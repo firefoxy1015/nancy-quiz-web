@@ -442,8 +442,14 @@ async function init() {
   els.nextQuestionBtn.addEventListener('click', () => { state.currentIndex += 1; renderQuestion(); });
   els.langToggle.addEventListener('click', () => {
     state.lang = state.lang === 'zh' ? 'en' : 'zh';
-    renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderGuidelineLinks();
+    renderStaticText();
+    renderChapters();
+    renderChapterReviewList();
+    renderExamGroups();
+    renderGuidelineLinks();
     if (!els.views.practice.classList.contains('hidden')) renderQuestion();
+    if (!els.views.reviewDetail.classList.contains('hidden')) renderChapterReviewDetail();
+    if (!els.views.wrong.classList.contains('hidden')) renderWrongAnswers();
   });
   els.startPracticeBtn.addEventListener('click', startRandomPractice);
   els.reviewBackBtn.addEventListener('click', () => setView('review'));
