@@ -64,13 +64,15 @@ button.primary:hover { background: var(--primary-2); }
   gap: 16px;
 }
 .chapter-list { display: grid; gap: 10px; }
-.chapter-item {
+.chapter-item,
+.resource-card {
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 .practice-header {
   display: flex;
@@ -95,6 +97,22 @@ button.primary:hover { background: var(--primary-2); }
 }
 .practice-actions { margin-top: 18px; }
 .empty { color: var(--muted); }
+.guideline-list { display: grid; gap: 10px; }
+.resource-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: white;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+.resource-link-btn:hover {
+  background: #eef3ff;
+}
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
   .grid.two { grid-template-columns: 1fr; }
