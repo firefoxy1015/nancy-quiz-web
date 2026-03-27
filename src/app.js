@@ -26,7 +26,7 @@ const i18n = {
     homeSupportedList: ['中英双语题目显示', '按章节筛选', '即时判分与解析', '错题本（本地浏览器保存）'],
     homeNextTitle: '接下来会补',
     homeNextList: ['更多章节题库', '模拟考试模式', '学习进度追踪', '章节学习路线'],
-    homeProgressNote: '当前正在优先补 Chapter 1–5 与 Chapter 13–19 的正式题库。',
+    homeProgressNote: '当前正在按 chapter 顺序持续扩充正式题库。',
     startPracticeBtn: '开始练习',
     chaptersTitle: '按章节学习',
     practiceTitle: '练习模式',
@@ -56,7 +56,7 @@ const i18n = {
     homeSupportedList: ['Bilingual question display', 'Chapter filtering', 'Instant scoring and explanations', 'Wrong-answer notebook (browser local storage)'],
     homeNextTitle: 'Coming Next',
     homeNextList: ['More chapter coverage', 'Mock exam mode', 'Learning progress tracking', 'Structured chapter roadmap'],
-    homeProgressNote: 'Current priority: expanding the formal banks for Chapters 1–5 and 13–19.',
+    homeProgressNote: 'Current priority: expanding the formal banks chapter by chapter in sequence.',
     startPracticeBtn: 'Start Practice',
     chaptersTitle: 'Study by Chapter',
     practiceTitle: 'Practice Mode',
@@ -115,6 +115,7 @@ function renderStaticText() {
   document.getElementById('homeSupportedTitle').textContent = t('homeSupportedTitle');
   document.getElementById('homeNextTitle').textContent = t('homeNextTitle');
   document.getElementById('homeProgressNote').textContent = t('homeProgressNote');
+  document.getElementById('homeQuestionCount').textContent = state.data ? (state.lang === 'zh' ? `Current question count / 当前题库总数：${state.data.questions.length}` : `Current question count: ${state.data.questions.length}`) : '';
   document.getElementById('chaptersTitle').textContent = t('chaptersTitle');
   document.getElementById('wrongTitle').textContent = t('wrongTitle');
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
