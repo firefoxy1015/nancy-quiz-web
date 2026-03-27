@@ -339,40 +339,42 @@ function renderChapterReviewDetail() {
     els.reviewDetail.innerHTML = `<p class="empty">${t('reviewEmpty')}</p>`;
     return;
   }
-  const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
-  const summary = state.lang === 'zh' ? item.summaryZh : item.summaryEn;
-  const highlights = state.lang === 'zh' ? item.highlightsZh : item.highlightsEn;
-  const keyPoints = state.lang === 'zh' ? item.keyPointsZh : item.keyPointsEn;
-  const mustKnow = state.lang === 'zh' ? item.mustKnowZh : item.mustKnowEn;
-  const commonConfusions = state.lang === 'zh' ? item.commonConfusionsZh : item.commonConfusionsEn;
+  const titleZh = item.titleZh || item.titleEn;
+  const titleEn = item.titleEn || item.titleZh;
+  const summaryZh = item.summaryZh || item.summaryEn || '';
+  const summaryEn = item.summaryEn || item.summaryZh || '';
+  const highlightsZh = item.highlightsZh || item.highlightsEn || [];
+  const highlightsEn = item.highlightsEn || item.highlightsZh || [];
+  const keyPointsZh = item.keyPointsZh || item.keyPointsEn || [];
+  const keyPointsEn = item.keyPointsEn || item.keyPointsZh || [];
+  const mustKnowZh = item.mustKnowZh || item.mustKnowEn || [];
+  const mustKnowEn = item.mustKnowEn || item.mustKnowZh || [];
+  const commonConfusionsZh = item.commonConfusionsZh || item.commonConfusionsEn || [];
+  const commonConfusionsEn = item.commonConfusionsEn || item.commonConfusionsZh || [];
+
+  const bilingualBlock = (label, zhContent, enContent, isList = false) => `
+    <div class="review-section">
+      <strong>${label}</strong>
+      <div class="review-bilingual-grid">
+        <div class="review-lang-block">
+          <div class="review-lang-label">中文</div>
+          ${isList ? `<ul>${zhContent.map(point => `<li>${point}</li>`).join('')}</ul>` : `<p>${zhContent}</p>`}
+        </div>
+        <div class="review-lang-block">
+          <div class="review-lang-label">English</div>
+          ${isList ? `<ul>${enContent.map(point => `<li>${point}</li>`).join('')}</ul>` : `<p>${enContent}</p>`}
+        </div>
+      </div>
+    </div>
+  `;
+
   els.reviewDetail.innerHTML = `
-    <h3>${title}</h3>
-    <div class="review-section">
-      <strong>${t('summaryLabel')}</strong>
-      <p>${summary}</p>
-    </div>
-    <div class="review-section">
-      <strong>${t('highlightsLabel')}</strong>
-      <ul>${(highlights || []).map(point => `<li>${point}</li>`).join('')}</ul>
-    </div>
-    ${keyPoints?.length ? `
-      <div class="review-section">
-        <strong>${t('keyPointsLabel')}</strong>
-        <ul>${keyPoints.map(point => `<li>${point}</li>`).join('')}</ul>
-      </div>
-    ` : ''}
-    ${mustKnow?.length ? `
-      <div class="review-section">
-        <strong>${t('mustKnowLabel')}</strong>
-        <ul>${mustKnow.map(point => `<li>${point}</li>`).join('')}</ul>
-      </div>
-    ` : ''}
-    ${commonConfusions?.length ? `
-      <div class="review-section">
-        <strong>${t('commonConfusionsLabel')}</strong>
-        <ul>${commonConfusions.map(point => `<li>${point}</li>`).join('')}</ul>
-      </div>
-    ` : ''}
+    <h3>${state.lang === 'zh' ? titleZh : titleEn}</h3>
+    ${bilingualBlock(t('summaryLabel'), summaryZh, summaryEn, false)}
+    ${bilingualBlock(t('highlightsLabel'), highlightsZh, highlightsEn, true)}
+    ${keyPointsZh.length || keyPointsEn.length ? bilingualBlock(t('keyPointsLabel'), keyPointsZh, keyPointsEn, true) : ''}
+    ${mustKnowZh.length || mustKnowEn.length ? bilingualBlock(t('mustKnowLabel'), mustKnowZh, mustKnowEn, true) : ''}
+    ${commonConfusionsZh.length || commonConfusionsEn.length ? bilingualBlock(t('commonConfusionsLabel'), commonConfusionsZh, commonConfusionsEn, true) : ''}
   `;
 }
 function renderWrongAnswers() {
