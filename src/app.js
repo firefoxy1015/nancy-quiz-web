@@ -191,7 +191,7 @@ function renderWrongAnswers() {
   els.wrongList.innerHTML = items.map(q => `<div class="chapter-item"><div><strong>${state.lang === 'zh' ? q.questionZh : q.questionEn}</strong><div class="empty">${state.lang === 'zh' ? q.explanationZh : q.explanationEn}</div></div></div>`).join('');
 }
 async function init() {
-  const res = await fetch('./data/question-bank.json');
+  const res = await fetch(`./data/question-bank.json?v=${Date.now()}`);
   state.data = await res.json();
   renderStaticText(); renderChapters(); updateScore(); setView('home');
   document.querySelectorAll('.nav-btn').forEach(btn => btn.addEventListener('click', () => { const view = btn.dataset.view; if (view === 'practice') startRandomPractice(); else setView(view); }));
