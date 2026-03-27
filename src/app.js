@@ -46,6 +46,9 @@ const i18n = {
     reviewBackLabel: '← 返回 Chapter Review',
     summaryLabel: 'Summary',
     highlightsLabel: 'Highlights',
+    keyPointsLabel: 'Key Points',
+    mustKnowLabel: 'Must Know',
+    commonConfusionsLabel: 'Common Confusions / Test Traps',
     wrongTitle: 'WRONG ANSWERS',
     wrongIntro: '错题只保存在当前浏览器本地，不会同步到线上。',
     noWrong: '当前还没有错题。',
@@ -94,6 +97,9 @@ const i18n = {
     reviewBackLabel: '← Back to Chapter Review',
     summaryLabel: 'Summary',
     highlightsLabel: 'Highlights',
+    keyPointsLabel: 'Key Points',
+    mustKnowLabel: 'Must Know',
+    commonConfusionsLabel: 'Common Confusions / Test Traps',
     wrongTitle: 'WRONG ANSWERS',
     wrongIntro: 'Wrong answers are saved only in this browser locally and are not synced online.',
     noWrong: 'No wrong answers yet.',
@@ -336,6 +342,9 @@ function renderChapterReviewDetail() {
   const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
   const summary = state.lang === 'zh' ? item.summaryZh : item.summaryEn;
   const highlights = state.lang === 'zh' ? item.highlightsZh : item.highlightsEn;
+  const keyPoints = state.lang === 'zh' ? item.keyPointsZh : item.keyPointsEn;
+  const mustKnow = state.lang === 'zh' ? item.mustKnowZh : item.mustKnowEn;
+  const commonConfusions = state.lang === 'zh' ? item.commonConfusionsZh : item.commonConfusionsEn;
   els.reviewDetail.innerHTML = `
     <h3>${title}</h3>
     <div class="review-section">
@@ -344,8 +353,26 @@ function renderChapterReviewDetail() {
     </div>
     <div class="review-section">
       <strong>${t('highlightsLabel')}</strong>
-      <ul>${highlights.map(point => `<li>${point}</li>`).join('')}</ul>
+      <ul>${(highlights || []).map(point => `<li>${point}</li>`).join('')}</ul>
     </div>
+    ${keyPoints?.length ? `
+      <div class="review-section">
+        <strong>${t('keyPointsLabel')}</strong>
+        <ul>${keyPoints.map(point => `<li>${point}</li>`).join('')}</ul>
+      </div>
+    ` : ''}
+    ${mustKnow?.length ? `
+      <div class="review-section">
+        <strong>${t('mustKnowLabel')}</strong>
+        <ul>${mustKnow.map(point => `<li>${point}</li>`).join('')}</ul>
+      </div>
+    ` : ''}
+    ${commonConfusions?.length ? `
+      <div class="review-section">
+        <strong>${t('commonConfusionsLabel')}</strong>
+        <ul>${commonConfusions.map(point => `<li>${point}</li>`).join('')}</ul>
+      </div>
+    ` : ''}
   `;
 }
 function renderWrongAnswers() {
