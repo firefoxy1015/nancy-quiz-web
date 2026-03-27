@@ -42,7 +42,8 @@ const i18n = {
     nextQuestionBtn: '下一题',
     reviewTitle: 'Chapter Review',
     reviewIntro: '这里按 chapter 提供重点总结和 highlights，帮助快速抓住本章主轴。',
-    reviewEmpty: '请选择左侧一个 chapter 查看重点。',
+    reviewEmpty: '请选择一个 chapter 查看重点。',
+    reviewBackLabel: '← 返回 Chapter Review',
     summaryLabel: 'Summary',
     highlightsLabel: 'Highlights',
     wrongTitle: 'WRONG ANSWERS',
@@ -89,7 +90,8 @@ const i18n = {
     nextQuestionBtn: 'Next Question',
     reviewTitle: 'Chapter Review',
     reviewIntro: 'This section provides chapter-by-chapter summaries and highlights for fast review.',
-    reviewEmpty: 'Choose a chapter on the left to view the review notes.',
+    reviewEmpty: 'Choose a chapter to view the review notes.',
+    reviewBackLabel: '← Back to Chapter Review',
     summaryLabel: 'Summary',
     highlightsLabel: 'Highlights',
     wrongTitle: 'WRONG ANSWERS',
@@ -116,6 +118,7 @@ const els = {
     chapters: document.getElementById('chaptersView'),
     practice: document.getElementById('practiceView'),
     review: document.getElementById('reviewView'),
+    reviewDetail: document.getElementById('reviewDetailView'),
     wrong: document.getElementById('wrongView'),
     exam: document.getElementById('examView'),
     guidelines: document.getElementById('guidelinesView')
@@ -127,6 +130,7 @@ const els = {
   practiceMeta: document.getElementById('practiceMeta'),
   reviewList: document.getElementById('reviewList'),
   reviewDetail: document.getElementById('reviewDetail'),
+  reviewBackBtn: document.getElementById('reviewBackBtn'),
   wrongList: document.getElementById('wrongList'),
   examList: document.getElementById('examList'),
   guidelinesList: document.getElementById('guidelinesList'),
@@ -206,6 +210,7 @@ function renderStaticText() {
   document.getElementById('chaptersTitle').textContent = t('chaptersTitle');
   document.getElementById('reviewTitle').textContent = t('reviewTitle');
   document.getElementById('reviewIntro').textContent = t('reviewIntro');
+  els.reviewBackBtn.textContent = t('reviewBackLabel');
   document.getElementById('wrongTitle').textContent = t('wrongTitle');
   document.getElementById('wrongIntro').textContent = t('wrongIntro');
   document.getElementById('examTitle').textContent = t('examTitle');
@@ -306,28 +311,21 @@ function renderQuestion() {
 function renderChapterReviewList() {
   const reviews = state.reviewData?.reviews || [];
   els.reviewList.innerHTML = reviews.map(item => `
-    <div class="chapter-item review-item ${item.chapterId === state.selectedReviewChapterId ? 'active-review-item' : ''}" data-review-id="${item.chapterId}">
+    <div class="chapter-item review-item">
       <div><strong>${state.lang === 'zh' ? item.titleZh : item.titleEn}</strong></div>
       <button data-review-open="${item.chapterId}">${t('startLabel')}</button>
     </div>
   `).join('');
-  els.reviewList.querySelectorAll('[data-review-id]').forEach(card => {
-    card.addEventListener('click', (event) => {
-      const target = event.target;
-      const chapterId = target?.dataset?.reviewOpen || card.dataset.reviewId;
-      state.selectedReviewChapterId = chapterId;
-      renderChapterReviewList();
+  els.reviewList.querySelectorAll('button[data-review-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.selectedReviewChapterId = btn.dataset.reviewOpen;
       renderChapterReviewDetail();
+      setView('reviewDetail');
     });
   });
-  if (!state.selectedReviewChapterId && reviews.length) {
-    state.selectedReviewChapterId = reviews[0].chapterId;
-  }
   if (!reviews.length) {
-    els.reviewDetail.innerHTML = `<p class="empty">${t('reviewEmpty')}</p>`;
-    return;
+    els.reviewList.innerHTML = `<p class="empty">${t('reviewEmpty')}</p>`;
   }
-  renderChapterReviewDetail();
 }
 function renderChapterReviewDetail() {
   const item = (state.reviewData?.reviews || []).find(r => r.chapterId === state.selectedReviewChapterId);
@@ -420,5 +418,6 @@ async function init() {
     if (!els.views.practice.classList.contains('hidden')) renderQuestion();
   });
   els.startPracticeBtn.addEventListener('click', startRandomPractice);
+  els.reviewBackBtn.addEventListener('click', () => setView('review'));
 }
 init();
