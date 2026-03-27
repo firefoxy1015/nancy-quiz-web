@@ -311,15 +311,21 @@ function renderChapterReviewList() {
       <button data-review-open="${item.chapterId}">${t('startLabel')}</button>
     </div>
   `).join('');
-  els.reviewList.querySelectorAll('button[data-review-open]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      state.selectedReviewChapterId = btn.dataset.reviewOpen;
+  els.reviewList.querySelectorAll('[data-review-id]').forEach(card => {
+    card.addEventListener('click', (event) => {
+      const target = event.target;
+      const chapterId = target?.dataset?.reviewOpen || card.dataset.reviewId;
+      state.selectedReviewChapterId = chapterId;
       renderChapterReviewList();
       renderChapterReviewDetail();
     });
   });
   if (!state.selectedReviewChapterId && reviews.length) {
     state.selectedReviewChapterId = reviews[0].chapterId;
+  }
+  if (!reviews.length) {
+    els.reviewDetail.innerHTML = `<p class="empty">${t('reviewEmpty')}</p>`;
+    return;
   }
   renderChapterReviewDetail();
 }
