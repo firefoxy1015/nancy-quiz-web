@@ -1,5 +1,5 @@
 const state = {
-  lang: 'zh',
+  lang: 'en',
   data: null,
   currentQuestions: [],
   currentIndex: 0,
