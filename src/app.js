@@ -107,9 +107,9 @@ function getExamGroups() {
 
 const guidelineLinks = [
   {
-    titleEn: 'BC Emergency Health Services Clinical Resources',
-    titleZh: 'BC Emergency Health Services 临床资源',
-    url: 'https://handbook.bcehs.ca/'
+    titleEn: 'BCEHS Clinical Practice Guidelines',
+    titleZh: 'BCEHS Clinical Practice Guidelines',
+    url: 'https://handbook.bcehs.ca/clinical-practice-guidelines/'
   },
   {
     titleEn: 'BLS Treatment Guidelines (BCEHS Handbook)',
