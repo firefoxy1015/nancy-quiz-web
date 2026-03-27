@@ -7,7 +7,8 @@ const state = {
   scoreCorrect: 0,
   scoreTotal: 0,
   selectedChapterId: null,
-  currentMode: 'nancy'
+  currentMode: 'nancy',
+  wrongStorageKey: 'nancyQuizWrongAnswersV2'
 };
 
 const i18n = {
@@ -18,6 +19,7 @@ const i18n = {
     navHome: '首页',
     navChapters: '按章节学习',
     navPractice: '随机练习',
+    navWrong: 'WRONG ANSWERS',
     navExam: 'EMR/PCP EXAM QUESTIONS',
     navGuidelines: 'GUIDELINE LINK',
     statusTitle: '项目状态',
@@ -35,6 +37,12 @@ const i18n = {
     practiceMeta: '请选择一道题开始',
     scoreLabel: '分数',
     nextQuestionBtn: '下一题',
+    wrongTitle: 'WRONG ANSWERS',
+    wrongIntro: '错题只保存在当前浏览器本地，不会同步到线上。',
+    noWrong: '当前还没有错题。',
+    clearWrongLabel: '清空错题',
+    wrongSourceNancy: 'Nancy 题库',
+    wrongSourceExam: 'BC Guideline Exam 题库',
     examTitle: 'EMR/PCP EXAM QUESTIONS',
     examIntro: '这里是独立于 Nancy chapter 题库之外的 BC Provincial Examination Guideline 模拟题区。',
     guidelinesTitle: 'GUIDELINE LINK',
@@ -52,6 +60,7 @@ const i18n = {
     navHome: 'Home',
     navChapters: 'Study by Chapter',
     navPractice: 'Random Practice',
+    navWrong: 'WRONG ANSWERS',
     navExam: 'EMR/PCP EXAM QUESTIONS',
     navGuidelines: 'GUIDELINE LINK',
     statusTitle: 'Project Status',
@@ -69,6 +78,12 @@ const i18n = {
     practiceMeta: 'Choose a question set to begin',
     scoreLabel: 'Score',
     nextQuestionBtn: 'Next Question',
+    wrongTitle: 'WRONG ANSWERS',
+    wrongIntro: 'Wrong answers are saved only in this browser locally and are not synced online.',
+    noWrong: 'No wrong answers yet.',
+    clearWrongLabel: 'Clear Wrong Answers',
+    wrongSourceNancy: 'Nancy question bank',
+    wrongSourceExam: 'BC Guideline exam bank',
     examTitle: 'EMR/PCP EXAM QUESTIONS',
     examIntro: 'This is a standalone BC Provincial Examination Guideline question area, separate from the Nancy chapter bank.',
     guidelinesTitle: 'GUIDELINE LINK',
@@ -86,6 +101,7 @@ const els = {
     home: document.getElementById('homeView'),
     chapters: document.getElementById('chaptersView'),
     practice: document.getElementById('practiceView'),
+    wrong: document.getElementById('wrongView'),
     exam: document.getElementById('examView'),
     guidelines: document.getElementById('guidelinesView')
   },
@@ -94,6 +110,7 @@ const els = {
   scoreValue: document.getElementById('scoreValue'),
   practiceTitle: document.getElementById('practiceTitle'),
   practiceMeta: document.getElementById('practiceMeta'),
+  wrongList: document.getElementById('wrongList'),
   examList: document.getElementById('examList'),
   guidelinesList: document.getElementById('guidelinesList'),
   nextQuestionBtn: document.getElementById('nextQuestionBtn'),
@@ -124,9 +141,29 @@ const guidelineLinks = [
 ];
 
 function t(key) { return i18n[state.lang][key]; }
+function getWrongAnswers() {
+  try {
+    return JSON.parse(localStorage.getItem(state.wrongStorageKey) || '[]');
+  } catch {
+    return [];
+  }
+}
+function saveWrongAnswer(entry) {
+  const current = getWrongAnswers();
+  const exists = current.some(item => item.id === entry.id && item.mode === entry.mode);
+  if (!exists) {
+    current.unshift(entry);
+    localStorage.setItem(state.wrongStorageKey, JSON.stringify(current));
+  }
+}
+function clearWrongAnswers() {
+  localStorage.removeItem(state.wrongStorageKey);
+  renderWrongAnswers();
+}
 function setView(name) {
   Object.entries(els.views).forEach(([key, el]) => el.classList.toggle('hidden', key !== name));
   document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === name));
+  if (name === 'wrong') renderWrongAnswers();
   if (name === 'exam') renderExamGroups();
   if (name === 'guidelines') renderGuidelineLinks();
 }
@@ -137,6 +174,7 @@ function renderStaticText() {
   document.getElementById('navHome').textContent = t('navHome');
   document.getElementById('navChapters').textContent = t('navChapters');
   document.getElementById('navPractice').textContent = t('navPractice');
+  document.getElementById('navWrong').textContent = t('navWrong');
   document.getElementById('navExam').textContent = t('navExam');
   document.getElementById('navGuidelines').textContent = t('navGuidelines');
   document.getElementById('statusTitle').textContent = t('statusTitle');
@@ -147,6 +185,8 @@ function renderStaticText() {
   document.getElementById('homeProgressNote').textContent = t('homeProgressNote');
   document.getElementById('homeQuestionCount').textContent = state.data ? (state.lang === 'zh' ? `Current question count / 当前题库总数：${state.data.questions.length}` : `Current question count: ${state.data.questions.length}`) : '';
   document.getElementById('chaptersTitle').textContent = t('chaptersTitle');
+  document.getElementById('wrongTitle').textContent = t('wrongTitle');
+  document.getElementById('wrongIntro').textContent = t('wrongIntro');
   document.getElementById('examTitle').textContent = t('examTitle');
   document.getElementById('examIntro').textContent = t('examIntro');
   document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
@@ -218,7 +258,21 @@ function renderQuestion() {
       if (wrapper.dataset.answered === 'true') return;
       wrapper.dataset.answered = 'true'; state.scoreTotal += 1;
       const isCorrect = opt.key === q.answer;
-      if (isCorrect) { state.scoreCorrect += 1; btn.classList.add('correct'); } else { btn.classList.add('wrong'); }
+      if (isCorrect) {
+        state.scoreCorrect += 1;
+        btn.classList.add('correct');
+      } else {
+        btn.classList.add('wrong');
+        saveWrongAnswer({
+          id: q.id,
+          mode: state.currentMode,
+          question: state.lang === 'zh' ? q.questionZh : q.questionEn,
+          context: state.currentMode === 'exam'
+            ? (state.lang === 'zh' ? (examGroup?.titleZh || t('examTitle')) : (examGroup?.titleEn || t('examTitle')))
+            : (state.lang === 'zh' ? (chapter?.titleZh || t('chaptersTitle')) : (chapter?.titleEn || t('chaptersTitle'))),
+          explanation: state.lang === 'zh' ? q.explanationZh : q.explanationEn
+        });
+      }
       [...optionsDiv.children].forEach(child => { const childKey = child.textContent.trim().charAt(0); if (childKey === q.answer) child.classList.add('correct'); });
       explanationDiv.classList.remove('hidden');
       explanationDiv.innerHTML = `<strong>${t('explanation')}</strong><p>${state.lang === 'zh' ? q.explanationZh : q.explanationEn}</p>`;
@@ -227,6 +281,29 @@ function renderQuestion() {
     optionsDiv.appendChild(btn);
   });
   els.questionBox.innerHTML = ''; els.questionBox.appendChild(wrapper);
+}
+function renderWrongAnswers() {
+  const wrong = getWrongAnswers();
+  if (!wrong.length) {
+    els.wrongList.innerHTML = `<p class="empty">${t('noWrong')}</p>`;
+    return;
+  }
+  els.wrongList.innerHTML = `
+    <div class="wrong-toolbar">
+      <button id="clearWrongBtn">${t('clearWrongLabel')}</button>
+    </div>
+    ${wrong.map(item => `
+      <div class="resource-card wrong-answer-card">
+        <div>
+          <strong>${item.question}</strong>
+          <div class="empty">${item.mode === 'exam' ? t('wrongSourceExam') : t('wrongSourceNancy')}</div>
+          <div class="empty">${item.context}</div>
+          <div class="explanation-inline"><strong>${t('explanation')}</strong> ${item.explanation}</div>
+        </div>
+      </div>
+    `).join('')}
+  `;
+  document.getElementById('clearWrongBtn')?.addEventListener('click', clearWrongAnswers);
 }
 function renderExamGroups() {
   const groups = getExamGroups();

@@ -25,6 +25,7 @@
           <button class="nav-btn active" data-view="home" id="navHome">首页</button>
           <button class="nav-btn" data-view="chapters" id="navChapters">按章节学习</button>
           <button class="nav-btn" data-view="practice" id="navPractice">随机练习</button>
+          <button class="nav-btn" data-view="wrong" id="navWrong">WRONG ANSWERS</button>
           <button class="nav-btn" data-view="exam" id="navExam">EMR/PCP EXAM QUESTIONS</button>
           <button class="nav-btn" data-view="guidelines" id="navGuidelines">GUIDELINE LINK</button>
         </div>
@@ -72,6 +73,12 @@
           <div class="practice-actions">
             <button id="nextQuestionBtn" class="primary">下一题</button>
           </div>
+        </div>
+
+        <div id="wrongView" class="view card hidden">
+          <h2 id="wrongTitle">WRONG ANSWERS</h2>
+          <p class="progress-note" id="wrongIntro"></p>
+          <div id="wrongList" class="chapter-list"></div>
         </div>
 
         <div id="examView" class="view card hidden">

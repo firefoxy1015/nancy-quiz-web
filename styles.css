@@ -113,6 +113,18 @@ button.primary:hover { background: var(--primary-2); }
 .resource-link-btn:hover {
   background: #eef3ff;
 }
+.wrong-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+.wrong-answer-card {
+  align-items: flex-start;
+}
+.explanation-inline {
+  margin-top: 8px;
+  color: var(--text);
+}
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
   .grid.two { grid-template-columns: 1fr; }
