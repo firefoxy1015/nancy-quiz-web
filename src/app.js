@@ -2,11 +2,13 @@ const state = {
   lang: 'en',
   data: null,
   examData: null,
+  reviewData: null,
   currentQuestions: [],
   currentIndex: 0,
   scoreCorrect: 0,
   scoreTotal: 0,
   selectedChapterId: null,
+  selectedReviewChapterId: null,
   currentMode: 'nancy',
   wrongStorageKey: 'nancyQuizWrongAnswersV2'
 };
@@ -19,6 +21,7 @@ const i18n = {
     navHome: '首页',
     navChapters: '按章节学习',
     navPractice: '随机练习',
+    navReview: 'Chapter Review',
     navWrong: 'WRONG ANSWERS',
     navExam: 'EMR/PCP EXAM QUESTIONS',
     navGuidelines: 'GUIDELINE LINK',
@@ -37,6 +40,11 @@ const i18n = {
     practiceMeta: '请选择一道题开始',
     scoreLabel: '分数',
     nextQuestionBtn: '下一题',
+    reviewTitle: 'Chapter Review',
+    reviewIntro: '这里按 chapter 提供重点总结和 highlights，帮助快速抓住本章主轴。',
+    reviewEmpty: '请选择左侧一个 chapter 查看重点。',
+    summaryLabel: 'Summary',
+    highlightsLabel: 'Highlights',
     wrongTitle: 'WRONG ANSWERS',
     wrongIntro: '错题只保存在当前浏览器本地，不会同步到线上。',
     noWrong: '当前还没有错题。',
@@ -60,6 +68,7 @@ const i18n = {
     navHome: 'Home',
     navChapters: 'Study by Chapter',
     navPractice: 'Random Practice',
+    navReview: 'Chapter Review',
     navWrong: 'WRONG ANSWERS',
     navExam: 'EMR/PCP EXAM QUESTIONS',
     navGuidelines: 'GUIDELINE LINK',
@@ -78,6 +87,11 @@ const i18n = {
     practiceMeta: 'Choose a question set to begin',
     scoreLabel: 'Score',
     nextQuestionBtn: 'Next Question',
+    reviewTitle: 'Chapter Review',
+    reviewIntro: 'This section provides chapter-by-chapter summaries and highlights for fast review.',
+    reviewEmpty: 'Choose a chapter on the left to view the review notes.',
+    summaryLabel: 'Summary',
+    highlightsLabel: 'Highlights',
     wrongTitle: 'WRONG ANSWERS',
     wrongIntro: 'Wrong answers are saved only in this browser locally and are not synced online.',
     noWrong: 'No wrong answers yet.',
@@ -101,6 +115,7 @@ const els = {
     home: document.getElementById('homeView'),
     chapters: document.getElementById('chaptersView'),
     practice: document.getElementById('practiceView'),
+    review: document.getElementById('reviewView'),
     wrong: document.getElementById('wrongView'),
     exam: document.getElementById('examView'),
     guidelines: document.getElementById('guidelinesView')
@@ -110,6 +125,8 @@ const els = {
   scoreValue: document.getElementById('scoreValue'),
   practiceTitle: document.getElementById('practiceTitle'),
   practiceMeta: document.getElementById('practiceMeta'),
+  reviewList: document.getElementById('reviewList'),
+  reviewDetail: document.getElementById('reviewDetail'),
   wrongList: document.getElementById('wrongList'),
   examList: document.getElementById('examList'),
   guidelinesList: document.getElementById('guidelinesList'),
@@ -163,6 +180,7 @@ function clearWrongAnswers() {
 function setView(name) {
   Object.entries(els.views).forEach(([key, el]) => el.classList.toggle('hidden', key !== name));
   document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === name));
+  if (name === 'review') renderChapterReviewList();
   if (name === 'wrong') renderWrongAnswers();
   if (name === 'exam') renderExamGroups();
   if (name === 'guidelines') renderGuidelineLinks();
@@ -174,6 +192,7 @@ function renderStaticText() {
   document.getElementById('navHome').textContent = t('navHome');
   document.getElementById('navChapters').textContent = t('navChapters');
   document.getElementById('navPractice').textContent = t('navPractice');
+  document.getElementById('navReview').textContent = t('navReview');
   document.getElementById('navWrong').textContent = t('navWrong');
   document.getElementById('navExam').textContent = t('navExam');
   document.getElementById('navGuidelines').textContent = t('navGuidelines');
@@ -185,6 +204,8 @@ function renderStaticText() {
   document.getElementById('homeProgressNote').textContent = t('homeProgressNote');
   document.getElementById('homeQuestionCount').textContent = state.data ? (state.lang === 'zh' ? `Current question count / 当前题库总数：${state.data.questions.length}` : `Current question count: ${state.data.questions.length}`) : '';
   document.getElementById('chaptersTitle').textContent = t('chaptersTitle');
+  document.getElementById('reviewTitle').textContent = t('reviewTitle');
+  document.getElementById('reviewIntro').textContent = t('reviewIntro');
   document.getElementById('wrongTitle').textContent = t('wrongTitle');
   document.getElementById('wrongIntro').textContent = t('wrongIntro');
   document.getElementById('examTitle').textContent = t('examTitle');
@@ -282,6 +303,47 @@ function renderQuestion() {
   });
   els.questionBox.innerHTML = ''; els.questionBox.appendChild(wrapper);
 }
+function renderChapterReviewList() {
+  const reviews = state.reviewData?.reviews || [];
+  els.reviewList.innerHTML = reviews.map(item => `
+    <div class="chapter-item review-item ${item.chapterId === state.selectedReviewChapterId ? 'active-review-item' : ''}" data-review-id="${item.chapterId}">
+      <div><strong>${state.lang === 'zh' ? item.titleZh : item.titleEn}</strong></div>
+      <button data-review-open="${item.chapterId}">${t('startLabel')}</button>
+    </div>
+  `).join('');
+  els.reviewList.querySelectorAll('button[data-review-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.selectedReviewChapterId = btn.dataset.reviewOpen;
+      renderChapterReviewList();
+      renderChapterReviewDetail();
+    });
+  });
+  if (!state.selectedReviewChapterId && reviews.length) {
+    state.selectedReviewChapterId = reviews[0].chapterId;
+  }
+  renderChapterReviewDetail();
+}
+function renderChapterReviewDetail() {
+  const item = (state.reviewData?.reviews || []).find(r => r.chapterId === state.selectedReviewChapterId);
+  if (!item) {
+    els.reviewDetail.innerHTML = `<p class="empty">${t('reviewEmpty')}</p>`;
+    return;
+  }
+  const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
+  const summary = state.lang === 'zh' ? item.summaryZh : item.summaryEn;
+  const highlights = state.lang === 'zh' ? item.highlightsZh : item.highlightsEn;
+  els.reviewDetail.innerHTML = `
+    <h3>${title}</h3>
+    <div class="review-section">
+      <strong>${t('summaryLabel')}</strong>
+      <p>${summary}</p>
+    </div>
+    <div class="review-section">
+      <strong>${t('highlightsLabel')}</strong>
+      <ul>${highlights.map(point => `<li>${point}</li>`).join('')}</ul>
+    </div>
+  `;
+}
 function renderWrongAnswers() {
   const wrong = getWrongAnswers();
   if (!wrong.length) {
@@ -335,18 +397,20 @@ function renderGuidelineLinks() {
   `).join('');
 }
 async function init() {
-  const [nancyRes, examRes] = await Promise.all([
+  const [nancyRes, examRes, reviewRes] = await Promise.all([
     fetch(`./data/question-bank.json?v=${Date.now()}`),
-    fetch(`./data/exam-bank.json?v=${Date.now()}`)
+    fetch(`./data/exam-bank.json?v=${Date.now()}`),
+    fetch(`./data/chapter-review.json?v=${Date.now()}`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
-  renderStaticText(); renderChapters(); renderExamGroups(); renderGuidelineLinks(); updateScore(); setView('home');
+  state.reviewData = await reviewRes.json();
+  renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderGuidelineLinks(); updateScore(); setView('home');
   document.querySelectorAll('.nav-btn').forEach(btn => btn.addEventListener('click', () => { const view = btn.dataset.view; if (view === 'practice') startRandomPractice(); else setView(view); }));
   els.nextQuestionBtn.addEventListener('click', () => { state.currentIndex += 1; renderQuestion(); });
   els.langToggle.addEventListener('click', () => {
     state.lang = state.lang === 'zh' ? 'en' : 'zh';
-    renderStaticText(); renderChapters(); renderExamGroups(); renderGuidelineLinks();
+    renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderGuidelineLinks();
     if (!els.views.practice.classList.contains('hidden')) renderQuestion();
   });
   els.startPracticeBtn.addEventListener('click', startRandomPractice);

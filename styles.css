@@ -113,6 +113,23 @@ button.primary:hover { background: var(--primary-2); }
 .resource-link-btn:hover {
   background: #eef3ff;
 }
+.review-detail-panel {
+  min-height: 420px;
+}
+.review-item {
+  align-items: center;
+}
+.active-review-item {
+  border-color: var(--primary);
+  background: #eef3ff;
+}
+.review-section {
+  margin-top: 14px;
+}
+.review-section ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
 .wrong-toolbar {
   display: flex;
   justify-content: flex-end;

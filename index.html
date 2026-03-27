@@ -25,6 +25,7 @@
           <button class="nav-btn active" data-view="home" id="navHome">首页</button>
           <button class="nav-btn" data-view="chapters" id="navChapters">按章节学习</button>
           <button class="nav-btn" data-view="practice" id="navPractice">随机练习</button>
+          <button class="nav-btn" data-view="review" id="navReview">Chapter Review</button>
           <button class="nav-btn" data-view="wrong" id="navWrong">WRONG ANSWERS</button>
           <button class="nav-btn" data-view="exam" id="navExam">EMR/PCP EXAM QUESTIONS</button>
           <button class="nav-btn" data-view="guidelines" id="navGuidelines">GUIDELINE LINK</button>
@@ -72,6 +73,19 @@
           <div id="questionBox" class="question-box"></div>
           <div class="practice-actions">
             <button id="nextQuestionBtn" class="primary">下一题</button>
+          </div>
+        </div>
+
+        <div id="reviewView" class="view card hidden">
+          <h2 id="reviewTitle">Chapter Review</h2>
+          <p class="progress-note" id="reviewIntro"></p>
+          <div class="grid two">
+            <div>
+              <div id="reviewList" class="chapter-list"></div>
+            </div>
+            <div>
+              <div id="reviewDetail" class="card review-detail-panel"></div>
+            </div>
           </div>
         </div>
 
