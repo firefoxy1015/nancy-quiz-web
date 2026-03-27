@@ -1,12 +1,13 @@
 const state = {
   lang: 'en',
   data: null,
+  examData: null,
   currentQuestions: [],
   currentIndex: 0,
   scoreCorrect: 0,
   scoreTotal: 0,
   selectedChapterId: null,
-  wrongKey: 'nancyQuizWrongAnswers'
+  currentMode: 'nancy'
 };
 
 const i18n = {
@@ -17,7 +18,8 @@ const i18n = {
     navHome: '首页',
     navChapters: '按章节学习',
     navPractice: '随机练习',
-    navWrong: '错题本',
+    navExam: 'EMR/PCP EXAM QUESTIONS',
+    navGuidelines: 'GUIDELINE LINK',
     statusTitle: '项目状态',
     statusList: ['阶段：第一版网页骨架', '语言：中英双语', '题库：可扩展 JSON', '对象：Nancy 全书'],
     homeGoalTitle: '项目目标',
@@ -33,11 +35,14 @@ const i18n = {
     practiceMeta: '请选择一道题开始',
     scoreLabel: '分数',
     nextQuestionBtn: '下一题',
-    wrongTitle: '错题本',
+    examTitle: 'EMR/PCP EXAM QUESTIONS',
+    examIntro: '这里是独立于 Nancy chapter 题库之外的 BC Provincial Examination Guideline 模拟题区。',
+    guidelinesTitle: 'GUIDELINE LINK',
+    guidelinesIntro: '这里先放常用 guideline 入口，后续再继续补充。',
     startLabel: '开始',
+    openLinkLabel: '打开链接',
     complete: '这组题做完了。',
     practiceComplete: '已完成当前练习',
-    noWrong: '目前还没有错题。',
     explanation: '解析'
   },
   en: {
@@ -47,7 +52,8 @@ const i18n = {
     navHome: 'Home',
     navChapters: 'Study by Chapter',
     navPractice: 'Random Practice',
-    navWrong: 'Wrong Answers',
+    navExam: 'EMR/PCP EXAM QUESTIONS',
+    navGuidelines: 'GUIDELINE LINK',
     statusTitle: 'Project Status',
     statusList: ['Stage: First web prototype', 'Language: Bilingual (ZH/EN)', 'Question bank: Expandable JSON', 'Scope: Full Nancy textbook'],
     homeGoalTitle: 'Project Goal',
@@ -63,11 +69,14 @@ const i18n = {
     practiceMeta: 'Choose a question set to begin',
     scoreLabel: 'Score',
     nextQuestionBtn: 'Next Question',
-    wrongTitle: 'Wrong Answers',
+    examTitle: 'EMR/PCP EXAM QUESTIONS',
+    examIntro: 'This is a standalone BC Provincial Examination Guideline question area, separate from the Nancy chapter bank.',
+    guidelinesTitle: 'GUIDELINE LINK',
+    guidelinesIntro: 'This section is reserved for quick guideline access and can be expanded with more links.',
     startLabel: 'Start',
+    openLinkLabel: 'Open Link',
     complete: 'This set is complete.',
     practiceComplete: 'Current practice complete',
-    noWrong: 'No wrong answers yet.',
     explanation: 'Explanation'
   }
 };
@@ -77,29 +86,49 @@ const els = {
     home: document.getElementById('homeView'),
     chapters: document.getElementById('chaptersView'),
     practice: document.getElementById('practiceView'),
-    wrong: document.getElementById('wrongView')
+    exam: document.getElementById('examView'),
+    guidelines: document.getElementById('guidelinesView')
   },
   chapterList: document.getElementById('chapterList'),
   questionBox: document.getElementById('questionBox'),
   scoreValue: document.getElementById('scoreValue'),
   practiceTitle: document.getElementById('practiceTitle'),
   practiceMeta: document.getElementById('practiceMeta'),
-  wrongList: document.getElementById('wrongList'),
+  examList: document.getElementById('examList'),
+  guidelinesList: document.getElementById('guidelinesList'),
   nextQuestionBtn: document.getElementById('nextQuestionBtn'),
   langToggle: document.getElementById('langToggle'),
   startPracticeBtn: document.getElementById('startPracticeBtn')
 };
 
-function t(key) { return i18n[state.lang][key]; }
-function getWrongAnswers() { return JSON.parse(localStorage.getItem(state.wrongKey) || '[]'); }
-function saveWrongAnswer(questionId) {
-  const wrong = new Set(getWrongAnswers()); wrong.add(questionId);
-  localStorage.setItem(state.wrongKey, JSON.stringify([...wrong]));
+function getExamGroups() {
+  return state.examData?.groups || [];
 }
+
+const guidelineLinks = [
+  {
+    titleEn: 'BC Emergency Health Services Clinical Resources',
+    titleZh: 'BC Emergency Health Services 临床资源',
+    url: 'https://handbook.bcehs.ca/'
+  },
+  {
+    titleEn: 'BLS Treatment Guidelines (BCEHS Handbook)',
+    titleZh: 'BLS Treatment Guidelines（BCEHS Handbook）',
+    url: 'https://handbook.bcehs.ca/clinical-resources/treatment-guidelines/'
+  },
+  {
+    titleEn: 'COPR Paramedic Competency Profile',
+    titleZh: 'COPR Paramedic Competency Profile',
+    url: 'https://copr.ca/'
+  }
+];
+
+function t(key) { return i18n[state.lang][key]; }
 function setView(name) {
   Object.entries(els.views).forEach(([key, el]) => el.classList.toggle('hidden', key !== name));
   document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.view === name));
-  if (name === 'wrong') renderWrongAnswers();
+  if (name === 'exam') renderExamGroups();
+  if (name === 'guidelines') renderGuidelineLinks();
 }
 function renderStaticText() {
   document.getElementById('appTitle').textContent = t('appTitle');
@@ -108,7 +137,8 @@ function renderStaticText() {
   document.getElementById('navHome').textContent = t('navHome');
   document.getElementById('navChapters').textContent = t('navChapters');
   document.getElementById('navPractice').textContent = t('navPractice');
-  document.getElementById('navWrong').textContent = t('navWrong');
+  document.getElementById('navExam').textContent = t('navExam');
+  document.getElementById('navGuidelines').textContent = t('navGuidelines');
   document.getElementById('statusTitle').textContent = t('statusTitle');
   document.getElementById('homeGoalTitle').textContent = t('homeGoalTitle');
   document.getElementById('homeGoalText').textContent = t('homeGoalText');
@@ -117,7 +147,10 @@ function renderStaticText() {
   document.getElementById('homeProgressNote').textContent = t('homeProgressNote');
   document.getElementById('homeQuestionCount').textContent = state.data ? (state.lang === 'zh' ? `Current question count / 当前题库总数：${state.data.questions.length}` : `Current question count: ${state.data.questions.length}`) : '';
   document.getElementById('chaptersTitle').textContent = t('chaptersTitle');
-  document.getElementById('wrongTitle').textContent = t('wrongTitle');
+  document.getElementById('examTitle').textContent = t('examTitle');
+  document.getElementById('examIntro').textContent = t('examIntro');
+  document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
+  document.getElementById('guidelinesIntro').textContent = t('guidelinesIntro');
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
   els.nextQuestionBtn.textContent = t('nextQuestionBtn');
   els.startPracticeBtn.textContent = t('startPracticeBtn');
@@ -142,13 +175,21 @@ function renderChapters() {
 function updateScore() { els.scoreValue.textContent = `${state.scoreCorrect} / ${state.scoreTotal}`; }
 function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
 function startChapterPractice(chapterId) {
+  state.currentMode = 'nancy';
   state.selectedChapterId = chapterId;
   state.currentQuestions = shuffle(state.data.questions.filter(q => q.chapterId === chapterId));
   state.currentIndex = 0; state.scoreCorrect = 0; state.scoreTotal = 0; updateScore(); setView('practice'); renderQuestion();
 }
 function startRandomPractice() {
+  state.currentMode = 'nancy';
   state.selectedChapterId = null;
   state.currentQuestions = shuffle(state.data.questions);
+  state.currentIndex = 0; state.scoreCorrect = 0; state.scoreTotal = 0; updateScore(); setView('practice'); renderQuestion();
+}
+function startExamGroup(groupId) {
+  state.currentMode = 'exam';
+  state.selectedChapterId = null;
+  state.currentQuestions = shuffle(state.examData.questions.filter(q => q.groupId === groupId));
   state.currentIndex = 0; state.scoreCorrect = 0; state.scoreTotal = 0; updateScore(); setView('practice'); renderQuestion();
 }
 function renderQuestion() {
@@ -158,8 +199,11 @@ function renderQuestion() {
     els.practiceMeta.textContent = t('practiceComplete');
     return;
   }
-  const chapter = state.data.chapters.find(ch => ch.id === q.chapterId);
-  els.practiceTitle.textContent = state.lang === 'zh' ? (chapter?.titleZh || t('practiceTitle')) : (chapter?.titleEn || t('practiceTitle'));
+  const chapter = state.currentMode === 'nancy' ? state.data.chapters.find(ch => ch.id === q.chapterId) : null;
+  const examGroup = state.currentMode === 'exam' ? state.examData.groups.find(group => group.id === q.groupId) : null;
+  els.practiceTitle.textContent = state.currentMode === 'exam'
+    ? (state.lang === 'zh' ? (examGroup?.titleZh || t('examTitle')) : (examGroup?.titleEn || t('examTitle')))
+    : (state.lang === 'zh' ? (chapter?.titleZh || t('practiceTitle')) : (chapter?.titleEn || t('practiceTitle')));
   els.practiceMeta.textContent = `${state.currentIndex + 1} / ${state.currentQuestions.length}`;
   const wrapper = document.createElement('div');
   wrapper.className = 'question-card';
@@ -174,7 +218,7 @@ function renderQuestion() {
       if (wrapper.dataset.answered === 'true') return;
       wrapper.dataset.answered = 'true'; state.scoreTotal += 1;
       const isCorrect = opt.key === q.answer;
-      if (isCorrect) { state.scoreCorrect += 1; btn.classList.add('correct'); } else { btn.classList.add('wrong'); saveWrongAnswer(q.id); }
+      if (isCorrect) { state.scoreCorrect += 1; btn.classList.add('correct'); } else { btn.classList.add('wrong'); }
       [...optionsDiv.children].forEach(child => { const childKey = child.textContent.trim().charAt(0); if (childKey === q.answer) child.classList.add('correct'); });
       explanationDiv.classList.remove('hidden');
       explanationDiv.innerHTML = `<strong>${t('explanation')}</strong><p>${state.lang === 'zh' ? q.explanationZh : q.explanationEn}</p>`;
@@ -184,19 +228,50 @@ function renderQuestion() {
   });
   els.questionBox.innerHTML = ''; els.questionBox.appendChild(wrapper);
 }
-function renderWrongAnswers() {
-  const wrong = getWrongAnswers();
-  if (!wrong.length) { els.wrongList.innerHTML = `<p class="empty">${t('noWrong')}</p>`; return; }
-  const items = state.data.questions.filter(q => wrong.includes(q.id));
-  els.wrongList.innerHTML = items.map(q => `<div class="chapter-item"><div><strong>${state.lang === 'zh' ? q.questionZh : q.questionEn}</strong><div class="empty">${state.lang === 'zh' ? q.explanationZh : q.explanationEn}</div></div></div>`).join('');
+function renderExamGroups() {
+  const groups = getExamGroups();
+  els.examList.innerHTML = groups.map(group => {
+    const count = state.examData.questions.filter(q => q.groupId === group.id).length;
+    return `
+    <div class="resource-card">
+      <div>
+        <strong>${state.lang === 'zh' ? group.titleZh : group.titleEn}</strong>
+        <div class="empty">${state.lang === 'zh' ? group.descriptionZh : group.descriptionEn}</div>
+        <div class="empty">${state.lang === 'zh' ? `题数：${count}` : `Questions: ${count}`}</div>
+      </div>
+      <button data-exam-id="${group.id}">${t('startLabel')}</button>
+    </div>
+  `}).join('');
+  els.examList.querySelectorAll('button[data-exam-id]').forEach(btn => {
+    btn.addEventListener('click', () => startExamGroup(btn.dataset.examId));
+  });
+}
+function renderGuidelineLinks() {
+  els.guidelinesList.innerHTML = guidelineLinks.map(link => `
+    <div class="resource-card">
+      <div>
+        <strong>${state.lang === 'zh' ? link.titleZh : link.titleEn}</strong>
+        <div class="empty"><a href="${link.url}" target="_blank" rel="noreferrer">${link.url}</a></div>
+      </div>
+      <a class="resource-link-btn" href="${link.url}" target="_blank" rel="noreferrer">${t('openLinkLabel')}</a>
+    </div>
+  `).join('');
 }
 async function init() {
-  const res = await fetch(`./data/question-bank.json?v=${Date.now()}`);
-  state.data = await res.json();
-  renderStaticText(); renderChapters(); updateScore(); setView('home');
+  const [nancyRes, examRes] = await Promise.all([
+    fetch(`./data/question-bank.json?v=${Date.now()}`),
+    fetch(`./data/exam-bank.json?v=${Date.now()}`)
+  ]);
+  state.data = await nancyRes.json();
+  state.examData = await examRes.json();
+  renderStaticText(); renderChapters(); renderExamGroups(); renderGuidelineLinks(); updateScore(); setView('home');
   document.querySelectorAll('.nav-btn').forEach(btn => btn.addEventListener('click', () => { const view = btn.dataset.view; if (view === 'practice') startRandomPractice(); else setView(view); }));
   els.nextQuestionBtn.addEventListener('click', () => { state.currentIndex += 1; renderQuestion(); });
-  els.langToggle.addEventListener('click', () => { state.lang = state.lang === 'zh' ? 'en' : 'zh'; renderStaticText(); renderChapters(); if (!els.views.wrong.classList.contains('hidden')) renderWrongAnswers(); if (!els.views.practice.classList.contains('hidden')) renderQuestion(); });
+  els.langToggle.addEventListener('click', () => {
+    state.lang = state.lang === 'zh' ? 'en' : 'zh';
+    renderStaticText(); renderChapters(); renderExamGroups(); renderGuidelineLinks();
+    if (!els.views.practice.classList.contains('hidden')) renderQuestion();
+  });
   els.startPracticeBtn.addEventListener('click', startRandomPractice);
 }
 init();
