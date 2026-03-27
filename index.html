@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nancy Caroline 学习系统</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <h1>Nancy Caroline 学习系统</h1>
+        <p class="subtitle">Emergency Care in the Streets · 中英双语互动题库</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="langToggle">中文 / English</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar card">
+        <h2>学习模式</h2>
+        <div class="menu-group">
+          <button class="nav-btn active" data-view="home">首页</button>
+          <button class="nav-btn" data-view="chapters">按章节学习</button>
+          <button class="nav-btn" data-view="practice">随机练习</button>
+          <button class="nav-btn" data-view="wrong">错题本</button>
+        </div>
+
+        <h2>项目状态</h2>
+        <ul class="status-list">
+          <li>阶段：第一版网页骨架</li>
+          <li>语言：中英双语</li>
+          <li>题库：可扩展 JSON</li>
+          <li>对象：Nancy 全书</li>
+        </ul>
+      </aside>
+
+      <section class="content">
+        <div id="homeView" class="view card">
+          <h2>项目目标</h2>
+          <p>这不是普通小测验，而是一个可分享的网页版互动学习系统。目标是让使用者通过完整题库，以选择题互动方式系统走完整本 <strong>Nancy Caroline’s Emergency Care in the Streets</strong>。</p>
+          <div class="grid two">
+            <div>
+              <h3>当前已支持</h3>
+              <ul>
+                <li>中英双语题目显示</li>
+                <li>按章节筛选</li>
+                <li>即时判分与解析</li>
+                <li>错题本（本地浏览器保存）</li>
+              </ul>
+            </div>
+            <div>
+              <h3>接下来会补</h3>
+              <ul>
+                <li>更多章节题库</li>
+                <li>模拟考试模式</li>
+                <li>学习进度追踪</li>
+                <li>章节学习路线</li>
+              </ul>
+            </div>
+          </div>
+          <button id="startPracticeBtn" class="primary">开始练习</button>
+        </div>
+
+        <div id="chaptersView" class="view card hidden">
+          <h2>按章节学习</h2>
+          <div id="chapterList" class="chapter-list"></div>
+        </div>
+
+        <div id="practiceView" class="view card hidden">
+          <div class="practice-header">
+            <div>
+              <h2 id="practiceTitle">练习模式</h2>
+              <p id="practiceMeta">请选择一道题开始</p>
+            </div>
+            <div class="scorebox">
+              <span>Score</span>
+              <strong id="scoreValue">0 / 0</strong>
+            </div>
+          </div>
+          <div id="questionBox" class="question-box"></div>
+          <div class="practice-actions">
+            <button id="nextQuestionBtn" class="primary">下一题</button>
+          </div>
+        </div>
+
+        <div id="wrongView" class="view card hidden">
+          <h2>错题本</h2>
+          <div id="wrongList"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
