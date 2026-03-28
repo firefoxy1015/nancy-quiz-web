@@ -28,6 +28,7 @@
           <button class="nav-btn" data-view="review" id="navReview">Chapter Review</button>
           <button class="nav-btn" data-view="wrong" id="navWrong">WRONG ANSWERS</button>
           <button class="nav-btn" data-view="exam" id="navExam">EMR/PCP EXAM QUESTIONS</button>
+          <button class="nav-btn" data-view="copr" id="navCopr">COPR</button>
           <button class="nav-btn" data-view="guidelines" id="navGuidelines">GUIDELINE LINK</button>
         </div>
 
@@ -97,6 +98,17 @@
           <h2 id="examTitle">EMR/PCP EXAM QUESTIONS</h2>
           <p class="progress-note" id="examIntro"></p>
           <div id="examList" class="chapter-list"></div>
+        </div>
+
+        <div id="coprView" class="view card hidden">
+          <h2 id="coprTitle">COPR</h2>
+          <p class="progress-note" id="coprIntro"></p>
+          <div id="coprList" class="chapter-list"></div>
+        </div>
+
+        <div id="coprDetailView" class="view card hidden">
+          <button id="coprBackBtn" class="back-btn">← Back</button>
+          <div id="coprDetail" class="review-detail-panel"></div>
         </div>
 
         <div id="guidelinesView" class="view card hidden">

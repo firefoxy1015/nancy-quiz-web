@@ -3,12 +3,14 @@ const state = {
   data: null,
   examData: null,
   reviewData: null,
+  coprData: null,
   currentQuestions: [],
   currentIndex: 0,
   scoreCorrect: 0,
   scoreTotal: 0,
   selectedChapterId: null,
   selectedReviewChapterId: null,
+  selectedCoprSectionId: null,
   currentMode: 'nancy',
   wrongStorageKey: 'nancyQuizWrongAnswersV2'
 };
@@ -24,6 +26,7 @@ const i18n = {
     navReview: 'Chapter Review',
     navWrong: 'WRONG ANSWERS',
     navExam: 'EMR/PCP EXAM QUESTIONS',
+    navCopr: 'COPR',
     navGuidelines: 'GUIDELINE LINK',
     statusTitle: '项目状态',
     statusList: ['阶段：第一版网页骨架', '语言：中英双语', '题库：可扩展 JSON', '对象：Nancy 全书'],
@@ -57,6 +60,10 @@ const i18n = {
     wrongSourceExam: 'BC Guideline Exam 题库',
     examTitle: 'EMR/PCP EXAM QUESTIONS',
     examIntro: '这里是独立于 Nancy chapter 题库之外的 BC Provincial Examination Guideline 模拟题区。',
+    coprTitle: 'COPR',
+    coprIntro: '这里整理 COPR 对 PCP written exam 最重要的结构、规则与准备重点。',
+    coprBackLabel: '← 返回 COPR',
+    coprSourceLabel: '来源：COPR Entry to Practice Examinations Handbook (March 5, 2026)',
     guidelinesTitle: 'GUIDELINE LINK',
     guidelinesIntro: '这里先放常用 guideline 入口，后续再继续补充。',
     startLabel: '开始',
@@ -75,6 +82,7 @@ const i18n = {
     navReview: 'Chapter Review',
     navWrong: 'WRONG ANSWERS',
     navExam: 'EMR/PCP EXAM QUESTIONS',
+    navCopr: 'COPR',
     navGuidelines: 'GUIDELINE LINK',
     statusTitle: 'Project Status',
     statusList: ['Stage: First web prototype', 'Language: Bilingual (ZH/EN)', 'Question bank: Expandable JSON', 'Scope: Full Nancy textbook'],
@@ -108,6 +116,10 @@ const i18n = {
     wrongSourceExam: 'BC Guideline exam bank',
     examTitle: 'EMR/PCP EXAM QUESTIONS',
     examIntro: 'This is a standalone BC Provincial Examination Guideline question area, separate from the Nancy chapter bank.',
+    coprTitle: 'COPR',
+    coprIntro: 'This section explains the COPR exam structure and the most important preparation logic for the PCP written exam.',
+    coprBackLabel: '← Back to COPR',
+    coprSourceLabel: 'Source: COPR Entry to Practice Examinations Handbook (March 5, 2026)',
     guidelinesTitle: 'GUIDELINE LINK',
     guidelinesIntro: 'This section is reserved for quick guideline access and can be expanded with more links.',
     startLabel: 'Start',
@@ -127,6 +139,8 @@ const els = {
     reviewDetail: document.getElementById('reviewDetailView'),
     wrong: document.getElementById('wrongView'),
     exam: document.getElementById('examView'),
+    copr: document.getElementById('coprView'),
+    coprDetail: document.getElementById('coprDetailView'),
     guidelines: document.getElementById('guidelinesView')
   },
   chapterList: document.getElementById('chapterList'),
@@ -139,6 +153,9 @@ const els = {
   reviewBackBtn: document.getElementById('reviewBackBtn'),
   wrongList: document.getElementById('wrongList'),
   examList: document.getElementById('examList'),
+  coprList: document.getElementById('coprList'),
+  coprDetail: document.getElementById('coprDetail'),
+  coprBackBtn: document.getElementById('coprBackBtn'),
   guidelinesList: document.getElementById('guidelinesList'),
   nextQuestionBtn: document.getElementById('nextQuestionBtn'),
   langToggle: document.getElementById('langToggle'),
@@ -193,6 +210,7 @@ function setView(name) {
   if (name === 'review') renderChapterReviewList();
   if (name === 'wrong') renderWrongAnswers();
   if (name === 'exam') renderExamGroups();
+  if (name === 'copr') renderCoprList();
   if (name === 'guidelines') renderGuidelineLinks();
 }
 function renderStaticText() {
@@ -205,6 +223,7 @@ function renderStaticText() {
   document.getElementById('navReview').textContent = t('navReview');
   document.getElementById('navWrong').textContent = t('navWrong');
   document.getElementById('navExam').textContent = t('navExam');
+  document.getElementById('navCopr').textContent = t('navCopr');
   document.getElementById('navGuidelines').textContent = t('navGuidelines');
   document.getElementById('statusTitle').textContent = t('statusTitle');
   document.getElementById('homeGoalTitle').textContent = t('homeGoalTitle');
@@ -221,6 +240,9 @@ function renderStaticText() {
   document.getElementById('wrongIntro').textContent = t('wrongIntro');
   document.getElementById('examTitle').textContent = t('examTitle');
   document.getElementById('examIntro').textContent = t('examIntro');
+  document.getElementById('coprTitle').textContent = t('coprTitle');
+  document.getElementById('coprIntro').textContent = t('coprIntro');
+  els.coprBackBtn.textContent = t('coprBackLabel');
   document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
   document.getElementById('guidelinesIntro').textContent = t('guidelinesIntro');
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
@@ -376,6 +398,41 @@ function renderChapterReviewDetail() {
     ` : ''}
   `;
 }
+function renderCoprList() {
+  const sections = state.coprData?.sections || [];
+  els.coprList.innerHTML = sections.map(section => `
+    <div class="chapter-item review-item">
+      <div><strong>${state.lang === 'zh' ? section.titleZh : section.titleEn}</strong></div>
+      <button data-copr-open="${section.id}">${t('startLabel')}</button>
+    </div>
+  `).join('');
+  els.coprList.querySelectorAll('button[data-copr-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.selectedCoprSectionId = btn.dataset.coprOpen;
+      renderCoprDetail();
+      setView('coprDetail');
+    });
+  });
+}
+function renderCoprDetail() {
+  const item = (state.coprData?.sections || []).find(section => section.id === state.selectedCoprSectionId);
+  if (!item) {
+    els.coprDetail.innerHTML = `<p class="empty">${t('coprIntro')}</p>`;
+    return;
+  }
+  const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
+  const body = state.lang === 'zh' ? item.bodyZh : item.bodyEn;
+  const highlights = state.lang === 'zh' ? item.highlightsZh : item.highlightsEn;
+  els.coprDetail.innerHTML = `
+    <h3>${title}</h3>
+    <div class="review-section"><div class="empty">${t('coprSourceLabel')}</div></div>
+    <div class="review-section">${body.map(p => `<p>${p}</p>`).join('')}</div>
+    <div class="review-section">
+      <strong>${t('highlightsLabel')}</strong>
+      <ul>${highlights.map(point => `<li>${point}</li>`).join('')}</ul>
+    </div>
+  `;
+}
 function renderWrongAnswers() {
   const wrong = getWrongAnswers();
   if (!wrong.length) {
@@ -429,15 +486,17 @@ function renderGuidelineLinks() {
   `).join('');
 }
 async function init() {
-  const [nancyRes, examRes, reviewRes] = await Promise.all([
+  const [nancyRes, examRes, reviewRes, coprRes] = await Promise.all([
     fetch(`./data/question-bank.json?v=${Date.now()}`),
     fetch(`./data/exam-bank.json?v=${Date.now()}`),
-    fetch(`./data/chapter-review.json?v=${Date.now()}`)
+    fetch(`./data/chapter-review.json?v=${Date.now()}`),
+    fetch(`./data/copr-guide.json?v=${Date.now()}`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
   state.reviewData = await reviewRes.json();
-  renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderGuidelineLinks(); updateScore(); setView('home');
+  state.coprData = await coprRes.json();
+  renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderCoprList(); renderGuidelineLinks(); updateScore(); setView('home');
   document.querySelectorAll('.nav-btn').forEach(btn => btn.addEventListener('click', () => { const view = btn.dataset.view; if (view === 'practice') startRandomPractice(); else setView(view); }));
   els.nextQuestionBtn.addEventListener('click', () => { state.currentIndex += 1; renderQuestion(); });
   els.langToggle.addEventListener('click', () => {
@@ -446,12 +505,15 @@ async function init() {
     renderChapters();
     renderChapterReviewList();
     renderExamGroups();
+    renderCoprList();
     renderGuidelineLinks();
     if (!els.views.practice.classList.contains('hidden')) renderQuestion();
     if (!els.views.reviewDetail.classList.contains('hidden')) renderChapterReviewDetail();
+    if (!els.views.coprDetail.classList.contains('hidden')) renderCoprDetail();
     if (!els.views.wrong.classList.contains('hidden')) renderWrongAnswers();
   });
   els.startPracticeBtn.addEventListener('click', startRandomPractice);
   els.reviewBackBtn.addEventListener('click', () => setView('review'));
+  els.coprBackBtn.addEventListener('click', () => setView('copr'));
 }
 init();
