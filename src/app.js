@@ -4,6 +4,7 @@ const state = {
   examData: null,
   reviewData: null,
   coprData: null,
+  coprMockData: null,
   currentQuestions: [],
   currentIndex: 0,
   scoreCorrect: 0,
@@ -60,10 +61,6 @@ const i18n = {
     wrongSourceExam: 'BC Guideline Exam 题库',
     examTitle: 'EMR/PCP EXAM QUESTIONS',
     examIntro: '这里是独立于 Nancy chapter 题库之外的 BC Provincial Examination Guideline 模拟题区。',
-    coprTitle: 'COPR',
-    coprIntro: '这里整理 COPR 对 PCP written exam 最重要的结构、规则与准备重点。',
-    coprBackLabel: '← 返回 COPR',
-    coprSourceLabel: '来源：COPR Entry to Practice Examinations Handbook (March 5, 2026)',
     guidelinesTitle: 'GUIDELINE LINK',
     guidelinesIntro: '这里先放常用 guideline 入口，后续再继续补充。',
     startLabel: '开始',
@@ -120,6 +117,8 @@ const i18n = {
     coprIntro: 'This section explains the COPR exam structure and the most important preparation logic for the PCP written exam.',
     coprBackLabel: '← Back to COPR',
     coprSourceLabel: 'Source: COPR Entry to Practice Examinations Handbook (March 5, 2026)',
+    coprMockTitle: 'COPR Mock Exam',
+    coprMockIntro: 'This section provides COPR-style PCP written exam mock questions. Each start pulls a random 50-question test from a 300-question bank.',
     guidelinesTitle: 'GUIDELINE LINK',
     guidelinesIntro: 'This section is reserved for quick guideline access and can be expanded with more links.',
     startLabel: 'Start',
@@ -141,6 +140,7 @@ const els = {
     exam: document.getElementById('examView'),
     copr: document.getElementById('coprView'),
     coprDetail: document.getElementById('coprDetailView'),
+    coprMock: document.getElementById('coprMockView'),
     guidelines: document.getElementById('guidelinesView')
   },
   chapterList: document.getElementById('chapterList'),
@@ -156,6 +156,7 @@ const els = {
   coprList: document.getElementById('coprList'),
   coprDetail: document.getElementById('coprDetail'),
   coprBackBtn: document.getElementById('coprBackBtn'),
+  coprMockList: document.getElementById('coprMockList'),
   guidelinesList: document.getElementById('guidelinesList'),
   nextQuestionBtn: document.getElementById('nextQuestionBtn'),
   langToggle: document.getElementById('langToggle'),
@@ -211,6 +212,7 @@ function setView(name) {
   if (name === 'wrong') renderWrongAnswers();
   if (name === 'exam') renderExamGroups();
   if (name === 'copr') renderCoprList();
+  if (name === 'coprMock') renderCoprMockList();
   if (name === 'guidelines') renderGuidelineLinks();
 }
 function renderStaticText() {
@@ -243,6 +245,8 @@ function renderStaticText() {
   document.getElementById('coprTitle').textContent = t('coprTitle');
   document.getElementById('coprIntro').textContent = t('coprIntro');
   els.coprBackBtn.textContent = t('coprBackLabel');
+  document.getElementById('coprMockTitle').textContent = t('coprMockTitle');
+  document.getElementById('coprMockIntro').textContent = t('coprMockIntro');
   document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
   document.getElementById('guidelinesIntro').textContent = t('guidelinesIntro');
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
@@ -295,9 +299,12 @@ function renderQuestion() {
   }
   const chapter = state.currentMode === 'nancy' ? state.data.chapters.find(ch => ch.id === q.chapterId) : null;
   const examGroup = state.currentMode === 'exam' ? state.examData.groups.find(group => group.id === q.groupId) : null;
+  const coprMockGroup = state.currentMode === 'coprMock' ? state.coprMockData.groups.find(group => group.id === q.groupId) : null;
   els.practiceTitle.textContent = state.currentMode === 'exam'
     ? (state.lang === 'zh' ? (examGroup?.titleZh || t('examTitle')) : (examGroup?.titleEn || t('examTitle')))
-    : (state.lang === 'zh' ? (chapter?.titleZh || t('practiceTitle')) : (chapter?.titleEn || t('practiceTitle')));
+    : state.currentMode === 'coprMock'
+      ? (state.lang === 'zh' ? (coprMockGroup?.titleZh || t('coprMockTitle')) : (coprMockGroup?.titleEn || t('coprMockTitle')))
+      : (state.lang === 'zh' ? (chapter?.titleZh || t('practiceTitle')) : (chapter?.titleEn || t('practiceTitle')));
   els.practiceMeta.textContent = `${state.currentIndex + 1} / ${state.currentQuestions.length}`;
   const wrapper = document.createElement('div');
   wrapper.className = 'question-card';
@@ -323,7 +330,9 @@ function renderQuestion() {
           question: state.lang === 'zh' ? q.questionZh : q.questionEn,
           context: state.currentMode === 'exam'
             ? (state.lang === 'zh' ? (examGroup?.titleZh || t('examTitle')) : (examGroup?.titleEn || t('examTitle')))
-            : (state.lang === 'zh' ? (chapter?.titleZh || t('chaptersTitle')) : (chapter?.titleEn || t('chaptersTitle'))),
+            : state.currentMode === 'coprMock'
+              ? (state.lang === 'zh' ? (coprMockGroup?.titleZh || t('coprMockTitle')) : (coprMockGroup?.titleEn || t('coprMockTitle')))
+              : (state.lang === 'zh' ? (chapter?.titleZh || t('chaptersTitle')) : (chapter?.titleEn || t('chaptersTitle'))),
           explanation: state.lang === 'zh' ? q.explanationZh : q.explanationEn
         });
       }
@@ -400,18 +409,28 @@ function renderChapterReviewDetail() {
 }
 function renderCoprList() {
   const sections = state.coprData?.sections || [];
-  els.coprList.innerHTML = sections.map(section => `
+  els.coprList.innerHTML = `
     <div class="chapter-item review-item">
-      <div><strong>${state.lang === 'zh' ? section.titleZh : section.titleEn}</strong></div>
-      <button data-copr-open="${section.id}">${t('startLabel')}</button>
+      <div><strong>${state.lang === 'zh' ? 'COPR Mock Exam' : 'COPR Mock Exam'}</strong></div>
+      <button data-copr-mock-open="1">${t('startLabel')}</button>
     </div>
-  `).join('');
+    ${sections.map(section => `
+      <div class="chapter-item review-item">
+        <div><strong>${state.lang === 'zh' ? section.titleZh : section.titleEn}</strong></div>
+        <button data-copr-open="${section.id}">${t('startLabel')}</button>
+      </div>
+    `).join('')}
+  `;
   els.coprList.querySelectorAll('button[data-copr-open]').forEach(btn => {
     btn.addEventListener('click', () => {
       state.selectedCoprSectionId = btn.dataset.coprOpen;
       renderCoprDetail();
       setView('coprDetail');
     });
+  });
+  els.coprList.querySelector('[data-copr-mock-open]')?.addEventListener('click', () => {
+    renderCoprMockList();
+    setView('coprMock');
   });
 }
 function renderCoprDetail() {
@@ -433,6 +452,37 @@ function renderCoprDetail() {
     </div>
   `;
 }
+function startCoprMockExam(groupId) {
+  state.currentMode = 'coprMock';
+  state.selectedChapterId = null;
+  const all = state.coprMockData.questions.filter(q => q.groupId === groupId);
+  state.currentQuestions = shuffle(all).slice(0, 50);
+  state.currentIndex = 0;
+  state.scoreCorrect = 0;
+  state.scoreTotal = 0;
+  updateScore();
+  setView('practice');
+  renderQuestion();
+}
+function renderCoprMockList() {
+  const groups = state.coprMockData?.groups || [];
+  els.coprMockList.innerHTML = groups.map(group => {
+    const count = state.coprMockData.questions.filter(q => q.groupId === group.id).length;
+    return `
+      <div class="resource-card">
+        <div>
+          <strong>${state.lang === 'zh' ? group.titleZh : group.titleEn}</strong>
+          <div class="empty">${state.lang === 'zh' ? group.descriptionZh : group.descriptionEn}</div>
+          <div class="empty">${state.lang === 'zh' ? `题库总数：${count}；每次开始随机抽 50 题` : `Bank size: ${count}; each start draws a random 50-question test`}</div>
+        </div>
+        <button data-copr-mock-id="${group.id}">${t('startLabel')}</button>
+      </div>
+    `;
+  }).join('');
+  els.coprMockList.querySelectorAll('button[data-copr-mock-id]').forEach(btn => {
+    btn.addEventListener('click', () => startCoprMockExam(btn.dataset.coprMockId));
+  });
+}
 function renderWrongAnswers() {
   const wrong = getWrongAnswers();
   if (!wrong.length) {
@@ -447,7 +497,7 @@ function renderWrongAnswers() {
       <div class="resource-card wrong-answer-card">
         <div>
           <strong>${item.question}</strong>
-          <div class="empty">${item.mode === 'exam' ? t('wrongSourceExam') : t('wrongSourceNancy')}</div>
+          <div class="empty">${item.mode === 'exam' ? t('wrongSourceExam') : item.mode === 'coprMock' ? 'COPR Mock Exam' : t('wrongSourceNancy')}</div>
           <div class="empty">${item.context}</div>
           <div class="explanation-inline"><strong>${t('explanation')}</strong> ${item.explanation}</div>
         </div>
@@ -486,16 +536,18 @@ function renderGuidelineLinks() {
   `).join('');
 }
 async function init() {
-  const [nancyRes, examRes, reviewRes, coprRes] = await Promise.all([
-    fetch(`./data/question-bank.json?v=20260328-0355`),
-    fetch(`./data/exam-bank.json?v=20260328-0355`),
-    fetch(`./data/chapter-review.json?v=20260328-0355`),
-    fetch(`./data/copr-guide.json?v=20260328-0355`)
+  const [nancyRes, examRes, reviewRes, coprRes, coprMockRes] = await Promise.all([
+    fetch(`./data/question-bank.json?v=20260328-0446`),
+    fetch(`./data/exam-bank.json?v=20260328-0446`),
+    fetch(`./data/chapter-review.json?v=20260328-0446`),
+    fetch(`./data/copr-guide.json?v=20260328-0446`),
+    fetch(`./data/copr-mock-bank.json?v=20260328-0446`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
   state.reviewData = await reviewRes.json();
   state.coprData = await coprRes.json();
+  state.coprMockData = await coprMockRes.json();
   renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderCoprList(); renderGuidelineLinks(); updateScore(); setView('home');
   document.querySelectorAll('.nav-btn').forEach(btn => btn.addEventListener('click', () => { const view = btn.dataset.view; if (view === 'practice') startRandomPractice(); else setView(view); }));
   els.nextQuestionBtn.addEventListener('click', () => { state.currentIndex += 1; renderQuestion(); });
