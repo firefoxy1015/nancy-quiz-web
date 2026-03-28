@@ -487,10 +487,10 @@ function renderGuidelineLinks() {
 }
 async function init() {
   const [nancyRes, examRes, reviewRes, coprRes] = await Promise.all([
-    fetch(`./data/question-bank.json?v=${Date.now()}`),
-    fetch(`./data/exam-bank.json?v=${Date.now()}`),
-    fetch(`./data/chapter-review.json?v=${Date.now()}`),
-    fetch(`./data/copr-guide.json?v=${Date.now()}`)
+    fetch(`./data/question-bank.json?v=20260328-0355`),
+    fetch(`./data/exam-bank.json?v=20260328-0355`),
+    fetch(`./data/chapter-review.json?v=20260328-0355`),
+    fetch(`./data/copr-guide.json?v=20260328-0355`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
