@@ -543,11 +543,11 @@ function renderGuidelineLinks() {
 }
 async function init() {
   const [nancyRes, examRes, reviewRes, coprRes, coprMockRes] = await Promise.all([
-    fetch(`./data/question-bank.json?v=20260329-1249`),
-    fetch(`./data/exam-bank.json?v=20260329-1249`),
-    fetch(`./data/chapter-review.json?v=20260329-1249`),
-    fetch(`./data/copr-guide.json?v=20260329-1249`),
-    fetch(`./data/copr-mock-bank.json?v=20260329-1249`)
+    fetch(`./data/question-bank.json?v=20260404-1426`),
+    fetch(`./data/exam-bank.json?v=20260404-1426`),
+    fetch(`./data/chapter-review.json?v=20260404-1426`),
+    fetch(`./data/copr-guide.json?v=20260404-1426`),
+    fetch(`./data/copr-mock-bank.json?v=20260404-1426`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
