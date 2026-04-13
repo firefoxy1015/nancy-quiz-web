@@ -559,50 +559,57 @@ function renderScenarios() {
     const handover = state.lang === 'zh' ? item.handoverZh : item.handoverEn;
     const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
     return `
-      <div class="scenario-card">
-        <div class="scenario-headline">
-          <div class="scenario-title-line"><strong>${state.lang === 'zh' ? 'Scenario' : 'Scenario'}:</strong> ${title}</div>
-          <div class="scenario-title-line"><strong>${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}:</strong> ${item.scenarioNo}</div>
-        </div>
-        <div class="scenario-sheet-row"><span class="scenario-label">${state.lang === 'zh' ? 'Background' : 'Background'}:</span><div class="scenario-value">${background}</div></div>
-        <div class="scenario-sheet-row"><span class="scenario-label">${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}:</span><div class="scenario-value">${sceneSurvey}</div></div>
-        <div class="scenario-sheet-row"><span class="scenario-label">${state.lang === 'zh' ? 'Condition of Patient' : 'Condition of Patient'}:</span><div class="scenario-value">${condition}</div></div>
-        <div class="scenario-section">
-          <div class="scenario-block-title">${state.lang === 'zh' ? 'Primary Survey' : 'Primary Survey'}</div>
-          <ul class="scenario-compact-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul>
-        </div>
-        <div class="scenario-grid-two">
-          <div class="scenario-section">
-            <div class="scenario-block-title">${state.lang === 'zh' ? 'Secondary Survey Interview' : 'Secondary Survey Interview'}</div>
-            <ul class="scenario-compact-list">${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul>
-          </div>
-          <div class="scenario-section">
-            <div class="scenario-block-title">${state.lang === 'zh' ? 'Vital Signs' : 'Vital Signs'} <span class="scenario-q">(Q.${item.scenarioNo})</span></div>
-            <ul class="scenario-compact-list">${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul>
-          </div>
-        </div>
-        <div class="scenario-grid-two">
-          <div class="scenario-section">
-            <div class="scenario-block-title">${state.lang === 'zh' ? 'Rapid Transport?' : 'Rapid Transport?'}</div>
-            <p class="scenario-flag">${rapidTransport}</p>
-          </div>
-          <div class="scenario-section">
-            <div class="scenario-block-title">${state.lang === 'zh' ? 'Interventions' : 'Interventions'}</div>
-            <ul class="scenario-compact-list">${interventions.map(point => `<li>${point}</li>`).join('')}</ul>
-          </div>
-        </div>
-        <div class="scenario-section">
-          <div class="scenario-block-title">${state.lang === 'zh' ? 'Handover' : 'Handover'}</div>
-          <div class="scenario-value">${handover}</div>
-        </div>
-        <div class="scenario-section">
-          <div class="scenario-block-title">${state.lang === 'zh' ? 'Comments' : 'Comments'}</div>
-          <div class="scenario-value">${comments}</div>
-        </div>
-        <div class="scenario-section">
-          <div class="scenario-block-title">${state.lang === 'zh' ? 'Bonus Points' : 'Bonus Points'}</div>
-          <ul class="scenario-compact-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul>
-        </div>
+      <div class="scenario-card scenario-table-card">
+        <table class="scenario-table">
+          <tr>
+            <th>${state.lang === 'zh' ? 'Scenario' : 'Scenario'}</th>
+            <td>${title}</td>
+            <th>${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}</th>
+            <td class="scenario-no-cell">${item.scenarioNo}</td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Background' : 'Background'}</th>
+            <td colspan="3">${background}</td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}</th>
+            <td colspan="3">${sceneSurvey}</td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Condition of Patient' : 'Condition of Patient'}</th>
+            <td colspan="3">${condition}</td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Primary Survey' : 'Primary Survey'}</th>
+            <td colspan="3"><ul class="scenario-table-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Secondary Survey Interview' : 'Secondary Survey Interview'}</th>
+            <td colspan="3"><ul class="scenario-table-list">${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Vital Signs' : 'Vital Signs'} <span class="scenario-q">(Q.${item.scenarioNo})</span></th>
+            <td colspan="3"><ul class="scenario-table-list">${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Rapid Transport?' : 'Rapid Transport?'}</th>
+            <td>${rapidTransport}</td>
+            <th>${state.lang === 'zh' ? 'Interventions' : 'Interventions'}</th>
+            <td><ul class="scenario-table-list">${interventions.map(point => `<li>${point}</li>`).join('')}</ul></td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Handover' : 'Handover'}</th>
+            <td colspan="3">${handover}</td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Comments' : 'Comments'}</th>
+            <td colspan="3">${comments}</td>
+          </tr>
+          <tr>
+            <th>${state.lang === 'zh' ? 'Bonus Points' : 'Bonus Points'}</th>
+            <td colspan="3"><ul class="scenario-table-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></td>
+          </tr>
+        </table>
       </div>
     `;
   }).join('');
@@ -625,7 +632,7 @@ async function init() {
     fetch(`./data/chapter-review.json?v=20260404-1426`),
     fetch(`./data/copr-guide.json?v=20260404-1426`),
     fetch(`./data/copr-mock-bank.json?v=20260404-1426`),
-    fetch(`./data/scenarios.json?v=20260412-scenarios2`)
+    fetch(`./data/scenarios.json?v=20260412-scenarios3`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();

@@ -147,8 +147,20 @@ button.primary:hover { background: var(--primary-2); }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
   .grid.two { grid-template-columns: 1fr; }
-  .scenario-grid-two { grid-template-columns: 1fr; }
-  .scenario-sheet-row { grid-template-columns: 1fr; }
+  .scenario-table,
+  .scenario-table tbody,
+  .scenario-table tr,
+  .scenario-table th,
+  .scenario-table td {
+    display: block;
+    width: 100%;
+  }
+  .scenario-table th {
+    border-bottom: 0;
+  }
+  .scenario-table td {
+    border-top: 0;
+  }
 }
 
 .progress-note{margin-top:12px;color:#5f6b84;font-size:14px;}
@@ -159,63 +171,44 @@ button.primary:hover { background: var(--primary-2); }
   border-radius: 14px;
   background: #fff;
 }
-.scenario-headline {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
+.scenario-table-card {
+  padding: 0;
+  overflow: hidden;
 }
-.scenario-title-line {
-  font-size: 16px;
-  line-height: 1.5;
+.scenario-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
-.scenario-sheet-row {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 12px;
-  margin-top: 12px;
+.scenario-table th,
+.scenario-table td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  vertical-align: top;
+  line-height: 1.55;
+  text-align: left;
 }
-.scenario-label {
+.scenario-table th {
+  width: 18%;
+  background: #f7f9fc;
   font-weight: 700;
 }
-.scenario-value {
-  line-height: 1.6;
+.scenario-table td {
+  background: #fff;
 }
-.scenario-section {
-  margin-top: 14px;
-}
-.scenario-block-title {
+.scenario-no-cell {
+  white-space: nowrap;
   font-weight: 700;
-  margin-bottom: 6px;
 }
 .scenario-q {
   color: var(--muted);
   font-weight: 600;
 }
-.scenario-grid-two {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 6px;
+.scenario-table-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.55;
 }
-.scenario-compact-list {
-  margin: 8px 0 0;
-  padding-left: 20px;
-  line-height: 1.6;
-}
-.scenario-section p {
-  margin: 8px 0 0;
-  color: var(--text);
-  line-height: 1.6;
-}
-.scenario-flag {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #eef3ff;
-  color: var(--primary-2);
-  font-weight: 700;
+.scenario-table-list li + li {
+  margin-top: 4px;
 }
