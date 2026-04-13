@@ -560,21 +560,49 @@ function renderScenarios() {
     const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
     return `
       <div class="scenario-card">
-        <div class="scenario-topline">
-          <h3>${title}</h3>
-          <div class="scenario-no">${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}: ${item.scenarioNo}</div>
+        <div class="scenario-headline">
+          <div class="scenario-title-line"><strong>${state.lang === 'zh' ? 'Scenario' : 'Scenario'}:</strong> ${title}</div>
+          <div class="scenario-title-line"><strong>${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}:</strong> ${item.scenarioNo}</div>
         </div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Background / 背景' : 'Background'}</strong><p>${background}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Scene Survey / 现场评估' : 'Scene Survey'}</strong><p>${sceneSurvey}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Condition of Patient / 病人状态' : 'Condition of Patient'}</strong><p>${condition}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Primary Survey / 初级评估' : 'Primary Survey'}</strong><ul>${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Secondary Survey / 次级评估' : 'Secondary Survey'}</strong><ul>${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Vital Signs / 生命体征' : 'Vital Signs'}</strong><ul>${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Rapid Transport? / 是否快速转运' : 'Rapid Transport?'}</strong><p class="scenario-flag">${rapidTransport}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Interventions / 处理' : 'Interventions'}</strong><ul>${interventions.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Handover / 交接要点' : 'Handover'}</strong><p>${handover}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Bonus Points / 加分点' : 'Bonus Points'}</strong><ul>${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Comments / 备注' : 'Comments'}</strong><p>${comments}</p></div>
+        <div class="scenario-sheet-row"><span class="scenario-label">${state.lang === 'zh' ? 'Background' : 'Background'}:</span><div class="scenario-value">${background}</div></div>
+        <div class="scenario-sheet-row"><span class="scenario-label">${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}:</span><div class="scenario-value">${sceneSurvey}</div></div>
+        <div class="scenario-sheet-row"><span class="scenario-label">${state.lang === 'zh' ? 'Condition of Patient' : 'Condition of Patient'}:</span><div class="scenario-value">${condition}</div></div>
+        <div class="scenario-section">
+          <div class="scenario-block-title">${state.lang === 'zh' ? 'Primary Survey' : 'Primary Survey'}</div>
+          <ul class="scenario-compact-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul>
+        </div>
+        <div class="scenario-grid-two">
+          <div class="scenario-section">
+            <div class="scenario-block-title">${state.lang === 'zh' ? 'Secondary Survey Interview' : 'Secondary Survey Interview'}</div>
+            <ul class="scenario-compact-list">${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul>
+          </div>
+          <div class="scenario-section">
+            <div class="scenario-block-title">${state.lang === 'zh' ? 'Vital Signs' : 'Vital Signs'} <span class="scenario-q">(Q.${item.scenarioNo})</span></div>
+            <ul class="scenario-compact-list">${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul>
+          </div>
+        </div>
+        <div class="scenario-grid-two">
+          <div class="scenario-section">
+            <div class="scenario-block-title">${state.lang === 'zh' ? 'Rapid Transport?' : 'Rapid Transport?'}</div>
+            <p class="scenario-flag">${rapidTransport}</p>
+          </div>
+          <div class="scenario-section">
+            <div class="scenario-block-title">${state.lang === 'zh' ? 'Interventions' : 'Interventions'}</div>
+            <ul class="scenario-compact-list">${interventions.map(point => `<li>${point}</li>`).join('')}</ul>
+          </div>
+        </div>
+        <div class="scenario-section">
+          <div class="scenario-block-title">${state.lang === 'zh' ? 'Handover' : 'Handover'}</div>
+          <div class="scenario-value">${handover}</div>
+        </div>
+        <div class="scenario-section">
+          <div class="scenario-block-title">${state.lang === 'zh' ? 'Comments' : 'Comments'}</div>
+          <div class="scenario-value">${comments}</div>
+        </div>
+        <div class="scenario-section">
+          <div class="scenario-block-title">${state.lang === 'zh' ? 'Bonus Points' : 'Bonus Points'}</div>
+          <ul class="scenario-compact-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul>
+        </div>
       </div>
     `;
   }).join('');
