@@ -147,6 +147,18 @@ button.primary:hover { background: var(--primary-2); }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
   .grid.two { grid-template-columns: 1fr; }
+  .topbar {
+    padding: 16px 18px;
+    gap: 12px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .topbar h1 { font-size: 24px; }
+  .layout { padding: 14px; gap: 14px; }
+  .card { padding: 16px; border-radius: 14px; }
+  .menu-group { gap: 10px; }
+  button { padding: 12px 14px; }
+  .scenario-card { border-radius: 12px; }
   .scenario-table,
   .scenario-table tbody,
   .scenario-table tr,
@@ -155,11 +167,36 @@ button.primary:hover { background: var(--primary-2); }
     display: block;
     width: 100%;
   }
+  .scenario-table tr {
+    border-bottom: 1px solid var(--line);
+  }
+  .scenario-table tr:last-child {
+    border-bottom: 0;
+  }
+  .scenario-table th,
+  .scenario-table td {
+    padding: 10px 12px;
+    border-left: 0;
+    border-right: 0;
+  }
   .scenario-table th {
     border-bottom: 0;
+    background: #eef3ff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
   }
   .scenario-table td {
     border-top: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .scenario-no-cell {
+    font-size: 16px;
+  }
+  .scenario-table-list {
+    padding-left: 18px;
   }
 }
 
