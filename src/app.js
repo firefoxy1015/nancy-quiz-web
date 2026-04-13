@@ -554,6 +554,10 @@ function renderScenarios() {
     const secondarySurvey = state.lang === 'zh' ? item.secondarySurveyZh : item.secondarySurveyEn;
     const vitalSigns = state.lang === 'zh' ? item.vitalSignsZh : item.vitalSignsEn;
     const comments = state.lang === 'zh' ? item.commentsZh : item.commentsEn;
+    const rapidTransport = state.lang === 'zh' ? item.rapidTransportZh : item.rapidTransportEn;
+    const interventions = state.lang === 'zh' ? item.interventionsZh : item.interventionsEn;
+    const handover = state.lang === 'zh' ? item.handoverZh : item.handoverEn;
+    const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
     return `
       <div class="scenario-card">
         <div class="scenario-topline">
@@ -566,6 +570,10 @@ function renderScenarios() {
         <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Primary Survey / 初级评估' : 'Primary Survey'}</strong><ul>${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></div>
         <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Secondary Survey / 次级评估' : 'Secondary Survey'}</strong><ul>${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></div>
         <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Vital Signs / 生命体征' : 'Vital Signs'}</strong><ul>${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Rapid Transport? / 是否快速转运' : 'Rapid Transport?'}</strong><p class="scenario-flag">${rapidTransport}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Interventions / 处理' : 'Interventions'}</strong><ul>${interventions.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Handover / 交接要点' : 'Handover'}</strong><p>${handover}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Bonus Points / 加分点' : 'Bonus Points'}</strong><ul>${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></div>
         <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Comments / 备注' : 'Comments'}</strong><p>${comments}</p></div>
       </div>
     `;
