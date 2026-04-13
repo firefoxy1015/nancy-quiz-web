@@ -157,9 +157,21 @@ button.primary:hover { background: var(--primary-2); }
   border-radius: 14px;
   background: #fff;
 }
+.scenario-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
 .scenario-card h3 {
   margin-top: 0;
   margin-bottom: 14px;
+}
+.scenario-no {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 .scenario-section {
   margin-top: 12px;

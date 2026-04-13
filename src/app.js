@@ -547,19 +547,26 @@ function renderScenarios() {
   const scenarios = state.scenariosData?.scenarios || [];
   els.scenariosList.innerHTML = scenarios.map(item => {
     const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
-    const setting = state.lang === 'zh' ? item.settingZh : item.settingEn;
-    const dispatch = state.lang === 'zh' ? item.dispatchZh : item.dispatchEn;
-    const findings = state.lang === 'zh' ? item.arrivalFindingsZh : item.arrivalFindingsEn;
-    const cprFocus = state.lang === 'zh' ? item.cprFocusZh : item.cprFocusEn;
-    const pearls = state.lang === 'zh' ? item.examPearlsZh : item.examPearlsEn;
+    const background = state.lang === 'zh' ? item.backgroundZh : item.backgroundEn;
+    const sceneSurvey = state.lang === 'zh' ? item.sceneSurveyZh : item.sceneSurveyEn;
+    const condition = state.lang === 'zh' ? item.conditionZh : item.conditionEn;
+    const primarySurvey = state.lang === 'zh' ? item.primarySurveyZh : item.primarySurveyEn;
+    const secondarySurvey = state.lang === 'zh' ? item.secondarySurveyZh : item.secondarySurveyEn;
+    const vitalSigns = state.lang === 'zh' ? item.vitalSignsZh : item.vitalSignsEn;
+    const comments = state.lang === 'zh' ? item.commentsZh : item.commentsEn;
     return `
       <div class="scenario-card">
-        <h3>${title}</h3>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Scene / 场景' : 'Scene'}</strong><p>${setting}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Dispatch / 派遣信息' : 'Dispatch'}</strong><p>${dispatch}</p></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Arrival findings / 到场所见' : 'Arrival findings'}</strong><ul>${findings.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'CPR focus / CPR 核心' : 'CPR focus'}</strong><ul>${cprFocus.map(point => `<li>${point}</li>`).join('')}</ul></div>
-        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Exam pearls / 考点提醒' : 'Exam pearls'}</strong><ul>${pearls.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-topline">
+          <h3>${title}</h3>
+          <div class="scenario-no">${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}: ${item.scenarioNo}</div>
+        </div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Background / 背景' : 'Background'}</strong><p>${background}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Scene Survey / 现场评估' : 'Scene Survey'}</strong><p>${sceneSurvey}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Condition of Patient / 病人状态' : 'Condition of Patient'}</strong><p>${condition}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Primary Survey / 初级评估' : 'Primary Survey'}</strong><ul>${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Secondary Survey / 次级评估' : 'Secondary Survey'}</strong><ul>${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Vital Signs / 生命体征' : 'Vital Signs'}</strong><ul>${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Comments / 备注' : 'Comments'}</strong><p>${comments}</p></div>
       </div>
     `;
   }).join('');
