@@ -625,7 +625,7 @@ async function init() {
     fetch(`./data/chapter-review.json?v=20260404-1426`),
     fetch(`./data/copr-guide.json?v=20260404-1426`),
     fetch(`./data/copr-mock-bank.json?v=20260404-1426`),
-    fetch(`./data/scenarios.json?v=20260412-scenarios1`)
+    fetch(`./data/scenarios.json?v=20260412-scenarios2`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
