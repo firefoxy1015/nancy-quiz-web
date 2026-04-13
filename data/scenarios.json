@@ -1,0 +1,484 @@
+{
+  "meta": {
+    "title": "BC PCP CPR Scenarios",
+    "version": 1,
+    "targetProvince": "BC",
+    "targetExamYear": 2027,
+    "focus": "license exam style CPR calls"
+  },
+  "scenarios": [
+    {
+      "id": "scenario-witnessed-vf-gym",
+      "titleEn": "Witnessed collapse at a gym (adult VF arrest)",
+      "titleZh": "健身房目击倒地（成人 VF 心脏骤停）",
+      "settingEn": "A 54-year-old male suddenly collapses on a treadmill at a busy gym. Staff saw him clutch his chest, stumble, and fall. A bystander started compressions before your arrival.",
+      "settingZh": "54 岁男性在健身房跑步机上突然倒地。工作人员看到他先捂胸、踉跄，然后倒下。你到场前已有旁观者开始按压。",
+      "dispatchEn": "Unconscious, not breathing normally, CPR in progress, AED available on site.",
+      "dispatchZh": "无意识、无正常呼吸、现场 CPR 进行中，现场有 AED。",
+      "arrivalFindingsEn": [
+        "Patient supine on the floor, unresponsive, apneic except for occasional agonal gasps",
+        "No carotid pulse felt within 10 seconds",
+        "Skin pale and cool, pupils mid-sized",
+        "Gym staff report collapse was less than 4 minutes ago"
+      ],
+      "arrivalFindingsZh": [
+        "患者平躺地面，无反应，除偶发濒死喘息外无正常呼吸",
+        "10 秒内摸不到颈动脉搏动",
+        "皮肤苍白偏凉，瞳孔中等大小",
+        "健身房人员表示倒地发生不到 4 分钟"
+      ],
+      "cprFocusEn": [
+        "Recognize agonal respirations are not normal breathing",
+        "High-quality CPR with rapid defibrillation priority",
+        "Minimize peri-shock pause and rotate compressors early",
+        "Use pit-crew style role assignment if enough helpers are present"
+      ],
+      "cprFocusZh": [
+        "识别濒死喘息不等于正常呼吸",
+        "高质量 CPR + 尽快除颤是核心",
+        "尽量减少电击前后暂停时间，尽早轮换按压者",
+        "若现场人手足够，尽量用 pit-crew 分工"
+      ],
+      "examPearlsEn": [
+        "Classic license-style arrest: witnessed adult collapse + immediate CPR + shockable rhythm",
+        "Strong candidates think about pad placement, compressor rotation, and scene leadership",
+        "Do not waste time on long pulse checks or unnecessary movement before first shock"
+      ],
+      "examPearlsZh": [
+        "这是典型 license exam 心脏骤停题：目击倒地 + 立即 CPR + 可电击节律",
+        "高分点常在贴片位置、按压轮换、现场领导与节奏控制",
+        "不要在首次电击前浪费时间做过长脉搏检查或无意义搬动"
+      ]
+    },
+    {
+      "id": "scenario-unwitnessed-home-arrest",
+      "titleEn": "Unwitnessed home arrest (elderly downtime unknown)",
+      "titleZh": "家中未目击心脏骤停（老年人，停搏时间不明）",
+      "settingEn": "An 81-year-old female is found on the bedroom floor by her husband at 06:30. He last saw her awake around 02:00 when she went to the bathroom.",
+      "settingZh": "81 岁女性在卧室地板上被丈夫于早上 06:30 发现。丈夫最后一次看到她清醒是在凌晨 02:00，她起床去洗手间时。",
+      "dispatchEn": "Cardiac or respiratory arrest, downtime unknown.",
+      "dispatchZh": "心脏或呼吸骤停，停搏时间不明。",
+      "arrivalFindingsEn": [
+        "Patient unresponsive, not breathing, pulseless",
+        "Dependent lividity is not obvious, body cool but not cold",
+        "Medication bottles nearby include antihypertensives and anticoagulants",
+        "Family is distraught and asking if she can still be saved"
+      ],
+      "arrivalFindingsZh": [
+        "患者无反应、无呼吸、无脉搏",
+        "尸斑不明显，身体偏凉但不冰冷",
+        "附近药瓶包括降压药和抗凝药",
+        "家属非常崩溃，不断问还有没有救"
+      ],
+      "cprFocusEn": [
+        "Work an organized arrest while also gathering downtime clues",
+        "Balance immediate resuscitation with recognition of prognosis and context",
+        "Maintain compression quality even in emotionally difficult home scenes",
+        "Scene communication and family management matter"
+      ],
+      "cprFocusZh": [
+        "一边有条理地进行心脏骤停处理，一边收集停搏时间线索",
+        "要在立即复苏与预后/情境判断之间取得平衡",
+        "即使在情绪化家庭现场，也要保持按压质量",
+        "现场沟通与家属管理同样重要"
+      ],
+      "examPearlsEn": [
+        "This tests judgment under uncertainty, not just compression mechanics",
+        "Candidates must think about downtime clues, medications, and reversible causes",
+        "The emotional scene is part of the exam difficulty"
+      ],
+      "examPearlsZh": [
+        "这类题考的是不确定情境下的判断，不只是按压动作",
+        "考生要想到停搏时间线索、药物背景和可逆病因",
+        "家庭情绪现场本身就是考试难点的一部分"
+      ]
+    },
+    {
+      "id": "scenario-choking-to-arrest-restaurant",
+      "titleEn": "Restaurant choking that progresses to arrest", 
+      "titleZh": "餐厅异物梗阻进展为心脏骤停",
+      "settingEn": "A 67-year-old male choked on steak in a restaurant. Initially he was conscious and unable to speak; by the time you arrive he has collapsed.",
+      "settingZh": "67 岁男性在餐厅吃牛排时发生气道异物梗阻。最初他清醒但无法说话；等你到场时已经倒地。",
+      "dispatchEn": "Choking, now unconscious.",
+      "dispatchZh": "异物梗阻，现已失去意识。",
+      "arrivalFindingsEn": [
+        "Patient is cyanotic, pulseless, and apneic",
+        "Bystanders attempted abdominal thrusts before collapse",
+        "Food debris is seen in the mouth but not easily removable with fingers",
+        "Family states collapse happened less than 2 minutes ago"
+      ],
+      "arrivalFindingsZh": [
+        "患者发绀、无脉搏、无呼吸",
+        "旁观者在倒地前做过腹部冲击",
+        "口腔内可见食物残渣，但无法轻易手指清除",
+        "家属称倒地发生在 2 分钟内"
+      ],
+      "cprFocusEn": [
+        "Begin CPR immediately once unresponsive and pulseless",
+        "Think about airway obstruction as the likely cause of arrest",
+        "Coordinate compressions with airway attempts and visible foreign body checks",
+        "Avoid blind finger sweeps"
+      ],
+      "cprFocusZh": [
+        "一旦无反应无脉搏，立刻开始 CPR",
+        "要把气道异物梗阻视为最可能的骤停原因",
+        "将按压、气道处理和可见异物检查有节奏地配合起来",
+        "避免盲目手指掏取"
+      ],
+      "examPearlsEn": [
+        "This is a classic airway-to-arrest transition scenario",
+        "The exam often checks whether you change from choking algorithm to full arrest management at the right time",
+        "Good candidates remember that oxygenation/ventilation problems caused the arrest"
+      ],
+      "examPearlsZh": [
+        "这是典型“异物梗阻转心脏骤停”场景",
+        "考试常考你是否能在正确时间点从 choking 流程切到 full arrest management",
+        "高分考生会记得：本质上是氧合/通气问题导致的骤停"
+      ]
+    },
+    {
+      "id": "scenario-drowning-pool-child",
+      "titleEn": "Pediatric drowning arrest at a backyard pool",
+      "titleZh": "后院泳池儿童溺水心脏骤停",
+      "settingEn": "A 4-year-old child is pulled from a backyard pool during a family gathering. Estimated submersion time is 3 to 5 minutes before removal from the water.",
+      "settingZh": "家庭聚会时，一名 4 岁儿童从后院泳池中被拉出。估计淹没时间约 3 到 5 分钟。",
+      "dispatchEn": "Child not breathing after drowning.",
+      "dispatchZh": "儿童溺水后无呼吸。",
+      "arrivalFindingsEn": [
+        "Child is limp, cyanotic, and unresponsive",
+        "No palpable pulse, no effective respirations",
+        "Wet clothing, pool deck crowded with panicked family members",
+        "One family member is attempting shallow ineffective compressions"
+      ],
+      "arrivalFindingsZh": [
+        "儿童身体松软、发绀、无反应",
+        "摸不到脉搏，无有效呼吸",
+        "衣物湿透，泳池边围满惊慌家属",
+        "一位家属正在做很浅且无效的按压"
+      ],
+      "cprFocusEn": [
+        "Pediatric arrest is often hypoxic in origin, so oxygenation and ventilation matter heavily",
+        "Deliver high-quality age-appropriate CPR with effective ventilations",
+        "Control scene chaos and create working space rapidly",
+        "Anticipate the emotional weight of a pediatric arrest"
+      ],
+      "cprFocusZh": [
+        "儿科骤停常由缺氧引起，所以氧合与通气特别关键",
+        "要做符合年龄的高质量 CPR，并确保有效通气",
+        "快速控制混乱现场，腾出工作空间",
+        "要预判儿科骤停带来的巨大情绪压力"
+      ],
+      "examPearlsEn": [
+        "This tests whether you remember that many pediatric arrests are respiratory first, cardiac second",
+        "Candidates are expected to adapt CPR technique to child size",
+        "Scene control and leadership are often embedded in the stem"
+      ],
+      "examPearlsZh": [
+        "这类题常考：儿科骤停往往先是呼吸问题，后才发展成心脏骤停",
+        "考生需要根据儿童体型调整 CPR 技术",
+        "题干里常暗含现场控制和领导能力考点"
+      ]
+    },
+    {
+      "id": "scenario-sids-infant-bedroom",
+      "titleEn": "Unresponsive infant in a crib (possible SIDS presentation)",
+      "titleZh": "婴儿床内无反应婴儿（疑似 SIDS 表现）",
+      "settingEn": "A 3-month-old infant is found unresponsive in a crib by a parent during an afternoon nap check. The infant was last seen normal 45 minutes earlier.",
+      "settingZh": "家长午睡查看时发现一名 3 个月大的婴儿在婴儿床中无反应。45 分钟前最后一次看到时仍正常。",
+      "dispatchEn": "Infant not breathing.",
+      "dispatchZh": "婴儿无呼吸。",
+      "arrivalFindingsEn": [
+        "Infant is pale, limp, and apneic",
+        "No central pulse appreciated quickly",
+        "Room is quiet but emotionally overwhelming, parents crying and blaming themselves",
+        "No obvious trauma or signs of choking"
+      ],
+      "arrivalFindingsZh": [
+        "婴儿苍白、松软、无呼吸",
+        "无法迅速摸到中心脉搏",
+        "房间很安静，但情绪极度沉重，父母在哭并自责",
+        "无明显外伤或异物梗阻迹象"
+      ],
+      "cprFocusEn": [
+        "Immediate infant CPR with correct technique and ratio awareness",
+        "Gentle but efficient airway positioning and ventilations",
+        "Maintain professionalism despite intense parental distress",
+        "Document timeline carefully because history matters"
+      ],
+      "cprFocusZh": [
+        "立刻按正确婴儿技术开始 CPR，并注意按压通气比例",
+        "气道摆位和通气要轻柔但高效",
+        "在家长极度悲痛的情况下依然保持专业",
+        "仔细记录时间线，因为病史对判断很重要"
+      ],
+      "examPearlsEn": [
+        "Infant scenarios test fine motor CPR details and emotional control",
+        "The exam may probe whether you can stay systematic in a devastating scene",
+        "History and timing remain important even when CPR is underway"
+      ],
+      "examPearlsZh": [
+        "婴儿场景常考 CPR 细节动作和情绪稳定度",
+        "考试也会看你能否在极端悲剧现场保持系统性",
+        "即使 CPR 已开始，病史和时间线仍然重要"
+      ]
+    },
+    {
+      "id": "scenario-opioid-overdose-washroom",
+      "titleEn": "Opioid overdose arrest in a public washroom",
+      "titleZh": "公共洗手间阿片类药物过量致心脏骤停",
+      "settingEn": "A 29-year-old male is found collapsed in a locked mall washroom stall. Security forced entry after he had been inside for an unknown amount of time.",
+      "settingZh": "29 岁男性被发现倒在商场洗手间隔间内。保安在其停留时间不明的情况下强行开门进入。",
+      "dispatchEn": "Unconscious person, possible overdose.",
+      "dispatchZh": "无意识患者，疑似药物过量。",
+      "arrivalFindingsEn": [
+        "Patient unresponsive, cyanotic, pulseless, not breathing",
+        "Drug paraphernalia nearby including burnt foil and syringe",
+        "Scene is cramped and awkward for team positioning",
+        "Friends on scene say he used fentanyl 10 minutes ago"
+      ],
+      "arrivalFindingsZh": [
+        "患者无反应、发绀、无脉搏、无呼吸",
+        "旁边有吸毒工具，包括烧焦锡纸和注射器",
+        "现场狭窄，团队站位和操作都困难",
+        "同行朋友说他 10 分钟前吸食了 fentanyl"
+      ],
+      "cprFocusEn": [
+        "Treat as cardiac arrest when pulseless, not just overdose sedation",
+        "High-quality CPR in a confined environment requires deliberate positioning",
+        "Address airway/ventilation aggressively because the arrest is likely hypoxic/toxicologic in origin",
+        "Scene safety and sharps awareness matter"
+      ],
+      "cprFocusZh": [
+        "既然无脉搏，就按心脏骤停处理，而不只是药物过量昏睡",
+        "狭小空间里的高质量 CPR 需要刻意设计站位",
+        "由于很可能是缺氧/毒理性骤停，气道与通气处理尤其关键",
+        "要兼顾现场安全和锐器风险"
+      ],
+      "examPearlsEn": [
+        "This tests whether you can correctly transition from overdose thinking to arrest thinking",
+        "Candidates must not let the cause distract them from basic arrest priorities",
+        "Confined-space logistics are often part of the challenge"
+      ],
+      "examPearlsZh": [
+        "这类题考你能否从 overdose 思维正确切换到 arrest 思维",
+        "不能因为病因明显，就忽略基础的骤停优先级",
+        "狭小环境操作常是题目附加难点"
+      ]
+    },
+    {
+      "id": "scenario-trauma-arrest-highway",
+      "titleEn": "High-speed MVC with traumatic arrest",
+      "titleZh": "高速车祸创伤性心脏骤停",
+      "settingEn": "A 36-year-old unrestrained driver is ejected during a high-speed rollover on a highway. Fire has already secured the vehicle hazards when you arrive.",
+      "settingZh": "36 岁未系安全带司机在高速翻滚车祸中被甩出车外。你到场时消防已控制车辆相关危险。",
+      "dispatchEn": "Major trauma, patient ejected, CPR may be needed.",
+      "dispatchZh": "重大创伤，患者被甩出，可能需要 CPR。",
+      "arrivalFindingsEn": [
+        "Patient supine on gravel shoulder, apneic and pulseless",
+        "Massive facial trauma, chest wall deformity, and suspected pelvic instability",
+        "Bystanders attempted to move the patient before EMS arrival",
+        "Blood visible on clothing and roadway"
+      ],
+      "arrivalFindingsZh": [
+        "患者仰卧在路肩碎石地面，无呼吸无脉搏",
+        "面部重创、胸壁畸形、疑似骨盆不稳",
+        "旁观者在 EMS 到达前试图移动患者",
+        "衣物和路面可见血迹"
+      ],
+      "cprFocusEn": [
+        "Traumatic arrest requires thinking beyond compressions alone",
+        "Address likely reversible causes such as airway compromise, tension physiology, and exsanguination context",
+        "Manual stabilization and team choreography matter when trauma and CPR collide",
+        "Avoid treating this like a simple medical VF arrest"
+      ],
+      "cprFocusZh": [
+        "创伤性骤停不能只想到按压本身",
+        "要同时考虑可逆原因，如气道问题、张力生理、失血背景",
+        "当创伤处理和 CPR 叠加时，手动固定与团队编排很重要",
+        "不能把这题当成普通医疗性 VF 骤停来做"
+      ],
+      "examPearlsEn": [
+        "A license exam may use this to test distinction between medical and traumatic arrest thinking",
+        "Strong candidates identify mechanism, prognosis clues, and reversible priorities quickly",
+        "Scene safety and trauma pattern recognition remain essential"
+      ],
+      "examPearlsZh": [
+        "license exam 常用这类题考“医疗性骤停”和“创伤性骤停”思路区别",
+        "高分点在快速识别损伤机制、预后线索和可逆优先项",
+        "现场安全和创伤模式识别仍是核心"
+      ]
+    },
+    {
+      "id": "scenario-postpartum-collapse-home",
+      "titleEn": "Postpartum collapse at home with CPR in progress",
+      "titleZh": "产后居家突然倒地，现场 CPR 进行中",
+      "settingEn": "A 32-year-old female is 6 days postpartum and suddenly collapses at home after complaining of shortness of breath and chest pain.",
+      "settingZh": "32 岁女性产后第 6 天，在主诉呼吸困难和胸痛后于家中突然倒地。",
+      "dispatchEn": "Female unconscious, not breathing, family doing CPR.",
+      "dispatchZh": "女性无意识、无呼吸，家属正在做 CPR。",
+      "arrivalFindingsEn": [
+        "Patient is pulseless and apneic on the living room floor",
+        "Husband states she looked anxious and breathless for 10 minutes before collapse",
+        "Fresh postpartum supplies and medications are visible nearby",
+        "A newborn is crying in the room, increasing family chaos"
+      ],
+      "arrivalFindingsZh": [
+        "患者躺在客厅地板上，无脉搏无呼吸",
+        "丈夫说她倒地前约 10 分钟就已经焦躁、气短",
+        "附近可见产后用品和药物",
+        "房内新生儿正在哭，进一步加剧家庭混乱"
+      ],
+      "cprFocusEn": [
+        "Run high-quality CPR while considering postpartum high-risk causes such as embolic events",
+        "Recognize pre-arrest dyspnea/chest pain as a major clue",
+        "Family and environmental distraction can degrade performance if not controlled",
+        "This is a high-acuity medical arrest with a specific risk context"
+      ],
+      "cprFocusZh": [
+        "进行高质量 CPR 的同时，要考虑产后高风险病因，如栓塞事件",
+        "要把倒地前的气短和胸痛视为重要线索",
+        "如果不控制家庭和环境干扰，操作质量很容易下降",
+        "这是带有特定高风险背景的高危医疗性骤停"
+      ],
+      "examPearlsEn": [
+        "The stem is testing whether you recognize postpartum red flags before and during arrest management",
+        "This is not just a generic adult collapse",
+        "Context can change your differential dramatically"
+      ],
+      "examPearlsZh": [
+        "题干是在考你是否能在骤停处理前后都识别产后红旗",
+        "这不是普通成人倒地题",
+        "背景信息会显著改变你的鉴别思路"
+      ]
+    },
+    {
+      "id": "scenario-dialysis-clinic-collapse",
+      "titleEn": "Dialysis clinic arrest after treatment",
+      "titleZh": "透析后在透析中心突发心脏骤停",
+      "settingEn": "A 63-year-old male collapses in a dialysis clinic waiting area just after completing his treatment.",
+      "settingZh": "63 岁男性在刚完成透析后，于透析中心等待区突然倒地。",
+      "dispatchEn": "Patient collapsed, CPR started by clinic staff.",
+      "dispatchZh": "患者倒地，诊所人员已开始 CPR。",
+      "arrivalFindingsEn": [
+        "Patient unresponsive, apneic, pulseless",
+        "Dialysis access is present in the arm",
+        "Clinic staff report he complained of weakness and palpitations before collapse",
+        "Monitor hookup is delayed because the scene is cluttered with chairs and equipment"
+      ],
+      "arrivalFindingsZh": [
+        "患者无反应、无呼吸、无脉搏",
+        "手臂可见透析通路",
+        "诊所人员表示他倒地前主诉无力和心悸",
+        "现场椅子和器械杂乱，导致监护连接稍有延误"
+      ],
+      "cprFocusEn": [
+        "Think about dialysis-related reversible causes while maintaining CPR basics",
+        "Avoid letting equipment clutter delay compressions or defibrillation readiness",
+        "Use history to guide likely cause without slowing arrest care",
+        "Team coordination in semi-clinical environments matters"
+      ],
+      "cprFocusZh": [
+        "在保持 CPR 基础优先级的同时，考虑透析相关可逆病因",
+        "不要让器械杂乱耽误按压和除颤准备",
+        "要用病史帮助判断病因，但不能拖慢骤停处理",
+        "半临床环境下的团队协调同样重要"
+      ],
+      "examPearlsEn": [
+        "This kind of question often points toward electrolyte-driven arrest thinking",
+        "Candidates should integrate context fast without freezing on pathophysiology",
+        "The exam rewards practical priorities, not over-analysis"
+      ],
+      "examPearlsZh": [
+        "这类题常把你往电解质相关骤停思路上带",
+        "考生要快速整合背景，而不是卡死在病理生理分析里",
+        "考试更奖励实用优先级，不是过度分析"
+      ]
+    },
+    {
+      "id": "scenario-lightning-field-arrest",
+      "titleEn": "Lightning strike with sudden collapse in a sports field",
+      "titleZh": "运动场雷击后突然心脏骤停",
+      "settingEn": "During a storm delay at an outdoor soccer field, a 17-year-old player is struck by lightning and collapses immediately.",
+      "settingZh": "户外足球场因暴风雨暂停比赛时，一名 17 岁球员遭雷击后立即倒地。",
+      "dispatchEn": "Teen struck by lightning, unconscious.",
+      "dispatchZh": "青少年被雷击，无意识。",
+      "arrivalFindingsEn": [
+        "Patient is unresponsive and apneic with no pulse",
+        "Clothing is partially burned, nearby players are screaming and scattered",
+        "The storm is moving away but scene safety still needs confirmation",
+        "Coaches state the collapse was immediate and witnessed"
+      ],
+      "arrivalFindingsZh": [
+        "患者无反应、无呼吸、无脉搏",
+        "衣物部分烧灼，周围球员惊叫四散",
+        "雷暴正在远离，但现场安全仍需确认",
+        "教练表示是目击性立即倒地"
+      ],
+      "cprFocusEn": [
+        "Scene safety first, then rapid CPR once safe to enter",
+        "This is a special mechanism but still an arrest requiring disciplined basics",
+        "Because it is witnessed and sudden, organized rapid intervention matters",
+        "Do not be distracted by the dramatic mechanism alone"
+      ],
+      "cprFocusZh": [
+        "先确认现场安全，再迅速进入开始 CPR",
+        "这虽然是特殊机制，但本质上仍是需要扎实基础处理的骤停",
+        "由于是目击性突然倒地，快速而有组织的介入很关键",
+        "不要只被戏剧性机制吸走注意力"
+      ],
+      "examPearlsEn": [
+        "Exams like unusual mechanisms to see whether you still prioritize scene safety and basic arrest care",
+        "Witnessed sudden collapse means early intervention may matter greatly",
+        "Mechanism is important, but priorities remain recognizable"
+      ],
+      "examPearlsZh": [
+        "考试喜欢用这种少见机制，看你会不会仍然守住现场安全和基础骤停处理",
+        "目击性突然倒地意味着早期干预可能非常关键",
+        "机制特殊，但优先级依然是可识别的"
+      ]
+    },
+    {
+      "id": "scenario-nursing-home-full-code",
+      "titleEn": "Nursing home arrest with conflicting family information",
+      "titleZh": "养老院心脏骤停并伴随家属信息冲突",
+      "settingEn": "A 78-year-old male in a nursing facility is found pulseless in bed shortly after staff heard a thud. Staff started CPR and report he is listed as full code, but one family member arriving on scene insists he never wanted this.",
+      "settingZh": "78 岁男性在养老机构床上被发现无脉搏。工作人员听到响动后发现其倒地并开始 CPR。院方称他登记为 full code，但赶到现场的一位家属坚称他从不想被这样抢救。",
+      "dispatchEn": "Cardiac arrest in care home, CPR in progress.",
+      "dispatchZh": "养老院心脏骤停，现场 CPR 进行中。",
+      "arrivalFindingsEn": [
+        "Patient pulseless, apneic, CPR underway by staff",
+        "Medication list includes CHF, COPD, atrial fibrillation, and dementia history",
+        "Printed paperwork is disorganized and not immediately clear",
+        "Family conflict begins while your team is trying to take over resuscitation"
+      ],
+      "arrivalFindingsZh": [
+        "患者无脉搏、无呼吸，工作人员正在 CPR",
+        "药物清单提示 CHF、COPD、房颤和失智病史",
+        "纸本文件杂乱，短时间内无法立即看清",
+        "当你团队准备接手复苏时，家属冲突已经开始"
+      ],
+      "cprFocusEn": [
+        "Take over CPR efficiently while sorting code-status documentation appropriately",
+        "Do not let verbal conflict alone derail immediate resuscitation if paperwork is unclear",
+        "Scene leadership and communication are central to this scenario",
+        "Clinical arrest care and ethical communication are both being examined"
+      ],
+      "cprFocusZh": [
+        "高效接手 CPR，同时妥善厘清 code status 文件",
+        "如果正式文件不清，不要因为口头冲突就立刻偏离当前复苏流程",
+        "现场领导和沟通是这个场景的核心",
+        "这题同时在考临床骤停处理和伦理沟通"
+      ],
+      "examPearlsEn": [
+        "License exams often mix CPR skills with legal/ethical ambiguity",
+        "The challenge is staying calm, evidence-based, and organized",
+        "Candidates should recognize that documentation status matters more than shouting"
+      ],
+      "examPearlsZh": [
+        "license exam 很爱把 CPR 技能和法律/伦理模糊点混在一起考",
+        "难点在于你能否保持冷静、讲证据、讲秩序",
+        "考生应意识到：正式文件状态通常比现场喊叫更重要"
+      ]
+    }
+  ]
+}

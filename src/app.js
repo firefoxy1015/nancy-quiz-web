@@ -5,6 +5,7 @@ const state = {
   reviewData: null,
   coprData: null,
   coprMockData: null,
+  scenariosData: null,
   currentQuestions: [],
   currentIndex: 0,
   scoreCorrect: 0,
@@ -28,13 +29,14 @@ const i18n = {
     navWrong: '错题本',
     navExam: 'EMR/PCP 考试题库',
     navCopr: 'BC PCP',
+    navScenarios: 'SCENARIOS',
     navGuidelines: '指引入口',
     statusTitle: '项目状态',
     statusList: ['阶段：BC PCP 2027 定向版', '语言：中英双语', '题库：可扩展 JSON', '范围：Nancy + BC PCP written exam'],
     homeGoalTitle: '项目目标',
     homeGoalText: '这不是普通小测验，而是一个面向 BC PCP 2027 考生的网页版互动备考系统。目标是把 Nancy 基础、BC handbook 思路、BC 临床判断与模拟考试整合到同一个学习入口里。',
     homeSupportedTitle: '当前已支持',
-    homeSupportedList: ['Nancy 章节题库', 'BC PCP mock exam', 'BC handbook 导向讲义', '错题本（本地浏览器保存）'],
+    homeSupportedList: ['Nancy 章节题库', 'BC PCP mock exam', 'BC handbook 导向讲义', '错题本（本地浏览器保存）', 'CPR 场景化 scenarios'],
     homeNextTitle: '接下来会补',
     homeNextList: ['更多 BC 高频块', '更细的 mock 题型分层', '弱项反馈', '更完整的 BC written exam roadmap'],
     homeProgressNote: '当前重点：继续把系统压成 BC PCP 2027 written exam 备考方向。',
@@ -67,6 +69,8 @@ const i18n = {
     coprSourceLabel: '来源：BC Handbook / BCEHS Clinical Practice Guidelines / BC-focused exam prep notes',
     coprMockTitle: 'BC PCP Mock Exam',
     coprMockIntro: '这里提供面向 BC PCP 2027 written exam 的 mock 题。每次开始都会从 1000 题里随机抽 50 题。',
+    scenariosTitle: 'SCENARIOS',
+    scenariosIntro: '这里整理 10 个 BC PCP license exam 风格、且都会进入 CPR 的 call。每个场景都给你现场背景、到场所见、CPR 核心点和考试高分提醒。',
     guidelinesTitle: '指引入口',
     guidelinesIntro: '这里保留 BC 相关 guideline / handbook 入口，后续继续补。',
     startLabel: '开始',
@@ -86,13 +90,14 @@ const i18n = {
     navWrong: '错题本',
     navExam: 'EMR/PCP 考试题库',
     navCopr: 'BC PCP',
+    navScenarios: 'SCENARIOS',
     navGuidelines: '指引入口',
     statusTitle: 'Project Status',
     statusList: ['Stage: BC PCP 2027 targeted build', 'Language: Bilingual (ZH/EN)', 'Question bank: Expandable JSON', 'Scope: Nancy + BC PCP written exam'],
     homeGoalTitle: 'Project Goal',
     homeGoalText: 'This is a web-based interactive prep system built for a BC PCP 2027 candidate. The goal is to combine Nancy foundations, BC handbook logic, BC clinical judgment, and mock exams in one study workflow.',
     homeSupportedTitle: 'Currently Supported',
-    homeSupportedList: ['Nancy chapter bank', 'BC PCP mock exam', 'BC handbook-driven study notes', 'Wrong-answer notebook (browser local storage)'],
+    homeSupportedList: ['Nancy chapter bank', 'BC PCP mock exam', 'BC handbook-driven study notes', 'Wrong-answer notebook (browser local storage)', 'CPR scenario bank'],
     homeNextTitle: 'Coming Next',
     homeNextList: ['More BC high-yield blocks', 'Better mock-exam difficulty layering', 'Weak-topic feedback', 'A fuller BC written-exam roadmap'],
     homeProgressNote: 'Current priority: pushing the system harder toward BC PCP 2027 written-exam prep.',
@@ -125,6 +130,8 @@ const i18n = {
     coprSourceLabel: 'Source: BC Handbook / BCEHS Clinical Practice Guidelines / BC-focused exam prep notes',
     coprMockTitle: 'BC PCP Mock Exam',
     coprMockIntro: 'This section provides mock questions aimed at BC PCP 2027 written-exam prep. Each start pulls a random 50-question test from a 1000-question bank.',
+    scenariosTitle: 'SCENARIOS',
+    scenariosIntro: 'This section gives 10 BC PCP license-exam style calls that all progress to CPR. Each scenario includes dispatch context, arrival findings, CPR focus points, and exam pearls.',
     guidelinesTitle: '指引入口',
     guidelinesIntro: 'This section is reserved for BC-relevant guideline and handbook entry points.',
     startLabel: 'Start',
@@ -147,6 +154,7 @@ const els = {
     copr: document.getElementById('coprView'),
     coprDetail: document.getElementById('coprDetailView'),
     coprMock: document.getElementById('coprMockView'),
+    scenarios: document.getElementById('scenariosView'),
     guidelines: document.getElementById('guidelinesView')
   },
   chapterList: document.getElementById('chapterList'),
@@ -163,6 +171,7 @@ const els = {
   coprDetail: document.getElementById('coprDetail'),
   coprBackBtn: document.getElementById('coprBackBtn'),
   coprMockList: document.getElementById('coprMockList'),
+  scenariosList: document.getElementById('scenariosList'),
   guidelinesList: document.getElementById('guidelinesList'),
   nextQuestionBtn: document.getElementById('nextQuestionBtn'),
   langToggle: document.getElementById('langToggle'),
@@ -219,6 +228,7 @@ function setView(name) {
   if (name === 'exam') renderExamGroups();
   if (name === 'copr') renderCoprList();
   if (name === 'coprMock') renderCoprMockList();
+  if (name === 'scenarios') renderScenarios();
   if (name === 'guidelines') renderGuidelineLinks();
 }
 function renderStaticText() {
@@ -232,6 +242,7 @@ function renderStaticText() {
   document.getElementById('navWrong').textContent = t('navWrong');
   document.getElementById('navExam').textContent = t('navExam');
   document.getElementById('navCopr').textContent = t('navCopr');
+  document.getElementById('navScenarios').textContent = t('navScenarios');
   document.getElementById('navGuidelines').textContent = t('navGuidelines');
   document.getElementById('statusTitle').textContent = t('statusTitle');
   document.getElementById('homeGoalTitle').textContent = t('homeGoalTitle');
@@ -253,6 +264,8 @@ function renderStaticText() {
   els.coprBackBtn.textContent = t('coprBackLabel');
   document.getElementById('coprMockTitle').textContent = t('coprMockTitle');
   document.getElementById('coprMockIntro').textContent = t('coprMockIntro');
+  document.getElementById('scenariosTitle').textContent = t('scenariosTitle');
+  document.getElementById('scenariosIntro').textContent = t('scenariosIntro');
   document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
   document.getElementById('guidelinesIntro').textContent = t('guidelinesIntro');
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
@@ -530,6 +543,27 @@ function renderExamGroups() {
     btn.addEventListener('click', () => startExamGroup(btn.dataset.examId));
   });
 }
+function renderScenarios() {
+  const scenarios = state.scenariosData?.scenarios || [];
+  els.scenariosList.innerHTML = scenarios.map(item => {
+    const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
+    const setting = state.lang === 'zh' ? item.settingZh : item.settingEn;
+    const dispatch = state.lang === 'zh' ? item.dispatchZh : item.dispatchEn;
+    const findings = state.lang === 'zh' ? item.arrivalFindingsZh : item.arrivalFindingsEn;
+    const cprFocus = state.lang === 'zh' ? item.cprFocusZh : item.cprFocusEn;
+    const pearls = state.lang === 'zh' ? item.examPearlsZh : item.examPearlsEn;
+    return `
+      <div class="scenario-card">
+        <h3>${title}</h3>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Scene / 场景' : 'Scene'}</strong><p>${setting}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Dispatch / 派遣信息' : 'Dispatch'}</strong><p>${dispatch}</p></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Arrival findings / 到场所见' : 'Arrival findings'}</strong><ul>${findings.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'CPR focus / CPR 核心' : 'CPR focus'}</strong><ul>${cprFocus.map(point => `<li>${point}</li>`).join('')}</ul></div>
+        <div class="scenario-section"><strong>${state.lang === 'zh' ? 'Exam pearls / 考点提醒' : 'Exam pearls'}</strong><ul>${pearls.map(point => `<li>${point}</li>`).join('')}</ul></div>
+      </div>
+    `;
+  }).join('');
+}
 function renderGuidelineLinks() {
   els.guidelinesList.innerHTML = guidelineLinks.map(link => `
     <div class="resource-card">
@@ -542,19 +576,21 @@ function renderGuidelineLinks() {
   `).join('');
 }
 async function init() {
-  const [nancyRes, examRes, reviewRes, coprRes, coprMockRes] = await Promise.all([
+  const [nancyRes, examRes, reviewRes, coprRes, coprMockRes, scenariosRes] = await Promise.all([
     fetch(`./data/question-bank.json?v=20260404-1426`),
     fetch(`./data/exam-bank.json?v=20260404-1426`),
     fetch(`./data/chapter-review.json?v=20260404-1426`),
     fetch(`./data/copr-guide.json?v=20260404-1426`),
-    fetch(`./data/copr-mock-bank.json?v=20260404-1426`)
+    fetch(`./data/copr-mock-bank.json?v=20260404-1426`),
+    fetch(`./data/scenarios.json?v=20260412-scenarios1`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
   state.reviewData = await reviewRes.json();
   state.coprData = await coprRes.json();
   state.coprMockData = await coprMockRes.json();
-  renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderCoprList(); renderGuidelineLinks(); updateScore(); setView('home');
+  state.scenariosData = await scenariosRes.json();
+  renderStaticText(); renderChapters(); renderChapterReviewList(); renderExamGroups(); renderCoprList(); renderScenarios(); renderGuidelineLinks(); updateScore(); setView('home');
   document.querySelectorAll('.nav-btn').forEach(btn => btn.addEventListener('click', () => { const view = btn.dataset.view; if (view === 'practice') startRandomPractice(); else setView(view); }));
   els.nextQuestionBtn.addEventListener('click', () => { state.currentIndex += 1; renderQuestion(); });
   els.langToggle.addEventListener('click', () => {
@@ -564,6 +600,7 @@ async function init() {
     renderChapterReviewList();
     renderExamGroups();
     renderCoprList();
+    renderScenarios();
     renderGuidelineLinks();
     if (!els.views.practice.classList.contains('hidden')) renderQuestion();
     if (!els.views.reviewDetail.classList.contains('hidden')) renderChapterReviewDetail();
