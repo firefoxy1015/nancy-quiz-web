@@ -13,6 +13,7 @@ const state = {
   selectedChapterId: null,
   selectedReviewChapterId: null,
   selectedCoprSectionId: null,
+  selectedScenarioId: null,
   currentMode: 'nancy',
   wrongStorageKey: 'nancyQuizWrongAnswersV2'
 };
@@ -155,6 +156,7 @@ const els = {
     coprDetail: document.getElementById('coprDetailView'),
     coprMock: document.getElementById('coprMockView'),
     scenarios: document.getElementById('scenariosView'),
+    scenarioDetail: document.getElementById('scenarioDetailView'),
     guidelines: document.getElementById('guidelinesView')
   },
   chapterList: document.getElementById('chapterList'),
@@ -172,6 +174,8 @@ const els = {
   coprBackBtn: document.getElementById('coprBackBtn'),
   coprMockList: document.getElementById('coprMockList'),
   scenariosList: document.getElementById('scenariosList'),
+  scenarioDetail: document.getElementById('scenarioDetail'),
+  scenarioBackBtn: document.getElementById('scenarioBackBtn'),
   guidelinesList: document.getElementById('guidelinesList'),
   nextQuestionBtn: document.getElementById('nextQuestionBtn'),
   langToggle: document.getElementById('langToggle'),
@@ -229,6 +233,7 @@ function setView(name) {
   if (name === 'copr') renderCoprList();
   if (name === 'coprMock') renderCoprMockList();
   if (name === 'scenarios') renderScenarios();
+  if (name === 'scenarioDetail') renderScenarioDetail();
   if (name === 'guidelines') renderGuidelineLinks();
 }
 function renderStaticText() {
@@ -268,6 +273,7 @@ function renderStaticText() {
   document.getElementById('scenariosIntro').textContent = t('scenariosIntro');
   document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
   document.getElementById('guidelinesIntro').textContent = t('guidelinesIntro');
+  if (els.scenarioBackBtn) els.scenarioBackBtn.textContent = state.lang === 'zh' ? '← 返回 Scenarios' : '← Back to Scenarios';
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
   els.nextQuestionBtn.textContent = t('nextQuestionBtn');
   els.startPracticeBtn.textContent = t('startPracticeBtn');
@@ -543,76 +549,99 @@ function renderExamGroups() {
     btn.addEventListener('click', () => startExamGroup(btn.dataset.examId));
   });
 }
+function renderScenarioTable(item) {
+  const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
+  const background = state.lang === 'zh' ? item.backgroundZh : item.backgroundEn;
+  const sceneSurvey = state.lang === 'zh' ? item.sceneSurveyZh : item.sceneSurveyEn;
+  const condition = state.lang === 'zh' ? item.conditionZh : item.conditionEn;
+  const primarySurvey = state.lang === 'zh' ? item.primarySurveyZh : item.primarySurveyEn;
+  const secondarySurvey = state.lang === 'zh' ? item.secondarySurveyZh : item.secondarySurveyEn;
+  const vitalSigns = state.lang === 'zh' ? item.vitalSignsZh : item.vitalSignsEn;
+  const comments = state.lang === 'zh' ? item.commentsZh : item.commentsEn;
+  const rapidTransport = state.lang === 'zh' ? item.rapidTransportZh : item.rapidTransportEn;
+  const interventions = state.lang === 'zh' ? item.interventionsZh : item.interventionsEn;
+  const handover = state.lang === 'zh' ? item.handoverZh : item.handoverEn;
+  const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
+  return `
+    <div class="scenario-card scenario-table-card">
+      <table class="scenario-table">
+        <tr>
+          <th>${state.lang === 'zh' ? 'Scenario' : 'Scenario'}</th>
+          <td>${title}</td>
+          <th>${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}</th>
+          <td class="scenario-no-cell">${item.scenarioNo}</td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Background' : 'Background'}</th>
+          <td colspan="3">${background}</td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}</th>
+          <td colspan="3">${sceneSurvey}</td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Condition of Patient' : 'Condition of Patient'}</th>
+          <td colspan="3">${condition}</td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Primary Survey' : 'Primary Survey'}</th>
+          <td colspan="3"><ul class="scenario-table-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Secondary Survey Interview' : 'Secondary Survey Interview'}</th>
+          <td colspan="3"><ul class="scenario-table-list">${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Vital Signs' : 'Vital Signs'} <span class="scenario-q">(Q.${item.scenarioNo})</span></th>
+          <td colspan="3"><ul class="scenario-table-list">${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Rapid Transport?' : 'Rapid Transport?'}</th>
+          <td>${rapidTransport}</td>
+          <th>${state.lang === 'zh' ? 'Interventions' : 'Interventions'}</th>
+          <td><ul class="scenario-table-list">${interventions.map(point => `<li>${point}</li>`).join('')}</ul></td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Handover' : 'Handover'}</th>
+          <td colspan="3">${handover}</td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Comments' : 'Comments'}</th>
+          <td colspan="3">${comments}</td>
+        </tr>
+        <tr>
+          <th>${state.lang === 'zh' ? 'Bonus Points' : 'Bonus Points'}</th>
+          <td colspan="3"><ul class="scenario-table-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></td>
+        </tr>
+      </table>
+    </div>
+  `;
+}
 function renderScenarios() {
   const scenarios = state.scenariosData?.scenarios || [];
-  els.scenariosList.innerHTML = scenarios.map(item => {
-    const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
-    const background = state.lang === 'zh' ? item.backgroundZh : item.backgroundEn;
-    const sceneSurvey = state.lang === 'zh' ? item.sceneSurveyZh : item.sceneSurveyEn;
-    const condition = state.lang === 'zh' ? item.conditionZh : item.conditionEn;
-    const primarySurvey = state.lang === 'zh' ? item.primarySurveyZh : item.primarySurveyEn;
-    const secondarySurvey = state.lang === 'zh' ? item.secondarySurveyZh : item.secondarySurveyEn;
-    const vitalSigns = state.lang === 'zh' ? item.vitalSignsZh : item.vitalSignsEn;
-    const comments = state.lang === 'zh' ? item.commentsZh : item.commentsEn;
-    const rapidTransport = state.lang === 'zh' ? item.rapidTransportZh : item.rapidTransportEn;
-    const interventions = state.lang === 'zh' ? item.interventionsZh : item.interventionsEn;
-    const handover = state.lang === 'zh' ? item.handoverZh : item.handoverEn;
-    const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
-    return `
-      <div class="scenario-card scenario-table-card">
-        <table class="scenario-table">
-          <tr>
-            <th>${state.lang === 'zh' ? 'Scenario' : 'Scenario'}</th>
-            <td>${title}</td>
-            <th>${state.lang === 'zh' ? 'Scenario No' : 'Scenario No'}</th>
-            <td class="scenario-no-cell">${item.scenarioNo}</td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Background' : 'Background'}</th>
-            <td colspan="3">${background}</td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}</th>
-            <td colspan="3">${sceneSurvey}</td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Condition of Patient' : 'Condition of Patient'}</th>
-            <td colspan="3">${condition}</td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Primary Survey' : 'Primary Survey'}</th>
-            <td colspan="3"><ul class="scenario-table-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Secondary Survey Interview' : 'Secondary Survey Interview'}</th>
-            <td colspan="3"><ul class="scenario-table-list">${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Vital Signs' : 'Vital Signs'} <span class="scenario-q">(Q.${item.scenarioNo})</span></th>
-            <td colspan="3"><ul class="scenario-table-list">${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Rapid Transport?' : 'Rapid Transport?'}</th>
-            <td>${rapidTransport}</td>
-            <th>${state.lang === 'zh' ? 'Interventions' : 'Interventions'}</th>
-            <td><ul class="scenario-table-list">${interventions.map(point => `<li>${point}</li>`).join('')}</ul></td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Handover' : 'Handover'}</th>
-            <td colspan="3">${handover}</td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Comments' : 'Comments'}</th>
-            <td colspan="3">${comments}</td>
-          </tr>
-          <tr>
-            <th>${state.lang === 'zh' ? 'Bonus Points' : 'Bonus Points'}</th>
-            <td colspan="3"><ul class="scenario-table-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></td>
-          </tr>
-        </table>
-      </div>
-    `;
-  }).join('');
+  els.scenariosList.innerHTML = scenarios.map(item => `
+    <div class="scenario-item-button-wrap">
+      <button class="scenario-open-btn" data-scenario-open="${item.id}">
+        <span>${state.lang === 'zh' ? item.titleZh : item.titleEn}</span>
+        <span class="scenario-open-meta">${item.scenarioNo}</span>
+      </button>
+    </div>
+  `).join('');
+  els.scenariosList.querySelectorAll('button[data-scenario-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.selectedScenarioId = btn.dataset.scenarioOpen;
+      renderScenarioDetail();
+      setView('scenarioDetail');
+    });
+  });
+}
+function renderScenarioDetail() {
+  const item = (state.scenariosData?.scenarios || []).find(s => s.id === state.selectedScenarioId);
+  if (!item) {
+    els.scenarioDetail.innerHTML = `<p class="empty">No scenario selected.</p>`;
+    return;
+  }
+  els.scenarioDetail.innerHTML = renderScenarioTable(item);
 }
 function renderGuidelineLinks() {
   els.guidelinesList.innerHTML = guidelineLinks.map(link => `
@@ -632,7 +661,7 @@ async function init() {
     fetch(`./data/chapter-review.json?v=20260404-1426`),
     fetch(`./data/copr-guide.json?v=20260404-1426`),
     fetch(`./data/copr-mock-bank.json?v=20260404-1426`),
-    fetch(`./data/scenarios.json?v=20260412-scenarios4`)
+    fetch(`./data/scenarios.json?v=20260412-scenarios5`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
@@ -660,5 +689,6 @@ async function init() {
   els.startPracticeBtn.addEventListener('click', startRandomPractice);
   els.reviewBackBtn.addEventListener('click', () => setView('review'));
   els.coprBackBtn.addEventListener('click', () => setView('copr'));
+  els.scenarioBackBtn?.addEventListener('click', () => setView('scenarios'));
 }
 init();

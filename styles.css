@@ -249,3 +249,27 @@ button.primary:hover { background: var(--primary-2); }
 .scenario-table-list li + li {
   margin-top: 4px;
 }
+.scenario-item-button-wrap {
+  display: block;
+}
+.scenario-open-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 600;
+}
+.scenario-open-btn:hover {
+  background: #f7f9fc;
+}
+.scenario-open-meta {
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+}
