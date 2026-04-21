@@ -71,7 +71,7 @@ const i18n = {
     coprMockTitle: 'BC PCP Mock Exam',
     coprMockIntro: '这里提供面向 BC PCP 2027 written exam 的 mock 题。每次开始都会从 1000 题里随机抽 50 题。',
     scenariosTitle: 'SCENARIOS',
-    scenariosIntro: '这里整理 10 个 BC PCP license exam 风格、且都会进入 CPR 的 call。每个场景都给你现场背景、到场所见、CPR 核心点和考试高分提醒。',
+    scenariosIntro: '这里整理 22 个 BC PCP license exam 风格的 medical / CPR scenarios。每个场景都给你现场背景、到场所见、CPR 核心点和考试高分提醒。',
     guidelinesTitle: '指引入口',
     guidelinesIntro: '这里保留 BC 相关 guideline / handbook 入口，后续继续补。',
     startLabel: '开始',
@@ -132,7 +132,7 @@ const i18n = {
     coprMockTitle: 'BC PCP Mock Exam',
     coprMockIntro: 'This section provides mock questions aimed at BC PCP 2027 written-exam prep. Each start pulls a random 50-question test from a 1000-question bank.',
     scenariosTitle: 'SCENARIOS',
-    scenariosIntro: 'This section gives 10 BC PCP license-exam style calls that all progress to CPR. Each scenario includes dispatch context, arrival findings, CPR focus points, and exam pearls.',
+    scenariosIntro: 'This section gives 22 BC PCP license-exam style medical / CPR scenarios. Each scenario includes dispatch context, arrival findings, CPR focus points, and exam pearls.',
     guidelinesTitle: '指引入口',
     guidelinesIntro: 'This section is reserved for BC-relevant guideline and handbook entry points.',
     startLabel: 'Start',
@@ -661,7 +661,7 @@ async function init() {
     fetch(`./data/chapter-review.json?v=20260404-1426`),
     fetch(`./data/copr-guide.json?v=20260404-1426`),
     fetch(`./data/copr-mock-bank.json?v=20260404-1426`),
-    fetch(`./data/scenarios.json?v=20260413-scenarios6`)
+    fetch(`./data/scenarios.json?v=20260420-scenarios22`)
   ]);
   state.data = await nancyRes.json();
   state.examData = await examRes.json();
