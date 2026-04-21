@@ -565,6 +565,16 @@ function renderScenarioTable(item) {
   const patientInstructions = state.lang === 'zh' ? item.patientInstructionsZh : item.patientInstructionsEn;
   const additionalHelp = state.lang === 'zh' ? item.additionalHelpZh : item.additionalHelpEn;
   const facilitatorNotes = state.lang === 'zh' ? item.facilitatorNotesZh : item.facilitatorNotesEn;
+  const prepInfo = state.lang === 'zh' ? item.prepInfoZh : item.prepInfoEn;
+  const additionalInfo = state.lang === 'zh' ? item.additionalInfoZh : item.additionalInfoEn;
+  const patientEquipment = state.lang === 'zh' ? item.patientEquipmentZh : item.patientEquipmentEn;
+  const criticalIntervention1 = state.lang === 'zh' ? item.criticalIntervention1Zh : item.criticalIntervention1En;
+  const criticalIntervention2 = state.lang === 'zh' ? item.criticalIntervention2Zh : item.criticalIntervention2En;
+  const criticalIntervention3 = state.lang === 'zh' ? item.criticalIntervention3Zh : item.criticalIntervention3En;
+  const patientPosition = state.lang === 'zh' ? item.patientPositionZh : item.patientPositionEn;
+  const medication1 = state.lang === 'zh' ? item.medication1Zh : item.medication1En;
+  const medication2 = state.lang === 'zh' ? item.medication2Zh : item.medication2En;
+  const medication3 = state.lang === 'zh' ? item.medication3Zh : item.medication3En;
   const setupLines = [];
   const dispatch = state.lang === 'zh' ? item.dispatchZh : item.dispatchEn;
   const hazards = state.lang === 'zh' ? item.hazardsZh : item.hazardsEn;
@@ -587,8 +597,32 @@ function renderScenarioTable(item) {
           <td class="scenario-no-cell">${item.scenarioNo}</td>
         </tr>
         <tr>
+          <th>PREPARATION INFORMATION</th>
+          <td colspan="3">${prepInfo || ''}</td>
+        </tr>
+        <tr>
+          <th>ADDITIONAL INFORMATION TO BE ADDED TO MARKING SHEET</th>
+          <td colspan="3">${additionalInfo || ''}</td>
+        </tr>
+        <tr>
           <th>SCENARIO SET UP</th>
           <td colspan="3"><ul class="scenario-table-list">${setupLines.join('')}</ul></td>
+        </tr>
+        <tr>
+          <th>PATIENT EQUIPMENT</th>
+          <td colspan="3">${patientEquipment || ''}</td>
+        </tr>
+        <tr>
+          <th>CRITICAL INTERVENTION 1</th>
+          <td>${criticalIntervention1 || ''}</td>
+          <th>CRITICAL INTERVENTION 2</th>
+          <td>${criticalIntervention2 || ''}</td>
+        </tr>
+        <tr>
+          <th>CRITICAL INTERVENTION 3</th>
+          <td>${criticalIntervention3 || ''}</td>
+          <th>PATIENT POSITION</th>
+          <td>${patientPosition || ''}</td>
         </tr>
         <tr>
           <th>SCENE SURVEY</th>
@@ -603,8 +637,16 @@ function renderScenarioTable(item) {
           <td colspan="3">${patientInstructions || ''}</td>
         </tr>
         <tr>
+          <th>MEDICATION 1</th>
+          <td>${medication1 || ''}</td>
+          <th>MEDICATION 2</th>
+          <td>${medication2 || ''}</td>
+        </tr>
+        <tr>
+          <th>MEDICATION 3</th>
+          <td>${medication3 || ''}</td>
           <th>ADDITIONAL HELP AVAILABLE</th>
-          <td colspan="3">${additionalHelp || ''}</td>
+          <td>${additionalHelp || ''}</td>
         </tr>
         <tr>
           <th>PRIMARY SURVEY PHYSICAL FINDING</th>
