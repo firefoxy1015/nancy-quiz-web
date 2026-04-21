@@ -562,6 +562,9 @@ function renderScenarioTable(item) {
   const interventions = state.lang === 'zh' ? item.interventionsZh : item.interventionsEn;
   const handover = state.lang === 'zh' ? item.handoverZh : item.handoverEn;
   const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
+  const patientInstructions = state.lang === 'zh' ? item.patientInstructionsZh : item.patientInstructionsEn;
+  const additionalHelp = state.lang === 'zh' ? item.additionalHelpZh : item.additionalHelpEn;
+  const facilitatorNotes = state.lang === 'zh' ? item.facilitatorNotesZh : item.facilitatorNotesEn;
   const setupLines = [];
   const dispatch = state.lang === 'zh' ? item.dispatchZh : item.dispatchEn;
   const hazards = state.lang === 'zh' ? item.hazardsZh : item.hazardsEn;
@@ -596,6 +599,14 @@ function renderScenarioTable(item) {
           <td colspan="3">${condition}</td>
         </tr>
         <tr>
+          <th>PATIENT INSTRUCTIONS</th>
+          <td colspan="3">${patientInstructions || ''}</td>
+        </tr>
+        <tr>
+          <th>ADDITIONAL HELP AVAILABLE</th>
+          <td colspan="3">${additionalHelp || ''}</td>
+        </tr>
+        <tr>
           <th>PRIMARY SURVEY PHYSICAL FINDING</th>
           <td colspan="3"><ul class="scenario-table-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
         </tr>
@@ -619,6 +630,10 @@ function renderScenarioTable(item) {
         </tr>
         <tr>
           <th>FACILITATOR / EXAM NOTES</th>
+          <td colspan="3">${facilitatorNotes || comments}</td>
+        </tr>
+        <tr>
+          <th>COMMENTS</th>
           <td colspan="3">${comments}</td>
         </tr>
         <tr>
