@@ -553,7 +553,7 @@ function renderScenarioTable(item) {
   const title = state.lang === 'zh' ? item.titleZh : item.titleEn;
   const background = state.lang === 'zh' ? item.backgroundZh : item.backgroundEn;
   const sceneSurvey = state.lang === 'zh' ? item.sceneSurveyZh : item.sceneSurveyEn;
-  const condition = state.lang === 'zh' ? item.conditionZh : item.conditionEn;
+  const condition = state.lang === 'zh' ? (item.generalImpressionZh || item.conditionZh) : (item.generalImpressionEn || item.conditionEn);
   const primarySurvey = state.lang === 'zh' ? item.primarySurveyZh : item.primarySurveyEn;
   const secondarySurvey = state.lang === 'zh' ? item.secondarySurveyZh : item.secondarySurveyEn;
   const vitalSigns = state.lang === 'zh' ? item.vitalSignsZh : item.vitalSignsEn;
@@ -562,6 +562,18 @@ function renderScenarioTable(item) {
   const interventions = state.lang === 'zh' ? item.interventionsZh : item.interventionsEn;
   const handover = state.lang === 'zh' ? item.handoverZh : item.handoverEn;
   const bonusPoints = state.lang === 'zh' ? item.bonusPointsZh : item.bonusPointsEn;
+  const setupLines = [];
+  const dispatch = state.lang === 'zh' ? item.dispatchZh : item.dispatchEn;
+  const hazards = state.lang === 'zh' ? item.hazardsZh : item.hazardsEn;
+  const environment = state.lang === 'zh' ? item.environmentZh : item.environmentEn;
+  const moi = state.lang === 'zh' ? item.moiZh : item.moiEn;
+  const numberPatients = state.lang === 'zh' ? item.numberPatientsZh : item.numberPatientsEn;
+  if (dispatch) setupLines.push(`<li><strong>${state.lang === 'zh' ? 'Dispatch:' : 'Dispatch:'}</strong> ${dispatch}</li>`);
+  if (hazards) setupLines.push(`<li><strong>${state.lang === 'zh' ? 'Hazards:' : 'Hazards:'}</strong> ${hazards}</li>`);
+  if (environment) setupLines.push(`<li><strong>${state.lang === 'zh' ? 'Environment:' : 'Environment:'}</strong> ${environment}</li>`);
+  if (moi) setupLines.push(`<li><strong>${state.lang === 'zh' ? 'MOI / NOI:' : 'MOI / NOI:'}</strong> ${moi}</li>`);
+  if (numberPatients) setupLines.push(`<li><strong>${state.lang === 'zh' ? 'Number of Patients:' : 'Number of Patients:'}</strong> ${numberPatients}</li>`);
+  if (!setupLines.length && background) setupLines.push(`<li>${background}</li>`);
   return `
     <div class="scenario-card scenario-table-card">
       <table class="scenario-table">
@@ -573,7 +585,7 @@ function renderScenarioTable(item) {
         </tr>
         <tr>
           <th>${state.lang === 'zh' ? 'Scenario Set Up' : 'Scenario Set Up'}</th>
-          <td colspan="3">${background}</td>
+          <td colspan="3"><ul class="scenario-table-list">${setupLines.join('')}</ul></td>
         </tr>
         <tr>
           <th>${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}</th>
