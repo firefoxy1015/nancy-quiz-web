@@ -578,51 +578,51 @@ function renderScenarioTable(item) {
     <div class="scenario-card scenario-table-card">
       <table class="scenario-table">
         <tr>
-          <th>${state.lang === 'zh' ? 'Practical Scenario' : 'Practical Scenario'}</th>
+          <th>EMERGENCY RESPONDER PRACTICAL SCENARIO</th>
           <td>${title}</td>
-          <th>${state.lang === 'zh' ? 'Scenario No.' : 'Scenario No.'}</th>
+          <th>SCENARIO NO.</th>
           <td class="scenario-no-cell">${item.scenarioNo}</td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Scenario Set Up' : 'Scenario Set Up'}</th>
+          <th>SCENARIO SET UP</th>
           <td colspan="3"><ul class="scenario-table-list">${setupLines.join('')}</ul></td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Scene Survey' : 'Scene Survey'}</th>
+          <th>SCENE SURVEY</th>
           <td colspan="3">${sceneSurvey}</td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'General Impression / Condition of Patient' : 'General Impression / Condition of Patient'}</th>
+          <th>GENERAL IMPRESSION / CONDITION OF PATIENT</th>
           <td colspan="3">${condition}</td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Primary Survey Physical Finding' : 'Primary Survey Physical Finding'}</th>
+          <th>PRIMARY SURVEY PHYSICAL FINDING</th>
           <td colspan="3"><ul class="scenario-table-list">${primarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'History / Secondary Survey' : 'History / Secondary Survey'}</th>
+          <th>HISTORY / SECONDARY SURVEY</th>
           <td colspan="3"><ul class="scenario-table-list">${secondarySurvey.map(point => `<li>${point}</li>`).join('')}</ul></td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Vital Signs' : 'Vital Signs'}</th>
+          <th>VITAL SIGNS</th>
           <td colspan="3"><ul class="scenario-table-list">${vitalSigns.map(point => `<li>${point}</li>`).join('')}</ul></td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Rapid Transport' : 'Rapid Transport'}</th>
+          <th>RAPID TRANSPORT</th>
           <td>${rapidTransport}</td>
-          <th>${state.lang === 'zh' ? 'Interventions' : 'Interventions'}</th>
+          <th>INTERVENTIONS</th>
           <td><ul class="scenario-table-list">${interventions.map(point => `<li>${point}</li>`).join('')}</ul></td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Verbal Handover' : 'Verbal Handover'}</th>
+          <th>VERBAL HANDOVER</th>
           <td colspan="3">${handover}</td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'Facilitator / Exam Notes' : 'Facilitator / Exam Notes'}</th>
+          <th>FACILITATOR / EXAM NOTES</th>
           <td colspan="3">${comments}</td>
         </tr>
         <tr>
-          <th>${state.lang === 'zh' ? 'High Mark / Bonus Points' : 'High Mark / Bonus Points'}</th>
+          <th>HIGH MARK / BONUS POINTS</th>
           <td colspan="3"><ul class="scenario-table-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></td>
         </tr>
       </table>
