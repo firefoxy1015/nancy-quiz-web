@@ -575,6 +575,8 @@ function renderScenarioTable(item) {
   const medication1 = state.lang === 'zh' ? item.medication1Zh : item.medication1En;
   const medication2 = state.lang === 'zh' ? item.medication2Zh : item.medication2En;
   const medication3 = state.lang === 'zh' ? item.medication3Zh : item.medication3En;
+  const markLossSummary = state.lang === 'zh' ? item.markLossSummaryZh : item.markLossSummaryEn;
+  const focusParagraph = state.lang === 'zh' ? item.focusParagraphZh : item.focusParagraphEn;
   const setupLines = [];
   const dispatch = state.lang === 'zh' ? item.dispatchZh : item.dispatchEn;
   const hazards = state.lang === 'zh' ? item.hazardsZh : item.hazardsEn;
@@ -681,6 +683,14 @@ function renderScenarioTable(item) {
         <tr>
           <th>HIGH MARK / BONUS POINTS</th>
           <td colspan="3"><ul class="scenario-table-list">${bonusPoints.map(point => `<li>${point}</li>`).join('')}</ul></td>
+        </tr>
+        <tr>
+          <th>WHERE YOU CAN LOSE A LOT OF MARKS</th>
+          <td colspan="3">${markLossSummary || ''}</td>
+        </tr>
+        <tr>
+          <th>WHAT TO REALLY FOCUS ON</th>
+          <td colspan="3">${focusParagraph || ''}</td>
         </tr>
       </table>
     </div>
