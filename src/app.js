@@ -87,12 +87,12 @@ const i18n = {
     navHome: 'Home',
     navChapters: 'Study by Chapter',
     navPractice: 'Random Practice',
-    navReview: '章节讲义',
-    navWrong: '错题本',
-    navExam: 'EMR/PCP 考试题库',
+    navReview: 'Chapter Review',
+    navWrong: 'Wrong Answers',
+    navExam: 'EMR/PCP Exam Bank',
     navCopr: 'BC PCP',
-    navScenarios: 'SCENARIOS',
-    navGuidelines: '指引入口',
+    navScenarios: 'Scenarios',
+    navGuidelines: 'Guidelines',
     statusTitle: 'Project Status',
     statusList: ['Stage: BC PCP 2027 targeted build', 'Language: Bilingual (ZH/EN)', 'Question bank: Expandable JSON', 'Scope: Nancy + BC PCP written exam'],
     homeGoalTitle: 'Project Goal',
@@ -108,7 +108,7 @@ const i18n = {
     practiceMeta: 'Choose a question set to begin',
     scoreLabel: 'Score',
     nextQuestionBtn: 'Next Question',
-    reviewTitle: '章节讲义',
+    reviewTitle: 'Chapter Review',
     reviewIntro: 'This section provides chapter-by-chapter summaries and highlights for fast review.',
     reviewEmpty: 'Choose a chapter to view the review notes.',
     reviewBackLabel: '← Back to Chapter Review',
@@ -117,13 +117,13 @@ const i18n = {
     keyPointsLabel: 'Key Points',
     mustKnowLabel: 'Must Know',
     commonConfusionsLabel: 'Common Confusions / Test Traps',
-    wrongTitle: '错题本',
+    wrongTitle: 'Wrong Answers',
     wrongIntro: 'Wrong answers are saved only in this browser locally and are not synced online.',
     noWrong: 'No wrong answers yet.',
     clearWrongLabel: 'Clear Wrong Answers',
     wrongSourceNancy: 'Nancy question bank',
     wrongSourceExam: 'BC Guideline exam bank',
-    examTitle: 'EMR/PCP 考试题库',
+    examTitle: 'EMR/PCP Exam Bank',
     examIntro: 'This is a standalone BC Provincial Examination Guideline question area, separate from the Nancy chapter bank.',
     coprTitle: 'BC PCP',
     coprIntro: 'This section is no longer generic COPR commentary. It is now focused on BC PCP 2027 written-exam prep, BC handbook high-yield logic, and the clinical judgment patterns that matter most for BC-focused study.',
@@ -131,9 +131,9 @@ const i18n = {
     coprSourceLabel: 'Source: BC Handbook / BCEHS Clinical Practice Guidelines / BC-focused exam prep notes',
     coprMockTitle: 'BC PCP Mock Exam',
     coprMockIntro: 'This section provides mock questions aimed at BC PCP 2027 written-exam prep. Each start pulls a random 50-question test from a 1000-question bank.',
-    scenariosTitle: 'SCENARIOS',
+    scenariosTitle: 'Scenarios',
     scenariosIntro: 'This section gives 22 BC PCP license-exam style medical / CPR scenarios. Each scenario includes dispatch context, arrival findings, CPR focus points, and exam pearls.',
-    guidelinesTitle: '指引入口',
+    guidelinesTitle: 'Guidelines',
     guidelinesIntro: 'This section is reserved for BC-relevant guideline and handbook entry points.',
     startLabel: 'Start',
     openLinkLabel: 'Open Link',
@@ -255,7 +255,7 @@ function renderStaticText() {
   document.getElementById('homeSupportedTitle').textContent = t('homeSupportedTitle');
   document.getElementById('homeNextTitle').textContent = t('homeNextTitle');
   document.getElementById('homeProgressNote').textContent = t('homeProgressNote');
-  document.getElementById('homeQuestionCount').textContent = state.data ? (state.lang === 'zh' ? `Current question count / 当前题库总数：${state.data.questions.length}` : `Current question count: ${state.data.questions.length}`) : '';
+  document.getElementById('homeQuestionCount').textContent = state.data ? (state.lang === 'zh' ? `当前题库总数：${state.data.questions.length}` : `Current question count: ${state.data.questions.length}`) : '';
   document.getElementById('chaptersTitle').textContent = t('chaptersTitle');
   document.getElementById('reviewTitle').textContent = t('reviewTitle');
   document.getElementById('reviewIntro').textContent = t('reviewIntro');
@@ -273,7 +273,7 @@ function renderStaticText() {
   document.getElementById('scenariosIntro').textContent = t('scenariosIntro');
   document.getElementById('guidelinesTitle').textContent = t('guidelinesTitle');
   document.getElementById('guidelinesIntro').textContent = t('guidelinesIntro');
-  if (els.scenarioBackBtn) els.scenarioBackBtn.textContent = state.lang === 'zh' ? '← 返回 Scenarios' : '← Back to Scenarios';
+  if (els.scenarioBackBtn) els.scenarioBackBtn.textContent = state.lang === 'zh' ? '← 返回场景' : '← Back to Scenarios';
   document.getElementById('scoreLabel').textContent = t('scoreLabel');
   els.nextQuestionBtn.textContent = t('nextQuestionBtn');
   els.startPracticeBtn.textContent = t('startPracticeBtn');
@@ -735,7 +735,7 @@ function renderGuidelineLinks() {
 }
 async function init() {
   const [nancyRes, examRes, reviewRes, coprRes, coprMockRes, scenariosRes] = await Promise.all([
-    fetch(`./data/question-bank.json?v=20260404-1426`),
+    fetch(`./data/question-bank.json?v=20260430-0518`),
     fetch(`./data/exam-bank.json?v=20260404-1426`),
     fetch(`./data/chapter-review.json?v=20260404-1426`),
     fetch(`./data/copr-guide.json?v=20260404-1426`),
