@@ -237,15 +237,19 @@ def check_scenarios():
                 w = ex.get('weight')
                 if not isinstance(w, (int, float)) or w <= 0:
                     err(f"{pctx}: bad weight {w!r}")
-        # history phase must cover the six official items
+        # history phase must cover the six official items — check rubricRef, not
+        # prose, since scenarios legitimately abbreviate ("Obtain LOI", "HxC/C")
         hist = next((p for p in phases if p.get('id') == 'history'), None)
         if hist:
-            blob = ' '.join(str(e.get('actionEn', '')).lower() for e in hist.get('expected', []))
-            for kw, label in [('chief', 'chief complaint'), ('histor', 'Hx of C/C'),
-                              ('medic', 'medications'), ('allerg', 'allergies'),
-                              ('oral intake', 'last oral intake')]:
-                if kw not in blob:
-                    warn(f"{ctx}/history: no expected action mentions {label}")
+            refs = {e.get('rubricRef') for e in hist.get('expected', [])}
+            for ref, label in [('chief-complaint', 'chief complaint'),
+                               ('history-of-cc', 'history of C/C'),
+                               ('past-medical-history', 'past medical history'),
+                               ('medications', 'medications'),
+                               ('allergies', 'allergies'),
+                               ('last-oral-intake', 'last oral intake')]:
+                if ref not in refs:
+                    warn(f"{ctx}/history: missing expected action for {label} ({ref})")
         vs = s.get('vitalsSets', [])
         if len(vs) < 2:
             warn(f"{ctx}: only {len(vs)} vitals set(s) — ongoing phase needs a second")
