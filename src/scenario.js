@@ -1,6 +1,28 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice
 import { S, save, bi, biList, t, esc, loadJSON, nav } from './app.js';
 
+// Scenarios live in several files (see data/practical/index.json) so batches can
+// be authored independently; they are merged into one pool at load time.
+let scenarioPool = null;
+async function loadScenarios() {
+  if (scenarioPool) return scenarioPool;
+  const idx = await loadJSON('./data/practical/index.json');
+  const files = idx ? idx.files : ['scenarios.json'];
+  const parts = await Promise.all(files.map(f => loadJSON('./data/practical/' + f)));
+  const scenarios = [];
+  const seen = new Set();
+  for (const p of parts) {
+    if (!p || !p.scenarios) continue;
+    for (const s of p.scenarios) {
+      if (seen.has(s.id)) continue;
+      seen.add(s.id);
+      scenarios.push(s);
+    }
+  }
+  scenarioPool = { scenarios };
+  return scenarioPool;
+}
+
 const PHASE_NAMES = {
   dispatch: ['Dispatch', '派遣'], scene: ['Scene Assessment + PPE', '现场评估+PPE'],
   primary: ['Primary Survey', '初级评估'], transport: ['Transport Decision', '转运决策'],
@@ -13,7 +35,7 @@ const PHASE_NAMES = {
 /* ---------------- hub ---------------- */
 export async function renderPracticalHub(el) {
   const tr = S.track;
-  const data = await loadJSON('./data/practical/scenarios.json');
+  const data = await loadScenarios();
   const rubric = await loadJSON('./data/practical/rubric.json');
   const n = data ? data.scenarios.length : 0;
   const med = data ? data.scenarios.filter(s => s.type === 'medical').length : 0;
@@ -56,13 +78,18 @@ export async function renderPracticalHub(el) {
 
 /* ---------------- scenario list ---------------- */
 export async function renderScenarioList(el, arg, params) {
-  const data = await loadJSON('./data/practical/scenarios.json');
+  const data = await loadScenarios();
   if (!data) { el.innerHTML = `<div class="card"><h2>${t('Scenarios deploying…', '场景库部署中…')}</h2></div>`; return; }
   const type = params.type || 'all';
-  const list = data.scenarios.filter(s => type === 'all' || s.type === type);
+  const list = data.scenarios
+    .filter(s => type === 'all' || s.type === type)
+    // scenarios written from your own scope's perspective come first
+    .sort((a, b) => (b.focus === S.track ? 1 : 0) - (a.focus === S.track ? 1 : 0));
+  const mine = list.filter(s => s.focus === S.track).length;
   el.innerHTML = `
     <div class="card">
-      <h2>🎬 ${t('Scenarios', '场景库')}</h2>
+      <h2>🎬 ${t('Scenarios', '场景库')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
+      ${mine ? `<p class="tiny">${t(`${mine} scenario(s) written specifically for your scope are listed first.`, `其中 ${mine} 个是专门按你的授权范围写的，排在前面。`)}</p>` : ''}
       <div class="btn-row">
         ${['all', 'medical', 'trauma'].map(x => `<a class="btn ${type === x ? '' : 'ghost'}" href="#/scenarios?type=${x}">${x === 'all' ? t('All', '全部') : x}</a>`).join('')}
       </div>
@@ -72,7 +99,8 @@ export async function renderScenarioList(el, arg, params) {
         const best = S.scenarioHistory.filter(r => r.id === s.id).reduce((m, r) => Math.max(m, r.score), 0);
         return `<button class="list-item" data-open="${esc(s.id)}">
           <span class="pill ${s.type}">${s.type}</span>
-          <span>${bi(s.titleEn, s.titleZh, 'span')}</span>
+          <span>${bi(s.titleEn, s.titleZh, 'span')}
+            ${s.focus === S.track ? `<span class="tiny" style="color:var(--${S.track})">★ ${t(S.track.toUpperCase() + '-focused', S.track.toUpperCase() + ' 专属')}</span>` : ''}</span>
           <span class="tag-count">${best ? best + '%' : t('new', '未练')}</span>
           <span class="li-arrow">›</span>
         </button>`;
@@ -84,7 +112,7 @@ export async function renderScenarioList(el, arg, params) {
 /* ---------------- player ---------------- */
 let run = null;
 export async function renderScenarioPlayer(el, id) {
-  const data = await loadJSON('./data/practical/scenarios.json');
+  const data = await loadScenarios();
   const sc = data && data.scenarios.find(s => s.id === id);
   if (!sc) { el.innerHTML = `<div class="card">Scenario not found</div>`; return; }
   const phases = sc.phases.filter(p => !(p.id === 'fe' && S.track === 'emr'));

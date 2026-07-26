@@ -3,23 +3,52 @@ import { S, save, bi, biList, t, esc, loadJSON, nav } from './app.js';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
+  const tr = S.track, isEmr = tr === 'emr';
+  // count what this candidate's scope actually shows, so the filtering is visible
+  const [tData, pData, dData] = await Promise.all([
+    loadJSON('./data/study/treatments.json'), loadJSON('./data/study/protocols.json'), loadJSON('./data/study/drugs.json'),
+  ]);
+  const inScope = (item, key = 'licence') => !(isEmr && item[key] === 'pcp');
+  const tAll = tData ? tData.treatments.length : 0;
+  const tMine = tData ? tData.treatments.filter(x => inScope(x)).length : 0;
+  const pAll = pData ? pData.protocols.length : 0;
+  const pMine = pData ? pData.protocols.filter(x => inScope(x)).length : 0;
+  const dAll = dData ? dData.drugs.length : 0;
+  const dMine = dData ? dData.drugs.filter(x => (x.licence || []).some(l => l.toLowerCase() === tr)).length : 0;
+  const scopeTag = (mine, all) => mine === all
+    ? `<span class="tag-count">${all}</span>`
+    : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
   const cards = [
-    ['assessment', '🧭', 'Patient Assessment Model', '患者评估模型', 'The backbone of both written and practical. Learn the exact official sequence.', '笔试和实操共同的主线，按官方顺序学。'],
-    ['protocols', '📜', 'Protocols (13)', '处置协议 (13)', 'The decision trees examiners test: cardiac arrest to narcotic overdose.', '考官考的决策树：从心脏骤停到麻醉剂过量。'],
-    ['treatments', '🩹', 'Treatments', '处置主题', 'Wound care, spinal, burns, CPR, environmental — every testable topic.', '伤口/脊柱/烧伤/CPR/环境急症——每个可考主题。'],
-    ['drugs', '💊', 'Drug Monographs (18)', '药物专论 (18)', 'Doses, contraindications, and who may give what (EMR vs PCP).', '剂量、禁忌、EMR/PCP 授权差异。'],
-    ['reference', '🔤', 'Reference', '速查参考', 'Abbreviations, GCS, AVPU, history mnemonics, PCR fields.', '缩写表、GCS、AVPU、病史口诀、PCR 字段。'],
+    ['assessment', '🧭', 'Patient Assessment Model', '患者评估模型',
+      'The backbone of both written and practical. Learn the exact official sequence.', '笔试和实操共同的主线，按官方顺序学。', ''],
+    ['protocols', '📜', 'Protocols', '处置协议',
+      'The decision trees examiners test: cardiac arrest to narcotic overdose.', '考官考的决策树：从心脏骤停到麻醉剂过量。', scopeTag(pMine, pAll)],
+    ['treatments', '🩹', 'Treatments', '处置主题',
+      'Wound care, spinal, burns, CPR, environmental — every testable topic.', '伤口/脊柱/烧伤/CPR/环境急症——每个可考主题。', scopeTag(tMine, tAll)],
+    ['drugs', '💊', 'Drug Monographs', '药物专论',
+      'Doses, contraindications, and who may give what.', '剂量、禁忌、给药权限。', scopeTag(dMine, dAll)],
+    ['reference', '🔤', 'Reference', '速查参考',
+      'Abbreviations, GCS, AVPU, history mnemonics, PCR fields.', '缩写表、GCS、AVPU、病史口诀、PCR 字段。', ''],
   ];
   el.innerHTML = `
     <div class="card">
-      <h2>📖 ${t('Study Library', '学习内容库')}</h2>
+      <h2>📖 ${t('Study Library', '学习内容库')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${bi('All content is structured from the official BC Provincial Examination Guidelines (June 15, 2026) — the only standard examiners may mark against. Page references included.',
            '所有内容都结构化自 BC 官方考纲（2026年6月15日现行版）——考官唯一被允许采用的标准。每条都带原文页码。')}
+    </div>
+    <div class="notice">
+      ${bi(isEmr
+        ? `Filtered to the EMR scope: you see ${pMine} of ${pAll} protocols, ${tMine} of ${tAll} treatment topics, and ${dMine} of ${dAll} drugs. Assessment, history taking and most trauma and medical care are identical at both levels — what changes is which interventions you are authorized to perform (no IV, no CPAP, fewer drugs).`
+        : `Full PCP scope: all ${pAll} protocols, ${tAll} treatment topics and ${dMine} of ${dAll} drugs are within your authorization. The extra ground over EMR is IV therapy, CPAP, fluid resuscitation and the PCP-only medications.`,
+        isEmr
+        ? `已按 EMR 授权范围过滤：协议 ${pMine}/${pAll}、处置主题 ${tMine}/${tAll}、药物 ${dMine}/${dAll}。评估流程、病史采集和大部分创伤/内科处置在两个等级是完全一样的——区别只在于"你被授权做哪些干预"（EMR 不能开 IV、不能用 CPAP、可用药更少）。`
+        : `PCP 完整范围：${pAll} 个协议、${tAll} 个处置主题全部可用，药物 ${dMine}/${dAll} 在你的授权内。比 EMR 多出来的是 IV 治疗、CPAP、液体复苏和 PCP 专属药物。`)}
     </div>
     <div class="list-wrap">
       ${cards.map(c => `<button class="list-item" data-goto="/study/${c[0]}">
         <span style="font-size:1.3rem">${c[1]}</span>
         <span>${bi(c[2], c[3], 'span')}<div class="tiny">${t(c[4], c[5])}</div></span>
+        ${c[6]}
         <span class="li-arrow">›</span></button>`).join('')}
     </div>`;
   el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
