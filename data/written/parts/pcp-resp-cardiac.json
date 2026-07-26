@@ -1,7 +1,7 @@
 {
   "meta": {
     "part": "pcp-resp-cardiac",
-    "count": 100,
+    "count": 120,
     "languages": [
       "en",
       "zh"
@@ -3806,6 +3806,766 @@
       "explanationEn": "Repeat vitals and the drug until pain is relieved, to a maximum of 3 doses in any 30-minute period, providing the systolic BP remains above 110 mmHg, irrespective of any nitro taken by the patient prior to your arrival. Note that ASA is different: if the patient has already taken their recommended dose, ASA is contraindicated.",
       "explanationZh": "应重复测量生命体征并给药直至疼痛缓解，任何30分钟内最多3剂，前提是收缩压持续高于110毫米汞柱，且不计患者在你到达前自行服用的硝酸甘油。注意阿司匹林规则不同：若患者已自行服用推荐剂量，则禁用阿司匹林。",
       "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-101",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "hemorrhage",
+      "difficulty": "intermediate",
+      "questionEn": "A 31-year-old man has a deep forearm laceration bleeding briskly after a workshop accident. What is your first hemorrhage control measure?",
+      "questionZh": "一名31岁男性在车间事故中前臂深度撕裂伤，出血迅猛。你的第一项止血措施是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Apply a tourniquet proximal to the wound immediately",
+          "zh": "立即在伤口近端上止血带"
+        },
+        {
+          "key": "B",
+          "en": "Pack the wound with hemostatic gauze",
+          "zh": "用止血纱布填塞伤口"
+        },
+        {
+          "key": "C",
+          "en": "Apply a cold pack and elevate the limb",
+          "zh": "冷敷并抬高患肢"
+        },
+        {
+          "key": "D",
+          "en": "Expose and examine the wound, then apply direct pressure",
+          "zh": "暴露并检查伤口，然后直接压迫"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "In the primary survey, expose and examine, then control major hemorrhage with direct pressure, patient positioning and part positioning. Methods in order of preference are direct pressure, pressure dressing, positioning the part, positioning the patient, tourniquet, then wound packing.",
+      "explanationZh": "在初级评估中应先暴露并检查伤口，然后以直接压迫、患者体位和肢体体位控制大出血。首选顺序为：直接压迫→加压包扎→抬高患部→摆放患者体位→止血带→伤口填塞。",
+      "sourceRef": "BC Guidelines p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-102",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "hemorrhage",
+      "difficulty": "foundation",
+      "questionEn": "A 10-year-old boy has an arterial bleed from a mid-thigh laceration. Direct pressure and a pressure dressing have failed to control it. What is the next step?",
+      "questionZh": "一名10岁男孩大腿中段撕裂伤伴动脉性出血。直接压迫和加压包扎均未能控制出血。下一步是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Pack the thigh wound and bandage over the packing",
+          "zh": "填塞大腿伤口并在填塞物上加压包扎"
+        },
+        {
+          "key": "B",
+          "en": "Elevate the limb and wait 5 minutes before reassessing",
+          "zh": "抬高患肢，等5分钟后再评估"
+        },
+        {
+          "key": "C",
+          "en": "Transport immediately without further hemorrhage control",
+          "zh": "立即转运，不再做其他止血处理"
+        },
+        {
+          "key": "D",
+          "en": "Apply a tourniquet proximal to the wound",
+          "zh": "在伤口近端上止血带"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "If direct pressure does not control the bleeding and the wound is in an area amenable to tourniquet application, apply a tourniquet proximal to the wound. Wound packing is considered for junctional hemorrhage where a tourniquet cannot be applied.",
+      "explanationZh": "若直接压迫无法控制出血，而伤口位于可上止血带的部位，应在伤口近端上止血带。伤口填塞用于无法使用止血带的交界区出血。",
+      "sourceRef": "BC Guidelines p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-103",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "hemorrhage",
+      "difficulty": "foundation",
+      "questionEn": "According to the BC wound care guideline, what is the correct order of preference for methods of hemorrhage control?",
+      "questionZh": "按BC伤口护理指南，止血方法的正确优先顺序是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Direct pressure, pressure dressing, positioning the part, positioning the patient, tourniquet, wound packing",
+          "zh": "直接压迫→加压包扎→抬高患部→摆放患者体位→止血带→伤口填塞"
+        },
+        {
+          "key": "B",
+          "en": "Tourniquet, direct pressure, wound packing, pressure dressing",
+          "zh": "止血带→直接压迫→伤口填塞→加压包扎"
+        },
+        {
+          "key": "C",
+          "en": "Wound packing, tourniquet, direct pressure, elevation",
+          "zh": "伤口填塞→止血带→直接压迫→抬高"
+        },
+        {
+          "key": "D",
+          "en": "Pressure points, elevation, tourniquet, direct pressure",
+          "zh": "压迫点→抬高→止血带→直接压迫"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The listed order is direct pressure, pressure dressing, positioning the part (elevation, only if it will not aggravate other injuries), positioning the patient (at rest and supine if injuries permit), tourniquet (note the time and do not release once applied), and extremity wound packing if the bleed cannot be controlled.",
+      "explanationZh": "指南列出的顺序为：直接压迫→加压包扎→抬高患部（仅在不加重其他损伤时）→摆放患者体位（伤情允许时静卧仰卧）→止血带（记录时间，一旦上好不得松开）→出血仍无法控制时行肢体伤口填塞。",
+      "sourceRef": "BC Guidelines p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-104",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "hemorrhage",
+      "difficulty": "intermediate",
+      "questionEn": "A 72-year-old man on warfarin has a deep laceration at the junction of the neck and shoulder that continues to bleed despite direct pressure. What should you do?",
+      "questionZh": "一名72岁服用华法林的男性在颈肩交界处有深度撕裂伤，直接压迫后仍持续出血。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Pack the wound firmly, since it is not amenable to a tourniquet",
+          "zh": "因无法使用止血带，用力填塞该伤口"
+        },
+        {
+          "key": "B",
+          "en": "Apply a tourniquet around the base of the neck",
+          "zh": "在颈根部上止血带"
+        },
+        {
+          "key": "C",
+          "en": "Release pressure every minute to assess whether bleeding has stopped",
+          "zh": "每分钟松开压迫一次以判断是否已止血"
+        },
+        {
+          "key": "D",
+          "en": "Continue and improve direct pressure with a pressure dressing; do not pack wounds on the neck, chest or abdomen",
+          "zh": "继续并加强直接压迫、加用加压包扎；颈部、胸部和腹部的伤口不得填塞"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Wound packing is considered for junctional hemorrhage not amenable to a tourniquet, but the guideline explicitly states: do not pack wounds on the neck, chest, or abdomen. Direct pressure and a pressure dressing remain the management here.",
+      "explanationZh": "伤口填塞用于无法上止血带的交界区出血，但指南明确规定：颈部、胸部和腹部的伤口不得填塞。此例仍应以直接压迫和加压包扎处理。",
+      "sourceRef": "BC Guidelines p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-105",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "hemorrhage",
+      "difficulty": "foundation",
+      "questionEn": "You applied a tourniquet 12 minutes ago to a 14-year-old's forearm and the bleeding has stopped. Transport time is 25 minutes. What should you do with the tourniquet?",
+      "questionZh": "你在12分钟前给一名14岁患者的前臂上了止血带，出血已经停止。转运时间还需25分钟。止血带应该如何处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Release it every 10 minutes to allow limb perfusion",
+          "zh": "每10分钟松开一次以让肢体获得灌注"
+        },
+        {
+          "key": "B",
+          "en": "Release it now that bleeding has stopped, and reapply if bleeding restarts",
+          "zh": "既然出血已停止就松开，再出血时重新上"
+        },
+        {
+          "key": "C",
+          "en": "Loosen it slightly to reduce pain, without fully releasing",
+          "zh": "稍微放松以减轻疼痛，但不完全松开"
+        },
+        {
+          "key": "D",
+          "en": "Leave it in place, having noted the time of application, and do not release it",
+          "zh": "记录上带时间后保持原位，不得松开"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Note the time of tourniquet application and do not release it once applied. Releasing a tourniquet risks renewed catastrophic hemorrhage and washout of metabolic products.",
+      "explanationZh": "上止血带时应记录时间，一旦上好就不得松开。松开止血带有导致灾难性再出血和代谢产物冲刷入循环的风险。",
+      "sourceRef": "BC Guidelines p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-106",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "hemorrhage",
+      "difficulty": "intermediate",
+      "questionEn": "What is the dose and administration of tranexamic acid (TXA) under the BC guidelines?",
+      "questionZh": "按BC指南，氨甲环酸（TXA）的剂量和给药方法是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "1 gram IV push over 10 seconds",
+          "zh": "1克静脉推注，10秒内推完"
+        },
+        {
+          "key": "B",
+          "en": "2 grams (2000 mg) IV push over 1 minute",
+          "zh": "2克（2000毫克）静脉推注，1分钟内推完"
+        },
+        {
+          "key": "C",
+          "en": "1 gram IM, repeated once after 30 minutes",
+          "zh": "肌注1克，30分钟后重复一次"
+        },
+        {
+          "key": "D",
+          "en": "20 mg/kg IV infused over 20 minutes",
+          "zh": "20毫克/公斤静脉输注，20分钟输完"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "TXA is delivered as 2 grams (2000 mg) IV push over 1 minute. Rapid administration risks further hypotension, which is the listed caution.",
+      "explanationZh": "TXA为2克（2000毫克）静脉推注，1分钟内推完。给药过快会加重低血压，这是指南列出的注意事项。",
+      "sourceRef": "BC Guidelines p.78",
+      "verified": false
+    },
+    {
+      "id": "prc-107",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "hemorrhage",
+      "difficulty": "intermediate",
+      "questionEn": "A 9-year-old girl struck by a car has signs of shock with ongoing internal bleeding suspected. The hypovolemia protocol has been initiated. What about TXA?",
+      "questionZh": "一名9岁女孩被汽车撞伤，有休克表现并怀疑持续内出血，已启动低血容量方案。TXA该如何处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Give 1 gram IV, half the adult dose, adjusted for her age",
+          "zh": "按年龄调整，静脉给1克，即成人剂量的一半"
+        },
+        {
+          "key": "B",
+          "en": "Give the full 2 gram adult dose",
+          "zh": "按成人剂量给足2克"
+        },
+        {
+          "key": "C",
+          "en": "Give TXA only if the injury occurred more than 3 hours ago",
+          "zh": "仅在受伤超过3小时时才给TXA"
+        },
+        {
+          "key": "D",
+          "en": "Withhold TXA: patients under 12 years are a contraindication",
+          "zh": "不给TXA：12岁以下患者属于禁忌"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "TXA contraindications are known hypersensitivity, more than 3 hours after injury, patients under 12 years, and isolated traumatic brain injuries. There is no reduced paediatric dose; the drug is simply not given below 12 years.",
+      "explanationZh": "TXA的禁忌证为：已知过敏、受伤超过3小时、12岁以下患者，以及孤立性颅脑损伤。该药没有儿科减量方案，12岁以下直接不予使用。",
+      "sourceRef": "BC Guidelines p.78",
+      "verified": false
+    },
+    {
+      "id": "prc-108",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "hemorrhage",
+      "difficulty": "advanced",
+      "questionEn": "A 68-year-old man fell down stairs and was found by family 4 hours later. He has a rigid abdomen, BP 84/58 and HR 122. The hypovolemia protocol is under way. What about TXA?",
+      "questionZh": "一名68岁男性从楼梯摔下，4小时后才被家人发现。腹部板状强直，血压84/58，心率122，已在执行低血容量方案。TXA该如何处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Give 2 grams IV push over 1 minute, since he is clearly in shock",
+          "zh": "因其明显休克，静脉推注2克，1分钟内推完"
+        },
+        {
+          "key": "B",
+          "en": "Give 2 grams IV as a slow infusion over 30 minutes instead",
+          "zh": "改为静脉缓慢输注2克，30分钟输完"
+        },
+        {
+          "key": "C",
+          "en": "Give 1 gram IV as a compromise given the delay",
+          "zh": "因延迟就诊折中给1克静脉推注"
+        },
+        {
+          "key": "D",
+          "en": "Withhold TXA: it is contraindicated more than 3 hours after injury",
+          "zh": "不给TXA：受伤超过3小时属于禁忌"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "TXA is contraindicated if time is greater than 3 hours after injury. Continue the hypovolemia protocol: control hemorrhage, position supine, keep warm, oxygen to SpO2 ≥ 94%, vascular access and fluid boluses as clinically indicated.",
+      "explanationZh": "受伤超过3小时后禁用TXA。应继续执行低血容量方案：控制出血、仰卧位、保暖、给氧维持SpO2≥94%、建立血管通路并按临床指征输液。",
+      "sourceRef": "BC Guidelines p.54, p.78",
+      "verified": false
+    },
+    {
+      "id": "prc-109",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "hemorrhage",
+      "difficulty": "advanced",
+      "questionEn": "A 27-year-old man assaulted with a bat has an isolated head injury: GCS 10, a boggy scalp hematoma, BP 148/92, HR 62, no other injuries found on the rapid body survey. Your partner suggests TXA. What is correct?",
+      "questionZh": "一名27岁男性被球棒击打，为孤立性头部损伤：GCS 10分，头皮有波动性血肿，血压148/92，心率62，快速全身检查未发现其他损伤。搭档建议给TXA。正确的判断是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Give TXA, since head bleeding is the most dangerous type of hemorrhage",
+          "zh": "给TXA，因为颅内出血是最危险的出血"
+        },
+        {
+          "key": "B",
+          "en": "Give TXA only after a fluid bolus raises the blood pressure",
+          "zh": "先输液升压后再给TXA"
+        },
+        {
+          "key": "C",
+          "en": "Withhold TXA: isolated traumatic brain injury is a contraindication, and he shows no signs of shock or hypovolemia",
+          "zh": "不给TXA：孤立性颅脑损伤是禁忌证，且他没有休克或低血容量表现"
+        },
+        {
+          "key": "D",
+          "en": "Give half the dose because he is hypertensive",
+          "zh": "因其血压偏高而给半量"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Isolated TBIs are a listed contraindication to TXA. His indications are also absent: TXA is for major trauma patients after initiation of the hypovolemia protocol, or signs of shock with a mechanism or findings suggestive of occult or ongoing bleeding. His hypertension with bradycardia suggests rising intracranial pressure, not hypovolemia.",
+      "explanationZh": "孤立性颅脑损伤是TXA明确列出的禁忌证。且其适应证也不成立：TXA用于启动低血容量方案后的严重创伤患者，或有休克表现且受伤机制／体征提示隐匿性或持续性出血者。血压高伴心动过缓提示颅内压升高，而非低血容量。",
+      "sourceRef": "BC Guidelines p.78",
+      "verified": false
+    },
+    {
+      "id": "prc-110",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "hemorrhage",
+      "difficulty": "intermediate",
+      "questionEn": "A 12-year-old girl has a grossly deformed mid-shaft femur fracture with no palpable pulse in the foot. Bleeding is controlled. What should you do?",
+      "questionZh": "一名12岁女孩股骨干中段骨折伴明显畸形，足背触不到脉搏，出血已控制。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Splint the limb exactly as found and transport without any realignment",
+          "zh": "按发现时的原状固定肢体，不做任何复位即转运"
+        },
+        {
+          "key": "B",
+          "en": "Apply a tourniquet above the fracture to protect the limb",
+          "zh": "在骨折上方上止血带以保护肢体"
+        },
+        {
+          "key": "C",
+          "en": "Make repeated realignment attempts until a pulse returns",
+          "zh": "反复尝试复位直到脉搏恢复"
+        },
+        {
+          "key": "D",
+          "en": "Make one attempt to re-align the limb to the anatomical position; if circulation returns treat as stable, if it remains pulseless manage as unstable",
+          "zh": "尝试一次将肢体复位至解剖位；若循环恢复按稳定处理，若仍无脉搏则按不稳定处理"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Absence of distal circulation may indicate a limb-threatening injury. If the limb is pulseless distal to an injury, one attempt can be made to re-align it to the anatomical position. If circulation returns the patient can be treated as stable; if the limb remains pulseless the patient should be managed as unstable.",
+      "explanationZh": "远端循环消失提示可能存在危及肢体的损伤。若损伤远端无脉搏，可尝试一次将肢体复位至解剖位。若循环恢复可按稳定患者处理；若仍无脉搏则应按不稳定患者处理。",
+      "sourceRef": "BC Guidelines p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-111",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "shock",
+      "difficulty": "intermediate",
+      "questionEn": "A 79-year-old woman fell at home and has an unstable pelvis, BP 86/54, HR 118, pale cool skin. External bleeding is controlled and the pelvis has been bound. How should she be positioned and protected?",
+      "questionZh": "一名79岁女性在家跌倒，骨盆不稳定，血压86/54，心率118，皮肤苍白湿冷。外出血已控制且骨盆已固定。应如何摆放体位并做好防护？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Sitting upright with legs hung down",
+          "zh": "端坐位，双腿下垂"
+        },
+        {
+          "key": "B",
+          "en": "Semi-prone on her left side",
+          "zh": "左侧半俯卧位"
+        },
+        {
+          "key": "C",
+          "en": "Prone with the head turned to the side",
+          "zh": "俯卧并将头偏向一侧"
+        },
+        {
+          "key": "D",
+          "en": "Supine to support blood pressure, kept warm and protected from further heat loss, with oxygen to maintain SpO2 ≥ 94%",
+          "zh": "仰卧以支持血压，注意保暖并防止进一步热量丢失，给氧维持SpO2≥94%"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Hypovolemia management at all licence levels: control external hemorrhage, splint pelvis or fractures if indicated, position the patient supine to support blood pressure, keep warm and protect from further heat loss, and administer oxygen to maintain SpO2 ≥ 94%.",
+      "explanationZh": "各级执照的低血容量处理：控制外出血，按指征固定骨盆或骨折，仰卧位以支持血压，保暖并防止进一步热量丢失，给氧维持SpO2≥94%。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "prc-112",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "shock",
+      "difficulty": "foundation",
+      "questionEn": "What is the fluid bolus regimen for a hypovolemic patient under the PCP scope?",
+      "questionZh": "在PCP范围内，低血容量患者的液体推注方案是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "10 ml/kg to a maximum of 1 litre, reassessing every 250 ml",
+          "zh": "10毫升/公斤，最多1升，每250毫升复评一次"
+        },
+        {
+          "key": "B",
+          "en": "1 litre wide open, then reassess once",
+          "zh": "1升全速输入后复评一次"
+        },
+        {
+          "key": "C",
+          "en": "500 ml regardless of weight, no repeat",
+          "zh": "不论体重一律500毫升，不重复"
+        },
+        {
+          "key": "D",
+          "en": "20 ml/kg to a maximum of 2 litres, reassessing every 500 ml",
+          "zh": "20毫升/公斤，最多2升，每500毫升复评一次"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The fluid bolus is 20 ml/kg to a maximum of 2 litres, reassessing every 500 ml. In the nausea and vomiting protocol the same bolus regimen is used, targeting a systolic blood pressure of 90 mmHg.",
+      "explanationZh": "液体推注为20毫升/公斤，最多2升，每500毫升复评一次。恶心呕吐方案采用同样的推注方案，目标收缩压为90毫米汞柱。",
+      "sourceRef": "BC Guidelines p.54, p.48",
+      "verified": false
+    },
+    {
+      "id": "prc-113",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "shock",
+      "difficulty": "intermediate",
+      "questionEn": "A 6-year-old boy has scald burns to 25% of his body surface area. He is alert with BP 96/60 and HR 130. Which BC guideline applies?",
+      "questionZh": "一名6岁男孩烫伤面积占体表25%，神志清醒，血压96/60，心率130。适用哪一项BC指南？",
+      "options": [
+        {
+          "key": "A",
+          "en": "None, because his blood pressure is normal for his age",
+          "zh": "都不适用，因为其血压对该年龄属正常"
+        },
+        {
+          "key": "B",
+          "en": "Only the wound care guideline, since burns are wounds",
+          "zh": "只适用伤口护理指南，因为烧伤属于伤口"
+        },
+        {
+          "key": "C",
+          "en": "The CPAP guideline, to support oxygenation",
+          "zh": "CPAP指南，用于支持氧合"
+        },
+        {
+          "key": "D",
+          "en": "The hypovolemia guideline: patients with burns greater than 20% BSA (partial and full thickness) are a listed indication",
+          "zh": "低血容量指南：体表面积超过20%的（部分及全层）烧伤患者是其列出的适应证"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Patients with burns greater than 20% BSA (partial and full thickness) are a listed indication for the hypovolemia protocol, alongside hypovolemia with systolic BP < 90 mmHg and other clinical signs of shock. Initiate cooling of major burns and protect against heat loss.",
+      "explanationZh": "体表面积超过20%的（部分及全层）烧伤患者是低血容量方案列出的适应证之一，与收缩压<90毫米汞柱的低血容量及其他休克体征并列。大面积烧伤应开始降温处理并注意防止热量丢失。",
+      "sourceRef": "BC Guidelines p.54, p.11",
+      "verified": false
+    },
+    {
+      "id": "prc-114",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "shock",
+      "difficulty": "advanced",
+      "questionEn": "An 81-year-old man was ejected from a rolled vehicle. He has a flail segment, an open femur fracture and BP 112/70 with HR 98. Your partner says the hypovolemia protocol does not apply because his systolic is above 90. What is correct?",
+      "questionZh": "一名81岁男性在车辆翻滚中被抛出车外，有连枷胸段、股骨开放性骨折，血压112/70，心率98。搭档说收缩压高于90，因此低血容量方案不适用。正确的判断是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "The protocol may be used with a BP above 90 mmHg if shock is anticipated because of the mechanism, the nature and extent of the injuries, or the patient's condition",
+          "zh": "若根据受伤机制、损伤性质与范围或患者状况预计会发生休克，血压高于90毫米汞柱时也可使用该方案"
+        },
+        {
+          "key": "B",
+          "en": "The protocol is strictly limited to a systolic below 90 mmHg",
+          "zh": "该方案严格限于收缩压低于90毫米汞柱者"
+        },
+        {
+          "key": "C",
+          "en": "Wait for a second set of vitals showing hypotension before acting",
+          "zh": "等到第二组生命体征显示低血压后再处理"
+        },
+        {
+          "key": "D",
+          "en": "Use the protocol only once the heart rate exceeds 120",
+          "zh": "只有心率超过120时才启用该方案"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The footnote to the hypovolemia protocol states it may be used for patients with BP greater than 90 mmHg if shock is anticipated because of the mechanism of injury, the nature and extent of the injuries, or the patient's condition. Waiting for hypotension in a multi-system trauma patient means acting late.",
+      "explanationZh": "低血容量方案的注释明确指出：若根据受伤机制、损伤性质与范围或患者状况预计会发生休克，血压高于90毫米汞柱的患者也可使用该方案。对多系统创伤患者等到出现低血压再处理就太迟了。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "prc-115",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "shock",
+      "difficulty": "foundation",
+      "questionEn": "Which findings are listed indications for the BC hypovolemia guideline?",
+      "questionZh": "下列哪组表现是BC低血容量指南列出的适应证？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Fever, tachypnea and a productive cough",
+          "zh": "发热、呼吸增快和咳痰"
+        },
+        {
+          "key": "B",
+          "en": "Chest pain relieved by rest with a normal blood pressure",
+          "zh": "休息后缓解的胸痛且血压正常"
+        },
+        {
+          "key": "C",
+          "en": "Wheezing with accessory muscle use and a normal blood pressure",
+          "zh": "喘鸣伴辅助呼吸肌参与且血压正常"
+        },
+        {
+          "key": "D",
+          "en": "Hypovolemia with systolic BP < 90 mmHg plus other clinical signs or symptoms of shock, or burns > 20% BSA",
+          "zh": "低血容量伴收缩压<90毫米汞柱及其他休克体征或症状，或体表面积>20%的烧伤"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The indications are patients with all of: hypovolemia, systolic BP < 90 mmHg, and other clinical signs or symptoms of shock; plus patients with burns greater than 20% BSA (partial and full thickness). Evidence of significant blood or body fluid loss is needed to support the diagnosis of hypovolemia.",
+      "explanationZh": "适应证为同时具备低血容量、收缩压<90毫米汞柱以及其他休克体征或症状的患者，另加体表面积超过20%的（部分及全层）烧伤患者。诊断低血容量需要有明显血液或体液丢失的证据支持。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "prc-116",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "neonatal",
+      "topic": "shock",
+      "difficulty": "foundation",
+      "questionEn": "A 2-week-old infant has been vomiting for 3 days and now has cool mottled skin and a weak rapid pulse. He is wet and exposed on the assessment surface. Beyond oxygenation, which intervention is essential?",
+      "questionZh": "一名2周大的婴儿呕吐已3天，现皮肤湿冷花斑、脉搏细速。他身上潮湿且暴露在检查台上。除了氧合之外，哪项处置最为关键？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Position him sitting upright with the legs hung down",
+          "zh": "让其端坐、双腿下垂"
+        },
+        {
+          "key": "B",
+          "en": "Dry him and keep him warm, protecting from further heat loss",
+          "zh": "擦干并保暖，防止进一步热量丢失"
+        },
+        {
+          "key": "C",
+          "en": "Apply a tourniquet-style pressure wrap to the limbs",
+          "zh": "在四肢缠绕止血带式加压绷带"
+        },
+        {
+          "key": "D",
+          "en": "Administer TXA 2 grams IV",
+          "zh": "静脉给予2克TXA"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Keeping the patient warm and protecting from further heat loss is a core intervention at all licence levels for hypovolemia, and neonates lose heat extremely rapidly. Sitting upright is for CHF/pulmonary edema, and TXA is contraindicated under 12 years.",
+      "explanationZh": "保暖并防止进一步热量丢失是各级执照处理低血容量的核心措施，而新生儿散热极快。端坐位适用于心衰／肺水肿，TXA则在12岁以下属禁忌。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "prc-117",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "shock",
+      "difficulty": "intermediate",
+      "questionEn": "A 15-year-old boy with a stab wound to the thigh has BP 88/56, HR 128 and pale clammy skin. Bleeding is controlled with a tourniquet. As a PCP, when should vascular access and fluid be obtained?",
+      "questionZh": "一名15岁男孩大腿刺伤，血压88/56，心率128，皮肤苍白湿冷，已用止血带控制出血。作为PCP，应在什么时候建立血管通路并输液？",
+      "options": [
+        {
+          "key": "A",
+          "en": "On scene, before packaging, so the bolus is complete before moving",
+          "zh": "在现场、打包前完成，以便搬动前输完"
+        },
+        {
+          "key": "B",
+          "en": "Only after arrival at hospital",
+          "zh": "到达医院后才做"
+        },
+        {
+          "key": "C",
+          "en": "Before controlling the hemorrhage",
+          "zh": "在控制出血之前"
+        },
+        {
+          "key": "D",
+          "en": "En route, or during a time delay, after hemorrhage control and packaging",
+          "zh": "在控制出血并打包之后，于转运途中或遇到延误时进行"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Additional PCP interventions for hypovolemia are performed en route or during a time delay: obtain vascular access, consider a fluid bolus of 20 ml/kg to a maximum of 2 litres reassessing every 500 ml, and consider TXA where indicated. On-scene time should not be extended for IV access.",
+      "explanationZh": "低血容量的PCP附加处置应在转运途中或遇到延误时进行：建立血管通路，按指征考虑20毫升/公斤（最多2升、每500毫升复评）的液体推注，并考虑使用TXA。不应为建立静脉通路而延长现场时间。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "prc-118",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "shock",
+      "difficulty": "intermediate",
+      "questionEn": "A 30 kg 9-year-old in hypovolemic shock is receiving a fluid bolus. What volume constitutes the correct bolus, and how often should you reassess?",
+      "questionZh": "一名30公斤重的9岁低血容量休克患儿正在接受液体推注。正确的推注量是多少，多久复评一次？",
+      "options": [
+        {
+          "key": "A",
+          "en": "300 ml, reassessing at the end of the bolus",
+          "zh": "300毫升，输完后复评"
+        },
+        {
+          "key": "B",
+          "en": "1500 ml, reassessing every 500 ml",
+          "zh": "1500毫升，每500毫升复评一次"
+        },
+        {
+          "key": "C",
+          "en": "2000 ml, reassessing at the end of the bolus",
+          "zh": "2000毫升，输完后复评"
+        },
+        {
+          "key": "D",
+          "en": "600 ml (20 ml/kg), reassessing every 500 ml",
+          "zh": "600毫升（20毫升/公斤），每500毫升复评一次"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The bolus is 20 ml/kg to a maximum of 2 litres: 30 kg x 20 ml = 600 ml, with reassessment every 500 ml. Reassessment between increments prevents over-resuscitation.",
+      "explanationZh": "推注量为20毫升/公斤，最多2升：30公斤×20毫升＝600毫升，每500毫升复评一次。分段复评可避免液体复苏过量。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "prc-119",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "shock",
+      "difficulty": "foundation",
+      "questionEn": "A 13-year-old with multiple injuries and signs of shock has an open abdominal wound with a loop of bowel protruding. How should the eviscerated bowel be managed?",
+      "questionZh": "一名13岁多发伤患者有休克表现，腹部开放伤口有一段肠管脱出。脱出的肠管应如何处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Gently replace it in the abdominal cavity and bandage firmly",
+          "zh": "轻柔地将其放回腹腔并加压包扎"
+        },
+        {
+          "key": "B",
+          "en": "Cover it with moist sterile dressings followed by an occlusive layer, and do not place it back in the abdominal cavity",
+          "zh": "用湿润无菌敷料覆盖后再加一层封闭敷料，不要将其放回腹腔"
+        },
+        {
+          "key": "C",
+          "en": "Pack the abdominal wound to control bleeding",
+          "zh": "填塞腹部伤口以控制出血"
+        },
+        {
+          "key": "D",
+          "en": "Apply a dry pressure dressing directly over the bowel",
+          "zh": "直接在肠管上加干性加压包扎"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Cover extruded bowel or eviscerated abdominal contents with moist, sterile dressings followed by an occlusive layer, and do not place them back in the abdominal cavity. Also control external hemorrhage, limit movement to reduce clot disruption, protect against heat loss and use a position of comfort. Wounds on the abdomen must not be packed.",
+      "explanationZh": "脱出的肠管或腹腔内容物应以湿润无菌敷料覆盖，外加一层封闭敷料，且不得放回腹腔。同时控制外出血、限制活动以免血凝块脱落、防止热量丢失并保持舒适体位。腹部伤口不得填塞。",
+      "sourceRef": "BC Guidelines p.32, p.19",
+      "verified": false
+    },
+    {
+      "id": "prc-120",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "shock",
+      "difficulty": "advanced",
+      "questionEn": "A 66-year-old woman thrown from a horse 40 minutes ago has BP 88/60, HR 124, a rigid abdomen and no external bleeding. The hypovolemia protocol has been initiated and vascular access obtained. What additional PCP intervention should be considered?",
+      "questionZh": "一名66岁女性40分钟前从马背摔下，血压88/60，心率124，腹部板状强直，无外出血。低血容量方案已启动且血管通路已建立。应考虑哪项PCP附加处置？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Nitroglycerin 0.4 mg SL for the abdominal pain",
+          "zh": "舌下含服0.4毫克硝酸甘油以缓解腹痛"
+        },
+        {
+          "key": "B",
+          "en": "Ipratropium 500 mcg via nebulizer",
+          "zh": "雾化吸入500微克异丙托溴铵"
+        },
+        {
+          "key": "C",
+          "en": "CPAP at 5 cmH2O to support oxygenation",
+          "zh": "给予5厘米水柱CPAP以支持氧合"
+        },
+        {
+          "key": "D",
+          "en": "Tranexamic acid, indicated in shock secondary to blood loss and hypovolemia secondary to occult bleeding",
+          "zh": "氨甲环酸，适用于失血所致休克及隐匿性出血所致低血容量"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Consider tranexamic acid in cases of shock secondary to blood loss and hypovolemia secondary to occult bleeding. She is within 3 hours of injury, over 12 years of age, and has no isolated TBI, so no contraindication applies. Dose is 2 grams IV push over 1 minute.",
+      "explanationZh": "失血所致休克及隐匿性出血导致的低血容量应考虑使用氨甲环酸。该患者受伤在3小时内、年龄超过12岁、无孤立性颅脑损伤，故无禁忌。剂量为2克静脉推注，1分钟内推完。",
+      "sourceRef": "BC Guidelines p.54, p.78",
       "verified": false
     }
   ]

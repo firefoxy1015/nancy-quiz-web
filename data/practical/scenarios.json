@@ -2,7 +2,7 @@
   "meta": {
     "title": "BC Practical Exam Scenarios",
     "version": 1,
-    "count": 7,
+    "count": 9,
     "languages": [
       "en",
       "zh"
@@ -2555,6 +2555,545 @@
       }
     },
     {
+      "id": "tr-06",
+      "type": "trauma",
+      "titleEn": "Assault With Traumatic Brain Injury - Declining GCS",
+      "titleZh": "袭击致创伤性颅脑损伤——GCS 进行性下降",
+      "protocols": [
+        "Traumatic Brain Injuries",
+        "Spinal Management"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "2320 hrs. Code 3 to a park pathway in Abbotsford. 38-year-old male assaulted, struck in the head with a baseball bat. Police are on scene and have detained the assailant. Trauma centre is 20 minutes away; the local hospital is 8 minutes away.",
+      "dispatchZh": "23:20，Code 3 前往阿伯茨福一处公园步道。38 岁男性遭袭击，被棒球棒击中头部。警察已在现场并已控制行凶者。创伤中心车程 20 分钟；本地医院车程 8 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: witnesses say he was knocked out and is now awake but 'not making sense'. Police confirm the scene is safe.",
+          "infoZh": "调度补充：目击者称他当时被打晕，现已醒来但「说话颠三倒四」。警察确认现场安全。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan spinal equipment, oxygen, BVM, suction, and a rapid trauma-centre transport",
+              "actionZh": "确认；准备脊柱装备、氧气、球囊面罩、吸引器，并计划快速转往创伤中心",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate a head injury with altered LOC - plan for airway compromise and vomiting",
+              "actionZh": "预判头部损伤伴意识改变——预备气道受损与呕吐的应对",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Dark pathway lit by police flashlights and your scene lights. Wet grass, 9 degrees C, light rain. A baseball bat has been secured by police as evidence. The patient lies on his left side on the grass where he fell; a bystander rolled him there because he vomited. One patient. Police remain with you.",
+          "infoZh": "考官脚本：步道昏暗，靠警灯和你们的现场灯照明。草地潮湿，9 摄氏度，小雨。棒球棒已由警方作为证物封存。患者左侧卧在跌倒处的草地上；因为他吐过，一名旁观者把他翻成侧卧。单一患者。警察全程在场。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (dark, wet, cold, assault scene - police present), environment, MOI (blunt head trauma with bat), one patient",
+              "actionZh": "口述危险源（黑暗、潮湿、寒冷、袭击现场——警察在场）、环境、受伤机制（棒球棒钝性头部伤）、单一患者",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection (blood and vomit)",
+              "actionZh": "戴手套和护目镜（有血液与呕吐物）",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: patient on his side, moaning, blood in the hair on the right temple, vomit beside him",
+              "actionZh": "第一眼：患者侧卧、呻吟、右侧颞部头发上有血、身旁有呕吐物",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            },
+            {
+              "actionEn": "Protect from the environment: get the patient off the cold wet ground promptly and shield from rain",
+              "actionZh": "环境防护：尽快让患者脱离冰冷潮湿地面并遮挡雨水",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: eyes open to voice, confused speech ('where... where is... my bag'), obeys simple commands slowly. EXAMINER (give when assessed): airway - vomit in the mouth requiring SUCTION (10-15 seconds in an adult) and ongoing airway monitoring; respirations 14, adequate depth; radial pulse 58, strong and bounding. Skin: pale, warm, dry. RBS: 6 cm boggy swelling and laceration over the right temporal scalp with slow venous bleeding, no depressed skull fracture felt, no CSF from ears or nose, no other injuries. SpO2 93% RA. UNSTABLE: altered LOC with head trauma.",
+          "infoZh": "患者演员：呼唤能睁眼，言语错乱（「我的…我的包呢…」），能缓慢执行简单指令。考官（评估时给出）：气道——口腔内有呕吐物，需吸引（成人 10-15 秒）并持续监测气道；呼吸 14 次/分、深度尚可；桡动脉 58 次/分、有力洪大。皮肤：苍白、温暖、干燥。RBS：右颞部头皮有 6 cm 松软肿胀伴裂伤、缓慢静脉性出血，未触及凹陷性骨折，耳鼻无脑脊液流出，无其他损伤。SpO2 室内空气 93%。不稳定：头部外伤伴意识改变。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: responds to Voice, confused - a decreased LOC",
+              "actionZh": "评估意识 / AVPU：对言语有反应、言语错乱——意识下降",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Take manual c-spine control immediately - blunt head trauma with altered LOC is a NEXUS-positive indication",
+              "actionZh": "立即徒手固定颈椎——钝性头部外伤伴意识改变属 NEXUS 阳性指征",
+              "weight": 100,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess the airway and SUCTION the vomit; keep the airway clear throughout",
+              "actionZh": "评估气道并吸引呕吐物；全程保持气道通畅",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Consider and correctly size an airway adjunct (OPA only if the gag reflex is absent; NPA is an option if not contraindicated)",
+              "actionZh": "考虑并正确选择气道辅助装置（无咽反射才用口咽通气道；无禁忌时可考虑鼻咽通气道）",
+              "weight": 25,
+              "rubricRef": "skill-airway-mgmt"
+            },
+            {
+              "actionEn": "Assess breathing rate and adequacy; be ready to assist ventilations if the rate falls",
+              "actionZh": "评估呼吸频率与是否足够；一旦频率下降立即准备辅助通气",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation - recognize bradycardia with a bounding pulse as a possible rising-ICP sign",
+              "actionZh": "评估循环——识别心动过缓伴洪大脉搏可能提示颅内压升高",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Complete the RBS; control scalp bleeding with direct pressure; palpate for depressed skull fracture and check ears/nose for fluid",
+              "actionZh": "完成快速查体；直接加压控制头皮出血；触诊有无凹陷性骨折并检查耳鼻有无液体",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pale warm dry",
+              "actionZh": "记录皮肤：苍白、温暖、干燥",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Apply oxygen to keep SpO2 at or above 94% - TBI patients must not be allowed to desaturate",
+              "actionZh": "给氧维持 SpO2≥94%——颅脑损伤患者绝不能出现氧饱和度下降",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Manage position: spinal precautions with the head of the bed elevated 30 degrees once packaged, and airway protection given the vomiting",
+              "actionZh": "体位管理：脊柱防护下打包后床头抬高 30 度，并针对呕吐做好气道保护",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Altered LOC after head trauma = UNSTABLE, RTC. Package with spinal precautions and be ready to load within 15 minutes. Destination: this patient meets trauma-centre criteria for a moderate TBI; verbalize the destination decision and notify.",
+          "infoZh": "决策点。头部外伤后意识改变=不稳定，RTC。按脊柱防护打包，15 分钟内可装载。目的地：本例符合中度颅脑损伤的创伤中心标准；需口述目的地决策并预报。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC and act with urgency",
+              "actionZh": "判定为 RTC 并保持紧迫感",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Packaged and ready to load within 15 minutes with the airway managed",
+              "actionZh": "15 分钟内在气道已管理的前提下打包完毕可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Verbalize the trauma-centre destination decision and notify early",
+              "actionZh": "口述送往创伤中心的决策并尽早预报",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "ACTOR is confused - use POLICE AND WITNESSES: struck once on the right side of the head with a bat about 15 minutes ago, fell backwards onto grass, unconscious for roughly 2 minutes, then awake but confused and vomited twice. No other blows seen. He cannot describe the pain reliably; when asked he says his head hurts, maybe 6/10. PMHx (from his wife by phone): none significant, no anticoagulants. Meds: none. Allergies: none known. LOI: dinner around 1900, two beers.",
+          "infoZh": "患者意识错乱——需向警察和目击者采集：约 15 分钟前右侧头部被棒球棒击中一次，向后倒在草地上，昏迷约 2 分钟，随后清醒但意识错乱并呕吐两次。未见其他击打。他无法可靠描述疼痛；被问及时称头痛，大约 6/10。既往史（电话联系其妻获得）：无重要病史，未服抗凝药。用药：无。过敏：无已知。最后进食：约 19:00 晚餐，两瓶啤酒。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: head injury with altered mental status",
+              "actionZh": "确立主诉：头部损伤伴精神状态改变",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C from witnesses: number of blows, weapon, duration of LOC, vomiting, behaviour since, any lucid interval",
+              "actionZh": "向目击者采集现病史：击打次数、凶器、昏迷时长、呕吐、此后表现、有无中间清醒期",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Pain score if obtainable; document that reliability is limited by confusion",
+              "actionZh": "尽可能采集疼痛评分；注明因意识错乱可靠性受限",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "PMHx from family/police - specifically anticoagulant use",
+              "actionZh": "从家属/警察获取既往史——特别是抗凝药使用情况",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications",
+              "actionZh": "用药史",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI including alcohol",
+              "actionZh": "最后进食（含饮酒）",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1: GCS 13 (E3 V4 M6 - eyes to voice, confused, obeys commands); BP 168/92; pulse 58 strong bounding; respirations 14 regular; skin pale warm dry; PUPILS - right 5 mm sluggish, left 3 mm brisk (UNEQUAL - a critical finding); SpO2 93% RA rising to 98% on oxygen; BGL 5.6 (indicated with altered LOC); temperature 36.2 (indicated - cold wet ground). Widening pulse pressure with bradycardia and unequal pupils suggests rising intracranial pressure. RTC interval 5-6 minutes and pupils MUST be repeated every set.",
+          "infoZh": "第 1 组：GCS 13（E3 V4 M6——呼唤睁眼、言语错乱、能执行指令）；血压 168/92；脉搏 58 有力洪大；呼吸 14 规则；皮肤苍白温干；瞳孔——右侧 5 mm 反应迟钝、左侧 3 mm 反应灵敏（不等大，为关键发现）；SpO2 室内空气 93%，吸氧后升至 98%；血糖 5.6（意识改变时有指征）；体温 36.2（有指征——冰冷潮湿地面）。脉压增宽合并心动过缓与瞳孔不等大提示颅内压升高。RTC 间隔 5-6 分钟，且每组必须复查瞳孔。",
+          "expected": [
+            {
+              "actionEn": "GCS with all three components and the correct total (E3 V4 M6 = 13, moderate TBI)",
+              "actionZh": "GCS 三项分别评分并得出正确总分（E3 V4 M6 = 13，中度颅脑损伤）",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation - recognize hypertension with a widening pulse pressure",
+              "actionZh": "听诊测血压——识别高血压伴脉压增宽",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse - recognize bradycardia with a bounding character",
+              "actionZh": "脉搏——识别心动过缓伴洪大脉",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character; watch for irregular patterns",
+              "actionZh": "呼吸频率/深度/性质；警惕呼吸节律异常",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on",
+              "actionZh": "动手查皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils - identify and act on the unequal, sluggish right pupil; repeat with every set",
+              "actionZh": "瞳孔——发现并处置右侧不等大、反应迟钝的瞳孔；每组必查",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration; keep at or above 94%",
+              "actionZh": "SpO2 并校准；维持≥94%",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "BGL - indicated with any altered LOC",
+              "actionZh": "血糖——任何意识改变均有指征",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            },
+            {
+              "actionEn": "Temperature - indicated after exposure on cold wet ground",
+              "actionZh": "体温——冰冷潮湿地面暴露后有指征",
+              "weight": 5,
+              "rubricRef": "temperature"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, en route, limited by the patient's confusion. EXAMINER NOTE: no deduction for FE systems the patient cannot answer - document the limitation and obtain what you can from witnesses. Available: general - fit, no recent illness; CNS - LOC 2 minutes, confused, headache, no seizure witnessed; respiratory nil; cardiovascular nil; GI/GU - vomited twice; integumentary - scalp laceration; musculoskeletal nil; endocrine - no diabetes; EENT - blurred vision reported once, no fluid from ears.",
+          "infoZh": "仅 PCP，途中完成，受患者意识错乱限制。考官提示：患者无法回答的系统不扣分——记录该限制并尽量从目击者处获取。可得信息：整体——身体健康、近期无疾病；中枢神经——昏迷 2 分钟、意识错乱、头痛、未见抽搐；呼吸无；心血管无；消化/泌尿——呕吐两次；皮肤——头皮裂伤；肌肉骨骼无；内分泌——无糖尿病；眼耳鼻喉——曾诉视物模糊一次、耳部无液体流出。",
+          "expected": [
+            {
+              "actionEn": "FE - General health (from witnesses/family)",
+              "actionZh": "功能问诊——整体健康（向目击者/家属获取）",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS (pertinent: LOC duration, headache, seizure, vision)",
+              "actionZh": "功能问诊——中枢神经（重点：昏迷时长、头痛、抽搐、视觉）",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory",
+              "actionZh": "功能问诊——呼吸",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (vomiting is a TBI red flag)",
+              "actionZh": "功能问诊——消化/泌尿（呕吐是颅脑损伤警示征）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "功能问诊——内分泌",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT (vision, ear/nose discharge)",
+              "actionZh": "功能问诊——眼耳鼻喉（视觉、耳鼻分泌物）",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "Head-to-toe (mostly en route): head/neck - 6 cm right temporal laceration with boggy swelling, bleeding controlled by direct pressure, no depression palpable, no CSF from ears or nose, no Battle sign or raccoon eyes yet, no midline cervical tenderness elicited but he is unreliable; chest - clear and equal 6 sites; abdomen - soft; back - checked during the roll onto the device, no injury; lower extremities - moves both to command, no injury; upper extremities - moves both, grip equal, no injury.",
+          "infoZh": "从头到脚（主要在途中完成）：头颈——右颞部 6 cm 裂伤伴松软肿胀，直接加压后出血已控制，未触及凹陷，耳鼻无脑脊液，暂无 Battle 征或熊猫眼，颈椎中线未引出压痛但患者可靠性差；胸部——6 点听诊清晰对称；腹部——软；背部——滚动上板时已查、无损伤；下肢——能按指令活动双侧、无损伤；上肢——双侧能活动、握力对称、无损伤。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam: DOTS, skull depression, CSF from ears/nose, Battle sign, raccoon eyes",
+              "actionZh": "头颈查体：DOTS、颅骨凹陷、耳鼻脑脊液、Battle 征、熊猫眼",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation",
+              "actionZh": "胸部查体并 6 点听诊",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam during the roll",
+              "actionZh": "滚动时完成背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities with motor and sensory check",
+              "actionZh": "下肢并查运动与感觉",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities with grip strength comparison",
+              "actionZh": "上肢并对比握力",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "TBI guideline, all levels: maintain SpO2 at or above 94% (assist ventilations if respirations fail, keeping SpO2 at or above 94% - do NOT hyperventilate routinely); elevate the head of the bed 30 degrees; LOOSEN the hard collar once the patient is secured; suction as needed; dress the scalp laceration with direct pressure. Spinal packaging with the head elevated. PCP ADDITIONS: maintain blood sugar 4.0-8.0 mmol/L; maintain systolic BP above 120 mmHg; IV TKVO if systolic is above 120. TXA IS CONTRAINDICATED in isolated TBI - a candidate who gives it here commits a major protocol error.",
+          "infoZh": "颅脑损伤指南（各级别）：维持 SpO2≥94%（呼吸衰竭时辅助通气并保持 SpO2≥94%，不做常规过度通气）；床头抬高 30 度；患者固定后放松硬质颈托；按需吸引；头皮裂伤直接加压包扎。脊柱打包并抬高头部。PCP 追加：维持血糖 4.0-8.0 mmol/L；维持收缩压高于 120 mmHg；收缩压高于 120 时静脉通路 TKVO。孤立性颅脑损伤禁用 TXA——此处给药属重大协议错误。",
+          "expected": [
+            {
+              "actionEn": "Maintain oxygenation at or above 94% and be prepared to assist ventilations without routine hyperventilation",
+              "actionZh": "维持氧合≥94%，随时准备辅助通气但不做常规过度通气",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Elevate the head of the bed 30 degrees and loosen the hard collar after securing",
+              "actionZh": "床头抬高 30 度，固定后放松硬质颈托",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Spinal packaging performed correctly (collar, device, body before head, no head tape)",
+              "actionZh": "正确完成脊柱打包（颈托、装置、先躯干后头部、不用胶带缠头）",
+              "weight": 25,
+              "rubricRef": "skill-spinal-mgmt"
+            },
+            {
+              "actionEn": "Airway management: suction correctly (10-15 seconds adult), adjunct sized and inserted appropriately, patient positioned to protect against aspiration",
+              "actionZh": "气道管理：正确吸引（成人 10-15 秒）、辅助装置尺寸与置入正确、体位防误吸",
+              "weight": 25,
+              "rubricRef": "skill-airway-mgmt"
+            },
+            {
+              "actionEn": "Do NOT administer TXA - contraindicated in isolated TBI",
+              "actionZh": "不得给 TXA——孤立性颅脑损伤为禁忌",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "PCP: IV TKVO with systolic above 120, and keep BGL between 4.0 and 8.0",
+              "actionZh": "PCP：收缩压高于 120 时静脉 TKVO，并维持血糖 4.0-8.0",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs, GCS and PUPILS after every move and at least every 5 minutes. Set 2 (en route, 6 minutes later): GCS 11 (E2 V4 M5 - eyes to pain now, still confused, localizes); BP 178/88; pulse 52 bounding; respirations 12 and becoming irregular; skin pale warm dry; pupils right 6 mm non-reactive, left 3 mm reactive; SpO2 97% on oxygen; BGL 5.6. He is DETERIORATING - the candidate must recognize the falling GCS, support ventilations to keep SpO2 at or above 94%, keep suction ready, and expedite transport with an urgent notification.",
+          "infoZh": "每次移动后及至少每 5 分钟复评 ABC、GCS 和瞳孔。第 2 组（途中，6 分钟后）：GCS 11（E2 V4 M5——现在需疼痛刺激才睁眼、仍言语错乱、能定位疼痛）；血压 178/88；脉搏 52 洪大；呼吸 12 且渐不规则；皮肤苍白温干；瞳孔右 6 mm 无反应、左 3 mm 有反应；SpO2 吸氧下 97%；血糖 5.6。病情正在恶化——考生必须识别 GCS 下降，辅助通气维持 SpO2≥94%，备好吸引，并加快转运、紧急预报。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions after each major move and after any change in LOC",
+              "actionZh": "每次大移动后及意识状态变化后复评 ABC 与全部处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within 5-6 minutes including a repeat GCS and pupils",
+              "actionZh": "5-6 分钟内完成第二组完整生命体征，含复评 GCS 与瞳孔",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Recognize the deteriorating GCS and pupil change and escalate care (assist ventilations, suction ready, urgent notification)",
+              "actionZh": "识别 GCS 下降与瞳孔变化并升级处置（辅助通气、备好吸引、紧急预报）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Assist ventilations at an appropriate rate with the BVM connected to oxygen, confirming chest rise",
+              "actionZh": "以合适频率用连接氧气的球囊面罩辅助通气，并确认胸廓起伏",
+              "weight": 25,
+              "rubricRef": "skill-breathing-mgmt"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Critical patient - urgent en-route notification to the trauma centre stating the GCS trend and pupil findings. Structured hand-off; PCR within 5 minutes.",
+          "infoZh": "危重患者——紧急向创伤中心途中预报，说明 GCS 变化趋势和瞳孔发现。结构化交接；5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Urgent trauma-centre notification including GCS trend and unequal pupils",
+              "actionZh": "紧急创伤中心预报（含 GCS 趋势与瞳孔不等大）",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off with both GCS scores broken down by component",
+              "actionZh": "完整交接，两次 GCS 均按分项报告",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline",
+          "gcs": "13 (E3V4M6)",
+          "bp": "168/92",
+          "pulse": "58 strong bounding",
+          "resp": "14 regular",
+          "skin": "pale warm dry",
+          "pupils": "UNEQUAL - R 5 mm sluggish, L 3 mm brisk",
+          "spo2": "93% RA, 98% on O2",
+          "bgl": "5.6 mmol/L",
+          "temp": "36.2 C"
+        },
+        {
+          "set": 2,
+          "timeHint": "en route, deteriorating",
+          "gcs": "11 (E2V4M5)",
+          "bp": "178/88",
+          "pulse": "52 bounding",
+          "resp": "12, becoming irregular",
+          "skin": "pale warm dry",
+          "pupils": "R 6 mm non-reactive, L 3 mm reactive",
+          "spo2": "97% on O2 with assisted ventilations",
+          "bgl": "5.6 mmol/L",
+          "temp": "36.2 C"
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Giving TXA for an isolated TBI - explicitly contraindicated, major protocol error 100%",
+        "No c-spine control with blunt head trauma and altered LOC - 100%",
+        "Not suctioning a vomiting patient with a decreased LOC, or leaving him unprotected against aspiration - 100% (Airway)",
+        "Not repeating pupils and GCS with every set and missing the deterioration - pupil/GCS deductions plus a major protocol failure",
+        "Routine hyperventilation, or allowing SpO2 to fall below 94% in a TBI patient - protocol error"
+      ],
+      "criticalPitfallsZh": [
+        "对孤立性颅脑损伤给 TXA——明文禁忌，重大协议错误扣 100%",
+        "钝性头部外伤伴意识改变却不做颈椎固定——扣 100%",
+        "对意识下降的呕吐患者不吸引、不做误吸防护——扣 100%（Airway）",
+        "不做每组瞳孔与 GCS 复评、漏掉病情恶化——瞳孔/GCS 扣分外加重大协议失分",
+        "常规过度通气，或让颅脑损伤患者 SpO2 低于 94%——协议错误"
+      ],
+      "emrVariantEn": "EMR: spinal packaging, suction, airway adjuncts, oxygenation at or above 94%, assisted ventilations, head of bed at 30 degrees, collar loosened, serial GCS and pupils, and rapid transport. No IV, no blood-sugar correction beyond recognizing the BGL. No Functional Enquiry. TXA is not in EMR scope and remains contraindicated regardless.",
+      "emrVariantZh": "EMR：脊柱打包、吸引、气道辅助装置、维持氧合≥94%、辅助通气、床头抬高 30 度、放松颈托、连续复查 GCS 与瞳孔、快速转运。无静脉通路，除识别血糖外不做纠正。无功能问诊。TXA 不在 EMR 范围内，且本例本身即为禁忌。",
+      "pcpVariantEn": "PCP adds IV TKVO (only if systolic is above 120 mmHg), maintenance of blood sugar between 4.0 and 8.0 mmol/L, maintenance of systolic above 120 mmHg, and the Functional Enquiry as far as the patient's confusion allows. TXA remains contraindicated.",
+      "pcpVariantZh": "PCP 增加静脉 TKVO（仅在收缩压高于 120 mmHg 时）、维持血糖 4.0-8.0 mmol/L、维持收缩压高于 120 mmHg，以及在患者意识允许范围内完成功能问诊。TXA 仍为禁忌。",
+      "handoffModelEn": "This is a 38-year-old male assaulted at approximately 2305, struck once to the right temple with a baseball bat, with about 2 minutes of loss of consciousness and two episodes of vomiting since. Chief complaint is head injury with altered mental status. On our arrival GCS was 13, eyes to voice, confused, obeying commands, with BP 168/92, pulse 58 and bounding, resps 14, SpO2 93% on room air, BGL 5.6, temperature 36.2, and an unequal right pupil at 5 millimetres and sluggish. Six minutes later he is GCS 11, eyes to pain now, BP 178/88, pulse 52, resps 12 and irregular, right pupil 6 millimetres and non-reactive - he is deteriorating with signs of rising intracranial pressure. No significant medical history, no anticoagulants, no known allergies, two beers with dinner. Treatments: airway suctioned, oxygen to keep saturations above 94 percent with ventilations now assisted, manual c-spine and full spinal packaging with the collar loosened and head of bed at 30 degrees, scalp laceration controlled with direct pressure, IV TKVO. No TXA - contraindicated in isolated head injury.",
+      "handoffModelZh": "患者 38 岁男性，约 23:05 遭袭击，右颞部被棒球棒击中一次，昏迷约 2 分钟，此后呕吐两次。主诉为头部损伤伴精神状态改变。我们到场时 GCS 13，呼唤睁眼、言语错乱、能执行指令，血压 168/92、脉搏 58 洪大、呼吸 14、SpO2 室内空气 93%、血糖 5.6、体温 36.2，右侧瞳孔 5 mm 且反应迟钝，双侧不等大。6 分钟后 GCS 降至 11，改为疼痛刺激才睁眼，血压 178/88、脉搏 52、呼吸 12 且不规则，右瞳 6 mm 无反应——病情恶化，提示颅内压升高。无重要既往史、未服抗凝药、无已知过敏，晚餐时饮啤酒两瓶。处置：气道吸引，给氧维持血氧高于 94% 并已开始辅助通气，徒手固定颈椎后全脊柱打包、颈托放松、床头抬高 30 度，头皮裂伤直接加压止血，静脉 TKVO。未给 TXA——孤立性颅脑损伤禁用。",
+      "pcrKeyPoints": {
+        "cc": "Head injury with altered mental status after assault with a bat",
+        "hxcc": "Single blow to right temple ~2305, LOC approx 2 min, confused since, vomited twice; witnessed by police and bystanders",
+        "pmhx": "Nil significant; no anticoagulants (confirmed with spouse)",
+        "meds": "None",
+        "allergies": "NKA",
+        "treatments": [
+          "Suction of vomit, airway maintained",
+          "O2 titrated to SpO2 94% or above; assisted ventilations when resps fell",
+          "Manual c-spine, collar, full spinal packaging; collar loosened after securing",
+          "Head of bed elevated 30 degrees",
+          "Direct pressure to scalp laceration",
+          "PCP: IV TKVO (SBP above 120); TXA withheld - contraindicated in isolated TBI"
+        ],
+        "findings": [
+          "GCS 13 (E3V4M6) falling to 11 (E2V4M5)",
+          "Unequal pupils: R 5 mm sluggish then 6 mm non-reactive, L 3 mm reactive",
+          "Bradycardia 58 to 52 with hypertension 168/92 to 178/88 - Cushing pattern",
+          "6 cm right temporal laceration with boggy swelling; no CSF, no palpable depression"
+        ]
+      }
+    },
+    {
       "id": "md-01",
       "type": "medical",
       "titleEn": "Anaphylaxis After Peanut Exposure",
@@ -3587,6 +4126,533 @@
           "BP 148/92 down to 122/78, pain 8/10 down to 3/10",
           "No JVD, chest clear, no reproducible chest wall pain",
           "SpO2 96-97% throughout"
+        ]
+      }
+    },
+    {
+      "id": "md-03",
+      "type": "medical",
+      "titleEn": "Hypoglycemia With Decreased LOC - Glucagon and D10W",
+      "titleZh": "低血糖伴意识下降——胰高血糖素与 D10W",
+      "protocols": [
+        "Diabetic Emergencies",
+        "Altered Mental Status NYD"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "0730 hrs. Code 3 to an assisted-living apartment in Victoria. 74-year-old female, known insulin-dependent diabetic, found by a care aide unresponsive in her armchair. Hospital is 11 minutes away.",
+      "dispatchZh": "07:30，Code 3 前往维多利亚一处协助生活公寓。74 岁女性，已知胰岛素依赖型糖尿病，被护理员发现在扶手椅上无反应。医院车程 11 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: the care aide says she took her morning insulin but refused breakfast. She is breathing but will not wake up.",
+          "infoZh": "调度补充：护理员称她打了早上的胰岛素但拒绝吃早餐。目前有呼吸但叫不醒。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan glucometer, glucose gel, glucagon (EMR) or D10W (PCP), suction, oxygen, BVM",
+              "actionZh": "确认；准备血糖仪、葡萄糖凝胶、胰高血糖素（EMR）或 D10W（PCP）、吸引器、氧气、球囊面罩",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate an unresponsive medical patient - airway first, and BGL is mandatory",
+              "actionZh": "预判为无反应的内科患者——优先气道，且必须测血糖",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: The care aide lets you into a small warm suite. The patient is slumped in an armchair, head fallen forward onto her chest, snoring loudly. An insulin pen and a used needle are on the side table beside an untouched breakfast tray. No spilled pills, no alcohol. One patient. Warm room, good lighting.",
+          "infoZh": "考官脚本：护理员带你进入一间温暖的小套间。患者瘫坐在扶手椅上，头前倾抵在胸前，鼾声很响。边几上有一支胰岛素笔和一枚用过的针头，旁边是原封未动的早餐托盘。地上无散落药片、无酒瓶。单一患者。房间温暖，照明良好。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (used sharps on the table - important), environment, nature of illness (unresponsive diabetic), one patient",
+              "actionZh": "口述危险源（桌上有用过的针头，重点）、环境、发病性质（无反应的糖尿病患者）、单一患者",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection; act on the sharps hazard before working around it",
+              "actionZh": "戴手套和护目镜；在旁边操作前先处理针头危险",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: elderly female slumped forward, snoring respirations, pale and sweaty, untouched breakfast",
+              "actionZh": "第一眼：老年女性前倾瘫坐、鼾式呼吸、面色苍白多汗、早餐未动",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: does not respond to voice; withdraws from a trapezius pinch, no eye opening, incomprehensible groaning. EXAMINER (give when assessed): airway - snoring, partially obstructed by the tongue and her chin-on-chest position; opens with a head-tilt chin-lift or jaw thrust and improves markedly when she is laid supine or positioned lateral; respirations 16, adequate depth once the airway is open; radial pulse 104, strong and regular. Skin: pale, cool, very diaphoretic. Modified RBS: no trauma, no medical alert bracelet found initially - one IS present on the left wrist reading 'Insulin Dependent Diabetic'. SpO2 92% RA. C-spine NOT indicated: no trauma, she was seated and did not fall. UNSTABLE: decreased LOC.",
+          "infoZh": "患者演员：呼唤无反应；斜方肌掐压时有回缩动作，不睁眼，只有含糊呻吟。考官（评估时给出）：气道——鼾声，因舌后坠与下巴抵胸的体位而部分梗阻；仰头抬颏或推举下颌可打开，改为仰卧或侧卧后明显改善；呼吸 16 次/分，气道打开后深度尚可；桡动脉 104 次/分、有力规则。皮肤：苍白、发凉、大汗淋漓。改良快速查体：无外伤，起初未见医疗警示手环——左手腕确有一只，写着「胰岛素依赖型糖尿病」。SpO2 室内空气 92%。无颈椎固定指征：无外伤，患者原本坐着且未跌倒。不稳定：意识下降。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: responds to Pain only - a significantly decreased LOC",
+              "actionZh": "评估意识 / AVPU：仅对疼痛有反应——意识显著下降",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Verbalize c-spine not indicated (no trauma, seated, no fall) - do not immobilize unnecessarily",
+              "actionZh": "口述无颈椎固定指征（无外伤、坐位、未跌倒）——不要做不必要的固定",
+              "weight": 15,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Open and maintain the airway with a manual technique; she cannot protect her own airway",
+              "actionZh": "用手法开放并维持气道；患者无法自行保护气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Consider a correctly sized airway adjunct and have suction immediately available",
+              "actionZh": "考虑尺寸正确的气道辅助装置，并保证吸引器随时可用",
+              "weight": 25,
+              "rubricRef": "skill-airway-mgmt"
+            },
+            {
+              "actionEn": "Assess breathing rate and adequacy once the airway is open",
+              "actionZh": "气道打开后评估呼吸频率与是否足够",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation",
+              "actionZh": "评估循环",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Perform a modified rapid body survey; look for a medical alert bracelet, injection sites and any injury",
+              "actionZh": "做改良快速查体；查找医疗警示手环、注射部位与任何损伤",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pale cool diaphoretic - classic hypoglycemia",
+              "actionZh": "记录皮肤：苍白、发凉、大汗——典型低血糖表现",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Apply oxygen to maintain SpO2 at or above 94%",
+              "actionZh": "给氧维持 SpO2≥94%",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position lateral or three-quarter prone to protect the airway (recovery position for the unconscious medical patient)",
+              "actionZh": "置侧卧或 3/4 俯卧位保护气道（无意识内科患者的复原体位）",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Decreased LOC = UNSTABLE, RTC. Correct the hypoglycemia on scene first (the protocol says transport AFTER the first dose of D10W or glucagon), then be ready to load within 15 minutes. Delegate crew members to prep egress as the guideline requires.",
+          "infoZh": "决策点。意识下降=不稳定，RTC。先在现场纠正低血糖（协议规定在首剂 D10W 或胰高血糖素后再转运），随后 15 分钟内可装载。按指南要求指派搭档准备撤离路线。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC and act with urgency",
+              "actionZh": "判定为 RTC 并保持紧迫感",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Correct the hypoglycemia first, then ready to load within 15 minutes",
+              "actionZh": "先纠正低血糖，随后 15 分钟内可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate crew members to prep egress (required by the Diabetic Emergencies guideline)",
+              "actionZh": "指派搭档准备撤离路线（糖尿病急症指南要求）",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "PATIENT CANNOT ANSWER - use the CARE AIDE and the medication record: she took her usual 18 units of long-acting insulin at 0700, then said she felt nauseated and refused breakfast; the aide found her unresponsive at 0725. She has had two similar episodes in the past year, both treated by paramedics with sugar. Nothing suggests stroke onset, no seizure witnessed, no fall, no fever. PMHx: type 1 diabetes for 40 years, atrial fibrillation, hypothyroidism, previous hypoglycemic seizures. Meds: insulin glargine 18 units daily, insulin aspart with meals, apixaban, levothyroxine. Allergies: none known. LOI: nothing today; supper at 1800 yesterday.",
+          "infoZh": "患者无法回答——需向护理员并查阅用药记录：她 07:00 照常注射了 18 单位长效胰岛素，随后说恶心而拒绝早餐；护理员 07:25 发现她无反应。过去一年有过两次类似发作，都由救护员用糖纠正。无卒中起病提示，未见抽搐，无跌倒，无发热。既往史：1 型糖尿病 40 年、房颤、甲状腺功能减退、既往有低血糖抽搐。用药：甘精胰岛素每日 18 单位、餐时门冬胰岛素、阿哌沙班、左甲状腺素。过敏：无已知。最后进食：今日未进食；昨晚 18:00 晚餐。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: unresponsiveness in a known diabetic",
+              "actionZh": "确立主诉：已知糖尿病患者出现无反应",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C from the care aide: insulin taken, dose and time, food missed, time last seen normal, progression, previous similar episodes",
+              "actionZh": "向护理员采集现病史：注射的胰岛素及剂量时间、漏餐情况、最后正常时间、进展、既往类似发作",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "PMHx incl duration of diabetes and previous hypoglycemic events",
+              "actionZh": "既往史（含糖尿病病程与既往低血糖事件）",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications with doses and schedules from the medication record",
+              "actionZh": "查用药记录获取药名、剂量与服用时间",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI - critical here: she missed breakfast after taking insulin",
+              "actionZh": "最后进食——本例关键：打完胰岛素后漏了早餐",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            },
+            {
+              "actionEn": "Evaluate for stroke signs and symptoms as the guideline requires in diabetic emergencies",
+              "actionZh": "按糖尿病急症指南要求评估卒中症状体征",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 - baseline BEFORE treatment: GCS 8 (E1 V2 M5 - no eye opening, incomprehensible sounds, withdraws from pain); BP 142/86; pulse 104 strong irregular (atrial fibrillation); respirations 16 adequate once the airway is open; skin pale cool diaphoretic; pupils equal and reactive, 3 mm; SpO2 92% RA rising to 98% on oxygen; BGL 1.8 mmol/L - MANDATORY in any decreased LOC; temperature 36.6 (reasonable to exclude sepsis). RTC interval 5-6 minutes.",
+          "infoZh": "第 1 组——治疗前基线：GCS 8（E1 V2 M5——不睁眼、发出无法理解的声音、疼痛回缩）；血压 142/86；脉搏 104 有力但不规则（房颤）；呼吸 16，气道打开后深度足够；皮肤苍白发凉大汗；瞳孔等大有反应，3 mm；SpO2 室内空气 92%，吸氧后升至 98%；血糖 1.8 mmol/L——任何意识下降者必测；体温 36.6（用于排除脓毒症，合理）。RTC 间隔 5-6 分钟。",
+          "expected": [
+            {
+              "actionEn": "GCS with components (E1 V2 M5 = 8)",
+              "actionZh": "GCS 及分项（E1 V2 M5 = 8）",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation",
+              "actionZh": "听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse - note the irregular rhythm (atrial fibrillation)",
+              "actionZh": "脉搏——注意节律不齐（房颤）",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character",
+              "actionZh": "呼吸频率/深度/性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on",
+              "actionZh": "动手查皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils - required with any decreased LOC",
+              "actionZh": "瞳孔——任何意识下降均须检查",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration",
+              "actionZh": "SpO2 并校准",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "BGL with correct technique and a clean, uncontaminated sample site - mandatory in decreased LOC",
+              "actionZh": "以正确手法在清洁、未污染的部位测血糖——意识下降者必测",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            },
+            {
+              "actionEn": "Temperature - reasonable to screen for infection as a cause of altered LOC",
+              "actionZh": "体温——作为意识改变病因筛查感染，合理",
+              "weight": 5,
+              "rubricRef": "temperature"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, after treatment when she is alert, en route. ACTOR (now awake and cooperative): general - has had a poor appetite and nausea for two days; CNS - no headache now, no weakness or numbness, no vision change; respiratory - nil; cardiovascular - knows she has an irregular heartbeat; GI/GU - nauseated for two days, no vomiting, no diarrhea, normal urine; integumentary - clammy earlier, now dry; musculoskeletal - nil; endocrine - type 1 diabetes 40 years, admits she sometimes skips meals but still takes full insulin; EENT - nil.",
+          "infoZh": "仅 PCP，治疗后患者清醒时于途中完成。患者演员（已清醒并配合）：整体——近两天食欲差、恶心；中枢神经——现无头痛、无肢体无力麻木、无视觉改变；呼吸——无异常；心血管——知道自己心跳不齐；消化/泌尿——恶心两天、无呕吐腹泻、小便正常；皮肤——之前湿冷、现已干爽；肌肉骨骼——无异常；内分泌——1 型糖尿病 40 年，承认有时漏餐但仍照常打足量胰岛素；眼耳鼻喉——无异常。",
+          "expected": [
+            {
+              "actionEn": "FE - General health (recent illness, appetite)",
+              "actionZh": "功能问诊——整体健康（近期疾病、食欲）",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS (stroke screen post-recovery)",
+              "actionZh": "功能问诊——中枢神经（恢复后卒中筛查）",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory",
+              "actionZh": "功能问诊——呼吸",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular (atrial fibrillation)",
+              "actionZh": "功能问诊——心血管（房颤）",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (nausea and poor intake - the precipitant)",
+              "actionZh": "功能问诊——消化/泌尿（恶心与进食差，本次诱因）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine (pertinent: insulin regimen and adherence)",
+              "actionZh": "功能问诊——内分泌（重点：胰岛素方案与依从性）",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "Head-to-toe (after she is alert, en route): head/neck - no trauma, no tongue biting, no incontinence noted, no facial droop, speech now clear; chest - clear and equal at all 6 sites, irregularly irregular heart rhythm; abdomen - soft, non-tender; back - no findings; lower extremities - no edema, moves both normally, grip and strength symmetrical; upper extremities - medical alert bracelet on the left wrist, insulin injection sites on the abdomen, no deficit.",
+          "infoZh": "从头到脚（患者清醒后于途中完成）：头颈——无外伤、无舌咬伤、未见失禁、无面部下垂、言语已清晰；胸部——6 点听诊清晰对称，心律绝对不齐；腹部——软、无压痛；背部——无异常；下肢——无水肿、双侧活动正常、肌力对称；上肢——左腕有医疗警示手环、腹部有胰岛素注射点、无功能缺损。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam incl tongue biting and facial droop (seizure and stroke differentials)",
+              "actionZh": "头颈查体（含舌咬伤与面部下垂，用于鉴别抽搐与卒中）",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation",
+              "actionZh": "胸部查体并 6 点听诊",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam",
+              "actionZh": "背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities with motor and sensory comparison",
+              "actionZh": "下肢并对比运动与感觉",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities incl the medical alert bracelet and injection sites",
+              "actionZh": "上肢（含医疗警示手环与注射部位）",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Diabetic Emergencies protocol. ALL LEVELS: manage the airway with positioning, suction and adjuncts; oxygen to keep SpO2 at or above 94%; position lateral or three-quarter prone; baseline vitals INCLUDING BGL; evaluate for stroke. Correct hypoglycemia below 4.0 mmol/L: oral glucose gel 15 g ONLY if the patient has sufficient mentation to protect the airway - THIS PATIENT DOES NOT, so oral glucose is CONTRAINDICATED. EMR: give GLUCAGON for insufficient mentation or an unprotected airway - 0.5 to 1 mg IM (or 3 mg IN), repeat after 15 minutes if there is no clinical response; onset 15 minutes. PCP: obtain vascular access and give D10W 10-25 g (100-250 mL of 10% solution) IV; use glucagon only if IV access cannot be obtained. Transport after the first dose. Recheck BGL after treatment.",
+          "infoZh": "糖尿病急症协议。各级别通用：以体位、吸引和辅助装置管理气道；给氧维持 SpO2≥94%；置侧卧或 3/4 俯卧位；完成含血糖在内的基线生命体征；评估卒中。纠正血糖低于 4.0 mmol/L：仅当患者神志足以保护气道时才口服葡萄糖凝胶 15 g——本例患者做不到，故口服葡萄糖属禁忌。EMR：对神志不足或气道无保护者给胰高血糖素——0.5-1 mg 肌注（或 3 mg 鼻内），15 分钟无临床反应可重复；起效 15 分钟。PCP：建立静脉通路并给 D10W 10-25 g（10% 溶液 100-250 mL）静脉推注；仅在无法建立静脉通路时才用胰高血糖素。首剂后即转运。治疗后复测血糖。",
+          "expected": [
+            {
+              "actionEn": "Initiate the Diabetic Emergencies protocol on correct indications with a BGL below 4.0 confirmed and baseline vitals done",
+              "actionZh": "在血糖低于 4.0 已确认、基线生命体征完成的前提下按正确指征启动糖尿病急症协议",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Recognize oral glucose is CONTRAINDICATED with insufficient mentation and an unprotected airway",
+              "actionZh": "识别神志不足、气道无保护时口服葡萄糖为禁忌",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "EMR: glucagon 0.5-1 mg IM with 6 rights, correct IM site and needle; PCP: D10W 10-25 g IV, glucagon only if IV access fails",
+              "actionZh": "EMR：胰高血糖素 0.5-1 mg 肌注，六项核对、部位与针具正确；PCP：D10W 10-25 g 静脉给药，仅在静脉失败时用胰高血糖素",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Airway management skill: correct positioning, suction if needed, properly sized adjunct",
+              "actionZh": "气道管理技能：体位正确、按需吸引、辅助装置尺寸合适",
+              "weight": 25,
+              "rubricRef": "skill-airway-mgmt"
+            },
+            {
+              "actionEn": "Recheck the BGL after treatment and document the response",
+              "actionZh": "治疗后复测血糖并记录反应",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs and LOC continuously - a change in GCS requires a full ABC reassessment. Set 2 (about 6 minutes after treatment, en route): GCS 15 (E4V5M6) - awake, oriented, embarrassed and asking to stay home; BP 138/82; pulse 92 irregular; respirations 14; skin pink warm dry; pupils equal reactive; SpO2 98% on oxygen; BGL 7.4. EXAMINER: she now says she feels fine and wants to refuse transport - the candidate should encourage transport, explain the long-acting insulin risk of recurrent hypoglycemia, feed her a complex carbohydrate if her airway is now protected, and involve the care aide.",
+          "infoZh": "持续复评 ABC 与意识——GCS 变化后必须完整复评 ABC。第 2 组（治疗后约 6 分钟，途中）：GCS 15（E4V5M6）——清醒、定向力正常、觉得不好意思并要求留在家里；血压 138/82；脉搏 92 不规则；呼吸 14；皮肤红润温干；瞳孔等大有反应；SpO2 吸氧下 98%；血糖 7.4。考官提示：她此时称自己没事、想拒绝转运——考生应劝导转运，说明长效胰岛素会导致低血糖复发的风险，在气道已能自我保护时给她吃复合碳水，并让护理员参与沟通。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and interventions after treatment and after every change in LOC",
+              "actionZh": "治疗后及每次意识变化后复评 ABC 与各项处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within 5-6 minutes including a repeat BGL",
+              "actionZh": "5-6 分钟内完成第二组完整生命体征，含复测血糖",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Once she can protect her airway, give complex carbohydrate and explain the risk of recurrent hypoglycemia from long-acting insulin",
+              "actionZh": "在她能保护气道后给予复合碳水，并解释长效胰岛素导致低血糖复发的风险",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            },
+            {
+              "actionEn": "Manage the refusal professionally: strongly recommend transport, involve the care aide, do not simply accept the refusal",
+              "actionZh": "专业处理拒绝转运：强烈建议转运、让护理员参与，不可简单接受拒绝",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Notify the receiving facility. Hand-off must include both BGL values, the drug given with time and route, and the response. PCR within 5 minutes.",
+          "infoZh": "通知接收医院。交接必须包含两次血糖值、所给药物的时间与途径以及治疗反应。5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Notify the receiving facility with the BGL and treatment",
+              "actionZh": "向接收医院预报血糖值与处置",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off with initial and final GCS, both BGLs, drug time/dose/route and response",
+              "actionZh": "完整交接：首末 GCS、两次血糖、给药时间/剂量/途径及反应",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline, before treatment",
+          "gcs": "8 (E1V2M5)",
+          "bp": "142/86",
+          "pulse": "104 strong irregular (AF)",
+          "resp": "16 adequate once airway open",
+          "skin": "pale cool diaphoretic",
+          "pupils": "PERL 3 mm",
+          "spo2": "92% RA, 98% on O2",
+          "bgl": "1.8 mmol/L",
+          "temp": "36.6 C"
+        },
+        {
+          "set": 2,
+          "timeHint": "approx 6 min after glucagon/D10W, en route",
+          "gcs": "15 (E4V5M6)",
+          "bp": "138/82",
+          "pulse": "92 irregular",
+          "resp": "14 regular",
+          "skin": "pink warm dry",
+          "pupils": "PERL 3 mm",
+          "spo2": "98% on O2",
+          "bgl": "7.4 mmol/L",
+          "temp": "36.6 C"
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Not obtaining a blood glucose level in a patient with decreased LOC - failure to obtain a diagnostic when clearly indicated, and it makes the protocol decision unjustifiable",
+        "Giving oral glucose gel to a patient who cannot protect her airway - non-indicated skill with aspiration risk, up to 100%",
+        "Leaving an unresponsive patient supine and unprotected without airway management or recovery positioning - 100% (Airway/Position)",
+        "Immobilizing the spine when there is no trauma - non-indicated intervention causing delay",
+        "Accepting a refusal of transport after correcting hypoglycemia caused by long-acting insulin without explaining the recurrence risk - overall patient care deduction"
+      ],
+      "criticalPitfallsZh": [
+        "意识下降患者不测血糖——明确有指征却不做的检查，且使协议决策失去依据",
+        "给无法保护气道的患者口服葡萄糖凝胶——非指征操作且有误吸风险，最高扣 100%",
+        "让无反应患者仰卧且不做气道管理或复原体位——扣 100%（气道/体位）",
+        "无外伤却做脊柱固定——非指征操作并造成延误",
+        "纠正长效胰岛素所致低血糖后不解释复发风险就接受拒绝转运——患者照护类扣分"
+      ],
+      "emrVariantEn": "EMR treats insufficient mentation with GLUCAGON 0.5-1 mg IM (or 3 mg IN, repeat after 15 minutes if no response). Oral glucose 15 g is EMR scope but only for patients with sufficient mentation to protect the airway - not this patient initially. EMR does not establish IV access or give D10W. No Functional Enquiry.",
+      "emrVariantZh": "EMR 对神志不足者用胰高血糖素 0.5-1 mg 肌注（或 3 mg 鼻内，15 分钟无反应可重复）。口服葡萄糖 15 g 属 EMR 范围，但只能用于神志足以保护气道者——本例初始不适用。EMR 不建立静脉通路、不给 D10W。无功能问诊。",
+      "pcpVariantEn": "PCP obtains vascular access and gives D10W 10-25 g (100-250 mL of 10% solution) IV as first-line, reserving glucagon for failed IV access. PCP also performs the 9-system Functional Enquiry once she is alert. Watch for extravasation - D10W causes tissue necrosis.",
+      "pcpVariantZh": "PCP 首选建立静脉通路并给 D10W 10-25 g（10% 溶液 100-250 mL）静脉给药，仅在静脉通路失败时才用胰高血糖素。患者清醒后 PCP 还需完成 9 系统功能问诊。注意防止药液外渗——D10W 外渗会引起组织坏死。",
+      "handoffModelEn": "This is a 74-year-old female, a 40-year type 1 diabetic, found unresponsive in her armchair at 0725 by her care aide after taking her usual 18 units of long-acting insulin at 0700 and then refusing breakfast because of nausea. On arrival she was responsive to pain only, GCS 8, with snoring respirations, BP 142/86, pulse 104 irregular, resps 16, skin pale cool and diaphoretic, SpO2 92% on room air, and a blood glucose of 1.8. She is now GCS 15 and fully oriented with a blood glucose of 7.4, BP 138/82, pulse 92 irregular, SpO2 98%. History of type 1 diabetes, atrial fibrillation, hypothyroidism and previous hypoglycemic seizures; medications are insulin glargine and aspart, apixaban and levothyroxine; no known allergies; nothing to eat since supper yesterday. Treatments: airway opened and maintained with lateral positioning, oxygen to keep saturations above 94 percent, and D10W 25 grams IV at 0741 with the glucose rechecked afterwards. She is at risk of recurrent hypoglycemia because the long-acting insulin is still on board.",
+      "handoffModelZh": "患者 74 岁女性，1 型糖尿病 40 年，07:00 照常注射 18 单位长效胰岛素后因恶心拒绝早餐，07:25 被护理员发现在扶手椅上无反应。我们到场时仅对疼痛有反应，GCS 8，鼾式呼吸，血压 142/86、脉搏 104 不规则、呼吸 16、皮肤苍白发凉大汗、SpO2 室内空气 92%，血糖 1.8。目前 GCS 15、定向力完全恢复，血糖 7.4、血压 138/82、脉搏 92 不规则、SpO2 98%。既往 1 型糖尿病、房颤、甲减及既往低血糖抽搐；用药为甘精与门冬胰岛素、阿哌沙班、左甲状腺素；无已知过敏；自昨晚晚餐后未进食。处置：开放并以侧卧位维持气道、给氧维持血氧高于 94%、07:41 给 D10W 25 g 静脉推注并于其后复测血糖。因长效胰岛素仍在体内，她有低血糖复发风险。",
+      "pcrKeyPoints": {
+        "cc": "Unresponsive known insulin-dependent diabetic (BGL 1.8 mmol/L)",
+        "hxcc": "Took 18 units long-acting insulin at 0700, refused breakfast due to nausea, found unresponsive 0725; two similar episodes in the past year",
+        "pmhx": "Type 1 diabetes 40 years, atrial fibrillation, hypothyroidism, previous hypoglycemic seizures",
+        "meds": "Insulin glargine 18 units daily, insulin aspart with meals, apixaban, levothyroxine",
+        "allergies": "NKA",
+        "treatments": [
+          "Airway opened, lateral/recovery positioning, suction available",
+          "O2 titrated to SpO2 94% or above",
+          "Oral glucose withheld - insufficient mentation",
+          "PCP: IV access and D10W 25 g IV at 0741 (EMR: glucagon 1 mg IM)",
+          "BGL rechecked after treatment; complex carbohydrate given once airway protected"
+        ],
+        "findings": [
+          "GCS 8 (E1V2M5) improving to 15 (E4V5M6)",
+          "BGL 1.8 rising to 7.4 mmol/L",
+          "Pale cool diaphoretic skin resolving",
+          "Irregular pulse consistent with known atrial fibrillation",
+          "No stroke signs, no trauma, no seizure witnessed"
         ]
       }
     }

@@ -61,17 +61,25 @@ async function sAssessment(el) {
         </div>
       </details>`).join('')}
     ${d.unstableCriteria ? `<div class="card"><h3 style="margin-top:0">🚨 ${t('Unstable / RTC criteria', '危重(RTC)判定标准')}</h3>
-      ${Object.entries(d.unstableCriteria).filter(([k]) => k.endsWith('En')).map(([k, v]) => {
-        const zh = d.unstableCriteria[k.replace(/En$/, 'Zh')] || [];
-        return `<div class="detail-section"><h4>${esc(k.replace(/En$/, ''))}</h4><ul>${biList(Array.isArray(v) ? v : [v], Array.isArray(zh) ? zh : [zh])}</ul></div>`;
-      }).join('')}</div>` : ''}
+      ${d.unstableCriteria.descriptionEn ? bi(d.unstableCriteria.descriptionEn, d.unstableCriteria.descriptionZh) : ''}
+      ${[['primarySurveyFindings', t('Primary survey findings', '初级评估发现')],
+         ['anatomicalFindings', t('Anatomical findings', '解剖学发现')],
+         ['mechanismOfInjury', t('Mechanism of injury', '受伤机制')]]
+        .map(([key, label]) => sec(label, d.unstableCriteria[key + 'En'], d.unstableCriteria[key + 'Zh'])).join('')}
+      <p class="tiny">pp. ${pages(d.unstableCriteria.sourcePages)}</p></div>` : ''}
     ${d.criticalHistory ? `<div class="card"><h3 style="margin-top:0">❓ ${t('Critical History Questions', '关键病史问题')}</h3>
       ${(d.criticalHistory.mnemonics || []).map(m => `<details class="acc"><summary><b>${esc(m.name)}</b>${m.supplementary ? ` <span class="pill gray">${t('study aid', '辅助记忆')}</span>` : ''}</summary>
         <div class="acc-body"><ul>${biList(m.expansionEn, m.expansionZh)}</ul></div></details>`).join('')}
-      ${(d.criticalHistory.questionsEn || []).length ? `<div class="detail-section"><h4>${t('By mechanism', '按受伤机制')}</h4><ul>${biList(d.criticalHistory.questionsEn, d.criticalHistory.questionsZh)}</ul></div>` : ''}
-      ${(d.criticalHistory.categories || []).map(c => `<details class="acc"><summary>${bi(c.nameEn, c.nameZh, 'span')}</summary><div class="acc-body"><ul>${biList(c.questionsEn, c.questionsZh)}</ul></div></details>`).join('')}
+      ${renderCriticalHistory(d.criticalHistory)}
     </div>` : ''}
-    ${d.avpu ? `<div class="card"><h3 style="margin-top:0">🧠 AVPU</h3><ul>${biList(d.avpu.levelsEn, d.avpu.levelsZh)}</ul>
+    ${d.avpu ? `<div class="card"><h3 style="margin-top:0">🧠 AVPU</h3>
+      ${(d.avpu.levelsEn || []).map((lv, i) => {
+        const lz = (d.avpu.levelsZh || [])[i] || {};
+        return `<div class="chk" style="cursor:default">
+          <span class="opt-key" style="background:var(--accent-soft);color:var(--accent);border:none">${esc(lv.letter || '')}</span>
+          <span><b>${bi(lv.term, lz.term || lv.term, 'span')}</b><div class="tiny">${bi(lv.description, lz.description || '', 'span')}</div></span>
+        </div>`;
+      }).join('')}
       ${(d.avpu.notesEn || []).length ? `<div class="detail-section"><h4>${t('Notes', '要点')}</h4><ul>${biList(d.avpu.notesEn, d.avpu.notesZh)}</ul></div>` : ''}</div>` : ''}
     ${d.pcr ? `<div class="card"><h3 style="margin-top:0">📄 ${t('Patient Care Report fields', 'PCR 报告字段')}</h3><ul>${biList(d.pcr.fieldsEn, d.pcr.fieldsZh)}</ul></div>` : ''}`;
 }
@@ -109,8 +117,23 @@ function drawProtocol(el, p) {
       ${p.emrPcpDiffEn ? `<div class="detail-section"><h4>EMR vs PCP</h4>${bi(p.emrPcpDiffEn, p.emrPcpDiffZh)}</div>` : ''}
       ${sec('⚠️ ' + t('Common exam deductions', '考试常见扣分'), p.commonDeductionsEn, p.commonDeductionsZh)}
       ${(p.drugs || []).length ? `<div class="detail-section"><h4>${t('Linked drugs', '关联药物')}</h4><div class="btn-row">${p.drugs.map(dg => `<a class="btn ghost" href="#/study/drugs?id=${dg}">${esc(dg)}</a>`).join('')}</div></div>` : ''}
-      <p class="tiny">pp. ${(p.sourcePages || []).join(', ')}</p>
+      <p class="tiny">pp. ${pages(p.sourcePages)}</p>
     </div>`;
+}
+// source page refs arrive as arrays in some files and plain strings in others
+function pages(v) { return esc(Array.isArray(v) ? v.join(', ') : (v ?? '')); }
+// criticalHistory.questionsEn is grouped by mechanism: [{category, questions[]}, …]
+function renderCriticalHistory(ch) {
+  const en = ch.questionsEn || [], zh = ch.questionsZh || [];
+  if (!en.length) return '';
+  if (typeof en[0] === 'string') {
+    return `<div class="detail-section"><h4>${t('By mechanism', '按受伤机制')}</h4><ul>${biList(en, zh)}</ul></div>`;
+  }
+  return en.map((g, i) => {
+    const gz = zh[i] || {};
+    return `<details class="acc"><summary>${bi(g.category, gz.category || g.category, 'span')}</summary>
+      <div class="acc-body"><ul>${biList(g.questions || [], gz.questions || [])}</ul></div></details>`;
+  }).join('');
 }
 function sec(title, en = [], zh = []) {
   if (!en || !en.length) return '';
