@@ -34,10 +34,12 @@ BC 省急救人员（EMA = Emergency Medical Assistant）由 **EMALB**（Emergen
 | Practical（实操） | EMALB 线下考官 | 2 个场景：1 medical + 1 trauma，每场 40 分钟 | 每场 70%（扣分制） | — |
 
 **COPR 考试关键事实：**
+- **在家远程考，不去考场**（"The EMR, PCP, and ACP Examinations are offered using online proctoring"）。实体考场只留给获批需要它的 testing accommodation 考生，名额有限。设备与环境要求极严（台式/笔记本、Guardian Browser、单显示器、上传≥3Mbps、360°房扫+镜子照屏、禁耳机、桌面清空、迟到15分钟作废）。
 - 2027 年考生**必考 CPCF 版**（NOCP 版 2026 年 11 月后彻底停办）。
-- 一年 4-5 场（2026 年：2/11、5/6、7/8、9/9、11/12），报名截止约考前 4 周，成绩考后 3-4 周出。
+- 一年 4-5 场（2026 年：2/11、5/6、7/8、9/9、11/12），报名截止约考前 4 周，考前约 3 周预约座位与连线时间，成绩考后 3-4 周出。
 - 出分带**八大能力域红/黄/浅绿/深绿弱项报告**——我们的模拟考应该复刻这个报告样式。
 - 官方有 60 题 Preparatory Test（$—另购）；挂科可花 $200 人工核分。
+- **次数**：课程结业后 12 个月内最多 3 次；⚠️ 手册明写重修/重读课程**不会**重置次数与时限，需省级监管机构（EMALB）签发 Eligibility Confirmation Letter 才能再考。
 
 ### 1.4 COPR PCP 笔试蓝图（CPCF 2024 版，出题权重）
 

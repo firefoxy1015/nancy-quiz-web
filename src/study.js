@@ -432,17 +432,23 @@ export async function renderExamInfo(el) {
     </div>
     <div class="card"><h3 style="margin-top:0">📝 ${t('Written', '笔试')}</h3>
       ${bi(w.providerNoteEn, w.providerNoteZh)}
+      ${w.deliveryEn ? `<div class="notice">💻 ${bi(w.deliveryEn, w.deliveryZh, 'span')}</div>` : ''}
       <table class="vitals-table" style="margin-top:8px">
         <tr><th>${t('Questions', '题量')}</th><td>${w.questions}${w.scoredQuestions ? ` (${w.scoredQuestions} scored)` : ''}</td></tr>
         <tr><th>${t('Time', '时长')}</th><td>${w.format ? esc(w.format) : (w.timeLimitMinutes / 60 + ' h')}</td></tr>
         <tr><th>${t('Pass', '及格')}</th><td>${w.passMarkPercent ? w.passMarkPercent + '%' : esc(w.passMarkEn || '')}</td></tr>
         ${w.feeCad ? `<tr><th>${t('Fee', '费用')}</th><td>$${w.feeCad} CAD + tax / attempt</td></tr>` : ''}
-        ${w.locations ? `<tr><th>${t('Locations', '考点')}</th><td>${w.locations.join(', ')}</td></tr>` : ''}
         ${w.schedule2026 ? `<tr><th>${t('2026 dates', '2026考期')}</th><td>${w.schedule2026.join(' · ')}</td></tr>` : ''}
       </table>
       ${w.retakeRulesEn ? bi(w.retakeRulesEn, w.retakeRulesZh) : ''}
       ${w.scheduleNoteEn ? bi(w.scheduleNoteEn, w.scheduleNoteZh) : ''}
+      ${w.seatReservationEn ? bi(w.seatReservationEn, w.seatReservationZh) : ''}
       ${w.resultsEn ? bi(w.resultsEn, w.resultsZh) : ''}
+      ${(w.onlineRequirementsEn || []).length ? `<details class="acc" style="margin-top:10px">
+        <summary>🖥️ ${t('Online proctoring requirements — read before exam day', '在家考的硬性要求——考前必看')}</summary>
+        <div class="acc-body"><ul>${biList(w.onlineRequirementsEn, w.onlineRequirementsZh)}</ul>
+        ${w.techFailureEn ? bi(w.techFailureEn, w.techFailureZh) : ''}</div>
+      </details>` : ''}
     </div>
     <div class="card"><h3 style="margin-top:0">⚖️ ${t('Jurisprudence', '法规考')}</h3>
       <table class="vitals-table">
@@ -469,6 +475,10 @@ export async function renderExamInfo(el) {
         <li>${bi(`All exams within ${c.completionWindowMonths} months of finishing training.`, `所有考试须在结业后 ${c.completionWindowMonths} 个月内完成。`, 'span')}</li>
         <li>${bi(c.practicalPrerequisiteEn, c.practicalPrerequisiteZh, 'span')}</li>
       </ul>
+      ${tr === 'pcp' && c.afterThreeFailsCoprCaveatEn ? `<div class="notice" style="background:var(--red-soft);border-color:var(--red);color:#7f1d1d">
+        ⚠️ ${bi(c.afterThreeFailsCoprCaveatEn, c.afterThreeFailsCoprCaveatZh, 'span')}</div>` : ''}
+      ${c.practicalFailExemptionEn ? `<div class="notice" style="background:var(--green-soft);border-color:var(--green);color:#14532d">
+        💡 ${bi(c.practicalFailExemptionEn, c.practicalFailExemptionZh, 'span')}</div>` : ''}
       <div class="btn-row">
         <a class="btn ghost" href="${rules.meta.sources.emalb.url}" target="_blank">EMALB ↗</a>
         <a class="btn ghost" href="${rules.meta.sources.copr.url}" target="_blank">COPR ↗</a>
