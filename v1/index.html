@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nancy Caroline 学习系统</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <h1 id="appTitle">Nancy Caroline 学习系统</h1>
+        <p class="subtitle" id="appSubtitle">Emergency Care in the Streets · 中英双语互动题库</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="langToggle">中文 / English</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar card">
+        <h2 id="menuTitle">学习模式</h2>
+        <div class="menu-group">
+          <button class="nav-btn active" data-view="home" id="navHome">首页</button>
+          <button class="nav-btn" data-view="chapters" id="navChapters">按章节学习</button>
+          <button class="nav-btn" data-view="practice" id="navPractice">随机练习</button>
+          <button class="nav-btn" data-view="review" id="navReview">Chapter Review</button>
+          <button class="nav-btn" data-view="wrong" id="navWrong">WRONG ANSWERS</button>
+          <button class="nav-btn" data-view="exam" id="navExam">EMR/PCP EXAM QUESTIONS</button>
+          <button class="nav-btn" data-view="copr" id="navCopr">COPR</button>
+          <button class="nav-btn" data-view="scenarios" id="navScenarios">SCENARIOS</button>
+          <button class="nav-btn" data-view="guidelines" id="navGuidelines">GUIDELINE LINK</button>
+        </div>
+
+        <h2 id="statusTitle">项目状态</h2>
+        <ul class="status-list" id="statusList"></ul>
+      </aside>
+
+      <section class="content">
+        <div id="homeView" class="view card">
+          <h2 id="homeGoalTitle">项目目标</h2>
+          <p id="homeGoalText"></p>
+          <div class="grid two">
+            <div>
+              <h3 id="homeSupportedTitle">当前已支持</h3>
+              <ul id="homeSupportedList"></ul>
+            </div>
+            <div>
+              <h3 id="homeNextTitle">接下来会补</h3>
+              <ul id="homeNextList"></ul>
+            </div>
+          </div>
+          <p class="progress-note" id="homeProgressNote"></p>
+          <p class="progress-note" id="homeQuestionCount"></p>
+          <button id="startPracticeBtn" class="primary">开始练习</button>
+        </div>
+
+        <div id="chaptersView" class="view card hidden">
+          <h2 id="chaptersTitle">按章节学习</h2>
+          <div id="chapterList" class="chapter-list"></div>
+        </div>
+
+        <div id="practiceView" class="view card hidden">
+          <div class="practice-header">
+            <div>
+              <h2 id="practiceTitle">练习模式</h2>
+              <p id="practiceMeta">请选择一道题开始</p>
+            </div>
+            <div class="scorebox">
+              <span id="scoreLabel">Score</span>
+              <strong id="scoreValue">0 / 0</strong>
+            </div>
+          </div>
+          <div id="questionBox" class="question-box"></div>
+          <div class="practice-actions">
+            <button id="nextQuestionBtn" class="primary">下一题</button>
+          </div>
+        </div>
+
+        <div id="reviewView" class="view card hidden">
+          <h2 id="reviewTitle">Chapter Review</h2>
+          <p class="progress-note" id="reviewIntro"></p>
+          <div id="reviewList" class="chapter-list"></div>
+        </div>
+
+        <div id="reviewDetailView" class="view card hidden">
+          <button id="reviewBackBtn" class="back-btn">← Back</button>
+          <div id="reviewDetail" class="review-detail-panel"></div>
+        </div>
+
+        <div id="wrongView" class="view card hidden">
+          <h2 id="wrongTitle">WRONG ANSWERS</h2>
+          <p class="progress-note" id="wrongIntro"></p>
+          <div id="wrongList" class="chapter-list"></div>
+        </div>
+
+        <div id="examView" class="view card hidden">
+          <h2 id="examTitle">EMR/PCP EXAM QUESTIONS</h2>
+          <p class="progress-note" id="examIntro"></p>
+          <div id="examList" class="chapter-list"></div>
+        </div>
+
+        <div id="coprView" class="view card hidden">
+          <h2 id="coprTitle">COPR</h2>
+          <p class="progress-note" id="coprIntro"></p>
+          <div id="coprList" class="chapter-list"></div>
+        </div>
+
+        <div id="coprDetailView" class="view card hidden">
+          <button id="coprBackBtn" class="back-btn">← Back</button>
+          <div id="coprDetail" class="review-detail-panel"></div>
+        </div>
+
+        <div id="coprMockView" class="view card hidden">
+          <h2 id="coprMockTitle">COPR Mock Exam</h2>
+          <p class="progress-note" id="coprMockIntro"></p>
+          <div id="coprMockList" class="chapter-list"></div>
+        </div>
+
+        <div id="scenariosView" class="view card hidden">
+          <h2 id="scenariosTitle">SCENARIOS</h2>
+          <p class="progress-note" id="scenariosIntro"></p>
+          <div id="scenariosList" class="chapter-list"></div>
+        </div>
+
+        <div id="scenarioDetailView" class="view card hidden">
+          <button id="scenarioBackBtn" class="back-btn">← Back</button>
+          <div id="scenarioDetail"></div>
+        </div>
+
+        <div id="guidelinesView" class="view card hidden">
+          <h2 id="guidelinesTitle">GUIDELINE LINK</h2>
+          <p class="progress-note" id="guidelinesIntro"></p>
+          <div id="guidelinesList" class="guideline-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./src/app.js?v=20260420-scenarios22" type="module"></script>
+</body>
+</html>

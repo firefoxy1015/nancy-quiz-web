@@ -1,0 +1,610 @@
+{
+  "meta": {
+    "title": "BC Patient Assessment Model",
+    "source": "BC Provincial Examination Guidelines",
+    "sourceVersion": "Current to June 15, 2026",
+    "sourcePages": "5-13",
+    "languages": ["en", "zh"],
+    "notesEn": [
+      "Official model sequence (page 6 diagram): Rescue Scene Evaluation → Primary Survey → Secondary Survey (History, Vital signs, Head-to-toe examination) → Protocols → Treatments → Load and transport → Records and Reports.",
+      "Page 9: 'The Patient Assessment Model consists of seven components, each of which has multiple steps. The sequence of these components may vary based on the nature and flow of the call.'",
+      "Page 6 footnote: depending upon patient condition (stable vs unstable) and the ability to provide definitive care, load and transport may be appropriate any time after the 'decision point'."
+    ],
+    "notesZh": [
+      "官方模型顺序（第 6 页流程图）：Rescue Scene Evaluation（救援现场评估）→ Primary Survey（初级评估）→ Secondary Survey（次级评估：History 病史、Vital signs 生命体征、Head-to-toe examination 从头到脚检查）→ Protocols（协议）→ Treatments（处置）→ Load and transport（装载与转运）→ Records and Reports（记录与报告）。",
+      "第 9 页：患者评估模型由七个组成部分构成，每个部分包含多个步骤；各部分的先后顺序可依呼叫的性质与流程而变化。",
+      "第 6 页脚注：视患者情况（稳定 vs 不稳定）及能否提供确定性治疗，在『决定点』（decision point）之后的任何时间都可以进行装载与转运。"
+    ]
+  },
+  "phases": [
+    {
+      "id": "rescue-scene-evaluation",
+      "nameEn": "Rescue Scene Evaluation",
+      "nameZh": "救援现场评估（Rescue Scene Evaluation）",
+      "orderIndex": 1,
+      "purposeEn": "The purpose of the RSE is to ensure that the scene is safe for the crew and patient and to provide information about the potential nature and extent of the patient's injuries or condition.",
+      "purposeZh": "RSE 的目的是确保现场对救护人员和患者是安全的，并提供关于患者伤病潜在性质与严重程度的信息。",
+      "stepsEn": [
+        {"step": "Hazards", "detail": "Identify actual or potential hazards to the crew, patient, and bystanders before approaching.", "verbalize": true},
+        {"step": "Environment", "detail": "Assess the environment (weather, terrain, access) and how it affects patient care.", "verbalize": true},
+        {"step": "Mechanism of injury", "detail": "Determine the mechanism of injury (MOI) or nature of illness.", "verbalize": true},
+        {"step": "People", "detail": "Determine the number of patients and other people involved.", "verbalize": true},
+        {"step": "Additional resources", "detail": "Determine whether additional resources are required (e.g., fire, police, additional ambulances).", "verbalize": true},
+        {"step": "General Impression", "detail": "Form a general impression of the patient's condition on first contact.", "verbalize": true}
+      ],
+      "stepsZh": [
+        {"step": "Hazards（危险因素）", "detail": "在接近前识别对救护人员、患者及旁观者的现存或潜在危险。", "verbalize": true},
+        {"step": "Environment（环境）", "detail": "评估环境（天气、地形、通道）及其对患者救护的影响。", "verbalize": true},
+        {"step": "Mechanism of injury（受伤机制）", "detail": "判断受伤机制（MOI）或疾病性质。", "verbalize": true},
+        {"step": "People（人员）", "detail": "确定患者人数及相关人员情况。", "verbalize": true},
+        {"step": "Additional resources（额外资源）", "detail": "判断是否需要额外资源（如消防、警察、增援救护车）。", "verbalize": true},
+        {"step": "General Impression（总体印象）", "detail": "初次接触时对患者状况形成总体印象。", "verbalize": true}
+      ],
+      "interventionsEn": [],
+      "interventionsZh": [],
+      "sourcePage": 9
+    },
+    {
+      "id": "primary-survey",
+      "nameEn": "Primary Survey",
+      "nameZh": "初级评估（Primary Survey）",
+      "orderIndex": 2,
+      "purposeEn": "The purpose of the primary survey is to identify and manage life- and limb-threatening injuries and conditions.",
+      "purposeZh": "初级评估的目的是识别并处理危及生命和肢体的损伤与病情。",
+      "stepsEn": [
+        {"step": "LOC", "detail": "Assess level of consciousness using AVPU (see Assessing LOC Using AVPU, page 13).", "verbalize": false},
+        {"step": "Spinal Precautions", "detail": "Apply cervical spine stabilization if indicated: meets NEXUS or Canadian C-Spine indications, obvious injury above the level of the clavicles, or unconscious patient where trauma cannot be reasonably ruled out.", "verbalize": false},
+        {"step": "Airway", "detail": "Assess and manage the airway; maintain and suction as required.", "verbalize": false},
+        {"step": "Breathing", "detail": "Assess breathing; ventilate the non-breathing patient and assist inadequate or failing respirations.", "verbalize": false},
+        {"step": "Circulation", "detail": "Assess circulation (pulses, major hemorrhage, skin); perform CPR if there is no carotid pulse; control major hemorrhage.", "verbalize": false},
+        {"step": "Rapid Body Survey", "detail": "Rapid head-to-toe sweep to find life- and limb-threatening injuries.", "verbalize": false},
+        {"step": "Survey interventions", "detail": "Skin, Oxygen, Airway, Position, Bandage, Pelvic Binder, Blanket (warmth).", "verbalize": false},
+        {"step": "Transport Decision", "detail": "Decide stable vs unstable and transport appropriately. Depending upon patient condition and the ability to provide definitive care, load and transport may be appropriate any time after the decision point. See unstable patient criteria (pages 7-8).", "verbalize": true}
+      ],
+      "stepsZh": [
+        {"step": "LOC（意识水平）", "detail": "使用 AVPU 评估意识水平（见第 13 页 Assessing LOC Using AVPU）。", "verbalize": false},
+        {"step": "Spinal Precautions（脊柱保护）", "detail": "符合指征时进行颈椎固定：符合 NEXUS 或 Canadian C-Spine 标准、锁骨以上有明显损伤、或无法合理排除创伤的昏迷患者。", "verbalize": false},
+        {"step": "Airway（气道）", "detail": "评估并管理气道；按需进行气道维护与吸引。", "verbalize": false},
+        {"step": "Breathing（呼吸）", "detail": "评估呼吸；为无呼吸患者通气，辅助不充分或衰竭的呼吸。", "verbalize": false},
+        {"step": "Circulation（循环）", "detail": "评估循环（脉搏、大出血、皮肤）；颈动脉搏动消失时实施 CPR；控制大出血。", "verbalize": false},
+        {"step": "Rapid Body Survey（快速全身检查）", "detail": "快速从头到脚扫查，发现危及生命和肢体的损伤。", "verbalize": false},
+        {"step": "Survey interventions（检查中的干预）", "detail": "Skin（皮肤）、Oxygen（氧气）、Airway（气道）、Position（体位）、Bandage（包扎）、Pelvic Binder（骨盆固定带）、Blanket（保暖毯）。", "verbalize": false},
+        {"step": "Transport Decision（转运决定）", "detail": "判断患者稳定或不稳定并采取相应的转运方式。视患者情况及能否提供确定性治疗，『决定点』之后的任何时间都可以装载与转运。不稳定患者判定标准见第 7-8 页。", "verbalize": true}
+      ],
+      "interventionsEn": [
+        "Cervical spine stabilization — Indications: meets NEXUS or Canadian C-Spine indications; obvious injury above the level of the clavicles; unconscious patient where trauma cannot be reasonably ruled out",
+        "Obstructed airway procedures — Indications: absence of respiration; inability to ventilate the patient",
+        "Airway maintenance and suctioning — Indications: decreased level of consciousness (LOC); presence of fluids or potential obstructions in upper airway",
+        "Ventilating the non-breathing patient — Indications: absence of respirations",
+        "Assisting inadequate or failing respirations — Indications: abnormally fast or slow respirations; distressed respirations; shallow or labored respirations, especially in the presence of decreasing LOC, cyanosis, or decreased O2 saturations",
+        "Sealing open chest wounds — Indications: open chest wounds",
+        "Performing CPR — Indications: absence of carotid pulse",
+        "Controlling hemorrhage — Indications: major hemorrhage",
+        "Binding pelvis — Indications: suspected fracture due to mechanism or unstable pelvis, including shock-like symptoms with MOI",
+        "Stabilizing fractures — Indications: suspected fractures",
+        "Realigning limb fractures — Indications: fractured limbs that are grossly deformed or with no distal pulses",
+        "Initiating cooling of burns — Indications: major burns",
+        "Oxygen — Indications: altered LOC; respiratory distress; trauma; evidence of shock (e.g., tachycardia, tachypnea, pallor, cyanosis); hypoxia NYD",
+        "Gradual warming — Indications: hypothermia",
+        "Rapid cooling — Indications: hyperthermia"
+      ],
+      "interventionsZh": [
+        "颈椎固定（Cervical spine stabilization）— 指征：符合 NEXUS 或 Canadian C-Spine 标准；锁骨以上有明显损伤；无法合理排除创伤的昏迷患者",
+        "气道梗阻处理（Obstructed airway procedures）— 指征：无呼吸；无法为患者通气",
+        "气道维护与吸引（Airway maintenance and suctioning）— 指征：意识水平（LOC）下降；上气道存在液体或潜在梗阻物",
+        "为无呼吸患者通气（Ventilating the non-breathing patient）— 指征：无呼吸",
+        "辅助不充分或衰竭的呼吸（Assisting inadequate or failing respirations）— 指征：呼吸异常过快或过慢；呼吸窘迫；呼吸浅或费力，尤其在 LOC 下降、发绀或血氧饱和度下降时",
+        "封闭开放性胸部伤口（Sealing open chest wounds）— 指征：开放性胸部伤口",
+        "实施 CPR（Performing CPR）— 指征：颈动脉搏动消失",
+        "控制出血（Controlling hemorrhage）— 指征：大出血",
+        "骨盆固定（Binding pelvis）— 指征：因受伤机制怀疑骨折或骨盆不稳定，包括结合 MOI 出现休克样症状",
+        "固定骨折（Stabilizing fractures）— 指征：疑似骨折",
+        "肢体骨折复位（Realigning limb fractures）— 指征：严重变形或远端无脉搏的肢体骨折",
+        "开始烧伤降温（Initiating cooling of burns）— 指征：大面积烧伤（major burns）",
+        "氧气（Oxygen）— 指征：LOC 改变；呼吸窘迫；创伤；休克征象（如心动过速、呼吸急促、苍白、发绀）；原因未明的低氧（hypoxia NYD）",
+        "逐步复温（Gradual warming）— 指征：低体温（hypothermia）",
+        "快速降温（Rapid cooling）— 指征：高体温（hyperthermia）"
+      ],
+      "interventionsSourcePage": 11,
+      "sourcePage": 9
+    },
+    {
+      "id": "secondary-survey",
+      "nameEn": "Secondary Survey",
+      "nameZh": "次级评估（Secondary Survey）",
+      "orderIndex": 3,
+      "purposeEn": "The purpose of the secondary survey is to identify the patient's chief complaint, establish a baseline set of vital signs and gather information about the patient's injuries and condition.",
+      "purposeZh": "次级评估的目的是明确患者主诉、建立基线生命体征，并收集患者伤病相关信息。",
+      "stepsEn": [
+        {"step": "History", "detail": "Obtain the history of the chief complaint and incident. Use the Critical History Questions (pages 12-13) for MVA, fall, pedestrian struck, shooting, and stabbing.", "verbalize": false},
+        {"step": "Vital signs", "detail": "Establish a baseline set of vital signs.", "verbalize": false},
+        {"step": "Head-to-toe examination", "detail": "Systematic head-to-toe physical examination.", "verbalize": false},
+        {"step": "Functional inquiry (PCP required)", "detail": "Functional inquiry is required at the PCP level.", "verbalize": false}
+      ],
+      "stepsZh": [
+        {"step": "History（病史）", "detail": "采集主诉及事件经过。MVA、跌落、行人被撞、枪击、刺伤等情形使用关键病史问题（第 12-13 页）。", "verbalize": false},
+        {"step": "Vital signs（生命体征）", "detail": "建立基线生命体征。", "verbalize": false},
+        {"step": "Head-to-toe examination（从头到脚检查）", "detail": "系统性的从头到脚体格检查。", "verbalize": false},
+        {"step": "Functional inquiry（功能性问诊，PCP 必做）", "detail": "PCP 级别必须完成功能性问诊。", "verbalize": false}
+      ],
+      "interventionsEn": [],
+      "interventionsZh": [],
+      "sourcePage": 9
+    },
+    {
+      "id": "protocols",
+      "nameEn": "Protocols",
+      "nameZh": "协议（Protocols）",
+      "orderIndex": 4,
+      "purposeEn": "Protocols are preset algorithms guiding the EMA through administration of medications or the application of medical equipment.",
+      "purposeZh": "协议是预设的流程算法，指导 EMA 给予药物或应用医疗设备。",
+      "stepsEn": [
+        {"step": "Various", "detail": "Apply the relevant preset protocol (e.g., medication administration, medical equipment) based on patient presentation.", "verbalize": false}
+      ],
+      "stepsZh": [
+        {"step": "Various（视情况）", "detail": "根据患者表现应用相应的预设协议（如给药、应用医疗设备）。", "verbalize": false}
+      ],
+      "interventionsEn": [],
+      "interventionsZh": [],
+      "sourcePage": 9
+    },
+    {
+      "id": "treatments",
+      "nameEn": "Treatments",
+      "nameZh": "处置（Treatments）",
+      "orderIndex": 5,
+      "purposeEn": "Treatments are first aid procedures that aim to arrest injury progression (burns, hemorrhage) or support sustained injuries (fracture and spinal management).",
+      "purposeZh": "处置是急救操作，旨在阻止损伤进展（烧伤、出血）或支持已发生的损伤（骨折与脊柱管理）。",
+      "stepsEn": [
+        {"step": "Wound Care", "detail": "", "verbalize": false},
+        {"step": "Fracture management", "detail": "", "verbalize": false},
+        {"step": "Spinal management", "detail": "", "verbalize": false},
+        {"step": "Burn management", "detail": "", "verbalize": false},
+        {"step": "Management of specific injuries and conditions", "detail": "", "verbalize": false}
+      ],
+      "stepsZh": [
+        {"step": "Wound Care（伤口护理）", "detail": "", "verbalize": false},
+        {"step": "Fracture management（骨折管理）", "detail": "", "verbalize": false},
+        {"step": "Spinal management（脊柱管理）", "detail": "", "verbalize": false},
+        {"step": "Burn management（烧伤管理）", "detail": "", "verbalize": false},
+        {"step": "Management of specific injuries and conditions（特定伤病的管理）", "detail": "", "verbalize": false}
+      ],
+      "interventionsEn": [],
+      "interventionsZh": [],
+      "sourcePage": 9
+    },
+    {
+      "id": "load-and-transport",
+      "nameEn": "Load and transport",
+      "nameZh": "装载与转运（Load and transport）",
+      "orderIndex": 6,
+      "purposeEn": "Load the patient and transport. Depending upon patient condition (i.e. stable vs unstable) and the ability to provide definitive care, as outlined in protocols, load and transport may be appropriate any time after the 'decision point'.",
+      "purposeZh": "装载患者并转运。视患者情况（稳定 vs 不稳定）及能否提供确定性治疗（按协议规定），『决定点』之后的任何时间都可以进行装载与转运。",
+      "stepsEn": [
+        {"step": "Load the stretcher into the ambulance", "detail": "", "verbalize": false},
+        {"step": "Reassess the ABCI (injuries) after each major move", "detail": "Reassess airway, breathing, circulation, and injuries after each major move.", "verbalize": false},
+        {"step": "Prepare the ambulance and equipment", "detail": "i.e. lighting, temperature, resuscitation equipment, etc.", "verbalize": false},
+        {"step": "Consider bringing additional resources", "detail": "i.e. First Responders.", "verbalize": false},
+        {"step": "Transport mode", "detail": "Select the transport mode appropriate to the patient's condition.", "verbalize": true},
+        {"step": "Notification if appropriate", "detail": "Notify the receiving facility if appropriate.", "verbalize": true}
+      ],
+      "stepsZh": [
+        {"step": "将担架装入救护车", "detail": "", "verbalize": false},
+        {"step": "每次大幅移动后重新评估 ABCI（含损伤）", "detail": "每次大幅移动后重新评估气道、呼吸、循环及损伤情况。", "verbalize": false},
+        {"step": "准备救护车与设备", "detail": "如照明、温度、复苏设备等。", "verbalize": false},
+        {"step": "考虑携带额外资源", "detail": "如 First Responders（第一响应者）。", "verbalize": false},
+        {"step": "Transport mode（转运方式）", "detail": "根据患者情况选择合适的转运方式。", "verbalize": true},
+        {"step": "Notification（必要时通知）", "detail": "必要时通知接收医院。", "verbalize": true}
+      ],
+      "interventionsEn": [],
+      "interventionsZh": [],
+      "sourcePage": 10
+    },
+    {
+      "id": "records-and-reports",
+      "nameEn": "Records and Reports",
+      "nameZh": "记录与报告（Records and Reports）",
+      "orderIndex": 7,
+      "purposeEn": "Reports are used to gather or give information regarding the patient's status and treatment. Forms are used to record assessment and treatment of a patient.",
+      "purposeZh": "报告用于收集或传递患者状况与治疗的信息；表格用于记录对患者的评估与治疗。",
+      "stepsEn": [
+        {"step": "Hand off report", "detail": "Give a verbal hand-off report when transferring care.", "verbalize": true},
+        {"step": "Documentation", "detail": "Complete the Patient Care Report (see page 17).", "verbalize": false}
+      ],
+      "stepsZh": [
+        {"step": "Hand off report（交接报告）", "detail": "移交患者时进行口头交接报告。", "verbalize": true},
+        {"step": "Documentation（书面记录）", "detail": "完成 Patient Care Report（见第 17 页）。", "verbalize": false}
+      ],
+      "interventionsEn": [],
+      "interventionsZh": [],
+      "sourcePage": 10
+    }
+  ],
+  "unstableCriteria": {
+    "descriptionEn": "Findings in Unstable Adult Patients — for practical examination purposes patients who present with any of the criteria below should be considered unstable and transported appropriately.",
+    "descriptionZh": "不稳定成人患者的判定 — 就实操考试而言，出现以下任一标准的患者应视为不稳定，并采取相应的转运方式。",
+    "primarySurveyFindingsEn": [
+      "Altered LOC or unconsciousness",
+      "Difficulty maintaining the patient's airway",
+      "Respiratory distress / accessory muscle use / respiratory arrest",
+      "Absent radial pulses",
+      "Cardiac arrest",
+      "Hemorrhage requiring tourniquet application or wound packing",
+      "Cool pale clammy skin secondary to suspected shock",
+      "Suspected CVA",
+      "Heat stroke",
+      "Severe hypothermia",
+      "Suspected cardiac chest pain",
+      "Anaphylaxis"
+    ],
+    "primarySurveyFindingsZh": [
+      "LOC 改变或意识丧失",
+      "难以维持患者气道",
+      "呼吸窘迫 / 使用辅助呼吸肌 / 呼吸停止",
+      "桡动脉搏动消失",
+      "心脏骤停",
+      "需要使用止血带或伤口填塞的出血",
+      "疑似休克所致的皮肤湿冷苍白",
+      "疑似 CVA（脑血管意外）",
+      "热射病（Heat stroke）",
+      "重度低体温",
+      "疑似心源性胸痛",
+      "过敏性休克（Anaphylaxis）"
+    ],
+    "anatomicalFindingsEn": [
+      "Open or depressed skull fracture",
+      "New onset neurological deficits",
+      "Major penetrating trauma to the head, neck, torso, and extremities proximal to the knee or elbow",
+      "Facial injury with potential airway compromise",
+      "Two or more proximal long bone fractures",
+      "Crushed, de-gloved, or mangled extremity",
+      "Pulseless extremity (after 1 attempt at re-alignment fails to restore circulation)",
+      "Amputation proximal to wrist or ankle",
+      "Chest wall instability or deformity (i.e. flail chest)",
+      "Unstable pelvis",
+      "Major burns: partial thickness > 20% BSA; full thickness > 10% BSA; facial or airway burns (with or without inhalation injury); third degree burns involving the eyes, neck, hands, feet, groin; burns that fully encircle a limb; high voltage electrical burns"
+    ],
+    "anatomicalFindingsZh": [
+      "开放性或凹陷性颅骨骨折",
+      "新发神经功能缺损",
+      "头、颈、躯干及膝/肘近端肢体的严重穿透伤",
+      "可能危及气道的面部损伤",
+      "两处及以上近端长骨骨折",
+      "肢体压碎、脱套或毁损",
+      "肢体无脉（1 次复位尝试后循环仍未恢复）",
+      "腕或踝近端的离断伤",
+      "胸壁不稳定或畸形（如连枷胸 flail chest）",
+      "骨盆不稳定",
+      "大面积烧伤：二度烧伤 > 20% BSA；三度烧伤 > 10% BSA；面部或气道烧伤（无论有无吸入性损伤）；累及眼、颈、手、足、腹股沟的三度烧伤；环绕整个肢体的烧伤；高压电烧伤"
+    ],
+    "mechanismOfInjuryEn": [
+      "Free fall from a height > 6 meters (~ 20 feet)",
+      "High risk automobile crash: significant intrusion into the passenger compartment (> 0.3 m on occupant side or > 0.5 m any site including roof); ejection from the vehicle; death in the passenger compartment",
+      "Auto versus pedestrian / cyclist at > 30 kph",
+      "Motorcycle crash > 30 kph"
+    ],
+    "mechanismOfInjuryZh": [
+      "从超过 6 米（约 20 英尺）高处自由坠落",
+      "高风险汽车碰撞：座舱明显侵入（乘员侧 > 0.3 米，或包括车顶在内的任何部位 > 0.5 米）；被甩出车外；同车厢内有人死亡",
+      "汽车撞击行人/骑车人，车速 > 30 kph",
+      "摩托车事故，车速 > 30 kph"
+    ],
+    "sourcePages": "7-8"
+  },
+  "criticalHistory": {
+    "sourcePages": "12-13",
+    "questionsEn": [
+      {
+        "category": "MVA",
+        "questions": [
+          "Location of patients",
+          "Which vehicle was the patient in?",
+          "How many vehicles are involved",
+          "Type of vehicle(s)",
+          "Impact speed",
+          "Exterior damage",
+          "Interior damage / Compartment Intrusion",
+          "Type of restraints",
+          "Initial position and condition of patient",
+          "Loss of consciousness",
+          "Condition of other patients – fatality in same vehicle",
+          "Vehicle equipped with airbags – were they deployed"
+        ]
+      },
+      {
+        "category": "Fall",
+        "questions": [
+          "Where from",
+          "Height",
+          "Free fall or hit other objects during fall",
+          "Landing surface",
+          "Position of patient at impact – what hit first",
+          "Initial position and condition of patient",
+          "Has the patient moved or been moved since the incident?",
+          "Any loss of consciousness",
+          "Cause of fall"
+        ]
+      },
+      {
+        "category": "Pedestrian Struck",
+        "questions": [
+          "What hit them – size, weight",
+          "Velocity of vehicle",
+          "What part of the vehicle hit what part of patient?",
+          "Damage to vehicle",
+          "Distance patient thrown",
+          "Initial position and condition of patient",
+          "Has the patient moved or been moved since the incident?",
+          "Any loss of consciousness",
+          "Condition of vehicle occupants"
+        ]
+      },
+      {
+        "category": "Shooting",
+        "questions": [
+          "Type of firearm",
+          "Range",
+          "Angle of shot",
+          "Type of bullet if possible",
+          "Entrance and exit wounds",
+          "Initial position and condition of patient",
+          "Loss of consciousness"
+        ]
+      },
+      {
+        "category": "Stabbing",
+        "questions": [
+          "Type of weapon/object",
+          "Size – length and width of weapon",
+          "Type of wound – slashed or stabbed",
+          "Number of wounds",
+          "Other injuries",
+          "Initial position and condition of patient",
+          "Loss of consciousness"
+        ]
+      }
+    ],
+    "questionsZh": [
+      {
+        "category": "MVA（机动车事故）",
+        "questions": [
+          "患者所在位置",
+          "患者在哪辆车里？",
+          "涉及多少辆车",
+          "车辆类型",
+          "撞击速度",
+          "车外损坏情况",
+          "车内损坏 / 座舱侵入情况",
+          "约束装置类型（安全带等）",
+          "患者最初的位置和状态",
+          "是否曾失去意识",
+          "其他患者情况——同车是否有人死亡",
+          "车辆是否配备安全气囊——是否弹出"
+        ]
+      },
+      {
+        "category": "Fall（坠落/跌落）",
+        "questions": [
+          "从何处坠落",
+          "高度",
+          "自由坠落还是坠落过程中撞到其他物体",
+          "着地表面",
+          "落地瞬间的姿势——哪个部位先着地",
+          "患者最初的位置和状态",
+          "事发后患者是否自行移动过或被移动过？",
+          "是否曾失去意识",
+          "坠落原因"
+        ]
+      },
+      {
+        "category": "Pedestrian Struck（行人被撞）",
+        "questions": [
+          "被什么撞到——大小、重量",
+          "车辆速度",
+          "车辆哪个部位撞到患者哪个部位？",
+          "车辆损坏情况",
+          "患者被抛出的距离",
+          "患者最初的位置和状态",
+          "事发后患者是否自行移动过或被移动过？",
+          "是否曾失去意识",
+          "车内人员情况"
+        ]
+      },
+      {
+        "category": "Shooting（枪击）",
+        "questions": [
+          "枪支类型",
+          "射击距离",
+          "射击角度",
+          "如可能，了解子弹类型",
+          "入口伤与出口伤",
+          "患者最初的位置和状态",
+          "是否曾失去意识"
+        ]
+      },
+      {
+        "category": "Stabbing（刺伤）",
+        "questions": [
+          "凶器/物体类型",
+          "尺寸——凶器的长度和宽度",
+          "伤口类型——划伤还是刺伤",
+          "伤口数量",
+          "其他损伤",
+          "患者最初的位置和状态",
+          "是否曾失去意识"
+        ]
+      }
+    ],
+    "mnemonics": [
+      {
+        "name": "OPQRRRST",
+        "supplementary": true,
+        "noteEn": "Standard BC EMR/PCP pain and symptom history mnemonic; not printed on pages 12-13 of the source document.",
+        "noteZh": "BC EMR/PCP 常用的疼痛/症状病史口诀；原文第 12-13 页未印出，属补充内容。",
+        "expansionEn": [
+          "O – Onset: What were you doing when it started? Sudden or gradual?",
+          "P – Provocation / Palliation: What makes it worse or better?",
+          "Q – Quality: What does it feel like (sharp, dull, crushing, burning)?",
+          "R – Region: Where is it?",
+          "R – Radiation: Does it spread anywhere?",
+          "R – Relief: Does anything relieve it (rest, position, medication)?",
+          "S – Severity: How bad is it on a scale of 0-10?",
+          "T – Time: When did it start? How long has it lasted? Constant or intermittent?"
+        ],
+        "expansionZh": [
+          "O – Onset（起病）：发作时你在做什么？突发还是逐渐出现？",
+          "P – Provocation / Palliation（诱发/缓解）：什么会使其加重或减轻？",
+          "Q – Quality（性质）：是什么感觉（锐痛、钝痛、压榨感、烧灼感）？",
+          "R – Region（部位）：在哪里？",
+          "R – Radiation（放射）：是否向其他部位放射？",
+          "R – Relief（缓解方式）：有什么能缓解（休息、体位、药物）？",
+          "S – Severity（严重程度）：0-10 分打几分？",
+          "T – Time（时间）：何时开始？持续多久？持续性还是间歇性？"
+        ]
+      },
+      {
+        "name": "LOTARP",
+        "supplementary": true,
+        "noteEn": "Complaint/pain history mnemonic used in BC EMR courses; not printed on pages 12-13 of the source document.",
+        "noteZh": "BC EMR 课程常用的主诉/疼痛病史口诀；原文第 12-13 页未印出，属补充内容。",
+        "expansionEn": [
+          "L – Location: Where is the pain or complaint?",
+          "O – Onset: When and how did it start?",
+          "T – Type: What kind of pain or sensation is it?",
+          "A – Aggravating factors: What makes it worse?",
+          "R – Relieving factors: What makes it better?",
+          "P – Progression: Is it getting better, worse, or staying the same?"
+        ],
+        "expansionZh": [
+          "L – Location（部位）：疼痛或不适在哪里？",
+          "O – Onset（起病）：何时、如何开始？",
+          "T – Type（性质）：是哪种疼痛或感觉？",
+          "A – Aggravating factors（加重因素）：什么会使其加重？",
+          "R – Relieving factors（缓解因素）：什么会使其减轻？",
+          "P – Progression（进展）：在好转、加重，还是维持不变？"
+        ]
+      },
+      {
+        "name": "SAMPLE",
+        "supplementary": true,
+        "noteEn": "Standard patient history mnemonic; not printed on pages 12-13 of the source document.",
+        "noteZh": "标准病史采集口诀；原文第 12-13 页未印出，属补充内容。",
+        "expansionEn": [
+          "S – Signs and symptoms",
+          "A – Allergies",
+          "M – Medications",
+          "P – Past / pertinent medical history",
+          "L – Last oral intake",
+          "E – Events leading up to the incident"
+        ],
+        "expansionZh": [
+          "S – Signs and symptoms（体征与症状）",
+          "A – Allergies（过敏史）",
+          "M – Medications（用药情况）",
+          "P – Past / pertinent medical history（既往/相关病史）",
+          "L – Last oral intake（最后一次进食进水）",
+          "E – Events leading up to the incident（事发前经过）"
+        ]
+      }
+    ]
+  },
+  "avpu": {
+    "sourcePage": 13,
+    "levelsEn": [
+      {
+        "letter": "A",
+        "term": "Alert",
+        "description": "Patient is awake, talking and should be able to maintain own airway. May need help if there is a c-spine concern and complaining of nausea or has an oral bleed."
+      },
+      {
+        "letter": "V",
+        "term": "Verbal",
+        "description": "Patient responds to verbal stimulus but is drowsy. May consider placing patient semi-prone if injuries permit."
+      },
+      {
+        "letter": "P",
+        "term": "Pain",
+        "description": "Patient responds only to pain stimuli. Must monitor airway closely and intervene, as necessary. Should be semi-prone, injuries permitting."
+      },
+      {
+        "letter": "U",
+        "term": "Unresponsive",
+        "description": "No response to stimuli. This patient is unable to protect own airway. You must intervene and very closely monitor patient's airway."
+      }
+    ],
+    "levelsZh": [
+      {
+        "letter": "A",
+        "term": "Alert（清醒）",
+        "description": "患者清醒、能说话，应能自行维持气道。若存在颈椎（c-spine）顾虑且患者诉恶心或口腔出血，可能需要协助。"
+      },
+      {
+        "letter": "V",
+        "term": "Verbal（对声音有反应）",
+        "description": "患者对言语刺激有反应但嗜睡。若伤情允许，可考虑将患者置于半俯卧位（semi-prone）。"
+      },
+      {
+        "letter": "P",
+        "term": "Pain（对疼痛有反应）",
+        "description": "患者仅对疼痛刺激有反应。必须密切监测气道并在必要时干预。伤情允许时应置于半俯卧位。"
+      },
+      {
+        "letter": "U",
+        "term": "Unresponsive（无反应）",
+        "description": "对刺激无反应。该患者无法保护自身气道。你必须进行干预并非常密切地监测患者气道。"
+      }
+    ],
+    "notesEn": [
+      "AVPU is used to assess level of consciousness (LOC) as the first step of the Primary Survey.",
+      "Source: 'Assessing LOC Using AVPU', page 13 of the BC Provincial Examination Guidelines."
+    ],
+    "notesZh": [
+      "AVPU 用于评估意识水平（LOC），是 Primary Survey 的第一步。",
+      "来源：BC Provincial Examination Guidelines 第 13 页 'Assessing LOC Using AVPU'。"
+    ]
+  },
+  "pcr": {
+    "sourcePage": 17,
+    "supplementary": true,
+    "fieldsEn": [
+      "Date of call and incident/call number",
+      "Times: call received, dispatched, arrival on scene, depart scene, arrival at hospital",
+      "Patient identification: name, address, date of birth, age, sex, personal health number",
+      "Chief complaint (C/C)",
+      "History of chief complaint and incident (Hx)",
+      "Past medical history, medications, allergies (SAMPLE)",
+      "Level of consciousness (LOC) and serial vital signs with times: pulse, respirations, blood pressure, skin, pupils, SpO2, blood glucose (BGL) as indicated",
+      "Assessment findings: primary survey and secondary survey / head-to-toe findings",
+      "Treatments and interventions performed, with times and patient response",
+      "Protocols / medications administered: drug, dose, route, time",
+      "Transport information: destination, transport mode, patient position",
+      "Transfer of care / hand-off report to receiving facility",
+      "Crew members and licence levels",
+      "Signatures, and refusal-of-care documentation if applicable"
+    ],
+    "fieldsZh": [
+      "呼叫日期及事件/呼叫编号",
+      "时间节点：接到呼叫、派遣、到达现场、离开现场、到达医院",
+      "患者身份信息：姓名、住址、出生日期、年龄、性别、个人健康号（PHN）",
+      "主诉（C/C）",
+      "主诉及事件经过（Hx）",
+      "既往病史、用药、过敏史（SAMPLE）",
+      "意识水平（LOC）及带时间的连续生命体征：脉搏、呼吸、血压、皮肤、瞳孔、SpO2，必要时含血糖（BGL）",
+      "评估发现：Primary Survey 及 Secondary Survey / 从头到脚检查结果",
+      "已实施的处置与干预，含时间及患者反应",
+      "已执行的协议/给药：药物、剂量、途径、时间",
+      "转运信息：目的地、转运方式、患者体位",
+      "向接收医院的交接（hand-off report）",
+      "出勤人员及执照级别",
+      "签名，以及（如适用）拒绝救护的记录"
+    ],
+    "notesEn": [
+      "Page 17 of the source document shows the Patient Care Report as a form image only; no field text could be extracted. The fields listed here are the standard PCR sections (supplementary).",
+      "Records and Reports component (page 10): 'Reports are used to gather or give information regarding the patient's status and treatment. Forms are used to record assessment and treatment of a patient.' Steps: Hand off report; Documentation."
+    ],
+    "notesZh": [
+      "原文第 17 页的 Patient Care Report 仅为表格图片，无法提取字段文字；此处所列为标准 PCR 栏目（补充内容）。",
+      "Records and Reports 部分（第 10 页）：报告用于收集或传递患者状况与治疗信息；表格用于记录对患者的评估与治疗。步骤：Hand off report（交接报告）；Documentation（书面记录）。"
+    ]
+  }
+}

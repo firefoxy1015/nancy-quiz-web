@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "BC EMR/PCP Licensing Exam Rules",
+    "verifiedDate": "2026-07-25",
+    "sources": {
+      "bcGuidelines": { "name": "BC Provincial Examination Guidelines", "version": "Current to June 15, 2026", "url": "https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/heath-care-partners/colleges-board-and-commissions/emergency-medical-assistants-licensing-board/britishcolumbiaprovincialexaminationguidelines.pdf" },
+      "gradingCriteria": { "name": "EMALB Practical Examination Grading Criteria", "version": "March 2025", "url": "https://www2.gov.bc.ca/assets/gov/health/about-bc-s-health-care-system/heath-care-partners/colleges-board-and-commissions/emergency-medical-assistants-licensing-board/emalbpracticalexaminationgradingcriteria.pdf" },
+      "coprHandbook": { "name": "COPR Entry to Practice Examinations Handbook", "version": "July 9, 2026", "url": "https://copr.ca/wp-content/uploads/2025/07/Examination-Handbook.pdf" },
+      "emalb": { "name": "EMALB Licensing", "url": "https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/partners/colleges-boards-and-commissions/emergency-medical-assistants-licensing-board/licensing" },
+      "copr": { "name": "COPR", "url": "https://copr.ca/" }
+    }
+  },
+  "common": {
+    "attemptsPerExam": 3,
+    "completionWindowMonths": 12,
+    "afterThreeFailsEn": "Candidates unsuccessful after three attempts must complete a new recognized training program to restart the exam process.",
+    "afterThreeFailsZh": "任一考试三次未通过，必须重新完成一个认可的培训课程才能重启考试流程。",
+    "practicalPrerequisiteEn": "Practical exams are not scheduled until the written and jurisprudence exams are passed.",
+    "practicalPrerequisiteZh": "必须先通过笔试和法规考，EMALB 才会为你排期实操考试。"
+  },
+  "emr": {
+    "written": {
+      "provider": "EMALB",
+      "providerNoteEn": "Administered by the EMA Licensing Branch online — this is BC's own exam, NOT the COPR exam.",
+      "providerNoteZh": "由 EMALB（BC 发牌机构）自己在线出题和主办——这是 BC 自己的考试，不是 COPR 全国统考。",
+      "questions": 200,
+      "timeLimitMinutes": 150,
+      "passMarkPercent": 75,
+      "retakeRulesEn": "Fail once: re-attempt after 2 days. Fail twice: re-attempt after 5 days.",
+      "retakeRulesZh": "挂第一次：2 天后可重考；挂第二次：5 天后可第三次（最后一次）。",
+      "resultsEn": "Results available immediately after submission.",
+      "resultsZh": "交卷后立刻出分。"
+    },
+    "jurisprudence": { "$ref": "jurisprudence" },
+    "practical": { "$ref": "practical" }
+  },
+  "pcp": {
+    "written": {
+      "provider": "COPR",
+      "providerNoteEn": "The national COPR Entry to Practice Examination, computer-based, proctored by Meazure Learning. Registration through the COPR applicant portal, separate from EMALB.",
+      "providerNoteZh": "COPR 全国统考，机考，由 Meazure Learning 监考。报名走 COPR 官网的 applicant portal，和 EMALB 是两套报名系统，都要报。",
+      "framework": "CPCF",
+      "frameworkNoteEn": "From November 2026 all PCP examinations test to the 2024 Canadian Paramedic Competence Framework (CPCF). The NOCP version is discontinued.",
+      "frameworkNoteZh": "2026 年 11 月起 PCP 统考全部按 2024 版 CPCF 能力框架出题，旧 NOCP 版已停办。2027 年考生考的一定是 CPCF 版。",
+      "questions": 200,
+      "scoredQuestions": 180,
+      "format": "Two parts of 120 minutes each with one optional 10-minute break between parts. Part 1 cannot be revisited after the break.",
+      "formatZh": "两部分各 120 分钟，中间可休息 10 分钟；休息开始后不能再回到第一部分。",
+      "passMarkEn": "Standard Score (scaled) — no fixed percentage. Only the Total Standard Score determines pass/fail.",
+      "passMarkZh": "标准分制（按考卷难度校准），没有固定及格百分比，只看总标准分。",
+      "feeCad": 650,
+      "feeNoteEn": "$650 + tax per attempt (includes non-refundable $150 admin fee), payable to COPR. BC licence fee is separate.",
+      "feeNoteZh": "每次 $650 加币+税（含 $150 不可退的行政费），付给 COPR；BC 的牌照费另算。",
+      "schedule2026": ["2026-02-11", "2026-05-06", "2026-07-08", "2026-09-09", "2026-11-12"],
+      "scheduleNoteEn": "Offered 4-5 times per year. Application closes ~4 weeks before the exam date. Late applications are not accepted.",
+      "scheduleNoteZh": "一年 4-5 场，报名约在考前 4 周截止，逾期不受理。日程通常提前一年挂在 copr.ca。",
+      "locations": ["Burnaby", "Nanaimo", "Kelowna", "Prince George", "Richmond", "Surrey", "Vancouver", "Victoria"],
+      "resultsEn": "Results released approximately 3-4 weeks after the exam, with a competency-area breakdown (red / yellow / light green / dark green).",
+      "resultsZh": "考后约 3-4 周出分，附各能力域强弱分色报告（红/黄/浅绿/深绿）。",
+      "rewriteEn": "Failed candidates must submit a new application and pay again. Manual score verification available for $200.",
+      "rewriteZh": "挂科后重考要重新申请重新缴费；可花 $200 申请人工核分。"
+    },
+    "jurisprudence": { "$ref": "jurisprudence" },
+    "practical": { "$ref": "practical" }
+  },
+  "jurisprudence": {
+    "provider": "EMALB",
+    "questions": 25,
+    "timeLimit": null,
+    "timeLimitNoteEn": "No time limit.",
+    "timeLimitNoteZh": "不限时。",
+    "passMarkPercent": 80,
+    "retakeRulesEn": "Fail once: retry any time. Fail twice: wait 5 days before the third and final attempt.",
+    "retakeRulesZh": "挂第一次：随时重考；挂第二次：等 5 天后进行第三次也是最后一次。",
+    "scopeEn": "BC law and policy for EMAs: Emergency Health Services Act, EMA Regulation (incl. Schedule 1/2 scope of practice), Board policies, professional conduct.",
+    "scopeZh": "考 BC 的急救人员法规：Emergency Health Services Act、EMA Regulation（含 Schedule 1/2 执业范围）、Board 政策、职业行为。"
+  },
+  "practical": {
+    "provider": "EMALB",
+    "structureEn": "Two scenarios: one medical call and one trauma call, randomly selected from the evaluation bank.",
+    "structureZh": "两场场景考：1 个 medical（内科）+ 1 个 trauma（创伤），从官方场景库随机抽取。",
+    "examMinutes": 40,
+    "pcrMinutes": 5,
+    "rtcPackageMinutes": 15,
+    "nonRtcPackageMinutes": 30,
+    "passMarkPercent": 70,
+    "scoringEn": "Deduction-based: you start at 100% and deductions are taken for each deficiency, weighted by severity (Major/Moderate/Minor). 70% or higher passes.",
+    "scoringZh": "扣分制：100% 起步，按缺陷严重度（Major/Moderate/Minor）逐项扣分，剩 70% 以上过关。",
+    "mustPerformEn": "You must physically perform actions — stating what you would do is not enough. Narrate while you work.",
+    "mustPerformZh": "必须动手做出来，只嘴说不算；边做边口述你的思路。",
+    "remedialEn": "Fail the medical scenario → assigned another medical; fail trauma → another trauma.",
+    "remedialZh": "挂 medical 补 medical，挂 trauma 补 trauma。",
+    "reviewEn": "One clinical review may be requested within 5 days of the exam date.",
+    "reviewZh": "对结果有异议可在考后 5 天内申请一次复核（仅一次）。",
+    "locations": ["Victoria", "North/Central Vancouver Island", "Lower Mainland", "Vernon", "Kootenays", "Prince George", "North Eastern B.C."],
+    "accommodationsEn": "No accommodations are available for practical examinations.",
+    "accommodationsZh": "实操考试不提供任何特殊安排（accommodation），必须能实际完成全部技能。"
+  }
+}
