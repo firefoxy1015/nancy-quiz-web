@@ -2,7 +2,7 @@
   "meta": {
     "title": "BC Practical Exam Scenarios",
     "version": 1,
-    "count": 14,
+    "count": 16,
     "languages": [
       "en",
       "zh"
@@ -7266,6 +7266,1072 @@
           "BP 186/104 - not treated pre-hospitally",
           "Deficit unchanged between both assessments",
           "Anticoagulated on apixaban, last dose 0800"
+        ]
+      }
+    },
+    {
+      "id": "md-07",
+      "type": "medical",
+      "titleEn": "Mild Hypothermia - Elderly Woman in an Unheated Home",
+      "titleZh": "轻度低体温——独居老人无暖气住宅",
+      "protocols": [
+        "Environmental Emergencies",
+        "Altered Mental Status NYD"
+      ],
+      "priority": "non-rtc",
+      "dispatchEn": "0900 hrs. Code 3 to a detached house in Chilliwack. 82-year-old female, wellness check requested by a neighbour who has not seen her for two days. The furnace has been broken since a power outage. Outside temperature is minus 4 degrees C. Hospital is 15 minutes away.",
+      "dispatchZh": "09:00，Code 3 前往奇利瓦克一处独立屋。82 岁女性，邻居已两天未见到她，请求上门查看。停电后暖炉一直坏着。室外气温零下 4 摄氏度。医院车程 15 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: police attended, gained entry and report the patient is awake, cold to touch and 'a bit muddled'. Fire is not attending.",
+          "infoZh": "调度补充：警察已到场破门进入，报告患者清醒、身体冰凉、「有点糊涂」。消防不到场。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan thermometer, warm blankets, hot packs, glucometer, and preheat the ambulance to 30 degrees C",
+              "actionZh": "确认；准备体温计、加温毯、热敷包、血糖仪，并把救护车预热到 30 摄氏度",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate that the ambulance interior must be warmed BEFORE the patient is loaded",
+              "actionZh": "预判必须在装载患者之前先把车厢加温",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: The house is dim and very cold - a thermometer on the wall reads 8 degrees C. Police have opened the front door, letting in more cold air. The patient sits in a recliner wrapped in a thin blanket, wearing a housecoat that is damp at the back from incontinence. Newspapers dating back two days are on the mat. A space heater is unplugged. One patient. No CO source running.",
+          "infoZh": "考官脚本：屋内昏暗且非常冷——墙上温度计显示 8 摄氏度。警察已把前门打开，冷空气持续灌入。患者裹着一条薄毯坐在躺椅上，穿的家居袍背部因失禁而潮湿。门垫上堆着两天的报纸。取暖器插头没插。单一患者。现场没有在运行的一氧化碳来源。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (cold environment, open door worsening heat loss, possible CO from heating attempts - none found), environment, nature of illness (environmental exposure), one patient",
+              "actionZh": "口述危险源（寒冷环境、敞开的门加剧散热、取暖可能产生的一氧化碳——本例未发现）、环境、发病性质（环境暴露）、单一患者",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "ACT on the environmental hazard: close the door and stop ongoing heat loss before beginning the assessment",
+              "actionZh": "对环境危险采取行动：先关门、阻止持续散热，再开始评估",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: elderly female, shivering, pale, slow to respond, damp clothing, cold room",
+              "actionZh": "第一眼：老年女性、寒战、面色苍白、反应迟缓、衣物潮湿、房间寒冷",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: awake, opens her eyes spontaneously, answers slowly and is disoriented to the day and date but knows her name and that she is at home; SHIVERING VIGOROUSLY. EXAMINER (give when assessed): airway clear and self-maintained; respirations 16, regular; radial pulse 56, regular and weak - take up to 30-45 seconds to assess a pulse in a cold patient. Skin: pale, COLD to touch centrally including the trunk and abdomen, dry apart from the damp clothing. Modified RBS: no trauma, no injury from a fall - she says she did not fall; mild dependent edema in both ankles, no focal weakness. SpO2 reads 89 percent but the probe is on a cold finger and the trace is poor - a peripherally shut-down reading; on a warmed ear probe it is 95 percent. STABLE: alert, shivering, mild hypothermia.",
+          "infoZh": "患者演员：清醒、能自主睁眼，回答缓慢，对星期和日期定向障碍，但知道自己的名字和身处家中；正在剧烈寒战。考官（评估时给出）：气道通畅、可自行维持；呼吸 16 次/分、规则；桡动脉 56 次/分、规则而细弱——低体温患者触脉最多可用 30-45 秒。皮肤：苍白，包括躯干和腹部在内的中心部位触之冰凉，除衣物潮湿外皮肤干燥。改良快速查体：无外伤、无跌倒所致损伤——她自述没有摔倒；双踝轻度体位性水肿，无局灶性无力。SpO2 显示 89%，但探头夹在冰凉手指上且波形差——属外周血管收缩造成的读数；换用加温耳探头后为 95%。稳定：清醒、有寒战、轻度低体温。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: Alert but disoriented - note that confusion is itself a hypothermia sign",
+              "actionZh": "评估意识 / AVPU：Alert 但有定向障碍——注意意识模糊本身就是低体温的表现",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Verbalize c-spine not indicated after confirming there was no fall",
+              "actionZh": "确认无跌倒后口述无颈椎固定指征",
+              "weight": 15,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway",
+              "actionZh": "评估气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing",
+              "actionZh": "评估呼吸",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation, taking 30-45 seconds to confirm a pulse in a cold patient before concluding pulselessness",
+              "actionZh": "评估循环，低体温患者在判定无脉前须用 30-45 秒确认脉搏",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Modified rapid body survey looking for occult injury, especially a fall she may not recall",
+              "actionZh": "改良快速查体，寻找隐匿损伤，尤其是她可能不记得的跌倒",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Assess skin temperature CENTRALLY (trunk/abdomen), not just at the hands",
+              "actionZh": "在躯干/腹部等中心部位而不仅仅是手部评估皮肤温度",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "REMOVE the damp clothing and cover with dry blankets - stopping heat loss is the first intervention",
+              "actionZh": "脱去潮湿衣物并盖上干燥毯子——阻止散热是首要处置",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Verbalize the oxygen decision and recognize the unreliable peripheral SpO2 reading in a cold patient",
+              "actionZh": "口述给氧决策，并识别低体温患者外周 SpO2 读数不可靠",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position of comfort, handle gently, and avoid rough handling",
+              "actionZh": "舒适体位、轻柔搬动、避免粗暴操作",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. She is alert, shivering, maintaining her own airway with a temperature of 33.4 degrees C - this is MILD hypothermia (above 32 and below 35), not severe. STABLE, NON-RTC: assess, actively rewarm, package and be ready to load within 30 minutes. NOTE the contrast: severe hypothermia below 28 degrees C would be an unstable, rapid-transport patient in whom you do NOT actively rewarm.",
+          "infoZh": "决策点。患者清醒、有寒战、能自行维持气道，体温 33.4 摄氏度——属轻度低体温（高于 32 且低于 35），并非重度。稳定，非 RTC：完成评估、主动复温、打包，30 分钟内可装载。请注意对比：体温低于 28 摄氏度的重度低体温属不稳定、需快速转运，且不得主动复温。",
+          "expected": [
+            {
+              "actionEn": "Categorize correctly as non-RTC and justify it with the temperature band and her mental status",
+              "actionZh": "正确判定为非 RTC，并以体温分级和意识状态作为依据",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Ready to load within 30 minutes, with active rewarming started on scene",
+              "actionZh": "30 分钟内可装载，并已在现场开始主动复温",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Verbalize the temperature thresholds and how the plan would change with severe hypothermia",
+              "actionZh": "口述体温分级阈值，以及若为重度低体温处置将如何改变",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "ACTOR ANSWERS SLOWLY (police and the neighbour help): the furnace stopped working during a power outage two days ago; she did not want to bother anyone. She has been in the recliner most of that time, has not eaten much and has been drinking tea. She denies falling, denies chest pain and denies shortness of breath. She has been incontinent of urine because she was too cold and stiff to get up. O - gradual over two days. P - blankets helped at first. Q - 'cold all the way through', shivering, stiff. R - no pain radiation, general aching. S - feels weaker than yesterday. T - continuous. PMHx: hypothyroidism, osteoarthritis, hypertension, mild dementia diagnosed last year. Meds: levothyroxine, acetaminophen prn, amlodipine. Allergies: none known. LOI: half a piece of toast and tea yesterday afternoon.",
+          "infoZh": "患者演员回答缓慢（警察和邻居协助补充）：两天前停电后暖炉就坏了；她不想麻烦别人。这两天大部分时间都窝在躺椅上，吃得很少，一直在喝茶。她否认摔倒、否认胸痛、否认气促。因为太冷太僵硬起不来，已发生小便失禁。O——两天内逐渐加重。P——毯子起初有用。Q——「从里到外都冷」，寒战、身体发僵。R——疼痛不放射，全身酸痛。S——感觉比昨天更虚弱。T——持续存在。既往史：甲状腺功能减退、骨关节炎、高血压、去年诊断的轻度痴呆。用药：左甲状腺素、对乙酰氨基酚按需、氨氯地平。过敏：无已知。最后进食：昨天下午半片吐司和茶。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: feeling cold, weak and confused after two days without heating",
+              "actionZh": "确立主诉：无暖气两天后出现寒冷、虚弱与意识模糊",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C with OPQRRRST/LOTARP plus exposure history: duration, ambient temperature, wet clothing, food and fluid intake, alcohol, any fall",
+              "actionZh": "用 OPQRRRST/LOTARP 采集现病史并补充暴露史：持续时间、环境温度、衣物是否潮湿、进食饮水、饮酒、有无跌倒",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "PMHx - hypothyroidism is a key predisposing cause of hypothermia",
+              "actionZh": "既往史——甲状腺功能减退是低体温的重要易感因素",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications",
+              "actionZh": "用药史",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI - poor intake contributes to hypoglycemia and reduced heat production",
+              "actionZh": "最后进食——摄入不足会导致低血糖并减少产热",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1: GCS 14 (E4 V4 M6 - disoriented to time); BP 104/62; pulse 56 regular and weak; respirations 16 regular; skin pale and cold centrally, dry; pupils equal and reactive but sluggish; SpO2 95 percent on a warmed ear probe (peripheral reading unreliable); BGL 3.6 mmol/L - LOW, and mandatory with an altered LOC; TEMPERATURE 33.4 degrees C tympanic - THE DEFINING VITAL SIGN in this call. Non-RTC interval: repeat within about 15 minutes.",
+          "infoZh": "第 1 组：GCS 14（E4 V4 M6——时间定向障碍）；血压 104/62；脉搏 56 规则而细弱；呼吸 16 规则；皮肤苍白、中心部位冰凉、干燥；瞳孔等大有反应但迟钝；SpO2 用加温耳探头为 95%（外周读数不可靠）；血糖 3.6 mmol/L——偏低，且意识改变时必测；鼓膜体温 33.4 摄氏度——本例最关键的生命体征。非 RTC 间隔：约 15 分钟内复测。",
+          "expected": [
+            {
+              "actionEn": "GCS with components",
+              "actionZh": "GCS 及分项",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation",
+              "actionZh": "听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse - allow 30-45 seconds in a cold patient and report rate, strength and rhythm",
+              "actionZh": "脉搏——低体温患者给足 30-45 秒，并报告频率、强度与节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character",
+              "actionZh": "呼吸频率/深度/性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin assessed centrally, hands-on",
+              "actionZh": "在中心部位动手评估皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils",
+              "actionZh": "瞳孔",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 - recognize and comment on an unreliable peripheral reading in a cold patient",
+              "actionZh": "SpO2——识别并说明低体温患者外周读数不可靠",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "BGL - mandatory with decreased LOC; 3.6 mmol/L is below 4.0 and must be corrected",
+              "actionZh": "血糖——意识下降时必测；3.6 mmol/L 低于 4.0，必须纠正",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            },
+            {
+              "actionEn": "TEMPERATURE - explicitly required in environmental patients and it drives the entire treatment plan",
+              "actionZh": "体温——环境急症患者明确要求测量，并决定整个治疗方案",
+              "weight": 5,
+              "rubricRef": "temperature"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY. ACTOR: general - weak, poor appetite, has not been herself for two days; CNS - confused about the date, no headache, no weakness on one side, no fall; respiratory - no cough or SOB; cardiovascular - no chest pain, no palpitations; GI/GU - urinary incontinence from immobility and cold, no diarrhea, poor fluid intake; integumentary - cold and mottled skin, no frostbite on the fingers or toes; musculoskeletal - stiff and aching all over, arthritis worse in the cold; endocrine - hypothyroidism, she thinks she has missed some levothyroxine doses; EENT - no ear pain, hearing aid not in.",
+          "infoZh": "仅 PCP。患者演员：整体——虚弱、食欲差、两天来状态不对；中枢神经——分不清日期、无头痛、无单侧无力、无跌倒；呼吸——无咳嗽气促；心血管——无胸痛心悸；消化/泌尿——因活动受限和寒冷导致小便失禁、无腹泻、饮水少；皮肤——冰凉、有花斑，手指足趾无冻伤；肌肉骨骼——全身僵硬酸痛，天冷时关节炎加重；内分泌——甲状腺功能减退，她觉得自己漏服过几次左甲状腺素；眼耳鼻喉——无耳痛，助听器没戴。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS (confusion, fall screen)",
+              "actionZh": "功能问诊——中枢神经（意识模糊、跌倒筛查）",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory",
+              "actionZh": "功能问诊——呼吸",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (intake and incontinence)",
+              "actionZh": "功能问诊——消化/泌尿（摄入与失禁）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary (frostbite screen)",
+              "actionZh": "功能问诊——皮肤（冻伤筛查）",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine (hypothyroidism is pertinent and may be the underlying cause)",
+              "actionZh": "功能问诊——内分泌（甲减与本例相关，可能是根本原因）",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "Head-to-toe: head/neck - no trauma, no signs of a fall, mucous membranes dry; chest - clear and equal at all 6 sites, no crackles; abdomen - soft, cold to touch, non-tender; back - sacral skin damp and reddened but intact, no pressure ulcer; lower extremities - mild ankle edema, cold and mottled feet, pedal pulses weak but present, NO frostbite - the toes blanch and refill; upper extremities - cold hands, no frostbite, CSM intact, no injury.",
+          "infoZh": "从头到脚：头颈——无外伤、无跌倒迹象、黏膜干燥；胸部——6 点听诊清晰对称、无湿啰音；腹部——软、触之冰凉、无压痛；背部——骶部皮肤潮湿发红但完整，无压疮；下肢——双踝轻度水肿，双足冰凉且有花斑，足动脉搏动微弱但可及，无冻伤——脚趾按压后可变白并再充盈；上肢——双手冰凉、无冻伤、远端 CSM 完好、无损伤。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam with a fall and trauma screen",
+              "actionZh": "头颈查体并筛查跌倒与外伤",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation",
+              "actionZh": "胸部查体并 6 点听诊",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam - a cold abdomen confirms core cooling",
+              "actionZh": "腹部查体——腹部冰凉可佐证核心体温下降",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam incl skin integrity after two days in a chair",
+              "actionZh": "背部查体（含在椅上两天后的皮肤完整性）",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities with a frostbite check and distal pulses",
+              "actionZh": "下肢并检查冻伤与远端脉搏",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities with a frostbite check",
+              "actionZh": "上肢并检查冻伤",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Hypothermia guideline. ALL LEVELS: assess and maintain ABCs; take up to 30-45 seconds to determine pulselessness in a severely hypothermic patient; REMOVE WET AND COLD CLOTHING and cover with blankets or dry clothing; take a temperature. For MILD hypothermia above 32 and below 35 degrees C and MODERATE above 28 and below 32, ACTIVELY REWARM: mild activity if appropriate, preheat the ambulance interior to 30 degrees C, hot packs WRAPPED IN TOWELS - never placed directly on skin - and warm blankets. For SEVERE hypothermia below 28 degrees C, DO NOT actively rewarm: insulate only, heat the ambulance to 30 degrees C and avoid rough handling. This patient at 33.4 degrees C is mild and IS actively rewarmed. Also correct the BGL of 3.6: she is alert with an intact swallow, so oral glucose 15 g is appropriate at both levels; recheck in 5 minutes. Hot packs go to the axillae, groin and neck over a layer of towel.",
+          "infoZh": "低体温指南。各级别通用：评估并维持 ABC；重度低体温患者判定有无脉搏时可用 30-45 秒；脱去潮湿寒冷的衣物并盖上毯子或干衣物；测量体温。轻度低体温（高于 32、低于 35 摄氏度）和中度（高于 28、低于 32）应主动复温：适当时做轻度活动、把车厢预热到 30 摄氏度、用毛巾包裹的热敷包（绝不直接贴皮肤）、加温毯。重度低体温（低于 28 摄氏度）不得主动复温：只做保温隔热、车厢加热到 30 摄氏度、避免粗暴搬动。本例 33.4 摄氏度属轻度，应主动复温。同时纠正 3.6 的血糖：她清醒且吞咽功能完好，两个级别均可给口服葡萄糖 15 g；5 分钟后复测。热敷包隔一层毛巾放在腋窝、腹股沟和颈部。",
+          "expected": [
+            {
+              "actionEn": "Remove wet and cold clothing and cover with dry blankets - the single most important intervention",
+              "actionZh": "脱去潮湿寒冷衣物并盖上干毯——最重要的单项处置",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Correctly classify the hypothermia by temperature and choose ACTIVE rewarming for mild hypothermia",
+              "actionZh": "按体温正确分级，并对轻度低体温选择主动复温",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Preheat the ambulance interior to 30 degrees C before loading",
+              "actionZh": "装载前先把车厢预热到 30 摄氏度",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Apply hot packs WRAPPED IN TOWELS to the axillae, groin and neck - never directly against the skin",
+              "actionZh": "热敷包用毛巾包裹后放于腋窝、腹股沟和颈部——绝不直接接触皮肤",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            },
+            {
+              "actionEn": "Correct the BGL of 3.6 with oral glucose 15 g since she is alert with an intact swallow, and recheck",
+              "actionZh": "她清醒且吞咽完好，用口服葡萄糖 15 g 纠正 3.6 的血糖，并复测",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Handle gently and avoid rough movement, which can precipitate arrhythmias in a cold heart",
+              "actionZh": "轻柔搬动、避免粗暴动作，低温心脏受刺激可诱发心律失常",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs and rewarming after every move, and repeat the temperature to confirm the trend. Set 2 (after rewarming en route, about 15 minutes later): GCS 15 (E4V5M6) - now oriented to day and place; BP 112/68; pulse 66 regular, stronger; respirations 16; skin pink returning, warmer centrally, dry; pupils equal and reactive, less sluggish; SpO2 96 percent; BGL 5.4 after oral glucose; TEMPERATURE 34.6 degrees C - rising appropriately. Shivering has decreased as she warms.",
+          "infoZh": "每次移动后复评 ABC 与复温效果，并复测体温确认趋势。第 2 组（途中复温后约 15 分钟）：GCS 15（E4V5M6）——已能说出星期和所在地；血压 112/68；脉搏 66 规则、较前有力；呼吸 16；皮肤转红润、中心部位变暖、干燥；瞳孔等大有反应、迟钝程度减轻；SpO2 96%；口服葡萄糖后血糖 5.4；体温 34.6 摄氏度——回升合理。随着体温回升寒战减轻。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions after each move",
+              "actionZh": "每次移动后复评 ABC 与全部处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within the non-RTC interval, including a repeat temperature and BGL",
+              "actionZh": "在非 RTC 时限内完成第二组完整生命体征，含复测体温与血糖",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Confirm the temperature is rising and the LOC is improving; document both trends",
+              "actionZh": "确认体温在回升、意识在改善，并记录两条变化趋势",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            },
+            {
+              "actionEn": "Recheck the BGL after oral glucose",
+              "actionZh": "口服葡萄糖后复测血糖",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Notify the receiving facility. The hand-off must include both temperatures, the rewarming method, the BGL before and after treatment, and the two-day exposure history including social circumstances. PCR within 5 minutes.",
+          "infoZh": "通知接收医院。交接必须包含两次体温、复温方式、治疗前后血糖，以及包含社会状况在内的两天暴露史。5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Notify the receiving facility with the temperature and exposure duration",
+              "actionZh": "向接收医院预报体温与暴露时长",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off with both temperatures, rewarming method, BGL correction and the social situation",
+              "actionZh": "完整交接：两次体温、复温方式、血糖纠正情况与社会处境",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline",
+          "gcs": "14 (E4V4M6)",
+          "bp": "104/62",
+          "pulse": "56 regular weak",
+          "resp": "16 regular",
+          "skin": "pale, cold centrally, dry",
+          "pupils": "equal, reactive but sluggish",
+          "spo2": "95% (warmed ear probe; peripheral reading unreliable)",
+          "bgl": "3.6 mmol/L",
+          "temp": "33.4 C tympanic"
+        },
+        {
+          "set": 2,
+          "timeHint": "after active rewarming and oral glucose, en route",
+          "gcs": "15 (E4V5M6)",
+          "bp": "112/68",
+          "pulse": "66 regular, stronger",
+          "resp": "16 regular",
+          "skin": "pink returning, warmer centrally, dry",
+          "pupils": "PERL, less sluggish",
+          "spo2": "96%",
+          "bgl": "5.4 mmol/L",
+          "temp": "34.6 C tympanic"
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Not taking a temperature in an environmental patient - it is explicitly indicated and it determines whether you actively rewarm or only insulate",
+        "Leaving the patient in wet clothing or failing to stop ongoing heat loss (door left open) - identifying a hazard and not acting",
+        "Applying hot packs directly to bare skin - burn risk in a cold, vasoconstricted patient",
+        "Actively rewarming a patient who is actually severely hypothermic below 28 degrees C - the guideline forbids it; classification must come first",
+        "Not obtaining a BGL with an altered LOC, or failing to correct a level below 4.0 mmol/L",
+        "Rough handling of a cold patient, which can precipitate arrhythmias"
+      ],
+      "criticalPitfallsZh": [
+        "环境急症患者不测体温——这是明确有指征的项目，且决定是主动复温还是仅做保温",
+        "让患者继续穿着湿衣物，或不阻止持续散热（门一直开着）——发现危险却不处理",
+        "热敷包直接贴在裸露皮肤上——低温血管收缩的患者有烫伤风险",
+        "对实为低于 28 摄氏度的重度低体温患者做主动复温——指南禁止；必须先完成分级",
+        "意识改变却不测血糖，或血糖低于 4.0 mmol/L 却不纠正",
+        "对低体温患者粗暴搬动，可诱发心律失常"
+      ],
+      "emrVariantEn": "EMR performs the entire hypothermia guideline: removal of wet clothing, blankets, temperature measurement, active rewarming for mild and moderate hypothermia, preheating the ambulance to 30 degrees C, wrapped hot packs and gentle handling. Oral glucose 15 g is within EMR scope for this alert patient with an intact swallow; glucagon would be used if she could not protect her airway. No Functional Enquiry.",
+      "emrVariantZh": "EMR 可完成整套低体温指南：脱去湿衣、加盖毯子、测量体温、对轻中度低体温主动复温、车厢预热到 30 摄氏度、使用包裹好的热敷包并轻柔搬动。本例患者清醒、吞咽完好，口服葡萄糖 15 g 在 EMR 范围内；若她无法保护气道则改用胰高血糖素。无功能问诊。",
+      "pcpVariantEn": "PCP adds the 9-system Functional Enquiry and may obtain vascular access if the patient deteriorates; D10W would replace oral glucose if her mentation fell. No fluid bolus is indicated with a systolic of 104 and no signs of shock. Hypothyroidism should be flagged to the receiving team as a likely predisposing cause.",
+      "pcpVariantZh": "PCP 增加 9 系统功能问诊，若病情恶化可建立静脉通路；若神志下降则用 D10W 取代口服葡萄糖。收缩压 104 且无休克征象时无补液指征。应向接收团队指出甲状腺功能减退可能是本次的易感原因。",
+      "handoffModelEn": "This is an 82-year-old female found on a wellness check after two days in an unheated house with an ambient temperature of 8 degrees, brought to our attention by a neighbour. Chief complaint is generalized cold, weakness and confusion. On arrival she was alert but disoriented to time, GCS 14, shivering vigorously, cold centrally, in damp clothing from incontinence, with BP 104/62, pulse 56 and weak, resps 16, tympanic temperature 33.4 and a blood glucose of 3.6. That places her in mild hypothermia, so we actively rewarmed her. She is now GCS 15 and oriented, BP 112/68, pulse 66, temperature 34.6 and blood glucose 5.4. History of hypothyroidism, which may be contributing, plus osteoarthritis, hypertension and mild dementia; she takes levothyroxine, amlodipine and acetaminophen and thinks she has missed some thyroid doses; no known allergies; she last ate half a piece of toast yesterday afternoon. Treatments: wet clothing removed, dried and wrapped in warm blankets, ambulance preheated to 30 degrees, towel-wrapped hot packs to the axillae and groin, oral glucose 15 grams with the sugar rechecked, and gentle handling throughout. She denies falling and we found no injury. Socially she cannot return to that house until the furnace is repaired.",
+      "handoffModelZh": "患者 82 岁女性，因邻居报警上门查看被发现，此前已在无暖气、室温 8 摄氏度的住宅中度过两天。主诉为全身发冷、虚弱和意识模糊。我们到场时她清醒但时间定向障碍，GCS 14，剧烈寒战，中心部位冰凉，因失禁衣物潮湿，血压 104/62、脉搏 56 细弱、呼吸 16、鼓膜体温 33.4、血糖 3.6。据此判定为轻度低体温，故实施主动复温。目前 GCS 15、定向力恢复，血压 112/68、脉搏 66、体温 34.6、血糖 5.4。既往有甲状腺功能减退（可能是诱因之一）、骨关节炎、高血压和轻度痴呆；服用左甲状腺素、氨氯地平和按需对乙酰氨基酚，她自述漏服过几次甲状腺药；无已知过敏；最后进食为昨天下午半片吐司。处置：脱去湿衣、擦干后裹上加温毯，车厢预热至 30 摄氏度，毛巾包裹的热敷包置于腋窝与腹股沟，口服葡萄糖 15 g 并复测血糖，全程轻柔搬动。她否认跌倒，查体也未发现损伤。从社会层面看，暖炉修好之前她不能回到那所房子。",
+      "pcrKeyPoints": {
+        "cc": "Cold, weak and confused after two days in an unheated home (mild hypothermia, temp 33.4 C)",
+        "hxcc": "Furnace failed two days ago after a power outage; remained in a recliner, minimal food, incontinent of urine, did not call for help; denies fall, chest pain or SOB; found on a neighbour-requested wellness check",
+        "pmhx": "Hypothyroidism, osteoarthritis, hypertension, mild dementia",
+        "meds": "Levothyroxine (doses possibly missed), amlodipine, acetaminophen prn",
+        "allergies": "NKA",
+        "treatments": [
+          "Door closed and heat loss stopped before assessment",
+          "Wet clothing removed, patient dried and wrapped in warm blankets",
+          "Ambulance preheated to 30 C before loading",
+          "Towel-wrapped hot packs to axillae, groin and neck",
+          "Oral glucose 15 g for BGL 3.6 (alert, intact swallow); BGL rechecked",
+          "Gentle handling to avoid arrhythmia"
+        ],
+        "findings": [
+          "Tympanic temperature 33.4 rising to 34.6 C - mild hypothermia, actively rewarmed",
+          "GCS 14 disoriented to time, improving to 15 and oriented",
+          "Bradycardia 56 improving to 66 with rewarming",
+          "BGL 3.6 corrected to 5.4",
+          "No frostbite, no trauma, skin intact; peripheral SpO2 unreliable when cold"
+        ]
+      }
+    },
+    {
+      "id": "md-08",
+      "type": "medical",
+      "titleEn": "Witnessed Seizure With Post-Ictal State - Altered LOC NYD",
+      "titleZh": "目击性癫痫发作后的发作后状态——意识改变原因待查",
+      "protocols": [
+        "Altered Mental Status NYD",
+        "Diabetic Emergencies"
+      ],
+      "priority": "non-rtc",
+      "dispatchEn": "1340 hrs. Code 3 to a public library in Kelowna. 26-year-old male had a witnessed seizure in the reading room. Library staff report he is breathing and now 'waking up slowly'. Hospital is 12 minutes away.",
+      "dispatchZh": "13:40，Code 3 前往基洛纳一家公共图书馆。26 岁男性在阅览室发生目击性癫痫发作。图书馆工作人员称他有呼吸、现在正「慢慢醒过来」。医院车程 12 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: the seizure lasted about 90 seconds and has stopped. Staff have cleared the area and put a jacket under his head.",
+          "infoZh": "调度补充：抽搐持续约 90 秒后已停止。工作人员已清空周围区域，并在他头下垫了一件外套。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan suction, oxygen, OPA/NPA, glucometer and a stretcher to the patient",
+              "actionZh": "确认；准备吸引器、氧气、口咽/鼻咽通气道、血糖仪，并把担架床推到患者身边",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate a post-ictal airway problem and the need to rule out hypoglycemia as the cause",
+              "actionZh": "预判发作后气道问题，并需排除低血糖这一病因",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: A quiet reading room; staff have moved chairs and tables away and asked the public to leave. A tipped-over chair and a knocked-down book cart mark where he fell - so a FALL DID OCCUR at the onset and a head strike cannot be excluded. The patient lies on his left side on the carpet, snoring, with saliva at his mouth. A witness who saw the whole event is available. One patient. Room temperature, good lighting.",
+          "infoZh": "考官脚本：安静的阅览室；工作人员已把桌椅移开并请公众离开。倒下的椅子和被撞翻的书车标示出他倒地的位置——也就是说发作开始时确实发生了跌倒，不能排除头部撞击。患者左侧卧在地毯上，鼾声明显，口角有唾液。有一名目击了全过程的证人在场。单一患者。室温正常，照明良好。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (furniture, secretions, possible repeat seizure), environment, nature of illness (witnessed seizure with a fall), one patient",
+              "actionZh": "口述危险源（家具、分泌物、可能再次发作）、环境、发病性质（目击性癫痫发作伴跌倒）、单一患者",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection (secretions)",
+              "actionZh": "戴手套和护目镜（有分泌物）",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: young male on his side, snoring respirations, saliva at the mouth, not yet responsive to voice",
+              "actionZh": "第一眼：年轻男性侧卧、鼾式呼吸、口角有唾液、尚不能对呼唤作出反应",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            },
+            {
+              "actionEn": "Note the tipped chair and identify that he fell at the onset - this changes the spinal decision",
+              "actionZh": "注意倒下的椅子，认定他在发作开始时跌倒过——这会改变脊柱处置决策",
+              "weight": 15,
+              "rubricRef": "delicate-spine"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: initially responds only to pain with a groan and non-purposeful movement; over the next several minutes he progressively wakes, becoming drowsy but rousable, then confused, then oriented. EXAMINER (give when assessed): airway - snoring with pooled saliva requiring SUCTION and positioning; a nasopharyngeal airway is appropriate if he has an intact gag reflex; respirations 20, regular, adequate; radial pulse 104, strong and regular. Skin: pink, warm, moist. Modified RBS: a small laceration and a developing bruise on the left occiput where he struck the book cart - HE DID HIT HIS HEAD; tongue laceration on the left side; urinary incontinence; no other injury. SpO2 94 percent RA, 98 percent with oxygen.",
+          "infoZh": "患者演员：初始仅对疼痛有呻吟和无目的动作反应；随后数分钟内逐渐苏醒，先是嗜睡但可唤醒，继而意识错乱，最后定向力恢复。考官（评估时给出）：气道——鼾声伴唾液积聚，需要吸引和体位处理；若咽反射完好可置鼻咽通气道；呼吸 20 次/分、规则、足够；桡动脉 104 次/分、有力规则。皮肤：红润、温暖、潮湿。改良快速查体：左枕部有一处小裂伤和正在形成的瘀斑，是撞到书车所致——他确实撞到了头；左侧舌部裂伤；小便失禁；无其他损伤。SpO2 室内空气 94%，吸氧后 98%。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: initially responds to Pain only, and reassess as it changes",
+              "actionZh": "评估意识 / AVPU：初始仅对疼痛有反应，并随变化持续复评",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Take manual c-spine control: he fell at onset, struck his head, and had a decreased LOC - trauma cannot be reasonably ruled out at this point",
+              "actionZh": "徒手固定颈椎：他在发作时跌倒、撞到头且意识下降——此时无法合理排除创伤",
+              "weight": 100,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Open and maintain the airway, SUCTION the pooled secretions, and consider a correctly sized NPA",
+              "actionZh": "开放并维持气道、吸引积聚的分泌物、并考虑尺寸正确的鼻咽通气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing rate and adequacy",
+              "actionZh": "评估呼吸频率与是否足够",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation",
+              "actionZh": "评估循环",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Modified rapid body survey; find the occipital laceration, the tongue laceration and the incontinence",
+              "actionZh": "改良快速查体；发现枕部裂伤、舌部裂伤与失禁",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pink warm moist",
+              "actionZh": "记录皮肤：红润、温暖、潮湿",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Apply oxygen to maintain SpO2 at or above 94 percent in a post-ictal patient",
+              "actionZh": "对发作后患者给氧维持 SpO2≥94%",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position to protect the airway while maintaining spinal precautions; control bleeding from the scalp with direct pressure",
+              "actionZh": "在维持脊柱防护的前提下取保护气道的体位；头皮出血用直接加压控制",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. By the end of the primary survey he is waking steadily: rousable, protecting his own airway, breathing adequately, strong radial pulse, normal skin, SpO2 94 percent and no ongoing seizure. A single self-limiting seizure in a known epileptic who is recovering normally is STABLE, NON-RTC. Assess, treat, package and be ready to load within 30 minutes. EXAMINER: if the candidate is slow and a SECOND seizure occurs before packaging, the call becomes RTC - status epilepticus and a persistently decreased LOC are unstable findings.",
+          "infoZh": "决策点。初次评估结束时他正稳步转醒：可唤醒、能自行保护气道、呼吸足够、桡动脉有力、皮肤正常、SpO2 94%、无持续抽搐。已知癫痫患者的单次自限性发作且恢复正常，属稳定、非 RTC。30 分钟内完成评估、处置、打包并可装载。考官提示：若考生动作拖沓、在打包前发生第二次发作，本例即转为 RTC——癫痫持续状态与持续意识下降属不稳定表现。",
+          "expected": [
+            {
+              "actionEn": "Categorize correctly as non-RTC for a single self-limiting seizure with steady recovery, and justify it",
+              "actionZh": "对单次自限性发作且稳步恢复者正确判定为非 RTC，并说明依据",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Ready to load within 30 minutes",
+              "actionZh": "30 分钟内可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Verbalize what would change the category: a second seizure, a persistently decreased LOC, or a falling GCS would make this RTC",
+              "actionZh": "口述何种情况会改变分类：再次发作、意识持续下降或 GCS 下降都会使其变为 RTC",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "WITNESS FIRST, then the patient as he wakes. WITNESS: he was reading, suddenly went stiff, cried out, fell sideways off the chair into the book cart, then had generalized jerking of all four limbs for about 90 seconds; his lips went blue during it; no jerking since; he has been sleepy since it stopped; total time about 8 minutes ago. PATIENT (once oriented): he has epilepsy diagnosed at 19, usually two or three seizures a year, this one felt like his usual ones; he ran out of his levetiracetam three days ago and has not refilled it; he has been sleeping badly and had been drinking the last two nights. No fever, no headache before it, no recent head injury, no drug use. PMHx: epilepsy, no diabetes. Meds: levetiracetam 500 mg twice daily (NONE FOR 3 DAYS). Allergies: none known. LOI: coffee at 1100, no lunch.",
+          "infoZh": "先问目击者，患者转醒后再问患者。目击者：他当时在看书，突然全身僵直、叫了一声，从椅子上侧摔撞到书车，随后四肢抽动约 90 秒；抽搐时口唇发绀；此后没有再抽；停止后一直昏睡；距现在总共约 8 分钟。患者（定向力恢复后）：19 岁确诊癫痫，通常一年发作两三次，这次感觉和平时一样；左乙拉西坦三天前吃完就没再配药；最近睡眠很差，前两晚还喝了酒。无发热、发作前无头痛、近期无头部外伤、未使用毒品。既往史：癫痫，无糖尿病。用药：左乙拉西坦 500 mg 每日两次（已停药 3 天）。过敏：无已知。最后进食：11:00 喝过咖啡，没吃午饭。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: witnessed generalized seizure with a post-ictal decreased LOC",
+              "actionZh": "确立主诉：目击性全身性癫痫发作伴发作后意识下降",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C from the witness first: onset, duration, type of movement, cyanosis, number of seizures, recovery pattern, then the patient's own account",
+              "actionZh": "先向目击者采集现病史：起病、持续时间、抽动形式、有无发绀、发作次数、恢复过程，随后再问患者本人",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "PMHx - known epilepsy, and screen for diabetes, previous head injury and recent illness",
+              "actionZh": "既往史——已知癫痫，并筛查糖尿病、既往头部外伤与近期疾病",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications - critically, whether he has been taking his anticonvulsant (he has not for 3 days)",
+              "actionZh": "用药史——关键在于抗癫痫药是否按时服用（他已停药 3 天）",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI - relevant to hypoglycemia as a seizure cause",
+              "actionZh": "最后进食——与低血糖作为发作诱因相关",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 - taken while he is still post-ictal: GCS 11 (E3 V3 M5 - eyes to voice, inappropriate words, localizes); BP 148/88; pulse 104 strong regular; respirations 20 regular; skin pink warm moist; pupils equal and reactive, 4 mm; SpO2 94 percent RA rising to 98 percent on oxygen; BGL 4.8 mmol/L - MANDATORY, hypoglycemia is a leading cause of seizures and D10W is indicated for coma or seizure NYD; temperature 37.0 - reasonable to exclude a febrile cause. Non-RTC: repeat within about 15 minutes.",
+          "infoZh": "第 1 组——在发作后状态下测得：GCS 11（E3 V3 M5——呼唤睁眼、言语不当、能定位疼痛）；血压 148/88；脉搏 104 有力规则；呼吸 20 规则；皮肤红润温润；瞳孔等大有反应，4 mm；SpO2 室内空气 94%，吸氧后升至 98%；血糖 4.8 mmol/L——必测，低血糖是癫痫发作的主要病因之一，D10W 的适应证即包括昏迷或原因待查的抽搐；体温 37.0——用于排除发热性病因，合理。非 RTC：约 15 分钟内复测。",
+          "expected": [
+            {
+              "actionEn": "GCS with components (E3 V3 M5 = 11) and repeat it as he wakes",
+              "actionZh": "GCS 及分项（E3 V3 M5 = 11），并随其转醒复评",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation",
+              "actionZh": "听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate/strength/rhythm",
+              "actionZh": "脉搏频率/强度/节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character",
+              "actionZh": "呼吸频率/深度/性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on",
+              "actionZh": "动手查皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils - required with a decreased LOC and a head injury, and repeated every set",
+              "actionZh": "瞳孔——意识下降合并头部损伤时必查，且每组复评",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration",
+              "actionZh": "SpO2 并校准",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "BGL - mandatory in any seizure or altered LOC to exclude hypoglycemia",
+              "actionZh": "血糖——任何抽搐或意识改变均必测，用以排除低血糖",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            },
+            {
+              "actionEn": "Temperature - reasonable to exclude a febrile or infectious cause",
+              "actionZh": "体温——用于排除发热或感染性病因，合理",
+              "weight": 5,
+              "rubricRef": "temperature"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, once he is oriented. EXAMINER NOTE: no deduction for systems he could not answer while post-ictal. ACTOR: general - poor sleep, drinking more than usual for two nights, missed meals; CNS - known epilepsy since 19, no aura this time, headache now, no focal weakness, bit his tongue; respiratory - no cough, no aspiration symptoms; cardiovascular - no palpitations, no chest pain, no syncope pattern; GI/GU - incontinent of urine during the seizure, no vomiting; integumentary - scalp laceration; musculoskeletal - aching all over from the convulsion, left shoulder sore from the fall; endocrine - no diabetes; EENT - no visual aura, no ear discharge.",
+          "infoZh": "仅 PCP，在其定向力恢复后进行。考官提示：发作后状态下无法回答的系统不扣分。患者演员：整体——睡眠差、连续两晚饮酒比平时多、漏餐；中枢神经——19 岁起确诊癫痫，本次无先兆，现有头痛，无局灶性无力，咬伤了舌头；呼吸——无咳嗽、无误吸症状；心血管——无心悸、无胸痛、不像晕厥；消化/泌尿——发作时小便失禁、无呕吐；皮肤——头皮裂伤；肌肉骨骼——抽搐后全身酸痛，跌倒后左肩疼；内分泌——无糖尿病；眼耳鼻喉——无视觉先兆、耳部无分泌物。",
+          "expected": [
+            {
+              "actionEn": "FE - General health (sleep, alcohol, missed meals - all seizure triggers)",
+              "actionZh": "功能问诊——整体健康（睡眠、饮酒、漏餐——均为发作诱因）",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS (the core system: aura, focal deficit, headache, previous seizure pattern)",
+              "actionZh": "功能问诊——中枢神经（核心系统：先兆、局灶缺损、头痛、既往发作规律）",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory (aspiration screen)",
+              "actionZh": "功能问诊——呼吸（筛查误吸）",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular (differentiating seizure from syncope)",
+              "actionZh": "功能问诊——心血管（鉴别癫痫与晕厥）",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (incontinence supports a true seizure)",
+              "actionZh": "功能问诊——消化/泌尿（失禁支持真性癫痫发作）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal (injuries from the convulsion and the fall)",
+              "actionZh": "功能问诊——肌肉骨骼（抽搐与跌倒造成的损伤）",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine (diabetes screen)",
+              "actionZh": "功能问诊——内分泌（筛查糖尿病）",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "Head-to-toe: head/neck - 2 cm laceration with a haematoma over the left occiput, no depression, no CSF from ears or nose, tongue laceration on the left lateral border, no midline cervical tenderness once he can answer reliably; chest - clear and equal at all 6 sites, no aspiration signs; abdomen - soft, non-tender; back - no tenderness or deformity, checked during the roll onto the spinal device; lower extremities - no injury, moves all four limbs equally, no focal weakness (important - a persistent focal deficit after a seizure would suggest a structural cause); upper extremities - left shoulder tender with full range of movement, no dislocation, CSM intact.",
+          "infoZh": "从头到脚：头颈——左枕部 2 cm 裂伤伴血肿，无凹陷，耳鼻无脑脊液，舌左侧缘裂伤，待他能可靠回答后确认颈椎中线无压痛；胸部——6 点听诊清晰对称、无误吸征象；腹部——软、无压痛；背部——无压痛无畸形，在滚动上脊柱板时完成检查；下肢——无损伤，四肢活动对称，无局灶性无力（这一点很重要——发作后持续存在的局灶缺损提示结构性病因）；上肢——左肩压痛但活动范围完整、无脱位、远端 CSM 完好。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam incl the occipital laceration, skull palpation, CSF check and tongue",
+              "actionZh": "头颈查体（含枕部裂伤、颅骨触诊、脑脊液检查与舌部）",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation to screen for aspiration",
+              "actionZh": "胸部查体并 6 点听诊以筛查误吸",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam during the controlled roll",
+              "actionZh": "在受控滚动中完成背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities with a focal-deficit check comparing both sides",
+              "actionZh": "下肢并做双侧对比的局灶缺损检查",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities incl the shoulder injured in the fall, with CSM",
+              "actionZh": "上肢（含跌倒受伤的肩部）及远端 CSM",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Altered Mental Status NYD approach: manage the airway with positioning, suction and adjuncts; oxygen to maintain SpO2 at or above 94 percent; protect from injury; obtain a BGL - this is not optional, because hypoglycemia is a treatable cause and D10W is indicated for coma or seizure NYD. His BGL of 4.8 is normal, so glucose is NOT indicated and giving it would be a non-indicated intervention. Spinal management: he fell and struck his head with a decreased LOC, so apply a collar and package on a spinal device; the head of the bed may be elevated 30 degrees for the head injury. Dress the occipital laceration with direct pressure. There is no BC-authorized anticonvulsant at the EMR or PCP level - management of a recurrent seizure is supportive: protect the airway, do not restrain the limbs, do not put anything in the mouth, time the seizure, oxygen, and upgrade to rapid transport with notification. Do NOT give Entonox or any analgesia requiring compliance to a post-ictal patient with an altered LOC.",
+          "infoZh": "意识改变原因待查的处理思路：以体位、吸引和辅助装置管理气道；给氧维持 SpO2≥94%；防止患者受伤；测血糖——这一项不可省略，因为低血糖是可治疗的病因，而 D10W 的适应证正包括昏迷或原因待查的抽搐。他血糖 4.8 属正常，因此没有补糖指征，擅自给糖属非指征操作。脊柱管理：他跌倒撞头且意识下降，故应上颈托并用脊柱固定装置打包；因头部损伤可将床头抬高 30 度。枕部裂伤用直接加压后包扎。EMR 和 PCP 级别在 BC 都没有被授权的抗惊厥药——再次发作时只能支持治疗：保护气道、不要按压肢体、不要往口内塞任何东西、计时、给氧，并升级为快速转运并预报。对意识改变的发作后患者，不得给 Entonox 或任何需要配合的镇痛。",
+          "expected": [
+            {
+              "actionEn": "Obtain a BGL as a mandatory step in any seizure or altered LOC, and correctly conclude that glucose is not indicated at 4.8 mmol/L",
+              "actionZh": "对任何抽搐或意识改变必测血糖，并正确判断 4.8 mmol/L 时无补糖指征",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Airway management skill: suction, correctly sized adjunct, positioning to prevent aspiration",
+              "actionZh": "气道管理技能：吸引、尺寸正确的辅助装置、防误吸体位",
+              "weight": 25,
+              "rubricRef": "skill-airway-mgmt"
+            },
+            {
+              "actionEn": "Spinal management: collar and packaging given the fall, head strike and decreased LOC",
+              "actionZh": "脊柱管理：因跌倒、撞头且意识下降，应上颈托并打包",
+              "weight": 25,
+              "rubricRef": "skill-spinal-mgmt"
+            },
+            {
+              "actionEn": "Dress the occipital laceration with direct pressure, without applying pressure over a suspected depressed fracture",
+              "actionZh": "枕部裂伤直接加压包扎，但不得在疑似凹陷骨折处施压",
+              "weight": 25,
+              "rubricRef": "skill-wound-mgmt"
+            },
+            {
+              "actionEn": "Verbalize the recurrent-seizure plan: protect the airway, do not restrain, nothing in the mouth, time it, oxygen, upgrade to RTC",
+              "actionZh": "口述再次发作的预案：保护气道、不按压肢体、口内不放任何东西、计时、给氧、升级为 RTC",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Do not give oral glucose, analgesia or anything by mouth while his LOC is decreased",
+              "actionZh": "意识下降期间不得给口服葡萄糖、镇痛药或任何经口物品",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs after every move and after every change in LOC - a changing GCS demands a full ABC reassessment. Set 2 (about 15 minutes later, packaged and en route): GCS 15 (E4V5M6) - now fully oriented, embarrassed, asking about his shoulder; BP 132/78; pulse 88 strong regular; respirations 16; skin pink warm dry; pupils equal and reactive, 4 mm; SpO2 98 percent on oxygen; BGL 4.8; temperature 37.0. He is recovering as expected for a post-ictal state. EXAMINER: he may now say he feels fine and wants to go home - the candidate must recommend transport, explaining the head injury, the missed anticonvulsant and the risk of another seizure.",
+          "infoZh": "每次移动后及每次意识变化后复评 ABC——GCS 变化必须完整复评 ABC。第 2 组（约 15 分钟后，已打包并在途中）：GCS 15（E4V5M6）——定向力完全恢复、觉得不好意思、询问自己的肩膀；血压 132/78；脉搏 88 有力规则；呼吸 16；皮肤红润温干；瞳孔等大有反应，4 mm；SpO2 吸氧下 98%；血糖 4.8；体温 37.0。恢复过程符合发作后状态的预期。考官提示：他此时可能称自己没事、想回家——考生必须建议转运，并解释头部损伤、漏服抗癫痫药以及再次发作的风险。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions after each move and each change in LOC",
+              "actionZh": "每次移动及每次意识变化后复评 ABC 与全部处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within the non-RTC interval, with a repeat GCS and pupils",
+              "actionZh": "在非 RTC 时限内完成第二组完整生命体征，含复评 GCS 与瞳孔",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Document the improving GCS trend from 11 to 15 as evidence of a normal post-ictal recovery",
+              "actionZh": "记录 GCS 由 11 升至 15 的改善趋势，作为发作后正常恢复的证据",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            },
+            {
+              "actionEn": "Strongly recommend transport despite him feeling better, citing the head injury and the three days without levetiracetam",
+              "actionZh": "尽管他自觉好转仍强烈建议转运，理由是头部损伤与已停用左乙拉西坦三天",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Notify the receiving facility. The hand-off must include the seizure duration, the post-ictal GCS trend, the BGL, the head strike and the missed anticonvulsant. PCR within 5 minutes.",
+          "infoZh": "通知接收医院。交接必须包含发作持续时间、发作后 GCS 变化趋势、血糖、头部撞击及抗癫痫药漏服情况。5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Notify the receiving facility",
+              "actionZh": "向接收医院预报",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off with seizure duration, GCS trend, BGL, head injury and medication non-compliance",
+              "actionZh": "完整交接：发作时长、GCS 趋势、血糖、头部损伤与用药中断",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline, post-ictal",
+          "gcs": "11 (E3V3M5)",
+          "bp": "148/88",
+          "pulse": "104 strong regular",
+          "resp": "20 regular",
+          "skin": "pink warm moist",
+          "pupils": "PERL 4 mm",
+          "spo2": "94% RA, 98% on O2",
+          "bgl": "4.8 mmol/L",
+          "temp": "37.0 C"
+        },
+        {
+          "set": 2,
+          "timeHint": "approx 15 min later, packaged and en route",
+          "gcs": "15 (E4V5M6)",
+          "bp": "132/78",
+          "pulse": "88 strong regular",
+          "resp": "16 regular",
+          "skin": "pink warm dry",
+          "pupils": "PERL 4 mm",
+          "spo2": "98% on O2",
+          "bgl": "4.8 mmol/L",
+          "temp": "37.0 C"
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Not obtaining a blood glucose in a seizure or altered LOC - hypoglycemia is a treatable cause and D10W is indicated for seizure NYD",
+        "Giving glucose or D10W with a normal BGL of 4.8 - initiating a protocol without proper indications is a 100% error",
+        "Not applying c-spine precautions when he fell, struck his head and had a decreased LOC - 100%",
+        "Leaving a post-ictal patient with pooled secretions unsuctioned or supine without airway protection - 100% (Airway)",
+        "Restraining the limbs or placing anything in the mouth if another seizure occurs - harmful and non-indicated",
+        "Accepting his refusal of transport without addressing the head injury and the three days without anticonvulsant medication"
+      ],
+      "criticalPitfallsZh": [
+        "抽搐或意识改变却不测血糖——低血糖是可治疗病因，D10W 的适应证包括原因待查的抽搐",
+        "血糖正常（4.8）却给葡萄糖或 D10W——无适当指征启动协议属 100% 级错误",
+        "他跌倒、撞头且意识下降却不做颈椎防护——扣 100%",
+        "对口腔积聚分泌物的发作后患者不吸引，或让其仰卧而不保护气道——扣 100%（Airway）",
+        "若再次发作时按压肢体或往口内塞东西——有害且无指征",
+        "接受其拒绝转运，却不处理头部损伤和已停药三天这两个问题"
+      ],
+      "emrVariantEn": "EMR manages this entirely within scope: airway with suction and adjuncts, oxygen to 94 percent or above, spinal precautions, BGL measurement, wound care and supportive care for any recurrent seizure. There is no EMR anticonvulsant. If the BGL had been below 4.0 with an unprotected airway, EMR would give glucagon. No Functional Enquiry.",
+      "emrVariantZh": "EMR 完全可在授权范围内处理本例：吸引与辅助装置管理气道、给氧维持 94% 以上、脊柱防护、测血糖、伤口处理，以及对再次发作的支持性处理。EMR 没有抗惊厥药。若血糖低于 4.0 且气道无保护，EMR 应给胰高血糖素。无功能问诊。",
+      "pcpVariantEn": "PCP adds the 9-system Functional Enquiry once he is oriented and may establish vascular access; D10W would be given only if the BGL were below 4.0, which it is not. There is no PCP anticonvulsant in the BC drug list, so a recurrent seizure is still managed supportively with airway protection, oxygen and rapid transport.",
+      "pcpVariantZh": "PCP 在其定向力恢复后增加 9 系统功能问诊，并可建立静脉通路；仅当血糖低于 4.0 时才给 D10W，而本例并非如此。BC 药物清单中 PCP 也没有抗惊厥药，因此再次发作仍以支持治疗为主：保护气道、给氧、快速转运。",
+      "handoffModelEn": "This is a 26-year-old male with known epilepsy since age 19 who had a witnessed generalized tonic-clonic seizure in the library at approximately 1332, lasting about 90 seconds, with cyanosis during the event and no further seizure activity since. He fell sideways off his chair into a book cart at the onset and struck the back of his head, so we have maintained spinal precautions. On arrival he responded only to pain, GCS 11, with snoring respirations and pooled secretions requiring suction, BP 148/88, pulse 104, resps 20, SpO2 94 percent on room air, blood glucose 4.8 and temperature 37.0. He is now GCS 15 and fully oriented, BP 132/78, pulse 88, SpO2 98 percent on oxygen. Findings include a 2 centimetre occipital laceration with a haematoma, a left lateral tongue laceration, urinary incontinence and a tender left shoulder with full range of movement; no focal neurological deficit. He has epilepsy on levetiracetam 500 milligrams twice daily but ran out three days ago, has been sleeping poorly and drinking more than usual. No known allergies, last ate this morning. Treatments: suction and airway positioning, oxygen to keep saturations above 94 percent, collar and spinal packaging with the head of the bed elevated, direct pressure and a dressing to the scalp, blood glucose confirmed normal so no glucose given.",
+      "handoffModelZh": "患者 26 岁男性，19 岁起确诊癫痫，约 13:32 在图书馆发生目击性全身强直阵挛发作，持续约 90 秒，发作中出现发绀，此后未再抽搐。发作开始时他从椅子上侧摔撞到书车并磕到后脑，因此我们全程维持脊柱防护。我们到场时他仅对疼痛有反应，GCS 11，鼾式呼吸伴口腔分泌物积聚需要吸引，血压 148/88、脉搏 104、呼吸 20、SpO2 室内空气 94%、血糖 4.8、体温 37.0。目前 GCS 15、定向力完全恢复，血压 132/78、脉搏 88、吸氧下 SpO2 98%。查体发现枕部 2 cm 裂伤伴血肿、舌左侧缘裂伤、小便失禁、左肩压痛但活动范围完整；无局灶性神经缺损。他因癫痫服用左乙拉西坦 500 mg 每日两次，但三天前已断药，近期睡眠很差且饮酒较多。无已知过敏，最后进食为今天上午。处置：吸引与气道体位管理、给氧维持血氧高于 94%、上颈托并脊柱打包且抬高床头、头皮直接加压包扎；血糖确认正常，故未给任何糖。",
+      "pcrKeyPoints": {
+        "cc": "Witnessed generalized seizure with post-ictal decreased LOC and a head strike",
+        "hxcc": "Sudden stiffening and cry, fell from chair into a book cart at ~1332, generalized limb jerking for ~90 seconds with cyanosis, no further seizures; ran out of levetiracetam 3 days ago; poor sleep and increased alcohol over two nights; no fever, no aura, no drug use",
+        "pmhx": "Epilepsy diagnosed age 19, 2-3 seizures per year; no diabetes",
+        "meds": "Levetiracetam 500 mg BID - none taken for 3 days",
+        "allergies": "NKA",
+        "treatments": [
+          "Suction of pooled secretions, airway positioning, adjunct considered",
+          "O2 to maintain SpO2 94% or above",
+          "Manual c-spine, collar and spinal packaging (fall + head strike + decreased LOC); head of bed elevated",
+          "BGL obtained (4.8) - normal, so no glucose given",
+          "Direct pressure and dressing to the occipital laceration",
+          "Recurrent-seizure plan verbalized; nothing given by mouth while LOC decreased"
+        ],
+        "findings": [
+          "GCS 11 (E3V3M5) improving steadily to 15 (E4V5M6)",
+          "2 cm left occipital laceration with haematoma; no depression, no CSF",
+          "Left lateral tongue laceration and urinary incontinence - consistent with a true seizure",
+          "No focal neurological deficit on recovery",
+          "BGL 4.8 and temperature 37.0 exclude hypoglycemic and febrile causes"
         ]
       }
     }
