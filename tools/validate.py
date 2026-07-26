@@ -202,13 +202,28 @@ def check_scenarios():
     print('\n' + '=' * 70)
     print('PRACTICAL SCENARIOS')
     print('=' * 70)
-    data = load('data/practical/scenarios.json', required=False)
-    if not data:
+    # mirror the app: merge every file listed in the manifest
+    idx = load('data/practical/index.json', required=False)
+    files = idx['files'] if idx else ['scenarios.json']
+    scs, seen = [], set()
+    for f in files:
+        part = load('data/practical/' + f, required=False)
+        if not part:
+            continue
+        n_before = len(scs)
+        for s in part.get('scenarios', []):
+            if s.get('id') in seen:
+                err(f"duplicate scenario id {s.get('id')} in {f}")
+                continue
+            seen.add(s.get('id'))
+            scs.append(s)
+        print(f"  {f:26s} {len(scs) - n_before:3d} scenarios")
+    if not scs:
         print('  (not yet generated)')
         return
-    scs = data.get('scenarios', [])
     types = Counter(s.get('type') for s in scs)
     prio = Counter(s.get('priority') for s in scs)
+    focus = Counter(s.get('focus') or 'universal' for s in scs)
     for s in scs:
         sid = s.get('id', '?')
         ctx = f"scenario {sid}"
@@ -255,9 +270,14 @@ def check_scenarios():
             warn(f"{ctx}: only {len(vs)} vitals set(s) — ongoing phase needs a second")
         if not s.get('pcrKeyPoints'):
             warn(f"{ctx}: no pcrKeyPoints for PCR practice")
-    print(f"  {len(scs)} scenarios — {dict(types)} · {dict(prio)}")
+    print(f"  TOTAL {len(scs)} scenarios — {dict(types)} · {dict(prio)} · focus {dict(focus)}")
     if types.get('medical', 0) < 8 or types.get('trauma', 0) < 8:
         note(f"target is 8 medical + 8 trauma; have {types.get('medical',0)} + {types.get('trauma',0)}")
+    for track in ('emr', 'pcp'):
+        avail = [s for s in scs if s.get('focus') in (None, track)]
+        med = sum(1 for s in avail if s.get('type') == 'medical')
+        tra = sum(1 for s in avail if s.get('type') == 'trauma')
+        note(f"{track.upper()} candidates can practise {med} medical + {tra} trauma scenarios")
 
 
 def check_rubric_links():
