@@ -1,0 +1,2547 @@
+{
+  "meta": {
+    "title": "BC Practical Exam Scenarios",
+    "version": 1,
+    "count": 5,
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "passMark": 70,
+    "disclaimer": "Unofficial practice scenarios modeled on EMALB exam format"
+  },
+  "scenarios": [
+    {
+      "id": "tr-01",
+      "type": "trauma",
+      "titleEn": "Fall From Ladder - Spinal Injury With Wrist Fracture",
+      "titleZh": "梯子坠落——脊柱损伤合并腕部骨折",
+      "protocols": [
+        "Spinal Management",
+        "Musculoskeletal Injuries",
+        "Pain Management"
+      ],
+      "priority": "non-rtc",
+      "dispatchEn": "1410 hrs. Code 3 to a single-storey residence in Burnaby. 34-year-old male fell from a ladder while cleaning gutters. Caller (his wife) reports he is conscious, lying on the back patio, complaining of neck pain. Fire is not attending. Closest hospital is 15 minutes away.",
+      "dispatchZh": "14:10，Code 3 前往本拿比一处平房住宅。34 岁男性清理排水槽时从梯子上坠落。报警人（其妻）称患者清醒，躺在后院露台上，主诉颈部疼痛。消防不到场。最近医院车程 15 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "You and your partner are a BLS crew. Travel time to scene is 8 minutes. No update from dispatch en route.",
+          "infoZh": "你与搭档为 BLS 双人组。到场车程 8 分钟。途中调度无更新信息。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge dispatch and plan equipment: spinal device, hard collars, splint kit, oxygen, analgesia kit",
+              "actionZh": "确认派遣信息并计划装备：脊柱固定装置、硬质颈托、夹板包、氧气、镇痛用具",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate hazards (ladder, wet surfaces) and PPE needs before arrival",
+              "actionZh": "到场前预判危险源（梯子、湿滑地面）及个人防护需求",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Access is through a side gate to the backyard patio. An aluminum extension ladder lies on its side, clear of the patient. The patient is supine on the concrete patio where he landed and has NOT been moved. His wife kneels beside him. Overcast, 14 degrees C, dry. One patient. The gutter line is approximately 4 metres above the ground.",
+          "infoZh": "考官脚本：经侧门进入后院露台。一架铝制伸缩梯侧倒在地，未压住患者。患者仰卧在坠落原地的混凝土露台上，未被移动过。妻子跪在旁边。阴天，14 摄氏度，地面干燥。单一患者。排水槽高度约离地 4 米。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards, environment, MOI (approx. 4 m fall onto concrete) and number of patients (1) before touching the patient",
+              "actionZh": "接触患者前口述危险源、环境、受伤机制（约 4 米坠落至混凝土）及患者数量（1 名）",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First-look visual assessment: patient supine, eyes open, holding very still, obvious right wrist deformity",
+              "actionZh": "第一眼视诊：患者仰卧、睁眼、刻意保持不动，右腕明显畸形",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: alert, oriented, speaks full sentences, keeps head still, complains of neck pain and right wrist pain. EXAMINER (give only when assessed): airway clear and self-maintained; respirations 18, regular, good volume; radial pulse 92, strong and regular. Skin (give during RBS): pink, warm, dry. RBS findings: midline cervical tenderness at C5-C6; right wrist dorsally deformed and swollen, distal circulation, sensation and function INTACT; no bleeding; no other injuries. SpO2 97% on room air.",
+          "infoZh": "患者演员：清醒、定向力正常、能整句说话、自觉保持头部不动，主诉颈痛和右腕痛。考官（仅在考生实际评估时给出）：气道通畅、可自行维持；呼吸 18 次/分、规则、潮气量好；桡动脉搏动 92 次/分、有力规则。皮肤（RBS 时给出）：红润、温暖、干燥。RBS 发现：C5-C6 中线压痛；右腕背侧畸形肿胀，远端循环、感觉、活动均完好；无出血；无其他损伤。SpO2 室内空气 97%。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC and verbalize placement on AVPU: Alert",
+              "actionZh": "评估意识并口述 AVPU 定位：Alert（清醒）",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Take manual in-line c-spine control BEFORE any movement or pain stimulus (MOI plus midline neck pain = NEXUS positive)",
+              "actionZh": "在任何移动或疼痛刺激之前先徒手中线固定颈椎（受伤机制+中线颈痛=NEXUS 阳性）",
+              "weight": 100,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway patency",
+              "actionZh": "评估气道通畅性",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing rate, depth and effort",
+              "actionZh": "评估呼吸频率、深度与呼吸做功",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess radial pulse rate, strength and regularity",
+              "actionZh": "评估桡动脉搏动的频率、强度与节律",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Perform a full rapid body survey; find the wrist injury, expose it, check distal CSM and manually stabilize",
+              "actionZh": "完成全身快速查体；发现腕部损伤并暴露，检查远端循环/感觉/活动，徒手固定",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin colour, temperature and condition",
+              "actionZh": "记录皮肤颜色、温度与状态",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Check SpO2 and verbalize oxygen decision: 97% RA, titrate to keep SpO2 at or above 94%, no supplemental oxygen currently required",
+              "actionZh": "查 SpO2 并口述给氧决策：室内空气 97%，目标维持 SpO2≥94%，目前无需吸氧",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Keep the patient supine and still; explain why he must not move",
+              "actionZh": "保持患者仰卧制动，并向其解释不能移动的原因",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. No unstable findings: alert, strong radial pulse, normal skin, SpO2 97%, fall below the 6 m auto-RTC threshold, no neurological deficit. Correct decision: NON-RTC (stable). Assess, treat, package and be ready to load within 30 minutes. Secondary survey may be completed on scene.",
+          "infoZh": "决策点。无不稳定表现：清醒、桡动脉有力、皮肤正常、SpO2 97%、坠落高度低于 6 米自动 RTC 阈值、无神经功能缺损。正确决策：非 RTC（稳定）。30 分钟内完成评估、处置、打包并可装载。二次评估可在现场完成。",
+          "expected": [
+            {
+              "actionEn": "Categorize correctly as non-RTC and manage accordingly",
+              "actionZh": "正确判定为非 RTC 并按其流程管理",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Complete spinal packaging and splinting to be ready to load within 30 minutes, working with steady purpose",
+              "actionZh": "在 30 分钟内完成脊柱打包与夹板固定并可装载，全程保持稳定的工作节奏",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate partner to bring spinal device, splint kit and cot; plan the egress route through the side gate",
+              "actionZh": "指派搭档取脊柱固定装置、夹板包和担架床；规划经侧门的搬运路线",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "ACTOR ANSWERS (only if asked): cleaning gutters, the ladder feet slipped; free fall about 4 m, landed flat on his back on concrete, head did not strike; no loss of consciousness; has not moved since landing. Neck pain 5/10, aching, non-radiating, worse with any attempted movement. Wrist pain 7/10, sharp. PMHx: none. Medications: none. Allergies: none known. Last oral intake: sandwich and coffee 1 hour ago. Wife confirms the fall was witnessed and he did not pass out.",
+          "infoZh": "患者演员回答（仅在被问到时）：清理排水槽时梯脚打滑；约 4 米自由坠落，背部平摔在混凝土上，头部未撞击；无意识丧失；落地后未移动过。颈痛 5/10，酸痛、不放射、活动时加重。腕痛 7/10，锐痛。既往史：无。用药：无。过敏：无已知过敏。最后进食：1 小时前三明治和咖啡。妻子证实坠落全程被目击，患者未昏迷。",
+          "expected": [
+            {
+              "actionEn": "Clarify the chief complaint (neck pain vs wrist pain) directly with the patient",
+              "actionZh": "与患者当面确认主诉（颈痛与腕痛孰为主）",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "Obtain HxC/C using OPQRRRST plus fall critical history: height, landing surface, what hit first, LOC, cause of fall, movement since",
+              "actionZh": "用 OPQRRRST 加坠落关键病史采集现病史：高度、落地面、先着地部位、有无昏迷、坠落原因、事后是否移动",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Obtain pain scores on a 0-10 scale for both complaints",
+              "actionZh": "对两处疼痛均采集 0-10 疼痛评分",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "Obtain past medical history",
+              "actionZh": "采集既往病史",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Obtain medications",
+              "actionZh": "采集用药史",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Obtain allergies",
+              "actionZh": "采集过敏史",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "Obtain last oral intake with time and size",
+              "actionZh": "采集最后进食的时间和量",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 (given only as each vital is properly assessed): GCS 15 (E4 V5 M6); BP 128/82 auscultated; pulse 92 strong regular; respirations 18 regular good volume; skin pink warm dry; pupils equal and reactive, 4 mm; SpO2 97% RA. BGL and temperature are NOT indicated for this presentation. A full set must be completed in under 3 minutes.",
+          "infoZh": "第 1 组（考生规范测量后逐项给出）：GCS 15（E4 V5 M6）；血压听诊 128/82；脉搏 92 有力规则；呼吸 18 规则潮气量好；皮肤红润温暖干燥；瞳孔等大有反应，4 mm；SpO2 室内空气 97%。本表现不需要测血糖和体温。一整套生命体征须在 3 分钟内完成。",
+          "expected": [
+            {
+              "actionEn": "Assess GCS and verbalize component scores (E4 V5 M6 = 15)",
+              "actionZh": "评估 GCS 并口述分项评分（E4 V5 M6 = 15）",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "Obtain BP by auscultation with correct cuff and stethoscope placement",
+              "actionZh": "以正确袖带和听诊器位置听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Obtain pulse rate, strength and rhythm (convert to per-minute)",
+              "actionZh": "测脉搏的频率、强度与节律（换算为每分钟）",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Obtain respiratory rate, depth and character",
+              "actionZh": "测呼吸频率、深度与性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Physically assess skin colour, temperature, condition",
+              "actionZh": "动手评估皮肤颜色、温度、状态",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Assess pupils for size, equality and reactivity",
+              "actionZh": "评估瞳孔大小、对称性与对光反应",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "Obtain SpO2 and confirm oximeter reading calibrates with palpated pulse",
+              "actionZh": "测 SpO2 并确认血氧仪读数与触诊脉搏一致",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY (EMR player skips this phase). ACTOR ANSWERS: general health good; CNS - no headache, dizziness, numbness, tingling or weakness in any limb; respiratory - no SOB; cardiovascular - no chest pain or palpitations; GI/GU - no abdominal pain, no incontinence; integumentary - nil except wrist swelling; musculoskeletal - neck and right wrist pain only; endocrine - no diabetes; EENT - no visual change, no blood or fluid from ears/nose.",
+          "infoZh": "仅 PCP（EMR 播放器跳过此幕）。患者演员回答：整体健康良好；中枢神经——无头痛、头晕，四肢无麻木、刺痛或无力；呼吸——无气促；心血管——无胸痛心悸；消化/泌尿——无腹痛、无失禁；皮肤——除腕部肿胀外无异常；肌肉骨骼——仅颈部和右腕疼痛；内分泌——无糖尿病；眼耳鼻喉——无视觉改变，耳鼻无出血或液体。",
+          "expected": [
+            {
+              "actionEn": "FE - General health and recent illness",
+              "actionZh": "功能问诊——整体健康与近期疾病",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS: headache, dizziness, numbness, tingling, weakness (critical with spinal MOI)",
+              "actionZh": "功能问诊——中枢神经：头痛/头晕/麻木/刺痛/无力（脊柱伤机制下为重点）",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory system",
+              "actionZh": "功能问诊——呼吸系统",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular system",
+              "actionZh": "功能问诊——心血管系统",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU: abdominal pain, incontinence",
+              "actionZh": "功能问诊——消化/泌尿：腹痛、失禁",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary system",
+              "actionZh": "功能问诊——皮肤系统",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal system",
+              "actionZh": "功能问诊——肌肉骨骼系统",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine system",
+              "actionZh": "功能问诊——内分泌系统",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "Head-to-toe findings (give per region examined): head/neck - midline tenderness C5-C6, no deformity, no fluid from ears/nose, mouth clear; chest - no DOTS, equal air entry with clear breath sounds in all 6 auscultation sites; abdomen - soft, non-tender; back - to be assessed during the roll onto the spinal device, no thoracolumbar tenderness or deformity; lower extremities - no injury, CSM intact bilaterally; upper extremities - right wrist deformity as found, CSM intact, left arm unremarkable.",
+          "infoZh": "从头到脚查体发现（按考生检查的区域给出）：头颈——C5-C6 中线压痛，无畸形，耳鼻无液体，口腔干净；胸部——无 DOTS，6 个听诊点空气进入对称、呼吸音清；腹部——软、无压痛；背部——在滚动上脊柱板时检查，胸腰段无压痛无畸形；下肢——无损伤，双侧远端循环感觉活动完好；上肢——右腕畸形同前，远端 CSM 完好，左臂无异常。",
+          "expected": [
+            {
+              "actionEn": "Examine head and neck (DOTS, ears/nose fluid, mouth)",
+              "actionZh": "检查头颈（DOTS、耳鼻液体、口腔）",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Examine and auscultate chest in at least 6 sites, comparing bilaterally through inspiration and expiration",
+              "actionZh": "检查并听诊胸部至少 6 个部位，双侧对比、听完吸气与呼气相",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Examine abdomen (inspect and palpate four quadrants)",
+              "actionZh": "检查腹部（视诊并触诊四个象限）",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Examine the back during the coordinated roll, maintaining spinal alignment",
+              "actionZh": "在保持脊柱轴线的协同滚动中检查背部",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Examine lower extremities including pelvis, with distal CSM",
+              "actionZh": "检查下肢（含骨盆），并查远端循环感觉活动",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Examine upper extremities with distal CSM comparison in both hands",
+              "actionZh": "检查上肢并对比双手远端循环感觉活动",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Skills to physically perform: sized hard collar while manual stabilization is maintained; coordinated roll or scoop onto the spinal device with the candidate controlling the head; head blocks and straps - body secured before head, do NOT tape the head. Pain Management protocol BEFORE splinting/movement: PCP - acetaminophen 1000 mg PO and ibuprofen 400 mg PO on-boarded early, plus Entonox self-administered during packaging and splinting (rule out contraindications for each: liver disease/recent doses; GI bleed/anticoagulants/pregnancy; pneumothorax/ALOC/inability to comply). EMR - Entonox only. Then splint the right wrist in position found (distal pulse present, no realignment needed), pad, immobilize joint above and below, apply cold 10 minutes on / 5 off, reassess distal CSM before and after.",
+          "infoZh": "需实际操作的技能：在持续徒手固定下量取并上硬质颈托；由考生控制头部，协同滚动或铲式担架移上脊柱固定装置；头部固定块与绑带——先固定躯干后固定头部，禁止用胶带缠头。移动/夹板前先启动疼痛管理协议：PCP——尽早口服对乙酰氨基酚 1000 mg 和布洛芬 400 mg，打包与夹板期间让患者自控吸入 Entonox（逐药排除禁忌：肝病/近期已服用；消化道出血/抗凝药/妊娠；气胸/意识改变/无法配合）。EMR——仅 Entonox。然后按原位夹板固定右腕（远端脉搏存在，无需复位），加衬垫，固定上下关节，冰敷 10 分钟敷 5 分钟停，夹板前后复查远端循环感觉活动。",
+          "expected": [
+            {
+              "actionEn": "Apply a correctly sized hard collar without losing manual stabilization",
+              "actionZh": "在不丢失徒手固定的前提下上尺寸正确的硬质颈托",
+              "weight": 25,
+              "rubricRef": "skill-spinal-mgmt"
+            },
+            {
+              "actionEn": "Package onto the spinal device: coordinated roll, neutral alignment, body strapped before head, no head tape",
+              "actionZh": "打包上脊柱固定装置：协同滚动、中立位对线、先绑躯干后固定头部、不用胶带缠头",
+              "weight": 25,
+              "rubricRef": "skill-spinal-mgmt"
+            },
+            {
+              "actionEn": "Initiate the Pain Management protocol with baseline vitals done and contraindications ruled out BEFORE splinting or movement",
+              "actionZh": "在夹板固定或移动之前，于基线生命体征完成、禁忌排除后启动疼痛管理协议",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Administer analgesia with the 6 rights (PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox; EMR: Entonox, invert cylinder 3 times)",
+              "actionZh": "按六项核对给药（PCP：对乙酰氨基酚 1000 mg 口服+布洛芬 400 mg 口服+Entonox；EMR：Entonox，先倒转气瓶 3 次）",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Splint the wrist with padding, joints above and below immobilized, cold applied 10-on/5-off, distal CSM rechecked before and after",
+              "actionZh": "腕部夹板：加衬垫、固定上下关节、冰敷 10 敷 5 停、夹板前后复查远端循环感觉活动",
+              "weight": 25,
+              "rubricRef": "skill-fracture-mgmt"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess after every major move (roll, lift to cot, load). Set 2 vitals (after analgesia and packaging): GCS 15; BP 124/80; pulse 84 strong regular; respirations 16; skin pink warm dry; pupils equal reactive; SpO2 98% RA; neck pain 3/10, wrist pain 3/10. Non-RTC vitals interval: next set no later than about 15 minutes after the first.",
+          "infoZh": "每次大的移动（滚动、抬上担架床、装车）后复评。第 2 组生命体征（镇痛与打包后）：GCS 15；血压 124/80；脉搏 84 有力规则；呼吸 16；皮肤红润温暖干燥；瞳孔等大有反应；SpO2 室内空气 98%；颈痛 3/10，腕痛 3/10。非 RTC 生命体征间隔：与第一组相隔不超过约 15 分钟。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions (collar, straps, splint, distal CSM) after each major move",
+              "actionZh": "每次大移动后复评 ABC 及所有处置（颈托、绑带、夹板、远端循环感觉活动）",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Complete a full second set of vitals within the non-RTC interval",
+              "actionZh": "在非 RTC 时限内完成完整的第二组生命体征",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Reassess pain scores after analgesia and titrate Entonox to effect",
+              "actionZh": "镇痛后复评疼痛评分，并按效果滴定 Entonox",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Give a structured verbal hand-off at the hospital, then complete the PCR within 5 minutes. The hand-off must include: age/sex, chief complaint, MOI, history of chief complaint, initial and final vitals, PMHx, medications, allergies, treatments given, relevant findings.",
+          "infoZh": "到院后进行结构化口头交接，随后 5 分钟内完成 PCR。交接必须包含：年龄/性别、主诉、受伤机制、现病史、首末两组生命体征、既往史、用药、过敏、已行处置、相关阳性发现。",
+          "expected": [
+            {
+              "actionEn": "Notify the receiving hospital en route with a concise report",
+              "actionZh": "途中向接收医院进行简明预报",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Deliver a complete, organized hand-off report covering all required elements",
+              "actionZh": "交付完整、有条理、涵盖全部要素的交接报告",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Submit a legible, accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内提交字迹清楚、内容准确的 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline",
+          "gcs": "15 (E4V5M6)",
+          "bp": "128/82",
+          "pulse": "92 strong regular",
+          "resp": "18 regular, good volume",
+          "skin": "pink warm dry",
+          "pupils": "PERL 4 mm",
+          "spo2": "97% RA",
+          "bgl": null,
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "after analgesia and packaging",
+          "gcs": "15 (E4V5M6)",
+          "bp": "124/80",
+          "pulse": "84 strong regular",
+          "resp": "16 regular",
+          "skin": "pink warm dry",
+          "pupils": "PERL 4 mm",
+          "spo2": "98% RA",
+          "bgl": null,
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Moving the patient or applying any pain stimulus before manual c-spine control - 100% (Delicate Spine)",
+        "Releasing c-spine control before the patient is fully secured to the device - 100%",
+        "No rapid body survey, or finding the wrist injury and not stabilizing it - 100% (RBS)",
+        "PCP: on-boarding acetaminophen/ibuprofen but delaying Entonox until after splinting or movement - 100% (Pain Management, Appendix A)",
+        "Initiating the analgesia protocol without baseline vitals or without ruling out contraindications - up to 100% (Protocols)"
+      ],
+      "criticalPitfallsZh": [
+        "徒手固定颈椎之前移动患者或施加疼痛刺激——扣 100%（Delicate Spine）",
+        "患者尚未完全固定在装置上就松开颈椎固定——扣 100%",
+        "不做快速查体，或发现腕部损伤却不固定——扣 100%（RBS）",
+        "PCP：已给对乙酰氨基酚/布洛芬，却把 Entonox 拖到夹板/移动之后——扣 100%（疼痛管理附录 A）",
+        "未完成基线生命体征或未排除禁忌就启动镇痛协议——最高扣 100%（Protocols）"
+      ],
+      "emrVariantEn": "EMR carries no oral analgesics: pain management is Entonox only (rule out pneumothorax, ALOC, inability to comply; invert cylinder 3 times). No Functional Enquiry phase. All spinal and fracture skills are identical to PCP.",
+      "emrVariantZh": "EMR 没有口服镇痛药：疼痛管理只用 Entonox（排除气胸、意识改变、无法配合；气瓶倒转 3 次）。无功能问诊幕。脊柱与骨折技能与 PCP 完全相同。",
+      "pcpVariantEn": "PCP adds the full 9-system Functional Enquiry and the three-drug analgesia ladder: acetaminophen 500-1000 mg PO and ibuprofen 300-400 mg PO on-boarded early, Entonox during packaging/splinting. Appendix A weighting applies: omitting Entonox when indicated after giving the oral agents, or sequencing it after fracture management, is a 100% error.",
+      "pcpVariantZh": "PCP 增加 9 系统功能问诊和三联镇痛阶梯：尽早口服对乙酰氨基酚 500-1000 mg 和布洛芬 300-400 mg，打包/夹板期间用 Entonox。适用附录 A 权重：给了口服药却在有指征时不给 Entonox，或把 Entonox 排到骨折处理之后，都是 100% 级错误。",
+      "handoffModelEn": "This is Mark, a 34-year-old male, chief complaint of midline neck pain and right wrist pain after a witnessed 4-metre fall from a ladder, landing flat on his back on concrete, no loss of consciousness, not moved since landing. Initial vitals: GCS 15, BP 128/82, pulse 92 strong regular, resps 18, skin pink warm dry, pupils equal and reactive, SpO2 97% on room air; latest set BP 124/80, pulse 84, pain down from 7 to 3 after analgesia. No past medical history, no medications, no known allergies, last ate one hour ago. Findings: midline C5-C6 tenderness, dorsally deformed right wrist with distal CSM intact throughout. Treatments: manual c-spine then collar and full spinal immobilization, right wrist splinted with cold applied, acetaminophen 1000 mg PO, ibuprofen 400 mg PO and Entonox prior to movement.",
+      "handoffModelZh": "患者 Mark，34 岁男性，主诉为目击下从梯子约 4 米坠落、背部平摔在混凝土上后的颈部中线疼痛和右腕疼痛，无意识丧失，落地后未移动。首组生命体征：GCS 15，血压 128/82，脉搏 92 有力规则，呼吸 18，皮肤红润温暖干燥，瞳孔等大有反应，SpO2 室内空气 97%；末组血压 124/80，脉搏 84，镇痛后疼痛由 7 分降至 3 分。无既往史、无用药、无已知过敏，1 小时前进食。发现：C5-C6 中线压痛，右腕背侧畸形，远端循环感觉活动全程完好。处置：徒手固定颈椎后上颈托并全脊柱固定，右腕夹板加冰敷，移动前给予对乙酰氨基酚 1000 mg 口服、布洛芬 400 mg 口服及 Entonox。",
+      "pcrKeyPoints": {
+        "cc": "Midline neck pain and right wrist pain after 4 m fall from ladder onto concrete",
+        "hxcc": "Ladder feet slipped while cleaning gutters; free fall, landed flat on back; no head strike; no LOC; not moved since; neck 5/10 aching, wrist 7/10 sharp",
+        "pmhx": "None",
+        "meds": "None",
+        "allergies": "NKA",
+        "treatments": [
+          "Manual c-spine then hard collar",
+          "Full spinal immobilization on device (body before head, no head tape)",
+          "Right wrist splint in position found, cold 10-on/5-off",
+          "PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox before movement (EMR: Entonox only)"
+        ],
+        "findings": [
+          "Midline C5-C6 tenderness",
+          "Right wrist dorsal deformity and swelling, distal CSM intact before and after splint",
+          "Vitals stable both sets",
+          "Pain 7/10 to 3/10 after analgesia"
+        ]
+      }
+    },
+    {
+      "id": "tr-02",
+      "type": "trauma",
+      "titleEn": "High-Risk MVA - Blunt Abdominal Trauma With Shock",
+      "titleZh": "高风险车祸——腹部钝性伤合并休克",
+      "protocols": [
+        "Hypovolemia",
+        "Abdominal Injuries",
+        "Spinal Management"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "1740 hrs. Code 3 to the intersection of No. 3 Road and Westminster Highway, Richmond, for a two-vehicle collision. Fire and police are on scene. Your patient is the 45-year-old male driver of a sedan T-boned on the driver side at an estimated 60 km/h. Hospital is 10 minutes away.",
+      "dispatchZh": "17:40，Code 3 前往列治文 No. 3 Road 与 Westminster Highway 路口两车相撞现场。消防和警察已在现场。你的患者是被以约 60 km/h T 字撞击驾驶侧的轿车司机，45 岁男性。医院车程 10 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Rush-hour traffic. Fire reports the patient is out of the vehicle, lying on a blanket on the road, awake. No entrapment.",
+          "infoZh": "晚高峰车流。消防报告患者已离开车辆，躺在路面毯子上，清醒。无困陷。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge dispatch; anticipate a high-risk MVA: spinal equipment, oxygen, trauma kit, early transport mindset",
+              "actionZh": "确认派遣；预判高风险车祸：脊柱装备、氧气、创伤包，树立尽早转运意识",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate hazards: traffic, glass, leaking fluids; plan PPE",
+              "actionZh": "预判危险源：车流、玻璃、泄漏液体；计划个人防护",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Police have closed the lane; fire has controlled leaking fluids and disconnected the battery. The sedan has 0.4 m of intrusion into the driver door. Airbags deployed. The patient, extricated by fire, lies supine on a blanket 5 metres from the wreck, pale, holding his left side. One patient - the other driver has refused care and is with police. Daylight, dry road, 18 degrees C.",
+          "infoZh": "考官脚本：警察已封闭车道；消防已控制泄漏液体并断开电瓶。轿车驾驶侧车门内陷 0.4 米。安全气囊已弹出。患者由消防移出，仰卧在距残骸 5 米的毯子上，面色苍白，手捂左侧腹。单一患者——另一司机拒绝救治，正与警察在一起。白天，路面干燥，18 摄氏度。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (traffic, glass, fluids controlled), environment, MOI (60 km/h T-bone, 0.4 m intrusion = high-risk auto crash) and number of patients",
+              "actionZh": "口述危险源（车流、玻璃、液体已控制）、环境、受伤机制（60 km/h T 字撞击、0.4 米内陷=高风险车祸）及患者数量",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: pale male, supine, guarding his left flank, talking",
+              "actionZh": "第一眼：苍白男性，仰卧，护住左侧腹，能说话",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: alert but anxious, answers in short sentences, complains of severe left upper abdominal pain. EXAMINER (give when assessed): airway clear; respirations 24, shallow; radial pulse present but weak and rapid at 124. Skin (during RBS): pale, cool, clammy. RBS: seatbelt bruising across chest and abdomen; LUQ tender and guarded; pelvis stable on single gentle assessment; no external hemorrhage; no long bone fractures. SpO2 91% RA. This patient is UNSTABLE (weak rapid pulse, cool pale clammy skin = suspected shock).",
+          "infoZh": "患者演员：清醒但焦虑，只能短句回答，主诉左上腹剧痛。考官（评估时给出）：气道通畅；呼吸 24 次/分、浅；桡动脉可及但细速，124 次/分。皮肤（RBS 时给出）：苍白、湿冷。RBS：胸腹部安全带瘀痕；左上腹压痛伴肌卫；骨盆单次轻柔检查稳定；无外出血；无长骨骨折。SpO2 室内空气 91%。该患者为不稳定（细速脉+苍白湿冷皮肤=疑似休克）。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC and verbalize AVPU: Alert",
+              "actionZh": "评估意识并口述 AVPU：Alert",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Take manual c-spine control immediately (high-risk MOI)",
+              "actionZh": "立即徒手固定颈椎（高风险受伤机制）",
+              "weight": 100,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway",
+              "actionZh": "评估气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing; expose the chest given the MOI",
+              "actionZh": "评估呼吸；按受伤机制暴露胸部",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess radial pulse; recognize weak rapid pulse as shock",
+              "actionZh": "评估桡动脉；识别细速脉为休克表现",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Rapid body survey: find seatbelt sign and tender guarded LUQ; single gentle pelvis check only",
+              "actionZh": "快速查体：发现安全带征和左上腹压痛肌卫；骨盆仅做单次轻柔检查",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pale cool clammy",
+              "actionZh": "记录皮肤：苍白湿冷",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Apply high-flow oxygen (15 L/min NRB) for shock and SpO2 91%",
+              "actionZh": "因休克且 SpO2 91% 给高流量吸氧（非再吸入面罩 15 L/min）",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Keep supine to support blood pressure; blanket for warmth; limit movement to reduce clot disruption",
+              "actionZh": "保持仰卧以维持血压；盖毯保暖；限制移动以减少血凝块破坏",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Unstable: suspected shock with high-risk MOI. Correct decision: RTC. Package on a spinal device and be ready to load within 15 minutes with clear urgency. History, remaining vitals and the head-to-toe are completed EN ROUTE.",
+          "infoZh": "决策点。不稳定：高风险机制下疑似休克。正确决策：RTC。15 分钟内完成脊柱装置打包并可装载，动作要有紧迫感。病史、其余生命体征与从头到脚查体在转运途中完成。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC and act with urgency",
+              "actionZh": "判定为 RTC 并以紧迫节奏执行",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Assess, package (spinal device, secured) and be ready to load within 15 minutes",
+              "actionZh": "15 分钟内完成评估、打包（脊柱装置、固定妥当）并可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate fire/partner: cot to patient, egress cleared, notify en route",
+              "actionZh": "指派消防/搭档：担架床推到患者旁、清出撤离通道、途中预报医院",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "EN ROUTE. ACTOR ANSWERS: driver, lap-shoulder belt worn, airbags deployed; other car hit his door at speed; he was dazed but thinks he did not lose consciousness; fire moved him out. Pain 8/10 LUQ, sharp, worse with breathing, non-radiating, started at impact. PMHx: hypertension. Meds: ramipril 5 mg daily. Allergies: penicillin (rash). LOI: coffee 2 hours ago. MVA critical history is available from fire/police if asked: single impact, no fatality, moderate cabin intrusion 0.4 m.",
+          "infoZh": "转运途中。患者演员回答：司机，系三点式安全带，气囊弹出；对方车辆高速撞上他的车门；当时发懵但自认没有昏迷；由消防移出车外。疼痛 8/10，左上腹锐痛，呼吸时加重，不放射，撞击时开始。既往史：高血压。用药：雷米普利 5 mg 每日。过敏：青霉素（皮疹）。最后进食：2 小时前咖啡。向消防/警察询问可得车祸关键病史：单次撞击、无死亡、驾驶舱内陷 0.4 米。",
+          "expected": [
+            {
+              "actionEn": "Confirm chief complaint: left upper abdominal pain",
+              "actionZh": "确认主诉：左上腹痛",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "Obtain HxC/C with OPQRRRST plus MVA critical history (speed, intrusion, restraints, airbags, LOC, other occupants)",
+              "actionZh": "用 OPQRRRST 加车祸关键病史（车速、内陷、约束装置、气囊、昏迷、其他乘员）采集现病史",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Obtain pain score 0-10",
+              "actionZh": "采集 0-10 疼痛评分",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "Obtain PMHx (hypertension)",
+              "actionZh": "采集既往史（高血压）",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Obtain medications (ramipril)",
+              "actionZh": "采集用药（雷米普利）",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Obtain allergies (penicillin - rash)",
+              "actionZh": "采集过敏史（青霉素——皮疹）",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "Obtain LOI",
+              "actionZh": "采集最后进食",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 (given as assessed): GCS 15 (E4V5M6); BP 88/62; pulse 124 weak regular; respirations 24 shallow; skin pale cool clammy; pupils equal reactive; SpO2 94% on 15 L NRB (was 91% RA). BGL and temperature not indicated. RTC patient: repeat vitals within 5-6 minutes; over 9 minutes between sets is a major deficiency.",
+          "infoZh": "第 1 组（按评估给出）：GCS 15（E4V5M6）；血压 88/62；脉搏 124 细弱规则；呼吸 24 浅；皮肤苍白湿冷；瞳孔等大有反应；SpO2 在 15 L 非再吸入面罩下 94%（室内空气时 91%）。血糖和体温无指征。RTC 患者：5-6 分钟内复测生命体征；两组间隔超过 9 分钟属重大缺陷。",
+          "expected": [
+            {
+              "actionEn": "GCS with components (15)",
+              "actionZh": "GCS 及分项（15）",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation - recognize 88/62 as hypotension",
+              "actionZh": "听诊测血压——识别 88/62 为低血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate, strength, rhythm",
+              "actionZh": "脉搏频率、强度、节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate, depth, character",
+              "actionZh": "呼吸频率、深度、性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin reassessed hands-on",
+              "actionZh": "动手复评皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils size, equality, reactivity",
+              "actionZh": "瞳孔大小、对称、对光反应",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration check against pulse",
+              "actionZh": "SpO2 并与触诊脉搏校准",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, en route, kept brief for the unstable patient. ACTOR: general health good; CNS - no headache, no numbness; respiratory - pain on deep breath, no SOB at rest; cardiovascular - no chest pain; GI/GU - severe LUQ pain, felt faint on standing (fire lifted him); nauseated; integumentary - seatbelt bruising; musculoskeletal - left ribs sore; endocrine - nil; EENT - nil.",
+          "infoZh": "仅 PCP，转运途中，对不稳定患者从简。患者演员：整体健康好；中枢神经——无头痛无麻木；呼吸——深吸气痛，静息无气促；心血管——无胸痛；消化/泌尿——左上腹剧痛，站立时曾觉眩晕（由消防抬出）；恶心；皮肤——安全带瘀痕；肌肉骨骼——左侧肋部酸痛；内分泌——无；眼耳鼻喉——无。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "功能问诊——中枢神经",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory",
+              "actionZh": "功能问诊——呼吸",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (nausea, faintness - pertinent to shock)",
+              "actionZh": "功能问诊——消化/泌尿（恶心、眩晕——与休克相关）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "功能问诊——内分泌",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe (give per region): head/neck - no DOTS, trachea midline; chest - seatbelt bruise left chest, tender left lower ribs, equal air entry all 6 sites, no crepitus; abdomen - LUQ guarding and tenderness, increasing distension; back - checked during roll onto device on scene, no deformity; lower extremities - nil, CSM intact; upper extremities - nil, CSM intact.",
+          "infoZh": "途中从头到脚查体（按区域给出）：头颈——无 DOTS，气管居中；胸部——左胸安全带瘀痕、左下肋压痛、6 个听诊点空气进入对称、无骨擦感；腹部——左上腹肌卫压痛、腹胀渐增；背部——现场滚动上板时已查、无畸形；下肢——无异常、CSM 完好；上肢——无异常、CSM 完好。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam",
+              "actionZh": "头颈查体",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation, bilateral comparison",
+              "actionZh": "胸部查体并 6 点听诊、双侧对比",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam - recognize increasing distension as ongoing bleed",
+              "actionZh": "腹部查体——识别腹胀渐增提示持续出血",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back examined during the scene roll",
+              "actionZh": "现场滚动时完成背部检查",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities incl pelvis review, CSM",
+              "actionZh": "下肢（含骨盆回顾）及 CSM",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities, CSM",
+              "actionZh": "上肢及 CSM",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Treatments: spinal packaging done on scene (collar, device, body before head). Hypovolemia protocol for all levels: supine, warmth, high-flow O2, limit movement, rapid transport. PCP EN ROUTE: vascular access 18 G, normal saline fluid bolus 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL, target systolic BP 90; TXA 2 g (2000 mg) IV push over 1 minute - indicated (signs of shock with MOI suggesting occult bleeding, under 3 hours, over 12 years old, not an isolated TBI). EMR: no IV/TXA - supportive shock care and rapid conveyance.",
+          "infoZh": "处置：脊柱打包已在现场完成（颈托、装置、先躯干后头部）。各级别低血容量协议：仰卧、保暖、高流量吸氧、限制移动、快速转运。PCP 途中：18 G 静脉通路，生理盐水 20 mL/kg 快速补液、上限 2 升、每 500 mL 复评、目标收缩压 90；TXA 2 g（2000 mg）静推 1 分钟——有指征（休克征象+机制提示隐匿出血、伤后不足 3 小时、大于 12 岁、非孤立性颅脑伤）。EMR：无静脉/TXA——支持性抗休克处理并快速转运。",
+          "expected": [
+            {
+              "actionEn": "Execute the Hypovolemia protocol: supine, warm, high-flow O2, minimal movement, no delay on scene",
+              "actionZh": "执行低血容量协议：仰卧、保暖、高流量吸氧、尽量少动、现场不滞留",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Spinal packaging skill performed correctly",
+              "actionZh": "脊柱打包技能操作正确",
+              "weight": 25,
+              "rubricRef": "skill-spinal-mgmt"
+            },
+            {
+              "actionEn": "PCP: IV access and 20 mL/kg bolus (max 2 L), reassess every 500 mL against target SBP 90",
+              "actionZh": "PCP：建立静脉通路并 20 mL/kg 补液（上限 2 升），每 500 mL 按目标收缩压 90 复评",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "PCP: TXA 2 g IV over 1 minute with 6 rights and contraindications ruled out (time of injury, age, allergy, isolated TBI)",
+              "actionZh": "PCP：TXA 2 g 静推 1 分钟，六项核对并排除禁忌（受伤时间、年龄、过敏、孤立性颅脑伤）",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs and interventions after loading and after every 500 mL of fluid. Set 2 (en route): GCS 15 but increasingly anxious; BP 84/58; pulse 132 weak; respirations 26; skin pale cool clammy; pupils equal; SpO2 95% on 15 L. The patient is deteriorating - continue bolus, keep warm, early hospital notification.",
+          "infoZh": "装车后及每输注 500 mL 后复评 ABC 与各项处置。第 2 组（途中）：GCS 15 但愈发焦虑；血压 84/58；脉搏 132 细弱；呼吸 26；皮肤苍白湿冷；瞳孔等大；SpO2 15 L 下 95%。患者在恶化——继续补液、保暖、尽早通知医院。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and interventions after each major move and each 500 mL",
+              "actionZh": "每次大移动及每 500 mL 后复评 ABC 与处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within 5-6 minutes; recognize the deteriorating trend",
+              "actionZh": "5-6 分钟内完成第二组完整生命体征；识别恶化趋势",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Continue the fluid protocol correctly against the SBP 90 target (PCP)",
+              "actionZh": "按收缩压 90 目标正确继续补液协议（PCP）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Critical patient: the hospital must be notified en route. Structured hand-off on arrival; PCR within 5 minutes.",
+          "infoZh": "危重患者：必须在途中通知医院。到院后结构化交接；5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Early en-route notification for a critical patient",
+              "actionZh": "危重患者尽早途中预报",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete organized hand-off with initial and final vitals and treatment response",
+              "actionZh": "完整有序交接，含首末生命体征与治疗反应",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline",
+          "gcs": "15 (E4V5M6)",
+          "bp": "88/62",
+          "pulse": "124 weak regular",
+          "resp": "24 shallow",
+          "skin": "pale cool clammy",
+          "pupils": "PERL",
+          "spo2": "94% on 15 L NRB (91% RA)",
+          "bgl": null,
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "en route, deteriorating",
+          "gcs": "15, anxious",
+          "bp": "84/58",
+          "pulse": "132 weak regular",
+          "resp": "26 shallow",
+          "skin": "pale cool clammy",
+          "pupils": "PERL",
+          "spo2": "95% on 15 L NRB",
+          "bgl": null,
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Not recognizing shock and staying on scene beyond 15 minutes for a full secondary - RTC timing failure (25%) and can cascade to protocol failures",
+        "No c-spine control with a high-risk MVA mechanism - 100%",
+        "No rapid body survey / missing the abdominal life threat - 100%",
+        "Repeatedly springing or rocking the pelvis - patient care deduction; one gentle assessment only",
+        "PCP: giving TXA without confirming time of injury under 3 hours, or running fluid without reassessing every 500 mL - protocol errors up to 100%"
+      ],
+      "criticalPitfallsZh": [
+        "不识别休克、为做完整二次评估在现场滞留超过 15 分钟——RTC 时限失分（25%）并可连锁引发协议失分",
+        "高风险车祸机制下不做颈椎固定——扣 100%",
+        "不做快速查体/漏掉腹部致命伤——扣 100%",
+        "反复摇晃或按压骨盆——患者照护扣分；只允许单次轻柔检查",
+        "PCP：未确认受伤时间在 3 小时内就给 TXA，或补液不做每 500 mL 复评——协议类错误最高扣 100%"
+      ],
+      "emrVariantEn": "EMR: no vascular access, no TXA. The station is won on shock recognition, supine positioning, warmth, high-flow oxygen, 15-minute packaging and en-route reassessment. Secondary survey en route.",
+      "emrVariantZh": "EMR：无静脉通路、无 TXA。本题得分点在于识别休克、仰卧位、保暖、高流量吸氧、15 分钟内打包和途中复评。二次评估在途中完成。",
+      "pcpVariantEn": "PCP adds en-route vascular access (18 G), 20 mL/kg NS bolus to max 2 L reassessing every 500 mL (target SBP 90), and TXA 2 g IV over 1 minute for shock with suspected occult bleeding. Functional Enquiry en route, kept efficient.",
+      "pcpVariantZh": "PCP 增加途中静脉通路（18 G）、生理盐水 20 mL/kg 补液上限 2 升每 500 mL 复评（目标收缩压 90），以及针对疑似隐匿出血休克的 TXA 2 g 静推 1 分钟。功能问诊在途中高效完成。",
+      "handoffModelEn": "This is a 45-year-old male, restrained driver of a sedan T-boned on his door at about 60 km/h with 0.4 metres of intrusion, airbags deployed, no confirmed LOC. Chief complaint is severe left upper quadrant abdominal pain with seatbelt bruising, guarding and increasing distension - we are treating this as intra-abdominal bleeding with shock. Initial vitals GCS 15, BP 88/62, pulse 124 weak, resps 24 shallow, skin pale cool clammy, SpO2 94% on 15 litres; latest BP 84/58, pulse 132 - he is trending down. History of hypertension on ramipril, allergic to penicillin, coffee two hours ago. Treatments: c-spine and full spinal packaging, high-flow oxygen, kept supine and warm, rapid transport; IV 18 G with a saline bolus running, 1 litre in, and TXA 2 grams IV given at 25 minutes post-injury.",
+      "handoffModelZh": "患者 45 岁男性，系安全带的轿车司机，驾驶侧被以约 60 km/h T 字撞击、车门内陷 0.4 米、气囊弹出，无确认的意识丧失。主诉左上腹剧痛，伴安全带瘀痕、肌卫及渐进性腹胀——按腹腔内出血合并休克处理。首组生命体征 GCS 15、血压 88/62、脉搏 124 细弱、呼吸 24 浅、皮肤苍白湿冷、SpO2 15 升下 94%；末组血压 84/58、脉搏 132——持续恶化。高血压史，服雷米普利，青霉素过敏，2 小时前喝过咖啡。处置：颈椎固定并全脊柱打包、高流量吸氧、保持仰卧保暖、快速转运；18 G 静脉通路补液中（已入 1 升），伤后 25 分钟给予 TXA 2 g 静推。",
+      "pcrKeyPoints": {
+        "cc": "Severe LUQ abdominal pain post high-risk MVA (60 km/h T-bone, 0.4 m intrusion)",
+        "hxcc": "Restrained driver, airbags deployed, dazed no confirmed LOC, extricated by fire; pain 8/10 sharp, worse on breathing, since impact",
+        "pmhx": "Hypertension",
+        "meds": "Ramipril 5 mg daily",
+        "allergies": "Penicillin (rash)",
+        "treatments": [
+          "Manual c-spine, collar, full spinal packaging",
+          "High-flow O2 15 L NRB",
+          "Supine, warmth, movement limited",
+          "RTC transport within 15 min",
+          "PCP: IV 18 G, NS bolus 20 mL/kg reassessed q500 mL, TXA 2 g IV over 1 min"
+        ],
+        "findings": [
+          "Seatbelt sign chest and abdomen",
+          "LUQ tenderness, guarding, increasing distension",
+          "BP 88/62 falling to 84/58, pulse 124 rising to 132",
+          "Pelvis stable on single gentle check"
+        ]
+      }
+    },
+    {
+      "id": "tr-03",
+      "type": "trauma",
+      "titleEn": "Stabbing - Open (Sucking) Chest Wound",
+      "titleZh": "刀刺伤——开放性（吸吮性）胸部伤口",
+      "protocols": [
+        "Chest Trauma",
+        "Hypovolemia",
+        "Wound Care"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "0120 hrs. Code 3 to a nightclub on Granville Street, Vancouver, for a 27-year-old male stabbed in the chest. Police are ON SCENE and report the scene is secure - the assailant has fled. Hospital is 8 minutes away.",
+      "dispatchZh": "01:20，Code 3 前往温哥华 Granville 街一家夜店，27 岁男性胸部被刺。警察已在现场并报告现场安全——行凶者已逃离。医院车程 8 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Do not stage - police confirm the scene is secure. En route, dispatch adds: single stab wound to the right chest, patient conscious, heavy bleeding reported by staff.",
+          "infoZh": "无需等待——警察确认现场安全。途中调度补充：右胸单一刺伤，患者清醒，店员称出血较多。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan chest seals, trauma dressings, oxygen, early transport",
+              "actionZh": "确认信息；准备胸封贴、创伤敷料、氧气，计划尽早转运",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Confirm scene security with police before entering; plan PPE",
+              "actionZh": "进入前与警察确认现场安全；计划个人防护",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Police escort you in. Loud music stopped, lights up, crowd pushed back. The patient sits against the bar wall, hand over his right chest, blood on his shirt. A folding knife with a 10 cm blade has been recovered by police. One patient. No weapons remain in the area.",
+          "infoZh": "考官脚本：警察带你进入。音乐已停、灯光已开、人群被隔开。患者靠吧台墙坐着，手捂右胸，衬衫染血。警方已起获一把刃长 10 cm 的折刀。单一患者。现场已无武器。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (crowd, possible weapons - confirmed clear by police), environment, MOI (10 cm blade stab), one patient",
+              "actionZh": "口述危险源（人群、可能的武器——警方确认已清除）、环境、受伤机制（10 cm 刀刺）、单一患者",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: conscious male, sitting, pale, breathing fast, blood-soaked right shirt",
+              "actionZh": "第一眼：清醒男性，坐位，苍白，呼吸快，右侧衬衫浸血",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: alert, anxious, speaking in short phrases, says it is hard to breathe. EXAMINER (give when assessed): airway clear; respirations 28 shallow and laboured; when the chest is exposed you see a 2 cm open wound at the right 4th intercostal space, mid-clavicular, BUBBLING with each breath. Radial pulse 118, present, rapid. Skin (during RBS): pale, cool, moist. RBS: no other wounds on the front; the BACK MUST BE CHECKED for an exit wound - none found. SpO2 89% RA. C-spine is NOT indicated: isolated penetrating trauma, no blunt mechanism, no neurological complaint. Immediate action on finding the wound: gloved hand over it, then a commercial chest seal or three-sided occlusive dressing.",
+          "infoZh": "患者演员：清醒、焦虑、只能短语说话，自诉呼吸费力。考官（评估时给出）：气道通畅；呼吸 28 次/分、浅而费力；暴露胸部后可见右侧第 4 肋间锁骨中线处一个 2 cm 开放伤口，随呼吸冒泡。桡动脉 118 次/分、可及、快。皮肤（RBS 时给出）：苍白、凉、潮湿。RBS：前侧无其他伤口；必须检查背部有无出口伤——未发现。SpO2 室内空气 89%。不需要颈椎固定：孤立穿透伤、无钝性机制、无神经主诉。发现伤口后的即刻处理：先用戴手套的手掌覆盖，再换商品化胸封贴或三边封闭敷料。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: Alert",
+              "actionZh": "评估意识 / AVPU：Alert",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Verbalize ruling OUT c-spine: isolated penetrating trauma without blunt MOI or neuro deficit",
+              "actionZh": "口述排除颈椎固定指征：孤立穿透伤、无钝性机制、无神经缺损",
+              "weight": 15,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway",
+              "actionZh": "评估气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing AND expose the chest; find the open chest wound",
+              "actionZh": "评估呼吸并暴露胸部；发现开放性胸部伤口",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Seal the sucking chest wound IMMEDIATELY (gloved hand, then commercial seal or 3-sided occlusive)",
+              "actionZh": "立即封闭吸吮性胸部伤口（先手掌覆盖，再商品胸封贴或三边封闭敷料）",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Assess circulation - radial pulse rapid",
+              "actionZh": "评估循环——桡动脉快",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Complete the RBS including the BACK - check for an exit wound",
+              "actionZh": "完成快速查体并包括背部——检查出口伤",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pale cool moist",
+              "actionZh": "记录皮肤：苍白、凉、潮湿",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "High-flow oxygen 15 L NRB (SOB, SpO2 89%)",
+              "actionZh": "高流量吸氧 15 L 非再吸入面罩（气促、SpO2 89%）",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position semi-sitting / position of comfort (no spinal concern) as soon as possible",
+              "actionZh": "尽快置于半坐位/舒适体位（无脊柱顾虑）",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Major penetrating trauma to the torso plus respiratory distress = UNSTABLE. Correct decision: RTC - packaged and ready to load within 15 minutes. Remaining assessment continues en route.",
+          "infoZh": "决策点。躯干重大穿透伤加呼吸窘迫=不稳定。正确决策：RTC——15 分钟内打包完毕可装载。其余评估在途中继续。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC (penetrating torso trauma) and act with urgency",
+              "actionZh": "判定为 RTC（躯干穿透伤）并保持紧迫感",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Ready to load within 15 minutes, seal secured before movement",
+              "actionZh": "15 分钟内可装载，移动前确认封贴固定",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate partner for cot and egress through the crowd; police to clear the path",
+              "actionZh": "指派搭档准备担架床并经人群开出通道；请警察协助清道",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "EN ROUTE. ACTOR/POLICE ANSWERS: single stab with a folding knife, 10 cm blade, one thrust, no other wounds felt; no LOC; happened about 10 minutes before your arrival. Pain 7/10 sharp at the wound, worse on inspiration. PMHx: none. Meds: none. Allergies: none known. LOI: two beers over the evening, wings at 2300. Stabbing critical history: weapon type and length, number of wounds, slashed vs stabbed - all obtained from police.",
+          "infoZh": "转运途中。患者/警察回答：折刀单次刺入，刃长 10 cm，仅一刀，自觉无其他伤口；无昏迷；发生在你到场前约 10 分钟。疼痛 7/10，伤口处锐痛，吸气加重。既往史：无。用药：无。过敏：无已知。最后进食：晚间两瓶啤酒，23:00 吃过鸡翅。刀刺关键病史：武器类型与长度、伤口数量、划伤还是刺伤——均可向警察获取。",
+          "expected": [
+            {
+              "actionEn": "Confirm chief complaint: stab wound with difficulty breathing",
+              "actionZh": "确认主诉：刺伤伴呼吸困难",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C with OPQRRRST plus stabbing critical history (weapon, blade length, number of wounds, time)",
+              "actionZh": "OPQRRRST 加刀刺关键病史（武器、刃长、伤口数、时间）",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Pain score 0-10",
+              "actionZh": "0-10 疼痛评分",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "PMHx",
+              "actionZh": "既往史",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications",
+              "actionZh": "用药史",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI including alcohol intake",
+              "actionZh": "最后进食（含饮酒量）",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 (given as assessed): GCS 15; BP 104/70; pulse 118 rapid regular; respirations 28 shallow laboured; skin pale cool moist; pupils equal reactive; SpO2 93% on 15 L NRB (89% RA). BGL/temp not indicated. RTC vitals interval 5-6 minutes.",
+          "infoZh": "第 1 组（按评估给出）：GCS 15；血压 104/70；脉搏 118 快而规则；呼吸 28 浅而费力；皮肤苍白凉潮；瞳孔等大有反应；SpO2 15 L 面罩下 93%（室内空气 89%）。血糖/体温无指征。RTC 生命体征间隔 5-6 分钟。",
+          "expected": [
+            {
+              "actionEn": "GCS with components",
+              "actionZh": "GCS 及分项",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation",
+              "actionZh": "听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate/strength/rhythm",
+              "actionZh": "脉搏频率/强度/节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character",
+              "actionZh": "呼吸频率/深度/性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on",
+              "actionZh": "动手查皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils",
+              "actionZh": "瞳孔",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration and trend after oxygen",
+              "actionZh": "SpO2（校准并对比给氧后变化）",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, en route, brief. ACTOR: general health good; CNS nil; respiratory - SOB since the stab, painful inspiration; cardiovascular - no chest pressure, heart racing; GI/GU nil; integumentary - the wound; musculoskeletal nil; endocrine nil; EENT nil.",
+          "infoZh": "仅 PCP，途中从简。患者演员：整体健康好；中枢神经无；呼吸——被刺后气促、吸气痛；心血管——无胸闷、心跳快；消化/泌尿无；皮肤——刺伤口；肌肉骨骼无；内分泌无；眼耳鼻喉无。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "功能问诊——中枢神经",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory (pertinent)",
+              "actionZh": "功能问诊——呼吸（与主诉相关）",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU",
+              "actionZh": "功能问诊——消化/泌尿",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "功能问诊——内分泌",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe: head/neck - trachea midline, no JVD currently; chest - sealed wound right 4th ICS, DIMINISHED air entry right side on auscultation (all 6 sites compared), left side clear; abdomen - soft non-tender; back - already checked for exit wound, no other wounds; lower extremities nil; upper extremities nil.",
+          "infoZh": "途中从头到脚：头颈——气管居中，目前无颈静脉怒张；胸部——右第 4 肋间伤口已封闭，听诊右侧空气进入减弱（6 点对比），左侧清晰；腹部——软、无压痛；背部——已查出口伤，无其他伤口；下肢无；上肢无。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam including trachea and JVD",
+              "actionZh": "头颈查体（含气管位置与颈静脉）",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam: 6-site auscultation, recognize diminished right air entry",
+              "actionZh": "胸部查体：6 点听诊，识别右侧进气减弱",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam (exit wound already ruled out - reconfirm dressings)",
+              "actionZh": "背部查体（出口伤已排除——再确认敷料）",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities",
+              "actionZh": "下肢",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities",
+              "actionZh": "上肢",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Skills: chest seal applied correctly (wound cleaned edge, seal burped of air, vented/3-sided so air can escape). Chest Trauma guideline: control bleeding with gauze, assist oxygenation, MONITOR CLOSELY for tension pneumothorax - increasing respiratory distress, absent breath sounds right, JVD, tracheal shift, falling BP; if it develops, lift or burp the seal. PCP EN ROUTE: vascular access; TXA only if shock from blood loss develops (SBP under 90) - currently not indicated, verbalize the monitoring plan. No analgesia with Entonox - pneumothorax is an absolute contraindication.",
+          "infoZh": "技能：正确贴敷胸封（伤缘擦干、排出封贴下空气、用带排气阀或三边封法保证气体可排出）。胸部创伤指南：纱布控制出血、辅助氧合，并密切监测张力性气胸——呼吸窘迫加重、右侧呼吸音消失、颈静脉怒张、气管移位、血压下降；一旦出现立即掀起或放气封贴。PCP 途中：建立静脉通路；TXA 仅在失血性休克（收缩压低于 90）出现时给——目前无指征，需口述监测计划。禁用 Entonox 镇痛——气胸为绝对禁忌。",
+          "expected": [
+            {
+              "actionEn": "Wound management skill: correct three-sided/vented chest seal technique",
+              "actionZh": "伤口处理技能：正确的三边/带阀胸封操作",
+              "weight": 25,
+              "rubricRef": "skill-wound-mgmt"
+            },
+            {
+              "actionEn": "Verbalize tension pneumothorax watch and the burp-the-seal response",
+              "actionZh": "口述张力性气胸监测要点及掀贴放气的应对",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Recognize Entonox is contraindicated (pneumothorax)",
+              "actionZh": "识别 Entonox 禁忌（气胸）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "PCP: vascular access en route; TXA criteria verbalized and monitored",
+              "actionZh": "PCP：途中建立静脉通路；口述并监测 TXA 使用标准",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs, the seal, and breath sounds after every move. Set 2 (en route): GCS 15; BP 100/68; pulse 116; respirations 26; skin pale cool moist; pupils equal; SpO2 94% on 15 L. Seal intact, no tension signs. If the candidate fails to monitor: EXAMINER escalates - SpO2 drops, breath sounds vanish on the right - expecting immediate seal burp.",
+          "infoZh": "每次移动后复评 ABC、封贴及呼吸音。第 2 组（途中）：GCS 15；血压 100/68；脉搏 116；呼吸 26；皮肤苍白凉潮；瞳孔等大；SpO2 15 L 下 94%。封贴完好，无张力征象。若考生不监测：考官升级病情——SpO2 下降、右侧呼吸音消失——期待立即掀贴放气。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs, seal integrity and right-side air entry after each move",
+              "actionZh": "每次移动后复评 ABC、封贴完整性及右侧进气",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full vitals within 5-6 minutes",
+              "actionZh": "5-6 分钟内完成第二组完整生命体征",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Respond correctly to any tension pneumothorax development (burp/lift the seal, reassess)",
+              "actionZh": "对张力性气胸变化作出正确处理（掀贴/放气并复评）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Critical patient - en-route notification mandatory (trauma team activation). Structured hand-off; PCR within 5 minutes.",
+          "infoZh": "危重患者——必须途中预报（启动创伤团队）。结构化交接；5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Early en-route trauma notification",
+              "actionZh": "尽早途中创伤预报",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off including seal type and breath-sound trend",
+              "actionZh": "完整交接，含封贴类型与呼吸音变化",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline",
+          "gcs": "15 (E4V5M6)",
+          "bp": "104/70",
+          "pulse": "118 rapid regular",
+          "resp": "28 shallow laboured",
+          "skin": "pale cool moist",
+          "pupils": "PERL",
+          "spo2": "93% on 15 L NRB (89% RA)",
+          "bgl": null,
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "en route, seal on",
+          "gcs": "15 (E4V5M6)",
+          "bp": "100/68",
+          "pulse": "116 rapid regular",
+          "resp": "26 shallow",
+          "skin": "pale cool moist",
+          "pupils": "PERL",
+          "spo2": "94% on 15 L NRB",
+          "bgl": null,
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Not exposing the chest / not finding and sealing the sucking wound in the primary - 100% (Breathing / RBS)",
+        "Taping an occlusive dressing on all four sides with no vent and not monitoring - creates tension pneumothorax; failure to relieve it is a 100% protocol error",
+        "Not checking the back for an exit wound - explicit rubric deduction",
+        "Giving Entonox to a chest-trauma patient (pneumothorax contraindication) - protocol error up to 100%",
+        "Applying c-spine immobilization when not indicated - unnecessary skill causing delay (deduction) and slows the RTC clock"
+      ],
+      "criticalPitfallsZh": [
+        "不暴露胸部/初评中未发现并封闭吸吮性伤口——扣 100%（Breathing / RBS）",
+        "四边全封且不留排气、之后又不监测——制造张力性气胸；不解除即为 100% 协议错误",
+        "不检查背部出口伤——评分细则明确扣分项",
+        "给胸部创伤患者使用 Entonox（气胸禁忌）——协议错误最高扣 100%",
+        "无指征地做颈椎固定——非指征技能造成延误（扣分）并拖慢 RTC 时限"
+      ],
+      "emrVariantEn": "EMR: identical priorities - seal in the primary, exit-wound check, high-flow O2, tension watch, 15-minute packaging. No IV, no TXA. Entonox remains contraindicated at every level.",
+      "emrVariantZh": "EMR：优先级完全相同——初评中封闭伤口、查出口伤、高流量吸氧、监测张力性气胸、15 分钟打包。无静脉、无 TXA。Entonox 在任何级别都属禁忌。",
+      "pcpVariantEn": "PCP adds en-route vascular access and TXA 2 g IV only if hemorrhagic shock criteria are met; Functional Enquiry en route. If ventilation becomes necessary, be ready to disconnect and manage a developing tension pneumothorax first.",
+      "pcpVariantZh": "PCP 增加途中静脉通路，且仅在符合失血性休克标准时给 TXA 2 g 静推；功能问诊途中完成。若需辅助通气，先处理可能进展的张力性气胸。",
+      "handoffModelEn": "This is a 27-year-old male stabbed once in the right chest with a 10 cm folding knife about 30 minutes ago, no loss of consciousness. Chief complaint is difficulty breathing with a sucking wound at the right 4th intercostal space, mid-clavicular; no exit wound on the back. Initial vitals GCS 15, BP 104/70, pulse 118, resps 28 shallow, SpO2 89% room air rising to 93% on 15 litres; latest BP 100/68, pulse 116, SpO2 94%, air entry diminished on the right but stable, trachea midline, no JVD. No medical history, no medications, no known allergies, two beers this evening. Treatments: immediate gloved occlusion then a vented commercial chest seal, high-flow oxygen, semi-sitting position, rapid transport with continuous tension-pneumothorax monitoring; IV established en route.",
+      "handoffModelZh": "患者 27 岁男性，约 30 分钟前被刃长 10 cm 的折刀刺中右胸一刀，无意识丧失。主诉呼吸困难，右第 4 肋间锁骨中线处为吸吮性伤口；背部无出口伤。首组生命体征 GCS 15、血压 104/70、脉搏 118、呼吸 28 浅、SpO2 室内空气 89%、15 升吸氧后升至 93%；末组血压 100/68、脉搏 116、SpO2 94%，右侧进气减弱但稳定，气管居中，无颈静脉怒张。无既往史、无用药、无已知过敏，晚间饮啤酒两瓶。处置：发现后立即手掌封闭，改用带排气阀商品胸封贴，高流量吸氧，半坐位，快速转运并持续监测张力性气胸；途中已建立静脉通路。",
+      "pcrKeyPoints": {
+        "cc": "Single stab wound right chest with dyspnea (sucking chest wound)",
+        "hxcc": "Folding knife, 10 cm blade, single thrust ~10 min before arrival; no LOC; pain 7/10 pleuritic",
+        "pmhx": "None",
+        "meds": "None",
+        "allergies": "NKA",
+        "treatments": [
+          "Immediate gloved occlusion then vented/3-sided chest seal",
+          "High-flow O2 15 L NRB",
+          "Semi-sitting position",
+          "RTC transport, trauma notification",
+          "PCP: IV en route; TXA criteria monitored, not met"
+        ],
+        "findings": [
+          "2 cm bubbling wound right 4th ICS MCL",
+          "No exit wound (back checked)",
+          "Diminished right air entry, trachea midline, no JVD",
+          "SpO2 89% RA improving to 94% on O2"
+        ]
+      }
+    },
+    {
+      "id": "tr-04",
+      "type": "trauma",
+      "titleEn": "Table Saw Partial Amputation - Tourniquet and TXA",
+      "titleZh": "台锯部分离断——止血带与 TXA",
+      "protocols": [
+        "Hemorrhage Control",
+        "Hypovolemia",
+        "Preservation of Amputated Parts"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "1005 hrs. Code 3 to a cabinet-making shop in an industrial park in Surrey. 52-year-old male caught his left forearm in a table saw. Coworkers report severe bleeding. Hospital is 12 minutes away.",
+      "dispatchZh": "10:05，Code 3 前往素里工业园区一家橱柜厂。52 岁男性左前臂卷入台锯。工友报告出血严重。医院车程 12 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch update en route: coworkers are holding a towel on the arm and the machine has been shut off.",
+          "infoZh": "途中调度更新：工友正用毛巾按压伤臂，机器已关停。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan tourniquet, pressure dressings, oxygen, amputated-part care, early transport",
+              "actionZh": "确认；准备止血带、加压敷料、氧气、断肢保存用品，计划尽早转运",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate machine hazard and blood exposure; PPE incl eye protection",
+              "actionZh": "预判机器危险与血液暴露；个人防护含护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: A coworker leads you in. The table saw is OFF and locked out. The patient sits on the floor leaning on a cabinet, a blood-soaked towel clamped to his left forearm. An estimated 700 mL of blood is pooled on the floor. The hand is attached only by a soft-tissue bridge just proximal to the wrist. One patient. Good lighting, no other hazards.",
+          "infoZh": "考官脚本：工友带你进入。台锯已关停并锁定。患者坐在地上靠着柜体，左前臂压着浸透血的毛巾。地面血泊估计约 700 mL。手部仅靠腕近端的软组织桥与前臂相连。单一患者。照明良好，无其他危险。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (machine locked out, blood), environment, MOI (table saw), one patient; estimate blood loss",
+              "actionZh": "口述危险源（机器已锁定、血液）、环境、受伤机制（台锯）、单一患者；估计失血量",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection (splash risk)",
+              "actionZh": "戴手套和护目镜（喷溅风险）",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: pale male, awake, large blood pool, near-complete amputation at the wrist",
+              "actionZh": "第一眼：苍白男性、清醒、大片血泊、腕部近完全离断",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: alert, pale, frightened, gripping the towel. EXAMINER: when the towel is lifted, bright red blood SPURTS from the wound - direct pressure through dressings does NOT control it. This is hemorrhage requiring a tourniquet: apply proximal to the wound on the forearm, tighten until bleeding stops, NOTE THE TIME, never release. Airway clear; respirations 22; right radial pulse 122 weak. Skin (during RBS): pale, cool, clammy. RBS: no other injuries. SpO2 95% on O2. C-spine not indicated (no fall, no head involvement - machine injury only). UNSTABLE: tourniquet hemorrhage + shock signs.",
+          "infoZh": "患者演员：清醒、苍白、恐惧，死死按着毛巾。考官：掀开毛巾时鲜红血液从伤口喷出——隔敷料直接加压无法控制。此为需要止血带的大出血：在前臂伤口近端上止血带，收紧至出血停止，记录时间，绝不放松。气道通畅；呼吸 22；右桡动脉 122 次/分、细弱。皮肤（RBS 时给出）：苍白、湿冷。RBS：无其他损伤。SpO2 吸氧下 95%。无颈椎固定指征（无坠落、无头部受累——单纯机器伤）。不稳定：需止血带的大出血+休克征象。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: Alert",
+              "actionZh": "评估意识 / AVPU：Alert",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Attempt direct pressure; when it fails, apply a tourniquet proximal to the wound, tighten to stop the bleed, NOTE THE TIME, do not release",
+              "actionZh": "先直接加压；无效后立即在伤口近端上止血带，收紧至止血，记录时间，不再放松",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Assess airway",
+              "actionZh": "评估气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing",
+              "actionZh": "评估呼吸",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation on the uninjured side; recognize shock",
+              "actionZh": "在健侧评估循环；识别休克",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Complete the RBS for other injuries",
+              "actionZh": "完成快速查体排查其他损伤",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pale cool clammy",
+              "actionZh": "记录皮肤：苍白湿冷",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "High-flow oxygen 15 L NRB (shock)",
+              "actionZh": "高流量吸氧 15 L 非再吸入面罩（休克）",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position supine, keep warm with blankets",
+              "actionZh": "置仰卧位，盖毯保暖",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            },
+            {
+              "actionEn": "Bandage the wound once hemorrhage is controlled",
+              "actionZh": "出血控制后包扎伤口",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Hemorrhage requiring a tourniquet + amputation proximal to the wrist + shock signs = UNSTABLE, RTC. Ready to load within 15 minutes. Delegate a coworker (under direction) to prepare the amputated-part container while you package.",
+          "infoZh": "决策点。需止血带的大出血+腕近端离断+休克征象=不稳定，RTC。15 分钟内可装载。打包期间指导一名工友准备断肢保存容器。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC and act with urgency",
+              "actionZh": "判定为 RTC 并保持紧迫感",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Packaged and ready to load within 15 minutes",
+              "actionZh": "15 分钟内打包完毕可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate bystanders effectively (cot, doors, part preservation under direction)",
+              "actionZh": "有效指挥旁观者（担架床、开门、按指示准备断肢保存）",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "EN ROUTE (or while partner packages). ACTOR: reached over the blade to clear a jam, glove caught, arm pulled in; happened about 8 minutes before arrival; no LOC, no other body part touched the blade. Pain 9/10. PMHx: type 2 diabetes, high cholesterol. Meds: metformin, atorvastatin. Allergies: sulfa drugs (hives). LOI: breakfast 0700, coffee since.",
+          "infoZh": "途中（或搭档打包时）。患者演员：伸手越过锯片清理卡料，手套被卷住、手臂被拖入；发生在到场前约 8 分钟；无昏迷，身体其他部位未碰到锯片。疼痛 9/10。既往史：2 型糖尿病、高血脂。用药：二甲双胍、阿托伐他汀。过敏：磺胺类（荨麻疹）。最后进食：07:00 早餐，之后有咖啡。",
+          "expected": [
+            {
+              "actionEn": "Confirm chief complaint",
+              "actionZh": "确认主诉",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C: mechanism, time of injury (critical for TXA window), blade contact points, LOC",
+              "actionZh": "现病史：机制、受伤时间（TXA 时间窗关键）、锯片接触部位、有无昏迷",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Pain score",
+              "actionZh": "疼痛评分",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "PMHx (diabetes)",
+              "actionZh": "既往史（糖尿病）",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications",
+              "actionZh": "用药史",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies (sulfa)",
+              "actionZh": "过敏史（磺胺）",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI",
+              "actionZh": "最后进食",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1: GCS 15; BP 96/64; pulse 122 weak regular; respirations 22; skin pale cool clammy; pupils equal reactive; SpO2 95% on 15 L NRB; BGL 7.8 (indicated - known diabetic); temp not indicated. RTC interval 5-6 minutes.",
+          "infoZh": "第 1 组：GCS 15；血压 96/64；脉搏 122 细弱规则；呼吸 22；皮肤苍白湿冷；瞳孔等大有反应；SpO2 15 L 下 95%；血糖 7.8（有指征——已知糖尿病）；体温无指征。RTC 间隔 5-6 分钟。",
+          "expected": [
+            {
+              "actionEn": "GCS with components",
+              "actionZh": "GCS 及分项",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation on the uninjured arm",
+              "actionZh": "在健侧手臂听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate/strength/rhythm",
+              "actionZh": "脉搏频率/强度/节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations",
+              "actionZh": "呼吸",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on",
+              "actionZh": "动手查皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils",
+              "actionZh": "瞳孔",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 (probe on uninjured hand)",
+              "actionZh": "SpO2（探头夹健侧手指）",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "BGL - indicated in a known diabetic",
+              "actionZh": "血糖——已知糖尿病患者有指征",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, en route, brief for the unstable patient. ACTOR: general - felt lightheaded on scene; CNS nil; respiratory nil; cardiovascular - heart pounding; GI/GU - nauseated; integumentary - the wound; musculoskeletal nil elsewhere; endocrine - diabetes well controlled; EENT nil.",
+          "infoZh": "仅 PCP，途中，对不稳定患者从简。患者演员：整体——现场曾头晕；中枢神经无；呼吸无；心血管——心悸；消化/泌尿——恶心；皮肤——伤口；肌肉骨骼余处无；内分泌——糖尿病控制良好；眼耳鼻喉无。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "功能问诊——中枢神经",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory",
+              "actionZh": "功能问诊——呼吸",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU",
+              "actionZh": "功能问诊——消化/泌尿",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine (diabetes pertinent)",
+              "actionZh": "功能问诊——内分泌（糖尿病相关）",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe: head/neck nil; chest - clear, equal air entry 6 sites; abdomen soft; back nil; lower extremities nil; upper extremities - tourniquet in place, bleeding controlled, distal part cool and pulseless (expected distal to tourniquet), right arm normal.",
+          "infoZh": "途中从头到脚：头颈无；胸部——清晰、6 点进气对称；腹部软；背部无；下肢无；上肢——止血带在位、出血已控制、远端部分发凉无脉（止血带远端为预期表现）、右臂正常。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam",
+              "actionZh": "头颈查体",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with auscultation",
+              "actionZh": "胸部查体并听诊",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam",
+              "actionZh": "背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities",
+              "actionZh": "下肢",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities: tourniquet site, dressing, wound recheck",
+              "actionZh": "上肢：止血带部位、敷料、伤口复查",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Treatments: once the patient is stabilized, preserve the (near-)amputated part: rinse gross debris with cool sterile water, wrap loosely in saline-moistened sterile gauze, place in a plastic bag, keep the bag cool in a protective container, transport WITH the patient. Never warm it, never immerse in water, never place directly on ice, never use dry ice. Hypovolemia protocol: supine, warmth, O2. PCP EN ROUTE: vascular access on the right arm; fluid bolus 20 mL/kg max 2 L reassessing q500 mL (SBP target 90); TXA 2 g IV over 1 minute - indicated (shock from blood loss, well under 3 hours). Analgesia: Entonox is CAUTIONED in shock - withhold and document rationale.",
+          "infoZh": "处置：患者稳定后保存（近）离断部分：用冷的无菌水冲去大块污物，用生理盐水湿润的无菌纱布松松包裹，装入塑料袋，袋子放入保护容器中保持低温，随患者一同转运。绝不加温、绝不泡水、绝不直接放冰上、绝不用干冰。低血容量协议：仰卧、保暖、吸氧。PCP 途中：右臂建立静脉通路；补液 20 mL/kg 上限 2 升每 500 mL 复评（目标收缩压 90）；TXA 2 g 静推 1 分钟——有指征（失血性休克，远在 3 小时内）。镇痛：休克为 Entonox 慎用情形——暂不给并记录理由。",
+          "expected": [
+            {
+              "actionEn": "Wound management skill: tourniquet technique correct, time noted, bleeding controlled, wound bandaged",
+              "actionZh": "伤口处理技能：止血带操作正确、记录时间、出血控制、伤口包扎",
+              "weight": 25,
+              "rubricRef": "skill-wound-mgmt"
+            },
+            {
+              "actionEn": "Preserve the amputated part correctly (moist sterile gauze, bag, kept cool, not on ice, transported with patient)",
+              "actionZh": "正确保存离断部分（湿润无菌纱布、装袋、保冷、不直接接触冰、随患者转运）",
+              "weight": 25,
+              "rubricRef": "skill-wound-mgmt"
+            },
+            {
+              "actionEn": "Execute the Hypovolemia protocol (supine, warm, O2, rapid transport)",
+              "actionZh": "执行低血容量协议（仰卧、保暖、吸氧、快速转运）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "PCP: IV, 20 mL/kg bolus reassessed q500 mL, and TXA 2 g IV over 1 min with 6 rights",
+              "actionZh": "PCP：静脉通路、20 mL/kg 补液每 500 mL 复评、TXA 2 g 静推 1 分钟并六项核对",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Verbalize withholding Entonox due to shock caution",
+              "actionZh": "口述因休克慎用而暂不给 Entonox",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs, the tourniquet and dressing after every move - the dressing must stay dry (no re-bleeding). Set 2 (en route, fluids running): GCS 15; BP 102/66; pulse 114; respirations 20; skin pale cool; pupils equal; SpO2 96% on 15 L; BGL not repeated. Improving with fluid.",
+          "infoZh": "每次移动后复评 ABC、止血带与敷料——敷料须保持干燥（无再出血）。第 2 组（途中，补液中）：GCS 15；血压 102/66；脉搏 114；呼吸 20；皮肤苍白凉；瞳孔等大；SpO2 15 L 下 96%；血糖不需复测。补液后好转。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs plus tourniquet/dressing after each move and each 500 mL",
+              "actionZh": "每次移动及每 500 mL 后复评 ABC 及止血带/敷料",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full vitals within 5-6 minutes; interpret the improving trend",
+              "actionZh": "5-6 分钟内第二组完整生命体征；解读好转趋势",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Never release or loosen the tourniquet",
+              "actionZh": "绝不放松或松解止血带",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Critical patient - en-route notification with tourniquet TIME clearly stated. Hand-off must mention the part, its packaging, and TXA time. PCR within 5 minutes.",
+          "infoZh": "危重患者——途中预报并明确报告止血带时间。交接须提到断肢及其包装方式、TXA 给药时间。5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "En-route notification incl tourniquet time",
+              "actionZh": "途中预报（含止血带时间）",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off incl part preservation and drug times",
+              "actionZh": "完整交接（含断肢保存与给药时间）",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes (tourniquet and TXA times documented)",
+              "actionZh": "5 分钟内完成准确 PCR（记录止血带与 TXA 时间）",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline, tourniquet on",
+          "gcs": "15 (E4V5M6)",
+          "bp": "96/64",
+          "pulse": "122 weak regular",
+          "resp": "22 regular",
+          "skin": "pale cool clammy",
+          "pupils": "PERL",
+          "spo2": "95% on 15 L NRB",
+          "bgl": "7.8 mmol/L",
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "en route with fluids",
+          "gcs": "15 (E4V5M6)",
+          "bp": "102/66",
+          "pulse": "114 weak regular",
+          "resp": "20 regular",
+          "skin": "pale cool",
+          "pupils": "PERL",
+          "spo2": "96% on 15 L NRB",
+          "bgl": null,
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Finding life-threatening hemorrhage and failing to control it, or long delay before the tourniquet - 100% (RBS)",
+        "Releasing or loosening the tourniquet once applied - 100%",
+        "Not noting the tourniquet time - critical information failure carried into records deductions",
+        "Placing the part directly on ice, in water, or warming it - part-preservation errors (skill deductions)",
+        "PCP: skipping the reassessment every 500 mL during the bolus, or TXA outside its indications - protocol errors up to 100%"
+      ],
+      "criticalPitfallsZh": [
+        "发现致命性大出血却未控制，或上止血带前拖延过久——扣 100%（RBS）",
+        "止血带上好后又放松或松解——扣 100%",
+        "不记录止血带时间——关键信息缺失并延伸到记录类扣分",
+        "把断肢直接放冰上、泡水或加温——断肢保存错误（技能类扣分）",
+        "PCP：补液不做每 500 mL 复评，或超出指征使用 TXA——协议类错误最高扣 100%"
+      ],
+      "emrVariantEn": "EMR: tourniquet, part preservation, shock positioning, warmth, high-flow O2 and a 15-minute clock are all EMR-level skills - no IV, no TXA. Entonox withheld (shock caution).",
+      "emrVariantZh": "EMR：止血带、断肢保存、休克体位、保暖、高流量吸氧和 15 分钟时限全部是 EMR 级技能——无静脉、无 TXA。Entonox 因休克慎用而不给。",
+      "pcpVariantEn": "PCP adds vascular access on the intact arm, 20 mL/kg NS bolus (max 2 L, reassess q500 mL, target SBP 90) and TXA 2 g IV over 1 minute within the 3-hour window. Functional Enquiry en route.",
+      "pcpVariantZh": "PCP 增加健侧手臂静脉通路、生理盐水 20 mL/kg 补液（上限 2 升、每 500 mL 复评、目标收缩压 90）及 3 小时窗内 TXA 2 g 静推 1 分钟。功能问诊途中完成。",
+      "handoffModelEn": "This is a 52-year-old male with a near-complete amputation of the left hand just proximal to the wrist from a table saw at approximately 0957, arterial bleeding uncontrolled by direct pressure. A tourniquet was applied to the left forearm at 1012 and has not been released. Estimated 700 mL blood loss on scene. Initial vitals GCS 15, BP 96/64, pulse 122 weak, resps 22, skin pale cool clammy, SpO2 95% on 15 litres, BGL 7.8; latest BP 102/66, pulse 114 after one litre of saline. History of type 2 diabetes and dyslipidemia on metformin and atorvastatin, allergic to sulfa. Treatments: tourniquet at 1012, pressure dressing, supine with warmth, high-flow oxygen, IV with saline bolus running, TXA 2 grams IV at 1025, and the amputated part is wrapped in saline-moistened gauze, bagged and kept cool, transported with him.",
+      "handoffModelZh": "患者 52 岁男性，约 09:57 左手在台锯下于腕近端近完全离断，动脉性出血直接加压无法控制。10:12 于左前臂上止血带，此后未松解。现场估计失血 700 mL。首组生命体征 GCS 15、血压 96/64、脉搏 122 细弱、呼吸 22、皮肤苍白湿冷、SpO2 15 升下 95%、血糖 7.8；补液 1 升后末组血压 102/66、脉搏 114。既往 2 型糖尿病、血脂异常，服二甲双胍和阿托伐他汀，磺胺过敏。处置：10:12 止血带、加压敷料、仰卧保暖、高流量吸氧、静脉补液中、10:25 TXA 2 g 静推；断肢以盐水湿纱布包裹装袋保冷，随患者转运。",
+      "pcrKeyPoints": {
+        "cc": "Near-complete left hand amputation proximal to wrist, arterial hemorrhage",
+        "hxcc": "Table saw caught glove while clearing jam ~0957; no LOC; pain 9/10; ~700 mL loss on scene",
+        "pmhx": "Type 2 diabetes, dyslipidemia",
+        "meds": "Metformin, atorvastatin",
+        "allergies": "Sulfa (hives)",
+        "treatments": [
+          "Direct pressure failed - tourniquet left forearm at 1012, never released",
+          "Pressure dressing over wound",
+          "Supine, warmth, high-flow O2",
+          "Part: saline-moist gauze, bagged, kept cool, transported with patient",
+          "PCP: IV, NS bolus q500 mL reassess, TXA 2 g IV at 1025"
+        ],
+        "findings": [
+          "Estimated 700 mL blood loss",
+          "Shock: BP 96/64, pulse 122, pale cool clammy",
+          "Improving after fluids: BP 102/66, pulse 114",
+          "BGL 7.8 (diabetic)"
+        ]
+      }
+    },
+    {
+      "id": "md-01",
+      "type": "medical",
+      "titleEn": "Anaphylaxis After Peanut Exposure",
+      "titleZh": "花生暴露后过敏性休克",
+      "protocols": [
+        "Anaphylaxis",
+        "Shortness of Breath"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "1915 hrs. Code 3 to a Thai restaurant in New Westminster. 24-year-old female with a known peanut allergy has an allergic reaction. Staff say she is having trouble breathing. Hospital is 9 minutes away.",
+      "dispatchZh": "19:15，Code 3 前往新西敏一家泰国餐厅。24 岁女性，已知花生过敏，出现过敏反应。店员称她呼吸困难。医院车程 9 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: caller says her face is swelling and she used to carry an EpiPen but does not have it tonight.",
+          "infoZh": "调度补充：报警人称她面部肿胀，她平时带 EpiPen 但今晚没带。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan epinephrine, oxygen, salbutamol, BVM, early transport",
+              "actionZh": "确认信息；准备肾上腺素、氧气、沙丁胺醇、球囊面罩，计划尽早转运",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Recognize from dispatch this is likely an unstable anaphylaxis call",
+              "actionZh": "从派遣信息即预判这很可能是不稳定的过敏性休克",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Busy restaurant, staff have cleared a path to a corner booth. The patient is slumped sideways in the booth, flushed, with obvious facial and lip swelling, audible wheeze and stridor. Her friend is beside her holding a plate of pad thai. Room temperature, no hazards. One patient.",
+          "infoZh": "考官脚本：餐厅客满，店员已清出通往角落卡座的通道。患者侧歪在卡座上，面色潮红，面部及口唇明显肿胀，可闻及喘鸣和吸气性喉鸣。朋友在旁边端着一盘泰式炒河粉。室温正常，无危险源。单一患者。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (none), environment, nature of illness (allergic reaction / possible ongoing allergen), number of patients (1)",
+              "actionZh": "口述危险源（无）、环境、发病性质（过敏反应/可能仍在接触过敏原）、患者数量（1 名）",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: flushed, facial/lip swelling, audible stridor and wheeze, slumped posture",
+              "actionZh": "第一眼：潮红、面唇肿胀、可闻及喉鸣与喘鸣、身体瘫软",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            },
+            {
+              "actionEn": "Remove/stop the allergen exposure (clear the food away)",
+              "actionZh": "移除/终止过敏原暴露（把食物拿开）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: awake but drowsy, answers in one or two words, clutching her throat, says 'can't... breathe'. EXAMINER (give when assessed): airway - swollen, stridor present but she is still moving air; respirations 30, laboured with accessory muscle use and audible wheeze; radial pulse 130 weak. Skin: flushed with widespread urticaria (hives) over chest and arms, warm and moist. RBS: no trauma, no injection sites, no stinger. SpO2 88% RA. C-spine NOT indicated. UNSTABLE: anaphylaxis with respiratory distress and decreased LOC.",
+          "infoZh": "患者演员：清醒但嗜睡，只能一两个词回答，手抓喉咙，说「喘…不上气」。考官（评估时给出）：气道——肿胀、有喉鸣但仍有气流通过；呼吸 30 次/分、费力、动用辅助呼吸肌、可闻及喘鸣；桡动脉 130 次/分、细弱。皮肤：潮红，胸部和双臂广泛荨麻疹，温热潮湿。RBS：无外伤、无注射痕迹、无蜂刺。SpO2 室内空气 88%。无颈椎固定指征。不稳定：过敏性休克伴呼吸窘迫和意识下降。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: responds to Verbal, drowsy - a decreased LOC finding",
+              "actionZh": "评估意识 / AVPU：对言语有反应、嗜睡——属意识下降",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Verbalize c-spine not indicated (medical, no trauma)",
+              "actionZh": "口述无颈椎固定指征（内科、无外伤）",
+              "weight": 5,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway - identify swelling and stridor as an airway threat",
+              "actionZh": "评估气道——识别肿胀与喉鸣为气道威胁",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing - rate, effort, accessory muscle use, wheeze",
+              "actionZh": "评估呼吸——频率、做功、辅助肌使用、喘鸣",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation - weak rapid radial pulse",
+              "actionZh": "评估循环——桡动脉细速",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Perform a modified rapid body survey looking for hives, stinger/injection site and other causes",
+              "actionZh": "做改良快速查体，寻找荨麻疹、蜂刺/注射部位及其他原因",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: flushed, urticaria, warm moist",
+              "actionZh": "记录皮肤：潮红、荨麻疹、温热潮湿",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "High-flow oxygen 15 L NRB to target SpO2 at or above 94%",
+              "actionZh": "高流量吸氧 15 L 非再吸入面罩，目标 SpO2≥94%",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position SUPINE to support blood pressure and do NOT walk the patient (per Anaphylaxis guideline)",
+              "actionZh": "按过敏性休克指南置仰卧位以维持血压，且绝不让患者行走",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Anaphylaxis with respiratory distress and decreased LOC = UNSTABLE, RTC. Give epinephrine on scene then transport - do not delay for a full secondary survey. Ready to load within 15 minutes. Delegate crew to prep egress while you run the protocol.",
+          "infoZh": "决策点。过敏性休克伴呼吸窘迫和意识下降=不稳定，RTC。现场给肾上腺素后转运——不要为完成完整二次评估而拖延。15 分钟内可装载。执行协议同时指派搭档准备撤离路线。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC and act with urgency",
+              "actionZh": "判定为 RTC 并保持紧迫感",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Epinephrine given on scene, then ready to load within 15 minutes",
+              "actionZh": "现场给予肾上腺素后 15 分钟内可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate crew members to prep egress (explicitly required by the Anaphylaxis guideline)",
+              "actionZh": "指派搭档准备撤离通道（过敏性休克指南明确要求）",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "ACTOR / FRIEND ANSWERS (patient can only manage a few words; use the friend): ate pad thai, first mouthful about 8 minutes ago, told the server 'no peanuts'; itching and throat tightness within 2 minutes, then swelling. Known peanut anaphylaxis, two previous ER visits, one previous EpiPen use. Onset sudden, severity worst ever, no relief. PMHx: peanut anaphylaxis, mild asthma. Meds: salbutamol MDI prn, EpiPen (not with her, expired last month). Allergies: peanuts (anaphylaxis), shellfish (hives). LOI: the pad thai just now, water.",
+          "infoZh": "患者/朋友回答（患者只能说几个词，主要问朋友）：吃了泰式炒河粉，第一口约在 8 分钟前，点餐时特意说过「不要花生」；2 分钟内出现瘙痒和喉咙发紧，随后肿胀。已知花生过敏性休克，曾两次进急诊，用过一次 EpiPen。起病突然，是历来最重的一次，无缓解。既往史：花生过敏性休克、轻度哮喘。用药：沙丁胺醇定量吸入剂按需、EpiPen（未随身，上月已过期）。过敏：花生（过敏性休克）、贝类（荨麻疹）。最后进食：刚才的炒河粉和水。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: difficulty breathing and throat swelling after eating",
+              "actionZh": "确立主诉：进食后呼吸困难与咽喉肿胀",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C with OPQRRRST/LOTARP: onset, allergen, time from exposure, progression, previous reactions, severity",
+              "actionZh": "用 OPQRRRST/LOTARP 采集现病史：起病、过敏原、暴露到发病时间、进展、既往反应、严重程度",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "PMHx (peanut anaphylaxis, asthma)",
+              "actionZh": "既往史（花生过敏性休克、哮喘）",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications incl EpiPen availability and expiry",
+              "actionZh": "用药史（含 EpiPen 是否随身及有效期）",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies with consequence detail",
+              "actionZh": "过敏史及其后果细节",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI - identifies the exposure",
+              "actionZh": "最后进食——确定暴露源",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            },
+            {
+              "actionEn": "Use the friend as a history source when the patient cannot speak",
+              "actionZh": "患者说不了话时改由朋友提供病史",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 - baseline BEFORE epinephrine (required before initiating a protocol): GCS 14 (E4 V4 M6, confused); BP 84/50; pulse 130 weak regular; respirations 30 laboured with wheeze; skin flushed, urticarial, warm moist; pupils equal reactive; SpO2 88% RA. BGL 6.1 if checked (altered LOC - reasonable). Temp not indicated. RTC interval 5-6 minutes.",
+          "infoZh": "第 1 组——给肾上腺素前的基线（启动协议前必须完成）：GCS 14（E4 V4 M6，言语错乱）；血压 84/50；脉搏 130 细弱规则；呼吸 30 费力伴喘鸣；皮肤潮红、有荨麻疹、温热潮湿；瞳孔等大有反应；SpO2 室内空气 88%。若测血糖为 6.1（意识改变，测血糖合理）。体温无指征。RTC 间隔 5-6 分钟。",
+          "expected": [
+            {
+              "actionEn": "GCS with components (14: E4 V4 M6)",
+              "actionZh": "GCS 及分项（14：E4 V4 M6）",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation - recognize BP under 90 systolic as an anaphylaxis instability criterion",
+              "actionZh": "听诊测血压——识别收缩压低于 90 为过敏性休克不稳定标准",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate/strength/rhythm",
+              "actionZh": "脉搏频率/强度/节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character incl wheeze",
+              "actionZh": "呼吸频率/深度/性质（含喘鸣）",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on: temperature, colour, condition, extent of urticaria",
+              "actionZh": "动手查皮肤：温度、颜色、状态、荨麻疹范围",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils",
+              "actionZh": "瞳孔",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration",
+              "actionZh": "SpO2 并校准",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "BGL - reasonable with altered LOC",
+              "actionZh": "血糖——意识改变时合理",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, en route AFTER epinephrine, brief. ACTOR (improving, now able to talk): general - felt fine until dinner; CNS - felt faint, no headache; respiratory - throat tightness and wheeze, improving; cardiovascular - heart racing (expected after epinephrine); GI/GU - crampy abdominal pain and nausea; integumentary - itching and hives all over; musculoskeletal nil; endocrine nil; EENT - lip and tongue swelling, eyes itchy and puffy.",
+          "infoZh": "仅 PCP，给肾上腺素后在途中简要完成。患者演员（好转，已能说话）：整体——晚餐前一切正常；中枢神经——曾觉眩晕、无头痛；呼吸——咽紧和喘鸣，正在好转；心血管——心跳快（用肾上腺素后预期表现）；消化/泌尿——腹部绞痛伴恶心；皮肤——全身瘙痒和风团；肌肉骨骼无；内分泌无；眼耳鼻喉——口唇及舌肿胀、眼痒浮肿。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "功能问诊——中枢神经",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory (pertinent)",
+              "actionZh": "功能问诊——呼吸（与主诉相关）",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (abdominal cramps are an anaphylaxis sign)",
+              "actionZh": "功能问诊——消化/泌尿（腹部绞痛属过敏性休克表现）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary (urticaria)",
+              "actionZh": "功能问诊——皮肤（荨麻疹）",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "功能问诊——内分泌",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT (angioedema)",
+              "actionZh": "功能问诊——眼耳鼻喉（血管性水肿）",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe: head/neck - lip and tongue swelling, stridor decreasing after epinephrine, no JVD; chest - expiratory wheeze in all fields on 6-site auscultation, improving after salbutamol; abdomen - soft, mild generalized tenderness; back - urticaria across the back; lower extremities - urticaria, CSM intact; upper extremities - urticaria, CSM intact.",
+          "infoZh": "途中从头到脚：头颈——口唇及舌肿胀，用肾上腺素后喉鸣减轻，无颈静脉怒张；胸部——6 点听诊各野呼气相喘鸣，沙丁胺醇后好转；腹部——软，轻度弥漫压痛；背部——背部可见荨麻疹；下肢——荨麻疹，远端 CSM 完好；上肢——荨麻疹，远端 CSM 完好。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam incl airway swelling reassessment",
+              "actionZh": "头颈查体（含气道肿胀复评）",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation, bilateral comparison",
+              "actionZh": "胸部查体并 6 点听诊、双侧对比",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam",
+              "actionZh": "背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities",
+              "actionZh": "下肢",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities",
+              "actionZh": "上肢",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "ALL LEVELS: remove allergen, supine, high-flow O2, baseline vitals, then EPINEPHRINE 0.5 mg IM (adult) - there are no absolute contraindications in life-threatening anaphylaxis; may repeat every 5 minutes up to 3 times. Then transport and continue treatment en route. PCP ADDITIONS: vascular access and 20 mL/kg fluid bolus (max 2 L, reassess q500 mL) if still hypotensive; salbutamol by nebulizer or MDI for bronchospasm AFTER epinephrine has been given; diphenhydramine 25-50 mg to limit the histamine response. Note: epinephrine first - salbutamol or antihistamine INSTEAD of epinephrine is a major protocol error.",
+          "infoZh": "各级别通用：移除过敏原、仰卧、高流量吸氧、完成基线生命体征，然后肌注肾上腺素 0.5 mg（成人）——危及生命的过敏性休克无绝对禁忌；可每 5 分钟重复，最多 3 次。随后转运并在途中继续治疗。PCP 追加：仍低血压时建立静脉通路并 20 mL/kg 补液（上限 2 升、每 500 mL 复评）；肾上腺素已给后再用沙丁胺醇雾化或定量吸入剂处理支气管痉挛；苯海拉明 25-50 mg 抑制组胺反应。注意：必须先给肾上腺素——用沙丁胺醇或抗组胺药替代肾上腺素属重大协议错误。",
+          "expected": [
+            {
+              "actionEn": "Initiate the Anaphylaxis protocol with correct indications (signs + exposure + instability) and baseline vitals done",
+              "actionZh": "在指征正确（症状+暴露+不稳定）且基线生命体征已完成的前提下启动过敏性休克协议",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Administer epinephrine 0.5 mg IM with the 6 rights, correct site (anterolateral thigh) and IM needle",
+              "actionZh": "按六项核对肌注肾上腺素 0.5 mg，部位正确（大腿前外侧）并使用肌注针",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Verbalize repeat dosing: may repeat 0.5 mg IM every 5 minutes up to 3 doses if no improvement",
+              "actionZh": "口述重复给药：无改善时可每 5 分钟重复 0.5 mg 肌注，最多 3 次",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "PCP: salbutamol for bronchospasm only AFTER epinephrine; diphenhydramine 25-50 mg; IV with fluid bolus if still hypotensive",
+              "actionZh": "PCP：支气管痉挛在肾上腺素之后再用沙丁胺醇；苯海拉明 25-50 mg；仍低血压时静脉补液",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Do not allow the patient to stand or walk to the stretcher",
+              "actionZh": "不允许患者站立或自行走到担架床",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs and interventions 5 minutes after epinephrine and after each move. Set 2 (5 minutes post-epinephrine, en route): GCS 15 (E4V5M6); BP 106/68; pulse 118 stronger; respirations 22, wheeze reduced, stridor resolved; skin still flushed with fading hives, warm dry; pupils equal; SpO2 96% on 15 L. Improving - document the response; if it had NOT improved, a second 0.5 mg IM dose at 5 minutes is required.",
+          "infoZh": "肾上腺素后 5 分钟及每次移动后复评 ABC 与各项处置。第 2 组（给药后 5 分钟，途中）：GCS 15（E4V5M6）；血压 106/68；脉搏 118 较前有力；呼吸 22，喘鸣减轻、喉鸣消失；皮肤仍潮红、风团渐退、温干；瞳孔等大；SpO2 15 L 下 96%。病情好转——记录治疗反应；若未好转，须在 5 分钟时追加第二剂 0.5 mg 肌注。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions after epinephrine and after each move",
+              "actionZh": "给药后及每次移动后复评 ABC 与全部处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within 5-6 minutes and interpret the response to epinephrine",
+              "actionZh": "5-6 分钟内完成第二组完整生命体征，并解读对肾上腺素的反应",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Verbalize the plan for a repeat dose if deterioration or no improvement occurs",
+              "actionZh": "口述若病情恶化或无改善的重复给药计划",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Critical patient - notify the hospital en route (allergic airway). Structured hand-off with drug times and response; PCR within 5 minutes.",
+          "infoZh": "危重患者——途中通知医院（过敏性气道问题）。结构化交接，含给药时间与反应；5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "En-route notification for a critical patient",
+              "actionZh": "危重患者途中预报",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off with epinephrine time, dose, route and response",
+              "actionZh": "完整交接（肾上腺素时间、剂量、途径与反应）",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline, before epinephrine",
+          "gcs": "14 (E4V4M6)",
+          "bp": "84/50",
+          "pulse": "130 weak regular",
+          "resp": "30 laboured with wheeze",
+          "skin": "flushed, urticaria, warm moist",
+          "pupils": "PERL",
+          "spo2": "88% RA",
+          "bgl": "6.1 mmol/L",
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "5 min after epinephrine, en route",
+          "gcs": "15 (E4V5M6)",
+          "bp": "106/68",
+          "pulse": "118 stronger regular",
+          "resp": "22, wheeze reduced, stridor resolved",
+          "skin": "flushed, hives fading, warm dry",
+          "pupils": "PERL",
+          "spo2": "96% on 15 L NRB",
+          "bgl": null,
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Giving salbutamol or diphenhydramine instead of / before epinephrine - major protocol error up to 100%",
+        "Initiating the protocol without a baseline set of vital signs - 100%",
+        "Walking the patient to the stretcher or sitting her up when hypotensive - 100% (guideline says supine, do not walk)",
+        "Not reassessing at 5 minutes and missing the indication for a repeat epinephrine dose - major delay in subsequent doses, 100%",
+        "Treating as non-RTC and completing a full on-scene secondary survey - transport category error, 25%"
+      ],
+      "criticalPitfallsZh": [
+        "用沙丁胺醇或苯海拉明替代肾上腺素、或抢在其之前给——重大协议错误，最高扣 100%",
+        "未做基线生命体征就启动协议——扣 100%",
+        "让低血压患者自行走向担架或坐起——扣 100%（指南要求仰卧、禁止行走）",
+        "5 分钟不复评、错过重复给肾上腺素的指征——后续剂量重大延误，扣 100%",
+        "当作非 RTC、在现场做完整二次评估——转运分类错误，扣 25%"
+      ],
+      "emrVariantEn": "EMR gives epinephrine 0.5 mg IM (repeat q5 min up to 3 doses), oxygen, supine positioning and rapid transport. EMR does NOT give diphenhydramine or IV fluids; salbutamol is within EMR scope for bronchospasm but only after epinephrine. No Functional Enquiry.",
+      "emrVariantZh": "EMR 给肾上腺素 0.5 mg 肌注（每 5 分钟重复，最多 3 次）、吸氧、仰卧位并快速转运。EMR 不给苯海拉明和静脉补液；沙丁胺醇在 EMR 范围内可用于支气管痉挛，但必须在肾上腺素之后。无功能问诊。",
+      "pcpVariantEn": "PCP adds vascular access with a 20 mL/kg bolus (max 2 L, reassess q500 mL) for persistent hypotension, salbutamol after epinephrine for bronchospasm, diphenhydramine 25-50 mg, and the 9-system Functional Enquiry en route.",
+      "pcpVariantZh": "PCP 增加静脉通路与 20 mL/kg 补液（上限 2 升、每 500 mL 复评）处理持续低血压、肾上腺素后用沙丁胺醇处理支气管痉挛、苯海拉明 25-50 mg，以及途中 9 系统功能问诊。",
+      "handoffModelEn": "This is a 24-year-old female with known peanut anaphylaxis, chief complaint of throat swelling and difficulty breathing about 8 minutes after eating pad thai. On our arrival she had stridor, wheeze, facial and lip angioedema, widespread urticaria, GCS 14, BP 84/50, pulse 130 weak, resps 30 laboured, SpO2 88% on room air, BGL 6.1. She received epinephrine 0.5 milligrams IM to the left anterolateral thigh at 1922, high-flow oxygen, supine positioning, salbutamol by nebulizer and diphenhydramine 50 milligrams, with an IV and saline running. Five minutes post-epinephrine she is GCS 15, BP 106/68, pulse 118, resps 22, SpO2 96% on 15 litres, stridor resolved. History of peanut anaphylaxis and mild asthma, uses a salbutamol inhaler, her EpiPen was expired and not with her, allergic to peanuts and shellfish.",
+      "handoffModelZh": "患者 24 岁女性，已知花生过敏性休克，主诉为进食泰式炒河粉约 8 分钟后出现咽喉肿胀和呼吸困难。我们到场时有喉鸣、喘鸣、面唇血管性水肿、全身荨麻疹，GCS 14、血压 84/50、脉搏 130 细弱、呼吸 30 费力、SpO2 室内空气 88%、血糖 6.1。19:22 于左大腿前外侧肌注肾上腺素 0.5 mg，并给高流量吸氧、仰卧位、沙丁胺醇雾化和苯海拉明 50 mg，已建立静脉通路补液。给药后 5 分钟：GCS 15、血压 106/68、脉搏 118、呼吸 22、SpO2 15 升下 96%，喉鸣消失。既往花生过敏性休克及轻度哮喘，使用沙丁胺醇吸入剂，EpiPen 已过期且未随身，对花生和贝类过敏。",
+      "pcrKeyPoints": {
+        "cc": "Throat swelling and difficulty breathing after peanut exposure (anaphylaxis)",
+        "hxcc": "Ate pad thai ~8 min prior despite requesting no peanuts; itching and throat tightness within 2 min, progressive swelling, worst reaction to date; 2 previous ER visits",
+        "pmhx": "Peanut anaphylaxis, mild asthma",
+        "meds": "Salbutamol MDI prn; EpiPen (expired, not carried)",
+        "allergies": "Peanuts (anaphylaxis), shellfish (hives)",
+        "treatments": [
+          "Allergen removed",
+          "Supine, not ambulated",
+          "High-flow O2 15 L NRB",
+          "Epinephrine 0.5 mg IM anterolateral thigh at 1922",
+          "PCP: salbutamol neb after epi, diphenhydramine 50 mg, IV + fluid for hypotension",
+          "RTC transport with en-route notification"
+        ],
+        "findings": [
+          "Stridor, wheeze, facial/lip angioedema, widespread urticaria",
+          "Baseline GCS 14, BP 84/50, pulse 130, SpO2 88% RA",
+          "Post-epinephrine GCS 15, BP 106/68, SpO2 96%, stridor resolved",
+          "Abdominal cramping and nausea"
+        ]
+      }
+    }
+  ]
+}

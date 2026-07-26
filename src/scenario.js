@@ -236,6 +236,7 @@ function drawScenarioResult(el, sc) {
     S.scenarioHistory.push({ id: sc.id, date: new Date().toISOString().slice(0, 10), score, pass });
     save(); run.saved = true;
   }
+  const autoFails = run.deductions.filter(d => d.weight >= 100);
   el.innerHTML = `
     <a class="back-link" href="#/scenarios">← ${t('Scenarios', '场景库')}</a>
     <div class="card score-hero">
@@ -243,6 +244,12 @@ function drawScenarioResult(el, sc) {
       <p><b>${bi(sc.titleEn, sc.titleZh, 'span')}</b></p>
       <p class="muted">${pass ? t('PASS — 70% needed', '通过——及格线 70%') : t('BELOW 70% — review the deductions', '低于 70%——复盘扣分项')} · ${mins} min</p>
     </div>
+    ${autoFails.length ? `<div class="card" style="border-color:var(--red);background:var(--red-soft)">
+      <h3 style="margin-top:0;color:var(--red)">☠️ ${t('AUTO-FAIL', '直接挂科')}</h3>
+      ${bi('You missed a 100%-deduction item. In the real exam this ends the scenario as a fail regardless of everything else you did well.',
+           '你踩到了 100% 扣分项。在真实考试里这一条就直接判挂，不管你其它地方做得多好。')}
+      <ul style="margin-top:8px">${autoFails.map(d => `<li>${bi(d.actionEn, d.actionZh, 'span')}</li>`).join('')}</ul>
+    </div>` : ''}
     ${run.deductions.length ? `<div class="card">
       <h3 style="margin-top:0">${t('Deductions taken', '被扣的分')}</h3>
       <ul class="deduct-list" style="list-style:none">

@@ -1,0 +1,3912 @@
+{
+  "meta": {
+    "part": "pcp-assessment-populations",
+    "count": 100,
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
+  "questions": [
+    {
+      "id": "pap-001",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "foundation",
+      "questionEn": "According to the BC Patient Assessment Model, which sequence correctly lists the seven components in their standard order?",
+      "questionZh": "根据 BC Patient Assessment Model，下列哪一项正确列出了七个组成部分的标准顺序？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Primary Survey, Rescue Scene Evaluation, Secondary Survey, Treatments, Protocols, Load and Transport, Records and Reports",
+          "zh": "Primary Survey、Rescue Scene Evaluation、Secondary Survey、Treatments、Protocols、Load and Transport、Records and Reports"
+        },
+        {
+          "key": "B",
+          "en": "Rescue Scene Evaluation, Primary Survey, Secondary Survey, Protocols, Treatments, Load and Transport, Records and Reports",
+          "zh": "Rescue Scene Evaluation、Primary Survey、Secondary Survey、Protocols、Treatments、Load and Transport、Records and Reports"
+        },
+        {
+          "key": "C",
+          "en": "Rescue Scene Evaluation, Secondary Survey, Primary Survey, Protocols, Treatments, Records and Reports, Load and Transport",
+          "zh": "Rescue Scene Evaluation、Secondary Survey、Primary Survey、Protocols、Treatments、Records and Reports、Load and Transport"
+        },
+        {
+          "key": "D",
+          "en": "Primary Survey, Secondary Survey, Rescue Scene Evaluation, Load and Transport, Protocols, Treatments, Records and Reports",
+          "zh": "Primary Survey、Secondary Survey、Rescue Scene Evaluation、Load and Transport、Protocols、Treatments、Records and Reports"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The model on p.6 flows: Rescue Scene Evaluation, Primary Survey, Secondary Survey (history, vital signs, head-to-toe), Protocols, Treatments, Load and Transport, then Records and Reports. Depending on stability, load and transport may move up any time after the decision point, but this is the generic order.",
+      "explanationZh": "p.6 的模型顺序为：Rescue Scene Evaluation → Primary Survey → Secondary Survey（history、vital signs、head-to-toe）→ Protocols → Treatments → Load and Transport → Records and Reports。依据病人稳定程度，load and transport 可以在 decision point 之后随时提前，但通用顺序如上。",
+      "sourceRef": "BC Guidelines p.6",
+      "verified": false
+    },
+    {
+      "id": "pap-002",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "foundation",
+      "questionEn": "You arrive at a single-vehicle MVA at night. The car has struck a power pole and a wire is draped across the hood. The driver is slumped over the wheel. What should you do first?",
+      "questionZh": "夜间你到达一起单车 MVA 现场。汽车撞上电线杆，一根电线搭在引擎盖上，驾驶员趴在方向盘上。你首先应该做什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Approach the driver's window and begin the primary survey through the glass",
+          "zh": "走近驾驶员车窗，隔着玻璃开始 primary survey"
+        },
+        {
+          "key": "B",
+          "en": "Instruct the driver to open the door and step away from the vehicle",
+          "zh": "指示驾驶员打开车门并离开车辆"
+        },
+        {
+          "key": "C",
+          "en": "Stage at a safe distance and confirm the line is de-energized by the utility crew before anyone approaches",
+          "zh": "在安全距离外待命，等电力公司确认电线断电后再让任何人接近"
+        },
+        {
+          "key": "D",
+          "en": "Move the wire off the hood with a wooden pole so you can access the patient",
+          "zh": "用木杆把电线从引擎盖上挑开以便接触病人"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Hazard identification is the first step of the Rescue Scene Evaluation, and the electrical contact guideline is explicit: do not approach electrical sources or downed power lines until qualified personnel have deemed the scene safe. No patient contact or instruction to exit occurs until the scene is cleared.",
+      "explanationZh": "Hazards 是 Rescue Scene Evaluation 的第一步，而 electrical contact 指南明确要求：在合格人员确认现场安全之前，不得接近电源或落地电线。现场未清除危险前不能接触病人，也不能指示其下车。",
+      "sourceRef": "BC Guidelines p.9, p.35",
+      "verified": false
+    },
+    {
+      "id": "pap-003",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "foundation",
+      "questionEn": "What is the stated purpose of the primary survey in the BC Patient Assessment Model?",
+      "questionZh": "在 BC Patient Assessment Model 中，primary survey 的明确目的（purpose）是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "To identify and manage life- and limb-threatening injuries and conditions",
+          "zh": "识别并处理危及生命和肢体的损伤与病情"
+        },
+        {
+          "key": "B",
+          "en": "To establish a baseline set of vital signs and identify the chief complaint",
+          "zh": "建立基线 vital signs 并确定 chief complaint"
+        },
+        {
+          "key": "C",
+          "en": "To ensure the scene is safe for the crew and the patient",
+          "zh": "确保现场对救护人员和病人安全"
+        },
+        {
+          "key": "D",
+          "en": "To gather a complete SAMPLE history before treatment begins",
+          "zh": "在治疗开始前收集完整的 SAMPLE history"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Per the component table, the primary survey exists to identify and manage life- and limb-threatening injuries and conditions. Baseline vitals and chief complaint belong to the secondary survey; scene safety is the purpose of the Rescue Scene Evaluation.",
+      "explanationZh": "根据组件表，primary survey 的目的是识别并处理危及生命和肢体的损伤与病情。基线 vitals 和 chief complaint 属于 secondary survey；现场安全是 Rescue Scene Evaluation 的目的。",
+      "sourceRef": "BC Guidelines p.9",
+      "verified": false
+    },
+    {
+      "id": "pap-004",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "Which element of the secondary survey is specifically listed in the BC guidelines as required at the PCP level?",
+      "questionZh": "BC 指南中，secondary survey 的哪个组成部分被特别标注为 PCP 级别必须完成（required）？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Head-to-toe examination",
+          "zh": "Head-to-toe examination（从头到脚检查）"
+        },
+        {
+          "key": "B",
+          "en": "Baseline vital signs",
+          "zh": "基线 vital signs"
+        },
+        {
+          "key": "C",
+          "en": "History taking",
+          "zh": "History（病史采集）"
+        },
+        {
+          "key": "D",
+          "en": "Functional inquiry",
+          "zh": "Functional inquiry（系统回顾问诊）"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The secondary survey consists of history, vital signs, head-to-toe examination, and functional inquiry, with functional inquiry annotated as PCP required. History, vitals, and head-to-toe are expected at all licence levels.",
+      "explanationZh": "Secondary survey 包括 history、vital signs、head-to-toe examination 和 functional inquiry，其中 functional inquiry 标注为 PCP required。History、vitals 和 head-to-toe 是所有级别都要完成的。",
+      "sourceRef": "BC Guidelines p.9",
+      "verified": false
+    },
+    {
+      "id": "pap-005",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "A 24-year-old man has been stabbed in the left chest. Your primary survey finds respiratory distress with accessory muscle use and a sealed open chest wound. He is clearly unstable. What is the most appropriate next step?",
+      "questionZh": "一名 24 岁男性左胸被刺伤。Primary survey 发现呼吸窘迫伴辅助呼吸肌使用，开放性胸部伤口已封闭。他明显不稳定。下一步最合适的做法是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Complete a full head-to-toe examination on scene before moving him",
+          "zh": "搬动前先在现场完成完整的 head-to-toe examination"
+        },
+        {
+          "key": "B",
+          "en": "Load and initiate transport now, completing the secondary survey en route",
+          "zh": "立即装载并开始转运，在途中完成 secondary survey"
+        },
+        {
+          "key": "C",
+          "en": "Obtain a full SAMPLE history and two sets of vital signs on scene",
+          "zh": "在现场完成完整 SAMPLE history 和两组 vital signs"
+        },
+        {
+          "key": "D",
+          "en": "Wait on scene for ALS intercept before any movement",
+          "zh": "在现场等待 ALS 支援后再搬动病人"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The model's footnote states that depending on patient condition (stable vs unstable), load and transport may be appropriate any time after the decision point. Major penetrating torso trauma with respiratory distress is unstable: transport is prioritized and the secondary survey continues en route.",
+      "explanationZh": "模型脚注指出：依据病人情况（stable vs unstable），load and transport 可以在 decision point 之后随时进行。胸部大穿透伤伴呼吸窘迫属于不稳定：应优先转运，secondary survey 在途中继续完成。",
+      "sourceRef": "BC Guidelines p.6-7",
+      "verified": false
+    },
+    {
+      "id": "pap-006",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "You find a 30-year-old man lying on a couch after a party. He does not respond when you enter, but when you loudly call his name he opens his eyes, mumbles an answer, and drifts back off. On the AVPU scale he is:",
+      "questionZh": "派对后你发现一名 30 岁男性躺在沙发上。你进门时他没有反应，但当你大声喊他名字时，他睁眼、含糊地应了一声，然后又昏睡过去。按 AVPU 评分他属于：",
+      "options": [
+        {
+          "key": "A",
+          "en": "V - he responds to verbal stimulus but is drowsy; consider placing him semi-prone if injuries permit",
+          "zh": "V —— 对言语刺激有反应但嗜睡；如损伤允许可考虑摆 semi-prone 体位"
+        },
+        {
+          "key": "B",
+          "en": "A - he is alert because he answered a question appropriately",
+          "zh": "A —— 他能回答问题，所以属于 alert"
+        },
+        {
+          "key": "C",
+          "en": "P - he required a loud stimulus, which counts as a painful stimulus",
+          "zh": "P —— 需要大声刺激才有反应，等同于疼痛刺激"
+        },
+        {
+          "key": "D",
+          "en": "U - he is unresponsive because he keeps drifting back to sleep",
+          "zh": "U —— 他持续昏睡，属于 unresponsive"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "A patient who responds to verbal stimulus but is drowsy is V on the AVPU scale. The guideline notes such a patient may be considered for semi-prone positioning if injuries permit, because a decreased LOC threatens the airway. A loud voice is still a verbal stimulus, not pain.",
+      "explanationZh": "对言语刺激有反应但嗜睡的病人在 AVPU 中评为 V。指南提示：如损伤允许，可考虑 semi-prone 体位，因为意识下降会威胁气道。大声呼喊仍属言语刺激而非疼痛刺激。",
+      "sourceRef": "BC Guidelines p.13",
+      "verified": false
+    },
+    {
+      "id": "pap-007",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "A warehouse worker is found unconscious on the floor at the base of a storage rack. Nobody saw what happened. There are no obvious injuries. Regarding cervical spine stabilization, you should:",
+      "questionZh": "一名仓库工人被发现昏迷倒在货架底下的地面上，无人目击事发经过，没有明显外伤。关于颈椎固定，你应该：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Defer spinal precautions because there are no visible injuries above the clavicles",
+          "zh": "因为锁骨以上没有可见损伤，暂不做脊柱保护"
+        },
+        {
+          "key": "B",
+          "en": "Apply spinal precautions only if he wakes up and reports neck pain",
+          "zh": "只有当他醒来并主诉颈痛时才做脊柱保护"
+        },
+        {
+          "key": "C",
+          "en": "Clear the spine using NEXUS criteria since he cannot report pain",
+          "zh": "既然他无法主诉疼痛，就用 NEXUS 标准来排除颈椎损伤"
+        },
+        {
+          "key": "D",
+          "en": "Stabilize the cervical spine because he is unconscious and trauma cannot be reasonably ruled out",
+          "zh": "进行颈椎固定，因为他处于昏迷状态且无法合理排除外伤"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Primary survey intervention indications for cervical spine stabilization include an unconscious patient where trauma cannot be reasonably ruled out. An unwitnessed collapse beside a storage rack could involve a fall or struck-by mechanism, so precautions apply. NEXUS cannot be applied to an unassessable patient.",
+      "explanationZh": "Primary survey 干预中，颈椎固定的指征包括：昏迷且无法合理排除外伤的病人。货架旁无目击的倒地可能涉及坠落或被砸的机制，故应做脊柱保护。NEXUS 标准无法用于不能配合评估的病人。",
+      "sourceRef": "BC Guidelines p.11",
+      "verified": false
+    },
+    {
+      "id": "pap-008",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "assessment-model",
+      "difficulty": "advanced",
+      "questionEn": "During the rapid body survey of a stabbing victim you discover a bubbling open wound on the right chest. The airway is clear and breathing is laboured. What should you do about the wound?",
+      "questionZh": "在对一名刺伤病人做 rapid body survey 时，你发现右胸有一个冒泡的开放性伤口。气道通畅，呼吸费力。对这个伤口你应该怎么处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Note its location and seal it during the treatment component after the secondary survey",
+          "zh": "记录位置，等 secondary survey 之后的 treatment 阶段再封闭"
+        },
+        {
+          "key": "B",
+          "en": "Pack the wound with hemostatic gauze to stop air entry",
+          "zh": "用止血纱布填塞伤口以阻止空气进入"
+        },
+        {
+          "key": "C",
+          "en": "Seal it immediately as a primary survey intervention, then continue the survey",
+          "zh": "立即封闭伤口——这是 primary survey 干预之一——然后继续检查"
+        },
+        {
+          "key": "D",
+          "en": "Leave it open so air can escape and prevent a tension pneumothorax",
+          "zh": "保持开放让空气逸出，以预防张力性气胸"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Sealing open chest wounds is listed as a primary survey intervention: life-threatening findings are managed as they are found. Do not pack wounds on the chest. Sealing uses a three-sided occlusive dressing or commercial chest seal, then the survey continues while monitoring for tension pneumothorax.",
+      "explanationZh": "封闭开放性胸部伤口是 primary survey 干预之一：发现威胁生命的问题就立即处理。胸部伤口禁止填塞。应使用三边封闭敷料或商用 chest seal 封闭，然后继续检查并监测张力性气胸。",
+      "sourceRef": "BC Guidelines p.11, p.19, p.34",
+      "verified": false
+    },
+    {
+      "id": "pap-009",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "foundation",
+      "questionEn": "A 35-year-old roofer fell approximately 7 meters onto grass. He is alert, complaining only of left wrist pain, with strong radial pulses and normal breathing. How should he be categorized for transport?",
+      "questionZh": "一名 35 岁屋顶工从约 7 米高处坠落到草地上。他神志清楚，只主诉左腕疼痛，桡动脉搏动有力，呼吸正常。转运分类应如何判断？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Stable, because his primary survey shows no life-threatening findings",
+          "zh": "稳定——因为 primary survey 没有危及生命的发现"
+        },
+        {
+          "key": "B",
+          "en": "Unstable and transported appropriately, because a free fall from over 6 meters is a high-risk mechanism",
+          "zh": "不稳定并按不稳定转运——因为超过 6 米的自由坠落属于高危机制"
+        },
+        {
+          "key": "C",
+          "en": "Stable, because the landing surface was soft grass",
+          "zh": "稳定——因为落地面是柔软的草地"
+        },
+        {
+          "key": "D",
+          "en": "Unstable only if his vital signs deteriorate during the secondary survey",
+          "zh": "只有当 secondary survey 中 vitals 恶化时才算不稳定"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Mechanism of injury alone can classify a patient as unstable: a free fall from a height greater than 6 meters (about 20 feet) is on the list. Reassuring initial findings do not remove the mechanism-based risk of occult internal injury.",
+      "explanationZh": "仅凭受伤机制即可判定不稳定：超过 6 米（约 20 英尺）的自由坠落在清单之列。初始表现良好并不能消除机制带来的隐匿性内伤风险。",
+      "sourceRef": "BC Guidelines p.7",
+      "verified": false
+    },
+    {
+      "id": "pap-010",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "You attend a two-vehicle MVA. Your patient is the restrained driver, GCS 15, vitals normal, complaining of chest soreness from the seatbelt. The front-seat passenger of the same vehicle was pronounced dead at the scene. Your transport decision is based on:",
+      "questionZh": "你处理一起两车相撞的 MVA。你的病人是系了安全带的驾驶员，GCS 15，vitals 正常，主诉安全带造成的胸部酸痛。同车前排乘客已当场宣告死亡。你的转运决策依据是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Stable - his own examination findings are normal",
+          "zh": "稳定——他本人的检查结果正常"
+        },
+        {
+          "key": "B",
+          "en": "Stable - the death of another occupant only matters if the patient was also ejected",
+          "zh": "稳定——除非病人也被甩出车外，否则他人死亡不影响分类"
+        },
+        {
+          "key": "C",
+          "en": "Unstable only if compartment intrusion exceeded 0.5 m on his side",
+          "zh": "只有当他这一侧车厢侵入超过 0.5 米时才算不稳定"
+        },
+        {
+          "key": "D",
+          "en": "Unstable - a death in the same passenger compartment is a high-risk mechanism criterion",
+          "zh": "不稳定——同一乘员舱内有死亡是高危机制标准之一"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Death in the passenger compartment is listed under high-risk automobile crash mechanisms. It indicates the forces involved were severe enough to kill, so surviving occupants are managed as unstable regardless of initial presentation. Intrusion criteria (>0.3 m occupant side) are separate, additional triggers.",
+      "explanationZh": "同一乘员舱内有死亡是高危车祸机制标准之一。它说明碰撞能量足以致死，因此幸存乘员无论初始表现如何都按不稳定处理。车厢侵入（乘员侧 >0.3 米）是另一条独立标准。",
+      "sourceRef": "BC Guidelines p.7-8",
+      "verified": false
+    },
+    {
+      "id": "pap-011",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "A 28-year-old cyclist was struck by a car travelling approximately 40 km/h. She is alert with abrasions and a deformed left forearm, vitals within normal limits. What is the correct transport categorization?",
+      "questionZh": "一名 28 岁骑自行车者被一辆时速约 40 km/h 的汽车撞倒。她神志清楚，有擦伤和左前臂畸形，vitals 在正常范围。正确的转运分类是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Unstable - auto versus cyclist at greater than 30 km/h is a high-risk mechanism",
+          "zh": "不稳定——汽车撞骑车人且车速超过 30 km/h 属于高危机制"
+        },
+        {
+          "key": "B",
+          "en": "Stable - an isolated forearm fracture is not a proximal long bone injury",
+          "zh": "稳定——孤立前臂骨折不属于近端长骨损伤"
+        },
+        {
+          "key": "C",
+          "en": "Stable - she would only be unstable if thrown more than 6 meters",
+          "zh": "稳定——只有被抛出超过 6 米才算不稳定"
+        },
+        {
+          "key": "D",
+          "en": "Unstable only if she lost consciousness at the scene",
+          "zh": "只有当她现场曾意识丧失时才算不稳定"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Auto versus pedestrian or cyclist at greater than 30 km/h is a listed high-risk mechanism, making her unstable for transport purposes even though her anatomical injuries appear limited. The forearm fracture is managed, but the mechanism drives the decision.",
+      "explanationZh": "汽车撞行人/骑车人且车速超过 30 km/h 属于高危机制清单内容，即使她的解剖学损伤看起来有限，也应按不稳定转运。前臂骨折照常处理，但转运决策由机制决定。",
+      "sourceRef": "BC Guidelines p.8",
+      "verified": false
+    },
+    {
+      "id": "pap-012",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "advanced",
+      "questionEn": "In a parking lot, a reversing car bumped a 40-year-old pedestrian at roughly 10-15 km/h. He was knocked down but did not lose consciousness. Primary survey is unremarkable; he has a small scalp abrasion and normal vitals. The best decision is:",
+      "questionZh": "停车场里，一辆倒车的汽车以大约 10-15 km/h 的速度碰倒了一名 40 岁行人。他被撞倒但没有意识丧失。Primary survey 无异常，只有头皮小擦伤，vitals 正常。最佳决策是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Rapid transport - any auto versus pedestrian collision is automatically a high-risk mechanism",
+          "zh": "快速转运——任何汽车撞行人都自动属于高危机制"
+        },
+        {
+          "key": "B",
+          "en": "Rapid transport - a scalp wound counts as major penetrating trauma to the head",
+          "zh": "快速转运——头皮伤口算作头部大穿透伤"
+        },
+        {
+          "key": "C",
+          "en": "Complete the full assessment on scene; the mechanism threshold of over 30 km/h is not met and no unstable findings are present",
+          "zh": "在现场完成完整评估；未达到超过 30 km/h 的机制门槛，也没有不稳定表现"
+        },
+        {
+          "key": "D",
+          "en": "No transport is needed because the impact speed was low",
+          "zh": "因为撞击速度低，不需要转运"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The mechanism criterion is auto versus pedestrian at greater than 30 km/h; a low-speed parking-lot bump does not meet it. With no unstable primary survey or anatomical findings, he is assessed fully on scene and transported routinely. Low speed does not mean no assessment or no transport - he still warrants evaluation.",
+      "explanationZh": "机制标准是汽车撞行人且车速超过 30 km/h；停车场低速碰撞未达门槛。Primary survey 与解剖学检查均无不稳定发现时，应在现场完成完整评估后常规转运。低速不等于不需要评估或转运——他仍需要就医检查。",
+      "sourceRef": "BC Guidelines p.7-8",
+      "verified": false
+    },
+    {
+      "id": "pap-013",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "Which of the following anatomical findings places an adult trauma patient in the unstable category under the BC guidelines?",
+      "questionZh": "根据 BC 指南，下列哪一项解剖学发现会将成人创伤病人归入不稳定类别？",
+      "options": [
+        {
+          "key": "A",
+          "en": "A closed fracture of one wrist with intact distal circulation",
+          "zh": "单侧腕部闭合骨折，远端循环完好"
+        },
+        {
+          "key": "B",
+          "en": "Fractures of both femurs",
+          "zh": "双侧股骨骨折"
+        },
+        {
+          "key": "C",
+          "en": "A partial thickness burn covering 10% of body surface area on the back",
+          "zh": "背部 10% 体表面积的部分皮层烧伤"
+        },
+        {
+          "key": "D",
+          "en": "A single rib fracture with equal air entry",
+          "zh": "单根肋骨骨折，双侧进气均等"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Two or more proximal long bone fractures is a listed anatomical instability criterion; bilateral femur fractures meet it and also carry major hemorrhage risk. A wrist fracture, partial thickness burn of 10% BSA (threshold is >20%), and single rib fracture without instability do not meet the criteria.",
+      "explanationZh": "两处及以上近端长骨骨折是解剖学不稳定标准之一；双侧股骨骨折符合，且伴有大出血风险。腕部骨折、10% BSA 的部分皮层烧伤（门槛是 >20%）和无胸壁不稳的单根肋骨骨折都不符合标准。",
+      "sourceRef": "BC Guidelines p.7",
+      "verified": false
+    },
+    {
+      "id": "pap-014",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "advanced",
+      "questionEn": "A 45-year-old carpenter amputated his thumb with a table saw. Bleeding is controlled with a pressure dressing, he is calm, and vitals are normal. Which statement about his management is correct?",
+      "questionZh": "一名 45 岁木工被台锯切断拇指。压力敷料已控制出血，他情绪平稳，vitals 正常。关于处理，下列哪项正确？",
+      "options": [
+        {
+          "key": "A",
+          "en": "He is unstable because any amputation is an anatomical instability criterion",
+          "zh": "他不稳定——任何截肢都属于解剖学不稳定标准"
+        },
+        {
+          "key": "B",
+          "en": "The thumb should be placed directly on ice to maximize viability",
+          "zh": "拇指应直接放在冰上以最大限度保存活性"
+        },
+        {
+          "key": "C",
+          "en": "He requires a tourniquet regardless of whether direct pressure controlled the bleed",
+          "zh": "无论直接压迫是否已止血，都必须上止血带"
+        },
+        {
+          "key": "D",
+          "en": "He does not meet the instability criterion - that applies to amputations proximal to the wrist or ankle - so manage the wound, preserve the part, and transport",
+          "zh": "他不符合不稳定标准——该标准针对腕/踝以近的截肢——处理伤口、保存断指、常规转运即可"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The anatomical criterion is amputation proximal to the wrist or ankle; a thumb amputation with controlled hemorrhage does not meet it. The part is rinsed with cool sterile water, wrapped in saline-moistened gauze, bagged, kept cool (never directly on ice), and transported with the patient.",
+      "explanationZh": "解剖学标准是腕或踝以近的截肢；出血已控制的拇指截肢不符合。断指应以凉的无菌水冲洗、用生理盐水湿润纱布松裹、装袋后保持低温（绝不可直接放冰上），随病人一起转运。",
+      "sourceRef": "BC Guidelines p.7, p.20",
+      "verified": false
+    },
+    {
+      "id": "pap-015",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "A welder has a full thickness burn that completely encircles his right forearm, estimated at 5% BSA. He is alert with normal vitals and severe pain. How is he categorized?",
+      "questionZh": "一名焊工右前臂被全层烧伤，烧伤环绕整个前臂一圈，估计 5% BSA。他神志清楚，vitals 正常，疼痛剧烈。他应如何分类？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Unstable - burns that fully encircle a limb are a listed criterion regardless of BSA",
+          "zh": "不稳定——环绕肢体一整圈的烧伤是明确标准之一，与 BSA 无关"
+        },
+        {
+          "key": "B",
+          "en": "Stable - full thickness burns only count when they exceed 10% BSA",
+          "zh": "稳定——全层烧伤只有超过 10% BSA 才算"
+        },
+        {
+          "key": "C",
+          "en": "Stable - the burn does not involve the face, hands, or airway",
+          "zh": "稳定——烧伤不涉及面部、手或气道"
+        },
+        {
+          "key": "D",
+          "en": "Unstable only if distal pulses are already absent",
+          "zh": "只有当远端脉搏已消失时才算不稳定"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Burns that fully encircle a limb appear on the major burns list independent of the BSA percentage thresholds, because circumferential burns can act like a tourniquet as edema develops. Waiting for pulses to disappear would mean waiting for the complication to occur.",
+      "explanationZh": "环绕肢体一圈的烧伤独立列于 major burns 标准中，与 BSA 百分比门槛无关，因为环形烧伤随水肿进展可产生类似止血带的效应。等远端脉搏消失才升级，等于等并发症发生。",
+      "sourceRef": "BC Guidelines p.7",
+      "verified": false
+    },
+    {
+      "id": "pap-016",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "transport-decision",
+      "difficulty": "foundation",
+      "questionEn": "Which primary survey finding places an adult patient in the unstable category for examination purposes?",
+      "questionZh": "以下哪个 primary survey 发现会使成人病人被归为不稳定（考试标准）？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Heart rate of 96 with warm, dry skin",
+          "zh": "心率 96，皮肤温暖干燥"
+        },
+        {
+          "key": "B",
+          "en": "Localized abdominal tenderness with normal vitals",
+          "zh": "局限性腹部压痛，vitals 正常"
+        },
+        {
+          "key": "C",
+          "en": "Absent radial pulses",
+          "zh": "桡动脉搏动消失"
+        },
+        {
+          "key": "D",
+          "en": "Pain rated 8 out of 10 from an isolated ankle injury",
+          "zh": "孤立踝部损伤，疼痛评分 8/10"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Absent radial pulses appear on the primary survey instability list - they suggest significant hypotension or peripheral shutdown from shock. Tachycardia alone with good skin, localized tenderness, or severe pain from a minor injury do not by themselves meet the listed criteria.",
+      "explanationZh": "桡动脉搏动消失在 primary survey 不稳定清单中——提示明显低血压或休克导致的外周灌注关闭。单纯轻度心率增快伴皮肤良好、局限性压痛、或小伤口的剧烈疼痛本身都不在清单标准内。",
+      "sourceRef": "BC Guidelines p.7",
+      "verified": false
+    },
+    {
+      "id": "pap-017",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "A 40-year-old fell from a ladder. He opens his eyes when you speak to him, is confused about where he is and the date, and follows your command to squeeze your fingers. What is his GCS and injury classification?",
+      "questionZh": "一名 40 岁男性从梯子上摔下。你和他说话时他会睁眼，对地点和日期表述混乱（confused），但能按指令握你的手指。他的 GCS 是多少？属于哪一级损伤？",
+      "options": [
+        {
+          "key": "A",
+          "en": "GCS 11 - moderate traumatic brain injury",
+          "zh": "GCS 11 —— 中度创伤性脑损伤"
+        },
+        {
+          "key": "B",
+          "en": "GCS 13 - mild traumatic brain injury",
+          "zh": "GCS 13 —— 轻度创伤性脑损伤"
+        },
+        {
+          "key": "C",
+          "en": "GCS 15 - no brain injury",
+          "zh": "GCS 15 —— 无脑损伤"
+        },
+        {
+          "key": "D",
+          "en": "GCS 9 - moderate traumatic brain injury",
+          "zh": "GCS 9 —— 中度创伤性脑损伤"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Eye opening to voice scores 3, confused speech scores 4, obeying commands scores 6: total GCS 13. Per the guideline, a GCS of 13 or higher indicates mild traumatic brain injury. Note that confused but converses is V4, not V3 (inappropriate words).",
+      "explanationZh": "呼唤睁眼 E3，言语混乱 V4，遵嘱动作 M6，合计 GCS 13。按指南，GCS ≥ 13 提示轻度创伤性脑损伤。注意「混乱但能对话」是 V4，而不是 V3（不恰当言语）。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-018",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "An assault victim opens his eyes only to a trapezius squeeze, makes incomprehensible moaning sounds, and withdraws his arm from the painful stimulus. What is his GCS and classification?",
+      "questionZh": "一名被殴打的伤者只有在斜方肌掐捏时才睁眼，发出无法理解的呻吟声，并会从疼痛刺激中回缩手臂。他的 GCS 和分级是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "GCS 10 - moderate traumatic brain injury",
+          "zh": "GCS 10 —— 中度创伤性脑损伤"
+        },
+        {
+          "key": "B",
+          "en": "GCS 6 - severe traumatic brain injury",
+          "zh": "GCS 6 —— 重度创伤性脑损伤"
+        },
+        {
+          "key": "C",
+          "en": "GCS 9 - moderate traumatic brain injury",
+          "zh": "GCS 9 —— 中度创伤性脑损伤"
+        },
+        {
+          "key": "D",
+          "en": "GCS 8 - severe traumatic brain injury",
+          "zh": "GCS 8 —— 重度创伤性脑损伤"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Eye opening to pain scores 2, incomprehensible sounds score 2, withdrawal from pain scores 4: total GCS 8. A GCS of 8 or less is defined as severe traumatic brain injury, with implications for aggressive airway monitoring and rapid transport.",
+      "explanationZh": "疼痛刺激睁眼 E2，无法理解的声音 V2，疼痛回缩 M4，合计 GCS 8。GCS ≤ 8 定义为重度创伤性脑损伤，意味着需要严密的气道管理和快速转运。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-019",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "vitals-gcs",
+      "difficulty": "advanced",
+      "questionEn": "Following a motorcycle crash, a rider has no eye opening to any stimulus, makes no sounds, and extends both arms rigidly when a painful stimulus is applied. What is his GCS?",
+      "questionZh": "摩托车事故后，一名骑手对任何刺激均不睁眼、不发声，疼痛刺激时双臂僵硬伸直（extension）。他的 GCS 是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "GCS 4",
+          "zh": "GCS 4"
+        },
+        {
+          "key": "B",
+          "en": "GCS 3",
+          "zh": "GCS 3"
+        },
+        {
+          "key": "C",
+          "en": "GCS 6",
+          "zh": "GCS 6"
+        },
+        {
+          "key": "D",
+          "en": "GCS 5",
+          "zh": "GCS 5"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "No eye opening scores 1, no verbal response scores 1, and extension to pain scores 2, totalling GCS 4 - a severe traumatic brain injury. Extension (decerebrate) scores 2 while abnormal flexion (decorticate) scores 3; confusing the two is a common exam error. The minimum possible GCS is 3, not 0.",
+      "explanationZh": "不睁眼 E1，无言语 V1，疼痛刺激伸直（去大脑强直）M2，合计 GCS 4，属重度创伤性脑损伤。伸直（decerebrate）计 2 分，异常屈曲（decorticate）计 3 分，两者混淆是常见考试错误。GCS 最低分是 3 而不是 0。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-020",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "vitals-gcs",
+      "difficulty": "foundation",
+      "questionEn": "According to the BC guidelines, a Glasgow Coma Scale score between 9 and 12 after head trauma suggests which classification?",
+      "questionZh": "根据 BC 指南，头部外伤后 GCS 在 9 到 12 之间提示哪一级损伤？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Mild traumatic brain injury",
+          "zh": "轻度创伤性脑损伤"
+        },
+        {
+          "key": "B",
+          "en": "Severe traumatic brain injury",
+          "zh": "重度创伤性脑损伤"
+        },
+        {
+          "key": "C",
+          "en": "Moderate traumatic brain injury",
+          "zh": "中度创伤性脑损伤"
+        },
+        {
+          "key": "D",
+          "en": "No traumatic brain injury",
+          "zh": "无创伤性脑损伤"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The guideline classifies GCS 13 or greater as mild, 9 to 12 as moderate, and 8 or less as severe traumatic brain injury. These bands guide airway vigilance, oxygenation targets (SpO2 at least 94%), and transport urgency.",
+      "explanationZh": "指南将 GCS ≥ 13 归为轻度，9-12 为中度，≤ 8 为重度创伤性脑损伤。该分级指导气道警戒、氧合目标（SpO2 ≥ 94%）与转运紧迫性。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-021",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "A 33-year-old with a lacerated thigh has these serial vitals - on arrival: HR 92, BP 128/84, RR 18, skin warm; 15 minutes later: HR 118, BP 96/72, RR 24, skin cool and pale. What do these trends indicate?",
+      "questionZh": "一名 33 岁大腿裂伤病人的连续 vitals：到达时 HR 92、BP 128/84、RR 18、皮肤温暖；15 分钟后 HR 118、BP 96/72、RR 24、皮肤湿冷苍白。这个趋势提示什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Anxiety response - the falling BP reflects the patient calming down",
+          "zh": "焦虑反应——血压下降说明病人逐渐平静"
+        },
+        {
+          "key": "B",
+          "en": "Progressing hemorrhagic shock - he is now unstable and requires rapid transport with hemorrhage control",
+          "zh": "失血性休克进展——他已属不稳定，需要止血并快速转运"
+        },
+        {
+          "key": "C",
+          "en": "Normal variation - both readings are within acceptable adult ranges",
+          "zh": "正常波动——两组读数都在成人可接受范围内"
+        },
+        {
+          "key": "D",
+          "en": "Improving perfusion because the heart is compensating effectively",
+          "zh": "灌注改善——因为心脏正在有效代偿"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Rising heart rate and respiratory rate with falling blood pressure and deteriorating skin signs is the classic trajectory of decompensating hemorrhagic shock. Cool pale clammy skin secondary to suspected shock is itself an unstable primary survey finding. Single readings can mislead; trends tell the story.",
+      "explanationZh": "心率和呼吸频率上升、血压下降、皮肤征象恶化，是失血性休克失代偿的典型轨迹。疑似休克导致的湿冷苍白皮肤本身就是 primary survey 的不稳定表现之一。单次读数会误导，趋势才能说明问题。",
+      "sourceRef": "BC Guidelines p.7, p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-022",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "vitals-gcs",
+      "difficulty": "advanced",
+      "questionEn": "A 26-year-old struck his head snowboarding. During transport his BP climbs from 130/76 to 172/60, his heart rate falls from 88 to 54, and his respirations become irregular. His right pupil is now sluggish. This pattern most likely represents:",
+      "questionZh": "一名 26 岁男子滑雪板时撞到头部。转运途中血压从 130/76 升到 172/60，心率从 88 降到 54，呼吸变得不规则，右侧瞳孔反应迟钝。这种组合最可能代表：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Hypovolemic shock from an associated internal bleed",
+          "zh": "合并内出血导致的低血容量性休克"
+        },
+        {
+          "key": "B",
+          "en": "A normal vagal response to pain and anxiety",
+          "zh": "疼痛和焦虑引起的正常迷走反应"
+        },
+        {
+          "key": "C",
+          "en": "Early anaphylaxis from an unknown exposure",
+          "zh": "不明暴露引起的早期过敏性休克"
+        },
+        {
+          "key": "D",
+          "en": "Rising intracranial pressure - reassess ABCs, support oxygenation to SpO2 of at least 94%, and notify the receiving facility",
+          "zh": "颅内压升高——重新评估 ABC，维持 SpO2 ≥ 94%，并通知接收医院"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Rising blood pressure with widening pulse pressure, bradycardia, and irregular respirations is the Cushing response to rising intracranial pressure - the opposite of hypovolemic shock, where BP falls and HR rises. Management follows the TBI guideline: oxygenation at SpO2 of 94% or above, head of bed elevated 30 degrees, loosened collar, and early notification.",
+      "explanationZh": "血压升高伴脉压增宽、心动过缓和不规则呼吸是颅内压升高的 Cushing 反应——与低血容量性休克（血压降、心率升）正好相反。处理遵循 TBI 指南：维持 SpO2 ≥ 94%、床头抬高 30 度、松开硬质颈托、尽早通知医院。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-023",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "iv-calc",
+      "difficulty": "foundation",
+      "questionEn": "You are asked to infuse 500 mL of normal saline over 12 hours using a macro-drip set rated at 10 gtts/mL. What drip rate should you set?",
+      "questionZh": "需要用 10 gtts/mL 的 macro-drip 输液器在 12 小时内输入 500 mL 生理盐水。滴速应设为多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "7 gtts/min",
+          "zh": "7 gtts/min"
+        },
+        {
+          "key": "B",
+          "en": "12 gtts/min",
+          "zh": "12 gtts/min"
+        },
+        {
+          "key": "C",
+          "en": "25 gtts/min",
+          "zh": "25 gtts/min"
+        },
+        {
+          "key": "D",
+          "en": "42 gtts/min",
+          "zh": "42 gtts/min"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "gtts per minute = volume x set rate / time in minutes = 500 x 10 / 720 = 5000 / 720 = approximately 7 gtts/min. This is the worked example in the guideline. Choosing 42 would be the error of using a 60 gtts/mL micro-drip factor.",
+      "explanationZh": "gtts/min = 容量 x 输液器滴系数 / 分钟数 = 500 x 10 / 720 = 5000 / 720 ≈ 7 gtts/min。这正是指南中的例题。选 42 是误用了 60 gtts/mL micro-drip 系数的结果。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-024",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "iv-calc",
+      "difficulty": "foundation",
+      "questionEn": "You must infuse 25 mL of D10W over 60 minutes using a micro-drip set (60 gtts/mL). What is the correct drip rate?",
+      "questionZh": "需要用 micro-drip 输液器（60 gtts/mL）在 60 分钟内输入 25 mL D10W。正确滴速是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "4 gtts/min",
+          "zh": "4 gtts/min"
+        },
+        {
+          "key": "B",
+          "en": "15 gtts/min",
+          "zh": "15 gtts/min"
+        },
+        {
+          "key": "C",
+          "en": "25 gtts/min",
+          "zh": "25 gtts/min"
+        },
+        {
+          "key": "D",
+          "en": "60 gtts/min",
+          "zh": "60 gtts/min"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "25 mL x 60 gtts/mL / 60 minutes = 1500 / 60 = 25 gtts/min. This matches the guideline's second worked example. A convenient rule: with a 60 gtts/mL micro-drip set, gtts/min equals mL/hr.",
+      "explanationZh": "25 mL x 60 gtts/mL / 60 分钟 = 1500 / 60 = 25 gtts/min，与指南第二个例题一致。速记：使用 60 gtts/mL micro-drip 时，gtts/min 数值等于 mL/hr。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-025",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "iv-calc",
+      "difficulty": "intermediate",
+      "questionEn": "A physician orders 1000 mL of normal saline over 6 hours during a long transfer. Your set delivers 10 gtts/mL. What drip rate do you run?",
+      "questionZh": "长途转运中医嘱要求 6 小时输入 1000 mL 生理盐水。你的输液器为 10 gtts/mL。滴速应是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "17 gtts/min",
+          "zh": "17 gtts/min"
+        },
+        {
+          "key": "B",
+          "en": "28 gtts/min",
+          "zh": "28 gtts/min"
+        },
+        {
+          "key": "C",
+          "en": "42 gtts/min",
+          "zh": "42 gtts/min"
+        },
+        {
+          "key": "D",
+          "en": "167 gtts/min",
+          "zh": "167 gtts/min"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "1000 mL x 10 gtts/mL / 360 minutes = 10000 / 360 = approximately 28 gtts/min. Answer 167 is the micro-drip error (60 gtts/mL); 17 comes from mistakenly using 10 hours.",
+      "explanationZh": "1000 mL x 10 gtts/mL / 360 分钟 = 10000 / 360 ≈ 28 gtts/min。选 167 是误用 micro-drip（60 gtts/mL）；选 17 是把时间错算成 10 小时。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-026",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "iv-calc",
+      "difficulty": "advanced",
+      "questionEn": "En route, you need to infuse 100 mL of normal saline over 30 minutes using a 10 gtts/mL set. What drip rate should you run?",
+      "questionZh": "转运途中需要用 10 gtts/mL 输液器在 30 分钟内输入 100 mL 生理盐水。滴速应是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "10 gtts/min",
+          "zh": "10 gtts/min"
+        },
+        {
+          "key": "B",
+          "en": "17 gtts/min",
+          "zh": "17 gtts/min"
+        },
+        {
+          "key": "C",
+          "en": "20 gtts/min",
+          "zh": "20 gtts/min"
+        },
+        {
+          "key": "D",
+          "en": "33 gtts/min",
+          "zh": "33 gtts/min"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "100 mL x 10 gtts/mL / 30 minutes = 1000 / 30 = approximately 33 gtts/min. Answer 17 is the error of dividing by 60 minutes; answer 20 comes from inverting the formula.",
+      "explanationZh": "100 mL x 10 gtts/mL / 30 分钟 = 1000 / 30 ≈ 33 gtts/min。选 17 是错除以 60 分钟；选 20 是把公式弄反了。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-027",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "iv-calc",
+      "difficulty": "foundation",
+      "questionEn": "When a BC protocol refers to running an IV at a maintenance rate, what flow rate does this correspond to?",
+      "questionZh": "当 BC protocol 提到以 maintenance rate（维持速度）输液时，对应的流速大约是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Approximately 75 mL/hr",
+          "zh": "大约 75 mL/hr"
+        },
+        {
+          "key": "B",
+          "en": "Approximately 150 mL/hr",
+          "zh": "大约 150 mL/hr"
+        },
+        {
+          "key": "C",
+          "en": "Approximately 30 mL/hr",
+          "zh": "大约 30 mL/hr"
+        },
+        {
+          "key": "D",
+          "en": "A wide-open line until 500 mL has infused",
+          "zh": "全开输注直到输完 500 mL"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The IV maintenance section states the maintenance rate is approximately 75 mL/hr, delivered through either a 10 gtts/mL macro-drip or 60 gtts/mL micro-drip set. It is distinct from a fluid bolus, which is volume-targeted (20 mL/kg) for hypoperfusion.",
+      "explanationZh": "IV maintenance 章节指出维持速度约为 75 mL/hr，可经 10 gtts/mL macro-drip 或 60 gtts/mL micro-drip 输液器给予。它不同于针对低灌注的 fluid bolus（按 20 mL/kg 容量目标给）。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-028",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "iv-calc",
+      "difficulty": "intermediate",
+      "questionEn": "During transport with a running IV, how often should you reassess the patient and the IV according to the maintenance guideline, and what does the check include?",
+      "questionZh": "转运途中有 IV 在输注时，按 maintenance 指南应多久重新评估一次？评估包括哪些内容？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Once on arrival at hospital; check only the total volume infused",
+          "zh": "到医院时评估一次；只需核对总输入量"
+        },
+        {
+          "key": "B",
+          "en": "Every 30-45 minutes; check the drip chamber only",
+          "zh": "每 30-45 分钟一次；只检查滴壶"
+        },
+        {
+          "key": "C",
+          "en": "Every 5-15 minutes; reassess ABCs, vital signs, the IV site, tubing, solution bag, and watch for complications",
+          "zh": "每 5-15 分钟一次；重新评估 ABC、vitals、穿刺部位、管路和液袋，并观察并发症"
+        },
+        {
+          "key": "D",
+          "en": "Only when the pump alarms or the patient complains of pain at the site",
+          "zh": "只有当输液报警或病人主诉穿刺处疼痛时才评估"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "IV maintenance requires regular reassessment every 5 to 15 minutes: ABCs and injury sites, vital signs, inspection of the IV site, tubing and solution bag, observation for complications, maintaining the correct flow rate, and changing the bag when required.",
+      "explanationZh": "IV maintenance 要求每 5-15 分钟定期重评：ABC 和损伤部位、vital signs、检查穿刺点/管路/液袋、观察并发症、维持正确滴速，并在需要时更换液袋。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-029",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "history",
+      "difficulty": "foundation",
+      "questionEn": "Which of the following belongs on the list of critical history questions for a motor vehicle accident?",
+      "questionZh": "下列哪一项属于 MVA（机动车事故）的 critical history questions 清单内容？",
+      "options": [
+        {
+          "key": "A",
+          "en": "The patient's insurance provider and licence status",
+          "zh": "病人的保险公司和驾照状态"
+        },
+        {
+          "key": "B",
+          "en": "The colour and model year of the vehicles",
+          "zh": "车辆的颜色和出厂年份"
+        },
+        {
+          "key": "C",
+          "en": "Whether the roadway was provincially or municipally maintained",
+          "zh": "道路属于省道还是市政道路"
+        },
+        {
+          "key": "D",
+          "en": "Whether the vehicle had airbags and whether they deployed",
+          "zh": "车辆是否配有安全气囊、气囊是否弹出"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The MVA critical history list includes airbag equipment and deployment, along with impact speed, exterior and interior damage, compartment intrusion, restraint type, patient position, loss of consciousness, and the condition of other occupants including any fatality in the same vehicle.",
+      "explanationZh": "MVA critical history 清单包括是否配备气囊及是否弹出，以及撞击速度、车辆外部/内部损坏、车厢侵入、约束装置类型、病人初始位置、有无意识丧失、以及其他乘员情况（含同车死亡）。",
+      "sourceRef": "BC Guidelines p.12",
+      "verified": false
+    },
+    {
+      "id": "pap-030",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "history",
+      "difficulty": "intermediate",
+      "questionEn": "A man was stabbed during an altercation outside a bar. The scene is now police-secured. Beyond the wound itself, which history details are most important to gather for the receiving trauma team?",
+      "questionZh": "一名男子在酒吧外斗殴中被刺伤，警方已控制现场。除伤口本身外，为接收创伤团队收集的最重要病史细节是哪些？",
+      "options": [
+        {
+          "key": "A",
+          "en": "The names of witnesses and the suspect's description",
+          "zh": "目击者姓名和嫌疑人的体貌特征"
+        },
+        {
+          "key": "B",
+          "en": "The length and width of the weapon, the number of wounds, and whether the wounds were slashed or stabbed",
+          "zh": "凶器的长度和宽度、伤口数量、以及伤口属于划割还是刺入"
+        },
+        {
+          "key": "C",
+          "en": "The exact time police arrived and secured the scene",
+          "zh": "警方到达并控制现场的确切时间"
+        },
+        {
+          "key": "D",
+          "en": "Whether the patient had consumed alcohol earlier in the evening",
+          "zh": "病人当晚是否饮酒"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "For a stabbing, the critical history list specifies the type of weapon, its size (length and width), whether wounds are slashed or stabbed, the number of wounds, other injuries, initial position and condition, and loss of consciousness. Weapon dimensions predict depth and the cavities potentially penetrated.",
+      "explanationZh": "刺伤的 critical history 清单包括凶器类型、尺寸（长度和宽度）、伤口是划割还是刺入、伤口数量、其他损伤、初始位置与状态、有无意识丧失。凶器尺寸可预测刺入深度和可能穿透的体腔。",
+      "sourceRef": "BC Guidelines p.13",
+      "verified": false
+    },
+    {
+      "id": "pap-031",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "pcr",
+      "difficulty": "foundation",
+      "questionEn": "A transfer document states the patient has been 'NPO since 0600, salbutamol prn'. Using the BC abbreviation list, this means the patient:",
+      "questionZh": "转院文件写明病人「NPO since 0600, salbutamol prn」。按 BC 缩写表，这表示病人：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Has had nothing by mouth since 0600 and takes salbutamol as needed",
+          "zh": "从 06:00 起禁食禁水，salbutamol 按需使用"
+        },
+        {
+          "key": "B",
+          "en": "Has had no pain since 0600 and takes salbutamol nightly",
+          "zh": "从 06:00 起无疼痛，salbutamol 每晚使用"
+        },
+        {
+          "key": "C",
+          "en": "Received nitrous oxide at 0600 and salbutamol before meals",
+          "zh": "06:00 使用过氧化亚氮，salbutamol 餐前使用"
+        },
+        {
+          "key": "D",
+          "en": "Was non-palpable for pulses at 0600 and needs salbutamol immediately",
+          "zh": "06:00 时脉搏无法触及，需立即给 salbutamol"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "NPO means nothing by mouth and prn means as needed or as required. Misreading standard abbreviations on transfer paperwork is a real safety hazard; the guideline includes the approved abbreviation list for both PCR writing and reading.",
+      "explanationZh": "NPO 意为禁食禁水（nothing by mouth），prn 意为按需（as needed）。误读转运文书上的标准缩写是真实的安全隐患；指南提供的缩写表既用于书写也用于阅读 PCR。",
+      "sourceRef": "BC Guidelines p.14-16",
+      "verified": false
+    },
+    {
+      "id": "pap-032",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "pcr",
+      "difficulty": "intermediate",
+      "questionEn": "After a call involving an intoxicated patient who initially refused care, which entry is the most appropriate way to document his behaviour on the Patient Care Report?",
+      "questionZh": "处理一名最初拒绝救治的醉酒病人后，在 Patient Care Report 上记录其行为的最恰当写法是哪种？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Patient was drunk and being difficult as usual for this address",
+          "zh": "「病人喝醉了，和这个地址一贯的情况一样难缠」"
+        },
+        {
+          "key": "B",
+          "en": "Patient appeared intoxicated; no further detail needed",
+          "zh": "「病人看起来醉了」——无需更多细节"
+        },
+        {
+          "key": "C",
+          "en": "Smell of alcohol on breath noted; slurred speech; patient stated 'I don't need help'; refusal discussed and patient later consented at 2145",
+          "zh": "「呼气有酒味；言语含糊；病人称『我不需要帮助』；已说明拒绝风险，病人于 21:45 同意接受救治」"
+        },
+        {
+          "key": "D",
+          "en": "Omit the refusal since he ultimately agreed to transport",
+          "zh": "既然最终同意转运，就不必记录拒绝过程"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Documentation should record objective findings (AOB, slurred speech), direct patient quotes, and times, rather than opinions or labels. The records and reports component exists to accurately capture assessment and treatment; an initial refusal and subsequent consent are clinically and legally significant events.",
+      "explanationZh": "记录应写客观发现（呼气酒味 AOB、言语含糊）、病人原话引用和时间，而不是主观评价或标签。Records and reports 组件的目的就是准确记录评估与处置；先拒绝后同意在临床和法律上都是重要事件。",
+      "sourceRef": "BC Guidelines p.10, p.17",
+      "verified": false
+    },
+    {
+      "id": "pap-033",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "A 78-year-old woman with type 2 diabetes calls for 'indigestion' that started 2 hours ago. She is weak, diaphoretic, and slightly short of breath, but denies any chest pain. Her vitals: HR 96, BP 142/88, SpO2 93%. The most appropriate approach is to:",
+      "questionZh": "一名 78 岁 2 型糖尿病女性因 2 小时前开始的「消化不良」呼叫救护。她乏力、出汗、轻微气促，但否认任何胸痛。Vitals：HR 96、BP 142/88、SpO2 93%。最恰当的做法是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Treat for gastric upset and recommend she follow up with her family doctor",
+          "zh": "按胃部不适处理，建议她之后看家庭医生"
+        },
+        {
+          "key": "B",
+          "en": "Treat her as suspected cardiac ischemia with atypical symptoms - manage per the cardiac chest pain guideline and transport",
+          "zh": "按疑似心肌缺血的不典型表现处理——依 cardiac chest pain 指南处置并转运"
+        },
+        {
+          "key": "C",
+          "en": "Administer oral glucose in case this is hypoglycemia",
+          "zh": "先给口服葡萄糖，以防是低血糖"
+        },
+        {
+          "key": "D",
+          "en": "Ask her to walk to the stretcher to assess her exercise tolerance",
+          "zh": "让她走到担架旁以评估运动耐量"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Older adults, women, and diabetics frequently present with atypical ischemia: epigastric discomfort, weakness, diaphoresis, or dyspnea without chest pain. The ASA monograph explicitly covers atypical symptoms consistent with cardiac ischemia. Painless presentations are a core geriatric trap; walking the patient increases myocardial demand.",
+      "explanationZh": "老年人、女性和糖尿病患者常以不典型缺血表现就诊：上腹不适、乏力、出汗或呼吸困难而无胸痛。ASA 药物专论明确将「符合心肌缺血的不典型症状」列入指征。无痛性表现是老年病学核心陷阱；让病人行走会增加心肌耗氧。",
+      "sourceRef": "BC Guidelines p.47, p.60",
+      "verified": false
+    },
+    {
+      "id": "pap-034",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "Why are elderly patients more likely than younger adults to have a myocardial infarction without chest pain?",
+      "questionZh": "为什么老年病人比年轻成人更容易发生没有胸痛的心肌梗死？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Their coronary arteries are too small to generate pain signals",
+          "zh": "他们的冠状动脉太细，无法产生疼痛信号"
+        },
+        {
+          "key": "B",
+          "en": "They have higher pain thresholds from years of physical labour",
+          "zh": "多年体力劳动使他们疼痛阈值更高"
+        },
+        {
+          "key": "C",
+          "en": "Elderly hearts infarct more slowly, so pain never develops",
+          "zh": "老年人心肌梗死进展更慢，因此不会出现疼痛"
+        },
+        {
+          "key": "D",
+          "en": "Age-related changes and conditions such as diabetic neuropathy blunt pain perception, so ischemia may present as weakness, dyspnea, or confusion instead",
+          "zh": "年龄相关改变及糖尿病神经病变等使痛觉迟钝，缺血可能表现为乏力、气促或意识混乱"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Altered pain perception from aging nervous systems and comorbidities such as diabetic autonomic neuropathy means ischemia may produce weakness, syncope, dyspnea, or new confusion rather than classic crushing chest pain. This is why the guidelines recognize atypical symptoms consistent with cardiac ischemia as an ASA indication.",
+      "explanationZh": "神经系统老化及糖尿病自主神经病变等共病使痛觉减退，心肌缺血可表现为乏力、晕厥、气促或新发意识混乱，而非典型压榨性胸痛。这正是指南将「符合心肌缺血的不典型症状」列为 ASA 指征的原因。",
+      "sourceRef": "BC Guidelines p.60",
+      "verified": false
+    },
+    {
+      "id": "pap-035",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "An 82-year-old man on metoprolol has had black tarry stools for two days. He is pale and diaphoretic with cool skin. His heart rate is 84. Why should the heart rate NOT reassure you?",
+      "questionZh": "一名 82 岁男性服用 metoprolol（美托洛尔），黑色柏油样便两天。他面色苍白、出汗、皮肤湿冷。心率 84。为什么这个心率不能让你放心？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Beta-blockade prevents compensatory tachycardia, so he may be in significant hemorrhagic shock with a 'normal' rate",
+          "zh": "β 受体阻滞剂抑制代偿性心动过速，他可能已处于明显失血性休克却显示「正常」心率"
+        },
+        {
+          "key": "B",
+          "en": "Elderly patients normally run heart rates over 100, so 84 is actually bradycardia requiring pacing",
+          "zh": "老年人正常心率应超过 100，84 其实是需要起搏的心动过缓"
+        },
+        {
+          "key": "C",
+          "en": "The heart rate is irrelevant because melena is never hemodynamically significant",
+          "zh": "心率无关紧要，因为黑便从不会造成血流动力学问题"
+        },
+        {
+          "key": "D",
+          "en": "Metoprolol causes false pulse oximetry readings that invalidate all vitals",
+          "zh": "美托洛尔会造成血氧仪读数错误，使所有 vitals 失效"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Beta-blockers cap the tachycardic response that normally signals hypovolemia, so skin signs (pale, cool, diaphoretic) become the more reliable shock indicators - and his meet the unstable criterion of cool pale clammy skin secondary to suspected shock. Treat as unstable GI hemorrhage despite the deceptively normal rate.",
+      "explanationZh": "β 受体阻滞剂封顶了通常提示低血容量的心率上升反应，因此皮肤征象（苍白、湿冷、出汗）成为更可靠的休克指标——他已符合「疑似休克所致湿冷苍白皮肤」这一不稳定标准。尽管心率看似正常，仍应按不稳定的消化道出血处理。",
+      "sourceRef": "BC Guidelines p.7, p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-036",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "A 79-year-old woman on warfarin tripped on a rug, struck her head on the floor, and got up by herself. She has a small forehead bruise, GCS 15, and no complaints. Her son asks if she really needs to go to hospital. Your best response is based on which reasoning?",
+      "questionZh": "一名服用 warfarin（华法林）的 79 岁女性被地毯绊倒，头部撞到地板，自己爬了起来。前额有小片瘀青，GCS 15，无任何主诉。她儿子问是否真的需要去医院。你的最佳回答基于哪种推理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "She can stay home because her GCS is 15 and the mechanism was minor",
+          "zh": "GCS 15 且受伤机制轻微，可以留在家中"
+        },
+        {
+          "key": "B",
+          "en": "She only needs transport if she vomits within the next hour",
+          "zh": "只有当她一小时内呕吐才需要转运"
+        },
+        {
+          "key": "C",
+          "en": "Anticoagulated elderly patients can develop delayed intracranial bleeding after even minor head strikes, so transport for evaluation is warranted despite the normal exam",
+          "zh": "服抗凝药的老年人即使轻微头部撞击也可能发生迟发性颅内出血，因此虽然检查正常仍应转运评估"
+        },
+        {
+          "key": "D",
+          "en": "Warfarin protects against clot formation, which lowers her risk of intracranial bleeding",
+          "zh": "华法林抗凝反而降低了她颅内出血的风险"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Warfarin dramatically raises the risk of slow intracranial hemorrhage; age-related brain atrophy stretches bridging veins and enlarges the space in which a bleed can grow silently before signs appear. A normal initial GCS does not exclude an evolving bleed. New neurological deficits would make her definitively unstable - the goal is to be in hospital before that happens.",
+      "explanationZh": "华法林显著增加缓慢性颅内出血风险；年龄相关脑萎缩牵拉桥静脉并扩大了出血可无症状积聚的空间。初始 GCS 正常不能排除进展中的出血。一旦出现新发神经功能缺损她就明确不稳定——目标是在那之前抵达医院。",
+      "sourceRef": "BC Guidelines p.7, p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-037",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "An 81-year-old man fell in his kitchen. He has a painful hip and abrasions. While gathering the fall history, which question is most important for uncovering a treatable medical cause?",
+      "questionZh": "一名 81 岁男性在厨房跌倒，髋部疼痛并有擦伤。采集跌倒病史时，哪个问题对发现可治疗的内科原因最重要？",
+      "options": [
+        {
+          "key": "A",
+          "en": "What type of flooring is in the kitchen?",
+          "zh": "「厨房铺的是什么地板？」"
+        },
+        {
+          "key": "B",
+          "en": "What were you doing and how did you feel just before you fell - any dizziness, palpitations, or blackout?",
+          "zh": "「跌倒前你在做什么、有什么感觉——有没有头晕、心悸或眼前发黑？」"
+        },
+        {
+          "key": "C",
+          "en": "Have you ever fallen anywhere else in the house before?",
+          "zh": "「你以前在家里其他地方摔过吗？」"
+        },
+        {
+          "key": "D",
+          "en": "Do you live alone or with family?",
+          "zh": "「你独居还是和家人同住？」"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The critical history list for falls includes the cause of the fall. In older adults a fall is often the presenting sign of syncope, arrhythmia, hypoglycemia, stroke, or medication effect. Pre-fall symptoms distinguish a mechanical trip from a medical event that itself needs assessment and transport.",
+      "explanationZh": "跌倒的 critical history 清单包含「跌倒原因」。对老年人而言，跌倒常常是晕厥、心律失常、低血糖、卒中或药物作用的首发表现。跌倒前的症状可以区分单纯绊倒和本身就需要评估转运的内科事件。",
+      "sourceRef": "BC Guidelines p.12",
+      "verified": false
+    },
+    {
+      "id": "pap-038",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "When taking a history from an elderly patient with impaired hearing, which technique is most effective?",
+      "questionZh": "为听力受损的老年病人采集病史时，哪种沟通技巧最有效？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Shout loudly close to the patient's ear",
+          "zh": "贴近病人耳边大声喊"
+        },
+        {
+          "key": "B",
+          "en": "Direct all questions to family members to save time",
+          "zh": "为节省时间，把所有问题都问家属"
+        },
+        {
+          "key": "C",
+          "en": "Face the patient at eye level, speak slowly and clearly in a slightly lower pitch, and confirm understanding",
+          "zh": "与病人平视、面对面，放慢语速、咬字清晰、音调略低，并确认对方理解"
+        },
+        {
+          "key": "D",
+          "en": "Use only written notes and avoid speaking",
+          "zh": "只用写字交流，避免说话"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Age-related hearing loss affects high frequencies first, so a lower-pitched, clear, unhurried voice with the face visible (allowing lip reading) works better than shouting, which distorts speech and appears aggressive. Bypassing a competent patient for the family disrespects autonomy and loses first-hand history.",
+      "explanationZh": "老年性听力下降先影响高频，因此音调略低、清晰、不急促、面部可见（便于读唇）的交流方式比喊叫更有效——喊叫会使语音失真且显得有攻击性。绕过有行为能力的病人只问家属，既不尊重其自主权也丢失了第一手病史。",
+      "sourceRef": "BC Guidelines p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-039",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "Care aides report that an 86-year-old woman with dementia 'seems confused'. She is calm, answers some questions oddly, and vitals are normal. What is the single most useful piece of information to obtain next?",
+      "questionZh": "护理人员报告一名 86 岁失智女性「看起来意识混乱」。她情绪平静，部分问题回答古怪，vitals 正常。接下来最有价值的信息是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Her exact age and place of birth for the PCR",
+          "zh": "她的确切年龄和出生地，用于填写 PCR"
+        },
+        {
+          "key": "B",
+          "en": "Whether the facility has transport paperwork ready",
+          "zh": "机构是否已备好转运文件"
+        },
+        {
+          "key": "C",
+          "en": "Her score on a full mini mental status examination",
+          "zh": "完整简易精神状态检查（MMSE）的得分"
+        },
+        {
+          "key": "D",
+          "en": "Her baseline mental status from a caregiver - is today's presentation different from her normal?",
+          "zh": "向照护者了解她的基线精神状态——今天的表现和平时是否不同？"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "In dementia, confusion alone is uninterpretable without a baseline. An acute change from baseline suggests delirium with a treatable cause - infection, hypoglycemia, hypoxia, stroke, or drug effect - and warrants full assessment including blood glucose. Chronic stable confusion is her normal. Caregivers are the essential comparator.",
+      "explanationZh": "对失智病人来说，单纯「混乱」在没有基线的情况下无法解读。与基线相比的急性变化提示谵妄，背后常有可治疗原因——感染、低血糖、低氧、卒中或药物作用——需要包括血糖在内的完整评估。慢性稳定的混乱则是她的常态。照护者是必不可少的对照来源。",
+      "sourceRef": "BC Guidelines p.57 (decreased LOC without known cause)",
+      "verified": false
+    },
+    {
+      "id": "pap-040",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "An 85-year-old woman with a history of recurrent UTIs has become withdrawn and confused over 24 hours. Temperature 36.4, HR 92, BP 108/64, RR 20. Her daughter says 'at least she has no fever, so it can't be an infection.' Your assessment should recognize that:",
+      "questionZh": "一名有反复尿路感染史的 85 岁女性 24 小时内变得淡漠、意识混乱。体温 36.4，HR 92，BP 108/64，RR 20。女儿说「至少没发烧，所以不可能是感染」。你的评估应认识到：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Elderly patients with serious infection often fail to mount fever or marked tachycardia - new confusion may be the primary presenting sign of sepsis",
+          "zh": "老年人发生严重感染时常常不出现发热或明显心动过速——新发意识混乱可能就是脓毒症的主要表现"
+        },
+        {
+          "key": "B",
+          "en": "The daughter is correct - absence of fever reliably excludes infection at any age",
+          "zh": "女儿说得对——任何年龄无发热都能可靠排除感染"
+        },
+        {
+          "key": "C",
+          "en": "Confusion in a patient this age is always dementia and needs no acute workup",
+          "zh": "这个年龄的意识混乱都是失智，不需要急性期检查"
+        },
+        {
+          "key": "D",
+          "en": "A temperature of 36.4 rules out sepsis because sepsis always causes hypothermia below 35",
+          "zh": "36.4 的体温排除了脓毒症，因为脓毒症必然导致 35 以下的低体温"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Blunted immune and thermoregulatory responses mean older septic patients may be normothermic or hypothermic, with modest heart rates. Acute functional decline and new confusion are among the most sensitive geriatric sepsis indicators. This patient needs full assessment including blood glucose, and transport.",
+      "explanationZh": "免疫与体温调节反应迟钝使老年脓毒症病人可能体温正常甚至偏低，心率变化也不明显。急性功能下降和新发意识混乱是老年脓毒症最敏感的指标之一。该病人需要包括血糖在内的完整评估并转运。",
+      "sourceRef": "BC Guidelines p.18 (References: Nancy Caroline); p.57",
+      "verified": false
+    },
+    {
+      "id": "pap-041",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "Which statement best describes how normal aging changes the trauma assessment of a geriatric patient?",
+      "questionZh": "关于正常衰老如何改变老年创伤评估，下列哪种说法最准确？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Aging thickens the skin, making bruising and skin tears less common",
+          "zh": "衰老使皮肤增厚，瘀伤和皮肤撕裂更少见"
+        },
+        {
+          "key": "B",
+          "en": "Reduced physiologic reserve means an older patient can look stable initially yet deteriorate rapidly, and lesser mechanisms can cause serious injury",
+          "zh": "生理储备下降意味着老年病人初期可能看似稳定却迅速恶化，较小的受伤机制也能造成严重损伤"
+        },
+        {
+          "key": "C",
+          "en": "Older bones are denser, so fractures require higher-energy mechanisms than in the young",
+          "zh": "老年人骨密度更高，骨折需要比年轻人更大的能量"
+        },
+        {
+          "key": "D",
+          "en": "The aging heart compensates for blood loss faster than a younger heart",
+          "zh": "老年心脏对失血的代偿比年轻心脏更快"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Diminished cardiac, respiratory, and renal reserve narrows the margin between compensation and collapse, while osteoporosis and fragile tissues mean low-energy mechanisms - a fall from standing - can fracture hips, ribs, or vertebrae. Maintain a lower threshold for treating geriatric trauma patients as unstable.",
+      "explanationZh": "心、肺、肾储备下降使代偿与崩溃之间的余地变窄；骨质疏松和脆弱组织意味着低能量机制——如站立位跌倒——也能造成髋部、肋骨或椎体骨折。对老年创伤病人应以更低的门槛按不稳定处理。",
+      "sourceRef": "BC Guidelines p.18 (References: ITLS/Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-042",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "Assessing an 88-year-old man for 'a fall', you find bruises on his forearms and back in several different stages of healing. His story of the fall keeps changing, and his adult son answers most questions for him while standing close. What is your most appropriate course of action?",
+      "questionZh": "你以「跌倒」为由评估一名 88 岁男性，发现他前臂和背部有多处处于不同愈合阶段的瘀伤。他对跌倒经过的描述前后不一，而他的成年儿子紧贴在旁替他回答大多数问题。你最恰当的做法是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Confront the son directly at the scene and demand an explanation for the bruises",
+          "zh": "当场质问儿子，要求解释瘀伤来源"
+        },
+        {
+          "key": "B",
+          "en": "Accept the family's explanation and document 'multiple falls' as the cause",
+          "zh": "接受家属解释，在记录中写「多次跌倒」作为原因"
+        },
+        {
+          "key": "C",
+          "en": "Refuse to transport until police arrive and interview the family",
+          "zh": "在警方到场并询问家属之前拒绝转运"
+        },
+        {
+          "key": "D",
+          "en": "Try to assess and speak with the patient privately, document all findings and statements objectively, transport, and report your concerns through the appropriate channel",
+          "zh": "设法与病人单独交流评估，客观记录所有发现和陈述，转运病人，并按规定渠道上报你的疑虑"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Bruises in multiple healing stages, inconsistent history, and a controlling caregiver are recognized elder abuse indicators. The paramedic's role is objective documentation - locations, sizes, colours, direct quotes - separating the patient for private conversation when possible, transporting, and reporting concerns; not scene confrontation or accusation, which can escalate danger for the patient.",
+      "explanationZh": "多阶段愈合的瘀伤、前后矛盾的病史和控制性照护者是公认的老年虐待警示信号。救护员的职责是客观记录——部位、大小、颜色、原话引用——尽量创造与病人单独交流的机会、转运并上报疑虑；而不是现场对质或指控，那可能加剧病人的危险。",
+      "sourceRef": "BC Guidelines p.10, p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-043",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "An 88-year-old woman with known osteoporosis slipped from a low step and landed on her buttocks. She has midline mid-back pain but can move all limbs, with normal vitals. Which reasoning should guide your management?",
+      "questionZh": "一名已知骨质疏松的 88 岁女性从矮台阶滑落坐倒在地。她主诉背部中线中段疼痛，但四肢活动正常，vitals 正常。哪种推理应指导你的处置？",
+      "options": [
+        {
+          "key": "A",
+          "en": "A fall from a low step cannot generate enough force to fracture the spine, so no precautions are needed",
+          "zh": "矮台阶跌倒的能量不足以造成脊柱骨折，无需任何保护措施"
+        },
+        {
+          "key": "B",
+          "en": "Since she can move all four limbs, a spinal fracture is excluded",
+          "zh": "四肢都能活动，说明脊柱骨折已被排除"
+        },
+        {
+          "key": "C",
+          "en": "Osteoporotic bone can fracture with minimal force - midline back pain after even a low fall warrants spinal assessment and precautions",
+          "zh": "骨质疏松的骨骼受很小外力也会骨折——即使低处跌倒，出现背部中线疼痛也应做脊柱评估和保护"
+        },
+        {
+          "key": "D",
+          "en": "Give analgesia and leave her at home with instructions to rest in bed for a week",
+          "zh": "给予镇痛后让她留在家中卧床休息一周"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Osteoporosis rewrites the usual relationship between mechanism and injury: vertebral compression fractures commonly follow trivial falls. Midline pain is a NEXUS-relevant finding, and intact limb movement does not exclude an unstable fracture. Assess, apply spinal motion restriction as indicated, and transport.",
+      "explanationZh": "骨质疏松改写了机制与损伤之间的常规对应关系：椎体压缩骨折常发生于很轻微的跌倒之后。中线压痛是 NEXUS 相关阳性发现，四肢活动正常并不能排除不稳定骨折。应评估、按指征实施脊柱活动限制并转运。",
+      "sourceRef": "BC Guidelines p.25, p.12",
+      "verified": false
+    },
+    {
+      "id": "pap-044",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "geriatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "When transporting an elderly patient who takes multiple medications, why is bringing the complete, current medication list (or the actual bottles) to hospital a priority?",
+      "questionZh": "转运服用多种药物的老年病人时，为什么把完整、最新的用药清单（或药瓶本身）带到医院是优先事项？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Polypharmacy causes interactions and adverse effects that may explain the presentation, and the list guides both prehospital decisions and hospital care",
+          "zh": "多重用药造成的相互作用和不良反应可能正是发病原因，清单同时指导院前决策和院内治疗"
+        },
+        {
+          "key": "B",
+          "en": "It is only needed for billing purposes at the receiving facility",
+          "zh": "只是接收医院计费需要"
+        },
+        {
+          "key": "C",
+          "en": "Medications are irrelevant to assessment once the patient is symptomatic",
+          "zh": "病人一旦出现症状，用药情况就与评估无关了"
+        },
+        {
+          "key": "D",
+          "en": "The list only matters if the patient is unconscious",
+          "zh": "只有病人昏迷时清单才重要"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Drug effects and interactions - beta-blockers masking tachycardia, anticoagulants raising bleed risk, sedatives causing falls, diuretics causing electrolyte loss - are frequent causes or modifiers of geriatric emergencies. The medication history also feeds directly into protocol contraindication checks such as those for ASA and nitroglycerin.",
+      "explanationZh": "药物作用与相互作用——β 阻滞剂掩盖心动过速、抗凝药增加出血风险、镇静剂导致跌倒、利尿剂造成电解质丢失——是老年急症的常见原因或修饰因素。用药史还直接用于 ASA、硝酸甘油等 protocol 的禁忌症核查。",
+      "sourceRef": "BC Guidelines p.60, p.73",
+      "verified": false
+    },
+    {
+      "id": "pap-045",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "You find a 77-year-old man on his bathroom floor. He does not respond to loud verbal commands, but groans and pushes your hand away when you apply a trapezius squeeze. On AVPU he is rated:",
+      "questionZh": "你在卫生间地板上发现一名 77 岁男性。他对大声呼唤没有反应，但斜方肌掐捏时会呻吟并推开你的手。按 AVPU 他应评为：",
+      "options": [
+        {
+          "key": "A",
+          "en": "A, because pushing your hand away is purposeful movement",
+          "zh": "A——因为推开你的手属于有目的的动作"
+        },
+        {
+          "key": "B",
+          "en": "V, because he made a sound",
+          "zh": "V——因为他发出了声音"
+        },
+        {
+          "key": "C",
+          "en": "U, because he cannot follow commands",
+          "zh": "U——因为他不能遵嘱动作"
+        },
+        {
+          "key": "D",
+          "en": "P - he responds only to pain; monitor the airway closely and place him semi-prone if injuries permit",
+          "zh": "P——只对疼痛刺激有反应；需严密监测气道，如损伤允许应置于 semi-prone 体位"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Response only to painful stimulus is P on AVPU. The guideline instructs close airway monitoring with intervention as necessary, and semi-prone positioning if injuries permit, because a patient at P cannot reliably protect the airway. Groaning triggered by pain is not a verbal response to voice.",
+      "explanationZh": "只对疼痛刺激有反应在 AVPU 中评为 P。指南要求严密监测气道并按需干预，如损伤允许摆 semi-prone 体位，因为 P 级病人无法可靠保护气道。疼痛引发的呻吟不属于对言语的反应。",
+      "sourceRef": "BC Guidelines p.13",
+      "verified": false
+    },
+    {
+      "id": "pap-046",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "An 80-year-old woman fell against a coffee table. She is alert with a bleeding laceration above her right eyebrow and neck stiffness. Which primary survey intervention indication applies?",
+      "questionZh": "一名 80 岁女性跌倒撞到茶几。她神志清楚，右眉上方有出血性裂伤，并有颈部僵硬感。适用哪一条 primary survey 干预指征？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Cervical spine stabilization - she has an obvious injury above the level of the clavicles",
+          "zh": "颈椎固定——她有锁骨水平以上的明显损伤"
+        },
+        {
+          "key": "B",
+          "en": "Obstructed airway procedures - facial wounds always compromise the airway",
+          "zh": "气道梗阻处理——面部伤口必然影响气道"
+        },
+        {
+          "key": "C",
+          "en": "No intervention - alert patients never need spinal precautions",
+          "zh": "无需干预——清醒病人从不需要脊柱保护"
+        },
+        {
+          "key": "D",
+          "en": "Rapid cooling - to reduce swelling around the laceration",
+          "zh": "快速降温——以减少裂伤周围肿胀"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Obvious injury above the level of the clavicles is a listed indication for cervical spine stabilization, and her neck symptoms reinforce it. Age and osteoporosis raise the risk that even this modest mechanism injured the cervical spine. The laceration is controlled with direct pressure during the survey.",
+      "explanationZh": "锁骨水平以上的明显损伤是颈椎固定的明确指征之一，她的颈部症状进一步支持。年龄和骨质疏松使这种不大的机制也可能伤及颈椎。裂伤在检查过程中以直接压迫控制。",
+      "sourceRef": "BC Guidelines p.11",
+      "verified": false
+    },
+    {
+      "id": "pap-047",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "assessment-model",
+      "difficulty": "advanced",
+      "questionEn": "A 90-year-old man with severe kyphosis requires spinal motion restriction after a fall down three stairs. When you lay him on the board his head hovers well above the surface and he cannot straighten. You should:",
+      "questionZh": "一名严重驼背（kyphosis）的 90 岁男性从三级台阶跌落后需要脊柱活动限制。放到板上时他的头部悬空远离板面，无法伸直。你应该：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Firmly press the head down to the board and secure it with tape",
+          "zh": "用力将头压到板面并用胶带固定"
+        },
+        {
+          "key": "B",
+          "en": "Pad generously under the head and shoulders to support his habitual curvature and immobilize him in his own neutral position",
+          "zh": "在头和肩下充分垫衬，支撑他习惯的脊柱曲度，在其自身的中立位上固定"
+        },
+        {
+          "key": "C",
+          "en": "Skip immobilization entirely because it is impossible in kyphotic patients",
+          "zh": "驼背病人无法固定，干脆完全放弃固定"
+        },
+        {
+          "key": "D",
+          "en": "Transport him prone so the curvature faces upward",
+          "zh": "让他俯卧转运，使弯曲的背部朝上"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Immobilization means securing the spine in the patient's own neutral alignment, not an idealized flat position. Forcing a rigidly kyphotic spine straight can cause fractures and pain. Filling the voids with padding achieves motion restriction while respecting fixed deformity. Note the guideline also cautions against taping the head as the sole securing method.",
+      "explanationZh": "固定的含义是在病人自身的中立对线上限制脊柱活动，而不是强求理想化的平躺位。强行压直僵硬驼背的脊柱可造成骨折和剧痛。用垫料填满空隙既能限制活动又尊重固定畸形。另注意指南提醒不要用胶带固定头部作为唯一手段。",
+      "sourceRef": "BC Guidelines p.25",
+      "verified": false
+    },
+    {
+      "id": "pap-048",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "A 76-year-old woman with CHF is in respiratory distress, sitting bolt upright at 0300, SpO2 88%. During the primary survey, which combination of survey interventions is indicated?",
+      "questionZh": "一名 76 岁 CHF 女性凌晨 3 点端坐呼吸窘迫，SpO2 88%。Primary survey 中应采取哪组 survey interventions？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Lay her flat and apply a blanket for warmth",
+          "zh": "让她平躺并盖毯保暖"
+        },
+        {
+          "key": "B",
+          "en": "Withhold oxygen until a full set of vitals is documented",
+          "zh": "在记录完整 vitals 之前暂不给氧"
+        },
+        {
+          "key": "C",
+          "en": "Oxygen for respiratory distress, keep her positioned upright with legs down, keep her at rest and warm",
+          "zh": "因呼吸窘迫给氧，保持她直立坐位、双腿下垂，保持静息并注意保暖"
+        },
+        {
+          "key": "D",
+          "en": "Position her semi-prone to protect the airway",
+          "zh": "置于 semi-prone 体位以保护气道"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Oxygen is a primary survey intervention indicated by respiratory distress, and position is another listed survey intervention - for CHF/pulmonary edema the guideline specifies sitting upright with legs hung down, at rest, kept warm. Laying her flat would worsen pulmonary edema; oxygen is never delayed for paperwork.",
+      "explanationZh": "给氧是 primary survey 干预之一，指征包括呼吸窘迫；体位（Position）也是列明的 survey intervention——对 CHF/肺水肿，指南指定直立坐位、双腿下垂、静息、保暖。让她平躺会加重肺水肿；给氧绝不能为记录 vitals 而延迟。",
+      "sourceRef": "BC Guidelines p.11, p.33",
+      "verified": false
+    },
+    {
+      "id": "pap-049",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "assessment-model",
+      "difficulty": "foundation",
+      "questionEn": "You have completed the primary survey of a stable 74-year-old man with abdominal pain and decided he does not require immediate transport. According to the assessment model, the secondary survey you now begin consists of:",
+      "questionZh": "你已完成一名腹痛、情况稳定的 74 岁男性的 primary survey，判断暂不需要立即转运。按评估模型，你接下来开始的 secondary survey 包括：",
+      "options": [
+        {
+          "key": "A",
+          "en": "History, vital signs, head-to-toe examination, and functional inquiry",
+          "zh": "History、vital signs、head-to-toe examination，以及 functional inquiry"
+        },
+        {
+          "key": "B",
+          "en": "Rapid body survey, transport decision, and protocols",
+          "zh": "Rapid body survey、transport decision 和 protocols"
+        },
+        {
+          "key": "C",
+          "en": "Hazards, environment, mechanism, people, and resources",
+          "zh": "Hazards、environment、mechanism、people 和 resources"
+        },
+        {
+          "key": "D",
+          "en": "Hand-off report and documentation",
+          "zh": "Hand-off report 和 documentation"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The secondary survey comprises history, vital signs, head-to-toe examination, and (PCP required) functional inquiry. Its purpose is to identify the chief complaint, establish baseline vitals, and gather information about the condition. Option B mixes primary survey steps; C is the RSE; D is records and reports.",
+      "explanationZh": "Secondary survey 由 history、vital signs、head-to-toe examination 和（PCP 必做的）functional inquiry 组成，目的是明确 chief complaint、建立基线 vitals 并收集病情信息。选项 B 混入了 primary survey 步骤；C 是 RSE；D 是 records and reports。",
+      "sourceRef": "BC Guidelines p.9",
+      "verified": false
+    },
+    {
+      "id": "pap-050",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "assessment-model",
+      "difficulty": "advanced",
+      "questionEn": "A talkative 83-year-old woman called for her chronic knee pain, but as you assess her you notice she is speaking in shorter sentences than when you arrived and her breathing has become laboured with accessory muscle use. She insists she just wants to discuss her knee. You should:",
+      "questionZh": "一名健谈的 83 岁女性因慢性膝痛呼叫救护，但评估过程中你注意到她说话的句子比你刚到时明显变短，呼吸变得费力并出现辅助呼吸肌使用。她坚持只想谈膝盖的问题。你应该：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Complete the knee assessment first since it is her stated chief complaint",
+          "zh": "先完成膝部评估，因为那是她自述的 chief complaint"
+        },
+        {
+          "key": "B",
+          "en": "Document the breathing change and continue the interview as planned",
+          "zh": "记录呼吸变化，按原计划继续问诊"
+        },
+        {
+          "key": "C",
+          "en": "Advise her to book a family doctor appointment for the breathing",
+          "zh": "建议她为呼吸问题预约家庭医生"
+        },
+        {
+          "key": "D",
+          "en": "Return to the primary survey - new respiratory distress is an unstable finding that takes priority over the chronic complaint",
+          "zh": "回到 primary survey——新出现的呼吸窘迫属于不稳定表现，优先级高于慢性主诉"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Assessment is dynamic: whenever a life-threat emerges, the paramedic returns to the primary survey. Respiratory distress with accessory muscle use is an unstable criterion requiring oxygen and a transport decision. Elderly patients frequently minimize or misattribute serious symptoms; the crew's observations outrank the stated agenda.",
+      "explanationZh": "评估是动态的：一旦出现威胁生命的问题，就应回到 primary survey。呼吸窘迫伴辅助呼吸肌使用属于不稳定标准，需要给氧并做转运决策。老年病人经常淡化或错误归因严重症状；救护员的客观观察优先于病人自述的议题。",
+      "sourceRef": "BC Guidelines p.7, p.9",
+      "verified": false
+    },
+    {
+      "id": "pap-051",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "A 72-year-old man with a previous hip replacement felt his hip 'pop out' while bending; his leg is now shortened and internally rotated. Distal pulses are present. What does the BC guideline say about his transport category?",
+      "questionZh": "一名做过髋关节置换的 72 岁男性弯腰时感到髋部「弹出」；患腿现在缩短并内旋，远端脉搏存在。BC 指南对他的转运分类怎么规定？",
+      "options": [
+        {
+          "key": "A",
+          "en": "All hip dislocations are in the Rapid Transport Category",
+          "zh": "所有髋关节脱位都属于 Rapid Transport Category"
+        },
+        {
+          "key": "B",
+          "en": "Hip dislocations are rapid transport only when distal pulses are absent",
+          "zh": "只有远端脉搏消失的髋脱位才需要快速转运"
+        },
+        {
+          "key": "C",
+          "en": "Prosthetic hip dislocations are excluded from rapid transport rules",
+          "zh": "人工髋关节脱位不适用快速转运规则"
+        },
+        {
+          "key": "D",
+          "en": "He may wait for a scheduled transfer since this is a recurrent problem",
+          "zh": "这属于复发问题，可以等待预约转院"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The guideline states plainly: all hip dislocations are in the Rapid Transport Category, because early medical reduction is essential to avoid serious long-term complications. (Isolated hip fractures, by contrast, become rapid transport when there is neurovascular impairment.) Support the limb, secure to the stretcher, and monitor distal pulses en route.",
+      "explanationZh": "指南明确写道：所有髋关节脱位都属于 Rapid Transport Category，因为早期医疗复位对避免严重长期并发症至关重要。（相比之下，孤立髋部骨折在有神经血管损害时才升为快速转运。）应支撑患肢、固定于担架，途中监测远端脉搏。",
+      "sourceRef": "BC Guidelines p.22",
+      "verified": false
+    },
+    {
+      "id": "pap-052",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "An 85-year-old woman fell and has an isolated suspected hip fracture: shortened, externally rotated left leg. Her left foot is cold and you cannot palpate the pedal pulse. This finding changes her management because:",
+      "questionZh": "一名 85 岁女性跌倒后疑似孤立性髋部骨折：左腿缩短外旋。她的左脚发凉，足背动脉无法触及。这个发现改变她的处置，因为：",
+      "options": [
+        {
+          "key": "A",
+          "en": "A cold foot is normal in the elderly and requires no change",
+          "zh": "老年人脚凉很正常，无需改变处置"
+        },
+        {
+          "key": "B",
+          "en": "She now needs a traction splint applied to the hip",
+          "zh": "她现在需要对髋部使用牵引夹板"
+        },
+        {
+          "key": "C",
+          "en": "An isolated hip fracture with neurovascular impairment becomes a rapid transport patient",
+          "zh": "伴神经血管损害的孤立髋部骨折升级为快速转运病人"
+        },
+        {
+          "key": "D",
+          "en": "The absent pulse only matters if the skin is also mottled",
+          "zh": "只有皮肤同时出现花斑，脉搏消失才有意义"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Isolated hip fractures are rapid transport if there is neuro or vascular impairment - a cold, pulseless foot is exactly that. Traction splints are indicated for mid-shaft femur fractures, not hip fractures. Quickly support the limb, secure her to a firm stretcher, and transport rapidly with frequent distal checks.",
+      "explanationZh": "孤立髋部骨折在存在神经或血管损害时即为快速转运——脚凉、无脉正是血管损害。牵引夹板的指征是股骨中段骨折，不是髋部骨折。应迅速支撑患肢、固定于硬担架，快速转运并频繁复查远端循环。",
+      "sourceRef": "BC Guidelines p.22",
+      "verified": false
+    },
+    {
+      "id": "pap-053",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "transport-decision",
+      "difficulty": "advanced",
+      "questionEn": "A 77-year-old man slipped from a standing position in his garage. On assessment his speech is newly slurred and his left hand grip is weaker than the right - his wife confirms both are new since the fall. Vitals are normal. Although the mechanism seems minor, he is categorized as:",
+      "questionZh": "一名 77 岁男性在车库里从站立位滑倒。评估时发现他言语含糊是新出现的，左手握力比右手弱——妻子确认这两项都是跌倒后才有的。Vitals 正常。尽管机制看似轻微，他应被归类为：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Stable, because a fall from standing height never meets mechanism criteria",
+          "zh": "稳定——因为站立高度跌倒从不满足机制标准"
+        },
+        {
+          "key": "B",
+          "en": "Unstable - new onset neurological deficits are an anatomical criterion regardless of mechanism, and a stroke may have caused the fall",
+          "zh": "不稳定——新发神经功能缺损是解剖学标准，与机制无关；而且卒中可能正是跌倒的原因"
+        },
+        {
+          "key": "C",
+          "en": "Stable, provided his blood pressure stays under 180 systolic",
+          "zh": "稳定——只要收缩压保持在 180 以下"
+        },
+        {
+          "key": "D",
+          "en": "Unstable only if his GCS drops below 13",
+          "zh": "只有 GCS 降到 13 以下才算不稳定"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "New onset neurological deficits sit on the anatomical instability list, and suspected CVA is a primary survey instability criterion - both independent of mechanism. In the elderly, always ask whether a medical event caused the fall: slurred speech plus unilateral weakness demands FAST-VAN evaluation, timely transport, and early notification.",
+      "explanationZh": "新发神经功能缺损位列解剖学不稳定标准，疑似 CVA 也是 primary survey 不稳定标准——两者都与机制无关。对老年人要始终追问是否内科事件导致了跌倒：言语含糊加单侧无力需要 FAST-VAN 评估、及时转运并提前通知医院。",
+      "sourceRef": "BC Guidelines p.7, p.30",
+      "verified": false
+    },
+    {
+      "id": "pap-054",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "A care home reports an 84-year-old woman with a sudden facial droop and arm drift noticed 40 minutes ago. Under the BC instability criteria, a suspected CVA is:",
+      "questionZh": "养老院报告一名 84 岁女性 40 分钟前突然出现口角歪斜和手臂下垂。按 BC 不稳定标准，疑似 CVA（脑血管意外）属于：",
+      "options": [
+        {
+          "key": "A",
+          "en": "A stable condition if the patient can still swallow",
+          "zh": "只要病人还能吞咽就属于稳定"
+        },
+        {
+          "key": "B",
+          "en": "Unstable only when accompanied by unconsciousness",
+          "zh": "只有伴意识丧失时才不稳定"
+        },
+        {
+          "key": "C",
+          "en": "A condition to monitor at the facility for progression over 2 hours",
+          "zh": "应在机构内观察 2 小时看是否进展"
+        },
+        {
+          "key": "D",
+          "en": "A listed unstable primary survey finding - recognize with FAST-VAN, transport in a timely manner, and notify the receiving facility en route",
+          "zh": "明确列入 primary survey 不稳定标准——用 FAST-VAN 识别、及时转运并在途中通知接收医院"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Suspected CVA appears on the unstable findings list, and the stroke guideline requires accurate recognition (FAST-VAN), timely transport, and en-route notification, because time determines eligibility for reperfusion therapy. Waiting to see if deficits resolve wastes the treatment window.",
+      "explanationZh": "疑似 CVA 在不稳定表现清单中，stroke 指南要求准确识别（FAST-VAN）、及时转运并途中通知医院，因为时间窗决定再灌注治疗资格。留观等待缺损是否消退会浪费治疗窗口。",
+      "sourceRef": "BC Guidelines p.7, p.30",
+      "verified": false
+    },
+    {
+      "id": "pap-055",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "transport-decision",
+      "difficulty": "foundation",
+      "questionEn": "An 84-year-old man has vomited dark blood twice. He is anxious, with cool, pale, clammy skin. Based on the primary survey findings alone, he is:",
+      "questionZh": "一名 84 岁男性两次呕吐深色血液。他焦虑不安，皮肤湿冷苍白。仅根据 primary survey 发现，他属于：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Unstable - cool pale clammy skin secondary to suspected shock is a listed criterion; position supine, keep warm, give oxygen, and transport rapidly",
+          "zh": "不稳定——疑似休克所致的湿冷苍白皮肤是明确标准；应平卧、保暖、给氧并快速转运"
+        },
+        {
+          "key": "B",
+          "en": "Stable until his systolic blood pressure is confirmed below 90",
+          "zh": "在确认收缩压低于 90 之前都算稳定"
+        },
+        {
+          "key": "C",
+          "en": "Stable because hematemesis is usually self-limiting",
+          "zh": "稳定——因为呕血通常会自限"
+        },
+        {
+          "key": "D",
+          "en": "Unstable only if he vomits a third time during your assessment",
+          "zh": "只有评估期间第三次呕血才算不稳定"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Cool pale clammy skin secondary to suspected shock is itself an unstable primary survey finding - no confirmatory BP threshold is required before acting. Hypovolemia management applies: supine positioning, warmth, supplemental oxygen to SpO2 of at least 94%, and rapid transport, with airway vigilance given ongoing vomiting.",
+      "explanationZh": "疑似休克所致的湿冷苍白皮肤本身就是 primary survey 不稳定表现——不需要等血压数值确认再行动。按 hypovolemia 处理：平卧、保暖、给氧维持 SpO2 ≥ 94%、快速转运，并因持续呕吐保持气道警惕。",
+      "sourceRef": "BC Guidelines p.7, p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-056",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "An 87-year-old woman with moderate dementia is assessed after a fall. Her eyes are open spontaneously, she speaks in sentences but is disoriented to place and date, and she follows simple commands. Her GCS is:",
+      "questionZh": "一名中度失智的 87 岁女性跌倒后接受评估。她自发睁眼，能成句说话但对地点和日期定向障碍，可以完成简单指令。她的 GCS 是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "GCS 15, because dementia does not affect scoring",
+          "zh": "GCS 15——因为失智不影响评分"
+        },
+        {
+          "key": "B",
+          "en": "GCS 12",
+          "zh": "GCS 12"
+        },
+        {
+          "key": "C",
+          "en": "GCS 14 (E4 V4 M6) - and it must be interpreted against her known baseline",
+          "zh": "GCS 14（E4 V4 M6）——且必须对照她已知的基线来解读"
+        },
+        {
+          "key": "D",
+          "en": "GCS cannot be scored in patients with dementia",
+          "zh": "失智病人无法进行 GCS 评分"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Spontaneous eye opening is E4, confused conversation is V4, obeying commands is M6: GCS 14. In dementia the raw score must be compared with baseline: if she is always disoriented, 14 may be her normal; if she was oriented yesterday, the same 14 is an acute change demanding urgent evaluation. Document both the score and the baseline source.",
+      "explanationZh": "自发睁眼 E4，混乱对话 V4，遵嘱动作 M6：GCS 14。对失智病人，分数必须对照基线解读：如果她平时就定向障碍，14 可能是常态；如果她昨天还定向正常，同样的 14 就是需要紧急评估的急性变化。应同时记录分数和基线信息来源。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-057",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "A 79-year-old man fell down a flight of stairs. He opens his eyes when you speak loudly, utters random inappropriate words, and localizes to a painful stimulus. What is his GCS and TBI classification?",
+      "questionZh": "一名 79 岁男性从整段楼梯摔下。大声呼唤时他会睁眼，说出零散且不恰当的词语，对疼痛刺激能定位。他的 GCS 和 TBI 分级是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "GCS 13 - mild traumatic brain injury",
+          "zh": "GCS 13 —— 轻度创伤性脑损伤"
+        },
+        {
+          "key": "B",
+          "en": "GCS 11 (E3 V3 M5) - moderate traumatic brain injury",
+          "zh": "GCS 11（E3 V3 M5）—— 中度创伤性脑损伤"
+        },
+        {
+          "key": "C",
+          "en": "GCS 9 - moderate traumatic brain injury",
+          "zh": "GCS 9 —— 中度创伤性脑损伤"
+        },
+        {
+          "key": "D",
+          "en": "GCS 8 - severe traumatic brain injury",
+          "zh": "GCS 8 —— 重度创伤性脑损伤"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Eye opening to voice is E3, inappropriate words V3, localizing to pain M5: total 11, in the moderate band (9-12). Management includes oxygenation to SpO2 of at least 94%, head elevated 30 degrees, and for PCP maintaining systolic BP above 120 mmHg. In an anticoagulated elderly faller, expect deterioration and reassess frequently.",
+      "explanationZh": "呼唤睁眼 E3，不恰当词语 V3，疼痛定位 M5：合计 11，属中度（9-12）。处理包括维持 SpO2 ≥ 94%、床头抬高 30 度，PCP 需维持收缩压 > 120 mmHg。对服抗凝药的老年跌倒者要预期恶化并频繁复评。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-058",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "advanced",
+      "questionEn": "A 76-year-old woman with long-standing hypertension (usual BP around 165/95 per her home log) has vomited coffee-ground material. She is pale with HR 104. Her BP reads 118/76. How should you interpret this blood pressure?",
+      "questionZh": "一名长期高血压的 76 岁女性（家庭记录平时血压约 165/95）呕吐咖啡渣样物。她面色苍白，HR 104。现测血压 118/76。你应如何解读这个血压？",
+      "options": [
+        {
+          "key": "A",
+          "en": "It is a textbook-normal reading, so her volume status is adequate",
+          "zh": "这是教科书上的正常血压，说明容量状态良好"
+        },
+        {
+          "key": "B",
+          "en": "It proves her home log was inaccurate",
+          "zh": "这证明她的家庭血压记录不准确"
+        },
+        {
+          "key": "C",
+          "en": "It should be ignored because automated cuffs fail in the elderly",
+          "zh": "应忽略此读数，因为电子血压计对老年人不准"
+        },
+        {
+          "key": "D",
+          "en": "For a chronic hypertensive this represents a marked drop from baseline - treat it as relative hypotension with significant volume loss",
+          "zh": "对慢性高血压病人来说，这相比基线是明显下降——应视为伴显著容量丢失的相对性低血压"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "A 'normal' number can hide a 45-plus mmHg fall from an elderly hypertensive's baseline - a large perfusion deficit, corroborated here by pallor and tachycardia. Geriatric vitals must be read against the individual baseline, not population norms. Manage as hypovolemia from GI bleeding: supine, warm, oxygen, rapid transport, and PCP vascular access en route.",
+      "explanationZh": "「正常」数值可能掩盖了比老年高血压病人基线低了 45 mmHg 以上的下降——这是很大的灌注缺口，且已有苍白和心动过速佐证。老年 vitals 必须对照个体基线而非人群标准解读。按消化道出血所致 hypovolemia 处理：平卧、保暖、给氧、快速转运，PCP 途中建立静脉通路。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-059",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "foundation",
+      "questionEn": "An elderly patient reports feeling faint each time she stands up after starting a new diuretic. Which vital signs approach best evaluates this complaint?",
+      "questionZh": "一名老年病人报告开始服用新的利尿剂后每次站起都感到快要晕倒。哪种 vitals 评估方式最适合评估这一主诉？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Compare lying and standing readings - a marked heart rate rise or systolic drop with symptoms on standing suggests volume depletion",
+          "zh": "对比卧位和站立位读数——站立时心率明显上升或收缩压明显下降并伴症状，提示容量不足"
+        },
+        {
+          "key": "B",
+          "en": "Take a single seated blood pressure, which reflects all positions",
+          "zh": "只测一次坐位血压，它能代表所有体位"
+        },
+        {
+          "key": "C",
+          "en": "Measure blood pressure in both arms simultaneously",
+          "zh": "同时测量双上肢血压"
+        },
+        {
+          "key": "D",
+          "en": "Check only the oxygen saturation since dizziness is a hypoxia symptom",
+          "zh": "只查血氧饱和度，因为头晕是缺氧症状"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Positional (orthostatic) assessment compares supine and standing vitals: a significant HR increase or SBP fall with symptom reproduction points to volume depletion - common with diuretics in the elderly, whose blunted baroreceptor reflexes compensate poorly. Perform it only when the patient is otherwise safe to stand, with the crew guarding against a fall.",
+      "explanationZh": "体位性（orthostatic）评估对比卧位与站立位 vitals：心率明显上升或收缩压下降并复现症状，提示容量不足——在服用利尿剂、压力感受器反射迟钝的老年人中很常见。只有病人可以安全站立时才做该检查，且救护员应在旁防跌倒。",
+      "sourceRef": "BC Guidelines p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-060",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "A 90-year-old man fainted at lunch. He takes metoprolol and digoxin. Now: HR 40 and regular, BP 88/54, he is pale and lightheaded. The most accurate clinical interpretation is:",
+      "questionZh": "一名 90 岁男性午餐时晕厥。他服用 metoprolol 和 digoxin。现在：HR 40 且规则，BP 88/54，面色苍白、头晕。最准确的临床解读是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "A heart rate of 40 is acceptable in the very old and needs no action",
+          "zh": "高龄老人心率 40 可以接受，无需处理"
+        },
+        {
+          "key": "B",
+          "en": "His bradycardia is compensatory and protective, so transport is optional",
+          "zh": "他的心动过缓是保护性代偿，可以不转运"
+        },
+        {
+          "key": "C",
+          "en": "Symptomatic bradycardia with hypotension - likely contributed to by his rate-controlling medications - makes him unstable; give oxygen, keep him supine, and transport promptly with the medication list",
+          "zh": "症状性心动过缓伴低血压——很可能与他的控率药物有关——属于不稳定；应给氧、平卧、尽快转运并携带用药清单"
+        },
+        {
+          "key": "D",
+          "en": "The digoxin proves this is an overdose requiring immediate naloxone",
+          "zh": "服用 digoxin 说明这是需要立即给 naloxone 的药物过量"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Syncope, HR 40, and BP 88/54 together mean hypoperfusion - a symptomatic bradycardia, plausibly worsened by beta-blockade and digoxin. He is unstable and needs oxygen, supine positioning, prompt transport, and the medication list for the receiving team. Naloxone reverses opioids, not cardiac glycosides.",
+      "explanationZh": "晕厥、HR 40、BP 88/54 合起来就是灌注不足——症状性心动过缓，很可能被 β 阻滞剂和 digoxin 加重。他属于不稳定，需要给氧、平卧、尽快转运，并把用药清单交给接收团队。Naloxone 逆转的是阿片类，不是强心苷。",
+      "sourceRef": "BC Guidelines p.7, p.60 (medication interactions)",
+      "verified": false
+    },
+    {
+      "id": "pap-061",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "You are transporting an 81-year-old woman on apixaban who struck her head. Her GCS was 15 on scene; 20 minutes into transport she is drowsy, opening eyes to voice and now confused - GCS 13. The most appropriate response is to:",
+      "questionZh": "你正在转运一名服用 apixaban（阿哌沙班）、头部受伤的 81 岁女性。现场 GCS 15；转运 20 分钟后她变得嗜睡，呼唤才睁眼且出现意识混乱——GCS 13。最恰当的反应是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Let her sleep - drowsiness is expected after a stressful event",
+          "zh": "让她睡——应激事件后嗜睡是正常的"
+        },
+        {
+          "key": "B",
+          "en": "Recognize a falling GCS in an anticoagulated head injury as probable intracranial bleeding: reassess ABCs, support oxygenation to at least 94%, elevate the head 30 degrees, and notify the receiving facility",
+          "zh": "把服抗凝药的头伤病人 GCS 下降识别为很可能的颅内出血：重评 ABC、维持 SpO2 ≥ 94%、床头抬高 30 度并通知接收医院"
+        },
+        {
+          "key": "C",
+          "en": "Record the new score and continue without other changes since 13 is still 'mild'",
+          "zh": "记录新分数即可，13 仍属「轻度」，无需其他改变"
+        },
+        {
+          "key": "D",
+          "en": "Administer oral glucose in case of hypoglycemia before doing anything else",
+          "zh": "先给口服葡萄糖以防低血糖，再做其他处理"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The direction of change matters more than the absolute number: a two-point fall in an anticoagulated elderly head injury signals an evolving bleed. TBI care applies - oxygenation at 94% or above, head of bed at 30 degrees, loosened collar - plus early notification. A drowsy patient with a compromised airway risk should never simply be left to sleep; oral glucose requires an intact airway and a confirmed low glucose.",
+      "explanationZh": "变化的方向比绝对值更重要：服抗凝药的老年头伤病人 GCS 下降 2 分提示出血正在进展。按 TBI 处理——SpO2 ≥ 94%、床头 30 度、松开颈托——并尽早通知医院。嗜睡且有气道风险的病人绝不能放任入睡；口服葡萄糖需要气道完好且确认血糖低才能给。",
+      "sourceRef": "BC Guidelines p.27",
+      "verified": false
+    },
+    {
+      "id": "pap-062",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "vitals-gcs",
+      "difficulty": "advanced",
+      "questionEn": "A 92-year-old woman with advanced dementia and a suspected femur fracture cannot answer the 0-10 pain scale. She is grimacing, guarding the leg, breathing at 28, and became agitated when moved. How should you assess and treat her pain?",
+      "questionZh": "一名晚期失智的 92 岁女性疑似股骨骨折，无法回答 0-10 疼痛评分。她表情痛苦、护住患腿、呼吸 28 次/分，搬动时变得躁动。你应如何评估和处理她的疼痛？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Record 'pain assessment impossible' and withhold analgesia",
+          "zh": "记录「无法评估疼痛」并不给镇痛"
+        },
+        {
+          "key": "B",
+          "en": "Assume dementia patients feel less pain and treat only if she cries out",
+          "zh": "假定失智病人痛觉减退，只有她喊叫才处理"
+        },
+        {
+          "key": "C",
+          "en": "Ask her repeatedly until she produces a number for the scale",
+          "zh": "反复追问直到她说出一个疼痛数字"
+        },
+        {
+          "key": "D",
+          "en": "Use behavioural and physiological indicators - grimacing, guarding, agitation on movement, elevated respiratory rate - as evidence of significant pain and manage it before movement per the protocol",
+          "zh": "把行为和生理指标——表情痛苦、护腿、搬动时躁动、呼吸增快——作为明显疼痛的证据，并按 protocol 在搬动前给予镇痛"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Dementia impairs pain reporting, not pain perception. Behavioural cues (grimacing, guarding, agitation with movement) and physiological signs substitute for the numeric scale. The musculoskeletal guideline calls for analgesia prior to movement in appropriate patients - untreated pain in dementia frequently presents as 'agitation' and then gets mislabelled.",
+      "explanationZh": "失智损害的是疼痛的表达，不是疼痛的感受。行为线索（表情痛苦、护腿、搬动时躁动）和生理征象可替代数字评分。骨骼肌肉损伤指南要求对合适的病人在搬动前给予镇痛——失智病人未处理的疼痛常表现为「躁动」而被误判。",
+      "sourceRef": "BC Guidelines p.21",
+      "verified": false
+    },
+    {
+      "id": "pap-063",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "history",
+      "difficulty": "intermediate",
+      "questionEn": "A neighbour found an 86-year-old man on his kitchen floor; nobody knows how long he was down. For the spinal management decision specifically, which critical history question matters most?",
+      "questionZh": "邻居发现一名 86 岁男性倒在厨房地板上，没人知道他倒了多久。就脊柱处置决策而言，哪个 critical history 问题最重要？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Has he moved himself or been moved by anyone since the fall?",
+          "zh": "「跌倒后他自己动过吗？有人搬动过他吗？」"
+        },
+        {
+          "key": "B",
+          "en": "What did he eat for his last meal?",
+          "zh": "「他最后一餐吃了什么？」"
+        },
+        {
+          "key": "C",
+          "en": "Does he have a family doctor in the area?",
+          "zh": "「他在本地有家庭医生吗？」"
+        },
+        {
+          "key": "D",
+          "en": "How often does the neighbour check on him?",
+          "zh": "「邻居多久来看他一次？」"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The fall history list includes 'has the patient moved or been moved since the incident' - it shapes spinal assessment (movement without symptoms is informative; well-meaning bystander movement may have worsened an injury) and documentation. Height, landing surface, first point of impact, LOC, and cause of fall complete the picture, alongside downtime concerns such as hypothermia and pressure injury.",
+      "explanationZh": "跌倒 critical history 清单中包括「事发后病人是否自行移动或被移动过」——它直接影响脊柱评估（活动后无症状有参考意义；好心旁人的搬动可能加重损伤）和记录。坠落高度、落地面、先着地部位、有无意识丧失和跌倒原因补全信息，同时还要关注长时间倒地的低体温和压疮问题。",
+      "sourceRef": "BC Guidelines p.12",
+      "verified": false
+    },
+    {
+      "id": "pap-064",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "history",
+      "difficulty": "intermediate",
+      "questionEn": "A 79-year-old man drove his car slowly into a light pole. Damage is minor and he is uninjured but seems vague about what happened. Which line of history questioning adds the most clinical value?",
+      "questionZh": "一名 79 岁男性驾车低速撞上灯柱。车损轻微，他没有受伤，但对事发经过表述含糊。哪条病史追问最有临床价值？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Whether his insurance covers single-vehicle collisions",
+          "zh": "他的保险是否涵盖单车事故"
+        },
+        {
+          "key": "B",
+          "en": "How long he has owned the vehicle",
+          "zh": "这辆车他开了多少年"
+        },
+        {
+          "key": "C",
+          "en": "What he experienced immediately before impact - chest pain, palpitations, dizziness, confusion, or loss of consciousness",
+          "zh": "撞击前一刻他有什么感觉——胸痛、心悸、头晕、意识混乱或意识丧失"
+        },
+        {
+          "key": "D",
+          "en": "Whether the pole belongs to the city or a private lot",
+          "zh": "灯柱属于市政还是私人停车场"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The MVA history list includes loss of consciousness and the events of the crash. In older drivers, a low-speed single-vehicle impact is a classic footprint of a medical event behind the wheel - arrhythmia, TIA, hypoglycemia, or syncope. Vagueness about the moment of impact strengthens that suspicion, and the medical cause matters more than the minor trauma.",
+      "explanationZh": "MVA 病史清单包含意识丧失和事故经过。对高龄驾驶者，低速单车撞击是驾驶中发生内科事件的经典痕迹——心律失常、TIA、低血糖或晕厥。对撞击瞬间的含糊描述会加重这种怀疑，内科原因比轻微外伤更重要。",
+      "sourceRef": "BC Guidelines p.12",
+      "verified": false
+    },
+    {
+      "id": "pap-065",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "pcr",
+      "difficulty": "intermediate",
+      "questionEn": "You transport an 88-year-old woman with dementia whose history came mostly from her daughter. Which PCR documentation practice is most appropriate?",
+      "questionZh": "你转运一名 88 岁失智女性，病史主要由女儿提供。哪种 PCR 记录方式最恰当？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Write the history as if the patient provided it, to keep the narrative simple",
+          "zh": "把病史写成病人自己提供的，让叙述简洁一些"
+        },
+        {
+          "key": "B",
+          "en": "Record the history source ('history per daughter'), the patient's stated baseline mental status, and today's objective findings for comparison",
+          "zh": "注明病史来源（「病史由女儿提供」）、家属描述的基线精神状态，以及今天的客观发现以供对比"
+        },
+        {
+          "key": "C",
+          "en": "Omit the mental status section because dementia makes it meaningless",
+          "zh": "省略精神状态部分——失智让它失去意义"
+        },
+        {
+          "key": "D",
+          "en": "Document only vital signs since the history is second-hand",
+          "zh": "既然病史是二手的，只记录 vitals 即可"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Accurate records identify the information source and preserve the baseline-versus-today comparison, which is the key diagnostic axis in dementia patients. The receiving team's ability to judge 'acute change' depends entirely on what you capture at the scene - the daughter may not accompany the patient.",
+      "explanationZh": "准确的记录应注明信息来源，并保留「基线 vs 今天」的对比——这是失智病人最关键的诊断轴线。接收团队判断「急性变化」的能力完全取决于你在现场记下的内容——女儿未必会陪同到院。",
+      "sourceRef": "BC Guidelines p.10, p.17",
+      "verified": false
+    },
+    {
+      "id": "pap-066",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "iv-calc",
+      "difficulty": "advanced",
+      "questionEn": "For a frail 84-year-old transfer patient you are asked to run the IV at the standard maintenance rate of 75 mL/hr using a micro-drip set (60 gtts/mL). What drip rate is that?",
+      "questionZh": "为一名体弱的 84 岁转院病人，需要用 micro-drip 输液器（60 gtts/mL）以标准维持速度 75 mL/hr 输液。滴速是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "8 gtts/min",
+          "zh": "8 gtts/min"
+        },
+        {
+          "key": "B",
+          "en": "13 gtts/min",
+          "zh": "13 gtts/min"
+        },
+        {
+          "key": "C",
+          "en": "45 gtts/min",
+          "zh": "45 gtts/min"
+        },
+        {
+          "key": "D",
+          "en": "75 gtts/min",
+          "zh": "75 gtts/min"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "75 mL x 60 gtts/mL / 60 minutes = 4500 / 60 = 75 gtts/min. With a micro-drip set, gtts/min always equals mL/hr. 13 gtts/min would be the answer with a 10 gtts/mL macro set - a micro-drip is often preferred in frail elderly patients because it makes accidental over-infusion harder.",
+      "explanationZh": "75 mL x 60 gtts/mL / 60 分钟 = 4500 / 60 = 75 gtts/min。用 micro-drip 时 gtts/min 数值恒等于 mL/hr。13 gtts/min 是 10 gtts/mL macro 输液器的答案——体弱老年病人常首选 micro-drip，因为它更不容易发生意外过量输注。",
+      "sourceRef": "BC Guidelines p.39",
+      "verified": false
+    },
+    {
+      "id": "pap-067",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "iv-calc",
+      "difficulty": "advanced",
+      "questionEn": "A 68-year-old woman (70 kg) with a history of CHF is hypotensive at 82/50 after two days of vomiting. The hypovolemia protocol allows a 20 mL/kg bolus to a maximum of 2 litres. What is the safest way to run this bolus?",
+      "questionZh": "一名有 CHF 病史的 68 岁女性（70 kg）呕吐两天后血压 82/50。Hypovolemia protocol 允许 20 mL/kg、最多 2 升的液体冲击。最安全的执行方式是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Run the full calculated 1400 mL wide open without stopping, since the protocol allows it",
+          "zh": "既然 protocol 允许，就一次性全开输完计算出的 1400 mL"
+        },
+        {
+          "key": "B",
+          "en": "Withhold all fluid because CHF is an absolute contraindication to IV therapy",
+          "zh": "CHF 是静脉输液的绝对禁忌，一滴都不能给"
+        },
+        {
+          "key": "C",
+          "en": "Give the bolus with reassessment every 500 mL as the protocol directs - and in a CHF patient specifically recheck breath sounds and work of breathing at each interval, stopping if congestion develops",
+          "zh": "按 protocol 每 500 mL 重新评估一次——对 CHF 病人尤其要在每个间隔复查呼吸音和呼吸做功，一旦出现淤血征象即停止"
+        },
+        {
+          "key": "D",
+          "en": "Give 250 mL total regardless of response, then switch to TKVO",
+          "zh": "无论反应如何都只给 250 mL，然后改为 TKVO"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The protocol's own safeguard - reassessing every 500 mL - exists precisely for patients with limited cardiac reserve. Her calculated bolus is 20 x 70 = 1400 mL, but in CHF each increment demands auscultation for crackles and reassessment of breathing before continuing. Dehydration and CHF can coexist; neither blind full-volume infusion nor blanket fluid refusal is correct.",
+      "explanationZh": "Protocol 自带的安全机制——每 500 mL 重评——正是为心脏储备有限的病人设计的。她的计算量是 20 x 70 = 1400 mL，但对 CHF 病人，每一段输注前都要听诊有无湿啰音并重评呼吸。脱水与 CHF 可以并存；盲目全量输注和一概拒绝补液都不正确。",
+      "sourceRef": "BC Guidelines p.39, p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-068",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "The Pediatric Assessment Triangle (PAT) allows a rapid 'from the doorway' impression of a sick child. What are its three arms?",
+      "questionZh": "Pediatric Assessment Triangle（儿科评估三角，PAT）可以在「门口第一眼」快速形成对患儿的总体印象。它的三条边是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Airway patency, blood pressure, and temperature",
+          "zh": "气道通畅度、血压和体温"
+        },
+        {
+          "key": "B",
+          "en": "Appearance, work of breathing, and circulation to the skin",
+          "zh": "外观（appearance）、呼吸做功（work of breathing）和皮肤循环（circulation to skin）"
+        },
+        {
+          "key": "C",
+          "en": "Alertness, verbal response, and pain response",
+          "zh": "警觉、言语反应和疼痛反应"
+        },
+        {
+          "key": "D",
+          "en": "Pulse, pupils, and skin colour",
+          "zh": "脉搏、瞳孔和肤色"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The PAT is a hands-off first impression built from appearance (tone, interactiveness, consolability, look or gaze, speech or cry), work of breathing (retractions, positioning, audible sounds), and circulation to skin (pallor, mottling, cyanosis). It precedes and complements the hands-on primary survey.",
+      "explanationZh": "PAT 是不动手的第一印象，由三部分构成：外观（肌张力、互动性、可安抚性、眼神、言语/哭声）、呼吸做功（凹陷、体位、可闻及的呼吸音）和皮肤循环（苍白、花斑、发绀）。它先于并补充动手进行的 primary survey。",
+      "sourceRef": "BC Guidelines p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-069",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "You enter a home to find an 18-month-old girl lying limp across her mother's lap. She makes no eye contact, does not resist your exam, and gives a weak intermittent whimper. Using PAT reasoning, this presentation indicates:",
+      "questionZh": "你进入住宅，看到一名 18 个月大的女孩软软地横躺在母亲腿上。她没有眼神接触，不抗拒你的检查，只发出微弱断续的呜咽。按 PAT 推理，这种表现提示：",
+      "options": [
+        {
+          "key": "A",
+          "en": "A seriously ill child - abnormal appearance (poor tone, no interactiveness) signals inadequate brain perfusion or oxygenation regardless of the eventual diagnosis",
+          "zh": "重症患儿——外观异常（肌张力差、无互动）提示脑灌注或氧合不足，无论最终诊断是什么"
+        },
+        {
+          "key": "B",
+          "en": "A tired toddler who missed her nap and needs no further assessment",
+          "zh": "只是错过午睡的疲倦幼儿，无需进一步评估"
+        },
+        {
+          "key": "C",
+          "en": "Normal stranger anxiety for her age",
+          "zh": "该年龄段正常的陌生人焦虑"
+        },
+        {
+          "key": "D",
+          "en": "A well child because she is quiet and cooperative with the exam",
+          "zh": "安静配合检查，说明是健康孩子"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "A toddler who is limp, uninterested in strangers, and does not resist examination is displaying abnormal appearance - the most sensitive PAT arm. Healthy 18-month-olds typically fear strangers and fight the exam; 'easy to examine' in this age group is a red flag, not reassurance. She needs a full primary survey, oxygen consideration, and prompt transport.",
+      "explanationZh": "软弱无力、对陌生人毫无兴趣、不抗拒检查的幼儿属于外观异常——PAT 中最敏感的一条边。健康的 18 个月幼儿通常怕生并抗拒检查；这个年龄「很好检查」是危险信号而不是好消息。她需要完整 primary survey、考虑给氧并尽快转运。",
+      "sourceRef": "BC Guidelines p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-070",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "When assessing for a pulse in an unresponsive infant, which site does the BC guideline direct you to use?",
+      "questionZh": "评估无反应婴儿的脉搏时，BC 指南要求使用哪个部位？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Carotid artery",
+          "zh": "颈动脉"
+        },
+        {
+          "key": "B",
+          "en": "Radial artery",
+          "zh": "桡动脉"
+        },
+        {
+          "key": "C",
+          "en": "Brachial artery",
+          "zh": "肱动脉"
+        },
+        {
+          "key": "D",
+          "en": "Dorsalis pedis artery",
+          "zh": "足背动脉"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The infant CPR basics state: assess for a pulse using the brachial rather than the carotid artery. An infant's short, chubby neck makes the carotid difficult and unreliable to palpate; the brachial site on the inner upper arm is accessible and accurate.",
+      "explanationZh": "婴儿 CPR 基础要点指出：应触诊肱动脉而非颈动脉。婴儿脖颈短而多肉，颈动脉难以可靠触及；上臂内侧的肱动脉既好找又准确。",
+      "sourceRef": "BC Guidelines p.43",
+      "verified": false
+    },
+    {
+      "id": "pap-071",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "Why does the BC guideline recommend placing a pad under an infant's shoulders during CPR or airway management?",
+      "questionZh": "为什么 BC 指南建议在 CPR 或气道管理时于婴儿肩下垫一块垫料？",
+      "options": [
+        {
+          "key": "A",
+          "en": "To raise the chest for easier compressions",
+          "zh": "抬高胸部便于按压"
+        },
+        {
+          "key": "B",
+          "en": "To keep the infant warm during resuscitation",
+          "zh": "在复苏中为婴儿保暖"
+        },
+        {
+          "key": "C",
+          "en": "To make the infant more visible to the second rescuer",
+          "zh": "让第二名施救者更容易看到婴儿"
+        },
+        {
+          "key": "D",
+          "en": "The infant's proportionally large head flexes the neck when supine - shoulder padding restores a neutral airway position",
+          "zh": "婴儿头部占身体比例大，仰卧时会使颈部前屈——肩下垫料可恢复气道中立位"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Due to the size of an infant's head relative to the body, lying flat pushes the neck into flexion and can obstruct the airway. A pad under the shoulders (if available) facilitates the neutral position, keeping the airway open - a uniquely pediatric anatomical adaptation.",
+      "explanationZh": "婴儿头部相对躯干偏大，平躺时颈部会被推向前屈，可能压闭气道。肩下垫料（如有）帮助维持中立位、保持气道开放——这是儿科特有的解剖学调整。",
+      "sourceRef": "BC Guidelines p.43",
+      "verified": false
+    },
+    {
+      "id": "pap-072",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "You and your partner are performing CPR on an 8-month-old infant. What compression-to-ventilation ratio should you use?",
+      "questionZh": "你和搭档正在对一名 8 个月大的婴儿实施 CPR。应采用什么按压通气比？",
+      "options": [
+        {
+          "key": "A",
+          "en": "30:2, the same as for adults",
+          "zh": "30:2——与成人相同"
+        },
+        {
+          "key": "B",
+          "en": "15:2, the two-rescuer ratio for infants and children",
+          "zh": "15:2——婴儿和儿童的双人施救比例"
+        },
+        {
+          "key": "C",
+          "en": "3:1 with continuous compressions",
+          "zh": "3:1 并持续按压"
+        },
+        {
+          "key": "D",
+          "en": "5:1 alternating rescuers each cycle",
+          "zh": "5:1，每个循环轮换施救者"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "For infants and children the ratio is 30:2 with one rescuer but 15:2 with two rescuers - the extra ventilations reflect the primarily asphyxial nature of pediatric arrest. The 3:1 ratio is reserved for neonates (up to 28 days). Compression rate stays 100-120/min, depth one-third to one-half of chest diameter.",
+      "explanationZh": "婴儿和儿童单人施救为 30:2，双人施救为 15:2——更多通气对应儿科心搏骤停以窒息为主的本质。3:1 仅用于新生儿（出生 28 天内）。按压频率仍为 100-120 次/分，深度为胸廓前后径的 1/3 至 1/2。",
+      "sourceRef": "BC Guidelines p.41, p.43",
+      "verified": false
+    },
+    {
+      "id": "pap-073",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "A 4-month-old with bronchiolitis is mottled and barely responsive. The brachial pulse is present but slow - you count 50 beats per minute. Breathing is shallow and gasping. What should you do?",
+      "questionZh": "一名患毛细支气管炎的 4 个月婴儿出现皮肤花斑、几乎无反应。肱动脉搏动存在但缓慢——数得每分钟 50 次。呼吸浅慢伴喘息样呼吸。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Begin CPR - an infant with a heart rate below 60 and signs of poor perfusion is treated as being in arrest",
+          "zh": "开始 CPR——心率低于 60 且伴灌注不良征象的婴儿按心搏骤停处理"
+        },
+        {
+          "key": "B",
+          "en": "Withhold CPR because a palpable pulse always contraindicates compressions",
+          "zh": "不做 CPR——只要摸得到脉搏就禁忌按压"
+        },
+        {
+          "key": "C",
+          "en": "Provide ventilations only and recheck the pulse in 10 minutes",
+          "zh": "只做通气，10 分钟后再查脉搏"
+        },
+        {
+          "key": "D",
+          "en": "Apply the AED first and wait for its analysis before touching the chest",
+          "zh": "先贴 AED，等待分析结果后再碰胸部"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The pediatric guideline directs starting CPR if there is no pulse or if the heart rate is below 60 with signs of poor perfusion (pallor, mottling, cyanosis, decreased LOC). In infants, cardiac output is heavily rate-dependent; a rate of 50 with mottling and decreased responsiveness cannot sustain perfusion. This is a key difference from adult practice.",
+      "explanationZh": "儿科指南要求：无脉搏、或心率低于 60 且伴灌注不良征象（苍白、花斑、发绀、意识下降）时即开始 CPR。婴儿的心输出量高度依赖心率；心率 50 加上花斑和反应下降无法维持灌注。这是与成人实践的关键差异。",
+      "sourceRef": "BC Guidelines p.41, p.43",
+      "verified": false
+    },
+    {
+      "id": "pap-074",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "Off duty and without a phone, you find a 3-year-old unresponsive and pulseless at a playground. Nobody saw what happened and you are alone. What does the guideline direct?",
+      "questionZh": "你下班且没带手机，在游乐场发现一名 3 岁儿童无反应、无脉搏。无人目击经过，现场只有你一人。指南要求怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Leave immediately to find a phone, then return to start CPR",
+          "zh": "立即离开去找电话，回来后再开始 CPR"
+        },
+        {
+          "key": "B",
+          "en": "Perform rescue breathing only until help happens to arrive",
+          "zh": "只做人工呼吸，直到碰巧有人来帮忙"
+        },
+        {
+          "key": "C",
+          "en": "Perform about 2 minutes (5 cycles) of CPR first, then activate the emergency response system and get an AED",
+          "zh": "先做约 2 分钟（5 个循环）CPR，再启动急救系统并获取 AED"
+        },
+        {
+          "key": "D",
+          "en": "Do compressions for 10 minutes before considering leaving the child",
+          "zh": "先按压 10 分钟再考虑离开孩子"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "For an unwitnessed pediatric collapse when alone, the guideline directs 5 cycles (about 2 minutes) of CPR before activating the emergency response system, because pediatric arrests are usually asphyxial and immediate CPR addresses the primary problem. Had the collapse been witnessed, you would activate the system and get an AED first.",
+      "explanationZh": "单人面对无目击的儿科倒地，指南要求先做 5 个循环（约 2 分钟）CPR 再启动急救系统，因为儿科骤停多为窒息性，立即 CPR 针对的正是根本问题。若倒地被目击，则应先启动系统并取 AED。",
+      "sourceRef": "BC Guidelines p.43",
+      "verified": false
+    },
+    {
+      "id": "pap-075",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "A 12-year-old is struck in the centre of the chest by a line drive at a baseball game and collapses immediately in front of a crowd. You are first on scene with a bystander beside you. Why does this situation demand the AED as early as possible?",
+      "questionZh": "棒球比赛中，一名 12 岁少年胸部正中被平飞球击中后当众立即倒地。你第一个到场，旁边有一名旁观者。为什么这种情况要求尽早使用 AED？",
+      "options": [
+        {
+          "key": "A",
+          "en": "All pediatric arrests are shockable, so the AED always takes precedence over CPR",
+          "zh": "所有儿科骤停都可电击，AED 永远优先于 CPR"
+        },
+        {
+          "key": "B",
+          "en": "The AED is needed mainly to document the rhythm for the hospital",
+          "zh": "AED 主要用于为医院记录心律"
+        },
+        {
+          "key": "C",
+          "en": "AED use prevents the need for chest compressions in commotio cordis",
+          "zh": "用了 AED 就不需要做胸外按压了"
+        },
+        {
+          "key": "D",
+          "en": "A blow to the precordium followed by collapse suggests commotio cordis - one of the rare pediatric situations where ventricular fibrillation is likely, making early defibrillation decisive; send the bystander for the AED while you start CPR",
+          "zh": "心前区被击中后立即倒地提示 commotio cordis——儿科少见的室颤高概率情形之一，早期除颤起决定作用；让旁观者去取 AED，你立即开始 CPR"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Most pediatric arrests are asphyxial, but the guideline notes VF occurs in children with previous cardiac problems, electrocution, or a sharp blow to the precordial area followed by collapse (commotio cordis). This witnessed sudden arrest fits the VF pattern, so immediate activation and early AED matter, with CPR ongoing - defibrillation and compressions coexist, neither replacing the other.",
+      "explanationZh": "儿科骤停多为窒息性，但指南指出：有心脏病史、电击伤、或心前区被猛击后倒地（commotio cordis）的儿童可能出现室颤。这种被目击的骤然倒地符合室颤模式，因此立即启动系统和尽早 AED 至关重要，同时持续 CPR——除颤与按压并行，互不取代。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-076",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "vitals-gcs",
+      "difficulty": "foundation",
+      "questionEn": "You record a heart rate of 130 and a respiratory rate of 38 in a settled 6-month-old with a mild fever. How should you interpret these numbers?",
+      "questionZh": "你为一名安静、低热的 6 个月婴儿测得心率 130、呼吸 38 次/分。应如何解读这些数值？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Both are dangerously high and indicate decompensated shock",
+          "zh": "两项都危险偏高，提示失代偿性休克"
+        },
+        {
+          "key": "B",
+          "en": "The heart rate is normal but the respiratory rate indicates respiratory failure",
+          "zh": "心率正常，但呼吸频率提示呼吸衰竭"
+        },
+        {
+          "key": "C",
+          "en": "Both fall within the expected range for a 6-month-old - infant norms are much faster than adult norms",
+          "zh": "两项都在 6 个月婴儿的正常范围内——婴儿的正常值远高于成人"
+        },
+        {
+          "key": "D",
+          "en": "Both are too low for this age and suggest impending arrest",
+          "zh": "对这个年龄来说两项都偏低，提示即将骤停"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Infants normally run heart rates of roughly 100-160 and respiratory rates of roughly 30-60. Applying adult thresholds to children is a classic exam trap in both directions: an infant heart rate of 130 is normal, while an infant rate below 60 with poor perfusion is an indication to start CPR.",
+      "explanationZh": "婴儿正常心率约 100-160 次/分，呼吸约 30-60 次/分。把成人标准套用到儿童身上是经典考试陷阱，两个方向都会错：婴儿心率 130 属正常，而婴儿心率低于 60 且灌注不良则是开始 CPR 的指征。",
+      "sourceRef": "BC Guidelines p.43; p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-077",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "A 2-year-old with a two-day history of vomiting and diarrhea is alert but quiet. His hands are cool and mottled to the wrists, capillary refill is 4 seconds, and the radial pulse is weak but present. His blood pressure is 92/60. What does this picture indicate?",
+      "questionZh": "一名 2 岁儿童呕吐腹泻两天，神志清楚但安静。双手至腕部发凉、有花斑，毛细血管再充盈 4 秒，桡动脉搏动微弱但可及，血压 92/60。这幅图景提示什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "He is well perfused - a normal blood pressure excludes shock in children",
+          "zh": "灌注良好——儿童血压正常即可排除休克"
+        },
+        {
+          "key": "B",
+          "en": "Compensated shock - abnormal skin circulation and delayed capillary refill precede hypotension in children",
+          "zh": "代偿性休克——儿童的皮肤循环异常和毛细血管再充盈延迟出现在低血压之前"
+        },
+        {
+          "key": "C",
+          "en": "Simple dehydration requiring only oral fluids at home",
+          "zh": "单纯脱水，在家口服补液即可"
+        },
+        {
+          "key": "D",
+          "en": "Cold exposure, since mottling is only an environmental sign",
+          "zh": "受凉所致——花斑只是环境因素造成的"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Children maintain blood pressure far longer than adults by vasoconstricting and increasing heart rate; the circulation-to-skin arm of the PAT (mottling, pallor, delayed refill) therefore turns abnormal well before the blood pressure drops. A normal pediatric BP never excludes shock - when it finally falls, the child is decompensating.",
+      "explanationZh": "儿童通过血管收缩和心率增快维持血压的时间远长于成人；因此 PAT 中「皮肤循环」这一边（花斑、苍白、再充盈延迟）在血压下降之前就已异常。儿童血压正常绝不能排除休克——等血压真的降下来时，孩子已经在失代偿了。",
+      "sourceRef": "BC Guidelines p.54; p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-078",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "transport-decision",
+      "difficulty": "intermediate",
+      "questionEn": "A 7-year-old was struck by a car at approximately 40 km/h while crossing the street. He is crying, moving all limbs, and has an abrasion on his flank with vitals in normal range for age. Your transport decision should be:",
+      "questionZh": "一名 7 岁儿童过马路时被时速约 40 km/h 的汽车撞倒。他在哭、四肢均能活动，腰侧有擦伤，vitals 在该年龄正常范围。你的转运决策应是：",
+      "options": [
+        {
+          "key": "A",
+          "en": "Stable - crying children are always well perfused and low risk",
+          "zh": "稳定——会哭的孩子灌注一定良好、风险低"
+        },
+        {
+          "key": "B",
+          "en": "Stable - normal vitals in a child rule out significant internal injury",
+          "zh": "稳定——儿童 vitals 正常即可排除明显内伤"
+        },
+        {
+          "key": "C",
+          "en": "Stable unless he vomits during your assessment",
+          "zh": "稳定——除非评估期间发生呕吐"
+        },
+        {
+          "key": "D",
+          "en": "Unstable - auto versus pedestrian at over 30 km/h is a high-risk mechanism, and a child's compact body transmits force to multiple organs",
+          "zh": "不稳定——汽车撞行人且车速超过 30 km/h 属于高危机制，而儿童身体紧凑，外力会传导至多个器官"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The mechanism criterion of auto versus pedestrian or cyclist at over 30 km/h applies at any age. In children the same energy is distributed across a smaller body with less fat and a more pliable rib cage, so multi-system injury is common and serious internal injury can exist behind normal-looking vitals and intact skin.",
+      "explanationZh": "「汽车撞行人/骑车人且车速超过 30 km/h」这条机制标准适用于任何年龄。儿童体型更小、脂肪更少、胸廓更柔韧，同样的能量会分布到多个系统，因此多系统损伤常见，严重内伤可能藏在看似正常的 vitals 和完好的皮肤之下。",
+      "sourceRef": "BC Guidelines p.8",
+      "verified": false
+    },
+    {
+      "id": "pap-079",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "iv-calc",
+      "difficulty": "intermediate",
+      "questionEn": "A 20 kg child is hypotensive after significant blood loss. Using the BC fluid bolus of 20 mL/kg, what volume should you plan for the first bolus?",
+      "questionZh": "一名 20 kg 儿童在明显失血后出现低血压。按 BC 的 20 mL/kg 液体冲击量，第一次 bolus 应计划输入多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "400 mL",
+          "zh": "400 mL"
+        },
+        {
+          "key": "B",
+          "en": "200 mL",
+          "zh": "200 mL"
+        },
+        {
+          "key": "C",
+          "en": "1000 mL",
+          "zh": "1000 mL"
+        },
+        {
+          "key": "D",
+          "en": "2000 mL, the protocol maximum",
+          "zh": "2000 mL —— protocol 上限"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "20 mL/kg x 20 kg = 400 mL. The 2 litre figure is the maximum for the protocol, not a pediatric dose - giving it to a 20 kg child would be a five-fold overdose. Reassess after the bolus; the protocol also directs reassessment every 500 mL, which in a small child means reassessing well before that mark is reached.",
+      "explanationZh": "20 mL/kg x 20 kg = 400 mL。2 升是 protocol 的最大值，不是儿科剂量——给 20 kg 儿童输 2 升是五倍过量。Bolus 后要重新评估；protocol 要求每 500 mL 重评，对小体重儿童意味着远在到达该数值之前就应重评。",
+      "sourceRef": "BC Guidelines p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-080",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "A frightened 4-year-old with a forearm injury screams and pulls away whenever you approach. Which approach best allows you to complete an accurate assessment?",
+      "questionZh": "一名前臂受伤、受惊吓的 4 岁儿童，每次你靠近都尖叫躲闪。哪种方式最有利于完成准确评估？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Have two crew members hold the child still so the exam can be completed quickly",
+          "zh": "让两名队员按住孩子，以便快速完成检查"
+        },
+        {
+          "key": "B",
+          "en": "Assess at the child's eye level with the caregiver holding him, start with the uninjured side, and examine the painful area last",
+          "zh": "蹲到与孩子平视的高度，让照护者抱着他，从未受伤的一侧开始检查，把疼痛部位放到最后"
+        },
+        {
+          "key": "C",
+          "en": "Separate the child from the parent to remove distractions",
+          "zh": "把孩子和家长分开，以减少干扰"
+        },
+        {
+          "key": "D",
+          "en": "Skip the hands-on exam entirely and rely on the parent's description",
+          "zh": "完全跳过体格检查，仅依赖家长描述"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "A struggling, screaming child yields unreliable findings. Keeping the caregiver present, working at eye level, and moving toe-to-head or uninjured-to-injured preserves trust and produces a more complete examination. Restraint is reserved for immediate safety needs; separating a preschooler from the caregiver reliably worsens cooperation.",
+      "explanationZh": "挣扎尖叫的孩子给出的检查结果不可靠。让照护者陪在身边、蹲到平视高度、从脚到头或从健侧到患侧推进，可以维持信任并获得更完整的检查。强行按住只保留给即刻安全需要；把学龄前儿童与照护者分开一定会让配合度更差。",
+      "sourceRef": "BC Guidelines p.9; p.18 (References: Nancy Caroline)",
+      "verified": false
+    },
+    {
+      "id": "pap-081",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "pediatric",
+      "topic": "vitals-gcs",
+      "difficulty": "advanced",
+      "questionEn": "A 5-year-old with severe asthma has been working hard to breathe for an hour. Over ten minutes his respiratory rate falls from 44 to 18, his wheeze becomes quiet, and he stops fighting the oxygen mask. What does this change mean?",
+      "questionZh": "一名 5 岁重度哮喘患儿已经费力呼吸一小时。十分钟内他的呼吸频率从 44 降到 18，哮鸣音变轻，也不再抗拒氧气面罩。这种变化意味着什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "The salbutamol is working and he is improving",
+          "zh": "沙丁胺醇起效了，他在好转"
+        },
+        {
+          "key": "B",
+          "en": "He is falling asleep normally after exhaustion from crying",
+          "zh": "他哭累了，正常入睡"
+        },
+        {
+          "key": "C",
+          "en": "Impending respiratory failure - a falling rate, quiet chest, and decreasing responsiveness mean he is tiring and needs assisted ventilation, not reassurance",
+          "zh": "即将发生呼吸衰竭——呼吸频率下降、胸部安静、反应性降低说明他已力竭，需要辅助通气而不是安慰"
+        },
+        {
+          "key": "D",
+          "en": "He no longer needs oxygen because his work of breathing has decreased",
+          "zh": "呼吸做功减少，说明他不再需要氧气"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "A silent chest with a falling respiratory rate and decreasing level of consciousness in an asthmatic child signals exhaustion and impending arrest, not improvement - air movement has become too poor to generate wheeze. The primary survey intervention indications include assisting inadequate or failing respirations when respirations are abnormally slow or shallow with decreasing LOC or cyanosis.",
+      "explanationZh": "哮喘患儿出现「安静胸」伴呼吸频率下降和意识水平降低，是力竭与即将骤停的信号而非好转——气流已弱到无法产生哮鸣音。Primary survey 干预指征中明确包括：呼吸异常缓慢或表浅、伴意识下降或发绀时，应辅助通气。",
+      "sourceRef": "BC Guidelines p.11, p.49",
+      "verified": false
+    },
+    {
+      "id": "pap-082",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "How long may suction be applied in a pediatric patient and in an infant according to the BC guidelines?",
+      "questionZh": "根据 BC 指南，儿童和婴儿的每次吸痰时间上限分别是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "10 seconds in the pediatric patient and 5 seconds in an infant",
+          "zh": "儿童 10 秒，婴儿 5 秒"
+        },
+        {
+          "key": "B",
+          "en": "15 seconds in the pediatric patient and 10 seconds in an infant",
+          "zh": "儿童 15 秒，婴儿 10 秒"
+        },
+        {
+          "key": "C",
+          "en": "20 seconds for both",
+          "zh": "两者均为 20 秒"
+        },
+        {
+          "key": "D",
+          "en": "5 seconds in the pediatric patient and 3 seconds in an infant",
+          "zh": "儿童 5 秒，婴儿 3 秒"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The guideline specifies 10-15 seconds in the adult, 10 seconds in the pediatric patient, and 5 seconds in an infant. Shorter times reflect smaller oxygen reserves and higher metabolic demand - prolonged suctioning causes hypoxia and bradycardia in small children.",
+      "explanationZh": "指南规定：成人 10-15 秒，儿童 10 秒，婴儿 5 秒。时间更短是因为氧储备更小、代谢需求更高——吸引时间过长会使幼儿出现低氧和心动过缓。",
+      "sourceRef": "BC Guidelines p.45",
+      "verified": false
+    },
+    {
+      "id": "pap-083",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "A conscious 9-month-old choked on a grape. He cannot cry or cough and is turning blue. What should you do?",
+      "questionZh": "一名 9 个月大的清醒婴儿被葡萄噎住，无法哭也无法咳嗽，面色发绀。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Perform abdominal thrusts as you would for an adult",
+          "zh": "像对成人一样实施腹部冲击"
+        },
+        {
+          "key": "B",
+          "en": "Perform a blind finger sweep to retrieve the grape",
+          "zh": "盲目手指清扫以取出葡萄"
+        },
+        {
+          "key": "C",
+          "en": "Encourage him to cough forcefully and monitor closely",
+          "zh": "鼓励他用力咳嗽并密切观察"
+        },
+        {
+          "key": "D",
+          "en": "Deliver repeated cycles of 5 back blows followed by 5 chest compressions until the object is expelled",
+          "zh": "反复循环给予 5 次拍背和 5 次胸部按压，直到异物排出"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "For an infant with a complete obstruction the guideline directs repeated cycles of 5 back blows followed by 5 chest compressions. Abdominal thrusts are described for conscious adults and children over 1 year of age, not infants. Blind finger sweeps are explicitly prohibited, and encouraging coughing applies only to a partial obstruction where the infant can still move air.",
+      "explanationZh": "对完全气道梗阻的婴儿，指南要求反复循环给予 5 次拍背和 5 次胸部按压。腹部冲击适用于清醒的成人和 1 岁以上儿童，不适用于婴儿。盲目手指清扫被明确禁止；鼓励咳嗽只适用于仍有气流的部分梗阻。",
+      "sourceRef": "BC Guidelines p.46",
+      "verified": false
+    },
+    {
+      "id": "pap-084",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "You are resuscitating a 5-year-old in cardiac arrest and your AED kit contains only adult pads. What should you do?",
+      "questionZh": "你正在为一名 5 岁心搏骤停患儿实施复苏，AED 套件里只有成人电极片。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Do not use the AED at all - adult pads are contraindicated under 8 years of age",
+          "zh": "完全不用 AED——8 岁以下禁用成人电极片"
+        },
+        {
+          "key": "B",
+          "en": "Use the adult pads and deliver the adult joules",
+          "zh": "使用成人电极片并按成人能量除颤"
+        },
+        {
+          "key": "C",
+          "en": "Cut the adult pads in half to reduce the delivered energy",
+          "zh": "把成人电极片剪成一半以减少输出能量"
+        },
+        {
+          "key": "D",
+          "en": "Wait for another unit to arrive with pediatric pads before analyzing",
+          "zh": "等另一辆车送来儿科电极片后再分析心律"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The guideline states that for a child 0-8 years switch to child AED pads if available, and if not available you may use the adult pads and deliver the adult joules. Delaying or withholding defibrillation is far more harmful than a slightly higher energy dose. Never modify pads.",
+      "explanationZh": "指南规定：0-8 岁儿童如有儿科电极片则更换使用，若没有，可以使用成人电极片并给予成人能量。延误或放弃除颤的危害远大于稍高的能量剂量。绝不可裁剪或改造电极片。",
+      "sourceRef": "BC Guidelines p.43",
+      "verified": false
+    },
+    {
+      "id": "pap-085",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "intermediate",
+      "questionEn": "Placing AED pads on a small 2-year-old in arrest, you see that in the standard anterior/lateral position the two pads are almost touching - about 2 cm apart. What should you do?",
+      "questionZh": "为一名体型瘦小的 2 岁骤停患儿贴 AED 电极片时，你发现按标准前/侧位放置后两片几乎相碰——间距约 2 cm。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Leave them as placed since the position is standard",
+          "zh": "维持原位——这是标准位置"
+        },
+        {
+          "key": "B",
+          "en": "Overlap the pads so both make full skin contact",
+          "zh": "让两片重叠，确保都完全贴合皮肤"
+        },
+        {
+          "key": "C",
+          "en": "Shift to an anterior/posterior configuration, since pads within 2.5 cm of each other may need repositioning",
+          "zh": "改为前/后位放置——两片间距小于 2.5 cm 时可能需要重新放置"
+        },
+        {
+          "key": "D",
+          "en": "Trim one pad so it fits alongside the other",
+          "zh": "剪小其中一片，使两片能并排放下"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The guideline states that if pads in the normal anterior/lateral chest position are within 2.5 cm (one inch) of each other, they may need to be shifted to an anterior/posterior configuration. Pads that touch or overlap allow current to arc between them across the skin rather than through the heart.",
+      "explanationZh": "指南规定：若按常规前/侧位放置时两片间距在 2.5 cm（1 英寸）以内，可能需要改为前/后位放置。电极片相碰或重叠会让电流沿皮肤在两片之间「短路」，而不是穿过心脏。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-086",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "pediatric",
+      "topic": "transport-decision",
+      "difficulty": "advanced",
+      "questionEn": "You are managing a 3-year-old in cardiac arrest after a near-drowning. CPR is in progress with an SGA in place. Regarding intra-arrest transport, which statement reflects the BC guideline?",
+      "questionZh": "你正在处理一名溺水后心搏骤停的 3 岁儿童，CPR 进行中且已置入 SGA。关于「骤停中转运」，哪种说法符合 BC 指南？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Transport with ongoing CPR is never permitted because compressions deteriorate during movement",
+          "zh": "绝不允许边 CPR 边转运，因为搬动会使按压质量下降"
+        },
+        {
+          "key": "B",
+          "en": "Pediatric arrests must always be worked on scene for the full 30 minutes before any movement",
+          "zh": "儿科骤停必须在现场做满 30 分钟才能搬动"
+        },
+        {
+          "key": "C",
+          "en": "Transport should begin immediately in all arrests to reach definitive care faster",
+          "zh": "所有骤停都应立即转运以尽快获得确定性治疗"
+        },
+        {
+          "key": "D",
+          "en": "CPR is most effective while stationary, but intra-arrest transport with ongoing CPR may occur for pediatrics, hypothermia, trauma, or treatable causes - and this case fits both criteria",
+          "zh": "CPR 在静止时最有效，但儿科、低体温、创伤或可逆病因的骤停可以边 CPR 边转运——本例同时符合两条"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The guideline acknowledges CPR is more effective while stationary, yet explicitly lists paediatrics, hypothermic, traumatic, and treatable causes as situations where intra-arrest transport with ongoing CPR may occur. A drowning arrest is hypoxic and potentially reversible, so this child meets the criteria twice over.",
+      "explanationZh": "指南承认 CPR 在静止时更有效，但明确列出儿科、低体温、创伤和可逆病因是可以边 CPR 边转运的情形。溺水骤停属于缺氧性、潜在可逆，因此这名患儿同时符合两条标准。",
+      "sourceRef": "BC Guidelines p.42, p.45",
+      "verified": false
+    },
+    {
+      "id": "pap-087",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "vitals-gcs",
+      "difficulty": "intermediate",
+      "questionEn": "A 2-year-old with a febrile illness lies still, does not open his eyes when his mother calls him, but cries and pushes your hand away when you insert an IV. Using AVPU, he is:",
+      "questionZh": "一名发热患病的 2 岁儿童安静躺着，母亲呼唤时不睁眼，但你穿刺静脉时他哭闹并推开你的手。按 AVPU 他属于：",
+      "options": [
+        {
+          "key": "A",
+          "en": "P - responsive to pain only; monitor the airway closely and position semi-prone if injuries permit",
+          "zh": "P —— 仅对疼痛有反应；需严密监测气道，如损伤允许置于 semi-prone 体位"
+        },
+        {
+          "key": "B",
+          "en": "V - crying counts as a verbal response",
+          "zh": "V —— 哭泣算作言语反应"
+        },
+        {
+          "key": "C",
+          "en": "A - he is alert because he responded purposefully",
+          "zh": "A —— 他有目的地反应，属于 alert"
+        },
+        {
+          "key": "D",
+          "en": "U - toddlers cannot be scored on AVPU",
+          "zh": "U —— 幼儿无法用 AVPU 评分"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Response only to a painful stimulus is P regardless of age; crying triggered by the IV is a response to pain, not to voice. The guideline warns that a patient at P must have the airway monitored closely with intervention as necessary, and be positioned semi-prone if injuries permit. Failing to respond to a parent's voice is a serious finding in a toddler.",
+      "explanationZh": "只对疼痛刺激有反应，无论年龄都评为 P；穿刺引发的哭泣是对疼痛而非对言语的反应。指南提示 P 级病人必须严密监测气道并按需干预，如损伤允许摆 semi-prone 体位。幼儿对母亲呼唤没有反应本身就是严重发现。",
+      "sourceRef": "BC Guidelines p.13",
+      "verified": false
+    },
+    {
+      "id": "pap-088",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "assessment-model",
+      "difficulty": "intermediate",
+      "questionEn": "A 9-year-old with pneumonia has an SpO2 of 90% on oxygen, a respiratory rate of 34, and accessory muscle use. He is awake and following commands. Can you apply CPAP?",
+      "questionZh": "一名 9 岁肺炎患儿吸氧下 SpO2 90%、呼吸 34 次/分、有辅助呼吸肌使用，清醒且能遵嘱。可以给他上 CPAP 吗？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Yes - he meets the RR, SpO2, and accessory muscle criteria",
+          "zh": "可以——他符合 RR、SpO2 和辅助肌使用三项标准"
+        },
+        {
+          "key": "B",
+          "en": "No - CPAP is contraindicated in patients 12 years of age and under; support him with oxygen and assisted ventilation as needed",
+          "zh": "不可以——CPAP 对 12 岁及以下病人属禁忌；应给氧并按需辅助通气"
+        },
+        {
+          "key": "C",
+          "en": "Yes, but only at a maximum of 5 cmH2O",
+          "zh": "可以，但最大只能用 5 cmH2O"
+        },
+        {
+          "key": "D",
+          "en": "Yes - pneumonia is a listed CPAP indication at any age",
+          "zh": "可以——肺炎在任何年龄都是 CPAP 的指征"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "CPAP is indicated for patients 13 years of age and older, and patients 12 years and under are listed as a contraindication - even when the RR, SpO2, and accessory muscle criteria are met and pneumonia is otherwise a valid indication. Manage this child with oxygen titration and BVM assistance if he deteriorates.",
+      "explanationZh": "CPAP 的指征是 13 岁及以上，12 岁及以下明确列为禁忌——即使 RR、SpO2 和辅助肌使用三项标准都符合、且肺炎本身是有效指征也不行。该患儿应通过滴定给氧处理，若恶化则用 BVM 辅助通气。",
+      "sourceRef": "BC Guidelines p.52",
+      "verified": false
+    },
+    {
+      "id": "pap-089",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "iv-calc",
+      "difficulty": "advanced",
+      "questionEn": "You must deliver a 300 mL fluid bolus to a 15 kg child over 20 minutes using a 10 gtts/mL set. What drip rate is required?",
+      "questionZh": "需要用 10 gtts/mL 输液器在 20 分钟内为一名 15 kg 儿童输入 300 mL 液体冲击量。所需滴速是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "50 gtts/min",
+          "zh": "50 gtts/min"
+        },
+        {
+          "key": "B",
+          "en": "100 gtts/min",
+          "zh": "100 gtts/min"
+        },
+        {
+          "key": "C",
+          "en": "150 gtts/min",
+          "zh": "150 gtts/min"
+        },
+        {
+          "key": "D",
+          "en": "30 gtts/min",
+          "zh": "30 gtts/min"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "300 mL x 10 gtts/mL / 20 minutes = 3000 / 20 = 150 gtts/min. That is roughly 2-3 drops per second - a rate this fast is a signal to watch the bag closely and reassess the child frequently, since 300 mL represents the full 20 mL/kg bolus for a 15 kg child.",
+      "explanationZh": "300 mL x 10 gtts/mL / 20 分钟 = 3000 / 20 = 150 gtts/min，约每秒 2-3 滴。这么快的速度提示必须紧盯液袋并频繁重评患儿，因为 300 mL 正是 15 kg 儿童 20 mL/kg 的完整冲击量。",
+      "sourceRef": "BC Guidelines p.39, p.54",
+      "verified": false
+    },
+    {
+      "id": "pap-090",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "history",
+      "difficulty": "intermediate",
+      "questionEn": "A 6-year-old fell from a play structure onto a paved surface. Beyond the height of the fall, which history details does the BC critical history list direct you to obtain?",
+      "questionZh": "一名 6 岁儿童从游乐设施上摔到水泥地面。除坠落高度外，BC 的 critical history 清单还要求收集哪些信息？",
+      "options": [
+        {
+          "key": "A",
+          "en": "The manufacturer and installation date of the play structure",
+          "zh": "游乐设施的生产厂家和安装日期"
+        },
+        {
+          "key": "B",
+          "en": "Whether the school has an incident report policy",
+          "zh": "学校是否有事故报告制度"
+        },
+        {
+          "key": "C",
+          "en": "The child's immunization record and school grade",
+          "zh": "孩子的疫苗接种记录和年级"
+        },
+        {
+          "key": "D",
+          "en": "Whether it was a free fall or he hit objects on the way down, the landing surface, what body part hit first, his position and condition afterward, any loss of consciousness, and the cause of the fall",
+          "zh": "是自由坠落还是途中撞到物体、落地面材质、先着地的部位、坠落后的位置与状态、有无意识丧失，以及跌倒原因"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The fall history list specifies where from, height, free fall or striking objects, landing surface, position at impact and what hit first, initial position and condition, whether the patient has been moved, loss of consciousness, and the cause of the fall. First point of impact predicts the injury pattern - a head-first landing on pavement demands different vigilance than feet-first.",
+      "explanationZh": "跌倒的 critical history 清单包括：从哪里坠落、高度、是否自由坠落或途中撞击、落地面、撞击时体位与先着地部位、初始位置与状态、是否被移动过、有无意识丧失、以及跌倒原因。先着地部位可预测损伤模式——头先着地于水泥面与脚先着地需要完全不同的警惕重点。",
+      "sourceRef": "BC Guidelines p.12",
+      "verified": false
+    },
+    {
+      "id": "pap-091",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "advanced",
+      "questionEn": "An 11-month-old with a cough has audible grunting on expiration, head bobbing with each breath, and intercostal retractions. His SpO2 is 91% and he is alert. What is your interpretation and priority?",
+      "questionZh": "一名 11 个月大、有咳嗽的婴儿，呼气时可闻及呻吟（grunting），每次呼吸伴点头样动作，有肋间凹陷。SpO2 91%，神志清楚。你的判断和优先处置是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Grunting and head bobbing are signs of severe respiratory distress in an infant - give oxygen, minimize agitation, and transport promptly with continuous reassessment",
+          "zh": "呻吟和点头样呼吸是婴儿重度呼吸窘迫的表现——应给氧、尽量减少刺激、持续复评并尽快转运"
+        },
+        {
+          "key": "B",
+          "en": "Grunting is a normal infant sound and requires no intervention",
+          "zh": "呻吟是婴儿的正常发声，无需处理"
+        },
+        {
+          "key": "C",
+          "en": "Because he is alert and his SpO2 is above 90%, no oxygen is needed",
+          "zh": "他神志清楚且 SpO2 高于 90%，不需要给氧"
+        },
+        {
+          "key": "D",
+          "en": "Head bobbing indicates a neurological problem rather than a respiratory one",
+          "zh": "点头样动作提示神经系统问题而非呼吸问题"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Grunting is an infant's attempt to generate self-PEEP against collapsing alveoli, and head bobbing reflects accessory muscle recruitment - both are the work-of-breathing arm of the PAT turning abnormal and both mark severe distress. Respiratory distress is a listed oxygen indication; agitation increases oxygen demand, so handle the infant gently and transport without delay.",
+      "explanationZh": "呻吟是婴儿对抗肺泡塌陷、自造 PEEP 的表现，点头样动作反映辅助呼吸肌动员——两者都是 PAT 中「呼吸做功」这条边异常的信号，均代表重度窘迫。呼吸窘迫是明确的给氧指征；哭闹烦躁会增加耗氧，因此应轻柔操作并立即转运。",
+      "sourceRef": "BC Guidelines p.11, p.50",
+      "verified": false
+    },
+    {
+      "id": "pap-092",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "pediatric-assessment",
+      "difficulty": "foundation",
+      "questionEn": "What compression rate and depth does the BC guideline specify for CPR on a 6-year-old?",
+      "questionZh": "BC 指南规定对 6 岁儿童实施 CPR 的按压频率和深度是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "80-100 per minute at a fixed depth of 5 cm",
+          "zh": "每分钟 80-100 次，固定深度 5 cm"
+        },
+        {
+          "key": "B",
+          "en": "100-120 per minute at a depth of one-third to one-half the chest diameter",
+          "zh": "每分钟 100-120 次，深度为胸廓前后径的三分之一至二分之一"
+        },
+        {
+          "key": "C",
+          "en": "60-80 per minute at a depth of 2 cm",
+          "zh": "每分钟 60-80 次，深度 2 cm"
+        },
+        {
+          "key": "D",
+          "en": "120-140 per minute at a depth of 6 cm",
+          "zh": "每分钟 120-140 次，深度 6 cm"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "For infants and children the optimum rate is 100-120 per minute with a depth of one-third to one-half the chest diameter. The rate matches adults; the depth is expressed proportionally because a fixed 5-6 cm target would be dangerous in a small chest. Allow complete recoil after each compression and keep interruptions under 5 seconds.",
+      "explanationZh": "婴儿和儿童的最佳按压频率为每分钟 100-120 次，深度为胸廓前后径的 1/3 至 1/2。频率与成人一致；深度按比例表述，因为对小胸廓固定 5-6 cm 会造成危险。每次按压后要完全回弹，中断保持在 5 秒以内。",
+      "sourceRef": "BC Guidelines p.42-43",
+      "verified": false
+    },
+    {
+      "id": "pap-093",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "foundation",
+      "questionEn": "A baby born 3 hours ago requires CPR. What compression-to-ventilation ratio applies, and what is the role of the AED?",
+      "questionZh": "一名出生 3 小时的新生儿需要 CPR。应采用什么按压通气比？AED 起什么作用？",
+      "options": [
+        {
+          "key": "A",
+          "en": "15:2 with the AED applied as soon as available",
+          "zh": "15:2，AED 一旦可用立即使用"
+        },
+        {
+          "key": "B",
+          "en": "30:2 with the AED applied after 2 minutes",
+          "zh": "30:2，2 分钟后使用 AED"
+        },
+        {
+          "key": "C",
+          "en": "3:1, and no AED is used in the neonate",
+          "zh": "3:1，新生儿不使用 AED"
+        },
+        {
+          "key": "D",
+          "en": "5:1 with child AED pads in an anterior/posterior configuration",
+          "zh": "5:1，使用儿科电极片按前后位放置"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "For a neonate (up to 28 days) the ratio is 3:1 and no AED is used. The ventilation-heavy ratio reflects that neonatal arrest is almost always respiratory in origin; shockable rhythms are so rare in this group that the AED has no role.",
+      "explanationZh": "新生儿（出生 28 天内）按压通气比为 3:1，且不使用 AED。以通气为主的比例反映新生儿骤停几乎都源于呼吸问题；该人群可电击心律极为罕见，AED 无用武之地。",
+      "sourceRef": "BC Guidelines p.41, p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-094",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "intermediate",
+      "questionEn": "You deliver a baby who is floppy, limp, and not breathing, with a heart rate of 80. What is your first step under the newborn guideline?",
+      "questionZh": "你接生的新生儿松软无力、无呼吸，心率 80。按 newborn 指南，第一步应做什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Start chest compressions immediately because the heart rate is below 100",
+          "zh": "因为心率低于 100，立即开始胸外按压"
+        },
+        {
+          "key": "B",
+          "en": "Ventilate with a BVM using 100% oxygen for 30 seconds",
+          "zh": "用 BVM 接 100% 氧气通气 30 秒"
+        },
+        {
+          "key": "C",
+          "en": "Apply an AED and analyze the rhythm",
+          "zh": "贴上 AED 并分析心律"
+        },
+        {
+          "key": "D",
+          "en": "Dry, stimulate, and keep the baby warm for 30 seconds, then reassess the heart rate",
+          "zh": "擦干、刺激并保暖 30 秒，然后复查心率"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Step 1 of the newborn sequence is dry, stimulate, and keep warm for 30 seconds; if the heart rate remains below 100 bpm you progress to step 2 (BVM on room air for 30 seconds), then step 3 (BVM with 100% oxygen for 30 seconds), and only then step 4, chest compressions, if the heart rate stays below 60. Many newborns respond to drying and stimulation alone.",
+      "explanationZh": "Newborn 流程第 1 步是擦干、刺激、保暖 30 秒；若心率仍低于 100 bpm 则进入第 2 步（室内空气 BVM 通气 30 秒），再到第 3 步（接 100% 氧气 BVM 通气 30 秒），只有心率仍低于 60 才进入第 4 步胸外按压。很多新生儿仅靠擦干和刺激就能恢复。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-095",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "intermediate",
+      "questionEn": "After 30 seconds of drying, stimulation, and warming, a newborn's heart rate is 88 bpm and he still is not breathing effectively. What is the next step?",
+      "questionZh": "擦干、刺激、保暖 30 秒后，新生儿心率 88 bpm，仍无有效呼吸。下一步是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Ventilate with a BVM on room air for 30 seconds, then reassess the heart rate",
+          "zh": "用 BVM 以室内空气通气 30 秒，然后复查心率"
+        },
+        {
+          "key": "B",
+          "en": "Begin chest compressions with ventilations at 3:1",
+          "zh": "以 3:1 开始按压加通气"
+        },
+        {
+          "key": "C",
+          "en": "Continue drying and stimulating for another 30 seconds",
+          "zh": "再继续擦干和刺激 30 秒"
+        },
+        {
+          "key": "D",
+          "en": "Attach 100% oxygen to the BVM immediately and ventilate",
+          "zh": "立即给 BVM 接 100% 氧气并通气"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Step 2 of the newborn sequence is ventilation with a BVM on room air for 30 seconds. Only if the heart rate remains below 100 bpm do you move to step 3 and attach 100% oxygen, and only if it remains below 100 after that do you begin compressions - which continue until the heart rate is above 60 bpm. Effective ventilation, not oxygen concentration, is the key intervention at this stage.",
+      "explanationZh": "Newborn 流程第 2 步是用 BVM 以室内空气通气 30 秒。只有心率仍低于 100 bpm 才进入第 3 步接 100% 氧气；仍低于 100 才开始胸外按压，并持续到心率高于 60 bpm。此阶段关键干预是有效通气，而不是氧浓度。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-096",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "advanced",
+      "questionEn": "You have completed 30 seconds of BVM ventilation with 100% oxygen on a newborn. His heart rate is now 50 bpm. What should you do, and what is your endpoint?",
+      "questionZh": "你已为新生儿用 BVM 接 100% 氧气通气 30 秒，现在心率 50 bpm。你应该怎么做？终点指标是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Continue ventilations alone and reassess in 2 minutes",
+          "zh": "仅继续通气，2 分钟后复评"
+        },
+        {
+          "key": "B",
+          "en": "Begin chest compressions with ventilations and 100% oxygen, continuing until the heart rate is above 60 bpm",
+          "zh": "开始按压加通气并给 100% 氧气，持续到心率高于 60 bpm"
+        },
+        {
+          "key": "C",
+          "en": "Apply the AED and analyze before starting compressions",
+          "zh": "先贴 AED 分析心律再开始按压"
+        },
+        {
+          "key": "D",
+          "en": "Continue compressions until the heart rate exceeds 100 bpm, then stop ventilating",
+          "zh": "按压至心率超过 100 bpm 后停止通气"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Step 4 of the newborn sequence is chest compressions with ventilations and 100% oxygen until the heart rate is above 60 bpm. Note the two different thresholds: 100 bpm drives progression through the ventilation steps, while 60 bpm is the endpoint for compressions. No AED is used in neonates.",
+      "explanationZh": "Newborn 流程第 4 步是按压加通气并给 100% 氧气，直到心率高于 60 bpm。注意两个不同阈值：100 bpm 决定通气各步骤的推进，60 bpm 是停止按压的终点。新生儿不使用 AED。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-097",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "foundation",
+      "questionEn": "For the purposes of the BC CPR guidelines, a patient is classified as a neonate up to what age?",
+      "questionZh": "按 BC 的 CPR 指南，多大年龄以内的病人被归类为 neonate（新生儿）？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Up to 7 days",
+          "zh": "出生 7 天以内"
+        },
+        {
+          "key": "B",
+          "en": "Up to 12 hours",
+          "zh": "出生 12 小时以内"
+        },
+        {
+          "key": "C",
+          "en": "Up to 28 days",
+          "zh": "出生 28 天以内"
+        },
+        {
+          "key": "D",
+          "en": "Up to 1 year",
+          "zh": "出生 1 年以内"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The guideline defines a neonate as up to 28 days of age, with a 3:1 compression ratio and no AED. Beyond 28 days the patient is managed as an infant: brachial pulse check, 30:2 with one rescuer or 15:2 with two, and AED use as available.",
+      "explanationZh": "指南将 neonate 定义为出生 28 天以内，采用 3:1 按压通气比且不使用 AED。超过 28 天则按婴儿处理：触诊肱动脉、单人 30:2 或双人 15:2，并按可用情况使用 AED。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-098",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "knowledge",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "intermediate",
+      "questionEn": "Why is drying the newborn and maintaining warmth listed as part of the very first step of newborn resuscitation rather than an afterthought?",
+      "questionZh": "为什么擦干新生儿和保暖被列为新生儿复苏的第一步内容，而不是事后再做的事？",
+      "options": [
+        {
+          "key": "A",
+          "en": "It is done purely for the parents' comfort and reassurance",
+          "zh": "这纯粹是为了让父母安心舒适"
+        },
+        {
+          "key": "B",
+          "en": "Warmth only matters once the heart rate is above 100 bpm",
+          "zh": "只有心率超过 100 bpm 后保暖才有意义"
+        },
+        {
+          "key": "C",
+          "en": "Drying is primarily to allow the AED pads to adhere",
+          "zh": "擦干主要是为了让 AED 电极片能粘牢"
+        },
+        {
+          "key": "D",
+          "en": "A wet newborn loses heat extremely rapidly, and hypothermia worsens hypoxia and acidosis - drying also provides the stimulation that may itself restore effective breathing",
+          "zh": "湿身的新生儿散热极快，低体温会加重缺氧和酸中毒——而擦干本身提供的刺激就可能恢复有效呼吸"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Step 1 combines three actions for good reason: a wet newborn with a high surface-area-to-mass ratio cools within minutes, and hypothermia deepens hypoxia and acidosis, making resuscitation harder. The friction of drying is also the stimulation that frequently triggers effective respiration on its own. Neonates never receive an AED.",
+      "explanationZh": "第 1 步把三个动作合在一起是有道理的：体表面积与体重比很高的湿身新生儿几分钟内就会失温，而低体温会加深缺氧和酸中毒，使复苏更困难。擦干时的摩擦本身也是刺激，常常能直接引发有效呼吸。新生儿不使用 AED。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-099",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "critical",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "advanced",
+      "questionEn": "A 3-week-old is brought to you limp, mottled, and hypothermic, with a heart rate of 55 and shallow irregular respirations. Which management set is correct?",
+      "questionZh": "一名 3 周大的婴儿被送来时全身松软、皮肤花斑、体温偏低，心率 55，呼吸浅而不规则。哪一组处置是正确的？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Apply the AED first since bradycardia may indicate a shockable rhythm",
+          "zh": "先贴 AED——心动过缓可能提示可电击心律"
+        },
+        {
+          "key": "B",
+          "en": "Ventilate and begin compressions at a 3:1 ratio without an AED, keep him warm, and transport - at 21 days he is still a neonate",
+          "zh": "通气并以 3:1 开始按压、不用 AED、注意保暖并转运——21 天大仍属新生儿"
+        },
+        {
+          "key": "C",
+          "en": "Use 15:2 with two rescuers since he is over 2 weeks old",
+          "zh": "他已超过 2 周，双人施救应用 15:2"
+        },
+        {
+          "key": "D",
+          "en": "Give oxygen only and defer compressions until the heart rate falls below 40",
+          "zh": "只给氧，等心率降到 40 以下再开始按压"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "At 21 days of age he is still within the 28-day neonatal definition, so the 3:1 ratio applies and no AED is used. Bradycardia below 60 with poor perfusion is an indication to start compressions - not to wait for a lower number - and warming matters because hypothermia both causes and worsens neonatal deterioration.",
+      "explanationZh": "21 天大仍在 28 天的新生儿定义范围内，因此适用 3:1 比例且不使用 AED。心率低于 60 且灌注不良就是开始按压的指征——不能等到更低的数值——保暖同样重要，因为低体温既是新生儿恶化的原因也会使其加重。",
+      "sourceRef": "BC Guidelines p.41, p.44",
+      "verified": false
+    },
+    {
+      "id": "pap-100",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "competency": "H2",
+      "cognitive": "application",
+      "population": "neonatal",
+      "topic": "neonatal",
+      "difficulty": "intermediate",
+      "questionEn": "You assist a delivery. After drying and stimulation the baby cries vigorously, has good tone, and her heart rate is 140. What is your management?",
+      "questionZh": "你协助完成一次接生。擦干和刺激后婴儿大声啼哭、肌张力良好，心率 140。你的处置是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "No ventilation or compressions are needed - keep her warm and dry, monitor breathing, tone, and heart rate, and transport mother and baby together",
+          "zh": "不需要通气或按压——保持温暖干燥，监测呼吸、肌张力和心率，母婴一同转运"
+        },
+        {
+          "key": "B",
+          "en": "Begin BVM ventilation on room air for 30 seconds as a precaution",
+          "zh": "为保险起见，先用室内空气 BVM 通气 30 秒"
+        },
+        {
+          "key": "C",
+          "en": "Start compressions at 3:1 because all newborns require initial support",
+          "zh": "以 3:1 开始按压——所有新生儿都需要初始支持"
+        },
+        {
+          "key": "D",
+          "en": "Apply the AED to establish a baseline rhythm",
+          "zh": "贴 AED 以取得基线心律"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The newborn resuscitation sequence is triggered by a baby who is floppy, limp, not breathing, or has a heart rate below 100 bpm. A vigorous crying baby with good tone and a heart rate of 140 meets none of those, so she needs only warmth, drying, and ongoing observation of breathing, tone, and heart rate. Unnecessary ventilation and compressions cause harm, and neonates never receive an AED.",
+      "explanationZh": "新生儿复苏流程的启动条件是：松软无力、无呼吸，或心率低于 100 bpm。大声啼哭、肌张力良好、心率 140 的婴儿都不符合，因此只需保暖、擦干，并持续观察呼吸、肌张力和心率。不必要的通气和按压会造成伤害，而新生儿从不使用 AED。",
+      "sourceRef": "BC Guidelines p.44",
+      "verified": false
+    }
+  ]
+}
