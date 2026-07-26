@@ -2,7 +2,7 @@
   "meta": {
     "title": "BC Practical Exam Scenarios",
     "version": 1,
-    "count": 5,
+    "count": 7,
     "languages": [
       "en",
       "zh"
@@ -2029,6 +2029,532 @@
       }
     },
     {
+      "id": "tr-05",
+      "type": "trauma",
+      "titleEn": "Scald Burn - Cooling, BSA and Analgesia",
+      "titleZh": "热液烫伤——降温、体表面积与镇痛",
+      "protocols": [
+        "Burn Management",
+        "Pain Management"
+      ],
+      "priority": "non-rtc",
+      "dispatchEn": "1150 hrs. Code 3 to a commercial kitchen in a Langley restaurant. 29-year-old male tipped a stockpot of boiling water onto his right arm and chest. Staff have him at the sink. Hospital is 12 minutes away; the burn unit is at a tertiary centre 40 minutes away.",
+      "dispatchZh": "11:50，Code 3 前往兰里一家餐厅的后厨。29 岁男性把一锅沸水打翻在右臂和胸部。店员已让他在水槽边冲洗。最近医院车程 12 分钟；三级烧伤中心车程 40 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: staff put him under cool running water immediately and he has been there about 4 minutes. He is conscious and talking.",
+          "infoZh": "调度补充：店员在事发后立即让他用冷水冲洗，已冲约 4 分钟。患者清醒、能说话。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan burn dressings, analgesia, oxygen, and note that bystander cooling time counts toward the 15-20 minutes",
+              "actionZh": "确认；准备烧伤敷料、镇痛、氧气，并注意旁观者已完成的降温时间计入 15-20 分钟总时长",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate kitchen hazards (heat sources, wet floor, hot liquids) and PPE",
+              "actionZh": "预判后厨危险源（热源、湿滑地面、热液）与个人防护",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: The burner is off and the stockpot is on the floor, contents spilled. The floor is wet. The patient stands at a double sink with his right arm and chest under cool running tap water; a coworker is helping. Kitchen is hot, about 30 degrees C. One patient. No smoke, no fire, no enclosed-space exposure.",
+          "infoZh": "考官脚本：炉火已关，汤锅倒在地上，汤水泼洒一地。地面湿滑。患者站在双水槽前，右臂和胸部在冷水龙头下冲洗，一名工友在旁协助。厨房闷热，约 30 摄氏度。单一患者。无烟、无明火、无密闭空间暴露。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (wet floor, hot surfaces, spilled liquid), environment, MOI (boiling water scald), one patient",
+              "actionZh": "口述危险源（湿滑地面、高温台面、泼洒液体）、环境、受伤机制（沸水烫伤）、单一患者",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: alert male, in obvious pain, right arm and anterior chest red and blistered, no soot or singed hair",
+              "actionZh": "第一眼：清醒男性、明显疼痛、右臂与前胸发红起水疱、无烟灰或毛发烧焦",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            },
+            {
+              "actionEn": "Allow cooling to continue while beginning the assessment - do not stop effective cooling to start over",
+              "actionZh": "评估的同时让降温继续——不要为了重新开始而中断有效降温",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: alert, grimacing, swearing with pain, speaks in full sentences. EXAMINER (give when assessed): airway clear, voice normal, no hoarseness, no stridor, no soot in mouth or nose, no singed nasal hair, no facial burn; respirations 22, unlaboured; radial pulse 108 strong regular. Skin: unburned skin pink warm dry. Burn assessment (Rule of Nines): entire right upper limb front and back = 9%; anterior chest = 9%; total 18% partial thickness (red, blistered, wet, extremely painful). No circumferential burn, no full-thickness area, no hands/face/groin involvement. SpO2 98% RA. C-spine not indicated. STABLE: 18% partial thickness is below the 20% major-burn threshold and there is no airway involvement.",
+          "infoZh": "患者演员：清醒、痛得龇牙咧嘴、边骂边说，能整句说话。考官（评估时给出）：气道通畅，声音正常，无声嘶、无喉鸣，口鼻无烟灰，鼻毛未烧焦，面部无烧伤；呼吸 22 次/分、不费力；桡动脉 108 次/分、有力规则。皮肤：未烧伤区域红润温干。烧伤评估（九分法）：整个右上肢前后=9%；前胸=9%；合计 18% 部分厚度（发红、起疱、渗液、剧痛）。无环形烧伤、无全层烧伤、未累及手/面/会阴。SpO2 室内空气 98%。无颈椎固定指征。稳定：18% 部分厚度低于 20% 重度烧伤阈值，且无气道受累。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: Alert",
+              "actionZh": "评估意识 / AVPU：Alert",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Verbalize c-spine not indicated (no fall, no blunt mechanism)",
+              "actionZh": "口述无颈椎固定指征（无坠落、无钝性机制）",
+              "weight": 5,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway specifically for inhalation injury: voice, hoarseness, stridor, soot, singed nasal hair, facial burns",
+              "actionZh": "专门评估气道有无吸入性损伤：声音、声嘶、喉鸣、烟灰、鼻毛烧焦、面部烧伤",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing",
+              "actionZh": "评估呼吸",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation",
+              "actionZh": "评估循环",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Expose and examine the burn; remove wet clothing and any jewellery/watch before swelling; complete the rapid body survey",
+              "actionZh": "暴露并检查烧伤；在肿胀前脱去湿衣物、摘下首饰手表；完成快速查体",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Initiate/continue cooling for a total of 15-20 minutes with cool (not cold) running water, counting the bystander time",
+              "actionZh": "用凉（非冰）流水启动/继续降温，总时长 15-20 分钟，计入旁观者已冲洗时间",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Calculate BSA using the Rule of Nines and state the figure (18% partial thickness)",
+              "actionZh": "用九分法计算体表面积并报出数值（18% 部分厚度）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Note skin colour, temperature and condition of unburned areas",
+              "actionZh": "记录未烧伤区域皮肤的颜色、温度与状态",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Verbalize the oxygen decision: no inhalation injury and SpO2 98%, so no supplemental oxygen required",
+              "actionZh": "口述给氧决策：无吸入性损伤且 SpO2 98%，无需吸氧",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position of comfort; prevent hypothermia by keeping unburned areas covered and warm during cooling",
+              "actionZh": "舒适体位；降温期间盖住并保暖未烧伤区域，防止低体温",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. 18% partial thickness, no full-thickness, no airway or facial burn, no circumferential burn, normal vitals = STABLE, NON-RTC. Cooling for the full 15-20 minutes on scene is appropriate here because there is no immediate life threat; be assessed, treated, packaged and ready to load within 30 minutes.",
+          "infoZh": "决策点。18% 部分厚度、无全层烧伤、无气道或面部烧伤、无环形烧伤、生命体征正常=稳定，非 RTC。因无即刻生命威胁，现场完成 15-20 分钟完整降温是恰当的；30 分钟内完成评估、处置、打包并可装载。",
+          "expected": [
+            {
+              "actionEn": "Categorize correctly as non-RTC with justification (BSA, depth, no airway involvement)",
+              "actionZh": "正确判定为非 RTC 并说明依据（面积、深度、无气道受累）",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Ready to load within 30 minutes while completing the full cooling period",
+              "actionZh": "在完成完整降温周期的同时于 30 分钟内可装载",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Verbalize the destination consideration (burn-centre criteria) and consult/notify as appropriate",
+              "actionZh": "口述送治目的地考量（烧伤中心标准）并适当联系/预报",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "ACTOR ANSWERS: was carrying a stockpot of boiling water to the sink, the handle slipped, water went over his right arm and chest; happened about 6 minutes before your arrival; a coworker put him straight under the tap. No fall, no LOC, no fire or smoke, not in an enclosed space. Pain 9/10, constant burning, worse when the water stops. PMHx: none. Meds: none. Allergies: none known. LOI: staff lunch at 1100, one hour ago.",
+          "infoZh": "患者演员回答：端着一锅沸水走向水槽时锅把手打滑，热水浇在右臂和胸部；发生在你到场前约 6 分钟；工友立刻把他推到水龙头下。无坠落、无昏迷、无明火或烟雾、非密闭空间。疼痛 9/10，持续灼痛，停水时加重。既往史：无。用药：无。过敏：无已知。最后进食：11:00 员工餐，1 小时前。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: burn pain to right arm and chest",
+              "actionZh": "确立主诉：右臂与胸部烧伤疼痛",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "HxC/C with OPQRRRST plus burn-specific questions: agent, temperature, duration of contact, enclosed space/smoke, time of injury, cooling already given",
+              "actionZh": "用 OPQRRRST 采集现病史并补充烧伤专项：致伤物、温度、接触时间、有无密闭空间/烟雾、受伤时间、已做的降温",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Pain score 0-10",
+              "actionZh": "0-10 疼痛评分",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "PMHx",
+              "actionZh": "既往史",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications",
+              "actionZh": "用药史",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies (before any analgesia)",
+              "actionZh": "过敏史（给任何镇痛药前）",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI with time and size",
+              "actionZh": "最后进食的时间与量",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 - baseline before analgesia: GCS 15 (E4V5M6); BP 138/84; pulse 108 strong regular; respirations 22 unlaboured; skin (unburned) pink warm dry; pupils equal reactive; SpO2 98% RA; temperature 36.4 tympanic - indicated because prolonged cooling risks hypothermia. BGL not indicated. Non-RTC interval: next set within about 15 minutes.",
+          "infoZh": "第 1 组——镇痛前基线：GCS 15（E4V5M6）；血压 138/84；脉搏 108 有力规则；呼吸 22 不费力；皮肤（未烧伤区）红润温干；瞳孔等大有反应；SpO2 室内空气 98%；鼓膜体温 36.4——因长时间降温有低体温风险，故有指征。血糖无指征。非 RTC 间隔：下一组在约 15 分钟内完成。",
+          "expected": [
+            {
+              "actionEn": "GCS with components",
+              "actionZh": "GCS 及分项",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation on the uninjured arm",
+              "actionZh": "在未受伤手臂听诊测血压",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate/strength/rhythm",
+              "actionZh": "脉搏频率/强度/节律",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character",
+              "actionZh": "呼吸频率/深度/性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin assessed hands-on in unburned areas",
+              "actionZh": "在未烧伤区域动手评估皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils",
+              "actionZh": "瞳孔",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration",
+              "actionZh": "SpO2 并校准",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "Temperature - indicated during prolonged cooling to detect hypothermia",
+              "actionZh": "体温——长时间降温期间用于发现低体温，有指征",
+              "weight": 5,
+              "rubricRef": "temperature"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY. ACTOR: general - fit, works full-time; CNS - no dizziness, no headache; respiratory - no cough, no SOB, no throat irritation (important negative for inhalation injury); cardiovascular - heart racing from pain; GI/GU - nil, no vomiting; integumentary - the burn, plus shivering as cooling continues; musculoskeletal - no other injury; endocrine - no diabetes; EENT - no eye involvement, no facial burn, voice normal.",
+          "infoZh": "仅 PCP。患者演员：整体——身体好、全职工作；中枢神经——无头晕、无头痛；呼吸——无咳嗽、无气促、无咽喉刺激感（吸入性损伤的重要阴性表现）；心血管——因疼痛心跳快；消化/泌尿——无异常、无呕吐；皮肤——烧伤，随降温延续出现寒战；肌肉骨骼——无其他损伤；内分泌——无糖尿病；眼耳鼻喉——眼部未受累、面部无烧伤、声音正常。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "功能问诊——中枢神经",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory (inhalation injury screen - pertinent)",
+              "actionZh": "功能问诊——呼吸（筛查吸入性损伤，重点）",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "功能问诊——心血管",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU",
+              "actionZh": "功能问诊——消化/泌尿",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary (burn depth, shivering)",
+              "actionZh": "功能问诊——皮肤（烧伤深度、寒战）",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "功能问诊——肌肉骨骼",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "功能问诊——内分泌",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT (voice, facial/eye involvement)",
+              "actionZh": "功能问诊——眼耳鼻喉（声音、面部/眼部受累）",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "Head-to-toe: head/neck - no burns, no soot, voice clear, no stridor; chest - anterior chest partial-thickness burn 9%, air entry equal and clear at all 6 sites; abdomen - not burned, soft non-tender; back - not burned, no other injury; lower extremities - unburned, CSM intact; upper extremities - right arm circumferentially reddened but NOT a full circumferential burn, blisters intact, radial pulse present, sensation intact, fingers move; left arm normal.",
+          "infoZh": "从头到脚：头颈——无烧伤、无烟灰、声音清晰、无喉鸣；胸部——前胸部分厚度烧伤 9%，6 个听诊点进气对称清晰；腹部——未烧伤、软、无压痛；背部——未烧伤、无其他损伤；下肢——未烧伤、CSM 完好；上肢——右臂环周发红但并非全环形烧伤，水疱完整，桡动脉搏动可及，感觉正常，手指活动自如；左臂正常。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam with inhalation-injury signs",
+              "actionZh": "头颈查体并查吸入性损伤体征",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation and burn mapping",
+              "actionZh": "胸部查体、6 点听诊并标注烧伤范围",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam",
+              "actionZh": "背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities",
+              "actionZh": "下肢",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities: check for circumferential burn and distal CSM in the burned limb",
+              "actionZh": "上肢：检查有无环形烧伤并查烧伤肢体远端 CSM",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Burn Management: cool 15-20 minutes total with cool (not cold) running water, inclusive of bystander cooling; monitor for hypothermia and keep the rest of the body covered; do NOT break blisters, do NOT apply creams, ointments or ice. AFTER cooling is complete, dress with sterile, non-stick, DRY gauze. Pain Management protocol: PCP - acetaminophen 1000 mg PO and ibuprofen 400 mg PO plus Entonox self-administered (Entonox is indicated for pain associated with burns; contraindicated with inhalation injury - here there is none). EMR - Entonox only. Reassess distal CSM in the burned limb before and after dressing.",
+          "infoZh": "烧伤处理：用凉（非冰）流水降温总计 15-20 分钟，含旁观者已完成时间；监测低体温并盖好身体其余部位；不要挑破水疱，不要涂抹药膏、油膏或冰敷。降温结束后用无菌、不粘、干燥纱布包扎。疼痛管理协议：PCP——对乙酰氨基酚 1000 mg 口服加布洛芬 400 mg 口服，并让患者自控吸入 Entonox（Entonox 适用于烧伤相关疼痛；吸入性损伤为禁忌，本例没有）。EMR——仅 Entonox。包扎前后复查烧伤肢体远端 CSM。",
+          "expected": [
+            {
+              "actionEn": "Complete 15-20 minutes of cooling with cool running water, counting bystander time, without over-cooling the patient",
+              "actionZh": "用凉流水完成 15-20 分钟降温（计入旁观者时间），避免过度降温",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Dress with sterile non-stick DRY gauze only after cooling; do not break blisters or apply creams or ice",
+              "actionZh": "降温完成后仅用无菌不粘干纱布包扎；不挑破水疱、不涂药膏、不冰敷",
+              "weight": 25,
+              "rubricRef": "skill-wound-mgmt"
+            },
+            {
+              "actionEn": "Run the Pain Management protocol with contraindications ruled out for each drug",
+              "actionZh": "执行疼痛管理协议，逐药排除禁忌",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Administer analgesia with 6 rights (PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox; EMR: Entonox)",
+              "actionZh": "按六项核对给药（PCP：对乙酰氨基酚 1000 mg+布洛芬 400 mg 口服+Entonox；EMR：Entonox）",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Prevent hypothermia: cover unburned areas, warm ambulance, monitor temperature",
+              "actionZh": "预防低体温：盖住未烧伤区域、预热救护车、监测体温",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs, the airway in particular, and the dressings after each move. Set 2 (after cooling, dressing and analgesia): GCS 15; BP 130/80; pulse 96 strong regular; respirations 18; skin pink warm dry, mild shivering settling under blankets; pupils equal reactive; SpO2 98% RA; temperature 36.1; pain down from 9/10 to 4/10. Airway remains clear - continue to monitor for late-developing hoarseness or stridor.",
+          "infoZh": "每次移动后复评 ABC（尤其气道）与敷料。第 2 组（降温、包扎和镇痛后）：GCS 15；血压 130/80；脉搏 96 有力规则；呼吸 18；皮肤红润温干，盖毯后轻度寒战缓解；瞳孔等大有反应；SpO2 室内空气 98%；体温 36.1；疼痛由 9/10 降至 4/10。气道持续通畅——继续监测有无迟发的声嘶或喉鸣。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and interventions after each major move, with specific airway rechecks",
+              "actionZh": "每次大移动后复评 ABC 与处置，并专门复查气道",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within the non-RTC interval, including a repeat temperature",
+              "actionZh": "在非 RTC 时限内完成第二组完整生命体征，包括复测体温",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Reassess pain and cooling endpoint; stop cooling at 20 minutes to avoid hypothermia",
+              "actionZh": "复评疼痛与降温终点；20 分钟时停止降温以免低体温",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Non-critical but significant burn: notify the receiving facility, state BSA and depth. Structured hand-off; PCR within 5 minutes.",
+          "infoZh": "非危重但属重要烧伤：通知接收医院并报告体表面积与深度。结构化交接；5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "Notify the receiving facility with BSA, depth and cooling time",
+              "actionZh": "向接收医院预报体表面积、深度与降温时间",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off incl analgesia given and airway status",
+              "actionZh": "完整交接（含已给镇痛与气道状态）",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline, before analgesia",
+          "gcs": "15 (E4V5M6)",
+          "bp": "138/84",
+          "pulse": "108 strong regular",
+          "resp": "22 unlaboured",
+          "skin": "unburned areas pink warm dry",
+          "pupils": "PERL",
+          "spo2": "98% RA",
+          "bgl": null,
+          "temp": "36.4 C tympanic"
+        },
+        {
+          "set": 2,
+          "timeHint": "after cooling, dressing and analgesia",
+          "gcs": "15 (E4V5M6)",
+          "bp": "130/80",
+          "pulse": "96 strong regular",
+          "resp": "18 regular",
+          "skin": "pink warm dry, shivering settling",
+          "pupils": "PERL",
+          "spo2": "98% RA",
+          "bgl": null,
+          "temp": "36.1 C tympanic"
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Applying ice or very cold water, or cooling well beyond 20 minutes and making the patient hypothermic - protocol error up to 100%",
+        "Dressing the burn before cooling is complete, or using wet/creamed/ointment dressings instead of dry non-stick gauze - wound management error 25%",
+        "Breaking blisters - wound management error",
+        "Not assessing the airway for inhalation injury (voice, soot, singed hair) - 100% (Airway)",
+        "PCP: giving acetaminophen and ibuprofen but omitting Entonox when indicated - 25% per Appendix A; delaying Entonox until after painful dressing changes - up to 100%"
+      ],
+      "criticalPitfallsZh": [
+        "用冰或过冷的水降温，或降温远超 20 分钟导致患者低体温——协议错误最高扣 100%",
+        "降温未完成就包扎，或用湿敷料/药膏而非干燥不粘纱布——伤口处理错误扣 25%",
+        "挑破水疱——伤口处理错误",
+        "不评估气道有无吸入性损伤（声音、烟灰、毛发烧焦）——扣 100%（Airway）",
+        "PCP：给了对乙酰氨基酚和布洛芬却在有指征时不给 Entonox——按附录 A 扣 25%；把 Entonox 拖到痛苦的换药之后——最高扣 100%"
+      ],
+      "emrVariantEn": "EMR: cooling, BSA calculation, dry sterile non-stick dressings, hypothermia prevention and Entonox for analgesia are all EMR-level. EMR does not give oral analgesics or establish IV access. No Functional Enquiry.",
+      "emrVariantZh": "EMR：降温、体表面积计算、无菌干燥不粘敷料、预防低体温和用 Entonox 镇痛都属 EMR 级。EMR 不给口服镇痛药、不建立静脉通路。无功能问诊。",
+      "pcpVariantEn": "PCP adds acetaminophen and ibuprofen to the analgesia ladder and the 9-system Functional Enquiry. IV fluid is only indicated for burns over 20% BSA or hypotension - at 18% with normal blood pressure a fluid bolus is NOT indicated, and giving one is a non-indicated intervention.",
+      "pcpVariantZh": "PCP 在镇痛阶梯上增加对乙酰氨基酚和布洛芬，并做 9 系统功能问诊。静脉补液仅在烧伤超过 20% 体表面积或低血压时有指征——本例 18% 且血压正常，不该补液，擅自补液属非指征操作。",
+      "handoffModelEn": "This is a 29-year-old male with a boiling-water scald to the right upper limb and anterior chest sustained at approximately 1144 in a commercial kitchen. Using the Rule of Nines this is 18 percent partial thickness - 9 percent for the whole right arm and 9 percent for the anterior chest - with blistering, no full-thickness area, no circumferential burn and no airway involvement: voice is clear, no soot, no singed nasal hair, no facial burn. Initial vitals GCS 15, BP 138/84, pulse 108, resps 22, SpO2 98% on room air, temperature 36.4; latest BP 130/80, pulse 96, temperature 36.1, pain down from 9 to 4 out of 10. No medical history, no medications, no known allergies, ate one hour before. Treatments: 20 minutes total of cool running water cooling including the 4 minutes staff provided, wet clothing and his watch removed, sterile dry non-stick dressings after cooling, blankets to prevent hypothermia, acetaminophen 1000 milligrams and ibuprofen 400 milligrams orally plus Entonox for pain. Distal circulation, sensation and function in the right arm have been intact throughout.",
+      "handoffModelZh": "患者 29 岁男性，约 11:44 在后厨被沸水烫伤右上肢和前胸。按九分法为 18% 部分厚度——整个右臂 9% 加前胸 9%——有水疱形成，无全层烧伤，无环形烧伤，无气道受累：声音清晰、无烟灰、鼻毛未烧焦、面部无烧伤。首组生命体征 GCS 15、血压 138/84、脉搏 108、呼吸 22、SpO2 室内空气 98%、体温 36.4；末组血压 130/80、脉搏 96、体温 36.1，疼痛由 9/10 降至 4/10。无既往史、无用药、无已知过敏，1 小时前进食。处置：含店员已冲的 4 分钟在内共完成 20 分钟凉流水降温，脱去湿衣物并摘除手表，降温后用无菌干燥不粘敷料包扎，盖毯预防低体温，给予对乙酰氨基酚 1000 mg、布洛芬 400 mg 口服及 Entonox 镇痛。右臂远端循环、感觉与活动全程完好。",
+      "pcrKeyPoints": {
+        "cc": "Partial-thickness scald burn to right arm and anterior chest, pain 9/10",
+        "hxcc": "Stockpot of boiling water spilled at ~1144; no fall, no LOC, no smoke or enclosed space; coworkers began cooling immediately (4 min before arrival)",
+        "pmhx": "None",
+        "meds": "None",
+        "allergies": "NKA",
+        "treatments": [
+          "Cool running water cooling to a total of 20 min (incl bystander time)",
+          "Wet clothing and watch removed",
+          "Sterile dry non-stick dressings after cooling",
+          "Hypothermia prevention with blankets, temperature monitored",
+          "PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox (EMR: Entonox only)"
+        ],
+        "findings": [
+          "18% BSA partial thickness by Rule of Nines (right arm 9% + anterior chest 9%)",
+          "No inhalation injury: clear voice, no soot, no singed hair, no facial burn",
+          "No circumferential or full-thickness burn; distal CSM intact",
+          "Temp 36.4 to 36.1 with cooling; pain 9/10 to 4/10"
+        ]
+      }
+    },
+    {
       "id": "md-01",
       "type": "medical",
       "titleEn": "Anaphylaxis After Peanut Exposure",
@@ -2540,6 +3066,527 @@
           "Baseline GCS 14, BP 84/50, pulse 130, SpO2 88% RA",
           "Post-epinephrine GCS 15, BP 106/68, SpO2 96%, stridor resolved",
           "Abdominal cramping and nausea"
+        ]
+      }
+    },
+    {
+      "id": "md-02",
+      "type": "medical",
+      "titleEn": "Cardiac Chest Pain - ASA and Nitroglycerin",
+      "titleZh": "心源性胸痛——阿司匹林与硝酸甘油",
+      "protocols": [
+        "Cardiac Chest Pain",
+        "Pain Management"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "0640 hrs. Code 3 to a townhouse complex in Coquitlam. 62-year-old male with central chest pain that woke him from sleep. His wife made the call. Hospital with a cath lab is 14 minutes away.",
+      "dispatchZh": "06:40，Code 3 前往高贵林一处联排住宅。62 岁男性因胸骨后疼痛从睡梦中痛醒。其妻报警。设有心导管室的医院车程 14 分钟。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: he is conscious, sweating, and has not taken anything for the pain. No prescribed nitroglycerin in the house.",
+          "infoZh": "调度补充：患者清醒、出汗，尚未服用任何止痛药物。家中没有处方硝酸甘油。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge; plan ASA, nitroglycerin, oxygen, cot to the patient, minimal-exertion approach",
+              "actionZh": "确认；准备阿司匹林、硝酸甘油、氧气，把担架床推到患者身边，采取减少活动的策略",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate a time-critical cardiac call and plan early transport with hospital notification",
+              "actionZh": "预判为时间敏感的心脏事件，计划尽早转运并通知医院",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Wife meets you at the door and leads you upstairs to the bedroom. Warm room, well lit, stairs are the only egress challenge - 14 steps, narrow turn. The patient sits on the edge of the bed, grey and diaphoretic, fist clenched over his sternum. One patient. No hazards, no pets, no smoking materials.",
+          "infoZh": "考官脚本：妻子在门口迎接并带你上楼进卧室。房间温暖、照明良好，唯一的搬运难点是楼梯——14 级台阶，转角狭窄。患者坐在床沿，面色灰白、大汗，握拳按在胸骨上。单一患者。无危险源、无宠物、无吸烟物品。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (stair egress), environment, nature of illness (chest pain), number of patients (1)",
+              "actionZh": "口述危险源（楼梯搬运）、环境、发病性质（胸痛）、患者数量（1 名）",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection",
+              "actionZh": "戴手套和护目镜",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: grey, diaphoretic, clenched fist over sternum (Levine sign)",
+              "actionZh": "第一眼：面色灰白、大汗、握拳压胸骨（Levine 征）",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            },
+            {
+              "actionEn": "Plan the stair egress early and bring equipment to the patient rather than walking him",
+              "actionZh": "尽早规划下楼方案，把装备带到患者身边而不是让他走动",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR: alert and oriented, speaking in short sentences because of the pain, says it feels like a weight on his chest. EXAMINER (give when assessed): airway clear; respirations 22, slightly laboured, no wheeze; radial pulse 96, regular, normal strength. Skin: pale, cool, diaphoretic. Modified rapid body survey: no trauma, no edema, no obvious abnormality; abdomen soft. SpO2 96% RA. C-spine not indicated. UNSTABLE by BC criteria: suspected cardiac chest pain.",
+          "infoZh": "患者演员：清醒、定向力正常，因疼痛只能短句说话，形容像有重物压在胸口。考官（评估时给出）：气道通畅；呼吸 22 次/分、略费力、无喘鸣；桡动脉 96 次/分、规则、强度正常。皮肤：苍白、发凉、大汗。改良快速查体：无外伤、无水肿、无明显异常；腹部软。SpO2 室内空气 96%。无颈椎固定指征。按 BC 标准属不稳定：疑似心源性胸痛。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC / AVPU: Alert",
+              "actionZh": "评估意识 / AVPU：Alert",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Verbalize c-spine not indicated (medical presentation)",
+              "actionZh": "口述无颈椎固定指征（内科表现）",
+              "weight": 5,
+              "rubricRef": "delicate-spine"
+            },
+            {
+              "actionEn": "Assess airway",
+              "actionZh": "评估气道",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing rate, depth and effort",
+              "actionZh": "评估呼吸频率、深度与做功",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess radial pulse rate, strength and regularity",
+              "actionZh": "评估桡动脉频率、强度与节律",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Perform a modified rapid body survey appropriate to a medical patient",
+              "actionZh": "按内科患者做适当的改良快速查体",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note skin: pale cool diaphoretic",
+              "actionZh": "记录皮肤：苍白、发凉、大汗",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "Titrate oxygen only to maintain SpO2 at or above 94% - at 96% RA supplemental oxygen is not required; verbalize the decision",
+              "actionZh": "仅按维持 SpO2≥94% 滴定给氧——室内空气 96% 时无需吸氧，需口述该决策",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Keep at rest in a position of comfort; limit all patient movement and exertion",
+              "actionZh": "保持休息于舒适体位；限制一切活动和用力",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            },
+            {
+              "actionEn": "Administer ASA 160 mg chewed and swallowed after the rapid body survey (ASA is the one drug not requiring vitals first)",
+              "actionZh": "快速查体后给阿司匹林 160 mg 嚼服（唯一无需先测生命体征的药物）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Suspected cardiac chest pain = UNSTABLE, RTC. The guideline says transport immediately if able; if not, delegate crew to prep egress. Ready to load within 15 minutes. Give nitroglycerin, then transport after the first dose if not already moving.",
+          "infoZh": "决策点。疑似心源性胸痛=不稳定，RTC。指南要求：能立即转运就立即转运；不能则指派搭档准备撤离路线。15 分钟内可装载。给硝酸甘油，若尚未出发则在第一剂后转运。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC and act with urgency",
+              "actionZh": "判定为 RTC 并保持紧迫感",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Ready to load within 15 minutes; carry the patient down the stairs, do not let him walk",
+              "actionZh": "15 分钟内可装载；抬患者下楼，绝不让其自行走动",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Delegate the partner to prep egress and the stair chair while you run the protocol",
+              "actionZh": "执行协议时指派搭档准备撤离路线和楼梯椅",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "ACTOR ANSWERS: woke at 0615 with central chest pressure. O - at rest, woke him. P - nothing makes it better, deep breathing does not change it. Q - heavy pressure, like a band. R - radiates to the left jaw and down the left arm. R (relief) - none. R (recurrence) - had two similar milder episodes with exertion this week that settled with rest. S - 8/10. T - constant for 25 minutes. Associated: nausea, sweating, short of breath. PMHx: hypertension, high cholesterol, ex-smoker (quit 3 years, 30 pack-years), father died of MI at 58. Meds: amlodipine 5 mg, rosuvastatin 10 mg. NO erectile dysfunction medication - specifically denies Viagra, Levitra or Cialis. Allergies: none known. LOI: dinner at 1900 last night, nothing since.",
+          "infoZh": "患者演员回答：06:15 因胸骨后压迫感痛醒。O——静息状态下发作、把他痛醒。P——没有任何方式能缓解，深呼吸不影响疼痛。Q——沉重压迫感，像被箍住。R——放射至左下颌和左上肢。R（缓解）——无。R（复发）——本周有过两次较轻的活动后发作，休息后自行缓解。S——8/10。T——持续 25 分钟。伴随症状：恶心、出汗、气促。既往史：高血压、高血脂、戒烟 3 年（吸烟史 30 包年），父亲 58 岁死于心梗。用药：氨氯地平 5 mg、瑞舒伐他汀 10 mg。无勃起功能障碍用药——明确否认使用万艾可、艾力达或希爱力。过敏：无已知过敏。最后进食：昨晚 19:00 晚餐，之后未进食。",
+          "expected": [
+            {
+              "actionEn": "Establish chief complaint: central chest pain",
+              "actionZh": "确立主诉：胸骨后疼痛",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "Full OPQRRRST pain assessment including radiation, recurrence and severity",
+              "actionZh": "完整 OPQRRRST 疼痛评估，包括放射、复发和严重程度",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Obtain a 0-10 pain score",
+              "actionZh": "采集 0-10 疼痛评分",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "PMHx with cardiac risk factors and time scales",
+              "actionZh": "既往史（含心血管危险因素与时间跨度）",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications - and specifically screen for Viagra/Levitra in 24 h or Cialis in 48 h before nitroglycerin",
+              "actionZh": "用药史——给硝酸甘油前必须专门筛查 24 小时内万艾可/艾力达或 48 小时内希爱力",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies incl aspirin sensitivity before giving ASA",
+              "actionZh": "过敏史（给阿司匹林前须问阿司匹林过敏）",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "LOI",
+              "actionZh": "最后进食",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 - baseline BEFORE nitroglycerin: GCS 15 (E4V5M6); BP 148/92; pulse 96 regular; respirations 22; skin pale cool diaphoretic; pupils equal reactive; SpO2 96% RA. BGL not routinely indicated; temperature not indicated. Systolic is above 110 and HR is between 50 and 150, so nitroglycerin is not contraindicated on vitals. RTC interval 5-6 minutes; repeat vitals before EVERY nitroglycerin dose.",
+          "infoZh": "第 1 组——给硝酸甘油前的基线：GCS 15（E4V5M6）；血压 148/92；脉搏 96 规则；呼吸 22；皮肤苍白发凉大汗；瞳孔等大有反应；SpO2 室内空气 96%。血糖常规无指征；体温无指征。收缩压高于 110、心率在 50-150 之间，故生命体征方面无硝酸甘油禁忌。RTC 间隔 5-6 分钟；每次给硝酸甘油前都必须复测生命体征。",
+          "expected": [
+            {
+              "actionEn": "GCS with components",
+              "actionZh": "GCS 及分项",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "BP by auscultation - confirm systolic above 110 before nitroglycerin",
+              "actionZh": "听诊测血压——给硝酸甘油前确认收缩压高于 110",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate/strength/rhythm - confirm HR is not under 50 or over 150",
+              "actionZh": "脉搏频率/强度/节律——确认心率不低于 50 且不高于 150",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respirations rate/depth/character",
+              "actionZh": "呼吸频率/深度/性质",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin hands-on",
+              "actionZh": "动手查皮肤",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils",
+              "actionZh": "瞳孔",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 with calibration check",
+              "actionZh": "SpO2 并校准",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, en route. ACTOR: general - well until this week; CNS - no syncope, no headache; respiratory - short of breath with the pain, no cough, no orthopnea; cardiovascular - chest pressure with radiation, no palpitations, no ankle swelling, two exertional episodes this week; GI/GU - nauseated, no vomiting, no indigestion pattern; integumentary - sweating heavily; musculoskeletal - no chest wall injury, pain not reproducible on palpation; endocrine - no diabetes; EENT - nil.",
+          "infoZh": "仅 PCP，途中完成。患者演员：整体——本周之前一直健康；中枢神经——无晕厥、无头痛；呼吸——疼痛时气促、无咳嗽、无端坐呼吸；心血管——胸部压迫感伴放射、无心悸、无踝部水肿、本周有两次活动后发作；消化/泌尿——恶心、无呕吐、不像消化不良的规律；皮肤——大量出汗；肌肉骨骼——胸壁无外伤、按压不能复现疼痛；内分泌——无糖尿病；眼耳鼻喉——无异常。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "功能问诊——整体健康",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS (syncope screen)",
+              "actionZh": "功能问诊——中枢神经（筛查晕厥）",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory (orthopnea, cough)",
+              "actionZh": "功能问诊——呼吸（端坐呼吸、咳嗽）",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular (pertinent: palpitations, edema, prior episodes)",
+              "actionZh": "功能问诊——心血管（重点：心悸、水肿、既往发作）",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (nausea, indigestion differential)",
+              "actionZh": "功能问诊——消化/泌尿（恶心、与消化不良鉴别）",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "功能问诊——皮肤",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal (reproducible chest wall pain?)",
+              "actionZh": "功能问诊——肌肉骨骼（胸壁按压是否可复现疼痛）",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine (diabetes screen)",
+              "actionZh": "功能问诊——内分泌（筛查糖尿病）",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "功能问诊——眼耳鼻喉",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe: head/neck - no JVD, trachea midline; chest - no chest wall tenderness, pain NOT reproducible on palpation, air entry equal and clear in all 6 sites, no crackles; abdomen - soft, non-tender; back - no findings; lower extremities - no pedal edema, pulses equal; upper extremities - pulses equal bilaterally, no deficit.",
+          "infoZh": "途中从头到脚：头颈——无颈静脉怒张、气管居中；胸部——胸壁无压痛、按压不能复现疼痛、6 个听诊点空气进入对称且清晰、无湿啰音；腹部——软、无压痛；背部——无异常；下肢——无足部水肿、双侧动脉搏动对称；上肢——双侧搏动对称、无功能缺损。",
+          "expected": [
+            {
+              "actionEn": "Head/neck exam incl JVD assessment",
+              "actionZh": "头颈查体（含颈静脉怒张评估）",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest exam with 6-site auscultation; palpate to test reproducibility of the pain",
+              "actionZh": "胸部查体并 6 点听诊；触诊检验疼痛可否复现",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen exam",
+              "actionZh": "腹部查体",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back exam",
+              "actionZh": "背部查体",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Lower extremities incl pedal edema and pulses",
+              "actionZh": "下肢（含足部水肿与动脉搏动）",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            },
+            {
+              "actionEn": "Upper extremities incl bilateral pulse comparison",
+              "actionZh": "上肢（含双侧脉搏对比）",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "Cardiac Chest Pain protocol, all levels: position of comfort, limit movement, oxygen only to keep SpO2 at or above 94%, ASA 160 mg PO chewed after the RBS, initiate transport, history and baseline vitals, then NITROGLYCERIN 0.4 mg SL every 3-5 minutes provided systolic BP stays above 110, to a maximum of 3 doses in any 30-minute period, until pain free. Repeat vital signs before EVERY dose. Do not shake the spray; verbalize priming. If pain persists beyond 3 doses or systolic falls below 110, give Entonox 5 minutes after the last nitroglycerin dose. PCP ADDITIONS: vascular access with running fluid; consider dimenhydrinate 1 mg/kg to a max 50 mg for nausea.",
+          "infoZh": "心源性胸痛协议（各级别通用）：舒适体位、限制活动、按维持 SpO2≥94% 给氧、快速查体后阿司匹林 160 mg 嚼服、启动转运、采集病史与基线生命体征，然后硝酸甘油 0.4 mg 舌下含服，每 3-5 分钟一次，前提是收缩压持续高于 110，30 分钟内最多 3 剂，直至无痛。每次给药前都要复测生命体征。喷雾剂给药前不要摇晃，需口述预喷排气。若 3 剂后疼痛持续或收缩压降至 110 以下，在最后一剂硝酸甘油后 5 分钟给 Entonox。PCP 追加：建立静脉通路并持续输液；恶心可考虑苯海拉明类止吐药茶苯海明 1 mg/kg（上限 50 mg）。",
+          "expected": [
+            {
+              "actionEn": "Initiate the Cardiac Chest Pain protocol with correct indications and sequence (ASA after RBS, nitroglycerin after baseline vitals)",
+              "actionZh": "按正确指征与顺序启动心源性胸痛协议（阿司匹林在快速查体后，硝酸甘油在基线生命体征后）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "ASA 160 mg PO chewed with 6 rights; rule out allergy, active GI bleed/peptic ulcer, inability to swallow, prior dose taken",
+              "actionZh": "阿司匹林 160 mg 嚼服并六项核对；排除过敏、活动性消化道出血/溃疡、无法吞咽、到场前已服用",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Nitroglycerin 0.4 mg SL with contraindications ruled out (SBP under 110, HR under 50 or over 150, nitrate allergy, PDE5 inhibitor use) and vitals repeated before each dose",
+              "actionZh": "硝酸甘油 0.4 mg 舌下并排除禁忌（收缩压低于 110、心率低于 50 或高于 150、硝酸盐过敏、PDE5 抑制剂用药），每剂前复测生命体征",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Verbalize the maximum of 3 nitroglycerin doses in 30 minutes and the Entonox rule (5 minutes after the last nitroglycerin dose)",
+              "actionZh": "口述 30 分钟内硝酸甘油最多 3 剂，以及 Entonox 规则（末次硝酸甘油后 5 分钟）",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "PCP: vascular access with running fluid; consider dimenhydrinate for nausea",
+              "actionZh": "PCP：建立静脉通路并持续输液；恶心时考虑茶苯海明",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs and pain after every dose and every move. Set 2 (after 2 doses of nitroglycerin, en route): GCS 15; BP 122/78; pulse 88 regular; respirations 18; skin pink, warm, drying; pupils equal reactive; SpO2 97% RA; pain down from 8/10 to 3/10. Note the systolic remains above 110, so a third dose is permitted if pain persists. If the candidate does not recheck BP before dosing, EXAMINER drops the BP to 96/60 to test whether they withhold the next dose.",
+          "infoZh": "每次给药和每次移动后复评 ABC 与疼痛。第 2 组（给两剂硝酸甘油后，途中）：GCS 15；血压 122/78；脉搏 88 规则；呼吸 18；皮肤转红润、温暖、汗渐干；瞳孔等大有反应；SpO2 室内空气 97%；疼痛由 8/10 降至 3/10。注意收缩压仍高于 110，故疼痛持续时可给第三剂。若考生给药前不复测血压，考官将把血压改为 96/60，检验其是否会停止下一剂。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions after each dose and each move",
+              "actionZh": "每次给药与每次移动后复评 ABC 及全部处置",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Full second set of vitals within 5-6 minutes and before the next nitroglycerin dose",
+              "actionZh": "在 5-6 分钟内且在下一剂硝酸甘油之前完成第二组完整生命体征",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Reassess the pain score after each dose and titrate to pain-free",
+              "actionZh": "每剂后复评疼痛评分，滴定至无痛",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "Withhold nitroglycerin if systolic falls below 110 and switch to the Entonox pathway",
+              "actionZh": "收缩压降至 110 以下即停用硝酸甘油，转为 Entonox 路径",
+              "weight": 100,
+              "rubricRef": "protocols"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Critical patient - notify the receiving facility en route (possible STEMI, cath lab). Hand-off with all drug times, doses and pain response; PCR within 5 minutes.",
+          "infoZh": "危重患者——途中通知接收医院（可能为 STEMI，需心导管室）。交接需含全部给药时间、剂量与疼痛反应；5 分钟内完成 PCR。",
+          "expected": [
+            {
+              "actionEn": "En-route notification of a possible acute coronary syndrome",
+              "actionZh": "途中预报疑似急性冠脉综合征",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete hand-off with ASA and nitroglycerin times, doses and BP trend",
+              "actionZh": "完整交接：阿司匹林与硝酸甘油的时间、剂量及血压变化",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR within 5 minutes",
+              "actionZh": "5 分钟内完成准确 PCR",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "baseline, before nitroglycerin",
+          "gcs": "15 (E4V5M6)",
+          "bp": "148/92",
+          "pulse": "96 regular normal strength",
+          "resp": "22 slightly laboured",
+          "skin": "pale cool diaphoretic",
+          "pupils": "PERL",
+          "spo2": "96% RA",
+          "bgl": null,
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "after 2 doses of nitroglycerin, en route",
+          "gcs": "15 (E4V5M6)",
+          "bp": "122/78",
+          "pulse": "88 regular",
+          "resp": "18 regular",
+          "skin": "pink warm, drying",
+          "pupils": "PERL",
+          "spo2": "97% RA",
+          "bgl": null,
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Giving nitroglycerin without a baseline set of vital signs, or without rechecking BP before each dose - 100% (Protocols)",
+        "Not screening for Viagra/Levitra in the last 24 h or Cialis in the last 48 h before nitroglycerin - failure to rule out contraindications, up to 100%",
+        "Letting the patient walk down the stairs to the ambulance - exertion in cardiac chest pain, overall patient care deduction up to 100%",
+        "Applying high-flow oxygen when SpO2 is 96% - oxygen is titrated to 94% or above in a patient who is not SOB or shocked",
+        "Omitting ASA when not contraindicated, or giving it before the rapid body survey - protocol sequencing error"
+      ],
+      "criticalPitfallsZh": [
+        "未做基线生命体征就给硝酸甘油，或每剂前不复测血压——扣 100%（Protocols）",
+        "给硝酸甘油前不筛查 24 小时内万艾可/艾力达或 48 小时内希爱力——未排除禁忌，最高扣 100%",
+        "让患者自己走下楼上救护车——心源性胸痛下的用力，患者照护类最高扣 100%",
+        "SpO2 96% 时仍上高流量吸氧——不气促、不休克的患者应滴定至 94% 以上即可",
+        "无禁忌却不给阿司匹林，或在快速查体之前就给——协议顺序错误"
+      ],
+      "emrVariantEn": "EMR gives ASA 160 mg PO and nitroglycerin 0.4 mg SL under the same protocol (no physician order required), plus oxygen titration, rest, and rapid transport. EMR does not establish IV access or give dimenhydrinate. Entonox is available at both levels for the post-3-dose pathway. No Functional Enquiry.",
+      "emrVariantZh": "EMR 同样按本协议给阿司匹林 160 mg 口服和硝酸甘油 0.4 mg 舌下（无需医嘱），并做氧疗滴定、休息与快速转运。EMR 不建立静脉通路、不给茶苯海明。三剂之后的 Entonox 路径两个级别都可用。无功能问诊。",
+      "pcpVariantEn": "PCP adds vascular access with running fluid, dimenhydrinate 1 mg/kg to a maximum of 50 mg for nausea, and the 9-system Functional Enquiry en route. Everything else is identical.",
+      "pcpVariantZh": "PCP 增加静脉通路并持续输液、恶心时茶苯海明 1 mg/kg（上限 50 mg），以及途中 9 系统功能问诊。其余完全相同。",
+      "handoffModelEn": "This is a 62-year-old male, chief complaint of central chest pressure that woke him at 0615, so about 45 minutes of pain now. It is a heavy band-like pressure radiating to the left jaw and left arm, 8 out of 10 at onset, associated with nausea and diaphoresis, not reproducible on palpation, and he had two exertional episodes earlier this week. Initial vitals GCS 15, BP 148/92, pulse 96 regular, resps 22, skin pale cool diaphoretic, SpO2 96% on room air; latest BP 122/78, pulse 88, SpO2 97%, pain now 3 out of 10. History of hypertension and dyslipidemia, ex-smoker, father died of an MI at 58, takes amlodipine and rosuvastatin, no PDE5 inhibitors, no known allergies, last ate at 1900 yesterday. Treatments: kept at rest and carried out, ASA 160 milligrams chewed at 0652, nitroglycerin 0.4 milligrams sublingual at 0658 and 0703 with blood pressure rechecked before each dose, IV established en route.",
+      "handoffModelZh": "患者 62 岁男性，主诉 06:15 被胸骨后压迫感痛醒，至今疼痛约 45 分钟。为沉重箍紧样压迫感，放射至左下颌和左上肢，起病时 8/10，伴恶心和大汗，按压不能复现，本周早些时候另有两次活动后发作。首组生命体征 GCS 15、血压 148/92、脉搏 96 规则、呼吸 22、皮肤苍白发凉大汗、SpO2 室内空气 96%；末组血压 122/78、脉搏 88、SpO2 97%，疼痛降至 3/10。既往高血压、血脂异常，已戒烟，父亲 58 岁死于心梗，服氨氯地平和瑞舒伐他汀，未用 PDE5 抑制剂，无已知过敏，昨晚 19:00 最后进食。处置：全程保持休息并由我们抬出，06:52 阿司匹林 160 mg 嚼服，06:58 和 07:03 各给硝酸甘油 0.4 mg 舌下，每剂前均复测血压，途中已建立静脉通路。",
+      "pcrKeyPoints": {
+        "cc": "Central chest pressure at rest, radiating to left jaw and arm",
+        "hxcc": "Woke from sleep 0615; heavy band-like pressure 8/10; radiates left jaw/arm; nausea and diaphoresis; two exertional episodes earlier in the week; not reproducible on palpation",
+        "pmhx": "Hypertension, dyslipidemia, ex-smoker 30 pack-years, family history of MI",
+        "meds": "Amlodipine 5 mg, rosuvastatin 10 mg; no PDE5 inhibitors",
+        "allergies": "NKA",
+        "treatments": [
+          "Rest, position of comfort, carried down stairs",
+          "O2 titrated to keep SpO2 94% or above (none required at 96%)",
+          "ASA 160 mg PO chewed at 0652",
+          "Nitroglycerin 0.4 mg SL at 0658 and 0703, BP rechecked before each",
+          "RTC transport with cath-lab notification",
+          "PCP: IV with running fluid"
+        ],
+        "findings": [
+          "Levine sign, pale cool diaphoretic",
+          "BP 148/92 down to 122/78, pain 8/10 down to 3/10",
+          "No JVD, chest clear, no reproducible chest wall pain",
+          "SpO2 96-97% throughout"
         ]
       }
     }

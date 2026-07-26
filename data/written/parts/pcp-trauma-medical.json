@@ -1,7 +1,7 @@
 {
   "meta": {
     "part": "pcp-trauma-medical",
-    "count": 100,
+    "count": 120,
     "languages": [
       "en",
       "zh"
@@ -3806,6 +3806,766 @@
       "explanationEn": "Diabetic emergencies indications include decreased LOC patients without a known cause, and the guideline directs obtaining a baseline set of vital signs including a blood glucose level. Neonates have minimal glycogen stores and become hypoglycemic quickly with poor feeding, so glucose must be measured.",
       "explanationZh": "糖尿病急症的适应证包括原因不明的意识下降患者，指南要求获取包含血糖在内的基线生命体征。新生儿糖原储备极少，进食差时很快出现低血糖，因此必须测量血糖。",
       "sourceRef": "BC Guidelines p.57",
+      "verified": false
+    },
+    {
+      "id": "ptm-101",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "stroke",
+      "difficulty": "foundation",
+      "questionEn": "A 58-year-old male developed left facial droop and left arm weakness 40 minutes ago. He is alert, SpO2 97% on room air, BP 168/94. Which assessment must be completed before transport?",
+      "questionZh": "一名58岁男性40分钟前出现左侧面瘫和左上肢无力。意识清醒，未吸氧SpO2 97%，血压168/94。转运前必须完成哪项评估？",
+      "options": [
+        {
+          "key": "A",
+          "en": "A 12-lead ECG to rule out atrial fibrillation",
+          "zh": "12导联心电图以排除房颤"
+        },
+        {
+          "key": "B",
+          "en": "A blood glucose check",
+          "zh": "血糖检查"
+        },
+        {
+          "key": "C",
+          "en": "Orthostatic vital signs",
+          "zh": "体位性生命体征"
+        },
+        {
+          "key": "D",
+          "en": "A temperature measurement",
+          "zh": "体温测量"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Stroke interventions for all licence levels include a blood glucose check, because hypoglycemia is a classic stroke mimic that is rapidly reversible. Other required elements are ABC management, oxygen to maintain SpO2 ≥ 94%, patient positioning, accurate recognition using FAST-VAN, and timely transport with notification of the receiving facility.",
+      "explanationZh": "各级执照的卒中处置均包括血糖检查，因为低血糖是典型的卒中模拟症且可迅速纠正。其他必需内容包括ABC管理、给氧维持SpO2≥94%、患者体位、用FAST-VAN准确识别，以及及时转运并通知接收医院。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-102",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "stroke",
+      "difficulty": "intermediate",
+      "questionEn": "BC guidelines direct accurate stroke recognition using FAST-VAN. What do the letters V, A, and N add to the traditional FAST assessment?",
+      "questionZh": "BC指南要求使用FAST-VAN准确识别卒中。相比传统FAST评估，V、A、N三个字母增加了什么内容？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Vertigo, Ataxia, and Nystagmus",
+          "zh": "眩晕、共济失调、眼球震颤"
+        },
+        {
+          "key": "B",
+          "en": "Vomiting, Agitation, and Nausea",
+          "zh": "呕吐、躁动、恶心"
+        },
+        {
+          "key": "C",
+          "en": "Vision loss, Aphasia, and Neglect",
+          "zh": "视野缺损、失语、忽视"
+        },
+        {
+          "key": "D",
+          "en": "Vital signs, Airway, and Neurological score",
+          "zh": "生命体征、气道、神经评分"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "FAST-VAN extends Face, Arm, Speech, Time with Vision loss, Aphasia, and Neglect. These three cortical findings help identify large vessel occlusions, which influences the choice of receiving facility and the urgency of notification.",
+      "explanationZh": "FAST-VAN在面部、上肢、言语、时间的基础上增加了视野缺损、失语和忽视。这三项皮层体征有助于识别大血管闭塞，从而影响接收医院的选择和通知的紧迫性。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-103",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "stroke",
+      "difficulty": "intermediate",
+      "questionEn": "You are en route with a 74-year-old female with right-sided weakness and expressive aphasia. She is stable with SpO2 96%. As a PCP obtaining vascular access, which site and catheter size does BC specify?",
+      "questionZh": "你正在转运一名74岁女性，右侧肢体无力伴运动性失语。病情稳定，SpO2 96%。作为PCP建立静脉通路时，BC指南规定选择什么部位和导管型号？",
+      "options": [
+        {
+          "key": "A",
+          "en": "A 22 G in the left hand, on the weak side",
+          "zh": "患侧左手22G"
+        },
+        {
+          "key": "B",
+          "en": "A 20 G in the external jugular vein",
+          "zh": "颈外静脉20G"
+        },
+        {
+          "key": "C",
+          "en": "An 18 G in the left antecubital fossa, below the wrist",
+          "zh": "左肘窝18G，腕关节以下"
+        },
+        {
+          "key": "D",
+          "en": "An 18 G above the level of the wrist, preferably on the right side",
+          "zh": "18G，位于腕关节水平以上，首选右侧"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Additional PCP stroke interventions performed en route direct selecting a site above the level of the wrist using a size 18 G, preferably on the right side. A large-bore right-sided line supports contrast administration and endovascular access at the stroke centre.",
+      "explanationZh": "卒中的PCP附加处置（转运途中）要求选择腕关节水平以上的部位，使用18G导管，首选右侧。右侧大管径通路便于卒中中心进行造影剂注射和血管内介入。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-104",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "stroke",
+      "difficulty": "foundation",
+      "questionEn": "Which of the following is listed as an indication for the BC stroke guideline?",
+      "questionZh": "下列哪项被列为BC卒中指南的适应证？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Bilateral leg pain after exertion",
+          "zh": "活动后双下肢疼痛"
+        },
+        {
+          "key": "B",
+          "en": "Any neurological deficits",
+          "zh": "任何神经功能缺损"
+        },
+        {
+          "key": "C",
+          "en": "Isolated chest discomfort",
+          "zh": "单纯胸部不适"
+        },
+        {
+          "key": "D",
+          "en": "Fever with productive cough",
+          "zh": "发热伴咳痰"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Stroke indications include any neurological deficits, altered LOC or unconsciousness, difficulty maintaining the airway, shortness of breath with noisy or absent respirations, and a weak, rapid, or absent radial pulse.",
+      "explanationZh": "卒中的适应证包括任何神经功能缺损、意识改变或昏迷、气道维持困难、呼吸困难伴呼吸音异常或呼吸停止，以及桡动脉搏动微弱、增快或消失。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-105",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "stroke",
+      "difficulty": "advanced",
+      "questionEn": "An 81-year-old male with a suspected stroke has an altered LOC, snoring respirations, and SpO2 of 88% on room air. His family wants him taken to the small local hospital 5 minutes away rather than the stroke centre 25 minutes away. What is the correct action?",
+      "questionZh": "一名81岁疑似卒中男性意识改变，有鼾声呼吸，未吸氧SpO2 88%。家属希望送往5分钟车程的小型社区医院，而非25分钟车程的卒中中心。正确的做法是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Go to the closest hospital; airway compromise overrides destination protocol",
+          "zh": "送最近的医院；气道受累的优先级高于目的地流程"
+        },
+        {
+          "key": "B",
+          "en": "Ask the family to decide the destination after you manage the airway",
+          "zh": "处理气道后由家属决定送往何处"
+        },
+        {
+          "key": "C",
+          "en": "Manage the airway and oxygenate to SpO2 ≥ 94%, then transport in a timely manner to the appropriate stroke facility with pre-notification en route",
+          "zh": "管理气道并给氧使SpO2≥94%，随后及时转运至合适的卒中医院并在途中预先通知"
+        },
+        {
+          "key": "D",
+          "en": "Withhold oxygen to avoid masking the neurological picture",
+          "zh": "暂不给氧以免掩盖神经系统表现"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Stroke care requires managing ABCs as required and supplemental oxygen to maintain SpO2 ≥ 94%, followed by timely transport with notification of the receiving facility while en route. Airway management is done concurrently, not as a reason to bypass definitive stroke care.",
+      "explanationZh": "卒中处置要求按需管理ABC并给氧维持SpO2≥94%，随后及时转运并在途中通知接收医院。气道管理应同时进行，不能作为放弃确定性卒中治疗的理由。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-106",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "stroke",
+      "difficulty": "intermediate",
+      "questionEn": "A 62-year-old woman with a suspected stroke is drooling and has a weak gag. She is semi-conscious but breathing adequately. How should she be positioned and managed?",
+      "questionZh": "一名62岁疑似卒中女性流涎，咽反射减弱。半昏迷但呼吸尚可。应如何摆放体位并处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Fully supine and flat with a cervical collar",
+          "zh": "完全平卧并上颈托"
+        },
+        {
+          "key": "B",
+          "en": "Sitting bolt upright with legs dependent",
+          "zh": "完全坐直，双腿下垂"
+        },
+        {
+          "key": "C",
+          "en": "Prone to allow secretions to drain",
+          "zh": "俯卧位以利分泌物引流"
+        },
+        {
+          "key": "D",
+          "en": "Positioned to protect the airway with suction ready, oxygen to keep SpO2 ≥ 94%, and timely transport",
+          "zh": "摆放保护气道的体位并备好抽吸，给氧维持SpO2≥94%，及时转运"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Stroke interventions include assessing and managing ABCs as required, supplemental oxygen to keep SpO2 ≥ 94%, and appropriate positioning of the patient. A patient with a weak gag and pooling secretions needs a position that protects the airway with suction immediately available.",
+      "explanationZh": "卒中处置包括按需评估和管理ABC、给氧维持SpO2≥94%以及合适的患者体位。咽反射减弱、分泌物积聚的患者需要能保护气道的体位并随时备好抽吸。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-107",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "stroke",
+      "difficulty": "advanced",
+      "questionEn": "A 14-year-old with sickle cell disease has sudden slurred speech and right arm weakness. Blood glucose is 5.6 mmol/L, SpO2 93%. What is the appropriate management?",
+      "questionZh": "一名14岁镰状细胞病患者突发言语含糊和右上肢无力。血糖5.6mmol/L，SpO2 93%。恰当的处理是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Reassure the family; strokes do not occur in adolescents",
+          "zh": "安抚家属；青少年不会发生卒中"
+        },
+        {
+          "key": "B",
+          "en": "Treat as a stroke: oxygen to SpO2 ≥ 94%, FAST-VAN documentation, timely transport, and notify the receiving facility en route",
+          "zh": "按卒中处理：给氧使SpO2≥94%，记录FAST-VAN，及时转运并在途中通知接收医院"
+        },
+        {
+          "key": "C",
+          "en": "Give oral glucose as a trial despite the normal reading",
+          "zh": "尽管血糖正常仍试用口服葡萄糖"
+        },
+        {
+          "key": "D",
+          "en": "Delay transport for 30 minutes to see if symptoms resolve",
+          "zh": "推迟转运30分钟观察症状是否缓解"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Any neurological deficit is an indication for the stroke guideline, regardless of age — sickle cell disease is a recognized stroke risk factor in children. Glucose has been checked and is normal, SpO2 must be raised to ≥ 94%, FAST-VAN recognition documented, and the receiving facility notified en route.",
+      "explanationZh": "任何神经功能缺损都是卒中指南的适应证，与年龄无关——镰状细胞病是儿童公认的卒中危险因素。血糖已查且正常，SpO2须提升至94%以上，记录FAST-VAN识别结果并在转运途中通知接收医院。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-108",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "stroke",
+      "difficulty": "foundation",
+      "questionEn": "According to BC guidelines, when should the receiving facility be notified about a suspected stroke patient?",
+      "questionZh": "根据BC指南，疑似卒中患者应何时通知接收医院？",
+      "options": [
+        {
+          "key": "A",
+          "en": "On arrival at the emergency department entrance",
+          "zh": "到达急诊科门口时"
+        },
+        {
+          "key": "B",
+          "en": "Only if the patient's condition deteriorates during transport",
+          "zh": "仅当患者转运途中病情恶化时"
+        },
+        {
+          "key": "C",
+          "en": "While en route, as part of timely transport",
+          "zh": "转运途中，作为及时转运的组成部分"
+        },
+        {
+          "key": "D",
+          "en": "Notification is the dispatcher's responsibility, not the crew's",
+          "zh": "通知是调度员的职责，与出勤组无关"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Stroke interventions specify timely transport and notifying the receiving facility while en route. Advance notice allows the stroke team, imaging, and thrombolysis or thrombectomy pathways to be activated before the patient arrives.",
+      "explanationZh": "卒中处置明确要求及时转运并在途中通知接收医院。提前通知可使卒中团队、影像检查以及溶栓或取栓流程在患者到达前启动。",
+      "sourceRef": "BC Guidelines p.30",
+      "verified": false
+    },
+    {
+      "id": "ptm-109",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "nausea",
+      "difficulty": "foundation",
+      "questionEn": "A 37-year-old male has 8 hours of vomiting from suspected gastroenteritis. He is alert, HR 96, BP 118/74, and requests something for the nausea. He is stable. Where may antiemetics be given?",
+      "questionZh": "一名37岁男性因疑似胃肠炎呕吐8小时。意识清醒，心率96，血压118/74，要求止吐。病情稳定。止吐药可在何处给予？",
+      "options": [
+        {
+          "key": "A",
+          "en": "On scene, since stable patients may be treated with antiemetics before departure",
+          "zh": "现场即可，因稳定患者可在出发前使用止吐药"
+        },
+        {
+          "key": "B",
+          "en": "Only after arrival at the emergency department",
+          "zh": "仅在到达急诊科后"
+        },
+        {
+          "key": "C",
+          "en": "Only en route, regardless of stability",
+          "zh": "无论是否稳定，只能在转运途中"
+        },
+        {
+          "key": "D",
+          "en": "Only after a 2-litre fluid bolus has been completed",
+          "zh": "必须先完成2升快速补液后"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The nausea/vomiting guideline states stable patients may be treated with antiemetics on scene, while unstable patients are treated en route to hospital. He is hemodynamically stable, so dimenhydrinate or ondansetron may be given before departure.",
+      "explanationZh": "恶心呕吐指南规定：稳定患者可在现场使用止吐药，不稳定患者则在转运途中处理。他血流动力学稳定，因此出发前即可给予茶苯海明或昂丹司琼。",
+      "sourceRef": "BC Guidelines p.48",
+      "verified": false
+    },
+    {
+      "id": "ptm-110",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "geriatric",
+      "topic": "nausea",
+      "difficulty": "intermediate",
+      "questionEn": "A 70-year-old male weighing 80 kg requires an antiemetic. What is the correct dimenhydrinate dose?",
+      "questionZh": "一名70岁、体重80公斤的男性需要止吐药。茶苯海明的正确剂量是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "80 mg, calculated at 1 mg/kg",
+          "zh": "80毫克，按1毫克/公斤计算"
+        },
+        {
+          "key": "B",
+          "en": "50 mg, the maximum dose",
+          "zh": "50毫克，即最大剂量"
+        },
+        {
+          "key": "C",
+          "en": "4 mg, the same as ondansetron",
+          "zh": "4毫克，与昂丹司琼相同"
+        },
+        {
+          "key": "D",
+          "en": "25 mg, halved because of his age",
+          "zh": "25毫克，因年龄减半"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Dimenhydrinate is 1 mg/kg to a maximum dose of 50 mg. At 80 kg the weight-based calculation gives 80 mg, which exceeds the cap, so 50 mg is given. Contact the ER if the patient appears to be under 25 kg.",
+      "explanationZh": "茶苯海明剂量为1毫克/公斤，最大50毫克。80公斤按体重计算为80毫克，超过上限，故给予50毫克。若患者体重看起来不足25公斤，须联系急诊科。",
+      "sourceRef": "BC Guidelines p.63",
+      "verified": false
+    },
+    {
+      "id": "ptm-111",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "nausea",
+      "difficulty": "advanced",
+      "questionEn": "A 42-year-old Indigenous woman with severe nausea tells you her brother was diagnosed with Long QT syndrome. She has no other history. Which antiemetic is appropriate?",
+      "questionZh": "一名42岁原住民女性严重恶心，告知你其兄长被诊断为长QT综合征。无其他病史。应选用哪种止吐药？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Ondansetron 4 mg PO, as it is first-line",
+          "zh": "昂丹司琼4毫克口服，因其为一线用药"
+        },
+        {
+          "key": "B",
+          "en": "Ondansetron ODT, which avoids the QT effect",
+          "zh": "昂丹司琼口崩片，可避免QT效应"
+        },
+        {
+          "key": "C",
+          "en": "Dimenhydrinate, which is recommended in this population",
+          "zh": "茶苯海明，该人群的推荐用药"
+        },
+        {
+          "key": "D",
+          "en": "No antiemetic may be given to any Indigenous patient",
+          "zh": "任何原住民患者都不可使用止吐药"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Congenital long QT syndrome is a contraindication to ondansetron. BC notes some Indigenous people have a higher prevalence of Long QT syndrome due to a genetic variation and advises asking whether they or their family have been diagnosed; if so, dimenhydrinate is the recommended antiemetic. The ODT form does not remove the QT risk — it only changes the aspartame concern for PKU.",
+      "explanationZh": "先天性长QT综合征是昂丹司琼的禁忌证。BC指出部分原住民因基因变异，长QT综合征患病率较高，建议询问本人或家族是否被诊断；若是，则推荐使用茶苯海明。口崩片并不能消除QT风险——它只涉及苯丙酮尿症患者的阿斯巴甜问题。",
+      "sourceRef": "BC Guidelines p.48, p.75",
+      "verified": false
+    },
+    {
+      "id": "ptm-112",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "nausea",
+      "difficulty": "intermediate",
+      "questionEn": "A 6-year-old boy has been vomiting for several hours. He is alert, tolerating sips, HR 108, BP 100/62. What is the correct ondansetron dose?",
+      "questionZh": "一名6岁男孩呕吐数小时。意识清醒，可小口进水，心率108，血压100/62。昂丹司琼的正确剂量是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "2 mg PO",
+          "zh": "2毫克口服"
+        },
+        {
+          "key": "B",
+          "en": "8 mg PO",
+          "zh": "8毫克口服"
+        },
+        {
+          "key": "C",
+          "en": "1 mg/kg PO",
+          "zh": "1毫克/公斤口服"
+        },
+        {
+          "key": "D",
+          "en": "4 mg PO",
+          "zh": "4毫克口服"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Ondansetron pediatric dosing is 2 mg PO for ages 6 months to 4 years and 4 mg PO for 4 years and older. At age 6 he receives 4 mg PO, the same as the adult dose. The 1 mg/kg calculation belongs to dimenhydrinate.",
+      "explanationZh": "昂丹司琼儿童剂量为：6个月至4岁2毫克口服，4岁及以上4毫克口服。该6岁患儿给予4毫克口服，与成人剂量相同。1毫克/公斤是茶苯海明的计算方式。",
+      "sourceRef": "BC Guidelines p.75",
+      "verified": false
+    },
+    {
+      "id": "ptm-113",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "neonatal",
+      "topic": "nausea",
+      "difficulty": "intermediate",
+      "questionEn": "A 4-week-old has forceful vomiting after every feed for two days. He is alert with a strong cry, HR 168, and appears dry. What is the appropriate prehospital management?",
+      "questionZh": "一名4周大的婴儿连续两天每次喂奶后剧烈呕吐。意识清醒、哭声有力，心率168，看起来脱水。恰当的院前处理是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Keep him at rest in a position of comfort that protects the airway, have suction ready, and transport",
+          "zh": "保持安静，取能保护气道的舒适体位，备好抽吸并转运"
+        },
+        {
+          "key": "B",
+          "en": "Administer dimenhydrinate 1 mg/kg IM",
+          "zh": "肌注茶苯海明1毫克/公斤"
+        },
+        {
+          "key": "C",
+          "en": "Give ondansetron 2 mg PO",
+          "zh": "口服昂丹司琼2毫克"
+        },
+        {
+          "key": "D",
+          "en": "Encourage a large feed to correct the dehydration",
+          "zh": "鼓励大量喂奶以纠正脱水"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Core nausea/vomiting care is keeping the patient at rest in a position of comfort consistent with protecting the airway, with suction ready. Neither antiemetic is dosed for this age: ondansetron starts at 6 months, and dimenhydrinate requires contacting the ER if the patient appears to be under 25 kg.",
+      "explanationZh": "恶心呕吐的基本处置是让患者安静休息，取与保护气道相符的舒适体位并备好抽吸。两种止吐药对该年龄段均无适用剂量：昂丹司琼自6个月起适用，茶苯海明则要求体重看似不足25公斤时须联系急诊科。",
+      "sourceRef": "BC Guidelines p.48, p.63, p.75",
+      "verified": false
+    },
+    {
+      "id": "ptm-114",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "pediatric",
+      "topic": "nausea",
+      "difficulty": "advanced",
+      "questionEn": "A 9-year-old with phenylketonuria (PKU) needs an antiemetic for persistent vomiting. Which statement about ondansetron is correct?",
+      "questionZh": "一名9岁苯丙酮尿症（PKU）患儿因持续呕吐需要止吐药。关于昂丹司琼的下列说法哪项正确？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Ondansetron is absolutely contraindicated in PKU by any route",
+          "zh": "PKU患者任何途径均绝对禁用昂丹司琼"
+        },
+        {
+          "key": "B",
+          "en": "The ODT form should be avoided because it may contain aspartame, but ondansetron injections can be safely administered",
+          "zh": "应避免使用口崩片因其可能含阿斯巴甜，但昂丹司琼注射剂可安全使用"
+        },
+        {
+          "key": "C",
+          "en": "PKU is unrelated to any antiemetic choice",
+          "zh": "PKU与止吐药选择无关"
+        },
+        {
+          "key": "D",
+          "en": "PKU patients require a doubled ondansetron dose",
+          "zh": "PKU患者需要双倍昂丹司琼剂量"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Ondansetron ODT may contain aspartame, which should be avoided in patients with phenylketonuria; ondansetron injections can be safely administered in this population. The other listed contraindications are known allergy, congenital long QT syndrome, and a relative contraindication in first trimester pregnancy.",
+      "explanationZh": "昂丹司琼口崩片可能含阿斯巴甜，苯丙酮尿症患者应避免使用；该人群可安全使用昂丹司琼注射剂。其他已列禁忌证包括已知过敏、先天性长QT综合征，以及妊娠早期的相对禁忌。",
+      "sourceRef": "BC Guidelines p.75",
+      "verified": false
+    },
+    {
+      "id": "ptm-115",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "pain-management",
+      "difficulty": "foundation",
+      "questionEn": "A 45-year-old male with an isolated ankle injury rates his pain 7/10. He took no medication today. What is the correct oral acetaminophen dose?",
+      "questionZh": "一名45岁男性单纯踝关节损伤，疼痛评分7/10。今日未服用任何药物。对乙酰氨基酚口服的正确剂量是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "2,000 mg PO as a single loading dose",
+          "zh": "单次负荷剂量口服2000毫克"
+        },
+        {
+          "key": "B",
+          "en": "325 mg PO every 2 hours",
+          "zh": "每2小时口服325毫克"
+        },
+        {
+          "key": "C",
+          "en": "1,000 mg PO, repeated every hour as needed",
+          "zh": "口服1000毫克，按需每小时重复"
+        },
+        {
+          "key": "D",
+          "en": "500-1,000 mg PO, which may be repeated once after 4 hours",
+          "zh": "口服500-1000毫克，4小时后可重复一次"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Oral acetaminophen for analgesia and antipyresis is 500-1,000 mg PO, which may be repeated once after 4 hours. The 24-hour maximum from all sources and routes is 4,000 mg, reduced to 2,000 mg in suspected or known liver dysfunction or malnutrition.",
+      "explanationZh": "对乙酰氨基酚用于镇痛和退热的口服剂量为500-1000毫克，4小时后可重复一次。所有来源和途径合计24小时最大量为4000毫克；疑似或已知肝功能障碍或营养不良者降至2000毫克。",
+      "sourceRef": "BC Guidelines p.58",
+      "verified": false
+    },
+    {
+      "id": "ptm-116",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pain-management",
+      "difficulty": "intermediate",
+      "questionEn": "A 30 kg 9-year-old has moderate pain from a closed forearm fracture. There is no bleeding history, no GI disease, and no anticoagulant use. What is the correct ibuprofen dose?",
+      "questionZh": "一名30公斤重的9岁儿童因闭合性前臂骨折出现中度疼痛。无出血史、无胃肠疾病、未使用抗凝药。布洛芬的正确剂量是多少？",
+      "options": [
+        {
+          "key": "A",
+          "en": "400 mg PO, the adult dose",
+          "zh": "口服400毫克，即成人剂量"
+        },
+        {
+          "key": "B",
+          "en": "5 mg/kg (150 mg) PO",
+          "zh": "5毫克/公斤（150毫克）口服"
+        },
+        {
+          "key": "C",
+          "en": "10 mg/kg (300 mg) PO, which may be repeated once after 6 hours",
+          "zh": "10毫克/公斤（300毫克）口服，6小时后可重复一次"
+        },
+        {
+          "key": "D",
+          "en": "40 mg/kg (1,200 mg) PO as a single dose",
+          "zh": "40毫克/公斤（1200毫克）单次口服"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Pediatric ibuprofen for mild to moderate pain is 10 mg/kg PO, repeated once after 6 hours, with a maximum daily dose of 40 mg/kg/day. For 30 kg this is 300 mg. The 5 mg/kg dose applies only to pyrexia below 39°C, and 40 mg/kg is the daily maximum, not a single dose.",
+      "explanationZh": "儿童布洛芬用于轻中度疼痛为10毫克/公斤口服，6小时后可重复一次，每日最大量40毫克/公斤/天。30公斤即300毫克。5毫克/公斤仅用于体温低于39°C的发热，40毫克/公斤是每日上限而非单次剂量。",
+      "sourceRef": "BC Guidelines p.68",
+      "verified": false
+    },
+    {
+      "id": "ptm-117",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "pain-management",
+      "difficulty": "advanced",
+      "questionEn": "A 29-year-old woman, 20 weeks pregnant, has severe pain from an isolated closed tibia fracture. She is alert, hemodynamically stable, and has taken nothing today. Which analgesic option is appropriate?",
+      "questionZh": "一名29岁女性，妊娠20周，单纯闭合性胫骨骨折伴剧烈疼痛。意识清醒，血流动力学稳定，今日未服药。哪种镇痛方案合适？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Ibuprofen 400 mg PO plus acetaminophen 1,000 mg PO",
+          "zh": "布洛芬400毫克口服加对乙酰氨基酚1000毫克口服"
+        },
+        {
+          "key": "B",
+          "en": "Acetaminophen 1,000 mg PO, avoiding both ibuprofen and methoxyflurane",
+          "zh": "对乙酰氨基酚1000毫克口服，避免使用布洛芬和甲氧氟烷"
+        },
+        {
+          "key": "C",
+          "en": "Methoxyflurane 3 mL self-administered",
+          "zh": "甲氧氟烷3毫升自行吸入"
+        },
+        {
+          "key": "D",
+          "en": "No analgesia is permitted in pregnancy",
+          "zh": "妊娠期禁用一切镇痛"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Ibuprofen is contraindicated in pregnancy in the first, second, and third trimesters, and methoxyflurane is contraindicated in pregnancy, intended pregnancy, and breast-feeding. Acetaminophen 500-1,000 mg PO remains available. Entonox lists pregnancy neither as a contraindication nor caution, but the NSAID and Penthrox routes are closed.",
+      "explanationZh": "布洛芬在妊娠早、中、晚三期均属禁忌；甲氧氟烷在妊娠、备孕和哺乳期禁用。对乙酰氨基酚500-1000毫克口服仍可使用。Entonox的禁忌和注意事项中未列妊娠，但NSAID和Penthrox这两条途径已被排除。",
+      "sourceRef": "BC Guidelines p.58, p.68, p.71",
+      "verified": false
+    },
+    {
+      "id": "ptm-118",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "pediatric",
+      "topic": "pain-management",
+      "difficulty": "advanced",
+      "questionEn": "A 16-year-old has a painful isolated wrist fracture. He is alert, cooperative, GCS 15, with clear lungs and no head injury. He asks for the \"green whistle\" (methoxyflurane) his friend received. What is correct?",
+      "questionZh": "一名16岁少年单纯腕部骨折伴疼痛。意识清醒、配合，GCS 15分，双肺清晰，无颅脑损伤。他要求使用朋友用过的\"绿色哨子\"（甲氧氟烷）。正确的做法是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Methoxyflurane is contraindicated under 18 years of age; use Entonox and/or oral acetaminophen and ibuprofen instead",
+          "zh": "甲氧氟烷18岁以下禁用；改用Entonox和/或口服对乙酰氨基酚与布洛芬"
+        },
+        {
+          "key": "B",
+          "en": "Give methoxyflurane 3 mL since he is alert and cooperative",
+          "zh": "因其清醒配合可给予甲氧氟烷3毫升"
+        },
+        {
+          "key": "C",
+          "en": "Give methoxyflurane at half the volume for his age",
+          "zh": "按其年龄给予半量甲氧氟烷"
+        },
+        {
+          "key": "D",
+          "en": "Withhold all analgesia until arrival at hospital",
+          "zh": "到院前不给任何镇痛"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Methoxyflurane is contraindicated in patients less than 18 years of age — there is no reduced-volume alternative. With an isolated extremity injury, a clear sensorium, and no pneumothorax or inhalation injury, Entonox is appropriate, and acetaminophen with ibuprofen may be used concurrently for analgesia.",
+      "explanationZh": "甲氧氟烷禁用于18岁以下患者——不存在减量替代方案。该患者为单纯肢体损伤、神志清楚、无气胸或吸入性损伤，适合使用Entonox；对乙酰氨基酚与布洛芬也可联合用于镇痛。",
+      "sourceRef": "BC Guidelines p.65, p.71, p.58",
+      "verified": false
+    },
+    {
+      "id": "ptm-119",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "pain-management",
+      "difficulty": "foundation",
+      "questionEn": "Which of the following is a contraindication to Entonox?",
+      "questionZh": "下列哪项是Entonox的禁忌证？",
+      "options": [
+        {
+          "key": "A",
+          "en": "An isolated extremity injury",
+          "zh": "单纯肢体损伤"
+        },
+        {
+          "key": "B",
+          "en": "Pain associated with a superficial burn",
+          "zh": "浅表烧伤引起的疼痛"
+        },
+        {
+          "key": "C",
+          "en": "A pain severity score of 9/10",
+          "zh": "疼痛评分9/10"
+        },
+        {
+          "key": "D",
+          "en": "An altered level of consciousness",
+          "zh": "意识水平改变"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Entonox contraindications are inability to comply, inability to ventilate an enclosed treatment area, decompression sickness, altered level of consciousness, pneumothorax, air embolism, inhalation injury, and nitroglycerin used in the last 5 minutes. Isolated extremity injuries and burn pain are listed indications.",
+      "explanationZh": "Entonox的禁忌证包括无法配合、治疗区域无法通风、减压病、意识水平改变、气胸、空气栓塞、吸入性损伤，以及5分钟内使用过硝酸甘油。单纯肢体损伤和烧伤疼痛属于适应证。",
+      "sourceRef": "BC Guidelines p.65",
+      "verified": false
+    },
+    {
+      "id": "ptm-120",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "pain-management",
+      "difficulty": "advanced",
+      "questionEn": "A 77-year-old male with cirrhosis and heavy alcohol use has a painful shoulder dislocation. His daughter says he took 1,000 mg of acetaminophen 90 minutes ago. He is on warfarin. What analgesia is appropriate?",
+      "questionZh": "一名77岁男性，肝硬化并长期大量饮酒，肩关节脱位疼痛。其女儿称他90分钟前服用了1000毫克对乙酰氨基酚。患者正在服用华法林。合适的镇痛方案是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Acetaminophen 1,000 mg PO now, since his 24-hour total is still under 4,000 mg",
+          "zh": "现在口服对乙酰氨基酚1000毫克，因其24小时总量仍不足4000毫克"
+        },
+        {
+          "key": "B",
+          "en": "Ibuprofen 400 mg PO, which is safer than acetaminophen in liver disease",
+          "zh": "口服布洛芬400毫克，在肝病患者中比对乙酰氨基酚更安全"
+        },
+        {
+          "key": "C",
+          "en": "Entonox, provided the contraindications are ruled out and the treatment area can be ventilated",
+          "zh": "Entonox，前提是已排除禁忌证且治疗区域可通风"
+        },
+        {
+          "key": "D",
+          "en": "Methoxyflurane 3 mL self-administered",
+          "zh": "甲氧氟烷3毫升自行吸入"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Acetaminophen is barred because a dose was given within the past 4 hours, and his cirrhosis lowers the 24-hour maximum to 2,000 mg. Ibuprofen is contraindicated with anticoagulants such as warfarin. Methoxyflurane is contraindicated with a history of liver dysfunction following halogenated anesthetics and is cautioned in renal impairment. Entonox remains available after a primary survey, pain assessment, baseline vitals including SpO2, and a history and physical sufficient to rule out its contraindications.",
+      "explanationZh": "对乙酰氨基酚因4小时内已服用一剂而禁用，且肝硬化使其24小时上限降至2000毫克。布洛芬与华法林等抗凝药合用属禁忌。甲氧氟烷在既往使用卤代麻醉剂后出现肝功能障碍者禁用，肾功能不全者需慎用。完成初步评估、疼痛评估、含SpO2的基线生命体征以及足以排除禁忌证的病史与体检后，Entonox仍可使用。",
+      "sourceRef": "BC Guidelines p.58, p.65, p.68, p.71",
       "verified": false
     }
   ]

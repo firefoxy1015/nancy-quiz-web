@@ -1,7 +1,7 @@
 {
   "meta": {
     "part": "pcp-resp-cardiac",
-    "count": 80,
+    "count": 100,
     "languages": [
       "en",
       "zh"
@@ -3046,6 +3046,766 @@
       "explanationEn": "CHF/pulmonary edema management includes keeping the patient warm and protecting from further heat loss, sitting upright with legs hung down, rest with no exertion, and supplemental oxygen to keep SpO2 ≥ 94%.",
       "explanationZh": "心衰／肺水肿的处理包括保暖并防止进一步热量丢失、端坐位双腿下垂、静止休息不用力，并给予补充氧以维持SpO2≥94%。",
       "sourceRef": "BC Guidelines p.33",
+      "verified": false
+    },
+    {
+      "id": "prc-081",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 67-year-old man has crushing substernal chest pain radiating to his left arm, BP 138/84, HR 88, SpO2 96% on room air. He has taken no medication. What should be administered first?",
+      "questionZh": "一名67岁男性有压榨性胸骨后疼痛并向左臂放射，血压138/84，心率88，未吸氧SpO2 96%。他尚未服用任何药物。首先应给予什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Nitroglycerin 0.4 mg SL, before any other drug",
+          "zh": "先舌下含服0.4毫克硝酸甘油，再考虑其他药物"
+        },
+        {
+          "key": "B",
+          "en": "Acetylsalicylic acid 160 mg, chewed and swallowed",
+          "zh": "160毫克阿司匹林，嚼碎后吞服"
+        },
+        {
+          "key": "C",
+          "en": "Entonox, self-administered for the pain",
+          "zh": "由患者自行吸入Entonox止痛"
+        },
+        {
+          "key": "D",
+          "en": "Salbutamol 5 mg by nebulizer",
+          "zh": "雾化吸入5毫克沙丁胺醇"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The cardiac chest pain protocol directs administering ASA, chewed and swallowed, if not already given prior to EHS arrival, then initiating transport, obtaining history and baseline vitals, and administering nitroglycerin if appropriate. The ASA dose is 160 mg PO.",
+      "explanationZh": "心源性胸痛方案要求：如患者在急救到达前未服用，则给予阿司匹林嚼碎吞服，随后启动转运、采集病史和基线生命体征，并在合适时给予硝酸甘油。阿司匹林剂量为口服160毫克。",
+      "sourceRef": "BC Guidelines p.47, p.60",
+      "verified": false
+    },
+    {
+      "id": "prc-082",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "foundation",
+      "questionEn": "What is the dose and route of Aspirin (ASA) for suspected cardiac ischemia under the BC guidelines?",
+      "questionZh": "按BC指南，疑似心肌缺血时阿司匹林的剂量和给药途径是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "325 mg PO, swallowed whole",
+          "zh": "口服325毫克，整片吞服"
+        },
+        {
+          "key": "B",
+          "en": "80 mg PO daily",
+          "zh": "每日口服80毫克"
+        },
+        {
+          "key": "C",
+          "en": "160 mg PO",
+          "zh": "口服160毫克"
+        },
+        {
+          "key": "D",
+          "en": "650 mg PO",
+          "zh": "口服650毫克"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The ASA dose is 160 mg PO, chewed and swallowed, with an onset of 20 minutes to one hour if chewed. ASA is the only medication for which vitals are not required prior to administration.",
+      "explanationZh": "阿司匹林剂量为口服160毫克，嚼碎后吞服，嚼服起效时间为20分钟至1小时。阿司匹林是唯一在给药前不要求先测生命体征的药物。",
+      "sourceRef": "BC Guidelines p.60",
+      "verified": false
+    },
+    {
+      "id": "prc-083",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "advanced",
+      "questionEn": "A 74-year-old woman with chest pain tells you she has an active peptic ulcer and was recently treated for a GI bleed. Her BP is 142/88. What should you do about ASA?",
+      "questionZh": "一名74岁胸痛女性告诉你她有活动性消化性溃疡，最近因消化道出血接受过治疗。血压142/88。关于阿司匹林你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Give 160 mg because the benefit in cardiac ischemia always outweighs bleeding risk",
+          "zh": "给160毫克，因为心肌缺血的获益永远大于出血风险"
+        },
+        {
+          "key": "B",
+          "en": "Give a reduced dose of 80 mg to lower the bleeding risk",
+          "zh": "减量给80毫克以降低出血风险"
+        },
+        {
+          "key": "C",
+          "en": "Give ASA rectally to bypass the stomach",
+          "zh": "改为直肠给药以避开胃部"
+        },
+        {
+          "key": "D",
+          "en": "Withhold ASA: active peptic ulcer or gastrointestinal bleeding is a contraindication",
+          "zh": "不给阿司匹林：活动性消化性溃疡或消化道出血是禁忌证"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "Active peptic ulcer or gastrointestinal bleeding is a listed contraindication to ASA, along with inability to swallow, allergy, having already taken the recommended dose, salicylate/NSAID-induced asthma, and paediatric patients with viral symptoms. The rest of the chest pain protocol still applies.",
+      "explanationZh": "活动性消化性溃疡或消化道出血是阿司匹林明确列出的禁忌证，其他禁忌还包括无法吞咽、过敏、已自行服用推荐剂量、水杨酸/非甾体药物诱发哮喘史，以及有病毒感染症状的儿童。胸痛方案的其余部分仍需执行。",
+      "sourceRef": "BC Guidelines p.60",
+      "verified": false
+    },
+    {
+      "id": "prc-084",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "What is the correct dose and dosing interval for sublingual nitroglycerin in cardiac chest pain?",
+      "questionZh": "心源性胸痛时舌下含服硝酸甘油的正确剂量和给药间隔是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "0.4 mg SL every 3-5 minutes, provided the systolic BP remains above 110 mmHg, until pain free",
+          "zh": "每3–5分钟舌下0.4毫克，前提是收缩压持续高于110毫米汞柱，直至疼痛消失"
+        },
+        {
+          "key": "B",
+          "en": "0.8 mg SL every 5 minutes, provided systolic BP remains above 90 mmHg",
+          "zh": "每5分钟舌下0.8毫克，前提是收缩压高于90毫米汞柱"
+        },
+        {
+          "key": "C",
+          "en": "0.4 mg SL every 10 minutes, maximum of 5 doses",
+          "zh": "每10分钟舌下0.4毫克，最多5剂"
+        },
+        {
+          "key": "D",
+          "en": "0.3 mg SL once only, then transport",
+          "zh": "仅舌下0.3毫克一次，然后转运"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Nitroglycerin is 0.4 mg SL every 3-5 minutes provided the systolic BP remains above 110 mmHg, until the patient is pain free, to a maximum of 3 doses in any 30-minute period. Onset is about 60 seconds with a 30-minute duration.",
+      "explanationZh": "硝酸甘油为每3–5分钟舌下含服0.4毫克，前提是收缩压持续高于110毫米汞柱，直至疼痛消失，任何30分钟内最多3剂。起效约60秒，作用持续30分钟。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-085",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 70-year-old man with chest pain has a BP of 104/68, HR 76. He has had ASA. What about nitroglycerin?",
+      "questionZh": "一名70岁胸痛男性血压为104/68，心率76，已服用阿司匹林。硝酸甘油该如何处理？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Give 0.4 mg SL, since the systolic pressure is above 90 mmHg",
+          "zh": "给舌下0.4毫克，因为收缩压高于90毫米汞柱"
+        },
+        {
+          "key": "B",
+          "en": "Give a half dose of 0.2 mg SL",
+          "zh": "给半量，舌下0.2毫克"
+        },
+        {
+          "key": "C",
+          "en": "Withhold nitroglycerin: a systolic BP below 110 mmHg is a contraindication",
+          "zh": "不给硝酸甘油：收缩压低于110毫米汞柱是禁忌证"
+        },
+        {
+          "key": "D",
+          "en": "Give nitroglycerin after a 500 mL fluid bolus",
+          "zh": "先输500毫升液体再给硝酸甘油"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Nitroglycerin is contraindicated with a systolic BP below 110 mmHg. Other contraindications are known nitrate allergy or sensitivity, HR below 50 or above 150, and Viagra or Levitra within 24 hours or Cialis within 48 hours.",
+      "explanationZh": "收缩压低于110毫米汞柱时禁用硝酸甘油。其他禁忌包括已知硝酸盐类过敏或不耐受、心率低于50或高于150，以及24小时内使用过万艾可或艾力达、48小时内使用过希爱力。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-086",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "advanced",
+      "questionEn": "A 56-year-old man has chest pain, BP 128/78, HR 82. He mentions he took a Cialis tablet about 30 hours ago. What is the correct decision?",
+      "questionZh": "一名56岁男性胸痛，血压128/78，心率82。他提到大约30小时前服用过一片希爱力。正确的决定是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Withhold nitroglycerin: Cialis within the past 48 hours is a contraindication",
+          "zh": "不给硝酸甘油：48小时内使用过希爱力是禁忌证"
+        },
+        {
+          "key": "B",
+          "en": "Give nitroglycerin, since more than 24 hours have passed",
+          "zh": "给硝酸甘油，因为已超过24小时"
+        },
+        {
+          "key": "C",
+          "en": "Give nitroglycerin at half the usual dose",
+          "zh": "按常规剂量的一半给硝酸甘油"
+        },
+        {
+          "key": "D",
+          "en": "Give nitroglycerin only if the systolic BP is above 150 mmHg",
+          "zh": "只有收缩压高于150毫米汞柱时才给硝酸甘油"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "The contraindication window differs by drug: Viagra or Levitra within 24 hours, but Cialis within 48 hours. At 30 hours post-Cialis, nitroglycerin is contraindicated because of the risk of profound hypotension.",
+      "explanationZh": "不同药物的禁忌时间窗不同：万艾可或艾力达为24小时内，而希爱力为48小时内。服用希爱力30小时时仍属禁忌期，给药有导致严重低血压的风险。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-087",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "advanced",
+      "questionEn": "A 61-year-old woman with chest pain has received 3 doses of nitroglycerin over 15 minutes. Her pain persists and her BP is now 106/70. What is the next step?",
+      "questionZh": "一名61岁胸痛女性在15分钟内已接受3剂硝酸甘油，疼痛仍未缓解，目前血压106/70。下一步是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Give a fourth dose of nitroglycerin immediately",
+          "zh": "立即给第4剂硝酸甘油"
+        },
+        {
+          "key": "B",
+          "en": "Administer Entonox 5 minutes after the last dose of nitroglycerin",
+          "zh": "在最后一剂硝酸甘油后5分钟给予Entonox"
+        },
+        {
+          "key": "C",
+          "en": "Administer a second 160 mg dose of ASA",
+          "zh": "再给一次160毫克阿司匹林"
+        },
+        {
+          "key": "D",
+          "en": "Give Entonox immediately, without waiting",
+          "zh": "不必等待，立即给予Entonox"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "If pain persists beyond 3 doses of nitroglycerin, or if the systolic BP falls below 110 mmHg, administer Entonox 5 minutes after the last dose of nitroglycerin. Nitroglycerin used in the last 5 minutes is a contraindication to Entonox. Continue assessment and vitals every 5 minutes.",
+      "explanationZh": "若3剂硝酸甘油后疼痛仍持续，或收缩压降至110毫米汞柱以下，应在最后一剂硝酸甘油后5分钟给予Entonox。5分钟内使用过硝酸甘油是Entonox的禁忌。同时每5分钟复评并测量生命体征。",
+      "sourceRef": "BC Guidelines p.47, p.65",
+      "verified": false
+    },
+    {
+      "id": "prc-088",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "How frequently should assessment, treatment and vital signs be repeated during the cardiac chest pain protocol?",
+      "questionZh": "在心源性胸痛方案执行过程中，评估、处置和生命体征应多久重复一次？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Every 15 minutes",
+          "zh": "每15分钟"
+        },
+        {
+          "key": "B",
+          "en": "Only on arrival and at handover",
+          "zh": "仅在到达时和交接时各一次"
+        },
+        {
+          "key": "C",
+          "en": "Every 20 minutes",
+          "zh": "每20分钟"
+        },
+        {
+          "key": "D",
+          "en": "Every 5 minutes",
+          "zh": "每5分钟"
+        }
+      ],
+      "answer": "D",
+      "explanationEn": "The protocol directs continuing with assessment, treatment, and vital signs every 5 minutes, both when pain returns after relief and when pain persists beyond 3 nitroglycerin doses.",
+      "explanationZh": "方案要求每5分钟继续进行评估、处置和生命体征测量，无论是疼痛缓解后再发，还是3剂硝酸甘油后疼痛仍持续的情况。",
+      "sourceRef": "BC Guidelines p.47",
+      "verified": false
+    },
+    {
+      "id": "prc-089",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "advanced",
+      "questionEn": "A 73-year-old man's chest pain resolved completely after 2 doses of nitroglycerin. Ten minutes later, en route, the pain returns at the same intensity. His BP is 126/78. What should you do?",
+      "questionZh": "一名73岁男性在2剂硝酸甘油后胸痛完全缓解。10分钟后转运途中疼痛以相同强度再次出现，血压126/78。你应该怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Re-initiate the nitroglycerin component and continue assessment, treatment and vitals every 5 minutes",
+          "zh": "重新启动硝酸甘油部分，并每5分钟继续评估、处置和测量生命体征"
+        },
+        {
+          "key": "B",
+          "en": "Repeat both the nitroglycerin and the ASA components in full",
+          "zh": "完整重复硝酸甘油和阿司匹林两部分"
+        },
+        {
+          "key": "C",
+          "en": "Give Entonox instead, since nitroglycerin has already been used",
+          "zh": "改用Entonox，因为已经用过硝酸甘油"
+        },
+        {
+          "key": "D",
+          "en": "Give no further treatment, since 2 doses were already effective",
+          "zh": "不再给任何处置，因为2剂已经有效"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "If pain is completely relieved for more than 5 minutes and then returns, you may re-initiate the nitroglycerin component of the chest pain protocol, but not the aspirin component; this counts as a new episode. Continue assessment, treatment and vitals every 5 minutes.",
+      "explanationZh": "若疼痛完全缓解超过5分钟后再次出现，可重新启动胸痛方案的硝酸甘油部分，但不重复阿司匹林部分；这算作一次新发作。同时每5分钟继续评估、处置和测量生命体征。",
+      "sourceRef": "BC Guidelines p.47, p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-090",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "foundation",
+      "questionEn": "What is the mechanism by which nitroglycerin relieves cardiac chest pain?",
+      "questionZh": "硝酸甘油缓解心源性胸痛的机制是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "It blocks pain transmission in the spinal cord",
+          "zh": "阻断脊髓中的疼痛传导"
+        },
+        {
+          "key": "B",
+          "en": "It reduces cardiac oxygen demand by dilating vessels, decreasing preload and afterload, and dilates coronary arteries to increase blood flow to cardiac tissue",
+          "zh": "通过扩张血管降低心脏耗氧、减少前负荷和后负荷，并扩张冠状动脉以增加心肌血流"
+        },
+        {
+          "key": "C",
+          "en": "It prevents platelets from clumping together to form clots",
+          "zh": "防止血小板聚集形成血栓"
+        },
+        {
+          "key": "D",
+          "en": "It increases heart rate and contractility to improve output",
+          "zh": "通过提高心率和收缩力来改善心输出量"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Nitroglycerin reduces cardiac oxygen demand primarily by dilating blood vessels, decreasing preload and afterload, and dilating coronary arteries to increase blood flow to cardiac tissue. Preventing platelet clumping describes ASA.",
+      "explanationZh": "硝酸甘油主要通过扩张血管降低心脏耗氧，减少前负荷和后负荷，并扩张冠状动脉以增加心肌血流。防止血小板聚集描述的是阿司匹林。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-091",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 77-year-old woman with chest pain is standing at her kitchen counter when you arrive. After the primary survey, what does the protocol direct regarding her position and movement?",
+      "questionZh": "你到达时，一名77岁胸痛女性正站在厨房台面旁。完成初级评估后，方案对其体位和活动有何要求？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Have her walk to the stretcher to assess her exercise tolerance",
+          "zh": "让她自行走到担架旁以评估运动耐量"
+        },
+        {
+          "key": "B",
+          "en": "Lay her flat and elevate her legs",
+          "zh": "让她平卧并抬高双腿"
+        },
+        {
+          "key": "C",
+          "en": "Place her in a position of comfort as permitted by her clinical condition, and in general limit patient movement",
+          "zh": "在临床状况允许的前提下置于舒适体位，总体上限制患者活动"
+        },
+        {
+          "key": "D",
+          "en": "Keep her seated with legs hung down and delay transport until pain-free",
+          "zh": "让她坐位双腿下垂，等疼痛完全消失后再转运"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The chest pain protocol directs placing the patient in a position of comfort as permitted by clinical condition and, in general, limiting patient movement. Transport should be initiated immediately if able, delegating crew to prep egress.",
+      "explanationZh": "胸痛方案要求在临床状况允许下将患者置于舒适体位，总体上限制其活动。若条件允许应立即启动转运，并指派队员准备搬运路线。",
+      "sourceRef": "BC Guidelines p.47",
+      "verified": false
+    },
+    {
+      "id": "prc-092",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 59-year-old man with chest pain has an SpO2 of 97% on room air. How should oxygen be managed?",
+      "questionZh": "一名59岁胸痛男性未吸氧时SpO2为97%。应如何给氧？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Apply a non-rebreather at 15 L/min to all cardiac chest pain patients",
+          "zh": "所有心源性胸痛患者一律使用15升/分非再呼吸面罩"
+        },
+        {
+          "key": "B",
+          "en": "Apply oxygen only as required to maintain SpO2 ≥ 94%; none is needed at 97%",
+          "zh": "仅在需要维持SpO2≥94%时给氧；97%时无需给氧"
+        },
+        {
+          "key": "C",
+          "en": "Apply nasal cannula at 6 L/min routinely",
+          "zh": "常规使用6升/分鼻导管"
+        },
+        {
+          "key": "D",
+          "en": "Withhold oxygen entirely regardless of the saturation",
+          "zh": "不论血氧饱和度如何一律不给氧"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "The chest pain protocol directs completing a primary survey and applying oxygen as required to maintain SpO2 ≥ 94%. Routine high-flow oxygen in a normoxic cardiac patient is not indicated.",
+      "explanationZh": "胸痛方案要求完成初级评估，并按需给氧以维持SpO2≥94%。对血氧正常的心脏病患者常规高流量给氧并无指征。",
+      "sourceRef": "BC Guidelines p.47",
+      "verified": false
+    },
+    {
+      "id": "prc-093",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 71-year-old man with cardiac chest pain becomes nauseated after his second nitroglycerin dose. As a PCP, what additional intervention may be considered?",
+      "questionZh": "一名71岁心源性胸痛男性在第2剂硝酸甘油后出现恶心。作为PCP，可以考虑什么附加处置？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Dimenhydrinate for the nausea",
+          "zh": "给予苯海拉明茶碱（晕海宁）止吐"
+        },
+        {
+          "key": "B",
+          "en": "Ibuprofen 400 mg PO for the chest discomfort",
+          "zh": "口服400毫克布洛芬缓解胸部不适"
+        },
+        {
+          "key": "C",
+          "en": "Glucagon 1 mg IM",
+          "zh": "肌注1毫克胰高血糖素"
+        },
+        {
+          "key": "D",
+          "en": "Diphenhydramine 50 mg IV",
+          "zh": "静注50毫克苯海拉明"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Additional PCP interventions in the cardiac chest pain protocol are obtaining vascular access with running IV fluid and considering dimenhydrinate for nausea. Nausea and vomiting are recognized adverse effects of nitroglycerin.",
+      "explanationZh": "心源性胸痛方案中PCP的附加处置为建立血管通路并输注液体，以及考虑用茶苯海明处理恶心。恶心呕吐是硝酸甘油已知的不良反应。",
+      "sourceRef": "BC Guidelines p.47, p.63",
+      "verified": false
+    },
+    {
+      "id": "prc-094",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "critical",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "advanced",
+      "questionEn": "An 83-year-old woman with chest pain has a nitroglycerin patch already applied by her family, and her BP is 132/80 with HR 78. Your partner says the protocol cannot be used because she already has nitrates on board. What is correct?",
+      "questionZh": "一名83岁胸痛女性身上已被家人贴了硝酸甘油贴片，血压132/80，心率78。搭档说她体内已有硝酸盐，因此不能执行该方案。正确的说法是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "A nitro patch does not change the nitroglycerin protocol; proceed with 0.4 mg SL as indicated",
+          "zh": "贴片不改变硝酸甘油方案；按指征照常舌下给0.4毫克"
+        },
+        {
+          "key": "B",
+          "en": "The patch counts as one of the 3 permitted doses",
+          "zh": "贴片计入允许的3剂之一"
+        },
+        {
+          "key": "C",
+          "en": "Remove the patch and wait 30 minutes before any sublingual dose",
+          "zh": "揭掉贴片并等待30分钟后才能舌下给药"
+        },
+        {
+          "key": "D",
+          "en": "The protocol is contraindicated whenever a patch is in place",
+          "zh": "只要贴着贴片就禁用该方案"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "If the patient has a nitro patch applied, it does not change the nitroglycerin protocol. The dose limit of 3 in any 30-minute period applies to your sublingual administrations and is counted irrespective of any nitro the patient took before your arrival, provided the systolic BP remains above 110 mmHg.",
+      "explanationZh": "患者已贴硝酸甘油贴片不改变硝酸甘油方案。任何30分钟内最多3剂的上限针对的是你舌下给药的次数，且不计患者在你到达前自行使用的硝酸甘油，前提是收缩压持续高于110毫米汞柱。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-095",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "knowledge",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "foundation",
+      "questionEn": "Which medication in the BC guidelines does not require a set of vital signs prior to administration?",
+      "questionZh": "在BC指南中，哪种药物在给药前不需要先测量生命体征？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Nitroglycerin",
+          "zh": "硝酸甘油"
+        },
+        {
+          "key": "B",
+          "en": "Entonox",
+          "zh": "Entonox（氧化亚氮）"
+        },
+        {
+          "key": "C",
+          "en": "Aspirin (ASA)",
+          "zh": "阿司匹林"
+        },
+        {
+          "key": "D",
+          "en": "Epinephrine",
+          "zh": "肾上腺素"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "ASA is the only medication for which vitals are not required prior to administration, though it should follow the rapid body survey and the cautions and contraindications must still be checked. Entonox specifically requires a baseline set of vitals including oxygen saturation.",
+      "explanationZh": "阿司匹林是唯一在给药前不要求先测生命体征的药物，但仍应在快速全身检查之后给予，并必须核对注意事项和禁忌证。Entonox则明确要求先获得包括血氧饱和度在内的基线生命体征。",
+      "sourceRef": "BC Guidelines p.60, p.65",
+      "verified": false
+    },
+    {
+      "id": "prc-096",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "advanced",
+      "questionEn": "A 60-year-old man with chest pain has been on Entonox for 20 minutes after 3 nitroglycerin doses. Hospital arrival is not imminent. What does the guideline direct?",
+      "questionZh": "一名60岁胸痛男性在3剂硝酸甘油后已吸入Entonox 20分钟，短时间内无法到达医院。指南要求怎么做？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Continue Entonox for the remainder of the transport without change",
+          "zh": "整个转运过程继续吸入Entonox，不作调整"
+        },
+        {
+          "key": "B",
+          "en": "Discontinue Entonox, resume high-flow oxygen, and administer additional nitroglycerin as per protocol",
+          "zh": "停用Entonox，恢复高流量给氧，并按方案追加硝酸甘油"
+        },
+        {
+          "key": "C",
+          "en": "Administer a second 160 mg dose of ASA",
+          "zh": "再给160毫克阿司匹林一次"
+        },
+        {
+          "key": "D",
+          "en": "Give nitroglycerin at the same time as the Entonox for a combined effect",
+          "zh": "在吸Entonox的同时给硝酸甘油以求叠加效果"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "If nitroglycerin has been given and Entonox is now in use, and hospital arrival is not imminent 20 minutes after the last nitro, discontinue Entonox, resume high-flow oxygen, and administer additional nitroglycerin as per protocol. The protocol may be repeated 30 minutes after the first nitro dose, after stopping nitrous oxide for 5 minutes.",
+      "explanationZh": "若已给过硝酸甘油且正在使用Entonox，在最后一剂硝酸甘油后20分钟仍无法很快到院，应停用Entonox、恢复高流量给氧并按方案追加硝酸甘油。首剂硝酸甘油后30分钟，在停用氧化亚氮5分钟后可重复该方案。",
+      "sourceRef": "BC Guidelines p.47, p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-097",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "geriatric",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A frail 86-year-old woman with chest pain is about to receive her first nitroglycerin dose while sitting on the edge of her bed. Which caution is most important?",
+      "questionZh": "一名体弱的86岁胸痛女性正坐在床沿，即将接受第一剂硝酸甘油。最重要的注意事项是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Nitroglycerin causes bradycardia in the elderly and requires atropine standby",
+          "zh": "硝酸甘油在老年人中会引起心动过缓，需备好阿托品"
+        },
+        {
+          "key": "B",
+          "en": "Hypotension frequently occurs, especially in the elderly, and must be expected; ensure she is not at risk of falling",
+          "zh": "低血压很常见，老年人尤甚，必须预料到；要确保她没有跌倒风险"
+        },
+        {
+          "key": "C",
+          "en": "Nitroglycerin spray should be shaken vigorously before use",
+          "zh": "硝酸甘油喷雾使用前应用力摇匀"
+        },
+        {
+          "key": "D",
+          "en": "The dose must be halved for patients over 80",
+          "zh": "80岁以上患者剂量必须减半"
+        }
+      ],
+      "answer": "B",
+      "explanationEn": "Hypotension frequently occurs with nitroglycerin, especially in the elderly, and must be expected: ensure the patient is not at risk to fall. If using nitro spray, do not shake the container prior to administration.",
+      "explanationZh": "硝酸甘油常引起低血压，老年人尤为明显，必须预先考虑到：要确保患者没有跌倒风险。使用硝酸甘油喷雾时，给药前不要摇动瓶身。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-098",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 62-year-old man with cardiac chest pain has a heart rate of 158 and a BP of 118/76. What is the correct decision about nitroglycerin?",
+      "questionZh": "一名62岁心源性胸痛男性心率158，血压118/76。关于硝酸甘油的正确决定是什么？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Withhold nitroglycerin: a heart rate above 150 is a contraindication",
+          "zh": "不给硝酸甘油：心率高于150是禁忌证"
+        },
+        {
+          "key": "B",
+          "en": "Give nitroglycerin, since the systolic BP is above 110 mmHg",
+          "zh": "给硝酸甘油，因为收缩压高于110毫米汞柱"
+        },
+        {
+          "key": "C",
+          "en": "Give nitroglycerin only after two doses of ASA",
+          "zh": "给两次阿司匹林之后再给硝酸甘油"
+        },
+        {
+          "key": "D",
+          "en": "Give a double dose of nitroglycerin to counter the tachycardia",
+          "zh": "给双倍剂量硝酸甘油以对抗心动过速"
+        }
+      ],
+      "answer": "A",
+      "explanationEn": "Nitroglycerin is contraindicated when the heart rate is below 50 or above 150, as well as with systolic BP below 110 mmHg, known nitrate allergy or sensitivity, and recent PDE-5 inhibitor use. The rest of the chest pain protocol still applies.",
+      "explanationZh": "心率低于50或高于150时禁用硝酸甘油，此外收缩压低于110毫米汞柱、已知硝酸盐过敏或不耐受、近期使用过PDE-5抑制剂也均为禁忌。胸痛方案的其余部分仍应执行。",
+      "sourceRef": "BC Guidelines p.73",
+      "verified": false
+    },
+    {
+      "id": "prc-099",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "foundation",
+      "questionEn": "Under the cardiac chest pain protocol, at what point should transport be initiated?",
+      "questionZh": "按心源性胸痛方案，应在什么时候启动转运？",
+      "options": [
+        {
+          "key": "A",
+          "en": "Only after the patient is pain free",
+          "zh": "等患者疼痛完全消失后"
+        },
+        {
+          "key": "B",
+          "en": "Only after all three nitroglycerin doses are given",
+          "zh": "等三剂硝酸甘油全部给完后"
+        },
+        {
+          "key": "C",
+          "en": "Immediately if able, delegating crew members to prep egress if not; transport after the first nitroglycerin dose if not already moving",
+          "zh": "条件允许时立即转运，否则指派队员准备搬运路线；若尚未出发，至少在第一剂硝酸甘油后转运"
+        },
+        {
+          "key": "D",
+          "en": "Only after vascular access has been established",
+          "zh": "必须先建立血管通路后才转运"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "The protocol directs initiating transport immediately if able to do so, delegating crew members to prep egress if not, and transporting after the first dose of nitroglycerin if not already done. On-scene time should not be extended for the full drug sequence.",
+      "explanationZh": "方案要求条件允许时立即启动转运，否则指派队员准备搬运路线；若尚未出发，至少在第一剂硝酸甘油后转运。不应为完成整套给药流程而延长现场停留时间。",
+      "sourceRef": "BC Guidelines p.47",
+      "verified": false
+    },
+    {
+      "id": "prc-100",
+      "licence": "pcp",
+      "cpcfArea": "H",
+      "cognitive": "application",
+      "population": "adult",
+      "topic": "cardiac-chest-pain",
+      "difficulty": "intermediate",
+      "questionEn": "A 54-year-old man with chest pain tells you he took two of his own nitroglycerin tablets before you arrived, with no relief. His BP is 124/76 and HR 84. How many doses may you administer?",
+      "questionZh": "一名54岁胸痛男性告诉你，在你到达前他已自行含服了两片自己的硝酸甘油但未缓解。血压124/76，心率84。你可以给几剂？",
+      "options": [
+        {
+          "key": "A",
+          "en": "One dose only, since he has already had two",
+          "zh": "只能给一剂，因为他已经用过两片"
+        },
+        {
+          "key": "B",
+          "en": "None, because self-administered nitroglycerin blocks the protocol",
+          "zh": "一剂也不能给，因为自行服药后不能再执行该方案"
+        },
+        {
+          "key": "C",
+          "en": "Up to 3 doses in any 30-minute period, irrespective of any nitro taken prior to your arrival, provided the systolic BP remains above 110 mmHg",
+          "zh": "任何30分钟内最多3剂，不计其在你到达前自行服用的量，前提是收缩压持续高于110毫米汞柱"
+        },
+        {
+          "key": "D",
+          "en": "Unlimited doses as long as the pain continues",
+          "zh": "只要疼痛持续就可以不限剂数"
+        }
+      ],
+      "answer": "C",
+      "explanationEn": "Repeat vitals and the drug until pain is relieved, to a maximum of 3 doses in any 30-minute period, providing the systolic BP remains above 110 mmHg, irrespective of any nitro taken by the patient prior to your arrival. Note that ASA is different: if the patient has already taken their recommended dose, ASA is contraindicated.",
+      "explanationZh": "应重复测量生命体征并给药直至疼痛缓解，任何30分钟内最多3剂，前提是收缩压持续高于110毫米汞柱，且不计患者在你到达前自行服用的硝酸甘油。注意阿司匹林规则不同：若患者已自行服用推荐剂量，则禁用阿司匹林。",
+      "sourceRef": "BC Guidelines p.73",
       "verified": false
     }
   ]

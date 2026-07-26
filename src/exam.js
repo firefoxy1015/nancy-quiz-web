@@ -227,7 +227,7 @@ function drawMock(el) {
   el.innerHTML = `
     <div class="q-wrap">
       <div class="q-meta">
-        <div><b>${t('Part', '第')} ${session.part}/${session.parts} ${S.lang !== 'en' ? '部分' : ''}</b> · Q${session.pos + 1 - lo}/${hi - lo}</div>
+        <div><b>${S.lang === 'zh' ? `第 ${session.part} 部分（共 ${session.parts} 部分）` : `Part ${session.part}/${session.parts}`}</b> · Q${session.pos + 1 - lo}/${hi - lo}</div>
         <div class="q-timer" id="mockTimer">--:--</div>
       </div>
       <div class="q-grid">${qs.slice(lo, hi).map((qq, i) => {
