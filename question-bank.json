@@ -985,7 +985,609 @@
     {
       "id": "ch17",
       "titleZh": "Chapter 17 — Patient Assessment",
-      "titleEn": "Chapter 17 — Patient Assessment"
+      "titleEn": "Chapter 17 — Patient Assessment",
+      "questions": [
+        {
+          "id": "ch17-q1",
+          "questionZh": "患者评估的主要目标是什么？",
+          "questionEn": "What is the primary goal of patient assessment?",
+          "options": [
+            {
+              "textZh": "识别和管理威胁生命的情况",
+              "textEn": "To identify and manage life-threatening conditions",
+              "correct": true
+            },
+            {
+              "textZh": "完成详细的病史采集",
+              "textEn": "To complete a detailed medical history",
+              "correct": false
+            },
+            {
+              "textZh": "快速转运到医院",
+              "textEn": "To rapidly transport to the hospital",
+              "correct": false
+            },
+            {
+              "textZh": "记录所有生命体征",
+              "textEn": "To document all vital signs",
+              "correct": false
+            }
+          ],
+          "explanationZh": "患者评估的首要目标是快速识别和处理任何威胁生命的情况，如气道阻塞、严重出血或休克。",
+          "explanationEn": "The primary goal of patient assessment is to rapidly identify and manage any life-threatening conditions such as airway obstruction, severe bleeding, or shock.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q2",
+          "questionZh": "场景大小评估（scene size-up）的首要考虑是什么？",
+          "questionEn": "What is the first consideration during scene size-up?",
+          "options": [
+            {
+              "textZh": "场景安全",
+              "textEn": "Scene safety",
+              "correct": true
+            },
+            {
+              "textZh": "患者数量",
+              "textEn": "Number of patients",
+              "correct": false
+            },
+            {
+              "textZh": "伤害机制",
+              "textEn": "Mechanism of injury",
+              "correct": false
+            },
+            {
+              "textZh": "需要的资源",
+              "textEn": "Resources needed",
+              "correct": false
+            }
+          ],
+          "explanationZh": "在场景大小评估中，场景安全永远是第一优先级。EMS 人员必须首先确保自己和团队的安全。",
+          "explanationEn": "During scene size-up, scene safety is always the first priority. EMS personnel must ensure their own safety and that of their crew first.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q3",
+          "questionZh": "初步评估（primary survey）的正确顺序是什么？",
+          "questionEn": "What is the correct order of the primary survey?",
+          "options": [
+            {
+              "textZh": "A-B-C-D-E (气道-呼吸-循环-残疾-暴露)",
+              "textEn": "A-B-C-D-E (Airway-Breathing-Circulation-Disability-Exposure)",
+              "correct": true
+            },
+            {
+              "textZh": "C-A-B-D-E (循环-气道-呼吸-残疾-暴露)",
+              "textEn": "C-A-B-D-E (Circulation-Airway-Breathing-Disability-Exposure)",
+              "correct": false
+            },
+            {
+              "textZh": "A-C-B-D-E (气道-循环-呼吸-残疾-暴露)",
+              "textEn": "A-C-B-D-E (Airway-Circulation-Breathing-Disability-Exposure)",
+              "correct": false
+            },
+            {
+              "textZh": "D-A-B-C-E (残疾-气道-呼吸-循环-暴露)",
+              "textEn": "D-A-B-C-E (Disability-Airway-Breathing-Circulation-Exposure)",
+              "correct": false
+            }
+          ],
+          "explanationZh": "初步评估遵循 ABCDE 顺序：气道（Airway）、呼吸（Breathing）、循环（Circulation）、残疾/神经状态（Disability）和暴露（Exposure）。",
+          "explanationEn": "The primary survey follows the ABCDE sequence: Airway, Breathing, Circulation, Disability (neurologic status), and Exposure.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q4",
+          "questionZh": "在初步评估中发现威胁生命的问题时应该怎么做？",
+          "questionEn": "What should you do when a life-threatening problem is found during the primary survey?",
+          "options": [
+            {
+              "textZh": "立即停止并处理该问题",
+              "textEn": "Stop immediately and manage the problem",
+              "correct": true
+            },
+            {
+              "textZh": "记录下来，完成评估后再处理",
+              "textEn": "Note it and address after completing the assessment",
+              "correct": false
+            },
+            {
+              "textZh": "继续评估，快速转运",
+              "textEn": "Continue assessment and transport rapidly",
+              "correct": false
+            },
+            {
+              "textZh": "呼叫高级生命支持（ALS）",
+              "textEn": "Call for advanced life support (ALS)",
+              "correct": false
+            }
+          ],
+          "explanationZh": "在初步评估中发现任何威胁生命的问题时，必须立即停止并优先处理该问题，然后再继续评估。",
+          "explanationEn": "When any life-threatening problem is identified during the primary survey, you must stop immediately and manage that problem before continuing the assessment.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q5",
+          "questionZh": "Glasgow昏迷量表（GCS）评估哪三个方面？",
+          "questionEn": "What three components does the Glasgow Coma Scale (GCS) assess?",
+          "options": [
+            {
+              "textZh": "眼睛反应、语言反应、运动反应",
+              "textEn": "Eye opening, verbal response, motor response",
+              "correct": true
+            },
+            {
+              "textZh": "意识、呼吸、循环",
+              "textEn": "Consciousness, breathing, circulation",
+              "correct": false
+            },
+            {
+              "textZh": "瞳孔、脉搏、血压",
+              "textEn": "Pupils, pulse, blood pressure",
+              "correct": false
+            },
+            {
+              "textZh": "气道、呼吸、意识",
+              "textEn": "Airway, breathing, consciousness",
+              "correct": false
+            }
+          ],
+          "explanationZh": "GCS 评估三个方面：眼睛睁开反应（1-4分）、语言反应（1-5分）和运动反应（1-6分），总分3-15分。",
+          "explanationEn": "The GCS assesses three components: eye opening (1-4 points), verbal response (1-5 points), and motor response (1-6 points), for a total score of 3-15.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q6",
+          "questionZh": "SAMPLE 病史采集中的 'S' 代表什么？",
+          "questionEn": "What does the 'S' in SAMPLE history stand for?",
+          "options": [
+            {
+              "textZh": "症状和体征 (Signs and Symptoms)",
+              "textEn": "Signs and Symptoms",
+              "correct": true
+            },
+            {
+              "textZh": "严重程度 (Severity)",
+              "textEn": "Severity",
+              "correct": false
+            },
+            {
+              "textZh": "手术史 (Surgery)",
+              "textEn": "Surgery",
+              "correct": false
+            },
+            {
+              "textZh": "场景 (Scene)",
+              "textEn": "Scene",
+              "correct": false
+            }
+          ],
+          "explanationZh": "SAMPLE 病史采集法：S=症状和体征、A=过敏史、M=用药、P=既往病史、L=末次进食、E=导致事件的事件。",
+          "explanationEn": "SAMPLE history: S=Signs and Symptoms, A=Allergies, M=Medications, P=Past medical history, L=Last oral intake, E=Events leading to injury/illness.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q7",
+          "questionZh": "OPQRST 用于评估什么？",
+          "questionEn": "What is OPQRST used to assess?",
+          "options": [
+            {
+              "textZh": "疼痛或不适的特征",
+              "textEn": "Characteristics of pain or discomfort",
+              "correct": true
+            },
+            {
+              "textZh": "患者的生命体征",
+              "textEn": "Patient's vital signs",
+              "correct": false
+            },
+            {
+              "textZh": "神经系统功能",
+              "textEn": "Neurological function",
+              "correct": false
+            },
+            {
+              "textZh": "呼吸状态",
+              "textEn": "Respiratory status",
+              "correct": false
+            }
+          ],
+          "explanationZh": "OPQRST 是评估疼痛的工具：O=起病（Onset）、P=诱发/缓解因素（Provocation）、Q=性质（Quality）、R=放射（Radiation）、S=严重程度（Severity）、T=时间（Time）。",
+          "explanationEn": "OPQRST is a tool for pain assessment: O=Onset, P=Provocation/Palliation, Q=Quality, R=Radiation, S=Severity, T=Time.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q8",
+          "questionZh": "正常成人的呼吸频率范围是多少？",
+          "questionEn": "What is the normal respiratory rate range for adults?",
+          "options": [
+            {
+              "textZh": "12-20 次/分钟",
+              "textEn": "12-20 breaths/min",
+              "correct": true
+            },
+            {
+              "textZh": "8-12 次/分钟",
+              "textEn": "8-12 breaths/min",
+              "correct": false
+            },
+            {
+              "textZh": "15-25 次/分钟",
+              "textEn": "15-25 breaths/min",
+              "correct": false
+            },
+            {
+              "textZh": "20-30 次/分钟",
+              "textEn": "20-30 breaths/min",
+              "correct": false
+            }
+          ],
+          "explanationZh": "正常成人呼吸频率为 12-20 次/分钟。低于 12 为呼吸过缓，高于 20 为呼吸过速。",
+          "explanationEn": "Normal adult respiratory rate is 12-20 breaths per minute. Below 12 is bradypnea, above 20 is tachypnea.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q9",
+          "questionZh": "正常成人的收缩压范围是多少？",
+          "questionEn": "What is the normal systolic blood pressure range for adults?",
+          "options": [
+            {
+              "textZh": "90-140 mmHg",
+              "textEn": "90-140 mmHg",
+              "correct": true
+            },
+            {
+              "textZh": "80-120 mmHg",
+              "textEn": "80-120 mmHg",
+              "correct": false
+            },
+            {
+              "textZh": "100-160 mmHg",
+              "textEn": "100-160 mmHg",
+              "correct": false
+            },
+            {
+              "textZh": "70-100 mmHg",
+              "textEn": "70-100 mmHg",
+              "correct": false
+            }
+          ],
+          "explanationZh": "正常成人收缩压范围为 90-140 mmHg。低于 90 可能提示休克，高于 140 提示高血压。",
+          "explanationEn": "Normal adult systolic blood pressure ranges from 90-140 mmHg. Below 90 may indicate shock, above 140 suggests hypertension.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q10",
+          "questionZh": "DCAP-BTLS 是什么的记忆口诀？",
+          "questionEn": "What is DCAP-BTLS a mnemonic for?",
+          "options": [
+            {
+              "textZh": "体格检查中寻找的损伤类型",
+              "textEn": "Types of injuries to look for during physical exam",
+              "correct": true
+            },
+            {
+              "textZh": "外伤患者的处理步骤",
+              "textEn": "Treatment steps for trauma patients",
+              "correct": false
+            },
+            {
+              "textZh": "生命体征评估顺序",
+              "textEn": "Sequence of vital sign assessment",
+              "correct": false
+            },
+            {
+              "textZh": "病史采集的要素",
+              "textEn": "Elements of history taking",
+              "correct": false
+            }
+          ],
+          "explanationZh": "DCAP-BTLS：D=畸形、C=挫伤、A=擦伤、P=穿透伤、B=烧伤、T=压痛、L=撕裂伤、S=肿胀。用于系统性体格检查。",
+          "explanationEn": "DCAP-BTLS: D=Deformities, C=Contusions, A=Abrasions, P=Penetrations, B=Burns, T=Tenderness, L=Lacerations, S=Swelling. Used for systematic physical exam.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q11",
+          "questionZh": "什么是'一般印象'（general impression）？",
+          "questionEn": "What is the 'general impression'?",
+          "options": [
+            {
+              "textZh": "对患者状态的快速初步评估",
+              "textEn": "A rapid initial assessment of the patient's condition",
+              "correct": true
+            },
+            {
+              "textZh": "详细的体格检查",
+              "textEn": "A detailed physical examination",
+              "correct": false
+            },
+            {
+              "textZh": "患者的主诉",
+              "textEn": "The patient's chief complaint",
+              "correct": false
+            },
+            {
+              "textZh": "完整的病史记录",
+              "textEn": "A complete medical history documentation",
+              "correct": false
+            }
+          ],
+          "explanationZh": "一般印象是在接近患者时形成的快速初步评估，包括患者年龄、性别、外观和明显的痛苦程度。",
+          "explanationEn": "The general impression is a rapid initial assessment formed when approaching the patient, including age, sex, appearance, and obvious level of distress.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q12",
+          "questionZh": "评估意识水平的 AVPU 量表中的字母代表什么？",
+          "questionEn": "What do the letters in the AVPU scale for consciousness represent?",
+          "options": [
+            {
+              "textZh": "清醒、对语言有反应、对疼痛有反应、无反应",
+              "textEn": "Alert, Verbal, Pain, Unresponsive",
+              "correct": true
+            },
+            {
+              "textZh": "气道、通气、脉搏、无意识",
+              "textEn": "Airway, Ventilation, Pulse, Unconscious",
+              "correct": false
+            },
+            {
+              "textZh": "评估、生命体征、体格检查、紧急",
+              "textEn": "Assessment, Vitals, Physical exam, Urgent",
+              "correct": false
+            },
+            {
+              "textZh": "能力、视觉、疼痛、不稳定",
+              "textEn": "Ability, Visual, Pain, Unstable",
+              "correct": false
+            }
+          ],
+          "explanationZh": "AVPU：A=清醒（Alert）、V=对语言刺激有反应（Verbal）、P=仅对疼痛刺激有反应（Pain）、U=无反应（Unresponsive）。",
+          "explanationEn": "AVPU: A=Alert, V=responsive to Verbal stimuli, P=responsive to Painful stimuli only, U=Unresponsive.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q13",
+          "questionZh": "伤害机制（mechanism of injury, MOI）评估的目的是什么？",
+          "questionEn": "What is the purpose of assessing the mechanism of injury (MOI)?",
+          "options": [
+            {
+              "textZh": "预测可能存在的隐藏损伤",
+              "textEn": "To predict potential hidden injuries",
+              "correct": true
+            },
+            {
+              "textZh": "确定患者的病史",
+              "textEn": "To determine the patient's medical history",
+              "correct": false
+            },
+            {
+              "textZh": "决定转运的优先级",
+              "textEn": "To decide transport priority",
+              "correct": false
+            },
+            {
+              "textZh": "评估现场安全",
+              "textEn": "To assess scene safety",
+              "correct": false
+            }
+          ],
+          "explanationZh": "了解伤害机制可以帮助 EMS 人员预测可能存在但不明显的损伤，如高速撞击可能导致的内脏损伤。",
+          "explanationEn": "Understanding the mechanism of injury helps EMS personnel predict potential injuries that may not be immediately obvious, such as internal organ damage from high-speed impacts.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q14",
+          "questionZh": "什么是'关键患者'（critical patient）？",
+          "questionEn": "What is a 'critical patient'?",
+          "options": [
+            {
+              "textZh": "存在威胁生命的病情，需要立即干预和快速转运",
+              "textEn": "One with life-threatening conditions requiring immediate intervention and rapid transport",
+              "correct": true
+            },
+            {
+              "textZh": "需要高级生命支持的患者",
+              "textEn": "A patient requiring advanced life support",
+              "correct": false
+            },
+            {
+              "textZh": "有慢性疾病史的患者",
+              "textEn": "A patient with chronic medical conditions",
+              "correct": false
+            },
+            {
+              "textZh": "拒绝治疗的患者",
+              "textEn": "A patient refusing treatment",
+              "correct": false
+            }
+          ],
+          "explanationZh": "关键患者是指存在威胁生命的状况（如气道问题、呼吸窘迫、休克、严重外伤或意识改变）需要立即干预和快速转运的患者。",
+          "explanationEn": "A critical patient has life-threatening conditions (such as airway compromise, respiratory distress, shock, severe trauma, or altered mental status) requiring immediate intervention and rapid transport.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q15",
+          "questionZh": "重新评估（reassessment）应该多久进行一次？",
+          "questionEn": "How often should reassessment be performed?",
+          "options": [
+            {
+              "textZh": "稳定患者每 15 分钟，不稳定患者每 5 分钟",
+              "textEn": "Every 15 minutes for stable patients, every 5 minutes for unstable patients",
+              "correct": true
+            },
+            {
+              "textZh": "所有患者每 10 分钟",
+              "textEn": "Every 10 minutes for all patients",
+              "correct": false
+            },
+            {
+              "textZh": "稳定患者每 30 分钟，不稳定患者每 15 分钟",
+              "textEn": "Every 30 minutes for stable, every 15 minutes for unstable",
+              "correct": false
+            },
+            {
+              "textZh": "仅在患者状态改变时",
+              "textEn": "Only when patient condition changes",
+              "correct": false
+            }
+          ],
+          "explanationZh": "重新评估间隔：稳定患者至少每 15 分钟一次，不稳定或关键患者至少每 5 分钟一次，或在任何干预后。",
+          "explanationEn": "Reassessment intervals: stable patients at least every 15 minutes, unstable or critical patients at least every 5 minutes, or after any intervention.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q16",
+          "questionZh": "快速外伤评估（rapid trauma assessment）的主要目的是什么？",
+          "questionEn": "What is the main purpose of the rapid trauma assessment?",
+          "options": [
+            {
+              "textZh": "快速识别严重损伤",
+              "textEn": "To quickly identify serious injuries",
+              "correct": true
+            },
+            {
+              "textZh": "替代详细体格检查",
+              "textEn": "To replace the detailed physical exam",
+              "correct": false
+            },
+            {
+              "textZh": "记录所有生命体征",
+              "textEn": "To document all vital signs",
+              "correct": false
+            },
+            {
+              "textZh": "采集完整病史",
+              "textEn": "To obtain a complete medical history",
+              "correct": false
+            }
+          ],
+          "explanationZh": "快速外伤评估用于在最短时间内系统性检查外伤患者，快速识别需要立即处理的严重损伤。",
+          "explanationEn": "The rapid trauma assessment is used to systematically examine trauma patients in minimal time, quickly identifying serious injuries requiring immediate management.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q17",
+          "questionZh": "体位性低血压（orthostatic hypotension）提示什么？",
+          "questionEn": "What does orthostatic hypotension suggest?",
+          "options": [
+            {
+              "textZh": "体液减少或脱水",
+              "textEn": "Volume depletion or dehydration",
+              "correct": true
+            },
+            {
+              "textZh": "高血压危象",
+              "textEn": "Hypertensive crisis",
+              "correct": false
+            },
+            {
+              "textZh": "心律失常",
+              "textEn": "Cardiac arrhythmia",
+              "correct": false
+            },
+            {
+              "textZh": "呼吸系统问题",
+              "textEn": "Respiratory problems",
+              "correct": false
+            }
+          ],
+          "explanationZh": "体位性低血压（从平卧到站立时血压显著下降）通常提示血容量不足、脱水或某些药物作用。",
+          "explanationEn": "Orthostatic hypotension (significant blood pressure drop when moving from lying to standing) typically indicates volume depletion, dehydration, or certain medication effects.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q18",
+          "questionZh": "瞳孔对光反应（pupillary response）评估什么？",
+          "questionEn": "What does pupillary response to light assess?",
+          "options": [
+            {
+              "textZh": "脑功能和颅神经完整性",
+              "textEn": "Brain function and cranial nerve integrity",
+              "correct": true
+            },
+            {
+              "textZh": "眼部外伤",
+              "textEn": "Eye injury",
+              "correct": false
+            },
+            {
+              "textZh": "血压",
+              "textEn": "Blood pressure",
+              "correct": false
+            },
+            {
+              "textZh": "呼吸状态",
+              "textEn": "Respiratory status",
+              "correct": false
+            }
+          ],
+          "explanationZh": "瞳孔对光反应评估脑干功能和第二、三对颅神经（视神经和动眼神经）的完整性，是神经系统评估的重要部分。",
+          "explanationEn": "Pupillary light response assesses brainstem function and integrity of cranial nerves II and III (optic and oculomotor nerves), an important part of neurological assessment.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "ch17-q19",
+          "questionZh": "毛细血管再充盈时间（capillary refill time）超过多少秒被认为是延迟的？",
+          "questionEn": "A capillary refill time longer than how many seconds is considered delayed?",
+          "options": [
+            {
+              "textZh": "2 秒",
+              "textEn": "2 seconds",
+              "correct": true
+            },
+            {
+              "textZh": "1 秒",
+              "textEn": "1 second",
+              "correct": false
+            },
+            {
+              "textZh": "3 秒",
+              "textEn": "3 seconds",
+              "correct": false
+            },
+            {
+              "textZh": "5 秒",
+              "textEn": "5 seconds",
+              "correct": false
+            }
+          ],
+          "explanationZh": "正常毛细血管再充盈时间应少于 2 秒。超过 2 秒可能提示循环不良、休克或周围血管收缩。",
+          "explanationEn": "Normal capillary refill time should be less than 2 seconds. Delayed refill (>2 seconds) may indicate poor circulation, shock, or peripheral vasoconstriction.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "ch17-q20",
+          "questionZh": "详细体格检查（detailed physical exam）何时进行？",
+          "questionEn": "When is the detailed physical exam performed?",
+          "options": [
+            {
+              "textZh": "在初步评估和快速评估之后，时间和患者状态允许时",
+              "textEn": "After primary and rapid assessments, when time and patient condition permit",
+              "correct": true
+            },
+            {
+              "textZh": "在初步评估之前",
+              "textEn": "Before the primary assessment",
+              "correct": false
+            },
+            {
+              "textZh": "仅在医院进行",
+              "textEn": "Only at the hospital",
+              "correct": false
+            },
+            {
+              "textZh": "在所有患者中都必须进行",
+              "textEn": "Mandatory for all patients",
+              "correct": false
+            }
+          ],
+          "explanationZh": "详细体格检查是在初步评估和快速评估完成后、时间和患者状态允许的情况下进行的系统性全面检查，通常在转运途中或非危重患者中进行。",
+          "explanationEn": "The detailed physical exam is a systematic, comprehensive examination performed after primary and rapid assessments when time and patient condition permit, typically during transport or for non-critical patients.",
+          "difficulty": "medium"
+        }
+      ]
     },
     {
       "id": "ch2",
