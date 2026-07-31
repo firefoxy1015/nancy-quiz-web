@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "COPR Examination Blueprints (CPCF)",
+    "pcpApproved": "2024-06-20",
+    "emrRevised": "2025-09-04",
+    "source": "https://copr.ca/examinations-emr-pcp-acp/blueprints/"
+  },
+  "areas": [
+    { "id": "A", "nameEn": "Professionalism", "nameZh": "职业素养" },
+    { "id": "B", "nameEn": "Patient- and Community-Centred Communication", "nameZh": "以患者与社区为中心的沟通" },
+    { "id": "C", "nameEn": "Integrated Collaborative Health Care", "nameZh": "整合协作医疗" },
+    { "id": "D", "nameEn": "Continuous Learning and Adapting to Evidence", "nameZh": "持续学习与循证调整" },
+    { "id": "E", "nameEn": "Health of Professional", "nameZh": "从业者健康" },
+    { "id": "F", "nameEn": "Advocacy for Health, Equity, and Justice", "nameZh": "健康、公平与正义倡导" },
+    { "id": "G", "nameEn": "Leadership", "nameZh": "领导力" },
+    { "id": "H", "nameEn": "Care Along a Health and Social Continuum", "nameZh": "健康与社会连续体中的照护" }
+  ],
+  "pcp": {
+    "totalQuestions": 200,
+    "scoredQuestions": 180,
+    "unscoredQuestions": 20,
+    "totalMinutes": 240,
+    "parts": 2,
+    "partMinutes": 120,
+    "breakMinutes": 10,
+    "areaTargets": {
+      "A": { "percent": 4, "range": [7, 9] },
+      "B": { "percent": 5, "range": [9, 11] },
+      "C": { "percent": 5, "range": [9, 11] },
+      "D": { "percent": 3, "range": [5, 7] },
+      "E": { "percent": 5, "range": [9, 11] },
+      "F": { "percent": 5, "range": [9, 11] },
+      "G": { "percent": 3, "range": [5, 7] },
+      "H": { "percent": 70, "range": [126, 154] }
+    },
+    "hBreakdown": {
+      "H1": { "percent": 19.44, "range": [24, 30], "nameEn": "Integrated clinical practice", "nameZh": "临床实践综合" },
+      "H2": { "percent": 68.33, "range": [86, 106], "nameEn": "Assessment, diagnosis and clinical reasoning", "nameZh": "评估、诊断与临床推理" },
+      "H3": { "percent": 12.22, "range": [15, 19], "nameEn": "Care planning", "nameZh": "照护计划" }
+    },
+    "cognitive": { "knowledge": 30, "application": 50, "critical": 20 },
+    "population": { "neonatal": 5, "pediatric": 15, "adult": 45, "geriatric": 35 }
+  },
+  "emr": {
+    "totalQuestions": 125,
+    "scoredQuestions": 115,
+    "unscoredQuestions": 10,
+    "totalMinutes": 150,
+    "parts": 2,
+    "partMinutes": 75,
+    "breakMinutes": 10,
+    "noteEn": "BC's EMR written exam is EMALB's own 200-question exam, not the COPR EMR exam. This COPR blueprint is included as the closest official reference for topic structure.",
+    "noteZh": "注意：BC 的 EMR 笔试是 EMALB 自己的 200 题考试，不是 COPR EMR 统考。此蓝图仅作为最接近的官方主题结构参考。",
+    "areaTargets": {
+      "A": { "percent": 4, "range": [4, 6] },
+      "B": { "percent": 8, "range": [9, 11] },
+      "C": { "percent": 6, "range": [6, 9] },
+      "D": { "percent": 3, "range": [3, 5] },
+      "E": { "percent": 5, "range": [5, 7] },
+      "F": { "percent": 3, "range": [3, 5] },
+      "G": { "percent": 1, "range": [1, 2] },
+      "H": { "percent": 70, "range": [78, 97] }
+    },
+    "cognitive": { "knowledge": 50, "application": 35, "critical": 15 },
+    "population": { "neonatal": 5, "pediatric": 15, "adult": 45, "geriatric": 35 }
+  },
+  "emrWrittenBC": {
+    "provider": "EMALB",
+    "totalQuestions": 200,
+    "totalMinutes": 150,
+    "passMarkPercent": 75
+  }
+}

@@ -1,0 +1,3066 @@
+{
+  "meta": {
+    "title": "EMALB Practical Examination Grading Criteria",
+    "source": "EMALB Practical Examination Grading Criteria",
+    "sourceVersion": "March 2025",
+    "languages": ["en", "zh"],
+    "passMark": 70,
+    "startScore": 100
+  },
+  "deficiencyLevels": {
+    "majorEn": [
+      "Failing to perform a skill or task when indicated by patient presentation.",
+      "Failing to meet the standards required of the skill.",
+      "Performing an indicated skill or task with multiple or gross errors regardless of the outcome to patient care.",
+      "Performing a non-indicated skill to the detriment of patient care either directly or by cause of delay.",
+      "Incorrect sequencing of skills or tasks resulting in detriment to patient care."
+    ],
+    "majorZh": [
+      "患者表现已明确提示需要某项技能或操作时，未能执行。",
+      "未能达到该技能所要求的标准。",
+      "执行了有指征的技能或操作，但出现多处或严重错误，无论对患者照护的结果如何。",
+      "执行了无指征的技能，直接或因延误而损害患者照护。",
+      "技能或操作的顺序错误，导致患者照护受损。"
+    ],
+    "moderateEn": [
+      "Performing an indicated skill or task with single or minor errors with the potential to be detrimental to patient care.",
+      "Performing a non-indicated skill with the potential to be detrimental to patient care either directly or by delay.",
+      "Incorrect sequencing of skills or tasks not resulting in detriment to patient care.",
+      "Performing skills or tasks detrimental to staff, patient, and other safety but without detriment to patient care.",
+      "Failure to provide critical information in a record or report."
+    ],
+    "moderateZh": [
+      "执行了有指征的技能或操作，但出现单处或轻微错误，可能对患者照护造成损害。",
+      "执行了无指征的技能，直接或因延误而可能损害患者照护。",
+      "技能或操作的顺序错误，但未损害患者照护。",
+      "所执行的技能或操作危及工作人员、患者及他人安全，但未损害患者照护。",
+      "在记录或报告中未提供关键信息。"
+    ],
+    "minorEn": [
+      "Performing an indicated skill or task appropriately but with insufficient evidence to justify the action.",
+      "Performing a skill or task with single or minor errors without detriment to patient care.",
+      "Failure to provide non-critical but pertinent information in a record or report."
+    ],
+    "minorZh": [
+      "恰当地执行了有指征的技能或操作，但支持该行动的依据不足。",
+      "执行技能或操作时出现单处或轻微错误，但未损害患者照护。",
+      "在记录或报告中未提供非关键但相关的信息。"
+    ]
+  },
+  "sections": [
+    {
+      "id": "scene-assessment",
+      "nameEn": "Scene Assessment & PPE",
+      "nameZh": "现场评估与PPE",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "scene-ppe",
+          "nameEn": "Hazards, Env., MOI, # of patients + PPE",
+          "nameZh": "危险源/环境/受伤机制/患者数 + PPE",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to verbalize all components of the SA prior to assessing the patient and/or",
+                "Identifies a hazard during the SA but fails to act to make the scene safe",
+                "Fails to assess a hazard when clearly presented",
+                "Fails to don ANY PPE when needed prior to assessing the patient and/or",
+                "Does not verbalize that they would don PPE when required"
+              ],
+              "errorsZh": [
+                "在开始评估患者之前，未口头说出现场评估（SA）的全部组成部分。",
+                "在现场评估中识别出了危险源，却没有采取行动使现场安全。",
+                "危险源已明确存在时，未对其进行评估。",
+                "在评估患者之前需要佩戴个人防护装备（PPE）时，完全没有佩戴任何 PPE。",
+                "在需要时没有口头说明自己会佩戴 PPE。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Performs a SA with some components late, or evaluated after beginning patient assessment and/or",
+                "Performs a SA with one or more components missed and/or",
+                "Performs SA with minor deficiency in three or more components",
+                "Fails to don AN appropriate item of PPE when required given the MOI. (e.g., not verbalizing would wear mask with infectious respiratory patient)"
+              ],
+              "errorsZh": [
+                "进行了现场评估，但部分组成部分做得偏晚，或是在开始评估患者之后才补做。",
+                "进行了现场评估，但遗漏了一个或多个组成部分。",
+                "进行了现场评估，但有三个或以上组成部分存在轻微缺陷。",
+                "根据受伤机制需要时，未佩戴某一件应佩戴的 PPE（例如：面对呼吸道传染患者时没有说明会戴口罩）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Performs SA with minor deficiencies in one or two components",
+                "Dons PPE with incorrect technique"
+              ],
+              "errorsZh": [
+                "进行了现场评估，但有一到两个组成部分存在轻微缺陷。",
+                "佩戴 PPE 的方法不正确。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If information is given to the candidate during the preamble and the candidate takes action which demonstrates they have understood the information, then they should not receive a deduction for not verbalizing.",
+            "Candidates who wear glasses are expected to don safety goggles unless their glasses meet the same industry standard as the supplied safety glasses.",
+            "N95 masks are only required when indicated by patient presentation and may be verbalized."
+          ],
+          "commentsZh": [
+            "如果相关信息已在开场说明中告知考生，且考生的行动表明其已理解该信息，则不应因未口头说出而扣分。",
+            "戴眼镜的考生仍需佩戴护目镜，除非其眼镜达到与考场提供的安全眼镜相同的行业标准。",
+            "只有当患者表现有相应指征时才要求佩戴 N95 口罩，并且可以用口头说明代替。"
+          ],
+          "sourcePage": 11
+        }
+      ]
+    },
+    {
+      "id": "primary-survey",
+      "nameEn": "Primary Survey",
+      "nameZh": "初步评估",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "visual-assessment",
+          "nameEn": "Approach and Complete Visual Assessment",
+          "nameZh": "接近患者与完整目视评估",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to do ANY visual assessment"],
+              "errorsZh": ["完全没有进行任何目视评估。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Fails to do an appropriate visual assessment (e.g., does not note obvious visible findings)"],
+              "errorsZh": ["目视评估做得不到位（例如：没有注意到明显可见的发现）。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Does a visual assessment but misses a minor finding"],
+              "errorsZh": ["做了目视评估，但漏掉了一个次要发现。"]
+            }
+          ],
+          "commentsEn": [
+            "Candidates are expected to note what they see on approach in their \"first look\"."
+          ],
+          "commentsZh": [
+            "考生应在接近患者的「第一眼」时说出自己所看到的情况。"
+          ],
+          "sourcePage": 12
+        },
+        {
+          "id": "loc-avpu",
+          "nameEn": "Level of Consciousness (AVPU)",
+          "nameZh": "意识水平（AVPU）",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": ["Does not assess mental status at any time in the initial assessment"],
+              "errorsZh": ["在初步评估中自始至终没有评估患者的意识状态。"]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Notices a decreased mental status but does not assess responsiveness",
+                "Delay in assessing mental status potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "注意到患者意识水平下降，却没有进一步评估其反应性。",
+                "评估意识状态存在延误，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Correctly places the patient on the AVPU scale but comes to the decision erroneously",
+                "Does not verbalize an \"alert patient\""
+              ],
+              "errorsZh": [
+                "虽然把患者正确归入了 AVPU 等级，但得出结论的过程是错误的。",
+                "对于清醒患者，没有口头说出患者为「清醒（Alert）」。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "In the evaluation candidates are expected to state verbally where the patient falls on the AVPU scale regardless of the patient's presentation.",
+            "Because the simulated patients may not accurately depict a decreased mental status the evaluator may have to prompt the candidate to demonstrate how they would assess mental status. No deductions should be made if the error is caused by the patient.",
+            "The Evaluator may need to cross-reference the Hand-Off Report or the PCR to accurately assess the candidate's understanding of AVPU."
+          ],
+          "commentsZh": [
+            "考试中，无论患者表现如何，考生都应口头说明患者处于 AVPU 量表的哪一级。",
+            "由于模拟患者可能无法准确呈现意识水平下降，考官可能需要提示考生演示如何评估意识状态；若错误由模拟患者造成，则不应扣分。",
+            "考官可能需要对照交接报告（Hand-Off Report）或患者照护记录（PCR）来准确判断考生对 AVPU 的理解。"
+          ],
+          "sourcePage": 12
+        },
+        {
+          "id": "delicate-spine",
+          "nameEn": "Delicate Spine",
+          "nameZh": "脆弱脊柱（C-spine 决策）",
+          "weights": [100, 15, 5],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "Fails to initiate C-spine control at any time when indicated and/or",
+                "Releasing C-spine control when it is required, detrimental to patient care"
+              ],
+              "errorsZh": [
+                "在有指征时自始至终没有实施颈椎（C-spine）控制。",
+                "在仍需颈椎控制时松开了颈椎控制，对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "C-spine control taken late, or out of sequence with potentially negative consequences, including pain stimulus prior to C-spine control, and/or",
+                "Insufficient questioning to rule out the need for C-spine immobilization that is potentially detrimental to patient"
+              ],
+              "errorsZh": [
+                "颈椎控制实施过晚或顺序错误，可能带来不良后果，包括在实施颈椎控制之前就施加疼痛刺激。",
+                "用于排除颈椎固定必要性的问诊不充分，可能对患者造成损害。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Insufficient questioning to rule out the need for C-spine immobilization not detrimental to patient and/or",
+                "C-spine control taken when not indicated by mechanism of Injury"
+              ],
+              "errorsZh": [
+                "用于排除颈椎固定必要性的问诊不充分，但未对患者造成损害。",
+                "在受伤机制并无指征的情况下实施了颈椎控制。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Technical skills such as hand position and appropriate grips will be captured in the skills component.",
+            "Zero uncontrolled head movement, while desirable is rarely achievable; a very minor amount of movement in an isolated incident should not result in deductions.",
+            "Decision to rule in or rule out C-spine is captured here – see Spinal management for further details or deductions."
+          ],
+          "commentsZh": [
+            "手的位置、握持方式等技术细节在技能（Skills）部分评分。",
+            "头部完全零位移虽然理想但很难做到；孤立发生的极轻微移动不应扣分。",
+            "是否需要颈椎保护的决策在本项评分；进一步的细节或扣分见脊柱管理（Spinal Management）。"
+          ],
+          "sourcePage": 13
+        },
+        {
+          "id": "airway",
+          "nameEn": "Airway",
+          "nameZh": "气道",
+          "weights": [100, 15, 5],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "Fails to assess airway in initial assessment",
+                "Determines airway problems but fails to act to correct them and/or",
+                "Opens the airway using a manual technique but fails to maintain/clear the airway and is detrimental to patient care"
+              ],
+              "errorsZh": [
+                "初步评估中没有评估气道。",
+                "判断出气道存在问题，却没有采取行动加以纠正。",
+                "用手法打开了气道，却未能维持或清理气道，对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Fails to position or use airway adjunct to maintain a patent airway when required, potentially detrimental to patient care",
+                "Chooses an incorrectly sized OPA/NPA or measures/inserts the OPA/NPA incorrectly",
+                "Deduction if candidate opens and maintains the airway but it is out of sequence and it may negatively affect patient care"
+              ],
+              "errorsZh": [
+                "在需要时未通过摆位或使用气道辅助器械来维持气道通畅，可能对患者照护造成损害。",
+                "选择的 OPA/NPA 尺寸不对，或测量、插入 OPA/NPA 的方法不正确。",
+                "打开并维持了气道，但顺序不对，可能对患者照护产生负面影响。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Positions patient unnecessarily without first assessing airway (e.g., rolling a patient supine when not required)",
+                "Assesses and/or intervenes on a patient's airway but it is performed with minor deficiencies but does not affect overall patient care; or independently corrects an error that would have resulted in a 15% deduction. (e.g. – wrong hand positioning on head and/or jaw)",
+                "Displays poor head-tilt/chin-lift techniques (e.g. fingers placed in soft section of jaw / hyper-extension of head leading to closed airway)"
+              ],
+              "errorsZh": [
+                "未先评估气道就对患者做了不必要的摆位（例如：在不需要时把患者翻成仰卧位）。",
+                "评估或处理气道时有轻微缺陷，但未影响整体患者照护；或自行纠正了本会导致扣 15% 的错误（例如：放在头部或下颌上的手位不对）。",
+                "仰头举颏手法不佳（例如：手指压在下颌软组织上，或头部过度后仰导致气道闭合）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The decision to use airway adjuncts should be assessed here, the skill of effectively opening, clearing, and using the adjunct should be assessed in the skills component."
+          ],
+          "commentsZh": [
+            "是否使用气道辅助器械的决策在本项评分；有效打开、清理气道及使用辅助器械的技术在技能部分评分。"
+          ],
+          "sourcePage": 13
+        },
+        {
+          "id": "breathing",
+          "nameEn": "Breathing",
+          "nameZh": "呼吸",
+          "weights": [100, 15, 5],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "Fails to fully assess the patient's adequacy and quality of breathing and/or",
+                "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+              ],
+              "errorsZh": [
+                "未充分评估患者呼吸是否足够及其质量。",
+                "判断出呼吸消失或不规则，却没有立即干预——这一要求涵盖初步评估以及之后生命体征和 ABC 复评中的每一次检查。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Delay in positioning a patient for breathing (e.g., positioning a patient sitting for ease of breathing)",
+                "Ventilates a patient when not required",
+                "Deduction if candidate assesses and intervenes on a patient with inadequate breathing but it is out of sequence and it may affect negatively on patient care (e.g. – done after a pulse check but there was no significant time delay in assessing the Breathing)",
+                "Deduction if the attendant does not correct poor assistant technique from 'trained' partner",
+                "Deduction if the candidate does not state that the chest must be exposed or simulate exposing of the chest when indicated by the mechanism of injury."
+              ],
+              "errorsZh": [
+                "为改善呼吸而摆位存在延误（例如：让患者坐起以利于呼吸做得太晚）。",
+                "在不需要时对患者进行人工通气。",
+                "对呼吸不足的患者做了评估和干预，但顺序不对，可能对患者照护产生负面影响（例如：在检查脉搏之后才做，但评估呼吸并无明显时间延误）。",
+                "主治考生没有纠正「受过训练的」搭档的不良辅助技术。",
+                "受伤机制有指征时，考生没有说明必须暴露胸部，也没有模拟暴露胸部。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Identifies no intervention required without appropriate assessment not detrimental to patient care (states the patient is breathing without proper assessment)",
+                "Deduction if candidate assesses and/or intervenes on a patient's breathing but it is performed with minor deficiencies, but does not affect overall patient care; or independently corrects an error that would have resulted in a 15% deduction."
+              ],
+              "errorsZh": [
+                "未经恰当评估就认定无需干预，但未对患者照护造成损害（例如：没有正规评估就宣称患者有呼吸）。",
+                "评估或干预患者呼吸时有轻微缺陷，但未影响整体患者照护；或自行纠正了本会导致扣 15% 的错误。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The decision/techniques to assess breathing should be assessed here, the skill of ventilation should be assessed in the skills component.",
+            "Because the simulated patients may not accurately depict decreased or laboured breathing the evaluator may have to prompt the candidate to demonstrate how they would assess breathing. No deductions should be made if the error is caused by the patient."
+          ],
+          "commentsZh": [
+            "评估呼吸的决策与手法在本项评分；人工通气的技能在技能部分评分。",
+            "由于模拟患者可能无法准确呈现呼吸减弱或费力，考官可能需要提示考生演示如何评估呼吸；若错误由模拟患者造成，则不应扣分。"
+          ],
+          "sourcePage": 14
+        },
+        {
+          "id": "circulation",
+          "nameEn": "Circulation",
+          "nameZh": "循环",
+          "weights": [100, 15, 5],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "Does not assess the patient's pulse during the initial assessment and/or",
+                "Determines absent patient pulses but then does not intervene immediately (e.g., does not start CPR, does not position for hypotension at any time)"
+              ],
+              "errorsZh": [
+                "初步评估中没有评估患者脉搏。",
+                "判断出患者脉搏消失，却没有立即干预（例如：不开始 CPR，或自始至终未对低血压患者摆位）。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Assesses the patient's pulse but it is delayed, potentially detrimental to patient care (e.g., attempting to find the patient's pulse and it unreasonably extends the completion of the initial assessment)",
+                "Delay in positioning patient for hypotension, potentially detrimental to patient care",
+                "Does not use C-A-B to assess unconscious patient"
+              ],
+              "errorsZh": [
+                "评估了脉搏但存在延误，可能对患者照护造成损害（例如：反复寻找脉搏导致初步评估被不合理地拖长）。",
+                "对低血压患者摆位延误，可能对患者照护造成损害。",
+                "评估无意识患者时未采用 C-A-B 顺序。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Assesses pulses in incorrect place based on patient's presentation (e.g., only assesses carotid pulse on a conscious patient when not indicated)",
+                "Assesses the patient's pulse but it is performed with minor deficiencies, but does not affect overall patient care, or independently corrects an error that would have resulted in a 15% deduction."
+              ],
+              "errorsZh": [
+                "根据患者表现来看，摸脉的位置不正确（例如：无指征时只在清醒患者的颈动脉摸脉）。",
+                "评估脉搏时有轻微缺陷，但未影响整体患者照护；或自行纠正了本会导致扣 15% 的错误。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Because the simulated patients will not accurately depict scenario pulse rates the evaluator must be quick to respond with the proper rate and character as depicted within the scenario when the candidate relays their findings.",
+            "In Cardiac arrest patients, C-A-B should be assessed all at once and take no more than 10 seconds."
+          ],
+          "commentsZh": [
+            "由于模拟患者无法真实呈现情景设定的脉率，当考生报告其检查结果时，考官必须及时告知情景中设定的脉率与脉搏性质。",
+            "对心脏骤停患者，C-A-B 应一次性同时评估，用时不超过 10 秒。"
+          ],
+          "sourcePage": 15
+        },
+        {
+          "id": "rapid-body-survey",
+          "nameEn": "Rapid Body Survey",
+          "nameZh": "快速体格检查（RBS）",
+          "weights": [100, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "A rapid exam or modified exam is not performed during the initial assessment or is performed in a manner insufficient to locate life/limb threatening conditions and/or",
+                "Determines life/limb threatening conditions and fails to intervene",
+                "Intervenes incorrectly detrimental to patient care",
+                "Finds life threatening hemorrhage but then does not control the bleeding"
+              ],
+              "errorsZh": [
+                "初步评估中没有进行快速体格检查（或改良检查），或检查方式不足以发现危及生命/肢体的情况。",
+                "发现了危及生命/肢体的情况却没有干预。",
+                "干预方式错误，对患者照护造成损害。",
+                "发现危及生命的大出血，却没有控制出血。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Conducts a RBS but it is out of sequence and it may affect negatively on patient care (e.g. – delay of performing the RBS whereby they found injuries late, dressings are not secured or if direct pressure is not maintained with bandages immediately after the primary survey.)",
+                "Uses a tourniquet unnecessarily or uses an incorrect technique",
+                "Does not expose injuries when conducting the Primary Survey (e.g., not verbalizing that they would cut and expose if they found blood on the RBS)",
+                "Does not assess distal circulation in a circumstance in which it may affect the outcome or patient condition."
+              ],
+              "errorsZh": [
+                "做了快速体格检查（RBS）但顺序不对，可能对患者照护产生负面影响（例如：RBS 做得太晚导致伤情发现晚、敷料没有固定，或初步评估结束后没有立即用绷带维持直接加压）。",
+                "不必要地使用止血带，或止血带使用方法错误。",
+                "初步评估中没有暴露伤口（例如：在 RBS 中发现血迹时，没有说明会剪开衣物暴露检查）。",
+                "在可能影响结局或患者状况的情形下，没有评估远端循环。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Not doing an RBS but not detrimental to patient care",
+                "Conducts a rapid exam but it is performed with minor deficiencies (e.g. – not palpating over the entire body)",
+                "Extends or delays rapid exam to perform skills not indicated (e.g., removal of shoes to check distal circulation with no injury and/or impairment)",
+                "Intervenes on all life-threatening conditions found during the Primary Survey but they are performed with minor deficiencies (e.g., unnecessary injury aggravation while applying a pressure dressing)",
+                "Deduction if the candidate does not check for an exit wound in a patient with an open chest wound."
+              ],
+              "errorsZh": [
+                "没有做 RBS，但未对患者照护造成损害。",
+                "做了快速体格检查，但有轻微缺陷（例如：没有触诊全身）。",
+                "为做无指征的操作而拖长或延误快速体格检查（例如：在没有损伤或功能障碍时脱鞋检查远端循环）。",
+                "对初步评估中发现的所有危及生命的情况都做了干预，但操作有轻微缺陷（例如：加压包扎时不必要地加重了损伤）。",
+                "对有开放性胸部伤口的患者，没有检查是否存在出口伤。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The RBS may be modified depending on the patient presentation – Note: all primary interventions must be found and intervened in during rapid exam.",
+            "Due to the fidelity of the evaluation, where a candidate misses a simulated injury, evaluators must question the candidate to determine whether the candidate genuinely missed the injury or deliberately bypassed treatment. Deductions or non-deductions can then be based on this decision."
+          ],
+          "commentsZh": [
+            "RBS 可根据患者表现进行调整——注意：所有需要一线干预的问题都必须在快速体格检查中被发现并处理。",
+            "由于模拟的仿真度有限，当考生漏掉某个模拟伤情时，考官必须询问考生，判断其是真的漏检还是有意跳过处理，再据此决定是否扣分。"
+          ],
+          "sourcePage": 16
+        },
+        {
+          "id": "skin-primary",
+          "nameEn": "Skin (Primary Survey)",
+          "nameZh": "皮肤（初步评估）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Does not assess the patient's skin colour, temperature and condition at any time during the initial assessment"
+              ],
+              "errorsZh": [
+                "初步评估中自始至终没有评估患者皮肤的颜色、温度和状态。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Delay in assessing skin in the initial assessment (e.g. – Skin check done while taking a History and the patient's skin condition was clinically significant)",
+                "Does not verbalize the skin assessment, only assumed visually, and does not clarify with evaluator"
+              ],
+              "errorsZh": [
+                "初步评估中皮肤评估延误（例如：皮肤检查拖到问病史时才做，而患者的皮肤状况有临床意义）。",
+                "没有口头说出皮肤评估结果，只靠目测假定，也没有与考官确认。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Assesses the patient's skin but it is performed with minor deficiencies (e.g., not assessing the temperature)"
+              ],
+              "errorsZh": [
+                "评估了皮肤，但有轻微缺陷（例如：没有评估皮温）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "In reality the candidate would see the skin colour and condition of the patient's skin, therefore the Evaluator is obligated to provide the patient's skin colour and condition – usually this is done by the Evaluator during the RBS.",
+            "If the candidate physically assesses the patient's skin (e.g., back of their hand on the patient's forehead) but does not verbalize what they are checking, the Evaluator should ask the candidate what they are checking for before providing the scenario information."
+          ],
+          "commentsZh": [
+            "现实中考生本可以直接看到患者皮肤的颜色和状态，因此考官有义务提供这些信息——通常在 RBS 期间由考官给出。",
+            "如果考生实际动手评估了皮肤（例如：用手背贴患者额头）但没有说明在检查什么，考官应先询问考生检查目的，再提供情景信息。"
+          ],
+          "sourcePage": 17
+        },
+        {
+          "id": "oxygen",
+          "nameEn": "Oxygen",
+          "nameZh": "氧疗",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Does not apply oxygen at any time during the initial assessment when indicated by patient presentation and/or",
+                "Oxygen is administered by incorrect delivery device for patient presentation detrimental to patient care and/or",
+                "Oxygen flow rate is insufficient for delivery device (e.g., NRB on 6 lpm)"
+              ],
+              "errorsZh": [
+                "患者表现有指征时，初步评估中自始至终没有给氧。",
+                "给氧所用的输送装置与患者表现不符，对患者照护造成损害。",
+                "氧流量不足以匹配所用装置（例如：非再吸入面罩只开 6 升/分）。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Delay in oxygen administration potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "给氧延误，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Applies oxygen but it is applied with minor deficiencies",
+                "Oxygen is administered but cylinder is positioned in an unsafe manner"
+              ],
+              "errorsZh": [
+                "给了氧，但操作有轻微缺陷。",
+                "给了氧，但氧气瓶摆放方式不安全。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "For evaluation purposes the oxygen mask may be placed around a patient's neck, shoulder or be simulated.",
+            "Delay is when administered outside of the initial assessment."
+          ],
+          "commentsZh": [
+            "出于考试目的，氧气面罩可以挂在患者颈部、肩部，或以模拟方式进行。",
+            "「延误」指给氧发生在初步评估之外（初步评估结束后才给）。"
+          ],
+          "sourcePage": 17
+        },
+        {
+          "id": "patient-position",
+          "nameEn": "Patient Position",
+          "nameZh": "患者体位",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Does not position the patient into the appropriate position at any time during the initial assessment and/or",
+                "Positions the patient incorrectly detrimental to patient care"
+              ],
+              "errorsZh": [
+                "初步评估中自始至终没有把患者摆放到恰当体位。",
+                "体位摆放错误，对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Positions the patient incorrectly with the potential to be detrimental to patient care (e.g. delaying sitting a patient who is dizzy or delaying putting a shock patient supine)"
+              ],
+              "errorsZh": [
+                "体位摆放错误，可能对患者照护造成损害（例如：迟迟不让头晕的患者坐起，或迟迟不让休克患者平卧）。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Positions the patient into the appropriate position but there are minor deficiencies in the technique (e.g., did not support or assist the patient during any movement)"
+              ],
+              "errorsZh": [
+                "把患者摆放到了恰当体位，但手法有轻微缺陷（例如：移动过程中没有扶助或支撑患者）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Recovery position – used for all unconscious medical patients and/or any on-going airway maintenance problems (e.g., bleeding or vomit in the Airway)",
+            "Supine position – used for shock patients and spinal patients",
+            "Sitting/Semi-sitting – used for patients short of breath or chest injury patients with no spinal concerns",
+            "Position of comfort – used for all trauma/medical patients not requiring alternative positioning",
+            "Because of the nature of the simulation the Evaluator may need to prompt the candidate on patient positioning. For example, on a shock patient who is left sitting you may state something like \"your patient still appears pale and clammy, and is now complaining of being light-headed\"",
+            "If the airway is not maintained, then there would be another deduction under Airway",
+            "If the candidate rolled a spinal injured patient, with no on-going airway problems, into the recovery position, there would be a deduction under Delicate Spine",
+            "A patient who requires assisted respirations should not be placed in the recovery position"
+          ],
+          "commentsZh": [
+            "复原卧位（Recovery position）——适用于所有无意识的内科患者，以及存在持续气道维护问题者（例如气道内出血或呕吐物）。",
+            "仰卧位——适用于休克患者和脊柱损伤患者。",
+            "坐位/半坐位——适用于呼吸困难的患者，或无脊柱顾虑的胸部损伤患者。",
+            "舒适体位——适用于不需要特殊体位的所有创伤/内科患者。",
+            "由于模拟的性质，考官可能需要就体位问题提示考生。例如对被留在坐位的休克患者，可以说：「你的患者仍然面色苍白、皮肤湿冷，现在开始说自己头晕。」",
+            "若气道未得到维持，则会在「气道」一项另行扣分。",
+            "若考生把没有持续气道问题的脊柱损伤患者翻成复原卧位，则会在「脆弱脊柱（Delicate Spine）」一项扣分。",
+            "需要辅助呼吸的患者不应摆成复原卧位。"
+          ],
+          "sourcePage": 18
+        }
+      ]
+    },
+    {
+      "id": "transport-criteria",
+      "nameEn": "Transport Criteria",
+      "nameZh": "转运标准",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "transport",
+          "nameEn": "Transport",
+          "nameZh": "转运决策与打包时限",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Fails to place the patient in the correct category (Priority or Non-Priority – Medical/Trauma) at the end of the initial assessment and treats as such detrimental to patient care and/or",
+                "Does not assess, package, and have a non-Priority patient ready to load in 30 minutes or less where appropriate",
+                "Does not assess, package, and have a Priority patient ready to load in 15 minutes or less where appropriate"
+              ],
+              "errorsZh": [
+                "初步评估结束时未能把患者归入正确类别（优先/非优先——内科/创伤）并按错误类别处置，对患者照护造成损害。",
+                "在情况适宜时，未能在 30 分钟内完成非优先患者的评估、打包并使其达到可装载状态。",
+                "在情况适宜时，未能在 15 分钟内完成优先患者的评估、打包并使其达到可装载状态。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Makes decision to transport a patient as Priority prior to treatment potentially detrimental to patient care",
+                "Assesses & packages priority patient who requires interventions in 15 minutes but does not demonstrate a sense of urgency"
+              ],
+              "errorsZh": [
+                "在完成必要处置之前就决定按优先转运患者，可能对患者照护造成损害。",
+                "对需要干预的优先患者在 15 分钟内完成了评估和打包，但没有表现出紧迫感。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Places the patient in the correct category without sufficient assessment to justify the decision",
+                "Delays treatment and/or transport performing non-Priority tasks",
+                "Assesses & packages non-priority patient within 30 minutes but fails to demonstrate a sense of urgency"
+              ],
+              "errorsZh": [
+                "把患者归入了正确类别，但评估不充分，不足以支持该决定。",
+                "因执行非优先任务而延误了治疗和/或转运。",
+                "对非优先患者在 30 分钟内完成了评估和打包，但没有表现出紧迫感。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The candidate does not have to verbalize that the patient is RTC or non-RTC. The candidate's actions and timelines should convey their decision, however because it is a simulation and \"transport\" does not actually occur, it is acceptable for the Evaluator to ask the candidate what decision was made regarding RTC/non-RTC.",
+            "Depending on the scenario the candidate may need to obtain more patient history and possibly vital signs before being able to make a decision regarding RTC/non-RTC. No deductions should be made if this is the case.",
+            "If the candidate is required to perform EMR or PCP applicable protocols, then the decision between RTC/non-RTC may change accordingly.",
+            "Ready to load defined as \"on the cot with straps secured\"; or at point where the patient needs to be lifted off the floor (e.g. packaged spinal patient), for safety reasons, ready to load is defined as \"ready to be lifted onto the cot\".",
+            "Goal time to have patient ready to load for a Priority patient is 15 minutes when there are minimal interventions required.",
+            "If the candidate is required to perform interventions, there should be no penalty if they act with a sense of urgency.",
+            "Initiation of an appropriate protocol should not be considered a delay in transport.",
+            "Goal time to have patient ready to load for a non-Priority patient is 30 minutes regardless of interventions required."
+          ],
+          "commentsZh": [
+            "考生不必口头说明患者属于 RTC 还是非 RTC，其行动和时间线应能体现这一决定；但由于是模拟、并不会真的「转运」，考官可以询问考生就 RTC/非 RTC 做了什么决定。",
+            "视情景而定，考生可能需要先获取更多病史甚至生命体征才能做出 RTC/非 RTC 的决定；这种情况下不应扣分。",
+            "如果考生需要执行 EMR 或 PCP 适用的处置方案（protocol），RTC/非 RTC 的决定可能相应改变。",
+            "「可装载」定义为「已上担架床并系好约束带」；当患者需要从地面抬起时（如已打包的脊柱患者），出于安全考虑，「可装载」定义为「已准备好被抬上担架床」。",
+            "优先患者达到可装载状态的目标时间为 15 分钟（在所需干预很少的情况下）。",
+            "如果考生必须执行干预，只要其行动带有紧迫感，就不应处罚。",
+            "启动恰当的处置方案不应被视为延误转运。",
+            "非优先患者达到可装载状态的目标时间为 30 分钟，无论需要什么干预。"
+          ],
+          "sourcePage": 19
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "nameEn": "History",
+      "nameZh": "病史采集",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "chief-complaint",
+          "nameEn": "Chief Complaint (C/C)",
+          "nameZh": "主诉（C/C）",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Does not obtain a C/C and/or",
+                "Obtains incorrect C/C and treats incorrectly for presentation"
+              ],
+              "errorsZh": [
+                "没有获取主诉（C/C）。",
+                "获取的主诉错误，并因此对患者的表现做了错误处置。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Obtain the C/C but it was out of sequence or potentially detrimental to patient care (e.g. done after vital signs) and/or causes a delay in treatment",
+                "Obtains C/C from dispatch or general impression information only and does not investigate further",
+                "Obtain an incorrect C/C for the patient – but continues to effectively treat patient with no negative outcome"
+              ],
+              "errorsZh": [
+                "获取了主诉，但顺序不对或可能对患者照护造成损害（例如：在测生命体征之后才问），和/或导致治疗延误。",
+                "仅凭调度信息或总体印象得出主诉，没有进一步询问核实。",
+                "获取的主诉不正确，但仍有效地治疗了患者，未造成不良结果。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Obtain the C/C but with minor deficiencies (e.g. not specifically asking the patient's C/C but does obtain enough information to determine the C/C)"
+              ],
+              "errorsZh": [
+                "获取了主诉，但有轻微缺陷（例如：没有明确询问患者主诉，但获得的信息足以确定主诉）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "When the patient has more than one symptom, the candidate should clarify what is the patient's C/C. When the C/C is visually present (trauma), the candidate should confirm that the injury is in fact the C/C."
+          ],
+          "commentsZh": [
+            "当患者有多个症状时，考生应澄清哪个才是主诉；当主诉肉眼可见（创伤）时，考生应确认该损伤确实就是主诉。"
+          ],
+          "sourcePage": 20
+        },
+        {
+          "id": "history-of-cc",
+          "nameEn": "History of Chief Complaint",
+          "nameZh": "现病史（Hx C/C）",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": ["Does not obtain a Hx C/C at any time"],
+              "errorsZh": ["自始至终没有获取现病史（Hx C/C）。"]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Obtains the Hx C/C but it was out of sequence and it affects negatively on patient care (e.g., done after Vital Signs and the Hx C/C may have prompted further investigation/intervention before starting Vital Signs)",
+                "Obtains an incorrect Hx C/C for the patient – but continues to effectively treat patient with no negative outcome"
+              ],
+              "errorsZh": [
+                "获取了现病史，但顺序不对并对患者照护产生负面影响（例如：在测生命体征之后才问，而现病史本可在测生命体征前提示进一步检查或干预）。",
+                "获取的现病史不正确，但仍有效地治疗了患者，未造成不良结果。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Obtains the Hx C/C but with minor deficiencies (e.g. minor inaccuracies in the events surrounding the patient's ailment or injury that do not materially impact the care the patient would receive.)",
+                "Using only parts of the PQRST or LOTARP mnemonic"
+              ],
+              "errorsZh": [
+                "获取了现病史，但有轻微缺陷（例如：对发病或受伤经过的描述有小的不准确，但不实质影响患者所获照护）。",
+                "只用了 PQRST 或 LOTARP 口诀中的一部分。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If this information is provided by the Evaluator in the Dispatch or Scene information, then no deductions can be made if the candidate does not specifically ask.",
+            "If the patient is experiencing pain, the candidate should use either the OPQRRRST or LOTARP mnemonic to elicit information about the pain.",
+            "If assessing the Hx C/C is not going to affect patient care, then no deductions should be made if it is not performed in sequence (e.g., done part way through Vital Signs)"
+          ],
+          "commentsZh": [
+            "如果这些信息已由考官在调度或现场信息中给出，考生没有专门询问也不能扣分。",
+            "若患者存在疼痛，考生应使用 OPQRRRST 或 LOTARP 口诀来采集疼痛信息。",
+            "若现病史评估不会影响患者照护，则未按顺序进行（例如在测生命体征中途才问）不应扣分。"
+          ],
+          "sourcePage": 20
+        },
+        {
+          "id": "past-medical-history",
+          "nameEn": "Past Medical History",
+          "nameZh": "既往病史",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to obtain past medical history"],
+              "errorsZh": ["没有采集既往病史。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Obtains a medical history but misses conditions directly pertinent to C/C (e.g. obtains history of MI, but no other pertinent history - how long ago, STENTS placed, etc.)",
+                "Delay in obtaining past medical history potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "采集了既往病史，但漏掉与主诉直接相关的病情（例如：问出了心梗史，却没问相关细节——多久之前、是否放过支架等）。",
+                "采集既往病史延误，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Obtains a medical history with insufficient detail (e.g. no time scales)",
+                "Obtains a medical history but misses conditions not pertinent to C/C at any time"
+              ],
+              "errorsZh": [
+                "采集的既往病史细节不足（例如：没有时间线）。",
+                "采集了既往病史，但漏掉与主诉无关的病情。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If assessing the patient's past medical history, medications, allergies and/or LOI is not going to affect patient care, then no deductions should be made"
+          ],
+          "commentsZh": [
+            "若采集既往病史、用药、过敏和/或最后进食时间不会影响患者照护，则不应扣分。"
+          ],
+          "sourcePage": 21
+        },
+        {
+          "id": "medications",
+          "nameEn": "Medications",
+          "nameZh": "用药史",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to obtain list of medications"],
+              "errorsZh": ["没有采集患者的用药清单。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Obtains a list of medications but misses medications directly pertinent to C/C (e.g. a new prescription for antibiotics for recent chest infection)",
+                "Obtains the patient's medications but it was out of sequence, and it affects negatively on patient care (e.g. done after vital signs and the medications may have prompted further investigation/intervention before starting vital signs)"
+              ],
+              "errorsZh": [
+                "采集了用药清单，但漏掉与主诉直接相关的药物（例如：近期胸部感染新开的抗生素）。",
+                "采集了用药信息，但顺序不对并对患者照护产生负面影响（例如：在测生命体征之后才问，而用药信息本可在测生命体征前提示进一步检查或干预）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Obtains a list of medication with insufficient detail (e.g. no dosages or schedules)",
+                "Obtains a list of medications but misses medications not pertinent to C/C at any time"
+              ],
+              "errorsZh": [
+                "采集的用药清单细节不足（例如：没有剂量或服药时间安排）。",
+                "采集了用药清单，但漏掉与主诉无关的药物。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If assessing the patient's past medical history, medications, allergies and/or LOI is not going to affect patient care, then no deductions should be made"
+          ],
+          "commentsZh": [
+            "若采集既往病史、用药、过敏和/或最后进食时间不会影响患者照护，则不应扣分。"
+          ],
+          "sourcePage": 21
+        },
+        {
+          "id": "allergies",
+          "nameEn": "Allergies",
+          "nameZh": "过敏史",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to obtain list of allergies at any time"],
+              "errorsZh": ["自始至终没有采集过敏史。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Obtains a list of allergies with insufficient detail (e.g. no detail on consequences of exposure)",
+                "Obtains the patient's allergies but it was out of sequence, and it affects negatively on patient care (e.g. done after Vital Signs and the allergies may have prompted further investigation/intervention before starting Vital Signs)"
+              ],
+              "errorsZh": [
+                "采集了过敏史，但细节不足（例如：没问接触过敏原后会有什么后果）。",
+                "采集了过敏史，但顺序不对并对患者照护产生负面影响（例如：在测生命体征之后才问，而过敏信息本可在测生命体征前提示进一步检查或干预）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Obtains a list of allergies but misses allergies not detrimental to patient care (e.g. does not ask about food, environmental or other causes)"
+              ],
+              "errorsZh": [
+                "采集了过敏史，但漏掉不影响患者照护的过敏项（例如：没问食物、环境或其他原因的过敏）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If assessing the patient's past medical history, medications, allergies and/or LOI is not going to affect patient care, then no deductions should be made"
+          ],
+          "commentsZh": [
+            "若采集既往病史、用药、过敏和/或最后进食时间不会影响患者照护，则不应扣分。"
+          ],
+          "sourcePage": 21
+        },
+        {
+          "id": "last-oral-intake",
+          "nameEn": "Last Oral Intake (LOI)",
+          "nameZh": "最后进食时间（LOI）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to obtain LOI at any time"],
+              "errorsZh": ["自始至终没有询问最后进食时间（LOI）。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Obtains a LOI with insufficient detail (e.g. no detail on time or size of meal)"
+              ],
+              "errorsZh": [
+                "询问了最后进食时间，但细节不足（例如：没问具体时间或进食量）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Obtains a LOI but misses information not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "询问了最后进食时间，但漏掉不影响患者照护的信息。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If assessing the patient's past medical history, medications, allergies and/or LOI is not going to affect patient care, then no deductions should be made"
+          ],
+          "commentsZh": [
+            "若采集既往病史、用药、过敏和/或最后进食时间不会影响患者照护，则不应扣分。"
+          ],
+          "sourcePage": 21
+        }
+      ]
+    },
+    {
+      "id": "vital-signs",
+      "nameEn": "Vital Signs",
+      "nameZh": "生命体征",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "gcs",
+          "nameEn": "Glasgow Coma Scale",
+          "nameZh": "格拉斯哥昏迷评分（GCS）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to assess the patient using the GCS at any time and/or",
+                "Displays no knowledge on how to assess the patient using the GCS."
+              ],
+              "errorsZh": [
+                "自始至终没有用 GCS 评估患者。",
+                "表现出完全不懂如何用 GCS 评估患者。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Incorrectly performs the GCS assessment in two or more categories (e.g. incorrect motor and speech assessment or score) and/or",
+                "Demonstrates inconsistency in assessing GCS (e.g. does not complete a GCS for every set of vital signs)"
+              ],
+              "errorsZh": [
+                "GCS 评估中有两个或以上类别做错（例如：运动和言语的评估或评分错误）。",
+                "GCS 评估缺乏一贯性（例如：没有在每组生命体征中都完成 GCS）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Incorrectly performs the GCS assessment in only one category"
+              ],
+              "errorsZh": [
+                "GCS 评估中只有一个类别做错。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If the candidate appropriately assesses the patient's LOC during the Primary Survey no marks should be deducted if the candidate failed to assess the LOC again when doing the Vital Signs as long as the patient's condition has not deteriorated.",
+            "Because the simulated patients may not accurately depict a decreased LOC the evaluator may have to prompt the candidate to demonstrate how he/she would assess LOC. No deductions should be made if the error is caused by the patient.",
+            "If assessing the patient's LOC is not going to affect patient care, then no deductions should be made if it is not performed in sequence",
+            "The expectation is that the candidate assesses the LOC using the GCS. If done correctly, subsequent LOC assessments can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency.",
+            "The Evaluator may need to cross-reference the Hand-Off Report and PCR to accurately assess the candidate's understanding of GCS."
+          ],
+          "commentsZh": [
+            "若考生在初步评估中已恰当评估了意识水平，且患者病情没有恶化，则测生命体征时未再次评估意识水平不应扣分。",
+            "由于模拟患者可能无法准确呈现意识水平下降，考官可能需要提示考生演示如何评估意识水平；若错误由模拟患者造成，则不应扣分。",
+            "若评估意识水平不会影响患者照护，则未按顺序进行不应扣分。",
+            "期望考生用 GCS 评估意识水平。第一次做对后，后续的意识评估结果可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际演示，以确认其能力。",
+            "考官可能需要对照交接报告和 PCR 来准确判断考生对 GCS 的理解。"
+          ],
+          "sourcePage": 22
+        },
+        {
+          "id": "blood-pressure",
+          "nameEn": "Blood Pressure (B/P)",
+          "nameZh": "血压（B/P）",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Fails to obtain blood pressure at any time and/or",
+                "Positioning of BP cuff stethoscope make it highly unlikely that a blood pressure could be obtained and/or displays gross errors in technique"
+              ],
+              "errorsZh": [
+                "自始至终没有测血压。",
+                "血压袖带或听诊器的放置方式几乎不可能测出血压，和/或技术上有严重错误。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Reported BP is inconsistent with patient's presentation and/or",
+                "Does not complete a BP for every set of vital signs",
+                "Initial BP performed by palpation only, potentially detrimental to patient care",
+                "Deduction if the candidate demonstrates assessing the patient's B/P but it is out of sequence and it affects negatively on patient care"
+              ],
+              "errorsZh": [
+                "报告的血压与患者表现不符。",
+                "没有在每组生命体征中都测血压。",
+                "第一次血压只用触诊法测得，可能对患者照护造成损害。",
+                "演示了测血压，但顺序不对并对患者照护产生负面影响。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Cuff size incorrect for patient and candidate makes no attempt to correct/verbalize how this will affect the reading",
+                "Obtains patient's BP but it is performed with minor deficiencies (e.g. not auscultating over the correct location)",
+                "Attaches the BP cuff incorrectly including if done by partner and the candidate does not correct it and the examiner needs to step in"
+              ],
+              "errorsZh": [
+                "袖带尺寸与患者不匹配，考生既不纠正，也不说明这会如何影响读数。",
+                "测得了血压，但操作有轻微缺陷（例如：听诊位置不正确）。",
+                "袖带绑法错误（包括由搭档绑错而考生未纠正、需要考官介入的情况）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Appropriate technique – The candidate should have the cuff applied properly to the arm, the diaphragm side of the stethoscope over the approximate location of the brachial artery, pump up the cuff, and release the pressure in the cuff in a controlled fashion.",
+            "The expectation is that the candidate assesses the B/P by auscultation. If done correctly, subsequent B/P readings can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency.",
+            "If the evaluator is in doubt as to whether the candidate gains an accurate reading of the simulated patient, a BP check should be made to see if the evaluator's reading matches the candidate's reading"
+          ],
+          "commentsZh": [
+            "正确手法——袖带正确缚于上臂，听诊器膜面置于肱动脉大致位置，充气后以可控方式缓慢放气。",
+            "期望考生用听诊法测血压。第一次做对后，后续血压读数可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际操作，以确认其能力。",
+            "若考官不确定考生是否真的测准了模拟患者的血压，应复测一次血压，核对考官读数与考生读数是否一致。"
+          ],
+          "sourcePage": 22
+        },
+        {
+          "id": "pulse",
+          "nameEn": "Pulse",
+          "nameZh": "脉搏",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Fails to obtain pulse at any time and/or",
+                "Location of pulse check makes it highly unlikely that a pulse could be palpated, displays gross errors in technique"
+              ],
+              "errorsZh": [
+                "自始至终没有测脉搏。",
+                "摸脉的位置几乎不可能触及脉搏，技术上有严重错误。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Reported pulse is inconsistent with patient's presentation and/or",
+                "Does not obtain a pulse for every set of vital signs",
+                "Assessing the patient's pulse but it is out of sequence and it affects negatively on patient care"
+              ],
+              "errorsZh": [
+                "报告的脉搏与患者表现不符。",
+                "没有在每组生命体征中都测脉搏。",
+                "测了脉搏，但顺序不对并对患者照护产生负面影响。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Consistently fails to verbalize strength and/or rhythm two or more times"
+              ],
+              "errorsZh": [
+                "两次或以上持续不报脉搏的强度和/或节律。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Because the simulated patients will not accurately depict scenario pulse rates the evaluator must be quick to prompt the candidate with the proper rate as depicted within the scenario when they assess either the radial or carotid pulse",
+            "If the candidate only states the pulse rate for a 15 second time frame the evaluator should ask the candidate to convert that to a rate/minute",
+            "The expectation is that the candidate assesses the patient's pulse. If done correctly, subsequent pulse assessments can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency.",
+            "The evaluator will respond with only the information provided by the candidate i.e. candidate reports \"pulse 64\" evaluator replies with \"rate only\" as per simulation."
+          ],
+          "commentsZh": [
+            "由于模拟患者无法真实呈现情景设定的脉率，当考生触诊桡动脉或颈动脉时，考官必须及时告知情景设定的脉率。",
+            "若考生只报了 15 秒的脉搏数，考官应要求其换算成每分钟的脉率。",
+            "期望考生亲自评估脉搏。第一次做对后，后续脉搏结果可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际操作，以确认其能力。",
+            "考官只回应考生报告的内容——例如考生报「脉搏 64」，考官就按模拟设定只给出脉率。"
+          ],
+          "sourcePage": 23
+        },
+        {
+          "id": "respirations",
+          "nameEn": "Respirations",
+          "nameZh": "呼吸",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Fails to obtain respiration rate, effort, or character at any time",
+                "Displays gross errors in technique"
+              ],
+              "errorsZh": [
+                "自始至终没有评估呼吸的频率、费力程度或性质。",
+                "技术上有严重错误。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Reported respirations are inconsistent with patient's presentation",
+                "Does not obtain respirations for every set of vital signs"
+              ],
+              "errorsZh": [
+                "报告的呼吸与患者表现不符。",
+                "没有在每组生命体征中都评估呼吸。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Consistently fails to verbalize depth and/or rhythm two or more times",
+                "Assesses the patient's respiration but it is performed with minor deficiencies (e.g. – not look, listening, and feeling for breathing)"
+              ],
+              "errorsZh": [
+                "两次或以上持续不报呼吸的深度和/或节律。",
+                "评估了呼吸，但操作有轻微缺陷（例如：没有做到看、听、感觉三步并用）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Because the simulated patients will not accurately depict scenario respiration rates the evaluator must be quick to prompt the candidate with the proper rate, effort, and character as depicted within the scenario.",
+            "If the candidate only states the respiration rate for a 15 second time frame the evaluator should ask the candidate to convert that to a rate/minute.",
+            "The expectation is that the candidate assesses the patient's respiration rate, effort, and character. If done correctly, subsequent respiration assessments can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency.",
+            "The evaluator will respond with only the information provided by the candidate i.e. candidate reports \"respirations 12 deep\" evaluator replies with \"rate and depth\" as per simulation."
+          ],
+          "commentsZh": [
+            "由于模拟患者无法真实呈现情景设定的呼吸频率，考官必须及时告知情景设定的频率、费力程度和性质。",
+            "若考生只报了 15 秒的呼吸次数，考官应要求其换算成每分钟的呼吸频率。",
+            "期望考生亲自评估呼吸的频率、费力程度和性质。第一次做对后，后续呼吸结果可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际操作，以确认其能力。",
+            "考官只回应考生报告的内容——例如考生报「呼吸 12 次、深」，考官就按模拟设定只给出频率和深度。"
+          ],
+          "sourcePage": 23
+        },
+        {
+          "id": "skin-vitals",
+          "nameEn": "Skin (Vital Signs)",
+          "nameZh": "皮肤（生命体征）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to assess skin at any time during the vital signs - colour, temperature, and condition"
+              ],
+              "errorsZh": [
+                "测生命体征期间自始至终没有评估皮肤——颜色、温度和状态。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Only verbalizes checking the skin without touching the patient",
+                "Does not assess the skin for every set of vital signs"
+              ],
+              "errorsZh": [
+                "只口头说检查皮肤，没有实际触碰患者。",
+                "没有在每组生命体征中都评估皮肤。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Consistently reports only 1 criterion (e.g. only reports that it is warm, not \"normal, warm and dry\") two or more times"
+              ],
+              "errorsZh": [
+                "两次或以上持续只报告一项指标（例如：只说「温暖」，而不是「颜色正常、温暖、干燥」）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Unlike in the Primary Survey, where Skin is a \"given\", the Evaluator should expect the candidate to assess the patient's skin when assessing the patient's vital signs. This will show that the candidate realizes that a skin assessment is part of the overall Vital Signs assessment.",
+            "If the candidate physically assesses the patient's skin (e.g., back of their hand on the patient's forehead) but does not verbalize what they are checking the Evaluator should ask the candidate what they are checking for before providing the scenario vital signs information.",
+            "If the skin is assessed correctly, subsequent skin assessments can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency"
+          ],
+          "commentsZh": [
+            "与初步评估中皮肤信息由考官「直接给出」不同，测生命体征时考官应期望考生亲自评估皮肤，以显示考生明白皮肤评估是整套生命体征评估的一部分。",
+            "如果考生实际动手评估了皮肤（例如：用手背贴患者额头）但没有说明在检查什么，考官应先询问考生检查目的，再提供情景生命体征信息。",
+            "第一次皮肤评估做对后，后续结果可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际操作，以确认其能力。"
+          ],
+          "sourcePage": 24
+        },
+        {
+          "id": "pupils",
+          "nameEn": "Pupils",
+          "nameZh": "瞳孔",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to assess pupils at any time during the vital signs"
+              ],
+              "errorsZh": [
+                "测生命体征期间自始至终没有评估瞳孔。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Fails to interpret unequal/unreactive/dilated/constricted pupils",
+                "Assesses pupils, but does not check reactivity and/or size",
+                "Inappropriately/repeatedly checks pupils of a patient when not required, or causing delay in other vital signs",
+                "Does not assess the Pupils for every set of vital signs when required (e.g. neuro or head injury patient/decreased LOC)",
+                "Assesses patient's pupils but it is out of sequence and it affects negatively on patient care (e.g. unconscious head injury patient and pupils are not checked until after the Head-to-Toe)"
+              ],
+              "errorsZh": [
+                "未能正确解读双侧不等大/无反应/散大/缩小的瞳孔。",
+                "评估了瞳孔，但没有检查对光反应和/或大小。",
+                "在不需要时不恰当或反复地检查瞳孔，或因此延误了其他生命体征的测量。",
+                "在需要时（例如神经系统或头部损伤患者/意识水平下降）没有在每组生命体征中都评估瞳孔。",
+                "评估了瞳孔，但顺序不对并对患者照护产生负面影响（例如：无意识的头部损伤患者，直到从头到脚检查之后才查瞳孔）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Displays incorrect technique that could cause discomfort to the patient",
+                "Assesses the patient's pupils but it is performed with minor deficiencies (e.g. – assessed pupil reaction to light but did not compare pupils)"
+              ],
+              "errorsZh": [
+                "手法不正确，可能引起患者不适。",
+                "评估了瞳孔，但操作有轻微缺陷（例如：查了对光反应却没有对比双侧瞳孔）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The expectation is that the candidate assesses the patient's pupils (equality comparison and reaction to light). If done correctly, subsequent pupil assessments can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency",
+            "If assessing the patient's pupils is not going to affect patient care, then no deductions should be made"
+          ],
+          "commentsZh": [
+            "期望考生亲自评估瞳孔（双侧对比和对光反应）。第一次做对后，后续结果可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际操作，以确认其能力。",
+            "若评估瞳孔不会影响患者照护，则不应扣分。"
+          ],
+          "sourcePage": 24
+        }
+      ]
+    },
+    {
+      "id": "diagnostics",
+      "nameEn": "Diagnostics",
+      "nameZh": "辅助检查",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "pulse-oximetry",
+          "nameEn": "Pulse Oximetry",
+          "nameZh": "血氧饱和度",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to obtain pulse oximetry at any time"],
+              "errorsZh": ["自始至终没有测血氧饱和度。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Reported SPO2 is inconsistent with patient's presentation without comment by candidate (e.g. candidate does not notice, or verbalize an incorrect reading)",
+                "Does not obtain pulse oximetry for every set of vital signs",
+                "Applies the pulse oximeter but it is out of sequence, and it affects negatively on patient care (e.g. applying the pulse oximeter delays treatment or assessment)"
+              ],
+              "errorsZh": [
+                "报告的 SpO2 与患者表现不符而考生没有任何说明（例如：没有注意到或没有指出读数异常）。",
+                "没有在每组生命体征中都测血氧饱和度。",
+                "使用了血氧仪，但顺序不对并对患者照护产生负面影响（例如：因上血氧仪而延误了治疗或评估）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to consistently confirm calibration with pulse two or more times"
+              ],
+              "errorsZh": [
+                "两次或以上没有用脉搏核对校准血氧仪读数。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The expectation is that the candidate assesses the patient's SPO2 using the Pulse Oximeter. If done correctly, subsequent assessments can be given. If there are deficiencies noted the first time the Evaluator should have the candidate perform the skill for all repeat vital signs to determine competency"
+          ],
+          "commentsZh": [
+            "期望考生用血氧仪评估患者的 SpO2。第一次做对后，后续结果可由考官直接给出；若第一次发现缺陷，考官应要求考生在之后每组生命体征中都实际操作，以确认其能力。"
+          ],
+          "sourcePage": 25
+        },
+        {
+          "id": "blood-glucose",
+          "nameEn": "Blood Glucose",
+          "nameZh": "血糖",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to obtain blood glucose when indicated by patient presentation and/or past history"
+              ],
+              "errorsZh": [
+                "患者表现和/或既往史有指征时，没有测血糖。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Displays incorrect technique and/or",
+                "Contaminates sample site",
+                "Obtains BGL when not indicated/appropriate by patient presentation and/or past history",
+                "Choses an inappropriate sample site"
+              ],
+              "errorsZh": [
+                "操作技术不正确。",
+                "污染了采样部位。",
+                "患者表现和/或既往史并无指征时测了血糖。",
+                "选择的采样部位不恰当。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Delay in applying bandage to site"],
+              "errorsZh": ["采样后为穿刺部位贴敷贴延误。"]
+            }
+          ],
+          "commentsEn": [
+            "Component may be deemed N/A to assessment."
+          ],
+          "commentsZh": [
+            "此项可视评估情况判定为「不适用」。"
+          ],
+          "sourcePage": 25
+        },
+        {
+          "id": "temperature",
+          "nameEn": "Temperature",
+          "nameZh": "体温",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to obtain temperature when indicated and appropriate (e.g. patients that present with infectious symptoms or environmental patients)"
+              ],
+              "errorsZh": [
+                "在有指征且适宜时（例如有感染症状的患者或环境暴露患者）没有测体温。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Technique may lead to inaccurate measurement (e.g. fails to manipulate tragus for tympanic temp. and/or prioritizes temperature ahead of other vitals when not appropriate)",
+                "Does not verbalize or display correct aseptic/clean technique"
+              ],
+              "errorsZh": [
+                "操作方式可能导致测量不准（例如：测耳温时没有牵拉耳屏，和/或在不恰当时把体温排在其他生命体征之前）。",
+                "没有口头说明或展示正确的无菌/清洁操作。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Delay in taking a temperature when indicated"],
+              "errorsZh": ["有指征时测体温延误。"]
+            }
+          ],
+          "commentsEn": [
+            "Component may be deemed N/A to assessment."
+          ],
+          "commentsZh": [
+            "此项可视评估情况判定为「不适用」。"
+          ],
+          "sourcePage": 25
+        }
+      ]
+    },
+    {
+      "id": "functional-enquiries",
+      "nameEn": "Functional Enquiries (PCP ONLY)",
+      "nameZh": "系统功能问诊（仅 PCP）",
+      "licence": "pcp",
+      "capDeduction": 15,
+      "sectionNotesEn": [
+        "NOTE: If a PCP candidate does not complete all or part of the Functional Enquiry a max of 15% is deducted.",
+        "NOTE: If ANY part of the functional enquiry is not done due to a lack of available history, or unresponsive patient (unable to answer correctly), no deduction should be made."
+      ],
+      "sectionNotesZh": [
+        "注意：PCP 考生若未完成全部或部分系统功能问诊，最多扣 15%。",
+        "注意：若因病史无法获得或患者无反应（无法正确回答）而未完成系统功能问诊的任何部分，不应扣分。"
+      ],
+      "items": [
+        {
+          "id": "fe-general-health",
+          "nameEn": "General Health",
+          "nameZh": "总体健康状况",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about overall health/recent illness"],
+              "errorsZh": ["没有询问总体健康状况/近期患病情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about overall health but misses information pertinent to C/C"],
+              "errorsZh": ["询问了总体健康状况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about overall health but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了总体健康状况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-cns",
+          "nameEn": "Central Nervous System",
+          "nameZh": "中枢神经系统",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about nervous system"],
+              "errorsZh": ["没有询问神经系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about nervous system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了神经系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about nervous system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了神经系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-respiratory",
+          "nameEn": "Respiratory System",
+          "nameZh": "呼吸系统",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about respiratory system"],
+              "errorsZh": ["没有询问呼吸系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about respiratory system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了呼吸系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about respiratory system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了呼吸系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-cardiovascular",
+          "nameEn": "Cardiovascular System",
+          "nameZh": "心血管系统",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about cardiovascular system"],
+              "errorsZh": ["没有询问心血管系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about cardiovascular system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了心血管系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about cardiovascular system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了心血管系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-gi-gu",
+          "nameEn": "GI / GU System",
+          "nameZh": "消化/泌尿生殖系统（GI/GU）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about GI/GU systems"],
+              "errorsZh": ["没有询问消化/泌尿生殖系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about GI/GU systems but misses information pertinent to C/C"],
+              "errorsZh": ["询问了消化/泌尿生殖系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about GI/GU systems but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了消化/泌尿生殖系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-integumentary",
+          "nameEn": "Integumentary System",
+          "nameZh": "皮肤系统",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about integumentary system"],
+              "errorsZh": ["没有询问皮肤系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about integumentary system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了皮肤系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about integumentary system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了皮肤系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-musculoskeletal",
+          "nameEn": "Musculoskeletal System",
+          "nameZh": "肌肉骨骼系统",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about musculoskeletal system"],
+              "errorsZh": ["没有询问肌肉骨骼系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about musculoskeletal system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了肌肉骨骼系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about musculoskeletal system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了肌肉骨骼系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-endocrine",
+          "nameEn": "Endocrine System",
+          "nameZh": "内分泌系统",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about endocrine system"],
+              "errorsZh": ["没有询问内分泌系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about endocrine system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了内分泌系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about endocrine system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了内分泌系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        },
+        {
+          "id": "fe-eent",
+          "nameEn": "EENT",
+          "nameZh": "眼耳鼻喉（EENT）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to inquire about EENT system"],
+              "errorsZh": ["没有询问眼耳鼻喉系统情况。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Inquiries about EENT system but misses information pertinent to C/C"],
+              "errorsZh": ["询问了眼耳鼻喉系统情况，但漏掉与主诉相关的信息。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Inquiries about EENT system but misses information not pertinent to C/C"],
+              "errorsZh": ["询问了眼耳鼻喉系统情况，但漏掉与主诉无关的信息。"]
+            }
+          ],
+          "commentsEn": [],
+          "commentsZh": [],
+          "sourcePage": 26
+        }
+      ]
+    },
+    {
+      "id": "physical-exam",
+      "nameEn": "Physical Examination (Head to Toe)",
+      "nameZh": "体格检查（从头到脚）",
+      "licence": "both",
+      "capDeduction": 15,
+      "sectionNotesEn": [
+        "NOTE: If a candidate does not complete all or part of the Physical Exam a max of 15% is deducted."
+      ],
+      "sectionNotesZh": [
+        "注意：考生若未完成全部或部分体格检查，最多扣 15%。"
+      ],
+      "items": [
+        {
+          "id": "pe-head-neck",
+          "nameEn": "Head/Neck",
+          "nameZh": "头颈部",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to examine the head and neck where injuries are present, or pertinent to the C/C and/or",
+                "Finds an injury/abnormality and fails to treat/document"
+              ],
+              "errorsZh": [
+                "在头颈部存在损伤或与主诉相关时，没有检查头颈部。",
+                "发现了损伤/异常，却没有处理或记录。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Examines head/neck but misses injury or abnormality pertinent to C/C"
+              ],
+              "errorsZh": [
+                "检查了头颈部，但漏掉与主诉相关的损伤或异常。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to examine the head and neck when injuries are not present, or not pertinent to the C/C",
+                "Examines head/neck but misses injury or abnormality NOT pertinent to C/C"
+              ],
+              "errorsZh": [
+                "在头颈部没有损伤或与主诉无关时，没有检查头颈部。",
+                "检查了头颈部，但漏掉与主诉无关的损伤或异常。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The order that the Head-to-Toe physical assessment is conducted is irrelevant.",
+            "When inspecting/palpating the head the candidate should be looking and feeling for deformities, open wounds, tenderness and swelling (DOTS), fluid coming from the ears or nose, and the mouth for odour, broken teeth, and bleeding. Candidates may also assess tracheal position and jugular vein distension – however, at the EMR level this is not a mandatory consideration.",
+            "Candidates should also be questioning patients (where applicable) for medical history in this region e.g., any history of headaches/changes in sight, etc.",
+            "If the pupils are assessed, then this would be documented under Vital Signs."
+          ],
+          "commentsZh": [
+            "从头到脚体格检查的先后顺序不作要求。",
+            "视诊/触诊头部时，考生应查看并触摸畸形、开放伤口、压痛和肿胀（DOTS），耳鼻是否有液体流出，以及口腔有无异味、断齿和出血。考生还可评估气管位置和颈静脉怒张——但在 EMR 级别这不是必查项。",
+            "考生还应（在适用时）询问该区域的相关病史，例如有无头痛史/视力变化等。",
+            "若评估了瞳孔，应记录在生命体征项下。"
+          ],
+          "sourcePage": 27
+        },
+        {
+          "id": "pe-chest-lungs",
+          "nameEn": "Chest and Lungs",
+          "nameZh": "胸部与肺",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to examine and/or auscultate the chest where injuries are present, or pertinent to the C/C and/or",
+                "Finds an injury/abnormality and fails to treat/document"
+              ],
+              "errorsZh": [
+                "在胸部存在损伤或与主诉相关时，没有检查和/或听诊胸部。",
+                "发现了损伤/异常，却没有处理或记录。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Examines chest but misses injury or abnormality pertinent to C/C"
+              ],
+              "errorsZh": [
+                "检查了胸部，但漏掉与主诉相关的损伤或异常。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to examine and/or auscultate the chest when injuries are not present, or not pertinent to the C/C",
+                "Examines chest but misses injury or abnormality NOT pertinent to C/C"
+              ],
+              "errorsZh": [
+                "在胸部没有损伤或与主诉无关时，没有检查和/或听诊胸部。",
+                "检查了胸部，但漏掉与主诉无关的损伤或异常。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "When inspecting/palpating/auscultating the chest the candidate should be looking/feeling for DOTS and listening for adventitious breath sounds.",
+            "Candidates should also be questioning patients (where applicable) for medical history in this region e.g. is the patient a smoker/COPD",
+            "The candidate should auscultate the chest in a minimum of either 6 anterior or 6 posterior locations. The candidate should listen through the inspiratory and expiratory phase of respiration. The candidate should verbalize air entry, bilateral comparison, and breath sounds.",
+            "The evaluator may have to ask the candidate to verbalize his/her chest auscultation findings.",
+            "If the initial chest auscultation was completed correctly then subsequent assessments can be delegated and/or verbalized. If the initial chest auscultation was not completed correctly the evaluator should require the candidate to demonstrate any subsequent assessments."
+          ],
+          "commentsZh": [
+            "视诊/触诊/听诊胸部时，考生应查看并触摸 DOTS，并听诊有无附加呼吸音。",
+            "考生还应（在适用时）询问该区域的相关病史，例如患者是否吸烟/有无 COPD。",
+            "考生应在前胸或后背至少 6 个位置听诊，且应听完整个吸气相和呼气相，并口头报告进气量、双侧对比和呼吸音。",
+            "考官可能需要要求考生口头说出其胸部听诊发现。",
+            "若首次胸部听诊完成正确，后续听诊可以委托搭档完成或以口头说明代替；若首次听诊未正确完成，考官应要求考生亲自演示所有后续听诊。"
+          ],
+          "sourcePage": 27
+        },
+        {
+          "id": "pe-abdomen",
+          "nameEn": "Abdomen",
+          "nameZh": "腹部",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to examine the abdomen where injuries are present, or pertinent to the C/C and/or",
+                "Finds an injury/abnormality and fails to treat/document"
+              ],
+              "errorsZh": [
+                "在腹部存在损伤或与主诉相关时，没有检查腹部。",
+                "发现了损伤/异常，却没有处理或记录。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Examines abdomen but misses injury or abnormality pertinent to C/C"
+              ],
+              "errorsZh": [
+                "检查了腹部，但漏掉与主诉相关的损伤或异常。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to examine the abdomen when injuries are not present, or not pertinent to the C/C",
+                "Examines abdomen but misses injury or abnormality NOT pertinent to C/C"
+              ],
+              "errorsZh": [
+                "在腹部没有损伤或与主诉无关时，没有检查腹部。",
+                "检查了腹部，但漏掉与主诉无关的损伤或异常。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The order that the Head-to-Toe physical assessment is conducted is irrelevant.",
+            "When inspecting/palpating/auscultating the abdomen the candidate should be looking/feeling for deformity, open wounds, tenderness, swelling.",
+            "*The EMR candidate is not required to auscultate the abdomen."
+          ],
+          "commentsZh": [
+            "从头到脚体格检查的先后顺序不作要求。",
+            "视诊/触诊/听诊腹部时，考生应查看并触摸畸形、开放伤口、压痛和肿胀。",
+            "EMR 考生不要求听诊腹部。"
+          ],
+          "sourcePage": 28
+        },
+        {
+          "id": "pe-back",
+          "nameEn": "Back",
+          "nameZh": "背部",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to examine the back where injuries are present, or pertinent to the C/C and/or",
+                "Finds an injury/abnormality and fails to treat/document"
+              ],
+              "errorsZh": [
+                "在背部存在损伤或与主诉相关时，没有检查背部。",
+                "发现了损伤/异常，却没有处理或记录。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Examines back but misses injury or abnormality pertinent to C/C"
+              ],
+              "errorsZh": [
+                "检查了背部，但漏掉与主诉相关的损伤或异常。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to examine the back when injuries are not present, or not pertinent to the C/C",
+                "Examines back but misses injury or abnormality NOT pertinent to C/C"
+              ],
+              "errorsZh": [
+                "在背部没有损伤或与主诉无关时，没有检查背部。",
+                "检查了背部，但漏掉与主诉无关的损伤或异常。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The order that the Head-to-Toe physical assessment is conducted is irrelevant.",
+            "When inspecting/palpating the back the candidate should be looking/feeling for deformity, open wounds, tenderness, and swelling.",
+            "Candidates should also be questioning patients (where applicable) for medical history in this region e.g. past trauma/recent back pain."
+          ],
+          "commentsZh": [
+            "从头到脚体格检查的先后顺序不作要求。",
+            "视诊/触诊背部时，考生应查看并触摸畸形、开放伤口、压痛和肿胀。",
+            "考生还应（在适用时）询问该区域的相关病史，例如既往外伤/近期背痛。"
+          ],
+          "sourcePage": 28
+        },
+        {
+          "id": "pe-lower-extremities",
+          "nameEn": "Lower Extremities",
+          "nameZh": "下肢",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to examine the lower extremities where injuries are present, or pertinent to the C/C and/or",
+                "Finds an injury/abnormality and fails to treat/document"
+              ],
+              "errorsZh": [
+                "在下肢存在损伤或与主诉相关时，没有检查下肢。",
+                "发现了损伤/异常，却没有处理或记录。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Examines lower extremities but misses injury or abnormality pertinent to C/C"
+              ],
+              "errorsZh": [
+                "检查了下肢，但漏掉与主诉相关的损伤或异常。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to examine the lower extremities when injuries are not present, or not pertinent to the C/C",
+                "Examines lower extremities but misses injury or abnormality NOT pertinent to C/C"
+              ],
+              "errorsZh": [
+                "在下肢没有损伤或与主诉无关时，没有检查下肢。",
+                "检查了下肢，但漏掉与主诉无关的损伤或异常。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The order that the Head-to-Toe physical assessment is conducted is irrelevant.",
+            "When inspecting/palpating the lower extremities the candidate should be looking/feeling for deformity, open wounds, tenderness, swelling.",
+            "The candidate should also assess for any numbness, paresthesia, deficits in strength or mobility",
+            "If there is an injury to an extremity then the candidate should also assess distal circulation, sensation, and function in both upper extremities.",
+            "Inspection/palpation of the hips/pelvis is considered part of the lower extremity assessment."
+          ],
+          "commentsZh": [
+            "从头到脚体格检查的先后顺序不作要求。",
+            "视诊/触诊下肢时，考生应查看并触摸畸形、开放伤口、压痛和肿胀。",
+            "考生还应评估有无麻木、感觉异常、肌力或活动度下降。",
+            "若肢体存在损伤，考生还应评估双侧肢体的远端循环、感觉和功能。",
+            "髋部/骨盆的视诊与触诊属于下肢评估的一部分。"
+          ],
+          "sourcePage": 29
+        },
+        {
+          "id": "pe-upper-extremities",
+          "nameEn": "Upper Extremities",
+          "nameZh": "上肢",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to examine the upper extremities where injuries are present, or pertinent to the C/C and/or",
+                "Finds an injury/abnormality and fails to treat/document"
+              ],
+              "errorsZh": [
+                "在上肢存在损伤或与主诉相关时，没有检查上肢。",
+                "发现了损伤/异常，却没有处理或记录。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Examines upper extremities but misses injury or abnormality pertinent to C/C"
+              ],
+              "errorsZh": [
+                "检查了上肢，但漏掉与主诉相关的损伤或异常。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Fails to examine the upper extremities when injuries are not present, or not pertinent to the C/C",
+                "Examines upper extremities but misses injury or abnormality NOT pertinent to C/C"
+              ],
+              "errorsZh": [
+                "在上肢没有损伤或与主诉无关时，没有检查上肢。",
+                "检查了上肢，但漏掉与主诉无关的损伤或异常。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The order that the Head-to-Toe physical assessment is conducted is irrelevant.",
+            "When inspecting/palpating the upper extremities the candidate should be looking/feeling for deformity, open wounds, tenderness, swelling.",
+            "The candidate should also assess for any numbness, paresthesia, deficits in grip strength or mobility",
+            "If there is an injury to an extremity then the candidate should also assess distal circulation, sensation, and function in both upper extremities."
+          ],
+          "commentsZh": [
+            "从头到脚体格检查的先后顺序不作要求。",
+            "视诊/触诊上肢时，考生应查看并触摸畸形、开放伤口、压痛和肿胀。",
+            "考生还应评估有无麻木、感觉异常、握力或活动度下降。",
+            "若肢体存在损伤，考生还应评估双侧上肢的远端循环、感觉和功能。"
+          ],
+          "sourcePage": 29
+        }
+      ]
+    },
+    {
+      "id": "skills-treatments",
+      "nameEn": "Skills and Treatments",
+      "nameZh": "技能与治疗",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "skill-airway-mgmt",
+          "nameEn": "Airway Management",
+          "nameZh": "气道管理（技能）",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Performs an airway maneuver inappropriate for C-spine precautions"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "在需要颈椎保护时使用了不适当的气道手法。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Does not suction the airway as per the standards outlined in the skills checklist",
+                "Does not properly size an airway adjunct",
+                "Chooses the wrong airway adjunct based on patient presentation"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "吸引气道没有达到技能核查表所列标准。",
+                "气道辅助器械没有正确量取尺寸。",
+                "根据患者表现选择了错误的气道辅助器械。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care",
+                "Does not verbalize lubricating the airway adjunct",
+                "Suctions the airway effectively without visualizing the airway"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。",
+                "没有口头说明会润滑气道辅助器械。",
+                "有效吸引了气道，但没有直视气道进行。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care."
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。"
+          ],
+          "sourcePage": 30
+        },
+        {
+          "id": "skill-breathing-mgmt",
+          "nameEn": "Breathing Management",
+          "nameZh": "呼吸管理（技能）",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Does not simulate proper use of the BVM",
+                "Does not assess effectiveness of ventilations (e.g. attempts to ventilate patient but does not confirm chest rise, or other indications of effective ventilations at any time)"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "没有正确模拟 BVM（球囊面罩）的使用。",
+                "没有评估通气效果（例如：尝试通气却自始至终不确认胸廓起伏或其他有效通气指征）。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Ventilates at a rate not appropriate for patient",
+                "Does not position the patient to ensure proper ventilations (e.g. attempts to ventilate a patient while 3/4 prone)",
+                "Does not ensure BVM is connected to oxygen at any time"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "通气频率不适合该患者。",
+                "没有把患者摆到能保证有效通气的体位（例如：在患者呈 3/4 俯卧位时尝试通气）。",
+                "自始至终没有确认 BVM 已连接氧气。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care",
+                "Prioritizes connecting oxygen before starting ventilations."
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。",
+                "先去连接氧气，而不是先开始通气。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care."
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。"
+          ],
+          "sourcePage": 30
+        },
+        {
+          "id": "skill-cpr-aed",
+          "nameEn": "CPR/AED",
+          "nameZh": "心肺复苏/AED",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Demonstrates no knowledge of how to use the AED"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "表现出完全不懂如何使用 AED。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Compresses the chest at a rate not appropriate for patient",
+                "Does not continue chest compressions while AED is charging",
+                "Improper hand placement for chest compressions detrimental to patient care"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "胸外按压频率不适合该患者。",
+                "AED 充电期间没有继续胸外按压。",
+                "按压手位不正确，对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care."
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。"
+          ],
+          "sourcePage": 31
+        },
+        {
+          "id": "skill-spinal-mgmt",
+          "nameEn": "Spinal Management",
+          "nameZh": "脊柱管理（技能）",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Excessive movement of the head",
+                "Manual stabilization is not maintained throughout roll (e.g. does not adequately support the head during a roll)"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "头部移动过大。",
+                "翻身过程中没有始终保持手法固定（例如：翻身时没有充分支撑头部）。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Does not properly size a hard collar",
+                "Does not place the patient in neutral alignment at any time possibly detrimental to patient care"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "硬质颈托没有正确量取尺寸。",
+                "自始至终没有让患者处于中立位，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care",
+                "Improper strapping not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。",
+                "绑带方式不当，但未对患者照护造成损害。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care."
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。"
+          ],
+          "sourcePage": 31
+        },
+        {
+          "id": "skill-fracture-mgmt",
+          "nameEn": "Fracture Management",
+          "nameZh": "骨折处理（技能）",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Does not manually support the limb at any time",
+                "Does not utilize proper splinting technique in the non-Priority patient (e.g. not applying the sager splint to a Non-Priority femur fracture when indicated)",
+                "Does not meet the standards for fracture management detrimental to patient care (not applying a pelvic binder when indicated)"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "自始至终没有用手支撑伤肢。",
+                "对非优先患者未采用正确的夹板技术（例如：非优先股骨骨折有指征时不使用 Sager 牵引夹板）。",
+                "骨折处理未达到标准，对患者照护造成损害（例如：有指征时不使用骨盆固定带）。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Does not sequence the application of splint correctly",
+                "Does not immobilize the joint above and below the fracture",
+                "Does not adequately ensure manual stabilization during splinting",
+                "Does not assess distal circulation or function",
+                "Improper strapping/padding, use of splint or incorrect amount of traction detrimental to patient care"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "夹板固定的操作顺序不正确。",
+                "没有固定骨折部位上下两端的关节。",
+                "上夹板期间没有充分保持手法固定。",
+                "没有评估远端循环或功能。",
+                "绑带/衬垫不当、夹板使用不当或牵引力度错误，对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care",
+                "Does not properly apply ice (e.g. 10 min on/5 min off)"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。",
+                "冰敷方法不正确（正确做法例如：敷 10 分钟、停 5 分钟）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care."
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。"
+          ],
+          "sourcePage": 32
+        },
+        {
+          "id": "skill-wound-mgmt",
+          "nameEn": "Wound Management",
+          "nameZh": "伤口处理（技能）",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Does not meet the standards for wound management detrimental to patient care (e.g. does not apply a chest seal to sucking chest wound)",
+                "Does not stabilize an impaled object"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "伤口处理未达到标准，对患者照护造成损害（例如：吸吮性胸部伤口不贴胸封贴）。",
+                "没有固定刺入体内的异物。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Chooses the wrong dressing for the wound (e.g. does not use a burn dressing for burns)",
+                "Does not assess distal circulation before and after bandaging when appropriate"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "为伤口选择了错误的敷料（例如：烧伤不用烧伤敷料）。",
+                "适用时没有在包扎前后评估远端循环。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care",
+                "Delay in management of non-critical wounds"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。",
+                "非危重伤口的处理延误。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care."
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。"
+          ],
+          "sourcePage": 32
+        },
+        {
+          "id": "skill-drug-admin",
+          "nameEn": "Drug Administration",
+          "nameZh": "给药（技能）",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs the skill with gross incompetence and/or with two or more errors",
+                "Administers a medication by the incorrect route",
+                "Choses the wrong IV fluid and/or",
+                "Gives incorrect dose/volume of drug or fluid",
+                "Makes assumptions when ruling out contraindications without proper assessment (e.g. asking if patient has a pneumothorax before admin of Entonox)"
+              ],
+              "errorsZh": [
+                "操作表现出严重不胜任，和/或出现两处及以上错误。",
+                "以错误的给药途径给药。",
+                "选择了错误的静脉输液液体。",
+                "给予的药物或液体剂量/容量错误。",
+                "排除禁忌证时靠主观臆断而非正规评估（例如：给 Entonox 前只问患者「你有没有气胸」）。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Performs the skill with an isolated error with the potential to be detrimental to patient care",
+                "Does not chose the appropriate site/needle for injection potentially detrimental to patient care",
+                "Uses the incorrect equipment not suitable for administration potentially causing errors (e.g. using a SQ needle instead of an IM, or using a blunt tip for the administration)"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，可能对患者照护造成损害。",
+                "注射部位/针头选择不当，可能对患者照护造成损害。",
+                "使用了不适合给药的错误器材，可能引发差错（例如：该用肌注针却用皮下针，或用钝头针给药）。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs the skill with an isolated error not detrimental to patient care",
+                "Administers D10W or normal saline at the incorrect maintenance rate potentially detrimental to patient care",
+                "Does not verbalize they would prime the S/L spray prior to use",
+                "Does not chose the appropriate needle for injection not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "操作中出现一处孤立错误，但未对患者照护造成损害。",
+                "以错误的维持速度输注 D10W 或生理盐水，可能对患者照护造成损害。",
+                "使用舌下喷剂前没有口头说明会先做预喷排空。",
+                "注射针头选择不当，但未对患者照护造成损害。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "If a skill is not performed the candidate may not be marked down for the performance of that skill. Instead, a deduction should be made in overall patient care.",
+            "The skills for drug administration are verbalized and should be marked as such.",
+            "For drug administration the candidates are expected to follow the procedures set out in the skills checklist. The candidates are expected to follow the 6 rights for each medication to receive a 0% deduction (the right documentation will be captured in the records and reports component).",
+            "Drug timings should reflect time from original route of administration"
+          ],
+          "commentsZh": [
+            "若某项技能根本没有执行，不应在该技能的操作表现上扣分，而应在「整体患者照护」项下扣分。",
+            "给药技能以口头描述方式进行，评分时应按此处理。",
+            "给药时考生应遵循技能核查表规定的流程；每种药物都应遵循「给药 6 项核对（6 rights）」才能不扣分（其中「正确记录」在记录与报告部分评分）。",
+            "给药时间应从最初给药途径的时间起算。"
+          ],
+          "sourcePage": 33
+        }
+      ]
+    },
+    {
+      "id": "protocols",
+      "nameEn": "Protocols",
+      "nameZh": "处置方案（Protocols）",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "protocols",
+          "nameEn": "Protocols",
+          "nameZh": "处置方案执行",
+          "weights": [100, 25, 15],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "Initiated protocol without proper indications (e.g. patient is not DLOC)",
+                "Does not rule out all the contraindications, detrimental to patient care",
+                "Does not complete baseline vital signs prior to initiating the protocol",
+                "Fails to administer a medication indicated by the protocol detrimental to patient care",
+                "Major delay in treatment or subsequent doses of medication (IV dextrose, epinephrine) detrimental to patient care",
+                "Performs the protocol with gross incompetence and/or with two or more errors"
+              ],
+              "errorsZh": [
+                "在没有正当指征的情况下启动了处置方案（例如：患者并无意识水平下降却按 DLOC 处理）。",
+                "没有排除全部禁忌证，对患者照护造成损害。",
+                "启动处置方案之前没有完成基线生命体征。",
+                "没有给予方案有指征的药物，对患者照护造成损害。",
+                "治疗或后续给药（静脉葡萄糖、肾上腺素）出现重大延误，对患者照护造成损害。",
+                "执行方案时表现出严重不胜任，和/或出现两处及以上错误。"
+              ]
+            },
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Does not rule out all the contraindications, potentially detrimental to patient care",
+                "Performs the protocol with isolated error with potential to be detrimental to patient care",
+                "Moderate delay in treatment or subsequent doses of medication (Nitro or Narcan)",
+                "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)",
+                "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)",
+                "Delay in treatment or subsequent doses of medication (e.g. Epinephrine) potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "没有排除全部禁忌证，可能对患者照护造成损害。",
+                "执行方案时出现一处孤立错误，可能对患者照护造成损害。",
+                "治疗或后续给药（硝酸甘油或纳洛酮）出现中度延误。",
+                "评估不充分就确定治疗（例如：仅凭意识水平判断是否需要纳洛酮）。",
+                "没有给予方案有指征的药物，但未对患者照护造成损害（例如：镇痛未给 Entonox）。",
+                "治疗或后续给药（例如肾上腺素）延误，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Does not rule out all the cautions of a medication",
+                "Minor delay in administration of treatment not detrimental to patient care (Glucogel)",
+                "Performs a 25% deduction error but independently recognizes mistake and corrects, if appropriate."
+              ],
+              "errorsZh": [
+                "没有排除药物的全部注意事项（cautions）。",
+                "治疗给药出现轻微延误，未对患者照护造成损害（例如 Glucogel）。",
+                "犯了本应扣 25% 的错误，但自行发现并（在适当时）予以纠正。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Protocols should be referenced as per the EMALB Examination Guidelines."
+          ],
+          "commentsZh": [
+            "处置方案以 EMALB 考试指南为准。"
+          ],
+          "sourcePage": 34
+        }
+      ]
+    },
+    {
+      "id": "progressive-goals",
+      "nameEn": "Progressive Goals",
+      "nameZh": "整体目标",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "overall-call-management",
+          "nameEn": "Overall Call Management",
+          "nameZh": "整体呼叫管理",
+          "weights": [25, 15, 10],
+          "errorsByWeight": [
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Does not manage the simulation effectively or efficiently: including not using additional resources causing excessive delays, or not communicating with patient, partner, or bystander that would have benefitted patient care.",
+                "Displays poor management and indecisiveness, does not display sufficient control or direction throughout the simulation detrimental to patient care or outcome (e.g. excessive delays spent locating equipment)",
+                "Performs the goal with two or more errors not captured in other categories"
+              ],
+              "errorsZh": [
+                "未能有效、高效地掌控整个模拟：包括不调用额外资源导致过度延误，或不与患者、搭档、旁观者沟通，而这些沟通本可让患者照护受益。",
+                "表现出管理不力和优柔寡断，全程缺乏足够的掌控与指挥，对患者照护或结局造成损害（例如：花过多时间找器材）。",
+                "在其他类别未涵盖的方面出现两处及以上错误。"
+              ]
+            },
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Manages the simulation to the desired outcome but with moderate deficiencies in call management. (e.g. little to no communication with patient, partner or bystanders, poor decision making, indecisiveness)",
+                "Does not complete a set of vital signs in less than 3 minutes and/or",
+                "Major delay in reassessing vital signs",
+                "Unable to complete a physical exam due to poor time management"
+              ],
+              "errorsZh": [
+                "把模拟推进到了预期结局，但呼叫管理存在中度缺陷（例如：几乎不与患者、搭档或旁观者沟通，决策差，优柔寡断）。",
+                "一组生命体征没能在 3 分钟内完成。",
+                "复测生命体征出现重大延误。",
+                "因时间管理不善而无法完成体格检查。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Manages the simulation to the desired outcome but with minor deficiencies (e.g. neglected to inform patient on one or two procedures that were occurring, minor communication errors or indecisiveness)",
+                "Completes partial set of vital signs but misses vital signs pertinent to CC",
+                "Moderate delay in reassessing vital signs"
+              ],
+              "errorsZh": [
+                "把模拟推进到了预期结局，但存在轻微缺陷（例如：有一两个操作没有事先告知患者，轻微的沟通失误或犹豫）。",
+                "只完成了部分生命体征，漏掉与主诉相关的项目。",
+                "复测生命体征出现中度延误。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The candidate should display appropriate call management for the complexity of the simulation, and patient presentation. The candidate should display appropriate stress management and communication to facilitate the simulation to the desired outcome.",
+            "This component should be used to capture errors not captured elsewhere.",
+            "The Evaluator should consider teamwork; delegation; use of witnesses/bystanders; communication with partner, patient, witnesses/bystanders and other health care providers; and time management.",
+            "Vitals - Priority Patient: Moderate is 7-8 minutes between sets, Major is greater than 9 minutes between sets.",
+            "Vitals - Non-Priority patient: Moderate is 17-18 minutes between sets, Major is greater than 19 minutes between sets."
+          ],
+          "commentsZh": [
+            "考生应针对模拟的复杂程度和患者表现展现相称的呼叫管理，并展现恰当的压力管理与沟通，把模拟推向预期结局。",
+            "此项用于收纳其他项目未涵盖的错误。",
+            "考官应考量团队协作、任务委派、对目击者/旁观者的利用、与搭档/患者/目击者/其他医护人员的沟通，以及时间管理。",
+            "生命体征——优先患者：两组之间间隔 7–8 分钟为中度缺陷，超过 9 分钟为重大缺陷。",
+            "生命体征——非优先患者：两组之间间隔 17–18 分钟为中度缺陷，超过 19 分钟为重大缺陷。"
+          ],
+          "sourcePage": 35
+        },
+        {
+          "id": "overall-patient-care",
+          "nameEn": "Overall Patient Care",
+          "nameZh": "整体患者照护",
+          "weights": [100, 25, 10],
+          "errorsByWeight": [
+            {
+              "weight": 100,
+              "errorsEn": [
+                "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)",
+                "Does not perform an act that was required based on patient presentation that is detrimental to patient care"
+              ],
+              "errorsZh": [
+                "做出可能危及患者生命或肢体、且未被其他主要评分项涵盖的行为（例如：对有脉搏的患者做胸外按压）。",
+                "根据患者表现本应执行的行为没有执行，对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 25,
+              "errorsEn": [
+                "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)",
+                "Displays poor regard for patient care (e.g. gross delay in recognizing a decline in patient presentation, or ignoring voiced complaints from a patient)",
+                "Displays behaviour that is unacceptable towards the patient (e.g. un-ethical remarks or inappropriate behaviour)",
+                "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "做出可能加重患者病情或损伤、且未被其他主要评分项涵盖的行为（例如：反复碰撞骨折的腿，造成明显移动和疼痛）。",
+                "对患者照护缺乏重视（例如：对患者病情恶化反应严重迟缓，或无视患者口头诉求）。",
+                "对患者做出不可接受的行为（例如：不合职业伦理的言论或不当举止）。",
+                "根据患者表现本应执行的行为没有执行，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 10,
+              "errorsEn": [
+                "Performs an act with minor deficiencies that is not listed in the major performance criteria",
+                "Repeated questioning not detrimental to patient care (does not listen to the patient requiring repeated investigation/history)",
+                "Does not perform an act that was required based on patient presentation that is not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "做出的行为有轻微缺陷，且未列入其他主要评分项。",
+                "反复重复提问但未损害患者照护（不认真听患者说话，导致需要反复询问病史）。",
+                "根据患者表现本应执行的行为没有执行，但未对患者照护造成损害。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "Deductions within this performance criterion should only occur if the candidate's performance cannot be captured elsewhere.",
+            "The candidate should always display respect and professionalism towards the patient. It is expected the candidate will treat the patient as real as possible and act as such throughout the evaluation."
+          ],
+          "commentsZh": [
+            "只有当考生的表现无法在其他评分项中体现时，才在此项扣分。",
+            "考生应始终对患者表现出尊重与专业素养，并在整个考试过程中尽可能把患者当作真实患者对待。"
+          ],
+          "sourcePage": 36
+        }
+      ]
+    },
+    {
+      "id": "timing",
+      "nameEn": "Timing",
+      "nameZh": "时机与复评",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "ongoing-abc-i",
+          "nameEn": "Ongoing Assessment of ABC I's",
+          "nameZh": "ABC 与干预措施的持续复评",
+          "weights": [15, 5, 3],
+          "errorsByWeight": [
+            {
+              "weight": 15,
+              "errorsEn": [
+                "Does not reassess A.B.C. I's after each major \"move\"",
+                "Does not reassess A.B.C. I's after a change in the patients LOC/GCS",
+                "Does not reassess primary interventions at any time"
+              ],
+              "errorsZh": [
+                "每次大的「移动」之后没有复评 ABC 和干预措施（ABC I's）。",
+                "患者意识水平/GCS 发生变化后没有复评 ABC 和干预措施。",
+                "自始至终没有复查一线干预措施。"
+              ]
+            },
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Only talks to the patient to reassess A.B.C. I's and/or delay in reassessment of A.B.C. I's, with potential to be detrimental to patient care.",
+                "Reassesses only 1-2 of 3 criteria",
+                "Delay in reassessment of primary interventions (e.g. does not recheck a deadly bleed after a major move)"
+              ],
+              "errorsZh": [
+                "只靠跟患者说话来复评 ABC 和干预措施，和/或复评延误，可能对患者照护造成损害。",
+                "三项标准只复评了一到两项。",
+                "复查一线干预措施延误（例如：大的移动之后没有复查致命性出血）。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Reassesses A.B.C. I's but makes errors (e.g. assesses pulse in incorrect location based on patient's presentation)"
+              ],
+              "errorsZh": [
+                "复评了 ABC 和干预措施，但有错误（例如：按患者表现来看摸脉位置不对）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "On-going reassessment of ABCs and interventions, also to include any primary interventions, e.g. bleed still controlled, straps for fracture management still intact and secure, chest seal is in place."
+          ],
+          "commentsZh": [
+            "对 ABC 和干预措施的持续复评还包括所有一线干预，例如：出血仍受控、骨折固定的绑带仍完好牢固、胸封贴仍在位。"
+          ],
+          "sourcePage": 37
+        },
+        {
+          "id": "pain-scale",
+          "nameEn": "Pain Scale",
+          "nameZh": "疼痛评分",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": ["Fails to obtain pain scale when indicated"],
+              "errorsZh": ["有指征时没有评估疼痛评分。"]
+            },
+            {
+              "weight": 3,
+              "errorsEn": ["Obtains pain scale but language leads to potential inaccuracy"],
+              "errorsZh": ["评估了疼痛评分，但提问用语可能导致结果不准确。"]
+            },
+            {
+              "weight": 1,
+              "errorsEn": ["Uses inappropriate scale"],
+              "errorsZh": ["使用了不恰当的评分量表。"]
+            }
+          ],
+          "commentsEn": [
+            "Component may be deemed N/A to assessment."
+          ],
+          "commentsZh": [
+            "此项可视评估情况判定为「不适用」。"
+          ],
+          "sourcePage": 37
+        }
+      ]
+    },
+    {
+      "id": "records-reports",
+      "nameEn": "Records and Reports",
+      "nameZh": "记录与报告",
+      "licence": "both",
+      "capDeduction": null,
+      "items": [
+        {
+          "id": "notification",
+          "nameEn": "Notification",
+          "nameZh": "医院通知",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to notify the hospital at any time for a critical patient",
+                "Report given with gross deficiencies"
+              ],
+              "errorsZh": [
+                "危重患者自始至终没有通知医院。",
+                "所作报告存在严重缺陷。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Failure to provide critical information potentially detrimental to patient care (e.g. not reporting ventilating the apneic patient)",
+                "Fails to notify the hospital at any time for a non-critical patient",
+                "Delay in notification of a critical patient potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "未提供关键信息，可能对患者照护造成损害（例如：没有报告正在为呼吸停止的患者通气）。",
+                "非危重患者自始至终没有通知医院。",
+                "危重患者的通知延误，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Notification is disorganized",
+                "Failure to provide non-critical information in a record or report",
+                "Notifies with inaccuracies not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "通知内容缺乏条理。",
+                "记录或报告中未提供非关键信息。",
+                "通知中有不准确之处，但未损害患者照护。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "A hospital notification should include: the patient's age and gender, the patient's chief complaint, the mechanism of injury if applicable, the history of chief complaint, patient vital signs, any treatments/protocols given, and relevant physical findings."
+          ],
+          "commentsZh": [
+            "医院通知应包括：患者年龄和性别、主诉、受伤机制（如适用）、现病史、生命体征、已给予的治疗/处置方案，以及相关体格检查发现。"
+          ],
+          "sourcePage": 38
+        },
+        {
+          "id": "hand-off-report",
+          "nameEn": "Hand-off Report",
+          "nameZh": "交接报告",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Fails to provide a report and/or is unsure how to provide a handover report",
+                "Report given with gross deficiencies"
+              ],
+              "errorsZh": [
+                "没有提供交接报告，和/或不知道如何进行交接。",
+                "所作报告存在严重缺陷。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Fails to provide critical information in a record or report potentially detrimental to patient care"
+              ],
+              "errorsZh": [
+                "记录或报告中未提供关键信息，可能对患者照护造成损害。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Report is disorganized",
+                "Failure to provide non-critical information in a record or report",
+                "Reports with inaccuracies not detrimental to patient care"
+              ],
+              "errorsZh": [
+                "报告缺乏条理。",
+                "记录或报告中未提供非关键信息。",
+                "报告中有不准确之处，但未损害患者照护。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "A verbal hand-off report should include: the patient's age and gender, the patient's chief complaint, the mechanism of injury if applicable, the history of chief complaint, patient initial and final vital signs, medical history, patient medications, patient allergies, any treatments/protocols given, and relevant physical findings"
+          ],
+          "commentsZh": [
+            "口头交接报告应包括：患者年龄和性别、主诉、受伤机制（如适用）、现病史、首末两组生命体征、既往病史、用药、过敏史、已给予的治疗/处置方案，以及相关体格检查发现。"
+          ],
+          "sourcePage": 38
+        },
+        {
+          "id": "documentation",
+          "nameEn": "Documentation",
+          "nameZh": "书面记录（PCR）",
+          "weights": [5, 3, 1],
+          "errorsByWeight": [
+            {
+              "weight": 5,
+              "errorsEn": [
+                "Deduction if the candidate does not submit a PCR",
+                "Deduction if the candidate submits a PCR but it is illegible"
+              ],
+              "errorsZh": [
+                "考生没有提交患者照护记录（PCR）。",
+                "提交了 PCR，但字迹无法辨认。"
+              ]
+            },
+            {
+              "weight": 3,
+              "errorsEn": [
+                "Deduction if the candidate misses significant data fields that are relevant to the simulation (e.g. missing three or more data fields)",
+                "Deduction if the data entered does not match what occurred in the simulation (e.g. medications and allergies don't match between the scenario and the documentation)"
+              ],
+              "errorsZh": [
+                "漏填与本次模拟相关的重要数据栏（例如：缺三个或以上数据栏）。",
+                "填写的数据与模拟中实际发生的不一致（例如：记录中的用药、过敏与情景不符）。"
+              ]
+            },
+            {
+              "weight": 1,
+              "errorsEn": [
+                "Deduction if the candidate submits a PCR but it contains minor deficiencies (e.g. missing one or two data fields that are relevant to the simulation)"
+              ],
+              "errorsZh": [
+                "提交了 PCR，但有轻微缺陷（例如：缺一到两个与模拟相关的数据栏）。"
+              ]
+            }
+          ],
+          "commentsEn": [
+            "The evaluator may have to remind the candidate to complete the PCR – this documentation should be provided to the evaluator before the next scenario begins.",
+            "When reviewing the PCR the focus should be on the patient's History (C/C, HxC/C, Past Med. Hx, Medications, and Allergies), Vital Signs, treatments, and relevant findings."
+          ],
+          "commentsZh": [
+            "考官可能需要提醒考生完成 PCR——该记录应在下一个情景开始前交给考官。",
+            "审阅 PCR 时应重点关注病史（主诉、现病史、既往病史、用药、过敏）、生命体征、治疗以及相关发现。"
+          ],
+          "sourcePage": 38
+        }
+      ]
+    }
+  ],
+  "autoFails": [
+    {
+      "itemId": "delicate-spine",
+      "actionEn": "Fails to initiate C-spine control at any time when indicated",
+      "actionZh": "在有指征时自始至终没有实施颈椎（C-spine）控制。",
+      "sourcePage": 13
+    },
+    {
+      "itemId": "delicate-spine",
+      "actionEn": "Releasing C-spine control when it is required, detrimental to patient care",
+      "actionZh": "在仍需颈椎控制时松开了颈椎控制，对患者照护造成损害。",
+      "sourcePage": 13
+    },
+    {
+      "itemId": "airway",
+      "actionEn": "Fails to assess airway in initial assessment",
+      "actionZh": "初步评估中没有评估气道。",
+      "sourcePage": 13
+    },
+    {
+      "itemId": "airway",
+      "actionEn": "Determines airway problems but fails to act to correct them",
+      "actionZh": "判断出气道存在问题，却没有采取行动加以纠正。",
+      "sourcePage": 13
+    },
+    {
+      "itemId": "airway",
+      "actionEn": "Opens the airway using a manual technique but fails to maintain/clear the airway and is detrimental to patient care",
+      "actionZh": "用手法打开了气道，却未能维持或清理气道，对患者照护造成损害。",
+      "sourcePage": 13
+    },
+    {
+      "itemId": "breathing",
+      "actionEn": "Fails to fully assess the patient's adequacy and quality of breathing",
+      "actionZh": "未充分评估患者呼吸是否足够及其质量。",
+      "sourcePage": 14
+    },
+    {
+      "itemId": "breathing",
+      "actionEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments.",
+      "actionZh": "判断出呼吸消失或不规则，却没有立即干预——这一要求涵盖初步评估以及之后生命体征和 ABC 复评中的每一次检查。",
+      "sourcePage": 14
+    },
+    {
+      "itemId": "circulation",
+      "actionEn": "Does not assess the patient's pulse during the initial assessment",
+      "actionZh": "初步评估中没有评估患者脉搏。",
+      "sourcePage": 15
+    },
+    {
+      "itemId": "circulation",
+      "actionEn": "Determines absent patient pulses but then does not intervene immediately (e.g., does not start CPR, does not position for hypotension at any time)",
+      "actionZh": "判断出患者脉搏消失，却没有立即干预（例如：不开始 CPR，或自始至终未对低血压患者摆位）。",
+      "sourcePage": 15
+    },
+    {
+      "itemId": "rapid-body-survey",
+      "actionEn": "A rapid exam or modified exam is not performed during the initial assessment or is performed in a manner insufficient to locate life/limb threatening conditions",
+      "actionZh": "初步评估中没有进行快速体格检查（或改良检查），或检查方式不足以发现危及生命/肢体的情况。",
+      "sourcePage": 16
+    },
+    {
+      "itemId": "rapid-body-survey",
+      "actionEn": "Determines life/limb threatening conditions and fails to intervene",
+      "actionZh": "发现了危及生命/肢体的情况却没有干预。",
+      "sourcePage": 16
+    },
+    {
+      "itemId": "rapid-body-survey",
+      "actionEn": "Intervenes incorrectly detrimental to patient care",
+      "actionZh": "干预方式错误，对患者照护造成损害。",
+      "sourcePage": 16
+    },
+    {
+      "itemId": "rapid-body-survey",
+      "actionEn": "Finds life threatening hemorrhage but then does not control the bleeding",
+      "actionZh": "发现危及生命的大出血，却没有控制出血。",
+      "sourcePage": 16
+    },
+    {
+      "itemId": "protocols",
+      "actionEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)",
+      "actionZh": "在没有正当指征的情况下启动了处置方案（例如：患者并无意识水平下降却按 DLOC 处理）。",
+      "sourcePage": 34
+    },
+    {
+      "itemId": "protocols",
+      "actionEn": "Does not rule out all the contraindications, detrimental to patient care",
+      "actionZh": "没有排除全部禁忌证，对患者照护造成损害。",
+      "sourcePage": 34
+    },
+    {
+      "itemId": "protocols",
+      "actionEn": "Does not complete baseline vital signs prior to initiating the protocol",
+      "actionZh": "启动处置方案之前没有完成基线生命体征。",
+      "sourcePage": 34
+    },
+    {
+      "itemId": "protocols",
+      "actionEn": "Fails to administer a medication indicated by the protocol detrimental to patient care",
+      "actionZh": "没有给予方案有指征的药物，对患者照护造成损害。",
+      "sourcePage": 34
+    },
+    {
+      "itemId": "protocols",
+      "actionEn": "Major delay in treatment or subsequent doses of medication (IV dextrose, epinephrine) detrimental to patient care",
+      "actionZh": "治疗或后续给药（静脉葡萄糖、肾上腺素）出现重大延误，对患者照护造成损害。",
+      "sourcePage": 34
+    },
+    {
+      "itemId": "protocols",
+      "actionEn": "Performs the protocol with gross incompetence and/or with two or more errors",
+      "actionZh": "执行方案时表现出严重不胜任，和/或出现两处及以上错误。",
+      "sourcePage": 34
+    },
+    {
+      "itemId": "overall-patient-care",
+      "actionEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)",
+      "actionZh": "做出可能危及患者生命或肢体、且未被其他主要评分项涵盖的行为（例如：对有脉搏的患者做胸外按压）。",
+      "sourcePage": 36
+    },
+    {
+      "itemId": "overall-patient-care",
+      "actionEn": "Does not perform an act that was required based on patient presentation that is detrimental to patient care",
+      "actionZh": "根据患者表现本应执行的行为没有执行，对患者照护造成损害。",
+      "sourcePage": 36
+    },
+    {
+      "itemId": "pain-management",
+      "actionEn": "Delaying the Entonox until after they have realigned or performed fracture management when they have administered Acetaminophen and Ibuprofen – 100%",
+      "actionZh": "在已给予 Acetaminophen（对乙酰氨基酚）和 Ibuprofen（布洛芬）的情况下，把 Entonox 拖延到复位或骨折处理之后才给——扣 100%。",
+      "sourcePage": 39
+    },
+    {
+      "itemId": "pain-management",
+      "actionEn": "Does not administer Entonox in the instance when indicated where it does cause further detriment to the patient condition (realigning a limb/performed fracture management) – 100%",
+      "actionZh": "在有指征、且不给药确实对患者状况造成进一步损害的情形下（复位肢体/进行骨折处理），没有给予 Entonox——扣 100%。",
+      "sourcePage": 39
+    }
+  ],
+  "painManagementRules": {
+    "rulesEn": [
+      "1. Administering Entonox for pain but not administering Acetaminophen and Ibuprofen (when indicated) – 10% deduction.",
+      "2. Administering Acetaminophen and Ibuprofen for pain but not Entonox – 25% deduction.",
+      "3. Administering one of either Acetaminophen and Ibuprofen for pain but not both and administers Entonox – 10% deduction.",
+      "4. Administering one of either Acetaminophen and Ibuprofen for pain but not both and does not administer Entonox – 25% deduction.",
+      "5. Administering all three for pain but onboarding the Acetaminophen and Ibuprofen before the Entonox – No deduction unless considerable delay in Entonox admin.",
+      "6. Delaying the Entonox until after they have realigned or performed fracture management when they have administered Acetaminophen and Ibuprofen – 100% deduction. Does not administer Entonox in the instance when indicated where it does cause further detriment to the patient condition (realigning a limb/performed fracture management) – 100% deduction; does not administer Entonox in the instance when it is indicated where it does not cause further detriment for the patient – 25% deduction."
+    ],
+    "rulesZh": [
+      "1. 给予 Entonox 镇痛，但在有指征时没有给予 Acetaminophen（对乙酰氨基酚）和 Ibuprofen（布洛芬）——扣 10%。",
+      "2. 给予 Acetaminophen 和 Ibuprofen 镇痛，但没有给予 Entonox——扣 25%。",
+      "3. Acetaminophen 和 Ibuprofen 只给了其中一种（没有两种都给），但给予了 Entonox——扣 10%。",
+      "4. Acetaminophen 和 Ibuprofen 只给了其中一种（没有两种都给），且没有给予 Entonox——扣 25%。",
+      "5. 三种镇痛药都给了，但先给 Acetaminophen 和 Ibuprofen、后给 Entonox——不扣分，除非 Entonox 的给药出现明显延误。",
+      "6. 在已给予 Acetaminophen 和 Ibuprofen 的情况下，把 Entonox 拖延到复位或骨折处理之后才给——扣 100%。在有指征、且不给药确实对患者状况造成进一步损害的情形下（复位肢体/进行骨折处理），没有给予 Entonox——扣 100%；在有指征、但不给药未对患者造成进一步损害的情形下，没有给予 Entonox——扣 25%。"
+    ],
+    "sixRightsNoteEn": "6 Rights: There are no deductions associated with not verbalizing the 6 rights for medications.",
+    "sixRightsNoteZh": "给药 6 项核对（6 Rights）：没有口头说出药物的 6 项核对不会被扣分。",
+    "sourcePage": 39
+  },
+  "timingRules": {
+    "examMinutes": 40,
+    "pcrMinutes": 5,
+    "rtcPackageMinutes": 15,
+    "nonRtcPackageMinutes": 30,
+    "vitalsIntervalPriority": { "moderate": "7-8 min", "major": ">9 min" },
+    "vitalsIntervalNonPriority": { "moderate": "17-18 min", "major": ">19 min" },
+    "notesEn": [
+      "Examinations are scheduled for 40 minutes and may not go over the time allotted.",
+      "RTC Scenarios (Unstable) – 15 minutes to transport / 25 minutes to hospital.",
+      "Non-RTC Scenarios (Stable) – 30 minutes to transport / 10 minutes to hospital.",
+      "The candidate has 5 minutes to complete and submit their patient care report.",
+      "The examiner has 10 minutes to complete their paperwork, grade the candidate's documentation, and prepare for the next examination.",
+      "Ready to load is defined as \"on the cot with straps secured\"; where the patient needs to be lifted off the floor (e.g. packaged spinal patient), for safety reasons, ready to load is defined as \"ready to be lifted onto the cot\".",
+      "Goal time to have a Priority patient ready to load is 15 minutes when there are minimal interventions required; if the candidate is required to perform interventions, there should be no penalty if they act with a sense of urgency.",
+      "Goal time to have a non-Priority patient ready to load is 30 minutes regardless of interventions required.",
+      "A set of vital signs should be completed in less than 3 minutes (see Overall Call Management).",
+      "Vitals - Priority Patient: Moderate is 7-8 minutes between sets, Major is greater than 9 minutes between sets.",
+      "Vitals - Non-Priority patient: Moderate is 17-18 minutes between sets, Major is greater than 19 minutes between sets."
+    ],
+    "notesZh": [
+      "考试时长为 40 分钟，不得超时。",
+      "RTC（快速转运，不稳定）情景——15 分钟内完成到「可转运」，25 分钟到医院。",
+      "非 RTC（稳定）情景——30 分钟内完成到「可转运」，10 分钟到医院。",
+      "考生有 5 分钟时间完成并提交患者照护记录（PCR）。",
+      "考官有 10 分钟时间完成文书、批改考生的记录，并为下一场考试做准备。",
+      "「可装载」定义为「已上担架床并系好约束带」；当患者需要从地面抬起时（如已打包的脊柱患者），出于安全考虑，「可装载」定义为「已准备好被抬上担架床」。",
+      "优先患者达到可装载状态的目标时间为 15 分钟（在所需干预很少的情况下）；如果考生必须执行干预，只要其行动带有紧迫感，就不应处罚。",
+      "非优先患者达到可装载状态的目标时间为 30 分钟，无论需要什么干预。",
+      "每组生命体征应在 3 分钟内完成（见「整体呼叫管理」）。",
+      "生命体征——优先患者：两组之间间隔 7–8 分钟为中度缺陷，超过 9 分钟为重大缺陷。",
+      "生命体征——非优先患者：两组之间间隔 17–18 分钟为中度缺陷，超过 19 分钟为重大缺陷。"
+    ]
+  }
+}
