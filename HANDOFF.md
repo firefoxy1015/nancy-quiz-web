@@ -112,6 +112,13 @@
 
 ---
 
+## 2.5 多 session 协作规则（重要）
+
+另一个会话在用 **v1 老格式**往章节题库加题（提交历史见 "Add ChN ..." 系列，作者 win@local）。规则：
+1. 那边继续往 `v1/question-bank.json` 或 `v1/data/question-bank.json` 加题没问题——v2 不直接读它们。
+2. 每次它们更新后，跑 `python tools/sync-v1-bank.py` 把新题重打标签+洗牌答案后灌进 `data/written/parts/nancy-foundation.json`（id 稳定，错题本不受影响），再 `python tools/validate.py`，再 push。
+3. **push 前先 `git pull --rebase`**——两边都在推 main，直接 push 会被拒。
+
 ## 3. 踩过的坑（必读，省你重踩）
 
 1. **Session 限额会杀长任务 agent**（本 session 被杀两轮，11:40pm PT 重置）。对策：**分块写盘**——每 25-50 题/2-4 个场景就写盘一次成合法 JSON（meta.count 更新），再续加。永远保持磁盘上的文件可解析。被杀后 SendMessage 原 agent id 可原地续跑（上下文还在）。
