@@ -1,4 +1,5 @@
-// Practical exam: scenario player with official deduction rubric, timers, PCR practice
+// Practical exam: scenario player with official deduction rubric, timers, PCR practice,
+// full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
 import { S, save, bi, biList, t, esc, loadJSON, nav } from './app.js';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
@@ -22,6 +23,10 @@ async function loadScenarios() {
   scenarioPool = { scenarios };
   return scenarioPool;
 }
+// scenarios usable on the current track: universal ones plus this track's focused ones
+function trackPool(scenarios) {
+  return scenarios.filter(s => !s.focus || s.focus === S.track);
+}
 
 const PHASE_NAMES = {
   dispatch: ['Dispatch', '派遣'], scene: ['Scene Assessment + PPE', '现场评估+PPE'],
@@ -31,15 +36,17 @@ const PHASE_NAMES = {
   interventions: ['Skills / Protocols / Drugs', '技能·协议·给药'], ongoing: ['Ongoing Assessment', '持续复评'],
   handoff: ['Notification · Hand-off · PCR', '通报·交接·PCR'],
 };
+const phaseName = id => PHASE_NAMES[id] ? t(PHASE_NAMES[id][0], PHASE_NAMES[id][1]) : id;
 
 /* ---------------- hub ---------------- */
 export async function renderPracticalHub(el) {
   const tr = S.track;
   const data = await loadScenarios();
-  const rubric = await loadJSON('./data/practical/rubric.json');
-  const n = data ? data.scenarios.length : 0;
-  const med = data ? data.scenarios.filter(s => s.type === 'medical').length : 0;
+  const pool = trackPool(data.scenarios);
+  const n = pool.length;
+  const med = pool.filter(s => s.type === 'medical').length;
   const runs = S.scenarioHistory;
+  const pm = S.practicalMock;
   el.innerHTML = `
     <div class="card">
       <h2>🚑 ${t('Practical Exam Camp', '实操营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
@@ -52,11 +59,22 @@ export async function renderPracticalHub(el) {
         <div class="stat"><b>${runs.length ? Math.max(...runs.map(r => r.score)) + '%' : '—'}</b><span>${t('best score', '最好成绩')}</span></div>
       </div>
     </div>
+    ${pm && pm.active ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      🎓 ${bi(`A full practical mock is in progress — next up: the ${pm.stage} scenario.`, `你有一场全真实操模考进行中——接下来是${pm.stage === 'medical' ? '内科' : '创伤'}场景。`, 'span')}
+      <a class="btn" style="margin-left:auto" href="#/scenario/${pm.ids[pm.stage]}">${t('Continue', '继续考试')} →</a>
+      <button class="btn ghost" id="cancelMock">${t('Abandon', '放弃')}</button>
+    </div>` : ''}
+    <div class="card" style="border-color:var(--accent)">
+      <h3 style="margin-top:0">🎓 ${t('Full practical mock — exam day simulation', '全真实操模考——考试日模拟')}</h3>
+      ${bi('Exactly like the real day: the system randomly draws one medical and one trauma scenario. Run both under the clock; you must score 70%+ on each to pass. When time expires the scenario ends and everything not done counts against you.',
+           '完全复刻真实考试日：系统随机抽 1 个内科 + 1 个创伤场景，连考两场。每场都要 70% 以上才算通过；40 分钟一到当场收卷，没做的项目全部按漏做扣分。')}
+      <div class="btn-row"><button class="btn big" id="startPMock" ${pm && pm.active ? 'disabled' : ''}>▶ ${t('Draw my two scenarios', '抽签开考')}</button></div>
+    </div>
     <div class="grid-2">
       <div class="card">
-        <h3 style="margin-top:0">🎬 ${t('Scenario simulator', '场景模拟器')}</h3>
-        ${bi('Run a full call phase by phase against the real examiner checklist, with live deduction scoring and the packaging clock.',
-             '按真实考官清单逐幕跑完整个 call，实时扣分计分，附打包倒计时。')}
+        <h3 style="margin-top:0">🎬 ${t('Practice one scenario', '单场练习')}</h3>
+        ${bi('Pick any scenario and run it phase by phase against the real examiner checklist — no pressure, learn the flow.',
+             '任选一个场景逐幕练，对照真实考官清单自评——没有收卷压力，先把流程练熟。')}
         <div class="btn-row"><a class="btn" href="#/scenarios">${t('Choose a scenario', '选场景')}</a></div>
       </div>
       <div class="card">
@@ -74,6 +92,21 @@ export async function renderPracticalHub(el) {
     </div>
     <div class="notice">${t('A website trains decisions, sequencing and timing. Hands-on skills (BVM, bandaging, spinal rolls) need real-world practice with real equipment.',
       '网站能练决策、流程和时间感；动手技能（BVM、包扎、脊柱滚动）必须用真实器材线下实练。')}</div>`;
+  const startBtn = el.querySelector('#startPMock');
+  if (startBtn) startBtn.onclick = async () => {
+    const meds = pool.filter(s => s.type === 'medical');
+    const tras = pool.filter(s => s.type === 'trauma');
+    if (!meds.length || !tras.length) { alert(t('Scenario pool incomplete.', '场景池还不完整。')); return; }
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+    S.practicalMock = { active: true, stage: 'medical', ids: { medical: pick(meds).id, trauma: pick(tras).id }, results: [] };
+    S.scenarioRun = null; run = null; save();
+    nav('/scenario/' + S.practicalMock.ids.medical);
+  };
+  const cancelBtn = el.querySelector('#cancelMock');
+  if (cancelBtn) cancelBtn.onclick = () => {
+    if (!confirm(t('Abandon this mock exam?', '确定放弃本场模考？'))) return;
+    S.practicalMock = null; S.scenarioRun = null; run = null; save(); renderPracticalHub(el);
+  };
 }
 
 /* ---------------- scenario list ---------------- */
@@ -81,9 +114,8 @@ export async function renderScenarioList(el, arg, params) {
   const data = await loadScenarios();
   if (!data) { el.innerHTML = `<div class="card"><h2>${t('Scenarios deploying…', '场景库部署中…')}</h2></div>`; return; }
   const type = params.type || 'all';
-  const list = data.scenarios
+  const list = trackPool(data.scenarios)
     .filter(s => type === 'all' || s.type === type)
-    // scenarios written from your own scope's perspective come first
     .sort((a, b) => (b.focus === S.track ? 1 : 0) - (a.focus === S.track ? 1 : 0));
   const mine = list.filter(s => s.focus === S.track).length;
   el.innerHTML = `
@@ -111,33 +143,41 @@ export async function renderScenarioList(el, arg, params) {
 
 /* ---------------- player ---------------- */
 let run = null;
+function persistRun() { S.scenarioRun = run ? { ...run } : null; save(); }
 export async function renderScenarioPlayer(el, id) {
   const data = await loadScenarios();
   const sc = data && data.scenarios.find(s => s.id === id);
   if (!sc) { el.innerHTML = `<div class="card">Scenario not found</div>`; return; }
   const phases = sc.phases.filter(p => !(p.id === 'fe' && S.track === 'emr'));
   if (!run || run.id !== id) {
-    run = { id, phaseIdx: 0, checks: {}, deductions: [], startedAt: null, rtcChoice: null, finished: false };
+    // resume a saved run after a refresh; otherwise start fresh
+    const saved = S.scenarioRun;
+    if (saved && saved.id === id && !saved.finished) run = { ...saved };
+    else run = { id, phaseIdx: 0, checks: {}, deductions: [], startedAt: null, rtcChoice: null, finished: false, timeUp: false };
   }
   drawPhase(el, sc, phases);
 }
 function drawPhase(el, sc, phases) {
   if (run.finished) { drawScenarioResult(el, sc); return; }
+  if (run.phaseIdx >= phases.length) run.phaseIdx = phases.length - 1;
   const p = phases[run.phaseIdx];
   const started = !!run.startedAt;
   const variant = S.track === 'emr' ? [sc.emrVariantEn, sc.emrVariantZh] : [sc.pcpVariantEn, sc.pcpVariantZh];
+  const inMock = isMockRun(sc);
   el.innerHTML = `
-    <a class="back-link" href="#/scenarios">← ${t('Scenarios', '场景库')}</a>
+    <a class="back-link" href="${inMock ? '#/practical' : '#/scenarios'}">← ${inMock ? t('Practical camp', '实操营') : t('Scenarios', '场景库')}</a>
     <div class="card">
       <div class="q-meta">
         <h2 style="font-size:1.05rem">${bi(sc.titleEn, sc.titleZh, 'span')}</h2>
-        <span class="pill ${sc.type}">${sc.type}</span>
+        <span style="display:flex;gap:6px">${inMock ? `<span class="pill gray">🎓 ${t('MOCK', '模考')}</span>` : ''}<span class="pill ${sc.type}">${sc.type}</span></span>
       </div>
       ${!started ? `
         <div class="sc-info"><div class="sc-label">Dispatch 派遣</div>${bi(sc.dispatchEn, sc.dispatchZh)}</div>
         ${variant[0] ? `<div class="notice">${t('Your level', '你的等级')} (${S.track.toUpperCase()}): ${bi(variant[0], variant[1], 'span')}</div>` : ''}
-        ${bi('When you press start, the 40-minute exam clock begins. Work each phase as if the examiner is watching: do it, say it, then open the self-check list and be honest.',
-             '按下开始后 40 分钟考试计时启动。把每一幕当考官在场：先做、边做边口述，然后打开该幕的自评清单，诚实勾选。')}
+        ${inMock ? bi('MOCK RULES: when the 40-minute clock hits zero the scenario ends itself and every unticked item deducts, exactly like the real exam.',
+                      '模考规则：40 分钟一到自动收卷，所有没勾的项目按漏做扣分——和真实考试一样。')
+                 : bi('When you press start, the 40-minute exam clock begins. Work each phase as if the examiner is watching: do it, say it, then open the self-check list and be honest.',
+                      '按下开始后 40 分钟考试计时启动。把每一幕当考官在场：先做、边做边口述，然后打开该幕的自评清单，诚实勾选。')}
         <div class="btn-row"><button class="btn big" id="startRun">▶ ${t('Start scenario', '开始场景')}</button></div>`
       : `
         <div class="timer-bar">
@@ -145,14 +185,16 @@ function drawPhase(el, sc, phases) {
           <span id="pkgClockWrap" class="hidden">📦 <b id="pkgClock">--:--</b> <span class="tiny" id="pkgLabel"></span></span>
           <span style="margin-left:auto">💯 <b id="scoreNow">100%</b></span>
         </div>
+        <div id="timeUpBanner" class="${run.timeUp ? '' : 'hidden'} notice" style="background:var(--red-soft);border-color:var(--red);color:#7f1d1d">
+          ⏰ ${t('TIME IS UP — in the real exam the scenario ends here.', '时间到——真实考试到这里就收卷了。')}</div>
         <div class="phase-track">${phases.map((ph, i) =>
-          `<span class="ph ${i < run.phaseIdx ? 'done' : i === run.phaseIdx ? 'now' : ''}">${PHASE_NAMES[ph.id] ? PHASE_NAMES[ph.id][0] : ph.id}</span>`).join('')}</div>
-        <h3 style="margin-top:0">${PHASE_NAMES[p.id] ? t(PHASE_NAMES[p.id][0], PHASE_NAMES[p.id][1]) : p.id}</h3>
+          `<span class="ph ${i < run.phaseIdx ? 'done' : i === run.phaseIdx ? 'now' : ''}">${phaseName(ph.id)}</span>`).join('')}</div>
+        <h3 style="margin-top:0">${phaseName(p.id)}</h3>
         ${p.infoEn ? `<div class="sc-info"><div class="sc-label">${t('Examiner info', '考官信息')}</div>${bi(p.infoEn, p.infoZh)}</div>` : ''}
         ${p.id === 'vitals' || p.id === 'ongoing' ? vitalsTable(sc, p.id === 'ongoing' ? 1 : 0) : ''}
         ${p.id === 'transport' ? rtcChooser() : ''}
         <details class="acc" id="selfCheck">
-          <summary>✅ ${t('Self-check: what did you actually do?', '自评清单：你刚才真的做了哪些？')}</summary>
+          <summary>✅ ${t('Done it out loud? Open the self-check', '这幕做完口述完了？打开自评清单')}</summary>
           <div class="acc-body">
             <p class="tiny">${t('Tick only what you did/said out loud. Unticked items deduct at exam weight.', '只勾你真正做了/口述了的项目；没勾的按考试权重扣分。')}</p>
             ${(p.expected || []).map((ex, i) => `
@@ -167,18 +209,29 @@ function drawPhase(el, sc, phases) {
           <button class="btn" id="nextPhase">${run.phaseIdx >= phases.length - 1 ? t('Finish & score', '结束并评分') : t('Next phase', '下一幕') + ' →'}</button>
         </div>`}
     </div>`;
-  if (!started) { el.querySelector('#startRun').onclick = () => { run.startedAt = Date.now(); drawPhase(el, sc, phases); }; return; }
-  el.querySelectorAll('[data-chk]').forEach(c => c.onchange = () => { run.checks[c.dataset.chk] = c.checked; c.closest('.chk').classList.toggle('done', c.checked); updateScoreNow(sc, phases); });
-  const rtcBtns = el.querySelectorAll('[data-rtc]');
-  rtcBtns.forEach(b => b.onclick = () => { run.rtcChoice = b.dataset.rtc; drawPhase(el, sc, phases); });
+  if (!started) {
+    el.querySelector('#startRun').onclick = () => { run.startedAt = Date.now(); persistRun(); drawPhase(el, sc, phases); };
+    return;
+  }
+  el.querySelectorAll('[data-chk]').forEach(c => c.onchange = () => {
+    run.checks[c.dataset.chk] = c.checked;
+    c.closest('.chk').classList.toggle('done', c.checked);
+    persistRun();
+    updateScoreNow();
+  });
+  el.querySelectorAll('[data-rtc]').forEach(b => b.onclick = () => { run.rtcChoice = b.dataset.rtc; persistRun(); drawPhase(el, sc, phases); });
   el.querySelector('#nextPhase').onclick = () => {
     if (p.id === 'transport' && !run.rtcChoice) { alert(t('Make your transport decision first.', '先做出转运决策。')); return; }
     scorePhase(sc, p);
-    if (run.phaseIdx >= phases.length - 1) { run.finished = true; drawScenarioResult(el, sc); }
-    else { run.phaseIdx++; drawPhase(el, sc, phases); }
+    if (run.phaseIdx >= phases.length - 1) finishRun(el, sc);
+    else { run.phaseIdx++; persistRun(); drawPhase(el, sc, phases); }
   };
-  tickScenario(sc);
-  updateScoreNow(sc, phases);
+  tickScenario(el, sc, phases);
+  updateScoreNow();
+}
+function isMockRun(sc) {
+  const pm = S.practicalMock;
+  return !!(pm && pm.active && pm.ids && pm.ids[pm.stage] === sc.id);
 }
 function rtcChooser() {
   return `<div class="btn-row">
@@ -204,38 +257,48 @@ function scorePhase(sc, p) {
     run.deductions.push({ phase: 'transport', actionEn: `Wrong transport category (correct: ${sc.priority.toUpperCase()})`, actionZh: `转运分类错误（正确：${sc.priority === 'rtc' ? 'RTC 危重' : '非 RTC 稳定'}）`, weight: 25, ref: 'transport' });
   }
 }
-function currentScore(capped = true) {
-  // caps: fe & exam sections cap at 15 per official rubric
+// time expired in mock mode: everything not yet committed counts as missed
+function commitRemaining(sc, phases) {
+  for (let i = run.phaseIdx; i < phases.length; i++) scorePhase(sc, phases[i]);
+}
+function finishRun(el, sc) {
+  run.finished = true;
+  S.scenarioRun = null; save();
+  drawScenarioResult(el, sc);
+}
+function currentScore() {
+  // caps: fe & exam sections cap at 15 per the official rubric
   let feDed = 0, examDed = 0, other = 0;
   for (const d of run.deductions) {
     if (d.phase === 'fe') feDed += d.weight;
     else if (d.phase === 'exam') examDed += d.weight;
     else other += d.weight;
   }
-  if (capped) { feDed = Math.min(feDed, 15); examDed = Math.min(examDed, 15); }
-  return Math.max(0, 100 - other - feDed - examDed);
+  return Math.max(0, 100 - other - Math.min(feDed, 15) - Math.min(examDed, 15));
 }
-function updateScoreNow(sc, phases) {
-  const el = document.getElementById('scoreNow');
-  if (!el) return;
-  // live estimate: committed deductions + unticked in current phase
-  const p = phases[run.phaseIdx];
-  let pending = 0;
-  (p.expected || []).forEach((ex, i) => { if (!run.checks[p.id + i]) pending += 0; }); // pending not counted until committed
+function updateScoreNow() {
+  const elS = document.getElementById('scoreNow');
+  if (!elS) return;
   const s = currentScore();
-  el.textContent = s + '%';
-  el.style.color = s < 70 ? 'var(--red)' : 'var(--green)';
+  elS.textContent = s + '%';
+  elS.style.color = s < 70 ? 'var(--red)' : 'var(--green)';
 }
 let scTick = null;
-function tickScenario(sc) {
+function tickScenario(el, sc, phases) {
   clearInterval(scTick);
   scTick = setInterval(() => {
     const mc = document.getElementById('mainClock');
     if (!mc || !run || run.finished || !run.startedAt) { clearInterval(scTick); return; }
     const elapsed = Date.now() - run.startedAt;
     const left = 40 * 60000 - elapsed;
-    mc.textContent = fmt(left);
+    mc.textContent = fmt(Math.max(0, left));
     mc.style.color = left < 5 * 60000 ? 'var(--red)' : left < 10 * 60000 ? 'var(--yellow)' : '';
+    if (left <= 0 && !run.timeUp) {
+      run.timeUp = true; persistRun();
+      if (isMockRun(sc)) { clearInterval(scTick); commitRemaining(sc, phases); finishRun(el, sc); return; }
+      const banner = document.getElementById('timeUpBanner');
+      if (banner) banner.classList.remove('hidden');
+    }
     const wrap = document.getElementById('pkgClockWrap');
     if (wrap && run.rtcChoice) {
       wrap.classList.remove('hidden');
@@ -255,6 +318,7 @@ function fmt(ms) {
 }
 
 /* ---------------- result ---------------- */
+let pcrTick = null;
 function drawScenarioResult(el, sc) {
   clearInterval(scTick);
   const score = currentScore();
@@ -262,16 +326,34 @@ function drawScenarioResult(el, sc) {
   const mins = run.startedAt ? Math.round((Date.now() - run.startedAt) / 60000) : 0;
   if (!run.saved) {
     S.scenarioHistory.push({ id: sc.id, date: new Date().toISOString().slice(0, 10), score, pass });
-    save(); run.saved = true;
+    run.saved = true;
+    // full-mock bookkeeping
+    const pm = S.practicalMock;
+    if (pm && pm.active && pm.ids[pm.stage] === sc.id && !pm.results.find(r => r.id === sc.id)) {
+      pm.results.push({ id: sc.id, type: sc.type, score, pass });
+      if (pm.stage === 'medical') pm.stage = 'trauma';
+      else pm.active = false;
+    }
+    save();
   }
+  const pm = S.practicalMock;
+  const mockNextId = pm && pm.active && pm.results.length === 1 ? pm.ids.trauma : null;
+  const mockDone = pm && !pm.active && pm.results && pm.results.length === 2 && pm.results.find(r => r.id === sc.id);
   const autoFails = run.deductions.filter(d => d.weight >= 100);
   el.innerHTML = `
-    <a class="back-link" href="#/scenarios">← ${t('Scenarios', '场景库')}</a>
+    <a class="back-link" href="${pm && (pm.active || mockDone) ? '#/practical' : '#/scenarios'}">← ${pm && (pm.active || mockDone) ? t('Practical camp', '实操营') : t('Scenarios', '场景库')}</a>
     <div class="card score-hero">
       <div class="score-big ${pass ? 'pass' : 'fail'}">${score}%</div>
       <p><b>${bi(sc.titleEn, sc.titleZh, 'span')}</b></p>
-      <p class="muted">${pass ? t('PASS — 70% needed', '通过——及格线 70%') : t('BELOW 70% — review the deductions', '低于 70%——复盘扣分项')} · ${mins} min</p>
+      <p class="muted">${pass ? t('PASS — 70% needed', '通过——及格线 70%') : t('BELOW 70% — review the deductions', '低于 70%——复盘扣分项')} · ${mins} min${run.timeUp ? ' · ⏰ ' + t('time expired', '到点收卷') : ''}</p>
     </div>
+    ${mockNextId ? `<div class="card" style="border-color:var(--accent);text-align:center">
+      <h3 style="margin-top:0">🎓 ${t('Mock exam: scenario 1 of 2 complete', '模考：第 1 场结束')}</h3>
+      ${bi('Take a breath. The trauma scenario is next — in the real exam you would move to the second room now.',
+           '喘口气，接下来是创伤场景——真实考试现在就会带你去第二个考场。')}
+      <div class="btn-row" style="justify-content:center"><button class="btn big" id="nextMock">▶ ${t('Start trauma scenario', '开始创伤场景')}</button></div>
+    </div>` : ''}
+    ${mockDone ? mockSummary(pm) : ''}
     ${autoFails.length ? `<div class="card" style="border-color:var(--red);background:var(--red-soft)">
       <h3 style="margin-top:0;color:var(--red)">☠️ ${t('AUTO-FAIL', '直接挂科')}</h3>
       ${bi('You missed a 100%-deduction item. In the real exam this ends the scenario as a fail regardless of everything else you did well.',
@@ -282,7 +364,8 @@ function drawScenarioResult(el, sc) {
       <h3 style="margin-top:0">${t('Deductions taken', '被扣的分')}</h3>
       <ul class="deduct-list" style="list-style:none">
         ${run.deductions.sort((a, b) => b.weight - a.weight).map(d => `<li>
-          <span>${bi(d.actionEn, d.actionZh, 'span')} <span class="tiny">(${PHASE_NAMES[d.phase] ? PHASE_NAMES[d.phase][0] : d.phase})</span></span>
+          <span>${bi(d.actionEn, d.actionZh, 'span')} <span class="tiny">(${phaseName(d.phase)})</span>
+            ${d.ref ? ` <a class="tiny" href="#/rubric?item=${esc(d.ref)}">📖 ${t('rubric', '查细则')}</a>` : ''}</span>
           <b style="color:var(--red)">−${d.weight}%</b></li>`).join('')}
       </ul>
       <p class="tiny">${t('Functional enquiry and head-to-toe deductions are capped at −15% each, as in the real rubric.', '系统问诊和从头到脚检查的扣分按官方规则各封顶 −15%。')}</p>
@@ -296,25 +379,65 @@ function drawScenarioResult(el, sc) {
         <div class="acc-body">${bi(sc.handoffModelEn, sc.handoffModelZh)}</div></details>
     </div>
     <div class="card">
-      <h3 style="margin-top:0">📄 ${t('PCR practice (5 minutes in the real exam)', 'PCR 练习（真考限时 5 分钟）')}</h3>
+      <h3 style="margin-top:0">📄 ${t('PCR practice — 5 minutes, like the real exam', 'PCR 练习——限时 5 分钟，和真考一样')}</h3>
+      <div class="btn-row" style="margin-top:0;margin-bottom:8px">
+        <button class="btn secondary" id="pcrTimerBtn">▶ ${t('Start the 5-minute clock', '启动 5 分钟计时')}</button>
+        <span class="q-timer hidden" id="pcrClock">05:00</span>
+      </div>
       <textarea class="pcr-box" id="pcrBox" placeholder="${t('Write your patient care report here…', '在这里写你的 PCR…')}"></textarea>
       <div class="btn-row"><button class="btn secondary" id="revealPcr">${t('Reveal key points', '看关键点对照')}</button></div>
       <div id="pcrKey"></div>
     </div>
     <div class="btn-row">
-      <button class="btn" id="againBtn">🔁 ${t('Run again', '再来一遍')}</button>
-      <a class="btn ghost" href="#/scenarios">${t('Another scenario', '换个场景')}</a>
+      ${mockNextId || mockDone ? '' : `<button class="btn" id="againBtn">🔁 ${t('Run again', '再来一遍')}</button>
+      <a class="btn ghost" href="#/scenarios">${t('Another scenario', '换个场景')}</a>`}
     </div>`;
-  el.querySelector('#againBtn').onclick = () => { run = null; nav('/scenario/' + sc.id); renderScenarioPlayer(document.getElementById('view'), sc.id); };
+  const nextBtn = el.querySelector('#nextMock');
+  if (nextBtn) nextBtn.onclick = () => { run = null; S.scenarioRun = null; save(); nav('/scenario/' + mockNextId); };
+  const againBtn = el.querySelector('#againBtn');
+  if (againBtn) againBtn.onclick = () => { run = null; S.scenarioRun = null; save(); renderScenarioPlayer(document.getElementById('view'), sc.id); };
   el.querySelector('#revealPcr').onclick = () => {
     const k = sc.pcrKeyPoints || {};
     document.getElementById('pcrKey').innerHTML = `<table class="vitals-table" style="margin-top:10px">
       ${Object.entries(k).map(([f, v]) => `<tr><th>${esc(f)}</th><td>${esc(Array.isArray(v) ? v.join('; ') : v)}</td></tr>`).join('')}</table>`;
   };
+  el.querySelector('#pcrTimerBtn').onclick = () => {
+    const clock = el.querySelector('#pcrClock');
+    const box = el.querySelector('#pcrBox');
+    clock.classList.remove('hidden');
+    el.querySelector('#pcrTimerBtn').disabled = true;
+    box.focus();
+    const end = Date.now() + 5 * 60000;
+    clearInterval(pcrTick);
+    pcrTick = setInterval(() => {
+      const left = end - Date.now();
+      if (!document.getElementById('pcrClock')) { clearInterval(pcrTick); return; }
+      clock.textContent = fmt(Math.max(0, left));
+      clock.className = 'q-timer' + (left < 60000 ? ' crit' : left < 2 * 60000 ? ' warn' : '');
+      if (left <= 0) {
+        clearInterval(pcrTick);
+        box.readOnly = true;
+        box.style.background = 'var(--bg)';
+        clock.textContent = t('Time — pens down', '时间到，收笔');
+      }
+    }, 500);
+  };
+}
+function mockSummary(pm) {
+  const bothPass = pm.results.length === 2 && pm.results.every(r => r.pass);
+  return `<div class="card" style="border-color:${bothPass ? 'var(--green)' : 'var(--red)'}">
+    <h3 style="margin-top:0">🎓 ${t('Full practical mock — final result', '全真实操模考——总成绩')}</h3>
+    ${pm.results.map(r => `<div class="area-bar ${r.pass ? 'band-lgreen' : 'band-red'}">
+      <span class="area-tag">${r.score}</span>
+      <div><b>${r.type}</b> · ${r.pass ? t('PASS', '通过') : t('FAIL', '未过')} <span class="tiny">(${esc(r.id)})</span></div></div>`).join('')}
+    <p style="margin-top:10px"><b>${bothPass
+      ? '✅ ' + t('You passed both scenarios — exam-day standard met.', '两场全部通过——达到考试日标准！')
+      : '❌ ' + t('The real exam requires 70%+ on BOTH scenarios. Fail one, and you are reassigned another of the same type.', '真实考试要求两场都 70% 以上。挂哪类，补考就重抽哪类。')}</b></p>
+  </div>`;
 }
 
 /* ---------------- rubric browser ---------------- */
-export async function renderRubricBrowser(el) {
+export async function renderRubricBrowser(el, arg, params) {
   const r = await loadJSON('./data/practical/rubric.json');
   if (!r) { el.innerHTML = `<div class="card"><h2>${t('Rubric deploying…', '评分细则部署中…')}</h2></div>`; return; }
   const wcls = w => w >= 100 ? 'w100' : w >= 25 ? 'wbig' : w >= 10 ? 'wmid' : 'wsm';
@@ -333,7 +456,7 @@ export async function renderRubricBrowser(el) {
         <h3 style="margin-top:0">${bi(sec.nameEn, sec.nameZh, 'span')} ${sec.licence === 'pcp' ? '<span class="pill pcp">PCP</span>' : ''}
           ${sec.capDeduction ? `<span class="pill gray">cap −${sec.capDeduction}%</span>` : ''}</h3>
         ${sec.items.map(it => `
-          <details class="acc">
+          <details class="acc" id="rub-${esc(it.id)}">
             <summary>${bi(it.nameEn, it.nameZh, 'span')} <span style="margin-left:auto;display:flex;gap:4px">${it.weights.map(w => `<span class="rubric-w ${wcls(w)}">${w}%</span>`).join('')}</span></summary>
             <div class="acc-body">
               ${it.errorsByWeight.map(g => `
@@ -346,6 +469,15 @@ export async function renderRubricBrowser(el) {
     ${r.painManagementRules ? `<div class="card">
       <h3 style="margin-top:0">💊 ${t('Pain Management special rules (Appendix A)', '疼痛管理专项扣分规则 (附录A)')}</h3>
       <ul>${biList(r.painManagementRules.rulesEn, r.painManagementRules.rulesZh)}</ul></div>` : ''}`;
+  // deep link from a deduction: open and scroll to the referenced item
+  if (params && params.item) {
+    const target = el.querySelector('#rub-' + CSS.escape(params.item));
+    if (target) {
+      target.open = true;
+      target.style.borderColor = 'var(--accent)';
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+    }
+  }
 }
 
 /* ---------------- auto-fail flashcards ---------------- */
