@@ -135,3 +135,5 @@
 - 仓库：`D:\Claude\nancy-quiz-web`（GitHub: firefoxy1015/nancy-quiz-web，Pages 从 main 根目录发布）
 - 记忆：`~/.claude/projects/D--Claude/memory/bc-emr-pcp-exam-facts.md` + `nancy-quiz-web-project.md`
 - 用户要求汇总：全站双语（EN主中辅）/ 场景是重点、要真实不编造 / EMR 和 PCP 同等分量 / 用户一进站就知道怎么用（引导页已做）/ 学完能有信心过考试
+
+11. **双语生成必查错别字（罕见字频率扫描）**：批量生成中文时会产生形近字损坏——实测出现过 梗阻→"梓阻"、瞳孔→"瞄孔"、癫痫→"癘疫"、荨麻疹→"荞麻疹"、桡动脉→"桥动脉" 等约 50 处。**分布统计和 JSON 校验完全查不出来**。做法：统计全库 CJK 字频，列出出现 ≤2 次的字人工过一遍，再对关键术语（梗阻/瞳孔/癫痫/桡动脉/颈静脉怒张…）做存在性计数。`tools/validate.py` 没有覆盖这项，需要时手动跑。
