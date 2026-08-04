@@ -449,12 +449,19 @@ function finishMock(el) {
       ${Object.entries(areaStat).sort().map(([a, s]) => {
         const p = Math.round(s.right / s.total * 100);
         const [band, label] = bandOf(p);
+        // weak areas link straight into filtered practice — the report is only
+        // useful if acting on it is one tap away
+        const weak = p < 70;
         return `<div class="area-bar ${band}">
           <span class="area-tag">${a}</span>
-          <div style="flex:1"><div style="display:flex;justify-content:space-between"><span>${label}</span><b>${s.right}/${s.total} (${p}%)</b></div>
+          <div style="flex:1"><div style="display:flex;justify-content:space-between;gap:8px">
+            <span>${label}</span><b>${s.right}/${s.total} (${p}%)</b></div>
           <div class="area-meter"><i style="width:${p}%"></i></div></div>
+          <a class="btn ${weak ? '' : 'ghost'}" style="flex:0 0 auto;padding:6px 12px;font-size:.78rem"
+             href="#/practice?area=${a}">${weak ? t('Drill this', '专项攻克') : t('Practise', '再练')}</a>
         </div>`;
       }).join('')}
+      <p class="tiny" style="margin-top:10px">${t('Anything under 70% is flagged. Tap "Drill this" to practise only that competency area.', '低于 70% 的会被标出。点「专项攻克」只刷那个能力域的题。')}</p>
     </div>
     <div class="card">
       <div class="btn-row">
