@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico} from './app.js?v=7';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico} from './app.js?v=8';
 
 let session = null; // current exam session (mock or practice)
 
