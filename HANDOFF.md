@@ -112,12 +112,9 @@
 
 ---
 
-## 2.5 多 session 协作规则（重要）
+## 2.5 历史协作说明
 
-另一个会话在用 **v1 老格式**往章节题库加题（提交历史见 "Add ChN ..." 系列，作者 win@local）。规则：
-1. 那边继续往 `v1/question-bank.json` 或 `v1/data/question-bank.json` 加题没问题——v2 不直接读它们。
-2. 每次它们更新后，跑 `python tools/sync-v1-bank.py` 把新题重打标签+洗牌答案后灌进 `data/written/parts/nancy-foundation.json`（id 稳定，错题本不受影响），再 `python tools/validate.py`，再 push。
-3. **push 前先 `git pull --rebase`**——两边都在推 main，直接 push 会被拒。
+曾有一个并行会话（作者 win@local，提交 "Add ChN ..." 系列）用 v1 老格式往章节题库加题——**该会话已于 2026-08 弃用**，它的 504 题已通过 `tools/sync-v1-bank.py` 一次性导入并经过质量审计清洗（见 tools/audit/）。以后不会再有 v1 格式的新题进来；`sync-v1-bank.py` 保留仅作归档用途。质量原则（用户定的）：**不是越多越好**——新增任何题都必须达到 HANDOFF 第 2 节 B 的质量红线，宁缺毋滥。push 前照例 `git pull --rebase`。
 
 ## 3. 踩过的坑（必读，省你重踩）
 
