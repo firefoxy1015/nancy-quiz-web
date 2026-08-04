@@ -1,9 +1,9 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=4';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=4';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=4';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=5';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=5';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=5';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -13,9 +13,13 @@ function loadState() {
   catch { return defaultState(); }
 }
 function defaultState() {
-  return { track: null, lang: 'both', wrong: {}, mockHistory: [], scenarioHistory: [], practiceStats: {}, jurisHistory: [] };
+  return { track: null, lang: 'both', theme: 'auto', wrong: {}, mockHistory: [], scenarioHistory: [], practiceStats: {}, jurisHistory: [] };
 }
 export function save() { localStorage.setItem(LS_KEY, JSON.stringify(S)); }
+
+/* ---------------- icons ---------------- */
+// inline sprite symbols live in index.html
+export function ico(name, cls = '') { return `<svg class="icon ${cls}"><use href="#i-${name}"/></svg>`; }
 
 /* ---------------- i18n ---------------- */
 export function bi(en, zh, tag = 'div') {
@@ -137,7 +141,7 @@ async function renderHome(el) {
           </button>
         </div>
         <div class="btn-row" style="justify-content:center;margin-top:18px">
-          <a class="btn secondary" href="#/guide">📘 ${t('How to use this site', '怎么用这个网站')}</a>
+          <a class="btn secondary" href="#/guide">${ico('cap')} ${t('How to use this site', '怎么用这个网站')}</a>
         </div>
       </div>`;
     return;
@@ -158,19 +162,19 @@ async function renderHome(el) {
       <p class="muted">${t('Three exams stand between you and your licence. Attack all three.', '拿牌要过三关，三关都在这里练。')}</p>
       <div class="pillar-row">
         <div class="pillar">
-          <div class="p-head"><span class="p-ico">📝</span>${t('Written', '笔试')}</div>
+          <div class="p-head"><span class="p-ico">${ico('pen')}</span>${t('Written', '笔试')}</div>
           <div class="p-facts">${writtenFacts}</div>
           ${lastMock ? `<div class="tiny">${t('Last mock', '上次模考')}: <b>${lastMock.pct}%</b> (${lastMock.date})</div>` : `<div class="tiny">${t('No mock exams yet', '还没做过模考')}</div>`}
           <a class="btn" href="#/written">${t('Enter', '进入')}</a>
         </div>
         <div class="pillar">
-          <div class="p-head"><span class="p-ico">⚖️</span>${t('Jurisprudence', '法规考')}</div>
+          <div class="p-head"><span class="p-ico">${ico('scale')}</span>${t('Jurisprudence', '法规考')}</div>
           <div class="p-facts">${t('EMALB · 25Q · no time limit · pass 80%', 'EMALB · 25题 · 不限时 · 80%及格')}</div>
           <div class="tiny">${S.jurisHistory.length ? t(`${S.jurisHistory.length} mock(s) done`, `已做 ${S.jurisHistory.length} 次模拟`) : t('Highest pass mark of the three!', '三关里及格线最高的一关！')}</div>
           <a class="btn" href="#/juris">${t('Enter', '进入')}</a>
         </div>
         <div class="pillar">
-          <div class="p-head"><span class="p-ico">🚑</span>${t('Practical', '实操')}</div>
+          <div class="p-head"><span class="p-ico">${ico('ambulance')}</span>${t('Practical', '实操')}</div>
           <div class="p-facts">${t('1 medical + 1 trauma · 40 min · pass 70% (deduction-based)', '1内科+1创伤 · 每场40分钟 · 扣分制70%过')}</div>
           <div class="tiny">${scen ? t(`${scen} scenario run(s)`, `已练 ${scen} 场`) : t('Practice with the real grading rubric', '用真实考官扣分表练习')}</div>
           <a class="btn" href="#/practical">${t('Enter', '进入')}</a>
@@ -180,11 +184,11 @@ async function renderHome(el) {
     <div class="card">
       <h3 style="margin-top:0">${t('Quick actions', '快捷入口')}</h3>
       <div class="btn-row">
-        <a class="btn secondary" href="#/guide">📘 ${t('How to use / study path', '使用指南·备考路线')}</a>
-        <a class="btn secondary" href="#/study">📖 ${t('Study library', '学习内容库')}</a>
-        <a class="btn secondary" href="#/wrong">❌ ${t(`Wrong answers (${wrongCount})`, `错题本 (${wrongCount})`)}</a>
-        <a class="btn secondary" href="#/autofails">☠️ ${t('Auto-fail traps', '直接挂科陷阱')}</a>
-        <a class="btn secondary" href="#/info">ℹ️ ${t('Exam logistics & fees', '考务流程与费用')}</a>
+        <a class="btn secondary" href="#/guide">${ico('cap')} ${t('How to use / study path', '使用指南·备考路线')}</a>
+        <a class="btn secondary" href="#/study">${ico('book')} ${t('Study library', '学习内容库')}</a>
+        <a class="btn secondary" href="#/wrong">${ico('x')} ${t(`Wrong answers (${wrongCount})`, `错题本 (${wrongCount})`)}</a>
+        <a class="btn secondary" href="#/autofails">${ico('skull')} ${t('Auto-fail traps', '直接挂科陷阱')}</a>
+        <a class="btn secondary" href="#/info">${ico('info')} ${t('Exam logistics & fees', '考务流程与费用')}</a>
       </div>
     </div>
     ${rules ? `<div class="card">
@@ -192,7 +196,7 @@ async function renderHome(el) {
       <ul class="steps" style="list-style:none">
         <li class="step"><span class="step-num">3</span>${bi('Three attempts per exam. Fail all three → repeat your entire training program.', '每门考试只有 3 次机会，三次全挂就要重读整个课程。')}</li>
         <li class="step"><span class="step-num">12</span>${bi('All exams must be passed within 12 months of finishing your course.', '所有考试必须在课程结业后 12 个月内全部通过。')}</li>
-        <li class="step"><span class="step-num">⚠️</span>${bi('Practical exams are only scheduled after written + jurisprudence are passed — do those first.', '实操考要等笔试和法规考都过了才给排期——先攻前两关。')}</li>
+        <li class="step"><span class="step-num">!</span>${bi('Practical exams are only scheduled after written + jurisprudence are passed — do those first.', '实操考要等笔试和法规考都过了才给排期——先攻前两关。')}</li>
       </ul>
     </div>` : ''}`;
 }
@@ -201,7 +205,7 @@ async function renderHome(el) {
 async function renderGuide(el) {
   el.innerHTML = `
     <div class="card">
-      <h2>📘 ${t('How to use this site', '怎么用这个网站')}</h2>
+      <h2>${ico('cap')} ${t('How to use this site', '怎么用这个网站')}</h2>
       <p class="muted">${t('A complete path from zero to exam-ready. Follow the six steps in order.', '从零到考前就绪的完整路线，按下面六步走。')}</p>
       <div class="steps">
         <div class="step"><span class="step-num">1</span><div>
@@ -256,5 +260,21 @@ document.getElementById('view').addEventListener('click', e => {
   const tb = e.target.closest('[data-pick-track]');
   if (tb) { S.track = tb.dataset.pickTrack; save(); nav('/'); route(); }
 });
+// theme: auto (follow OS) → light → dark → auto
+document.getElementById('themeBtn').addEventListener('click', () => {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (S.theme === 'auto') S.theme = prefersDark ? 'light' : 'dark';
+  else if (S.theme === (prefersDark ? 'light' : 'dark')) S.theme = prefersDark ? 'dark' : 'light';
+  else S.theme = 'auto';
+  applyTheme(); save();
+});
+function applyTheme() {
+  const root = document.documentElement;
+  if (S.theme === 'light' || S.theme === 'dark') root.dataset.theme = S.theme;
+  else delete root.dataset.theme;
+  const btn = document.getElementById('themeBtn');
+  if (btn) btn.title = S.theme === 'auto' ? 'Theme: auto 跟随系统' : (S.theme === 'dark' ? 'Theme: dark 深色' : 'Theme: light 浅色');
+}
+applyTheme();
 window.addEventListener('hashchange', route);
 route();

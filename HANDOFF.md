@@ -122,10 +122,12 @@
 2. **EMR 笔试是 EMALB 自己的考试（200题/2.5h/75%），不是 COPR**——网上搜到"EMR 考 COPR"是萨省的规定，别混。
 3. **EHS Act 是 RSBC 1996 c.182**（不是 c.108，那个 URL 404）。
 4. **唯一临床标准=EMALB 考纲**：评分手册明文禁止采纳其它机构标准。Nancy 教材/BCEHS/美国 AHA 细节与考纲冲突时，以考纲为准。
-5. **药物 id 命名**：aspirin / oral-glucose / d10w / tranexamic-acid…（见 drugs.json）。协议/场景里引用药物用这些 id，别自创（上次 agent 写了 acetylsalicylic-acid 和 glucose-gel，已修）。
-6. 官方评估模型是 **7 阶段**（Rescue Scene Evaluation→Primary(含Transport Decision)→Secondary→Protocols→Treatments→Load and transport→Records），场景播放器的 11 幕是训练用分解，两者并存不矛盾，别"统一"它们。
-7. 旧 v1 数据里 **copr-mock-bank.json 的 1000 题是模板垃圾，已废弃**，永远别迁移回来。
-8. juris bank 的选项格式是 `{id,textEn,textZh}`，written parts 是 `{key,en,zh}`——引擎两种都支持，别改存量。
+5. **改 UI 必须同步 4 处版本串**：`index.html` 的 css + app.js 引用，以及 `src/{exam,scenario,study}.js` 顶部 `from './app.js?v=N'`。⚠️ 子模块导入 app.js **必须带和入口相同的 ?v=**——URL 不同 = ES module 会创建两个独立实例，状态 S 会被复制成两份（这个隐患一直存在到 2026-08-03 才发现）。
+6. **主题/背景色**：页面背景设在 `html` 上，不要设在 `body`——body 背景会被传播到 canvas，某些引擎在 CSS 变量变化时不重绘，导致主题切换后旧色卡住。同理别给 body 的 background-color 加 transition。
+7. **药物 id 命名**：aspirin / oral-glucose / d10w / tranexamic-acid…（见 drugs.json）。协议/场景里引用药物用这些 id，别自创（上次 agent 写了 acetylsalicylic-acid 和 glucose-gel，已修）。
+8. 官方评估模型是 **7 阶段**（Rescue Scene Evaluation→Primary(含Transport Decision)→Secondary→Protocols→Treatments→Load and transport→Records），场景播放器的 11 幕是训练用分解，两者并存不矛盾，别"统一"它们。
+9. 旧 v1 数据里 **copr-mock-bank.json 的 1000 题是模板垃圾，已废弃**，永远别迁移回来。
+10. juris bank 的选项格式是 `{id,textEn,textZh}`，written parts 是 `{key,en,zh}`——引擎两种都支持，别改存量。
 
 ## 4. 资源位置
 

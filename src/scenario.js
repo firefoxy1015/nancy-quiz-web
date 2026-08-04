@@ -1,6 +1,6 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav } from './app.js';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=5';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -49,7 +49,7 @@ export async function renderPracticalHub(el) {
   const pm = S.practicalMock;
   el.innerHTML = `
     <div class="card">
-      <h2>🚑 ${t('Practical Exam Camp', '实操营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>${ico('ambulance')} ${t('Practical Exam Camp', '实操营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${bi('The real exam: one medical + one trauma scenario, 40 minutes each plus 5 minutes for the PCR. You start at 100% and every deficiency deducts — 70% passes. RTC (unstable) patients must be packaged in 15 minutes, stable patients in 30.',
            '真实考试：1 个内科 + 1 个创伤场景，每场 40 分钟另加 5 分钟写 PCR。扣分制 100% 起步，70% 及格。危重(RTC)患者 15 分钟内打包完，稳定患者 30 分钟。')}
       <div class="stat-row" style="margin-top:12px">
@@ -60,32 +60,32 @@ export async function renderPracticalHub(el) {
       </div>
     </div>
     ${pm && pm.active ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-      🎓 ${bi(`A full practical mock is in progress — next up: the ${pm.stage} scenario.`, `你有一场全真实操模考进行中——接下来是${pm.stage === 'medical' ? '内科' : '创伤'}场景。`, 'span')}
+      ${ico('cap')} ${bi(`A full practical mock is in progress — next up: the ${pm.stage} scenario.`, `你有一场全真实操模考进行中——接下来是${pm.stage === 'medical' ? '内科' : '创伤'}场景。`, 'span')}
       <a class="btn" style="margin-left:auto" href="#/scenario/${pm.ids[pm.stage]}">${t('Continue', '继续考试')} →</a>
       <button class="btn ghost" id="cancelMock">${t('Abandon', '放弃')}</button>
     </div>` : ''}
     <div class="card" style="border-color:var(--accent)">
-      <h3 style="margin-top:0">🎓 ${t('Full practical mock — exam day simulation', '全真实操模考——考试日模拟')}</h3>
+      <h3 style="margin-top:0">${ico('cap')} ${t('Full practical mock — exam day simulation', '全真实操模考——考试日模拟')}</h3>
       ${bi('Exactly like the real day: the system randomly draws one medical and one trauma scenario. Run both under the clock; you must score 70%+ on each to pass. When time expires the scenario ends and everything not done counts against you.',
            '完全复刻真实考试日：系统随机抽 1 个内科 + 1 个创伤场景，连考两场。每场都要 70% 以上才算通过；40 分钟一到当场收卷，没做的项目全部按漏做扣分。')}
       <div class="btn-row"><button class="btn big" id="startPMock" ${pm && pm.active ? 'disabled' : ''}>▶ ${t('Draw my two scenarios', '抽签开考')}</button></div>
     </div>
     <div class="grid-2">
       <div class="card">
-        <h3 style="margin-top:0">🎬 ${t('Practice one scenario', '单场练习')}</h3>
+        <h3 style="margin-top:0">${ico('film')} ${t('Practice one scenario', '单场练习')}</h3>
         ${bi('Pick any scenario and run it phase by phase against the real examiner checklist — no pressure, learn the flow.',
              '任选一个场景逐幕练，对照真实考官清单自评——没有收卷压力，先把流程练熟。')}
         <div class="btn-row"><a class="btn" href="#/scenarios">${t('Choose a scenario', '选场景')}</a></div>
       </div>
       <div class="card">
-        <h3 style="margin-top:0">☠️ ${t('Auto-fail traps', '直接挂科陷阱')}</h3>
+        <h3 style="margin-top:0"> ${t('Auto-fail traps', '直接挂科陷阱')}</h3>
         ${bi('Every 100%-deduction action from the official rubric as flashcards. Know them cold.',
              '官方评分表里所有 100% 扣分（=当场挂科）的动作做成闪卡，必须背到条件反射。')}
         <div class="btn-row"><a class="btn danger" href="#/autofails">${t('Drill them', '开背')}</a></div>
       </div>
     </div>
     <div class="card">
-      <h3 style="margin-top:0">📋 ${t('The official grading rubric', '官方评分细则')}</h3>
+      <h3 style="margin-top:0">${ico('list')} ${t('The official grading rubric', '官方评分细则')}</h3>
       ${bi('Browse every scoring item and its deduction weights — this is the exact standard examiners mark you against (EMALB, March 2025).',
            '逐项浏览每个考核点和扣分权重——这就是考官手里的评分标准（EMALB 2025年3月版）。')}
       <div class="btn-row"><a class="btn secondary" href="#/rubric">${t('Open rubric', '打开细则')}</a></div>
@@ -120,7 +120,7 @@ export async function renderScenarioList(el, arg, params) {
   const mine = list.filter(s => s.focus === S.track).length;
   el.innerHTML = `
     <div class="card">
-      <h2>🎬 ${t('Scenarios', '场景库')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
+      <h2>${ico('film')} ${t('Scenarios', '场景库')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
       ${mine ? `<p class="tiny">${t(`${mine} scenario(s) written specifically for your scope are listed first.`, `其中 ${mine} 个是专门按你的授权范围写的，排在前面。`)}</p>` : ''}
       <div class="btn-row">
         ${['all', 'medical', 'trauma'].map(x => `<a class="btn ${type === x ? '' : 'ghost'}" href="#/scenarios?type=${x}">${x === 'all' ? t('All', '全部') : x}</a>`).join('')}
@@ -132,7 +132,7 @@ export async function renderScenarioList(el, arg, params) {
         return `<button class="list-item" data-open="${esc(s.id)}">
           <span class="pill ${s.type}">${s.type}</span>
           <span>${bi(s.titleEn, s.titleZh, 'span')}
-            ${s.focus === S.track ? `<span class="tiny" style="color:var(--${S.track})">★ ${t(S.track.toUpperCase() + '-focused', S.track.toUpperCase() + ' 专属')}</span>` : ''}</span>
+            ${s.focus === S.track ? `<span class="tiny" style="color:var(--${S.track})"> ${t(S.track.toUpperCase() + '-focused', S.track.toUpperCase() + ' 专属')}</span>` : ''}</span>
           <span class="tag-count">${best ? best + '%' : t('new', '未练')}</span>
           <span class="li-arrow">›</span>
         </button>`;
@@ -169,7 +169,7 @@ function drawPhase(el, sc, phases) {
     <div class="card">
       <div class="q-meta">
         <h2 style="font-size:1.05rem">${bi(sc.titleEn, sc.titleZh, 'span')}</h2>
-        <span style="display:flex;gap:6px">${inMock ? `<span class="pill gray">🎓 ${t('MOCK', '模考')}</span>` : ''}<span class="pill ${sc.type}">${sc.type}</span></span>
+        <span style="display:flex;gap:6px">${inMock ? `<span class="pill gray">${ico('cap')} ${t('MOCK', '模考')}</span>` : ''}<span class="pill ${sc.type}">${sc.type}</span></span>
       </div>
       ${!started ? `
         <div class="sc-info"><div class="sc-label">Dispatch 派遣</div>${bi(sc.dispatchEn, sc.dispatchZh)}</div>
@@ -182,8 +182,8 @@ function drawPhase(el, sc, phases) {
       : `
         <div class="timer-bar">
           <span>⏱ <b id="mainClock">40:00</b></span>
-          <span id="pkgClockWrap" class="hidden">📦 <b id="pkgClock">--:--</b> <span class="tiny" id="pkgLabel"></span></span>
-          <span style="margin-left:auto">💯 <b id="scoreNow">100%</b></span>
+          <span id="pkgClockWrap" class="hidden">${ico('list')} <b id="pkgClock">--:--</b> <span class="tiny" id="pkgLabel"></span></span>
+          <span style="margin-left:auto">${ico('target')} <b id="scoreNow">100%</b></span>
         </div>
         <div id="timeUpBanner" class="${run.timeUp ? '' : 'hidden'} notice" style="background:var(--red-soft);border-color:var(--red);color:#7f1d1d">
           ⏰ ${t('TIME IS UP — in the real exam the scenario ends here.', '时间到——真实考试到这里就收卷了。')}</div>
@@ -194,7 +194,7 @@ function drawPhase(el, sc, phases) {
         ${p.id === 'vitals' || p.id === 'ongoing' ? vitalsTable(sc, p.id === 'ongoing' ? 1 : 0) : ''}
         ${p.id === 'transport' ? rtcChooser() : ''}
         <details class="acc" id="selfCheck">
-          <summary>✅ ${t('Done it out loud? Open the self-check', '这幕做完口述完了？打开自评清单')}</summary>
+          <summary>${ico('target')} ${t('Done it out loud? Open the self-check', '这幕做完口述完了？打开自评清单')}</summary>
           <div class="acc-body">
             <p class="tiny">${t('Tick only what you did/said out loud. Unticked items deduct at exam weight.', '只勾你真正做了/口述了的项目；没勾的按考试权重扣分。')}</p>
             ${(p.expected || []).map((ex, i) => `
@@ -235,15 +235,15 @@ function isMockRun(sc) {
 }
 function rtcChooser() {
   return `<div class="btn-row">
-    <button class="btn ${run.rtcChoice === 'rtc' ? 'danger' : 'ghost'}" data-rtc="rtc">🚨 ${t('RTC / Priority — package in 15 min', 'RTC 危重——15 分钟内打包')}</button>
-    <button class="btn ${run.rtcChoice === 'non-rtc' ? '' : 'ghost'}" data-rtc="non-rtc">🟢 ${t('Non-RTC / Stable — package in 30 min', '非 RTC 稳定——30 分钟内打包')}</button>
+    <button class="btn ${run.rtcChoice === 'rtc' ? 'danger' : 'ghost'}" data-rtc="rtc">${ico('cross')} ${t('RTC / Priority — package in 15 min', 'RTC 危重——15 分钟内打包')}</button>
+    <button class="btn ${run.rtcChoice === 'non-rtc' ? '' : 'ghost'}" data-rtc="non-rtc">${ico('target')} ${t('Non-RTC / Stable — package in 30 min', '非 RTC 稳定——30 分钟内打包')}</button>
   </div>`;
 }
 function vitalsTable(sc, setIdx) {
   const v = (sc.vitalsSets || [])[setIdx];
   if (!v) return '';
   const rows = [['GCS', v.gcs], ['BP', v.bp], ['Pulse', v.pulse], ['Resp', v.resp], ['Skin', v.skin], ['Pupils', v.pupils], ['SpO2', v.spo2], ['BGL', v.bgl], ['Temp', v.temp]].filter(r => r[1]);
-  return `<details class="acc"><summary>🩺 ${t(`Vitals set ${v.set} (ask, then reveal)`, `第 ${v.set} 套生命体征（先测再看）`)}</summary>
+  return `<details class="acc"><summary>${ico('cross')} ${t(`Vitals set ${v.set} (ask, then reveal)`, `第 ${v.set} 套生命体征（先测再看）`)}</summary>
     <div class="acc-body"><table class="vitals-table">${rows.map(r => `<tr><th>${r[0]}</th><td>${esc(r[1])}</td></tr>`).join('')}</table>
     <p class="tiny">${esc(v.timeHint || '')}</p></div></details>`;
 }
@@ -348,14 +348,14 @@ function drawScenarioResult(el, sc) {
       <p class="muted">${pass ? t('PASS — 70% needed', '通过——及格线 70%') : t('BELOW 70% — review the deductions', '低于 70%——复盘扣分项')} · ${mins} min${run.timeUp ? ' · ⏰ ' + t('time expired', '到点收卷') : ''}</p>
     </div>
     ${mockNextId ? `<div class="card" style="border-color:var(--accent);text-align:center">
-      <h3 style="margin-top:0">🎓 ${t('Mock exam: scenario 1 of 2 complete', '模考：第 1 场结束')}</h3>
+      <h3 style="margin-top:0">${ico('cap')} ${t('Mock exam: scenario 1 of 2 complete', '模考：第 1 场结束')}</h3>
       ${bi('Take a breath. The trauma scenario is next — in the real exam you would move to the second room now.',
            '喘口气，接下来是创伤场景——真实考试现在就会带你去第二个考场。')}
       <div class="btn-row" style="justify-content:center"><button class="btn big" id="nextMock">▶ ${t('Start trauma scenario', '开始创伤场景')}</button></div>
     </div>` : ''}
     ${mockDone ? mockSummary(pm) : ''}
     ${autoFails.length ? `<div class="card" style="border-color:var(--red);background:var(--red-soft)">
-      <h3 style="margin-top:0;color:var(--red)">☠️ ${t('AUTO-FAIL', '直接挂科')}</h3>
+      <h3 style="margin-top:0;color:var(--red)"> ${t('AUTO-FAIL', '直接挂科')}</h3>
       ${bi('You missed a 100%-deduction item. In the real exam this ends the scenario as a fail regardless of everything else you did well.',
            '你踩到了 100% 扣分项。在真实考试里这一条就直接判挂，不管你其它地方做得多好。')}
       <ul style="margin-top:8px">${autoFails.map(d => `<li>${bi(d.actionEn, d.actionZh, 'span')}</li>`).join('')}</ul>
@@ -365,21 +365,21 @@ function drawScenarioResult(el, sc) {
       <ul class="deduct-list" style="list-style:none">
         ${run.deductions.sort((a, b) => b.weight - a.weight).map(d => `<li>
           <span>${bi(d.actionEn, d.actionZh, 'span')} <span class="tiny">(${phaseName(d.phase)})</span>
-            ${d.ref ? ` <a class="tiny" href="#/rubric?item=${esc(d.ref)}">📖 ${t('rubric', '查细则')}</a>` : ''}</span>
+            ${d.ref ? ` <a class="tiny" href="#/rubric?item=${esc(d.ref)}">${ico('book')} ${t('rubric', '查细则')}</a>` : ''}</span>
           <b style="color:var(--red)">−${d.weight}%</b></li>`).join('')}
       </ul>
       <p class="tiny">${t('Functional enquiry and head-to-toe deductions are capped at −15% each, as in the real rubric.', '系统问诊和从头到脚检查的扣分按官方规则各封顶 −15%。')}</p>
-    </div>` : `<div class="card"><h3>🏆 ${t('Clean run — zero deductions', '零扣分完美运行')}</h3></div>`}
+    </div>` : `<div class="card"><h3>${ico('target')} ${t('Clean run — zero deductions', '零扣分完美运行')}</h3></div>`}
     ${(sc.criticalPitfallsEn || []).length ? `<div class="card">
-      <h3 style="margin-top:0">☠️ ${t('Auto-fail traps in this scenario', '本场景的直接挂科陷阱')}</h3>
+      <h3 style="margin-top:0"> ${t('Auto-fail traps in this scenario', '本场景的直接挂科陷阱')}</h3>
       <ul>${biList(sc.criticalPitfallsEn, sc.criticalPitfallsZh)}</ul></div>` : ''}
     <div class="card">
-      <h3 style="margin-top:0">🗣️ ${t('Model hand-off report', '示范交接报告')}</h3>
+      <h3 style="margin-top:0"> ${t('Model hand-off report', '示范交接报告')}</h3>
       <details class="acc"><summary>${t('Write/say yours first, then reveal', '先自己说一遍，再看示范')}</summary>
         <div class="acc-body">${bi(sc.handoffModelEn, sc.handoffModelZh)}</div></details>
     </div>
     <div class="card">
-      <h3 style="margin-top:0">📄 ${t('PCR practice — 5 minutes, like the real exam', 'PCR 练习——限时 5 分钟，和真考一样')}</h3>
+      <h3 style="margin-top:0">${ico('list')} ${t('PCR practice — 5 minutes, like the real exam', 'PCR 练习——限时 5 分钟，和真考一样')}</h3>
       <div class="btn-row" style="margin-top:0;margin-bottom:8px">
         <button class="btn secondary" id="pcrTimerBtn">▶ ${t('Start the 5-minute clock', '启动 5 分钟计时')}</button>
         <span class="q-timer hidden" id="pcrClock">05:00</span>
@@ -389,7 +389,7 @@ function drawScenarioResult(el, sc) {
       <div id="pcrKey"></div>
     </div>
     <div class="btn-row">
-      ${mockNextId || mockDone ? '' : `<button class="btn" id="againBtn">🔁 ${t('Run again', '再来一遍')}</button>
+      ${mockNextId || mockDone ? '' : `<button class="btn" id="againBtn">${ico('clock')} ${t('Run again', '再来一遍')}</button>
       <a class="btn ghost" href="#/scenarios">${t('Another scenario', '换个场景')}</a>`}
     </div>`;
   const nextBtn = el.querySelector('#nextMock');
@@ -426,13 +426,13 @@ function drawScenarioResult(el, sc) {
 function mockSummary(pm) {
   const bothPass = pm.results.length === 2 && pm.results.every(r => r.pass);
   return `<div class="card" style="border-color:${bothPass ? 'var(--green)' : 'var(--red)'}">
-    <h3 style="margin-top:0">🎓 ${t('Full practical mock — final result', '全真实操模考——总成绩')}</h3>
+    <h3 style="margin-top:0">${ico('cap')} ${t('Full practical mock — final result', '全真实操模考——总成绩')}</h3>
     ${pm.results.map(r => `<div class="area-bar ${r.pass ? 'band-lgreen' : 'band-red'}">
       <span class="area-tag">${r.score}</span>
       <div><b>${r.type}</b> · ${r.pass ? t('PASS', '通过') : t('FAIL', '未过')} <span class="tiny">(${esc(r.id)})</span></div></div>`).join('')}
     <p style="margin-top:10px"><b>${bothPass
-      ? '✅ ' + t('You passed both scenarios — exam-day standard met.', '两场全部通过——达到考试日标准！')
-      : '❌ ' + t('The real exam requires 70%+ on BOTH scenarios. Fail one, and you are reassigned another of the same type.', '真实考试要求两场都 70% 以上。挂哪类，补考就重抽哪类。')}</b></p>
+      ? ico('target') + ' ' + t('You passed both scenarios — exam-day standard met.', '两场全部通过——达到考试日标准！')
+      : ico('x') + ' ' + t('The real exam requires 70%+ on BOTH scenarios. Fail one, and you are reassigned another of the same type.', '真实考试要求两场都 70% 以上。挂哪类，补考就重抽哪类。')}</b></p>
   </div>`;
 }
 
@@ -444,7 +444,7 @@ export async function renderRubricBrowser(el, arg, params) {
   el.innerHTML = `
     <a class="back-link" href="#/practical">← ${t('Practical camp', '实操营')}</a>
     <div class="card">
-      <h2>📋 ${t('Official Grading Rubric', '官方评分细则')}</h2>
+      <h2>${ico('list')} ${t('Official Grading Rubric', '官方评分细则')}</h2>
       <p class="tiny">${esc(r.meta.source)} · ${esc(r.meta.sourceVersion)} · ${t('start at 100%, pass at 70%', '100% 起扣，70% 及格')}</p>
       <h3>${t('Deficiency levels', '缺陷分级')}</h3>
       <details class="acc"><summary>*** Major</summary><div class="acc-body"><ul>${biList(r.deficiencyLevels.majorEn, r.deficiencyLevels.majorZh)}</ul></div></details>
@@ -467,7 +467,7 @@ export async function renderRubricBrowser(el, arg, params) {
           </details>`).join('')}
       </div>`).join('')}
     ${r.painManagementRules ? `<div class="card">
-      <h3 style="margin-top:0">💊 ${t('Pain Management special rules (Appendix A)', '疼痛管理专项扣分规则 (附录A)')}</h3>
+      <h3 style="margin-top:0">${ico('pill')} ${t('Pain Management special rules (Appendix A)', '疼痛管理专项扣分规则 (附录A)')}</h3>
       <ul>${biList(r.painManagementRules.rulesEn, r.painManagementRules.rulesZh)}</ul></div>` : ''}`;
   // deep link from a deduction: open and scroll to the referenced item
   if (params && params.item) {
@@ -490,12 +490,12 @@ export async function renderAutoFails(el) {
     el.innerHTML = `
       <a class="back-link" href="#/practical">← ${t('Practical camp', '实操营')}</a>
       <div class="card">
-        <h2>☠️ ${t('Auto-fail flashcards', '直接挂科闪卡')} <span class="tag-count">${pos + 1}/${order.length}</span></h2>
+        <h2> ${t('Auto-fail flashcards', '直接挂科闪卡')} <span class="tag-count">${pos + 1}/${order.length}</span></h2>
         ${bi('These actions (or omissions) are worth a 100% deduction — instant fail. Tap the card to reveal.', '这些动作（或不作为）直接扣 100% = 当场挂科。点卡片翻面。')}
         <div class="flash ${revealed ? 'revealed' : ''}" id="flashCard">
           ${revealed
             ? `<div style="font-size:1.05rem">${bi(af.actionEn, af.actionZh)}</div><div class="flash-hint">${esc(af.itemId || '')}</div>`
-            : `<div style="font-size:2rem">💀</div><div class="flash-hint">${t('Auto-fail #' + (pos + 1) + ' — can you name it? Tap to reveal.', '第 ' + (pos + 1) + ' 个挂科点——你能说出来吗？点开看。')}</div>`}
+            : `<div style="font-size:2rem">${ico('skull')}</div><div class="flash-hint">${t('Auto-fail #' + (pos + 1) + ' — can you name it? Tap to reveal.', '第 ' + (pos + 1) + ' 个挂科点——你能说出来吗？点开看。')}</div>`}
         </div>
         <div class="btn-row">
           <button class="btn ghost" id="prevF" ${pos === 0 ? 'disabled' : ''}>←</button>

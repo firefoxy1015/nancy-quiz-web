@@ -1,5 +1,5 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav } from './app.js';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=5';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -19,20 +19,20 @@ export async function renderStudyHub(el) {
     ? `<span class="tag-count">${all}</span>`
     : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
   const cards = [
-    ['assessment', '🧭', 'Patient Assessment Model', '患者评估模型',
+    ['assessment', ico('compass'), 'Patient Assessment Model', '患者评估模型',
       'The backbone of both written and practical. Learn the exact official sequence.', '笔试和实操共同的主线，按官方顺序学。', ''],
-    ['protocols', '📜', 'Protocols', '处置协议',
+    ['protocols', ico('list'), 'Protocols', '处置协议',
       'The decision trees examiners test: cardiac arrest to narcotic overdose.', '考官考的决策树：从心脏骤停到麻醉剂过量。', scopeTag(pMine, pAll)],
-    ['treatments', '🩹', 'Treatments', '处置主题',
+    ['treatments', ico('bandage'), 'Treatments', '处置主题',
       'Wound care, spinal, burns, CPR, environmental — every testable topic.', '伤口/脊柱/烧伤/CPR/环境急症——每个可考主题。', scopeTag(tMine, tAll)],
-    ['drugs', '💊', 'Drug Monographs', '药物专论',
+    ['drugs', ico('pill'), 'Drug Monographs', '药物专论',
       'Doses, contraindications, and who may give what.', '剂量、禁忌、给药权限。', scopeTag(dMine, dAll)],
-    ['reference', '🔤', 'Reference', '速查参考',
+    ['reference', ico('abc'), 'Reference', '速查参考',
       'Abbreviations, GCS, AVPU, history mnemonics, PCR fields.', '缩写表、GCS、AVPU、病史口诀、PCR 字段。', ''],
   ];
   el.innerHTML = `
     <div class="card">
-      <h2>📖 ${t('Study Library', '学习内容库')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>${ico('book')} ${t('Study Library', '学习内容库')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${bi('All content is structured from the official BC Provincial Examination Guidelines (June 15, 2026) — the only standard examiners may mark against. Page references included.',
            '所有内容都结构化自 BC 官方考纲（2026年6月15日现行版）——考官唯一被允许采用的标准。每条都带原文页码。')}
     </div>
@@ -46,7 +46,7 @@ export async function renderStudyHub(el) {
     </div>
     <div class="list-wrap">
       ${cards.map(c => `<button class="list-item" data-goto="/study/${c[0]}">
-        <span style="font-size:1.3rem">${c[1]}</span>
+        <span style="display:inline-flex;color:var(--accent);font-size:1.15rem">${c[1]}</span>
         <span>${bi(c[2], c[3], 'span')}<div class="tiny">${t(c[4], c[5])}</div></span>
         ${c[6]}
         <span class="li-arrow">›</span></button>`).join('')}
@@ -69,7 +69,7 @@ async function sAssessment(el) {
   el.innerHTML = `
     ${backStudy()}
     <div class="card">
-      <h2>🧭 ${t('Patient Assessment Model', '患者评估模型')}</h2>
+      <h2>${ico('compass')} ${t('Patient Assessment Model', '患者评估模型')}</h2>
       <p class="tiny">${esc(d.meta.source)} · pp.${esc(d.meta.sourcePages)}</p>
       ${bi('Master this order until it is automatic — the practical exam is scored phase by phase against it.',
            '把这个顺序练到条件反射——实操考试就是按它逐阶段评分的。')}
@@ -82,26 +82,26 @@ async function sAssessment(el) {
             const zh = (p.stepsZh || [])[j] || {};
             return `<div class="chk" style="cursor:default">
               <span>${bi(st.step, zh.step, 'span')}${st.detail ? `<div class="tiny">${bi(st.detail, zh.detail || '', 'span')}</div>` : ''}</span>
-              ${st.verbalize ? `<span class="chk-w" style="background:var(--accent-soft);color:var(--accent)">🗣 ${t('say it', '要口述')}</span>` : ''}
+              ${st.verbalize ? `<span class="chk-w" style="background:var(--accent-soft);color:var(--accent)"> ${t('say it', '要口述')}</span>` : ''}
             </div>`;
           }).join('')}
           ${(p.interventionsEn || []).length ? `<div class="detail-section"><h4>${t('Possible interventions', '可能触发的干预')}</h4><ul>${biList(p.interventionsEn, p.interventionsZh)}</ul></div>` : ''}
           <p class="tiny">p.${p.sourcePage || ''}</p>
         </div>
       </details>`).join('')}
-    ${d.unstableCriteria ? `<div class="card"><h3 style="margin-top:0">🚨 ${t('Unstable / RTC criteria', '危重(RTC)判定标准')}</h3>
+    ${d.unstableCriteria ? `<div class="card"><h3 style="margin-top:0">${ico('cross')} ${t('Unstable / RTC criteria', '危重(RTC)判定标准')}</h3>
       ${d.unstableCriteria.descriptionEn ? bi(d.unstableCriteria.descriptionEn, d.unstableCriteria.descriptionZh) : ''}
       ${[['primarySurveyFindings', t('Primary survey findings', '初级评估发现')],
          ['anatomicalFindings', t('Anatomical findings', '解剖学发现')],
          ['mechanismOfInjury', t('Mechanism of injury', '受伤机制')]]
         .map(([key, label]) => sec(label, d.unstableCriteria[key + 'En'], d.unstableCriteria[key + 'Zh'])).join('')}
       <p class="tiny">pp. ${pages(d.unstableCriteria.sourcePages)}</p></div>` : ''}
-    ${d.criticalHistory ? `<div class="card"><h3 style="margin-top:0">❓ ${t('Critical History Questions', '关键病史问题')}</h3>
+    ${d.criticalHistory ? `<div class="card"><h3 style="margin-top:0"> ${t('Critical History Questions', '关键病史问题')}</h3>
       ${(d.criticalHistory.mnemonics || []).map(m => `<details class="acc"><summary><b>${esc(m.name)}</b>${m.supplementary ? ` <span class="pill gray">${t('study aid', '辅助记忆')}</span>` : ''}</summary>
         <div class="acc-body"><ul>${biList(m.expansionEn, m.expansionZh)}</ul></div></details>`).join('')}
       ${renderCriticalHistory(d.criticalHistory)}
     </div>` : ''}
-    ${d.avpu ? `<div class="card"><h3 style="margin-top:0">🧠 AVPU</h3>
+    ${d.avpu ? `<div class="card"><h3 style="margin-top:0"> AVPU</h3>
       ${(d.avpu.levelsEn || []).map((lv, i) => {
         const lz = (d.avpu.levelsZh || [])[i] || {};
         return `<div class="chk" style="cursor:default">
@@ -110,7 +110,7 @@ async function sAssessment(el) {
         </div>`;
       }).join('')}
       ${(d.avpu.notesEn || []).length ? `<div class="detail-section"><h4>${t('Notes', '要点')}</h4><ul>${biList(d.avpu.notesEn, d.avpu.notesZh)}</ul></div>` : ''}</div>` : ''}
-    ${d.pcr ? `<div class="card"><h3 style="margin-top:0">📄 ${t('Patient Care Report fields', 'PCR 报告字段')}</h3><ul>${biList(d.pcr.fieldsEn, d.pcr.fieldsZh)}</ul></div>` : ''}`;
+    ${d.pcr ? `<div class="card"><h3 style="margin-top:0">${ico('list')} ${t('Patient Care Report fields', 'PCR 报告字段')}</h3><ul>${biList(d.pcr.fieldsEn, d.pcr.fieldsZh)}</ul></div>` : ''}`;
 }
 
 async function sProtocols(el, params) {
@@ -124,7 +124,7 @@ async function sProtocols(el, params) {
   }
   el.innerHTML = `
     ${backStudy()}
-    <div class="card"><h2>📜 ${t('Protocols', '处置协议')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
+    <div class="card"><h2> ${t('Protocols', '处置协议')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
     ${bi('These 13 protocols are exactly what the practical examiners grade "cognitive ability and protocol decision-making" against.',
          '这 13 个协议就是实操考官评估"认知能力与协议决策"的依据。')}</div>
     <div class="list-wrap">
@@ -144,7 +144,7 @@ function drawProtocol(el, p) {
       ${sec(t('Contraindications', '禁忌'), p.contraindicationsEn, p.contraindicationsZh)}
       ${sec(t('Steps', '处置步骤'), p.stepsEn, p.stepsZh)}
       ${p.emrPcpDiffEn ? `<div class="detail-section"><h4>EMR vs PCP</h4>${bi(p.emrPcpDiffEn, p.emrPcpDiffZh)}</div>` : ''}
-      ${sec('⚠️ ' + t('Common exam deductions', '考试常见扣分'), p.commonDeductionsEn, p.commonDeductionsZh)}
+      ${sec(' ' + t('Common exam deductions', '考试常见扣分'), p.commonDeductionsEn, p.commonDeductionsZh)}
       ${(p.drugs || []).length ? `<div class="detail-section"><h4>${t('Linked drugs', '关联药物')}</h4><div class="btn-row">${p.drugs.map(dg => `<a class="btn ghost" href="#/study/drugs?id=${dg}">${esc(dg)}</a>`).join('')}</div></div>` : ''}
       <p class="tiny">pp. ${pages(p.sourcePages)}</p>
     </div>`;
@@ -186,7 +186,7 @@ async function sTreatments(el, params) {
             return `<div class="detail-section"><h4>${bi(cEn.heading, cZh.heading || '', 'span')}</h4>
               <ul>${biList(cEn.points, cZh.points || [])}</ul></div>`;
           }).join('')}
-          ${sec('💡 ' + t('Exam tips', '考试要点'), x.examTipsEn, x.examTipsZh)}
+          ${sec(ico('info') + ' ' + t('Exam tips', '考试要点'), x.examTipsEn, x.examTipsZh)}
           <p class="tiny">p. ${x.sourcePage || ''}</p>
         </div>`;
       return;
@@ -196,7 +196,7 @@ async function sTreatments(el, params) {
   for (const x of list) (cats[x.category || 'other'] ||= []).push(x);
   el.innerHTML = `
     ${backStudy()}
-    <div class="card"><h2>🩹 ${t('Treatments', '处置主题')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2></div>
+    <div class="card"><h2>${ico('bandage')} ${t('Treatments', '处置主题')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2></div>
     ${Object.entries(cats).map(([cat, xs]) => `
       <div class="card"><h3 style="margin-top:0">${esc(cat)}</h3></div>
       <div class="list-wrap">
@@ -220,7 +220,7 @@ async function sDrugs(el, params) {
   const others = d.drugs.filter(dr => !mine.includes(dr));
   el.innerHTML = `
     ${backStudy()}
-    <div class="card"><h2>💊 ${t('Drug Monographs', '药物专论')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
+    <div class="card"><h2>${ico('pill')} ${t('Drug Monographs', '药物专论')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
       ${bi(`${mine.length} drugs in your scope · ${others.length} beyond it (still worth recognizing).`,
            `你的授权范围内 ${mine.length} 个药 · 范围外 ${others.length} 个（也要认识）。`)}</div>
     <div class="list-wrap">
@@ -246,15 +246,15 @@ function drawDrug(el, dr) {
         ${(dr.routes || []).map(r => `<span class="pill gray">${esc(r)}</span>`).join('')}</div>
       ${dr.classificationEn ? `<div class="detail-section"><h4>${t('Class', '分类')}</h4>${bi(dr.classificationEn, dr.classificationZh)}</div>` : ''}
       ${sec(t('Indications', '适应指征'), dr.indicationsEn, dr.indicationsZh)}
-      ${sec('⛔ ' + t('Contraindications', '禁忌'), dr.contraindicationsEn, dr.contraindicationsZh)}
-      ${sec('⚠️ ' + t('Cautions', '慎用'), dr.cautionsEn, dr.cautionsZh)}
+      ${sec(' ' + t('Contraindications', '禁忌'), dr.contraindicationsEn, dr.contraindicationsZh)}
+      ${sec(' ' + t('Cautions', '慎用'), dr.cautionsEn, dr.cautionsZh)}
       <div class="detail-section"><h4>${t('Dose', '剂量')}</h4>
         <table class="vitals-table">
           ${Object.entries(dose).filter(([, v]) => v).map(([k, v]) => `<tr><th>${esc(k)}</th><td>${bi(v, doseZh[k] || '', 'span')}</td></tr>`).join('')}
         </table></div>
       ${sec(t('Side effects', '副作用'), dr.sideEffectsEn, dr.sideEffectsZh)}
       ${sec(t('Notes', '备注'), dr.notesEn, dr.notesZh)}
-      ${sec('💡 ' + t('Exam tips', '考试要点'), dr.examTipsEn, dr.examTipsZh)}
+      ${sec(ico('info') + ' ' + t('Exam tips', '考试要点'), dr.examTipsEn, dr.examTipsZh)}
       <p class="tiny">p. ${dr.sourcePage || ''}</p>
     </div>`;
 }
@@ -265,11 +265,11 @@ async function sReference(el) {
   el.innerHTML = `
     ${backStudy()}
     <div class="card">
-      <h2>🔤 ${t('Abbreviations', '缩写表')} <span class="tag-count">${(d.abbreviations || []).length}</span></h2>
+      <h2>${ico('abc')} ${t('Abbreviations', '缩写表')} <span class="tag-count">${(d.abbreviations || []).length}</span></h2>
       <input class="search-box" id="abbrSearch" placeholder="${t('Search abbreviations…', '搜索缩写…')}" />
       <div id="abbrList"></div>
     </div>
-    ${d.gcs ? `<div class="card"><h3 style="margin-top:0">🧠 Glasgow Coma Scale</h3>
+    ${d.gcs ? `<div class="card"><h3 style="margin-top:0"> Glasgow Coma Scale</h3>
       <div class="grid-3">
         ${['eye', 'verbal', 'motor'].map(k => `<div><h4 style="text-transform:capitalize">${k}</h4>
           <ul style="padding-left:18px">${(d.gcs[k] || []).map(x => `<li class="tiny">${esc(typeof x === 'string' ? x : JSON.stringify(x))}</li>`).join('')}</ul></div>`).join('')}
@@ -296,7 +296,7 @@ export async function renderJurisHub(el, arg, params) {
   const hist = S.jurisHistory;
   el.innerHTML = `
     <div class="card">
-      <h2>⚖️ ${t('Jurisprudence Camp', '法规营')}</h2>
+      <h2> ${t('Jurisprudence Camp', '法规营')}</h2>
       ${bi('25 questions · no time limit · 80% to pass — the highest pass mark of your three exams. Content: BC law and policy for EMAs.',
            '25 题 · 不限时 · 80% 及格——三关里及格线最高。考 BC 急救人员相关法律与政策。')}
       <div class="stat-row" style="margin-top:12px">
@@ -306,10 +306,10 @@ export async function renderJurisHub(el, arg, params) {
       </div>
     </div>
     <div class="grid-2">
-      <div class="card"><h3 style="margin-top:0">📚 ${t('Study notes', '法规笔记')}</h3>
+      <div class="card"><h3 style="margin-top:0">${ico('book')} ${t('Study notes', '法规笔记')}</h3>
         ${bi('EMA Act, EMA Regulation, scope of practice, conduct — summarized bilingual.', 'EMA 法案、条例、执业范围、职业行为——双语摘要。')}
         <div class="btn-row"><a class="btn" href="#/juris?mode=notes">${t('Read', '阅读')}</a></div></div>
-      <div class="card"><h3 style="margin-top:0">✍️ ${t('Practice / Mock', '练习与模拟')}</h3>
+      <div class="card"><h3 style="margin-top:0"> ${t('Practice / Mock', '练习与模拟')}</h3>
         ${bi('Drill with feedback, or simulate the real 25-question exam at the 80% bar.', '带解析刷题，或全真模拟 25 题考试（80% 及格线）。')}
         <div class="btn-row">
           <a class="btn secondary" href="#/juris?mode=practice">${t('Practice', '练习')}</a>
@@ -323,7 +323,7 @@ export async function renderJurisHub(el, arg, params) {
 function drawJurisNotes(el, notes) {
   el.innerHTML = `
     <a class="back-link" href="#/juris">← ${t('Jurisprudence camp', '法规营')}</a>
-    <div class="card"><h2>📚 ${t('Jurisprudence Notes', '法规笔记')}</h2>
+    <div class="card"><h2>${ico('book')} ${t('Jurisprudence Notes', '法规笔记')}</h2>
       <p class="tiny">${esc((notes.meta.sources || []).join(' · '))}</p></div>
     ${notes.sections.map(s => `
       <details class="acc"><summary>${bi(s.titleEn, s.titleZh, 'span')}</summary>
@@ -426,13 +426,13 @@ export async function renderExamInfo(el) {
   const w = rules[tr].written, j = rules.jurisprudence, p = rules.practical, c = rules.common;
   el.innerHTML = `
     <div class="card">
-      <h2>ℹ️ ${t('Exam Logistics', '考务流程')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>ℹ ${t('Exam Logistics', '考务流程')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${bi('Verified against official sources on ' + rules.meta.verifiedDate + '. Always double-check current rules before booking.',
            '以下信息于 ' + rules.meta.verifiedDate + ' 对照官方文件核实；报名前请再次核对最新规定。')}
     </div>
-    <div class="card"><h3 style="margin-top:0">📝 ${t('Written', '笔试')}</h3>
+    <div class="card"><h3 style="margin-top:0">${ico('pen')} ${t('Written', '笔试')}</h3>
       ${bi(w.providerNoteEn, w.providerNoteZh)}
-      ${w.deliveryEn ? `<div class="notice">💻 ${bi(w.deliveryEn, w.deliveryZh, 'span')}</div>` : ''}
+      ${w.deliveryEn ? `<div class="notice">${ico('info')} ${bi(w.deliveryEn, w.deliveryZh, 'span')}</div>` : ''}
       <table class="vitals-table" style="margin-top:8px">
         <tr><th>${t('Questions', '题量')}</th><td>${w.questions}${w.scoredQuestions ? ` (${w.scoredQuestions} scored)` : ''}</td></tr>
         <tr><th>${t('Time', '时长')}</th><td>${w.format ? esc(w.format) : (w.timeLimitMinutes / 60 + ' h')}</td></tr>
@@ -445,12 +445,12 @@ export async function renderExamInfo(el) {
       ${w.seatReservationEn ? bi(w.seatReservationEn, w.seatReservationZh) : ''}
       ${w.resultsEn ? bi(w.resultsEn, w.resultsZh) : ''}
       ${(w.onlineRequirementsEn || []).length ? `<details class="acc" style="margin-top:10px">
-        <summary>🖥️ ${t('Online proctoring requirements — read before exam day', '在家考的硬性要求——考前必看')}</summary>
+        <summary> ${t('Online proctoring requirements — read before exam day', '在家考的硬性要求——考前必看')}</summary>
         <div class="acc-body"><ul>${biList(w.onlineRequirementsEn, w.onlineRequirementsZh)}</ul>
         ${w.techFailureEn ? bi(w.techFailureEn, w.techFailureZh) : ''}</div>
       </details>` : ''}
     </div>
-    <div class="card"><h3 style="margin-top:0">⚖️ ${t('Jurisprudence', '法规考')}</h3>
+    <div class="card"><h3 style="margin-top:0"> ${t('Jurisprudence', '法规考')}</h3>
       <table class="vitals-table">
         <tr><th>${t('Questions', '题量')}</th><td>${j.questions}</td></tr>
         <tr><th>${t('Time', '时长')}</th><td>${esc(j.timeLimitNoteEn)}</td></tr>
@@ -458,7 +458,7 @@ export async function renderExamInfo(el) {
       </table>
       ${bi(j.scopeEn, j.scopeZh)}${bi(j.retakeRulesEn, j.retakeRulesZh)}
     </div>
-    <div class="card"><h3 style="margin-top:0">🚑 ${t('Practical', '实操')}</h3>
+    <div class="card"><h3 style="margin-top:0">${ico('ambulance')} ${t('Practical', '实操')}</h3>
       ${bi(p.structureEn, p.structureZh)}
       <table class="vitals-table" style="margin-top:8px">
         <tr><th>${t('Time', '时长')}</th><td>${p.examMinutes} min + ${p.pcrMinutes} min PCR</td></tr>
@@ -468,7 +468,7 @@ export async function renderExamInfo(el) {
       </table>
       ${bi(p.scoringEn, p.scoringZh)}${bi(p.mustPerformEn, p.mustPerformZh)}${bi(p.remedialEn, p.remedialZh)}${bi(p.accommodationsEn, p.accommodationsZh)}
     </div>
-    <div class="card"><h3 style="margin-top:0">🧱 ${t('Hard rules', '硬规则')}</h3>
+    <div class="card"><h3 style="margin-top:0">${ico('list')} ${t('Hard rules', '硬规则')}</h3>
       <ul>
         <li>${bi(`${c.attemptsPerExam} attempts per exam.`, `每门考试 ${c.attemptsPerExam} 次机会。`, 'span')}</li>
         <li>${bi(c.afterThreeFailsEn, c.afterThreeFailsZh, 'span')}</li>
@@ -476,9 +476,9 @@ export async function renderExamInfo(el) {
         <li>${bi(c.practicalPrerequisiteEn, c.practicalPrerequisiteZh, 'span')}</li>
       </ul>
       ${tr === 'pcp' && c.afterThreeFailsCoprCaveatEn ? `<div class="notice" style="background:var(--red-soft);border-color:var(--red);color:#7f1d1d">
-        ⚠️ ${bi(c.afterThreeFailsCoprCaveatEn, c.afterThreeFailsCoprCaveatZh, 'span')}</div>` : ''}
+         ${bi(c.afterThreeFailsCoprCaveatEn, c.afterThreeFailsCoprCaveatZh, 'span')}</div>` : ''}
       ${c.practicalFailExemptionEn ? `<div class="notice" style="background:var(--green-soft);border-color:var(--green);color:#14532d">
-        💡 ${bi(c.practicalFailExemptionEn, c.practicalFailExemptionZh, 'span')}</div>` : ''}
+        ${ico('info')} ${bi(c.practicalFailExemptionEn, c.practicalFailExemptionZh, 'span')}</div>` : ''}
       <div class="btn-row">
         <a class="btn ghost" href="${rules.meta.sources.emalb.url}" target="_blank">EMALB ↗</a>
         <a class="btn ghost" href="${rules.meta.sources.copr.url}" target="_blank">COPR ↗</a>

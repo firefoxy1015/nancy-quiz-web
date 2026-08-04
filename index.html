@@ -4,10 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="BC EMR & PCP licensing exam prep — written, jurisprudence and practical. Unofficial study tool aligned to EMALB & COPR requirements." />
+  <meta name="theme-color" content="#0d5c5c" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0d1211" media="(prefers-color-scheme: dark)" />
   <title>BC EMR/PCP Exam Prep · BC急救员考证系统</title>
-  <link rel="stylesheet" href="./styles.css?v=4" />
+  <link rel="stylesheet" href="./styles.css?v=5" />
+  <script>
+    // apply the saved theme before first paint to avoid a flash
+    try {
+      var s = JSON.parse(localStorage.getItem('bcprep2') || '{}');
+      if (s.theme === 'light' || s.theme === 'dark') document.documentElement.dataset.theme = s.theme;
+    } catch (e) {}
+  </script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.2 12 3l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H19v15H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 1 5.5 18H19v3H5.5A1.5 1.5 0 0 1 4 19.5z"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path d="M14 3.5 20.5 10 9 21.5H2.5V15z"/><path d="m12 5.5 6.5 6.5"/></symbol>
+      <symbol id="i-ambulance" viewBox="0 0 24 24"><path d="M2 17V7.5A1.5 1.5 0 0 1 3.5 6H14v11"/><path d="M14 10h3.8a2 2 0 0 1 1.7 1l2.1 3.4a2 2 0 0 1 .4 1.1V17h-2"/><circle cx="7" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/><path d="M8 9v4M6 11h4"/></symbol>
+      <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7 2 14h6zM19 7l-3 7h6z"/><path d="M2 14a4 4 0 0 0 6 0M16 14a4 4 0 0 0 6 0"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+      <symbol id="i-cross" viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></symbol>
+      <symbol id="i-skull" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8v3.5l1.5 1.5V19a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-4l1.5-1.5V10a8 8 0 0 0-8-8z"/><circle cx="9" cy="11" r="1.6"/><circle cx="15" cy="11" r="1.6"/><path d="M12 15v3"/></symbol>
+      <symbol id="i-film" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M7 4.5v15M17 4.5v15M2.5 12h19M2.5 8.2h4.5M2.5 15.8h4.5M17 8.2h4.5M17 15.8h4.5"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8h.01"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+      <symbol id="i-pill" viewBox="0 0 24 24"><rect x="2.6" y="8.4" width="18.8" height="7.2" rx="3.6" transform="rotate(-45 12 12)"/><path d="m8.5 8.5 7 7"/></symbol>
+      <symbol id="i-bandage" viewBox="0 0 24 24"><rect x="1.5" y="8" width="21" height="8" rx="4" transform="rotate(-45 12 12)"/><path d="M10 10h.01M14 14h.01M10 14h.01M14 10h.01"/></symbol>
+      <symbol id="i-abc" viewBox="0 0 24 24"><path d="M3 17 6.5 7 10 17M4.2 14h4.6M20.5 9.5A2.5 2.5 0 0 0 18 7h-1.5v10H18a2.5 2.5 0 0 0 0-5h-1.5"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 4 2.5 8.5 12 13l9.5-4.5z"/><path d="M6.5 11v4.8c0 1.6 2.7 2.9 5.5 2.9s5.5-1.3 5.5-2.9V11M21.5 8.5V15"/></symbol>
+    </defs>
+  </svg>
+
   <div id="app">
     <header class="topbar">
       <a class="brand" href="#/">
@@ -22,19 +56,23 @@
           <button data-track="emr">EMR</button>
           <button data-track="pcp">PCP</button>
         </div>
-        <button class="lang-btn" id="langBtn" title="Language">EN+中</button>
+        <button class="lang-btn" id="langBtn" title="Language 语言">EN+中</button>
+        <button class="icon-btn" id="themeBtn" title="Theme 主题" aria-label="Toggle theme">
+          <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        </button>
       </div>
     </header>
 
-    <main id="view" class="view-root"></main>
-
     <nav class="bottom-nav" id="bottomNav">
-      <a href="#/" data-nav="home"><span class="nav-ico">🏠</span><span class="nav-label">Home<br>首页</span></a>
-      <a href="#/study" data-nav="study"><span class="nav-ico">📖</span><span class="nav-label">Study<br>学习</span></a>
-      <a href="#/written" data-nav="written"><span class="nav-ico">📝</span><span class="nav-label">Written<br>笔试</span></a>
-      <a href="#/practical" data-nav="practical"><span class="nav-ico">🚑</span><span class="nav-label">Practical<br>实操</span></a>
-      <a href="#/juris" data-nav="juris"><span class="nav-ico">⚖️</span><span class="nav-label">Juris<br>法规</span></a>
+      <a href="#/" data-nav="home"><span class="nav-ico"><svg class="icon"><use href="#i-home"/></svg></span><span class="nav-label">Home<br>首页</span></a>
+      <a href="#/study" data-nav="study"><span class="nav-ico"><svg class="icon"><use href="#i-book"/></svg></span><span class="nav-label">Study<br>学习</span></a>
+      <a href="#/written" data-nav="written"><span class="nav-ico"><svg class="icon"><use href="#i-pen"/></svg></span><span class="nav-label">Written<br>笔试</span></a>
+      <a href="#/practical" data-nav="practical"><span class="nav-ico"><svg class="icon"><use href="#i-ambulance"/></svg></span><span class="nav-label">Practical<br>实操</span></a>
+      <a href="#/juris" data-nav="juris"><span class="nav-ico"><svg class="icon"><use href="#i-scale"/></svg></span><span class="nav-label">Juris<br>法规</span></a>
     </nav>
+
+    <main id="view" class="view-root"></main>
 
     <footer class="site-footer">
       <p><strong>Unofficial study tool 非官方备考工具</strong> — Not affiliated with EMALB or COPR. Practice content is original and modeled on public official documents. Always verify with
@@ -44,6 +82,6 @@
       <p class="align-note">Content aligned to: BC Provincial Examination Guidelines (June 15, 2026) · EMALB Grading Criteria (Mar 2025) · COPR Handbook (Jul 9, 2026) · CPCF 2024</p>
     </footer>
   </div>
-  <script type="module" src="./src/app.js?v=4"></script>
+  <script type="module" src="./src/app.js?v=5"></script>
 </body>
 </html>

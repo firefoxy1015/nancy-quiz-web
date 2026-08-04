@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav } from './app.js';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico} from './app.js?v=5';
 
 let session = null; // current exam session (mock or practice)
 
@@ -13,7 +13,7 @@ export async function renderWrittenHub(el) {
   const topics = countBy(bank, q => q.topic);
   el.innerHTML = `
     <div class="card">
-      <h2>📝 ${t('Written Exam Camp', '笔试营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>${ico('pen')} ${t('Written Exam Camp', '笔试营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${isPcp
         ? bi('COPR national exam: 200 questions (180 scored) · two 120-minute parts with a 10-minute break · standard-score pass mark. From Nov 2026 all exams test to the CPCF.',
              'COPR 全国统考：200 题（180 计分）· 两部分各 120 分钟，中间休息 10 分钟 · 标准分制。2026 年 11 月起全部按 CPCF 框架出题。')
@@ -28,13 +28,13 @@ export async function renderWrittenHub(el) {
     </div>
     <div class="grid-2">
       <div class="card">
-        <h3 style="margin-top:0">🎯 ${t('Practice mode', '练习模式')}</h3>
+        <h3 style="margin-top:0">${ico('target')} ${t('Practice mode', '练习模式')}</h3>
         ${bi('Instant feedback with explanations. Filter by topic. Wrong answers go to your wrong-answer book automatically.',
              '即时判分带解析，可按主题筛选。错题自动进错题本。')}
         <div class="btn-row"><a class="btn" href="#/practice">${t('Start practice', '开始练习')}</a></div>
       </div>
       <div class="card">
-        <h3 style="margin-top:0">⏱️ ${t('Full mock exam', '全真模考')}</h3>
+        <h3 style="margin-top:0">${ico('clock')} ${t('Full mock exam', '全真模考')}</h3>
         ${isPcp
           ? bi('Blueprint-weighted 180 scored questions, real two-part timing with break, COPR-style area report at the end.',
                '按 CPCF 蓝图配比抽 180 计分题，全真两段计时+中场休息，考完出 COPR 风格分域报告。')
@@ -44,7 +44,7 @@ export async function renderWrittenHub(el) {
       </div>
     </div>
     <div class="card">
-      <h3 style="margin-top:0">❌ ${t('Wrong-answer book', '错题本')}</h3>
+      <h3 style="margin-top:0">${ico('x')} ${t('Wrong-answer book', '错题本')}</h3>
       ${bi('Re-drill every question you have ever missed until none are left.', '把你错过的每道题反复刷，刷到清零为止。')}
       <div class="btn-row"><a class="btn secondary" href="#/wrong">${t('Open', '打开')} (${Object.keys(S.wrong).length})</a></div>
     </div>
@@ -155,7 +155,7 @@ export async function renderMock(el) {
   const plan = isPcp ? { parts: 2, partMin: 120, breakMin: 10, passPct: null } : { parts: 1, partMin: 150, breakMin: 0, passPct: 75 };
   el.innerHTML = `
     <div class="card">
-      <h2>⏱️ ${t('Full Mock Exam', '全真模考')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>⏱ ${t('Full Mock Exam', '全真模考')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${isPcp
         ? bi(`Format: 180 scored questions sampled to the CPCF blueprint (Area H ≈ 70%). Two parts of 120 minutes; after the break you cannot return to Part 1. Report card uses COPR's four colour bands.`,
              `格式：按 CPCF 蓝图配比抽 180 计分题（H 域约 70%）。两部分各 120 分钟；休息后不能回改第一部分。考完出 COPR 四色分域报告。`)
@@ -246,7 +246,7 @@ function drawMock(el) {
         </div>
         <div class="btn-row">
           <button class="btn ghost" id="prevQ" ${session.pos <= lo ? 'disabled' : ''}>←</button>
-          <button class="btn ghost" id="flagQ">${session.flags[q.id] ? '🚩 ' + t('Unflag', '取消标记') : '🏳️ ' + t('Flag', '标记')}</button>
+          <button class="btn ghost" id="flagQ">${session.flags[q.id] ? ico('list') + ' ' + t('Unflag', '取消标记') : t('Flag', '标记')}</button>
           <button class="btn ghost" id="nextQ" ${session.pos >= hi - 1 ? 'disabled' : ''}>→</button>
           <button class="btn ${session.part === session.parts ? 'danger' : 'secondary'}" id="endPart">
             ${session.part === session.parts ? t('Submit exam', '交卷') : t('End Part 1 → break', '结束第一部分→休息')}</button>
@@ -289,7 +289,7 @@ function tickMock(el, hi) {
 function drawBreak(el) {
   el.innerHTML = `
     <div class="card" style="text-align:center;padding:40px 20px">
-      <h2>☕ ${t('Break', '中场休息')}</h2>
+      <h2>${ico('clock')} ${t('Break', '中场休息')}</h2>
       ${bi('Up to 10 minutes. In the real exam the proctor re-secures your area — keep time away under 5 minutes. You cannot return to Part 1.',
            '最多 10 分钟。真实考试里离开考位要控制在 5 分钟内以便监考重新核验。你不能再回到第一部分。')}
       <div class="q-timer" id="breakTimer" style="font-size:1.8rem;margin:18px auto;max-width:180px">--:--</div>
@@ -336,7 +336,7 @@ function finishMock(el) {
       ${session.track === 'pcp'
         ? `<p class="tiny">${t('The real COPR exam uses a scaled standard score, not a fixed percentage. Treat ≥70% here as a healthy margin.', '真实 COPR 考试是标准分制没有固定及格百分比；这里建议以 ≥70% 作为安全边际。')}</p>`
         : `<p class="tiny">${t('Real pass mark: 75%.', '真实及格线：75%。')}</p>`}
-      ${session.backfilled ? `<p class="tiny">⚠️ ${t(`${session.backfilled} blueprint slots backfilled from clinical topics (bank still growing).`, `有 ${session.backfilled} 个蓝图名额由临床题补位（题库还在扩容）。`)}</p>` : ''}
+      ${session.backfilled ? `<p class="tiny"> ${t(`${session.backfilled} blueprint slots backfilled from clinical topics (bank still growing).`, `有 ${session.backfilled} 个蓝图名额由临床题补位（题库还在扩容）。`)}</p>` : ''}
     </div>
     <div class="card">
       <h3 style="margin-top:0">${t('Competency area report', '能力域报告')} <span class="tiny">(COPR ${t('style', '风格')})</span></h3>
@@ -374,7 +374,7 @@ export async function renderWrong(el) {
   const wrongQs = bank.filter(q => S.wrong[q.id]);
   if (!wrongQs.length) {
     el.innerHTML = `<div class="card" style="text-align:center;padding:40px">
-      <h2>🎉 ${t('Wrong-answer book is empty', '错题本是空的')}</h2>
+      <h2>${ico('target')} ${t('Wrong-answer book is empty', '错题本是空的')}</h2>
       ${bi('Either you are perfect, or you have not practiced yet. Both are fixable.', '要么你是天才，要么你还没开始刷题。去练两道就知道了。')}
       <div class="btn-row" style="justify-content:center"><a class="btn" href="#/practice">${t('Go practice', '去刷题')}</a></div>
     </div>`;
@@ -385,7 +385,7 @@ export async function renderWrong(el) {
     const q = session.pool[session.order[session.pos]];
     el.innerHTML = `
       <div class="q-wrap"><div class="card">
-        <div class="q-meta"><h2 style="font-size:1.05rem">❌ ${t('Wrong-answer drill', '错题重刷')}</h2>
+        <div class="q-meta"><h2 style="font-size:1.05rem">${ico('x')} ${t('Wrong-answer drill', '错题重刷')}</h2>
         <div class="muted">${session.pool.length} ${t('left', '题待清')} · ${t('correct answers remove the question', '答对即从错题本移除')}</div></div>
         ${questionHTML(q, false)}
         <div class="btn-row">
