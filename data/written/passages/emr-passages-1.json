@@ -2,8 +2,8 @@
   "meta": {
     "part": "emr-passages-1",
     "licence": "emr",
-    "passageCount": 5,
-    "questionCount": 20,
+    "passageCount": 10,
+    "questionCount": 40,
     "languages": [
       "en",
       "zh"
@@ -917,6 +917,836 @@
           "verified": false,
           "evolutionEn": "Aspirin and Entonox have been given, nitroglycerin has been withheld, and the crew is preparing to move her to the stretcher.",
           "evolutionZh": "已给 Aspirin 和 Entonox，nitroglycerin 未给；急救组正准备把她搬上担架。"
+        }
+      ]
+    },
+    {
+      "id": "emr-cs-01",
+      "format": "case-scenario",
+      "titleEn": "Two-vehicle collision on a highway off-ramp",
+      "titleZh": "高速公路匝道上的两车相撞",
+      "passageEn": "You and your EMR partner are first on scene at a two-vehicle collision on a highway off-ramp at 21:40. A pickup truck has struck the driver's side of a small sedan; the sedan's driver's door is intruded roughly 40 cm and the windshield is starred. The sedan's driver, a 34-year-old man, is still belted in his seat, awake, and shouting that his left leg is trapped and \"killing\" him. Traffic is still moving past in the adjacent lane, broken glass is spread across the roadway, and the pickup driver is standing at the roadside on his phone. Fire and a PCP ambulance are both twelve minutes out.",
+      "passageZh": "晚上 21:40，你和 EMR 搭档是一起高速公路匝道两车相撞事故的首到单位。一辆皮卡撞上了一辆小型轿车的驾驶侧；轿车的驾驶门向内凹陷约 40 cm，挡风玻璃呈放射状碎裂。轿车司机是一名 34 岁男性，仍系着安全带坐在座位上，意识清醒，大喊左腿被卡住、「疼死了」。旁边车道仍有车流通过，路面散落着碎玻璃，皮卡司机站在路肩打电话。消防和 PCP 救护车都还有 12 分钟才到。",
+      "questions": [
+        {
+          "id": "emr-cs-01-q1",
+          "cpcfArea": "E",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "scene-safety",
+          "difficulty": "foundation",
+          "questionEn": "Before approaching the sedan, what is the crew's first priority?",
+          "questionZh": "在靠近那辆轿车之前，急救组的首要任务是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Ask the pickup driver what happened so the mechanism can be documented",
+              "zh": "先问皮卡司机事情经过，以便记录受伤机制"
+            },
+            {
+              "key": "B",
+              "en": "Reach the trapped patient quickly, since he is clearly the most seriously injured",
+              "zh": "尽快接近被卡住的患者，因为他显然伤得最重"
+            },
+            {
+              "key": "C",
+              "en": "Make the scene safe: position the ambulance to block the lane, put on high-visibility PPE and control the passing traffic",
+              "zh": "先把现场变安全：把救护车停成阻挡车道的位置、穿好高可视度防护装备、管控过往车流"
+            },
+            {
+              "key": "D",
+              "en": "Get the traction splint out, since a trapped leg suggests a femur fracture",
+              "zh": "先把牵引夹板取出来，因为腿被卡提示可能有股骨骨折"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "The Rescue Scene Evaluation comes before the primary survey on every call, and its first two elements are hazards and environment. Moving traffic beside a crew kneeling in a doorway is the hazard that most often injures paramedics at collisions, and broken glass adds a sharps risk to every knee and hand placed on that roadway. Options B and D are both patient care, which is correct work at the wrong moment — you cannot treat anyone if you are struck. Option A is history taking, part of the secondary survey.",
+          "explanationZh": "每一次出勤，Rescue Scene Evaluation 都排在 primary survey 之前，而它的头两项就是 hazards（危险源）与 environment（环境）。在急救员跪在车门口作业时旁边仍有车流通过，是车祸现场最常导致急救员受伤的危险源；散落的碎玻璃则让每一次跪地和撑手都带上利器风险。选项 B 和 D 都属于患者处置——事情本身没错，但时机错了：你自己被撞了，就谁也救不了。选项 A 是病史采集，属于二次检查的内容。",
+          "sourceRef": "BC Guidelines p.9; CPCF area E",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-cs-01-q2",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "unstable-criteria",
+          "difficulty": "intermediate",
+          "questionEn": "The scene is now secured. On the primary survey the patient is alert with a clear airway, RR 26, a present but rapid radial pulse, and cool pale skin. His left thigh is grossly deformed and his pelvis is tender when gently assessed. Which one of the following most clearly makes him a rapid-transport patient under the BC Guidelines?",
+          "questionZh": "现场已管控完毕。初步检查发现患者神志清醒、气道通畅，RR 26，桡动脉可触及但快，皮肤湿冷苍白。左大腿明显畸形，轻柔检查时骨盆有压痛。按照 BC 指南，以下哪一项最明确地把他归为需要快速转运的患者？",
+          "options": [
+            {
+              "key": "A",
+              "en": "His respiratory rate of 26",
+              "zh": "他 26 次/分的呼吸频率"
+            },
+            {
+              "key": "B",
+              "en": "His report that the pain is severe",
+              "zh": "他自述疼痛剧烈"
+            },
+            {
+              "key": "C",
+              "en": "The collision happened at night on a highway",
+              "zh": "事故发生在夜间的高速公路上"
+            },
+            {
+              "key": "D",
+              "en": "Intrusion of more than 0.3 m into the passenger compartment on the occupant's side",
+              "zh": "乘员一侧的车厢侵入超过 0.3 m"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The guideline lists specific mechanism-of-injury criteria that make a patient unstable regardless of how well they currently look, and significant intrusion of more than 0.3 m on the occupant's side is one of them. The door is intruded about 40 cm, which meets it outright. His cool pale skin would also qualify as a primary-survey finding of suspected shock, but among the four options given, the intrusion is the criterion stated verbatim in the guideline. A respiratory rate of 26 on its own is not on the list, pain severity is not a stability criterion at all, and time of day and road type are not either.",
+          "explanationZh": "指南列出了一系列具体的受伤机制标准，只要符合，无论患者当下看起来多好都算不稳定，而「乘员一侧车厢侵入超过 0.3 m」正是其中一条。车门凹陷约 40 cm，直接达标。他湿冷苍白的皮肤同样可以算作初步检查中「疑似休克」的阳性发现，但在给出的四个选项里，车厢侵入是指南原文逐字列出的标准。单独一个 26 次/分的呼吸频率不在名单上；疼痛程度根本不是稳定性判定标准；发生时间和道路类型也不是。",
+          "sourceRef": "BC Guidelines p.7-8",
+          "verified": false,
+          "evolutionEn": "The scene has been made safe. Primary survey findings are now available: alert, airway clear, RR 26, radial pulse present but rapid, skin cool and pale, left thigh grossly deformed, pelvis tender.",
+          "evolutionZh": "现场已安全。初步检查结果：神志清醒、气道通畅，RR 26，桡动脉可触及但快，皮肤湿冷苍白，左大腿明显畸形，骨盆压痛。"
+        },
+        {
+          "id": "emr-cs-01-q3",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "adult",
+          "topic": "trauma-priorities",
+          "difficulty": "advanced",
+          "questionEn": "Fire has extricated the patient onto a long spinal board. Repeat vitals are HR 128, RR 28, BP 86/60, with cool clammy skin. His left thigh is still grossly deformed. Which one of the following is most appropriate now?",
+          "questionZh": "消防已将患者解救并固定在长脊柱板上。复测 HR 128，RR 28，BP 86/60，皮肤湿冷。左大腿仍明显畸形。此时最恰当的处置是以下哪一项？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Bind the pelvis, keep him warm and supine, and transport immediately without applying a traction splint",
+              "zh": "绑扎骨盆、保暖并保持仰卧，不上牵引夹板，立即转运"
+            },
+            {
+              "key": "B",
+              "en": "Apply a traction splint to the femur before moving, since traction reduces bleeding",
+              "zh": "搬动前先给股骨上牵引夹板，因为牵引可以减少出血"
+            },
+            {
+              "key": "C",
+              "en": "Apply a tourniquet high on the left thigh to control the internal femoral bleeding",
+              "zh": "在左大腿高位上止血带，以控制股部的内出血"
+            },
+            {
+              "key": "D",
+              "en": "Wait on scene for the PCP crew so that tranexamic acid can be given before transport",
+              "zh": "在现场等 PCP 组，先给 tranexamic acid 再转运"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The traction splint is indicated for suspected mid-shaft femur fractures in stable patients, and this patient is not stable: HR 128 with a BP of 86/60 and cool clammy skin is shock. He meets the pelvic binding indications outright — major mechanism plus a heart rate over 100 and a systolic under 90 — and binding reduces pelvic volume, tamponades bleeding and stabilizes fragments. The hypovolemia guideline then adds supine positioning, warmth and oxygen. Option B is the trap of a correct skill applied to the wrong patient. Option C cannot work: a tourniquet compresses vessels against bone in a limb, it does nothing for pelvic or intra-thigh bleeding, and it is not indicated without external hemorrhage. Option D holds an unstable trauma patient on scene for a PCP-only drug, which is both outside your scope and the wrong priority.",
+          "explanationZh": "牵引夹板的适应证是「稳定患者的疑似股骨干骨折」，而这位患者并不稳定：HR 128、BP 86/60、皮肤湿冷，这就是休克。他完全符合骨盆绑扎指征——重大受伤机制加上心率 >100、收缩压 <90——绑扎可以减小骨盆容积、形成填塞压迫、稳定骨折断端。随后按 hypovolemia 指南补上仰卧、保暖和氧疗。选项 B 是「技术本身没错、但用错了患者」的陷阱。选项 C 行不通：止血带是把肢体血管压向骨骼，对骨盆或大腿深部出血毫无作用，而且没有外出血时并无指征。选项 D 让一个不稳定的创伤患者滞留现场，只为等一个 PCP 才能给的药——既超出你的范围，优先级也是错的。",
+          "sourceRef": "BC Guidelines p.23, p.24, p.54, p.78",
+          "verified": false,
+          "evolutionEn": "The patient has been extricated onto a long spinal board. Vitals have deteriorated: HR 128 (was 'rapid'), RR 28, BP 86/60, skin cool and clammy. The femur remains grossly deformed.",
+          "evolutionZh": "患者已被解救并固定在长脊柱板上。生命体征恶化：HR 128（原为「快」），RR 28，BP 86/60，皮肤湿冷。股骨仍明显畸形。"
+        },
+        {
+          "id": "emr-cs-01-q4",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "scope-of-practice",
+          "difficulty": "intermediate",
+          "questionEn": "The PCP crew arrives and joins you in the back of the ambulance. Which one of the following interventions performed on this patient is outside the EMR scope of practice?",
+          "questionZh": "PCP 组赶到并上了救护车后厢协助。以下针对这位患者的处置中，哪一项超出 EMR 的授权范围？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Applying a commercial pelvic binder",
+              "zh": "使用商用骨盆绑带"
+            },
+            {
+              "key": "B",
+              "en": "Establishing intravenous access and giving a 20 mL/kg fluid bolus",
+              "zh": "建立静脉通路并给 20 mL/kg 液体推注"
+            },
+            {
+              "key": "C",
+              "en": "Realigning a grossly deformed limb that has no distal pulse",
+              "zh": "对明显畸形且远端无脉的肢体进行复位对线"
+            },
+            {
+              "key": "D",
+              "en": "Applying a tourniquet to a bleeding extremity wound",
+              "zh": "对四肢出血伤口使用止血带"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "Vascular access and fluid boluses are listed under Additional Primary Care Paramedic Interventions throughout the guideline, including in the hypovolemia protocol; they are not available to an EMR. Pelvic binding, limb realignment where the limb is pulseless, and tourniquet application all appear under interventions for all licence levels. On the exam these scope questions are worth the same as any other, and an intervention that is clinically sensible but above your licence is still the wrong answer.",
+          "explanationZh": "在整本指南里，建立血管通路和液体推注都列在 Additional Primary Care Paramedic Interventions 之下，hypovolemia protocol 也是如此；EMR 不具备这项授权。骨盆绑扎、远端无脉肢体的复位对线、以及止血带的使用，都出现在「适用于所有执照等级」的处置里。在考试中，这类范围题与其他题分值相同；一项临床上说得通、但超出你执照的处置，仍然是错误答案。",
+          "sourceRef": "BC Guidelines p.19, p.21, p.24, p.54",
+          "verified": false,
+          "evolutionEn": "The pelvis has been bound, the patient is supine, warm and on high-flow oxygen, and transport is under way when the PCP crew joins you.",
+          "evolutionZh": "骨盆已绑扎，患者仰卧、保暖并接受高流量氧疗，转运已开始，此时 PCP 组上车加入。"
+        }
+      ]
+    },
+    {
+      "id": "emr-cs-02",
+      "format": "case-scenario",
+      "titleEn": "Nine-year-old pulled from a lake",
+      "titleZh": "从湖里被救上岸的 9 岁男孩",
+      "passageEn": "On a hot August afternoon you are called to a lake beach for a nine-year-old boy pulled from the water. Bystanders say he was jumping from a floating dock with friends, went under, and was not seen for about two minutes before a lifeguard brought him to shore. He is lying on the sand, coughing forcefully, soaking wet and shivering. One lifeguard is kneeling beside him; a second tells you the boy \"went in head first off the dock\". His mother arrives from the parking lot as you begin your assessment.",
+      "passageZh": "八月一个炎热的下午，你被派往一处湖滨沙滩，一名 9 岁男孩刚被从水中救起。旁观者说他和朋友们从浮动码头往下跳，入水后沉了下去，约两分钟无人看见，随后被救生员救上岸。他躺在沙滩上，用力咳嗽，浑身湿透并在发抖。一名救生员跪在他身旁；另一名救生员告诉你，男孩是「头朝下从码头跳下去的」。你开始评估时，他母亲从停车场赶了过来。",
+      "questions": [
+        {
+          "id": "emr-cs-02-q1",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "pediatric",
+          "topic": "drowning-management",
+          "difficulty": "intermediate",
+          "questionEn": "Given the mechanism the lifeguard describes, what is the most appropriate initial management?",
+          "questionZh": "考虑到救生员描述的受伤机制，最恰当的初始处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Apply spinal motion restriction because of the head-first entry, keep him at rest, position him sitting up, and remove and dry the wet clothing",
+              "zh": "因为是头朝下入水，给予脊柱运动限制，让他保持安静休息、取坐位，并脱去湿衣物擦干"
+            },
+            {
+              "key": "B",
+              "en": "Roll him semi-prone immediately to drain the water out of his lungs",
+              "zh": "立即把他翻成半俯卧位，把肺里的水控出来"
+            },
+            {
+              "key": "C",
+              "en": "Lay him flat and perform abdominal thrusts to clear the swallowed water",
+              "zh": "把他放平并做腹部冲击，把吞进去的水排出来"
+            },
+            {
+              "key": "D",
+              "en": "Have him walk up to the ambulance to warm up while you take a history",
+              "zh": "让他自己走到救护车上取暖，你同时采集病史"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The drowning guideline bundles exactly these steps: spinal motion restriction as indicated by the mechanism, keep the patient at rest, position sitting up, remove wet clothing and dry the patient, avoid rough handling, and maintain body temperature. A head-first entry from a dock into a lake is a mechanism that cannot be cleared on a beach. Options B and C are the persistent myth that water must be drained or forced out; both delay real care and risk vomiting and aspiration. Option D directly contradicts \"keep the patient at rest\" and makes him move his own possibly injured spine.",
+          "explanationZh": "溺水指南把这几步打包在一起：按受伤机制给予脊柱运动限制、让患者保持安静休息、取坐位、脱去湿衣物并擦干、避免粗暴搬动、维持体温。从码头头朝下跳入湖中，这样的机制在沙滩上是无法排除脊柱损伤的。选项 B 和 C 是「必须把水控出来」的老迷思；两者都在拖延真正的处置，还会诱发呕吐和误吸。选项 D 直接违反「保持安静休息」，还让他自己活动可能已受伤的脊柱。",
+          "sourceRef": "BC Guidelines p.37",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-cs-02-q2",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "pediatric",
+          "topic": "drowning-delayed-complications",
+          "difficulty": "foundation",
+          "questionEn": "Ten minutes later he has stopped coughing, says he feels fine and wants to rejoin his friends. HR 104, RR 22, SpO2 96% on room air, lungs clear. His mother asks whether he really has to go to hospital. What is the best reason to transport him?",
+          "questionZh": "10 分钟后他不再咳嗽，说自己没事，想回去找朋友。HR 104，RR 22，室内空气下 SpO2 96%，双肺听诊清。母亲问他是不是真的必须去医院。支持转运的最佳理由是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "All children must be transported after any water incident, without exception",
+              "zh": "凡是发生涉水事件的儿童都必须转运，没有例外"
+            },
+            {
+              "key": "B",
+              "en": "He is likely hypoglycemic after swimming",
+              "zh": "游泳之后他很可能出现低血糖"
+            },
+            {
+              "key": "C",
+              "en": "He needs a tetanus booster after swimming in lake water",
+              "zh": "在湖水里游过泳，他需要补打破伤风疫苗"
+            },
+            {
+              "key": "D",
+              "en": "Pulmonary complications from a submersion can develop over the hours that follow, even in a patient who looks well",
+              "zh": "溺水后的肺部并发症可能在随后的数小时内才出现，即使患者当下看起来很好"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "Water in the alveoli disrupts surfactant and irritates the lung, and pulmonary edema can develop hours after the submersion in a child whose lungs sound clear on the beach. Drowning is listed in the BC guidelines as a cause of pulmonary edema for exactly this reason, so a normal set of vitals now is not reassurance about the next few hours. Option A is an absolute-worded rule, which is usually the wrong answer and also gives his mother no reason she can understand or act on. Options B and C invent problems that submersion does not cause.",
+          "explanationZh": "进入肺泡的水会破坏表面活性物质并刺激肺组织，肺水肿可能在溺水后数小时才发展起来，而此刻在沙滩上听诊肺部可以是完全清的。BC 指南正是因此把溺水列为肺水肿的病因之一——所以现在这一套正常的生命体征，并不能保证接下来几个小时也没事。选项 A 是绝对化措辞的规则，这类选项通常是错的，而且也没给母亲一个她听得懂、用得上的理由。选项 B 和 C 编造了溺水并不会引起的问题。",
+          "sourceRef": "BC Guidelines p.33, p.37",
+          "verified": false,
+          "evolutionEn": "Ten minutes have passed. The coughing has settled, he says he feels fine, and vitals are HR 104, RR 22, SpO2 96% on room air with clear lungs.",
+          "evolutionZh": "已过 10 分钟。咳嗽停止，他说自己没事，生命体征为 HR 104、RR 22、室内空气下 SpO2 96%，双肺听诊清。"
+        },
+        {
+          "id": "emr-cs-02-q3",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "pediatric",
+          "topic": "respiratory-deterioration",
+          "difficulty": "advanced",
+          "questionEn": "During transport he becomes quiet and drowsy, his respirations become shallow at 34 per minute, and his SpO2 falls to 88% despite high-flow oxygen by non-rebreather. He now responds only to voice. What is the most appropriate action?",
+          "questionZh": "转运途中他变得安静、嗜睡，呼吸变浅、频率 34 次/分，尽管已用 non-rebreather 给高流量氧，SpO2 仍降至 88%。他现在只对呼唤有反应。最恰当的处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Apply CPAP at 5 cmH2O and titrate upward",
+              "zh": "上 CPAP，从 5 cmH2O 开始逐步上调"
+            },
+            {
+              "key": "B",
+              "en": "Sit him fully upright and encourage him to cough",
+              "zh": "让他完全坐直，鼓励他咳嗽"
+            },
+            {
+              "key": "C",
+              "en": "Begin assisted ventilations with a bag-valve mask and 100% oxygen, and notify the receiving facility",
+              "zh": "用 BVM 加 100% 氧气开始辅助通气，并通知接收医院"
+            },
+            {
+              "key": "D",
+              "en": "Reduce the oxygen flow rate, because high-flow oxygen is suppressing his respiratory drive",
+              "zh": "调低氧流量，因为高流量氧正在抑制他的呼吸驱动"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "Shallow rapid breathing with a falling level of consciousness and a falling SpO2 on high-flow oxygen is failing respiration, and the guideline directs you to assist inadequate or failing respirations — for an EMR that means bag-valve-mask ventilation with 100% oxygen. Option A fails on two counts: CPAP is contraindicated in patients twelve years and under and in anyone whose level of consciousness is falling, and it is a PCP intervention. Option B leaves a drowsy child to do the work himself when he is already losing that fight. Option D is a myth misapplied from chronic COPD, and it would be dangerous here.",
+          "explanationZh": "浅快呼吸 + 意识水平下降 + 高流量氧下 SpO2 仍在掉，这就是呼吸衰竭；指南要求对不足或衰竭的呼吸进行辅助——对 EMR 来说就是用 BVM 加 100% 氧气通气。选项 A 错了两层：CPAP 对 12 岁及以下、以及意识水平正在下降的患者都是禁忌，而且它属于 PCP 的处置。选项 B 是让一个已经打不动这场仗的嗜睡孩子自己继续硬撑。选项 D 是从慢性 COPD 那里生搬硬套过来的错误说法，用在这里很危险。",
+          "sourceRef": "BC Guidelines p.11, p.37, p.52",
+          "verified": false,
+          "evolutionEn": "En route, he has deteriorated: quiet and drowsy, responding only to voice, respirations shallow at 34/min, SpO2 down to 88% on high-flow oxygen.",
+          "evolutionZh": "转运途中病情恶化：安静、嗜睡，仅对呼唤有反应，呼吸浅、34 次/分，高流量氧下 SpO2 降至 88%。"
+        },
+        {
+          "id": "emr-cs-02-q4",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "pediatric",
+          "topic": "hypothermia-prevention",
+          "difficulty": "foundation",
+          "questionEn": "He is still wet, is shivering and his skin is cold to the touch. Which one of the following is correct for the EMR?",
+          "questionZh": "他仍然浑身湿透、在发抖，皮肤摸上去冰凉。以下哪一项是 EMR 应做的？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Leave the wet clothing in place as an insulating layer until arrival at hospital",
+              "zh": "把湿衣物留在身上当作保温层，直到送达医院"
+            },
+            {
+              "key": "B",
+              "en": "Remove the wet clothing, dry him, cover him with blankets and raise the temperature in the ambulance",
+              "zh": "脱去湿衣物、擦干身体、盖上毯子，并调高救护车内的温度"
+            },
+            {
+              "key": "C",
+              "en": "Rub his arms and legs vigorously to restore circulation",
+              "zh": "用力搓揉他的四肢以恢复循环"
+            },
+            {
+              "key": "D",
+              "en": "Give him a warm sweet drink as soon as he is able to swallow",
+              "zh": "只要他能吞咽，就给他喝一杯温热的甜饮料"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "Both the drowning and hypothermia guidelines say the same thing: remove wet and cold clothing, dry the patient, cover with blankets or dry clothing, and warm the ambulance. Wet clothing conducts heat away from the body many times faster than air, so option A actively continues the heat loss. Option C is vigorous handling, which the hypothermia guideline warns against, and rubbing does nothing useful for core temperature. Option D gives an oral fluid to a child whose level of consciousness has already dropped once on this call, which is an aspiration risk.",
+          "explanationZh": "溺水指南和低体温指南说的是同一件事：脱掉湿冷衣物、擦干患者、盖上毯子或干衣服、把救护车内加温。湿衣物带走体热的速度比空气快很多倍，所以选项 A 是在主动让热量继续流失。选项 C 属于粗暴搬动，低体温指南明确要求避免，而且搓揉对核心体温毫无帮助。选项 D 给一个本次出勤中意识水平已经掉过一次的孩子口服液体，存在误吸风险。",
+          "sourceRef": "BC Guidelines p.29, p.37",
+          "verified": false,
+          "evolutionEn": "Assisted ventilation has been started and he is being transported; he remains wet, shivering and cold to the touch.",
+          "evolutionZh": "已开始辅助通气并在转运中；他仍然湿透、发抖，皮肤冰凉。"
+        }
+      ]
+    },
+    {
+      "id": "emr-cs-03",
+      "format": "case-scenario",
+      "titleEn": "Found in a driveway on a February morning",
+      "titleZh": "二月清晨被发现倒在车道上",
+      "passageEn": "At 06:20 in February you are called to a rural driveway where a 79-year-old woman has been found lying beside her car. A neighbour says she left for an early appointment and must have slipped on the ice; the last time anyone saw her was 22:00 the night before. The outside temperature is -9 C. She is wearing a housecoat and slippers, she is not shivering, and she mumbles when you speak to her. Her skin is cold and waxy to the touch and her limbs feel stiff.",
+      "passageZh": "二月的清晨 06:20，你被派往一处乡村住宅车道，一名 79 岁女性被发现倒在自己车旁。邻居说她本来要去赶一个早上的预约，应该是在冰面上滑倒了；最后一次有人见到她是前一晚 22:00。室外温度 -9 C。她穿着睡袍和拖鞋，没有在发抖，你对她说话时她只是含糊地咕哝。她的皮肤摸上去冰冷发蜡，四肢僵硬。",
+      "questions": [
+        {
+          "id": "emr-cs-03-q1",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "hypothermia-pulse-check",
+          "difficulty": "intermediate",
+          "questionEn": "You cannot immediately feel a carotid pulse. What should you do?",
+          "questionZh": "你一时摸不到颈动脉搏动。应该怎么做？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Begin chest compressions immediately, since any patient without an immediately palpable pulse is in cardiac arrest",
+              "zh": "立即开始胸外按压，因为只要摸不到脉搏就说明是心脏骤停"
+            },
+            {
+              "key": "B",
+              "en": "Take up to 30-45 seconds to confirm the absence of a pulse before starting CPR",
+              "zh": "用最多 30-45 秒确认确实没有脉搏，再开始 CPR"
+            },
+            {
+              "key": "C",
+              "en": "Check a radial pulse instead, since it is easier to find in a cold patient",
+              "zh": "改摸桡动脉，因为在寒冷患者身上更容易摸到"
+            },
+            {
+              "key": "D",
+              "en": "Apply the AED first and let the machine decide whether she has a pulse",
+              "zh": "先贴 AED，让机器来判断她有没有脉搏"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The hypothermia guideline makes a specific exception to the usual ten-second rule: take up to 30-45 seconds to determine pulselessness in a severely hypothermic patient. A cold heart can beat very slowly and very weakly, and starting compressions on a perfusing hypothermic heart risks provoking ventricular fibrillation. Option C is backwards — peripheral vasoconstriction makes a radial pulse the hardest one to find in this patient. Option D misunderstands the AED, which analyses rhythm and cannot tell you whether there is a pulse.",
+          "explanationZh": "低体温指南在通常的「10 秒」规则之外做了专门例外：对严重低体温患者，可用最多 30-45 秒来判断是否无脉。低温的心脏可以跳得极慢、极弱；在一颗仍在灌注的低温心脏上开始按压，有诱发心室颤动的风险。选项 C 恰好搞反了——外周血管收缩使桡动脉成为这位患者身上最难摸到的脉搏。选项 D 误解了 AED：它分析的是心律，无法告诉你有没有脉搏。",
+          "sourceRef": "BC Guidelines p.29",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-cs-03-q2",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "hypothermia-rewarming",
+          "difficulty": "intermediate",
+          "questionEn": "A carotid pulse is found at about 40 and she is breathing 8 times a minute. She has been moved into the warmed ambulance and her wet housecoat has been removed. A tympanic temperature reads 27 C. Based on that temperature, what is the correct rewarming approach?",
+          "questionZh": "最终摸到颈动脉搏动约 40 次/分，呼吸 8 次/分。她已被移入已加温的救护车内，湿睡袍也已脱去。鼓膜温度显示 27 C。根据这个体温，正确的复温方式是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Actively rewarm with hot packs wrapped in towels and encourage mild activity",
+              "zh": "用毛巾包裹的热敷包主动复温，并鼓励轻度活动"
+            },
+            {
+              "key": "B",
+              "en": "Immerse her hands and feet in warm water to speed rewarming",
+              "zh": "把她的手脚泡进温水里以加快复温"
+            },
+            {
+              "key": "C",
+              "en": "Do not actively rewarm; insulate her to prevent further heat loss, heat the ambulance to 30 C and avoid rough handling",
+              "zh": "不主动复温；给她保温以防止进一步散热，把救护车加热到 30 C，并避免粗暴搬动"
+            },
+            {
+              "key": "D",
+              "en": "Actively rewarm with hot packs and warm blankets, but avoid any activity",
+              "zh": "用热敷包和温热毯子主动复温，但避免任何活动"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "The BC guideline splits management by core temperature: mild and moderate hypothermia are actively rewarmed, but severe hypothermia below 28 C is not. At 27 C she is severe, so the plan is insulation to prevent further loss, an ambulance heated to 30 C, and gentle handling. Options A and D both apply the moderate-hypothermia plan to a severe patient, and option A adds activity, which pushes cold peripheral blood back to the core. Option B rewarms the periphery first, the same error in a more aggressive form. The stiff limbs and absent shivering in the passage were the clues that she was already below the shivering threshold.",
+          "explanationZh": "BC 指南按核心体温分档处理：轻度和中度低体温要主动复温，而低于 28 C 的重度低体温不主动复温。她 27 C，属重度，因此方案是保温以防继续散热、把救护车加热到 30 C、并轻柔搬动。选项 A 和 D 都是把中度低体温的方案套在重度患者身上，选项 A 还加上了活动——那会把外周的冷血推回核心。选项 B 先复温外周，是同一个错误的更激进版本。情境里「四肢僵硬」和「不再发抖」就是提示：她的体温已经低到连寒战都停止了。",
+          "sourceRef": "BC Guidelines p.29",
+          "verified": false,
+          "evolutionEn": "A carotid pulse of about 40 has been confirmed and she is breathing 8 times a minute. She is now in the warmed ambulance, the wet housecoat has been removed, and a tympanic temperature reads 27 C.",
+          "evolutionZh": "已确认颈动脉搏动约 40 次/分，呼吸 8 次/分。她已被移入加温后的救护车内，湿睡袍已脱去，鼓膜温度为 27 C。"
+        },
+        {
+          "id": "emr-cs-03-q3",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "assisted-ventilation",
+          "difficulty": "intermediate",
+          "questionEn": "Her respirations remain 8 per minute and shallow, and her SpO2 reads 86%. What is the most appropriate intervention?",
+          "questionZh": "她的呼吸仍为 8 次/分且浅表，SpO2 显示 86%。最恰当的处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Apply a nasal cannula at 4 L/min and continue to monitor",
+              "zh": "用鼻导管以 4 L/min 给氧并继续监测"
+            },
+            {
+              "key": "B",
+              "en": "Apply a non-rebreather mask at 15 L/min and continue to monitor",
+              "zh": "用 non-rebreather 面罩以 15 L/min 给氧并继续监测"
+            },
+            {
+              "key": "C",
+              "en": "Insert an oropharyngeal airway and let her breathe room air until she warms",
+              "zh": "插入 OPA，让她呼吸室内空气直到体温回升"
+            },
+            {
+              "key": "D",
+              "en": "Assist ventilations with a bag-valve mask and 100% oxygen at an appropriate rate, handling her gently",
+              "zh": "用 BVM 加 100% 氧气以适当频率辅助通气，同时轻柔操作"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "A rate of 8 with shallow tidal volumes in a patient with an altered level of consciousness is the guideline's definition of inadequate or failing respirations, and the listed intervention is to assist those ventilations. Oxygen alone, whether by cannula or non-rebreather, does not fix inadequate minute volume — the patient is not moving enough air to carry that oxygen in, so options A and B leave the underlying problem untouched. Option C leaves her hypoxic on room air. Note that the assistance must still respect the hypothermia rule of gentle handling, since a cold heart is irritable.",
+          "explanationZh": "意识状态改变的患者呼吸 8 次/分且潮气量浅，正符合指南对「不足或衰竭的呼吸」的定义，而对应的处置就是辅助通气。单纯给氧——无论鼻导管还是 non-rebreather——都解决不了分钟通气量不足的问题：患者本身移动的气体量就不够，氧气进不去，所以选项 A、B 都没碰到根本问题。选项 C 让她在室内空气下继续缺氧。要注意，辅助通气同样要遵守低体温的轻柔操作原则，因为低温的心脏很容易激惹。",
+          "sourceRef": "BC Guidelines p.11, p.29",
+          "verified": false,
+          "evolutionEn": "Insulation is in place and the ambulance is at 30 C. Her respirations remain 8 per minute and shallow and SpO2 now reads 86%.",
+          "evolutionZh": "保温已完成，救护车内温度已达 30 C。她的呼吸仍为 8 次/分且浅表，SpO2 现为 86%。"
+        },
+        {
+          "id": "emr-cs-03-q4",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "hypothermic-cardiac-arrest",
+          "difficulty": "advanced",
+          "questionEn": "Six minutes from hospital she loses her pulse. CPR is started, the AED advises a shock and you deliver it. Over the next four minutes the AED advises and you deliver two more shocks, with no return of circulation. What should the crew do now?",
+          "questionZh": "距医院还有 6 分钟时，她失去脉搏。CPR 已开始，AED 提示可电击，你实施了一次电击。接下来的 4 分钟内，AED 又两次提示可电击、你也都实施了，但自主循环仍未恢复。此时急救组应该怎么做？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Continue CPR without pausing to analyze or shock again, and continue rapid transport",
+              "zh": "继续 CPR，不再为分析或电击而暂停，同时继续快速转运"
+            },
+            {
+              "key": "B",
+              "en": "Stop resuscitation, since three unsuccessful shocks in a hypothermic patient indicate death",
+              "zh": "停止复苏，因为低体温患者三次电击无效就说明已经死亡"
+            },
+            {
+              "key": "C",
+              "en": "Continue the standard cycle of two minutes of CPR followed by analysis and a shock as advised",
+              "zh": "继续标准循环：2 分钟 CPR 后分析，按提示电击"
+            },
+            {
+              "key": "D",
+              "en": "Pause CPR for 45 seconds every two minutes to recheck for a pulse",
+              "zh": "每 2 分钟暂停 CPR 45 秒，重新检查脉搏"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The hypothermia guideline is explicit: in cardiac arrest, apply the AED and defibrillate up to three times if indicated, then continue CPR and transport rapidly — after three defibrillations, do not pause CPR for analyzing or shocks. A cold myocardium usually will not convert until it is rewarmed, so further shocks buy nothing while the pauses cost perfusion. Option C is the normal adult algorithm applied to a patient the guideline specifically carves out. Option B stops too early; hypothermia is a recognized reversible cause and intra-arrest transport is appropriate. Option D builds in exactly the long interruptions the guideline is trying to eliminate.",
+          "explanationZh": "低体温指南写得很明确：发生心脏骤停时贴上 AED，如有指征最多电击三次，然后继续 CPR 并快速转运——三次除颤之后，不要再为分析或电击而暂停 CPR。低温的心肌通常在复温之前不会转复，因此再多的电击换不来什么，而每一次暂停都在损失灌注。选项 C 是把常规成人流程套在一个指南专门做了例外的患者身上。选项 B 停得太早；低体温是公认的可逆病因，边复苏边转运是恰当的。选项 D 恰恰制造了指南想要消除的长时间中断。",
+          "sourceRef": "BC Guidelines p.29, p.42, p.45",
+          "verified": false,
+          "evolutionEn": "Six minutes from hospital she has gone into cardiac arrest. CPR is in progress and three AED-advised shocks have been delivered over about four minutes with no return of circulation.",
+          "evolutionZh": "距医院 6 分钟时她发生心脏骤停。CPR 正在进行，约 4 分钟内已按 AED 提示实施了三次电击，自主循环仍未恢复。"
+        }
+      ]
+    },
+    {
+      "id": "emr-cs-04",
+      "format": "case-scenario",
+      "titleEn": "Unresponsive in a bar washroom at 02:15",
+      "titleZh": "凌晨 02:15 酒吧洗手间内的无反应患者",
+      "passageEn": "You are called at 02:15 to the washroom of a downtown bar for an unresponsive 26-year-old man. Staff found him slumped against the wall of a locked cubicle and unlocked the door for you. A friend says he \"took something\" about half an hour ago but will not say what. There is a used needle on the floor beside him. He is grey, his lips are blue, and you count 4 shallow breaths in 30 seconds. His pupils are pinpoint and a carotid pulse is present at about 110. The cubicle is narrow and the floor is wet.",
+      "passageZh": "凌晨 02:15，你被派往市中心一家酒吧的洗手间，一名 26 岁男性无反应。店员发现他瘫靠在一个反锁隔间的墙上，并为你们打开了门。一位朋友说他大约半小时前「吃了点东西」，但不肯说是什么。他身旁地上有一支用过的针头。他面色灰白、口唇发绀，30 秒内你数到 4 次浅呼吸。瞳孔呈针尖样，颈动脉搏动约 110 次/分。隔间狭窄，地面潮湿。",
+      "questions": [
+        {
+          "id": "emr-cs-04-q1",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "adult",
+          "topic": "overdose-priorities",
+          "difficulty": "intermediate",
+          "questionEn": "What is the EMR's first priority for this patient?",
+          "questionZh": "对这位患者，EMR 的首要处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Give naloxone 0.4 mg IM immediately, since reversing the opioid will restore his breathing",
+              "zh": "立即肌注 naloxone 0.4 mg，因为逆转阿片作用就能让他恢复呼吸"
+            },
+            {
+              "key": "B",
+              "en": "Open the airway, suction if needed, and begin bag-valve-mask ventilation with 100% oxygen",
+              "zh": "开放气道、必要时吸引，并用 BVM 加 100% 氧气开始通气"
+            },
+            {
+              "key": "C",
+              "en": "Obtain a blood glucose level before any other intervention",
+              "zh": "在任何其他处置之前先测血糖"
+            },
+            {
+              "key": "D",
+              "en": "Complete a rapid body survey and a full set of vital signs before intervening",
+              "zh": "先完成快速身体检查和一整套生命体征，再做处置"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The narcotic overdose guideline puts the primary survey first and in order: manage the airway with positioning, suctioning and adjuncts as needed, support ventilations, and administer oxygen to keep SpO2 at or above 94%. Naloxone comes after that, and this is the single most-tested idea in opioid overdose: the patient is dying of hypoxia, not of opioid, and ventilation is what reverses hypoxia in the next sixty seconds. Option A is not wrong as a treatment, only as a first move — the drug takes minutes to work while the brain is anoxic now. Options C and D are assessment steps that belong after the airway and breathing are secured; a blood glucose is required in this protocol, but not before ventilation.",
+          "explanationZh": "麻醉剂过量指南把 primary survey 放在最前面且有顺序：用体位、吸引和气道辅助装置管理气道，支持通气，给氧维持 SpO2 ≥ 94%。naloxone 排在这之后——这也是阿片过量最常考的一个概念：患者是死于缺氧，而不是死于阿片本身，而能在接下来 60 秒内逆转缺氧的只有通气。选项 A 作为处置本身没错，错在把它当成第一步——药物起效要几分钟，而大脑此刻正在缺氧。选项 C、D 是评估步骤，应在气道和呼吸被稳住之后进行；这个 protocol 确实要求测血糖，但不是在通气之前。",
+          "sourceRef": "BC Guidelines p.11, p.56",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-cs-04-q2",
+          "cpcfArea": "E",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "sharps-safety",
+          "difficulty": "foundation",
+          "questionEn": "Ventilations have been started and his colour is improving. Your partner needs to move him out of the narrow cubicle and notices that the used needle is now lying under the patient's thigh. What is the safest way to manage the needle?",
+          "questionZh": "通气已开始，他的面色在好转。搭档准备把他从狭窄的隔间里搬出来时，发现那支用过的针头现在压在患者大腿下面。处理这支针头最安全的做法是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Pick it up in a gloved hand and hold it while the patient is moved",
+              "zh": "戴手套把它捡起来，搬动患者时一直握在手里"
+            },
+            {
+              "key": "B",
+              "en": "Move the patient first and pick the needle up afterwards",
+              "zh": "先把患者搬出去，之后再回来捡针头"
+            },
+            {
+              "key": "C",
+              "en": "Sweep it aside with your boot and carry on",
+              "zh": "用鞋把它拨到一边，继续做事"
+            },
+            {
+              "key": "D",
+              "en": "Use a tool or the lid of the sharps container to lift it without touching it, place it in a puncture-resistant sharps container, then move the patient",
+              "zh": "用工具或利器盒盖把它夹起、不直接用手接触，放入防穿刺利器盒后，再搬动患者"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "An exposed contaminated needle under the patient must be controlled before anyone lifts him, and it should be handled without being touched by hand and placed straight into a puncture-resistant container. Option B is the tempting one — patient first — but a lift is exactly the moment when hands go under a thigh and knees go onto the floor, so the sharp gets you or the patient. Option A keeps an uncapped needle in the hand of someone doing a two-person lift on a wet floor. Option C leaves it loose on the floor for the next person. Gloves do not stop a needle.",
+          "explanationZh": "压在患者身下的这支暴露的污染针头，必须在任何人抬他之前先被控制住，而且应当不用手直接接触、直接放进防穿刺容器。选项 B 很有诱惑力——先顾患者——但抬人恰恰就是双手伸到大腿底下、膝盖压到地面的那一刻，针头正好扎到你或患者。选项 A 让一个正在湿滑地面上做双人搬运的人手里握着一支没有护套的针。选项 C 把它继续散落在地上，留给下一个进来的人。手套挡不住针头。",
+          "sourceRef": "BC Guidelines p.9 (Rescue Scene Evaluation - hazards); CPCF area E",
+          "verified": false,
+          "evolutionEn": "Bag-valve-mask ventilation is under way and his colour is improving. The used needle is now under the patient's thigh and he must be moved out of the cubicle.",
+          "evolutionZh": "BVM 通气正在进行，他的面色在好转。用过的针头现在压在患者大腿下方，而他必须被搬出隔间。"
+        },
+        {
+          "id": "emr-cs-04-q3",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "naloxone-dose",
+          "difficulty": "intermediate",
+          "questionEn": "After two minutes of effective ventilation his SpO2 has risen to 96%, but he is still not breathing on his own and remains unresponsive. His blood glucose is 5.8 mmol/L. What is the correct initial EMR dose of naloxone?",
+          "questionZh": "有效通气 2 分钟后，他的 SpO2 升至 96%，但仍没有自主呼吸，也仍无反应。血糖为 5.8 mmol/L。EMR 给 naloxone 的正确初始剂量是多少？",
+          "options": [
+            {
+              "key": "A",
+              "en": "0.4 mg IM",
+              "zh": "0.4 mg 肌注"
+            },
+            {
+              "key": "B",
+              "en": "2.0 mg IM",
+              "zh": "2.0 mg 肌注"
+            },
+            {
+              "key": "C",
+              "en": "0.8 mg IM",
+              "zh": "0.8 mg 肌注"
+            },
+            {
+              "key": "D",
+              "en": "4 mg IV",
+              "zh": "4 mg 静脉注射"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The BC monograph starts at 0.4 mg and escalates only if the endpoint is not reached: 0.4 mg, then 0.4 mg after three minutes, then 0.8 mg, then 2.0 mg, with the target being an SpO2 of at least 94% and a respiratory rate above 10. Options B and C are later steps in that ladder, not starting doses, and jumping to them produces an abrupt, agitated withdrawal that is harder to manage. Option D confuses two things: 4 mg is the intranasal dose, and intravenous naloxone is a PCP intervention. Note that his blood glucose was checked and is normal, so it is not the cause of his unresponsiveness.",
+          "explanationZh": "BC 药物专论从 0.4 mg 起始，只有在未达终点时才逐级上调：0.4 mg，3 分钟后 0.4 mg，再 0.8 mg，再 2.0 mg；目标终点是 SpO2 ≥ 94% 且呼吸频率 >10。选项 B、C 是这个阶梯上后面的步骤，不是起始剂量；直接跳上去会造成突然而剧烈的戒断反应，反而更难处理。选项 D 混淆了两件事：4 mg 是鼻内给药的剂量，而静脉给 naloxone 属于 PCP 的处置。另外注意，他的血糖已经测过且正常，所以低血糖不是他无反应的原因。",
+          "sourceRef": "BC Guidelines p.56, p.72",
+          "verified": false,
+          "evolutionEn": "Two minutes of bag-valve-mask ventilation have raised SpO2 to 96%, but he still has no spontaneous respirations and remains unresponsive. Blood glucose has been checked at 5.8 mmol/L.",
+          "evolutionZh": "经过 2 分钟 BVM 通气，SpO2 升至 96%，但仍无自主呼吸、仍无反应。血糖已测，为 5.8 mmol/L。"
+        },
+        {
+          "id": "emr-cs-04-q4",
+          "cpcfArea": "B",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "communication-post-naloxone",
+          "difficulty": "advanced",
+          "questionEn": "Three minutes after the first dose he opens his eyes, pushes the mask away and says loudly: \"What the hell did you do to me? You wasted my whole hit. I'm not going to any hospital — leave me alone.\" What is the EMR's most appropriate response?",
+          "questionZh": "第一剂后 3 分钟，他睁开眼睛，把面罩推开，大声说：「你们对我做了什么？我那一份全废了。我不去什么医院——别管我。」EMR 最恰当的回应是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "\"You nearly died. If you don't come with us you'll be dead by morning.\"",
+              "zh": "「你刚才差点就没命了。你要是不跟我们走，天亮之前就死了。」"
+            },
+            {
+              "key": "B",
+              "en": "\"Fine. It's your body — we'll pack up.\"",
+              "zh": "「行吧。你的身体你做主——我们收拾东西走人。」"
+            },
+            {
+              "key": "C",
+              "en": "\"I hear you, and I'm sorry — you weren't breathing, so we had to. The medicine we gave you wears off in under an hour and what you took may not, and if that happens you could stop breathing again with nobody here. We'd really like to take you in and stay with you.\"",
+              "zh": "「我听到了，也很抱歉——当时你已经没在呼吸了，我们不得不这么做。我们给你的这个药不到一个小时就会失效，而你用的那个东西可能还没失效；真到那时候，你可能会再次停止呼吸，而身边一个人都没有。我们很希望能送你去医院，并且一路陪着你。」"
+            },
+            {
+              "key": "D",
+              "en": "\"You should think about what you're doing to your family.\"",
+              "zh": "「你该想想你这么做对你家人意味着什么。」"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "Option C acknowledges his anger without arguing with it, explains honestly why you intervened, and then gives the one clinical fact that actually justifies transport: naloxone has a shorter duration of action than most opioids, so he can re-sedate and stop breathing after you leave. It ends with an offer rather than an order, which is what keeps a patient like this talking to you. Option A is a threat, and threatening a patient who has just been thrown into withdrawal usually ends the conversation. Option B accepts a refusal without ever explaining the re-sedation risk, so it is not an informed refusal. Option D moralizes about his family, which is a judgement, not care, and will destroy any chance of him accepting help.",
+          "explanationZh": "选项 C 先承接他的怒气而不与之争辩，诚实说明为什么必须干预，然后给出唯一真正能支撑转运的临床事实：naloxone 的作用时间比大多数阿片类都短，所以你们走后他可能重新陷入镇静并停止呼吸。它以「我们希望」而不是「你必须」结尾，这正是让这类患者愿意继续跟你说话的关键。选项 A 是威胁，而对一个刚被推入戒断状态的患者施加威胁，通常谈话到此为止。选项 B 在从未说明「再次镇静」风险的情况下就接受了拒绝，这不是知情拒绝。选项 D 拿他的家人做道德评判——那是评判，不是照护，只会彻底断送他接受帮助的可能。",
+          "sourceRef": "BC Guidelines p.56, p.72; CPCF area B",
+          "verified": false,
+          "evolutionEn": "Three minutes after naloxone 0.4 mg IM, he has woken, pushed the mask away, and is angry and refusing transport.",
+          "evolutionZh": "肌注 naloxone 0.4 mg 后 3 分钟，他醒了过来，推开面罩，情绪愤怒并拒绝转运。"
+        }
+      ]
+    },
+    {
+      "id": "emr-cs-05",
+      "format": "case-scenario",
+      "titleEn": "Team van rollover with five patients",
+      "titleZh": "球队面包车侧翻，共 5 名伤者",
+      "passageEn": "You and your EMR partner are the first unit to arrive at a single-vehicle collision at 16:30. A passenger van carrying a youth soccer team has left the road and rolled onto its side in a ditch. There are five patients. The van is on its side but stable, the ignition is off, and there is no fire or leaking fuel. The next ambulance is fifteen minutes away and fire is eight minutes away. The patients are: (1) a 46-year-old coach, walking around the ditch shouting for help, no obvious injuries; (2) a 15-year-old girl who was not breathing until you opened her airway, then began breathing at 8 per minute; (3) a 14-year-old boy, awake, with an obviously deformed forearm, radial pulse present, crying loudly; (4) a 13-year-old girl, unresponsive, with no breathing after her airway was opened and no carotid pulse; (5) a 15-year-old boy, awake but confused, with a rapid weak radial pulse and cool clammy skin.",
+      "passageZh": "16:30，你和 EMR 搭档是一起单车事故的首到单位。一辆载着青少年足球队的面包车冲出路面，侧翻在路边沟里。共 5 名伤者。车辆虽侧翻但姿态稳定，点火已关闭，无起火、无燃油泄漏。下一辆救护车还有 15 分钟到，消防还有 8 分钟。伤者情况：(1) 46 岁教练，在沟边来回走动大声呼救，无明显外伤；(2) 15 岁女孩，你打开气道之前没有呼吸，打开后开始以 8 次/分呼吸；(3) 14 岁男孩，清醒，前臂明显畸形，桡动脉搏动可及，大声哭喊；(4) 13 岁女孩，无反应，开放气道后仍无呼吸，颈动脉无搏动；(5) 15 岁男孩，清醒但意识模糊，桡动脉快而弱，皮肤湿冷。",
+      "questions": [
+        {
+          "id": "emr-cs-05-q1",
+          "cpcfArea": "C",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "multi-casualty-resources",
+          "difficulty": "foundation",
+          "questionEn": "As the first crew on scene with five patients and no additional resources for at least eight minutes, what is your first action?",
+          "questionZh": "作为首到现场的急救组，面对 5 名伤者、且至少 8 分钟内没有增援，你的第一个动作应该是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Begin CPR on patient 4, since she has the most immediate threat to life",
+              "zh": "先给 4 号做 CPR，因为她的生命威胁最紧迫"
+            },
+            {
+              "key": "B",
+              "en": "Complete the scene evaluation and a rapid triage of all five patients, then immediately update dispatch with the number and condition of patients",
+              "zh": "完成现场评估并对 5 名伤者快速分诊，随即立刻向调度通报伤者数量与伤情"
+            },
+            {
+              "key": "C",
+              "en": "Start treating patient 2, since she is the most salvageable critical patient",
+              "zh": "先处置 2 号，因为她是最有救治希望的危重患者"
+            },
+            {
+              "key": "D",
+              "en": "Load patients 2 and 5 and begin transport before the other crews arrive",
+              "zh": "在其他单位到达前先装载 2 号和 5 号并开始转运"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The Rescue Scene Evaluation includes identifying the additional resources required, and with five patients and two EMRs the single action that changes the outcome for the most people is an accurate early call for help. Until dispatch knows there are five patients — three of them serious — the response they have sent is built on a one-patient collision. Triage also has to precede treatment, because the moment you kneel down beside one patient you stop being available to the other four. Options A and C are treatment decisions made before anyone knows what is on scene, and option D removes the only crew on scene from four remaining patients.",
+          "explanationZh": "Rescue Scene Evaluation 本身就包含判断所需的增援资源；面对 5 名伤者和 2 名 EMR，唯一能改变最多人结局的动作，就是尽早、准确地呼叫增援。在调度知道现场有 5 名伤者、其中 3 名危重之前，他们派出的力量是按「单人车祸」配置的。分诊也必须在处置之前，因为你一旦在某一名伤者身旁跪下，就等于对另外四人不再可用。选项 A、C 是在还没人知道现场全貌时就做出的处置决定；选项 D 则把现场唯一的急救组带走，丢下剩余四名伤者。",
+          "sourceRef": "BC Guidelines p.9; CPCF area C",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-cs-05-q2",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "pediatric",
+          "topic": "triage-priority",
+          "difficulty": "advanced",
+          "questionEn": "Dispatch has been updated and two more ambulances plus fire are en route. Which patient should receive your first hands-on treatment?",
+          "questionZh": "已向调度通报，另外两辆救护车和消防正在赶来。你应该先对哪名伤者动手处置？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Patient 3, the 14-year-old with the deformed forearm, because he is in visible pain",
+              "zh": "3 号，前臂畸形的 14 岁男孩，因为他的疼痛最明显"
+            },
+            {
+              "key": "B",
+              "en": "Patient 4, the 13-year-old in cardiac arrest, because cardiac arrest is always the highest priority",
+              "zh": "4 号，心脏骤停的 13 岁女孩，因为心脏骤停永远是最高优先级"
+            },
+            {
+              "key": "C",
+              "en": "Patient 1, the coach, because once he is checked he can help you with the others",
+              "zh": "1 号教练，因为先把他检查完，他就能帮你照看其他人"
+            },
+            {
+              "key": "D",
+              "en": "Patient 2, the 15-year-old girl whose breathing returned as soon as her airway was opened",
+              "zh": "2 号，那名一开放气道就恢复呼吸的 15 岁女孩"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The purpose of the primary survey is to find and manage life threats, and when two providers face five patients the rule is the greatest good for the greatest number. Patient 2 has already proved that a simple airway manoeuvre keeps her alive, and at 8 breaths per minute she needs assisted ventilation now — she is the patient your hands can actually save. Patient 4 is a traumatic arrest who did not breathe even after her airway was opened; with two providers and four other patients, committing both of you to a CPR that has almost no chance and abandons three salvageable patients is the wrong call, which is why the wording \"always the highest priority\" in option B should stand out as an absolute. Patient 5 is in shock and is next, ahead of patient 3, whose forearm is painful but not life-threatening. Patient 1 is walking, talking and uninjured.",
+          "explanationZh": "初步检查的目的是发现并处理危及生命的问题；当 2 名施救者面对 5 名伤者时，原则是「让最多的人获得最大的益处」。2 号已经证明了：一个简单的开放气道动作就能让她活着；而 8 次/分的呼吸意味着她现在就需要辅助通气——她正是你双手真的救得回来的那个人。4 号是创伤性心脏骤停，开放气道后仍无呼吸；在只有 2 名施救者、还有另外 4 名伤者的情况下，把两人都投入一场几乎没有希望、同时放弃三名可救伤者的 CPR，是错误的决定——这也是为什么选项 B 里「永远是最高优先级」这种绝对化措辞应当立刻引起你的警觉。5 号处于休克，是下一位，排在 3 号之前；3 号的前臂虽痛，但没有生命危险。1 号能走能喊，没有受伤。",
+          "sourceRef": "BC Guidelines p.7, p.9, p.11",
+          "verified": false,
+          "evolutionEn": "Dispatch has been updated with five patients and their conditions; two additional ambulances and fire are en route.",
+          "evolutionZh": "已向调度通报共 5 名伤者及各自伤情；另有两辆救护车和消防正在赶来。"
+        },
+        {
+          "id": "emr-cs-05-q3",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "pediatric",
+          "topic": "airway-and-spinal-management",
+          "difficulty": "intermediate",
+          "questionEn": "Patient 2 is still breathing 8 shallow breaths per minute with her airway held open. She has a laceration on her forehead and does not respond to voice. What is the most appropriate management?",
+          "questionZh": "在保持气道开放的情况下，2 号仍为 8 次/分的浅呼吸。她前额有一处裂伤，对呼唤无反应。最恰当的处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Insert an oropharyngeal airway, assist ventilations with a bag-valve mask and 100% oxygen, and maintain manual in-line stabilization of the head and neck",
+              "zh": "插入 OPA，用 BVM 加 100% 氧气辅助通气，并保持头颈的徒手轴向固定"
+            },
+            {
+              "key": "B",
+              "en": "Apply a non-rebreather mask at 15 L/min and move on to the next patient",
+              "zh": "给她戴上 15 L/min 的 non-rebreather 面罩，然后去看下一名伤者"
+            },
+            {
+              "key": "C",
+              "en": "Sit her upright to improve her breathing and apply a hard collar",
+              "zh": "让她坐直以改善呼吸，并上硬颈托"
+            },
+            {
+              "key": "D",
+              "en": "Place her in the recovery position and reassess in two minutes",
+              "zh": "把她放成复原体位，2 分钟后复评"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "She is unresponsive, which means she cannot protect her own airway, and she is breathing inadequately, which the guideline says must be assisted. An oropharyngeal airway is indicated for a decreased level of consciousness, and the forehead laceration is an obvious injury above the level of the clavicles in an unconscious trauma patient, so cervical stabilization is indicated in the primary survey and is maintained manually while you ventilate. Option B gives oxygen to a patient who is not moving enough air to use it and then leaves her alone. Option C sits up a patient with a suspected spinal injury and still does not address the inadequate ventilation. Option D is a reasonable position for a patient who is breathing adequately, which she is not.",
+          "explanationZh": "她无反应，意味着无法自行保护气道；她的呼吸不足，而指南要求对不足的呼吸进行辅助。意识水平下降是 OPA 的适应证；而在一名昏迷的创伤患者身上，前额裂伤属于「锁骨平面以上的明显外伤」，因此初步检查阶段就有颈部固定的指征，并在通气过程中以徒手方式维持。选项 B 给一个连气都换不够的患者送氧，然后把她一个人留在那里。选项 C 让疑似脊柱损伤的患者坐起来，而且仍然没有解决通气不足。选项 D 对呼吸尚可的患者是合理体位，但她并非如此。",
+          "sourceRef": "BC Guidelines p.11, p.13, p.25",
+          "verified": false,
+          "evolutionEn": "You are now with patient 2. Her airway is being held open manually, she is breathing 8 shallow breaths per minute, has a forehead laceration and does not respond to voice.",
+          "evolutionZh": "你现在在 2 号身旁。她的气道正被徒手保持开放，呼吸浅、8 次/分，前额有裂伤，对呼唤无反应。"
+        },
+        {
+          "id": "emr-cs-05-q4",
+          "cpcfArea": "B",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "communication-bystander",
+          "difficulty": "intermediate",
+          "questionEn": "The coach (patient 1) follows you from patient to patient, repeatedly saying: \"Tell me they're all okay. Please, just tell me they're all going to be okay — I was driving.\" What is the EMR's most appropriate response?",
+          "questionZh": "教练（1 号）一直跟着你在伤者之间来回走，反复说：「告诉我他们都没事。求你了，就说他们都会没事的——车是我开的。」EMR 最恰当的回应是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "\"They're all going to be fine, don't worry.\"",
+              "zh": "「他们都会没事的，别担心。」"
+            },
+            {
+              "key": "B",
+              "en": "\"I can't talk to you right now, please step back.\"",
+              "zh": "「我现在没空跟你说话，请退后。」"
+            },
+            {
+              "key": "C",
+              "en": "\"I can't promise you that yet — we're still assessing everyone. What would help me most right now is you: can you sit with the boy with the hurt arm and keep him still until the next crew arrives?\"",
+              "zh": "「我现在还不能向你保证——我们还在逐个评估。但眼下最能帮到我的其实是你：你能不能去陪着那个手臂受伤的男孩，让他别乱动，一直到下一组人到？」"
+            },
+            {
+              "key": "D",
+              "en": "\"You need to talk to the police about that when they get here.\"",
+              "zh": "「这件事你等警察来了跟他们说。」"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "Option C does three things at once: it is honest without being cruel, it does not make a promise you cannot keep, and it converts an anxious walking-wounded bystander into a useful pair of hands, which is a real gain when two providers are covering five patients. Option A is a false reassurance about patients you have not finished assessing, and one of them has no pulse. Option B is dismissive of a man who is himself a patient and who will simply keep following you. Option D hears \"I was driving\" as a legal admission and answers as if the issue were blame, when what he needs is a task and a truthful answer.",
+          "explanationZh": "选项 C 一次做成三件事：诚实而不残忍；不做你兑现不了的承诺；并把一个焦虑的、能走动的轻伤旁观者转化为一双有用的手——在 2 名施救者要覆盖 5 名伤者时，这是实打实的收益。选项 A 是对尚未评估完的伤者做出的虚假保证，而其中一人已经没有脉搏。选项 B 对一个本身也是伤者、而且只会继续跟着你的人来说太过冷淡。选项 D 把「车是我开的」听成了法律意义上的认错，回答的是责任归属问题；而他此刻需要的是一件事情做，和一个真实的回答。",
+          "sourceRef": "BC Guidelines p.9; CPCF area B",
+          "verified": false,
+          "evolutionEn": "Patient 2 is being ventilated by your partner while you move to reassess patient 5; the coach has been following you throughout.",
+          "evolutionZh": "搭档正在给 2 号通气，你转去复评 5 号；教练自始至终一直跟在你身后。"
         }
       ]
     }

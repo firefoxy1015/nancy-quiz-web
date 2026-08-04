@@ -2,8 +2,8 @@
   "meta": {
     "part": "pcp-passages-1",
     "licence": "pcp",
-    "passageCount": 3,
-    "questionCount": 12,
+    "passageCount": 10,
+    "questionCount": 40,
     "languages": [
       "en",
       "zh"
@@ -565,6 +565,1228 @@
           "verified": false,
           "evolutionEn": "Eight minutes after the first dose the wheeze has returned and worsened, she has become drowsy, her blood pressure is now 70/40 and her SpO2 is 88% on high-flow oxygen.",
           "evolutionZh": "首剂给药 8 分钟后，哮鸣重新出现并加重，患儿变得嗜睡，血压降至 70/40 mmHg，高流量氧疗下 SpO2 为 88%。"
+        }
+      ]
+    },
+    {
+      "id": "pcp-pp-04",
+      "format": "patient-profile",
+      "titleEn": "78-year-old man found confused and sweating",
+      "titleZh": "被发现意识模糊、大汗淋漓的 78 岁男性",
+      "profile": {
+        "ageEn": "78 years old",
+        "ageZh": "78 岁",
+        "genderEn": "Male",
+        "genderZh": "男",
+        "chiefComplaintEn": "Found by his wife in the garden confused, sweating and slurring his words",
+        "chiefComplaintZh": "被妻子发现在花园里意识模糊、大汗淋漓、说话含糊不清",
+        "pastMedicalHxEn": "Insulin-dependent type 2 diabetes mellitus, atrial fibrillation, a transient ischemic attack three years ago",
+        "pastMedicalHxZh": "胰岛素依赖的 2 型糖尿病、心房颤动、三年前发生过一次短暂性脑缺血发作（TIA）",
+        "medicationsEn": "Insulin glargine and insulin aspart, apixaban, bisoprolol",
+        "medicationsZh": "甘精胰岛素和门冬胰岛素、阿哌沙班（apixaban）、比索洛尔",
+        "firstVitalsEn": "HR 104; RR 18; BP 148/88; SpO2 96% on room air; Temp 36.2°C; BGL 2.4 mmol/L; GCS 12 (E3 V4 M5)",
+        "firstVitalsZh": "心率 104 次/分；呼吸 18 次/分；血压 148/88 mmHg；室内空气下 SpO2 96%；体温 36.2°C；血糖 2.4 mmol/L；GCS 12 分（E3 V4 M5）",
+        "physicalFindingsEn": "Pale, cool and diaphoretic; opens his eyes to voice but does not follow commands reliably; weaker grip on the right than the left; pupils equal and reactive to light; gag reflex present but he cannot hold a cup steady",
+        "physicalFindingsZh": "面色苍白、皮肤湿冷多汗；呼唤能睁眼，但不能可靠地执行指令；右手握力明显弱于左手；双侧瞳孔等大、对光反射灵敏；咽反射存在，但无法稳稳端住杯子",
+        "otherInformationEn": "He took his usual morning insulin but skipped lunch because he was working in the garden. His wife says his speech was completely normal when she spoke to him 30 minutes ago.",
+        "otherInformationZh": "他照常注射了早晨的胰岛素，但因为一直在花园干活而没有吃午饭。妻子说 30 分钟前和他讲话时，他的口齿还完全正常。"
+      },
+      "questions": [
+        {
+          "id": "pcp-pp-04-q1",
+          "cpcfArea": "H",
+          "competency": "H2",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "diabetic-emergencies",
+          "difficulty": "foundation",
+          "questionEn": "Besides obtaining a blood glucose level, which assessment does the BC Diabetic Emergencies guideline specifically require in a patient with a decreased level of consciousness?",
+          "questionZh": "对于意识水平下降的患者，除了测血糖之外，BC《糖尿病急症》指南特别要求还必须做哪一项评估？",
+          "options": [
+            {
+              "key": "A",
+              "en": "A 12-lead ECG",
+              "zh": "12 导联心电图"
+            },
+            {
+              "key": "B",
+              "en": "Auscultation of all lung fields",
+              "zh": "听诊全部肺野"
+            },
+            {
+              "key": "C",
+              "en": "A complete head-to-toe examination before any treatment is given",
+              "zh": "在给予任何治疗之前先完成一次完整的头到脚检查"
+            },
+            {
+              "key": "D",
+              "en": "Evaluation for the signs and symptoms of stroke",
+              "zh": "评估是否存在卒中（stroke）的症状和体征"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The Diabetic Emergencies guideline lists 'evaluate for stroke signs and symptoms' as a required step alongside obtaining a blood glucose level, precisely because hypoglycemia and stroke can look identical and can also coexist. That matters here: this patient has atrial fibrillation, is anticoagulated, has had a previous TIA, and has one-sided weakness. A 12-lead and lung auscultation are reasonable general assessments but are not what the guideline specifies, and delaying treatment of a glucose of 2.4 mmol/L for a full head-to-toe examination would be harmful.",
+          "explanationZh": "《糖尿病急症》指南把「评估卒中的症状和体征」和测血糖并列为必做步骤，原因正是低血糖和卒中在表现上可以完全一样，而且两者还可能同时存在。这一点在本例尤其关键：患者有房颤、正在抗凝、三年前发生过 TIA，而且出现了一侧肢体无力。12 导联心电图和肺部听诊是合理的常规评估，但并不是指南特别指定的项目；而血糖已经 2.4 mmol/L 却先做完整的头到脚检查再治疗，属于有害的延误。",
+          "sourceRef": "BC Guidelines p.57 (Diabetic Emergencies); p.30 (Stroke)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-pp-04-q2",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "diabetic-emergencies",
+          "difficulty": "foundation",
+          "questionEn": "The patient has a gag reflex but cannot reliably follow commands or hold a cup. Vascular access has been established. What is the correct PCP treatment for his hypoglycemia?",
+          "questionZh": "该患者咽反射存在，但不能可靠地执行指令，也端不住杯子。静脉通路已经建立。作为 PCP，纠正其低血糖的正确处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Oral glucose 15 g applied to the oral mucosa",
+              "zh": "口服葡萄糖 15 g 涂抹于口腔黏膜"
+            },
+            {
+              "key": "B",
+              "en": "D10W 10-25 g (100-250 mL of 10% solution) IV",
+              "zh": "静脉给予 D10W 10-25 g（10% 葡萄糖溶液 100-250 mL）"
+            },
+            {
+              "key": "C",
+              "en": "Glucagon 1 mg IM",
+              "zh": "胰高血糖素（glucagon）1 mg 肌注"
+            },
+            {
+              "key": "D",
+              "en": "Dextrose 50% 25 g IV push",
+              "zh": "50% 葡萄糖 25 g 静脉推注"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "For a PCP with vascular access, confirmed hypoglycemia is corrected with D10W 10-25 g, which is 100-250 mL of the 10% solution. Oral glucose is only for patients with sufficient mentation to maintain their airway — this patient cannot follow commands or hold a cup, so he is an aspiration risk. Glucagon is the alternative when IV access attempts have been unsuccessful, which is not the case here. Dextrose 50% is not the BC preparation; D10W is the concentration in the guidelines and carries less risk of tissue necrosis if it extravasates.",
+          "explanationZh": "对已建立静脉通路的 PCP 来说，确诊低血糖的纠正用药是 D10W 10-25 g，也就是 10% 葡萄糖溶液 100-250 mL。口服葡萄糖仅适用于神志足以自主保护气道的患者——本例既不能执行指令也端不住杯子，存在误吸风险。胰高血糖素是在静脉穿刺尝试失败时才用的替代方案，本例并非如此。50% 葡萄糖不是 BC 采用的制剂；考纲规定的浓度是 D10W，而且万一渗漏，组织坏死的风险也更小。",
+          "sourceRef": "BC Guidelines p.57 (Diabetic Emergencies); p.61 (D10W); p.67 (Glucagon); p.76 (Oral Glucose)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-pp-04-q3",
+          "cpcfArea": "H",
+          "competency": "H2",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "stroke",
+          "difficulty": "intermediate",
+          "questionEn": "What does this most likely indicate, and what should the crew do?",
+          "questionZh": "这最可能说明什么问题？急救组应该怎么做？",
+          "options": [
+            {
+              "key": "A",
+              "en": "The dextrose has not fully taken effect; wait another ten minutes on scene and repeat the blood glucose",
+              "zh": "葡萄糖还没有完全起效；在现场再等十分钟后复测血糖"
+            },
+            {
+              "key": "B",
+              "en": "This is a normal post-hypoglycemic state; he may stay at home once he has eaten a meal",
+              "zh": "这是低血糖纠正后的正常状态；只要吃一顿饭就可以留在家里"
+            },
+            {
+              "key": "C",
+              "en": "The deficit is not explained by the corrected glucose — treat it as a suspected stroke, establish the last seen normal time, and transport with hospital notification",
+              "zh": "血糖已纠正却仍有神经功能缺损，说明缺损无法用低血糖解释——按疑似卒中处理，确定最后一次正常的时间，转运并提前通知医院"
+            },
+            {
+              "key": "D",
+              "en": "Give a second dose of D10W to raise the glucose above 10 mmol/L",
+              "zh": "再给一剂 D10W，把血糖升到 10 mmol/L 以上"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "D10W acts immediately, and this patient's mentation has recovered, which confirms the glucose was corrected. A focal deficit that persists after the glucose is normal is not hypoglycemia — in a patient with atrial fibrillation, previous TIA and anticoagulation it must be managed as a suspected stroke, which is one of the primary survey findings that makes a patient unstable. The last seen normal time is critical information for the receiving facility, and the guideline requires notification en route. Options A and D chase a glucose problem that is already fixed and delay transport; option B abandons a patient with new neurological deficits.",
+          "explanationZh": "D10W 起效是即时的，而且患者神志已经恢复，说明血糖确实纠正了。血糖恢复正常之后仍然存在的局灶性神经功能缺损就不是低血糖——在一个有房颤、既往 TIA 并正在抗凝的患者身上，必须按疑似卒中处理，而疑似卒中本身就是使患者归为不稳定的初查发现之一。最后一次正常的时间对接收医院是关键信息，指南要求在途中就完成通知。选项 A 和 D 都在追一个已经解决了的血糖问题，只会延误转运；选项 B 则是把一个出现新发神经功能缺损的患者留在家里不管。",
+          "sourceRef": "BC Guidelines p.30 (Stroke); p.57 (Diabetic Emergencies); p.7 (unstable findings — suspected CVA); p.61 (D10W onset)",
+          "verified": false,
+          "evolutionEn": "Five minutes after the D10W his blood glucose is 7.8 mmol/L and he is alert, oriented and following commands, but the right-sided weakness and the slurred speech have not improved at all.",
+          "evolutionZh": "给完 D10W 五分钟后复测血糖为 7.8 mmol/L，患者神志清醒、定向力恢复、可以配合指令，但右侧肢体无力和言语含糊完全没有好转。"
+        },
+        {
+          "id": "pcp-pp-04-q4",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "iv-therapy",
+          "difficulty": "intermediate",
+          "questionEn": "The crew keeps the line running at the maintenance rate of approximately 75 mL/hr using a 10 gtts/mL administration set. What drip rate should they set?",
+          "questionZh": "急救组使用 10 gtts/mL 的输液器，以约 75 mL/小时的维持速度保留静脉通路。滴速应该调到多少？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Approximately 13 gtts/min",
+              "zh": "约 13 滴/分"
+            },
+            {
+              "key": "B",
+              "en": "Approximately 7 gtts/min",
+              "zh": "约 7 滴/分"
+            },
+            {
+              "key": "C",
+              "en": "Approximately 25 gtts/min",
+              "zh": "约 25 滴/分"
+            },
+            {
+              "key": "D",
+              "en": "Approximately 75 gtts/min",
+              "zh": "约 75 滴/分"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "Using gtts per minute = (volume to be infused x set rate) / time in minutes: (75 mL x 10 gtts/mL) / 60 min = 750 / 60 = 12.5, so approximately 13 gtts/min. Option B is the answer to the guideline's own worked example of 500 mL over 12 hours and is the deliberate near-miss. Option C is the answer to the guideline's micro-drip example. Option D simply confuses millilitres per hour with drops per minute.",
+          "explanationZh": "按公式「滴/分 =（待输液量 × 输液器滴系数）÷ 时间（分钟）」计算：（75 mL × 10 gtts/mL）÷ 60 分钟 = 750 ÷ 60 = 12.5，即约 13 滴/分。选项 B 是考纲自己举的例子（500 mL 输 12 小时）的答案，属于刻意设置的「差一点就对」。选项 C 是考纲微量输液器例子的答案。选项 D 则是把毫升/小时和滴/分直接混为一谈。",
+          "sourceRef": "BC Guidelines p.39 (IV Maintenance Rate Calculation)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        }
+      ]
+    },
+    {
+      "id": "pcp-pp-05",
+      "format": "patient-profile",
+      "titleEn": "69-year-old with COPD and three days of worsening breathlessness",
+      "titleZh": "慢阻肺（COPD）病史、气促加重三天的 69 岁女性",
+      "profile": {
+        "ageEn": "69 years old",
+        "ageZh": "69 岁",
+        "genderEn": "Female",
+        "genderZh": "女",
+        "chiefComplaintEn": "Three days of worsening shortness of breath with a productive cough; she cannot finish a sentence",
+        "chiefComplaintZh": "气促进行性加重三天，伴咳嗽咳痰；说话不能说完整一句",
+        "pastMedicalHxEn": "COPD on home oxygen at 2 L/min by nasal cannula, hypertension, 45 pack-year smoking history",
+        "pastMedicalHxZh": "慢性阻塞性肺疾病（COPD），长期家庭氧疗，鼻导管 2 L/分；高血压；吸烟史 45 包年",
+        "medicationsEn": "Salbutamol and ipratropium inhalers, tiotropium, amlodipine",
+        "medicationsZh": "沙丁胺醇和异丙托溴铵（ipratropium）吸入剂、噻托溴铵、氨氯地平",
+        "firstVitalsEn": "HR 118; RR 30; BP 152/90; SpO2 84% on her home oxygen at 2 L/min; Temp 37.8°C",
+        "firstVitalsZh": "心率 118 次/分；呼吸 30 次/分；血压 152/90 mmHg；在自家 2 L/分鼻导管吸氧下 SpO2 仅 84%；体温 37.8°C",
+        "physicalFindingsEn": "Sitting tripod at the edge of the bed with pursed-lip breathing and visible accessory muscle use in the neck; widespread expiratory wheeze with poor air entry at both bases; alert, anxious, speaking in two- to three-word sentences",
+        "physicalFindingsZh": "坐在床边呈三脚架体位，缩唇呼吸，颈部辅助呼吸肌明显参与；双肺弥漫呼气相哮鸣音，两肺底进气量差；神志清醒但焦虑，每次只能说出两三个字",
+        "otherInformationEn": "She has used her own salbutamol inhaler four times in the past hour with no relief. She is fully oriented and follows commands without difficulty.",
+        "otherInformationZh": "过去一小时里她自己用了四次沙丁胺醇吸入剂，完全没有缓解。她定向力完整，能毫无困难地听从指令。"
+      },
+      "questions": [
+        {
+          "id": "pcp-pp-05-q1",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "copd-oxygen",
+          "difficulty": "foundation",
+          "questionEn": "How should oxygen be administered to this patient?",
+          "questionZh": "对这名患者应该怎样给氧？",
+          "options": [
+            {
+              "key": "A",
+              "en": "High-flow oxygen, titrated to achieve an SpO2 of at least 94%",
+              "zh": "高流量氧疗，并根据血氧滴定，目标 SpO2 至少达到 94%"
+            },
+            {
+              "key": "B",
+              "en": "Leave her on her home nasal cannula at 2 L/min so that her hypoxic drive is not suppressed",
+              "zh": "维持她家里的鼻导管 2 L/分，以免抑制她的缺氧驱动"
+            },
+            {
+              "key": "C",
+              "en": "Nasal cannula at 4 L/min, because COPD patients must never be given more than 4 L/min",
+              "zh": "鼻导管 4 L/分，因为 COPD 患者绝不能给超过 4 L/分的氧"
+            },
+            {
+              "key": "D",
+              "en": "Room air only until a bronchodilator has been given and has had time to work",
+              "zh": "先只吸室内空气，等支气管扩张剂给完并起效之后再考虑给氧"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The BC guidelines state plainly that the use of high flow oxygen for COPD patients complaining of shortness of breath is indicated, and that oxygen is titrated on pulse oximetry to a target of 94%; the shortness of breath guideline adds the caution that 94% may not be achievable in this population. Option B applies the hypoxic-drive myth to an acutely hypoxic patient at 84%. Option C contains an absolute ('must never'), which the guidelines do not support — the 1-3 L/min nasal cannula figure applies after acute treatment with high flow oxygen. Option D withholds oxygen from a patient who is hypoxic right now.",
+          "explanationZh": "BC 考纲写得很直白：对主诉气促的 COPD 患者，高流量氧疗是有指征的；给氧要依据脉搏血氧滴定，目标 94%；《气促》一节还额外提醒，这类患者可能达不到 94%。选项 B 是把「缺氧驱动」这个说法套在一个当下 SpO2 只有 84% 的急性缺氧患者身上。选项 C 含有「绝不能」这种绝对化措辞，考纲并不支持——鼻导管 1-3 L/分那条是指急性期高流量给氧治疗之后的维持。选项 D 则是对一个此刻正在缺氧的患者拒绝给氧。",
+          "sourceRef": "BC Guidelines p.49 (SOB with Asthma/COPD); p.50 (Oxygen Administration)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-pp-05-q2",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "copd-bronchodilator",
+          "difficulty": "intermediate",
+          "questionEn": "Which bronchodilator regimen does the BC guideline authorize for a PCP treating this patient?",
+          "questionZh": "对这名患者，BC 考纲授权 PCP 使用哪一种支气管扩张方案？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Salbutamol 5 mg by nebulizer only, repeated as required",
+              "zh": "只给沙丁胺醇 5 mg 雾化，必要时重复"
+            },
+            {
+              "key": "B",
+              "en": "Ipratropium 500 mcg by nebulizer as monotherapy, repeated every 20 minutes",
+              "zh": "单用异丙托溴铵 500 mcg 雾化，每 20 分钟重复一次"
+            },
+            {
+              "key": "C",
+              "en": "Epinephrine 0.5 mg IM as the first-line treatment",
+              "zh": "首选肾上腺素 0.5 mg 肌注"
+            },
+            {
+              "key": "D",
+              "en": "Salbutamol 5 mg combined with ipratropium 500 mcg in the same nebulizer, with salbutamol repeated as required and ipratropium given as a single dose",
+              "zh": "沙丁胺醇 5 mg 与异丙托溴铵 500 mcg 混于同一雾化器共同给药，沙丁胺醇必要时重复，异丙托溴铵只给一次"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "Salbutamol with ipratropium is the additional PCP intervention for shortness of breath with a history of asthma or COPD, and the two may be combined in the same nebulizer; the adult ipratropium dose is 500 mcg and it is a single dose administration, while salbutamol may be repeated. Option A is the EMR-level regimen and leaves out the ipratropium a PCP is authorized to add. Option B breaks an explicit caution — ipratropium is intended to act synergistically with salbutamol and is not indicated as monotherapy for acute bronchospasm. Option C skips ahead: intramuscular epinephrine is reserved for severe disease or imminent respiratory failure that has not responded to salbutamol.",
+          "explanationZh": "对有哮喘或 COPD 病史的气促患者，沙丁胺醇联合异丙托溴铵是 PCP 层级追加的处置，两者可以混在同一个雾化器里共同给药；成人异丙托溴铵剂量为 500 mcg 且只给一次，而沙丁胺醇可以重复。选项 A 是 EMR 层级的方案，漏掉了 PCP 有权追加的异丙托溴铵。选项 B 违反了明确的注意事项——异丙托溴铵的定位是与沙丁胺醇协同起效，不能作为急性支气管痉挛的单药治疗。选项 C 跳步了：肌注肾上腺素保留给沙丁胺醇治疗无效的重症或濒临呼吸衰竭者。",
+          "sourceRef": "BC Guidelines p.49 (SOB with Asthma/COPD — PCP interventions); p.70 (Ipratropium); p.77 (Salbutamol)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-pp-05-q3",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "cpap",
+          "difficulty": "advanced",
+          "questionEn": "Is CPAP indicated for this patient, and on what basis?",
+          "questionZh": "这名患者是否有 CPAP 的指征？依据是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "No — CPAP is contraindicated in chronic obstructive pulmonary disease",
+              "zh": "否——CPAP 对慢性阻塞性肺疾病属禁忌"
+            },
+            {
+              "key": "B",
+              "en": "Yes — she is over 13, awake and following commands, maintaining her own airway, and exhibits all three of RR > 24, SpO2 < 94% on oxygen and accessory muscle use; start at 5 cmH2O with 5 L/min",
+              "zh": "是——她年龄大于 13 岁，清醒且能执行指令，能自主维持气道，并且同时满足呼吸频率 > 24、吸氧下 SpO2 < 94%、使用辅助呼吸肌这三项；从 5 cmH2O、5 L/分开始"
+            },
+            {
+              "key": "C",
+              "en": "No — her systolic blood pressure is too high for CPAP to be used safely",
+              "zh": "否——她的收缩压太高，用 CPAP 不安全"
+            },
+            {
+              "key": "D",
+              "en": "Yes — but start at 10 cmH2O to overcome the air trapping of COPD",
+              "zh": "是——但为了克服 COPD 的气体陷闭，应该直接从 10 cmH2O 开始"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The CPAP indications require a patient 13 years of age or older in significant respiratory distress who is awake, follows commands and maintains a patent airway, and who exhibits all three of a respiratory rate over 24, an SpO2 below 94% on oxygen and accessory muscle use. She meets every criterion. COPD is on the list of conditions in which CPAP should be considered, so A is wrong; the blood pressure contraindication is a systolic below 90 mmHg, not a high pressure, so C is wrong. D has the right decision but the wrong start point: CPAP begins at 5 cmH2O with 5 L/min and is increased in 2.5 cmH2O steps to a maximum of 10 cmH2O.",
+          "explanationZh": "CPAP 的适应证要求患者年满 13 岁、存在明显呼吸窘迫、清醒并能执行指令、能维持气道通畅，且同时具备呼吸频率 > 24、吸氧状态下 SpO2 < 94%、使用辅助呼吸肌这三项。本例每一条都符合。COPD 本身就列在「应考虑使用 CPAP」的病种里，所以 A 错；血压方面的禁忌是收缩压低于 90 mmHg，而不是血压偏高，所以 C 错。D 的判断方向对，但起始参数错了：CPAP 从 5 cmH2O、5 L/分开始，之后按每次 2.5 cmH2O 递增，最高 10 cmH2O。",
+          "sourceRef": "BC Guidelines p.51-52 (CPAP indications, contraindications and use)",
+          "verified": false,
+          "evolutionEn": "After two salbutamol and ipratropium treatments she remains distressed. Her respiratory rate is 28, SpO2 is 91% on high-flow oxygen, blood pressure 144/86, and she is still awake, following commands and using accessory muscles.",
+          "evolutionZh": "两轮沙丁胺醇联合异丙托溴铵雾化之后，她仍然明显窘迫。呼吸 28 次/分，高流量氧疗下 SpO2 91%，血压 144/86 mmHg，仍然清醒、能执行指令，辅助呼吸肌持续参与。"
+        },
+        {
+          "id": "pcp-pp-05-q4",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "cpap",
+          "difficulty": "intermediate",
+          "questionEn": "What is the correct action now?",
+          "questionZh": "此时正确的做法是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Increase the CPAP to 10 cmH2O to support her failing respirations",
+              "zh": "把 CPAP 提高到 10 cmH2O，以支撑她正在衰竭的呼吸"
+            },
+            {
+              "key": "B",
+              "en": "Continue the CPAP and give a third salbutamol treatment through it",
+              "zh": "继续使用 CPAP，并通过 CPAP 再给第三次沙丁胺醇雾化"
+            },
+            {
+              "key": "C",
+              "en": "Remove the CPAP and ventilate with a bag-valve mask, adding a PEEP valve set to 5 cmH2O",
+              "zh": "撤除 CPAP，改用球囊面罩（BVM）辅助通气，并加装设定为 5 cmH2O 的 PEEP 阀"
+            },
+            {
+              "key": "D",
+              "en": "Remove the CPAP and place her on a non-rebreather mask at 15 L/min",
+              "zh": "撤除 CPAP，改用 15 L/分的非重复呼吸面罩"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "Slow, shallow respirations with a falling level of consciousness describe imminent respiratory failure, and the guidelines state that any patient unable to maintain their own respiratory effort is unlikely to benefit from CPAP; if the patient deteriorates, remove the CPAP and use a bag-valve mask with assisted ventilations, adding a PEEP valve at 5 cmH2O if there are no contraindications. Options A and B continue a therapy the patient has outgrown and are the wrong-priority trap. Option D correctly abandons CPAP but leaves a hypoventilating, drowsy patient breathing for herself — a non-rebreather delivers oxygen but does not ventilate.",
+          "explanationZh": "呼吸变慢变浅并伴意识水平下降，是濒临呼吸衰竭的表现；考纲明确指出，任何无法维持自主呼吸做功的患者都不太可能从 CPAP 获益；一旦患者恶化，就应撤除 CPAP，改用球囊面罩辅助通气，若无禁忌再加装 5 cmH2O 的 PEEP 阀。选项 A 和 B 继续沿用一个已经不再适用的治疗手段，属于优先级判断错误。选项 D 撤 CPAP 这一步是对的，但把一个通气不足、意识模糊的患者留给她自己呼吸——非重复呼吸面罩只能给氧，不能替她通气。",
+          "sourceRef": "BC Guidelines p.51-52 (CPAP deterioration and PEEP use); p.11 (assisting failing respirations)",
+          "verified": false,
+          "evolutionEn": "Ten minutes after CPAP is started her respirations have slowed to 8 per minute and become shallow, and she is now drowsy and no longer following commands.",
+          "evolutionZh": "开始 CPAP 十分钟后，她的呼吸减慢到 8 次/分且变浅，人已经嗜睡，不再能执行指令。"
+        }
+      ]
+    },
+    {
+      "id": "pcp-cs-01",
+      "format": "case-scenario",
+      "titleEn": "Two-vehicle collision on a rural highway",
+      "titleZh": "乡村公路上的两车相撞事故",
+      "passageEn": "At 16:40 paramedics are dispatched to a two-vehicle collision on a rural highway. Police have closed the road and confirm the scene is safe; the fire department is standing by. A 34-year-old male driver is still in the seat of a sedan with roughly 40 cm of intrusion into the driver's door. He was wearing a seat belt and the airbag deployed. He is awake, says 'my belly really hurts', and is breathing rapidly. The front-seat passenger is deceased in the vehicle. The fire department estimates ten minutes to extricate.",
+      "passageZh": "16:40，急救组被派往乡村公路上的一起两车相撞事故。警方已封路并确认现场安全，消防在旁待命。一名 34 岁男性驾驶员仍坐在轿车座位上，驾驶侧车门内陷约 40 cm。他系了安全带，安全气囊已弹出。他神志清醒，说「我肚子疼得厉害」，呼吸急促。前排乘客已在车内死亡。消防估计需要十分钟才能完成破拆解救。",
+      "questions": [
+        {
+          "id": "pcp-cs-01-q1",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "trauma-transport-decision",
+          "difficulty": "foundation",
+          "questionEn": "On mechanism of injury alone, which finding at this scene places the patient in the rapid transport category?",
+          "questionZh": "仅从受伤机制来看，现场哪一项发现足以把这名患者归入快速转运类别（rapid transport category）？",
+          "options": [
+            {
+              "key": "A",
+              "en": "The airbag deployed",
+              "zh": "安全气囊已经弹出"
+            },
+            {
+              "key": "B",
+              "en": "There is a death in the passenger compartment",
+              "zh": "乘员舱内有人员死亡"
+            },
+            {
+              "key": "C",
+              "en": "The road has been closed by police",
+              "zh": "警方已经封闭了道路"
+            },
+            {
+              "key": "D",
+              "en": "Extrication will take about ten minutes",
+              "zh": "破拆解救大约需要十分钟"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The mechanism-of-injury list for unstable patients includes death in the passenger compartment, along with significant intrusion of more than 0.3 m on the occupant side, ejection, auto versus pedestrian over 30 kph and motorcycle crash over 30 kph. Note that this scene actually satisfies two of those criteria: the fatality and the 40 cm of intrusion on the driver's side. Airbag deployment is expected in a collision of this severity and is not itself a criterion, and neither road closure nor extrication time is a mechanism of injury.",
+          "explanationZh": "属于不稳定患者的受伤机制清单里包括「乘员舱内有人员死亡」，此外还有乘员侧内陷超过 0.3 m、被抛出车外、机动车撞行人时速大于 30 km、摩托车事故时速大于 30 km 等。请注意本例现场实际上同时满足其中两条：一是有人死亡，二是驾驶侧内陷 40 cm。安全气囊在这种严重程度的碰撞中弹出是意料之中的，本身不构成判定标准；封路和破拆耗时也都不属于受伤机制。",
+          "sourceRef": "BC Guidelines p.7-8 (Findings in Unstable Adult Patients — Mechanism of Injury)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-01-q2",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "trauma-primary-survey",
+          "difficulty": "intermediate",
+          "questionEn": "Which plan best reflects the correct priorities once the airway is confirmed patent?",
+          "questionZh": "在确认气道通畅之后，哪一个方案最符合正确的处置优先顺序？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Apply high-flow oxygen, bind the pelvis, extricate with spinal motion restriction and begin transport",
+              "zh": "给予高流量氧疗，绑定骨盆，在脊柱制动下解救脱困，随即开始转运"
+            },
+            {
+              "key": "B",
+              "en": "Bind the pelvis, then complete the head-to-toe examination and a second set of vital signs at the roadside before moving him",
+              "zh": "先绑定骨盆，然后在路边完成头到脚检查和第二组生命体征，之后再搬动他"
+            },
+            {
+              "key": "C",
+              "en": "Establish two large-bore IVs on scene and run normal saline wide open before extrication",
+              "zh": "在现场先建立两条大口径静脉通路并把生理盐水全速滴入，然后再解救脱困"
+            },
+            {
+              "key": "D",
+              "en": "Give tranexamic acid before extrication and then reassess",
+              "zh": "在解救脱困之前先给氨甲环酸（TXA），然后再复评"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "Absent radial pulses, cool pale clammy skin and a rigid distended abdomen mean uncontrolled internal hemorrhage in an unstable patient — oxygen, pelvic binding for a major mechanism with hemodynamic instability, spinal motion restriction and immediate transport are the priorities. Option B is the recurring trap of a correct treatment attached to the wrong priority: the pelvic binder is right, but completing a head-to-toe and a second set of vitals at the roadside delays definitive surgical care. Options C and D are PCP interventions that the guidelines place en route or during a time delay, not before extrication of an unstable trauma patient.",
+          "explanationZh": "桡动脉搏动消失、皮肤湿冷苍白、腹部板状紧张伴膨隆，说明这是一名不稳定患者正在发生无法控制的内出血——氧疗、针对高受伤机制合并血流动力学不稳定的骨盆绑定、脊柱制动以及立即转运才是优先事项。选项 B 正是那个反复出现的陷阱：处置对但优先级错——骨盆绑带做得对，但在路边做完头到脚检查和第二组生命体征，会延误确定性手术治疗。选项 C 和 D 属于 PCP 处置，考纲把它们安排在转运途中或者被困延误期间进行，而不是在把不稳定创伤患者救出之前。",
+          "sourceRef": "BC Guidelines p.7 (unstable findings); p.11 (Primary Survey interventions); p.24 (Pelvis binding indications); p.54 (Hypovolemia — en route)",
+          "verified": false,
+          "evolutionEn": "The primary survey finds a patent airway, respirations of 28 and shallow, absent radial pulses with a weak rapid carotid pulse, cool pale clammy skin, and a rigid distended abdomen. There is no external hemorrhage.",
+          "evolutionZh": "初查发现：气道通畅，呼吸 28 次/分且浅表，桡动脉搏动消失、颈动脉搏动细速，皮肤湿冷苍白，腹部板状紧张伴膨隆。体表无活动性出血。"
+        },
+        {
+          "id": "pcp-cs-01-q3",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "hypovolemia-txa",
+          "difficulty": "intermediate",
+          "questionEn": "Which PCP treatment is indicated at this point?",
+          "questionZh": "此时 PCP 层级应给予哪一项处置？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Tranexamic acid 1 g IV infused over 10 minutes",
+              "zh": "氨甲环酸（TXA）1 g 静脉滴注，10 分钟输完"
+            },
+            {
+              "key": "B",
+              "en": "Withhold tranexamic acid because there is no visible external bleeding",
+              "zh": "不给氨甲环酸，因为体表看不到出血"
+            },
+            {
+              "key": "C",
+              "en": "A 20 mL/kg fluid bolus reassessing every 500 mL, plus tranexamic acid 2 g IV push over 1 minute",
+              "zh": "按 20 mL/kg 给予液体冲击、每 500 mL 复评一次，同时给氨甲环酸 2 g 静脉推注，1 分钟内推完"
+            },
+            {
+              "key": "D",
+              "en": "Fluid wide open to a target systolic blood pressure of 120 mmHg",
+              "zh": "液体全速滴注，把收缩压升到 120 mmHg 为目标"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "He meets the hypovolemia protocol — systolic below 90 with clinical signs of shock from a major mechanism — so the fluid bolus is 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL, with a target systolic of 90 mmHg. Tranexamic acid is indicated in major trauma after the hypovolemia protocol is initiated, and for shock associated with occult bleeding; the BC dose is 2 g IV push over 1 minute, within 3 hours of injury, in a patient 12 or over with no isolated traumatic brain injury — all satisfied here. Option A uses a hospital regimen, not the BC dose. Option B misreads the indication, which explicitly covers occult bleeding. Option D targets a pressure that would dislodge clot; the guidelines target 90 mmHg systolic.",
+          "explanationZh": "该患者符合低血容量协议——收缩压低于 90 且存在由高受伤机制导致的休克临床征象——因此液体冲击按 20 mL/kg 给予，最多 2 升，每 500 mL 复评一次，目标收缩压 90 mmHg。氨甲环酸（TXA）的适应证是重大创伤在启动低血容量协议之后使用，以及隐匿性出血导致的休克；BC 的剂量是 2 g 静脉推注、1 分钟内推完，要求在受伤后 3 小时以内、患者年满 12 岁、且不是单纯颅脑损伤——本例全部满足。选项 A 用的是医院的给药方案，不是 BC 剂量。选项 B 误读了适应证，指南明确涵盖隐匿性出血。选项 D 的目标血压过高会冲掉已形成的血凝块，考纲的目标是收缩压 90 mmHg。",
+          "sourceRef": "BC Guidelines p.54 (Hypovolemia); p.78 (Tranexamic Acid); p.48 (fluid bolus target SBP 90)",
+          "verified": false,
+          "evolutionEn": "The patient is now extricated and in the ambulance. Twenty-five minutes have passed since the collision. His blood pressure is 82/54, heart rate 132, GCS 14, and vascular access has been established. There is no head injury and still no external bleeding.",
+          "evolutionZh": "患者已经脱困并被抬上救护车。距离碰撞发生已过去二十五分钟。血压 82/54 mmHg，心率 132 次/分，GCS 14 分，静脉通路已建立。没有颅脑损伤，体表仍无出血。"
+        },
+        {
+          "id": "pcp-cs-01-q4",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "critical",
+          "population": "adult",
+          "topic": "chest-trauma",
+          "difficulty": "advanced",
+          "questionEn": "What is the priority action for this PCP crew?",
+          "questionZh": "对这组 PCP 急救员来说，此刻的首要处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Stop the vehicle and perform needle decompression of the left chest",
+              "zh": "把车停下，对左胸行针刺减压"
+            },
+            {
+              "key": "B",
+              "en": "Increase the oxygen flow rate to 25 L/min and continue transport",
+              "zh": "把氧流量调到 25 L/分，继续转运"
+            },
+            {
+              "key": "C",
+              "en": "Apply CPAP at 10 cmH2O to improve oxygenation",
+              "zh": "给予 10 cmH2O 的 CPAP 以改善氧合"
+            },
+            {
+              "key": "D",
+              "en": "Begin assisted ventilation with a bag-valve mask and high-flow oxygen, notify the receiving hospital of the deterioration, and continue rapid transport",
+              "zh": "立即用球囊面罩（BVM）配合高流量氧气辅助通气，向接收医院通报病情恶化，并继续快速转运"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The chest trauma guideline directs all licence levels to assist oxygenation and ventilation as necessary; a patient who is unresponsive with shallow respirations of 8 and an SpO2 of 86% needs assisted ventilation now, and the grading criteria treat failure to notify the hospital for a critical patient as a deduction. Needle decompression is not listed among the interventions available to a PCP in BC, so A is out of scope. Option B is impossible — oxygen is titrated to a maximum of 15 L/min. Option C stacks three CPAP contraindications at once: a traumatic cause of respiratory distress, a decreased level of consciousness, and a suspected pneumothorax.",
+          "explanationZh": "《胸部创伤》指南要求所有执照层级「必要时协助氧合与通气」；一个已经无反应、呼吸 8 次/分且浅表、SpO2 只有 86% 的患者，现在就需要辅助通气；评分标准也把危重患者未通知医院列为扣分项。针刺减压并未列入 BC 对 PCP 授权的处置范围，所以 A 超范围。选项 B 根本做不到——氧流量最高滴定到 15 L/分。选项 C 一次性触犯了三条 CPAP 禁忌：呼吸窘迫由创伤引起、意识水平下降、以及怀疑气胸。",
+          "sourceRef": "BC Guidelines p.34 (Chest Trauma); p.50 (Oxygen Administration, max 15 L/min); p.52 (CPAP contraindications); BC Practical Grading Criteria p.38 (Notification)",
+          "verified": false,
+          "evolutionEn": "Ten minutes from hospital the patient becomes agitated and then unresponsive. His breathing is shallow at 8 per minute, SpO2 is 86% on a non-rebreather, and there is now jugular venous distension with absent breath sounds on the left and the trachea deviated to the right.",
+          "evolutionZh": "距医院还有十分钟时，患者先是躁动，随后失去反应。呼吸浅表、8 次/分，戴非重复呼吸面罩下 SpO2 为 86%，此时出现颈静脉怒张、左侧呼吸音消失、气管向右偏移。"
+        }
+      ]
+    },
+    {
+      "id": "pcp-cs-02",
+      "format": "case-scenario",
+      "titleEn": "Garbled speech at a seniors' residence",
+      "titleZh": "老年公寓里突然口齿不清的住户",
+      "passageEn": "Paramedics are called at 08:15 to a seniors' residence for a 74-year-old woman found sitting at the breakfast table unable to speak properly. Staff say she was chatting normally during breakfast service, which finished at 07:30. She is awake and follows simple commands, but her words are garbled. Her right arm drifts down when she is asked to hold both arms up, and the right side of her mouth droops. Her airway is clear and she is not in respiratory distress. HR 88 and irregular, RR 16, BP 178/96, SpO2 96% on room air.",
+      "passageZh": "08:15，急救组被叫到一处老年公寓，一名 74 岁女性被发现坐在早餐桌旁、说话说不清楚。工作人员说早餐服务在 07:30 结束，当时她还在正常聊天。她神志清醒、能执行简单指令，但吐字含糊。请她双臂平举时右臂会下坠，右侧口角下垂。气道通畅，没有呼吸窘迫。心率 88 次/分且不规则，呼吸 16 次/分，血压 178/96 mmHg，室内空气下 SpO2 96%。",
+      "questions": [
+        {
+          "id": "pcp-cs-02-q1",
+          "cpcfArea": "H",
+          "competency": "H2",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "stroke",
+          "difficulty": "foundation",
+          "questionEn": "In the FAST-VAN screening tool referenced in the BC Stroke guideline, what do the letters V, A and N stand for?",
+          "questionZh": "BC《卒中》指南所引用的 FAST-VAN 筛查工具中，V、A、N 三个字母分别代表什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Vertigo, Ataxia, Nystagmus",
+              "zh": "眩晕（Vertigo）、共济失调（Ataxia）、眼球震颤（Nystagmus）"
+            },
+            {
+              "key": "B",
+              "en": "Vomiting, Apnea, Numbness",
+              "zh": "呕吐（Vomiting）、呼吸暂停（Apnea）、麻木（Numbness）"
+            },
+            {
+              "key": "C",
+              "en": "Vision changes, Aphasia, Neglect",
+              "zh": "视觉改变（Vision）、失语（Aphasia）、忽视（Neglect）"
+            },
+            {
+              "key": "D",
+              "en": "Vital signs, Airway, Neurological status",
+              "zh": "生命体征（Vital signs）、气道（Airway）、神经状态（Neurological status）"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "FAST covers Face, Arms, Speech and Time; the VAN extension adds Vision changes, Aphasia and Neglect, which are the cortical signs that point to a large vessel occlusion and therefore to a patient who may benefit from thrombectomy at a specialized centre. Accurate recognition using FAST-VAN is listed as an intervention for all licence levels in the BC Stroke guideline. Vertigo, ataxia and nystagmus are posterior circulation signs but are not what VAN stands for.",
+          "explanationZh": "FAST 分别代表面部（Face）、上肢（Arms）、言语（Speech）和时间（Time）；VAN 是在此基础上补充的视觉改变（Vision）、失语（Aphasia）和忽视（Neglect），这三项是提示大血管闭塞的皮层体征，意味着患者可能需要送到能做取栓的专科中心。BC《卒中》指南把「用 FAST-VAN 准确识别」列为所有执照层级的处置项。眩晕、共济失调和眼球震颤属于后循环体征，但并不是 VAN 的含义。",
+          "sourceRef": "BC Guidelines p.30 (Stroke — accurate recognition FAST-VAN)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-02-q2",
+          "cpcfArea": "H",
+          "competency": "H2",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "stroke",
+          "difficulty": "intermediate",
+          "questionEn": "It is now 08:25. What time should be documented and reported as the last seen normal time?",
+          "questionZh": "现在是 08:25。「最后一次被目击为正常」的时间应该记录并报告为几点？",
+          "options": [
+            {
+              "key": "A",
+              "en": "08:15, the time of the 911 call",
+              "zh": "08:15，也就是拨打 911 的时间"
+            },
+            {
+              "key": "B",
+              "en": "07:30, the time she was last observed to be at her baseline",
+              "zh": "07:30，也就是最后一次有人目击她处于基线状态的时间"
+            },
+            {
+              "key": "C",
+              "en": "08:25, the time of the paramedics' first patient contact",
+              "zh": "08:25，也就是急救员首次接触患者的时间"
+            },
+            {
+              "key": "D",
+              "en": "Unknown, because nobody witnessed the moment the symptoms began",
+              "zh": "未知，因为没有人目击症状开始的那一刻"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "Last seen normal is the last moment anyone can confirm the patient was at her neurological baseline, not the moment symptoms were discovered. Staff confirm she was speaking normally at 07:30, so that is the time the receiving stroke centre needs in order to decide about thrombolysis or thrombectomy. The call time and the arrival time only record when the problem was found. Answering 'unknown' would throw away the single most treatment-relevant piece of history in this call, and the guideline requires timely transport with notification en route.",
+          "explanationZh": "「最后一次正常」指的是最后一次有人能确认患者处于其神经功能基线状态的时刻，而不是症状被发现的时刻。工作人员确认她在 07:30 还在正常说话，因此接收卒中中心需要的正是这个时间点，用来决定能否溶栓或取栓。呼叫时间和到达时间只反映问题被发现的时刻。回答「未知」等于把这次出车里对治疗最关键的一条病史丢掉，而指南要求及时转运并在途中完成通知。",
+          "sourceRef": "BC Guidelines p.30 (Stroke — timely transport, notify receiving facility); BC Practical Grading Criteria p.38 (Notification content)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-02-q3",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "stroke",
+          "difficulty": "intermediate",
+          "questionEn": "How should the PCP obtain vascular access in this patient?",
+          "questionZh": "对这名患者，PCP 应该怎样建立静脉通路？",
+          "options": [
+            {
+              "key": "A",
+              "en": "A 22 G catheter in the left hand, inserted before leaving the scene",
+              "zh": "在离开现场之前，于左手背置入 22 G 留置针"
+            },
+            {
+              "key": "B",
+              "en": "An 18 G catheter below the level of the wrist on the weak side",
+              "zh": "在偏瘫侧、腕关节水平以下置入 18 G 留置针"
+            },
+            {
+              "key": "C",
+              "en": "A 20 G catheter in the right external jugular vein",
+              "zh": "在右侧颈外静脉置入 20 G 留置针"
+            },
+            {
+              "key": "D",
+              "en": "An 18 G catheter above the level of the wrist, preferably on the right arm, obtained en route",
+              "zh": "在腕关节水平以上置入 18 G 留置针，首选右上肢，并在转运途中完成"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The stroke guideline is specific: vascular access is obtained en route, using an 18 G catheter at a site above the level of the wrist, preferably on the right side. The large gauge and the site above the wrist matter because the hospital may need to inject contrast for CT angiography. Option A uses too small a catheter, the wrong site and delays departure. Option B places the line below the wrist, which the guideline excludes. An external jugular is not the PCP site described in this protocol.",
+          "explanationZh": "《卒中》指南写得很具体：静脉通路要在转运途中建立，使用 18 G 留置针，穿刺点选在腕关节水平以上，首选右侧。之所以强调大口径和腕以上的位置，是因为医院可能需要经此注射造影剂做 CT 血管成像。选项 A 留置针太细、部位不对，而且还耽误出发。选项 B 穿在腕关节水平以下，正是指南排除的位置。颈外静脉不是本协议中给 PCP 规定的穿刺部位。",
+          "sourceRef": "BC Guidelines p.30 (Stroke — Additional PCP Interventions, vascular access)",
+          "verified": false,
+          "evolutionEn": "Her blood glucose is 6.1 mmol/L and the deficits are confirmed on repeat examination. The crew has loaded her and is now en route.",
+          "evolutionZh": "她的血糖为 6.1 mmol/L，复查体格检查确认神经功能缺损存在。急救组已完成装车，正在转运途中。"
+        },
+        {
+          "id": "pcp-cs-02-q4",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "stroke",
+          "difficulty": "advanced",
+          "questionEn": "What is the priority?",
+          "questionZh": "此刻的首要处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Suction the airway, position her to protect the airway, support ventilations to keep SpO2 at or above 94%, and update the receiving hospital",
+              "zh": "吸引气道分泌物，摆放能保护气道的体位，辅助通气维持 SpO2 ≥ 94%，并向接收医院更新病情"
+            },
+            {
+              "key": "B",
+              "en": "Pull over and repeat the full FAST-VAN assessment before continuing",
+              "zh": "先靠边停车，重新做一次完整的 FAST-VAN 评估，然后再继续转运"
+            },
+            {
+              "key": "C",
+              "en": "Apply CPAP at 5 cmH2O to support her breathing",
+              "zh": "给予 5 cmH2O 的 CPAP 支持她的呼吸"
+            },
+            {
+              "key": "D",
+              "en": "Give ondansetron 4 mg PO to stop the vomiting",
+              "zh": "口服昂丹司琼（ondansetron）4 mg 止吐"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "A patient who has vomited and whose GCS has fallen to 9 with snoring respirations can no longer protect her own airway. The primary survey interventions apply: suction for fluids in the upper airway, positioning for a decreased LOC, assisted ventilation for failing respirations, and oxygen to keep SpO2 at or above 94%. Repeating a stroke screen does not treat an airway. CPAP is contraindicated with a decreased level of consciousness and with any risk of aspiration or vomiting. Ondansetron is an oral tablet, which cannot be given safely to a patient with a GCS of 9 who is actively vomiting.",
+          "explanationZh": "一个已经呕吐、GCS 降到 9 分且出现鼾声呼吸的患者，已经无法自主保护气道。此时适用的是初查阶段的处置：上气道有分泌物就吸引，意识下降就摆放合适体位，呼吸衰竭就辅助通气，并给氧维持 SpO2 ≥ 94%。重做一次卒中筛查并不能解决气道问题。CPAP 在意识水平下降以及存在呕吐、误吸风险时属于禁忌。昂丹司琼是口服片剂，对一个 GCS 9 分、正在呕吐的患者无法安全给药。",
+          "sourceRef": "BC Guidelines p.11 (Primary Survey interventions); p.13 (AVPU airway management); p.30 (Stroke); p.52 (CPAP contraindications); p.75 (Ondansetron)",
+          "verified": false,
+          "evolutionEn": "Six minutes from hospital she vomits, her GCS falls to 9 (E2 V2 M5) and her breathing becomes snoring and irregular.",
+          "evolutionZh": "距医院还有六分钟时她发生呕吐，GCS 降至 9 分（E2 V2 M5），呼吸变成不规则的鼾声呼吸。"
+        }
+      ]
+    },
+    {
+      "id": "pcp-cs-03",
+      "format": "case-scenario",
+      "titleEn": "Unresponsive person in a community centre washroom",
+      "titleZh": "社区中心洗手间内无反应的患者",
+      "passageEn": "Paramedics are dispatched at 23:10 to a community centre for an unresponsive person in a washroom. Staff report the door was locked for about twenty minutes before they forced it. Police attend and confirm the scene is safe. A man in his late twenties is slumped against the wall, cyanosed around the lips, with a respiratory rate of 4 and shallow. His pupils are pinpoint. A used syringe is on the floor beside him. There is no sign of trauma.",
+      "passageZh": "23:10，急救组被派往一处社区中心，洗手间内有一名无反应者。工作人员说门被反锁了大约二十分钟才被强行打开。警方到场并确认现场安全。一名二十多岁的男性瘫靠在墙边，口唇发绀，呼吸 4 次/分且浅表，双侧瞳孔针尖样缩小。地上有一支用过的注射器。没有外伤迹象。",
+      "questions": [
+        {
+          "id": "pcp-cs-03-q1",
+          "cpcfArea": "H",
+          "competency": "H2",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "narcotic-overdose",
+          "difficulty": "foundation",
+          "questionEn": "Which set of findings is most characteristic of an opioid overdose?",
+          "questionZh": "哪一组表现最符合阿片类药物过量（opioid overdose）？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Dilated pupils, tachypnea and hypertension",
+              "zh": "瞳孔散大、呼吸增快、血压升高"
+            },
+            {
+              "key": "B",
+              "en": "Pinpoint pupils, tachypnea and hyperthermia",
+              "zh": "瞳孔针尖样缩小、呼吸增快、体温升高"
+            },
+            {
+              "key": "C",
+              "en": "Dilated pupils, bradypnea and hyperthermia",
+              "zh": "瞳孔散大、呼吸减慢、体温升高"
+            },
+            {
+              "key": "D",
+              "en": "Pinpoint pupils with a decreased level of consciousness and a depressed respiratory drive showing both a slow rate and small tidal volumes",
+              "zh": "瞳孔针尖样缩小，意识水平下降，呼吸驱动受抑制、既表现为频率慢又表现为潮气量小"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The BC guideline describes suspected narcotic overdose as a decreased level of consciousness with a depressed respiratory drive demonstrated by both a decreased rate and limited tidal volume, and lists pinpoint pupils, hypotension, hypothermia and tachycardia among the additional signs. Opioids slow respiration rather than speeding it up and lower body temperature rather than raising it, which rules out B and C; miosis rather than mydriasis is the pupillary sign, which rules out A and C.",
+          "explanationZh": "BC 考纲对疑似麻醉剂过量的描述是：意识水平下降，同时呼吸驱动受抑制——既表现为呼吸频率下降，也表现为潮气量受限；此外还列出瞳孔针尖样缩小、低血压、低体温和心动过速等表现。阿片类药物使呼吸变慢而非变快、使体温下降而非升高，因此排除 B 和 C；瞳孔表现是缩小而不是散大，因此排除 A 和 C。",
+          "sourceRef": "BC Guidelines p.56 (Suspected Narcotic Overdose — indications)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-03-q2",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "narcotic-overdose",
+          "difficulty": "intermediate",
+          "questionEn": "What must be done before naloxone is administered?",
+          "questionZh": "在给纳洛酮（naloxone）之前必须先完成什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Establish intravenous access so that the naloxone can be given by the fastest route",
+              "zh": "先建立静脉通路，以便用起效最快的途径给纳洛酮"
+            },
+            {
+              "key": "B",
+              "en": "Give the naloxone immediately; airway management can follow once he begins to wake",
+              "zh": "立刻给纳洛酮，等他开始清醒之后再做气道管理"
+            },
+            {
+              "key": "C",
+              "en": "Manage the airway with positioning, suction and an adjunct as needed, support ventilations with a bag-valve mask to maintain SpO2 at or above 94%, and obtain a history and baseline vital signs including a blood glucose level",
+              "zh": "先做气道管理——摆位、吸引、必要时置入通气道，用球囊面罩（BVM）辅助通气维持 SpO2 ≥ 94%，并采集病史和包括血糖在内的基线生命体征"
+            },
+            {
+              "key": "D",
+              "en": "Apply the AED and analyze the rhythm",
+              "zh": "先贴上 AED 并分析心律"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "The narcotic overdose protocol puts the primary survey first: the airway is managed with positioning, suctioning and adjunct insertion as needed, ventilations are supported — considering two-person bag-valve-mask technique — and oxygen is given to maintain an SpO2 of at least 94%. A history and baseline vitals including blood glucose follow, and hypoglycemia is corrected if the reading is 4 mmol/L or below. Only then is naloxone given. This patient is dying of hypoventilation, not of a missing antidote; ventilation restores oxygenation within seconds while naloxone takes minutes. He has a pulse, so the AED is not indicated, and IV access is not a prerequisite because naloxone may be given IM or IN.",
+          "explanationZh": "麻醉剂过量协议把初查放在第一位：通过摆位、吸引、必要时置入通气道来管理气道，辅助通气（可考虑双人球囊面罩手法），并给氧维持 SpO2 至少 94%。之后采集病史和包括血糖在内的基线生命体征，若血糖 ≤ 4 mmol/L 则先纠正低血糖。做完这些才轮到纳洛酮。这名患者是被通气不足害死的，而不是死于缺一支解毒剂；通气几秒钟内就能恢复氧合，而纳洛酮要几分钟才起效。他有脉搏，所以 AED 没有指征；纳洛酮可肌注或鼻内给药，因此静脉通路也不是前提条件。",
+          "sourceRef": "BC Guidelines p.56 (Suspected Narcotic Overdose — interventions); p.72 (Naloxone routes)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-03-q3",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "critical",
+          "population": "adult",
+          "topic": "narcotic-overdose",
+          "difficulty": "advanced",
+          "questionEn": "What is the correct next step?",
+          "questionZh": "接下来正确的一步是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Give a further 0.4 mg of naloxone IM or IV and continue assisted ventilation",
+              "zh": "再给一剂纳洛酮 0.4 mg 肌注或静注，同时继续辅助通气"
+            },
+            {
+              "key": "B",
+              "en": "Give 2.0 mg of naloxone IM immediately to reverse the opioid completely",
+              "zh": "立刻给纳洛酮 2.0 mg 肌注，把阿片类作用彻底逆转"
+            },
+            {
+              "key": "C",
+              "en": "Give 4 mg of naloxone intranasally in addition to the intramuscular dose already given",
+              "zh": "在已给的肌注剂量之外，再经鼻给纳洛酮 4 mg"
+            },
+            {
+              "key": "D",
+              "en": "Give no further naloxone, because his SpO2 is now above 94%",
+              "zh": "不再追加纳洛酮，因为他的 SpO2 已经超过 94%"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The BC naloxone ladder is 0.4 mg, then a further 0.4 mg after three minutes, then 0.8 mg, then 2.0 mg — and each step is taken only if the patient has not achieved both an SpO2 of at least 94% and a spontaneous ventilatory rate above 10. That double criterion is the trap in option D: his saturation is 96% but only because the crew is breathing for him, and his own rate is 6, so the target is not met and the next dose is due. Option B skips two rungs of the ladder and risks a violent withdrawal reaction in a patient who is already improving. Option C stacks a full intranasal dose on top of an intramuscular dose given three minutes earlier.",
+          "explanationZh": "BC 的纳洛酮阶梯是 0.4 mg → 3 分钟后再 0.4 mg → 0.8 mg → 2.0 mg，而且每一级都必须在患者尚未同时达到「SpO2 ≥ 94%」和「自主呼吸频率 > 10 次/分」这两个条件时才追加。这个双重条件正是选项 D 的陷阱：他的血氧 96% 是因为急救员在替他呼吸，而他自己的呼吸只有 6 次/分，因此目标并未达成，下一剂该给。选项 B 一次跳过两级，且在患者已经好转的情况下增加剧烈戒断反应的风险。选项 C 则是在三分钟前的肌注剂量之上再叠加一个足量的鼻内给药剂量。",
+          "sourceRef": "BC Guidelines p.72 (Naloxone dose ladder); p.56 (Suspected Narcotic Overdose)",
+          "verified": false,
+          "evolutionEn": "The crew has been ventilating for three minutes and his SpO2 is now 96%, but between assisted breaths he is only breathing 6 times a minute on his own. His blood glucose is 5.8 mmol/L. Naloxone 0.4 mg IM was given three minutes ago.",
+          "evolutionZh": "急救组已辅助通气三分钟，SpO2 升至 96%，但在辅助呼吸的间隙，他自主呼吸只有 6 次/分。血糖 5.8 mmol/L。三分钟前已给纳洛酮 0.4 mg 肌注。"
+        },
+        {
+          "id": "pcp-cs-03-q4",
+          "cpcfArea": "A",
+          "competency": "A1",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "occupational-safety",
+          "difficulty": "foundation",
+          "questionEn": "One paramedic has initiated an IV and is holding the used catheter stylet. How should the sharp be disposed of?",
+          "questionZh": "一名急救员刚建立静脉通路，手里拿着用过的穿刺针芯。这枚利器应该怎样处置？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Recap the needle and keep it in a uniform pocket until the ambulance is restocked",
+              "zh": "把针帽套回去，先放在制服口袋里，等回站补给时再处理"
+            },
+            {
+              "key": "B",
+              "en": "Place it immediately in a puncture-resistant sharps container",
+              "zh": "立即放入防刺穿的利器盒"
+            },
+            {
+              "key": "C",
+              "en": "Wrap it in gauze and drop it in the washroom garbage can",
+              "zh": "用纱布包好后丢进洗手间的垃圾桶"
+            },
+            {
+              "key": "D",
+              "en": "Hand it to the attending police officer to dispose of",
+              "zh": "交给在场的警员处理"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "Sharps must go straight into an appropriate puncture-resistant container, immediately, to protect the crew, the patient, other providers and bystanders. This scene raises the stakes: a public washroom, a patient who may become combative as the naloxone takes effect, and an ambulance in motion. Recapping is the classic mechanism of needlestick injury, a pocket puts the sharp against the paramedic's own body, an unsecured garbage can transfers the hazard to cleaning staff, and handing a contaminated sharp to another person simply moves the risk. Under the grading criteria, performing a task detrimental to staff or bystander safety is a moderate deficiency even when the patient comes to no harm.",
+          "explanationZh": "利器必须立刻放进合适的防刺穿容器，以保护急救员本人、患者、其他医护人员和旁观者。本例风险更高：现场是公共洗手间，患者在纳洛酮起效后可能变得躁动，而且随后要在行驶的救护车上操作。回套针帽是针刺伤最典型的成因；放进口袋等于把利器贴在自己身上；丢进没有防护的垃圾桶是把危险转嫁给保洁人员；把污染利器交给别人只是把风险转移出去。按评分标准，做出危及员工或旁观者安全的动作，即便患者本身没有受到伤害，也属于中度扣分项。",
+          "sourceRef": "BC Practical Grading Criteria p.6 (Moderate Deficiency — tasks detrimental to staff, patient and other safety); COPR Study Guide v4.2 sample case item 5",
+          "verified": false,
+          "evolutionEn": "The patient is now rousing and ventilating adequately on his own. The crew is packaging him for transport.",
+          "evolutionZh": "患者已经开始清醒，自主通气也足够。急救组正在做转运前的包扎固定。"
+        }
+      ]
+    },
+    {
+      "id": "pcp-cs-04",
+      "format": "case-scenario",
+      "titleEn": "Unplanned home delivery with a flat newborn",
+      "titleZh": "计划外家中分娩，新生儿状态不佳",
+      "passageEn": "Paramedics respond at 03:20 to a private residence. A 29-year-old woman delivered a baby at 39 weeks gestation on the bathroom floor about eight minutes before the crew arrived, with her partner assisting. The baby is lying on a towel on the mother's abdomen, is floppy and limp, is not crying, and has a heart rate of 88 beats per minute. The mother is alert and says she feels shaky. The placenta has not yet delivered. The room is cool. The nearest hospital is 25 minutes away and a second crew is 15 minutes out.",
+      "passageZh": "03:20，急救组前往一处私人住宅。一名 29 岁女性在孕 39 周于浴室地板上分娩，时间大约在急救组到达前八分钟，由其伴侣协助完成。婴儿裹着一条毛巾放在母亲腹部上，肌张力低、四肢瘫软，没有哭声，心率 88 次/分。母亲神志清醒，自述发抖发虚。胎盘尚未娩出。房间温度偏低。最近的医院车程 25 分钟，第二组救护车还有 15 分钟到达。",
+      "questions": [
+        {
+          "id": "pcp-cs-04-q1",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "knowledge",
+          "population": "neonatal",
+          "topic": "newborn-resuscitation",
+          "difficulty": "foundation",
+          "questionEn": "The newborn is floppy, is not breathing effectively and has a heart rate of 88. What is the first step of the BC newborn sequence?",
+          "questionZh": "该新生儿肌张力低、没有有效呼吸、心率 88 次/分。BC 新生儿复苏流程的第一步是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Dry, stimulate and keep the baby warm for 30 seconds, then reassess the heart rate",
+              "zh": "擦干、刺激并保暖 30 秒，然后复测心率"
+            },
+            {
+              "key": "B",
+              "en": "Ventilate with a bag-valve mask with 100% oxygen attached for 30 seconds",
+              "zh": "用球囊面罩接 100% 氧气通气 30 秒"
+            },
+            {
+              "key": "C",
+              "en": "Begin chest compressions with ventilations at a ratio of 3:1",
+              "zh": "以 3:1 的比例开始胸外按压配合通气"
+            },
+            {
+              "key": "D",
+              "en": "Apply the AED and analyze the rhythm",
+              "zh": "贴上 AED 并分析心律"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "A newborn who is floppy, limp, not breathing or has a heart rate below 100 enters the BC newborn sequence at step one: dry, stimulate and keep warm for 30 seconds, and if the heart rate is still below 100, move to step two. Drying and stimulating alone resolve the great majority of these babies, and the cool room makes warmth a real priority. The steps must not be skipped — ventilation with 100% oxygen is step three, not step one — and an AED is never used on a neonate.",
+          "explanationZh": "对于肌张力低、四肢瘫软、没有呼吸或心率低于 100 次/分的新生儿，BC 流程从第一步开始：擦干、刺激并保暖 30 秒，若心率仍低于 100 次/分再进入第二步。绝大多数这类婴儿仅靠擦干和刺激就能改善，而本例房间温度偏低，保暖尤其重要。步骤不能跳——接 100% 氧气通气是第三步而不是第一步——而且新生儿绝不使用 AED。",
+          "sourceRef": "BC Guidelines p.44 (Newborn sequence; Neonate — no AED)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-04-q2",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "knowledge",
+          "population": "neonatal",
+          "topic": "newborn-resuscitation",
+          "difficulty": "foundation",
+          "questionEn": "What is the next step?",
+          "questionZh": "下一步应该做什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Continue drying and stimulating for a further 30 seconds",
+              "zh": "再继续擦干和刺激 30 秒"
+            },
+            {
+              "key": "B",
+              "en": "Ventilate with a bag-valve mask on room air for 30 seconds, then reassess the heart rate",
+              "zh": "用球囊面罩以室内空气通气 30 秒，然后复测心率"
+            },
+            {
+              "key": "C",
+              "en": "Ventilate with a bag-valve mask with 100% oxygen attached for 30 seconds",
+              "zh": "用球囊面罩接 100% 氧气通气 30 秒"
+            },
+            {
+              "key": "D",
+              "en": "Begin chest compressions at a ratio of 3:1",
+              "zh": "以 3:1 的比例开始胸外按压"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "Step two of the newborn sequence is 30 seconds of bag-valve-mask ventilation on room air; only if the heart rate is still below 100 after that does the crew move to step three and attach 100% oxygen. Option C is the deliberate near-miss — the right skill one step too early. Repeating step one wastes 30 seconds in a baby who has already failed to respond to it, and compressions are step four, reserved for a heart rate that stays low after both ventilation stages.",
+          "explanationZh": "新生儿流程的第二步是用球囊面罩以室内空气通气 30 秒；只有在此之后心率仍低于 100 次/分，才进入第三步接上 100% 氧气。选项 C 正是刻意设置的「差一点就对」——技术本身没错，但提前了一步。重复第一步会在一个已经对刺激无反应的婴儿身上白白浪费 30 秒；胸外按压是第四步，只留给两轮通气之后心率仍然过低的情况。",
+          "sourceRef": "BC Guidelines p.44 (Newborn sequence steps 1-4)",
+          "verified": false,
+          "evolutionEn": "After 30 seconds of drying, stimulation and warming, the baby has weak irregular respiratory effort and the heart rate is 92 beats per minute.",
+          "evolutionZh": "经过 30 秒擦干、刺激和保暖后，婴儿出现微弱不规则的呼吸动作，心率 92 次/分。"
+        },
+        {
+          "id": "pcp-cs-04-q3",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "neonatal",
+          "topic": "newborn-resuscitation",
+          "difficulty": "intermediate",
+          "questionEn": "What should the crew do now?",
+          "questionZh": "此时急救组应该怎么做？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Apply paediatric AED pads and analyze the rhythm",
+              "zh": "贴上儿童 AED 电极片并分析心律"
+            },
+            {
+              "key": "B",
+              "en": "Continue ventilation alone and reassess in another 30 seconds",
+              "zh": "只继续通气，再过 30 秒复评"
+            },
+            {
+              "key": "C",
+              "en": "Begin chest compressions at a ratio of 15:2 with two rescuers",
+              "zh": "双人复苏，以 15:2 的比例开始胸外按压"
+            },
+            {
+              "key": "D",
+              "en": "Begin chest compressions with ventilations at a ratio of 3:1 with 100% oxygen, continuing until the heart rate is above 60",
+              "zh": "在 100% 氧气下以 3:1 的比例开始按压配合通气，持续到心率超过 60 次/分为止"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "Both ventilation stages have now been completed and the heart rate is 52, so the sequence moves to step four: chest compressions with ventilations and 100% oxygen until the heart rate is above 60. The neonatal compression ratio is 3:1, which is why C is wrong — 15:2 is the two-rescuer ratio for infants and children beyond the neonatal period. No AED is used on a neonate. Continuing to ventilate alone abandons the algorithm at the point where perfusion has failed.",
+          "explanationZh": "两轮通气都已完成而心率仍为 52 次/分，因此进入第四步：在 100% 氧气下按压配合通气，直到心率超过 60 次/分。新生儿的按压通气比是 3:1，所以 C 是错的——15:2 是新生儿期之后婴幼儿的双人复苏比例。新生儿不使用 AED。而只继续通气，等于在灌注已经失败的节点上停下不再推进流程。",
+          "sourceRef": "BC Guidelines p.41 and p.44 (Child/Infant CPR; Neonate 3:1, no AED; newborn step 4)",
+          "verified": false,
+          "evolutionEn": "The baby has now had 30 seconds of bag-valve-mask ventilation on room air and a further 30 seconds with 100% oxygen attached. The heart rate is 52 beats per minute.",
+          "evolutionZh": "婴儿已经接受了 30 秒室内空气球囊面罩通气，以及随后 30 秒接 100% 氧气的通气。心率为 52 次/分。"
+        },
+        {
+          "id": "pcp-cs-04-q4",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "hypovolemia-txa",
+          "difficulty": "intermediate",
+          "questionEn": "Which management is indicated for the mother?",
+          "questionZh": "对这位母亲应该采取哪一项处置？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Tranexamic acid 2 g IV push alone; withhold fluid until the systolic pressure falls below 70 mmHg",
+              "zh": "只给氨甲环酸 2 g 静脉推注；在收缩压降到 70 mmHg 以下之前不补液"
+            },
+            {
+              "key": "B",
+              "en": "Sit her fully upright, apply oxygen and transport without attempting vascular access",
+              "zh": "让她完全坐直、给氧，不建立静脉通路直接转运"
+            },
+            {
+              "key": "C",
+              "en": "Keep her supine and warm with oxygen to maintain SpO2 at or above 94%, obtain vascular access, give a 20 mL/kg fluid bolus reassessing every 500 mL, and consider tranexamic acid",
+              "zh": "让她保持仰卧并注意保暖，给氧维持 SpO2 ≥ 94%，建立静脉通路，按 20 mL/kg 给予液体冲击并每 500 mL 复评一次，同时考虑使用氨甲环酸"
+            },
+            {
+              "key": "D",
+              "en": "Give ibuprofen 400 mg PO for the uterine cramping and transport",
+              "zh": "口服布洛芬 400 mg 缓解子宫痉挛痛，然后转运"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "She meets the hypovolemia protocol: significant fluid loss, a systolic below 90 and clinical signs of shock. All licence levels position the patient supine to support the blood pressure, keep her warm and protect from heat loss, and give oxygen to maintain SpO2 at 94% or above; the PCP adds vascular access and a 20 mL/kg bolus to a maximum of 2 litres with reassessment every 500 mL. Post-partum hemorrhage is listed as a consideration for tranexamic acid. Option A withholds fluid from a patient who is already in shock. Option B sits a hypotensive patient upright and skips access. Ibuprofen is contraindicated in active hemorrhage and treats nothing that matters here.",
+          "explanationZh": "这位母亲符合低血容量协议的条件：明显的体液丢失、收缩压低于 90 mmHg，并伴有休克的临床征象。所有执照层级都应让患者仰卧以支撑血压、注意保暖防止热量流失、给氧维持 SpO2 ≥ 94%；PCP 在此基础上追加静脉通路和 20 mL/kg（最多 2 升）的液体冲击，每 500 mL 复评一次。产后出血（post-partum hemorrhage）被列为氨甲环酸的考虑适应证之一。选项 A 对一个已经休克的患者拒绝补液。选项 B 让低血压患者坐直，还跳过了静脉通路。布洛芬在活动性出血时属于禁忌，而且在这里也解决不了任何关键问题。",
+          "sourceRef": "BC Guidelines p.54 (Hypovolemia); p.78 (Tranexamic Acid — considerations include post partum hemorrhage); p.68 (Ibuprofen contraindications)",
+          "verified": false,
+          "evolutionEn": "While one paramedic manages the newborn, the mother becomes pale and diaphoretic. Heavy vaginal bleeding has soaked through two towels. Her blood pressure is 84/50, heart rate 126, and her skin is cool and clammy. Delivery was 20 minutes ago.",
+          "evolutionZh": "在一名急救员处理新生儿的同时，母亲面色变得苍白、大汗淋漓。阴道大量出血，已经浸透两条毛巾。血压 84/50 mmHg，心率 126 次/分，皮肤湿冷。距分娩已过去 20 分钟。"
+        }
+      ]
+    },
+    {
+      "id": "pcp-cs-05",
+      "format": "case-scenario",
+      "titleEn": "Flash fire in a residential garage",
+      "titleZh": "住宅车库内的闪燃火灾",
+      "passageEn": "At 14:05 paramedics respond to a residential garage where a 41-year-old man was using a solvent near a running space heater. There was a flash fire; the fire department has extinguished it and declared the scene safe. He is standing outside, awake and shouting in pain. His shirt burned away over the whole front of his chest and abdomen, and the entire right arm is blistered and weeping. His face is reddened and his eyebrows are singed, but his voice is clear, there is no soot in the mouth or nose, and he denies any difficulty breathing. A neighbour has been running a garden hose over the arm since before the crew arrived. HR 118, RR 22, BP 138/84, SpO2 97% on room air.",
+      "passageZh": "14:05，急救组前往一处住宅车库。一名 41 岁男性在正在运转的取暖器旁使用溶剂时发生闪燃火灾，消防已将火扑灭并宣布现场安全。他站在屋外，神志清醒、疼得大喊。上衣在整个胸腹前侧烧毁，整条右上肢起水疱并有渗液。面部发红、眉毛被燎焦，但声音清亮，口鼻内没有煤灰，他也否认有任何呼吸困难。在急救组到达之前，邻居就一直用花园水管冲他的手臂。心率 118 次/分，呼吸 22 次/分，血压 138/84 mmHg，室内空气下 SpO2 97%。",
+      "questions": [
+        {
+          "id": "pcp-cs-05-q1",
+          "cpcfArea": "H",
+          "competency": "H2",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "burns",
+          "difficulty": "foundation",
+          "questionEn": "Using the Rule of Nines, what is the approximate burn surface area involving the entire front of the chest and abdomen plus the entire right arm?",
+          "questionZh": "按九分法（Rule of Nines）计算，整个胸腹前侧加上整条右上肢的烧伤面积大约是多少？",
+          "options": [
+            {
+              "key": "A",
+              "en": "18%",
+              "zh": "18%"
+            },
+            {
+              "key": "B",
+              "en": "27%",
+              "zh": "27%"
+            },
+            {
+              "key": "C",
+              "en": "36%",
+              "zh": "36%"
+            },
+            {
+              "key": "D",
+              "en": "9%",
+              "zh": "9%"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "In the adult Rule of Nines the entire anterior trunk is 18% and a whole arm is 9%, giving 27%. That number matters beyond arithmetic: partial thickness burns of more than 20% BSA make this patient unstable and rapid transport category, and burns over 20% BSA are also one of the listed indications for the hypovolemia protocol. Option A counts only the trunk, option D counts only the arm, and option C double-counts by adding the posterior trunk that was not burned.",
+          "explanationZh": "在成人九分法中，整个躯干前侧占 18%，一整条上肢占 9%，合计 27%。这个数字的意义不止于算术：部分厚度烧伤超过体表面积 20% 就使患者归为不稳定、进入快速转运类别；而烧伤超过 20% BSA 同时也是启动低血容量协议的适应证之一。选项 A 只算了躯干，选项 D 只算了上肢，选项 C 则把并未烧伤的躯干背侧也重复算了进去。",
+          "sourceRef": "BC Guidelines p.28 (Burn Management — Rule of Nines); p.7 (major burns as unstable findings); p.54 (Hypovolemia — burns > 20% BSA)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-05-q2",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "burns",
+          "difficulty": "intermediate",
+          "questionEn": "The neighbour has already been cooling the arm for about ten minutes. What is the correct approach to cooling?",
+          "questionZh": "邻居已经给手臂降温大约十分钟了。正确的降温处理是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Stop cooling at once, because cooling beyond the first five minutes causes hypothermia",
+              "zh": "立刻停止降温，因为超过最初五分钟的降温会导致低体温"
+            },
+            {
+              "key": "B",
+              "en": "Restart the clock and cool for a further twenty minutes using cold water and ice packs",
+              "zh": "重新开始计时，用冷水加冰袋再降温二十分钟"
+            },
+            {
+              "key": "C",
+              "en": "Do not cool at all; apply dry sterile dressings and transport immediately",
+              "zh": "完全不降温，直接覆盖干燥无菌敷料并立即转运"
+            },
+            {
+              "key": "D",
+              "en": "Continue with cool — not cold — running water to complete a total of 15 to 20 minutes counting the bystander's time, then dress with sterile, non-stick, dry gauze",
+              "zh": "继续用凉水（而非冰冷的水）冲洗，把旁观者已降温的时间计算在内，凑满 15-20 分钟，之后用无菌、不粘连的干纱布包扎"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The guideline recommends 15 to 20 minutes of cooling, explicitly inclusive of any time bystanders have already provided effective cooling, using cool — not cold — running water; once cooling is finished the wound is dressed with sterile, non-stick, dry gauze. Cooling is also an analgesic strategy in its own right, which matters in a patient shouting in pain. Option B restarts a clock that is already running and adds ice, which deepens the injury. Option A cuts short a treatment that limits burn progression, and option C omits it altogether.",
+          "explanationZh": "考纲建议降温 15-20 分钟，并明确说明旁观者已经实施的有效降温时间要计算在内，且要用凉水而不是冰冷的水冲洗；降温结束后用无菌、不粘连的干纱布包扎创面。降温本身也是一种镇痛手段，这对一个疼得大喊的患者格外重要。选项 B 把已经在走的计时重新归零，还加了冰，反而会加深损伤。选项 A 中断了一项能限制烧伤进展的处置，选项 C 则干脆完全省略。",
+          "sourceRef": "BC Guidelines p.28 (Burn Management — cooling 15-20 minutes inclusive of bystander cooling, cool not cold water, dressing)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-05-q3",
+          "cpcfArea": "H",
+          "competency": "H3",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "pain-management",
+          "difficulty": "intermediate",
+          "questionEn": "He rates the pain 9/10. He has no allergies, no liver disease and no gastrointestinal bleeding, is not on anticoagulants, has taken no analgesic today, and has no signs of inhalation injury. Which analgesic plan meets the BC standard?",
+          "questionZh": "他把疼痛评为 9/10。无过敏史、无肝病、无消化道出血，未服用抗凝药，今天没有用过任何止痛药，也没有吸入性损伤的表现。哪一个镇痛方案符合 BC 标准？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Entonox alone, self-administered",
+              "zh": "只给 Entonox（笑气），由患者自行吸入"
+            },
+            {
+              "key": "B",
+              "en": "Acetaminophen 1,000 mg PO and ibuprofen 400 mg PO only",
+              "zh": "只给对乙酰氨基酚 1000 mg 口服加布洛芬 400 mg 口服"
+            },
+            {
+              "key": "C",
+              "en": "Entonox self-administered together with acetaminophen 1,000 mg PO and ibuprofen 400 mg PO",
+              "zh": "Entonox 由患者自行吸入，同时给对乙酰氨基酚 1000 mg 口服和布洛芬 400 mg 口服"
+            },
+            {
+              "key": "D",
+              "en": "Methoxyflurane 3 mL self-administered plus acetaminophen 1,000 mg PO",
+              "zh": "甲氧氟烷（methoxyflurane）3 mL 自行吸入，加对乙酰氨基酚 1000 mg 口服"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "BC pain management expects all three agents when they are indicated and not contraindicated. The grading criteria attach deductions to every partial version: Entonox without acetaminophen and ibuprofen loses 10%, acetaminophen and ibuprofen without Entonox loses 25%, and giving only one of the two oral agents loses 10% or 25% depending on whether Entonox was also given. Doses are acetaminophen 500 to 1,000 mg PO, ibuprofen 300 to 400 mg PO and Entonox self-administered by inhalation. Entonox is contraindicated in inhalation injury, so the profile deliberately rules that out — clear voice, no soot, no respiratory distress — and the exam convention is that anything not stated abnormal is normal. Option D substitutes a second inhaled agent for the standard combination and still omits the ibuprofen.",
+          "explanationZh": "BC 的疼痛管理要求：只要三种药都有指征且无禁忌，就必须三者齐上。评分标准对每一种「只给一部分」的做法都设了扣分：给了 Entonox 却没给对乙酰氨基酚和布洛芬扣 10%；给了对乙酰氨基酚和布洛芬却没给 Entonox 扣 25%；两种口服药只给了其中一种，则视是否同时给了 Entonox 分别扣 10% 或 25%。剂量为对乙酰氨基酚 500-1000 mg 口服、布洛芬 300-400 mg 口服、Entonox 由患者自行吸入。Entonox 在吸入性损伤时属禁忌，所以本例资料刻意排除了这一点——声音清亮、无煤灰、无呼吸窘迫；而考试惯例是资料里没写成异常的就按正常处理。选项 D 用另一种吸入药替换了标准组合，而且仍然漏掉了布洛芬。",
+          "sourceRef": "BC Practical Grading Criteria p.39 (Appendix A — Pain Management deductions); BC Guidelines p.28 (Burn Management — consider pain management); p.58 (Acetaminophen); p.65 (Entonox contraindications); p.68 (Ibuprofen)",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "pcp-cs-05-q4",
+          "cpcfArea": "H",
+          "competency": "H1",
+          "cognitive": "critical",
+          "population": "adult",
+          "topic": "burns",
+          "difficulty": "advanced",
+          "questionEn": "What should the crew do?",
+          "questionZh": "急救组应该怎么做？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Discontinue the Entonox, apply high-flow oxygen by non-rebreather, notify the receiving hospital, and wait until the light turns green and traffic begins to move before activating the lights and siren",
+              "zh": "停用 Entonox，改用非重复呼吸面罩高流量给氧，通知接收医院，并等到绿灯亮起、车流开始移动之后再打开警灯和警笛"
+            },
+            {
+              "key": "B",
+              "en": "Immediately activate the lights and siren and sound the horn so that the stopped traffic moves out of the way",
+              "zh": "立即打开警灯和警笛并按喇叭，让停着的车辆让开"
+            },
+            {
+              "key": "C",
+              "en": "Continue the Entonox for pain control and activate the lights and siren once traffic clears",
+              "zh": "继续用 Entonox 镇痛，等车流疏散后再开警灯警笛"
+            },
+            {
+              "key": "D",
+              "en": "Apply CPAP at 5 cmH2O and continue at normal road speed without upgrading the response",
+              "zh": "给予 5 cmH2O 的 CPAP，按正常路速行驶，不升级响应等级"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "Hoarseness, sooty sputum and stridor are an evolving inhalation injury, which is an explicit contraindication to Entonox, so it must come off; a non-rebreather is indicated for smoke inhalation, and the hospital must be notified of the deterioration in a critical patient. On the driving question, suddenly activating emergency lights and sirens while stopped at a red light surrounded by traffic may cause other drivers to panic and move into an unsafe intersection — the safe answer beats the fast one, so B is wrong. C leaves a contraindicated drug running. CPAP is contraindicated here on two counts: an airway burn is a traumatic cause of respiratory distress, and stridor from swelling is not relieved by mask pressure.",
+          "explanationZh": "声音嘶哑、咳出带煤灰的痰、出现喘鸣，说明吸入性损伤正在进展，而吸入性损伤是 Entonox 的明确禁忌，因此必须立刻停用；烟雾吸入的指征用非重复呼吸面罩，同时必须把危重患者的病情恶化通知接收医院。至于行车决策：在红灯前被车流包围时突然打开警灯警笛，可能让其他驾驶员惊慌失措、贸然驶入不安全的路口——安全优先于快速，所以 B 是错的。C 让一种已属禁忌的药继续使用。CPAP 在这里有两条禁忌：气道烧伤属于「呼吸窘迫由创伤引起」，而且肿胀造成的喘鸣也不是靠面罩正压能缓解的。",
+          "sourceRef": "BC Guidelines p.65 (Entonox contraindications — inhalation injury); p.50 (non-rebreather for smoke inhalation); p.52 (CPAP contraindications); COPR Study Guide v4.2 sample stand-alone item (emergency vehicle operation)",
+          "verified": false,
+          "evolutionEn": "Loading is complete and the crew is en route. The patient has become hoarse, is coughing up sooty sputum and has developed inspiratory stridor; his SpO2 has fallen to 90%. The ambulance is stopped at a red light surrounded by traffic and the crew decides to upgrade to a lights-and-siren response.",
+          "evolutionZh": "装车完成，急救组已在转运途中。患者声音变得嘶哑，咳出带煤灰的痰，并出现吸气性喘鸣，SpO2 降至 90%。此刻救护车正停在红灯前、四周被车流包围，急救组决定把响应等级升级为警灯警笛。"
         }
       ]
     }
