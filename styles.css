@@ -494,6 +494,12 @@ details.acc summary::after { content: "›"; margin-left: auto; color: var(--ink
   line-height: 1; transition: transform .2s var(--ease); }
 details.acc[open] summary::after { transform: rotate(90deg); }
 details.acc .acc-body { padding: 0 var(--s4) var(--s4); }
+/* passage attached to a linked question set */
+details.acc.passage { border-color: color-mix(in srgb, var(--accent) 30%, var(--line));
+  background: var(--surface-2); margin-bottom: var(--s3); }
+details.acc.passage summary { color: var(--accent-ink); }
+details.acc.passage .vitals-table { margin: 0; }
+details.acc.passage .vitals-table th { width: 38%; background: var(--surface); }
 
 /* progress dashboard */
 .stat-row { display: flex; gap: var(--s2); flex-wrap: wrap; }

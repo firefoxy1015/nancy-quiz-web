@@ -1,0 +1,924 @@
+{
+  "meta": {
+    "part": "emr-passages-1",
+    "licence": "emr",
+    "passageCount": 5,
+    "questionCount": 20,
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
+  "passages": [
+    {
+      "id": "emr-pp-01",
+      "format": "patient-profile",
+      "titleEn": "Sudden facial swelling after a restaurant meal",
+      "titleZh": "餐厅进食后突发面部肿胀",
+      "profile": {
+        "ageEn": "28 years old",
+        "ageZh": "28 岁",
+        "genderEn": "Male",
+        "genderZh": "男性",
+        "chiefComplaintEn": "Throat tightness and facial swelling, sudden onset",
+        "chiefComplaintZh": "咽喉紧缩感与面部肿胀，突然发作",
+        "pastMedicalHxEn": "Known shellfish allergy; two previous reactions, neither required admission to hospital",
+        "pastMedicalHxZh": "已知对贝类过敏；既往两次过敏反应，均未住院",
+        "medicationsEn": "None. Family states an epinephrine auto-injector was prescribed but it is expired and at home",
+        "medicationsZh": "无。家属说医生曾开过 epinephrine 自动注射笔，但已过期且放在家里",
+        "firstVitalsEn": "HR 124 and regular; RR 28 and shallow; BP 88/54; SpO2 91% on room air",
+        "firstVitalsZh": "HR 124，规则；RR 28，浅快；BP 88/54；室内空气下 SpO2 91%",
+        "physicalFindingsEn": "Urticaria over the chest and neck; audible wheeze; swelling of the lips and tongue; anxious but alert",
+        "physicalFindingsZh": "胸部与颈部可见 urticaria（荨麻疹）；可闻及 wheeze（哮鸣音）；唇部与舌部肿胀；焦虑但神志清醒",
+        "otherInformationEn": "Symptoms began within 10 minutes of eating a seafood chowder. The patient walked from his table to the front of the restaurant before staff called 911.",
+        "otherInformationZh": "进食海鲜浓汤后 10 分钟内出现症状。在店员拨打 911 之前，患者自己从餐桌走到了餐厅门口。"
+      },
+      "questions": [
+        {
+          "id": "emr-pp-01-q1",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "anaphylaxis-positioning",
+          "difficulty": "foundation",
+          "questionEn": "The patient is standing near the restaurant entrance when you reach him. Before any medication is given, what does the BC anaphylaxis guideline direct the EMR to do about his position?",
+          "questionZh": "你到达时患者正站在餐厅门口。在给任何药物之前，BC 的 anaphylaxis 指南要求 EMR 如何处理他的体位？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Sit him upright in a chair and have him lean forward",
+              "zh": "让他坐在椅子上、身体前倾"
+            },
+            {
+              "key": "B",
+              "en": "Walk him out to the stretcher at the ambulance door to save time",
+              "zh": "为了节省时间，让他自己走到停在门口的救护车担架旁"
+            },
+            {
+              "key": "C",
+              "en": "Lay him supine and do not allow him to walk",
+              "zh": "让他仰卧（supine），并且不允许他走动"
+            },
+            {
+              "key": "D",
+              "en": "Place him semi-prone in the recovery position",
+              "zh": "把他放成半俯卧的复原体位"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "The BC anaphylaxis guideline states plainly: position supine to improve blood pressure and do not walk the patient. This patient is already hypotensive at 88/54; walking an anaphylactic patient can empty a poorly filled heart and precipitate collapse. Option A is the position used for asthma and COPD, not for a hypotensive anaphylactic patient. Option D is reserved for a patient who cannot protect their own airway; this patient is alert.",
+          "explanationZh": "BC 的 anaphylaxis 指南写得很直接：仰卧以改善血压，并且不要让患者走动。本例血压已降至 88/54，让 anaphylaxis 患者走动会使本就充盈不足的心脏进一步排空，可能导致虚脱。选项 A 是 asthma / COPD 的体位，不适用于低血压的 anaphylaxis 患者。选项 D 只用于无法自行保护气道的患者，而本例神志清醒。",
+          "sourceRef": "BC Guidelines p.55",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-pp-01-q2",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "adult",
+          "topic": "epinephrine-dose",
+          "difficulty": "intermediate",
+          "questionEn": "The patient is now supine, high-flow oxygen is running and the wheeze has become louder. What is the correct EMR dose and route of epinephrine for this patient?",
+          "questionZh": "患者现已仰卧，高流量氧气已给上，哮鸣音变得更响。对这位患者，EMR 给 epinephrine 的正确剂量与途径是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "0.3 mg subcutaneous, repeated once after 15 minutes",
+              "zh": "0.3 mg 皮下注射（subcutaneous），15 分钟后重复一次"
+            },
+            {
+              "key": "B",
+              "en": "0.5 mg IM, may be repeated every 5 minutes up to 3 times",
+              "zh": "0.5 mg IM（肌注），每 5 分钟可重复一次，最多重复 3 次"
+            },
+            {
+              "key": "C",
+              "en": "0.01 mg/kg IM to a maximum of 0.3 mg, single dose only",
+              "zh": "0.01 mg/kg IM，最大 0.3 mg，只给一次"
+            },
+            {
+              "key": "D",
+              "en": "0.5 mg IV push, repeated every 5 minutes",
+              "zh": "0.5 mg IV 推注，每 5 分钟重复一次"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The BC monograph gives the adult anaphylaxis dose as 0.5 mg IM every 5 minutes, repeated up to 3 times. Option C is the paediatric weight-based dose (0.01 mg/kg IM to a maximum of 0.5 mg) and would badly under-dose a 28-year-old. Option A uses the wrong route and a dose from an older auto-injector convention. Option D is wrong on route and is outside the EMR scope: EMRs give epinephrine intramuscularly only.",
+          "explanationZh": "BC 药物专论规定成人 anaphylaxis 的剂量为 0.5 mg IM，每 5 分钟一次，最多重复 3 次。选项 C 是儿科按体重给药（0.01 mg/kg IM，最大 0.5 mg），用在 28 岁成人身上会严重剂量不足。选项 A 途径错误，剂量沿用的是旧式自动注射笔的规格。选项 D 途径错误，而且超出 EMR 授权范围——EMR 只能肌注 epinephrine。",
+          "sourceRef": "BC Guidelines p.66",
+          "verified": false,
+          "evolutionEn": "The patient has been laid supine, high-flow oxygen is running, and the audible wheeze has become louder.",
+          "evolutionZh": "患者已被放平仰卧，高流量氧气已开始，可闻及的哮鸣音变得更响。"
+        },
+        {
+          "id": "emr-pp-01-q3",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "adult",
+          "topic": "anaphylaxis-priorities",
+          "difficulty": "advanced",
+          "questionEn": "Five minutes after the first dose of epinephrine the wheeze persists, the blood pressure is now 82/50 and SpO2 is 90% on high-flow oxygen. Your partner has brought the stretcher alongside the patient. What is the most appropriate action?",
+          "questionZh": "第一剂 epinephrine 后 5 分钟，哮鸣音仍在，血压降至 82/50，高流量氧气下 SpO2 为 90%。搭档已把担架推到患者身旁。此时最恰当的处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Give a second dose of epinephrine 0.5 mg IM and initiate transport",
+              "zh": "再给第二剂 epinephrine 0.5 mg IM，并开始转运"
+            },
+            {
+              "key": "B",
+              "en": "Give salbutamol by nebulizer and reassess in five minutes before deciding about transport",
+              "zh": "先用 nebulizer 给 salbutamol，5 分钟后复评再决定是否转运"
+            },
+            {
+              "key": "C",
+              "en": "Stay on scene to complete a detailed head-to-toe examination before moving him",
+              "zh": "留在现场完成详细的头到脚检查后再搬动他"
+            },
+            {
+              "key": "D",
+              "en": "Give diphenhydramine to limit the histamine response",
+              "zh": "给 diphenhydramine 以抑制组胺反应"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The patient is deteriorating despite the first dose, so the repeat dose of epinephrine is due at 5 minutes and transport must not be delayed. Option B is the classic near-miss: salbutamol does treat the bronchospasm and is within EMR scope, but it is an adjunct that follows epinephrine, and pausing five minutes to reassess before deciding about transport wastes time in a patient who is losing his blood pressure. Option C is the standard exam trap of correct-treatment-wrong-priority: a detailed secondary assessment belongs en route, not on scene, in an unstable patient. Option D is a PCP intervention and is outside the EMR scope.",
+          "explanationZh": "第一剂后患者仍在恶化，因此 5 分钟时应给第二剂 epinephrine，并且不能再延误转运。选项 B 是典型的「差一点就对」：salbutamol 确实能缓解支气管痉挛，也在 EMR 范围内，但它是 epinephrine 之后的辅助手段；而且在一个血压正在掉的患者身上停下来观察 5 分钟再决定转不转，是在浪费时间。选项 C 是经典陷阱——处置本身没错但优先级错了：不稳定患者的详细二次评估应在转运途中做，而不是留在现场做。选项 D 属于 PCP 的处置，超出 EMR 范围。",
+          "sourceRef": "BC Guidelines p.55, p.66",
+          "verified": false,
+          "evolutionEn": "Five minutes have passed since the first epinephrine dose. The wheeze persists, BP has fallen from 88/54 to 82/50, and SpO2 is 90% despite high-flow oxygen. The stretcher is now beside the patient.",
+          "evolutionZh": "距第一剂 epinephrine 已过 5 分钟。哮鸣音仍在，血压由 88/54 降至 82/50，高流量氧气下 SpO2 为 90%。担架已推到患者身旁。"
+        },
+        {
+          "id": "emr-pp-01-q4",
+          "cpcfArea": "E",
+          "cognitive": "knowledge",
+          "population": "adult",
+          "topic": "sharps-safety",
+          "difficulty": "foundation",
+          "questionEn": "Immediately after the injection your partner hands you the used syringe and needle. The patient is being moved onto the stretcher and the restaurant floor is crowded with customers and staff. What should you do with the sharp?",
+          "questionZh": "注射结束后，搭档立刻把用过的注射器和针头递给你。此时患者正被搬上担架，餐厅地面上挤满了顾客和店员。你应该如何处理这个利器？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Recap the needle and put it in your uniform pocket until you get back to the ambulance",
+              "zh": "把针帽套回去，放进制服口袋，等回到救护车再处理"
+            },
+            {
+              "key": "B",
+              "en": "Hand it to a member of the restaurant staff to dispose of",
+              "zh": "交给餐厅店员去处理"
+            },
+            {
+              "key": "C",
+              "en": "Wrap it in gauze and put it in the drug kit until the call is finished",
+              "zh": "用纱布包好放进药箱，等这趟出勤结束再说"
+            },
+            {
+              "key": "D",
+              "en": "Place it directly into a puncture-resistant sharps container",
+              "zh": "直接放入防穿刺的 sharps container（利器盒）"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "Sharps are disposed of immediately into a puncture-resistant container. Every other option leaves an uncontrolled needle in a crowded room: recapping is itself a common cause of needlestick injury, a pocketed or gauze-wrapped needle will be found by the next hand into that pocket or kit, and handing a contaminated sharp to a member of the public transfers your occupational risk to someone with no training and no protection. Occupational safety is examinable in its own right alongside clinical care.",
+          "explanationZh": "利器必须立即丢入防穿刺容器。其他每一个选项都会让一根失控的针头留在拥挤的房间里：重新套针帽本身就是针刺伤的常见原因；塞口袋或用纱布包起来放药箱，下一个把手伸进去的人就会中招；把污染利器交给普通市民，等于把你的职业暴露风险转嫁给一个没有受过训练、也没有防护的人。职业安全和临床处置一样，是独立的考点。",
+          "sourceRef": "BC Guidelines p.9 (Rescue Scene Evaluation - hazards); CPCF area E",
+          "verified": false,
+          "evolutionEn": "Epinephrine has been given and the patient is being moved onto the stretcher; the restaurant floor remains crowded.",
+          "evolutionZh": "epinephrine 已注射完毕，患者正被搬上担架；餐厅内仍然人多拥挤。"
+        }
+      ]
+    },
+    {
+      "id": "emr-pp-02",
+      "format": "patient-profile",
+      "titleEn": "Four-year-old with worsening difficulty breathing",
+      "titleZh": "4 岁女童呼吸困难加重",
+      "profile": {
+        "ageEn": "4 years old",
+        "ageZh": "4 岁",
+        "genderEn": "Female",
+        "genderZh": "女性",
+        "chiefComplaintEn": "Difficulty breathing, worsening over 6 hours",
+        "chiefComplaintZh": "呼吸困难，6 小时内逐渐加重",
+        "pastMedicalHxEn": "Asthma diagnosed at age 2; two emergency department visits for asthma this year",
+        "pastMedicalHxZh": "2 岁时确诊 asthma（哮喘）；今年已因哮喘两次去急诊",
+        "medicationsEn": "Salbutamol MDI at home; mother gave 2 puffs one hour ago with little effect",
+        "medicationsZh": "家中有 salbutamol MDI（定量吸入器）；母亲 1 小时前给她吸了 2 喷，效果不明显",
+        "firstVitalsEn": "HR 158; RR 44; SpO2 89% on room air; Temp 37.4 C; weight approximately 17 kg",
+        "firstVitalsZh": "HR 158；RR 44；室内空气下 SpO2 89%；体温 37.4 C；体重约 17 kg",
+        "physicalFindingsEn": "Sitting upright and tripoding on her mother's lap; intercostal and subcostal indrawing; expiratory wheeze in all fields; speaking in single words only",
+        "physicalFindingsZh": "坐在母亲腿上，身体前倾呈三脚架姿势；肋间与肋下凹陷；双肺满布呼气相哮鸣音；只能一个词一个词地说话",
+        "otherInformationEn": "The family recently brought a cat into the home. The child is frightened and cries whenever a stranger comes close.",
+        "otherInformationZh": "家里最近养了一只猫。孩子很害怕，陌生人一靠近就哭。"
+      },
+      "questions": [
+        {
+          "id": "emr-pp-02-q1",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "pediatric",
+          "topic": "pediatric-assessment-approach",
+          "difficulty": "foundation",
+          "questionEn": "Which one of the following best describes the correct approach to assessing this child?",
+          "questionZh": "以下哪一项最能描述评估这名儿童的正确做法？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Move her onto the stretcher and lay her supine so a full set of vital signs can be taken",
+              "zh": "把她抱上担架并放平仰卧，以便测量完整的生命体征"
+            },
+            {
+              "key": "B",
+              "en": "Separate her from her mother so that she can concentrate on your questions",
+              "zh": "把她和母亲分开，好让她专心回答你的问题"
+            },
+            {
+              "key": "C",
+              "en": "Delay all assessment until salbutamol has been given",
+              "zh": "在给 salbutamol 之前，暂缓一切评估"
+            },
+            {
+              "key": "D",
+              "en": "Leave her on her mother's lap in the position she has chosen and begin the assessment at her feet",
+              "zh": "让她保持自己选择的姿势坐在母亲腿上，从脚开始做评估"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "Two paediatric principles combine here. First, a child in respiratory distress has chosen the tripod position for a reason, and laying her flat or taking her from her mother will increase her work of breathing and her distress. Second, assessment in this age group is conducted toe-to-head to gain the child's confidence before you reach the frightening parts. Option C is an absolute that would have you withhold even the primary survey, which always comes before any protocol.",
+          "explanationZh": "这里叠加了两条儿科原则。第一，呼吸窘迫的孩子摆出三脚架姿势是有原因的，把她放平或从母亲怀里抱走，只会加重呼吸做功和恐惧。第二，这个年龄段的评估从脚往头做（toe-to-head），先建立信任，再检查会吓到她的部位。选项 C 是绝对化措辞，等于连 primary survey 都不做了——而初步检查永远在任何 protocol 之前。",
+          "sourceRef": "BC Guidelines p.6, p.49",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-pp-02-q2",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "pediatric",
+          "topic": "salbutamol-pediatric-dose",
+          "difficulty": "intermediate",
+          "questionEn": "You have left the child on her mother's lap and oxygen is being held near her face; SpO2 has risen to 92%. According to the BC drug monograph, what is the correct salbutamol dose for this 17 kg child by metered dose inhaler?",
+          "questionZh": "你让孩子继续坐在母亲腿上，并把氧气面罩举在她面部附近，SpO2 升至 92%。根据 BC 药物专论，这名 17 kg 儿童用 MDI 给 salbutamol 的正确剂量是多少？",
+          "options": [
+            {
+              "key": "A",
+              "en": "4 x 100 mcg, repeated as required",
+              "zh": "4 x 100 mcg，按需重复"
+            },
+            {
+              "key": "B",
+              "en": "5 x 100 mcg per course, may be repeated up to 3 times",
+              "zh": "每疗程 5 x 100 mcg，最多可重复 3 次"
+            },
+            {
+              "key": "C",
+              "en": "10 x 100 mcg per course, may be repeated up to 3 times",
+              "zh": "每疗程 10 x 100 mcg，最多可重复 3 次"
+            },
+            {
+              "key": "D",
+              "en": "MDI is not indicated at this weight; she requires 2.5 mg by nebulizer",
+              "zh": "这个体重不适用 MDI；必须用 nebulizer 给 2.5 mg"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "Paediatric MDI dosing is banded by weight: under 10 kg MDI is not indicated, 10-20 kg gets 5 x 100 mcg per course, and over 20 kg gets 10 x 100 mcg per course; both bands may be repeated up to 3 times. At 17 kg she falls in the 10-20 kg band. Option A is the adult dose, option C is the over-20 kg dose, and the 2.5 mg nebulizer dose in option D is the dose for a child under one year of age. A spacer should be used with the MDI.",
+          "explanationZh": "儿科 MDI 剂量按体重分档：<10 kg 不适用 MDI；10-20 kg 每疗程 5 x 100 mcg；>20 kg 每疗程 10 x 100 mcg；两档均最多可重复 3 次。17 kg 落在 10-20 kg 这一档。选项 A 是成人剂量，选项 C 是 >20 kg 的剂量，选项 D 中 2.5 mg 的雾化剂量是 1 岁以下婴儿的剂量。用 MDI 时应配合 spacer（储雾罐）。",
+          "sourceRef": "BC Guidelines p.77",
+          "verified": false,
+          "evolutionEn": "The child has been left in her position of comfort on her mother's lap and oxygen is being held near her face; SpO2 has come up from 89% to 92%.",
+          "evolutionZh": "孩子被保留在母亲腿上的舒适体位，氧气举在她面部附近；SpO2 已从 89% 升至 92%。"
+        },
+        {
+          "id": "emr-pp-02-q3",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "pediatric",
+          "topic": "pediatric-respiratory-failure",
+          "difficulty": "advanced",
+          "questionEn": "After two courses of salbutamol the wheeze has become much quieter, the child has stopped crying, her SpO2 is 88% on high-flow oxygen and her head bobs with each breath. What does this change most likely mean, and what should you do?",
+          "questionZh": "给了两个疗程的 salbutamol 后，哮鸣音明显变轻，孩子不哭了，高流量氧气下 SpO2 降到 88%，每次呼吸时头部随之点动。这一变化最可能意味着什么？你应该怎么做？",
+          "options": [
+            {
+              "key": "A",
+              "en": "She is improving; continue salbutamol and complete a detailed secondary assessment on scene",
+              "zh": "她在好转；继续给 salbutamol，并在现场完成详细的二次评估"
+            },
+            {
+              "key": "B",
+              "en": "She has an upper airway foreign body; begin back blows and chest thrusts",
+              "zh": "她有上气道异物；开始拍背和胸部冲击"
+            },
+            {
+              "key": "C",
+              "en": "She is tiring with falling air entry; assist ventilations with a bag-valve mask and transport immediately",
+              "zh": "她已疲劳、进气量下降；用 BVM 辅助通气并立即转运"
+            },
+            {
+              "key": "D",
+              "en": "She now meets the criteria for CPAP; apply it before moving her to the ambulance",
+              "zh": "她现在符合 CPAP 的适应证；上救护车前先给她上 CPAP"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "A quiet chest in an asthmatic child is not a good sign — it means too little air is moving to generate a wheeze. Combined with a falling SpO2 despite high-flow oxygen, a child who has gone quiet and a bobbing head, this is exhaustion and impending respiratory failure. The guideline directs you to assist inadequate or failing respirations, which here means bag-valve-mask ventilation and immediate transport. Option A misreads the silence as improvement and adds the on-scene-delay trap. Option B does not fit a six-hour history with a known asthma diagnosis. Option D fails twice: CPAP is contraindicated in patients 12 years and under, and it is a PCP intervention that is outside the EMR scope.",
+          "explanationZh": "哮喘患儿肺部变安静不是好事——它意味着进出的气流已经少到吹不出哮鸣音。再加上高流量氧气下 SpO2 仍在下降、孩子不哭了、出现点头样呼吸，这是体力耗竭、即将发生呼吸衰竭。指南要求对不足或衰竭的呼吸进行辅助，在这里就是 BVM 通气并立即转运。选项 A 把「安静」误读成好转，还叠加了现场滞留的陷阱。选项 B 与已确诊哮喘、症状持续 6 小时的病史不符。选项 D 错了两层：CPAP 对 12 岁及以下是禁忌，而且属于 PCP 的处置，超出 EMR 范围。",
+          "sourceRef": "BC Guidelines p.11, p.49, p.52",
+          "verified": false,
+          "evolutionEn": "Two courses of salbutamol have been given. The wheeze is now much quieter, the child has stopped crying and become quiet, SpO2 has fallen to 88% on high-flow oxygen, and her head bobs with each breath.",
+          "evolutionZh": "已给了两个疗程的 salbutamol。哮鸣音明显减弱，孩子从哭闹变得安静，高流量氧气下 SpO2 降至 88%，每次呼吸伴头部点动。"
+        },
+        {
+          "id": "emr-pp-02-q4",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "pediatric",
+          "topic": "scope-of-practice",
+          "difficulty": "intermediate",
+          "questionEn": "The PCP crew has not yet arrived. Which one of the following treatments for this child is outside the EMR scope of practice in British Columbia?",
+          "questionZh": "PCP 组还没到。在 BC 省，以下哪一项针对这名儿童的处置超出了 EMR 的授权范围？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Adding ipratropium to a nebulizer",
+              "zh": "在雾化中加入 ipratropium"
+            },
+            {
+              "key": "B",
+              "en": "Salbutamol by metered dose inhaler with a spacer",
+              "zh": "用 MDI 加 spacer 给 salbutamol"
+            },
+            {
+              "key": "C",
+              "en": "High-flow oxygen by non-rebreather mask",
+              "zh": "用 non-rebreather 面罩给高流量氧气"
+            },
+            {
+              "key": "D",
+              "en": "Assisted ventilation with a bag-valve mask",
+              "zh": "用 BVM 辅助通气"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "Ipratropium is a PCP-level medication in British Columbia; the EMR bronchodilator is salbutamol, given by MDI with a spacer or by nebulizer. Oxygen and bag-valve-mask ventilation are core EMR skills at every licence level. Knowing where your authorization stops matters as much as knowing the treatment: on the exam, an intervention that is clinically reasonable but above your licence is still the wrong answer. Dexamethasone and CPAP are two other PCP additions in this protocol.",
+          "explanationZh": "在 BC 省，ipratropium 属于 PCP 级别药物；EMR 的支气管扩张剂是 salbutamol，可用 MDI 加 spacer 或雾化给药。氧气和 BVM 通气是所有执照等级的核心 EMR 技能。清楚自己的授权边界和掌握处置同样重要：在考试中，一项临床上合理但超出你执照的处置，仍然是错误答案。这个 protocol 里另外两项 PCP 才能做的是 dexamethasone 和 CPAP。",
+          "sourceRef": "BC Guidelines p.49, p.70",
+          "verified": false,
+          "evolutionEn": "Bag-valve-mask ventilation has been started and transport is under way; the PCP crew has not yet arrived.",
+          "evolutionZh": "已开始 BVM 通气并正在转运途中；PCP 组尚未到达。"
+        }
+      ]
+    },
+    {
+      "id": "emr-pp-03",
+      "format": "patient-profile",
+      "titleEn": "Confused and sweaty at home before breakfast",
+      "titleZh": "早餐前在家中出现意识模糊、大汗",
+      "profile": {
+        "ageEn": "74 years old",
+        "ageZh": "74 岁",
+        "genderEn": "Female",
+        "genderZh": "女性",
+        "chiefComplaintEn": "Found confused and sweaty by her husband, unable to answer questions",
+        "chiefComplaintZh": "被丈夫发现意识模糊、大汗，无法回答问题",
+        "pastMedicalHxEn": "Type 2 diabetes for 18 years; hypertension; mild osteoarthritis",
+        "pastMedicalHxZh": "2 型糖尿病 18 年；高血压；轻度骨关节炎",
+        "medicationsEn": "Long-acting insulin each evening; metformin; ramipril",
+        "medicationsZh": "每晚一次长效 insulin；metformin；ramipril",
+        "firstVitalsEn": "HR 108; RR 20; BP 142/86; SpO2 96% on room air; BGL 2.4 mmol/L; Temp 36.4 C",
+        "firstVitalsZh": "HR 108；RR 20；BP 142/86；室内空气下 SpO2 96%；BGL 2.4 mmol/L；体温 36.4 C",
+        "physicalFindingsEn": "Pale, cool, diaphoretic skin; responds to voice only, with mumbling (AVPU = V); no facial droop; equal grip strength; no signs of injury",
+        "physicalFindingsZh": "皮肤苍白、湿冷、大汗；仅对呼唤有含糊应答（AVPU = V）；无口角歪斜；双手握力对称；无外伤征象",
+        "otherInformationEn": "Her husband says she took her usual insulin last night but skipped both breakfast and lunch because she \"wasn't hungry\". She was last seen behaving normally 90 minutes ago.",
+        "otherInformationZh": "丈夫说她昨晚照常打了 insulin，但今天早餐和午餐都没吃，因为她说「不饿」。最后一次见她表现正常是在 90 分钟前。"
+      },
+      "questions": [
+        {
+          "id": "emr-pp-03-q1",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "hypoglycemia-treatment",
+          "difficulty": "foundation",
+          "questionEn": "She responds to voice only, with mumbling, and cannot follow commands. Based on the BC diabetic emergencies guideline, which one of the following is appropriate for the EMR?",
+          "questionZh": "她只对呼唤有含糊应答，无法执行指令。根据 BC 的 diabetic emergencies 指南，以下哪一项适合 EMR 执行？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Place oral glucose gel between the cheek and gum",
+              "zh": "把 oral glucose gel（葡萄糖凝胶）抹在颊黏膜与牙龈之间"
+            },
+            {
+              "key": "B",
+              "en": "Withhold all glucose until a PCP crew arrives",
+              "zh": "在 PCP 组到达前不给任何葡萄糖"
+            },
+            {
+              "key": "C",
+              "en": "Administer glucagon 1 mg IM",
+              "zh": "肌注 glucagon 1 mg"
+            },
+            {
+              "key": "D",
+              "en": "Administer D10W 10-25 g intravenously",
+              "zh": "静脉给 D10W 10-25 g"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "The guideline draws the line at mentation: oral glucose gel is applied to the oral mucosa only for patients with sufficient mentation to maintain their own airway. A patient who is at V on AVPU and cannot follow commands does not meet that bar, and for insufficient mentation or an unprotected airway the EMR gives glucagon (0.5-1 mg IM). Option A is the intuitive but unsafe choice and risks aspiration. Option D is a PCP intervention. Option B delays treatment of a BGL of 2.4 mmol/L that the EMR is fully authorized to correct.",
+          "explanationZh": "指南以「神志是否足以保护气道」划线：口服葡萄糖凝胶只用于神志足以自行维持气道的患者。AVPU 为 V、无法执行指令的患者达不到这一标准；对神志不足或气道无保护的患者，EMR 应给 glucagon（0.5-1 mg IM）。选项 A 是直觉上想做、但不安全的选择，有误吸风险。选项 D 属于 PCP 的处置。选项 B 会延误对 2.4 mmol/L 低血糖的处理，而这恰恰是 EMR 完全有授权处理的。",
+          "sourceRef": "BC Guidelines p.57, p.67, p.76",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-pp-03-q2",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "airway-positioning",
+          "difficulty": "intermediate",
+          "questionEn": "Glucagon 1 mg has been given IM. She is still at V on AVPU, and her husband now mentions that she vomited once before you arrived. What is the most appropriate way to manage her airway while you wait for a response?",
+          "questionZh": "已肌注 glucagon 1 mg。她仍处于 AVPU 的 V 级，丈夫此时补充说，你们到之前她曾吐过一次。在等待药效期间，管理她气道最恰当的方式是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Place her in the lateral (3/4 prone) position with suction immediately at hand",
+              "zh": "让她侧卧（3/4 俯卧位），并把吸引装置放在随手可及处"
+            },
+            {
+              "key": "B",
+              "en": "Insert an oropharyngeal airway and begin bag-valve-mask ventilation",
+              "zh": "插入 OPA 并开始 BVM 通气"
+            },
+            {
+              "key": "C",
+              "en": "Sit her fully upright on the edge of the bed and have suction ready",
+              "zh": "让她完全坐直在床沿，并准备好吸引"
+            },
+            {
+              "key": "D",
+              "en": "Leave her supine and flat with a nasopharyngeal airway in place",
+              "zh": "让她平躺仰卧，插入 NPA"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "The diabetic emergencies guideline specifically directs positioning in the lateral or 3/4 prone position if needed, and the AVPU table says a patient responding only to voice may be placed semi-prone if injuries permit. She has vomited once and cannot fully protect her airway, so gravity and ready suction are the priority. Option B over-treats a patient who is breathing at 20 with an SpO2 of 96% and who still has a gag reflex — an OPA in that patient will provoke vomiting. Option D leaves her supine, the position most likely to end in aspiration.",
+          "explanationZh": "diabetic emergencies 指南明确要求「必要时置于侧卧或 3/4 俯卧位」，AVPU 表也说明仅对呼唤有反应的患者，在伤情允许时可置半俯卧位。她已呕吐过一次、无法完全保护气道，因此靠重力引流并随时可吸引是首要考虑。选项 B 属于过度处置——她呼吸 20 次/分、SpO2 96%，且仍有咽反射，此时插 OPA 反而会诱发呕吐。选项 D 让她仰卧平躺，这是最容易发生误吸的体位。",
+          "sourceRef": "BC Guidelines p.13, p.57",
+          "verified": false,
+          "evolutionEn": "Glucagon 1 mg IM has been given. She remains at V on AVPU, and the husband has now disclosed that she vomited once before your arrival.",
+          "evolutionZh": "已肌注 glucagon 1 mg。她仍为 AVPU 的 V 级，丈夫此时才说出你们到达之前她曾呕吐过一次。"
+        },
+        {
+          "id": "emr-pp-03-q3",
+          "cpcfArea": "B",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "communication-refusal",
+          "difficulty": "intermediate",
+          "questionEn": "Ten minutes later she is alert and oriented, her repeat BGL is 6.8 mmol/L, and she says: \"Oh dear, I'm so embarrassed. I've wasted your whole evening over a bit of low sugar. Just go — I'll eat a sandwich and lie down.\" What is the EMR's most appropriate response?",
+          "questionZh": "10 分钟后她神志清醒、定向力正常，复测 BGL 为 6.8 mmol/L。她说：「哎呀，真不好意思。就为了一点低血糖，浪费你们一整晚。你们走吧——我吃个三明治躺一会儿就好。」EMR 最恰当的回应是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "\"No problem at all. Give us a call again if it happens twice more.\"",
+              "zh": "「没事的。如果再发作两次，你再打给我们。」"
+            },
+            {
+              "key": "B",
+              "en": "\"You haven't wasted anyone's evening — this is exactly what we're here for. But because your insulin is a long-acting one and you've missed two meals, your sugar can drop again after we leave, so we'd like to take you in to be checked.\"",
+              "zh": "「您一点也没有浪费谁的时间——我们就是为这种情况来的。不过您打的是长效 insulin，又漏了两顿饭，我们走了之后血糖还可能再掉下去，所以我们希望送您去医院检查一下。」"
+            },
+            {
+              "key": "C",
+              "en": "\"You should really be more careful about eating when you're on insulin.\"",
+              "zh": "「您打 insulin 的时候真该多注意吃饭。」"
+            },
+            {
+              "key": "D",
+              "en": "\"That's your decision. Sign here and we'll be on our way.\"",
+              "zh": "「那是您自己的决定。在这里签个字，我们就走了。」"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "A communication item needs both halves to be right: the tone has to answer the worry the patient actually voiced, and the clinical instruction has to be safe. Option B relieves her embarrassment and then gives her a concrete, honest reason to come in. Option A is warm but tells her to wait for two more episodes, which is dangerous advice. Option C is technically true and lands as a scolding of an elderly patient who is already embarrassed. Option D accepts a refusal without ever telling her what she is refusing, so any consent she gives is not informed.",
+          "explanationZh": "沟通题必须两半都对：语气要回应患者真正说出口的顾虑，临床指令必须安全。选项 B 先化解她的尴尬，再给出一个具体、诚实的就医理由。选项 A 语气温和，却让她等到再发作两次，这是危险的建议。选项 C 内容也许没错，但对一位本已难为情的老人来说就是训话。选项 D 在从未告诉她「她拒绝的是什么」的情况下就接受了拒绝，那样得到的同意根本谈不上知情。",
+          "sourceRef": "BC Guidelines p.57, p.67",
+          "verified": false,
+          "evolutionEn": "Ten minutes after glucagon, she is alert and oriented and the repeat BGL is 6.8 mmol/L.",
+          "evolutionZh": "给 glucagon 后 10 分钟，她神志清醒、定向力正常，复测 BGL 为 6.8 mmol/L。"
+        },
+        {
+          "id": "emr-pp-03-q4",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "hypoglycemia-relapse",
+          "difficulty": "advanced",
+          "questionEn": "Her husband asks why she cannot simply eat and stay home now that she is awake. What is the strongest clinical reason to transport her?",
+          "questionZh": "丈夫问：既然人已经醒了，为什么不能就在家吃点东西、留在家里？支持转运她的最有力临床理由是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Metformin commonly causes rebound hypoglycemia within an hour",
+              "zh": "metformin 常在 1 小时内引起反跳性低血糖"
+            },
+            {
+              "key": "B",
+              "en": "Ramipril blocks the effect of glucagon and will make the blood sugar fall again",
+              "zh": "ramipril 会阻断 glucagon 的作用，使血糖再次下降"
+            },
+            {
+              "key": "C",
+              "en": "Every patient who receives glucagon must be transported, without exception",
+              "zh": "凡是用过 glucagon 的患者都必须转运，没有例外"
+            },
+            {
+              "key": "D",
+              "en": "Glucagon works by releasing the liver's stored glycogen, which may be limited after two missed meals, while her long-acting insulin is still working",
+              "zh": "glucagon 是靠释放肝脏储存的 glycogen 起效的，而她已漏了两顿饭、糖原储备可能有限，与此同时她的长效 insulin 仍在起作用"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "The reasoning that matters here is the mismatch in duration. Glucagon mobilizes hepatic glycogen, so it works only as long as those stores last, and stores are depleted in a patient who has not eaten all day; her long-acting insulin, meanwhile, will keep working for hours. She is very likely to relapse at home. Option C is the absolute-wording distractor: rules stated as \"without exception\" are usually the wrong answer, and it also gives her husband no reason he can actually understand. Options A and B invent pharmacology that neither drug has.",
+          "explanationZh": "这里真正关键的推理是「作用时长不匹配」。glucagon 靠动员肝糖原起效，因此只能维持到糖原耗尽为止；而她一整天没吃东西，储备很可能本来就不多。与此同时，她的长效 insulin 还会继续作用好几个小时。她在家再次发作的可能性很高。选项 C 是绝对化措辞的干扰项：以「没有例外」表述的规则通常是错的，而且这句话也没给丈夫一个他真能听懂的理由。选项 A、B 编造了这两种药并不具备的药理作用。",
+          "sourceRef": "BC Guidelines p.57, p.67",
+          "verified": false,
+          "evolutionEn": "She is now alert with a BGL of 6.8 mmol/L; her husband is questioning the need for hospital.",
+          "evolutionZh": "她现在神志清醒，BGL 为 6.8 mmol/L；丈夫正在质疑是否有必要去医院。"
+        }
+      ]
+    },
+    {
+      "id": "emr-pp-04",
+      "format": "patient-profile",
+      "titleEn": "Fall down the stairs on a blood thinner",
+      "titleZh": "服用抗凝药的老人跌落楼梯",
+      "profile": {
+        "ageEn": "84 years old",
+        "ageZh": "84 岁",
+        "genderEn": "Male",
+        "genderZh": "男性",
+        "chiefComplaintEn": "Fell down four carpeted stairs at home and struck the back of his head; now has a headache and neck pain",
+        "chiefComplaintZh": "在家中从四级铺地毯的台阶上跌落，后脑着地；现有头痛与颈部疼痛",
+        "pastMedicalHxEn": "Atrial fibrillation; hypertension; right hip replacement 6 years ago; cataracts",
+        "pastMedicalHxZh": "心房颤动（atrial fibrillation）；高血压；6 年前右髋关节置换；白内障",
+        "medicationsEn": "Apixaban (Eliquis); metoprolol; amlodipine",
+        "medicationsZh": "Apixaban（Eliquis，抗凝药）；metoprolol；amlodipine",
+        "firstVitalsEn": "HR 62 and irregular; RR 18; BP 168/92; SpO2 95% on room air; BGL 6.1 mmol/L; GCS 15",
+        "firstVitalsZh": "HR 62，不规则；RR 18；BP 168/92；室内空气下 SpO2 95%；BGL 6.1 mmol/L；GCS 15",
+        "physicalFindingsEn": "4 cm boggy swelling over the occiput with slow ongoing bleeding; midline cervical tenderness on palpation; no limb weakness; pupils equal and reactive",
+        "physicalFindingsZh": "枕部 4 cm 松软肿胀，仍有缓慢渗血；颈椎正中线触痛；四肢无肌力下降；双侧瞳孔等大、对光反应存在",
+        "otherInformationEn": "The fall was not witnessed. He says he \"just missed the last step\". His daughter states he has been his normal self all day. He is refusing hospital because his dog is home alone.",
+        "otherInformationZh": "无人目击跌倒过程。他说自己「只是踩空了最后一级」。女儿说他一整天状态如常。他拒绝去医院，因为家里的狗没人照看。"
+      },
+      "questions": [
+        {
+          "id": "emr-pp-04-q1",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "spinal-motion-restriction",
+          "difficulty": "foundation",
+          "questionEn": "Which one of the findings in this profile most clearly indicates that this patient requires spinal motion restriction?",
+          "questionZh": "在这份患者资料中，哪一项发现最明确地提示这位患者需要进行脊柱运动限制（spinal motion restriction）？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Midline cervical spine tenderness on palpation",
+              "zh": "颈椎正中线触痛"
+            },
+            {
+              "key": "B",
+              "en": "His age of 84 years on its own",
+              "zh": "单凭他 84 岁的年龄"
+            },
+            {
+              "key": "C",
+              "en": "The bleeding wound on the back of his head",
+              "zh": "后脑那处仍在出血的伤口"
+            },
+            {
+              "key": "D",
+              "en": "His irregular heart rate",
+              "zh": "他不规则的心率"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "Spinal management in BC follows the NEXUS criteria and the Canadian C-Spine rule, and midline cervical tenderness is a direct positive finding under both. Age is a modifier within the Canadian C-Spine rule rather than a finding that decides the question by itself, so option B overstates it. Option C is a distractor built on a true fact — an obvious injury above the level of the clavicles is a listed indication for cervical stabilization in the primary survey — but the definite, protocol-level finding here is the midline tenderness he is reporting. Option D reflects his known atrial fibrillation and has nothing to do with his spine.",
+          "explanationZh": "BC 的脊柱处理遵循 NEXUS 标准与 Canadian C-Spine 规则，颈椎正中线触痛在两套标准里都是直接的阳性发现。年龄在 Canadian C-Spine 规则中是一个修正因素，而不是单独就能定论的发现，所以选项 B 说过头了。选项 C 是建立在一个真事实上的干扰项——初步检查中，锁骨平面以上的明显外伤确实是颈部固定的指征之一——但本例中最确凿、直接对应标准的，是他自己报告的正中线触痛。选项 D 反映的是他已知的房颤，与脊柱无关。",
+          "sourceRef": "BC Guidelines p.11, p.25",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-pp-04-q2",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "hemorrhage-control",
+          "difficulty": "intermediate",
+          "questionEn": "A hard collar is on and the patient has been log-rolled onto a spinal device. The occipital wound is still oozing and has soaked through the first dressing. What is the most appropriate next step to control this bleeding?",
+          "questionZh": "硬颈托已固定，患者已被轴向翻身移至脊柱固定装置上。枕部伤口仍在渗血，已浸透第一层敷料。控制出血的下一步，最恰当的做法是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Pack the wound with hemostatic gauze",
+              "zh": "用止血纱布填塞（pack）伤口"
+            },
+            {
+              "key": "B",
+              "en": "Apply firm direct pressure with a second dressing placed on top of the first",
+              "zh": "在第一层敷料上再加一层，持续加压"
+            },
+            {
+              "key": "C",
+              "en": "Apply a tourniquet proximal to the wound",
+              "zh": "在伤口近端上止血带"
+            },
+            {
+              "key": "D",
+              "en": "Remove the soaked dressing, clean the wound and apply a fresh pressure dressing",
+              "zh": "撕掉已浸透的敷料，清创后换一块新的加压敷料"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The BC order of preference for hemorrhage control starts with direct pressure and a pressure dressing, and this scalp bleed has not yet had a proper trial of that. Wound packing is reserved for bleeding that direct pressure cannot control in an area not amenable to a tourniquet, and the guideline explicitly says not to pack wounds on the neck, chest or abdomen — an occipital wound sits right at that boundary and needs pressure, not packing. A tourniquet cannot be applied to the head at all. Option D is the one that actively causes harm: stripping off a soaked dressing pulls away the clot that has already formed, which matters far more in a patient on apixaban.",
+          "explanationZh": "BC 的止血手段有优先顺序，第一位是直接压迫和加压包扎，而这处头皮出血还没有经过一次像样的加压尝试。伤口填塞只用于直接压迫无法控制、且部位不适合上止血带的出血；指南还明确写明颈部、胸部、腹部的伤口不得填塞——枕部正处在这条边界上，应该加压而不是填塞。头部根本无法使用止血带。选项 D 是会主动造成伤害的那个：撕掉浸透的敷料会把已经形成的血凝块一起扯掉，对一个正在服用 apixaban 的患者来说后果更严重。",
+          "sourceRef": "BC Guidelines p.19",
+          "verified": false,
+          "evolutionEn": "A hard collar has been applied and the patient has been log-rolled onto a spinal device. The occipital wound continues to ooze and has soaked through the first dressing.",
+          "evolutionZh": "已上硬颈托，患者被轴向翻身固定到脊柱装置上。枕部伤口持续渗血，已浸透第一层敷料。"
+        },
+        {
+          "id": "emr-pp-04-q3",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "traumatic-brain-injury",
+          "difficulty": "advanced",
+          "questionEn": "En route the patient is still GCS 15, but he tells you his headache is getting worse and that he now feels \"a bit sick to my stomach\". What is the most significant concern raised by this change?",
+          "questionZh": "转运途中患者 GCS 仍为 15，但他说头痛在加重，而且现在「有点想吐」。这一变化最值得担心的是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "He is having a vasovagal reaction to the hard collar",
+              "zh": "他对硬颈托产生了迷走神经反应"
+            },
+            {
+              "key": "B",
+              "en": "His blood pressure medication is wearing off",
+              "zh": "他的降压药药效正在消退"
+            },
+            {
+              "key": "C",
+              "en": "He is becoming hypoglycemic after missing his evening meal",
+              "zh": "他晚饭没吃，正在出现低血糖"
+            },
+            {
+              "key": "D",
+              "en": "He is developing an intracranial bleed, which apixaban makes both more likely and more severe",
+              "zh": "他正在发生颅内出血，而 apixaban 会让这种出血更容易发生、也更严重"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "A worsening headache with new nausea after a head strike is the classic early picture of a rising intracranial bleed, and the anticoagulant in his medication list is the single most important fact in this profile: on apixaban a bleed that would have been minor can become life-threatening, and it can declare itself hours after a fall that looked trivial. A normal GCS does not exclude it. Option C is excluded by the profile itself — his BGL is documented at 6.1 mmol/L, and the exam convention is that a value given as normal stays normal unless the passage says otherwise. Options A and B do not explain a progressive headache.",
+          "explanationZh": "头部受撞后头痛加重并新出现恶心，是颅内出血逐渐增大的典型早期表现；而用药清单里的抗凝药是整份资料中最重要的一条：服用 apixaban 时，原本轻微的出血可能变成致命出血，而且可能在一次看起来微不足道的跌倒之后数小时才显现。GCS 正常并不能排除它。选项 C 已被资料本身排除——BGL 明确记录为 6.1 mmol/L；考试惯例是：资料里给出的正常值，除非后文另有说明，就按正常处理。选项 A、B 都无法解释进行性加重的头痛。",
+          "sourceRef": "BC Guidelines p.27",
+          "verified": false,
+          "evolutionEn": "The patient is now packaged and en route. GCS remains 15, but the headache is worsening and he reports new nausea.",
+          "evolutionZh": "患者已固定完毕并在转运途中。GCS 仍为 15，但头痛在加重，并新出现恶心。"
+        },
+        {
+          "id": "emr-pp-04-q4",
+          "cpcfArea": "B",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "communication-refusal",
+          "difficulty": "intermediate",
+          "questionEn": "Before he was packaged, the patient said: \"I'm not going anywhere — Buster's been shut in since this morning and there's nobody to feed him.\" What was the EMR's most appropriate response?",
+          "questionZh": "在固定搬运之前，患者说：「我哪儿也不去——Buster 从今天早上就被关在家里，没人喂它。」EMR 最恰当的回应是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "\"You have the right to refuse. Sign this form and we'll leave you our number.\"",
+              "zh": "「您有权拒绝。在这张表上签个字，我们把电话留给您。」"
+            },
+            {
+              "key": "B",
+              "en": "\"If you don't come with us tonight you could die in your sleep.\"",
+              "zh": "「今晚您要是不跟我们走，可能睡着睡着就没命了。」"
+            },
+            {
+              "key": "C",
+              "en": "\"I understand Buster matters — let's sort that out. Is there a neighbour or family member who could take him tonight? You're on a blood thinner and you hit your head, and that kind of bleed can start hours later, so you do need to be seen.\"",
+              "zh": "「我明白 Buster 对您很重要——我们先把它安排好。有没有邻居或家人今晚能帮忙照看？您在吃抗凝药，又撞到了头，这类出血可能几个小时之后才开始，所以您确实需要去医院看一下。」"
+            },
+            {
+              "key": "D",
+              "en": "\"Your daughter can decide for you — I'll ask her to sign the consent.\"",
+              "zh": "「让您女儿替您做决定吧——我去请她签同意书。」"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "The barrier he named is the dog, so the answer has to solve the dog and then give him a safe, honest reason to come in. Option C does both. Option A treats his refusal as final without ever explaining what he is risking, so the refusal is not informed. Option B is coercion by fear, which damages trust and often hardens the refusal. Option D bypasses a patient who is GCS 15, alert and oriented, and therefore capable of making his own decision — a competent adult's family does not consent on his behalf.",
+          "explanationZh": "他自己说出口的障碍是那条狗，所以正确答案必须先解决狗的问题，再给他一个安全而诚实的就医理由。选项 C 两件事都做到了。选项 A 把他的拒绝当成定局，却从未说明他在冒什么风险，这样的拒绝不构成知情拒绝。选项 B 是用恐吓施压，会破坏信任，往往让患者更坚决地拒绝。选项 D 绕过了一位 GCS 15、神志清醒、定向力正常、因而有能力自主决定的患者——有决定能力的成年人，家属不能代他签同意。",
+          "sourceRef": "BC Guidelines p.27; CPCF area B",
+          "verified": false,
+          "evolutionEn": "This exchange took place on scene, before the collar was applied and before he agreed to be transported.",
+          "evolutionZh": "这段对话发生在现场，在上颈托之前、也在他同意转运之前。"
+        }
+      ]
+    },
+    {
+      "id": "emr-pp-05",
+      "format": "patient-profile",
+      "titleEn": "Chest pressure in the kitchen after supper",
+      "titleZh": "晚饭后在厨房出现胸部压迫感",
+      "profile": {
+        "ageEn": "69 years old",
+        "ageZh": "69 岁",
+        "genderEn": "Female",
+        "genderZh": "女性",
+        "chiefComplaintEn": "Central chest pressure for 40 minutes, radiating to the jaw, with nausea",
+        "chiefComplaintZh": "胸骨后压迫感持续 40 分钟，向下颌放射，伴恶心",
+        "pastMedicalHxEn": "Type 2 diabetes; high cholesterol; hysterectomy 15 years ago",
+        "pastMedicalHxZh": "2 型糖尿病；高胆固醇；15 年前子宫切除术",
+        "medicationsEn": "Metformin; atorvastatin. No nitroglycerin has ever been prescribed for her",
+        "medicationsZh": "metformin；atorvastatin。她从未被开过 nitroglycerin",
+        "firstVitalsEn": "HR 96 and regular; RR 22; BP 104/68; SpO2 95% on room air; BGL 8.2 mmol/L; Temp 36.8 C",
+        "firstVitalsZh": "HR 96，规则；RR 22；BP 104/68；室内空气下 SpO2 95%；BGL 8.2 mmol/L；体温 36.8 C",
+        "physicalFindingsEn": "Pale, cool, clammy skin; sitting forward on a kitchen chair; lungs clear on auscultation; no peripheral edema",
+        "physicalFindingsZh": "皮肤苍白、湿冷；坐在厨房椅子上身体前倾；听诊双肺清；无下肢水肿",
+        "otherInformationEn": "She has taken nothing before your arrival and has no known allergies. She says she \"feels ridiculous\" for calling and has twice asked whether she could just drive herself to a walk-in clinic.",
+        "otherInformationZh": "你们到达前她没有服用任何药物，无已知过敏史。她说自己叫救护车「实在太小题大做」，并已两次问能不能自己开车去走诊诊所。"
+      },
+      "questions": [
+        {
+          "id": "emr-pp-05-q1",
+          "cpcfArea": "H",
+          "cognitive": "knowledge",
+          "population": "geriatric",
+          "topic": "aspirin-dose",
+          "difficulty": "foundation",
+          "questionEn": "Which one of the following is the correct EMR dose and route of Aspirin for this patient?",
+          "questionZh": "对这位患者，EMR 给 Aspirin 的正确剂量与途径是以下哪一项？",
+          "options": [
+            {
+              "key": "A",
+              "en": "81 mg swallowed whole with water",
+              "zh": "81 mg，用水整片吞服"
+            },
+            {
+              "key": "B",
+              "en": "160 mg chewed and swallowed",
+              "zh": "160 mg，嚼碎后吞下"
+            },
+            {
+              "key": "C",
+              "en": "325 mg placed under the tongue",
+              "zh": "325 mg，舌下含服"
+            },
+            {
+              "key": "D",
+              "en": "650 mg chewed and swallowed",
+              "zh": "650 mg，嚼碎后吞下"
+            }
+          ],
+          "answer": "B",
+          "explanationEn": "The BC monograph gives 160 mg PO, chewed and swallowed. Chewing matters: it speeds absorption, which is the whole point in a suspected coronary event. Swallowing a tablet whole (option A) delays the effect and 81 mg is below the dose specified. Aspirin is not given sublingually, so option C is wrong on both count and route, and option D exceeds the specified dose. Aspirin is also the one medication for which vital signs are not required before administration, though her contraindications must still be checked.",
+          "explanationZh": "BC 药物专论规定为 160 mg 口服，嚼碎后吞下。「嚼」很关键：这样吸收更快，而在疑似冠脉事件中，快就是全部意义所在。整片吞服（选项 A）会延迟起效，而且 81 mg 低于规定剂量。Aspirin 不经舌下给药，所以选项 C 剂量和途径都不对；选项 D 超出规定剂量。Aspirin 也是唯一一种给药前不要求先测生命体征的药物，但禁忌证仍必须逐条核对。",
+          "sourceRef": "BC Guidelines p.47, p.60",
+          "verified": false,
+          "evolutionEn": "",
+          "evolutionZh": ""
+        },
+        {
+          "id": "emr-pp-05-q2",
+          "cpcfArea": "H",
+          "cognitive": "critical",
+          "population": "geriatric",
+          "topic": "nitroglycerin-contraindication",
+          "difficulty": "advanced",
+          "questionEn": "Aspirin has been given and she is on oxygen at 4 L/min by nasal cannula, with SpO2 now 97%. Repeat vitals are HR 98 and BP 102/64. She rates the pain 8/10. What is the most appropriate action regarding nitroglycerin?",
+          "questionZh": "Aspirin 已给，鼻导管 4 L/min 给氧后 SpO2 升至 97%。复测 HR 98，BP 102/64。她自评疼痛 8/10。关于 nitroglycerin，最恰当的处置是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Give 0.4 mg SL and recheck the blood pressure in 3 minutes",
+              "zh": "给 0.4 mg 舌下含服，3 分钟后复测血压"
+            },
+            {
+              "key": "B",
+              "en": "Give 0.4 mg SL only after laying her flat to raise her blood pressure first",
+              "zh": "先把她放平以升高血压，再给 0.4 mg 舌下含服"
+            },
+            {
+              "key": "C",
+              "en": "Withhold nitroglycerin because her systolic blood pressure is below 110 mmHg, and initiate transport",
+              "zh": "因为她的收缩压低于 110 mmHg，暂不给 nitroglycerin，开始转运"
+            },
+            {
+              "key": "D",
+              "en": "Withhold nitroglycerin and give a second dose of Aspirin instead",
+              "zh": "不给 nitroglycerin，改为再给一剂 Aspirin"
+            }
+          ],
+          "answer": "C",
+          "explanationEn": "Nitroglycerin is contraindicated at a systolic blood pressure below 110 mmHg, and hers is 102. The severity of her pain does not override a contraindication, so option A is the trap for candidates who treat the symptom rather than read the monograph. Option B manufactures a workaround the protocol does not offer, and laying a patient with chest pain flat to make a contraindicated drug usable is not a legitimate step. Option D repeats a drug whose dose is already complete. Withholding the nitroglycerin does not mean withholding care — she still needs oxygen titration, position of comfort, and prompt transport.",
+          "explanationZh": "收缩压低于 110 mmHg 时 nitroglycerin 是禁忌，而她是 102。疼痛剧烈并不能压过禁忌证，所以选项 A 是给那些「看症状不看专论」的考生准备的陷阱。选项 B 自创了一个 protocol 里没有的变通做法——把胸痛患者放平，好让一个禁忌药变得「能用」，这不是正当步骤。选项 D 重复给一个已经给足剂量的药。不给 nitroglycerin 不等于不处置——她仍然需要氧疗滴定、舒适体位和尽快转运。",
+          "sourceRef": "BC Guidelines p.47, p.73",
+          "verified": false,
+          "evolutionEn": "Aspirin 160 mg has been given, oxygen is running at 4 L/min by nasal cannula and SpO2 is 97%. Repeat vitals: HR 98, BP 102/64. She now rates the pain 8/10.",
+          "evolutionZh": "已给 Aspirin 160 mg，鼻导管 4 L/min 给氧后 SpO2 为 97%。复测：HR 98，BP 102/64。她现在自评疼痛 8/10。"
+        },
+        {
+          "id": "emr-pp-05-q3",
+          "cpcfArea": "H",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "analgesia-options",
+          "difficulty": "intermediate",
+          "questionEn": "Because nitroglycerin is contraindicated, which one of the following analgesic options is available to the EMR for her chest pain?",
+          "questionZh": "既然 nitroglycerin 是禁忌，以下哪一项镇痛方案是 EMR 可以用于她胸痛的？",
+          "options": [
+            {
+              "key": "A",
+              "en": "Entonox, self-administered by inhalation",
+              "zh": "Entonox，由患者自行吸入给药"
+            },
+            {
+              "key": "B",
+              "en": "Acetaminophen 1,000 mg PO",
+              "zh": "口服 acetaminophen 1,000 mg"
+            },
+            {
+              "key": "C",
+              "en": "Dimenhydrinate 50 mg IM for the nausea",
+              "zh": "为缓解恶心，肌注 dimenhydrinate 50 mg"
+            },
+            {
+              "key": "D",
+              "en": "Ibuprofen 400 mg PO",
+              "zh": "口服 ibuprofen 400 mg"
+            }
+          ],
+          "answer": "A",
+          "explanationEn": "One of the listed indications for Entonox is cardiac-related chest pain where nitroglycerin is of no value or is contraindicated, which is exactly this situation. She is alert, can follow instructions and can hold the mouthpiece herself, so she can self-administer. Option C is a PCP medication and outside the EMR scope. Options B and D are indicated for mild to moderate pain and pyrexia, not for suspected cardiac ischemia, and ibuprofen carries the additional problem of being an NSAID in a patient who has just been given Aspirin.",
+          "explanationZh": "Entonox 的适应证之一，正是「nitroglycerin 无效或属禁忌时的心源性胸痛」，本例恰好符合。她神志清醒、能听懂指令、能自己拿住吸嘴，因此可以自行吸入给药。选项 C 是 PCP 级别药物，超出 EMR 范围。选项 B、D 的适应证是轻中度疼痛和发热，而不是疑似心肌缺血；ibuprofen 还多一层问题——她刚服过 Aspirin，再叠加一种 NSAID 并不合适。",
+          "sourceRef": "BC Guidelines p.47, p.65",
+          "verified": false,
+          "evolutionEn": "Nitroglycerin has been withheld because of the systolic blood pressure of 102 mmHg. Her pain remains 8/10.",
+          "evolutionZh": "因收缩压 102 mmHg，已决定不给 nitroglycerin。她的疼痛仍为 8/10。"
+        },
+        {
+          "id": "emr-pp-05-q4",
+          "cpcfArea": "B",
+          "cognitive": "application",
+          "population": "geriatric",
+          "topic": "communication-transport-decision",
+          "difficulty": "intermediate",
+          "questionEn": "As you prepare to move her she says: \"Honestly, I feel ridiculous. It's probably just heartburn from the curry. Let me drive myself to the walk-in clinic and you can go to a real emergency.\" What is the EMR's most appropriate response?",
+          "questionZh": "在你准备搬动她时，她说：「说真的，我觉得自己太小题大做了。八成就是咖喱吃的烧心。让我自己开车去走诊诊所吧，你们去处理真正的急诊。」EMR 最恰当的回应是什么？",
+          "options": [
+            {
+              "key": "A",
+              "en": "\"It could be a myocardial infarction, an aortic dissection or pericarditis — none of those can be ruled out here.\"",
+              "zh": "「这可能是 myocardial infarction、aortic dissection 或 pericarditis——这些在现场都排除不了。」"
+            },
+            {
+              "key": "B",
+              "en": "\"If you feel well enough to drive, that's your call — the walk-in clinic can always send you on.\"",
+              "zh": "「如果您觉得自己开得了车，那就随您——走诊诊所觉得不行还可以再转您去。」"
+            },
+            {
+              "key": "C",
+              "en": "\"Let me help you find your keys and I'll follow behind you in the ambulance.\"",
+              "zh": "「我帮您找钥匙，我开救护车跟在您后面。」"
+            },
+            {
+              "key": "D",
+              "en": "\"You're not taking us away from anyone — this is exactly what we're for. The pain you're describing may be coming from your heart, and if it is, driving yourself is dangerous. We need to take you in by ambulance.\"",
+              "zh": "「您没有占用谁的资源——我们就是为这种情况存在的。您描述的这种痛可能来自心脏，如果是的话，自己开车非常危险。我们需要用救护车送您过去。」"
+            }
+          ],
+          "answer": "D",
+          "explanationEn": "Both halves have to be right. Option D answers the worry she actually voiced — that she is wasting the crew's time — and then states clearly that she must go by ambulance. Option A is clinically accurate but delivered in medical jargon that will frighten rather than inform her. Options B and C are kind in tone but both end with a patient in suspected cardiac ischemia driving a car, and a patient who arrests at the wheel endangers herself and everyone on the road. An answer that is warm but leaves a possible MI patient driving is always wrong.",
+          "explanationZh": "两半都必须对。选项 D 回应了她真正说出口的顾虑——怕自己浪费了急救资源——然后明确告诉她必须乘救护车走。选项 A 临床上没错，但用的是医学术语，只会吓到她而不是让她理解。选项 B 和 C 语气都很温和，但结局都是让一个疑似心肌缺血的患者自己开车；一旦在方向盘后面发生心脏骤停，害的不只是她自己，还有路上所有人。语气再暖，只要让可能是 MI 的患者自己开车，就一定是错的。",
+          "sourceRef": "BC Guidelines p.47; CPCF area B",
+          "verified": false,
+          "evolutionEn": "Aspirin and Entonox have been given, nitroglycerin has been withheld, and the crew is preparing to move her to the stretcher.",
+          "evolutionZh": "已给 Aspirin 和 Entonox，nitroglycerin 未给；急救组正准备把她搬上担架。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico} from './app.js?v=5';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico} from './app.js?v=6';
 
 let session = null; // current exam session (mock or practice)
 
@@ -105,19 +105,59 @@ function drawPracticeQ(el, topics, areas, topic, area) {
 }
 function advance() { session.pos = (session.pos + 1) % session.order.length; }
 
-function questionHTML(q, review, picked) {
+// Patient-profile table / case-scenario prose, shown above every question in a set.
+// Collapsed by default from the second question on, since the candidate has read it.
+export function passageHTML(q) {
+  if (!q.passage) return '';
+  const p = q.passage;
+  const isProfile = p.format === 'patient-profile';
+  const rows = [
+    ['Age 年龄', p.profile?.ageEn, p.profile?.ageZh],
+    ['Gender 性别', p.profile?.genderEn, p.profile?.genderZh],
+    ['Chief complaint 主诉', p.profile?.chiefComplaintEn, p.profile?.chiefComplaintZh],
+    ['Past medical Hx 既往史', p.profile?.pastMedicalHxEn, p.profile?.pastMedicalHxZh],
+    ['Medications 用药', p.profile?.medicationsEn, p.profile?.medicationsZh],
+    ['1st vital signs 首次生命体征', p.profile?.firstVitalsEn, p.profile?.firstVitalsZh],
+    ['Physical findings 查体发现', p.profile?.physicalFindingsEn, p.profile?.physicalFindingsZh],
+    ['Other information 其他信息', p.profile?.otherInformationEn, p.profile?.otherInformationZh],
+  ].filter(r => r[1]);
+  const body = isProfile
+    ? `<table class="vitals-table">${rows.map(r =>
+        `<tr><th>${esc(r[0])}</th><td>${bi(r[1], r[2] || '', 'span')}</td></tr>`).join('')}</table>`
+    : bi(p.passageEn, p.passageZh);
+  const label = isProfile ? t('Patient profile', '患者资料') : t('Case scenario', '情境');
+  const counter = `${t('Question', '第')} ${q.passageIndex + 1}/${q.passageTotal} ${t('of this set', '题 / 本组')}`;
   return `
+    <details class="acc passage" ${q.passageIndex === 0 ? 'open' : ''}>
+      <summary>📋 ${label}${p.titleEn ? ' · ' + bi(p.titleEn, p.titleZh, 'span') : ''}
+        <span class="tag-count">${counter}</span></summary>
+      <div class="acc-body">${body}</div>
+    </details>
+    ${q.evolutionEn ? `<div class="sc-info"><div class="sc-label">${t('Update 病情更新', '病情更新')}</div>${bi(q.evolutionEn, q.evolutionZh)}</div>` : ''}`;
+}
+// answer may be a single key ("B") or, for select-all-that-apply items, an array
+export function answerKeys(q) { return Array.isArray(q.answer) ? q.answer : [q.answer]; }
+export function isMulti(q) { return Array.isArray(q.answer) && q.answer.length > 1; }
+function pickedKeys(picked) { return picked == null ? [] : (Array.isArray(picked) ? picked : [picked]); }
+
+function questionHTML(q, review, picked) {
+  const correct = answerKeys(q);
+  const chosen = pickedKeys(picked);
+  return `
+    ${passageHTML(q)}
     <div class="q-text">${bi(q.questionEn, q.questionZh)}</div>
-    <div class="q-opts" data-qid="${esc(q.id)}">
+    ${isMulti(q) ? `<p class="tiny" style="color:var(--accent);font-weight:700">${t(`Select all that apply — ${correct.length} correct answers.`, `多选题——共 ${correct.length} 个正确答案。`)}</p>` : ''}
+    <div class="q-opts" data-qid="${esc(q.id)}" data-multi="${isMulti(q) ? '1' : ''}">
       ${q.options.map(o => {
         let cls = 'opt';
         if (review) {
-          if (o.key === q.answer) cls += ' correct';
-          else if (picked === o.key) cls += ' wrong';
-        }
+          if (correct.includes(o.key)) cls += ' correct';
+          else if (chosen.includes(o.key)) cls += ' wrong';
+        } else if (chosen.includes(o.key)) cls += ' picked';
         return `<button class="${cls}" data-key="${o.key}"><span class="opt-key">${o.key}</span><span>${bi(o.en, o.zh, 'span')}</span></button>`;
       }).join('')}
     </div>
+    ${isMulti(q) && !review ? `<div class="btn-row" style="margin-top:8px"><button class="btn secondary" id="submitMulti">${t('Submit answer', '提交答案')}</button></div>` : ''}
     ${review ? explainHTML(q) : `<div id="explainSlot"></div>`}
     <p class="tiny">${esc(q.sourceRef || '')} ${q.verified === false ? '· ' + t('unaudited', '未复核') : ''}</p>`;
 }
@@ -127,15 +167,48 @@ function explainHTML(q) {
 function bindOptions(el, q, onAnswered) {
   const wrap = el.querySelector('.q-opts');
   if (!wrap) return;
+  const correct = answerKeys(q);
+  // select-all-that-apply: toggle picks, then grade on submit — all-or-nothing,
+  // the way the real exam scores a multi-select item
+  if (isMulti(q)) {
+    const chosen = new Set();
+    wrap.querySelectorAll('.opt').forEach(btn => btn.onclick = () => {
+      if (wrap.dataset.done) return;
+      const k = btn.dataset.key;
+      if (chosen.has(k)) { chosen.delete(k); btn.classList.remove('picked'); }
+      else { chosen.add(k); btn.classList.add('picked'); }
+    });
+    const submit = el.querySelector('#submitMulti');
+    if (submit) submit.onclick = () => {
+      if (wrap.dataset.done) return;
+      if (!chosen.size) { alert(t('Select at least one option.', '至少选一项。')); return; }
+      wrap.dataset.done = '1';
+      const right = correct.length === chosen.size && correct.every(k => chosen.has(k));
+      session.done++;
+      if (right) { session.right++; delete S.wrong[q.id]; } else S.wrong[q.id] = { at: Date.now() };
+      wrap.querySelectorAll('.opt').forEach(b => {
+        const k = b.dataset.key;
+        b.classList.remove('picked');
+        if (correct.includes(k)) b.classList.add('correct');
+        else if (chosen.has(k)) b.classList.add('wrong');
+      });
+      submit.remove();
+      save();
+      el.querySelector('#explainSlot').innerHTML = explainHTML(q);
+      if (onAnswered) onAnswered([...chosen]);
+    };
+    return;
+  }
   wrap.querySelectorAll('.opt').forEach(btn => btn.onclick = () => {
     if (wrap.dataset.done) return;
     wrap.dataset.done = '1';
     const k = btn.dataset.key;
     session.done++;
-    if (k === q.answer) { session.right++; btn.classList.add('correct'); delete S.wrong[q.id]; }
+    if (correct.includes(k)) { session.right++; btn.classList.add('correct'); delete S.wrong[q.id]; }
     else {
       btn.classList.add('wrong');
-      wrap.querySelector(`[data-key="${q.answer}"]`).classList.add('correct');
+      const el2 = wrap.querySelector(`[data-key="${correct[0]}"]`);
+      if (el2) el2.classList.add('correct');
       S.wrong[q.id] = { at: Date.now() };
     }
     save();
@@ -168,7 +241,7 @@ export async function renderMock(el) {
       <p class="tiny">${t(`Question pool: ${bank.length}. If a blueprint area lacks questions, the sampler backfills from clinical topics and notes it in the report.`, `当前题库 ${bank.length} 题。蓝图某域题量不足时会用临床题补位并在报告中注明。`)}</p>
     </div>`;
   el.querySelector('#startMock').onclick = () => {
-    const qs = isPcp ? samplePcp(bank, bp) : sampleEmr(bank);
+    const qs = isPcp ? samplePcp(bank) : sampleEmr(bank);
     session = {
       mode: 'mock', track: tr, qs, answers: {}, flags: {}, pos: 0,
       part: 1, parts: plan.parts, partMin: plan.partMin, breakMin: plan.breakMin, passPct: plan.passPct,
@@ -177,44 +250,67 @@ export async function renderMock(el) {
     drawMock(el);
   };
 }
-function samplePcp(bank, bp) {
+// Sampling works on units, not loose questions: a standalone question is a unit of
+// one, a passage set is a unit of all its questions. That keeps a patient profile
+// and its 3-5 linked questions together and in order, as the real exam presents them.
+function toUnits(questions) {
+  const sets = new Map(); const units = [];
+  for (const q of questions) {
+    if (!q.passageId) { units.push([q]); continue; }
+    if (!sets.has(q.passageId)) { const u = []; sets.set(q.passageId, u); units.push(u); }
+    sets.get(q.passageId).push(q);
+  }
+  for (const u of units) if (u.length > 1) u.sort((a, b) => a.passageIndex - b.passageIndex);
+  return units;
+}
+function flatten(units) { return units.flat(); }
+
+export function samplePcp(bank) {
   const targets = { A: 8, B: 10, C: 10, D: 6, E: 10, F: 10, G: 6, H: 120 };
   const byArea = {};
-  for (const q of bank) (byArea[q.cpcfArea || 'H'] ||= []).push(q);
+  for (const u of toUnits(bank)) (byArea[u[0].cpcfArea || 'H'] ||= []).push(u);
   Object.values(byArea).forEach(shuffleInPlace);
-  const out = []; let backfilled = 0;
+  const picked = []; let backfilled = 0;
   for (const [a, n] of Object.entries(targets)) {
     const pool = byArea[a] || [];
-    const take = pool.slice(0, n);
-    backfilled += n - take.length;
-    out.push(...take);
+    let got = 0;
+    for (const u of pool) {
+      if (got >= n) break;
+      picked.push(u); got += u.length;
+    }
+    if (got < n) backfilled += n - got;
   }
-  // backfill shortage from H then anywhere
+  let out = flatten(picked);
   if (out.length < 180) {
     const used = new Set(out.map(q => q.id));
-    const rest = shuffle(bank.filter(q => !used.has(q.id)));
-    while (out.length < 180 && rest.length) out.push(rest.pop());
+    const rest = shuffle(toUnits(bank).filter(u => !used.has(u[0].id)));
+    while (out.length < 180 && rest.length) out = out.concat(rest.pop());
   }
-  const qs = shuffle(out.slice(0, 180));
+  // shuffle by unit so sets stay contiguous, then trim on a set boundary
+  const finalUnits = shuffle(toUnits(out));
+  const qs = [];
+  for (const u of finalUnits) { if (qs.length + u.length > 180) continue; qs.push(...u); }
   qs.backfilled = backfilled;
   return qs;
 }
-function sampleEmr(bank) {
-  // topic-spread round robin up to 200
+export function sampleEmr(bank) {
+  // topic-spread round robin over units, up to 200 questions
   const byTopic = {};
-  for (const q of bank) (byTopic[q.topic || '?'] ||= []).push(q);
+  for (const u of toUnits(bank)) (byTopic[u[0].topic || '?'] ||= []).push(u);
   Object.values(byTopic).forEach(shuffleInPlace);
   const topics = Object.keys(byTopic);
-  const out = [];
-  let added = true;
-  while (out.length < 200 && added) {
+  const picked = []; let total = 0, added = true;
+  while (total < 200 && added) {
     added = false;
     for (const tp of topics) {
       const pool = byTopic[tp];
-      if (pool.length && out.length < 200) { out.push(pool.pop()); added = true; }
+      if (!pool.length || total >= 200) continue;
+      const u = pool.pop();
+      if (total + u.length > 200) continue;
+      picked.push(u); total += u.length; added = true;
     }
   }
-  return shuffle(out);
+  return flatten(shuffle(picked));
 }
 function drawMock(el) {
   if (session.onBreak) { drawBreak(el); return; }
@@ -233,15 +329,16 @@ function drawMock(el) {
       <div class="q-grid">${qs.slice(lo, hi).map((qq, i) => {
         const gi = lo + i;
         let cls = [];
-        if (session.answers[qq.id]) cls.push('answered');
+        if (pickedKeys(session.answers[qq.id]).length) cls.push('answered');
         if (session.flags[qq.id]) cls.push('flagged');
         if (gi === session.pos) cls.push('current');
         return `<button class="${cls.join(' ')}" data-goto="${gi}">${gi + 1 - lo}</button>`;
       }).join('')}</div>
       <div class="card">
+        ${passageHTML(q)}
         <div class="q-text">${bi(q.questionEn, q.questionZh)}</div>
         <div class="q-opts">
-          ${q.options.map(o => `<button class="opt ${session.answers[q.id] === o.key ? 'picked' : ''}" data-key="${o.key}">
+          ${q.options.map(o => `<button class="opt ${pickedKeys(session.answers[q.id]).includes(o.key) ? 'picked' : ''}" data-key="${o.key}">
             <span class="opt-key">${o.key}</span><span>${bi(o.en, o.zh, 'span')}</span></button>`).join('')}
         </div>
         <div class="btn-row">
@@ -254,12 +351,20 @@ function drawMock(el) {
       </div>
     </div>`;
   el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { session.pos = +b.dataset.goto; drawMock(el); });
-  el.querySelectorAll('.q-opts .opt').forEach(b => b.onclick = () => { session.answers[q.id] = b.dataset.key; drawMock(el); });
+  el.querySelectorAll('.q-opts .opt').forEach(b => b.onclick = () => {
+    const k = b.dataset.key;
+    if (isMulti(q)) {
+      const cur = pickedKeys(session.answers[q.id]);
+      session.answers[q.id] = cur.includes(k) ? cur.filter(x => x !== k) : cur.concat(k);
+      if (!session.answers[q.id].length) delete session.answers[q.id];
+    } else session.answers[q.id] = k;
+    drawMock(el);
+  });
   el.querySelector('#prevQ').onclick = () => { session.pos--; drawMock(el); };
   el.querySelector('#nextQ').onclick = () => { session.pos++; drawMock(el); };
   el.querySelector('#flagQ').onclick = () => { session.flags[q.id] = !session.flags[q.id]; drawMock(el); };
   el.querySelector('#endPart').onclick = () => {
-    const unanswered = qs.slice(lo, hi).filter(qq => !session.answers[qq.id]).length;
+    const unanswered = qs.slice(lo, hi).filter(qq => !pickedKeys(session.answers[qq.id]).length).length;
     const msg = session.part === session.parts
       ? t(`Submit now? ${unanswered} unanswered.`, `确定交卷？还有 ${unanswered} 题没答。`)
       : t(`End Part 1? You cannot return after the break. ${unanswered} unanswered.`, `结束第一部分？休息后不能回改。还有 ${unanswered} 题没答。`);
@@ -321,7 +426,8 @@ function finishMock(el) {
     const a = q.cpcfArea || 'H';
     areaStat[a] ||= { right: 0, total: 0 };
     areaStat[a].total++;
-    if (session.answers[q.id] === q.answer) { right++; areaStat[a].right++; delete S.wrong[q.id]; }
+    const want = answerKeys(q), got = pickedKeys(session.answers[q.id]);
+    if (want.length === got.length && want.every(k => got.includes(k))) { right++; areaStat[a].right++; delete S.wrong[q.id]; }
     else S.wrong[q.id] = { at: Date.now() };
   }
   const pct = Math.round(right / qs.length * 100);

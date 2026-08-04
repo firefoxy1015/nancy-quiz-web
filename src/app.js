@@ -1,9 +1,9 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=5';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=5';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=5';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=6';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=6';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=6';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -43,11 +43,15 @@ export function esc(s) {
 }
 
 /* ---------------- data loading ---------------- */
+// Data files carry the same build tag as the modules. Without it the browser
+// serves a cached copy after a content update and users silently keep the old
+// question bank — bump this whenever data/ changes.
+const DATA_V = '6';
 const cache = {};
 export async function loadJSON(path) {
   if (cache[path]) return cache[path];
   try {
-    const r = await fetch(path);
+    const r = await fetch(path + (path.includes('?') ? '&' : '?') + 'v=' + DATA_V);
     if (!r.ok) throw new Error(r.status);
     const d = await r.json();
     cache[path] = d;
@@ -66,6 +70,33 @@ export async function loadBank(track) { // merged question pool for a licence tr
     if (!part || !part.questions) continue;
     for (const q of part.questions) {
       if (q.licence === track || q.licence === 'both') pool.push(q);
+    }
+  }
+  // passage-based sets: the real exam attaches 3-5 linked questions to a patient
+  // profile table or an evolving case scenario. Each question carries its passage
+  // so it can be rendered standalone, plus the ids needed to keep a set together.
+  const passageFiles = (idx.passages || []);
+  const packs = await Promise.all(passageFiles.map(p => loadJSON('./data/written/passages/' + p)));
+  for (const pack of packs) {
+    if (!pack || !pack.passages) continue;
+    const licence = pack.meta && pack.meta.licence;
+    if (licence && licence !== track && licence !== 'both') continue;
+    for (const psg of pack.passages) {
+      const qs = psg.questions || [];
+      qs.forEach((q, i) => {
+        pool.push(Object.assign({}, q, {
+          licence: licence || 'both',
+          passageId: psg.id,
+          passageIndex: i,
+          passageTotal: qs.length,
+          passage: {
+            id: psg.id, format: psg.format,
+            titleEn: psg.titleEn, titleZh: psg.titleZh,
+            profile: psg.profile || null,
+            passageEn: psg.passageEn || '', passageZh: psg.passageZh || '',
+          },
+        }));
+      });
     }
   }
   return pool;
