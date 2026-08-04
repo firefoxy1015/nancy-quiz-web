@@ -4,64 +4,147 @@
     "whatThisIs": "Verbatim sample questions published by COPR itself in its Entry to Practice Examination Study Guides, for candidates. These are the only real, legally shareable exam-representative items that exist publicly — written by the same subject-matter experts, in the same formats, with COPR's own rationales and cognitive-level labels.",
     "whatThisIsNot": "NOT leaked live exam content. Candidates sign a Statement of Understanding forbidding disclosure of actual exam items; breaching it risks invalidated results and referral to the provincial regulator. Nothing here comes from that channel.",
     "sources": [
-      { "name": "COPR Entry to Practice Examination Study Guide v4.2 (PCP/ACP)", "date": "February 2017", "url": "https://copr.ca/wp-content/uploads/2019/09/Exam-Study-Guide-v4.2-FINAL-Posted-February-9-2017.pdf" },
-      { "name": "COPR EMR NOCP Entry to Practice Examination Study Guide", "date": "April 14, 2025", "url": "https://copr.ca/wp-content/uploads/2025/07/EMR-NOCP-Examination-Study-Guide-4.14.2025-Final.pdf" }
+      {
+        "name": "COPR Entry to Practice Examination Study Guide v4.2 (PCP/ACP)",
+        "date": "February 2017",
+        "url": "https://copr.ca/wp-content/uploads/2019/09/Exam-Study-Guide-v4.2-FINAL-Posted-February-9-2017.pdf"
+      },
+      {
+        "name": "COPR EMR NOCP Entry to Practice Examination Study Guide",
+        "date": "April 14, 2025",
+        "url": "https://copr.ca/wp-content/uploads/2025/07/EMR-NOCP-Examination-Study-Guide-4.14.2025-Final.pdf"
+      }
     ],
     "retrieved": "2026-08-03",
     "usage": "Use these as the gold-standard template for authoring: match their passage structure, distractor logic and rationale depth. Do not ship them verbatim as our own practice questions — cite them as COPR's samples if displayed at all.",
     "officialPracticeTests": {
-      "note": "COPR also sells Preparatory Tests that run on the same software as the real exam and are drawn to the same blueprint. This is the legitimate way to get more real-format practice.",
-      "emr": { "questions": 30, "priceCad": 37.5 },
-      "pcp": { "questions": 60 },
+      "note": "COPR sells Preparatory Tests that run on the same software platform as the real exam. Verified on the vendor site 2026-08-03.",
+      "vendor": "Yardstick Assessment Strategies / Meazure Learning",
       "url": "https://coprpreptest.ysasecure.com/login",
+      "emr": {
+        "questions": 30,
+        "priceCad": 37.5,
+        "titles": [
+          "EMR Preparatory Test I",
+          "II",
+          "III"
+        ]
+      },
+      "pcp": {
+        "questions": 60,
+        "priceCad": 75.0,
+        "titles": [
+          "PCP Preparatory Test I",
+          "II",
+          "III"
+        ]
+      },
+      "acp": {
+        "questions": 60,
+        "priceCad": 75.0
+      },
+      "attemptsPerPurchase": 1,
+      "validUntil": "2027-08-04 (as listed on the 2024-version products)",
+      "freeSample": "Signing up for a free user account gives 5 free sample questions.",
+      "frameworkCaveat": "IMPORTANT for candidates writing the CPCF exam: as of 2026-08-03 all PCP preparatory tests on sale are the 2024 versions and COPR's own 'Preparing for the Examination' page states the feedback identifies 'the NOCP competency area each question is testing'. The PCP CPCF Study Guide is still listed as 'coming soon'. Clinical content (CPCF area H, ~70% of the exam) transfers well; the seven non-clinical CPCF areas A-G (~30%) are the part NOCP material aligns with least. Candidates sitting a CPCF exam should consider waiting for CPCF-aligned versions, or email info@copr.ca to ask when they will be released.",
+      "licence": "Single user. COPR states the tests are not for sharing, distribution, copying or resale — do not reproduce them in this project.",
       "caveat": "COPR states that passing a Preparatory Test does not mean you will pass the real exam, and that it does not endorse or validate any third-party exam prep."
     }
   },
-
   "examFormat": {
     "questionTypes": [
-      { "type": "patient-profile", "descriptionEn": "Key patient information given in a table (age, gender, chief complaint, past medical history, medications, first vital signs, physical findings, other information), followed by 3 or more linked multiple-choice questions.", "descriptionZh": "表格给出患者关键信息（年龄、性别、主诉、既往史、用药、首次生命体征、查体发现、其他信息），后接 3 道以上关联选择题。" },
-      { "type": "case-scenario", "descriptionEn": "Scenario described in prose, with 3 or more linked questions. The patient's condition may evolve from one question to the next.", "descriptionZh": "以叙述形式给出情境，后接 3 道以上关联题；患者病情会随题目推进而变化。" },
-      { "type": "stand-alone", "descriptionEn": "A single multiple-choice question not attached to any passage.", "descriptionZh": "不依附于任何情境的独立选择题。" }
+      {
+        "type": "patient-profile",
+        "descriptionEn": "Key patient information given in a table (age, gender, chief complaint, past medical history, medications, first vital signs, physical findings, other information), followed by 3 or more linked multiple-choice questions.",
+        "descriptionZh": "表格给出患者关键信息（年龄、性别、主诉、既往史、用药、首次生命体征、查体发现、其他信息），后接 3 道以上关联选择题。"
+      },
+      {
+        "type": "case-scenario",
+        "descriptionEn": "Scenario described in prose, with 3 or more linked questions. The patient's condition may evolve from one question to the next.",
+        "descriptionZh": "以叙述形式给出情境，后接 3 道以上关联题；患者病情会随题目推进而变化。"
+      },
+      {
+        "type": "stand-alone",
+        "descriptionEn": "A single multiple-choice question not attached to any passage.",
+        "descriptionZh": "不依附于任何情境的独立选择题。"
+      }
     ],
     "cognitiveLevels": [
-      { "level": "knowledge", "en": "Recall or recognize facts, terms, concepts or procedures.", "zh": "回忆或辨认事实、术语、概念或流程。" },
-      { "level": "application", "en": "Apply knowledge of facts, terms, concepts or procedures in a novel context.", "zh": "把知识应用到新的情境中。" },
-      { "level": "critical", "en": "Infer the significance of key facts presented in a realistic scenario — usually a prioritization or 'what matters most here' judgement.", "zh": "从真实情境中推断关键信息的意义——通常是优先级判断或「此刻什么最要紧」。" }
+      {
+        "level": "knowledge",
+        "en": "Recall or recognize facts, terms, concepts or procedures.",
+        "zh": "回忆或辨认事实、术语、概念或流程。"
+      },
+      {
+        "level": "application",
+        "en": "Apply knowledge of facts, terms, concepts or procedures in a novel context.",
+        "zh": "把知识应用到新的情境中。"
+      },
+      {
+        "level": "critical",
+        "en": "Infer the significance of key facts presented in a realistic scenario — usually a prioritization or 'what matters most here' judgement.",
+        "zh": "从真实情境中推断关键信息的意义——通常是优先级判断或「此刻什么最要紧」。"
+      }
     ],
     "strategyNotes": [
-      { "en": "Wrong answers do not count against your score. Never leave a question blank — always guess.", "zh": "答错不倒扣分。绝对不要留空——不会也要蒙一个。" },
-      { "en": "All questions are worth the same. Do not burn time on one hard item.", "zh": "每题分值相同，别在一道难题上耗时间。" },
-      { "en": "Try to answer in your head before reading the options, then eliminate.", "zh": "先在脑子里想出答案再看选项，然后用排除法。" },
-      { "en": "Do not change an answer on review unless you have a concrete reason.", "zh": "复查时除非有明确理由，否则不要改答案。" }
+      {
+        "en": "Wrong answers do not count against your score. Never leave a question blank — always guess.",
+        "zh": "答错不倒扣分。绝对不要留空——不会也要蒙一个。"
+      },
+      {
+        "en": "All questions are worth the same. Do not burn time on one hard item.",
+        "zh": "每题分值相同，别在一道难题上耗时间。"
+      },
+      {
+        "en": "Try to answer in your head before reading the options, then eliminate.",
+        "zh": "先在脑子里想出答案再看选项，然后用排除法。"
+      },
+      {
+        "en": "Do not change an answer on review unless you have a concrete reason.",
+        "zh": "复查时除非有明确理由，否则不要改答案。"
+      }
     ]
   },
-
   "samples": [
     {
       "id": "copr-pcp-profile-1",
       "level": "PCP",
       "format": "patient-profile",
       "profile": {
-        "age": "3 years old", "gender": "Female", "chiefComplaint": "Barking cough",
-        "pastMedicalHx": "None", "medications": "None",
+        "age": "3 years old",
+        "gender": "Female",
+        "chiefComplaint": "Barking cough",
+        "pastMedicalHx": "None",
+        "medications": "None",
         "firstVitals": "HR 140; RR 26; BP 90/68; SpO2 94%; Temp 38°C",
         "physicalFindings": "Warm to the touch and flushed in colour; patient is alert and crying",
         "otherInformation": "Patient has been feeling unwell for 24 hours"
       },
       "questions": [
         {
-          "n": 1, "cognitive": "knowledge",
+          "n": 1,
+          "cognitive": "knowledge",
           "stem": "At which area of the body should the paramedic start their assessment?",
-          "options": { "A": "The feet", "B": "The head", "C": "The arms", "D": "The stomach" },
+          "options": {
+            "A": "The feet",
+            "B": "The head",
+            "C": "The arms",
+            "D": "The stomach"
+          },
           "answer": "A",
           "rationale": "To gain the confidence of a patient in this age group the assessment should be conducted toe-to-head. Note the child is considered to be crying normally — abnormal crying would have been stated in the profile.",
           "teaches": "Paediatric assessment is done toe-to-head to build trust; and profiles state abnormal findings explicitly, so absence of a comment means normal."
         },
         {
-          "n": 2, "cognitive": "application",
+          "n": 2,
+          "cognitive": "application",
           "stem": "What is the most likely differential diagnosis?",
-          "options": { "A": "Croup", "B": "Meningitis", "C": "Epiglottitis", "D": "Foreign body airway obstruction" },
+          "options": {
+            "A": "Croup",
+            "B": "Meningitis",
+            "C": "Epiglottitis",
+            "D": "Foreign body airway obstruction"
+          },
           "answer": "A",
           "rationale": "Barking cough with low-grade fever fits croup. A barking cough is not typical of meningitis. Epiglottitis usually brings high fever, drooling and stridor. The child is alert, crying and unwell for 24 hours, so FBAO is unlikely.",
           "teaches": "Differential-diagnosis items pit look-alike airway conditions against each other; you discriminate on the specific feature set, not the general picture."
@@ -75,25 +158,43 @@
       "passage": "Paramedics arrive to a scene where a 24-year-old male is complaining of shortness of breath. The patient was at a picnic in a local park with friends when he suddenly started having difficulty breathing. On arrival it is established that the patient is allergic to bees and seems to be having an allergic reaction.",
       "questions": [
         {
-          "n": 3, "cognitive": "application",
+          "n": 3,
+          "cognitive": "application",
           "stem": "Which of the following is most relevant to this patient's condition?",
-          "options": { "A": "Time of last meal", "B": "Date of last doctor's visit", "C": "Family history of allergies", "D": "Previous allergic reactions" },
+          "options": {
+            "A": "Time of last meal",
+            "B": "Date of last doctor's visit",
+            "C": "Family history of allergies",
+            "D": "Previous allergic reactions"
+          },
           "answer": "D",
           "rationale": "Anaphylaxis can progress rapidly, so pertinent history must be gathered quickly. A history of previous reactions (severity, speed of onset) is the most important item listed; family history is not relevant to his present complaint.",
           "teaches": "History-priority items: pick the single question whose answer would change your management right now."
         },
         {
-          "n": 4, "cognitive": "critical",
+          "n": 4,
+          "cognitive": "critical",
           "stem": "On assessment, the patient has wheezing in all lung fields, is breathing at a rate of 32 and using accessory muscles to breathe. What is the most appropriate medication to administer to this patient at this time?",
-          "options": { "A": "Salbutamol", "B": "Epinephrine", "C": "Nitroglycerine", "D": "Diphenhydramine" },
+          "options": {
+            "A": "Salbutamol",
+            "B": "Epinephrine",
+            "C": "Nitroglycerine",
+            "D": "Diphenhydramine"
+          },
           "answer": "B",
           "rationale": "Epinephrine is the drug of choice for moderate to severe allergic reactions including anaphylaxis. Salbutamol treats wheeze but is not first-line here; nitroglycerine is unrelated; diphenhydramine is not the first-line agent.",
           "teaches": "The classic trap: a plausible-but-second-line drug (salbutamol for the wheeze) sits next to the correct first-line one. Note the patient evolved — new findings appeared in this question that were not in the passage."
         },
         {
-          "n": 5, "cognitive": "knowledge",
+          "n": 5,
+          "cognitive": "knowledge",
           "stem": "One of the paramedics initiates an IV. How should they dispose of the sharp?",
-          "options": { "A": "Place the catheter in a puncture-resistant container", "B": "Place the catheter in the nearest park garbage can", "C": "Give the catheter to a bystander on scene to dispose of it", "D": "Put the catheter in their pocket until it can be disposed of in the ambulance" },
+          "options": {
+            "A": "Place the catheter in a puncture-resistant container",
+            "B": "Place the catheter in the nearest park garbage can",
+            "C": "Give the catheter to a bystander on scene to dispose of it",
+            "D": "Put the catheter in their pocket until it can be disposed of in the ambulance"
+          },
           "answer": "A",
           "rationale": "Sharps must be disposed of immediately in an appropriate container to avoid risk to paramedics, the patient, other providers and bystanders.",
           "teaches": "The exam mixes occupational-safety items into clinical passages — scene safety and sharps handling are examinable, not just protocols."
@@ -106,17 +207,29 @@
       "format": "stand-alone",
       "questions": [
         {
-          "n": 6, "cognitive": "critical",
+          "n": 6,
+          "cognitive": "critical",
           "stem": "While the ambulance is at a red light, the patient's condition deteriorates. The paramedics decide to upgrade their response to the hospital with lights and sirens. Given that the ambulance is parked at a red light and is surrounded by traffic, what is the best way for the driver to proceed?",
-          "options": { "A": "Immediately turn on the lights and sirens", "B": "Honk for traffic to move then turn on the lights and sirens", "C": "Immediately turn on the lights and sirens, and then start honking for traffic to move", "D": "Wait for the traffic light to turn green and for the traffic to start moving, and then turn on the lights and sirens" },
+          "options": {
+            "A": "Immediately turn on the lights and sirens",
+            "B": "Honk for traffic to move then turn on the lights and sirens",
+            "C": "Immediately turn on the lights and sirens, and then start honking for traffic to move",
+            "D": "Wait for the traffic light to turn green and for the traffic to start moving, and then turn on the lights and sirens"
+          },
           "answer": "D",
           "rationale": "Suddenly activating emergency systems while stopped at a red light surrounded by traffic may cause other drivers to panic and proceed into an unsafe intersection.",
           "teaches": "Emergency vehicle operation is examinable. The safe answer beats the fast answer."
         },
         {
-          "n": 7, "cognitive": "application",
+          "n": 7,
+          "cognitive": "application",
           "stem": "[Urinary catheter drainage bag] Where should the bag be positioned relative to the patient?",
-          "options": { "A": "It does not matter", "B": "Lower than the patient", "C": "Higher than the patient", "D": "At the same height as the patient" },
+          "options": {
+            "A": "It does not matter",
+            "B": "Lower than the patient",
+            "C": "Higher than the patient",
+            "D": "At the same height as the patient"
+          },
           "answer": "B",
           "rationale": "Only this option lets gravity drain urine from the patient through the catheter into the bag.",
           "teaches": "Transfer-of-care / device-management details are examinable at PCP level."
@@ -129,25 +242,43 @@
       "format": "stand-alone",
       "questions": [
         {
-          "n": 1, "cognitive": "application",
+          "n": 1,
+          "cognitive": "application",
           "stem": "EMRs are responding to an 88-year-old patient who complains of abdominal pain. During the assessment, the patient vomits on one of the EMR's boots and apologizes. What is the EMR's best response to this patient?",
-          "options": { "A": "\"No problem.\"", "B": "\"Next time try and hit the container next to you.\"", "C": "\"I think it's best that my partner takes over your care.\"", "D": "\"It's okay; you don't need to be sorry. This is what we do, and we're here because we want to be.\"" },
+          "options": {
+            "A": "\"No problem.\"",
+            "B": "\"Next time try and hit the container next to you.\"",
+            "C": "\"I think it's best that my partner takes over your care.\"",
+            "D": "\"It's okay; you don't need to be sorry. This is what we do, and we're here because we want to be.\""
+          },
           "answer": "D",
           "rationale": "When a patient accidentally vomits on you and apologizes, respond politely and professionally, reassuring them.",
           "teaches": "Communication items give you the literal words to choose. The best answer actively relieves the patient's embarrassment — a merely neutral reply ('No problem') is not enough."
         },
         {
-          "n": 2, "cognitive": "knowledge",
+          "n": 2,
+          "cognitive": "knowledge",
           "stem": "A 29-year-old female, weighing 50 kg, collapses at work after complaining of severe left and right lower quadrant pain. When the EMRs arrive she is conscious, pale, and complaining of severe pain. She denies any bleeding. She has no pertinent medical history. Her last menstrual period was six weeks ago. She has an absent radial pulse, a rapid weak carotid pulse, rapid shallow respirations, and a BP of 78/50. Which one of the following scenarios would be the best way to manage this patient?",
-          "options": { "A": "Lay the patient prone, provide oxygen, and transport.", "B": "Lay the patient supine, provide oxygen, and transport.", "C": "Lay the patient semi-prone, provide oxygen, and transport.", "D": "Lay the patient supine with legs elevated, provide oxygen, and transport." },
+          "options": {
+            "A": "Lay the patient prone, provide oxygen, and transport.",
+            "B": "Lay the patient supine, provide oxygen, and transport.",
+            "C": "Lay the patient semi-prone, provide oxygen, and transport.",
+            "D": "Lay the patient supine with legs elevated, provide oxygen, and transport."
+          },
           "answer": "D",
           "rationale": "This patient is going into shock. Lay her supine with feet elevated to keep the core perfusing, give oxygen and transport.",
           "teaches": "Note the buried clue: LMP six weeks ago plus lower-quadrant pain plus shock = suspected ectopic pregnancy. The question is answerable on shock management alone, but the profile rewards recognizing the cause."
         },
         {
-          "n": 3, "cognitive": "knowledge",
+          "n": 3,
+          "cognitive": "knowledge",
           "stem": "A 10-year-old patient has fallen off their bicycle and injured their chest. EMRs suspect a rib fracture. Which one of the following treatments is most appropriate for this fracture?",
-          "options": { "A": "Tightly binding the chest.", "B": "Raise the legs in supine position.", "C": "Apply a board splint and secure it to the chest.", "D": "Give the patient a pillow to hug and support the fracture." },
+          "options": {
+            "A": "Tightly binding the chest.",
+            "B": "Raise the legs in supine position.",
+            "C": "Apply a board splint and secure it to the chest.",
+            "D": "Give the patient a pillow to hug and support the fracture."
+          },
           "answer": "D",
           "rationale": "Self-splinting with a pillow supports the fracture without restricting chest expansion.",
           "teaches": "Distractors A and C are the intuitive-but-harmful 'immobilize it' instinct — binding the chest restricts ventilation."
@@ -159,25 +290,40 @@
       "level": "EMR",
       "format": "patient-profile",
       "profile": {
-        "age": "23 years old", "gender": "Not applicable", "chiefComplaint": "Shortness of breath (SOB), sudden onset",
-        "pastMedicalHx": "Severe reactions to some food", "medications": "None",
+        "age": "23 years old",
+        "gender": "Not applicable",
+        "chiefComplaint": "Shortness of breath (SOB), sudden onset",
+        "pastMedicalHx": "Severe reactions to some food",
+        "medications": "None",
         "firstVitals": "HR 132 and regular; RR 36 and shallow; BP 118/72",
         "physicalFindings": "Hives on arms and chest area, audible wheezing, and tachycardia",
         "otherInformation": "Shortness of breath started following lunch. This episode is the worst the patient has ever experienced."
       },
       "questions": [
         {
-          "n": 4, "cognitive": "knowledge",
+          "n": 4,
+          "cognitive": "knowledge",
           "stem": "Which one of the following conditions is the patient most likely suffering from?",
-          "options": { "A": "Anaphylaxis", "B": "Asthma attack", "C": "Pulmonary embolism", "D": "Myocardial infarction" },
+          "options": {
+            "A": "Anaphylaxis",
+            "B": "Asthma attack",
+            "C": "Pulmonary embolism",
+            "D": "Myocardial infarction"
+          },
           "answer": "A",
           "rationale": "SOB with audible wheezing and hives after eating, in a patient with prior food reactions who calls this the worst episode yet, is anaphylaxis.",
           "teaches": "Recognition items combine trigger + skin findings + history. Asthma is the near-miss distractor because of the wheeze."
         },
         {
-          "n": 5, "cognitive": "critical",
+          "n": 5,
+          "cognitive": "critical",
           "stem": "After placing the patient in a position of comfort, what is the best treatment plan for this patient?",
-          "options": { "A": "Insert an Oropharyngeal Airway (OPA) and start ventilations.", "B": "Apply oxygen via nasal cannula and initiate transport.", "C": "Apply high flow oxygen by non-rebreather and initiate transport.", "D": "Apply high flow oxygen by non-rebreather and complete a detailed secondary assessment." },
+          "options": {
+            "A": "Insert an Oropharyngeal Airway (OPA) and start ventilations.",
+            "B": "Apply oxygen via nasal cannula and initiate transport.",
+            "C": "Apply high flow oxygen by non-rebreather and initiate transport.",
+            "D": "Apply high flow oxygen by non-rebreather and complete a detailed secondary assessment."
+          },
           "answer": "C",
           "rationale": "This patient needs positioning for ease of breathing, high-flow oxygen, and transport.",
           "teaches": "The trap is D: right oxygen, wrong priority — staying on scene for a detailed secondary assessment delays transport in a time-critical patient. Option A over-treats a patient who is still conscious and breathing."
@@ -192,15 +338,22 @@
       "passage": "Paramedics respond to a 61-year-old female complaining of abdominal pain. On arrival the patient is sitting in a chair rubbing her upper abdomen. She says the pain started 30 minutes ago and rates it 5/10. She is pale but not in respiratory distress. Pulse 78, BP 156/84. She reports nausea but has not vomited and 'feels a bit weak and tired'. She has not had pain like this before and called paramedics instead of driving herself. She says she feels badly that they had to come all the way to her house when the weather is so awful.",
       "questions": [
         {
-          "n": 3, "cognitive": "critical",
+          "n": 3,
+          "cognitive": "critical",
           "stem": "Based on the patient's complaints, what is the most appropriate assessment to do next?",
-          "options": { "A": "Obtain a 12 lead ECG", "B": "Check a blood glucose level", "C": "Perform a complete neurological exam", "D": "Palpate for the presence of Rovsing's sign" },
+          "options": {
+            "A": "Obtain a 12 lead ECG",
+            "B": "Check a blood glucose level",
+            "C": "Perform a complete neurological exam",
+            "D": "Palpate for the presence of Rovsing's sign"
+          },
           "answer": "A",
           "rationale": "All of these could be appropriate, but the presentation carries a high likelihood of myocardial infarction, so the 12-lead comes first. Rovsing's sign tests for appendicitis, which does not fit upper abdominal pain.",
           "teaches": "Prioritization items: several options are defensible; you rank them by the worst thing it could be. Epigastric pain + pale + weak in a 61-year-old woman is atypical MI until proven otherwise."
         },
         {
-          "n": 4, "cognitive": "critical",
+          "n": 4,
+          "cognitive": "critical",
           "stem": "During the assessment the patient continually apologizes for 'having to go through all this trouble for a silly stomach ache.' She offers to drive herself to the doctor if the paramedics think it is worth seeing one. What is the paramedic's most appropriate response?",
           "options": {
             "A": "Listing possible diagnoses in medical terminology (perforated ulcer, abdominal aortic aneurysm, cholecystitis…)",
@@ -213,7 +366,8 @@
           "teaches": "Two things must both be true in communication items: the tone addresses the patient's stated emotional concern, AND the clinical instruction is safe. An answer that is kind but lets a possible-MI patient drive herself is wrong."
         },
         {
-          "n": 5, "cognitive": "application",
+          "n": 5,
+          "cognitive": "application",
           "stem": "The crew transports with lights and sirens and approaches an intersection with a red light. What is the most appropriate action?",
           "options": {
             "A": "Come to a complete stop, wait until there are no other vehicles at the intersection, then proceed.",
@@ -228,14 +382,34 @@
       ]
     }
   ],
-
   "patternsForOurAuthors": [
-    { "en": "Passages carry 3-5 questions and the patient evolves — new vitals or findings appear inside later question stems, not only in the passage.", "zh": "一个情境带 3-5 题，且患者会演变——新的生命体征或发现出现在后面的题干里，而不只在情境描述中。" },
-    { "en": "Distractors are near-misses from the same domain (salbutamol vs epinephrine; croup vs epiglottitis), never jokes.", "zh": "干扰项是同领域的「差一点就对」（salbutamol vs epinephrine、croup vs 会厌炎），绝不是玩笑选项。" },
-    { "en": "A recurring trap is the right treatment attached to the wrong priority — e.g. correct oxygen therapy but staying on scene for a detailed secondary assessment.", "zh": "反复出现的陷阱是「处置对但优先级错」——比如氧疗给对了，却留在现场做详细二次评估。" },
-    { "en": "Communication items quote literal speech and require both an empathetic tone and a safe clinical instruction.", "zh": "沟通题直接给出台词，要求语气共情且临床指令安全，两者缺一不可。" },
-    { "en": "Options containing absolutes ('until there are no other vehicles', 'always', 'never') are usually wrong.", "zh": "含绝对化措辞的选项（「直到一辆车都没有」「总是」「绝不」）通常是错的。" },
-    { "en": "Occupational safety (sharps, emergency driving) and device management (catheters) are examinable alongside clinical protocols.", "zh": "职业安全（利器处置、紧急驾驶）和器械管理（导尿管）与临床协议一样会考。" },
-    { "en": "Profiles state abnormalities explicitly; if something is not mentioned, treat it as normal.", "zh": "患者资料会明确写出异常；没提到的就按正常处理。" }
+    {
+      "en": "Passages carry 3-5 questions and the patient evolves — new vitals or findings appear inside later question stems, not only in the passage.",
+      "zh": "一个情境带 3-5 题，且患者会演变——新的生命体征或发现出现在后面的题干里，而不只在情境描述中。"
+    },
+    {
+      "en": "Distractors are near-misses from the same domain (salbutamol vs epinephrine; croup vs epiglottitis), never jokes.",
+      "zh": "干扰项是同领域的「差一点就对」（salbutamol vs epinephrine、croup vs 会厌炎），绝不是玩笑选项。"
+    },
+    {
+      "en": "A recurring trap is the right treatment attached to the wrong priority — e.g. correct oxygen therapy but staying on scene for a detailed secondary assessment.",
+      "zh": "反复出现的陷阱是「处置对但优先级错」——比如氧疗给对了，却留在现场做详细二次评估。"
+    },
+    {
+      "en": "Communication items quote literal speech and require both an empathetic tone and a safe clinical instruction.",
+      "zh": "沟通题直接给出台词，要求语气共情且临床指令安全，两者缺一不可。"
+    },
+    {
+      "en": "Options containing absolutes ('until there are no other vehicles', 'always', 'never') are usually wrong.",
+      "zh": "含绝对化措辞的选项（「直到一辆车都没有」「总是」「绝不」）通常是错的。"
+    },
+    {
+      "en": "Occupational safety (sharps, emergency driving) and device management (catheters) are examinable alongside clinical protocols.",
+      "zh": "职业安全（利器处置、紧急驾驶）和器械管理（导尿管）与临床协议一样会考。"
+    },
+    {
+      "en": "Profiles state abnormalities explicitly; if something is not mentioned, treat it as normal.",
+      "zh": "患者资料会明确写出异常；没提到的就按正常处理。"
+    }
   ]
 }
