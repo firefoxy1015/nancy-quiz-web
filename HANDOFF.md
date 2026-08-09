@@ -140,3 +140,6 @@
 
 12. **题目 topic 是创作粒度，不是展示粒度**：全库 255 个 distinct topic，几十个只有 1 题。用户可见的筛选和 EMR 模考抽样都必须走 `app.js` 的 `topicGroup()`（17 个临床域分组）。曾经的 bug：EMR 抽样按原始 topic 轮转 → 每个微 topic 场场必进，40 道 ddx 全进每场模考（占 20%），模考之间几乎不换题。加新题不用管分组（正则自动归类），但新增很怪的 topic 命名时跑一下分组脚本确认没落进 other。
 13. **笔试模考有崩溃保护**：`S.writtenMock`（exam.js persistMock/renderMock resume 流程），每次 redraw 落盘，finishMock 清空。改模考逻辑别破坏这条链。
+
+14. **v1/ 归档不是死档——它有真内容，别再让它失联**：Nancy Caroline 54 章精读来自 `v1/data/chapter-review.json`，已提取真字段进 `data/study/chapters.json` 并接入 学习库首卡。当初把老站整体归档进 v1/ 却没在新站留任何入口，用户直接以为"学习库被弄没了"。**归档 ≠ 下线**：任何搬进 v1/ 的东西，要么在新站给入口，要么明确告诉用户它没了。v1/ 里还没接回来的：copr-mock-bank(1000题,模板货)、exam-bank(100)、question-bank(504章节题,已审计萃取过)、scenarios(22,已被新场景库取代)、copr-guide(14节)。
+15. **迁移旧内容先量模板化程度**：chapter-review 12 个字段里 7 个是模板填空（`clinicalScenarios` 57% 把章节标题塞进固定句式，去标题后仅 44% 互异），5 个是真写的。判据：统计"字段值里含本章标题的占比"+"抹掉标题后的互异度"。别整包搬。

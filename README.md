@@ -98,6 +98,6 @@ data/practical/                       grading rubric + scenarios
 data/jurisprudence/                   legislation notes + question bank
 data/study/                           assessment model, protocols, treatments, drugs, reference
 tools/validate.py                     schema / blueprint / bilingual validation
-v1/                                   archived first version (Nancy Caroline quiz site)
+v1/                                   archived first version; its 54-chapter Nancy Caroline review lives on at #/study/chapters
 PLAN.md · HANDOFF.md                  product plan & execution handbook
 ```

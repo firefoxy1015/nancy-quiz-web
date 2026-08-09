@@ -46,7 +46,7 @@ export function esc(s) {
 // Data files carry the same build tag as the modules. Without it the browser
 // serves a cached copy after a content update and users silently keep the old
 // question bank — bump this whenever data/ changes.
-const DATA_V = '8';
+const DATA_V = '9';
 const cache = {};
 export async function loadJSON(path) {
   if (cache[path]) return cache[path];

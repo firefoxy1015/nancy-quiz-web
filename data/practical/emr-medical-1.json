@@ -1,0 +1,1073 @@
+{
+  "meta": {
+    "title": "BC Practical Exam Scenarios - EMR Medical Set 1",
+    "version": 1,
+    "count": 2,
+    "focus": "emr",
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "passMark": 70,
+    "disclaimer": "Unofficial practice scenarios modeled on EMALB exam format. Clinical content follows the BC Provincial Examination Guidelines (current to June 15, 2026) and is written to EMR scope of practice."
+  },
+  "scenarios": [
+    {
+      "id": "emd-01",
+      "type": "medical",
+      "focus": "emr",
+      "titleEn": "Witnessed Collapse in a Gym - Adult Cardiac Arrest, CPR and AED",
+      "titleZh": "健身房目击倒地——成人心脏骤停，CPR 与 AED",
+      "protocols": [
+        "Adult CPR/AED",
+        "Treatable Causes of Cardiac Arrest",
+        "Oxygen Administration"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "0715 hrs. Code 3 to a community recreation centre gym in Kamloops. A 68-year-old man has collapsed mid-workout. Staff are performing CPR and the wall-mounted AED is being brought over. Fire first responders are 4 minutes out. Royal Inland Hospital is 10 minutes away; the nearest PCP car is 8 minutes behind you.",
+      "dispatchZh": "07:15，Code 3 前往 Kamloops 一家社区活动中心的健身房。一名 68 岁男性在锻炼中倒地。工作人员正在做 CPR，墙上的 AED 正被取来。消防第一响应人员 4 分钟后到达。Royal Inland 医院距离 10 分钟车程；最近的 PCP 车在你之后 8 分钟到达。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: the collapse was witnessed by staff at 0710, bystander CPR started within about a minute, and the caller states the patient is not breathing normally. His wife is on scene.",
+          "infoZh": "调度补充：工作人员于 07:10 目击其倒地，旁观者约一分钟内就开始了 CPR，报案人称患者呼吸不正常。他的妻子在现场。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge and plan resuscitation equipment to the patient's side: AED, oxygen, BVM, oropharyngeal airways, suction, and the stretcher",
+              "actionZh": "确认出车信息，并规划把复苏装备直接带到患者身边：AED、氧气、BVM、口咽通气道、吸引器和担架。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Assign crew roles before arrival - who takes compressions, who manages the airway and AED - and plan to rotate compressors every 2 minutes",
+              "actionZh": "到场前先分好组员角色——谁负责按压、谁负责气道和 AED——并计划每 2 分钟轮换一次按压者。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Recognize from dispatch that this is a witnessed arrest with early bystander CPR - a potentially shockable rhythm - and plan to run the resuscitation on scene rather than moving the patient early",
+              "actionZh": "从派遣信息判断这是有目击、且旁观者早期就做了 CPR 的骤停——很可能是可除颤心律——并计划在现场原地进行复苏，而不是过早搬动患者。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Bright, open gym floor with equipment pushed aside; no hazards. One patient: a 68-year-old man supine on a rubber mat. A staff member is doing chest compressions; another arrives with the AED. The patient's wife stands nearby, distraught, saying 'he grabbed his chest and went down'. Fire is 3 minutes out.",
+          "infoZh": "考官脚本：健身房场地明亮开阔，器械已被推开，无危险源。只有一名患者：68 岁男性，仰卧在橡胶垫上。一名工作人员正在做胸外按压；另一名刚把 AED 拿到。患者的妻子站在旁边，情绪崩溃，说「他抓着胸口就倒下去了」。消防 3 分钟后到达。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (none), environment (indoor, dry), nature of illness (witnessed medical collapse with chest pain - suspected cardiac arrest), people (one patient, bystanders performing CPR) and resources (fire for CPR manpower, PCP car en route)",
+              "actionZh": "口头说出危险源（无）、环境（室内、干燥）、疾病性质（目击到的内科性倒地，倒地前抓胸口——怀疑心脏骤停）、人员（一名患者，旁观者正在做 CPR）以及资源（消防协助按压人力，PCP 车在途中）。",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves and eye protection before taking over patient contact",
+              "actionZh": "在接手患者之前戴好手套和护目镜。",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "First look: older man, motionless, skin grey, no chest movement apart from compressions; direct the bystander to continue CPR until your crew is positioned to take over without a gap",
+              "actionZh": "第一眼印象：老年男性，一动不动，肤色灰暗，除按压外胸廓无起伏；指示旁观者继续 CPR，直到你的组员就位、可以无缝接手为止。",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "EXAMINER (give only when assessed): the patient is unresponsive to voice and pain. When compressions are paused for your check he has occasional gasping (agonal) breaths and NO carotid pulse - the breathing and pulse check must be done simultaneously and take no more than 10 seconds. Airway: clear, no vomit. Modified rapid body survey during CPR: no hemorrhage, no medical-alert jewelry on the wrists, a chain with a medic-alert tag on his chest reads 'CAD - stents'. UNSTABLE: cardiac arrest.",
+          "infoZh": "考官（仅在考生实际评估时给出）：患者对言语和疼痛刺激均无反应。暂停按压检查时，他只有偶发的喘息样（agonal）呼吸，且颈动脉搏动消失——呼吸和脉搏必须同时检查，总时长不得超过 10 秒。气道：通畅，无呕吐物。CPR 期间的改良快速体格检查：无出血，手腕无医疗警示手环，胸前挂链上的医疗警示牌写着「冠心病——支架植入」。不稳定判定：心脏骤停。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC: unresponsive to voice and pain - U on AVPU",
+              "actionZh": "评估意识水平：对言语和疼痛刺激均无反应——AVPU 评级为 U。",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Confirm cardiac arrest correctly: assess breathing and the carotid pulse simultaneously, taking no more than 10 seconds, and treat gasping breaths as not breathing",
+              "actionZh": "正确确认心脏骤停：同时评估呼吸和颈动脉搏动，总时长不超过 10 秒，并把喘息样呼吸当作没有呼吸来处理。",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Take over high-quality compressions with no gap: rate 100-120 per minute, depth 5-6 cm, full recoil after each compression, interruptions kept under 5 seconds",
+              "actionZh": "无间断接手高质量按压：频率 100–120 次/分，深度 5–6 厘米，每次按压后完全回弹，任何中断控制在 5 秒以内。",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Open the airway, insert an oropharyngeal airway, and keep suction within reach; ventilate at a 30:2 ratio with a BVM without over-ventilating",
+              "actionZh": "开放气道，置入口咽通气道，吸引器放在触手可及处；用 BVM 以 30:2 的比例通气，避免过度通气。",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Attach oxygen to the BVM as soon as practical, but never delay compressions or the first ventilations to connect oxygen",
+              "actionZh": "在可行时尽快把氧气接上 BVM，但绝不能为了接氧气而延误按压或最初的通气。",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position the AED and analyze as soon as it is available - CPR continues while the pads go on and while the AED charges",
+              "actionZh": "AED 一到就立即贴片分析——贴片期间和 AED 充电期间按压都不停。",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Complete a modified rapid body survey during CPR: check for hemorrhage and medical-alert identification, and report the 'CAD - stents' tag",
+              "actionZh": "在 CPR 进行的同时完成改良快速体格检查：查看有无出血和医疗警示标识，并报告「冠心病——支架」的警示牌。",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note the skin: grey, cool, diaphoretic",
+              "actionZh": "记录皮肤情况：灰暗、发凉、大汗。",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. First analysis: SHOCK ADVISED. Deliver a single shock and resume CPR immediately, including during the charging phase. CPR is more effective while stationary: this adult arrest is worked on scene - intra-arrest transport is reserved for paediatric, hypothermic, traumatic, or treatable-cause arrests. After the second analysis and shock (about 8 minutes in) the patient coughs and moves: signs of ROSC. A carotid pulse is present. From this moment he is a post-ROSC unstable patient: Rapid Transport Category, packaged and ready to load within 15 minutes, AED left attached, PCP intercept en route.",
+          "infoZh": "决策点。第一次分析：建议除颤。给一次电击后立即恢复 CPR，充电期间也要持续按压。原地不动时 CPR 质量最高：这类成人骤停应在现场进行复苏——按压途中转运只保留给儿科、低体温、创伤或存在可逆病因的骤停。第二次分析和电击后（约第 8 分钟），患者咳嗽并出现肢体活动：这是 ROSC（自主循环恢复）的迹象，颈动脉搏动恢复。从这一刻起他是 ROSC 后的不稳定患者：按 RTC 处理，15 分钟内打包完毕达到可装载状态，AED 电极保持连接，与 PCP 车在途中会合。",
+          "expected": [
+            {
+              "actionEn": "Verbalize the on-scene resuscitation decision: adult arrest is worked where he lies because moving the patient degrades CPR quality; state the exceptions (paediatric, hypothermia, trauma, treatable causes)",
+              "actionZh": "口头说出「原地复苏」的决策：成人骤停就在患者倒下的位置进行抢救，因为搬动会破坏 CPR 质量；并说出例外情形（儿科、低体温、创伤、可逆病因）。",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Deliver single shocks with CPR resumed immediately after each, and continue compressions while the AED is charging",
+              "actionZh": "每次只给单次电击，电击后立即恢复 CPR；AED 充电期间按压不停。",
+              "weight": 25,
+              "rubricRef": "skill-cpr-aed"
+            },
+            {
+              "actionEn": "Recognize ROSC from signs of life, confirm the carotid pulse, and re-categorize as an unstable post-ROSC patient: RTC, ready to load within 15 minutes, AED still attached",
+              "actionZh": "从生命迹象识别 ROSC，确认颈动脉搏动，并将其重新归类为 ROSC 后的不稳定患者：按 RTC 处理，15 分钟内达到可装载状态，AED 电极保持连接。",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Arrange the PCP intercept en route instead of waiting on scene",
+              "actionZh": "安排在途中与 PCP 车会合，而不是留在现场等待。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "Collateral history from the wife (the patient is unresponsive): he complained of chest heaviness while warming up at 0700 and collapsed at 0710. WIFE'S TRAP: 'He always said he wouldn't want machines keeping him alive.' There is NO written DNR or No-CPR order on scene - resuscitation continues unless a verifiable DNR document is produced. PMHx: heart attack in 2021 with two stents, hypertension, high cholesterol. Meds: metoprolol, atorvastatin, low-dose Aspirin daily. Allergies: none known. LOI: toast and coffee at 0630.",
+          "infoZh": "旁证病史来自妻子（患者无反应）：他 07:00 热身时诉胸口发沉，07:10 倒地。妻子设下的陷阱：「他总说过不想靠机器维持生命。」现场没有任何书面 DNR 或「不做 CPR」的指令——除非出示可核实的 DNR 文件，否则复苏必须继续。既往史：2021 年心肌梗死并植入两枚支架、高血压、高血脂。用药：metoprolol、atorvastatin、每日小剂量 Aspirin。过敏史：无已知过敏。最后进食：06:30 吐司和咖啡。",
+          "expected": [
+            {
+              "actionEn": "Establish the chief complaint from collateral sources: witnessed collapse with cardiac arrest, preceded by chest heaviness",
+              "actionZh": "通过旁证确定主诉：目击倒地并心脏骤停，倒地前有胸口发沉。",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "Take the HxC/C from the wife: exact time of collapse, symptoms before it, whether CPR was immediate, and any down time without CPR",
+              "actionZh": "向妻子采集现病史：确切倒地时间、倒地前的症状、CPR 是否立即开始、有没有无人按压的空窗时间。",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Handle the DNR statement correctly: a verbal recollection is not a verifiable DNR - state that resuscitation continues, respectfully, and ask whether any written order exists",
+              "actionZh": "正确处理 DNR 说法：口头转述不构成可核实的 DNR——礼貌地说明复苏将继续进行，并询问是否存在书面指令。",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Past medical history",
+              "actionZh": "既往病史。",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications",
+              "actionZh": "用药史。",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史。",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "Last oral intake",
+              "actionZh": "最后一次进食进饮。",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 (immediately post-ROSC, completed in under 3 minutes): GCS 3 (E1 V1 M1); BP 92/58; carotid and weak radial pulse 108, regular; respirations 6, agonal and inadequate - ventilations are being assisted with a BVM at 10-12 per minute; skin grey, cool, diaphoretic; pupils equal, sluggish; SpO2 91% during assisted ventilation on 15 L, rising; BGL 7.2 mmol/L (indicated - unconscious patient); temperature not indicated. As a priority patient the second set is due within 7-8 minutes.",
+          "infoZh": "第 1 组（ROSC 后立即测量，3 分钟内完成）：GCS 3（E1 V1 M1）；血压 92/58；颈动脉及微弱桡动脉搏动 108 次/分，规则；呼吸 6 次/分，喘息样、不足——正在以 BVM 按 10–12 次/分辅助通气；皮肤灰暗、湿冷、大汗；瞳孔等大、对光反应迟钝；15 L 氧辅助通气下 SpO2 91% 并在上升；血糖 7.2 mmol/L（有指征——患者昏迷）；体温无测量指征。作为优先患者，第二组生命体征应在 7–8 分钟内完成。",
+          "expected": [
+            {
+              "actionEn": "GCS with all three components stated separately",
+              "actionZh": "GCS 评分，并分别说出睁眼、语言、运动三项的得分。",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "Blood pressure by auscultation - a systolic of 92 post-ROSC needs close tracking",
+              "actionZh": "用听诊法测血压——ROSC 后收缩压 92，必须密切追踪变化。",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate, rhythm and quality at the carotid and radial",
+              "actionZh": "在颈动脉和桡动脉分别评估脉搏的频率、节律和强弱。",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respiratory rate and adequacy - 6 agonal breaths per minute is inadequate and assisted ventilation must continue",
+              "actionZh": "呼吸频率与是否足够——每分钟 6 次喘息样呼吸属于通气不足，必须继续辅助通气。",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin colour, temperature and moisture assessed hands-on",
+              "actionZh": "用手实际触摸评估皮肤的颜色、温度和干湿。",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils - size, equality and reaction",
+              "actionZh": "瞳孔——大小、是否等大、对光反应。",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 monitored continuously during assisted ventilation, target 94% or above",
+              "actionZh": "辅助通气期间持续监测 SpO2，目标 94% 及以上。",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "Blood glucose - indicated in every unconscious patient",
+              "actionZh": "血糖——对所有昏迷患者都有测量指征。",
+              "weight": 5,
+              "rubricRef": "blood-glucose"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, taken from the wife en route and kept brief. General - well until this morning; CNS - no seizures, no strokes; respiratory - no complaints; cardiovascular - angina since 2021, episodes more frequent this past week, saw his GP two days ago; GI/GU - nil; integumentary - nil; musculoskeletal - nil; endocrine - no diabetes; EENT - nil.",
+          "infoZh": "仅 PCP 需要，途中向妻子简要采集。全身情况——今晨之前一切正常；中枢神经——无癫痫发作史、无卒中史；呼吸——无不适；心血管——2021 年起有心绞痛，最近一周发作变频繁，两天前刚看过家庭医生；消化/泌尿——无异常；皮肤——无异常；肌肉骨骼——无异常；内分泌——无糖尿病；眼耳鼻喉——无异常。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "系统问诊——全身健康状况。",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "系统问诊——中枢神经系统。",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory",
+              "actionZh": "系统问诊——呼吸系统。",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular (worsening angina this week is the key positive)",
+              "actionZh": "系统问诊——心血管系统（最近一周心绞痛加重是关键阳性发现）。",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU",
+              "actionZh": "系统问诊——消化/泌尿系统。",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "系统问诊——皮肤。",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "系统问诊——肌肉骨骼系统。",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "系统问诊——内分泌系统。",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "系统问诊——眼耳鼻喉。",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe: head - small abrasion on the occiput from the fall onto the mat, no depression; neck - trachea midline, no JVD, medic-alert chain documented; chest - crepitus over the sternum consistent with CPR, equal air entry with BVM ventilations, no wounds; abdomen - soft, slightly distended (air from ventilations); back - checked during the transfer to the stretcher, nil; upper extremities - nil, radial pulses now present bilaterally; lower extremities - nil, pedal pulses present.",
+          "infoZh": "途中从头到脚检查：头部——倒在垫子上时枕部留下小片擦伤，无凹陷；颈部——气管居中，无颈静脉怒张，记录医疗警示挂链；胸部——胸骨处有与 CPR 相符的骨擦感，BVM 通气下双肺呼吸音对称，无伤口；腹部——柔软、轻度胀气（通气进气所致）；背部——移上担架床时检查，无异常；上肢——无异常，双侧桡动脉搏动已恢复；下肢——无异常，足背动脉搏动可及。",
+          "expected": [
+            {
+              "actionEn": "Head and neck examined, including the occiput for injury from the collapse",
+              "actionZh": "检查头颈部，包括查看倒地时可能撞伤的枕部。",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest examined with auscultation during ventilations; document the CPR-related sternal crepitus without stopping compressions-quality care",
+              "actionZh": "通气期间听诊检查胸部；记录 CPR 造成的胸骨骨擦感，且不因此降低照护质量。",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen examined in four quadrants; note gastric distension and keep suction ready",
+              "actionZh": "腹部按四个象限检查；注意胃胀气，吸引器保持随手可用。",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back examined during the stretcher transfer",
+              "actionZh": "移上担架床时一并检查背部。",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Upper extremities examined with pulses reassessed",
+              "actionZh": "检查上肢并复评脉搏。",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            },
+            {
+              "actionEn": "Lower extremities examined with pulses reassessed",
+              "actionZh": "检查下肢并复评脉搏。",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "EMR SCOPE for this call: high-quality CPR with operator rotation every 2 minutes, AED applied and used with single shocks, oropharyngeal airway, suction (10-15 seconds per pass in an adult), BVM ventilation with oxygen, and post-ROSC care - continued assisted ventilation at 10-12 per minute to keep SpO2 at or above 94% without hyperventilating, supine positioning, warmth, AED left attached for re-arrest, and rapid transport. OUT OF EMR SCOPE and verbalized: supraglottic airway insertion, IV access and IV medications - the PCP intercept provides these. Continue resuscitation until ROSC, transfer of care, or the stopping rule: 30 minutes with no ROSC and no defibrillations, or 40 minutes if there was ROSC at any time or any defibrillation.",
+          "infoZh": "本次出车属于 EMR 授权范围内的处置：高质量 CPR 并每 2 分钟轮换按压者、贴用 AED 并按单次电击原则除颤、口咽通气道、吸引（成人每次 10–15 秒）、接氧 BVM 通气，以及 ROSC 后处置——以 10–12 次/分继续辅助通气、把 SpO2 维持在 94% 及以上且不过度通气、仰卧位、保暖、AED 电极保持连接以防再次骤停，并快速转运。超出 EMR 范围、需要口头说明的：置入声门上气道、静脉通路和静脉药物——这些由途中会合的 PCP 提供。复苏应持续到 ROSC、移交，或达到终止标准：全程无 ROSC 且未除颤满 30 分钟；若曾有 ROSC 或曾除颤，则为 40 分钟。",
+          "expected": [
+            {
+              "actionEn": "CPR/AED skill performed to standard: correct hand position, rate 100-120, depth 5-6 cm, full recoil, operators switched every 2 minutes, compressions continued while the AED charges",
+              "actionZh": "CPR/AED 技能达标：按压位置正确，频率 100–120 次/分，深度 5–6 厘米，完全回弹，每 2 分钟换人，AED 充电期间按压不停。",
+              "weight": 25,
+              "rubricRef": "skill-cpr-aed"
+            },
+            {
+              "actionEn": "Airway management: OPA sized and inserted, suction used correctly for no more than 10-15 seconds per pass",
+              "actionZh": "气道管理：选对尺寸并置入口咽通气道，吸引操作正确、每次不超过 10–15 秒。",
+              "weight": 25,
+              "rubricRef": "skill-airway-mgmt"
+            },
+            {
+              "actionEn": "Breathing management: two-person BVM technique with visible chest rise confirmed, 30:2 during the arrest, then 10-12 per minute after ROSC without hyperventilation",
+              "actionZh": "呼吸管理：双人 BVM 手法并确认胸廓起伏，骤停期间按 30:2，ROSC 后改为 10–12 次/分，避免过度通气。",
+              "weight": 25,
+              "rubricRef": "skill-breathing-mgmt"
+            },
+            {
+              "actionEn": "Post-ROSC bundle: AED left attached, oxygen titrated to SpO2 at or above 94%, patient kept supine and warm, and the crew briefed to restart CPR immediately if the pulse is lost",
+              "actionZh": "ROSC 后处置一揽子：AED 电极保持连接，氧滴定至 SpO2 94% 及以上，保持仰卧并保暖，并向组员交代——一旦脉搏消失立即重启 CPR。",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Verbalize that supraglottic airways and IV medications are outside EMR scope; transport with the PCP intercept en route",
+              "actionZh": "口头说明声门上气道和静脉药物超出 EMR 授权范围；立即转运并在途中与 PCP 会合。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess ABCs and interventions after every move and at least every 5 minutes. Set 2 (en route, 7 minutes after set 1): GCS 4 (E1 V1 M2); BP 104/64; pulse 96, stronger, regular; spontaneous respirations 8, still assisted; skin pale, warmer; pupils equal, reacting; SpO2 96% assisted on 15 L. He is trending up but remains at high risk of re-arrest: continuous pulse monitoring, suction in hand, AED attached. If the pulse is lost at any reassessment, CPR restarts immediately and the AED analyzes.",
+          "infoZh": "每次搬动后以及至少每 5 分钟复评一次 ABC 和已做的处置。第 2 组（途中，第 1 组之后 7 分钟）：GCS 4（E1 V1 M2）；血压 104/64；脉搏 96 次/分，较前有力、规则；自主呼吸 8 次/分，仍在辅助通气；皮肤苍白、转暖；瞳孔等大、有对光反应；15 L 辅助通气下 SpO2 96%。趋势在好转，但再次骤停的风险仍然很高：持续监测脉搏，吸引器拿在手边，AED 保持连接。任何一次复评发现脉搏消失，都要立即重启 CPR 并用 AED 分析。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and all interventions after each move and at least every 5 minutes, with the carotid pulse specifically re-checked",
+              "actionZh": "每次搬动后以及至少每 5 分钟复评一次 ABC 和全部处置，并特别复查颈动脉搏动。",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within 7-8 minutes of the first, with the improving trend interpreted out loud",
+              "actionZh": "在第一组之后 7–8 分钟内完成第二组完整生命体征，并口头解读好转的趋势。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Continue assisted ventilation while spontaneous respirations remain inadequate at 8 per minute",
+              "actionZh": "自主呼吸仍只有 8 次/分、尚不足够时，继续辅助通气。",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "State the re-arrest plan: if any reassessment finds no pulse, compressions restart immediately and the AED analyzes",
+              "actionZh": "说出再骤停预案：任何一次复评发现无脉搏，立即恢复按压并让 AED 分析。",
+              "weight": 100,
+              "rubricRef": "circulation"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Priority patient - hospital notification en route with the arrest summary. The hand-off must state the collapse time, bystander CPR, the number of shocks, the time of ROSC, and the vital sign trend. PCR within 5 minutes, including exact event times.",
+          "infoZh": "优先患者——途中向医院预报骤停概要。交接必须说明倒地时间、旁观者 CPR、除颤次数、ROSC 时间以及生命体征趋势。5 分钟内完成 PCR，并写清各事件的确切时间。",
+          "expected": [
+            {
+              "actionEn": "En-route hospital notification with the arrest and ROSC summary",
+              "actionZh": "途中向医院预报，内容包含骤停与 ROSC 概要。",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete verbal hand-off with times: collapse, CPR start, shocks, ROSC, and both vital sign sets",
+              "actionZh": "完整口头交接并带时间点：倒地、CPR 开始、除颤、ROSC，以及两组生命体征。",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR completed within 5 minutes",
+              "actionZh": "5 分钟内完成准确的 PCR 书面记录。",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "immediately post-ROSC, within 3 minutes",
+          "gcs": "3 (E1 V1 M1)",
+          "bp": "92/58",
+          "pulse": "108 weak regular (carotid and radial)",
+          "resp": "6 agonal, assisted at 10-12/min",
+          "skin": "grey cool diaphoretic",
+          "pupils": "equal, sluggish",
+          "spo2": "91% assisted on 15 L, rising",
+          "bgl": "7.2 mmol/L",
+          "temp": null
+        },
+        {
+          "set": 2,
+          "timeHint": "en route, 7 minutes later - improving but high re-arrest risk",
+          "gcs": "4 (E1 V1 M2)",
+          "bp": "104/64",
+          "pulse": "96 stronger regular",
+          "resp": "8 spontaneous, still assisted",
+          "skin": "pale, warming",
+          "pupils": "equal, reacting",
+          "spo2": "96% assisted on 15 L",
+          "bgl": "7.2 mmol/L",
+          "temp": null
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Taking longer than 10 seconds to confirm pulselessness, or treating agonal gasps as breathing and never starting CPR - determining absent pulses and failing to intervene immediately is a 100% deduction",
+        "Performing chest compressions on a patient with a pulse (e.g., continuing after clear ROSC without a pulse check) - an act that may jeopardize the patient is a 100% deduction",
+        "Stopping compressions while the AED charges, pausing longer than 5 seconds for ventilations or pad placement - CPR quality errors are deducted under the CPR/AED skill",
+        "Accepting the wife's verbal 'he wouldn't want machines' as a DNR - only a verifiable written DNR or No-CPR order stops resuscitation",
+        "Loading and transporting during the active arrest without a reversible cause - CPR is more effective while stationary; intra-arrest transport is for paediatric, hypothermic, traumatic, or treatable causes",
+        "Hyperventilating after ROSC or ventilating without confirming chest rise - failing to assess ventilation effectiveness is a breathing management deduction",
+        "Prioritizing oxygen hookup before starting ventilations, or delaying the AED to finish another task - early CPR and early defibrillation must coexist"
+      ],
+      "criticalPitfallsZh": [
+        "确认无脉搏用时超过 10 秒，或把喘息样呼吸当成正常呼吸而始终没有开始 CPR——判断出脉搏消失却不立即干预，扣 100%。",
+        "对有脉搏的患者做胸外按压（例如 ROSC 已很明确却不查脉搏、继续按压）——做出可能危及患者的行为，扣 100%。",
+        "AED 充电期间停止按压、通气或贴片造成超过 5 秒的中断——CPR 质量问题按 CPR/AED 技能项扣分。",
+        "把妻子口头的「他不想靠机器活着」当成 DNR——只有可核实的书面 DNR 或「不做 CPR」指令才能终止复苏。",
+        "在没有可逆病因的情况下于骤停抢救期间装车转运——原地不动时 CPR 质量最高；按压途中转运只适用于儿科、低体温、创伤或可逆病因。",
+        "ROSC 后过度通气，或通气时不确认胸廓起伏——未评估通气效果按呼吸管理项扣分。",
+        "先忙着接氧气才开始通气，或为了做别的事推迟 AED——早期 CPR 和早期除颤必须并行，互不拖延。"
+      ],
+      "emrVariantEn": "EMR owns every life-saving intervention in this call: confirming arrest with a simultaneous breathing-and-pulse check under 10 seconds, uninterrupted high-quality compressions with 2-minute rotations, OPA and suction, 30:2 BVM ventilation with oxygen, the full AED sequence with single shocks and compressions during charging, and the post-ROSC bundle - assisted ventilation at 10-12 per minute titrated to SpO2 94% or above, warmth, AED left attached, and rapid transport with a PCP intercept. Supraglottic airways and IV access are outside EMR scope; nothing about them changes the on-scene priorities.",
+      "emrVariantZh": "这一场里所有真正救命的操作都在 EMR 授权范围内：10 秒内同时查呼吸和脉搏确认骤停、无间断的高质量按压并每 2 分钟轮换、口咽通气道加吸引、接氧 BVM 按 30:2 通气、完整的 AED 流程（单次电击、充电期间按压不停），以及 ROSC 后处置——以 10–12 次/分辅助通气并把 SpO2 滴定到 94% 及以上、保暖、AED 保持连接、快速转运并与 PCP 途中会合。声门上气道和静脉通路超出 EMR 范围；它们的缺位不改变现场的任何优先级。",
+      "pcpVariantEn": "PCP adds a supraglottic airway once high-quality arrest management is established, switching to continuous compressions with asynchronous ventilations, plus vascular access en route after ROSC. The AED sequence, compression standards, stopping rules and post-ROSC ventilation targets are identical to EMR.",
+      "pcpVariantZh": "PCP 在高质量骤停管理建立后追加置入声门上气道，改为不间断按压配合非同步通气，并在 ROSC 后于途中建立静脉通路。AED 流程、按压标准、终止标准和 ROSC 后的通气目标与 EMR 完全一致。",
+      "handoffModelEn": "This is a 68-year-old male who suffered a witnessed cardiac arrest at a gym at 0710 after complaining of chest heaviness. Bystander CPR started within one minute. We confirmed pulselessness and continued CPR; the AED advised shocks twice, and we delivered two shocks with ROSC at approximately 0722 - total downtime about 12 minutes with continuous CPR. He remains unresponsive, GCS 3 improving to 4, with spontaneous but inadequate respirations assisted by BVM at 10-12 per minute on 15 litres. Post-ROSC vitals: BP 92/58 rising to 104/64, pulse 108 settling to 96, SpO2 96% assisted, BGL 7.2, pupils equal and reacting. History from his wife: MI in 2021 with two stents, hypertension, high cholesterol, worsening angina this past week; medications metoprolol, atorvastatin and daily low-dose Aspirin; no known allergies; last ate at 0630. Treatments: OPA, suction ready, two-person BVM, AED still attached, kept warm and supine. Sternal crepitus from CPR is documented. No verifiable DNR exists; his wife raised a verbal recollection only.",
+      "handoffModelZh": "这是一名 68 岁男性，07:10 在健身房诉胸口发沉后目击倒地、心脏骤停。旁观者一分钟内开始 CPR。我们确认无脉搏后继续 CPR；AED 两次建议除颤，共给两次电击，约 07:22 恢复自主循环——总停跳时间约 12 分钟，期间按压未中断。他目前仍无反应，GCS 3 升至 4，有自主呼吸但不足，正以接 15 L 氧的 BVM 按 10–12 次/分辅助通气。ROSC 后生命体征：血压 92/58 升至 104/64，脉搏 108 回落到 96，辅助通气下 SpO2 96%，血糖 7.2，瞳孔等大、有对光反应。妻子提供的病史：2021 年心肌梗死并植入两枚支架、高血压、高血脂，最近一周心绞痛加重；用药为 metoprolol、atorvastatin 和每日小剂量 Aspirin；无已知过敏；06:30 最后进食。我们的处置：口咽通气道、吸引器备好、双人 BVM、AED 电极保持连接、保暖并仰卧。已记录 CPR 造成的胸骨骨擦感。现场不存在可核实的 DNR，妻子只提到口头说法。",
+      "pcrKeyPoints": {
+        "cc": "Witnessed cardiac arrest at 0710, preceded by chest heaviness",
+        "hxcc": "Chest heaviness at 0700 while warming up, witnessed collapse 0710, bystander CPR within 1 minute, no down time without CPR; two shocks delivered, ROSC approximately 0722; worsening angina over the past week per wife",
+        "pmhx": "MI 2021 with two stents, hypertension, hyperlipidemia",
+        "meds": "Metoprolol, atorvastatin, low-dose Aspirin daily",
+        "allergies": "None known",
+        "treatments": [
+          "Pulselessness confirmed with simultaneous breathing and carotid check under 10 seconds",
+          "High-quality CPR 30:2, operators rotated every 2 minutes, interruptions under 5 seconds",
+          "AED applied, two single shocks with compressions during charging, CPR resumed immediately after each",
+          "OPA inserted, suction ready, two-person BVM with oxygen",
+          "Post-ROSC: assisted ventilation 10-12/min titrated to SpO2 94% or above, AED left attached, warmth, supine",
+          "No verifiable DNR - resuscitation continued; wife's verbal statement documented",
+          "RTC transport with PCP intercept en route, hospital notified"
+        ],
+        "findings": [
+          "Unresponsive, agonal respirations, no carotid pulse on arrival",
+          "ROSC at approximately 0722 after two shocks, total downtime about 12 minutes",
+          "GCS 3 improving to 4, spontaneous respirations 8/min still inadequate",
+          "BP 92/58 to 104/64, pulse 108 to 96, SpO2 96% assisted",
+          "Medic-alert tag: CAD - stents; sternal crepitus from CPR; occipital abrasion from the fall"
+        ]
+      }
+    },
+    {
+      "id": "emd-02",
+      "type": "medical",
+      "focus": "emr",
+      "titleEn": "Six-Year-Old With Severe Asthma Exacerbation - Pediatric Respiratory Distress",
+      "titleZh": "六岁儿童哮喘急性发作——儿科呼吸窘迫",
+      "protocols": [
+        "SOB With History of Asthma/COPD",
+        "Oxygen Administration"
+      ],
+      "priority": "rtc",
+      "dispatchEn": "1930 hrs. Code 3 to a townhouse in Langley. A 6-year-old girl with known asthma is having severe difficulty breathing. Her mother says she 'can barely talk'. Langley Memorial Hospital is 12 minutes away. No fire response tonight; the nearest PCP car is 10 minutes out.",
+      "dispatchZh": "19:30，Code 3 前往 Langley 一处联排住宅。一名已知患哮喘的 6 岁女孩出现严重呼吸困难，母亲说她「几乎说不出话」。Langley Memorial 医院距离 12 分钟车程。今晚无消防出动；最近的 PCP 车 10 分钟后到达。",
+      "phases": [
+        {
+          "id": "dispatch",
+          "infoEn": "Dispatch adds: the child has had a cold for two days and her puffer 'is not working tonight'. She is conscious. Mother is alone with her.",
+          "infoZh": "调度补充：孩子感冒两天，今晚「吸入器不管用了」。她意识清醒。家里只有母亲和她。",
+          "expected": [
+            {
+              "actionEn": "Acknowledge and plan pediatric-sized equipment: pediatric BVM and masks, pediatric oxygen delivery, MDI spacer with a pediatric mask, and suction",
+              "actionZh": "确认信息，并规划儿科尺寸的装备：儿科 BVM 和面罩、儿科给氧用具、带儿科面罩的 MDI 储雾罐，以及吸引器。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Plan the pediatric approach in advance: assess from the doorway, keep the child on her mother's lap, get to her eye level, and never force interventions that will agitate her",
+              "actionZh": "提前规划儿科接触方式：进门先远观评估，让孩子留在母亲腿上，蹲到与她平视的高度，绝不强行做会让她哭闹挣扎的操作。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Anticipate a Rapid Transport Category call: a child in respiratory distress whose home salbutamol is failing",
+              "actionZh": "预判这将是一场 RTC：呼吸窘迫的儿童，且家用 salbutamol 已经不起效。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "scene",
+          "infoEn": "EXAMINER SCRIPT: Tidy townhouse living room, no hazards, good lighting. One patient: a small girl sitting bolt upright on her mother's lap, leaning forward on her hands. From the doorway - Pediatric Assessment Triangle: APPEARANCE - anxious, tired, but interactive and clinging to her mother; WORK OF BREATHING - audible wheeze, nasal flaring, visible intercostal and subcostal retractions; CIRCULATION TO SKIN - pale, no cyanosis. Mother is frightened but cooperative. A used salbutamol MDI sits on the table.",
+          "infoZh": "考官脚本：整洁的联排住宅客厅，无危险源，光线良好。只有一名患者：小女孩直挺挺坐在母亲腿上，双手撑膝、身体前倾。从门口远观——儿科评估三角：外观——焦虑、疲惫，但仍有互动、紧紧贴着母亲；呼吸做功——可闻及喘鸣，鼻翼扇动，可见肋间及肋下凹陷；皮肤循环——苍白，无发绀。母亲很害怕但配合。桌上放着一支用过的 salbutamol 吸入器。",
+          "expected": [
+            {
+              "actionEn": "Verbalize hazards (none), environment, nature of illness (asthma exacerbation on top of a cold), people (one patient plus mother) and resources (PCP car en route)",
+              "actionZh": "口头说出危险源（无）、环境、疾病性质（感冒诱发的哮喘急性发作）、人员（一名患者加一位母亲）以及资源（PCP 车在途中）。",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Don gloves; use a mask given the child's infectious respiratory symptoms",
+              "actionZh": "戴手套；因孩子有呼吸道感染症状，同时戴上口罩。",
+              "weight": 5,
+              "rubricRef": "scene-ppe"
+            },
+            {
+              "actionEn": "Complete the Pediatric Assessment Triangle from the doorway and state the conclusion: abnormal work of breathing with a still-interactive child - respiratory distress, sick, move quickly",
+              "actionZh": "在门口完成儿科评估三角并说出结论：呼吸做功异常但孩子仍有互动——属呼吸窘迫，是重症，必须加快节奏。",
+              "weight": 5,
+              "rubricRef": "visual-assessment"
+            }
+          ]
+        },
+        {
+          "id": "primary",
+          "infoEn": "ACTOR (child): speaks 2-3 words at a time - 'can't... breathe...'. Alert, clinging to her mother. EXAMINER (give only when assessed): airway patent, no stridor, no drooling, no barking cough - this is lower airway, not croup or epiglottitis. Breathing: rate 40, prolonged expiration with diffuse expiratory wheeze in all fields, intercostal and subcostal retractions, nasal flaring. Radial pulse 132, strong, regular; capillary refill 2 seconds; skin pale, warm, dry. RAPID BODY SURVEY toe-to-head for this age: no hives or rash anywhere (helps rule out anaphylaxis), no swelling of lips or tongue, no injuries, eczema patches in the elbow creases. SpO2 89% on room air. UNSTABLE: respiratory distress with accessory muscle use.",
+          "infoZh": "演员（儿童）表现：一次只能说两三个字——「喘……不上……」。清醒，紧贴母亲。考官（仅在考生实际评估时给出）：气道通畅，无喘鸣音（stridor）、无流涎、无犬吠样咳嗽——问题在下气道，不是哮吼也不是会厌炎。呼吸：40 次/分，呼气相延长，双肺满布呼气相哮鸣音，肋间及肋下凹陷，鼻翼扇动。桡动脉搏动 132 次/分，有力、规则；毛细血管再充盈 2 秒；皮肤苍白、温暖、干燥。针对该年龄段采用从脚到头的快速体格检查：全身无风团无皮疹（有助排除过敏性休克），唇舌无肿胀，无外伤，肘窝有湿疹斑。室内空气下 SpO2 89%。不稳定判定：呼吸窘迫伴辅助呼吸肌参与。",
+          "expected": [
+            {
+              "actionEn": "Assess LOC age-appropriately: alert, interactive with her mother - and recognize that agitation or drowsiness in this child would signal deterioration",
+              "actionZh": "用适合年龄的方式评估意识：清醒、能与母亲互动——并认识到这孩子一旦出现烦躁或嗜睡就是恶化的信号。",
+              "weight": 15,
+              "rubricRef": "loc-avpu"
+            },
+            {
+              "actionEn": "Assess the airway and actively differentiate: no stridor, no drooling, no barking cough - lower airway bronchospasm, not croup or epiglottitis",
+              "actionZh": "评估气道并主动鉴别：无喘鸣音、无流涎、无犬吠样咳嗽——是下气道支气管痉挛，不是哮吼也不是会厌炎。",
+              "weight": 100,
+              "rubricRef": "airway"
+            },
+            {
+              "actionEn": "Assess breathing fully: rate 40, prolonged expiration, diffuse expiratory wheeze on auscultation of both sides, retractions and nasal flaring - inadequate and worsening",
+              "actionZh": "完整评估呼吸：40 次/分，呼气相延长，双侧听诊满布呼气相哮鸣音，伴凹陷征和鼻翼扇动——通气不足且在加重。",
+              "weight": 100,
+              "rubricRef": "breathing"
+            },
+            {
+              "actionEn": "Assess circulation: radial pulse 132 strong with capillary refill 2 seconds - perfusion still adequate",
+              "actionZh": "评估循环：桡动脉搏动 132 次/分、有力，毛细血管再充盈 2 秒——灌注尚可。",
+              "weight": 100,
+              "rubricRef": "circulation"
+            },
+            {
+              "actionEn": "Rapid body survey done toe-to-head for a young child, specifically checking for hives, lip or tongue swelling to rule out anaphylaxis",
+              "actionZh": "按幼儿习惯从脚到头完成快速体格检查，特别查看有无风团、唇舌肿胀，以排除过敏性休克。",
+              "weight": 100,
+              "rubricRef": "rapid-body-survey"
+            },
+            {
+              "actionEn": "Note the skin: pale, warm, dry, no cyanosis",
+              "actionZh": "记录皮肤情况：苍白、温暖、干燥，无发绀。",
+              "weight": 5,
+              "rubricRef": "skin-primary"
+            },
+            {
+              "actionEn": "High-flow oxygen for SpO2 89% with respiratory distress, delivered the least frightening way - mother holds the mask, or blow-by if the mask is refused; target SpO2 at or above 94%",
+              "actionZh": "SpO2 89% 且呼吸窘迫，给高流量氧，并用最不吓着孩子的方式——由母亲扶面罩，孩子拒绝就改用吹拂式给氧；目标 SpO2 94% 及以上。",
+              "weight": 15,
+              "rubricRef": "oxygen"
+            },
+            {
+              "actionEn": "Position of comfort: leave her sitting upright on her mother's lap - never force her supine and never separate her from her mother",
+              "actionZh": "舒适体位：让她继续直坐在母亲腿上——绝不强行放平，也绝不把她和母亲分开。",
+              "weight": 15,
+              "rubricRef": "patient-position"
+            }
+          ]
+        },
+        {
+          "id": "transport",
+          "infoEn": "Decision point. Respiratory distress with accessory muscle use makes this child unstable: Rapid Transport Category, ready to load within 15 minutes. Destination is the closest emergency department. Treatment starts on scene (first salbutamol course) and continues en route; the mother rides in the ambulance holding the child's hand.",
+          "infoZh": "决策点。呼吸窘迫伴辅助呼吸肌参与，这个孩子属于不稳定：按 RTC 处理，15 分钟内达到可装载状态。目的地是最近的急诊。治疗在现场开始（第一轮 salbutamol），途中继续；母亲随车、握着孩子的手。",
+          "expected": [
+            {
+              "actionEn": "Categorize as RTC out loud: pediatric respiratory distress with accessory muscle use and failing home salbutamol",
+              "actionZh": "明确口头判定为 RTC：儿科呼吸窘迫，辅助呼吸肌参与，且家用 salbutamol 已失效。",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Ready to load within 15 minutes, transported sitting up, with the remaining assessment done en route",
+              "actionZh": "15 分钟内达到可装载状态，保持坐位转运，其余评估留到途中完成。",
+              "weight": 25,
+              "rubricRef": "transport"
+            },
+            {
+              "actionEn": "Bring the mother in the ambulance: she is the child's consent-giver, historian, and the best tool for keeping the child calm",
+              "actionZh": "让母亲上救护车：她既是孩子的监护同意人和病史来源，也是让孩子保持安静的最好办法。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            }
+          ]
+        },
+        {
+          "id": "history",
+          "infoEn": "MOTHER ANSWERS: asthma diagnosed at age 4; two ER visits last winter, one of which needed an overnight admission - never intubated, never in ICU. A cold started two days ago; the wheeze began this afternoon and got worse tonight. She gave the home salbutamol MDI twice this evening - two puffs each time, no spacer - with little effect. Triggers: colds. PAIN: none - 'it's hard to breathe, it doesn't hurt'. PMHx: asthma, eczema. Meds: salbutamol MDI as needed; fluticasone inhaler daily but 'we've been forgetting it lately'. Allergies: none known - no food or drug allergies. LOI: small dinner at 1800, drinking poorly today. Weight: about 21 kg.",
+          "infoZh": "母亲回答：4 岁确诊哮喘；去年冬天去过两次急诊，其中一次留院过夜——从未插管、从未进过 ICU。两天前开始感冒；今天下午开始喘，入夜加重。今晚她给孩子喷过两次家里的 salbutamol 吸入器——每次两喷、没用储雾罐——几乎没有效果。诱因：感冒。疼痛：无——「只是喘不上气，不疼」。既往史：哮喘、湿疹。用药：salbutamol 吸入器按需使用；fluticasone 每日吸入，「但最近老忘」。过敏史：无已知过敏——无食物或药物过敏。最后进食：18:00 吃了一点晚饭，今天喝水也少。体重：约 21 公斤。",
+          "expected": [
+            {
+              "actionEn": "Establish the chief complaint: severe shortness of breath in a known asthmatic with a two-day cold",
+              "actionZh": "确定主诉：已知哮喘患儿感冒两天后出现的严重呼吸困难。",
+              "weight": 15,
+              "rubricRef": "chief-complaint"
+            },
+            {
+              "actionEn": "Take the HxC/C: onset and progression, what home treatment was given (doses, times, spacer or not) and its effect, plus the severity markers - prior admissions, ICU stays or intubations",
+              "actionZh": "采集现病史：起病和进展过程、在家用过什么治疗（剂量、时间、有没有用储雾罐）及其效果，再问严重度标志——既往住院、进 ICU 或插管史。",
+              "weight": 15,
+              "rubricRef": "history-of-cc"
+            },
+            {
+              "actionEn": "Ask the child's weight - every pediatric drug dose depends on it",
+              "actionZh": "询问孩子的体重——所有儿科药物剂量都依赖这个数字。",
+              "weight": 5,
+              "rubricRef": "pain-scale"
+            },
+            {
+              "actionEn": "Past medical history",
+              "actionZh": "既往病史。",
+              "weight": 5,
+              "rubricRef": "past-medical-history"
+            },
+            {
+              "actionEn": "Medications, including tonight's salbutamol doses and adherence to the daily preventer",
+              "actionZh": "用药史，包括今晚已用的 salbutamol 次数，以及每日预防药的依从情况。",
+              "weight": 5,
+              "rubricRef": "medications"
+            },
+            {
+              "actionEn": "Allergies",
+              "actionZh": "过敏史。",
+              "weight": 5,
+              "rubricRef": "allergies"
+            },
+            {
+              "actionEn": "Last oral intake, noting poor fluid intake today",
+              "actionZh": "最后一次进食进饮，并注意她今天饮水很少。",
+              "weight": 5,
+              "rubricRef": "last-oral-intake"
+            }
+          ]
+        },
+        {
+          "id": "vitals",
+          "infoEn": "Set 1 (on scene, completed in under 3 minutes, done gently on mother's lap): GCS 15; BP 98/64; pulse 132 strong regular; respirations 40, laboured, with expiratory wheeze; skin pale warm dry; pupils equal and reactive; SpO2 89% on room air, 92% once oxygen is accepted; BGL not indicated (alert, no altered LOC); temperature 37.9 C (indicated - two days of infectious symptoms). As a priority patient the second set is due 7-8 minutes after the first.",
+          "infoZh": "第 1 组（现场测量，3 分钟内完成，在母亲腿上轻柔进行）：GCS 15；血压 98/64；脉搏 132 次/分，有力规则；呼吸 40 次/分，费力，伴呼气相哮鸣音；皮肤苍白温暖干燥；瞳孔等大有反应；SpO2 室内空气 89%，接受吸氧后 92%；血糖无测量指征（清醒、无意识改变）；体温 37.9 摄氏度（有指征——感染症状已两天）。作为优先患者，第二组生命体征应在第一组之后 7–8 分钟内完成。",
+          "expected": [
+            {
+              "actionEn": "GCS with all three components stated separately",
+              "actionZh": "GCS 评分，并分别说出睁眼、语言、运动三项的得分。",
+              "weight": 5,
+              "rubricRef": "gcs"
+            },
+            {
+              "actionEn": "Blood pressure with a pediatric cuff",
+              "actionZh": "用儿科袖带测血压。",
+              "weight": 15,
+              "rubricRef": "blood-pressure"
+            },
+            {
+              "actionEn": "Pulse rate, rhythm and quality - and note 132 as the pre-salbutamol baseline for later comparison",
+              "actionZh": "脉搏的频率、节律和强弱——并把 132 记为用 salbutamol 前的基线，供之后对比。",
+              "weight": 15,
+              "rubricRef": "pulse"
+            },
+            {
+              "actionEn": "Respiratory rate, depth and character with both lung fields auscultated",
+              "actionZh": "呼吸的频率、深度和性质，并听诊双侧肺野。",
+              "weight": 15,
+              "rubricRef": "respirations"
+            },
+            {
+              "actionEn": "Skin assessed hands-on",
+              "actionZh": "用手实际触摸评估皮肤。",
+              "weight": 5,
+              "rubricRef": "skin-vitals"
+            },
+            {
+              "actionEn": "Pupils - size, equality and reaction",
+              "actionZh": "瞳孔——大小、是否等大、对光反应。",
+              "weight": 5,
+              "rubricRef": "pupils"
+            },
+            {
+              "actionEn": "SpO2 monitored continuously, on and off oxygen values recorded",
+              "actionZh": "持续监测 SpO2，分别记录吸氧前后的数值。",
+              "weight": 5,
+              "rubricRef": "pulse-oximetry"
+            },
+            {
+              "actionEn": "Temperature - indicated with two days of infectious symptoms",
+              "actionZh": "体温——感染症状已两天，有测量指征。",
+              "weight": 5,
+              "rubricRef": "temperature"
+            }
+          ]
+        },
+        {
+          "id": "fe",
+          "infoEn": "PCP ONLY, from the mother en route, kept brief. General - cold for two days, no other illness; CNS - nil; respiratory - cough and wheeze since this afternoon, no stridor at any point; cardiovascular - nil; GI/GU - drinking poorly today, no vomiting, fewer wet trips to the toilet; integumentary - eczema, no new rashes; musculoskeletal - nil; endocrine - nil; EENT - runny nose, no ear pain, no sore throat.",
+          "infoZh": "仅 PCP 需要，途中向母亲简要采集。全身情况——感冒两天，无其他疾病；中枢神经——无异常；呼吸——今天下午起咳嗽和喘，全程无喘鸣音；心血管——无异常；消化/泌尿——今天喝水少，无呕吐，小便次数也变少；皮肤——湿疹，无新发皮疹；肌肉骨骼——无异常；内分泌——无异常；眼耳鼻喉——流鼻涕，无耳痛，无咽痛。",
+          "expected": [
+            {
+              "actionEn": "FE - General health",
+              "actionZh": "系统问诊——全身健康状况。",
+              "weight": 5,
+              "rubricRef": "fe-general-health"
+            },
+            {
+              "actionEn": "FE - CNS",
+              "actionZh": "系统问诊——中枢神经系统。",
+              "weight": 5,
+              "rubricRef": "fe-cns"
+            },
+            {
+              "actionEn": "FE - Respiratory (no stridor at any point keeps the diagnosis in the lower airway)",
+              "actionZh": "系统问诊——呼吸系统（全程无喘鸣音，支持病变位于下气道）。",
+              "weight": 5,
+              "rubricRef": "fe-respiratory"
+            },
+            {
+              "actionEn": "FE - Cardiovascular",
+              "actionZh": "系统问诊——心血管系统。",
+              "weight": 5,
+              "rubricRef": "fe-cardiovascular"
+            },
+            {
+              "actionEn": "FE - GI/GU (poor intake and fewer wet diapers or toilet trips flag dehydration in a child)",
+              "actionZh": "系统问诊——消化/泌尿系统（进水少、小便次数减少提示儿童脱水）。",
+              "weight": 5,
+              "rubricRef": "fe-gi-gu"
+            },
+            {
+              "actionEn": "FE - Integumentary",
+              "actionZh": "系统问诊——皮肤。",
+              "weight": 5,
+              "rubricRef": "fe-integumentary"
+            },
+            {
+              "actionEn": "FE - Musculoskeletal",
+              "actionZh": "系统问诊——肌肉骨骼系统。",
+              "weight": 5,
+              "rubricRef": "fe-musculoskeletal"
+            },
+            {
+              "actionEn": "FE - Endocrine",
+              "actionZh": "系统问诊——内分泌系统。",
+              "weight": 5,
+              "rubricRef": "fe-endocrine"
+            },
+            {
+              "actionEn": "FE - EENT",
+              "actionZh": "系统问诊——眼耳鼻喉。",
+              "weight": 5,
+              "rubricRef": "fe-eent"
+            }
+          ]
+        },
+        {
+          "id": "exam",
+          "infoEn": "EN ROUTE head-to-toe, kept gentle and mostly observational: head/neck - nasal flaring, mild tracheal tug, no stridor, no drooling, moist lips; chest - intercostal and subcostal retractions, expiratory wheeze in all six auscultation sites, equal air entry, no crackles, no silent zones; abdomen - soft, moving with respiration; back - posterior fields auscultated, wheeze throughout; upper extremities - nil, capillary refill 2 seconds; lower extremities - nil, no cyanosis or clubbing.",
+      "infoZh": "途中从头到脚检查，动作轻柔、以观察为主：头颈——鼻翼扇动，轻度气管牵拉征，无喘鸣音，无流涎，口唇湿润；胸部——肋间及肋下凹陷，六个听诊点均有呼气相哮鸣音，双侧呼吸音对称，无湿啰音，无「安静区」；腹部——柔软，随呼吸起伏；背部——听诊后肺野，满布哮鸣音；上肢——无异常，毛细血管再充盈 2 秒；下肢——无异常，无发绀或杵状指。",
+          "expected": [
+            {
+              "actionEn": "Head and neck examined: work-of-breathing signs documented, airway red flags (stridor, drooling) rechecked",
+              "actionZh": "检查头颈部：记录呼吸做功的体征，并复查气道红旗（喘鸣音、流涎）。",
+              "weight": 5,
+              "rubricRef": "pe-head-neck"
+            },
+            {
+              "actionEn": "Chest auscultated at all six sites, listening specifically for silent zones - a quiet chest in asthma means worsening, not improvement",
+              "actionZh": "胸部六个听诊点全部听诊，特别留意「安静区」——哮喘患者胸音变安静意味着恶化，不是好转。",
+              "weight": 5,
+              "rubricRef": "pe-chest-lungs"
+            },
+            {
+              "actionEn": "Abdomen examined",
+              "actionZh": "检查腹部。",
+              "weight": 5,
+              "rubricRef": "pe-abdomen"
+            },
+            {
+              "actionEn": "Back examined with posterior lung fields auscultated",
+              "actionZh": "检查背部并听诊后肺野。",
+              "weight": 5,
+              "rubricRef": "pe-back"
+            },
+            {
+              "actionEn": "Upper extremities with capillary refill",
+              "actionZh": "检查上肢并测毛细血管再充盈。",
+              "weight": 5,
+              "rubricRef": "pe-upper-extremities"
+            },
+            {
+              "actionEn": "Lower extremities checked for cyanosis",
+              "actionZh": "检查下肢有无发绀。",
+              "weight": 5,
+              "rubricRef": "pe-lower-extremities"
+            }
+          ]
+        },
+        {
+          "id": "interventions",
+          "infoEn": "EMR SCOPE for this call: oxygen titrated toward SpO2 94% or above delivered in the least distressing way; salbutamol - MDI with spacer is strongly recommended because she has infectious respiratory symptoms; for a child over 20 kg the course is 10 x 100 mcg via MDI with spacer and pediatric mask, and it may be repeated up to 3 times; transport after the first course; verbalize the 6 rights; expect the pulse to rise after salbutamol. Position of comfort, mother beside her. BVM sized and ready: the trigger to ventilate is a tiring child with a falling respiratory rate, decreasing LOC, or a silent chest. OUT OF EMR SCOPE and verbalized: ipratropium, dexamethasone, IM epinephrine for severe unresolved bronchospasm, and CPAP - and CPAP is contraindicated in patients 12 and under regardless of provider level.",
+          "infoZh": "本次出车属于 EMR 授权范围内的处置：以最不惊扰孩子的方式给氧、滴定到 SpO2 94% 及以上；salbutamol——她有呼吸道感染症状，强烈建议用 MDI 加储雾罐给药；体重超过 20 公斤的儿童每轮剂量为 MDI 100 微克 × 10 喷（经储雾罐和儿科面罩），必要时最多可重复 3 轮；第一轮给完即转运；口头核对给药 6 项；预期用药后脉搏会升高。保持舒适体位，母亲陪在身边。备好合适尺寸的 BVM：一旦孩子疲惫、呼吸频率下降、意识变差或胸音变安静，就立即开始辅助通气。超出 EMR 范围、需要口头说明的：ipratropium、dexamethasone、对难以缓解的严重支气管痉挛肌注 epinephrine，以及 CPAP——而且无论什么级别，CPAP 对 12 岁及以下患者本身就是禁忌。",
+          "expected": [
+            {
+              "actionEn": "Administer salbutamol by MDI with spacer and pediatric mask: 10 x 100 mcg for a 21 kg child, repeatable up to 3 times, with the 6 rights verbalized",
+              "actionZh": "经储雾罐和儿科面罩给 salbutamol MDI：21 公斤儿童每轮 100 微克 × 10 喷，最多可重复 3 轮，并口头核对给药 6 项。",
+              "weight": 25,
+              "rubricRef": "skill-drug-admin"
+            },
+            {
+              "actionEn": "Choose MDI with spacer over the nebulizer and say why: infectious respiratory symptoms make aerosol-generating nebulization the wrong first choice",
+              "actionZh": "选择 MDI 加储雾罐而不是雾化器，并说明理由：孩子有呼吸道感染症状，产生气溶胶的雾化不是首选。",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "Transport after the first course rather than staying on scene to finish all repeats",
+              "actionZh": "第一轮给完就转运，而不是留在现场把三轮全部用完。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Keep the BVM sized and within reach, and state the triggers for assisted ventilation: tiring, falling respiratory rate, decreasing LOC, or a silent chest",
+              "actionZh": "把合适尺寸的 BVM 放在伸手可及处，并说出启动辅助通气的触发条件：孩子疲惫、呼吸频率下降、意识变差或胸音变安静。",
+              "weight": 25,
+              "rubricRef": "skill-breathing-mgmt"
+            },
+            {
+              "actionEn": "Verbalize what is outside EMR scope - ipratropium, dexamethasone, IM epinephrine, CPAP - and that CPAP is contraindicated at age 6 in any case",
+              "actionZh": "口头说明超出 EMR 范围的项目——ipratropium、dexamethasone、肌注 epinephrine、CPAP——并指出 6 岁本身就是 CPAP 的禁忌。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Keep the child calm throughout: interventions delivered on mother's lap, nothing forced",
+              "actionZh": "全程让孩子保持安静：所有操作都在母亲腿上完成，绝不强迫。",
+              "weight": 25,
+              "rubricRef": "overall-patient-care"
+            }
+          ]
+        },
+        {
+          "id": "ongoing",
+          "infoEn": "Reassess after every intervention and at least every 5 minutes. Set 2 (en route, 7 minutes after set 1, after the first salbutamol course): GCS 15; BP 100/66; pulse 140 - up from 132, an expected salbutamol effect, not an alarm; respirations 32, less laboured; speaking 4-5 word phrases; wheeze still present but air entry improved; skin pale warm; SpO2 94% on oxygen; temperature unchanged. Interpret the trend out loud: improving. Repeat the salbutamol course en route as required, reassessing after each. If she instead becomes quiet, floppy or her chest goes silent - ventilate with the BVM immediately.",
+          "infoZh": "每次干预后以及至少每 5 分钟复评一次。第 2 组（途中，第 1 组之后 7 分钟，第一轮 salbutamol 用完后）：GCS 15；血压 100/66；脉搏 140——比 132 升高，这是 salbutamol 的预期药效，不是警报；呼吸 32 次/分，费力程度减轻；能连说四五个字；哮鸣音仍在但进气量改善；皮肤苍白温暖；吸氧下 SpO2 94%；体温不变。口头解读趋势：在好转。途中按需重复 salbutamol，每轮后复评。反之，若她变得异常安静、松软或胸音消失——立即用 BVM 辅助通气。",
+          "expected": [
+            {
+              "actionEn": "Reassess ABCs and interventions after each salbutamol course and at least every 5 minutes",
+              "actionZh": "每轮 salbutamol 之后以及至少每 5 分钟复评一次 ABC 和已做的处置。",
+              "weight": 15,
+              "rubricRef": "ongoing-abc-i"
+            },
+            {
+              "actionEn": "Second full set of vitals within 7-8 minutes, with the trend interpreted out loud as improving",
+              "actionZh": "7–8 分钟内完成第二组完整生命体征，并口头解读趋势为好转。",
+              "weight": 25,
+              "rubricRef": "overall-call-management"
+            },
+            {
+              "actionEn": "Attribute the pulse rise from 132 to 140 to salbutamol rather than deterioration, and keep treating",
+              "actionZh": "把脉搏从 132 升到 140 正确归因于 salbutamol 的药效而不是病情恶化，并继续治疗。",
+              "weight": 100,
+              "rubricRef": "protocols"
+            },
+            {
+              "actionEn": "State the deterioration triggers one more time: quiet child, silent chest, falling rate or LOC means BVM ventilation now",
+              "actionZh": "再次说出恶化触发条件：孩子变安静、胸音消失、呼吸频率或意识下降——立即上 BVM 辅助通气。",
+              "weight": 100,
+              "rubricRef": "breathing"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "infoEn": "Priority patient - pediatric notification en route. The hand-off must state the severity markers (prior admission, tonight's failed home salbutamol), doses given with times, and the response. PCR within 5 minutes, including the weight the doses were based on.",
+          "infoZh": "优先患者——途中向医院做儿科预报。交接必须说明严重度标志（既往住院史、今晚家用 salbutamol 无效）、已给药物的剂量与时间，以及治疗反应。5 分钟内完成 PCR，并写明计算剂量所用的体重。",
+          "expected": [
+            {
+              "actionEn": "En-route notification to the receiving hospital for a pediatric respiratory patient",
+              "actionZh": "途中向接收医院预报儿科呼吸系统患者。",
+              "weight": 5,
+              "rubricRef": "notification"
+            },
+            {
+              "actionEn": "Complete verbal hand-off: severity history, treatment times and doses, and response to salbutamol",
+              "actionZh": "完整口头交接：严重度病史、治疗时间与剂量，以及对 salbutamol 的反应。",
+              "weight": 5,
+              "rubricRef": "hand-off-report"
+            },
+            {
+              "actionEn": "Accurate PCR completed within 5 minutes, weight documented",
+              "actionZh": "5 分钟内完成准确的 PCR，并记录体重。",
+              "weight": 5,
+              "rubricRef": "documentation"
+            }
+          ]
+        }
+      ],
+      "vitalsSets": [
+        {
+          "set": 1,
+          "timeHint": "on scene, within 3 minutes",
+          "gcs": "15 (E4 V5 M6)",
+          "bp": "98/64",
+          "pulse": "132 strong regular",
+          "resp": "40 laboured, expiratory wheeze",
+          "skin": "pale warm dry",
+          "pupils": "PERL",
+          "spo2": "89% RA, 92% on O2",
+          "bgl": null,
+          "temp": "37.9 C"
+        },
+        {
+          "set": 2,
+          "timeHint": "en route, 7 minutes later, after first salbutamol course - improving",
+          "gcs": "15 (E4 V5 M6)",
+          "bp": "100/66",
+          "pulse": "140 strong regular (salbutamol effect)",
+          "resp": "32, less laboured",
+          "skin": "pale warm",
+          "pupils": "PERL",
+          "spo2": "94% on O2",
+          "bgl": null,
+          "temp": "37.9 C"
+        }
+      ],
+      "criticalPitfallsEn": [
+        "Forcing the child supine, tearing her from her mother, or fighting to strap a mask on - agitation raises oxygen demand and can tip a distressed child into failure",
+        "Reading a quiet chest or a sleepy child as improvement - silence and drowsiness in asthma are pre-arrest signs demanding BVM ventilation, and determining inadequate breathing without intervening is a 100% deduction",
+        "Withholding oxygen because the child resists the mask instead of switching to blow-by or a mother-held mask",
+        "Treating this as croup and withholding salbutamol - there is no barking cough and no stridor; failing to administer a medication indicated by the protocol is a 100% deduction",
+        "Panicking at the post-salbutamol pulse of 140 and stopping the bronchodilator - tachycardia is an expected side effect",
+        "Staying on scene to run all three salbutamol courses - transport follows the first course",
+        "Classifying her as non-RTC because she is alert - respiratory distress with accessory muscle use is an unstable finding, and a transport category error is a 25% deduction"
+      ],
+      "criticalPitfallsZh": [
+        "强行把孩子放平、把她从母亲怀里抱走，或硬把面罩扣上去——哭闹挣扎会增加耗氧，可能把呼吸窘迫的孩子推向呼吸衰竭。",
+        "把胸音变安静或孩子变困倦当成好转——哮喘中的「安静」和嗜睡是骤停前兆，必须立即 BVM 辅助通气；判断出呼吸不足却不干预，扣 100%。",
+        "因为孩子抗拒面罩就干脆不给氧，而不是改用吹拂式给氧或让母亲扶面罩。",
+        "把本例当成哮吼处理而不给 salbutamol——她没有犬吠样咳嗽也没有喘鸣音；不给方案有指征的药物，扣 100%。",
+        "看到用药后脉搏 140 就慌了、停掉支气管扩张剂——心率升高是 salbutamol 的预期副作用。",
+        "留在现场把三轮 salbutamol 全部用完——第一轮结束就该转运。",
+        "因为孩子清醒就归为非 RTC——呼吸窘迫伴辅助呼吸肌参与属于不稳定表现，转运分类错误扣 25%。"
+      ],
+      "emrVariantEn": "EMR delivers the complete first-line treatment for this call: least-distressing oxygen titrated toward 94% or above, salbutamol 10 x 100 mcg by MDI with spacer and pediatric mask (repeatable up to 3 courses) with transport after the first course, position of comfort on mother's lap, and a sized BVM ready with clearly stated triggers - a tiring child, falling rate, falling LOC, or a silent chest. Ipratropium, dexamethasone, IM epinephrine and CPAP belong to the PCP, and CPAP is contraindicated at this age regardless.",
+      "emrVariantZh": "这一场的全部一线治疗都在 EMR 手里：用最不惊扰孩子的方式给氧并滴定到 94% 及以上，经储雾罐和儿科面罩给 salbutamol MDI 100 微克 × 10 喷（最多重复 3 轮）且第一轮结束即转运，让孩子在母亲腿上保持舒适体位，并备好合适尺寸的 BVM、说清启动辅助通气的触发条件——孩子疲惫、呼吸频率下降、意识变差或胸音消失。ipratropium、dexamethasone、肌注 epinephrine 和 CPAP 属于 PCP 的范围，而且这个年龄本身就是 CPAP 的禁忌。",
+      "pcpVariantEn": "PCP adds ipratropium 250 mcg by nebulizer (single dose, co-administered with salbutamol when nebulization is appropriate), dexamethasone 0.5 mg/kg PO to a maximum of 16 mg - about 10.5 mg for this 21 kg child, mixable with juice - and, for severe bronchospasm unresolved by salbutamol with SpO2 below 90%, IM epinephrine 0.01 mg/kg to a maximum of 0.5 mg. CPAP remains contraindicated: she is under 13.",
+      "pcpVariantZh": "PCP 在此基础上追加：雾化 ipratropium 250 微克（单次剂量，在适合雾化时与 salbutamol 同雾化罐合用）；口服 dexamethasone 0.5 mg/kg、上限 16 mg——21 公斤的孩子约 10.5 mg，可兑果汁改善口感；若 salbutamol 无法缓解严重支气管痉挛且 SpO2 低于 90%，肌注 epinephrine 0.01 mg/kg、单次上限 0.5 mg。CPAP 依然禁忌：她未满 13 岁。",
+      "handoffModelEn": "This is a 6-year-old girl, about 21 kilograms, with asthma diagnosed at age 4 and one overnight admission last winter, never intubated. She has had a cold for two days and developed severe wheeze this evening; her mother gave two untreated-response doses of home salbutamol MDI without a spacer before calling. On our arrival she was alert on her mother's lap, speaking 2-3 words, rate 40 with diffuse expiratory wheeze, retractions and nasal flaring, SpO2 89% on room air. No stridor, no drooling, no hives at any point. First vitals: GCS 15, BP 98/64, pulse 132, resps 40, SpO2 92% on oxygen, temperature 37.9. We gave salbutamol 10 puffs of 100 micrograms by MDI with spacer and pediatric mask at 1948 and transported after the first course. Following treatment: pulse 140 - consistent with salbutamol - resps down to 32, SpO2 94%, speaking longer phrases, air entry improved. She has had oxygen throughout, mother is with her, no known allergies, small dinner at 1800 with poor fluids today.",
+      "handoffModelZh": "这是一名 6 岁女孩，体重约 21 公斤，4 岁确诊哮喘，去年冬天曾留院观察一晚，从未插管。感冒两天，今晚出现严重喘息；来电前母亲已在家给过两次 salbutamol 吸入器（未用储雾罐），效果不佳。我们到达时她清醒地坐在母亲腿上，一次只能说两三个字，呼吸 40 次/分，双肺满布呼气相哮鸣音，伴凹陷征和鼻翼扇动，室内空气 SpO2 89%。全程无喘鸣音、无流涎、无风团。首组生命体征：GCS 15、血压 98/64、脉搏 132、呼吸 40、吸氧下 SpO2 92%、体温 37.9。我们于 19:48 经储雾罐和儿科面罩给 salbutamol 100 微克 × 10 喷，第一轮结束即转运。治疗后：脉搏 140——与 salbutamol 药效相符——呼吸降至 32，SpO2 94%，能连说更长的句子，进气量改善。她全程吸氧，母亲随车陪同，无已知过敏，18:00 吃了少量晚饭，今天饮水少。",
+      "pcrKeyPoints": {
+        "cc": "Severe shortness of breath in a 6-year-old known asthmatic",
+        "hxcc": "Cold for 2 days, wheeze from this afternoon worsening tonight; two home salbutamol MDI doses without spacer, little effect; severity markers: one overnight admission last winter, never intubated, never ICU; speaking 2-3 words on arrival; no stridor, no barking cough, no allergen exposure",
+        "pmhx": "Asthma diagnosed age 4, eczema",
+        "meds": "Salbutamol MDI PRN; fluticasone daily with recent poor adherence",
+        "allergies": "None known",
+        "treatments": [
+          "Oxygen delivered least-distressing way, titrated toward SpO2 94% or above",
+          "Salbutamol 10 x 100 mcg MDI with spacer and pediatric mask at 1948 (21 kg dosing), 6 rights verbalized; repeatable up to 3 courses",
+          "MDI with spacer chosen over nebulizer due to infectious respiratory symptoms",
+          "Transported sitting upright on mother's lap after the first course, mother in the ambulance",
+          "Pediatric BVM sized and ready; ventilation triggers stated",
+          "PCP-level options verbalized as out of scope: ipratropium, dexamethasone, IM epinephrine, CPAP (also age-contraindicated)"
+        ],
+        "findings": [
+          "PAT: abnormal work of breathing, normal appearance apart from anxiety and fatigue, pale skin",
+          "Rate 40 with diffuse expiratory wheeze, intercostal and subcostal retractions, nasal flaring, mild tracheal tug",
+          "SpO2 89% RA rising to 94% with oxygen and salbutamol",
+          "Pulse 132 rising to 140 after salbutamol - expected drug effect",
+          "No stridor, drooling, hives or lip swelling at any point; temperature 37.9",
+          "Improving after first course: resps 32, speaking 4-5 word phrases"
+        ]
+      }
+    }
+  ]
+}

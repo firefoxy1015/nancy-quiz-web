@@ -18,7 +18,12 @@ export async function renderStudyHub(el) {
   const scopeTag = (mine, all) => mine === all
     ? `<span class="tag-count">${all}</span>`
     : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
+  const chData = await loadJSON('./data/study/chapters.json');
   const cards = [
+    ['chapters', ico('cap'), 'Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读',
+      'All 54 textbook chapters: summary, key points, must-knows and the confusions students actually have.',
+      '教材全部 54 章：本章概要、要点、必背、以及学生真正会搞混的地方。',
+      chData ? `<span class="tag-count">${chData.chapters.length}</span>` : ''],
     ['assessment', ico('compass'), 'Patient Assessment Model', '患者评估模型',
       'The backbone of both written and practical. Learn the exact official sequence.', '笔试和实操共同的主线，按官方顺序学。', ''],
     ['protocols', ico('list'), 'Protocols', '处置协议',
@@ -33,8 +38,8 @@ export async function renderStudyHub(el) {
   el.innerHTML = `
     <div class="card">
       <h2>${ico('book')} ${t('Study Library', '学习内容库')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
-      ${bi('All content is structured from the official BC Provincial Examination Guidelines (June 15, 2026) — the only standard examiners may mark against. Page references included.',
-           '所有内容都结构化自 BC 官方考纲（2026年6月15日现行版）——考官唯一被允许采用的标准。每条都带原文页码。')}
+      ${bi('Two layers. The Nancy Caroline chapter review is your textbook backbone — it teaches the subject. Everything below it is structured from the official BC Provincial Examination Guidelines (June 15, 2026), the only standard examiners may mark against, with page references throughout. When the textbook and the guidelines differ, the guidelines win.',
+           '两层内容。Nancy Caroline 章节精读是教材主线——它负责把知识讲明白。它下面的全部内容结构化自 BC 官方考纲（2026年6月15日现行版）——考官唯一被允许采用的标准，每条都带原文页码。教材与考纲冲突时，一律以考纲为准。')}
     </div>
     <div class="notice">
       ${bi(isEmr
@@ -56,12 +61,84 @@ export async function renderStudyHub(el) {
 
 /* ---------------- sections ---------------- */
 export async function renderStudySection(el, arg, params) {
-  const fn = { assessment: sAssessment, protocols: sProtocols, treatments: sTreatments, drugs: sDrugs, reference: sReference }[arg];
+  const fn = { chapters: sChapters, assessment: sAssessment, protocols: sProtocols, treatments: sTreatments, drugs: sDrugs, reference: sReference }[arg];
   if (!fn) { renderStudyHub(el); return; }
   await fn(el, params);
 }
 const backStudy = () => `<a class="back-link" href="#/study">← ${t('Study library', '学习内容库')}</a>`;
 const deploying = title => `<div class="card"><h2>${title}</h2><p class="muted">${t('This module is deploying — check back shortly.', '该模块内容部署中，稍后再来。')}</p></div>`;
+
+// Nancy Caroline chapter review — the textbook layer, migrated from the v1 site.
+// Only the five originally-written fields survive; see chapters.json meta.note.
+async function sChapters(el, params) {
+  const d = await loadJSON('./data/study/chapters.json');
+  if (!d) { el.innerHTML = backStudy() + deploying('Chapter Review'); return; }
+  const open = params.ch;
+  const ch = open ? d.chapters.find(c => c.id === open) : null;
+  if (ch) { drawChapter(el, d, ch); return; }
+  const q = (params.q || '').toLowerCase();
+  const list = q ? d.chapters.filter(c =>
+    (c.n + '').includes(q) || c.titleEn.toLowerCase().includes(q) || c.titleZh.includes(params.q)) : d.chapters;
+  el.innerHTML = `
+    ${backStudy()}
+    <div class="card">
+      <h2>${ico('cap')} ${t('Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读')}</h2>
+      ${bi(`All ${d.chapters.length} chapters of the textbook, condensed to what changes your actions: a summary, the highlights, the key points, the must-knows, and the confusions students actually have. Read the chapter, then drill its clinical domain in the written camp.`,
+           `教材全部 ${d.chapters.length} 章，浓缩成"会改变你行动"的部分：本章概要、重点提示、关键要点、必背内容，以及学生真正会搞混的地方。看完一章，就去笔试营刷它对应的临床域。`)}
+      <input id="chSearch" class="lang-btn" style="width:100%;margin-top:10px;padding:9px 12px;font-size:.9rem"
+             placeholder="${t('Search chapter number or title…', '搜索章节号或标题…')}" value="${esc(params.q || '')}" />
+    </div>
+    <div class="list-wrap">
+      ${list.map(c => `<button class="list-item" data-ch="${c.id}">
+        <span class="step-num" style="flex:0 0 30px;height:30px;font-size:.8rem">${c.n}</span>
+        <span>${bi(c.titleEn, c.titleZh, 'span')}
+          <div class="tiny">${(c.keyPointsEn || []).length + (c.mustKnowEn || []).length + (c.highlightsEn || []).length} ${t('points', '条要点')}</div></span>
+        <span class="li-arrow">›</span></button>`).join('')}
+      ${list.length ? '' : `<p class="muted" style="padding:14px">${t('No chapter matches.', '没有匹配的章节。')}</p>`}
+    </div>`;
+  const s = el.querySelector('#chSearch');
+  s.oninput = () => {
+    const v = s.value;
+    // re-render in place so the field keeps focus and the caret position
+    const kept = s.selectionStart;
+    history.replaceState(null, '', '#/study/chapters' + (v ? '?q=' + encodeURIComponent(v) : ''));
+    sChapters(el, { q: v }).then(() => {
+      const s2 = el.querySelector('#chSearch');
+      if (s2) { s2.focus(); s2.setSelectionRange(kept, kept); }
+    });
+  };
+  el.querySelectorAll('[data-ch]').forEach(b => b.onclick = () => nav('/study/chapters?ch=' + b.dataset.ch));
+}
+function drawChapter(el, d, c) {
+  const i = d.chapters.indexOf(c);
+  const prev = d.chapters[i - 1], next = d.chapters[i + 1];
+  const sec = (labelEn, labelZh, enArr, zhArr, cls = '') => {
+    if (!enArr || !enArr.length) return '';
+    return `<div class="detail-section ${cls}"><h4>${t(labelEn, labelZh)}</h4><ul>${biList(enArr, zhArr)}</ul></div>`;
+  };
+  el.innerHTML = `
+    <a class="back-link" href="#/study/chapters">← ${t('All chapters', '全部章节')}</a>
+    <div class="card">
+      <p class="tiny">${t('Chapter', '第')} ${c.n} ${t('of', '/')} ${d.chapters.length}</p>
+      <h2 style="margin-top:2px">${bi(c.titleEn, c.titleZh, 'span')}</h2>
+      ${c.summaryEn ? bi(c.summaryEn, c.summaryZh) : ''}
+      <div class="btn-row">
+        <a class="btn" href="#/practice?topic=${c.group}">${t('Drill this domain', '刷这个域的题')} →</a>
+      </div>
+    </div>
+    <div class="card">
+      ${sec('Highlights', '重点提示', c.highlightsEn, c.highlightsZh)}
+      ${sec('Key points', '关键要点', c.keyPointsEn, c.keyPointsZh)}
+      ${sec('Must know', '必背', c.mustKnowEn, c.mustKnowZh)}
+      ${sec('Common confusions', '常见误区', c.commonConfusionsEn, c.commonConfusionsZh)}
+    </div>
+    <div class="card"><div class="btn-row">
+      ${prev ? `<a class="btn ghost" href="#/study/chapters?ch=${prev.id}">← ${t('Ch.', '第')} ${prev.n}</a>` : ''}
+      ${next ? `<a class="btn ghost" href="#/study/chapters?ch=${next.id}">${t('Ch.', '第')} ${next.n} →</a>` : ''}
+    </div></div>
+    <div class="notice">${t('The textbook teaches the subject; the BC guidelines decide the exam. Where a dose, sequence or contraindication differs, follow the guidelines.',
+      '教材负责把知识讲明白，但决定考试对错的是 BC 考纲。剂量、顺序、禁忌只要有出入，一律以考纲为准。')}</div>`;
+}
 
 async function sAssessment(el) {
   const d = await loadJSON('./data/study/assessment-model.json');
