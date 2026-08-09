@@ -1,9 +1,9 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=8';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=8';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=8';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=9';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=9';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=9';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -61,6 +61,43 @@ export async function loadJSON(path) {
     return null;
   }
 }
+/* ---------------- topic grouping ---------------- */
+// The bank's raw `topic` values are authoring-granular (255 distinct values,
+// dozens holding a single question) — unusable as a filter list and unfair as
+// a sampling axis. These 17 clinical-domain groups are the user-facing unit.
+// Order matters: first matching rule wins, so specific domains precede broad ones.
+export const TOPIC_GROUPS = [
+  ['ddx', 'Differential Dx', '鉴别诊断', /^ddx-/],
+  ['arrest', 'Cardiac Arrest & Resus', '骤停与复苏', /arrest|cpr|aed|defib|resus|rosc/],
+  ['ops', 'Operations & Safety', '运营与安全', /driving|ambulance|vehicle|safety|lifting|body-mechanic|ppe|infection|disinfect|sharps|hazmat|mci|triage|scene|extricat|transport|equipment|restraint|violence|crime|incident-command|patient-moving|landing-zone|hand-hygiene|routine-practices|cbrne|decontamin|droplet|occupational|multi-casualty|offload/],
+  ['tox', 'Toxicology & Overdose', '中毒与过量', /poison|overdose|tox|alcohol|withdrawal|opioid|naloxone|carbon-monoxide|substance|huff/],
+  ['obgyn', 'OB & Neonatal', '产科与新生儿', /obstetric|pregnan|birth|labour|labor|neonat|newborn|deliver|eclamp|postpartum|gyne|vaginal|miscarr/],
+  ['environment', 'Environmental', '环境急症', /hypotherm|hyperther|heat|cold-|drown|submers|bite|sting|envenom|altitude|electric|lightning|frostbite|diving|environmental/],
+  ['trauma', 'Trauma', '创伤', /trauma|fracture|burn|spinal|c-spine|head-injur|tbi|chest-injur|pelvi|amputat|wound|crush|blast|msk|dislocat|sprain|lacerat|avuls|impale|eviscer|pneumothorax|flail|concuss|bleeding-control|soft-tissue|splint|traction|eye|dental|facial|neck|musculoskeletal|injur/],
+  ['shock', 'Shock · Bleeding · Allergy', '休克·出血·过敏', /shock|hemorrhag|bleed|fluid|tourniquet|txa|sepsis|anaphyla|allerg/],
+  ['cardiac', 'Cardiac', '心血管', /cardiac|chest-pain|acs|\bmi\b|ecg|heart|chf|arrhythm|av-block|nitro|angina|coronary|pulmonary-edema|tachy|brady|aortic|cardio/],
+  ['airway', 'Airway & Breathing', '气道与呼吸', /airway|breath|resp|oxygen|ventil|copd|asthma|croup|fbao|chok|suction|cpap|stridor|epiglott|tracheit|pneumonia|intub|opa|npa|bvm|hyperventil|dyspnea|sob/],
+  ['neuro', 'Neurological', '神经急症', /stroke|seizure|syncope|altered|dloc|\bloc\b|headache|tia|epilep|neuro|gcs|glasgow|meningitis|unconscious|avpu/],
+  ['medical', 'Medical & GI', '内科与消化', /diabet|glyc|endocrin|\bgi\b|abdominal|nausea|renal|uro|bowel|appendic|cholecyst|ulcer|gastro|hepat|pancrea|sickle|dka|fever|medical|infectious|dialysis|dehydrat/],
+  ['pharm', 'Pharmacology & IV', '药理与IV', /drug|medicat|pharm|dose|administr|entonox|glucagon|salbutamol|epinephrine|aspirin|glucose|ipratropium|dimenhydrinate|acetaminophen|ibuprofen|pain-management|analgesia|iv-/],
+  ['peds', 'Pediatrics', '儿科', /pediatric|paediatric|peds|child|infant|toddler|adolescent|development/],
+  ['geriatric', 'Geriatrics', '老年', /geriatric|elder|senior|dementia|aging|delirium|falls-prevention/],
+  ['assessment', 'Assessment & Vitals', '评估与体征', /assess|vital|history|physical-exam|head-to-toe|sample-|opqrst|primary|secondary|baseline|pupil|skin-|palpat|auscult|unstable-criteria/],
+  ['professional', 'Professional & Legal', '职业与法规', /legal|consent|ethic|communicat|document|profession|jurispr|quality|research|health-promot|educat|cultural|team|wellness|stress|confidential|capacity|refus|ems|paramedic|community|reporting|abuse|neglect|mental-health|psychiat|behavior|behaviour|end-of-life|palliat|dnr|expanded|equity|learning|evidence|wellbeing|advocacy|leadership|scope-of-practice|substitute-decision|advance-directive|fitness|handover|health-literacy|social-determinants|privacy|colleague|fatigue|language|difficult-conversations|peer-support|disclosure|pcr/],
+];
+const groupCache = {};
+export function topicGroup(topic) {
+  const tp = topic || '?';
+  if (groupCache[tp]) return groupCache[tp];
+  let g = 'other';
+  for (const [id, , , rx] of TOPIC_GROUPS) if (rx.test(tp)) { g = id; break; }
+  return groupCache[tp] = g;
+}
+export function groupLabel(id) {
+  const g = TOPIC_GROUPS.find(x => x[0] === id);
+  return g ? t(g[1], g[2]) : id;
+}
+
 export async function loadBank(track) { // merged question pool for a licence track
   const idx = await loadJSON('./data/written/index.json');
   if (!idx) return [];

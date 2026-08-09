@@ -1,7 +1,23 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico} from './app.js?v=8';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=9';
 
 let session = null; // current exam session (mock or practice)
+
+/* ---------------- keyboard ---------------- */
+// One live handler at a time; each view installs its own and the hash guard
+// inside the handler keeps it inert after navigating away.
+let keyHandler = null;
+function setKeys(fn) {
+  if (keyHandler) document.removeEventListener('keydown', keyHandler);
+  keyHandler = fn;
+  if (fn) document.addEventListener('keydown', fn);
+}
+function keyToIndex(k) {
+  const i = 'ABCD'.indexOf((k || '').toUpperCase());
+  if (i >= 0) return i;
+  const n = '1234'.indexOf(k);
+  return n >= 0 ? n : null;
+}
 
 /* ---------------- hub ---------------- */
 export async function renderWrittenHub(el) {
@@ -26,6 +42,11 @@ export async function renderWrittenHub(el) {
         <div class="stat"><b>${Object.keys(S.wrong).length}</b><span>${t('wrong answers', '错题数')}</span></div>
       </div>
     </div>
+    ${S.writtenMock && S.writtenMock.track === tr ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      ${ico('clock')} ${bi(`A mock exam is in progress — ${Object.keys(S.writtenMock.answers || {}).length}/${S.writtenMock.ids.length} answered.`,
+        `有一场模考进行中——已答 ${Object.keys(S.writtenMock.answers || {}).length}/${S.writtenMock.ids.length} 题。`, 'span')}
+      <a class="btn" style="margin-left:auto" href="#/mock">${t('Resume', '继续考试')} →</a>
+    </div>` : ''}
     <div class="grid-2">
       <div class="card">
         <h3 style="margin-top:0">${ico('target')} ${t('Practice mode', '练习模式')}</h3>
@@ -62,25 +83,30 @@ export async function renderPractice(el, arg, params) {
   const tr = S.track;
   const bank = await loadBank(tr);
   if (!bank.length) { el.innerHTML = emptyBank(); return; }
-  const topic = params.topic || 'all';
+  // filter by clinical-domain group, not raw topic — the bank's 255 authoring
+  // topics are far too granular to scroll through
+  const group = params.topic || 'all';
   const area = params.area || 'all';
-  const topics = Object.entries(countBy(bank, q => q.topic)).sort((a, b) => b[1] - a[1]);
+  const gCount = countBy(bank, q => topicGroup(q.topic));
+  const groups = TOPIC_GROUPS.map(g => g[0]).filter(id => gCount[id]);
+  if (gCount.other) groups.push('other');
   const areas = Object.entries(countBy(bank, q => q.cpcfArea)).sort();
-  let pool = bank.filter(q => (topic === 'all' || q.topic === topic) && (area === 'all' || q.cpcfArea === area));
-  if (!session || session.mode !== 'practice' || session.filterKey !== topic + area) {
-    session = { mode: 'practice', filterKey: topic + area, order: shuffle(pool.map((_, i) => i)), pos: 0, right: 0, done: 0, pool };
+  let pool = bank.filter(q => (group === 'all' || topicGroup(q.topic) === group) && (area === 'all' || q.cpcfArea === area));
+  if (!session || session.mode !== 'practice' || session.filterKey !== group + area) {
+    session = { mode: 'practice', filterKey: group + area, order: shuffle(pool.map((_, i) => i)), pos: 0, right: 0, done: 0, pool };
   }
-  drawPracticeQ(el, topics, areas, topic, area);
+  drawPracticeQ(el, groups, gCount, areas, group, area);
 }
-function drawPracticeQ(el, topics, areas, topic, area) {
+function drawPracticeQ(el, groups, gCount, areas, group, area) {
   const q = session.pool[session.order[session.pos]];
   el.innerHTML = `
     <div class="q-wrap">
       <div class="card">
         <div class="q-meta">
           <div>
-            <select id="topicSel" class="lang-btn">${['all', ...topics.map(x => x[0])].map(tp =>
-              `<option value="${tp}" ${tp === topic ? 'selected' : ''}>${tp === 'all' ? t('All topics', '全部主题') : tp}</option>`).join('')}</select>
+            <select id="topicSel" class="lang-btn">${['all', ...groups].map(g =>
+              `<option value="${g}" ${g === group ? 'selected' : ''}>${g === 'all' ? t('All topics', '全部主题')
+                : (g === 'other' ? t('Other', '其他') : groupLabel(g)) + ' (' + gCount[g] + ')'}</option>`).join('')}</select>
             <select id="areaSel" class="lang-btn">${['all', ...areas.map(x => x[0])].map(a =>
               `<option value="${a}" ${a === area ? 'selected' : ''}>${a === 'all' ? t('All areas', '全部能力域') : 'Area ' + a}</option>`).join('')}</select>
           </div>
@@ -91,16 +117,28 @@ function drawPracticeQ(el, topics, areas, topic, area) {
           <button class="btn ghost" id="skipBtn">${t('Skip', '跳过')} →</button>
           <a class="btn ghost" href="#/written">← ${t('Back', '返回')}</a>
         </div>
+        <p class="tiny">${t('Keys: A–D answer · Enter next', '键盘：A–D 选答案 · Enter 下一题')}</p>
       </div>
     </div>`;
   el.querySelector('#topicSel').onchange = e => nav('/practice?topic=' + encodeURIComponent(e.target.value) + '&area=' + area);
-  el.querySelector('#areaSel').onchange = e => nav('/practice?topic=' + topic + '&area=' + encodeURIComponent(e.target.value));
-  el.querySelector('#skipBtn').onclick = () => { advance(); drawPracticeQ(el, topics, areas, topic, area); };
+  el.querySelector('#areaSel').onchange = e => nav('/practice?topic=' + group + '&area=' + encodeURIComponent(e.target.value));
+  const goNext = () => { advance(); drawPracticeQ(el, groups, gCount, areas, group, area); };
+  el.querySelector('#skipBtn').onclick = goNext;
   if (q) bindOptions(el, q, () => { // after answer
     const nextBtn = document.createElement('button');
-    nextBtn.className = 'btn'; nextBtn.textContent = t('Next question', '下一题') + ' →';
-    nextBtn.onclick = () => { advance(); drawPracticeQ(el, topics, areas, topic, area); };
+    nextBtn.className = 'btn'; nextBtn.id = 'nextQBtn'; nextBtn.textContent = t('Next question', '下一题') + ' →';
+    nextBtn.onclick = goNext;
     el.querySelector('.btn-row').prepend(nextBtn);
+  });
+  setKeys(e => {
+    if (!/^#\/(practice|wrong)/.test(location.hash)) return;
+    if (/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+    const idx = keyToIndex(e.key);
+    if (idx != null) { const b = el.querySelectorAll('.q-opts .opt')[idx]; if (b) b.click(); return; }
+    if (e.key === 'Enter') {
+      const b = el.querySelector('#submitMulti') || el.querySelector('#nextQBtn');
+      if (b) { e.preventDefault(); b.click(); }
+    }
   });
 }
 function advance() { session.pos = (session.pos + 1) % session.order.length; }
@@ -218,12 +256,60 @@ function bindOptions(el, q, onAnswered) {
 }
 
 /* ---------------- mock exam ---------------- */
+// A 2-hour mock must survive an accidental refresh or tab close. Question ids,
+// answers, flags and the absolute part-end timestamp go to localStorage on every
+// redraw; renderMock offers to rebuild the session from them. (The practical
+// simulator has had this since day one — S.scenarioRun — the written mock didn't.)
+function persistMock() {
+  if (!session || session.mode !== 'mock' || session.finished) return;
+  S.writtenMock = {
+    track: session.track, ids: session.qs.map(q => q.id),
+    answers: session.answers, flags: session.flags, pos: session.pos,
+    part: session.part, parts: session.parts, partMin: session.partMin,
+    breakMin: session.breakMin, passPct: session.passPct,
+    partEndsAt: session.partEndsAt, onBreak: session.onBreak || false,
+    breakEndsAt: session.breakEndsAt || 0, backfilled: session.backfilled || 0,
+  };
+  save();
+}
 export async function renderMock(el) {
   const tr = S.track;
   if (session && session.mode === 'mock' && session.track === tr && !session.finished) { drawMock(el); return; }
   const bank = await loadBank(tr);
   const bp = await loadJSON('./data/meta/cpcf-blueprint.json');
   if (!bank.length) { el.innerHTML = emptyBank(); return; }
+  const wm = S.writtenMock;
+  if (wm && wm.track === tr && wm.ids && wm.ids.length) {
+    const answered = Object.keys(wm.answers || {}).length;
+    const ms = (wm.onBreak ? wm.breakEndsAt : wm.partEndsAt) - Date.now();
+    el.innerHTML = `
+      <div class="card">
+        <h2>⏱ ${t('Mock exam in progress', '有一场模考进行中')}</h2>
+        ${bi(`Part ${wm.part}/${wm.parts} · ${answered}/${wm.ids.length} answered · ${ms > 0 ? fmtMs(ms) + ' left on the clock' : 'time has expired — resuming will score it'}.`,
+             `第 ${wm.part}/${wm.parts} 部分 · 已答 ${answered}/${wm.ids.length} 题 · ${ms > 0 ? '剩余 ' + fmtMs(ms) : '时间已到——恢复后将直接结算'}。`)}
+        <div class="btn-row">
+          <button class="btn big" id="resumeMock">${t('Resume', '继续考试')}</button>
+          <button class="btn ghost" id="discardMock">${t('Discard', '放弃这场')}</button>
+        </div>
+      </div>`;
+    el.querySelector('#resumeMock').onclick = () => {
+      const byId = new Map(bank.map(q => [q.id, q]));
+      const qs = wm.ids.map(id => byId.get(id)).filter(Boolean);
+      session = {
+        mode: 'mock', track: wm.track, qs, answers: wm.answers || {}, flags: wm.flags || {},
+        pos: Math.min(wm.pos || 0, qs.length - 1), part: wm.part || 1, parts: wm.parts,
+        partMin: wm.partMin, breakMin: wm.breakMin, passPct: wm.passPct,
+        partEndsAt: wm.partEndsAt, onBreak: wm.onBreak || false, breakEndsAt: wm.breakEndsAt || 0,
+        finished: false, backfilled: wm.backfilled || 0,
+      };
+      drawMock(el);
+    };
+    el.querySelector('#discardMock').onclick = () => {
+      if (!confirm(t('Discard this mock? Its answers are lost.', '确定放弃？这场的作答会丢失。'))) return;
+      S.writtenMock = null; save(); renderMock(el);
+    };
+    return;
+  }
   const isPcp = tr === 'pcp';
   const plan = isPcp ? { parts: 2, partMin: 120, breakMin: 10, passPct: null } : { parts: 1, partMin: 150, breakMin: 0, passPct: 75 };
   el.innerHTML = `
@@ -247,6 +333,7 @@ export async function renderMock(el) {
       part: 1, parts: plan.parts, partMin: plan.partMin, breakMin: plan.breakMin, passPct: plan.passPct,
       partEndsAt: Date.now() + plan.partMin * 60000, finished: false, backfilled: qs.backfilled || 0,
     };
+    persistMock();
     drawMock(el);
   };
 }
@@ -294,9 +381,12 @@ export function samplePcp(bank) {
   return qs;
 }
 export function sampleEmr(bank) {
-  // topic-spread round robin over units, up to 200 questions
+  // domain-spread round robin over units, up to 200 questions. Round-robin runs
+  // over the 17 clinical-domain groups, not the 255 raw topics — with raw topics
+  // every one-question micro-topic was guaranteed into every mock, so successive
+  // mocks barely differed.
   const byTopic = {};
-  for (const u of toUnits(bank)) (byTopic[u[0].topic || '?'] ||= []).push(u);
+  for (const u of toUnits(bank)) (byTopic[topicGroup(u[0].topic)] ||= []).push(u);
   Object.values(byTopic).forEach(shuffleInPlace);
   const topics = Object.keys(byTopic);
   const picked = []; let total = 0, added = true;
@@ -313,6 +403,7 @@ export function sampleEmr(bank) {
   return flatten(shuffle(picked));
 }
 function drawMock(el) {
+  persistMock(); // every redraw = an answer, flag, nav or part change worth saving
   if (session.onBreak) { drawBreak(el); return; }
   const qs = session.qs;
   const half = Math.ceil(qs.length / session.parts);
@@ -348,8 +439,19 @@ function drawMock(el) {
           <button class="btn ${session.part === session.parts ? 'danger' : 'secondary'}" id="endPart">
             ${session.part === session.parts ? t('Submit exam', '交卷') : t('End Part 1 → break', '结束第一部分→休息')}</button>
         </div>
+        <p class="tiny">${t('Keys: A–D answer · ←/→ move · F flag', '键盘：A–D 选答案 · ←→ 翻题 · F 标记')} · ${t('Progress auto-saves — a refresh will not lose this exam.', '进度自动保存——刷新页面不会丢这场考试。')}</p>
       </div>
     </div>`;
+  setKeys(e => {
+    if (!location.hash.startsWith('#/mock')) return;
+    if (/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+    if (!session || session.mode !== 'mock' || session.finished || session.onBreak) return;
+    const idx = keyToIndex(e.key);
+    if (idx != null) { const b = el.querySelectorAll('.q-opts .opt')[idx]; if (b) b.click(); return; }
+    if (e.key === 'ArrowLeft') { const b = el.querySelector('#prevQ'); if (b && !b.disabled) b.click(); }
+    else if (e.key === 'ArrowRight') { const b = el.querySelector('#nextQ'); if (b && !b.disabled) b.click(); }
+    else if (e.key === 'f' || e.key === 'F') { const b = el.querySelector('#flagQ'); if (b) b.click(); }
+  });
   el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { session.pos = +b.dataset.goto; drawMock(el); });
   el.querySelectorAll('.q-opts .opt').forEach(b => b.onclick = () => {
     const k = b.dataset.key;
@@ -419,6 +521,7 @@ function drawBreak(el) {
 function finishMock(el) {
   clearInterval(mockTick);
   session.finished = true;
+  S.writtenMock = null; // the crash-safe copy is now spent
   const qs = session.qs;
   let right = 0;
   const areaStat = {};
@@ -509,9 +612,19 @@ export async function renderWrong(el) {
     el.querySelector('#skipBtn').onclick = () => { advance(); draw(); };
     bindOptions(el, q, k => {
       const btn = document.createElement('button');
-      btn.className = 'btn'; btn.textContent = t('Next', '下一题') + ' →';
+      btn.className = 'btn'; btn.id = 'nextQBtn'; btn.textContent = t('Next', '下一题') + ' →';
       btn.onclick = () => renderWrong(el);
       el.querySelector('.btn-row').prepend(btn);
+    });
+    setKeys(e => {
+      if (!/^#\/(practice|wrong)/.test(location.hash)) return;
+      if (/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
+      const idx = keyToIndex(e.key);
+      if (idx != null) { const b = el.querySelectorAll('.q-opts .opt')[idx]; if (b) b.click(); return; }
+      if (e.key === 'Enter') {
+        const b = el.querySelector('#submitMulti') || el.querySelector('#nextQBtn');
+        if (b) { e.preventDefault(); b.click(); }
+      }
     });
   };
   draw();
