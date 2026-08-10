@@ -68,23 +68,24 @@ export async function renderStudySection(el, arg, params) {
 const backStudy = () => `<a class="back-link" href="#/study">← ${t('Study library', '学习内容库')}</a>`;
 const deploying = title => `<div class="card"><h2>${title}</h2><p class="muted">${t('This module is deploying — check back shortly.', '该模块内容部署中，稍后再来。')}</p></div>`;
 
-// Nancy Caroline chapter review — the textbook layer, migrated from the v1 site.
-// Only the five originally-written fields survive; see chapters.json meta.note.
+// Nancy Caroline chapter review. v2 (chapters2/) is the 8-module Canadian-edition
+// rewrite; chapters whose index status is still 'legacy' fall back to the old
+// chapters.json content via legacyFrom, so the section never shows a hole.
 async function sChapters(el, params) {
-  const d = await loadJSON('./data/study/chapters.json');
+  const d = await loadJSON('./data/study/chapters2/index.json');
   if (!d) { el.innerHTML = backStudy() + deploying('Chapter Review'); return; }
-  const open = params.ch;
-  const ch = open ? d.chapters.find(c => c.id === open) : null;
-  if (ch) { drawChapter(el, d, ch); return; }
+  if (params.ch) { await drawChapter(el, d, params.ch); return; }
   const q = (params.q || '').toLowerCase();
   const list = q ? d.chapters.filter(c =>
     (c.n + '').includes(q) || c.titleEn.toLowerCase().includes(q) || c.titleZh.includes(params.q)) : d.chapters;
+  const stars = w => '★'.repeat(w);
+  const read = S.chaptersRead || {};
   el.innerHTML = `
     ${backStudy()}
     <div class="card">
       <h2>${ico('cap')} ${t('Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读')}</h2>
-      ${bi(`All ${d.chapters.length} chapters of the textbook, condensed to what changes your actions: a summary, the highlights, the key points, the must-knows, and the confusions students actually have. Read the chapter, then drill its clinical domain in the written camp.`,
-           `教材全部 ${d.chapters.length} 章，浓缩成"会改变你行动"的部分：本章概要、重点提示、关键要点、必背内容，以及学生真正会搞混的地方。看完一章，就去笔试营刷它对应的临床域。`)}
+      ${bi(`All ${d.chapters.length} chapters of the Canadian edition, condensed for candidates who cannot read 4,700 pages: an exam-focused knowledge map per textbook section, every testable number, field tips, traps, and a self-check — with BC-guideline differences flagged. ★★★ chapters carry the most exam weight.`,
+           `加拿大版教材全部 ${d.chapters.length} 章，为读不完 4700 页原书的考生浓缩：按原书小节组织的知识地图、全部可考数值、实战要点、常见陷阱和自查——教材与 BC 考纲的差异逐处标出。★★★ 是考试权重最高的章。`)}
       <input id="chSearch" class="lang-btn" style="width:100%;margin-top:10px;padding:9px 12px;font-size:.9rem"
              placeholder="${t('Search chapter number or title…', '搜索章节号或标题…')}" value="${esc(params.q || '')}" />
     </div>
@@ -92,7 +93,8 @@ async function sChapters(el, params) {
       ${list.map(c => `<button class="list-item" data-ch="${c.id}">
         <span class="step-num" style="flex:0 0 30px;height:30px;font-size:.8rem">${c.n}</span>
         <span>${bi(c.titleEn, c.titleZh, 'span')}
-          <div class="tiny">${(c.keyPointsEn || []).length + (c.mustKnowEn || []).length + (c.highlightsEn || []).length} ${t('points', '条要点')}</div></span>
+          <div class="tiny">${stars(c.examWeight)} · ${c.pageCount}p${read[c.id] ? ' · ' + t('read', '已读') : ''}</div></span>
+        ${c.status === 'v2' ? `<span class="tag-count" style="color:var(--accent);border-color:var(--accent)">v2</span>` : ''}
         <span class="li-arrow">›</span></button>`).join('')}
       ${list.length ? '' : `<p class="muted" style="padding:14px">${t('No chapter matches.', '没有匹配的章节。')}</p>`}
     </div>`;
@@ -109,35 +111,99 @@ async function sChapters(el, params) {
   };
   el.querySelectorAll('[data-ch]').forEach(b => b.onclick = () => nav('/study/chapters?ch=' + b.dataset.ch));
 }
-function drawChapter(el, d, c) {
-  const i = d.chapters.indexOf(c);
-  const prev = d.chapters[i - 1], next = d.chapters[i + 1];
-  const sec = (labelEn, labelZh, enArr, zhArr, cls = '') => {
-    if (!enArr || !enArr.length) return '';
-    return `<div class="detail-section ${cls}"><h4>${t(labelEn, labelZh)}</h4><ul>${biList(enArr, zhArr)}</ul></div>`;
-  };
-  el.innerHTML = `
-    <a class="back-link" href="#/study/chapters">← ${t('All chapters', '全部章节')}</a>
-    <div class="card">
-      <p class="tiny">${t('Chapter', '第')} ${c.n} ${t('of', '/')} ${d.chapters.length}</p>
-      <h2 style="margin-top:2px">${bi(c.titleEn, c.titleZh, 'span')}</h2>
-      ${c.summaryEn ? bi(c.summaryEn, c.summaryZh) : ''}
-      <div class="btn-row">
-        <a class="btn" href="#/practice?topic=${c.group}">${t('Drill this domain', '刷这个域的题')} →</a>
-      </div>
-    </div>
-    <div class="card">
-      ${sec('Highlights', '重点提示', c.highlightsEn, c.highlightsZh)}
-      ${sec('Key points', '关键要点', c.keyPointsEn, c.keyPointsZh)}
-      ${sec('Must know', '必背', c.mustKnowEn, c.mustKnowZh)}
-      ${sec('Common confusions', '常见误区', c.commonConfusionsEn, c.commonConfusionsZh)}
-    </div>
-    <div class="card"><div class="btn-row">
+
+async function drawChapter(el, d, chId) {
+  const metaIdx = d.chapters.findIndex(c => c.id === chId);
+  if (metaIdx < 0) { sChapters(el, {}); return; }
+  const meta = d.chapters[metaIdx];
+  const prev = d.chapters[metaIdx - 1], next = d.chapters[metaIdx + 1];
+  const navRow = `<div class="card"><div class="btn-row">
       ${prev ? `<a class="btn ghost" href="#/study/chapters?ch=${prev.id}">← ${t('Ch.', '第')} ${prev.n}</a>` : ''}
       ${next ? `<a class="btn ghost" href="#/study/chapters?ch=${next.id}">${t('Ch.', '第')} ${next.n} →</a>` : ''}
-    </div></div>
-    <div class="notice">${t('The textbook teaches the subject; the BC guidelines decide the exam. Where a dose, sequence or contraindication differs, follow the guidelines.',
+      <button class="btn secondary" id="markRead">${(S.chaptersRead || {})[meta.id] ? t('Mark unread', '取消已读') : t('Mark as read', '标记已读')}</button>
+    </div></div>`;
+  const guardNote = `<div class="notice">${t('The textbook teaches the subject; the BC guidelines decide the exam. Where a dose, sequence or contraindication differs, follow the guidelines.',
       '教材负责把知识讲明白，但决定考试对错的是 BC 考纲。剂量、顺序、禁忌只要有出入，一律以考纲为准。')}</div>`;
+  const head = (c2, extra = '') => `
+    <a class="back-link" href="#/study/chapters">← ${t('All chapters', '全部章节')}</a>
+    <div class="card">
+      <p class="tiny">${t('Chapter', '第')} ${meta.n} ${t('of', '/')} ${d.chapters.length} · ${'★'.repeat(meta.examWeight)} · ${meta.pageCount} ${t('book pages', '页原书')}${extra}</p>
+      <h2 style="margin-top:2px">${bi(meta.titleEn, meta.titleZh, 'span')}</h2>
+      ${c2 && c2.whyEn ? bi(c2.whyEn, c2.whyZh) : ''}
+      <div class="btn-row">
+        <a class="btn" href="#/practice?topic=${meta.group}">${t('Drill this domain', '刷这个域的题')} →</a>
+      </div>
+    </div>`;
+
+  const v2 = meta.status === 'v2' ? await loadJSON('./data/study/chapters2/' + meta.id + '.json') : null;
+  if (v2) {
+    const pt = p => `<li class="${p.hard ? 'pt-hard' : ''}">${bi(p.en, p.zh, 'span')}</li>`;
+    el.innerHTML = `
+      ${head(v2)}
+      ${v2.competencies && (v2.competencies.areas || []).length ? `<div class="card">
+        <h4 style="margin:0 0 6px">${t('NOCP competencies in this chapter', '本章覆盖的 NOCP 能力域')}</h4>
+        <p class="tiny">${(v2.competencies.areas || []).map(esc).join(' · ')}${(v2.competencies.codes || []).length ? ` · ${v2.competencies.codes.length} ${t('codes', '个编码')}` : ''}</p>
+      </div>` : ''}
+      ${(v2.bcAlerts || []).length ? `<div class="bc-alert">
+        <h4>🔺 ${t('Textbook vs BC Guidelines — the guidelines win', '教材 vs BC 考纲——以考纲为准')}</h4>
+        ${v2.bcAlerts.map(a => `<div class="bc-alert-item">
+          <b>${bi(a.topicEn, a.topicZh, 'span')}</b>
+          <div class="bc-cols">
+            <div><span class="bc-tag book">${t('Book', '教材')}</span>${bi(a.bookEn, a.bookZh, 'span')}</div>
+            <div><span class="bc-tag bc">BC</span>${bi(a.bcEn, a.bcZh, 'span')}</div>
+          </div>${a.ref ? `<p class="tiny">${esc(a.ref)}</p>` : ''}
+        </div>`).join('')}
+      </div>` : ''}
+      ${(v2.sections || []).map((s, i) => `
+        <details class="acc" ${i === 0 ? 'open' : ''}>
+          <summary><span class="step-num" style="flex:0 0 26px;height:26px;font-size:.8rem">${i + 1}</span> ${bi(s.titleEn, s.titleZh, 'span')}
+            <span class="tag-count">${(s.points || []).length}</span></summary>
+          <div class="acc-body"><ul class="pt-list">${(s.points || []).map(pt).join('')}</ul></div>
+        </details>`).join('')}
+      ${(v2.hardNumbers || []).length ? `<div class="card">
+        <h3 style="margin-top:0">${t('Hard numbers — every testable value in this chapter', '硬数字表——本章全部可考数值')}</h3>
+        <div style="overflow-x:auto"><table class="hard-table">
+          ${v2.hardNumbers.map(h => `<tr><td>${bi(h.itemEn, h.itemZh, 'span')}</td><th>${esc(h.value)}</th></tr>`).join('')}
+        </table></div></div>` : ''}
+      ${(v2.atScene || []).length ? `<div class="card">
+        <h3 style="margin-top:0">${t('At the scene', '实战要点')}</h3>
+        <ul class="pt-list">${v2.atScene.map(x => `<li>${bi(x.en, x.zh, 'span')}</li>`).join('')}</ul></div>` : ''}
+      ${(v2.confusions || []).length ? `<div class="card">
+        <h3 style="margin-top:0">${t('Common confusions', '常见误区')}</h3>
+        <ul class="pt-list">${v2.confusions.map(x => `<li>${bi(x.en, x.zh, 'span')}</li>`).join('')}</ul></div>` : ''}
+      ${(v2.mnemonics || []).length ? `<div class="card">
+        <h3 style="margin-top:0">${t('Memory hooks', '记忆钩子')}</h3>
+        ${v2.mnemonics.map(m => `<details class="acc"><summary><b>${esc(m.name)}</b></summary>
+          <div class="acc-body">${bi(m.en, m.zh)}</div></details>`).join('')}</div>` : ''}
+      ${(v2.selfCheck || []).length ? `<div class="card">
+        <h3 style="margin-top:0">${t('Self-check — answer before you peek', '快测自查——先自答再点开')}</h3>
+        ${v2.selfCheck.map(x => `<details class="acc"><summary>${bi(x.qEn, x.qZh, 'span')}</summary>
+          <div class="acc-body">${bi(x.aEn, x.aZh)}</div></details>`).join('')}</div>` : ''}
+      ${navRow}${guardNote}`;
+  } else {
+    // legacy fallback: old chapters.json content remapped via legacyFrom
+    const old = await loadJSON('./data/study/chapters.json');
+    const lc = old && meta.legacyFrom ? old.chapters.find(x => x.n === meta.legacyFrom) : null;
+    const sec = (labelEn, labelZh, enArr, zhArr) => (!enArr || !enArr.length) ? '' :
+      `<div class="detail-section"><h4>${t(labelEn, labelZh)}</h4><ul>${biList(enArr, zhArr)}</ul></div>`;
+    el.innerHTML = `
+      ${head(null, ' · ' + t('classic notes — full rewrite in progress', '经典笔记——完整版编写中'))}
+      ${lc ? `<div class="card">
+        ${lc.summaryEn ? bi(lc.summaryEn, lc.summaryZh) : ''}
+        ${sec('Highlights', '重点提示', lc.highlightsEn, lc.highlightsZh)}
+        ${sec('Key points', '关键要点', lc.keyPointsEn, lc.keyPointsZh)}
+        ${sec('Must know', '必背', lc.mustKnowEn, lc.mustKnowZh)}
+        ${sec('Common confusions', '常见误区', lc.commonConfusionsEn, lc.commonConfusionsZh)}
+      </div>` : `<div class="card"><p class="muted">${t('This chapter is new to the Canadian edition line-up — its full review is being written. Meanwhile, drill its domain below.',
+        '这一章是加拿大版新增章目，完整精读正在编写。可以先刷它对应的题库分组。')}</p></div>`}
+      ${navRow}${guardNote}`;
+  }
+  el.querySelector('#markRead').onclick = () => {
+    S.chaptersRead = S.chaptersRead || {};
+    if (S.chaptersRead[meta.id]) delete S.chaptersRead[meta.id];
+    else S.chaptersRead[meta.id] = Date.now();
+    save(); drawChapter(el, d, chId);
+  };
 }
 
 async function sAssessment(el) {

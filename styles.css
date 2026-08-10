@@ -562,3 +562,20 @@ details.acc.passage .vitals-table th { width: 38%; background: var(--surface); }
 /* page transition */
 .view-root > * { animation: rise .34s var(--ease) both; }
 @keyframes rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+
+/* ---- chapter review v2 ---- */
+.pt-list { margin: 0; padding-left: 20px; }
+.pt-list li { margin: 7px 0; }
+.pt-list li.pt-hard { list-style: none; margin-left: -20px; padding: 6px 10px 6px 12px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0; }
+.hard-table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.hard-table td, .hard-table th { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+.hard-table th { background: var(--accent-soft); color: var(--accent); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bc-alert { border: 1.5px solid var(--red); border-radius: var(--radius, 12px); padding: 14px 16px; margin: var(--s2, 12px) 0; background: color-mix(in srgb, var(--red) 6%, transparent); }
+.bc-alert h4 { margin: 0 0 10px; color: var(--red); }
+.bc-alert-item { margin: 10px 0; padding-top: 8px; border-top: 1px dashed var(--line); }
+.bc-alert-item:first-of-type { border-top: 0; }
+.bc-cols { display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 5px; }
+@media (min-width: 640px) { .bc-cols { grid-template-columns: 1fr 1fr; } }
+.bc-tag { display: inline-block; font-size: .68rem; font-weight: 700; padding: 1px 7px; border-radius: var(--radius-pill, 99px); margin-right: 6px; vertical-align: 2px; }
+.bc-tag.book { background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); }
+.bc-tag.bc { background: var(--red); color: #fff; }
