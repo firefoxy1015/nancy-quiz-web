@@ -1,0 +1,294 @@
+{
+ "id": "ch21",
+ "n": 21,
+ "titleEn": "Bleeding and Shock",
+ "titleZh": "出血与休克",
+ "group": "shock",
+ "examWeight": 3,
+ "whyEn": "Exam weight 3/3. This chapter is the physiologic engine room of the whole trauma block: blood-loss estimation, shock staging, fluid strategy, tourniquets, pelvic binding, and TXA are all directly testable on the COPR written exam and drive scenario management in the practical. Nearly every number here — volume percentages, phase cut-offs, fluid caps — converts straight into a question. Budget serious review time.",
+ "whyZh": "考试权重 3/3。这一章是整个创伤板块的发动机舱：失血量估算、休克分期、补液策略、止血带、骨盆捆扎和 TXA 全部是 COPR 笔试的直接考点，也是实操站情景处置的主轴。本章几乎每个数字——血容量百分比、分期切点、补液上限——都能原样变成考题，值得花大块时间。",
+ "competencies": {
+  "areas": ["Area 4: Assessment and Diagnostics"],
+  "codes": ["4.3.a","4.3.b","4.3.c","4.3.d","4.3.e","4.3.f","4.3.g","4.3.h","4.3.i","4.3.j","4.3.k","4.3.l","4.4.a","4.4.b","4.4.c","4.4.d","4.4.e","4.4.f","4.4.g","4.4.h","4.4.i","4.5.a","4.5.b","4.5.c","4.5.d","4.5.e","4.5.f","4.5.g","4.5.h","4.5.i","4.5.j","4.5.k","4.5.l","4.5.m"]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: C-A-B and the Perfusion Goal",
+   "titleZh": "引言：C-A-B 与灌注目标",
+   "points": [
+    {"en": "Evidence-based trauma care rewrote the classic ABC priority as 'A before B, except after C': when severe hemorrhage is seen or strongly suspected, circulation gets managed before airway (C-A-B).", "zh": "循证创伤医学把经典 ABC 顺序改写为「A before B, except after C」：看到或高度怀疑严重出血时，先处理循环、再管气道（C-A-B）。"},
+    {"en": "Rationale: a perfectly secured airway achieves nothing if there is no circulating volume left to carry the oxygen — catastrophic external bleeding gets controlled immediately, before anything else.", "zh": "背后的道理：气道再完美，没有循环血量把氧运出去也是白搭——所以灾难性大出血必须第一时间控制，其他都往后排。"},
+    {"en": "Bleeding is the most common cause of shock and among the most time-sensitive conditions in prehospital care.", "zh": "出血是休克最常见的原因，也是院前最分秒必争的情况之一。"},
+    {"en": "Definition to memorize: shock is a state of cardiovascular collapse producing inadequate tissue perfusion — and it actually begins as the body's own compensatory drive to preserve systolic BP and brain perfusion.", "zh": "必背定义：休克是心血管系统崩溃导致组织灌注不足的状态——而它一开始其实是身体为保住收缩压和脑灌注而启动的代偿反应。"},
+    {"en": "Triggers span trauma, heart attack, and allergy; untreated shock progressively destroys vital organs and kills, while early recognition plus rapid action measurably cuts morbidity and mortality.", "zh": "诱因横跨创伤、心梗、过敏；不处理的休克会逐步毁掉重要器官并致死，而早识别＋快行动能实打实降低致残率和死亡率。"}
+   ]
+  },
+  {
+   "titleEn": "Cardiovascular Anatomy and Physiology",
+   "titleZh": "心血管解剖与生理",
+   "points": [
+    {"en": "Perfusion needs three intact components: a working pump (heart), enough fluid volume (blood), and a vessel 'container' able to constrict and dilate on demand — damage any one and the whole system fails.", "zh": "灌注依赖三大件同时完好：能泵的心脏、足够的血容量、能收能舒的血管「容器」——任何一件坏了，整套系统都会垮。"},
+    {"en": "The heart is fist-sized, weighing about 280-350 g in men and 225-280 g in women, with roughly two-thirds of it lying in the left mediastinum.", "zh": "心脏拳头大小，男性约 280-350 g、女性约 225-280 g，约三分之二位于纵隔左侧。", "hard": true},
+    {"en": "Flow sequence (a favourite ordering question): venae cavae, right atrium, tricuspid valve, right ventricle, pulmonic valve, pulmonary artery, lungs, pulmonary veins, left atrium, mitral valve, left ventricle, aortic valve, aorta.", "zh": "血流顺序（爱考排序题）：上下腔静脉→右房→三尖瓣→右室→肺动脉瓣→肺动脉→肺→肺静脉→左房→二尖瓣→左室→主动脉瓣→主动脉。"},
+    {"en": "Afterload is the aortic pressure the left ventricle must pump against; the higher the afterload, the smaller the stroke volume.", "zh": "后负荷（afterload）是左室射血时要对抗的主动脉压力；后负荷越高，每搏输出量越小。"},
+    {"en": "Cardiac output (L/min) = stroke volume x pulse rate; whatever moves either factor moves oxygen delivery to the tissues.", "zh": "心输出量（L/min）＝每搏输出量×脉率；任何改变这两个因子的因素，都会改变组织的氧输送。", "hard": true},
+    {"en": "Starling law: extra venous return stretches the ventricle, which then contracts harder; the ejection fraction (the percentage pumped out) stays constant while the absolute volume pumped rises.", "zh": "Starling 定律：静脉回流增多把心室拉伸，收缩就更有力；射血分数（泵出的百分比）保持不变，但泵出的绝对量增加。"},
+    {"en": "Blood = plasma (over half of total volume, 92% water) + RBCs carrying oxygen on hemoglobin + infection-fighting WBCs + platelets, which clump with liver-made clotting factors and calcium to build clots.", "zh": "血液＝血浆（占总量一半以上，其中 92% 是水）＋靠血红蛋白运氧的红细胞＋抗感染的白细胞＋血小板——血小板与肝脏合成的凝血因子和钙一起形成血凝块。", "hard": true},
+    {"en": "Ischemia clocks at 37°C: brain and spinal cord tolerate only 4-6 minutes without perfusion; kidneys 45 minutes; skeletal muscle 2 hours; the GI tract several hours. Colder organs last longer.", "zh": "37°C 下的缺血时钟：脑和脊髓断灌注只扛得住 4-6 分钟；肾 45 分钟；骨骼肌 2 小时；胃肠道数小时。低温的器官能扛更久。", "hard": true},
+    {"en": "During emergencies the autonomic nervous system reroutes blood toward heart, brain, lungs, and kidneys; when rerouting can no longer cover demand, hypoperfusion — shock — begins.", "zh": "紧急状态下自主神经会把血流优先调配给心、脑、肺、肾；当调配也补不上缺口时，低灌注——休克——就开始了。"}
+   ]
+  },
+  {
+   "titleEn": "Pathophysiology of Hemorrhage",
+   "titleZh": "出血的病理生理",
+   "points": [
+    {"en": "Bleeding character by vessel: capillaries ooze dark red, veins flow steadily and dark, arteries spurt bright red in time with the pulse — arterial bleeding is high-pressure and hardest to control.", "zh": "按血管类型认出血：毛细血管渗（暗红）、静脉稳稳地流（色暗）、动脉随脉搏喷（鲜红）——动脉出血压力高，最难控制。"},
+    {"en": "Traps in that rule: as BP falls, a spurting artery fades to a mere flow; an artery cut cleanly across recoils and self-limits, but one cut on a bias cannot recoil and keeps bleeding; large abrasions and varicose veins can also ooze impressive volumes.", "zh": "这条规律的坑：血压掉下来后，动脉喷血会退化成流血；横断的动脉会回缩自限，斜切的动脉缩不了会一直流；大面积擦伤和曲张静脉同样能渗出大量血。"},
+    {"en": "Internal bleeding into the trunk (chest, abdomen, pelvis) tends to be severe and uncontrolled because the space is huge; small-bone fractures bleed into a confined space and self-limit. Nontraumatic sources: GI bleeds, ruptured ectopic pregnancy, ruptured aneurysm.", "zh": "躯干（胸、腹、骨盆）内出血因为空间巨大，往往又重又难控；小骨骨折的出血被局限空间压住而自限。非创伤来源：消化道出血、宫外孕破裂、动脉瘤破裂。"},
+    {"en": "Blood volume equals 6-8% of body weight, and 1 L of blood weighs about 1 kg; adult males carry roughly 70 mL/kg, females roughly 65 mL/kg.", "zh": "血容量约占体重的 6-8%，1 L 血约重 1 kg；成年男性约 70 mL/kg，女性约 65 mL/kg。", "hard": true},
+    {"en": "The body cannot tolerate acute loss of more than 20% of total volume; once a typical adult loses over 1 L, heart and respiratory rates climb and BP starts to fall.", "zh": "急性失血超过总量的 20% 身体就扛不住；普通成人失血超过 1 L 时，心率呼吸开始加快、血压开始下降。", "hard": true},
+    {"en": "Pediatric scale: a 1-year-old owns only about 800 mL of blood, so 100-200 mL of loss — far less than one soft-drink can (345 mL) — already produces significant signs.", "zh": "儿童换算：1 岁孩子总血量仅约 800 mL，失血 100-200 mL（不到一罐汽水的 345 mL）就会出现明显症状。", "hard": true},
+    {"en": "Rate beats amount: donating 500 mL over 15-20 minutes is harmless, but losing the same volume in moments can trigger hypovolemic shock.", "zh": "失血速度比总量更致命：15-20 分钟献 500 mL 毫发无损，同样的量在瞬间流掉就可能直接休克。", "hard": true},
+    {"en": "Untouched bleeding usually stops within about 10 minutes via vasoconstriction plus platelet plugging (hemostasis); anticoagulants (ASA, warfarin), massive vessel damage, or a partially cut wall that cannot constrict all defeat the mechanism.", "zh": "不干预的出血通常在约 10 分钟内靠血管收缩＋血小板栓（hemostasis）自行停止；抗凝药（阿司匹林、华法林）、血管毁损过重、或管壁只切开一部分无法回缩，都会让这套机制失灵。", "hard": true},
+    {"en": "Judge bleeding as serious when any apply: forceful MOI to chest or abdomen, poor general appearance, shock signs, hemodynamic instability, rapid loss, or bleeding you cannot control.", "zh": "满足任意一条就按严重出血对待：胸腹部承受大能量机制、总体观感差、有休克征象、血流动力学不稳、失血很快、或出血控制不住。"},
+    {"en": "An isolated femur fracture can quietly pour 1 L or more into the thigh — occult volume loss behind a clean-looking scene.", "zh": "单纯股骨骨折就能悄悄往大腿软组织里灌 1 L 以上的血——现场看着干净，血却在体内流。", "hard": true},
+    {"en": "Trauma triad of death: hypothermia + coagulopathy + acidosis (pH below 7.35). Each element feeds the next — cold blood clots poorly, uncontrolled bleeding deepens acidosis, and acidosis further blocks clotting.", "zh": "创伤死亡三联征：低体温＋凝血障碍＋酸中毒（pH<7.35）。三者互相喂养——血冷了凝不住，出血不止加重酸中毒，酸中毒又反过来抑制凝血。", "hard": true},
+    {"en": "Anti-triad playbook: control bleeding aggressively (early tourniquet), blankets under and over plus warmed IV fluid, minimize acidic saline volume, watch EtCO2 and ventilation to avoid respiratory acidosis, and consider TXA where protocols allow.", "zh": "对付三联征的打法：狠一点止血（该上止血带就上）、身下身上都盖毯＋输温热液体、少灌偏酸的生理盐水、盯住 EtCO2 和通气防呼吸性酸中毒、按协议考虑 TXA。"}
+   ]
+  },
+  {
+   "titleEn": "Assessment of a Bleeding Patient",
+   "titleZh": "出血病人的评估",
+   "points": [
+    {"en": "PPE scales with the blood: gloves at minimum; add mask, eye shield, and gown when blood is spurting or copious; thorough handwashing between patients is non-negotiable.", "zh": "防护随出血量升级：手套是底线；血在喷或量很大时加口罩、护目、隔离衣；两个病人之间彻底洗手没有商量余地。"},
+    {"en": "In the primary survey handle only major external bleeding; minor bleeding waits until the patient is assessed and prioritized — never stall a critical patient by bandaging trivia.", "zh": "初评阶段只处理大的外出血；小出血等评估分级完成再管——别为了包扎小伤口耽误一个危重病人。"},
+    {"en": "Suspected internal bleeding: keep the patient warm, give oxygen at 15 L/min by nonrebreathing mask, and move — it cannot be controlled in the field.", "zh": "怀疑内出血：保暖＋非重复呼吸面罩 15 L/min 给氧＋赶紧走——内出血在院前是止不住的。", "hard": true},
+    {"en": "MOI is your X-ray vision: the down-and-under crash path damages knees, femur, hip, and pelvis; up-and-over hits head, neck, chest, and abdomen; a child struck by a car (Waddell triad) takes head plus chest-abdomen plus femur injuries; steering-column crush ruptures the spleen.", "zh": "受伤机制就是你的透视眼：车祸「下潜」路径伤膝/股骨/髋/骨盆；「上跃」路径伤头颈/胸/腹；儿童被车撞（Waddell 三联征）＝头＋胸腹＋下肢；方向盘挤压易致脾破裂。"},
+    {"en": "Any shock picture without an external wound means internal bleeding, usually in the torso, until proven otherwise.", "zh": "有休克表现却看不到外伤＝先按躯干内出血处理，除非证明不是。"},
+    {"en": "History must ask about blood thinners: ASA cripples platelets, warfarin blocks clotting factors — both turn small bleeds into big ones; also probe for dizziness, abdominal tenderness, bruising, and guarding.", "zh": "问病史必须问抗凝药：阿司匹林废掉血小板，华法林废掉凝血因子——都能把小出血养成大出血；同时追问头晕、腹部压痛、瘀斑和肌卫。"},
+    {"en": "Blood signatures decode the source: coffee-ground emesis = old upper-GI blood; melena (dark tarry stool) = upper GI; hematochezia (bright red stool) = distal colon; hematuria suggests renal injury; nonmenstrual vaginal bleeding is always significant.", "zh": "血的「签名」能定位来源：咖啡渣样呕吐物＝陈旧的上消化道出血；黑便（melena）＝上消化道；鲜红血便（hematochezia）＝结肠远端；血尿提示肾损伤；非经期阴道出血一律当回事。"},
+    {"en": "Older patients may announce internal hemorrhage only as dizziness, syncope, or weakness — no pain, no visible source.", "zh": "老年人内出血的开场白可能只有头晕、晕厥或乏力——不痛，也看不到出血点。"}
+   ]
+  },
+  {
+   "titleEn": "Treatment of a Bleeding Patient",
+   "titleZh": "出血病人的处理",
+   "points": [
+    {"en": "Textbook baseline for external bleeding: direct pressure, then elevation above the heart if no fracture is suspected, then a pressure dressing — with the tourniquet reserved for when those fail. (BC's exam sequence promotes the tourniquet — see BC alerts.)", "zh": "教材的外出血基线流程：直接压迫→无骨折嫌疑则抬高过心脏→加压包扎；都不行才上止血带。（BC 考纲把止血带的顺位提前了——见 BC 差异。）"},
+    {"en": "Ear or nose bleeding after head trauma may mean a basal skull fracture: never plug the flow; drape loose sterile gauze to catch blood and block contamination — CSF mixed in the blood dries into a yellow-ringed bull's-eye (halo) stain.", "zh": "头外伤后耳鼻流血可能是颅底骨折：绝对不能堵；用无菌纱布松松盖住，收集血液兼防污染——血里混有脑脊液时，纱布上会晕出黄圈「靶心」（halo 征）。"},
+    {"en": "Scalp wounds bleed out of proportion to their size — direct pressure or a circumferential compression bandage controls most of them.", "zh": "头皮伤口的出血量常大得与伤口不成比例——直接压迫或环形加压包扎能控制大多数。"},
+    {"en": "Junctional zones (neck, groin, axilla) defeat tourniquets; use direct pressure or hemostatic packing per local protocol.", "zh": "交界区（颈、腹股沟、腋窝）上不了止血带；按当地协议用直接压迫或止血敷料填塞。"},
+    {"en": "Splint fractures early: moving bone ends keep slicing vessels and shredding fresh clots; a simple splint alone often stops fracture bleeding.", "zh": "骨折要早固定：断端每动一次就再割一次血管、搅碎刚成形的血块；很多骨折出血靠一个简单夹板就能止住。"},
+    {"en": "Air splints inflate to roughly 50 mm Hg (a fingertip should still dent one) — effectively a whole-limb pressure dressing, but useless against arterial bleeding until the patient's systolic BP falls to splint pressure.", "zh": "空气夹板充气约 50 mm Hg（指尖仍能按出凹陷）——相当于整肢加压包扎，但对动脉出血无效，除非病人收缩压已掉到夹板压力以下。", "hard": true},
+    {"en": "Traction splints for femur fractures pull at the ankle against counter-traction on the ischium and groin — pad those points well; after applying any splint, recheck distal circulation.", "zh": "股骨牵引夹板在踝部施力、以坐骨和腹股沟做反牵引——这两处要垫厚；上完任何夹板都要复查远端循环。"},
+    {"en": "Hemostatic agents stick to damaged tissue and either dehydrate the blood or fire the intrinsic clotting cascade, stopping bleeding within about 2 minutes; powder forms risk embolizing into open vessels — impregnated gauze avoids that.", "zh": "止血剂粘附于损伤组织，靠脱水浓缩血液或激活内源性凝血级联发挥作用，约 2 分钟内止血；粉剂可能顺着开放血管进成栓子——浸渍纱布没有这个问题。", "hard": true},
+    {"en": "Wound packing: drive gauze down to the bleeding source, pack the cavity completely and tightly, pile the excess on top, then hold firm pressure at least 3 minutes or secure a snug pressure dressing — the workhorse for junctional bleeding.", "zh": "伤口填塞：把纱布一路推到出血源、将腔隙塞满塞紧、多余的堆在伤口上，然后持续用力按压至少 3 分钟或包上贴身的加压敷料——交界区出血的主力技术。", "hard": true},
+    {"en": "Tourniquet rules: proximal to the wound but close to it, never over a joint; the widest band available with padding beneath; never wire, rope, or a belt; never cover it; record the application time and hand it over.", "zh": "止血带规矩：绑在伤口近心端但尽量靠近伤口，绝不压在关节上；用能找到的最宽带子并在下面垫衬；绝不用铁丝、绳子或皮带；绝不遮盖；记录上带时间并交接。"},
+    {"en": "Once tightened, never loosen — the hospital releases it; and reassess constantly, because improving perfusion can restart bleeding that then needs the tourniquet tighter.", "zh": "拧紧之后就不再松——由医院来放；同时要反复评估，因为灌注一改善，出血可能卷土重来，那时要做的是拧得更紧。"},
+    {"en": "After control: patient supine, oxygen as needed, keep warm, transport promptly, run serial vitals, and hunt for early shock.", "zh": "止血之后：病人平卧、按需给氧、保暖、尽快转运、连续测生命体征、警惕休克苗头。"}
+   ]
+  },
+  {
+   "titleEn": "Pelvic Trauma and Internal Hemorrhage",
+   "titleZh": "骨盆创伤与内出血",
+   "points": [
+    {"en": "A pelvic fracture can dump more than 2 L of blood into the pelvis; binding reduces pelvic volume, tamponades the bleeding, and splints the fragments — mitigating this loss is a top priority.", "zh": "骨盆骨折可向盆腔内失血超过 2 L；捆扎缩小骨盆容积、形成填塞效应并固定骨折块——压住这个出血源是最高优先级之一。", "hard": true},
+    {"en": "Bind when any is present: pelvic, hip, groin, or lower-back pain; signs of hypovolemic shock; or a suspicious MOI even with stable vitals — binding a pelvis that turns out fine causes negligible harm.", "zh": "满足任一条就捆：骨盆/髋/腹股沟/下背疼痛、低血容量休克征象、或机制可疑（哪怕目前生命体征稳定）——绑错基本无害，漏绑才致命。"},
+    {"en": "High-risk mechanisms: side-impact MVC, vehicle versus pedestrian or cyclist, motorcycle crash, crush force, fall from height, and trauma patients older than 65; suspicion rises further with decreased LOC, intoxication, or a distracting injury.", "zh": "高危机制：侧面撞击车祸、机动车撞行人或骑车人、摩托车事故、挤压伤、高处坠落、65 岁以上创伤病人；意识下降、醉酒吸毒或存在干扰性损伤时更要提高怀疑。", "hard": true},
+    {"en": "Never spring or rock the pelvis on exam — palpate once, gently; springing can restart controlled bleeding.", "zh": "查体绝不能反复摇压骨盆——轻轻触诊一次就够；来回压可能把已经停住的出血压开。"},
+    {"en": "When both are indicated, pelvic binder goes on BEFORE the femur traction splint; if applying traction provokes pelvic pain or instability, stop and splint the femur without traction.", "zh": "两者都要上时，先捆骨盆、再上股骨牵引夹板；牵引一拉就引发骨盆疼痛或不稳，立即停手、改用无牵引方式固定股骨。"},
+    {"en": "Contraindication: the classic fractured femoral neck picture (elderly fall at home, leg shortened and rotated) — a binder would compress that fracture site for zero benefit.", "zh": "禁忌证：典型股骨颈骨折表现（老人居家跌倒、患肢短缩外旋）——捆扎只会压迫骨折端，零收益。"},
+    {"en": "Once applied, never remove — letting the fracture reopen re-bleeds and drops BP fast; a loosened binder gets tightened, not taken off.", "zh": "捆上就不再解——骨折一旦重新张开会再次出血、血压跳水；松了就拧紧，而不是拆掉。"},
+    {"en": "Sheeting technique: folded width spans iliac crest to pubic symphysis with the top edge at the crests; pad between knees and ankles and tie the legs; two rescuers pull the ends simultaneously with even force; clamps sit laterally to keep X-rays clear.", "zh": "床单捆扎要点：折叠宽度对应髂嵴到耻骨联合、上缘平髂嵴；膝踝之间垫衬并把双腿绑拢；两名施救者同时对拉、力量均匀；夹钳放侧方以免挡 X 光。"},
+    {"en": "Pelvic binding and cervical collars are natural partners — their trigger criteria (vitals, LOC, intoxication, distracting injury, MOI) overlap, so reaching for one should make you consider the other.", "zh": "骨盆捆扎和颈托是天生一对——触发标准（生命体征、意识、醉酒、干扰伤、机制）高度重叠，想到其中一个就该想到另一个。"},
+    {"en": "Internal-hemorrhage package: supine, airway and breathing secured, high-flow O2, splint fractures or bind the pelvis, keep warm, large-bore IV en route with a 250-mL crystalloid challenge if hypoperfused (IV on scene only if entrapped), analgesia only if vitals permit, vitals at least every 5 minutes.", "zh": "内出血组合拳：平卧、保住气道呼吸、高流量氧、骨折固定或骨盆捆扎、保暖、途中开大口径静脉——有低灌注证据就给 250 mL 晶体液冲击（除非被困，别在现场开静脉）、生命体征允许才镇痛、至少每 5 分钟测一轮体征。", "hard": true}
+   ]
+  },
+  {
+   "titleEn": "Transport Decisions for Hemorrhage and Shock",
+   "titleZh": "出血与休克的转运决策",
+   "points": [
+    {"en": "Even minor wounds carry transport questions: need for sutures, a tetanus shot within the past 10 years, and whether the patient will reliably follow up.", "zh": "小伤口也有转运考量：要不要缝合、过去 10 年内打没打破伤风、病人会不会靠谱地复诊。", "hard": true},
+    {"en": "Severe or uncontrolled bleeding usually ends in surgery — route the patient to a facility with surgical capability (regional trauma centre), not merely the nearest door.", "zh": "严重或止不住的出血通常要靠手术收场——送往有外科能力的机构（区域创伤中心），而不是随便找最近的门。"},
+    {"en": "Consider air transport for suspected severe internal or uncontrollable external bleeding when road time is long, per regional activation criteria.", "zh": "怀疑严重内出血或不可控外出血、且陆路耗时长时，按区域启动标准考虑空中转运。"},
+    {"en": "Shock transport mirrors the logic: hemorrhagic shock in any phase benefits from early surgery; cardiogenic shock wants a cath-lab and cardiac-surgery centre — otherwise stabilize locally and arrange secondary transfer, with direct medical control helping the call.", "zh": "休克的转运逻辑同理：失血性休克无论哪一期都受益于尽早手术；心源性休克要去有导管室和心外科的医院——去不了就先送本地再二次转运，拿不准时请示在线医疗指导。"}
+   ]
+  },
+  {
+   "titleEn": "Pathophysiology of Shock: Mechanisms and Compensation",
+   "titleZh": "休克病理生理：机制与代偿",
+   "points": [
+    {"en": "Hypoperfusion whispers before vitals shout: altered mentation can be the only early sign while BP, pulse, and respirations still read normal.", "zh": "低灌注的开场是耳语而不是喊叫：意识状态的细微改变可能是唯一早期信号，此时血压、脉搏、呼吸都还「正常」。"},
+    {"en": "The three shock mechanisms mirror the three circulatory components — pump failure (cardiogenic), volume loss (hypovolemic: blood, plasma, or electrolyte fluid), and container failure from lost vessel tone (neurogenic and other distributive states).", "zh": "休克三大机制正好对应循环三大件——泵坏了（心源性）、液体没了（低血容量性：失血/血浆/电解质液）、容器失去张力（神经源性等分布性休克）。"},
+    {"en": "Nancy's rule: in unexplained shock, assume a hypovolemic component and treat for volume first.", "zh": "Nancy 铁律：原因不明的休克，先假定存在低血容量成分、先按补容量来治。"},
+    {"en": "High-risk shock candidates: trauma or bleeding, the elderly, massive MI, pregnancy, and sepsis-prone hosts (burns, diabetes, cancer).", "zh": "休克高危人群：创伤或出血者、老年人、大面积心梗、孕妇，以及容易感染的宿主（烧伤、糖尿病、肿瘤）。"},
+    {"en": "Compensation wiring: baroreceptors in the aortic arch and carotid sinuses detect falling flow and drive the vasomotor centre to constrict vessels; the medullary vasoconstrictor centre fires when systolic BP drops into the 60-80 mm Hg range (lower still in children).", "zh": "代偿的线路图：主动脉弓和颈动脉窦的压力感受器察觉血流下降，驱动血管运动中枢收缩血管；当收缩压掉进 60-80 mm Hg 区间（儿童阈值更低）时，延髓缩血管中枢强烈放电。", "hard": true},
+    {"en": "Hormonal reinforcements: RAAS activation plus pituitary ADH retain salt and water and constrict the periphery; interstitial fluid shifts into the vessels; the spleen releases stored RBCs — preload, stroke volume, and pulse rate all climb.", "zh": "激素援军：RAAS 激活＋垂体释放 ADH，保钠保水又收缩外周；组织间液向血管内转移；脾脏放出储备的红细胞——前负荷、每搏量、脉率一起上抬。"},
+    {"en": "Adrenal catecholamines: epinephrine's alpha-1 constricts vessels (raising PVR and afterload) while its beta effects speed and strengthen the heart and dilate bronchi; norepinephrine is nearly pure alpha vasoconstriction.", "zh": "肾上腺儿茶酚胺：肾上腺素的 α1 收缩血管（升高外周阻力和后负荷），β 效应加快加强心脏并扩张支气管；去甲肾上腺素几乎是纯 α 缩血管。"},
+    {"en": "Blood is sacrificed in a fixed order to protect the brain: placenta first, then skin, muscles, gut, kidneys, liver, heart, lungs — skin and muscle endure the squeeze longest.", "zh": "为了保脑，身体按固定顺序牺牲供血：胎盘最先，然后皮肤、肌肉、肠道、肾、肝、心、肺——皮肤和肌肉最耐得住被「抽血」。"},
+    {"en": "When major organs stay underperfused beyond 60 minutes, complications like renal failure and shock lung set in — the physiologic backbone of the golden hour.", "zh": "重要器官低灌注超过 60 分钟就会出现肾衰、休克肺之类的并发症——这正是创伤「黄金一小时」的生理学根据。", "hard": true},
+    {"en": "Cellular endgame: anaerobic metabolism piles up lactate and drops pH, ATP production stalls, the sodium-potassium pump fails, cells swell with sodium and water, and rupturing lysosomes self-digest the cell; acidotic blood also binds oxygen poorly (curve shifts right), and glucose may read high from catecholamines and cortisol.", "zh": "细胞层面的终局：无氧代谢堆积乳酸、pH 下滑，ATP 断供，钠钾泵失灵，钠和水涌入细胞使其肿胀，溶酶体破裂开始自我消化；酸化的血携氧也变差（解离曲线右移），儿茶酚胺和皮质醇还可能把血糖顶高。"},
+    {"en": "When mean arterial pressure sinks below 60 mm Hg the coronaries stop filling, the weakened heart drops output further, and an ischemic pancreas releases myocardial depressant factor — a self-accelerating spiral.", "zh": "平均动脉压跌破 60 mm Hg 后冠脉无法充盈，变弱的心脏让输出量再降一截，缺血的胰腺还释放心肌抑制因子——一个自我加速的死亡螺旋。", "hard": true},
+    {"en": "Terminal microcirculation: sluggish acidic blood clots into microthrombi and capillaries leak plasma; then relaxing postcapillary sphincters flush pooled acid, potassium, CO2, and clotted RBCs back into circulation (capillary washout) — the doorway to multiple-organ dysfunction.", "zh": "微循环的末路：又慢又酸的血形成微血栓、毛细血管漏出血浆；随后毛细血管后括约肌松开，把积存的酸、钾、CO2 和凝集的红细胞一起冲回循环（capillary washout）——这就是多器官功能障碍的大门。"}
+   ]
+  },
+  {
+   "titleEn": "Types of Shock",
+   "titleZh": "休克的类型",
+   "points": [
+    {"en": "Weil-Shubin sorting: central shock = cardiogenic + obstructive; peripheral shock = hypovolemic + distributive.", "zh": "Weil-Shubin 分法：中心性休克＝心源性＋梗阻性；外周性休克＝低血容量性＋分布性。"},
+    {"en": "Shared canvas of every shock: low cardiac output, circulatory insufficiency, tachycardia, usually pallor — EXCEPT neurogenic (spinal) and septic shock, which can look pink; hypotension is a late finding, especially in children.", "zh": "所有休克的共同底色：心输出量低、循环不足、心动过速、通常苍白——例外是神经源性和感染性休克可以面色如常；低血压是晚期表现，儿童尤其如此。"},
+    {"en": "Cardiogenic shock: primary pump failure, most often massive left-ventricular infarction; prognosis turns grim when over 40% of the LV is non-functional; it complicates about 7.5% of acute MIs, with mortality up to 80% even with treatment.", "zh": "心源性休克：泵本身坏了，最常见于大面积左室梗死；左室超过 40% 失去功能预后就很差；约 7.5% 的急性心梗会并发心源性休克，即使治疗死亡率也高达 80%。", "hard": true},
+    {"en": "Obstructive shock: flow physically blocked — pericardial tamponade squeezes right-ventricular diastolic filling, tension pneumothorax and massive pulmonary embolism choke lung flow, and vena cava compression (late-pregnancy supine position) starves venous return.", "zh": "梗阻性休克：血流被物理卡住——心包填塞压住右室舒张充盈，张力性气胸和大面积肺栓塞掐断肺血流，腔静脉受压（孕晚期平卧）断掉静脉回流。"},
+    {"en": "Hypovolemic shock splits into exogenous (fluid leaves the body — external bleeding is the top cause) and endogenous (fluid trapped inside: dehydration, burns, crush injury, anaphylaxis, and third-space losses in peritonitis, pancreatitis, or ileus).", "zh": "低血容量性休克分外源性（液体离开身体——外出血最常见）和内源性（液体困在体内：脱水、烧伤、挤压伤、过敏，以及腹膜炎/胰腺炎/肠梗阻的第三间隙丢失）。"},
+    {"en": "Dehydration exam: tenting skin, furrowed tongue, sunken eyes, a weak fast pulse that jumps more than 15 beats/min on sitting up, postural syncope; treat adults with NS or LR at 100-200 mL/h, patient supine.", "zh": "脱水查体：皮肤捏起不回弹、舌面起皱、眼窝凹陷、脉弱而快且坐起时再增 15 次/分以上、体位性晕厥；成人用 NS 或 LR 以 100-200 mL/h 补液，保持平卧。", "hard": true},
+    {"en": "Distributive shock = resistance vessels (arterioles) and/or capacitance vessels (venules) dilate wide and the volume pools in the expanded bed; the trio: septic, neurogenic, anaphylactic.", "zh": "分布性休克＝阻力血管（小动脉）和/或容量血管（小静脉）大开，血都「躺」在扩张的血管床里；三兄弟：感染性、神经源性、过敏性。"},
+    {"en": "Septic shock definition: sepsis syndrome plus systolic BP under 90 mm Hg (or a fall of more than 40 from baseline); it hurts three ways — leaky capillaries drain the volume, the leaked fluid drowns gas exchange, and the dilated bed dwarfs whatever volume remains.", "zh": "感染性休克定义：脓毒症综合征＋收缩压 <90 mm Hg（或较基线下降 >40）；它三面夹击——毛细血管渗漏丢容量、漏出的液体泡坏气体交换、扩张的血管床装不满剩余的血量。", "hard": true},
+    {"en": "Neurogenic shock: cord injury severs sympathetic tone, everything below the lesion dilates, and the body's 5-6 L can no longer fill the container — relative hypovolemia with systolic BP typically 80-100 mm Hg.", "zh": "神经源性休克：脊髓损伤切断交感张力，损伤平面以下血管全面扩张，全身 5-6 L 血填不满变大的容器——相对性低血容量，收缩压常在 80-100 mm Hg。", "hard": true},
+    {"en": "Neurogenic signature (exam gold): relative bradycardia plus pink, warm, DRY skin with no sweating below the injury — the exact opposite of the catecholamine-driven pale-cold-clammy picture.", "zh": "神经源性的招牌（考试金句）：相对心动过缓＋粉红、温暖、干燥的皮肤、损伤平面以下无汗——和儿茶酚胺驱动的苍白湿冷刚好相反。"},
+    {"en": "Spinal shock is NOT true shock: a local, often temporary neurologic state right after cord injury — flaccid paralysis and sphincters, absent reflexes and all sensation below the lesion, impaired thermoregulation, bowel distension.", "zh": "脊髓休克（spinal shock）不是真正的休克：它是脊髓损伤后局部的、常可逆的神经状态——弛缓性瘫痪和括约肌松弛、损伤平面以下反射和各种感觉消失、体温调节受损、肠管扩张。"},
+    {"en": "Anaphylaxis: prior sensitization, then re-exposure releases histamine and other vasodilators — dilation plus leaking capillaries (relative hypovolemia, swelling that can seal the upper airway), bronchoconstriction with wheeze, urticaria; each new exposure tends to hit harder. Angioedema = sudden subcutaneous swelling resolving within about 24 hours, mostly in young women.", "zh": "过敏性休克：先致敏，再次暴露时组胺等扩血管介质倾巢而出——血管扩张＋毛细血管渗漏（相对低血容量，肿胀可堵死上气道）、支气管收缩伴哮鸣、荨麻疹；而且往往一次比一次凶。血管性水肿＝突发的皮下肿胀，约 24 小时内消退，多见于年轻女性。"},
+    {"en": "SIRS: two or more of — temperature above 38 or below 36°C; pulse above 90; respirations above 20 or PCO2 below 32 mm Hg; WBC above 12 or below 4 x10^9/L. SIRS + infection = sepsis; mortality scales with criteria count (two ≈6%, three ≈10%, four ≈17%), and its endpoint MODS kills 60-90%.", "zh": "SIRS 判定：以下满足两条及以上——体温 >38 或 <36°C、脉搏 >90、呼吸 >20 或 PCO2 <32 mm Hg、白细胞 >12 或 <4×10⁹/L。SIRS＋感染＝脓毒症；死亡率随条数上升（2 条约 6%、3 条约 10%、4 条约 17%），其终点 MODS 死亡率 60-90%。", "hard": true},
+    {"en": "SIRS organ toll: ARDS with severe hypoxemia; acute tubular necrosis with urine under 20 mL/h; DIC where clotting and bleeding happen simultaneously; the acid-base story opens with respiratory alkalosis, then slides into metabolic acidosis.", "zh": "SIRS 的器官账单：ARDS 伴严重低氧；急性肾小管坏死、尿量 <20 mL/h；DIC——同时在凝血又在出血；酸碱变化先是呼吸性碱中毒，随后滑向代谢性酸中毒。", "hard": true}
+   ]
+  },
+  {
+   "titleEn": "Phases of Shock and the Clinical Picture",
+   "titleZh": "休克分期与临床表现",
+   "points": [
+    {"en": "Shock runs three phases — compensated, decompensated, irreversible; the entire job of this chapter is teaching you to catch it in phase one.", "zh": "休克三部曲——代偿期、失代偿期、不可逆期；这一章的全部意义，就是让你在第一幕就认出它。"},
+    {"en": "Tennis-score mapping of hemorrhagic loss: 15-30% = compensated, 30-40% = decompensated, past 40% = irreversible.", "zh": "用网球比分记失血分期：15-30%＝代偿期，30-40%＝失代偿期，超过 40%＝不可逆期。", "hard": true},
+    {"en": "Compensated picture: agitation, anxiety, sense of impending doom, thirst, nausea, tachypnea, weak thready pulse, cool clammy pale skin with perhaps cyanotic lips, delayed cap refill in children — and a NORMAL blood pressure with a quietly narrowing pulse pressure.", "zh": "代偿期长相：躁动、焦虑、濒死感、口渴、恶心、呼吸急促、脉细速、皮肤湿冷苍白甚至口唇发绀、儿童再充盈延迟——而血压是正常的，只有脉压在悄悄变窄。"},
+    {"en": "Pulse pressure (systolic minus diastolic) narrows early because it tracks arterial tone — more sensitive to perfusion change than either number alone.", "zh": "脉压（收缩压减舒张压）反映动脉张力，比单看收缩压或舒张压都更早、更敏感地暴露灌注变化。"},
+    {"en": "Decompensated picture: falling BP, mentation sliding from verbal toward unresponsive (a LATE marker), laboured or irregular breathing, thready-to-absent peripheral pulses, ashen or mottled or cyanotic skin, dilated pupils, shrinking urine output.", "zh": "失代偿期长相：血压下滑、意识从能对答滑向无反应（这是晚期指标）、呼吸费力或不规则、外周脉细到摸不到、皮肤灰白/花斑/发绀、瞳孔散大、尿量缩水。"},
+    {"en": "BP is the last domino: compensation props up the number until it can't — and infants and children keep a 'normal' BP until close to half their blood volume is gone.", "zh": "血压是最后倒下的多米诺：代偿机制会死撑读数直到撑不住——婴幼儿更夸张，失血接近一半之前血压都能显得「正常」。", "hard": true},
+    {"en": "Compensated-phase breathing races on purpose: the body manufactures respiratory alkalosis to offset the growing metabolic acidosis.", "zh": "代偿期的喘不是白喘：身体故意制造呼吸性碱中毒，去中和正在积累的代谢性酸中毒。"},
+    {"en": "Orthostatic tilt test (for hypovolemia): positive if position change brings dizziness, a pulse rise of at least 20 beats/min, or a systolic drop of at least 20 mm Hg.", "zh": "直立倾斜试验（查低血容量）：体位改变后出现头晕、脉搏增加 ≥20 次/分、或收缩压下降 ≥20 mm Hg，即为阳性。", "hard": true},
+    {"en": "Perfusion gauges without a lab: mental status reads the brain (alert = perfused, whatever the cuff says); urine reads the kidneys (30-50 mL/h is healthy); nail-bed capillary refill beyond 2 seconds flags poor peripheral flow, though it is not the most reliable sign.", "zh": "不靠化验的灌注仪表盘：意识代表脑（清醒＝脑在灌注，别管血压计说什么）；尿量代表肾（健康 30-50 mL/h）；甲床再充盈超过 2 秒提示外周灌注差——但它不是最可靠的指标。", "hard": true},
+    {"en": "Pulse-location BP estimate: palpable radial ≈ systolic 80-90; carotid-only ≈ below 80. A barely-there radial in a talking patient means the pressure is collapsing — skip the cuff and go.", "zh": "摸脉估血压：桡动脉摸得到≈收缩压 80-90；只剩颈动脉≈低于 80。病人还在说话但桡脉若有若无，说明血压正在崩——别量了，直接走。", "hard": true},
+    {"en": "Trauma shock is hemorrhagic until proven otherwise: on scene do only ABCs and spinal motion restriction; SAMPLE, baseline vitals, and IVs happen en route unless the patient is trapped.", "zh": "创伤休克在证明不是之前都按失血性算：现场只做 ABC 和脊柱活动限制；SAMPLE、基线体征、开静脉都放到车上做，除非病人被困。"},
+    {"en": "'Irreversible' is a retrospective label earned only after fluids, blood, and vasopressors have all failed — never field-diagnose it; with any signs of life, resuscitate aggressively and transport.", "zh": "「不可逆」是补液、输血、升压药全部无效之后回头贴的标签——绝不许在现场下这个结论；只要还有生命迹象，就全力复苏、快速转运。"}
+   ]
+  },
+  {
+   "titleEn": "Treatment of a Patient in Shock",
+   "titleZh": "休克病人的治疗",
+   "points": [
+    {"en": "Order of business: CABC — kill catastrophic bleeding first, then airway with suction ready, high-flow O2 or bag-mask assistance, and an early definitive airway if the patient cannot protect their own.", "zh": "总纲：CABC——先灭掉灾难性出血，再管气道（吸引器备好）、高流量氧或球囊面罩辅助，病人保不住自己气道就早做确定性气道。"},
+    {"en": "Fluid vehicle: isotonic crystalloid (normal saline or lactated Ringer) through at least one large-bore IV; dextrose-containing solutions are banned from trauma resuscitation.", "zh": "补液载体：等张晶体液（生理盐水或乳酸林格液），至少一条大口径静脉通路；含糖溶液禁止用于创伤复苏。"},
+    {"en": "Book dosing logic: 250-mL boluses repeated until radial pulses return — a radial pulse equates to systolic roughly 80-90 mm Hg; reassess after every challenge.", "zh": "教材的给液逻辑：每次 250 mL 冲击、直到桡动脉搏动回来——桡脉出现约等于收缩压 80-90 mm Hg；每次冲击后都要复评。", "hard": true},
+    {"en": "Book Table 21-4 (lungs dry): SBP 100-130 → 250-mL challenge; SBP 80-90 → 500 mL; SBP 50-80 → 1 L then titrate to perfusion. BC's exam answer instead: 20 mL/kg to a 2-L cap, reassessing every 500 mL.", "zh": "教材表 21-4（肺部干净时）：收缩压 100-130→250 mL 冲击；80-90→500 mL；50-80→先 1 L 再滴定。BC 的考试答案则是：20 mL/kg、封顶 2 L、每 500 mL 复评一次。", "hard": true},
+    {"en": "Permissive hypotension: hold SBP around 70-80 (or titrate to 80-90) so fresh clots survive — only when definitive care is near; blunt-trauma endpoint = radial pulse or verbal contact, penetrating-torso endpoint = carotid pulse or verbal contact.", "zh": "允许性低血压：把收缩压压在约 70-80（或滴定至 80-90），让新生的血凝块保得住——前提是很快能到确定性治疗；钝性伤终点＝桡脉或能对话，躯干穿透伤终点＝颈动脉搏动或能对话。", "hard": true},
+    {"en": "Permissive hypotension is OFF the table for TBI (the book keeps SBP above 90; BC demands above 120) and unproven in children, pregnancy, and the elderly — a single hypotensive episode below 90 already worsens brain-injury outcomes; CPP = MAP minus ICP.", "zh": "允许性低血压对 TBI 禁用（教材要求收缩压 >90；BC 要求 >120），对儿童、孕妇、老人也缺乏证据——重型脑外伤哪怕出现一次 <90 的低血压都会恶化预后；脑灌注压＝平均动脉压−颅内压。", "hard": true},
+    {"en": "Crystalloid truth: roughly 60% of a normal-saline bolus escapes the vessels within 20 minutes; lactated Ringer carries 28 mEq of lactate that the liver turns into bicarbonate, with hints of benefit in septic shock.", "zh": "晶体液的真相：生理盐水冲击量约 60% 会在 20 分钟内漏出血管；乳酸林格液含 28 mEq 乳酸盐、经肝转成碳酸氢盐，在感染性休克中似乎略有优势。", "hard": true},
+    {"en": "Hypertonic saline (3% or 7.5%): 250 mL pulls in interstitial fluid like 2-3 L of isotonic — yet evidence shows no superiority (niche: severe head injury per protocol); colloids, dextran, and polygeline offer no benefit and possible end-organ harm — all retired from shock care.", "zh": "高渗盐水（3% 或 7.5%）：250 mL 的扩容效果堪比 2-3 L 等渗液——但证据显示并不更优（小众用途：按协议用于重型颅脑伤）；胶体、右旋糖酐、聚明胶肽无益还可能伤器官——已全部退出休克治疗。", "hard": true},
+    {"en": "Predict blood-product need with three flags — pulse over 120, BP under 90, penetrating mechanism — and radio ahead so the hospital's massive hemorrhage protocol is running before you arrive.", "zh": "预测要用血的三面旗——脉搏 >120、血压 <90、穿透机制——提前电台通知，让医院的大量输血协议在你到达前就转起来。", "hard": true},
+    {"en": "Obstructive causes get mechanical fixes: tension pneumothorax → needle decompression now; suspected tamponade → expedite to the ED for pericardiocentesis. Everyone gets warmth (cold cripples clotting), nothing by mouth, and ECG monitoring for dysrhythmias.", "zh": "梗阻性的病因用机械手段解：张力性气胸→立即针刺减压；疑心包填塞→火速送院做心包穿刺。所有休克病人都要保暖（低温废掉凝血）、禁食禁水、持续心电监护防心律失常。"},
+    {"en": "Cardiogenic shock: no stay-and-play — supine, O2 at 12-15 L/min by nonrebreathing mask, IV access, a cautious 250-mL challenge only if lungs are clear, low-dose dopamine or norepinephrine if MAP falls below 60, and a destination with a cath lab.", "zh": "心源性休克：不许恋战——平卧、非重复呼吸面罩 12-15 L/min、开静脉、肺部干净才敢给 250 mL 试探性补液、平均动脉压 <60 时用小剂量多巴胺或去甲肾上腺素、目的地要有导管室。", "hard": true},
+    {"en": "Neurogenic shock: general shock care plus spinal motion restriction and aggressive warmth (thermoregulation is disconnected); NS in 250-mL increments up to 2 L targeting SBP at or above 90; in a pure neurogenic picture, pressors beat drowning the patient in fluid.", "zh": "神经源性休克：常规休克处理＋脊柱活动限制＋加倍保暖（体温调节已断线）；生理盐水按 250 mL 递增、最多 2 L、目标收缩压 ≥90；纯神经源性时，升压药比拼命灌液更聪明。", "hard": true},
+    {"en": "Anaphylactic shock: strip the trigger, own the airway early, IM epinephrine is THE drug (the patient's auto-injector counts) while IV access is coming, crystalloid challenges for the leaky container, salbutamol for bronchospasm, steroids and diphenhydramine per protocol.", "zh": "过敏性休克：移除过敏原、早期强势管理气道，肌注肾上腺素是核心用药（病人自带的笔式注射器也算），随后开静脉、晶体液冲击补「漏桶」、沙丁胺醇平喘、激素和苯海拉明按协议跟上。"},
+    {"en": "Start IVs prophylactically in anyone poised to crash: profuse external, internal, or vaginal bleeding; blunt abdominal trauma; pelvic or femur fracture; major burns; heat exhaustion; intractable vomiting or diarrhea; neurogenic or septic shock. In shock, IM and subcutaneous drugs absorb too unpredictably — go IV.", "zh": "对随时可能崩的病人预防性开静脉：大量外出血/内出血/阴道出血、腹部钝性伤、骨盆或股骨骨折、大面积烧伤、热衰竭、顽固呕吐腹泻、神经源性或感染性休克。休克状态下肌注和皮下给药吸收完全不可预测——一律走静脉。"}
+   ]
+  },
+  {
+   "titleEn": "Prevention Strategies and the Case Wrap-Up",
+   "titleZh": "预防策略与病例收尾",
+   "points": [
+    {"en": "The single most effective shock-prevention measure on the road: seat belts, every ride.", "zh": "预防休克性价比最高的一招：每次上车都系好安全带。"},
+    {"en": "Never explain warning signs away — 'he's tachycardic because he's upset' is how patients die; pair the MOI with any irregularity and treat as shock now.", "zh": "永远不要替危险信号找借口——「他心跳快是因为吓着了」就是病人死掉的方式；机制＋任何一点异常＝现在就按休克处理。"},
+    {"en": "Case math to internalize: an 80-kg man carries 4.8-6.4 L of blood (6-8% of weight); alert but with no radial pulse puts his SBP around 60-90 — decompensated, roughly 30% (about 4 units) already gone; at 40% loss the pulse itself disappears.", "zh": "要内化的病例算术：80 kg 男性血容量 4.8-6.4 L（体重的 6-8%）；人清醒但桡脉消失，收缩压约在 60-90——已是失代偿期，约 30%（约 4 个单位）的血没了；到 40% 时连脉搏都会消失。", "hard": true},
+    {"en": "The clock: inside the golden hour you own only a platinum 10 minutes on scene — every intervention there must justify its cost in minutes, and calling ahead activates the OR and blood bank before arrival.", "zh": "时间账：黄金一小时里，属于现场的只有铂金 10 分钟——每个现场操作都必须对得起它烧掉的时间；提前呼叫能让手术室和血库在你到达前就位。", "hard": true},
+    {"en": "SpO2 lies in low-perfusion states — trust the clinical picture over the number and keep moving.", "zh": "低灌注状态下 SpO2 会说谎——信临床表现，别信数字，继续赶路。"}
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {"itemEn": "Blood volume vs body weight", "itemZh": "血容量占体重比例", "value": "6-8%；1 L 血 ≈ 1 kg"},
+  {"itemEn": "Blood volume per kilogram", "itemZh": "每公斤血容量", "value": "男 ~70 mL/kg；女 ~65 mL/kg"},
+  {"itemEn": "Maximum tolerable acute blood loss", "itemZh": "急性失血耐受上限", "value": ">20% 总血量即无法耐受"},
+  {"itemEn": "Adult loss that shifts vital signs", "itemZh": "成人体征改变的失血量", "value": ">1 L（心率呼吸升、血压降）"},
+  {"itemEn": "1-year-old: total volume / significant loss", "itemZh": "1 岁儿童总血量 / 显著失血量", "value": "~800 mL / 100-200 mL（汽水罐 345 mL 作参照）"},
+  {"itemEn": "Tolerable bleed rate (donation)", "itemZh": "可耐受失血速度参照（献血）", "value": "500 mL / 15-20 min"},
+  {"itemEn": "Spontaneous hemostasis time", "itemZh": "自发止血时间", "value": "约 10 min"},
+  {"itemEn": "Ischemia tolerance at 37°C", "itemZh": "37°C 下缺血耐受时限", "value": "脑/脊髓 4-6 min；肾 45 min；骨骼肌 2 h；胃肠道数小时"},
+  {"itemEn": "Occult loss: femur / pelvis", "itemZh": "隐匿失血：股骨 / 骨盆", "value": "股骨 ≥1 L；骨盆 >2 L"},
+  {"itemEn": "Acidosis threshold (lethal triad)", "itemZh": "酸中毒判定（死亡三联征）", "value": "pH <7.35"},
+  {"itemEn": "Shock phases by blood loss", "itemZh": "失血量对应休克分期", "value": "15-30% 代偿；30-40% 失代偿；>40% 不可逆"},
+  {"itemEn": "Pediatric BP illusion", "itemZh": "儿童血压假象", "value": "失血近 50% 前血压可维持正常"},
+  {"itemEn": "Pulse-site BP estimate", "itemZh": "摸脉估收缩压", "value": "桡脉可及 ≈80-90 mm Hg；仅颈动脉 ≈<80 mm Hg"},
+  {"itemEn": "Vasoconstrictor centre trigger", "itemZh": "缩血管中枢触发点", "value": "SBP 60-80 mm Hg（儿童更低）"},
+  {"itemEn": "Coronary filling floor", "itemZh": "冠脉充盈底线", "value": "MAP <60 mm Hg 冠脉停灌"},
+  {"itemEn": "Organ-damage timer / scene time", "itemZh": "器官损伤计时 / 现场时限", "value": "低灌注 >60 min 出并发症；现场只有铂金 10 min"},
+  {"itemEn": "Capillary refill", "itemZh": "毛细血管再充盈", "value": "正常 <2 s"},
+  {"itemEn": "Urine output", "itemZh": "尿量", "value": "正常 30-50 mL/h；少尿 <20 mL/h"},
+  {"itemEn": "Positive orthostatic tilt test", "itemZh": "倾斜试验阳性标准", "value": "头晕 / 脉搏 +≥20 次/分 / SBP −≥20 mm Hg"},
+  {"itemEn": "Cardiogenic shock statistics", "itemZh": "心源性休克数字", "value": "左室 >40% 失功预后差；见于 ~7.5% AMI；死亡率至 80%"},
+  {"itemEn": "Septic shock definition", "itemZh": "感染性休克定义", "value": "SBP <90 mm Hg 或较基线降 >40"},
+  {"itemEn": "Neurogenic shock hemodynamics", "itemZh": "神经源性休克血流动力学", "value": "SBP 常 80-100 mm Hg＋相对心动过缓"},
+  {"itemEn": "SIRS criteria (need at least 2)", "itemZh": "SIRS 判据（≥2 条）", "value": "T>38/<36°C；HR>90；RR>20 或 PCO2<32；WBC>12 或 <4 ×10⁹/L"},
+  {"itemEn": "SIRS / MODS mortality", "itemZh": "SIRS / MODS 死亡率", "value": "2 条 6%、3 条 10%、4 条 17%；MODS 60-90%"},
+  {"itemEn": "Dehydration IV rate (adult)", "itemZh": "脱水补液速度（成人）", "value": "NS/LR 100-200 mL/h"},
+  {"itemEn": "Book IV fluid table (dry lungs)", "itemZh": "教材补液表（肺部干净）", "value": "SBP 100-130→250 mL；80-90→500 mL；50-80→1 L 再滴定"},
+  {"itemEn": "BC fluid bolus (exam standard)", "itemZh": "BC 补液标准（考试答案）", "value": "20 mL/kg，上限 2 L，每 500 mL 复评"},
+  {"itemEn": "TXA (BC monograph)", "itemZh": "TXA（BC 药物单）", "value": "2 g IV 推注、用时 1 min；>3 h、<12 岁、孤立 TBI、过敏禁用"},
+  {"itemEn": "Permissive hypotension target", "itemZh": "允许性低血压目标", "value": "SBP 70-80（或滴定 80-90）；TBI 例外：书 >90 / BC >120"},
+  {"itemEn": "NS bolus escape rate", "itemZh": "生理盐水外漏速度", "value": "~60% 在 20 min 内漏出血管"},
+  {"itemEn": "Lactated Ringer buffer content", "itemZh": "乳酸林格液缓冲成分", "value": "28 mEq 乳酸盐（肝转碳酸氢盐）"},
+  {"itemEn": "Hypertonic saline equivalence", "itemZh": "高渗盐水等效扩容", "value": "250 mL ≈ 2-3 L 等渗晶体（证据不支持常规用）"},
+  {"itemEn": "Blood-product need predictors", "itemZh": "需血制品预测指标", "value": "HR >120＋SBP <90＋穿透伤"},
+  {"itemEn": "Air splint pressure", "itemZh": "空气夹板充气压", "value": "~50 mm Hg（可按出指凹）"},
+  {"itemEn": "Hemostatic agent / wound packing times", "itemZh": "止血剂起效 / 填塞按压时间", "value": "止血 ≤2 min / 按压 ≥3 min"},
+  {"itemEn": "Cardiogenic shock O2 and pressor gate", "itemZh": "心源性休克给氧与升压阈值", "value": "NRB 12-15 L/min；MAP <60 起用低剂量升压药"},
+  {"itemEn": "Neurogenic shock fluid plan", "itemZh": "神经源性休克补液方案", "value": "250 mL 递增至 2 L，目标 SBP ≥90"},
+  {"itemEn": "Tetanus lookback window", "itemZh": "破伤风追溯期", "value": "10 年"}
+ ],
+ "atScene": [
+  {"en": "Estimate the pre-injury blood volume before judging loss: volume is 6-8% of body weight and 1 L of blood weighs about 1 kg — an 80-kg patient started with roughly 5-6 L.", "zh": "判断失血之前先算病人原本有多少血：血容量约占体重 6-8%，1 L 血约重 1 kg——80 kg 的病人起点大约 5-6 L。"},
+  {"en": "Arterial spray means full barrier PPE — gloves plus mask, eye shield, and gown — and thorough handwashing between every patient remains the cheapest protection you own.", "zh": "动脉喷血就要全套屏障防护——手套加口罩、护目、隔离衣——而每个病人之间认真洗手，永远是最便宜的保命招。"},
+  {"en": "Shock signs with no external wound = probable internal bleeding, usually inside the torso.", "zh": "有休克征象却没有外伤＝大概率内出血，位置通常在躯干。"},
+  {"en": "BP may be the LAST vital to move; by the time it drops, shock is established — children can bleed to nearly half their volume with a normal reading.", "zh": "血压可能是最后才动的体征；等它掉下来，休克早已成型——儿童失血到接近一半时读数都可能还正常。"},
+  {"en": "Whether blood pools on the kitchen floor or hides in a body cavity, every uncontrolled bleeder walks the same staircase of shock phases — the phase simply tracks the percentage lost; internal bleeding is likelier to stay uncontrolled, so hit its early phase aggressively.", "zh": "血是摊在厨房地板上还是藏在体腔里并不重要——只要止不住，病人走的都是同一段休克楼梯，走到哪一级取决于失血百分比；内出血更可能止不住，所以要在早期就下重手。"},
+  {"en": "Orthostatic vocabulary: orthostatic hypotension is a systolic drop on standing; the tilt test measures BP and pulse lying, seated, and standing — dizziness, pulse up 20, or SBP down 20 makes it positive.", "zh": "直立体位词汇表：直立性低血压＝站起时收缩压下降；倾斜试验分别在卧、坐、立位测血压和脉搏——头晕、脉搏 +20 或收缩压 −20 即阳性。"},
+  {"en": "Notes from Nancy, doubled: do not wait for the BP to fall before treating shock; and in unexplained shock, treat the hypovolemic component first.", "zh": "Nancy 的两句原话：不要等血压掉了才开始治休克；原因不明的休克，先按低血容量治。"},
+  {"en": "In the elderly, nontraumatic internal bleeding may debut as nothing but dizziness, fainting, or weakness.", "zh": "老年人的非创伤性内出血，首发表现可能只有头晕、晕厥或乏力。"}
+ ],
+ "confusions": [
+  {"en": "'BP is fine, so no shock' — wrong: in compensated shock (15-30% loss) BP is normal by definition; the tell-tales are anxiety, tachycardia, clammy skin, and a narrowing pulse pressure.", "zh": "「血压还行＝没休克」——错：代偿期（失血 15-30%）的定义就是血压正常；真正的破绽是焦虑、心动过速、皮肤湿冷和脉压变窄。"},
+  {"en": "'No visible blood, so bleeding is minor' — a chest, abdomen, or pelvis can swallow most of the blood volume without one drop showing.", "zh": "「看不到血＝出血不重」——胸腔、腹腔、骨盆能吞下大半血容量而体表一滴不见。"},
+  {"en": "'The monitor will tell me' — the patient tells you first, through appearance, mentation, and skin; machines confirm late.", "zh": "「等监护仪告诉我」——病人会先用外观、意识和皮肤告诉你；机器只负责晚一步确认。"},
+  {"en": "Neurogenic shock vs spinal shock: the first is a real perfusion failure (dilated vessels, hypotension, bradycardia); the second is a local, often temporary neurologic state — flaccidity and lost reflexes — not a circulation problem.", "zh": "神经源性休克 vs 脊髓休克：前者是真的灌注衰竭（血管扩张、低血压、心动过缓）；后者是局部的、常可逆的神经状态——弛缓瘫痪、反射消失——跟循环无关。"},
+  {"en": "SIRS is not sepsis: trauma, burns, and pancreatitis all trigger SIRS; only SIRS PLUS infection equals sepsis, and SIRS alone is neither a diagnosis nor a prognosis.", "zh": "SIRS 不等于脓毒症：创伤、烧伤、胰腺炎都能触发 SIRS；SIRS＋感染才是脓毒症，单独的 SIRS 既不是诊断也不是预后。"},
+  {"en": "An artery that stops spurting has not necessarily stopped bleeding — falling BP converts a spurt into a steady flow; reassess instead of relaxing.", "zh": "动脉不喷了不代表不出血了——血压掉下来会把喷射变成静静地流；该做的是复评，不是松口气。"},
+  {"en": "An air splint is not an arterial-bleeding tool: at about 50 mm Hg it cannot beat arterial pressure until the patient is already dangerously hypotensive.", "zh": "空气夹板治不了动脉出血：约 50 mm Hg 的充气压根本压不过动脉压，除非病人已经低血压到危险的程度。"},
+  {"en": "A pelvic binder is not for 'broken hips': the classic femoral-neck fracture (elderly, shortened rotated leg after a simple fall) is a contraindication, and BC also excludes falls from standing height.", "zh": "骨盆捆扎不是用来治「摔断髋」的：典型股骨颈骨折（老人简单跌倒、患肢短缩外旋）是禁忌证，BC 还明确排除了平地跌倒。"},
+  {"en": "Permissive hypotension is not a universal trauma strategy: TBI needs pressure (book above 90, BC above 120), and children, pregnant women, and the elderly lack supporting evidence.", "zh": "允许性低血压不是万能创伤策略：TBI 要保住血压（教材 >90，BC >120），儿童、孕妇、老人则缺乏证据支持。"},
+  {"en": "Never loosen a tourniquet 'to give the limb a break' — release is a hospital decision; en route the correct adjustment is tighter, never looser.", "zh": "绝不「松一松止血带让肢体喘口气」——放松是医院的决定；在路上你唯一该做的调整是更紧，永远不是更松。"},
+  {"en": "Melena vs hematochezia: dark tarry stool = blood digested from the UPPER GI tract; bright red stool = bleeding near the colon's exit — candidates swap these every year.", "zh": "黑便 vs 鲜血便：柏油样黑便＝上消化道的血被消化过；鲜红血便＝接近结肠出口的出血——这两个考生年年混。"}
+ ],
+ "mnemonics": [
+  {"name": "CABC", "en": "'A before B, except after C' — in catastrophic hemorrhage, circulation control jumps the queue ahead of airway.", "zh": "「A before B, except after C」——灾难性大出血时，循环控制插队到气道前面。"},
+  {"name": "Tennis 15-30-40", "en": "Score hemorrhagic shock like tennis: 15-30 (%) compensated, 30-40 decompensated, past 40 irreversible.", "zh": "像报网球比分一样记失血分期：15-30（%）代偿，30-40 失代偿，过了 40 不可逆。"},
+  {"name": "胎皮肌肠肾肝心肺", "en": "The order the body sacrifices blood flow: placenta, skin, muscle, gut, kidney, liver, heart, lungs.", "zh": "身体牺牲血流的顺序：胎盘→皮肤→肌肉→肠→肾→肝→心→肺，背作「胎皮肌肠肾肝心肺」。"},
+  {"name": "冷·稀·酸", "en": "Trauma triad of death: hypothermia (cold), coagulopathy (thin), acidosis (acid) — each worsens the other two.", "zh": "创伤死亡三联征：低体温（冷）、凝血障碍（稀）、酸中毒（酸）——任何一个都会恶化另外两个。"},
+  {"name": "SIRS 38·36 / 90 / 20·32 / 12·4", "en": "SIRS number chant: temp 38/36, pulse 90, resp 20 (or PCO2 32), WBC 12/4 — any two make SIRS.", "zh": "SIRS 数字口诀：体温 38/36、脉搏 90、呼吸 20（或 PCO2 32）、白细胞 12/4——凑满两条即成立。"},
+  {"name": "Weil-Shubin: Core vs Pipes", "en": "Central shock = the Core fails (cardiogenic + obstructive); peripheral shock = the Pipes fail (hypovolemic + distributive).", "zh": "中心性＝核心坏了（心源性＋梗阻性）；外周性＝管道坏了（低血容量性＋分布性）。"},
+  {"name": "Good capillary refill", "en": "Saying 'good capillary refill' out loud takes about 2 seconds — the nail bed should pink up before you finish the phrase.", "zh": "念完英文「good capillary refill」大约正好 2 秒——念完之前甲床就该转红。"}
+ ],
+ "selfCheck": [
+  {"qEn": "An 80-kg man is alert with no palpable radial pulse. Estimate his original blood volume, his current systolic BP, and his shock phase.", "qZh": "80 kg 男性，神志清楚但桡动脉摸不到。估算他原本的血容量、目前的收缩压和休克分期。", "aEn": "Volume 4.8-6.4 L (6-8% of body weight). Alert with only central pulses ≈ SBP 60-90 mm Hg. He is hypotensive, therefore decompensated — roughly 30% (about 4 units) already lost.", "aZh": "血容量 4.8-6.4 L（体重的 6-8%）。清醒但只剩中心脉搏≈收缩压 60-90 mm Hg。已经低血压，属失代偿期——约 30%（约 4 个单位）血量已丢失。"},
+  {"qEn": "State the BC fluid resuscitation order for hypovolemic shock, with numbers.", "qZh": "背出 BC 考纲的低血容量休克补液医嘱，带数字。", "aEn": "Bolus 20 mL/kg of crystalloid to a maximum of 2 L, reassessing the patient after every 500 mL.", "aZh": "晶体液 20 mL/kg 冲击，上限 2 L，每输 500 mL 复评一次。"},
+  {"qEn": "TXA in BC: dose, route, speed, and the four contraindications.", "qZh": "BC 的 TXA：剂量、途径、推注速度和四条禁忌证。", "aEn": "2 g (2000 mg) IV push over 1 minute — pushing faster risks worsening hypotension. Contraindicated: known allergy, more than 3 hours since injury, age under 12, and isolated TBI.", "aZh": "2 g（2000 mg）静脉推注、用时 1 分钟——推太快会加重低血压。禁忌：已知过敏、伤后超过 3 小时、12 岁以下、孤立性脑外伤。"},
+  {"qEn": "Contrast the skin, pulse, and BP of neurogenic shock against hypovolemic shock.", "qZh": "对比神经源性休克与低血容量性休克的皮肤、脉搏和血压。", "aEn": "Neurogenic: pink, warm, dry skin (no sweating below the lesion), relative bradycardia, SBP typically 80-100. Hypovolemic: pale, cool, clammy skin, tachycardia with a weak thready pulse, BP normal early and falling late.", "aZh": "神经源性：皮肤粉红温暖干燥（损伤平面以下无汗）、相对心动过缓、收缩压常 80-100。低血容量性：皮肤苍白湿冷、心动过速伴细弱脉，血压先正常、后期才下跌。"},
+  {"qEn": "Direct pressure fails on a spurting forearm wound. Next move per BC — and what if the wound were in the groin?", "qZh": "前臂喷血，直接压迫无效。按 BC 下一步做什么？如果伤口在腹股沟呢？", "aEn": "Forearm: apply a tourniquet proximal to the wound, note the time, and never release it in the field. Groin (junctional, no tourniquet possible): pack the wound — but never pack neck, chest, or abdominal wounds.", "aZh": "前臂：在伤口近心端上止血带，记录时间，院前绝不放松。腹股沟（交界区，上不了止血带）：伤口填塞——但颈部、胸部、腹部的伤口绝对不能填塞。"}
+ ],
+ "bcAlerts": [
+  {"topicEn": "Fluid resuscitation volume", "topicZh": "补液量", "bookEn": "Table 21-4 doses by BP band — 250-mL challenge when normotensive, 500 mL at SBP 80-90, 1 L at SBP 50-80 then titrate; elsewhere 250-mL increments until radial pulses return.", "bookZh": "教材按血压分档：正常血压给 250 mL 冲击，收缩压 80-90 给 500 mL，50-80 先给 1 L 再滴定；另一处写 250 mL 递增直到桡脉恢复。", "bcEn": "BC exam answer: fluid bolus 20 mL/kg to a maximum of 2 L, reassessing after every 500 mL. Answer with this, not the book table.", "bcZh": "BC 考试答案：20 mL/kg 冲击、上限 2 L、每 500 mL 复评一次。答题以此为准，不用教材表格。", "ref": "BC Guidelines p.54 Hypovolemia"},
+  {"topicEn": "Tranexamic acid (TXA)", "topicZh": "氨甲环酸（TXA）", "bookEn": "Mentioned only in passing as 'consider tranexamic acid if protocols allow' — no dose, no contraindications.", "bookZh": "教材只顺带一句「协议允许时可考虑 TXA」——没有剂量也没有禁忌证。", "bcEn": "Full monograph is testable: antifibrinolytic that competes for TPA receptor sites; 2 g IV push over 1 minute; indications — major trauma after starting the hypovolemia protocol, or shock with suspected occult bleeding; contraindications — allergy, more than 3 h post injury, under 12 years, isolated TBI; caution — a too-fast push deepens hypotension.", "bcZh": "BC 的完整药物单是考点：抗纤溶药，竞争 TPA 受体位点防止血凝块降解；2 g 静推、用时 1 分钟；适应证——启动低血容量协议后的重大创伤、或休克伴疑似隐匿出血；禁忌——过敏、伤后超 3 小时、12 岁以下、孤立性 TBI；注意——推得太快会加重低血压。", "ref": "BC Guidelines p.78 Tranexamic Acid"},
+  {"topicEn": "Tourniquet position in the sequence", "topicZh": "止血带在流程中的顺位", "bookEn": "Direct pressure, elevation, pressure dressing — with the tourniquet held back as a last resort.", "bookZh": "教材流程：直接压迫→抬高→加压包扎，止血带压箱底、最后才用。", "bcEn": "BC promotes it: if direct pressure fails and the area is tourniquet-amenable, apply one proximal to the wound at once (note the time, never release); junctional wounds get wound packing instead — and NEVER pack neck, chest, or abdomen. Preference chain: direct pressure, pressure dressing, position the part, position the patient, tourniquet, extremity packing.", "bcZh": "BC 把顺位提前：直接压迫无效且部位允许，立即在近心端上止血带（记时间、绝不放松）；交界区伤口改用填塞——且颈、胸、腹的伤口绝对不能填塞。优先链：直接压迫→加压包扎→摆放伤肢→摆放病人→止血带→肢体填塞。", "ref": "BC Guidelines p.19 Wound Care"},
+  {"topicEn": "Pelvic binding specifics", "topicZh": "骨盆捆扎细节", "bookEn": "Commercial binder or a properly applied sheet; broad indications; neck-of-femur presentation contraindicated.", "bookZh": "教材：商用捆扎带或正确使用的床单皆可；适应证宽；股骨颈骨折表现为禁忌。", "bcEn": "BC gets specific: commercial binder or three overlapping broad triangular bandages — zap straps are explicitly unacceptable; centre the belt on the greater trochanters; do not log-roll during application; contraindicated in neck-of-femur fractures AND simple falls from standing height; indication trigger includes HR over 100 or SBP under 90 with a major mechanism.", "bcZh": "BC 抠细节：商用捆扎带或三条相互重叠的宽三角巾——束线带（zap straps）明确不合格；带子中心对准股骨大转子；操作时不翻滚病人；股骨颈骨折和平地简单跌倒是禁忌；启动指征含大机制＋心率 >100 或收缩压 <90 等。", "ref": "BC Guidelines p.24 Pelvis Binding"},
+  {"topicEn": "TBI blood-pressure floor", "topicZh": "TBI 的血压底线", "bookEn": "Permissive hypotension excluded in TBI — maintain SBP above 90 mm Hg.", "bookZh": "教材：TBI 不适用允许性低血压——收缩压要保在 90 mm Hg 以上。", "bcEn": "PCP standard for TBI is stricter: maintain SBP above 120 mm Hg (IV runs TKVO once above 120), keep glucose 4.0-8.0 mmol/L, SpO2 at or above 94% — and TXA is contraindicated in isolated TBI.", "bcZh": "BC 的 PCP 标准更严：TBI 要把收缩压维持在 120 mm Hg 以上（超过 120 后静脉仅保持通路 TKVO）、血糖维持 4.0-8.0 mmol/L、SpO2 ≥94%——且孤立性 TBI 禁用 TXA。", "ref": "BC Guidelines p.27 Traumatic Brain Injuries"},
+  {"topicEn": "Oxygen dosing", "topicZh": "给氧策略", "bookEn": "Blanket high-flow: nonrebreathing mask at 15 L/min for bleeding and shock patients.", "bookZh": "教材：出血和休克病人一律高流量——非重复呼吸面罩 15 L/min。", "bcEn": "Titrated target: supplemental oxygen to keep SpO2 at or above 94% in the hypovolemia protocol — answer with the saturation target, not a fixed flow.", "bcZh": "BC 是滴定目标：低血容量协议里给氧以维持 SpO2 ≥94% 为准——答题答饱和度目标，不答固定流量。", "ref": "BC Guidelines p.54 Hypovolemia"},
+  {"topicEn": "Automatic 'unstable' findings", "topicZh": "自动判「不稳定」的表现", "bookEn": "The chapter has no single equivalent checklist.", "bookZh": "教材本章没有对应的单一判定清单。", "bcEn": "For the practical exam these findings alone make the patient unstable: absent radial pulses; hemorrhage needing a tourniquet or wound packing; cool, pale, clammy skin from suspected shock. Unstable = load and go, treatment en route.", "bcZh": "实操考里，出现以下任意一条就直接判不稳定：桡动脉消失；出血需要止血带或伤口填塞；疑休克的湿冷苍白皮肤。不稳定＝立即装载转运、处置放在车上做。", "ref": "BC Guidelines p.7 Findings in Unstable Adult Patients"}
+ ],
+ "sourcePages": "1738-1811"
+}

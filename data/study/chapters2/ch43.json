@@ -1,0 +1,967 @@
+{
+ "id": "ch43",
+ "n": 43,
+ "titleEn": "Neonatology",
+ "titleZh": "新生儿学",
+ "group": "obgyn",
+ "examWeight": 3,
+ "whyEn": "A weight-3 core chapter. COPR questions cluster around three things: the resuscitation ladder — where BC's fixed four-step sequence differs from the textbook's NRP algorithm, the single most testable divergence on the whole exam; a stack of hard thresholds (HR 100/60, glucose 2.6 mmol/L, Apgar timing, the temperature bands); and a handful of recognize-on-sight emergencies (bilious vomiting, diaphragmatic hernia, subgaleal hemorrhage). Memorize the BC ladder word-perfect, drill the numbers table twice, and this chapter's marks are yours.",
+ "whyZh": "权重 3 的产儿科核心章。COPR 在这章基本围绕三件事出题：复苏阶梯——BC 的固定四步与教材 NRP 流程不同，是全卷最容易踩坑的差异点；一整串硬阈值（心率 100/60、血糖 2.6 mmol/L、Apgar 节奏、体温带）；再加几类见到就得认出的急症（胆汁样呕吐、膈疝、帽状腱膜下出血）。把 BC 四步阶梯背到一字不差，硬数字表过两遍，这章的分就稳了。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "1.1.b",
+   "1.7.a",
+   "1.7.b",
+   "2.1.f",
+   "2.1.g",
+   "2.3.a",
+   "2.3.b",
+   "2.3.c",
+   "2.3.d",
+   "2.4.a",
+   "2.4.b",
+   "2.4.c",
+   "2.4.d",
+   "2.4.f",
+   "4.3.a",
+   "4.3.b",
+   "4.3.f",
+   "4.3.o",
+   "4.4.a",
+   "4.4.b",
+   "4.4.g",
+   "4.4.h",
+   "4.4.i",
+   "4.5.b",
+   "5.1.a",
+   "5.1.b",
+   "5.1.c",
+   "5.1.d",
+   "5.1.h",
+   "5.1.i",
+   "5.1.j",
+   "5.2.a",
+   "5.3.d",
+   "5.4.a",
+   "5.5.a",
+   "5.5.c",
+   "5.5.d",
+   "5.5.e",
+   "5.5.f",
+   "5.5.s",
+   "5.8.a",
+   "5.8.e",
+   "5.8.f",
+   "5.8.g",
+   "6.2.a",
+   "6.2.b",
+   "6.3.a"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Definitions, Transition, and Risk Factors",
+   "titleZh": "定义、胎儿过渡与风险识别",
+   "points": [
+    {
+     "en": "Newborn means the first 24 hours of life; neonate means the first month. BC treats up to 28 days as a neonate — the age band that carries the 3:1 compression ratio and the no-AED rule.",
+     "zh": "Newborn（新生儿）指出生后第 1 天内；neonate 指出生后第 1 个月内。BC 考纲把 ≤28 天算作 neonate——3:1 按压比和不用 AED 这两条规则都挂在这个年龄段上。",
+     "hard": true
+    },
+    {
+     "en": "Gestation cutoffs: preterm = delivered before 37 completed weeks; term = 37 to 42 weeks; postterm = beyond 42 weeks.",
+     "zh": "胎龄分界：早产=不满 37 整周分娩；足月=37-42 周；过期产=超过 42 周。",
+     "hard": true
+    },
+    {
+     "en": "Small for gestational age = birth weight below the 3rd percentile for that gestation; large for gestational age = above the 97th. Both ends of the curve are hypoglycemia risks.",
+     "zh": "小于胎龄（SGA）=出生体重低于同胎龄第 3 百分位；大于胎龄（LGA）=高于第 97 百分位。曲线两头都是低血糖高危儿。",
+     "hard": true
+    },
+    {
+     "en": "About 6% to 10% of deliveries need skilled intervention, and roughly 80% of babies born under 1,500 g need resuscitation — risk climbs as weight and gestation fall.",
+     "zh": "约 6%-10% 的分娩需要专业干预；出生体重不足 1,500 g 的宝宝约 80% 需要复苏——体重越轻、胎龄越小，风险越高。",
+     "hard": true
+    },
+    {
+     "en": "In utero the collapsed, fluid-filled lungs receive only 10% of blood flow; gas exchange happens at the placenta via three shunts — ductus venosus, ductus arteriosus, foramen ovale. At birth, cord clamping raises systemic pressure, the first breaths expand the lungs, pulmonary resistance falls, the shunts close, and circulation flips to the adult pattern.",
+     "zh": "宫内的肺是塌陷、充满液体的，只分到全身血流的 10%；气体交换靠胎盘，经三条分流通道完成——静脉导管、动脉导管、卵圆孔。出生时断脐让体循环压力升高，头几口呼吸让肺张开、肺血管阻力下降，三条分流关闭，循环切换成成人模式。",
+     "hard": true
+    },
+    {
+     "en": "Anything that keeps pulmonary pressure from falling delays transition — hypoxia, hypothermia, acidosis, meconium aspiration, sepsis, maternal drugs — and a failed transition means hypoxia, possible brain damage, even death.",
+     "zh": "任何让肺动脉压降不下来的因素都会拖住过渡——缺氧、低体温、酸中毒、胎粪吸入、败血症、母体用药——过渡失败的代价是缺氧、脑损伤甚至死亡。"
+    },
+    {
+     "en": "Antepartum red flags: maternal age under 16 or over 35, multiple gestation, pre- or post-term, polyhydramnios or oligohydramnios, premature rupture of membranes, bleeding in pregnancy, chronic maternal illness, drug use, decreased fetal movement, no prenatal care.",
+     "zh": "产前危险因素：产妇小于 16 岁或大于 35 岁、多胎、早产或过期、羊水过多或过少、胎膜早破、孕期出血、母体慢性病、用药史、胎动减少、没做产检。",
+     "hard": true
+    },
+    {
+     "en": "Intrapartum red flags: premature labour, membranes ruptured over 24 hours, breech or other abnormal presentation, prolapsed cord, placenta previa, meconium-stained fluid, maternal fever, labour beyond 24 hours, shoulder dystocia, narcotics given within 4 hours of delivery.",
+     "zh": "产时危险因素：早产临产、破膜超过 24 小时、臀位或其他异常先露、脐带脱垂、前置胎盘、羊水胎粪污染、产妇发热、产程超过 24 小时、肩难产、分娩前 4 小时内用过麻醉性镇痛药。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "At the Delivery: First Steps and Apgar",
+   "titleZh": "出生现场处置与 Apgar 评分",
+   "points": [
+    {
+     "en": "Minimum kit for any field birth: warm dry blankets, a bulb syringe, two cord clamps or ties, and clean scissors — sealed packaging is fine, but everything sits within arm's reach before the baby arrives.",
+     "zh": "任何现场分娩的最低装备：温暖干燥的毯子、吸球、两把脐带夹（或结扎带）、干净剪刀——可以不拆封，但宝宝落地前必须全放在手边。",
+     "hard": true
+    },
+    {
+     "en": "Cord prolapse (commoner with polyhydramnios and breech): mother into knee-to-chest or Trendelenburg, two gloved fingers lift the presenting part off the cord and hold it there until obstetric help, and the exposed cord gets a moist sterile dressing.",
+     "zh": "脐带脱垂（羊水过多、臀位时更常见）：让产妇取胸膝位或头低足高位，戴手套的两指伸入阴道把先露部从脐带上顶开并一直保持，外露脐带用湿润无菌敷料覆盖。",
+     "hard": true
+    },
+    {
+     "en": "Cord timing: keep the newborn level with the placenta and let 60 to 120 seconds pass before cutting. Held too high, the baby can drain half its blood volume back into the placenta; held too low, polycythemia. The need for resuscitation overrides the wait.",
+     "zh": "断脐时机：让宝宝与胎盘保持同一水平，等 60-120 秒再断。抱得太高，宝宝可能把一半血容量流回胎盘；抱得太低则会红细胞增多。需要复苏时不等，立刻断。",
+     "hard": true
+    },
+    {
+     "en": "Hold the head slightly below the body to drain secretions. Routine oropharyngeal suction is out — suction only for obvious obstruction or before PPV, mouth before nose, and BC caps a single infant suction pass at 5 seconds; deep or repeated suction invites vagal bradycardia.",
+     "zh": "让头略低于身体以利分泌物引流。常规口咽吸引已淘汰——只有明显梗阻或需要正压通气前才吸，先口后鼻，且 BC 规定婴儿单次吸引不超过 5 秒；吸得深、吸得勤都会诱发迷走性心动过缓。",
+     "hard": true
+    },
+    {
+     "en": "Dry the baby, then warm blankets or skin-to-skin on the mother's bare chest; hat on early because the scalp is the biggest heat leak. Target core temperature: 36°C to 38°C.",
+     "zh": "擦干后裹暖毯，或直接和妈妈皮肤贴皮肤再盖毯；帽子尽早戴——头皮是最大的散热口。核心体温目标：36-38°C。",
+     "hard": true
+    },
+    {
+     "en": "The pulse oximeter probe goes on the right upper limb (preductal). Saturations above 90% typically take 6 to 7 minutes to arrive — a slowly pinking, vigorous baby is normal transition, not an emergency.",
+     "zh": "血氧探头夹右上肢（动脉导管前）。血氧升过 90% 通常要等 6-7 分钟——慢慢转粉、活力好的宝宝是正常过渡，不是急症。",
+     "hard": true
+    },
+    {
+     "en": "Apgar scores five items — Appearance, Pulse, Grimace, Activity, Respirations — 0 to 2 points each, taken at 1 and 5 minutes. Normal runs 7 to 9. A 5-minute score under 7 triggers rescoring every 5 minutes out to 20 minutes.",
+     "zh": "Apgar 评五项——肤色、心率、对刺激的反应、肌张力、呼吸——每项 0-2 分，1 分钟和 5 分钟各评一次。正常 7-9 分。5 分钟不足 7 分，就每 5 分钟评一次，一直评到 20 分钟。",
+     "hard": true
+    },
+    {
+     "en": "Fast rates: count breaths or pulse for 6 seconds and multiply by 10. Get the heart rate by auscultation (preferred) or by palpating the pulsating base of the umbilical cord — and call the number out loud to your team.",
+     "zh": "快速数率法：数 6 秒然后乘 10。心率首选听诊，也可以摸脐带根部的搏动——数出来要大声报给队友。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The BC Four-Step Resuscitation Ladder",
+   "titleZh": "BC 新生儿复苏四步阶梯（考试以此为准）",
+   "points": [
+    {
+     "en": "BC entry criteria: the newborn is floppy, limp, not breathing, or the heart rate is under 100 beats per minute — start the ladder.",
+     "zh": "BC 启动条件：宝宝松软、无力、不呼吸，或心率低于 100 次/分——进入阶梯。",
+     "hard": true
+    },
+    {
+     "en": "Step 1 — dry, stimulate, and keep warm, for 30 seconds.",
+     "zh": "第 1 步——擦干、刺激、保暖，做 30 秒。",
+     "hard": true
+    },
+    {
+     "en": "Step 2 — ventilate with BVM on room air, for 30 seconds.",
+     "zh": "第 2 步——球囊面罩通气，用室内空气，做 30 秒。",
+     "hard": true
+    },
+    {
+     "en": "Step 3 — ventilate with BVM with 100% oxygen attached, for 30 seconds.",
+     "zh": "第 3 步——球囊面罩接上 100% 氧继续通气，做 30 秒。",
+     "hard": true
+    },
+    {
+     "en": "Step 4 — chest compressions with ventilations and 100% oxygen, continued until the heart rate is above 60 beats per minute.",
+     "zh": "第 4 步——胸外按压+通气+100% 氧，一直做到心率升过 60 次/分。",
+     "hard": true
+    },
+    {
+     "en": "The escalation gate is identical at every rung: heart rate still under 100 after that step's 30 seconds — climb one step. So compressions are entered at under 100 (after step 3) and stopped above 60. Do not import the textbook's start-at-60 threshold into a BC exam answer.",
+     "zh": "每一级的升级门槛完全一样：该步做满 30 秒后心率仍低于 100——就上一级。所以按压的进入条件是（第 3 步之后）心率仍 <100，停止条件是 >60。别把教材那条低于 60 才开始按压的门槛带进 BC 考场。",
+     "hard": true
+    },
+    {
+     "en": "Neonate — up to 28 days old: compression-to-ventilation ratio 3:1, and no AED.",
+     "zh": "Neonate——出生 28 天以内：按压通气比 3:1，并且不用 AED。",
+     "hard": true
+    },
+    {
+     "en": "Correct stimulation is flicking the soles and gently rubbing the back. No slapping, no rough rubbing — that is not coaxing a breath, it is causing an injury.",
+     "zh": "正确的刺激是弹足底+轻搓背。不许拍打、不许用力搓——那不是催呼吸，是制造损伤。"
+    },
+    {
+     "en": "Nearly all neonatal bradycardia is hypoxia, and effective ventilation reverses it. Fewer than 1% of deliveries ever need compressions; neonatal cardiac arrest is almost always secondary to hypoxia or shock, not a primary cardiac event.",
+     "zh": "新生儿心动过缓几乎都是缺氧所致，有效通气就能逆转。需要按压的分娩不足 1%；新生儿心搏骤停几乎都是缺氧或休克的继发事件，不是原发心脏问题。",
+     "hard": true
+    },
+    {
+     "en": "Termination guideposts: no spontaneous heartbeat after 10 minutes of resuscitation — consider stopping; no spontaneous breathing by 20 minutes — outcomes are very poor. Seek direct medical control advice before discontinuing.",
+     "zh": "终止参考线：复苏满 10 分钟仍无自主心跳——可考虑停止；20 分钟仍无自主呼吸——预后极差。停止之前先请示在线医疗指挥。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Airway and Ventilation",
+   "titleZh": "气道管理与通气",
+   "points": [
+    {
+     "en": "Free-flow oxygen (breathing adequate, HR over 100, but cyanotic or pale): mask or tubing in a cupped hand near the nose and mouth at 5 L/min; warm and humidify if it runs more than a few minutes; never blow the stream into the eyes.",
+     "zh": "自由流量给氧（呼吸够、心率超 100，但发绀或苍白）：面罩或手窝拢氧管凑近口鼻，流量 5 L/min；超过几分钟要加温湿化；氧流绝不能对着眼睛吹。",
+     "hard": true
+    },
+    {
+     "en": "Cyanosis only shows once 50 g/L of hemoglobin is desaturated — a severely anemic hypoxic baby looks pale, not blue. So a pale newborn gets oxygen until a pulse oximeter reading says otherwise.",
+     "zh": "要有 50 g/L 的去氧血红蛋白才看得出发绀——严重贫血的缺氧儿只显苍白、不显青紫。所以苍白的新生儿先给氧，等血氧仪读数说话。",
+     "hard": true
+    },
+    {
+     "en": "Hyperoxia is toxic, worst for preemies. Saturation targets: 90% to 95%, and 92% to 94% for the very preterm, titrated against right-hand oximetry.",
+     "zh": "高氧有毒，早产儿受害最重。血氧目标：90%-95%，极早产 92%-94%，按右手血氧仪读数滴定给氧。",
+     "hard": true
+    },
+    {
+     "en": "BVM ventilation is indicated for apnea (a pause of 20 seconds or more), inadequate respiratory effort, or a heart rate under 100 after the airway is cleared and the baby has been dried and stimulated.",
+     "zh": "球囊面罩通气指征：呼吸暂停（停顿 ≥20 秒）、呼吸努力不足，或清理气道并擦干刺激之后心率仍低于 100。",
+     "hard": true
+    },
+    {
+     "en": "Signs a newborn needs ventilatory support: periodic breathing, intercostal retractions, nasal flaring, expiratory grunting. Respiratory distress affects roughly 8 per 1,000 live births and drives about 15% of neonatal deaths.",
+     "zh": "提示需要通气支持的表现：周期性呼吸、肋间凹陷、鼻翼扇动、呼气呻吟。呼吸窘迫发生率约 8/1,000 活产，占新生儿死亡的约 15%。",
+     "hard": true
+    },
+    {
+     "en": "Bag choice: infant self-inflating bag, 240 mL. A neonate's tidal volume is only 5 to 8 mL/kg — under a tenth of the bag. An adult bag (750 mL or more) is a last resort with feather-light squeezes and eyes locked on chest rise.",
+     "zh": "气囊选择：婴儿型自充气囊 240 mL。新生儿潮气量只有 5-8 mL/kg——连囊容积的十分之一都不到。成人囊（750 mL 以上）是万不得已的替补，捏到极轻、眼睛死盯胸廓起伏。",
+     "hard": true
+    },
+    {
+     "en": "The mask seals over mouth and nose down to the chin but never touches the eyes — eye pressure, like deep suction, triggers vagal bradycardia. Sniffing position with a towel roll under the shoulders offsets the newborn's big occiput.",
+     "zh": "面罩要罩住口鼻、下缘到下巴，绝不能压到眼睛——压眼和深部吸引一样会触发迷走性心动过缓。肩下垫一卷毛巾摆出嗅物位，抵消新生儿的大后脑勺。"
+    },
+    {
+     "en": "Pressures: the first breaths may need about 30 cm H2O to open fluid-filled lungs (pop-off valves are factory-set at 30 to 40 and may need a finger over them); after that, just visible chest rise. Keep PEEP at 5 to 6 cm H2O; if PPV runs past 1 minute, add a manometer and hold peak pressure under 25 (term) or 20 (preterm).",
+     "zh": "压力：头几口气可能要约 30 cm H2O 才能撑开还灌满液体的肺（泄压阀出厂设定 30-40，必要时用手指按住）；之后以看得见的胸廓起伏为度。PEEP 维持 5-6 cm H2O；正压通气超过 1 分钟要接测压表，峰压足月压在 25 以下、早产 20 以下。",
+     "hard": true
+    },
+    {
+     "en": "Rate: 40 to 60 breaths per minute — count \"breath–two–three\" to pace it. Bagging faster buys hypocapnia, air trapping, or a pneumothorax.",
+     "zh": "频率：40-60 次/分——念着「吹–二–三」卡节奏。吹快了换来的是低碳酸血症、气体潴留或气胸。",
+     "hard": true
+    },
+    {
+     "en": "BVM not working? The two usual suspects are mask seal and head position; only then think secretions, mucus plug, pneumothorax, or equipment failure.",
+     "zh": "球囊没效果？头两号嫌疑犯永远是面罩密封和头位；然后才轮到分泌物、黏液栓、气胸、器材故障。"
+    },
+    {
+     "en": "Intubate when: a diaphragmatic hernia needs ventilatory support; BVM plus compressions have failed and the tracheal route is the only way to give epinephrine; or prolonged PPV is needed with hospital more than 30 minutes away. Routine tracheal suctioning of the depressed meconium-stained newborn is no longer recommended.",
+     "zh": "插管指征：膈疝需要通气支持；球囊+按压失败、只剩气管途径能给肾上腺素；或需要长时间正压通气而医院在 30 分钟以外。胎粪污染的抑制儿做常规气管吸引已不再推荐。",
+     "hard": true
+    },
+    {
+     "en": "Sizes: tracheal tube 2.5 under 28 weeks, 3.0 for 28 to 36 weeks, 3.5 over 36 weeks; straight blade 0 for preterm, 1 for term. Depth at the lip: about 9 cm term, 6.5 to 7 cm preterm. Cap each attempt at 20 seconds and bail to BVM if the heart rate drops below 80.",
+     "zh": "选号：气管导管不满 28 周用 2.5、28-36 周用 3.0、超过 36 周用 3.5；直镜片早产 0 号、足月 1 号。唇缘深度：足月约 9 cm，早产 6.5-7 cm。单次尝试限 20 秒；心率掉破 80 立即中止改球囊。",
+     "hard": true
+    },
+    {
+     "en": "Confirm placement: end-tidal CO2 colour change or a capnograph waveform is the gold standard, backed by chest rise, equal bilateral sounds, tube misting, and clinical improvement. Then guard the tube against dislodgement, plugging, and pneumothorax.",
+     "zh": "确认位置：呼末 CO2 变色或波形是金标准，辅以胸廓起伏、双侧呼吸音对称、管内起雾和临床好转。之后防三件事：脱管、堵管、气胸。"
+    },
+    {
+     "en": "Orogastric decompression (8F tube): for BVM beyond 5 to 10 minutes, gastric distension impeding ventilation, or diaphragmatic hernia. Measure earlobe to nose tip to midway between xiphoid and umbilicus; after suctioning, leave it open to vent.",
+     "zh": "口胃管减压（8F）：球囊通气超过 5-10 分钟、胃胀影响通气、或膈疝时使用。测量长度=耳垂→鼻尖→剑突与脐连线的中点；抽吸后开口留置排气。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Compressions, Vascular Access, and Drugs",
+   "titleZh": "胸外按压、血管通路与药物",
+   "points": [
+    {
+     "en": "The textbook (NRP) threshold: start compressions when the heart rate stays under 60 after 30 seconds of effective PPV with 100% oxygen. On the BC exam, follow the four-step ladder instead — see the BC alert. Either way, reassess the pulse every 60 seconds.",
+     "zh": "教材（NRP）的门槛：100% 氧有效正压通气 30 秒后心率仍低于 60 才开始按压。BC 考试则按四步阶梯走——见 BC 警示。无论哪套体系，每 60 秒都要复评一次心率。",
+     "hard": true
+    },
+    {
+     "en": "Technique: two thumbs side by side between the xiphoid and the internipple line with hands encircling the torso — the preferred two-rescuer method; a lone rescuer uses two fingertips on the lower third of the sternum. Depth is one-third of the AP chest diameter at 100 to 120 per minute, fingers never leaving the chest, compressions never pausing.",
+     "zh": "手法：双拇指并排放在剑突与两乳头连线之间、双手环抱躯干——双人时的首选；单人用两指尖按胸骨下三分之一。深度为胸廓前后径的三分之一，频率 100-120 次/分，手指不离开胸壁，按压不中断。",
+     "hard": true
+    },
+    {
+     "en": "Ratio: this Canadian textbook prints 30:2 for one rescuer and 15:2 for two; BC's answer for a neonate is 3:1. On the exam, write 3:1.",
+     "zh": "比例：这版加拿大教材印的是单人 30:2、双人 15:2；BC 考纲对 neonate 的答案是 3:1。考试就写 3:1。",
+     "hard": true
+    },
+    {
+     "en": "Quality check: effective compressions produce palpable femoral and brachial pulses. Known risks of the job: liver laceration and rib fractures.",
+     "zh": "质量检验：有效的按压能摸到股动脉和肱动脉搏动。已知代价：肝撕裂和肋骨骨折。"
+    },
+    {
+     "en": "Umbilical vein line: the target is the single large thin-walled vessel at 12 o'clock (the two thick-walled arteries sit at 4 and 8). Prefill a 3.5F to 5F catheter with saline, insert 4 cm until blood aspirates, flush with 2 mL, tape it. Advanced too far it reaches the liver — where hypertonic drugs cause irreversible damage — or the heart, where it triggers dysrhythmias.",
+     "zh": "脐静脉置管：目标是 12 点钟方向那根又大又薄壁的血管（4 点、8 点是两条厚壁脐动脉）。3.5F-5F 导管先用盐水预充，插入 4 cm 至回抽见血，冲 2 mL 后固定。插得太深会进肝——高渗药物在那里造成不可逆损伤——或进心脏诱发心律失常。",
+     "hard": true
+    },
+    {
+     "en": "An IO line is often preferable in a newborn over 3 kg; any neonate more than a few days old gets a peripheral IV or IO. Choose a smaller IO needle so it does not punch out the far cortex.",
+     "zh": "体重超过 3 kg 的新生儿常可优先骨内通路；出生几天以上的 neonate 用外周静脉或骨内针。骨内针要选小号，防止穿透对侧骨皮质。"
+    },
+    {
+     "en": "Epinephrine: indicated when the heart rate stays under 60 after 30 seconds of effective ventilation plus 30 seconds of compressions. Concentration 1:10,000 only; dose 0.01 to 0.03 mg/kg (0.1 to 0.3 mL/kg) IV push, chased with 0.5 to 1 mL saline; the tracheal route needs 1 mL/kg — tenfold; repeat every 3 to 5 minutes. The 1:1,000 strength can cause intracranial hemorrhage — never.",
+     "zh": "肾上腺素：有效通气 30 秒+按压 30 秒后心率仍低于 60 时用。浓度只能 1:10,000；剂量 0.01-0.03 mg/kg（0.1-0.3 mL/kg）静脉快推，随后 0.5-1 mL 盐水冲管；气管途径要 1 mL/kg——十倍量；每 3-5 分钟可重复。1:1,000 浓度会导致颅内出血——绝对禁止。",
+     "hard": true
+    },
+    {
+     "en": "Volume: normal saline 10 mL/kg over 5 to 10 minutes, repeatable. The indication is the triad of pallor plus delayed capillary refill plus weak pulses despite a decent rate. Pallor alone can be fetal anemia or asphyxia and is not an indication.",
+     "zh": "补液：生理盐水 10 mL/kg，5-10 分钟推完，可重复。指征是三联征：苍白+毛细血管再充盈延迟+脉搏细弱（心率尚可）。单独苍白可能是胎儿贫血或窒息，不构成补液指征。",
+     "hard": true
+    },
+    {
+     "en": "Sodium bicarbonate is a last-ditch drug for profound metabolic acidosis (pH under 7.0) with bradycardia persisting despite ventilation, compressions, and volume: 2 mEq/kg of the 4.2% solution over 5 to 10 minutes. Fast pushes risk brain bleeds in preemies. Contact direct medical control first.",
+     "zh": "碳酸氢钠是最后手段，用于通气、按压、补液都到位后心率仍慢的重度代谢性酸中毒（pH<7.0）：4.2% 溶液 2 mEq/kg，5-10 分钟缓推。推快了早产儿会脑出血。用前先联系在线医疗指挥。",
+     "hard": true
+    },
+    {
+     "en": "Naloxone is off the first-line list. With chronic maternal opioid use it can trigger life-threatening withdrawal seizures — ventilate and transport instead. Only when the mother received narcotics acutely, with no chronic exposure: 0.1 mg/kg IV (preferred) or IM.",
+     "zh": "纳洛酮已退出一线。母亲长期用阿片者，给纳洛酮可诱发致命性戒断惊厥——正确做法是通气支持+转运。仅当母亲是急性用药、无长期暴露时才可给：0.1 mg/kg 静脉（首选）或肌注。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Specific Conditions",
+   "titleZh": "特殊状况",
+   "points": [
+    {
+     "en": "Meconium-stained fluid appears in 10% to 15% of deliveries, more with postterm and small-for-gestational-age babies, and can end in meconium aspiration syndrome with high mortality. Vigorous baby: routine care. Depressed baby: standard resuscitation — routine intubate-and-suction is no longer recommended.",
+     "zh": "羊水胎粪污染见于 10%-15% 的分娩，过期产和小于胎龄儿更多见，可发展为高死亡率的胎粪吸入综合征。宝宝有力：常规处理。宝宝抑制：按标准流程复苏——常规插管吸引已不再推荐。",
+     "hard": true
+    },
+    {
+     "en": "Congenital diaphragmatic hernia: 1 in 2,200 births, 80% to 90% left-sided, mortality up to 50%. Recognize the quartet: respiratory distress, heart sounds pushed to the right, bowel sounds in the chest, scaphoid abdomen.",
+     "zh": "先天性膈疝：1/2,200 活产，80%-90% 在左侧，死亡率可达 50%。认准四联征：呼吸窘迫、心音被推向右侧、胸腔里听到肠鸣音、舟状腹。",
+     "hard": true
+    },
+    {
+     "en": "CDH management: bag-mask ventilation inflates the gut sitting inside the chest — avoid it. If PPV is needed, intubate and keep pressures minimal (hypoplastic lungs pop at low pressures), drop an orogastric tube with intermittent suction, and — the exception to the room-air rule — resuscitate with 100% oxygen if hypoxic.",
+     "zh": "膈疝的处置：球囊面罩会把待在胸腔里的肠子吹胀——必须避开。需要正压通气就插管，压力压到最低（发育不良的肺在很低的压力下就会破），置口胃管间断抽吸，并且——室内空气原则的例外——缺氧时直接用 100% 氧复苏。",
+     "hard": true
+    },
+    {
+     "en": "Pneumothorax comes with meconium aspiration, infection-weakened lungs, or PPV itself. Suspect it when severe distress persists despite PPV with unilateral decreased breath sounds and shifted heart sounds. Before any needle: recheck that your ventilation is actually effective.",
+     "zh": "气胸的来路：胎粪吸入、被感染削弱的肺、或正压通气本身。正压通气下窘迫不缓解+单侧呼吸音减低+心音移位就要怀疑。动针之前：先复查你的通气到底有没有效。"
+    },
+    {
+     "en": "Needle decompression: second intercostal space, midclavicular line (usually just above the nipple); a 22-gauge butterfly with extension tubing, three-way stopcock, and 20-mL syringe goes in just above the rib's upper edge — vessels and nerves run beneath ribs. For an ongoing leak, drop the tube end into a bottle of sterile water as an underwater seal.",
+     "zh": "穿刺减压：锁骨中线第二肋间（通常在乳头稍上方）；22 号蝶形针接延长管、三通和 20 mL 注射器，紧贴肋骨上缘进针——血管神经走行在肋骨下缘。持续漏气时，把管端插进无菌水瓶做水封。",
+     "hard": true
+    },
+    {
+     "en": "Apnea (a pause of 20 seconds or more) is common before 32 weeks gestation yet rare in the first 24 hours. Primary apnea still answers to drying and stimulation; once the baby has gasped its way into secondary apnea, only PPV restarts breathing.",
+     "zh": "呼吸暂停（停顿 ≥20 秒）在 32 周以下的早产儿常见，但生后头 24 小时内反而少见。原发性呼吸暂停还能被擦干+刺激唤回；一旦经过喘息进入继发性呼吸暂停，就只有正压通气能重启呼吸。",
+     "hard": true
+    },
+    {
+     "en": "Airway anomalies cheat-sheet: bilateral choanal atresia kills fast but an oral airway (or a gloved finger holding the mouth open) relieves it; Pierre Robin sequence — prone position first, then an airway, with a nasopharyngeal one often better tolerated; cleft lip/palate — cricoid pressure helps intubation, a touch more positive pressure may be needed, nothing by mouth.",
+     "zh": "气道畸形速查：双侧后鼻孔闭锁可迅速致命，但放口咽通气道（或戴手套的手指撑开嘴）即可缓解；Pierre Robin 序列征——先俯卧位、不行再放通气道，鼻咽通气道往往更耐受；唇腭裂——插管时压环状软骨帮助显露、通气可能要稍高的正压、禁经口喂养。"
+    },
+    {
+     "en": "Gastroschisis and omphalocele: bag the baby from the waist down in a sterile clear plastic bag, nurse on the side, keep the bowel moist with sterile saline, and watch bowel colour — pink means perfused, dark means kinked mesenteric vessels: reposition now. Vascular access goes peripheral IV or IO.",
+     "zh": "腹裂与脐膨出：腰部以下整个装进无菌透明塑料袋，侧卧护理，无菌盐水保持肠管湿润，紧盯肠管颜色——粉=有血供，发暗=系膜血管打折：立刻调整体位。通路用外周静脉或骨内。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Premature and Low-Birth-Weight Infants",
+   "titleZh": "早产儿与低出生体重儿",
+   "points": [
+    {
+     "en": "Preterm = under 37 completed weeks, about 12% of births; low birth weight = under 2,500 g, and prematurity is its leading cause.",
+     "zh": "早产=不满 37 整周，约占分娩的 12%；低出生体重=不足 2,500 g，头号原因就是早产。",
+     "hard": true
+    },
+    {
+     "en": "Delivered before 24 weeks or under 500 g outside a specialty centre, survival is unlikely — but with any signs of life, resuscitate and keep the baby warm all the way in.",
+     "zh": "不满 24 周或体重不足 500 g、又生在专科中心之外，基本难以存活——但只要有生命迹象，就要复苏并全程保暖转运。",
+     "hard": true
+    },
+    {
+     "en": "The 23-to-26-week band: roughly one-third die, one-third carry major respiratory or neurologic sequelae, and up to half show disability by school age. Past 28 weeks, most babies given cardiorespiratory support do well long-term.",
+     "zh": "23-26 周段：约三分之一死亡、三分之一留下呼吸或神经系统大问题、多达一半到学龄期被查出残障。过了 28 周，大多数获得心肺支持的宝宝长期预后良好。",
+     "hard": true
+    },
+    {
+     "en": "Under 28 weeks: skip the drying — the body goes straight into a plastic bag with only the head out; dry the head and cover it with a hat, wool if available.",
+     "zh": "28 周以下：身体不擦干——直接装进塑料袋、只露出头；头部擦干并戴帽，有羊毛帽最好。",
+     "hard": true
+    },
+    {
+     "en": "Surfactant-deficient lungs: use minimum PPV pressures plus PEEP to fend off bronchopulmonary dysplasia, and wean FiO2 quickly by oximetry (90% to 95%, very preterm 92% to 94%) because oxygen toxicity feeds retinopathy of prematurity — but never withhold oxygen from a cyanotic preemie; hypoxic brain damage is permanent.",
+     "zh": "缺表面活性物质的肺：正压通气用最低压力并加 PEEP，防支气管肺发育不良；按血氧仪尽快下调 FiO2（目标 90%-95%，极早产 92%-94%），因为氧中毒会加重早产儿视网膜病——但发绀的早产儿绝不能停氧，缺氧性脑损伤不可逆。",
+     "hard": true
+    },
+    {
+     "en": "The preemie brain both bleeds and infarcts easily: hypoxemia, blood-pressure swings, and hyperosmolar loads (a fast bicarbonate push, say) drive intraventricular hemorrhage; hypoperfusion drives periventricular leukomalacia. Handle gently, infuse slowly.",
+     "zh": "早产儿的脑又易出血又易缺血：低氧血症、血压大起大落、高渗负荷（比如快推碳酸氢钠）会引发脑室内出血；灌注不足则导致脑室周围白质软化。动作要轻，给药要慢。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Neonatal Seizures",
+   "titleZh": "新生儿惊厥",
+   "points": [
+    {
+     "en": "Seizures are the most distinctive marker of neonatal neurologic disease, and they scale with immaturity: 57.5 per 1,000 newborns under 1,500 g versus 2.8 per 1,000 at 2,500 to 3,999 g.",
+     "zh": "惊厥是新生儿神经系统疾病最有辨识度的标志，且随不成熟程度飙升：出生体重不足 1,500 g 者 57.5/1,000，而 2,500-3,999 g 者只有 2.8/1,000。",
+     "hard": true
+    },
+    {
+     "en": "Jitteriness versus seizure: jitteriness is stimulus-triggered, tremor-like, carries no eye signs and no autonomic signs, and stops when you gently hold the limb. A seizure brings eye deviation or fixation, autonomic phenomena, clonic jerking — and holding the limb changes nothing.",
+     "zh": "抖动 vs 惊厥：抖动可被刺激诱发、呈震颤样、无眼征也无自主神经症状、轻握肢体就停。惊厥则有眼球偏斜或凝视、伴自主神经表现、呈阵挛性抽动——握住肢体也不会停。",
+     "hard": true
+    },
+    {
+     "en": "Four types: subtle (eye deviation, blinking, sucking, leg-pedalling, apnea — the easiest to miss), tonic (posturing; the generalized form typifies preemies with intraventricular hemorrhage), clonic (focal or multifocal; truly bilateral synchronous clonic activity is rare because neonatal myelination cannot support it), myoclonic (lightning jerks under 50 milliseconds, no rhythm, mostly preterm).",
+     "zh": "四型：微小型（眼偏斜、眨眼、吸吮、蹬腿样动作、呼吸暂停——最容易漏）、强直型（姿势固定；全身强直多见于脑室内出血的早产儿）、阵挛型（局灶或多灶；真正双侧同步的全身阵挛罕见——新生儿的髓鞘还带不动）、肌阵挛型（不到 50 毫秒的闪电样抽动、无节律、多见于早产儿）。"
+    },
+    {
+     "en": "Hypoxic-ischemic encephalopathy is the top cause in term and preterm alike: onset within the first 24 hours, possibly worsening into status epilepticus over 2 to 3 days. Hypocalcemia peaks at days 2 to 3 (low-birth-weight babies, diabetic mothers; a late form follows cow's milk or high-phosphorus formula). The rest of the list: hypoglycemia, sodium disturbances, hemorrhage, stroke, infection, drug withdrawal, inborn errors.",
+     "zh": "缺氧缺血性脑病是足月和早产共同的头号原因：生后 24 小时内起病，可在 2-3 天内加重为惊厥持续状态。低钙血症的高峰在生后 2-3 天（低体重儿、糖尿病母亲；晚发型见于喂牛奶或高磷配方奶之后）。名单其余成员：低血糖、血钠紊乱、颅内出血、卒中、感染、药物戒断、先天代谢缺陷。",
+     "hard": true
+    },
+    {
+     "en": "Every seizing newborn gets a glucose check. Below 2.6 mmol/L: D10W 2 mL/kg IV bolus, recheck in about 30 minutes, then an infusion of 60 to 80 mL/kg per day. No IV yet: IM glucagon; oral glucose gel works for term babies.",
+     "zh": "惊厥的新生儿必查血糖。低于 2.6 mmol/L：D10W 2 mL/kg 静推，约 30 分钟复测，继以每日 60-80 mL/kg 输注。静脉还没建好：肌注胰高血糖素；足月儿也可用口服葡萄糖凝胶。",
+     "hard": true
+    },
+    {
+     "en": "Anticonvulsant ladder (with direct medical control): lorazepam 0.1 mg/kg, repeatable once; then phenobarbital 20 mg/kg, may repeat; then phenytoin 20 mg/kg. Every one of them depresses breathing and the heart — have PPV ready before you push.",
+     "zh": "抗惊厥阶梯（须在线医疗指挥）：劳拉西泮 0.1 mg/kg、可重复一次；然后苯巴比妥 20 mg/kg、可再给一剂；再然后苯妥英 20 mg/kg。这些药个个抑制呼吸和心脏——推药之前先备好正压通气。",
+     "hard": true
+    },
+    {
+     "en": "Expect apnea during and after seizures — cover it with PPV, hold body temperature normal, and keep the family briefed as transport rolls.",
+     "zh": "惊厥中和惊厥后常见呼吸暂停——用正压通气兜底，维持正常体温，转运路上同步告知并安抚家属。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Thermoregulation and Hypoglycemia",
+   "titleZh": "体温调节与低血糖",
+   "points": [
+    {
+     "en": "Newborn heat constants: average normal temperature 37.5°C, thermoneutral range 36.6°C to 37.2°C. Heat comes from nonshivering thermogenesis in brown fat — deposited only after 28 weeks, around the scapulae, kidneys, adrenals, neck, and axillae. Newborns neither shiver nor sweat effectively.",
+     "zh": "新生儿体温常数：平均正常体温 37.5°C，热中性区 36.6-37.2°C。产热靠棕色脂肪的非寒战产热——28 周后才开始储备，分布在肩胛、肾、肾上腺、颈部和腋窝。新生儿既不会寒战、也基本不会出汗。",
+     "hard": true
+    },
+    {
+     "en": "Four heat-loss routes — evaporation, convection, conduction, radiation. Block all four: environment at 23°C to 26°C, nothing cold touching the baby, no drafts, everything dry.",
+     "zh": "四条散热通路——蒸发、对流、传导、辐射。四路全堵：环境温度 23-26°C、不接触冷的东西、避开气流、保持干燥。",
+     "hard": true
+    },
+    {
+     "en": "Fever = rectal temperature above 38°C; oral averages 0.6°C lower and axillary 1.1°C lower, and under age 2 only the rectal reading is reliable. About 13% of babies under 28 days running above 38.1°C harbour a serious bacterial infection.",
+     "zh": "发热=直肠温超过 38°C；口温平均低 0.6°C、腋温低 1.1°C，而且 2 岁以下只有直肠温可靠。生后 28 天内体温超过 38.1°C 的宝宝约 13% 藏着严重细菌感染。",
+     "hard": true
+    },
+    {
+     "en": "Infected neonates may run cold, not hot — sepsis can drop the core temperature. Fever can also just be overbundling, a heated car, direct sun, or dehydration in a breastfeeding baby who shed over 10% of birth weight in week one.",
+     "zh": "感染的新生儿可能不发热反而变冷——败血症会把核心体温往下拽。发热也可能只是包得太多、闷在暖车里、直晒太阳，或第一周体重掉了超过 10% 的母乳喂养儿脱水。"
+    },
+    {
+     "en": "No antipyretics prehospital — and ibuprofen is never given to an infant, full stop. Cooling means removing layers and ventilating the environment.",
+     "zh": "院前不给退热药——布洛芬对婴儿更是绝对禁用。降温就两招：脱掉几层包被、给环境通风。",
+     "hard": true
+    },
+    {
+     "en": "Hypothermia = below 36°C. Highest risk: every neonate in the first 12 hours, home births, prolonged resuscitation, small-for-gestational-age, preemies, sepsis, badly insulated transport. The metabolic bill: hypoglycemia, metabolic acidosis, pulmonary hypertension, hypoxemia — and mortality climbs in low-birth-weight babies. Cold starts at the extremities then spreads; watch for pallor, apnea, bradycardia, weak cry, lethargy; severe cases show bright-red skin, sclerema, DIC.",
+     "zh": "低体温=低于 36°C。高危名单：所有生后 12 小时内的新生儿、家中分娩、复苏时间长、小于胎龄、早产、败血症、转运保暖不到位。代谢账单：低血糖、代谢性酸中毒、肺动脉高压、低氧血症——低体重儿的死亡率随之上升。凉是从四肢开始再蔓延全身；警惕苍白、呼吸暂停、心动过缓、哭声弱、嗜睡；重者皮肤反而鲜红、出现硬肿症、DIC。",
+     "hard": true
+    },
+    {
+     "en": "Rewarming: skin-to-skin is the home method of choice, room warmed to 24°C to 26°C, prewarmed cap plus warm blanket, warm IV fluids help. Hot water bottles are banned — cold skin with poor circulation burns easily. Every hypothermic newborn also gets investigated for infection.",
+     "zh": "复温：家中首选皮肤贴皮肤，房间加温到 24-26°C，预热的帽子加暖毯，温热的静脉液也有帮助。热水袋禁用——循环差的冷皮肤一烫就伤。另外，每个低体温新生儿都要排查感染。",
+     "hard": true
+    },
+    {
+     "en": "Therapeutic hypothermia (33°C to 34°C within 6 hours) for hypoxic-ischemic injury is a hospital play, not a prehospital one — your job is simply to prevent hyperthermia and keep the axillary temperature no higher than 36.5°C.",
+     "zh": "针对缺氧缺血性损伤的治疗性低温（6 小时内降到 33-34°C）是医院的活，不是院前项目——你的任务只是防止过热，把腋温压在 36.5°C 以内。",
+     "hard": true
+    },
+    {
+     "en": "Hypoglycemia = blood glucose under 2.6 mmol/L at any gestation. Most babies stay symptom-free until it sits below 2.2 for a while, but 2.6 already demands immediate treatment even without symptoms — the neonatal brain runs on glucose, and the price of waiting is seizures and permanent damage.",
+     "zh": "低血糖=血糖低于 2.6 mmol/L，不分胎龄。多数宝宝要跌破 2.2 并持续一阵才出症状，但到 2.6 就必须立即处理、无症状也要处理——新生儿的大脑全靠葡萄糖供能，等待的代价是惊厥和永久性损伤。",
+     "hard": true
+    },
+    {
+     "en": "Who crashes: small- and large-for-gestational-age babies, the smaller of discordant twins (weight gap over 25%), infants of diabetic mothers, preemies, perinatal distress (5-minute Apgar under 5), sepsis, cold stress. A term baby's glycogen stores only cover 8 to 12 hours. Symptoms — cyanosis, apnea, irritability, poor feeding, hypothermia, tremors, seizures — are all nonspecific, so every sick newborn gets a heel-stick glucose.",
+     "zh": "谁会栽在血糖上：小于/大于胎龄儿、体重差超 25% 的双胎中较小的那个、糖尿病母亲的孩子、早产儿、围产期窘迫（5 分钟 Apgar 不足 5 分）、败血症、冷应激。足月儿的糖原储备只够撑 8-12 小时。症状——发绀、呼吸暂停、易激惹、吃奶差、低体温、震颤、惊厥——没有一个特异，所以每个生病的新生儿都要扎足跟测血糖。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Vomiting, Diarrhea, and Dehydration",
+   "titleZh": "呕吐、腹泻与脱水",
+   "points": [
+    {
+     "en": "85% of infants vomit in the first week and another 10% by six weeks — mostly harmless. Two colours override everything: bile and blood both mean pathology needing urgent care, and aspirated vomitus can obstruct the airway outright.",
+     "zh": "85% 的婴儿第一周就吐过奶，再有 10% 在六周前吐过——绝大多数无害。两种颜色一票否决：带胆汁、带血都是需要紧急处理的病理信号，而且误吸的呕吐物本身就能堵死气道。",
+     "hard": true
+    },
+    {
+     "en": "Bile-stained vomit = malrotation with midgut volvulus until proven otherwise — a surgical emergency (the Ladd procedure) where every hour of delay costs bowel. Malrotation runs about 1 in 500 births; some 40% declare themselves in the first week.",
+     "zh": "胆汁样呕吐=先按肠旋转不良+中肠扭转处理，直到被排除——外科急症（Ladd 手术），每拖一小时都在赔肠子。旋转不良发生率约 1/500，约 40% 在生后第一周发病。",
+     "hard": true
+    },
+    {
+     "en": "Vomiting through the first 24 hours suggests upper-gut atresia. Esophageal atresia (1 per 3,000 to 4,500 births): excess frothy mucus and choking with every feed; an accompanying tracheoesophageal fistula lets crying pump air into the gut — squeezing ventilation — and gastric contents into the lungs.",
+     "zh": "生后头 24 小时持续呕吐提示上消化道闭锁。食管闭锁（1/3,000-4,500）：口水泡沫特别多、一喂就呛；若合并气管食管瘘，哭闹会把空气打进肠道挤压通气，胃内容物则倒灌进肺。",
+     "hard": true
+    },
+    {
+     "en": "Pyloric stenosis: 2 to 4 per 1,000 live births, boys outnumber girls 4:1, 30% are first-born males, classic onset around week 3 (range 1 to 18). Projectile vomit that is never bilious but may turn brown from gastritis or a Mallory-Weiss tear.",
+     "zh": "幽门肥厚性狭窄：2-4/1,000 活产，男女比 4:1，30% 是头胎男孩，典型在第 3 周起病（1-18 周都可能）。喷射状呕吐、绝不含胆汁，但可因胃炎或贲门黏膜撕裂带棕色。",
+     "hard": true
+    },
+    {
+     "en": "Gastroesophageal reflux (prevalence 2% to 10%, peaking at 1 to 4 months): effortless, non-bilious, non-bloody spit-up that can masquerade as apnea, bradycardia, wheeze, stridor, or failure to thrive. Hard to treat — and nothing by mouth prehospital.",
+     "zh": "胃食管反流（患病率 2%-10%，1-4 月龄高峰）：不费力的吐奶、无胆汁无血，却能伪装成呼吸暂停、心动过缓、喘息、喘鸣或生长迟滞。不好治——院前禁食禁饮。"
+    },
+    {
+     "en": "No meconium in the first 24 hours: think meconium plug, Hirschsprung disease, or meconium ileus — a classic newborn face of cystic fibrosis. Sudden forceful vomiting with persistent irritability: consider meningitis, hydrocephalus (big head is the clue), asphyxia. Among withdrawal drugs, barbiturates cause vomiting most often.",
+     "zh": "生后 24 小时没排胎便：想胎粪栓、先天性巨结肠、胎粪性肠梗阻——囊性纤维化在新生儿期的经典面目。突发的用力呕吐+持续哭闹不安：考虑脑膜炎、脑积水（头围大是线索）、窒息。戒断性呕吐的药物里，巴比妥类最常见。"
+    },
+    {
+     "en": "Management: face turned to one side, suction the vomitus clear, oxygen or PPV as needed (vagal bradycardia from vomiting is usually transient), consider a gastric tube for decompression. Antiemetics are banned prehospital. Dehydration clues — dry mucosa, heart rate over 160, sunken fontanelle — earn normal saline 10 mL/kg boluses.",
+     "zh": "处理：脸侧向一边、把呕吐物吸干净、按需给氧或正压通气（呕吐引起的迷走性心动过缓多为一过性）、考虑置胃管减压。院前禁用止吐药。脱水线索——黏膜干、心率超 160、前囟凹陷——就上生理盐水 10 mL/kg 推注。",
+     "hard": true
+    },
+    {
+     "en": "Diarrhea: a breastfed infant normally stools 5 to 6 times a day, even after every feed — that is not diarrhea. True neonatal diarrhea is uncommon and usually viral, but intussusception, malrotation, and metabolic disease must be excluded. Dehydration is scored on combinations: ill appearance, capillary refill over 2 seconds, dry mucosa, absent tears, weight loss, scant urine.",
+     "zh": "腹泻：母乳喂养的宝宝一天排便 5-6 次、甚至每喂必排，都算正常——那不是腹泻。新生儿真性腹泻不常见、多为病毒性，但必须排除肠套叠、旋转不良和代谢病。脱水靠组合判断：一般状况差、毛细血管再充盈超过 2 秒、黏膜干、哭无泪、体重下降、尿少。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Birth Injuries",
+   "titleZh": "产伤",
+   "points": [
+    {
+     "en": "Birth trauma complicates 2 to 7 per 1,000 live births; nearly half is potentially avoidable by anticipating obstetric risk, and it accounts for 2% to 3% of infant deaths.",
+     "zh": "产伤见于 2-7/1,000 活产；近一半本可通过预判产科高危因素避免，占婴儿死亡的 2%-3%。",
+     "hard": true
+    },
+    {
+     "en": "Difficult-birth setups: first pregnancy, cephalopelvic disproportion, prolonged or lightning-fast labour, breech/brow/face presentation, birth weight over 4,000 g, prematurity, low birth weight, instrumented (vacuum or forceps) delivery.",
+     "zh": "难产的土壤：初产、头盆不称、产程过长或过快、臀位/额先露/面先露、出生体重超 4,000 g、早产、低体重、器械（真空或产钳）助产。"
+    },
+    {
+     "en": "Three scalp swellings, three fates: caput succedaneum — soft-tissue edema from pressing on the cervix, gone in a day or two; cephalohematoma — subperiosteal bleed appearing hours after birth, confined by bone edges, resolving over 2 weeks to 3 months with later jaundice possible, and never drained; subgaleal hemorrhage — shearing under the scalp, classic after vacuum delivery, which can bleed to shock and needs NICU with hourly head-circumference checks.",
+     "zh": "三种头皮肿块、三种命运：产瘤——软组织受压水肿，一两天消退；头颅血肿——骨膜下出血、生后数小时才鼓起、以骨缝为界，2 周到 3 个月吸收、红细胞分解可续发黄疸，绝不能穿刺引流；帽状腱膜下出血——头皮下的剪切伤、真空助产后的经典，可以出血到休克，必须进 NICU 每小时量头围。",
+     "hard": true
+    },
+    {
+     "en": "Skull fractures: nondisplaced linear ones are managed conservatively — just keep pressure off the spot; displaced fractures need neurosurgical evaluation.",
+     "zh": "颅骨骨折：无移位的线性骨折保守处理——别压那块就行；有移位的要神经外科评估。"
+    },
+    {
+     "en": "The clavicle is the newborn's most commonly fractured bone — usually an unpredictable feature of normal birth (big baby, mid-forceps, shoulder dystocia). The clue is pseudoparalysis: the baby simply will not move that arm; exam finds crepitus and a palpable irregularity.",
+     "zh": "锁骨是新生儿最常骨折的骨头——多为正常分娩中难以预测的并发症（大宝宝、中位产钳、肩难产）。线索是假性瘫痪：宝宝干脆不动那条胳膊；查体有骨擦感和可触及的骨性不平整。",
+     "hard": true
+    },
+    {
+     "en": "Long bones: femur and humerus lead. The early flag is loss of spontaneous limb movement; treatment is splinting, and a humeral fracture earns a radial nerve check.",
+     "zh": "长骨骨折：股骨和肱骨最多。早期信号是那条肢体不再自发活动；处理是夹板固定，肱骨骨折要顺带查桡神经。",
+     "hard": true
+    },
+    {
+     "en": "Brachial plexus injuries (0.5 to 2 per 1,000 live births, big babies): Erb palsy (C5–C6) is the common pattern; Klumpke paralysis (C7–C8, T1) is rare and weakens the hand's intrinsic muscles. Some of these actually predate birth.",
+     "zh": "臂丛损伤（0.5-2/1,000 活产，大婴儿多见）：Erb 麻痹（C5-C6）是常见型；Klumpke 麻痹（C7-C8、T1）罕见、表现为手内在肌无力。其中一部分其实是宫内就已发生的。",
+     "hard": true
+    },
+    {
+     "en": "Nerve palsies: facial palsy (mostly unrelated to trauma) shows as a face pulled toward the good side when crying, resolving over weeks; phrenic-root injury paralyzes the diaphragm — 80% right-sided, 10% bilateral — bringing distress and hypoxemia; laryngeal nerve injury gives stridor or a hoarse cry, usually clearing in 4 to 6 weeks, occasionally taking 6 to 12 months.",
+     "zh": "神经麻痹：面神经麻痹（多数与产伤无关）表现为哭时脸被拉向健侧，数周内恢复；膈神经根损伤造成膈肌麻痹——80% 在右侧、10% 双侧——带来呼吸窘迫和低氧血症；喉神经损伤则是喘鸣或哭声嘶哑，多在 4-6 周恢复，偶尔要拖 6-12 个月。",
+     "hard": true
+    },
+    {
+     "en": "The gravest patterns: spinal cord injury from breech traction or vertex torsion presents as stillbirth or rapid death with no airway to be had; intra-abdominal hemorrhage — the liver first — hides behind shock, unexplained pallor, and a distending abdomen, especially in macrosomic babies.",
+     "zh": "最凶险的两类：臀位牵拉或头位旋转造成的脊髓损伤，表现为死产或迅速死亡、连气道都建立不起来；腹内出血——肝脏首当其冲——藏在休克、不明原因苍白和腹部渐胀的背后，巨大儿尤其要想到。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Family and Transport",
+   "titleZh": "家属沟通与转运",
+   "points": [
+    {
+     "en": "Destination logic: the nearest facility able to deliver the needed level of care — sometimes a close community hospital that can place a chest tube or secure an airway beats a distant tertiary centre. Call ahead, always; and for interfacility moves, hypoxemia, acidosis, hypoglycemia, and hypovolemia get corrected before wheels roll.",
+     "zh": "目的地逻辑：最近的、能提供所需级别照护的医院——有时近处能置胸管、能建气道的社区医院，胜过远处的三级中心。永远提前电话通报；院间转运则要在出发前先纠正低氧、酸中毒、低血糖、低血容量。"
+    },
+    {
+     "en": "En-route watch list: thermoregulation, airway patency, respiratory effort, skin colour, pulse rate — plus an oxygen saturation reading and a blood glucose estimate.",
+     "zh": "转运路上的监测清单：体温、气道通畅、呼吸努力、肤色、心率——再加一个血氧读数和一个血糖估值。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Newborn vs neonate",
+   "itemZh": "Newborn 与 neonate 的定义",
+   "value": "newborn = 生后第 1 天内；neonate = 生后 1 个月内（BC 规则挂在 ≤28 天）"
+  },
+  {
+   "itemEn": "Preterm / term / postterm cutoffs",
+   "itemZh": "早产 / 足月 / 过期产分界",
+   "value": "<37 整周 / 37-42 周 / >42 周"
+  },
+  {
+   "itemEn": "Deliveries needing skilled intervention",
+   "itemZh": "需要专业干预的分娩比例",
+   "value": "约 6%-10%；出生体重 <1,500 g 者约 80% 需复苏"
+  },
+  {
+   "itemEn": "BC ladder: time per step",
+   "itemZh": "BC 阶梯每步时长",
+   "value": "每步 30 秒（擦干刺激保暖 → 空气 BVM → 100% 氧 BVM → 按压）"
+  },
+  {
+   "itemEn": "BC ladder: escalation gate",
+   "itemZh": "BC 阶梯升级门槛",
+   "value": "每步 30 秒后心率仍 <100 次/分即升一级"
+  },
+  {
+   "itemEn": "BC ladder: compression endpoint",
+   "itemZh": "BC 按压终止线",
+   "value": "按压+通气+100% 氧做到心率 >60 次/分为止"
+  },
+  {
+   "itemEn": "BC neonate ratio and AED",
+   "itemZh": "BC neonate 按压比与 AED",
+   "value": "3:1；≤28 天不用 AED"
+  },
+  {
+   "itemEn": "Apnea definition",
+   "itemZh": "呼吸暂停定义",
+   "value": "呼吸停顿 ≥20 秒"
+  },
+  {
+   "itemEn": "PPV rate",
+   "itemZh": "正压通气频率",
+   "value": "40-60 次/分"
+  },
+  {
+   "itemEn": "Compression depth and rate",
+   "itemZh": "按压深度与速率",
+   "value": "胸廓前后径的 1/3；100-120 次/分"
+  },
+  {
+   "itemEn": "Epinephrine",
+   "itemZh": "肾上腺素",
+   "value": "仅 1:10,000；0.01-0.03 mg/kg（0.1-0.3 mL/kg）IV，每 3-5 分钟；气管途径 1 mL/kg"
+  },
+  {
+   "itemEn": "Fluid bolus",
+   "itemZh": "液体推注",
+   "value": "生理盐水 10 mL/kg，5-10 分钟推完，可重复"
+  },
+  {
+   "itemEn": "Hypoglycemia threshold and fix",
+   "itemZh": "低血糖阈值与纠正",
+   "value": "<2.6 mmol/L；D10W 2 mL/kg 静推，约 30 分钟复测"
+  },
+  {
+   "itemEn": "Weight quick-estimate",
+   "itemZh": "体重速估",
+   "value": "足月 3-4 kg；28 周约 1 kg"
+  },
+  {
+   "itemEn": "Low birth weight / viability floor",
+   "itemZh": "低出生体重与存活底线",
+   "value": "LBW <2,500 g；<24 周或 <500 g 院外分娩难存活"
+  },
+  {
+   "itemEn": "Core temperature targets",
+   "itemZh": "核心体温目标",
+   "value": "36-38°C（热中性区 36.6-37.2°C；平均正常 37.5°C）"
+  },
+  {
+   "itemEn": "Fever and hypothermia lines",
+   "itemZh": "发热与低体温线",
+   "value": "直肠 >38°C 发热；<36°C 低体温；口温低 0.6°C、腋温低 1.1°C"
+  },
+  {
+   "itemEn": "Saturation targets",
+   "itemZh": "血氧目标",
+   "value": "90%-95%（极早产 92%-94%）；生后 6-7 分钟才升过 90%"
+  },
+  {
+   "itemEn": "Apgar rhythm",
+   "itemZh": "Apgar 节奏",
+   "value": "1、5 分钟各评一次；正常 7-9；5 分钟 <7 则每 5 分钟评到 20 分钟"
+  },
+  {
+   "itemEn": "Infant bag and tidal volume",
+   "itemZh": "婴儿气囊与潮气量",
+   "value": "囊 240 mL；潮气量仅 5-8 mL/kg"
+  },
+  {
+   "itemEn": "Ventilation pressures",
+   "itemZh": "通气压力",
+   "value": "首几口约 30 cm H2O；PEEP 5-6；峰压足月 <25、早产 <20 cm H2O"
+  },
+  {
+   "itemEn": "Tracheal tube sizing",
+   "itemZh": "气管导管选号",
+   "value": "<28 周 2.5 / 28-36 周 3.0 / >36 周 3.5；足月唇缘 9 cm；单次尝试 ≤20 秒"
+  },
+  {
+   "itemEn": "Umbilical vein line",
+   "itemZh": "脐静脉置管",
+   "value": "12 点钟方向；插入 4 cm 至回抽见血"
+  },
+  {
+   "itemEn": "Cord clamping window",
+   "itemZh": "断脐窗口",
+   "value": "与胎盘同高，等 60-120 秒（需复苏则立断）"
+  },
+  {
+   "itemEn": "Termination reference",
+   "itemZh": "终止复苏参考",
+   "value": "10 分钟无自主心跳考虑停止；20 分钟无自主呼吸预后极差"
+  },
+  {
+   "itemEn": "Meconium-stained fluid",
+   "itemZh": "羊水胎粪污染发生率",
+   "value": "10%-15% 的分娩"
+  },
+  {
+   "itemEn": "Diaphragmatic hernia",
+   "itemZh": "先天性膈疝",
+   "value": "1/2,200；80%-90% 左侧；死亡率可达 50%"
+  },
+  {
+   "itemEn": "Naloxone (acute maternal narcotics only)",
+   "itemZh": "纳洛酮（仅母亲急性用药）",
+   "value": "0.1 mg/kg IV（首选）或 IM"
+  },
+  {
+   "itemEn": "Anticonvulsant chain",
+   "itemZh": "抗惊厥剂量链",
+   "value": "劳拉西泮 0.1 mg/kg → 苯巴比妥 20 mg/kg → 苯妥英 20 mg/kg"
+  },
+  {
+   "itemEn": "BC suction time limits",
+   "itemZh": "BC 吸引时限",
+   "value": "婴儿 5 秒（儿童 10 秒、成人 10-15 秒）"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Pull the vehicle over to place and secure an advanced airway; BVM ventilation and chest compressions can carry on while moving.",
+   "zh": "上高级气道时把车靠边停稳；球囊通气和胸外按压则可以在行驶中继续做。"
+  },
+  {
+   "en": "Suspected pneumothorax? Before you reach for a needle, recheck that your ventilation is actually effective — that is the fix more often than the needle is.",
+   "zh": "怀疑气胸？伸手拿针之前，先复查你的通气是不是真的有效——问题出在通气上的次数远比需要动针的多。"
+  },
+  {
+   "en": "Two moves that improve fetal circulation before delivery: roll the mother onto her side to lift the uterus off the great vessels, and give her 100% oxygen by mask.",
+   "zh": "分娩前改善胎儿循环的两招：让产妇翻向侧卧、把子宫从大血管上挪开；再给产妇面罩 100% 氧。"
+  },
+  {
+   "en": "Every neonatal drug is weight-based — practise the estimate until it is reflex: term 3 to 4 kg, 28 weeks about 1 kg.",
+   "zh": "新生儿所有药都按体重给——把估重练成反射：足月 3-4 kg，28 周约 1 kg。"
+  },
+  {
+   "en": "Never get specific about survival odds with the family; too many factors move the number, and being wrong is worse than being honest about not knowing.",
+   "zh": "别跟家属讲具体的存活率；影响结局的因素太多，说错的伤害比坦承不知道大得多。"
+  },
+  {
+   "en": "Any newborn who needed respiratory support or resuscitation stays nil by mouth — reflux and aspiration are waiting.",
+   "zh": "凡是经历过呼吸支持或复苏的新生儿一律禁食——反流和误吸就等在那儿。"
+  },
+  {
+   "en": "Warm your hands before touching the baby, and get a hat on early — the scalp dumps more heat than anywhere else.",
+   "zh": "摸宝宝之前先把手焐热，帽子尽早戴上——头皮是全身漏热最凶的地方。"
+  },
+  {
+   "en": "Rapid assessment and treatment run in parallel, not in sequence — and note the time of delivery the moment it happens.",
+   "zh": "快速评估和处置是并行的、不是先后关系——另外，宝宝一落地就记下出生时间。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "A neonate is not a scaled-down pediatric patient: the whole assessment revolves around whether the fetal-to-newborn transition is succeeding — breathing established, circulation switched, heat kept — priorities no older child has.",
+   "zh": "新生儿不是缩小版儿科病人：整个评估围着「胎儿到新生儿的过渡有没有成功」转——呼吸建没建立、循环切没切换、体温保没保住——这些优先级在年长儿身上根本不存在。"
+  },
+  {
+   "en": "A small, quiet baby is not a reassuring baby. Silence and floppiness can be exactly what neurologic depression or serious infection look like.",
+   "zh": "小小的、安安静静的宝宝不等于让人放心的宝宝。安静和松软可能恰恰就是神经抑制或严重感染的样子。"
+  },
+  {
+   "en": "Temperature is not a secondary concern: hypothermia directly buys hypoglycemia, metabolic acidosis, pulmonary hypertension, and hypoxemia. Thermal management is core stability work.",
+   "zh": "体温不是次要问题：低体温直接换来低血糖、代谢性酸中毒、肺动脉高压和低氧血症。保温是稳定性工作的核心，不是附加题。"
+  },
+  {
+   "en": "Blue hands and feet do not mean hypoxia — acrocyanosis is normal for hours after birth, and nearly 90% of newborns arrive vigorous. Judge colour centrally, over the sternum and mucosa; central cyanosis is the abnormal finding.",
+   "zh": "手脚发青不等于缺氧——肢端青紫在生后数小时内都属正常，而且近 90% 的新生儿一出生就是有力的。看颜色要看中心：看胸骨区和黏膜；中心性发绀才是异常。"
+  },
+  {
+   "en": "A pale baby is not a safe baby: cyanosis needs 50 g/L of desaturated hemoglobin to show, so a severely anemic hypoxic newborn skips blue and goes straight to white.",
+   "zh": "脸色苍白不等于没缺氧：发绀要有 50 g/L 去氧血红蛋白才显形，所以严重贫血的缺氧儿会跳过发青、直接发白。"
+  },
+  {
+   "en": "Neonatal bradycardia is not a cardiac problem — it is hypoxia until proven otherwise, and effective ventilation is the treatment. Drugs come last, not first.",
+   "zh": "新生儿心动过缓不是心脏问题——除非证明不是，它就是缺氧，治疗手段是有效通气。用药排在最后，不是最先。"
+  },
+  {
+   "en": "A depressed baby born through meconium no longer gets routine tracheal intubation and suctioning — that recommendation is gone; run the standard resuscitation sequence.",
+   "zh": "胎粪污染的抑制儿不再做常规气管插管吸引——这条推荐已经废除；按标准复苏流程走。"
+  },
+  {
+   "en": "Naloxone is not the answer to a floppy newborn: it is off the first line, and with a chronically opioid-using mother it can detonate life-threatening withdrawal seizures. Ventilate and transport.",
+   "zh": "松软的新生儿不是先推纳洛酮：它已退出一线，且母亲长期用阿片时它可能引爆致命性戒断惊厥。正确答案是通气+转运。"
+  },
+  {
+   "en": "Epinephrine 1:1,000 is never a newborn drug — that concentration can cause spontaneous intracranial hemorrhage. Neonates get 1:10,000 only.",
+   "zh": "1:1,000 的肾上腺素永远不是新生儿用药——那个浓度会引发自发性颅内出血。新生儿只能用 1:10,000。"
+  },
+  {
+   "en": "Pallor alone does not justify a fluid bolus — it may be fetal anemia or asphyxia. The bolus indication is pallor plus delayed capillary refill plus weak pulses.",
+   "zh": "单独苍白不构成补液指征——那可能是胎儿贫血或窒息。补液要凑齐三联：苍白+毛细血管再充盈延迟+脉搏细弱。"
+  },
+  {
+   "en": "No fever does not mean no infection: a septic neonate's temperature may fall instead of rise. Treat every hypothermic newborn as a possible infection.",
+   "zh": "不发热不等于没感染：败血症的新生儿体温可能不升反降。每个低体温的新生儿都要当成潜在感染来查。"
+  },
+  {
+   "en": "Not all scalp lumps are equal: caput crosses the days-old finish line on its own; a cephalohematoma stays inside bone borders and must not be drained; a subgaleal hemorrhage can exsanguinate — that one is the emergency.",
+   "zh": "头上的包不都一样：产瘤一两天自己消；头颅血肿以骨缝为界、绝不能穿刺；帽状腱膜下出血能把血放到休克——那个才是急症。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "APGAR",
+   "en": "Appearance, Pulse, Grimace, Activity, Respirations — five items, 0 to 2 points each, scored at 1 and 5 minutes.",
+   "zh": "A 肤色、P 心率、G 对刺激的反应、A 肌张力、R 呼吸——五项各 0-2 分，1 分钟和 5 分钟各评一次。"
+  },
+  {
+   "name": "30·30·30·压",
+   "en": "The BC ladder in one breath: dry-stimulate-warm 30 s, room-air BVM 30 s, 100% O2 BVM 30 s, then compressions. Climb at under 100, stop compressing above 60.",
+   "zh": "BC 阶梯一口气背完：擦干刺激保暖 30 秒 → 空气球囊 30 秒 → 纯氧球囊 30 秒 → 按压。升级看 100，停按看 60。"
+  },
+  {
+   "name": "蒸·对·传·辐",
+   "en": "The four heat-loss routes: evaporation, convection, conduction, radiation — block all four for every newborn.",
+   "zh": "四条散热路：蒸发、对流、传导、辐射——每个新生儿都要四路全堵。"
+  },
+  {
+   "name": "抖动握得住，惊厥握不住",
+   "en": "Gently holding the limb stops jitteriness but never a seizure — and eye deviation or autonomic signs always mean seizure.",
+   "zh": "轻握肢体能停的是抖动，握不停的是惊厥——出现眼球偏斜或自主神经症状就一定是惊厥。"
+  },
+  {
+   "name": "先口后鼻",
+   "en": "Suction the mouth before the nose — nasal suction triggers a gasp, and you want nothing left in the mouth when it happens.",
+   "zh": "吸引先口后鼻——碰鼻子会诱发喘息，喘那一下之前嘴里必须已经是空的。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Recite the BC newborn ladder: what is the escalation gate at each step, and when do compressions stop?",
+   "qZh": "背出 BC 新生儿四步阶梯：每一步的升级门槛是什么？按压做到什么时候停？",
+   "aEn": "Entry: floppy, limp, not breathing, or HR under 100. Steps of 30 seconds each: dry-stimulate-warm; BVM on room air; BVM with 100% oxygen; then compressions with ventilations and 100% oxygen. The gate at every step is HR still under 100; compressions continue until HR is above 60.",
+   "aZh": "启动条件：松软、无力、不呼吸或心率 <100。每步 30 秒：擦干刺激保暖 → 空气球囊 → 100% 氧球囊 → 按压+通气+100% 氧。每一步的升级门槛都是心率仍 <100；按压一直做到心率 >60 为止。"
+  },
+  {
+   "qEn": "Compression-to-ventilation ratio and AED policy for a 2-week-old in BC?",
+   "qZh": "BC 考纲下，2 周大的宝宝按压通气比是多少？能用 AED 吗？",
+   "aEn": "A 2-week-old is a neonate (28 days or under): ratio 3:1, and no AED.",
+   "aZh": "2 周大属于 neonate（≤28 天）：按压比 3:1，不用 AED。"
+  },
+  {
+   "qEn": "When is epinephrine indicated in newborn resuscitation, and at what dose?",
+   "qZh": "新生儿复苏中肾上腺素的指征和剂量？",
+   "aEn": "HR still under 60 after 30 seconds of effective ventilation plus 30 seconds of compressions: 1:10,000 only, 0.01 to 0.03 mg/kg (0.1 to 0.3 mL/kg) IV with a saline flush, repeatable every 3 to 5 minutes; tracheal route 1 mL/kg.",
+   "aZh": "有效通气 30 秒+按压 30 秒后心率仍 <60：只用 1:10,000，0.01-0.03 mg/kg（0.1-0.3 mL/kg）静推并冲管，每 3-5 分钟可重复；气管途径 1 mL/kg。"
+  },
+  {
+   "qEn": "Define neonatal hypoglycemia and give the field treatment.",
+   "qZh": "新生儿低血糖的定义和现场处理？",
+   "aEn": "Blood glucose under 2.6 mmol/L at any gestation — treat immediately even without symptoms: D10W 2 mL/kg IV bolus, recheck in about 30 minutes; IM glucagon if no IV, glucose gel for a term baby.",
+   "aZh": "血糖 <2.6 mmol/L（不分胎龄）——无症状也要立即处理：D10W 2 mL/kg 静推，约 30 分钟复测；没有静脉就肌注胰高血糖素，足月儿可用葡萄糖凝胶。"
+  },
+  {
+   "qEn": "A newborn vomits green material. What is your working diagnosis and why does it matter?",
+   "qZh": "新生儿吐出绿色的东西，你的工作诊断是什么？为什么要紧？",
+   "aEn": "Bile-stained vomit is malrotation with midgut volvulus until proven otherwise — a surgical emergency where delayed diagnosis costs the bowel its blood supply.",
+   "aZh": "胆汁样呕吐先按肠旋转不良+中肠扭转处理，直到被排除——这是外科急症，诊断每拖一步，肠子的血供就多断一分。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Newborn resuscitation sequence",
+   "topicZh": "新生儿复苏流程",
+   "bookEn": "NRP algorithm: after 30 seconds of drying and stimulation, start PPV if the baby is apneic or HR is under 100, beginning on room air (term) or about 30% oxygen titrated by right-hand oximetry; compressions only when HR stays under 60 after 30 seconds of effective PPV with 100% oxygen; wind support down once HR climbs past 100.",
+   "bookZh": "NRP 流程：擦干刺激 30 秒后，若呼吸暂停或心率 <100 就开始正压通气，起始用室内空气（足月）或约 30% 氧、按右手血氧滴定；100% 氧有效通气 30 秒后心率仍 <60 才按压；心率回到 100 以上逐步撤支持。",
+   "bcEn": "Fixed four-step ladder for the floppy, limp, non-breathing newborn or HR under 100: (1) dry, stimulate, keep warm 30 s; (2) BVM on room air 30 s; (3) BVM with 100% oxygen 30 s; (4) chest compressions with ventilations and 100% oxygen. Every step escalates on HR under 100; compressions run until HR is above 60. Answer with this ladder on the exam.",
+   "bcZh": "BC 是固定四步阶梯，对象是松软、无力、不呼吸或心率 <100 的新生儿：①擦干刺激保暖 30 秒；②空气球囊通气 30 秒；③接 100% 氧球囊通气 30 秒；④胸外按压+通气+100% 氧。每一步的升级门槛都是心率 <100；按压做到心率 >60 为止。考试一律按这套阶梯作答。",
+   "ref": "BC Guidelines p.44"
+  },
+  {
+   "topicEn": "Neonatal compression ratio",
+   "topicZh": "新生儿按压通气比",
+   "bookEn": "This Canadian edition prints 30:2 for a single rescuer and 15:2 for multiple rescuers at 100 to 120 compressions per minute.",
+   "bookZh": "这版加拿大教材印的是单人 30:2、双人 15:2，频率 100-120 次/分。",
+   "bcEn": "BC: neonate (up to 28 days) uses a 3:1 compression-to-ventilation ratio. Write 3:1.",
+   "bcZh": "BC：neonate（≤28 天）用 3:1 的按压通气比。答题写 3:1。",
+   "ref": "BC Guidelines p.41, p.44"
+  },
+  {
+   "topicEn": "AED in neonates",
+   "topicZh": "新生儿与 AED",
+   "bookEn": "The chapter defers defibrillation details to CPR appendices and never draws a hard age line for AED use.",
+   "bookZh": "教材把除颤细节推给 CPR 附录，没有为 AED 划出明确的年龄红线。",
+   "bcEn": "BC is explicit: no AED for a neonate up to 28 days old.",
+   "bcZh": "BC 写得很死：≤28 天的 neonate 不用 AED。",
+   "ref": "BC Guidelines p.44"
+  },
+  {
+   "topicEn": "Oxygen strategy during resuscitation",
+   "topicZh": "复苏中的氧策略",
+   "bookEn": "Textbook: begin on room air for term babies (FiO2 about 0.3 for preterm), blend and titrate to saturations of 90% to 95%, avoiding hyperoxia throughout.",
+   "bookZh": "教材：足月儿从室内空气起步（早产约 FiO2 0.3），用空氧混合按血氧滴定到 90%-95%，全程防高氧。",
+   "bcEn": "The BC ladder hard-codes the oxygen: step 2 is room air, step 3 adds 100% oxygen, and step 4 compressions run with 100% oxygen — no blender logic in the exam answer.",
+   "bcZh": "BC 阶梯把氧写死了：第 2 步用空气，第 3 步接 100% 氧，第 4 步按压时也用 100% 氧——考试答案里不需要空氧混合那套逻辑。",
+   "ref": "BC Guidelines p.44"
+  },
+  {
+   "topicEn": "Suction duration",
+   "topicZh": "吸引时长",
+   "bookEn": "The book urges brief, gentle suction (mouth before nose, beware vagal bradycardia) but sets no stopwatch.",
+   "bookZh": "教材只说吸引要短、要轻（先口后鼻、防迷走性心动过缓），没给具体秒数。",
+   "bcEn": "BC gives numbers: 5 seconds for an infant, 10 seconds for a paediatric patient, 10 to 15 seconds for an adult.",
+   "bcZh": "BC 给了数：婴儿 5 秒、儿童 10 秒、成人 10-15 秒。",
+   "ref": "BC Guidelines p.45"
+  }
+ ],
+ "sourcePages": "3629-3707"
+}

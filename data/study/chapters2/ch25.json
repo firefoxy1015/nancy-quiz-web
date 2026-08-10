@@ -1,0 +1,959 @@
+{
+ "id": "ch25",
+ "n": 25,
+ "titleEn": "Spine Injuries",
+ "titleZh": "脊柱损伤",
+ "group": "trauma",
+ "examWeight": 3,
+ "whyEn": "A weight-3 trauma chapter that pays off on both exams. The written exam mines it for cord syndromes, neurogenic shock physiology, and the numeric thresholds of high-risk mechanisms; the practical exam turns C-spine control into a 100%-deduction criterion — skip it once when indicated and the whole scenario is lost. Master the packaging sequence, the level-by-level neurology, and BC's decision rules (NEXUS / Canadian C-Spine) until they are reflex.",
+ "whyZh": "权重 3 的创伤大章，笔试实操双线回本。笔试爱出脊髓综合征鉴别、神经源性休克机理和高危机制的具体数字门槛；实操里 C-spine 控制是 100% 扣分项——该上没上，整场直接报废。打包顺序、按节段推神经功能、BC 的判定规则（NEXUS/加拿大颈椎规则）都要练到条件反射。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics（进行神经系统评估并解读发现）",
+   "Area 5: Therapeutics（对中轴骨骼的疑似骨折实施固定）",
+   "Area 6: Integration（处置出现神经系统症状体征的患者）"
+  ],
+  "codes": [
+   "4.3.d",
+   "5.7.b",
+   "6.1.b"
+  ]
+ },
+ "sourcePages": "2092-2162",
+ "sections": [
+  {
+   "titleEn": "Introduction & Epidemiology",
+   "titleZh": "概述与流行病学",
+   "points": [
+    {
+     "en": "Canadian incidence: roughly 35 new SCI per million population yearly, about 1,050 cases; around 36,000 Canadians currently live with SCI.",
+     "zh": "加拿大发病率：每年约每百万人 35 例新发脊髓损伤（SCI），合计约 1,050 人；全国约 36,000 人带 SCI 生活。",
+     "hard": true
+    },
+    {
+     "en": "Average age at injury is 32; 80% of SCI patients are under 40 — a young population, which is why lifetime costs run so high.",
+     "zh": "受伤平均年龄 32 岁，80% 患者不到 40 岁——伤的是年轻人，所以终身花费惊人（加拿大每年约 15 亿加元）。",
+     "hard": true
+    },
+    {
+     "en": "Cause ranking: motor vehicle collisions 35-40% > acts of violence 24.5% > falls 21.8% (mostly older adults) > recreation/athletics 7.2% (diving is the classic).",
+     "zh": "病因排序：机动车碰撞 35-40% > 暴力行为 24.5% > 跌落 21.8%（老年人为主）> 运动休闲 7.2%（跳水是经典场景）。",
+     "hard": true
+    },
+    {
+     "en": "Mortality: isolated SCI carries a 7% in-hospital death rate, but up to 20% die in the first months after injury, and the rate climbs with age.",
+     "zh": "死亡率：孤立性 SCI 院内死亡率 7%；伤后头几个月内死亡率可高达 20%，且随年龄上升。",
+     "hard": true
+    },
+    {
+     "en": "Leading killers after hospital discharge: pulmonary embolism and septicemia (from pneumonia, urosepsis, or pressure ulcers).",
+     "zh": "出院后头号死因：肺栓塞和败血症（源头是肺炎、尿源性脓毒症或压疮）。",
+     "hard": true
+    },
+    {
+     "en": "Acute treatment options are thin — rehabilitation dominates. The paramedic's real leverage is preventing secondary injury through disciplined handling.",
+     "zh": "急性期能做的治疗有限，后续靠康复。急救员真正能改变结局的抓手，是用规范的搬运操作阻止二次损伤。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy & Physiology",
+   "titleZh": "解剖与生理",
+   "points": [
+    {
+     "en": "33 vertebrae total: 7 cervical, 12 thoracic, 5 lumbar, 5 fused sacral, 3-5 coccygeal. Named by region letter plus number (T5 = fifth thoracic).",
+     "zh": "椎骨共 33 块：颈椎 7、胸椎 12、腰椎 5、骶椎 5（融合成骶骨）、尾椎 3-5。按区域字母+序号命名（T5=第 5 胸椎）。",
+     "hard": true
+    },
+    {
+     "en": "C1 (atlas) and C2 (axis) are structurally unique and give the skull its rotation; C1-C2 is the only spinal level with significant rotational range.",
+     "zh": "C1（寰椎）和 C2（枢椎）结构特殊，负责头颅旋转；整条脊柱只有 C1-C2 有明显的旋转活动度。",
+     "hard": true
+    },
+    {
+     "en": "Vertebral parts: body bears weight anteriorly; pedicles plus laminae form the posterior arch enclosing the canal; nerve roots exit through the intervertebral foramina; spinous and transverse processes anchor muscles and ligaments.",
+     "zh": "椎骨构件：椎体在前方承重；椎弓根+椎板围成后方椎弓，包住椎管；神经根经椎间孔穿出；棘突和横突是肌肉韧带的附着点。",
+     "hard": true
+    },
+    {
+     "en": "Regional traits: thoracic spine is stiffened by rib attachments; lumbar vertebrae are the largest and carry most upper-body weight, making them injury-prone; coccyx fractures hurt badly but are clinically insignificant.",
+     "zh": "分区特点：胸椎有肋骨附着而更稳定；腰椎最大、承担大部分上身重量，因此易伤；尾椎骨折疼得厉害但临床意义不大。",
+     "hard": true
+    },
+    {
+     "en": "Intervertebral disks are shock absorbers; they dehydrate and thin with age (hence height loss). A stressed disk can herniate into the canal and hit cord or nerve root.",
+     "zh": "椎间盘是减震垫，随年龄脱水变薄（老人变矮的原因）。受力过大时可向椎管内突出，压迫脊髓或神经根。",
+     "hard": true
+    },
+    {
+     "en": "The cord exits the skull via the foramen magnum and ends at L2, where it splits into the cauda equina (a bundle of individual nerve roots).",
+     "zh": "脊髓从枕骨大孔出颅，向下终止于 L2；再往下是马尾——一束单独的神经根。",
+     "hard": true
+    },
+    {
+     "en": "Gray-matter division: posterior (dorsal) horns carry sensory input, anterior (ventral) horns drive motor output for that segment.",
+     "zh": "灰质分工：后角（背侧）收感觉，前角（腹侧）发运动——按节段各管各的。",
+     "hard": true
+    },
+    {
+     "en": "Tracts to memorize: lateral spinothalamic (ascending) = pain and temperature; corticospinal (descending) = voluntary motor; dorsal columns (fasciculus gracilis/cuneatus) = proprioception, light touch, vibration.",
+     "zh": "必背传导束：外侧脊髓丘脑束（上行）=痛温觉；皮质脊髓束（下行）=随意运动；后索（薄束/楔束）=本体觉、轻触觉、振动觉。",
+     "hard": true
+    },
+    {
+     "en": "Meninges outside-in: dura mater (tough), arachnoid (web-like vessels), pia mater (on the cord); CSF bathes them as a fluid cushion.",
+     "zh": "脑脊膜由外向内：硬膜（坚韧）→蛛网膜（血管呈蛛网状）→软膜（贴着脊髓）；脑脊液在其间形成液体缓冲垫。",
+     "hard": true
+    },
+    {
+     "en": "31 pairs of spinal nerves: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, 1 coccygeal.",
+     "zh": "脊神经 31 对：颈 8、胸 12、腰 5、骶 5、尾 1。",
+     "hard": true
+    },
+    {
+     "en": "Plexus map: cervical C1-C5 (phrenic nerve C3-C5 drives the diaphragm); brachial C5-T1 (axillary, median, musculocutaneous, radial, ulnar); lumbar L1-L4 (abdominal wall, genitalia, part of leg); sacral L4-S4 (sciatic, pudendal).",
+     "zh": "神经丛地图：颈丛 C1-C5（其中膈神经 C3-C5 支配膈肌）；臂丛 C5-T1（腋、正中、肌皮、桡、尺神经）；腰丛 L1-L4（腹壁、外生殖器、部分下肢）；骶丛 L4-S4（坐骨神经、阴部神经）。",
+     "hard": true
+    },
+    {
+     "en": "Sympathetic outflow is thoracolumbar: signals descend through the cervical cord and exit at thoracic/lumbar levels. SCI at or above T6 can sever this drive and cripple homeostasis.",
+     "zh": "交感神经走胸腰段：信号先经颈髓下行，再从胸腰段出脊柱。T6 及以上的损伤会切断交感输出，体温、血管张力等稳态全乱。",
+     "hard": true
+    },
+    {
+     "en": "Parasympathetic quirks: the vagus leaves at the medulla and travels beside the carotids, so vagal tone SURVIVES cervical SCI; sacral fibres S2-S4 run bowel, bladder, and sexual function — sacral damage means loss of those.",
+     "zh": "副交感的两个考点：迷走神经从延髓发出、沿颈动脉下行，颈髓损伤后迷走张力依然完好；骶段 S2-S4 管排便、排尿和性功能，骶部损伤即失禁。",
+     "hard": true
+    },
+    {
+     "en": "Receptor logic behind neurogenic shock: alpha stimulation constricts vascular smooth muscle; beta relaxes vessels/bronchioles and speeds/strengthens the heart. Kill the sympathetic input and vessels dilate with no reflex tachycardia.",
+     "zh": "神经源性休克的受体逻辑：α 受体兴奋→血管收缩；β 受体兴奋→血管支气管舒张+心率心力增强。交感输入一断，血管扩张且没有代偿性心动过速。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Mechanisms & Injury Classification",
+   "titleZh": "损伤机制与分类",
+   "points": [
+    {
+     "en": "Three-column model (anterior / middle / posterior) applies to the THORACOLUMBAR spine only. Failure of two or three columns = unstable injury.",
+     "zh": "三柱理论（前柱/中柱/后柱）只适用于胸腰段。两柱或三柱失效＝不稳定损伤。",
+     "hard": true
+    },
+    {
+     "en": "Stable injuries usually involve only the anterior (sometimes middle) column; posterior-column damage strips the cord's direct protection — unstable, higher SCI risk.",
+     "zh": "稳定损伤一般只涉及前柱（偶及中柱）；一旦后柱受累，脊髓失去直接保护——不稳定，SCI 风险陡增。",
+     "hard": true
+    },
+    {
+     "en": "Flexion mechanism: at C1-C2 it can create an unstable dislocation with or without fracture; lower down, force channels through the vertebral bodies into anterior wedge fractures.",
+     "zh": "屈曲机制：在 C1-C2 可造成不稳定脱位（伴或不伴骨折）；再往下，力沿椎体前部传导，形成前方楔形压缩骨折。",
+     "hard": true
+    },
+    {
+     "en": "Wedge-fracture red flags: vertebral body loses more than half its height, or injuries at multiple levels — implies posterior column involvement and instability.",
+     "zh": "楔形骨折的危险信号：椎体高度丢失超过一半，或多节段受累——提示后柱已牵连，按不稳定处理。",
+     "hard": true
+    },
+    {
+     "en": "Teardrop fracture = avulsion of the antero-inferior corner of the vertebral body from severe hyperflexion; the associated ligament damage makes it unstable with real cord risk.",
+     "zh": "泪滴骨折＝椎体前下角撕脱（重度过屈所致）；伴随的韧带损伤使其不稳定，脊髓风险高。",
+     "hard": true
+    },
+    {
+     "en": "Bilateral facet dislocation is EXTREMELY unstable. Severe flexion can also tear ligaments and dislocate joints without any fracture.",
+     "zh": "双侧小关节脱位＝极度不稳定。重度屈曲也可能只撕韧带、脱关节而完全没有骨折。",
+     "hard": true
+    },
+    {
+     "en": "Rotation-flexion: significant rotation exists only at C1-C2, so injuries there are unstable; below C2 the result may be a stable cervical dislocation (a radiology call, never a field call); in the thoracolumbar region it fractures instead.",
+     "zh": "旋转+屈曲：只有 C1-C2 能明显旋转，该处损伤按不稳定算；C2 以下可形成稳定型颈椎脱位（放射科才能定，现场判不了）；胸腰段则以骨折为主。",
+     "hard": true
+    },
+    {
+     "en": "Vertical compression (axial load through the crown, or up through feet/pelvis in a fall): burst or compression fracture; fragments can embed in the cord, and retropharyngeal edema may threaten the airway.",
+     "zh": "垂直压缩（头顶受击的轴向力，或坠落时经足—骨盆上传）：爆裂/压缩骨折；碎骨可嵌入脊髓，咽后水肿还可能威胁气道。",
+     "hard": true
+    },
+    {
+     "en": "Hangman's fracture: bilateral C2 pedicle fracture from hyperextension-distraction (skull, atlas, axis decelerating as a unit). Unstable — yet rarely causes SCI unless it dislocates.",
+     "zh": "Hangman 骨折（缢死者骨折）：过伸+牵张使 C2 双侧椎弓根骨折（头颅、寰椎、枢椎作为整体骤减速）。属不稳定，但很少伤及脊髓——除非合并脱位。",
+     "hard": true
+    },
+    {
+     "en": "Hyperextension teardrop: ruptures the anterior longitudinal ligament — stable while the neck is flexed, unstable in extension. Positioning matters.",
+     "zh": "过伸型泪滴骨折：前纵韧带断裂——屈位下稳定，伸位下不稳定。摆位方向直接决定安全。",
+     "hard": true
+    },
+    {
+     "en": "Primary SCI happens at impact (transection, compression, contusion); penetrating trauma typically transects non-regenerating neural tissue = complete injury.",
+     "zh": "原发性 SCI 发生在受伤瞬间（横断、压迫、挫伤）；穿透伤往往直接切断不可再生的神经组织＝完全性损伤。",
+     "hard": true
+    },
+    {
+     "en": "Secondary SCI is the progression afterward, fed by hypoxemia, hypoglycemia, and hypothermia. Countermeasures: motion restriction with neutral alignment, oxygenation, perfusion, warmth.",
+     "zh": "继发性 SCI 是伤后的恶化进程，低氧、低血糖、低体温都是燃料。对策：中立位限动、保氧合、保灌注、保温。",
+     "hard": true
+    },
+    {
+     "en": "Cord concussion: transient dysfunction lasting 24-48 hours, 3-4% of all SCIs, classed as incomplete; may occur with simple compression fractures or none at all. Contusion adds edema and vascular leak — deficits despite normal films. Laceration (bone or projectile in the canal) bleeds into cord tissue.",
+     "zh": "脊髓震荡：一过性功能障碍持续 24-48 小时，占全部 SCI 的 3-4%，归为不完全性；可伴单纯压缩骨折或完全无骨折。脊髓挫伤伴水肿和血管渗漏——片子正常也可能有神经缺损。脊髓裂伤（骨块或弹片入椎管）则出血入髓。",
+     "hard": true
+    },
+    {
+     "en": "SCIWORA (SCI without radiographic abnormality): kids' flatter vertebrae dislocate then snap back — X-ray looks perfect while the cord is crushed. Cannot be diagnosed prehospital; MRI territory.",
+     "zh": "SCIWORA（影像学无异常的脊髓损伤）：儿童椎体较平，脱位后又自行复位——X 光完全正常，脊髓却已受压甚至断裂。院前无法诊断，要靠 MRI。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cord Syndromes, Spinal Shock & Neurogenic Shock",
+   "titleZh": "脊髓综合征与两种“休克”",
+   "points": [
+    {
+     "en": "Complete SCI = permanent loss of every cord-mediated function below the lesion: high cervical → quadriplegia, high thoracic → paraplegia. Incomplete = some function survives; graded serially with the ASIA impairment scale.",
+     "zh": "完全性 SCI＝损伤平面以下所有脊髓功能永久丧失：高颈段→四肢瘫，高胸段→截瘫。不完全性＝仍保留部分功能，用 ASIA 分级动态评估。",
+     "hard": true
+    },
+    {
+     "en": "Anterior cord syndrome: flexion drives bone fragments into the front of the cord, or the anterior spinal artery (supplying the anterior two-thirds) is cut off. Result: paralysis plus loss of pain, temperature, and touch below the lesion.",
+     "zh": "前索综合征：屈曲伤把骨块压进脊髓前部，或脊髓前动脉（供应脊髓前 2/3）断流。表现：损伤面以下瘫痪＋痛觉、温度觉、触觉丧失。",
+     "hard": true
+    },
+    {
+     "en": "Central cord syndrome: hyperextension in (typically) older necks with spondylosis/stenosis; arm weakness worse than legs, variable pain/temperature loss, sometimes bladder/bowel trouble. Up to 60% have fracture-dislocations or disk herniation. Best prognosis of the syndromes.",
+     "zh": "中央索综合征：过伸伤，好发于已有颈椎病/椎管狭窄的老年人；上肢无力重于下肢，痛温觉丧失不定，可伴大小便功能障碍。高达 60% 合并骨折脱位或椎间盘突出。各综合征中预后最好。",
+     "hard": true
+    },
+    {
+     "en": "Posterior cord syndrome: extension injury, rare; dorsal columns fail — light touch, proprioception, vibration go — while most motor and other sensory functions stay intact.",
+     "zh": "后索综合征：过伸所致，少见；后索失灵——轻触觉、本体觉、振动觉丢失——运动和其余感觉大多保留。",
+     "hard": true
+    },
+    {
+     "en": "Brown-Séquard syndrome: cord hemisection (classically penetrating trauma). Same side below lesion: motor loss + dorsal-column loss (touch, proprioception, vibration). Opposite side below lesion: pain and temperature loss.",
+     "zh": "Brown-Séquard 综合征：脊髓半切（经典原因是穿透伤）。损伤面以下同侧：运动＋后索功能（触觉/本体觉/振动觉）丧失；对侧：痛温觉丧失。",
+     "hard": true
+    },
+    {
+     "en": "Spinal shock = the cord's temporary local shutdown after trauma; edema starts within 30 minutes. Picture: flaccid paralysis, flaccid sphincters, absent reflexes, impaired sensation and thermoregulation, bowel distension from lost peristalsis. Resolves in hours to weeks.",
+     "zh": "脊髓休克＝伤后脊髓暂时性“罢工”，水肿 30 分钟内开始。表现：弛缓性瘫痪、括约肌松弛、反射消失、感觉和体温调节受损、肠蠕动停止致腹胀。数小时到数周内可恢复。",
+     "hard": true
+    },
+    {
+     "en": "Neurogenic shock = autonomic failure at the injury level: alpha tone vanishes → vasodilation → blood pools → relative hypovolemia → stroke volume and cardiac output fall; unopposed vagal tone → bradycardia; adrenals lose sympathetic drive → no epinephrine/norepinephrine surge; no sweating, heat bleeds away.",
+     "zh": "神经源性休克＝损伤平面的自主神经功能失灵：α 张力消失→血管扩张→血液淤积→相对性低血容量→每搏量和心输出量下降；迷走占上风→心动过缓；肾上腺失去交感驱动→打不出肾上腺素/去甲肾上腺素；不出汗，体温流失。",
+     "hard": true
+    },
+    {
+     "en": "The classic neurogenic-shock triad: hypotension + bradycardia + skin that is warm, flushed, and dry below the lesion. (Hypovolemic shock is the mirror: pale, cold, clammy, tachycardic.)",
+     "zh": "神经源性休克经典三联：低血压＋心动过缓＋损伤面以下皮肤温暖、潮红、干燥。（低血容量休克正好相反：苍白湿冷＋心动过速。）",
+     "hard": true
+    },
+    {
+     "en": "Autonomic dysreflexia (hyperreflexia): usually a LATE complication of lesions above T4-T6. A noxious stimulus below the lesion (distended bladder or rectum are the classics; tight clothing, sharp objects, skin lesions, menstrual cramps, pregnancy) fires an uncontrolled sympathetic surge the brain can't reach to shut off.",
+     "zh": "自主神经反射异常：多为 T4-T6 以上损伤的晚期并发症。损伤面以下的有害刺激（膀胱/直肠过胀最经典；紧衣物、口袋里的尖锐物、皮肤破损、痛经、妊娠也算）触发失控的交感风暴——信号上不了脑，无人踩刹车。",
+     "hard": true
+    },
+    {
+     "en": "Dysreflexia picture: systolic above 200 mm Hg, diastolic 130 mm Hg or more, pounding headache, nasal congestion, dilated pupils, vagal bradycardia; flushed sweaty skin ABOVE the lesion, cool pale limbs below. Can end in seizures, stroke, or death.",
+     "zh": "反射异常的表现：收缩压＞200 mmHg、舒张压≥130 mmHg、炸裂样头痛、鼻塞、瞳孔散大、迷走性心动过缓；损伤面以上皮肤潮红出汗，以下肢体苍白发凉。可进展为抽搐、卒中甚至死亡。",
+     "hard": true
+    },
+    {
+     "en": "Dysreflexia management = hunt and remove the trigger: drain/irrigate the catheter, loosen clothing, clear sharp objects, dress skin lesions, cold packs; rectal disimpaction is a physician job. If no removable source, hospital IV vasodilators — rarely a prehospital fix.",
+     "zh": "反射异常的处理＝找到并去除刺激源：导尿管冲洗或更换、松开衣物、清掉尖锐物、包扎皮损、敷冷袋；直肠嵌塞通常由医生在院内处理。找不到可去除的源头就得靠院内静脉血管扩张剂——院前基本解决不了。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "When to Suspect & Primary Assessment",
+   "titleZh": "何时怀疑与初步评估",
+   "points": [
+    {
+     "en": "Default to suspicion: every multi-trauma patient, every unresponsive trauma patient (most cervical injuries ride with head injuries), and any major trauma above the clavicles. Nancy's rule: significant head injury = cervical injury until proven otherwise.",
+     "zh": "默认怀疑：所有多发伤、所有创伤后无反应的患者（颈椎伤大多与头部伤同行），以及锁骨以上的任何严重创伤。Nancy 铁律：明显头部伤＝颈椎伤，除非证明不是。",
+     "hard": true
+    },
+    {
+     "en": "High-risk mechanisms mandating full SMR regardless of exam, part 1: collision above 60 km/h; unrestrained occupant in a moderate/high-speed MVC; 30 cm of intrusion into the seating space; ejection from the vehicle; unrestrained rollover; a death in the same compartment.",
+     "zh": "无论查体如何都必须全面 SMR 的高危机制（上）：车速＞60 km/h 的碰撞；中高速车祸中未系安全带；驾乘空间被侵入 30 cm；被甩出车外；未约束的翻滚事故；同车厢有人死亡。",
+     "hard": true
+    },
+    {
+     "en": "High-risk mechanisms, part 2: fall above 1 m raises risk and above 3 m raises it sharply; motorcycle crash over 30 km/h with rider thrown clear; vehicle striking a pedestrian or cyclist above 10 km/h; any diving injury.",
+     "zh": "高危机制（下）：坠落＞1 m 风险升高、＞3 m 显著升高；摩托车＞30 km/h 且人车分离；机动车以＞10 km/h 撞击行人或骑车人；一切跳水伤。",
+     "hard": true
+    },
+    {
+     "en": "Penetrating trauma near the spine counts as high-risk only WITH a neurologic deficit; penetrating neck trauma plus a normal neuro exam needs no SMR.",
+     "zh": "脊柱附近的穿透伤，只有伴神经功能缺损才算高危；颈部穿透伤＋神经查体正常＝不需要 SMR。",
+     "hard": true
+    },
+    {
+     "en": "Uncertain/low-risk (SMR guided by assessment): MVC under 60 km/h; isolated injury with negative findings; isolated minor head injury without a spine mechanism; syncope while already seated/supine or eased down by a bystander.",
+     "zh": "低危或不确定机制（SMR 由评估决定）：车速＜60 km/h 的车祸；孤立伤且查体阴性；无脊柱机制的单纯轻微头伤；晕厥时本已坐着/躺着，或被旁人扶着放倒。",
+     "hard": true
+    },
+    {
+     "en": "Document the physics: forces, speed, trajectory, blunt vs penetrating, torsion, restraint use and seating position, vehicle damage, fall height and landing surface, exact injury time and every change since.",
+     "zh": "把“物理学”记全：受力大小、速度、轨迹，钝性还是穿透，有无扭转，安全带使用与座位，车损程度，坠落高度和落点材质，受伤准确时间及此后的每次变化。",
+     "hard": true
+    },
+    {
+     "en": "Airway with a suspect spine: jaw thrust in neutral alignment; suction fast; OPA is contraindicated if the gag reflex is intact; NPA is relatively contraindicated with facial fractures or suspected basilar skull fracture; an upper-cervical (C2) retropharyngeal hematoma can itself occlude the airway.",
+     "zh": "疑脊柱伤的气道：中立位下托颌法开放；需要就快速吸引；咽反射存在则禁用口咽通气道；面部骨折或疑颅底骨折时鼻咽通气道为相对禁忌；上颈段（C2）咽后血肿本身就能堵死气道。",
+     "hard": true
+    },
+    {
+     "en": "GCS 8 or less (or deteriorating) with a failing airway → consider RSI/sedation-assisted intubation with manual in-line stabilization; open the collar and dedicate a second provider to the head during any advanced airway; note the evidence for better outcomes vs bag-mask is lacking, and limited neck motion beats asphyxia.",
+     "zh": "GCS≤8 或持续下滑且气道不保→考虑 RSI 或镇静辅助插管，全程手法轴线固定；上高级气道时要打开颈托、专人扶头；注意：插管优于球囊面罩的证据并不存在，而“允许少量颈部活动”好过“把人憋死”。",
+     "hard": true
+    },
+    {
+     "en": "Vomiting → log roll to the side as a unit with the head held in line, then suction.",
+     "zh": "呕吐→保持头颈轴线，整体滚向侧方，再吸引。",
+     "hard": true
+    },
+    {
+     "en": "Breathing by level: lesion at/above C3-C4 → diaphragm paralyzed, no intercostal or abdominal muscle power, leftover neck accessory muscles cannot sustain ventilation; lesion at/above T2 → intercostals gone, patient breathes on diaphragm plus neck accessories only. Auscultation may reveal a shortened inspiratory phase.",
+     "zh": "按平面推呼吸：C3-C4 及以上→膈肌瘫痪，肋间肌和腹肌全失，仅剩的颈部辅助肌撑不起通气；T2 及以上→肋间肌瘫，只靠膈肌＋颈部辅助肌呼吸。听诊可闻吸气相缩短。",
+     "hard": true
+    },
+    {
+     "en": "Inadequate breathing → BVM at 10-12 breaths/min with 12-15 L/min oxygen; with a suspected head injury, titrate to end-tidal CO2 of 35-45 mm Hg.",
+     "zh": "通气不足→球囊面罩辅助通气 10-12 次/分，接氧 12-15 L/min；疑合并头部伤时用呼气末 CO2 监测，目标 35-45 mmHg。",
+     "hard": true
+    },
+    {
+     "en": "Circulation: pure neurogenic shock rarely needs big volume — it needs atropine (vagolytic) and vasopressors (dopamine or norepinephrine); multisystem trauma with hypovolemia still gets volume. SCI patients also equilibrate to ambient temperature — keep them warm.",
+     "zh": "循环：单纯神经源性休克要的不是大量补液，而是阿托品（解迷走）＋升压药（多巴胺或去甲肾上腺素）；合并多系统创伤的低血容量该补还得补。SCI 患者体温会随环境漂移——务必保温。",
+     "hard": true
+    },
+    {
+     "en": "Expose smart: cut clothing off instead of wrestling it; log roll to inspect the back for penetrations; palpate each spinous process for tenderness, deformity, or step-off; then blanket — hypothermia breeds coagulopathy (platelet dysfunction) and starves tissues of oxygen.",
+     "zh": "暴露要聪明：剪衣服而不是扒衣服；滚身查背找穿透伤；逐个触诊棘突查压痛、变形或台阶感；查完立刻盖毯——低体温会引发凝血病（血小板失能）并恶化组织供氧。",
+     "hard": true
+    },
+    {
+     "en": "Reliable-patient checklist (prerequisite for any clearance thinking): alert and oriented, no language barrier, no brain injury or intoxication, not emotionally overwhelmed, no distracting injury (a femur fracture can mask spine pain). Fail any item = unreliable = keep the spine protected.",
+     "zh": "“可靠患者”清单（谈排除的前提）：清醒且定向力好、无语言障碍、无脑损伤或醉酒吸毒、情绪没有崩、无分散注意力的疼痛伤（一根股骨骨折就能盖住脊柱痛）。任何一条不满足＝不可靠＝继续保护脊柱。",
+     "hard": true
+    },
+    {
+     "en": "Head-to-toe with DCAP-BTLS (deformities, contusions, abrasions, punctures, burns, tenderness, lacerations, swelling); distal PMS (pulse-motor-sensory) in all four limbs, rechecked after every move and intervention; associated fractures of ribs, sternum, clavicle, scapula, pelvis raise SCI odds; check the male urethral meatus for blood and assess for priapism.",
+     "zh": "用 DCAP-BTLS 做头到脚检查（变形、挫伤、擦伤、穿刺、烧伤、压痛、裂伤、肿胀）；四肢远端 PMS（脉搏-运动-感觉）每次搬动和操作后都要复查；肋骨、胸骨、锁骨、肩胛、骨盆骨折与 SCI 高度相关；男性查尿道口有无出血，并注意有无异常勃起。",
+     "hard": true
+    },
+    {
+     "en": "Ongoing: vitals every 5 minutes if unstable, every 15 if stable; hypotension with a normal-or-slow pulse and warm skin screams neurogenic shock; corticosteroids for SCI are out — no longer recommended, possibly harmful.",
+     "zh": "持续监测：不稳定每 5 分钟、稳定每 15 分钟测一轮生命体征；低血压＋心率正常或偏慢＋皮肤温暖＝神经源性休克的高音喇叭；SCI 不再推荐用糖皮质激素——可能有害。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Neurologic Examination",
+   "titleZh": "神经系统检查",
+   "points": [
+    {
+     "en": "The field neuro exam sets the BASELINE — lesion level and completeness — so the hospital can trend changes and call surgery timing. A normal exam never rules out SCI.",
+     "zh": "院前神经查体的意义是定基线——损伤平面和完全程度——医院靠它对比变化、决定手术时机。查体正常永远不等于排除 SCI。",
+     "hard": true
+    },
+    {
+     "en": "GCS with paralyzed limbs: never score motor as absent — ask for a blink or facial movement (cranial-nerve driven) instead. An unresponsive patient is always a spine suspect.",
+     "zh": "肢体瘫痪时打 GCS：不能直接给运动项记零分——改让患者眨眼或动面部肌肉（由颅神经支配）。无反应的患者永远按疑似脊柱伤对待。",
+     "hard": true
+    },
+    {
+     "en": "Horner syndrome — drooping upper eyelid (ptosis), small pupil (miosis), same-side loss of sweating — flags injury to the sympathetic pathway; hunt for it when a high cervical lesion is plausible.",
+     "zh": "Horner 综合征——上睑下垂＋瞳孔缩小＋同侧无汗——提示眼交感通路受损；怀疑高颈段损伤时要专门找。",
+     "hard": true
+    },
+    {
+     "en": "Upper-limb myotome ladder: elbow flexion C5, wrist movement C6, elbow extension C7, finger curl against pull C8, finger spread-and-squeeze against resistance T1.",
+     "zh": "上肢肌节阶梯：屈肘 C5、动腕 C6、伸肘 C7、抗阻屈指 C8、抗阻张指并指 T1。",
+     "hard": true
+    },
+    {
+     "en": "Lower-limb myotome ladder: knee bend and extension L3-L4, toe dorsiflexion against resistance L5, foot/ankle plantar flexion S1-S2.",
+     "zh": "下肢肌节阶梯：屈膝伸膝 L3-L4、抗阻勾脚趾 L5、踝和足跖屈（踩油门）S1-S2。",
+     "hard": true
+    },
+    {
+     "en": "Direction rules: motor is tested bilaterally from the TOP DOWN to find the lowest normal segment; sensory from the FEET UP to find the lowest normal level plus any islands of sparing below. Incomplete lesions demand checking below the level.",
+     "zh": "查体方向口诀：运动自上而下双侧查，找最低的正常节段；感觉自下而上，找最低正常平面和其下残存的“感觉岛”。不完全损伤必须查平面以下还剩什么。",
+     "hard": true
+    },
+    {
+     "en": "Sensory detail: ask about pins-and-needles, electric-shock feelings, hyperesthesia; in a responsive patient test light touch, temperature, and proprioception.",
+     "zh": "感觉细查：追问针刺感、过电感、触碰即痛（痛觉过敏）；清醒患者要测轻触觉、温度觉和本体觉。",
+     "hard": false
+    },
+    {
+     "en": "Unresponsive patients: grimacing, vocalizing, or eye-opening to pain above the deficit level WITHOUT limb movement suggests a cord lesion; test pain at several sites before declaring no response. If local injury blocks part of the motor exam, the exam is unreliable — restrict motion.",
+     "zh": "无反应患者：对疼痛刺激有皱眉、发声或睁眼、但肢体不动，提示脊髓病变；宣布“无反应”前要多点测试。局部损伤导致运动查体做不全＝查体不可靠＝按需限动。",
+     "hard": true
+    },
+    {
+     "en": "Reflexes: usually absent early after significant SCI, returning hours to weeks later; intact reflexes suggest that segment's motor and sensory circuits survive. Babinski: toes curling UP on sole stimulation is abnormal in anyone older than 2 (normal response is down).",
+     "zh": "反射：重度 SCI 早期通常消失，数小时至数周后回归；反射尚在提示该节段运动感觉通路幸存。Babinski 征：划足底时脚趾上翘，2 岁以上即为异常（正常应下屈）。",
+     "hard": true
+    },
+    {
+     "en": "The single most valuable neuro datum is the TREND — are findings improving or worsening, and in which direction? Watch breathing patterns for an ascending lesion.",
+     "zh": "神经评估最值钱的一条数据是趋势——体征在好转还是恶化、朝哪个方向走？盯住呼吸模式，警惕损伤平面上移。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "SMR Decisions & Packaging",
+   "titleZh": "SMR 决策与打包",
+   "points": [
+    {
+     "en": "SMR is not free: pressure pain at the occiput and lumbosacral spine, claustrophobia and anxiety, restricted ventilation, higher aspiration risk; rigid collars are implicated in raised intracranial pressure, block neck access and mouth opening, and can even DISTRACT unstable cervical fractures.",
+     "zh": "SMR 不是零成本：枕部和腰骶部压痛、幽闭感和焦虑、限制通气、误吸风险升高；硬质颈托还被指与颅内压升高有关，挡住颈部观察、限制张口，甚至可能把不稳定的颈椎骨折“拉开”。",
+     "hard": true
+    },
+    {
+     "en": "Scene-time discipline: the 'platinum 10 minutes' — aim to be rolling within 10 minutes unless trapped in a lengthy extrication or waiting for air transport; unstable patients go to the most appropriate facility ASAP.",
+     "zh": "现场时间纪律：“白金 10 分钟”——除非长时间解救或等待空运，力争 10 分钟内出发；不稳定患者尽快送最合适的医院。",
+     "hard": true
+    },
+    {
+     "en": "Splinting concept: treat the whole spine as ONE long bone articulating with head and pelvis — partial SMR does not exist.",
+     "zh": "固定概念：把整条脊柱当成一根与头和骨盆相连的长骨——不存在“只固定某一段”的 SMR。",
+     "hard": true
+    },
+    {
+     "en": "Ground-to-board methods ranked by spinal motion generated (least first): scoop stretcher → six-plus-person lift and slide → straddle lift and slide (5 rescuers, patient raised 2-3 cm) → four-person log roll. Clinical significance of the differences is unknown. If log rolling, roll AWAY from the injured side.",
+     "zh": "地面上板方法按产生的脊柱位移排序（最小在前）：铲式担架 → 六人以上抬滑 → 跨式抬滑（5 人，患者仅抬离地面 2-3 cm）→ 四人轴线翻滚。差异是否有临床意义尚无定论。做翻滚时，向远离受伤侧的方向滚。",
+     "hard": true
+    },
+    {
+     "en": "Log-roll packaging sequence: leader kneels at head with manual in-line hold (jaw supported by index/middle fingers, palms on head) → assess reliability and distal PMS in all four limbs → size and apply the collar → on the head-holder's command roll patient toward rescuers, examine the back, slide the board under → roll back, centre the patient → pad every void → strap TORSO first, then pelvis and upper legs (iliac-crest straps/groin loops), then lower legs, arms with a single strap → head LAST with side blocks → recheck PMS.",
+     "zh": "翻滚打包全流程：指挥者跪在头端手法轴线固定（食指中指托下颌、手掌扶头）→ 评估可靠性＋四肢远端 PMS → 量好尺寸上颈托 → 听头端口令把患者滚向救援者一侧、检查背部、塞入长板 → 滚回、居中 → 填满所有空隙 → 先绑躯干，再骨盆和大腿（髂嵴带/腹股沟环带），再小腿，手臂单独一条带 → 头部最后配侧块固定 → 复查 PMS。",
+     "hard": true
+    },
+    {
+     "en": "Why head last: if the head is fixed first and the body then shifts, the neck takes the load — securing the heavy torso first protects the spine.",
+     "zh": "为什么头最后固定：先固定头、身体再一滑动，全部力量都压在颈椎上——先把沉重的躯干绑牢才是在保护脊柱。",
+     "hard": true
+    },
+    {
+     "en": "The collar ADDS TO manual stabilization, never replaces it; a wrong-size collar causes harm — improvise with rolled towels (scarf-style, or taped rolls as head blocks) if nothing fits. Never let go of the head until head and torso are fully secured with side bolsters.",
+     "zh": "颈托是手法固定的补充，永远不能替代它；尺寸不对的颈托本身就会造成伤害——没有合适的就用毛巾卷替代（围巾式缠绕，或卷起来当头部侧块）。头和躯干没有连同侧挡完全固定之前，手绝对不能松。",
+     "hard": true
+    },
+    {
+     "en": "Do NOT force neutral alignment when: neck muscle spasm, resistance to movement, pain increasing with movement, or new numbness/tingling/weakness — splint in the position found. Neutral positioning is preferred because it maximizes canal space and eases cord pressure.",
+     "zh": "四种情况禁止硬掰回中立位：颈肌痉挛、移动有阻力、一动就更痛、出现新的麻木/刺痛/无力——按发现时的位置固定。之所以首选中立位，是因为它给脊髓最大的椎管空间、减轻压迫。",
+     "hard": true
+    },
+    {
+     "en": "Padding by anatomy: adults are anatomically aligned with a 1-5 cm pad under the OCCIPUT (never a pillow); children have big heads, so pad under the TORSO to stop neck flexion (or use a recessed pediatric board); never tape across a child's neck; pad a child out to the board's width.",
+     "zh": "按解剖垫衬：成人在枕后垫 1-5 cm 的折叠毛巾即可达到轴线对位（禁用枕头）；小孩头大，要在躯干下垫高防颈部前屈（或用带凹槽的儿科板）；胶带绝不许横跨儿童颈部；孩子太瘦要垫到和板同宽。",
+     "hard": true
+    },
+    {
+     "en": "Skin breakdown is fast: 32% of SCI patients develop a lesion within 24 hours. Weight concentrates on five points — both buttock bones, both scapular ridges, and the occiput. Keep board time minimal.",
+     "zh": "压疮来得飞快：32% 的 SCI 患者 24 小时内出现皮肤破损。体重集中在五个点——双侧臀部骨突、双侧肩胛嵴、枕部。上板时间必须压到最短。",
+     "hard": true
+    },
+    {
+     "en": "Comfort tricks that also improve SMR: fill voids with blanket rolls (pre-made ones take seconds to place and measurably improve motion restriction), slightly flex the knees with towel rolls, separate the legs with a pillow, use FIVE straps; transports longer than 1 hour → log roll the patient off the board onto the stretcher.",
+     "zh": "舒适度技巧同时提升固定质量：用毯卷填空隙（提前备好的毯卷几秒就能放好，被证明显著提升限动效果）、毛巾卷让膝盖微屈、两腿间夹枕头、用满五条固定带；转运超过 1 小时→把患者滚离长板放到担架床上。",
+     "hard": true
+    },
+    {
+     "en": "Head-of-bed elevation is generally avoided for spine patients; exceptions (lung disease, morbid obesity who cannot ventilate supine) go through direct medical control.",
+     "zh": "脊柱伤患者一般不抬高床头；例外情形（肺病、病态肥胖平躺无法通气）需联系在线医疗指挥决定。",
+     "hard": true
+    },
+    {
+     "en": "Third-trimester pregnancy: tilt the secured board 15-20 degrees to the LEFT (pillow/blankets under the right side) to stop the uterus compressing the inferior vena cava; if tilting is impossible, manually displace the uterus leftward. Left is convention so the patient faces you in the ambulance.",
+     "zh": "妊娠晚期：整板向左倾 15-20°（右侧下方垫枕/毯），防止子宫压迫下腔静脉造成仰卧位低血压；没法倾斜就用手把子宫推向左侧。选左侧是惯例——让患者面朝救护车里的你，方便持续评估。",
+     "hard": true
+    },
+    {
+     "en": "Osteoporotic elders break in three patterns: compression fracture (anterior body only, stable, can come from trivial strain like standing up); burst fracture (multi-part body, unstable, high-energy, cord at risk from shifting fragments); seat-belt/flexion type (through body AND arch — lap belt without shoulder strap, or ejection; strongly tied to paraplegia and abdominal injuries, especially in children under 16). Kyphotic backs need generous blankets/vacuum splints under head, upper back, knees, lumbar voids.",
+     "zh": "骨质疏松老人的三种骨折模式：压缩骨折（仅前柱椎体，稳定，弯腰起身这种小动作就能造成）；爆裂骨折（椎体多块碎裂，不稳定，高能量伤，碎块移位威胁脊髓）；安全带型/屈曲骨折（贯穿椎体和椎弓——只系腰带不系肩带或被甩出者，与截瘫和腹部伤强相关，16 岁以下儿童尤甚）。驼背患者要在头、上背、膝下、腰部空隙大量垫毯或用真空垫。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Special Situations: Extrication, Standing, Water, Helmets",
+   "titleZh": "特殊场景：解救、站立、水中、头盔",
+   "points": [
+    {
+     "en": "Stable seated patient: manual hold → measured rigid collar → vest-type extrication device (flaps snug to armpits, torso straps, groin loops, pad behind head, forehead strap then lower head strap) → rotate and lower onto the board as a unit → slide up using the built-in handles → release leg straps and LOOSEN the chest strap so the chest can expand; keep the vest on for transport.",
+     "zh": "情况稳定的坐位患者：手法固定 → 量尺寸上硬颈托 → 背心式解救装置（侧翼贴紧腋下、绑躯干带和腹股沟环带、头后垫衬、先额带后下头带）→ 整体旋转放倒到长板上 → 借装置提手整体上滑 → 松开腿带并放松胸带让胸廓能充分扩张；背心留在身上直到医院。",
+     "hard": true
+    },
+    {
+     "en": "Rapid extrication is for FIVE situations only: unsafe vehicle/scene; patient unassessable in place; patient needs an immediate supine intervention; condition demands immediate transport; patient blocks access to a sicker patient. No urgency = no rapid extrication (it moves the spine more than a vest).",
+     "zh": "快速解救只用于五种情形：车辆/现场不安全；在原位无法完成评估；需要立刻仰卧位处置；病情要求立即转运；患者挡住了通往更重伤员的路。没有紧急性＝禁用快速解救（它比背心式装置移动脊柱更多）。",
+     "hard": true
+    },
+    {
+     "en": "Rapid extrication mechanics: a practiced team of 3 gets the patient from seat to board in about 2 minutes — rescuer 1 holds the head, rescuer 2 (team leader) hugs and turns the torso, rescuer 3 walks the legs; rotate the patient as a unit 90 degrees in one-eighth to one-quarter turns on 'ready, turn' commands; lower onto the board, then slide along it in 20-30 cm pulls until fully aboard.",
+     "zh": "快速解救的操作学：3 名练熟的队员约 2 分钟完成从座位到长板——1 号扶头，2 号（指挥）环抱并旋转躯干，3 号挪腿；以 1/8 到 1/4 圈的小步幅、喊“预备，转”口令，把患者整体旋转 90°；放倒上板后，每次 20-30 cm 地拉动滑移，直到完全上板。",
+     "hard": true
+    },
+    {
+     "en": "Self-extrication: a healthy-volunteer study found LESS cervical motion with carefully instructed self-extrication than with a vest device — unvalidated in real crashes; some protocols allow clinical clearance of seated patients via the Canadian C-Spine rule. Follow local protocol.",
+     "zh": "自行脱困：健康志愿者研究显示，仔细指导下的自行脱困比背心式装置产生的颈椎位移更小——但未在真实车祸中验证；部分规程允许用加拿大颈椎规则对坐位患者做临床排除。一切以当地规程为准。",
+     "hard": true
+    },
+    {
+     "en": "Standing patient with a concerning mechanism still needs SMR. Two routes: standing takedown (board upright behind patient, two rescuers at the sides gripping handholds at shoulder level under the arms, third holds the head, lower as a unit under head-holder's direction); or — with evidence of less cervical movement — collar the patient and let them keep their own alignment while placing themselves on the stretcher. Watch footing on wet or icy ground.",
+     "zh": "还站着的患者只要机制可疑，同样需要 SMR。两条路：站立位放倒（长板立在患者背后，两名救援者在两侧从腋下抓肩水平的把手，第三人扶头，听头端指挥整体放倒）；或——有证据显示颈椎位移更小——上颈托后让患者自己保持对线、自己躺上担架床。湿滑结冰的地面要防跌倒二次伤。",
+     "hard": true
+    },
+    {
+     "en": "Prone or side-lying patients: log roll supine as a unit with a crossed-hands head hold, stabilizing head and neck in the position found. Unresponsive patient whose head is passively rotated: keep it that way UNLESS breathing is compromised — then gentle axial traction toward alignment. A reliable responsive patient may turn their own head if no overt injury or deficit; stop at any pain or neuro complaint and transport in position of comfort.",
+     "zh": "俯卧或侧卧患者：用交叉手法扶稳头颈、按发现的位置整体翻成仰卧。无反应且头被动偏向一侧者：保持原位——除非呼吸受影响，才用轻柔的轴向牵引回正。清醒可靠、无明显伤情和神经缺损的患者可以自己转头；一旦诉痛或出现神经症状立即停止，按舒适体位转运。",
+     "hard": true
+    },
+    {
+     "en": "Water rescue with a diving-type mechanism: start SMR BEFORE removing the patient from the water. Approach from the head, sandwich head/neck between your arms, step back and turn the patient supine as a unit (two rescuers ideally); ventilation can begin in the water with a pocket mask — chest compressions cannot; float a buoyant board under, secure head and trunk, THEN lift out. No spine mechanism + cardiac arrest = get them out immediately and start CPR.",
+     "zh": "跳水类机制的水中救援：SMR 必须在离水之前就开始。从头端接近，用双臂夹稳头颈，退一步把患者整体翻成仰卧（最好两人）；水里可以用袖珍面罩开始通气——但胸外按压在水里无效；把浮力长板从下方浮入，固定头和躯干之后再抬出水面。若无脊柱机制且已心脏骤停＝立即离水开始 CPR。",
+     "hard": true
+    },
+    {
+     "en": "Every submersion patient who lost consciousness or likely aspirated goes to hospital — water aspiration causes DELAYED pulmonary edema, with hypoxia and distress surfacing hours later.",
+     "zh": "凡是曾失去意识或可能呛入大量水的溺水者一律送医——呛水引起的肺水肿是延迟性的，低氧和呼吸窘迫可能几小时后才冒头。",
+     "hard": true
+    },
+    {
+     "en": "Helmet removal indications (Inter-Association Task Force): loose helmet/chin strap fails to hold the head; strap design defeats airway control even with the face mask off; the face mask cannot be removed in reasonable time; the helmet blocks proper motion restriction for transport. A snug helmet with airway access that can be secured to the board STAYS ON.",
+     "zh": "摘头盔的指征（跨协会工作组）：头盔或颏带松、固定不住头；颏带设计导致即使拆了面罩也控不住气道；面罩合理时间内拆不下来；头盔妨碍转运固定。反之——头盔贴合、气道够得着、又能固定上板，就留着别摘。",
+     "hard": true
+    },
+    {
+     "en": "Football and ice hockey: helmet and shoulder pads are an ALL-OR-NOTHING pair — removing one alone kinks cervical alignment. Helmet removal itself is strictly a TWO-provider procedure (one stabilizes helmet with fingers on the jaw, partner unbuckles, hand slides to the occiput at the halfway point so the head never drops). Pad under shoulders for large helmets/small patients, or behind the head when shoulder pads stay.",
+     "zh": "美式橄榄球和冰球：头盔与护肩是“全取或全不取”的一对——只摘一个会让颈椎折角。摘头盔本身是严格的双人操作（一人扶盔、手指抵住下颌，同伴解开颏带，摘到一半时同伴的手滑到枕后接住，头绝不能坠）。头盔大/患者小要在肩下垫衬；护肩留着时则垫在头后。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pharmacotherapy & Complications",
+   "titleZh": "药物治疗与并发症",
+   "points": [
+    {
+     "en": "Steroids for acute SCI are OUT: both the AANS/CNS position and the assessment chapter agree — no longer recommended, potentially harmful. Expect this as a written-exam distractor.",
+     "zh": "急性 SCI 禁用类固醇：AANS/CNS 立场和评估章节口径一致——不再推荐，可能有害。笔试拿它当干扰项的概率很高。",
+     "hard": true
+    },
+    {
+     "en": "Acute agitation: first exclude correctable causes (hypoxia above all), then short-acting REVERSIBLE sedatives; weigh the secondary-injury risk of thrashing against airway/ventilatory depression and the loss of a reliable neuro exam. Analgesia may also be needed.",
+     "zh": "急性躁动：先排除可纠正的原因（首查低氧），再用短效、可逆的镇静剂；要在“乱动加重二次损伤”与“呼吸抑制＋神经查体失真”之间权衡。镇痛也常常需要。",
+     "hard": true
+    },
+    {
+     "en": "Neurogenic shock pharmacology: atropine to break the unopposed vagal bradycardia, vasopressors (dopamine or norepinephrine) to restore vasomotor tone; transcutaneous pacing is on the table. Volume alone won't fix a vasodilated circuit.",
+     "zh": "神经源性休克的用药：阿托品对付无对抗的迷走性心动过缓，多巴胺或去甲肾上腺素找回血管张力；经皮起搏也是选项。光补液填不满一张扩张开的血管床。",
+     "hard": true
+    },
+    {
+     "en": "Respiratory complications ladder: high cervical lesions risk aspiration and respiratory arrest; lower cervical lesions spare the diaphragm but lose the intercostals — weak cough and shallow breathing breed atelectasis and pneumonia.",
+     "zh": "呼吸并发症阶梯：高颈段损伤直接威胁误吸和呼吸骤停；低颈段保住膈肌但丢了肋间肌——咳嗽无力、呼吸变浅，随之而来的是肺不张和肺炎。",
+     "hard": true
+    },
+    {
+     "en": "Late killers from immobility: deep-vein thrombosis and pulmonary embolism — the same PE that tops the post-discharge mortality list.",
+     "zh": "卧床带来的晚期杀手：深静脉血栓和肺栓塞——正是出院后死因榜首的那个肺栓塞。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Nontraumatic Spinal Conditions",
+   "titleZh": "非创伤性脊柱疾患",
+   "points": [
+    {
+     "en": "Low back pain hits 60-90% of the population at some point; most cases are idiopathic. L4-L5 is the mechanical stress point where the spine's curvature changes direction under upright posture.",
+     "zh": "腰背痛一生患病率 60-90%，多数查不出明确病因。L4-L5 是直立姿势下脊柱曲度换向的力学应力点。",
+     "hard": true
+    },
+    {
+     "en": "Risk factors: repetitive lifting, vibration exposure (vehicles, industrial machines), osteoporosis. Screen the med list — chronic back pain and spinal tumour patients may be on very high-dose narcotics.",
+     "zh": "危险因素：反复搬抬、车辆或工业机械的振动暴露、骨质疏松。要翻药单——慢性腰痛和脊柱肿瘤患者可能在用非常大剂量的麻醉性镇痛药。",
+     "hard": true
+    },
+    {
+     "en": "Osteoporotic older women get SPONTANEOUS compression fractures — typically stable, no SCI. Metastatic tumours cause pathologic fractures that CAN push bone or tumour into the canal and injure the cord.",
+     "zh": "骨质疏松的老年女性会发生自发性压缩骨折——通常稳定、不伤脊髓。转移性肿瘤造成的病理性骨折则可能把骨块或瘤体推进椎管，伤及脊髓。",
+     "hard": true
+    },
+    {
+     "en": "Degenerative disk disease: common after age 50 — disks lose height, shock absorption fades, and marked narrowing can destabilize the segment.",
+     "zh": "退行性椎间盘病：50 岁以后常见——椎间盘变矮、减震能力衰退，明显狭窄时节段稳定性也会受累。",
+     "hard": true
+    },
+    {
+     "en": "Disk herniation profile: men 30-50, usually some trauma on top of pre-existing degeneration, classically poor lifting technique. Sites: L4-L5 and L5-S1 most common, cervical C5-C6 and C6-C7 next. Pain worsens with straining, ROM is limited, sensory/motor changes possible; cervical herniations cause arm pain or paresthesia that worsens with neck motion.",
+     "zh": "椎间盘突出画像：30-50 岁男性，多在既有退变基础上叠加外力，经典诱因是搬重物姿势错误。好发部位：L4-L5 和 L5-S1 最多，颈段 C5-C6、C6-C7 次之。用力时痛加重、活动度受限，可有感觉运动改变；颈段突出表现为上肢痛或麻，转脖子时加重。",
+     "hard": true
+    },
+    {
+     "en": "Spondylolysis: a defect of the lamina/vertebral arch between the articulating facets, usually congenital and possibly hereditary; X-ray confirms it, not the field exam.",
+     "zh": "椎弓峡部裂：上下关节突之间的椎板/椎弓缺损，多为先天且可能遗传；确诊靠 X 光，现场查不出来。",
+     "hard": true
+    },
+    {
+     "en": "Severe back spasm can literally pin a patient in place: move them with a scoop stretcher; IV benzodiazepines can relieve the spasm. Nontraumatic back-pain care is symptom relief plus comfort during movement.",
+     "zh": "重度腰肌痉挛能把人“钉”在原地：用铲式担架搬运；静脉苯二氮卓类可缓解痉挛。非创伤性腰背痛的院前处理就是缓解症状＋减少移动时的痛苦。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Vertebrae total (C/T/L/S/coccyx)",
+   "itemZh": "椎骨总数（颈/胸/腰/骶/尾）",
+   "value": "33 = 7+12+5+5+3~5"
+  },
+  {
+   "itemEn": "Spinal nerve pairs (C/T/L/S/coccygeal)",
+   "itemZh": "脊神经对数（颈/胸/腰/骶/尾）",
+   "value": "31 = 8+12+5+5+1"
+  },
+  {
+   "itemEn": "Cord ends at / below it",
+   "itemZh": "脊髓终止水平 / 其下结构",
+   "value": "L2 / 马尾"
+  },
+  {
+   "itemEn": "Phrenic nerve (diaphragm)",
+   "itemZh": "膈神经（膈肌）",
+   "value": "C3-C5"
+  },
+  {
+   "itemEn": "Sympathetic disruption threshold",
+   "itemZh": "交感通路中断的损伤平面",
+   "value": "T6 及以上"
+  },
+  {
+   "itemEn": "Sacral parasympathetic (bowel/bladder/sexual)",
+   "itemZh": "骶副交感（便/尿/性功能）",
+   "value": "S2-S4"
+  },
+  {
+   "itemEn": "Canada SCI incidence / prevalence",
+   "itemZh": "加拿大 SCI 年发病 / 存量",
+   "value": "35/百万 ≈1,050 人/年；36,000 人"
+  },
+  {
+   "itemEn": "Age profile at injury",
+   "itemZh": "受伤年龄画像",
+   "value": "平均 32 岁；80% <40 岁"
+  },
+  {
+   "itemEn": "Cause ranking",
+   "itemZh": "病因构成",
+   "value": "MVC 35-40% > 暴力 24.5% > 跌落 21.8% > 运动 7.2%"
+  },
+  {
+   "itemEn": "Mortality: in-hospital (isolated) / first months",
+   "itemZh": "死亡率：孤立伤院内 / 伤后数月",
+   "value": "7% / 最高 20%"
+  },
+  {
+   "itemEn": "Cord concussion: duration / share of SCIs",
+   "itemZh": "脊髓震荡：持续时间 / 占比",
+   "value": "24-48 小时 / 3-4%"
+  },
+  {
+   "itemEn": "Central cord syndrome with fracture-dislocation or herniation",
+   "itemZh": "中央索综合征合并骨折脱位/椎间盘突出",
+   "value": "高达 60%"
+  },
+  {
+   "itemEn": "Spinal shock: cord edema onset",
+   "itemZh": "脊髓休克：水肿起始",
+   "value": "伤后 30 分钟内"
+  },
+  {
+   "itemEn": "Autonomic dysreflexia: lesion level / BP",
+   "itemZh": "自主神经反射异常：平面 / 血压",
+   "value": "T4-T6 以上；SBP>200，DBP≥130 mmHg"
+  },
+  {
+   "itemEn": "High-risk MOI speed thresholds",
+   "itemZh": "高危机制速度门槛",
+   "value": "汽车>60、摩托>30、撞行人>10 km/h"
+  },
+  {
+   "itemEn": "High-risk MOI: intrusion / falls",
+   "itemZh": "高危机制：侵入 / 坠落",
+   "value": "侵入 30 cm；坠落>1 m 升高、>3 m 显著"
+  },
+  {
+   "itemEn": "Assisted ventilation rate / O2 flow",
+   "itemZh": "辅助通气频率 / 氧流量",
+   "value": "10-12 次/分；12-15 L/min"
+  },
+  {
+   "itemEn": "ETCO2 target with head injury",
+   "itemZh": "合并头伤的呼气末 CO2 目标",
+   "value": "35-45 mmHg"
+  },
+  {
+   "itemEn": "Intubation consideration threshold",
+   "itemZh": "考虑插管的意识门槛",
+   "value": "GCS ≤8 或持续恶化"
+  },
+  {
+   "itemEn": "Skin breakdown on the board",
+   "itemZh": "长板上的压疮速度",
+   "value": "32% 患者 24 小时内"
+  },
+  {
+   "itemEn": "Adult occiput padding for neutral alignment",
+   "itemZh": "成人枕后垫高达到轴线对位",
+   "value": "1-5 cm"
+  },
+  {
+   "itemEn": "Third-trimester board tilt",
+   "itemZh": "妊娠晚期长板左倾角",
+   "value": "15-20°"
+  },
+  {
+   "itemEn": "Rapid extrication: crew / time / slide",
+   "itemZh": "快速解救：人数 / 用时 / 滑移步幅",
+   "value": "3 人；约 2 分钟；每次 20-30 cm"
+  },
+  {
+   "itemEn": "Straddle lift: rescuers / lift height",
+   "itemZh": "跨式抬升：人数 / 抬离高度",
+   "value": "5 人；2-3 cm"
+  },
+  {
+   "itemEn": "Log-roll off board threshold",
+   "itemZh": "滚离长板的转运时长门槛",
+   "value": "转运 >1 小时"
+  },
+  {
+   "itemEn": "Vitals frequency (unstable / stable)",
+   "itemZh": "生命体征频率（不稳定/稳定）",
+   "value": "每 5 分钟 / 每 15 分钟"
+  },
+  {
+   "itemEn": "Scene-time goal",
+   "itemZh": "现场时间目标",
+   "value": "白金 10 分钟"
+  },
+  {
+   "itemEn": "Lifetime low back pain prevalence / stress point",
+   "itemZh": "腰背痛终生患病率 / 力学应力点",
+   "value": "60-90%；L4-L5"
+  },
+  {
+   "itemEn": "Disk herniation: sites / typical patient",
+   "itemZh": "椎间盘突出：好发位 / 典型人群",
+   "value": "L4-L5、L5-S1；30-50 岁男性"
+  },
+  {
+   "itemEn": "Babinski reflex abnormal age cutoff",
+   "itemZh": "Babinski 征算异常的年龄界线",
+   "value": ">2 岁脚趾上翘"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Palpate every spinous process before you accept 'my neck doesn't hurt.' A patient's denial is information, not an exam — the physical check still happens.",
+   "zh": "在接受“我脖子不疼”之前，先把每个棘突都摸一遍。患者的否认只是一条信息，不能替代查体——体格检查照做不误。"
+  },
+  {
+   "en": "Hands stay on the head until the whole spine is secured with side bolsters. The collar's real job is to remind everyone — you and the patient — that a spine problem may exist; it does not eliminate neck movement.",
+   "zh": "在整条脊柱连同侧挡固定完成之前，扶头的手不能离开。颈托真正的作用是提醒所有人——包括你和患者——这里可能有脊柱问题；它消除不了颈部活动。"
+  },
+  {
+   "en": "A patient standing and walking at the crash scene is not self-cleared. Collar them, and let them keep their own alignment while lying onto the stretcher — that path actually produces less cervical movement than a takedown.",
+   "zh": "在事故现场站着走动的患者不等于自动排除。上颈托，让他自己保持对线躺上担架床——这条路产生的颈椎位移其实比强行放倒更小。"
+  },
+  {
+   "en": "Two Nancy rules worth tattooing: any significant head injury has a cervical spine injury until proven otherwise, and the single most important sign in a head-injured patient is a CHANGING level of consciousness.",
+   "zh": "两条值得刻进骨子里的 Nancy 铁律：明显头部伤一律先当颈椎伤处理，直到证明不是；头伤患者最重要的单一体征，是不断变化的意识水平。"
+  },
+  {
+   "en": "The lumbar spine takes constant hits — most low-back calls are muscle spasm that never threatens the cord, yet low back pain remains a leading source of disability. When spasm locks a patient rigid, slide a scoop stretcher under them; IV benzodiazepines can unlock severe spasm.",
+   "zh": "腰段是挨打最多的部位——多数腰痛出诊只是肌肉痉挛、不威胁脊髓，但腰背痛依然是致残大户。痉挛把人锁死时，用铲式担架从身下合拢；重度痉挛可用静脉苯二氮卓类松解。"
+  },
+  {
+   "en": "What you do in the first hour follows the patient for decades: SCI upends mobility, work, and finances (about $1.5 billion a year in Canada). Secondary-injury prevention is the one lever that is entirely in your hands.",
+   "zh": "你在第一个小时里做的事会跟随患者几十年：SCI 颠覆行动力、工作和经济（加拿大每年约 15 亿加元）。防止二次损伤，是唯一完全握在你手里的杠杆。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Spine injury' is not a back-pain problem — the stake is neurologic function. Weakness, numbness, or a nasty mechanism can outweigh pain entirely; some fractured spines barely hurt.",
+   "zh": "“脊柱损伤”不是腰疼脖子疼的问题——赌注是神经功能。无力、麻木或凶险的受伤机制可能比疼痛本身更说明问题；有些椎体骨折甚至不怎么疼。"
+  },
+  {
+   "en": "A normal neurologic exam does NOT rule out SCI. The exam sets a baseline; the mechanism sets the suspicion.",
+   "zh": "神经查体正常不能排除 SCI。查体的作用是定基线，怀疑与否由受伤机制决定。"
+  },
+  {
+   "en": "'He can move / he's walking' proves nothing — an unstable column can be one careless move away from cord damage. Standing patients with a real mechanism still get SMR.",
+   "zh": "“他能动/他还能走”什么都证明不了——不稳定的脊柱离脊髓损伤可能只差一个随意的动作。机制可疑的站立患者照样要 SMR。"
+  },
+  {
+   "en": "Spinal shock vs neurogenic shock: spinal shock is the cord's TEMPORARY functional shutdown (flaccidity, absent reflexes, hours-to-weeks course); neurogenic shock is a hemodynamic DISTRIBUTIVE crisis (hypotension + bradycardia + warm dry skin). One word apart, different exam answers.",
+   "zh": "脊髓休克 vs 神经源性休克：前者是脊髓功能的暂时性罢工（弛缓瘫、反射消失，数小时到数周恢复）；后者是血流动力学层面的分布性休克（低血压＋心动过缓＋皮肤温暖干燥）。一词之差，考题里是两个答案。"
+  },
+  {
+   "en": "Neurogenic vs hypovolemic shock at the bedside: warm/flushed/dry + slow-or-normal pulse points neurogenic; pale/cold/clammy + tachycardia points hypovolemic. In multi-trauma, assume both until proven otherwise.",
+   "zh": "床旁鉴别神经源性与低血容量休克：皮肤温暖潮红干燥＋心率慢或正常→神经源性；苍白湿冷＋心动过速→低血容量。多发伤患者要按两者并存来处理，直到排除。"
+  },
+  {
+   "en": "The collar is a reminder, not a fix — it never replaces manual stabilization, and releasing the head early is the classic packaging error.",
+   "zh": "颈托是提醒物，不是固定术——它永远替代不了手法固定；过早松开扶头的手是打包环节最经典的错误。"
+  },
+  {
+   "en": "Torso first, head LAST when strapping — fixing the head first lets a shifting body lever the neck. Many students instinctively reverse it.",
+   "zh": "绑带顺序是躯干在前、头部最后——先固定头，身体一滑就拿颈椎当杠杆。很多考生凭直觉做反。"
+  },
+  {
+   "en": "Penetrating neck trauma with a normal neuro exam does NOT need SMR — blanket-immobilizing every neck wound is the wrong answer on paper and in practice.",
+   "zh": "颈部穿透伤＋神经查体正常＝不需要 SMR——“见颈伤就全固定”无论笔试还是实操都是错误答案。"
+  },
+  {
+   "en": "'Unstable fracture' does not always mean cord damage: a hangman's fracture is unstable yet rarely injures the cord. And 'normal X-ray' does not mean intact cord: SCIWORA kids have perfect films over a crushed cord.",
+   "zh": "“不稳定骨折”不等于必然伤髓：Hangman 骨折不稳定却很少损伤脊髓。“影像正常”也不等于脊髓完好：SCIWORA 的孩子片子完美，脊髓却已受压。"
+  },
+  {
+   "en": "Central cord syndrome weakens the ARMS more than the legs — intuition says the opposite. Remember: cervical motor fibres sit centrally.",
+   "zh": "中央索综合征是上肢比下肢更无力——和直觉正好相反。记住：支配颈段/上肢的运动纤维排在脊髓中央。"
+  },
+  {
+   "en": "Rapid extrication is an exception tool, not a default: without one of its five urgent indications, using it is itself an error (it moves the spine more).",
+   "zh": "快速解救是例外手段，不是默认操作：五个紧急指征一个都不占时用它，本身就是错误（它对脊柱的扰动更大）。"
+  },
+  {
+   "en": "Removing a football or hockey helmet while leaving the shoulder pads (or vice versa) bends the neck — the pair comes off together or stays together.",
+   "zh": "橄榄球/冰球场景里只摘头盔留护肩（或反过来）会把颈椎顶弯——这一对装备要么一起摘，要么一起留。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "C3-4-5 保膈肌",
+   "en": "'C3, 4, 5 keeps the diaphragm alive' — lesions at/above C3-C4 paralyze the diaphragm; T2 and above take out the intercostals.",
+   "zh": "“C3、4、5，膈肌才能活”——C3-C4 及以上损伤膈肌瘫痪；T2 及以上肋间肌报废，只剩膈肌呼吸。"
+  },
+  {
+   "name": "皮节锚点",
+   "en": "Dermatome anchors: C6 thumb, C7 middle finger, C8 little finger ('6-7-8, thumb-middle-pinky'); T4 nipple line; T10 umbilicus ('belly but-TEN'); L3 knee; S1 lateral foot/sole; S4-5 perianal.",
+   "zh": "皮节锚点：C6 拇指、C7 中指、C8 小指（“678＝拇中小”）；T4 乳头线；T10 肚脐（“十全肚美”）；L3 膝；S1 足外侧/足底；S4-5 肛周。"
+  },
+  {
+   "name": "肌节阶梯",
+   "en": "Myotome ladder: elbow flex 5 / wrist 6 / elbow extend 7 / finger flex 8 / finger spread T1; knee L3-4, toes-up L5, gas-pedal S1-2.",
+   "zh": "肌节阶梯：屈肘 5、动腕 6、伸肘 7、屈指 8、张指 T1；膝 L3-4、勾趾 L5、踩油门 S1-2。"
+  },
+  {
+   "name": "DCAP-BTLS",
+   "en": "Head-to-toe trauma scan: Deformities, Contusions, Abrasions, Punctures, Burns, Tenderness, Lacerations, Swelling.",
+   "zh": "创伤头到脚八查：变形、挫伤、擦伤、穿刺、烧伤、压痛、裂伤、肿胀。"
+  },
+  {
+   "name": "低慢暖",
+   "en": "Neurogenic shock in three characters: LOW pressure, SLOW pulse, WARM dry flushed skin — the exact opposite of the pale-cold-fast hypovolemic picture.",
+   "zh": "神经源性休克三个字：“低”血压、“慢”心率、“暖”而干红的皮肤——和低血容量休克的“白冷快”逐项相反。"
+  },
+  {
+   "name": "高危机制数字串 60-30-30-10-3",
+   "en": "One string to hold the SMR thresholds: car >60 km/h — intrusion 30 cm — motorcycle >30 km/h — pedestrian/cyclist struck >10 km/h — fall >3 m (risk already rises past 1 m).",
+   "zh": "一串数字扣住 SMR 门槛：汽车>60 km/h——侵入 30 cm——摩托>30 km/h——撞行人/骑车人>10 km/h——坠落>3 m（超过 1 m 风险已升高）。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Describe neurogenic shock and how you separate it from hypovolemic shock on exam. What drugs fix it?",
+   "qZh": "描述神经源性休克的表现，床旁如何与低血容量休克鉴别？用什么药纠正？",
+   "aEn": "Hypotension with bradycardia and warm, dry, flushed skin below the lesion (lost alpha tone, unopposed vagus, no adrenal surge); hypovolemia shows pale, cold, clammy skin with tachycardia. Treatment: modest fluids plus atropine for bradycardia and vasopressors (dopamine/norepinephrine) for tone; consider pacing.",
+   "aZh": "低血压＋心动过缓＋损伤面以下皮肤温暖干燥潮红（α 张力丢失、迷走无对抗、肾上腺不放激素）；低血容量休克则是苍白湿冷＋心动过速。处理：适量补液，阿托品纠正心动过缓，多巴胺/去甲肾上腺素找回血管张力，必要时起搏。"
+  },
+  {
+   "qEn": "List at least five high-risk mechanisms that mandate SMR regardless of physical findings — with their numbers.",
+   "qZh": "列出至少五个无论查体如何都必须 SMR 的高危机制——带数字。",
+   "aEn": "Collision >60 km/h; compartment intrusion 30 cm; fall >3 m (>1 m already elevated); motorcycle >30 km/h with rider thrown; vehicle vs pedestrian/cyclist >10 km/h; plus ejection, unrestrained rollover, diving, death in the same compartment, penetrating trauma near the spine with deficit.",
+   "aZh": "车速>60 km/h；驾乘空间侵入 30 cm；坠落>3 m（>1 m 已升高）；摩托>30 km/h 且人车分离；机动车>10 km/h 撞行人/骑车人；另有甩出车外、未约束翻滚、跳水、同车厢死亡、脊柱旁穿透伤伴神经缺损。"
+  },
+  {
+   "qEn": "A 78-year-old tripped and hyperextended her neck; arms are weak but legs work. Syndrome, mechanism, prognosis?",
+   "qZh": "78 岁老人绊倒后颈部过伸，上肢无力但下肢正常。什么综合征？机制？预后？",
+   "aEn": "Central cord syndrome: hyperextension squeezes an already-narrow spondylotic canal, bruising the central cervical motor tracts — arms worse than legs, variable pain/temperature loss, sometimes bladder/bowel involvement; up to 60% have fracture-dislocation or herniation. Prognosis is the best of the cord syndromes.",
+   "aZh": "中央索综合征：过伸让本已狭窄的颈椎病椎管挤压脊髓中央，颈段运动纤维首当其冲——上肢重于下肢，痛温觉丧失不定，可累及大小便；高达 60% 合并骨折脱位或椎间盘突出。在各综合征中预后最好。"
+  },
+  {
+   "qEn": "Walk through the full supine packaging sequence, and name the two ordering rules examiners watch for.",
+   "qZh": "完整走一遍仰卧位打包流程，并说出考官紧盯的两条顺序规则。",
+   "aEn": "Manual in-line hold at the head → reliability check + distal PMS ×4 → sized collar → log roll toward rescuers, inspect back, insert board → centre, pad voids → strap torso, then pelvis/legs, arms one strap → head last with side blocks → recheck PMS. Rules: torso before head, and hands never leave the head until everything is secured. (BC practical: never tape across the head.)",
+   "aZh": "头端手法轴线固定→评估可靠性＋四肢远端 PMS→量尺寸上颈托→向救援者侧翻滚、查背、入板→居中、填空隙→先绑躯干，再骨盆和腿，手臂单独一条带→头部最后加侧块→复查 PMS。两条规则：躯干先于头；固定全部完成前手不离头。（BC 实操：不许用胶带贴头。）"
+  },
+  {
+   "qEn": "What triggers autonomic dysreflexia, what does it look like, and what is the field priority?",
+   "qZh": "什么会触发自主神经反射异常？表现如何？现场第一要务是什么？",
+   "aEn": "A noxious stimulus below a lesion above T4-T6 — distended bladder/rectum classically, also tight clothing, sharp objects, skin lesions, menstrual cramps. Picture: SBP >200, DBP ≥130, pounding headache, nasal congestion, bradycardia, flushing/sweating above the lesion, cool pale skin below; can end in seizure or stroke. Field priority: find and remove the trigger (catheter, clothing, objects); definitive BP control is a hospital job.",
+   "aZh": "T4-T6 以上损伤者，损伤面以下的有害刺激——膀胱/直肠过胀最经典，紧衣物、尖锐物、皮损、痛经也算。表现：SBP>200、DBP≥130、炸裂样头痛、鼻塞、心动过缓、损伤面以上潮红出汗、以下苍白发凉；可进展为抽搐或卒中。现场第一要务：找到并去除刺激源（导尿管、衣物、异物）；降压是院内的活。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "C-spine control is a 100%-deduction item in the practical",
+   "topicZh": "C-spine 控制＝实操 100% 扣分项",
+   "bookEn": "The textbook teaches when to suspect spine injury and the technique of manual stabilization, with no exam stakes attached.",
+   "bookZh": "教材只教什么时候怀疑脊柱伤、怎么做手法固定，不涉及考试后果。",
+   "bcEn": "BC's practical grading has a dedicated 'Delicate Spine' criterion: failing to initiate C-spine control at ANY time when indicated, or releasing it when still required to the patient's detriment, deducts 100% — instant scenario failure. Applying pain stimulus before taking C-spine control, or taking it late/out of sequence, costs 15%.",
+   "bcZh": "BC 实操评分表有专门的“Delicate Spine”条目：该上 C-spine 控制而任何时点没上，或仍需要时松手且危害患者，直接扣 100%——整场判负。先给疼痛刺激后才控制 C-spine、或控制得太晚/顺序错，扣 15%。",
+   "ref": "EMALB Practical Grading Criteria (2025-03) p.13"
+  },
+  {
+   "topicEn": "SMR decision rules: NEXUS + Canadian C-Spine",
+   "topicZh": "SMR 判定规则：NEXUS＋加拿大颈椎规则",
+   "bookEn": "The book drives full SMR off a long high-risk mechanism list regardless of exam findings, and calls prehospital clearance an evolving controversy.",
+   "bookZh": "教材用一长串高危机制清单决定全面 SMR（无论查体结果），并把院前排除说成尚在演进的争议。",
+   "bcEn": "The BC exam expects decisions via the NEXUS criteria and Canadian C-Spine rule. Primary-survey stabilization is indicated when those rules are met, when there is obvious injury above the clavicles, or when an unconscious patient's trauma cannot be reasonably ruled out. Verbalize the rule-in/rule-out reasoning.",
+   "bcZh": "BC 考试要求按 NEXUS 标准和加拿大颈椎规则做决策。初步评估中上颈椎固定的指征：满足上述规则、锁骨以上有明显损伤、或无意识患者无法合理排除创伤。判进判出的推理过程要说出声。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.11, 25"
+  },
+  {
+   "topicEn": "Packaging standard: fixed sequence, and never tape the head",
+   "topicZh": "打包标准：固定流程，禁止胶带贴头",
+   "bookEn": "The book offers device options including taping rolled towels to the board as an improvised head immobilizer.",
+   "bookZh": "教材给了多种器材选项，包括把毛巾卷用胶带固定在板上当临时头部固定器。",
+   "bcEn": "BC's checklist is fixed: manual stabilization → hard collar → spinal immobilization device → foam rollers/blocks → secure the body — and 'Do not tape the head.' Skill deductions: excessive head movement or losing manual stabilization mid-roll 25%; wrong collar size or never achieving neutral alignment 15%; sloppy strapping 10%.",
+   "bcZh": "BC 的清单是固定的：手法固定→硬颈托→脊柱固定装置→泡沫滚轴/头块→绑牢身体——并明文“不要用胶带贴头”。技能扣分：头部过度移动或翻滚中途手法固定脱手扣 25%；颈托尺寸不对或始终没摆到中立位扣 15%；绑带马虎扣 10%。",
+   "ref": "BC Guidelines p.25; Grading Criteria p.31"
+  },
+  {
+   "topicEn": "Over-immobilizing also costs marks",
+   "topicZh": "过度固定同样扣分",
+   "bookEn": "The book's tone is protective — when the mechanism is high-risk, restrict motion regardless of findings.",
+   "bookZh": "教材的基调偏保护——机制高危就限动，别管查体。",
+   "bcEn": "In the BC practical, taking C-spine control when the mechanism does not indicate it deducts 5%, and insufficient questioning to rule C-spine in or out costs 5-15%. Non-indicated skills that delay care are major deficiencies. Both directions of the decision are scored — justify aloud.",
+   "bcZh": "BC 实操里，机制不支持却上 C-spine 控制要扣 5%；判进/判出问诊不充分扣 5-15%。无指征操作若拖延救治更算重大缺陷。这道决策题双向都计分——必须出声说明理由。",
+   "ref": "EMALB Practical Grading Criteria p.13"
+  },
+  {
+   "topicEn": "Spine + suspected TBI: elevate 30° and loosen the collar",
+   "topicZh": "脊柱伤合并疑似脑外伤：抬高 30°、松颈托",
+   "bookEn": "The book generally avoids elevating the head of the board for spine patients (rare ventilation exceptions go through medical control), and notes collars may raise ICP.",
+   "bookZh": "教材原则上不给脊柱伤患者抬高床头（通气困难等罕见例外需医疗指挥同意），并提到颈托可能升高颅内压。",
+   "bcEn": "BC's TBI guideline actively requires: elevate the head of the bed to 30 degrees AND loosen the hard collar, alongside SpO2 ≥94%. When spine and brain injuries coexist in a scenario, the BC answer is elevate-and-loosen, not flat-and-tight.",
+   "bcZh": "BC 的脑外伤指南主动要求：床头抬高 30° 并松开硬颈托，同时维持 SpO2≥94%。情景题里脊柱伤与脑外伤并存时，BC 的正确答案是“抬高＋松托”，不是“放平＋绑紧”。",
+   "ref": "BC Guidelines p.27"
+  }
+ ]
+}

@@ -1,0 +1,994 @@
+{
+ "id": "ch42",
+ "n": 42,
+ "titleEn": "Obstetrics",
+ "titleZh": "产科",
+ "group": "obgyn",
+ "examWeight": 3,
+ "whyEn": "Obstetrics is double-weighted in BC: the COPR written exam mines it for hard numbers (stages of labour, delivery-versus-transport criteria, the three causes of third-trimester hemorrhage, preeclampsia thresholds, postpartum hemorrhage limits), and the practical exam runs an entire field-delivery station where crowning, the newborn ladder, and third-stage management are scored line by line. Every call carries at least two patients, and the physiologic changes of pregnancy rewrite the vital-sign rules you use everywhere else.",
+ "whyZh": "产科在 BC 考试里是双线重点：COPR 笔试爱挖硬数字（产程分期、接生还是转运的判据、孕晚期三大出血、子痫前期阈值、产后出血标准），实操考试更有一整场居家接生站，着冠判断、新生儿阶梯、第三产程处理逐条计分。每次出车至少两名患者，而孕期生理改变会把你在其他章学的生命体征规则整个改写。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "1.1.a",
+   "1.1.e",
+   "1.1.k",
+   "1.3.b",
+   "2.1.e",
+   "2.1.f",
+   "2.1.g",
+   "2.3.c",
+   "2.4.a",
+   "2.4.c",
+   "2.4.f",
+   "4.2.c",
+   "4.2.d",
+   "4.2.e",
+   "4.3.a",
+   "4.3.b",
+   "4.3.f",
+   "4.3.o",
+   "4.4.a",
+   "4.4.b",
+   "5.1.h",
+   "5.2.a",
+   "5.3.c",
+   "5.5.c",
+   "6.1.d",
+   "6.1.q",
+   "6.2.a",
+   "6.3.a"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Reproductive Anatomy, Conception, and Gestation",
+   "titleZh": "生殖解剖、受孕与妊娠",
+   "points": [
+    {
+     "en": "Each fallopian tube is roughly 10 cm long. An ovum can be fertilized only within about 24 hours of ovulation; if no sperm arrives it degenerates within 36 to 48 hours.",
+     "zh": "每条输卵管长约 10 cm。卵子只在排卵后约 24 小时内可受精；没受精的卵子在 36–48 小时内退化。",
+     "hard": true
+    },
+    {
+     "en": "The blastocyst implants in the endometrium about 1 week after conception. Implantation can produce painless spotting, which may frighten a patient who does not yet know she is pregnant.",
+     "zh": "受精卵（囊胚）在受孕后约 1 周植入子宫内膜。着床可引起无痛点滴出血，还不知道自己怀孕的患者可能因此惊慌。",
+     "hard": true
+    },
+    {
+     "en": "Developing placental tissue releases hCG, which tells the corpus luteum to keep making supportive hormones; the corpus luteum carries the pregnancy for about 90 days until the placenta takes over.",
+     "zh": "发育中的胎盘组织释放 hCG，通知黄体继续分泌维持妊娠的激素；黄体大约支撑 90 天，之后由胎盘接管。",
+     "hard": true
+    },
+    {
+     "en": "The umbilical cord has two arteries carrying deoxygenated blood to the placenta and one vein returning oxygenated blood to the fetus; Wharton jelly keeps it from knotting. A single umbilical artery can be a marker for heart or kidney malformations.",
+     "zh": "脐带内有两条动脉（把低氧血送回胎盘）和一条静脉（把含氧血送给胎儿）；华通胶防止脐带打结。只有单条脐动脉时要想到心脏或肾脏畸形的可能。",
+     "hard": true
+    },
+    {
+     "en": "Fetal circulation bypasses the lungs through three shunts - ductus venosus, ductus arteriosus, and foramen ovale - all of which close once the newborn starts breathing.",
+     "zh": "胎儿循环靠三条分流绕过肺：静脉导管、动脉导管和卵圆孔；新生儿开始呼吸后这些通道关闭。",
+     "hard": true
+    },
+    {
+     "en": "Amniotic fluid volume reaches about 1 L at term. It cushions the fetus and, late in pregnancy, is swallowed and passed as part of fetal excretion.",
+     "zh": "足月时羊水量约 1 L。它给胎儿提供缓冲，孕晚期胎儿还会吞咽羊水并向其中排泄。",
+     "hard": true
+    },
+    {
+     "en": "Weeks 4 through 8 after conception are the critical window of organ formation, when drugs, alcohol, and toxins do the most damage. Fetal alcohol syndrome requires all three findings: poor growth, characteristic facial abnormalities, and CNS dysfunction.",
+     "zh": "受孕后第 4–8 周是器官形成的关键窗口，药物、酒精和毒物在此期危害最大。胎儿酒精综合征要求三项同时存在：生长落后、特征性面部畸形、中枢神经功能障碍。",
+     "hard": true
+    },
+    {
+     "en": "Gestation runs 38 weeks from conception, counted as 40 weeks from the last menstrual period. Due date: first day of the last period, plus 1 year, minus 3 months, plus 7 days.",
+     "zh": "妊娠自受孕起 38 周，按末次月经计为 40 周。预产期推算：末次月经第一天加 1 年、减 3 个月、再加 7 天。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Maternal Physiologic Changes",
+   "titleZh": "妊娠期母体生理变化",
+   "points": [
+    {
+     "en": "The uterus grows from a 10-mL capacity organ to one holding about 5 L and weighing up to 1 kg at term - the single most dramatic anatomic change of pregnancy.",
+     "zh": "子宫容量从孕前约 10 mL 扩张到足月约 5 L，重量可达 1 kg——这是妊娠期最剧烈的解剖改变。",
+     "hard": true
+    },
+    {
+     "en": "Fundal height tracks gestation: at 20 weeks the fundus sits at the umbilicus (about 20 cm above the pubic bone) and rises roughly 1 cm per additional week. Longer than dates suggests twins; shorter suggests breech position or a growth problem.",
+     "zh": "宫底高度对应孕周：20 周时宫底平脐（距耻骨约 20 cm），之后每周约升高 1 cm。比孕周高提示双胎，偏低提示臀位或发育问题。",
+     "hard": true
+    },
+    {
+     "en": "Blood volume climbs 40% to 50% by term, and the uterus holds 15% to 16% of the total circulation. This reserve lets a woman tolerate up to 500 mL of loss in a vaginal delivery, or 1,000 mL in a cesarean, helped by autotransfusion as the uterus contracts.",
+     "zh": "足月时血容量增加 40%–50%，子宫本身容纳全身血量的 15%–16%。这套储备让产妇能耐受顺产约 500 mL、剖宫产约 1,000 mL 的失血，宫缩时的自体回输也在帮忙。",
+     "hard": true
+    },
+    {
+     "en": "Red cell mass rises up to 33%, so iron demand jumps; without supplements the fetus drains maternal iron stores, and the resulting anemia raises the risk of preterm labour and miscarriage. Clotting factors and fibrinogen also rise, feeding thromboembolic risk.",
+     "zh": "红细胞总量最多增加 33%，铁需求随之大增；不补铁时胎儿会掏空母体铁储备，贫血又会增加早产和流产风险。凝血因子和纤维蛋白原同样升高，血栓风险随之上升。",
+     "hard": true
+    },
+    {
+     "en": "Cardiac output rises about 40%, peaking near 22 weeks and settling around 20% above baseline at term; resting heart rate climbs 15 to 20 beats/min. Ectopic beats, SVT, slight left-axis deviation, and lead III T-wave or Q-wave changes can all be normal pregnancy findings.",
+     "zh": "心排血量约增 40%，22 周左右达峰，足月回落到高于基线约 20%；静息心率增加 15–20 次/分。早搏、室上速、轻度电轴左偏和 III 导联 T 波或 Q 波改变在孕期都可能属正常。",
+     "hard": true
+    },
+    {
+     "en": "From about 20 weeks on, lying supine lets the uterus pinch the inferior vena cava and cut venous return. Diastolic pressure normally dips 5 to 10 mm Hg around week 12 and drifts back to prepregnancy levels by about week 36.",
+     "zh": "约 20 周起，仰卧位时子宫会压住下腔静脉、减少回心血量。舒张压在 12 周前后正常会降 5–10 mm Hg，到 36 周左右逐渐回到孕前水平。",
+     "hard": true
+    },
+    {
+     "en": "Venous distention reaches about 150% of prepregnancy levels, producing dependent edema, hemorrhoids, varicose veins, and a real risk of DVT and pulmonary embolism in bedridden patients. Slowed venous return also delays absorption of IM or subcutaneous drugs.",
+     "zh": "静脉扩张到孕前约 150%，带来体位性水肿、痔疮、下肢静脉曲张，久卧者有深静脉血栓和肺栓塞的实际风险。静脉回流变慢也会拖慢肌注和皮下给药的吸收。",
+     "hard": true
+    },
+    {
+     "en": "Respiratory changes: the diaphragm is pushed up about 4 cm, oxygen consumption rises 20% to 40%, tidal volume grows about 40%, minute ventilation increases up to 50%, and PaCO2 falls about 5 mm Hg - a compensated respiratory alkalosis is the pregnant baseline.",
+     "zh": "呼吸系统：膈肌被顶高约 4 cm，耗氧量增加 20%–40%，潮气量增约 40%，分钟通气量最多增 50%，PaCO2 下降约 5 mm Hg——代偿性的呼吸性碱中毒就是孕期基线。",
+     "hard": true
+    },
+    {
+     "en": "The airway mucosa becomes swollen and friable: avoid nasal intubation, pick a tracheal tube one size smaller than usual for oral intubation, and expect that epistaxis can become a genuine emergency.",
+     "zh": "气道黏膜水肿而脆弱：不要经鼻插管，经口插管要选小一号的气管导管，鼻出血在孕妇可能演变成真正的急症。",
+     "hard": true
+    },
+    {
+     "en": "Average weight gain in pregnancy is 12.3 kg. Relaxin loosens ligaments (lordosis, pelvic laxity), and falling cellular sensitivity to insulin sets up gestational diabetes in predisposed women.",
+     "zh": "孕期平均增重 12.3 kg。松弛素让韧带变松（腰椎前凸、骨盆松弛）；细胞对胰岛素的敏感性下降，易感者会发展成妊娠期糖尿病。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Obstetric Patient Assessment",
+   "titleZh": "产科患者评估",
+   "points": [
+    {
+     "en": "Gravida counts every pregnancy regardless of outcome; para counts pregnancies carried past 20 weeks. A woman with four pregnancies, three losses, and one delivery is G4P1 (or G4A3P1). More than five deliveries makes a grand multipara.",
+     "zh": "Gravida（孕次）计所有怀孕，不论结局；para（产次）只计超过 20 周的妊娠。怀孕 4 次、流产 3 次、分娩 1 次记作 G4P1（或 G4A3P1）。分娩超过 5 次称多产妇（grand multipara）。",
+     "hard": true
+    },
+    {
+     "en": "Every labour call boils down to two questions: am I delivering this baby here, and if so, which complications should I expect?",
+     "zh": "所有临产出车归结为两个问题：这孩子会不会在现场出生？如果会，我该预判哪些并发症？",
+     "hard": false
+    },
+    {
+     "en": "Core obstetric history: due date and weeks of gestation, gravida and para, speed of previous labours, prior cesarean and any VBAC plan (uterine rupture risk), ultrasound findings on twins or abnormal presentation, bleeding or discharge, drug and alcohol use, and prenatal care.",
+     "zh": "产科病史核心项：预产期与孕周、孕产次、上一胎产程快慢、剖宫产史及是否计划 VBAC（子宫破裂风险）、超声有无双胎或异常胎位、出血或分泌物、烟酒毒品使用、产检情况。",
+     "hard": true
+    },
+    {
+     "en": "True labour: contractions regularly spaced, intervals shortening, intensity climbing, pain not abolished by analgesics, cervix effacing and dilating. Braxton Hicks contractions are irregular, every 10 to 20 minutes, stable in intensity, and often melt away with analgesia.",
+     "zh": "真临产：宫缩规律、间隔渐短、强度渐增、止痛药压不掉、宫颈在展平和扩张。假性宫缩（Braxton Hicks）不规律、约 10–20 分钟一次、强度不变，常被止痛药压掉。",
+     "hard": true
+    },
+    {
+     "en": "Contractions more than 5 minutes apart usually leave time to reach a nearby hospital; contractions under 2 minutes apart signal impending delivery, especially in a multipara.",
+     "zh": "宫缩间隔大于 5 分钟通常还来得及送附近医院；间隔小于 2 分钟说明马上要生，经产妇尤其如此。",
+     "hard": true
+    },
+    {
+     "en": "An urge to move the bowels during labour is the baby's head pressing on the rectum - delivery is imminent. Never let the patient walk to the toilet.",
+     "zh": "临产时的便意是胎头压在直肠上——马上要生了。绝对不能让产妇自己去厕所。",
+     "hard": true
+    },
+    {
+     "en": "Crowning means birth within minutes: commit to delivering on scene and set up immediately.",
+     "zh": "着冠意味着几分钟内出生：立即决定现场接生并马上布置。",
+     "hard": true
+    },
+    {
+     "en": "First labours average about 16 hours and run slower, buying transport time; a multipara with a fast previous labour can deliver precipitously.",
+     "zh": "初产妇产程平均约 16 小时、进展慢，转运余地大；上一胎产程快的经产妇可能急产。",
+     "hard": true
+    },
+    {
+     "en": "When delivery looks imminent, still grab three things: maternal vitals (raised BP, puffy face or hands, and brisk knee jerks scream preeclampsia - be ready for seizures); gestational age by fundal height (just above the symphysis is 12 to 16 weeks, umbilicus is 20 weeks, xiphoid is term); and fetal heart tones.",
+     "zh": "即便马上要生，也要抓三件事：产妇生命体征（血压高、脸手浮肿、膝反射亢进强烈提示子痫前期——准备好应对抽搐）；用宫底高度估孕周（耻骨联合上缘约 12–16 周、平脐 20 周、达剑突为足月）；听胎心。",
+     "hard": true
+    },
+    {
+     "en": "Normal fetal heart rate is 120 to 160 beats/min; below 120 suggests distress. If the fetal rate exactly matches the maternal pulse you are hearing an echo of the mother's heartbeat - palpate her pulse while you listen and move the stethoscope. A Doppler probe goes at the 4 o'clock position about 5 cm from the umbilicus.",
+     "zh": "胎心率正常 120–160 次/分，低于 120 提示胎儿窘迫。若胎心和母亲脉搏完全同步，你听到的是母亲心跳的回声——边听边摸母脉对照，并挪动听诊器。多普勒探头放在脐旁约 5 cm 的 4 点钟位置。",
+     "hard": true
+    },
+    {
+     "en": "Ask when the water broke and what the fluid looked like: brown or black colour or a strong odour means meconium, which rewrites your newborn airway plan.",
+     "zh": "要问破水时间和羊水样子：呈棕色或黑色、或气味重，就是胎粪污染，新生儿气道预案必须改。",
+     "hard": true
+    },
+    {
+     "en": "Blood pressure is an unreliable perfusion gauge in pregnancy - a pregnant patient loses a large volume before hypotension appears. Judge by mechanism and serial findings, not a single normal BP.",
+     "zh": "孕期血压是不可靠的灌注指标——孕妇失血很多之后血压才会掉。要靠受伤机制和连续复评判断，不能凭一次正常血压放心。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Complications of Pregnancy",
+   "titleZh": "妊娠并发症",
+   "points": [
+    {
+     "en": "Chronic (preexisting) hypertension is BP of 140/90 mm Hg or higher before pregnancy, before the 20th week, or persisting postpartum. Diastolic pressure over 110 mm Hg puts the patient at added risk of stroke.",
+     "zh": "慢性（原有）高血压指血压 ≥140/90 mmHg 且出现在孕前、孕 20 周前，或产后仍持续。舒张压超过 110 mmHg 者卒中风险明显升高。",
+     "hard": true
+    },
+    {
+     "en": "Gestational hypertension appears during or after the 20th week in a previously normotensive woman and resolves after delivery; obesity and glucose intolerance predispose.",
+     "zh": "妊娠期高血压出现在孕 20 周或之后、原本血压正常的女性，产后自行缓解；肥胖和糖耐量异常者易发。",
+     "hard": true
+    },
+    {
+     "en": "Preeclampsia (SOGC definition) is gestational hypertension plus at least one of: new proteinuria, an adverse condition, or a severe complication. The classic triad is edema of face and hands, rising blood pressure, and protein in the urine; warning symptoms include severe headache, visual disturbance, vomiting, and abdominal pain.",
+     "zh": "子痫前期（SOGC 定义）= 妊娠期高血压加以下至少一项：新发蛋白尿、不良状况或严重并发症。经典三联征是脸手水肿、血压渐升、尿蛋白；警示症状有剧烈头痛、视觉障碍、呕吐和腹痛。",
+     "hard": true
+    },
+    {
+     "en": "Severe preeclampsia: systolic over 160 or diastolic over 105 mm Hg with risk factors, HELLP syndrome, liver or renal failure, cerebral hemorrhage, or abruption. In hospital it calls for magnesium sulphate plus antihypertensives such as labetalol or hydralazine; delivery is the definitive cure.",
+     "zh": "重度子痫前期：收缩压超过 160 或舒张压超过 105 mmHg 并伴危险因素，或出现 HELLP 综合征、肝肾衰竭、脑出血、胎盘早剥。院内需硫酸镁加拉贝洛尔或肼屈嗪等降压药；根治手段是娩出胎儿。",
+     "hard": true
+    },
+    {
+     "en": "Eclampsia is a tonic-clonic seizure on top of preeclampsia. Risk groups: first pregnancy under 18 or at 35 and older, chronic hypertension, renal disease, diabetes. Magnesium sulphate is the treatment of choice.",
+     "zh": "子痫 = 在子痫前期基础上出现强直阵挛发作。高危人群：18 岁以下或 35 岁及以上的初产妇、慢性高血压、肾病、糖尿病。首选治疗是硫酸镁。",
+     "hard": true
+    },
+    {
+     "en": "A seizure in pregnancy involves two patients. Diazepam and phenobarbital cross the placenta and distress the fetus, which is why magnesium sulphate is preferred; give high-flow oxygen to buffer seizure hypoxia. Complications include abruption, hemorrhage, and DIC.",
+     "zh": "孕妇抽搐牵涉两名患者。地西泮和苯巴比妥会穿过胎盘造成胎儿窘迫，所以首选硫酸镁；给高流量氧对抗抽搐造成的缺氧。并发症包括胎盘早剥、出血和 DIC。",
+     "hard": true
+    },
+    {
+     "en": "Gestational diabetes can start early, so a fasting glucose test belongs in routine prenatal screening. Pregnant diabetics swing wildly between hyper- and hypoglycemia; any altered mental status or seizure gets a glucometer check, with dextrose for a low reading.",
+     "zh": "妊娠期糖尿病可能很早出现，常规产检应包含空腹血糖。孕期糖尿病患者血糖大起大落；凡意识改变或抽搐都要测血糖，低了就给葡萄糖。",
+     "hard": true
+    },
+    {
+     "en": "Hyperemesis gravidarum is persistent vomiting beyond 3 or 4 times daily, often projectile with bile or blood, leading to dehydration and malnutrition; it favours first pregnancies, multiple gestations, and obesity. Treatment: oxygen, glucose check, IV normal saline starting with 250 mL, then dimenhydrinate 10 to 50 mg IV or deep IM (not with MAO inhibitors) or ondansetron per protocol.",
+     "zh": "妊娠剧吐指每天呕吐超过 3–4 次、常呈喷射状带胆汁甚至血，导致脱水和营养不良；初产、多胎和肥胖者多见。处置：给氧、测血糖、静脉生理盐水先输 250 mL，再按协议给茶苯海明 10–50 mg 静注或深部肌注（服 MAO 抑制剂者禁用）或昂丹司琼。",
+     "hard": true
+    },
+    {
+     "en": "Rh sensitization: an Rh-negative mother carrying an Rh-positive fetus builds antibodies that attack fetal red cells in later pregnancies, causing fetal death or hemolytic disease of the newborn. RhIG is given routinely at 28 weeks and within 72 hours of delivering an Rh-positive baby, and after miscarriage, trauma, or invasive procedures.",
+     "zh": "Rh 致敏：Rh 阴性母亲怀 Rh 阳性胎儿后产生抗体，下次妊娠时抗体攻击胎儿红细胞，可致胎死宫内或新生儿溶血病。RhIG 常规在孕 28 周注射、分娩 Rh 阳性婴儿后 72 小时内再注射，流产、外伤或侵入性操作后也要打。",
+     "hard": true
+    },
+    {
+     "en": "Group B streptococcus is the leading cause of life-threatening infection in newborns; SOGC recommends vaginal and anal swab screening at 35 to 37 weeks. Newborn illness usually declares itself within the first 7 days.",
+     "zh": "B 族链球菌是新生儿致命感染的头号原因；SOGC 建议孕 35–37 周做阴道和肛门拭子筛查。新生儿感染多在生后 7 天内发病。",
+     "hard": true
+    },
+    {
+     "en": "Cholestasis of pregnancy: bile flow stalls and acids spill into blood, causing intense itching of palms and soles, dark urine, pale stools, and right upper quadrant pain. Benign for the mother, but untreated it risks preterm birth and stillbirth.",
+     "zh": "妊娠期肝内胆汁淤积：胆汁流动受阻、胆汁酸入血，表现为手心脚心剧痒、尿色深、粪色浅、右上腹痛。对母亲多为良性，但不处理会增加早产和死胎风险。",
+     "hard": true
+    },
+    {
+     "en": "Asthma is one of the commonest conditions complicating pregnancy: an attack exposes both mother and fetus to progressive hypoxia, and can trigger premature labour, preeclampsia, respiratory failure, or fetal growth restriction and death.",
+     "zh": "哮喘是最常见的妊娠合并症之一：发作让母胎一起陷入进行性缺氧，可诱发早产、子痫前期、呼吸衰竭，也可造成胎儿生长受限甚至死亡。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Bleeding Related to Pregnancy",
+   "titleZh": "妊娠相关出血",
+   "points": [
+    {
+     "en": "Ectopic pregnancy implants outside the uterus, usually in a fallopian tube, while showing every normal sign of pregnancy. Treat any woman of childbearing age with severe lower abdominal pain as an ectopic until proven otherwise: manage shock and transport rapidly.",
+     "zh": "宫外孕着床在子宫以外（多在输卵管），却带着妊娠的全部正常表现。任何育龄女性出现剧烈下腹痛，都按宫外孕对待直到排除：按休克处置、快速转运。",
+     "hard": true
+    },
+    {
+     "en": "Molar pregnancy (hydatidiform mole) comes from a fertilization error and produces an abnormal placenta; expect dark-brown spotting, outsized nausea and vomiting, and a raised preeclampsia risk.",
+     "zh": "葡萄胎源于受精环节出错、形成异常胎盘；表现为深棕色点滴出血、异常剧烈的恶心呕吐，子痫前期风险也升高。",
+     "hard": false
+    },
+    {
+     "en": "Miscarriage is loss of the fetus before the 20th week (some sources extend to 28). Most happen in the first trimester, and spontaneous miscarriage touches about 1 in 5 pregnancies.",
+     "zh": "流产指孕 20 周前（有的定义放宽到 28 周）失去胎儿。绝大多数发生在早孕期，自然流产波及约五分之一的妊娠。",
+     "hard": true
+    },
+    {
+     "en": "Threatened miscarriage: first-half bleeding with a closed cervix and cramp-like discomfort - transport and support, since nothing in the field prevents it. Inevitable miscarriage: strong contractions, heavy bleeding, dilating cervix - IV normal saline to hold blood pressure, 100% oxygen by nonrebreathing mask at 15 L/min, ECG, rapid transport, watch for shock.",
+     "zh": "先兆流产：孕早中期出血、宫颈闭合、类似痛经的隐痛——转运加安抚，院前无法阻止。难免流产：强烈宫缩、出血量大、宫颈扩张——静脉生理盐水维持血压、非再吸入面罩 15 L/min 给纯氧、上心电监护、快速转运、盯紧休克。",
+     "hard": true
+    },
+    {
+     "en": "Incomplete miscarriage: part of the products of conception stays inside, so bleeding continues. Consult direct medical control about gently removing tissue protruding from the vagina; collect every expelled product for the receiving facility, and let the patient view the fetus if she wishes.",
+     "zh": "不全流产：部分妊娠组织留在宫内，出血因此不止。阴道口有组织物突出时，联系直接医疗指导后再轻柔取出；所有排出组织都要收集带往医院，患者想看胎儿就不要阻拦。",
+     "hard": true
+    },
+    {
+     "en": "Missed miscarriage: the fetus dies before 20 weeks but stays in utero. Typical story - bleeding stopped, pregnancy signs faded, brownish foul-smelling discharge, a hard uterine mass, and no fetal heart tones.",
+     "zh": "稽留流产：胎儿在 20 周前死亡却留在宫内。典型经过——出血停了、妊娠表现逐渐消退、棕色带臭味分泌物、腹部摸到硬块状子宫、听不到胎心。",
+     "hard": true
+    },
+    {
+     "en": "Septic miscarriage: fever and foul vaginal discharge starting within hours of any type of miscarriage, with abdominal tenderness. Full septic-shock package - IV normal saline titrated to pressure, 100% oxygen, ECG, rapid transport.",
+     "zh": "感染性流产：任何类型流产后数小时内发热、阴道分泌物恶臭、腹部压痛。按感染性休克整套处理——生理盐水按血压滴定、纯氧、心电监护、快速转运。",
+     "hard": true
+    },
+    {
+     "en": "A pregnant woman can lose 40% of her circulating volume before hypovolemia shows itself. Treat on mechanism and story, not on reassuring vitals; orthostatic changes flag major hidden loss.",
+     "zh": "孕妇失血达全身血量的 40% 之前，低血容量征象可以完全不露面。要按机制和病史处置，别被安稳的生命体征骗了；体位性改变提示大量隐匿失血。",
+     "hard": true
+    },
+    {
+     "en": "The three major causes of third-trimester hemorrhage are abruptio placenta, placenta previa, and uterine rupture - and you do not need to tell them apart to treat, because prehospital management is identical.",
+     "zh": "孕晚期大出血三大原因：胎盘早剥、前置胎盘、子宫破裂——而且不需要分清是哪个才能治，院前处置完全一样。",
+     "hard": true
+    },
+    {
+     "en": "Abruptio placenta - premature separation of a normally implanted placenta - hits about 1 in 100 term pregnancies; maternal hypertension is the leading cause at 44%, ahead of trauma. Presentation: sudden severe abdominal pain radiating to the back, a rigid tender uterus, reduced fetal movement and heart tones, and shock out of proportion to visible bleeding, because blood may stay concealed inside.",
+     "zh": "胎盘早剥——正常着床的胎盘提前剥离——约见于 1/100 的足月妊娠；母体高血压是首因（占 44%），高于外伤。表现：突发剧烈腹痛放射到背部、子宫硬而压痛、胎动和胎心减弱、休克程度与可见出血不成比例（血可能全憋在宫腔里）。",
+     "hard": true
+    },
+    {
+     "en": "Placenta previa - the placenta implants low and covers part or all of the cervical canal - occurs in about 5 of 1,000 births, and women over 30 carry three times the risk of women in their 20s. Presentation: painless bright-red bleeding with a soft, nontender uterus and preserved fetal movement. Never palpate deeply and never examine internally - deep pressure can unleash massive bleeding.",
+     "zh": "前置胎盘——胎盘着床过低、部分或完全盖住宫颈管——约见于 5/1,000 次分娩，30 岁以上女性风险是 20 多岁的 3 倍。表现：无痛性鲜红出血、子宫软而无压痛、胎动仍在。绝对不做深部触诊和阴道内检——按深了可能引爆大出血。",
+     "hard": true
+    },
+    {
+     "en": "Third-trimester bleeding, one recipe: left lateral recumbent position, 100% oxygen at 15 L/min by nonrebreathing mask, rapid transport with early notification, large-bore IV normal saline in 250-mL boluses up to 20 mL/kg (medical direction beyond that, targeting 90 mm Hg systolic), ECG, loose trauma pads over the vagina - never packed inside.",
+     "zh": "孕晚期出血一套流程：左侧卧位、非再吸入面罩 15 L/min 纯氧、快速转运并提前通报、大口径静脉通路生理盐水按 250 mL 一组推注、总量到 20 mL/kg（再多需医疗指导，目标收缩压 90 mmHg）、心电监护、阴道口松敷创伤垫——绝不填塞。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Normal Childbirth and Field Delivery",
+   "titleZh": "正常分娩与现场接生",
+   "points": [
+    {
+     "en": "Labour opens with the prodromal stage: pressure shifts from upper abdomen to pelvis as the fetus descends, and the mucus plug - sometimes blood-tinged, the bloody show - discharges from the dilating cervix.",
+     "zh": "临产从前驱期开始：胎儿下降，上腹压迫感转到骨盆，黏液栓（可带血，即见红）从正在扩张的宫颈排出。",
+     "hard": false
+    },
+    {
+     "en": "Stage 1 runs from the first regular labour pains to full cervical dilation, with contractions starting 5 to 15 minutes apart while the cervix effaces and dilates: 8 to 12 hours in a nullipara, 6 to 8 in a multipara. The amniotic sac often ruptures near the end of this stage.",
+     "zh": "第一产程从规律阵痛到宫颈全开，宫缩起初 5–15 分钟一次，宫颈同步展平和扩张：初产妇 8–12 小时，经产妇 6–8 小时。羊膜囊常在这一程末破裂。",
+     "hard": true
+    },
+    {
+     "en": "Stage 2 starts when the head enters the birth canal: contractions tighten to every 2 to 3 minutes, the mother bears down and feels rectal pressure, and crowning appears. It lasts 1 to 2 hours in a nullipara but about 30 minutes in a multipara, and ends with the baby fully delivered.",
+     "zh": "第二产程始于胎头进入产道：宫缩加密到 2–3 分钟一次，产妇不自主屏气用力并有直肠压迫感，随后着冠。初产妇 1–2 小时，经产妇约 30 分钟，以胎儿完全娩出结束。",
+     "hard": true
+    },
+    {
+     "en": "Stage 3 is placental separation and expulsion, 5 to 60 minutes, usually within 20 to 30 minutes of the birth. Do not wait on scene for it - transport and deliver the placenta en route.",
+     "zh": "第三产程是胎盘剥离与娩出，5–60 分钟不等，通常在产后 20–30 分钟内完成。不要在现场干等——先转运，胎盘在途中娩出。",
+     "hard": true
+    },
+    {
+     "en": "Set up: full precautions (gloves, gown, mask, eye protection - deliveries are messy), sterile OB kit opened touching only the outside, drapes under the buttocks, between the legs, over abdomen and thighs. The kit holds scissors or scalpel, cord clamps, bulb syringe, towels, gauze, gloves, infant blanket, sanitary pads, and a plastic bag; an infant bag-mask and goggles must be added from the unit.",
+     "zh": "布置：全套防护（手套、隔离衣、口罩、护目镜——接生体液飞溅极多），产科包只碰外面无菌开启，臀下、两腿间、腹部和大腿铺巾。包内有剪刀或手术刀、脐带夹、球形吸引器、毛巾、纱布、无菌手套、婴儿毯、产垫和塑料袋；婴儿 BVM 和护目镜不在包里，要从车上另备。",
+     "hard": true
+    },
+    {
+     "en": "If the head is coming fast, controlling the delivery beats putting on sterile drapes. And if the mother wants to deliver standing, kneeling, side-lying, or semi-Fowler, adapt - any position she prefers is acceptable as long as it endangers no one.",
+     "zh": "胎头出得快时，控制娩出比铺无菌巾优先。产妇想站着、跪着、侧卧或半坐位生，就顺着她——只要不造成危险，任何她舒服的体位都可以。",
+     "hard": false
+    },
+    {
+     "en": "Panting during contractions stops pushing, because bearing down needs a closed glottis - use it to buy setup time or to slow a cord-prolapse labour.",
+     "zh": "宫缩时喘气式呼吸能阻止向下用力，因为屏气用力需要声门关闭——可用来争取布置时间，脐带脱垂时也靠它拖住产程。",
+     "hard": true
+    },
+    {
+     "en": "Delivery of the head: gentle palm pressure so it does not burst out and tear the vagina, support it as it rotates, and never pull. If the membranes still cover the face, tear them open with fingers or forceps so the newborn can breathe.",
+     "zh": "娩头：掌心轻压防止胎头爆冲撕裂阴道，胎头旋转时顺势托扶，全程不拉。若胎膜仍罩着脸，用手指或钳把它撕开让新生儿能呼吸。",
+     "hard": true
+    },
+    {
+     "en": "Slip a middle finger alongside the head to feel for a nuchal cord. Usually it slides over the shoulder and head; if it is wrapped tight, place two umbilical clamps 5 cm apart and cut between them before going on.",
+     "zh": "以中指沿胎头探查脐带绕颈。通常能顺势滑过肩和头；绕得太紧就上两把脐带夹、相距 5 cm，在中间剪断后继续接生。",
+     "hard": true
+    },
+    {
+     "en": "Guide the head slightly downward to free the anterior shoulder, then upward for the posterior shoulder; the trunk and legs follow fast, and newborns are slippery. Keep the baby level with the vagina until the cord is managed, dry immediately (wet newborns dump heat), wrap warm, and record the time of birth.",
+     "zh": "先轻引胎头向下娩出前肩，再向上娩出后肩；躯干和腿会紧跟着滑出来——新生儿非常滑。断脐处理前让婴儿保持与阴道同高，立刻擦干（湿身散热极快）、裹暖，并记录出生时间。",
+     "hard": true
+    },
+    {
+     "en": "Bulb syringe, only if the airway is obstructed: squeeze the bulb BEFORE inserting the tip, release slowly in the mouth then nostrils, expel the contents, repeat as needed.",
+     "zh": "球形吸引器只在气道有堵塞时用：先捏瘪再放进口中，缓慢松手回吸，先口后鼻，甩净内容物后按需重复。",
+     "hard": true
+    },
+    {
+     "en": "Apgar scores five items - heart rate, respiratory effort, muscle tone, reflex irritability, colour - 0 to 2 points each, at 1 and at 5 minutes. 7 to 10 is vigorous; 4 to 6 is moderately depressed and needs resuscitation. Resuscitation decisions never wait for a score: they run on breathing, heart rate, and colour at birth.",
+     "zh": "Apgar 评五项——心率、呼吸力度、肌张力、反射兴奋性、肤色——每项 0–2 分，出生后 1 分钟和 5 分钟各评一次。7–10 分为健康活跃；4–6 分为中度抑制、需复苏。但复苏与否从不等评分：看的是出生当下的呼吸、心率和肤色。",
+     "hard": true
+    },
+    {
+     "en": "Cord care: after pulsation stops, clamp about 10 cm from the navel, place a second clamp 5 cm beyond, cut between. Waiting 60 to 120 seconds before clamping benefits the newborn - especially preterm - but any need for resuscitation overrides the wait. Inspect both cut ends; oozing on the newborn side gets another clamp proximal to the first.",
+     "zh": "断脐：搏动停止后，第一把夹在距脐约 10 cm 处，第二把再隔 5 cm，中间剪断。等 60–120 秒再夹对新生儿有利（早产儿尤其），但一旦需要复苏就不等了。检查两侧断端；婴儿侧渗血就在原夹近端再加一把。",
+     "hard": true
+    },
+    {
+     "en": "Placental separation announces itself: contractions return, the uterus rises and firms, the cord lengthens, blood gushes. Have her bear down, hold and gently twist the placenta so the membranes peel off whole, massage the uterus - and never, ever pull on the cord. Examine the placenta for missing pieces (retained fragments keep bleeding), bag it, and bring it to hospital.",
+     "zh": "胎盘剥离有信号：宫缩重来、子宫上升变硬、脐带外露段变长、一股血涌出。让产妇用力，双手托住胎盘轻轻旋转让胎膜完整剥脱，按摩子宫——脐带永远不许拉。检查胎盘是否完整（残留碎块会持续出血），装袋随车送院。",
+     "hard": true
+    },
+    {
+     "en": "After delivery: sanitary pad at the vaginal opening, pressure on any bleeding perineal tears, blankets against hypothermia, close watch on mother for hemorrhage, seizures, or breathing trouble, and on the newborn for cardiopulmonary distress. Putting the baby to the breast triggers oxytocin release, contracting the uterus and cutting bleeding.",
+     "zh": "产后：阴道口放产垫，会阴撕裂出血处直接按压，盖毯防失温，紧盯产妇有无大出血、抽搐或呼吸困难，同时盯新生儿的心肺状况。让婴儿吸吮乳头会促发催产素分泌，帮子宫收缩、减少出血。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Emergency Pharmacology in Pregnancy",
+   "titleZh": "妊娠期急救用药",
+   "points": [
+    {
+     "en": "Pregnancy rewires pharmacokinetics: hepatic metabolism and renal excretion speed up (IV drugs clear faster), the distribution volume grows (doses may need to rise), and gastric absorption slows (oral drugs act late). Fetal concerns are secondary when the mother's life is at stake.",
+     "zh": "妊娠改写药代动力学：肝代谢和肾排泄加快（静脉药清除更快）、分布容积变大（可能需要更大剂量）、胃吸收变慢（口服药起效更迟）。母亲有生命危险时，胎儿用药顾虑退居其次。",
+     "hard": true
+    },
+    {
+     "en": "Magnesium sulphate, a CNS depressant, is the anchor drug for eclampsia and may be infused in preeclampsia to prevent seizures. Push it slowly: rapid infusion invites respiratory depression, hypotension, and circulatory collapse. For the IM route, split the total dose equally into two syringes and inject at two separate sites.",
+     "zh": "硫酸镁属中枢抑制剂，是子痫的核心用药，子痫前期也可输注预防抽搐。必须慢推：快了会招来呼吸抑制、低血压甚至循环衰竭。走肌注时把总量对半分进两支注射器，分两个部位注射。",
+     "hard": true
+    },
+    {
+     "en": "Calcium chloride (or gluconate) is the antidote when magnesium causes respiratory depression: slow IV push over 10 minutes, repeatable at 10-minute intervals per protocol. It can itself trigger bradycardia, dysrhythmias, or arrest.",
+     "zh": "氯化钙（或葡萄糖酸钙）是硫酸镁致呼吸抑制的解毒剂：10 分钟缓慢静推，按协议可每 10 分钟重复。它本身也可能引起心动过缓、心律失常甚至骤停。",
+     "hard": true
+    },
+    {
+     "en": "Benzodiazepines are the fallback when eclamptic seizures resist magnesium sulphate; watch for respiratory depression and hypotension, and follow local protocol on agent and dose.",
+     "zh": "苯二氮卓类是子痫抽搐对硫酸镁无反应时的后备；警惕呼吸抑制和低血压，用哪种、用多少遵当地协议。",
+     "hard": true
+    },
+    {
+     "en": "Diphenhydramine 25 to 50 mg IV doubles as sedative and antiemetic for hyperemesis; ondansetron is the alternative, but its QT-prolonging potential means continuous ECG monitoring when given in pregnancy.",
+     "zh": "苯海拉明 25–50 mg 静注兼具镇静与止吐作用，可用于妊娠剧吐；昂丹司琼是替代选项，但它可能延长 QT，孕妇用药时要持续心电监护。",
+     "hard": true
+    },
+    {
+     "en": "Oxytocin triggers uterine contraction. Prehospital, it is reserved for severe postpartum bleeding, and only after every product of conception - including any additional fetus - is out. Dose: 10 units IM, then 20 to 40 units in 1,000 mL normal saline as an infusion. Overdose can cause uterine rupture, hypertension, seizures, or coma.",
+     "zh": "催产素促发宫缩。院前只用于严重产后出血，且必须等所有妊娠产物——包括可能的第二个胎儿——全部娩出之后。剂量：10 单位肌注，随后 20–40 单位加入 1,000 mL 生理盐水静滴。过量可致子宫破裂、高血压、抽搐或昏迷。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Abnormal Deliveries",
+   "titleZh": "异常分娩",
+   "points": [
+    {
+     "en": "Shoulder dystocia: the shoulders outgrow the head and the anterior shoulder jams behind the pubic symphysis - the head delivers then retracts ('turtling'). The fetus cannot breathe with its chest still inside, the cord may be compressed, and the classic newborn injury is brachial plexus damage.",
+     "zh": "肩难产：胎肩比胎头宽，前肩卡在耻骨联合后——胎头娩出后又缩回（俗称缩头龟征）。胸廓还在产道内无法呼吸，脐带可能被压，新生儿典型损伤是臂丛神经损害。",
+     "hard": true
+    },
+    {
+     "en": "Shoulder dystocia sequence: McRoberts manoeuvre (knees drawn to abdomen flattens the lumbar spine and widens the pelvis) plus firm open-hand suprapubic pressure, then try to deliver; if stuck, roll her to all fours and let gravity work; still stuck - 100% oxygen for the mother, maintain what airway the newborn has, transport immediately.",
+     "zh": "肩难产处理顺序：McRoberts 手法（双膝抱向腹部拉平腰椎、扩大骨盆）加耻骨上方掌根用力下压，再试娩出；不行就翻成手膝跪位借重力；还不行——给母亲纯氧、尽量维持新生儿气道、立即转运。",
+     "hard": true
+    },
+    {
+     "en": "Breech presentation - buttocks or feet first - occurs in 4% of deliveries, more often preterm. The hospital is the right delivery room; in the field you often discover it only at crowning, when it is too late to move.",
+     "zh": "臀位——臀或足先露——占分娩的 4%，早产时更常见。臀位理应在医院生；现场往往到着冠才发现不是头，那时已来不及转运。",
+     "hard": true
+    },
+    {
+     "en": "Breech assist: buttocks at the bed edge, legs flexed; let buttocks and trunk deliver on their own with zero pulling; support the body and let it hang slightly to draw the head down. When the hairline shows at the nape below the symphysis, grasp the ankles and lift toward the mother's abdomen - the head should follow.",
+     "zh": "臀位助产：臀部移到床沿、双腿屈曲；臀和躯干完全靠宫缩自行娩出、一点不拉；托住胎体让它略微下垂，借自重把胎头带下来。看到发际线在耻骨联合下方露出时，握住脚踝向母亲腹侧上抬——胎头应随之娩出。",
+     "hard": true
+    },
+    {
+     "en": "Breech with the head stuck over 3 minutes = suffocation risk: gloved hand in, palm to the baby's face, index and middle fingers forming a V on either side of the nose, push the vaginal wall away to make an airway, other hand flexing the occiput forward (modified Mauriceau manoeuvre). If the head still will not come 3 minutes after the airway is made, transport urgently with the mother's hips elevated, keeping the airway open en route.",
+     "zh": "臀位胎头超过 3 分钟不出 = 窒息风险：戴手套的手伸入，掌心对胎儿面部，食指中指在鼻两侧摆成 V 形，撑开阴道壁给出呼吸空间，另一手中指按后枕使胎头前屈（改良 Mauriceau 手法）。建立呼吸空间后再过 3 分钟胎头仍不出，垫高产妇臀部紧急转运，途中一直保住这个空间。",
+     "hard": true
+    },
+    {
+     "en": "Footling breech, transverse lie (a hand may present through the vagina), and face or brow presentations are not field deliveries - nearly all need cesarean section. Rapid transport is the treatment.",
+     "zh": "足先露、横位（可能一只手先从阴道伸出）以及颜面位、额先露都不是现场能接生的——几乎全都要剖宫产。处置就是快速转运。",
+     "hard": true
+    },
+    {
+     "en": "Prolapsed cord - the cord slips out ahead of the fetus - complicates 1% to 3% of deliveries, favoured whenever the presenting part fails to fill the pelvic brim: prematurity, multiples, abnormal presentation. Every contraction crushes the cord against the pelvis and strangles the fetal oxygen supply.",
+     "zh": "脐带脱垂——脐带抢在胎儿前面滑出——见于 1%–3% 的分娩，凡先露部填不满骨盆入口就容易发生：早产、多胎、异常胎位。之后每次宫缩都会把脐带压在骨盆上，掐断胎儿的供氧。",
+     "hard": true
+    },
+    {
+     "en": "Prolapsed cord response: supine with hips elevated on pillows, 100% oxygen, coach her to pant through contractions, then two gloved fingers push the presenting part - never the cord - off the cord and hold it off the whole way to hospital, while your partner wraps the exposed cord in saline-moistened dressings.",
+     "zh": "脐带脱垂处置：仰卧、枕头垫高臀部、纯氧、教产妇宫缩时喘气不用力；两根戴手套的手指把先露部——绝不是脐带——顶离脐带，并且一路顶到医院不松手；同伴用生理盐水浸湿的敷料包住外露脐带。",
+     "hard": true
+    },
+    {
+     "en": "Preterm labour: tocolysis (indomethacin and nitroglycerin are studied examples) buys time to reach the right hospital and to give antenatal corticosteroids, which are what actually blunt the complications of prematurity.",
+     "zh": "早产临产：宫缩抑制（研究过的药如吲哚美辛、硝酸甘油）是为了争取时间——送到合适的医院、用上产前糖皮质激素，后者才是真正减少早产并发症的干预。",
+     "hard": true
+    },
+    {
+     "en": "Any newborn under 37 weeks or under 2.5 kg gets premie care: dry thoroughly, foil bunting head to toe, blanket, onto the mother's chest, ambulance heated ('comfortable for you is too cold for the premie'); bulb-syringe airway care; guard every drop of cord blood and reclamp any ooze; oxygen only by tent above the head at under 4 L/min, never blasted at the eyes; gown, mask, and distance against infection.",
+     "zh": "凡不足 37 周或体重不足 2.5 kg 的新生儿都按早产儿照护：彻底擦干、锡箔襁褓从头包到脚、再盖毯、放到母亲胸口，车厢调暖（你觉得舒适的温度对早产儿就是冷）；用球形吸引器护理气道；脐带一滴血都不能漏、渗血就再加夹；给氧只用头上方氧帐、流量低于 4 L/min，绝不能对着眼睛吹；穿隔离衣、戴口罩、隔开旁人防感染。",
+     "hard": true
+    },
+    {
+     "en": "Multiple gestation runs about 3% of pregnancies. Suspect an undiagnosed twin when the first newborn is small or the abdomen stays big. Clamp and cut the first cord before the next birth (twins may share a placenta); contractions restart in 5 to 10 minutes and the second twin usually arrives within 30 to 45 minutes - time enough to transport if you choose; label the firstborn Baby A, record separate birth times, and treat both like premies.",
+     "zh": "多胎约占妊娠的 3%。第一个新生儿偏小或产后腹部依旧很大，要怀疑还有一个。第二个出生前先把第一条脐带夹好剪断（双胎可能共用胎盘）；宫缩会在 5–10 分钟内重来，第二胎通常 30–45 分钟内娩出——想转运还来得及；给头一个系上标记记作 Baby A，出生时间分开记录，两个都按早产儿护理。",
+     "hard": true
+    },
+    {
+     "en": "Intrauterine fetal death runs about 1 in 200 pregnancies. Attempt resuscitation on every newborn unless death is obvious (putrefaction); a normal-appearing newborn in arrest from the birth process gets the full effort. Expect to need every professional and emotional skill you have with the parents.",
+     "zh": "宫内死胎约见于 1/200 的妊娠。除非死亡确凿（已有腐败征象），每个新生儿都要尝试复苏；外观正常、因产程发生心肺骤停的新生儿必须全力抢救。同时准备好用尽你全部的专业与情感支持能力面对父母。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Complications of Labour",
+   "titleZh": "产程并发症",
+   "points": [
+    {
+     "en": "Read the amniotic fluid: clear is normal; a yellow tint means meconium passed a while ago; greenish-black fluid, especially with particles, means fresh meconium and real danger. You cannot know until the sac breaks, so always ask about colour and odour.",
+     "zh": "看羊水下判断：清亮为正常；发黄说明胎粪排出已有一段时间；绿黑色——尤其带颗粒——是新排的胎粪，情况危险。破水前无从得知，所以永远要问羊水颜色和气味。",
+     "hard": true
+    },
+    {
+     "en": "Meconium plan: suction the hypopharynx aggressively the moment the head appears (suction trap or meconium aspirator if available). Tracheal suction is reserved for thick meconium with a NONvigorous neonate, done before drying and stimulation; routine oro- and nasopharyngeal suction on the perineum for meconium-stained fluid is no longer recommended.",
+     "zh": "胎粪预案：胎头一露出就用力抽吸下咽部（有吸引收集器或胎粪吸引器就用上）。气管内吸引只留给「稠胎粪 + 无活力新生儿」，且要在擦干和刺激之前做；对胎粪污染羊水在会阴处做常规口鼻咽吸引的做法已被取消。",
+     "hard": true
+    },
+    {
+     "en": "Supine hypotensive syndrome: the gravid uterus flattens the inferior vena cava; 3 to 7 minutes of compression brings nausea, dizziness, tachycardia, and air hunger, sliding toward syncope, maternal hypotension, and placental hypoperfusion. Fix: left lateral decubitus, IV fluids if hypovolemic, monitor - and remember the definitive cure is delivery.",
+     "zh": "仰卧位低血压综合征：妊娠子宫压扁下腔静脉；压迫 3–7 分钟就会出现恶心、头晕、心悸和憋闷感，进而晕厥、母体低血压和胎盘低灌注。处理：左侧卧位，有低血容量就补液、持续监护——记住根治手段是分娩。",
+     "hard": true
+    },
+    {
+     "en": "Uterine rupture in labour targets grand multiparas and scarred uteri (prior cesarean). The tell: contractions that were fierce and painful abruptly weaken or stop, with weakness, dizziness, thirst, and mounting shock signs - while vaginal bleeding may be minimal or absent.",
+     "zh": "产程中的子宫破裂偏爱多产妇和有瘢痕的子宫（剖宫产史）。识别线索：原本又强又痛的宫缩突然减弱或消失，产妇诉乏力、头晕、口渴，休克征象步步逼近——而阴道出血可以很少甚至没有。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Postpartum Complications",
+   "titleZh": "产后并发症",
+   "points": [
+    {
+     "en": "Uterine inversion - the uterus turns inside-out - strikes about 1 in 2,000 pregnancies, almost always from mismanaged third stage: yanking the cord or crushing the fundus. Prolapsed and total inversions are the forms you can see; pain is severe and hypovolemic shock builds fast.",
+     "zh": "子宫内翻——子宫整个翻出来——约见于 1/2,000 次妊娠，几乎都是第三产程处理失当造成：猛拉脐带或粗暴按压宫底。院前能辨认的是脱垂型和完全型；疼痛剧烈，低血容量休克来得很快。",
+     "hard": true
+    },
+    {
+     "en": "Inversion management: recumbent, 100% oxygen, two IV normal saline lines with an initial 250 to 500 mL bolus titrated to pressure; leave an attached placenta alone; make exactly ONE attempt to replace the uterus (fingertips and palm pushing the fundus up through the vaginal canal); if it fails, moist sterile dressings over everything and rapid transport; oxytocin 10 units IM per protocol against exsanguinating bleeding.",
+     "zh": "内翻处置：平卧、纯氧、两条生理盐水通路先推 250–500 mL 并按血压滴定；胎盘还连着就绝不剥离；只允许一次复位尝试（指尖加掌心把宫底顺阴道推回去）；失败就用湿无菌敷料盖住全部外露组织、快速转运；按协议给催产素 10 单位肌注对抗大出血。",
+     "hard": true
+    },
+    {
+     "en": "Postpartum hemorrhage = more than 500 mL in the first 24 hours after birth; normal third-stage loss averages about 150 mL.",
+     "zh": "产后出血 = 产后 24 小时内失血超过 500 mL；正常第三产程平均失血约 150 mL。",
+     "hard": true
+    },
+    {
+     "en": "PPH causes cluster around a uterus that cannot clamp down: atony, exhaustion after prolonged labour or multiples, retained products, grand-multipara fibrosis, the overstretched multiple-pregnancy uterus, a previa implantation site, a full bladder - plus tears, and DIC burning through clotting factors.",
+     "zh": "产后出血的原因绕着「子宫收不紧」转：宫缩乏力、产程过长或多胎后的疲惫子宫、妊娠物残留、多产后肌纤维被纤维组织替代、多胎撑到过度的子宫、前置胎盘着床部位、胀满的膀胱——再加上产道撕裂和耗尽凝血因子的 DIC。",
+     "hard": true
+    },
+    {
+     "en": "Field PPH bundle: continuous circular fundal massage; put the baby to the breast; oxytocin 20 units in 1,000 mL at 250 mL/h per protocol; second large-bore IV running normal saline wide open; notify and transport without delay; a Foley to empty the bladder if qualified and time allows; direct pressure with cold packs for perineal tears. Never examine internally, never pack the vagina.",
+     "zh": "现场产后出血组合拳：环形按摩宫底不停手；让婴儿吸吮乳头；按协议催产素 20 单位加入 1,000 mL、以 250 mL/h 滴注；第二条大口径通路生理盐水全速；提前通报、立即转运；有资质且来得及就置 Foley 导尿排空膀胱；会阴撕裂直接按压、可加冰袋。绝不做阴道内检，绝不填塞阴道。",
+     "hard": true
+    },
+    {
+     "en": "The WOMAN trial showed tranexamic acid cuts maternal deaths from postpartum hemorrhage; it has not yet entered SOGC guidelines, but early prehospital TXA for PPH may become standard.",
+     "zh": "WOMAN 试验证明氨甲环酸能降低产后出血的孕产妇死亡；它还没写进 SOGC 指南，但院前早期用 TXA 治产后出血可能成为未来标准。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary embolism is among the commonest killers in childbirth and postpartum: pelvic clots, DVT, amniotic fluid, even water or air after a water birth. Sudden postpartum dyspnea, tachycardia, sharp chest pain, syncope, or hypotension with an unremarkable exam = PE until proven otherwise.",
+     "zh": "肺栓塞是分娩期和产后最常见的死因之一：盆腔血栓、深静脉血栓、羊水栓塞，水中分娩后甚至有水或空气入血。产后突发呼吸困难、心动过速、锐性胸痛、晕厥或低血压而查体无著 = 先按肺栓塞对待。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Trauma in Pregnancy and Maternal Cardiac Arrest",
+   "titleZh": "妊娠期创伤与孕产妇心搏骤停",
+   "points": [
+    {
+     "en": "Trauma is the leading cause of maternal death; 6% to 8% of pregnant women sustain some trauma, mostly in the last trimester. Top mechanisms: motor vehicle collisions, falls, domestic abuse - which climbs during pregnancy, so keep your suspicion up - and penetrating wounds.",
+     "zh": "创伤是孕产妇死亡的首位原因；6%–8% 的孕妇会经历创伤，多在孕晚期。主要机制：车祸、跌倒、家庭暴力——孕期家暴发生率上升，要保持警觉——以及穿透伤。",
+     "hard": true
+    },
+    {
+     "en": "Anatomy shifts the injury map: first trimester, the uterus hides safely in the bony pelvis; later it rises into the abdomen and takes blunt and penetrating hits - while shielding the mother's other organs, which is why penetrating trauma often spares the mother and injures the fetus. From the second trimester the bladder rides up out of the pelvis and becomes vulnerable, and the maximally stretched peritoneum can mute peritoneal signs of serious bleeding.",
+     "zh": "解剖改变重画了受伤地图：早孕期子宫安全藏在骨盆里；之后升入腹腔，直面钝性伤和穿透伤——同时替母亲挡住其他脏器，所以穿透伤常常母亲预后好、胎儿遭殃。中孕期起膀胱被顶出骨盆、变得易伤，而被撑到极限的腹膜会掩盖严重出血的腹膜刺激征。",
+     "hard": true
+    },
+    {
+     "en": "Seat belts, taught right: lap belt UNDER the abdomen, across the iliac crests and pubic symphysis; shoulder strap between the breasts. A belt found riding over the uterine dome after a crash should spike your suspicion of internal injury - lap-belt compression of the uterus raises the risk of uterine damage, and deceleration can shear off the placenta or rupture the uterus.",
+     "zh": "正确的安全带教学：腰带压在腹部以下、跨过髂嵴和耻骨联合；肩带走两乳之间。车祸后发现腰带勒在宫底上方，内伤怀疑指数要立刻拉满——腰带压迫子宫会增加子宫损伤风险，减速力还能撕脱胎盘或撕裂子宫。",
+     "hard": true
+    },
+    {
+     "en": "The vital-sign trap: resting pulse runs 15 to 20 beats/min above baseline (up to about 100 by late second trimester), so tachycardia is hard to read; BP may hold until roughly 40% of volume is gone; pelvic blood flow is tenfold, so pelvic fracture can exsanguinate; and a respiratory rate under 20 breaths/min counts as inadequate in a pregnant trauma patient.",
+     "zh": "生命体征陷阱：静息心率比孕前高 15–20 次/分（中孕末可到 100 左右），心动过速难以解读；失血约 40% 之前血压都可能撑住；盆腔血流是常人的 10 倍，骨盆骨折可以流干；孕妇创伤患者呼吸频率低于 20 次/分就算通气不足。",
+     "hard": true
+    },
+    {
+     "en": "Once the mother shows overt shock, fetal circulation is already sacrificed - expect 70% to 80% fetal mortality. The fetus can be in shock behind normal maternal vitals, so start aggressive fluid resuscitation early; every gain in maternal perfusion is a gain for the fetus.",
+     "zh": "母亲一旦表现出明显休克，胎儿循环早已被牺牲——胎儿死亡率可达 70%–80%。母体生命体征正常时胎儿可能已经休克，所以要早、要积极地液体复苏；母体灌注每改善一分，胎儿就多一分生机。",
+     "hard": true
+    },
+    {
+     "en": "Airway and breathing: slowed digestion plus uterine pressure means a perpetually full stomach - aspiration risk is dramatic, so intubate the unconscious pregnant patient early with cricoid pressure. Her oxygen needs run 10% to 20% higher, the elevated diaphragm makes her harder to ventilate, and assisted ventilation needs a higher minute volume than usual.",
+     "zh": "气道与呼吸：消化变慢加子宫顶压等于胃永远是满的——误吸风险巨大，昏迷孕妇要早插管并加环状软骨压迫。她的需氧量比常人高 10%–20%，被顶高的膈肌让通气更费力，辅助通气要给出比平时更大的分钟通气量。",
+     "hard": true
+    },
+    {
+     "en": "Transport position: left lateral decubitus. Spinal precautions? Tilt the whole backboard 30 degrees left with wedges. Forced supine? Elevate the right hip about 15 cm. In arrest, assign someone to manually displace the uterus leftward.",
+     "zh": "转运体位：左侧卧位。需要脊柱防护？整块脊柱板用垫子左倾 30°。不得不平卧？右髋垫高约 15 cm。心搏骤停时专人把子宫向左手动推移。",
+     "hard": true
+    },
+    {
+     "en": "The best window on the fetus after trauma is fetal heart rate: 120 to 160 is normal, below 120 is a dire emergency - but a normal rate is no guarantee, since even minor deceleration forces can hurt the fetus. Every pregnant crash victim goes to hospital, however trivial her own injuries look.",
+     "zh": "创伤后判断胎儿状况最好的窗口是胎心率：120–160 正常，低于 120 是十万火急——但胎心正常不等于平安，轻微的减速伤都可能伤到胎儿。所有孕妇车祸伤员一律送院评估，哪怕她自己看着毫发无损。",
+     "hard": true
+    },
+    {
+     "en": "Maternal arrest: standard CPR and resuscitation plus manual left uterine displacement. A perimortem cesarean within 5 minutes of arrest gives a term fetus about a 70% chance of survival - so even when the mother is beyond saving, high-quality CPR and ventilation may keep the fetus alive to reach the scalpel. Rapid transport with early notification.",
+     "zh": "孕产妇骤停：标准 CPR 和复苏流程，外加持续把子宫向左手推。骤停 5 分钟内完成的围死期剖宫产能给足月胎儿约 70% 的生存机会——所以即使母亲已无可挽救，高质量按压和通气也可能把胎儿活着送上手术台。快速转运、提前通报。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Term gestation",
+   "itemZh": "足月孕程",
+   "value": "38 周（自受孕）= 40 周（自末次月经）；预产期 = 末次月经 +1 年 −3 月 +7 天"
+  },
+  {
+   "itemEn": "Fundal height landmarks",
+   "itemZh": "宫底高度标志",
+   "value": "耻骨联合上缘 12–16 周；平脐 20 周（约 20 cm）；达剑突为足月；20 周后每周 +1 cm"
+  },
+  {
+   "itemEn": "Maternal blood volume at term",
+   "itemZh": "足月母体血容量",
+   "value": "+40%–50%；子宫容纳全身血量 15%–16%"
+  },
+  {
+   "itemEn": "Tolerated delivery blood loss",
+   "itemZh": "分娩可耐受失血",
+   "value": "顺产 ≤500 mL；剖宫产 ≤1,000 mL"
+  },
+  {
+   "itemEn": "Cardiac changes",
+   "itemZh": "心脏改变",
+   "value": "心排血量 +40%（约 22 周达峰，足月回落至 +20%）；心率 +15–20 次/分"
+  },
+  {
+   "itemEn": "Respiratory changes",
+   "itemZh": "呼吸改变",
+   "value": "膈肌上抬 4 cm；潮气量 +40%；分钟通气量 +50%；PaCO2 −5 mmHg；耗氧 +20%–40%"
+  },
+  {
+   "itemEn": "Stages of labour",
+   "itemZh": "产程时长",
+   "value": "第一程：初产 8–12 h / 经产 6–8 h；第二程：1–2 h / 30 min；第三程：均为 5–60 min"
+  },
+  {
+   "itemEn": "Deliver-or-transport line",
+   "itemZh": "接生还是转运",
+   "value": "宫缩间隔 >5 min 通常可转运；<2 min（经产妇尤甚）、便意或着冠 = 现场接生"
+  },
+  {
+   "itemEn": "Fetal heart rate",
+   "itemZh": "胎心率",
+   "value": "正常 120–160 次/分；<120 = 胎儿窘迫"
+  },
+  {
+   "itemEn": "Hypertension thresholds",
+   "itemZh": "妊娠高血压阈值",
+   "value": "慢性高血压 ≥140/90（孕 20 周前）；DBP >110 卒中高危；重度子痫前期 SBP >160 或 DBP >105"
+  },
+  {
+   "itemEn": "Miscarriage",
+   "itemZh": "流产",
+   "value": "定义 <20 周（部分定义至 28 周）；自然流产约占妊娠的 1/5"
+  },
+  {
+   "itemEn": "Third-trimester hemorrhage epidemiology",
+   "itemZh": "孕晚期出血流行病学",
+   "value": "胎盘早剥 1/100 足月妊娠（高血压致病占 44%）；前置胎盘 5/1,000 分娩（>30 岁风险 ×3）"
+  },
+  {
+   "itemEn": "Hidden blood loss ceiling",
+   "itemZh": "隐匿失血上限",
+   "value": "孕妇失血达循环血量 40% 才出现明显低血容量征象"
+  },
+  {
+   "itemEn": "Apgar score",
+   "itemZh": "Apgar 评分",
+   "value": "5 项（心率/呼吸/肌张力/反射/肤色）各 0–2 分，1 与 5 分钟各评一次；7–10 正常；4–6 中度抑制需复苏"
+  },
+  {
+   "itemEn": "Cord clamping",
+   "itemZh": "断脐参数",
+   "value": "搏动停止后：距脐 10 cm 夹第一把、再隔 5 cm 夹第二把、中间剪断；理想等待 60–120 秒（需复苏则不等）"
+  },
+  {
+   "itemEn": "Placental delivery",
+   "itemZh": "胎盘娩出",
+   "value": "通常产后 20–30 分钟内；超过 30 分钟不等，途中娩出"
+  },
+  {
+   "itemEn": "Abnormal delivery rates",
+   "itemZh": "异常分娩发生率",
+   "value": "臀位 4%；脐带脱垂 1%–3%；多胎 3%；宫内死胎 1/200；子宫内翻 1/2,000"
+  },
+  {
+   "itemEn": "Breech head clock",
+   "itemZh": "臀位胎头时限",
+   "value": "胎头 3 分钟不出 → V 形手指建立呼吸空间；再 3 分钟不出 → 垫高臀部紧急转运"
+  },
+  {
+   "itemEn": "Preterm thresholds",
+   "itemZh": "早产界线",
+   "value": "<37 周或 <2.5 kg 按早产儿照护；氧帐流量 <4 L/min"
+  },
+  {
+   "itemEn": "Twin timing",
+   "itemZh": "双胎间隔",
+   "value": "第一胎后 5–10 分钟宫缩重启；第二胎通常 30–45 分钟内娩出"
+  },
+  {
+   "itemEn": "Postpartum hemorrhage",
+   "itemZh": "产后出血",
+   "value": "产后 24 h 失血 >500 mL；正常第三产程平均失血约 150 mL"
+  },
+  {
+   "itemEn": "Oxytocin for PPH",
+   "itemZh": "催产素（产后出血）",
+   "value": "10 单位 IM；或 20 单位入 1,000 mL 生理盐水以 250 mL/h 滴注（须协议允许，确认无第二胎）"
+  },
+  {
+   "itemEn": "Supine hypotension onset",
+   "itemZh": "仰卧位低血压",
+   "value": "下腔静脉受压 3–7 分钟后出现症状；孕 20 周起即有风险"
+  },
+  {
+   "itemEn": "Trauma in pregnancy",
+   "itemZh": "妊娠创伤",
+   "value": "6%–8% 孕妇经历创伤；母亲显性休克时胎儿死亡率 70%–80%；骤停 5 分钟内围死期剖宫产→足月胎儿存活率约 70%"
+  },
+  {
+   "itemEn": "Pregnant transport position",
+   "itemZh": "孕妇转运体位",
+   "value": "左侧卧；脊柱板整体左倾 30°；被迫平卧则右髋垫高约 15 cm"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Blood pressure lies to you in pregnancy: the expanded volume hides major loss until late. Treat the mechanism, reassess in series, and never wait for hypotension to call it shock.",
+   "zh": "孕期血压会骗人：扩容后的循环把大失血一直藏到晚期。按机制处置、连续复评，绝不等血压掉了才承认休克。"
+  },
+  {
+   "en": "A transverse scar above the pubic hair line means a prior cesarean. Ask whether she has any reason she cannot deliver vaginally, report it to medical control, and remember a VBAC attempt carries uterine rupture risk.",
+   "zh": "耻骨上缘的横行瘢痕意味着剖宫产史。问她是否有不能顺产的原因、上报医疗指导，并记住尝试 VBAC 有子宫破裂风险。"
+  },
+  {
+   "en": "Your calm is the strongest sedative on scene. Deliveries run on the emotions in the room, and everyone - patient, partner, bystanders - takes their cue from you.",
+   "zh": "你的镇定是现场最强的镇静剂。接生现场被情绪驱动，产妇、伴侣和围观者都在看你的脸色行事。"
+  },
+  {
+   "en": "If she wants to deliver standing, kneeling, side-lying, or propped up - do not argue. Adapt to any position she prefers, as long as it endangers nobody.",
+   "zh": "她想站着生、跪着生、侧躺或半坐——别争。只要不危及任何人，就顺着她最舒服的体位调整你的操作。"
+  },
+  {
+   "en": "Any baby not coming head first gets delivered at the hospital. Footling breech, transverse lie, face or brow: rapid transport is the delivery plan.",
+   "zh": "凡不是头先出来的孩子都该在医院生。足先露、横位、颜面位或额先露：转运本身就是接生方案。"
+  },
+  {
+   "en": "Third-trimester vaginal bleeding is a dire emergency until the hospital proves otherwise - and no matter the cause, you never pull on an umbilical cord to hurry a placenta.",
+   "zh": "孕晚期阴道出血一律按危急重症对待，直到医院证明不是——而且无论什么情况，都不许靠拉脐带催胎盘。"
+  },
+  {
+   "en": "Coach seat-belt wearing at every teachable moment: lap belt under the bump across the iliac crests and symphysis, shoulder strap between the breasts. A belt across the dome turns a survivable crash into an abruption.",
+   "zh": "逮着机会就教安全带系法：腰带压在孕肚下方、跨髂嵴和耻骨联合，肩带走两乳之间。勒在宫底上的腰带能把一场本可无恙的车祸变成胎盘早剥。"
+  },
+  {
+   "en": "What is good for the mother is good for the fetus - and every pregnant woman in a collision goes to hospital, even when her own injuries look trivial.",
+   "zh": "对母亲好就是对胎儿好——出过车祸的孕妇一律送院，哪怕她自己看上去毫发无损。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "False versus true labour: pain that analgesics abolish is probably Braxton Hicks. True labour is regular, accelerating, intensifying, and comes with cervical effacement and dilation - drugs do not switch it off.",
+   "zh": "假临产 vs 真临产：止痛药能压掉的痛多半是假性宫缩。真临产规律、渐密、渐强，伴宫颈展平和扩张——药压不住。"
+  },
+  {
+   "en": "Apgar is not a resuscitation trigger. The first score lands at 1 minute; a depressed newborn cannot wait that long. Decide on resuscitation from breathing, heart rate, and colour the moment the baby is out; score later.",
+   "zh": "Apgar 不是复苏的发令枪。第一次评分在出生 1 分钟，抑制的新生儿等不了那么久。孩子一出来就凭呼吸、心率、肤色决定要不要复苏；分数以后再打。"
+  },
+  {
+   "en": "Previa versus abruption: painless bright-red bleeding with a soft uterus points to previa; sudden severe pain with a rigid board-like uterus and scanty external blood points to abruption. Either way - no deep palpation, no internal exam.",
+   "zh": "前置胎盘 vs 胎盘早剥：无痛、鲜红、子宫软指向前置胎盘；剧痛、子宫硬如板、外出血反而少指向早剥。无论哪个——不深压、不内检。"
+  },
+  {
+   "en": "Normal maternal vitals do not clear the fetus. Pregnancy raises baseline pulse 15 to 20 and defends BP until 40% volume loss, so the fetus can already be shocked behind textbook-normal numbers.",
+   "zh": "母体生命体征正常不代表胎儿没事。孕期基线心率本来就高 15–20，血压又能撑到失血 40%，所以教科书般正常的数字背后，胎儿可能已经休克。"
+  },
+  {
+   "en": "Blue hands and feet on a newborn are normal (acrocyanosis) as long as the trunk is pink. Central cyanosis is the finding that demands action.",
+   "zh": "新生儿手脚发蓝是正常的（肢端发绀），只要躯干红润就好。要处理的是中心性发绀。"
+  },
+  {
+   "en": "A fetal heart rate identical to the mother's pulse is an echo of the maternal heartbeat. Palpate her pulse while auscultating and move the stethoscope until the two diverge.",
+   "zh": "胎心率和母亲脉搏完全一致时，你听到的是母亲心跳的回声。边听边摸母脉对照，挪动听诊器直到两个频率分开。"
+  },
+  {
+   "en": "The urge to move her bowels is the fetal head on the rectum, not a bathroom problem. Sending a labouring woman to the toilet is how babies get delivered into toilets.",
+   "zh": "便意是胎头压着直肠，不是真要上厕所。放临产产妇去卫生间，孩子就会生在马桶里。"
+  },
+  {
+   "en": "Pregnancy-related does not mean fetus-first. You can only treat the mother directly - her airway, her perfusion - and stabilizing her IS the fetal resuscitation.",
+   "zh": "「和怀孕有关」不等于先看胎儿。你能直接治疗的只有母亲——她的气道、她的灌注——稳住她本身就是在抢救胎儿。"
+  },
+  {
+   "en": "Privacy does not mean asking less. Sensitive topics - bleeding, discharge, passed tissue, pregnancy possibility - need MORE directness, delivered with dignity, not fewer questions.",
+   "zh": "顾及隐私不等于少问。出血、分泌物、排出组织物、有无怀孕可能这些敏感问题恰恰要问得更直接——带着尊重去问，而不是干脆不问。"
+  },
+  {
+   "en": "Do not start oxytocin until you are certain there is no second baby. A twin still inside a contracting, drug-stimulated uterus is a catastrophe.",
+   "zh": "没确认宫内没有第二个孩子之前，绝不启动催产素。药物催缩的子宫里若还有一个双胎，就是灾难。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "G 与 P 的 20 周线",
+   "en": "Gravida counts every conception; Para counts only pregnancies past 20 weeks. G4A3P1 reads: four pregnancies, three lost, one delivered.",
+   "zh": "G（孕次）什么怀孕都算；P（产次）只算过了 20 周的。G4A3P1 读作：怀过 4 次、流了 3 次、生了 1 次。"
+  },
+  {
+   "name": "痛不痛、硬不硬、缩不缩",
+   "en": "Third-trimester bleeds: previa = painless + soft uterus; abruption = severe pain + rigid uterus; rupture = strong contractions that suddenly quit + shock.",
+   "zh": "孕晚期出血三问：前置胎盘=不痛、宫软；胎盘早剥=剧痛、宫硬；子宫破裂=强宫缩突然熄火＋休克。"
+  },
+  {
+   "name": "APGAR 五字诀",
+   "en": "Appearance (colour), Pulse, Grimace (reflex), Activity (tone), Respiration - the five letters of the name spell the five items.",
+   "zh": "Appearance 肤色、Pulse 心率、Grimace 反射、Activity 肌张力、Respiration 呼吸——名字五个字母正好对五个评分项。"
+  },
+  {
+   "name": "10-5 断脐",
+   "en": "First clamp 10 cm from the navel, second clamp 5 cm beyond, cut between. A tight nuchal cord uses the same two-clamps-5-cm-apart geometry.",
+   "zh": "第一把离脐 10 cm，第二把再隔 5 cm，中间剪。绕颈太紧时也是两把相隔 5 cm 剪中间，几何完全一样。"
+  },
+  {
+   "name": "左 30 右 15",
+   "en": "Pregnant transport: backboard tilted 30 degrees LEFT, or right hip elevated 15 cm when supine is forced.",
+   "zh": "孕妇转运：脊柱板向左倾 30°；被迫平卧就把右髋垫高 15 cm。"
+  },
+  {
+   "name": "30-30-30-3:1（BC 新生儿阶梯）",
+   "en": "BC newborn ladder: dry-stimulate-warm 30 s, BVM room air 30 s, BVM 100% oxygen 30 s, then compressions with ventilations at 3:1 until HR tops 60. No AED on a neonate.",
+   "zh": "BC 新生儿阶梯：擦干刺激保暖 30 秒 → BVM 室内空气 30 秒 → BVM 接纯氧 30 秒 → 3:1 按压加通气直到心率过 60。新生儿不用 AED。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A G3P2 with a fast previous labour has contractions 2 minutes apart and says she needs the toilet. Transport or deliver - and on what criteria?",
+   "qZh": "一名 G3P2、上胎产程很快的产妇宫缩 2 分钟一次，说想上厕所。转运还是接生？判据是什么？",
+   "aEn": "Deliver on scene. Contractions under 2 minutes in a multipara plus an urge to move the bowels (fetal head on the rectum) signal imminent birth; check for crowning, which confirms it. Never let her go to the toilet. Transport margin exists only when contractions are more than 5 minutes apart.",
+   "aZh": "现场接生。经产妇宫缩间隔小于 2 分钟，加上便意（胎头压直肠）＝马上要生；查看是否着冠即可确认。绝不让她去厕所。只有宫缩间隔大于 5 分钟才谈得上转运余地。"
+  },
+  {
+   "qEn": "Painless bright-red third-trimester bleeding versus sudden severe abdominal pain with a rigid uterus - what does each suggest, and what changes in your management?",
+   "qZh": "孕晚期无痛鲜红出血 vs 突发剧烈腹痛加板状子宫，各提示什么？处置差别在哪？",
+   "aEn": "Painless bright-red bleeding with a soft uterus suggests placenta previa; severe pain, rigid tender uterus, and shock beyond visible loss suggests abruption. Management is identical - left lateral position, high-flow oxygen, large-bore IV with 250-mL boluses up to 20 mL/kg, rapid transport - the only rule that matters is never palpating deeply or examining internally.",
+   "aZh": "无痛鲜红加子宫软＝前置胎盘；剧痛、子宫硬且压痛、休克与可见出血不成比例＝胎盘早剥。处置完全一样——左侧卧、高流量氧、大口径通路按 250 mL 一组推到 20 mL/kg、快速转运——唯一必须记牢的是不深压、不内检。"
+  },
+  {
+   "qEn": "The newborn is floppy with a heart rate of 90. What are the first two steps of the BC newborn ladder, and how long does each get?",
+   "qZh": "新生儿娩出后松软、心率 90。BC 新生儿阶梯的前两步是什么？各做多久？",
+   "aEn": "Step 1: dry, stimulate, and keep warm for 30 seconds. If the heart rate stays under 100, step 2: ventilate with a BVM on room air for 30 seconds. Escalation continues to BVM with 100% oxygen for 30 seconds, then compressions with ventilations at 3:1 until the rate exceeds 60. Heart rate is checked at the brachial artery or cord stump, and no AED is used.",
+   "aZh": "第一步：擦干、刺激、保暖 30 秒。心率仍低于 100 就进第二步：BVM 室内空气通气 30 秒。再不行依次升级：接纯氧通气 30 秒，然后 3:1 按压加通气直到心率超过 60。心率在肱动脉或脐带根部摸，全程不用 AED。"
+  },
+  {
+   "qEn": "Define postpartum hemorrhage, and list the field measures inside BC PCP scope.",
+   "qZh": "产后出血的定义阈值是什么？BC PCP 范围内的现场处置有哪些？",
+   "aEn": "More than 500 mL in the first 24 hours after birth. Field bundle: continuous fundal massage, breastfeeding to trigger natural oxytocin, direct pressure with pads on perineal tears (pad count as the measure), a second large-bore IV with fluid at 20 mL/kg to a 2-L maximum reassessing every 500 mL, and transport without delay. No internal exam, no vaginal packing; drug options like oxytocin are not in the BC PCP formulary.",
+   "aZh": "产后 24 小时内失血超过 500 mL。现场组合：持续按摩宫底、让婴儿吸吮促内源性催产素、会阴撕裂用产垫直接按压（以产垫数量估失血）、第二条大口径通路按 20 mL/kg、上限 2 L、每 500 mL 复评补液，并立即转运。不内检、不填塞；催产素之类药物不在 BC PCP 处方集内。"
+  },
+  {
+   "qEn": "How does supine hypotensive syndrome develop, and how do you position a pregnant patient for transport?",
+   "qZh": "仰卧位低血压是怎么发生的？孕妇转运该怎么摆体位？",
+   "aEn": "From about 20 weeks the gravid uterus compresses the inferior vena cava in the supine position; 3 to 7 minutes of compression drops venous return, then cardiac output and BP, starving the placenta. Transport in left lateral decubitus; with spinal precautions tilt the backboard 30 degrees left; if supine is unavoidable, elevate the right hip about 15 cm.",
+   "aZh": "约 20 周起，仰卧时妊娠子宫压住下腔静脉；压 3–7 分钟回心血量就掉，接着心排量和血压下滑，胎盘跟着断粮。转运用左侧卧位；需脊柱防护就把脊柱板左倾 30°；实在只能平卧，就把右髋垫高约 15 cm。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Deliver on scene vs transport",
+   "topicZh": "现场接生还是转运",
+   "bookEn": "The text frames the decision loosely: contractions over 5 minutes apart usually allow transport; crowning means delivery within minutes.",
+   "bookZh": "教材给的判据较松：宫缩间隔大于 5 分钟通常可转运；着冠意味着几分钟内出生。",
+   "bcEn": "The BC practical exam scores this as a hard verbal decision point: crowning or an involuntary urge to push means you state out loud that delivery happens where you stand. Transporting a crowning patient - or letting her walk to the toilet - is a classic exam failure. After delivery, both patients are reclassified (stable non-RTC unless PPH, boggy uterus, retained placenta, or a newborn still needing resuscitation upgrades the call).",
+   "bcZh": "BC 实操把这题考成硬性口头决策点：一见着冠或不自主向下用力，就要当场说出「就地接生」。转运已着冠的产妇、或放她去厕所，都是经典的挂科动作。分娩后两名患者重新定级（稳定则按非 RTC；产后大出血、宫底松软、胎盘滞留或新生儿仍需复苏则升级）。",
+   "ref": "BC EMALB 考试指南 2026-06 实操评分 + 本站 emd-03 场景"
+  },
+  {
+   "topicEn": "Newborn resuscitation sequence",
+   "topicZh": "新生儿复苏流程",
+   "bookEn": "This chapter handles the newborn with bulb suction, drying, warmth, and blow-by oxygen for central cyanosis, deferring resuscitation detail to the neonatology chapter.",
+   "bookZh": "本章对新生儿的处理是球形吸引、擦干、保暖，中心性发绀给吹拂式给氧，复苏细节留给新生儿章。",
+   "bcEn": "BC tests a fixed four-step ladder for the floppy, apneic, or HR-below-100 newborn: dry-stimulate-warm 30 s; BVM on room air 30 s; BVM with 100% oxygen 30 s; then compressions with ventilations at 3:1 until HR exceeds 60. Neonate CPR is 3:1, no AED ever, and the heart rate is taken at the brachial artery or cord stump.",
+   "bcZh": "BC 考固定的四步阶梯，适用于松软、不呼吸或心率低于 100 的新生儿：擦干刺激保暖 30 秒；BVM 室内空气 30 秒；BVM 接纯氧 30 秒；然后 3:1 按压加通气直到心率超过 60。新生儿 CPR 恒为 3:1、永不用 AED，心率在肱动脉或脐带根部评估。",
+   "ref": "BC EMALB 考试指南 2026-06 p.44「Newborn」"
+  },
+  {
+   "topicEn": "Fluid resuscitation numbers",
+   "topicZh": "液体复苏数字",
+   "bookEn": "The text gives 250-mL boluses up to 20 mL/kg for third-trimester bleeding, and 'wide open' normal saline for postpartum hemorrhage.",
+   "bookZh": "教材对孕晚期出血写的是按 250 mL 一组推注、总量至 20 mL/kg；产后出血则写生理盐水「全速滴注」。",
+   "bcEn": "The BC standard for every hypovolemia scenario is one formula: 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL, targeting a systolic of 90 mm Hg. Quote this version in the exam, not the book's wide-open language.",
+   "bcZh": "BC 对一切低血容量场景只认一个公式：20 mL/kg、上限 2 升、每 500 mL 复评、目标收缩压 90 mmHg。考试答这套数字，别答教材的「全速」。",
+   "ref": "BC EMALB 考试指南 2026-06 p.48/54 + 2025-04-16 修订记录"
+  },
+  {
+   "topicEn": "Obstetric drugs and scope",
+   "topicZh": "产科用药与执业范围",
+   "bookEn": "The chapter treats oxytocin, magnesium sulphate, calcium chloride, and benzodiazepines as paramedic-administered obstetric drugs.",
+   "bookZh": "本章把催产素、硫酸镁、氯化钙和苯二氮卓类写成急救员可给的产科用药。",
+   "bcEn": "None of these exist in the BC EMR/PCP formulary. In BC, postpartum hemorrhage is managed mechanically (fundal massage, breastfeeding, pad pressure) plus fluids; eclampsia gets airway positioning, oxygen, a glucose check (D10W covers seizure NYD), left lateral position, and rapid transport. Learn the book pharmacology for written-exam concepts, but never claim these drugs in a BC scenario.",
+   "bcZh": "这些药没有一个在 BC EMR/PCP 处方集里。BC 的产后出血靠机械手段（按摩宫底、婴儿吸吮、产垫按压）加补液；子痫处理是气道体位、给氧、测血糖（原因不明抽搐在 D10W 指征内）、左侧卧和快速转运。教材药理当笔试概念学，BC 场景里绝不能报这些药。",
+   "ref": "BC EMALB 考试指南 2026-06 药物专论 pp.60–78"
+  },
+  {
+   "topicEn": "TXA and postpartum hemorrhage",
+   "topicZh": "氨甲环酸与产后出血",
+   "bookEn": "The text presents TXA for PPH as promising (WOMAN trial) but not yet standard, a possible future prehospital drug.",
+   "bookZh": "教材把 TXA 治产后出血描述为有前景（WOMAN 试验）但尚未成为标准、未来可能进入院前。",
+   "bcEn": "BC PCPs already carry TXA - 2 g IV push over 1 minute - but the monograph indication is major trauma or shock with ongoing blood loss on the hypovolemia protocol; postpartum hemorrhage appears only under 'Considerations'. Contraindications: over 3 hours from injury, under 12 years, isolated TBI.",
+   "bcZh": "BC 的 PCP 已经带 TXA——2 g 静推、1 分钟推完——但专论指征是重大创伤或持续失血休克、走低血容量协议；产后出血只列在「考量」栏。禁忌：伤后超过 3 小时、12 岁以下、单纯颅脑伤。",
+   "ref": "BC EMALB 考试指南 2026-06 p.78"
+  },
+  {
+   "topicEn": "Antiemetics in pregnancy",
+   "topicZh": "孕期止吐药",
+   "bookEn": "For hyperemesis the text offers dimenhydrinate 10 to 50 mg IV or deep IM (contraindicated with MAO inhibitors) or ondansetron PO/IV per protocol.",
+   "bookZh": "教材对妊娠剧吐给的是茶苯海明 10–50 mg 静注或深部肌注（服 MAO 抑制剂者禁用），或按协议口服/静注昂丹司琼。",
+   "bcEn": "BC doses differ: dimenhydrinate 1 mg/kg to a 50-mg maximum, IV diluted and pushed at 25 mg/min; ondansetron 4 mg PO with a RELATIVE contraindication in the first trimester. BC also directs you to ask Indigenous patients about Long QT syndrome (higher prevalence from a genetic variant) and prefer dimenhydrinate if present.",
+   "bcZh": "BC 剂量不同：茶苯海明按 1 mg/kg、上限 50 mg，静脉给药需稀释、以 25 mg/min 推注；昂丹司琼 4 mg 口服，且孕早期属相对禁忌。BC 还特别要求询问原住民患者有无长 QT 综合征（基因变异致患病率更高），有则改用茶苯海明。",
+   "ref": "BC EMALB 考试指南 2026-06 pp.63/75"
+  },
+  {
+   "topicEn": "Analgesia contraindications in pregnancy",
+   "topicZh": "孕期镇痛禁忌",
+   "bookEn": "The chapter does not cover prehospital analgesic choices for pregnant patients.",
+   "bookZh": "教材本章没有展开孕妇院前镇痛的选择问题。",
+   "bcEn": "BC monographs are explicit: ibuprofen is contraindicated in ALL three trimesters; methoxyflurane (Penthrox) is contraindicated in pregnancy, intended pregnancy, and breastfeeding; ASA lists possible pregnancy as a caution. Entonox carries no pregnancy contraindication and remains the workable option.",
+   "bcZh": "BC 药物专论写得很死：布洛芬孕期三个孕程全禁；甲氧氟烷（Penthrox）妊娠、备孕和哺乳期禁用；ASA 把可能妊娠列为慎用。Entonox 无妊娠禁忌，是可用的选项。",
+   "ref": "BC EMALB 考试指南 2026-06 pp.60/68/71"
+  },
+  {
+   "topicEn": "Cord clamping timing",
+   "topicZh": "断脐时机",
+   "bookEn": "The text recommends keeping the newborn level with the placenta and waiting 60 to 120 seconds before clamping, especially for preterm births.",
+   "bookZh": "教材建议让新生儿与胎盘同高、等 60–120 秒再夹脐，早产儿尤其如此。",
+   "bcEn": "The BC practical model answer clamps and cuts after cord pulsation stops - which in practice lands in the same 1-to-2-minute window, so the two agree. The override is identical in both: any need for resuscitation means clamp immediately and work on the baby.",
+   "bcZh": "BC 实操的标准答案是「脐带搏动停止后」夹剪——实际上就落在同一个 1–2 分钟窗口里，两者不冲突。例外规则也一致：一旦需要复苏就立刻断脐、专心救孩子。",
+   "ref": "BC 实操标准流程 + 本站 emd-03 场景"
+  }
+ ],
+ "sourcePages": "3528-3628"
+}
