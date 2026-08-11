@@ -353,7 +353,7 @@ function toUnits(questions) {
 function flatten(units) { return units.flat(); }
 
 export function samplePcp(bank) {
-  const targets = { A: 8, B: 10, C: 10, D: 6, E: 10, F: 10, G: 6, H: 120 };
+  const targets = { A: 7, B: 9, C: 9, D: 5, E: 9, F: 9, G: 6, H: 126 }; // REV2025 ranges: H must be >=126 (70%); previous H:120 sat below the official floor
   const byArea = {};
   for (const u of toUnits(bank)) (byArea[u[0].cpcfArea || 'H'] ||= []).push(u);
   Object.values(byArea).forEach(shuffleInPlace);
