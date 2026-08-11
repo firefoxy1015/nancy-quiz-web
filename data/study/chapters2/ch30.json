@@ -1,0 +1,1837 @@
+{
+ "id": "ch30",
+ "n": 30,
+ "titleEn": "Cardiovascular Emergencies",
+ "titleZh": "心血管急症",
+ "group": "cardiac",
+ "examWeight": 3,
+ "whyEn": "Cardiac arrest and ACS are the two spines of this giant chapter. The arrest side is pure procedure — 30:2, interruptions under 5 seconds, single shocks, and BC's own 30/40-minute termination clock. The ACS side is where BC's drug rules diverge hardest from the textbook: nitroglycerin's SBP>110 gate, the Viagra/Levitra 24h and Cialis 48h windows, ASA fixed at 160 mg, the Entonox bridge, and no nitroglycerin at all in the BC pulmonary-edema protocol. ECG interpretation beyond rhythm recognition is ACP territory — learn to recognize, not to manage.",
+ "whyZh": "心脏骤停和 ACS 是这个巨章的两条主线。骤停一侧是纯流程——30:2、按压中断小于 5 秒、单次电击、以及 BC 独有的 30/40 分钟终止时钟。ACS 一侧是 BC 用药规则与教材分歧最狠的地方：硝酸甘油 SBP>110 硬闸门、Viagra/Levitra 24 小时与 Cialis 48 小时窗口、ASA 固定 160 mg、Entonox 桥接流程、以及 BC 肺水肿协议里根本没有硝酸甘油。心电判读超出节律识别的部分属于 ACP——学到会认，不必会管。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "4.2.a",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.2.f",
+   "4.3.a",
+   "4.3.b",
+   "4.3.c",
+   "4.3.n",
+   "4.4.a",
+   "4.4.b",
+   "4.4.d",
+   "4.4.e",
+   "4.4.g",
+   "4.4.h",
+   "4.4.i",
+   "4.5.d",
+   "4.5.l",
+   "4.5.m",
+   "5.1.g",
+   "5.1.h",
+   "5.2.a",
+   "5.3.a",
+   "5.3.d",
+   "5.3.e",
+   "5.4.a",
+   "5.5.a",
+   "5.5.c",
+   "5.5.d",
+   "5.5.i",
+   "5.5.j",
+   "5.5.k",
+   "5.5.l",
+   "5.8.a",
+   "5.8.b",
+   "5.8.e",
+   "5.8.h",
+   "6.1.a",
+   "6.3.a",
+   "6.3.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction and Epidemiology",
+   "titleZh": "引言与流行病学",
+   "points": [
+    {
+     "en": "CHD held the number-one spot among Canadian causes of death until cancer overtook it in 2007; worldwide it still kills more people than anything else. Canada logs roughly 159,000 new heart-disease diagnoses and about 33,600 deaths each year.",
+     "zh": "冠心病（CHD）长期是加拿大头号死因，直到 2007 年被癌症超过；在全球它仍是第一杀手。加拿大每年新确诊心脏病约 159,000 人，死亡约 33,600 人。",
+     "hard": true
+    },
+    {
+     "en": "About half of all AMI deaths happen within minutes to hours of symptom onset, before the patient ever reaches hospital — providing early definitive AMI care is literally why the paramedic profession was created over 30 years ago.",
+     "zh": "死于急性心梗的人约一半在症状出现后几分钟到几小时内、还没送到医院就已死亡——「让心梗患者更早获得确定性治疗」正是 30 多年前救护员这个职业诞生的初衷。",
+     "hard": true
+    },
+    {
+     "en": "HSFC figures: CHD accounts for about 30% of adult deaths (one life every 7 minutes); circulatory diseases lead Canadian hospitalizations at 15.4%; the yearly economic cost tops $18 billion.",
+     "zh": "心脏与中风基金会（HSFC）数据：约 30% 的成人死亡由冠心病造成（每 7 分钟夺走一条命）；循环系统疾病占全国住院原因之首（15.4%）；每年经济损失超过 180 亿加元。",
+     "hard": true
+    },
+    {
+     "en": "Family history counts as a formal CHD risk factor when a first-degree male relative developed CHD before age 55, or a female relative before age 65.",
+     "zh": "家族史要算作冠心病危险因素有明确门槛：一级亲属中男性 55 岁前、或女性 65 岁前患冠心病。",
+     "hard": true
+    },
+    {
+     "en": "CHD was long branded a man's disease, yet more women than men die of cardiac events — heart disease is the number-one killer of Canadian women and claims a third of all female deaths.",
+     "zh": "冠心病长期被当成「男人病」，但死于心脏事件的女性其实比男性多——心脏病是加拿大女性的第一死因，占女性死亡的三分之一。"
+    },
+    {
+     "en": "Prevention math the exam likes: 9 in 10 adult Canadians carry at least one modifiable risk factor and 4 in 10 carry three or more; lifestyle change can cut heart-disease and stroke risk by up to 80%, and combined drug-plus-lifestyle therapy in high-risk patients halves heart-attack risk.",
+     "zh": "考试爱考的预防数字：九成加拿大成年人至少有一个可改变的危险因素，四成有三个以上；生活方式干预最多可把心脏病/中风风险降 80%；高危人群药物＋非药物双管齐下，可把心梗风险砍半。",
+     "hard": true
+    },
+    {
+     "en": "Canada still sees about 70,000 AMIs annually with roughly 20% mortality (about 16,000 deaths); that mortality has fallen 5% over the past decade.",
+     "zh": "加拿大每年仍约有 70,000 例急性心梗，死亡率约 20%（约 16,000 人），过去十年已下降 5%。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cardiac Anatomy: Pericardium, Valves, Coronary Arteries",
+   "titleZh": "心脏解剖：心包、瓣膜与冠状动脉",
+   "points": [
+    {
+     "en": "The heart weighs only 250-300 g yet moves 7,000-9,000 L of blood daily; it sits retrosternally above the diaphragm, and its apical beat (PMI) is normally felt at the left midclavicular line, 5th intercostal space.",
+     "zh": "心脏只有 250-300 g，却每天泵送 7,000-9,000 L 血；位于胸骨后、膈肌上方，心尖搏动点（PMI）正常位于左锁骨中线第 5 肋间。",
+     "hard": true
+    },
+    {
+     "en": "The fibrous pericardium holds about 30 mL of lubricating serous fluid and cannot stretch acutely: slow accumulation is a pericardial effusion; rapid or large accumulation that strangles systole is pericardial tamponade.",
+     "zh": "纤维心包内约有 30 mL 起润滑作用的浆液，且短时间内几乎无法扩张：液体缓慢积聚叫心包积液；快速或大量积聚、压制收缩期，就是心包填塞。",
+     "hard": true
+    },
+    {
+     "en": "Wall layers from outside in: epicardium (thin serous surface), myocardium (the working muscle), endocardium (smooth inner lining). Endocarditis — infection of the lining and valves — is rare but dangerous; myocarditis is usually milder, though some patients die of heart failure.",
+     "zh": "心壁三层由外向内：心外膜（薄浆膜）、心肌层（干活的肌肉）、心内膜（光滑内衬）。心内膜炎——内衬与瓣膜的感染——少见但凶险；心肌炎通常较轻，但也有人最终死于心衰。"
+    },
+    {
+     "en": "The two coronary arteries take off from the aorta at ostia just above the aortic-valve leaflets. The left main splits into the LAD and circumflex, feeding the muscular left ventricle, the interventricular septum, and part of the right ventricle; the RCA feeds the right atrium and ventricle plus part of the LV.",
+     "zh": "左右冠状动脉从主动脉发出，开口就在主动脉瓣叶上方。左主干分成前降支（LAD）和回旋支，供应肌肉最厚的左室、室间隔及部分右室；右冠（RCA）供应右房、右室和部分左室。",
+     "hard": true
+    },
+    {
+     "en": "Anastomoses between coronary arterioles create collateral circulation — detour routes that keep muscle alive when a main branch narrows or blocks.",
+     "zh": "冠脉小动脉之间的吻合支构成侧支循环——主干狭窄或堵塞时，给心肌留的备用通路。"
+    },
+    {
+     "en": "AV valves (tricuspid on the right, mitral on the left) are tethered by chordae tendineae and papillary muscles; if these tear, the leaflet prolapses and blood regurgitates back into the atrium. The semilunar pulmonic and aortic valves block backflow from the great arteries.",
+     "zh": "房室瓣（右三尖、左二尖）由腱索和乳头肌拉住；一旦断裂，瓣叶脱垂、血液反流回心房。半月瓣（肺动脉瓣、主动脉瓣）负责挡住大动脉的回流。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Cardiac Cycle, Two Pumps, and Blood Vessels",
+   "titleZh": "心动周期、双泵与血管",
+   "points": [
+    {
+     "en": "One cycle = diastole then systole. Diastole (about 0.52 s) does most of the filling passively — roughly 70-80% of ventricular filling happens before the atria contract; the atrial kick tops up the rest, and systole finishes in about 0.28 s.",
+     "zh": "一个心动周期＝舒张期＋收缩期。舒张期（约 0.52 秒）完成大部分充盈——约 70-80% 的心室充盈在心房收缩前被动完成；剩下的靠心房收缩「踢」进去（atrial kick），收缩期约 0.28 秒收工。",
+     "hard": true
+    },
+    {
+     "en": "Functionally the heart is two pumps sharing one organ and one conduction system: a weaker low-pressure right pump into the lungs, a stronger high-pressure left pump into the body — trouble on one side eventually drags down the other.",
+     "zh": "心脏功能上是共用一个器官、一套传导系统的两台泵：右泵弱、低压，打向肺循环；左泵强、高压，打向全身——一侧出问题，迟早拖垮另一侧。"
+    },
+    {
+     "en": "Backup logic to memorize: right-pump failure backs blood into the systemic veins — JVD plus dependent and organ edema; left-pump failure backs blood into the lungs — dyspnea, bubbling crackles, frothy sputum.",
+     "zh": "必背的「倒灌逻辑」：右泵衰竭→血倒灌体循环静脉→颈静脉怒张＋下垂部位/内脏水肿；左泵衰竭→血倒灌肺循环→呼吸困难、湿啰音、泡沫痰。"
+    },
+    {
+     "en": "Vessel wall from outside in: tunica adventitia (withstands pressure), tunica media (muscle and elastic fibres — far thicker in arteries), tunica intima (one-cell lining around the lumen). Capillary walls are a single cell thick, and red cells pass through single file.",
+     "zh": "血管壁由外向内：外膜（抗压）、中膜（肌肉＋弹性纤维，动脉的中膜厚得多）、内膜（围着管腔的单层细胞内衬）。毛细血管壁只有一个细胞厚，红细胞得排队单个通过。"
+    },
+    {
+     "en": "Direction rules and their two exceptions: arteries carry blood away from the heart (oxygenated, except the pulmonary arteries); veins return blood to it (deoxygenated, except the pulmonary veins); only veins contain one-way valves.",
+     "zh": "方向规则和两个例外：动脉把血带离心脏（含氧——肺动脉除外）；静脉把血送回心脏（乏氧——肺静脉除外）；只有静脉里有单向瓣膜。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Pump Performance: Cardiac Output, Preload, Afterload",
+   "titleZh": "泵的性能参数：心输出量、前负荷、后负荷",
+   "points": [
+    {
+     "en": "Core equation: cardiac output = stroke volume x heart rate. Normal adult values: CO 5-6 L/min, SV 60-100 mL, HR 60-100 beats/min — and a healthy heart can raise SV by at least another 50%.",
+     "zh": "核心公式：心输出量＝每搏量×心率。成人正常值：CO 5-6 L/min、每搏量 60-100 mL、心率 60-100 次/分——健康心脏的每搏量还有至少 50% 的上调空间。",
+     "hard": true
+    },
+    {
+     "en": "Frank-Starling mechanism: the more incoming volume stretches the ventricle, the harder it contracts — until overstretch, when extra volume stops buying output. It is intrinsic to the muscle, not nerve-driven, and explains why diseased hearts enlarge.",
+     "zh": "Frank-Starling 机制：回心血量把心室拉得越开，收缩就越有力——但拉过头后，再多容量也换不来输出。这是心肌自带的属性，不归神经系统管；病心变大就是靠它硬撑出来的。"
+    },
+    {
+     "en": "Preload is the filling pressure set by venous return; afterload is what the ventricle pumps against (for the LV, aortic pressure). Rising afterload either cuts CO or forces extra cardiac work — driving up oxygen demand and inviting ischemia; a sudden SVR spike is a classic trigger of flash pulmonary edema.",
+     "zh": "前负荷＝静脉回流决定的充盈压；后负荷＝射血要对抗的压力（左室对抗的就是主动脉压）。后负荷升高要么压低 CO、要么逼心脏加班——耗氧随之上升、诱发缺血；外周阻力骤升是突发肺水肿的经典诱因。"
+    },
+    {
+     "en": "Contractility (inotropy) and heart rate (chronotropy) are the nervous system's two levers on output; dromotropy means conduction velocity. Ejection fraction is the percentage of ventricular blood ejected per beat — it falls when afterload climbs or the muscle fails.",
+     "zh": "收缩力（inotropy）和心率（chronotropy）是神经系统调节输出的两个旋钮；dromotropy 指传导速度。射血分数＝每搏射出的心室血百分比——后负荷升高或心肌受损时它会往下掉。"
+    },
+    {
+     "en": "BP = CO x SVR. When hemorrhage drops the CO, sympathetic vasoconstriction raises SVR to defend the pressure — the compensation you see as pale, clamped-down skin.",
+     "zh": "血压＝心输出量×外周血管阻力。出血把 CO 拉低时，交感缩血管把阻力顶上去保血压——病人苍白、湿冷的皮肤就是这套代偿的外观。"
+    },
+    {
+     "en": "Years of high afterload hypertrophy the left ventricle: the chamber shrinks, filling and relaxation worsen, oxygen demand climbs — the road from chronic hypertension to heart failure and ischemia.",
+     "zh": "常年高后负荷让左室肥厚：心腔变小、充盈和舒张变差、耗氧上升——这就是慢性高血压一路走向心衰和缺血的路径。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Electrical Conduction System and Electrolytes",
+   "titleZh": "电传导系统与电解质",
+   "points": [
+    {
+     "en": "Automaticity lets cardiac tissue fire without nerve input; whichever conduction tissue is currently generating the rhythm is the pacemaker. The dominant one is the SA node, sitting in the right atrium near the SVC inlet and supplied by an RCA branch — an RCA occlusion can silence it.",
+     "zh": "自律性（automaticity）让心肌不靠神经也能自己放电；当下产生节律的传导组织就是起搏点。老大是窦房结（SA node），位于右心房、上腔静脉入口附近，由右冠分支供血——右冠堵了可以直接让它哑火。"
+    },
+    {
+     "en": "Intrinsic pacemaker rates, in descending order: SA node 60-100/min, AV junction 40-60/min, ventricular Purkinje system 20-40/min. When the SA node fails, the next tier takes over at its own slower rate.",
+     "zh": "各级起搏点固有频率从高到低：窦房结 60-100 次/分、房室交界 40-60 次/分、心室浦肯野系统 20-40 次/分。窦房结罢工时，下一级按自己更慢的频率顶上。",
+     "hard": true
+    },
+    {
+     "en": "Conduction timing: impulses cross the atria via internodal pathways (including the Bachmann bundle) in about 0.08 s, are held at the AV node about 0.12 s so the atria can finish emptying, then sweep the ventricles through the His-bundle-branch-Purkinje chain in about 0.08 s. The AV node's blood comes from the RCA in 85-90% of people, from the circumflex in 10-15%.",
+     "zh": "传导时序：冲动经结间通路（含 Bachmann 束）约 0.08 秒扫过心房，在房室结被压住约 0.12 秒好让心房排空，再经 His 束—左右束支—浦肯野纤维约 0.08 秒扫过心室。房室结供血 85-90% 的人来自右冠，10-15% 来自回旋支。",
+     "hard": true
+    },
+    {
+     "en": "Depolarization: from a resting -90 mV, sodium rushes in (calcium follows more slowly, sustaining depolarization and driving contraction). Repolarization: potassium exits. The ATP-driven sodium-potassium pump then restores order, moving 3 Na+ out for every 2 K+ in.",
+     "zh": "去极化：从静息 -90 mV 起步，钠离子涌入（钙离子跟着缓慢进入，维持去极化并驱动收缩）。复极化：钾离子外流。随后靠 ATP 驱动的钠钾泵收拾残局——每泵出 3 个钠换回 2 个钾。",
+     "hard": true
+    },
+    {
+     "en": "Electrolyte derangements the exam loves: hypokalemia raises myocardial irritability; hyperkalemia depresses automaticity and conduction; hypocalcemia weakens contractility and raises irritability; hypercalcemia boosts contractility; magnesium stabilizes the membrane, partnering potassium and opposing calcium.",
+     "zh": "考试最爱的电解质紊乱：低钾→心肌兴奋性升高；高钾→自律性和传导双双被压低；低钙→收缩力下降＋兴奋性升高；高钙→收缩力增强；镁负责稳定细胞膜，与钾协同、与钙对抗。",
+     "hard": true
+    },
+    {
+     "en": "Refractory periods: during the absolute refractory period no new action potential is possible; during the relative refractory period one is inhibited but can still be provoked.",
+     "zh": "不应期分两段：绝对不应期内新动作电位完全发不出来；相对不应期内会被抑制，但仍可能被激发。"
+    },
+    {
+     "en": "ECG mapping: P wave = atrial depolarization; PRI (P start to QRS start) = atria plus AV delay, normally 0.12-0.20 s (3-5 small squares); QRS = ventricular depolarization (atrial repolarization hides inside it); ST segment runs from the J point and should sit on the isoelectric line — elevation or depression flags injury or ischemia; T wave = ventricular repolarization; R-R interval sets the rate.",
+     "zh": "ECG 对照表：P 波＝心房去极化；PRI（P 波起点到 QRS 起点）＝心房传导＋房室结延搁，正常 0.12-0.20 秒（3-5 小格）；QRS＝心室去极化（心房复极波藏在里面）；ST 段从 J 点开始、应与等电位线齐平——抬高或压低提示损伤/缺血；T 波＝心室复极化；R-R 间期决定心率。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Autonomic Nervous System and Sympathetic Drugs",
+   "titleZh": "自主神经系统与拟交感药物",
+   "points": [
+    {
+     "en": "Parasympathetic side (cholinergic, rest-and-digest): messages travel the vagus nerve and land as acetylcholine on the SA and AV nodes, slowing the heart (mostly the atria). Triggers include carotid sinus pressure, Valsalva straining, and distention of hollow organs.",
+     "zh": "副交感（胆碱能，rest-and-digest）：指令沿迷走神经下行，以乙酰胆碱作用于窦房结和房室结，让心率减慢（主要作用在心房）。按压颈动脉窦、屏气用力（Valsalva）、空腔脏器扩张都能激活它。"
+    },
+    {
+     "en": "Atropine is the parasympathetic blocker: it occupies the ACh binding sites at the SA and AV nodes, releasing the vagal brake and speeding a bradycardic heart — hence its anticholinergic, vagolytic labels.",
+     "zh": "阿托品是副交感阻断剂：占住窦房结和房室结上乙酰胆碱的结合位点，松开迷走「刹车」，把过缓的心率提上来——所以叫抗胆碱能药、有解迷走（vagolytic）作用。"
+    },
+    {
+     "en": "Sympathetic side (adrenergic, fight-or-flight): thoracolumbar nerves release norepinephrine and intense stress adds adrenal epinephrine. Receptor map: alpha = arterial constriction plus mild bronchoconstriction; beta-1 = heart (rate, force, conduction all up); beta-2 = bronchodilation and arterial dilation. Memory hook: one heart, beta-1; two lungs, beta-2.",
+     "zh": "交感（肾上腺素能，fight-or-flight）：胸腰段神经释放去甲肾上腺素，强烈应激时肾上腺再补一波肾上腺素。受体地图：alpha＝动脉收缩＋轻度支气管收缩；beta-1＝心脏（心率、收缩力、传导全上调）；beta-2＝支气管扩张＋动脉扩张。记法：一颗心 beta-1，两个肺 beta-2。",
+     "hard": true
+    },
+    {
+     "en": "Agent spectrum: phenylephrine nearly pure alpha; norepinephrine mostly alpha (first pick for vasodilatory hypotension — neurogenic and septic shock — causing less tachycardia and fewer dysrhythmias than dopamine, but prolonged high doses risk critical limb ischemia); epinephrine mostly beta (cardiac arrest, anaphylaxis first-line); dopamine mixed and dose-dependent; dobutamine and salbutamol sit at the beta end (salbutamol beta-2-specific, tachycardia still common).",
+     "zh": "药物光谱：去氧肾上腺素几乎纯 alpha；去甲肾上腺素以 alpha 为主（血管扩张型低血压——神经源性、脓毒性休克——的首选，比多巴胺更少心动过速和心律失常，但大剂量久用会造成肢端严重缺血）；肾上腺素以 beta 为主（心脏骤停、过敏性休克首选）；多巴胺 alpha/beta 混合、随剂量变脸；多巴酚丁胺和沙丁胺醇在 beta 端（沙丁胺醇偏 beta-2，但心动过速仍常见）。"
+    },
+    {
+     "en": "Dopamine dose bands: 1-2 mcg/kg/min dopaminergic (renal perfusion up), 2-10 beta-1 (rate and contractile force up), 10-20 alpha (vasoconstriction).",
+     "zh": "多巴胺剂量档位：1-2 mcg/kg/min 多巴胺受体（改善肾灌注）、2-10 走 beta-1（提心率和收缩力）、10-20 走 alpha（缩血管升压）。",
+     "hard": true
+    },
+    {
+     "en": "Beta blockers (metoprolol, propranolol, labetalol, atenolol, esmolol) occupy beta receptors first, so stimulants cannot act: uses are slowing tachydysrhythmias, easing chronic angina by cutting cardiac work, and damping myocardial irritability. Metoprolol is contraindicated in asthma.",
+     "zh": "Beta 阻滞剂（美托洛尔、普萘洛尔、拉贝洛尔、阿替洛尔、艾司洛尔）抢先占住 beta 受体，让兴奋剂无处下手：用来减慢快速性心律失常、通过降低心脏做功缓解慢性心绞痛、压制心肌兴奋性。美托洛尔禁用于哮喘。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Patient Assessment: History and OPQRST",
+   "titleZh": "患者评估：病史与 OPQRST",
+   "points": [
+    {
+     "en": "The cardiac chief-complaint list: chest pain, dyspnea, fainting, palpitations, nausea, fatigue. Assessment order is ABC for the conscious cardiac patient but flips to CAB the moment the patient is unresponsive with suspected cardiac arrest.",
+     "zh": "心脏主诉清单：胸痛、呼吸困难、晕厥、心悸、恶心、乏力。清醒的心脏病人按 ABC 评估；一旦病人无反应、怀疑心脏骤停，顺序立刻翻成 CAB。"
+    },
+    {
+     "en": "Work OPQRST on chest pain: Onset sudden or gradual; Provocation exertional or not; Palliation — did rest or the patient's own nitroglycerin help; Quality in the patient's own words (crushing, squeezing, heavy) without leading; Radiation to jaw, arms, back; Severity on a 0-10 scale compared against usual angina; Timing — when it started, constant or intermittent.",
+     "zh": "胸痛用 OPQRST 挖：Onset 突发还是渐起；Provocation 是否劳力诱发；Palliation 休息或自服硝酸甘油有没有用；Quality 用病人自己的词（压榨、紧缩、沉重），别去引导；Radiation 是否放射到下颌、手臂、后背；Severity 0-10 打分并和平时心绞痛比；Timing 何时开始、持续还是间歇。"
+    },
+    {
+     "en": "Dyspnea questions that catch left-heart failure: paroxysmal nocturnal dyspnea (suddenly waking suffocating, going to the window for air) is a classic left-failure flag; orthopnea (worse lying flat, sleeping on stacked pillows or in a recliner) points the same way.",
+     "zh": "抓左心衰的呼吸困难问法：夜间阵发性呼吸困难（PND，睡着后突然憋醒、要去窗边「透气」）是经典左心衰信号；端坐呼吸（平躺加重、要垫几个枕头或坐躺椅睡）指向同一件事。"
+    },
+    {
+     "en": "Syncope triage by context: a young person fainting at the sight of blood is one story; a 60-year-old who faints after chest 'fluttering', or anyone who loses consciousness while sitting or lying down, is presumed to have a dangerous dysrhythmia until proven otherwise.",
+     "zh": "晕厥按情境分级：年轻人见血晕倒是一回事；60 岁的人胸口「扑腾」几下后晕过去，或任何人在坐着/躺着时失去意识，都要先按危险心律失常对待，排除了再说。"
+    },
+    {
+     "en": "Palpitations are the felt version of dysrhythmia — often PVCs or PSVT; patients say the heart 'skipped a beat'. Chase onset, frequency, duration, prior episodes, and companions like chest pain, dizziness, dyspnea.",
+     "zh": "心悸是心律失常的「体感版」——常见元凶是室性早搏或阵发性室上速；病人会说心脏「漏跳了一拍」。要追问起病、频率、持续时间、既往发作，以及胸痛、头晕、呼吸困难这些同伴症状。"
+    },
+    {
+     "en": "Past-history checklist for cardiac patients: CAD (angina, prior MI, hypertension, heart failure), valvular disease, aneurysm, pulmonary disease, diabetes, renal disease, vascular disease, inflammatory cardiac disease, previous cardiac surgery, congenital anomalies — plus meds (are they actually taken? borrowed?), allergies, and last oral intake.",
+     "zh": "心脏病人的既往史清单：冠心病（心绞痛、心梗史、高血压、心衰）、瓣膜病、动脉瘤、肺病、糖尿病、肾病、血管病、炎症性心脏病、心脏手术史、先天畸形——外加用药核对（真的在吃吗？是不是借来的药？）、过敏史和最后进食时间。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Vital Signs and Physical Examination",
+   "titleZh": "生命体征与体格检查",
+   "points": [
+    {
+     "en": "Abnormal pulse vocabulary: pulse deficit = palpated radial rate below the apical rate, or an absent left radial with the right present (report the numeric difference); pulsus paradoxus = SBP falling more than 10 mm Hg on inspiration (think tamponade); pulsus alternans = strong and weak beats alternating. Always assess both radial pulses.",
+     "zh": "脉搏异常词汇表：脉搏短绌＝桡动脉触诊频率低于心尖听诊频率、或左桡动脉消失而右侧存在（按两者差值上报）；奇脉＝吸气时收缩压掉超过 10 mmHg（先想心包填塞）；交替脉＝一强一弱交替出现。双侧桡动脉都要摸。",
+     "hard": true
+    },
+    {
+     "en": "BP reference points: hypertension = resting BP of at least 130/80; SBP 120-129 counts as prehypertensive; normal is under 120/80. Interpreting pulse pressure: widened = stiff arteriosclerotic vessels; narrowed = falling stroke volume (cardiogenic shock, tamponade); a very low DBP suggests vasodilated states like sepsis or anaphylaxis.",
+     "zh": "血压参考点：静息 130/80 及以上算高血压；收缩压 120-129 属于高血压前期；正常要低于 120/80。脉压怎么读：增宽＝动脉硬化、管壁变僵；变窄＝每搏量在掉（心源性休克、心包填塞）；舒张压特别低提示血管扩张状态（脓毒症、过敏）。",
+     "hard": true
+    },
+    {
+     "en": "Measure BP in both arms for every chest-pain patient: an arm-to-arm difference above 20 mm Hg is abnormal, raises aortic dissection, and must be flagged to the receiving facility.",
+     "zh": "每个胸痛病人都要量双臂血压：两臂差超过 20 mmHg 属异常，要往主动脉夹层方向想，并必须告知接收医院。",
+     "hard": true
+    },
+    {
+     "en": "JVP technique and meaning: semi-Fowler at 45 degrees, head rotated away, read the fluid column height above the sternal angle — normal is 2-4 cm; distention signals back-pressure from a struggling right heart.",
+     "zh": "颈静脉压的量法和意义：半卧位 45 度、头转向对侧，读液柱在胸骨角以上的高度——正常 2-4 cm；怒张说明右心顶不住、压力在往体循环倒灌。",
+     "hard": true
+    },
+    {
+     "en": "Chest exam yield: surgical scars, a nitro patch, a pacemaker or AICD bulge below the clavicle; crackles = left-failure pulmonary edema, while a 'cardiac wheeze' mimics asthma — salbutamol rarely helps it and its beta-1 spillover raises myocardial demand. Peripheral or presacral edema = right failure. Cold sweaty skin means massive vasoconstriction; LOC tracks cerebral perfusion.",
+     "zh": "胸部查体的收获点：手术疤痕、硝酸甘油贴片、锁骨下起搏器/AICD 鼓包；湿啰音＝左心衰肺水肿，而「心源性哮鸣」会伪装成哮喘——沙丁胺醇对它基本没用，其 beta-1 溢出效应还会推高心肌耗氧。外周/骶前水肿＝右心衰。皮肤湿冷＝强烈缩血管代偿；意识状态就是脑灌注的仪表盘。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Atherosclerosis and the Angina Spectrum",
+   "titleZh": "动脉粥样硬化与心绞痛谱",
+   "points": [
+    {
+     "en": "Atherosclerosis hurts you two ways: gradual luminal narrowing starves tissue on demand (stable angina, claudication), while acute plaque rupture plus thrombosis shuts an artery outright (MI). It underlies angina, MI, heart failure, aortic aneurysm and dissection, peripheral vascular disease, and stroke.",
+     "zh": "动脉粥样硬化的两条害人路径：管腔慢慢变窄→需求一上来组织就缺血（稳定型心绞痛、间歇性跛行）；斑块急性破裂＋血栓形成→动脉当场堵死（心梗）。它是心绞痛、心梗、心衰、主动脉瘤/夹层、外周血管病和中风的共同地基。",
+     "hard": true
+    },
+    {
+     "en": "Stable angina is predictable in every axis — same exertion threshold, same location, same intensity, same duration, relieved within minutes by rest or nitroglycerin; transient ST depression or T inversion resolves once supply meets demand again. Prinzmetal angina is coronary vasospasm: women, at rest and at night, nitrate- and calcium-blocker-responsive, yet still capable of MI, ventricular dysrhythmias, AV block, and sudden death.",
+     "zh": "稳定型心绞痛每个维度都可预测——同样的劳力阈值、同样的部位、强度和时长，休息或含硝酸甘油几分钟内缓解；一过性 ST 压低或 T 波倒置在供需恢复平衡后消退。变异型（Prinzmetal）心绞痛是冠脉痉挛：好发女性、常在静息和夜间发作，对硝酸酯和钙通道阻滞剂有效，但照样能引发心梗、室性心律失常、房室传导阻滞和猝死。"
+    },
+    {
+     "en": "Unstable angina = the pattern breaks: attacks more frequent, more severe, lasting beyond 15 minutes, or arriving at rest — read it as plaque rupture in progress with imminent AMI risk. Field rule: you cannot reliably separate angina from AMI on scene, so treat every suspected cardiac ischemia as an AMI rather than undertreat one.",
+     "zh": "不稳定型心绞痛＝规律被打破：发作更频、更重、超过 15 分钟、或静息时也来——要当成正在进行的斑块破裂、心梗随时兑现。现场铁律：院前分不清心绞痛和心梗，所以一律按心梗处理，宁可「过度」也不漏治。",
+     "hard": true
+    },
+    {
+     "en": "Peripheral vascular notes: PAD affects about 4% of Canadians over 40, smoking is its dominant risk factor, and an acutely pale, pulseless leg is a surgical emergency. Thromboembolism seeds limb ischemia, ischemic stroke, and PE — about 50,000 serious PEs and 5,000 deaths a year in Canada; prehospital care for both is supportive en route.",
+     "zh": "外周血管补充：外周动脉疾病（PAD）影响约 4% 的 40 岁以上加拿大人，吸烟是头号危险因素；急性苍白、无脉的下肢是外科急症。血栓栓塞可造成肢体缺血、缺血性中风和肺栓塞——加拿大每年约 50,000 例严重肺栓塞、约 5,000 人死亡；这两类问题的院前处置都是转运途中支持治疗。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Recognizing Acute Coronary Syndrome",
+   "titleZh": "识别急性冠脉综合征",
+   "points": [
+    {
+     "en": "ACS bundles unstable angina, NSTEMI, and STEMI — all usually born of plaque rupture and coronary thrombosis; stable angina is excluded. Sorting logic: STEMI is declared on the 12-lead alone, no biomarkers needed; NSTEMI and unstable angina look identical on ECG and are separated only by biomarkers (elevated = NSTEMI, normal = UA).",
+     "zh": "ACS 打包了不稳定型心绞痛、NSTEMI 和 STEMI——共同源头多为斑块破裂＋冠脉血栓；稳定型心绞痛不算在内。分拣逻辑：STEMI 单凭 12 导联即可判定，不需要生物标志物；NSTEMI 和不稳定型心绞痛在 ECG 上长得一样，只能靠标志物区分（升高＝NSTEMI，正常＝UA）。",
+     "hard": true
+    },
+    {
+     "en": "Infarct geography and the killer complication: most infarcts hit the left ventricle — anterior, lateral, septal walls trace to left-coronary branches, inferior wall to the RCA. The ischemic ring around dead tissue is electrically unstable: 90% of AMI deaths are dysrhythmic (usually VF), concentrated in the early hours, and most prehospital deaths occur within the first 4 hours — which is exactly why they are preventable.",
+     "zh": "梗死的地理学和头号杀手并发症：多数梗死发生在左室——前壁、侧壁、间隔壁对应左冠分支，下壁对应右冠。坏死区外那圈缺血组织电学上极不稳定：90% 的心梗死亡死于心律失常（通常是室颤），集中在发病早期，院前死亡大多发生在症状出现后 4 小时内——所以这些死亡恰恰是可预防的。",
+     "hard": true
+    },
+    {
+     "en": "Classic ACS pain: retrosternal or left-chest heaviness, squeezing, crushing lasting over 15 minutes, unmoved by breathing, coughing, or position; the patient may clench a fist describing it (Levine sign). It radiates to the arms in 25% of cases — right-arm radiation is highly suggestive of a cardiac cause — or to neck, jaw, upper back, epigastrium. Companions: profuse cold sweat, dyspnea, nausea, weakness, dizziness, palpitations, a feeling of impending doom.",
+     "zh": "典型 ACS 疼痛：胸骨后或左胸的沉重、紧缩、压榨感，持续超过 15 分钟，不随呼吸、咳嗽或体位改变；病人描述时可能不自觉握拳（Levine 征）。25% 的病例放射到手臂——放射到右臂高度提示心源性——也可放射到颈、下颌、上背、上腹。同伴症状：大汗淋漓的冷汗、呼吸困难、恶心、乏力、头晕、心悸、濒死感。",
+     "hard": true
+    },
+    {
+     "en": "The silent 10-20%: that share of AMIs arrives with no chest pain at all — classically diabetics, older adults, and heart-transplant recipients — presenting instead with sudden dyspnea racing toward pulmonary edema, hypotension, confusion, or profound fatigue. Women skew atypical too: nausea, light-headedness, epigastric burning, sudden weakness, unexplained tiredness; heart disease is the top killer of Canadian women and takes a third of all female deaths — never dismiss vague symptoms before AMI has been considered.",
+     "zh": "沉默的 10-20%：这部分心梗完全没有胸痛——典型人群是糖尿病患者、老年人和心脏移植受者——取而代之的是骤起呼吸困难直奔肺水肿、低血压、意识混乱或极度乏力。女性也偏「非典型」：恶心、头晕、上腹烧灼、突发无力、说不清的疲惫；心脏病是加拿大女性头号死因、占女性死亡的三分之一——在把心梗考虑进去之前，永远不要打发「模糊症状」。",
+     "hard": true
+    },
+    {
+     "en": "The 'nitro didn't work' fork: ask whether the patient felt the drug's usual signature — sublingual burning, flushing, a brief throbbing headache. Felt the effects but pain persists = the drug is fine and the patient is likely in ACS; felt nothing = the tablets may simply be expired.",
+     "zh": "「硝酸甘油没用」的分岔口：问病人有没有出现药物的招牌反应——舌下灼热、脸潮红、短暂的搏动性头痛。有反应但疼痛不退＝药没问题，病人很可能是 ACS；毫无反应＝药片八成过期了。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Prehospital Management of ACS",
+   "titleZh": "ACS 院前处置",
+   "points": [
+    {
+     "en": "Three treatment goals: limit infarct size, cut fear and pain, prevent and manage dysrhythmias. Physical plus emotional rest is therapy — semi-Fowler about 30 degrees (more upright if pulmonary edema), and zero patient effort from the moment you arrive: the patient does not even walk to the stretcher.",
+     "zh": "三大治疗目标：缩小梗死面积、减轻恐惧和疼痛、预防并处理心律失常。身体＋情绪的双重休息本身就是治疗——半卧位约 30 度（有肺水肿可再坐直些），从你到场那刻起病人零用力：连走到担架这几步都不许。"
+    },
+    {
+     "en": "Aspirin is the lifesaving ACS medication — a simple therapy with a dramatic mortality cut. Book dose: chew 160-325 mg non-enteric-coated unless allergy, GI bleeding, or recent head injury or hemorrhagic stroke stands in the way; dispatchers may already have advised it.",
+     "zh": "阿司匹林是 ACS 里真正救命的药——手段简单，降死亡率的效果却立竿见影。教材剂量：嚼服 160-325 mg 非肠溶片，除非有过敏、消化道出血、近期头外伤或出血性中风挡路；调度员可能已电话指导服用。",
+     "hard": true
+    },
+    {
+     "en": "Oxygen is no longer routine in ACS: supplemental O2 shows no morbidity or mortality benefit unless the patient is hypoxic, and hyperoxia can damage injured cells. Book threshold: give O2 only when SpO2 is below 90%, titrating to 90-94%, usually via nasal cannula.",
+     "zh": "ACS 不再常规给氧：病人不缺氧时，补氧没有任何发病率/死亡率获益，氧过量反而伤害受损细胞。教材阈值：SpO2 低于 90% 才给氧，滴定到 90-94%，鼻导管通常够用。",
+     "hard": true
+    },
+    {
+     "en": "Get the 12-lead early — before anti-ischemic therapy: prehospital acquisition shaves 15-30 minutes off door-to-balloon and door-to-needle times, and an ECG captured before nitroglycerin preserves ischemic changes that treatment may erase. If the first trace shows no STEMI, repeat it in the vehicle before leaving scene — serial ECGs catch 10-15% more evolving STEMIs. Transport every STEMI patient with defibrillation pads already on the chest.",
+     "zh": "12 导联要早做——赶在抗缺血治疗之前：院前完成能把 door-to-balloon/door-to-needle 时间缩短 15-30 分钟；硝酸甘油之前抓到的 ECG 能保住治疗后会消失的缺血证据。首份没见 STEMI 的，离开现场前在车里再做一份——连续 ECG 能多抓出 10-15% 正在演变的 STEMI。所有 STEMI 病人转运时除颤电极片必须提前贴好。",
+     "hard": true
+    },
+    {
+     "en": "Nitroglycerin (book): 0.3-0.4 mg SL, repeatable every 5 minutes for 3-6 doses while stable, reassessing vitals after each. Withhold for hypotension, HR below 50 or above 160, known right ventricular infarction (preload-dependent — vasodilation can crash the output), or a PDE5 inhibitor within 24-72 hours (sildenafil/vardenafil 24 h, tadalafil up to 72 h); no IV access is a relative contraindication. Stop if SBP drops by more than a third. Know its limits: nitro relieves anginal ischemia but cannot open a thrombosed artery and does not reduce AMI mortality.",
+     "zh": "硝酸甘油（教材版）：0.3-0.4 mg 舌下含服，病情稳定时每 5 分钟可重复、共 3-6 剂，每剂后复测生命体征。禁忌：低血压、心率低于 50 或高于 160、已知右室梗死（极度依赖前负荷——扩血管会把输出打崩）、24-72 小时内用过 PDE5 抑制剂（西地那非/伐地那非 24 小时，他达拉非长达 72 小时）；没有静脉通路属相对禁忌。收缩压掉超过初始值三分之一就停。认清它的天花板：硝酸甘油能缓解心绞痛缺血，但打不开被血栓堵死的动脉，也不降低心梗死亡率。",
+     "hard": true
+    },
+    {
+     "en": "Opioids take the back seat: morphine and fentanyl slow absorption of the P2Y12 antiplatelets (clopidogrel, ticagrelor) that actually cut STEMI mortality, so Canadian guidelines avoid routine opioid use — reserve them for severe uncontrolled pain of 7/10 or worse: 2 mg IV every 5 minutes, stop once pain improves below 7/10 or hypotension appears; contraindications mirror nitro (hypotension, RVI).",
+     "zh": "阿片类靠边站：吗啡和芬太尼会减慢 P2Y12 抗血小板药（氯吡格雷、替格瑞洛）的吸收，而后者才是真正降 STEMI 死亡率的药——所以加拿大指南不推荐常规用阿片，只留给 7/10 以上无法控制的剧痛：2 mg 静推、每 5 分钟一次，疼痛降到 7/10 以下或出现低血压就停；禁忌与硝酸甘油同款（低血压、右室梗死）。",
+     "hard": true
+    },
+    {
+     "en": "Reperfusion — time is myocardium: PCI beats fibrinolysis when the balloon can open the artery within 90-120 minutes of first medical contact (the clock starts at paramedic contact), with similar mortality benefit but less bleeding. Fibrinolysis is available in virtually every Canadian ED and can be paramedic-delivered in rural systems with strict protocols; Canadian studies validate paramedic 12-lead STEMI identification with direct bypass to PCI centres. Your jobs: recognize STEMI, know your PCI and fibrinolysis destinations, notify early and transmit the ECG.",
+     "zh": "再灌注——time is myocardium：只要能在首次医疗接触（从救护员接触病人起算）后 90-120 分钟内球囊开通血管，PCI 就优于溶栓——降死亡率相当、出血更少。溶栓几乎每家加拿大急诊都能做，偏远系统里救护员也可按严格协议在院前给药；加拿大研究已证实救护员用 12 导联识别 STEMI 并直送 PCI 中心（绕行普通医院）安全可靠。你的任务：认出 STEMI、清楚辖区哪家能 PCI/溶栓、尽早通知并传输 ECG。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Heart Failure",
+   "titleZh": "心力衰竭",
+   "points": [
+    {
+     "en": "An estimated 600,000 Canadians live with heart failure; annual mortality runs 5-50% depending on severity. Left-side failure typically follows MI and chronic hypertension; right-side failure most commonly follows left-side failure itself, or arises from PE and chronic lung disease driving pulmonary hypertension (cor pulmonale). Treat left and right as different diseases.",
+     "zh": "加拿大约 600,000 人患心衰，年死亡率随严重程度在 5-50% 之间。左心衰通常由心梗和慢性高血压造成；右心衰最常见的原因就是左心衰本身，其次是肺栓塞和慢性肺病推高肺动脉压（肺心病）。左衰右衰要当两种病来对待。",
+     "hard": true
+    },
+    {
+     "en": "Left-failure cascade: the LV cannot clear the pulmonary return, left atrial and pulmonary venous pressures climb, serum gets squeezed into the alveoli — cardiogenic pulmonary edema. Picture: dyspnea, orthopnea, a history of PND, tachypnea, crackles plus possible cardiac wheeze, pink frothy sputum, and a panic-epinephrine-vasoconstriction spiral (pale sweaty skin, high BP) that feeds the failure; confusion or combativeness signals hypoxemia, and older patients may show Cheyne-Stokes breathing.",
+     "zh": "左心衰的连锁反应：左室排不掉肺循环送来的血，左房和肺静脉压力上抬，血清被压进肺泡——心源性肺水肿。画面：呼吸困难、端坐呼吸、夜间阵发性呼吸困难史、呼吸急促、湿啰音＋可能的心源性哮鸣、粉红泡沫痰，再加「恐慌→肾上腺素→缩血管」的恶性循环（苍白冷汗、血压偏高）反过来喂养心衰；意识混乱或躁动挣扎提示缺氧血症，老年人还可能出现潮式呼吸。"
+    },
+    {
+     "en": "Management priorities: oxygenate, cut cardiac work, cut preload. Sit the patient up with legs dangling (pools venous blood), O2 titrated to 90-94%, IV at TKO, 12-lead when feasible. Nitroglycerin is the mainstay — the one medication shown to reduce mortality, intubation, ICU admission, and MI rates: 0.4-0.8 mg SL repeated every 3-5 minutes with BP checks; venodilation first, arterial dilation (afterload relief) at higher doses.",
+     "zh": "处置优先级：改善氧合、降低心脏做功、减少前负荷。让病人坐起、双腿下垂（把静脉血「存」在腿里），氧滴定到 90-94%，静脉通路 TKO 维持，条件允许做 12 导联。硝酸甘油是主力——它是唯一被证明能降低死亡率、插管率、ICU 入住率和心梗率的药：0.4-0.8 mg 舌下、每 3-5 分钟可重复、每次都查血压；小剂量先扩静脉，剂量加大再扩动脉（卸后负荷）。",
+     "hard": true
+    },
+    {
+     "en": "CPAP splints the alveoli open through the whole respiratory cycle, reversing atelectasis — give initial meds before masking when possible, and watch BP (raised intrathoracic pressure can lower it). Falling saturation, climbing ETCO2, or dropping LOC means abandon CPAP for bag-mask with a PEEP valve. Caution list: furosemide only in small 20-40 mg IV doses (diuresis takes 30 minutes; large doses trigger reflex afterload rise and can worsen the patient); morphine is rarely indicated (sedation breeds intubation); bronchodilators only for genuine bronchospasm — their tachycardia worsens failure. Isolated right-side failure is seldom an emergency: comfort, semi-Fowler, monitor, and treat any left-side component.",
+     "zh": "CPAP 在整个呼吸周期把肺泡「撑住」、逆转肺不张——可能的话先给药再扣面罩，并盯紧血压（胸内压升高会压低血压）。血氧在掉、ETCO2 在涨、或意识在变差＝立刻放弃 CPAP，改球囊面罩＋PEEP 阀。谨慎清单：呋塞米只给 20-40 mg 静推的小剂量（利尿要 30 分钟起效；大剂量会反射性抬高后负荷、把病人推得更糟）；吗啡基本不用（镇静催生插管）；支气管扩张剂只留给真正的支气管痉挛——它带来的心动过速会加重心衰。单纯右心衰很少是急症：舒适体位、半卧位、监护，同时处理任何左心衰成分。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cardiac Tamponade and Cardiogenic Shock",
+   "titleZh": "心包填塞与心源性休克",
+   "points": [
+    {
+     "en": "Tamponade physiology and recognition: fluid or blood filling the unstretchable pericardium throttles diastolic filling, so stroke volume falls — pulse pressure narrows first, then tachycardia compensates. Beck triad = hypotension + JVD + muffled heart sounds; the most useful field clue is pulsus paradoxus over 10 mm Hg; electrical alternans and pulsus alternans are rare bonuses. In trauma, tamponade keeps breath sounds equal and the trachea midline — that is how you separate it from tension pneumothorax.",
+     "zh": "心包填塞的生理和识别：液体或血灌进撑不开的心包，掐住舒张期充盈，每搏量下滑——先是脉压变窄，随后心率代偿性加快。Beck 三联征＝低血压＋颈静脉怒张＋心音遥远；现场最有用的线索是奇脉超过 10 mmHg；电交替和交替脉是少见的加分项。创伤场景下，填塞的呼吸音两侧对称、气管居中——这就是它和张力性气胸的分界线。",
+     "hard": true
+    },
+    {
+     "en": "Tamponade care: the definitive fix is pericardiocentesis — withdrawing as little as 50 mL can transform the patient — so field care is rapid transport to a capable facility with full ABC support en route; a 500-1,000 mL saline bolus may be considered, and your pre-alert should spell out every sign that built your suspicion.",
+     "zh": "填塞的处置：根治手段是心包穿刺——哪怕只抽出 50 mL 病情都可能立竿见影地好转——所以院前工作就是快速转运到有能力的医院、途中撑住 ABC；可考虑 500-1,000 mL 生理盐水推注，预告医院时要把你起疑的所有征象讲清楚。",
+     "hard": true
+    },
+    {
+     "en": "Cardiogenic shock thresholds and care: infarcting about 25% of the LV brings left failure; 40% or more brings cardiogenic shock and steep mortality. Other causes: transient post-ROSC stunning, beta-blocker or calcium-channel-blocker toxicity, viral myocarditis, peripartum cardiomyopathy. SBP often sinks below 90, but a chronically hypertensive patient can be shocked above that number. Care = improve perfusion without adding cardiac work: O2 if hypoxic, supine (semi-Fowler if pulmonary edema), IV TKO, a physician-ordered rapid 250 mL fluid trial even with edema, treat dysrhythmias, vasopressors on order (dopamine most used; norepinephrine offers similar outcomes with fewer dysrhythmias) titrated with BP checks every 5 minutes, TCP for unstable bradycardia — and a short scene time, because nothing prehospital stabilizes true cardiogenic shock.",
+     "zh": "心源性休克的阈值与处置：左室约 25% 梗死就会左心衰；40% 及以上就是心源性休克，死亡率陡峭。其他病因：ROSC 后的一过性心肌顿抑、beta 阻滞剂或钙通道阻滞剂中毒、病毒性心肌炎、围产期心肌病。收缩压常掉到 90 以下，但长期高血压的人在 90 以上也可能已经休克。处置＝在不增加心脏做功的前提下改善灌注：缺氧才给氧、平卧（有肺水肿改半卧）、静脉 TKO、医生医嘱下即使有肺水肿也可试快速推注 250 mL、处理心律失常、按医嘱上升压药（多巴胺最常用；去甲肾上腺素结局相近但心律失常更少）并每 5 分钟测压滴定、不稳定心动过缓用经皮起搏——现场时间必须短，因为院前没有任何手段能真正稳住心源性休克。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Aortic and Hypertensive Emergencies",
+   "titleZh": "主动脉与高血压急症",
+   "points": [
+    {
+     "en": "Dissection mechanics: some 40 million pressure waves a year degrade the aortic media — faster with age, chronic hypertension, Marfan syndrome (patients 20-40), and pregnancy — until the intima tears (65% in the ascending aorta just distal to the valve) and each systole pumps blood into a false channel between wall layers. Complication map follows the anatomy: reach the valve = regurgitation; the coronary ostia = AMI; the arch vessels = stroke, arm ischemia, arm-to-arm BP gap; rupture = tamponade or rapid exsanguination.",
+     "zh": "夹层的力学：每年约 4,000 万次压力波锤击主动脉中膜——年龄、慢性高血压、马凡综合征（20-40 岁患者）和妊娠都会加速损耗——直到内膜撕裂（65% 发生在升主动脉、紧邻主动脉瓣远端），此后每次收缩都把血打进管壁夹层的假腔里。并发症跟着解剖走：波及瓣膜＝反流；波及冠脉开口＝心梗；波及弓部分支＝中风、上肢缺血、双臂血压差；破裂＝心包填塞或迅速失血致死。",
+     "hard": true
+    },
+    {
+     "en": "Dissection versus AMI at the bedside: dissection pain is abrupt, 'worst ever', tearing or ripping, maximal within a minute, without prodrome, often between the shoulder blades, and does not abate; AMI pain builds gradually as pressure with nausea and sweating. Check both radial pulses, both arms' BP (a gap above 20 mm Hg), and femoral/carotid pulses. Management: recognition plus transport without delay — calm the patient, O2 if hypoxic, IV, monitor; morphine 2 mg IV per dose for severe pain if not hypotensive; avoid ASA and nitroglycerin.",
+     "zh": "床旁分辨夹层和心梗：夹层疼痛骤起、「这辈子最痛」、撕裂样、一分钟内即达顶峰、无前驱症状、常位于两肩胛之间、且不会自行减轻；心梗疼痛是压迫感逐渐爬升，带恶心、出汗等前奏。要摸双侧桡动脉、量双臂血压（差超过 20 mmHg）、查股动脉/颈动脉搏动。处置：识别＋立刻转运——安抚病人、缺氧才给氧、开静脉、上监护；不低血压的剧痛可给吗啡每次 2 mg 静推；禁用 ASA 和硝酸甘油。",
+     "hard": true
+    },
+    {
+     "en": "AAA: found in about 2% of people over 65, usually just distal to the renal arteries; rupture carries 80% mortality. Classic patient: a man in his late 70s with sudden abdominal or lower-back pain radiating to thigh and groin (easily mistaken for a pulled muscle or renal colic), sometimes syncope followed by pain, and a pulsatile abdominal mass. Care: expedite transport, large-bore IV en route kept at TKO — if shock appears, permissive hypotension with fluid only to an SBP of 70-90, because more pressure means more bleeding.",
+     "zh": "腹主动脉瘤（AAA）：65 岁以上约 2% 的人有，多位于肾动脉远端；破裂死亡率 80%。经典病人：快 80 岁的男性，突发腹痛或下腰痛、放射到大腿和腹股沟（很容易被当成「闪了腰」或肾绞痛），可先晕厥后疼痛，腹部可摸到搏动性包块。处置：加速转运，途中开大口径静脉但维持 TKO——出现休克才补液，且执行允许性低血压、只把收缩压补到 70-90，因为压力越高出血越多。",
+     "hard": true
+    },
+    {
+     "en": "Hypertensive emergency = acute BP elevation WITH end-organ damage — the organ damage defines the urgency, never the cuff number alone; only about 1% of hypertensive patients ever have one. Hypertensive encephalopathy arrives when MAP (= DBP + 1/3 of pulse pressure) exceeds about 150 and the blood-brain barrier gives way: severe headache, nausea and vomiting first, then seizures, altered LOC, or focal deficits (sudden blindness, aphasia, hemiparesis). Field care is supportive — O2 if hypoxic, IV TKO, monitor, transport ready for seizures; BP gets lowered by no more than one-third over 30-60 minutes, in hospital. Interfacility option: labetalol 10-20 mg slow IV push (alpha + beta blocker, relatively contraindicated in asthma/COPD), with nitroglycerin 0.4 mg SL an acceptable fallback; whenever lowering BP, keep the patient supine and recheck pressure every 3-5 minutes.",
+     "zh": "高血压急症＝血压急性升高「加上」终末器官损害——定性靠器官损害，永远不是袖带上的数字；高血压人群中只有约 1% 会发生。高血压脑病出现在 MAP（＝DBP＋脉压的三分之一）超过约 150、血脑屏障失守时：先是剧烈头痛、恶心呕吐，随后抽搐、意识改变或局灶体征（突发失明、失语、偏瘫）。院前只做支持——缺氧才给氧、静脉 TKO、监护、转运并随时准备处理抽搐；降压要在医院进行，30-60 分钟内降幅不超过三分之一。转院途中的选项：拉贝洛尔 10-20 mg 缓慢静推（alpha＋beta 双阻滞，哮喘/COPD 相对禁忌），没有它时硝酸甘油 0.4 mg 舌下可作替补；只要在降压，病人必须平卧、每 3-5 分钟复测血压。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cardiac Monitoring: ECG Fundamentals",
+   "titleZh": "心电监护：ECG 判读基础",
+   "points": [
+    {
+     "en": "Dysrhythmias are not only caused by MI: hypoxemia, potassium/calcium/magnesium disturbances, acid-base upset, hypothermia, drugs (tricyclics, digoxin, organophosphates), raised vagal or sympathetic tone, and cardiac trauma all qualify. After an AMI they arise two ways: irritable ischemic foci fire tachydysrhythmias (VT, PVCs), while damaged conduction tissue produces blocks and bradycardias. Always treat the patient AND the monitor.",
+     "zh": "心律失常绝不只由心梗引起：低氧血症、钾/钙/镁紊乱、酸碱失衡、低体温、药物（三环类、地高辛、有机磷）、迷走或交感张力升高、心脏挫伤都可以。AMI 后的心律失常有两条来路：缺血心肌的易激惹病灶点燃快速型（VT、PVC），传导组织受损则产生阻滞和缓慢型。永远既看病人又看监护。",
+     "hard": true
+    },
+    {
+     "en": "Rate extremes hurt output from both ends: below about 50/min output falls and escape pacemakers start firing; above 120-140/min the heart's own oxygen demand climbs, and past 150/min ventricular filling time shrinks enough to drop cardiac output.",
+     "zh": "心率两头都伤输出：低于约 50 次/分心输出量不足且逸搏起搏点开始接管；超过 120-140 次/分心肌自身耗氧上升；超过 150 次/分心室充盈时间被压缩，心输出量随之下滑。",
+     "hard": true
+    },
+    {
+     "en": "Electrode routine: shave dense chest hair, briskly rub the site with dry gauze to strip oils, and clip electrodes onto the cables BEFORE sticking them on. A flat line on an alert, talking patient means a loose lead, never asystole; a wavy baseline that mimics VF can be tremor or movement — look at the patient before reaching for the defibrillator.",
+     "zh": "贴电极的固定流程：浓密胸毛要剃、干纱布用力擦皮肤去油脂、先把电极扣上导线再贴到病人身上。清醒还在说话的病人出现直线，只能是导联脱落，绝不是 asystole；貌似 VF 的波浪基线可能只是肌颤或移动伪差——伸手拿除颤器之前先看病人。",
+     "hard": true
+    },
+    {
+     "en": "Limb cable colours: white to right upper chest, black to left upper chest, red to left lower abdomen, green (ground, when present) to right lower abdomen. These form the Einthoven triangle giving bipolar leads I, II, III; lead II is the workhorse for rhythm interpretation. A current flowing toward a positive electrode draws an upright deflection; away from it, a negative one; the TP segment — not the PR — is the isoelectric reference line, because pericarditis can depress PR.",
+     "zh": "肢体导线颜色：白＝右上胸、黑＝左上胸、红＝左下腹、绿（接地，如果有）＝右下腹。它们构成 Einthoven 三角，产生双极导联 I、II、III；节律判读的主力是 II 导联。电流朝正极流动画出直立波形，背离正极画负向波形；等电位基线用 TP 段而不是 PR 段——因为心包炎会压低 PR。",
+     "hard": true
+    },
+    {
+     "en": "ECG paper runs at 25 mm/s: one small square = 0.04 s, one large square (5 small) = 0.20 s, five large squares = 1 s. Vertical calibration is 10 mm/mV, confirmed by the 5 mm wide x 10 mm tall calibration box printed at the start of every tracing.",
+     "zh": "ECG 走纸速度 25 mm/s：一小格＝0.04 秒，一大格（5 小格）＝0.20 秒，五大格＝1 秒。纵轴定标 10 mm/mV，每份图开头印的校准方块（宽 5 mm、高 10 mm）就是确认标志。",
+     "hard": true
+    },
+    {
+     "en": "P wave = atrial depolarization: smooth, round, upright in leads I and II when sinus, duration under 110 ms and height under 2.5 mm. No P waves means the pacemaker is not the SA node (think AF, junctional, or ventricular); a P without a following QRS means a block below the atria; multiple P shapes mean multiple atrial pacemaker sites.",
+     "zh": "P 波＝心房除极：窦性时在 I、II 导联光滑、圆钝、直立，时限小于 110 ms、振幅小于 2.5 mm。没有 P 波＝起搏点不在窦房结（想 AF、交界性或室性）；P 波后面不跟 QRS＝心房以下有阻滞；P 波形态多变＝心房里有多个起搏点。",
+     "hard": true
+    },
+    {
+     "en": "PR interval 0.12-0.20 s (3-5 small squares). Longer than 0.20 s = first-degree AV block; shorter than 0.12 s = preexcitation via an accessory pathway (WPW); a PRI that keeps changing = wandering atrial pacemaker or second-degree block.",
+     "zh": "PR 间期 0.12-0.20 秒（3-5 小格）。超过 0.20 秒＝一度房室阻滞；短于 0.12 秒＝经旁路预激（WPW）；PRI 不断变化＝游走性房性起搏点或二度阻滞。",
+     "hard": true
+    },
+    {
+     "en": "QRS under 0.12 s = conduction ran the normal His-Purkinje highway (supraventricular origin); 0.12 s or wider = ventricular origin or bundle branch block/aberrancy. A Q wave is pathologic when 0.04 s or wider, or deeper than one-third of the QRS height — evidence of current or previous infarction. An R-prime (second positive deflection) is never normal.",
+     "zh": "QRS 小于 0.12 秒＝电冲动走了正常的希氏-浦肯野高速路（室上性起源）；达到或超过 0.12 秒＝室性起源或束支阻滞/差异传导。Q 波达到 0.04 秒宽、或深度超过 QRS 高度的三分之一即为病理性——提示现在或过去发生过梗死。R'（第二个正向波）永远不正常。",
+     "hard": true
+    },
+    {
+     "en": "The J point marks where QRS ends and ST begins. An ST segment displaced 1 mm or more above or below the isoelectric line in two contiguous leads strongly suggests ischemia or injury — but a full 12-lead is needed to say which.",
+     "zh": "J 点是 QRS 结束、ST 段开始的交界。ST 段在两个相邻导联偏离等电位线达到 1 mm（一小格）以上，强烈提示缺血或损伤——但要说清是哪一种，必须做完整 12 导。",
+     "hard": true
+    },
+    {
+     "en": "T wave = ventricular repolarization; it should be asymmetric, under half the QRS height, and point the same way as the QRS. Its first half is the absolute refractory period (nothing can fire), its second half the relative refractory period — a big stimulus landing there (R-on-T) can trigger VF, which is exactly why cardioversion uses the synchronize button.",
+     "zh": "T 波＝心室复极；正常应不对称、低于 QRS 高度的一半、方向与 QRS 一致。T 波前半段是绝对不应期（什么都点不着），后半段是相对不应期——大刺激正好落在这里（R-on-T）可以引爆 VF，这正是电复律要按同步键的原因。",
+     "hard": true
+    },
+    {
+     "en": "QT interval 0.36-0.44 s covers one full ventricular cycle; machines correct it to a rate of 60 and report QTc. A prolonged QT (LQTS, roughly over 0.45 s) extends the vulnerable period and breeds torsades de pointes; culprits include antidysrhythmics, antibiotics, antipsychotics, antihistamines, hypokalemia, hypocalcemia, and congenital disease. Record an ECG on every syncope patient, including the young.",
+     "zh": "QT 间期 0.36-0.44 秒，代表一整个心室周期；机器会校正到心率 60 并报告 QTc。QT 延长（LQTS，约超过 0.45 秒）拉长易损期、孕育尖端扭转型室速；元凶包括抗心律失常药、抗生素、抗精神病药、抗组胺药、低钾、低钙和先天性疾病。每一个晕厥病人都要记录 ECG，年轻人也不例外。",
+     "hard": true
+    },
+    {
+     "en": "Five-step strip reading, always in order: identify the waves (P-QRS-T), measure the PRI, measure QRS width, determine regularity, then measure rate. Regularity comes in three flavours: regular, regularly irregular (a repeating pattern), and irregularly irregular (no two R-R alike — the AF signature).",
+     "zh": "五步读图法，顺序固定：认波（P-QRS-T）→ 量 PRI → 量 QRS 宽度 → 定节律规整性 → 测心率。规整性分三种：规则、规则地不规则（有重复模式）、不规则地不规则（任意两个 R-R 都不同——AF 的签名）。",
+     "hard": true
+    },
+    {
+     "en": "Three rate methods: (1) 6-second method — count QRS in 6 s, multiply by 10; fastest, and the only good option for irregular rhythms. (2) Sequence method — from an R on a heavy line count 300-150-100-75-60-50 per large square; regular rhythms only; under 3 large squares means over 100, over 5 means under 60. (3) 1500 method — 1500 divided by small squares between R waves; the most accurate, for regular fast rhythms.",
+     "zh": "三种测率法：(1) 6 秒法——数 6 秒内的 QRS 个数乘 10；最快，也是不规则节律唯一靠谱的方法。(2) 序列法——从落在粗线上的 R 波起按大格数 300-150-100-75-60-50；只适用规则节律；R-R 不足 3 大格＝心率超 100，超过 5 大格＝低于 60。(3) 1500 法——1500 除以 R-R 间的小格数；最精确，用于规则的快节律。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cardiac Monitoring: The Dysrhythmia Family",
+   "titleZh": "心电监护：心律失常谱系",
+   "points": [
+    {
+     "en": "Pacemaker hierarchy and intrinsic rates: SA node 60-100/min, AV junction 40-60/min, ventricles 20-40/min. When a higher pacemaker fails, the next one down escapes at its own slower rate — this single ladder explains junctional and idioventricular rhythms and the ventricular rates seen in complete block.",
+     "zh": "起搏点阶梯与固有频率：窦房结 60-100 次/分、房室交界 40-60 次/分、心室 20-40 次/分。上级起搏点罢工，下一级就以自己更慢的频率逸搏接管——这一条阶梯解释了交界性心律、室性自主心律、以及完全阻滞时的心室率。",
+     "hard": true
+    },
+    {
+     "en": "Sinus bradycardia: sinus P before every QRS, rate under 60. Normal in athletes and sleep; worrying causes include hypothermia, SA node disease, inferior AMI driving vagal tone, raised intracranial pressure, beta blockers, calcium channel blockers, and digoxin. Treat only by tolerance: atropine first, transcutaneous pacing if refractory.",
+     "zh": "窦性心动过缓：每个 QRS 前有窦性 P 波，频率低于 60。运动员和睡眠中属正常；危险病因包括低体温、窦房结病变、下壁 AMI 激发迷走张力、颅内压升高、β 阻滞剂、钙通道阻滞剂和地高辛。只按耐受度治疗：先阿托品，无效再经皮起搏。",
+     "hard": true
+    },
+    {
+     "en": "Sinus tachycardia: usually 101-180/min, upper limit roughly 220 minus age. It is a compensation signal — pain, fever, hypoxia, hypovolemia, anemia, stimulants — so treat the cause, never the rate. Sinus dysrhythmia (rate swings with breathing, over 0.12 s variation between cycles) is a normal finding in the young.",
+     "zh": "窦性心动过速：通常 101-180 次/分，上限约等于 220 减年龄。它是代偿信号——疼痛、发热、缺氧、低血容量、贫血、兴奋剂——所以治原因，永远不治心率本身。窦性心律不齐（心率随呼吸起伏，最长最短周期差超过 0.12 秒）在年轻人属正常。",
+     "hard": true
+    },
+    {
+     "en": "Sinus arrest drops at least one whole PQRST cycle, and the resulting P-P gap is NOT an exact multiple of the normal interval. Sick sinus syndrome is the elderly patient's failing SA node showing up as bradycardia, arrest, SA block, or alternating extreme bradycardia and tachycardia — a classic hidden cause of syncope.",
+     "zh": "窦性停搏是整组 PQRST 至少缺失一次，且缺口造成的 P-P 距离不是正常间期的整数倍。病态窦房结综合征是老年人窦房结衰竭的集合表现：心动过缓、停搏、窦房阻滞、或极端快慢交替（快慢综合征）——晕厥的经典隐藏病因。",
+     "hard": true
+    },
+    {
+     "en": "Wandering atrial pacemaker: at least three different P-wave shapes on one strip, rate 60-100, slightly irregular — seen in children, older adults, athletes. The same picture at over 100/min is multifocal atrial tachycardia (MAT), which lives in severe lung disease and theophylline therapy and does not respond to usual SVT treatment.",
+     "zh": "游走性房性起搏点：同一条图上至少三种不同形态的 P 波，频率 60-100，轻度不规则——见于儿童、老人、运动员。同样的图超过 100 次/分就是多源性房性心动过速（MAT），常伴严重肺病和茶碱治疗，对常规 SVT 疗法无反应。",
+     "hard": true
+    },
+    {
+     "en": "Premature complexes are early ectopic beats inside another rhythm, named by origin: PAC (different-shaped upright P), PJC (inverted P before, inside, or after the QRS; PRI under 0.12 s), PVC (no P at all, wide bizarre QRS over 0.12 s, full compensatory pause). Common triggers: stress, caffeine, electrolyte upset, heart failure.",
+     "zh": "早搏是嵌在其他节律里提前出现的异位搏动，按起源命名：房早 PAC（形态不同的直立 P）、交界性早搏 PJC（倒置 P 出现在 QRS 前/内/后；PRI 小于 0.12 秒）、室早 PVC（完全无 P，宽大畸形 QRS 超 0.12 秒，跟完全代偿间歇）。常见诱因：应激、咖啡因、电解质紊乱、心衰。",
+     "hard": true
+    },
+    {
+     "en": "PVC danger grading: multifocal (two or more shapes), couplets, and bigeminy outrank unifocal PVCs; three or more in a row = a run of VT. The killer mechanism is R-on-T — a PVC landing on the T wave can flip the heart into VF. Prehospital treatment targets the cause (like ischemic pain), not the PVCs themselves.",
+     "zh": "室早的危险分级：多源（两种以上形态）、成对（couplet）、二联律比单源室早更危险；连续三个以上＝短阵 VT。致命机制是 R-on-T——室早正砸在 T 波上可把心脏掀进 VF。院前处理针对病因（如缺血性胸痛），不直接打室早。",
+     "hard": true
+    },
+    {
+     "en": "SVT: regular narrow-complex tachycardia from above the ventricles; when the rate hits 150-180 the P waves bury themselves in the preceding T wave. AVNRT (reentry loop at the AV node) is the most common paroxysmal form; AVRT runs the loop through an accessory pathway (WPW). The surface ECG usually cannot tell them apart — and if the rhythm is regular and narrow, management is identical anyway.",
+     "zh": "SVT：起源于心室以上的规则窄 QRS 心动过速；室率到 150-180 时 P 波会埋进前一个 T 波里。AVNRT（房室结折返环）是最常见的阵发型；AVRT 的折返环借道旁路（WPW）。体表 ECG 通常分不出两者——反正只要节律规则且窄，处理完全相同。",
+     "hard": true
+    },
+    {
+     "en": "Atrial flutter: sawtooth F waves with the AV node blocking some of them; most often regular 2:1 conduction with a ventricular rate of almost exactly 150. Usually signals real heart disease and often degenerates into AF; rarely treated in the field.",
+     "zh": "心房扑动：锯齿状 F 波，房室结拦掉其中一部分；最常见规则的 2:1 下传，室率几乎正好 150。通常提示实质性心脏病，常退变为 AF；院前几乎不处理。",
+     "hard": true
+    },
+    {
+     "en": "Atrial fibrillation: chaotic baseline, no true P waves, and an irregularly irregular ventricular response — the hallmark. Its real menace is clot formation in the quivering atria, hence anticoagulants and rate-control drugs (beta or calcium channel blockers) at home; older patients get rate control, not rhythm conversion. Prehospital care is supportive.",
+     "zh": "心房颤动：基线混乱、没有真正的 P 波、心室反应「不规则地不规则」——这是识别标志。真正的威胁是颤动的心房里长血栓，所以病人长期吃抗凝药加控率药（β 或钙通道阻滞剂）；老年病人控率不复律。院前以支持为主。",
+     "hard": true
+    },
+    {
+     "en": "Junctional rhythms, one family, three speeds: escape 40-60 (SA failure, the junction's natural rate), accelerated 60-100, junctional tachycardia over 100. All share absent or inverted P waves (before, buried in, or after the QRS) with a PRI under 0.12 s when visible. Slow symptomatic ones: atropine, possibly pacing.",
+     "zh": "交界性心律一家三速：逸搏型 40-60（窦房结失灵，交界区的天然频率）、加速型 60-100、交界性心动过速超 100。共同点：P 波缺失或倒置（在 QRS 前、埋在里面、或在后面），能测到时 PRI 小于 0.12 秒。慢而有症状者：阿托品，必要时起搏。",
+     "hard": true
+    },
+    {
+     "en": "First-degree AV block: every P conducts, but PRI is fixed above 0.20 s — least serious, often the first clue of AV node injury. Mobitz I (Wenckebach): PRI stretches longer beat by beat until one P drops its QRS, then the cycle restarts; always irregular, usually benign.",
+     "zh": "一度房室阻滞：每个 P 都下传，但 PRI 固定地超过 0.20 秒——最轻，常是房室结受损的第一个信号。二度 I 型（文氏）：PRI 一搏比一搏长，直到某个 P 丢掉 QRS，然后循环重来；必然不规则，通常良性。",
+     "hard": true
+    },
+    {
+     "en": "Mobitz II: some P waves simply fail to conduct while the PRI of every conducted beat stays CONSTANT — that constancy is the identifier. It can run regular (2:1) or irregular, is more ominous than type I, and may need transcutaneous pacing when bradycardia compromises output.",
+     "zh": "二度 II 型：部分 P 波直接不下传，而所有下传搏动的 PRI 保持恒定——这份恒定就是鉴别点。可以规则（2:1）也可以不规则，比 I 型凶险，心率慢到影响输出时可能需要经皮起搏。",
+     "hard": true
+    },
+    {
+     "en": "Third-degree (complete) block: atria and ventricles beat independently — P-P regular, R-R regular, no relationship between them. Escape from the junction runs 40-60 with narrow QRS and may answer atropine; escape from the ventricles runs 20-40 with wide QRS, ignores atropine, and needs pacing.",
+     "zh": "三度（完全性）阻滞：心房心室各跳各的——P-P 规则、R-R 也规则，但两者毫无关系。交界区逸搏 40-60 次/分、QRS 窄，可能对阿托品有反应；心室逸搏 20-40 次/分、QRS 宽，对阿托品无动于衷，需要起搏。",
+     "hard": true
+    },
+    {
+     "en": "Idioventricular rhythm: ventricles pace alone at 20-40, wide QRS, no P — pulse may or may not exist, always critical. Accelerated idioventricular rhythm (AIVR, 40-100) classically appears after reperfusion of an occluded coronary artery and is a GOOD sign; do not give antidysrhythmics.",
+     "zh": "室性自主心律：心室独自起搏 20-40 次/分，宽 QRS、无 P——可有可无脉搏，一律危重。加速性室性自主心律（AIVR，40-100）经典地出现在闭塞冠脉再灌注之后，是好消息；禁给抗心律失常药。",
+     "hard": true
+    },
+    {
+     "en": "VT: wide-complex (0.12 s or more), regular, rate over 100; dissociated P waves buried at varying spots inside the QRS help confirm VT over SVT with aberrancy. Monomorphic = one QRS shape; polymorphic = shifting shapes, led by torsades de pointes on a long QT. Triage by pulse and stability: pulseless VT = immediate unsynchronized shock; unstable VT = synchronized cardioversion; stable VT = medication or monitored transport.",
+     "zh": "室速 VT：宽 QRS（0.12 秒以上）、规则、频率超 100；埋在 QRS 里位置游移的分离 P 波有助于把 VT 和「SVT 伴差传」区分开。单形性＝QRS 一个模样；多形性＝形态不断变化，代表是长 QT 上的尖端扭转。按脉搏和稳定性分诊：无脉 VT＝立即非同步电击；不稳定 VT＝同步电复律；稳定 VT＝药物或监护下转运。",
+     "hard": true
+    },
+    {
+     "en": "VF: the whole heart quivers, no organized complexes at all. Fresh VF is coarse (tall chaotic waves); as cellular energy drains it decays to fine VF, which shocks less well — good compressions delay that decay. VF is the most common initial arrest rhythm in adults and responds best to defibrillation within the first few minutes.",
+     "zh": "室颤 VF：整颗心在蠕动，完全没有成形的波群。新鲜 VF 是粗颤（高大杂乱的波）；细胞能量耗竭后退化为细颤，电击效果变差——高质量按压能延缓这种退化。VF 是成人骤停最常见的初始节律，最初几分钟内除颤效果最好。",
+     "hard": true
+    },
+    {
+     "en": "Asystole: zero electrical activity — first confirm it is not a loose lead. Agonal rhythm (occasional sinusoidal blips under 20/min) is a dying heart's residual discharge and NEVER produces a pulse, unlike an idioventricular rhythm which may. Asystole is generally confirmation of death.",
+     "zh": "心搏停止 asystole：完全没有电活动——先确认不是导联脱落。濒死心律（低于 20 次/分的零星正弦样小波）是垂死心脏的残余放电，永远摸不到脉——这一点和可能有脉的室性自主心律不同。Asystole 一般视为死亡的确认。",
+     "hard": true
+    },
+    {
+     "en": "Paced rhythms: sharp vertical spikes give the implant away — ventricular pacing shows spike + wide QRS, dual-chamber shows two spikes, demand pacemakers only fire below their set rate (usually 60). Spikes with no QRS after them = loss of capture (dead battery or displaced wire) — start TCP fast. A runaway pacemaker races tachycardic; a strong magnet over the generator resets it to 60-80.",
+     "zh": "起搏心律：垂直尖钉是植入装置的招牌——心室起搏＝尖钉+宽 QRS，双腔起搏＝两个尖钉，按需型只在心率掉到设定值（通常 60）以下才放电。尖钉后面不跟 QRS＝失夺获（电池耗尽或导线移位）——尽快上经皮起搏。「失控起搏器」狂奔性心动过速；把强磁铁放在脉冲发生器上可把它重置到 60-80 次/分。",
+     "hard": true
+    },
+    {
+     "en": "WPW: a delta wave (rapid upslope straight off the P wave), PRI under 0.12 s, and a widened QRS betray the bundle of Kent bypassing the AV node. Preexcited AF is the trap: irregular, wide, rates above 200 — every AV-nodal blocker (adenosine, beta blockers, calcium channel blockers) is contraindicated because blocking the node shoves everything down the pathway and can drop the patient into VF. Treatment is synchronized cardioversion.",
+     "zh": "WPW：delta 波（P 波后紧接的快速上斜）、PRI 短于 0.12 秒、QRS 增宽，暴露了绕过房室结的 Kent 束。预激房颤是陷阱：不规则、宽 QRS、室率超 200——所有房室结阻滞剂（腺苷、β 阻滞剂、钙通道阻滞剂）一律禁用，因为堵住结会把全部冲动赶进旁路，可能把病人直接推进 VF。治疗是同步电复律。",
+     "hard": true
+    },
+    {
+     "en": "ECG clues beyond rhythm: hyperkalemia = tall peaked T waves marching toward a sine wave when profound; hypokalemia = flattened T waves plus a U wave; hypercalcemia shortens QT, hypocalcemia lengthens it; an Osborne (J) wave — a P-like bump right after the QRS — flags hypothermia, growing with severity.",
+     "zh": "节律之外的 ECG 线索：高钾＝高尖 T 波，严重时整条图走向正弦波；低钾＝T 波低平外加 U 波；高钙缩短 QT，低钙拉长 QT；Osborne（J）波——QRS 后紧跟的一个貌似 P 波的隆起——是低体温的标志，越冷越大。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "12-Lead ECGs and STEMI Recognition",
+   "titleZh": "12 导 ECG 与 STEMI 识别",
+   "points": [
+    {
+     "en": "One lead is enough to name the rhythm; localizing injury needs twelve angles. Vertical plane (limb leads): II, III, aVF stare at the inferior wall; I and aVL at the high lateral wall. Horizontal plane (precordial): V1-V2 septum, V3-V4 anterior wall, V5-V6 lateral wall. The standard 12 views barely see the right ventricle or posterior wall — that is the 15-lead's job. (PCP scope: exam tests recognition level only.)",
+     "zh": "认节律一个导联就够；定位损伤要十二个角度。垂直面（肢体导联）：II、III、aVF 盯着下壁；I、aVL 盯着高侧壁。水平面（胸前导联）：V1-V2 看间隔，V3-V4 看前壁，V5-V6 看侧壁。标准 12 个视角几乎看不到右心室和后壁——那是 15 导的活。（PCP 授权范围：考试只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "When to acquire: suspected ACS (before ACS-specific treatment when possible, to capture reversible changes), post-ROSC, and dysrhythmia workup. Acquisition must not add more than 2 minutes to scene time. If the first tracing is nondiagnostic, repeating it in the vehicle before transport and again on hospital arrival captures 10-15% more evolving STEMIs.",
+     "zh": "什么时候做：疑似 ACS（尽量在 ACS 针对性治疗之前做，才能抓到可逆的改变）、ROSC 之后、以及协助心律判读。采集不得让现场时间多耗超过 2 分钟。第一份不具诊断性时，出发前在车里重做一次、到院时再做一次，能多抓 10-15% 演变中的 STEMI。",
+     "hard": true
+    },
+    {
+     "en": "Precordial placement: V1 fourth intercostal space right of the sternum; V2 fourth space left of the sternum; V4 fifth space midclavicular; V3 halfway between V2 and V4; V5 anterior axillary line and V6 midaxillary line, both level with V4. Limb electrodes go on the limbs, not the trunk. A 3 cm error — one interspace — changes the view enough to miss an MI, and serial comparison only works if placement is consistent.",
+     "zh": "胸前电极位置：V1 右侧第 4 肋间胸骨旁；V2 左侧第 4 肋间胸骨旁；V4 第 5 肋间锁骨中线；V3 在 V2 与 V4 正中间；V5 腋前线、V6 腋中线，两者与 V4 同一水平。肢体电极贴四肢，不贴躯干。错 3 cm——一个肋间——视角就变得足以漏掉心梗，而且前后对比只有在贴法一致时才成立。",
+     "hard": true
+    },
+    {
+     "en": "Two acquisition modes: monitor mode filters at 1-40 Hz for a clean moving-vehicle tracing but distorts ST and T — never judge ischemia from it. Diagnostic mode (0.05-40 or up to 150 Hz) preserves ST/T morphology and is always what a 12-lead records; the frequency range prints at the bottom of the tracing.",
+     "zh": "两种采集模式：监护模式滤波 1-40 Hz，行车中图形干净，但会扭曲 ST 和 T 波——绝不能用它判断缺血。诊断模式（0.05-40 或最高 150 Hz）保留 ST/T 形态，12 导永远以诊断模式记录；频率范围印在图纸底部。",
+     "hard": true
+    },
+    {
+     "en": "The ischemic cascade on paper: ischemia = ST depression and/or T inversion (onset); injury = peaked T waves then ST elevation (minutes to hours); infarction = pathologic Q waves (hours to days), which then persist as the scar of an MI of unknown age. A normal or nonspecific ECG never rules out ACS — serial tracings and blood work do that in hospital.",
+     "zh": "缺血级联在图纸上的样子：缺血＝ST 压低和/或 T 波倒置（起病时）；损伤＝T 波高尖继而 ST 抬高（数分钟到数小时）；梗死＝病理性 Q 波（数小时到数天），此后作为「年代不明心梗」的疤痕长期存在。正常或非特异的 ECG 永远不能排除 ACS——那要靠院内的系列 ECG 和抽血。",
+     "hard": true
+    },
+    {
+     "en": "STEMI criteria (Fourth Universal Definition, 2018): new ST elevation at the J point in two contiguous leads, 1 mm or more everywhere except V2-V3, which demand 2 mm in men 40 and over, 2.5 mm in men under 40, and 1.5 mm in women of any age. Reciprocal ST depression in the electrically opposite leads (I and aVL for inferior STEMI) strongly confirms but is not required. (Beyond PCP authorization — exam tests recognition level only.)",
+     "zh": "STEMI 判据（2018 第四版全球统一定义）：两个相邻导联 J 点新发 ST 抬高，除 V2-V3 外均为 1 mm 及以上；V2-V3 特殊——40 岁及以上男性要 2 mm、40 岁以下男性 2.5 mm、女性不分年龄 1.5 mm。电学对侧导联的镜像 ST 压低（下壁 STEMI 对应 I、aVL）强力佐证但不是必要条件。（超出 PCP 授权——考试只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "Localization map: inferior = II, III, aVF; anteroseptal = V1-V3; anterolateral = V4-V6; extensive anterior = V1-V6 plus I and aVL; right ventricular = V4R (with inferior changes); posterior = tall R waves and ST depression in V1-V2 as mirror clues, confirmed by V8-V9 elevation on a 15-lead. (Exam tests recognition level only.)",
+     "zh": "定位地图：下壁＝II、III、aVF；前间隔＝V1-V3；前侧壁＝V4-V6；广泛前壁＝V1-V6 加 I、aVL；右室＝V4R（伴下壁改变）；后壁＝V1-V2 出现高 R 波和 ST 压低这对镜像线索，由 15 导的 V8-V9 抬高确认。（考试只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "15-lead triggers: inferior ST elevation, or ST depression in V1-V2. Modified version: move V4 to V4R (mirror position, right fifth space midclavicular), V5 to V8 (left midscapular), V6 to V9 (left paravertebral), relabel by hand and circle — the computer read is void because it does not know the electrodes moved. 40% of inferior MIs grow a right ventricular MI; ST elevation of 1 mm or more in V4R confirms it.",
+     "zh": "做 15 导的触发条件：下壁 ST 抬高，或 V1-V2 出现 ST 压低。改良做法：V4 挪到 V4R（镜像位，右侧第 5 肋间锁骨中线）、V5 挪到 V8（左肩胛中线）、V6 挪到 V9（左脊柱旁），手工改标并圈出——电脑解读作废，因为它不知道电极搬了家。40% 的下壁心梗会发展出右室梗死；V4R 抬高 1 mm 及以上即确认。",
+     "hard": true
+    },
+    {
+     "en": "RVMI physiology: the damaged right ventricle is preload dependent — any preload reducer (nitroglycerin above all) can crash the blood pressure, so do a 15-lead on every inferior MI BEFORE giving nitro. Right-side failure keeps the chest clear; left-side failure floods it with pulmonary edema. Physicians may order 1-2 L of IV saline to prop up preload even before hypotension appears.",
+     "zh": "右室梗死的生理：受伤的右心室完全依赖前负荷——任何降前负荷的药（首当其冲硝酸甘油）都可能砸垮血压，所以每一个下壁心梗都要先做 15 导再考虑硝酸甘油。右心衰竭肺是干净的；左心衰竭才有肺水肿。医生可能会开 1-2 L 生理盐水撑住前负荷，甚至等不到低血压出现。",
+     "hard": true
+    },
+    {
+     "en": "ST elevation in aVR with diffuse ST depression elsewhere is not a standard STEMI but a red flag: critical left main stenosis, triple-vessel disease, or supply-demand mismatch from sepsis, hemorrhage, or severe hypertension. Consider non-ACS causes, manage them, and warn the receiving facility — this marks a critically ill patient. (Recognition level only.)",
+     "zh": "aVR 的 ST 抬高伴其余导联弥漫性 ST 压低，不是标准 STEMI，而是红色警报：左主干临界狭窄、三支病变、或败血症/大出血/重度高血压造成的供需失衡。要考虑非 ACS 病因并着手处理，同时提前通知接收医院——这是危重病人的标记。（只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "Bundle branch blocks: a supraventricular rhythm with QRS of 0.12 s or wider. RBBB = terminal R wave in V1 (causes include ischemia, cor pulmonale, PE); LBBB = terminal S wave in V1 with terminal R in I, aVL, V6 (ischemia, aortic stenosis, dilated cardiomyopathy). Chronic LBBB is a notorious STEMI mimic and makes STEMI recognition beyond paramedic-level criteria — check local guidelines and compare with old tracings. (Recognition level only.)",
+     "zh": "束支阻滞：室上性节律带着 0.12 秒及以上的宽 QRS。右束支阻滞＝V1 终末 R 波（病因含缺血、肺心病、肺栓塞）；左束支阻滞＝V1 终末 S 波、I/aVL/V6 终末 R 波（缺血、主动脉瓣狭窄、扩张型心肌病）。慢性 LBBB 是臭名昭著的 STEMI 模仿者，使 STEMI 识别超出 paramedic 层级的判据——查本地指南并与旧图对比。（只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "STEMI mimics to know by pattern: benign early repolarization (concave, diffuse, no reciprocal changes, young healthy men); pericarditis (global concave elevation plus PR depression, pain worse supine and better leaning forward); LVH and hypertrophic cardiomyopathy (tall R waves with secondary ST changes); Brugada (V1-V2 rSR' with aggressive downsloping elevation, about 4% of sudden arrests); old MI or ventricular aneurysm (persistent elevation); hyperkalemia; Prinzmetal spasm. Convex elevation favours true MI, concave favours benign — but neither is reliable alone, and elevation across three or more regions argues mimic. (Recognition level only.)",
+     "zh": "要按图形认得的 STEMI 模仿者：良性早期复极（凹面向上、弥漫、无镜像改变，年轻健康男性）；心包炎（全局性凹面抬高加 PR 压低，平躺加重、前倾缓解）；左室肥厚与肥厚型心肌病（高 R 波带继发 ST 改变）；Brugada（V1-V2 的 rSR' 加陡峭下斜型抬高，约占心源性猝死 4%）；陈旧心梗或室壁瘤（持续性抬高）；高钾；Prinzmetal 痉挛。凸面抬高偏向真心梗、凹面偏向良性——但单看都不可靠；三个及以上区域同时抬高更支持模仿者。（只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "Computer interpretation: excellent at intervals (PRI, QRS, QT), tuned for high specificity on STEMI — a positive call is rarely wrong, but subtle STEMIs get missed and artifact fools the rhythm call. Always make your own read and keep the computer's as a second opinion. Nancy's rule: crushing, squeezing, or choking chest pain gets treated as AMI even when the ECG is perfectly normal.",
+     "zh": "电脑解读：量间期（PRI、QRS、QT）很准，对 STEMI 调成高特异性——报阳几乎不冤枉人，但细微的 STEMI 会漏，伪差会骗过节律判断。永远先做自己的解读，把电脑意见当第二意见。Nancy 铁律：压榨性、紧勒性、窒息样的胸痛，就算 ECG 完全正常也按 AMI 处理。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Management of Adult Cardiac Arrest",
+   "titleZh": "成人心脏骤停管理",
+   "points": [
+    {
+     "en": "The two proven survival levers are quality CPR and short time to defibrillation — ACLS drugs and airways add little on top. Compressions: 5-6 cm deep, 100-120/min, full recoil, shoulders over sternum, swap compressors every 2 minutes, interruptions 10 seconds or less (BC exam: keep them under 5 seconds). Adult ratio 30:2; textbook allows two-rescuer continuous compressions with 8-10 ventilations/min, but BC keeps adults at 30:2 regardless of rescuer count.",
+     "zh": "被证实的两根救命杠杆是高质量 CPR 和尽早除颤——ACLS 药物和高级气道在此之上的增益很小。按压：深 5-6 cm、频率 100-120 次/分、完全回弹、肩在胸骨正上方、每 2 分钟换人，中断不超过 10 秒（BC 考纲：控制在 5 秒以内）。成人按压通气比 30:2；教材允许双人做连续按压加每分钟 8-10 次通气，但 BC 规定成人无论几名施救者一律 30:2。",
+     "hard": true
+    },
+    {
+     "en": "Universal algorithm entry: unresponsive with absent or abnormal breathing (agonal gasps count as arrest) — start compressions; pulse checks are unreliable even for professionals. Rhythm check with simultaneous pulse check, maximum 10 seconds, every 2 minutes; charge the defibrillator DURING compressions to shrink the perishock pause, shock, and resume CPR instantly without waiting to admire the monitor.",
+     "zh": "通用流程入口：无反应且呼吸消失或异常（濒死喘息算骤停）——立刻按压；摸脉即使对专业人员也不可靠。每 2 分钟做一次节律检查并同时摸脉，上限 10 秒；充电要在按压进行中完成以压缩电击前停顿，电完立即恢复按压，不许停下来欣赏监护仪。",
+     "hard": true
+    },
+    {
+     "en": "VF/pulseless VT arm: shock energy per manufacturer; if unknown, 200 J biphasic or 360 J monophasic. Epinephrine 1 mg IV/IO after the second shock, repeated every 3-5 minutes (every second CPR cycle). After the third shock, refractory VF/VT gets amiodarone 300 mg IV/IO push, then 150 mg in 3-5 minutes (lidocaine is the alternative) — these raise survival to hospital but not neurologically intact survival. (ACLS drugs are ACP-level; PCP exam tests the sequence conceptually.)",
+     "zh": "VF/无脉 VT 分支：电击能量按厂商建议；不明时双相波 200 J、单相波 360 J。第二次电击后给肾上腺素 1 mg IV/IO，每 3-5 分钟（每隔一个 CPR 循环）重复。第三次电击后的顽固性 VF/VT 给胺碘酮 300 mg IV/IO 推注，3-5 分钟后再给 150 mg（利多卡因是替代）——这些药提高「活着到医院」的比例，但不提高神经功能完好的存活率。（ACLS 药物属 ACP 层级；PCP 考试只考流程概念。）",
+     "hard": true
+    },
+    {
+     "en": "Asystole/PEA arm: PEA is any organized rhythm on the screen without a detectable pulse. No shocks — the work is quality CPR, epinephrine 1 mg IV/IO every 3-5 minutes, and an aggressive hunt for reversible causes using the Hs and Ts: hypoxia, hypovolemia, hydrogen ions, hyper/hypokalemia, hypothermia, tamponade, tension pneumothorax, thrombosis (pulmonary and coronary), toxins. Survival here usually means a cause was found and fixed.",
+     "zh": "Asystole/PEA 分支：PEA＝屏幕上有成形节律却摸不到脉。不电击——工作是高质量 CPR、每 3-5 分钟肾上腺素 1 mg IV/IO、外加用 5H5T 穷追可逆病因：缺氧、低血容量、氢离子（酸中毒）、高/低钾、低体温、心包填塞、张力性气胸、血栓（肺栓塞与冠脉）、毒物。这条分支的存活通常意味着找到了病因并纠正了它。",
+     "hard": true
+    },
+    {
+     "en": "Airway during arrest: a tracheal tube can wait 8 minutes or longer; an oropharyngeal airway plus BVM, or a supraglottic airway with capnography, serves fine. Once an advanced airway is in: continuous compressions of at least 100/min with one ventilation every 6-8 seconds (8-10/min) — and never interrupt compressions to place the airway.",
+     "zh": "骤停中的气道：气管插管可以等 8 分钟甚至更久；口咽气道加 BVM、或声门上气道配 CO2 波形监测就足够。高级气道到位后：连续按压至少 100 次/分，每 6-8 秒送气一次（每分钟 8-10 次）——而且绝不为放气道中断按压。",
+     "hard": true
+    },
+    {
+     "en": "Capnography in arrest, five jobs: confirm tube placement, catch displacement, grade CPR quality, spot ROSC (a sudden sustained rise), and gauge futility. After 20 minutes of ACLS, ETCO2 persistently under 10 mm Hg is associated with futility (hypothermia excepted); values over 25 mm Hg track with survival. Falling values mean a tired compressor, hyperventilation, obstruction, or a migrated tube.",
+     "zh": "骤停中 CO2 波形监测的五件事：确认插管位置、发现移位、评按压质量、抓 ROSC（突然持续上升）、判断徒劳。ACLS 进行 20 分钟后 ETCO2 持续低于 10 mm Hg 与徒劳相关（低体温除外）；高于 25 mm Hg 与存活相关。数值下滑提示按压者疲劳、过度通气、气道梗阻或管子移位。",
+     "hard": true
+    },
+    {
+     "en": "Post-ROSC bundle, A-B-C-D: reassess airway need; ventilate to ETCO2 35-40 mm Hg and titrate oxygen to SpO2 94-98% — hyperventilation quietly kills cardiac output; keep SBP above 90 with crystalloid (1-2 L bolus for marked hypotension) then dopamine or norepinephrine on long transports; capture an early 12-lead for ST elevation and notify the receiving facility; raise the head 30 degrees, avoid tracheal suctioning, and expect therapeutic hypothermia to start in the ED for comatose patients.",
+     "zh": "ROSC 后处置包，按 A-B-C-D：重估气道需求；通气滴定到 ETCO2 35-40 mm Hg、给氧滴定到 SpO2 94-98%——过度通气会悄悄压垮心输出量；用晶体液把收缩压顶在 90 以上（明显低血压推 1-2 L），转运长再加多巴胺或去甲肾上腺素；尽早做 12 导找 ST 抬高并通知接收医院；床头抬高 30 度、避免气管内吸引，昏迷病人到急诊后通常开始亚低温治疗。",
+     "hard": true
+    },
+    {
+     "en": "Stopping resuscitation: under 1% of adults who fail adequate prehospital ACLS survive, so lights-and-sirens transport with ongoing CPR mostly adds crew risk. The textbook's Canadian-derived rules — BLS-TOR (no shock delivered, no ROSC, arrest not witnessed by EMS) and ALS-TOR (adds not bystander-witnessed, no bystander CPR) — are discussed with a physician after 15-20 minutes and three medication rounds; exclusions include trauma, hanging, drowning, hypothermia, toxicology. BC's exam runs its own 30/40-minute clock instead — see the BC alerts.",
+     "zh": "终止复苏：院前 ACLS 充分抢救仍无效的成人存活率不到 1%，一路按压狂奔送医主要是给机组添风险。教材里加拿大研究推导的规则——BLS-TOR（没电过、没 ROSC、EMS 没目击）和 ALS-TOR（再加旁观者没目击、没做旁观者 CPR）——在 15-20 分钟、三轮药物后与医生讨论；排除创伤、上吊、溺水、低体温、中毒。BC 考纲用的是自己的 30/40 分钟计时规则——见 BC 警示。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Symptomatic Bradycardia and Tachycardia",
+   "titleZh": "症状性心动过缓与心动过速",
+   "points": [
+    {
+     "en": "Rule one for any slow or fast rhythm: fix reversible causes before touching the rhythm — hypoxia, hypothermia, hypovolemia, toxins. Then classify: UNSTABLE means failing end-organ perfusion (hypotension, altered mentation, ischemic chest pain, acute heart failure, pre-arrest); SYMPTOMATIC-but-stable means palpitations, dyspnea, or light-headedness with intact perfusion. Stable patients ride to hospital monitored; only unstable ones get treated in the field.",
+     "zh": "面对任何过慢或过快的节律，第一条规矩：先纠正可逆病因再碰节律——缺氧、低体温、低血容量、毒物。然后分级：「不稳定」＝终末器官灌注在垮（低血压、意识改变、缺血性胸痛、急性心衰、濒临骤停）；「有症状但稳定」＝心悸、气短、头晕但灌注完好。稳定的病人监护着送医院；只有不稳定的才在现场处理。",
+     "hard": true
+    },
+    {
+     "en": "Bradycardia ladder (unstable only): bradycardia is under 60/min but symptoms usually need under 50. Atropine 0.5 mg IV, repeatable every 3-5 minutes to a 3 mg ceiling or heart rate above 60. High-degree blocks — Mobitz II or wide-QRS third-degree — often ignore atropine: trial it while setting up transcutaneous pacing at 60-80/min. Last rung: dopamine 5-20 mcg/kg/min (check the premix bag concentration!) or epinephrine infusion, used cautiously since both raise cardiac workload. (ACP-level interventions; PCP exam tests recognition and the escalation concept.)",
+     "zh": "心动过缓阶梯（只治不稳定者）：过缓定义为低于 60 次/分，但出症状通常要低于 50。阿托品 0.5 mg IV，每 3-5 分钟可重复，封顶 3 mg 或心率回到 60 以上。高度阻滞——Mobitz II 或宽 QRS 三度——常对阿托品无反应：可以边试边架经皮起搏，频率 60-80 次/分。最后一级：多巴胺 5-20 mcg/kg/min（预混袋浓度务必核对！）或肾上腺素泵注，两者都加重心脏负荷，谨慎使用。（ACP 层级操作；PCP 考试考识别和升级思路。）",
+     "hard": true
+    },
+    {
+     "en": "Tachycardia logic: rates under 150 rarely cause instability by themselves — the failing-heart patient is tachycardic BECAUSE of the failure, and slowing a compensatory rhythm can be fatal. Truly unstable tachycardia = synchronized cardioversion (midazolam sedation if time allows; skip it if unconscious or crashing). Stable wide-complex: usually monitored transport, possibly amiodarone or procainamide. Stable narrow regular: vagal maneuvers then adenosine — remembering adenosine cannot convert sinus tach, flutter, or AF. (ACP-level; PCP exam tests recognition level.)",
+     "zh": "心动过速的逻辑：室率低于 150 很少单独造成不稳定——心衰病人的心快是因为衰竭才快，把代偿性心率压下去可能致命。真正不稳定的过速＝同步电复律（时间允许先用咪达唑仑镇静；意识丧失或急速恶化就别等）。稳定的宽 QRS：通常监护转运，或用胺碘酮/普鲁卡因胺。稳定的窄而规则：先迷走手法再腺苷——记住腺苷转不了窦速、房扑、房颤。（ACP 层级；PCP 考试只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "Vagal maneuvers convert 15-50% of AV-nodal tachycardias. Standard Valsalva: strain against a closed glottis, like bearing down. Modified Valsalva (about 40% success): semi-reclined patient blows into a 10 mL syringe for 15 seconds — just enough to move the plunger — then lies flat with legs raised. Infants: a bag of ice water on the face triggers the diving reflex (warn the family first). Carotid sinus massage can shear plaque into an embolic stroke or cause asystole — treat it as high-risk and avoid it.",
+     "zh": "迷走手法能转复 15-50% 的房室结性心动过速。标准 Valsalva：憋气对抗紧闭的声门用力，像解大便一样。改良 Valsalva（成功率约 40%）：半卧位对着 10 mL 注射器吹 15 秒——吹到活塞刚好动——然后放平并抬高双腿。婴儿：一袋冰水敷脸触发潜水反射（先跟家属打好招呼）。颈动脉窦按摩可能把斑块搓下来造成栓塞性卒中，也可能压出 asystole——按高风险操作对待，直接避开。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Electrical Therapy Techniques",
+   "titleZh": "电学治疗技术",
+   "points": [
+    {
+     "en": "Defibrillation depolarizes every myocardial cell at once so the SA node can restart the orchestra; it is for VF and pulseless VT only, as early as possible, and is useless — possibly harmful — in asystole. Pads: four acceptable positions, anterolateral as default — sternum pad right of the upper sternum below the clavicle, apex pad on the left lower chest with its top 5-7 cm below the armpit; never on breast tissue; strip medication patches and wipe residue (patch backings can arc and burn); an implanted pacemaker or AICD is no contraindication — just keep pads off the battery bulge.",
+     "zh": "除颤让全部心肌细胞同时除极，好让窦房结重新起拍；只用于 VF 和无脉 VT，越早越好，对 asystole 无用——甚至有害。电极片：四个可接受位置，默认前-侧位——胸骨片贴右上胸锁骨下方，心尖片贴左下胸、上缘在腋窝下 5-7 cm；绝不压在乳腺组织上；药物贴片要撕掉并擦净残胶（贴片背衬会拉电弧烧伤皮肤）；植入式起搏器或 AICD 不是禁忌——避开电池鼓包贴就行。",
+     "hard": true
+    },
+    {
+     "en": "Manual shock sequence: confirm a shockable rhythm, set 200 J biphasic (360 J monophasic, all shocks), keep compressions running while charging, call 'All clear!' and sweep visually, shock, resume CPR immediately for 2 minutes before any pulse or rhythm recheck. Visible muscle contraction proves current delivery — if absent, check that the sync switch is OFF and the battery charged. Inspect the whole defibrillator kit at every shift start. (Manual defibrillation is ACP-level; PCP operates AEDs.)",
+     "zh": "手动电击流程：确认可电击节律，设双相波 200 J（单相波 360 J，每次都是），充电期间按压不停，喊「All clear!」并目视扫一圈，放电，立即恢复 CPR 2 分钟后才查脉搏和节律。看到肌肉抽动才证明电流真的进去了——没有就检查同步开关是否关闭、电池是否有电。每个班次开始都要按清单检查整套除颤设备。（手动除颤属 ACP 层级；PCP 操作 AED。）",
+     "hard": true
+    },
+    {
+     "en": "AED discipline: turn it ON first — the voice prompts sequence everything else. Bare the chest, sternal pad at the right clavicle/sternum junction, apex pad at the left lower rib margin in the anterior axillary line. Clear for analysis (6-20 seconds; charging adds 5-10); the machine advises, the rescuer presses. 'A' means automated, not automatic. After any shock — or a no-shock advisory — resume CPR instantly for 2 minutes before the next analysis; a provider (unlike a layperson) checks the pulse during analysis.",
+     "zh": "AED 纪律：第一步永远是开机——语音提示会把后面每一步排好。裸露胸部，胸骨片贴右锁骨与胸骨交界处，心尖片贴左下肋缘腋前线。分析时离手（6-20 秒；充电再加 5-10 秒）；机器给建议，人来按键。「A」是半自动，不是全自动。电击后——或提示「不建议电击」后——都立即恢复 CPR 2 分钟再进入下一轮分析；专业人员（不同于普通人）在分析时同步摸脉。",
+     "hard": true
+    },
+    {
+     "en": "Synchronized cardioversion is the defibrillator with its brain switched on: for UNSTABLE tachycardias WITH a pulse, it times the discharge about 10 ms after the R peak to dodge R-on-T. Practical traps: both limb leads and pads must be connected (the pads cable cannot sense and shock at once); the shock fires after a delay, so hold the button; the sync setting must be re-armed before every repeat shock. Typical energies: SVT converts around 50 J; VT wants 100 J or more. (ACP-level; PCP exam tests recognition level.)",
+     "zh": "同步电复律是打开了大脑的除颤器：用于有脉搏的不稳定过速，它把放电定时在 R 波峰后约 10 ms，避开 R-on-T。实操陷阱：肢体导联和电极片必须同时连接（电极片这一条线没法边感知边放电）；放电有延迟，按键要按住不放；每次重复电击前必须重新开同步。典型能量：SVT 约 50 J 就能转，VT 要 100 J 以上。（ACP 层级；PCP 考试只考识别层级。）",
+     "hard": true
+    },
+    {
+     "en": "Transcutaneous pacing: for unstable bradycardia refusing atropine — never for asystole. Set rate 60-80/min (70-80 commonly chosen), climb the current 10-20 mA at a time until ELECTRICAL capture (every spike followed by a wide QRS), then confirm MECHANICAL capture (a pulse with every QRS). Fine-tune by dropping the current until capture is lost, then adding 5-10 mA back. TCP fires chest-wall muscle too, so conscious patients need analgesia (morphine/fentanyl) and/or midazolam. Record strips before and after. (ACP-level; PCP exam tests recognition level.)",
+     "zh": "经皮起搏：用于阿托品无效的不稳定心动过缓——绝不用于 asystole。频率设 60-80 次/分（常选 70-80），电流每次上调 10-20 mA，直到出现电夺获（每个尖钉后跟一个宽 QRS），再确认机械夺获（每个 QRS 摸得到脉）。微调：把电流降到夺获丢失，再回加 5-10 mA。TCP 会连胸壁肌肉一起电，清醒病人需要镇痛（吗啡/芬太尼）和/或咪达唑仑。起搏前后都要留存图条。（ACP 层级；PCP 考试只考识别层级。）",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Extracorporeal Life Support (ECLS/ECPR)",
+   "titleZh": "体外生命支持（ECLS/ECPR）",
+   "points": [
+    {
+     "en": "ECLS cannulates large vessels, routes blood through an external oxygenator, and returns it — sustaining near-physiologic flow even when the heart is not beating at all.",
+     "zh": "ECLS 经大血管置管把血引出体外，由机器完成氧合再回输；即使心脏完全不跳，也能维持接近正常生理的血流。",
+     "hard": true
+    },
+    {
+     "en": "Candidates are select patients whose arrest cause is reversible: acute coronary occlusion, refractory VF, PE, hypothermia, myocarditis, cardiomyopathy, heart failure, poisoning, trauma — or as a bridge to LVAD implantation or transplant.",
+     "zh": "只适用于骤停病因可逆的挑选病例：急性冠脉闭塞、顽固性 VF、肺栓塞、低体温、心肌炎、心肌病、心衰、中毒、创伤；也可作为过渡到 LVAD 植入或心脏移植的临时桥梁。",
+     "hard": true
+    },
+    {
+     "en": "When to abandon conventional resuscitation for ECLS is unsettled: proposed windows are 10 to 30 minutes of failed CPR, and many programs treat 60 minutes as the outer limit of benefit.",
+     "zh": "何时放弃常规复苏改上 ECLS 没有定论：提议的时间窗是常规 CPR 失败 10–30 分钟，多数项目把 60 分钟当作获益的外限。",
+     "hard": true
+    },
+    {
+     "en": "The core trade-off: the longer conventional CPR fails, the less ECLS helps; but starting too early exposes a patient to highly invasive procedures that conventional care might have made unnecessary.",
+     "zh": "核心权衡：常规 CPR 失败越久，ECLS 帮助越小；但上得太早，患者就承受了本可能不需要的高度侵入性操作。",
+     "hard": false
+    },
+    {
+     "en": "Survival depends on selection: programs with very strict criteria (typically excluding age over 60, liver failure, lung disease, cancer) report up to 54%; broad-inclusion out-of-hospital programs report 10-15% — comparable to high-quality manual CPR inside an integrated system.",
+     "zh": "存活率取决于筛选：严格准入的项目（通常排除 60 岁以上及肝衰、肺病、癌症共病）报告最高 54%；宽准入的院外项目为 10%–15%——与整合体系内的高质量徒手 CPR 相当。",
+     "hard": true
+    },
+    {
+     "en": "The 2018 Heart and Stroke Foundation update says ECPR 'may be considered' only for select arrests with a potentially reversible cause during limited mechanical support; most supporting evidence is in-hospital, and field ECLS remains resource-heavy with an uncertain future.",
+     "zh": "加拿大心脏与卒中基金会 2018 更新的措辞只是『可考虑』：限于病因在有限机械支持期内可能逆转的挑选病例；支持证据主要来自院内，院前 ECLS 极耗资源、前景未定。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Devices That Support Cardiac Output (IABP, Impella)",
+   "titleZh": "支持心输出量的装置（IABP 与 Impella）",
+   "points": [
+    {
+     "en": "The IABP is a helium-filled balloon sitting in the proximal descending aorta, timed off the ECG waveform: it inflates during diastole and deflates during systole.",
+     "zh": "IABP 是放在近端降主动脉里的氦气球囊，靠 ECG 波形同步计时：舒张期充气、收缩期放气。",
+     "hard": true
+    },
+    {
+     "en": "The counterpulsation payoff chain: afterload drops, so LV stroke volume improves; coronary perfusion pressure rises, so myocardial oxygenation improves; cerebral blood flow is thought to benefit as well.",
+     "zh": "反搏的收益链：后负荷下降→左室每搏量改善；冠脉灌注压升高→心肌氧合改善；脑血流也被认为受益。",
+     "hard": true
+    },
+    {
+     "en": "IABPs typically carry a shocked heart for days while muscle recovers from MI, poisoning, or infection; air-medical rules allow them on both pressurized and unpressurized aircraft.",
+     "zh": "IABP 常在 MI、中毒或感染打击后支撑休克心脏数天等待心肌恢复；航空转运规则对加压舱和非加压舱都不设限。",
+     "hard": true
+    },
+    {
+     "en": "Transport hazard is line tension: the balloon stays tethered to console and gas supply, so loading, unloading, and every patient move must keep wires and tubing slack; a specially trained nurse, perfusionist, or paramedic owns the pump, and many patients are also ventilated with infusions running.",
+     "zh": "转运的要害是管线张力：球囊始终连着主机和气源，装卸车和每一次搬动都不能让导线导管受牵拉；由受训的护士、灌注师或辅助医务人员专人负责泵，多数患者还同时带着呼吸机和持续输注。",
+     "hard": false
+    },
+    {
+     "en": "The Impella is a percutaneous LVAD: inlet in the left ventricle, outlet in the proximal aorta, pumping across the aortic valve at up to 5 L/min.",
+     "zh": "Impella 是经皮 LVAD：入口在左室、出口在近端主动脉，跨主动脉瓣泵血，流量最高 5 L/min。",
+     "hard": true
+    },
+    {
+     "en": "Unlike the IABP, the Impella is continuous-flow and needs no cardiac synchronization — it actively ejects blood from the LV to offload workload; some native LV function is required, yet at rest it can nearly replace a failed left ventricle. Both devices are temporary bridges to recovery or transplant.",
+     "zh": "与 IABP 不同，Impella 是连续流、不需与心搏同步——它主动把血泵出左室来卸载心脏做功；需要残存部分左室功能，但静息状态下几乎能完全顶替衰竭的左室。两种装置都只是恢复或移植前的临时桥梁。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Left Ventricular Assist Devices (LVAD)",
+   "titleZh": "左心室辅助装置（LVAD）",
+   "points": [
+    {
+     "en": "An LVAD is an implanted continuous-flow pump driving blood from the LV into the aorta; pump, power source, and controller are worn on the body and connect through a driveline. It serves severe left-sided heart failure as a bridge to transplant or to recovery.",
+     "zh": "LVAD 是植入式连续流泵，把血从左室泵入主动脉；泵、电源和控制器佩戴在体外，经驱动线相连。用于重度左心衰，作为等待移植或心肌恢复的桥梁。",
+     "hard": false
+    },
+    {
+     "en": "LVADs generate no pulse — only a continuous pressure equal to the MAP. A patient whose device works perfectly can be pulseless; a standard BP cuff fails, so obtain a MAP with a Doppler or noninvasive cuff, and expect pulse oximetry to be unreliable.",
+     "zh": "LVAD 不产生脉搏，只输出一条等于 MAP 的连续压力：装置完全正常的患者也可能摸不到脉！普通血压计量不出来，要改用 Doppler 或无创血压获取 MAP；脉搏血氧仪也常不可靠。",
+     "hard": true
+    },
+    {
+     "en": "Is the pump running? Auscultate the precordium for a hum. In an unresponsive, pulseless patient with a normal MAP, hunt for other signs of perfusion instead of declaring cardiac arrest.",
+     "zh": "判断泵在不在转：听诊心前区有无嗡鸣（hum）。无反应+无脉但 MAP 正常的患者，必须去找其他灌注征象，不能直接按骤停处理。",
+     "hard": true
+    },
+    {
+     "en": "Every LVAD patient is anticoagulated to keep clots out of the pump — so gut and brain bleeds are signature complications, and bleeding early after implant can produce cardiac tamponade.",
+     "zh": "所有 LVAD 患者都在服抗凝药防泵内血栓——因此消化道出血和颅内出血是标志性并发症；植入早期的出血还可能造成心脏压塞。",
+     "hard": true
+    },
+    {
+     "en": "Five device emergencies: clot disrupting the pump, component displacement, driveline infection at the skin entry, failure of pump/controller/power, and anticoagulant bleeding.",
+     "zh": "五类装置急症：血栓扰乱泵运转、部件移位、驱动线皮肤入口感染、泵/控制器/电源故障、抗凝相关出血。",
+     "hard": true
+    },
+    {
+     "en": "Every LVAD patient has a 24/7 support line — call it to troubleshoot, and when condition allows, transport to the hospital that implanted the device.",
+     "zh": "每位 LVAD 患者都配有 24/7 支持热线：先打热线排障；病情允许时，转运回植入该装置的医院。",
+     "hard": true
+    },
+    {
+     "en": "Hypotensive LVAD patients often respond well to small fluid boluses; tachydysrhythmias are common companions.",
+     "zh": "LVAD 患者的低血压常对小剂量补液反应良好；快速性心律失常很常见。",
+     "hard": true
+    },
+    {
+     "en": "LVAD cardiac arrest is rarely survivable. Sequence: search reversible causes (hyperkalemia, hypovolemia); no hum means no power — connect an external source; if there is still no hum and no MAP or signs of circulation, do chest compressions despite the manufacturers' cannula-displacement warning.",
+     "zh": "LVAD 骤停极少存活。流程：先查可逆病因（高钾血症、低血容量）→听不到嗡鸣就是断电，接外接电源→仍无嗡鸣且无 MAP、无循环征象，才开始胸外按压（厂商顾虑套管移位，但此时按压是必须的）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Medications Commonly Prescribed for Coronary Heart Disease",
+   "titleZh": "冠心病患者常用处方药识别",
+   "points": [
+    {
+     "en": "One drug never equals one disease: beta blockers treat angina, hypertension, chronic heart failure, and prevent repeat AMI; diuretics may target fluid overload or blood pressure. Read every medication against the history and the rest of the med list.",
+     "zh": "一药多用，不能由药反推病：β 阻滞剂可治心绞痛、高血压、慢性心衰，也用于 AMI 二级预防；利尿剂既可能是排水也可能是降压。每种药都要对照病史和其余用药一起解读。",
+     "hard": false
+    },
+    {
+     "en": "Digoxin strengthens contraction and slows AV-junction conduction — prescribed for chronic heart failure and for rapid atrial dysrhythmias (rapid atrial flutter, atrial fibrillation, supraventricular dysrhythmias).",
+     "zh": "地高辛增强心肌收缩力、减慢房室交界传导——用于慢性心衰和快速房性心律失常（快速房扑、房颤、室上性心律失常）。",
+     "hard": true
+    },
+    {
+     "en": "Toxic effects appear in at least 30% of digoxin users: anorexia, nausea, vomiting, headache, blurred or yellow vision — and virtually any cardiac dysrhythmia. So ask every patient with a rhythm disturbance whether they take digoxin.",
+     "zh": "至少 30% 的地高辛使用者会出现中毒表现：厌食、恶心呕吐、头痛、视物模糊、黄视——以及几乎任何一种心律失常。所以每个心律紊乱的患者都要问：在不在吃地高辛？",
+     "hard": true
+    },
+    {
+     "en": "Digoxin patients are very sensitive to calcium preparations and to falling serum potassium — use caution with anything that depletes potassium, such as diuretics or large amounts of sodium bicarbonate.",
+     "zh": "地高辛患者对钙剂非常敏感，对血钾下降也高度敏感：并用会排钾的药（利尿剂、大量碳酸氢钠）必须格外小心。",
+     "hard": true
+    },
+    {
+     "en": "Three antianginal classes — nitrates, beta blockers, calcium channel blockers — all work the demand side of the oxygen supply-demand equation: each cuts myocardial oxygen consumption.",
+     "zh": "抗心绞痛三大类——硝酸酯、β 阻滞剂、钙通道阻滞剂——全部作用在氧供需方程的『需求侧』：都是降低心肌耗氧。",
+     "hard": true
+    },
+    {
+     "en": "Nitroglycerin takes effect in about 3 to 5 minutes (textbook figure) and comes as sublingual spray, fast sublingual tablets, sustained-release tablets, ointment, and patches — a patient who 'puts medicine under the tongue' almost certainly means nitroglycerin.",
+     "zh": "硝酸甘油教材写起效约 3–5 分钟；剂型有舌下喷雾、速效舌下片、缓释口服片、软膏和贴片——患者说『放在舌头下面的药』，基本就是硝酸甘油。",
+     "hard": true
+    },
+    {
+     "en": "Nitroglycerin's heavy venodilation is why the text lists it as a prehospital adjunct for pulmonary edema from left-sided failure: an 'internal phlebotomy' pooling blood in the veins, as if volume had been withdrawn from the body. (BC stance differs — see bcAlerts.)",
+     "zh": "硝酸甘油显著扩张静脉，因此教材把它列为左心衰肺水肿的院前辅助用药——机制像『体内放血』：血液蓄积在静脉系统里，等效于抽走一部分肺循环血量。（BC 立场不同，见 bcAlerts。）",
+     "hard": true
+    },
+    {
+     "en": "When a patient took their own nitro, ask two things: how much, and did it relieve the pain? Four reasons nitro fails: the pain is not cardiac, the pain is extraordinary, it is infarction rather than angina, or the bottle has been open too long and the drug is dead.",
+     "zh": "患者自服过硝酸甘油，必问两件事：服了多少？疼痛缓解没有？无效的四种解释：疼痛不是心源性、疼痛极其剧烈、是梗死而不是心绞痛、药开封太久已经失效。",
+     "hard": true
+    },
+    {
+     "en": "Potent nitro announces itself: throbbing headache, burning under the tongue, bitter taste. No bitter taste or headache suggests an outdated tablet; a pounding headache with zero pain relief points toward AMI.",
+     "zh": "新鲜有效的硝酸甘油有信号：搏动性头痛、舌下烧灼感、苦味。没有苦味没有头痛，提示药已过期；头痛明显但胸痛毫无缓解，要怀疑 AMI。",
+     "hard": true
+    },
+    {
+     "en": "Chronic beta blockade blunts the beta effects of epinephrine during arrest resuscitation — but the alpha vasoconstriction is untouched, so epinephrine remains worth giving.",
+     "zh": "长期 β 阻滞会钝化骤停复苏中肾上腺素的 β 效应——但 α 缩血管效应不受影响，所以肾上腺素依然值得给。",
+     "hard": true
+    },
+    {
+     "en": "Calcium channel blockers stop calcium influx into cardiac muscle: they prevent coronary spasm and weaken contraction to cut oxygen demand, with hypotension as the notable side effect. Diltiazem and verapamil also slow the AV node — their main job today is rate control in atrial fibrillation.",
+     "zh": "钙通道阻滞剂阻止钙离子进入心肌：既防冠脉痉挛，又减弱收缩力来降低耗氧；显著副作用是低血压。地尔硫卓和维拉帕米还减慢房室结传导——如今主要用于房颤的心室率控制。",
+     "hard": true
+    },
+    {
+     "en": "An antidysrhythmic on the med list (amiodarone for VT and life-threatening ventricular dysrhythmias; also sotalol, procainamide, flecainide, mexiletine) certifies a significant dysrhythmia history — keep that patient on the monitor throughout your care.",
+     "zh": "药单上出现抗心律失常药（胺碘酮=室速及危及生命的室性心律失常；还有索他洛尔、普鲁卡因胺、氟卡尼、美西律等），就等于认证了明确的心律失常史——照护全程都要持续监护。",
+     "hard": true
+    },
+    {
+     "en": "Diuretics (furosemide/Lasix, hydrochlorothiazide, metolazone, spironolactone) trick the kidneys into dumping sodium and water — many dump potassium too. Unreplaced hypokalemia invites dysrhythmias, and the danger multiplies if the patient also takes digoxin.",
+     "zh": "利尿剂（呋塞米 Lasix、氢氯噻嗪、美托拉宗、螺内酯等）让肾脏多排钠排水——很多同时排钾。不补钾的低钾血症容易诱发心律失常，若患者同时在吃地高辛，危险加倍。",
+     "hard": true
+    },
+    {
+     "en": "ACE inhibitors (-pril: ramipril, lisinopril, enalapril) and ARBs (-sartan: candesartan, losartan, valsartan) relax arteries, lowering both BP and afterload — workhorses for hypertension and heart failure, often paired with a diuretic.",
+     "zh": "ACEI（后缀 -pril：雷米普利、赖诺普利、依那普利）和 ARB（后缀 -sartan：坎地沙坦、氯沙坦、缬沙坦）通过松弛动脉同时降血压和后负荷——高血压和心衰的主力药，常与利尿剂合用。",
+     "hard": false
+    },
+    {
+     "en": "Antihypertensive dosing is hard to titrate, so weakness, dizziness, and orthostatic hypotension are common — check BP in recumbent and sitting positions on every patient taking these drugs.",
+     "zh": "降压药剂量难拿捏，虚弱、头晕和体位性低血压很常见——所有服降压药的患者都应测卧位+坐位两套血压来筛查体位性低血压。",
+     "hard": true
+    },
+    {
+     "en": "Anticoagulants (warfarin; newer oral dabigatran/Pradaxa, rivaroxaban/Xarelto, apixaban/Eliquis; subcutaneous heparins) mark patients with AF, artificial valves, or prior PE/MI — expect heavy bleeding from minor trauma or venipuncture. Antiplatelets center on ASA, with clopidogrel, ticagrelor, or prasugrel added for acute STEMI.",
+     "zh": "抗凝药（华法林；新型口服药达比加群 Pradaxa、利伐沙班 Xarelto、阿哌沙班 Eliquis；皮下肝素类）提示房颤、机械瓣或 PE/MI 病史——轻微创伤或穿刺都可能出血不止。抗血小板药以 ASA 为核心，急性 STEMI 常加氯吡格雷、替格瑞洛或普拉格雷。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Heart weight / daily blood moved",
+   "itemZh": "心脏重量 / 每日泵血量",
+   "value": "250-300 g / 7,000-9,000 L"
+  },
+  {
+   "itemEn": "Pericardial serous fluid (normal)",
+   "itemZh": "心包浆液正常量",
+   "value": "约 30 mL"
+  },
+  {
+   "itemEn": "PMI location",
+   "itemZh": "心尖搏动点（PMI）位置",
+   "value": "左锁骨中线第 5 肋间"
+  },
+  {
+   "itemEn": "Cardiac output = SV x HR (adult normals)",
+   "itemZh": "心输出量＝每搏量×心率（成人正常值）",
+   "value": "CO 5-6 L/min；SV 60-100 mL；HR 60-100/min"
+  },
+  {
+   "itemEn": "Cardiac cycle timing",
+   "itemZh": "心动周期时长",
+   "value": "舒张期约 0.52 s / 收缩期约 0.28 s；被动充盈占 70-80%"
+  },
+  {
+   "itemEn": "Intrinsic pacemaker rates",
+   "itemZh": "三级起搏点固有频率",
+   "value": "窦房结 60-100；房室交界 40-60；浦肯野 20-40 次/分"
+  },
+  {
+   "itemEn": "Conduction timing (atria / AV delay / ventricles)",
+   "itemZh": "传导时序（心房/房室结延搁/心室）",
+   "value": "0.08 s / 0.12 s / 0.08 s；PRI 正常 0.12-0.20 s（3-5 小格）"
+  },
+  {
+   "itemEn": "Resting membrane potential / Na-K pump ratio",
+   "itemZh": "静息膜电位 / 钠钾泵比例",
+   "value": "-90 mV；3 Na+ 出 : 2 K+ 进"
+  },
+  {
+   "itemEn": "Dopamine dose bands",
+   "itemZh": "多巴胺剂量档位",
+   "value": "1-2 多巴胺受体（肾）；2-10 beta-1；10-20 alpha（mcg/kg/min）"
+  },
+  {
+   "itemEn": "BP definitions",
+   "itemZh": "血压判定线",
+   "value": "高血压 ≥130/80；前期 SBP 120-129；正常 <120/80 mmHg"
+  },
+  {
+   "itemEn": "Pulsus paradoxus threshold",
+   "itemZh": "奇脉判据",
+   "value": "吸气时 SBP 下降 >10 mmHg（想心包填塞）"
+  },
+  {
+   "itemEn": "Arm-to-arm BP difference (abnormal)",
+   "itemZh": "双臂血压差异常线",
+   "value": ">20 mmHg（想主动脉夹层）"
+  },
+  {
+   "itemEn": "Normal JVP",
+   "itemZh": "正常颈静脉压",
+   "value": "45° 半卧位下胸骨角上方 2-4 cm"
+  },
+  {
+   "itemEn": "Family-history risk threshold",
+   "itemZh": "家族史危险因素门槛",
+   "value": "一级亲属男 <55 岁 / 女 <65 岁患 CHD"
+  },
+  {
+   "itemEn": "AMI presentation stats",
+   "itemZh": "心梗表现统计",
+   "value": "10-20% 无胸痛；25% 放射到手臂；90% 死亡源于心律失常（多为室颤）；院前死亡多在 4 小时内"
+  },
+  {
+   "itemEn": "ASA dose",
+   "itemZh": "阿司匹林剂量",
+   "value": "教材 160-325 mg 嚼服；BC 考纲 160 mg 口服嚼碎"
+  },
+  {
+   "itemEn": "Nitroglycerin dosing",
+   "itemZh": "硝酸甘油给法",
+   "value": "教材 0.3-0.4 mg SL q5min×3-6 剂；BC 0.4 mg SL q3-5min、任意 30 分钟内 ≤3 剂、全程 SBP >110"
+  },
+  {
+   "itemEn": "Oxygen in ACS",
+   "itemZh": "ACS 给氧阈值",
+   "value": "教材：SpO2 <90% 才给、滴定 90-94%；BC 协议：维持 ≥94%"
+  },
+  {
+   "itemEn": "Prehospital 12-lead payoff",
+   "itemZh": "院前 12 导联的收益",
+   "value": "缩短入院治疗时间 15-30 分钟；重复 ECG 多识别 10-15% STEMI"
+  },
+  {
+   "itemEn": "PCI window",
+   "itemZh": "PCI 时间窗",
+   "value": "首次医疗接触后 90-120 分钟内球囊开通"
+  },
+  {
+   "itemEn": "Cardiogenic shock LV thresholds",
+   "itemZh": "心源性休克左室阈值",
+   "value": "梗死 25% → 左心衰；≥40% → 心源性休克"
+  },
+  {
+   "itemEn": "Aortic dissection / AAA numbers",
+   "itemZh": "夹层 / 腹主动脉瘤数字",
+   "value": "65% 夹层在升主动脉；AAA 见于 2% 的 >65 岁人群、破裂死亡率 80%、休克时允许性低血压 SBP 70-90"
+  },
+  {
+   "itemEn": "MAP formula and encephalopathy line",
+   "itemZh": "MAP 公式与脑病阈值",
+   "value": "MAP = DBP + 1/3(SBP−DBP)；>150 风险；降压 ≤1/3、用 30-60 分钟"
+  },
+  {
+   "itemEn": "Heart failure burden in Canada",
+   "itemZh": "加拿大心衰负担",
+   "value": "600,000 患者；年死亡率 5-50%"
+  },
+  {
+   "itemEn": "PDE5 inhibitor lockout",
+   "itemZh": "PDE5 抑制剂禁药窗",
+   "value": "教材 24-72 h（他达拉非最长）；BC：Viagra/Levitra 24 h、Cialis 48 h"
+  },
+  {
+   "itemEn": "ECG paper speed / squares",
+   "itemZh": "ECG 走纸速度 / 格子",
+   "value": "25 mm/s；小格 0.04 s，大格 0.20 s，5 大格 = 1 s"
+  },
+  {
+   "itemEn": "Amplitude calibration",
+   "itemZh": "振幅定标",
+   "value": "10 mm/mV（校准方块宽 5 mm × 高 10 mm）"
+  },
+  {
+   "itemEn": "Normal P wave",
+   "itemZh": "正常 P 波",
+   "value": "< 110 ms，< 2.5 mm"
+  },
+  {
+   "itemEn": "PR interval",
+   "itemZh": "PR 间期",
+   "value": "0.12-0.20 s；> 0.20 s = 一度阻滞，< 0.12 s = 预激"
+  },
+  {
+   "itemEn": "QRS width cutoff",
+   "itemZh": "QRS 宽度分界",
+   "value": "< 0.12 s 窄（室上性）；≥ 0.12 s 宽（室性/束支阻滞）"
+  },
+  {
+   "itemEn": "Pathologic Q wave",
+   "itemZh": "病理性 Q 波",
+   "value": "宽 ≥ 0.04 s 或深 > R 波高度 1/3"
+  },
+  {
+   "itemEn": "QT interval / LQTS",
+   "itemZh": "QT 间期 / 长 QT",
+   "value": "0.36-0.44 s；LQTS 约 > 0.45 s → 尖端扭转风险"
+  },
+  {
+   "itemEn": "Intrinsic pacemaker rates",
+   "itemZh": "起搏点固有频率",
+   "value": "窦房结 60-100 / 交界 40-60 / 心室 20-40 次/分"
+  },
+  {
+   "itemEn": "Max sinus tachycardia",
+   "itemZh": "窦速上限",
+   "value": "约 220 − 年龄；静息窦速典型 101-180 次/分"
+  },
+  {
+   "itemEn": "STEMI ST-elevation criteria",
+   "itemZh": "STEMI 抬高判据",
+   "value": "2 相邻导联 ≥ 1 mm；V2-V3 例外：男 ≥40 岁 2 mm、男 <40 岁 2.5 mm、女 1.5 mm"
+  },
+  {
+   "itemEn": "Inferior MI → RVMI",
+   "itemZh": "下壁梗死并发右室梗死",
+   "value": "40% 并发；V4R ST 抬高 ≥ 1 mm 确认 → 禁硝酸甘油"
+  },
+  {
+   "itemEn": "12-lead time rules",
+   "itemZh": "12 导时间规则",
+   "value": "现场加时 ≤ 2 min；重复 2 次多抓 10-15% STEMI"
+  },
+  {
+   "itemEn": "Defibrillation energy (unknown device)",
+   "itemZh": "除颤能量（厂商建议不明时）",
+   "value": "双相 200 J / 单相 360 J（每次）"
+  },
+  {
+   "itemEn": "Cardioversion typical energies",
+   "itemZh": "电复律典型能量",
+   "value": "SVT 约 50 J；VT ≥ 100 J（ACP 层级）"
+  },
+  {
+   "itemEn": "Arrest drugs (ACP level)",
+   "itemZh": "骤停药物（ACP 层级）",
+   "value": "肾上腺素 1 mg IV/IO q3-5 min；胺碘酮 300 mg → 150 mg"
+  },
+  {
+   "itemEn": "Atropine for unstable bradycardia (ACP)",
+   "itemZh": "不稳定过缓的阿托品（ACP）",
+   "value": "0.5 mg IV q3-5 min，上限 3 mg"
+  },
+  {
+   "itemEn": "Adult compressions",
+   "itemZh": "成人按压",
+   "value": "深 5-6 cm，100-120 次/分，比例 30:2；中断 ≤ 10 s（BC：< 5 s）"
+  },
+  {
+   "itemEn": "ETCO2 in arrest",
+   "itemZh": "骤停中 ETCO2",
+   "value": "ACLS 20 min 后持续 < 10 mmHg 提示徒劳（低体温除外）；> 25 与存活相关"
+  },
+  {
+   "itemEn": "Post-ROSC targets",
+   "itemZh": "ROSC 后目标",
+   "value": "ETCO2 35-40 mmHg，SpO2 94-98%，SBP > 90 mmHg，床头抬高 30°"
+  },
+  {
+   "itemEn": "BC stop-CPR clock",
+   "itemZh": "BC 终止计时",
+   "value": "30 min 无 ROSC 且无除颤可停；曾 ROSC 或除颤过则 40 min"
+  },
+  {
+   "itemEn": "TCP settings (ACP)",
+   "itemZh": "经皮起搏参数（ACP）",
+   "value": "频率 60-80 次/分；电流每次 +10-20 mA 至夺获，回调后 +5-10 mA"
+  },
+  {
+   "itemEn": "AED timing",
+   "itemZh": "AED 时间",
+   "value": "分析 6-20 s，充电 5-10 s；电击后立即 CPR 2 min 再分析"
+  },
+  {
+   "itemEn": "ECLS initiation window after failed conventional CPR",
+   "itemZh": "常规 CPR 失败后转 ECLS 的时间窗",
+   "value": "提议 10–30 min；多数项目以 60 min 为获益外限"
+  },
+  {
+   "itemEn": "ECLS survival by inclusion criteria",
+   "itemZh": "ECLS 存活率（按准入标准）",
+   "value": "严格准入最高 54%；宽准入院外项目 10%–15%"
+  },
+  {
+   "itemEn": "Common ECLS exclusions",
+   "itemZh": "ECLS 常见排除标准",
+   "value": "年龄 >60 岁；肝衰竭、肺病、癌症等共病"
+  },
+  {
+   "itemEn": "IABP balloon cycle",
+   "itemZh": "IABP 球囊周期",
+   "value": "舒张期充气 / 收缩期放气（氦气球囊，ECG 同步）"
+  },
+  {
+   "itemEn": "Impella pump output",
+   "itemZh": "Impella 泵血流量",
+   "value": "最高 5 L/min（左室→近端主动脉，连续流）"
+  },
+  {
+   "itemEn": "Digoxin toxicity incidence",
+   "itemZh": "地高辛中毒发生率",
+   "value": "≥30% 使用者出现中毒表现"
+  },
+  {
+   "itemEn": "Nitroglycerin onset",
+   "itemZh": "硝酸甘油起效时间",
+   "value": "教材 3–5 min；BC 药典：舌下 60 s 起效、持续 30 min"
+  },
+  {
+   "itemEn": "Nitroglycerin dosing (BC)",
+   "itemZh": "硝酸甘油剂量（BC）",
+   "value": "0.4 mg SL，q3–5 min；30 min 内最多 3 剂；全程需 SBP >110 mmHg"
+  },
+  {
+   "itemEn": "Nitroglycerin HR limits (BC)",
+   "itemZh": "硝酸甘油心率界限（BC）",
+   "value": "HR <50 或 >150 禁用"
+  },
+  {
+   "itemEn": "PDE5 inhibitor lockout before nitro (BC)",
+   "itemZh": "PDE5 抑制剂后禁硝酸甘油时窗（BC）",
+   "value": "Viagra/Levitra 24 h 内；Cialis 48 h 内"
+  },
+  {
+   "itemEn": "ASA dose for cardiac chest pain",
+   "itemZh": "心源性胸痛 ASA 剂量",
+   "value": "教材 160–325 mg 嚼服；BC 160 mg PO（唯一给药前不需测 vitals 的药）"
+  },
+  {
+   "itemEn": "CPAP for pulmonary edema (BC PCP)",
+   "itemZh": "肺水肿 CPAP 参数（BC PCP）",
+   "value": "5 cmH2O / 5 L/min 起步，按 2.5 cmH2O 递增至最大 10 cmH2O；SBP <90 禁用"
+  },
+  {
+   "itemEn": "BC CPR termination clock",
+   "itemZh": "BC CPR 终止时限",
+   "value": "30 min 无 ROSC 且无除颤；若曾有 ROSC 或除过颤则 40 min"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Adequate perfusion needs all three: a pump (heart), a container (vessels), and fluid (blood) — lose any one and perfusion fails.",
+   "zh": "足够的灌注需要三件套同时在线：泵（心脏）、容器（血管）、液体（血液）——缺一个，灌注就垮。"
+  },
+  {
+   "en": "Atropine is an anticholinergic with vagolytic properties: it blocks ACh at the SA and AV nodes and lifts the vagal brake on a slow heart.",
+   "zh": "阿托品是带解迷走作用的抗胆碱能药：在窦房结和房室结挡住乙酰胆碱，把压着慢心率的迷走「刹车」松开。"
+  },
+  {
+   "en": "Abbreviation discipline: PE means pulmonary embolism — never write PE for pulmonary edema.",
+   "zh": "缩写纪律：PE 只代表肺栓塞——绝不要拿 PE 去写肺水肿。"
+  },
+  {
+   "en": "Chest pain is ACS until the hospital rules it out: a 12-lead can rule IN a STEMI but cannot exclude ACS — only serial biomarkers can.",
+   "zh": "胸痛在医院排除之前都算 ACS：12 导联能「确诊」STEMI，却排除不了 ACS——能排除的只有连续的生物标志物。"
+  },
+  {
+   "en": "Nancy's rule: start treatment immediately for any patient with chest pain — assessment and management run in parallel, not in sequence.",
+   "zh": "Nancy 铁律：任何胸痛病人都立即开始治疗——评估和处置并行推进，不是先评估完再治。"
+  },
+  {
+   "en": "The handshake exam: while introducing yourself, a quick radial palpation already gives you rate, rhythm, and a rough BP — and picks out the very sick.",
+   "zh": "握手查体：自我介绍握手的同时顺手摸桡动脉，心率、节律、血压粗值全到手——重病人一摸便知。"
+  },
+  {
+   "en": "Treat the patient, not the monitor: the ECG shows electrical activity only — it says nothing about mechanical pumping, and an unobtainable SpO2 reading is itself a low-output clue.",
+   "zh": "治病人，别治监护仪：ECG 只反映电活动——机械泵血它一个字不提；血氧仪读不出数，本身就是低心输出量的线索。"
+  },
+  {
+   "en": "Start the IV in the left arm when possible: cath labs favour the right radial artery for cardiac procedures.",
+   "zh": "静脉通路尽量避开右臂：导管室做心脏介入偏爱右侧桡动脉。"
+  },
+  {
+   "en": "Cable placement memory: 'white is on the right, smoke over fire' (black above red on the left) — or salt, pepper, ketchup going around from the right.",
+   "zh": "导线位置口诀：「白在右，烟在火上」（左侧黑在红上）——或者从右边数过去：盐（白）、胡椒（黑）、番茄酱（红）。"
+  },
+  {
+   "en": "If the whole PQRST is upright in aVR, the arm leads are switched — fix the cables before you 'diagnose' anything.",
+   "zh": "aVR 里整组 PQRST 都直立＝左右手导联接反了——先把线换回来，再谈任何「诊断」。"
+  },
+  {
+   "en": "Flat line on an alert, talking patient = a loose lead. Wavy VF-lookalike baseline on a comfortable patient = artifact. Look at the patient before you reach for the paddles.",
+   "zh": "清醒说话的病人出现直线＝导联脱落。安然无恙的病人出现貌似 VF 的波浪基线＝伪差。伸手拿电极板之前，先看病人。"
+  },
+  {
+   "en": "Pathologic Q waves on a routine ECG mean an evolved MI of unknown age — the physician's first question will be 'when was the MI?'",
+   "zh": "常规 ECG 上看到病理性 Q 波＝年代不明的陈旧心梗——医生的第一个问题一定是「什么时候梗过？」"
+  },
+  {
+   "en": "Every inferior STEMI gets a 15-lead (or at least V4R) BEFORE nitroglycerin — a preload-dependent right ventricle can crash the pressure on one spray.",
+   "zh": "每一个下壁 STEMI 都要先做 15 导（至少 V4R）再考虑硝酸甘油——依赖前负荷的右心室可能一喷就把血压打垮。"
+  },
+  {
+   "en": "Nancy's rule: heavy, crushing, squeezing, or choking chest pain is treated as AMI even when the ECG looks perfectly normal.",
+   "zh": "Nancy 铁律：沉重、压榨、紧勒、窒息样的胸痛，就算 ECG 看起来完全正常，也按 AMI 处理。"
+  },
+  {
+   "en": "Unresponsive, pulseless LVAD patient: before any compressions, auscultate for the hum, get a Doppler MAP, and look for perfusion signs — then dial the patient's 24/7 device line for troubleshooting and destination advice.",
+   "zh": "LVAD 患者无反应又摸不到脉：按压之前先听心前区嗡鸣、用 Doppler 测 MAP、找灌注征象——然后拨打患者随身的 24/7 装置热线，边排障边定转运目的地。"
+  },
+  {
+   "en": "Moving an IABP or Impella patient, the kill risk is line tension: assign one person to watch tubing and cables through every lift, load, and unload, and keep the device specialist beside the pump.",
+   "zh": "搬运 IABP 或 Impella 患者，致命风险是管线受牵拉：每一次抬、装车、卸车都要专人盯住导管和线缆，装置专责人员必须守在泵旁。"
+  },
+  {
+   "en": "Before your own nitro, interrogate theirs: how many doses, any relief, any bitter taste or headache? A pounding headache with unrelieved pain reframes this call as probable AMI, not angina.",
+   "zh": "给你自己的硝酸甘油之前，先审患者自服的那份：吃了几剂？缓解没有？有没有苦味和头痛？头痛明显但疼痛不减，这单就要按疑似 AMI 而不是心绞痛来打。"
+  },
+  {
+   "en": "In BC chest pain calls, ASA comes early — it is the one drug that needs no vitals first — and transport rolls after the first nitro dose, not after the pain settles.",
+   "zh": "BC 的胸痛出勤里，ASA 要趁早——它是唯一给药前不用先测生命体征的药；而且首剂硝酸甘油一给就启动转运，不是等疼痛压下去再走。"
+  },
+  {
+   "en": "A beta blocker on the med list does not cancel epinephrine in arrest: beta response may be blunted, but alpha vasoconstriction still works for you.",
+   "zh": "药单上有 β 阻滞剂，不等于骤停时肾上腺素作废：β 反应可能被钝化，但 α 缩血管效应照样为你干活。"
+  },
+  {
+   "en": "Every patient on antihypertensives gets two blood pressures — recumbent and sitting — before you stand them up; orthostatic hypotension is the fall you can prevent.",
+   "zh": "服降压药的患者一律测两套血压——卧位一套、坐位一套——再让人起身；体位性低血压是你能提前拦住的那次跌倒。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Cardiovascular emergencies are not mainly monitor interpretation — perfusion assessment (skin, mentation, pulse quality, BP trend) stays central; the body shows poor perfusion before the rhythm gets a name.",
+   "zh": "心血管急症不等于看监护仪——灌注评估（皮肤、意识、脉搏质量、血压趋势）才是核心；身体总在心律「叫得出名字」之前就先暴露灌注不良。"
+  },
+  {
+   "en": "Chest pain is not a pain-control problem but an ischemia problem: ASA is the mortality-cutting drug, analgesia is secondary and opioids can even blunt lifesaving antiplatelets.",
+   "zh": "胸痛不是止痛问题，是缺血问题：真正降死亡率的是阿司匹林；镇痛是次要目标，阿片类甚至会拖累救命的抗血小板药。"
+  },
+  {
+   "en": "Respiratory and cardiac complaints overlap: a 'cardiac wheeze' from pulmonary edema mimics asthma, salbutamol rarely helps it, and the tachycardia worsens the failing heart.",
+   "zh": "呼吸主诉和心脏主诉常常是一回事：肺水肿的「心源性哮鸣」会伪装成哮喘，沙丁胺醇对它基本无效，带来的心动过速反而加重心衰。"
+  },
+  {
+   "en": "Ventricular filling percentages look contradictory in the book (about 80% passive in the cardiac-cycle section; 70% by gravity plus 30% atrial kick in the conduction section) — safe exam answer: the majority (70-80%) fills passively, atrial kick tops up the final 20-30%.",
+   "zh": "教材里心室充盈比例前后不一（心动周期一节说约 80% 被动充盈；传导一节说 70% 靠重力＋30% 靠心房收缩）——保险的考试答案：大头（70-80%）是被动充盈，心房收缩补最后的 20-30%。"
+  },
+  {
+   "en": "Unstable angina vs NSTEMI: same story, same exam, same ECG — only biomarkers separate them (elevated = NSTEMI). STEMI is the odd one out: the 12-lead alone declares it.",
+   "zh": "不稳定型心绞痛 vs NSTEMI：病史一样、查体一样、ECG 一样——只有生物标志物能分开它们（升高＝NSTEMI）。STEMI 才是例外：单凭 12 导联即可宣判。"
+  },
+  {
+   "en": "Nitroglycerin relieves anginal pain but does not open a thrombosed artery and does not lower AMI mortality — do not equate symptom relief with lifesaving therapy; in acute heart failure, though, nitro IS the mortality-reducing mainstay.",
+   "zh": "硝酸甘油能缓解心绞痛，但打不开血栓堵死的动脉、也不降低心梗死亡率——别把「症状缓解」当成「救命治疗」；可一换到急性心衰场景，硝酸甘油恰恰是降死亡率的主力。这两个场景最容易考混。"
+  },
+  {
+   "en": "Three look-alike pulse terms: pulse deficit (radial below apical, or left radial absent), pulsus paradoxus (inspiratory SBP drop over 10 mm Hg — tamponade), pulsus alternans (strong-weak alternation) — exams love swapping their definitions.",
+   "zh": "三个长得像的脉搏术语：脉搏短绌（桡动脉数低于心尖、或左桡缺失）、奇脉（吸气 SBP 掉超 10 mmHg——填塞）、交替脉（一强一弱交替）——考题最爱把定义互换来挖坑。"
+  },
+  {
+   "en": "Tamponade vs tension pneumothorax in the hypotensive trauma patient: tamponade keeps equal breath sounds and a midline trachea; tension pneumo silences one side and pushes the trachea away.",
+   "zh": "低血压创伤病人里的填塞 vs 张力性气胸：填塞呼吸音两侧对称、气管居中；张力性气胸一侧呼吸音消失、气管被推向对侧。"
+  },
+  {
+   "en": "Dissection vs AMI: dissection pain is maximal from the first minute, tearing, radiates to the interscapular back, no prodrome, never abates; AMI builds gradually with nausea/sweating prodrome. Managements diverge hard: dissection gets NO ASA and NO nitro.",
+   "zh": "夹层 vs 心梗：夹层疼痛第一分钟就到顶、撕裂样、放射到肩胛间背部、无前驱、不会自行减轻；心梗是带恶心出汗前奏的渐进式。处置分道扬镳：夹层禁 ASA、禁硝酸甘油。"
+  },
+  {
+   "en": "Right-side failure alone is seldom an emergency and is most often caused by left-side failure; the sorting clue is pulmonary edema — present means secondary to left failure, absent points to primary lung or right-heart disease.",
+   "zh": "单纯右心衰很少是急症，而且它最常见的病因就是左心衰；分拣线索是肺水肿——有肺水肿＝继发于左心衰，没有＝原发于肺或右心的问题。"
+  },
+  {
+   "en": "A hypertensive EMERGENCY is defined by end-organ damage, not the cuff number — and one high reading on a stressful scene never diagnoses chronic hypertension.",
+   "zh": "高血压「急症」由终末器官损害定义，不由袖带数字定义——现场应激下的一次高读数，也永远不能给人扣上慢性高血压的帽子。"
+  },
+  {
+   "en": "Furosemide and morphine are legacy pulmonary-edema drugs now under caution: furosemide only in small doses (delayed diuresis, reflex afterload rise), morphine rarely (sedation breeds intubation) — nitroglycerin plus CPAP are today's workhorses.",
+   "zh": "呋塞米和吗啡是肺水肿的「上个时代」用药，如今都要小心：呋塞米只敢小剂量（利尿迟、反射性抬后负荷），吗啡基本不用（镇静催生插管）——现在的主力是硝酸甘油＋CPAP。"
+  },
+  {
+   "en": "Norepinephrine is chiefly ALPHA (vasoconstrictor of choice, fewer dysrhythmias than dopamine); epinephrine is chiefly BETA (arrest and anaphylaxis) — students reliably reverse these two.",
+   "zh": "去甲肾上腺素以 alpha 为主（首选缩血管药，比多巴胺少心律失常）；肾上腺素以 beta 为主（骤停和过敏首选）——这俩被记反的概率极高。"
+  },
+  {
+   "en": "Mobitz I vs Mobitz II: type I stretches the PRI longer and longer until a beat drops (always irregular, usually benign); type II keeps the PRI absolutely constant and simply drops beats (more dangerous, pacing territory).",
+   "zh": "Mobitz I vs II：I 型 PRI 越拉越长直到掉一跳（必然不规则，通常良性）；II 型 PRI 纹丝不动、直接掉跳（更凶险，属于要准备起搏的那一类）。"
+  },
+  {
+   "en": "Third-degree block is NOT 'chaos': both the P-P and R-R are regular — they just ignore each other. A regular rhythm with an inconsistent PRI is almost certainly third-degree.",
+   "zh": "三度阻滞不是「乱」：P-P 规则、R-R 也规则——只是彼此互不理睬。节律规整而 PRI 不恒定，几乎必是三度。"
+  },
+  {
+   "en": "Agonal rhythm vs idioventricular rhythm: both are slow and ugly, but agonal (under 20/min) never produces a pulse; an idioventricular rhythm might.",
+   "zh": "濒死心律 vs 室性自主心律：都又慢又难看，但濒死心律（低于 20 次/分）永远摸不到脉；室性自主心律可能有脉。"
+  },
+  {
+   "en": "AF vs atrial flutter: AF is irregularly irregular with no P waves at all; flutter shows sawtooth F waves and usually runs regular 2:1 with a ventricular rate right around 150.",
+   "zh": "房颤 vs 房扑：房颤是「不规则地不规则」且完全没有 P 波；房扑是锯齿状 F 波、通常规则 2:1 下传、室率正卡在 150 左右。"
+  },
+  {
+   "en": "Defibrillate (unsynchronized) only pulseless VF/VT; synchronized cardioversion only unstable tachycardia WITH a pulse; asystole gets neither — shocking it is useless and possibly harmful.",
+   "zh": "非同步除颤只给无脉的 VF/VT；同步电复律只给有脉的不稳定过速；asystole 两个都不给——电它无用甚至有害。"
+  },
+  {
+   "en": "A normal ECG does not rule out AMI, and a 'nondiagnostic' ECG does not mean 'no MI' — changes may take hours to appear. Treat the story.",
+   "zh": "ECG 正常不能排除心梗，「非诊断性」也不等于「没有心梗」——图上的改变可能要几小时才浮现。要治的是病史。"
+  },
+  {
+   "en": "Sinus tachycardia is a symptom, not a disease: it compensates for pain, fever, hypovolemia, or hypoxia. Chemically slowing a compensatory rhythm can kill the patient.",
+   "zh": "窦速是症状不是病：它在替疼痛、发热、低血容量、缺氧代偿。用药把代偿性心率压下去，可能直接害死病人。"
+  },
+  {
+   "en": "Preexcited (WPW) AF looks like 'just fast AF' but is irregular, WIDE, and over 200/min — adenosine, beta blockers, and calcium channel blockers are all contraindicated; the answer is synchronized cardioversion.",
+   "zh": "预激（WPW）房颤看着像「快一点的房颤」，其实是不规则＋宽 QRS＋室率超 200——腺苷、β 阻滞剂、钙通道阻滞剂全部禁用；答案是同步电复律。"
+  },
+  {
+   "en": "Hyperkalemia vs hypokalemia on ECG: high K = tall, peaked, tented T waves heading toward a sine wave; low K = flat T waves plus a U wave after the T.",
+   "zh": "高钾 vs 低钾的 ECG：高钾＝高、尖、帐篷样 T 波，严重时走向正弦波；低钾＝T 波低平、T 后多出一个 U 波。"
+  },
+  {
+   "en": "VT vs SVT with aberrancy: both are fast and wide, but dissociated P waves peeking out at varying spots inside the QRS argue VT. When in doubt in an unstable patient, treat as VT.",
+   "zh": "VT vs 室上速伴差传：都又快又宽，但 QRS 里位置游移、若隐若现的分离 P 波指向 VT。拿不准而病人不稳定时，一律按 VT 处理。"
+  },
+  {
+   "en": "Pulseless LVAD patient = cardiac arrest? No. A normally running LVAD produces continuous flow with no pulse; declare arrest only after no hum, no MAP, and no signs of circulation. Blind compressions risk cannula displacement.",
+   "zh": "误区：LVAD 患者摸不到脉=骤停。错。正常运转的 LVAD 本来就是连续血流、无脉搏；只有无嗡鸣+无 MAP+无循环征象三样齐了才按骤停处理。上来就盲目按压，反而可能压脱套管。"
+  },
+  {
+   "en": "Nitroglycerin saves lives in ACS? No — it treats ischemic pain but does not cut mortality. ASA is the mortality-reducing drug and the single most important medication to give.",
+   "zh": "误区：ACS 里硝酸甘油是救命药。错——它只处理缺血性疼痛，不降低死亡率。真正降低死亡率、最重要的那颗药是 ASA。"
+  },
+  {
+   "en": "On LVAD patients, trust the monitor? SpO2 is often unreliable and a cuff may read nothing — clinical perfusion signs (mentation, skin, cap refill) plus a Doppler MAP outrank the numbers.",
+   "zh": "误区：LVAD 患者看监护仪读数就行。它的 SpO2 常不可靠、普通血压计可能什么都量不出——意识、皮肤、毛细血管再充盈这些临床灌注征象加 Doppler MAP，比屏幕数字更算数。"
+  },
+  {
+   "en": "One med proves one disease? A beta blocker could mean angina, hypertension, heart failure, or a prior MI — medications narrow the field only when read against history and the whole list.",
+   "zh": "误区：看到一种药就能锁定一种病。一颗 β 阻滞剂背后可能是心绞痛、高血压、心衰或 MI 病史——药物必须对着病史和整张药单读才有意义。"
+  },
+  {
+   "en": "Digoxin toxicity has a signature rhythm? Virtually any dysrhythmia can be digoxin — which is exactly why every rhythm-disturbance patient gets asked about it.",
+   "zh": "误区：地高辛中毒有特定的『标志心律』。实际上几乎任何心律失常都可能是地高辛干的——这正是每个心律紊乱患者都要被问『吃不吃地高辛』的原因。"
+  },
+  {
+   "en": "Nitro didn't work, so the pain isn't cardiac? Four explanations exist, and one is simply a stale, opened bottle — no bitter taste and no headache betray dead tablets, not a benign chest.",
+   "zh": "误区：硝酸甘油无效=疼痛不是心脏的。无效有四种解释，其中一种只是药开封太久失效了——没有苦味、没有头痛，暴露的是死药片，不是安全的胸痛。"
+  },
+  {
+   "en": "IABP and Impella do the same job? The IABP pumps no blood — it counterpulsates with the ECG to cut afterload and boost coronary perfusion; the Impella actively pumps up to 5 L/min of continuous flow and needs no synchronization.",
+   "zh": "误区：IABP 和 Impella 干的是同一件事。IABP 自己不泵血——它靠 ECG 同步反搏来降后负荷、提冠脉灌注；Impella 则是真的在泵血，连续流最高 5 L/min，完全不需要同步。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "Mighty Mitral",
+   "en": "The MITRAL valve guards the MIGHTY side: left heart, high pressure — tricuspid takes the weaker right.",
+   "zh": "二尖瓣守的是「大力士」那一侧：左心、高压——三尖瓣管压力低的右心。记住 mitral＝mighty＝左。"
+  },
+  {
+   "name": "One heart, two lungs",
+   "en": "How many hearts? One — beta-1. How many lungs? Two — beta-2.",
+   "zh": "几颗心？一颗——beta-1 管心。几个肺？两个——beta-2 管肺。"
+  },
+  {
+   "name": "OPQRST",
+   "en": "Onset, Provocation/Palliation, Quality, Radiation, Severity, Timing — the chest-pain history frame.",
+   "zh": "起病、诱因/缓解、性质、放射、程度、时间——胸痛问诊的六格框架。"
+  },
+  {
+   "name": "Beck Triad",
+   "en": "Tamponade's three: hypotension, jugular distention, muffled heart sounds — 'the pressure falls, the neck swells, the heart goes quiet'.",
+   "zh": "填塞三件套：血压低、颈静脉胀、心音闷——「压掉了、脖子鼓了、心声远了」。"
+  },
+  {
+   "name": "Time is muscle",
+   "en": "Every minute a coronary stays occluded kills more myocardium — reperfusion speed is the treatment.",
+   "zh": "冠脉多堵一分钟，心肌多死一片——再灌注的速度本身就是治疗。"
+  },
+  {
+   "name": "CAB flip",
+   "en": "Conscious cardiac patient: assess ABC. Unresponsive with suspected arrest: flip to CAB — circulation first.",
+   "zh": "清醒的心脏病人查 ABC；无反应、疑似骤停立刻翻成 CAB——循环先行。"
+  },
+  {
+   "name": "White right, smoke over fire",
+   "en": "Limb cables: WHITE on the right shoulder; on the left, SMOKE (black) sits above FIRE (red). Alternative: salt, pepper, ketchup.",
+   "zh": "肢体导线：白色在右肩；左侧「烟压着火」——黑在上、红在下。备用版：盐、胡椒、番茄酱。"
+  },
+  {
+   "name": "300-150-100-75-60-50",
+   "en": "Sequence method: from an R wave on a heavy line, each following large square reads 300, 150, 100, 75, 60, 50 — regular rhythms only.",
+   "zh": "序列法：从落在粗线上的 R 波起，后面每一条大格线依次念 300、150、100、75、60、50——只适用于规则节律。"
+  },
+  {
+   "name": "×10 in 6 seconds",
+   "en": "Count QRS complexes in a 6-second strip and multiply by 10 — the fast method, and the only fair one for irregular rhythms.",
+   "zh": "数 6 秒图条里的 QRS 个数乘 10——最快的方法，也是不规则节律唯一公平的方法。"
+  },
+  {
+   "name": "Hs & Ts (5H5T)",
+   "en": "Reversible arrest causes: Hypoxia, Hypovolemia, Hydrogen ions, Hyper/Hypokalemia, Hypothermia; Tamponade, Tension pneumothorax, Thrombosis (lung), Thrombosis (heart), Toxins.",
+   "zh": "可逆骤停病因：缺氧、低血容量、氢离子（酸中毒）、高/低钾、低体温；心包填塞、张力性气胸、肺血栓、冠脉血栓、毒物。"
+  },
+  {
+   "name": "Wall map",
+   "en": "II-III-aVF inferior; V1-V2 septal; V3-V4 anterior; V5-V6 + I + aVL lateral; V4R right ventricle; V8-V9 posterior.",
+   "zh": "定位地图：II-III-aVF 下壁；V1-V2 间隔；V3-V4 前壁；V5-V6＋I＋aVL 侧壁；V4R 右室；V8-V9 后壁。"
+  },
+  {
+   "name": "Three Ns (textbook TOR)",
+   "en": "BLS termination poem: No shocks delivered, No ROSC, Not seen (witnessed) by the team. BC's exam replaces this with the 30/40-minute clock.",
+   "zh": "教材版终止口诀三个 N：没电过（No shocks）、没恢复（No ROSC）、没目击（Not seen）。BC 考纲用 30/40 分钟计时规则取而代之。"
+  },
+  {
+   "name": "HUM（LVAD 三查）",
+   "en": "Hear the hum — Use a Doppler for MAP — Make the call (24/7 device line). Three checks before you ever treat a pulseless LVAD patient as an arrest.",
+   "zh": "H 听嗡鸣（Hear the hum）→ U 用 Doppler 测 MAP（Use Doppler）→ M 拨热线（Make the call，24/7 装置热线）。把无脉的 LVAD 患者当骤停之前，三步先走完。"
+  },
+  {
+   "name": "110–50/150–24/48（BC 硝酸甘油四道闸）",
+   "en": "SBP must stay above 110; HR must sit between 50 and 150; Viagra/Levitra locks nitro out for 24 h, Cialis for 48 h.",
+   "zh": "SBP 必须 >110；HR 必须在 50–150 之间；Viagra/Levitra 封锁 24 小时，Cialis 封锁 48 小时。四道闸全过才给药。"
+  },
+  {
+   "name": "NBC（抗心绞痛三类）",
+   "en": "Nitrates, Beta blockers, Calcium channel blockers — the whole 'network' broadcasts on the demand side: all three cut myocardial oxygen consumption.",
+   "zh": "N 硝酸酯、B β 阻滞剂、C 钙通道阻滞剂——这个『电视台』只播需求侧节目：三类全是降心肌耗氧。"
+  },
+  {
+   "name": "药名后缀速判",
+   "en": "-olol = beta blocker; -pril = ACE inhibitor; -sartan = ARB; -dipine = dihydropyridine CCB. Suffixes sort most cardiac med lists in seconds.",
+   "zh": "-olol=β 阻滞剂；-pril=ACEI；-sartan=ARB；-dipine=二氢吡啶类钙拮抗剂。靠后缀几秒钟就能把大半张心脏药单归类。"
+  },
+  {
+   "name": "地高辛怕『低钾高钙』",
+   "en": "Digoxin fears low K and given Ca: hypokalemia (from diuretics or bicarbonate loads) and calcium preparations both magnify its toxicity.",
+   "zh": "地高辛怕两样：钾低了（利尿剂、大量碳酸氢钠都会排钾）和钙来了（对钙剂高度敏感）——两样都会放大毒性。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "List the BC nitroglycerin contraindications and the dosing pattern.",
+   "qZh": "背出 BC 版硝酸甘油禁忌和给药节奏。",
+   "aEn": "SBP <110, HR <50 or >150, nitrate allergy, Viagra/Levitra within 24 h, Cialis within 48 h; 0.4 mg SL q3-5 min, max 3 doses per 30 minutes, SBP must stay >110, pre-arrival nitro counts.",
+   "aZh": "SBP <110、心率 <50 或 >150、硝酸酯过敏、24 小时内 Viagra/Levitra、48 小时内 Cialis；0.4 mg 舌下、每 3-5 分钟一次、任意 30 分钟 ≤3 剂、全程 SBP 必须 >110，病人自服的也计入。"
+  },
+  {
+   "qEn": "Intrinsic rates of the three pacemaker tiers?",
+   "qZh": "三级起搏点的固有频率各是多少？",
+   "aEn": "SA node 60-100, AV junction 40-60, Purkinje system 20-40 beats/min.",
+   "aZh": "窦房结 60-100、房室交界 40-60、浦肯野系统 20-40 次/分。"
+  },
+  {
+   "qEn": "What separates unstable angina from NSTEMI, and NSTEMI from STEMI?",
+   "qZh": "不稳定型心绞痛和 NSTEMI 怎么分？NSTEMI 和 STEMI 又怎么分？",
+   "aEn": "UA vs NSTEMI: biomarkers only (ECG identical; elevated = NSTEMI). STEMI: declared on the 12-lead alone, no biomarkers needed.",
+   "aZh": "UA vs NSTEMI：只能靠生物标志物（ECG 一样；升高＝NSTEMI）。STEMI：单凭 12 导联即可判定，不需要标志物。"
+  },
+  {
+   "qEn": "Name the Beck triad and its condition; what is the best field clue?",
+   "qZh": "Beck 三联征是什么、对应什么病？现场最有用的线索是？",
+   "aEn": "Hypotension + jugular venous distention + muffled heart sounds = cardiac tamponade; best field clue is pulsus paradoxus (inspiratory SBP drop >10 mm Hg).",
+   "aZh": "低血压＋颈静脉怒张＋心音遥远＝心包填塞；现场最有用的线索是奇脉（吸气 SBP 掉超 10 mmHg）。"
+  },
+  {
+   "qEn": "Which ACS drug actually cuts mortality, and what is the BC dose?",
+   "qZh": "ACS 里真正降死亡率的药是哪个？BC 剂量多少？",
+   "aEn": "Aspirin — BC dose 160 mg chewed (book range 160-325 mg), the only med needing no prior vitals. Nitro relieves pain but does not lower AMI mortality.",
+   "aZh": "阿司匹林——BC 剂量 160 mg 嚼服（教材范围 160-325 mg），也是唯一不需要先测生命体征的药。硝酸甘油只缓解疼痛，不降低心梗死亡率。"
+  },
+  {
+   "qEn": "Signature signs of left-side versus right-side heart failure?",
+   "qZh": "左心衰 vs 右心衰的招牌体征？",
+   "aEn": "Left = pulmonary: orthopnea, PND, crackles, cardiac wheeze, pink frothy sputum. Right = systemic: JVD, pedal/presacral edema, tender hepatomegaly — most often caused by left failure itself.",
+   "aZh": "左＝肺循环：端坐呼吸、夜间阵发性呼吸困难、湿啰音、心源性哮鸣、粉红泡沫痰。右＝体循环：颈静脉怒张、足部/骶前水肿、压痛性肝大——而右衰最常见的原因正是左衰。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Nitroglycerin contraindications",
+   "topicZh": "硝酸甘油禁忌症",
+   "bookEn": "Withhold for hypotension, HR below 50 or above 160, known right ventricular infarction, or PDE5 inhibitors within 24-72 h (sildenafil/vardenafil 24 h, tadalafil up to 72 h); no IV line is a relative contraindication; stop if SBP falls by more than one-third.",
+   "bookZh": "教材：低血压、心率 <50 或 >160、已知右室梗死、24-72 小时内用过 PDE5 抑制剂（西地那非/伐地那非 24 小时、他达拉非最长 72 小时）都不给；无静脉通路属相对禁忌；SBP 掉超初始值三分之一就停。",
+   "bcEn": "BC exam set: SBP below 110 (must stay above 110 to keep dosing), HR below 50 or above 150, nitrate allergy/sensitivity, Viagra or Levitra within 24 h, Cialis within 48 h. No RVI or IV-line clause at this level — answer with the BC list.",
+   "bcZh": "BC 考纲版：SBP <110（给药全程必须 >110）、心率 <50 或 >150、硝酸酯过敏/敏感、24 小时内用过 Viagra/Levitra、48 小时内用过 Cialis。此级别不考右室梗死和静脉通路条款——答题用 BC 清单。",
+   "ref": "BC Guidelines p.73-74 (Nitroglycerin monograph)"
+  },
+  {
+   "topicEn": "Nitroglycerin dosing pattern",
+   "topicZh": "硝酸甘油给药节奏",
+   "bookEn": "0.3-0.4 mg SL, repeat every 5 minutes for 3-6 doses while the patient stays stable.",
+   "bookZh": "教材：0.3-0.4 mg 舌下，病情稳定时每 5 分钟重复、共 3-6 剂。",
+   "bcEn": "0.4 mg SL every 3-5 minutes, maximum 3 doses in any 30-minute period, counted irrespective of nitro the patient took before your arrival; do not shake the spray; a nitro patch on the skin changes nothing. Pain fully relieved for over 5 minutes then returning = a NEW episode — restart the nitro component (not the ASA).",
+   "bcZh": "BC：0.4 mg 舌下、每 3-5 分钟一次、任意 30 分钟内最多 3 剂——病人在你到场前自服的硝酸甘油也一并计入；喷剂用前不摇瓶；身上贴着硝酸甘油贴片不改变协议。疼痛完全缓解超过 5 分钟后复发＝新发作——硝酸甘油部分可重启（ASA 不重复）。",
+   "ref": "BC Guidelines p.47, p.73-74"
+  },
+  {
+   "topicEn": "ASA dose and rules",
+   "topicZh": "阿司匹林剂量与规则",
+   "bookEn": "Chew 160-325 mg non-enteric-coated unless allergy, GI bleeding, or recent head injury/hemorrhagic stroke.",
+   "bookZh": "教材：嚼服 160-325 mg 非肠溶片，除非过敏、消化道出血、近期头外伤或出血性中风。",
+   "bcEn": "BC dose is exactly 160 mg PO chewed, and ASA is the ONLY medication given without vitals first. Contraindications: cannot swallow, allergy, active peptic ulcer or GI bleed, already took the recommended dose before your arrival, salicylate/NSAID-induced asthma, pediatric viral symptoms. Cautions: recent internal bleeding or surgery, bleeding disorders, anticoagulants, possible pregnancy.",
+   "bcZh": "BC 剂量就是 160 mg 口服嚼碎，而且 ASA 是唯一「给药前不需要生命体征」的药。禁忌：不能吞咽、过敏、活动性消化性溃疡/消化道出血、到场前已服过推荐剂量、水杨酸/NSAID 诱发哮喘史、有病毒症状的儿科病人。慎用：近期内出血或手术、出血性疾病、抗凝药、可能怀孕。",
+   "ref": "BC Guidelines p.60 (ASA monograph)"
+  },
+  {
+   "topicEn": "Oxygen target in cardiac chest pain",
+   "topicZh": "心源性胸痛的氧饱和目标",
+   "bookEn": "No routine oxygen: give only if SpO2 is below 90%, titrate to 90-94%, avoid hyperoxia.",
+   "bookZh": "教材：不常规给氧——SpO2 <90% 才给，滴定到 90-94%，避免氧过量。",
+   "bcEn": "The BC chest-pain protocol orders oxygen as required to maintain SpO2 of 94% or higher. For protocol questions answer 94%+; keep the book's hyperoxia rationale for physiology questions.",
+   "bcZh": "BC 胸痛协议要求按需给氧、把 SpO2 维持在 ≥94%。协议题答 ≥94%；教材那套「氧过量有害」的道理留给机理题。",
+   "ref": "BC Guidelines p.47 (Cardiac Chest Pain)"
+  },
+  {
+   "topicEn": "Entonox in the chest-pain protocol",
+   "topicZh": "胸痛协议里的 Entonox",
+   "bookEn": "The textbook ACS pathway has no nitrous oxide step at all — analgesia escalates from nitro to (reluctant) opioids.",
+   "bookZh": "教材的 ACS 流程里根本没有笑气这一步——镇痛从硝酸甘油直接（勉强）升级到阿片。",
+   "bcEn": "BC uniquely adds Entonox: when pain persists beyond 3 nitro doses OR SBP drops below 110, give Entonox starting 5 minutes after the last nitro (nitro within 5 minutes is an Entonox contraindication). At 30 minutes from the first nitro dose the whole protocol may repeat after stopping N2O for 5 minutes; if hospital arrival is not imminent 20 minutes after the last nitro, stop Entonox, resume high-flow O2 and further nitro.",
+   "bcZh": "BC 独有 Entonox 环节：疼痛熬过 3 剂硝酸甘油仍在、或 SBP 掉到 110 以下时，在最后一剂硝酸甘油 5 分钟后开始给 Entonox（5 分钟内用过硝酸甘油是 Entonox 的禁忌）。距首剂硝酸甘油满 30 分钟后，停笑气 5 分钟即可整套协议重来；若最后一剂硝酸甘油后 20 分钟还到不了医院，停 Entonox、恢复高流量氧并继续按协议给硝酸甘油。",
+   "ref": "BC Guidelines p.47, p.65, p.73-74"
+  },
+  {
+   "topicEn": "12-lead ECG in the BC protocol",
+   "topicZh": "BC 协议里的 12 导联",
+   "bookEn": "The book makes early 12-lead acquisition (before therapy) and STEMI bypass to PCI centres the backbone of ACS care.",
+   "bookZh": "教材把「治疗前尽早做 12 导联」和「STEMI 绕行直送 PCI 中心」当成 ACS 处置的骨架。",
+   "bcEn": "The BC exam's chest-pain protocol contains no 12-lead step at the EMR/PCP level: the tested sequence is position/limit movement, O2, ASA, initiate transport, history and vitals, then nitro. Answer protocol questions with that order; keep 12-lead knowledge for physiology/rationale items.",
+   "bcZh": "BC 考纲的胸痛协议在 EMR/PCP 级别没有 12 导联这一步：考的顺序是「体位/限制活动 → 给氧 → ASA → 启动转运 → 病史＋生命体征 → 硝酸甘油」。协议题按这个顺序答；12 导联的知识留给机理题。",
+   "ref": "BC Guidelines p.47 (Cardiac Chest Pain)"
+  },
+  {
+   "topicEn": "Hypotension and fluids at PCP level",
+   "topicZh": "PCP 级别的低血压补液",
+   "bookEn": "For cardiogenic shock the book uses a physician-ordered rapid 250 mL saline trial plus titrated vasopressors (dopamine, norepinephrine).",
+   "bookZh": "教材对心源性休克用「医嘱下快速试推 250 mL 生理盐水」＋滴定升压药（多巴胺、去甲肾上腺素）。",
+   "bcEn": "The BC PCP pattern for volume-related hypotension is a 20 mL/kg fluid bolus to a maximum of 2 L, reassessing every 500 mL, targeting SBP 90 — and vasopressors are not in PCP scope. Exam answers use the 20 mL/kg / 2 L / 500 mL / SBP 90 frame.",
+   "bcZh": "BC PCP 对容量相关低血压的模式是：20 mL/kg 推注、上限 2 L、每 500 mL 重新评估、目标 SBP 90——升压药不在 PCP 执业范围内。考试就按 20 mL/kg / 2 L / 500 mL / SBP 90 这套答。",
+   "ref": "BC Guidelines p.48 等（PCP 补液通用模式）"
+  },
+  {
+   "topicEn": "Termination of resuscitation",
+   "topicZh": "终止复苏规则",
+   "bookEn": "Canadian BLS-TOR/ALS-TOR rules: discuss with a physician after 15-20 minutes of ACLS and three medication rounds; 'no shock, no ROSC, not witnessed'.",
+   "bookZh": "教材用加拿大 BLS-TOR/ALS-TOR 规则：ACLS 进行 15-20 分钟、三轮药物后与医生讨论；口诀「没电过、没 ROSC、没目击」。",
+   "bcEn": "BC exam: continue until handover or signs of life; may stop at 30 minutes with no ROSC and no shocks, or 40 minutes if there was ever ROSC or a shock. Consult medical oversight to discontinue on scene.",
+   "bcZh": "BC 考纲：持续到移交或出现生命迹象；满 30 分钟无 ROSC 且无除颤可停，曾有 ROSC 或除颤过则满 40 分钟。现场终止需联系 medical oversight。",
+   "ref": "BC Guidelines p.40, 42"
+  },
+  {
+   "topicEn": "CPR interruption limit",
+   "topicZh": "按压中断上限",
+   "bookEn": "Keep interruptions to 10 seconds or less.",
+   "bookZh": "教材：中断控制在 10 秒以内。",
+   "bcEn": "BC states interruptions must be kept under 5 seconds — the stricter number is the exam answer.",
+   "bcZh": "BC 明确写中断要保持在 5 秒以内——考试答案取更严的这个数。",
+   "ref": "BC Guidelines p.42"
+  },
+  {
+   "topicEn": "Adult compression-to-ventilation ratio",
+   "topicZh": "成人按压通气比",
+   "bookEn": "Two rescuers may run continuous compressions with 8-10 ventilations/min even before an advanced airway.",
+   "bookZh": "教材：双人时即使没有高级气道也可连续按压＋每分钟 8-10 次通气。",
+   "bcEn": "BC: adults are 30:2 whether one or two rescuers; children/infants switch to 15:2 with two rescuers; neonates 3:1.",
+   "bcZh": "BC：成人不论单人双人一律 30:2；儿童/婴儿双人时改 15:2；新生儿 3:1。",
+   "ref": "BC Guidelines p.41, 43"
+  },
+  {
+   "topicEn": "Hypothermic cardiac arrest shocks",
+   "topicZh": "低体温骤停的电击",
+   "bookEn": "Textbook defers to hypothermia management; standard shockable-rhythm cycling otherwise.",
+   "bookZh": "教材把细节留给低体温章节，其余按常规可电击节律循环。",
+   "bcEn": "BC: defibrillate up to three times if indicated, then continue CPR and transport rapidly WITHOUT pausing again for analysis or shocks. Allow 30-45 seconds to confirm pulselessness first.",
+   "bcZh": "BC：按指征最多除颤 3 次，之后继续 CPR 快速转运，不再为分析或电击暂停。判定无脉可先花 30-45 秒确认。",
+   "ref": "BC Guidelines hypothermia protocol"
+  },
+  {
+   "topicEn": "PCP authorization ceiling",
+   "topicZh": "PCP 授权上限",
+   "bookEn": "The chapter teaches manual defibrillation, synchronized cardioversion, TCP, atropine, amiodarone, adenosine, and full 12-lead diagnosis as paramedic skills.",
+   "bookZh": "教材把手动除颤、同步电复律、经皮起搏、阿托品、胺碘酮、腺苷和完整 12 导诊断都当 paramedic 技能来教。",
+   "bcEn": "For the BC PCP (COPR-CPCF) exam these are ACP-level: PCP scope is the AED cycle, CPR quality, SGA insertion, and rhythm/STEMI material at recognition level only. Know what the interventions ARE and when they are indicated, not how to run them.",
+   "bcZh": "在 BC PCP（COPR-CPCF）考试里这些属于 ACP 层级：PCP 授权范围是 AED 循环、按压质量、SGA 置入，心律与 STEMI 内容只考识别层级。要会认「这是什么、什么时候该用」，不考具体操作。",
+   "ref": "COPR/CPCF scope; BC Guidelines p.42-43"
+  },
+  {
+   "topicEn": "Pediatric arrest specifics",
+   "topicZh": "儿科骤停细则",
+   "bookEn": "Chapter 30 is adult-focused; pediatric detail lives elsewhere in the text.",
+   "bookZh": "第 30 章以成人为主，儿科细节在教材其他章节。",
+   "bcEn": "BC exam pulls these in: start CPR if HR under 60 with poor perfusion; brachial pulse for infants; if alone, 5 cycles (2 min) of CPR before the AED; child pads for ages 0-8, else adult pads with adult energy; pads within 2.5 cm of each other go anterior/posterior; neonates 3:1 and NO AED; asphyxial arrest gets 5 cycles of CPR before AED analysis.",
+   "bcZh": "BC 考纲会考：心率低于 60 且灌注差即开始 CPR；婴儿摸肱动脉；单人先做 5 个循环（约 2 分钟）CPR 再上 AED；0-8 岁用儿童电极片、没有就用成人片＋成人能量；两片间距不足 2.5 cm 改前后位；新生儿 3:1 且不用 AED；窒息性骤停先做 5 个循环 CPR 再分析。",
+   "ref": "BC Guidelines p.41-44"
+  },
+  {
+   "topicEn": "Nitroglycerin for pulmonary edema",
+   "topicZh": "硝酸甘油用于肺水肿",
+   "bookEn": "The text presents nitroglycerin as a prehospital adjunct for pulmonary edema from left-sided heart failure — venodilation as an 'internal phlebotomy' offloading the pulmonary circulation.",
+   "bookZh": "教材把硝酸甘油列为左心衰肺水肿的院前辅助用药——靠扩静脉『体内放血』给肺循环减负。",
+   "bcEn": "BC's CHF/Pulmonary Edema protocol contains no nitroglycerin at any license level. The sequence is: sit upright with legs dependent, oxygen to SpO2 >= 94%, assist ventilation if LOC drops or SpO2 stays under 94%; PCP adds CPAP (start 5 cmH2O, max 10) or a PEEP valve on the BVM. In BC, nitro's only indication is cardiac-appearing chest discomfort.",
+   "bcZh": "BC 的 CHF/肺水肿协议里任何级别都没有硝酸甘油。流程是：坐位垂腿、给氧维持 SpO2 ≥94%、意识下降或 SpO2 <94% 就辅助通气；PCP 加用 CPAP（5 cmH2O 起、最大 10）或 BVM 加 PEEP 阀。在 BC，硝酸甘油唯一的适应证是疑似心源性胸部不适。",
+   "ref": "BC Guidelines p.33（CHF/肺水肿）、p.51-53（CPAP/PEEP）、p.73（Nitroglycerin 药典）"
+  },
+  {
+   "topicEn": "ASA dose and preconditions",
+   "topicZh": "ASA 剂量与给药前提",
+   "bookEn": "The case wrap-up teaches 160-325 mg of non-enteric-coated aspirin chewed, callable even by dispatchers before crew arrival.",
+   "bookZh": "教材案例总结教的是 160–325 mg 非肠溶阿司匹林嚼服，调度员在到达前即可指导服用。",
+   "bcEn": "BC fixes the dose at 160 mg PO and makes ASA the only medication requiring no vital signs first (give after the RBS). Contraindications: inability to swallow or allergy, active peptic ulcer or GI bleed, the day's recommended dose already taken, salicylate/NSAID-induced asthma history, and pediatric patients with viral symptoms.",
+   "bcZh": "BC 把剂量定死在 160 mg 口服，并且 ASA 是唯一给药前不需要先测生命体征的药（在 RBS 之后给）。禁忌：不能吞咽或过敏、活动性消化性溃疡或消化道出血、当日推荐剂量已服过、水杨酸/NSAID 诱发哮喘史、有病毒症状的儿科患者。",
+   "ref": "BC Guidelines p.47（Cardiac Chest Pain）、p.60（Aspirin 药典）"
+  },
+  {
+   "topicEn": "Pain persisting after nitro: the Entonox bridge",
+   "topicZh": "硝酸甘油后疼痛不退：Entonox 桥接",
+   "bookEn": "The textbook chest pain pathway has no nitrous oxide step; analgesia beyond nitrates moves to other agents.",
+   "bookZh": "教材的胸痛路径没有氧化亚氮这一步，硝酸酯之后的镇痛走别的药。",
+   "bcEn": "BC-specific: if pain outlasts 3 nitro doses or SBP falls below 110, give Entonox starting 5 minutes after the last nitro dose (Entonox is contraindicated within 5 minutes of nitro). Thirty minutes after the first nitro dose the whole protocol may restart after stopping nitrous for 5 minutes; complete relief for over 5 minutes followed by returning pain counts as a new episode — restart nitro but never repeat the ASA.",
+   "bcZh": "BC 特有：疼痛扛过 3 剂硝酸甘油仍在，或 SBP 跌破 110，改给 Entonox——但必须距最后一剂硝酸甘油 5 分钟以上（5 分钟内是 Entonox 禁忌）。距首剂硝酸甘油 30 分钟后，停氧化亚氮 5 分钟可重启整套协议；疼痛完全缓解超 5 分钟后再复发算新发作——硝酸甘油可以重来，ASA 绝不重复。",
+   "ref": "BC Guidelines p.47（Chest Pain 流程）、p.65（Entonox 药典）、p.73-74"
+  },
+  {
+   "topicEn": "How long to resuscitate: ECLS horizons vs BC termination clock",
+   "topicZh": "复苏做多久：ECLS 视野 vs BC 终止时钟",
+   "bookEn": "The ECLS discussion floats 10-30 minute handoff windows with 60 minutes as the benefit ceiling, and notes device-era survivors are reshaping beliefs about resuscitation duration and destination.",
+   "bookZh": "教材 ECLS 部分讨论 10–30 分钟的交接窗、60 分钟的获益天花板，并提到装置时代的幸存者正在改写复苏时长与转运目的地的老观念。",
+   "bcEn": "For the BC EMR/PCP exam the clock is fixed: continue CPR/AED until care transfers, signs of life appear, 30 minutes pass with no ROSC and no defibrillation — or 40 minutes if ROSC or any shock occurred. ECLS, IABP, and Impella are specialty-transport material; the exam expects you to recognize devices, protect their lines, and run LVAD assessment, not to operate them.",
+   "bcZh": "BC EMR/PCP 考试的时钟是死的：持续 CPR/AED 直到移交、出现生命征象、或 30 分钟无 ROSC 且从未除颤——若曾有 ROSC 或除过颤则到 40 分钟。ECLS、IABP、Impella 属于专科转运范畴；考试要求的是认得装置、保护管线、会做 LVAD 评估，而不是操作它们。",
+   "ref": "BC Guidelines p.39-40（CPR/AED 终止标准）"
+  }
+ ],
+ "sourcePages": "2522-2800"
+}

@@ -1,0 +1,1738 @@
+{
+ "id": "ch13",
+ "n": 13,
+ "titleEn": "Airway Management and Ventilation",
+ "titleZh": "气道管理与通气",
+ "group": "airway",
+ "examWeight": 3,
+ "whyEn": "The biggest chapter in the book, and the one the exam never stops testing: every practical scenario opens with an airway judgement, and airway/breathing questions dominate the written blueprint. Study it in three passes — physiology and evaluation (S1-7), the basic skills that win the practical (manual manoeuvres, suction, OPA/NPA, oxygen, BVM and CPAP, S8-14), then advanced management (S15-22) which BC examines at concept level only: a PCP's ceiling in cardiac arrest is the supraglottic airway, and intubation, RSI and surgical airways belong to ACP. Know which side of that line every skill sits on.",
+ "whyZh": "全书最大的一章，也是考试从不放过的一章：每场实操都从气道判断开场，气道与呼吸类题目在笔试蓝图里占比最大。建议分三遍学——先啃生理与评估（第 1-7 节），再把赢下实操的基本功练熟（徒手手法、吸引、OPA/NPA、氧疗、BVM 与 CPAP，第 8-14 节），最后的高级气道（第 15-22 节）BC 只考概念层：PCP 在骤停中的授权上限是声门上气道，插管、RSI、环甲膜切开都属于 ACP。每一项技能站在授权线的哪一侧，必须一清二楚。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "1.3.a",
+   "1.5.a",
+   "1.6.a",
+   "1.6.c",
+   "2.4.d",
+   "2.4.e",
+   "3.3.a",
+   "3.3.b",
+   "3.3.f",
+   "3.3.g",
+   "4.2.a",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.2.f",
+   "4.3.a",
+   "4.3.b",
+   "4.3.e",
+   "4.4.a",
+   "4.4.b",
+   "4.4.d",
+   "4.4.g",
+   "4.4.i",
+   "5.1.a",
+   "5.1.b",
+   "5.1.c",
+   "5.1.d",
+   "5.1.e",
+   "5.1.f",
+   "5.1.g",
+   "5.1.h",
+   "5.1.i",
+   "5.1.j",
+   "5.1.k",
+   "5.1.l",
+   "5.2.a",
+   "5.2.b",
+   "5.3.a",
+   "5.3.b",
+   "5.3.c",
+   "5.3.d",
+   "5.3.e",
+   "5.4.a",
+   "5.4.b",
+   "5.4.c",
+   "5.4.d",
+   "5.8.a",
+   "5.8.e",
+   "6.1.c",
+   "6.1.j"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Maintaining a Patent Airway: A Critical Concern",
+   "titleZh": "气道通畅：生死第一关",
+   "points": [
+    {
+     "en": "The brain tolerates only about 6 minutes without oxygen before permanent damage begins; until the airway is open, every other treatment is futile.",
+     "zh": "大脑断氧约 6 分钟就开始出现不可逆损伤；气道没打通之前，其他一切抢救都是徒劳。",
+     "hard": true
+    },
+    {
+     "en": "Airway mismanagement is a leading cause of preventable prehospital death: skipping basic maneuvers, wrong mask size or poor seal, bad head positioning, rushing to advanced devices, and failing to reassess all raise mortality.",
+     "zh": "气道处理不当是院前可预防死亡的主要原因之一——跳过基础手法、面罩尺寸不对或封闭不严、头位摆错、急着上高级器械、不做再评估，都会推高死亡率。",
+     "hard": true
+    },
+    {
+     "en": "Correct order is basic before advanced: open the airway, keep it patent, escalate only as needed, and reassess continuously.",
+     "zh": "正确顺序是先基础后高级：先开放并维持气道，再按需升级手段，全程持续再评估。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy of the Upper Airway",
+   "titleZh": "上气道解剖",
+   "points": [
+    {
+     "en": "The upper airway is every structure above the vocal cords; its jobs are warming, filtering, and humidifying inhaled air.",
+     "zh": "上气道指声带以上的全部结构，功能是给吸入的空气加温、过滤、湿化。",
+     "hard": true
+    },
+    {
+     "en": "The pharynx has three parts—nasopharynx, oropharynx, and laryngopharynx (hypopharynx); the laryngopharynx opens into the larynx in front and the esophagus behind.",
+     "zh": "咽分三段：鼻咽、口咽、喉咽（又称下咽）；喉咽向前通喉、向后通食管。",
+     "hard": true
+    },
+    {
+     "en": "The nasal mucosa is fragile with a rich blood supply: forcing in a nasal airway can cause heavy posterior nasal bleeding that direct pressure cannot control, so check for a deviated septum before inserting.",
+     "zh": "鼻腔黏膜脆弱且血供极其丰富：鼻咽通气道插入手法粗暴可引发后鼻腔大出血，而且直接加压根本压不住——置管前先确认有无鼻中隔偏曲。",
+     "hard": true
+    },
+    {
+     "en": "Fracture of the sinus-forming cranial bones can leak cerebrospinal fluid from the nose (rhinorrhea) or the ears (otorrhea).",
+     "zh": "构成鼻窦的颅骨骨折可让脑脊液从鼻孔漏出（脑脊液鼻漏）或从耳道漏出（脑脊液耳漏）。",
+     "hard": true
+    },
+    {
+     "en": "The tongue anchors to the mandible and the hyoid bone, and it is the single most common cause of anatomic upper airway obstruction—especially when consciousness is decreased.",
+     "zh": "舌附着在下颌骨和舌骨上，是解剖性上气道梗阻最常见的原因，意识水平下降时尤其危险。",
+     "hard": true
+    },
+    {
+     "en": "Adults have 32 teeth; moderate trauma can fracture or avulse them into the airway or lungs, and severely swollen tonsils can also obstruct the upper airway.",
+     "zh": "成人有 32 颗牙，中等程度外伤即可使其折断或脱落，堵塞气道或被吸入肺内；扁桃体重度肿大同样可造成上气道梗阻。",
+     "hard": true
+    },
+    {
+     "en": "The leaf-shaped epiglottis seals the laryngeal inlet during swallowing; the vallecula—the pocket between tongue base and epiglottis—is the landmark where a curved laryngoscope blade seats during intubation.",
+     "zh": "叶片状的会厌在吞咽时盖住喉入口；会厌谷（舌根与会厌之间的凹陷）是插管时弯喉镜片安放的关键标志。",
+     "hard": true
+    },
+    {
+     "en": "Landmark chain: the thyroid cartilage (Adam's apple) lies directly anterior to the glottic opening; the cricoid below it is the lowest part of the larynx, the first tracheal ring, and the only complete cartilage ring; between the two lies the cricothyroid membrane—the cricothyrotomy site, bordered by the highly vascular thyroid gland.",
+     "zh": "标志链：甲状软骨（喉结）正位于声门开口前方；其下方的环状软骨是喉的最低部分、气管的第一个环，也是上气道唯一的完整软骨环；两者之间是环甲膜——环甲膜切开/穿刺的进针部位，周围紧邻血供丰富的甲状腺，定位必须精准。",
+     "hard": true
+    },
+    {
+     "en": "The glottis (the space between the vocal cords) is the narrowest point of the adult airway and stays open only with adequate muscle tone; the arytenoid cartilages anchor the cords posteriorly and serve as intubation guides.",
+     "zh": "声门（两条声带之间的空隙）是成人气道最窄处，其开放依赖足够的肌张力；杓状软骨在后方固定声带，是插管时的定位参照。",
+     "hard": true
+    },
+    {
+     "en": "An airway device that slides into a piriform fossa tents the skin under the jaw—recognize this sign and reinsert.",
+     "zh": "器械误入梨状隐窝时，下颌下方皮肤会被顶起呈帐篷样——见到此征象应退出重插。",
+     "hard": true
+    },
+    {
+     "en": "Airway stimulation (aspiration, submersion) can trigger laryngospasm—spasmodic closure of the vocal cords that normally lasts only seconds but can block ventilation entirely if persistent.",
+     "zh": "误吸、溺水等刺激可诱发喉痉挛——声带痉挛性关闭，通常只持续几秒，若持续不缓解可完全阻断通气。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy of the Lower Airway",
+   "titleZh": "下气道解剖",
+   "points": [
+    {
+     "en": "The lower airway exchanges oxygen and carbon dioxide; externally it runs from the 4th cervical vertebra to the xiphoid process, internally from the glottis to the pulmonary capillary membrane.",
+     "zh": "下气道负责氧气与二氧化碳交换：体表定位从第 4 颈椎到剑突，内部范围从声门到肺毛细血管膜。",
+     "hard": true
+    },
+    {
+     "en": "The trachea is 10 to 12 cm long, built of C-shaped cartilage rings, starts just below the cricoid, and splits into the two mainstem bronchi at the carina (around the 5th–6th thoracic vertebra).",
+     "zh": "气管长 10～12 cm，由 C 形软骨环构成，起自环状软骨正下方，在隆突处（约第 5～6 胸椎水平）分为左右主支气管。",
+     "hard": true
+    },
+    {
+     "en": "The right mainstem bronchus is shorter and straighter, so a tracheal tube advanced too far usually lodges in the right mainstem—one cause of one-sided breath sounds.",
+     "zh": "右主支气管更短更直，气管导管插入过深几乎都滑进右主支气管——这是单侧呼吸音的经典原因之一。",
+     "hard": true
+    },
+    {
+     "en": "The bronchi are lined with mucus-producing cells and beta-2 receptors; stimulating those receptors dilates the airways—the basis of bronchodilator therapy.",
+     "zh": "支气管内壁分布黏液分泌细胞和 β2 受体，受体被激动时支气管扩张——这就是支气管扩张剂起效的原理。",
+     "hard": true
+    },
+    {
+     "en": "The right lung has 3 lobes and the left has 2; visceral pleura wraps the lung, parietal pleura lines the chest wall, with a thin fluid layer between them cutting friction; adult lungs hold roughly 6 L.",
+     "zh": "右肺 3 叶、左肺 2 叶；脏层胸膜贴肺、壁层胸膜贴胸壁，两层之间的少量液体减少呼吸摩擦；成人双肺总容量约 6 L。",
+     "hard": true
+    },
+    {
+     "en": "Alveoli—single-layer air sac clusters—are the site of gas exchange by simple diffusion; surfactant lowers wall surface tension, and losing it (or leaving alveoli deflated) causes atelectasis.",
+     "zh": "肺泡是单层气囊团，靠单纯弥散完成气体交换；表面活性物质降低肺泡壁表面张力，其减少或肺泡持续塌陷即为肺不张。",
+     "hard": true
+    },
+    {
+     "en": "Pediatric airway difference 1: a proportionately big occiput flexes the head when the child lies flat and can itself obstruct—pad under the shoulders to keep the head neutral; a small mandible plus a large tongue further raise obstruction risk.",
+     "zh": "儿童气道差异一：枕部比例大，平躺时头自然前屈，本身就能压闭气道——应在肩下垫毛巾保持头部中立位；再加上下颌小、舌头大，梗阻风险更高。",
+     "hard": true
+    },
+    {
+     "en": "Pediatric airway difference 2: the epiglottis is floppy and omega-shaped and must be lifted to expose the cords; the larynx sits higher, more anterior, and funnel-shaped—under age 10 the narrowest point is the cricoid ring, not the glottis.",
+     "zh": "儿童气道差异二：会厌软而呈 Ω 形，插管时必须挑起才能暴露声带；喉的位置更高更靠前、呈漏斗状——10 岁以下最窄处在环状软骨环，而不是成人那样的声门。",
+     "hard": true
+    },
+    {
+     "en": "Pediatric airway difference 3: soft pliable ribs and weak chest muscles mean children rely on the diaphragm—they are belly breathers, so watch the abdomen to judge their breathing.",
+     "zh": "儿童气道差异三：肋骨软、胸壁肌肉弱，呼吸主要靠膈肌——属于「腹式呼吸者」，评估其呼吸要看腹部起伏。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Lung and Respiratory Volumes",
+   "titleZh": "肺容量与呼吸容量",
+   "points": [
+    {
+     "en": "Normal adult tidal volume is 5 to 7 mL/kg (about 500 mL); in infants and children it is about 6 to 8 mL/kg.",
+     "zh": "成人正常潮气量为 5～7 mL/kg（约 500 mL）；婴儿和儿童约 6～8 mL/kg。",
+     "hard": true
+    },
+    {
+     "en": "About 150 mL of each adult breath—roughly one-third—stays in dead space where no gas exchange happens; disease can add physiologic dead space through obstruction or atelectasis.",
+     "zh": "成人每次吸气约 150 mL（约占潮气量三分之一）滞留在死腔里，不参与气体交换；疾病造成的肺内阻塞或肺不张会额外增加生理性死腔。",
+     "hard": true
+    },
+    {
+     "en": "Alveolar volume = tidal volume minus dead space, about 350 mL; minute volume VM = VT × RR; minute alveolar volume VA = (VT − VD) × RR—the number that actually reflects gas exchange.",
+     "zh": "肺泡容量＝潮气量－死腔量，约 350 mL；分钟通气量 VM＝潮气量×呼吸频率；分钟肺泡通气量 VA＝（潮气量－死腔量）×呼吸频率——真正反映气体交换的是 VA。",
+     "hard": true
+    },
+    {
+     "en": "Fast-and-shallow breathing wrecks VA: with VT 200 mL only 50 mL per breath clears dead space, so even a rate of 40 gives VA ≈ 2,000 mL versus a normal ≈ 5,600 mL—rate alone never proves adequate breathing.",
+     "zh": "又快又浅的呼吸会摧毁肺泡通气：潮气量降到 200 mL 时每口气只有 50 mL 越过死腔，就算频率飙到 40 次/分，VA 也只有约 2,000 mL，而正常约 5,600 mL——所以呼吸频率快绝不等于通气够。",
+     "hard": true
+    },
+    {
+     "en": "Volume ladder: total lung capacity ≈ 6 L; inspiratory reserve ≈ 3,000 mL; expiratory reserve ≈ 1,200 mL; residual volume (air you can never exhale) ≈ 1,200 mL.",
+     "zh": "容量阶梯：肺总量约 6 L；补吸气量约 3,000 mL；补呼气量约 1,200 mL；残气量（无论如何都呼不出去的部分）约 1,200 mL。",
+     "hard": true
+    },
+    {
+     "en": "FIO2 is the oxygen fraction of inhaled air written as a decimal: room air = 0.21; a nonrebreathing mask delivering about 90% oxygen = 0.90—document it this way.",
+     "zh": "FIO2 即吸入气氧浓度，用小数记录：呼吸室内空气为 0.21；非重复呼吸面罩供氧约 90%，记为 0.90——病历要按此格式书写。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Ventilation",
+   "titleZh": "通气",
+   "points": [
+    {
+     "en": "Ventilation is the physical movement of air in and out of the lungs; one cycle = inspiration (about one-third of the cycle) plus expiration (about two-thirds).",
+     "zh": "通气是空气进出肺的物理过程；一个通气周期＝吸气（约占三分之一）＋呼气（约占三分之二）。",
+     "hard": true
+    },
+    {
+     "en": "Rate and depth of breathing are driven primarily by the pH of cerebrospinal fluid, which tracks dissolved CO2 (PaCO2)—carbon dioxide, not oxygen, is the primary respiratory drive.",
+     "zh": "呼吸的频率与深度主要由脑脊液 pH 调控，而脑脊液 pH 直接反映血浆中溶解的二氧化碳（PaCO2）——驱动呼吸的首要因素是二氧化碳，不是氧。",
+     "hard": true
+    },
+    {
+     "en": "Involuntary breathing originates in the brainstem (pons and medulla); the phrenic nerves drive the diaphragm and the intercostal nerves drive the external intercostal muscles.",
+     "zh": "不自主呼吸起源于脑干（脑桥＋延髓）；膈神经支配膈肌，肋间神经支配肋间外肌。",
+     "hard": true
+    },
+    {
+     "en": "Medullary centres: the rhythmicity centre sets the resting rate (about 2 seconds of inspiratory stimulation, then 3 seconds of relaxation); the apneustic centre promotes inspiration; the pneumotaxic centre inhibits it—when demand rises, pneumotaxic influence drops and the rate climbs.",
+     "zh": "延髓三个中枢：节律中枢设定静息频率（约 2 秒吸气刺激＋3 秒放松）；长吸中枢促进吸气；呼吸调整中枢抑制吸气——需求增大时呼吸调整中枢影响减弱，频率随之上升。",
+     "hard": true
+    },
+    {
+     "en": "Hering-Breuer reflex: stretch receptors in the chest wall and bronchioles signal through the vagus nerve to end inhalation, protecting the lungs from overexpansion.",
+     "zh": "黑-伯反射：胸壁和细支气管的牵张感受器经迷走神经传入信号终止吸气，防止肺过度膨胀。",
+     "hard": true
+    },
+    {
+     "en": "Two chemoreceptor sets: peripheral receptors in the carotid bodies and aortic arch track PaCO2 and report via cranial nerves IX and X; central receptors beside the medulla track CSF pH—more acidic CSF means faster, deeper breathing.",
+     "zh": "两套化学感受器：外周感受器位于颈动脉体和主动脉弓，监测 PaCO2，经第 9、第 10 对脑神经上报；中枢感受器紧邻延髓，监测脑脊液 pH——脑脊液变酸则呼吸更快更深。",
+     "hard": true
+    },
+    {
+     "en": "The hypoxic drive is a backup system that responds to low PaO2 instead of CO2; in practice essentially only end-stage COPD patients breathe on it.",
+     "zh": "低氧驱动是备用系统，以血氧（PaO2）下降而非二氧化碳作为刺激；实际上基本只有终末期 COPD 患者才依赖它呼吸。",
+     "hard": true
+    },
+    {
+     "en": "Modifiers of respiration: fever, amphetamines, pain, strong emotion, hypoxia, and acidosis all speed breathing; narcotic analgesics such as morphine and fentanyl slow it through CNS depression.",
+     "zh": "影响呼吸的因素：发热、苯丙胺类、疼痛、强烈情绪、缺氧、酸中毒都会加快呼吸；吗啡、芬太尼等麻醉性镇痛药通过抑制中枢神经使呼吸变慢。",
+     "hard": true
+    },
+    {
+     "en": "Mechanics: the diaphragm is the main breathing muscle; inhalation is active—muscle contraction expands the chest and air is sucked in by negative pressure—while exhalation is passive elastic recoil. Without effective chest movement, air only enters via positive-pressure ventilation.",
+     "zh": "呼吸力学：膈肌是最主要的呼吸肌；吸气是主动过程——肌肉收缩使胸腔扩大、以负压把空气吸进来；呼气靠肺的弹性回缩，属被动过程。胸廓运动无效时，只有正压通气才能把气送进肺里。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Respiration",
+   "titleZh": "呼吸（气体交换）",
+   "points": [
+    {
+     "en": "External respiration exchanges gases between the lungs and pulmonary capillary blood; internal respiration exchanges gases between blood and tissues; both run on diffusion from higher to lower concentration.",
+     "zh": "外呼吸是肺与肺毛细血管血液之间的气体交换；内呼吸是血液与组织之间的交换；两者都靠气体从高浓度向低浓度弥散。",
+     "hard": true
+    },
+    {
+     "en": "About 97% of the body's oxygen rides on hemoglobin; the small dissolved remainder is the PaO2. Crystalloids such as saline or Ringer solution carry no hemoglobin—this is why they cannot restore oxygen-carrying capacity after major blood loss.",
+     "zh": "体内约 97% 的氧结合在血红蛋白上，溶解在血浆里的一小部分构成 PaO2。生理盐水、林格液等晶体液不含血红蛋白——大出血后只补晶体液无法恢复携氧能力，道理就在这里。",
+     "hard": true
+    },
+    {
+     "en": "Carbon dioxide travels mainly as bicarbonate ions, with about 33% bound to hemoglobin; the fraction dissolved in plasma is the PaCO2.",
+     "zh": "二氧化碳主要以碳酸氢根离子形式运输，约 33% 结合在血红蛋白上；溶解在血浆中的部分构成 PaCO2。",
+     "hard": true
+    },
+    {
+     "en": "Carbon monoxide binds hemoglobin about 250 times more readily than oxygen, so a CO-rich environment starves the tissues even when breathing looks normal.",
+     "zh": "一氧化碳与血红蛋白的亲和力约为氧的 250 倍，所以在一氧化碳浓度高的环境里，即使呼吸看起来正常，组织照样缺氧。",
+     "hard": true
+    },
+    {
+     "en": "Blood oxygen falls when exchange surface shrinks (flail chest, any pneumothorax or hemothorax), when mechanical effort drops (respiratory splinting from chest pain, traumatic asphyxia, hypoventilation), or when alveoli are damaged or fluid-filled (pneumonia, pulmonary edema, COPD)—the latter causes intrapulmonary shunting, blood returning to the left heart still unoxygenated.",
+     "zh": "血氧下降的三类机制：交换面积缩小（连枷胸、各类气胸、血胸）；呼吸做功下降（胸痛引起的呼吸制动、创伤性窒息、任何原因的通气不足）；肺泡受损或积液（肺炎、肺水肿、COPD）——最后一类造成肺内分流，血液未经氧合就流回左心。",
+     "hard": true
+    },
+    {
+     "en": "PaCO2 moves opposite to minute volume: less VM means CO2 builds up (hypercapnia); more VM washes CO2 out (hypocapnia). Anxiety hyperventilation drops CO2 and produces dizziness plus numbness and tingling of face and limbs.",
+     "zh": "PaCO2 与分钟通气量反向变动：通气量降低则二氧化碳蓄积（高碳酸血症）；通气量升高则二氧化碳被洗出（低碳酸血症）。焦虑性过度通气把 CO2 吹低后，会出现头晕和面部、四肢麻木刺痛。",
+     "hard": true
+    },
+    {
+     "en": "Dalton's law: total gas pressure equals the sum of the partial pressures of its components; air is nitrogen 78.62%, oxygen 20.84%, CO2 0.04%, and water vapour 0.50%.",
+     "zh": "道尔顿分压定律：混合气体总压等于各组分分压之和；空气组成为氮 78.62%、氧 20.84%、二氧化碳 0.04%、水蒸气 0.50%。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Airway Evaluation",
+   "titleZh": "气道评估",
+   "points": [
+    {
+     "en": "Normal respiratory rates: adults 12-20 breaths/min; children aged 1-18 years 12-37; infants 1 month-1 year 30-53. Breathing at rest should be silent and effortless—if you can see or hear it, something is usually wrong.",
+     "zh": "正常呼吸频率：成人 12～20 次/分；1～18 岁儿童 12～37；1 个月～1 岁婴儿 30～53。静息呼吸应当无声、不费力——一眼能看出或能听见的呼吸，多半有问题。",
+     "hard": true
+    },
+    {
+     "en": "Inadequate breathing = rate under 12 or over 20, shallow tidal volume, abnormal breath sounds, altered mental status, or cyanosis—intervene at once with positive-pressure ventilation and 100% oxygen. A patient speaking full sentences is patent for now; distressed patients sit themselves upright (tripod or semi-Fowler) and resist lying flat.",
+     "zh": "通气不足的判据：频率 <12 或 >20 次/分、潮气量变浅、呼吸音异常、意识改变、发绀——出现即应立即正压通气并给 100% 氧。能整句说话说明气道此刻通畅；呼吸窘迫的患者会自己坐直（三脚架位或半坐位）、抗拒平躺。",
+     "hard": true
+    },
+    {
+     "en": "Terminology chain: dyspnea can stem from hypoxemia (low arterial oxygen), which untreated becomes hypoxia (tissue oxygen lack) and finally anoxia (no oxygen—cell death). Management always runs: open the airway, clear it, assess breathing, then intervene—in that order.",
+     "zh": "概念链：呼吸困难可源于低氧血症（动脉血氧下降），不处理会进展为低氧（组织缺氧），最终无氧（细胞死亡）。处置顺序永远是：开放气道→清理气道→评估呼吸→实施干预，次序不可颠倒。",
+     "hard": true
+    },
+    {
+     "en": "Visual survey: retractions at four sites (intercostal, suprasternal notch, supraclavicular fossa, subcostal), sternocleidomastoid accessory-muscle use, nasal flaring, pursed-lip breathing, gasping, and asymmetric chest movement—one side moving less means reduced airflow into that lung.",
+     "zh": "视诊清单：四个部位的凹陷（肋间、胸骨上窝、锁骨上窝、肋下）、胸锁乳突肌等辅助肌参与、鼻翼扇动、缩唇呼吸、张口喘气，以及胸廓起伏不对称——一侧动得少＝该侧进气减少。",
+     "hard": true
+    },
+    {
+     "en": "Auscultate both sides front and back, comparing apex to apex and base to base (2nd, 5th, and 7th intercostal spaces). When bagging, compliance is feedback: an easy squeeze means air enters freely; a bag turning hard to squeeze suggests airway obstruction.",
+     "zh": "听诊要前后、双侧对称比较——肺尖对肺尖、肺底对肺底（常用第 2、5、7 肋间）。捏皮囊时的顺应性就是反馈：捏着轻松＝进气顺畅；越捏越费力提示气道梗阻。",
+     "hard": true
+    },
+    {
+     "en": "Pulsus paradoxus—systolic pressure falling more than 10 mm Hg during inhalation (the pulse may weaken or vanish)—points to decompensating COPD, pericardial tamponade, tension pneumothorax, or severe asthma.",
+     "zh": "奇脉：吸气时收缩压下降超过 10 mm Hg（脉搏可随之减弱甚至消失），见于 COPD 失代偿、心包填塞、张力性气胸、重度哮喘等胸腔内压增高的情况。",
+     "hard": true
+    },
+    {
+     "en": "Protective reflexes: cough, sneeze, gag. A cough suppressed by drugs, pain, or trauma leaves the patient at serious aspiration risk; the gag reflex guards the lower airway; a normal person sighs about once a minute, reinflating collapsed alveoli.",
+     "zh": "气道保护性反射：咳嗽、喷嚏、呕吐反射。咳嗽机制被药物、疼痛或外伤压制时误吸风险大增；呕吐反射保护下气道；正常人约每分钟叹气一次，用来重新张开塌陷的肺泡。",
+     "hard": true
+    },
+    {
+     "en": "Pattern-to-cause table: apneustic (long gasping inhale, tiny exhale) = brainstem insult; agonal gasps = cerebral anoxia, briefly after arrest; Biot (chaotic depth and rate with apnea spells) = raised intracranial pressure; Cheyne-Stokes (crescendo-decrescendo with apnea) is not ominous unless extreme or with brain trauma; Kussmaul (deep and rapid) = diabetic ketoacidosis.",
+     "zh": "呼吸模式对照：长吸式呼吸（长而费力的吸气＋极短呼气）＝脑干损伤；濒死叹息样呼吸＝大脑缺氧，骤停后可短暂出现；比奥呼吸（节律深度紊乱夹杂呼吸暂停）＝颅内压增高；潮式呼吸（渐强渐弱夹呼吸暂停）除非极端或合并脑外伤，不算凶兆；库斯莫尔呼吸（深大而快）＝糖尿病酮症酸中毒。",
+     "hard": true
+    },
+    {
+     "en": "Pulse oximetry: a healthy reading is above 95%; below 95% in a nonsmoker suggests hypoxemia; below 90% with distress demands aggressive oxygen. (BC titrates to ≥ 94%—see BC alert.)",
+     "zh": "脉搏血氧：正常应 >95%；不吸烟者 <95% 提示低氧血症；<90% 且伴窘迫必须积极氧疗。（BC 考纲的滴定目标是 ≥94%，见 BC 差异。）",
+     "hard": true
+    },
+    {
+     "en": "Oximeter traps: bright ambient light, patient motion, poor perfusion (shock, arrest, cold—move the probe to earlobe or nose), nail polish, venous pulsation in right-heart failure, abnormal hemoglobins. CO poisoning reads falsely normal because carboxyhemoglobin masquerades as oxygenated—only a CO-oximeter (SpCO) unmasks it. Always weigh the number against the patient.",
+     "zh": "血氧仪陷阱：强环境光、患者移动、灌注差（休克、骤停、寒冷——可把探头改夹耳垂或鼻部）、指甲油、右心衰的静脉搏动、异常血红蛋白。CO 中毒时读数假性正常，因为碳氧血红蛋白冒充了氧合血红蛋白——只有 CO 血氧仪（SpCO）能识破。读数永远要对照患者本人。",
+     "hard": true
+    },
+    {
+     "en": "Peak expiratory flow: normal adults 350-750 L/min; sit the patient with legs dangling, take three attempts, keep the best. Rising flow means bronchodilators are working; falling flow is early deterioration.",
+     "zh": "呼气峰流速：正常成人 350～750 L/min；患者坐位、双腿下垂，测三次取最佳值。数值上升说明支气管扩张剂起效；下降则是恶化的早期信号。",
+     "hard": true
+    },
+    {
+     "en": "Normal ABGs: pH 7.35-7.45; PaO2 80-100 mm Hg; PaCO2 35-45 mm Hg; HCO3− 21-28 mEq/L; base excess −2 to +3; SaO2 above 95%. Read PaCO2 as the ventilation gauge and PaO2/SaO2 as the oxygenation gauges.",
+     "zh": "动脉血气正常值：pH 7.35～7.45；PaO2 80～100 mm Hg；PaCO2 35～45 mm Hg；碳酸氢根 21～28 mEq/L；碱剩余 −2～+3；SaO2 >95%。判读口径：PaCO2 反映通气，PaO2 和 SaO2 反映氧合。",
+     "hard": true
+    },
+    {
+     "en": "Colourimetric ETCO2 (between tube and bag): read after 6-8 positive-pressure breaths—tracheal placement exhales 4-5% CO2 and turns the paper from purple to yellow; esophageal placement (under 0.5% CO2) leaves it purple. Gastric CO2 from carbonated drinks can fake a positive, and heat, humidity, or secretions degrade it—use it only as a spot check, then switch to a quantitative device.",
+     "zh": "比色式 ETCO2 检测器（接在导管与通气装置之间）：正压通气 6～8 次后再判读——管在气管内时呼出气含 4%～5% CO2，试纸由紫变黄；误入食管（CO2 <0.5%）则一直保持紫色。胃内碳酸饮料产生的 CO2 可造成假阳性，高温、潮湿或分泌物进入都会使其失准——只能当点检工具，应尽快换定量设备。",
+     "hard": true
+    },
+    {
+     "en": "Quantitative waveform capnography is the recommended—and prehospital-mandatory—method for confirming and continuously monitoring any advanced airway. Normal ETCO2 is 35-45 mm Hg, about 2-5 mm Hg below PaCO2. A suddenly flat waveform means the tube has left the trachea until proven otherwise; a sampling line clogged with blood or debris also zeroes the trace—replace the in-line adaptor.",
+     "zh": "定量波形二氧化碳监测是确认并持续监测高级气道位置的推荐方法，院前属于强制要求。ETCO2 正常 35～45 mm Hg，约比 PaCO2 低 2～5。波形突然变平，在排除其他原因之前一律按导管脱出处理；采样管被血液或杂物堵塞同样会让波形归零——换掉管路适配器即可恢复。",
+     "hard": true
+    },
+    {
+     "en": "Waveform reading: tall waves with ETCO2 above 45 = hypoventilation (opioid depression, bagging too slowly); small waves below 35 = hyperventilation (panic, acidosis, head injury, pulmonary embolism, bagging too fast); a shark-fin upslope = bronchospasm with air trapping; a baseline never returning to zero = rebreathing. In arrest, ETCO2 tracks compression quality; an abrupt sustained jump (typically above 40 mm Hg) announces ROSC—while prolonged arrest keeps ETCO2 minimal even with a perfectly placed tube.",
+     "zh": "波形判读：波形高、ETCO2 >45＝通气不足（阿片类抑制、辅助通气太慢）；波形矮、<35＝过度通气（惊恐发作、酸中毒、颅脑伤、肺栓塞、捏皮囊太快）；上升支呈鲨鱼鳍＝支气管痉挛伴气体潴留；基线回不到零＝重复吸入呼出气。骤停时 ETCO2 反映按压质量；突然持续跃升（典型 >40 mm Hg）宣告自主循环恢复——而长时间骤停即使导管位置完美，ETCO2 也会很低。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Positioning and Manual Airway Manoeuvres",
+   "titleZh": "体位摆放与徒手开放气道",
+   "points": [
+    {
+     "en": "A patient who is talking, screaming, or crying has a patent airway by definition. Altered level of consciousness is the setting where the airway silently fails and manual manoeuvres become necessary.",
+     "zh": "还在说话、喊叫或哭的病人，气道一定是通的。真正要警惕的是意识改变的病人——他们的气道会悄无声息地失守，需要靠手法去打开。",
+     "hard": true
+    },
+    {
+     "en": "Found prone and unresponsive: log roll the patient as a single unit into a supine position first, then open the airway and assess breathing.",
+     "zh": "发现俯卧的无反应病人：先把人当作一个整体轴线翻身（log roll）成仰卧，再开放气道、评估呼吸。",
+     "hard": true
+    },
+    {
+     "en": "Recovery position (left lateral recumbent) has four entry conditions that must all be met: no trauma, unresponsive or decreased awareness, able to maintain their own airway spontaneously, and breathing adequately.",
+     "zh": "复原体位（左侧卧）四个条件缺一不可：非创伤、无反应或意识下降、能自主维持气道、呼吸足够。四条全占才允许侧卧。",
+     "hard": true
+    },
+    {
+     "en": "Head tilt-chin lift is the preferred opening technique when there is no trauma mechanism. Chin lift details are testable: fingertips on the bony chin only (soft tissue pressure blocks the airway), never lift with the thumb, teeth brought nearly together without fully closing the mouth.",
+     "zh": "无创伤机制时，仰头举颏是首选开放手法。举颏细节全是考点：指尖只放在颏部骨性部位（压到颏下软组织反而堵气道），不能用拇指去抬，牙齿接近合拢但嘴不能完全闭上。",
+     "hard": true
+    },
+    {
+     "en": "Jaw-thrust manoeuvre is the choice for suspected cervical spine injury: index fingertips hooked under the mandibular angle, thumb bases on the zygomatic arches, head held neutral inline. Works with a cervical collar in place; a conscious patient with a jaw fracture may also need it. Weaknesses: exhausting to maintain, needs a second paramedic for bag-mask ventilation, no aspiration protection.",
+     "zh": "疑颈椎伤用双手托颌法：食指尖钩住下颌角，拇指根部撑在颧弓上，头保持中立位不动。戴着颈托也能做；清醒的下颌骨折病人有时也需要它来防舌后坠。弱点：非常费力难以久撑、单人没法同时捏球囊（要第二名医护）、不防误吸。",
+     "hard": true
+    },
+    {
+     "en": "If the jaw thrust fails to open the airway, carefully perform a head tilt-chin lift anyway — a patent airway outranks spinal precautions.",
+     "zh": "托颌打不开气道时，就小心翼翼地改做仰头举颏——气道通畅永远排在脊柱保护前面。",
+     "hard": true
+    },
+    {
+     "en": "Tongue-jaw lift is only an access manoeuvre — it opens the mouth for suctioning or inserting an oral airway. It cannot be used while ventilating, because it makes a mask seal impossible.",
+     "zh": "舌-下颌上提只是个「开门」手法——为吸引或放口咽通气道而撬开嘴。它不能配合通气使用，因为这个手法下面罩根本封不严。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Airway Obstructions",
+   "titleZh": "气道梗阻",
+   "points": [
+    {
+     "en": "Foreign body profiles: adults choke during meals; children while eating or playing with small toys. A previously healthy child with sudden breathing difficulty and no fever is a foreign body until proven otherwise. The classic adult victim is middle-aged or older, wears dentures, and has been drinking; stroke and other reflex-blunting conditions raise the risk.",
+     "zh": "异物梗阻的人物画像：成人几乎都发生在进餐时；儿童在吃东西或玩小玩具时。原本健康的孩子突然呼吸困难又不发热，先按异物处理。经典的成人受害者是中老年、戴假牙、喝了酒；卒中等使保护反射变钝的情况也会抬高风险。",
+     "hard": true
+    },
+    {
+     "en": "Obstruction from infection or severe allergy must NOT be treated with repeated foreign-body clearing attempts — they will fail and can make things worse. These patients need condition-specific care and prompt transport.",
+     "zh": "感染或重度过敏引起的梗阻，绝不能当异物去反复「清理」——清不出来还可能帮倒忙。这类病人要按对应疾病处理并尽快转运。",
+     "hard": true
+    },
+    {
+     "en": "Tongue obstruction reads by sound: partial = snoring respirations; complete = silence with no air movement. Either way a simple manual manoeuvre fixes it.",
+     "zh": "舌后坠靠声音判断：部分梗阻＝鼾声呼吸；完全梗阻＝一点气流声都没有。无论哪种，一个开放气道手法就能纠正。",
+     "hard": true
+    },
+    {
+     "en": "Laryngospasm is classically triggered by an overly aggressive intubation attempt or the moment of extubation; positive pressure ventilation or an upward jaw pull may break it, and it can recur after apparent resolution. Laryngeal edema narrows the glottis — think laryngeal trauma, epiglottitis, anaphylaxis, or upper-airway burns.",
+     "zh": "喉痉挛的经典诱因是插管动作过猛或刚拔管的瞬间；正压通气或向上提下颌可能解除，而且看似缓解后还会复发，不能松懈。喉水肿则会把声门挤窄——想到喉外伤、会厌炎、过敏性休克和上气道烧伤。",
+     "hard": true
+    },
+    {
+     "en": "Aspiration of blood or fluid sharply raises mortality: it obstructs, destroys bronchiolar tissue, seeds infection, and stiffens the lungs. Keep suction at hand and assume every emergency patient has a full stomach.",
+     "zh": "误吸血液或液体会显著推高死亡率：既堵气道，又毁支气管细支组织、把病原带进肺、还让肺变得难以通气。吸引装置随手可及，并且把每个急诊病人都当作饱胃处理。",
+     "hard": true
+    },
+    {
+     "en": "Mild obstruction (still exchanging air, forceful cough, no cyanosis): do NOT intervene — a forceful cough beats any technique you have, and grabbing at the object can convert mild to severe. Monitor and stand ready.",
+     "zh": "轻度梗阻（还能换气、咳嗽有力、不发绀）：不要出手——用力咳嗽比你任何手法都管用，伸手去抠反而可能把轻度变成完全梗阻。要做的是持续盯着、随时准备升级。",
+     "hard": true
+    },
+    {
+     "en": "Severe obstruction: sudden inability to breathe, talk, or cough; clutching the throat (universal choking sign); weak or absent cough; faint inspiratory stridor; cyanosis. Responsive adult or child: abdominal thrusts until the object is out or the patient goes unresponsive; use chest thrusts instead in late pregnancy or morbid obesity. Responsive infant: cycles of 5 back blows then 5 chest thrusts.",
+     "zh": "重度梗阻的样子：突然不能呼吸、不能说话、不能咳，双手掐喉（窒息通用手势），咳嗽无力或消失，微弱的吸气性喘鸣，发绀。清醒成人/儿童：腹部冲击做到异物排出或人失去反应为止；孕晚期或病态肥胖改做胸部冲击。清醒婴儿：5 次背部拍击＋5 次胸部冲击循环。",
+     "hard": true
+    },
+    {
+     "en": "The moment the patient goes unresponsive: position supine and start chest compressions immediately — no pulse check. After 30 compressions (15 with two rescuers, or for infants and children), open the mouth and look; remove the object only if you can see it. Blind finger sweeps are banned at every age.",
+     "zh": "病人一旦失去反应：放平，立即开始胸外按压——不查脉搏。30 次按压后（双人施救、婴儿或儿童为 15 次）开口查看，看得见异物才取。任何年龄都禁止盲目手指清扫。",
+     "hard": true
+    },
+    {
+     "en": "When BLS methods fail in the unresponsive patient, the textbook next step is direct laryngoscopy with Magill forceps. The BC exam FBAO sequence stops at compressions-look-remove; laryngoscope retrieval is concept-recognition only, not an exam skill station.",
+     "zh": "无反应病人 BLS 手段用尽后，教材的下一步是直接喉镜＋Magill 钳取异物。但 BC 考纲的 FBAO 流程只写到「按压—查看—看见才取」；喉镜取异物在考试里只要求认得这个概念，不是实操考站内容。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Suctioning",
+   "titleZh": "吸引",
+   "points": [
+    {
+     "en": "Gurgling means suction, now. Sequence discipline: open the airway first, clear it with suction second, ventilate third — bagging through secretions drives them into the lungs.",
+     "zh": "听到「咕噜」声＝立刻吸引。顺序纪律：先开放气道，再吸干净，然后才通气——隔着分泌物捏球囊等于把脏东西灌进肺里。",
+     "hard": true
+    },
+    {
+     "en": "Every shift: test the mechanical unit's vacuum by switching it on and clamping the tubing to confirm the gauge builds adequate pressure; confirm battery units are charged. Both a fixed and a portable unit belong on the ambulance.",
+     "zh": "每个班次开始：打开吸引器、夹闭管路，确认压力表能建立足够负压；电池款要确认满电。车上固定式和便携式两套都得有。",
+     "hard": true
+    },
+    {
+     "en": "Catheter selection: rigid Yankauer (tonsil-tip) for the adult pharynx and the preferred device for infants and children — wide, non-collapsing, moves big volumes fast. Soft French (whistle-tip) catheters go where rigid cannot: through the nose, down a tracheal tube, past clenched teeth, or into a stoma; lubricate for the nasopharynx.",
+     "zh": "导管怎么选：硬质 Yankauer（扁桃体头）用于成人咽部，也是婴幼儿的首选——口径大、不塌陷、大量液体吸得快。软质 French（哨音头）管走硬管去不了的路：经鼻、进气管导管内、绕过紧咬的牙关、进气切造口；进鼻咽要先润滑。",
+     "hard": true
+    },
+    {
+     "en": "Suction removes oxygen along with fluid, so preoxygenate before every attempt. Time caps per attempt: 15 seconds maximum in the adult, less in children and infants — the At the Scene box sets 15/10/5 seconds for adult/child/infant. In the young child, pharyngeal stimulation can trigger vagal bradycardia.",
+     "zh": "吸走液体的同时也在吸走氧，所以每次吸引前都要先预氧合。单次时限：成人最多 15 秒，儿童和婴儿更短——教材实战框给的是成人/儿童/婴儿 15/10/5 秒。婴幼儿咽后壁受刺激还会诱发迷走性心动过缓。",
+     "hard": true
+    },
+    {
+     "en": "Depth: measure from the corner of the mouth to the earlobe and never pass the base of the tongue — deeper triggers gagging and vomiting. Technique: no suction during insertion; apply suction in a circular motion on the way out.",
+     "zh": "深度：从口角量到耳垂，永远不要越过舌根——再深就会诱发呕吐。手法：进管时不开吸引，退管时边转圈边吸。",
+     "hard": true
+    },
+    {
+     "en": "After suctioning, do not walk away satisfied: reassess airway patency, then resume ventilation and oxygenation.",
+     "zh": "吸完不是结束：重新评估气道通畅度，然后接着通气和给氧，把中断的氧补回来。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Basic Airway Adjuncts: OPA and NPA",
+   "titleZh": "基础气道辅助器：口咽与鼻咽通气道",
+   "points": [
+    {
+     "en": "An adjunct never replaces head positioning — the manual manoeuvre must be maintained even after an OPA or NPA is in place.",
+     "zh": "辅助器从来不能替代头位——放进 OPA 或 NPA 之后，手法开放的体位仍然一秒都不能放松。",
+     "hard": true
+    },
+    {
+     "en": "OPA rules: insert promptly in any unresponsive patient without a gag reflex, breathing or not. An intact gag reflex is the contraindication — the tip sits in the posterior pharynx and will trigger retching and vomiting. If the patient gags on insertion, pull it out immediately and be ready to suction. Bonus role: bite-block for an intubated patient. It does not protect against aspiration.",
+     "zh": "OPA 使用规则：无反应且无咽反射的病人——不管还有没有呼吸——都应尽快插入。咽反射存在就是禁忌：它的尖端正好顶在咽后部，会诱发干呕和呕吐。插入过程中病人一恶心，立刻拔出并准备吸引。附加用途：给插管病人当牙垫。它不提供任何误吸保护。",
+     "hard": true
+    },
+    {
+     "en": "OPA sizing: earlobe to the corner of the mouth. A wrong size or sloppy insertion pushes the tongue backward and CREATES an obstruction; rough technique can injure the hard palate and set off bleeding and vomiting.",
+     "zh": "OPA 量法：耳垂到口角。选错尺寸或手法潦草，会把舌头往后推、亲手制造一个梗阻；动作粗暴还会蹭伤硬腭，引来出血和呕吐。",
+     "hard": true
+    },
+    {
+     "en": "Adult insertion: tip toward the roof of the mouth, rotate 180° at the soft-palate bump ('hard palate, soft palate, rotate'). Alternative: tongue blade down, slide in sideways from the mouth corner, rotate 90°. Final position: flange on the lips, curve following the teeth.",
+     "zh": "成人插法：尖端朝上腭滑入，摸到软腭那个「小坎」立即旋转 180°（口诀：硬腭—软腭—转）。备用插法：压舌板压住舌头，从口角侧入再转 90°。到位标准：翼缘贴在唇上，弧度顺着牙列。",
+     "hard": true
+    },
+    {
+     "en": "Pediatric OPA: use a tongue blade and insert right side up — no rotation. Rotating in a child's posterior pharynx can lacerate or even fracture the hard palate.",
+     "zh": "儿童 OPA：用压舌板压舌、按最终方向直接放入——不做旋转。在孩子的咽后部转那一下，可能撕裂甚至折断硬腭。",
+     "hard": true
+    },
+    {
+     "en": "NPA rules: the adjunct for altered patients who still HAVE a gag reflex — far better tolerated than an OPA. Contraindications: nasal trauma, or suspected skull fracture (CSF from the nose) — the tube could pass through the fracture line. Advantages worth listing: can be suctioned through, tolerated awake, placed blindly, mouth need not open.",
+     "zh": "NPA 使用规则：专为「意识差但咽反射还在」的病人准备——耐受性远好于 OPA。禁忌：鼻部外伤、疑颅底骨折（鼻孔流脑脊液）——管子有可能顺着骨折缝进颅。值得背的优点：可以经它吸引、清醒者能耐受、可盲插、不需要张嘴。",
+     "hard": true
+    },
+    {
+     "en": "NPA technique: size from nostril tip to earlobe (or angle of the jaw); diameter about the patient's little finger. Lubricate with water-soluble gel, pick the larger nostril, bevel toward the septum, advance along the nasal floor parallel to the mouth. Never force — resistance means switch nostrils. Too long a tube obstructs; poor technique can cause epistaxis that is extremely hard to control.",
+     "zh": "NPA 手法：从鼻尖量到耳垂（或下颌角），粗细约等于病人的小指。水溶性润滑剂涂足，挑较大的那个鼻孔，斜面朝向鼻中隔，沿鼻底与口平行方向推进。绝不硬推——遇到阻力就换对侧。管子太长会顶出梗阻；手法差引起的鼻出血会非常难止。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Supplemental Oxygen Therapy and Oxygen Sources",
+   "titleZh": "氧疗决策与氧源管理",
+   "points": [
+    {
+     "en": "Oxygen indications: respiratory distress, or suspected/documented hypoxemia (SpO2 below 94%). Routine oxygen for a well-oxygenated patient may cause harm (oxidative stress, hyperoxic injury) — but when in doubt about oxygenation status, give it.",
+     "zh": "给氧指征：呼吸窘迫，或疑似/证实的低氧血症（SpO2 低于 94%）。氧合良好的人常规吸氧可能反受其害（氧化应激、高氧损伤）——但只要拿不准病人的氧合状态，就给。",
+     "hard": true
+    },
+    {
+     "en": "Cylinder sizes to memorize: D = 350 L (carried to the patient), E = 625 L, M = 3,450 L (onboard main supply). Swap the cylinder at 200 psi — the safe residual pressure. A full cylinder holds about 2,000 psi; the therapy regulator steps it down to roughly 50 psi; the flowmeter then delivers 1-25 L/min.",
+     "zh": "氧瓶容量要背：D 瓶 350 L（随身带到病人身边）、E 瓶 625 L、M 瓶 3,450 L（车载主供）。压力掉到 200 psi（安全残压）就必须换瓶。满瓶约 2,000 psi；治疗调节器把它降到约 50 psi；流量计再按 1-25 L/min 输出。",
+     "hard": true
+    },
+    {
+     "en": "Cylinder safety: no oil or grease near any fitting, no smoking nearby, store below 50°C, close valves even on empty tanks, secure against toppling, stand to the side of the valve, and hydrostatic-test every 10 years (date stamped on the collar).",
+     "zh": "氧瓶安全条款：任何接口都不能沾油脂，周边禁烟，存放温度低于 50°C，空瓶也要关阀，固定防倒，操作时人站瓶阀侧面，每 10 年做一次水压试验（日期就打在瓶颈上）。",
+     "hard": true
+    },
+    {
+     "en": "Flowmeter physics: the pressure-compensated (float-ball) type must stay upright because gravity drives the reading; the Bourdon-gauge type works in any position but does not compensate for backpressure — a downstream kink makes it read falsely high.",
+     "zh": "流量计的物理：压力补偿式（浮球）靠重力工作，必须竖直放；Bourdon 表式怎么摆都行，但不补偿背压——下游一打折，读数就虚高。",
+     "hard": true
+    },
+    {
+     "en": "Shift routine: open the main cylinder valve and check pressure at shift start; check portable cylinders after every oxygen call; always carry at least one spare cylinder.",
+     "zh": "班次例行：接班先开主供瓶阀看压力；每趟用过氧的任务后都查便携瓶余压；车上永远至少备一个满的备用瓶。",
+     "hard": true
+    },
+    {
+     "en": "BC exam oxygen doctrine (overrides any looser textbook wording): titrate to SpO2 ≥94%; SOB, shock, or CO poisoning get high-flow — nonrebreather at 15 L/min, and a nasal cannula at 15 L/min can be layered underneath; never run an adult face mask below 6 L/min or the patient rebreathes worse than room air.",
+     "zh": "BC 考试的给氧铁律（教材写得再宽松也按这个答）：滴定到 SpO2 ≥94%；呼吸困难、休克、CO 中毒一律高流量——非再吸入面罩 15 L/min，还可以在面罩下再叠一条 15 L/min 的鼻导管；成人面罩流量绝不能低于 6 L/min，否则重复吸入呼出气，比呼吸室内空气还糟。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Oxygen-Delivery Devices",
+   "titleZh": "供氧装置",
+   "points": [
+    {
+     "en": "Nonrebreathing mask — the prehospital first choice for the spontaneously breathing patient needing high concentration: about 90% oxygen with a good seal at 15 L/min. Fill the reservoir bag completely BEFORE applying; keep flow at 12-15 L/min so the bag never collapses on inhalation. It is a passive device: apnea or poor respiratory effort makes it useless — shallow breathers cannot pull the one-way valve open.",
+     "zh": "非再吸入面罩——院前给自主呼吸病人上高浓度氧的首选：密封良好、15 L/min 时约 90%。戴上去之前必须先把储气袋充满；流量保持 12-15 L/min，保证吸气时袋子不被吸瘪。它是被动装置：呼吸暂停或呼吸努力太差就完全没用——呼吸太浅的病人拉不开那个单向阀。",
+     "hard": true
+    },
+    {
+     "en": "Nasal cannula: 1-6 L/min delivers 24-44% oxygen; cranking higher only irritates the mucosa without raising concentration. Best for long-term oxygen users and patients who cannot tolerate a mask; ineffective in apnea, poor effort, severe hypoxia, or mouth-breathers.",
+     "zh": "鼻导管：1-6 L/min 给到 24-44% 的氧；再往上调只会刺激鼻黏膜，浓度一点不涨。最适合长期氧疗者和戴不住面罩的人；对呼吸暂停、呼吸努力差、重度缺氧和用嘴呼吸的病人无效。",
+     "hard": true
+    },
+    {
+     "en": "The interfacility pair: simple face mask gives 40-60% at 10 L/min (side ports dilute with room air); Venturi mask dials precise concentrations — 24%, 28%, 35%, 40%, or 50% — mostly for in-hospital COPD care and long-distance transfers.",
+     "zh": "转院场景的两员：简单面罩 10 L/min 时 40-60%（侧孔会吸进室内空气稀释）；Venturi 面罩能精确调浓度——24%、28%、35%、40%、50% 五档——主要用在院内 COPD 管理和长途转运。",
+     "hard": true
+    },
+    {
+     "en": "The 15 L/min line-up to memorize: bag-mask with reservoir ≈ nearly 100%; nonrebreather ≈ 90%; pocket mask with oxygen inlet ≈ 55% (16% — your exhaled air — without oxygen attached).",
+     "zh": "同样 15 L/min，三件装备三个数：带储氧袋的球囊面罩≈接近 100%；非再吸入面罩≈90%；带氧气入口的口对面罩≈55%（不接氧就只有你呼出气里的 16%）。",
+     "hard": true
+    },
+    {
+     "en": "Infection-control extras: the Hi-Ox mask filters the patient's exhaled breath — used for febrile respiratory illness. Nebulizers hold 3-5 mL of medication fluid. Humidifiers suit long transports only (must stay upright), and many systems ban humidifiers and nebulizers outright because they aerosolize secretions.",
+     "zh": "感控相关的几件：Hi-Ox 面罩会过滤病人呼出气——发热性呼吸道疾病用它。雾化器每次装 3-5 mL 药液。湿化瓶只适合长途转运（必须竖直固定），而且不少系统因为气溶胶传播风险干脆禁用湿化和雾化装置。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Assisted and Artificial Ventilation, CPAP and PEEP",
+   "titleZh": "辅助与人工通气、CPAP 与 PEEP",
+   "points": [
+    {
+     "en": "Positive pressure methods ranked by preference: mouth-to-mask first, two-person bag-mask second, one-person bag-mask last — because providers who rarely ventilate struggle most with the mask seal, and one person juggling airway position, seal, and bag is the weakest setup.",
+     "zh": "正压通气方式的优先级排序：口对面罩 ＞ 双人球囊面罩 ＞ 单人球囊面罩——原因是不常做通气的人最难保住面罩密封，而单人要同时管头位、密封、挤袋三件事，是最不可靠的组合。",
+     "hard": true
+    },
+    {
+     "en": "Ventilation rates by age: adult apneic with a pulse 10-12 breaths/min; infant and child 12-20 breaths/min; cardiac arrest with an advanced airway placed — 10 breaths/min for everyone, asynchronous with compressions.",
+     "zh": "通气频率按年龄背：成人有脉搏的呼吸暂停 10-12 次/分；婴儿和儿童 12-20 次/分；心搏骤停且已置入高级气道——一律 10 次/分，与按压各干各的、不用同步。",
+     "hard": true
+    },
+    {
+     "en": "Never hyperventilate: overinflated lungs squeeze the heart, choke venous return, and drop cardiac output — while also inflating the stomach and inviting regurgitation and aspiration. Each breath: 1 second, just enough for visible chest rise.",
+     "zh": "绝不过度通气：肺被吹得太胀会挤压心脏、掐断静脉回流、拉低心输出量——同时还把胃吹起来，招来反流误吸。每次送气 1 秒，胸廓刚好可见起伏就够。",
+     "hard": true
+    },
+    {
+     "en": "Adequate-ventilation checklist: equal chest rise and fall, audible breath sounds bilaterally, age-appropriate rate, pulse returning toward normal. Inadequate: minimal chest movement, silent chest, wrong rate, pulse and SpO2 not improving.",
+     "zh": "通气足够的核对单：双侧胸廓等幅起伏、两侧都能听到呼吸音、频率符合年龄、脉率往正常回落。通气不足：胸廓几乎不动、听不到呼吸音、频率不对、脉搏和 SpO2 都不见起色。",
+     "hard": true
+    },
+    {
+     "en": "Obesity: ramp the patient 25-30° head-and-shoulders up until the external auditory meatus lines up with the sternal notch — pillows/blankets and commercial devices work equally well. Expect a shrunken oxygen reserve and a shorter safe window for every airway procedure.",
+     "zh": "肥胖病人：用 ramped 体位把头肩垫高 25-30°，垫到外耳道与胸骨切迹一条水平线——枕头毯子和商品化坡垫效果相当。同时预期氧储备缩水，每一步气道操作的安全窗都更短。",
+     "hard": true
+    },
+    {
+     "en": "Pediatric bag-mask: flat nasal bridge makes the seal hard — use the EC-clamp, and never press the soft tissue under the chin or the eyes. Bag sizes: minimum 450 mL for term neonates and infants; adult 1,500-mL bag acceptable for children but pediatric bag preferred; over 12-14 years needs the adult bag; length-based tape works up to 34 kg. Cadence: 'squeeze, release, release' — one breath every 3-5 seconds.",
+     "zh": "儿科球囊面罩：孩子鼻梁平，密封本来就难——用 EC 手法，且不许压颏下软组织和眼睛。袋子尺寸：足月新生儿和婴儿最少 450 mL；儿童可以用 1,500 mL 成人袋但首选儿科袋；超过 12-14 岁就得用成人袋；34 kg 以下可用身长带选号。节奏口令：「squeeze, release, release」——每 3-5 秒送一口气。",
+     "hard": true
+    },
+    {
+     "en": "Pediatric cricoid pressure (to limit gastric distention and passive regurgitation): one fingertip in infants, thumb and index finger in children, gentle — excessive force compresses the infant trachea shut.",
+     "zh": "儿科环状软骨压迫（为减少胃胀气和被动反流）：婴儿用一根指尖，儿童用拇指加食指，力道要轻——按重了能把婴儿的气管直接压瘪。",
+     "hard": true
+    },
+    {
+     "en": "CPAP mechanism: continuous pressure splints alveoli open, recruits collapsed ones, pushes oxygen across the membrane, and drives interstitial fluid back into the circulation — treating symptoms and work of breathing, not the underlying disease. It can spare a patient from intubation.",
+     "zh": "CPAP 的原理：持续的气道正压把肺泡撑住不塌、把塌了的重新吹开、加大氧穿膜的驱动力、还把间质液体压回肺循环——但它治的是症状和呼吸功，不是背后的病。用得早可以帮病人躲过插管。",
+     "hard": true
+    },
+    {
+     "en": "BC CPAP entry gate (memorize the numeric version, not the textbook's loose list): age ≥13, awake and following commands, maintains own airway, AND all three of — RR over 24, SpO2 under 94% on oxygen, accessory muscle use. Typical causes: CHF/cardiogenic pulmonary edema, asthma, COPD, pneumonia, submersion.",
+     "zh": "BC 的 CPAP 准入门槛（背数字版，别背教材那份松散清单）：年龄 ≥13 岁、清醒能遵嘱、能自己保住气道，并且三条全占——呼吸频率＞24、已给氧下 SpO2＜94%、辅助呼吸肌参与。常见适应病种：心衰/心源性肺水肿、哮喘、COPD、肺炎、溺水后。",
+     "hard": true
+    },
+    {
+     "en": "BC CPAP contraindications: 12 years or younger, decreased LOC or cannot follow commands, respiratory arrest or hypoventilation, imminent respiratory failure (slow shallow breaths, falling LOC — these patients get BVM with PEEP instead), unfittable mask, vomiting or aspiration risk, traumatic cause, tracheostomy, suspected pneumothorax, systolic BP under 90 mmHg.",
+     "zh": "BC 的 CPAP 禁忌：12 岁及以下、意识下降或不能遵嘱、呼吸停止或低通气、即将呼吸衰竭（呼吸又慢又浅、意识在往下掉——这类人直接 BVM 加 PEEP）、面罩戴不严、呕吐或有误吸风险、创伤性呼吸窘迫、气管切开、疑气胸、收缩压低于 90 mmHg。",
+     "hard": true
+    },
+    {
+     "en": "BC CPAP operation: start oxygen 5 L/min with the valve at 5 cmH2O, obtain a seal, reassess, then climb in 2.5-cmH2O steps to a maximum of 10 cmH2O. Deterioration = remove CPAP, switch to BVM with assisted ventilations (PEEP valve if indicated). PEEP on the BVM: start 5 cmH2O, increase by 2.5 to max 10, ventilate about 8-10 breaths/min; pull the valve off if SBP drops below 90 or the patient arrests.",
+     "zh": "BC 的 CPAP 操作：氧流量 5 L/min、阀值 5 cmH2O 起步，扣严面罩、复评生命体征，然后按 2.5 cmH2O 一档往上加，封顶 10 cmH2O。病情恶化＝撤掉 CPAP，改 BVM 辅助通气（需要就加 PEEP 阀）。BVM 上的 PEEP：5 cmH2O 起、每次加 2.5、最高 10，通气频率约 8-10 次/分；收缩压跌破 90 或心搏骤停就立刻摘掉 PEEP 阀。",
+     "hard": true
+    },
+    {
+     "en": "CPAP complications and logistics: barotrauma pneumothorax, hypotension from raised intrathoracic pressure, gastric insufflation, and claustrophobic panic — coach, never force the mask on. Oxygen burn is brutal: some units empty a D cylinder in 5-10 minutes, so start with a full tank plus a backup.",
+     "zh": "CPAP 的并发症与后勤账：气压伤性气胸、胸内压升高导致的低血压、胃胀气，还有幽闭恐惧式的抗拒——要边安抚边适应，绝不能硬扣面罩。耗氧非常凶：有些机型 5-10 分钟就抽干一个 D 瓶，所以上机前必须满瓶起步、备用瓶在手。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Gastric Distention and Decompression",
+   "titleZh": "胃胀气与胃减压",
+   "points": [
+    {
+     "en": "Three causes of blowing air into the stomach during ventilation: squeezing too hard, ventilating too fast, and an incompletely opened airway - pharyngeal pressure forces the esophagus open. Children are the highest-risk group, though adults are far from immune.",
+     "zh": "通气把气吹进胃的三个原因：送气压力过大、频率过快、通气时气道没有完全打开——咽部压力把食管顶开，气体灌进胃。儿童最高危，成人也常见。",
+     "hard": true
+    },
+    {
+     "en": "A distended stomach hurts the patient twice: it drives regurgitation (vomitus creeping up the throat ends in the lungs as aspiration), and it shoves the diaphragm upward, shrinking the space the lungs can expand into.",
+     "zh": "胃胀气的双重危害：一是促发反流——呕吐物爬上咽后壁很快进肺造成误吸；二是把膈肌顶向胸腔，压缩肺的扩张空间。",
+     "hard": true
+    },
+    {
+     "en": "Recognize it by a growing abdomen and rising resistance to bag-mask squeezes. Response: reassess and reposition the airway, apply cricoid pressure, watch chest rise, and cap each breath at 1 second or just enough for adequate chest rise.",
+     "zh": "识别线索：腹围渐增、捏球囊阻力越来越大。处置：重新评估并调整气道位置、加环状软骨压迫、盯胸廓起伏，每次送气限制在 1 秒或刚好见胸起即止。",
+     "hard": true
+    },
+    {
+     "en": "Insert a gastric tube for anyone facing prolonged positive pressure ventilation (especially unintubated), and whenever distention interferes with ventilation - classically children on PPV or who have swallowed air from increased work of breathing. Never pass one if the esophagus is not patent; extreme caution with esophageal varices or tumours.",
+     "zh": "胃管指征：需要较长时间正压通气者（尤其未插管的）、胃胀气已妨碍通气者——典型如正压通气中的儿童或因呼吸做功大量吞气者。食管不通畅绝对禁插；食管静脉曲张或肿瘤要极度谨慎。",
+     "hard": true
+    },
+    {
+     "en": "Route selection is testable: NG for responsive patients (better tolerated, patient can still talk), but NG is contraindicated with midface or skull fractures - the tube can enter the cranial vault - so use OG there. OG suits unresponsive patients without a gag reflex and is normally inserted after tracheal intubation, because an earlier OG tube blocks your view of the cords; OG also avoids epistaxis and takes larger tubes for lavage.",
+     "zh": "路径选择是考点：清醒患者首选 NG（耐受好、插着仍能说话）；但中面部或颅底骨折禁用 NG——管子可能穿进颅腔，此时改走 OG。OG 适合无意识、无咽反射者，通常等气管插管完成后再下——先下 OG 会挡住看声带的视野；OG 还不引起鼻出血，且可用更粗的管做洗胃。",
+     "hard": true
+    },
+    {
+     "en": "Depth is measured nose (or mouth) to earlobe to xiphoid. Confirm position by auscultating over the epigastrium while injecting 20-30 mL of air and/or seeing gastric contents return, with no reflux around the tube; after an OG tube, recheck lung sounds to prove the tracheal tube was not dislodged.",
+     "zh": "测深：鼻（或口）→耳垂→剑突。确认位置：向管内注气 20-30 mL 同时听诊上腹部，和/或见胃内容物回流，管周无反流；下完 OG 管还要再听双肺，证实气管导管没被带偏。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Predicting the Difficult Airway",
+   "titleZh": "预判困难气道",
+   "points": [
+    {
+     "en": "MOANS predicts difficult bag-mask ventilation: Mask seal problems, Obese, Aged (facial tissue loss), No teeth, Stiff lungs. Any hit means plan for two-person BVM plus an airway adjunct from the start.",
+     "zh": "MOANS 预判球囊面罩通气困难：Mask seal 密封难、Obese 肥胖、Aged 高龄（面部组织萎缩）、No teeth 无牙、Stiff lungs 肺顺应性差。中任何一条，就该从一开始安排双人球囊法加气道辅助器。",
+     "hard": true
+    },
+    {
+     "en": "LEMON predicts difficult intubation: Look externally (deformity, obesity, neck mass, big tongue, trauma), Evaluate 3-3-2, Mallampati class, Obstruction (epiglottitis, tumour, snoring, abnormal voice), Neck mobility (arthritis, surgery, spinal immobilization). A failed LEMON means set up plan B before the first attempt.",
+     "zh": "LEMON 预判插管困难：Look 外观（畸形、肥胖、颈部肿块、巨舌、颌面外伤）、Evaluate 3-3-2、Mallampati 分级、Obstruction 梗阻（会厌炎、肿瘤、鼾声、声音异常）、Neck mobility 颈部活动度（关节炎、术后、脊柱固定）。LEMON 不过关，第一次尝试前就要把 B 计划的器械摆好。",
+     "hard": true
+    },
+    {
+     "en": "The 3-3-2 rule: mouth opening at least 3 fingerbreadths, chin-to-hyoid at least 3 fingerbreadths, hyoid-to-thyroid-notch at least 2 fingerbreadths. Any dimension short of the number predicts a difficult intubation.",
+     "zh": "3-3-2 法则：张口≥3 指宽、颏至舌骨≥3 指、舌骨至甲状软骨切迹≥2 指。任何一个量不够数，就要按困难插管准备。",
+     "hard": true
+    },
+    {
+     "en": "Two grading scales, two moments: Mallampati (I-IV) rates how much oropharynx you see in a cooperative sitting patient before any attempt - class III/IV predicts difficulty; Cormack-Lehane (1-4) rates what the laryngoscope actually shows - 1 full glottis, 2 partial glottis or arytenoids only, 3 epiglottis only, 4 not even the epiglottis.",
+     "zh": "两套分级对应两个时点：Mallampati I-IV 级在患者坐位配合时评估口咽可见度，属于插管前预测——III、IV 级预示困难；Cormack-Lehane 1-4 级评的是喉镜下真实视野——1 级声门全见，2 级仅见部分声门或杓状软骨，3 级只见会厌，4 级连会厌都看不到。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Orotracheal Intubation by Direct Laryngoscopy",
+   "titleZh": "直视喉镜下气管插管全流程",
+   "points": [
+    {
+     "en": "The classic error in arrest is grabbing advanced airway tools too early. Only two reasons ever justify an advanced airway: failure to keep the airway patent, or failure to oxygenate and ventilate adequately. A hypoxemic patient needs oxygen through basic techniques first - the tube is never a substitute.",
+     "zh": "骤停现场的经典错误是过早上高级气道。高级气道只有两个正当理由：基础手法维持不住气道通畅，或氧合与通气始终不达标。低氧血症的患者先用基础手段把氧供上——插管永远不是基础手法的替代品。",
+     "hard": true
+    },
+    {
+     "en": "Tube facts: sizes run 2.5-9.0 mm in 0.5 steps; cuffs appear from 5.0 mm up. Adult women take 7.0-8.0 mm, men 7.5-8.5 mm; always lay out three tubes (estimate, one size up, one down). The Murphy eye side-port keeps ventilating if the tip plugs. Pediatric tubes (2.5-4.5 mm) are usually uncuffed - the funnel-shaped cricoid seals anatomically - but the old rule that cuffed tubes are never used in children is obsolete.",
+     "zh": "导管硬知识：内径 2.5-9.0 mm、按 0.5 递增，5.0 mm 起才带套囊。成年女性用 7.0-8.0 mm、男性 7.5-8.5 mm；永远备三根（预估号、大一号、小一号）。管尖侧孔 Murphy eye 保证管口被堵时仍能通气。儿科管 2.5-4.5 mm 通常无囊——漏斗形环状软骨环天然密封——但『儿童绝不能用带囊管』的老规矩已经过时。",
+     "hard": true
+    },
+    {
+     "en": "Blades: the curved Macintosh tip sits in the vallecula and lifts the epiglottis indirectly - preferred by beginners and experts alike, less likely to lever against teeth. The straight Miller goes under the epiglottis and lifts it directly - the choice for infants with a long floppy epiglottis. Sizes 0-4: 0-2 pediatric, 3 average adult, 4 large adult. Stylet tip must stay at least 1.3 cm short of the tube end.",
+     "zh": "镜片：弯片 Macintosh 尖端放会厌谷、间接挑起会厌——新手老手都首选，也更不容易拿牙当支点；直片 Miller 直接从会厌下方挑起——婴幼儿会厌长而软塌，用直片最合适。号码 0-4：0-2 用于儿科，3 号普通成人，4 号大体型。管芯尖端必须缩在管口后至少 1.3 cm。",
+     "hard": true
+    },
+    {
+     "en": "Preoxygenate 2-3 minutes with 100% oxygen before every attempt - nonrebreathing mask if breathing spontaneously, gentle bag-mask if not - and keep passive high-flow oxygen running through a nasal cannula during the attempt itself; studies show this cuts peri-intubation hypoxia. Hold SpO2 above 95%, and never trust the oximeter alone - it can read falsely high in severe hypoxia.",
+     "zh": "每次尝试前用 100% 氧预氧合 2-3 分钟——自主呼吸者上非再吸入面罩，无自主呼吸者轻柔球囊通气；尝试进行中还要经鼻导管持续被动高流量给氧，研究证实能减少插管期低氧。SpO2 保持在 95% 以上，且别只信脉搏氧——严重缺氧时它可能虚高。",
+     "hard": true
+    },
+    {
+     "en": "The sniffing position aligns the three airway axes: roughly 20 degrees of atlanto-occipital extension plus 30 degrees of neck flexion at C6-C7; in practice, raise the occiput 2.5-5 cm until the earlobe is level with the sternum. Obese patients need padding under shoulders and neck too. Suspected spine injury: no sniffing position ever - neutral in-line stabilization with a two-person technique.",
+     "zh": "嗅物位对齐口、咽、喉三条轴线：寰枕关节后伸约 20°，颈部在 C6-C7 前屈约 30°；操作上垫高枕部 2.5-5 cm，垫到耳垂与胸骨平齐为止。肥胖者肩颈下也要加垫。怀疑脊柱伤：绝不用嗅物位——中立位人工轴线固定，双人操作。",
+     "hard": true
+    },
+    {
+     "en": "Technique core: laryngoscope in the LEFT hand, blade enters the right side of the mouth and sweeps the tongue leftward to midline - skip the sweep and all you will see is tongue. Lift along the handle's long axis at 45 degrees; never pry back on the upper teeth (fulcrum action breaks teeth that can then be aspirated). Finesse, not force.",
+     "zh": "手法核心：喉镜永远握在左手，镜片从口腔右侧进入、把舌体拨向左侧归中线——不拨舌，满视野都是舌头。沿镜柄长轴 45° 方向上提；绝不能以上门齿为支点向后撬（撬断的牙可能被吸入气道）。靠巧劲，不靠蛮力。",
+     "hard": true
+    },
+    {
+     "en": "View won't come? Two fixes: bimanual laryngoscopy - your right hand molds the larynx externally while you watch the view improve, then an assistant holds that spot; or BURP - backward, upward, rightward pressure on the lower third of the thyroid cartilage. Cricoid pressure also drops the larynx posteriorly and can help the view.",
+     "zh": "看不到声门的两个补救：双手喉镜法——右手在颈外自己揉动喉部、边看视野边找最佳位，找到后由助手按住不动；或 BURP 手法——在甲状软骨下 1/3 向背侧、头侧、右侧加压。环状软骨压迫也能让喉部后移、改善视野。",
+     "hard": true
+    },
+    {
+     "en": "The bougie (about 1 cm diameter, 60 cm long) belongs in every intubation attempt: its angled tip slips through a partial view and you can feel it click over the tracheal rings; railroad the tube over it Seldinger-style, withdraw it, then confirm with capnography. Routine bougie use is proven to raise first-pass success.",
+     "zh": "探条 bougie（直径约 1 cm、长 60 cm）应该纳入每一次插管尝试：带角度的尖端能钻过只看到一半的声门，还能感到滑过气管软骨环的搓板感；然后按 Seldinger 思路把导管顺着它滑进去、退出探条、上二氧化碳波形确认。常规用探条已被证实提高首次成功率。",
+     "hard": true
+    },
+    {
+     "en": "You must SEE the tube pass the cords - a blindly slipped tube almost always lands in the esophagus, and looking away even for a second invites it. Advance until the cuff sits 1-2 cm past the cords, inflate with 5-10 mL of air, and detach the syringe immediately or cuff air leaks back. Average adult depth: 21-25 cm at the teeth. Never pass the tube down the blade's barrel - it blocks your own view.",
+     "zh": "必须亲眼看着管子穿过声带——盲塞的管子几乎注定进食管，哪怕视线离开一秒都危险。推进到套囊过声带 1-2 cm，充气 5-10 mL，充完立刻拔掉注射器，否则囊内气会漏回针筒。成人平均深度：门齿处 21-25 cm。管子绝不能顺着镜片槽送——那会挡死自己的视野。",
+     "hard": true
+    },
+    {
+     "en": "The 30-second rule: an attempt starts when bag-mask ventilation stops and must not exceed 30 seconds; if you fail, abort and reoxygenate with 100% oxygen for 30 seconds to 1 minute before trying again. In cardiac arrest, chest compressions are never interrupted for intubation.",
+     "zh": "30 秒规则：从停掉球囊通气那一刻计时，一次尝试不得超过 30 秒；失败就中止，用 100% 氧再氧合 30 秒到 1 分钟才许再试。心搏骤停时，绝不为插管打断胸外按压。",
+     "hard": true
+    },
+    {
+     "en": "Post-tube ventilation rates: apneic adult with a pulse 10-12/min (one every 5-6 s); apneic infant or child with a pulse 12-20/min (one every 3-5 s); cardiac arrest at any age 10/min (one every 6 s), delivered without pausing compressions (asynchronous CPR).",
+     "zh": "插管后的通气频率：有脉搏的呼吸停止成人 10-12 次/分（每 5-6 秒一次）；有脉搏的婴儿/儿童 12-20 次/分（每 3-5 秒一次）；心搏骤停不分年龄一律 10 次/分（每 6 秒一次），按压不停、通气穿插（非同步 CPR）。",
+     "hard": true
+    },
+    {
+     "en": "Confirmation is a stack, never a single test: seeing the cords is first and best; then five-point auscultation (silent epigastrium plus equal bilateral breath sounds); then at least two methods of which one MUST be ETCO2 - waveform capnography attached the moment the tube is in. Tube misting and the esophageal detector device are NOT definitive. Reconfirm every single time the patient is moved.",
+     "zh": "确认是一整套组合拳，不是单项测试：亲眼见管过声带排第一；五点听诊（上腹部安静＋双肺呼吸音对称）随后；再叠加至少两种手段、其中必须有一种是 ETCO2——管子一进就接上波形二氧化碳图。管内起雾和食管探测球都不算数。患者每移动一次，全部重新确认一遍。",
+     "hard": true
+    },
+    {
+     "en": "Two misplacement patterns: breath sounds on the right only = right mainstem - deflate the cuff, pull back slowly while auscultating the left chest, stop at equality, note depth, reinflate, resecure. Gurgling over the epigastrium with absent breath sounds = esophagus - pull the tube (exception: copious vomitus pouring from it - leave it, inflate the cuff, turn it aside, and bag the face directly), suction, then 30 s-1 min of oxygen before any retry.",
+     "zh": "两种错位识别：只有右侧有呼吸音＝插深进右主支气管——放掉套囊，边听左胸边缓慢回退，双侧对称即停，记深度、复充囊、重新固定。上腹部咕噜声＋双肺无音＝进了食管——拔管（唯一例外：管里正大量涌呕吐物时别拔，充上囊、把管拨到一边、直接对脸球囊通气），吸引后给氧 30 秒-1 分钟再考虑重试。",
+     "hard": true
+    },
+    {
+     "en": "Securing is not optional garnish: inadvertent extubation is common and reintubation is always harder. Use a commercial device (or tape as fallback), add a bite block, and keep a hand on the tube while ventilating. Head flexion-extension can shift the tip up to 5 cm - consider a collar and head blocks for transport.",
+     "zh": "固定不是装饰步骤：意外脱管很常见，重插只会更难。用商品固定器（没有就用胶布），加牙垫防咬，通气时始终有手扶管。头部屈伸能让管尖移位达 5 cm——转运时考虑上颈托加头部固定块。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Nasotracheal, Digital, Transillumination and the Failed Airway",
+   "titleZh": "经鼻与替代插管路径·失败气道",
+   "points": [
+    {
+     "en": "Blind nasotracheal intubation is for the spontaneously breathing patient with an intact gag reflex who still needs a definitive airway - classically respiratory failure from COPD, asthma, or pulmonary edema. Contraindications: apnea (go orotracheal); midface or skull fracture with CSF from the nose (the tube can enter the cranial vault); deviated septum, nasal polyps, habitual cocaine use; and avoid it in anticoagulated or clotting-disordered patients - all of these bleed.",
+     "zh": "盲探经鼻插管适合还有自主呼吸、咽反射完好却需要确定性气道的患者——典型是 COPD、哮喘、肺水肿导致的呼吸衰竭。禁忌：呼吸停止（改经口）；中面部或颅底骨折伴鼻漏脑脊液（管子可能穿进颅腔）；鼻中隔偏曲、鼻息肉、长期用可卡因者；服抗凝药或凝血障碍者尽量避开——这些情况都会大出血。",
+     "hard": true
+    },
+    {
+     "en": "NTI technique keys: tube 1.0-1.5 mm smaller than the oral route; bevel toward the septum, right nostril first, aim straight back at the ear along the nasal floor - never upward. Advance during inhalation when the cords are widest open; success shows as maximal airflow through the tube and an aphonic patient. A soft-tissue bulge beside the airway means piriform fossa (withdraw slightly); silence in the tube means esophagus. Bleeding is the most common complication.",
+     "zh": "经鼻技术要点：导管比经口小 1.0-1.5 mm；斜面朝鼻中隔，先试右鼻孔，沿鼻底笔直朝耳的方向送——绝不能朝上。在吸气相推进，此时声带开得最大；成功的标志是管内气流最大、患者发不出声。颈侧见软组织隆起＝进了梨状窝（稍退再进）；管内完全无气流＝进了食管。最常见并发症是出血。",
+     "hard": true
+    },
+    {
+     "en": "Digital (tactile) intubation is a last-ditch option for equipment failure: only in deeply unresponsive, apneic patients with a bite block in place, using a tube half to one size smaller, middle finger hooking the epiglottis forward. Absolutely contraindicated if the patient breathes, responds, or has any gag. Main complication: misplacement - confirmation must be rigorous.",
+     "zh": "手指盲插是器械失灵时的保命备选：仅限深度无反应且呼吸停止的患者，必须先塞牙垫，导管小半号到一号，用中指勾起会厌导引。只要患者还有呼吸、有反应或有一点咽反射就绝对禁用。主要并发症是错位——确认必须格外严格。",
+     "hard": true
+    },
+    {
+     "en": "Transillumination (lighted stylet) reads position by glow: a bright, tightly circumscribed light just below the thyroid cartilage = trachea; a faint glow with bulging above the thyroid cartilage = vallecula; dim and diffuse = esophagus. Needs a tube of at least 6.0 mm for the stylet, fails in bright ambient light, and is hard in obese or short thick necks; contraindicated with an intact gag reflex or airway obstruction.",
+     "zh": "透照法（发光管芯）靠颈前亮斑判位置：甲状软骨稍下方一个亮而边界清楚的光点＝在气管；甲状软骨上方光弱伴软组织隆起＝在会厌谷；光暗而弥散＝在食管。管芯塞不进 6.0 mm 以下的导管，环境光太亮做不了，肥胖、短粗颈也难；咽反射存在或气道梗阻者禁用。",
+     "hard": true
+    },
+    {
+     "en": "A failed airway is defined: inability to keep SpO2 acceptable during or after attempts, OR three failed attempts by an experienced intubator even with saturation holding. The answer is retreat, not escalation - back to bag-mask ventilation, then a rescue supraglottic device (King LT, LMA). Rescue devices buy time; they are not definitive airways.",
+     "zh": "失败气道有明确定义：尝试中或尝试后 SpO2 维持不住，或有经验的操作者连续三次插管失败——哪怕血氧还撑得住。对策是后撤而不是升级——回到球囊面罩通气，再上补救型声门上气道（King LT、LMA）。补救器材只是买时间，不是确定性气道。",
+     "hard": true
+    },
+    {
+     "en": "Tracheobronchial suctioning: don't unless secretions are massive enough to block ventilation - it can trigger dysrhythmias and even arrest. Preoxygenate 2-3 minutes, sterile technique, 3-5 mL sterile water down the tube to loosen plugs, insert to resistance, suction no more than 10-15 seconds while rotating on withdrawal, monitoring rhythm and SpO2; a closed in-line catheter is preferred. When any intubated patient suddenly deteriorates, run DOPE: Displacement, Obstruction, Pneumothorax, Equipment failure.",
+     "zh": "气管内吸引：不到分泌物多到妨碍通气就别做——它能诱发心律失常甚至骤停。先预氧合 2-3 分钟，无菌操作，管内注 3-5 mL 无菌水松解痰栓，插到有阻力处，边旋转边回撤吸引不超过 10-15 秒，全程盯心律和血氧；有条件优先用密闭式管路内吸引。插管患者突然恶化，按 DOPE 排查：移位 Displacement、堵管 Obstruction、气胸 Pneumothorax、设备故障 Equipment。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital extubation is almost never right: sedating a tube-intolerant patient beats pulling the tube, and extubation is absolutely contraindicated if there is any risk of recurrent failure or doubt the patient can protect the airway. If it must happen: preoxygenate, sit the patient up or lean forward, suction the oropharynx, deflate the cuff as exhalation begins, and pull in one motion on the next exhalation - with reintubation gear ready.",
+     "zh": "院前拔管几乎永远不是正确答案：患者躁动排斥导管时，镇静优于拔管；只要有再次呼吸衰竭的风险、或不确定患者能自护气道，拔管绝对禁忌。真要拔：先预氧合，扶坐或前倾，吸净口咽，呼气开始时放套囊，下一次呼气时顺气道弧度一次性拔出——重插器械全程备在手边。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Supraglottic and Multilumen Rescue Airways",
+   "titleZh": "声门上与多腔补救气道",
+   "points": [
+    {
+     "en": "King LT: a single-lumen tube inserted blindly, tip resting in the proximal esophagus; one valve inflates both cuffs - distal seals the esophagus, proximal seals the oropharynx, and ventilation exits ports between them. Contraindicated with an intact gag reflex, known esophageal disease, or caustic ingestion. Sizing runs on height and weight across seven sizes.",
+     "zh": "King LT：单腔盲插，管尖停在食管近端；一个阀门同时给两个套囊充气——远端囊封食管、近端囊封口咽，气从两囊之间的侧孔进肺。咽反射存在、已知食管疾病、吞服腐蚀性物质者禁用。共七个型号，按身高体重选。",
+     "hard": true
+    },
+    {
+     "en": "King LT troubleshooting: if ventilation is hard because the pharyngeal balloon has pushed the epiglottis over the glottis, withdraw the device slightly WITHOUT deflating the cuffs. The LTS-D variant has an open distal tip taking a suction catheter up to 18F for gastric decompression, and a bougie can be passed through the tube to convert to tracheal intubation.",
+     "zh": "King LT 故障排除：通气费力多因咽囊把会厌顶到了声门口——不放气、整体稍稍回撤即可缓解。LTS-D 型远端开口，可通过胃减压通道下最粗 18F 的吸引管；还能经管腔先送探条、再换成气管插管。",
+     "hard": true
+    },
+    {
+     "en": "LMA: an inflatable cuff that seats around the glottic opening - tip in the proximal esophagus, sides in the piriform fossae, upper border at the tongue base. Sized by weight; the classic error is choosing too small a size, which makes ventilation ineffective. Correct placement clue: the device rises outward 1-2 cm as the cuff inflates. A size 3 or 4 accepts a 6.0-mm tracheal tube straight through.",
+     "zh": "LMA 喉罩：可充气罩杯扣在声门口周围——尖端抵食管近端，两翼卡梨状窝，上缘顶舌根。按体重选号；经典错误是选小了号，结果通气无效。到位的线索：充气时整个器械会向外弹出 1-2 cm。3、4 号喉罩可直接通过 6.0 mm 气管导管。",
+     "hard": true
+    },
+    {
+     "en": "LMA limits are the exam favourites: it gives NO aspiration protection - if the patient regurgitates, contents are likely funneled straight into the trachea; it seats poorly in obesity (avoid in morbid obesity); hiatal hernia and pregnancy raise regurgitation risk; and it cannot ventilate patients needing high airway pressures (COPD, heart failure).",
+     "zh": "LMA 的局限是高频考点：完全不防误吸——患者一反流，胃内容物反而可能被罩体导进气管；肥胖者密封差（病态肥胖禁用）；食管裂孔疝和孕妇反流风险更高；需要高气道压的患者（COPD、心衰）用它通不动气。",
+     "hard": true
+    },
+    {
+     "en": "i-gel: a gel-like cuff that seals anatomically with NO inflation, cutting compression trauma; built-in bite block, a gastric channel for a 12-Fr tube, and a supplemental oxygen port; three adult and four pediatric sizes printed with weight ranges. Some evidence suggests it may beat tracheal intubation for ventilation during prehospital CPR - it has become a mainstream rescue airway.",
+     "zh": "i-gel：凝胶状罩体靠解剖形状密封、完全不用充气，压迫性损伤更小；自带牙垫、可下 12-Fr 胃管的减压通道和补氧接口；成人三号、儿科四号，重量范围直接印在器械上。有证据提示院前 CPR 中它的通气效果可能优于气管插管——已是主流补救气道。",
+     "hard": true
+    },
+    {
+     "en": "Combitube logic: two lumens mean it works wherever it lands - esophagus (usual) or trachea. Ventilate the longer BLUE No.1 tube first; if there is no chest rise and no breath sounds, switch immediately to the clear No.2 tube. The single deadliest complication is unrecognized displacement - ventilating the wrong port delivers no pulmonary ventilation at all.",
+     "zh": "Combitube 的逻辑：双腔设计让它落在哪都能用——食管（绝大多数）或气管。先从较长的蓝色 1 号管通气；无胸廓起伏、无呼吸音就立刻换透明 2 号管。最致命的并发症是错位未被识别——从错误管腔通气等于完全没给肺通气。",
+     "hard": true
+    },
+    {
+     "en": "Combitube restrictions: 16 years and older only; height 1.5-2 m (the SA small-adult model covers above 1.2 m); insert until the incisors sit between the two black rings. Contraindicated with a gag reflex, esophageal trauma or disease, caustic ingestion, or a history of alcoholism. If the pharyngeal balloon caps the glottis, withdrawing 2-4 cm usually frees ventilation. All SGAs share one confirmation standard: chest rise, lung and epigastric auscultation, and waveform capnography - and none eliminates aspiration risk.",
+     "zh": "Combitube 限制条件：仅限 16 岁以上；身高 1.5-2 m（SA 小成人型覆盖 1.2 m 以上）；插到门齿落在两条黑环线之间为止。咽反射存在、食管外伤或疾病、吞腐蚀物、酗酒史者禁用。咽囊盖住声门时回撤 2-4 cm 多能缓解。所有声门上气道共用一套确认标准：胸廓起伏＋双肺和上腹听诊＋波形二氧化碳图——而且没有一种能彻底消除误吸风险。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pharmacologic Adjuncts and Rapid-Sequence Intubation",
+   "titleZh": "药物辅助与快速顺序插管（RSI）",
+   "points": [
+    {
+     "en": "Sedation walks a two-sided cliff: undersedation brings gagging, tachycardia, hypertension, vomiting, aspiration, and recall of the event; oversedation brings lost airway reflexes, respiratory depression, airway collapse, and hypotension. Two drug families: analgesics (kill pain) versus sedative-hypnotics (induce sleep and calm - no pain relief).",
+     "zh": "镇静两头都是悬崖：镇静不足→干呕、心动过速、高血压、呕吐误吸、事后全程记得；镇静过量→保护性反射消失、呼吸抑制、气道塌陷、低血压。药物分两族：镇痛药（管疼）和镇静催眠药（催眠抗焦虑——不管疼）。",
+     "hard": true
+    },
+    {
+     "en": "Benzodiazepines and opioids: midazolam is 2-4 times as potent as diazepam, faster on, shorter lasting; 0.1-0.2 mg/kg IV brings loss of consciousness in 30-60 seconds for up to 20 minutes (0.05-0.1 mg/kg is the common lower dose alongside a paralytic). Fentanyl runs 70-150 times morphine's potency. Reversal agents exist - flumazenil and naloxone - but rapid or excessive reversal can precipitate withdrawal seizures in dependent patients.",
+     "zh": "苯二氮卓与阿片类：咪达唑仑效价是地西泮的 2-4 倍、起效更快、维持更短；0.1-0.2 mg/kg IV 约 30-60 秒意识消失、维持至多 20 分钟（与瘫痪药联用时常用低剂量 0.05-0.1 mg/kg）。芬太尼效价是吗啡的 70-150 倍。两族都有解药——氟马西尼和纳洛酮——但对成瘾者推得太快太多会诱发戒断抽搐。",
+     "hard": true
+    },
+    {
+     "en": "Etomidate 0.3 mg/kg: barely touches heart rate, blood pressure, cerebral flow, or ICP - ideal for coronary disease, raised ICP, or borderline hypotension - but causes myoclonic jerks, and Health Canada has not approved it for general release. Propofol: induction 2-2.5 mg/kg, sedation infusion 10-100 mcg/kg/min; expect hypotension and dose-dependent apnea; not for pediatric sedation; typically restricted to critical care crews.",
+     "zh": "依托咪酯 0.3 mg/kg：对心率、血压、脑血流、颅内压几乎零扰动——冠心病、颅高压、血压临界者的理想诱导药——但常见肌阵挛抽动，且加拿大卫生部未批准其全面上市。丙泊酚：诱导 2-2.5 mg/kg，维持镇静输注 10-100 mcg/kg/min；要预期低血压和剂量依赖性呼吸停止；不用于儿科镇静；通常仅限重症转运级别使用。",
+     "hard": true
+    },
+    {
+     "en": "Ketamine 1-2 mg/kg IV: a dissociative that is sympathomimetic - the hemodynamically stable choice when the patient is hypotensive, and current evidence clears it for suspected raised ICP. Subdissociative 0.2-0.3 mg/kg gives fentanyl-grade analgesia without the hemodynamic hit. Reemergence phenomena (dreams to delirium on wake-up) are blunted or treated with a benzodiazepine.",
+     "zh": "氯胺酮 1-2 mg/kg IV：分离性麻醉剂，自带拟交感效应——患者低血压时的血流动力学首选，且新证据已解除『颅高压禁用』的旧说法。亚分离剂量 0.2-0.3 mg/kg 可提供与芬太尼相当的镇痛而无循环打击。苏醒期出现的梦境到谵妄（reemergence 现象）用苯二氮卓预防或处理。",
+     "hard": true
+    },
+    {
+     "en": "Paralytics block the neuromuscular junction and touch NOTHING above it: consciousness, hearing, feeling, and thinking remain intact. Within about 1 minute every skeletal muscle - diaphragm included - stops; cardiac and smooth muscle are spared. Paralysis without sedation is a form of patient abuse: never push a paralytic before the sedative.",
+     "zh": "瘫痪药只阻断神经肌肉接头，接头以上一概不碰：意识、听觉、痛觉、思维全部保留。给药约 1 分钟内所有骨骼肌——包括膈肌——全部罢工；心肌和平滑肌不受影响。只瘫痪不镇静等同虐待患者：瘫痪药永远不许先于镇静药推。",
+     "hard": true
+    },
+    {
+     "en": "Succinylcholine, the only depolarizing agent: 1.5-2 mg/kg IV, paralysis in 45-90 seconds, gone in about 15 minutes - which is exactly why it leads: fail to intubate and you only bag briefly. Fasciculations precede paralysis and cause later muscle pain; pediatric bradycardia is common enough that atropine premedication is considered. Storage trap: needs refrigeration and light protection - at room temperature it lasts as little as 2 weeks to 3 months.",
+     "zh": "琥珀胆碱是唯一的去极化型：1.5-2 mg/kg IV，45-90 秒全瘫，约 15 分钟自行恢复——短效正是它当首选的原因：万一插不进，只需球囊撑一小段时间。瘫痪前先出现肌束颤动，事后会肌肉酸痛；儿科心动过缓常见到要考虑阿托品预处理。储存陷阱：须冷藏避光——室温下短则 2 周、最长 3 个月就失效。",
+     "hard": true
+    },
+    {
+     "en": "Succinylcholine contraindications are all hyperkalemia stories plus two absolutes: burns over 10% BSA from 48 hours to 6 months post-burn; crush injuries 3 days to 6 months; paralysing illness including stroke 3 days to 6 months; abdominal sepsis from day 3 onward; any neuromuscular disorder while active; and personal or family history of malignant hyperthermia - never.",
+     "zh": "琥珀胆碱禁忌全是高钾剧本外加两条绝对线：烧伤 >10% 体表面积者伤后 48 小时至 6 个月内；挤压伤后 3 天至 6 个月；致瘫性疾病（含卒中）发病 3 天至 6 个月；腹腔感染起病 3 天以后；活动期神经肌肉疾病；本人或家族恶性高热史——绝对禁用。",
+     "hard": true
+    },
+    {
+     "en": "Nondepolarizers by the clock: rocuronium 0.6-1.2 mg/kg, onset 45-90 s, duration 20-45 min - the workhorse; vecuronium 0.1 mg/kg, onset 2 min, duration 45 min; pancuronium onset 3-5 min, duration 60 min. After succinylcholine wears off, ongoing paralysis uses a nondepolarizer - repeat sux dosing is not routine. Sugammadex can dissociate rocuronium-class agents when reversal is needed now.",
+     "zh": "非去极化型按时钟记：罗库溴铵 0.6-1.2 mg/kg，起效 45-90 秒，维持 20-45 分钟——主力用药；维库溴铵 0.1 mg/kg，起效 2 分钟，维持 45 分钟；泮库溴铵起效 3-5 分钟，维持 60 分钟。琥珀胆碱失效后要继续瘫痪就换非去极化药——重复推琥珀胆碱不是常规做法。需要立刻逆转时，舒更葡糖（sugammadex）能把罗库这类药物解离掉。",
+     "hard": true
+    },
+    {
+     "en": "RSI order of operations: monitor and prepare (suction plus backup plan ready) - preoxygenate 2-3 min with passive nasal cannula continuing through the attempt - optional lidocaine 1-1.5 mg/kg for closed head injury (evidence controversial, no longer routine) - sedate if SBP is above 90 (reach for ketamine if hypotensive) - paralytic, working in 30-45 seconds - intubate within 30 seconds - confirm - maintain sedation with or without further paralysis. The delayed-sequence variant sedates first, positions and bags to SpO2 above 93% for at least 3 minutes, THEN paralyzes - shown to cut peri-intubation hypoxia. Only attempt RSI at all if you are confident you can intubate or keep ventilating; a paralyzed patient you cannot oxygenate dies.",
+     "zh": "RSI 操作顺序：上监护、备器械（吸引器和 B 计划先摆好）→ 预氧合 2-3 分钟、鼻导管被动给氧贯穿全程 → 闭合性颅脑伤可选利多卡因 1-1.5 mg/kg（证据有争议、已非常规）→ 收缩压 >90 才镇静（低血压改用氯胺酮）→ 推瘫痪药、30-45 秒起效 → 30 秒内完成插管 → 确认 → 维持镇静±继续瘫痪。延迟顺序插管（DSI）变体是先镇静、摆好体位球囊给氧把 SpO2 撑到 93% 以上至少 3 分钟再瘫痪——已证实减少插管期低氧。大前提：只有确信『插得进、插不进也能通气』才许做 RSI——瘫痪了又氧合不了的患者必死。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Surgical and Needle Cricothyrotomy",
+   "titleZh": "外科与针刺环甲膜切开",
+   "points": [
+    {
+     "en": "Cricothyrotomy has exactly one trigger: cannot intubate AND cannot ventilate - first-line and rescue devices have failed and bag-mask fails too. If you can still bag the patient effectively, cricothyrotomy is not indicated. Typical scenarios: unremovable upper airway foreign body, swelling (epiglottitis, anaphylaxis, airway burns), massive maxillofacial trauma, a mouth that will not open.",
+     "zh": "环甲膜切开只有一个启动条件：插不进也通不了气——一线方法、补救器材、球囊面罩全部失败。只要球囊还能有效通气，就没有做它的指征。典型场景：取不出的上气道异物、水肿封喉（会厌炎、过敏性休克、气道烧伤）、毁损性颌面创伤、口张不开。",
+     "hard": true
+    },
+    {
+     "en": "Why this site and this cut: the cricothyroid membrane has no vital structures between skin and airway, sits close to the surface, and the tough cricoid behind guards the esophagus from through-and-through puncture. The superior cricothyroid vessels cross the membrane's upper third transversely and the carotids run vertically just lateral - a VERTICAL skin incision dodges all of them and the vascular thyroid gland below.",
+     "zh": "为什么选这里、这样切：环甲膜表面到气道之间没有要害结构、位置表浅，后壁是坚韧的环状软骨，挡住刀尖不至于捅穿进食管。环甲上血管横行于膜上 1/3，颈动脉在膜外侧纵行——皮肤纵切口能同时避开它们和下方血供丰富的甲状腺。",
+     "hard": true
+    },
+    {
+     "en": "Open cricothyrotomy numbers: locate the V notch of the thyroid cartilage, slide down to the depression - that is the membrane. Vertical skin incision 1-2 cm (longer and deeper in bariatric patients), puncture the membrane, then a horizontal cut about 1 cm each way; the index finger guards the opening the moment the scalpel leaves, because bleeding will erase your view. Insert a 6.0-mm cuffed tracheal or tracheostomy tube, cuff 5-10 mL, confirm like any tube - epigastric sounds mean you have perforated into the esophagus.",
+     "zh": "外科切开的数字：先摸甲状软骨 V 形切迹，指尖下滑到凹陷处即环甲膜。皮肤纵切 1-2 cm（肥胖者要更长更深），刺穿膜后向两侧各横切约 1 cm；刀一离手食指立刻压在膜口上——出血马上会淹没视野。置入 6.0 mm 带囊气管管或气切管，套囊充 5-10 mL，按插管标准流程确认——听到上腹部有声＝捅穿进了食管。",
+     "hard": true
+    },
+    {
+     "en": "Open cric contraindications: airway securable by anything less invasive; inability to identify the landmarks; laryngeal crush injury or tracheal transection; subglottic stenosis or tumour; and age under 8 years - a child's larynx cannot take an effective-size tube, so needle cricothyrotomy is the pediatric route. Where cric is contraindicated, the move is rapid transport for an emergency tracheostomy.",
+     "zh": "外科切开的禁忌：任何创伤更小的方法还能建立气道；摸不清解剖标志；喉部碾挫伤或气管横断；声门下狭窄或肿瘤；以及 8 岁以下——小儿喉部撑不起够粗的管，儿科走针刺路线。禁忌时的对策是快速转运，到院做急诊气管切开。",
+     "hard": true
+    },
+    {
+     "en": "Open cric complications: serious bleeding usually means the external jugular was nicked (the vertical incision minimizes this); a false passage that never enters the trachea shows as subcutaneous emphysema - a crackling feel under the skin means suspect misplacement immediately; and a slow procedure is itself a complication - prolonged hypoxia brings dysrhythmias, brain injury, or arrest.",
+     "zh": "外科切开的并发症：大出血多半是划到了颈外静脉（纵切口能把风险降到最低）；管子钻进皮下没进气管＝假通道，标志是皮下气肿——摸到皮下捻发感立刻怀疑错位；手太慢本身就是并发症——低氧拖久了就是心律失常、脑损伤、骤停。",
+     "hard": true
+    },
+    {
+     "en": "Needle cricothyrotomy: a 14-16 gauge over-the-needle catheter on a syringe holding about 3 mL of saline, through the membrane at 45 degrees toward the feet; feel the pop, advance 1 cm, aspirate - free air with bubbles in the saline proves tracheal placement; blood or resistance means you are outside. Slide the catheter to the hub, withdraw the needle, connect the jet ventilator (50-psi source): open the valve about 1 second until the chest rises, release 2-3 seconds for passive exhalation - overinflation causes barotrauma and pneumothorax.",
+     "zh": "针刺法：14-16G 套管针接抽了约 3 mL 生理盐水的 10 mL 注射器，呈 45° 朝足侧刺穿环甲膜；感到落空感后再进 1 cm 回抽——空气轻松抽出、盐水冒泡＝在气管内；抽出血或有阻力＝在气管外。套管推到底、退针芯，接喷射通气机（50 psi 气源）：按住阀门约 1 秒、见胸廓抬起就松，放 2-3 秒让肺被动呼气——吹过头就是气压伤和气胸。",
+     "hard": true
+    },
+    {
+     "en": "Needle cric physiology is the trap question: it oxygenates but does NOT ventilate - PaCO2 and ETCO2 climb steadily, so it is strictly a bridge to a definitive airway. Absolute contraindication: complete obstruction above the catheter, because exhalation escapes via the glottis and a blocked outflow means severe hypercapnia and barotrauma. No jet ventilator? A 7.0-7.5 mm tube adapter jammed into a 10-mL syringe barrel connects a bag-mask device - poor tidal volume, but some oxygen flows.",
+     "zh": "针刺法的生理陷阱是必考题：它只氧合、不通气——PaCO2 和 ETCO2 会一路爬升，纯属通往确定性气道的过桥手段。绝对禁忌：穿刺点上方完全梗阻——呼气全靠声门排出，出口一堵就是严重高碳酸血症加气压伤。没有喷射通气机的土办法：把 7.0-7.5 mm 导管接头塞进 10 mL 注射器筒，再接球囊——潮气量很差，但至少有氧进。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Special Patient Considerations",
+   "titleZh": "特殊患者：造口·假牙·颌面创伤",
+   "points": [
+    {
+     "en": "A total laryngectomee is a neck breather: pharynx and lower airway are disconnected, so mouth-to-mask or bag-mask over the face moves air only into the stomach - ventilation MUST go through the stoma. Partial laryngectomees breathe through both stoma and mouth/nose, and you may not discover which type you have until you attempt ventilation.",
+     "zh": "全喉切除者是『颈呼吸者』：咽与下气道已彻底断开，对口鼻做面罩或球囊通气，气只会进胃——通气必须走颈前造口。部分喉切除者造口和口鼻两条路都通气；哪一种往往要到实际通气那一刻才分得清。",
+     "hard": true
+    },
+    {
+     "en": "Stoma suctioning: inject 3 mL of sterile saline first, insert the catheter on exhalation to resistance but never past 12 cm, and suction no more than 10 seconds while withdrawing during cough or exhalation. These patients cough poorly and plug with mucus easily - yet even slight tracheal irritation can trigger violent laryngospasm and total closure.",
+     "zh": "造口吸引：先注入 3 mL 无菌生理盐水，让患者呼气时送入导管、到有阻力处但绝不超过 12 cm，边退边吸不超过 10 秒，同时嘱其咳嗽或呼气。喉切除者咳痰无力、极易被黏液栓堵口——但气管壁哪怕轻微刺激都可能诱发剧烈喉痉挛、气道完全关闭。",
+     "hard": true
+    },
+    {
+     "en": "Stoma ventilation: no head-tilt or jaw-thrust needed. Seal an infant- or child-size mask over the stoma, close the mouth and nose with one hand during each breath, and release between breaths so exhalation can escape upward - which is why bag-to-stoma is a two-rescuer job. Cannot ventilate? Suction the stoma first; then try mouth-and-nose ventilation while sealing the stoma.",
+     "zh": "造口通气：不需要仰头抬颏或托颌。用婴儿或儿童号面罩扣住造口密封，每次送气时用另一只手捏闭口鼻、送完就松开让气从上气道呼出——所以球囊对造口通气标准配置是两人。通不进气？先吸引造口；再改为封住造口、从口鼻方向通气试试。",
+     "hard": true
+    },
+    {
+     "en": "Dislodged tracheostomy tube: the stoma can stenose within a frighteningly short time, so if the original tube will not go back, insert a lubricated tracheal tube of at least 5.0 mm about 1-2 cm past the cuff before the opening closes. Confirm you have not created a false lumen in the neck's soft tissue, auscultate the lungs, and follow local protocols or direct medical control.",
+     "zh": "气切管脱出：造口软组织肿胀、口径会在短时间内狭窄，原管放不回去就要赶在闭合前置入润滑过的至少 5.0 mm 气管导管，深度过套囊 1-2 cm。必须确认没把管子捅进颈部软组织形成假腔，听诊双肺，并按本地规程或线上医控处理。",
+     "hard": true
+    },
+    {
+     "en": "Dental appliances: fitting well - leave them in; they hold the face's shape and improve the mask seal. Loose - remove them; they are obstructions in waiting. Before intubation, remove appliances as a rule: once the tube is secured, extraction becomes difficult and dangerous, and dislodged bridges carry sharp metal ends that lacerate the pharynx.",
+     "zh": "假牙原则：戴得稳的留在原位——它撑起面部轮廓，让面罩更好密封；松动的取掉——那是随时会脱落的梗阻物。插管前一律先取假牙：管子固定好之后再取又难又险，而且脱落的牙桥常带锋利金属端，会划伤咽喉。",
+     "hard": true
+    },
+    {
+     "en": "Facial trauma: the face's rich blood supply means severe swelling plus blood pouring into the airway. Uncontrollable oropharyngeal bleeding with failing breathing = suction continuously and intubate. Facial injury also raises the index of suspicion for cervical spine injury - jaw-thrust, neutral in-line position, two-paramedic intubation (or brace the head with your thighs if alone). Rising stridor or falling compliance warns of laryngeal edema; if you can neither ventilate nor intubate, that is the cricothyrotomy scenario.",
+     "zh": "颌面创伤：面部血运丰富，等于重度肿胀加血液源源灌入气道。口咽出血控制不住又呼吸不济＝持续吸引并插管。面部受伤同时要提高颈椎伤怀疑指数——托颌法、中立位轴线固定、双人插管（单人时可用双膝夹稳患者头部）。喘鸣渐起或通气阻力渐大提示喉水肿；到了既通不了气又插不了管的地步，就是环甲膜切开的剧本。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Oxygen deprivation before permanent brain damage",
+   "itemZh": "大脑缺氧多久开始不可逆损伤",
+   "value": "约 6 分钟"
+  },
+  {
+   "itemEn": "Tracheal length (adult)",
+   "itemZh": "成人气管长度",
+   "value": "10～12 cm"
+  },
+  {
+   "itemEn": "Tidal volume: adult vs infant/child",
+   "itemZh": "潮气量：成人 vs 婴儿/儿童",
+   "value": "成人 5～7 mL/kg（约 500 mL）；婴儿/儿童 6～8 mL/kg"
+  },
+  {
+   "itemEn": "Anatomic dead space (adult)",
+   "itemZh": "成人解剖死腔量",
+   "value": "约 150 mL（约占潮气量 1/3）"
+  },
+  {
+   "itemEn": "Lung volume ladder",
+   "itemZh": "肺容量阶梯",
+   "value": "肺总量约 6 L；补吸气量约 3,000 mL；补呼气量约 1,200 mL；残气量约 1,200 mL"
+  },
+  {
+   "itemEn": "Normal minute alveolar volume (worked example)",
+   "itemZh": "正常分钟肺泡通气量（算例）",
+   "value": "(500−150)×16 ≈ 5,600 mL/min"
+  },
+  {
+   "itemEn": "Normal respiratory rates by age",
+   "itemZh": "各年龄正常呼吸频率",
+   "value": "成人 12～20；儿童(1～18 岁) 12～37；婴儿(1 个月～1 岁) 30～53 次/分"
+  },
+  {
+   "itemEn": "CO vs O2 affinity for hemoglobin",
+   "itemZh": "CO 与血红蛋白的亲和力（对比氧）",
+   "value": "约 250 倍"
+  },
+  {
+   "itemEn": "Oxygen bound to hemoglobin",
+   "itemZh": "血液中结合于血红蛋白的氧比例",
+   "value": "约 97%"
+  },
+  {
+   "itemEn": "SpO2 thresholds (textbook)",
+   "itemZh": "SpO2 判读阈值（教材）",
+   "value": "正常 >95%；<90%＋窘迫→积极给氧（BC 滴定目标 ≥94%）"
+  },
+  {
+   "itemEn": "Pulsus paradoxus threshold",
+   "itemZh": "奇脉判定阈值",
+   "value": "吸气时收缩压下降 >10 mm Hg"
+  },
+  {
+   "itemEn": "Peak expiratory flow (normal adult)",
+   "itemZh": "呼气峰流速正常成人范围",
+   "value": "350～750 L/min（测 3 次取最佳）"
+  },
+  {
+   "itemEn": "Normal ABG values",
+   "itemZh": "动脉血气正常值",
+   "value": "pH 7.35～7.45；PaCO2 35～45；PaO2 80～100 mm Hg；HCO3− 21～28 mEq/L"
+  },
+  {
+   "itemEn": "ETCO2 normal range and offset from PaCO2",
+   "itemZh": "ETCO2 正常范围及与 PaCO2 的差值",
+   "value": "35～45 mm Hg，比 PaCO2 低约 2～5"
+  },
+  {
+   "itemEn": "Colourimetric ETCO2 readout",
+   "itemZh": "比色式 ETCO2 判读",
+   "value": "通气 6～8 次后判读；气管内呼出 CO2 4%～5% 变黄，食管 <0.5% 保持紫色"
+  },
+  {
+   "itemEn": "ROSC signature on capnography",
+   "itemZh": "ROSC 在二氧化碳波形上的标志",
+   "value": "ETCO2 突然持续升高，典型 >40 mm Hg"
+  },
+  {
+   "itemEn": "FIO2 documentation",
+   "itemZh": "FIO2 记录方式",
+   "value": "室内空气 0.21；非重复吸入面罩约 0.90"
+  },
+  {
+   "itemEn": "Narrowest airway point: adult vs child under 10",
+   "itemZh": "气道最窄处：成人 vs 10 岁以下儿童",
+   "value": "成人在声门；10 岁以下在环状软骨环"
+  },
+  {
+   "itemEn": "Suction time limit per attempt (adult / child / infant)",
+   "itemZh": "单次吸引时限（成人/儿童/婴儿）",
+   "value": "BC: 10-15 s / 10 s / 5 s（教材实战框 15/10/5 s）"
+  },
+  {
+   "itemEn": "Nasal cannula flow and delivered concentration",
+   "itemZh": "鼻导管流量与氧浓度",
+   "value": "1-6 L/min → 24-44%"
+  },
+  {
+   "itemEn": "Nonrebreathing mask at 15 L/min",
+   "itemZh": "非再吸入面罩 15 L/min",
+   "value": "≈90%；储气袋防塌流量 12-15 L/min"
+  },
+  {
+   "itemEn": "Bag-mask with reservoir / pocket mask at 15 L/min",
+   "itemZh": "带储氧袋球囊 / 口对面罩 15 L/min",
+   "value": "≈100% / ≈55%（口对面罩不接氧仅 16%）"
+  },
+  {
+   "itemEn": "Simple face mask / Venturi mask",
+   "itemZh": "简单面罩 / Venturi 面罩",
+   "value": "40-60% @10 L/min / 24·28·35·40·50% 五档；成人面罩最低 6 L/min（BC）"
+  },
+  {
+   "itemEn": "Ventilation rates",
+   "itemZh": "通气频率",
+   "value": "成人 10-12 次/分；婴儿/儿童 12-20 次/分；骤停置高级气道后一律 10 次/分（不同步）"
+  },
+  {
+   "itemEn": "Oxygen cylinder capacities",
+   "itemZh": "氧瓶容量",
+   "value": "D 350 L / E 625 L / M 3,450 L"
+  },
+  {
+   "itemEn": "Cylinder pressures",
+   "itemZh": "氧瓶压力",
+   "value": "满瓶≈2,000 psi；调节器出口≈50 psi；安全残压 200 psi 必须换瓶；水压试验每 10 年"
+  },
+  {
+   "itemEn": "BC CPAP indication numbers",
+   "itemZh": "BC CPAP 指征数字",
+   "value": "≥13 岁 + RR＞24 + 给氧下 SpO2＜94% + 辅助肌使用（三条全占）；SBP＜90 禁忌"
+  },
+  {
+   "itemEn": "BC CPAP / PEEP settings",
+   "itemZh": "BC CPAP / PEEP 设置",
+   "value": "均 5 cmH2O 起，每次 +2.5，最高 10 cmH2O；CPAP 起始氧流 5 L/min；PEEP 下 BVM 8-10 次/分"
+  },
+  {
+   "itemEn": "CPAP oxygen consumption",
+   "itemZh": "CPAP 耗氧",
+   "value": "部分机型 5-10 分钟耗尽一个 D 瓶"
+  },
+  {
+   "itemEn": "Ramped position for obesity",
+   "itemZh": "肥胖 ramped 体位",
+   "value": "头肩抬高 25-30°，外耳道对齐胸骨切迹"
+  },
+  {
+   "itemEn": "Pediatric bag sizes",
+   "itemZh": "儿科球囊尺寸",
+   "value": "新生儿/婴儿最小 450 mL；成人袋 1,500 mL；身长带适用至 34 kg"
+  },
+  {
+   "itemEn": "3-3-2 rule (difficult intubation screen)",
+   "itemZh": "3-3-2 法则（困难插管筛查）",
+   "value": "张口≥3指；颏-舌骨≥3指；舌骨-甲状软骨切迹≥2指"
+  },
+  {
+   "itemEn": "Adult tracheal tube inner diameter",
+   "itemZh": "成人气管导管内径",
+   "value": "女 7.0-8.0 mm；男 7.5-8.5 mm（备三根：预估号±0.5）"
+  },
+  {
+   "itemEn": "Cuff inflation volume",
+   "itemZh": "套囊充气量",
+   "value": "5-10 mL，充完立即拔注射器"
+  },
+  {
+   "itemEn": "Adult tube depth at the teeth",
+   "itemZh": "成人门齿处导管深度",
+   "value": "21-25 cm"
+  },
+  {
+   "itemEn": "Intubation attempt limit / reoxygenation between attempts",
+   "itemZh": "单次插管时限 / 两次尝试间再氧合",
+   "value": "≤30 秒；100% 氧 30 秒-1 分钟"
+  },
+  {
+   "itemEn": "Preoxygenation before any advanced airway",
+   "itemZh": "高级气道操作前预氧合",
+   "value": "100% 氧 2-3 分钟，尝试中鼻导管被动给氧"
+  },
+  {
+   "itemEn": "Post-intubation ventilation rates",
+   "itemZh": "插管后通气频率",
+   "value": "成人 10-12 次/分；婴儿童 12-20 次/分；骤停一律 10 次/分"
+  },
+  {
+   "itemEn": "Succinylcholine (depolarizing)",
+   "itemZh": "琥珀胆碱（去极化型）",
+   "value": "1.5-2 mg/kg IV；45-90 秒起效；维持约 15 分钟"
+  },
+  {
+   "itemEn": "Rocuronium (nondepolarizing workhorse)",
+   "itemZh": "罗库溴铵（非去极化主力）",
+   "value": "0.6-1.2 mg/kg；起效 45-90 秒；维持 20-45 分钟"
+  },
+  {
+   "itemEn": "Ketamine dosing",
+   "itemZh": "氯胺酮剂量",
+   "value": "诱导 1-2 mg/kg；亚分离镇痛 0.2-0.3 mg/kg"
+  },
+  {
+   "itemEn": "Midazolam induction",
+   "itemZh": "咪达唑仑诱导",
+   "value": "0.1-0.2 mg/kg IV；30-60 秒意识消失，维持约 20 分钟"
+  },
+  {
+   "itemEn": "Needle cricothyrotomy catheter",
+   "itemZh": "针刺环甲膜穿刺针",
+   "value": "14-16G 套管针；45° 朝足侧进针"
+  },
+  {
+   "itemEn": "Jet ventilation timing",
+   "itemZh": "喷射通气节律",
+   "value": "按阀约 1 秒见胸起即放；呼气 2-3 秒（50 psi 气源）"
+  },
+  {
+   "itemEn": "Open cricothyrotomy",
+   "itemZh": "外科环甲膜切开",
+   "value": "皮肤纵切 1-2 cm；置 6.0 mm 带囊管；<8 岁禁做（改针刺）"
+  },
+  {
+   "itemEn": "Stoma suctioning",
+   "itemZh": "造口吸引",
+   "value": "先注 3 mL 盐水；进管 ≤12 cm；吸引 ≤10 秒"
+  },
+  {
+   "itemEn": "Gastric tube placement check",
+   "itemZh": "胃管到位确认",
+   "value": "注气 20-30 mL 同时听诊上腹部"
+  },
+  {
+   "itemEn": "Combitube size limits",
+   "itemZh": "Combitube 适用范围",
+   "value": "仅 ≥16 岁；身高 1.5-2 m（SA 型 >1.2 m）"
+  },
+  {
+   "itemEn": "BC suction duration by age",
+   "itemZh": "BC 分龄吸引时长",
+   "value": "成人 10-15 秒；儿童 10 秒；婴儿 5 秒"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "No effective chest movement means no negative intrathoracic pressure—air will not come in on its own. The only way to move air then is positive pressure: bag-mask, pocket face mask, or a mechanical ventilator.",
+   "zh": "胸廓没有有效起伏＝胸腔产生不了负压，空气不会自己进来。这时唯一的进气方式是正压通气：皮囊面罩、口袋面罩或机械通气机。"
+  },
+  {
+   "en": "Four history questions that predict a crash: Have you ever been kept overnight in the ED, admitted to hospital, admitted to an ICU, or intubated for this same problem? Any yes raises the odds of rapid deterioration—prepare accordingly.",
+   "zh": "预判恶化的四个病史问题：同样的毛病你是否曾在急诊留观过夜？住过院？进过 ICU？被插过管？任何一个「是」都预示可能快速恶化——提前做好准备。"
+  },
+  {
+   "en": "When in doubt, look at the patient: if the person is blue and struggling, ignore a reassuring pulse-ox number and treat what you see.",
+   "zh": "拿不准时看患者本人：如果人已发绀、在拼命呼吸，就无视那个「还不错」的血氧读数，按眼前的病情处理。"
+  },
+  {
+   "en": "Waveform capnography is the minimum standard for transporting an intubated patient. Before rolling: batteries charged, backup power confirmed, alarm limits and volumes set—so any parameter drifting out of range alerts you instantly.",
+   "zh": "转运插管患者，波形二氧化碳监测是最低标准。出发前：设备电量充足、备用电源确认、报警上下限和音量设好——任何参数越界都能第一时间提醒你。"
+  },
+  {
+   "en": "PPE floor for airway work: gloves for every airway/ventilation procedure; add mask and eye protection or a face shield when placing an advanced airway; gown for heavy blood splash. Suction an intubated patient only through a closed in-line system.",
+   "zh": "气道操作的防护底线：任何气道/通气操作至少戴手套；放高级气道时加口罩和护目镜或面屏；大量血液飞溅再加隔离衣。给已插管病人吸引，只能走密闭式在线吸引系统。"
+  },
+  {
+   "en": "OPA insertion shortcut: glide along the hard palate until you feel the bump of the soft palate — rotate 180° right there and the tip will catch the tongue base and carry it forward.",
+   "zh": "OPA 插入捷径：贴着硬腭滑行，指下一感到软腭的「小坎」就地旋转 180°，尖端正好兜住舌根把它带向前方。"
+  },
+  {
+   "en": "Severe obstruction clock: a fully obstructed patient has only minutes before profound hypoxia. While you run BLS rounds, your partner should already be laying out laryngoscope handle, blade, and Magill forceps — so the escalation (where authorized) costs zero extra seconds.",
+   "zh": "重度梗阻的倒计时：完全梗阻的病人离重度缺氧只有几分钟。你做 BLS 循环的同时，搭档就该把喉镜柄、镜片和 Magill 钳摆好——一旦需要升级（在授权范围内），不再浪费一秒。"
+  },
+  {
+   "en": "Oxygen logistics discipline: check the main cylinder at shift start, check portables after every oxygen call, swap at 200 psi, and never leave station without a backup cylinder.",
+   "zh": "氧气后勤纪律：接班查主供瓶，每趟用氧任务后查便携瓶，200 psi 就换，出车永远带备用瓶。"
+  },
+  {
+   "en": "Do not force CPAP onto a panicking patient — let them hold the mask to their own face first, coach them through the first minutes, then strap. Forcing it spikes anxiety and oxygen demand, the exact opposite of the goal.",
+   "zh": "别把 CPAP 硬扣到恐慌的病人脸上——先让他自己扶着面罩感受，头几分钟全程安抚，适应了再上头带。硬来只会推高焦虑和耗氧，与目的背道而驰。"
+  },
+  {
+   "en": "If SpO2 keeps falling despite your best manual airway and ventilation efforts, stop chasing a perfect preoxygenation number - proceed to intubation without delay.",
+   "zh": "如果在最佳人工气道加通气下 SpO2 仍持续下滑，就别再执着于预氧合达标——立即转入插管，不再等。"
+  },
+  {
+   "en": "Trauma airway is a two-paramedic job: one holds manual in-line stabilization in neutral, the other intubates. The sniffing position is off the table.",
+   "zh": "创伤气道是双人活：一人中立位徒手轴线固定头颈，另一人插管。嗅物位从选项里划掉。"
+  },
+  {
+   "en": "In cardiac arrest the tube never outranks compressions: if it will not go in within the window, go back to bagging - compressions do not pause for laryngoscopy.",
+   "zh": "骤停现场导管的优先级永远低于按压：窗口期内插不进就回去捏球囊——按压绝不为喉镜暂停。"
+  },
+  {
+   "en": "Check the intubation kit at the start of every shift; the bulb test is 'bright, white, steady, tight' - a loose bulb can end up aspirated into the airway.",
+   "zh": "每个班次开始就核查插管包；灯泡口诀『亮、白、稳、紧』——拧不紧的灯泡可能整颗掉进气道被吸入。"
+  },
+  {
+   "en": "A video laryngoscope is only as good as its lens: one fleck of blood blinds it. Keep the camera ahead of secretions and suction before advancing.",
+   "zh": "视频喉镜的上限就是镜头的洁净度：一点血渍就致盲。让镜头始终走在分泌物前面，先吸引再推进。"
+  },
+  {
+   "en": "Combativeness, aggression, and belligerence are cerebral hypoxia until proven otherwise - the patient is fighting for air, not fighting you.",
+   "zh": "好斗、攻击性、不配合，先当脑缺氧处理直到证明不是——患者是在为呼吸挣扎，不是在跟你作对。"
+  },
+  {
+   "en": "A paralyzed patient can hear, feel, and think - paralysis without sedation is considered patient abuse. Sedative first, always.",
+   "zh": "被瘫痪的患者听得见、感觉得到、想得明白——只瘫痪不镇静被视为虐待患者。镇静永远在前。"
+  },
+  {
+   "en": "Attempt RSI only when you are confident you can intubate - or keep the patient oxygenated and ventilated if you cannot. Otherwise the person you paralyzed dies.",
+   "zh": "只有确信『插得进，插不进也能维持氧合通气』才许启动 RSI——否则被你瘫痪的患者就是死路一条。"
+  },
+  {
+   "en": "During blind nasotracheal intubation, keep a laryngoscope and Magill forceps within arm's reach: if the patient goes apneic mid-procedure you must finish under direct vision.",
+   "zh": "盲探经鼻插管时，喉镜和 Magill 钳必须放在伸手可及处：患者中途一旦呼吸停止，就得改直视完成。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "\"He is talking, so the airway is fine.\" Talking only proves the airway is open this minute. Fatigue, swelling, or bleeding can close it soon after—always judge the trajectory, not the snapshot.",
+   "zh": "「他还能说话，气道就没事。」能说话只证明此刻通畅。疲劳、肿胀、出血都可能很快把气道关掉——要判断趋势，不是只看这一眼。"
+  },
+  {
+   "en": "\"Oxygen fixes respiratory distress.\" Oxygen improves oxygenation only; it does nothing for failing ventilation. When tidal volume or effort is inadequate, the answer is assisted ventilation, not just a higher flow rate.",
+   "zh": "「给了氧，呼吸窘迫就解决了。」氧只改善氧合，救不了衰竭中的通气。潮气量或呼吸做功不够时，答案是辅助通气，而不是把氧流量再调大。"
+  },
+  {
+   "en": "\"SpO2 looks normal, so the patient is safe.\" The number lies with CO poisoning, motion, and poor perfusion—and a tiring patient can hold a good number right up until collapse.",
+   "zh": "「血氧读数正常＝患者安全。」CO 中毒、肢体晃动、灌注差时读数都会骗人——而且正在耗竭的患者可以把读数撑到崩溃前一刻。"
+  },
+  {
+   "en": "\"Airway management means placing an advanced airway.\" Most airway care is positioning, suction, basic adjuncts, and bag-mask ventilation; rushing to advanced devices is itself a documented cause of increased mortality.",
+   "zh": "「气道管理＝上高级气道。」绝大多数气道处理靠体位、吸引、基础辅助器械和皮囊面罩通气；急着上高级器械本身就是被点名的增加死亡率的原因。"
+  },
+  {
+   "en": "\"Wait for full apnea before assisting ventilation.\" Assist when breathing turns inadequate—abnormal rate plus shallow volume or altered mentation. Waiting for arrest means the safest window has already passed.",
+   "zh": "「等呼吸完全停了再辅助通气。」呼吸变得不充分——频率异常＋潮气量浅或意识改变——就该介入。等到呼吸停止，最安全的干预窗口早就错过了。"
+  },
+  {
+   "en": "\"A fast rate means good ventilation.\" Fast-and-shallow breaths may only shuttle air through dead space; minute alveolar volume can be a quarter of normal despite a rate of 40. Judge depth and chest rise, not rate alone.",
+   "zh": "「呼吸快＝通气好。」又快又浅的呼吸可能只在死腔里来回倒气；频率 40 次/分时肺泡通气量照样可以只有正常的四分之一。要看深度和胸廓起伏，不能只数次数。"
+  },
+  {
+   "en": "\"COPD patients must not get much oxygen because of the hypoxic drive.\" The hypoxic drive matters essentially only in end-stage COPD, and BC explicitly indicates high-flow oxygen for COPD patients short of breath. Never withhold oxygen from a hypoxic patient.",
+   "zh": "「COPD 患者有低氧驱动，不能多给氧。」低氧驱动基本只见于终末期 COPD，而且 BC 考纲明确：COPD 患者气促时就该用高流量氧。绝不能因为这个顾虑对缺氧患者扣着氧不给。"
+  },
+  {
+   "en": "\"Low ETCO2 in arrest means the tube is in the esophagus.\" Prolonged arrest itself yields minimal exhaled CO2 (severe acidosis, poor CO2 return to the lungs). Confirm with the waveform plus multiple methods before pulling a tube.",
+   "zh": "「骤停时 ETCO2 低＝管子插进食管了。」长时间骤停本身就会让呼出 CO2 极低（严重酸中毒、回肺 CO2 少）。要结合波形和多种确认手段，别急着拔管。"
+  },
+  {
+   "en": "\"Cheyne-Stokes and Biot respirations are the same kind of bad.\" Cheyne-Stokes is not automatically ominous; Biot—chaotic breathing with apnea spells—signals raised intracranial pressure. Exams love swapping the two.",
+   "zh": "「潮式呼吸和比奥呼吸都一样凶险。」潮式呼吸并不必然是凶兆；比奥呼吸——节律紊乱夹呼吸暂停——才提示颅内压增高。考试特别爱把这两个对调设坑。"
+  },
+  {
+   "en": "\"Compliance direction is confusing.\" Increased compliance = the bag squeezes easily = air flows in freely. Decreased compliance = squeezing gets hard = suspect obstruction. Students routinely flip this.",
+   "zh": "「顺应性方向容易记反。」顺应性高＝皮囊好捏＝气进得顺；顺应性下降＝越捏越费劲＝警惕气道梗阻。这个方向经常被学生记反。"
+  },
+  {
+   "en": "'The patient is talking, so the airway is fine.' Talking proves patency THIS minute — swelling, bleeding, fatigue, and falling LOC can close it within minutes. Track the trajectory, not the snapshot.",
+   "zh": "「病人还在说话，气道没事。」说话只证明这一分钟是通的——肿胀、出血、疲劳和意识下滑可以在几分钟内把它关上。要盯的是走向，不是快照。"
+  },
+  {
+   "en": "'Oxygen fixes breathing problems.' Oxygen fixes oxygenation only; a hypoventilating patient needs VENTILATION assistance. Piling on oxygen while CO2 climbs is a classic exam trap and a real-world killer.",
+   "zh": "「给氧就能解决呼吸问题。」氧只解决氧合；通气不足的病人需要的是辅助通气。一边堆氧一边放任 CO2 攀升，是经典考试陷阱，也是现实中的杀手。"
+  },
+  {
+   "en": "'Lower mask flow is gentler.' Below 6 L/min an adult face mask becomes a rebreathing chamber — worse than room air. If the patient cannot tolerate proper flow, change the device, not the flow.",
+   "zh": "「面罩流量调低一点更温和。」成人面罩低于 6 L/min 就成了呼出气回收罐——比呼吸室内空气还差。病人受不了标准流量，就换装置，不是调低流量。"
+  },
+  {
+   "en": "'A nonrebreather helps every dyspneic patient.' It is passive: shallow tidal volumes cannot open its one-way valve, so the sickest breathers get almost nothing. Inadequate depth = switch to assisted BVM ventilation.",
+   "zh": "「非再吸入面罩对所有呼吸困难都有用。」它是被动装置：潮气量太浅根本拉不开单向阀，越重的病人拿到的越少。呼吸深度不够＝改球囊辅助通气。"
+  },
+  {
+   "en": "'CPAP is for the crashing patient.' Backwards — imminent or actual respiratory failure (slow shallow breathing, dropping LOC) is a CONTRAINDICATION. Those patients need BVM with PEEP; CPAP is for the awake, working-hard-but-losing patient.",
+   "zh": "「病人快不行了，赶紧上 CPAP。」正好说反——即将或已经呼吸衰竭（呼吸慢浅、意识往下掉）恰恰是禁忌。那种病人要的是 BVM 加 PEEP；CPAP 属于清醒的、还在奋力呼吸但渐渐落败的人。"
+  },
+  {
+   "en": "'Suction until it looks clean.' Every second of suction steals oxygen. Preoxygenate first, obey the time caps, and expect vagal bradycardia if you linger in a small child's pharynx.",
+   "zh": "「一口气吸到干净为止。」吸引的每一秒都在偷走氧。先预氧合、严守时限，在幼儿咽部逗留还会招来迷走性心动过缓。"
+  },
+  {
+   "en": "'A gagging patient can tolerate an OPA if you push past it.' Any gag = wrong device. Pull it out, ready the suction, and go nasopharyngeal instead.",
+   "zh": "「病人有点恶心，OPA 忍一忍就进去了。」出现咽反射＝用错装置。拔出来、备好吸引，改走鼻咽通气道。"
+  },
+  {
+   "en": "'Abdominal thrusts are the only correct answer for adult choking.' The textbook leads with the Heimlich, but the BC exam accepts back slaps, chest thrusts, and abdominal thrusts — alternating two techniques in sets of five is explicitly acceptable.",
+   "zh": "「成人噎住只有腹部冲击一个标准答案。」教材以 Heimlich 为主，但 BC 考纲认可背部拍击、胸部冲击、腹部冲击三种手法——两种手法五次一组交替也明确可接受。"
+  },
+  {
+   "en": "'I can intubate' is not 'I should intubate.' Advanced airways exist for exactly two failures - patency or oxygenation/ventilation. Skipping basics to reach for the laryngoscope on an already-hypoxemic arrest patient is the chapter's number-one named error.",
+   "zh": "『会插管』不等于『该插管』。高级气道只对应两种失败——通畅维持不住，或氧合通气不达标。跳过基础手法、对着已经低氧的骤停患者直接亮喉镜，是本章点名批评的头号错误。"
+  },
+  {
+   "en": "Paralytics are not sedatives: they freeze every skeletal muscle while consciousness, hearing, and pain stay fully intact. The drug that stops the breathing does nothing for the fear.",
+   "zh": "瘫痪药不是镇静药：它冻结全部骨骼肌，而意识、听觉、痛觉原封不动。让呼吸停下来的那支药，对恐惧毫无作用。"
+  },
+  {
+   "en": "A Combitube resting in the esophagus is not a misplacement - that is its expected home. The lethal error is ventilating through the wrong lumen without recognizing it: zero air reaches the lungs.",
+   "zh": "Combitube 落在食管不是插错了——那本来就是它的预期位置。真正致命的错误是从错误管腔通气而不自知：肺一点气都没进。"
+  },
+  {
+   "en": "Needle cricothyrotomy 'works' only in one direction: oxygen goes in, but CO2 barely comes out. PaCO2 climbs the whole time - it is a bridge measured in minutes, not a destination.",
+   "zh": "针刺环甲膜只在一个方向上『有效』：氧进得去，CO2 却几乎排不出来。PaCO2 全程上爬——它是按分钟计的过桥手段，不是终点。"
+  },
+  {
+   "en": "Tube misting and the esophageal detector device feel reassuring and prove nothing. Confirmation demands at least two methods, and one must be ETCO2 - waveform capnography is the standard.",
+   "zh": "管内起雾、食管探测球看着让人安心，但什么都证明不了。确认必须至少两种手段，其中一种必须是 ETCO2——标准是波形二氧化碳图。"
+  },
+  {
+   "en": "The LMA fixes the mask-seal problem, not the aspiration problem - if the patient regurgitates, the device may funnel stomach contents straight into the trachea.",
+   "zh": "LMA 解决的是面罩密封问题，不是误吸问题——患者一旦反流，罩体反而可能把胃内容物直接导进气管。"
+  },
+  {
+   "en": "Breath sounds on the right only does not mean re-intubate: the tube is simply too deep in the right mainstem. Deflate, withdraw slowly to bilateral equality, and re-secure - pulling it out entirely throws away a working airway.",
+   "zh": "只有右侧有呼吸音不等于要重插：只是管子插深进了右主支气管。放囊、缓慢回退到双侧对称、重新固定即可——整根拔掉等于白扔一条已经建立的气道。"
+  },
+  {
+   "en": "NG and OG are not interchangeable defaults: NG suits the responsive patient but is banned with midface/skull fractures; OG suits the unresponsive patient and normally goes in only after the tracheal tube - earlier, it blocks your view of the cords.",
+   "zh": "NG 和 OG 不是随手互换的默认项：NG 适合清醒患者、但中面部/颅底骨折绝对禁用；OG 适合无意识患者、且通常等气管插管完成后再下——提前下管会挡住声带视野。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "Yellow = Yes",
+   "en": "Colourimetric ETCO2: Yellow = Yes, the tube is tracheal; Purple = Problem, think esophageal.",
+   "zh": "比色 CO2 检测：变黄＝Yes，管在气管；持续紫＝Problem，警惕食管。"
+  },
+  {
+   "name": "吸一呼二",
+   "en": "Each ventilation cycle: inspiration one-third, expiration two-thirds.",
+   "zh": "每个通气周期：吸气占 1/3，呼气占 2/3——「吸一呼二」。"
+  },
+  {
+   "name": "500−150＝350",
+   "en": "Tidal 500 minus dead space 150 leaves 350 mL of alveolar volume—only that 350 exchanges gas.",
+   "zh": "潮气量 500 减死腔 150，剩 350 mL 肺泡容量——真正换气的只有那 350。"
+  },
+  {
+   "name": "儿童气道五不同",
+   "en": "Peds airway: Big occiput, Big tongue, Small jaw, High anterior larynx, Cricoid narrowest under age 10.",
+   "zh": "儿童气道五不同：枕大、舌大、颌小、喉高靠前、10 岁以下环状软骨最窄。"
+  },
+  {
+   "name": "鲨鱼鳍＝痉挛",
+   "en": "A shark-fin capnograph waveform = bronchospasm (asthma/COPD air trapping).",
+   "zh": "二氧化碳波形呈鲨鱼鳍状＝支气管痉挛（哮喘/COPD 气体潴留）。"
+  },
+  {
+   "name": "35～45 用两次",
+   "en": "The range 35-45 mm Hg serves twice: normal PaCO2 and normal ETCO2 (ETCO2 runs 2-5 lower).",
+   "zh": "35～45 这组数用两次：既是 PaCO2 正常范围，也是 ETCO2 正常范围（ETCO2 略低 2～5）。"
+  },
+  {
+   "name": "15-10-5",
+   "en": "Suction caps shrink with the patient: adult 15 (BC: 10-15), child 10, infant 5 seconds.",
+   "zh": "吸引时限跟着病人个头缩水：成人 15（BC 写 10-15）、儿童 10、婴儿 5 秒。"
+  },
+  {
+   "name": "有反射走鼻路",
+   "en": "Gag reflex present → NPA via the nose; no gag reflex → OPA via the mouth. Both are measured to the earlobe — OPA from the mouth corner, NPA from the nostril tip.",
+   "zh": "咽反射在→鼻咽通气道；反射没了→口咽通气道。两个都量到耳垂——OPA 从口角起量，NPA 从鼻尖起量。"
+  },
+  {
+   "name": "13-24-94",
+   "en": "BC CPAP gate: at least 13 years old, RR above 24, SpO2 below 94% on oxygen (plus accessory muscle use, awake, airway intact).",
+   "zh": "BC CPAP 门槛：满 13 岁、呼吸频率超 24、给氧下 SpO2 不到 94%（外加辅助肌参与、清醒、气道自保）。"
+  },
+  {
+   "name": "5-2.5-10",
+   "en": "CPAP and PEEP share one dial rule: start 5 cmH2O, step up by 2.5, ceiling 10.",
+   "zh": "CPAP 和 PEEP 共用一条旋钮口诀：5 起步、2.5 一档、10 封顶。"
+  },
+  {
+   "name": "同是 15，差三档",
+   "en": "At 15 L/min: BVM+reservoir ≈100%, nonrebreather ≈90%, pocket mask ≈55%.",
+   "zh": "同样 15 L/min 三件装备三个数：球囊带储袋≈100%、非再吸入面罩≈90%、口对面罩≈55%。"
+  },
+  {
+   "name": "Squeeze-Release-Release",
+   "en": "Pediatric bagging cadence — one second to squeeze, two beats to let go: one breath every 3-5 seconds, 12-20/min.",
+   "zh": "儿科捏袋节奏——挤 1 秒、松 2 拍：每 3-5 秒一口气，合 12-20 次/分。"
+  },
+  {
+   "name": "MOANS",
+   "en": "Difficult bag-mask ventilation: Mask seal, Obese, Aged, No teeth, Stiff lungs.",
+   "zh": "预判球囊面罩通气困难：密封难、肥胖、高龄、无牙、肺硬（顺应性差）。"
+  },
+  {
+   "name": "LEMON",
+   "en": "Difficult intubation: Look externally, Evaluate 3-3-2, Mallampati, Obstruction, Neck mobility.",
+   "zh": "预判插管困难：看外观、量 3-3-2、Mallampati 分级、找梗阻、查颈部活动度。"
+  },
+  {
+   "name": "BURP",
+   "en": "Backward-Upward-Rightward Pressure on the lower third of the thyroid cartilage to improve the laryngoscopic view.",
+   "zh": "改善喉镜视野的按压方向：在甲状软骨下 1/3 向背侧、头侧、右侧加压。"
+  },
+  {
+   "name": "DOPE",
+   "en": "Sudden deterioration in an intubated patient: Displacement, Obstruction, Pneumothorax, Equipment failure.",
+   "zh": "已插管患者突然恶化的四大排查：管移位、管堵塞、气胸、设备故障。"
+  },
+  {
+   "name": "亮白稳紧",
+   "en": "Laryngoscope bulb check: bright, white, steady, tight - the loose bulb is an aspiration hazard.",
+   "zh": "喉镜灯泡四字诀：亮（刺眼才够亮）、白（不发黄）、稳（不闪烁）、紧（拧牢，防脱落被吸入）。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Normal respiratory rates for adult, child, and infant?",
+   "qZh": "成人、儿童、婴儿的正常呼吸频率各是多少？",
+   "aEn": "Adult 12-20; child (1-18 y) 12-37; infant (1 mo-1 y) 30-53 breaths/min.",
+   "aZh": "成人 12～20；儿童（1～18 岁）12～37；婴儿（1 个月～1 岁）30～53 次/分。"
+  },
+  {
+   "qEn": "Formula for minute alveolar volume, and why fast-shallow breathing fails?",
+   "qZh": "分钟肺泡通气量的公式？为什么又快又浅的呼吸不行？",
+   "aEn": "VA = (VT − VD) × RR. Shallow breaths mostly refill the 150 mL dead space, so little air reaches the alveoli no matter the rate.",
+   "aZh": "VA＝（潮气量−死腔量）×呼吸频率。浅呼吸大部分只在 150 mL 死腔里打转，频率再快也没多少气到肺泡。"
+  },
+  {
+   "qEn": "Why is pulse oximetry unreliable in CO poisoning?",
+   "qZh": "CO 中毒时脉搏血氧仪为什么不可靠？",
+   "aEn": "CO binds hemoglobin about 250 times more readily than oxygen, so carboxyhemoglobin fakes a normal SpO2; a CO-oximeter (SpCO) is needed.",
+   "aZh": "CO 与血红蛋白的亲和力约是氧的 250 倍，碳氧血红蛋白会伪装成正常 SpO2；需要 CO 血氧仪（SpCO）才能识别。"
+  },
+  {
+   "qEn": "The colourimetric CO2 detector stays purple after 6-8 breaths—what does that mean?",
+   "qZh": "比色 CO2 检测器通气 6～8 次后仍是紫色，说明什么？",
+   "aEn": "Exhaled CO2 is under 0.5%—suspect esophageal placement (tracheal air carries 4-5% CO2 and turns it yellow).",
+   "aZh": "呼出 CO2 不足 0.5%——警惕导管在食管（气管内呼出气含 4%～5% CO2，会把试纸变黄）。"
+  },
+  {
+   "qEn": "What does ROSC look like on capnography?",
+   "qZh": "自主循环恢复在二氧化碳波形上是什么表现？",
+   "aEn": "An abrupt, sustained rise in ETCO2, typically above 40 mm Hg.",
+   "aZh": "ETCO2 突然且持续升高，典型超过 40 mm Hg。"
+  },
+  {
+   "qEn": "BC oxygen titration rule in one line?",
+   "qZh": "BC 的氧疗滴定规则一句话？",
+   "aEn": "Titrate to SpO2 ≥ 94% (max 15 L/min) unless SOB, shock, or CO poisoning—those get high-flow oxygen at once.",
+   "aZh": "按 SpO2 ≥94% 滴定（最高 15 L/min）；一旦气促、休克或 CO 中毒，直接上高流量氧。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Oxygen titration target",
+   "topicZh": "氧疗滴定目标",
+   "bookEn": "Textbook: normal SpO2 is above 95%; aggressive oxygen is reserved for readings below 90% with respiratory distress.",
+   "bookZh": "教材：SpO2 正常应 >95%；要到 <90% 且伴呼吸窘迫才要求积极给氧。",
+   "bcEn": "BC: titrate oxygen to SpO2 ≥ 94% (up to 15 L/min) when the patient is not SOB or in shock; SOB, shock, or CO poisoning gets high-flow oxygen immediately.",
+   "bcZh": "BC 考纲：患者无气促、无休克时，按 SpO2 ≥94% 滴定给氧（最高 15 L/min）；气促、休克或 CO 中毒则直接高流量。答题一律以 94% 为准。",
+   "ref": "BC Guidelines p.50 Oxygen Administration"
+  },
+  {
+   "topicEn": "COPD and the hypoxic drive",
+   "topicZh": "COPD 与低氧驱动",
+   "bookEn": "Textbook frames the hypoxic drive as the backup breathing control in end-stage COPD, which students often read as a reason to limit oxygen.",
+   "bookZh": "教材把低氧驱动描述为终末期 COPD 的备用呼吸调控，学生常据此推出「COPD 要限氧」。",
+   "bcEn": "BC: high-flow oxygen IS indicated for COPD patients complaining of shortness of breath; routine COPD oxygen is nasal cannula at 1-3 L/min after acute treatment. Never withhold oxygen for fear of the hypoxic drive.",
+   "bcZh": "BC 考纲：COPD 患者主诉气促时，高流量氧就是适应证；急性处理后的常规给氧才是鼻导管 1～3 L/min。不能因低氧驱动顾虑而对缺氧患者限氧。",
+   "ref": "BC Guidelines p.50 Oxygen Administration"
+  },
+  {
+   "topicEn": "Trigger for assisted ventilation",
+   "topicZh": "辅助通气的启动线",
+   "bookEn": "Textbook: begin positive-pressure support when breathing is inadequate, judged from rate, depth, sounds, mentation, and cyanosis.",
+   "bookZh": "教材：呼吸不充分（频率、深度、呼吸音、意识、发绀综合判断）即开始正压支持。",
+   "bcEn": "BC writes the trigger as an explicit rule: assist ventilations if the patient has altered LOC or SpO2 below 94%.",
+   "bcZh": "BC 考纲把启动线写成硬规则：意识改变或 SpO2 <94% 就应辅助通气。实操考按这条执行。",
+   "ref": "BC Guidelines p.33"
+  },
+  {
+   "topicEn": "Adult/child conscious FBAO technique",
+   "topicZh": "清醒成人/儿童异物梗阻手法",
+   "bookEn": "Abdominal thrusts (Heimlich) as the primary technique until expulsion or collapse; chest thrusts only for pregnancy/obesity.",
+   "bookZh": "教材以腹部冲击（Heimlich）为主线，做到排出或倒下；胸部冲击仅留给孕妇/肥胖。",
+   "bcEn": "Back slaps, chest thrusts, AND abdominal thrusts are all endorsed as feasible and effective; alternating two techniques in sets of five is acceptable; if abdominal thrusts fail, consider chest thrusts.",
+   "bcZh": "BC 认可背部拍击、胸部冲击、腹部冲击三种手法均可行有效；两种手法五次一组交替可接受；腹部冲击无效可改胸部冲击。答题按 BC。",
+   "ref": "BC Guidelines p.46 (FBAO)"
+  },
+  {
+   "topicEn": "Adult suction duration",
+   "topicZh": "成人吸引时长",
+   "bookEn": "Maximum 15 seconds per attempt in the adult.",
+   "bookZh": "教材写成人单次最多 15 秒。",
+   "bcEn": "10-15 seconds in the adult; 10 seconds pediatric; 5 seconds infant.",
+   "bcZh": "BC 写成人 10-15 秒、儿童 10 秒、婴儿 5 秒。数字题以 BC 区间为准。",
+   "ref": "BC Guidelines p.45 (Suctioning)"
+  },
+  {
+   "topicEn": "Oxygen titration strategy",
+   "topicZh": "给氧滴定策略",
+   "bookEn": "Give oxygen for distress or SpO2 <94%; avoid routine hyperoxia.",
+   "bookZh": "教材：呼吸窘迫或 SpO2＜94% 给氧，避免常规高氧。",
+   "bcEn": "Titrate to SpO2 ≥94%; SOB, shock, or CO poisoning get high-flow (NRB 15 L/min, may layer nasal cannula 15 L/min beneath); adult face mask never below 6 L/min; COPD maintenance is nasal cannula 1-3 L/min but acute COPD SOB still gets high-flow.",
+   "bcZh": "BC：滴定到 SpO2 ≥94%；呼吸困难、休克、CO 中毒用高流量（NRB 15 L/min，可在面罩下叠 15 L/min 鼻导管）；成人面罩不得低于 6 L/min；COPD 平时鼻导管 1-3 L/min，但急性发作照样高流量。",
+   "ref": "BC Guidelines p.50 (Oxygen Administration)"
+  },
+  {
+   "topicEn": "CPAP criteria",
+   "topicZh": "CPAP 指征与禁忌",
+   "bookEn": "Descriptive list: alert, moderate-severe distress, rapid breathing affecting minute volume, SpO2 <90%; broad contraindication list without an age cutoff.",
+   "bookZh": "教材是描述式清单：清醒、中重度窘迫、呼吸过快影响分钟通气量、SpO2＜90%；禁忌一长串但没有年龄线。",
+   "bcEn": "Numeric gate: ≥13 years, awake/following commands, patent airway, RR>24 + SpO2<94% on O2 + accessory muscle use (all three); contraindications include ≤12 years and SBP <90 mmHg; settings 5→10 cmH2O in 2.5 steps. CPAP is a PCP-level skill.",
+   "bcZh": "BC 是数字门槛：≥13 岁、清醒遵嘱、气道自保、RR＞24＋给氧下 SpO2＜94%＋辅助肌使用三条全占；禁忌含 ≤12 岁和收缩压＜90；设置 5→10 cmH2O、每档 2.5。CPAP 属 PCP 授权技能。",
+   "ref": "BC Guidelines p.51-53 (CPAP)"
+  },
+  {
+   "topicEn": "Laryngoscopy + Magill forceps for FBAO",
+   "topicZh": "喉镜＋Magill 钳取异物",
+   "bookEn": "Presented as the standard next step when BLS fails in the unresponsive patient.",
+   "bookZh": "教材把它列为无反应病人 BLS 失败后的标准下一步。",
+   "bcEn": "The BC exam FBAO algorithm ends at compressions-look-remove with blind sweeps banned; laryngoscope foreign-body retrieval is not in the written sequence — learn it as concept recognition only.",
+   "bcZh": "BC 考纲的 FBAO 流程到「按压—查看—看见才取、禁盲扫」为止，没有喉镜取异物这一步——按概念识别掌握即可，别当成考试操作流程去背。",
+   "ref": "BC Guidelines p.46 (FBAO)"
+  },
+  {
+   "topicEn": "Advanced airway in cardiac arrest",
+   "topicZh": "骤停中的高级气道",
+   "bookEn": "This chapter's later sections teach tracheal intubation and alternative devices in depth (Combitube, LMA, King LT, i-gel).",
+   "bookZh": "本章后段深入讲授气管插管和各类替代装置（Combitube、LMA、King LT、i-gel）。",
+   "bcEn": "For PCPs the authorized advanced airway is the supraglottic airway, inserted once high-quality arrest management is running; tracheal intubation is beyond PCP scope (ACP) — exams test concept recognition, not performance.",
+   "bcZh": "PCP 获授权的高级气道是声门上气道（SGA），在高质量骤停管理已建立后插入；气管插管超出 PCP 范围（属 ACP）——考试只考概念识别，不考操作。",
+   "ref": "BC Guidelines p.42 (Cardiac Arrest Management)"
+  },
+  {
+   "topicEn": "Advanced airway scope for BC PCP",
+   "topicZh": "BC PCP 的高级气道授权边界",
+   "bookEn": "The textbook teaches the full ladder: tracheal intubation, RSI, and cricothyrotomy as paramedic skills.",
+   "bookZh": "教材把插管、RSI、环甲膜切开整套讲成 paramedic 技能。",
+   "bcEn": "In BC the PCP ceiling is the supraglottic airway: the cardiac arrest guideline authorizes SGA insertion for PCPs once high-quality arrest management is running. Intubation, drug-assisted intubation, and cricothyrotomy sit above PCP scope (ACP/CCP territory). The written exam can still test the concepts; prepare hands-on skills around BLS airway plus SGA.",
+   "bcZh": "BC 的 PCP 天花板是声门上气道：骤停指南写明『高质量骤停管理建立后，PCP 可置入 SGA』。插管、药物辅助插管、环甲膜切开都在 PCP 授权之上（属 ACP/CCP）。笔试仍可能考这些概念；实操按 BLS 气道手法＋SGA 来准备。",
+   "ref": "BC EMALB Guidelines 2026-06, CPR/AED Basic Concepts (p.42)"
+  },
+  {
+   "topicEn": "Airway drugs are not on the PCP formulary",
+   "topicZh": "气道药物不在 PCP 药单上",
+   "bookEn": "The chapter details midazolam, ketamine, etomidate, propofol, succinylcholine, and rocuronium as airway-management drugs.",
+   "bookZh": "本章把咪达唑仑、氯胺酮、依托咪酯、丙泊酚、琥珀胆碱、罗库溴铵当气道管理用药详细展开。",
+   "bcEn": "None of these appear among the 18 drug monographs in the BC PCP guidelines (acetaminophen through tranexamic acid). For BC exams they are knowledge-level content only - dosing recall matters for the written exam, but administration is outside EMR/PCP practice.",
+   "bcZh": "这些药没有一个出现在 BC 指南的 18 个药物专论里（从对乙酰氨基酚到氨甲环酸）。对 BC 考试它们只是认知层面内容——笔试可能考剂量记忆，但给药本身超出 EMR/PCP 执业范围。",
+   "ref": "BC EMALB Guidelines 2026-06, Drug Monographs (pp.58-78)"
+  },
+  {
+   "topicEn": "Suction duration is age-banded in BC",
+   "topicZh": "BC 吸引时长按年龄分档",
+   "bookEn": "The textbook caps tracheobronchial suctioning at 10-15 seconds in the adult and stoma suctioning at 10 seconds, without a pediatric breakdown here.",
+   "bookZh": "教材写成人气管内吸引不超过 10-15 秒、造口吸引不超过 10 秒，此处没给儿科分档。",
+   "bcEn": "BC states it explicitly by age: adult 10-15 s, child 10 s, infant 5 s. Answer age-banded on the BC exam.",
+   "bcZh": "BC 明确分龄：成人 10-15 秒、儿童 10 秒、婴儿 5 秒。BC 考试按分龄作答。",
+   "ref": "BC EMALB Guidelines 2026-06, Resuscitation/FBAO section (p.45-46)"
+  },
+  {
+   "topicEn": "Arrest ventilation follows the 2020 resuscitation guidelines",
+   "topicZh": "骤停通气以 2020 复苏指南为准",
+   "bookEn": "The textbook's arrest figure - 10 breaths/min without pausing compressions once an advanced airway is in - matches current guidelines.",
+   "bookZh": "教材的骤停数字——高级气道建立后每分钟 10 次通气、按压不停——与现行指南一致。",
+   "bcEn": "BC references Heart & Stroke 2020: before an SGA is placed, ventilate 30:2; after placement, asynchronous at 10/min. 'Avoid hyperventilation' is spelled out in the BC guideline and is a live deduction point in the practical exam.",
+   "bcZh": "BC 引用 Heart & Stroke 2020：SGA 置入前按 30:2；置入后改为不间断按压＋每分钟 10 次通气。『避免过度通气』在 BC 指南里是白纸黑字，也是实操考核的现成扣分点。",
+   "ref": "BC EMALB Guidelines 2026-06, CPR/AED Basic Concepts (p.42)"
+  }
+ ],
+ "sourcePages": "907-1264"
+}
