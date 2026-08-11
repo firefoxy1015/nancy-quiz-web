@@ -1,5 +1,5 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=10';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=11';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -18,12 +18,13 @@ export async function renderStudyHub(el) {
   const scopeTag = (mine, all) => mine === all
     ? `<span class="tag-count">${all}</span>`
     : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
-  const chData = await loadJSON('./data/study/chapters.json');
+  const chData = await loadJSON('./data/study/chapters2/index.json');
+  const chV2 = chData ? chData.chapters.filter(c => c.status === 'v2').length : 0;
   const cards = [
     ['chapters', ico('cap'), 'Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读',
-      'All 54 textbook chapters: summary, key points, must-knows and the confusions students actually have.',
-      '教材全部 54 章：本章概要、要点、必背、以及学生真正会搞混的地方。',
-      chData ? `<span class="tag-count">${chData.chapters.length}</span>` : ''],
+      `All 54 chapters of the Canadian edition. ${chV2} are rewritten in depth — knowledge map, every testable number, BC-guideline conflicts flagged.`,
+      `加拿大版教材全部 54 章，其中 ${chV2} 章已深度重写——知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注。`,
+      chData ? `<span class="tag-count">${chV2} / ${chData.chapters.length}</span>` : ''],
     ['assessment', ico('compass'), 'Patient Assessment Model', '患者评估模型',
       'The backbone of both written and practical. Learn the exact official sequence.', '笔试和实操共同的主线，按官方顺序学。', ''],
     ['protocols', ico('list'), 'Protocols', '处置协议',
