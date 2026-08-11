@@ -1,0 +1,1020 @@
+{
+ "id": "ch45",
+ "n": 45,
+ "titleEn": "Geriatrics",
+ "titleZh": "老年医学",
+ "group": "geriatric",
+ "examWeight": 3,
+ "whyEn": "The heaviest patient-population chapter on the whole exam: the CPCF blueprint assigns geriatric patients 35% of the population mix, more than any other group. That means every clinical topic you have studied can be re-asked in a geriatric skin, and this chapter supplies the twists the examiners love: the silent MI, pneumonia without fever, delirium as the only sign of hypoglycemia or sepsis, polypharmacy as the hidden culprit, falls that were really syncope, and maltreatment you must recognize and report. Master the atypical-presentation rules, the GEMS diamond, the fall-cause clues, and the trauma modifications, and you have bought marks across the entire paper, not just here.",
+ "whyZh": "全考试人群权重最高的一章：CPCF 蓝图给 geriatric 病人 35% 的人群配比，超过其他任何组。这意味着你学过的每个临床主题都可能套上老年外壳再考一遍，而本章提供的正是出题人最爱的那些反转——不痛的心梗、不发烧的肺炎、以谵妄为唯一线索的低血糖或脓毒症、藏在药盒里的真凶（polypharmacy）、其实是晕厥的『跌倒』、必须识别并上报的虐待。把非典型表现规则、GEMS 钻石、跌倒原因线索表和创伤处置改良吃透，赚到的分散布全卷，不止这一章。",
+ "competencies": {
+  "areas": [
+   "Area 2: Communication",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "2.1.f",
+   "2.3.c",
+   "2.3.d",
+   "2.4.f",
+   "5.1.a",
+   "5.6.f",
+   "5.7.a",
+   "5.7.b",
+   "6.2.c",
+   "6.3.a",
+   "6.3.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Demographics of an Aging Canada",
+   "titleZh": "老龄化的加拿大：人口与就医格局",
+   "points": [
+    {
+     "en": "Geriatrics covers assessment and care of illness or injury in anyone 65 years or older. Seniors were 15.6% of Canadians in 2016 and are projected to reach 22% by 2030, driven by baby boomers born 1946-1964.",
+     "zh": "老年医学的对象是 65 岁及以上人群的疾病与创伤。2016 年老年人占加拿大人口 15.6%，预计 2030 年升到 22%，主力是 1946-1964 年出生的 baby boomers。",
+     "hard": true
+    },
+    {
+     "en": "The fastest-growing slice of the Canadian population is people 85 and older. Projected life expectancy at birth by 2036: 86.2 years for women, 82.9 for men.",
+     "zh": "加拿大增长最快的人口段是 85 岁以上。预计到 2036 年出生时预期寿命：女性 86.2 岁，男性 82.9 岁。",
+     "hard": true
+    },
+    {
+     "en": "People 65+ generate about one-third of all hospitalizations and more than half of all hospital-stay days, and see physicians more often than younger people — expect them to dominate your call volume.",
+     "zh": "65 岁以上人群贡献约三分之一的住院人次和超过一半的住院日，看医生的频率也高于年轻人——他们会占据你出勤量的大头。",
+     "hard": true
+    },
+    {
+     "en": "Old-age dependency ratio = number of people 65+ per 100 adults aged 18-64. It was about 20 per 100 in 1990 and is projected at 32 per 100 by 2025 — caregiver supply is falling behind demand.",
+     "zh": "老年抚养比 = 每 100 名 18-64 岁劳动年龄成人对应的 65 岁以上人数：1990 年约 20:100，预计 2025 年达 32:100——照护人手的供给追不上需求。",
+     "hard": true
+    },
+    {
+     "en": "Most geriatric patients do NOT live in nursing homes: many live independently at home with family or visiting-nurse support, others in assisted living or total-care facilities. Loneliness and bereavement harm health — the chance of death rises in the year after losing a spouse.",
+     "zh": "大多数老年病人并不住养老院：很多人在家独立生活、靠家人或探访护士支持，其余住辅助生活或全护理机构。孤独与丧亲直接损害健康——丧偶后一年内死亡概率升高。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Aging Changes: Heart, Vessels, and Lungs",
+   "titleZh": "老化改变：心血管与呼吸",
+   "points": [
+    {
+     "en": "The aging heart hypertrophies against the raised afterload of stiffened arteries; cardiac output falls mainly through a dropping stroke volume, and arteriosclerosis drives systolic hypertension.",
+     "zh": "老化的心脏为对抗僵硬动脉带来的后负荷升高而肥厚；心输出量下降主要源于每搏输出量减少，动脉硬化则推高收缩压。",
+     "hard": true
+    },
+    {
+     "en": "Vessel walls make more abnormal collagen and less elastin, so they stiffen: pulse pressure widens, coronary perfusion drops, and an S4 heart sound is common in older patients.",
+     "zh": "血管壁异常胶原增多、弹性蛋白减少而变硬：脉压增宽、冠脉灌注下降，老年人常可闻及 S4 心音。",
+     "hard": true
+    },
+    {
+     "en": "The SA node, AV node, and bundle of His turn fibrotic and SA pacemaker cells thin out with age — the usual result is bradycardia, which further cuts cardiac output.",
+     "zh": "窦房结、房室结与希氏束随年龄纤维化，窦房结起搏细胞减少——常见结局是心动过缓，进一步压低心输出量。",
+     "hard": true
+    },
+    {
+     "en": "Not every cardiovascular decline is aging: much is deconditioning from a sedentary life. Use it or lose it applies to cardiac muscle too.",
+     "zh": "并非所有心血管功能下降都是老化本身：很大一部分是久坐少动导致的去适应。『用进废退』同样适用于心肌。",
+     "hard": false
+    },
+    {
+     "en": "Lungs lose elasticity and respiratory muscles lose bulk: vital capacity falls while residual volume rises, so total lung air stays the same but the usable gas-exchange fraction shrinks. Resting respiratory rate drifts up to roughly 16-25 breaths/min and becomes shallower.",
+     "zh": "肺弹性下降、呼吸肌量减少：肺活量降低而残气量升高，肺内总气量不变但可用于气体交换的比例缩水。静息呼吸频率漂移到约 16-25 次/分且变浅。",
+     "hard": true
+    },
+    {
+     "en": "PaO2 can be estimated as 100 minus age divided by 3: about 90 mm Hg at age 30 falls to about 75 mm Hg at 80 on room air. The respiratory drive also dulls — older bodies react less to deranged blood gases.",
+     "zh": "PaO2 可用『100 − 年龄/3』估算：室内空气下 30 岁约 90 mmHg，到 80 岁只剩约 75 mmHg。呼吸驱动同时变钝——老年身体对血气紊乱的反应变弱。",
+     "hard": true
+    },
+    {
+     "en": "Kyphosis and calcified costal cartilage stiffen the chest wall; weakened cough and gag reflexes plus slowed cilia let secretions pool — the recipe for aspiration and respiratory infection. Late COPD can produce a barrel chest with distant-sounding breath sounds.",
+     "zh": "驼背（kyphosis）与肋软骨钙化让胸壁变硬；咳嗽和呕吐反射减弱加上纤毛运动变慢使分泌物潴留——正是误吸和呼吸道感染的配方。晚期 COPD 可出现桶状胸，呼吸音听起来遥远低弱。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Aging Changes: Brain and Senses",
+   "titleZh": "老化改变：神经与感官",
+   "points": [
+    {
+     "en": "Normal cognitive aging = slower processing and longer memory retrieval, in step with the person's age. Brain weight may shrink 10-20% by age 80, yet reserve capacity means a lighter brain does not equal impaired thinking.",
+     "zh": "正常的认知老化 = 处理速度变慢、记忆提取变长，且与年龄进程合拍。80 岁时脑重量可减少 10-20%，但大脑储备巨大，脑变轻不等于思维受损。",
+     "hard": true
+    },
+    {
+     "en": "Vision declines from as early as 40; up to half of people over 65 have vision problems. The two leading causes: cataracts (lens hardens and turns opaque — blurred or double vision, spots, ghost images) and glaucoma (raised intraocular pressure damaging the optic nerve — permanent peripheral then central vision loss).",
+     "zh": "视力从 40 岁起就可能开始退化；65 岁以上多达一半有视力问题。两大首要原因：白内障（晶状体硬化混浊——视物模糊、复视、黑点、重影）和青光眼（眼压升高损伤视神经——先周边后中心的永久性视野丧失）。",
+     "hard": true
+    },
+    {
+     "en": "Presbycusis is progressive high-frequency hearing loss with poor separation of speech from background noise. Do not shout: lean in, use a lower pitch, keep light on your face so the patient can read lips.",
+     "zh": "老年性耳聋（presbycusis）是渐进性高频听力丧失，且难以从背景噪音中分辨语音。不要吼：凑近、压低音调、让光照到你的脸方便病人读唇。",
+     "hard": true
+    },
+    {
+     "en": "Meniere disease affects about 1 in 1,000: cycles of vertigo, hearing loss, tinnitus, and ear pressure lasting months at a time, typically starting in early middle age.",
+     "zh": "梅尼埃病患病率约 1/1,000：眩晕、听力下降、耳鸣、耳胀感呈周期发作，一轮可持续数月，通常中年早期起病。",
+     "hard": true
+    },
+    {
+     "en": "Vestibular decline plus fading proprioception make older people unsteady — the tendency to fall climbs markedly. Taste and smell also fade, cutting appetite and setting up malnutrition.",
+     "zh": "前庭功能与本体感觉双双衰退让老人站不稳——跌倒倾向显著上升。味觉嗅觉同步减退，压低食欲，为营养不良埋下伏笔。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Aging Changes: Digestion, Kidneys, Skin, Homeostasis, Bones",
+   "titleZh": "老化改变：消化·肾·皮肤·稳态·骨骼",
+   "points": [
+    {
+     "en": "Saliva and gastric secretions both drop and gastric emptying slows — raising aspiration risk and causing reflux. Tooth loss is disease of teeth and gums, not normal aging, but it is widespread and worsens nutrition.",
+     "zh": "唾液和胃液分泌减少、胃排空变慢——误吸风险升高并引起反流。牙齿脱落是牙与牙龈的疾病而非正常老化，但极普遍且拖累营养。",
+     "hard": true
+    },
+    {
+     "en": "Hepatic detox enzyme activity declines with age, so medications clear slower — a core reason older patients slide into medication toxicity.",
+     "zh": "肝脏解毒酶活性随年龄下降，药物清除变慢——这是老年病人容易滑入药物中毒的核心原因之一。",
+     "hard": true
+    },
+    {
+     "en": "Kidneys shrink from 250-270 g in a young adult to 180-200 g by 70 as nephrons drop out. They cope with daily life but fail under the extra load of acute illness — expect fluid and electrolyte derangement.",
+     "zh": "肾脏从青年期的 250-270 g 缩到 70 岁的 180-200 g，肾单位不断丢失。日常负荷尚可应付，急病加压即告失守——要预期水电解质紊乱。",
+     "hard": true
+    },
+    {
+     "en": "Aging kidneys respond sluggishly to sodium: big sodium losses plus a blunted thirst drive mean dehydration develops fast and severe; conversely a saline load (IV fluids, salty food) is poorly excreted and tips the patient into volume overload. Potassium handling fails the same way — hyperkalemia can reach lethal levels if the patient turns acidotic.",
+     "zh": "老化肾对钠反应迟钝：钠大量丢失叠加口渴机制变钝，脱水来得又快又重；反过来，钠负荷（静脉盐水、重盐饮食）排不出去，病人被推入容量超载。钾的处理同样失灵——一旦酸中毒，高钾可达致命水平。",
+     "hard": true
+    },
+    {
+     "en": "Incontinence is NOT normal aging. Stress incontinence leaks with cough, laugh, sneeze, lifting; urge incontinence is triggered by hot or cold fluids, running water, even the thought of the bathroom. Retention has causes too: prostate enlargement pressing the urethra, or a painful UTI making the patient avoid voiding — prolonged cases can end in renal failure.",
+     "zh": "尿失禁不是正常老化。压力性失禁在咳嗽、大笑、打喷嚏、提重物时漏尿；急迫性失禁由冷热液体、流水声甚至『想到要上厕所』触发。尿潴留也有其因：前列腺增生压迫尿道，或 UTI 排尿痛让病人刻意憋尿——迁延可发展为肾衰。",
+     "hard": true
+    },
+    {
+     "en": "Skin thins, dries, and loses elastin and collagen; subcutaneous fat that used to cushion vessels wastes away, so bruising is easy, tears bleed longer before hemostasis, and broken skin invites secondary infection. Sweat gland activity falls, hobbling heat regulation.",
+     "zh": "皮肤变薄变干、弹性蛋白与胶原流失；原本给血管当缓冲垫的皮下脂肪萎缩，因此容易瘀青、皮肤撕裂后止血前出血更多，破损处易继发感染。汗腺活动下降，散热调节跟着瘸腿。",
+     "hard": true
+    },
+    {
+     "en": "Homeostatic feedback loops fade across the board: thermoregulation misfires (hypothermia or heat exhaustion after minor exposure; infections may run little or no fever), and glucose control loosens (mild hyperglycemia is common — overtreating it causes harmful hypoglycemia). One illness therefore tends to trigger generalized deterioration.",
+     "zh": "稳态反馈机制全面衰退：体温调节失灵（轻度暴露即可失温或中暑衰竭；感染可能只有低热甚至不发热），血糖调控松动（轻度高血糖很常见——矫枉过正反而造成有害的低血糖）。因此一个病灶往往引发全身性恶化。",
+     "hard": true
+    },
+    {
+     "en": "Bone mass falls, fastest in postmenopausal women; disks narrow and vertebrae compress, costing height and stooping posture; joints stiffen and muscle mass and strength shrink. For paramedics this cashes out as one thing: falls that fracture.",
+     "zh": "骨量下降，绝经后女性掉得最快；椎间盘变窄、椎体压缩，身高缩水、体态佝偻；关节僵硬、肌量肌力萎缩。对救护员而言这一切最终兑现成一件事：一跌就骨折。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Assessment of Geriatric Patients",
+   "titleZh": "老年病人评估：两大挑战",
+   "points": [
+    {
+     "en": "Aging alone is not a disease and does not by itself cause symptoms; the wear-and-tear theory and genetic-programming theory are the two leading explanations for its biologic effects — neither licenses writing off a new complaint as 'just old age.'",
+     "zh": "老化本身不是病，单靠老化不会致症状；『磨损论』与『基因编程论』是解释其生物学效应的两大主流理论——但两者都不能成为把新主诉打发成『年纪大了』的理由。",
+     "hard": true
+    },
+    {
+     "en": "Assessing an older adult means clearing two hurdles: first, telling normal aging apart from disease; second, recognizing that disease itself often shows up looking different than it does in younger patients.",
+     "zh": "评估老年病人要过两关：先分清『正常老化』与『疾病』；再认清疾病本身在这个人群里常常换了一副面孔出现。",
+     "hard": false
+    },
+    {
+     "en": "Memorize the atypical-presentation lineup: MI can strike with no chest pain, pneumonia can run with little or no fever, out-of-control diabetes can show up as HHS/HONK instead of DKA, and everything from heart failure to an acute abdomen can present as nothing but delirium.",
+     "zh": "非典型表现清单要背熟：心梗可以一点不痛、肺炎可以几乎不发烧、失控的糖尿病能表现成 HHS/HONK 而非 DKA，从心衰到急腹症一整片急症都可能只露出谵妄这一个尾巴。",
+     "hard": true
+    },
+    {
+     "en": "Multiple chronic conditions create a domino effect: pain from one disease can bury the symptoms of another (severe arthritis pain may mask a new thrombophlebitis), and when several organ systems already run near their limit, dysfunction in just one can cascade into multi-organ failure.",
+     "zh": "多病共存会制造多米诺效应：一种病带来的疼痛可能盖掉另一种（严重关节炎痛可能埋没新发的血栓性静脉炎），而当多个器官系统本已逼近极限，只要一处功能出岔子，就可能连锁演成多器官衰竭。",
+     "hard": true
+    },
+    {
+     "en": "Comorbidity complicates treatment too: the medication an older patient needs for a cardiac problem may be contraindicated by an underlying kidney or liver condition, or at minimum demand a major dose adjustment.",
+     "zh": "共病也给治疗添堵：老年病人心脏问题所需的药，可能因为同时存在的肾病或肝病而不能用，至少也要大幅调整剂量。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The GEMS Diamond: Scene and History Assessment",
+   "titleZh": "GEMS 钻石：现场与病史评估",
+   "points": [
+    {
+     "en": "The E of GEMS is a preventive-care moment, not just information-gathering: check whether the home is too hot or cold, well-kept and secure, or hazardous — an older patient may not recognize risks in their own environment.",
+     "zh": "GEMS 中的 E（环境）不只是收集信息，更是一次预防性照护的机会：查居所冷热是否适宜、是否整洁安全、有无隐患——老人常常察觉不到自己家里的风险。",
+     "hard": false
+    },
+    {
+     "en": "A full geriatric scene assessment pulls clues from living conditions, availability of social/family support, activity level, current medications, and general appearance — nutrition, hygiene, grooming, attitude, and mental well-being.",
+     "zh": "完整的老年现场评估要从居住状况、社会/家庭支持是否到位、活动能力、目前用药、整体外观（营养、卫生、仪容）以及情绪与精神状态里找线索。",
+     "hard": false
+    },
+    {
+     "en": "Sensory alterations, verbal-communication limits, and reduced mental or physical capability all distort the standard assessment process in geriatric patients — you must actively accommodate them, not assume your usual technique will work unchanged.",
+     "zh": "感官衰退、言语沟通受限、心智或体能下降都会扭曲标准评估流程——必须主动去适应这些限制，不能假设平时那套技巧原样管用。",
+     "hard": false
+    },
+    {
+     "en": "Default assumption for any geriatric patient: mental status IS normal until you have evidence otherwise. Confirm the patient's presentation against their own baseline with family or a caregiver before calling it 'confusion.'",
+     "zh": "对任何老年病人的默认假设：意识状态是正常的，除非有证据说明不是。给病人扣上『意识混乱』的帽子前，先向家属或照护者核实这是不是他本人的基线状态。",
+     "hard": true
+    },
+    {
+     "en": "A comprehensive history covers chief complaint, present illness, pertinent medical history, and current care needs; dig specifically for cardiovascular symptoms (palpitations, flutter), exercise tolerance, diet, medications, smoking/drinking, and sleep patterns.",
+     "zh": "全面病史要覆盖主诉、现病史、既往病史相关内容和当前照护需求；要专门挖：心血管症状（心悸、房颤感）、运动耐量、饮食史、用药、烟酒习惯、睡眠模式。",
+     "hard": false
+    },
+    {
+     "en": "Take a SAMPLE history and specifically ask about recent hospitalizations and allergies — both are easy to skip in a prehospital interview but change the differential and the receiving hospital's workup.",
+     "zh": "做 SAMPLE 病史时要专门问最近住院史和过敏史——这两项在院前问诊里很容易被漏问，却会改变鉴别诊断和接诊医院的检查方向。",
+     "hard": true
+    },
+    {
+     "en": "Medication history must go deep: ask the patient to name every drug by name with dose and frequency, whether any prescribed drug is NOT being taken (cost, side effects) and whether any drug came from another source (eg, a spouse's prescription).",
+     "zh": "用药史要挖到底：让病人逐一报出药名、剂量、频次；问清哪些开了却没吃（因为费用或副作用）、哪些药来自别处（比如配偶的处方药）。",
+     "hard": true
+    },
+    {
+     "en": "Get permission and collect ALL of the patient's medications — prescription and nonprescription — for transport. If the patient cannot say where they are kept, check the bathroom cabinet, bedside table, kitchen counters, and refrigerator.",
+     "zh": "征得同意后把病人所有的药——处方和非处方——都收走带上车。病人说不清药放哪时，去查浴室药柜、床头柜、厨房台面和冰箱。",
+     "hard": true
+    },
+    {
+     "en": "Older patients under-report symptoms for three reasons: believing aches are simply part of aging, avoiding being labelled a hypochondriac, and fearing that naming a symptom will trigger hospitalization and loss of independence.",
+     "zh": "老年病人瞒报症状有三个理由：以为不适只是老化的一部分、怕被贴上『疑病』标签、怕一提症状就会被送医住院、从此失去独立生活。",
+     "hard": true
+    },
+    {
+     "en": "Geriatric patients often carry several unrelated chief complaints at once. When a stated complaint sounds trivial, run a brief system-by-system screen — cardiovascular, respiratory, neurologic, GI, GU — before assuming there is nothing more to find.",
+     "zh": "老年病人常常同时揣着好几个互不相干的主诉。当说出口的主诉听起来无关紧要时，先按系统（心血管、呼吸、神经、消化、泌尿生殖）快速筛一轮，别急着断定没别的问题。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Communication and the Physical Examination",
+   "titleZh": "沟通技巧与体格检查",
+   "points": [
+    {
+     "en": "Never default to 'honey,' 'dear,' or 'grandpa' with an older patient unless they ask to be addressed that way. Introduce yourself, use the patient's real name, and speak to the patient first — not to family or bystanders.",
+     "zh": "不要对老年病人张口就是『亲爱的』『老爷子』这类称呼，除非病人自己要求这样叫。先自我介绍，用病人的真名，并且先跟病人本人说话——不是先问家属或旁观者。",
+     "hard": true
+    },
+    {
+     "en": "Interviewing checklist worth drilling: face the patient directly with plenty of light, speak slowly and distinctly, explain what you are doing, allow time for an answer, preserve dignity, and never discuss the patient with others in front of them.",
+     "zh": "值得练熟的问诊清单：让光线充足并正面对着病人、说话放慢咬字清楚、解释你在做什么、给足时间等回答、维护病人尊严、绝不当着病人的面跟别人讨论他的情况。",
+     "hard": true
+    },
+    {
+     "en": "Nonverbal channels carry as much weight as words: eye contact, gestures, body position, facial expression, and touch. Have the patient wear their hearing aids or glasses during the interview, then send those devices to hospital with them.",
+     "zh": "非语言渠道和语言一样重要：眼神接触、手势、身体姿态、面部表情、触碰。问诊时让病人戴上助听器或眼镜，之后连同这些设备一起送去医院。",
+     "hard": false
+    },
+    {
+     "en": "Adapt the physical exam to the patient's limits: minimize handling because older patients tire and may not cooperate well, keep them warm because they are more susceptible to hypothermia, and remove only the clothing the exam actually needs, re-covering when finished.",
+     "zh": "体格检查要照顾老人的极限：手法操作尽量少，因为病人容易疲惫且未必配合；注意保暖，因为老人更容易失温；只脱检查必须脱的衣物，查完立刻盖回去。",
+     "hard": true
+    },
+    {
+     "en": "Start the exam by observing dress and grooming — neglected appearance can be the very first sign of depression or a serious underlying medical condition, not just self-neglect.",
+     "zh": "查体从观察穿着仪容开始——邋遢外表可能是抑郁症或严重潜在疾病的第一个信号，而不只是单纯的自我疏于打理。",
+     "hard": false
+    },
+    {
+     "en": "Grade level of consciousness with AVPU in a critically ill or injured patient; if time allows, go deeper — orientation to place and time, affect appropriate to the situation, presence of delusions — and confirm against the patient's known baseline with family or a caregiver.",
+     "zh": "危重病人用 AVPU 评意识水平；时间允许时再深挖：是否能定向到地点和时间、情绪反应是否符合情境、有无妄想——并向家属或照护者核实这是否符合病人已知的基线。",
+     "hard": true
+    },
+    {
+     "en": "Note upper and lower dentures during the mouth exam — a small detail that is easy to skip but belongs in a complete geriatric physical.",
+     "zh": "口腔检查要记录上下假牙情况——一个容易漏掉的小细节，但属于完整老年体检的一部分。",
+     "hard": false
+    },
+    {
+     "en": "Postural blood-pressure changes grow more pronounced with increasing frailty and raise fall risk; a marked drop in BP or pulse on standing points to hypovolemia or overmedication — check vitals in both arms and pulses proximally and distally in all limbs.",
+     "zh": "体位性血压变化随身体越虚弱而越明显，并推高跌倒风险；起立后血压或脉搏显著下降提示低血容量或用药过量——建议双臂都测血压，并检查四肢近端和远端脉搏。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Complaints: Cardiovascular and Respiratory",
+   "titleZh": "医疗主诉：心血管与呼吸",
+   "points": [
+    {
+     "en": "Prehospital chest-pain treatment is unchanged for older adults, but caution rises: nitroglycerin and morphine cause more hypotension or respiratory compromise in this group, and aspirin can worsen bleeding in a patient already on anticoagulants.",
+     "zh": "老年胸痛的院前处置流程不变，但顾虑更多：硝酸甘油和吗啡在这个群体更易引起低血压或呼吸抑制，阿司匹林则可能加重正在用抗凝药病人的出血。",
+     "hard": true
+    },
+    {
+     "en": "Heart failure in an older adult hides behind 'old-age' symptoms — exertional dyspnea, easy fatigue, confusion, crackles, orthopnea, a cough turning productive, dependent edema. Acute flares often trace to a high-salt diet, missed medication doses, new atrial fibrillation, or silent cardiac ischemia.",
+     "zh": "老年心衰会躲在『老了』的症状后面——活动后气促、易疲劳、意识混乱、湿啰音、端坐呼吸、干咳转湿咳、下肢凹陷性水肿。急性发作常源于高盐饮食、漏服药物、新发房颤或悄无声息的心肌缺血。",
+     "hard": true
+    },
+    {
+     "en": "Geriatric heart-failure treatment leans on the same tools with sharper focus: monitor ETCO2 continuously for trend, watch fluids closely to avoid overload, consider CPAP, and consider diltiazem for a patient in atrial fibrillation or flutter.",
+     "zh": "老年心衰的处置工具不变，但更讲究：持续监测 ETCO2 看趋势、严控补液防超载、考虑上 CPAP、房颤或房扑病人可考虑用 diltiazem（合心爽）。",
+     "hard": true
+    },
+    {
+     "en": "Thoracic aortic aneurysm usually stays silent until it is large or ruptures, sometimes announced early only by dysphagia or hoarseness from nerve compression; abdominal aortic aneurysm typically causes abdominal or isolated back pain — examine chest AND abdomen in any older patient with back pain.",
+     "zh": "胸主动脉瘤通常一直沉默，直到长大或破裂，早期偶尔只靠压迫神经引起的吞咽困难或声音嘶哑露出马脚；腹主动脉瘤则典型表现为腹痛或孤立性背痛——任何老年背痛病人都要同时查胸和腹。",
+     "hard": true
+    },
+    {
+     "en": "Classic pneumonia (chills, fever, productive cough) often goes missing in older adults, especially regular NSAID users — delirium, a normal temperature, and little or no cough take its place. Treatment stays supportive: positioning, fluids, oxygen, and analgesics for fever.",
+     "zh": "肺炎的经典三件套（寒战、发热、咳痰）在老人身上常常缺席，长期吃 NSAID 的病人尤其如此——取而代之的是谵妄、体温正常、几乎不咳。处置仍以支持治疗为主：摆体位、补液、给氧、退热镇痛。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary embolism in older adults is often silent or presents as tachypnea alone, without the classic dyspnea-chest pain-hemoptysis triad. Check the lower leg for swelling, erythema, warmth, or tenderness as DVT clues, and handle a suspected DVT leg gently.",
+     "zh": "老年肺栓塞常常悄无声息，或只表现为呼吸增快，没有典型的呼吸困难-胸痛-咯血三联征。查小腿有无肿胀、发红、发热或压痛作为 DVT 线索，怀疑 DVT 时动作要轻柔。",
+     "hard": true
+    },
+    {
+     "en": "Asthma and COPD guidelines do not change with age. Reserve epinephrine for a life-threatening asthma exacerbation. COPD often shows up as fatigue and reduced activity alongside dyspnea — expect the patient to already be on inhaled beta-agonists or corticosteroids.",
+     "zh": "哮喘和 COPD 的处置指南不因年龄而变。肾上腺素留给危及生命的哮喘发作用。COPD 除呼吸困难外，常伴疲劳和活动量下降——病人多半已在用吸入性 β 受体激动剂或皮质类固醇。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Complaints: Gastrointestinal Bleeding",
+   "titleZh": "医疗主诉：消化道出血",
+   "points": [
+    {
+     "en": "Constipation with abdominal pain is one of the most common geriatric GI complaints — but the workup still needs food/fluid intake, prior abdominal history, bowel/bladder habits, and medications, because pain is often vague and diffuse with no clear point of origin. Abdominal emergencies usually need surgery, so recognize early and transport fast.",
+     "zh": "便秘伴腹痛是老年最常见的消化道主诉之一——但问诊仍要问清饮食、既往腹部病史、排便排尿习惯和用药，因为疼痛常常又散又模糊、找不到明确压痛点。腹部急症多半要开刀，早识别、快转运。",
+     "hard": false
+    },
+    {
+     "en": "Upper-GI-bleed history clues: regular NSAID or alcohol use points to ulcers, forceful vomiting points to an esophageal tear, liver cirrhosis points to bleeding varices, and recent weight loss or trouble swallowing raises suspicion of cancer.",
+     "zh": "上消化道出血的病史线索：常用 NSAID 或饮酒指向溃疡，剧烈呕吐后出血指向食管撕裂，肝硬化指向食管静脉曲张破裂，近期体重下降或吞咽困难则要疑心肿瘤。",
+     "hard": true
+    },
+    {
+     "en": "Judge upper-GI-bleed severity, not just cause: coffee-ground emesis with a normal pulse and pressure signals slow bleeding, while hematemesis or tarry black stool signals a brisk bleed needing shock treatment and immediate transport.",
+     "zh": "评估上消化道出血要先看严重程度，而非只看病因：咖啡渣样呕吐物伴脉搏血压正常提示慢渗血；呕鲜血或柏油样黑便提示急性大出血，需按休克处理并立即转运。",
+     "hard": true
+    },
+    {
+     "en": "Lower GI bleeding is never automatically hemorrhoids — screen for polyps, colon cancer, prior bleeding episodes, recent constipation or diarrhea, and blood-thinner use. Minor bleeding streaks formed stool or toilet paper; severe bleeding passes large amounts of red or maroon stool.",
+     "zh": "下消化道出血绝不能自动归为痔疮——要筛查息肉、结肠癌、既往出血史、近期便秘或腹泻、抗凝药使用。轻微出血是成形大便或手纸上带血丝；严重出血是排出大量红色或暗红色（maroon）便。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital GI-bleed care is supportive: adequate pain control, treat for shock, and immediate transport to the nearest emergency department for any severe upper or lower GI bleed.",
+     "zh": "院前消化道出血处置以支持治疗为主：充分镇痛、按休克处理，任何严重的上或下消化道出血都要立即转运至最近的急诊科。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Complaints: Neurologic, Endocrine, and Delirium",
+   "titleZh": "医疗主诉：神经、内分泌与谵妄",
+   "points": [
+    {
+     "en": "Stroke-scale scoring can mislead in older adults: severe arthritis can mimic one-sided weakness, and a prior stroke can already impair speech. Always ask family or caregivers what counts as this patient's normal, and screen for new weakness, fatigue, syncope, near-syncope, and mood or sleep changes.",
+     "zh": "老年人做卒中量表评分容易被误导：严重关节炎可以模仿单侧无力，既往卒中也可能早就影响语言功能。一定要问家属或照护者『这位病人平时是什么样』，并筛查新发的无力、乏力、晕厥、近乎晕厥，以及情绪或睡眠变化。",
+     "hard": true
+    },
+    {
+     "en": "Stroke is emotionally traumatic for the patient. Even when they cannot speak back, many can still understand you — keep your tone calm and reassuring exactly as you would with any other patient.",
+     "zh": "卒中对病人而言是情感创伤事件。哪怕病人说不出话，很多人仍能听懂你说的——语气要像对待任何其他病人一样保持镇定和安抚。",
+     "hard": false
+    },
+    {
+     "en": "Dementia develops over months to years and can include short-term memory loss, a shortened attention span, jargon aphasia (talking nonsense), hallucinations, disorientation, difficulty learning new information, and personality change such as withdrawal or inappropriate behaviour.",
+     "zh": "痴呆历经数月数年发展，可表现为短期记忆丧失、注意力持续时间缩短、语无伦次的『行话失语』（jargon aphasia）、幻觉、定向障碍、学不进新信息、以及性格改变如社交退缩或行为失当。",
+     "hard": true
+    },
+    {
+     "en": "When you suspect delirium, look for an acute onset of anxiety plus an inability to think logically or hold attention and focus. Then check vital signs, temperature (infection), glucose level, and medications — the usual suspects behind it.",
+     "zh": "怀疑谵妄时要找：急性起病的焦虑，加上无法逻辑思考、无法维持注意力和专注。接着查生命体征、体温（查感染）、血糖、用药——这些是谵妄最常见的元凶。",
+     "hard": true
+    },
+    {
+     "en": "Altered mental status is a symptom, not a diagnosis. Work through head injury, dysrhythmias, dementia, medications, fluid-balance shifts such as blood loss, hypoxia, glucose swings, hyper/hypothermia, and infection — with neurologic causes like Alzheimer or Parkinson disease and endocrine causes like diabetes getting special attention.",
+     "zh": "意识改变是一个症状，不是诊断。要过一遍：头部损伤、心律失常、痴呆、药物、体液平衡变化（如失血）、低氧、血糖波动、体温过高或过低、感染——其中神经系统病因（阿尔茨海默病、帕金森病）和内分泌病因（糖尿病）要特别留意。",
+     "hard": true
+    },
+    {
+     "en": "Alzheimer disease can present as confusion about familiar surroundings, personality or judgment change, and severe difficulty with basic activities — feeding, bathing, bowel and bladder control.",
+     "zh": "阿尔茨海默病可表现为对熟悉环境感到陌生、性格或判断力改变、以及基本日常活动（进食、洗浴、大小便控制）严重困难。",
+     "hard": true
+    },
+    {
+     "en": "Parkinson disease can present as dyskinesia (involuntary movement or tremor on one or both sides), dementia, depression, autonomic dysfunction affecting bladder and GI function, and postural instability from lost righting reflexes.",
+     "zh": "帕金森病可表现为运动障碍（单侧或双侧不自主运动或震颤）、痴呆、抑郁、影响膀胱和消化功能的自主神经紊乱，以及因姿势反射丧失导致的姿势不稳。",
+     "hard": true
+    },
+    {
+     "en": "Older patients may carry pre-existing endocrine disease — Graves disease (hyperthyroid), Addison disease (hypoadrenal), Cushing syndrome (hyperadrenal), osteoporosis, or diabetes — so for a known diabetic, actively look for dehydration and hyperglycemia on top of whatever chief complaint brought the call.",
+     "zh": "老年病人常带着既往内分泌病——Graves 病（甲亢）、Addison 病（肾上腺皮质功能减退）、Cushing 综合征（皮质醇增多）、骨质疏松、糖尿病——对已知糖尿病病人，无论主诉是什么，都要主动查有无脱水和高血糖。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Complaints: Toxicologic, Sepsis, Skin, and Psychological",
+   "titleZh": "医疗主诉：中毒、脓毒症、皮肤与精神",
+   "points": [
+    {
+     "en": "The single most common 'poisoning' in older adults is accidental double-dosing on their own medication — a reminder that a drug is really just a poison with a beneficial side effect. Multiple prescribers who do not know about each other's orders make this worse.",
+     "zh": "老年人最常见的『中毒』其实是不小心把自己的药吃了两次——提醒我们：药物说到底就是带着有益副作用的毒物。多个医生互不知情地各开各的处方，只会让这问题更严重。",
+     "hard": true
+    },
+    {
+     "en": "Aging slows every step of pharmacokinetics — absorption, distribution, metabolism, excretion — and diet, smoking, alcohol, and other drugs pile on. Drugs that depend on liver and kidney clearance, digoxin above all, are especially prone to building up to toxic levels.",
+     "zh": "老化让药代动力学的每一步都变慢——吸收、分布、代谢、排泄——饮食、吸烟、饮酒、其他药物还会火上浇油。依赖肝肾清除的药物，尤其是地高辛，最容易蓄积到中毒水平。",
+     "hard": true
+    },
+    {
+     "en": "Toxic drug reactions in older adults usually surface as psychiatric symptoms (hallucinations, paranoia, agitation) or cognitive impairment (delirium, confusion, amnesia, stupor). The worst offenders: anticholinergics/antihistamines, anticoagulants, antidysrhythmics, antidepressants, antipsychotics, digoxin, insulin, narcotics, and sedative-hypnotics.",
+     "zh": "老年人药物中毒反应通常表现为精神症状（幻觉、偏执、躁动）或认知障碍（谵妄、意识混乱、遗忘、木僵）。最常见的元凶：抗胆碱能/抗组胺药、抗凝药、抗心律失常药、抗抑郁药、抗精神病药、地高辛、胰岛素、麻醉性镇痛药、镇静催眠药。",
+     "hard": true
+    },
+    {
+     "en": "Sepsis begins when an infection lets microorganisms or their toxins spill into the bloodstream. Think sepsis the moment you see a patient who is hot, flushed, tachycardic, and tachypneic — then confirm against the vital-sign thresholds in the hard-numbers table.",
+     "zh": "脓毒症始于感染让病原体或其毒素漏进血液。一见病人又热又红、心快气促，脑子里就该先冒出『脓毒症』三个字——再对照硬数字表里的生命体征阈值确认。",
+     "hard": false
+    },
+    {
+     "en": "Shingles reactivates the chickenpox virus along a nerve root — most often a thoracic nerve or the ophthalmic branch of the trigeminal nerve. Pain comes first, then a cluster of vesicles on reddened skin that stays unilateral and rarely crosses the midline; the main complication is postherpetic neuralgia.",
+     "zh": "带状疱疹是水痘病毒沿神经根重新激活——最常侵犯胸神经或三叉神经眼支。先痛后疹：一簇小水疱长在发红皮肤上，通常局限单侧、很少越过中线；主要并发症是带状疱疹后神经痛。",
+     "hard": true
+    },
+    {
+     "en": "Cellulitis, a bacterial skin infection usually of the lower leg, brings fever, chills, malaise, warmth, swelling, redness, tenderness, and enlarged nodes; treatment is antibiotics, adequate fluids, and local dressings for any open wound.",
+     "zh": "蜂窝织炎是细菌性皮肤感染，多发生在小腿，表现为发热、寒战、乏力、局部发热、肿胀、发红、压痛、淋巴结肿大；处置是抗生素、充分补液，有开放伤口则加局部敷料。",
+     "hard": false
+    },
+    {
+     "en": "Geriatric depression is fed by polypathology, psychosocial stress, and brain aging, and it raises suicide risk — distinguish a behavioural emergency (imminent danger to self or others, eg active suicidal intent) from a behavioural crisis (coping has broken down but there is no immediate danger).",
+     "zh": "老年抑郁由多病共存、心理社会压力和大脑老化共同喂养，并推高自杀风险——要分清『行为急症』（对自己或他人有迫在眉睫的危险，如主动的自杀意图）与『行为危机』（应对能力崩溃但没有即刻危险）。",
+     "hard": true
+    },
+    {
+     "en": "Clues to psychotic behaviour include sudden anger or excitement for no reason, antisocial or loner conduct, and a reversed sleep-wake cycle. Always screen for an underlying medical cause before assuming a purely psychiatric origin, and ask family about any change from the patient's normal routine.",
+     "zh": "精神病性行为的线索包括无缘无故的暴怒或亢奋、反社会或独来独往、昼夜作息颠倒。在认定纯属精神科问题之前，一定先排查潜在的躯体病因，并向家属打听病人日常习惯有没有变化。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Management of Medical Emergencies in Older Adults",
+   "titleZh": "老年医疗急症的管理速查",
+   "points": [
+    {
+     "en": "Approach every geriatric medical emergency the same way: scene size-up, then a general impression built on mental status plus airway/breathing/circulation, then set a transport priority. Outside of immediate airway/breathing/circulatory intervention, most care here is supportive — pain relief and comfort.",
+     "zh": "每一次老年医疗急症都按同一套走：先现场安全评估，再靠意识状态加气道/呼吸/循环建立整体印象，然后定转运优先级。除非气道、呼吸、循环需要立刻处理，其余多数处置都是支持性的——镇痛与舒适为主。",
+     "hard": false
+    },
+    {
+     "en": "Incontinence management ranges from surgery to absorptive products or catheters — but do not overlook the patient's self-esteem and the social embarrassment the problem carries.",
+     "zh": "尿失禁的处置从手术到吸收型用品或导尿管都有——但别忽视病人的自尊心以及这个问题带来的社交尴尬。",
+     "hard": false
+    },
+    {
+     "en": "COPD nebulizer treatment pairs a bronchodilator — salbutamol or racemic epinephrine — with ipratropium.",
+     "zh": "COPD 雾化治疗把支气管扩张剂——沙丁胺醇或消旋肾上腺素——和异丙托溴铵搭配使用。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary embolism management centres on clot lysis and anticoagulation — heparin or enoxaparin — only after every bleeding risk factor has been reviewed.",
+     "zh": "肺栓塞处置的核心是溶栓和抗凝——肝素或依诺肝素——但前提是先把每一项出血风险因素都过一遍。",
+     "hard": true
+    },
+    {
+     "en": "Heart failure with pulmonary edema is managed with CPAP; if the patient is hemodynamically unstable with hypotension, a vasoactive drug such as dopamine may be used instead.",
+     "zh": "伴肺水肿的心衰用 CPAP 处置；若病人血流动力学不稳定合并低血压，则可能改用血管活性药如多巴胺。",
+     "hard": true
+    },
+    {
+     "en": "Stable dysrhythmias get supportive care only; unstable ones follow standard CPR and ECG-guided treatment. An aneurysm's only real fix is surgery — prehospital care is purely supportive.",
+     "zh": "稳定的心律失常只做支持治疗；不稳定的按标准 CPR 和心电图指导的方案处理。动脉瘤唯一的根本解法是手术——院前处置纯属支持性质。",
+     "hard": false
+    },
+    {
+     "en": "A hypertensive emergency calls for a controlled, gradual drop in blood pressure — something that is often simply not achievable in the prehospital setting.",
+     "zh": "高血压急症需要有控制、渐进地降压——而这在院前环境里往往根本做不到。",
+     "hard": false
+    },
+    {
+     "en": "Hypoglycemia treatment options are glucose by mouth, glucagon IM, or dextrose IV unless contraindicated; hyperglycemia treatment leans on fluid boluses, but only if the patient's kidneys are working well enough to handle the load.",
+     "zh": "低血糖处置选项：口服葡萄糖、肌注胰高血糖素，或静脉推注葡萄糖（除非有禁忌）；高血糖处置靠补液冲淡血糖，但前提是肾功能足够好、扛得住这份负荷。",
+     "hard": true
+    },
+    {
+     "en": "Toxic-drug quick reference: lidocaine causes CNS depression with no prehospital antidote; beta-blocker overdose gets activated charcoal plus consideration of atropine, epinephrine, or glucagon; digoxin toxicity gets fluids, a vasoactive drug, and charcoal; antidepressant overdose gets fluid for hypotension plus sodium bicarbonate.",
+     "zh": "药物中毒速查：利多卡因中毒引起中枢抑制，院前无解药；β受体阻滞剂过量用活性炭，并考虑阿托品、肾上腺素或胰高血糖素；地高辛中毒用补液、血管活性药加活性炭；抗抑郁药过量用补液纠正低血压加碳酸氢钠。",
+     "hard": true
+    },
+    {
+     "en": "Behavioural disorders lean on psychological support and communication technique first; depression and suicide risk get supportive care in the field with the essential next step being referral to an appropriate treatment facility.",
+     "zh": "行为障碍首先靠心理支持和沟通技巧；抑郁与自杀风险在现场做支持性处置，关键的下一步是转介到合适的治疗机构。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Trauma in Geriatric Patients",
+   "titleZh": "老年创伤评估与处置",
+   "points": [
+    {
+     "en": "Falls cause the most geriatric injuries, followed by motor-vehicle trauma (as driver, passenger, or pedestrian), then burns and other causes. Always ask whether a medical event triggered the trauma — a driver who syncopized can end up in a collision.",
+     "zh": "老年创伤的头号病因是跌倒，其次是机动车创伤（驾驶员、乘客或行人），再往后是烧伤及其他。永远要问：是不是先有医疗事件才引发的创伤——比如司机先晕厥才撞车。",
+     "hard": true
+    },
+    {
+     "en": "Airway care in geriatric trauma: leave intact, well-seated dentures in place, but remove loose or broken ones into a safe container. Suction aggressively — the aging airway and gag reflex are already compromised.",
+     "zh": "老年创伤气道处理：完好且戴稳的假牙留在原位，松动或破损的取下放进安全容器。要积极吸引——老年人的气道和呕吐反射本就打了折扣。",
+     "hard": true
+    },
+    {
+     "en": "Check for rib fracture during the breathing assessment. If you must bag the patient, ventilate gently — just enough pressure to inflate the lungs — to cut the risk of causing a pneumothorax, and start supplemental oxygen early.",
+     "zh": "呼吸评估要查肋骨骨折。若需要辅助通气，球囊要轻柔按压——刚好让肺充气的力度即可——降低造成气胸的风险，并尽早给氧。",
+     "hard": true
+    },
+    {
+     "en": "In the trauma circulation check, a 'normal' blood pressure can already be shock for this patient — chase their baseline. For disability, check pupils and grade LOC with AVPU, and expose the entire injured area even through many layers of clothing.",
+     "zh": "创伤循环评估中，『正常』血压对这位病人可能已经是休克——要追他的基线。神经功能评估查瞳孔并用 AVPU 分级意识水平，暴露整个受伤区域，哪怕要扒开好几层衣服。",
+     "hard": true
+    },
+    {
+     "en": "Trauma history needs the mechanism in detail: how high did the fall go, was there dizziness or fainting beforehand, how fast was the vehicle moving, did witnesses see erratic driving before the crash?",
+     "zh": "创伤病史要问细机制：跌倒有多高、事发前有没有头晕或黑蒙、车速多快、目击者有没有看到撞车前车辆行驶异常？",
+     "hard": false
+    },
+    {
+     "en": "Get a full medication list for any geriatric trauma patient, asking specifically about beta blockers, antihypertensives, and diabetes medications — all three can blunt or distort the response to resuscitation and anesthesia.",
+     "zh": "老年创伤病人一定要问全用药清单，尤其是 β 受体阻滞剂、降压药、糖尿病用药——这三类都可能钝化或扭曲病人对复苏和麻醉的反应。",
+     "hard": true
+    },
+    {
+     "en": "Decreased pain perception can hide a fracture or peripheral injury, so a focused exam must deliberately target the head, cervical spine, ribs, abdomen, and long bones rather than waiting for the patient to point out pain.",
+     "zh": "痛觉减退会把骨折或周围损伤的疼痛藏起来，所以重点体格检查必须主动去查头部、颈椎、肋骨、腹部、长骨，而不是等病人自己指出哪里疼。",
+     "hard": true
+    },
+    {
+     "en": "Monitor cardiac rhythm throughout geriatric trauma care — pre-existing heart disease makes new ECG changes more likely. Keep the patient warm: temperature regulation is already slowed by age, and cold blood clots poorly.",
+     "zh": "老年创伤全程要监护心律——既有心脏病会让新发心电图改变更容易出现。要给病人保暖：老化本就拖慢体温调节，冷血又凝得差。",
+     "hard": false
+    },
+    {
+     "en": "A traction splint may not suit a frail older patient with a femur fracture — consider a well-padded backboard with pillows firmly secured around the limb instead.",
+     "zh": "牵引夹板未必适合体质虚弱又股骨骨折的老人——可考虑改用垫得厚实的长背板，再用枕头牢牢固定在肢体周围。",
+     "hard": true
+    },
+    {
+     "en": "Pad the backboard generously before immobilizing the cervical spine — fragile skin breaks down fastest where bone sits near the surface: occiput, scapulae, spinous processes, elbows, sacrum, heels. A pressure ulcer can start in as little as 45 minutes.",
+     "zh": "固定颈椎前要给长背板铺厚垫——脆弱的皮肤最先在骨骼贴近体表处破损：枕骨、肩胛骨、棘突、肘部、骶骨、足跟。压疮最快 45 分钟就能形成。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Elder Maltreatment",
+   "titleZh": "老年虐待",
+   "points": [
+    {
+     "en": "Elder maltreatment is any mistreatment causing harm or loss to an older person, split into five types: physical, sexual, emotional, neglect, and financial (improper use of the person's funds, property, or assets).",
+     "zh": "老年虐待指任何造成老人伤害或损失的不当对待，分五类：躯体、性、精神情感、疏忽照护、经济（不当使用老人的资金、财产或资产）。",
+     "hard": true
+    },
+    {
+     "en": "The typical maltreatment victim profile: about 80 years old, female, with multiple chronic conditions that leave her dependent on others for care. The abuser is almost always someone the victim knows — often an adult child or spouse — and abuse is more likely at home than in a long-term care facility.",
+     "zh": "老年虐待受害者的典型画像：约 80 岁、女性、多病共存导致部分照护要依赖他人。施虐者几乎总是受害者认识的人——常是成年子女或配偶——虐待更常发生在家中，而不是长期照护机构。",
+     "hard": true
+    },
+    {
+     "en": "The classic red flag is an injury that does not fit the explanation given. Build the assessment from three angles — physical exam, environmental clues, and social clues such as overall hygiene and how the patient interacts with caregivers.",
+     "zh": "经典警示信号是伤情和说法对不上。评估要三管齐下——体格检查、环境线索、社会线索（比如整体卫生状况、病人和照护者互动的样子）。",
+     "hard": true
+    },
+    {
+     "en": "Listen patiently to any concern the patient raises. If the patient is stable but the situation is unsafe, offer transport; if they refuse, offer a referral to adult protective services — some patients decline out of fear of caregiver retaliation.",
+     "zh": "对病人说出的任何担忧都要耐心听。若病人稳定但环境不安全，提议转运；若拒绝，转介成人保护服务——有些病人拒绝是因为怕照护者报复。",
+     "hard": false
+    },
+    {
+     "en": "If the situation is immediately unsafe, notify law enforcement and stay with the patient only for as long as the scene itself stays safe for you.",
+     "zh": "若情况当下就不安全，通知执法部门，只有在现场对你自己也安全的情况下才留下陪病人。",
+     "hard": false
+    },
+    {
+     "en": "Some maltreatment is a Criminal Code of Canada offence, other forms fall under provincial law, and most cases are never reported. Regardless of which law applies, document your observations carefully and report any suspicion to the receiving facility.",
+     "zh": "部分虐待属于加拿大刑法典下的罪行，其他形式归省级法律管辖，而大多数案例从未被上报。不管适用哪部法律，你都要仔细记录观察结果，把任何怀疑上报给接诊医院。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "End-of-Life Care",
+   "titleZh": "临终照护",
+   "points": [
+    {
+     "en": "DNR never means 'do not care for a dying patient.' You still bring value even on visits that end in a decision not to transport — a caring, concerned approach is itself part of the treatment.",
+     "zh": "DNR 绝不等于『不用管临终病人』。哪怕这次出诊最终决定不转运，你的到场仍有价值——用心关切的态度本身就是一种治疗。",
+     "hard": false
+    },
+    {
+     "en": "Many communities run a hospice that provides terminal care and family support — know whether one exists in your area and how your service can collaborate with it for end-of-life patients.",
+     "zh": "很多社区有安宁疗护机构，提供临终照护和家属支持——要清楚你所在地区有没有这类机构，以及你的团队能怎么和它协作照顾临终病人。",
+     "hard": false
+    },
+    {
+     "en": "Community advance directives and DNR orders mirror hospital versions — learn your region's specific policy and follow it, because it represents the patient's expressed wishes for a catastrophic or terminal event.",
+     "zh": "社区版预立医疗指示和 DNR 医嘱与医院版本类似——要弄清你所在地区的具体政策并遵守，因为它代表病人对灾难性或临终事件的明确意愿。",
+     "hard": false
+    },
+    {
+     "en": "Aging touches every organ system, but the five most relevant to prehospital geriatric assessment are respiratory, cardiovascular, renal, nervous, and musculoskeletal.",
+     "zh": "老化影响所有器官系统，但和院前老年评估最相关的五个是：呼吸、心血管、肾脏、神经、肌肉骨骼。",
+     "hard": true
+    },
+    {
+     "en": "Geriatric history-taking is hard for five compounding reasons: multiple chronic illnesses, pain that is not felt the way a younger person feels it, trouble telling an acute problem from a chronic one, fear of hospitalization, and fear of losing independence.",
+     "zh": "老年病史采集之所以难，五个原因叠加：多病共存、痛觉体验和年轻人不一样、分不清急性问题和慢性问题、怕被送医住院、怕失去独立生活能力。",
+     "hard": true
+    },
+    {
+     "en": "Pneumonia risk climbs with institutional living, chronic illness, and a weakened immune system — a nursing-home resident with diabetes already carries two of the three.",
+     "zh": "肺炎风险随机构居住、慢性病、免疫力下降而升高——住养老院又有糖尿病的病人，三项风险里已经占了两项。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Definition of geriatric patient",
+   "itemZh": "老年病人定义",
+   "value": "≥65 岁"
+  },
+  {
+   "itemEn": "Seniors as share of Canadians",
+   "itemZh": "老年人口占比",
+   "value": "2016 年 15.6% → 预计 2030 年 22%；增长最快段 ≥85 岁"
+  },
+  {
+   "itemEn": "Absolute count of Canadian seniors",
+   "itemZh": "加拿大老年人口绝对数",
+   "value": "现有 >590 万人 65+（占 15.6%）；预计 2030 年增至 800 万人"
+  },
+  {
+   "itemEn": "Life expectancy at birth by 2036",
+   "itemZh": "2036 年出生预期寿命",
+   "value": "女 86.2 岁 / 男 82.9 岁"
+  },
+  {
+   "itemEn": "Old-age dependency ratio",
+   "itemZh": "老年抚养比",
+   "value": "1990 年 20:100 → 预计 2025 年 32:100（65+ 对 100 名 18-64 岁）"
+  },
+  {
+   "itemEn": "Hospital burden of 65+",
+   "itemZh": "65+ 住院负担",
+   "value": "约 1/3 的住院人次、>1/2 的住院日"
+  },
+  {
+   "itemEn": "Elderly resting respiratory rate",
+   "itemZh": "老年静息呼吸频率",
+   "value": "约 16-25 次/分，且偏浅"
+  },
+  {
+   "itemEn": "PaO2 by age",
+   "itemZh": "PaO2 随年龄估算",
+   "value": "PaO2 ≈ 100 − 年龄/3：30 岁约 90 mmHg → 80 岁约 75 mmHg"
+  },
+  {
+   "itemEn": "Brain weight loss by age 80",
+   "itemZh": "80 岁脑重量减少",
+   "value": "10-20%（不等于认知受损）"
+  },
+  {
+   "itemEn": "Kidney weight: young vs 70",
+   "itemZh": "肾重量：青年 vs 70 岁",
+   "value": "250-270 g → 180-200 g"
+  },
+  {
+   "itemEn": "Arm-to-arm SBP gap suggesting thoracic aortic disruption",
+   "itemZh": "提示胸主动脉夹层的双臂压差",
+   "value": "SBP 相差 ≥15 mmHg（胸痛病人双臂测压）"
+  },
+  {
+   "itemEn": "BP doubling mortality risk in men",
+   "itemZh": "男性死亡风险翻倍的血压",
+   "value": ">160/95 mmHg"
+  },
+  {
+   "itemEn": "Stroke in Canada",
+   "itemZh": "加拿大卒中数据",
+   "value": "年约 14,000 死（7%），第三大死因；>80% 卒中死亡发生在 >65 岁；55 岁后每 10 年风险翻倍"
+  },
+  {
+   "itemEn": "TIA duration",
+   "itemZh": "TIA 持续时间",
+   "value": "<24 小时，多数 <60 分钟；是未来卒中的警报"
+  },
+  {
+   "itemEn": "HHS glucose level",
+   "itemZh": "HHS 血糖水平",
+   "value": "通常 >33 mmol/L（最常见诱因是感染）"
+  },
+  {
+   "itemEn": "Geriatric appendicitis perforation rate",
+   "itemZh": "老年阑尾炎穿孔率",
+   "value": "约 50%（因难以识别而延误）"
+  },
+  {
+   "itemEn": "Medication load",
+   "itemZh": "用药负荷",
+   "value": "老年人消耗全国 >20% 的药品；社区老人日均 3-5 种；养老院 6-7 种固定 + 2-3 种 PRN"
+  },
+  {
+   "itemEn": "CNS drug dose reduction example",
+   "itemZh": "CNS 药物减量示例",
+   "value": "芬太尼镇痛：考虑 25 mcg 而非 50 mcg——最佳剂量 = 能起效的最低剂量"
+  },
+  {
+   "itemEn": "Senior injury hospitalizations (2017-2018)",
+   "itemZh": "老年人伤害住院（2017-2018）",
+   "value": ">137,500 人次，占伤害住院的一半以上；跌倒是急诊就诊与住院的第一大原因"
+  },
+  {
+   "itemEn": "Osteoporosis in Canada",
+   "itemZh": "加拿大骨质疏松",
+   "value": "约 140 万人；>50 岁女性 1/4、男性 1/8；年治疗费约 $23 亿（占医疗支出 1.3%）"
+  },
+  {
+   "itemEn": "Pressure ulcer onset on a hard board",
+   "itemZh": "硬板上压疮形成时间",
+   "value": "最快 45 分钟——背板必须厚垫"
+  },
+  {
+   "itemEn": "Sepsis red-flag vitals",
+   "itemZh": "脓毒症警示生命体征",
+   "value": "体温 >38°C 或 <36°C；呼吸 >20 次/分或 PaCO2 <32 mmHg；心率 >90 次/分"
+  },
+  {
+   "itemEn": "Shingles antiviral window",
+   "itemZh": "带状疱疹抗病毒窗口",
+   "value": "发病 48 小时内用 acyclovir/valacyclovir 效果最好"
+  },
+  {
+   "itemEn": "Burn patient urine output target",
+   "itemZh": "烧伤病人尿量目标",
+   "value": "50-60 mL/h，即 0.5-1 mL/kg/h"
+  },
+  {
+   "itemEn": "Pneumococcal vaccine booster",
+   "itemZh": "肺炎球菌疫苗加强针",
+   "value": "首剂后 3-5 年"
+  },
+  {
+   "itemEn": "Dementia and depression prevalence in 65+",
+   "itemZh": "65+ 痴呆与抑郁患病率",
+   "value": "痴呆最终累及 6-10%；抑郁 5-10%（都不是正常老化）"
+  },
+  {
+   "itemEn": "Atrial kick",
+   "itemZh": "心房收缩贡献（atrial kick）",
+   "value": "约 20% 的心室充盈——房颤丢掉它即可让稳定心衰失代偿"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Confusion, dementia, delirium, depression, falls, weakness, and syncope are never part of normal aging — every one of them is a disease process until proven otherwise.",
+   "zh": "意识混乱、痴呆、谵妄、抑郁、跌倒、乏力、晕厥都不属于正常老化——每一项都先按疾病过程对待，除非证明不是。"
+  },
+  {
+   "en": "When an older adult calls an ambulance there is almost always a genuine problem — though not necessarily the one the patient names. Hypochondria is rarer in this group, not commoner.",
+   "zh": "老人叫救护车几乎总有真问题——但未必是他嘴上说的那个。疑病在这个人群里更少见，而不是更多。"
+  },
+  {
+   "en": "Hypotensive patient wearing a nitroglycerin patch? Take the patch off — the complaint may be too much, or too little, of that drug.",
+   "zh": "低血压病人身上贴着硝酸甘油贴片？先撕掉——主诉可能正是这药给多了或给少了造成的。"
+  },
+  {
+   "en": "Think hypovolemia in any older adult with a systolic pressure under 120 mm Hg — their baseline runs high, so a 'normal' number can be shock in disguise.",
+   "zh": "任何收缩压低于 120 mmHg 的老人都要想到低血容量——他们基线偏高，『正常』数字可能是伪装的休克。"
+  },
+  {
+   "en": "Tachypnea is one of the most sensitive early markers of acute illness in the elderly, especially lung infection — even when everything else looks quiet.",
+   "zh": "呼吸增快是老年急病（尤其肺部感染）最敏感的早期标志之一——哪怕其他一切看起来风平浪静。"
+  },
+  {
+   "en": "Put every geriatric patient on the monitor, whatever the chief complaint.",
+   "zh": "每一个老年病人都上监护，无论主诉是什么。"
+  },
+  {
+   "en": "Cover the patient with a blanket: it preserves warmth, protects dignity, and a patient who feels respected examines better.",
+   "zh": "给病人盖上毯子：保温、保尊严，被尊重的病人也更配合检查。"
+  },
+  {
+   "en": "UTI clues: fever, chills, cloudy foul-smelling urine, burning on voiding, rectal pain in men, pelvic pain in women — and in the elderly, sometimes just new confusion.",
+   "zh": "UTI 线索：发热、寒战、浑浊有臭味的尿、排尿灼痛、男性直肠痛、女性盆腔痛——在老人身上有时只表现为新出现的意识混乱。"
+  },
+  {
+   "en": "Trauma arithmetic: failing compensatory mechanisms + aged organ systems + preexisting disease = bad outcomes. Keep them warm — cold blood does not clot.",
+   "zh": "创伤算术：代偿机制衰退 + 器官老化 + 基础病 = 差结局。给病人保暖——冷的血不凝。"
+  },
+  {
+   "en": "Collect ALL medications — prescription and over-the-counter — and bring them to hospital, along with hearing aids and glasses so the patient can keep communicating.",
+   "zh": "把所有药——处方药加非处方药——收齐带去医院，助听器和眼镜也一并带上，让病人一路都能沟通。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "A mild-sounding complaint does not mean a mild case. Geriatrics is the specialty of hidden severity: quiet presentations with low reserve underneath.",
+   "zh": "主诉听着轻不代表病情轻。老年医学恰恰是『藏起来的重症』专科：表面安静，底下储备见底。"
+  },
+  {
+   "en": "Do not wait for textbook symptoms before taking a case seriously. Atypical presentation means the physiology is speaking a different language, not that acuity is low.",
+   "zh": "别等教科书症状凑齐才认真对待。非典型表现只说明生理换了种语言说话，不代表危重程度低。"
+  },
+  {
+   "en": "Age alone is not the story: baseline function and physiologic reserve tell you far more than the birth year. Always ask how far this patient has drifted from their own normal.",
+   "zh": "年龄本身说明不了什么：基线功能和生理储备比出生年份有用得多。永远要问：这位病人离『他自己的正常』漂了多远。"
+  },
+  {
+   "en": "Delirium vs dementia: delirium is abrupt (hours to days), fluctuating, and usually reversible once the cause is treated; dementia builds over months to years and is irreversible. A patient with dementia can ALSO develop delirium — the flag is acute change from that patient's baseline.",
+   "zh": "谵妄 vs 痴呆：谵妄起病急（数小时到数天）、症状波动、病因处理后通常可逆；痴呆历经数月数年且不可逆。痴呆病人同样可以叠加谵妄——识别旗标是『相对其本人基线的急性改变』。",
+   "hard": true
+  },
+  {
+   "en": "Skin tenting is unreliable in the elderly — lost elasticity mimics dehydration in a well-hydrated patient. Trust the real signs instead: dry furrowed tongue, dry mucosa, weak upper-body muscles, confusion, difficult speech, sunken eyes.",
+   "zh": "皮肤『搭帐篷』在老人身上不可靠——弹性流失会让水分正常的人看起来像脱水。请改信真正的脱水征：舌干有纵沟、黏膜干、上身肌力弱、意识混乱、言语困难、眼窝凹陷。"
+  },
+  {
+   "en": "A 'normal adult' blood pressure can be hypotension in an older patient whose baseline runs high. Chase the baseline, not the textbook range.",
+   "zh": "『正常成人』血压在基线偏高的老人身上可能就是低血压。追他的基线，别追教科书区间。"
+  },
+  {
+   "en": "Constipation is common and does cause abdominal pain — but it is never your first suspect. Rule out the killers first: bleeding aortic aneurysm and dead bowel from mesenteric ischemia.",
+   "zh": "便秘常见、也确实会腹痛——但它永远不该是你的第一嫌疑人。先排除会杀人的：腹主动脉瘤出血、肠系膜缺血坏死肠管。"
+  },
+  {
+   "en": "Crackles in the chest and swollen legs are not automatic heart failure: older lungs can crackle without pathology and leg edema may be chronic venous insufficiency. Do not reach for CPAP at the first crackle — build the whole picture.",
+   "zh": "肺里有湿啰音、腿肿≠心衰：老年肺可以无病理性原因地出现啰音，腿肿也可能是慢性静脉功能不全。别一听到 crackle 就上 CPAP——先拼完整幅图。"
+  },
+  {
+   "en": "Never write lower GI bleeding off as hemorrhoids — polyps and colon cancer bleed too. And remember melena, not pain, is the most common presenting sign of UPPER GI bleeding.",
+   "zh": "下消化道出血永远别甩锅给痔疮——息肉和结肠癌同样会出血。并记住：上消化道出血最常见的表现是黑便（melena），不是腹痛。",
+   "hard": true
+  },
+  {
+   "en": "Sometimes the fracture caused the fall, not the reverse: a patient who felt something snap BEFORE going down likely broke a fragile hip first. Meticulous history separates trip, drop attack, orthostatic drop, syncope, stroke, and fracture-first.",
+   "zh": "有时是先骨折才摔倒，而非摔倒致骨折：倒地前先感到『咔』一声的病人，很可能是脆弱的髋部先断了。细致的病史才能分开绊倒、猝倒发作、体位性低血压、晕厥、卒中和『骨折在前』。",
+   "hard": true
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "GEMS diamond",
+   "en": "G — Geriatric mindset: expect atypical presentations. E — Environment: temperature, hazards, upkeep, security of the home. M — Medical: thorough history; many conditions, many medications. S — Social: shrinking support network, help with daily activities, referrals to services.",
+   "zh": "G——老年思维：默认会有非典型表现；E——环境评估：居所冷热、隐患、整洁与安全；M——医学评估：病史要挖透，多病共存、多药同服；S——社会评估：支持网萎缩、日常活动要人帮、该转介就转介。"
+  },
+  {
+   "name": "DELIRIUMS",
+   "en": "Causes of delirium: Drugs/toxins (or withdrawal); Emotional/electrolytes; Low PaO2 (CO, COPD, heart failure, MI, pneumonia); Infection (UTI, pneumonia, sepsis); Retention of stool or urine; Ictal (seizure); Undernutrition/underhydration; Metabolic (thyroid, kidneys, electrolytes); Subdural hematoma.",
+   "zh": "谵妄病因九宫格：D 药物/毒物（含戒断）；E 情绪精神/电解质；L 低氧（CO 中毒、COPD、心衰、心梗、肺炎）；I 感染（UTI、肺炎、脓毒症）；R 便/尿潴留；I 癫痫发作期；U 营养不良/脱水；M 代谢（甲状腺、肾、电解质）；S 硬膜下血肿。"
+  },
+  {
+   "name": "Start low, go slow",
+   "en": "Geriatric dosing rule: the best dose is the lowest that works. Cut CNS-active drugs especially — think fentanyl 25 mcg instead of 50.",
+   "zh": "老年给药总则：最佳剂量就是能起效的最低剂量。作用于中枢的药尤其要砍——比如芬太尼 25 mcg 起，而不是 50。"
+  },
+  {
+   "name": "100 − age/3",
+   "en": "Quick PaO2 estimate on room air: subtract a third of the age from 100. A 'normal-looking' SpO2 hides less reserve than you think.",
+   "zh": "室内空气 PaO2 速算：100 减去年龄的三分之一。看着『还行』的血氧背后，储备比你以为的薄。"
+  },
+  {
+   "name": "三多（3 Ps）",
+   "en": "Polyuria, polydipsia, polyphagia — the classic hyperglycemia trio; in elders new-onset diabetes may instead creep in with no symptoms at all.",
+   "zh": "多尿、多饮、多食——高血糖经典三联；但老年新发糖尿病常常悄无声息，一个症状都不给。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "List the atypical faces of myocardial infarction in an older adult, and the assessment rule they force on you.",
+   "qZh": "列举老年心梗的非典型面孔，以及它们逼出的评估规则。",
+   "aEn": "Chest pain may be blunted or absent; instead expect dyspnea, syncope, weakness, confusion, nausea or vomiting, or plain fatigue. The rule: put every geriatric patient on the cardiac monitor regardless of complaint, and never rank acuity by how dramatic the presentation looks.",
+   "aZh": "胸痛可以减弱甚至缺席；取而代之的是呼吸困难、晕厥、乏力、意识混乱、恶心呕吐或单纯疲倦。规则：无论主诉是什么，每个老年病人都上心电监护，且绝不以表现的『戏剧程度』给危重度排序。"
+  },
+  {
+   "qEn": "How do you separate delirium from dementia at the bedside, and what does DELIRIUMS stand for?",
+   "qZh": "床旁如何区分谵妄与痴呆？DELIRIUMS 代表什么？",
+   "aEn": "Delirium: abrupt onset over hours to days, fluctuating course, disrupted attention, usually reversible — always a sign of physical illness or intoxication, always an emergency. Dementia: gradual over months to years, irreversible. DELIRIUMS = Drugs/toxins, Emotional/electrolytes, Low PaO2, Infection, Retention of stool/urine, Ictal, Undernutrition/underhydration, Metabolic, Subdural hematoma.",
+   "aZh": "谵妄：数小时到数天内急性起病、病程波动、注意力涣散、通常可逆——它永远提示躯体疾病或药物中毒，永远按急症处理。痴呆：数月数年缓慢进展、不可逆。DELIRIUMS = 药物毒物、情绪/电解质、低氧、感染、便尿潴留、癫痫发作、营养不良/脱水、代谢、硬膜下血肿。"
+  },
+  {
+   "qEn": "Walk through the GEMS diamond on a nursing-home call.",
+   "qZh": "在一次养老院出勤中过一遍 GEMS 钻石。",
+   "aEn": "G: switch on the geriatric mindset — this patient may present atypically. E: read the environment — temperature, hazards, cleanliness, security. M: dig the medical history — multiple conditions, prescription plus OTC plus herbal medications, take them all along. S: size up the social side — support network, ability to dress and eat, and refer to community services where gaps show.",
+   "aZh": "G：切到老年思维——这位病人可能非典型起病。E：读环境——冷热、隐患、卫生、安全。M：挖病史——多病共存，处方药+OTC+草药全问全带。S：看社会面——支持网还剩多少、穿衣吃饭能否自理，缺口处转介社区服务。"
+  },
+  {
+   "qEn": "A senior 'tripped over the rug.' What fall causes must you actively screen for, and with what clues?",
+   "qZh": "老人说『被地毯绊倒』。你必须主动筛查哪些跌倒原因？各自的线索是什么？",
+   "aEn": "Half of falls are intrinsic. Screen: drop attack (sudden collapse, found confused, briefly unable to rise, no warning); orthostatic hypotension (fell on standing up — check medications, ask about black stools, compare lying and sitting pressures); dizziness or syncope (marked bradycardia or tachydysrhythmia); stroke (hemiparesis, aphasia); fracture-first (felt a snap before falling). Meticulous questioning often uncovers dizziness or palpitations before the 'trip.'",
+   "aZh": "一半的跌倒是内因。要筛：猝倒发作（突然倒地、被发现时迷糊、短暂爬不起来、无先兆）；体位性低血压（起身即倒——查用药、问黑便、对比卧位坐位血压）；头晕/晕厥（显著心动过缓或快速心律失常）；卒中（偏瘫、失语）；骨折在前（倒地前先听到『咔』声）。细问之下，『绊倒』前常常藏着头晕或心悸。"
+  },
+  {
+   "qEn": "Which vital-sign pattern should make you say 'sepsis' out loud, and how does geriatric pneumonia disguise itself?",
+   "qZh": "哪组生命体征该让你脱口而出『脓毒症』？老年肺炎又是怎么伪装的？",
+   "aEn": "Hot, flushed, tachycardic, tachypneic — then confirm against the numbers: temperature above 38°C or below 36°C, respirations above 20/min or PaCO2 under 32 mm Hg, pulse above 90/min. Geriatric pneumonia swaps the classic chills-fever-productive-cough for delirium, a normal temperature, and minimal or no cough — especially in patients on regular NSAIDs.",
+   "aZh": "又热又红、心快气促——再对数字：体温 >38°C 或 <36°C、呼吸 >20 次/分或 PaCO2 <32 mmHg、心率 >90 次/分。老年肺炎把经典的寒战-发热-咳痰三件套换成了谵妄、体温正常、几乎不咳——长期吃 NSAIDs 的病人尤其如此。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Nitroglycerin in elderly chest pain",
+   "topicZh": "老年胸痛的硝酸甘油",
+   "bookEn": "The textbook warns only generally that nitroglycerin and morphine cause more hypotension and respiratory trouble in older patients, and to remove a nitro patch if the patient is hypotensive.",
+   "bookZh": "教科书只泛泛提醒：硝酸甘油和吗啡在老年人更易引起低血压与呼吸抑制，低血压者要撕掉硝酸甘油贴片。",
+   "bcEn": "BC hard-codes the numbers: nitro 0.4 mg SL every 3-5 min, only while SBP stays above 110 mm Hg, maximum 3 doses in any 30 minutes; contraindicated with HR under 50 or over 150, or recent Viagra/Levitra (24 h) or Cialis (48 h). The guideline explicitly expects hypotension 'especially in the elderly' — guard against falls after dosing. A worn patch does not change the protocol.",
+   "bcZh": "BC 把数字写死：硝酸甘油 0.4 mg 舌下 q3-5min，仅在 SBP >110 mmHg 时给，任意 30 分钟内最多 3 剂；HR <50 或 >150、24 小时内用过 Viagra/Levitra 或 48 小时内用过 Cialis 为禁忌。指南明说低血压『在老年人中必须预期发生』——给药后防跌倒。病人自贴的贴片不改变本方案。",
+   "ref": "BC Guidelines p.47, p.73"
+  },
+  {
+   "topicEn": "Oxygen for the COPD patient",
+   "topicZh": "COPD 病人的给氧",
+   "bookEn": "The textbook keeps COPD oxygen vague — supportive care, supplemental oxygen, long-term home oxygen helps hypoxemic patients.",
+   "bookZh": "教科书对 COPD 给氧写得含糊——支持治疗、补氧、长期家庭氧疗对低氧血症者有益。",
+   "bcEn": "BC is explicit: high-flow oxygen IS indicated for the COPD patient short of breath; after acute treatment, maintain by nasal cannula 1-3 L/min. Titrate toward SpO2 94% (may not be achievable), up to 15 L/min. Never withhold oxygen from a distressed COPD patient over hypoxic-drive fears on this exam.",
+   "bcZh": "BC 写得明确：COPD 病人呼吸困难时就该给高流量氧；急性处理后改鼻导管 1-3 L/min 维持。向 SpO2 94% 滴定（可能达不到），流量上限 15 L/min。考试里绝不能因为『低氧驱动』顾虑而对呼吸窘迫的 COPD 病人扣着氧不给。",
+   "ref": "BC Guidelines p.49-50"
+  },
+  {
+   "topicEn": "Fluid boluses in the elderly",
+   "topicZh": "老年补液",
+   "bookEn": "The textbook says only: it is easy to sodium-overload an older person — use small boluses and reassess frequently for pulmonary edema; be cautious with fluids in HHS.",
+   "bookZh": "教科书只说：老年人极易钠/容量超载——小量分次、勤评估肺水肿；HHS 补液要谨慎。",
+   "bcEn": "BC's standing bolus order everywhere is 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL. In geriatric patients that built-in 500-mL reassessment is your safety valve: listen to the chest and recheck work of breathing at each mark before continuing.",
+   "bcZh": "BC 各处的标准补液医嘱都是 20 mL/kg、上限 2 L、每 500 mL 重评。对老年病人，这个内置的 500 mL 重评就是你的安全阀：每到刻度先听肺、看呼吸做功，再决定继续。",
+   "ref": "BC Guidelines p.28, p.48"
+  },
+  {
+   "topicEn": "Pelvic binder vs the fallen senior",
+   "topicZh": "骨盆带 vs 跌倒的老人",
+   "bookEn": "The textbook lists hip fracture as the most common geriatric orthopaedic injury and recommends padded immobilization; it does not discuss binders.",
+   "bookZh": "教科书列髋部骨折为老年最常见骨科损伤并建议厚垫固定；未讨论骨盆带。",
+   "bcEn": "BC draws a hard line: pelvic binding is CONTRAINDICATED for neck-of-femur (hip) fractures and for falls from standing height or other simple falls. Binding is for major mechanism plus instability (HR over 100 or SBP under 90), pelvic pain or instability, decreased LOC, or a distracting injury. Centre the binder on the greater trochanters; zap straps are unacceptable.",
+   "bcZh": "BC 划了硬线：股骨颈（髋部）骨折、站立高度跌倒等简单跌倒——禁用骨盆带。绑带的指征是高能机制加不稳定（HR >100 或 SBP <90）、骨盆痛或不稳、意识下降、或有分散注意的大伤。绑带中心对准股骨大转子；扎带（zap straps）不合格。",
+   "ref": "BC Guidelines p.24"
+  },
+  {
+   "topicEn": "Spinal clearance in the elderly",
+   "topicZh": "老年脊柱固定判定",
+   "bookEn": "The textbook stresses that cervical spondylosis makes even minor trauma or sudden neck movement enough to injure the aging cord, and says to immobilize before transport with generous padding.",
+   "bookZh": "教科书强调颈椎退变让轻微创伤甚至猛回头都足以伤及老化的脊髓，转运前需固定并厚垫。",
+   "bcEn": "BC tests by rulebook: follow NEXUS and the Canadian C-Spine Rule. Remember the CCR counts age 65 or older as a high-risk factor by itself — a 70-year-old with a plausible mechanism cannot be clinically cleared. Manual stabilization, hard collar, immobilization device, blocks; do not tape the head.",
+   "bcZh": "BC 按规则出题：走 NEXUS 和 Canadian C-Spine Rule。记住 CCR 把『年龄 ≥65』本身列为高危因素——机制说得通的 70 岁病人不能临床排除。手法固定、硬颈托、固定装置、头部固定块；不要用胶带贴头。",
+   "ref": "BC Guidelines p.25-26"
+  },
+  {
+   "topicEn": "DNR / No CPR orders",
+   "topicZh": "DNR / 拒绝心肺复苏医嘱",
+   "bookEn": "The textbook says to know your regional advance-directive and DNR policies and honour them as the patient's expressed wishes; DNR never means do-not-care.",
+   "bookZh": "教科书说：熟悉本地区预立医疗指示与 DNR 政策，把它当作病人的意愿来尊重；DNR 绝不等于不照护。",
+   "bcEn": "In BC protocol terms, a VERIFIABLE DNR or No CPR order is the listed contraindication to CPR/AED — you may also stop resuscitation on such an order, on physician instruction, on signs of life, or at the 30-minute (no ROSC, no shocks) / 40-minute (any ROSC or shock) marks. Comfort care, dignity, and family support remain fully in scope.",
+   "bcZh": "在 BC 方案语言里，『可核实的 DNR 或 No CPR 医嘱』就是 CPR/AED 的禁忌证——复苏也可因该医嘱、医生指示、出现生命迹象、或到达 30 分钟（无 ROSC 无除颤）/40 分钟（曾有 ROSC 或除颤）时限而终止。安慰照护、尊严与家属支持始终照做。",
+   "ref": "BC Guidelines p.40"
+  },
+  {
+   "topicEn": "Antiemetics in older patients",
+   "topicZh": "老年病人的止吐药",
+   "bookEn": "The textbook lists dimenhydrinate (Gravol) or ondansetron (Zofran) for nausea in older adults and warns broadly that anticholinergics and antihistamines cause urinary difficulty, constipation, and drowsiness in this group.",
+   "bookZh": "教科书给老年恶心列了 dimenhydrinate（Gravol）或 ondansetron（Zofran），并泛泛警告抗胆碱能/抗组胺药在此人群致排尿困难、便秘、嗜睡。",
+   "bcEn": "BC's drug monographs name the elderly directly: dimenhydrinate carries 'elderly' as a caution alongside glaucoma, asthma/COPD, cardiovascular disease, and prostatic hyperplasia; ondansetron requires close monitoring for respiratory depression and CNS effects 'particularly in elderly patients' or hepatic/renal impairment. Ondansetron adult dose 4 mg PO; congenital long QT is a contraindication.",
+   "bcZh": "BC 药物专论直接点名老年人：dimenhydrinate 的 caution 栏把『老年』与青光眼、哮喘/COPD、心血管病、前列腺增生并列；ondansetron 要求『尤其对老年或肝肾功能受损病人』密切监测呼吸抑制与中枢反应。Ondansetron 成人剂量 4 mg 口服；先天性长 QT 为禁忌。",
+   "ref": "BC Guidelines p.63-64, p.75"
+  },
+  {
+   "topicEn": "Table 45-5 drug list vs BC PCP scope",
+   "topicZh": "Table 45-5 药物清单 vs BC PCP 执业范围",
+   "bookEn": "The textbook's geriatric-emergency management chart (Table 45-5) lists hospital/ALS-level drugs without flagging any scope boundary — labetalol or sodium nitroprusside for hypertensive crisis, heparin/enoxaparin for pulmonary embolism, dopamine for unstable heart failure, haloperidol/olanzapine for behavioural disorders.",
+   "bookZh": "教科书的老年急症管理表（Table 45-5）列了一串医院/ALS 级别的药，完全没标注执业范围边界——高血压危象用 labetalol 或硝普钠、肺栓塞用肝素/依诺肝素、不稳定心衰用多巴胺、行为障碍用氟哌啶醇/奥氮平。",
+   "bcEn": "None of these five drugs appear anywhere in the BC PCP/EMR provincial guidelines. A BC PCP's real scope for these presentations stays supportive care, oxygen, IV fluids per the standing 20 mL/kg (max 2 L) bolus, the approved antiemetics (dimenhydrinate/ondansetron), and rapid transport. Read Table 45-5 as background on what happens after hospital handoff, not as a list of drugs you will personally give.",
+   "bcZh": "这五种药一个都没出现在 BC PCP/EMR 省级指南里。BC PCP 对这些情况的真实执业范围仍是支持治疗、给氧、按标准 20 mL/kg（上限 2 L）补液、已获批的止吐药（dimenhydrinate/ondansetron）加快速转运。Table 45-5 该当成『交接给医院后会发生什么』的背景知识来读，而不是自己会给的药单。",
+   "ref": "BC Guidelines（全文检索：无 labetalol / sodium nitroprusside / heparin / enoxaparin / dopamine / haloperidol / olanzapine 匹配）"
+  }
+ ],
+ "sourcePages": "3880-3958"
+}
