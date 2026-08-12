@@ -1,0 +1,708 @@
+{
+ "id": "ch32",
+ "n": 32,
+ "titleEn": "Endocrine Emergencies",
+ "titleZh": "内分泌急症",
+ "group": "medical",
+ "examWeight": 2,
+ "whyEn": "A weight-2 chapter that hides one of the best-loved written-exam traps in the whole course: the DKA-versus-HHS differential (ketosis or not, glucose threshold, type 1 vs type 2, Kussmaul respirations), plus thyroid storm, myxedema coma, and Addisonian crisis all compressed into a handful of pages. The book's drug numbers are almost all wrong for BC — D50W becomes D10W, and glucagon gains an intranasal route — so this chapter is really a numbers-correction exercise sitting on top of the glucose physiology you already covered in ch31. The practical payoff is recognizing that a vague, generally-unwell patient may be an endocrine emergency, and that objective glucose data plus a fast skin/breathing read (Kussmaul, fruity breath, hypothermia with no fever) can solve the case before any lab result comes back.",
+ "whyZh": "权重 2，但压缩了全书最爱考的鉴别题之一：DKA vs HHS（有没有酮症、血糖分界、1 型 vs 2 型、Kussmaul 呼吸），外加甲状腺危象、黏液性水肿昏迷、肾上腺危象全挤在几页纸里。教材的药物数字几乎全部要改写成 BC 版本——D50W 要换成 D10W，胰高血糖素还多了鼻喷给药——所以这一章某种程度上是叠在第 31 章血糖知识之上的一次「数字纠错」练习。实操端的重点是：一个看起来「就是很不舒服、说不清哪里」的病人，也可能是内分泌急症；客观血糖数据加上快速的皮肤/呼吸判读（Kussmaul 呼吸、烂苹果味、低体温却不发热），常常能在任何化验结果出来之前就把案子破了。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics（采集过敏史/用药史/主诉与现病史/既往史；准确完整的现场评估；初步评估与判读；血糖检测与判读）",
+   "Area 5: Therapeutics（维护外周静脉通路及不含添加剂的晶体液输注）",
+   "Area 6: Integration（处置出现内分泌系统症状体征的患者）"
+  ],
+  "codes": [
+   "4.2.a",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.2.f",
+   "4.3.a",
+   "4.5.c",
+   "5.5.c",
+   "6.1.i"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Anatomy & Physiology",
+   "titleZh": "解剖与生理基础",
+   "points": [
+    {
+     "en": "Endocrine glands (no ducts) release hormones straight into surrounding tissue/blood; exocrine glands (sweat, salivary, liver) use ducts to carry secretions outward. Hormones act as the body's slower, broader-reaching 'second controlling system' alongside the faster nervous system.",
+     "zh": "内分泌腺（无导管）把激素直接释放进周围组织和血液；外分泌腺（汗腺、唾液腺、肝脏）靠导管把分泌物送到体外。激素是身体比神经系统更慢、但作用范围更广的「第二套调控系统」。",
+     "hard": false
+    },
+    {
+     "en": "Receptor logic: agonists bind a cell's receptor and trigger a response; antagonists bind the same receptor and block agonist action instead. Many prehospital drugs are simply synthetic agonists or antagonists at a hormone's own receptor.",
+     "zh": "受体逻辑：激动剂结合受体并触发细胞反应；拮抗剂结合同一受体却阻断激动剂的作用。不少院前用药本质上就是某种激素受体的人工激动剂或拮抗剂。",
+     "hard": false
+    },
+    {
+     "en": "Most hormone control runs on negative feedback: stress drives the sympathetic system to push the adrenal medulla to release epinephrine; once the stressor is gone, the signal quiets and epinephrine secretion falls back down. Disease often traces back to a break somewhere in one of these loops.",
+     "zh": "多数激素调控靠负反馈：压力驱动交感神经系统，促使肾上腺髓质释放肾上腺素；压力一消失，信号减弱，肾上腺素分泌随之回落。很多内分泌疾病的根源就是这类反馈环节出了故障。",
+     "hard": false
+    },
+    {
+     "en": "Hypothalamus-pituitary axis: the hypothalamus is brain tissue, not a gland — it's the anatomic bridge between nervous and endocrine control. The pituitary is the 'master gland': its anterior lobe manufactures six hormones itself (including ACTH, TSH, growth hormone), while its posterior lobe only stores and releases two hormones (ADH, oxytocin) that were actually made by the hypothalamus.",
+     "zh": "下丘脑-垂体轴：下丘脑是脑组织而非腺体——它是神经系统和内分泌系统之间的解剖桥梁。垂体被称为「主腺」：前叶自己合成六种激素（含 ACTH、TSH、生长激素）；后叶只负责储存和释放两种激素（ADH、催产素），而这两种激素其实是下丘脑造的。",
+     "hard": true
+    },
+    {
+     "en": "Thyroid vs parathyroid on calcium: thyroid calcitonin LOWERS blood calcium (pushes it into bone, boosts renal excretion); parathyroid hormone (PTH) is calcitonin's antagonist and RAISES blood calcium (breaks down bone, cuts renal calcium loss). The pair keeps calcium in a tight physiologic band. Thyroxine, the thyroid's other main product, sets the whole-body metabolic rate and requires dietary iodine to be made at all.",
+     "zh": "甲状腺 vs 甲状旁腺对钙的调节：甲状腺降钙素「降」血钙（把钙推入骨骼、增加肾排泄）；甲状旁腺激素（PTH）是降钙素的拮抗剂，会「升」血钙（分解骨骼、减少肾排钙）。两者搭配把血钙锁在一个很窄的生理区间。甲状腺的另一主打产物甲状腺素决定全身代谢率，制造它离不开膳食碘。",
+     "hard": false
+    },
+    {
+     "en": "Adrenal cortex vs medulla: cortex makes corticosteroids/mineralocorticoids (cortisol = stress response, glucose balance, anti-inflammatory; aldosterone = sodium/water retention plus potassium excretion, driven by the renin-angiotensin system and serum potassium) plus sex hormones. Medulla makes catecholamines (epinephrine/norepinephrine) that drive the fight-or-flight response — heart rate, respiratory rate, and blood pressure all rise, and liver glycogen converts to glucose.",
+     "zh": "肾上腺皮质 vs 髓质：皮质产糖皮质激素/盐皮质激素（皮质醇＝应激反应、血糖平衡、抗炎；醛固酮＝保钠保水＋排钾，受肾素-血管紧张素系统和血钾水平驱动）以及性激素。髓质产儿茶酚胺（肾上腺素/去甲肾上腺素），驱动「战或逃」反应——心率、呼吸频率、血压全面升高，肝糖原转化为葡萄糖。",
+     "hard": false
+    },
+    {
+     "en": "The stress axis that matters clinically: stress -> hypothalamus -> anterior pituitary releases ACTH -> adrenal cortex releases cortisol. Cortisol is what keeps vascular smooth muscle toned — this is the direct mechanistic link to why adrenal insufficiency later in this chapter threatens blood pressure so directly.",
+     "zh": "临床上最关键的应激轴：压力→下丘脑→垂体前叶释放 ACTH→肾上腺皮质释放皮质醇。正是皮质醇维持着血管平滑肌的张力——这也是本章后面「肾上腺功能不全会直接威胁血压」这一机制的源头。",
+     "hard": false
+    },
+    {
+     "en": "Pancreas is both exocrine (digestive enzymes via the pancreatic duct) and endocrine (islets of Langerhans): alpha cells secrete glucagon, which raises glucose by breaking down liver glycogen; beta cells secrete insulin, the ONLY hormone that lowers blood glucose, by driving cellular glucose uptake and glycogen/fat/protein storage.",
+     "zh": "胰腺兼具外分泌（经胰管分泌消化酶）和内分泌（胰岛）两种功能：α细胞分泌胰高血糖素，通过分解肝糖原升高血糖；β细胞分泌胰岛素——唯一能「降」血糖的激素，靠促进细胞摄取葡萄糖及糖原/脂肪/蛋白质的储存来实现。",
+     "hard": true
+    },
+    {
+     "en": "The six major endocrine components to know as a set: hypothalamus, pituitary, thyroid, parathyroid, adrenal glands, and gonads — plus the pancreas, which straddles endocrine and exocrine duty. Gonads (testes/androgens in men, ovaries/estrogen+progesterone in women) drive puberty and reproduction but are rarely the source of an EMS-relevant emergency in this chapter.",
+     "zh": "内分泌系统六大主要组成要成组记：下丘脑、垂体、甲状腺、甲状旁腺、肾上腺、性腺——外加身兼内外分泌两职的胰腺。性腺（男性睾丸/雄激素，女性卵巢/雌孕激素）驱动青春期发育和生殖，但本章里很少直接构成 EMS 相关的急症。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "General Assessment & Management",
+   "titleZh": "总体评估与处置",
+   "points": [
+    {
+     "en": "Scene clues often solve the case faster than the exam: check bureau tops, bedside tables, medicine cabinets, and the fridge (for insulin) for anything that hints at the underlying illness. Bring medication bottles to hospital — they can identify the treating physician and confirm the diagnosis.",
+     "zh": "现场线索常常比查体更快破案：查看边几、床头柜、药箱，以及冰箱（找胰岛素），任何能提示潜在疾病的东西都别放过。把药瓶一起带去医院——它们能帮忙确认主治医生并佐证诊断。",
+     "hard": false
+    },
+    {
+     "en": "ABCs come first regardless of the endocrine cause. Altered-LOC patients often can't protect their own airway and vomit frequently — manage with positioning, suction, and basic airway adjuncts as needed; give supplemental oxygen liberally whenever there's any respiratory concern, even with a normal SpO2 reading.",
+     "zh": "不管背后是哪种内分泌病因，ABC 永远优先。意识改变的患者常常无法自行保护气道且反复呕吐——按需体位摆放、吸引、基础气道辅助；只要对呼吸状态有任何担心，即便 SpO2 正常也应大方给氧。",
+     "hard": false
+    },
+    {
+     "en": "Skin exam is a fast pre-lab triage clue: cold+clammy suggests shock or severe hypoglycemia; cold+dry suggests sedative/alcohol overdose; hot+dry suggests fever or (in the right context) heatstroke.",
+     "zh": "皮肤检查是化验结果出来之前的快速分诊线索：冷而湿黏——提示休克或重度低血糖；冷而干燥——提示镇静药/酒精中毒；热而干燥——提示发热，或在合适情境下提示中暑。",
+     "hard": false
+    },
+    {
+     "en": "Posture and vital-sign overlap with neuro findings: an awkward found position or decorticate/decerebrate posturing is a bad sign; hypertension paired with bradycardia in a comatose patient should raise suspicion for increased ICP, not be assumed to be purely endocrine — the differentials from ch31 apply here too.",
+     "zh": "体位和生命体征与神经系统表现有交集：发现患者姿势怪异或出现去皮层/去大脑姿势都是坏迹象；昏迷患者若同时出现高血压＋心动过缓，应怀疑 ICP 升高，而不要想当然归为纯内分泌问题——第 31 章的鉴别诊断在这里同样适用。",
+     "hard": false
+    },
+    {
+     "en": "Breathing-pattern clues in a comatose patient: Cheyne-Stokes breathing usually points AWAY from a neurologic cause, not toward one. Sneezing and yawning both require an intact brainstem, so their presence is reassuring; hiccupping and coughing patterns, by contrast, can flag brainstem damage.",
+     "zh": "昏迷患者的呼吸型态线索：潮式（Cheyne-Stokes）呼吸通常提示病因「不在」神经系统，而不是相反。打喷嚏和打哈欠都需要脑干功能完整才能做出来，出现它们反而是安心信号；打嗝和咳嗽型态则可能提示脑干损伤。",
+     "hard": false
+    },
+    {
+     "en": "Family/genetic history matters, especially in children: a new-onset altered mental status in a child whose parent or grandparent has diabetes is a strong clue toward a diabetic cause.",
+     "zh": "家族/遗传病史很重要，尤其在儿童患者：如果家长或祖辈有糖尿病史，孩子新发的意识状态改变就要高度怀疑糖尿病相关病因。",
+     "hard": false
+    },
+    {
+     "en": "Reassessment cadence (book): recheck vital signs, pupils, and LOC every 5 minutes in unstable patients and every 10 minutes in stable patients — the trend across several measurements matters more than any single reading.",
+     "zh": "复评节奏（教材）：不稳定患者每 5 分钟、稳定患者每 10 分钟复查一次生命体征、瞳孔和意识水平——多次测量呈现的趋势比单一读数更重要。",
+     "hard": true
+    },
+    {
+     "en": "Transport position: supine if intubated; lateral/recovery position otherwise (unless injuries preclude it). If the patient must stay supine (e.g. suspected spine injury) and can't be intubated, keep the mouth and pharynx suctioned clear of secretions, vomitus, and blood.",
+     "zh": "转运体位：已插管者取仰卧位；未插管者取侧卧/复原体位（除非损伤不允许）。如必须仰卧（如疑似脊柱损伤）且无法插管，须持续吸引口咽，保持分泌物、呕吐物和血液不阻塞气道。",
+     "hard": false
+    },
+    {
+     "en": "Book's general algorithm for altered mental status: IV NS or saline lock -> immediate glucose check -> if below 4 mmol/L, treat (book dose 12.5-25 g D50W; BC uses D10W instead — see bcAlerts) -> if no improvement, or signs suggest opioid overdose (pinpoint pupils, needle tracks, depressed respirations), consider naloxone next.",
+     "zh": "教材针对意识改变的总体流程：建立静脉通路或留置针→立即测血糖→若低于 4 mmol/L 即治疗（教材剂量 D50W 12.5-25 g；BC 用 D10W，见 bcAlerts）→若无改善，或体征提示阿片过量（针尖样瞳孔、针眼痕迹、呼吸抑制），下一步考虑纳洛酮。",
+     "hard": true
+    },
+    {
+     "en": "Documentation/lab discipline: draw a blood specimen BEFORE giving any prehospital dextrose or other drug to a diabetic patient — once medications are on board, the hospital's later blood work is permanently altered and less useful diagnostically.",
+     "zh": "记录/送检纪律：给糖尿病患者用任何院前葡萄糖或药物之前，先抽血备样——一旦药物已经上身，医院后续的化验结果会被永久改变，诊断价值大打折扣。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Diabetes Mellitus Overview",
+   "titleZh": "糖尿病总论：1 型与 2 型",
+   "points": [
+    {
+     "en": "Diabetes mellitus = impaired glucose metabolism producing polyuria with glucose in the urine, significant thirst, and progressive body-function decline. Canadian scope: roughly 3 million Canadians (about 8.1% of the population) live with diabetes; about 1 in 10 adults age 20+ versus about 1 in 300 in ages 1-19; it is more common in men than women.",
+     "zh": "糖尿病＝葡萄糖代谢障碍，表现为多尿伴尿糖、明显口渴、身体机能逐渐衰退。加拿大概况：约 300 万加拿大人患糖尿病（约占人口 8.1%）；20 岁以上成人约十分之一，1-19 岁人群约三百分之一；男性发病率高于女性。",
+     "hard": true
+    },
+    {
+     "en": "Provincial variation (book-stated trivia): Newfoundland and Labrador, Nova Scotia, and Ontario have the highest age-standardized diabetes prevalence in Canada; Nunavut, Alberta, and Quebec have the lowest.",
+     "zh": "省级差异（教材原文提到的冷知识）：纽芬兰与拉布拉多、新斯科舍、安大略的年龄标准化糖尿病患病率在加拿大最高；努纳武特、阿尔伯塔、魁北克最低。",
+     "hard": true
+    },
+    {
+     "en": "Don't confuse diabetes insipidus with diabetes mellitus just because both cause excessive urination — DI is an entirely different disease driven by ADH dysfunction causing excess water loss, unrelated to glucose metabolism.",
+     "zh": "别因为都会多尿就把尿崩症和糖尿病混为一谈——尿崩症是完全不同的疾病，根源是 ADH 功能障碍导致水分过度流失，和葡萄糖代谢无关。",
+     "hard": false
+    },
+    {
+     "en": "Type 1: usually childhood-onset autoimmune destruction of insulin-producing beta cells (possibly infection-triggered); an ABSOLUTE insulin deficiency requiring lifelong exogenous insulin — needed both to control glucose AND to suppress ketoacid production. This is exactly why type 1 patients are the ones who develop DKA.",
+     "zh": "1 型：通常儿童期起病，自身免疫破坏产胰岛素的β细胞（可能由感染触发）；属「绝对」胰岛素缺乏，需终身外源胰岛素——既要控糖也要抑制酮酸生成。这正是为什么 DKA 主要发生在 1 型患者身上。",
+     "hard": false
+    },
+    {
+     "en": "Type 2: the most common form in Canada, usually mid-life onset (though rising in younger patients), linked to metabolic syndrome (central obesity, hypertension, dyslipidemia). Pancreas often still makes insulin but cells resist it; managed with weight loss/diet/oral agents, sometimes high-dose insulin to overcome resistance. These patients typically do NOT develop DKA when insulin is skipped, unlike type 1.",
+     "zh": "2 型：加拿大最常见的糖尿病类型，通常中年起病（但年轻患者也在增多），与代谢综合征相关（腹型肥胖、高血压、血脂异常）。胰腺往往仍能产胰岛素，但细胞对其抵抗；靠减重/饮食/口服药控制，有时需大剂量胰岛素克服抵抗。与 1 型不同，这类患者漏打胰岛素通常不会发展成 DKA。",
+     "hard": false
+    },
+    {
+     "en": "Macrovascular complications: coronary artery disease/MI, hypertension, dyslipidemia, peripheral vascular disease (foot ulcers/amputation), stroke.",
+     "zh": "大血管并发症：冠心病/心梗、高血压、血脂异常、外周血管病变（足溃疡/截肢）、卒中。",
+     "hard": false
+    },
+    {
+     "en": "Microvascular complications: retinopathy (diabetes is the number-one cause of blindness), nephropathy (can progress to end-stage renal disease), neuropathy (paraesthesia, sexual impotence, neurogenic bladder, constipation/diarrhea).",
+     "zh": "微血管并发症：视网膜病变（糖尿病是致盲头号病因）、肾病（可进展为终末期肾病）、神经病变（感觉异常、性功能障碍、神经源性膀胱、便秘/腹泻）。",
+     "hard": true
+    },
+    {
+     "en": "Special consideration — silent MI: long-standing diabetic neuropathy can blunt chest-pain sensation during cardiac ischemia, so a diabetic having an MI may present only with weakness or shortness of breath. Keep a high suspicion index for myocardial ischemia regardless of whether chest pain is present.",
+     "zh": "特别提醒——无痛性心梗：长期糖尿病神经病变会削弱心肌缺血时的胸痛感觉，因此糖尿病患者心梗发作可能只表现为乏力或呼吸困难。不管有没有胸痛，都要对心肌缺血保持高度怀疑。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Hypoglycemia",
+   "titleZh": "低血糖",
+   "points": [
+    {
+     "en": "Definition & mechanism: normal glucose runs roughly 4-8 mmol/L; hypoglycemia = BGL below 4 mmol/L. Unlike other organs that can burn fat or protein, central nervous system cells depend ENTIRELY on glucose, so a falling level starves the brain directly and can develop within minutes to a few hours.",
+     "zh": "定义与机制：正常血糖大致 4-8 mmol/L；低血糖＝血糖低于 4 mmol/L。和能燃烧脂肪或蛋白质的其他器官不同，中枢神经细胞「完全」依赖葡萄糖，血糖下降会直接饿到大脑，且可能在数分钟到几小时内发展起来。",
+     "hard": true
+    },
+    {
+     "en": "Symptom pattern has two sources: a sympathetic 'alarm' discharge (tremor, tachycardia, sweating, hunger) plus direct cerebral dysfunction (headache, confusion, memory loss, incoordination, slurred speech, irritability, dilated pupils, seizure/coma if severe). Patients often LOOK intoxicated and can present paranoid, hostile, or aggressive.",
+     "zh": "症状来自两个来源：交感神经「警报」放电（震颤、心跳快、出汗、饥饿感）加上大脑功能直接受损（头痛、意识混乱、记忆丧失、动作不协调、口齿不清、易激惹、瞳孔散大，重症可抽搐/昏迷）。患者常常看起来像喝醉了，也可能表现出偏执、敌意或攻击性。",
+     "hard": false
+    },
+    {
+     "en": "Not just a diabetic problem: alcoholics, drug overdoses (notably aspirin), and patients with certain cancers/liver/kidney disease can all present hypoglycemic. Never assume a comatose non-diabetic can't be hypoglycemic, and never let a known diabetes diagnosis stop you from considering stroke, seizure, or head injury as the real cause.",
+     "zh": "不只是糖尿病患者的问题：酗酒者、药物过量（尤其阿司匹林）、以及某些肿瘤/肝病/肾病患者都可能表现为低血糖。不要因为患者不是已知糖尿病就排除低血糖，也不要因为患者有糖尿病史就不去考虑卒中、癫痫或头部外伤这些真正的病因。",
+     "hard": false
+    },
+    {
+     "en": "Time-critical damage: unresponsiveness from hypoglycemia lasting beyond about 30 minutes risks generating toxic compounds in the brain that cause permanent neuronal damage — one of the most reversible causes of altered LOC, but only if corrected fast.",
+     "zh": "时间就是脑细胞：低血糖导致的无反应若持续超过约 30 分钟，脑内可能产生有毒代谢产物造成永久神经损伤——这是意识改变里最容易「逆转」的病因之一，但前提是要快。",
+     "hard": true
+    },
+    {
+     "en": "When uncertain of the glucose reading, always err toward assuming hypoglycemia is present — a period of low glucose does more damage than an equivalent stretch of high glucose.",
+     "zh": "拿不准血糖读数时，默认往「低血糖」方向判断更安全——一段时间的低血糖造成的伤害，比同等时长的高血糖更大。",
+     "hard": false
+    },
+    {
+     "en": "Route decision: if alert with an intact gag reflex and able to swallow, treat with oral sugar (candy bar, sugared warm water, regular cola). NEVER give anything by mouth once the level of consciousness is altered — aspiration risk.",
+     "zh": "给糖途径的判断：神志清醒、咽反射正常、能吞咽者可口服补糖（糖果、加糖温水、含糖可乐）。一旦意识水平已经改变，绝不能经口给任何东西——有误吸风险。",
+     "hard": false
+    },
+    {
+     "en": "Book IV technique for the comatose patient: 18-gauge-or-larger line, confirm patency with a saline test bolus and check for blood return before pushing dextrose (it's hypertonic and acidic — infiltration causes tissue damage); book dose is 12.5-25 g D50W push over at least 3 minutes, with another 25 g sometimes needed in severe cases. BC's actual drug is D10W, not D50W — see bcAlerts.",
+     "zh": "教材对昏迷患者的静脉给糖手法：18G 或更粗静脉，先用生理盐水测试推注确认通畅并见回血，再推葡萄糖（其黏稠且偏酸，外渗会损伤组织）；教材剂量 D50W 12.5-25 g，至少推 3 分钟，重症有时需再追加 25 g。BC 实际用药是 D10W 而非 D50W——见 bcAlerts。",
+     "hard": true
+    },
+    {
+     "en": "No-IV-access fallback (book): glucagon 1 mg IM. BC differs on both dose and route — see bcAlerts.",
+     "zh": "无静脉通路时的备选方案（教材）：胰高血糖素 1 mg 肌注。BC 在剂量和途径上都不一样——见 bcAlerts。",
+     "hard": true
+    },
+    {
+     "en": "Airway sequencing trick: hold off on placing an advanced airway if hypoglycemia is suspected — give dextrose first, because a patient who wakes rapidly after treatment will often forcibly self-extubate a tube placed prematurely.",
+     "zh": "气道处理顺序的反直觉点：疑似低血糖时先别急着上高级气道——先给糖，因为一旦患者治疗后迅速清醒，很可能会猛烈拔掉刚放进去的气道装置。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Hyperglycemia, DKA & HHS",
+   "titleZh": "高血糖、DKA 与 HHS",
+   "points": [
+    {
+     "en": "Hyperglycemia = glucose above normal range; common early signs are polyuria plus polydipsia. On its own it does NOT confirm a diabetes diagnosis (other causes exist), and it's linked to worse neurologic outcomes after stroke — check glucose whenever any hyper- or hypoglycemia sign shows up.",
+     "zh": "高血糖＝血糖高于正常范围；常见早期信号是多尿加多饮。单凭高血糖并不能确诊糖尿病（还有其他病因），而且高血糖会让卒中的神经系统预后更差——只要出现任何高血糖或低血糖迹象，都要测血糖。",
+     "hard": false
+    },
+    {
+     "en": "Hyperglycemia vs hypoglycemia contrast card (book Table 32-4): onset gradual over hours-days vs rapid within minutes; skin warm/dry vs pale/moist; breath Kussmaul + sweet/fruity vs normal; BP normal-to-low vs low; pulse normal-or-rapid+full vs rapid+weak; consciousness restless progressing to coma vs irritable/confused/seizure/coma; urine glucose+acetone present vs absent; response to treatment gradual over 6-12 h vs immediate after glucose.",
+     "zh": "高血糖 vs 低血糖对照表（教材 32-4）：起病——数小时到数天的渐进 vs 数分钟内的骤发；皮肤——温暖干燥 vs 苍白湿冷；呼吸/气味——Kussmaul 呼吸＋甜/果味 vs 正常；血压——正常偏低 vs 低；脉搏——正常或快而有力 vs 快而细弱；意识——躁动进展至昏迷 vs 易激惹/意识混乱/抽搐/昏迷；尿——糖和酮体阳性 vs 阴性；治疗反应——6-12 小时逐渐起效 vs 给糖后立刻起效。",
+     "hard": true
+    },
+    {
+     "en": "DKA definition & population: book threshold glucose above roughly 18 mmol/L; occurs overwhelmingly in type 1 diabetics. Mechanism: absolute insulin deficiency means cells can't take up glucose, so the body burns fat instead, producing ketone/acid byproducts that drive metabolic acidosis and the classic fruity breath odour.",
+     "zh": "DKA 定义与好发人群：教材阈值约血糖>18 mmol/L；绝大多数发生在 1 型糖尿病患者。机制：绝对胰岛素缺乏使细胞摄取不到葡萄糖，身体转而燃烧脂肪，产生酮酸类代谢产物，导致代谢性酸中毒和经典的烂苹果样呼气味。",
+     "hard": true
+    },
+    {
+     "en": "DKA fluid/electrolyte cascade: the glucose spike drives osmotic diuresis, causing massive water and electrolyte (sodium, potassium) loss; vomiting worsens the dehydration further, and the combination can progress all the way to shock.",
+     "zh": "DKA 的体液/电解质连锁反应：血糖飙升驱动渗透性利尿，造成大量水分和电解质（钠、钾）流失；呕吐会进一步加重脱水，严重时可发展为休克。",
+     "hard": false
+    },
+    {
+     "en": "DKA timeline & LOC clue: usually develops gradually over 12-48 hours with LOC deteriorating only slowly. DKA patients are RARELY deeply comatose — a totally unresponsive 'DKA' patient should make you hunt for a second cause (head injury, stroke, overdose).",
+     "zh": "DKA 时间线与意识线索：通常在 12-48 小时内渐进发展，意识水平只是缓慢恶化。DKA 患者很少完全深度昏迷——如果患者彻底无反应，要怀疑另有病因（头部外伤、卒中、药物过量）。",
+     "hard": true
+    },
+    {
+     "en": "DKA classic signs: polyuria, polydipsia, polyphagia (the '3 Ps'), nausea/vomiting (worsens dehydration), tachycardia, Kussmaul respirations (deep and rapid, blowing off CO2 to compensate for acidosis), warm/dry skin with dry mucous membranes, fruity ketone breath odour, sometimes fever, abdominal pain, and hypotension.",
+     "zh": "DKA 经典体征：多尿、多饮、多食（「三多」）、恶心呕吐（加重脱水）、心动过速、Kussmaul 呼吸（深大而快，代偿性排出 CO2 以对抗酸中毒）、皮肤温暖干燥伴黏膜干燥、烂苹果样酮体呼气味，有时伴发热、腹痛和低血压。",
+     "hard": false
+    },
+    {
+     "en": "Book field workup threshold: history and exam consistent with DKA plus a measured glucose above roughly 16 mmol/L supports treating as DKA per local protocol. The exact glucose number matters less than the clinical picture — there's no reliable correlation between how high glucose reads and how severe the ketoacidosis actually is.",
+     "zh": "教材院前处置阈值：病史体查符合 DKA 且实测血糖大于约 16 mmol/L，即可按当地方案按 DKA 处置。血糖具体数字不如临床表现重要——血糖有多高和酮症酸中毒有多重，两者并没有可靠的对应关系。",
+     "hard": true
+    },
+    {
+     "en": "DKA fluid protocol (book): up to 1 L NS over the first 30 minutes, continuing near 1 L/hr for the first several hours (patients are often shock-level dehydrated); if hypotensive, bolus isotonic fluid until systolic reaches 80 mmHg then slow down, watching closely for pulmonary edema with any bolus.",
+     "zh": "DKA 补液方案（教材）：首 30 分钟给至多 1 L 生理盐水，之后前几小时维持约 1 L/小时（患者常脱水到接近休克程度）；若低血压，快速补液至收缩压达 80 mmHg 后减慢速度，补液过程中密切留意肺水肿。",
+     "hard": true
+    },
+    {
+     "en": "DKA potassium trap: acidosis itself can push serum potassium dangerously HIGH before treatment — sharply peaked T waves on the monitor suggest this, and sodium bicarbonate correction (if ordered) needs extreme caution since overcorrecting can itself be fatal. Later, insulin (given in hospital) shifts potassium INTO cells and can drop it fast — expect levels to swing in both directions across the course of treatment.",
+     "zh": "DKA 的钾陷阱：治疗前酸中毒本身就可能把血钾推得很高——监护仪上 T 波尖耸提示这一点；若医嘱给碳酸氢钠纠正，必须极度谨慎，过量矫正本身就可能致命。之后到院内给胰岛素，又会把钾推入细胞、使血钾迅速下降——整个病程中血钾可能双向剧烈波动。",
+     "hard": false
+    },
+    {
+     "en": "HHS/HONK definition & population: book threshold glucose above roughly 33 mmol/L; occurs mainly in TYPE 2 diabetics. Hallmark = hyperglycemia plus hyperosmolarity WITHOUT significant ketosis — this is the direct contrast with DKA's ketosis, even though the two clinical pictures overlap and can occur together.",
+     "zh": "HHS/HONK 定义与好发人群：教材阈值约血糖>33 mmol/L；主要发生在 2 型糖尿病患者。标志性特征是高血糖＋高渗透压但「没有」明显酮症——这正是与 DKA 酮症的直接对比，尽管两者临床表现常有重叠甚至同时出现。",
+     "hard": true
+    },
+    {
+     "en": "HHS coma myth-buster: despite the nickname, actual coma occurs in FEWER than 10% of HHS cases — most patients present with severe dehydration plus focal or global neurologic deficits instead. About 30% of HHS patients have NO prior diabetes diagnosis at all, and acute MI is frequently associated with HHS.",
+     "zh": "HHS「昏迷」的迷思破除：尽管俗称里带「昏迷」，实际昏迷只出现在不到 10% 的 HHS 病例中——多数患者表现为重度脱水加局灶或全面性神经功能缺损。约 30% 的 HHS 患者此前从未被诊断过糖尿病，且 HHS 常合并急性心梗。",
+     "hard": true
+    },
+    {
+     "en": "HHS trigger & fluid deficit: most often triggered by a secondary illness (classically pneumonia or a UTI) that cuts fluid intake; total fluid deficit can run 10 L or more. Book protocol: initial bolus 500 mL NS (250 mL if the patient has a heart-failure/renal-insufficiency history), then 1-2 L within the first hour; if glucose is somehow below 4 mmol/L and symptomatic (unusual in HHS), give D50W 25 g per local protocol.",
+     "zh": "HHS 诱因与失水量：最常见由继发疾病（典型是肺炎或尿路感染）诱发，导致进液减少；总失水量可达 10 升甚至更多。教材方案：首剂生理盐水 500 mL（若有心衰/肾功能不全病史则给 250 mL），第一小时内再给 1-2 升；若血糖竟低于 4 mmol/L 且有症状（HHS 中少见），按当地方案给 D50W 25 g。",
+     "hard": true
+    },
+    {
+     "en": "DKA vs HHS quick-contrast card: type 1 vs type 2 population; glucose above ~18 vs ~33 mmol/L; ketosis/acidosis present vs classically absent; both develop over roughly 12-48 hours; coma is uncommon in both (though the '...coma' nickname belongs to HHS, real coma is under 10% there too); both need aggressive fluids and both withhold insulin correction until hospital.",
+     "zh": "DKA vs HHS 速查卡：好发人群 1 型 vs 2 型；血糖约>18 vs >33 mmol/L；酮症酸中毒存在 vs 典型缺失；两者都在约 12-48 小时内进展；两者昏迷都不常见（虽然「…昏迷」这个俗名属于 HHS，但其真正昏迷比例同样不到 10%）；两者都需要积极补液，且都要把胰岛素纠正留到医院进行。",
+     "hard": false
+    },
+    {
+     "en": "Airway/spine practice for the unresponsive hyperglycemic patient: intubate early if the airway can't be protected; apply spinal precautions to any unresponsive found-down patient unless witnesses confirm no fall occurred; don't delay transport to chase IV access — start it en route if needed.",
+     "zh": "无反应高血糖患者的气道/脊柱要点：气道无法保护时及早插管；对任何无反应且是被发现倒地的患者都做脊柱防护，除非有目击者证实没有跌倒；不要为了建立静脉通路而延误转运——需要的话可在途中建立。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Adrenal Emergencies",
+   "titleZh": "肾上腺急症：功能不全与库欣综合征",
+   "points": [
+    {
+     "en": "Adrenal insufficiency = decreased adrenal cortex function -> under-production of cortisol and aldosterone -> weakness, dehydration, and an inability to maintain blood pressure or mount a stress response. Cortisol touches almost every organ (BP/CV support, carb/protein/fat metabolism, glucose balance against insulin, anti-inflammatory effect); aldosterone holds sodium/potassium/water balance via the renin-angiotensin system.",
+     "zh": "肾上腺功能不全＝肾上腺皮质功能下降→皮质醇和醛固酮分泌不足→乏力、脱水、无法维持血压或应对应激。皮质醇几乎影响所有器官（支持血压/心血管、调节糖蛋白脂代谢、平衡胰岛素对血糖的作用、抗炎）；醛固酮通过肾素-血管紧张素系统维持钠/钾/水平衡。",
+     "hard": false
+    },
+    {
+     "en": "Primary adrenal insufficiency (Addison disease): destruction/atrophy of BOTH adrenal glands, symptomatic once about 90% of the cortex is destroyed. In Canada, mostly autoimmune/idiopathic atrophy; a rare disease overall, but treated patients have a normal life expectancy. Classic chronic signs: unexplained weight loss, fatigue, vomiting, diarrhea, anorexia, salt craving, muscle/joint pain, postural dizziness, and hyperpigmentation of extensor surfaces, palm creases, and oral mucosa.",
+     "zh": "原发性肾上腺功能不全（Addison 病）：双侧肾上腺被破坏/萎缩，皮质破坏约达 90% 才出现症状。在加拿大以自身免疫性/特发性萎缩为主；整体属罕见病，但规范治疗后预期寿命正常。慢性期经典表现：不明原因体重下降、乏力、呕吐、腹泻、厌食、嗜盐、肌肉关节痛、体位性头晕，以及伸侧皮肤、掌纹、口腔黏膜的色素沉着（古铜色）。",
+     "hard": true
+    },
+    {
+     "en": "Addison electrolyte/volume picture: failure to regulate sodium/potassium/water means blood volume and blood pressure fall, serum sodium falls, and serum potassium RISES; smooth muscle tone in vessels can drop too, producing vasodilatory shock in extreme cases.",
+     "zh": "Addison 病的电解质/容量表现：钠/钾/水调节失灵导致血容量和血压下降、血钠下降，而血钾「升高」；血管平滑肌张力也可能下降，极端时形成血管扩张性休克。",
+     "hard": false
+    },
+    {
+     "en": "Secondary adrenal insufficiency: a lack of pituitary ACTH (not gland destruction) drops cortisol production. Classic trigger is ABRUPT cessation of chronic corticosteroid use (oral prednisone, inhaled steroids for COPD/asthma, even excessive nasal steroid sprays) — the exogenous steroid had been suppressing the body's own cortisol production. Aldosterone is usually spared in this form.",
+     "zh": "继发性肾上腺功能不全：不是腺体被破坏，而是垂体 ACTH 分泌不足，导致皮质醇生成下降。典型诱因是长期用糖皮质激素后「突然」停药（口服泼尼松、COPD/哮喘吸入激素，甚至过量鼻用激素喷剂）——外源激素此前一直在抑制自身皮质醇分泌。这种类型通常不影响醛固酮。",
+     "hard": false
+    },
+    {
+     "en": "Addisonian crisis: acute decompensation of adrenal insufficiency, usually triggered by stress/trauma/surgery/severe infection, or steroid withdrawal (the single most common trigger). About 25% of adrenal-insufficiency patients have their FIRST symptoms show up as this crisis, with no prior diagnosis. Primary presentation is SHOCK, plus weakness, confusion/LOC loss, hypotension, fever, severe low back/leg/abdominal pain, and severe vomiting/diarrhea driving dehydration.",
+     "zh": "肾上腺危象：肾上腺功能不全的急性失代偿，常由压力/创伤/手术/重症感染诱发，或因激素骤停（最常见诱因）。约 25% 的肾上腺功能不全患者首次发病即以危象呈现，此前从未确诊。主要表现是「休克」，外加乏力、意识混乱/丧失、低血压、发热、严重下背/下肢/腹痛，以及导致脱水的重度呕吐腹泻。",
+     "hard": true
+    },
+    {
+     "en": "Addisonian crisis death mechanism & book field treatment: untreated crisis can be fatal from hypotension or dysrhythmias driven by hyperkalemia. Field care: ABC + O2 + suction ready for vomiting + IV up to 1 L NS (bolus 20 mL/kg if hypotensive) + glucose check with D50W 25-50 g if hypoglycemic (book prefers D5NS as the maintenance fluid, with a second D5W line to help protect glucose) + cardiac monitoring for electrolyte-driven dysrhythmias. Definitive steroid/electrolyte replacement happens in hospital, not the field.",
+     "zh": "肾上腺危象的致死机制与教材院前处置：未治疗的危象可能因低血压或高钾血症引起的心律失常而致命。现场处置：ABC＋给氧＋备好吸引器应对呕吐＋静脉补液至多 1 L 生理盐水（低血压时按 20 mL/kg 快速补液）＋测血糖，低血糖时给 D50W 25-50 g（教材建议维持液首选 D5NS，可加开第二路 D5W 帮助保住血糖水平）＋心电监护追踪电解质紊乱引起的心律失常。确定性的激素/电解质替代要到医院才能完成，不在现场处理范围。",
+     "hard": true
+    },
+    {
+     "en": "Cushing syndrome is the OPPOSITE mechanism — too MUCH cortisol, either from an adrenal/pituitary tumour or (far more commonly encountered) from long-term therapeutic glucocorticoid use (hydrocortisone, prednisone, methylprednisolone, dexamethasone) for conditions like asthma, rheumatoid arthritis, lupus, IBD, or allergies.",
+     "zh": "库欣综合征机制正相反——皮质醇「过多」，可能来自肾上腺/垂体肿瘤，但临床上更常见的是长期治疗性使用糖皮质激素（氢化可的松、泼尼松、甲泼尼龙、地塞米松）来治哮喘、类风湿关节炎、狼疮、炎症性肠病或过敏等疾病。",
+     "hard": false
+    },
+    {
+     "en": "Cushing classic signs: weakness/fatigue, mood swings/depression, increased thirst/urination, high blood glucose, hypertension, central weight gain (moon face, buffalo hump, truncal obesity), thin skin with easy bruising and purple striae, acne/facial hair growth/scalp hair loss in women, cessation of menstrual periods, neck darkening (acanthosis), and — in children — obesity with stunted height growth. Bones become weaker and more fracture-prone from impaired protein synthesis.",
+     "zh": "库欣综合征经典体征：乏力、情绪波动/抑郁、口渴和排尿增多、高血糖、高血压、向心性肥胖（满月脸、水牛背、躯干肥胖）、皮肤变薄易瘀伤伴紫色条纹、女性痤疮增多/面部多毛/头发脱落、月经停止、颈部色素沉着（黑棘皮），儿童则表现为肥胖伴身高增长受阻。蛋白质合成受损还会使骨骼变脆、易骨折。",
+     "hard": false
+    },
+    {
+     "en": "Cushing epidemiology & field care: incidence about 5-25 cases per million people per year, typical age range 25-45 years. Field management is purely supportive — check glucose, monitor blood pressure, treat abnormalities as they present; no specific field cure.",
+     "zh": "库欣综合征流行病学与现场处置：年发病率约每百万人 5-25 例，典型年龄 25-45 岁。现场处置纯支持性——测血糖、监测血压、有异常就对症处理；没有针对性的现场根治手段。",
+     "hard": true
+    },
+    {
+     "en": "Addison vs Cushing as a paired mental model: Addison = too LITTLE cortisol -> hyperpigmented, hypotensive, hyperkalemic, wasting. Cushing = too MUCH cortisol -> moon-faced/buffalo-humped, hypertensive, hyperglycemic, bruising-prone. Opposite hormone level, largely opposite exam picture.",
+     "zh": "Addison vs Cushing 的配对记忆模型：Addison＝皮质醇「太少」→色素沉着、低血压、高血钾、消瘦。Cushing＝皮质醇「太多」→满月脸/水牛背、高血压、高血糖、易瘀伤。激素水平相反，考试画面也基本相反。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Thyroid Emergencies",
+   "titleZh": "甲状腺急症：黏液性水肿昏迷与甲状腺危象",
+   "points": [
+    {
+     "en": "Thyroid axis: hypothalamus releases TRH -> anterior pituitary releases TSH -> thyroid releases thyroid hormone (thyroxine). Too little = hypothyroidism; too much = hyperthyroidism.",
+     "zh": "甲状腺轴：下丘脑释放 TRH→垂体前叶释放 TSH→甲状腺释放甲状腺素。分泌不足＝甲减；分泌过多＝甲亢。",
+     "hard": false
+    },
+    {
+     "en": "Hypo vs hyper contrast card (book Table 32-5): cardiovascular slow pulse/low cardiac output vs rapid pulse/high cardiac output; metabolic decreased rate/cold skin/weight gain vs increased rate/hot flushed skin/weight loss; neuromuscular weakness/sluggish reflexes vs tremor/hyperactive reflexes; mental sluggish/placid vs restless/irritable/emotionally labile; GI constipated vs diarrhea; general somatic cold dry skin vs warm moist skin.",
+     "zh": "甲减 vs 甲亢对照表（教材 32-5）：心血管——脉搏慢/心排量低 vs 脉搏快/心排量高；代谢——代谢率降/皮肤冷/体重增 vs 代谢率升/皮肤潮红发热/体重降；神经肌肉——无力/反射迟钝 vs 震颤/反射亢进；精神情绪——迟钝/温吞 vs 躁动/易激惹/情绪不稳；消化——便秘 vs 腹泻；全身皮肤——冷而干 vs 热而潮湿。",
+     "hard": true
+    },
+    {
+     "en": "Both extremes can need respiratory support: hyperthyroid = high oxygen demand and possible high-output cardiac failure; hypothyroid = blunted respiratory drive that may need positive-pressure ventilation. Both can drive dysrhythmias (tachydysrhythmia in hyper, bradydysrhythmia in hypo) that are hard to fix until the underlying thyroid disorder is addressed.",
+     "zh": "甲亢和甲减两个极端都可能需要呼吸支持：甲亢——氧耗增高，可能出现高输出量心衰；甲减——呼吸驱动力减弱，可能需要正压通气。两者都可能诱发心律失常（甲亢多为快速型，甲减多为缓慢型），且在纠正甲状腺问题本身之前很难单靠抗心律失常处理解决。",
+     "hard": false
+    },
+    {
+     "en": "Myxedema coma definition: the extreme decompensated form of severe/long-standing hypothyroidism (myx = mucin, edema = swelling — mucinous skin deposits give the name). Hallmark = deteriorating mental status, ranging from subtle apathy up through confusion, psychosis, and coma.",
+     "zh": "黏液性水肿昏迷定义：重度/长期甲减最极端的失代偿形式（myx＝黏蛋白，edema＝水肿——皮肤黏蛋白沉积由此得名）。标志性表现是意识状态持续恶化，从轻微淡漠一路发展到意识混乱、精神病样表现乃至昏迷。",
+     "hard": false
+    },
+    {
+     "en": "Myxedema coma epidemiology & mortality: classically women over 60, more common in winter. Untreated/undiagnosed mortality can run as high as 60% — genuinely one of the more lethal presentations in this chapter.",
+     "zh": "黏液性水肿昏迷的流行病学与死亡率：典型患者是 60 岁以上女性，冬季更常见。未诊断/未治疗的死亡率可高达 60%——是本章里真正致命的表现之一。",
+     "hard": true
+    },
+    {
+     "en": "Myxedema coma triggers & the afebrile trap: common precipitants are infection (especially lung/urinary), cold exposure, trauma, surgery, and certain medications. Hallmark vital sign is hypothermia — you may need a low-reading thermometer (rated below 32°C) to even capture it, and the striking clue is ABSENCE of fever even when infection is actually present, because the blunted metabolism can't mount a normal febrile response.",
+     "zh": "黏液性水肿昏迷的诱因与「不发热」陷阱：常见诱因是感染（尤其肺部/泌尿系）、寒冷暴露、创伤、手术和某些药物。标志性生命体征是低体温——可能需要能测到 32°C 以下的低读数体温计才能测出；一个突出的线索是即便真有感染，患者也可能「不发热」，因为代谢率过低、无法正常发烧。",
+     "hard": true
+    },
+    {
+     "en": "Myxedema coma drug trap: hypothyroidism slows both intestinal motility and drug metabolism, so normal doses of medications (especially CNS-active drugs) can build up to toxic levels — this 'accidental overdose' from a slowed-down body can itself be what tips a patient into myxedema coma.",
+     "zh": "黏液性水肿昏迷的用药陷阱：甲减会同时拖慢肠道蠕动和药物代谢，正常剂量的药物（尤其作用于中枢神经的药物）也可能蓄积到中毒水平——这种因身体代谢变慢导致的「意外过量」，本身就可能诱发黏液性水肿昏迷。",
+     "hard": false
+    },
+    {
+     "en": "Myxedema coma field management: oxygen; intubate/ventilate if respiratory drive is inadequate or the airway is unprotected; crystalloid +/- a vasopressor (e.g. dopamine) for hypotension; D50W 25-50 g if glucose is below 4 mmol/L and symptomatic; rewarm PASSIVELY (aggressive rewarming risks vasodilation and worsening hypotension) unless the patient is hemodynamically unstable with profound hypothermia, which then needs active rewarming; avoid sedatives, narcotics, and anesthetics given the delayed metabolism.",
+     "zh": "黏液性水肿昏迷的现场处置：给氧；呼吸驱动不足或气道无保护时插管通气；低血压给晶体液±升压药（如多巴胺）；血糖低于 4 mmol/L 且有症状时给 D50W 25-50 g；「被动」复温（积极复温有诱发血管扩张、加重低血压的风险），除非患者血流动力学不稳且重度低体温，此时才需要主动复温；因代谢延迟，避免使用镇静剂、麻醉性镇痛药和麻醉剂。",
+     "hard": true
+    },
+    {
+     "en": "Thyrotoxicosis vs hyperthyroidism: related but not identical terms — thyrotoxicosis is a toxic excess of circulating thyroid hormone that CAN come from hyperthyroidism but also from a goitre, autoimmune Graves disease, or thyroid cancer. Graves disease has an incidence of about 1.4 cases per 1,000 people, runs a chronic remitting-relapsing course, and can be fatal if untreated; exophthalmos (bulging eyes) is a classic sign of chronic hyperthyroidism/Graves.",
+     "zh": "甲状腺毒症 vs 甲亢：两者相关但不完全等同——甲状腺毒症是循环中甲状腺激素过量中毒的状态，可来自甲亢，也可来自甲状腺肿、自身免疫性 Graves 病或甲状腺癌。Graves 病发病率约每千人 1.4 例，病程呈慢性缓解-复发交替，未治疗可致命；眼球突出（突眼）是慢性甲亢/Graves 病的经典体征。",
+     "hard": true
+    },
+    {
+     "en": "Thyroid storm: a rare, life-threatening decompensation of thyrotoxicosis, usually triggered by a stressful event or a surge of circulating thyroid hormone. Adds fever, severe tachycardia, nausea/vomiting, altered mental status, and possible heart failure on top of ordinary hyperthyroid signs. Field management is purely supportive — treat immediate threats to life and transport promptly, since definitive management is complex and multi-system.",
+     "zh": "甲状腺危象：罕见但危及生命的甲状腺毒症急性失代偿，通常由应激事件或循环甲状腺激素骤增诱发。在普通甲亢体征基础上，还会出现发热、严重心动过速、恶心呕吐、意识状态改变，可能伴心衰。现场处置纯支持性——处理即刻威胁生命的问题并尽快转运，确定性治疗复杂且涉及多系统，留给医院处理。",
+     "hard": false
+    },
+    {
+     "en": "ECG takeaway across both directions: put every suspected thyroid-emergency patient on the monitor — hyperthyroid states favour tachydysrhythmias, hypothyroid states favour bradydysrhythmias, and neither responds reliably to standard antidysrhythmic treatment until the thyroid disorder itself is addressed.",
+     "zh": "心电图要点，两个方向都适用：任何疑似甲状腺急症的患者都要上心电监护——甲亢倾向快速型心律失常，甲减倾向缓慢型心律失常，且在甲状腺问题本身被纠正之前，两者对常规抗心律失常治疗的反应都不可靠。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Normal / hypoglycemia glucose thresholds",
+   "itemZh": "正常/低血糖血糖分界",
+   "value": "正常约 4-8 mmol/L；<4 mmol/L 即低血糖"
+  },
+  {
+   "itemEn": "Hypoglycemia permanent-damage time window",
+   "itemZh": "低血糖致永久脑损伤的时间窗",
+   "value": "无反应持续>约 30 分钟，风险明显上升"
+  },
+  {
+   "itemEn": "Canadian diabetes epidemiology",
+   "itemZh": "加拿大糖尿病流行病学",
+   "value": "约 300 万人/8.1%；20 岁+成人约 1:10；1-19 岁约 1:300"
+  },
+  {
+   "itemEn": "Book dextrose dose for hypoglycemia (D50W)",
+   "itemZh": "教材低血糖葡萄糖剂量（D50W）",
+   "value": "12.5-25 g IV push，≥18G，≥3 分钟；重症可再追加 25 g"
+  },
+  {
+   "itemEn": "BC dextrose dose for hypoglycemia (D10W, replaces D50W)",
+   "itemZh": "BC 低血糖葡萄糖剂量（D10W，取代 D50W）",
+   "value": "10-25 g（10% 溶液 100-250 mL）IV"
+  },
+  {
+   "itemEn": "Glucagon dose (book IM / BC IM+IN)",
+   "itemZh": "胰高血糖素剂量（教材肌注 / BC 肌注+鼻喷）",
+   "value": "教材 1 mg IM；BC 0.5-1 mg IM 或 3 mg IN，15 分钟无效可追加一次"
+  },
+  {
+   "itemEn": "DKA glucose definition / field workup threshold (book)",
+   "itemZh": "DKA 血糖定义/院前处置阈值（教材）",
+   "value": "定义约>18 mmol/L；处置阈值>16 mmol/L"
+  },
+  {
+   "itemEn": "HHS glucose definition (book)",
+   "itemZh": "HHS 血糖定义（教材）",
+   "value": "约>33 mmol/L"
+  },
+  {
+   "itemEn": "DKA / HHS onset timeline",
+   "itemZh": "DKA / HHS 发展时间线",
+   "value": "通常渐进发展 12-48 小时"
+  },
+  {
+   "itemEn": "DKA fluid protocol (book)",
+   "itemZh": "DKA 补液方案（教材）",
+   "value": "首 30 分钟至多 1 L NS，之后约 1 L/小时；低血压快速补液至 SBP 80 mmHg"
+  },
+  {
+   "itemEn": "HHS fluid deficit / initial bolus / first-hour volume (book)",
+   "itemZh": "HHS 失水量/首剂/第一小时补液量（教材）",
+   "value": "总失水可达 10 L+；首剂 500 mL（心衰/肾功能不全给 250 mL）；第一小时 1-2 L"
+  },
+  {
+   "itemEn": "HHS coma incidence / no-prior-diagnosis rate",
+   "itemZh": "HHS 昏迷发生率/此前未确诊比例",
+   "value": "真正昏迷<10%；约 30% 此前无糖尿病诊断"
+  },
+  {
+   "itemEn": "Addison disease: cortex destruction threshold for symptoms",
+   "itemZh": "Addison 病：出现症状所需皮质破坏比例",
+   "value": "约 90% 的肾上腺皮质被破坏"
+  },
+  {
+   "itemEn": "Addisonian crisis as first presentation",
+   "itemZh": "肾上腺危象作为首发表现的比例",
+   "value": "约 25% 的患者首次发病即是危象"
+  },
+  {
+   "itemEn": "Addisonian crisis field fluids / dextrose (book)",
+   "itemZh": "肾上腺危象现场补液/葡萄糖（教材）",
+   "value": "至多 1 L NS；低血压时 20 mL/kg；低血糖时 D50W 25-50 g"
+  },
+  {
+   "itemEn": "Cushing syndrome incidence / typical age",
+   "itemZh": "库欣综合征发病率/典型年龄",
+   "value": "每百万人年 5-25 例；25-45 岁"
+  },
+  {
+   "itemEn": "Myxedema coma mortality / thermometer floor / typical patient",
+   "itemZh": "黏液性水肿昏迷死亡率/体温计下限/典型患者",
+   "value": "死亡率最高 60%；需测<32°C 的低读数体温计；60 岁+女性、冬季多见"
+  },
+  {
+   "itemEn": "Graves disease incidence",
+   "itemZh": "Graves 病发病率",
+   "value": "约每千人 1.4 例"
+  },
+  {
+   "itemEn": "BC oral glucose dose",
+   "itemZh": "BC 口服葡萄糖剂量",
+   "value": "15 g PO，5 分钟可重复，不设上限"
+  },
+  {
+   "itemEn": "BC TBI-specific glucose target (contrast with general <4.0 threshold)",
+   "itemZh": "BC 脑外伤专用血糖目标（对比一般<4.0 阈值）",
+   "value": "4.0-8.0 mmol/L"
+  },
+  {
+   "itemEn": "Book reassessment interval (unstable / stable)",
+   "itemZh": "教材复评间隔（不稳定/稳定）",
+   "value": "不稳定每 5 分钟；稳定每 10 分钟"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Check the fridge for insulin, and bureau tops, bedside tables, and medicine cabinets for pill bottles — bring everything to hospital. It can identify the treating physician and confirm the diagnosis faster than your exam will.",
+   "zh": "查冰箱找胰岛素，查边几、床头柜、药箱找药瓶——全部带去医院。这些东西常常比你的查体更快确认诊断，还能帮忙联系到主治医生。"
+  },
+  {
+   "en": "Draw a blood sample BEFORE giving any prehospital dextrose or drug to a diabetic patient — once medication is on board, the hospital's later blood work is permanently altered.",
+   "zh": "给糖尿病患者用任何院前葡萄糖或药物之前先抽血备样——一旦药物已经上身，医院后续的化验结果会被永久改变。"
+  },
+  {
+   "en": "Not sure whether the glucose reading is accurate? Default to treating as if it's LOW — a period of hypoglycemia does more damage than an equal stretch of hyperglycemia.",
+   "zh": "拿不准血糖读数准不准？默认按「低血糖」处理更安全——一段低血糖造成的伤害比同等时长的高血糖更大。"
+  },
+  {
+   "en": "The exact glucose number matters less than the clinical picture — there's no reliable correlation between how high glucose reads and how severe the underlying ketoacidosis actually is.",
+   "zh": "血糖具体数字不如临床表现重要——血糖有多高和背后的酮症酸中毒有多重，两者并没有可靠的对应关系。"
+  },
+  {
+   "en": "Real-world DKA triggers cluster around one theme: infection, injury, alcohol, emotional stress, and illness (stroke/MI) all tend to make patients skip their insulin, which combined with physiologic stress sets up DKA.",
+   "zh": "现实中的 DKA 诱因常围绕同一个主题：感染、外伤、酒精、情绪压力、疾病（卒中/心梗）都容易让患者漏打胰岛素，叠加生理应激就诱发了 DKA。"
+  },
+  {
+   "en": "Everyday medications can quietly set up HHS: diuretics, beta blockers, H2 blockers, dialysis, total parenteral nutrition, and dextrose-containing IV fluids can all raise glucose, blunt insulin, or dehydrate a patient into it.",
+   "zh": "一些常见药物会悄悄铺垫出 HHS：利尿剂、β受体阻滞剂、H2 受体阻滞剂、透析、全肠外营养、含糖静脉液，都可能升高血糖、削弱胰岛素作用，或造成脱水。"
+  },
+  {
+   "en": "Steroid withdrawal doesn't only mean stopping pills — abruptly stopping INHALED steroids (asthma/COPD) or even overusing nasal steroid sprays can be enough to trigger secondary adrenal insufficiency.",
+   "zh": "激素骤停不只是停口服药——突然停用「吸入型」激素（哮喘/COPD）甚至过量用鼻用激素喷剂，都可能诱发继发性肾上腺功能不全。"
+  },
+  {
+   "en": "Exophthalmos (bulging eyes) is a classic bedside tell for chronic hyperthyroidism/Graves disease — a free visual clue before any lab result comes back.",
+   "zh": "眼球突出（突眼）是慢性甲亢/Graves 病的经典床边体征——化验结果出来之前，这是一个不花钱的视觉线索。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "A totally unresponsive 'DKA' patient is NOT the classic picture — DKA usually causes a slow decline in LOC over 12-48 hours and patients are rarely deeply comatose. Deep coma should make you look harder for a second cause (head injury, stroke, overdose).",
+   "zh": "完全无反应的「DKA」患者不是典型画面——DKA 通常在 12-48 小时内缓慢发展、意识只是逐渐恶化，患者很少完全深度昏迷。真的深昏迷应该让你怀疑另有病因（头部外伤、卒中、药物过量）。"
+  },
+  {
+   "en": "HHS is nicknamed 'hyperosmolar coma,' but actual coma shows up in fewer than 10% of real cases — most patients look severely dehydrated and neurologically abnormal, not unconscious. Don't require coma to consider HHS.",
+   "zh": "HHS 俗称「高渗性昏迷」，但真正昏迷只出现在不到 10% 的病例中——多数患者是重度脱水加神经系统异常，而不是失去意识。不要非等到昏迷才想到 HHS。"
+  },
+  {
+   "en": "A known diabetic's altered LOC is not automatically glucose-related, and a known alcoholic's coma is not automatically alcohol — neither label ever rules out stroke, seizure, or head injury. Keep assessing.",
+   "zh": "已知糖尿病患者意识改变不代表一定是血糖问题，已知酗酒者昏迷也不代表一定是酒精——这两个标签都不能排除卒中、癫痫或头部外伤。持续评估，不要先入为主。"
+  },
+  {
+   "en": "Ketosis, not the glucose number alone, is the real DKA-vs-HHS differentiator — DKA has significant ketosis, HHS classically does NOT, even though both present hyperglycemic and dehydrated. Don't diagnose purely by which number is higher.",
+   "zh": "真正区分 DKA 和 HHS 的是「有没有酮症」，而不是单看哪个血糖数字更高——DKA 有明显酮症酸中毒，HHS 典型「没有」，尽管两者都表现为高血糖和脱水。别只靠数字大小来下判断。"
+  },
+  {
+   "en": "Type 2 diabetics generally do NOT develop DKA when they skip insulin, unlike type 1 — if a 'type 2' patient looks ketotic and acidotic, reconsider the diagnosis or suspect an atypical/undiagnosed type 1 picture.",
+   "zh": "和 1 型不同，2 型糖尿病患者漏打胰岛素通常不会发展成 DKA——如果一个「2 型」患者看起来有酮症酸中毒，要重新考虑诊断，或怀疑是不典型/尚未确诊的 1 型。"
+  },
+  {
+   "en": "Cheyne-Stokes breathing in a comatose patient actually points AWAY from a primary neurologic cause, not toward one — don't read every abnormal breathing pattern as automatic proof of a brain problem.",
+   "zh": "昏迷患者出现潮式呼吸（Cheyne-Stokes）其实提示病因「不在」神经系统，而不是相反——不要把任何异常呼吸型态都当成脑部问题的直接证据。"
+  },
+  {
+   "en": "Addison disease and Cushing syndrome are not two flavours of 'adrenal problem' that blur together — they are opposite cortisol states with largely opposite vital-sign and skin pictures (hypotensive/hyperpigmented/hyperkalemic vs hypertensive/moon-faced/hyperglycemic).",
+   "zh": "Addison 病和库欣综合征不是同一种「肾上腺毛病」的两种轻重表现——它们是皮质醇水平相反的两种状态，生命体征和皮肤表现也基本相反（低血压/色素沉着/高血钾 vs 高血压/满月脸/高血糖）。"
+  },
+  {
+   "en": "Absence of fever in a hypothyroid/myxedema patient does NOT mean there's no infection — a blunted metabolic rate can suppress the normal febrile response even during a real, serious infection.",
+   "zh": "甲减/黏液性水肿患者不发热，不代表没有感染——过低的代谢率可能压制正常的发热反应，即便体内真的存在严重感染。"
+  },
+  {
+   "en": "Sneezing and yawning in an unresponsive patient are reassuring signs, not random noise — both require an intact brainstem, so their presence argues against severe brainstem injury; hiccupping and coughing patterns, by contrast, can flag brainstem damage.",
+   "zh": "无反应患者出现打喷嚏或打哈欠是安心信号，不是无意义的噪音——两者都需要脑干功能完整才能做出来，出现反而说明脑干严重损伤的可能性较低；打嗝和咳嗽型态则可能提示脑干受损。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "3P",
+   "en": "The classic hyperglycemia/DKA complaint trio: Polyuria, Polydipsia, Polyphagia — all traceable back to osmotic diuresis and the body's inefficient use of nutrients when insulin is absent.",
+   "zh": "高血糖/DKA 经典三联主诉：多尿、多饮、多食——根源都在渗透性利尿和胰岛素缺失时身体对营养利用的低效。"
+  },
+  {
+   "name": "湿冷快 vs 干暖慢",
+   "en": "Hypoglycemia = cool/clammy skin, fast onset (minutes), fast response to treatment. Hyperglycemia/DKA = warm/dry skin, slow onset (hours-days), slow response to treatment (6-12 h).",
+   "zh": "低血糖＝皮肤湿冷、起病快（分钟级）、治疗见效快。高血糖/DKA＝皮肤干暖、起病慢（数小时到数天）、治疗见效慢（6-12 小时）。"
+  },
+  {
+   "name": "Addison 古铜 vs Cushing 满月",
+   "en": "Addison disease = bronze/hyperpigmented skin from too little cortisol. Cushing syndrome = moon face from too much cortisol. Opposite skin picture, opposite hormone level.",
+   "zh": "Addison 病＝皮质醇太少→古铜色皮肤。库欣综合征＝皮质醇太多→满月脸。皮肤画面相反，激素水平也相反。"
+  },
+  {
+   "name": "Kussmaul = 深快排酸",
+   "en": "Deep, regular, fast breathing in a diabetic patient is the body's own fire alarm for acidosis, compensating by blowing off CO2 — it is NOT primary respiratory distress and should not by itself trigger assisted ventilation in an alert patient.",
+   "zh": "糖尿病患者出现深大而规则的快呼吸，是身体自己在拉响酸中毒警报、靠排 CO2 代偿——这「不是」原发性呼吸窘迫，清醒患者单凭这一点不该被上辅助通气。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A known diabetic is awake and talking, glucose reads above the meter's range, and respirations are 32/min, deep and regular. What is this breathing pattern and is it respiratory distress?",
+   "qZh": "一名已知糖尿病患者清醒能说话，血糖超出仪器量程，呼吸 32 次/分、深大而规则。这是什么呼吸型态？是呼吸窘迫吗？",
+   "aEn": "This is Kussmaul respiration — compensation for a metabolic (ketoacidotic) acidosis by blowing off CO2. It is compensation, not primary respiratory distress, and should not trigger assisted ventilation in an alert patient with clear, unlaboured air entry.",
+   "aZh": "这是 Kussmaul 呼吸——通过排出 CO2 来代偿代谢性（酮症）酸中毒。这是代偿，不是原发性呼吸窘迫；清醒且进气清晰不费力的患者不应因此被上辅助通气。"
+  },
+  {
+   "qEn": "List the core differences between DKA and HHS across typical population, glucose threshold, and ketosis.",
+   "qZh": "从好发人群、血糖阈值、有无酮症三方面，列出 DKA 和 HHS 的核心区别。",
+   "aEn": "DKA: mainly type 1 diabetics, glucose roughly above 18 mmol/L, significant ketosis/acidosis present. HHS: mainly type 2 diabetics, glucose roughly above 33 mmol/L, ketosis classically absent despite more extreme hyperglycemia and dehydration.",
+   "aZh": "DKA：主要是 1 型糖尿病，血糖约>18 mmol/L，有明显酮症酸中毒。HHS：主要是 2 型糖尿病，血糖约>33 mmol/L，尽管高血糖和脱水更极端，典型「没有」酮症。"
+  },
+  {
+   "qEn": "Compare the book protocol and the BC protocol for correcting confirmed hypoglycemia by IV, plus the no-IV-access fallback in each.",
+   "qZh": "对比教材和 BC 对确认低血糖的静脉纠正方案，以及各自无静脉通路时的备选方案。",
+   "aEn": "Book: D50W 12.5-25 g IV push over at least 3 minutes via an 18-gauge-or-larger line; fallback glucagon 1 mg IM. BC: D10W 10-25 g (100-250 mL of 10% solution) IV; fallback glucagon 0.5-1 mg IM or 3 mg IN, may repeat once after 15 minutes if no response.",
+   "aZh": "教材：D50W 12.5-25 g 静推，经 18G 或更粗静脉，至少推 3 分钟；备选胰高血糖素 1 mg 肌注。BC：D10W 10-25 g（10% 溶液 100-250 mL）静脉给药；备选胰高血糖素 0.5-1 mg 肌注或 3 mg 鼻内，15 分钟无反应可追加一次。"
+  },
+  {
+   "qEn": "A 70-year-old woman is found comatose in winter, profoundly hypothermic, with no fever despite apparent infection. What's the diagnosis, why is she afebrile, and how should you rewarm her?",
+   "qZh": "70 岁女性冬季被发现昏迷，重度低体温，尽管似乎有感染却不发热。诊断是什么？为什么她不发热？该怎么给她复温？",
+   "aEn": "Myxedema coma (severe decompensated hypothyroidism). Her blunted metabolism suppresses the normal febrile response even with real infection present. Rewarm PASSIVELY unless she is hemodynamically unstable with profound hypothermia, in which case active rewarming is required — aggressive rewarming otherwise risks vasodilation and worsening hypotension.",
+   "aZh": "黏液性水肿昏迷（重度失代偿性甲减）。她过低的代谢率压制了正常的发热反应，即便真的存在感染。除非她血流动力学不稳且重度低体温（此时需主动复温），否则应「被动」复温——积极复温有诱发血管扩张、加重低血压的风险。"
+  },
+  {
+   "qEn": "Contrast Addison disease and Cushing syndrome by cortisol level, skin finding, and blood pressure direction.",
+   "qZh": "从皮质醇水平、皮肤表现和血压方向三方面，对比 Addison 病和库欣综合征。",
+   "aEn": "Addison = too little cortisol -> hyperpigmented/bronzed skin, hypotension (can progress to vasodilatory shock), hyperkalemia. Cushing = too much cortisol -> moon face/buffalo hump/thin bruising skin with purple striae, hypertension, hyperglycemia.",
+   "aZh": "Addison＝皮质醇太少→色素沉着/古铜色皮肤、低血压（可进展为血管扩张性休克）、高血钾。库欣＝皮质醇太多→满月脸/水牛背/薄而易瘀伤伴紫纹的皮肤、高血压、高血糖。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Hypoglycemia drug: BC uses D10W, not the book's D50W",
+   "topicZh": "低血糖用药：BC 用 D10W，不是教材的 D50W",
+   "bookEn": "The book's dextrose protocol is built entirely around D50W (50% dextrose): 12.5-25 g IV push over at least 3 minutes through an 18-gauge-or-larger line, with another 25 g sometimes needed in severe cases.",
+   "bookZh": "教材的葡萄糖处置流程完全围绕 D50W（50% 葡萄糖）：经 18G 或更粗静脉推注 12.5-25 g，至少推 3 分钟，重症有时需再追加 25 g。",
+   "bcEn": "BC's drug monograph is D10W (10% dextrose), dosed 10-25 g (100-250 mL of the 10% solution) IV, indicated for suspected/known hypoglycemia. This is a PCP-only intervention under the Diabetic Emergencies protocol — EMR does not carry dextrose. If a question asks for the dextrose drug and dose, the BC answer is D10W at 10-25 g, NOT D50W at 12.5-25 g.",
+   "bcZh": "BC 的药物专论是 D10W（10% 葡萄糖），剂量 10-25 g（10% 溶液 100-250 mL）静脉给药，适应证为疑似/已知低血糖。这是糖尿病急症协议下「仅 PCP」的处置——EMR 不携带葡萄糖。考题问葡萄糖药物和剂量时，BC 答案是 D10W 10-25 g，不是 D50W 12.5-25 g。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.57, p.61"
+  },
+  {
+   "topicEn": "Glucagon: BC adds an intranasal route and a lower IM dose than the book",
+   "topicZh": "胰高血糖素：BC 多了鼻喷途径，肌注剂量也比教材低",
+   "bookEn": "The book gives a single glucagon dose for no-IV-access hypoglycemia: 1 mg by intramuscular injection, with no intranasal option mentioned.",
+   "bookZh": "教材对无静脉通路低血糖只给出单一胰高血糖素剂量：1 mg 肌注，没有提到鼻喷选项。",
+   "bcEn": "BC's Glucagon monograph sets the IM dose at 0.5-1 mg (lower than the book's flat 1 mg) and adds a formal intranasal option: 3 mg IN, may repeat once after 15 minutes if no clinical response. Under the Diabetic Emergencies protocol, glucagon is the EMR-level intervention for insufficient mentation/unprotected airway, and the PCP fallback only when IV access cannot be obtained.",
+   "bcZh": "BC 的胰高血糖素专论肌注剂量为 0.5-1 mg（比教材固定的 1 mg 低），并正式加入鼻喷途径：3 mg IN，15 分钟无临床反应可重复一次。在糖尿病急症协议下，胰高血糖素是 EMR 对神志不足/气道无保护患者的处置手段，也是 PCP 在无法建立静脉通路时的备选。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.57, p.67"
+  },
+  {
+   "topicEn": "DKA/HHS/Addisonian crisis fluids: BC uses one general bolus formula, not the book's condition-specific volumes, and carries no insulin at either level",
+   "topicZh": "DKA/HHS/肾上腺危象补液：BC 用统一的通用补液公式，不是教材各病各套的补液量，且两级都不携带胰岛素",
+   "bookEn": "The book gives a different fluid recipe for each condition: DKA gets up to 1 L NS over 30 minutes then about 1 L/hr; HHS gets a 500 mL (or 250 mL) initial bolus then 1-2 L in the first hour for a deficit that can reach 10 L or more; Addisonian crisis gets up to 1 L NS with a 20 mL/kg bolus if hypotensive. None of these carry insulin in the field — that is reserved for hospital in every case.",
+   "bookZh": "教材对每种情况都给出不同的补液配方：DKA 首 30 分钟至多 1 L NS，之后约 1 L/小时；HHS 首剂 500 mL（或 250 mL）后第一小时再给 1-2 L，应对可达 10 L+ 的总失水；肾上腺危象至多 1 L NS，低血压时按 20 mL/kg 快速补液。三种情况现场都不给胰岛素——一律留到医院。",
+   "bcEn": "BC's PCP scope applies one general fluid bolus rule across these presentations: 20 mL/kg to a maximum of 2 L, reassessed every 500 mL — not the book's per-condition volumes. Neither EMR nor PCP carries insulin at either level; for suspected hyperglycemia/DKA/HHS the BC field role is ABC support, oxygen, stroke evaluation, and fluid/transport judgement, with glucose correction reserved strictly for confirmed hypoglycemia below 4.0 mmol/L. Giving oral glucose or glucagon to a hyperglycemic patient is treated as initiating a protocol without indications.",
+   "bcZh": "BC 的 PCP 范围对这些情况统一用一条补液规则：按 20 mL/kg、上限 2 L，每 500 mL 复评一次——而不是教材那种每种病一套的补液量。EMR 和 PCP 两级都不携带胰岛素；面对疑似高血糖/DKA/HHS，BC 现场角色是 ABC 支持、给氧、卒中评估和补液/转运判断，血糖纠正严格限定给确诊血糖<4.0 mmol/L 的患者。给高血糖患者口服葡萄糖或胰高血糖素，属于无指征启动处置方案。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.57"
+  },
+  {
+   "topicEn": "Oral glucose: BC gives an explicit fixed dose the book only describes vaguely",
+   "topicZh": "口服葡萄糖：BC 给出明确固定剂量，教材只是笼统举例",
+   "bookEn": "The book suggests oral treatment options loosely — a candy bar, a glass of warm water with a few teaspoons of glucose added, or a non-diet cola — without a defined gram dose or repeat interval.",
+   "bookZh": "教材对口服治疗的建议比较笼统——糖果、加了几茶匙葡萄糖的温水，或含糖可乐——没有给出明确的克数剂量或重复间隔。",
+   "bcEn": "BC's Oral Glucose monograph is explicit: 15 g PO, may repeat every 5 minutes as necessary with no stated upper limit, indicated only for a conscious patient with sufficient mentation to protect the airway (no aspiration risk).",
+   "bcZh": "BC 的口服葡萄糖专论很明确：15 g 口服，可每 5 分钟重复，未设上限，适应证仅限神志清醒、足以保护气道（无误吸风险）的患者。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.76"
+  },
+  {
+   "topicEn": "TBI patients get a different glucose target than the general hypoglycemia threshold",
+   "topicZh": "脑外伤患者的血糖目标和一般低血糖阈值不一样",
+   "bookEn": "This chapter's book text discusses only a single glucose cutoff — treat when the level drops below 4 mmol/L — with no separate target described for head-injured patients.",
+   "bookZh": "本章教材只讨论了单一血糖分界——低于 4 mmol/L 即治疗——没有为头部外伤患者另设目标值。",
+   "bcEn": "BC's Traumatic Brain Injuries protocol sets a distinct PCP target of 4.0-8.0 mmol/L to protect cerebral perfusion in any patient at risk for elevated ICP — a higher floor than the general <4.0 mmol/L emergency-correction threshold used elsewhere in this chapter. Don't default to the general hypoglycemia number when the patient also has a head injury.",
+   "bcZh": "BC 的脑外伤协议给 PCP 设定了独立目标——4.0-8.0 mmol/L，用于保护有 ICP 升高风险患者的脑灌注——这个下限比本章其他场景用的一般<4.0 mmol/L 急症纠正阈值要高。合并头部外伤的患者，不要直接套用一般低血糖的数字。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.27"
+  }
+ ],
+ "sourcePages": "2895-2945"
+}

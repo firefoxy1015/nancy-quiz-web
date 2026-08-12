@@ -1,0 +1,1077 @@
+{
+ "id": "ch23",
+ "n": 23,
+ "titleEn": "Burns",
+ "titleZh": "烧伤",
+ "group": "trauma",
+ "examWeight": 2,
+ "whyEn": "Burns punch above their page count on both the written and practical exams because the chapter is really three exams in one: a numbers exam (rule of nines, depth grading, TBSA severity cutoffs, CO half-life, fluid math), a recognition exam (reading soot, singed hair, hoarseness and stridor as an airway emergency before the skin even matters), and a scope-and-protocol exam (cooling duration, what NOT to put on a burn, when Entonox is forbidden, who gets transferred to a burn centre). The single highest-yield theme is that burn severity is not read off the skin — a modest-looking facial burn with a hoarse voice can kill faster than a dramatic-looking limb burn. Learn BC's own numbers cold: they diverge from the textbook on cooling time, fluid volume, and the transfer thresholds that decide destination.",
+ "whyZh": "烧伤这一章分量不大，但笔试和实操都爱考，因为它其实是三张考卷叠在一起：数字卷（九分法、深度分级、TBSA 严重度分界、一氧化碳半衰期、补液计算）、识别卷（在还没细看皮肤之前，先从烟灰、燎焦的毛发、声音嘶哑和喘鸣里读出气道正在关闭）、以及范围与规程卷（降温做多久、烧伤面绝对不能抹什么、什么情况 Entonox 是禁忌、谁要转诊到烧伤中心）。全章最高频的一条主线是：烧伤的严重程度不能只看皮肤——一张看起来不起眼、却带着声音嘶哑的面部烧伤，可能比一处触目惊心的肢体烧伤更快致命。BC 自己的数字必须背到条件反射：降温时长、补液量、决定送治方向的转诊阈值，全部和教材原文有出入。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities（患者代言人角色；医疗监督的作用）",
+   "Area 2: Communication（向患者说明处境与救治计划；使用规范术语）",
+   "Area 3: Health and Safety（现场安全评估；职业危害应对；WHMIS 危化品处置；感染控制）",
+   "Area 4: Assessment and Diagnostics（现场评估；一/二级评估；皮肤系统评估；脉搏/呼吸/体温/血压；瞳孔与意识水平；外周静脉穿刺）",
+   "Area 5: Therapeutics（气道手法与体位维持通畅；声门可视化气道装置；机械通气指征识别；外周静脉通路维护与穿刺；烧伤处置）",
+   "Area 6: Integration（皮肤系统症状体征患者处置；不良环境暴露患者处置；创伤患者处置；儿科/老年患者处置；基于表现的持续评估）"
+  ],
+  "codes": [
+   "1.1.k", "1.3.a", "2.1.d", "2.1.g", "3.3.a", "3.3.b", "3.3.e", "3.3.f",
+   "4.2.f", "4.3.a", "4.3.b", "4.3.i", "4.4.a", "4.4.b", "4.4.c", "4.4.d",
+   "4.4.e", "4.4.f", "4.4.g", "4.4.h", "4.4.i", "4.5.d", "5.1.a", "5.1.h",
+   "5.4.b", "5.5.c", "5.5.d", "5.6.b", "6.1.f", "6.1.n", "6.1.o", "6.2.b",
+   "6.2.c", "6.3.a", "6.3.b"
+  ]
+ },
+ "sourcePages": "1898-1969",
+ "sections": [
+  {
+   "titleEn": "Introduction",
+   "titleZh": "概述",
+   "points": [
+    {
+     "en": "The large majority of fatal fires happen in homes, not vehicles or outdoors, and Canada still loses over 1,000 people a year to fire-related causes despite stricter building codes and mandatory smoke detectors — the two population groups at highest risk of dying in a fire are children under 5 and adults over 65.",
+     "zh": "绝大多数致命火灾发生在住宅内，而非车辆或户外；尽管建筑规范收紧、烟雾报警器普及，加拿大每年仍有一千多人死于火灾相关原因——死亡风险最高的两个人群是 5 岁以下儿童和 65 岁以上老人。",
+     "hard": true
+    },
+    {
+     "en": "Two low-tech prevention measures the chapter calls out specifically: turning household water heaters down to 50°C to prevent severe scald injuries, and using child-resistant disposable lighters.",
+     "zh": "教材特别点出两条低成本预防措施：把家用热水器温度调到 50°C 以下以防止严重烫伤，以及使用儿童安全打火机。",
+     "hard": true
+    },
+    {
+     "en": "Before modern burn care existed, a burn covering more than one-third of the body surface was almost always fatal. Survival now depends on a bundle of advances working together — understanding of burn shock physiology, aggressive fluid resuscitation, antibiotics, early excision of dead tissue, biologic dressings for early wound closure, and dedicated burn-team resuscitation protocols.",
+     "zh": "在现代烧伤救治出现之前，烧伤面积超过体表三分之一几乎必死无疑。如今生存率的提升靠的是一整套进步共同作用——对烧伤性休克生理的理解、积极的液体复苏、抗生素、坏死组织的早期清创、用于早期创面封闭的生物敷料，以及专门的烧伤团队复苏规程。",
+     "hard": false
+    },
+    {
+     "en": "Burns are not only thermal: the same chapter framework also covers electrical, chemical, and radiation burns, each with its own injury pattern and hazards for the crew as well as the patient.",
+     "zh": "烧伤不只是热力烧伤：本章框架同样涵盖电烧伤、化学烧伤和放射性烧伤，每一种都有各自独特的损伤模式，也各自对救护人员本身构成不同的风险。",
+     "hard": false
+    },
+    {
+     "en": "Why accurate on-scene severity recognition matters beyond the immediate treatment: it drives early notification so the receiving facility can prepare, and it drives the triage decision of whether the patient needs a specialized burn centre rather than the nearest general emergency department.",
+     "zh": "准确的现场严重度判断，价值不止于当下的处置本身：它决定了要不要提前预报让接收医院做好准备，也决定了分诊方向——患者是否需要专门的烧伤中心，而不是最近的普通急诊。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy and Function of the Skin",
+   "titleZh": "皮肤解剖与功能",
+   "points": [
+    {
+     "en": "Skin thickness varies enormously by location — from almost 1 cm on the heel down to about 1 mm on the eyelid — which is one reason the same thermal exposure produces very different burn depths depending on where on the body it lands.",
+     "zh": "皮肤厚度因部位差异极大——足跟处接近 1 厘米，眼睑处只有约 1 毫米——这也是同样一次热暴露、烧在身体不同部位会造成截然不同烧伤深度的原因之一。",
+     "hard": true
+    },
+    {
+     "en": "The skin performs four core functions: a protective barrier against injury, temperature extremes, UV radiation, mechanical force, chemicals and microorganisms; thermoregulation (retaining heat when core temperature falls, shedding it when core temperature rises); a watertight seal that stops fluid loss and keeps the internal chemical environment stable; and a sense organ that reports touch, temperature and pain to the brain.",
+     "zh": "皮肤有四大核心功能：作为防护屏障，抵御外伤、极端温度、紫外线、机械力、化学物质和微生物；体温调节（核心体温下降时保温，升高时散热）；防水屏障，阻止体液丢失、维持体内化学环境稳定；以及感觉器官，把触觉、温度和疼痛信息传给大脑。",
+     "hard": false
+    },
+    {
+     "en": "Two principal layers make up the skin: the epidermis (outer barrier layer, containing melanin-bearing cells whose density determines skin darkness) and the dermis (a tough, elastic connective-tissue layer built from collagen for tensile strength, elastin for spring-back, and a mucopolysaccharide gel for resistance to compression).",
+     "zh": "皮肤由两大主层构成：表皮（最外层的屏障，含黑色素细胞，其密度决定肤色深浅）与真皮（坚韧而富弹性的结缔组织层，由胶原纤维提供抗拉强度、弹性蛋白提供回弹性、黏多糖凝胶提供抗压能力）。",
+     "hard": false
+    },
+    {
+     "en": "The dermis houses nerve endings (touch, temperature, pressure, pain), blood vessels (deliver oxygen/nutrients, remove waste, and regulate body temperature by controlling flow from the warm core to the cooler surface), sweat glands, and hair follicles with their attached sebaceous glands.",
+     "zh": "真皮层内含神经末梢（触觉、温度、压觉、痛觉）、血管（供给氧气与营养、清除代谢废物，并通过调节核心到体表的血流来调控体温）、汗腺，以及毛囊及其附属的皮脂腺。",
+     "hard": false
+    },
+    {
+     "en": "Normal sweat output is roughly 500-1,000 mL over 24 hours at rest, but strenuous exercise can push sweat glands to secrete as much as 1,000 mL in a single hour — evaporative sweat loss is one of the body's major heat-shedding mechanisms.",
+     "zh": "静息状态下正常排汗量约为每 24 小时 500-1,000 mL，但剧烈运动时汗腺分泌量可高达每小时 1,000 mL——出汗蒸发是身体主要的散热机制之一。",
+     "hard": true
+    },
+    {
+     "en": "Scalp hair grows at roughly 1.5-3.9 mm per week and lives for 2-5 years before being shed and replaced. Clinically, hair melts rather than simply burning away, so singed nasal hair, eyebrows, and eyelashes are a specific red flag for possible airway/inhalation injury, and hair on the arms or legs that comes out painlessly signals that deeper skin structures have already been destroyed.",
+     "zh": "头皮毛发的生长速度约为每周 1.5-3.9 毫米，寿命 2-5 年后自然脱落更新。临床上毛发受热是熔化而非单纯烧焦脱落，因此鼻毛、眉毛和睫毛被燎焦是提示可能存在气道/吸入性损伤的特异性警示征；手臂或腿部毛发能被无痛拔出，则提示更深层的皮肤结构已经被破坏。",
+     "hard": true
+    },
+    {
+     "en": "Beneath the dermis, the subcutaneous layer (mostly fat) insulates against heat and cold, cushions underlying structures, and serves as an energy reserve. Below that sit muscle, bone, and vital organs — muscle's thick fibrous capsules make it prone to hypoxia and anaerobic metabolism once burned, bone is living tissue that can be damaged directly, and vital organs can be injured by thermal, chemical, or electrical energy that penetrates deeply enough.",
+     "zh": "真皮之下是皮下层（主要为脂肪组织），负责隔热保暖、缓冲深层结构，并作为能量储备。再往下是肌肉、骨骼和重要脏器——肌肉包裹在厚厚的纤维鞘内，一旦烧伤就容易缺氧并转为无氧代谢；骨骼是活组织，也可被直接损伤；重要脏器则可能被穿透足够深的热力、化学或电能损伤。",
+     "hard": false
+    },
+    {
+     "en": "The eye is highly vulnerable to burns from flame, superheated gas, an intense light source such as a welder's torch, or chemical splash. Alkali (high-pH) chemical exposures cause worse ocular damage than acids because they penetrate tissue more readily — the higher the pH, the more severe the injury — and rubbing the eyes after a chemical splash makes it worse instead of better; copious irrigation is the priority, not rubbing.",
+     "zh": "眼睛对火焰、过热气体、强光源（如焊工电弧）或化学溅入都极为脆弱。碱性（高 pH）化学暴露比酸性对眼睛的损伤更重，因为碱性物质更容易穿透组织——pH 越高、损伤越重；化学溅入后揉眼睛只会加重伤害，正确做法是立即大量冲洗而不是揉搓。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pathophysiology",
+   "titleZh": "病理生理",
+   "points": [
+    {
+     "en": "A thermal burn generally requires skin exposure above 44°C. Injury severity tracks three variables together: how much heat energy the source carries (temperature and heat content), and how long the exposure lasts — more heat energy, deeper wound; longer exposure, deeper wound. Solids typically hold more heat energy than gases, so touching a hot solid (an oven rack) usually burns worse than the hot gas coming off the same oven.",
+     "zh": "热力烧伤一般要皮肤暴露温度超过 44°C 才会发生。损伤严重度取决于三个共同作用的变量：热源携带的热能高低（温度与热含量）和暴露时长——热能越高、创面越深；暴露越久、创面越深。固体通常比气体携带更多热能，所以摸到滚烫的固体（比如烤箱内的烤架）通常比接触同一烤箱冒出的热气造成更重的烧伤。",
+     "hard": true
+    },
+    {
+     "en": "Unresponsive or paralyzed patients can be burned by heat sources most people would never notice as dangerous — a heating pad, a transcutaneous oxygen sensor, or a heat lamp left in place too long — because the normal reflex withdrawal from pain is absent.",
+     "zh": "无反应或瘫痪的患者可能被大多数人根本不会认为危险的热源烧伤——比如取暖垫、经皮血氧传感器、或放置过久的红外灯——因为正常的疼痛回避反射不存在了。",
+     "hard": false
+    },
+    {
+     "en": "Flame burns are the most common thermal burn source and tend to run deep, especially once clothing ignites — the origin of the 'stop, drop, and roll' teaching, since running fans the flame. Flame burns are frequently paired with inhalation injury.",
+     "zh": "火焰烧伤是最常见的热力烧伤来源，往往烧得很深，尤其是衣物一旦着火——这正是\"停、趴、滚\"教学口诀的由来，因为奔跑只会给火焰扇风。火焰烧伤常常合并吸入性损伤。",
+     "hard": false
+    },
+    {
+     "en": "Scald burns (hot liquids) are most common in children and in adults with impaired mobility, often cover large surface areas because liquid spreads and can soak into clothing to keep burning after contact, and are especially deep when the liquid is oil or grease that adheres to skin. A key clinical trap: the true depth and severity of a scald often cannot be judged accurately for the first 24 to 48 hours.",
+     "zh": "烫伤（热液体）在儿童及行动受限的成人中最常见，因为液体会流散、还可能浸入衣物持续烫伤，所以覆盖面积往往很大；若是会黏附在皮肤上的油或油脂，烫伤会格外深。一个重要的临床陷阱是：烫伤的真实深度和严重程度，往往要到伤后 24 到 48 小时才能准确判断。",
+     "hard": true
+    },
+    {
+     "en": "Contact burns from touching a hot object are usually shallow because withdrawal reflexes limit exposure time — they become deep only when the person cannot pull away (unconscious, intoxicated, restrained, or otherwise impaired), or after prolonged contact with something only moderately hot.",
+     "zh": "接触烧伤（碰到热物体）通常较浅，因为回避反射会限制接触时间——只有当患者无法自行抽离时（意识丧失、醉酒、被束缚或其他能力受限）才会烧得很深，或是长时间接触一个只是中等热度的物体也可能酿成深度烧伤。",
+     "hard": false
+    },
+    {
+     "en": "Non-accidental injury red flags in burn patients: formed or unusual patterned shapes, and burns in atypical locations such as the genitalia, buttocks, and thighs — screen for this especially in children, older adults, and people with disabilities.",
+     "zh": "烧伤患者提示非意外伤害（虐待）的警示征：有规则形状或不寻常图案的烧伤，以及位于生殖器、臀部、大腿等非典型部位的烧伤——尤其要在儿童、老年人和有残疾的患者身上留意排查。",
+     "hard": false
+    },
+    {
+     "en": "Steam is a special case among hot gases: most inhaled hot gases cause supraglottic (upper airway) injury only and rarely reach the lower airway, but steam's tiny hot-water particles can penetrate all the way down and cause substantial lower-airway injury.",
+     "zh": "蒸汽在热气体中是个特例：大多数吸入的热气体只造成声门上（上气道）损伤，很少累及下气道；但蒸汽中细小的高温水颗粒能一路深入，造成严重的下气道损伤。",
+     "hard": true
+    },
+    {
+     "en": "Flash burns come from an explosion or a lightning strike — a brief but very intense heat exposure. They are usually the least of the patient's problems, since the trauma caused by whatever produced the flash (blast injury, fall, being thrown) is often more severe than the burn itself.",
+     "zh": "闪光烧伤来自爆炸或雷击——短暂但极其强烈的热暴露。它们通常不是患者最主要的问题，因为造成闪光的事件本身带来的创伤（爆炸伤、坠落、被抛出）往往比烧伤本身更严重。",
+     "hard": false
+    },
+    {
+     "en": "Burn shock has two mechanisms working together: absolute fluid loss (evaporation straight out through damaged skin, plus endotoxin release from the injured tissue) and relative fluid loss (a distributive component as capillaries leak and fluid shifts into the interstitial space, causing whole-body edema). It is a whole-body process, not confined to the burned area, and it disrupts oxygen/nutrient delivery and waste removal everywhere.",
+     "zh": "烧伤性休克由两种机制共同造成：绝对容量丢失（体液经受损皮肤直接蒸发丢失，加上受伤组织释放内毒素）和相对容量丢失（分布性成分——毛细血管渗漏使液体转移到组织间隙，造成全身性水肿）。这是一个波及全身的过程，不局限于烧伤部位本身，会破坏全身各处的氧气/营养输送和废物清除。",
+     "hard": false
+    },
+    {
+     "en": "Burn shock typically doesn't set in until roughly 6-8 hours after the burn, so prehospital crews rarely actually witness it developing. The teaching point that follows: if an acutely burned patient IS in shock during the initial prehospital phase, that shock is probably from something else — go looking for another injury (falls through floors, jumps from windows, falling debris are all common at fire/explosion scenes) rather than assuming burn shock explains it.",
+     "zh": "烧伤性休克通常要到伤后约 6-8 小时才会出现，所以院前团队很少真正目睹它的发生过程。由此得出的教学要点是：如果一名刚烧伤的患者在院前初期阶段就已经休克，这种休克更可能另有原因——应该主动寻找其他损伤（火灾/爆炸现场常见坠楼、跳窗、被坠落物砸中等），而不是想当然地归因于烧伤性休克。",
+     "hard": true
+    },
+    {
+     "en": "Thermal inhalation injury splits along an anatomical line: superheated GAS inhalation tends to injure the supraglottic (upper) airway, while inhaled STEAM or hot particulate matter tends to injure the infraglottic (vocal cords, larynx) and lower airway. Either can cause coughing, wheezing, stridor, laryngospasm, or bronchospasm, and severe upper-airway swelling can develop suddenly — sometimes not until during transport, so recheck the airway repeatedly rather than once.",
+     "zh": "吸入性热损伤大致按解剖部位分界：吸入过热气体多损伤声门上（上气道），吸入蒸汽或热颗粒物多损伤声门下（声带、喉）及下气道。两者都可能引起咳嗽、喘鸣、喘息、喉痉挛或支气管痉挛，且严重的上气道水肿可能骤然出现——有时要到转运途中才显现，因此气道要反复复查，而不是评一次就够。",
+     "hard": true
+    },
+    {
+     "en": "The majority of fire deaths are NOT from the burn itself but from toxic gas inhalation, upper-airway compromise, and pulmonary injury. Burning plastics, PVC piping, and synthetic carpet release toxic combustion products including cyanide compounds (thiocyanate) — anyone exposed to smoke can suffer thermal airway burns, hypoxia (the fire itself consumes ambient oxygen), and chemical tissue damage all at once.",
+     "zh": "大多数火灾死亡并非死于烧伤本身，而是死于有毒气体吸入、上气道受损和肺损伤。塑料、PVC 管材和合成地毯燃烧会释放有毒燃烧产物，包括氰化物（硫氰酸盐）——任何暴露于烟雾中的人都可能同时遭受气道热灼伤、缺氧（燃烧本身消耗周围氧气）以及化学性组织损伤三重打击。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Carbon Monoxide Intoxication",
+   "titleZh": "一氧化碳中毒",
+   "points": [
+    {
+     "en": "Suspect CO whenever people who share the same space report headache or nausea together — a poorly maintained furnace, or vehicle exhaust drawn into a building's air-handling system, can poison an entire household or workplace at once. A classic clue: symptoms present at home but resolve when the person is away at work or school. Common source scenarios include running a small engine (generator, vehicle) in an enclosed garage or basement, firefighters doing post-fire overhaul, and heavy long-term exhaust exposure (toll booth workers, auto mechanics); methylene chloride found in some paint removers can also generate CO in the body.",
+     "zh": "只要处在同一空间的人同时出现头痛或恶心，就要怀疑一氧化碳中毒——年久失修的炉具，或被吸入建筑通风系统的车辆尾气，都可能让整户人家或整个工作场所同时中毒。一条经典线索是：症状在家中出现，一去上班或上学就好转。常见的来源场景包括在密闭车库或地下室内运行小型发动机（发电机、车辆），消防员火灾后清理现场，以及长期大量吸入尾气（收费站员工、汽修工）；某些油漆去除剂中的二氯甲烷在体内也可代谢产生一氧化碳。",
+     "hard": false
+    },
+    {
+     "en": "CO binds hemoglobin roughly 250 times more readily than oxygen does, so it progressively displaces oxygen from both alveolar air and blood. Baseline carboxyhemoglobin is about 2% in most people, rises to 4-8% in heavy smokers, and a level of 50% or higher can be fatal.",
+     "zh": "一氧化碳与血红蛋白的结合力约为氧气的 250 倍，因此会逐步把氧气从肺泡气和血液中挤走。大多数人基础碳氧血红蛋白水平约为 2%，重度吸烟者可升至 4-8%，达到 50% 或以上可能致命。",
+     "hard": true
+    },
+    {
+     "en": "The 'cherry red skin' teaching sign is mostly seen in people who have already died from CO, not in living patients — never rule out CO poisoning just because the patient's skin isn't cherry red.",
+     "zh": "教科书里的\"樱桃红皮肤\"体征主要见于已经死亡的一氧化碳中毒者，而不是活着的患者——不能仅凭患者皮肤不是樱桃红，就排除一氧化碳中毒。",
+     "hard": false
+    },
+    {
+     "en": "Standard pulse oximetry is unreliable and dangerous to trust in suspected CO poisoning: patients with severe CO intoxication typically show a normal-or-better SpO2 reading, because the device cannot tell carboxyhemoglobin apart from oxygenated hemoglobin. Newer prehospital CO-specific monitors exist but are not yet universal.",
+     "zh": "疑似一氧化碳中毒时不能信赖标准脉搏血氧仪的读数——即使是严重一氧化碳中毒的患者，SpO2 读数往往正常甚至偏高，因为设备无法区分碳氧血红蛋白和氧合血红蛋白。新一代可专门测一氧化碳的院前设备已经出现，但尚未普及。",
+     "hard": true
+    },
+    {
+     "en": "Hyperbaric oxygen therapy is theoretically attractive for CO poisoning because it speeds up how fast hemoglobin re-saturates with oxygen, but most randomized controlled trials have not shown a clear benefit, and burn centres no longer routinely use it — it's still worth knowing about, just not something to expect or request as a default intervention.",
+     "zh": "高压氧治疗对一氧化碳中毒在理论上很有吸引力，因为它能加快血红蛋白重新被氧饱和的速度，但大多数随机对照试验并未证实明确获益，烧伤中心目前也已不再常规使用——仍值得了解这项干预，但不应把它当成默认会用到的处置。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Chemical Burns",
+   "titleZh": "化学烧伤",
+   "points": [
+    {
+     "en": "A chemical burn keeps progressing for as long as the corrosive substance stays in contact with the skin, which is why the cornerstone of treatment is simply getting the chemical off the patient as fast as possible — not any specific antidote or dressing.",
+     "zh": "化学烧伤会持续进展，只要腐蚀性物质还接触着皮肤，损伤就不会停止——这正是治疗核心永远是尽快把化学物质从患者身上清除干净，而不是某种特效解毒剂或敷料。",
+     "hard": false
+    },
+    {
+     "en": "Acids cause immediate pain and coagulation necrosis, and deeper tissue is typically spared — the injury tends to look as bad as it is. Bases and alkalis (potassium/sodium hydroxide, lime, drain or oven cleaner, lye) cause comparatively little initial pain but far more extensive damage through liquefaction necrosis (protein and collagen breakdown, fat saponification, tissue dehydration, vessel thrombosis) — alkali burns are the deceptive, more dangerous ones because the pain doesn't match the true depth.",
+     "zh": "酸类会造成即刻疼痛和凝固性坏死，深层组织通常受累较轻——伤情看起来有多重就真有多重。碱性物质（氢氧化钾/钠、石灰、下水道/烤箱清洁剂、碱液）起初疼痛感相对轻微，却会通过液化性坏死（蛋白质与胶原分解、脂肪皂化、组织脱水、血管血栓形成）造成远比表面看起来更广泛的损伤——碱烧伤才是那种\"疼痛骗人\"、真实深度被低估的危险类型。",
+     "hard": true
+    },
+    {
+     "en": "Three further chemical-burn categories worth recognizing: oxidizing agents (hydrogen peroxide, sodium chlorate) add an exothermic heat reaction on top of tissue destruction and can cause systemic poisoning; phosphorous (white phosphorous, tracer ammunition, fireworks) ignites on contact with air and can also poison systemically; vesicants (Lewisite, mustard gas, phosgene oxime) are blister-forming chemical-warfare agents that cause respiratory compromise if inhaled.",
+     "zh": "另外三类化学烧伤要认得出来：氧化剂（过氧化氢、氯酸钠）在组织破坏之外还会产生放热反应，并可能造成全身中毒；磷类（白磷、曳光弹、烟花）一接触空气就会燃烧，也可能造成全身中毒；糜烂性毒剂（路易斯气、芥子气、光气肟）属于会致水疱的化学战剂，吸入后可造成呼吸功能损害。",
+     "hard": false
+    },
+    {
+     "en": "Decontamination technique: strip the patient's clothing immediately (this alone removes most surface chemical), then irrigate with copious low-pressure water. Have the patient bend forward while washing the head and hair so contaminated runoff doesn't cascade over the rest of the body, and scrub skin folds and between fingers/toes meticulously — chemical pools there and keeps burning. Wash the whole body again once you think you're done, since a single pass is rarely enough; a mild detergent (dish soap) helps lift chemicals that are adhering to the skin, and washing should stay gentle to avoid chafing that increases absorption.",
+     "zh": "洗消技术要点：立即脱去患者衣物（这一步就能去除大部分表面化学物质），然后用大量低压水冲洗。冲洗头面部和头发时让患者向前弯腰，避免带着污染物的水流冲过身体其他部位；皮肤褶皱处和指（趾）缝要仔细擦洗——化学物质会积存在这些地方持续造成损伤。以为洗完了也要再洗一遍，因为一次冲洗往往不够；若化学物质黏附在皮肤上，用温和洗洁精辅助去除；整个过程动作要轻柔，避免摩擦破皮反而增加吸收。",
+     "hard": false
+    },
+    {
+     "en": "Some chemicals — usually powders — react violently with water, which rules out immediate irrigation; brush off as much dry powder as possible first. A household-chemical trap worth knowing: mixing bleach (sodium hypochlorite) with an acid (vinegar) or a base (ammonia) displaces the chloride molecule and releases toxic chlorine gas.",
+     "zh": "有些化学物质（通常是粉末）遇水会发生剧烈反应，此时不能直接冲水，应先尽量刷掉干粉。一个家用化学品陷阱值得记住：漂白剂（次氯酸钠）与酸性物质（醋）或碱性物质（氨水）混合会置换出氯离子，释放有毒的氯气。",
+     "hard": false
+    },
+    {
+     "en": "Chemical burn extent is notoriously hard to estimate — it can penetrate far deeper than surface appearance suggests, so treat the rule-of-nines estimate as a starting point, not the whole story, and never underestimate a small quantity of a highly corrosive agent like phenol; the working rule is 'flush, flush, and then flush some more,' continuing irrigation until the patient's pain has substantially decreased or resolved.",
+     "zh": "化学烧伤的范围出了名地难估——它可能远比表面看起来渗透得更深，因此九分法只是个起点，不是全部真相；也绝不要低估少量高腐蚀性物质（如苯酚）的破坏力。操作原则是\"冲、再冲、继续冲\"，冲洗要持续到患者疼痛明显减轻或消失为止，而不是冲一个固定时长就停。",
+     "hard": false
+    },
+    {
+     "en": "Two burns that look deceptively mild at first: prolonged contact with petroleum products (gasoline, diesel) can end up full-thickness even though it initially looks only partial-thickness, and enough hydrocarbon absorption can cause organ failure or death; cement (calcium oxide) reacts with skin sweat and can penetrate clothing, so the injury may not be noticed until hours after exposure. Hydrofluoric acid causes pain and erythema at the site, and some services apply topical calcium gluconate gel after irrigation per local protocol. For eye exposure, acids, alkalis, dry chemicals (lye, lime), and phenols can all burn the eye — always wear eye protection when working around chemicals.",
+     "zh": "两类初看不起眼、实则凶险的烧伤：长时间接触石油产品（汽油、柴油）表面看似部分层烧伤，实际可能已是全层烧伤，且碳氢化合物吸收足够多可导致脏器衰竭甚至死亡；水泥（氧化钙）会与皮肤汗液反应且能渗透衣物，损伤可能要等数小时后才被发现。氢氟酸会在接触部位造成疼痛和红斑，部分单位按本地规程在冲洗后局部涂抹葡萄糖酸钙凝胶。眼部化学暴露方面，酸、碱、干性化学品（碱液、石灰）和苯酚都可能烧伤眼睛——接触化学品时务必佩戴护目镜。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Electrical Burns and Associated Injuries",
+   "titleZh": "电烧伤及相关损伤",
+   "points": [
+    {
+     "en": "Scope of the problem: one in every five construction-industry deaths involves electrical contact, and electrocution is the fifth leading cause of death in the workplace overall. Children make up the majority of home electrocutions, which tend to be lower-voltage exposures (classically, chewing on an electrical cord).",
+     "zh": "问题规模：建筑行业每五起死亡中就有一起涉及触电，电击致死是所有工作场所死亡原因中的第五位。家庭内触电事件中儿童占多数，通常是较低电压的暴露（经典场景是啃咬电线）。",
+     "hard": true
+    },
+    {
+     "en": "Three distinct electrical burn types: the contact burn (true electrical injury, current strongest at entry and exit — classic bull's-eye lesion with a charred full-thickness centre, a middle zone of cold grey dry tissue, and an outer red zone of coagulation necrosis); the flash burn (electrothermal, from current arcing through air once resistance drops low enough, arc temperature 3,000-20,000°C — hot enough to char, and can splash bystanders near a lightning strike with a fine red rash); and the flame burn (a thermal burn where the current ignites clothing or surroundings).",
+     "zh": "电烧伤有三种不同类型：接触性烧伤（真正的电击伤，电流在入口和出口最强——典型表现为靶心样病灶，中心为焦黑全层坏死区，中层为冷、灰、干组织，外层为凝固性坏死的红色区）；闪光伤（电热性损伤，电流在空气电阻足够低时经空气产生电弧，电弧温度 3,000-20,000°C——足以造成明显焦痂，雷击点附近的旁观者可能被\"溅到\"，出现细密的红色皮疹样烧伤）；以及火焰烧伤（热力性烧伤，电流引燃了衣物或周围环境）。",
+     "hard": true
+    },
+    {
+     "en": "The visible contact burn is often unimpressive but can signal devastating injury deep inside the body along the current's path — electrical burns are usually classified as MAJOR burns for this reason regardless of how small the entry/exit wounds look, and current that crossed the chest raises specific concern for cardiac conduction system injury.",
+     "zh": "可见的接触性烧伤外观往往并不吓人，却可能提示电流沿途造成的体内深部严重损伤——正因如此，无论进出口伤口看起来多小，电烧伤通常都被归类为重大烧伤；若电流曾穿过胸部，则要特别警惕心脏传导系统受损。",
+     "hard": false
+    },
+    {
+     "en": "Scene safety comes before patient contact, every time: if the power source might still be energized (patient lying on a live wire, for example), do not approach — call the power company to shut off and confirm de-energization before anyone touches the patient.",
+     "zh": "现场安全永远排在接触患者之前：如果电源可能仍然带电（比如患者躺在带电电线上），绝不能靠近——先联系电力公司切断并确认已断电，才能让任何人接触患者。",
+     "hard": false
+    },
+    {
+     "en": "The two most common causes of DEATH from electrical injury are asphyxia and cardiac arrest. Asphyxia can come from tetanic contraction of the respiratory muscles during prolonged AC contact, or from current knocking out the brain's own respiratory drive centre. Cardiac arrest can be triggered by a current as small as 0.1 amp if it passes directly through the heart — as it does on a hand-to-hand current pathway.",
+     "zh": "电击伤致死最常见的两个原因是窒息和心搏骤停。窒息可能来自长时间交流电接触引起的呼吸肌强直性收缩，也可能来自电流击中脑内呼吸驱动中枢。心搏骤停方面，只要电流直接穿过心脏——比如从一只手传到另一只手的路径——小到 0.1 安培的电流就足以诱发心室颤动。",
+     "hard": true
+    },
+    {
+     "en": "Non-lethal but serious sequelae to screen for: neurologic complications (seizures, delirium, confusion, coma, temporary quadriplegia), kidney injury resembling crush syndrome from released myoglobin, and tetanic muscle spasms strong enough to cause fractures or dislocations that get overlooked amid the focus on the burn itself — posterior shoulder dislocation and scapula fracture are classic, otherwise-rare injuries reported after electrocution. Always assess the C-spine too, especially in a worker who fell from a utility pole. Common post-electrical dysrhythmias include atrial fibrillation and atrial flutter.",
+     "zh": "需要主动排查的非致命但严重的并发症：神经系统并发症（癫痫发作、谵妄、意识模糊、昏迷、暂时性四肢瘫痪）、类似挤压综合征的肾损伤（源于释放入血的肌红蛋白）、以及强直性肌肉痉挛强到足以造成骨折或脱位——因为大家的注意力都在烧伤本身上，这类损伤常被忽略；肩关节后脱位和肩胛骨骨折就是触电后典型的、平时罕见却反复被报道的损伤。也要始终评估颈椎，尤其是从电线杆上摔下来的工人。触电后常见的心律失常包括心房颤动和心房扑动。",
+     "hard": false
+    },
+    {
+     "en": "TASER (conducted electrical weapon) injuries: two small barbed darts puncture the skin and deliver electromuscular disruption; while usually minor, hits to sensitive areas (eyes, major vessels, face, genitalia) have been reported, so remove darts carefully under standard precautions. Manufacturers advise against use in flammable environments — cases exist of a person covered in alcohol-based pepper spray catching fire when a TASER was applied nearby.",
+     "zh": "TASER（电击枪）损伤：两枚带倒钩的小型飞镖穿刺皮肤，造成电肌肉功能失调；虽然通常损伤轻微，但已有击中眼睛、大血管、面部、生殖器等敏感部位的报告，取出飞镖时要按标准防护规范小心操作。厂商建议不要在易燃环境中使用——已有患者身上沾有酒精基辣椒喷雾、在附近使用 TASER 后当场着火的案例。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Lightning Injuries",
+   "titleZh": "雷击伤",
+   "points": [
+    {
+     "en": "Lightning kills an average of 9-10 Canadians and injures roughly 160 more every year, mostly during the summer. It can strike up to 15 km away from the storm itself, before the storm visibly arrives or after it seems to have passed — 'the storm isn't here yet/is gone' is not a safety guarantee.",
+     "zh": "雷击平均每年造成约 9-10 名加拿大人死亡，另有约 160 人受伤，大多发生在夏季。雷击可以打在距离风暴本身 15 公里以外的地方，可能在风暴看起来还没到、或已经过去之后发生——\"风暴还没来/已经走了\"不代表安全。",
+     "hard": true
+    },
+    {
+     "en": "Most lightning victims are not struck directly — far more often they are 'splashed' when lightning hits a nearby tall conductive object (tree, pole, building), or injured by ground current spreading outward from a strike, which explains multi-casualty incidents in open areas like a golf course. A 'stride potential' injury occurs when a person stands with legs apart and current enters the closer leg, travels up through the trunk, and exits the far leg.",
+     "zh": "大多数雷击伤者并非被直接击中——更常见的情况是雷电击中附近的高大导电物体（树木、电线杆、建筑物）后被\"溅到\"，或是被雷击点向外扩散的地电流所伤，这也解释了为什么高尔夫球场等开阔地带会出现多人同时受伤的情况。\"跨步电压\"损伤发生在人双腿分开站立时：电流从较近的一条腿进入，经躯干向上传导，再从另一条腿流出。",
+     "hard": false
+    },
+    {
+     "en": "Lightning carries enormous power — up to 100 million volts and peak currents around 200,000 amps — but unlike ordinary high-voltage electrical injury, it is DIRECT current delivered over milliseconds, so it behaves more like a blast injury: it can damage the tympanic membranes and air-containing internal organs, and has been reported to blow victims' clothes off entirely. Muscle damage releases myoglobin and threatens the kidneys, same as other severe electrical/crush injuries.",
+     "zh": "雷电携带的能量极其巨大——高达一亿伏特，峰值电流约 20 万安培——但与普通高压电击伤不同，它是在毫秒级时间内释放的直流电，因此表现更像爆炸伤：可损伤鼓膜和含气脏器，也曾有受害者衣物被整个炸飞的记录。肌肉损伤释放的肌红蛋白同样会威胁肾脏，与其他严重电击伤/挤压伤类似。",
+     "hard": true
+    },
+    {
+     "en": "Cardiac effect — lightning acts as a 'cosmic defibrillator,' delivering a massive DC countershock that depolarizes the entire heart at once; it may resume beating spontaneously or after roughly 2 minutes of immediately-started CPR. Respiratory arrest, however, tends to persist even after the heart restarts, so continued ventilatory support matters — untreated post-lightning respiratory arrest can cause a SECOND, preventable cardiac arrest.",
+     "zh": "心脏方面的影响——雷击就像一次\"宇宙除颤\"，瞬间给出巨大的直流电击、使全心同步去极化；心脏可能自行恢复跳动，或在立即开始的心肺复苏约 2 分钟后恢复。但呼吸骤停往往在心跳恢复后仍然持续，因此持续的通气支持至关重要——雷击后未处理的呼吸骤停可能导致第二次、本可避免的心搏骤停。",
+     "hard": true
+    },
+    {
+     "en": "CNS effects are almost universal after a lightning strike: at least 70% of victims lose consciousness for some period and nearly 90% experience some confusion or amnesia; leg paralysis has occurred (usually temporary, rarely permanent quadriplegia). A lightning burn classically shows a feathery or zigzag (Lichtenberg) pattern from the splash effect, but despite the unique look, the immediate life threats match a high-voltage power-line injury: airway obstruction, respiratory arrest, and cardiac arrest.",
+     "zh": "雷击后中枢神经系统受累几乎是普遍现象：至少 70% 的受害者会有一段时间的意识丧失，近 90% 会出现不同程度的意识模糊或遗忘；也曾出现下肢瘫痪（通常是暂时性的，永久性四肢瘫痪罕见）。雷击烧伤典型表现为羽毛状或锯齿状（Lichtenberg 图案）的皮肤纹路，是溅射效应所致；但尽管外观独特，其即刻致命威胁与高压电线损伤一致：气道梗阻、呼吸骤停、心搏骤停。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Radiation Burns and Acute Radiation Syndrome",
+   "titleZh": "放射性烧伤与急性放射综合征",
+   "points": [
+    {
+     "en": "Three types of ionizing radiation, each needing a different shielding strategy: alpha particles (low penetrating energy, stopped by intact skin), beta particles (greater penetrating power, can pass skin but are blocked by simple protective clothing), and gamma radiation (highly penetrating, passes through the body and most solid materials, with danger proportional to wavelength).",
+     "zh": "电离辐射有三种类型，各自需要不同的防护策略：α粒子（穿透能力弱，被完整皮肤即可阻挡）、β粒子（穿透力更强，可穿过皮肤，但简单防护服可以阻挡）、γ射线（穿透力极强，能穿过人体和大多数固体材料，其危险性与波长成正比）。",
+     "hard": true
+    },
+    {
+     "en": "Radiation dose units: radiation absorbed dose (rad) or roentgen equivalent man (rem), with 100 rad equal to 1 gray (Gy). Average everyday background exposure is about 0.36 rem per year — a useful reference point for how small routine exposure normally is.",
+     "zh": "辐射剂量单位：吸收剂量（rad）或人体当量剂量（rem），100 rad 等于 1 戈瑞（Gy）。日常本底辐射暴露平均约为每年 0.36 rem——可作为衡量日常暴露有多微小的参照。",
+     "hard": true
+    },
+    {
+     "en": "Acute radiation sickness severity by whole-body dose: mild at 1-2 Gy (100-200 rad), moderate at 2-6 Gy (200-600 rad), severe at 6-8 Gy (600-800 rad), and exposure above 8 Gy (800 rad) is immediately fatal. This scale applies to total-body dose only — targeted radiation therapy can deliver 8-10 Gy safely to a small tumour site precisely because it isn't a whole-body exposure.",
+     "zh": "急性放射病严重度按全身剂量分级：1-2 Gy（100-200 rad）为轻度，2-6 Gy（200-600 rad）为中度，6-8 Gy（600-800 rad）为重度，超过 8 Gy（800 rad）立即致命。这个分级只适用于全身剂量——放疗可以对局部肿瘤精准给到 8-10 Gy 而依然安全，正是因为那不是全身暴露。",
+     "hard": true
+    },
+    {
+     "en": "How soon vomiting starts after radiation exposure is a practical triage/prognosis tool: unconsciousness or vomiting within 10 minutes predicts no survival; vomiting within 1 hour indicates severe exposure with a 30-80% survival rate; vomiting at 1-2 hours indicates moderate exposure with a 95-100% survival rate. Earlier-onset vomiting means a worse outcome — useful when deciding how to triage patients or weighing the risk of sending a crew into a high-radiation area for rescue.",
+     "zh": "辐射暴露后呕吐出现的早晚是一个实用的分诊/预后工具：暴露 10 分钟内出现意识丧失或呕吐，预示无法存活；1 小时内呕吐提示重度暴露，生存率 30-80%；1-2 小时内呕吐提示中度暴露，生存率 95-100%。呕吐出现越早，预后越差——这在决定分诊顺序、或权衡是否派队员进入高辐射区域施救时很有实际价值。",
+     "hard": true
+    },
+    {
+     "en": "Most real-world radiation accidents involve gamma radiation or x-rays. A patient who has simply been exposed to radiation poses no contamination risk to caregivers, but a patient contaminated with radioactive particulate matter (as can happen in an explosion or 'dirty bomb' incident) does. Radiation contact burns from briefly handling a radioactive source can resemble anything from a mild sunburn to a chemical burn — but unlike chemical burns, which appear almost immediately, a radiation burn may not become visible for hours to days after exposure.",
+     "zh": "现实中的辐射事故大多涉及γ射线或 X 射线。仅仅暴露于辐射中的患者不会对救护人员构成污染风险，但若患者被放射性颗粒物污染（如爆炸或\"脏弹\"事件中可能发生），则确实存在污染风险。短暂接触放射源造成的辐射接触性烧伤，外观可以从轻微晒伤到化学烧伤不等——但与几乎立即显现的化学烧伤不同，辐射烧伤可能要到暴露后数小时甚至数天才会显现出来。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Scene Assessment and Immediate Actions",
+   "titleZh": "现场评估与即刻处置",
+   "points": [
+    {
+     "en": "Never enter a burning building unless you are a trained, properly equipped firefighter, and stay wary of enclosed spaces even after the fire is out — toxic gases can linger, flashover can occur (room contents all igniting at once), and burning plastics release cyanide. Recently burned buildings stay dangerous afterward too: floors, roofs, beams and walls can collapse without warning, and electrical/gas/plumbing/heating systems may be unstable — watch for hazmat placards and never enter a suspected hazmat area without proper training and protection. Stage in a genuinely safe location; being too close to the hot zone compromises both your own safety and the care you can deliver, and your role may extend to treating fire victims AND providing rehab for firefighters and other responders.",
+     "zh": "除非你是训练有素、装备齐全的消防员，否则绝不进入正在燃烧的建筑；即使明火已灭，也要对密闭空间保持警惕——有毒气体可能残留，还可能发生轰燃（房间内物品同时瞬间起火），而燃烧塑料会释放氰化物。刚烧过的建筑事后依然危险：地板、屋顶、横梁、墙壁都可能毫无预兆地垮塌，电力、燃气、给排水和供暖系统也可能不稳定——留意危化品标识，未经专业训练和防护绝不进入疑似危化品区域。要停靠在真正安全的位置；离热区太近既危及自身安全，也会影响救治质量，而且你的职责可能还包括救治火灾受害者，以及为消防员等其他应急人员提供休整照护。",
+     "hard": false
+    },
+    {
+     "en": "First actions on a freshly burned patient are simple but often skipped: extinguish the flame and cool the burn — patients still turn up at hospital EDs with smouldering clothing. A person whose clothes are on fire should stop, drop, and roll — never let them run (running fans the flame) or stay standing (upright increases the chance of inhaling flame and igniting hair); if they can't roll themselves, lower them to the ground, cover with a blanket, and pat the fire out.",
+     "zh": "对刚烧伤患者的第一步动作很简单，却常被跳过：灭火并给烧伤降温——仍有患者带着阴燃的衣物被送到急诊。衣物着火的人应\"停、趴、滚\"——绝不能让他们跑动（奔跑会给火焰扇风）或保持站立（直立姿势更容易吸入火焰、点燃头发）；若患者无法自行打滚，应把他放倒在地、盖上毯子并拍灭火焰。",
+     "hard": false
+    },
+    {
+     "en": "Remove all smouldering clothing and anything that can retain heat — watchbands, zippers, and rings can keep burning the patient and can melt through your own gloves. Get rings off promptly: burned hands swell considerably, and an unremoved ring becomes a tourniquet. If cloth has melted into the skin, cut it away rather than pulling it off, and leave material truly fused to flesh for hospital or burn-centre staff to manage.",
+     "zh": "移除所有仍在阴燃的衣物和一切能储热的物品——表带、拉链、戒指都可能继续烫伤患者，还可能熔穿你自己的手套。要及时取下戒指：烧伤的手会明显肿胀，来不及取下的戒指会变成止血带。若织物已熔入皮肤，应剪开而不是硬拽，真正与皮肉熔合的部分留给医院或烧伤中心处理。",
+     "hard": false
+    },
+    {
+     "en": "Actively look for a second mechanism riding along with the burn itself — a jump from a window to escape flames, musculoskeletal trauma from tetanic muscle spasms after an electrical burn, entrapment in an enclosed space, or a loss of consciousness — and wear appropriate PPE (gloves plus a combined mask/eye shield): a burned patient is leaking body fluids and highly infection-prone, so the protection runs both directions.",
+     "zh": "主动排查烧伤之外可能并存的第二种受伤机制——为逃离火焰跳窗、电烧伤后强直性肌肉痉挛造成的肌肉骨骼损伤、被困在密闭空间、或曾经意识丧失——并佩戴合适的个人防护装备（手套加合并式口罩/护目面罩）：烧伤患者体液持续渗出、极易感染，这种防护是双向的。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Primary Survey in the Burn Patient",
+   "titleZh": "烧伤患者的初级评估",
+   "points": [
+    {
+     "en": "Burns can fool paramedics because severely injured burn patients often don't 'act sick' the way other trauma or cardiac patients do — an isolated severe burn patient may walk right up to you with the chief complaint 'I'm terribly cold' rather than presenting hypotensive or unresponsive, and what looks like tattered clothing on a limb may actually be sheets of the patient's own skin. There's a pain paradox to know too: partial-thickness burns hurt intensely because nerve endings are exposed, but the WORST burns — full-thickness — can hurt little or not at all because the sensory nerves themselves are destroyed, so a painless burn is not automatically a minor one.",
+     "zh": "烧伤很容易骗过救护人员，因为严重烧伤患者往往不像其他创伤或心脏病患者那样\"看起来很重\"——一名孤立性严重烧伤患者可能自己走到你面前，主诉是\"我好冷\"而不是低血压或无反应，肢体上看似破烂的衣物碎片，可能其实是患者自己脱落的整片皮肤。这里还有一个疼痛悖论：部分层烧伤因为神经末梢暴露而剧痛，但最严重的全层烧伤反而可能几乎不痛，因为感觉神经本身已被破坏——不痛的烧伤绝不等于轻微的烧伤。",
+     "hard": true
+    },
+    {
+     "en": "Combative behaviour in a burn patient should be treated as hypoxia until proven otherwise. Isolated burns alone do not cause unconsciousness (though toxic inhalation can), so any unresponsive burn patient needs a careful, deliberate search for another life-threatening injury rather than assuming the burn itself explains it. Airway management is a priority because the same heat that burned the skin may already have damaged the airway: laryngeal edema can develop with alarming speed, especially in infants and children, and early intubation — before the airway closes off completely — can be lifesaving, performed by the most experienced provider on scene. Catching it requires actively looking early, not waiting for obvious signs.",
+     "zh": "烧伤患者出现躁动，应按缺氧处理，直到排除为止。孤立性烧伤本身不会造成意识丧失（但有毒气体吸入可以），所以任何无反应的烧伤患者都需要认真、主动地排查是否存在另一处致命损伤，而不是想当然地归因于烧伤本身。气道管理是优先事项，因为造成皮肤烧伤的同一热源可能已经损伤了气道：喉头水肿可能进展得极快，婴幼儿尤其明显；在气道完全闭塞之前及早插管可能挽救生命，应由现场经验最丰富的人员执行——但前提是主动、及早地去找这个问题，而不是等明显征象出现才反应。",
+     "hard": true
+    },
+    {
+     "en": "Listen specifically for stridor as a sign of impending upper-airway compromise. Patients with pre-existing lung disease can develop bronchospasm from even a relatively minor smoke exposure and may respond to inhaled beta-2 agonists. Consider humidified, cool oxygen for a suspected upper-airway burn — nebulized normal saline is an option when a true high-output humidifier isn't available (a bubble humidifier doesn't count) — but weigh that against the need for a high oxygen concentration, since nebulized saline alone doesn't deliver much O2. Every person burned in a fire should get supplemental oxygen, and remember SpO2 readings are suspect whenever CO exposure is possible.",
+     "zh": "要专门听有无喘鸣，这是上气道即将受阻的信号。有基础肺部疾病的患者，即使只是相对轻微的烟雾暴露也可能诱发支气管痉挛，吸入型β2 激动剂可能有效。对疑似上气道烧伤，可考虑给予加湿的冷氧气——若没有真正的高流量加湿器（鼓泡式加湿器不算），雾化生理盐水是一个选项——但要权衡高浓度供氧的需求，因为单靠雾化生理盐水提供不了多少氧气。任何在火场受烧伤的人都应该给氧，同时要记住，只要有一氧化碳暴露的可能，SpO2 读数就不可信。",
+     "hard": false
+    },
+    {
+     "en": "Fluid resuscitation is a huge focus in the first 24-48 hours of burn CARE, but severely burned patients do not need large fluid volumes in the first few PREHOSPITAL minutes unless significant time has already passed since the burn — burn shock itself doesn't set in until roughly 6-8 hours post-burn. Don't delay transport chasing repeated vascular-access attempts if the patient isn't grossly hypotensive; an IV through burned tissue isn't strictly contraindicated but is avoided when an unburned site is available, and IO access is a modern fallback. If a freshly burned patient IS in shock during the early prehospital phase, look for another injury as the cause rather than assuming burn shock explains it.",
+     "zh": "液体复苏在烧伤救治的头 24-48 小时内是重中之重，但在院前最初几分钟内，严重烧伤患者并不需要大量补液——除非距受伤已经过去相当长时间；烧伤性休克本身要到伤后约 6-8 小时才会出现。如果患者没有明显低血压，不要为反复尝试建立静脉通路而耽误转运；经烧伤组织建立静脉通路并非绝对禁忌，但只要有未烧伤部位可用就应尽量避开，骨内通路是现代的备选方案。如果一名刚烧伤的患者在院前早期阶段就已经休克，应寻找其他损伤作为原因，而不是想当然地归因于烧伤性休克。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Burn Depth: Zones of Injury and Depth Classification",
+   "titleZh": "烧伤深度：损伤分区与深度分级",
+   "points": [
+    {
+     "en": "A burn wound radiates outward in three zones from the point of greatest heat contact: the central zone of coagulation (most damaged tissue, little or no blood flow), surrounded by the zone of stasis (reduced flow and inflammation — this tissue can still progress to necrosis over the next 24-48 hours, especially if burn shock compromises perfusion), and the outer zone of hyperemia (least affected, typically recovering within 7-10 days). Although burns were traditionally labelled first/second/third degree (and some centres extend this to fourth-sixth degree as destruction reaches muscle and bone), the practical field standard is to simplify everything to superficial, partial-thickness, or full-thickness — arguing over precise degree in the field wastes time; what the receiving facility needs is age plus approximate percentage full-thickness, percentage mixed partial-thickness, and airway status.",
+     "zh": "一处烧伤创面会以受热最重的部位为中心，向外呈三个分区放射：中心是凝固坏死区（损伤最重，血流很少或没有），外围是淤滞区（血流减少、伴炎症反应——这一层组织在之后 24-48 小时内仍可能进展为坏死，尤其是当烧伤性休克影响灌注时），最外层是充血区（受累最轻，通常 7-10 天内恢复）。虽然传统上把烧伤分为一度、二度、三度（部分中心甚至延伸出四到六度，指损伤深达肌肉和骨骼），但院前实用标准是简化为浅表、部分层、全层三类——在现场争论精确度数只会浪费时间；接收医院真正需要知道的是患者年龄，以及大致的全层烧伤百分比、混合部分层烧伤百分比和气道状况。",
+     "hard": true
+    },
+    {
+     "en": "A superficial burn involves only the epidermis: red, blanches and returns colour when touched, usually no blisters, painful because nerve endings are exposed to air. It heals spontaneously in 3-7 days — a sunburn is the textbook example.",
+     "zh": "浅表烧伤只累及表皮：发红，按压会变白后恢复颜色，通常没有水疱，因神经末梢暴露在空气中而疼痛。通常 3-7 天内自愈——晒伤就是典型例子。",
+     "hard": true
+    },
+    {
+     "en": "A partial-thickness burn involves the epidermis plus a variable amount of dermis, and splits into two grades. Superficial partial-thickness: red, blanches, usually blistered or moist, extremely painful, hair follicles still intact, heals spontaneously though it may scar or change appearance. Deep partial-thickness extends further into the dermis and destroys hair follicles plus sweat and sebaceous glands — commonly from hot liquid, steam, or grease — and in the field it can genuinely be hard to tell apart from a full-thickness burn.",
+     "zh": "部分层烧伤累及表皮加不同深度的真皮，可再分两级。浅部分层：发红、按压变白后恢复、通常有水疱或潮湿、疼痛剧烈、毛囊仍完整，会自行愈合但可能留疤或改变外观。深部分层则深入真皮更深处，破坏毛囊以及汗腺和皮脂腺——常见于热液体、蒸汽或油脂烫伤——在院前现场，深部分层与全层烧伤有时真的很难区分。",
+     "hard": true
+    },
+    {
+     "en": "A full-thickness burn destroys both skin layers, including the dermal basement membrane that regenerates new skin — the skin appears white/pale, brown and leathery, or charred, and dry leathery skin is called eschar. There is no capillary refill (capillaries destroyed) and often little or no pain within the full-thickness area itself (sensory nerves destroyed), though surrounding mixed-depth areas are usually very painful. Because the dermis can't regrow itself, full-thickness burns generally require skin grafting.",
+     "zh": "全层烧伤会破坏皮肤的两层结构，包括负责再生新皮肤的真皮基底膜——皮肤呈白色/苍白、棕色皮革样，或焦炭样，干燥呈皮革样的组织称为焦痂。毛细血管再充盈消失（毛细血管已被破坏），全层烧伤区域本身通常很少或完全不痛（感觉神经已被破坏），但周围混合深度区域通常非常疼痛。由于真皮无法自行再生，全层烧伤通常需要植皮。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "TBSA Estimation and Burn-Severity Classification",
+   "titleZh": "体表面积估算与严重度分级",
+   "points": [
+    {
+     "en": "When estimating total body surface area (TBSA) burned, count only partial- and full-thickness areas — ignore superficial burns. The rule of nines divides the body into 11 regions of roughly 9% each, with separate proportions for infants, children, and adults since body proportions change with growth. The rule of palms uses the patient's own palm (excluding fingers) as roughly 1% TBSA — handy for burns under 10% TBSA or scattered/irregular patterns. The Lund and Browder chart is the most precise method, subdividing the body into smaller, age-adjusted regions. Balance accuracy against time cost: the prehospital estimate exists to guide the patient to the right destination, the ED's estimate is used to start fluid therapy, and the burn centre's estimate — done last, with the most information — will always be the most accurate.",
+     "zh": "估算烧伤总体表面积（TBSA）时，只计算部分层和全层烧伤区域——不计浅表烧伤。九分法把身体分为 11 个区域，每区约占 9%，婴儿、儿童、成人的具体分法各不相同，因为身体比例会随生长发育变化。手掌法以患者自己的手掌（不含手指）约等于 1% TBSA 来估算——适合烧伤面积小于 10% TBSA 或形状零散不规则的情况。Lund and Browder 表是最精确的方法，把身体细分为更小的、按年龄调整的区域。要权衡精确度和所耗时间：院前估算是为了把患者送到正确的地方，急诊的估算用于启动补液治疗，而烧伤中心因为掌握信息最全，其估算永远是最精确的。",
+     "hard": true
+    },
+    {
+     "en": "The textbook grades burns as Major, Moderate, or Minor using TBSA-by-age cutoffs. MAJOR: full-thickness >10% TBSA; partial-thickness >25% TBSA (age 10-50) or >20% TBSA (under 10 or over 50); any burn to hands, feet, face, major joints, or genitalia, or a circumferential burn; burns with respiratory injury; burns complicated by fracture/trauma; high-voltage electrical burns; chemical burns; and burns in patients under 5 or over 55 that would only rate as moderate in a young adult. MODERATE: full-thickness 2-10% TBSA (excluding hands/feet/face/genitalia/airway); partial-thickness 15-25% (age 10-50) or 10-20% (under 10/over 50); superficial burns over 50% TBSA; low-voltage electrical burns. MINOR: full-thickness under 2%; partial-thickness under 15% (age 10-50) or under 10% (under 10/over 50); superficial burns under 50% TBSA. A patient with significant pre-existing disease — COPD or acute coronary syndrome, for example — may still need triage as a major burn even when the burn itself is small, because the underlying condition reduces their reserve to tolerate the injury.",
+     "zh": "教材按年龄分层的 TBSA 界值把烧伤分为重度、中度、轻度三级。重度：全层 >10% TBSA；部分层 >25% TBSA（10-50 岁）或 >20% TBSA（10 岁以下或 50 岁以上）；任何累及手、足、面部、大关节或生殖器的烧伤，或环形烧伤；合并呼吸道损伤的烧伤；合并骨折/其他创伤的烧伤；高压电烧伤；化学烧伤；以及 5 岁以下或 55 岁以上患者按年轻人标准只算中度的烧伤。中度：全层 2%-10% TBSA（不含手足面部生殖器和上气道）；部分层 15%-25%（10-50 岁）或 10%-20%（10 岁以下/50 岁以上）；浅表烧伤超过 50% TBSA；低压电烧伤。轻度：全层小于 2%；部分层小于 15%（10-50 岁）或小于 10%（10 岁以下/50 岁以上）；浅表烧伤小于 50% TBSA。若患者有明显基础疾病（如慢阻肺或急性冠脉综合征），即使烧伤面积本身很小，也可能仍需按重度烧伤分诊，因为基础病削弱了患者耐受损伤的储备。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Secondary Survey and Special Assessment Situations",
+   "titleZh": "二级评估与特殊情境评估",
+   "points": [
+    {
+     "en": "A quick look at the burned skin is only the start of the exam, not the end of it — burns can mask other, higher-priority injuries (a patient who jumped from a second-storey window may have leg fractures hidden under obvious burns), so complete the full head-to-toe and stay alert to the mechanism behind the burn itself. Cover injured eyes with moist, sterile pads. Actively check the neck, chest, and extremities for circumferential burns: as burned skin turns leathery and unyielding, progressive edema underneath can act like a tourniquet — in the neck it can obstruct the airway, in the chest it can restrict breathing excursion, and in a limb it can cut off circulation entirely. Check and document distal pulses in burned extremities repeatedly.",
+     "zh": "快速看一眼烧伤皮肤只是查体的开始，不是结束——烧伤可能掩盖其他优先级更高的损伤（从二楼跳窗的患者，明显的烧伤下方可能藏着腿部骨折），因此要完成完整的从头到脚检查，并对烧伤背后可能存在的受伤机制保持警觉。用湿润无菌敷料覆盖受伤的眼睛。主动检查颈部、胸部和四肢有无环形烧伤：随着烧伤皮肤变得像皮革一样僵硬缺乏弹性，皮下进行性水肿可能像止血带一样收紧——在颈部会堵塞气道，在胸部会限制呼吸幅度，在肢体则可能完全阻断循环。要反复检查并记录烧伤肢体的远端脉搏。",
+     "hard": false
+    },
+    {
+     "en": "Circumferential-burn patients need rapid transport because a compromised limb, chest, or airway may require an escharotomy — a surgical incision through the eschar to relieve pressure. Signs pointing toward vascular compromise that may need one: cyanosis, pallor, deep tissue pain, progressive paraesthesia, a progressively weakening or absent pulse, or a sensation of coldness in the limb.",
+     "zh": "环形烧伤患者需要快速转运，因为受压迫的肢体、胸廓或气道可能需要行焦痂切开术——即在焦痂上做手术切口以减压。提示血管受压、可能需要焦痂切开术的征象包括：发绀、苍白、深部组织疼痛、进行性感觉异常、脉搏进行性减弱或消失，以及肢体发凉感。",
+     "hard": false
+    },
+    {
+     "en": "Heat loss is a major threat for burn patients — take active steps against hypothermia, including running the ambulance heat uncomfortably warm for the crew and using warmed blankets and fluids.",
+     "zh": "热量丢失是烧伤患者面临的重大威胁——要主动采取防低体温措施，包括把救护车暖气开到让车组人员都觉得热的程度，并使用加温过的毯子和液体。",
+     "hard": false
+    },
+    {
+     "en": "For a radiation-exposure patient, scene safety comes first — determine whether it's safe to enter, and involve a hazmat team for exposure-limiting suits and destination advice if needed, since not every ED is equipped to handle a radiation-contaminated patient. Once the scene is safe, proceed with a standard ABCs assessment. Two brutal prognostic numbers to know: a thermal burn alone covering more than 70% TBSA is probably fatal by itself, and a combined burn-plus-radiation exposure affecting more than 30% TBSA together is probably fatal — keep this '30% rule' in mind when triaging multiple radiation-and-burn casualties and consulting medical control.",
+     "zh": "对辐射暴露患者，现场安全永远排第一位——先判断是否安全进入，必要时请危化品团队提供防护服并给出送治建议，因为并非每家急诊都有能力处理被辐射污染的患者。确认现场安全后，再按标准 ABC 顺序评估。两个残酷但必须记住的预后数字：单纯热力烧伤面积超过 70% TBSA 通常必死无疑；烧伤合并辐射暴露、两者共同影响面积超过 30% TBSA 时也通常必死无疑——在对多名同时遭受辐射和烧伤的伤员分诊、并联系医疗指导时，要牢记这条\"30% 规则\"。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "General and Immediate Management",
+   "titleZh": "总体处置与即刻处理",
+   "points": [
+    {
+     "en": "Burn care is measured in weeks, not hours, across four phases of definitive treatment, and EMS is most heavily involved in only the first one. Address the burn itself only once the ABCs are controlled — extinguish first, secure the ABCs, then turn to the burn — and have full resuscitation equipment (advanced airway gear, cardiac monitor) staged and ready before you start.",
+     "zh": "烧伤救治要以\"周\"为单位衡量，不是以小时计，全程分四个确定性治疗阶段，而 EMS 参与最深的只是第一阶段。只有在 ABC 得到控制之后，才把注意力转向烧伤本身——先灭火、先稳住 ABC，再处理烧伤——并在开始前就把全套复苏装备（高级气道器材、心电监护仪）准备就绪。",
+     "hard": false
+    },
+    {
+     "en": "Stopping the burning process takes real cooling, not a token dunk — a few seconds under cool water is rarely enough; achieving full cooling and meaningful pain relief typically takes several minutes, and all jewellery, metal buttons, zippers, and hooks need to be cool to the touch too. Never use ice on a burn.",
+     "zh": "终止烧伤过程需要真正的降温，而不是象征性地冲一下——冲几秒冷水通常远远不够；要达到充分降温和明显止痛效果，一般需要好几分钟，而且所有首饰、金属纽扣、拉链和挂钩也都要降到不烫手的温度。绝不能在烧伤处用冰。",
+     "hard": true
+    },
+    {
+     "en": "Cooling and hypothermia prevention pull in opposite directions and you have to manage both at once: stop the burning without chilling the whole patient. People with large burns have lost their main thermoregulation mechanism, so keep the patient covered and move them into the ambulance quickly to minimize hypothermic stress.",
+     "zh": "降温和防低体温这两件事方向相反，却必须同时兼顾：只终止烧伤过程，不能把整个人都冻透。大面积烧伤的患者已经丧失了主要的体温调节机制，所以要给患者盖好保暖并尽快转移进救护车，把低体温应激降到最低。",
+     "hard": false
+    },
+    {
+     "en": "Don't let the dramatic burn distract you from everything else: address suspected spinal trauma, gross bleeding, and other traumatic injuries with the same priority you would in any other trauma patient, and remember burns can also worsen a patient's underlying COPD, asthma, or cardiac disease.",
+     "zh": "不要被触目惊心的烧伤本身分散注意力：疑似脊柱创伤、明显外出血和其他创伤，处理优先级要和其他任何创伤患者一样。也要记得，烧伤本身还可能加重患者原有的慢阻肺、哮喘或心脏疾病。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Airway Management for Burns",
+   "titleZh": "烧伤气道管理",
+   "points": [
+    {
+     "en": "Many burn patients who are talking calmly to you in the field will still end up intubated later — burn airway management sorts into four categories. Category 1, the acutely decompensating airway: cardiac/respiratory arrest, or airway swelling happening visibly in front of you. Plan for the possibility that intubation fails, since supraglottic swelling can progress to complete obstruction; have a surgical airway or rescue device ready if both intubation and BVM ventilation fail.",
+     "zh": "很多在现场跟你平静交谈的烧伤患者，后来还是会被插管——烧伤气道管理分四类。第一类是急性失代偿气道：心脏/呼吸骤停，或气道肿胀正在你眼前发生。要为插管失败的可能性做好预案，因为声门上水肿可能进展为完全梗阻；一旦插管和 BVM 通气都失败，要备好外科气道或急救气道器材。",
+     "hard": false
+    },
+    {
+     "en": "Category 2, a deteriorating airway from burns/inhalation that hasn't failed yet: better deferred to the hospital's controlled anaesthesia/surgical team if at all possible — awake nasal intubation is dramatically harder in upper-airway burns and should be avoided. Only attempt prehospital intubation if waiting for hospital arrival means the airway closes first; consult medical control, explain the procedure to a scared conscious patient, and have everything staged so the attempt goes quickly once started. Consider RSI only if trained, equipped, and authorized, and have the most experienced provider perform it, since swelling makes the intubation technically difficult.",
+     "zh": "第二类是尚未彻底失代偿、但正在恶化的烧伤/吸入性气道：如果可能，最好留给医院有麻醉和外科团队的可控环境处理——清醒经鼻插管在上气道烧伤患者身上会难得多，应予避免。只有当等到医院时气道会先关闭时，才在院前尝试插管；联系医疗指导，向清醒但害怕的患者解释操作过程，并提前把所有器材摆好，一旦开始就能迅速完成。只有在受过训练、有相应药物、并获得医疗指导授权的前提下才考虑快速顺序插管，且应由现场经验最丰富的人执行，因为肿胀会让插管在技术上变得困难。",
+     "hard": false
+    },
+    {
+     "en": "A neuromuscular blocker in a burn patient with advancing airway edema is a specific trap: it can leave you with a paralyzed patient who has no gag reflex, can't breathe on their own, and an airway you may not be able to secure — treat this combination as especially dangerous.",
+     "zh": "对气道水肿正在进展的烧伤患者使用神经肌肉阻滞剂是一个特殊陷阱：它可能让你面对一名已经麻痹、没有呕吐反射、无法自主呼吸、而气道你又未必能建立起来的患者——这种组合要格外当心。",
+     "hard": false
+    },
+    {
+     "en": "Tracheal tube size is a trade-off: pick the largest tube that won't cause additional trauma on insertion — soot can clog a tube that's too small, but airway edema may force a smaller-than-usual choice. Never cut the tube shorter, because facial edema can actually dislodge a tracheal tube 2 to 3 days after the burn.",
+     "zh": "气管插管尺寸是个权衡：选能插入且不额外造成创伤的最大号导管——太细的导管可能被烟灰堵塞，但气道水肿又可能迫使你选比平时更小的型号。绝不能把导管剪短，因为面部水肿有可能在伤后 2 到 3 天才导致气管导管移位脱出。",
+     "hard": true
+    },
+    {
+     "en": "Category 3, currently patent airway but a history that carries risk factors for later compromise: cool, humidified oxygen (a true high-output nebulizer, not a bubble humidifier, or a saline aerosol) is appropriate; acute intervention usually isn't needed in the field, but the risk history must be reported clearly, since many of these patients go on to elective intubation later. Category 4, no risk factors and no distress: supplemental oxygen is still reasonable and safe even without distress, while you complete a full assessment.",
+     "zh": "第三类是目前气道通畅、但病史提示日后有受损风险：给加湿的冷氧气是恰当处置（要用真正的高流量加湿器而不是鼓泡式加湿器，或用生理盐水雾化），院前通常不需要紧急干预，但必须把风险病史清楚地报告出去，因为这类患者很多后来会接受择期插管。第四类是无风险因素、也无窘迫表现：即使患者没有窘迫，给予辅助氧气仍是合理且安全的做法，同时完成全面评估。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Fluid Resuscitation and the Consensus (Parkland) Formula",
+   "titleZh": "液体复苏与共识（Parkland）公式",
+   "points": [
+    {
+     "en": "The textbook trigger for fluid resuscitation is burns covering more than 20% of TBSA. Delaying fluid resuscitation more than 2 hours from the TIME OF THE BURN (not from when you reached the patient) in a major-burn patient complicates resuscitation and raises mortality — the goal is to start appropriate fluid delivery as soon as reasonably possible, while recognizing that too much fluid can be as harmful as too little depending on the patient's age and other conditions.",
+     "zh": "教材给出的液体复苏启动阈值是烧伤面积超过 20% TBSA。对重度烧伤患者而言，若液体复苏从\"受伤那一刻\"算起延迟超过 2 小时（不是从你接触到患者那一刻算起），复苏会变得更复杂、死亡率也会上升——目标是尽可能早地开始合理补液，同时要认识到，根据患者年龄和其他基础状况，补液过多和补液不足一样有害。",
+     "hard": true
+    },
+    {
+     "en": "IV access: place a large-bore cannula as early as possible in any severely burned patient, but don't delay transport chasing it. Lactated Ringer's or normal saline is the fluid of choice; a burned upper extremity is still a better IV site than an UNBURNED lower extremity if nothing else is available, and IO access is the fallback if IV access fails. Most seriously burned patients will eventually need central venous access, and prehospital peripheral lines are often lost once swelling sets in.",
+     "zh": "静脉通路：对任何严重烧伤患者都要尽早建立大号留置针，但不要为此耽误转运。首选乳酸林格液或生理盐水；如果实在没有其他部位，烧伤的上肢仍然优于未烧伤的下肢作为静脉通路部位，骨内通路是静脉通路失败时的备选方案。大多数严重烧伤患者最终都需要中心静脉通路，院前建立的外周静脉通路常常会在肿胀出现后失效。",
+     "hard": false
+    },
+    {
+     "en": "The Consensus (Parkland) formula estimates 24-hour fluid need: 2 to 4 mL of lactated Ringer's × body weight in kg × percentage TBSA burned. Half of that total is given in the FIRST 8 HOURS (counted from the time of injury), and the other half over the following 16 hours. Worked example: a 70 kg patient with 30% TBSA burned needs 2-4 × 70 × 30 = 4,200 to 8,400 mL over 24 hours; half of that (2,100-4,200 mL) in the first 8 hours works out to roughly 262-525 mL/h.",
+     "zh": "共识（Parkland）公式用来估算 24 小时的补液总量：2 至 4 mL 乳酸林格液 × 体重（kg）× 烧伤 TBSA 百分比。总量的一半要在\"受伤后头 8 小时\"内给完（从受伤那一刻算起），另一半在接下来的 16 小时内给完。举例：一名 70 公斤患者烧伤 30% TBSA，需要 2-4 × 70 × 30 = 4,200 至 8,400 mL（24 小时总量）；其中一半（2,100-4,200 mL）要在头 8 小时内给完，折算成滴速约为每小时 262-525 mL。",
+     "hard": true
+    },
+    {
+     "en": "Modern practice actually trends toward giving MORE than the Consensus formula suggests, though you never attempt to deliver the whole 24-hour target in the prehospital phase — over-delivering before burn-centre arrival is a recognized problem called 'fluid creep' (ironic, since the formula was originally designed to PREVENT fluid overload, pulmonary edema, and ARDS). Giving fluid too early or too fast can drive rapidly worsening peripheral edema that compromises airway devices and vascular access and can cause compartment syndrome — watch children and older adults especially closely. In hospital, resuscitation is titrated against urine output, which isn't a typical prehospital measurement but matters for interfacility transfers.",
+     "zh": "现代实践的趋势其实是给得比共识公式更多，但院前阶段绝不能试图把 24 小时的目标量一次给完——在到达烧伤中心之前给太多液体是一个已被公认的问题，称为\"补液蔓延\"（讽刺的是，这个公式最初正是为了\"防止\"液体过量、肺水肿和 ARDS 而设计的）。补液过早或过快会导致外周水肿迅速加重，压迫气道装置和静脉通路，还可能引发骨筋膜室综合征——儿童和老年人尤其要密切留意。到了医院，复苏会根据尿量来调整，这在院前不是常规监测项目，但在院际转运中很关键。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Pain Management for Burns",
+   "titleZh": "烧伤镇痛",
+   "points": [
+    {
+     "en": "Provide aggressive pain management for every burn patient: assess pain before giving any analgesia, and reassess on the same scale (e.g., 1-10) every 5 minutes. Burn patients often need higher-than-usual analgesic doses because their metabolism runs faster — consult protocols or medical control for dosing guidance.",
+     "zh": "对每一名烧伤患者都要积极镇痛：给药前先评估疼痛，之后用同一套评分标准（如 1-10 分）每 5 分钟复评一次。烧伤患者代谢速率加快，往往需要比平常更高的镇痛药剂量——用药剂量应参照规程或联系医疗指导。",
+     "hard": true
+    },
+    {
+     "en": "The IV route is strongly preferred for burn analgesia — fluid shifts and altered tissue blood flow make IM or subcutaneous drug absorption unpredictable in a burn patient, so measure and reassess pain carefully and monitor the response to whatever you give.",
+     "zh": "烧伤患者镇痛强烈建议走静脉途径——液体转移和组织血流改变会让肌肉或皮下注射的药物吸收变得难以预测，因此要仔细测量并复评疼痛，并持续监测给药后的反应。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Depth-Specific Wound Management",
+   "titleZh": "按深度分级的创面处理",
+   "points": [
+    {
+     "en": "For a superficial burn reached within the first hour: immerse in cool water or apply cold compresses (hands/feet can be soaked directly; wet towels for face/trunk) — this both stops the burning and relieves pain. Don't cool the WHOLE body and chill the patient; cover wet dressings with a dry sheet or blanket to limit systemic heat loss. No salves, ointments, creams, or sprays on any burn — they just get scrubbed off painfully at the hospital — and never ice a burn, since it worsens tissue injury. An uncomplicated superficial burn needs no further prehospital treatment beyond a comfortable transport position.",
+     "zh": "对伤后一小时内接触到的浅表烧伤：可浸入冷水或用冷敷（手足可直接泡水，面部/躯干用湿毛巾敷）——既能终止烧伤过程，又能止痛。不要把整个人都降温，避免患者受凉；湿敷料外面要盖一层干床单或毯子，减少全身散热。任何烧伤都不能涂药膏、软膏、乳霜或喷剂——到医院还是要把这些东西痛苦地擦掉——也绝不能用冰。单纯的浅表烧伤在院前不需要更多处置，只需以舒适体位转运即可。",
+     "hard": false
+    },
+    {
+     "en": "Partial-thickness burns get similar treatment: cooling or wet dressings within the first hour reduce both edema and pain, and burned extremities should be elevated to limit swelling. Do NOT rupture blisters — they act as a natural physiologic dressing. Establish IV fluids per local protocol and treat pain aggressively, since partial-thickness pain can be severe.",
+     "zh": "部分层烧伤的处理方式类似：伤后一小时内降温或湿敷能同时减轻水肿和疼痛，烧伤肢体应抬高以减少肿胀。绝不要弄破水疱——它们本身就是一层天然的生理性敷料。按本地规程建立静脉补液，并积极镇痛，因为部分层烧伤的疼痛可能非常剧烈。",
+     "hard": false
+    },
+    {
+     "en": "Full-thickness burns may not hurt within the burned area itself, but most patients have mixed-depth injury nearby that does hurt — so pain assessment and analgesia still apply. Dry dressings are the usual prehospital choice once the fire is out; confirm your local burn centre's preference on wet dressings or analgesia choices.",
+     "zh": "全层烧伤区域本身可能不痛，但大多数患者周围都有会痛的混合深度损伤——所以疼痛评估和镇痛依然适用。灭火后院前通常选用干敷料；关于是否用湿敷料以及镇痛方案，应确认本地烧伤中心的偏好。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Chemical Burn Management",
+   "titleZh": "化学烧伤处置",
+   "points": [
+    {
+     "en": "Speed is everything with chemical burns: begin flushing immediately with copious water (shower, garden hose, or an industrial decon shower), stripping contaminated clothing — especially shoes and socks — WHILE flushing, and take care not to get the chemical on yourself. Don't waste time hunting for a specific antidote; copious water is more effective and always immediately available. Flush for at least 30 minutes before moving the patient — extend that to 1-2 hours for strong alkali burns (oven/drain cleaner) — weighing scene time against the ability to keep flushing en route, and prevent hypothermia once flushing stops.",
+     "zh": "化学烧伤争分夺秒：立即用大量清水冲洗（淋浴、花园水管，或工业洗消淋浴），冲洗\"同时\"脱去被污染的衣物——尤其是鞋袜——并注意不要让化学品沾到自己身上。不要浪费时间找特效解毒剂；大量清水冲洗更有效，也永远随手可得。移动患者前至少冲洗 30 分钟——强碱烧伤（烤箱/下水道清洁剂）要延长到 1-2 小时——要权衡在现场停留冲洗的时间与转运、并在途中继续冲洗的能力，冲洗结束后要防止患者低体温。",
+     "hard": true
+    },
+    {
+     "en": "Special chemical cases: if you don't know the chemical, default to copious water flushing. Dry lime turns highly corrosive when it meets water — brush off as much dry powder as possible first (wear gloves), THEN flush. Sodium metal reacts violently and can explode on contact with water — cover it with mineral oil instead to block air/water contact. Hot tar is technically a thermal burn (grouped with chemical burns anyway) — immerse in cold water to dissipate heat and speed hardening; once cooled, leave the tar in place rather than trying to remove it in the field.",
+     "zh": "几种特殊化学品情形：不知道是什么化学品时，默认按大量清水冲洗处理。干石灰遇水会变成强腐蚀性物质——要先尽量刷掉干粉（戴手套操作），再冲洗。金属钠遇水会剧烈反应甚至爆炸——应改用矿物油覆盖，隔绝空气和水分接触。热沥青严格来说属于热力烧伤（但习惯上归入化学烧伤一类）——把患处浸入冷水以散热并加速沥青硬化；一旦冷却，就地保留沥青，不要在现场尝试去除。",
+     "hard": false
+    },
+    {
+     "en": "Hydrofluoric acid deserves special respect: HF burns covering more than 3-5% TBSA can be fatal, and pain that doesn't improve despite continuous flushing is a sign that tissue destruction is still actively happening. Calcium chloride jelly (an ampule of 10 mL 10% CaCl2 mixed with a water-based lubricant) can be applied to small-area HF burns to reduce ongoing pain and injury, and medical control may order IV calcium chloride for more significant exposures.",
+     "zh": "氢氟酸需要特别对待：氢氟酸烧伤面积超过 3-5% TBSA 可能致命，若持续冲洗后疼痛仍不缓解，提示组织破坏仍在进行中。氯化钙凝胶（用一支 10 mL、10% 浓度的氯化钙安瓿与水性润滑剂混合制成）可用于小面积氢氟酸烧伤，以减轻持续的疼痛和损伤；对暴露较大的情况，医疗指导可能会下达静脉给氯化钙的医嘱。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Chemical Burns of the Eye — Irrigation",
+   "titleZh": "眼部化学烧伤——冲洗",
+   "points": [
+    {
+     "en": "Flush chemically splashed eyes with copious water immediately — a faucet or eye-wash station works well; irrigate well underneath the eyelids, and if contact lenses don't flush out on their own, pause briefly after a minute or two to let the patient remove them, since a retained lens blocks water from reaching the cornea. Never use a chemical antidote (vinegar, baking soda) in the eye — water only. After irrigating, apply a light eye patch and transport for evaluation.",
+     "zh": "眼部化学溅入要立即用大量清水冲洗——用水龙头或洗眼站效果不错；要冲洗到眼睑下方，若隐形眼镜没有自行冲出，可在冲洗一两分钟后暂停片刻让患者自行取下，因为残留的隐形眼镜会挡住水流到达角膜。眼睛绝不能用醋或小苏打之类的化学\"解毒剂\"——只能用水冲洗。冲洗后轻轻覆盖眼罩并转运接受评估。",
+     "hard": false
+    },
+    {
+     "en": "A Morgan lens (a soft contact-lens-like device connected to IV tubing) can make continuous eye irrigation more comfortable and effective than manually prying the eye open; keep fluid running throughout insertion AND removal, since stopping the flow can create suction between the lens and the eye. Water remains the prehospital solvent of choice — an emerging agent called diphoterine (amphoteric, chelating, and hypertonic) shows promise for rapid acid/alkali neutralization, but its use should never delay immediate water irrigation.",
+     "zh": "Morgan 镜（一种连接输液管、形似隐形眼镜的软性装置）能让持续冲洗眼睛比徒手撑开眼睑冲洗更舒适、更有效；置入和取出的全程都要保持液体持续流动，因为一旦中断流动，镜片和眼球之间可能形成吸附。院前首选的冲洗介质依然是水——一种名为双相溶液（diphoterine）的新型制剂在快速中和酸碱方面显示出前景，但使用它绝不能延误立即用水冲洗。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Electrical Burn Management",
+   "titleZh": "电烧伤处置",
+   "points": [
+    {
+     "en": "Scene safety comes first, absolutely: never use a rope, pole, or any object to try to move a patient off a current source, never try to cut a wire, and stay away from high-tension lines entirely. Downed wires can be protected by auto-resetting breakers that reactivate a seemingly 'dead' wire — sometimes repeatedly — so the only safe approach to a downed high-tension wire is calling the electric company and waiting for a qualified person to confirm the power is off before anyone approaches.",
+     "zh": "现场安全绝对排第一：绝不用绳子、木杆或任何物件试图把患者从电源上挪开，绝不试图剪断电线，也要彻底远离高压线。倒地电线可能受自动重合闸断路器保护，一根看起来已经\"断电\"的电线可能重新带电——甚至反复多次——所以面对倒地高压线唯一安全的做法就是联系电力公司，等有资质人员确认断电后再靠近。",
+     "hard": false
+    },
+    {
+     "en": "Once the hazard is neutralized: open the airway with a jaw-thrust (assume possible C-spine injury), start CPR and attach a monitor to check for V-fib. Even if the patient isn't in arrest, dysrhythmia risk continues — cardiac monitoring is indicated for 24 hours after an electrical injury. Look for entry/exit wounds to trace the current's path, and palpate for rigid, swollen muscle — a rigid abdomen or extremity can signal serious internal injury from heat damage along deep tissue. Check distal pulses in all four extremities and watch for fractures/dislocations.",
+     "zh": "危险源被排除后：用推举下颌法开放气道（假设可能存在颈椎损伤），必要时开始 CPR 并连接监护仪查看有无室颤。即使患者未骤停，心律失常风险依然存在——电击伤后应持续心电监护 24 小时。要寻找入口和出口伤以推断电流路径，并触诊有无肌肉僵硬肿胀——腹部或肢体发硬可能提示深部组织热损伤造成了严重的内部损伤。检查四肢远端脉搏，并留意有无骨折或脱位。",
+     "hard": true
+    },
+    {
+     "en": "The physics that determines severity: tissue resistance, current intensity, and exposure duration. Wet/thin/clean skin offers much less resistance than dry/thick/dirty skin. Current converts to heat as it travels, usually following blood vessels and nerves; low voltage (under 1,000 volts, household) follows the path of least resistance, while high voltage takes the SHORTEST path instead. Alternating current is more dangerous than direct current — it causes repetitive muscle contractions that can 'freeze' the victim to the conductor, and it's more likely to trigger V-fib; a hand-to-hand current path is especially dangerous because it can cross the heart, and as little as 0.1 amp through the heart can provoke ventricular fibrillation.",
+     "zh": "决定损伤严重程度的物理因素：组织电阻、电流强度和暴露时长。潮湿、薄、清洁的皮肤电阻远低于干燥、厚、脏污的皮肤。电流在体内传导时转化为热能，通常沿血管和神经走行；低电压（低于 1,000 伏，家用电）沿阻力最小的路径传导，高电压则会走\"最短\"路径。交流电比直流电更危险——它会引起反复肌肉收缩，可能把受害者\"冻结\"在导体上无法脱离，也更容易诱发室颤；手到手的电流路径尤其危险，因为电流可能穿过心脏，小到 0.1 安培的电流经过心脏就足以诱发心室颤动。",
+     "hard": true
+    },
+    {
+     "en": "Beyond fluid therapy, no specific drug is routinely indicated for an electrical burn — just standard dysrhythmia or pain medications if authorized by medical control. Give early oxygen, manage for impending shock, make the transport decision early (weighing regional burn-centre resources and possibly consulting medical control about aeromedical transport), and keep a very anxious, frightened patient calm with clear explanations of what you're doing.",
+     "zh": "除了液体治疗之外，电烧伤通常不需要特殊药物——只在医疗指导授权时给予标准的抗心律失常或镇痛药物。要尽早给氧、按即将休克处理，尽早做出转运决策（权衡区域烧伤中心资源，必要时就航空医疗转运联系医疗指导），并用清晰的解释安抚极度焦虑害怕的患者。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Lightning-Related Injury Management",
+   "titleZh": "雷击伤处置",
+   "points": [
+    {
+     "en": "If the storm is still active, get patients and rescuers to real shelter first — lightning can strike the same place twice — but there is no hazard in touching a lightning-strike victim; no electrical charge remains in the body after the strike. Because a strike often injures more than one person, do a rapid scene headcount for total patient number before leaving the safety of the ambulance.",
+     "zh": "如果雷暴仍在持续，要先把患者和救援人员转移到真正安全的遮蔽处——雷可以两次打在同一个地方——但触碰雷击伤者本身没有危险；雷击后体内不会残留电荷。由于一次雷击常常会伤及不止一人，离开救护车的安全庇护前，要先快速清点现场患者总数。",
+     "hard": false
+    },
+    {
+     "en": "In a multi-victim lightning strike, treatment priority is REVERSED from normal triage instinct — go to the patients who are NOT breathing first, since lightning-arrest resuscitation has a genuinely good success rate even when the patient looks hopeless at first glance and even after a long delay before spontaneous breathing returns. Establish an airway with a jaw-thrust (avoid hyperextending the neck — assume C-spine injury) and give aggressive, continuous CPR with minimal interruptions, pushing hard and fast with full chest recoil; do not give up early on a lightning cardiac arrest.",
+     "zh": "多人雷击事件中，处置优先级与常规分诊直觉正好相反——优先处理\"没有呼吸\"的患者，因为雷击导致心搏骤停的复苏成功率其实相当不错，即便患者第一眼看起来已经没有希望、即便自主呼吸恢复延迟了很久也是如此。用推举下颌法开放气道（避免颈部过伸——假设存在颈椎损伤），并给予积极、持续、尽量不中断的心肺复苏，用力快速按压并保证胸廓充分回弹；不要对雷击导致的心搏骤停轻易放弃。",
+     "hard": true
+    },
+    {
+     "en": "Lightning injury management otherwise mirrors high-voltage electrical injury: confirm scene safety and relocate if needed, prioritize non-breathing patients, perform CPR/airway management with C-spine precautions, give supplemental oxygen, monitor cardiac rhythm, and — since myoglobin from muscle damage threatens the kidneys — run a large-bore IV of lactated Ringer's wide open to keep the kidneys flushed. Cover surface burns with dry, clean dressings, splint fractures, and apply spinal motion restriction if the patient fell.",
+     "zh": "其余的雷击伤处置原则和高压电击伤基本一致：确认现场安全、必要时转移，优先处理无呼吸患者，在颈椎防护下进行 CPR/气道管理，给予辅助氧气，监测心律；并且由于肌肉损伤释放的肌红蛋白会威胁肾脏，应建立大号静脉通路、以最快速度输注乳酸林格液以冲洗肾脏。体表烧伤用干净的干敷料覆盖，骨折要夹板固定，若患者曾跌落则要采取脊柱运动限制。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Radiation Burn Management",
+   "titleZh": "放射性烧伤处置",
+   "points": [
+    {
+     "en": "Radiation-burn patients may be contaminated with radioactive material and should be decontaminated before transport — simply disrobing the patient removes most of the contamination. Irrigate open wounds (and the head/scalp) gently, since rough washing can drive more radioactive material into the body and increase internal absorption; notify the receiving ED early if you're transporting a potentially contaminated patient. Counterintuitively, radioactive particulate matter poses a relatively LOW risk to the rescuer compared with other types of contamination — basic care can be provided even before full decontamination if you're wearing protective clothing.",
+     "zh": "放射性烧伤患者可能被放射性物质污染，应在转运前先行洗消——单是脱去患者衣物就能去除大部分污染。冲洗开放伤口（以及头皮）时动作要轻柔，因为粗暴冲洗反而可能把更多放射性物质推入体内、增加内吸收；若正在转运可能被污染的患者，应尽早通知接收医院急诊科。有些反直觉的是，与其他类型污染相比，放射性颗粒物对救援人员本身的风险相对较低——若穿戴了防护装备，可以在完成彻底洗消之前先给予基础处置。",
+     "hard": false
+    },
+    {
+     "en": "Radiation exposure follows the inverse square law: exposure drops off exponentially as distance from the source increases, so moving even a few feet further away can dramatically cut your dose. The practical response to a radiation source is the same three-part strategy every time: limit your duration of exposure, increase your distance from it, and put shielding between yourself and the source, especially for gamma radiation.",
+     "zh": "辐射暴露遵循平方反比定律：距离辐射源越远，暴露量呈指数级下降，哪怕只是多退开几英尺，剂量也会大幅降低。面对辐射源，应对策略永远是同一套三件事：缩短暴露时长、增加与辐射源的距离、在自己和辐射源之间加设屏蔽（对γ射线尤其重要）。",
+     "hard": true
+    },
+    {
+     "en": "A contact radiation burn is decontaminated the same way as a chemical burn — to remove radioactive particulate — and can then be managed as an ordinary burn. Some radioactive isotopes have specific antidotes that bind the isotope, speed its elimination, or blunt its toxic effects on other organs, but antidotal therapy should only be used under the guidance of a knowledgeable physician or public health agency.",
+     "zh": "放射性接触性烧伤的洗消方式与化学烧伤相同——目的是去除放射性颗粒物——之后就可以按普通烧伤处理。某些放射性同位素有特定的解毒剂，能结合同位素、加速其排出，或减轻其对其他脏器的毒性作用，但解毒治疗只应在有相关知识的医生或公共卫生机构指导下进行。",
+     "hard": false
+    },
+    {
+     "en": "Potassium iodide, distributed to people living near a nuclear power plant, can help protect the thyroid gland if taken within 6 hours of exposure — but it only works against radionuclides released from nuclear-plant fission products, and is of little to no value for exposure to medical radiation sources.",
+     "zh": "碘化钾会发放给居住在核电站附近的居民，若在暴露后 6 小时内服用，可帮助保护甲状腺——但它只对核电站裂变产物释放的放射性核素有效，对医用辐射源暴露基本没有保护作用。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pediatric and Geriatric Burn Considerations",
+   "titleZh": "儿科与老年烧伤特殊考量",
+   "points": [
+    {
+     "en": "Preschool-age children account for more than half of all pediatric fire-related deaths and injuries; the fatal-outcome rate for house fires in children under 5 fell from 18% (1980) to 6% (2011), but young children still don't wake as effectively to smoke detectors and are often disoriented immediately after waking, and they're more prone to severe scald injuries. Their thinner skin and more delicate airway structures also mean the same thermal exposure causes more damage than it would in an older child or adult.",
+     "zh": "学龄前儿童占儿童火灾相关死亡和受伤总数的一半以上；5 岁以下儿童在住宅火灾中的死亡率从 1980 年的 18% 降到了 2011 年的 6%，但幼儿仍然不太容易被烟雾报警器有效唤醒，醒来后往往方向感混乱，也更容易发生严重烫伤。他们更薄的皮肤和更娇嫩的气道结构也意味着，同样的热暴露会造成比年长儿童或成人更重的损伤。",
+     "hard": true
+    },
+    {
+     "en": "Fluid resuscitation is trickier in children because of their higher body-surface-to-weight ratio — they may need MORE fluid per kilogram than adults, so starting with the Consensus formula and then getting a medical-control order for additional fluid on a severe pediatric burn is a normal pattern, not a red flag. Poor glycogen stores mean children may need dextrose-containing fluids earlier than adults, so routine blood glucose monitoring matters in any seriously burned child — and because burns can be a marker of abuse, document the mechanism carefully and relay it to the receiving hospital.",
+     "zh": "儿童的体表面积与体重比更高，液体复苏因此更棘手——按每公斤体重计算，他们可能比成人需要更多液体，所以对重度烧伤儿童，先套用共识公式、再由医疗指导下医嘱追加补液，是正常操作，不是异常信号。儿童糖原储备较差，可能比成人更早需要含糖液体，因此任何严重烧伤儿童都要常规监测血糖——同时因为烧伤可能是虐待的标志，要仔细记录受伤机制并转告接收医院。",
+     "hard": false
+    },
+    {
+     "en": "Of roughly 170 fire-related deaths in Canada each year, 20-25% are in the geriatric population. About 13% of older adults smoke, and smoking is the leading cause of fatal fires in this age group — smoking while on supplemental home oxygen is the leading sentinel event reported in home care. Cooking fires are a distinct hazard too, since older adults may have a reduced sense of smell for a gas leak or kitchen fire, and they're more sensitive to respiratory insults from even a small fire's toxic fumes.",
+     "zh": "加拿大每年约 170 例火灾相关死亡中，20-25% 发生在老年群体。约 13% 的老年人吸烟，吸烟是这一年龄段致命火灾的首要原因——在家用供氧期间吸烟，是居家照护领域报告的头号哨兵事件。厨房火灾也是老年人特有的风险，因为他们对燃气泄漏或厨房火情的嗅觉可能已经减退，对哪怕是小火产生的有毒烟雾也更为敏感。",
+     "hard": true
+    },
+    {
+     "en": "Older burn patients may also have poor glycogen stores (check blood glucose for hypoglycemia) and need cardiac monitoring, but the fluid-resuscitation trap runs the OPPOSITE direction from children: geriatric patients are more prone to developing pulmonary edema during aggressive fluid resuscitation, so lung sounds need routine, repeated reassessment.",
+     "zh": "老年烧伤患者同样可能糖原储备不足（要查血糖排除低血糖），也需要心电监护，但液体复苏的陷阱方向和儿童正好相反：老年患者在积极补液过程中更容易出现肺水肿，因此要常规、反复地复评肺部听诊。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Transfer to a Burn Specialty Centre",
+   "titleZh": "转诊至专科烧伤中心",
+   "points": [
+    {
+     "en": "The textbook's burn-centre transfer criteria: partial-thickness burns over 10% TBSA; burns involving the face, hands, feet, genitalia, perineum, or major joints; full-thickness burns of ANY size in any age group; electrical burns (including lightning); chemical burns; inhalation burns; burns complicating a pre-existing medical condition that could worsen management, prolong recovery, or affect mortality; burns with concomitant trauma (e.g., fractures) where the burn itself is the bigger risk to life or limb; burns in children at a hospital without qualified paediatric burn personnel or equipment; and any burn needing special social, emotional, or long-term rehabilitation support.",
+     "zh": "教材给出的转诊烧伤中心标准：部分层烧伤超过 10% TBSA；累及面部、手、足、生殖器、会阴或大关节的烧伤；任何年龄、任何面积的全层烧伤；电烧伤（含雷击伤）；化学烧伤；吸入性烧伤；合并可能使处置复杂化、延长康复期或影响死亡率的既往病史的烧伤；合并其他创伤（如骨折）、且烧伤本身才是更大风险来源的情况；儿童烧伤但所在医院缺乏合格的儿科烧伤人员或设备；以及需要特殊社会、心理或长期康复支持的烧伤。",
+     "hard": true
+    },
+    {
+     "en": "Most major burns still go to the nearest appropriate facility first, although some regions have policies allowing prehospital bypass directly to a burn centre for major burns. One priority rule to remember: if the burn resulted from an explosion or other traumatic event, general TRAUMA destination/bypass policy takes priority over burn-specific destination policy — always screen for concomitant trauma when the mechanism suggests it.",
+     "zh": "大多数重大烧伤仍应先送往最近的合适医院，不过部分地区有政策允许院前直接绕过就近医院、送往烧伤中心。有一条优先级规则要记住：如果烧伤是由爆炸或其他创伤性事件造成的，一般的创伤目的地/绕行政策优先于针对烧伤的专属政策——只要受伤机制提示可能合并创伤，就要主动排查。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Long-Term Consequences of Burns",
+   "titleZh": "烧伤的长期后果",
+   "points": [
+    {
+     "en": "Patients with major burns average roughly 1 day of inpatient treatment for each 1% of TBSA burned, plus extensive rehabilitation to regain function. Long-term survivors commonly live with lasting problems in thermoregulation, motor function, and sensory function — though modern burn care now lets many patients survive injuries that would have been fatal a decade earlier, large-surface-area burns remain as critical a challenge as any other severe multisystem trauma.",
+     "zh": "重度烧伤患者的住院天数大致按每 1% TBSA 烧伤面积对应约 1 天来估算，此外还需要大量康复训练才能恢复功能。长期幸存者常常留下持续的体温调节、运动功能和感觉功能问题——尽管现代烧伤救治已经让许多十年前本会致命的患者得以存活，但大面积烧伤依然是不亚于其他任何严重多系统创伤的重症挑战。",
+     "hard": true
+    },
+    {
+     "en": "Caring for severe burn patients is one of the most difficult things paramedics do emotionally — chaotic, dangerous fire scenes, patients in severe pain, the smell of burned hair and flesh, and skin sometimes peeling off during something as routine as taking vital signs. With proper training and the right mix of confidence and courage, prehospital care still makes a real difference to these patients' survival and outcome.",
+     "zh": "照护重度烧伤患者在情感上是救护人员最艰难的工作之一——混乱危险的火灾现场、剧痛中的患者、烧焦毛发和肌肉的气味，有时仅仅是测个生命体征这样的常规操作，皮肤就可能随之剥落。但只要有恰当的训练，加上信心与勇气兼备，院前处置依然能真正改变这些患者的生存和预后。",
+     "hard": false
+    },
+    {
+     "en": "The textbook's own analgesia numbers for burn pain: morphine sulphate 0.03-0.1 mg/kg, or fentanyl 0.5-1 mcg/kg per dose, both repeatable as needed. These are weight-based IV opioid doses — compare carefully with BC's actual burn analgesia toolkit in the BC-difference notes below, which does not hand PCPs or EMRs an opioid for this indication at all.",
+     "zh": "教材给出的烧伤镇痛具体数字：硫酸吗啡 0.03-0.1 mg/kg，或芬太尼每次 0.5-1 mcg/kg，均可视需要重复给药。这些都是按体重计算的静脉阿片类药物剂量——请务必对照下方 BC 差异提示中 BC 实际的烧伤镇痛工具箱，BC 在这一适应证上根本没有把阿片类药物下放给 PCP 或 EMR 使用。",
+     "hard": true
+    },
+    {
+     "en": "Practical takeaway on burn shock: because it develops over a 6-8 hour window and prehospital crews rarely see it develop, auscultate lung sounds BEFORE giving fluid therapy — that baseline matters for catching fluid overload later, especially in children and older adults.",
+     "zh": "关于烧伤性休克的实用要点：因为它要经过 6-8 小时才会显现，院前团队很少真正目睹其发生过程，所以在开始补液治疗\"之前\"就要先听诊肺部——这个基线记录对之后识别液体过量很关键，儿童和老年人尤其如此。",
+     "hard": false
+    },
+    {
+     "en": "For both pediatric and geriatric burn patients: monitor blood glucose and be ready to give dextrose as needed (poor glycogen reserves at both age extremes), and stay alert to the possibility of child or elder abuse — reporting suspected abuse or neglect to the proper authorities is a professional responsibility, not optional.",
+     "zh": "无论儿科还是老年烧伤患者：都要监测血糖并做好按需给糖的准备（这两个年龄段的糖原储备都较差），并对可能存在的虐待儿童或虐待老人保持警觉——向相关部门报告疑似虐待或忽视是专业责任，不是可选项。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "CO-hemoglobin binding affinity vs O2",
+   "itemZh": "一氧化碳与血红蛋白结合力（相对氧气）",
+   "value": "≈250×"
+  },
+  {
+   "itemEn": "Carboxyhemoglobin levels: normal / heavy smoker / potentially fatal",
+   "itemZh": "碳氧血红蛋白水平：正常 / 重度吸烟者 / 可能致命",
+   "value": "≈2% / 4-8% / ≥50%"
+  },
+  {
+   "itemEn": "Skin thickness range (eyelid to heel)",
+   "itemZh": "皮肤厚度范围（眼睑至足跟）",
+   "value": "≈1 mm – 1 cm"
+  },
+  {
+   "itemEn": "Superficial burn healing time",
+   "itemZh": "浅表烧伤愈合时间",
+   "value": "3-7 天"
+  },
+  {
+   "itemEn": "Zone of stasis necrosis window / zone of hyperemia recovery",
+   "itemZh": "淤滞区坏死窗口 / 充血区恢复时间",
+   "value": "24-48 小时 / 7-10 天"
+  },
+  {
+   "itemEn": "Rule of nines regions / rule of palms",
+   "itemZh": "九分法分区数 / 手掌法",
+   "value": "11 区各≈9% / 患者手掌≈1%"
+  },
+  {
+   "itemEn": "Textbook MAJOR burn TBSA cutoffs (full-thickness / partial-thickness by age)",
+   "itemZh": "教材重度烧伤 TBSA 界值（全层／部分层按年龄）",
+   "value": ">10% / >25%(10-50岁) or >20%(<10或>50岁)"
+  },
+  {
+   "itemEn": "Consensus (Parkland) formula, 24-hour fluid",
+   "itemZh": "共识（Parkland）公式，24 小时补液量",
+   "value": "2-4 mL × kg × %TBSA，前 8 小时给一半"
+  },
+  {
+   "itemEn": "Worked example: 70 kg, 30% TBSA — 24h total / first-8h / hourly rate",
+   "itemZh": "算例：70 kg、30% TBSA——24小时总量／头8小时／每小时滴速",
+   "value": "4,200-8,400 mL / 2,100-4,200 mL / 262-525 mL/h"
+  },
+  {
+   "itemEn": "Burn pain reassessment interval",
+   "itemZh": "烧伤疼痛复评间隔",
+   "value": "每 5 分钟"
+  },
+  {
+   "itemEn": "Hydrofluoric acid burn — potentially fatal TBSA",
+   "itemZh": "氢氟酸烧伤——可能致命的 TBSA",
+   "value": ">3-5% TBSA"
+  },
+  {
+   "itemEn": "Calcium chloride jelly for HF burns — ampule strength/volume",
+   "itemZh": "氢氟酸烧伤用氯化钙凝胶——安瓿规格",
+   "value": "10 mL 10% CaCl2"
+  },
+  {
+   "itemEn": "Current through the heart that can trigger V-fib / household low-voltage cutoff",
+   "itemZh": "可诱发室颤的经心电流 / 家用低电压上限",
+   "value": "低至 0.1 安培 / <1,000 伏"
+  },
+  {
+   "itemEn": "Post-electrical-injury cardiac monitoring duration",
+   "itemZh": "电击伤后心电监护时长",
+   "value": "24 小时"
+  },
+  {
+   "itemEn": "Lightning: Canadian deaths/injuries per year, and max strike distance from a storm",
+   "itemZh": "雷击：加拿大每年死亡/受伤人数，及雷击最远距离风暴",
+   "value": "≈9-10 死 / ≈160 伤；最远 15 km"
+  },
+  {
+   "itemEn": "Lightning: peak voltage / peak current",
+   "itemZh": "雷击：峰值电压 / 峰值电流",
+   "value": "≈1亿伏 / ≈200,000 安"
+  },
+  {
+   "itemEn": "Lightning CNS effects: LOC / confusion-amnesia rate",
+   "itemZh": "雷击中枢神经系统影响：意识丧失率 / 意识模糊-遗忘率",
+   "value": "≥70% / ≈90%"
+  },
+  {
+   "itemEn": "Acute radiation sickness severity by whole-body dose (mild/moderate/severe/fatal)",
+   "itemZh": "急性放射病严重度（全身剂量：轻/中/重/致命）",
+   "value": "1-2 / 2-6 / 6-8 / >8 Gy"
+  },
+  {
+   "itemEn": "Radiation vomiting-onset triage (unsurvivable / severe / moderate)",
+   "itemZh": "辐射呕吐出现时间分诊（不可存活/重度/中度）",
+   "value": "<10分钟 / <1小时(30-80%生存) / 1-2小时(95-100%生存)"
+  },
+  {
+   "itemEn": "Fatal TBSA thresholds: burn alone / burn + radiation combined",
+   "itemZh": "致命 TBSA 阈值：单纯烧伤 / 烧伤合并辐射",
+   "value": ">70% / >30%"
+  },
+  {
+   "itemEn": "Potassium iodide effective window post-exposure",
+   "itemZh": "碘化钾暴露后有效服用窗口",
+   "value": "6 小时内"
+  },
+  {
+   "itemEn": "Textbook weight-based burn analgesia (morphine / fentanyl)",
+   "itemZh": "教材按体重给的烧伤镇痛剂量（吗啡／芬太尼）",
+   "value": "0.03-0.1 mg/kg / 0.5-1 mcg/kg"
+  },
+  {
+   "itemEn": "Burn-centre transfer trigger — partial-thickness TBSA",
+   "itemZh": "转诊烧伤中心触发线——部分层 TBSA",
+   "value": ">10% TBSA"
+  },
+  {
+   "itemEn": "Recovery time rule of thumb",
+   "itemZh": "康复时间经验估算",
+   "value": "≈1 住院日 / 每 1% TBSA"
+  },
+  {
+   "itemEn": "BC cooling duration (all license levels, includes bystander time)",
+   "itemZh": "BC 降温时长（所有执照级别，含旁人已降温时间）",
+   "value": "15-20 分钟"
+  },
+  {
+   "itemEn": "BC hypotensive burn-fluid dose and cap",
+   "itemZh": "BC 低血压烧伤补液剂量与上限",
+   "value": "20 mL/kg，上限 2 L"
+  },
+  {
+   "itemEn": "BC major-burn trauma-alert BSA thresholds (partial/full)",
+   "itemZh": "BC 重大烧伤创伤预警 BSA 阈值（部分层/全层）",
+   "value": ">20% / >10%"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "HF acid pain that refuses to improve despite continuous flushing is not a sign your irrigation is failing — it's a sign tissue destruction is still actively in progress. Keep flushing and escalate: consider calcium gluconate/chloride per protocol or medical control rather than assuming water alone will finish the job.",
+   "zh": "氢氟酸烧伤持续冲洗后疼痛仍不缓解，不代表你的冲洗没起效——而是说明组织破坏仍在进行中。要继续冲洗并升级处置：按规程或联系医疗指导考虑使用葡萄糖酸钙/氯化钙，而不是想当然地认为单靠水就能解决问题。"
+  },
+  {
+   "en": "Six red-flag signs of vascular compromise in a circumferentially burned limb that push you toward calling for an escharotomy: cyanosis, pallor, deep tissue pain, progressive paraesthesia, a progressively weakening or absent pulse, and a sensation of coldness in the limb. Any one of these on a repeat check is worth escalating, not waiting out.",
+   "zh": "环形烧伤肢体出现血管受压的六个警示征，应促使你考虑焦痂切开术：发绀、苍白、深部组织疼痛、进行性感觉异常、脉搏进行性减弱或消失，以及肢体发凉感。复查时出现其中任何一项都值得立刻升级处理，而不是继续观察等待。"
+  },
+  {
+   "en": "Chemical burn irrigation has a clinical endpoint, not a stopwatch one: keep flushing until the patient's pain has substantially decreased or resolved, not just for a fixed number of minutes — though strong alkalis (oven/drain cleaner) still deserve a 1-2 hour floor regardless.",
+   "zh": "化学烧伤冲洗有一个临床终点，而不是一个固定的秒表终点：要冲到患者疼痛明显缓解或消失为止，而不是冲够某个固定分钟数就停——不过强碱性物质（烤箱/下水道清洁剂）无论如何都至少要冲 1-2 小时打底。"
+  },
+  {
+   "en": "Tear gas and pepper spray at a scene can burn YOU too, not just the patient — take the same decontamination precautions for yourself that you would apply to the patient, and don't assume your own gear fully protects you from a burning sensation on exposed skin.",
+   "zh": "现场的催泪瓦斯或辣椒喷雾同样会灼伤\"你自己\"，不只是患者——对自己也要采取和给患者一样的洗消防护，不要以为自己的装备就能完全挡住裸露皮肤上的灼烧感。"
+  },
+  {
+   "en": "Don't assume an electrical injury is always obvious. Any patient with unexplained findings and no clear mechanism deserves a moment's thought about occult electrical exposure — a downed wire in tall grass, a fault in old wiring, or a partially insulated tool can all leave a real injury with no dramatic story attached.",
+   "zh": "不要以为电击伤总是一目了然。任何有不明原因体征、又没有明确受伤机制的患者，都值得花一点时间考虑隐匿性电击暴露——草丛里的断电线、老旧线路故障、绝缘不完全的工具，都可能造成真实的损伤，却没有戏剧性的受伤经过。"
+  },
+  {
+   "en": "Heat loss is a genuine emergency for a burn patient, not an afterthought: run the ambulance heater until it's uncomfortably warm for the crew, and use warmed blankets and warmed fluids as a routine part of burn care, not a nice-to-have.",
+   "zh": "热量丢失对烧伤患者来说是真实的紧急问题，不是次要考量：把救护车暖气开到让车组成员都觉得热的程度，并把加温毯子和加温液体当成烧伤处置的常规组成部分，而不是可有可无的加分项。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Myth: cherry-red skin is a reliable sign of CO poisoning in a live patient. Reality: it's mostly a postmortem finding — never rule out CO because the skin doesn't look cherry red.",
+   "zh": "误区：樱桃红皮肤是活着的一氧化碳中毒患者的可靠体征。事实：这几乎是死后才出现的表现——不能因为皮肤不是樱桃红就排除一氧化碳中毒。",
+   "hard": false
+  },
+  {
+   "en": "Myth: a normal or high SpO2 rules out CO poisoning or significant smoke inhalation. Reality: standard pulse oximetry can't distinguish carboxyhemoglobin from oxygenated hemoglobin, so severe CO intoxication often shows a falsely reassuring, normal-or-better reading — never trust the number alone in this setting.",
+   "zh": "误区：SpO2 正常或偏高就能排除一氧化碳中毒或严重烟雾吸入。事实：标准脉搏血氧仪分不清碳氧血红蛋白和氧合血红蛋白，严重一氧化碳中毒的读数往往正常甚至偏高、看似让人安心——这种情况下绝不能只信这个数字。",
+   "hard": false
+  },
+  {
+   "en": "Myth: a painless burn must be a minor one. Reality: it's often the opposite — full-thickness burns can hurt little or not at all because the sensory nerves themselves are destroyed, while the genuinely painful areas are usually the shallower partial-thickness zones around them.",
+   "zh": "误区：不痛的烧伤一定是轻微的。事实：往往恰恰相反——全层烧伤可能几乎不痛，因为感觉神经本身已被破坏；而真正剧痛的区域，通常是周围较浅的部分层烧伤区。",
+   "hard": false
+  },
+  {
+   "en": "Myth: an acid burn is automatically worse than an alkali burn because it hurts more right away. Reality: alkali (base) burns cause LESS initial pain but often MORE extensive tissue destruction through liquefaction necrosis — the pain level is not a reliable guide to which chemical did more damage.",
+   "zh": "误区：酸烧伤因为当下更痛，所以一定比碱烧伤更重。事实：碱性烧伤起初疼痛感较轻，却常常通过液化性坏死造成\"更广泛\"的组织破坏——疼痛程度并不能可靠地反映哪种化学品造成了更重的损伤。",
+   "hard": false
+  },
+  {
+   "en": "Myth: every burned area counts toward the TBSA percentage. Reality: standard practice counts only partial- and full-thickness areas — superficial (first-degree, sunburn-type) burns are excluded from the TBSA calculation entirely.",
+   "zh": "误区：所有烧伤区域都要计入 TBSA 百分比。事实：标准做法只计算部分层和全层烧伤区域——浅表（一度、类似晒伤）烧伤完全不计入 TBSA 估算。",
+   "hard": false
+  },
+  {
+   "en": "Myth: a burned patient found in shock on your arrival is in burn shock. Reality: burn shock doesn't set in until roughly 6-8 hours post-injury, a timeline prehospital crews rarely witness — early shock in a fresh burn patient means look for ANOTHER injury (occult trauma, bleeding) as the real cause.",
+   "zh": "误区：你到场时发现烧伤患者已经休克，就是烧伤性休克。事实：烧伤性休克要到伤后约 6-8 小时才会出现，这个时间线院前团队很少真正见证——刚烧伤的患者早期出现休克，意味着要去找\"另一个\"真正的原因（隐匿创伤、出血）。",
+   "hard": false
+  },
+  {
+   "en": "Myth: cooling a burn longer is always safer. Reality: BC caps cooling at 15-20 minutes total (including any bystander cooling and decontamination time) precisely because prolonged cooling of a large burn drives hypothermia — more cooling time is not automatically better care.",
+   "zh": "误区：烧伤降温时间越长越安全。事实：BC 把总降温时间上限设为 15-20 分钟（含旁人已完成的降温和洗消时间），正是因为大面积烧伤长时间降温会导致低体温——降温时间不是越久越好。",
+   "hard": false
+  },
+  {
+   "en": "Myth: Entonox is simply 'the burn pain drug,' so reach for it on any burn patient in pain. Reality: Entonox is explicitly indicated for burn pain AND explicitly contraindicated for inhalation injury — and since serious burns and inhalation injury travel together so often, you must screen airway status every single time before offering it.",
+   "zh": "误区：Entonox 就是\"烧伤止痛药\"，见到疼痛的烧伤患者就可以用。事实：Entonox 既明确适用于烧伤疼痛，又明确禁用于吸入性损伤——而严重烧伤和吸入性损伤又常常同时出现，因此每一次给药前都必须先排查气道状态。",
+   "hard": true
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "Stop, Drop, and Roll",
+   "en": "For a patient (or yourself) with clothing on fire: STOP moving (never run — it fans the flame), DROP to the ground (never stay standing — upright increases inhaled flame and ignited hair), and ROLL to smother the fire. If they can't roll themselves, lower them down, cover with a blanket, and pat the fire out.",
+   "zh": "衣物着火时：STOP（停下——绝不能跑，奔跑会给火焰扇风）、DROP（趴下——绝不能站着，直立姿势更容易吸入火焰、点燃头发）、ROLL（打滚把火压灭）。若患者无法自行打滚，就把他放倒、盖上毯子、拍灭火焰。"
+  },
+  {
+   "name": "Coagulation → Stasis → Hyperemia",
+   "en": "The three burn zones run worst-to-least from the centre outward: coagulation (dead, no blood flow) → stasis (at-risk, may still necrose in 24-48h) → hyperemia (least hurt, recovers in 7-10 days). The zone of stasis is the one your prehospital care can still influence — good perfusion keeps it from tipping into coagulation.",
+   "zh": "烧伤三区从中心向外由重到轻排列：凝固坏死区（已死，无血流）→ 淤滞区（有风险，24-48 小时内仍可能坏死）→ 充血区（受累最轻，7-10 天恢复）。淤滞区正是院前处置还能影响的那一层——维持好灌注，能防止它进一步滑向凝固坏死。"
+  },
+  {
+   "name": "CHECK (methoxyflurane cautions)",
+   "en": "Before giving methoxyflurane, run through CHECK: Cardiac instability or respiratory depression, Hypersensitivity, Consciousness (altered LOC), Kidneys (renal impairment), adult dosages only (Kids under 18 are contraindicated).",
+   "zh": "使用甲氧氟烷前过一遍 CHECK：C 心脏不稳定或呼吸抑制、H 过敏史、E 意识（意识改变）、C 肾脏（肾功能受损）、K 成人剂量（18 岁以下禁用）。"
+  },
+  {
+   "name": "Nines → Palms → Lund-Browder",
+   "en": "Three TBSA tools in order of speed vs. precision: rule of nines (fastest, whole-body regions of ~9%), rule of palms (fast for small/scattered burns, patient's own palm ≈1%), Lund and Browder chart (slowest, most precise, age-adjusted). Reach for the tool that matches how much time you actually have.",
+   "zh": "三种 TBSA 估算工具按\"速度 vs 精确度\"排列：九分法（最快，全身分区各约 9%）、手掌法（小面积/零散烧伤快速估算，患者自己手掌≈1%）、Lund and Browder 表（最慢，最精确，按年龄调整）。用哪种工具，取决于你实际有多少时间。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Work the Consensus (Parkland) formula for a 70 kg adult with 30% TBSA partial/full-thickness burns: state the 24-hour total, the first-8-hour amount, and the hourly rate for that first 8 hours. Then explain how BC's own protocol would actually dose this patient if they are hypotensive.",
+   "qZh": "为一名 70 公斤、30% TBSA 部分层/全层烧伤的成人套用共识（Parkland）公式：算出 24 小时总量、头 8 小时用量，以及头 8 小时的每小时滴速。然后说明如果该患者出现低血压，BC 规程实际会怎么给药。",
+   "aEn": "24-hour total: 2-4 mL × 70 kg × 30 = 4,200-8,400 mL. First 8 hours (half the total, counted from the TIME OF INJURY): 2,100-4,200 mL, which works out to roughly 262-525 mL/h. BC override: BC does not use the Parkland calculation prehospital — if this patient is hypotensive, the PCP dose is a flat 20 mL/kg to a maximum of 2 litres, regardless of the Parkland number.",
+   "aZh": "24 小时总量：2-4 mL × 70 kg × 30 ＝ 4,200-8,400 mL。头 8 小时（总量的一半，从\"受伤那一刻\"算起）：2,100-4,200 mL，折算滴速约每小时 262-525 mL。BC 的实际做法：BC 院前并不套用 Parkland 计算——若该患者出现低血压，PCP 的实际剂量是统一给 20 mL/kg、上限 2 升，与 Parkland 算出的数字无关。"
+  },
+  {
+   "qEn": "Compare superficial, partial-thickness, and full-thickness burns on four features: appearance/colour, blister presence, pain level, and capillary refill.",
+   "qZh": "从外观/颜色、是否有水疱、疼痛程度、毛细血管再充盈四个方面，对比浅表、部分层和全层烧伤。",
+   "aEn": "Superficial: red, blanches, no blisters usually, painful (nerve endings exposed), capillary refill normal. Partial-thickness: red and blanches (superficial grade) or extends deeper (deep grade, hair follicles/glands destroyed), usually blistered/moist, extremely painful, refill present though may be sluggish. Full-thickness: white/pale/brown-leathery/charred (eschar), no blistering in the classic sense, little or NO pain in the burned area itself (nerves destroyed) though surrounding mixed-depth tissue hurts, and NO capillary refill because capillaries are destroyed.",
+   "aZh": "浅表：发红、按压变白、通常无水疱、疼痛（神经末梢暴露）、毛细血管再充盈正常。部分层：浅部分层发红且按压变白，深部分层则更深、毛囊和腺体被破坏；通常有水疱或潮湿、疼痛剧烈，再充盈存在但可能变慢。全层：白色/苍白/棕色皮革样/焦炭样（焦痂），通常没有典型水疱，烧伤区域本身很少或完全不痛（神经已被破坏），但周围混合深度组织会痛，且毛细血管再充盈消失（毛细血管已被破坏）。"
+  },
+  {
+   "qEn": "Why does an alkali chemical burn tend to cause more tissue destruction than an acid burn of similar exposure, despite hurting less at first?",
+   "qZh": "为什么在暴露程度相似的情况下，碱性化学烧伤往往比酸性烧伤造成更多组织破坏，尽管一开始疼痛感更轻？",
+   "aEn": "Acids cause coagulation necrosis, which tends to form a barrier (a coagulated protein layer) that can actually limit how deep the injury spreads, and they cause immediate pain that alerts the patient early. Alkalis instead cause liquefaction necrosis — breaking down protein and collagen, saponifying fat, dehydrating tissue, and thrombosing blood vessels — which does not form a protective barrier and instead keeps penetrating deeper. Combined with the initially milder pain, patients and bystanders often underestimate an alkali exposure and delay decontamination, letting the injury progress further before anyone intervenes.",
+   "aZh": "酸类造成凝固性坏死，往往会形成一层屏障（凝固的蛋白质层），这层屏障反而能在一定程度上限制损伤继续向深部扩散，而且酸类会立刻造成剧痛、及早提醒患者。碱性物质则造成液化性坏死——分解蛋白质和胶原、使脂肪皂化、使组织脱水、使血管血栓形成——这个过程不会形成保护性屏障，反而会持续向深部渗透。再加上起初疼痛较轻，患者和旁人常常低估碱性暴露的严重性、延误洗消，让损伤在无人干预的情况下继续进展。"
+  },
+  {
+   "qEn": "List BC's major-burn trauma-alert criteria and the cooling protocol that applies to every burn patient regardless of license level.",
+   "qZh": "列出 BC 的重大烧伤创伤预警标准，以及适用于所有执照级别的降温规程。",
+   "aEn": "Major-burn trauma-alert criteria: partial-thickness burns >20% BSA; full-thickness burns >10% BSA; facial or airway burns (with or without inhalation injury); third-degree burns involving the eyes, neck, hands, feet, or groin; burns that fully encircle a limb; and high-voltage electrical burns. Cooling protocol: initiate cooling for 15-20 minutes total, with cool (not cold) running water wherever possible — this total is inclusive of any effective cooling bystanders already provided, and must never exceed 15-20 minutes including decontamination time. Once cooling is finished, dress the wound with sterile, non-stick, dry gauze.",
+   "aZh": "重大烧伤创伤预警标准：部分层烧伤 >20% BSA；全层烧伤 >10% BSA；面部或气道烧伤（无论是否合并吸入性损伤）；累及眼睛、颈部、手、足或腹股沟的三度烧伤；完全环绕肢体的烧伤；以及高压电烧伤。降温规程：总降温时间做满 15-20 分钟，尽量使用凉水（不是冰水）流动冲洗——这个总时长要把旁人已经有效降温的时间算进去，且含洗消时间在内绝不能超过 15-20 分钟。降温结束后，用无菌、不粘、干燥的纱布覆盖创面。"
+  },
+  {
+   "qEn": "Explain why pulse oximetry is unreliable in suspected CO poisoning or significant smoke inhalation, and state what you should do instead.",
+   "qZh": "解释为什么疑似一氧化碳中毒或严重烟雾吸入时脉搏血氧仪不可靠，并说明应该改用什么做法。",
+   "aEn": "Standard pulse oximetry works by distinguishing oxygenated from deoxygenated hemoglobin by light absorption, but it cannot tell carboxyhemoglobin (hemoglobin bound to CO) apart from oxyhemoglobin — CO binds hemoglobin roughly 250 times more readily than oxygen, so a patient can be severely poisoned while the oximeter still reads normal or even high. The right response is to treat clinically: apply high-flow oxygen by non-rebreather to any smoke-exposed patient regardless of the SpO2 number, verbalize that the reading is unreliable, and rely on history (closed-space exposure, duration), physical findings (soot, singed nasal hair, hoarseness, headache), and — where available — a CO-specific monitor rather than trusting standard SpO2 to rule anything out.",
+   "aZh": "标准脉搏血氧仪是通过光吸收来区分氧合血红蛋白和脱氧血红蛋白的，但它分不出碳氧血红蛋白（与一氧化碳结合的血红蛋白）和氧合血红蛋白——一氧化碳与血红蛋白的结合力约为氧气的 250 倍，所以患者可能已经严重中毒，血氧仪却仍然显示正常甚至偏高。正确做法是按临床判断处置：任何有烟雾暴露的患者，无论 SpO2 读数如何，都给予非再吸入面罩高流量吸氧，口头说明该读数不可信，并依据病史（密闭空间暴露、时长）、体征（烟灰、燎焦鼻毛、声音嘶哑、头痛），以及有条件时使用专门的一氧化碳监测设备，而不是依赖标准 SpO2 来排除任何情况。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Cooling duration: BC's strict 15-20 minute cap vs. the textbook's open-ended 'several minutes, then keep warm'",
+   "topicZh": "降温时长：BC 严格上限 15-20 分钟，对比教材\"数分钟、之后保暖\"的开放式说法",
+   "bookEn": "The textbook says cooling a burn properly takes 'several minutes,' not just seconds, and instructs cooling until the burning process stops and pain is relieved — with no explicit upper time limit given, only a warning to prevent the patient from becoming hypothermic afterward.",
+   "bookZh": "教材说给烧伤充分降温需要\"几分钟\"，而不是几秒钟，并要求持续降温直到烧伤过程终止、疼痛缓解——没有给出明确的时间上限，只是提醒之后要防止患者低体温。",
+   "bcEn": "BC sets a firm total of 15-20 minutes at ALL license levels, using cool (not cold) running water wherever possible. This total is INCLUSIVE of any effective cooling bystanders already provided before you arrived, and — in the electrical burns protocol specifically — must never exceed 15-20 minutes including decontamination time. Once cooling is done, stop, dry the patient, and dress with sterile, non-stick, dry gauze; do not keep cooling for the whole transport.",
+   "bcZh": "BC 在所有执照级别都设定了 15-20 分钟的硬性总时长，尽量用凉水（不是冰水）流动冲洗。这个总时长要把你到场前旁人已经有效完成的降温时间也算进去——在电烧伤规程中更明确写明，含洗消时间在内绝不能超过 15-20 分钟。降温做完后就要停止、擦干患者、用无菌不粘干纱布覆盖，不能把降温一直做到转运结束。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.28, p.54"
+  },
+  {
+   "topicEn": "Fluid resuscitation dosing: the Consensus/Parkland weight-and-TBSA formula vs. BC's flat 20 mL/kg capped at 2 L",
+   "topicZh": "补液剂量：共识/Parkland 按体重与 TBSA 计算的公式，对比 BC 统一 20 mL/kg、上限 2 升",
+   "bookEn": "The textbook's Consensus (Parkland) formula calculates a full 24-hour fluid target — 2 to 4 mL of lactated Ringer's × body weight in kg × percentage TBSA burned, with half given in the first 8 hours from the time of injury — and treats burns over roughly 20% TBSA as the point where resuscitation is needed.",
+   "bookZh": "教材的共识（Parkland）公式计算的是完整 24 小时补液目标——2 至 4 mL 乳酸林格液 × 体重（kg）× 烧伤 TBSA 百分比，其中一半要在受伤后头 8 小时内给完——并把烧伤面积约超过 20% TBSA 视为需要启动液体复苏的节点。",
+   "bcEn": "BC does not run the Parkland calculation in the field. The formal Hypovolemia protocol indication is specifically burns >20% BSA (partial and full thickness), and the Burn Management protocol's Additional PCP Intervention is simply: if hypotensive, give 20 mL/kg to a maximum of 2 litres — a flat weight-based dose with a hard volume cap, not a 24-hour titrated formula. EMR level has no IV fluid option for burns at all.",
+   "bcZh": "BC 院前并不套用 Parkland 计算。正式的低血容量规程适应证明确写的是烧伤 >20% BSA（部分层和全层）；烧伤处置规程里 PCP 的附加干预就是：若出现低血压，给 20 mL/kg，上限 2 升——这是一个有硬性总量上限的按体重固定剂量，不是 24 小时滴定式公式。EMR 级别对烧伤根本没有静脉补液这个选项。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.28, p.54"
+  },
+  {
+   "topicEn": "Major-burn severity classification: the textbook's age-tiered ABA-style table vs. BC's single blunt trauma-alert list",
+   "topicZh": "重度烧伤分级：教材按年龄分层的 ABA 式表格，对比 BC 单一、直白的创伤预警清单",
+   "bookEn": "The textbook grades burns into Major/Moderate/Minor using TBSA cutoffs that shift by age band (e.g., partial-thickness major at >25% TBSA for ages 10-50 but >20% for under-10 or over-50), plus a separate burn-centre TRANSFER criteria list that uses a different partial-thickness cutoff again (>10% TBSA) — two overlapping but not identical numeric systems within the same chapter.",
+   "bookZh": "教材用随年龄分层变化的 TBSA 界值把烧伤分为重度/中度/轻度（例如部分层烧伤在 10-50 岁人群中 >25% TBSA 才算重度，但 10 岁以下或 50 岁以上则 >20% 就算重度），另外还有一份单独的\"转诊烧伤中心\"标准清单，其中部分层的界值又不一样（>10% TBSA）——同一章里出现了两套有重叠但并不完全一致的数字体系。",
+   "bcEn": "BC's exam answer is simpler and does not vary by age: a major-burn trauma alert is triggered by partial-thickness burns >20% BSA, full-thickness burns >10% BSA, facial or airway burns (with or without inhalation injury), third-degree burns involving the eyes/neck/hands/feet/groin, a burn that fully encircles a limb, or a high-voltage electrical burn. Use these flat cutoffs for BC scenario and written-exam answers instead of the textbook's age-adjusted tiers or the separate 10% transfer-criteria number.",
+   "bcZh": "BC 的标准答案更简单，且不随年龄变化：部分层烧伤 >20% BSA、全层烧伤 >10% BSA、面部或气道烧伤（无论是否合并吸入性损伤）、累及眼/颈/手/足/腹股沟的三度烧伤、完全环绕肢体的烧伤，或高压电烧伤，任一条即触发重大烧伤创伤预警。BC 情景题或笔试作答时要用这套统一界值，而不是教材里按年龄调整的分级、或另一套 10% 的转诊标准数字。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.25"
+  },
+  {
+   "topicEn": "Burn analgesia: the textbook's weight-based IV opioids vs. BC's Entonox/methoxyflurane/oral-analgesic toolkit — no opioid in this scope at all",
+   "topicZh": "烧伤镇痛：教材按体重给的静脉阿片类，对比 BC 的 Entonox/甲氧氟烷/口服镇痛工具箱——这个范围内根本没有阿片类",
+   "bookEn": "The textbook recommends morphine sulphate 0.03-0.1 mg/kg or fentanyl 0.5-1 mcg/kg per dose, both repeatable as needed, as the analgesia of choice for burn pain.",
+   "bookZh": "教材推荐硫酸吗啡每次 0.03-0.1 mg/kg，或芬太尼每次 0.5-1 mcg/kg，均可视需要重复给药，作为烧伤镇痛的首选。",
+   "bcEn": "Neither morphine nor fentanyl appears anywhere in BC's EMR/PCP drug formulary for this indication. BC's burn analgesia toolkit is Entonox (explicitly indicated for 'pain associated with burns,' but absolutely contraindicated with inhalation injury), methoxyflurane/Penthrox (self-administered, 3 mL per dose, repeat once after 20 minutes, maximum 6 mL total, with respiratory depression as a caution under the CHECK mnemonic), plus PCP-level oral acetaminophen and ibuprofen. Do not answer 'morphine' or 'fentanyl' on a BC burn-pain question.",
+   "bcZh": "在这一适应证下，吗啡和芬太尼都不在 BC 的 EMR/PCP 药物目录里。BC 的烧伤镇痛工具箱是 Entonox（明确适用于\"烧伤相关疼痛\"，但合并吸入性损伤时绝对禁用）、甲氧氟烷/Penthrox（患者自行吸入给药，每次 3 mL，20 分钟后可重复一次，总量上限 6 mL，CHECK 助记法中把呼吸抑制列为慎用因素），以及 PCP 级别的口服对乙酰氨基酚和布洛芬。BC 烧伤镇痛题绝不能答\"吗啡\"或\"芬太尼\"。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.65, p.71"
+  },
+  {
+   "topicEn": "Electrical burns: the textbook's blanket 'usually major' framing vs. BC's specific high-voltage-only trauma-alert criterion",
+   "topicZh": "电烧伤：教材\"通常都算重度\"的笼统说法，对比 BC 明确只把高压电列为创伤预警标准",
+   "bookEn": "The textbook states electrical burns are most often classified as major burns given the risk of severe internal injury, while separately noting that LOW-voltage electrical burns fall under the Moderate category in its severity table.",
+   "bookZh": "教材指出，考虑到严重内部损伤的风险，电烧伤大多被归为重度烧伤；但在其严重度分级表中又把\"低压\"电烧伤单独归入中度一类。",
+   "bcEn": "BC's major-burn trauma-alert list specifically names HIGH-VOLTAGE electrical burns as a qualifying criterion — it does not list electrical burns generically, and does not carve out a separate lower tier for low-voltage exposures. When answering a BC scenario, tie the 'major burn' classification to voltage specifically (high-voltage = alert criterion) rather than treating all electrical contact as automatically major.",
+   "bcZh": "BC 的重大烧伤创伤预警清单专门点名\"高压电\"烧伤作为触发标准——并没有笼统地把\"电烧伤\"整体列入，也没有为低压暴露单独划出一个较轻的等级。回答 BC 情景题时，要把\"重度烧伤\"这个判断具体挂钩到电压高低（高压电＝预警标准），而不是把所有电击接触都想当然地当成重度烧伤。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.25"
+  }
+ ]
+}

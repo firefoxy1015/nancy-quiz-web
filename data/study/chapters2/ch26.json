@@ -1,0 +1,786 @@
+{
+ "id": "ch26",
+ "n": 26,
+ "titleEn": "Thoracic Injuries",
+ "titleZh": "胸部损伤",
+ "group": "trauma",
+ "examWeight": 2,
+ "whyEn": "A weight-2 trauma chapter, but a disproportionately high-yield one: it is the textbook's densest source of numeric thresholds you WILL be tested on - massive hemothorax's 1,500 mL line, cardiac tamponade's 50 mL acute threshold, the Beck triad's roughly 30% detection rate, the deadly dozen's nine-plus-three split. On the practical side, open and tension pneumothorax sit among the injuries graded as 100%-deduction misses if you fail to find and treat them in the primary survey. Learn the pneumothorax spectrum (simple to open to tension) as one continuous story, drill the tension-vs-tamponade differential until it is reflex, and know exactly where BC draws the line on what you are actually allowed to do about it in the field.",
+ "whyZh": "权重2的创伤章节，但性价比很高：它是全书里数值判据最密集的战场——大量血胸的1,500 mL分界、心包填塞急性期仅50 mL就能致命、Beck三联只有约30%患者完整出现、死亡十二征的9+3分组。实操上，开放性和张力性气胸是初评中漏诊即100%扣分的项目之一。要把气胸谱系（简单→开放→张力性）当成一条连续的故事线来记，把张力性气胸vs心包填塞的鉴别背到条件反射，同时搞清楚BC允许你在现场实际做到哪一步。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics（进行肌肉骨骼评估并解读发现）",
+   "Area 5: Therapeutics（实施针刺胸腔穿刺术/needle thoracostomy）",
+   "Area 6: Integration（处置出现心血管系统与呼吸系统症状体征的患者）"
+  ],
+  "codes": [
+   "4.3.j",
+   "5.5.s",
+   "6.1.a",
+   "6.1.c"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction & Epidemiology",
+   "titleZh": "概述与流行病学",
+   "points": [
+    {
+     "en": "Only head trauma/TBI kills more trauma patients than thoracic injury: about 25% of trauma deaths are directly due to chest injury, and thoracic trauma is a contributing factor in another 25% of trauma deaths.",
+     "zh": "创伤死亡里，只有头部外伤/脑外伤比胸部创伤致死更多：约25%的创伤死亡直接由胸伤造成，另有25%的创伤死亡中胸伤是促成因素。",
+     "hard": true
+    },
+    {
+     "en": "Motor vehicle collisions account for 7 of every 10 patients with blunt thoracic trauma - the dominant mechanism to keep in mind whenever a patient reports a car crash.",
+     "zh": "机动车碰撞占钝性胸部创伤患者的7/10——只要病史里有车祸，胸伤就该是默认怀疑项。",
+     "hard": true
+    },
+    {
+     "en": "Canadian injury burden (NACRS 2016-2017): more than 2 million emergency department visits and over a quarter-million hospital admissions for injury in one year nationally.",
+     "zh": "加拿大伤害负担（NACRS 2016-2017数据）：全国一年因伤害导致的急诊就诊超过200万人次，住院超过25万人次。",
+     "hard": true
+    },
+    {
+     "en": "Ontario's 2008-2012 trauma data: over 2.4 million people injured, 25,674 deaths; MVCs were the leading cause of major-injury hospitalization, ahead of unintentional falls and intentional violence. Injury-type breakdown: internal organ injury 80%, musculoskeletal 68%, superficial 28%; mechanism split 92% blunt (including lacerations), 6% penetrating, 2% burns; mean injury severity score 24; average hospital stay 15 days (burn admissions longest at 32 days).",
+     "zh": "安大略省2008-2012年创伤数据：受伤逾240万人，死亡25,674人；机动车碰撞是重大创伤住院的头号病因，排在意外跌落和故意暴力之前。伤情类型占比：内脏器官伤80%、肌肉骨骼伤68%、表浅伤28%；受伤机制92%为钝性伤（含裂伤）、6%穿透伤、2%烧伤住院；平均创伤严重度评分（ISS）24；平均住院15天（烧伤患者住院最长，32天）。",
+     "hard": true
+    },
+    {
+     "en": "Because the thorax packages the heart, great vessels, and both lungs into one compact compartment, a chest injury is almost never 'just' a local wound - it is simultaneously an airway, breathing, and circulation problem, which is why it belongs in the primary survey rather than a later exam step.",
+     "zh": "胸腔把心脏、大血管和两片肺全部装在一个紧凑空间里，所以胸部创伤几乎从不只是局部伤口——它同时是气道、呼吸、循环三条线的问题，这正是为什么它要放进初步评估、而不是留到后面再查。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy & Physiology",
+   "titleZh": "解剖与生理",
+   "points": [
+    {
+     "en": "Thoracic cage boundaries: posteriorly the thoracic vertebrae and ribs, anteriorly/laterally the ribs, inferiorly the diaphragm, superiorly the thoracic inlet. The diaphragm inserts anteriorly around ribs 4-5 even though the cavity extends to rib 12 posteriorly, so thoracic-cavity volume (and which organs are exposed) shifts with every breath.",
+     "zh": "胸腔边界：后方是胸椎和肋骨，前外侧是肋骨，下方是膈肌，上方是胸廓入口。膈肌前方止点大约在第4-5肋，但胸腔后方一直延伸到第12肋——所以胸腔容积（以及哪些脏器暴露在外）会随每次呼吸变化。",
+     "hard": true
+    },
+    {
+     "en": "Sternum has three parts: manubrium (superior), sternal body (central), xiphoid process (inferior). The suprasternal notch sits above the manubrium; the angle of Louis marks the manubriosternal junction - both are physical landmarks for locating ribs and intercostal spaces.",
+     "zh": "胸骨分三部分：上方胸骨柄、中央胸骨体、下方剑突。胸骨柄上方是胸骨上切迹；胸骨柄与胸骨体交界处是路易氏角（Angle of Louis）——两者都是定位肋骨和肋间隙的体表标志。",
+     "hard": true
+    },
+    {
+     "en": "12 pairs of ribs: ribs 1-7 (true ribs) attach directly to the sternum via costal cartilage; ribs 8-10 (false ribs) attach indirectly through rib 7's cartilage; ribs 11-12 (floating ribs) have no anterior attachment at all. Each intercostal space is numbered for the rib above it and carries a neurovascular bundle (artery, vein, nerve) along the inferior rib border.",
+     "zh": "肋骨共12对：1-7肋（真肋）经肋软骨直接连胸骨；8-10肋（假肋）经第7肋软骨间接相连；11-12肋（浮肋）前方完全没有附着。肋间隙以上方那根肋骨编号命名，神经血管束（动脉、静脉、神经）沿每根肋骨下缘走行。",
+     "hard": true
+    },
+    {
+     "en": "The mediastinum houses the heart, great vessels, esophagus, trachea, mainstem bronchi, and the vagus and phrenic nerves. The heart sits inside the pericardium (visceral layer = epicardium, on the heart itself; parietal layer = the outer sac); the pericardium's inferior surface is fixed directly to the diaphragm.",
+     "zh": "纵隔内装着心脏、大血管、食管、气管、主支气管以及迷走神经和膈神经。心脏被包在心包内（脏层＝心外膜，贴着心脏本身；壁层＝外层的囊袋）；心包下方直接固定在膈肌上。",
+     "hard": true
+    },
+    {
+     "en": "The right ventricle is the most anterior cardiac chamber and has the thinnest wall - its internal pressure runs only about one-quarter of the left ventricle's - which is exactly why it is the chamber most exposed to anterior blunt or penetrating chest injury. The cardiac impulse is palpable at the fifth intercostal space, midclavicular line.",
+     "zh": "右心室是最靠前的心腔，室壁也最薄——腔内压力只有左心室的约四分之一——这正是为什么前胸受到钝性或穿透伤时，最先遭殃的往往是右心室。心尖搏动可在第5肋间锁骨中线处触及。",
+     "hard": true
+    },
+    {
+     "en": "Cardiac output = heart rate x stroke volume; textbook baseline example: 70 beats/min x 70 mL/beat = 4,900 mL/min. Cardiac output depends on three linked pieces - a functional pump (the heart), adequate circulating volume, and low resistance to ejection (afterload) - and any thoracic injury that damages one of the three drops output.",
+     "zh": "心输出量＝心率×每搏量；教材举例基线：70次/分×70 mL/搏＝4,900 mL/分。心输出量依赖三个环环相扣的要素——功能正常的泵（心脏）、足够的循环容量、较低的射血阻力（后负荷）——胸部创伤只要伤及其中一项，心输出量就会下降。",
+     "hard": true
+    },
+    {
+     "en": "The aorta has three fixed attachment points - the annulus at its origin from the aortic valve, the ligamentum arteriosum, and the aortic hiatus - and these are exactly the sites that tear under the shearing forces of sudden deceleration.",
+     "zh": "主动脉有三个固定附着点——主动脉瓣起始处的瓣环、动脉韧带、主动脉裂孔——正是这三处最容易在突然减速产生的剪切力下被撕裂。",
+     "hard": true
+    },
+    {
+     "en": "The pleura is a double layer (parietal lines the inside of the chest wall, visceral lines the outside of the lung) separated by a thin film of fluid that creates surface tension holding the lung expanded against the chest wall. Fill that potential space with air, blood, or other fluid and the surface tension is lost - the lung collapses.",
+     "zh": "胸膜是双层结构（壁层贴胸壁内侧，脏层贴肺表面），两层之间一层薄薄的液体膜靠表面张力把肺撑在胸壁上。一旦这个潜在腔隙被空气、血液或其他液体填满，表面张力消失——肺就塌陷。",
+     "hard": true
+    },
+    {
+     "en": "The diaphragm is the primary muscle of breathing; in respiratory distress it gets help from accessory muscles - trapezius, latissimus dorsi, rhomboids, pectoralis, and sternocleidomastoid.",
+     "zh": "膈肌是主要的呼吸肌；呼吸窘迫时会动用辅助肌群——斜方肌、背阔肌、菱形肌、胸肌和胸锁乳突肌。",
+     "hard": true
+    },
+    {
+     "en": "The drive to breathe comes from chemoreceptors in the carotid sinus and aortic arch sensing rising CO2 and signalling the brain to speed up respiration. Some patients with end-stage COPD instead rely on a secondary hypoxic drive, because they chronically retain CO2 and their normal CO2-sensing trigger has been blunted.",
+     "zh": "呼吸驱动来自颈动脉窦和主动脉弓里的化学感受器，感知CO2升高后向大脑发信号加快呼吸。部分终末期COPD患者转而依赖缺氧驱动这一备用机制，因为他们长期潴留CO2，正常的CO2感知触发已经变钝。",
+     "hard": true
+    },
+    {
+     "en": "Breathing mechanics: diaphragm contraction plus intercostal/accessory muscle pull creates negative intrathoracic pressure that draws air in; relaxation creates positive pressure that pushes air out. Room air is about 21% O2 versus up to 100% via a nonrebreathing mask or bag-valve-mask; ambient air holds only about 0.033% CO2, which is what drives CO2 to diffuse OUT of the blood and into the alveoli.",
+     "zh": "呼吸力学：膈肌收缩加上肋间肌/辅助肌牵拉产生胸腔负压把空气吸入；放松则产生正压把气体呼出。室内空气氧浓度约21%，非再吸入面罩或球囊面罩可达100%；环境空气中CO2只占约0.033%，正是这个浓度差把CO2从血液推向肺泡、扩散排出体外。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Chest Wall Injuries: Flail Chest, Rib & Sternal Fractures",
+   "titleZh": "胸壁损伤：连枷胸、肋骨与胸骨骨折",
+   "points": [
+    {
+     "en": "Flail chest = 2 or more ADJACENT ribs, each fractured in 2 or more places, freeing a 'flail segment' that moves PARADOXICALLY: pulled inward on inspiration (negative intrathoracic pressure), pushed outward on expiration - the opposite of the rest of the chest wall.",
+     "zh": "连枷胸＝2根或以上相邻肋骨、每根都在2处或以上骨折，游离出一段“连枷段”出现反常运动：吸气时（胸腔负压）被吸向内、呼气时被推向外——方向和其余胸壁正好相反。",
+     "hard": true
+    },
+    {
+     "en": "Flail sternum is the most extreme pattern: the sternum fully separates from the ribs via fracture or ruptured costal cartilage, wrecking chest-wall mechanics on BOTH sides at once and producing more severe respiratory impairment than a lateral flail segment.",
+     "zh": "连枷胸骨是最极端的形式：胸骨因骨折或肋软骨断裂而与肋骨完全分离，两侧胸壁力学同时崩溃，呼吸损害比单侧连枷段更严重。",
+     "hard": true
+    },
+    {
+     "en": "Flail chest occurs in up to 20% of admitted trauma patients; reported mortality runs as high as 50%, worse in patients over 60, those with 7 or more rib fractures, 3 or more associated injuries, presenting shock, or associated head trauma.",
+     "zh": "连枷胸见于高达20%的住院创伤患者；报道的死亡率最高可达50%，60岁以上、肋骨骨折≥7根、合并伤≥3处、就诊时已休克、或合并头部外伤者预后更差。",
+     "hard": true
+    },
+    {
+     "en": "The real threat behind a flail segment is usually not the loose bone itself but the pulmonary contusion riding underneath it almost every time - that contusion, not the paradoxical motion, is the main driver of hypoxemia.",
+     "zh": "连枷段真正的威胁通常不是那段游离的骨头本身，而是几乎必然伴随的肺挫伤——造成低氧血症的主因是挫伤，不是反常运动本身。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary contusion forms via three physics mechanisms: the Spalding effect (pressure waves tear the capillary-alveolar membrane, causing hemorrhage), inertial effect (alveoli and larger bronchioles decelerate at different rates and shear apart), and implosion (compressed intrapulmonary gas re-expands violently and injures tissue).",
+     "zh": "肺挫伤通过三种物理机制形成：Spalding效应（压力波撕裂毛细血管-肺泡膜引起出血）、惯性效应（肺泡和较大支气管减速速率不同而相互撕扯）、内爆效应（被压缩的肺内气体剧烈再膨胀损伤组织）。",
+     "hard": true
+    },
+    {
+     "en": "Flail chest management: supplemental high-flow oxygen first; a flail segment alone does NOT mandate intubation or assisted ventilation unless oxygen by itself fails to maintain adequate oxygenation - intubate for progressive respiratory failure, not for the paradoxical motion itself.",
+     "zh": "连枷胸的处理：先给高流量吸氧；单纯连枷段本身并不强制要求插管或辅助通气——除非单纯吸氧无法维持足够氧合，插管的指征是进行性呼吸衰竭本身，而不是反常运动这个体征。",
+     "hard": true
+    },
+    {
+     "en": "External stabilization of a flail segment (sandbagging, strapping/taping it down) is NO LONGER recommended: it reduces aeration of the lung underneath, worsens alveolar collapse (atelectasis), and makes pulmonary function worse, not better.",
+     "zh": "对连枷段做外固定（沙袋加压、绑带加压包扎）现在已不再推荐：它会压住下方肺组织，减少通气，加重肺不张，反而让肺功能更差。",
+     "hard": true
+    },
+    {
+     "en": "Rib fractures are the single most common thoracic injury, present in more than half of all thoracic trauma patients; ribs 4 through 9 are the most commonly fractured because they are the least shielded by other bone and muscle.",
+     "zh": "肋骨骨折是最常见的胸部创伤，见于超过一半的胸部创伤患者；第4-9肋最常骨折，因为它们受其他骨骼和肌肉的保护最少。",
+     "hard": true
+    },
+    {
+     "en": "Fracture location is a clue to hidden injury: rib 4-9 fractures raise suspicion for associated aortic, tracheobronchial, pulmonary, or vascular injury; fractures of the lower ribs (9-11) raise suspicion for an associated intra-abdominal injury.",
+     "zh": "骨折位置是隐匿伤的线索：第4-9肋骨折要警惕合并主动脉、气管支气管、肺或血管损伤；下位肋骨（9-11肋）骨折要警惕合并腹腔脏器损伤。",
+     "hard": true
+    },
+    {
+     "en": "Subcutaneous emphysema (air trapped under the skin, felt as a 'snap-crackle-pop' or bubble-wrap sensation on palpation) is a key finding in blunt or penetrating chest injury and should raise suspicion for an underlying pneumothorax.",
+     "zh": "皮下气肿（空气积存在皮下，触诊呈“噼啪作响”或类似戳破气泡膜的感觉）是钝性或穿透性胸伤的重要体征，提示可能合并气胸。",
+     "hard": true
+    },
+    {
+     "en": "Sternal fracture occurs in roughly 1 in 20 blunt thoracic trauma patients; though minor by itself, associated findings - myocardial contusion, flail sternum, pulmonary contusion, head injury, intra-abdominal injury, myocardial rupture - push overall mortality above 1 in 4. Because the sternum is a thick bone, enough force to fracture it means the same force reached the heart, great vessels, lungs, and diaphragm - obtain an ECG.",
+     "zh": "胸骨骨折约见于1/20的钝性胸部创伤患者；单独看伤情轻微，但合并所见（心肌挫伤、连枷胸骨、肺挫伤、头部外伤、腹腔脏器损伤、心肌破裂）会把总体死亡率推高到超过1/4。胸骨是很厚的骨头，能打断它的力量同样传导到了心脏、大血管、肺和膈肌——务必做心电图。",
+     "hard": true
+    },
+    {
+     "en": "Rib-fracture pain drives 'self-splinting' - shallow breathing to avoid moving the injured segment - which looks like the patient is coping but is quietly building atelectasis and raising pneumonia risk. Adequate analgesia plus having the patient splint the chest with a pillow or blanket to encourage deeper breathing is itself part of the treatment, not just comfort care.",
+     "zh": "肋骨骨折的疼痛会诱发“自我夹板固定”——用浅呼吸来避免牵动伤处，看起来像在应对，实则悄悄制造肺不张、抬高肺炎风险。足量镇痛加上让患者用枕头或毯子抵住胸壁鼓励深呼吸，本身就是治疗的一部分，不只是舒适护理。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Lung Injuries: The Pneumothorax Spectrum",
+   "titleZh": "肺损伤：气胸谱系",
+   "points": [
+    {
+     "en": "Simple pneumothorax (air in the pleural space, not under tension) occurs in nearly half of blunt thoracic trauma patients and in almost every penetrating chest trauma patient. Findings scale with size: small = mild dyspnea, pleuritic pain, diminished breath sounds, hyperresonance; large = agitation, altered mental status, tachypnea, tachycardia, cyanosis, falling SpO2, even absent breath sounds on the affected side.",
+     "zh": "简单气胸（胸膜腔积气但未形成张力）见于近一半的钝性胸部创伤患者，几乎所有穿透性胸伤患者都会有。表现随大小而变：小气胸＝轻度呼吸困难、胸膜性疼痛、呼吸音减弱、叩诊过清音；大气胸＝烦躁、意识改变、呼吸急促、心动过速、发绀、SpO2下降，甚至患侧呼吸音消失。",
+     "hard": true
+    },
+    {
+     "en": "Simple pneumothorax mechanism: either direct lung injury (rib fragment, gunshot, stab) OR barotrauma - pressure (eg, steering wheel) applied to the chest while the glottis is closed transmits into the thorax and ruptures the lung.",
+     "zh": "简单气胸的机制：要么是直接肺损伤（肋骨碎片、枪伤、刀刺），要么是气压伤——闭合声门时胸部受压（如方向盘撞击），压力传导入胸腔造成肺破裂。",
+     "hard": true
+    },
+    {
+     "en": "Simple pneumothorax management: ABCs plus high-concentration oxygen (helps reabsorb pleural air and may slow or reverse its growth). The single most critical action is REPEATED reassessment to catch progression to tension - most pneumothoraces self-seal, but the ones that don't can kill fast.",
+     "zh": "简单气胸的处理：ABC加高浓度吸氧（帮助重新吸收胸膜腔内的空气，可能减缓甚至逆转气胸增大）。最关键的单一动作是反复复评，抓住进展为张力性气胸的苗头——多数气胸会自行封闭，但没封闭的那部分能很快致命。",
+     "hard": true
+    },
+    {
+     "en": "Open pneumothorax = a penetrating chest-wall defect linking the pleural space directly to outside air. If the wound is bigger than the glottic opening, air preferentially enters through the wound rather than the trachea, creating the classic sucking/bubbling chest wound.",
+     "zh": "开放性气胸＝穿透性胸壁缺损把胸膜腔和外界空气直接连通。如果伤口比声门开口还大，空气会优先经伤口而不是气管进出，形成典型的吸吮性/冒泡性胸部伤口。",
+     "hard": true
+    },
+    {
+     "en": "Open pneumothorax immediate care: gloved hand over the wound first, then an occlusive dressing 3-4 times the size of the wound, secured on only THREE sides (or use a vented commercial chest seal) so trapped air can still vent and tension physiology is prevented. If tension signs appear despite the dressing, LIFT/BURP the seal to release pressure.",
+     "zh": "开放性气胸的即刻处理：先用戴手套的手掌覆盖伤口，再换成大小为伤口3-4倍的封闭敷料，只固定三边（或用带排气阀的商品化胸封贴），让积气仍能排出、防止形成张力性生理状态。若贴上后仍出现张力征象，立即掀起/放气封贴解压。",
+     "hard": true
+    },
+    {
+     "en": "If a chest-wall wound is accidentally sealed on all FOUR sides with no vent, a simple or open pneumothorax can be converted into a tension pneumothorax - the fix is to immediately lift/release one edge of the dressing the moment tension signs appear.",
+     "zh": "如果胸壁伤口不慎四边全部封死、没有留排气口，简单或开放性气胸就可能被人为转化成张力性气胸——一旦出现张力征象，立即掀开敷料一角放气即是应对方法。",
+     "hard": true
+    },
+    {
+     "en": "Tension pneumothorax mechanism: a one-way valve lets air enter the pleural space but never leave. Pressure climbs, collapses the affected lung, and eventually shoves the mediastinum toward the opposite side - compressing the great veins enough to choke off venous return, preload, and cardiac output.",
+     "zh": "张力性气胸的机制：形成单向活瓣，空气只能进不能出。压力持续上升，压垮患侧肺，最终把纵隔推向对侧——压迫大静脉到足以阻断静脉回流、前负荷和心输出量的程度。",
+     "hard": true
+    },
+    {
+     "en": "An estimated 10% to 30% of patients transported to Level 1 trauma centres require emergent treatment for tension pneumothorax. Blunt lung parenchymal injury is its single most common cause; other causes include open thoracic injury, barotrauma from positive-pressure ventilation, and tracheobronchial injury from shearing forces.",
+     "zh": "估计转运到一级创伤中心的患者中，10%-30%需要针对张力性气胸的紧急处理。钝性肺实质损伤是最常见的病因；其他病因包括开放性胸部损伤、正压通气引起的气压伤、以及剪切力造成的气管支气管损伤。",
+     "hard": true
+    },
+    {
+     "en": "The classic tension-pneumothorax tetrad is absent breath sounds on the affected side, tachycardia, JVD, and tracheal deviation - but JVD and tracheal deviation are LATE, unreliable signs that may never appear even as the patient decompensates; hypotension is likewise a late finding, and its absence does not rule the diagnosis out. Working rule: shock (a late sign) plus decreased breath sounds plus hyperresonance to percussion, same side, means tension pneumothorax until proven otherwise.",
+     "zh": "张力性气胸的经典四联征是患侧呼吸音消失、心动过速、颈静脉怒张、气管偏移——但颈静脉怒张和气管偏移都是晚期、不可靠的体征，即使患者已经在恶化，也可能始终不出现；低血压同样是晚期表现，没有低血压不能排除诊断。实用法则：休克（晚期体征）＋呼吸音减弱＋同侧叩诊过清音＝按张力性气胸处理，直到证明不是。",
+     "hard": true
+    },
+    {
+     "en": "Textbook needle decompression (needle thoracentesis) equipment and landmarks: a large-bore IV catheter, preferably 12-14 gauge and at least 5 cm long; primary site is the 2nd-3rd intercostal space at the midclavicular line, just above the 3rd rib on the affected side; alternate site (deep chest wall or significant anterior trauma) is the 4th-5th intercostal space at the midaxillary line. The needle always rides the TOP of the rib below to avoid the neurovascular bundle running along each rib's inferior border.",
+     "zh": "教材描述的针刺减压（针刺胸腔穿刺术）器材与定位：大号静脉留置针，建议12-14号、针长至少5厘米；首选部位是患侧第2-3肋间、锁骨中线，紧贴第3肋上缘进针；备选部位（胸壁过厚或前胸有明显损伤时）是患侧第4-5肋间、腋中线。进针始终贴着下方肋骨的上缘，避开沿每根肋骨下缘走行的神经血管束。",
+     "hard": true
+    },
+    {
+     "en": "Needle decompression risk and limits: wrong-angle insertion (not riding the top of the rib) can lacerate the intercostal vessels and cause significant hemorrhage; the needle can also injure the lung parenchyma. Failure to treat a tension pneumothorax progresses the patient to pulseless electrical activity and cardiopulmonary arrest.",
+     "zh": "针刺减压的风险与局限：进针角度不对（没有贴肋骨上缘）可能撕裂肋间血管、造成明显出血；针也可能损伤肺实质本身。而不处理张力性气胸，患者会进展为无脉性电活动直至心脏骤停。",
+     "hard": true
+    },
+    {
+     "en": "A tracheobronchial injury near the carina can outrun a single needle decompression entirely: air floods the pleural space faster than one angiocath can vent it, so tension may re-accumulate and the decompression may need to be repeated before hospital arrival.",
+     "zh": "靠近气管隆突的气管支气管损伤可能让单次针刺减压完全跟不上：空气涌入胸膜腔的速度超过单根套管针的排气速度，张力可能重新积聚，到院前可能需要重复减压。",
+     "hard": true
+    },
+    {
+     "en": "All patients with signs of tension pneumothorax get immediate high-flow supplemental oxygen (12-15 L/min) via a nonrebreathing mask while decompression equipment is prepared.",
+     "zh": "所有出现张力性气胸征象的患者，在准备减压器材的同时，立即给予高流量吸氧（12-15 L/min，非再吸入面罩）。",
+     "hard": true
+    },
+    {
+     "en": "Positive-pressure ventilation is a double-edged sword in chest trauma: it may be needed to overcome respiratory failure, but each breath can also expand a pneumothorax, convert it to tension, or push more air through a tracheobronchial tear. Ventilate with the SMALLEST pressure that produces visible chest rise - watch the chest, do not simply 'top up' further.",
+     "zh": "正压通气在胸部创伤里是双刃剑：可能需要用它来纠正呼吸衰竭，但每一次送气都可能扩大气胸、把气胸转化为张力性、或把更多气体挤进气管支气管的撕裂处。用能看到胸廓起伏的最小压力送气——盯着胸廓，不要为了“保险”而继续加压。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Massive Hemothorax & Pulmonary Contusion",
+   "titleZh": "大量血胸与肺挫伤",
+   "points": [
+    {
+     "en": "Hemothorax = blood accumulating in the pleural space, occurring in approximately 25% of chest trauma patients, usually from torn lung parenchyma or rib-fracture bleeding, but also from penetrating cardiac/great-vessel wounds or blunt deceleration shearing. Hemopneumothorax = blood AND air present together.",
+     "zh": "血胸＝血液积聚在胸膜腔内，约见于25%的胸部创伤患者，多因肺实质撕裂或肋骨骨折出血，也可来自穿透性心脏/大血管伤或钝性减速剪切伤。血气胸＝血液和空气同时存在。",
+     "hard": true
+    },
+    {
+     "en": "Massive hemothorax is DEFINED as more than 1,500 mL of blood in the pleural space - roughly 25-30% of an adult's total blood volume, meaning the patient has already reached decompensated shock. Each lung cavity can hold up to 3,000 mL, so a patient CAN bleed out entirely into their own chest.",
+     "zh": "大量血胸的定义是胸膜腔内血量超过1,500 mL——约相当于成人总血容量的25-30%，意味着患者已进入失代偿性休克。每侧胸腔最多可容纳3,000 mL血液，患者完全可能把全部血液都失血到自己的胸腔里。",
+     "hard": true
+    },
+    {
+     "en": "Intercostal artery injury alone can bleed up to 50 mL per minute - do the arithmetic on how quickly that reaches the massive-hemothorax threshold.",
+     "zh": "单纯肋间动脉损伤出血速度可达每分钟50 mL——算一下这个速度多快能到达大量血胸的阈值。",
+     "hard": true
+    },
+    {
+     "en": "Hemothorax presentation blends two pictures at once: ventilatory insufficiency (hypoxia, tachypnea, dyspnea, agitation) plus hypovolemic shock (tachycardia, hypotension, pale clammy skin). It is told apart from tension pneumothorax by the ABSENCE of JVD and tracheal deviation, plus dullness (not hyperresonance) to percussion, and possible hemoptysis.",
+     "zh": "血胸的表现是两幅图叠加：通气不足（低氧、呼吸急促、呼吸困难、烦躁）加低血容量性休克（心动过速、低血压、皮肤苍白湿冷）。与张力性气胸的鉴别点是没有颈静脉怒张和气管偏移，叩诊是浊音（不是过清音），可能伴咯血。",
+     "hard": true
+    },
+    {
+     "en": "Hemothorax field management is supportive: high-flow oxygen if the airway is otherwise fine, two large-bore (18-gauge) IV lines, and fluid resuscitation guided by local protocol aimed at LIMITING how long the patient stays hypotensive, not at normalizing the pressure.",
+     "zh": "血胸的院前处理是支持性的：气道尚可时给高流量吸氧，建立两条大号（18号）静脉通路，按当地规程指导补液——目标是缩短低血压持续的时间，而不是把血压补到正常。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary contusion can be clinically silent for up to 24 hours before its severity becomes evident - a critical trap for patients found late (domestic violence, intoxication, remote or search-and-rescue calls) who 'look fine' at first contact.",
+     "zh": "肺挫伤最长可在临床上沉默24小时，之后严重程度才逐渐显现——对于延迟被发现的患者（家暴、醉酒受伤、偏远地区、搜救行动），首次接触时“看起来还好”是一个重要陷阱。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary contusion pathophysiology: local edema dilutes surfactant, causing alveolar collapse (atelectasis), which thickens mucus and causes further obstruction. A large contusion triggers pulmonary vasoconstriction that shunts blood away from the injury; this shunting actually increases mixed venous blood returning to the heart and worsens hypoxemia. Treatment: oxygen plus positive-pressure ventilation as needed, but go easy on IV fluids (edema-prone tissue) unless shock is present.",
+     "zh": "肺挫伤的病理生理：局部水肿稀释表面活性物质，导致肺泡塌陷（肺不张），黏液变稠又造成进一步梗阻。大范围挫伤会触发肺血管收缩、把血流分流出损伤区，但这种分流反而增加回到心脏的混合静脉血、加重低氧血症。治疗：视情况给氧和正压通气，但除非有休克表现，静脉补液要谨慎（组织本就容易水肿）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Myocardial Injuries: Tamponade, Contusion, Rupture, Commotio Cordis",
+   "titleZh": "心肌损伤：心包填塞、心肌挫伤、心肌破裂与心震荡",
+   "points": [
+    {
+     "en": "Cardiac tamponade = fluid (in trauma, usually blood) filling the pericardial sac and compressing the heart, dropping cardiac output. Almost all patients with a cardiac stab wound develop tamponade, but very few blunt-trauma patients do.",
+     "zh": "心包填塞＝液体（创伤中通常是血液）充满心包腔、压迫心脏，导致心输出量下降。几乎所有心脏刺伤患者都会发生填塞，但钝性伤患者极少发生。",
+     "hard": true
+    },
+    {
+     "en": "Volume threshold differs sharply by speed of onset: chronic medical tamponade (pericarditis, uremia, MI) can tolerate 1,000-1,500 mL because the parietal pericardium slowly stretches; acute traumatic bleeding can tamponade with as little as 50 mL, because the sac has no time to stretch.",
+     "zh": "达到填塞所需的液体量随起病速度大不相同：慢性内科性填塞（心包炎、尿毒症、心梗）因为壁层心包缓慢扩张，可耐受1,000-1,500 mL；急性创伤性出血因为心包来不及扩张，仅50 mL就可能造成填塞。",
+     "hard": true
+    },
+    {
+     "en": "Beck triad - muffled heart tones, narrowed pulse pressure, and JVD - is the classic teaching finding for cardiac tamponade, but it is only actually present in about 30% of confirmed cases. Do not wait for all three before suspecting tamponade.",
+     "zh": "Beck三联征——心音低钝、脉压差变窄、颈静脉怒张——是心包填塞的经典教学表现，但实际只在约30%确诊病例中完整出现。不要等三项全齐才怀疑填塞。",
+     "hard": true
+    },
+    {
+     "en": "Electrical alternans (beat-to-beat swing in QRS axis/amplitude as the heart swings inside a fluid-filled sac) is a classic but inconsistent ECG sign of tamponade - it must be distinguished from bigeminal ectopy, and is not commonly seen in acute traumatic tamponade.",
+     "zh": "电交替（心脏在充满液体的心包内摆动，导致QRS电轴/振幅逐搏变化）是经典但不总出现的心包填塞心电图表现——要与二联律异位心律区分，而且在急性创伤性填塞中并不常见。",
+     "hard": true
+    },
+    {
+     "en": "Tension pneumothorax vs cardiac tamponade - both present with shock plus JVD - split on four bedside findings: trachea (deviated in tension vs midline in tamponade), breath sounds (decreased/absent one side in tension vs equal both sides in tamponade), percussion (hyperresonant in tension vs normal in tamponade), heart sounds (typically normal in tension vs muffled in tamponade). Absent JVD with normal breath sounds, plus a fitting history, still points toward tamponade over tension.",
+     "zh": "张力性气胸 vs 心包填塞——两者都表现为休克＋颈静脉怒张——靠四个床旁体征区分：气管（张力性偏移／填塞居中）、呼吸音（张力性患侧减弱或消失／填塞双侧对称）、叩诊（张力性过清音／填塞正常）、心音（张力性通常正常／填塞低钝）。若无颈静脉怒张但双肺音正常、加上符合的病史，仍应更倾向考虑填塞而非张力性气胸。",
+     "hard": true
+    },
+    {
+     "en": "Cardiac tamponade field care is supportive only - oxygen, IV access, and rapid transport to a trauma centre for pericardiocentesis (a needle removes blood from the pericardial sac through the chest wall); definitive repair happens in the OR with a cardiothoracic surgeon. Judicious IV fluid can transiently buy time by boosting preload.",
+     "zh": "心包填塞的院前处理只是支持性的——吸氧、建立静脉通路、快速转运到创伤中心做心包穿刺（用穿刺针经胸壁抽出心包腔内积血）；根治性修复要在手术室由心胸外科医生完成。适量静脉补液可通过提升前负荷暂时争取时间。",
+     "hard": true
+    },
+    {
+     "en": "Myocardial contusion mechanism: at deceleration speeds above 30 km/h, the heart slams forward into the posterior sternum, and the thin-walled, most-anterior right ventricle takes the brunt. Presentation: sharp retrosternal pain, sometimes silent at first; sinus tachycardia is the most common ECG finding, though PACs/PVCs, new right bundle branch block, AV block, nonspecific ST/T changes, or even VT/VF are possible.",
+     "zh": "心肌挫伤机制：减速速度超过30 km/h时，心脏向前撞击胸骨后方，最先受累的往往是最靠前、壁最薄的右心室。表现：尖锐的胸骨后疼痛，有时最初完全无症状；窦性心动过速是最常见的心电图改变，也可见房性/室性期前收缩、新发右束支传导阻滞、房室传导阻滞、非特异性ST-T改变，甚至室速/室颤。",
+     "hard": true
+    },
+    {
+     "en": "Myocardial contusion field care: supportive - oxygen, frequent vital signs, cardiac monitoring, IV access, fluids as needed to support blood pressure; antiarrhythmic drugs need medical control consultation unless local protocol allows otherwise.",
+     "zh": "心肌挫伤的院前处理：支持性——吸氧、频繁复测生命体征、心电监护、建立静脉通路，按需补液维持血压；除非当地规程另有规定，使用抗心律失常药物前应先联系医疗指挥。",
+     "hard": true
+    },
+    {
+     "en": "Myocardial rupture = acute perforation of a chamber, septum, chordae, papillary muscle, or valve from severe blunt compression (heart crushed between sternum and spine) or a penetrating object/bone fragment; it accounts for 15% of fatal chest injuries. Care: supportive, with rapid transport to a facility that can perform a thoracotomy (or pericardiocentesis first if tamponade is present).",
+     "zh": "心肌破裂＝严重钝性压迫（心脏被夹在胸骨与脊柱之间）或穿透性异物/骨碎片造成心腔、间隔、腱索、乳头肌或瓣膜的急性穿孔，占致死性胸伤的15%。处理：支持性治疗，快速转运至能做开胸手术的机构（若合并填塞则先做心包穿刺）。",
+     "hard": true
+    },
+    {
+     "en": "Commotio cordis = cardiac arrest triggered by a direct chest blow landing during the heart's vulnerable repolarization window - documented triggers include softballs, baseballs, bats, snowballs, fists, and kickboxing kicks. The resulting rhythm is often ventricular fibrillation, and survival depends on defibrillation within the first 2 minutes - the reasoning behind public-access AEDs in schools and sports venues.",
+     "zh": "心震荡＝胸部在心脏复极的易损窗口期受到直接撞击而诱发心脏骤停——已有记录的诱因包括垒球、棒球、球棒、雪球、拳击和踢拳道踢击。诱发的心律常是室颤，能否存活取决于是否在最初2分钟内除颤——这正是学校和运动场馆推广公众可及除颤器（AED）的理由。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Vascular & Other Thoracic Injuries",
+   "titleZh": "血管及其他胸部损伤",
+   "points": [
+    {
+     "en": "Traumatic aortic disruption is involved in 1 of every 5 deaths from blunt trauma. Most patients who die from it die before EMS arrives; most of those who DO survive to be reached by paramedics can survive with prompt treatment, including surgery. Mechanism: shearing at the aorta's three fixed points (annulus, ligamentum arteriosum, aortic hiatus) as the aortic arch swings forward under sudden deceleration.",
+     "zh": "创伤性主动脉破裂见于每5例钝性创伤死亡中的1例。因主动脉伤死亡的患者多数在急救人员到场前就已死亡；能被急救人员救到的这部分患者，多数经及时治疗（含手术）可以存活。机制：突然减速使主动脉弓向前甩动，在瓣环、动脉韧带、主动脉裂孔这三个固定点产生剪切撕裂。",
+     "hard": true
+    },
+    {
+     "en": "The aortic wall has three layers - intima, media, adventitia. A tear limited to the intima lets blood dissect along the media (potentially survivable to hospital); a full-thickness tear leaks blood into the surrounding tissue and is rapidly fatal unless nearby tissue tamponades it long enough for surgery.",
+     "zh": "主动脉壁分三层——内膜、中膜、外膜。仅撕裂内膜时，血液会沿中膜层剥离（有机会撑到医院）；全层撕裂则血液直接漏入周围组织，除非附近组织能形成压塞、争取到手术时间，否则会迅速致命。",
+     "hard": true
+    },
+    {
+     "en": "Aortic injury red flags: pain behind the sternum or between the scapulae, unequal pulses/blood pressure between limbs (classically a STRONGER pulse and HIGHER pressure in the right arm versus the left arm or lower extremities), and a harsh murmur from turbulent flow past the tear. First or second rib fracture was historically taught as an indicator but this association is now considered controversial.",
+     "zh": "主动脉损伤的警示信号：胸骨后或肩胛间疼痛，四肢脉搏/血压不对称（典型表现为右臂脉搏更强、血压更高，高于左臂或下肢），以及血流经撕裂处产生湍流引起的粗糙杂音。第1或第2肋骨骨折曾被作为提示指标写入教材，但这一关联目前已受到质疑。",
+     "hard": true
+    },
+    {
+     "en": "Aortic injury field management: gradual (not aggressive) IV hydration for hypotension, since a sudden pressure swing could worsen the tear; expedite transport to a centre with cardiothoracic surgery available.",
+     "zh": "主动脉损伤的院前处理：低血压时缓慢（而非快速）补液，因为血压骤然波动可能加重撕裂；尽快转运至有心胸外科的医疗中心。",
+     "hard": true
+    },
+    {
+     "en": "Great vessel injuries (other than the aorta) are usually shielded by bone, so PENETRATING trauma is the dominant cause; blunt injury is rare and typically needs a severe rotational mechanism. They present as hypovolemic shock, hemothorax, or tamponade, or - if a hematoma forms - compression symptoms in the esophagus or trachea. Management mirrors any major vascular bleed: IV access and hydration en route.",
+     "zh": "除主动脉外的大血管损伤通常受骨骼保护，所以穿透性创伤是主要病因；钝性损伤少见，一般需要严重的旋转机制。表现为低血容量性休克、血胸或心包填塞，若形成血肿还可能压迫食管或气管产生相应症状。处理与任何大血管出血相同：建立静脉通路、途中补液。",
+     "hard": true
+    },
+    {
+     "en": "Diaphragmatic injury is protected on the right by the liver, so most ruptures - especially blunt ones - occur on the LEFT, classically letting the stomach or bowel herniate into the chest. Only about 1 in 4 are identified in the acute phase; the rest surface later as intermittent pain from periodic herniation (latent phase) or bowel obstruction/infarction as herniated organs strangulate (obstructive phase). The extreme case, tension gastrothorax, compresses the lung and circulation the way a tension pneumothorax does. Avoid nitrous oxide if diaphragmatic injury is suspected - it expands trapped gas in herniated bowel.",
+     "zh": "膈肌因右侧有肝脏保护，破裂多发生在左侧（尤其是钝性伤），典型表现是胃或肠管疝入胸腔。急性期只有约1/4能被识别，其余要到后期才显现——潜伏期表现为疝入内容间歇性嵌顿引起的阵发性疼痛，梗阻期则是疝入脏器血供被切断后的肠梗阻或坏死。极端情况是张力性胃胸——疝入的腹腔内容压迫肺和循环，效果类似张力性气胸。怀疑膈肌损伤时避免使用氧化亚氮镇痛——它会让疝入肠管内的气体膨胀。",
+     "hard": true
+    },
+    {
+     "en": "Esophageal injury is rare but among the most rapidly fatal gastrointestinal injuries if missed, due to mediastinitis; no specific prehospital therapy exists beyond keeping the patient NPO (nothing by mouth) and transporting.",
+     "zh": "食管损伤少见，但一旦漏诊会因纵隔炎迅速致命，是消化道损伤中最凶险的之一；院前没有特异性治疗，只能禁食禁饮并转运。",
+     "hard": true
+    },
+    {
+     "en": "Tracheobronchial injury is rare, usually from penetrating trauma (occasionally severe deceleration), and carries high mortality from airway obstruction. Ventilate GENTLY and SLOWLY if bagging is needed, and do NOT intubate an airway that a tenuous-but-manageable bag-valve-mask can sustain - passing a tube can complete a partial tracheal tear into total obstruction.",
+     "zh": "气管支气管损伤少见，多为穿透伤所致（偶见于严重减速伤），因气道梗阻而死亡率高。需要辅助通气时要轻柔缓慢地挤压球囊；如果球囊面罩已能勉强维持气道，就不要插管——插管可能把部分气管撕裂变成完全性气道梗阻。",
+     "hard": true
+    },
+    {
+     "en": "Traumatic asphyxia follows sudden violent chest compression: pressure backs up into the head/neck/upper-body veins and ruptures capillaries, producing cyanosis above the compression line, ocular findings from mild subconjunctival hemorrhage to dramatic exophthalmos, and swollen cyanotic tongue/lips. It is dramatic but often survivable - do not let the alarming face distract from hunting the underlying life threats. It is also seen after aggressive or improper restraint by police, EMS, or in an altercation.",
+     "zh": "创伤性窒息由突然剧烈的胸部压迫引起：压力回冲进头颈及上半身静脉，撑破毛细血管，表现为压迫平面以上发绀、眼部改变（轻则结膜下出血，重则眼球突出）、舌唇肿胀发绀。外观很吓人但往往可以存活——不要被这张“可怕的脸”分散注意力，忘了继续排查真正致命的合并伤。也见于被警察、急救人员过度或不当约束、或斗殴过程中。",
+     "hard": true
+    },
+    {
+     "en": "The 'select few' immediately-treatable injuries share one lesson: open pneumothorax, tension pneumothorax, and flail chest are the three you MUST catch and fix during the primary survey - almost everything else in this section is supportive care plus rapid transport to definitive (often surgical) care.",
+     "zh": "这一批“必须能识别处理”的伤情有一个共同教训：开放性气胸、张力性气胸、连枷胸是初步评估中必须发现并处理的三项——本节里的其余几乎都只是支持治疗加快速转运到确定性（多为手术）救治。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "General Assessment, Management & Transport Decisions",
+   "titleZh": "整体评估、处置与转运决策",
+   "points": [
+    {
+     "en": "Assessment stays ABC-first: mental status/AVPU and airway with spinal precautions, then breathing (fully expose the chest - clothing off - and systematically inspect, palpate, percuss, auscultate), then circulation. Any immediately life-threatening finding gets fixed the moment it is found, not bundled for later.",
+     "zh": "评估始终按ABC顺序：先意识状态/AVPU和气道（同时脊柱防护），再呼吸（彻底暴露胸部——脱去衣物——系统地视、触、叩、听），再循环。任何立即威胁生命的发现，发现即处理，不留到后面统一处理。",
+     "hard": true
+    },
+    {
+     "en": "Airway nuance in chest trauma: use jaw-thrust rather than head-tilt-chin-lift to protect a possible C-spine injury; assume ANY airway-compromised trauma patient also carries a possible cervical spine injury.",
+     "zh": "胸部创伤中的气道要点：用推举下颌法而非仰头抬颏法，以保护可能存在的颈椎损伤；假设任何气道受损的创伤患者都可能合并颈椎损伤。",
+     "hard": true
+    },
+    {
+     "en": "Breathing exam techniques and what they mean: inspection for paradoxical motion, wounds, subcutaneous air/edema; palpation for tenderness, crepitus, subcutaneous emphysema, tracheal position; percussion - hyperresonance suggests pneumothorax, dullness suggests hemothorax; auscultation for adventitious sounds and side-to-side symmetry across all lung fields.",
+     "zh": "呼吸查体手法及其意义：视诊看反常运动、伤口、皮下积气/水肿；触诊查压痛、骨擦感、皮下气肿、气管位置；叩诊——过清音提示气胸，浊音提示血胸；听诊查异常呼吸音，并对比双侧所有肺野是否对称。",
+     "hard": true
+    },
+    {
+     "en": "Circulation red flags beyond pulse rate: an IRREGULAR pulse in a trauma patient should raise suspicion of hypoxia/hypoperfusion and serious injury. A NORMAL-OR-SLOW rate does NOT rule out hypovolemia - neurogenic shock, severe hypoxia, the Cushing reflex, beta-blocker use, and myocardial injury can all mask tachycardia with a slow or normal pulse.",
+     "zh": "循环评估中除心率外的警示信号：创伤患者出现心律不齐应怀疑低氧/低灌注和严重损伤。心率正常或偏慢并不能排除低血容量——神经源性休克、严重低氧、库欣反射、β受体阻滞剂使用、心肌损伤都可能用慢或正常的心率掩盖本该出现的心动过速。",
+     "hard": true
+    },
+    {
+     "en": "JVD interpretation trap: true JVD is measured at 45-degree semi-Fowler position (engorgement 1-2 cm above the clavicle), which usually cannot be done in a supine spine-precaution patient - so ABSENCE of visible JVD while supine, combined with tachycardia, altered mental status, thready pulses, and poor skin perfusion, can still mean hypovolemia despite 'no JVD.'",
+     "zh": "颈静脉怒张判读陷阱：真正的颈静脉怒张要在45°半卧位测量（怒张定义为高出锁骨1-2厘米），而脊柱防护下的仰卧患者通常做不到这个体位——所以仰卧位看不到颈静脉怒张，配合心动过速、意识改变、脉搏细弱、皮肤灌注差，仍然可能是低血容量，不能因为“没看到怒张”就排除。",
+     "hard": true
+    },
+    {
+     "en": "Muffled heart tones are a genuinely useful clue for BOTH tension pneumothorax (via mediastinal shift) and cardiac tamponade - hard to assess in a moving, noisy ambulance, but worth attempting.",
+     "zh": "心音低钝对张力性气胸（因纵隔移位）和心包填塞两者都是有价值的线索——在颠簸嘈杂的救护车里听诊很难，但仍值得尝试。",
+     "hard": true
+    },
+    {
+     "en": "Only about 1 in 4 patients presenting with BOTH thoracic trauma and shock actually have their major bleeding source INSIDE the chest - finding a chest injury does not excuse a full exam for abdominal, pelvic, or extremity sources.",
+     "zh": "同时表现为胸部创伤和休克的患者中，只有约1/4的主要出血源真正在胸腔内——找到一处胸部损伤，不代表可以省略对腹部、骨盆、四肢出血源的全面排查。",
+     "hard": true
+    },
+    {
+     "en": "The 'Deadly Dozen' thoracic injuries: 9 immediately life-threatening injuries to catch on the PRIMARY survey - airway obstruction, bronchial disruption, diaphragmatic tear, esophageal injury, open pneumothorax, tension pneumothorax, massive hemothorax, flail chest, cardiac tamponade - plus 3 potentially lethal injuries typically surfacing during the FOCUSED history and physical exam - traumatic aortic disruption, myocardial contusion, pulmonary contusion.",
+     "zh": "“死亡十二征”胸部损伤：初步评估中必须发现的9项立即威胁生命的损伤——气道梗阻、支气管断裂、膈肌撕裂、食管损伤、开放性气胸、张力性气胸、大量血胸、连枷胸、心包填塞——加上通常在专项病史与查体中才浮现的3项潜在致命损伤——创伤性主动脉破裂、心肌挫伤、肺挫伤。",
+     "hard": true
+    },
+    {
+     "en": "Ongoing-assessment discipline: any patient with a presumed pneumothorax is UNSTABLE by definition and gets reassessed at least every 5 minutes, watching specifically for worsening dyspnea, rising heart rate, and new JVD, because simple can become tension fast.",
+     "zh": "持续评估纪律：任何疑似气胸的患者，按定义就是不稳定患者，至少每5分钟复评一次，重点盯呼吸困难加重、心率上升、新出现的颈静脉怒张——因为简单气胸可以很快转变为张力性气胸。",
+     "hard": true
+    },
+    {
+     "en": "Transport principle - the 'golden hour': outcomes improve when a trauma patient reaches definitive surgical care within 1 hour of injury. When ground transport cannot make that window, air medical transport is the tool, and the destination decision is ideally pre-set through protocol rather than debated on scene.",
+     "zh": "转运原则——“黄金一小时”：创伤患者若能在伤后1小时内得到确定性手术救治，预后更好。地面转运达不到这个时限时，就该用空中医疗转运；送院目的地的决策最好提前写进规程，而不是现场临时争论。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Thoracic trauma share of deaths (direct / contributing)",
+   "itemZh": "胸部创伤致死占比（直接/促成）",
+   "value": "25% / 另25%"
+  },
+  {
+   "itemEn": "MVC share of blunt thoracic trauma",
+   "itemZh": "机动车碰撞占钝性胸伤比例",
+   "value": "7/10"
+  },
+  {
+   "itemEn": "Flail chest definition",
+   "itemZh": "连枷胸定义",
+   "value": "≥2相邻肋骨、每根≥2处骨折"
+  },
+  {
+   "itemEn": "Flail chest incidence / mortality",
+   "itemZh": "连枷胸发生率/死亡率",
+   "value": "住院创伤患者达20%；死亡率最高50%"
+  },
+  {
+   "itemEn": "Flail chest worse-prognosis thresholds",
+   "itemZh": "连枷胸预后更差的阈值",
+   "value": "年龄>60；肋骨骨折≥7根；合并伤≥3处"
+  },
+  {
+   "itemEn": "Rib fracture share / most-fractured ribs",
+   "itemZh": "肋骨骨折占比/最常骨折部位",
+   "value": ">50%胸伤患者；第4-9肋"
+  },
+  {
+   "itemEn": "Sternal fracture incidence / associated mortality",
+   "itemZh": "胸骨骨折发生率/相关死亡率",
+   "value": "约1/20；死亡率>1/4"
+  },
+  {
+   "itemEn": "Simple pneumothorax share of blunt thoracic trauma",
+   "itemZh": "简单气胸占钝性胸伤比例",
+   "value": "近1/2"
+  },
+  {
+   "itemEn": "Tension pneumothorax needing emergent treatment",
+   "itemZh": "需紧急处理的张力性气胸占比",
+   "value": "一级创伤中心患者的10%-30%"
+  },
+  {
+   "itemEn": "Needle decompression catheter size / sites (textbook)",
+   "itemZh": "针刺减压导管规格/部位（教材）",
+   "value": "12-14号≥5cm；2-3肋间MCL或4-5肋间MAL"
+  },
+  {
+   "itemEn": "Massive hemothorax threshold / lung capacity",
+   "itemZh": "大量血胸阈值/单侧肺容量上限",
+   "value": ">1,500mL(25-30%血容量)；单侧最多3,000mL"
+  },
+  {
+   "itemEn": "Intercostal artery bleed rate",
+   "itemZh": "肋间动脉出血速度",
+   "value": "最高50 mL/分"
+  },
+  {
+   "itemEn": "Cardiac tamponade volume: acute trauma / chronic medical",
+   "itemZh": "心包填塞液量：急性创伤/慢性内科",
+   "value": "低至50 mL / 1,000-1,500 mL"
+  },
+  {
+   "itemEn": "Beck triad detection rate",
+   "itemZh": "Beck三联征完整出现率",
+   "value": "约30%"
+  },
+  {
+   "itemEn": "Myocardial contusion mechanism speed",
+   "itemZh": "心肌挫伤致伤速度门槛",
+   "value": ">30 km/h减速"
+  },
+  {
+   "itemEn": "Myocardial rupture share of fatal chest injuries",
+   "itemZh": "心肌破裂占致死性胸伤比例",
+   "value": "15%"
+  },
+  {
+   "itemEn": "Traumatic aortic disruption share of blunt-trauma deaths",
+   "itemZh": "创伤性主动脉破裂占钝性伤死亡比例",
+   "value": "1/5"
+  },
+  {
+   "itemEn": "Commotio cordis defibrillation window",
+   "itemZh": "心震荡除颤时间窗",
+   "value": "最初2分钟内"
+  },
+  {
+   "itemEn": "Cardiac output worked example",
+   "itemZh": "心输出量算例",
+   "value": "70次/分×70mL=4,900 mL/分"
+  },
+  {
+   "itemEn": "Diaphragmatic injury identified in acute phase",
+   "itemZh": "急性期被识别的膈肌损伤占比",
+   "value": "不到1/4"
+  },
+  {
+   "itemEn": "Pulmonary contusion clinical latency",
+   "itemZh": "肺挫伤临床沉默期",
+   "value": "最长24小时"
+  },
+  {
+   "itemEn": "Presumed pneumothorax reassessment interval",
+   "itemZh": "疑似气胸复评间隔",
+   "value": "至少每5分钟"
+  },
+  {
+   "itemEn": "Golden hour",
+   "itemZh": "黄金一小时",
+   "value": "伤后1小时内送达确定性手术救治"
+  },
+  {
+   "itemEn": "BC TXA dose / timing / exclusions",
+   "itemZh": "BC TXA剂量/时限/排除标准",
+   "value": "2g(2000mg)静推1分钟；伤后≤3小时；不用于<12岁或单纯脑外伤"
+  },
+  {
+   "itemEn": "BC fluid bolus cap",
+   "itemZh": "BC补液推注上限",
+   "value": "20 mL/kg，最多2升，每500mL复评"
+  },
+  {
+   "itemEn": "Thoracic trauma + shock: chest is the bleeding source",
+   "itemZh": "胸伤合并休克中胸腔是出血源的比例",
+   "value": "仅约1/4"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Don't let the loudest injury steal your attention. Thoracic injuries, severe or seemingly minor, often hide behind more visually dramatic associated injuries - systematically expose and check the whole chest even when a mangled limb is screaming for it.",
+   "zh": "别被最吵的伤转移注意力。胸部损伤无论严重还是看似轻微，常常被更吸引眼球的合并伤盖过去——即使一条肢体伤触目惊心，也要系统地暴露并检查整个胸部。"
+  },
+  {
+   "en": "Apply ventilatory support BEFORE true ventilatory failure sets in, not after. Waiting for obvious failure is waiting too long.",
+   "zh": "在真正的通气衰竭出现之前就上通气支持，而不是等衰竭发生之后。等到明显衰竭才动手，已经晚了。"
+  },
+  {
+   "en": "Pain-driven 'self-splinting' after rib fractures looks like the patient is coping, but the resulting shallow breathing is quietly building atelectasis. Treat the pain so the patient can breathe deeper - don't just chart that they're guarding.",
+   "zh": "肋骨骨折后疼痛引发的“自我夹板固定”看起来像患者在自我调节，实则浅呼吸正在悄悄制造肺不张。要通过镇痛让患者能深呼吸——不能只是记录“患者在保护性制动”。"
+  },
+  {
+   "en": "Percussion-plus-auscultation combo rule: hyperresonance plus decreased or absent breath sounds on ONE side means treat as tension pneumothorax until proven otherwise - do not wait for every classic sign (JVD, tracheal deviation) to show up first.",
+   "zh": "叩诊加听诊组合法则：一侧过清音加呼吸音减弱或消失＝按张力性气胸处理，直到证明不是——不要等所有经典体征（颈静脉怒张、气管偏移）都出现才行动。"
+  },
+  {
+   "en": "If a sucking chest wound has been taped on all four sides with no vent, it can quietly build a tension pneumothorax. The moment tension signs appear, lift or burp one edge of the dressing immediately.",
+   "zh": "如果吸吮性胸部伤口被四边全部贴死、没留排气口，可能悄悄制造出张力性气胸。一旦出现张力征象，立即掀起或放气敷料的一角。"
+  },
+  {
+   "en": "Quick tamponade rule: distended neck veins plus hypotension plus CLEAR/equal lung sounds (which rules out pneumothorax) plus a fitting history (stab wound near the heart) points to cardiac tamponade - transport for pericardiocentesis, do not attempt it in the field.",
+   "zh": "心包填塞速判法则：颈静脉怒张＋低血压＋双肺呼吸音清晰对称（排除气胸）＋符合的病史（心脏附近的刺伤）＝考虑心包填塞——转运去做心包穿刺，现场不要尝试。"
+  },
+  {
+   "en": "Myocardial contusion is often silent at first. Persistent sinus tachycardia with no obvious hypovolemic explanation - especially after a sternal fracture or a hard deceleration - is your cue to get the monitor on and stay alert.",
+   "zh": "心肌挫伤起初常常没有明显症状。找不到低血容量解释的持续窦性心动过速——尤其在胸骨骨折或剧烈减速伤之后——就是提醒你接上心电监护并保持警惕的信号。"
+  },
+  {
+   "en": "Be stingy with IV fluids when pulmonary contusion is suspected, unless there are signs of shock - you can flood an already-leaking lung.",
+   "zh": "怀疑肺挫伤时静脉补液要克制，除非出现休克表现——已经在渗漏的肺经不起大量液体冲击。"
+  },
+  {
+   "en": "Suspect aortic rupture by default in any mechanism involving powerful deceleration - head-on collisions, falls from height - even when the chest looks unremarkable on the outside.",
+   "zh": "任何涉及剧烈减速的机制（正面撞车、高处坠落），默认就要怀疑主动脉破裂——即使外观上胸部看起来毫无异常。"
+  },
+  {
+   "en": "Skip nitrous oxide analgesia when diaphragmatic rupture is possible - trapped bowel gas in the herniated organs will expand and worsen the picture.",
+   "zh": "怀疑膈肌破裂时不要用氧化亚氮镇痛——疝入的肠管里的气体会膨胀，让病情更糟。"
+  },
+  {
+   "en": "Aggressive prone restraint by police, EMS, or during a violent altercation can itself produce traumatic asphyxia. Recognize the mechanism for what it is - don't dismiss the dramatic facial findings as 'just a beating.'",
+   "zh": "被警察、急救人员过度俯卧位约束，或斗殴过程中，本身就可能造成创伤性窒息。要认清这个机制的本质——别把吓人的面部体征简单归为“只是挨打了”。"
+  },
+  {
+   "en": "Noisy breathing is obstructed breathing - treat the sound itself as an action cue, not just a descriptive finding to chart.",
+   "zh": "有声音的呼吸就是气道梗阻的呼吸——把这个声音当成马上要行动的信号，而不只是写进记录的一条描述。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Chest trauma is mainly about how much it hurts' is the wrong frame - severity is decided by ventilation/oxygenation/circulation, not by how loudly the patient complains. Some genuinely deadly injuries (early tension pneumothorax) do not hurt as much as you'd expect.",
+   "zh": "“胸部创伤主要看有多疼”是错误框架——严重程度由通气/氧合/循环这三条生理线决定，而不是患者喊疼的程度。有些真正致命的损伤（早期张力性气胸）疼痛感反而不突出。"
+  },
+  {
+   "en": "'The wound is small, so the injury is small' is false - a 2 cm penetrating chest wound is enough to create a sucking chest wound and a progressive tension pneumothorax. Skin entry size and internal damage do not scale together.",
+   "zh": "“伤口小，伤情就小”是错的——一个2厘米的开放性胸部伤口就足以造成吸吮性胸伤和进行性张力性气胸。皮肤入口的大小和体内破坏程度并不成正比。"
+  },
+  {
+   "en": "'Oxygenation looks acceptable now, so the patient is stable' is false - a simple pneumothorax can progress to tension within minutes. Acceptable SpO2 is a snapshot of one moment, not a verdict; keep reassessing.",
+   "zh": "“现在氧合看起来还行，说明患者稳定”是错的——简单气胸可以在几分钟内进展为张力性气胸。当下还行的SpO2只是某一刻的快照，不是结论，必须持续复评。"
+  },
+  {
+   "en": "JVD and tracheal deviation are LATE signs of tension pneumothorax and may never appear even as the patient decompensates; hypotension is also a late finding. Don't wait for the full classic triad before treating - shock plus decreased breath sounds plus hyperresonance, same side, is already enough.",
+   "zh": "颈静脉怒张和气管偏移是张力性气胸的晚期体征，即使患者已经在恶化也可能始终不出现；低血压同样是晚期表现。不要等经典三联全部凑齐才处理——休克＋呼吸音减弱＋同侧过清音已经足够启动处理。"
+  },
+  {
+   "en": "External stabilization of a flail segment (sandbags, circumferential strapping) is an outdated technique that is NO LONGER recommended - it compresses the lung underneath, worsens atelectasis, and hurts gas exchange instead of helping it.",
+   "zh": "外固定连枷段（沙袋加压、环形绑带包扎）是已被淘汰的过时做法，现在不再推荐——它会压住下方肺组织，加重肺不张，反而损害气体交换。"
+  },
+  {
+   "en": "Beck triad (muffled heart tones, narrowed pulse pressure, JVD) is only fully present in about 30% of confirmed cardiac tamponade cases - missing one or two components does not rule tamponade out.",
+   "zh": "Beck三联征（心音低钝、脉压差变窄、颈静脉怒张）只在约30%确诊的心包填塞病例中完整出现——缺一两项并不能排除填塞。"
+  },
+  {
+   "en": "Don't lean on 'is there JVD' alone to separate tension pneumothorax from cardiac tamponade - both cause JVD. The real differentiators are tracheal position (deviated vs midline), breath-sound symmetry (unequal vs equal), and percussion note (hyperresonant vs normal).",
+   "zh": "别只靠“有没有颈静脉怒张”来区分张力性气胸和心包填塞——两者都会出现怒张。真正能分开它们的是气管位置（偏移vs居中）、双侧呼吸音是否对称（不对称vs对称）、叩诊音（过清音vs正常）。"
+  },
+  {
+   "en": "First or second rib fracture used to be taught as a strong indicator of aortic injury - that association is now considered controversial and should not be treated as an automatic red flag.",
+   "zh": "第1或第2肋骨骨折过去被当作提示主动脉损伤的有力指标——这一关联目前已受到质疑，不应再当成自动触发的危险信号。"
+  },
+  {
+   "en": "For a suspected partial tracheobronchial tear, intubation can itself complete the tear into a total airway obstruction. If bag-valve-mask ventilation is already sustaining a tenuous airway, do NOT intubate 'just to be safer.'",
+   "zh": "对疑似气管支气管部分撕裂的患者，插管本身可能把“部分撕裂”捅成完全性气道梗阻。如果球囊面罩已经能勉强维持气道，不要为了“图个保险”而插管。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "死亡十二征 9+3",
+   "en": "Deadly Dozen, split by WHEN you find them: 9 immediate primary-survey catches (airway obstruction, bronchial disruption, diaphragmatic tear, esophageal injury, open pneumothorax, tension pneumothorax, massive hemothorax, flail chest, cardiac tamponade) + 3 potentially lethal ones the focused exam later reveals (aortic disruption, myocardial contusion, pulmonary contusion).",
+   "zh": "死亡十二征按“何时发现”分组：初评就要抓的9个立即致命项（气道梗阻、支气管断裂、膈肌撕裂、食管损伤、开放性气胸、张力性气胸、大量血胸、连枷胸、心包填塞）＋专项查体才会浮现的3个潜在致命项（主动脉破裂、心肌挫伤、肺挫伤）。"
+  },
+  {
+   "name": "张力气胸 vs 填塞 四问卡",
+   "en": "Four questions to split tension pneumothorax from tamponade when both look like 'shock plus JVD': Where's the trachea (deviated/midline)? Equal breath sounds (no/yes)? Percussion (hyperresonant/normal)? Heart sounds (usually normal/muffled)?",
+   "zh": "当两者都表现为“休克＋颈静脉怒张”时，用四问卡分开张力性气胸和心包填塞：气管偏不偏（偏移/居中）？呼吸音对不对称（不对称/对称）？叩诊音（过清音/正常）？心音（一般正常/低钝）？"
+  },
+  {
+   "name": "肋骨号码定悬念",
+   "en": "Rib number sets the suspicion: fractures at 4-9 point UP toward aorta/tracheobronchial tree/lung/vessels; fractures at 9-11 point DOWN toward the abdomen.",
+   "zh": "肋骨号码定悬念：4-9肋骨折往“上”想——主动脉、气管支气管、肺、血管；9-11肋骨折往“下”想——腹腔脏器。"
+  },
+  {
+   "name": "针刺减压 2-3-4-5",
+   "en": "'2-3 MCL, 4-5 MAL, always ride the top of the rib' - the textbook's two needle-decompression landmark options and the one rule (avoid the neurovascular bundle) that applies to both.",
+   "zh": "“2-3锁骨中线，4-5腋中线，永远贴肋骨上缘”——教材给出的两个针刺减压定位选项，以及两者通用的一条铁律（避开神经血管束）。"
+  },
+  {
+   "name": "闷窄胀",
+   "en": "Beck triad in three characters: MUFFLED heart tones, NARROWED pulse pressure, DISTENDED neck veins - present together in only about 30% of tamponade cases, so treat it as a checklist, not a gate.",
+   "zh": "Beck三联三个字：“闷”（心音低钝）、“窄”（脉压差变窄）、“胀”（颈静脉怒张）——三者同时出现的概率只有约30%，把它当核对清单用，别当成必须集齐的通关条件。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Both tension pneumothorax and cardiac tamponade can present as shock plus JVD. How do you tell them apart at the bedside, and how does field management differ?",
+   "qZh": "张力性气胸和心包填塞都可能表现为休克＋颈静脉怒张。床旁如何鉴别？现场处理有何不同？",
+   "aEn": "Tension pneumothorax: trachea deviated away from the injury, breath sounds decreased/absent on one side, percussion hyperresonant on that side, heart sounds usually normal - treat by relieving pressure (burp/lift the seal, or needle decompression where authorized). Cardiac tamponade: trachea midline, breath sounds equal both sides, percussion normal, heart sounds muffled - field care is supportive only (O2, IV access) with rapid transport for pericardiocentesis; do not attempt pericardiocentesis in the field.",
+   "aZh": "张力性气胸：气管偏离伤侧、患侧呼吸音减弱或消失、患侧叩诊过清音、心音通常正常——处理是解除压力（掀贴放气，或在授权范围内做针刺减压）。心包填塞：气管居中、双侧呼吸音对称、叩诊正常、心音低钝——现场只做支持性处理（吸氧、建立静脉通路），快速转运去做心包穿刺；现场不要尝试做心包穿刺。"
+  },
+  {
+   "qEn": "Define flail chest, and name the one thing prehospital care must NOT do that used to be taught.",
+   "qZh": "定义连枷胸，并说出一项过去教、但现在明确禁止的院前操作。",
+   "aEn": "Flail chest = 2 or more adjacent ribs, each fractured in 2 or more places, creating a segment that moves paradoxically. Give supplemental oxygen; intubate only if oxygen alone fails to keep the patient adequately oxygenated. Do NOT externally stabilize/strap/sandbag the flail segment - this outdated technique worsens atelectasis by compressing the lung underneath.",
+   "aZh": "连枷胸＝2根或以上相邻肋骨、每根都在2处或以上骨折，形成一段反常运动的游离胸壁。处理：给高流量吸氧；只有单纯吸氧无法维持足够氧合时才插管。禁止对连枷段做外固定/绑带加压/沙袋压迫——这种过时做法会压住下方肺组织、加重肺不张。"
+  },
+  {
+   "qEn": "What blood volume in the pleural space defines a massive hemothorax, and what shock stage does that already represent?",
+   "qZh": "胸膜腔内多少血量算大量血胸？这个量已经相当于哪个休克阶段？",
+   "aEn": "More than 1,500 mL, which is roughly 25-30% of an adult's total blood volume - meaning the patient has already reached decompensated shock. Each lung cavity can hold up to 3,000 mL, so a patient can theoretically bleed out entirely into the chest.",
+   "aZh": "超过1,500 mL，约相当于成人总血容量的25-30%——意味着患者已经进入失代偿性休克。每侧胸腔最多能容纳3,000 mL血液，理论上患者可以把全部血液都失血到自己的胸腔里。"
+  },
+  {
+   "qEn": "A sealed sucking chest wound (dressing taped on all four sides) is now showing rising heart rate and falling SpO2. What went wrong, and what do you do immediately?",
+   "qZh": "已封闭的吸吮性胸部伤口（四边全部贴死）现在出现心率上升、SpO2下降。哪里出了问题？应立即怎么做？",
+   "aEn": "The fully sealed, unvented dressing converted the open wound into a tension pneumothorax by trapping air that used to escape. Immediately lift or burp one edge/corner of the dressing to vent the trapped pressure, then reassess breath sounds and vitals.",
+   "aZh": "四边全封、没留排气口的敷料把原本能排气的开放伤口转化成了张力性气胸。应立即掀起或放气敷料的一角/一边，释放积聚的压力，然后复评呼吸音和生命体征。"
+  },
+  {
+   "qEn": "The textbook's Skill Drill 26-1 teaches needle decompression (needle thoracentesis) with a 12-14 gauge catheter at the 2nd-3rd intercostal space, midclavicular line, for tension pneumothorax. Is this an EMR or PCP skill on the BC provincial exam?",
+   "qZh": "教材Skill Drill 26-1教的是用12-14号导管在第2-3肋间锁骨中线处做针刺减压（针刺胸腔穿刺术）处理张力性气胸。这在BC省考中是EMR还是PCP的技能？",
+   "aEn": "NEEDS VERIFICATION - do not assume. The BC Provincial Examination Guidelines' Chest Trauma protocol (current to 2026-06-15) lists needle decompression at NEITHER license level: 'Interventions of all License Levels' only authorizes a three-sided occlusive dressing or commercial chest seal, 'monitor closely... relieve if necessary,' and the verified practical scenario tr-03 confirms the PCP-level response to developing tension is to burp/lift the seal, not to needle-decompress. This strongly suggests needle decompression sits above PCP (likely ACP) in BC, but this must be confirmed against ACP-level guidelines before being taught as settled fact - flag it as 'needs verification' rather than asserting a level.",
+   "aZh": "需核实——不要凭空假设。BC省考纲（现行至2026-06-15）胸部创伤protocol的“所有执照级别干预”条目里没有针刺减压：只授权三边封闭敷料或商品胸封贴，写“密切监测……必要时予以解除”；已验收的实操场景tr-03也确认PCP层级处理进展中张力性气胸的方式是掀贴放气，而不是针刺减压。这强烈提示针刺减压在BC属于PCP以上（很可能是ACP）级别的技能，但在当作定论教授之前，必须再对照ACP层级考纲核实——目前应标注为“需核实”，而不是断言某个具体级别。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Needle decompression is not an EMR or PCP intervention in BC",
+   "topicZh": "针刺减压不在 BC 的 EMR/PCP 授权范围内",
+   "bookEn": "The chapter teaches needle thoracentesis as a standard skill drill for tension pneumothorax, with a full step-by-step Skill Drill and equipment list.",
+   "bookZh": "本章把针刺胸腔穿刺术当作张力性气胸的标准技能来教，配有完整的操作步骤和器材清单。",
+   "bcEn": "BC's Chest Trauma protocol enumerates both 'Interventions of all License Levels' and 'Additional Primary Care Paramedic Interventions' — needle decompression appears in neither, and the terms needle thoracentesis, needle decompression and thoracostomy return zero hits across both the guidelines and the grading criteria. What the protocol does authorize for a tension pneumothorax developing under a chest seal is to relieve the dressing — burp the seal. For an EMR or PCP exam answer, seal-and-burp is the intervention; needle decompression is not. (This says nothing about ACP scope, which is governed by a different document.)",
+   "bcZh": "BC 胸部创伤协议逐条列举了「所有执照级别的干预」和「PCP 附加干预」两组内容，针刺减压两组里都没有；而且 needle thoracentesis / needle decompression / thoracostomy 这三个词在考纲和评分手册里全部零命中。协议明确授权的做法是：封闭敷料下出现张力性气胸时「掀开敷料放气」（relieve if necessary）。EMR/PCP 考试答\"封闭+掀开放气\"才对，答针刺减压是错的。（ACP 层级由另一份文件规定，不在此结论范围内。）",
+   "ref": "BC Guidelines p.34 Chest Trauma；三个检索词在 guidelines 与 grading-criteria 中均为 0 命中"
+  },
+  {
+   "topicEn": "TXA in chest/hemorrhagic trauma has a precise BC dose and window the book leaves vague",
+   "topicZh": "胸伤/失血性创伤中TXA的BC精确剂量和时限，教材写得很含糊",
+   "bookEn": "The textbook's general management section says only that pharmacologic agents have a limited role in trauma care beyond airway drugs and analgesics - it gives no TXA dose, timing window, or exclusion criteria anywhere in this chapter.",
+   "bookZh": "教材的整体处置一节只说创伤治疗中药物的作用有限（除气道用药和镇痛药外），本章全文都没有给出TXA的剂量、用药时限或排除标准。",
+   "bcEn": "BC's guidelines specify exact numbers: TXA 2 g (2,000 mg) IV push over 1 minute, indicated in major trauma after the Hypovolemia protocol has started or when the mechanism/findings suggest occult or ongoing bleeding; contraindicated if more than 3 hours have passed since injury, in patients under 12, in isolated TBI, or with known hypersensitivity. The chest trauma protocol itself lists 'TXA if indicated' as a PCP-only enroute addition - EMR does not give it.",
+   "bcZh": "BC考纲给出了精确数字：TXA 2克（2000毫克）静脉推注1分钟，指征是重大创伤患者已启动低血容量protocol、或机制/查体提示隐匿性/持续性出血；禁忌为伤后超过3小时、患者小于12岁、单纯脑外伤、或已知过敏。胸部创伤protocol本身把“如有指征给TXA”列为PCP专属的途中加做项——EMR不给药。",
+   "ref": "BC Provincial Examination Guidelines p.34（Chest Trauma）、p.78（Tranexamic Acid）"
+  },
+  {
+   "topicEn": "BC caps the fluid bolus at a specific number the book never states",
+   "topicZh": "BC对补液推注设了具体上限，教材从未给出这个数字",
+   "bookEn": "The book describes fluid management for hemothorax, aortic injury, and myocardial contusion only in qualitative terms - 'judicious IV fluids,' 'gradual IV hydration,' 'fluid resuscitation... as needed' - with no volume, rate, or reassessment interval specified anywhere in the chapter.",
+   "bookZh": "教材对血胸、主动脉损伤、心肌挫伤的补液处理只有定性描述——“适量静脉补液”“逐渐静脉补液”“按需液体复苏”——全章都没有给出具体容量、速度或复评间隔。",
+   "bcEn": "BC's Hypovolemia protocol (which chest-trauma patients with shock fall under) specifies: fluid bolus 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL - a PCP-only enroute intervention, considered only if hypoperfusion or hypotension is clinically indicated. Memorize the number; the exam expects it verbatim.",
+   "bcZh": "BC的低血容量protocol（合并休克的胸伤患者适用）明确写道：补液推注20 mL/kg，最多2升，每500 mL复评一次——属于PCP专属的途中干预，仅在临床提示低灌注或低血压时考虑给。这个数字要背到能原样默写，考试会直接考。",
+   "ref": "BC Provincial Examination Guidelines p.54, p.68, p.34"
+  },
+  {
+   "topicEn": "The occlusive-dressing fix for a sucking chest wound is authorized at EVERY license level, including EMR",
+   "topicZh": "开放性胸伤的封闭敷料处理在所有执照级别（含EMR）均已授权",
+   "bookEn": "The textbook discusses sucking-chest-wound dressings and needle decompression together as part of one continuum of care, without distinguishing which steps a given provider level is allowed to perform.",
+   "bookZh": "教材把吸吮性胸伤的敷料处理和针刺减压放在同一个连续处置流程里讲，没有区分不同执照级别各自能做到哪一步。",
+   "bcEn": "BC explicitly puts the three-sided occlusive dressing/commercial chest seal (with tension-pneumothorax monitoring and relief) under 'Interventions of all License Levels' - meaning even EMR-level candidates are expected to perform and be graded on this skill, while vascular access and TXA are gated to PCP-and-above additions.",
+   "bcZh": "BC明文把三边封闭敷料/商品胸封贴（含张力性气胸监测与解除）列在“所有执照级别的干预”条目下——也就是说，即使是EMR层级考生也要会做这项技能并会被打分；而静脉通路和TXA则是PCP及以上才加做的项目。",
+   "ref": "BC Provincial Examination Guidelines p.34"
+  }
+ ],
+ "sourcePages": "2163-2231"
+}
