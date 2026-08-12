@@ -1,0 +1,613 @@
+{
+ "id": "ch46",
+ "n": 46,
+ "titleEn": "Abuse",
+ "titleZh": "虐待与忽视",
+ "group": "professional",
+ "examWeight": 2,
+ "whyEn": "Abuse is new to the Canadian-edition exam, and its competency codes sit almost entirely inside Area 1 (Professional Responsibilities) and Area 2 (Communication) rather than a clinical-skills area — the questions test judgment, your reporting duty, and documentation discipline more than drugs or procedures. Expect scenario items across all four subtypes — child, elder, domestic/intimate-partner, and sexual assault — built around pattern recognition (red-flag injuries, red-flag caregiver behaviour, red-flag history), scene safety, and knowing exactly what to do next: report, document objectively, preserve evidence, or respect a capable patient's refusal. BC layers a real legal wrinkle on top of the textbook's generic language — the child mandatory-reporting duty applies to everyone in the province, but there is no equivalent mandatory duty for maltreatment of a capable adult — so this chapter is as much a legal-literacy chapter as a clinical one.",
+ "whyZh": "Abuse 是加拿大版教材的新章，能力编码几乎全落在\"专业责任\"（Area 1）与\"沟通\"（Area 2）两大领域，而不是临床技能领域——也就是说，考点更多是判断力、通报义务和记录纪律，而不是药物或操作。预期会出现覆盖四大类型（儿童、老年人、家庭/亲密伴侣、性侵害）的情景题，考的是模式识别（可疑伤情、可疑照护者行为、可疑病史）、现场安全，以及你接下来该做什么——通报、客观记录、保全证据，还是尊重神智清楚患者的拒绝权。BC 在教材的泛泛表述之上又叠了一层真实的法律细节：儿童的强制通报义务适用于全省每一个人，但对神智清楚成年人的虐待并没有同等的强制义务——这一章因此既是临床章，也是法律素养章。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication"
+  ],
+  "codes": [
+   "1.1.a",
+   "1.1.b",
+   "1.1.e",
+   "1.1.j",
+   "1.1.k",
+   "1.3.b",
+   "1.6.a",
+   "1.6.b",
+   "2.1.e",
+   "2.1.g",
+   "2.2.a",
+   "2.2.b",
+   "2.3.a",
+   "2.3.b",
+   "2.3.c",
+   "2.3.d",
+   "2.4.a",
+   "2.4.b",
+   "2.4.c",
+   "2.4.d",
+   "2.4.e",
+   "2.4.f",
+   "2.4.g",
+   "8.1.c",
+   "8.1.d",
+   "8.2.a"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: Scope of the Problem",
+   "titleZh": "总论：常见程度与后果",
+   "points": [
+    {
+     "en": "Maltreatment, neglect, and assault of children, women, and older adults are common enough that they rank among the recurring reasons EMS gets called — the exam expects you to do more than notice \"something is wrong\"; you need to tell abuse, neglect, and assault apart as distinct clinical and legal concepts.",
+     "zh": "儿童、女性、老年人的虐待、忽视与暴力伤害是急救出勤中反复出现的原因之一，考试要求的不只是意识到\"有问题\"，还要能把虐待、忽视、袭击区分为三个不同的临床与法律概念。",
+     "hard": false
+    },
+    {
+     "en": "Survivors of maltreatment or neglect often carry lasting physical and psychological disability, and a meaningful share go on to become abusive or neglectful caregivers themselves — early recognition in the field is what breaks that cycle.",
+     "zh": "虐待或忽视的幸存者常留下永久性的身心损害，其中不少人日后也会成为施虐或疏忽照护的一方——现场的早期识别正是打破这一循环的关键。",
+     "hard": false
+    },
+    {
+     "en": "In substantiated 2008 Canadian child maltreatment cases, neglect and exposure to intimate-partner violence tied for the leading category at 34% each, ahead of physical abuse (20%), emotional maltreatment (9%), and sexual abuse (3%).",
+     "zh": "在2008年加拿大已证实的儿童虐待个案中，忽视与\"目睹亲密伴侣暴力\"并列首位（各占34%），高于身体虐待（20%）、情感虐待（9%）与性虐待（3%）。",
+     "hard": true
+    },
+    {
+     "en": "Every abuse-pattern call carries two equally weighted obligations: protect yourself from the scene's violence potential, and still deliver optimal prehospital care to the patient — neither excuses skipping the other.",
+     "zh": "每一次疑似虐待出勤都有两项同等重要的义务：保护自己免受现场潜在暴力伤害，同时为患者提供最佳院前照护——两者缺一不可。",
+     "hard": false
+    },
+    {
+     "en": "The chapter's four maltreatment categories — child, elder, domestic/intimate-partner, and sexual assault — share one core skill set: recognizing suspicious patterns, documenting objectively, keeping the scene safe, and knowing your reporting duty.",
+     "zh": "本章四大虐待类别——儿童、老年人、家庭/亲密伴侣、性侵害——共享同一套核心技能：识别可疑模式、客观记录、现场安全、明确自己的通报责任。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Child Maltreatment",
+   "titleZh": "儿童虐待与忽视",
+   "points": [
+    {
+     "en": "Child maltreatment covers any excessive or improper act — or failure to act — that injures a child or infant or places them at serious risk of harm; the four recognized categories are physical abuse, sexual abuse, neglect, and emotional abuse.",
+     "zh": "儿童虐待指任何伤害儿童/婴儿、或使其面临严重伤害风险的过度或不当行为（包括不作为），可分为四类：身体虐待、性虐待、忽视、情感虐待。",
+     "hard": false
+    },
+    {
+     "en": "Neglect is diagnosed when a caregiver's failure to supply basic necessities — food, clothing, shelter, supervision, affection — or their substance misuse harms or endangers the child's physical, mental, or emotional condition; abandonment is its most extreme form.",
+     "zh": "忽视的判定标准是：照护者未能提供基本必需品（食物、衣物、住所、监护、情感支持）或滥用药物/酒精，从而伤害或危及儿童的身心状态；遗弃是其极端形式。",
+     "hard": false
+    },
+    {
+     "en": "A neglected child's exam often shows dirtiness, thinness, or developmental delay from lack of stimulation — treat these as pattern clues that raise suspicion, not as proof on their own.",
+     "zh": "被忽视儿童体检常见邋遢、消瘦或因缺乏刺激而出现的发育迟缓，这些是提高警惕的线索，本身不能作为确诊依据。",
+     "hard": false
+    },
+    {
+     "en": "Younger children carry the highest fatal risk: roughly 85% of children who die from maltreatment or neglect are under 6 years old, and more than 40% are under age 1.",
+     "zh": "年龄越小死亡风险越高：因虐待或忽视致死的儿童中，约85%不满6岁，超过40%不满1岁。",
+     "hard": true
+    },
+    {
+     "en": "Maltreatment crosses every socioeconomic line, but reported rates skew higher in low-income and single-parent households — read that as a statistical pattern, not a bias to apply to a specific family at the bedside.",
+     "zh": "虐待可发生在任何社会经济阶层，但低收入和单亲家庭的\"报告发生率\"更高——这是统计规律，不应作为你在现场对具体家庭下判断的偏见依据。",
+     "hard": false
+    },
+    {
+     "en": "Screen four risk-factor clusters: caregiver side (own history of being maltreated, substance abuse, poor knowledge of child development), family side (disorganization, marital conflict, poverty or unemployment), child side (disability, difficult temperament), and environment side (caregiver isolation, high-crime surroundings).",
+     "zh": "四类风险因素值得留意：照护者层面（自身童年受虐史、物质滥用、对儿童发育认知不足）、家庭层面（结构混乱、婚姻冲突、贫困或失业）、儿童层面（残疾、难养型气质）、环境层面（照护者社交孤立、社区暴力高发）。",
+     "hard": true
+    },
+    {
+     "en": "Red-flag caregiver behaviours: apathy toward the child, bizarre conduct, minimal concern, overreacting either to a minor misbehaviour or to the child's actual condition, intoxication, and an account of the injury that keeps shifting or doesn't add up.",
+     "zh": "照护者的危险信号行为包括：对孩子漠不关心、举止怪异、对孩子状况反应冷淡或过度、对孩子的轻微不当行为反应过激、处于醉酒状态、对受伤经过的说法含糊或前后矛盾。",
+     "hard": true
+    },
+    {
+     "en": "A maltreated child may not become upset when the caregiver leaves the room and may not seek them out for reassurance — an absent attachment response is itself a red flag, alongside crying that's either excessive or completely absent and wariness of physical touch.",
+     "zh": "受虐儿童在照护者离开房间时可能毫无反应，也不会寻求其安抚——这种依恋反应缺失本身就是警示信号，另外还要留意哭闹过度或完全不哭、对身体接触表现出戒备。",
+     "hard": true
+    },
+    {
+     "en": "Adapt the exam sequence to developmental stage: toddlers and preschoolers tolerate a toe-to-head order best, infants often examine best while still in a caregiver's arms, and preadolescents or teens need their modesty and body-awareness respected.",
+     "zh": "体检顺序应按发育阶段调整：幼儿和学龄前儿童适合从脚到头的顺序；婴儿常常在照护者怀中检查效果最好；青春期前后的孩子要尊重其身体隐私和羞怯心理。",
+     "hard": true
+    },
+    {
+     "en": "Whenever feasible, examine with a second crew member present — it corroborates your findings and shields you from later allegations of impropriety.",
+     "zh": "只要条件允许，检体时应有第二名队员在场——既能佐证你的发现，也能避免日后被指控行为不当。",
+     "hard": false
+    },
+    {
+     "en": "Documentation discipline: record only objective findings — never opinions or non-medical conclusions about what happened.",
+     "zh": "记录纪律：只写客观所见，绝不写主观判断或非医学性的\"事情经过\"结论。",
+     "hard": true
+    },
+    {
+     "en": "The CHILD ABUSE checklist: injury Consistency with developmental age, History that doesn't match the injury, Inappropriate parental concern, Lack of supervision, Delay in seeking care, the child's Affect, Bruises of differing ages, Unusual injury patterns, Suspicious circumstances, Environmental clues.",
+     "zh": "CHILD ABUSE 核对清单：受伤与发育年龄是否吻合（Consistency）、病史与伤情是否矛盾（History）、家长关切是否不合常理（Inappropriate concern）、是否监护缺失（Lack of supervision）、是否延迟就医（Delay）、患儿情感反应（Affect）、是否有不同愈合阶段的瘀伤（Bruises）、是否有异常伤型（Unusual patterns）、现场情况是否可疑（Suspicious circumstances）、环境线索（Environmental clues）。",
+     "hard": true
+    },
+    {
+     "en": "Bruises are the single most common finding on an abused child's exam; multiple bruises at clearly different healing stages, or bruises in unlikely spots — buttocks, back, face, ears, upper legs — should raise your index of suspicion.",
+     "zh": "瘀伤是受虐儿童体检中最常见的发现；若发现多处处于不同愈合阶段的瘀伤，或瘀伤出现在不寻常部位（臀部、背部、面部、耳部、大腿上部），应提高警惕。",
+     "hard": true
+    },
+    {
+     "en": "Two burn patterns point strongly to inflicted injury: a stocking/glove pattern on a hand or foot from forced immersion, and a doughnut-shaped burn where the skin pressed against a cooler tub surface is spared.",
+     "zh": "两种烧伤形态高度提示人为伤害：手/脚呈\"袜套/手套\"状的强迫浸入烫伤，以及贴着较凉浴缸表面的皮肤未被烫到而形成的\"甜甜圈状\"烧伤。",
+     "hard": true
+    },
+    {
+     "en": "Multiple fractures, fractures at different healing stages, or a fracture that seems to be healing without any care ever having been sought, are inconsistent with a single accidental event; head injury is the leading cause of death from child maltreatment, so scalp wounds and signs of hematoma or concussion need a close look.",
+     "zh": "多处骨折、处于不同愈合阶段的骨折，或看似\"自行愈合\"却从未就医的骨折，都与单次意外事件不符；头部损伤是儿童虐待致死的首要原因，需仔细检查头皮伤口及血肿、脑震荡迹象。",
+     "hard": true
+    },
+    {
+     "en": "Abdominal injury from maltreatment is uncommon but dangerous, because a young child's abdominal wall muscles are thin and underdeveloped — check colour, rigidity, and tenderness, since bowel or liver injury can hide behind a benign-looking abdomen.",
+     "zh": "虐待导致的腹部损伤少见但危险，因为幼儿腹壁肌肉薄弱未发育完全——需检查颜色、是否僵硬、有无压痛，肠道或肝脏损伤可能隐藏在外观正常的腹部之下。",
+     "hard": true
+    },
+    {
+     "en": "Not every alarming skin finding is abuse: cultural healing practices such as cupping (round marks, redder at the border) and coin rubbing (linear or oval red, patchy marks, often on the back) can mimic inflicted injury and deserve a respectful, non-accusatory question about their origin.",
+     "zh": "并非所有骇人的皮肤表现都是虐待：拔罐、刮痧等民俗疗法（拔罐留下边缘偏红的圆形印记；刮痧留下条状或椭圆状、常见于背部的红斑）可能酷似人为伤害，应以尊重而非指控的方式询问其来源。",
+     "hard": true
+    },
+    {
+     "en": "A pattern of repeated EMS calls to the same address for child injury or medical complaints is itself one of the strongest indicators of ongoing maltreatment — don't treat each call as an isolated event.",
+     "zh": "同一地址因儿童受伤或医疗问题反复呼叫救护车，本身就是持续性虐待最有力的指标之一——不要把每一次出勤都当作孤立事件看待。",
+     "hard": true
+    },
+    {
+     "en": "In most Canadian provinces and territories, paramedics are mandated reporters for suspected child maltreatment — place the report yourself and never assume the hospital, police, or a colleague already has.",
+     "zh": "在加拿大大多数省和地区，急救员对疑似儿童虐待负有强制通报责任——必须亲自完成通报，绝不能假设医院、警方或同事已经报告过。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Elder Maltreatment",
+   "titleZh": "老年人虐待与忽视",
+   "points": [
+    {
+     "en": "Elder maltreatment covers sexual abuse, psychological or emotional abuse, neglect, and abandonment — the same direct-harm principle as child maltreatment, overlaid on an aging, often care-dependent population.",
+     "zh": "老年人虐待涵盖性虐待、心理/情感虐待、忽视与遗弃——与儿童虐待同样是\"直接造成伤害\"的行为，只是叠加在日益依赖照护的老龄群体身上。",
+     "hard": false
+    },
+    {
+     "en": "Distinguish active neglect (deliberately withholding companionship, medicine, food, exercise, or mobility assistance) from passive neglect (the older person is simply left alone, ignored, isolated, or forgotten) — intent behind the omission is what separates the two.",
+     "zh": "区分主动忽视（蓄意剥夺陪伴、药物、饮食、运动或行动协助）与被动忽视（老人单纯被冷落、忽略、隔离或遗忘）——两者的区别在于疏忽背后是否存在故意性。",
+     "hard": true
+    },
+    {
+     "en": "Abandonment means desertion by someone who holds physical custody of the older adult or who has taken on responsibility for their care.",
+     "zh": "遗弃指对老年人负有实际监护责任或已承担照护责任的人将其抛弃、不再履行照护义务。",
+     "hard": true
+    },
+    {
+     "en": "Typical maltreated-elder profile: female, older than 75, living with one or more chronic physical or mental impairments that create care-dependency, living with the abuser, socially isolated, and displaying behaviours caregivers find hard to manage, such as incontinence or shouting.",
+     "zh": "典型的受虐老人画像：女性、75岁以上、患有一种或多种造成照护依赖的慢性身心障碍、与施虐者同住、社交孤立，并表现出令照护者难以应对的行为（如失禁、大声喊叫）。",
+     "hard": true
+    },
+    {
+     "en": "Typical elder-abuser profile: lives with the victim, has a drug or alcohol dependency, is older than 50, is financially dependent on the victim, shows poor impulse control, is unprepared or reluctant to give care, and often has a personal history of domestic violence.",
+     "zh": "典型的施虐者画像：与受害者同住、有药物/酒精依赖、年龄超过50岁、在经济上依赖受害者、冲动控制能力差、对照护准备不足或心不甘情不愿，且往往有家庭暴力史。",
+     "hard": true
+    },
+    {
+     "en": "Contributing factors: a learned cycle of violence (people maltreated as children may later maltreat the parents who once maltreated them), caregiver stress, the older adult's own shrinking social network, frailty, and illness, plus institutional risk — understaffed facilities with a track record of poor care and inadequate staff training.",
+     "zh": "促成因素包括习得性暴力循环（童年受虐者日后可能反过来虐待年迈的父母）、照护者压力、老人自身社交网络萎缩、体弱及疾病，以及机构层面的风险——曾有不良照护记录、人手不足、员工培训欠缺的机构。",
+     "hard": false
+    },
+    {
+     "en": "Watch for a fearful patient with unexplained or untended bruises and sores, or the mismatch of an unkempt patient paired with a visibly clean caregiver — a conscientious caregiver usually keeps both the patient and the surroundings tidy.",
+     "zh": "留意表现出恐惧、有未经处理的不明瘀伤或疮口的患者；也要注意\"患者邋遢、照护者却干净整洁\"这种反差——尽责的照护者通常会让患者本人和周边环境都保持整洁。",
+     "hard": true
+    },
+    {
+     "en": "A mentally competent patient who defers every question to the caregiver and visibly checks the caregiver's face for approval before answering is showing a controlled-interview red flag; complaints of stolen belongings or confiscated money may reflect paranoia or dementia — but may equally be true, so document them rather than investigate them yourself.",
+     "zh": "一个神智清楚却对每个问题都让照护者代答、回答前还要察言观色确认照护者反应的患者，属于\"被控制的问诊\"警示信号；患者称财物被拿走或钱被没收，可能是妄想或认知障碍的表现，也可能是真的——你的任务是记录，而不是自行调查。",
+     "hard": true
+    },
+    {
+     "en": "Older maltreated adults commonly stay silent — fear of being institutionalized, fear of getting the abuser in trouble, polypharmacy, confusion, and conditions like Alzheimer disease all suppress disclosure — so your physical exam, history, and scene observation carry more weight than the patient's own account.",
+     "zh": "受虐老人常常保持沉默——害怕被送进机构、担心让施虐者惹上麻烦、多重用药、意识混乱以及阿尔茨海默病等疾病都会抑制其主动披露，因此你的体检、病史采集与现场观察，权重往往高于患者本人的口述。",
+     "hard": true
+    },
+    {
+     "en": "Run a structured mini-screen every time: can the patient answer appropriately, do they appear fearful, are they clean, are pill bottles labelled and consistent with purchase dates and use, are there unexplained bruises or sores, and does the patient's account match the caregiver's account?",
+     "zh": "值得每次都套用的迷你筛查清单：患者能否恰当回答问题？是否显得恐惧？是否整洁？药瓶标签是否与购买日期、用量一致？是否有不明瘀伤或疮口？患者的说法与照护者的说法是否一致？",
+     "hard": true
+    },
+    {
+     "en": "Scene clues matter as much as the exam: is the home tidy, is there food in the refrigerator, is heating or cooling appropriate for the weather, and is there a mobility device present that the patient clearly isn't being allowed or helped to use?",
+     "zh": "现场线索与体检同等重要：住所是否整洁？冰箱里有食物吗？冷暖设备是否与当前天气相符？现场是否有助行器具却明显没被使用或没人协助使用？",
+     "hard": true
+    },
+    {
+     "en": "In a nursing-home setting, look for undocumented pressure sores, catheters that have been tied off, and dangerous restraint use; residents may be unable, unaware how, or too afraid of retaliation to report it themselves, and the abuser may be a visiting family member rather than staff. Document objectively for adult protective services, and notify the regulatory body overseeing the facility when institutional maltreatment is suspected.",
+     "zh": "在养老机构中，要留意未被记录的褥疮、被绑扎不用的导尿管，以及危险的约束具使用；住户可能无力、不知如何，或因害怕报复而不敢自行举报，施虐者也可能是探视的家属而非员工。怀疑机构性虐待时，应向负责监管该机构的主管部门通报，并为成人保护服务机构做好客观记录。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Domestic Maltreatment",
+   "titleZh": "家庭暴力与亲密伴侣虐待",
+   "points": [
+    {
+     "en": "Domestic maltreatment spans four forms: physical (hitting, kicking, pushing, choking, beating), emotional (belittling comments, name-calling, mind games), economic (blocking a partner from working or gaining financial independence), and sexual (forcing sexual activity against the person's will).",
+     "zh": "家庭虐待可分为四种形式：身体（殴打、踢踹、推搡、扼颈）、情感（贬损性言语、辱骂、精神操控）、经济（阻止伴侣工作或获得经济独立）、性（强迫对方进行违背其意愿的性行为）。",
+     "hard": true
+    },
+    {
+     "en": "Victims typically disclose only as a last resort, driven by shame, embarrassment, financial dependence, low self-esteem, a belief the abuser will change, self-blame for the situation, or fear that disclosure will trigger worse retaliation — expect reluctance as the norm, not the exception.",
+     "zh": "受害者通常只有在走投无路时才会披露实情，原因包括羞耻、尴尬、经济依赖、自我价值感低落、相信施虐者会改变、自责，或担心披露后遭到更严重的报复——把\"不愿说\"当作常态，而不是例外。",
+     "hard": true
+    },
+    {
+     "en": "Physical findings span broken bones, cuts, head injuries, bruises, burns, old scars from prior injuries, and internal injuries; psychologically, a maltreated partner may show anxiety, distress, hopelessness, depressive signs, suicide attempts, or substance abuse.",
+     "zh": "身体损伤可见于骨折、割伤、头部损伤、瘀伤、烧伤、既往伤留下的旧疤痕以及内脏损伤；心理层面可能表现为焦虑、痛苦、绝望、抑郁征象、自杀企图或物质滥用。",
+     "hard": true
+    },
+    {
+     "en": "Men are maltreated too, but under-report because of humiliation, weaker societal empathy, and fewer available resources; the emotional toll — guilt, loss of control, shame — mirrors what women describe.",
+     "zh": "男性同样会遭受伴侣虐待，但因羞辱感、社会同理心不足及可用资源较少而更少报告；他们经历的情绪创伤——内疚、失控感、羞耻——与女性受害者相似。",
+     "hard": true
+    },
+    {
+     "en": "Same-sex relationships carry the same risk of maltreatment as heterosexual ones; concerns about being outed can be an added barrier that keeps these victims from seeking help at all.",
+     "zh": "同性关系中的虐待风险与异性关系并无不同；对被迫出柜的顾虑，可能成为这些受害者不敢求助的额外障碍。",
+     "hard": false
+    },
+    {
+     "en": "Verbal and behavioural tells include avoiding eye contact, answers that are incorrect or inconsistent, and self-blaming statements — taking responsibility for \"provoking\" the partner or excusing the abuser's drinking.",
+     "zh": "语言和行为上的蛛丝马迹包括：回避眼神接触、回答前后不一或不准确，以及自我归咎的言语，比如把\"惹恼对方\"的责任揽到自己身上，或替施虐者的酗酒找借口。",
+     "hard": true
+    },
+    {
+     "en": "In several provinces and territories, policy directs police toward laying a charge under the Criminal Code whenever they have reasonable grounds to suspect an assault occurred, independent of whether the victim wants to press charges.",
+     "zh": "多个省和地区都有明确政策：只要警方有合理理由怀疑发生了袭击，就应依据刑事法典提出指控，而不取决于受害者本人是否希望追究。",
+     "hard": true
+    },
+    {
+     "en": "Abusers are a diverse group — roughly half show no obvious psychological red flags — but recurring traits include a personal history of being maltreated as a child, escalating violence with each episode, very low self-esteem, a remorse-then-repeat cycle after each attack, and a tendency to also direct violence at children, especially a partner's children from a previous relationship.",
+     "zh": "施虐者群体其实很多样——约一半在心理层面看不出明显异常——但常见特征包括童年受虐史、暴力程度随每次发作而升级、极低的自我价值感、每次施暴后陷入\"懊悔—再犯\"的循环，以及可能把暴力也指向孩子，尤其是伴侣与前任所生的孩子。",
+     "hard": true
+    },
+    {
+     "en": "Control tactics beyond direct violence: intimidation and threats, throwing objects in a rage, isolating the partner from friends and outside contact, and reframing the abuse as legitimate discipline.",
+     "zh": "除了直接施暴外，控制手段还包括恐吓威胁、盛怒下摔砸物品、隔绝伴侣与朋友和外界的联系，以及把施暴包装成\"合理管教\"。",
+     "hard": true
+    },
+    {
+     "en": "When it's safe to do so, separate the patient from the person suspected of maltreating them — this improves scene safety and lets you take independent histories from each party to compare.",
+     "zh": "在安全的前提下，尽量将患者与疑似施虐者分开——这既能提高现场安全，也方便你分别采集双方陈述并加以比对。",
+     "hard": true
+    },
+    {
+     "en": "If the suspected abuser becomes hostile, clear unnecessary bystanders (family, friends) from the scene, and call for law enforcement whenever you have any doubt about scene safety — domestic violence calls carry real potential for danger to you and your partner.",
+     "zh": "若疑似施虐者表现出敌意，应将无关的旁观者（家属、朋友）请离现场；只要对现场安全有任何疑虑，就应请求执法部门支援——家庭暴力出勤对你和搭档而言都存在真实的危险性。",
+     "hard": true
+    },
+    {
+     "en": "Approach the interview with direct but empathetic questioning, stay objective and nonjudgmental, listen for spontaneous disclosures such as \"we've been having some problems,\" and hand the patient back some control — for example, by discussing where they could go or who they could call if they choose to leave.",
+     "zh": "问诊时应直接但带着同理心，保持客观、不评判，留意患者自发流露的信息（如\"我们最近关系不太好\"），并把部分掌控权交还给患者——例如讨论如果要离开，他们可以去哪里、可以联系谁。",
+     "hard": false
+    },
+    {
+     "en": "The PCR from a domestic maltreatment call is potential courtroom evidence, not just a handoff note — keep statements objective, quote scene statements exactly, correct any error with a single line-through plus your initials rather than erasing, and remember you may be asked to testify on it years after the call.",
+     "zh": "家庭虐待出勤的PCR不只是交接记录，更是可能呈堂的证据——陈述必须客观，引用现场话语要一字不差，写错时只能划一条线并签姓名缩写更正，绝不能涂改，并且要记住多年后你可能仍需就这份记录出庭作证。",
+     "hard": true
+    },
+    {
+     "en": "Intimate-partner maltreatment is a crime against a person, not merely \"a family matter\" — treat it with the same legal seriousness as any other assault, and involve law enforcement.",
+     "zh": "亲密伴侣虐待是对一个人的犯罪行为，不是单纯的\"家务事\"——应以对待其他袭击案件同等的法律严肃性处理，并让执法部门介入。",
+     "hard": false
+    },
+    {
+     "en": "If a competent adult refuses transport, ask whether it's safe to leave information about victim-witness assistance programs or shelters they can use later — refusal of care doesn't mean the encounter has nothing left to offer.",
+     "zh": "如果神智清楚的成年患者拒绝送医，可询问是否方便留下受害者证人援助计划或庇护所等资源信息供其日后使用——拒绝救治并不代表这次接触就此毫无意义。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Sexual Assault",
+   "titleZh": "性侵害",
+   "points": [
+    {
+     "en": "Sexual assault and rape are, at their core, crimes of power, force, and violence rather than crimes of passion; while most victims are women, men and children are victims too.",
+     "zh": "性侵害与强奸本质上是权力、强迫与暴力的犯罪，而不是情欲驱动的行为；受害者以女性居多，但男性和儿童同样可能成为受害者。",
+     "hard": false
+    },
+    {
+     "en": "Legal definitions vary by jurisdiction, but broadly: sexual assault means unwanted sexual contact, rape means penile penetration of the genitalia without consent, offenses can be classified as simple or aggravated assault, and an underage victim makes it statutory rape.",
+     "zh": "法律定义因辖区而异，但大体而言：性侵害指未经同意的性接触，强奸指未经受害者同意的阴茎插入生殖器行为，可分为简单袭击或加重袭击，受害者未成年则构成法定强奸。",
+     "hard": true
+    },
+    {
+     "en": "Rape is an indictable offense — alongside treating the patient, you carry a duty to preserve the crime scene; offenders are frequently known to the victim, which is why the terms acquaintance assault and date rape exist.",
+     "zh": "强奸属于可公诉罪行——在救治患者的同时，你也负有保全犯罪现场的责任；施暴者往往是受害者认识的人，这正是\"熟人性侵\"\"约会强暴\"等说法的由来。",
+     "hard": true
+    },
+    {
+     "en": "Suspect drug-facilitated assault when a victim shows unexplained weakness, nausea, disorientation, or memory loss; also watch for multi-system trauma requiring shock management, since assault injuries aren't always limited to the genital area.",
+     "zh": "若受害者出现不明原因的虚弱、恶心、定向障碍或记忆缺失，应怀疑药物迷奸；同时留意是否存在需要处理休克的多系统创伤，因为性侵造成的损伤并不总局限于生殖器区域。",
+     "hard": true
+    },
+    {
+     "en": "When a same-gender caregiver is available without an unreasonable response delay — including through a rape crisis team — offer that option as a legitimate part of the treatment approach, not a courtesy extra.",
+     "zh": "如果有同性别照护者可在合理时间内到场（包括通过性侵危机应对小组），应主动提供这一选项——这是治疗方案的正当组成部分，而不是可有可无的额外照顾。",
+     "hard": false
+    },
+    {
+     "en": "Denial, disbelief, and an urge to shower or douche immediately are normal, expected reactions in a sexual assault victim — gently encourage the patient toward hospital transport instead, since evidence collection and professional support are there.",
+     "zh": "否认、难以置信，以及急于冲澡或冲洗身体的冲动，都是性侵受害者常见且正常的反应——应温和地引导患者接受送医，因为证据采集和专业支持都在医院一端。",
+     "hard": false
+    },
+    {
+     "en": "The central treatment principle is empowerment: give the patient choices during assessment and let them control small tasks themselves, such as placing their own pulse oximeter — apply this same principle to any abuse or assault victim, not just sexual assault.",
+     "zh": "核心治疗原则是赋权：在评估过程中给患者选择的机会，让其自行完成一些小任务（例如自己夹上血氧夹），这一原则适用于所有虐待或袭击类受害者，不只限于性侵害。",
+     "hard": true
+    },
+    {
+     "en": "You do not need — and should not seek — a detailed account of the assault; ask only what's necessary for care, such as time elapsed since the event, and leave in-depth investigative questioning to specially trained teams.",
+     "zh": "你不需要、也不应该要求受害者详述侵害经过；只需询问护理所需的信息，例如事发至今的时间，深入的调查性询问应交给受过专门训练的团队。",
+     "hard": true
+    },
+    {
+     "en": "Skip aggressive treatment measures unless life-threatening findings are actually present on your assessment.",
+     "zh": "除非评估中确实发现危及生命的体征，否则应避免采取激进的治疗手段。",
+     "hard": false
+    },
+    {
+     "en": "Evidence-preservation instructions for the patient: no bathing, douching, urinating, or defecating if genital or anal penetration occurred; no eating, drinking, tooth-brushing, or mouthwash if oral penetration occurred; take medication only if truly necessary and prescribed; keep clothing unwashed as evidence, and maintain chain of custody.",
+     "zh": "对患者的证据保全指示：若发生生殖器或肛门插入，切勿洗澡、冲洗、排尿或排便；若发生口腔插入，切勿进食、饮水、刷牙或使用漱口水；用药仅限确有必要且经处方；衣物应保持未清洗状态作为证据，并维持证据保管链。",
+     "hard": true
+    },
+    {
+     "en": "Competent adult patients retain the right to refuse assistance or transport, often to protect their privacy — follow your system's refusal protocol for sexual assault calls without judgment or condescension.",
+     "zh": "神智清楚的成年患者有权拒绝救助或送医，常常是为了保护隐私——应依照本系统针对性侵出勤的拒绝救治流程处理，不带评判或居高临下的态度。",
+     "hard": false
+    },
+    {
+     "en": "Because you may be called to testify two or three years after the call, document the history, assessment, treatment, and response to treatment in full objective detail — put subjective statements from the patient or bystanders in quotation marks, and record witness names, addresses, and contact information.",
+     "zh": "由于可能在事发两三年后被传唤出庭作证，应完整客观地记录病史、评估、治疗及治疗反应——患者或旁观者的主观陈述要用引号原样标注，并记录目击者的姓名、地址与联系方式。",
+     "hard": true
+    },
+    {
+     "en": "The scene checklist for any abuse or assault call: secure yourself and your partner and call police discreetly as needed; build trust through professional, compassionate conduct; foster empowerment through choice; advocate for the patient's dignity; treat physical injuries the same way you would in any other context; extend respect even to a suspected abuser; stay patient with a quick refusal of care; know your community's resource network; document objectively without drama; and share information with hospital staff and mandated authorities — when in doubt, report.",
+     "zh": "适用于任何虐待或袭击出勤的现场清单：确保自己和搭档的安全，必要时低调请求警方支援；以专业和同理心建立信任；通过给予选择来赋权患者；维护患者尊严；按常规方式处理身体损伤；对疑似施虐者也保持基本尊重；面对患者迅速拒绝救助时保持耐心；熟悉本地资源网络；客观记录、不夸大情绪化；并将信息共享给医院人员和法定通报机构——拿不准时，选择通报。",
+     "hard": false
+    },
+    {
+     "en": "Child sexual maltreatment is rarely a single incident, frequently involves no physical force and leaves no visible sign, and often works through the power of authority or the parent-child bond rather than violence — the child may be manipulated into believing the acts are normal, or silenced through shame and threats.",
+     "zh": "儿童性虐待很少是单次事件，常常不涉及暴力、也不留下可见痕迹，施害者往往借助权威地位或亲子纽带而非暴力来实施——孩子可能被操纵得以为这是正常行为，或因羞耻感与威胁而被迫沉默。",
+     "hard": true
+    },
+    {
+     "en": "Limit your assessment of a sexually maltreated child to what's needed to dress any injury; do not examine the genitalia unless there's visible bleeding or injury requiring treatment, but do treat any concurrent bruising or fractures if the child was also physically beaten — hostility or restlessness can be a behavioural tell.",
+     "zh": "对疑似性虐待儿童的评估应仅限于处理伤口所需的范围；除非有明显出血或需要处理的损伤，否则不应检查生殖器，但若孩子同时遭受殴打，应处理伴随的瘀伤或骨折；敌意或坐立不安可能是行为层面的线索。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "2008 Canada substantiated child maltreatment — neglect",
+   "itemZh": "2008年加拿大已证实儿童虐待——忽视",
+   "value": "34%"
+  },
+  {
+   "itemEn": "2008 Canada substantiated child maltreatment — exposure to intimate-partner violence",
+   "itemZh": "2008年加拿大已证实儿童虐待——目睹亲密伴侣暴力",
+   "value": "34%"
+  },
+  {
+   "itemEn": "2008 Canada substantiated child maltreatment — physical abuse",
+   "itemZh": "2008年加拿大已证实儿童虐待——身体虐待",
+   "value": "20%"
+  },
+  {
+   "itemEn": "2008 Canada substantiated child maltreatment — emotional maltreatment",
+   "itemZh": "2008年加拿大已证实儿童虐待——情感虐待",
+   "value": "9%"
+  },
+  {
+   "itemEn": "2008 Canada substantiated child maltreatment — sexual abuse",
+   "itemZh": "2008年加拿大已证实儿童虐待——性虐待",
+   "value": "3%"
+  },
+  {
+   "itemEn": "2008 Canada child maltreatment investigations",
+   "itemZh": "2008年加拿大儿童虐待调查案数",
+   "value": "235,842 起调查；36% 确证（约85,000名儿童）"
+  },
+  {
+   "itemEn": "Age distribution of fatal child maltreatment victims",
+   "itemZh": "儿童虐待致死案例年龄分布",
+   "value": "约85%不满6岁；>40%不满1岁"
+  },
+  {
+   "itemEn": "Profile of maltreated older patient — age threshold",
+   "itemZh": "受虐老人画像——年龄阈值",
+   "value": ">75岁"
+  },
+  {
+   "itemEn": "Profile of person who maltreats elders — age threshold",
+   "itemZh": "老年虐待施虐者画像——年龄阈值",
+   "value": ">50岁"
+  },
+  {
+   "itemEn": "Sexual assault documentation — possible court testimony delay",
+   "itemZh": "性侵出勤记录——可能的出庭作证间隔",
+   "value": "事发后2-3年"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Set up a discreet code phrase with your partner ahead of time — something like \"grab the extra gloves from the rig\" — so one of you can quietly call police without alerting or provoking a suspected abuser.",
+   "zh": "提前和搭档约定一个暗语——比如\"去车上拿多一副手套\"——这样一人可以悄悄呼叫警方，而不会惊动或激怒疑似施虐者。"
+  },
+  {
+   "en": "If it's safe, physically separate the patient from the person suspected of maltreating them; it improves scene safety and lets you take independent histories to compare for consistency.",
+   "zh": "在安全的前提下，把患者和疑似施虐者分开；这既提升现场安全，也方便你分别采集病史加以比对。"
+  },
+  {
+   "en": "Offer a same-gender caregiver for a sexual assault patient whenever one is available without an unreasonable delay, including via a rape crisis team response.",
+   "zh": "只要能在合理时间内到位（包括通过性侵危机应对小组），就应为性侵患者提供同性别照护者选项。"
+  },
+  {
+   "en": "Clear unnecessary bystanders — family, friends, onlookers — from a hostile-feeling scene, and call for law enforcement the moment you have any doubt about your own or your partner's safety.",
+   "zh": "在气氛紧张的现场，请无关的家属、朋友、旁观者离开；一旦对自己或搭档的安全有任何疑虑，立即请求执法支援。"
+  },
+  {
+   "en": "Treat the suspected abuser with the same basic respect and professionalism you'd extend to anyone else on scene — your job is patient care and objective documentation, not confrontation or judgment.",
+   "zh": "对疑似施虐者也保持基本的尊重和专业态度——你的任务是照护患者与客观记录，不是对质或评判。"
+  },
+  {
+   "en": "Foster empowerment at every step: offer the patient choices during assessment, and let them handle simple tasks themselves, such as placing their own pulse oximeter probe.",
+   "zh": "在评估的每一步都赋予患者掌控感：提供选择，让患者自己完成一些简单操作，比如自己夹好血氧探头。"
+  },
+  {
+   "en": "Keep a current, 24-hour directory of local resources — child protection lines, adult/elder protective services, domestic violence shelters, and sexual assault services — so you can hand over real options on scene, not just a transport.",
+   "zh": "随身备一份最新的24小时本地资源清单——儿童保护热线、成人/老年保护服务、家暴庇护所、性侵援助服务——这样现场能给出真正可用的选项，而不只是把人送医院了事。"
+  },
+  {
+   "en": "Document only what you directly observed and heard, quote scene statements exactly, and never write opinions or conclusions about what \"really happened\" onto the PCR.",
+   "zh": "只记录你亲眼所见、亲耳所闻，原话引用要一字不差，绝不在PCR上写下关于\"事情真相\"的主观判断或结论。"
+  },
+  {
+   "en": "When genuinely unsure whether a situation is maltreatment, err toward reporting — the downside of an unfounded report is far smaller than the downside of a maltreated victim falling through the cracks.",
+   "zh": "拿不准是否构成虐待时，宁可选择报告——一次不成立的报告造成的后果，远小于一个受害者因未被发现而持续受害。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Active neglect and passive neglect are not the same thing on this exam: active neglect is the deliberate withholding of care (medicine, food, companionship, mobility help), while passive neglect is an unintentional lapse — the older person simply isn't attended to. Don't collapse the two into one category.",
+   "zh": "考试里主动忽视和被动忽视不是一回事：主动忽视是故意剥夺照护（药物、饮食、陪伴、行动协助），被动忽视是无心之失——老人单纯没被顾上。别把两者混为一谈。"
+  },
+  {
+   "en": "\"Sexual assault\" and \"rape\" are not interchangeable terms in this chapter: sexual assault is the umbrella term for any unwanted sexual contact, while rape specifically means non-consensual penile penetration.",
+   "zh": "本章中\"性侵害\"和\"强奸\"不是同义词：性侵害是所有未经同意性接触的统称，强奸特指未经同意的阴茎插入行为。"
+  },
+  {
+   "en": "Do not assume someone else — the hospital, the police, your partner — has already reported suspected child maltreatment. The mandated-reporter duty is personal to you, and \"I figured the ED would call\" is not a defence.",
+   "zh": "不要假设已经有人——医院、警方、你的搭档——报告了疑似儿童虐待。强制通报义务是你个人的，\"我以为急诊会打电话\"不能作为理由。"
+  },
+  {
+   "en": "Culturally rooted skin marks such as cupping or coin rubbing are not, by themselves, evidence of maltreatment — they can look alarming but have a benign explanation; ask about the practice respectfully instead of jumping to a maltreatment conclusion.",
+   "zh": "拔罐、刮痧等民俗印记本身不能作为虐待证据——外观骇人，但可能有正常解释；应尊重地询问来源，而不是直接下虐待的结论。"
+  },
+  {
+   "en": "Same-sex intimate-partner violence is a real and equally serious problem — the belief that it's automatically \"less severe\" because the partners are \"on equal footing\" is a misconception that keeps victims from getting help.",
+   "zh": "同性伴侣间的亲密关系暴力同样真实且同样严重——认为双方\"地位平等\"所以程度较轻，是让受害者不敢求助的错误认知。"
+  },
+  {
+   "en": "Male victims of intimate-partner violence exist and carry the same emotional injuries as female victims — under-reporting reflects stigma and fewer resources, not a lower true incidence.",
+   "zh": "亲密伴侣暴力的男性受害者确实存在，情绪创伤与女性受害者相似——报告率低反映的是社会污名和资源不足，而不是真实发生率更低。"
+  },
+  {
+   "en": "You are not the investigator on a sexual assault call: your job is limited to care-relevant questions (like time since the event), not extracting the full story — leave the detailed forensic interview to specially trained personnel.",
+   "zh": "性侵出勤中你不是调查员：只问护理所需的有限信息（如事发多久），不必挖出完整经过——详细的取证式询问留给受过专门训练的人员。"
+  },
+  {
+   "en": "Don't assume child sexual maltreatment always leaves marks or involves obvious force — it commonly leaves no visible sign at all and relies on the offender's authority or the parent-child bond rather than violence, which is exactly why it's easy to miss.",
+   "zh": "不要以为儿童性虐待一定会留下痕迹或涉及明显暴力——它常常不留下任何可见迹象，施害者靠的是权威地位或亲子纽带而非暴力，这正是它容易被忽视的原因。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "CHILD ABUSE",
+   "en": "Physical-exam red flags for a suspected maltreated child: Consistency of injury with developmental age, History inconsistent with injury, Inappropriate parental concerns, Lack of supervision, Delay in seeking care, Affect, Bruises of varying ages, Unusual injury patterns, Suspicious circumstances, Environmental clues.",
+   "zh": "疑似受虐儿童体检红旗清单：Consistency 受伤与发育年龄是否吻合、History 病史与伤情是否矛盾、Inappropriate concerns 家长关切是否不合常理、Lack of supervision 是否监护缺失、Delay 是否延迟就医、Affect 患儿情感反应、Bruises 不同愈合阶段的瘀伤、Unusual patterns 异常伤型、Suspicious circumstances 可疑现场情况、Environmental clues 环境线索。"
+  },
+  {
+   "name": "PEES",
+   "en": "The four forms of domestic maltreatment, as a quick recall hook: Physical, Economic, Emotional, Sexual.",
+   "zh": "家庭虐待四种形式的速记钩子 PEES：Physical 身体、Economic 经济、Emotional 情感、Sexual 性。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "In 2008 Canadian data, which two categories tied for the leading share of substantiated child maltreatment, and at what percentage?",
+   "qZh": "2008年加拿大数据中，哪两类并列成为已证实儿童虐待的首位类别？各占多少比例？",
+   "aEn": "Neglect and exposure to intimate-partner violence, each at 34%.",
+   "aZh": "忽视与目睹亲密伴侣暴力，各占34%。"
+  },
+  {
+   "qEn": "What's the practical difference between active and passive neglect of an older adult?",
+   "qZh": "老年人的主动忽视与被动忽视，实际区别是什么？",
+   "aEn": "Active neglect is the deliberate withholding of care or necessities; passive neglect is unintentional — the older person is simply isolated, ignored, or forgotten.",
+   "aZh": "主动忽视是蓄意剥夺照护或必需品；被动忽视是无心之失——老人单纯被隔离、冷落或遗忘。"
+  },
+  {
+   "qEn": "A toddler has a doughnut-shaped burn on the buttocks with an unburned ring at the centre. What mechanism does this suggest, and what other burn pattern is equally suspicious?",
+   "qZh": "幼儿臀部有一处甜甜圈状烧伤，中心有一圈未被烫到的皮肤。这提示什么机制？还有哪种烧伤形态同样可疑？",
+   "aEn": "Forced immersion in hot bathwater — the skin pressed against the cooler tub bottom is spared, producing the ring — suggests inflicted injury. A stocking/glove-pattern burn on a hand or foot is the other classic inflicted-burn red flag.",
+   "aZh": "强迫浸入热水盆——贴着较凉盆底的皮肤未被烫到，从而形成中心的未烫环——提示人为伤害。另一个经典可疑烧伤形态是手/脚的\"袜套/手套状\"烫伤。"
+  },
+  {
+   "qEn": "Under BC's Adult Guardianship Act, does a Designated Agency have to respect a mentally capable older adult's refusal of help after a suspected-maltreatment report?",
+   "qZh": "根据BC《成人监护法》，如果一名神智清楚的老人在被举报疑似受虐后拒绝接受帮助，指定机构是否必须尊重这一拒绝？",
+   "aEn": "Yes — every adult is legally presumed capable, and Designated Agencies only intervene for adults unable to seek help themselves; a capable adult's refusal must be respected once immediate safety is addressed.",
+   "aZh": "是的——法律上推定每个成年人都具备能力，指定机构只对无法自行求助的成年人进行干预；一旦排除了紧急安全风险，就必须尊重神智清楚成年人的拒绝。"
+  },
+  {
+   "qEn": "What should you tell an adult sexual assault patient about bathing or eating before they get definitive care, and why?",
+   "qZh": "对一名成年性侵患者，在其获得最终医疗处置前，关于洗澡或进食你应该怎么交代？为什么？",
+   "aEn": "Advise against bathing, douching, urinating, or defecating if genital/anal penetration occurred, and against eating, drinking, brushing teeth, or using mouthwash if oral penetration occurred — these actions destroy forensic evidence needed for the sexual assault evidence kit.",
+   "aZh": "若发生生殖器/肛门插入，建议不要洗澡、冲洗、排尿或排便；若发生口腔插入，建议不要进食、饮水、刷牙或使用漱口水——这些行为会破坏性侵证据采集包所需的法医证据。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Child abuse reporting — who calls where",
+   "topicZh": "儿童虐待通报——该打哪个电话",
+   "bookEn": "The textbook states generically that in most provinces and territories the paramedic is a mandated reporter, and that most jurisdictions have established toll-free reporting numbers.",
+   "bookZh": "教材只泛泛说明：大多数省和地区急救员是强制通报者，且大多数辖区已设立免费通报专线。",
+   "bcEn": "BC's Child, Family and Community Service Act puts the reporting duty on everyone in the province, not just paramedics — anyone with reason to believe a child under 19 has been or is likely to be abused or neglected must report. As a professional making the report, call the Ministry of Children and Family Development's Provincial Centralized Screening line, 1-800-663-9122, available 24 hours. The separate Helpline for Children, 310-1234 (no area code needed), is the line for a child or youth to call about themselves. You do not need proof or even your name to make a report — sharing what you observed is enough; if the child is in immediate danger, call 911 or local police first.",
+   "bcZh": "BC《儿童、家庭与社区服务法》把通报义务放在全省每一个人身上，不只是急救员——任何人只要有理由相信一名19岁以下儿童正在或可能遭受虐待或忽视，就必须通报。作为专业人员通报时，应致电儿童与家庭发展部的省级集中筛查专线 1-800-663-9122，24小时可打。另一条 310-1234（不用加区号）的\"儿童热线\"是留给儿童/青少年本人求助用的。通报不需要证据，甚至不需要留下姓名，说出你看到的即可；若儿童处于即时危险中，应先拨打911或联系当地警方。",
+   "ref": "gov.bc.ca — Reporting child abuse under the CFCSA"
+  },
+  {
+   "topicEn": "Reporting elder/adult abuse — no mandatory duty for a capable adult",
+   "topicZh": "老年人/成人虐待通报——对有行为能力成年人无强制义务",
+   "bookEn": "The textbook talks about \"adult protective services (APS)\" and notifying the regulatory commission for an institutionalized older patient in language that reads as parallel to the child-reporting duty.",
+   "bookZh": "教材提到\"成人保护服务（APS）\"，以及为机构化老人向监管部门通报，行文语气与儿童通报义务近似平行。",
+   "bcEn": "Unlike the child-abuse duty, BC has no mandatory-reporting law for a capable adult who is being maltreated. Under the Adult Guardianship Act Part 3, all BC health authorities and Community Living BC are \"Designated Agencies\" that respond to reports of suspected abuse, neglect, or self-neglect — but only for adults who are unable to seek help themselves because of illness, injury, or another condition. Every adult is legally presumed capable of making their own decisions, so a mentally competent older patient who refuses help must have that refusal respected once immediate safety is addressed; document objectively and route your concern to the Designated Agency rather than assuming a duty to override the patient's wishes.",
+   "bcZh": "与儿童虐待不同，BC对有行为能力成年人受虐并没有强制通报法。根据《成人监护法》第三部分，BC所有卫生局和 Community Living BC 都是\"指定机构\"，负责回应疑似虐待、忽视或自我忽视的举报——但仅限于因疾病、受伤或其他状况而无法自行求助的成年人。法律推定每个成年人都具备决策能力，因此神智清楚的老年患者若拒绝帮助，一旦排除紧急安全风险就必须尊重其意愿；应客观记录并把担忧转介给指定机构，而不是假设自己有权凌驾患者意愿之上。",
+   "ref": "Adult Guardianship Act (BC), Part 3; Public Guardian and Trustee of BC"
+  },
+  {
+   "topicEn": "Domestic violence charge policy",
+   "topicZh": "家庭暴力的检控政策",
+   "bookEn": "The textbook notes generically that in many provinces and territories, guidelines direct police to lay a charge when they suspect an assault has occurred.",
+   "bookZh": "教材泛泛提到：多个省和地区有政策指引警方在怀疑发生袭击时提出指控。",
+   "bcEn": "BC's specific version is the Violence Against Women in Relationships (VAWIR) policy (Ministry of Attorney General, in force since 2010): police and Crown Counsel are directed toward pursuing charges in intimate-partner violence whenever it's in the public interest, independent of whether the victim wants to press charges, because the victim is treated as a vulnerable person. The decision to actually lay and pursue a charge belongs to Crown Counsel, not the patient and not you — your job stays limited to objective documentation and requesting police.",
+   "bcZh": "BC 对应的具体政策是《家庭暴力保护妇女政策》（VAWIR，检察总长办公室，2010年起施行）：警方与刑事检控官被要求，只要符合公共利益，就应推进亲密伴侣暴力案件的指控，不取决于受害者本人是否愿意追究，因为受害者被视为\"弱势人群\"。是否真正提出并推进指控由刑事检控官决定，不是患者、也不是你——你的职责始终限于客观记录与请求警方到场。",
+   "ref": "BC Violence Against Women in Relationships (VAWIR) Policy, Ministry of AG, 2010"
+  },
+  {
+   "topicEn": "Sexual assault forensic exam access varies by region",
+   "topicZh": "性侵法医检查的可及性因地区而异",
+   "bookEn": "The textbook says many provinces and territories offer rape crisis teams or sexual assault treatment centres, implying a uniform dedicated service.",
+   "bookZh": "教材说多个省和地区提供性侵危机小组或性侵治疗中心，给人一种服务统一到位的印象。",
+   "bcEn": "In BC, a forensic sexual-assault exam is available at every emergency department, so transporting to the nearest appropriate ED per protocol still gets the patient access to evidence collection — don't delay transport searching for a dedicated \"sexual assault centre.\" On-site specialized forensic nursing coverage, however, is uneven across the province — most consistently staffed in Fraser Health, with gaps reported in the Interior and North — so an on-call physician rather than a forensic nurse may end up performing the exam depending on where you transport.",
+   "bcZh": "在BC，每一家急诊室都能提供性侵法医检查，因此按流程送往最近的合适急诊室，患者依然能获得证据采集——不必为寻找专门的\"性侵中心\"而延误送医。但专职法医护士的驻点覆盖在全省并不均衡——以菲莎卫生局（Fraser Health）覆盖最稳定，内陆与北部报告存在缺口——所以实际执行检查的可能是值班医生而非法医护士，取决于你送往哪家医院。",
+   "ref": "BC forensic nursing services coverage reporting, 2026; BC Women's Hospital sexual assault service"
+  }
+ ],
+ "sourcePages": "3959-3993"
+}

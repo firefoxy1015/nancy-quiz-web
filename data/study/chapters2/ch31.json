@@ -1,0 +1,904 @@
+{
+ "id": "ch31",
+ "n": 31,
+ "titleEn": "Neurologic Emergencies",
+ "titleZh": "神经系统急症",
+ "group": "neuro",
+ "examWeight": 2,
+ "whyEn": "A weight-2 chapter that is a numbers chapter in disguise: GCS scoring, the CPP formula, glucose thresholds, and stroke/seizure timing windows are all fair game on the written exam, and BC has rewritten several of the drug answers (D10W instead of D50W, a fixed naloxone ladder, no benzodiazepine in scope). The practical payoff is the FAST-VAN stroke recognition sequence and the AEIOU-TIPS approach to an unexplained altered level of consciousness — both are reflex tools you are expected to run without hesitation.",
+ "whyZh": "权重 2 但暗藏大量硬数字：GCS 拆分、CPP 公式、血糖分界、卒中和癫痫的时间窗，都是笔试的常客；而且 BC 把好几个药物答案改写过了（低血糖用 D10W 不是 D50W、纳洛酮是固定阶梯量、苯二氮卓类根本不在 PCP 用药范围内）。实操端的重点是 FAST-VAN 卒中识别流程和 AEIOU-TIPS 排查不明原因意识改变——这两套工具要练到不用想就能出口。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics（神经系统评估、瞳孔/意识水平/血糖检测、外周静脉穿刺）",
+   "Area 5: Therapeutics（给氧装置准备、正压通气给氧、维持外周静脉/晶体输液、外周静脉置管）",
+   "Area 6: Integration（处置出现神经系统症状体征的患者）"
+  ],
+  "codes": [
+   "4.3.a",
+   "4.3.b",
+   "4.3.d",
+   "4.4.a",
+   "4.4.b",
+   "4.4.d",
+   "4.4.e",
+   "4.4.g",
+   "4.4.h",
+   "4.4.i",
+   "4.5.c",
+   "4.5.d",
+   "5.2.a",
+   "5.3.d",
+   "5.4.a",
+   "5.5.c",
+   "5.5.d",
+   "6.1.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Anatomy & Physiology",
+   "titleZh": "解剖与生理基础",
+   "points": [
+    {
+     "en": "CNS = brain + spinal cord (thought, perception, autonomic control); PNS = cranial + peripheral nerves carrying commands out and feedback in. Every neuro finding maps back to one of these two systems.",
+     "zh": "中枢神经系统（CNS）＝脑＋脊髓，管思维、感知和自主功能；周围神经系统（PNS）＝颅神经＋周围神经，负责把指令送出去、把反馈带回来。每一个神经系统体征都能归到这两个系统里的一个。",
+     "hard": false
+    },
+    {
+     "en": "Lobe map for exam recall: occipital = vision/visual memory; parietal = touch/texture sensation; temporal = hearing, smell, language storage; frontal = voluntary motor (motor cortex) plus judgment and consequence-prediction (prefrontal cortex).",
+     "zh": "脑叶功能地图：枕叶＝视觉与视觉记忆；顶叶＝触觉/质地觉；颞叶＝听觉、嗅觉、语言存储；额叶＝随意运动（运动皮层）＋判断和预判后果（前额叶皮层）。",
+     "hard": true
+    },
+    {
+     "en": "Limbic system generates raw emotion and basic reflexes (chewing, swallowing); the hypothalamus (part of the diencephalon) handles emotion, temperature control, and talks to the endocrine system via the pituitary.",
+     "zh": "边缘系统负责原始情绪和基础反射（咀嚼、吞咽）；下丘脑（间脑的一部分）管情绪、体温调节，并通过垂体和内分泌系统对话。",
+     "hard": false
+    },
+    {
+     "en": "Brainstem trio to memorize: midbrain houses the reticular activating system (RAS) and controls level of consciousness and muscle tone; pons sets respiratory pattern and depth; medulla oblongata drives pulse rate, blood pressure, and respiratory rate.",
+     "zh": "必背脑干三件套：中脑内含网状激活系统（RAS），管意识水平和肌张力；桥脑定呼吸节律和深度；延髓管心率、血压和呼吸频率。",
+     "hard": true
+    },
+    {
+     "en": "The cerebellum manages complex learned motor sequences (balance, gait, coordinated movement) so the frontal lobe doesn't have to micromanage every step; cerebellar damage shows up as ataxia, stumbling, and a failed pronator-drift test.",
+     "zh": "小脑负责已学会的复杂动作序列（平衡、步态、协调运动），让额叶不必逐步操心每个细节；小脑受损表现为共济失调、步态不稳、旋前肌漂移试验阳性。",
+     "hard": false
+    },
+    {
+     "en": "Myelin insulates axons and dramatically speeds conduction; autoimmune stripping of myelin is the mechanism behind multiple sclerosis, producing gaps in signal transmission.",
+     "zh": "髓鞘包裹轴突、大幅加快传导速度；多发性硬化的机制正是自身免疫攻击髓鞘，造成信号传导出现断点。",
+     "hard": false
+    },
+    {
+     "en": "Nerve decussation matters clinically: most motor/sensory fibres cross sides in the brainstem, so a LEFT cerebral stroke can present as RIGHT-side limb weakness paired with LEFT-side facial droop (facial nerve control does not fully decussate).",
+     "zh": "神经交叉在临床上很关键：多数运动/感觉纤维在脑干交叉，所以左侧大脑卒中可能表现为右侧肢体无力＋左侧面部下垂（面神经支配不完全交叉）。",
+     "hard": true
+    },
+    {
+     "en": "Airway-protective cranial nerves: trigeminal, glossopharyngeal, vagus, and hypoglossal control swallowing, tongue movement, and pharyngeal muscle tone; disruption produces either excess airway relaxation or trismus (jaw clenching).",
+     "zh": "负责气道保护的颅神经：三叉神经、舌咽神经、迷走神经、舌下神经，管吞咽、舌头运动和咽部肌张力；这些信号异常会导致气道过度松弛，或牙关紧闭（trismus）。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Pathophysiology & Intracranial Pressure",
+   "titleZh": "病理生理与颅内压",
+   "points": [
+    {
+     "en": "Six causal buckets for any neuro condition: neoplastic (uncontrolled cell growth, benign vs malignant, metastasis mainly from lung/breast cancer), degenerative (wear-and-tear or autoimmune, e.g. MS attacking myelin), developmental (neural tube errors like spina bifida, or perinatal insult like cerebral palsy), infectious (fever helps fight organisms but overheating impairs neurons and can trigger febrile seizures), vascular (emboli/thrombi/aneurysm), and multifactorial (combined developmental quality + repair capacity + insult severity).",
+     "zh": "神经系统疾病的六大病因框架：肿瘤性（细胞失控增殖，良恶性之分，转移瘤多来自肺癌/乳腺癌）、退行性（磨损或自身免疫，如 MS 攻击髓鞘）、发育性（神经管缺陷如脊柱裂，或围产期损伤如脑瘫）、感染性（发热能助攻免疫但体温过高会损伤神经元、诱发热性惊厥）、血管性（栓子/血栓/动脉瘤）、多因素性（发育质量＋修复能力＋损伤强度三者叠加）。",
+     "hard": false
+    },
+    {
+     "en": "Aneurysm formation is a 4-step process: a small tear opens in an artery wall layer -> blood tracks between the layers -> pressure enlarges the defect -> the weakened wall bulges and can leak or rupture into an intracranial hemorrhage.",
+     "zh": "动脉瘤形成四步：动脉壁某层出现微小撕裂→血液渗入层间→压力使裂口扩大→薄弱处鼓出成瘤，可渗漏或破裂造成颅内出血。",
+     "hard": false
+    },
+    {
+     "en": "The cranial vault holds three substances in fixed volume: brain, blood, and cerebrospinal fluid (CSF). Any added mass (blood, pus, tumour, swelling) has nowhere to go, so intracranial pressure (ICP) climbs and stays high — unlike the brief, harmless ICP spikes from coughing or straining.",
+     "zh": "颅腔容积固定，只装三样东西：脑组织、血液、脑脊液（CSF）。一旦多出任何东西（出血、脓液、肿瘤、水肿），都无处可去，颅内压（ICP）就会持续升高——这和咳嗽、用力时那种一过性、无害的 ICP 波动完全不同。",
+     "hard": true
+    },
+    {
+     "en": "Core formula: cerebral perfusion pressure (CPP) = mean arterial pressure (MAP) - ICP. Normal MAP 70-100 mm Hg, normal ICP 5-15 mm Hg, so normal CPP runs 60-80 mm Hg (lower acceptable limit about 50-60). Below a CPP of 50 mm Hg the brain becomes ischemic.",
+     "zh": "核心公式：脑灌注压（CPP）＝平均动脉压（MAP）－颅内压（ICP）。正常 MAP 70-100 mmHg，正常 ICP 5-15 mmHg，故正常 CPP 在 60-80 mmHg（下限可接受到 50-60）。CPP 低于 50 mmHg，脑组织开始缺血。",
+     "hard": true
+    },
+    {
+     "en": "Rising ICP kills the brain two ways: it starves tissue of perfusion (CPP falls as ICP rises against a fairly fixed MAP), or it forces brain tissue to herniate through rigid dural folds such as the tentorium and eventually the foramen magnum. Current understanding is the opposite — driving co2 down causes cerebral vasoconstriction and can worsen ischemia, so routine hyperventilation is now avoided.",
+     "zh": "ICP 升高伤脑靠两条路：一是灌注不足（MAP 相对固定时，ICP 越高 CPP 越低）；二是把脑组织从硬脑膜皱褶（如小脑幕）甚至枕骨大孔挤出去，即脑疝。（旧理论主张预防性过度通气来降 ICP；现在的认识正相反——把 CO2 压得太低会造成脑血管收缩，反而加重缺血，因此常规过度通气现已被摒弃。）",
+     "hard": false
+    },
+    {
+     "en": "Any patient at risk for elevated ICP needs a target systolic blood pressure of 110-120 mm Hg to protect CPP — this number reappears as the general-management target for the whole chapter.",
+     "zh": "任何有 ICP 升高风险的患者，收缩压目标都是 110-120 mmHg，用来保住 CPP——这个数字会在本章的总体处置里反复出现。",
+     "hard": true
+    },
+    {
+     "en": "Cushing reflex is the vital-sign signature of rising ICP and is the MIRROR IMAGE of shock: blood pressure rises, pulse and respiratory rate fall, and pulse pressure widens (systolic hypertension). The medulla drives up contraction force as perfusion falls, then brainstem compression from herniation cripples its own cardiorespiratory control, dropping heart and respiratory rate further.",
+     "zh": "Cushing 反射是 ICP 升高的生命体征标志，和休克刚好相反：血压升高，脉搏和呼吸频率下降，脉压增宽（收缩期高血压）。机制是灌注下降时延髓先加强心肌收缩力代偿，之后脑疝压迫延髓本身，反而拖垮它对心跳呼吸的控制，使心率呼吸进一步下降。",
+     "hard": true
+    },
+    {
+     "en": "Other hallmarks of increased ICP beyond the Cushing triad: decorticate or decerebrate posturing, an unresponsive/dilated pupil or anisocoria, and abnormal respiratory patterns (Biot, apneustic, Cheyne-Stokes).",
+     "zh": "除 Cushing 三联征外，ICP 升高的其他标志：去皮层或去大脑姿势、瞳孔无反应/散大或瞳孔不等大，以及异常呼吸型（Biot 呼吸、长吸式呼吸、潮式/Cheyne-Stokes 呼吸）。",
+     "hard": true
+    },
+    {
+     "en": "Anisocoria (pupil size difference greater than 1 mm) signals brainstem compression squeezing one pupil's nerve supply — many people have mild baseline asymmetry, but anything past 1 mm is a red flag for rising ICP.",
+     "zh": "瞳孔不等大（差值＞1 mm）提示脑干受压导致一侧瞳孔神经支配受阻——不少人本身瞳孔略有差异，但只要超过 1 mm 就要当作 ICP 升高的警号。",
+     "hard": true
+    },
+    {
+     "en": "Decorticate posturing (flexed arms curled to the core, pointed toes, flexed wrists) localizes damage just below the cerebral hemispheres; decerebrate posturing (extended, pronated arms, pointed toes, flexed wrists) is the more ominous finding, localizing to the brainstem itself.",
+     "zh": "去皮层姿势（上肢屈曲内收贴向躯干核心、脚趾绷直、腕屈）提示损伤在大脑半球正下方；去大脑姿势（上肢伸直旋前、脚趾绷直、腕屈）更凶险，提示损伤已到脑干本身。",
+     "hard": true
+    },
+    {
+     "en": "Infant ICP tell: pitch of the cry rises toward a cat-like shriek and pupils shift from round toward oval — remembered as 'cat's eyes and cat's cries.'",
+     "zh": "婴儿 ICP 升高的线索：哭声音调升高、逐渐变成猫叫般的尖叫，瞳孔形状从圆变椭圆——记忆口诀是“猫眼与猫叫”。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "General Assessment",
+   "titleZh": "总体评估",
+   "points": [
+    {
+     "en": "Scene safety extras for neuro calls: seizing patients may be incontinent (PPE); unresponsive patients may be overdose scenes with weapons/cash nearby; a whole household reporting headache together should trigger carbon monoxide suspicion, not individual diagnosis.",
+     "zh": "神经科出诊的场景安全要点：抽搐患者可能大小便失禁（做好个人防护）；无反应患者可能是滥用现场，附近可能有武器和现金；如果一家人同时报头痛，第一反应该是怀疑一氧化碳中毒，而不是逐个诊断。",
+     "hard": false
+    },
+    {
+     "en": "AVPU is the quick first pass (Alert to person/place/day, Verbal, Pain, Unresponsive); GCS is the detailed follow-up, scoring eye-opening, verbal response, and motor response separately and summing them. Always report the three sub-scores, not just the total — two patients can share one total GCS with very different pictures.",
+     "zh": "AVPU 是快速初筛（对人物/地点/时间清醒、对语言有反应、对疼痛有反应、无反应）；GCS 是详细复评，睁眼、语言、运动三项分别打分再相加。汇报时永远要报三个分项，不能只报总分——总分相同的两个患者，画像可能完全不同。",
+     "hard": false
+    },
+    {
+     "en": "GCS totals: 15 = no neurologic deficit, 13-14 = mild dysfunction, 9-12 = moderate-to-severe dysfunction, 8 or less = severe dysfunction (lowest possible total score is 3, not 0).",
+     "zh": "GCS 总分区间：15＝无神经功能缺损，13-14＝轻度障碍，9-12＝中至重度障碍，≤8＝重度障碍（最低分是 3 分，不是 0 分）。",
+     "hard": true
+    },
+    {
+     "en": "GCS component ceilings: eye-opening maxes at 4, verbal response at 5, motor response at 6 (4+5+6=15). A worked comparison: a drowsy-but-oriented patient scoring 4/4/6=14 looks very different from a patient who only opens eyes to pain, moans, and withdraws from pain, scoring 2/2/4=8 — same-sounding descriptions, very different numbers.",
+     "zh": "GCS 分项上限：睁眼最高 4 分、语言最高 5 分、运动最高 6 分（4+5+6=15）。对比示例：嗜睡但能认人的患者打 4/4/6=14 分；只对疼痛睁眼、呻吟、疼痛回缩的患者打 2/2/4=8 分——描述听起来接近，数字却差很多。",
+     "hard": true
+    },
+    {
+     "en": "If a limb is physically paralyzed or injured, never record motor response as absent by default — substitute a blink or facial movement (cranial-nerve driven, not limb-dependent) to keep the score meaningful.",
+     "zh": "如果某个肢体本身瘫痪或受伤，运动项不能默认打零分——改用眨眼或面部动作（由颅神经支配、不依赖肢体）来替代评分，避免分数失真。",
+     "hard": false
+    },
+    {
+     "en": "Vital-sign direction is the fast way to separate increased-ICP from shock: ICP pushes blood pressure UP while pulse and respiratory rate fall (Cushing reflex); shock pushes blood pressure DOWN while pulse rises. Opposite directions, opposite diagnoses.",
+     "zh": "快速鉴别 ICP 升高与休克，看生命体征的方向：ICP 升高时血压升、脉搏和呼吸频率降（Cushing 反射）；休克时血压降、脉搏升。方向相反，诊断相反。",
+     "hard": true
+    },
+    {
+     "en": "If ICP-driven bradycardia is present, do NOT treat with atropine or pacing — the systolic hypertension riding alongside it confirms the cause is intracranial, not primary cardiac; the correct move is rapid transport and hospital notification.",
+     "zh": "如果心动过缓是 ICP 引起的，不要用阿托品或起搏处理——同时存在的收缩期高血压证明病因在颅内，不在心脏本身；正确做法是快速转运并提前通知医院。",
+     "hard": true
+    },
+    {
+     "en": "Facial exam clues: ptosis (drooping eyelid) suggests Bell palsy or stroke; ask the patient to smile and check for symmetric droop. Nystagmus (involuntary rhythmic eye movement) points to seizure, vertigo, or MS.",
+     "zh": "面部检查线索：上睑下垂（ptosis）提示 Bell 麻痹或卒中——让患者微笑，看两侧是否对称下垂。眼球震颤（不自主节律性眼动）提示癫痫、眩晕或 MS。",
+     "hard": false
+    },
+    {
+     "en": "Speech deficits: agnosia = cannot NAME a familiar object despite normal vision/language (occipital-temporal link damage); apraxia = cannot demonstrate how to USE a familiar object despite naming it correctly (temporal-frontal link damage). Test with a pen, scissors, or keys — name it, then use it.",
+     "zh": "言语相关缺损：失认症（agnosia）＝视力语言都正常，却叫不出常见物品的名字（枕叶-颞叶连接受损）；失用症（apraxia）＝能正确说出名字，却不知道怎么使用（颞叶-额叶连接受损）。测试方法：拿出笔/剪刀/钥匙，先让患者命名，再让患者演示用法。",
+     "hard": false
+    },
+    {
+     "en": "Three aphasia types by lesion site: receptive (temporal lobe) = speaks fluently but cannot understand — answers factual questions incorrectly; expressive (frontal lobe) = understands fine but cannot produce clear speech — follows commands but can't answer verbally; global = both deficits together, patient thinks clearly but has no way to communicate needs.",
+     "zh": "三种失语按损伤部位分：感觉性失语（颞叶）＝说话流利但听不懂——事实性问题答不对；运动性失语（额叶）＝听得懂但说不清——能执行指令却答不出话；完全性失语＝两者都有，患者思路清楚却完全无法表达需求。",
+     "hard": true
+    },
+    {
+     "en": "Movement exam: hemiparesis (weakness) or hemiplegia (paralysis) on one side suggests stroke; the pronator drift test (eyes closed, arms out, palms up) — one arm drifting down and pronating is a positive sign for stroke via cerebellar/cortical dysfunction.",
+     "zh": "运动检查：单侧无力（偏瘫轻型）或瘫痪（偏瘫）提示卒中；旋前肌漂移试验（闭眼、双臂前平举、掌心向上）——一侧手臂下坠并转向掌心向下即为阳性，提示卒中相关的皮层/小脑功能障碍。",
+     "hard": false
+    },
+    {
+     "en": "Gait/posture clues to specific disease: Parkinson disease = short shuffling steps, feet close together, difficulty turning, falls backward when pushed (bradykinesia + rigidity); cerebral palsy (spastic form) = scissors gait, toes turned in, knees nearly touching.",
+     "zh": "步态/姿势对应特定疾病：帕金森病＝碎步拖行、双脚靠拢、转身困难、被轻推后向后倒（运动迟缓＋强直）；脑瘫（痉挛型）＝剪刀步态、脚趾内翻、双膝几乎相碰。",
+     "hard": false
+    },
+    {
+     "en": "Abnormal movement vocabulary: myoclonus = rapid jerky involuntary contraction (the sleepy head-jerk everyone has felt); dystonia = sustained contracted posture (e.g. foot cramp, spasmodic torticollis); tremor types — rest tremor (Parkinson), intension tremor worsening on reaching for an object (MS), postural tremor from sustained position. Seizure movement vocabulary: tonic = rigid sustained contraction; clonic = rhythmic alternating contraction/relaxation — coarser and less focused than any tremor.",
+     "zh": "异常运动词汇表：肌阵挛＝快速跳动式不自主收缩（打瞌睡时的猛然点头就是）；肌张力障碍＝持续性痉挛姿势（如足部痉挛、痉挛性斜颈）；震颤分型——静止性震颤（帕金森）、意向性震颤在伸手抓物时加重（MS）、姿势性震颤源于长时间维持某一姿势。癫痫发作的运动词汇：强直＝持续性僵硬收缩；阵挛＝节律性收缩与放松交替——比任何震颤都更粗大、更没有章法。",
+     "hard": false
+    },
+    {
+     "en": "Blood glucose thresholds for brain function: normal range 4-7 mmol/L; below 4 mmol/L level of consciousness starts to drop; below 2 mmol/L expect confusion or unconsciousness; below 0.6 mmol/L is typically incompatible with brain function and lethal. Check glucose in EVERY patient with a change in level of consciousness.",
+     "zh": "血糖与脑功能的分界数字：正常范围 4-7 mmol/L；低于 4 mmol/L 意识水平开始下降；低于 2 mmol/L 预期出现意识模糊或昏迷；低于 0.6 mmol/L 通常无法维持脑功能、可致命。任何意识水平改变的患者都必须测血糖。",
+     "hard": true
+    },
+    {
+     "en": "Incontinence is an objective severity marker, not just an embarrassing detail: normal sleep does not cause incontinence, so if it is present, level of consciousness has dropped below sleep depth.",
+     "zh": "大小便失禁不只是尴尬细节，而是客观的严重度标志：正常睡眠不会导致失禁，所以一旦出现失禁，说明意识水平已经跌破了睡眠的深度。",
+     "hard": false
+    },
+    {
+     "en": "Documentation discipline: avoid vague labels like lethargic, obtunded, or 'out of it' — describe active, specific behaviour instead (e.g. 'disoriented to place and day' or 'very slow to respond to painful stimulation'), because vague terms mean different things to different providers.",
+     "zh": "记录纪律：避免用“嗜睡”“昏昏沉沉”“反应迟钝”这类模糊标签——改用具体、可复现的行为描述（例如“对地点和日期定向障碍”“对疼痛刺激反应很慢”），因为模糊词汇在不同人嘴里意思都不一样。",
+     "hard": false
+    },
+    {
+     "en": "12-lead ECG belongs in the workup of any sudden loss of consciousness — cardiac dysrhythmias are a common hidden driver of neurologic-looking presentations by cutting cerebral blood flow.",
+     "zh": "突发意识丧失的患者都应做 12 导联心电图——心律失常是很常见的“伪装成神经系统问题”的幕后推手，机制是切断脑血流。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "General Management",
+   "titleZh": "总体处置",
+   "points": [
+    {
+     "en": "The brain needs three things to keep functioning: oxygen, glucose, and a normal temperature. Every general-management step in this chapter exists to protect one of those three.",
+     "zh": "脑功能的维持只靠三样东西：氧、葡萄糖、正常体温。本章所有总体处置步骤，本质上都是在保护这三样中的一样。",
+     "hard": false
+    },
+    {
+     "en": "Airway/breathing target: keep SpO2 above 90% with airway management and ventilatory support as needed; only hyperventilate a patient who is documented unresponsive AND showing signs of increased ICP with impending herniation — routine hyperventilation of neuro patients is harmful.",
+     "zh": "气道/呼吸目标：用气道管理和辅助通气把 SpO2 维持在 90% 以上；只有在患者确认无反应且已出现 ICP 升高、濒临脑疝的证据时才考虑过度通气——常规给神经科患者过度通气是有害的。",
+     "hard": true
+    },
+    {
+     "en": "IV fluid choice matters: run normal saline or lactated Ringer's, and specifically AVOID dextrose-containing solutions, because they can worsen cerebral edema and confound glucose readings. Support hypotension toward a systolic target of 110-120 mm Hg to protect CPP.",
+     "zh": "补液选择有讲究：用生理盐水或乳酸林格液，明确避免含糖溶液——因为含糖液可能加重脑水肿并干扰血糖读数。低血压时补液支持，目标收缩压 110-120 mmHg 以保住 CPP。",
+     "hard": true
+    },
+    {
+     "en": "ICP-positive management bundle: unless cervical spine injury is a concern, elevate the head 30 degrees; ventilate at 16-20 breaths/min without unnecessary hyperventilation; keep the airway clear but suction gently — vigorous suctioning triggers cough/gag reflexes that themselves raise ICP.",
+     "zh": "ICP 阳性处置组合：除非担心颈椎损伤，否则抬高床头 30°；通气频率 16-20 次/分，避免不必要的过度通气；保持气道通畅但吸引要轻柔——用力吸引会诱发咳嗽/呕吐反射，本身就会推高 ICP。",
+     "hard": true
+    },
+    {
+     "en": "Hypoglycemia correction (book protocol): confirm low glucose, then give dextrose 50% (D50W) 25 g IV push through an 18-gauge-or-larger line (D50W is thick and can extravasate, causing tissue/nerve necrosis); effect onset is 30 seconds to 2 minutes. If no glucometer is available and the patient is unresponsive, a blind half-syringe (12.5 g D50W) is reasonable, then reassess before giving more.",
+     "zh": "低血糖纠正（教材流程）：确认低血糖后，经 18G 或更粗的静脉给 D50W（50% 葡萄糖）25 g 静推（D50W 黏稠，外渗可致组织神经坏死）；起效 30 秒至 2 分钟。没有血糖仪且患者无反应时，可盲给半支（12.5 g D50W），再评估后决定是否追加。",
+     "hard": true
+    },
+    {
+     "en": "Glucagon is the no-IV-access fallback for hypoglycemia: 0.5-1 mg IM/subcut, expect a response within 20 minutes if liver glycogen stores are adequate; repeat dosing described inconsistently in the source text (up to 2-3 doses) — follow local protocol on repeat limits.",
+     "zh": "胰高血糖素是没有静脉通路时的低血糖备选方案：0.5-1 mg 肌注/皮下，如果肝糖原储备够，20 分钟内应见反应；原书对重复次数的表述前后不一致（最多 2-3 次不等）——追加次数以当地规程为准。",
+     "hard": true
+    },
+    {
+     "en": "Thiamine (vitamin B1) before or with dextrose in malnourished/chronic-alcohol patients: 50 mg slow IV plus 50 mg IM — they may lack the B1 needed to metabolize dextrose via the Krebs cycle (Wernicke encephalopathy risk); push too fast and it can cause hypotension.",
+     "zh": "营养不良/长期酗酒患者给糖前后要补硫胺素（维生素 B1）：50 mg 缓慢静推 + 50 mg 肌注——他们体内 B1 不够，无法通过 Krebs 循环代谢葡萄糖（有 Wernicke 脑病风险）；推得太快会导致低血压。",
+     "hard": true
+    },
+    {
+     "en": "Hyperglycemia in the field has no safe prehospital fix — insulin risks overcorrecting into hypoglycemia; the practical move is BP support plus fluids for the dehydration that often rides along with hyperglycemia, and awareness that hyperglycemia worsens outcomes in stroke patients. For a conscious patient who can protect the airway, oral glucose is an option too: sip test with water, then a tube of glucose (or icing/chocolate/sugared juice as substitutes) — slower-acting than IV/IM, supervise for aspiration.",
+     "zh": "院前对高血糖没有安全的纠正手段——胰岛素有矫枉过正变成低血糖的风险；实际做法是支持血压、给液体纠正常伴随高血糖的脱水，同时要意识到高血糖会加重卒中患者的预后。清醒且能保护气道的患者也可以口服葡萄糖：先喂一小口水测试吞咽，再给一支口服葡萄糖（或糖霜/巧克力/加糖果汁替代）——起效比静脉/肌注慢，全程要防误吸。",
+     "hard": false
+    },
+    {
+     "en": "Naloxone (book protocol) for suspected opioid overdose: initial 0.4-2.0 mg IV push, additional doses may be needed and can exceed 10 mg total for potent synthetic opioids; effect can be dramatic — GCS 3 to GCS 15 within 30 seconds — so be ready for a fearful or combative wake-up, and prefer small titrated increments.",
+     "zh": "疑似阿片过量的纳洛酮处置（教材流程）：首剂 0.4-2.0 mg 静推，可能需要追加，遇到强效合成阿片总量可能超过 10 mg；起效可能非常戏剧化——30 秒内 GCS 从 3 冲到 15——要提前防范患者惊恐或躁动，倾向小剂量滴定给药。",
+     "hard": true
+    },
+    {
+     "en": "Naloxone airway sequencing quirk: for a bradypneic, cyanotic overdose patient, secure the airway and ventilate WITHOUT rushing to intubate first — establish IV, titrate naloxone carefully, because a patient who wakes suddenly with a tube in place may violently self-extubate and injure the airway.",
+     "zh": "纳洛酮的气道处理有个反直觉点：面对呼吸抑制、发绀的过量患者，先保气道通气，但不要急着插管——先建立静脉通路、小心滴定纳洛酮，因为一旦插着管的患者突然清醒，可能猛烈自行拔管、伤到气道。",
+     "hard": false
+    },
+    {
+     "en": "AEIOU-TIPS is the recall mnemonic for the broad differential of altered level of consciousness: Alcohol/acidosis, Epilepsy, Insulin, Overdose, Uremia, Trauma, Infection, Psychosis, Stroke.",
+     "zh": "AEIOU-TIPS 是意识改变鉴别诊断的记忆口诀：酒精/酸中毒、癫痫、胰岛素（低血糖）、药物过量、尿毒症、创伤、感染、精神病、卒中。",
+     "hard": true
+    },
+    {
+     "en": "Temperature management follows the same low-tech logic both directions: for suspected hypothermia, cover the patient and turn up cabin heat; for suspected hyperthermia, remove clothing, cover with a sheet, and turn cabin heat off. Avoid axillary thermometry — it is unreliable.",
+     "zh": "体温处置两个方向逻辑一致：疑似低体温——盖好毯子、车厢升温；疑似高体温——脱衣、盖床单、车厢关暖气。避免用腋温——不可靠。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Stroke & Transient Ischemic Attack",
+   "titleZh": "卒中与短暂性脑缺血发作",
+   "points": [
+    {
+     "en": "'Time is brain': the longer a CVA (cerebrovascular accident/stroke) goes untreated, the worse the outcome. About 4 in 5 strokes (roughly 80%) are ischemic (vessel blocked, self-limiting to the territory beyond the blockage); the remaining ~20% are hemorrhagic (bleeding into the cranium, tends to WORSEN over time as ICP climbs).",
+     "zh": "“时间就是大脑”：卒中拖得越久，预后越差。约五分之四（约 80%）的卒中是缺血性（血管堵塞，损伤局限于堵塞远端）；剩下约 20% 是出血性（颅内出血，随着 ICP 升高病情会持续恶化）。",
+     "hard": true
+    },
+    {
+     "en": "Hemorrhagic stroke's hallmark complaint is 'the worst headache of my life,' often followed by speech loss, worsening arousal, and signs of rising ICP — that combination should push your suspicion firmly toward bleed rather than clot.",
+     "zh": "出血性卒中的标志性主诉是“这辈子最严重的头痛”，常伴随言语丧失、意识水平恶化、ICP 升高体征——这组合应该让你把怀疑方向坚定地推向出血而不是血栓。",
+     "hard": false
+    },
+    {
+     "en": "Stroke/TIA epidemiology: patients are usually over 65; men have more strokes but women die from them more often; First Nations and Inuit populations experience stroke at a higher rate than the general population.",
+     "zh": "卒中/TIA 流行病学：患者通常超过 65 岁；男性发病更多，但女性死于卒中的比例更高；原住民（First Nations）和因纽特人群卒中发生率高于总人口。",
+     "hard": true
+    },
+    {
+     "en": "Stroke presentation spans language (slurred speech, aphasia, agnosia, apraxia), movement (hemiparesis, hemiplegia, arm drift, facial droop, ptosis, ataxia), and sensation (headache in hemorrhagic stroke, sudden blindness, sudden one-sided paraesthesia) — plus possible LOC decline, seizures, coma, and hypertension.",
+     "zh": "卒中表现横跨三个维度：语言（口齿不清、失语、失认、失用）、运动（偏瘫轻型/重型、手臂漂移、面部下垂、上睑下垂、共济失调）、感觉（出血性卒中常伴头痛、突发失明、突发单侧感觉异常）——外加可能的意识水平下降、抽搐、昏迷和高血压。",
+     "hard": false
+    },
+    {
+     "en": "Hospital fibrinolytic therapy for ischemic stroke must be started within 4.5 hours of symptom onset — which is exactly why establishing a clear last-known-normal time in the field is a critical, not optional, data point.",
+     "zh": "医院给缺血性卒中溶栓治疗必须在症状发作 4.5 小时内启动——这正是院前必须问清“末次正常时间”的原因，这不是可选项，是关键数据点。",
+     "hard": true
+    },
+    {
+     "en": "Cincinnati Prehospital Stroke Scale: three checks — facial droop (ask to smile), arm drift (close eyes, hold both arms out palms-up for 10 seconds), and abnormal speech (repeat a test sentence). ANY one abnormal finding carries about a 72% probability of stroke.",
+     "zh": "辛辛那提院前卒中量表：三项检查——面部下垂（要求微笑）、手臂漂移（闭眼、双臂前平举掌心向上维持 10 秒）、言语异常（复述测试句）。任意一项阳性，卒中概率约 72%。",
+     "hard": true
+    },
+    {
+     "en": "FAST-VAN (developed for identifying emergent large-vessel occlusion, ELVO, candidates for embolectomy): the FAST layer is Face droop, Arm weakness, Speech trouble, Time of onset; if any FAST item is positive, add the VAN check — Visual disturbance, Aphasia, Neglect — because a positive VAN pattern flags a large-vessel stroke that may need an endovascular-capable centre rather than the nearest hospital.",
+     "zh": "FAST-VAN（用于识别可能需要取栓的大血管闭塞型卒中，ELVO）：FAST 层＝面部下垂（Face）、手臂无力（Arm）、言语障碍（Speech）、发作时间（Time）；只要 FAST 任一项阳性，就加做 VAN 检查——视觉障碍（Vision）、失语（Aphasia）、忽视（Neglect）——VAN 阳性提示可能是需要转去具备血管内取栓能力医院的大血管卒中，而不是就近医院。",
+     "hard": true
+    },
+    {
+     "en": "An Ontario prompt-card model (cited in the book as an example system, not a universal number) sets a 2-hour transport window from a clearly determined onset/last-normal time to reach a designated stroke centre, and excludes patients with an uncorrected airway/breathing/circulation problem, symptoms that resolved before assessment, blood glucose 3 mmol/L or less, a seizure at onset, GCS under 10, or terminal/palliative status.",
+     "zh": "书中援引的安大略提示卡模型（作为示例系统，不代表全国统一数字）：从明确的发作/末次正常时间起 2 小时内能送达指定卒中中心才启动快速通道；排除标准包括气道/呼吸/循环未纠正、评估前症状已缓解、血糖≤3 mmol/L、发作时伴癫痫、GCS<10、终末期/姑息患者。",
+     "hard": true
+    },
+    {
+     "en": "Oxygen target for suspected stroke: titrate to SpO2 94-99%, confirm the reading is accurate, and prefer a nasal cannula over high-flow if the patient is stable — do not automatically max out oxygen delivery.",
+     "zh": "疑似卒中的氧疗目标：滴定到 SpO2 94-99%，确认读数准确，患者稳定时首选鼻导管而非高流量——不要一律给到最大氧流量。",
+     "hard": true
+    },
+    {
+     "en": "Do NOT give aspirin for suspected stroke in the field: ASA helps ischemic stroke but actively harms hemorrhagic stroke, and you cannot tell the two apart without CT/MRI — withhold until imaging clears the diagnosis.",
+     "zh": "疑似卒中院前禁止给阿司匹林：ASA 对缺血性卒中有利，但对出血性卒中有害，而没有 CT/MRI 根本分不清是哪一种——影像排除前一律不给。",
+     "hard": true
+    },
+    {
+     "en": "A TIA (transient ischemic attack) can present with any stroke sign but resolves within hours with no lasting brain damage — meaning you may arrive to a patient who now looks completely normal. More than one-third of TIA patients go on to have a full stroke soon after, so a normal-looking patient is NOT a low-priority patient.",
+     "zh": "TIA（短暂性脑缺血发作）可以出现任何卒中体征，但数小时内自行缓解、不留脑损伤——意味着你到场时患者可能已经看起来完全正常。超过三分之一的 TIA 患者会在不久后发生真正的卒中，所以“看起来正常”绝不等于“低优先级”。",
+     "hard": true
+    },
+    {
+     "en": "Hypertension is the number-one PREVENTABLE cause of both stroke and TIA — worth reinforcing to the patient as part of transport persuasion and discharge-style counselling.",
+     "zh": "高血压是卒中和 TIA 头号可预防病因——在劝说患者接受转运、给予出院式健康建议时，这一点值得强调。",
+     "hard": true
+    },
+    {
+     "en": "Stroke documentation checklist: exact time last seen normal, exact time symptoms began, any change en route, and the specific reason a particular receiving hospital was chosen — all four data points shape the hospital's treatment-window decision.",
+     "zh": "卒中记录清单：末次正常的确切时间、症状开始的确切时间、转运途中有无变化、选择该医院的具体理由——这四项数据都会影响医院的治疗时间窗决策。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Seizure, Status Epilepticus & Syncope",
+   "titleZh": "癫痫发作、癫痫持续状态与晕厥",
+   "points": [
+    {
+     "en": "Seizure causes span the map — abscess, alcohol, birth defect, CNS infection, brain trauma, diabetes, fever, eclampsia, idiopathic, missed anticonvulsant doses, recreational drugs (cocaine), stroke/TIA, systemic infection, tumour, uremia — so a first-time seizure always warrants a search for the trigger, not just symptom control.",
+     "zh": "癫痫病因覆盖面很广——脑脓肿、酒精、出生缺陷、中枢感染、脑外伤、糖尿病、发热、子痫、特发性、抗癫痫药漏服、可卡因等娱乐性药物、卒中/TIA、全身感染、肿瘤、尿毒症——所以首次发作永远要找诱因，不能只顾控制症状。",
+     "hard": false
+    },
+    {
+     "en": "Two top-level buckets: generalized (large brain areas — tonic-clonic, absence, pseudoseizure) vs partial/focal (limited area — simple partial affecting one body region, complex partial with subtle LOC changes).",
+     "zh": "两大类：全面性发作（大范围脑区受累——强直阵挛、失神、假性发作）vs 局灶性发作（局限脑区——单纯部分性影响单一身体区域，复杂部分性表现为轻微意识改变）。",
+     "hard": false
+    },
+    {
+     "en": "Tonic-clonic seizure sequence: aura (warning sensation) -> loss of consciousness -> tonic phase (whole-body rigidity) -> hypertonic phase (arched, rigid back) -> clonic phase (chaotic alternating muscle contraction) -> post-seizure muscle relaxation with possible eye-rolling -> postictal period (minutes to hours of confusion, aphasia, emotional lability, fatigue, sometimes headache) before baseline mentation returns. Brief apnea during the event is normal; assist ventilation only if it persists beyond 30 seconds.",
+     "zh": "强直阵挛发作的标准顺序：先兆（预警感觉）→意识丧失→强直期（全身僵硬）→过度伸张期（背部弓起僵硬）→阵挛期（肌肉混乱交替收缩）→发作后肌肉松弛、可能眼球上翻→发作后期（数分钟到数小时的意识模糊、失语、情绪波动、疲乏，有时伴头痛），之后才逐渐恢复到基线意识。过程中短暂呼吸暂停属正常；仅在超过 30 秒才需辅助通气。",
+     "hard": false
+    },
+    {
+     "en": "Absence seizures (typically children): brief freeze with little/no movement, lasting only a few seconds, NO postictal period, no confusion afterward — can be triggered by flashing lights or hyperventilation.",
+     "zh": "失神发作（多见于儿童）：短暂僵住、几乎没有动作，只持续几秒钟，没有发作后期，事后不会意识模糊——可由闪光或过度通气诱发。",
+     "hard": true
+    },
+    {
+     "en": "Partial seizures can march: a Jacksonian march spreads like ripples from one point — e.g. left-hand shaking that travels to the arm, shoulder, head, then the opposite arm and hand before stopping. Simple partial = one body area moves or feels different, patient stays aware; complex partial = subtle consciousness change, possible confusion or hallucination, rarely full unresponsiveness.",
+     "zh": "局灶性发作可能“游走”：Jacksonian 行进像涟漪一样从一点扩散——例如左手抖动扩散到左臂、肩、头，再到对侧手臂和手才停止。单纯部分性＝某一身体区域运动或感觉异常，患者神志清楚；复杂部分性＝轻微意识改变，可能出现意识模糊或幻觉，很少完全无反应。",
+     "hard": false
+    },
+    {
+     "en": "Pseudoseizures (psychogenic nonepileptic events) can look identical to tonic-clonic seizures including a postictal-like phase, but the driver is psychiatric, the patient is not faking on purpose, and movement is often more organized (side-to-side head motion, bicycle-pedalling legs) — treat exactly like any other seizure in the field; do not dismiss it.",
+     "zh": "假性发作（心因性非癫痫发作）外观可以和强直阵挛发作一模一样，甚至有类似发作后期，但根源是精神心理性的，患者并非故意装病，动作往往更“有条理”（头部左右摆动、双腿像骑车般踩动）——院前处理和其他癫痫完全一样，不能因此轻视。",
+     "hard": false
+    },
+    {
+     "en": "Field seizure care: never restrain the convulsing movements, never put anything in the mouth (remove any bystander-placed object like a spoon), pad the environment to prevent injury, correct hypoglycemia with IV glucose if present, and default to transport unless a clear, easily reversible cause is found and the patient has a known seizure history.",
+     "zh": "现场癫痫处置：绝不按压制止抽搐动作，绝不往口中塞任何东西（有旁人塞进去的勺子等要取出），铺垫防撞伤，若有低血糖用静脉葡萄糖纠正，除非找到明确、可逆的诱因且患者有明确癫痫病史，否则默认转运。",
+     "hard": false
+    },
+    {
+     "en": "Stroke-vs-seizure discriminators: seizure movement is typically generalized and stops within 1-2 minutes with slow return of orientation; stroke weakness is typically lateralized (one-sided) and may fully resolve (as in TIA) or progressively worsen. A seizure that breaks the patient's OWN typical pattern is a red flag for an underlying stroke.",
+     "zh": "卒中 vs 癫痫的鉴别点：癫痫发作通常是全身性的，1-2 分钟内停止，定向力恢复较慢；卒中的无力通常是单侧的，可能完全缓解（如 TIA）或逐渐加重。如果一次发作打破了患者自己一贯的发作模式，要高度警惕背后有卒中。",
+     "hard": true
+    },
+    {
+     "en": "Status epilepticus is defined (with an acknowledged arbitrary cutoff) as a seizure lasting more than 4-5 minutes, or repeated seizures without recovery of consciousness in between — though some research places the true physiologic threshold closer to 20-30 minutes of uninterrupted seizing. Mortality in refractory status epilepticus can run as high as 70%. Mechanism: seizing neurons run hypermetabolic, burning glucose and dumping lactic acid; short seizures cause no lasting harm, but a prolonged one outstrips the body's ability to clear waste and resupply glucose, killing neurons outright.",
+     "zh": "癫痫持续状态的定义（明知是人为划定的分界）：单次发作超过 4-5 分钟，或反复发作之间意识始终未恢复——但也有研究认为真正的生理阈值接近连续抽搐 20-30 分钟。难治性癫痫持续状态的死亡率可高达 70%。机制：抽搐时神经元处于超代谢状态，狂烧葡萄糖、堆积乳酸；短暂发作不留后遗症，但持续太久身体清废物、补葡萄糖的速度跟不上，神经元会直接死亡。",
+     "hard": true
+    },
+    {
+     "en": "Book-level benzodiazepine dosing for seizure control (NOT part of BC EMR/PCP scope — see BC alert): midazolam 0.1 mg/kg IV (max 5 mg) or 0.2 mg/kg IM (max 10 mg), IV/IO pushed slowly over 2 minutes; lorazepam 0.05 mg/kg IV (max 4 mg); diazepam 5 mg IV, never mixed into dextrose or lactated Ringer's solution. If two doses fail to stop the seizure, contact medical control; be ready to fully manage the airway since these drugs can cause respiratory depression.",
+     "zh": "教材层面的苯二氮卓类止痫剂量（不在 BC EMR/PCP 用药范围内，见 BC 提示框）：咪达唑仑 0.1 mg/kg 静注（最大 5 mg）或 0.2 mg/kg 肌注（最大 10 mg），静脉/骨髓腔缓推 2 分钟；劳拉西泮 0.05 mg/kg 静注（最大 4 mg）；地西泮 5 mg 静注，禁止与含糖或乳酸林格液混合。两剂无效需联系医疗指导；这类药可致呼吸抑制，要随时准备接管气道。",
+     "hard": true
+    },
+    {
+     "en": "Syncope (fainting) is a brief, self-terminating loss of consciousness with loss of postural tone, accounting for roughly 3% of ED visits; because the brain cannot store glucose, even a 3-5 second interruption in cerebral blood flow is enough to drop a patient, and the whole episode typically resolves in under 60 seconds.",
+     "zh": "晕厥＝短暂、自行终止的意识丧失伴体位性肌张力丧失，约占急诊就诊量的 3%；因为大脑无法储存葡萄糖，脑血流哪怕只中断 3-5 秒也足以让人倒下，整个过程通常在 60 秒内自行恢复。",
+     "hard": true
+    },
+    {
+     "en": "Syncope-vs-seizure quick read: syncope classically starts from STANDING with dizziness/visual change/weakness prodrome, relaxed body during the event, and quick return of orientation; seizure can start from any position, has an aura (odd taste, lights, sounds, twitching), generalized movement during the event, and slow return of orientation.",
+     "zh": "晕厥 vs 癫痫速判：晕厥经典地发生在站立位，前驱症状是头晕/视觉改变/无力，发作时身体是松弛的，恢复定向力快；癫痫可以在任何体位发生，有先兆（异味感、闪光、异响、抽动），发作时是全身性动作，恢复定向力慢。",
+     "hard": false
+    },
+    {
+     "en": "Syncope field care: rule out trauma from the fall, take C-spine precautions as indicated, check glucose, monitor cardiac rhythm continuously, support blood pressure with fluids/vasopressors if the cause points that way, and transport — you will not know the true cause in the field, so do not assume it is benign.",
+     "zh": "晕厥现场处置：排查跌倒相关外伤、按指征做颈椎防护、测血糖、持续心电监护，如病因指向循环问题就用补液/升压药支持血压，并转运——院前无法确定真正病因，所以不能默认它是良性的。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Headache, Abscess, Neoplasm & Dystonia",
+   "titleZh": "头痛、脑脓肿、颅内肿瘤与肌张力障碍",
+   "points": [
+    {
+     "en": "The brain and skull carry no pain receptors — headache pain actually comes from the scalp, face, blood vessels, and neck/head muscles, which is why headache alone never tells you what's happening inside the cranium.",
+     "zh": "脑组织和颅骨本身没有痛觉感受器——头痛的疼痛其实来自头皮、面部、血管和颈头部肌肉，这也是为什么单靠“头痛”这个症状永远判断不出颅内到底发生了什么。",
+     "hard": false
+    },
+    {
+     "en": "Four headache patterns to tell apart: tension (most common; bilateral, dull/squeezing, tied to stress); migraine (unilateral throbbing that may spread, aura possible, nausea/vomiting, photophobia, can last days); cluster (rare, one-sided, sharp/excruciating around the eye, episodes last 30-45 minutes but recur several times a day for a stretch); sinus (facial pressure worse bending forward or on waking, with nasal discharge/sore throat).",
+     "zh": "四种头痛类型鉴别：紧张性（最常见；双侧、钝痛/压迫感，与压力相关）；偏头痛（单侧搏动样痛可扩散，可有先兆、恶心呕吐、畏光，可持续数天）；丛集性头痛（罕见，单侧、眼周锐痛/剧痛，单次发作 30-45 分钟，但一天可反复发作数次）；鼻窦性头痛（前倾或晨起时面部压痛加重，伴鼻涕/咽痛）。",
+     "hard": true
+    },
+    {
+     "en": "'Worst headache of my life' is the classic verbal red flag for hemorrhagic stroke — treat any headache with concerning associated findings as a possible stroke until proven otherwise, and darken/quiet the transport environment when tolerated rather than defaulting to lights and sirens.",
+     "zh": "“这辈子最严重的头痛”是出血性卒中的经典语言警号——任何伴有可疑体征的头痛都应先按可能的卒中处理，直到排除；能做到时把转运环境调暗调静，而不是习惯性拉警报灯。",
+     "hard": false
+    },
+    {
+     "en": "Brain abscess = infection (from sinuses, throat, gums, ears, or direct head trauma) walled off by the immune system, damaging tissue AND raising ICP as it grows. Typical patient is under 50 with gradual onset of fever, localized persistent headache, drowsiness, confusion, seizures, nausea/vomiting, and focal deficits. Field care is supportive plus seizure precautions — watch closely for ICP signs.",
+     "zh": "脑脓肿＝感染（源自鼻窦、咽喉、牙龈、耳部或头部直接外伤）被免疫系统包裹形成，随着增大既损伤组织又推高 ICP。典型患者不到 50 岁，起病渐进——发热、局限性持续头痛、嗜睡、意识模糊、抽搐、恶心呕吐、局灶性神经缺损。现场处置以支持治疗＋癫痫防护为主——密切盯防 ICP 体征。",
+     "hard": false
+    },
+    {
+     "en": "CNS neoplasm: primary tumours start in nervous tissue itself (rare, since mature neurons rarely divide); metastatic tumours arrive via blood/lymph, most often from lung or breast cancer. Presentation is headache, nausea/vomiting, seizures, mental-status change, and stroke-like signs, with speed depending on growth rate and location — some patients have months of headache, others a sudden first seizure with no warning.",
+     "zh": "中枢神经系统肿瘤：原发性肿瘤起源于神经组织本身（少见，因成熟神经元很少分裂）；转移性肿瘤经血/淋巴而来，最常见来源是肺癌和乳腺癌。表现为头痛、恶心呕吐、抽搐、精神状态改变、类卒中体征，进展速度取决于生长速度和位置——有人头痛拖了数月，有人毫无预兆突发首次抽搐。",
+     "hard": false
+    },
+    {
+     "en": "Dystonia = involuntary, often painful sustained muscle contractions causing bizarre postures; onset is usually before age 40. Secondary dystonia can follow antipsychotic medication (treat with diphenhydramine); primary dystonia (e.g. spasmodic torticollis, twisting the neck to one side) does NOT respond to diphenhydramine. Field priority is ruling out seizure, stroke, or a drug reaction before assuming primary dystonia.",
+     "zh": "肌张力障碍＝不自主、常伴疼痛的持续性肌肉收缩，造成怪异姿势；通常在 40 岁前起病。继发性（抗精神病药诱发）可用苯海拉明缓解；原发性（如痉挛性斜颈，颈部扭向一侧）对苯海拉明无效。现场处置的首要任务是先排除癫痫、卒中或药物反应，再考虑原发性肌张力障碍。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Chronic & Degenerative Neurologic Conditions",
+   "titleZh": "慢性与退行性神经系统疾病",
+   "points": [
+    {
+     "en": "Build a 'patient profile' for each chronic condition — typical age, sex, onset speed, hallmark signs — and use it as your flash-card structure; profiles below follow that pattern.",
+     "zh": "给每种慢性病建一张“患者画像”——典型年龄、性别、起病速度、标志性体征——把它当成记忆卡片的骨架；以下条目都按这个套路写。",
+     "hard": false
+    },
+    {
+     "en": "Multiple sclerosis (MS): autoimmune attack on CNS myelin, more common in temperate than tropical regions, typically diagnosed age 20-50. Pattern of attack-and-remission; first attack often brings double/blurred vision, plus possible weakness, sensory loss, ataxia, intension tremor, speech/vision disturbance, vertigo, bladder/bowel or sexual dysfunction, and fatigue. No cure — field care is purely supportive.",
+     "zh": "多发性硬化（MS）：自身免疫攻击中枢神经髓鞘，温带比热带地区多见，典型确诊年龄 20-50 岁。病程呈发作-缓解交替；首次发作常见复视/视物模糊，也可有无力、感觉丧失、共济失调、意向性震颤、言语/视觉障碍、眩晕、大小便或性功能障碍、疲劳。无法治愈——现场处置纯支持性。",
+     "hard": true
+    },
+    {
+     "en": "Parkinson disease: damage to the substantia nigra depletes dopamine, average onset age 60, more men affected. Classic tetrad — tremor, postural instability, rigidity, bradykinesia — plus depression, swallowing/speech difficulty, and fatigue; late-stage risk is death from aspiration, pneumonia, falls, or immobility complications. Levodopa can temporarily restore dopamine in hospital care.",
+     "zh": "帕金森病：黑质受损导致多巴胺耗竭，平均起病年龄 60 岁，男性更多见。经典四联征——震颤、姿势不稳、强直、运动迟缓——外加抑郁、吞咽/言语困难、疲劳；晚期死因多是误吸、肺炎、跌倒或长期卧床并发症。院内可用左旋多巴暂时恢复多巴胺水平。",
+     "hard": true
+    },
+    {
+     "en": "Trigeminal neuralgia (tic douloureux): an artery irritating the trigeminal (5th cranial) nerve grinds off its myelin, producing severe shock-like/stabbing one-sided facial pain triggered by touch, speaking, eating, or wind. Typical patient is over 50, more women than men. No motor deficit (facial droop and airway trouble are NOT features). Field caution: even blow-by oxygen or a mask can trigger an attack by touching the face — treat pain and limit conversation.",
+     "zh": "三叉神经痛：动脉刺激三叉神经（第五对颅神经），磨损其髓鞘，造成触碰、说话、进食、吹风即可诱发的单侧闪电样/刀割样剧痛。典型患者超过 50 岁，女性多于男性。无运动缺损（面部下垂和气道问题不是这个病的特征）。现场提醒：连吹气给氧或面罩都可能因触碰面部诱发发作——以镇痛和减少交谈为主。",
+     "hard": true
+    },
+    {
+     "en": "Bell palsy: sudden facial-nerve (7th cranial) paralysis, often after a minor preceding infection, easily mistaken for stroke — ptosis, facial droop/weakness, drooling, loss of taste. Strikes all races/sexes equally, most common age 15-60, usually resolves within about 2 weeks. Field rule: when in doubt, work it up as a stroke, not Bell palsy.",
+     "zh": "Bell 麻痹：面神经（第七对颅神经）突发瘫痪，常在轻微感染后发生，极易误认成卒中——上睑下垂、面部下垂/无力、流涎、味觉丧失。不分种族性别，好发 15-60 岁，通常约 2 周内自行缓解。现场原则：拿不准就先按卒中处理，不要先入为主当 Bell 麻痹。",
+     "hard": true
+    },
+    {
+     "en": "Amyotrophic lateral sclerosis (ALS / Lou Gehrig disease): progressive death of voluntary motor neurons with cognition fully preserved, more common in middle-aged men. Typical survival after diagnosis is 3-5 years; late disease needs ventilatory support, and death is usually from respiratory infection or immobility complications. Field care: assess swallowing/airway closely, expect home ventilators/feeding pumps/IV ports, and coordinate disconnection with medical direction plus family/caregiver guidance if transport requires it.",
+     "zh": "肌萎缩侧索硬化（ALS / 渐冻症）：随意运动神经元进行性死亡，认知完全保留，中年男性更多见。确诊后典型生存期 3-5 年；晚期需呼吸机支持，死因多为呼吸道感染或长期卧床并发症。现场处置：密切评估吞咽/气道，患者常带家用呼吸机/喂食泵/长期静脉通路，转运需断开设备时要联系医疗指导并请教家属/照护者。",
+     "hard": true
+    },
+    {
+     "en": "Guillain-Barre syndrome: ascending weakness/tingling starting in the legs and climbing to trunk and arms, often after a minor respiratory or GI infection, thought to be an immune attack on peripheral myelin. Can progress from walking normally to needing a ventilator within hours; maximum weakness typically hits within 2 weeks. About one-third of patients still have some residual weakness at 3 years. Watch respiratory status closely and continuous ETCO2 can flag impending failure.",
+     "zh": "格林-巴利综合征：上升性无力/麻木从下肢开始向躯干和上肢蔓延，常在轻微呼吸道或消化道感染后出现，被认为是免疫攻击周围神经髓鞘所致。可能从正常行走恶化到需要呼吸机只需几小时；通常 2 周内达到最重无力程度。约三分之一患者 3 年后仍有残留无力。要密切盯防呼吸状态，持续呼气末 CO2 监测可提示呼吸衰竭将至。",
+     "hard": true
+    },
+    {
+     "en": "Poliomyelitis: fecal-oral viral infection attacking motor neurons in brain/brainstem, largely eliminated in Canada since the 1955 Salk vaccine; wild poliovirus cases fell more than 99% worldwide since 1988 (from an estimated 350,000 cases across 125+ countries down to 33 reported cases in 2018, confined by early 2019 to just two countries). Survivors decades later can develop post-polio syndrome — renewed weakness/fatigue/swallowing trouble in the areas originally affected, from overworked compensating neurons finally failing.",
+     "zh": "脊髓灰质炎（小儿麻痹症）：粪-口途径病毒感染攻击脑/脑干运动神经元，加拿大自 1955 年 Salk 疫苗问世后已基本消灭；全球野生脊灰病毒病例自 1988 年以来下降超过 99%（从当年 125 多个国家约 35 万例，降到 2018 年仅 33 例报告病例，到 2019 年初仅剩两个国家仍有病例）。多年后幸存者可能出现脊灰后综合征——当年受累部位重新出现无力/疲劳/吞咽困难，原因是长期代偿的神经元终于撑不住了。",
+     "hard": true
+    },
+    {
+     "en": "Cerebral palsy (CP): non-progressive developmental brain damage (commonly frontal lobe); perinatal hypoxia, once thought the main cause, actually explains fewer than 10% of cases (infection, jaundice, Rh incompatibility also implicated). Higher risk with low birth weight, prematurity, breech delivery, or multiples. Spastic CP (70-80% of cases) produces a scissors gait — legs stiff, knees nearly touching, feet turned inward.",
+     "zh": "脑瘫（CP）：非进行性发育性脑损伤（常累及额叶）；曾被认为是主因的围产期缺氧，实际只能解释不到 10% 的病例（感染、黄疸、Rh 血型不合也是致病因素）。低出生体重、早产、臀位分娩、多胎妊娠风险更高。痉挛型脑瘫（占 70-80%）表现为剪刀步态——双腿僵直、双膝几乎相碰、脚尖内翻。",
+     "hard": true
+    },
+    {
+     "en": "Spina bifida: neural tube fails to close, leaving part of the spinal cord outside its normal location; severity ranges from spina bifida occulta (mild, often unnoticed) to myelomeningocele (cord tissue fully outside the vertebral column and skin). Severe forms disrupt CSF flow, causing hydrocephalus with rising ICP and seizures. Field note: many patients have LATEX ALLERGIES and may carry feeding tubes, shunts, or ventilatory support — coordinate with family/caregivers before transport.",
+     "zh": "脊柱裂：神经管未能闭合，部分脊髓留在正常位置之外；严重程度从隐性脊柱裂（轻微、常无人察觉）到脊髓脊膜膨出（脊髓组织完全暴露在椎管和皮肤之外）不等。重症会阻断脑脊液循环，导致脑积水、ICP 升高和抽搐。现场提示：不少患者有乳胶过敏，且可能带喂食管、分流管或呼吸支持设备——转运前先和家属/照护者对接。",
+     "hard": false
+    },
+    {
+     "en": "Myasthenia gravis: antibodies attack acetylcholine receptors, weakening muscles (classically eyes/eyelids/face first, sometimes swallowing, speech, or limbs) with NO sensory loss. Typically affects women under 40 and men over 60. Myasthenic crisis = sudden respiratory-muscle weakness from an infection, stress, or medication trigger, risking hypoxia — be ready to assist ventilation.",
+     "zh": "重症肌无力：抗体攻击乙酰胆碱受体，导致肌无力（经典先累及眼/眼睑/面部，也可累及吞咽、言语或四肢），无感觉丧失。典型累及 40 岁以下女性和 60 岁以上男性。肌无力危象＝感染、应激或药物诱发的突发呼吸肌无力，有缺氧风险——要随时准备辅助通气。",
+     "hard": true
+    },
+    {
+     "en": "Alzheimer disease: the most common cause of dementia — progressive, organic, irreversible neuron death affecting personality, memory, and thinking. No definitive treatment exists; field care is standard supportive care, with extra attention to establishing the patient's true cognitive BASELINE from family rather than assuming confusion is new.",
+     "zh": "阿尔茨海默病：最常见的痴呆病因——进行性、器质性、不可逆的神经元死亡，影响性格、记忆和思维能力。没有根治疗法；现场处置为标准支持性照护，重点是向家属确认患者真实的认知基线，而不是想当然地把意识模糊当成新发症状。",
+     "hard": false
+    },
+    {
+     "en": "Peripheral neuropathy (diabetic form as the model): high glucose damages peripheral nerve signalling over months to years, typically in diabetics over 50, more men than women — numbness, burning, pain, paraesthesia, and eventual loss of sensation in the feet. Field care is supportive; hospital management leans on antidepressants/anticonvulsants for nerve pain.",
+     "zh": "周围神经病变（以糖尿病型为代表）：高血糖经数月到数年损伤周围神经信号传导，多见于 50 岁以上糖尿病患者，男性多于女性——麻木、灼烧感、疼痛、感觉异常，最终可能丧失足部感觉。现场以支持性处置为主；院内治疗靠抗抑郁药/抗惊厥药控制神经痛。",
+     "hard": false
+    },
+    {
+     "en": "Muscular dystrophy (MD): genetic muscle-degeneration disorder (NOT primarily neurologic), diagnosed at age 2-5, occurs only in males. Duchenne is the most common form — progressive weakness plus cardiac/respiratory muscle involvement, with life expectancy rarely past the mid-20s, death usually from pneumonia or cardiogenic shock. Field care: BP/fluid support for a failing heart, ventilatory support in severe cases.",
+     "zh": "肌营养不良（MD）：遗传性肌肉退化疾病（本质不是神经系统病），确诊年龄 2-5 岁，只发生在男性身上。杜氏型最常见——进行性无力并累及心肌/呼吸肌，预期寿命很少超过 20 多岁，死因多是肺炎或心源性休克。现场处置：心功能衰竭时给血压/液体支持，重症需呼吸支持。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "GCS total score bands",
+   "itemZh": "GCS 总分区间",
+   "value": "15 无缺损；13-14 轻度；9-12 中重度；≤8 重度（最低 3 分）"
+  },
+  {
+   "itemEn": "GCS component ceilings (E/V/M)",
+   "itemZh": "GCS 分项上限（睁眼/语言/运动）",
+   "value": "4 / 5 / 6，相加满分 15"
+  },
+  {
+   "itemEn": "BC TBI severity by GCS (general guideline)",
+   "itemZh": "BC 脑外伤严重度分级（GCS，总纲）",
+   "value": "≥13 轻度；9-12 中度；≤8 重度"
+  },
+  {
+   "itemEn": "MAP / ICP / CPP normal ranges + formula",
+   "itemZh": "MAP / ICP / CPP 正常值＋公式",
+   "value": "CPP=MAP-ICP；MAP 70-100，ICP 5-15，CPP 60-80（下限 50-60）"
+  },
+  {
+   "itemEn": "CPP ischemia threshold",
+   "itemZh": "CPP 缺血阈值",
+   "value": "<50 mmHg 脑开始缺血"
+  },
+  {
+   "itemEn": "Target SBP when ICP risk present",
+   "itemZh": "疑 ICP 升高时的目标收缩压",
+   "value": "110-120 mmHg"
+  },
+  {
+   "itemEn": "ICP management: head elevation / ventilation rate",
+   "itemZh": "ICP 处置：抬高床头 / 通气频率",
+   "value": "抬高 30°（除非疑颈椎伤）；16-20 次/分"
+  },
+  {
+   "itemEn": "Anisocoria threshold",
+   "itemZh": "瞳孔不等大阈值",
+   "value": ">1 mm 差异有意义"
+  },
+  {
+   "itemEn": "Blood glucose bands for LOC",
+   "itemZh": "血糖与意识水平分界",
+   "value": "正常 4-7；<4 意识开始降；<2 意识模糊/昏迷；<0.6 mmol/L 致命"
+  },
+  {
+   "itemEn": "Book protocol: D50W dose / access / onset",
+   "itemZh": "教材流程：D50W 剂量/通路/起效",
+   "value": "25 g IV push，≥18G，起效 30 秒-2 分钟（无血糖仪可盲给半支 12.5 g）"
+  },
+  {
+   "itemEn": "BC protocol: D10W dose (replaces D50W)",
+   "itemZh": "BC 流程：D10W 剂量（取代 D50W）",
+   "value": "10-25 g（10% 溶液 100-250 mL）IV"
+  },
+  {
+   "itemEn": "Glucagon dose (book IM / BC IM+IN)",
+   "itemZh": "胰高血糖素剂量（教材肌注 / BC 肌注+鼻喷）",
+   "value": "IM 0.5-1 mg；BC 另有 IN 3 mg，15 分钟无效可追加一次"
+  },
+  {
+   "itemEn": "Thiamine dose before/with dextrose",
+   "itemZh": "给糖前后的硫胺素剂量",
+   "value": "50 mg 缓慢静推 + 50 mg 肌注"
+  },
+  {
+   "itemEn": "Book naloxone dosing",
+   "itemZh": "教材纳洛酮剂量",
+   "value": "首剂 0.4-2.0 mg IV push，重度阿片可能超 10 mg；GCS 3→15 可在 30 秒内"
+  },
+  {
+   "itemEn": "BC naloxone fixed escalation ladder",
+   "itemZh": "BC 纳洛酮固定阶梯剂量",
+   "value": "0.4→0.4→0.8→2.0 mg（IM/IV，各间隔 3 分钟）或 IN 4 mg，目标 SpO2≥94%+RR>10"
+  },
+  {
+   "itemEn": "Oral glucose dose (book / BC)",
+   "itemZh": "口服葡萄糖剂量（教材 / BC）",
+   "value": "教材 15-30 g/支；BC 明确 15 g PO，5 分钟可重复不设上限"
+  },
+  {
+   "itemEn": "Ischemic stroke fibrinolytic window (hospital)",
+   "itemZh": "缺血性卒中溶栓时间窗（院内）",
+   "value": "症状发作后 4.5 小时内"
+  },
+  {
+   "itemEn": "Stroke type ratio (ischemic vs hemorrhagic)",
+   "itemZh": "卒中类型占比（缺血 vs 出血）",
+   "value": "约 4:1（缺血约 80%，出血约 20%）"
+  },
+  {
+   "itemEn": "Cincinnati stroke scale positive predictive value",
+   "itemZh": "辛辛那提卒中量表阳性预测概率",
+   "value": "任一项异常＝卒中概率约 72%"
+  },
+  {
+   "itemEn": "Stroke oxygen target",
+   "itemZh": "卒中氧疗目标",
+   "value": "SpO2 94-99%"
+  },
+  {
+   "itemEn": "Ontario prompt-card stroke-centre transport window (example model)",
+   "itemZh": "安大略提示卡卒中中心转运时限（示例模型）",
+   "value": "末次正常/发作时间 2 小时内可送达"
+  },
+  {
+   "itemEn": "TIA -> CVA progression rate",
+   "itemZh": "TIA 后续发展为 CVA 的比例",
+   "value": ">1/3 的 TIA 患者近期会发生 CVA"
+  },
+  {
+   "itemEn": "Status epilepticus duration definition",
+   "itemZh": "癫痫持续状态时限定义",
+   "value": "单次发作>4-5 分钟，或连续发作间意识不恢复（部分研究认为真实阈值在 20-30 分钟）"
+  },
+  {
+   "itemEn": "Refractory status epilepticus mortality",
+   "itemZh": "难治性癫痫持续状态死亡率",
+   "value": "最高可达 70%"
+  },
+  {
+   "itemEn": "Seizure apnea intervention threshold",
+   "itemZh": "癫痫发作呼吸暂停干预阈值",
+   "value": ">30 秒开始辅助通气"
+  },
+  {
+   "itemEn": "Book benzodiazepine doses for seizure (not in BC PCP scope)",
+   "itemZh": "教材癫痫用苯二氮卓类剂量（不在 BC PCP 范围）",
+   "value": "咪达唑仑 0.1 mg/kg IV(max5)或 0.2 mg/kg IM(max10)；劳拉西泮 0.05 mg/kg(max4)；地西泮 5 mg IV"
+  },
+  {
+   "itemEn": "Syncope: ED-visit share / episode duration / perfusion-loss trigger",
+   "itemZh": "晕厥：急诊占比/发作时长/脑灌注中断触发",
+   "value": "约 3% 急诊量；发作<60 秒；脑血流中断 3-5 秒即可致晕厥"
+  },
+  {
+   "itemEn": "Cluster headache episode length",
+   "itemZh": "丛集性头痛单次发作时长",
+   "value": "30-45 分钟，一天可反复多次"
+  },
+  {
+   "itemEn": "Bell palsy typical resolution / age range",
+   "itemZh": "Bell 麻痹典型缓解时间/年龄段",
+   "value": "约 2 周内缓解；好发 15-60 岁"
+  },
+  {
+   "itemEn": "ALS survival after diagnosis",
+   "itemZh": "ALS 确诊后生存期",
+   "value": "典型 3-5 年"
+  },
+  {
+   "itemEn": "Guillain-Barre timeline",
+   "itemZh": "格林-巴利综合征时间线",
+   "value": "数小时内可从能走恶化到需呼吸机；2 周内达无力高峰；1/3 患者 3 年后仍有残留无力"
+  },
+  {
+   "itemEn": "Polio eradication trend",
+   "itemZh": "脊灰根除趋势",
+   "value": "1988 年以来病例降>99%（35 万例→2018 年 33 例，2019 年初仅剩 2 国有病例）"
+  },
+  {
+   "itemEn": "Cerebral palsy: perinatal-hypoxia share / spastic-type share",
+   "itemZh": "脑瘫：围产期缺氧占比/痉挛型占比",
+   "value": "缺氧病因<10%；痉挛型占 70-80%"
+  },
+  {
+   "itemEn": "Muscular dystrophy (Duchenne): diagnosis age / life expectancy",
+   "itemZh": "肌营养不良（杜氏型）：确诊年龄/预期寿命",
+   "value": "确诊 2-5 岁；很少活过 20 多岁"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "A patient can be perfectly calm and still be dying inside their skull. Track the DIRECTION of vital signs, not just the numbers: rising BP with falling pulse and respirations is Cushing reflex, the opposite of shock — treat it as ICP, not cardiac.",
+   "zh": "患者可能表面很平静，颅内却正在恶化。要盯生命体征的“方向”而不只是数字：血压升、脉搏呼吸降＝Cushing 反射，和休克方向正相反——按 ICP 处理，不要按心脏病处理。"
+  },
+  {
+   "en": "A normal-looking patient after stroke-like symptoms is not a stand-down signal — it may be a TIA, and more than a third of those patients have a real stroke soon after. Push for transport and evaluation regardless of how good they look right now.",
+   "zh": "卒中样症状消失、患者看起来完全正常，不代表可以放心离开——很可能是 TIA，超过三分之一的这类患者不久后会真发生卒中。不管现在看起来多好，都要坚持劝转运评估。"
+  },
+  {
+   "en": "Pin down the last-known-normal time before anything else in a suspected stroke. It drives the hospital's whole treatment-window decision, and it is often the one piece of information only you, at the scene with family, can gather accurately.",
+   "zh": "疑似卒中现场，先于一切先确认“末次正常时间”。这个时间点决定医院整个治疗时间窗的走向，往往也是只有你在现场问家属才能问准的信息。"
+  },
+  {
+   "en": "Do not reach for aspirin on a stroke call. It helps ischemic strokes and actively harms hemorrhagic ones, and you cannot tell them apart without imaging — withholding it is the safe default, not an oversight.",
+   "zh": "卒中出诊别习惯性想到给阿司匹林。它对缺血性卒中有利，但对出血性卒中有害，而没有影像根本分不清是哪种——不给才是安全的默认选项，不是漏做。"
+  },
+  {
+   "en": "During an active seizure, your hands should be protecting the patient from injury, not restraining the movement and not prying the jaw open to place anything inside it. Remove any object a bystander already placed in the mouth.",
+   "zh": "癫痫发作中，你的手是用来防止患者撞伤的，不是用来按住抽搐或撬开嘴塞东西的。如果旁人已经往嘴里塞了东西，要取出来。"
+  },
+  {
+   "en": "A seizure that looks different from the patient's own usual pattern is a clue, not a coincidence — ask family whether 'this looked like his normal seizures,' because a stroke-triggered seizure often breaks the patient's baseline pattern.",
+   "zh": "一次癫痫发作如果和患者自己平时的样子不一样，这是线索不是巧合——问家属“这次和他平时发作一样吗”，因为卒中诱发的发作往往会打破患者的基线模式。"
+  },
+  {
+   "en": "Confusion in a known alcoholic or diabetic is not automatically explained by the obvious label. Nancy's own rule: alcohol on the breath does not rule out a coma from another cause, and a diabetic history does not rule out a stroke.",
+   "zh": "已知的酗酒者或糖尿病患者出现意识模糊，不能想当然归因于那个显眼的标签。Nancy 的原话：呼气有酒味不能排除其他原因导致的昏迷，糖尿病病史也不能排除卒中。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'The patient can talk, so the airway is fine' is not neurologic logic — trismus, secretions, and posturing can all sabotage the airway in a patient who is still verbal. Watch the airway independently of the conversation.",
+   "zh": "“患者还能说话，气道肯定没事”不成立——牙关紧闭、分泌物、异常姿势都可能在患者还能开口时就已经威胁气道。气道要单独盯，不能靠对话来判断。"
+  },
+  {
+   "en": "Increased ICP does NOT look like shock — it looks like the OPPOSITE of shock (BP up, pulse/RR down). Treating ICP-driven bradycardia with atropine or pacing is a classic wrong answer; the fix is rapid transport, not cardiac drugs.",
+   "zh": "ICP 升高不长得像休克——它长得像休克的“反面”（血压升、脉搏呼吸降）。用阿托品或起搏处理 ICP 引起的心动过缓是经典错误答案；正确做法是快速转运，不是上心脏药。"
+  },
+  {
+   "en": "'Aspirin helps strokes' is only half true — it helps ischemic strokes and can be actively harmful in hemorrhagic ones. Since you cannot distinguish the two without imaging, the field answer is always to withhold it.",
+   "zh": "“阿司匹林对卒中有帮助”只说对了一半——它对缺血性卒中有利，对出血性卒中却可能有害。由于院前无法靠影像区分两者，正确答案永远是先不给。"
+  },
+  {
+   "en": "A patient who now looks totally normal after stroke-like symptoms has NOT ruled out anything — that is the textbook picture of a TIA, which is itself a serious warning sign, not a relief.",
+   "zh": "卒中样症状消失、患者看起来完全正常，并不代表排除了任何问题——这正是 TIA 的教科书画面，本身就是严重警号，不是可以松口气的信号。"
+  },
+  {
+   "en": "'GCS 8' from two different patients is not the same patient. Always break the score into its eye/verbal/motor components, because the same total can hide very different clinical pictures.",
+   "zh": "两个患者都是“GCS 8 分”不代表病情一样。永远要把总分拆成睁眼/语言/运动三项，因为同样的总分背后可能是完全不同的临床画面。"
+  },
+  {
+   "en": "Tremor and seizure are not the same category of movement — tremors are fine, oscillating, and localized; seizure movements are coarser, less focused, and generalized. Mixing the two up changes your whole differential.",
+   "zh": "震颤和癫痫发作不是同一类运动——震颤是细小、振荡性、局限性的；癫痫发作的动作更粗大、更没有章法、更全身性。把两者混为一谈会带偏整个鉴别思路。"
+  },
+  {
+   "en": "Absence seizures do NOT have a postictal period — a brief freeze followed by immediate normal behaviour is still consistent with a seizure, especially in a child; do not rule out seizure just because there was no confusion afterward.",
+   "zh": "失神发作没有发作后期——短暂僵住之后立刻恢复正常行为，仍然可能是癫痫发作，尤其在儿童身上；不要因为事后没有意识模糊就排除癫痫。"
+  },
+  {
+   "en": "A pseudoseizure is not a fake seizure being performed on purpose — the mechanism is psychiatric, not deceptive, and it gets exactly the same protective field care as any other seizure.",
+   "zh": "假性发作不是故意装出来的假动作——它的机制是精神心理性的，不是欺骗；现场处置和其他任何癫痫发作完全一样，一视同仁。"
+  },
+  {
+   "en": "Syncope from standing with a quick recovery is reassuring in pattern but never in disposition — you cannot know the cause in the field (cardiac dysrhythmia is a real possibility in older adults), so transport regardless of how well the patient looks afterward.",
+   "zh": "站立位晕厥且恢复快，这个“模式”看起来让人安心，但绝不能据此决定不转运——院前根本无法确定病因（老年人心律失常是实实在在的可能），所以不管事后患者看起来多好都要转运。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "AEIOU-TIPS",
+   "en": "Differential for altered LOC: Alcohol/acidosis, Epilepsy, Insulin, Overdose, Uremia, Trauma, Infection, Psychosis, Stroke.",
+   "zh": "意识改变鉴别：酒精/酸中毒、癫痫、胰岛素、药物过量、尿毒症、创伤、感染、精神病、卒中。"
+  },
+  {
+   "name": "FAST-VAN",
+   "en": "FAST (Face, Arm, Speech, Time) screens for any stroke; if positive, VAN (Vision, Aphasia, Neglect) screens for a large-vessel occlusion that may need an endovascular-capable centre.",
+   "zh": "FAST（面-臂-言语-时间）筛任何卒中；一旦阳性，加做 VAN（视觉-失语-忽视）筛查是否是需要转去具备取栓能力医院的大血管闭塞型卒中。"
+  },
+  {
+   "name": "猫眼猫叫",
+   "en": "Infant ICP tell: cry pitch rises toward a cat-like shriek, and pupils shift from round toward oval.",
+   "zh": "婴儿 ICP 升高线索：哭声升调像猫叫，瞳孔从圆变椭圆——“猫眼与猫叫”。"
+  },
+  {
+   "name": "CPP 三数字 70-15-60",
+   "en": "One string for the perfusion formula: MAP normal ceiling-floor is roughly 70-100, ICP normal ceiling is 15, so CPP floor is about 60 (below 50 = ischemia). CPP = MAP - ICP.",
+   "zh": "一串数字扣住灌注公式：MAP 正常大致 70-100，ICP 正常上限 15，所以 CPP 底线约 60（低于 50 就缺血）。CPP＝MAP－ICP。"
+  },
+  {
+   "name": "低慢暖 vs 高慢宽",
+   "en": "Shock = low BP + fast pulse (pale/cold); Cushing reflex (rising ICP) = HIGH BP + SLOW pulse/resps + WIDENED pulse pressure — remember it as the shock picture flipped upside down.",
+   "zh": "休克＝“低”血压＋“快”脉搏（苍白湿冷）；Cushing 反射（ICP 升高）＝“高”血压＋“慢”脉搏呼吸＋脉压“宽”——记成休克画面的镜像。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Break down the CPP formula and state the normal ranges for each variable, plus the ischemia threshold.",
+   "qZh": "写出 CPP 公式，说出每个变量的正常范围，以及缺血阈值。",
+   "aEn": "CPP = MAP - ICP. Normal MAP 70-100 mm Hg, normal ICP 5-15 mm Hg, so normal CPP is about 60-80 mm Hg (acceptable floor 50-60). Below a CPP of 50 mm Hg the brain becomes ischemic.",
+   "aZh": "CPP＝MAP－ICP。正常 MAP 70-100 mmHg，正常 ICP 5-15 mmHg，故正常 CPP 约 60-80 mmHg（可接受下限 50-60）。CPP 低于 50 mmHg，脑组织开始缺血。"
+  },
+  {
+   "qEn": "A patient has rising blood pressure, falling pulse, falling respiratory rate, and a widening pulse pressure. Name the phenomenon, the underlying cause, and the one drug class you should NOT reach for.",
+   "qZh": "患者血压升高、脉搏下降、呼吸频率下降、脉压增宽。这叫什么现象？根本原因是什么？绝对不该用哪类药？",
+   "aEn": "Cushing reflex, caused by rising intracranial pressure compressing the medulla. Do not give atropine or attempt pacing for the bradycardia — the cause is intracranial, not cardiac; the fix is rapid transport and hospital notification.",
+   "aZh": "Cushing 反射，根本原因是颅内压升高压迫延髓。不要用阿托品或起搏处理这种心动过缓——病因在颅内不在心脏；正确做法是快速转运并提前通知医院。"
+  },
+  {
+   "qEn": "Spell out FAST-VAN and explain why the VAN portion matters for transport destination.",
+   "qZh": "写出 FAST-VAN 每个字母的含义，并说明 VAN 部分为什么会影响转运目的地。",
+   "aEn": "FAST = Face droop, Arm weakness, Speech trouble, Time of onset. If any FAST item is positive, check VAN = Visual disturbance, Aphasia, Neglect. A positive VAN pattern suggests a large-vessel occlusion that may need an endovascular-capable stroke centre rather than the nearest hospital.",
+   "aZh": "FAST＝面部下垂、手臂无力、言语障碍、发作时间。任一 FAST 项阳性就加做 VAN＝视觉障碍、失语、忽视。VAN 阳性提示可能是大血管闭塞型卒中，需要转去具备血管内取栓能力的卒中中心，而不是就近医院。"
+  },
+  {
+   "qEn": "Define status epilepticus, including the caveat about the arbitrary cutoff, and state its refractory mortality rate.",
+   "qZh": "给出癫痫持续状态的定义（含分界的人为性说明），并说出其难治性死亡率。",
+   "aEn": "A seizure lasting more than 4-5 minutes, or repeated seizures without recovery of consciousness in between — an admittedly arbitrary cutoff, since some research places the true threshold closer to 20-30 minutes of uninterrupted seizing. Mortality in refractory status epilepticus can reach 70%.",
+   "aZh": "单次发作超过 4-5 分钟，或反复发作之间意识始终未恢复——这个分界公认是人为划定的，部分研究认为真实阈值接近连续抽搐 20-30 分钟。难治性癫痫持续状态死亡率可高达 70%。"
+  },
+  {
+   "qEn": "A diabetic, unresponsive patient needs glucose correction and you have no glucometer. Walk through the book approach and then the BC-specific drug and dose.",
+   "qZh": "一名糖尿病无反应患者需要纠正血糖，但没有血糖仪。先说教材做法，再说 BC 特有的药物和剂量。",
+   "aEn": "Book approach: give a blind half-syringe of D50W (12.5 g) IV through an 18-gauge-or-larger line, then reassess before giving more. BC-specific: the drug is D10W, not D50W — dose 10-25 g (100-250 mL of 10% solution) IV, indicated for suspected/known hypoglycemia, altered responsiveness, or coma/seizure of unknown cause.",
+   "aZh": "教材做法：经 18G 或更粗静脉盲给半支 D50W（12.5 g），再评估决定是否追加。BC 特有：药物是 D10W 不是 D50W——剂量 10-25 g（10% 溶液 100-250 mL）静脉给药，适应证包括疑似/已知低血糖、意识水平改变，或原因不明的昏迷/抽搐。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Stroke recognition tool: FAST-VAN is the named BC standard",
+   "topicZh": "卒中识别工具：BC 指定使用 FAST-VAN",
+   "bookEn": "The textbook presents several stroke screening options as roughly interchangeable choices: the Cincinnati Prehospital Stroke Scale, the Los Angeles Prehospital Stroke Screen, or an Ontario prompt card, and introduces FAST-VAN mainly as an emerging tool for identifying large-vessel occlusion candidates for embolectomy.",
+   "bookZh": "教材把几种卒中筛查工具当作大致可互换的选项并列介绍：辛辛那提院前卒中量表、洛杉矶院前卒中筛查、安大略提示卡，FAST-VAN 更多是作为识别大血管闭塞（可能需取栓）患者的新兴工具引入。",
+   "bcEn": "The BC Provincial Examination Guidelines name FAST-VAN directly as the required recognition method under 'Interventions of all License Levels' for the Stroke protocol — it is not one option among several, it is THE named tool the exam expects. Additional PCP intervention en route: obtain vascular access above the wrist with an 18-gauge (or larger) catheter, preferably on the right side.",
+   "bcZh": "BC 省考指南在卒中协议的“所有资格等级处置”条目下，直接点名要求用 FAST-VAN 做识别——不是众多选项之一，而是考试指定的那一个工具。PCP 附加处置（途中）：在腕部以上建立静脉通路，18G 或更粗留置针，优先选右侧。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.30"
+  },
+  {
+   "topicEn": "Hypoglycemia/coma drug: BC uses D10W, not D50W",
+   "topicZh": "低血糖/昏迷用药：BC 用 D10W，不是 D50W",
+   "bookEn": "The book's dextrose protocol is built entirely around D50W (50% dextrose): 25 g IV push through an 18-gauge-or-larger line, with a blind half-syringe (12.5 g) option when no glucometer is available.",
+   "bookZh": "教材的葡萄糖处置流程完全围绕 D50W（50% 葡萄糖）：经 18G 或更粗静脉推注 25 g，没有血糖仪时可盲给半支（12.5 g）。",
+   "bcEn": "BC's drug monograph is D10W (10% dextrose), dosed 10-25 g (100-250 mL of the 10% solution) IV, indicated for suspected/known hypoglycemia, altered responsiveness, or coma/seizure of undetermined cause. If a written or practical question asks for the dextrose drug and dose, the BC answer is D10W at 10-25 g — NOT D50W at 25 g.",
+   "bcZh": "BC 的药物专论是 D10W（10% 葡萄糖），剂量 10-25 g（10% 溶液 100-250 mL）静脉给药，适应证包括疑似/已知低血糖、意识水平改变，或原因不明的昏迷/抽搐。考题问葡萄糖药物和剂量时，BC 答案是 D10W 10-25 g——不是 D50W 25 g。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.61"
+  },
+  {
+   "topicEn": "Seizure/status epilepticus: no benzodiazepine in BC EMR/PCP scope",
+   "topicZh": "癫痫/持续状态：BC EMR/PCP 用药范围内没有苯二氮卓类",
+   "bookEn": "The book gives specific weight-based dosing for midazolam, lorazepam, and diazepam as the first-line drugs to terminate a seizure or status epilepticus, including IM/IV/IO/IN routes and a repeat-dose-then-call-medical-control rule.",
+   "bookZh": "教材给出咪达唑仑、劳拉西泮、地西泮的具体按体重剂量，作为终止癫痫发作/持续状态的一线用药，含肌注/静脉/骨髓腔/鼻喷给药途径，以及“重复一次无效就联系医疗指导”的规则。",
+   "bcEn": "BC's full drug-monograph list (18 drugs from acetaminophen through tranexamic acid) contains NO benzodiazepine at all, and the guideline has no dedicated 'Seizure' protocol page the way it has one for Stroke. This means active pharmacologic termination of a seizure is OUTSIDE BC EMR/PCP scope — field management is ABC support, positioning to prevent injury, oxygen, and glucose correction with D10W for suspected hypoglycemia (D10W's own indication list explicitly includes 'coma or seizure NYD'). Do not answer a BC exam question with midazolam/lorazepam/diazepam administration.",
+   "bcZh": "BC 完整的药物专论清单（从对乙酰氨基酚到氨甲环酸共 18 种）里完全没有苯二氮卓类，指南也没有像“卒中”那样单独设一页“癫痫”协议。这意味着主动用药终止癫痫发作不在 BC EMR/PCP 的执业范围内——现场处置就是 ABC 支持、摆位防外伤、给氧，以及疑似低血糖时用 D10W 纠正血糖（D10W 自己的适应证里明确写了“原因不明的昏迷或抽搐”）。BC 考题不能用给咪达唑仑/劳拉西泮/地西泮来作答。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) Drug Monographs p.58-78 (TOC); D10W p.61"
+  },
+  {
+   "topicEn": "Naloxone: BC uses a fixed escalating ladder, not a flexible range",
+   "topicZh": "纳洛酮：BC 用固定阶梯剂量，不是灵活区间",
+   "bookEn": "The book allows an initial dose of 0.4-2.0 mg IV push, titrated further as needed and potentially exceeding 10 mg total for potent synthetic opioids, with a note that dramatic wake-ups (GCS 3 to 15 in 30 seconds) require preparation for a combative patient.",
+   "bookZh": "教材允许首剂 0.4-2.0 mg 静推，之后按需滴定，遇到强效合成阿片总量可能超过 10 mg，并提醒戏剧性苏醒（30 秒内 GCS 3→15）要提前防范患者躁动。",
+   "bcEn": "BC's Naloxone monograph is a fixed escalating ladder gated by objective endpoints: 0.4 mg IM/IV first; if SpO2 has not reached 94% or higher AND ventilation is not above 10/min after 3 minutes, give 0.4 mg again; if still not met after another 3 minutes, give 0.8 mg; if still not met after another 3 minutes, give 2.0 mg. The IN route is a flat 4 mg dose, and as of 2025-10-15 the IN dose no longer requires medical oversight.",
+   "bcZh": "BC 的纳洛酮专论是有客观终点门槛的固定阶梯：先给 0.4 mg 肌注/静脉；3 分钟后若 SpO2 仍未达 94% 且通气未超过 10 次/分，再给 0.4 mg；再等 3 分钟仍未达标，给 0.8 mg；再等 3 分钟仍未达标，给 2.0 mg。鼻喷（IN）固定剂量 4 mg，且自 2025-10-15 起 IN 给药已取消医疗督导要求。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.72; Change Index 2025-10-15"
+  },
+  {
+   "topicEn": "Glucagon: BC adds an intranasal route the book does not mention",
+   "topicZh": "胰高血糖素：BC 多了教材没提的鼻喷途径",
+   "bookEn": "The book only describes IM (or subcutaneous) glucagon 0.5-1 mg, expecting a response within 20 minutes, with the source text itself inconsistent about the maximum number of repeat doses (stating both 'three' and 'two' in different passages).",
+   "bookZh": "教材只写了肌注（或皮下）胰高血糖素 0.5-1 mg，预期 20 分钟内起效，且原文对最多可重复几次的说法前后不一致（一处说“三次”，另一处说“两次”）。",
+   "bcEn": "BC's Glucagon monograph keeps the IM dose at 0.5-1 mg but adds a formal intranasal option: 3 mg IN, may repeat once after 15 minutes if no clinical response — with a defined onset/peak of 15 minutes and duration of 90 minutes. Use the BC IM/IN pairing and timing, not the book's inconsistent repeat-count language.",
+   "bcZh": "BC 的胰高血糖素专论保留肌注 0.5-1 mg，但正式加入鼻喷途径：3 mg IN，15 分钟无临床反应可重复一次——明确起效/达峰 15 分钟、持续 90 分钟。作答按 BC 的肌注/鼻喷组合和时限来，不要用教材里自相矛盾的“重复次数”说法。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.67"
+  }
+ ],
+ "sourcePages": "2801-2894"
+}

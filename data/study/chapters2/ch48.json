@@ -1,0 +1,654 @@
+{
+ "id": "ch48",
+ "n": 48,
+ "titleEn": "Acute Interventions for the Chronic Care Patient",
+ "titleZh": "慢病患者的急性干预",
+ "group": "medical",
+ "examWeight": 1,
+ "whyEn": "This chapter carries a light exam weight on its own, but it's where several high-value scenario topics live: a blocked tracheostomy, a spinal-cord-injury patient with autonomic dysreflexia, a malfunctioning vascular access device, or a DNR/consent question can all be dressed up as a \"chronic home-care patient\" stem. The core skill being tested is judgment around an unfamiliar device: recognize what you can safely touch, what you can't, and when the right move is simply airway/breathing/circulation plus transport.",
+ "whyZh": "本章单独的考试权重不高，但却是好几个高分值场景题的藏身之处：气切管堵塞、脊髓损伤患者的自主神经反射亢进、血管通路装置故障、DNR/知情同意问题，都可能被包装成'居家慢病患者'的题干出现。这一章真正考察的是面对陌生设备时的判断力——认清哪些能碰、哪些不能碰，以及什么时候唯一正确的动作就是回到气道/呼吸/循环基本功加转运。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration",
+   "Area 8: Health Promotion and Public Safety"
+  ],
+  "codes": [
+   "1.7.a",
+   "3.3.f",
+   "3.3.g",
+   "4.2.c",
+   "4.2.d",
+   "4.2.f",
+   "5.1.a",
+   "5.1.i",
+   "5.1.j",
+   "5.2.a",
+   "5.2.b",
+   "5.3.a",
+   "5.3.b",
+   "5.4.b",
+   "5.4.c",
+   "5.4.d",
+   "5.5.b",
+   "5.5.c",
+   "5.5.o",
+   "5.5.p",
+   "5.5.u",
+   "6.2.d",
+   "8.3.a",
+   "8.3.b",
+   "8.3.c",
+   "8.3.d",
+   "8.3.e",
+   "8.3.f"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Home Health Care in Canada",
+   "titleZh": "居家医疗导论",
+   "points": [
+    {
+     "en": "Hospice admission generally requires a terminal illness with a life expectancy of about 6 months or less; the focus shifts from curative treatment to pain and symptom control.",
+     "zh": "收治安宁疗护(hospice)通常要求患者患有终末期疾病、预计存活期在6个月左右或更短；照护重心从治愈转向疼痛与症状控制。",
+     "hard": true
+    },
+    {
+     "en": "A national survey found that roughly 8% of Canadians aged 15+ received some form of home-based care in the prior year, representing about 2.2 million people relying on help for a chronic condition, disability, or age-related need.",
+     "zh": "一项全国调查显示，约8%的15岁以上加拿大人在过去一年接受过某种居家照护，相当于约220万人因慢性病、残疾或增龄性需要而依赖他人协助。",
+     "hard": true
+    },
+    {
+     "en": "Home care spending in Canada was roughly $10 billion in 2010, about 5% of total national health spending; home-based care is generally cheaper than institutional care, tends to shorten hospital stays, and is often preferred by patients who want to stay in familiar surroundings.",
+     "zh": "2010年加拿大居家照护支出约100亿加元，约占全国医疗总支出的5%；相比机构照护，居家照护通常费用更低、住院时间更短，也更受希望留在熟悉环境中的患者青睐。",
+     "hard": true
+    },
+    {
+     "en": "Long-term care (maintaining a safe environment for patients who cannot return home), rehabilitation (restoring maximum physical/social/vocational function), and hospice/palliative care (comfort-focused, end-of-life) are three distinct goals of extended care — don't treat them as interchangeable when planning a call.",
+     "zh": "长期照护（为无法返家的患者维持安全环境）、康复照护（尽量恢复躯体/社交/职业功能）与安宁/纾缓照护（以舒适为核心的临终照护）目标各不相同，接诊居家患者时不要把三者混为一谈。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Scene Assessment, PPE & First Contact",
+   "titleZh": "现场评估、个人防护与初步接触",
+   "points": [
+    {
+     "en": "Home-care scenes carry hazards beyond a standard scene size-up: pets may be agitated by the household turning into a \"care facility,\" families may keep weapons or improvised weapons on hand, and ramps or renovations for mobility equipment can make entrances unsafe.",
+     "zh": "居家照护现场除常规评估外还有特殊风险：宠物可能因家中变成'病房'而躁动不安，家属可能存放武器或可作武器之物，为大型医疗设备/轮椅改建的坡道也可能让入口变得不安全。",
+     "hard": false
+    },
+    {
+     "en": "Quickly size up the patient's support equipment on arrival: can it be moved safely, is backup battery power available, and is it compatible with the ambulance's electrical system and space?",
+     "zh": "到场后要快速评估患者的支持设备：能否安全搬运、是否备有后备电池、是否与救护车电力系统及空间兼容。",
+     "hard": false
+    },
+    {
+     "en": "Hand hygiene is the single most effective way to stop pathogen spread: use an alcohol-based hand rub with at least 60% alcohol before and after gloving, switching to soap and running water whenever hands are visibly soiled or the patient has a known infection or is immunosuppressed.",
+     "zh": "手卫生是阻断病原体传播最有效的单一措施：戴脱手套前后应使用酒精浓度至少60%的免洗手消液；肉眼可见污染，或患者有已知感染/免疫抑制时，应改用肥皂加流水洗手。",
+     "hard": true
+    },
+    {
+     "en": "Many chronically ill patients have had repeated medical exposures to latex and may be sensitized, so avoid latex gloves in home care — this is especially critical for pediatric patients with spina bifida.",
+     "zh": "许多慢性病患者因反复医疗操作而多次接触乳胶，可能已经致敏，居家照护中应避免使用乳胶手套；对患脊柱裂的儿童患者尤其要注意这一点。",
+     "hard": false
+    },
+    {
+     "en": "If the general impression suggests the patient is near death, don't stop to troubleshoot home devices — disconnect the patient from the equipment, move them onto EMS gear, apply portable oxygen, and save device troubleshooting for after the patient is stabilized.",
+     "zh": "若总体印象提示患者濒临死亡，不要在现场排查居家设备故障——立即让患者脱离原设备、转接到急救装备并给予便携氧气，设备排查留到患者稳定之后再处理。",
+     "hard": false
+    },
+    {
+     "en": "Airway, breathing, and level-of-consciousness assessment in a home-care patient follows the same approach as any other patient, even when an artificial airway (tracheostomy, laryngectomy) or home oxygen/ventilator support is already in place.",
+     "zh": "无论患者是否已带气切造口、喉切除造口或正在使用家用氧气/呼吸机，气道、呼吸与意识状态的评估方法与其他患者完全一致。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Altered Mental Status & History-Taking",
+   "titleZh": "意识改变评估与病史沟通",
+   "points": [
+    {
+     "en": "Distinguish dementia (a chronic, usually irreversible baseline) from delirium (typically an acute, reversible change often driven by glucose or electrolyte imbalance, poor nutrition, hypothermia, or hyperthermia) — delirium is the one that demands an urgent search for a treatable cause.",
+     "zh": "要区分痴呆(慢性、通常不可逆的基线状态)与谵妄(通常急性起病、可逆，常由血糖或电解质紊乱、营养不良、体温过低或过高引发)——谵妄意味着必须立即寻找可逆病因。",
+     "hard": false
+    },
+    {
+     "en": "When assessing a patient with dementia, ask two questions: what is this person's usual baseline function, and how does today differ from that baseline? Once a change is identified, rule out reversible causes such as hypoglycemia, hypoxia, or hypothermia before assuming the dementia itself has worsened.",
+     "zh": "评估痴呆患者时问两个关键问题：患者平时的基线功能状态如何？今天与基线相比有何不同？一旦确认偏离基线，应先排除低血糖、缺氧、体温异常等可逆病因，而不是直接归因于痴呆加重。",
+     "hard": false
+    },
+    {
+     "en": "A call to a known home-care patient often turns out to be equipment failure (an IV line, feeding tube, artificial airway, or ventilator problem) rather than true clinical deterioration — consider the hardware before assuming the disease has worsened.",
+     "zh": "对已知居家照护患者的出诊，常常是设备故障(输液管路、管饲装置、人工气道或呼吸机问题)而非病情本身恶化——评估时应先想到'硬件'问题，而不是默认是疾病加重。",
+     "hard": false
+    },
+    {
+     "en": "Caregivers sometimes crush extended-release tablets to give them through a feeding tube; crushing destroys the slow-release coating, so the full dose can be absorbed too quickly and cause an accidental overdose — this is a red flag worth investigating.",
+     "zh": "照护者有时会把缓释药片碾碎后经胃管给入；碾碎会破坏缓释包衣，导致全剂量吸收过快、造成意外过量——这是一个值得深入排查的危险信号。",
+     "hard": false
+    },
+    {
+     "en": "Dementia alone does not make a patient legally incapable of refusing care; in most provinces you cannot transport an unwilling patient against their will unless they pose a danger to themselves or others, in which case you should contact online medical direction for guidance.",
+     "zh": "单纯的痴呆诊断并不代表患者丧失拒绝医疗的行为能力；在大多数省份，除非患者对自己或他人构成危险，否则不能违背其意愿强制转运，应联系医疗指导寻求处置建议。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Home Oxygen Systems & Noninvasive Ventilation",
+   "titleZh": "居家供氧系统与无创通气",
+   "points": [
+    {
+     "en": "The simplest home oxygen setups use a nasal cannula with portable cylinders or a large enrichment system; anxious patients breathe faster and burn through their oxygen supply more quickly, which is a common reason for a home-care oxygen call.",
+     "zh": "最基础的居家供氧方式是鼻导管配合便携气瓶或大型富氧系统；焦虑的患者呼吸更快、耗氧更多，常常因此提前耗尽氧气储备而呼叫急救。",
+     "hard": false
+    },
+    {
+     "en": "Oxygen concentrators pull and purify oxygen from room air, avoiding frequent cylinder deliveries, but they are large, not portable, and run on household electricity — patients should keep backup cylinders on hand for power outages.",
+     "zh": "氧气浓缩机从室内空气中提取并纯化氧气，省去了频繁换气瓶的麻烦，但体积大、不便携、依赖家用电力——患者应备有后备气瓶以应对停电。",
+     "hard": false
+    },
+    {
+     "en": "Liquid oxygen systems pack more gas into a smaller, more portable container, which suits active patients, but liquid oxygen cannot be stored long term because it gradually evaporates.",
+     "zh": "液氧系统能在更小、更便携的容器中储存更多气体，适合活动量较大的患者，但液氧无法长期储存，会逐渐挥发流失。",
+     "hard": false
+    },
+    {
+     "en": "CPAP keeps airway pressure above atmospheric pressure throughout the breathing cycle, splinting open the alveoli and upper airway to cut the work of breathing; in the home it is used mainly for obstructive sleep apnea. BPAP applies different inspiratory and expiratory pressures but, unlike a true ventilator, does not actively ventilate the patient.",
+     "zh": "CPAP让气道压力在整个呼吸周期中都维持在高于大气压的水平，把肺泡和上气道撑开，从而降低呼吸功；居家场景中主要用于治疗阻塞性睡眠呼吸暂停。BPAP吸气压与呼气压不同，但和真正的呼吸机不同，它并不能主动为患者通气。",
+     "hard": false
+    },
+    {
+     "en": "Both CPAP and BPAP can be delivered through a nasal or face mask without any invasive airway — that is what \"noninvasive ventilation\" means.",
+     "zh": "CPAP与BPAP都可以经鼻罩或面罩给予，无需建立有创气道——这正是'无创通气'的含义。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Home Ventilators, Invasive Airways & Tracheostomy Skills",
+   "titleZh": "家用呼吸机、人工气道与气切护理",
+   "points": [
+    {
+     "en": "Home ventilators can be smaller than a microwave oven, run on regular household current, and typically include a battery backup; they may be set to deliver a target tidal volume or a target pressure, and are most often paired with an invasive airway such as an endotracheal or tracheostomy tube.",
+     "zh": "家用呼吸机可以比微波炉还小，用普通家用电供电，通常带电池后备；可设定为容量控制(目标潮气量)或压力控制模式，多与气管插管或气切管等有创气道配合使用。",
+     "hard": false
+    },
+    {
+     "en": "Positive-pressure ventilation (as delivered by a ventilator or a bag-mask device) reduces venous return to the heart and can drop cardiac output, so blood pressure and pulse should be monitored closely whenever positive-pressure ventilation is started after a period of normal breathing.",
+     "zh": "正压通气(无论是呼吸机还是球囊面罩)会降低静脉回流、可能使心输出量下降；在患者原本自主呼吸的情况下开始正压通气时，应密切监测血压和脉搏。",
+     "hard": false
+    },
+    {
+     "en": "Negative-pressure ventilators (\"ponchos,\" \"turtle shells,\" or cuirass/belt devices) mimic normal breathing by expanding the chest to draw air in; they need no invasive airway and do not disturb hemodynamics the way positive pressure does, but they still depend on the patient having a patent airway.",
+     "zh": "负压呼吸机(俗称'斗篷式'、'龟壳式'或束带式装置)通过扩张胸廓模拟自然呼吸把空气吸入；不需要有创气道，也不像正压通气那样干扰血流动力学，但仍依赖患者气道本身保持通畅。",
+     "hard": false
+    },
+    {
+     "en": "A tracheostomy is a surgical airway created below the cricoid ring; a laryngectomy removes the larynx entirely and reroutes the trachea to the neck. Laryngectomy patients cannot be bag-mask ventilated through the nose and mouth, and nothing should be poured or forced into the stoma.",
+     "zh": "气管切开是在环状软骨下方建立的外科气道；喉切除术则整个喉被摘除、气管改道缝合于颈部。喉切除患者无法经口鼻用球囊面罩通气，也绝不能向造口内灌入液体。",
+     "hard": false
+    },
+    {
+     "en": "If a tracheostomy tube becomes obstructed and you cannot ventilate through it, deflate the cuff and try bag-mask ventilation over the covered nose and mouth; if that also fails, occlude the stoma itself and ventilate through the traditional nose-and-mouth route.",
+     "zh": "若气切管堵塞且经其无法通气，应先放气套囊，改经捂住的口鼻用球囊面罩通气；若仍不能通气，则改为堵住气切造口、经传统口鼻途径通气。",
+     "hard": false
+    },
+    {
+     "en": "On arrival to a patient already on a ventilator, check that chest movement is synchronous with the machine; if ventilator function is in doubt, don't hesitate to disconnect and switch to manual positive-pressure ventilation, and avoid changing a home ventilator's settings unless you are specifically trained/credentialed on that device.",
+     "zh": "到达时若患者已连着呼吸机，先检查胸廓起伏是否与机器同步；一旦怀疑呼吸机功能异常，应毫不犹豫脱机改为手动正压通气，且未经专门培训/授权不要擅自调整家用呼吸机的参数设置。",
+     "hard": false
+    },
+    {
+     "en": "When transporting a child with a tracheostomy in a car seat, avoid seats with a front tray or shield, since it can press against or block the tracheostomy; infant and small-child tracheostomy tubes are typically single-cannula plastic tubes and are usually uncuffed even on a ventilator.",
+     "zh": "用汽车安全座椅转运带气切的儿童时，应避免使用带前置护板/托盘的座椅，护板可能压迫或阻塞气切造口；婴幼儿的气切管通常是单腔塑料管，即使需要机械通气也大多不带套囊。",
+     "hard": false
+    },
+    {
+     "en": "To clean an inner cannula, soak it per the caregiver's usual solution or, if unknown, a 50/50 mix of hydrogen peroxide and water (plain water is acceptable short-term); when suctioning, preoxygenate first, insert the catheter without suction, then apply intermittent suction only while withdrawing, watching SpO2 throughout.",
+     "zh": "清洁内套管时按照家属惯用的溶液浸泡，若不清楚可用双氧水加水各半(50:50)混合液(短期也可用清水)；吸痰时先给患者预充氧，插入吸痰管时不给负压，只在退管过程中间断给负压，全程监测血氧饱和度。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Chronic Cardiovascular Disease & Vascular Access Devices",
+   "titleZh": "慢性心血管疾病与血管通路装置",
+   "points": [
+    {
+     "en": "Heart failure means the heart cannot pump enough blood to meet the body's demands; common causes managed at home include coronary artery disease, viral- or toxin-related muscle weakness, valve disease, and hypertension, and some patients rely on an implanted pacemaker to keep the heart pumping efficiently.",
+     "zh": "心力衰竭指心脏泵血无法满足身体需求；居家患者常见病因包括冠心病、病毒或毒物相关的心肌无力、瓣膜病和高血压，部分患者靠植入式起搏器维持心脏有效泵血。",
+     "hard": false
+    },
+    {
+     "en": "The heart never ejects 100% of the left ventricle's blood with each beat; an ejection fraction above 55% is considered adequate, one below 55% suggests cardiomyopathy and limited activity tolerance, and one below 20% can severely restrict a patient's lifestyle — a drop in a home-care patient's usual activity level is itself a warning sign.",
+     "zh": "心脏每次收缩都不会把左心室血液100%排空；射血分数高于55%视为正常，低于55%提示存在心肌病、活动耐量受限，低于20%则可严重限制患者的生活方式——居家患者活动耐量较以往下降本身就是一个警示信号。",
+     "hard": true
+    },
+    {
+     "en": "A central venous catheter's tip sits in the superior vena cava and is used for chemotherapy, long-term antibiotics/analgesia, concentrated glucose, or hemodialysis; a midline catheter sits in a large vessel short of the superior vena cava and is not suited for rapid fluid resuscitation.",
+     "zh": "中心静脉导管(CVC)导管尖端位于上腔静脉，用于化疗、长期抗生素或止痛、高浓度葡萄糖输注或血液透析；中线导管则位于大静脉但未达上腔静脉，不适合用于快速补液复苏。",
+     "hard": false
+    },
+    {
+     "en": "PICC lines and tunnelled/implanted central lines are long and narrow, poorly suited to rapid infusion, and their use may require online medical direction; implanted infusion ports must be accessed only with a noncutting, nonbevelled needle.",
+     "zh": "PICC导管及隧道式/植入式中心导管管腔细长，不适合快速输液，使用时可能需要在线医疗指导许可；植入式输液港则必须使用非切割刃、非斜面的专用针头穿刺。",
+     "hard": false
+    },
+    {
+     "en": "Vascular access devices used for hemodialysis are now typically flushed with saline rather than heparin, since even low-dose long-term heparin flushing can trigger heparin-induced thrombocytopenia — the trade-off is that a saline-locked device needs more frequent patency checks.",
+     "zh": "用于血液透析的通路装置现在多用生理盐水而非肝素封管，因为长期低剂量肝素封管也可能诱发肝素诱导性血小板减少症——代价是生理盐水封管需要更频繁地检查导管通畅性。",
+     "hard": false
+    },
+    {
+     "en": "Protect vascular access devices by using each one only for its intended purpose (a dialysis catheter is for dialysis only), never placing a blood pressure cuff on the access arm, checking pulses near the device, and securing all external lines before any patient move.",
+     "zh": "保护血管通路装置的原则：每种装置只能用于其设计用途(如透析导管只能用于透析)，绝不在有置管的手臂上测血压，要检查该处脉搏，并在转移患者前固定好所有外接管路。",
+     "hard": false
+    },
+    {
+     "en": "Serious vascular device complications and their clues: occlusion (can't aspirate or infuse), catheter thrombosis (swollen, painful arm/neck/shoulder), sepsis (fever, chills, malaise), catheter migration (change in the visible external length), catheter breakage (leaking/bleeding), and air embolism (sudden chest pain, dyspnea, tachycardia, hypotension, falling LOC).",
+     "zh": "血管通路装置常见严重并发症及提示：堵塞(抽不出血/输液不进)、导管相关血栓(肢体/颈肩肿痛)、脓毒症(发热寒战乏力)、导管移位(体外可见段长度改变)、导管断裂(渗漏出血)、空气栓塞(突发胸痛、气短、心动过速、低血压、意识下降)。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "GI/GU Access, Ostomies & Autonomic Dysreflexia",
+   "titleZh": "胃肠泌尿通路、造口与自主神经反射亢进",
+   "points": [
+    {
+     "en": "A gastric tube may enter through the nose/mouth or be placed surgically/endoscopically into the stomach or jejunum; to reduce reflux and aspiration risk, keep the patient at least 30 degrees upright during feeds or medication delivery and ideally for 30-60 minutes afterward, infusing liquids slowly.",
+     "zh": "胃管可经鼻/口置入，也可经手术或内镜置入胃部或空肠；为降低反流和误吸风险，输注药物或营养液时应让患者至少保持30度以上的半卧位，输注后最好继续保持30-60分钟直立，且输注速度要慢。",
+     "hard": true
+    },
+    {
+     "en": "Gastric tubes should be flushed, usually with water, after medications or feeds; infusing non-commercial homemade foods through the tube is discouraged because it commonly clogs the tube.",
+     "zh": "经胃管给药或喂养后应常规冲管(通常用清水)；不建议把非商用自制食物经胃管注入，因为这类食物很容易把管路堵住。",
+     "hard": false
+    },
+    {
+     "en": "Large-bowel obstruction (often from a growth in the colon) tends to show watery stool changes, distention, and localized pain; small-bowel obstruction (often from adhesions after abdominal surgery) tends to show diffuse pain, nausea, and vomiting that may contain fecal material, with bowel sounds ranging from faint to loud and frequent.",
+     "zh": "大肠梗阻(多由结肠内肿物引起)常表现为大便性状呈水样改变、腹胀及局限性疼痛；小肠梗阻(多因腹部手术后粘连)常表现为弥漫性腹痛、恶心及可含粪样物的呕吐，肠鸣音可从减弱到亢进不等。",
+     "hard": false
+    },
+    {
+     "en": "Indwelling catheters hold the bladder sphincter open and give bacteria a continuous route of entry, so urinary tract infection risk is higher than with intermittent catheterization; women, who have a shorter urethra, are at higher risk than men, and urosepsis is a common cause of septic shock in this population.",
+     "zh": "留置导尿管会持续撑开膀胱括约肌，为细菌提供持续入侵通道，尿路感染风险高于间歇导尿；女性尿道较短，风险高于男性；留置导尿相关的脓毒症(urosepsis)是这类患者发生感染性休克的常见诱因。",
+     "hard": false
+    },
+    {
+     "en": "The urge to void typically begins around 150 mL of bladder volume and becomes intense around 400 mL; in a patient with a spinal cord injury, an overfull bladder can trigger a dangerous spike in blood pressure known as autonomic dysreflexia.",
+     "zh": "排尿欲通常在膀胱容量约150mL时出现，约400mL时变得强烈；对脊髓损伤患者而言，膀胱过度充盈可能诱发一种危险的血压骤升，称为自主神经反射亢进。",
+     "hard": true
+    },
+    {
+     "en": "Autonomic dysreflexia occurs in spinal cord injuries at or above T6: a stimulus below the injury (classically a distended bladder or rectum) triggers a sympathetic surge that cannot be countered by the brain's normal parasympathetic response because the signal can't cross the injury site — the result is severe hypertension (systolic pressure can reach as high as 300 mmHg) paired with a slowing pulse.",
+     "zh": "自主神经反射亢进见于T6及以上水平的脊髓损伤：损伤平面以下的刺激(典型是膀胱或直肠过度充盈)引发交感神经风暴，而大脑正常的降压性副交感反射因信号无法越过损伤平面而无法下传抵消，结果是重度高血压(收缩压可高达300mmHg)伴脉搏减慢。",
+     "hard": true
+    },
+    {
+     "en": "Watch for autonomic dysreflexia's classic picture: sudden severe hypertension, pounding headache, blurred vision, sweating above the injury level, nasal congestion, nausea, and bradycardia — the priority is finding and relieving the triggering stimulus (commonly a full bladder or rectum) while arranging transport.",
+     "zh": "自主神经反射亢进的典型表现是：突发重度高血压、剧烈搏动样头痛、视物模糊、损伤平面以上出汗、鼻塞、恶心及心动过缓——处置重点是尽快找到并解除诱因刺激(常见是膀胱或直肠胀满)，同时安排转运。",
+     "hard": false
+    },
+    {
+     "en": "Ostomy types differ by output: an ileostomy drains small-bowel contents that irritate skin and needs frequent emptying; a colostomy's output ranges from loose (ascending colon) to formed and soft (transverse/descending colon) and may be temporary (meant to be reversed) or permanent; a ureterostomy brings the ureters themselves to a skin stoma, unlike a suprapubic catheter, which drains an intact bladder.",
+     "zh": "造口类型因排出物不同而异：回肠造口排出小肠内容物、刺激皮肤，需要频繁排空；结肠造口的排出物从稀水样(升结肠段)到成形软便(横/降结肠段)不等，可为暂时性(计划日后还纳)或永久性；输尿管造口是把输尿管本身引到皮肤造口，与耻骨上膀胱造瘘(膀胱仍完整、经造瘘引流)不同。",
+     "hard": false
+    },
+    {
+     "en": "An overfilled bladder can be mistaken for generalized abdominal distention, but a distended bladder usually has a palpable upper margin while true abdominal distention does not; urine is normally clear, pale yellow, and only mildly odorous — a strong ammonia smell suggests infection.",
+     "zh": "膀胱过度充盈容易被误认为普通腹胀，但膀胱膨胀通常能触及清晰的上缘边界，而单纯腹胀往往摸不到明确上界；正常尿液应清亮淡黄、气味轻微，浓烈的氨味提示尿路感染。",
+     "hard": false
+    },
+    {
+     "en": "When inserting a catheter, never inflate the retention balloon unless urine is already visible in the tubing and there is no resistance — inflating against resistance may mean the balloon is still in the urethra, and forcing it can cause urethral injury; always deflate the balloon with a syringe (never just pull) before removing an indwelling catheter.",
+     "zh": "置入导尿管时，只有在管内已见尿液且无阻力的情况下才能给球囊充盈——若遇阻力仍强行充盈，可能意味着球囊仍卡在尿道内，强行充盈会造成尿道损伤；拔除留置导尿管前必须先用注射器抽尽球囊内液体，绝不能直接硬拉。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Wound Care & Infection Control in Home Care",
+   "titleZh": "伤口护理与感染防控",
+   "points": [
+    {
+     "en": "Wound healing is affected by nutrition, activity level, medications (nicotine, anti-inflammatories, heparin, chemotherapy), chronic illness or immobility, diabetes, and infection; in immunocompromised patients (early transplant recipients, HIV), fever may be the only sign of infection and always warrants further workup.",
+     "zh": "伤口愈合受营养状态、活动水平、用药(尼古丁、抗炎药、肝素、化疗药)、慢性病或制动、糖尿病及感染等因素影响；免疫抑制患者(器官移植早期、HIV感染者)发热可能是感染的唯一征象，必须进一步排查。",
+     "hard": false
+    },
+    {
+     "en": "Wound drainage tells a story by colour: clear watery (serous), pus containing white cells and dead tissue (purulent), or bloody (sanguineous, brighter when fresh, darker when older) — note colour, amount, and odour when assessing any wound.",
+     "zh": "伤口渗液的颜色能说明问题：清亮水样(浆液性)、含白细胞和坏死组织的脓性、或血性(新鲜出血偏鲜红、陈旧出血偏暗红)——评估任何伤口都要记录渗液颜色、量和气味。",
+     "hard": false
+    },
+    {
+     "en": "A painful, red, possibly cracked area with clear drainage suggests cellulitis; add fever, chills, hot skin, and pus, and the infection is more serious — cellulitis is more likely to require hospitalization in patients with venous stasis, diabetes, or immunosuppression.",
+     "zh": "疼痛发红、可能皲裂伴清亮渗液的区域提示蜂窝织炎；若同时伴发热寒战、皮温高、脓性渗出，说明感染更严重——静脉淤滞、糖尿病或免疫抑制患者的蜂窝织炎更容易发展到需要住院。",
+     "hard": false
+    },
+    {
+     "en": "A sudden increase in wound drainage, especially around 4-5 days after surgery, is a red flag for dehiscence (the wound edges separating); most skin sutures/staples come out at 7-10 days, while deeper stay/retention sutures may stay in for 14-21 days.",
+     "zh": "伤口渗液量突然增多，尤其是术后4-5天左右出现，是伤口裂开(dehiscence)的警示信号；一般皮肤缝线/皮钉在7-10天拆除，而深层减张缝线可留置14-21天。",
+     "hard": true
+    },
+    {
+     "en": "MRSA is a significant community concern among chronically ill home-care patients and can silently colonize a person's skin without making them sick, allowing it to spread to others unnoticed — good hand hygiene and standard precautions matter even when the patient looks well.",
+     "zh": "MRSA(耐甲氧西林金黄色葡萄球菌)是居家慢病患者群体中的重要社区问题，可以在患者皮肤上无症状定植，在不知不觉中传染给他人——即使患者看起来状态良好，规范手卫生和标准防护仍然重要。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Maternal/Newborn Home Care & Infant Apnea Monitoring",
+   "titleZh": "母婴居家照护与婴儿呼吸暂停监测",
+   "points": [
+    {
+     "en": "In a recent reporting year, Canada saw roughly 386,000 live births, averaging about 3,500 g, with about 6.5% under 2,500 g and 28.8% delivered by cesarean section — all factors driving demand for postpartum home care.",
+     "zh": "加拿大某年活产数约38.6万例，平均出生体重约3500g，其中约6.5%低于2500g，剖宫产率高达28.8%——这些都是推高产后居家照护需求的因素。",
+     "hard": true
+    },
+    {
+     "en": "Postpartum complications to screen for include hemorrhage, depression, sepsis, and pulmonary embolism; a history of postpartum hemorrhage in a prior pregnancy is an important risk factor worth asking about directly.",
+     "zh": "产后需要留意的并发症包括产后出血、抑郁、脓毒症和肺栓塞；既往孕产史中出现过产后出血是重要的风险因素，应主动询问。",
+     "hard": false
+    },
+    {
+     "en": "Postpartum pulmonary embolism occurs in roughly 5.4 per 10,000 pregnancies in Canada and is a leading cause of maternal death, contributing to as many as 17 maternal deaths a year — a real risk behind vague dyspnea complaints in a recently-delivered patient.",
+     "zh": "加拿大产后肺栓塞的发生率约为每万次妊娠5.4例，是孕产妇死亡的主要原因之一，每年可造成多达17例孕产妇死亡——产后患者主诉含糊的气短，背后可能就是这个真实风险。",
+     "hard": true
+    },
+    {
+     "en": "Postpartum (perinatal) depression is easy to miss because its symptoms — fatigue, insomnia, strong emotional swings, weight change — overlap with normal postpartum changes; early recognition and referral are the key intervention.",
+     "zh": "产后(围产期)抑郁很容易被漏诊，因为其症状(疲劳、失眠、情绪剧烈波动、体重变化)与产后正常变化高度重叠；早识别、早转介是关键的干预点。",
+     "hard": false
+    },
+    {
+     "en": "Newborn sepsis accounts for about 4.8% of infant deaths in Canada and often shows no clear signs beyond a caregiver saying the baby \"just doesn't look right\" or has a sudden change in mental status — take that report seriously and transport promptly.",
+     "zh": "新生儿脓毒症约占加拿大婴儿死亡总数的4.8%，症状往往不典型，常常只是照护者觉得孩子'看起来不太对'或精神状态突然改变——这类主诉应认真对待并尽快转运。",
+     "hard": true
+    },
+    {
+     "en": "Home apnea monitoring is typically used for infants with unresolved apnea of prematurity, severe reflux, a prior apparent life-threatening event, or a sibling lost to SIDS; false alarms are common and usually caused by movement, loose leads, or poorly placed electrodes, so confirm the infant's actual clinical status before assuming the monitor is wrong.",
+     "zh": "家用呼吸暂停监测通常用于早产儿呼吸暂停未愈、严重胃食管反流、曾发生疑似危及生命事件、或有同胞死于婴儿猝死综合征的婴儿；假警报很常见，多由体动、导联松脱或电极贴放不当引起，但仍要先核实婴儿真实临床状态，不能直接默认是仪器误报。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Hospice, Pain Management & End-of-Life Decisions",
+   "titleZh": "临终关怀、疼痛管理与临终决策",
+   "points": [
+    {
+     "en": "Hospice pain management typically escalates in steps: round-the-clock anti-inflammatory medication (often with anti-anxiety or antiemetic drugs) first, then a mild opioid if that's not enough, then a stronger opioid if needed — non-drug comfort measures (positioning, warmth, TENS, massage) matter throughout.",
+     "zh": "安宁疗护的疼痛管理通常分阶梯：先是全天候抗炎药(常配合抗焦虑或止吐药)，效果不够再加弱阿片类，仍不够再升级为强阿片类——体位支撑、保暖、经皮神经电刺激(TENS)、按摩等非药物舒适措施应贯穿始终。",
+     "hard": false
+    },
+    {
+     "en": "In hospice patients, undermedicated pain is far more common than opioid overdose; if overdose is still suspected, treat and assess as usual but focus on respiratory adequacy, and remember that naloxone's goal here is restoring adequate breathing, not full reversal — fully reversing the opioid can plunge the patient back into severe pain and trigger a dangerous sympathetic surge in blood pressure and pulse.",
+     "zh": "安宁疗护患者中，镇痛不足远比阿片类药物过量常见；即便怀疑过量，仍按常规评估处置，重点关注呼吸是否充分；纳洛酮的目标是让患者恢复足够的自主呼吸，而不是完全清醒逆转——彻底逆转阿片作用可能让患者重新陷入剧痛，并诱发危险的交感性血压心率骤升。",
+     "hard": false
+    },
+    {
+     "en": "Nociceptors (pain receptors) are dense in skin, joints, and muscle but sparse in visceral organs and absent in brain tissue itself; fast (alpha) fibres carry sharp, well-localized acute pain, while slow (C) fibres carry the dull, burning or throbbing pain typical of chronic conditions.",
+     "zh": "伤害感受器(痛觉感受器)在皮肤、关节和肌肉中密集分布，在内脏器官中较少，脑组织本身则完全没有；快纤维(alpha纤维)传导定位明确的锐痛，多见于急性损伤；慢纤维(C纤维)传导烧灼样或搏动样的钝痛，多见于慢性病程。",
+     "hard": false
+    },
+    {
+     "en": "Chronic pain is generally defined as pain persisting six months or longer, often outlasting the original injury; poorly treated acute pain is a known risk factor for it becoming chronic.",
+     "zh": "慢性疼痛通常定义为持续6个月或更久的疼痛，往往超出了原发损伤本身的病程；急性疼痛处理不当是其转为慢性的已知风险因素。",
+     "hard": true
+    },
+    {
+     "en": "Chemotherapy commonly causes hair loss, poor appetite, fatigue, low white cell and platelet counts, anemia, and higher infection risk; transplant recipients and chemotherapy patients with depressed immunity should be protected with reverse isolation (mask on the patient) rather than just standard precautions for the crew.",
+     "zh": "化疗常见副作用包括脱发、食欲下降、乏力、白细胞和血小板减少、贫血及感染风险升高；对免疫功能低下的移植后或化疗患者应采取反向隔离(给患者本人戴口罩)加以保护，而不只是队员自身的标准防护。",
+     "hard": false
+    },
+    {
+     "en": "The five stages of adjustment to chronic illness — denial, anger, bargaining, withdrawal/depression, acceptance — each call for a different response: stay nonjudgmental through denial, separate acceptable anger from unacceptable abuse (retreat and call for help if unsafe), restate options during bargaining, offer reassurance during withdrawal, and support autonomy during acceptance.",
+     "zh": "慢性病适应五阶段——否认、愤怒、讨价还价、退缩伴抑郁、接受——各自需要不同的应对：否认期保持不评判；愤怒期区分'愤怒情绪可以接受'与'暴力行为不可接受'，现场不安全就先撤离求援；讨价还价期重述可选方案；退缩期给予安抚；接受期支持患者尽量自主。",
+     "hard": false
+    },
+    {
+     "en": "A durable power of attorney (health care proxy) lets a patient name someone to make health decisions if they become incapacitated, including stopping life support, removing life-sustaining equipment, and ending artificial nutrition/hydration; a living will expresses the same end-of-life wishes directly but is not legally recognized in every province or territory.",
+     "zh": "持续医疗代理授权书(健康照护代理人)允许患者预先指定他人在自己丧失行为能力时代为做医疗决定，包括终止生命支持、撤除维生设备、终止人工营养和补液；生前预嘱则直接表达患者本人的临终意愿，但并非所有省份和地区都承认其法律效力。",
+     "hard": false
+    },
+    {
+     "en": "A DNR/DNAR (or do-not-intubate) order only withholds resuscitation for cardiac or respiratory arrest — it does not mean withholding all care; pain medication, supplemental oxygen, nutrition, and hydration should still be provided as needed, and requirements for valid, witnessed DNR paperwork vary by province/territory.",
+     "zh": "DNR/DNAR(或'不插管')医嘱只是在发生心跳或呼吸骤停时放弃复苏——并不代表放弃全部治疗；止痛、供氧、营养和补液仍应按需提供，各省/地区对有效DNR文件的格式和见证要求也不尽相同。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Hospice eligibility (typical prognosis)",
+   "itemZh": "安宁疗护收治预后门槛",
+   "value": "预计存活期 ≤ 6 个月"
+  },
+  {
+   "itemEn": "Canadians receiving home care (2012 survey)",
+   "itemZh": "接受居家照护的加拿大人比例",
+   "value": "8%（15 岁以上）≈ 220 万人"
+  },
+  {
+   "itemEn": "Canadian home-care spending (2010)",
+   "itemZh": "加拿大居家照护支出（2010）",
+   "value": "约 100 亿加元，占医疗总支出约 5%"
+  },
+  {
+   "itemEn": "Minimum alcohol concentration for hand rub",
+   "itemZh": "免洗手消液最低酒精浓度",
+   "value": "≥ 60%"
+  },
+  {
+   "itemEn": "Inner-cannula soak solution when unknown",
+   "itemZh": "不明浸泡液时的内套管浸泡配方",
+   "value": "双氧水:水 = 50:50"
+  },
+  {
+   "itemEn": "Ejection fraction thresholds",
+   "itemZh": "射血分数分界值",
+   "value": "正常 > 55%；< 55% 提示心肌病；< 20% 严重限制生活"
+  },
+  {
+   "itemEn": "Gastric-tube feeding position",
+   "itemZh": "胃管喂养/给药体位",
+   "value": "≥ 30 度半卧位，喂养后维持 30-60 分钟"
+  },
+  {
+   "itemEn": "Bladder volume producing urge to void",
+   "itemZh": "引发排尿欲的膀胱容量",
+   "value": "~150 mL（有尿意）/ ~400 mL（强烈尿意）"
+  },
+  {
+   "itemEn": "Autonomic dysreflexia injury level & BP",
+   "itemZh": "自主神经反射亢进损伤平面与血压",
+   "value": "T6 及以上损伤；收缩压可达 300 mmHg"
+  },
+  {
+   "itemEn": "Wound dehiscence & suture-removal timing",
+   "itemZh": "伤口裂开高危期及拆线时间",
+   "value": "裂开高危期为术后 4-5 天；一般缝线 7-10 天拆，减张缝线 14-21 天"
+  },
+  {
+   "itemEn": "Canadian birth statistics",
+   "itemZh": "加拿大出生统计",
+   "value": "年活产约 38.6 万；均重 3,500 g；<2,500 g 占 6.5%；剖宫产率 28.8%"
+  },
+  {
+   "itemEn": "Postpartum pulmonary embolism incidence",
+   "itemZh": "产后肺栓塞发生率",
+   "value": "5.4/万次妊娠；每年最多致 17 例孕产妇死亡"
+  },
+  {
+   "itemEn": "Newborn sepsis share of infant deaths",
+   "itemZh": "新生儿脓毒症占婴儿死亡比例",
+   "value": "约 4.8%"
+  },
+  {
+   "itemEn": "Chronic pain duration definition",
+   "itemZh": "慢性疼痛病程定义",
+   "value": "持续 ≥ 6 个月"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Pulse oximetry readings vary by age and gender — always compare a reading to the patient's own known baseline before deciding whether to intervene, not to a generic \"normal\" number.",
+   "zh": "脉氧读数因年龄、性别而有差异——判断是否需要干预时，应对照患者本人平日的基线读数，而不是套用一个笼统的'正常值'。"
+  },
+  {
+   "en": "Equipment not designed for transport use raises injury risk for both patient and crew, so strip a home ventilator or similar device down to only what is needed en route (e.g., leave the humidifier behind) before moving.",
+   "zh": "并非为转运设计的设备一旦上车会增加患者和急救员受伤的风险，转运前应把呼吸机等设备精简到只保留途中必需的部件（例如可以留下加湿装置）。"
+  },
+  {
+   "en": "Before palpating the abdomen, auscultate bowel sounds first in a quiet environment — palpation can alter what you hear afterward.",
+   "zh": "触诊腹部之前先在安静环境下听诊肠鸣音——先触诊会改变之后听到的肠鸣音表现。"
+  },
+  {
+   "en": "A checklist for a failing GI/GU device: abdominal pain or distention, bowel sounds that are decreased or absent, a distended bladder, painful urination, or a change in urine output or colour.",
+   "zh": "判断胃肠/泌尿装置故障的速查清单：腹痛或腹胀、肠鸣音减弱或消失、膀胱膨胀、排尿疼痛、尿量或尿色改变。"
+  },
+  {
+   "en": "Patients in the acceptance stage of adjusting to chronic illness or dying can be uncomfortable to work with because they seem to have \"given up\" — let them do as much for themselves as they safely can, and ask what they expect from your care.",
+   "zh": "面对处于'接受'阶段的慢病或临终患者时，急救员可能会因为对方看似'已经放弃'而感到不适——应尽量让患者自己力所能及地完成动作，并询问对方对你的照护有什么期待。"
+  },
+  {
+   "en": "A terminally ill patient retains real rights: to know the truth, to confidentiality and privacy, to consent to treatment, to choose where and when they die, and to decide what happens to their body afterward.",
+   "zh": "临终患者仍然拥有实实在在的权利：知情权、保密隐私权、对治疗的同意权、选择死亡地点与时间的权利，以及决定身后遗体处置方式的权利。"
+  },
+  {
+   "en": "Home care patients often reuse suction catheters and urinary catheters if they show no visible contamination and have been stored cleanly — this differs from typical single-use hospital practice, so don't assume it's wrong technique.",
+   "zh": "居家患者常常重复使用吸痰管和导尿管，只要肉眼无污染且储存得当即可再用——这与医院常见的一次性使用习惯不同，不要一见就当作操作错误。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Misconception: any altered mental status in a chronic-care elder just means \"their dementia acting up.\" Reality: distinguish acute, reversible delirium from a chronic dementia baseline before writing it off.",
+   "zh": "误区：居家慢病老人意识状态改变=\"就是他的痴呆而已\"。事实：应先区分急性可逆的谵妄与慢性痴呆基线，不能轻易归因了事。"
+  },
+  {
+   "en": "Misconception: suspected opioid overdose in a hospice patient should be fully reversed with naloxone. Reality: the goal is adequate breathing, not full reversal — complete reversal reignites severe pain and a dangerous sympathetic surge.",
+   "zh": "误区：怀疑安宁疗护患者阿片过量就应该用纳洛酮彻底逆转。事实：目标是恢复足够呼吸而非完全清醒，彻底逆转会让剧痛重新出现并诱发危险的交感风暴。"
+  },
+  {
+   "en": "Misconception: a DNR order means withhold all treatment. Reality: DNR only withholds resuscitation for cardiac/respiratory arrest — pain control, oxygen, nutrition, and hydration should continue as needed.",
+   "zh": "误区：DNR 医嘱=放弃全部治疗。事实：DNR 只是在心跳呼吸骤停时放弃复苏，止痛、供氧、营养和补液仍应按需继续。"
+  },
+  {
+   "en": "Misconception: sudden severe hypertension in a spinal-cord-injured patient is most likely cardiac in origin. Reality: think autonomic dysreflexia first and look for a full bladder or rectum as the trigger.",
+   "zh": "误区：脊髓损伤患者突发重度高血压首先想到心源性病因。事实：应优先考虑自主神经反射亢进，排查膀胱或直肠是否胀满作为诱因。"
+  },
+  {
+   "en": "Misconception: a CVC, PICC, or implanted port can be used like a peripheral IV for rapid fluid resuscitation. Reality: these devices are long and narrow, poorly suited to rapid flow, and some require online medical direction before use.",
+   "zh": "误区：CVC、PICC 或植入式输液港可以像外周静脉一样用于快速补液复苏。事实：这些装置管腔细长，不适合快速输液，部分还需要在线医疗指导才能使用。"
+  },
+  {
+   "en": "Misconception: if a home ventilator seems to be malfunctioning, troubleshoot the settings first. Reality: assess the patient first — if ventilation looks inadequate, disconnect and bag the patient manually before touching any settings you aren't credentialed on.",
+   "zh": "误区：家用呼吸机疑似故障时应先排查参数设置。事实：应先评估患者——若通气看起来不足，先脱机改手动通气，未经培训的参数一律不要碰。"
+  },
+  {
+   "en": "Misconception: a tracheostomy blockage means the airway is lost until help arrives. Reality: deflate the cuff and bag over the nose/mouth, or occlude the stoma and bag the traditional route — you have options.",
+   "zh": "误区：气切管堵塞=气道彻底丧失，只能干等支援。事实：可以先放气套囊经口鼻通气，或堵住造口改传统口鼻通气——你是有办法的。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "AEIOU-TIPS",
+   "en": "A framework for sorting causes of altered mental status: Alcohol/acidosis, Epilepsy/environment/electricity, Insulin, Overdose, Uremia, Trauma, Infection, Poisoning/psychosis, Seizure/stroke/shock.",
+   "zh": "用于梳理意识改变病因的框架：A-酒精/酸中毒，E-癫痫/环境/触电，I-胰岛素相关，O-药物过量，U-尿毒症，T-创伤，I-感染，P-中毒/精神病，S-癫痫发作/卒中/休克。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "What is the correct rescue sequence when a tracheostomy tube is obstructed and you can't ventilate through it?",
+   "qZh": "气切管堵塞且经其无法通气时，正确的抢救顺序是什么？",
+   "aEn": "Deflate the cuff and bag-mask ventilate over the covered nose and mouth; if that still fails, occlude the stoma itself and ventilate through the traditional nose-and-mouth route.",
+   "aZh": "先放气套囊，改经捂住的口鼻用球囊面罩通气；若仍无效，则堵住气切造口，改用传统口鼻途径通气。"
+  },
+  {
+   "qEn": "A quadriplegic home-care patient with a T4 spinal cord injury develops a sudden severe headache, blurred vision, sweating above the nipple line, and a heart rate of 52. What's happening, and what do you check first?",
+   "qZh": "一名 T4 水平脊髓损伤的居家四肢瘫患者突发剧烈头痛、视物模糊、乳头连线以上出汗，心率 52 次/分。这是什么情况，首先该查什么？",
+   "aEn": "Autonomic dysreflexia — check for and relieve a full bladder or impacted rectum, the classic trigger, while arranging transport.",
+   "aZh": "自主神经反射亢进——首先排查并解除膀胱过度充盈或直肠嵌塞这两个经典诱因，同时安排转运。"
+  },
+  {
+   "qEn": "How do you tell delirium apart from dementia in a home-care patient, and why does the distinction matter?",
+   "qZh": "如何在居家患者身上区分谵妄与痴呆，这个区分为什么重要？",
+   "aEn": "Dementia is a chronic, usually irreversible baseline; delirium is typically acute and reversible, often from glucose/electrolyte imbalance, poor nutrition, or temperature extremes — delirium demands an urgent search for a treatable cause.",
+   "aZh": "痴呆是慢性、通常不可逆的基线状态；谵妄通常急性起病且可逆，常由血糖/电解质紊乱、营养不良或体温异常引起——谵妄意味着必须立即寻找可逆病因。"
+  },
+  {
+   "qEn": "Why shouldn't you fully reverse a suspected opioid overdose in a hospice patient with naloxone?",
+   "qZh": "为什么不应该用纳洛酮完全逆转安宁疗护患者疑似阿片过量？",
+   "aEn": "The goal is restoring adequate spontaneous breathing, not full reversal — complete reversal returns the patient to severe pain and can trigger a dangerous sympathetic surge in blood pressure and heart rate.",
+   "aZh": "目标是恢复足够的自主呼吸，而不是完全清醒逆转——彻底逆转会让患者重新陷入剧痛，并可能诱发危险的交感性血压心率骤升。"
+  },
+  {
+   "qEn": "What does an ejection fraction under 20% tell you about a home cardiac patient?",
+   "qZh": "射血分数低于 20% 对居家心脏病患者意味着什么？",
+   "aEn": "It indicates severely limited pumping function that can significantly restrict the patient's lifestyle and activity tolerance — a major red flag if their baseline activity has recently dropped.",
+   "aZh": "提示泵血功能严重受限，可显著限制患者的生活方式和活动耐量——如果患者近期活动耐量较以往明显下降，这是重要警示信号。"
+  },
+  {
+   "qEn": "A caregiver mentions they crushed the patient's extended-release pain medication before giving it through the feeding tube. Why is this a red flag?",
+   "qZh": "照护者提到把患者的缓释止痛药碾碎后经胃管给入，为什么这是一个危险信号？",
+   "aEn": "Crushing destroys the slow-release coating, so the full dose can absorb too fast and cause an accidental overdose.",
+   "aZh": "碾碎会破坏缓释包衣，导致全剂量吸收过快，可能造成意外过量。"
+  },
+  {
+   "qEn": "Does a DNR order mean you should withhold oxygen and pain medication from a patient in respiratory distress?",
+   "qZh": "DNR 医嘱是否意味着应该对呼吸窘迫的患者停用氧气和止痛药？",
+   "aEn": "No — DNR/DNAR only withholds resuscitation for cardiac or respiratory arrest; pain control, supplemental oxygen, nutrition, and hydration should still be given as needed.",
+   "aZh": "不是——DNR/DNAR 只是在心跳或呼吸骤停时放弃复苏，止痛、供氧、营养和补液仍应按需提供。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "CPAP and the tracheostomy patient",
+   "topicZh": "CPAP 与气切患者",
+   "bookEn": "This chapter discusses CPAP and BPAP as general home noninvasive-ventilation options but doesn't flag tracheostomy as a reason to avoid CPAP.",
+   "bookZh": "本章把 CPAP/BPAP 作为一般性的居家无创通气选项介绍，并未特别指出气切患者不适用 CPAP。",
+   "bcEn": "BC's CPAP protocol explicitly lists tracheostomy as a contraindication, alongside decreased LOC, respiratory arrest/hypoventilation, inability to get a mask seal, vomiting/aspiration risk, traumatic causes of distress, suspected pneumothorax, and SBP under 90 mmHg. If a home-care patient with a tracheostomy is in respiratory distress, CPAP is not the tool — manage the airway directly and ventilate as needed.",
+   "bcZh": "BC 的 CPAP 方案明确把气切患者列为禁忌，同列的还有意识水平下降、呼吸骤停/通气不足、无法密封面罩、呕吐/误吸风险、外伤性呼吸窘迫、疑似气胸及收缩压低于 90 mmHg。居家气切患者若出现呼吸窘迫，CPAP 不是合适的处置手段——应直接处理气道并按需通气。",
+   "ref": "BC Guidelines p.52（CPAP Contraindications）"
+  },
+  {
+   "topicEn": "Accessing implanted vascular devices",
+   "topicZh": "植入式血管通路装置的操作权限",
+   "bookEn": "The chapter teaches the full technique for drawing blood from a CVC and notes that PICC lines, tunnelled central lines, and implanted ports \"may require direct medical direction for use.\"",
+   "bookZh": "本章详细讲解了从 CVC 抽血的完整步骤，并提到 PICC、隧道式中心导管和植入式输液港的使用'可能需要在线医疗指导许可'。",
+   "bcEn": "BC's IV Procedures guideline only describes peripheral catheter insertion and maintenance — it does not authorize routine access of CVCs, PICC lines, tunnelled catheters, or implanted ports at the EMR/PCP level. Treat these devices as beyond-scope: don't access them for a fresh line, and never use one for rapid fluid resuscitation. If a device is malfunctioning or a complication is suspected, don't attempt to fix it — contact medical control and prepare for transport.",
+   "bcZh": "BC 的 IV 操作指引只描述了外周静脉导管的置入与维护，并未授权 EMR/PCP 层级常规操作 CVC、PICC、隧道式导管或植入式输液港。这类装置应视为超出常规操作范围：不要为建立新通路而穿刺它们，更不能用它们做快速补液复苏。一旦怀疑装置故障或并发症，不要自行处理，应联系医疗指导并准备转运。",
+   "ref": "BC Guidelines p.38-39（IV Procedures）；Nancy Ch.48 血管通路部分"
+  },
+  {
+   "topicEn": "VP shunts and dialysis emergencies fall outside this chapter's coverage",
+   "topicZh": "VP 分流与透析急症不在本章覆盖范围内",
+   "bookEn": "Neither this Nancy chapter nor the BC guidelines describe ventriculoperitoneal shunt malfunction or the mechanics of hemodialysis/peritoneal dialysis in any depth — the chapter's only dialysis references are that hemodialysis catheters exist as a CVC subtype and should be used only for dialysis.",
+   "bookZh": "无论是本章还是 BC 考纲，都没有深入讲解脑室腹腔（VP）分流故障或血液/腹膜透析的具体机制——本章唯一涉及透析的地方，是把血液透析导管列为 CVC 的一种、并强调该导管只能用于透析。",
+   "bcEn": "Don't invent protocol detail for these devices on the exam. The safe, generalizable EMR/PCP answer for any home neurologic or dialysis device you don't recognize is the same: never attempt to access, adjust, or troubleshoot the device itself; treat the patient's ABCs, position and transport based on presentation (e.g., signs of rising ICP — headache, vomiting, altered LOC — for a possible shunt problem), and contact medical control early.",
+   "bcZh": "考试中不要为这类装置编造具体处置流程。对任何你不认识的居家神经或透析装置，EMR/PCP 层级安全、通用的答案都一样：绝不尝试操作、调整或排查装置本身；按 ABCs 处理患者，根据表现（如疑似分流故障出现的颅内压增高征象——头痛、呕吐、意识改变）摆体位并转运，并尽早联系医疗指导。",
+   "ref": "内容缺口——Nancy Ch.48 原文与 BC 考纲均未覆盖"
+  },
+  {
+   "topicEn": "Catheterization and ostomy care are in-scope, not advanced skills",
+   "topicZh": "导尿和造口护理属于本级授权范围，并非进阶技能",
+   "bookEn": "The chapter presents catheterization and ostomy-appliance replacement as routine skills alongside more advanced content like CVC blood draws, which could make them feel like the same tier of practice.",
+   "bookZh": "本章把导尿和更换造口用具与抽取 CVC 血样等更进阶的内容放在同一章节讲解，容易让人误以为二者授权层级相同。",
+   "bcEn": "BC's ch48 competency list explicitly places \"provide routine care for patient with urinary catheter,\" \"provide routine care for patient with ostomy drainage system,\" and \"conduct urinary catheterization\" under Area 5 Therapeutics for this level — these ARE tested, in-scope EMR/PCP skills, unlike CVC/PICC access. Know the male/female catheterization steps and the ostomy-appliance change cold.",
+   "bcZh": "BC 的 ch48 能力清单在 Area 5 Therapeutics 下明确列出'为留置导尿管患者提供常规护理'、'为造口引流装置患者提供常规护理'和'实施导尿'——这些确实会考、且属于本级授权范围内的 EMR/PCP 技能，与 CVC/PICC 操作不同。男女导尿步骤和更换造口用具要熟练掌握。",
+   "ref": "ch48 manifest competencyCodes 5.5.o / 5.5.p / 5.5.u"
+  }
+ ],
+ "sourcePages": "4043-4118"
+}

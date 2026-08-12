@@ -1,0 +1,926 @@
+{
+ "id": "ch40",
+ "n": 40,
+ "titleEn": "Behavioural Emergencies",
+ "titleZh": "行为急症",
+ "group": "professional",
+ "examWeight": 2,
+ "whyEn": "Behavioural Emergencies is one of two chapters BC's Canadian curriculum added that the American edition skips — and it earns its keep on the exam by testing the one domain most paramedic training under-covers: reading, interviewing, and safely managing a mind in crisis. Expect questions on the eight-domain mental status exam (COASTMAP), the diagnostic feature sets for depression, mania, panic, and psychosis, the concrete risk factors and stepwise questioning for suicide risk, and the hard safety mechanics of restraint — team size, position, and the fatal mistakes to never make. Because BC's own Mental Health Act sets the real legal boundary for involuntary transport (not the vague 'laws vary by region' line the textbook offers), this chapter is where a wrong legal assumption costs you the most marks.",
+ "whyZh": "行为急症是加拿大版课程独有、美版教材没有的两个新增章之一——它在考试里的价值恰恰在于测试救护员培训里最常被忽视的一块：如何解读、问诊、安全管理一个正处于危机中的心智。要预期考的是：八域精神状态检查（COASTMAP）、抑郁/躁狂/惊恐/精神病态各自的诊断特征组合、自杀风险的具体因素和分步提问法，以及约束的硬核安全机制——团队人数、体位、绝不能犯的致命错误。由于 BC 自己的《精神卫生法》才是非自愿转运的真实法律边界（而不是教材那句含糊的『法律因地区而异』），这一章正是一个法律假设错了就会大量丢分的地方。",
+ "competencies": {
+  "areas": [
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "2.1.e",
+   "2.3.b",
+   "2.4.b",
+   "2.4.f",
+   "2.4.g",
+   "3.1.d",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.2.f",
+   "4.3.p",
+   "6.1.k",
+   "6.1.p"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "What Counts as a Behavioural Emergency",
+   "titleZh": "行为急症的定义与本质",
+   "points": [
+    {
+     "en": "A behavioural disorder is any disturbance of mood, thought, or behaviour — organic, psychiatric, or both — severe enough to disrupt a person's activities of daily living such as dressing, hygiene, or holding a job.",
+     "zh": "行为障碍指情绪、思维或行为的紊乱——病因可以是躯体性、精神性或两者兼有——严重到干扰穿衣、个人卫生、维持工作等日常生活活动（ADLs）。",
+     "hard": true
+    },
+    {
+     "en": "A behavioural emergency exists only when the abnormal behaviour threatens the patient's own health and safety, or someone else's — not every odd or upsetting behaviour qualifies.",
+     "zh": "只有当异常行为威胁到病人本人或他人的健康与安全时，才构成『行为急症』——并非所有古怪或令人不安的行为都算数。",
+     "hard": false
+    },
+    {
+     "en": "A psychotic episode is the most extreme behavioural emergency: delusions (fixed false beliefs) or hallucinations (false sensory perceptions) cause a loss of contact with reality, and the resulting disorganization, fear, or paranoia can push the person toward self-neglect, risky acts, or violence.",
+     "zh": "精神病发作是最极端的行为急症：妄想（固着的错误信念）或幻觉（虚假的感官感受）造成脱离现实，由此产生的混乱、恐惧或偏执可能把病人推向自我忽视、危险行为甚至暴力。",
+     "hard": true
+    },
+    {
+     "en": "Mind and body are not separate systems: physical illness commonly alters behaviour (often toward anxiety or depression), and mental-state changes can worsen physical health in return — assess a behavioural patient as a whole person, not a psychiatric label.",
+     "zh": "身心从不是两套独立系统：躯体疾病常常改变行为（多表现为焦虑或抑郁），情绪状态的变化反过来也会损害躯体健康——评估行为急症病人要看『整个人』，不能只贴一张精神科标签。",
+     "hard": false
+    },
+    {
+     "en": "In practice, the real trigger for a 911 call is often panic — from the patient, family, or bystanders — not a textbook severity threshold; that panic can pressure you into premature action even though a careful, organized approach serves the patient better.",
+     "zh": "现实中，真正触发 911 呼叫的往往是恐慌本身——病人、家属或旁观者的恐慌——而不是教科书上的严重度门槛；这种恐慌可能逼你仓促行动，而有条理、系统化的处置方式其实对病人更有利。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Causes of Abnormal Behaviour",
+   "titleZh": "异常行为的病因",
+   "points": [
+    {
+     "en": "Sort abnormal-behaviour causes into four buckets: biologic/organic, environmental, acute injury or illness, and substance-related. Organic and situational causes deserve priority attention because they are often the ones you can actually treat in the field.",
+     "zh": "把异常行为的病因归入四类：生物/器质性、环境性、急性损伤或疾病、物质相关。器质性和情境性病因要优先排查，因为它们往往是院前真正能治的那部分。",
+     "hard": false
+    },
+    {
+     "en": "Organic brain syndrome describes psychiatric-looking symptoms driven by a physical cause — diabetes, seizure disorder, severe infection, metabolic derangement, head injury, stroke, alcohol, brain tumour, or drugs are the classic culprits. A hypoglycemic diabetic who looks paranoid and combative can turn calm and courteous the moment glucose is corrected.",
+     "zh": "器质性脑综合征指由躯体病因驱动、外观酷似精神病的症状——糖尿病、癫痫、严重感染、代谢紊乱、头部外伤、卒中、酒精、脑肿瘤或药物都是常见元凶。一个低血糖、看起来偏执又好斗的糖尿病人，纠正血糖后可以立刻变得平静有礼。",
+     "hard": true
+    },
+    {
+     "en": "Delirium is a rapid-onset, fluctuating global impairment of consciousness and cognition usually caused by an underlying medical condition; dementia is a chronic, insidious process producing progressive memory, judgment, and abstract-thinking deficits and can even carry psychotic features such as paranoia.",
+     "zh": "谵妄是急性起病、程度可在一天内波动的意识与认知全面受损，通常由某种潜在躯体疾病驱动；痴呆则是慢性、隐匿起病的过程，造成进行性记忆、判断、抽象思维缺陷，甚至可带精神病性特征如偏执。",
+     "hard": true
+    },
+    {
+     "en": "Drug-induced psychosis can come from prescribed medications, not just street drugs: digitalis, corticosteroids, and disulfiram are documented causes alongside amphetamines, LSD, and PCP.",
+     "zh": "药源性精神病未必来自街头毒品：地高辛、皮质类固醇、双硫仑（disulfiram）都是有据可查的病因，跟苯丙胺、LSD、PCP 并列。",
+     "hard": true
+    },
+    {
+     "en": "Screen for psychosis mimics beyond drugs: CNS infection (syphilis, parasites, viral encephalitis, brain abscess), temporal lobe seizures, brain tumours, stroke, closed head injury, thyrotoxicosis, Cushing syndrome, electrolyte imbalance, hypoglycemia, and diabetic ketoacidosis can all present as a psychiatric emergency.",
+     "zh": "排查精神病样表现时别只想到毒品：中枢神经系统感染（梅毒、寄生虫、病毒性脑炎、脑脓肿）、颞叶癫痫、脑肿瘤、卒中、闭合性颅脑损伤、甲状腺功能亢进、Cushing 综合征、电解质紊乱、低血糖、糖尿病酮症酸中毒，都可能以精神急症的样子登场。",
+     "hard": true
+    },
+    {
+     "en": "Crisis theory: when a person's basic needs feel threatened, they face a crisis with two paths — cope, by changing the situation or their perception of it, or escape, via alcohol, drugs, psychiatric symptoms, or even suicide.",
+     "zh": "危机理论：当一个人感到基本需求受威胁，便进入危机状态，只有两条路——『应对』（改变处境或对处境的认知）或『逃避』（借助酒精、毒品、精神症状甚至自杀）。",
+     "hard": false
+    },
+    {
+     "en": "Social and cultural context shapes behaviour directly: assault, sexual assault, racially motivated attacks, and the death of a loved one can each trigger a significant behavioural shift — factor culture and community into your read of what counts as 'abnormal.'",
+     "zh": "社会文化背景直接塑造行为：遭受人身侵犯、性侵、种族仇恨攻击、痛失亲人，都可能引发显著的行为改变——判断『是否异常』时要把文化和社区背景算进去。",
+     "hard": false
+    },
+    {
+     "en": "Psychiatric disorders covered under behavioural emergencies fall into named categories: cognitive, thought, mood, neurotic (anxiety-related), substance-related and addictive, somatoform, factitious, impulse-control, and personality disorders — know which bucket a presentation belongs to.",
+     "zh": "行为急症涉及的精神障碍分为若干固定类别：认知、思维、情绪、神经症（焦虑相关）、物质相关及成瘾行为、躯体形式、做作性障碍、冲动控制、人格障碍——要能分辨一个表现属于哪一类。",
+     "hard": true
+    },
+    {
+     "en": "The American Psychiatric Association publishes the DSM-5, the standard reference manual clinicians use to classify and diagnose mental disorders — know the name, even though paramedics do not diagnose from it in the field.",
+     "zh": "美国精神病学会（APA）出版《精神障碍诊断与统计手册》第五版（DSM-5），是临床医生分类与诊断精神障碍的标准参考——救护员不会拿它在现场下诊断，但要认得这个名字。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Psychiatric Signs and Symptoms",
+   "titleZh": "精神状态检查：八大功能域",
+   "points": [
+    {
+     "en": "Psychiatric signs and symptoms work exactly like physical ones — the mind's own defence system trying to hold its balance under stress. The mental status exam covers eight domains: consciousness, motor activity, speech, thought, mood/affect, memory, orientation, and perception.",
+     "zh": "精神科的体征和症状运作方式和躯体的一样——都是心智在应激下努力维持平衡的自我防御。精神状态检查（MSE）覆盖八大领域：意识、运动活动、言语、思维、情绪/情感、记忆、定向、感知。",
+     "hard": true
+    },
+    {
+     "en": "Confusion is impaired understanding of one's own surroundings; delirium, stupor, and coma are deeper disorders of consciousness that usually point to an organic cause rather than a purely psychiatric one.",
+     "zh": "意识混乱指对自身周遭环境理解受损；谵妄、木僵、昏迷是更深层的意识障碍，通常提示器质性病因，而非单纯精神科问题。",
+     "hard": false
+    },
+    {
+     "en": "Restlessness paired with extreme excitement is called agitation. Stereotyped movements are purposeless repeated motions (eg, touching elbow, nose, forehead in sequence); compulsions are repetitive acts performed specifically to relieve the anxiety of an obsessive thought.",
+     "zh": "躁动不安并伴极度兴奋称为『激越』（agitation）。刻板动作是无目的的重复动作（如依次摸肘、鼻、额头）；强迫行为是专门用来缓解强迫思维焦虑的重复动作。",
+     "hard": true
+    },
+    {
+     "en": "Speech clues to mood disorder: delayed speech suggests severe depression, while pressured/accelerated speech — words pouring out under pressure — suggests mania. Neologisms are invented words, echolalia is echoing the examiner's words, and mutism is a total absence of speech.",
+     "zh": "言语线索提示情绪障碍：言语迟缓提示重度抑郁，而语速加快、语量倾泻（pressured speech）提示躁狂。造词症（neologism）是病人自创新词，模仿言语（echolalia）是重复检查者的话，缄默症（mutism）是完全不说话。",
+     "hard": true
+    },
+    {
+     "en": "Thought progression can speed up or slow down: flight of ideas is accelerated thinking that skips so fast between topics the listener loses the thread (seen in mania); thought retardation is markedly slowed thinking (seen in depression); perseveration repeats the same idea over and over; circumstantial thinking buries the point under irrelevant detail.",
+     "zh": "思维进程可加速或减速：意念飘忽（flight of ideas）指思维跳得太快，听者跟不上话题转换（见于躁狂）；思维迟缓见于抑郁；持续言语（perseveration）是同一个想法反复说；赘述性思维（circumstantial thinking）是把重点埋在大量无关细节里。",
+     "hard": true
+    },
+    {
+     "en": "Delusions are fixed false beliefs the patient will not abandon despite reasonable argument. Name the subtypes: persecution (others are plotting against me), grandeur (I am someone of great importance), thought broadcasting (others can hear my thoughts), thought control (outside forces control my thoughts), and ideas of reference (media messages are directed at me).",
+     "zh": "妄想是病人即便面对合理解释也不肯放弃的固着错误信念。要认得亚型：被害妄想（有人在害我）、夸大妄想（我是了不起的大人物）、思维广播（别人能听到我的想法）、思维被控制（外力在操控我的思维）、关系妄想（电视广播等媒体信息是专门针对我说的）。",
+     "hard": true
+    },
+    {
+     "en": "Obsessions are unwanted thoughts the patient knows are unreasonable but cannot stop thinking, often relieved briefly by a checking ritual (eg, repeatedly returning to check the stove). Phobias are obsessive, irrational fears of a specific thing or situation — heights, open spaces, confined spaces, or particular animals.",
+     "zh": "强迫思维是病人明知不合理却无法摆脱的念头，常靠反复检查的仪式短暂缓解焦虑（比如一再回去确认煤气关了没）。恐怖症是对特定事物或情境的强迫性、非理性恐惧——恐高、广场恐惧、幽闭恐惧或特定动物恐惧。",
+     "hard": false
+    },
+    {
+     "en": "Mood is the sustained, pervasive emotional state; affect is its outward expression. Inappropriate affect does not match the situation (eg, smiling while describing a parent's death); flat affect shows almost no emotion at all; labile affect swings rapidly, laughing one moment and crying the next.",
+     "zh": "情绪（mood）是持续、弥漫的内在情感状态；情感（affect）是它的外在表达。不协调情感与情境不符（比如描述父母去世时面带微笑）；平淡情感几乎没有情绪流露；易变情感忽笑忽哭、变化极快。",
+     "hard": false
+    },
+    {
+     "en": "Memory has four separable functions — registration (encoding new items), retention (storing them), recall (retrieving on demand), and recognition (identifying something previously encountered). Amnesia is memory loss from disrupting one or more of these; confabulation is inventing experiences to paper over memory gaps in organic brain disease.",
+     "zh": "记忆分四个可独立受损的功能：登记（编码新信息）、保持（存储）、回忆（按需提取）、再认（识别曾经历过的事）。遗忘症是这些功能中一个或多个受损造成的记忆丧失；虚构（confabulation）是器质性脑病病人用编造的经历填补记忆空白。",
+     "hard": true
+    },
+    {
+     "en": "Orientation checks four anchors — person, place, day/time, and the events leading up to now. Losing track of these (disorientation) is most typical of organic brain syndromes rather than purely functional psychiatric illness.",
+     "zh": "定向力检查四个锚点——人物、地点、日期/时间，以及导致当下处境的事件经过。丢失这些定向（定向障碍）更典型见于器质性脑综合征，而非单纯功能性精神疾病。",
+     "hard": true
+    },
+    {
+     "en": "An illusion is a misinterpretation of a real stimulus (mistaking a rope for a snake); a hallucination is a perception with no external stimulus at all. Auditory hallucinations (hearing voices) are the most common; hallucinations in other senses — such as the frightening visuals of delirium tremens — point toward an organic cause.",
+     "zh": "错觉是对真实刺激的误判（把绳子看成蛇）；幻觉则完全没有外部刺激却凭空出现感知。听幻觉（听见声音）最常见；其他感官的幻觉——比如震颤谵妄（delirium tremens）中骇人的视幻觉——更提示器质性病因。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Scene Safety, Consent, and Involuntary Transport",
+   "titleZh": "现场安全、知情同意与非自愿转运",
+   "points": [
+    {
+     "en": "You are the diagnostic instrument in a behavioural emergency: no stethoscope or cuff substitutes for using your own thinking, perception, and feelings to read someone else's — and the assessment itself is already part of the treatment, since your voice and manner start shaping the patient's state the moment you speak.",
+     "zh": "行为急症里，你自己就是诊断仪器：没有听诊器或血压计能替代你用自己的思维、知觉和感受去解读对方——而评估本身已经是治疗的一部分，你一开口，语气和态度就已经在影响病人的状态。",
+     "hard": false
+    },
+    {
+     "en": "Scan the scene for improvised weapons before entering — a chair, lamp, or book all qualify — and always keep a clear exit route for yourself; call for backup the moment you doubt you can manage the scene safely.",
+     "zh": "进入现场前先扫描潜在的临时武器——椅子、台灯、书都算——并始终留一条自己的撤离通道；一旦怀疑自己无法安全掌控现场，立刻呼叫支援。",
+     "hard": false
+    },
+    {
+     "en": "Respect a disturbed patient's wish not to be touched unless a compelling medical reason overrides it, such as profuse bleeding from slashed wrists or a decreased level of consciousness from overdose — those situations justify hands-on assessment regardless of the patient's preference.",
+     "zh": "尊重情绪紊乱病人不愿被触碰的意愿，除非有压倒性的医疗理由——比如割腕大出血或药物过量导致意识下降——这类情况下即便病人不愿意，也要上手评估。",
+     "hard": false
+    },
+    {
+     "en": "Even a minimal exam extracts clues: dress, cleanliness, and grooming reveal self-perception; posture reveals frustration, grief, or catatonia (rigid, expressionless immobility); pupils flag an organic cause — constricted pupils suggest opioid ingestion, unequal pupils suggest cerebral trauma.",
+     "zh": "哪怕只能做最低限度的检查也能挖出线索：衣着、清洁度、仪容反映自我认知；姿势反映挫败、悲伤或紧张症（catatonia，僵硬、面无表情的静止状态）；瞳孔提示器质性病因——瞳孔缩小提示阿片类摄入，两侧不等大提示颅脑外伤。",
+     "hard": true
+    },
+    {
+     "en": "Consent rule: a competent, conscious adult is generally transported only with consent. If consent is withheld, the patient can still be taken against their will only when deemed incompetent and judged to need hospital care, or when expressing thoughts of self-harm or harm to others — and any involuntary transport or forcible restraint must involve police.",
+     "zh": "同意原则：能力健全、清醒的成年人一般只在同意下转运。若病人拒绝，只有在被判定无自主能力且需要住院治疗、或表达出自伤/伤人念头时，才可违背其意愿转运——任何非自愿转运或强制约束都必须有警方介入。",
+     "hard": true
+    },
+    {
+     "en": "Involuntary transport strips a patient of a basic right and must never be undertaken lightly — laws defining what behaviour justifies it vary by region, so know your local legal framework and your service's written protocols for involuntary treatment and transport, developed with legal advice, and follow them to the letter.",
+     "zh": "非自愿转运剥夺了病人的一项基本权利，绝不能轻率决定——界定何种行为可以启动非自愿转运的法律因地区而异，务必熟悉本地法律框架和本机构经法律顾问审定的非自愿治疗/转运书面方案，并严格照章执行。",
+     "hard": false
+    },
+    {
+     "en": "Do not rush a stable behavioural patient straight to the ambulance: assess where the emergency occurred and let the patient regain composure in familiar surroundings when medically possible, because hospital urgency can reinforce a frightened patient's belief that something catastrophic is happening.",
+     "zh": "对状态稳定的行为急症病人，不要急着立刻拖上车：在医学允许的情况下，就在事发地评估，让病人在熟悉环境里先找回镇定——你的匆忙反而会强化受惊病人『大事不好了』的信念。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Interviewing a Disturbed Patient",
+   "titleZh": "问诊技巧",
+   "points": [
+    {
+     "en": "Open the interview with an open-ended question that offers no answer choices ('Tell me something about the kind of troubles you've been having'); switch to direct questions only when you need specific information fast, such as what pills were taken and how many.",
+     "zh": "问诊以开放式问题开场，不预设答案选项（『跟我说说你最近遇到的麻烦』）；只有当你急需具体信息时才转向直接提问，比如吃了什么药、吃了多少。",
+     "hard": false
+    },
+    {
+     "en": "Let the patient tell the story in their own way even if it takes longer — this restores a sense of control while letting you assess speech, affect, and thought process at the same time; do not rush to fill every silence, especially the silence that follows an overwhelming emotion, because that pause is often itself therapeutic.",
+     "zh": "让病人用自己的方式讲述，哪怕更花时间——这能帮病人找回掌控感，同时也让你顺带评估言语、情感和思维过程；不要急着填补每个沉默，尤其是情绪爆发后的沉默，这段停顿本身往往有治疗作用。",
+     "hard": false
+    },
+    {
+     "en": "Name the technique toolkit: facilitation nudges the story along with a nod or 'go on'; confrontation points out an observation, not a judgment ('You seem worried'); acknowledging and labelling feelings ('You seem very angry') helps a patient regain control over chaotic emotions.",
+     "zh": "记住技巧工具箱：『促进』（facilitation）靠点头或『继续说』推动叙述；『对质』（confrontation）指出的是观察而非评判（『你看起来很担心』）；『命名情绪』（『你现在看起来很生气』）能帮病人重新掌控混乱的情绪。",
+     "hard": false
+    },
+    {
+     "en": "Never argue a patient out of a misperception; at most, offer one simple, factual, neutrally-toned correction for something frightening ('that does look like a snake, but it's a shadow') and then drop it — do not get drawn into a dispute over the nature of reality.",
+     "zh": "不要争论着把病人从错觉里拉出来；对令病人恐惧的错觉，最多用中性语气给一次简单、事实性的更正（『那看起来确实像蛇，但其实是影子』），点到为止——绝不卷入关于『现实到底是什么』的争辩。",
+     "hard": false
+    },
+    {
+     "en": "Ask nondirective, open-ended how/what questions instead of yes-or-no or leading ones — 'How did you feel when that happened?' beats 'Are you very angry?' or 'Do you think your husband is part of the problem?'",
+     "zh": "多用非引导性的开放式『怎么/什么』提问，少用是非题或诱导性提问——『那件事发生时你感觉怎么样』胜过『你是不是很生气』或『你觉得你丈夫是不是问题的一部分』。",
+     "hard": false
+    },
+    {
+     "en": "Some patients — notably adolescents, severely depressed patients, and those who are confused or disorganized — grow anxious in open-ended silence; if open-ended questioning meets blank silence, switch to a more structured interview instead of forcing the technique.",
+     "zh": "有些病人——尤其是青少年、重度抑郁、或意识混乱/思维紊乱的病人——在开放式问询的沉默里反而会焦虑；若开放式提问只换来一片沉默，就改用更有结构的问诊方式，别硬撑技巧。",
+     "hard": false
+    },
+    {
+     "en": "Sit at a 45-degree angle to the patient — not face-on — to avoid encroaching on personal space, and always keep a clear exit route for yourself in case the patient becomes aggressive.",
+     "zh": "与病人呈 45 度角坐下，而不是正面相对，避免侵入个人空间，并始终给自己留一条清晰的撤离路线，以防病人转为攻击。",
+     "hard": true
+    },
+    {
+     "en": "Interview the patient alone when possible — have your partner take relatives and bystanders to another room — unless separation from a specific person (eg, a parent) itself makes the patient more anxious, in which case let that calming presence stay.",
+     "zh": "有条件就单独问诊病人——让搭档把家属和旁观者带到另一个房间——除非与某个特定的人（比如家长）分开反而让病人更焦虑，这种情况下就让这个能安抚病人的人留下。",
+     "hard": false
+    },
+    {
+     "en": "Stay nonjudgmental and give honest, truthful reassurance ('many people go through periods like this, and there are effective treatments today') — but avoid empty over-reassurance like 'everything's going to be fine,' which only tells the patient you do not grasp how bad it feels.",
+     "zh": "保持不评判的态度，给出诚实、真实的安慰（『很多人都经历过这样的阶段，现在也有有效的治疗』）——但避免空洞的过度安慰，比如『一切都会好的』，这只会让病人觉得你根本不懂他有多难受。",
+     "hard": false
+    },
+    {
+     "en": "End with a definite action plan stated as a recommendation, not an open menu of choices ('I think you should go to the hospital' rather than 'do you want to go or stay home'); once the plan is set, hand back small choices — stretcher or walk to the ambulance — to restore some autonomy. Encourage some motor activity (eg, packing their own things) to ease anxiety, and never leave the patient alone, even to use the bathroom, once you are responsible for their safety.",
+     "zh": "以明确的行动计划收尾，用建议语气而非开放式选择（『我认为你应该去医院』，而不是『你要去医院还是留在家』）；计划定下后，把担架还是自己走上车这类小选择还给病人，恢复一点自主感。鼓励适度的身体活动（比如让病人自己收拾东西）缓解焦虑，一旦你对病人的安全负责，就绝不能让他独处，哪怕是去洗手间。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "The Mental Status Exam (COASTMAP) and the Organic Screen",
+   "titleZh": "精神状态检查（COASTMAP）与器质性病因排查",
+   "points": [
+    {
+     "en": "COASTMAP structures the mental status exam: Consciousness, Orientation, Activity, Speech, Thought, Memory, Affect/mood, Perception — run every system in order, and you can complete most of it just by watching and listening.",
+     "zh": "COASTMAP 是精神状态检查（MSE）的结构框架：意识（Consciousness）、定向（Orientation）、活动（Activity）、言语（Speech）、思维（Thought）、记忆（Memory）、情感/情绪（Affect/mood）、感知（Perception）——按序逐项过，多数项目光靠观察和倾听就能完成。",
+     "hard": true
+    },
+    {
+     "en": "Only memory, orientation, and sometimes perception require you to actually ask direct questions ('Do you ever hear things other people cannot hear?') — everything else in COASTMAP can be read from watching how the patient talks, moves, and expresses feeling.",
+     "zh": "COASTMAP 里只有记忆、定向、有时还有感知需要直接提问（『你有没有听到过别人听不到的声音？』）——其余项目全靠观察病人怎么说话、怎么动、怎么表达情绪就能读出来。",
+     "hard": false
+    },
+    {
+     "en": "The Speech item in COASTMAP judges form, not content: rate, volume, flow, articulation, intonation. Ask whether speech is too fast/slow, too loud/soft, garbled or slurred (dysarthria), stuttering, mumbling, or using strange invented words.",
+     "zh": "COASTMAP 里的『言语』一项评的是形式而非内容：语速、音量、流畅度、发音、语调。要问：太快还是太慢、太响还是太轻、含糊或口齿不清（构音障碍）、结巴、喃喃自语，还是用了奇怪的自造词。",
+     "hard": false
+    },
+    {
+     "en": "Psychotropic medications — drugs that alter mood, thought, or behaviour — are among the most widely prescribed medications in Canada; most act on the sympathetic or parasympathetic nervous system, so know how your own kit's drugs might interact with them, and always ask what is prescribed versus what is actually being taken.",
+     "zh": "精神科用药（psychotropic medications，改变情绪、思维或行为的药物）是加拿大处方量最大的药物类别之一；多数作用于交感或副交感神经系统，因此要清楚自己药箱里的药可能和它们发生什么相互作用，并始终问清『开了什么』和『实际在吃什么』是否一致。",
+     "hard": true
+    },
+    {
+     "en": "Screen for an organic cause with a targeted exam: vital signs plus Glasgow Coma Scale for fever or raised intracranial pressure; skin temperature/moisture and scars (self-mutilation clue in borderline personality disorder); head for trauma; pupil size/equality/reactivity for toxic or intracranial causes; breath odour for poison, alcohol, or diabetic ketoacidosis; extremities for needle tracks, tremor, or unilateral weakness.",
+     "zh": "用一套针对性体检排查器质性病因：生命体征加 GCS 查发热或颅内压升高；皮肤温度/湿度及疤痕（提示边缘型人格障碍的自残线索）；头部查外伤；瞳孔大小/对称/对光反射查中毒或颅内病变；呼气异味查毒物、酒精或糖尿病酮症酸中毒；四肢查针眼、震颤、单侧无力。",
+     "hard": true
+    },
+    {
+     "en": "Reassessment matters most near the hospital: a patient whose body has calmed may still be mentally unsettled and act impulsively — some try to jump from a moving ambulance or hurt themselves, especially if they do not want help, so monitor vigilantly right up to arrival.",
+     "zh": "越接近医院越要重新评估：身体看似平静的病人，精神上仍可能处于波动状态并做出冲动行为——有些会在行驶中的救护车上试图跳车或自伤，尤其是不想被送医的病人，所以要一路警惕到抵达为止。",
+     "hard": false
+    },
+    {
+     "en": "Hand over more than vitals: your report to the receiving facility should carry medical and mental health history, prescribed medications, MSE findings, and — critically — advance notice if you used medication or physical restraints, so the hospital can mobilize security before you arrive.",
+     "zh": "交接不能只报生命体征：给接诊机构的报告要包含医疗和精神科病史、处方用药、MSE 发现，以及最关键的一点——如果用过药物或物理约束，要提前通知医院，好让他们在你到达前调集安保人手。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "General Management: Medical-First, Disorganized and Disoriented Patients",
+   "titleZh": "总体处置：先排医疗因、思维紊乱与定向障碍",
+   "points": [
+    {
+     "en": "Sequence for any psychiatric-looking call: secure the scene (call police if needed), treat any life threat found on initial assessment, then run a focused history and exam — if a medical cause such as hypoglycemia, overdose, or hypoxia could explain the erratic behaviour, treat that medical problem first rather than assuming a purely emotional or psychiatric cause.",
+     "zh": "看似精神科的出勤都按这个顺序走：先确保现场安全（需要就叫警察），再处理初步评估中发现的危及生命问题，然后做重点病史和体检——如果低血糖、过量用药、缺氧等躯体病因可以解释这种反常行为，先治这个躯体病，而不是急着断定纯属情绪或精神问题。",
+     "hard": false
+    },
+    {
+     "en": "Disorganization and disorientation are presentations, not diagnoses — they can come from organic brain syndrome (head injury, drug ingestion, metabolic disorder) or from schizophrenia, and they generate a large share of ambulance calls, especially among older patients. You do not need to name the diagnosis in the field, only manage it safely.",
+     "zh": "思维紊乱和定向障碍是一种表现，不是诊断——背后可能是器质性脑综合征（头部外伤、药物摄入、代谢紊乱）也可能是精神分裂症，这类表现占了相当一部分出勤，老年人尤其多。院前不需要下诊断，只需要安全地管理它。",
+     "hard": false
+    },
+    {
+     "en": "The disorganized patient — incoherent or rambling speech, sometimes still oriented to person and place, often found wandering and oddly dressed — rarely tolerates a thorough exam; your real objective is a trauma-free transport, backed by simple, consistent, firm instructions and plain-language explanations of your role and theirs.",
+     "zh": "思维紊乱的病人——言语不连贯或漫无边际，有时仍能定向到人物和地点，常表现为漫无目的游荡、衣着怪异——很难配合完整体检；你真正的目标是无创伤地把他转运到位，靠的是简单、一致、坚定的指令，以及用大白话说清你在做什么、他该做什么。",
+     "hard": false
+    },
+    {
+     "en": "For the disoriented patient, keep re-orienting to time, place, and the people present: identify yourself repeatedly (even several times en route), explain your actions, and point out landmarks to help the patient re-anchor to reality.",
+     "zh": "对定向障碍的病人，要不断重新定向到时间、地点、在场的人：反复自我介绍（哪怕路上要说好几次），解释你在做什么，并指出沿途地标帮病人重新锚定现实。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Anxiety Disorders and Their Medications",
+   "titleZh": "焦虑障碍与用药",
+   "points": [
+    {
+     "en": "Generalized anxiety disorder (GAD) is excessive, hard-to-control worry about everything, present more days than not for at least 6 months; a simple phobia fixes anxiety onto one specific object or situation (heights, spiders, flying), and roughly one in ten adults has a social phobia — fear of parties, meeting people, or performing in public.",
+     "zh": "广泛性焦虑障碍（GAD）是对一切事情都过度、难以控制的担忧，且至少 6 个月里大多数日子都存在；单纯恐怖症把焦虑锁定在某一类特定物体或情境上（恐高、怕蜘蛛、怕飞行），约十分之一成人患有社交恐怖症——害怕聚会、见生人或在公众场合表演/进食。",
+     "hard": true
+    },
+    {
+     "en": "Panic disorder brings sudden, unexpected surges of overwhelming fear from massive autonomic discharge — palpitations, sweating, chest discomfort, dizziness, choking sensation, paraesthesias, fear of dying or losing control — that typically peak within about 10 minutes and resolve within about an hour; repeated attacks can progress to agoraphobia, fear of leaving home.",
+     "zh": "惊恐障碍表现为突发、无预兆、由自主神经系统大量放电引起的强烈恐惧发作——心悸、出汗、胸部不适、头晕、窒息感、感觉异常、怕死或怕失控——通常约 10 分钟内达到高峰，约 1 小时内缓解；反复发作可发展为广场恐惧症（不敢离家）。",
+     "hard": true
+    },
+    {
+     "en": "Manage a panic attack by separating the patient from panicky bystanders (keep a calm family member if one is present), building a calm transport environment, and explicitly using the word 'safe' — then, after checking vitals and the monitor, tell the patient plainly that panic is distressing but not life-threatening, and let them do small things for themselves to regain control.",
+     "zh": "惊恐发作的处置：把病人和恐慌的旁观者分开（若有冷静的家人在场可以留下），营造平静的转运环境，明确使用『安全』这个词——查完生命体征和心电监护后，直白告诉病人恐慌很难受但不会致命，并让病人自己做点小事重新找回掌控感。",
+     "hard": false
+    },
+    {
+     "en": "Never use paper-bag rebreathing for hyperventilation — if the anxiety is actually masking an unsuspected pulmonary embolism or cardiac event, the bag can push the patient into fatal hypoxemia; coach slow breathing instead, and send every patient with a first panic attack to hospital for full evaluation, since panic can mimic (or hide) cardiac dysrhythmia, withdrawal, anaphylaxis, or hyperthyroidism.",
+     "zh": "过度通气绝不用纸袋回吸法——如果焦虑背后其实藏着未察觉的肺栓塞或心脏事件，纸袋可能把病人推入致命性低氧；改用引导慢呼吸。任何首次惊恐发作的病人都要送医院全面评估，因为惊恐症状可以模仿（或掩盖）心律失常、戒断反应、过敏反应或甲状腺功能亢进。",
+     "hard": false
+    },
+    {
+     "en": "PTSD is a severe anxiety disorder from a traumatic experience — combat, terrorist attack, motor vehicle collision, or sexual assault — marked by flashbacks (sudden re-living of the event), sleep disturbance, nightmares, depression, or survivor guilt; prehospital care is protection, positive support, and referral for thorough evaluation, not confrontation of the memory.",
+     "zh": "创伤后应激障碍（PTSD）是由创伤经历（战斗、恐怖袭击、车祸、性侵）引发的重度焦虑障碍，标志性表现是闪回（突然重新经历事件）、睡眠障碍、噩梦、抑郁或幸存者内疚；院前处置以保护、正向支持、转介进一步评估为主，不要主动去挖创伤记忆。",
+     "hard": false
+    },
+    {
+     "en": "SSRIs (citalopram, fluoxetine, sertraline, and similar) are today's first-line antianxiety and antidepressant agents, replacing the older sedating tranquilizers; benzodiazepines (diazepam, lorazepam, alprazolam) treat anxiety, muscle spasm, seizures, and provide sedation, but overdose brings severe hypoventilation, hypotension, bradycardia, slurred speech, and impaired coordination — manage the airway and IV fluids first, and reserve flumazenil reversal for medical-control cases without chronic use or mixed overdose, since it can trigger withdrawal seizures.",
+     "zh": "SSRI（西酞普兰、氟西汀、舍曲林等）是当今抗焦虑兼抗抑郁的一线用药，取代了老一代镇静类抗焦虑药；苯二氮䓬类（地西泮、劳拉西泮、阿普唑仑）用于抗焦虑、解痉、抗惊厥和镇静，但过量会带来严重通气不足、低血压、心动过缓、言语含糊、协调障碍——先处理气道和静脉补液，氟马西尼（flumazenil）拮抗只在医疗指导且非慢性用药/非混合过量时考虑，否则可能诱发戒断性癫痫。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Mood Disorders: Depression, Mania, and Medications",
+   "titleZh": "情绪障碍：抑郁、躁狂与用药",
+   "points": [
+    {
+     "en": "Mood disorders (affective disorders) affect up to 10% of people at some point in life. A patient stuck at one pole — either depression or mania alone — has a unipolar disorder (depression is by far the more common one-pole pattern); a patient who swings between both poles has bipolar disorder.",
+     "zh": "情绪障碍（情感障碍）终生患病率高达 10%。病人只停留在情绪连续谱的一端——只有抑郁或只有躁狂——属于单极障碍（其中抑郁是远更常见的单极模式）；在两极之间来回摆动的属于双极障碍（躁郁症）。",
+     "hard": true
+    },
+    {
+     "en": "Depression is the leading cause of disability in the 15-44 age group, affects women more than men, and has a mean onset age of 32; major depressive disorder has sudden onset and limited duration, while dysthymic disorder is a chronic low-grade form present most days for at least 2 years.",
+     "zh": "抑郁症是 15-44 岁人群失能的头号病因，女性多于男性，平均起病年龄 32 岁；重性抑郁障碍急性起病、病程有限，恶劣心境障碍（dysthymic disorder）则是慢性低强度形式，至少 2 年里大多数日子都存在。",
+     "hard": true
+    },
+    {
+     "en": "Depression's diagnostic features cluster around guilt/self-reproach, appetite change (usually decreased), early-morning insomnia (waking around 0300-0400 and unable to return to sleep), impaired concentration, loss of interest, psychomotor change (slowed or agitated), low energy, and — most critically — suicidal thoughts.",
+     "zh": "抑郁症的诊断特征围绕：内疚/自责、食欲改变（多为下降）、早醒性失眠（凌晨 3-4 点醒来后无法再入睡）、注意力受损、兴趣丧失、精神运动改变（迟缓或激越）、精力低下——以及最关键的一项：自杀念头。",
+     "hard": true
+    },
+    {
+     "en": "Antidepressant classes carry distinct warning profiles: SSRIs cause headache, dizziness, sexual dysfunction, and an abrupt-stop discontinuation syndrome; older heterocyclic (tricyclic/tetracyclic) agents bring anticholinergic effects (dry mouth, blurred vision, constipation, delirium) or cardiotoxicity (QT prolongation, AV block, dysrhythmias) and are prescribed far less today because of that risk; MAOIs risk orthostatic hypotension and CNS irritability.",
+     "zh": "抗抑郁药各类别有不同的警示谱：SSRI 引起头痛、头晕、性功能障碍，骤停会出现停药综合征；老一代三环/四环类会带来抗胆碱能反应（口干、视物模糊、便秘、谵妄）或心脏毒性（QT 延长、房室传导阻滞、心律失常），因此现今处方已大幅减少；MAOI 类的风险是体位性低血压和中枢神经系统易激惹。",
+     "hard": true
+    },
+    {
+     "en": "Manic patients typically look euphoric and 'on top of the world' rather than distressed — someone else calls the ambulance. MSE findings: distractible consciousness, disturbed time/place orientation, markedly hyperactive with drastically reduced need for sleep, pressured/rapid talkative speech, flight of ideas with grandiose delusions, usually intact memory, an elated but brittle affect that can flip to hostile, and possible hallucinations.",
+     "zh": "躁狂病人通常显得欣快、『站在世界之巅』而非痛苦——往往是旁人替他叫的救护车。MSE 发现：意识易分心、时间/地点定向紊乱、显著活动过度且睡眠需求大幅下降、语速快语量多、意念飘忽伴夸大妄想、记忆通常完好、情感高涨但脆弱易转为敌意，还可能有幻觉。",
+     "hard": false
+    },
+    {
+     "en": "Manage the manic patient calm, firm, and without power struggles: minimize stimulation, talk in a quiet place away from others, get history from bystanders separately, skip the sirens on transport, and call police if the patient refuses transport and hospital evaluation is truly needed.",
+     "zh": "处置躁狂病人要平静、坚定、不进入权力拉锯：减少外界刺激、找安静地方单独交谈、让搭档另行向旁观者问史、转运不开警笛，若病人拒绝转运而确实需要住院评估，就叫警察协助。",
+     "hard": false
+    },
+    {
+     "en": "First-line mania medications are lithium carbonate and valproic acid; 20-40% of bipolar patients do not respond to lithium and switch to anticonvulsants such as valproic acid or carbamazepine. Watch for lithium toxicity — nausea/vomiting, dysarthria, tremor, lethargy — which can cause brain damage if untreated.",
+     "zh": "躁狂一线用药是碳酸锂和丙戊酸；20%-40% 的双极病人对锂反应不佳，需改用抗癫痫药如丙戊酸或卡马西平。要警惕锂中毒——恶心呕吐、构音障碍、震颤、嗜睡——不处理可导致脑损伤。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Suicide Risk Assessment and Management",
+   "titleZh": "自杀风险评估与管理",
+   "points": [
+    {
+     "en": "Suicide ranks third among causes of death at ages 15-25, fourth at 25-44, and eighth at 45-64. Women attempt more often, but men complete more often — especially Caucasian men who are single, widowed, or divorced. One-sixth of depressed patients eventually die by suicide, and alcoholism is another major risk factor.",
+     "zh": "自杀在 15-25 岁死因中排第三、25-44 岁排第四、45-64 岁排第八。女性尝试更多，但男性『成功』自杀更多——尤其是单身、丧偶或离异的白人男性。抑郁病人中六分之一最终死于自杀，酗酒是另一大风险因素。",
+     "hard": true
+    },
+    {
+     "en": "More than half of completed suicides had a previous attempt, and three-quarters gave a clear warning of intent — take every suicidal act, gesture, or threat seriously. Key risk factors: depression (or a sudden unexplained improvement in it), recent loss of a relationship, chronic debilitating illness, schizophrenia, social isolation, financial or job loss, and a family history of suicide.",
+     "zh": "超过一半的『成功』自杀者此前有过尝试，四分之三给出过明确的预警信号——任何自杀行为、姿态或威胁都要认真对待。关键风险因素：抑郁（或抑郁突然无缘无故好转）、近期失去重要关系、慢性衰弱性疾病、精神分裂症、社交孤立、经济或工作损失、家族自杀史。",
+     "hard": true
+    },
+    {
+     "en": "Do not fear 'planting the idea' by asking directly — a depressed patient has already thought of suicide, and most feel relieved to talk about it. Approach in steps: 'Has life ever felt not worth living?' then escalate toward 'Do you have a plan? The means to carry it out? Has this happened before?' A concrete plan, means in hand, or a family suicide history marks higher risk.",
+     "zh": "别怕直接问会『把念头种进病人脑子』——抑郁病人早就想过自杀，多数人谈起时反而觉得如释重负。分步推进提问：从『有没有觉得活着不值得』开始，逐步问到『有没有具体计划？有没有实施手段？以前发生过吗？』有具体计划、手边有实施手段、或有家族自杀史，都提示更高风险。",
+     "hard": false
+    },
+    {
+     "en": "A suicidal or homicidal patient will not hesitate to hurt you — on arrival, discreetly survey for and remove implements of self-harm, and if someone phones in a suicide threat, keep them on the line until you reach the scene. Patients sometimes make a last-ditch attempt precisely when they realize the ambulance or hospital will take away their chance to finish it.",
+     "zh": "有自杀或杀人倾向的病人不会犹豫伤害你——到场后要低调查找并移除自伤工具；若有人打电话威胁自杀，要一直保持通话直到你抵达现场。病人有时会在意识到『上了救护车/进了医院就没机会完成』的那一刻，做出最后一搏。",
+     "hard": false
+    },
+    {
+     "en": "Management at risk of suicide: never leave the patient alone, bring any implements found (pill bottles, weapons) to hospital, acknowledge feelings honestly without arguing against the wish to die, and encourage transport — enlisting people close to the patient first, then police if resistance persists.",
+     "zh": "自杀风险病人的管理：绝不让病人独处、把现场找到的工具（药瓶、武器）一并带去医院、诚实地承认病人的感受而不与其『想死』的念头争辩、鼓励转运——先请亲近的人帮忙劝说，仍拒绝就叫警察协助。",
+     "hard": false
+    },
+    {
+     "en": "For an actual suicide attempt, medical treatment comes first: an overdose of sedatives/depressants needs respiratory-depression and circulatory-collapse management; slashed wrists need bleeding control and volume replacement. If the patient is conscious, still try to talk, and lead with empathy rather than judgment — the goal is to see the underlying distress behind the act.",
+     "zh": "面对实际的自杀行为，医疗处置优先：镇静剂/抑制剂过量要防呼吸抑制和循环衰竭，割腕要止血补容。若病人清醒，仍要尝试沟通，用共情而非评判开场——目标是看到行为背后真正的痛苦。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Personality, Somatoform, Dissociative, and Impulse-Control Disorders",
+   "titleZh": "人格障碍、躯体形式障碍、解离障碍与冲动控制障碍",
+   "points": [
+    {
+     "en": "A personality disorder is a lasting, culturally deviant pattern of thinking, feeling, and behaving that causes distress or dysfunction — often felt more by others than by the patient. DSM-5 groups them into three clusters: A (odd/eccentric — paranoid, schizoid, schizotypal), B (erratic/emotional — antisocial, borderline, histrionic, narcissistic), and C (anxious/fearful — avoidant, dependent, obsessive-compulsive).",
+     "zh": "人格障碍是一种持久、偏离文化常态的思维、情感和行为模式，造成痛苦或功能失调——这种痛苦往往是旁人感受到的，而非病人自己。DSM-5 把人格障碍分三大类：A 类（古怪/怪异——偏执型、分裂样、分裂型）、B 类（情绪化/戏剧化——反社会、边缘型、表演型、自恋型）、C 类（焦虑/恐惧——回避型、依赖型、强迫型）。",
+     "hard": true
+    },
+    {
+     "en": "True personality disorders are rare, but when present, another psychiatric illness usually rides along and complicates its treatment. In the field, adjust for the traits: an antisocial patient will not hesitate to hurt you if agitated, and a histrionic patient may be demanding and try to dictate the level of care — respond calm and professional either way.",
+     "zh": "真正的人格障碍在普通人群中罕见，但一旦存在，通常还合并另一种精神疾病，让该病的治疗更棘手。院前要针对特质调整应对：反社会型病人一旦被激怒会毫不犹豫伤人，表演型病人可能要求多、试图指挥你该给什么级别的照护——不管哪种都要保持冷静和专业。",
+     "hard": false
+    },
+    {
+     "en": "Somatoform disorders share one theme — overwhelming preoccupation with physical health: hypochondriasis is conviction of serious illness that even a physician cannot talk the patient out of; somatization disorder is multiple complaints focused on the symptoms themselves; conversion disorder produces a physical deficit (paralysis, blindness, seizures) with no organic cause. Factitious disorder is voluntary symptom production just to assume the sick role — inflicting it on a child (usually by the mother) is factitious disorder by proxy, an atypical form of child abuse.",
+     "zh": "躯体形式障碍有一个共同主题——对躯体健康的过度专注：疑病症是坚信自己患有重病，连医生都劝不动；躯体化障碍是多种躯体主诉，但关注点在症状本身；转换障碍会产生躯体功能缺失（瘫痪、失明、抽搐）但查不出器质性病因。做作性障碍是病人自愿制造症状只为获得『病人角色』的关注——若施加在孩子身上（通常是母亲所为），称为『代理型做作性障碍』，属于一种不典型的儿童虐待。",
+     "hard": true
+    },
+    {
+     "en": "Dissociative experiences are feelings of detachment from oneself: depersonalization is losing your own sense of reality (a crash feels 'dreamlike'), derealization is objects and people seeming to change shape or act robotic. In their most severe form, dissociative disorders can produce amnesia, a trance state, or a new identity — manage by close observation to prevent injury and transport, since correction is a hospital-level task.",
+     "zh": "解离体验是对自我的脱离感：人格解体（depersonalization）是丧失对自我的真实感（车祸感觉『像做梦』），现实解体（derealization）是外物或他人显得变形、像机器人。最严重的解离障碍可造成遗忘、恍惚状态或新身份——院前处置是密切观察防止受伤并转运，纠正这类障碍是医院级别的任务。",
+     "hard": false
+    },
+    {
+     "en": "Impulse-control disorders share an inability to resist a drive: intermittent explosive disorder (destructive aggressive outbursts), kleptomania (compulsive stealing), pyromania (compulsive fire-setting — only about 4% of arsonists actually have it), and pathologic gambling; they are rare and usually ride along with depression, antisocial/borderline personality, or Alzheimer disease.",
+     "zh": "冲动控制障碍的共同点是无法抵抗某种冲动：间歇性暴怒障碍（破坏性攻击发作）、偷窃癖（强迫性盗窃）、纵火癖（强迫性纵火——实际只有约 4% 的纵火犯真患有纵火癖）、病理性赌博；这类障碍本身罕见，通常与抑郁、反社会/边缘型人格或阿尔茨海默病并存。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Eating Disorders and Substance-Related Disorders",
+   "titleZh": "进食障碍与物质相关障碍",
+   "points": [
+    {
+     "en": "Eating disorders concentrate in young, upper-middle/upper-class females in socially competitive settings, and both major forms can cause severe electrolyte imbalance leading to cardiac events, seizures, renal failure, dental enamel erosion, and salivary gland enlargement; anxiety, depression, or substance abuse coexists in up to two-thirds of cases.",
+     "zh": "进食障碍集中在社会竞争氛围浓厚环境中的年轻、中上层阶级女性身上，两种主要类型都可能造成严重电解质紊乱，进而引发心脏事件、癫痫、肾衰竭、牙釉质腐蚀和唾液腺肿大；多达三分之二的病例合并焦虑、抑郁或物质滥用。",
+     "hard": true
+    },
+    {
+     "en": "Bulimia nervosa is binge eating (often junk food) that feels 'out of control,' compensated by purging — vomiting, laxatives, diuretics, or excessive exercise. Anorexia nervosa is extraordinary control over intake that drives weight dangerously low for age/height, with an intense fear of obesity despite being underweight, and can cause amenorrhea in women of childbearing age.",
+     "zh": "神经性贪食是感觉『失控』的暴食（常是垃圾食品），靠催吐、泻药、利尿剂或过度运动来代偿。神经性厌食是对摄入的极端控制，使体重严重低于年龄/身高标准，即使已经消瘦仍强烈恐惧发胖，育龄女性可因此闭经。",
+     "hard": true
+    },
+    {
+     "en": "Substance-related disorders sit on a four-level ladder: use (moderate, ADLs unaffected), intoxication (impaired thinking/motor function), abuse (disrupts ADLs — work, school, relationships), and dependence (addiction, needing escalating amounts, with drug-seeking behaviours such as stealing money to obtain more).",
+     "zh": "物质相关障碍分四个递进等级：使用（适量、不影响日常生活）、中毒（思维/运动功能受损）、滥用（干扰日常生活——工作、学业、人际关系）、依赖（成瘾，需要量不断升级，伴觅药行为，如偷钱换取更多物质）。",
+     "hard": true
+    },
+    {
+     "en": "Opioid contamination with high-potency fentanyl and carfentanil has made unintentional overdose a Canadian public health crisis — any patient with rapid, unexplained deterioration of consciousness should be suspected of opioid intoxication and given naloxone (Narcan).",
+     "zh": "芬太尼、卡芬太尼等高效能阿片类污染毒品供应，已让意外过量成为加拿大的公共卫生危机——任何意识状态原因不明、迅速恶化的病人都应怀疑阿片类中毒，给予纳洛酮（Narcan）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Psychosis and Schizophrenia",
+   "titleZh": "精神病态与精神分裂症",
+   "points": [
+    {
+     "en": "Psychosis is a state where internal ideas and feelings are mistaken for external reality — the line between fantasy and fact blurs. Causes span organic/biologic disease, mental illness, or drug abuse (the most common trigger); methamphetamine-induced psychosis can persist beyond 24 hours, well past the drug's own metabolism.",
+     "zh": "精神病态是把内在的想法和感受错当成外部现实——幻想和事实的界线变得模糊。病因涵盖器质性/生理性疾病、精神疾病或药物滥用（最常见诱因）；苯丙胺类兴奋剂（冰毒）诱发的精神病态可持续超过 24 小时，远超药物本身的代谢时间。",
+     "hard": true
+    },
+    {
+     "en": "Schizophrenia affects roughly 1 in 100 people in their lifetime (an estimated 0.2%-1.5% of the world's population), typically emerging in early adulthood, with genetic, neurobiologic, and psychosocial contributors. Symptoms fall into three types: positive (delusions, hallucinations), negative (apathy, mutism, flat affect, anhedonia), and disorganized (erratic speech, emotion, motor behaviour).",
+     "zh": "精神分裂症终生患病率约百分之一（估计占世界人口的 0.2%-1.5%），典型在成年早期起病，遗传、神经生物学和社会心理因素共同参与。症状分三类：阳性症状（妄想、幻觉）、阴性症状（情感淡漠、缄默、平淡情感、快感缺失）、瓦解症状（言语、情绪、运动行为紊乱）。",
+     "hard": true
+    },
+    {
+     "en": "Schizophrenia subtypes: paranoid (delusions/hallucinations around one theme, cognition otherwise intact), disorganized (mismatched emotion plus disorganized speech), catatonic (odd fixed postures or facial expressions, rigidity), and undifferentiated (does not fit the other patterns).",
+     "zh": "精神分裂症亚型：偏执型（围绕单一主题的妄想/幻觉，认知功能基本完好）、瓦解型（情绪与情境不符加言语紊乱）、紧张型（怪异固定姿势或面部表情、僵直）、未分化型（不符合以上任何一型）。",
+     "hard": false
+    },
+    {
+     "en": "Antipsychotics split into atypical (AAP — aripiprazole, clozapine, olanzapine, quetiapine, risperidone) and typical/traditional agents (haloperidol, chlorpromazine, and similar). AAP agents are now first-line because they also ease anxiety, depression, and suicidal tendencies, at the cost of metabolic side effects (glucose dysregulation, high cholesterol, hypertension).",
+     "zh": "抗精神病药分非典型（AAP——阿立哌唑、氯氮平、奥氮平、喹硫平、利培酮）和典型/传统药（氟哌啶醇、氯丙嗪等）两类。AAP 类现为一线用药，因为还能缓解焦虑、抑郁和自杀倾向，代价是代谢副作用（血糖紊乱、高胆固醇、高血压）。",
+     "hard": true
+    },
+    {
+     "en": "Typical antipsychotics can trigger an acute dystonic reaction — neck, face, and back muscle spasms within days of starting the drug — reversed rapidly with diphenhydramine 25-50 mg IV, though spasms may recur as it wears off; these agents also carry atropine-like anticholinergic effects (dry mouth, blurred vision, urinary retention, dysrhythmias).",
+     "zh": "典型抗精神病药可能在用药后数天内引发急性肌张力障碍反应——颈、面、背部肌肉痉挛——静脉注射苯海拉明（diphenhydramine）25-50 mg 可快速逆转，但药效消退后痉挛可能复发；这类药还带有阿托品样抗胆碱能作用（口干、视物模糊、尿潴留、心律失常）。",
+     "hard": true
+    },
+    {
+     "en": "MSE red flags for psychosis: loosening of associations (logical thread between ideas goes missing, sometimes to total incoherence), thought broadcasting/insertion/withdrawal, persecutory delusions, and auditory hallucinations — the most common perceptual disturbance, so suspect them when a patient seems to be attending to a conversation that is not yours.",
+     "zh": "精神病态 MSE 的警示信号：联想松弛（观念之间的逻辑线索消失，严重时言语完全无法理解）、思维广播/被插入/被抽走、被害妄想，以及最常见的感知障碍——听幻觉——若病人似乎在应答一段不属于你的对话，就要怀疑他在『听』什么。",
+     "hard": false
+    },
+    {
+     "en": "Manage acute psychosis by assessing danger first, then identifying yourself and your purpose clearly, staying calm and emotionally neutral (no touching, no over-friendliness), never arguing about the reality of a belief nor playing along with a delusion, explaining expectations and each management step plainly, and involving people the patient trusts.",
+     "zh": "急性精神病态的处置：先评估危险，再清楚地自我介绍和说明来意，保持冷静、情感中立（不触碰、不过分热络），绝不与病人争论其信念是否真实，也不附和妄想，用直白语言解释你的期望和每一步操作，并请病人信任的人协助。",
+     "hard": false
+    },
+    {
+     "en": "A patient who reports hearing voices commanding self-harm or harm to others must always be treated as dangerous — command hallucinations are one of the clearest red flags in the entire chapter for immediate risk.",
+     "zh": "病人若报告听到命令自己或他人受伤的『命令性幻听』，永远要按危险病人对待——这是全章里预示即刻危险最明确的红旗信号之一。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Special Considerations: Pediatric and Geriatric Behavioural Problems",
+   "titleZh": "特殊人群：儿童与老年的行为问题",
+   "points": [
+    {
+     "en": "Behavioural disorders affect an estimated 1 in 5 children and adolescents, and two-thirds of those with a mental health problem go untreated — untreated childhood problems tend to persist into adulthood, and suicide is the third leading cause of death in adolescents and the seventh in school-aged children.",
+     "zh": "行为障碍估计影响五分之一的儿童和青少年，其中三分之二有精神健康问题却未获治疗——儿童期未治疗的问题往往延续到成年，自杀是青少年死因第三位、学龄儿童死因第七位。",
+     "hard": true
+    },
+    {
+     "en": "Distinguish two common pediatric developmental disorders: autism shows abnormal social interaction, communication, and repetitive behaviours; ADHD shows distractibility and inattention, often with hyperactivity. Screen every child for suicide risk — diagnosed mood disorder, a recent life stressor (school change, parental separation, loss of a loved one), substance use, or command auditory hallucinations.",
+     "zh": "区分两种常见儿童发育障碍：孤独症表现为社交互动、沟通能力异常和重复行为；ADHD 表现为分心、注意力不集中，常伴多动。每个儿童都要筛查自杀风险：已确诊的情绪障碍、近期生活应激源（转学、父母分居、失去所爱之人）、物质使用、或命令性听幻觉。",
+     "hard": true
+    },
+    {
+     "en": "A child's mental status exam mirrors an adult's but must be scaled to developmental level, and cultural/ethnic background blurs the line between normal and abnormal coping — most abnormal findings in a child trace to adjustment disorder or stress rather than a severe underlying disorder.",
+     "zh": "儿童的精神状态检查与成人类似，但要按发育水平调整评估尺度，文化和族裔背景也会模糊『正常』与『异常』应对方式的界线——儿童身上多数异常发现的根源是适应障碍或应激反应，而非严重的潜在疾病。",
+     "hard": false
+    },
+    {
+     "en": "Older-adult behavioural change often traces to dementia (Alzheimer disease, chronic alcohol abuse, cumulative strokes, or nutritional deficiency), bereavement, financial worry, or dissatisfaction with living arrangements — anxiety, substance abuse (especially alcohol), depression, and suicide are all common in this population.",
+     "zh": "老年人的行为改变常源于痴呆（阿尔茨海默病、长期酗酒、多次卒中累积效应、营养缺乏）、丧亲、经济忧虑或对居住安排的不满——焦虑、物质滥用（尤其酗酒）、抑郁和自杀在这个人群里都很常见。",
+     "hard": false
+    },
+    {
+     "en": "Ageism — dismissing anxiety or depression in an older adult as 'just normal aging' — is a bias, not a clinical fact; recognize your own attitudes toward older or mentally ill patients first, so your physical and psychosocial assessment stays unbiased and complete.",
+     "zh": "老年歧视（ageism）——把老年人的焦虑或抑郁打发成『老了都这样』——是一种偏见，不是临床事实；先觉察自己对老年人或精神病患者的态度，才能做出不带偏见、完整的躯体与心理社会评估。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Hostile and Violent Patients: Warning Signs, De-escalation, and Restraint",
+   "titleZh": "敌意与暴力病人：警示信号、言语降级与物理约束",
+   "points": [
+    {
+     "en": "A 2014 survey of 1,676 Canadian paramedics found 75% had experienced workplace violence in the past year — 67% verbal assault, 41% intimidation, 26% physical assault, 14% sexual harassment, 3% sexual assault. Violence risk climbs wherever alcohol or drugs are present, in large crowds, or where violence has already occurred (shooting, stabbing, domestic disturbance).",
+     "zh": "2014 年一项对 1,676 名加拿大救护员的调查显示，75% 在过去一年内经历过职场暴力——67% 言语攻击、41% 恐吓、26% 身体攻击、14% 性骚扰、3% 性侵。有酒精或毒品在场、人群密集、或已发生暴力（枪击、刺伤、家暴）的场景，暴力风险都会升高。",
+     "hard": true
+    },
+    {
+     "en": "People more likely to turn violent: intoxication with alcohol or drugs (especially PCP, LSD, amphetamines, cocaine), withdrawal states, psychosis (particularly manic or paranoid types), or delirium from any cause such as hypoglycemia or sepsis.",
+     "zh": "更可能出现暴力行为的人群：酒精或毒品中毒（尤其是 PCP、LSD、苯丙胺、可卡因）、戒断状态、精神病态（尤其躁狂型或偏执型）、或任何原因引起的谵妄（如低血糖、脓毒症）。",
+     "hard": true
+    },
+    {
+     "en": "Read the warning signs before words even start: tense posture gripping the chair edge, loud/critical/profanity-laced speech, restless motor activity (pacing, easily startled), clenched fists, avoided eye contact — and trust your own gut fear response as a built-in danger sensor.",
+     "zh": "在开口说话之前就要读懂警示信号：紧绷姿势死抓椅子边缘、大声/挑剔/满口脏话、坐立难安的运动活动（踱步、易受惊）、攥紧的拳头、回避眼神接触——并且相信自己的本能恐惧，那是内置的危险感应器。",
+     "hard": false
+    },
+    {
+     "en": "Keep a two-arm-length safety zone and stand slightly to the side at a 45° angle rather than face-to-face, with your escape route unobstructed; if the patient backs away, you are too close. Position yourself between the patient and the door, but never move behind an agitated patient or turn your back, even for a moment.",
+     "zh": "保持两臂长的安全距离，站在侧面 45 度角而非正面相对，并确保撤离路线畅通；病人往后退就说明你站得太近了。让自己处在病人和门之间，但绝不要绕到激越病人身后，也绝不要背对他，哪怕只是一瞬间。",
+     "hard": true
+    },
+    {
+     "en": "De-escalation script: identify yourself as medical help in a low voice (forces the patient to focus on you), acknowledge the behaviour ('You look very upset — how can we help?'), listen and paraphrase back, ask directly whether they might lose control or are carrying a weapon, then state your expectations plainly — acknowledge their capacity to harm without permitting loss of control.",
+     "zh": "语言降级脚本：用低沉的声音表明自己是来帮忙的医护人员（迫使病人专注听你说话），承认他的情绪状态（『你看起来很难受，我们能怎么帮你？』），倾听并复述确认，直接问他会不会失控或身上有没有武器，然后明确说出你的期望——承认他有伤人的能力，但不允许失控发生。",
+     "hard": false
+    },
+    {
+     "en": "If a violent patient is armed, do not intervene yourself — back off, keep others safe, and wait for police. If verbal de-escalation stalls, disengage rather than push harder: tell the patient you are stepping back but not leaving, and that more help will arrive if needed.",
+     "zh": "若暴力病人持有武器，不要自己上前处理——后退、确保他人安全，等待警方。若语言降级卡住了，别硬撑，先脱离：告诉病人你要退一步但不会离开，如果需要，会有更多人手过来帮忙。",
+     "hard": false
+    },
+    {
+     "en": "Physical restraint needs overwhelming force: a minimum of five trained people, one assigned per limb plus one for the head, with a single leader directing the team and maintaining verbal contact — do not attempt it short-handed, and strip your own body of anything that could become a weapon (badge, scissors, keys, earrings) first.",
+     "zh": "物理约束（physical restraint）需要压倒性的人力：至少五名受训人员，每肢一人加一人固定头部，由一名队长统一指挥并保持与病人的语言接触——人手不够绝不能贸然行动，动手前先摘掉自己身上可能变成武器的物品（工牌、剪刀、钥匙、耳环）。",
+     "hard": true
+    },
+    {
+     "en": "Secure a restrained patient supine with both arms and both legs fastened to one side of the stretcher, turning the head to that side to protect against aspiration if they vomit. Absolute contraindications: never place the patient prone (you cannot monitor them and it restricts breathing), never tie wrists and ankles together as one, and never hobble-tie the feet alone — all three are documented causes of death.",
+     "zh": "被约束病人要仰卧固定，双臂双腿都固定在担架同一侧，头偏向那一侧以防呕吐误吸。绝对禁忌：绝不能俯卧固定（无法监护且限制呼吸）、绝不能把手腕和脚踝捆在一起、绝不能只捆双脚做『捆蹄式』约束——这三种方式都有导致死亡的记录。",
+     "hard": true
+    },
+    {
+     "en": "Once restraints are on, do not remove or renegotiate them, but keep talking to the patient calmly and with dignity throughout. Reassess continuously for airway, breathing, vomiting, and cardiovascular stability, and check radial and dorsalis pedis pulses every few minutes to confirm restraints are not too tight — a suddenly calm, cooperative patient still needs full vigilance, since combativeness can resume without warning.",
+     "zh": "约束一旦上了就不再解开或重新商量，但要全程保持冷静、有尊严地和病人持续对话。要持续重新评估气道、呼吸、有无呕吐、心血管状态，每隔几分钟查桡动脉和足背动脉搏动确认约束没绑太紧——病人突然变得平静配合也不能松懈，攻击行为可能毫无预兆地卷土重来。",
+     "hard": true
+    },
+    {
+     "en": "Document every restraint use in detail: the specific behaviours that justified it, how many people were used, which devices, and the patient's airway/breathing/circulation status afterward. Chemical restraint (benzodiazepines, droperidol, haloperidol) requires medical-control approval or a written protocol — droperidol carries a black-box QT-prolongation warning, so newer AAP agents are increasingly preferred.",
+     "zh": "详细记录每一次约束的使用：证明其必要性的具体行为、动用了多少人、用了哪些装置，以及事后气道/呼吸/循环状态。化学约束（苯二氮䓬类、氟哌利多、氟哌啶醇）需要医疗指导批准或书面方案——氟哌利多带有 QT 延长的黑框警告，因此新一代 AAP 类药物正日益受青睐。",
+     "hard": true
+    },
+    {
+     "en": "Police TASER use to subdue a violent patient does not end EMS involvement: officers are not routinely trained to recognize the underlying medical condition driving the behaviour, so paramedics must identify it and ensure appropriate care — TASER exposure is temporally, not proven causally, linked to some in-custody deaths, but the patients involved are often at high risk from that underlying condition regardless.",
+     "zh": "警方用泰瑟枪（TASER）制服暴力病人并不意味着 EMS 可以退场：警察通常没有受过识别背后躯体病因的训练，救护员必须自己识别并确保恰当处置——泰瑟枪暴露与部分在押期间死亡在时间上相关，但未证实存在因果关系，不过涉事病人往往本就因潜在病因而处于高风险。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Panic attack timing",
+   "itemZh": "惊恐发作时程",
+   "value": "约 10 分钟达峰，约 1 小时缓解"
+  },
+  {
+   "itemEn": "Social phobia prevalence",
+   "itemZh": "社交恐怖症患病率",
+   "value": "约成人的 1/10"
+  },
+  {
+   "itemEn": "Any anxiety disorder, annual prevalence",
+   "itemZh": "任一焦虑障碍年患病率",
+   "value": "近成人的 1/5"
+  },
+  {
+   "itemEn": "GAD diagnostic duration",
+   "itemZh": "GAD 诊断病程要求",
+   "value": "≥6 个月，且大多数日子存在"
+  },
+  {
+   "itemEn": "Mood disorder lifetime prevalence",
+   "itemZh": "情绪障碍终生患病率",
+   "value": "最高达 10%"
+  },
+  {
+   "itemEn": "Depression: age burden and onset",
+   "itemZh": "抑郁症的年龄负担与起病",
+   "value": "15-44 岁失能头号病因；平均起病年龄 32 岁"
+  },
+  {
+   "itemEn": "Dysthymic disorder duration",
+   "itemZh": "恶劣心境障碍病程要求",
+   "value": "≥2 年，且大多数日子存在"
+  },
+  {
+   "itemEn": "Suicide death-cause ranking by age",
+   "itemZh": "自杀死因排名（按年龄段）",
+   "value": "15-25 岁第 3 位；25-44 岁第 4 位；45-64 岁第 8 位"
+  },
+  {
+   "itemEn": "Suicide risk stats",
+   "itemZh": "自杀相关统计",
+   "value": "抑郁病人 1/6 最终自杀；既往自杀者中 >50% 有过尝试、>75% 曾给警示"
+  },
+  {
+   "itemEn": "Lithium non-response rate",
+   "itemZh": "锂盐无效率",
+   "value": "20%-40% 的双极病人对锂反应不佳"
+  },
+  {
+   "itemEn": "Diphenhydramine dose for dystonic reaction",
+   "itemZh": "苯海拉明处理肌张力障碍反应剂量",
+   "value": "25-50 mg IV"
+  },
+  {
+   "itemEn": "Schizophrenia prevalence",
+   "itemZh": "精神分裂症患病率",
+   "value": "终生约 1/100；世界人口 0.2%-1.5%"
+  },
+  {
+   "itemEn": "Pyromania among arsonists",
+   "itemZh": "纵火犯中真患纵火癖的比例",
+   "value": "约 4%"
+  },
+  {
+   "itemEn": "Eating disorder psychiatric comorbidity",
+   "itemZh": "进食障碍精神共病率",
+   "value": "最高达 2/3"
+  },
+  {
+   "itemEn": "Canadian paramedic workplace violence survey (2014)",
+   "itemZh": "加拿大救护员职场暴力调查（2014）",
+   "value": "1,676 人受访，75% 过去 12 个月遭遇暴力；67% 言语攻击/41% 恐吓/26% 身体攻击/14% 性骚扰/3% 性侵"
+  },
+  {
+   "itemEn": "Minimum personnel for physical restraint",
+   "itemZh": "物理约束最低人数",
+   "value": "5 名受训人员（四肢各一 + 头部一人）"
+  },
+  {
+   "itemEn": "Safety distance and interview angle",
+   "itemZh": "安全距离与问诊角度",
+   "value": "两臂长安全区；45° 侧角，不正面相对"
+  },
+  {
+   "itemEn": "Methamphetamine-induced psychosis duration",
+   "itemZh": "甲基苯丙胺诱发精神病态持续时间",
+   "value": "可超过 24 小时"
+  },
+  {
+   "itemEn": "Pediatric behavioural disorder burden",
+   "itemZh": "儿童行为障碍负担",
+   "value": "约 1/5 儿童青少年受影响；2/3 未获治疗"
+  },
+  {
+   "itemEn": "Suicide death-cause ranking in children",
+   "itemZh": "儿童自杀死因排名",
+   "value": "青少年第 3 位；学龄儿童第 7 位"
+  },
+  {
+   "itemEn": "TASER deployment parameters",
+   "itemZh": "泰瑟枪部署参数",
+   "value": "探针射程可达 7 米，放电约 5 秒"
+  },
+  {
+   "itemEn": "BC naloxone titration ladder",
+   "itemZh": "BC 纳洛酮滴定阶梯",
+   "value": "0.4 mg IM/IV 起，未达 SpO2≥94%/呼吸>10 则每 3 分钟递增 0.4→0.8→2.0 mg；或单次 4 mg IN"
+  },
+  {
+   "itemEn": "BC PCP full drug formulary size",
+   "itemZh": "BC PCP 完整处方药清单数量",
+   "value": "仅 18 种药，本章精神科药物表全部不在其中"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Assume anyone in a behavioural emergency has a treatable organic cause until proven otherwise — check glucose before you settle on 'just psychiatric.'",
+   "zh": "把行为急症病人默认成有可治的器质性病因，直到证明并非如此——先测血糖，再断定『纯属精神科』。"
+  },
+  {
+   "en": "Never leave a suicidal patient alone, not even to use the bathroom — that is exactly when a hidden pill bottle gets emptied.",
+   "zh": "绝不让有自杀风险的病人独处，哪怕只是去洗手间——藏起来的药瓶正是在这种时候被吞下的。"
+  },
+  {
+   "en": "Do not argue a patient out of a delusion or hallucination, and do not pretend to share it either — stay factual, neutral, and correct it at most once.",
+   "zh": "既不要争论着把病人从妄想或幻觉里拉出来，也不要假装认同——保持事实、中立，最多纠正一次。"
+  },
+  {
+   "en": "If the patient is armed, disengage and wait for police — no verbal technique substitutes for backup when a weapon is in the room.",
+   "zh": "病人持有武器时立刻脱离、等待警方——房间里有武器时，任何语言技巧都替代不了支援。"
+  },
+  {
+   "en": "A calm, cooperative patient after restraint is not a green light to relax — reassess circulation and airway every few minutes regardless.",
+   "zh": "约束后病人变得平静配合，不代表可以放松——照样每隔几分钟重新评估循环和气道。"
+  },
+  {
+   "en": "Notify the receiving facility before you arrive if medication or physical restraints were used, so security can be ready at the door.",
+   "zh": "如果用过药物或物理约束，要在抵达前先通知接诊机构，好让安保提前在门口待命。"
+  },
+  {
+   "en": "Bring all of the patient's medications — psychiatric and otherwise — to hospital; what is actually being taken (or not taken) is often the missing half of the diagnosis.",
+   "zh": "把病人所有的药——精神科和非精神科的都算——一起带去医院；『实际有没有在吃』往往是诊断里缺失的那一半。"
+  },
+  {
+   "en": "First panic attack ever? Full hospital work-up regardless of how classic it looks — cardiac, pulmonary, and endocrine mimics have hurt patients sent home as 'just anxiety.'",
+   "zh": "第一次惊恐发作？不管表现多典型都要送医院全面检查——心脏、肺部、内分泌的『冒充者』曾伤害过被当成『只是焦虑』打发回家的病人。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Confusing 'weird' with 'dangerous': odd behaviour alone is not a behavioural emergency — the threshold is danger to self or others, not how strange the presentation looks.",
+   "zh": "把『怪』和『危险』划等号：单纯古怪的行为不算行为急症——门槛是对自己或他人构成危险，而不是表现有多离奇。"
+  },
+  {
+   "en": "Confusing delirium with dementia: delirium is acute, fluctuating, and reversible with an organic driver; dementia is chronic and irreversible. Treat any acute change from baseline as delirium until proven otherwise, even in a known dementia patient.",
+   "zh": "把谵妄和痴呆混为一谈：谵妄是急性、波动、有器质性驱动因素且通常可逆；痴呆是慢性、不可逆的。哪怕病人已知有痴呆，任何相对基线的急性改变都先按谵妄处理，直到证明不是。",
+   "hard": true
+  },
+  {
+   "en": "Thinking hyperventilation always means 'just anxious': treating every fast-breathing patient with a paper bag ignores that pulmonary embolism, cardiac events, and DKA can present the same way — and the bag can kill a patient whose hypoxia is real.",
+   "zh": "以为过度通气『就是焦虑』：拿纸袋对付每个呼吸快的病人，忽略了肺栓塞、心脏事件、DKA 都能表现成一样的样子——而纸袋可能会害死真正缺氧的病人。"
+  },
+  {
+   "en": "Believing you will 'give the patient the idea' by asking about suicide directly: the opposite is true — most patients with suicidal thoughts are relieved someone finally asked, and avoiding the question only leaves you blind to real risk.",
+   "zh": "以为直接问自杀会『把念头种进病人脑子』：事实恰恰相反——多数有自杀念头的病人反而因为终于有人问了而松一口气，回避这个问题只会让你对真实风险视而不见。"
+  },
+  {
+   "en": "Assuming a manic patient is happy to be helped: euphoria is not insight — most manic patients do not believe anything is wrong, and family or bystanders are usually the ones who call 911, not the patient.",
+   "zh": "以为躁狂病人会乐意接受帮助：欣快不等于自知力——多数躁狂病人根本不认为自己有问题，打 911 的往往是家人或旁观者，而不是病人本人。"
+  },
+  {
+   "en": "Assuming restraint ends the danger: a restrained patient can still vomit, aspirate, or go into cardiovascular collapse from the underlying intoxication or exhaustion that made them violent — restraint is the start of intensive monitoring, not the end of the problem.",
+   "zh": "以为约束住了危险就结束了：被约束的病人仍可能呕吐误吸，或因导致其暴力的中毒、力竭状态而出现心血管衰竭——约束是密集监护的起点，不是问题的终点。",
+   "hard": true
+  },
+  {
+   "en": "Treating 'no obvious weapon' as 'safe': almost any object — a chair, a lamp, a book — can become a weapon in the wrong hands; scene safety is an ongoing scan, not a one-time checklist item.",
+   "zh": "把『没看到明显武器』当成『安全』：几乎任何物件——椅子、台灯、书——落到错的人手里都能变成武器；现场安全是持续扫描，不是一次性打勾的清单项。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "COASTMAP",
+   "en": "The mental status exam in order: Consciousness, Orientation, Activity, Speech, Thought, Memory, Affect/mood, Perception.",
+   "zh": "精神状态检查按顺序：意识（Consciousness）、定向（Orientation）、活动（Activity）、言语（Speech）、思维（Thought）、记忆（Memory）、情感/情绪（Affect/mood）、感知（Perception）。"
+  },
+  {
+   "name": "GAS PIPES",
+   "en": "Diagnostic features of depression: Guilt, Appetite change, Sleep disturbance, Paying attention (concentration) difficulty, Interest loss, Psychomotor change, Energy loss, Suicidal thoughts.",
+   "zh": "抑郁症诊断特征：内疚（Guilt）、食欲改变（Appetite）、睡眠障碍（Sleep）、注意力困难（Paying attention）、兴趣丧失（Interest）、精神运动改变（Psychomotor）、精力丧失（Energy）、自杀念头（Suicidal thoughts）。"
+  },
+  {
+   "name": "Personality disorder clusters A-B-C",
+   "en": "A = odd/eccentric (paranoid, schizoid, schizotypal); B = erratic/emotional (antisocial, borderline, histrionic, narcissistic); C = anxious/fearful (avoidant, dependent, obsessive-compulsive).",
+   "zh": "A 类=古怪/怪异（偏执、分裂样、分裂型）；B 类=情绪化/戏剧化（反社会、边缘型、表演型、自恋型）；C 类=焦虑/恐惧（回避型、依赖型、强迫型）。"
+  },
+  {
+   "name": "Five for restraint",
+   "en": "Never attempt to physically restrain a violent patient with fewer than five trained responders — one per limb, one for the head.",
+   "zh": "物理约束暴力病人前，人数绝不能少于五名受训人员——每肢一人，加一人固定头部。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A patient in an acute manic episode refuses transport and hospital evaluation is clearly needed. Walk through your approach, and say when you escalate to police.",
+   "qZh": "一名急性躁狂发作的病人拒绝转运，但明显需要住院评估。说说你的处置步骤，以及何时该升级叫警察。",
+   "aEn": "Stay calm, firm, and avoid a power struggle; minimize external stimulation by talking in a quiet place away from others; have your partner take history from bystanders separately; do not use sirens on transport. If the patient continues to refuse and hospital evaluation is genuinely needed, consult direct medical control if available and obtain police assistance for transport.",
+   "aZh": "保持冷静、坚定，不进入权力拉锯；找安静地方交谈，减少外界刺激；让搭档另行向旁观者问史；转运时不开警笛。若病人持续拒绝而确实需要住院评估，有医疗指导时先咨询，再申请警方协助转运。"
+  },
+  {
+   "qEn": "List the absolute contraindications when physically restraining a patient, and explain why each one is dangerous.",
+   "qZh": "列出物理约束病人时的绝对禁忌，并说明每一项为什么危险。",
+   "aEn": "Never place the patient prone (you cannot monitor the airway and breathing is restricted); never tie wrists and ankles together as one (a documented cause of death); never hobble-tie the feet alone. The correct position is supine with both arms and legs secured to one side of the stretcher and the head turned to that side, to protect against aspiration if the patient vomits.",
+   "aZh": "绝不俯卧固定（无法监护气道且限制呼吸）；绝不把手腕脚踝捆成一体（有致死记录）；绝不只捆双脚做捆蹄式约束。正确体位是仰卧，双臂双腿固定在担架同一侧，头偏向那一侧，以防呕吐误吸。"
+  },
+  {
+   "qEn": "How do you distinguish a behavioural emergency from ordinary abnormal behaviour, and what is the first step in assessing any patient with a behavioural emergency?",
+   "qZh": "怎么区分『行为急症』和普通的异常行为？评估任何行为急症病人的第一步是什么？",
+   "aEn": "A behavioural emergency exists only when abnormal behaviour threatens the patient's own health/safety or someone else's — not every odd or upsetting behaviour qualifies. The first assessment step is always ruling out an organic cause (eg, hypoglycemia, hypoxia, head injury, drug ingestion) before assuming a purely psychiatric origin.",
+   "aZh": "只有当异常行为威胁到病人本人或他人的健康/安全时，才构成『行为急症』——不是所有古怪或令人不安的行为都算。评估的第一步永远是先排除器质性病因（如低血糖、缺氧、头部外伤、药物摄入），再假设纯属精神科问题。"
+  },
+  {
+   "qEn": "A depressed patient says 'I wish I was dead.' What is your questioning sequence, and what specific risk factors would you screen for?",
+   "qZh": "一名抑郁病人说『我希望自己死了』。你的提问顺序是什么？要筛查哪些具体风险因素？",
+   "aEn": "Do not fear asking directly — start broad ('Has life ever felt not worth living?') and escalate toward specifics: a plan, the means to carry it out, whether it has happened before, and any family history of suicide. Screen for: depression (or sudden unexplained improvement), male sex under 55, single/widowed/divorced, alcohol or drug abuse, recent loss of a relationship, chronic illness, schizophrenia, social isolation, a previous attempt, financial/job loss, and family history.",
+   "aZh": "不要怕直接问——从宽泛的问题开始（『有没有觉得活着不值得』），逐步问到具体：有没有计划、有没有实施手段、以前发生过没有、家族有没有自杀史。要筛查：抑郁（或突然无缘无故好转）、55 岁以下男性、单身/丧偶/离异、酒精或药物滥用、近期失去重要关系、慢性病、精神分裂症、社交孤立、既往自杀未遂、经济/工作损失、家族自杀史。"
+  },
+  {
+   "qEn": "What are the red flags in a psychotic patient's mental status exam that should make you treat them as immediately dangerous?",
+   "qZh": "精神病态病人的精神状态检查里，哪些红旗信号该让你立刻按危险病人对待？",
+   "aEn": "Command auditory hallucinations telling the patient to hurt themselves or others are the clearest immediate-danger flag. Also watch for persecutory delusions, loosening of associations severe enough to be incoherent, and any body language of tense posture, clenched fists, or avoided eye contact alongside the psychosis.",
+   "aZh": "命令病人伤害自己或他人的命令性听幻觉，是最明确的即刻危险信号。此外还要留意被害妄想、严重到言语不可理解的联想松弛，以及伴随精神病态出现的紧绷姿势、攥拳、回避眼神等肢体语言。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Naloxone dosing and the combativeness warning",
+   "topicZh": "纳洛酮剂量与『用后躁动』警示",
+   "bookEn": "The textbook says only that a rapid, unexplained drop in consciousness may indicate opioid intoxication and 'naloxone (Narcan) should be given,' without dosing detail.",
+   "bookZh": "教科书只说：意识状态原因不明地迅速下降可能提示阿片类中毒，『应给予纳洛酮』，没有给出具体剂量。",
+   "bcEn": "BC's protocol is a titrated ladder: 0.4 mg IM/IV, repeat 0.4 mg after 3 minutes if SpO2 stays under 94% or respirations at/under 10/min, then 0.8 mg, then 2.0 mg (each after another 3 minutes) — or 4 mg intranasal as a single dose. The guideline explicitly lists reversal of narcotic effect AND combativeness together as an expected adverse effect: be ready for the patient to wake up angry and disoriented, which is exactly the kind of behavioural-emergency scene safety this chapter covers.",
+   "bcZh": "BC 方案是逐级滴定：0.4 mg IM/IV，3 分钟后若 SpO2 仍 <94% 或呼吸 ≤10 次/分则再给 0.4 mg，接着 0.8 mg，再 2.0 mg（每次间隔 3 分钟）——或直接单次鼻内给 4 mg。指南明确把『逆转麻醉效果』和『躁动』并列为预期不良反应：要准备好病人醒来后又气又懵，这正是本章讲的那种现场安全场景。",
+   "ref": "BC Guidelines p.72, p.57"
+  },
+  {
+   "topicEn": "This chapter's psychiatric medication tables vs BC PCP scope",
+   "topicZh": "本章精神科用药表 vs BC PCP 执业范围",
+   "bookEn": "The chapter lists extensive drug tables for anxiety, depression, mania, and psychosis — SSRIs, MAOIs, benzodiazepines, TCAs, lithium, valproic acid, carbamazepine, and both atypical and typical antipsychotics — with no scope boundary flagged.",
+   "bookZh": "本章为焦虑、抑郁、躁狂、精神病态列出了大段药物表——SSRI、MAOI、苯二氮䓬类、三环类、锂、丙戊酸、卡马西平，以及典型和非典型抗精神病药——完全没有标注执业范围边界。",
+   "bcEn": "None of these appear anywhere in BC's PCP formulary, which totals only 18 drugs: acetaminophen, ASA, D10W, dexamethasone, dimenhydrinate, diphenhydramine, Entonox, epinephrine, glucagon, ibuprofen, ipratropium, methoxyflurane, naloxone, nitroglycerin, ondansetron, oral glucose, salbutamol, and tranexamic acid. A BC PCP's real scope for every disorder in this chapter is supportive care, scene safety, de-escalation, naloxone for suspected opioid involvement, and rapid transport — not administering any drug from these tables.",
+   "bcZh": "这些药一个都不在 BC PCP 的处方清单里——清单总共只有 18 种药：对乙酰氨基酚、阿司匹林、D10W、地塞米松、dimenhydrinate、苯海拉明、Entonox、肾上腺素、胰高血糖素、布洛芬、异丙托溴铵、methoxyflurane、纳洛酮、硝酸甘油、ondansetron、口服葡萄糖、沙丁胺醇、氨甲环酸。BC PCP 对本章所有病症的真实执业范围是：支持治疗、现场安全、言语降级、疑似阿片类相关给纳洛酮、快速转运——而不是给这些表里的任何一种药。",
+   "ref": "BC Guidelines 目录 p.3-4（无 SSRI/MAOI/benzodiazepine/lithium/antipsychotic 匹配）"
+  },
+  {
+   "topicEn": "Diphenhydramine's listed indication vs the textbook's dystonic-reaction use",
+   "topicZh": "苯海拉明的官方适应症 vs 教科书的『肌张力障碍』用法",
+   "bookEn": "The textbook recommends diphenhydramine (Benadryl) 25-50 mg IV to rapidly reverse an acute dystonic reaction from a typical antipsychotic.",
+   "bookZh": "教科书建议用苯海拉明（Benadryl）25-50 mg IV 快速逆转典型抗精神病药引起的急性肌张力障碍反应。",
+   "bcEn": "BC's diphenhydramine monograph matches the dose exactly — 25-50 mg IV or PO — but its listed indications are allergic reactions and motion sickness; acute dystonic reaction is not itemized. Since antipsychotics are not in BC's PCP formulary to begin with (see the scope alert above), a BC PCP would not be the one starting the drug that caused the reaction — treat this as background knowledge for recognizing the reaction in a patient already on it, not a protocol you independently apply for it.",
+   "bcZh": "BC 的苯海拉明专论剂量完全一致——25-50 mg IV 或口服——但列出的适应症是过敏反应和晕动症，没有单独列『急性肌张力障碍反应』这一条。由于抗精神病药本来就不在 BC PCP 处方清单里（见上一条执业范围提醒），BC PCP 也不会是那个开出诱发反应的药的人——把这条当成识别『已在用药病人身上出现该反应』的背景知识，而不是你会主动套用的处置方案。",
+   "ref": "BC Guidelines p.64"
+  },
+  {
+   "topicEn": "Who can lawfully apprehend a patient under BC's Mental Health Act",
+   "topicZh": "在 BC，谁有法律权力依《精神卫生法》约束/带走病人",
+   "bookEn": "The textbook says involuntary transport requires the patient to be deemed incompetent and needing hospital care, or expressing thoughts of self-harm or harm to others, that police must be involved, and that 'laws vary from one region to another' without naming a specific framework.",
+   "bookZh": "教科书说非自愿转运需要病人被判定无自主能力且需要住院治疗，或表达出自伤/伤人念头，且必须有警方介入，并说『法律因地区而异』，没有指明具体框架。",
+   "bcEn": "In BC, the governing law is the Mental Health Act (RSBC 1996, c 288). There are exactly two lawful doors into involuntary psychiatric custody: (1) a physician who personally examines the person completes a Medical Certificate (Form 4) certifying the statutory criteria — mental disorder, need for treatment, risk of harm or serious deterioration, unsuitable as a voluntary patient — which authorizes admission, or (2) a peace officer, under section 28, who believes on reasonable grounds the person has a mental disorder and is acting in a way that endangers their own or others' safety may apprehend them and take them to a physician for examination. A BC PCP has NO independent legal authority under the Act to apprehend or detain a competent-appearing patient who refuses — your role is to transport safely once a physician's certificate or a police apprehension is already in place, or to request police attendance when you believe the criteria may be met.",
+   "bcZh": "在 BC，适用的法律是《精神卫生法》（Mental Health Act, RSBC 1996, c 288）。合法把一个人送入非自愿精神科拘留只有两道门：（1）亲自检查病人的医生填写医学证明书（Form 4），证明其符合法定标准——患有精神障碍、需要治疗、有伤害或严重恶化风险、不适合做自愿病人——从而获得收治授权；或（2）警察依第 28 条，在有合理理由相信此人患有精神障碍且行为方式危及自身或他人安全时，可以将其带走送医生检查。BC PCP 在这部法律下并没有独立的法定权力去约束或扣留一名表面上仍具行为能力却拒绝配合的病人——你的角色是：在医生证明书或警方带走已经生效之后负责安全转运，或者在你判断可能符合标准时请求警方到场。",
+   "ref": "BC Mental Health Act, RSBC 1996, c 288, ss 22 & 28（通行法律知识，非 BC Exam Guidelines PDF 内容，PDF 未涉及精神卫生法条文）"
+  }
+ ],
+ "sourcePages": "3400-3470"
+}

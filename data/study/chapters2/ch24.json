@@ -1,0 +1,1231 @@
+{
+ "id": "ch24",
+ "n": 24,
+ "titleEn": "Head and Face Injuries",
+ "titleZh": "头面部损伤",
+ "group": "trauma",
+ "examWeight": 2,
+ "whyEn": "A weight-2 trauma chapter with unusually high yield per page. The written exam draws hard on GCS scoring and TBI severity grading, pupil findings, signs of rising intracranial pressure (Cushing's triad, herniation), basilar skull fracture signs, and the injury taxonomy for eyes, ears, teeth, and the anterior neck. The practical exam folds a head-injured patient into a C-spine scenario and grades your neuro trending and airway priorities. Learn the numeric thresholds cold — GCS bands, ICP physiology, and BC's own blood-pressure target for TBI diverge sharply from the textbook default.",
+ "whyZh": "权重 2 的创伤章，但每页信息密度很高。笔试重点考 GCS 评分和 TBI 严重度分级、瞳孔判读、颅内压增高体征（Cushing 三联征、脑疝）、颅底骨折征象，以及眼、耳、牙、前颈损伤的分类体系。实操里头部伤患者常和 C-spine 情景绑在一起考，重点看神经趋势判断和气道优先级。数字门槛必须背到条件反射——GCS 分级、颅内压生理，以及 BC 自己的 TBI 血压目标，和教材默认值差很多。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics（神经系统评估并判读；评估瞳孔；评估意识水平；呼吸系统与多系统评估）",
+   "Area 5: Therapeutics（直接压迫与体位控制外出血；处理眼外伤）",
+   "Area 6: Integration（处置神经系统症状体征患者；处置眼耳鼻喉症状体征患者）"
+  ],
+  "codes": [
+   "4.3.d",
+   "4.3.e",
+   "4.3.n",
+   "4.4.h",
+   "4.4.i",
+   "5.5.b",
+   "5.6.c",
+   "6.1.b",
+   "6.1.j"
+  ]
+ },
+ "sourcePages": "1970-2091",
+ "sections": [
+  {
+   "titleEn": "The Skull and Facial Bones",
+   "titleZh": "颅骨与面骨解剖",
+   "points": [
+    {
+     "en": "Scalp layering outside-in (mnemonic SCALP): Skin, subCutaneous tissue (major veins that bleed heavily when cut), galea Aponeurotica (tendon sheet linking frontal and occipital muscles), Loose connective tissue (where a subgaleal hematoma pools after blunt trauma), Periosteum.",
+     "zh": "头皮五层由外向内（记忆法 SCALP）：皮肤、皮下组织（大血管，切裂出血凶猛）、帽状腱膜（连接额肌和枕肌的腱性薄片）、疏松结缔组织（钝伤后腱膜下血肿就积在这层）、骨膜。",
+     "hard": true
+    },
+    {
+     "en": "The skull totals 28 bones: 6 tiny auditory ossicles (3 per side, buried in the temporal bone) plus 22 bones making up the cranium and face.",
+     "zh": "颅骨共 28 块：6 块听小骨（每侧 3 块，藏在颞骨深处）＋22 块构成颅腔和面部的骨。",
+     "hard": true
+    },
+    {
+     "en": "The cranial vault is 8 bones protecting the brain: paired parietal and temporal bones, plus single frontal, occipital, sphenoid, and ethmoid bones. The cord exits through the foramen magnum at the base.",
+     "zh": "颅穹窿由 8 块骨保护脑：成对的顶骨和颞骨，加上单块的额骨、枕骨、蝶骨、筛骨。脊髓从颅底的枕骨大孔穿出。",
+     "hard": true
+    },
+    {
+     "en": "Named sutures: sagittal joins the two parietal bones; coronal joins parietal to frontal; lambdoid joins occipital to parietal. Fontanelles are the soft fibrous gaps between them in infants and should be fused by 18 months.",
+     "zh": "颅缝命名：矢状缝连两块顶骨；冠状缝连顶骨和额骨；人字缝连枕骨和顶骨。婴儿期这些缝之间还留有软的囟门，应在 18 个月前闭合。",
+     "hard": true
+    },
+    {
+     "en": "The cranial floor has three fossae (anterior/middle/posterior). The crista galli anchors the meninges; beside it the cribriform plate is punched with foramina carrying olfactory nerve fibres up from the nasal cavity — a thin barrier that basilar fractures can breach, letting CSF leak into the nose.",
+     "zh": "颅底分前、中、后三个窝。鸡冠是脑膜的附着点；紧挨着的筛板上布满小孔，让嗅神经纤维从鼻腔穿上来——这层骨极薄，颅底骨折可能就是从这里破口，脑脊液漏进鼻腔。",
+     "hard": true
+    },
+    {
+     "en": "14 facial bones (paired unless noted): maxillae, inferior nasal conchae, zygomatic, palatine, nasal, lacrimal bones, plus the single vomer. The frontal and ethmoid bones do double duty in both cranial vault and face.",
+     "zh": "面骨共 14 块（除特别注明外均成对）：上颌骨、下鼻甲、颧骨、腭骨、鼻骨、泪骨，再加单块的犁骨。额骨和筛骨则身兼颅穹窿与面部两职。",
+     "hard": true
+    },
+    {
+     "en": "Facial sensation and chewing run through cranial nerve V (trigeminal): ophthalmic branch covers forehead/upper lid/conjunctiva, maxillary branch covers nose/lower lid/cheek/upper lip, mandibular branch (sensory AND motor) drives chewing muscles plus skin of the lower lip, chin, and part of the outer ear. Cranial nerve VII (facial) runs the muscles of expression.",
+     "zh": "面部感觉和咀嚼归三叉神经（第 V 对颅神经）管：眼支管前额/上睑/结膜，上颌支管鼻侧/下睑/颊部/上唇，下颌支（感觉+运动双重）驱动咀嚼肌，并管下唇、下巴和部分外耳皮肤。面神经（第 VII 对）则专管面部表情肌。",
+     "hard": true
+    },
+    {
+     "en": "The face is fed by the external carotid artery via its temporal, maxillary, and mandibular (facial) branches — a rich blood supply that makes facial wounds bleed dramatically out of proportion to their depth.",
+     "zh": "面部血供来自颈外动脉的颞、上颌、下颌（面）三条分支——血供极丰富，所以面部伤口出血量常常比伤口深度看起来吓人得多。",
+     "hard": true
+    },
+    {
+     "en": "Orbital blowout fracture: a direct blow to the eye transmits force to the thin orbital floor instead of the globe, letting blood and orbital fat leak down into the maxillary sinus below.",
+     "zh": "眶底爆裂骨折：眼球正面受击时，力传导到眶底薄骨而不是眼球本身，血液和眶内脂肪会漏进下方的上颌窦。",
+     "hard": true
+    },
+    {
+     "en": "The TMJ is where the mandible's posterior condyle articulates with the temporal bone, giving the jaw its movement; the hyoid bone floats free below the mandible (not fused to the skull) and anchors tongue and neck muscles.",
+     "zh": "颞下颌关节（TMJ）由下颌骨后方的髁突与颞骨相接，负责下颌开合；舌骨则悬浮在下颌骨下方（不与颅骨相连），是舌肌和颈部肌肉的附着点。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Eyes, Ears, Teeth, and Mouth Anatomy",
+   "titleZh": "眼、耳、牙、口腔解剖",
+   "points": [
+    {
+     "en": "The globe is about 3 cm across. Cranial nerve III (oculomotor) moves the eyeball and upper lid and also carries the parasympathetic fibres that constrict the pupil and drive lens accommodation; cranial nerve II (optic) carries vision only, no movement.",
+     "zh": "眼球直径约 3 cm。动眼神经（第 III 对）负责转动眼球和抬上睑，还带副交感纤维管缩瞳和晶状体调节；视神经（第 II 对）只管视觉，不管运动。",
+     "hard": true
+    },
+    {
+     "en": "Outer coat front-to-back: sclera (tough white shell, can turn icteric/yellow with liver disease), cornea (clear window over iris/pupil), conjunctiva (thin membrane over sclera and lid undersides — a good place to spot cyanosis on dark skin).",
+     "zh": "外层结构由前到后：巩膜（坚韧白色外壳，肝病时可发黄）、角膜（覆盖虹膜瞳孔的透明窗）、结膜（覆盖巩膜和眼睑内面的薄膜——深色皮肤患者查发绀可以看这里）。",
+     "hard": false
+    },
+    {
+     "en": "Two internal fluid chambers with very different stakes: the anterior chamber (cornea to lens) holds aqueous humour, which slowly REGENERATES after loss; the posterior chamber (lens to retina) holds vitreous humour, which does NOT regenerate — losing it through a penetrating wound can cause permanent blindness.",
+     "zh": "眼内两个腔的赌注完全不同：前房（角膜到晶状体）装房水，丢失后会缓慢再生；后房（晶状体到视网膜）装玻璃体，一旦丢失不会再生——穿透伤漏出玻璃体可导致永久失明。",
+     "hard": true
+    },
+    {
+     "en": "The retina is a 10-layer sheet of neural tissue at the back of the globe; its central patch, the macula, drives central vision, while the rest handles peripheral vision.",
+     "zh": "视网膜是眼球后部一张 10 层的神经组织；中央那块黄斑负责中心视力，其余部分负责周边视力。",
+     "hard": true
+    },
+    {
+     "en": "Tear pathway: lacrimal gland produces tears → lacrimal ducts → lacrimal sac → nasolacrimal duct → drains into the nasal cavity, which is why crying makes the nose run.",
+     "zh": "泪液通路：泪腺分泌→泪小管→泪囊→鼻泪管→排入鼻腔，这也是为什么哭的时候鼻子也会流水。",
+     "hard": false
+    },
+    {
+     "en": "The ear has three anatomic zones: external (pinna, ear canal, outer face of the eardrum), middle (inner face of the eardrum plus the three ossicles), inner (cochlea and semicircular canals). Sound vibrates the eardrum → ossicles → oval window → cochlear fluid → organ of Corti hair cells → auditory nerve → brain.",
+     "zh": "耳分三区：外耳（耳廓、外耳道、鼓膜外侧）、中耳（鼓膜内侧＋三块听小骨）、内耳（耳蜗和半规管）。声音传导链：鼓膜振动→听小骨→卵圆窗→耳蜗内液体→柯蒂器毛细胞→听神经→大脑。",
+     "hard": true
+    },
+    {
+     "en": "Adults carry 32 permanent teeth in four mirror-image quadrants (upper/lower, left/right); each quadrant has 1 central incisor, 1 lateral incisor, 1 canine, 2 premolars, 3 molars — the third molar is the wisdom tooth, erupting in late adolescence.",
+     "zh": "成人共 32 颗恒牙，分四个镜像象限（上下、左右）；每个象限含 1 颗中切牙、1 颗侧切牙、1 颗尖牙、2 颗前磨牙、3 颗磨牙——第三磨牙就是智齿，青春期后期才长出。",
+     "hard": true
+    },
+    {
+     "en": "Tooth anatomy top to bottom: crown (visible above gum) → neck → root, with the pulp cavity (vessels/nerves) at the core, wrapped by dentin, then by enamel — harder than bone and the tooth's outermost armour. The tooth sits in a bony socket (alveolus) and is anchored by the periodontal membrane.",
+     "zh": "牙齿结构自上而下：牙冠（露出牙龈外）→牙颈→牙根，中心是牙髓腔（血管神经），外包牙本质，最外层是牙釉质——比骨头还硬，是牙齿的铠甲。牙齿坐在骨性牙槽窝里，靠牙周膜固定。",
+     "hard": true
+    },
+    {
+     "en": "Mouth nerve map: hypoglossal (CN XII) drives tongue muscles; glossopharyngeal (CN IX) carries taste from the posterior tongue plus parasympathetic drive to the salivary glands; trigeminal's mandibular branch (CN V) drives chewing muscles; facial (CN VII) drives all expression muscles AND carries taste from the anterior two-thirds of the tongue plus tongue/palate sensation.",
+     "zh": "口腔神经分工：舌下神经（第 XII 对）管舌肌运动；舌咽神经（第 IX 对）管舌后 1/3 味觉＋唾液腺副交感支配；三叉神经下颌支（第 V 对）管咀嚼肌；面神经（第 VII 对）既管全部表情肌，又管舌前 2/3 味觉和舌腭部感觉。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Anterior Neck Anatomy",
+   "titleZh": "前颈部解剖",
+   "points": [
+    {
+     "en": "Core anterior-neck structures: thyroid and cricoid cartilage, trachea, plus assorted muscles and nerves. The major vessels are the internal/external carotid arteries and internal/external jugular veins; the vertebral arteries instead run posterolaterally, tucked beside the cervical vertebrae.",
+     "zh": "前颈部核心结构：甲状软骨和环状软骨、气管，以及多组肌肉神经。主要血管是颈内/颈外动脉和颈内/颈外静脉；椎动脉则走在颈椎两侧后方，位置更靠后。",
+     "hard": true
+    },
+    {
+     "en": "Carotid or vertebral injury is not just local bleeding — because these vessels feed the brain directly, damage can cause hemorrhagic shock PLUS cerebral hypoxia, infarction, air embolism, or permanent neurologic deficit, all at once.",
+     "zh": "颈动脉或椎动脉损伤不只是局部出血——因为这两条血管直接供血给脑，损伤可以同时造成失血性休克＋脑缺氧、脑梗死、空气栓塞或永久性神经功能缺损。",
+     "hard": true
+    },
+    {
+     "en": "Other structures the anterior neck can lose to blunt or penetrating trauma: vagus nerves, thoracic duct, esophagus, thyroid/parathyroid glands, the lower cranial nerves, and the brachial plexus — which runs lower-arm and hand function.",
+     "zh": "钝性或穿透伤还可能伤到：迷走神经、胸导管、食管、甲状腺/甲状旁腺、下组颅神经，以及支配前臂和手功能的臂丛神经。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Brain",
+   "titleZh": "脑解剖与生理",
+   "points": [
+    {
+     "en": "Monro-Kellie composition of the closed cranial vault: brain tissue 80%, cerebral blood 12%, CSF 8%. Since the skull cannot expand, a rise in any one component must be offset by the others — the physiologic basis of every ICP discussion in this chapter.",
+     "zh": "颅腔内容物三大件（Monro-Kellie）：脑组织 80%、血液 12%、脑脊液 8%。颅骨不能膨胀，任何一项增多都得靠其余两项代偿——这是本章一切颅内压讨论的生理基础。",
+     "hard": true
+    },
+    {
+     "en": "The brain is only 2% of body weight yet burns 25% of the body's glucose (about 60 mg/min) and 20% of its oxygen. It stores neither fuel, so it depends completely on continuous cerebral blood flow via the carotid and vertebral arteries — and will hijack systemic physiology to protect that flow.",
+     "zh": "脑只占体重 2%，却消耗全身 25% 的葡萄糖（约 60 mg/分钟）和 20% 的氧。它不储存任何一种燃料，完全依赖颈动脉和椎动脉持续供血——为了保住这份血流，脑会不惜绑架全身生理来自保。",
+     "hard": true
+    },
+    {
+     "en": "The cerebrum splits into left/right hemispheres via the longitudinal fissure; in most right-handed people the speech centre sits in the left (dominant) hemisphere. The cerebral cortex runs voluntary movement and awareness — injury here shows up as paresthesia, weakness, or paralysis.",
+     "zh": "大脑靠纵裂分成左右半球；多数右利手人群的语言中枢在左（优势）半球。大脑皮质负责随意运动和意识清醒度——受伤表现为感觉异常、无力或瘫痪。",
+     "hard": true
+    },
+    {
+     "en": "Frontal lobe: voluntary motor action and personality — damage can trigger seizures or a flattened affect. Parietal lobe (separated from frontal by the central sulcus): sensory/motor for the OPPOSITE side of the body, plus memory and emotion.",
+     "zh": "额叶：随意运动＋人格特质——受伤可诱发癫痫或情感变平淡。顶叶（由中央沟与额叶分界）：管对侧身体的感觉运动，还兼管记忆和情绪。",
+     "hard": true
+    },
+    {
+     "en": "Occipital lobe processes vision and is where the optic nerve originates — a blow to the back of the head can jolt it against the skull and produce 'seeing stars.' Temporal lobe (separated by the lateral fissure) holds the speech centre on the left side in about 85% of people, plus long-term memory, hearing, taste, and smell.",
+     "zh": "枕叶负责处理视觉信息，也是视神经的起点——后脑勺受击可能让它撞上颅骨内壁，产生“眼冒金星”。颞叶（由外侧沟分界）约 85% 的人语言中枢在左侧，同时管长期记忆、听觉、味觉、嗅觉。",
+     "hard": true
+    },
+    {
+     "en": "Diencephalon sits between brainstem and cerebrum: thalamus relays most sensory input and colours mood/fear/rage; subthalamus handles motor control; hypothalamus (the lowest part) runs heart rate, digestion, temperature regulation, hunger, thirst, vomiting, and the sleep cycle.",
+     "zh": "间脑夹在脑干和大脑之间：丘脑中转大部分感觉信息并影响情绪、恐惧、愤怒；底丘脑管运动控制；下丘脑（最下方）掌管心率、消化、体温调节、饥饿、口渴、呕吐和睡眠周期。",
+     "hard": true
+    },
+    {
+     "en": "The cerebellum — nicknamed the 'athlete's brain' — sits below the cerebral hemispheres and runs posture, balance, and coordinated movement.",
+     "zh": "小脑——绰号“运动员的脑”——位于大脑半球下方，负责姿势、平衡和动作协调。",
+     "hard": false
+    },
+    {
+     "en": "Brainstem = midbrain + pons + medulla, linking cord to brain. High in the brainstem, the reticular activating system (RAS) maintains consciousness and arousal level; the LOWER brainstem houses the centres for heart rate, blood pressure, and respiration — damage there can cause cardiovascular collapse, respiratory arrest, or death.",
+     "zh": "脑干＝中脑＋脑桥＋延髓，是连接脊髓和大脑的枢纽。脑干高位有网状激活系统（RAS），负责维持意识和清醒度；脑干低位则藏着心率、血压、呼吸的控制中枢——伤到这里可致心血管崩溃、呼吸骤停甚至死亡。",
+     "hard": true
+    },
+    {
+     "en": "Basal ganglia (deep in cerebrum/diencephalon/midbrain) coordinate motor movement and posture. The limbic system (parts of cerebrum plus diencephalon) governs emotion, motivation, mood, and pain/pleasure sensation. The medulla is continuous with the spinal cord and hosts the origin of the vagus nerve (CN X).",
+     "zh": "基底节（深藏于大脑、间脑、中脑）协调运动和姿势。边缘系统（部分大脑加间脑）掌管情绪、动机、心境和痛/快感。延髓与脊髓相连，也是迷走神经（第 X 对颅神经）的发源地。",
+     "hard": true
+    },
+    {
+     "en": "Meninges outside-in: dura mater (tough outer layer, firmly stuck to the skull, folds inward to form the tentorium separating cerebral hemispheres from cerebellum/brainstem — splits at suture lines into venous sinuses); arachnoid (delicate, spiderweb-vessel middle layer); pia mater (thin, highly vascular, hugs the brain surface directly).",
+     "zh": "脑膜由外向内：硬膜（坚韧外层，牢牢贴住颅骨，向内折叠形成小脑幕，把大脑半球和小脑/脑干分开——在颅缝处分裂形成静脉窦）；蛛网膜（薄而血管呈蛛网状的中间层）；软膜（薄而血供丰富，直接贴附脑表面）。",
+     "hard": true
+    },
+    {
+     "en": "Bleeding source maps directly to hematoma name: disrupted venous sinuses (where dura splits at suture lines) → subdural hematoma below the dura; a torn meningeal artery (classically the middle meningeal artery, sitting between dura and skull) → epidural hematoma above the dura.",
+     "zh": "出血来源直接决定血肿命名：颅缝处硬膜分裂形成的静脉窦破裂→硬膜下血肿（血在硬膜内侧）；脑膜动脉撕裂（经典是脑膜中动脉，走在硬膜和颅骨之间）→硬膜外血肿（血在硬膜外侧）。",
+     "hard": true
+    },
+    {
+     "en": "CSF is made by the choroid plexus inside the brain's interconnected ventricles and flows through the subarachnoid space (between pia and arachnoid); it resembles plasma in composition and, together with the meninges, forms a fluid cushion protecting brain and cord.",
+     "zh": "脑脊液由脑室内的脉络丛制造，脑室彼此相通，脑脊液经蛛网膜下腔（软膜和蛛网膜之间）流动；成分类似血浆，和脑膜一起形成保护脑和脊髓的液体缓冲垫。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Face Injuries: Types, Assessment & Management",
+   "titleZh": "面部损伤：分类、评估与处理",
+   "points": [
+    {
+     "en": "Open facial soft-tissue wounds (lacerations, abrasions, avulsions) are rarely life-threatening alone, but with a significant mechanism they flag possible closed head or C-spine injury underneath; massive facial soft-tissue damage with oropharyngeal bleeding can independently wreck the airway and ventilation. CLOSED facial soft-tissue injury (bruising, hematoma) is its own red flag for an underlying fracture — keep suspicion high even with no open wound.",
+     "zh": "面部开放性软组织伤（裂伤、擦伤、撕脱伤）单独看很少致命，但配合高能机制，就是提示底下可能藏着闭合性头伤或颈椎伤的信号；大面积面部软组织损伤合并口咽出血，本身就能搞垮气道和通气。面部闭合性软组织伤（挫伤、血肿）本身就是骨折的警示信号——即使没有开放伤口也要保持高度怀疑。",
+     "hard": true
+    },
+    {
+     "en": "Impaled objects in the face threaten the airway far more than they threaten facial nerves — an object through the cheek causes massive oropharyngeal bleeding, airway obstruction, and aspiration risk; blood itself irritates the stomach, so swallowed blood commonly triggers vomiting and further aspiration.",
+     "zh": "脸上的刺入物对气道的威胁远大于对面神经的威胁——穿透脸颊的刺入物会造成大量口咽出血、气道阻塞和误吸风险；血本身刺激胃，咽下的血常引发呕吐，进一步加重误吸。",
+     "hard": true
+    },
+    {
+     "en": "Maxillofacial fracture threshold: it takes up to 150 g of force (g = gravitational acceleration) to fracture the maxilla — force of that magnitude typically also produces closed head and C-spine injury, so both get protected by default.",
+     "zh": "上颌骨骨折的力学门槛：需要高达 150 g（g＝重力加速度）的力才能骨折上颌骨——这么大的力通常也会同时造成闭合性头伤和颈椎伤，所以两者要一并按存在处理。",
+     "hard": true
+    },
+    {
+     "en": "General maxillofacial fracture signs: deep lacerations, bruising, pain on bony palpation, swelling, crepitus or instability, dental malocclusion, facial asymmetry, impaired eye movement, and visual disturbance.",
+     "zh": "颌面骨折通用体征：深裂伤、瘀斑、骨骼触痛、肿胀、骨擦感或不稳定、牙列错位、面部不对称、眼球活动受限、视觉障碍。",
+     "hard": true
+    },
+    {
+     "en": "Nasal fracture is the MOST common facial fracture (the nasal bones are the weakest); expect swelling, tenderness, crepitus, and lateral displacement off the midline, plus anterior or posterior epistaxis that can itself threaten the airway.",
+     "zh": "鼻骨骨折是最常见的面部骨折（鼻骨结构最脆弱）；表现为肿胀、压痛、骨擦感，鼻骨偏离中线向侧方移位，还常合并前或后鼻出血——出血本身就能威胁气道。",
+     "hard": true
+    },
+    {
+     "en": "Mandibular fracture ranks SECOND most common, typically from major blunt force to the lower third of the face (classically assault) and classically fractures at the angle of the jaw; because it takes real force, it may break in more than one place and become unstable. Look for malocclusion, chin numbness, inability to open the mouth, swelling, bruising, and avulsed teeth. TMJ dislocation from trauma is rare by comparison — more often it comes from a wide yawn: the patient feels a pop, then the jaw locks open with painful muscle spasm.",
+     "zh": "下颌骨骨折排第二常见，多因下面部受重度钝力（经典场景是被打），骨折点经典位置在下颌角；力量够大时可能多处骨折而不稳定。查体要点：牙列错位、下巴麻木、张不开嘴、肿胀瘀斑、牙齿脱落。相比之下颞下颌关节脱位很少由创伤引起——更常见的诱因是打哈欠张太大：患者会感觉“啪”一下，下巴卡在张开位置合不上，随后肌肉痉挛引发剧痛。",
+     "hard": true
+    },
+    {
+     "en": "Le Fort classification of maxillary (midface) fractures: Le Fort I is a horizontal fracture through the hard palate and lower maxilla; Le Fort II is pyramidal, involving the nasal bone and lower maxilla; Le Fort III (craniofacial disjunction) separates the ENTIRE midface from the cranium. They can appear alone or stacked together.",
+     "zh": "上颌（中面部）骨折的 Le Fort 分级：Le Fort I 是经硬腭和下上颌骨的水平骨折；Le Fort II 呈金字塔形，累及鼻骨和下上颌骨；Le Fort III（颅面分离）把整个中面部从颅骨上完全分离。三型可单独出现，也可叠加。",
+     "hard": true
+    },
+    {
+     "en": "Orbital fracture (blowout pattern most common at the thin orbital floor) causes double vision and numbness above the eyebrow or over the cheek from nerve damage, plus paralysis of upward gaze — check eye movement in ALL directions whenever a facial fracture is suspected.",
+     "zh": "眶骨骨折（最常见是眶底薄骨处的爆裂型）会造成复视、眉上或颊部麻木（神经损伤），以及向上凝视麻痹——只要怀疑面部骨折，眼球各方向活动都要查一遍。",
+     "hard": true
+    },
+    {
+     "en": "Zygomatic (cheekbone) fracture flattens that side of the face, causes paresthesia over cheek/nose/upper lip and possible upward-gaze paralysis, and commonly travels with orbital fracture, ocular injury, and epistaxis.",
+     "zh": "颧骨骨折让伤侧面部塌陷变平，颊部/鼻侧/上唇出现感觉异常，可能伴向上凝视麻痹；常与眶骨骨折、眼球损伤、鼻出血结伴出现。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital care does not need to distinguish which fracture type is present — that is a CT call in the ED. The field priority ladder is: rapid assessment, treat life threats, airway management, spinal motion restriction, then transport.",
+     "zh": "院前不需要分辨具体是哪种骨折——那是急诊 CT 的事。现场优先级是：快速评估、处理危及生命的问题、气道管理、脊柱限动、然后转运。",
+     "hard": true
+    },
+    {
+     "en": "Facial-trauma airway management starts with jaw-thrust plus manual neutral in-line stabilization (splint in position found if movement causes severe pain); clear tooth fragments/dentures/foreign bodies from the mouth and suction the oropharynx; use an OPA as needed, targeting SpO2 ≥94%.",
+     "zh": "面部创伤气道管理从托颌法＋手法轴线中立位固定开始（一动就剧痛则按发现体位固定）；清理口内牙齿碎片/义齿/异物并吸引口咽；按需上口咽通气道，目标 SpO2≥94%。",
+     "hard": true
+    },
+    {
+     "en": "Massive facial injury undermines the mask seal for BVM, so tracheal intubation is preferred — especially for unresponsive patients — to protect against aspiration; surgical or needle cricothyrotomy is the fallback when intubation is extremely difficult or impossible (unstable facial bones, massive swelling, severe oral bleeding).",
+     "zh": "大面积面部损伤会破坏球囊面罩的密封性，因此优先选气管插管——尤其是无反应患者——以防误吸；插管极难或不可能时（面骨不稳、肿胀巨大、口内大出血），退而求其次做外科或穿刺环甲膜切开。",
+     "hard": true
+    },
+    {
+     "en": "Blood or CSF from the nose (rhinorrhea) means suspect a skull fracture — never try to stop that drainage, since blocking it can raise ICP if a brain injury coexists; avoid nasal airway adjuncts and nasotracheal intubation whenever a nasal fracture or CSF rhinorrhea is suspected, because the device could pass through an occult basilar fracture straight into the brain.",
+     "zh": "鼻子流血或流脑脊液（鼻漏）＝怀疑颅底骨折——绝不能设法止住这股引流，堵住它反而可能在合并脑损伤时升高颅内压；只要怀疑鼻骨骨折或脑脊液鼻漏，就要避免鼻咽通气道和经鼻插管，因为器械可能经隐匿的颅底骨折直接捅进脑组织。",
+     "hard": true
+    },
+    {
+     "en": "Impaled facial objects: leave in place and stabilize UNLESS they threaten the airway (e.g., through the cheek) — then withdraw along the same path it entered, pack the inside of the cheek with sterile gauze, and apply firm counterpressure dressing over the outside.",
+     "zh": "脸上的刺入物：原位固定，除非它威胁气道（比如穿过脸颊）——这时沿入口原路拔出，用无菌纱布填塞脸颊内侧，再在外侧加压包扎固定。",
+     "hard": true
+    },
+    {
+     "en": "Severe oropharyngeal bleeding with inadequate ventilation: alternate 15 seconds of suction with 2 minutes of assisted ventilation, repeating until the airway is clear or secured with a tracheal tube, while watching SpO2 to avoid hypoxia.",
+     "zh": "严重口咽出血合并通气不足：15 秒吸引＋2 分钟辅助通气交替循环，直到气道清干净或用气管导管固定，全程盯住 SpO2 防低氧。",
+     "hard": true
+    },
+    {
+     "en": "Epistaxis control: direct pressure on the nares; if responsive with no suspected spinal injury, sit the patient up leaning forward while pinching the nose; unresponsive patients go on their side unless spine injury forbids it. If severe epistaxis forces a responsive patient to lie supine and immobilized, consider RSI for definitive airway control.",
+     "zh": "鼻出血处理：直接压迫鼻翼；清醒且不疑脊柱伤者，坐起前倾同时捏鼻；无反应者侧卧（除非脊柱伤禁止）。若严重鼻出血迫使清醒患者仰卧固定，可考虑快速顺序插管取得确定性气道。",
+     "hard": true
+    },
+    {
+     "en": "Facial lacerations rarely cause hemorrhagic shock alone in adults, but severe epistaxis CAN — assess for shock signs and give IV crystalloid boluses as needed. Never compress an eyeball you suspect is injured (raises intraocular pressure, can trigger the oculocardiac reflex); a firm roller bandage (e.g., Kerlix/Kling) can stabilize an unstable mandible without blocking the airway.",
+     "zh": "成人单纯面部裂伤很少单独造成失血性休克，但严重鼻出血可以——按需评估休克体征并静脉补晶体液。绝不能压迫疑似受伤的眼球（会升高眼压，可能诱发眼心反射）；自粘弹力绷带（如 Kerlix/Kling）可以在不堵气道的前提下稳定不稳定的下颌骨。",
+     "hard": true
+    },
+    {
+     "en": "Older adults bleed harder from minor facial injury: high risk for severe epistaxis, especially with hypertension or anticoagulant use (warfarin, DOACs); the source is often posterior nasopharyngeal and may not be visible on exam.",
+     "zh": "老年人轻微面部伤也可能大出血：严重鼻出血高危人群，尤其合并高血压或用抗凝药（华法林、新型口服抗凝药）；出血源常在鼻咽后部，查体未必看得见。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Eye Injuries: Types, Assessment & Management",
+   "titleZh": "眼外伤：分类、评估与处理",
+   "points": [
+    {
+     "en": "Eye trauma is common and consequential: over 700 Canadian workers suffer a workplace eye injury every day (CNIB data). The three mechanism buckets are blunt (MVC, falls, assault), penetrating (surface foreign bodies or an impaled object in the globe), and burns (chemical or industrial, e.g., welding).",
+     "zh": "眼外伤既常见又后果严重：据加拿大国家盲人协会（CNIB）统计，每天有 700 多名加拿大劳工发生职业性眼外伤。三大机制：钝伤（车祸、跌落、袭击）、穿透伤（表面异物或刺入眼球的异物）、烧伤（化学或工业性，如电焊）。",
+     "hard": true
+    },
+    {
+     "en": "Eyelid lacerations often bleed heavily but respond to gentle manual pressure. A laceration of the GLOBE itself is the opposite rule: never apply pressure — compression can starve the retina's blood supply or squeeze vitreous humour, iris, lens, or retina out of the eye, causing irreparable blindness.",
+     "zh": "眼睑裂伤出血常常很凶，但轻柔手压就能控制。眼球本身的裂伤规则正相反：绝不能加压——压迫可能切断视网膜血供，或把玻璃体、虹膜、晶状体甚至视网膜挤出眼球，造成不可逆失明。",
+     "hard": true
+    },
+    {
+     "en": "A surface foreign body causes near-immediate conjunctivitis (red, inflamed), reflex tearing, intense pain, and light-averse blinking; small metal fragments can bury themselves fully inside the globe without the patient even knowing — suspect this whenever the history includes hammering, grinding, or filing metal.",
+     "zh": "表面异物几乎立刻引起结膜炎（红肿）、反射性流泪、剧痛和畏光眨眼；小的金属碎片可能完全嵌入眼球而患者毫无察觉——只要病史有敲打、打磨、锉削金属，就要怀疑这种伤。",
+     "hard": true
+    },
+    {
+     "en": "An object impaled in the globe must be removed by a physician, never in the field — stabilize it and cover BOTH eyes (the uninjured one too) to stop sympathetic eye movement from worsening the injury, then transport.",
+     "zh": "刺入眼球的异物必须由医生取出，绝不能在现场拔——现场只做稳定，并且两只眼睛都要遮盖（包括没受伤那只），防止“共轭眼动”加重损伤，然后转运。",
+     "hard": true
+    },
+    {
+     "en": "Blunt trauma spans swelling/ecchymosis up to globe rupture. Hyphema (bleeding into the anterior chamber, partially or fully obscuring vision) is a sight-threatening emergency in its own right, and about 25% of hyphemas come with an associated globe injury.",
+     "zh": "钝伤谱系从肿胀瘀斑一路到眼球破裂。前房积血（血进入前房，部分或完全遮挡视力）本身就是威胁视力的急症，约 25% 的前房积血合并眼球本身的损伤。",
+     "hard": true
+    },
+    {
+     "en": "Blowout fracture can entrap the muscles that move the eye, producing diplopia especially on upward gaze. Rule of thumb: any pain, double vision, or decreased vision after blunt eye trauma = assume blowout fracture and transport.",
+     "zh": "眶底爆裂骨折可能夹住控制眼球运动的肌肉，导致复视，尤其是向上看时。经验法则：钝性眼外伤后出现疼痛、复视或视力下降，就按爆裂骨折处理并转运。",
+     "hard": true
+    },
+    {
+     "en": "Retinal detachment (inner retina separating from its nourishing choroid, classic in boxing) is PAINLESS but produces flashing lights, floaters, and a shade or curtain across vision — treat as an ocular emergency needing immediate care.",
+     "zh": "视网膜脱离（视网膜内层与供血的脉络膜分离，拳击伤经典）不疼，但会出现闪光感、飘浮物，以及视野被遮住一角的“窗帘感”——按眼科急症立即处理。",
+     "hard": true
+    },
+    {
+     "en": "Burns: chemical (acid/alkali) burns need immediate flushing with clean water or sterile saline; thermal burns from facial fire typically spare the globe (reflex eye closure) but the eyelids stay exposed and burn; light burns (infrared, solar, laser) damage the retina painlessly with permanent effect, while UV/welding/snow-blindness burns are often painless at first but flare 3-5 hours later with conjunctivitis, redness, photophobia, foreign-body sensation, and tearing.",
+     "zh": "烧伤谱系：化学（酸/碱）烧伤要立即用清水或无菌生理盐水冲洗；面部火烧多因反射性闭眼而保住眼球，但眼睑仍暴露并被烧伤；光损伤（红外线、太阳直视、激光）无痛却永久性损伤视网膜；紫外线/电焊/雪盲这类烧伤常常一开始不痛，3-5 小时后才发作结膜炎、发红、畏光、异物感和流泪。",
+     "hard": true
+    },
+    {
+     "en": "History checklist for any eye complaint: mechanism and timing, symptom onset, one eye or both, pre-existing eye disease (e.g., glaucoma), eye medications. Four red-flag symptoms: vision loss that does NOT clear with blinking (globe or optic-nerve damage — the single most important finding), diplopia (extraocular muscle/orbital fracture), severe pain (significant injury), foreign-body sensation (corneal injury or something trapped under the lid).",
+     "zh": "任何眼部主诉都要问：受伤机制和时间、症状起病、单眼还是双眼、既往眼病（如青光眼）、眼用药物。四个危险信号：眨眼也清不掉的视力丧失（眼球或视神经损伤——单项最重要的发现）、复视（眼外肌/眶骨骨折）、剧痛（提示严重损伤）、异物感（角膜损伤或眼睑下藏了异物）。",
+     "hard": true
+    },
+    {
+     "en": "Structured eye exam covers: orbital rim (bruising/swelling/lacerations/tenderness), eyelids, corneas (foreign bodies), conjunctivae (redness/pus/inflammation), globes (redness/pigment change/lacerations), pupils (size/shape/equality/light reaction), eye movement in ALL directions, and visual acuity tested in EACH eye separately.",
+     "zh": "结构化眼部查体涵盖：眶缘（瘀斑/肿胀/裂伤/压痛）、眼睑、角膜（异物）、结膜（发红/脓性分泌物/炎症）、眼球（发红/色素改变/裂伤）、瞳孔（大小/形状/对称/对光反射）、各方向眼球运动、以及双眼分别单独测视力。",
+     "hard": true
+    },
+    {
+     "en": "Anisocoria (unequal pupils) matters, but context first: about 20% of the general population has simple/physiologic anisocoria (usually under 1 mm difference), and roughly 4% have a difference over 1 mm that is still NOT clinically significant. Unilateral cataract surgery can also leave that eye's pupil nonreactive to light — don't mistake it for a neurologic finding.",
+     "zh": "瞳孔不等大有意义，但先看背景：约 20% 的普通人群有生理性瞳孔不等大（通常差＜1 mm），约 4% 的人差＞1 mm 但仍没有临床意义。单眼白内障术后那只眼的瞳孔也可能对光无反应——别把它误判成神经系统体征。",
+     "hard": true
+    },
+    {
+     "en": "Field treatment for globe injuries: use a RIGID eye shield over both eyes, never a soft gauze patch. Three rules for penetrating eye injuries: never press or manipulate the globe; if part of the globe is exposed, apply a moist sterile dressing to keep it from drying; then cover with a rigid shield/cup, soft dressing over both eyes, and transport promptly.",
+     "zh": "眼球损伤的现场处理：用硬质眼罩遮盖双眼，绝不用软纱布垫。穿透性眼外伤三原则：绝不按压或摆弄眼球；如眼球部分外露，用湿润无菌敷料防止干燥；然后硬质护罩/眼杯扣上、双眼软敷料包扎，尽快转运。",
+     "hard": true
+    },
+    {
+     "en": "Suspected hyphema or globe rupture implies enough facial force that C-spine may be involved — apply SMR precautions. Also elevate the head of the stretcher about 30-40 degrees and keep the collar loose to reduce intraocular pressure; discourage coughing/straining and consider an antiemetic, since vomiting spikes IOP too.",
+     "zh": "疑似前房积血或眼球破裂意味着面部受力足够大，可能合并颈椎伤——启动 SMR 防护。同时把担架床头抬高约 30-40°，颈托别系太紧，帮助降低眼压；劝阻咳嗽用力，可考虑用止吐药，因为呕吐同样会飙升眼压。",
+     "hard": true
+    },
+    {
+     "en": "An avulsed globe (displaced out of its socket) must NEVER be manipulated or repositioned — cover it with a moist sterile dressing, stabilize both eyes together (sympathetic movement risk), keep the patient supine to limit further fluid loss, and transport promptly.",
+     "zh": "眼球脱出眼眶后绝不能试图复位或摆弄——用湿润无菌敷料覆盖，双眼一起固定（防共轭眼动加重损伤），患者保持仰卧减少液体进一步流失，尽快转运。",
+     "hard": true
+    },
+    {
+     "en": "Chemical burn irrigation rules: sterile water or saline ONLY — never a chemical 'antidote' like vinegar or baking soda, since neutralizing acid/alkali generates heat that worsens the burn. Irrigate at least 5 minutes for a general chemical burn, but 20 minutes continuously for an alkali or strong acid (deep-penetrating), continuing en route if possible; flush from the nose side outward to protect the other eye.",
+     "zh": "化学烧伤冲洗铁律：只用无菌水或生理盐水——绝不用醋、小苏打这类“中和剂”，中和酸碱会放热，反而加重烧伤。一般化学烧伤至少冲 5 分钟，碱或强酸（渗透深）要连续冲 20 分钟，可能的话转运途中继续冲；冲洗方向从鼻侧往外，避免污染另一只眼。",
+     "hard": true
+    },
+    {
+     "en": "Loose surface foreign bodies usually flush out with gentle saline irrigation; a foreign body stuck or embedded in the cornea must NEVER be removed in the field — one lodged under the upper lid may be lifted out with a moist cotton-tipped applicator after everting the lid, but anything impaled in the globe gets stabilized, covered, and transported, not pulled.",
+     "zh": "松散的表面异物一般用生理盐水轻柔冲洗就能带出；卡在或嵌入角膜的异物绝不能在现场取出；翻开上眼睑后能看到的异物可用湿润棉签轻轻取下，但刺入眼球的异物只能固定包扎转运，不能拔。",
+     "hard": true
+    },
+    {
+     "en": "Suspect an eye prosthesis (artificial eye) when it fails to react to light, doesn't move with the other eye, or just looks different — ask the patient directly. Misreporting a fixed prosthetic pupil as a real neurologic finding is an embarrassing and clinically costly mistake.",
+     "zh": "如果一只眼对光不反应、不随另一只眼同步运动、或看起来明显不同，要怀疑是义眼——直接问患者。把固定不动的义眼瞳孔误报成真实神经系统体征，是既尴尬又误导临床的错误。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Ear Injuries: Types, Assessment & Management",
+   "titleZh": "耳外伤：分类、评估与处理",
+   "points": [
+    {
+     "en": "Isolated ear injuries are typically not life-threatening, but can leave lasting sensory loss and disfigurement; they can occur alone or riding along with other head/face trauma.",
+     "zh": "孤立的耳外伤通常不致命，但可能留下持久的感觉损失和外观损毁；可以单独发生，也可能和其他头面部损伤一起出现。",
+     "hard": false
+    },
+    {
+     "en": "The pinna can be contused, lacerated, or partially/completely avulsed by blunt or penetrating trauma. Because cartilage has a poor blood supply, pinna wounds heal slowly and are prone to infection.",
+     "zh": "耳廓可能因钝伤或穿透伤而挫伤、裂伤，或部分/完全撕脱。软骨血供差，所以耳廓伤口愈合慢、容易感染。",
+     "hard": true
+    },
+    {
+     "en": "Ruptured eardrum (TM perforation) comes from a foreign body in the ear, blast pressure from an explosion, or diving barotrauma. Signs: hearing loss plus blood draining from the ear canal. It hurts intensely but typically heals on its own without complication — still, do a careful full assessment to catch other, more dangerous injuries.",
+     "zh": "鼓膜穿孔的原因：耳内异物、爆炸冲击波、潜水气压伤。表现：听力下降＋耳道流血。虽然剧痛，但通常能自愈无并发症——仍要仔细全面评估，别漏掉其他更危险的损伤。",
+     "hard": true
+    },
+    {
+     "en": "Contact lenses come in three types (hard, rigid gas-permeable, soft/hydrophilic). Default rule: do NOT remove a contact lens from an injured eye — you may aggravate the injury. The ONE prehospital indication to remove it is a chemical burn, because the lens can trap the chemical underneath and block effective irrigation.",
+     "zh": "隐形眼镜分三种（硬性、硬性透气、软性/亲水性）。默认原则：受伤眼睛的隐形眼镜不要摘——摘的动作可能加重损伤。院前唯一该摘的情形是化学烧伤，因为镜片会把化学物质困在下面，妨碍有效冲洗。",
+     "hard": true
+    },
+    {
+     "en": "Contact lens removal technique: hard lens — a small saline-moistened suction cup; soft lens — drop saline into the eye, then gently pinch and lift it off with gloved thumb and index finger. Store the removed lens in sterile saline and tell ED staff the patient wears contacts.",
+     "zh": "取隐形眼镜手法：硬性镜片用生理盐水湿润的小吸盘吸取；软性镜片先滴生理盐水，再用戴手套的拇指食指轻捏提起。取下的镜片存放在无菌生理盐水中，并告知急诊人员患者戴隐形眼镜。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital exam cannot properly assess the external canal or middle ear. External bleeding is usually limited by the ear's poor blood supply; if direct pressure fails, place a soft padded dressing BEHIND the ear (between ear and scalp — bandaging it flat against the scalp hurts) and secure with a roller bandage; an ice pack helps swelling and pain.",
+     "zh": "院前检查没法真正评估外耳道和中耳。外耳血供差，出血一般不算多；直接压迫止不住时，先在耳后（耳与头皮之间）垫软敷料——把耳朵直接压平贴头皮会很痛——再用绷带卷固定；冰袋有助于消肿止痛。",
+     "hard": true
+    },
+    {
+     "en": "Partial pinna avulsion: realign it and bandage with saline-moistened padding. Complete avulsion: retrieve the part and treat it like any amputation — wrap in saline-moist gauze, seal in a plastic bag, place on ice (shield from a chemical ice pack with gauze layers, since those run colder than ice and can freeze the tissue).",
+     "zh": "耳廓部分撕脱：复位后用生理盐水浸湿的敷料包扎。完全撕脱：找回撕脱部分，按截肢处理——用生理盐水纱布包裹、装入塑料袋、袋子放在冰上（用几层纱布隔开化学冰袋，因为它比普通冰更冷，可能把组织冻伤）。",
+     "hard": true
+    },
+    {
+     "en": "Blood or CSF draining from the ear (otorrhea): apply a LOOSE dressing that does not stop the flow, and assess the patient for other basilar skull fracture signs. An impaled object in the ear is never removed — stabilize it and cover to prevent movement and inner-ear contamination.",
+     "zh": "耳道流血或流脑脊液：用松散敷料盖住但不堵住引流，同时排查其他颅底骨折体征。耳内刺入物绝不能拔——只做固定和覆盖，防止移动和内耳污染。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Oral & Dental Injuries: Types, Assessment & Management",
+   "titleZh": "口腔与牙齿损伤：分类、评估与处理",
+   "points": [
+    {
+     "en": "Oral/dental trauma is blunt (MVC, direct blow to mouth/chin) or penetrating (gunshot, laceration, puncture). The core danger is always airway compromise — from oropharyngeal bleeding, a displaced dental appliance (bridge/partial plate) blocking the airway, or aspiration of avulsed/fractured teeth.",
+     "zh": "口腔牙齿创伤分钝伤（车祸、口/下巴受直接击打）或穿透伤（枪伤、裂伤、刺伤）。核心危险永远是气道——口咽出血、移位的假牙（桥体/局部义齿）堵气道，或误吸脱落/断裂的牙齿。",
+     "hard": true
+    },
+    {
+     "en": "Mouth soft-tissue injuries risk intraoral hemorrhage into the upper airway; a responsive patient with severe oral bleeding is often unable to speak unless leaning forward, since that position helps blood drain out rather than back.",
+     "zh": "口腔软组织伤有出血流入上气道的风险；清醒患者严重口腔出血时常常说不出话，除非身体前倾——这个姿势能让血往外流而不是往后灌。",
+     "hard": true
+    },
+    {
+     "en": "Swallowed blood from intraoral lacerations can hide the true bleeding severity, and because blood irritates the stomach lining, vomiting and aspiration risk climb fast; an object impaled through the cheek adds the same profuse-bleeding-plus-vomiting risk.",
+     "zh": "口内裂伤咽下的血会掩盖真实出血量，而血刺激胃黏膜，呕吐和误吸风险迅速上升；刺穿脸颊的异物同样带来大出血＋呕吐的组合风险。",
+     "hard": true
+    },
+    {
+     "en": "Fractured or avulsed teeth (especially the anterior ones) are common after facial trauma — either isolated (an assault punch) or riding along with severe maxillofacial trauma. Always check the mouth after any facial injury: loose fragments or whole teeth can obstruct the airway and must be cleared immediately.",
+     "zh": "断裂或脱落的牙齿（尤其是前牙）在面部创伤后很常见——可能是孤立事件（被打一拳），也可能伴随严重颌面创伤。任何面部损伤后都要检查口腔：松动的碎片或整颗牙都可能堵气道，必须立刻清出来。",
+     "hard": true
+    },
+    {
+     "en": "Assault-scene tip: if safe, also check the striker's clenched (not outstretched) fist for a tooth fragment lodged in the knuckle — human mouths are loaded with bacteria, so an unnoticed knuckle wound with embedded tooth can infect the metacarpophalangeal joint.",
+     "zh": "斗殴现场提示：安全的话也检查一下打人者攥紧（而非张开）的拳头，看指关节里有没有嵌着牙齿碎片——人类口腔细菌极多，没发现的指关节伤口若嵌了牙齿碎片，容易感染到掌指关节。",
+     "hard": false
+    },
+    {
+     "en": "Management priority is airway and breathing: suction the oropharynx, clear tooth fragments, apply SMR per mechanism. If bleeding is profuse and the patient cannot protect the airway (e.g., reduced LOC), pharmacologically assisted intubation may be needed.",
+     "zh": "处理优先级是气道和呼吸：吸引口咽、清除牙齿碎片、按机制上 SMR。如果出血凶猛且患者护不住自己气道（如意识下降），可能需要药物辅助插管。",
+     "hard": true
+    },
+    {
+     "en": "Impaled objects in the mouth's soft tissue are stabilized in place UNLESS they interfere with breathing or airway management — only then remove along the same path it entered, and control bleeding with direct pressure.",
+     "zh": "口腔软组织内的刺入物原位固定，除非它妨碍呼吸或气道管理——这时才沿入口方向拔出，并用直接压迫止血。",
+     "hard": true
+    },
+    {
+     "en": "An avulsed tooth can still be successfully reimplanted even after up to 1 HOUR outside the mouth. Medical control may direct field reimplantation into the original socket — place it carefully and hold with fingers, or have the patient gently bite down to keep it seated.",
+     "zh": "脱落的牙齿即使离体长达 1 小时，仍有机会成功再植。医疗指挥可能会要求现场把牙齿放回原来的牙槽——小心放入，用手指扶住，或让患者轻轻咬合固定。",
+     "hard": true
+    },
+    {
+     "en": "If not reimplanting, follow dental-association guidance: handle the tooth by the crown ONLY (touching the root damages the periodontal ligament), rinse gently with sterile saline or water (no soap, no scrubbing), and never let it dry out. Acceptable storage media: a commercial tooth-preservation kit, propolis, egg white, coconut water, Ricetral, or cold whole milk; sterile saline is a last resort and only good for under 1 hour of storage.",
+     "zh": "不做现场再植时，按牙科协会指引：只捏牙冠（碰牙根会伤到牙周韧带），用无菌生理盐水或清水轻轻冲洗（不用肥皂、不要刷），绝不能让牙齿变干。可用的保存介质：商用保牙盒、蜂胶、蛋清、椰子水、Ricetral，或冷全脂牛奶；无菌生理盐水是最后选择，且只适合存放不到 1 小时。",
+     "hard": true
+    },
+    {
+     "en": "Retrieving or storing an avulsed tooth is a LOW priority whenever the patient is clinically unstable (compromised airway, shock) — aggressive airway management, spinal precautions, and rapid transport come first; the tooth problem waits.",
+     "zh": "如果患者临床不稳定（气道受威胁、休克），找牙、存牙都是低优先级——积极气道管理、脊柱防护和快速转运优先；牙齿的事往后放。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Anterior Neck Injuries: Types, Assessment & Management",
+   "titleZh": "前颈部损伤：分类、评估与处理",
+   "points": [
+    {
+     "en": "The neck packs the airway (larynx, trachea), the head's main vessels, and the spinal cord into one narrow stretch — treat ANY anterior neck injury, blunt or penetrating, as critical until proven otherwise.",
+     "zh": "颈部这一小段同时挤着气道（喉、气管）、供应头部的主要血管和脊髓——任何前颈部损伤，不论钝伤穿透伤，一律先按危重处理，直到证明不是。",
+     "hard": true
+    },
+    {
+     "en": "Neck zone classification drives prognosis: Zone I injuries extend into the chest, are hard to spot on exam, and carry the HIGHEST mortality; Zone II is the most common and most obvious with LOWER mortality than Zone I; Zone III sits near the skull base, where structures are hardest for a surgeon to reach and repair.",
+     "zh": "颈部分区决定预后：I 区损伤可延伸进胸腔、查体不易发现，死亡率最高；II 区最常见、最明显，死亡率低于 I 区；III 区靠近颅底，结构最难让外科医生够到修复。",
+     "hard": true
+    },
+    {
+     "en": "Blunt neck mechanisms (MVC, direct blow, hanging) cause swelling/edema and can injure the trachea, larynx, esophagus, or C-spine, with a high rate of airway compromise. Penetrating mechanisms (gunshot, stabbing, impaled object) range from superficial fascia/fat wounds to deep injury of larynx/trachea/esophagus/nerves/vessels — the two big threats are massive hemorrhage and airway compromise.",
+     "zh": "钝性颈部机制（车祸、直接击打、悬吊）造成肿胀水肿，可能伤及气管、喉、食管或颈椎，气道受累比例很高。穿透性机制（枪伤、刺伤、异物刺入）从浅表筋膜/脂肪伤到深达喉/气管/食管/神经/血管都有——两大威胁是大出血和气道受累。",
+     "hard": true
+    },
+    {
+     "en": "A special open-neck danger: exposed jugular veins can suck in air and cause a potentially FATAL air embolism — seal any open neck wound with an occlusive dressing immediately, no exceptions.",
+     "zh": "开放性颈伤的特殊危险：暴露的颈静脉会把空气吸进血管，造成可能致命的空气栓塞——任何开放性颈部伤口都要立刻用密闭敷料封住，没有例外。",
+     "hard": true
+    },
+    {
+     "en": "Impaled neck objects are stabilized in place, never pulled, EXCEPT when the object itself is blocking the airway or blocking your ability to manage it — in that rare case removal (and possibly emergency cricothyrotomy) becomes necessary.",
+     "zh": "颈部刺入物只做原位固定，绝不能拔——除非这个物体本身就堵着气道或妨碍你处理气道，这种罕见情况下才需要移除（甚至紧急环甲膜切开）。",
+     "hard": true
+    },
+    {
+     "en": "Laryngeal/tracheal/esophageal injury from blunt crush against the C-spine or a penetrating blade: the larynx and its supports (hyoid bone, thyroid cartilage, cricoid ring) can fracture, the trachea can fully separate from the larynx (transection), or the esophagus can perforate. These are often OCCULT — much less dramatic-looking than an open neck wound — so blunt anterior-neck trauma demands high suspicion regardless of appearance.",
+     "zh": "喉/气管/食管损伤（钝伤把颈部挤向颈椎，或利器穿透）：喉及其支撑结构（舌骨、甲状软骨、环状软骨环）可能骨折，气管可能与喉完全分离（离断），食管可能穿孔。这些伤往往很隐匿——不像开放颈伤那样一眼吓人——所以钝性前颈创伤无论外观如何都要高度怀疑。",
+     "hard": true
+    },
+    {
+     "en": "Consequences: laryngeal/tracheal injury threatens the airway directly (blocked air passage, swelling, blood aspiration); esophageal perforation can leak gastric contents into the chest and cause mediastinitis — high mortality without prompt surgery.",
+     "zh": "后果：喉/气管损伤直接威胁气道（气道堵塞、肿胀、误吸血液）；食管穿孔可让胃内容物漏入胸腔引发纵隔炎——不及时手术修复死亡率很高。",
+     "hard": true
+    },
+    {
+     "en": "Force strong enough to disrupt the larynx, trachea, or esophagus is strong enough to injure the cervical spine too — apply SMR and check for step-off deformities, paralysis, paresthesia, and neurogenic-shock signs (hypotension, normal/slow heart rate, no sweating).",
+     "zh": "力量大到能伤及喉、气管或食管，同样大到能伤颈椎——按 SMR 处理，并检查棘突台阶感、瘫痪、麻木和神经源性休克体征（低血压、心率正常或偏慢、不出汗）。",
+     "hard": true
+    },
+    {
+     "en": "First-rib fracture carries close to 50% mortality — not from the rib itself, but because breaking such a short, stout bone takes enough force that major face, head, and neck trauma almost always rides along with it.",
+     "zh": "第一肋骨骨折死亡率接近 50%——不是骨折本身要命，而是这根又短又粗的骨头需要极大的力才能断，而这种力度几乎必然同时造成严重的面、头、颈创伤。",
+     "hard": true
+    },
+    {
+     "en": "Never use a flow-restricted, oxygen-powered (manually-triggered) ventilation device on suspected laryngeal or tracheal injury — its high delivery pressure can cause barotrauma and worsen the injury; switch to bag-mask ventilation instead.",
+     "zh": "疑似喉或气管损伤时绝不能用流量限制式氧动力（手动触发）通气装置——它的高压输送可能造成气压伤、加重损伤；改用球囊面罩通气。",
+     "hard": true
+    },
+    {
+     "en": "Open neck wound bleeding control: occlusive dressing first (ECG electrodes work well for small holes), manual direct pressure with a bulky dressing over it, and as a last resort roller gauze wrapped LOOSELY around the neck but secured FIRMLY through the opposite axilla. Never wrap circumferentially around the neck — that can occlude both carotids (impairing cerebral perfusion) or block breathing, and can be fatal. Watch the pulse for reflex bradycardia, a sign of excess carotid pressure.",
+     "zh": "开放性颈伤止血：先用密闭敷料（小洞可以用心电电极片快速封）、再用厚敷料手动直接加压，最后手段是绷带卷松松绕颈一圈、但经对侧腋下牢牢固定。绝不能绕颈一圈勒紧——可能同时压闭双侧颈动脉（损害脑灌注）或堵住呼吸，可致命。要盯着脉搏看有没有反射性心动过缓——那是颈动脉受压过度的信号。",
+     "hard": true
+    },
+    {
+     "en": "Signs by injury type: laryngeal fracture/tracheal transection — laboured breathing, stridor, hoarseness/voice change, hemoptysis, subcutaneous emphysema, swelling, structural irregularity. Vascular injury — gross external bleeding, shock signs, hematoma/swelling, pulse deficits. Esophageal perforation — dysphagia, hematemesis, hemoptysis (suggests aspirated blood). Neurologic impairment — stroke-like signs (air embolism or infarct), paralysis/paresthesia, cranial nerve deficit, neurogenic shock.",
+     "zh": "按损伤类型分体征：喉骨折/气管离断——呼吸费力、喘鸣、声音嘶哑/改变、咯血、皮下气肿、肿胀、结构不平整。血管损伤——外出血、休克体征、血肿肿胀、脉搏减弱或消失。食管穿孔——吞咽困难、呕血、咯血（提示误吸血液）。神经功能损害——类卒中体征（空气栓塞或脑梗）、瘫痪/麻木、颅神经功能缺损、神经源性休克。",
+     "hard": true
+    },
+    {
+     "en": "Shock management with neck trauma: oxygen to SpO2 ≥94%, control external bleeding, keep the patient warm, at least one large-bore IV with isotonic crystalloid titrated to a systolic BP target of 80-90 mm Hg — notably lower than the usual trauma fluid target.",
+     "zh": "颈部创伤合并休克的处理：吸氧至 SpO2≥94%、控制外出血、保暖、至少一条大孔径静脉通路输等渗晶体液，血压目标是收缩压 80-90 mmHg——明显低于一般创伤补液的目标值。",
+     "hard": true
+    },
+    {
+     "en": "Intubation past a laryngeal/tracheal injury is hazardous — you cannot see the tube tip once it passes the cords, so it can slip through a wall defect or complete a partial transection; worsening neck swelling and subcutaneous emphysema DURING ventilation is the tell. An open tracheal wound may allow a cuffed tube directly through the hole, but confirm placement with MULTIPLE methods (breath sounds, capnography — waveform preferred, chest rise, exhaled mist), since the trachea may be torn front and back, risking a false passage.",
+     "zh": "喉/气管损伤时插管很危险——导管尖端一过声带就看不见了，可能穿过管壁破口，甚至把部分离断变成完全离断；通气过程中颈部肿胀和皮下气肿加重就是信号。开放性气管伤口有时可直接经伤口置入带套囊导管，但必须用多种方法确认位置（听诊、呼气末 CO2——首选波形、胸廓起伏、导管内呼气雾气），因为气管可能前后都破，插管容易走假道。",
+     "hard": true
+    },
+    {
+     "en": "If basic/advanced airway techniques fail or are impossible due to distorted anatomy, surgical or needle cricothyrotomy may be the only path to a patent airway — a lighted stylet or gum elastic bougie can sometimes secure the tube first and avoid a surgical airway.",
+     "zh": "如果基础和高级气道技术都失败、或解剖已扭曲到没法做，外科或穿刺环甲膜切开可能是唯一出路——先试试光棒或弹性探条插管有时能成功、避免走到外科气道那一步。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Head Injuries: Scalp & Skull Fractures",
+   "titleZh": "头部损伤：头皮与颅骨骨折",
+   "points": [
+    {
+     "en": "About 160,000 Canadians sustain a head injury of some severity every year; roughly 8% of those admitted die — double the 4% death rate for all trauma hospitalizations combined. Most deaths are in the elderly, and a fatal head injury always traces back to brain injury.",
+     "zh": "加拿大每年约 16 万人发生不同程度的头部损伤；住院患者约 8% 死亡——是全部创伤住院平均死亡率（4%）的两倍。死亡多发生在老年人，头部损伤致死无一例外都是因为伤到了脑。",
+     "hard": true
+    },
+    {
+     "en": "MVCs are the leading mechanism — more than two-thirds of people involved in a motor vehicle collision sustain some head injury. Assault, falls in the elderly, sports, and pediatric incidents are the other common sources.",
+     "zh": "车祸是头部损伤的头号机制——超过三分之二的车祸伤者都带头部损伤。其余常见来源是袭击、老年人跌倒、运动损伤和各类儿童意外。",
+     "hard": true
+    },
+    {
+     "en": "Closed head injury (most common) keeps the dura intact and brain unexposed, but can still carry a skull fracture, focal or diffuse brain injury, and rising ICP. Open head injury breaches the dura and cranial contents — brain tissue meets the outside world. Gunshot wounds are the most common penetrating cause, carry high mortality, and survivors almost always keep a major neurologic deficit.",
+     "zh": "闭合性头部损伤（最常见）硬膜完整、脑未暴露，但仍可能伴颅骨骨折、局灶或弥漫性脑损伤及颅内压升高。开放性头部损伤则硬膜和颅内容物被穿破，脑组织直接暴露。枪伤是最常见的穿透性病因，死亡率高，幸存者几乎都留下严重神经功能缺损。",
+     "hard": true
+    },
+    {
+     "en": "Scalp lacerations bleed out of proportion to their size thanks to a rich blood supply — but scalp bleeding alone rarely causes hypovolemic shock in adults (more common in children). Because scalp lacerations usually come from a direct blow, treat one as a flag for a deeper, more serious injury underneath.",
+     "zh": "头皮血供丰富，裂伤出血量常常比伤口大小看起来吓人——但单纯头皮出血在成人很少导致低血容量休克（儿童更常见）。头皮裂伤多因直接击打所致，要把它当成底下藏着更严重损伤的信号。",
+     "hard": true
+    },
+    {
+     "en": "Four skull fracture types — linear, depressed, basilar, open — with significance riding on fracture type, force magnitude, and the struck region; shared complications include intracranial hemorrhage, cerebral damage, and cranial nerve injury.",
+     "zh": "颅骨骨折四型——线性、凹陷性、颅底、开放性——严重程度取决于骨折类型、力度大小和受击部位；共同的并发症包括颅内出血、脑损伤和颅神经损伤。",
+     "hard": true
+    },
+    {
+     "en": "Linear (nondisplaced) fractures make up about 80% of all skull fractures, and about half of THOSE sit in the temporal-parietal region. They show no gross deformity — radiography is required to diagnose. Benign if brain and scalp are intact, BUT a co-existing scalp laceration turns it into an open fracture (infection risk), and a temporal-region linear fracture can tear the middle meningeal artery into a rapidly catastrophic epidural bleed.",
+     "zh": "线性（非移位）骨折约占全部颅骨骨折的 80%，其中约一半发生在颞顶区。外观没有明显畸形——必须靠影像才能确诊。脑和头皮都完好时相对良性；但一旦合并头皮裂伤就变成开放性骨折（感染风险），发生在颞区则可能撕裂脑膜中动脉，引发迅速恶化的硬膜外出血。",
+     "hard": true
+    },
+    {
+     "en": "Depressed fracture comes from a high-energy, small-surface-area blunt blow (classic: baseball bat) — the thin frontal and parietal bones are most vulnerable, and bone fragments can drive straight into the brain. Neurologic signs such as loss of consciousness are common at presentation.",
+     "zh": "凹陷性骨折来自高能量、小接触面的钝力打击（经典场景：棒球棍击头）——较薄的额骨和顶骨最容易中招，碎骨片可能直接扎进脑组织。就诊时常见意识丧失等神经系统体征。",
+     "hard": true
+    },
+    {
+     "en": "Basilar skull fracture follows high-energy diffuse impact (falls, MVC), usually as a linear fracture extending down to the skull base — and it can be hard to diagnose even on imaging. Its two classic delayed signs: raccoon/panda eyes (periorbital ecchymosis) and Battle sign (bruising behind the ear over the mastoid). Both can take up to 24 HOURS to appear, so their absence in the field does NOT rule the fracture out.",
+     "zh": "颅底骨折多因高能量弥漫性撞击（跌落、车祸），通常是线性骨折向下延伸到颅底——即便靠影像也可能难以确诊。两个经典延迟体征：熊猫眼/浣熊眼（眶周瘀斑）和 Battle 征（耳后乳突区瘀斑）。两者都可能在伤后长达 24 小时才出现，所以院前没看到不能排除颅底骨折。",
+     "hard": true
+    },
+    {
+     "en": "CSF draining from the ear after head trauma means a ruptured eardrum plus free-flowing CSF — a basilar-fracture sign that also puts the patient at risk for bacterial meningitis.",
+     "zh": "头部创伤后耳道流出脑脊液，意味着鼓膜破裂＋脑脊液自由外流——这是颅底骨折的体征，也让患者面临细菌性脑膜炎的风险。",
+     "hard": true
+    },
+    {
+     "en": "Open cranial vault fracture results from severe force, often alongside multi-system trauma; exposed brain tissue carries a steep infection risk (bacterial meningitis) and the fracture type itself has a high mortality rate.",
+     "zh": "开放性颅穹窿骨折源于严重外力，常伴多系统创伤；暴露的脑组织感染风险陡增（细菌性脑膜炎），这类骨折本身死亡率就高。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Traumatic Brain Injuries: Pathophysiology & Classification",
+   "titleZh": "创伤性脑损伤：病理生理与分类",
+   "points": [
+    {
+     "en": "TBI splits into primary injury (direct, instantaneous at the moment of impact) and secondary injury (the downstream cascade — cerebral edema, intracranial hemorrhage, rising ICP, ischemia/hypoxia, hypoglycemia, hypotension, infection). Secondary injury can surface anywhere from minutes to days after the initial hit — this is the window paramedics can actually influence.",
+     "zh": "TBI 分原发性损伤（撞击瞬间直接产生）和继发性损伤（后续连锁反应——脑水肿、颅内出血、颅内压升高、缺血缺氧、低血糖、低血压、感染）。继发性损伤可能在伤后几分钟到几天内任何时候出现——这正是急救员真正能干预的窗口。",
+     "hard": true
+    },
+    {
+     "en": "Coup-contrecoup mechanism (classic unrestrained MVC): the head hits the windshield, the brain keeps moving forward and slams the front of the skull (compression/bruising anteriorly, stretching/tearing posteriorly — the 'coup'), then rebounds backward into the rear of the skull as the body decelerates (the 'contrecoup'). Lateral collisions produce the same pattern side-to-side.",
+     "zh": "对冲性损伤机制（经典的无安全带车祸）：头撞上挡风玻璃，脑继续向前撞上颅骨前壁（前部受压挫伤、后部被拉伸撕裂——这是“冲击”侧），随后身体减速使脑反弹撞上颅骨后壁（这是“对冲”侧）。侧面碰撞会造成同样模式的左右版本。",
+     "hard": true
+    },
+    {
+     "en": "Post-injury swelling starts with cerebral vasodilation, then cerebral edema (rising brain water content) piles on more swelling — and edema may not show up for several HOURS after the initial hit, so an early-normal exam can still deteriorate later.",
+     "zh": "伤后肿胀先从脑血管扩张开始，随后脑水肿（脑内水分增多）叠加更多肿胀——而水肿可能要伤后好几个小时才出现，所以早期查体正常不代表后面不会恶化。",
+     "hard": true
+    },
+    {
+     "en": "Normal adult ICP is 5-15 mm Hg inside a rigid skull that cannot expand. Cerebral perfusion pressure (CPP) — the pressure actually driving blood through the brain — equals MAP minus ICP (CPP = MAP − ICP). The critical minimum CPP is 60 mm Hg in adults; drop below that and cerebral ischemia follows, risking permanent damage or death. The Brain Trauma Foundation notes that a single dip below 60 mm Hg DOUBLES the chance of death in a brain-injured patient.",
+     "zh": "成人正常颅内压是 5-15 mmHg，颅骨是不能扩张的刚性容器。脑灌注压（CPP，真正驱动脑血流的压力）＝平均动脉压减颅内压（CPP＝MAP－ICP）。成人 CPP 的临界底线是 60 mmHg，低于这个值就会脑缺血，可致永久损伤甚至死亡。脑创伤基金会指出：CPP 哪怕只有一次跌破 60 mmHg，脑损伤患者的死亡风险就会翻倍。",
+     "hard": true
+    },
+    {
+     "en": "The ICP vicious cycle: falling CPP triggers autoregulation (MAP rises, cerebral vessels dilate, blood flow increases) — but that extra flow pushes ICP even higher, which drops CPP again. CPP cannot be calculated in the field, so prehospital care aims to support MAP while limiting further ICP rise — a genuinely narrow balance. Left untreated, rising ICP can force the brain to herniate through the foramen magnum or over the tentorium.",
+     "zh": "颅内压的恶性循环：CPP 下降触发自身调节（MAP 升高、脑血管扩张、血流增加）——但多出来的血流又把 ICP 顶得更高，CPP 再度下跌。院前算不出 CPP，所以院前处理的目标是维持 MAP 同时尽量压住 ICP 上升——这是个很窄的平衡。放任 ICP 持续升高，脑组织最终会被挤出枕骨大孔或小脑幕，形成脑疝。",
+     "hard": true
+    },
+    {
+     "en": "Rising-ICP signs, early to late: EARLY — vomiting (often without nausea), headache, altered LOC, seizures. LATE and ominous — Cushing's triad (hypertension with a WIDENING pulse pressure + bradycardia + irregular respirations), a unilaterally dilated and nonreactive pupil (oculomotor/CN III compression), coma, and posturing.",
+     "zh": "颅内压升高体征，从早到晚：早期——呕吐（常无恶心）、头痛、意识改变、癫痫。晚期凶险信号——Cushing 三联征（高血压伴脉压增宽＋心动过缓＋呼吸不规则）、单侧瞳孔散大固定（动眼神经/第 III 对颅神经受压）、昏迷、去脑/去皮质姿势。",
+     "hard": true
+    },
+    {
+     "en": "Posturing tells you where the damage is: decorticate (flexor) posturing flexes the arms in toward the 'core' with legs extended; decerebrate (extensor) posturing extends BOTH arms and legs — and signals deeper, more ominous brainstem involvement.",
+     "zh": "去皮质/去脑姿势提示损伤深度：去皮质（屈肌）姿势是手臂向“核心”屈曲、腿伸直；去脑（伸肌）姿势是手臂和腿都伸直——提示脑干受累更深、预后更凶险。",
+     "hard": true
+    },
+    {
+     "en": "Brain injuries split into diffuse (affects the whole brain — concussion, diffuse axonal injury) and focal (a specific, CT-visible lesion — contusion, intracranial hemorrhage).",
+     "zh": "脑损伤分弥漫性（波及整个脑——脑震荡、弥漫性轴索损伤）和局灶性（具体、CT 上看得见的病灶——脑挫伤、颅内出血）两类。",
+     "hard": true
+    },
+    {
+     "en": "Cerebral concussion is mild diffuse injury from rapid accel-decel (coup-contrecoup) forces: transient cortical dysfunction that resolves spontaneously and fast, with NO structural damage. Signs range from brief confusion to disorientation lasting several minutes; LOC may or may not occur. Watch for retrograde amnesia (memory loss for events BEFORE the injury) versus anterograde/posttraumatic amnesia (memory loss for events AFTER it).",
+     "zh": "脑震荡是快速加减速（对冲）力造成的轻度弥漫性损伤：皮质功能一过性失调，自行快速恢复，没有结构损伤。表现从短暂困惑到持续数分钟的定向障碍不等；可有可无意识丧失。要区分逆行性遗忘（伤前事件记不住）和顺行性/创伤后遗忘（伤后事件记不住）。",
+     "hard": true
+    },
+    {
+     "en": "Diffuse axonal injury (DAI) is concussion's more severe cousin — stretching, shearing, or tearing of axons from high-speed accel-decel forces, often carrying a POOR prognosis. Severity (and prognosis) is graded mild/moderate/severe by how much axonal damage occurred — stretching being milder than shearing or tearing.",
+     "zh": "弥漫性轴索损伤（DAI）是脑震荡的“重症版”——高速加减速力造成轴索被拉伸、剪切或撕裂，往往预后较差。按轴索损伤程度分轻/中/重度——单纯拉伸比剪切撕裂轻。",
+     "hard": true
+    },
+    {
+     "en": "Cerebral contusion is focal bruising of brain tissue, producing worse deficits than a concussion (prolonged confusion, longer LOC) because there is real physical damage. The frontal lobe is hit most often, though coup-contrecoup mechanisms can bruise multiple sites at once; like any bruise it swells, driving ICP up.",
+     "zh": "脑挫伤是脑组织局部挫伤，因为是真实的物理损伤，神经缺损比脑震荡更重（意识混乱更久、昏迷更长）。最常受累的是额叶，但对冲机制可造成多处同时挫伤；和所有淤伤一样会肿胀，进而推高颅内压。",
+     "hard": true
+    },
+    {
+     "en": "Intracranial hemorrhage can pool in four places: between skull and dura (epidural), beneath dura but outside the brain (subdural), inside the brain tissue itself (intracerebral), or into the CSF (subarachnoid). Distinguishing contusion from hemorrhage is neither possible nor necessary in the field — what matters is recognizing rising-ICP signs as a critically injured patient needing immediate transport.",
+     "zh": "颅内出血有四个可能积血的位置：颅骨和硬膜之间（硬膜外）、硬膜下方但脑外（硬膜下）、脑组织本身内部（脑内）、脑脊液中（蛛网膜下）。院前既做不到也没必要区分挫伤和出血——重点是认出颅内压升高的体征，把患者当危重患者立即转运。",
+     "hard": true
+    },
+    {
+     "en": "Epidural hematoma occurs in 0.5-1% of all head injuries — nearly always a blow that linear-fractures the thin temporal bone and tears the middle meningeal artery running through its groove; arterial bleeding means symptoms progress FAST. Classic pattern: immediate LOC → a lucid interval → relapse into unresponsiveness as ICP climbs and the oculomotor nerve gets compressed against the tentorium, fixing and dilating the pupil on the hematoma's side. Without surgical evacuation, death follows quickly.",
+     "zh": "硬膜外血肿占全部头部损伤的 0.5-1%——几乎都是打击造成较薄颞骨线性骨折，撕裂骨沟内走行的脑膜中动脉；动脉性出血意味着症状进展飞快。经典模式：立即意识丧失→短暂清醒期（中间清醒期）→随颅内压升高、动眼神经被压向小脑幕而再度陷入无反应，血肿同侧瞳孔固定散大。不手术清除血肿，死亡会很快到来。",
+     "hard": true
+    },
+    {
+     "en": "Subdural hematoma occurs in about 5% of all head injuries — more common than epidural — typically from falls or strong deceleration, tearing the bridging veins between cortex and dura. Being venous, both the bleed and the ICP signs progress more GRADUALLY than an epidural; expect a fluctuating LOC, focal signs like unilateral hemiparesis, or slurred speech, with or without an accompanying skull fracture.",
+     "zh": "硬膜下血肿占全部头部损伤约 5%——比硬膜外更常见——典型诱因是跌落或强力减速，撕裂皮质与硬膜之间的桥静脉。因为是静脉性出血，出血和颅内压体征进展都比硬膜外更缓慢；表现为意识水平波动、局灶体征（如单侧肢体轻瘫）或言语含糊，可伴或不伴颅骨骨折。",
+     "hard": true
+    },
+    {
+     "en": "Subdural hematomas are ACUTE (signs within 24 hours) or CHRONIC (symptoms may not surface for up to 2 WEEKS) — chronic ones cluster in the elderly, people with alcoholism, bleeding disorders (e.g., hemophilia), and anticoagulant users (e.g., warfarin).",
+     "zh": "硬膜下血肿分急性（24 小时内出现体征）和慢性（症状可能拖到 2 周后才冒头）——慢性型多见于老年人、酗酒者、凝血功能障碍（如血友病）患者，以及正在用抗凝药（如华法林）的人。",
+     "hard": true
+    },
+    {
+     "en": "Intracerebral hematoma bleeds within the brain tissue itself, from a penetrating injury or rapid deceleration, and often rides along with DAI; the frontal and temporal lobes are the most common sites. Progression is unpredictable — once symptoms start, deterioration is often fast, and mortality stays high even with surgical evacuation.",
+     "zh": "脑内血肿是脑组织本身内部出血，源于穿透伤或快速减速力，常与 DAI 并存；额叶和颞叶是最常见部位。病情进展难以预料——一旦出现症状常迅速恶化，即使手术清除血肿死亡率依然很高。",
+     "hard": true
+    },
+    {
+     "en": "Subarachnoid hemorrhage bleeds into the CSF-filled subarachnoid space, producing bloody CSF and meningeal irritation signs (nuchal rigidity, headache) from trauma OR from a ruptured aneurysm/AVM. It classically presents as a sudden, severe headache (starting localized, going diffuse) and can rapidly add the full rising-ICP picture — decreased LOC, pupil changes, posturing, vomiting, seizures. A severe bleed is often fatal; survivors frequently keep permanent deficits.",
+     "zh": "蛛网膜下腔出血是血进入充满脑脊液的蛛网膜下腔，导致脑脊液带血和脑膜刺激征（颈项强直、头痛），病因可以是外伤，也可以是动脉瘤/动静脉畸形破裂。典型表现是突发剧烈头痛（先局限后弥漫），可迅速叠加完整的颅内压升高表现——意识下降、瞳孔改变、姿势异常、呕吐、癫痫。严重出血常致命，幸存者也常留下永久性缺损。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Neurologic Assessment: AVPU, GCS, Pupils & ICP Staging",
+   "titleZh": "神经评估：AVPU、GCS、瞳孔与颅内压分级",
+   "points": [
+    {
+     "en": "A deformed windshield or a cracked/dented helmet is itself a signal of major head impact — let mechanism alone raise your suspicion before signs appear. Head-injury signs (scalp lac/hematoma, palpable skull depression, visible deformity, Battle sign/raccoon eyes, CSF rhinorrhea/otorrhea) are distinct from TBI signs (pupil abnormality, unresponsiveness, confusion, perseveration, amnesia, combativeness, numbness/motor loss, focal deficits, seizures, Cushing's triad, dizziness/vertigo, diplopia, seeing stars, nausea/vomiting, posturing) — a patient can show either set, or both.",
+     "zh": "挡风玻璃变形、头盔裂开或凹陷本身就是头部受重击的信号——机制本身就该提高警觉，不必等体征出现。“头部损伤”体征（头皮裂伤/血肿、触及颅骨凹陷、可见畸形、Battle 征/熊猫眼、脑脊液鼻漏耳漏）和“脑损伤”体征（瞳孔异常、无反应、意识混乱、反复问同一问题、遗忘、躁动攻击、肢体麻木无力、局灶体征、癫痫、Cushing 三联征、眩晕、复视、眼冒金星、恶心呕吐、异常姿势）是两组不同清单——患者可能只中一组，也可能两组都占。",
+     "hard": true
+    },
+    {
+     "en": "A CHANGING level of consciousness is the single most important observation in grading brain-injury severity — Nancy's rule twice over. Establish a baseline with AVPU (Alert; responds to Verbal stimuli; responds to Pain; Unresponsive) and record the time whenever a head injury is suspected.",
+     "zh": "意识水平的“变化”是评估脑损伤严重度最重要的单一观察指标——Nancy 铁律再强调一遍。只要怀疑头部损伤，就用 AVPU（清醒；对言语有反应；对疼痛有反应；无反应）定基线并记录时间。",
+     "hard": true
+    },
+    {
+     "en": "GCS grades three independent axes (eye opening, verbal response, motor response) and classifies injury severity: 15 = no neurologic disability, 13-14 = mild TBI, 9-12 = moderate TBI, 3-8 = severe TBI. A single GCS score cannot show trajectory — take a baseline and reassess at least every 5 minutes, documenting each score with its timestamp.",
+     "zh": "GCS 从三个独立维度打分（睁眼、语言、运动），并据此分级：15＝无神经功能障碍，13-14＝轻度 TBI，9-12＝中度 TBI，3-8＝重度 TBI。单次 GCS 看不出变化趋势——先定基线，之后至少每 5 分钟复测一次，每次都要记分数和时间戳。",
+     "hard": true
+    },
+    {
+     "en": "Pupil nerves are exquisitely ICP-sensitive: a briskly-reactive pupil is reassuring; a SLUGGISH pupil is a relatively EARLY sign of rising ICP (or cerebral hypoxia); unequal pupils or bilaterally fixed-and-dilated ('blown') pupils are LATE, ominous signs from oculomotor nerve compression. The single most valuable neuro data point overall is whether findings are CHANGING and in which direction.",
+     "zh": "支配瞳孔的神经对颅内压极其敏感：对光反应灵敏＝令人安心；瞳孔反应迟钝（sluggish）是颅内压升高（或脑缺氧）相对较早的信号；瞳孔不等大或双侧固定散大（“瞳孔放大”）是动眼神经受压的晚期凶险信号。整个神经评估里最有价值的一条，始终是体征在不在变化、朝哪个方向变。",
+     "hard": true
+    },
+    {
+     "en": "ICP cannot be measured numerically in the field, but its severity can be staged clinically. MILD elevation: BP up/pulse down, pupils still reactive, Cheyne-Stokes respirations (rate/depth ramps up then down with apnea gaps), patient localizes then withdraws from pain, vomiting without nausea, headache, altered LOC, seizures — reversible with prompt treatment.",
+     "zh": "院前测不出颅内压的数值，但可以按临床表现分级。轻度升高：血压升、脉搏降，瞳孔仍有反应，潮式呼吸（幅度先增后减、中间有呼吸暂停），患者先能定位再回缩疼痛刺激，呕吐不伴恶心，头痛，意识改变，癫痫——及时处理可逆。",
+     "hard": true
+    },
+    {
+     "en": "MODERATE ICP elevation (middle brainstem involvement): widened pulse pressure plus bradycardia, sluggish/nonreactive pupils, central neurogenic hyperventilation (deep, rapid — like Kussmaul but without the acetone breath), decerebrate posturing. Survival is possible but usually with permanent neurologic deficit.",
+     "zh": "中度颅内压升高（累及脑干中段）：脉压增宽＋心动过缓，瞳孔迟钝或无反应，中枢神经源性过度通气（深快呼吸，类似 Kussmaul 但没有丙酮味），去脑姿势。有生存可能，但通常留下永久神经功能缺损。",
+     "hard": true
+    },
+    {
+     "en": "MARKED ICP elevation (lower brainstem/medulla involvement): a unilaterally fixed and dilated ('blown') pupil, ataxic/Biot respirations (irregular rate/pattern/depth with apnea gaps) or absent respirations, flaccid paralysis, irregular pulse, ECG changes (QRS/ST/T), fluctuating BP with hypotension common. Many patients do not survive this stage.",
+     "zh": "重度颅内压升高（累及脑干下段/延髓）：单侧瞳孔固定散大，共济失调性/Biot 呼吸（节律形态深度都乱、有呼吸暂停）或呼吸停止，弛缓性瘫痪，脉搏不规则，心电图改变（QRS/ST/T），血压波动、低血压常见。多数患者活不过这个阶段。",
+     "hard": true
+    },
+    {
+     "en": "Cerebral herniation is diagnosed clinically as an UNRESPONSIVE patient with TWO OR MORE of: asymmetric pupils or bilaterally fixed-and-dilated pupils; decerebrate posturing or no motor response to pain; a GCS of 8 or less, OR a drop of 2+ points from the patient's best recorded score. This specific combination is also the ONLY indication for deliberate hyperventilation.",
+     "zh": "脑疝的临床诊断标准：无反应患者＋以下至少两项——瞳孔不对称或双侧固定散大；去脑姿势或对疼痛无运动反应；GCS≤8，或较此前最佳记录下降≥2 分。这个组合也是唯一允许主动过度通气的指征。",
+     "hard": true
+    },
+    {
+     "en": "The Cushing triad — hypertension with a widening pulse pressure, bradycardia, and irregular/erratic respirations — is the body's autoregulatory response shunting extra blood to the injured brain, which drives up systemic BP and triggers reflex bradycardia; brainstem involvement is what generates the abnormal breathing patterns (Cheyne-Stokes, central neurogenic hyperventilation, Biot).",
+     "zh": "Cushing 三联征——高血压伴脉压增宽、心动过缓、呼吸不规则——是身体自身调节机制把更多血分流给受伤的脑，导致全身血压升高并触发反射性心动过缓；脑干受累则是各种异常呼吸模式（潮式呼吸、中枢神经源性过度通气、Biot 呼吸）的根源。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Management: Airway, Ventilation, Circulation & Transport",
+   "titleZh": "处理：气道、通气、循环与转运",
+   "points": [
+    {
+     "en": "Head-injury patients frequently carry a concurrent C-spine injury — start manual neutral in-line stabilization at the very first assessment, minimize neck movement, and keep holding until full SMR is applied.",
+     "zh": "头部损伤患者常常同时有颈椎伤——从第一次评估起就做手法轴线中立位固定，尽量减少颈部活动，持续手扶直到完成全套 SMR。",
+     "hard": true
+    },
+    {
+     "en": "Airway is priority one: jaw-thrust if the patient is unresponsive or can't protect their own airway. Vomiting is common with head injury (especially in kids) — be ready to roll the patient to their side, WHILE maintaining spinal stabilization, to prevent aspiration; manually sweep large debris and suction blood/secretions. Aspiration significantly raises mortality.",
+     "zh": "气道是第一优先：无反应或护不住自己气道就上托颌法。头部损伤常呕吐（儿童尤甚）——要随时准备在维持脊柱固定的同时把患者滚向侧方防误吸；手动清出大块异物，吸引血液和分泌物。误吸会显著推高死亡率。",
+     "hard": true
+    },
+    {
+     "en": "Insert a basic airway adjunct for decreased LOC, but NEVER a nasal airway if CSF/rhinorrhea is present or a nasal/basilar skull fracture is suspected — same rule as facial trauma, for the same reason (occult fracture, brain penetration risk).",
+     "zh": "意识下降时可用基础通气道，但只要有脑脊液鼻漏或疑似鼻骨/颅底骨折，绝不能用鼻咽通气道——原因和面部创伤一样：可能经隐匿骨折捅进脑组织。",
+     "hard": true
+    },
+    {
+     "en": "Both hypoxia AND hypercarbia aggravate cerebral edema and ICP, so oxygenation/ventilation vigilance never lets up. Give 100% oxygen via NRB if breathing is adequate — an injured brain tolerates hypoxia even worse than a healthy one, and prompt supplemental oxygen has been shown to reduce brain damage and improve neurologic outcome.",
+     "zh": "低氧和高碳酸血症都会加重脑水肿和颅内压，所以氧合通气必须全程紧盯。呼吸足够时用非重复呼吸面罩给 100% 氧——受伤的脑对缺氧的耐受比健康脑还差，及时补氧已被证实能减少脑损伤、改善神经预后。",
+     "hard": true
+    },
+    {
+     "en": "Ventilate an adult with brain injury at 10 breaths/min (or per local protocol) and avoid ROUTINE hyperventilation. Yes, hyperventilation causes cerebral vasoconstriction that transiently lowers ICP — but it also shunts oxygen away from the brain, drops CPP, causes ischemia, and merely opens up MORE room in the skull for further swelling or bleeding.",
+     "zh": "成人脑损伤通气频率定在 10 次/分（或按当地规程），避免常规性过度通气。没错，过度通气会造成脑血管收缩、一过性降低颅内压——但同时也把氧从脑里挤走、拉低脑灌注压、造成缺血，还不过是给颅内腾出更多空间让肿胀或出血继续扩大。",
+     "hard": true
+    },
+    {
+     "en": "Hyperventilation is reserved SOLELY for signs of cerebral herniation, at 20 breaths/min in adults, with ETCO2 monitoring if available. Target ETCO2 35-40 mm Hg (approximating PaCO2 30-35 mm Hg); NEVER let ETCO2 fall below 30 mm Hg (PaCO2 below 25), which risks cerebral anoxia, secondary brain injury, and possibly brain death.",
+     "zh": "过度通气只在出现脑疝体征时才用，成人频率 20 次/分，有条件就上呼气末 CO2 监测。目标 ETCO2 35-40 mmHg（约合 PaCO2 30-35 mmHg）；绝不能让 ETCO2 跌破 30 mmHg（对应 PaCO2＜25），否则脑缺氧、继发性脑损伤甚至脑死亡的风险陡增。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital intubation of a head-injury patient is a weighed decision, not a reflex: balance transport distance, provider skill, and local protocol against the hypercarbia/hypoxia/hypotension risk the intubation attempt itself carries (worse with pharmacologically assisted intubation). If it is needed: preoxygenate with 100% O2 for 2-3 minutes or to 100% saturation, use a two-person technique (one holds the head, one intubates) with the head in neutral in-line position, and consider RSI if combativeness or trismus blocks laryngoscopy. Maintain SpO2 at 95% or higher.",
+     "zh": "头部损伤患者的院前插管是权衡决策，不是条件反射：要在转运距离、自身技术水平、当地规程和插管操作本身带来的高碳酸血症/低氧/低血压风险（药物辅助插管风险更高）之间取舍。真要插管：预给氧 100% 至少 2-3 分钟或血氧到 100%，双人操作（一人扶头一人插管）、头部保持轴线中立位，患者躁动或牙关紧闭挡住喉镜视野时可考虑快速顺序插管。SpO2 目标维持在 95% 以上。",
+     "hard": true
+    },
+    {
+     "en": "Circulation: control major bleeding with direct pressure, but go easy on scalp lacerations with a suspected underlying fracture (don't drive bone fragments inward). Active bleeding compounds the problem twice over — it worsens hypoxia and drops CPP by depleting oxygen-carrying red blood cells.",
+     "zh": "循环：直接压迫控制大出血，但疑似合并颅骨骨折的头皮裂伤要轻手——别把碎骨往里压。活动性出血是双重打击——既加重缺氧，又因为丢失携氧红细胞而拉低脑灌注压。",
+     "hard": true
+    },
+    {
+     "en": "An isolated closed head injury will NOT put an adult into hypovolemic shock — the skull has no room to hide a shock-causing blood volume. If shock signs appear anyway, go hunting for an occult injury elsewhere (intra-abdominal or intrathoracic hemorrhage).",
+     "zh": "孤立的闭合性头部损伤不会让成人陷入低血容量休克——颅骨里没有空间藏得下能导致休克的血量。如果确实出现休克体征，就要去找别处的隐匿伤（腹腔内或胸腔内出血）。",
+     "hard": true
+    },
+    {
+     "en": "Textbook fluid strategy: without hypotension, restrict IV fluids to a keep-vein-open rate around 25-50 mL/h to avoid worsening cerebral edema/ICP; never use dextrose-containing solutions (e.g., D5W) — they worsen cerebral edema; give glucose only for CONFIRMED hypoglycemia (glucometer under 4 mmol/L). If hypotension does develop, the textbook default targets a systolic BP of at least 90 mm Hg with isotonic crystalloid boluses (e.g., 20 mL/kg) or per medical control — hypotension in brain injury is lethal because it drops CPP into cerebral ischemia.",
+     "zh": "教材默认补液策略：没有低血压时，静脉液体限制在约 25-50 mL/h 的“维持通畅”速度，避免加重脑水肿和颅内压；绝不用含糖溶液（如 D5W）——会加重脑水肿；只有确诊低血糖（血糖仪读数＜4 mmol/L）才给糖。真出现低血压，教材默认目标是收缩压至少 90 mmHg，用等渗晶体液冲击量（如 20 mL/kg）或遵医疗指挥指示——脑损伤合并低血压是致命的，因为会把脑灌注压拉进脑缺血区间。",
+     "hard": true
+    },
+    {
+     "en": "Brain Trauma Foundation's '90-90-9 rule' for severe head injury: a single drop in SpO2 below 90% significantly raises death risk; a single drop in systolic BP below 90 mm Hg significantly raises death risk; a GCS drop of 2+ points to 9 or below (i.e., 8 or less) raises death risk. Hypoxemia AND hypotension together raise the risk EXPONENTIALLY compared to either alone.",
+     "zh": "脑创伤基金会针对重度头部损伤的“90-90-9 法则”：SpO2 哪怕只有一次跌破 90%，死亡风险显著上升；收缩压哪怕只有一次跌破 90 mmHg，死亡风险显著上升；GCS 下降≥2 分到 9 分或以下（即≤8），死亡风险上升。低氧血症＋低血压同时出现，风险是指数级叠加，远高于单独出现任何一个。",
+     "hard": true
+    },
+    {
+     "en": "Severe head injury (especially with lower-brainstem involvement) can trigger cardiac rhythm disturbances — put every critically injured head-injury patient on a cardiac monitor and follow the ACLS pulseless-arrest protocol if arrest occurs.",
+     "zh": "重度头部损伤（尤其累及脑干下段）可诱发心律失常——所有危重头部损伤患者都要上心电监护，一旦骤停就按 ACLS 无脉骤停流程处理。",
+     "hard": false
+    },
+    {
+     "en": "Avoid overheating: unlike shock patients, head-injury patients can spike a dangerously high fever (hyperpyrexia) that worsens the brain injury. Do not cover the patient with blankets if ambient temperature is 21°C or higher.",
+     "zh": "别让患者过热：和休克患者不同，头部损伤患者可能出现危险的高热（超高热），反而加重脑损伤。环境温度≥21°C 时不要给患者盖毯子。",
+     "hard": true
+    },
+    {
+     "en": "Associated-injury care: an open skull fracture with exposed brain gets a LIGHT covering of saline-moistened sterile dressing; CSF leaking from ear or nose gets a loose sterile dressing just to keep the area clean — never plug the flow; an object impaled in the skull is stabilized in place and protected from jarring, never pulled.",
+     "zh": "合并损伤的处理：脑组织外露的开放性颅骨骨折，用生理盐水浸湿的无菌敷料轻轻覆盖；耳鼻脑脊液漏，用松散无菌敷料保持清洁即可——绝不能堵住引流；颅骨内的刺入物原位固定、防止震动，绝不能拔。",
+     "hard": true
+    },
+    {
+     "en": "Field pharmacology beyond airway drugs and seizure control is minimal; on a prolonged transport, medical control may order mannitol or hypertonic saline to fight cerebral edema and ICP. Seizures must be stopped ASAP with benzodiazepines (diazepam or lorazepam) per local protocol, since ongoing seizure activity drives ICP and body temperature even higher.",
+     "zh": "除了插管用药和控制癫痫，院前药物治疗基本用不上；转运时间长的话，医疗指挥可能会下令用甘露醇或高渗盐水对抗脑水肿和颅内压。癫痫必须尽快用苯二氮卓类（地西泮或劳拉西泮）按当地规程终止，因为持续发作会把颅内压和体温继续往上推。",
+     "hard": true
+    },
+    {
+     "en": "Get the patient to a trauma centre with NEUROSURGICAL capability as fast as safely possible, bypassing a closer non-neurosurgical hospital if that's the local policy — the extra time an inter-facility transfer costs can be the margin between life and death. Consider air transport whenever ground transport will be prolonged, and know your service's bypass/air-activation policy cold.",
+     "zh": "尽快、安全地把患者送到具备神经外科能力的创伤中心，如果当地政策允许就绕过较近但没有神外能力的医院——院间转运多花的时间可能就是生死之差。地面转运耗时长就该考虑空运，务必对本单位的绕行/空运启动政策了如指掌。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Skull bone count: total / ossicles / cranium+face",
+   "itemZh": "颅骨总数／听小骨／颅腔+面部",
+   "value": "28 = 6+22"
+  },
+  {
+   "itemEn": "Cranial vault bones / facial bones",
+   "itemZh": "颅穹窿骨数／面骨数",
+   "value": "8 块／14 块"
+  },
+  {
+   "itemEn": "Fontanelle closure age",
+   "itemZh": "囟门闭合年龄",
+   "value": "18 个月前"
+  },
+  {
+   "itemEn": "Globe diameter",
+   "itemZh": "眼球直径",
+   "value": "约 3 cm"
+  },
+  {
+   "itemEn": "Adult permanent teeth",
+   "itemZh": "成人恒牙数",
+   "value": "32 颗 = 4象限×8"
+  },
+  {
+   "itemEn": "Cranial vault contents (Monro-Kellie): brain/blood/CSF",
+   "itemZh": "颅腔三大件（Monro-Kellie）：脑/血/脑脊液",
+   "value": "80% / 12% / 8%"
+  },
+  {
+   "itemEn": "Brain body-weight share vs glucose/O2 consumption",
+   "itemZh": "脑占体重比 vs 葡萄糖/氧耗占比",
+   "value": "2% 体重；耗糖 25%(60mg/分)；耗氧 20%"
+  },
+  {
+   "itemEn": "Speech centre laterality",
+   "itemZh": "语言中枢偏侧率",
+   "value": "约 85% 在左颞叶"
+  },
+  {
+   "itemEn": "Canadian workplace eye injuries",
+   "itemZh": "加拿大职业性眼外伤",
+   "value": "每天 >700 例"
+  },
+  {
+   "itemEn": "Hyphema with associated globe injury",
+   "itemZh": "前房积血合并眼球损伤比例",
+   "value": "约 25%"
+  },
+  {
+   "itemEn": "Physiologic anisocoria in population / >1mm subset",
+   "itemZh": "生理性瞳孔不等大比例／差>1mm 比例",
+   "value": "约 20% ／约 4%"
+  },
+  {
+   "itemEn": "Chemical eye burn irrigation: general / alkali-strong acid",
+   "itemZh": "化学眼烧伤冲洗：一般／碱或强酸",
+   "value": "≥5 分钟／连续 20 分钟"
+  },
+  {
+   "itemEn": "UV/welding eye burn pain-onset delay",
+   "itemZh": "紫外线/电焊眼烧伤延迟发作",
+   "value": "伤后 3-5 小时"
+  },
+  {
+   "itemEn": "Avulsed tooth reimplantation window",
+   "itemZh": "脱落牙再植时限",
+   "value": "离体≤1 小时仍可行"
+  },
+  {
+   "itemEn": "Force required to fracture the maxilla",
+   "itemZh": "骨折上颌骨所需力",
+   "value": "高达 150 g"
+  },
+  {
+   "itemEn": "Canada annual head injuries / admission mortality",
+   "itemZh": "加拿大年头部损伤例数／住院死亡率",
+   "value": "约 16 万例／8%（全创伤平均 4%）"
+  },
+  {
+   "itemEn": "MVC occupants sustaining head injury",
+   "itemZh": "车祸伤者中头部受伤比例",
+   "value": ">2/3"
+  },
+  {
+   "itemEn": "Linear skull fracture: share of all fractures / temporal-parietal share",
+   "itemZh": "线性骨折占全部颅骨骨折／其中颞顶区占比",
+   "value": "约 80% ／约 50%"
+  },
+  {
+   "itemEn": "Basilar fracture signs (raccoon eyes / Battle sign) onset delay",
+   "itemZh": "颅底骨折体征（熊猫眼/Battle征）延迟出现",
+   "value": "可迟至伤后 24 小时"
+  },
+  {
+   "itemEn": "Epidural hematoma incidence among head injuries",
+   "itemZh": "硬膜外血肿占头部损伤比例",
+   "value": "0.5%-1%"
+  },
+  {
+   "itemEn": "Subdural hematoma incidence; acute vs chronic onset",
+   "itemZh": "硬膜下血肿占比；急性vs慢性发病",
+   "value": "约 5%；<24小时 vs 可迟至2周"
+  },
+  {
+   "itemEn": "Normal adult ICP",
+   "itemZh": "成人正常颅内压",
+   "value": "5-15 mmHg"
+  },
+  {
+   "itemEn": "CPP formula and critical minimum",
+   "itemZh": "脑灌注压公式与临界底线",
+   "value": "CPP=MAP-ICP；底线 60 mmHg"
+  },
+  {
+   "itemEn": "GCS-based TBI severity bands",
+   "itemZh": "GCS 对应 TBI 严重度分级",
+   "value": "15无障碍/13-14轻/9-12中/3-8重"
+  },
+  {
+   "itemEn": "Cerebral herniation GCS trigger",
+   "itemZh": "脑疝的 GCS 触发标准",
+   "value": "≤8 或较基线降≥2分"
+  },
+  {
+   "itemEn": "Adult brain-injury ventilation rate (normal vs hyperventilation)",
+   "itemZh": "成人脑损伤通气频率（常规vs过度通气）",
+   "value": "10次/分；仅脑疝征时20次/分"
+  },
+  {
+   "itemEn": "Target ETCO2 (with brain injury) / absolute floor",
+   "itemZh": "脑损伤 ETCO2 目标／绝对下限",
+   "value": "35-40 mmHg／禁<30 mmHg"
+  },
+  {
+   "itemEn": "SpO2 target for head-injury airway management",
+   "itemZh": "头部损伤气道管理 SpO2 目标",
+   "value": "≥95%"
+  },
+  {
+   "itemEn": "Textbook fluid strategy: KVO rate / hypotension SBP floor",
+   "itemZh": "教材补液策略：维持速度／低血压收缩压底线",
+   "value": "25-50 mL/h；SBP≥90 mmHg"
+  },
+  {
+   "itemEn": "Brain Trauma Foundation '90-90-9 rule'",
+   "itemZh": "脑创伤基金会“90-90-9法则”",
+   "value": "SpO2<90%／SBP<90／GCS降≥2至≤8"
+  },
+  {
+   "itemEn": "First-rib fracture mortality",
+   "itemZh": "第一肋骨骨折死亡率",
+   "value": "接近 50%"
+  },
+  {
+   "itemEn": "Neck-trauma shock resuscitation SBP target",
+   "itemZh": "颈部创伤休克复苏收缩压目标",
+   "value": "80-90 mmHg"
+  },
+  {
+   "itemEn": "Ambient-temperature blanket threshold for head injury",
+   "itemZh": "头部损伤盖毯的环境温度门槛",
+   "value": "≥21°C 不盖毯"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Two Nancy rules to tattoo on this chapter: any significant head injury has a cervical spine injury until proven otherwise, and the single most important sign in a head-injured patient is a CHANGING level of consciousness — not any one snapshot reading.",
+   "zh": "这一章刻进骨子里的两条 Nancy 铁律：明显头部伤一律先当颈椎伤处理，直到证明不是；头伤患者最重要的单一体征，是不断变化的意识水平——不是任何一次的单点读数。"
+  },
+  {
+   "en": "Before you press hard on bleeding near an eye, make sure it's the lid and not the globe. Eyelid bleeding takes gentle pressure fine; globe bleeding takes a rigid shield and zero pressure, ever.",
+   "zh": "眼睛附近出血想加压止血前，先确认压的是眼睑还是眼球。眼睑出血轻压没问题；眼球出血只用硬质护罩，绝不加压，任何时候都不行。",
+   "hard": false
+  },
+  {
+   "en": "See blood or clear fluid from the nose or ear after head trauma? Do not plug it, pack it, or apply pressure — loose dressing only. Stopping CSF drainage can raise ICP, and a nasal airway or nasotracheal tube in that same patient can travel straight through an occult basilar fracture into the brain.",
+   "zh": "头部创伤后鼻子或耳朵流血或清亮液体？不要堵、不要塞、不要压——只用松散敷料。堵住脑脊液引流可能升高颅内压，而给这类患者上鼻咽通气道或经鼻插管，导管可能直接经隐匿的颅底骨折捅进脑组织。"
+  },
+  {
+   "en": "A patient who talks to you clearly minutes after a hard hit to the head can still be sitting inside the lucid interval of an expanding epidural hematoma. One good GCS score is not clearance — reassess relentlessly, at least every 5 minutes.",
+   "zh": "头部受重击后几分钟还能清楚跟你对话的患者，完全可能正处在扩大中的硬膜外血肿的“中间清醒期”里。一次 GCS 分数好看不等于没事——必须不断复评，至少每 5 分钟一次。"
+  },
+  {
+   "en": "Reflex bradycardia while you're holding pressure on or near the neck means you're compressing the carotid too hard (parasympathetic stimulation) — ease off, and never wrap bandages circumferentially around the neck.",
+   "zh": "在颈部或附近加压时如果脉搏突然变慢，说明压到颈动脉太用力了（触发副交感反射）——松一点，而且绷带永远不能绕颈一圈勒紧。"
+  },
+  {
+   "en": "Do not hyperventilate a brain-injured patient just because they 'look bad.' Hyperventilation is reserved strictly for objective herniation signs (asymmetric/blown pupils, decerebrate posturing or no motor response, GCS ≤8 or a drop of 2+) — used reflexively, it drops CPP and can turn a survivable injury into a fatal one.",
+   "zh": "不要因为患者“看起来很糟”就给脑损伤患者过度通气。过度通气只留给客观的脑疝体征（瞳孔不对称/散大、去脑姿势或无运动反应、GCS≤8 或下降≥2 分）——凭感觉滥用会拉低脑灌注压，把本可救的伤变成致命伤。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Dramatic facial bleeding is not automatically the most life-threatening problem — the priority ladder is still airway, neuro status, and perfusion. Visible gore is a distraction test as much as a clinical finding.",
+   "zh": "面部出血看起来吓人不代表它就是最致命的问题——优先级仍然是气道、神经状态、灌注。视觉上的血腥感既是临床发现，也是一道分心测试题。",
+   "hard": false
+  },
+  {
+   "en": "'He's still talking to me' does not rule out a serious TBI. Cerebral edema may not develop for several hours, and an epidural hematoma classically presents with a LUCID INTERVAL between the first LOC dip and the crash that follows.",
+   "zh": "“他还能跟我说话”不能排除严重 TBI。脑水肿可能几个小时后才出现，而硬膜外血肿的经典表现就是先意识丧失、中间有段清醒期，然后再度崩溃。",
+   "hard": false
+  },
+  {
+   "en": "Hyperventilation lowering ICP is true but incomplete — it only helps transiently by shunting blood (and oxygen) away from the brain, which drops CPP and risks ischemia. It is a narrow, herniation-only tool, not a general 'ICP fix.'",
+   "zh": "“过度通气能降颅内压”这话没错但不完整——它只是把血（连同氧气）从脑里挤走，效果短暂，代价是拉低脑灌注压、增加缺血风险。它是只用于脑疝的窄适应证工具，不是通用的“降颅压神器”。",
+   "hard": false
+  },
+  {
+   "en": "Epidural vs subdural is a source-and-speed contrast, not interchangeable trivia: epidural = arterial (middle meningeal artery) = FAST-progressing with a classic lucid interval, rare (0.5-1%); subdural = venous (bridging veins) = SLOWER, fluctuating course, more common (~5%).",
+   "zh": "硬膜外和硬膜下不是可以互换的细节，而是出血来源和进展速度完全相反：硬膜外＝动脉（脑膜中动脉）＝进展快、经典中间清醒期、少见（0.5-1%）；硬膜下＝静脉（桥静脉）＝进展慢、意识波动、更常见（约 5%）。",
+   "hard": false
+  },
+  {
+   "en": "GCS 13-15 still means TBI is on the table — 'mild' is a severity label, not a 'no injury' label. Secondary injury (edema, delayed hematoma) can still build over the following hours.",
+   "zh": "GCS 13-15 也可能是 TBI——“轻度”是严重度标签，不是“没受伤”标签。继发性损伤（水肿、迟发血肿）仍可能在接下来几小时内累积。",
+   "hard": false
+  },
+  {
+   "en": "Decorticate is not decerebrate. Decorticate (flexor) posturing flexes the arms toward the body's 'core' — a cortex-level sign. Decerebrate (extensor) posturing extends BOTH arms and legs — a deeper, more ominous brainstem sign. Mixing them up flips the severity call.",
+   "zh": "去皮质不是去脑。去皮质（屈肌）姿势是手臂向身体“核心”屈曲——皮质层面的体征。去脑（伸肌）姿势是手臂和腿都伸直——更深、更凶险的脑干体征。两者混淆会把严重度判反。",
+   "hard": false
+  },
+  {
+   "en": "Unequal pupils are not automatically pathologic — about 20% of people have physiologic anisocoria, and cataract surgery or a prosthetic eye can also fix one pupil's reaction. Ask about eye history before you call it a neurologic emergency.",
+   "zh": "瞳孔不等大不是必然的病理表现——约 20% 的人有生理性瞳孔不等大，白内障手术史或义眼也可能让一只瞳孔固定不反应。判定为神经系统急症前先问一句眼部病史。",
+   "hard": false
+  },
+  {
+   "en": "Elevated BP with a slow pulse in a head-injury patient is NOT reassuring — that combination, especially with irregular respirations, is the Cushing triad, a late sign of dangerously high ICP, not a sign of stability.",
+   "zh": "头部损伤患者血压高、脉搏慢，这组合绝不是“状态不错”——尤其再加上呼吸不规则，那是 Cushing 三联征，颅内压危险升高的晚期信号，不是稳定的表现。",
+   "hard": false
+  },
+  {
+   "en": "Impaled-object rules are not one-size-fits-all: the default everywhere (eye, cheek, ear, neck, skull, mouth) is stabilize and leave in place. The exception is narrow and specific — remove ONLY if the object itself is actively blocking the airway or your ability to manage it, and even then only through a cheek/oral wound, following the entry path.",
+   "zh": "刺入物处理规则不是放之四海皆准：眼、颊、耳、颈、颅、口——默认全都是原位固定不拔。唯一的例外很窄很specific——只有当异物本身正在堵气道、或妨碍你处理气道时才拔，而且只限于经脸颊/口腔的伤口，还要沿入口方向拔。",
+   "hard": false
+  },
+  {
+   "en": "'No blood, no problem' fails for the ear and CSF leaks: a ruptured eardrum can drain painlessly and heal on its own, while a basilar skull fracture can leak CSF from ear or nose with delayed (up to 24-hour) bruising signs — a quiet presentation does not mean a minor injury.",
+   "zh": "“没流血就没事”这条规则在耳部和脑脊液漏这里失效：鼓膜破裂可能安静地流点液体就自愈，而颅底骨折的脑脊液漏可能耳鼻都在漏、瘀斑体征却要迟至 24 小时才出现——外表安静不代表伤情轻。",
+   "hard": false
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "SCALP 头皮五层",
+   "en": "SCALP: Skin, subCutaneous, galea Aponeurotica, Loose connective tissue, Periosteum — outside-in order, with the 'L' layer being where a subgaleal hematoma pools.",
+   "zh": "SCALP：皮肤、皮下组织、帽状腱膜、疏松结缔组织、骨膜——由外向内，“L”那层就是腱膜下血肿积血的地方。"
+  },
+  {
+   "name": "CPP 减法公式",
+   "en": "'CPP = MAP minus ICP' — perfusion is what's LEFT after intracranial pressure takes its cut. Push MAP up or push ICP down; either move raises CPP.",
+   "zh": "“CPP＝MAP 减 ICP”——灌注压是颅内压“抽成”之后剩下的部分。把 MAP 顶上去，或把 ICP 压下来，任何一个方向都能救 CPP。"
+  },
+  {
+   "name": "GCS 阶梯 15-13-9-3",
+   "en": "GCS severity staircase: 15 (no disability), 13 (mild starts here), 9 (moderate starts here), 3 (the floor, severe). Each step down is a worse bucket.",
+   "zh": "GCS 严重度阶梯：15（无障碍）、13（轻度起点）、9（中度起点）、3（谷底，重度）。每往下一级就换一个更差的分类。"
+  },
+  {
+   "name": "动脉快、静脉慢",
+   "en": "'Arterial is fast, venous is slow' — epidural (arterial, middle meningeal) crashes quickly with a lucid interval; subdural (venous, bridging veins) drifts more slowly with fluctuating LOC.",
+   "zh": "“动脉快、静脉慢”——硬膜外（动脉性，脑膜中动脉）恶化快、有中间清醒期；硬膜下（静脉性，桥静脉）进展慢、意识水平起伏不定。"
+  },
+  {
+   "name": "90-90-9 保命线",
+   "en": "The Brain Trauma Foundation's own mnemonic: SpO2 below 90, systolic BP below 90, GCS dropping 2+ points to 9-or-below (ie 8 or less) — any one of the three doubles death risk in severe TBI.",
+   "zh": "脑创伤基金会自带的记忆法：SpO2 跌破 90、收缩压跌破 90、GCS 降≥2 分到 9 以下（即≤8）——重度 TBI 里，这三条中任何一条都会让死亡风险翻倍。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Write the CPP formula, state the critical minimum for adults, and explain what happens physiologically once CPP falls below it.",
+   "qZh": "写出脑灌注压公式，说出成人的临界底线，并解释低于这个值后身体发生了什么。",
+   "aEn": "CPP = MAP − ICP. The critical minimum is 60 mm Hg. Below that, cerebral blood flow can't meet demand, causing cerebral ischemia — permanent neurologic damage or death can follow. A single dip below 60 mm Hg doubles the chance of death per the Brain Trauma Foundation. The body tries to compensate via autoregulation (raising MAP, dilating cerebral vessels), but the extra flow raises ICP further, creating a vicious cycle.",
+   "aZh": "CPP＝MAP－ICP。成人临界底线是 60 mmHg。低于这个值，脑血流供不上需求，导致脑缺血——可能造成永久神经损伤或死亡。脑创伤基金会指出，哪怕只有一次跌破 60 mmHg，死亡风险就会翻倍。身体会试图靠自身调节代偿（升高 MAP、扩张脑血管），但多出来的血流又会进一步推高颅内压，形成恶性循环。"
+  },
+  {
+   "qEn": "Compare epidural and subdural hematomas: source vessel, typical speed of onset, incidence, and classic presentation.",
+   "qZh": "对比硬膜外血肿和硬膜下血肿：出血来源血管、典型发病速度、发生率、经典表现。",
+   "aEn": "Epidural: arterial (usually the middle meningeal artery, torn by a temporal-bone linear fracture), fast progression, 0.5-1% of head injuries, classic pattern is immediate LOC → lucid interval → relapse with an ipsilateral fixed/dilated pupil. Subdural: venous (bridging veins between cortex and dura), slower/more gradual progression, ~5% of head injuries (more common), presents with fluctuating LOC, focal signs (e.g., unilateral hemiparesis), or slurred speech; can be acute (<24h) or chronic (up to 2 weeks, especially in the elderly, alcoholics, or anticoagulant users).",
+   "aZh": "硬膜外：动脉性（通常是脑膜中动脉，因颞骨线性骨折撕裂），进展快，占头部损伤 0.5-1%，经典模式是立即意识丧失→中间清醒期→再度陷入无反应＋同侧瞳孔固定散大。硬膜下：静脉性（皮质与硬膜间的桥静脉），进展较慢较渐进，占头部损伤约 5%（更常见），表现为意识水平波动、局灶体征（如单侧肢体轻瘫）或言语含糊；可分急性（<24小时）或慢性（可迟至2周，尤其老年人、酗酒者、抗凝药使用者）。"
+  },
+  {
+   "qEn": "Describe the Cushing triad and the physiologic story behind it.",
+   "qZh": "描述 Cushing 三联征及其背后的生理学故事。",
+   "aEn": "Hypertension with a widening pulse pressure, bradycardia, and irregular/erratic respirations. Rising ICP triggers the body's autoregulatory response to shunt more blood to the injured brain, which raises systemic arterial BP; that BP spike triggers reflex (vagal) bradycardia; brainstem involvement generates the abnormal breathing patterns (Cheyne-Stokes, central neurogenic hyperventilation, or Biot respirations depending on severity). It is a LATE, ominous sign of significantly raised ICP.",
+   "aZh": "高血压伴脉压增宽、心动过缓、呼吸不规则/紊乱。颅内压升高触发身体自身调节反应，把更多血分流给受伤的脑，导致全身动脉压升高；血压飙升又触发反射性（迷走性）心动过缓；脑干受累则产生各种异常呼吸模式（视严重度不同，可为潮式呼吸、中枢神经源性过度通气或 Biot 呼吸）。这是颅内压显著升高的晚期凶险信号。"
+  },
+  {
+   "qEn": "When is hyperventilation indicated in a brain-injured adult, at what rate, and what ETCO2 range should you target?",
+   "qZh": "脑损伤成人患者何时该用过度通气？频率多少？ETCO2 目标范围是多少？",
+   "aEn": "Only when signs of cerebral herniation are present — an unresponsive patient with 2+ of: asymmetric/bilaterally fixed-dilated pupils, decerebrate posturing or no motor response to pain, GCS ≤8 or a drop of 2+ points. Rate: 20 breaths/min in adults (vs the normal 10 breaths/min for brain injury generally). Target ETCO2 35-40 mm Hg (approximating PaCO2 30-35); never let ETCO2 drop below 30 mm Hg (PaCO2 <25), which risks cerebral anoxia and secondary injury.",
+   "aZh": "只在出现脑疝体征时才用——无反应患者＋以下至少两项：瞳孔不对称或双侧固定散大、去脑姿势或对疼痛无运动反应、GCS≤8 或降≥2 分。频率：成人 20 次/分（脑损伤一般通气频率是 10 次/分）。目标 ETCO2 35-40 mmHg（约合 PaCO2 30-35）；绝不能让 ETCO2 跌破 30 mmHg（PaCO2＜25），否则脑缺氧和继发性损伤风险陡增。"
+  },
+  {
+   "qEn": "List the signs of a basilar skull fracture, and explain why their absence in the field does not rule it out.",
+   "qZh": "列出颅底骨折的体征，并解释为什么院前没看到不能排除它。",
+   "aEn": "CSF drainage from the ear (otorrhea) or nose (rhinorrhea), periorbital ecchymosis (raccoon/panda eyes), and Battle sign (bruising behind the ear over the mastoid). Raccoon eyes and Battle sign specifically can take up to 24 HOURS to appear after the injury — a short prehospital timeline means they are often simply not visible yet, not that the fracture doesn't exist.",
+   "aZh": "耳道流脑脊液（耳漏）或鼻腔流脑脊液（鼻漏）、眶周瘀斑（熊猫眼/浣熊眼）、Battle 征（耳后乳突区瘀斑）。熊猫眼和 Battle 征尤其可能要迟至伤后 24 小时才出现——院前接触时间短，往往只是还没显现出来，不代表骨折不存在。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "TBI blood pressure target: >120 mmHg systolic, not the textbook's ≥90",
+   "topicZh": "TBI 血压目标：收缩压>120 mmHg，不是教材的≥90",
+   "bookEn": "The textbook restricts IV fluids to a keep-vein-open rate (about 25-50 mL/h) unless hypotension develops, and only then boluses crystalloid to reach a systolic BP of at least 90 mm Hg — treating 90 as the floor to defend.",
+   "bookZh": "教材的默认策略是没有低血压就把静脉液体限制在维持通畅速度（约 25-50 mL/h），只有出现低血压才推晶体液冲击量，目标是把收缩压顶到至少 90 mmHg——把 90 当成要守住的底线。",
+   "bcEn": "BC's Primary Care Paramedic protocol sets a much higher bar: maintain a blood pressure greater than 120 mmHg systolic, and run the IV at TKVO specifically WHEN systolic BP is above 120 mmHg. This is the single highest-yield numeric trap in the whole chapter — do not answer '90' on a BC scenario or written question about TBI blood pressure.",
+   "bcZh": "BC 的 PCP 规程门槛高得多：维持收缩压大于 120 mmHg，且明确当收缩压>120 mmHg 时静脉给药速度设为 TKVO（维持通畅）。这是全章数字陷阱等级最高的一条——BC 情景题或笔试问 TBI 血压目标时，答案绝不能是“90”。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.27"
+  },
+  {
+   "topicEn": "SpO2 target for TBI: BC's flat 94%, not the book's 95%",
+   "topicZh": "TBI 的 SpO2 目标：BC 统一 94%，不是教材的 95%",
+   "bookEn": "This chapter's own management section instructs closely monitoring SpO2 and maintaining it at 95% or higher during head-injury airway management — a number specific to this passage and higher than the book's usual 94% target elsewhere in the same textbook.",
+   "bookZh": "本章处理部分要求密切监测 SpO2 并维持在 95% 或以上——这个数字只出现在这一段，比同一本教材其他地方常用的 94% 目标更高。",
+   "bcEn": "BC's guideline is uniform across every trauma chapter, including TBI: ensure adequate oxygenation with SpO2 ≥94%, at ALL license levels. Use 94%, not 95%, as the exam answer for TBI oxygenation targets — consistency with every other BC protocol matters more than this one textbook passage's stricter number.",
+   "bcZh": "BC 指南在所有创伤章节（含 TBI）口径统一：确保氧合 SpO2≥94%，所有执照级别都适用。TBI 供氧目标的考试答案要用 94%，不是 95%——和其他所有 BC 规程保持一致，比教材这一段更严格的数字更重要。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.27"
+  },
+  {
+   "topicEn": "Elevate 30° and loosen the collar — a mandatory step BC adds, not a book default",
+   "topicZh": "抬高床头 30°＋松颈托——BC 强制要求，教材没这条默认动作",
+   "bookEn": "This chapter's assessment-and-management section covers airway, ventilation, circulation, thermal, and pharmacologic care for TBI in detail but never instructs elevating the head of the stretcher as a routine step (the book only elevates 30-40° for a DIFFERENT indication — suspected hyphema/globe rupture, back in the eye-injury section).",
+   "bookZh": "本章的评估处理部分详细讲了气道、通气、循环、保温、药物治疗，但从未把抬高担架床头当成常规动作（教材里唯一出现的 30-40° 抬高，是在眼外伤那节，针对疑似前房积血/眼球破裂的不同适应证）。",
+   "bcEn": "BC requires, at ALL license levels, for any suspected TBI: elevate the head of the bed to 30 degrees AND loosen the hard collar — alongside the SpO2 ≥94% target. This is a mandatory default intervention for TBI specifically, done in addition to whatever C-spine precautions are already in place, not a special-case manoeuvre.",
+   "bcZh": "BC 要求所有执照级别对疑似 TBI 患者都执行：床头抬高 30° 并松开硬颈托——与 SpO2≥94% 目标并列。这是 TBI 的强制默认动作，是在已有的颈椎防护基础上加做的，不是特殊情况才用的手法。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.27"
+  },
+  {
+   "topicEn": "Blood glucose has an active target range in BC, not just a hypoglycemia trigger",
+   "topicZh": "BC 有明确血糖目标区间，不只是低血糖触发线",
+   "bookEn": "The book's only glucose instruction for TBI is reactive: avoid dextrose-containing IV fluids (they worsen cerebral edema), and give glucose only when hypoglycemia is CONFIRMED by glucometer (under 4 mmol/L). It never sets a target range to actively maintain.",
+   "bookZh": "教材对 TBI 血糖唯一的指示是被动式的：避免含糖静脉液体（会加重脑水肿），只有血糖仪确诊低血糖（＜4 mmol/L）才给糖，从未设定一个要主动维持的目标区间。",
+   "bcEn": "BC's Primary Care Paramedic scope adds an active target: maintain normal blood sugar levels of 4.0-8.0 mmol/L for suspected TBI. This is a range to actively defend (both ends), not merely a floor to rescue from — know the upper bound too.",
+   "bcZh": "BC 的 PCP 范围多了一条主动目标：疑似 TBI 患者血糖维持在 4.0-8.0 mmol/L。这是一个要主动守住的区间（上下限都要管），不只是低了才救——上限也要记住。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.27"
+  },
+  {
+   "topicEn": "TXA is contraindicated for an isolated TBI — a trap the book never sets up",
+   "topicZh": "孤立性 TBI 禁用 TXA——教材完全没提示这个坑",
+   "bookEn": "This chapter never mentions tranexamic acid at all, so a student studying only from the book has no reason to think about TXA when managing a head injury.",
+   "bookZh": "本章完全没提到氨甲环酸（TXA），只靠教材复习的考生看到头部损伤根本不会想到 TXA 这回事。",
+   "bcEn": "BC's TXA protocol (given for major trauma with shock signs, 2 g IV push over 1 minute) explicitly excludes isolated TBI as a contraindication — alongside timing over 3 hours post-injury and patients under 12. In a multi-trauma scenario where the ONLY significant injury is a head injury, giving TXA is a scored error; TXA becomes appropriate again only once there is shock from bleeding elsewhere in the body.",
+   "bcZh": "BC 的 TXA 规程（用于有休克体征的重大创伤，2g 静推 1 分钟推完）明确把孤立性 TBI 列为禁忌之一——和“伤后超过 3 小时”“患者不满 12 岁”并列。多发伤情景里如果唯一的显著损伤就是头部伤，给 TXA 是会被扣分的错误；只有身体其他部位出血导致休克时，TXA 才重新变得合适。",
+   "ref": "BC Provincial Examination Guidelines (2026-06-15) p.27, 78"
+  }
+ ]
+}
