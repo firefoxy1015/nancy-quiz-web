@@ -1,0 +1,891 @@
+{
+ "id": "ch06",
+ "n": 6,
+ "titleEn": "Pathophysiology",
+ "titleZh": "病理生理学",
+ "group": "medical",
+ "examWeight": 2,
+ "whyEn": "Exam weight 2/3. Pathophysiology never shows up on the exam as its own scenario — it hides inside every other chapter's 'why does this sign mean what it means' question. This chapter builds the vocabulary (homeostasis, hypoxia, acidosis, hypersensitivity types, shock mechanisms) and the hard numbers (electrolyte ranges, pH range, hypersensitivity timing, apoptosis vs necrosis) that later cardiac, respiratory, trauma, and medical chapters simply assume you already know. Skipping it does not shrink your workload — it just means re-learning the same mechanisms piecemeal, chapter by chapter, without ever seeing why they connect. Treat this as the foundation chapter: every later 'clinical' chapter is this chapter's mechanisms playing out in one specific organ.",
+ "whyZh": "考试权重 2/3。病理生理学不会单独变成一个案例场景来考你——它藏在其它每一章「这个体征为什么意味着这个」的问题背后。这一章打下的是词汇基础（内环境稳态、缺氧、酸中毒、超敏反应分型、休克机制）和硬数字基础（电解质正常值、pH 范围、超敏反应的时间线、凋亡 vs 坏死），后面的心脏、呼吸、创伤、内科各章会默认你已经掌握。跳过这一章不会让你少学——只会让你在后面每一章零散地重新学一遍同样的机制，还看不出它们之间怎么连起来。把这章当成地基章来学：后面每一个「临床」章节，本质上都是这里讲的机制在某个具体器官上的上演。",
+ "competencies": {
+  "areas": [
+   "Area 5: Therapeutics"
+  ],
+  "codes": [
+   "5.6.f"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: What Pathophysiology Is For",
+   "titleZh": "引言：病理生理学是干什么用的",
+   "points": [
+    {
+     "en": "Pathophysiology is physiology (how the body normally works) studied under the added condition of stress, injury, or disease; homeostasis is the label for the balanced, steady-state functioning that disease disrupts.",
+     "zh": "病理生理学就是「加了应激/损伤/疾病这个变量之后的生理学」；而内环境稳态（homeostasis）指的正是那个被疾病打破的平衡状态。"
+    },
+    {
+     "en": "Practical payoff: figuring out a patient's aetiology (root cause) is what lets a paramedic pick a sensible assessment path and initial treatment, rather than reacting to isolated symptoms one at a time.",
+     "zh": "这门课的实际用处：找准病人的病因（aetiology）才能选对评估路径和初始处置，而不是见一个症状救一个症状。"
+    },
+    {
+     "en": "This chapter's build order matters for later chapters: normal cell structure/function first, then how environment and homeostasis break down into disease, then genetics, immune defence, inflammation, shock, and stress — each later medical chapter is really one of these mechanisms playing out in a specific organ.",
+     "zh": "本章的讲述顺序有意义：先讲正常细胞结构和功能，再讲环境与稳态如何崩溃成疾病，然后是遗传、免疫防御、炎症、休克和应激——后面每一个临床系统章节，本质上都是这几套机制在某个器官上具体上演。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Review of the Basic Cellular Systems",
+   "titleZh": "细胞系统基础回顾",
+   "points": [
+    {
+     "en": "Structural hierarchy: differentiated cells build tissues, tissues build organs, organs build organ systems — almost every cell (mature red cells and platelets are the exceptions) has a membrane, cytoplasm with organelles, and a nucleus.",
+     "zh": "结构层级：分化后的细胞组成组织，组织组成器官，器官组成系统——几乎所有细胞（成熟红细胞和血小板是例外）都有细胞膜、含细胞器的细胞质和细胞核这三大件。"
+    },
+    {
+     "en": "The membrane is fat-and-protein, so it repels charged (water-based) particles like sodium and potassium; those ions can only cross through dedicated protein-lined ion channels — which is exactly the target that local anesthetics (lidocaine) and antiarrhythmics (amiodarone) block.",
+     "zh": "细胞膜由脂质和蛋白质构成，天生排斥带电（水溶性）的粒子，比如钠和钾；这些离子只能靠专门的蛋白孔道——离子通道——通过，而局麻药（利多卡因）和抗心律失常药（胺碘酮）起效靠的正是堵住这些通道。",
+     "hard": true
+    },
+    {
+     "en": "Mitochondria are the cell's ATP factories — this single fact is the hinge for the entire hypoperfusion/shock discussion later in the chapter: cut off oxygen delivery and this is the organelle that starts failing first.",
+     "zh": "线粒体是细胞的 ATP 工厂——记住这一点，因为本章后面整段低灌注/休克的讨论都靠它撑起来：一旦氧供中断，最先出问题的就是这个细胞器。"
+    },
+    {
+     "en": "Lysosomes carry digestive enzymes that break down bacteria and debris inside the cell; when a cell is dying, these same enzymes leak out and self-digest the cell — the mechanism behind irreversible cell injury covered later.",
+     "zh": "溶酶体装着消化酶，负责在细胞内分解细菌和残渣碎屑；细胞濒死时这些酶会漏出来反过来消化细胞本身——这正是后面「不可逆细胞损伤」的机制基础。"
+    },
+    {
+     "en": "Peroxisomes concentrate in the liver and detoxify substances such as alcohol — a direct link to why liver disease changes how patients metabolize both alcohol and many drugs.",
+     "zh": "过氧化物酶体在肝脏里浓度最高，负责解毒酒精一类的物质——这也是肝病病人代谢酒精和很多药物会跟正常人不一样的原因。"
+    },
+    {
+     "en": "Four tissue types by function, each with a clinical hook: epithelial (barrier/absorption/secretion — endothelial cells lining vessels also control clotting), connective (collagen-based binding — abnormal collagen causes disease, e.g., scurvy), muscle (skeletal/cardiac/smooth), nerve (neurons signal via axon-to-dendrite synapses).",
+     "zh": "四类组织按功能记，各带一个临床钩子：上皮（屏障/吸收/分泌——衬在血管内的内皮细胞还管凝血）、结缔（靠胶原蛋白粘合——胶原异常本身就能致病，比如坏血病）、肌肉（骨骼/心/平滑）、神经（神经元靠轴突到树突的突触传信号）。"
+    },
+    {
+     "en": "Smooth muscle's job explains two classic presentations at once: bronchiole smooth-muscle constriction produces the wheeze of an asthma attack, and iris smooth muscle controls pupil size in response to light.",
+     "zh": "平滑肌的功能能同时解释两个经典表现：支气管的平滑肌收缩就是哮喘发作的喘鸣声来源；虹膜的平滑肌则负责瞳孔随光线变化。"
+    },
+    {
+     "en": "Homeostasis runs on paired opposing systems (sympathetic vs parasympathetic is the model example) using negative feedback — a receiving cell's response shuts off the signal that produced it, the same logic as a thermostat cycling a furnace on and off.",
+     "zh": "内环境稳态靠成对的拮抗系统运转（交感 vs 副交感是典型模型），机制是负反馈——细胞接收到信号并产生反应后，这个反应本身又会关掉产生信号的源头，跟温控器控制炉子开关是一个道理。"
+    },
+    {
+     "en": "The five heat-loss channels the body's own thermostat uses are convection, conduction, radiation, evaporation, and respiration — this exact list resurfaces whenever a later chapter discusses hyperthermia or hypothermia management.",
+     "zh": "身体自带温控系统靠这五条通道散热：对流、传导、辐射、蒸发、呼吸——后面讲中暑或低体温处置时会原样用到这张清单。",
+     "hard": true
+    },
+    {
+     "en": "Fluid-loss tolerance scales with body size: a healthy adult can lose over 30% of total body fluid before symptoms force the issue, but a small child can become symptomatic after losing only 10-15% — the physiologic reason peds patients decompensate so much faster.",
+     "zh": "体液丢失的耐受度和体型挂钩：健康成人要丢掉总体液量的 30% 以上才会出症状，而小孩丢掉 10-15% 就可能出症状——这正是儿科病人失代偿快得多的生理原因。",
+     "hard": true
+    },
+    {
+     "en": "Ligands (the body's chemical messengers) sort by delivery route: endocrine hormones travel by blood (thyroid hormone), exocrine hormones travel by duct (stomach acid, sweat), paracrine hormones diffuse locally (histamine — the mediator behind allergic and inflammatory reactions), and autocrine hormones act back on the cell that released them.",
+     "zh": "配体（身体的化学信使）按送达方式分类：内分泌激素走血液（甲状腺激素）、外分泌激素走导管（胃酸、汗液）、旁分泌激素就地扩散（组胺——过敏和炎症反应背后的介质）、自分泌激素则回头作用于分泌它自己的那个细胞。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Adaptations in Cells and Tissues",
+   "titleZh": "细胞与组织的适应性改变",
+   "points": [
+    {
+     "en": "Atrophy = cells shrink (same cell count, less subcellular machinery), the tissue's fallback response to disuse or unfavourable conditions — classic example: a limb in a cast wastes away from disuse.",
+     "zh": "萎缩（atrophy）＝细胞变小（数量不变，细胞内部结构减少），是组织应对废用或不利条件的退让策略——典型例子是打了石膏的肢体会因废用而变细。"
+    },
+    {
+     "en": "Hypertrophy = cells enlarge from added subcellular components, raising organ size — classic example: the left ventricle thickens in response to chronic pressure overload from hypertension.",
+     "zh": "肥大（hypertrophy）＝细胞内部结构增多、体积变大，带动器官变大——典型例子是长期高血压造成的压力负荷让左心室代偿性增厚。"
+    },
+    {
+     "en": "Hyperplasia = the actual number of cells increases, also enlarging the tissue — classic example: a callus is hyperplasia of the skin's keratin layer in response to repeated friction.",
+     "zh": "增生（hyperplasia）＝细胞数量真正变多，同样让组织变大——典型例子是老茧，是皮肤角质层为应对反复摩擦而增生。"
+    },
+    {
+     "en": "Dysplasia = cells change size, shape, and organization in an atypical way, usually in epithelium under chronic irritation — the exam-relevant link: HPV-driven cervical dysplasia and smoking-driven airway dysplasia are both recognized precursors to cancer.",
+     "zh": "异型增生（dysplasia）＝细胞在大小、形状、排列上发生不典型改变，常见于长期受刺激的上皮——考试关联点：HPV 相关的宫颈异型增生、吸烟相关的呼吸道异型增生，两者都是公认的癌前病变。",
+     "hard": true
+    },
+    {
+     "en": "Metaplasia = one mature, differentiated cell type is reversibly swapped for another mature type — classic example: a smoker's ciliated, mucus-clearing airway epithelium converts to tougher but non-clearing squamous epithelium.",
+     "zh": "化生（metaplasia）＝一种成熟分化的细胞类型可逆地被替换成另一种成熟细胞类型——典型例子：吸烟者气道里原本带纤毛能清痰的上皮，会被更耐磨但不会清痰的鳞状上皮取代。"
+    },
+    {
+     "en": "Exam differentiator: only atrophy and hyperplasia change cell number (down vs up); hypertrophy changes cell size only; dysplasia and metaplasia both swap or distort cell identity — dysplasia is disordered and precancerous, metaplasia is an orderly substitution of one normal type for another.",
+     "zh": "考试区分诀窍：只有萎缩和增生改变细胞数量（一减一增）；肥大只改变细胞大小；异型增生和化生都涉及细胞「身份」的改变——异型增生是紊乱且癌前的，化生则是一种正常类型有序替换成另一种正常类型。"
+    }
+   ]
+  },
+  {
+   "titleEn": "The Cellular Environment: Fluids and Electrolytes",
+   "titleZh": "细胞环境：体液与电解质",
+   "points": [
+    {
+     "en": "Total body water runs 50-70% of body weight — averaging 60% in men, 50% in women — because fat holds little water; this is why weight-based fluid dosing quietly assumes a body-composition baseline that varies by sex and adiposity.",
+     "zh": "全身含水量占体重的 50-70%——男性平均 60%，女性平均 50%，因为脂肪含水少；按体重算补液量时，其实默认了一个会因性别和体脂而变的体成分基线。",
+     "hard": true
+    },
+    {
+     "en": "Body water splits intracellular (45% of body weight, 75% of total water) versus extracellular (15% of body weight, 25% of total water); extracellular further splits into interstitial fluid (10.5%, bathing the tissues) and intravascular fluid/plasma (4.5%, inside the vessels) — IV fluids land in this smallest compartment first.",
+     "zh": "全身水分为细胞内液（占体重 45%，占总水量 75%）和细胞外液（占体重 15%，占总水量 25%）；细胞外液再分为组织间液（10.5%，泡着组织细胞）和血管内液/血浆（4.5%，血管里那部分）——静脉输液最先落进的就是这个最小的血管内间隙。",
+     "hard": true
+    },
+    {
+     "en": "Water percentage swings with age: a full-term neonate runs about 80% water, while an older adult may be down to 45% — the physiologic reason dehydration hits geriatric patients harder and faster than it looks on exam.",
+     "zh": "含水比例随年龄大幅摆动：足月新生儿约 80% 是水，老年人可能只剩 45%——这正是脱水在老年病人身上后果更重、进展更快的生理原因。",
+     "hard": true
+    },
+    {
+     "en": "Daily fluid ledger (~2,500 mL): intake is 60% drinking, 30% food, 10% metabolic by-product; output is 60% urine, 28% skin and lungs (insensible loss), 6% feces, 6% sweat — sweat's share balloons fast in heat or exertion.",
+     "zh": "每日体液收支（约 2,500 mL）：摄入端 60% 靠喝、30% 来自食物、10% 是代谢副产物；排出端 60% 走尿液、28% 走皮肤和肺（不显性丢失）、6% 走粪便、6% 走汗液——高温或剧烈运动时汗液这一项会迅速膨胀。",
+     "hard": true
+    },
+    {
+     "en": "Four passive movement mechanisms (diffusion, facilitated diffusion, osmosis, filtration) all move substances down a gradient with no energy cost; only active transport spends ATP to push something against its gradient — the Na+/K+ pump below is the textbook active-transport example.",
+     "zh": "四种被动转运（扩散、易化扩散、渗透、滤过）都是顺浓度梯度走，不耗能；只有主动转运要烧 ATP 逆浓度梯度搬东西——下面讲的钠钾泵就是主动转运的教科书例子。"
+    },
+    {
+     "en": "Tonicity vocabulary with real fluids: isotonic (normal saline, lactated Ringer, ~280 mOsm/L) leaves cells unchanged; hypertonic (mannitol, 3% saline) pulls water OUT of cells and is exactly how those agents shrink brain swelling; hypotonic solutions make cells swell.",
+     "zh": "张力词汇配上实际用的液体：等张（生理盐水、乳酸林格液，约 280 mOsm/L）不改变细胞大小；高张（甘露醇、3% 盐水）把水从细胞里拉出来——这正是它们能消脑肿的原理；低张液则会让细胞肿胀。",
+     "hard": true
+    },
+    {
+     "en": "The sodium-potassium pump swaps 3 Na+ out for every 2 K+ back in; when it fails from insufficient potassium, sodium piles up inside the cell and drags water in with it — cellular swelling, the same endgame later seen in shock and cell injury.",
+     "zh": "钠钾泵每次泵 3 个 Na+ 出去、换 2 个 K+ 回来；一旦因为钾不够而罢工，钠就会在细胞内堆积并把水一起拉进来——细胞肿胀，这跟后面休克和细胞损伤讲的结局是同一套剧本。",
+     "hard": true
+    },
+    {
+     "en": "Plasma is 55% of whole blood, itself 91% water plus 9% protein: albumin holds osmotic (oncotic) pressure inside the vessel, while fibrinogen and prothrombin drive clotting — low albumin is therefore a direct edema risk, not just a lab curiosity.",
+     "zh": "血浆占全血的 55%，本身又是 91% 水加 9% 蛋白质：白蛋白负责把渗透压（胶体渗透压）留在血管里，纤维蛋白原和凝血酶原负责凝血——所以白蛋白低不只是化验单上的数字，直接就是水肿风险。"
+    },
+    {
+     "en": "Edema has three mechanisms, not one: rising capillary pressure (heart failure, venous obstruction, allergic vasodilation), falling oncotic pressure from lost or under-produced plasma protein (liver failure, burns, protein-losing kidney disease), or blocked lymphatic drainage (post-mastectomy limb swelling is the classic case).",
+     "zh": "水肿其实是三条不同的路，不是一种机制：一是毛细血管压升高（心衰、静脉阻塞、过敏引起的血管扩张），二是血浆蛋白丢失或生成不足导致胶体渗透压下降（肝衰竭、烧伤、丢蛋白性肾病），三是淋巴回流受阻（乳腺切除术后上肢水肿是经典例子）。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary edema is the highest-stakes version of this mechanism: fluid floods the alveoli, blocks oxygen diffusion into the capillaries, and the patient becomes hypoxic — cardiac failure, near-drowning, and narcotic overdose can all produce it, and severe cases are functionally drowning in one's own fluid.",
+     "zh": "肺水肿是这套机制里赌注最高的一种：液体灌进肺泡、堵住氧气向毛细血管的弥散，病人就此缺氧——心衰、近乎溺水、麻醉药过量都能引发它，严重时等于是被自己的体液淹死。"
+    },
+    {
+     "en": "Three sensors run water balance: osmoreceptors in the hypothalamus detect rising blood osmolarity and trigger ADH release; atrial volume receptors detect stretch from too much intravascular volume and release natriuretic proteins; baroreceptors in the carotid, aorta, and kidney track blood pressure directly.",
+     "zh": "三套感受器管着水平衡：下丘脑的渗透压感受器一测到血浆渗透压升高就触发 ADH 释放；心房的容量感受器一被血容量撑大就释放利钠蛋白；颈动脉、主动脉和肾脏的压力感受器则直接盯着血压。"
+    },
+    {
+     "en": "RAAS cascade to memorize in order: kidneys release renin -> converts angiotensinogen to angiotensin I -> ACE (mainly in the lungs) converts it to angiotensin II -> angiotensin II both constricts renal vessels and triggers aldosterone -> aldosterone makes the kidney reabsorb sodium and dump potassium; natriuretic proteins do the opposite whole cascade.",
+     "zh": "RAAS 级联要按顺序背：肾脏释放肾素→把血管紧张素原转成血管紧张素 I→经（主要在肺的）ACE 转成血管紧张素 II→血管紧张素 II 一边收缩肾血管一边触发醛固酮→醛固酮让肾脏保钠排钾；利钠蛋白干的是这整条链的反方向。"
+    },
+    {
+     "en": "Sodium disorder cut-offs: hypernatremia is defined at serum sodium 143 mEq/L or above (levels past 160 mmol/L can bring hyperthermia, delirium, and coma); hyponatremia is defined at 135 mEq/L or below — and symptoms track how fast the level changed, not just how far.",
+     "zh": "钠紊乱的判定线：血钠 ≥143 mEq/L 即定义为高钠血症（超过 160 mmol/L 可出现高热、谵妄、昏迷）；血钠 ≤135 mEq/L 即定义为低钠血症——症状轻重取决于变化有多快，不只是偏离了多少。",
+     "hard": true
+    },
+    {
+     "en": "Potassium normal range is 3.5-5.0 mEq/L; below 2.5 mEq/L brings flaccid paralysis and tetany, while levels above 6.5 mmol/L start showing ECG change (peaked T waves, widening QRS, ventricular tachycardia) in under half of patients — hyperkalemia is the one electrolyte emergency you actually treat in the field because of its cardiac risk.",
+     "zh": "钾的正常范围是 3.5-5.0 mEq/L；低于 2.5 mEq/L 会出现弛缓性瘫痪和手足搐搦，超过 6.5 mmol/L 时不到一半病人会出现心电图改变（T 波高尖、QRS 增宽、室速）——高钾血症是唯一因为心脏风险而需要院前直接处理的电解质急症。",
+     "hard": true
+    },
+    {
+     "en": "Hyperkalemia treatment logic (don't confuse the jobs): IV calcium acts immediately to stabilize the heart muscle membrane against the arrhythmia risk, while bicarbonate, insulin, and salbutamol all shift potassium into cells over roughly 15-30 minutes — calcium protects the heart, the other three actually lower the level.",
+     "zh": "高钾血症的用药逻辑不能搞混：静脉钙立即起效，稳定心肌细胞膜、对抗心律失常风险；碳酸氢盐、胰岛素、沙丁胺醇则是在约 15-30 分钟内把钾推进细胞内——钙是保心脏，另外三个才是真正降钾。",
+     "hard": true
+    },
+    {
+     "en": "Calcium normal range is 2.05-2.55 mmol/L (the book prints 8.2-10.2 mg/dL; Canadian labs report mmol/L); hypocalcemia drives neuromuscular over-excitation (tetany, laryngospasm with stridor that can obstruct the airway, prolonged QT that predisposes to ventricular dysrhythmia), while hypercalcemia causes constipation, polyuria, and in severe cases stupor, coma, and renal failure.",
+     "zh": "血钙正常范围 2.05-2.55 mmol/L（教材印的是 8.2-10.2 mg/dL，加拿大实验室报的是 mmol/L）；低钙血症让神经肌肉过度兴奋（手足搐搦、喉痉挛伴喘鸣甚至堵气道、QT 延长易诱发室性心律失常），高钙血症则表现为便秘、多尿，严重时昏睡、昏迷、肾衰竭。",
+     "hard": true
+    },
+    {
+     "en": "Field treatment for symptomatic hypocalcemia (tetany, dysrhythmia, seizure): 10% IV calcium gluconate, 10-20 mL, given over 10-15 minutes — push it slowly, this is not a rapid IV push drug.",
+     "zh": "有症状低钙血症（手足搐搦、心律失常、抽搐）的现场处置：10% 葡萄糖酸钙静脉给药，10-20 mL，用时 10-15 分钟推完——要慢推，这不是能快速静推的药。",
+     "hard": true
+    },
+    {
+     "en": "Magnesium normal range is 1.3-2.1 mEq/L; hypomagnesemia causes CNS/neuromuscular hyperirritability (tremor, jerking, hypertension, tachycardia, ventricular dysrhythmias), while hypermagnesemia is almost always a renal-failure problem and can progress to respiratory muscle paralysis or cardiac arrest.",
+     "zh": "血镁正常范围 1.3-2.1 mEq/L；低镁血症带来中枢/神经肌肉的过度兴奋（震颤、抽动、高血压、心动过速、室性心律失常），高镁血症几乎都是肾衰竭闹的，能进展到呼吸肌麻痹甚至心搏骤停。",
+     "hard": true
+    },
+    {
+     "en": "Phosphate is mainly an intracellular anion; severe hypophosphatemia can trigger rhabdomyolysis (muscle breakdown) and acute hemolytic anemia, while hyperphosphatemia frequently travels together with hypocalcemia — treating the paired calcium problem is often part of managing it.",
+     "zh": "磷酸盐主要是细胞内的阴离子；严重低磷血症能诱发横纹肌溶解和急性溶血性贫血，高磷血症则常常和低钙血症结伴出现——处理时往往要一并处理钙的问题。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Acid-Base Balance",
+   "titleZh": "酸碱平衡",
+   "points": [
+    {
+     "en": "Normal blood pH sits in the narrow band 7.35-7.45, and because pH is a negative log scale, changes are exponential, not linear: dropping from 7.40 to 7.20 already represents a roughly 100-fold rise in free acid concentration — a small-looking number swing is a huge physiologic swing.",
+     "zh": "正常血液 pH 卡在 7.35-7.45 这条窄带里；因为 pH 是负对数刻度，变化是指数级的、不是线性的：从 7.40 掉到 7.20，游离酸浓度其实已经涨了约 100 倍——数字看着小，生理冲击巨大。",
+     "hard": true
+    },
+    {
+     "en": "The bicarbonate buffer system is the body's main extracellular buffer: excess H+ combines with HCO3- to form carbonic acid, which rapidly splits into water and CO2 that gets exhaled — this is why the lungs, not just the kidneys, are a real-time acid-dumping organ.",
+     "zh": "碳酸氢盐缓冲系统是身体最主要的细胞外缓冲系统：多余的 H+ 和 HCO3- 结合生成碳酸，碳酸又迅速裂解成水和会被呼出的 CO2——所以肺不只是呼吸器官，也是一个能实时排酸的器官。"
+    },
+    {
+     "en": "Acidosis (pH under 7.35) depresses the CNS — confusion and disorientation, and if it worsens, the respiratory centres themselves shut down and the patient dies; alkalosis (pH over 7.45) does the opposite, making neurons hyperexcitable — numbness and tingling first, then muscle twitches, then in severe cases sustained tetanic contractions that can paralyze the breathing muscles.",
+     "zh": "酸中毒（pH<7.35）会抑制中枢神经——先是意识混乱定向障碍，再重下去连呼吸中枢都会停摆、病人因此死亡；碱中毒（pH>7.45）反过来让神经元过度兴奋——先是麻木刺痛，再是肌肉抽动，严重时变成持续的手足搐搦，能把呼吸肌都锁死。",
+     "hard": true
+    },
+    {
+     "en": "Acid-base status and potassium move in lockstep because the kidney swaps H+ and K+ in opposite directions: acidosis makes the kidney dump H+ and hoard K+ (hyperkalemia risk), alkalosis makes it hoard H+ and dump K+ (hypokalemia risk) — connect any acid-base call straight back to the ECG changes in the electrolyte section.",
+     "zh": "酸碱状态和血钾会同进同退，因为肾脏是反方向搬运 H+ 和 K+ 的：酸中毒时肾脏排 H+、留 K+（高钾风险），碱中毒时反过来留 H+、排 K+（低钾风险）——判断酸碱平衡时要直接联想到前面电解质那节的心电图改变。"
+    },
+    {
+     "en": "Four-pattern grid to sort any blood gas: metabolic acidosis, metabolic alkalosis, respiratory acidosis, respiratory alkalosis — 'metabolic' problems start as a pH change with PaCO2 initially unmoved, 'respiratory' problems start as a PaCO2 change that drives the pH.",
+     "zh": "分析任何血气结果都套这个四象限：代谢性酸中毒、代谢性碱中毒、呼吸性酸中毒、呼吸性碱中毒——「代谢性」问题一开始是 pH 变了、PaCO2 还没动；「呼吸性」问题一开始是 PaCO2 先变、再拖着 pH 走。"
+    },
+    {
+     "en": "Metabolic acidosis (sepsis, DKA, salicylate poisoning) drops pH while PaCO2 starts unchanged; the body's own fix is to hyperventilate and blow off CO2 — so recognize Kussmaul respirations (deep, rapid, sighing breaths in DKA) as the body's compensation, not a separate lung disease.",
+     "zh": "代谢性酸中毒（脓毒症、DKA、水杨酸中毒）先让 pH 下降、PaCO2 起初不变；身体自己的补救办法是过度通气、把 CO2 吹掉——所以 DKA 里深快叹息样的库斯莫尔呼吸，要认成是身体在代偿，而不是另一种肺病。"
+    },
+    {
+     "en": "Metabolic alkalosis is rare acutely but common in chronic illness or after prolonged nasogastric suction (loses stomach acid) or antacid overuse; the compensation is the opposite direction — slower, shallower breathing that raises PaCO2 to pull the pH back down.",
+     "zh": "代谢性碱中毒急性期少见，但常见于慢性病人、长期胃管持续抽吸（丢失胃酸）或滥用抗酸药；身体的代偿方向相反——变慢变浅的呼吸把 PaCO2 抬高，把 pH 拉回来。"
+    },
+    {
+     "en": "Respiratory acidosis is CO2 retention from hypoventilation (opioid overdose is the prehospital classic) or intrinsic lung disease (asthma, COPD) — PaCO2 rises and drags pH down directly, with no metabolic step in between.",
+     "zh": "呼吸性酸中毒是 CO2 潴留导致的——院前最常见是通气不足（阿片类药物过量），或本身有肺病（哮喘、COPD）；PaCO2 直接升高、把 pH 拽下去，中间不经过代谢环节。"
+    },
+    {
+     "en": "Respiratory alkalosis is CO2 being blown off too fast, and 'hyperventilation' is a misleadingly narrow label for it: pulmonary embolism, acute MI, severe infection, and DKA can all drive the same overbreathing pattern, so do not anchor on anxiety as the default explanation.",
+     "zh": "呼吸性碱中毒是 CO2 被吹得太快，「过度通气」这个说法容易让人想窄了：肺栓塞、急性心梗、重症感染、DKA 都能驱动同样的过度呼吸模式，不要一见喘就先锚定「焦虑发作」。"
+    },
+    {
+     "en": "Compensation timing is asymmetric and testable: the lungs compensate for metabolic problems fast and fairly predictably; the kidneys compensating for respiratory problems takes hours to days, and an acute compensation is never complete — only chronic compensation (classically in COPD) can push pH all the way back to normal.",
+     "zh": "代偿的时间轴不对称，这点很爱考：肺代偿代谢性问题又快又相对可预测；肾代偿呼吸性问题要几小时到几天，而且急性代偿永远补不完全——只有慢性代偿（典型如 COPD）才可能把 pH 完全拉回正常。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cell Injury",
+   "titleZh": "细胞损伤",
+   "points": [
+    {
+     "en": "Seven different insults (hypoxia, ischemia, chemical, infectious, immunologic, mechanical, inflammatory) all funnel into the same final common pathway: cell swelling, membrane rupture, and breakdown of nuclear material — the cause varies, but the dying cell looks the same under the microscope.",
+     "zh": "缺氧、缺血、化学、感染、免疫、机械、炎症——七种不同的打击最后都汇进同一条终末通路：细胞肿胀、膜破裂、核物质崩解——起因不同，死法在显微镜下长得一样。"
+    },
+    {
+     "en": "Before the point of no return, injury is reversible with proper treatment; past it, the cell membrane turns abnormally leaky, electrolytes and fluid flood in, the cell and its organelles swell, and lysosomes release their own digestive enzymes onto the cell — this is necrosis, and it is why 'time to treatment' is the variable that decides outcome.",
+     "zh": "过了「不可逆点」之前，损伤靠及时治疗还能逆转；过了这个点，细胞膜异常通透，电解质和水灌进来，细胞连同细胞器一起肿胀，溶酶体把自己的消化酶撒向细胞——这就是坏死，也是「治疗时机」能决定预后的原因。"
+    },
+    {
+     "en": "Hypoxic injury has four distinct entry points worth telling apart on an exam: too little ambient oxygen or nonfunctional hemoglobin (CO poisoning), too few red cells to carry it (bleeding), failing lungs or heart that can't deliver it (COPD), or intact oxygen delivery but blocked cellular use of it (cyanide disables the mitochondrial cytochrome enzymes) — the last one means normal SpO2 can still mean a dying cell.",
+     "zh": "低氧性损伤有四个不同的切入点，考试爱区分：环境氧不够或血红蛋白失能（CO 中毒）、红细胞太少运不了氧（失血）、心肺本身衰竭送不出去（COPD）、氧气送到了但细胞用不了（氰化物阻断线粒体细胞色素酶）——最后这种情况意味着 SpO2 正常，细胞照样在死。",
+     "hard": true
+    },
+    {
+     "en": "Free radicals — molecules missing one electron and therefore chemically unstable — are the earliest and most dangerous mediators of hypoxic injury: they steal electrons from nearby cells and membranes, and the resulting damage triggers more mediator release, more hypoxia, and more free radicals — a self-amplifying positive-feedback spiral rather than a one-time insult.",
+     "zh": "自由基——外层缺一个电子、因而化学性不稳定的分子——是低氧损伤最早也最危险的介质：它们从周围细胞和细胞膜上「抢」电子，造成的损伤又释放更多介质、带来更多缺氧、产生更多自由基——是一个自我放大的正反馈螺旋，不是一次性打击。"
+    },
+    {
+     "en": "Poison mechanisms worth pattern-matching: cyanide blocks oxidative phosphorylation (cells can't use oxygen even though it's delivered), organophosphate pesticides block acetylcholinesterase (deranges nerve transmission — the classic toxidrome root cause), lead substitutes for calcium in biochemical reactions (chronic exposure from lead paint drives paediatric neuro injury), and carbon monoxide outcompetes oxygen for hemoglobin binding sites.",
+     "zh": "几种毒物机制值得配对记忆：氰化物阻断氧化磷酸化（氧送到了但细胞用不了）、有机磷农药阻断乙酰胆碱酯酶（搅乱神经传导——有机磷中毒典型表现的根源）、铅在生化反应中冒充钙（慢性铅漆暴露是儿童神经损伤的元凶）、一氧化碳抢占血红蛋白上原本给氧气的结合位。"
+    },
+    {
+     "en": "Acetaminophen becomes an acute overdose in an adult above roughly 140 mg/kg, generating toxic metabolites that poison the liver and can be fatal — worth flagging specifically because it is an over-the-counter drug patients underestimate.",
+     "zh": "成人对乙酰氨基酚（Tylenol）摄入超过约 140 mg/kg 即构成急性过量，代谢产生的毒性中间产物会毒害肝脏、可致命——特意拎出来讲是因为它是一种病人常常低估风险的非处方药。",
+     "hard": true
+    },
+    {
+     "en": "Bacteria injure two different ways: exotoxins are actively secreted into the surrounding tissue (Staphylococcus, Streptococcus, Clostridium tetani), while endotoxins are lipopolysaccharide built directly into gram-negative cell walls and released on bacterial death — a large endotoxin load is what tips a gram-negative infection into septic shock.",
+     "zh": "细菌致伤走两条路：外毒素是主动分泌到周围组织的（葡萄球菌、链球菌、破伤风梭菌），内毒素则是嵌在革兰阴性菌细胞壁里的脂多糖、菌体死亡时才释放——大量内毒素入血正是革兰阴性感染演变成感染性休克的推手。"
+    },
+    {
+     "en": "Weaker host defence means faster, worse infection: newborns, older adults, and patients with diabetes, cancer, or immunosuppressive/immunomodulating medications all fight pathogens less effectively — the same organism that gives a healthy adult a mild illness can kill these groups.",
+     "zh": "宿主防御弱＝感染进展更快更重：新生儿、老年人、糖尿病、肿瘤病人，以及正在用免疫抑制/调节药物的人，对付病原体的能力都更差——同一个病原体在健康成人身上是小病，在这些人身上可能致命。"
+    },
+    {
+     "en": "Immunologic and inflammatory injury reaches the same endgame through a different door: phagocytes, histamine, antibodies, and lymphokines damage the cell membrane directly, potassium leaks out while water floods in, and the cell swells toward rupture — the severity of the immune response itself determines how much collateral cell death occurs.",
+     "zh": "免疫和炎症性损伤走的是另一扇门、终点却相同：吞噬细胞、组胺、抗体、淋巴因子直接损伤细胞膜，钾漏出、水涌入，细胞肿胀直至破裂——免疫反应本身的强度，决定了会有多少「误伤」性的细胞死亡。"
+    },
+    {
+     "en": "Apoptosis versus necrosis is the highest-yield contrast in this section: apoptosis is genetically programmed, tidy cell suicide (driven by enzymes called caspases) that recycles components for neighbouring cells and triggers NO inflammation — it is the normal mechanism behind aging, development, menstruation, and red blood cell turnover; necrosis from hypoxia or toxins is messy and always triggers inflammation.",
+     "zh": "凋亡 vs 坏死是这一节含金量最高的对比：凋亡是基因编程好的、整整齐齐的细胞自杀（靠一类叫 caspase 的酶驱动），死后成分被邻近细胞回收利用，且不引起炎症——衰老、发育、月经、红细胞更新用的都是这套正常机制；而缺氧或毒素造成的坏死是一地狼藉，必定引发炎症。",
+     "hard": true
+    },
+    {
+     "en": "Apoptosis can misfire in both directions and both are pathologic: premature apoptosis contributes to some forms of heart failure and to hepatocyte death in viral hepatitis (the dying cells clump into Councilman bodies), while failure to apoptose when it should lets cells over-proliferate — the mechanism behind cancer and rheumatoid arthritis's runaway synovial growth.",
+     "zh": "凋亡也会「用力过猛」或「用力不足」，两个方向都是病态：过早凋亡见于某些心衰和病毒性肝炎（濒死肝细胞聚成 Councilman 小体）；该凋亡时不凋亡则让细胞失控增殖——这正是癌症、以及类风湿关节炎滑膜组织疯长背后的机制。"
+    },
+    {
+     "en": "Necrosis subtypes map to specific clinical pictures: coagulation (simple) necrosis keeps tissue architecture recognizable (acute ischemia, heavy-metal toxicity, direct chemical/burn injury); caseous necrosis turns tissue cheese-like (classic TB lesions); dry gangrene is ischemic tissue that putrefies after blood supply is lost; fat necrosis comes from pancreatic enzymes digesting fat (pancreatitis); liquefactive necrosis is bacterial invasion of warm, moist dead tissue producing lytic enzymes and gas (abscess, wet gangrene).",
+     "zh": "坏死的亚型能对应到具体临床画面：凝固性（简单）坏死保留组织轮廓（急性缺血、重金属中毒、化学/烧伤直接损伤）；干酪样坏死像奶酪（TB 病灶的典型表现）；干性坏疽是缺血组织断供后腐败；脂肪坏死是胰酶消化脂肪（胰腺炎）；液化性坏死是细菌侵入温热潮湿的死组织、产酶产气（脓肿、湿性坏疽）。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Genetics and Familial Disease",
+   "titleZh": "遗传与家族性疾病",
+   "points": [
+    {
+     "en": "Disease risk factors split into two exam-relevant buckets: uncontrollable (genetics, age, sex) versus modifiable (smoking, alcohol, poor nutrition, inactivity, stress) — history-taking should probe both, since only the second group is something a patient can actually change going forward.",
+     "zh": "疾病风险因素分两桶，考试常考区分：不可控（遗传、年龄、性别）vs 可控（吸烟、饮酒、饮食差、缺乏运动、压力）——问病史两类都要问，但只有后一类是病人今后真能改的。"
+    },
+    {
+     "en": "Three surveillance terms that get mixed up: incidence is the rate of NEW disease occurrence, prevalence is the total number of EXISTING cases in a population over a time window, mortality is the number of DEATHS from that disease in the affected population — three different numerators asking three different questions.",
+     "zh": "三个常被混淆的流行病学术语：发病率（incidence）＝新发生病例的比率；患病率（prevalence）＝某时间段内一个人群里现有病例总数；死亡率（mortality）＝该病人群中死亡的人数——三个词问的是三件不同的事。"
+    },
+    {
+     "en": "Genetic risk is not the same as familial tendency: genetic risk means a specific gene is proven to be inherited and passed down; familial tendency just means a disease clusters in families without confirmed heritable gene abnormality — don't assume 'runs in the family' always means 'single gene defect'.",
+     "zh": "遗传风险不等于家族倾向：遗传风险是指某个具体基因被证实会代代遗传；家族倾向只是说这个病在某些家族里扎堆出现，并没有证实存在可遗传的基因异常——「家里人都有」不代表一定是单基因病。"
+    },
+    {
+     "en": "Autosomal-recessive inheritance needs two copies of the gene to express the trait: two carrier parents give each child a 25% chance of being affected, while two affected parents guarantee every child is affected — hemochromatosis (excess iron absorption, deposits in liver/heart/pancreas, managed by regular phlebotomy) is the pattern's clinical example.",
+     "zh": "常染色体隐性遗传需要两份基因拷贝才会显性状：两个携带者父母，每个孩子有 25% 概率发病；两个都患病的父母，则孩子 100% 发病——血色病（铁吸收过多、沉积在肝/心/胰，靠定期放血治疗）是这个遗传模式的临床例子。",
+     "hard": true
+    },
+    {
+     "en": "Autosomal-dominant inheritance needs only one copy to express the trait, so an affected parent has at least a 50% chance of passing it to each child — familial adenomatous polyposis (near-certain progression to colon cancer) follows this pattern, which is why first-degree relatives of an affected patient need screening.",
+     "zh": "常染色体显性遗传只要一份基因拷贝就会显性状，患病父母传给每个孩子的概率至少 50%——家族性腺瘤性息肉病（几乎必然进展成结肠癌）就是这个模式，也是为什么患者的一级亲属都要接受筛查。",
+     "hard": true
+    },
+    {
+     "en": "Sex-linked (X-linked) recessive conditions pass from asymptomatic carrier mothers to sons: hemophilia (missing clotting factor VIII, so patients bleed excessively from minor injury and dental work, and can bleed into joints or rarely the brain) and Duchenne muscular dystrophy (onset around age 4, waddling gait progressing to wheelchair by about age 12, death often by age 20 usually from cardiac involvement) both follow this pattern — and only males show the disease.",
+     "zh": "性连锁（X 连锁）隐性遗传病是从无症状携带者母亲传给儿子的：血友病（缺凝血因子 VIII，轻伤或补牙都可能大出血，还可能出血进关节甚至颅内）和杜氏肌营养不良（约 4 岁起病、逐渐出现摇摆步态，约 12 岁需坐轮椅，常在 20 岁前因心脏受累而死亡）都是这个模式——而且只有男性会真正发病。",
+     "hard": true
+    },
+    {
+     "en": "G6PD deficiency is an inherited enzyme deficiency that turns an otherwise-rare drug reaction common: patients on sulfa antibiotics (eg, Septra/Bactrim for a UTI) are at markedly increased risk of hemolytic anemia — worth asking about in any patient on sulfa drugs who develops new pallor, fatigue, or dark urine.",
+     "zh": "G6PD 缺乏症是一种遗传性酶缺陷，能把一个本来罕见的药物反应变成常见反应：用磺胺类抗生素（比如治尿路感染的 Septra/Bactrim）的病人溶血性贫血风险明显升高——用磺胺药的病人如果新出现面色苍白、乏力或尿色变深，值得多问一句。"
+    },
+    {
+     "en": "Long QT syncope red flags: treat syncope as a life-threatening dysrhythmia until proven otherwise when it is exercise-induced, occurs with chest pain, is triggered by a startle (loud noise, alarm), or when a first-degree relative has a history of syncope — these patients can progress straight to torsades de pointes.",
+     "zh": "长 QT 综合征晕厥的危险信号：运动诱发的晕厥、伴胸痛的晕厥、受惊吓（巨响、闹钟）诱发的晕厥、或一级亲属有晕厥史——满足任一条，晕厥都要按致命性心律失常处理直到排除，因为这类病人可能直接演变成尖端扭转型室速。"
+    },
+    {
+     "en": "Hypertrophic cardiomyopathy is autosomal-dominant and thickens the septum enough to obstruct left-ventricular outflow; it presents with dyspnea, chest pain, palpitations, or syncope, and is a recognized cause of sudden cardiac death in young, otherwise-healthy, often athletic people — a family history of early sudden death is the tell.",
+     "zh": "肥厚型心肌病是常染色体显性遗传，增厚的室间隔能挡住左室流出道；表现为呼吸困难、胸痛、心悸或晕厥，也是年轻、看似健康甚至是运动员人群猝死的公认病因之一——家族里有人年纪轻轻猝死，就是提示信号。"
+    },
+    {
+     "en": "Never anchor new or worsening confusion in an older patient on 'it's probably dementia' before ruling out acute, reversible causes — a new medication, an infection, or an MI can all present as pure confusion in the geriatric population, and an apparent behavioural or emotional problem may have a fully organic cause.",
+     "zh": "老年病人新出现或加重的意识混乱，不要先入为主地归成「大概是老年痴呆」——新用的药、感染、心梗都可能在老年人身上就只表现为意识混乱，看似情绪或行为问题的表现，背后完全可能是器质性病因。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Hypoperfusion: The Cellular Mechanism Behind Shock",
+   "titleZh": "低灌注：休克背后的细胞机制",
+   "points": [
+    {
+     "en": "Terminology check: perfusion is the circulatory system delivering oxygen and nutrients while clearing waste at the cell level, and 'shock' and 'hypoperfusion' are treated as synonyms only when the WHOLE body is affected — a single blocked artery starving one limb is localized hypoperfusion, not shock.",
+     "zh": "术语要分清：灌注是循环系统在细胞层面送氧送营养、顺带清废物；「休克」和「低灌注」只有在全身受累时才能划等号——单一动脉闭塞饿着一条肢体，那是局部低灌注，不是休克。"
+    },
+    {
+     "en": "The anaerobic switch does more damage than lactate alone: alongside the lactic acidosis, cells also start breaking down fat (lipolysis) and producing ketones, on top of electrolyte shifts, cellular swelling, and leaking lysosomal enzymes — meanwhile stress hormones (catecholamines, cortisol) push blood glucose up even as the cells can't use oxygen to burn it.",
+     "zh": "无氧代谢造成的破坏不只是乳酸堆积：细胞还会开始分解脂肪（脂解）并产生酮体，同时伴有电解质紊乱、细胞肿胀、溶酶体酶外漏——与此同时应激激素（儿茶酚胺、皮质醇）还在把血糖往上推，可细胞根本没法用氧气把它烧掉。"
+    },
+    {
+     "en": "Acidotic blood loses its grip on oxygen — the hemoglobin-oxygen curve shifts right — so the acidosis produced by one hypoperfused tissue bed actively degrades oxygen delivery everywhere else in the body too, turning a local problem into a second, systemic feedback loop.",
+     "zh": "酸化的血液抓不住氧——血红蛋白氧解离曲线右移——所以一处组织低灌注产生的酸中毒，会反过来削弱全身其他部位的送氧能力，把一个局部问题变成第二条全身性的恶性循环。"
+    },
+    {
+     "en": "Extra obstructive-shock causes worth knowing beyond tamponade and PE: aortic dissection creates a false channel that derails normal flow, a left atrial tumour can physically block flow from atrium to ventricle, and abdominal compartment syndrome — a burn-resuscitation complication where large-volume IV fluid plus a cytokine-driven capillary leak raises intra-abdominal pressure high enough to impair ventilation, trigger acute kidney injury, and compress the inferior vena cava.",
+     "zh": "除心包填塞和肺栓塞外，梗阻性休克还有这些成因：主动脉夹层撕出假腔、正常血流被打乱；左房肿瘤能直接挡住房室之间的血流；腹腔间隔室综合征——烧伤大量补液后，细胞因子风暴造成毛细血管渗漏，腹内压升高到能妨碍通气、诱发急性肾损伤、还能压瘪下腔静脉。"
+    },
+    {
+     "en": "MODS has two distinct starting points worth telling apart: primary MODS is a direct hit to an organ (a pulmonary contusion from hitting the steering wheel), while secondary MODS is organ failure that develops as part of the body's own systemic response to a separate insult (renal failure after trauma elsewhere) — same syndrome, opposite origin.",
+     "zh": "多器官功能障碍综合征（MODS）有两个不同的起点：原发性 MODS 是器官被直接打击（方向盘撞胸引起的肺挫伤）；继发性 MODS 是身体对别处损伤产生系统性反应而拖垮的器官（创伤后继发肾衰）——同一个综合征，起点却相反。"
+    },
+    {
+     "en": "MODS runs on three engines at once: an overactive complement system that deepens cellular damage, an overactive coagulation system (triggered by endothelial injury) that throws microthrombi into small vessels and starves tissue downstream, and activation of the kallikrein/kinin system releasing bradykinin — a potent vasodilator that drags blood pressure and perfusion down even further.",
+     "zh": "MODS 同时靠三台引擎运转：补体系统过度激活加深细胞损伤；凝血系统过度激活（因内皮损伤触发）在小血管里撒下微血栓、饿死下游组织；激肽释放酶-激肽系统被激活、释放缓激肽——一种强效血管扩张剂，把血压和灌注拖得更低。"
+    },
+    {
+     "en": "MODS is delayed-onset, not immediate — it typically surfaces hours to days after the initial resuscitation, as tissues try to outrun a widening oxygen supply-demand gap by revving up metabolism, which only burns through ATP faster and drives cells deeper into anaerobic acidosis; this is the mechanism behind a patient who looked stabilized after the initial save crashing a day or two later.",
+     "zh": "MODS 不是立刻发生的，而是延迟出现——通常在初次复苏后数小时到几天才浮现：组织为了追赶越拉越大的供氧-耗氧缺口而加速代谢，结果只是更快耗尽 ATP、把细胞推向更深的无氧酸中毒——这正是「初步抢救后看着稳住了，一两天后却垮掉」背后的机制。"
+    }
+   ]
+  },
+  {
+   "titleEn": "The Body's Self-Defence Mechanisms",
+   "titleZh": "身体的自我防御机制",
+   "points": [
+    {
+     "en": "Three lines of defence, in order: anatomic barriers (skin, nasal hairs and lower-airway cilia, stomach acid) stop most invaders before they get in; the inflammatory response and the immune response are the two lines behind them — and critically, those last two are independent processes that often overlap but can each fire without the other.",
+     "zh": "三道防线按顺序排：解剖屏障（皮肤、鼻毛和下呼吸道纤毛、胃酸）先把大部分入侵者挡在门外；炎症反应和免疫反应是后面两道——关键是这两道是各自独立的过程，常常同时出现，但也可能只有其中一个启动。"
+    },
+    {
+     "en": "A fine but testable distinction: inflammation recruits several types of white blood cells, while the immune response proper involves only one type — lymphocytes.",
+     "zh": "一个细但爱考的区别：炎症反应会招募好几种白细胞，而真正的免疫反应只涉及一种——淋巴细胞。"
+    },
+    {
+     "en": "White cell differential worth memorizing: neutrophils dominate at 55-70% of leukocytes (the first-responder phagocytes, nicknamed 'polys'), eosinophils run 1-3% (kill parasites and drive allergic bronchospasm), and basophils are under 1% but punch above their weight by releasing histamine — their tissue-resident cousin, the mast cell, does the same job but never circulates in blood.",
+     "zh": "白细胞分类比例值得背：中性粒细胞占 55-70%（第一批到场的吞噬细胞，绰号「多形核」）、嗜酸性粒细胞占 1-3%（杀寄生虫、驱动过敏性支气管痉挛）、嗜碱性粒细胞不到 1% 但威力不小——负责释放组胺；它在组织里的同类肥大细胞干的是同一份工作，只是从不进入血液循环。",
+     "hard": true
+    },
+    {
+     "en": "Monocytes mature in the bloodstream for their first 24 hours, then migrate into tissue and differentiate into macrophages — the body's tissue-level scavengers and one of the earliest cellular responders in inflammation.",
+     "zh": "单核细胞在血液里成熟约 24 小时，随后迁入组织分化成巨噬细胞——组织层面的清道夫，也是炎症反应里最早到场的细胞之一。",
+     "hard": true
+    },
+    {
+     "en": "Native (innate) immunity is nonspecific, fires first, and is tied to the initial inflammatory response; acquired (adaptive) immunity is specific, remembers the exact invader, and takes real time to build up.",
+     "zh": "天然（固有）免疫非特异、最先启动，和早期炎症反应绑在一起；获得性（适应）免疫则是特异性的、能记住具体入侵者，但需要真正的时间才能建立起来。"
+    },
+    {
+     "en": "Passive versus active acquired immunity decides how fragile a newborn's protection is: passive immunity is borrowed antibody (transplacental transfer, colostrum, or injected immunoglobulin) and fades quickly, while active immunity is self-made and durable — a newborn survives its first few months on maternal antibody before its own B cells take over, which is exactly the window where that infant is most exposed once the borrowed protection runs out.",
+     "zh": "被动获得性免疫和主动获得性免疫的区别，决定了新生儿防护有多脆弱：被动免疫是「借来的」抗体（经胎盘转移、初乳、或注射免疫球蛋白），消退得快；主动免疫是自己造的，能扛得久——新生儿最初几个月全靠母体抗体撑着，等自己的 B 细胞接手之前，这段窗口期正是婴儿最容易失守的时候。"
+    },
+    {
+     "en": "Primary versus secondary (amnestic) immune response is the mechanism behind 'the second hit is worse': first contact with an antigen may not even cause symptoms while the body builds its response, but a repeat exposure triggers the faster, stronger, memory-primed secondary response — the same underlying principle that makes each anaphylaxis episode potentially more severe than the last.",
+     "zh": "初次免疫反应 vs 二次（记忆性）免疫反应，正是「第二次撞上更狠」背后的机制：第一次接触抗原时身体还在建立反应、可能都没症状，再次暴露就会触发更快更强、由记忆细胞主导的二次反应——这正是每次过敏反应可能一次比一次凶的底层原因。"
+    },
+    {
+     "en": "Immunoglobulin classes by share of plasma antibody (high-yield numbers): IgG 75% is the only class that crosses the placenta, protecting a newborn for its first few months; IgA 15% guards mucosal surfaces (tears, saliva, gut and airway secretions); IgM 5-10% is the first antibody made in a brand-new infection and the dominant antibody in ABO blood-type mismatch reactions; IgE under 1% drives allergic reactions via mast cell degranulation.",
+     "zh": "免疫球蛋白按血浆抗体占比分类（高价值数字）：IgG 占 75%，是唯一能穿过胎盘的一类，保护新生儿最初几个月；IgA 占 15%，守着黏膜表面（泪液、唾液、肠道和呼吸道分泌物）；IgM 占 5-10%，是全新感染时最先生成的抗体，也是 ABO 血型不合反应里的主力抗体；IgE 不到 1%，靠让肥大细胞脱颗粒来驱动过敏反应。",
+     "hard": true
+    },
+    {
+     "en": "The complement cascade's finishing move is the membrane attack complex (MAC): its proteins punch holes straight into a bacterium's membrane, letting ions and water flood in and burst the cell — a purely chemical kill that needs no immune cell to finish the job.",
+     "zh": "补体级联的收官动作是膜攻击复合物（MAC）：它的蛋白直接在细菌膜上打洞，离子和水灌进去把细菌胀破——这是纯化学的一击致命，不需要任何免疫细胞来收尾。"
+    },
+    {
+     "en": "Four T-cell subtypes worth telling apart: killer/cytotoxic T cells destroy virus-infected or cancerous cells and drive transplant-graft rejection; helper T cells (CD4+) activate B cells and other T cells; suppressor T cells (CD8+) hold other lymphocytes back from attacking normal tissue; memory T cells file the reaction away for next time.",
+     "zh": "四种 T 细胞亚型值得分清：杀伤性/细胞毒性 T 细胞消灭病毒感染或癌变的细胞，也是移植排斥反应的推手；辅助性 T 细胞（CD4+）激活 B 细胞和其他 T 细胞；抑制性 T 细胞（CD8+）拦住其他淋巴细胞、防止攻击正常组织；记忆性 T 细胞把这次反应存档备用。"
+    },
+    {
+     "en": "Aging blunts immunity on several fronts simultaneously: T-cell and B-cell function drop, macrophage activity drops right along with them, so older adults get infected more easily and recover more slowly — and they also accumulate more autoantibodies, part of why autoimmune disease grows more common with age.",
+     "zh": "衰老会同时削弱好几条免疫战线：T 细胞和 B 细胞功能下降，巨噬细胞活性也跟着降，所以老年人更容易被感染、恢复得也更慢——同时体内自身抗体也在累积，这也是自身免疫病随年龄增多的部分原因。"
+    },
+    {
+     "en": "Spleen quick facts that matter beyond immunology: it sits in the left upper quadrant, monitors circulating blood, destroys worn-out red blood cells, and traps foreign invaders — the same organ trauma assessment flags as the one most commonly injured in blunt abdominal trauma.",
+     "zh": "脾脏的几个要点在免疫学之外同样重要：它位于左上腹，负责监测循环血液、清除衰老的红细胞、拦截外来入侵者——也正是创伤评估里钝性腹部外伤最常受伤的那个器官。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Acute and Chronic Inflammation",
+   "titleZh": "急性与慢性炎症",
+   "points": [
+    {
+     "en": "Acute inflammation's vascular choreography, in order: brief arteriolar constriction, then dilation that floods the area with blood under higher pressure (active hyperemia), then that pressure plus leaky vessel walls pushes fluid out as edema, and finally the vessel contracts and outflow slows into capillary stasis — this is the mechanism behind an inflamed area going red-hot-swollen and then settling.",
+     "zh": "急性炎症的血管变化按顺序走：先短暂收缩，再扩张让更多血在更高压力下涌入（主动性充血），压力加上血管壁通透性升高把液体挤出去形成水肿，最后血管收缩、流出减慢、血液在毛细血管里淤滞——这就是发炎部位先红热肿胀、再慢慢平息的机制。"
+    },
+    {
+     "en": "Mast cells are inflammation's chemical dispatch centre, triggered by physical injury, chemical/bacterial toxins, or an IgE-antigen interaction, and firing three mediator families: pre-stored histamine and serotonin act fast (vasodilation, permeability, bronchoconstriction, nausea/vomiting); leukotrienes — literally nicknamed 'slow-reacting substance of anaphylaxis' — drive bronchoconstriction, mucus production, permeability, and eosinophil recruitment; prostaglandins drive pain and inflammation and are exactly what aspirin and NSAIDs block.",
+     "zh": "肥大细胞是炎症的化学调度中心，被物理损伤、化学/细菌毒素或 IgE-抗原反应触发后，会打出三类介质：预先储存的组胺和血清素起效最快（血管扩张、通透性增加、支气管收缩、恶心呕吐）；白三烯——绰号就叫「过敏反应慢反应物质」——负责支气管收缩、黏液分泌、通透性增加、招募嗜酸性粒细胞；前列腺素负责疼痛和炎症，正是阿司匹林和 NSAID 阻断的靶点。"
+    },
+    {
+     "en": "Corticosteroids come with a real trade-off worth remembering in the field: they blunt the initial inflammatory response that wound healing actually needs, and they raise infection risk through immunosuppression — a genuine concern in diabetic patients, who already heal poorly to begin with.",
+     "zh": "皮质类固醇有个现场要记住的真实代价：它压低了伤口愈合本身需要的初期炎症反应，还会因免疫抑制而增加感染风险——这对本来就愈合差的糖尿病病人是个实打实的顾虑。"
+    },
+    {
+     "en": "Complement has two entry roads that converge on the same three products: the classic pathway needs an antigen-antibody complex to start, the alternate pathway can be triggered directly by bacterial toxins with no antibody required — either way you end up with C3b (coats bacteria for easier phagocytosis), anaphylatoxins C3a/C4a/C5a (trigger smooth-muscle contraction and histamine release, raising vascular permeability), and the membrane attack complex (punches straight through a cell membrane, killing it by letting ions and water flood in).",
+     "zh": "补体有两条入口路径，最后汇成同样三个产物：经典途径需要抗原-抗体复合物才能启动，旁路途径能被细菌毒素直接触发、不需要抗体——不管走哪条，终点都是 C3b（包被细菌方便吞噬）、过敏毒素 C3a/C4a/C5a（触发平滑肌收缩和组胺释放，让血管通透性升高）、以及膜攻击复合物（直接在细胞膜上打洞，靠离子和水灌入把细胞杀死）。"
+    },
+    {
+     "en": "Hageman factor (clotting factor XII) is the single switch that starts three cascades at once — clotting, fibrinolysis, and complement — activated by contact with exposed collagen or by bacterial endotoxin; downstream it converts kallikrein into bradykinin, which dilates vessels, raises permeability, contracts smooth muscle, and produces pain.",
+     "zh": "Hageman 因子（凝血因子 XII）是同时启动三条级联的总开关——凝血、纤溶、补体——被暴露的胶原蛋白或细菌内毒素接触激活；下游把激肽释放酶转化成缓激肽，后者能扩张血管、升高通透性、收缩平滑肌、还会引起疼痛。"
+    },
+    {
+     "en": "Two clotting pathways start from different triggers but end the same way: the intrinsic pathway fires when blood contacts exposed collagen (inside a cut vessel), the extrinsic pathway fires from substances released by damaged tissue itself — both converge on the same final common pathway that ends in fibrin.",
+     "zh": "两条凝血通路起点不同、终点一样：内源性通路是血液接触到暴露的胶原蛋白触发（血管断裂内壁），外源性通路是受损组织自身释放物质触发——两者最后都汇入同一条终末通路，生成纤维蛋白。"
+    },
+    {
+     "en": "Neutrophil recruitment is a five-step relay worth knowing in order: margination (they settle against the vessel wall as blood flow slows), activation (selectins/integrins appear on the surfaces), adhesion (they stick to the endothelium), transmigration/diapedesis (they squeeze through the vessel wall), and chemotaxis (they follow a chemical trail to the actual injury site).",
+     "zh": "中性粒细胞募集是五步接力，顺序值得记牢：边集（血流变慢时贴向血管壁）→激活（内皮和粒细胞表面出现选择素/整合素）→黏附（贴在内皮上）→跨壁迁移（穿过血管壁挤出去）→趋化（顺着化学信号追到真正的受伤部位）。"
+    },
+    {
+     "en": "Interferon is a signal unique to viral infection: cells that are actually infected by a virus manufacture and release it specifically to warn healthy neighbouring cells to build an antiviral enzyme BEFORE the virus reaches them — a preemptive defence, not a reactive one.",
+     "zh": "干扰素是病毒感染独有的信号：真正被病毒感染的细胞会制造并释放它，专门提醒周围还健康的细胞提前造出抗病毒酶——这是先发制人的防御，不是事后补救。"
+    },
+    {
+     "en": "Which tissues scar and which don't comes down to three cell categories: labile cells (skin, gut lining) divide continuously and heal completely; stable cells (liver, kidney) regenerate from surviving cells when stimulated; permanent cells (nerve tissue, cardiac muscle) cannot be replaced at all and get patched with scar tissue instead — this is exactly why cardiac and CNS injury is permanent while skin heals clean.",
+     "zh": "哪些组织能长回来、哪些只能留疤，取决于三类细胞：不稳定细胞（皮肤、肠黏膜）持续分裂、能完全愈合；稳定细胞（肝、肾）受刺激后靠存活细胞再生；永久性细胞（神经组织、心肌）完全不能替换，只能用瘢痕组织填补——这正是为什么心脏和中枢神经损伤是永久性的，而皮肤能长得干干净净。"
+    },
+    {
+     "en": "Wound tensile strength comes back on a slow, testable timeline: only about 10% of original strength is back by the end of week 1, climbing to about 80% by 3 months — a wound that 'looks healed' at two weeks is still a small fraction of its full strength and can reopen under stress.",
+     "zh": "伤口抗张强度恢复得很慢，时间线值得记：第 1 周结束时只恢复约 10%，到 3 个月才恢复到约 80%——两周时「看着愈合了」的伤口，实际强度还差得远，受力仍可能重新裂开。",
+     "hard": true
+    },
+    {
+     "en": "Primary versus secondary intention healing predicts what to expect: clean wounds with opposed margins (a surgical incision) heal by primary intention with a short, mild inflammatory phase; large, gaping, or infected wounds heal by secondary intention with a longer, more intense inflammatory phase (neutrophils persist for days), more granulation tissue, and myofibroblast-driven contraction pulling the wound margins together over time.",
+     "zh": "一期愈合 vs 二期愈合决定预期走向：整齐对合的干净伤口（外科切口）走一期愈合，炎症期短而轻；大而开放或已感染的伤口走二期愈合，炎症期更长更重（中性粒细胞能持续存在数天）、肉芽组织更多、还靠肌成纤维细胞收缩慢慢把创缘拉拢。"
+    },
+    {
+     "en": "Wound healing sabotage splits local versus systemic: locally, infection diverts the body's healing effort, poor blood supply (diabetes-driven hypoxia) starves the tissue, and retained foreign bodies keep triggering inflammation; systemically, poor nutrition, low white cell counts or marrow suppression, diabetes and HIV (both directly cripple immune cells), and corticosteroids all slow the same process.",
+     "zh": "破坏伤口愈合的因素分局部和全身两类：局部——感染分走了身体的修复资源、供血不足（糖尿病导致的缺氧）饿着组织、异物残留持续触发炎症；全身——营养不良、白细胞数低或骨髓抑制、糖尿病和 HIV（都直接削弱免疫细胞）、以及皮质类固醇，都会拖慢同一个愈合过程。"
+    },
+    {
+     "en": "Chronic inflammation is what happens when the acute response fails to resolve — from a lingering foreign body, persistent infection, or antigen — and it looks different under the microscope: monocytes and lymphocytes replace neutrophils as the dominant infiltrate, and angiogenesis (new blood vessel growth) joins the ongoing cycle of tissue destruction and repair.",
+     "zh": "慢性炎症是急性反应没能收场的结果——原因常是残留异物、持续感染或持续存在的抗原——显微镜下的样子也不同：浸润细胞从中性粒细胞变成单核细胞和淋巴细胞为主，还多了血管新生，和持续进行的组织破坏-修复循环一起出现。"
+    },
+    {
+     "en": "Age blunts inflammatory signs at both extremes with a hard clinical cutoff attached: neonates and older adults both mount weaker, subtler inflammatory responses and heal more slowly; a child's immune system is not fully mature until age 2-3, which is exactly why fever workup must be aggressive in young children — most experts recommend admission for any temperature above 38°C in an infant under 3 months.",
+     "zh": "年龄在两端都会削弱炎症表现，且带着一个硬性临床分界线：新生儿和老年人的炎症反应都更弱更隐匿，愈合也更慢；儿童免疫系统要到 2-3 岁才发育成熟，这正是幼儿发热必须积极查因的原因——3 个月以下婴儿体温超过 38°C，多数专家建议收住院。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Variances in Immunity and Inflammation",
+   "titleZh": "免疫与炎症的变异",
+   "points": [
+    {
+     "en": "Three immune misfires that get conflated: hypersensitivity is the umbrella term for any exaggerated response; allergy is hypersensitivity to a specific allergen; autoimmunity turns antibodies or T cells against the patient's OWN tissue (SLE); isoimmunity turns them against ANOTHER person's antigens — a transfusion reaction and organ-transplant rejection are both isoimmune, not autoimmune.",
+     "zh": "三种容易混的免疫「误伤」：超敏反应是所有过度反应的统称；过敏是对特定过敏原的超敏反应；自身免疫是抗体或 T 细胞攻击病人自己的组织（如 SLE）；同种免疫是攻击别人的抗原——输血反应和器官移植排斥都是同种免疫，不是自身免疫。"
+    },
+    {
+     "en": "Type I hypersensitivity (immediate, seconds to minutes): first exposure sensitizes mast cells by coating them with IgE; a second exposure cross-links that IgE and triggers degranulation, and released histamine feeds back on mast cells and eosinophils for more release — so severity snowballs unpredictably, spans anywhere from allergic rhinitis to fatal anaphylaxis, and a prior severe reaction raises the risk of the next one. Always treat an IgE reaction as a potential life-threatening event; epinephrine (auto-injector or IM/SC) is the field answer.",
+     "zh": "I 型超敏反应（速发型，秒到分钟级）：首次暴露先给肥大细胞「镀」上 IgE（致敏），再次暴露时 IgE 被交联、触发脱颗粒，释放的组胺又反过来刺激肥大细胞和嗜酸性粒细胞放更多——所以严重程度会滚雪球式升级、无法预判，轻则过敏性鼻炎，重则致命性过敏反应；上次反应重，这次风险更高。所有 IgE 反应都要按可能致命处理，现场答案是肾上腺素（自动注射笔或肌注/皮下）。"
+    },
+    {
+     "en": "Type II hypersensitivity (cytotoxic, hours): IgG or IgM binds antigens sitting directly on a cell's own membrane, and complement or antibodies then lyse that cell — no mast cells or histamine involved; transfusion reactions and hemolytic disease of the newborn are the textbook examples.",
+     "zh": "II 型超敏反应（细胞毒型，小时级）：IgG 或 IgM 直接结合在细胞膜上的抗原，随后靠补体或其他抗体把这个细胞溶解——不涉及肥大细胞或组胺；输血反应和新生儿溶血病是教科书例子。"
+    },
+    {
+     "en": "Type III hypersensitivity (immune-complex, hours): IgG-antigen complexes form in the bloodstream and deposit in tissue (the kidney is the favourite target), recruiting neutrophils and provoking inflammation; the systemic version is serum sickness (fever, rash, joint pain, swollen lymph nodes, splenomegaly — classically from penicillin or horse-serum antitoxin), the localized version is an Arthus reaction (farmer's lung, a mold-triggered hypersensitivity pneumonitis, is the textbook case).",
+     "zh": "III 型超敏反应（免疫复合物型，小时级）：IgG-抗原复合物在血液里形成后沉积在组织里（最爱沉积在肾），招来中性粒细胞并引发炎症；全身型叫血清病（发热、皮疹、关节痛、淋巴结肿大、脾大——典型见于青霉素或马血清抗毒素），局部型叫 Arthus 反应（农民肺——霉变干草引起的过敏性肺炎是教科书例子）。"
+    },
+    {
+     "en": "Type IV hypersensitivity (cell-mediated, delayed — days): no antibodies at all, T cells do the work directly, in two flavours — delayed hypersensitivity (CD4 helper T cells activate macrophages; poison ivy contact rash and a positive TB skin test are the examples) and cell-mediated cytotoxicity (CD8 killer T cells kill the target cell themselves — how the body clears viral infections, runs tumour surveillance, and rejects transplants).",
+     "zh": "IV 型超敏反应（细胞介导型，迟发——天数级）：完全不靠抗体，直接由 T 细胞干活，分两种——迟发型超敏（CD4 辅助性 T 细胞激活巨噬细胞；接触性皮炎如漆树过敏、结核菌素皮试阳性都是例子）和细胞毒性反应（CD8 杀伤性 T 细胞亲自杀死靶细胞——身体清除病毒感染、监视肿瘤、排斥移植物都靠这条路）。"
+    },
+    {
+     "en": "Six allergen categories worth running through as a differential when a trigger isn't obvious: inhalants (pollen, dust, mould), foods, drugs (aspirin, antibiotics, serums, codeine), infectious agents, contactants (metals, plants, chemicals), and physical agents (light, pressure, heat, cold).",
+     "zh": "触发原因不明时，六类过敏原可以当鉴别清单过一遍：吸入物（花粉、灰尘、霉菌）、食物、药物（阿司匹林、抗生素、血清制品、可待因）、感染因子、接触物（金属、植物、化学品）、物理因子（光、压力、冷热）。"
+    },
+    {
+     "en": "Two autoimmune signatures worth pattern-matching fast: Graves disease — autoantibodies stimulate the TSH receptor, driving hyperthyroidism plus the classic eye findings (lid retraction, stare, exophthalmos) and pretibial myxedema; myasthenia gravis — autoantibodies attack the neuromuscular junction, hitting the smallest muscles first (ptosis, diplopia, and dysphagia — an airway-relevant symptom), worsening with repeated use, and linked to thymic abnormalities in about two-thirds of patients.",
+     "zh": "两个值得快速识别的自身免疫病特征：Graves 病——自身抗体刺激 TSH 受体，导致甲亢并伴典型眼征（睑退缩、凝视、眼球突出）和胫前黏液性水肿；重症肌无力——自身抗体攻击神经肌肉接头，最先累及最小的肌肉（上睑下垂、复视，以及吞咽困难——一个关乎气道的症状），反复用力会加重症状，约三分之二的病人合并胸腺异常。"
+    },
+    {
+     "en": "Two more autoimmune patterns: ITP — antiplatelet antibodies cause bruising, petechiae, and mucosal bleeding, treated with immune-suppressing drugs or, in refractory cases, splenectomy (removing the organ that clears the antibody-coated platelets); SLE — immune complexes deposit across the kidneys, skin, lungs, and joints, producing the classic malar rash, photosensitivity, arthritis, and renal complications, disproportionately (though not exclusively) affecting young women.",
+     "zh": "另外两个自身免疫模式：ITP（免疫性血小板减少性紫癜）——抗血小板抗体导致瘀斑、瘀点、黏膜出血，治疗靠免疫抑制药物，顽固病例靠脾切除（切掉清除抗体包被血小板的那个器官）；SLE——免疫复合物沉积在肾、皮肤、肺、关节，表现为典型的蝶形红斑、光敏感、关节炎和肾脏并发症，好发（但不限）于年轻女性。"
+    },
+    {
+     "en": "Blood-type antibody logic: you always carry antibodies against the antigen you DON'T have — type A carries anti-B, type B carries anti-A, type AB carries neither (the 'universal recipient' logic), type O carries both (the 'universal donor' logic) — giving the wrong type triggers antibody-mediated destruction of the transfused cells.",
+     "zh": "血型抗体的逻辑：血浆里的抗体永远是针对自己没有的那个抗原——A 型带抗 B 抗体、B 型带抗 A 抗体、AB 型两种都不带（「万能受血者」的道理）、O 型两种都带（「万能供血者」的道理）——配错血型会触发抗体介导的输血细胞破坏。"
+    },
+    {
+     "en": "Rh factor: about 85% of people carry the Rh antigen (Rh-positive); giving Rh-positive blood to an Rh-negative recipient can trigger antibody formation and, on a later exposure, hemolysis and anemia — the identical mechanism is why an Rh-negative mother can develop antibodies against an Rh-positive fetus's blood.",
+     "zh": "Rh 因子：约 85% 的人携带 Rh 抗原（Rh 阳性）；给 Rh 阴性受血者输 Rh 阳性血会诱发抗体生成，下次再暴露就会引起溶血和贫血——同样的机制解释了为什么 Rh 阴性母亲可能对 Rh 阳性胎儿的血液产生抗体。",
+     "hard": true
+    },
+    {
+     "en": "Congenital immunodeficiency pattern-matching: severe combined immunodeficiency disease knocks out BOTH T cells and B cells, leaving patients vulnerable to every organism class at once (bacteria, fungi, viruses, parasites); X-linked agammaglobulinemia knocks out only B cells (T cells work fine), so patients get recurrent pyogenic bacterial infections but are spared fungal/viral trouble — and symptoms typically start around 6 months of age, exactly when the maternal antibody protection covered earlier in this chapter has worn off.",
+     "zh": "先天性免疫缺陷的模式辨认：重症联合免疫缺陷病同时打掉 T 细胞和 B 细胞，患者对所有类型病原体（细菌、真菌、病毒、寄生虫）都没有防御；X 连锁无丙种球蛋白血症只打掉 B 细胞（T 细胞正常），所以病人反复得化脓性细菌感染，却不容易得真菌或病毒感染——症状通常约在 6 个月大时出现，正好是前面讲过的母体抗体保护耗尽的时间点。",
+     "hard": true
+    },
+    {
+     "en": "Selective IgA deficiency is the single most common immunodeficiency overall, usually silent but sometimes causing chronic sinus infections, and carries a higher rate of autoimmune disease alongside it.",
+     "zh": "选择性 IgA 缺乏症是所有免疫缺陷里最常见的一种，多数没症状，少数会出现慢性鼻窦感染，并且合并自身免疫病的比例也更高。"
+    },
+    {
+     "en": "Acquired immunodeficiency causes worth screening for in a history: malnutrition (protein deficiency cripples the liver's ability to make inflammatory mediators and plasma proteins), the stress response to trauma or shock itself, iatrogenic causes (corticosteroids, chemotherapy-induced marrow suppression), and physical or mental stress (measurably lowers white cell, lymphocyte, and antibody function).",
+     "zh": "问病史时值得筛查的后天性免疫缺陷病因：营养不良（蛋白质不足削弱肝脏合成炎症介质和血浆蛋白的能力）、创伤或休克本身的应激反应、医源性因素（皮质类固醇、化疗导致的骨髓抑制）、以及身心压力（能实测性地降低白细胞、淋巴细胞和抗体功能）。"
+    },
+    {
+     "en": "HIV/AIDS mechanism in one line: the virus binds the CD4 receptor on helper T cells, infects and kills them — and because helper T cells coordinate BOTH humoral and cell-mediated immunity, their loss cripples the entire immune response at once, not just one arm of it.",
+     "zh": "HIV/AIDS 的机制一句话讲清：病毒结合辅助性 T 细胞上的 CD4 受体，感染并杀死这些细胞——而辅助性 T 细胞同时协调体液免疫和细胞免疫两条线，所以它一倒，整个免疫反应都会跟着垮，不只是某一条线出问题。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Stress and Disease",
+   "titleZh": "应激与疾病",
+   "points": [
+    {
+     "en": "Selye's General Adaptation Syndrome maps chronic stress onto three stages: Alarm (catecholamines fire fight-or-flight, readying the body but also weakening the immune system — an infection window opens), Resistance (the adrenal cortex secretes glucocorticoids like cortisol — raising blood glucose, powerfully anti-inflammatory — plus mineralocorticoids like aldosterone that retain sodium/water to support BP; prolonged resistance itself produces fatigue, poor concentration, irritability, lethargy), and Exhaustion (adrenal reserves run dry, blood glucose falls, stress tolerance collapses, and the now-compromised immune system lets heart attack, hypertension, or severe infection actually manifest).",
+     "zh": "Selye 的一般适应综合征把慢性应激分成三期：警戒期（儿茶酚胺启动战或逃反应，身体备战的同时免疫系统被削弱——感染的窗口打开了）；抵抗期（肾上腺皮质分泌糖皮质激素如皮质醇——升血糖、强力抗炎——加上盐皮质激素如醛固酮保钠保水撑血压；抵抗期拖久了本身就会造成疲劳、注意力差、易怒、乏力）；衰竭期（肾上腺储备耗尽、血糖下降、应激耐受崩溃，被拖垮的免疫系统这时才真正放行心梗、高血压或重症感染）。"
+    },
+    {
+     "en": "Cortisol is a double-edged sword: it is both the body's main stress glucocorticoid AND a potent anti-inflammatory, but sustained high cortisol suppresses immunity (via interleukin-6) and interferes with serotonin activity — a direct mechanistic link between chronic stress and depression, not just a loose association.",
+     "zh": "皮质醇是把双刃剑：它既是身体主要的应激糖皮质激素，又是强力抗炎剂；但持续偏高的皮质醇会通过白介素-6 抑制免疫，还会干扰血清素活性——这是慢性应激和抑郁之间一条实打实的机制通路，不只是模糊的相关性。"
+    },
+    {
+     "en": "Chronic stress has a direct cardiovascular route to disease: it dumps fat and cholesterol into the bloodstream, contributing to arterial clogging that can culminate in heart attack or stroke — a real physiologic pathway, not just a vague 'stress is bad for the heart' claim.",
+     "zh": "慢性应激通向心血管疾病有条直接路径：它把脂肪和胆固醇倾倒进血液，促成动脉阻塞，最终可能导致心梗或卒中——这是一条实实在在的生理通路，不只是「压力对心脏不好」的模糊说法。"
+    },
+    {
+     "en": "Real-world evidence for the mind-body link: bereaved spouses show a measurably higher rate of serious illness, including cancer, in the year after a spouse's death — psychological stress translating into physical disease risk through this same cortisol/immune-suppression pathway.",
+     "zh": "身心关联的真实证据：丧偶者在配偶去世后一年内，重大疾病（包括癌症）的发生率会明显升高——心理应激正是通过同一条皮质醇/免疫抑制通路转化成了实实在在的身体疾病风险。"
+    },
+    {
+     "en": "The suppression is reversible, which matters for how you frame patient education: immune suppression from chronic stress can be corrected with psychotherapy, medication, or anything that genuinely restores hope and self-esteem — this is not a one-way physiologic street.",
+     "zh": "这种抑制是可逆的，这一点在做病人宣教时很重要：慢性应激造成的免疫抑制，靠心理治疗、药物，或任何能真正重建希望感和自我价值感的干预都能纠正——这不是一条单行道。"
+    },
+    {
+     "en": "This closes the loop on the whole chapter: the same catecholamines, cortisol, and immune modulation that drive the compensatory response to hypoperfusion and shock are also the machinery of chronic stress — a body simultaneously fighting acute illness and ongoing psychosocial stress is drawing on the same limited hormonal reserves twice over, which is exactly why chronically stressed patients decompensate faster and heal slower.",
+     "zh": "这一节把全章串成一个闭环：驱动低灌注/休克代偿反应的那套儿茶酚胺、皮质醇和免疫调节机制，正是慢性应激背后的同一套装置——一个同时在对抗急性疾病又长期承受心理压力的身体，其实是在用同一份有限的激素储备透支两次，这正是长期高压病人失代偿更快、愈合更慢的原因。"
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Adult vs paediatric fluid-loss tolerance",
+   "itemZh": "成人 vs 儿童体液丢失耐受度",
+   "value": "成人 >30% 才出症状；儿童 10-15% 即出症状"
+  },
+  {
+   "itemEn": "Five heat-elimination channels",
+   "itemZh": "五条散热通道",
+   "value": "对流、传导、辐射、蒸发、呼吸"
+  },
+  {
+   "itemEn": "Total body water by sex",
+   "itemZh": "全身含水量（按性别）",
+   "value": "体重的 50-70%；男 60%、女 50%"
+  },
+  {
+   "itemEn": "ICF / ECF split",
+   "itemZh": "细胞内外液分配",
+   "value": "ICF 占体重 45%（占总水量 75%）；ECF 占体重 15%（占总水量 25%，含组织间液 10.5%＋血管内液 4.5%）"
+  },
+  {
+   "itemEn": "Body water across the lifespan",
+   "itemZh": "含水量随年龄变化",
+   "value": "新生儿约 80%；老年人可低至 45%"
+  },
+  {
+   "itemEn": "Daily fluid ledger",
+   "itemZh": "每日体液收支",
+   "value": "约 2,500 mL；入 60%喝/30%食/10%代谢；出 60%尿/28%皮肺/6%便/6%汗"
+  },
+  {
+   "itemEn": "Na+/K+ pump ratio",
+   "itemZh": "钠钾泵交换比",
+   "value": "每次 3 Na+ 出：2 K+ 入"
+  },
+  {
+   "itemEn": "Isotonic reference osmolarity",
+   "itemZh": "等张液参考渗透压",
+   "value": "约 280 mOsm/L（NS、LR）"
+  },
+  {
+   "itemEn": "Sodium disorder cut-offs",
+   "itemZh": "钠紊乱判定线",
+   "value": "高钠 ≥143 mEq/L（>160 mmol/L 危及意识）；低钠 ≤135 mEq/L"
+  },
+  {
+   "itemEn": "Potassium normal range / danger zones",
+   "itemZh": "钾正常范围 / 危险区间",
+   "value": "3.5-5.0 mEq/L；<2.5 弛缓瘫痪；>6.5 mmol/L 心电图改变"
+  },
+  {
+   "itemEn": "Calcium normal range / IV treatment",
+   "itemZh": "钙正常范围 / 静脉用药",
+   "value": "2.05-2.55 mmol/L（教材 8.2-10.2 mg/dL）；10% 葡萄糖酸钙 10-20 mL，静推 10-15 分钟"
+  },
+  {
+   "itemEn": "Magnesium normal range",
+   "itemZh": "镁正常范围",
+   "value": "1.3-2.1 mEq/L"
+  },
+  {
+   "itemEn": "Blood pH normal range and its log-scale bite",
+   "itemZh": "血 pH 正常范围及其指数效应",
+   "value": "7.35-7.45；7.40→7.20 ≈ 酸浓度升高 100 倍"
+  },
+  {
+   "itemEn": "Acetaminophen acute-overdose threshold (adult)",
+   "itemZh": "对乙酰氨基酚急性过量阈值（成人）",
+   "value": ">140 mg/kg"
+  },
+  {
+   "itemEn": "Autosomal-recessive transmission risk",
+   "itemZh": "常染色体隐性遗传风险",
+   "value": "双携带者父母：每胎 25%；双患病父母：100%"
+  },
+  {
+   "itemEn": "Autosomal-dominant transmission risk",
+   "itemZh": "常染色体显性遗传风险",
+   "value": "患病父母：每胎 ≥50%"
+  },
+  {
+   "itemEn": "Duchenne muscular dystrophy timeline",
+   "itemZh": "杜氏肌营养不良病程",
+   "value": "约 4 岁起病；约 12 岁需轮椅；常 20 岁前死亡"
+  },
+  {
+   "itemEn": "White cell differential (neutrophil/eosinophil/basophil)",
+   "itemZh": "白细胞分类占比（中性/嗜酸/嗜碱）",
+   "value": "中性 55-70%；嗜酸 1-3%；嗜碱 <1%"
+  },
+  {
+   "itemEn": "Monocyte-to-macrophage timeline",
+   "itemZh": "单核转巨噬细胞的时间",
+   "value": "血中成熟约 24 小时后迁入组织"
+  },
+  {
+   "itemEn": "Immunoglobulin class shares",
+   "itemZh": "免疫球蛋白类别占比",
+   "value": "IgG 75%；IgA 15%；IgM 5-10%；IgE <1%"
+  },
+  {
+   "itemEn": "Wound tensile-strength recovery timeline",
+   "itemZh": "伤口抗张强度恢复时间线",
+   "value": "第 1 周末约 10%；3 个月约 80%"
+  },
+  {
+   "itemEn": "Paediatric fever admission threshold / immune maturity age",
+   "itemZh": "儿童发热收入院阈值 / 免疫成熟年龄",
+   "value": "<3 月龄且体温 >38°C 建议入院；免疫系统 2-3 岁才成熟"
+  },
+  {
+   "itemEn": "Rh-positive population share",
+   "itemZh": "Rh 阳性人群占比",
+   "value": "约 85%"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Local anesthetics (lidocaine) and antiarrhythmics (amiodarone) both work by blocking ion channels — the same mechanism from the cell-membrane basics explains why one drug can numb a wound and another can quiet a dysrhythmia.",
+   "zh": "局麻药（利多卡因）和抗心律失常药（胺碘酮）都是靠堵住离子通道起效——细胞膜基础那节的同一个机制，解释了为什么一种药能麻醉伤口、另一种能压住心律失常。"
+  },
+  {
+   "en": "Hypertonic solutions (mannitol, 3% saline) treat cerebral edema by pulling water straight out of swollen brain cells — this is pure osmosis in action, not a separate pharmacology trick.",
+   "zh": "高渗液（甘露醇、3% 盐水）治脑水肿的原理，就是把水直接从肿胀的脑细胞里拉出来——这纯粹是渗透作用在起效，不是什么另外的药理学把戏。"
+  },
+  {
+   "en": "Pulmonary edema is the same fluid-leak mechanism behind three very different-looking calls — cardiac failure, near-drowning, and narcotic overdose — all flood the alveoli and block oxygen diffusion the same way; treat the mechanism (support oxygenation, ventilation), not just the label on the call.",
+   "zh": "肺水肿背后是同一套液体渗漏机制，却能套在三种完全不同的出车场景上——心衰、近乎溺水、麻醉药过量——都是灌满肺泡、堵住氧气弥散；要按机制处理（保通气给氧），不要只盯着调度单上的标签。"
+  },
+  {
+   "en": "Symptomatic hypocalcemia (tetany, dysrhythmia, seizure) gets 10% IV calcium gluconate, 10-20 mL, over 10-15 minutes — push it slowly; this is not a rapid IV push drug.",
+   "zh": "有症状低钙血症（手足搐搦、心律失常、抽搐）给 10% 葡萄糖酸钙静脉注射，10-20 mL，用时 10-15 分钟——要慢推，这不是能快推的药。"
+  },
+  {
+   "en": "BC's reversible-cardiac-arrest H's (Hypovolemia, Hypoxia, Hydrogen ion/acidosis, Hypo/hyperkalemia, Hypothermia) are not a separate topic to memorize cold — they are five mechanisms this very chapter just taught in depth. Scanning for a reversible cause during a code is literally running back through this chapter's cell-injury and electrolyte sections in your head.",
+   "zh": "BC 心脏骤停可逆病因清单里的 H 系列（低血容量、缺氧、氢离子/酸中毒、高/低血钾、低体温）不是要另外死记的新知识——它们就是这一章刚讲透的五个机制。心脏骤停现场扫可逆病因，本质上就是在脑子里把这一章的细胞损伤和电解质那几节重新过一遍。"
+  },
+  {
+   "en": "A patient's next Type I reaction is not guaranteed to be milder just because the last one wasn't severe — the amnestic secondary response is typically faster and stronger, so treat every re-exposure as higher-risk, not lower.",
+   "zh": "病人下一次 I 型反应不会因为上次不严重就自动更轻——记忆性的二次反应通常更快更强，所以每一次再暴露都要按风险更高、而不是更低来处理。"
+  },
+  {
+   "en": "New or worsening confusion in an older patient is never automatically 'probably dementia' — rule out an acute, reversible cause (new medication, infection, MI) first; an apparent behavioural problem can have a fully organic origin, especially in geriatrics.",
+   "zh": "老年病人新出现或加重的意识混乱，永远不能自动归成「大概是老年痴呆」——先排除急性、可逆的病因（新用药、感染、心梗）；看起来像行为问题的表现，尤其在老年人身上，完全可能有器质性根源。"
+  },
+  {
+   "en": "Ask about sulfa antibiotics (Septra/Bactrim) in any patient with unexplained new pallor, fatigue, or dark urine — undiagnosed G6PD deficiency turns a routine UTI prescription into a hemolytic anemia trigger.",
+   "zh": "遇到不明原因新发面色苍白、乏力或尿色变深，要多问一句最近有没有吃磺胺类抗生素（如 Septra/Bactrim）——未确诊的 G6PD 缺乏症能把一次普通的尿路感染处方变成溶血性贫血的导火索。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Homeostasis means nothing is happening' — wrong: it is a dynamic, constantly-adjusting balance driven by nonstop negative feedback, not a static resting state.",
+   "zh": "「内环境稳态＝什么都没发生」——错：它是靠负反馈不停微调出来的动态平衡，不是静止不动的状态。"
+  },
+  {
+   "en": "'A normal SpO2 rules out cellular hypoxia' — wrong: hypoxia has four different entry points, and cyanide-type toxins block the cell's ability to USE oxygen even when delivery and saturation both look normal.",
+   "zh": "「SpO2 正常＝排除细胞缺氧」——错：缺氧有四个不同的切入点，氰化物一类的毒物是阻断细胞用氧的能力，哪怕氧供和血氧饱和度看着都正常。"
+  },
+  {
+   "en": "'Necrosis and apoptosis are both just cell death, same thing' — wrong: apoptosis is genetically programmed and provokes NO inflammation; necrosis is messy and always provokes inflammation.",
+   "zh": "「坏死和凋亡都是细胞死了，一回事」——错：凋亡是基因编程好的，不引发炎症；坏死是一地狼藉，必定引发炎症。"
+  },
+  {
+   "en": "'Metabolic and respiratory acid-base problems are read the same way' — wrong: metabolic problems start as a pH shift with PaCO2 initially unmoved; respiratory problems start with PaCO2 itself moving and dragging the pH along.",
+   "zh": "「代谢性和呼吸性酸碱失衡是一个读法」——错：代谢性问题先是 pH 变了、PaCO2 还没动；呼吸性问题是 PaCO2 先变、拖着 pH 走。"
+  },
+  {
+   "en": "'Genetic risk and familial tendency are the same thing' — wrong: genetic risk means a specific inherited gene is proven to be the cause; familial tendency just means a disease clusters in a family without a confirmed heritable gene defect.",
+   "zh": "「遗传风险和家族倾向是一回事」——错：遗传风险是证实了具体致病基因的遗传；家族倾向只是这个病在某家族扎堆出现，并没有证实存在可遗传的基因缺陷。"
+  },
+  {
+   "en": "'All four hypersensitivity types are just allergies at different speeds' — wrong: only Type I is IgE/histamine-mediated allergy; Type II is antibody-mediated cell killing, Type III is immune-complex deposition, Type IV involves no antibodies at all — different mechanisms, not just different clocks.",
+   "zh": "「四型超敏反应只是速度不同的过敏」——错：只有 I 型是 IgE/组胺介导的过敏；II 型是抗体介导的细胞杀伤，III 型是免疫复合物沉积，IV 型完全不靠抗体——是机制不同，不只是快慢不同。"
+  },
+  {
+   "en": "'Cortisol is just the stress hormone, basically bad for you' — wrong: cortisol is a genuinely useful, potent anti-inflammatory in the short term; it only turns harmful (immune suppression, depression via serotonin interference) when it stays chronically elevated.",
+   "zh": "「皮质醇就是压力激素，反正对身体不好」——错：短期内皮质醇是真正有用的强效抗炎物质；只有长期持续偏高时才会转向有害（免疫抑制、通过干扰血清素诱发抑郁）。"
+  },
+  {
+   "en": "'Corticosteroids are purely helpful for an inflamed wound' — wrong: they blunt the initial inflammatory response that healing actually needs and raise infection risk through immunosuppression, a real concern in diabetic patients specifically.",
+   "zh": "「皮质类固醇对发炎的伤口只有好处」——错：它会压低愈合真正需要的初期炎症反应，还会因免疫抑制增加感染风险，对糖尿病病人是个实打实的顾虑。"
+  },
+  {
+   "en": "'X-linked recessive diseases can show up in daughters too, just less often' — wrong for the classic pattern in this chapter: hemophilia and Duchenne muscular dystrophy pass from asymptomatic carrier mothers to sons, and only males actually develop the disease.",
+   "zh": "「X 连锁隐性病女儿也会得，只是概率低」——对本章讲的经典模式来说是错的：血友病和杜氏肌营养不良是从无症状携带者母亲传给儿子，真正发病的只有男性。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "ACID = types I-IV",
+   "en": "Hypersensitivity types in order: Anaphylactic/Atopic (I, IgE), Cytotoxic (II, antibody kills the cell), Immune-complex (III, deposits and inflames), Delayed (IV, T cells only, no antibody).",
+   "zh": "超敏反应四型按顺序记成 ACID：Anaphylactic/Atopic（I 型，IgE）、Cytotoxic（II 型，抗体杀细胞）、Immune-complex（III 型，沉积引炎）、Delayed（IV 型，只靠 T 细胞、不靠抗体）。"
+  },
+  {
+   "name": "3-out-2-in",
+   "en": "The Na+/K+ pump: 3 sodium ions out for every 2 potassium ions in, every single cycle — break this pump and sodium (plus water) piles up inside the cell.",
+   "zh": "钠钾泵「三出二进」：每一轮泵出 3 个钠离子、换进 2 个钾离子——这个泵一坏，钠（带着水）就会堆在细胞里。"
+  },
+  {
+   "name": "GAMED (Ig abundance order)",
+   "en": "Immunoglobulin classes from most to least abundant in plasma spell GAMED: IgG (75%), IgA (15%), IgM (5-10%), IgE and IgD (each under 1%).",
+   "zh": "免疫球蛋白按血浆占比从多到少拼成 GAMED：IgG（75%）、IgA（15%）、IgM（5-10%）、IgE 和 IgD（各不到 1%）。"
+  },
+  {
+   "name": "GAS",
+   "en": "Selye's General Adaptation Syndrome in order: Alarm (catecholamines), Resistance (cortisol/aldosterone), Exhaustion (adrenal reserves run dry) — G-A-S.",
+   "zh": "Selye 的一般适应综合征按顺序记成 GAS：Alarm 警戒期（儿茶酚胺）、Resistance 抵抗期（皮质醇/醛固酮）、Exhaustion 衰竭期（肾上腺储备耗尽）。"
+  },
+  {
+   "name": "7.40 down to 7.20 = 100x",
+   "en": "A pH drop from 7.40 to 7.20 looks small on paper but represents roughly a 100-fold rise in free acid — say it out loud as '0.2 down, 100 times up' to remember the log-scale trap.",
+   "zh": "pH 从 7.40 掉到 7.20 看着数字小，实际游离酸浓度涨了约 100 倍——念成「0.2 的差距，100 倍的酸」来记住对数刻度的陷阱。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A patient's serum potassium comes back at 6.8 mmol/L with peaked T waves on the monitor. Which single drug stabilizes the heart immediately, and which drugs actually lower the potassium level — and over what timeframe?",
+   "qZh": "病人血钾 6.8 mmol/L，心电监护出现 T 波高尖。哪个药能立即稳定心脏？哪些药才是真正降钾的？大约需要多久？",
+   "aEn": "IV calcium stabilizes the cardiac cell membrane immediately against the arrhythmia risk, but does not lower the potassium level itself. Bicarbonate, insulin, and salbutamol shift potassium into cells over roughly 15-30 minutes — calcium protects the heart, the other three actually treat the number.",
+   "aZh": "静脉钙能立即稳定心肌细胞膜、对抗心律失常风险，但它本身不降钾。碳酸氢盐、胰岛素、沙丁胺醇会在约 15-30 分钟内把钾推进细胞内——钙是保心脏，另外三个才是真正处理钾的数值。"
+  },
+  {
+   "qEn": "A patient's blood pH drops from 7.40 to 7.20. Roughly how many times has the free acid concentration increased, and why does such a small pH change carry such a big physiologic punch?",
+   "qZh": "病人血 pH 从 7.40 掉到 7.20。游离酸浓度大约升高了多少倍？为什么这么小的 pH 变化会有这么大的生理冲击？",
+   "aEn": "Roughly 100-fold. pH is a negative log scale, so changes in it are exponential, not linear — a 0.2 drop on the number line hides a massive rise in actual acid concentration.",
+   "aZh": "大约 100 倍。因为 pH 是负对数刻度，数值上的变化是指数级的、不是线性的——数字上只差 0.2，实际酸浓度的涨幅却很惊人。"
+  },
+  {
+   "qEn": "Differentiate atrophy, hypertrophy, and hyperplasia using their defining mechanism, not just an example disease.",
+   "qZh": "只用定义机制（不是靠举例子）区分萎缩、肥大、增生。",
+   "aEn": "Atrophy: cells shrink, cell count stays the same. Hypertrophy: cells enlarge (more internal machinery), cell count stays the same. Hyperplasia: the actual number of cells increases.",
+   "aZh": "萎缩：细胞变小，数量不变。肥大：细胞变大（内部结构增多），数量不变。增生：细胞数量本身增多。"
+  },
+  {
+   "qEn": "A patient is stung by a bee for the second time in her life and develops sudden wheeze, hives, and hypotension within minutes. Name the hypersensitivity type and explain why the FIRST sting mattered even though it caused no symptoms.",
+   "qZh": "病人第二次被蜜蜂蜇，几分钟内出现喘鸣、荨麻疹和低血压。这是哪一型超敏反应？为什么第一次被蜇（当时没症状）也很重要？",
+   "aEn": "Type I (IgE-mediated). The first sting sensitized her mast cells by coating them with antigen-specific IgE — no symptoms needed for this step. The second sting cross-linked that IgE, triggering mast cell degranulation and a histamine-driven feedback loop that produced the acute reaction.",
+   "aZh": "I 型（IgE 介导）。第一次被蜇让肥大细胞被特异性 IgE「镀」上（致敏），这一步本身不需要出现症状。第二次被蜇让 IgE 被交联，触发肥大细胞脱颗粒，组胺驱动的正反馈循环制造出这次的急性反应。"
+  },
+  {
+   "qEn": "A confused patient has a serum sodium of 148 mEq/L. Is this hyper- or hyponatremia, and at what level does the risk of hyperthermia, delirium, and coma rise further?",
+   "qZh": "一位意识混乱的病人血钠 148 mEq/L。这是高钠还是低钠？超过多少会进一步增加高热、谵妄、昏迷的风险？",
+   "aEn": "This is hypernatremia (defined at serum sodium 143 mEq/L or above). Risk of hyperthermia, delirium, and coma rises further once the level passes 160 mmol/L.",
+   "aZh": "这是高钠血症（定义为血钠 ≥143 mEq/L）。超过 160 mmol/L 后，高热、谵妄、昏迷的风险会进一步升高。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Reversible causes of cardiac arrest (H's and T's)",
+   "topicZh": "心脏骤停可逆病因（H's and T's）",
+   "bookEn": "This chapter teaches hypoxia, acidosis, and hypo/hyperkalemia as standalone cellular-injury and electrolyte topics; it does not package them into a named checklist for cardiac arrest.",
+   "bookZh": "本章把缺氧、酸中毒、高/低血钾当作独立的细胞损伤和电解质主题来讲，没有把它们打包成一份心脏骤停专用清单。",
+   "bcEn": "BC's guidelines consolidate five of these mechanisms into the 'H's' of reversible cardiac arrest causes: Hypovolemia, Hypoxia, Hydrogen ion (acidosis), Hypo/Hyperkalemia, Hypothermia (paired with the 'T's': Tension pneumothorax, cardiac Tamponade, Toxins/anaphylaxis, pulmonary Thrombosis, coronary Thrombosis). When running a code, treat this as a direct application of this chapter's mechanisms, not a separate memorization task.",
+   "bcZh": "BC 考纲把其中五个机制打包成心脏骤停可逆病因的「H 系列」：低血容量（Hypovolemia）、缺氧（Hypoxia）、氢离子/酸中毒（Hydrogen ion）、高/低血钾（Hypo/Hyperkalemia）、低体温（Hypothermia）（配对的「T 系列」：张力性气胸、心包填塞、中毒/过敏、肺栓塞、冠脉血栓）。心脏骤停现场排查可逆病因时，这就是本章机制的直接应用，不是另一份要死记的清单。",
+   "ref": "BC Guidelines p.45 Treatable Causes of Cardiac Arrest"
+  },
+  {
+   "topicEn": "Active drug treatment of hyperkalemia",
+   "topicZh": "高钾血症的主动药物治疗",
+   "bookEn": "The textbook presents hyperkalemia as a life-threatening electrolyte disturbance that 'should be treated in the prehospital setting,' naming IV calcium, bicarbonate, insulin, and salbutamol as the treatment sequence.",
+   "bookZh": "教材把高钾血症描述成「应该在院前处理」的致命性电解质紊乱，并列出静脉钙、碳酸氢盐、胰岛素、沙丁胺醇这套治疗顺序。",
+   "bcEn": "The BC PCP scope guidelines do not carry a standalone hyperkalemia drug-treatment protocol — hyperkalemia appears only inside the reversible-cardiac-arrest H's list. At the PCP exam level, treat this as a recognition-and-transport skill (spot the ECG changes, monitor, transport, communicate the suspicion) rather than a drug-administration skill, unless a specific local or ACP-level protocol says otherwise.",
+   "bcZh": "BC PCP 范围的考纲里没有单独的高钾血症给药方案——高钾血症只出现在心脏骤停可逆病因的 H 系列里。在 PCP 考试层面，把它当成「识别＋转运」的技能来处理（认出心电图改变、监护、转运、口头交接怀疑），而不是给药技能，除非有具体的本地协议或 ACP 层级方案另有规定。",
+   "ref": "BC Guidelines — no standalone hyperkalemia protocol found; cf. p.45 Treatable Causes of Cardiac Arrest"
+  }
+ ],
+ "sourcePages": "311-429"
+}

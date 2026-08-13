@@ -1,0 +1,1277 @@
+{
+ "id": "ch08",
+ "n": 8,
+ "titleEn": "Vascular Access and Medication Administration",
+ "titleZh": "血管通路与给药",
+ "group": "pharm",
+ "examWeight": 2,
+ "whyEn": "The authorization line of the whole licence sits in this chapter. Every BC protocol that mentions vascular access places it under Additional Primary Care Paramedic Interventions and nowhere else — an EMR has no IV authority in this province, so any exam option that has an EMR starting a line is wrong on its face. For PCP candidates the examinable core is narrow and arithmetic: catheter gauge by purpose, the 20 mL/kg capped at 2 L bolus that recurs identically across five protocols, the ~75 mL/hr maintenance rate, and gtt/min = volume x drop factor / minutes. The textbook's intraosseous and tracheal-route teaching is background only — neither appears anywhere in BC's documents.",
+ "whyZh": "整个执照的授权分界线就在这一章。BC 考纲里凡是提到静脉通路的地方，无一例外都排在「PCP 附加干预」之下——**EMR 在本省完全没有开 IV 的权限**，所以考题里只要出现「EMR 建立静脉通路」，那个选项本身就是错的。对 PCP 考生来说，可考的核心其实很窄而且偏算术：按用途选针号、五个协议里逐字重复的「20 mL/kg 上限 2 升」推注公式、约 75 mL/hr 的维持速度，以及 gtt/min =（液量 × 滴系数）÷ 分钟数。教材里的骨髓腔通路和气管给药只当背景知识——这两样在 BC 的任何官方文件里都查不到。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics"
+  ],
+  "codes": [
+   "4.5.d",
+   "5.5.c",
+   "5.5.d",
+   "5.5.e",
+   "5.5.g",
+   "5.8.b",
+   "5.8.c",
+   "5.8.d",
+   "5.8.e",
+   "5.8.f",
+   "5.8.g",
+   "5.8.h",
+   "5.8.i",
+   "5.8.j",
+   "5.8.k",
+   "5.8.l",
+   "5.8.m"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction",
+   "titleZh": "本章导读",
+   "points": [
+    {
+     "en": "BC prehospital vascular access covers three distinct techniques: peripheral extremity vein cannulation, external jugular (EJ) vein cannulation, and intraosseous (IO) infusion — this chapter treats all three as invasive procedures requiring proficiency and caution, not routine tasks.",
+     "zh": "院前血管通路一共只有三条路：外周肢体静脉穿刺、颈外静脉（EJ）穿刺、骨髓腔（IO）输注——本章把这三者都当成需要熟练且谨慎对待的侵入性操作，不是随手就能做的常规动作。"
+    },
+    {
+     "en": "The chapter's content forms one continuous safety chain — fluid/electrolyte physiology, IV solution classification, insertion mechanics, and dosage math — so an error at any single link (wrong tonicity, wrong gauge, wrong site, wrong rate) can turn a correctly indicated therapy into patient harm.",
+     "zh": "本章内容是一条连续的安全链条：体液电解质生理→IV液体分类→穿刺操作→剂量数学，任何一环出错（选错张力、选错型号、选错部位、算错速率）都可能把一个本该有效的治疗变成伤害。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Direction",
+   "titleZh": "医疗指导与给药安全",
+   "points": [
+    {
+     "en": "Standing orders are indirect medical control: the paramedic carries out predefined actions from a written protocol without a real-time conversation. Direct medical control means the specific action requires contacting the medical control physician or a designate first — even services that mainly run on standing orders are advised to call in whenever a situation is unusual.",
+     "zh": "预立医嘱（standing orders）属于间接医疗指导：按写好的规程执行预定动作，不需要临场通话。直接医疗指导则要求先联系医疗指导医生或其指定人员再动作——即便平时主要靠预立医嘱运作的系统，遇到不寻常情况也建议先通话确认。",
+     "hard": true
+    },
+    {
+     "en": "Before administering any drug: verify the patient is not allergic (via the patient or a reliable source), read the label three times — in the box, while preparing it, and immediately before giving it — and check for cracks, discolouration, cloudiness, or precipitate in the container; a suspicious-looking drug is never used.",
+     "zh": "给药前三步：核实病人不过敏（问病人或可靠信息源）、把标签读三遍——取药盒时、配药时、给药前各一遍——并检查容器有无裂损、变色、浑浊或沉淀；看着不对劲的药一律不用。",
+     "hard": true
+    },
+    {
+     "en": "For an online physician consultation: make sure the physician has the full clinical picture (age, weight, status, allergies, other meds), then repeat the order word for word — drug, dose, and route — back to the physician before giving it; if your partner did not hear the exchange, repeat it to them too as a second safety check.",
+     "zh": "在线请示医生时：先确保医生掌握完整病情（年龄、体重、状态、过敏史、合并用药），再把医嘱逐字复述——药名、剂量、途径——给医生确认后才能执行；如果搭档没听到这段通话，还要再复述给搭档听，作为第二道安全检查。",
+     "hard": true
+    },
+    {
+     "en": "After giving any medication, document six items: drug name, dose, time given, route, the administering paramedic's name, and the patient's response (positive or negative) — this list is separate from, and in addition to, the Six Rights checked before administration.",
+     "zh": "给药后要记录六项：药名、剂量、给药时间、途径、给药人姓名、病人反应（好转或恶化）——这六项和给药前核对的「六项正确」是两回事，给药后另外要记。",
+     "hard": true
+    },
+    {
+     "en": "Controlled substances (e.g., morphine, midazolam, fentanyl) require documenting both the amount given and the amount wasted, with a cosignature, plus a general medication count every 12 to 24 hours to verify inventory accuracy — this is a governing-body-level requirement (e.g., Health Canada), not a local option.",
+     "zh": "管制药物（如吗啡、咪达唑仑、芬太尼）必须同时记录「给了多少」和「废弃了多少」，并要有另一人签字确认，此外每12到24小时还要做一次库存盘点核实数量——这是监管机构（如加拿大卫生部）层级的硬性要求，不是各地可选可不选的做法。",
+     "hard": true
+    },
+    {
+     "en": "Drug incompatibility example: mixing sodium bicarbonate with calcium chloride forms an insoluble precipitate (calcium carbonate). If cloudiness appears after injecting a drug into IV tubing, clamp the tubing immediately and replace the entire administration set — flushing it through is not an acceptable fix.",
+     "zh": "配伍禁忌举例：碳酸氢钠和氯化钙混合会生成不溶的碳酸钙沉淀。如果往IV管路里推药后出现浑浊，要立刻夹闭管路并更换整套输液器——冲一冲继续用不是可接受的处理方式。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Local Drug Distribution System",
+   "titleZh": "本地药物配送系统",
+   "points": [
+    {
+     "en": "The shift-start ambulance check must confirm every medication carried is unexpired, undamaged, and stocked at the correct quantity — this is a mandatory part of the beginning-of-shift check, not something done only when a problem is suspected.",
+     "zh": "值班开始时的救护车检查必须确认车上每一种药物都未过期、未损坏、且数量正确——这是班前检查的强制项目，不是有问题才做的抽查。",
+     "hard": true
+    },
+    {
+     "en": "Medication storage temperature is drug-specific, not a single blanket number — always check the package insert for the recommended storage temperature of that particular medication while it sits in the ambulance.",
+     "zh": "药物储存温度是逐个药物定的，没有统一的一个数字——车上储药的温度要求以每种药自己的说明书为准，不能套用同一个标准。",
+     "hard": true
+    },
+    {
+     "en": "Documentation and security of all controlled substances carried on the ambulance, including accounting for any wasted (drawn up but not administered) medication, is the individual paramedic's responsibility under the local drug-distribution, security, and accountability system.",
+     "zh": "救护车上所有管制药物的记录和保管，包括核算任何被浪费（已抽出但未使用）的药量，都是当班急救员的个人责任，要按本地的药物配送、安保与问责制度执行。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Asepsis",
+   "titleZh": "医学无菌操作",
+   "points": [
+    {
+     "en": "Sterile technique destroys all living organisms (via heat, gas, or chemicals) and is how supplies arrive packaged before you touch them; medical asepsis (handwashing, gloving, keeping equipment clean) only reduces contamination risk and is the standard actually achievable in the field — true sterility cannot realistically be maintained in the prehospital setting.",
+     "zh": "无菌技术（sterile technique）靠热、气体或化学品杀灭所有活体微生物，是耗材出厂封装时就做好的事；医学无菌（medical asepsis，洗手、戴手套、保持器械清洁）只能降低污染风险，是院前现场真正能做到的标准——绝对无菌在院前环境里基本不可能长期维持。",
+     "hard": true
+    },
+    {
+     "en": "Antiseptics (isopropyl alcohol, iodine) are safe on living tissue and are used to prep a puncture site; disinfectants (sodium hypochlorite/bleach, Virex, Cidex, Microcide) are toxic to living tissue and are for nonliving surfaces only — the inside of the ambulance, laryngoscope blades — never on a patient.",
+     "zh": "消毒杀菌剂（antiseptic，如异丙醇、碘伏）对活组织安全，用来给穿刺部位备皮；消毒液（disinfectant，如次氯酸钠/漂白水、Virex、Cidex、Microcide）对活组织有毒性，只能用在非生命体表面——救护车内部、喉镜片——绝不能用在病人身上。",
+     "hard": true
+    },
+    {
+     "en": "A break in asepsis requires restarting, not rescuing: an IV catheter that touches the ground or any contaminated surface after the package is opened must be discarded for a fresh one, and a cleaned injection port that gets re-touched must be re-cleansed before injecting — there is no partial-credit exception to either rule.",
+     "zh": "无菌被破坏了就要重来，不能将就：拆包后的IV导管一旦碰到地面或其他污染物必须换新的，已经消毒过的注射接口如果又被摸了一下，也必须重新消毒才能扎针——这两条规则都没有「差不多就行」的例外。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Routine Precautions and Contaminated Equipment Disposal",
+   "titleZh": "常规防护与污染器材处理",
+   "points": [
+    {
+     "en": "Accidental needlesticks are the single most common route of disease transmission in health care — this is the reason blunt-tip needles for drawing up medication and safety catheters/needleless delivery systems exist, and why you should default to them whenever they are available.",
+     "zh": "意外针刺伤是医疗环境中最常见的疾病传播途径——这正是为什么会有钝头抽药针和带安全装置/无针输液系统的原因，只要有的用就应该优先选它们。",
+     "hard": true
+    },
+    {
+     "en": "Minimum sharps-container standard: at least two puncture-proof, biohazard-labelled sharps containers in the back of the ambulance, plus a smaller one carried in the jump kit for immediate disposal while away from the vehicle.",
+     "zh": "锐器盒配置底线：救护车后舱至少放两个防刺穿、带生物危害标志的锐器盒，另外急救包里还要带一个小的，用于离车时立即处理锐器。",
+     "hard": true
+    },
+    {
+     "en": "Recap a needle only as an absolute last resort, and only with the one-handed scoop technique — needle cover placed on a stationary surface, needle slid in with one hand. Even a needle or IV line with an automatic retracting mechanism must still be discarded into a sharps container; retraction is not disposal.",
+     "zh": "只有在万不得已时才给针头回帽，而且只能用单手挑帽法——把针帽放在固定表面上，用一只手把针滑进去。就算是有自动回缩装置的针头或IV留置针，用完后也必须丢进锐器盒——回缩不等于处理完毕。",
+     "hard": true
+    },
+    {
+     "en": "Starting an IV or giving a medication in a moving ambulance is discouraged because of the danger involved; if the patient's condition forces it, have the partner briefly stop the vehicle when feasible, especially over rough terrain — and never drop a sharp on the floor to deal with 'later.'",
+     "zh": "在行驶中的救护车里扎针或给药很危险，能避免就避免；如果病情逼得必须做，条件允许时让搭档短暂停车，尤其是在颠簸路段——用过的锐器绝不能先扔地上「等一下再处理」。"
+    }
+   ]
+  },
+  {
+   "titleEn": "Fluids and Electrolytes",
+   "titleZh": "体液与电解质",
+   "points": [
+    {
+     "en": "Total body water (TBW) is about 60% of adult body weight (~42 L in a 70-kg reference patient), split into intracellular fluid (ICF, 45% of body weight, ~28 L) and extracellular fluid (ECF, 15% of body weight, ~14 L).",
+     "zh": "总体液量（TBW）约占成人体重的60%（70公斤病人约42升），分成细胞内液（ICF，占体重45%，约28升）和细胞外液（ECF，占体重15%，约14升）两部分。",
+     "hard": true
+    },
+    {
+     "en": "ECF further splits into interstitial fluid (~10.5% of body weight, ~10 L — includes CSF and intraocular fluid) and intravascular fluid/plasma (~4.5% of body weight, ~4 L) — every IV infusion lands directly in this smallest ~4-L compartment first, before redistributing.",
+     "zh": "细胞外液再细分为间质液（约占体重10.5%，约10升，含脑脊液和眼内液）和血管内液/血浆（约占体重4.5%，约4升）——每一次静脉输液都是先落进这最小的约4升血管腔，之后才会重新分布。",
+     "hard": true
+    },
+    {
+     "en": "Electrolyte concentration is measured in millimoles per litre (mmol/L), not milligrams. One mmol of any monovalent cation (e.g., Na+) reacts completely with one mmol of a monovalent anion (Cl−); a bivalent cation like Ca2+ needs two mmol of a monovalent anion to balance its charge.",
+     "zh": "电解质浓度用毫摩尔每升（mmol/L）计量，不是毫克。1毫摩尔任意单价阳离子（如Na+）正好和1毫摩尔单价阴离子（Cl−）完全反应；像Ca2+这样的二价阳离子，要2毫摩尔单价阴离子才能中和它的电荷。",
+     "hard": true
+    },
+    {
+     "en": "About 98% of total body potassium sits inside cells (the principal intracellular cation), regulated in part by insulin via the sodium-potassium pump. Hypokalemia weakens skeletal muscle, disturbs the GI tract, and alters cardiac function; hyperkalemia hyperstimulates neural transmission and can precipitate cardiac arrest.",
+     "zh": "全身约98%的钾都在细胞内（是主要的细胞内阳离子），部分靠胰岛素通过钠钾泵调节。低钾血症会导致骨骼肌无力、胃肠道紊乱和心律异常；高钾血症会过度刺激神经传导，甚至诱发心脏骤停。",
+     "hard": true
+    },
+    {
+     "en": "Calcium disturbances run in opposite clinical directions: hypocalcemia over-stimulates nerve cells (skeletal/abdominal muscle cramps, carpopedal spasm, hypotension, vasoconstriction); hypercalcemia under-stimulates them instead (muscle weakness, lethargy, ataxia, vasodilation, hot flushed skin).",
+     "zh": "钙紊乱的临床表现方向正好相反：低钙血症会过度刺激神经细胞（骨骼/腹部肌肉痉挛、手足抽搐、低血压、血管收缩）；高钙血症则相反，抑制神经细胞（肌无力、嗜睡、共济失调、血管扩张、皮肤潮红发热）。",
+     "hard": true
+    },
+    {
+     "en": "Sodium is the principal extracellular cation and drives water distribution ('where sodium goes, water follows') — this single relationship is exactly why sodium concentration, not any other electrolyte, is used as the benchmark for classifying an IV solution's tonicity.",
+     "zh": "钠是主要的细胞外阳离子，决定水往哪里走（「钠去哪，水跟到哪」）——正因为这个关系，判断一袋IV液体是等张、低张还是高张，用的基准就是钠浓度，不是别的电解质。",
+     "hard": true
+    },
+    {
+     "en": "Bicarbonate is the primary buffer in circulating body fluid and the deciding factor between acidosis and alkalosis; chloride is the primary determinant of stomach pH and helps regulate ECF volume; magnesium acts similarly to calcium in controlling neuromuscular irritability; phosphorus is a core component of ATP, the body's energy currency.",
+     "zh": "碳酸氢盐是体液循环中的主要缓冲物质，决定酸中毒还是碱中毒；氯离子主要决定胃酸pH，也参与调节细胞外液容量；镁的作用和钙类似，控制神经肌肉的应激性；磷是ATP（身体的能量货币）的核心成分。",
+     "hard": true
+    },
+    {
+     "en": "Nonelectrolytes (e.g., glucose, urea) carry no electrical charge. Normal blood glucose concentration is 4-8 mmol/L per this textbook's range — note that BC's actual hypoglycemia-correction threshold (covered later in bcAlerts) sits right at the low edge of this range, not below it.",
+     "zh": "非电解质（如葡萄糖、尿素）不带电荷。教材给出的正常血糖范围是4-8 mmol/L——注意BC实际的低血糖纠正阈值（见后面bcAlerts）正好卡在这个范围的下边缘，而不是更低的数字。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Fluid and Electrolyte Movement",
+   "titleZh": "体液电解质的移动机制",
+   "points": [
+    {
+     "en": "Diffusion moves solute particles down a concentration gradient; filtration is diffusion driven specifically by a hydrostatic pressure gradient (the kidney tubule is the textbook example). Once filtered, antidiuretic hormone (ADH) reclaims water back into the tubules, while aldosterone reclaims sodium — the two hormones are not interchangeable.",
+     "zh": "扩散（diffusion）是溶质颗粒顺浓度梯度移动；滤过（filtration）则是专门由静水压梯度驱动的扩散（肾小管是教材举的例子）。滤过之后，抗利尿激素（ADH）负责把水重新吸收回肾小管，醛固酮负责把钠重新吸收——这两个激素分工不同，不能混用记。",
+     "hard": true
+    },
+    {
+     "en": "Active transport uses ATP to move substances against their gradient. The sodium-potassium pump moves 3 Na+ out of the cell for every 2 K+ moved in — this nets a negative charge inside the cell and, as a side effect, helps move glucose into the cell at the same time.",
+     "zh": "主动转运靠ATP供能，逆浓度梯度搬运物质。钠钾泵每把2个K+搬进细胞，就要把3个Na+搬出去——结果是细胞内净负电荷，同时顺带把葡萄糖也一起带进细胞。",
+     "hard": true
+    },
+    {
+     "en": "Osmosis moves the solvent (water), not the solute, across a selectively permeable membrane from lower to higher solute concentration — this is the opposite direction of what diffusion moves. Tonicity is the resulting sodium-driven measure of a solution's ability to pull or give water relative to the cell.",
+     "zh": "渗透（osmosis）移动的是溶剂（水），不是溶质，方向是从低溶质浓度往高溶质浓度的一侧穿过半透膜——这和扩散移动的对象正好相反。张力（tonicity）就是由此产生的、以钠为基准衡量一袋溶液相对细胞「吸水还是给水」能力的指标。",
+     "hard": true
+    },
+    {
+     "en": "A healthy adult loses approximately 2 to 2.5 L of fluid daily through urine output, exhaled breath, and skin — normally matched by intake. Illness breaks this balance in either direction, producing dehydration or overhydration.",
+     "zh": "健康成人每天大约通过尿液、呼气和皮肤丢失2到2.5升体液——正常靠摄入补平。生病会把这个平衡往任一方向打破，变成脱水或水中毒（过度水化）。",
+     "hard": true
+    },
+    {
+     "en": "Dehydration signs: decreased LOC, orthostatic hypotension, tachypnea, dry mucous membranes, tachycardia, poor skin turgor, and flushed/dry skin. The mechanism is sequential — interstitial fluid shifts into the vascular space first, then intracellular fluid shifts into the extracellular space — so by the time signs are obvious, all three compartments are already depleted.",
+     "zh": "脱水表现：意识水平下降、体位性低血压、呼吸急促、黏膜干燥、心动过速、皮肤弹性差、皮肤潮红且干燥。机制是分步进行的——先是间质液流向血管腔，接着细胞内液流向细胞外——等到症状明显时，三个体液腔其实都已经亏空了。",
+     "hard": true
+    },
+    {
+     "en": "Overhydration's single cardinal sign is edema; the fuller symptom set is shortness of breath, puffy eyelids, edema, polyuria, moist crackles (rales), and acute weight gain. Common causes are an unmonitored/wide-open IV line, kidney failure, and prolonged hypoventilation — the fluid backs up in the opposite direction from dehydration: vascular into interstitial, then interstitial into intracellular.",
+     "zh": "水中毒的标志性体征是水肿；完整表现还包括呼吸困难、眼睑浮肿、水肿、多尿、湿啰音（rales）和体重急剧增加。常见原因是IV没监控/开得太快、肾衰竭、长期通气不足——液体倒灌的方向和脱水正好相反：先从血管腔进间质，再从间质挤进细胞内。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "IV Fluid Composition",
+   "titleZh": "静脉输液的成分分类",
+   "points": [
+    {
+     "en": "Tonicity classification with worked examples: isotonic = normal saline (0.9% NaCl) and lactated Ringer's (LR); hypotonic = D5W once it is metabolized in the body (while still in the bag, D5W is isotonic); hypertonic = 3% saline, blood products, albumin, pentaspan, and mannitol. Sodium concentration is the benchmark used to define all three categories.",
+     "zh": "张力分类与实例：等张＝生理盐水（0.9%氯化钠）和乳酸林格液（LR）；低张＝D5W一旦进入体内代谢后（还在袋子里时D5W是等张的）；高张＝3%盐水、血制品、白蛋白、pentaspan、甘露醇。三类的判定基准都是钠浓度。",
+     "hard": true
+    },
+    {
+     "en": "Isotonic solutions expand the intravascular compartment without shifting fluid between compartments or changing cell shape — good for hypotension/hypovolemia, but risky for fluid overload in hypertensive or heart-failure patients, because the added preload raises cardiac workload and can back fluid up into the lungs.",
+     "zh": "等张液能扩充血管腔容量，不会引起体液腔之间的转移，也不改变细胞形态——适合低血压/低血容量，但对高血压或心衰病人有液体超负荷风险，因为多出来的前负荷会加重心脏负担，还可能把液体憋回肺里。",
+     "hard": true
+    },
+    {
+     "en": "LR contains lactate, which the liver metabolizes into bicarbonate to buffer the intracellular acidosis of severe blood loss — this is exactly why LR must be avoided in patients with liver disease, who cannot perform that conversion.",
+     "zh": "LR含有乳酸盐，肝脏会把它代谢成碳酸氢盐，用来缓冲大出血引起的细胞内酸中毒——这正是肝病病人不能用LR的原因，因为他们的肝脏做不了这个转化。",
+     "hard": true
+    },
+    {
+     "en": "Hypotonic solutions pull water from the vascular space into cells, risking cell swelling/bursting, cardiovascular collapse, or raised intracranial pressure — contraindicated in stroke/head trauma (ICP risk) and hazardous in burns, trauma, malnutrition, or liver disease (risk of abnormal third-spacing into the interstitial compartment).",
+     "zh": "低张液把水从血管腔拉进细胞，有细胞肿胀甚至破裂、心血管衰竭或颅内压升高的风险——中风/头部外伤病人禁用（颅内压风险），烧伤、创伤、营养不良或肝病病人也危险（有异常「第三间隙」体液转移进间质腔的风险）。",
+     "hard": true
+    },
+    {
+     "en": "Hypertonic solutions pull fluid from cells and the interstitium into the vascular space, risking cellular collapse from increased extracellular osmotic pressure — not used in routine 9-1-1 response (seen mainly in military or critical-care interfacility transport), and contraindicated in diabetic ketoacidosis or any patient at risk of cellular dehydration.",
+     "zh": "高张液把水从细胞和间质拉进血管腔，细胞外渗透压升高有细胞塌陷的风险——常规9-1-1出车不用（主要见于军事场景或重症机构间转运），糖尿病酮症酸中毒或任何有细胞脱水风险的病人都禁用。",
+     "hard": true
+    },
+    {
+     "en": "The 3-to-1 rule for isotonic crystalloid blood-loss replacement: 3 mL of crystalloid is needed to replace 1 mL of lost blood, because roughly two-thirds of an infused isotonic crystalloid volume leaves the vascular space within about 1 hour.",
+     "zh": "等张晶体液置换失血的3比1法则：补1毫升失血要用3毫升晶体液，因为输进去的等张晶体液大约有三分之二会在1小时左右就离开血管腔。",
+     "hard": true
+    },
+    {
+     "en": "This textbook's fluid-replacement bolus target is 10-20 mL/kg to restore perfusion markers (radial pulses, adequate mentation) — explicitly not to normalize blood pressure, because over-raising BP dilutes remaining hemoglobin and can worsen internal bleeding by disrupting hemostasis.",
+     "zh": "教材给的补液推注目标是10-20 mL/kg，目的是恢复灌注指标（摸得到桡动脉搏动、意识状态尚可）——明确不是为了把血压升到正常，因为血压升过头会稀释残余血红蛋白，还可能干扰止血机制、加重内出血。",
+     "hard": true
+    },
+    {
+     "en": "Colloid solutions (albumin, dextran, pentaspan) contain large protein molecules that stay in the vascular space and, through very high osmolarity, draw fluid in from the interstitium and cells — useful for reducing pulmonary/cerebral edema but capable of dangerous fluid shifts outside a controlled setting, so rarely used prehospital. Only whole blood carries oxygen (via hemoglobin); crystalloids and colloids never do, regardless of volume given.",
+     "zh": "胶体液（白蛋白、右旋糖酐、pentaspan）含大分子蛋白质，留在血管腔内，靠很高的渗透压把间质和细胞里的水分拉进来——能减轻肺水肿/脑水肿，但在非受控环境下容易引发危险的体液转移，所以院前很少用。只有全血（靠血红蛋白）能携带氧气；晶体液和胶体液不管输多少都不能携氧。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "IV Techniques and Administration",
+   "titleZh": "静脉穿刺技术与给液操作",
+   "points": [
+    {
+     "en": "Sterility rules differ for the bag versus the set: once an IV solution bag's outer protective wrap is torn off, it must be used within 24 hours; once an administration set's own piercing spike seal is broken, it must be used immediately or discarded — the 24-hour allowance belongs to the bag, not the tubing. Common prehospital bag sizes are 1,000/500/250 mL for general use, with smaller 100/50 mL bags (D5W or saline) reserved for mixing and running maintenance medication infusions rather than primary volume replacement.",
+     "zh": "袋子和输液器的无菌有效期不一样：IV液袋外层保护包装一旦撕开，24小时内必须用完；但输液器自己的穿刺针一旦破封，必须立刻使用或直接丢弃——24小时这个宽限期是给袋子的，不是给管路的。院前常见袋装规格是1000/500/250毫升（一般用途），较小的100/50毫升袋（D5W或生理盐水）专门用来配药和跑维持剂量的给药输液，不用于主要补液。",
+     "hard": true
+    },
+    {
+     "en": "Drip factor (drops per millilitre) is printed on the administration set package: microdrip sets deliver 60 gtt/mL for fine flow control (medication infusions, pediatric fluids); macrodrip sets deliver 10 or 15 gtt/mL for rapid volume replacement — the set is chosen deliberately for the clinical goal, not by convenience.",
+     "zh": "滴系数（每毫升多少滴）印在输液器包装上：微滴管是60滴/毫升，用于精细控制流速（给药输液、儿科补液）；大滴管是10或15滴/毫升，用于快速补液——该用哪种输液器是按临床目标特意选的，不是随手拿一个就上。",
+     "hard": true
+    },
+    {
+     "en": "Blood tubing is a macrodrip set with dual piercing spikes (allowing two bags to run simultaneously) and a drip-chamber filter of about 200 microns to screen the blood during transfusion — this is a distinct set from standard crystalloid tubing, not an interchangeable substitute.",
+     "zh": "血液输液器是大滴管规格，带两个穿刺针（能同时接两袋液体），滴室里还有约200微米的滤网，用来在输血时过滤血液——这是一套和普通晶体液输液器完全不同的专用装置，不能互相替代。",
+     "hard": true
+    },
+    {
+     "en": "A Volutrol (Buretrol) is a microdrip set with a calibrated 100- or 200-mL drip chamber and a proximal roller clamp that caps the exact volume a patient — typically pediatric — can receive before the clamp must be reopened for more; the same device also limit-doses continuous infusions such as dopamine or KCl.",
+     "zh": "Volutrol（Buretrol）是一种带刻度的微滴管装置，滴室容量为100或200毫升，近端有个滚轮夹，能精确限定病人（多用于儿科）能接收的液量，要更多液体才需重新打开夹子；这套装置也用来限量给多巴胺、氯化钾这类持续输注的药物。",
+     "hard": true
+    },
+    {
+     "en": "Site-selection criteria: avoid segments over vein valves (small palpable bumps that block catheter passage), avoid crossing joints, avoid an edematous limb or one with a dialysis fistula or an ipsilateral mastectomy, and avoid overlying cellulitis; work distal-to-proximal so a failed or infiltrated distal attempt does not sacrifice a proximal site. Rolling veins are stabilized with location-specific traction — thumb-taut for hand veins, wrist flexion for wrist veins, lateral traction for forearm/antecubital veins.",
+     "zh": "选点原则：避开静脉瓣所在段（摸起来是小凸起，导管过不去）、避开关节、避开水肿肢体、透析瘘管所在肢体、乳房切除术同侧肢体，也避开有蜂窝织炎的皮肤；从远端往近端依次尝试，这样远端穿刺失败或渗液也不会浪费掉近端的备选血管。容易滑动的血管要用对应部位的牵引法固定——手背血管用拇指绷紧皮肤、腕部血管靠屈腕绷紧皮肤、前臂/肘正中血管用另一只手做侧向牵引。",
+     "hard": true
+    },
+    {
+     "en": "Catheter gauge is inverse to diameter: 14G is the largest common bore, 27G the smallest. 18-20G suits an adult who does not need fluid replacement (fits metacarpal hand veins); 14-16G is required for fluid replacement (e.g., hypovolemic shock) or any patient who may receive blood products or go to surgery, typically sited in the antecubital or EJ vein. Pediatric gauges run 20/22/24/26G.",
+     "zh": "导管型号和直径成反比：14G是常见的最大号，27G是最小号。成人不需要补液时用18-20G（手背掌骨静脉够用）；需要补液（如低血容量休克）或可能要输血制品/手术的病人必须用14-16G，一般扎在肘正中静脉或颈外静脉；儿科用20/22/24/26G。",
+     "hard": true
+    },
+    {
+     "en": "Insertion mechanics: bevel up, insert at roughly a 45° angle through the skin, then drop the angle to roughly 15° once flashback confirms venous puncture, advancing a few more centimetres before sliding the sheath off the needle — over-advancing the needle after flashback risks lacerating the vein.",
+     "zh": "穿刺手法：斜面朝上，进皮角度约45°，见到回血确认已入静脉后把角度降到约15°，再往前推进几厘米才把外套管顺进静脉——回血后如果针头继续往前推太多，有割裂血管的风险。",
+     "hard": true
+    },
+    {
+     "en": "The constricting band is placed roughly 15-25 cm above the intended site, snug enough to significantly reduce venous flow but never enough to block arterial flow, and is released the moment the line is connected — it must never stay on while equipment is being assembled.",
+     "zh": "止血带绑在预定穿刺点上方约15到25厘米处，力度要能明显减少静脉回流，但绝不能压断动脉血流；一接好输液管就立刻松开——绝不能在组装器材的时候还绑着不管。",
+     "hard": true
+    },
+    {
+     "en": "Under hemodynamic instability, the antecubital vein is preferred over hand/forearm veins for critical or cardiac-arrest patients because it stays reliably visible and palpable during hypoperfusion, when other extremity veins may not; a neck vein (EJ) or IO access are the next-line fallback options.",
+     "zh": "血流动力学不稳定时，危重或心脏骤停病人优先选肘正中静脉而不是手背/前臂静脉，因为低灌注状态下它比其他肢体血管更可靠地能看见、摸到；颈外静脉或骨髓腔通路是接下来的备选。",
+     "hard": true
+    },
+    {
+     "en": "A saline lock is an intermittent-access port filled with about 2 mL of normal saline to prevent clotting at the catheter tip without running fluid into the vein — used when a patient needs rapid medication access but not ongoing fluids; patency still needs periodic checking even though no fluid is running.",
+     "zh": "生理盐水锁是一种间歇性通路装置，里面灌了约2毫升生理盐水，防止导管尖端凝血，但不会让液体流进静脉——用于病人需要快速用药通路但不需要持续输液的情况；虽然没有液体在跑，也要定期检查是否通畅。",
+     "hard": true
+    },
+    {
+     "en": "Change the IV bag once roughly 50 mL of fluid remains — never let it run completely dry — and never let the drip chamber or tubing fully empty, since either risks introducing air into the patient's vein. The bag swap itself is a sterile procedure: contaminated equipment gets replaced, not reused.",
+     "zh": "袋内液体剩约50毫升时就要换袋，绝不能等它流干——滴室和输液管也绝不能完全排空，否则有把空气打进病人静脉的风险。换袋本身是一次无菌操作：污染的器材要换掉，不能凑合用。",
+     "hard": true
+    },
+    {
+     "en": "Documenting an IV insertion requires four elements: catheter gauge, attempts versus successes, the exact site, and the fluid type with running rate — written in fixed shorthand, e.g. '18g IV left antecubital fossa NS @ 120 mL/h.'",
+     "zh": "记录IV穿刺要有四项：导管型号、尝试次数与成功次数、具体部位、液体种类和滴速——用固定的简写格式，例如「18g IV left antecubital fossa NS @ 120 mL/h」（左肘正中静脉18号针，生理盐水，120毫升/小时）。",
+     "hard": true
+    },
+    {
+     "en": "Discontinuing a line follows a fixed order: close the roller clamp first, peel the tape back toward the site while stabilizing the catheter, then withdraw the catheter while holding gauze pressure over the site — the IV tubing is never detached from the catheter hub before this sequence is complete.",
+     "zh": "拔除静脉留置针要按固定顺序：先关闭滚轮夹，一边稳住导管一边把胶布往穿刺点方向撕开，最后一边用纱布压住穿刺点一边把导管抽出——整个过程结束前，输液管都不能先从导管座上拔掉。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "External Jugular Vein Cannulation",
+   "titleZh": "颈外静脉穿刺",
+   "points": [
+    {
+     "en": "EJ cannulation is a last-resort peripheral option: exhaust arm/hand veins first, and only attempt the EJ where local or regional protocol explicitly permits it for peripheral IV access. Its specific risks — beyond those of a limb IV — are inadvertent carotid artery puncture, a rapidly expanding hematoma if infiltration occurs, and air embolism.",
+     "zh": "颈外静脉穿刺是外周血管的最后备选：先用尽手臂/手背血管，只有在当地或区域规程明确允许把EJ当作外周静脉通路时才能尝试。除了肢体IV共有的风险外，EJ特有的风险是误刺颈动脉、渗液后血肿迅速扩大，以及空气栓塞。",
+     "hard": true
+    },
+    {
+     "en": "Positioning and landmarks: patient supine, head-down to engorge the vein, head turned away from the puncture side. The puncture site is midway between the angle of the jaw and the midclavicular line, with the catheter aimed toward the shoulder on the same side as the venipuncture.",
+     "zh": "体位与定位：病人仰卧，头低位让血管充盈，头转向穿刺对侧。穿刺点位于下颌角和锁骨中线连线的中点，导管方向指向穿刺同侧的肩膀。",
+     "hard": true
+    },
+    {
+     "en": "Occlude the vein with a finger placed distal to (below) the intended insertion site to make it engorge and become visible before sticking — this substitutes for the constricting band used on limb veins.",
+     "zh": "在预定穿刺点下方用手指按压阻断静脉回流，让血管充盈显现后再下针——这一步替代了肢体静脉用的止血带。",
+     "hard": true
+    },
+    {
+     "en": "Always palpate for a pulse before cannulating an EJ to positively locate and avoid the adjacent carotid artery — this check is non-negotiable given the vein's proximity to major neck vasculature.",
+     "zh": "穿刺EJ之前一定要先摸清脉搏位置，确认并避开紧邻的颈动脉——因为这条静脉离颈部大血管太近，这一步没有商量余地。",
+     "hard": true
+    },
+    {
+     "en": "After securing an EJ line, tape it down but never wrap tape circumferentially around the neck — this is a distinct rule from securing a limb IV, where circumferential taping is merely discouraged rather than absolutely prohibited.",
+     "zh": "固定EJ留置针时可以贴胶布，但绝不能绕颈部一圈缠死——这一条和固定肢体IV不一样，肢体IV只是不建议整圈缠绕，EJ是绝对禁止。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Factors Affecting IV Flow Rates",
+   "titleZh": "影响静脉滴速的因素",
+   "points": [
+    {
+     "en": "Fluid viscosity slows flow: thick fluids (blood products, colloid solutions) infuse slowly and may need dilution to speed delivery; cold fluid also runs more slowly than warm fluid, so warm IV fluids before infusing in a cold environment when possible.",
+     "zh": "液体黏稠度会拖慢流速：黏稠液体（血制品、胶体液）输注慢，必要时可以稀释来加快；温度低的液体也比温热的流得慢，所以在寒冷环境输液前应尽量先给液体加温。",
+     "hard": true
+    },
+    {
+     "en": "The administration set choice sets the flow ceiling: macrodrip for rapid delivery, microdrip for controlled/slower delivery — this is a deliberate clinical choice made when starting the line, not something to fix after the fact.",
+     "zh": "输液器的选择决定了流速的上限：大滴管用于快速输注，微滴管用于控制性的慢速输注——这是开始输液时就该定好的临床选择，不是出问题以后再来补救的事。",
+     "hard": true
+    },
+    {
+     "en": "Bag height matters because gravity drives IV flow — hang the bag as high as practical above the IV site; a bag hung too low relative to the site slows or stops flow regardless of how large the catheter is.",
+     "zh": "液袋高度很关键，因为IV靠重力驱动流动——液袋要尽量挂高，高于穿刺点；如果液袋相对穿刺点挂得太低，不管导管多粗，流速都会变慢甚至停止。",
+     "hard": true
+    },
+    {
+     "en": "Catheter geometry follows the same inverse-gauge rule used in catheter selection: a smaller gauge number means a larger diameter and faster flow (e.g., a 14G catheter outperforms a 20G for flow rate) — this rule now applies to troubleshooting a line that is running too slowly.",
+     "zh": "导管的粗细规律和选型时一样是反过来的：数字越小，直径越大，流速越快（例如14G比20G流得快）——这条规律在这里用来排查一条流速太慢的线。",
+     "hard": true
+    },
+    {
+     "en": "First checks when a properly sized line still will not run: confirm the constricting band was actually removed after insertion, and check the line and limb for any kink or external compression — these two mechanical causes are ruled out before assuming the catheter itself is at fault.",
+     "zh": "一条型号选对了却还是不流的线，先查两件事：确认止血带在穿刺后真的松开了，检查管路和肢体有没有打折或受压——先排除这两个机械性原因，才轮到怀疑导管本身有问题。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Potential Complications of IV Therapy",
+   "titleZh": "静脉治疗的潜在并发症：局部与全身反应",
+   "points": [
+    {
+     "en": "Complications split into local (infiltration, thrombophlebitis, occlusion, vein irritation, hematoma, nerve/tendon/ligament injury, arterial puncture) and systemic (allergic, pyrogenic, circulatory overload, air embolus, vasovagal, catheter shear). Most local problems are fixed by pulling the line and restarting in the opposite limb; systemic reactions usually mean keeping the catheter in place as an emergency medication route, not removing it.",
+     "zh": "并发症分两类：局部反应（渗出、静脉炎、堵塞、静脉刺激、血肿、神经腱韧带损伤、误穿动脉）——多数处理方式就是拔管、换对侧肢体重新建立通路；全身反应（过敏、致热原反应、循环超负荷、空气栓塞、迷走神经反应、导管断裂）——通常要保留导管作为紧急给药通道，不能直接拔掉。",
+     "hard": false
+    },
+    {
+     "en": "Infiltration comes from a through-and-through puncture, patient movement, loose tape, or too shallow a catheter angle landing in fascia; it shows as edema at the site, continued flow after proximal occlusion, and tightness or pain. Treat with direct pressure and never wrap tape all the way around the limb — that creates a constricting band.",
+     "zh": "渗出的成因：导管穿透血管对侧壁、患者过度活动、胶带松脱，或穿刺角度太浅扎进了血管周围筋膜。表现为穿刺点水肿、压闭近端血管后液体仍在流、局部发紧发痛。处理：局部直接加压，绝不能把胶带整圈缠绕肢体——那等于人为做出一条止血带。",
+     "hard": true
+    },
+    {
+     "en": "Thrombophlebitis (vein inflammation plus clot) mostly traces back to broken aseptic technique or irritating fluids such as dextrose and other hypertonic solutions; onset takes hours, so it is rarely seen in the field except on interfacility transfers of an already-running line. Prevention: iodine scrub then an alcohol wipe, gloves for every venipuncture, a sterile dressing after insertion, and the catheter anchored so it cannot move inside the vein.",
+     "zh": "静脉炎（血管发炎＋血栓）多数根源是无菌操作失守，或葡萄糖等高渗液体本身刺激血管；起效要数小时，所以院前很少见到，除非是转运一条已经在用的通路。预防要点：碘伏消毒后再用酒精棉片收尾、每次穿刺都戴手套、置管后覆盖无菌敷料、把导管和管路牢牢固定防止在血管内晃动。",
+     "hard": true
+    },
+    {
+     "en": "Occlusion is a clot forming when flow is too slow to keep blood out of the catheter tip; the tell is a slowing drip or blood backing up in the tubing. Fix it with a syringe on the nearest port, gently pulling back to dislodge the clot — never push it forward, which turns it into an embolus. If flow will not restart, pull the line and start over on the other side.",
+     "zh": "堵塞是流速太慢导致血液反流进导管尖端凝固而成；征象是滴速变慢或导管管路里见血。处理：在最近的注射港接上注射器，轻轻回抽把血凝块拉松——绝不能往里推，一推就会把它推成栓子。回抽也通不了，就拔管、换对侧肢体重新建立通路。",
+     "hard": true
+    },
+    {
+     "en": "Vein irritation from too-rapid infusion feels like tingling, stinging or burning; if redness follows (an early phlebitis sign), stop and save the equipment for later inspection, then restart fresh gear on the other side — the same prevention steps as thrombophlebitis apply.",
+     "zh": "输液太快会刺激静脉，患者常主诉刺痛、灼烧或蚂蚁爬感；若随后出现发红（静脉炎早期信号），就要停止输液、保留原有器材备查，换一套全新器材在对侧重新开通路——预防方法与静脉炎一致。",
+     "hard": false
+    },
+    {
+     "en": "Three site-trauma complications: hematoma (from perforation or a bad catheter pull, more likely on anticoagulants, corticosteroids or with vascular disease like diabetes — stop and apply direct pressure if it happens mid-insertion, or just monitor if flow is unaffected after a successful placement); nerve/tendon/ligament injury near joints (sudden severe shooting pain plus numbness — pull the catheter and pick a different site); arterial puncture (bright red, spurting blood — pull and hold direct pressure at least 5 minutes; risk peaks cannulating an external jugular vein, where anatomic variation can leave an artery unusually superficial).",
+     "zh": "三类穿刺部位创伤性并发症：血肿（血管穿透或拔管手法不当所致，抗凝药、糖皮质激素使用者及糖尿病等血管病患者更易出现——置管中发生就停手加压，置管成功后才发现且不影响输液则观察即可）；关节附近的神经/肌腱/韧带损伤（突发剧烈放射样疼痛加麻木——立即拔管、另选部位）；误穿动脉（鲜红色血液搏动样喷出——拔管后直接加压至少 5 分钟；颈外静脉穿刺风险最高，因解剖变异可能让动脉异常表浅）。",
+     "hard": true
+    },
+    {
+     "en": "Allergic reactions (pruritus, dyspnea, facial/hand edema, hives, wheeze) can come from either the fluid or a medication in it. Stop the infusion and remove the solution, but leave the catheter as an emergency medication lock, attach a saline lock if available, notify medical control immediately, and keep the bag or drug for hospital analysis.",
+     "zh": "过敏反应（皮肤瘙痒、呼吸困难、面部或手部水肿、荨麻疹、喘鸣）可能来自液体本身或其中的药物。处理：停止输液、撤下液体，但保留导管作为紧急给药通路（有条件就接上盐水锁），立即联系医疗指导，把可疑液体或药物留给医院化验。",
+     "hard": false
+    },
+    {
+     "en": "Pyrogenic reactions come from foreign proteins in the fluid or set, typically starting within 30 minutes of the infusion and producing an abrupt fever as high as 41.1°C with chills, backache, headache, nausea and vomiting — occasionally full vascular collapse. Response: stop immediately, restart a fresh bag and line in the other arm; prevention is simply inspecting every bag for leaks or cloudiness before hanging it.",
+     "zh": "致热原反应源于液体或输液器中的外来蛋白，通常在输液开始后 30 分钟内发作：体温骤升可达 41.1°C，伴寒战、背痛、头痛、恶心呕吐，偶尔发展为血管性虚脱。处理：立即停止输液，换一套全新液体和输液器在对侧重新开始；预防的关键就是挂液体前检查有没有渗漏或浑浊。",
+     "hard": true
+    },
+    {
+     "en": "Circulatory overload shows as dyspnea, JVD, hypertension and crackles on auscultation; healthy adults tolerate roughly 2-3 extra litres, but cardiac, pulmonary or renal disease removes that buffer. The classic prehospital cause is forgetting to slow the rate back down after flushing a freshly placed line. Treatment: slow to keep-vein-open, raise the head, high-flow oxygen if indicated; for older patients prone to overload, give fluid in 200-300 mL boluses and recheck breath sounds before and after each one.",
+     "zh": "循环超负荷表现为呼吸困难、颈静脉怒张、血压升高，听诊可闻湿啰音；健康成人能耐受约 2-3 升额外液体，但有心、肺或肾功能不全的患者完全没有这个缓冲空间。院前最常见诱因就是刚置管冲管后忘记把速度调回去。处理：把速度降到维持通畅（TKO）、抬高床头、按需给高流量氧；对易超负荷的老年患者，改用 200-300 mL 一次的小剂量分次输注，每次前后都复查呼吸音。",
+     "hard": true
+    },
+    {
+     "en": "Three more systemic reactions: air embolus (a bag that ran dry before being swapped is the usual cause — sudden unequal breath sounds, cyanosis despite high-flow oxygen, shock signs or loss of consciousness; position left-side-down with the head down to trap air in the right heart, give 100% oxygen, transport rapidly); vasovagal reaction (needle or blood anxiety triggering vasodilation, hypotension and syncope — treat as shock, keep the IV running in case fluids are needed); catheter shear (re-threading a needle back through a catheter shaves off a fragment that can embolize to the lungs — never re-thread a catheter over its needle; if suspected, position left lateral recumbent, legs down, head up, to keep the fragment out of the pulmonary circulation).",
+     "zh": "另外三种全身反应：空气栓塞（液体袋没及时更换就跑空是常见诱因——突发双侧不对称呼吸音、给足高流量氧仍发绀、休克征象或意识丧失；处理是让患者左侧卧头低位把气体困在右心，给 100% 氧，尽快转运）；迷走神经反应（对针头或见血的焦虑引发血管扩张、低血压、晕厥——按休克处理，保留静脉通路以备补液）；导管断裂（把针芯重新穿回已退出的导管会削断出一截碎片、可能栓塞进肺循环——原则是绝不把针芯穿回导管；怀疑发生时让患者左侧卧、双腿放低、头部抬高，尽量把碎片挡在肺循环之外）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Obtaining Blood Samples",
+   "titleZh": "血标本采集",
+   "points": [
+    {
+     "en": "Draw blood at the same time as starting the IV whenever possible, using a second site distal to or away from the fluid site to avoid dilution or hemolysis. If a blood draw proves difficult, abandon it and finish establishing the IV line first — the line is the priority.",
+     "zh": "有条件就在开通静脉的同时采血，选在输液部位以外或远端的位置，避免液体稀释或标本溶血。抽血遇到困难时果断放弃，先把静脉通路建好——通路优先级更高。",
+     "hard": false
+    },
+    {
+     "en": "The textbook's fill order runs red, then blue, then green, then lavender — remembered by 'Red Blood Gives Life': red has no additive (for clotting/typing), blue holds EDTA (for PT/PTT clotting-time values), green holds heparin (for electrolytes and glucose), lavender holds sodium citrate (for a complete blood count). Follow local protocol for which tubes are actually drawn.",
+     "zh": "教材给出的抽血顺序是红→蓝→绿→薰衣草色，用口诀『Red Blood Gives Life』记忆：红管不加抗凝剂（用于血型/凝血）；蓝管含 EDTA（测 PT/PTT 凝血时间）；绿管含肝素（测电解质与血糖）；薰衣草色管含枸橼酸钠（用于全血细胞计数）。实际抽哪几管以当地规程为准。",
+     "hard": true
+    },
+    {
+     "en": "Drawing through the IV catheter hub: occlude the catheter and remove the constricting band FIRST, then attach the syringe and draw — leaving the band on lets waste products build up and skews the lab values. Detach the syringe, connect the IV tubing and start the infusion, then transfer blood into the tubes through a fresh 18- or 20-gauge needle and dispose of the syringe and needle immediately in a sharps container.",
+     "zh": "经导管接口采血：先阻断导管、松开止血带，再接注射器抽血——止血带不松就抽，代谢废物会在局部堆积，让检验结果失真。抽够血量后拔下注射器，接上输液管路开始输液，再用一根全新的 18 或 20 号针头把血分装进各采血管，用完立即把注射器和针头丢进锐器盒。",
+     "hard": true
+    },
+    {
+     "en": "When IV therapy is not otherwise indicated but blood work is, use a Vacutainer: constrict, cleanse the antecubital vein, insert the needle-Vacutainer assembly, remove the constricting band, then push tubes into the Vacutainer one at a time to fill them; withdraw, apply direct pressure, and dispose of the needle in a sharps container.",
+     "zh": "不需要输液但要抽血时用真空采血器（Vacutainer）：绑止血带、消毒肘正中静脉、把针头连同真空采血器一起刺入血管，松开止血带，再依次把采血管推入采血器完成填充；拔针后直接加压止血，针头丢进锐器盒。",
+     "hard": false
+    },
+    {
+     "en": "Tubes must be at least three-fourths full to be usable for testing; label every tube immediately with patient name, date, time and draw site, and tell the receiving hospital that blood was already drawn so they can add their own labels. Mix every tube by gentle inversion except the red-top, which must clot undisturbed — never shake it.",
+     "zh": "采血管必须至少装到四分之三满才算合格标本；每管当场标注患者姓名、日期、时间和采血部位，并告知接收医院已经采过血，方便他们加贴自己的标签。所有采血管都要轻轻上下翻转混匀，唯独红管例外——它需要静置自然凝固分离血清，绝不能摇晃。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Intraosseous Infusion",
+   "titleZh": "骨髓腔通路（IO）",
+   "points": [
+    {
+     "en": "IO access delivers fluids, blood products or medications into the marrow space of a long bone, most often the proximal tibia; anything that can go IV can go IO. The marrow's venous sinuses stay patent even when peripheral veins collapse in shock, arrest or status epilepticus, which is why IO is called a noncollapsible-vein route. Historically reserved for children younger than 6 after 3 failed IV attempts or 90 seconds, it is now also an accepted critical-access route in adults.",
+     "zh": "IO 通路把液体、血制品或药物打进长骨的骨髓腔——最常用近端胫骨；凡是能走静脉的都能走 IO。骨髓腔内的静脉窦即便在休克、心跳骤停或癫痫持续状态下外周血管塌陷时依然通畅，所以被称为『不会塌陷的静脉』。历史上 IO 只留给 6 岁以下、静脉尝试 3 次或耗时 90 秒仍失败的儿童，现在也是成人危重患者建立通路的公认选项。",
+     "hard": true
+    },
+    {
+     "en": "Four device families: manually inserted needles (Jamshidi/Cook trocar, twisted in by hand, rest at 90° to the bone and are easily dislodged so need full impaled-object-style immobilization); FAST1 (sternal placement only, adults only); EZ-IO (battery-powered drill, works the proximal humerus, proximal tibia or distal tibia, with three weight-based needle-set sizes); and the Bone Injection Gun, BIG (spring-loaded, proximal tibia, separate adult and pediatric sizes).",
+     "zh": "四大类装置：手动穿刺针（Jamshidi/Cook 套管针，手动拧转插入，与骨面呈 90°、极易松脱，必须像固定异物一样彻底固定）；FAST1（仅用于胸骨、仅限成人）；EZ-IO（电池驱动的骨钻，可用于肱骨近端、胫骨近端或胫骨远端，配三种按体重分级的针套）；骨枪 BIG（弹簧驱动，用于胫骨近端，成人和儿童各有专用型号）。",
+     "hard": true
+    },
+    {
+     "en": "EZ-IO technique highlights: the proximal tibia landmark sits medial to the tibial tuberosity, the bony bump just below the knee (other accepted sites: distal tibia, distal femur, proximal humerus, and — FAST1 only — the sternum/manubrium). Insert at a 90° angle, twist until a distinct 'pop' is felt, remove the stylet, then aspirate with a syringe to check for marrow — absence of marrow does NOT by itself mean the placement failed. Slowly test-flush with saline watching for extravasation; responsive patients should get 1% lidocaine before fluids run. Secure and support like any impaled object, and never tape all the way around the limb — that risks compartment syndrome.",
+     "zh": "EZ-IO 操作要点：胫骨近端穿刺点定位在胫骨粗隆（膝盖下方的骨性凸起）内侧（其他可接受部位：胫骨远端、股骨远端、肱骨近端，以及仅限 FAST1 使用的胸骨/胸骨柄）。以 90° 角进针，拧转至明显『落空感』（pop）出现，退出针芯，然后接注射器回抽确认骨髓——抽不到骨髓不代表置管失败。缓慢试推生理盐水观察有无外渗；清醒患者在正式输液前应先给 1% 利多卡因。固定方式和异物固定一样、加用厚敷料支撑，绝不能把胶带整圈缠绕肢体——那会诱发骨筋膜室综合征。",
+     "hard": true
+    },
+    {
+     "en": "Because the marrow space resists flow far more than a vein, gravity alone under-delivers; boluses need a syringe push in children and a pressure-infuser sleeve (an inflatable cuff around the bag) in adults.",
+     "zh": "骨髓腔对液体流动的阻力比静脉大得多，单靠重力输液速度太慢；儿童推注要用注射器手推，成人则需要加压输液袋（套在液体袋外的可充气加压套）。",
+     "hard": true
+    },
+    {
+     "en": "IO shares IV's complications (thrombophlebitis, local irritation, allergic reaction, circulatory overload, air embolism) plus its own: extravasation (needle outside the marrow space — soft-tissue swelling, especially on the posterior leg, and poor flow are the tells; stop and reattempt on the opposite leg); rare osteomyelitis; growth-plate injury from a missed landmark; through-and-through fracture (a second 'pop, pop' means both cortices were breached — remove and switch limbs); and pulmonary embolism from marrow, fat or bone debris, suspected with sudden shortness of breath, pleuritic chest pain and cyanosis.",
+     "zh": "IO 与 IV 共有的并发症（静脉炎、局部刺激、过敏反应、循环超负荷、空气栓塞）之外，还有 IO 特有的：外渗（针尖没在骨髓腔内——表现为软组织肿胀，尤其小腿后侧明显，且输液不畅；应立即停止并改到对侧腿重新穿刺）；骨髓炎（罕见）；定位错误伤及骨骺生长板；穿透性骨折（进针时听到第二声『pop』说明已穿透对侧骨皮质——拔针换另一侧肢体）；以及骨髓/脂肪/骨碎屑造成的肺栓塞（突发气短、胸膜性胸痛、发绀应高度怀疑）。",
+     "hard": true
+    },
+    {
+     "en": "Contraindications: fracture of the target bone, infected skin overlying the site, osteoporosis, osteogenesis imperfecta, and bilateral knee replacement. The overriding rule: a functional peripheral IV always beats IO — never choose IO just for convenience when a good vein is available.",
+     "zh": "禁忌症：目标骨骨折、穿刺部位皮肤感染、骨质疏松、成骨不全（先天性脆骨病）、双侧膝关节置换。最重要的一条原则：只要外周静脉能用，就永远优先于 IO——不能因为图省事而放弃能用的静脉去走 IO。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Calculating Fluid Infusion Rates",
+   "titleZh": "输液速率计算：滴速公式与快捷换算",
+   "points": [
+    {
+     "en": "Three inputs drive the flow rate: total volume to infuse, the time it should run over, and the administration set's drop factor (gtt/mL, printed on the packaging). Master formula: drops per minute = (volume in mL × drop factor in gtt/mL) ÷ time in minutes.",
+     "zh": "决定滴速的三个变量：要输的总量、要输的时长、输液器的滴系数（gtt/mL，印在包装上）。核心公式：每分钟滴数 ＝（总量 mL × 滴系数 gtt/mL）÷ 输注时间（分钟）。",
+     "hard": true
+    },
+    {
+     "en": "Worked textbook example: 1,000 mL normal saline over 4 hours (240 minutes) on a 10 gtt/mL macrodrip set — (1,000 × 10) ÷ 240 ≈ 42 gtt/min.",
+     "zh": "教材例题：1,000 mL 生理盐水，4 小时（240 分钟）输完，用 10 gtt/mL 的大滴输液器——（1,000 × 10）÷ 240 ≈ 42 gtt/min。",
+     "hard": true
+    },
+    {
+     "en": "Shortcut when the order is already given in mL/hr: divide the mL/hr number by 6 for a 10 gtt/mL macrodrip, by 4 for a 15 gtt/mL macrodrip, or by 1 (mL/hr equals gtt/min directly) for a 60 gtt/mL microdrip.",
+     "zh": "如果医嘱直接给的是 mL/hr，可以走捷径：10 gtt/mL 的大滴输液器就把 mL/hr 除以 6；15 gtt/mL 的大滴除以 4；60 gtt/mL 的微滴（microdrip）则 mL/hr 数字直接等于 gtt/min，不用再除。",
+     "hard": true
+    },
+    {
+     "en": "BC's own worked pair uses the identical formula: 500 mL normal saline over 12 hours on a 10 gtt/mL set works out to about 7 gtt/min; 25 mL of D10W over 60 minutes on a 60 gtt/mL microdrip works out to 25 gtt/min.",
+     "zh": "BC 考纲给出的例题用的是同一条公式：500 mL 生理盐水、12 小时输完、10 gtt/mL 输液器——约等于 7 gtt/min；25 mL D10W、60 分钟输完、60 gtt/mL 微滴输液器——等于 25 gtt/min。",
+     "hard": true
+    },
+    {
+     "en": "BC names a default IV maintenance rate of about 75 mL/hr whenever a protocol says 'maintenance' without a specific number, using either a 10 gtt/mL or 60 gtt/mL set. Whatever the rate, reassess the running line and the patient every 5-15 minutes and adjust as needed.",
+     "zh": "BC 考纲规定：当某个 protocol 只写『维持』而没给具体数字时，默认维持速率约为 75 mL/hr，常用 10 gtt/mL 或 60 gtt/mL 两种输液器计算。不论设的是什么速率，都要每 5-15 分钟重新评估通路和患者一次，按需调整。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Medication Administration — Pharmacology Math",
+   "titleZh": "给药计算基础：单位换算与剂量公式",
+   "points": [
+    {
+     "en": "Metric weight ladder (smallest to largest): microgram (mcg) → milligram (mg) → gram (g) → kilogram (kg); 1 mg = 1,000 mcg, 1 g = 1,000 mg, 1 kg = 1,000 g. Volume ladder: millilitre (mL) → decilitre (dL) → litre (L); 1 mL = 1 cc, 100 mL = 1 dL, 1,000 mL = 1 L. Converting between any two rungs is just moving the decimal point three places: large-to-small multiply by 1,000 (decimal right), small-to-large divide by 1,000 (decimal left) — same rule for weight and volume alike.",
+     "zh": "重量单位阶梯（小到大）：微克(mcg)→毫克(mg)→克(g)→千克(kg)；1 mg = 1,000 mcg，1 g = 1,000 mg，1 kg = 1,000 g。容量单位阶梯：毫升(mL)→分升(dL)→升(L)；1 mL = 1 cc，100 mL = 1 dL，1,000 mL = 1 L。在阶梯上换算其实就是把小数点移三位：大单位换小单位＝乘以 1,000（小数点右移三位）；小单位换大单位＝除以 1,000（小数点左移三位）——重量和容量用同一条规则。",
+     "hard": true
+    },
+    {
+     "en": "Two interchangeable pounds-to-kilograms formulas: divide pounds by 2.2; or divide pounds by 2 and then subtract 10% of that result (a quick field approximation). Round to the nearest whole kilogram.",
+     "zh": "磅换千克有两个可以互换用的公式：磅数除以 2.2；或者磅数除以 2 后再减去这个结果的 10%（现场快速估算法）。四舍五入到整数千克。",
+     "hard": true
+    },
+    {
+     "en": "Temperature conversion: Fahrenheit to Celsius = (F − 32) × 0.555; Celsius to Fahrenheit = (C × 1.8) + 32. Normal body temperature is 37°C, which equals 98.6°F.",
+     "zh": "体温换算：华氏转摄氏 ＝（华氏度 − 32）× 0.555；摄氏转华氏 ＝（摄氏度 × 1.8）+ 32。正常体温 37°C，对应 98.6°F。",
+     "hard": true
+    },
+    {
+     "en": "Every dose calculation runs on three facts: the desired dose (the order, in mcg/mg/g or mcg-mg-per-kg), the concentration on hand (weight ÷ volume, e.g., mg/mL), and the volume to give = desired dose ÷ concentration. A percentage on a label means grams per 100 mL — 1% lidocaine is 1 g/100 mL, i.e., 10 mg/mL.",
+     "zh": "所有剂量计算都建立在三个数据上：医嘱要给的剂量（desired dose，单位 mcg/mg/g 或每公斤体重的 mcg-mg）、现有药物的浓度（现有浓度＝总重量 ÷ 总容量，例如 mg/mL）、要给的容量 ＝ 期望剂量 ÷ 浓度。标签上的百分比表示每 100 mL 含多少克——1% 利多卡因就是 1 g/100 mL，即 10 mg/mL。",
+     "hard": true
+    },
+    {
+     "en": "Weight-based dosing adds one step ahead of the same formula: convert the patient's weight to kilograms first, multiply by the per-kilogram dose to get the desired dose, then divide by concentration for volume. BC example (replacing the textbook's atropine case): pediatric epinephrine for anaphylaxis is 0.01 mg/kg IM, capped at the adult dose of 0.5 mg regardless of weight.",
+     "zh": "体重法给药只是在同一套公式前多加一步：先把患者体重换算成千克，再乘以每公斤剂量得出期望剂量，最后除以浓度算出要给的容量。BC 例题（替换教材原本用的阿托品案例）：儿童过敏性休克用肾上腺素 0.01 mg/kg IM，单次上限封顶在成人剂量 0.5 mg，不论体重多重都不能超过这个数。",
+     "hard": true
+    },
+    {
+     "en": "Decimal-writing safety rule: always lead a fractional dose with a zero (0.2 mg, never .2 mg) and never leave a trailing decimal (2 mg, never 2.0 mg) — a missed or misread decimal point is a classic ten-fold medication error.",
+     "zh": "写小数剂量的安全规则：不满 1 的剂量前面一定加零（写 0.2 mg，绝不写 .2 mg）；整数剂量后面绝不加多余小数点（写 2 mg，绝不写 2.0 mg）——漏看或看错小数点是经典的『十倍剂量』致命错误来源。",
+     "hard": true
+    },
+    {
+     "en": "BC's weight-based fluid-bolus formula recurs across at least five different protocols (hypovolemia, burns, electrical contact, nausea/vomiting with hypotension, anaphylaxis): 20 mL/kg of crystalloid, capped at 2 litres total, reassessing after every 500 mL.",
+     "zh": "BC 有一条体重法补液公式反复出现在至少五个 protocol 中（低血容量、烧伤、触电、恶心呕吐伴低血压、过敏性休克）：晶体液 20 mL/kg，总量封顶 2 升，每输 500 mL 就要重新评估一次。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Calculating the Dose and Rate for a Medication Infusion",
+   "titleZh": "持续输注剂量与滴速计算",
+   "points": [
+    {
+     "en": "A non-weight-based continuous infusion needs the desired dose per minute (mcg/min or mg/min) plus the set's drop factor. Textbook chain: mix the drug into a bag to get a concentration (mg/mL); divide the per-minute desired dose by that concentration to get mL/min; multiply mL/min by the drop factor (gtt/mL) to get gtt/min.",
+     "zh": "非体重法的持续输注需要两个额外数据：每分钟的期望剂量（mcg/min 或 mg/min）和输液器的滴系数。教材推导链：把药加进液体袋算出浓度（mg/mL）→ 每分钟期望剂量 ÷ 浓度 ＝ mL/min → mL/min × 滴系数(gtt/mL) ＝ gtt/min。",
+     "hard": true
+    },
+    {
+     "en": "Weight-based continuous infusion adds a kg step first: desired dose (mcg/min) = per-kg-per-minute order × patient weight in kg; then the same concentration-to-mL/min-to-gtt/min chain applies. The textbook's worked examples use lidocaine and dopamine infusions — neither drug sits on BC's current PCP list, so treat those two worked numbers as pure math-skill practice, not BC protocol content.",
+     "zh": "体重法持续输注要先多算一步：期望剂量（mcg/min）＝ 医嘱的每公斤每分钟剂量 × 患者体重(kg)；之后同样走『浓度→mL/min→gtt/min』这条链。教材示例用的是利多卡因和多巴胺持续输注——这两种药都不在 BC 现行 PCP 药物清单里，因此这两个例题的数字只用来练计算技能，不代表 BC 考纲内容。",
+     "hard": true
+    },
+    {
+     "en": "The underlying four-step chain (concentration → desired dose → mL/min → gtt/min) is what actually gets tested: practice it with round numbers, and it applies to any drip-titrated medication a service might authorize, not just the textbook's two legacy examples.",
+     "zh": "真正会被考的是这套四步推导链本身（浓度 → 期望剂量 → mL/min → gtt/min）：用整数练熟这条链，它可以套用到任何需要滴速滴定的药物上，而不只是教材举例的那两种已过时药物。",
+     "hard": false
+    },
+    {
+     "en": "Re-derive gtt/min from an mL/hr order using the same divide-by-6 (10 gtt/mL), divide-by-4 (15 gtt/mL) or divide-by-1 (60 gtt/mL) shortcut from the fluid-rate section — the trick works identically whether the bag is plain crystalloid or has a drug mixed in.",
+     "zh": "如果医嘱直接给的是 mL/hr，可以沿用输液速率一节的捷径反推 gtt/min：10 gtt/mL 除以 6、15 gtt/mL 除以 4、60 gtt/mL 除以 1——不管袋子里是单纯晶体液还是加了药，这条捷径同样适用。",
+     "hard": false
+    },
+    {
+     "en": "Always round gtt/min to a whole drop — a fractional drop cannot physically be counted — and when the number falls between two whole values, round toward the safer (usually slower) side, then reassess quickly to confirm the effect.",
+     "zh": "gtt/min 一律取整——半滴、零点几滴在物理上根本数不出来；数字卡在两个整数之间时，就往更安全（通常是更慢）的一侧取整，再尽快复评确认效果。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Pediatric Drug Doses",
+   "titleZh": "儿科给药剂量",
+   "points": [
+    {
+     "en": "Most pediatric drug doses run on weight in kilograms. A length-based tape (Broselow) estimates weight from height, up to about 34 kg, when no scale or reliable caregiver-reported weight is available, then reads off a colour zone matched to doses and equipment sizes for that estimated weight.",
+     "zh": "多数儿科药物剂量以千克体重为基准。没有秤或家属报的体重不可靠时，可用身高估重带（Broselow tape）——用身高估算体重（上限约 34 kg），读出对应颜色区间，该区间已配好相应的剂量和器材尺寸。",
+     "hard": true
+    },
+    {
+     "en": "BC's own pediatric dosing is not uniformly per-kg — some drugs are weight-banded instead. Salbutamol MDI: not indicated under 10 kg, 5 × 100 mcg for 10-20 kg, 10 × 100 mcg above 20 kg (each course repeatable up to 3 times); salbutamol nebulizer stays age-banded instead (2.5 mg under 1 year, 5 mg at 1 year and older). The two dosing schemes for the same drug do not mix.",
+     "zh": "BC 的儿科剂量并非全部按体重线性计算——有些药是按体重分档给的。沙丁胺醇 MDI：体重 <10 kg 不适用，10-20 kg 每疗程 5 喷 × 100 mcg，>20 kg 每疗程 10 喷 × 100 mcg（均可重复至多 3 次）；同一种药的雾化给法却是按年龄分档（1 岁以下 2.5 mg，1 岁及以上 5 mg）。同一药物这两套给法不能混用。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Enteral Medication Administration",
+   "titleZh": "肠道给药：口服、胃管与直肠",
+   "points": [
+    {
+     "en": "Enteral routes go through the GI tract: oral, gastric tube, and rectal. Oral absorption is slow (per the chapter's absorption table, 30-90 minutes), which is exactly why oral medication is rarely the first choice for a prehospital emergency.",
+     "zh": "肠道给药途径均经过消化道：口服、胃管、直肠。口服吸收慢（按本章吸收速率表，需 30-90 分钟），这正是院前急症很少首选口服给药的原因。",
+     "hard": false
+    },
+    {
+     "en": "Oral technique: run through the six rights, check expiry and clarity, dispense a liquid into a calibrated cup or syringe, or tip a solid dose from the bottle lid into the patient's hand; have the patient swallow with water, then document.",
+     "zh": "口服操作：核对六个正确（six rights）、检查有效期和药液是否浑浊；液体药倒进有刻度的量杯或抽进注射器，固体药先倒进瓶盖再交到患者手中；让患者就着水吞下，随后记录。",
+     "hard": false
+    },
+    {
+     "en": "Gastric tube technique: confirm tube placement first (inject air while auscultating the epigastrium, or aspirate and look for gastric contents), irrigate with 30-60 mL normal saline, inject the drug, chase it with another 30-60 mL saline flush, then clamp — never connect the tube to suction right after, or the dose gets pulled straight back out. Activated charcoal for toxic ingestion is the field's main gastric-tube drug.",
+     "zh": "胃管给药操作：先确认管道位置（推气同时听诊上腹部，或回抽看有无胃内容物），用 30-60 mL 生理盐水冲洗管道，注入药物，再用 30-60 mL 生理盐水冲管把药物全部送入，然后夹闭管道——切忌马上接吸引器，否则刚给的药会被立刻吸出来。院前经胃管给的药主要是中毒患者用的活性炭。",
+     "hard": true
+    },
+    {
+     "en": "Rectal administration is chosen when IV/IO access is unavailable — the classic case is pediatric diazepam for an active seizure, because the highly vascular rectal mucosa absorbs quickly and predictably (5-30 minutes per the absorption table). Suppository technique: water-soluble lubricant, insert 2.5-3.8 cm, instruct the patient to relax and not bear down.",
+     "zh": "直肠给药用于无法建立 IV/IO 通路时——最经典的场景是儿童癫痫发作时经直肠给地西泮（diazepam），因为直肠黏膜血供丰富，吸收快且可预测（按吸收速率表为 5-30 分钟）。栓剂操作：用水溶性润滑剂，插入深度 2.5-3.8 cm，嘱患者放松、不要用力憋。",
+     "hard": true
+    },
+    {
+     "en": "Liquid drugs given rectally need a delivery device: a nasopharyngeal airway, a small tracheal tube, an IV catheter's plastic sheath, or a needleless 1 mL syringe — whichever fits the patient's size — inserted to the same 2.5-3.8 cm depth. Diazepam also comes in a purpose-built rectal applicator with a tapered tip, which skips the improvised-device step entirely.",
+     "zh": "直肠给液体药需要借助传送器械：鼻咽通气道、细的气管导管、静脉留置针的塑料外套管，或不带针头的 1 mL 注射器——按患者体型选，同样插入 2.5-3.8 cm 深度。地西泮还有专用的直肠给药器，前端做成锥形，可以完全省去临时找器械这一步。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Parenteral Medication Administration",
+   "titleZh": "肠外给药：注射器械、包装与各给药途径",
+   "points": [
+    {
+     "en": "Parenteral routes bypass the GI tract entirely — intradermal, subcutaneous, intramuscular, IV, IO and percutaneous — and generally absorb faster and more predictably than enteral routes. IV is both the fastest and the most common parenteral route in the prehospital setting.",
+     "zh": "肠外给药途径完全绕开消化道——皮内、皮下、肌肉、静脉、骨髓腔与经皮，普遍比肠道给药吸收更快、更可预测。静脉是院前最快也最常用的肠外途径。",
+     "hard": false
+    },
+    {
+     "en": "Needle gauge is inverse to diameter — the smaller the number, the bigger the bore; common range is 18-26 gauge, with smaller gauges chosen for subcutaneous injections and larger gauges for IM and IV. Syringes range 1-60 mL and are calibrated in 0.1 mL increments; the 3 mL syringe is the size used most often for injections.",
+     "zh": "针头号数与直径成反比——数字越小、针越粗；常用范围 18-26 号，皮下注射选细号，肌注和静脉选粗号。注射器规格 1-60 mL，刻度以 0.1 mL 为一格；日常注射最常用的是 3 mL 注射器。",
+     "hard": true
+    },
+    {
+     "en": "Ampules are single-dose, breakable glass containers (1-10 mL) — snap the scored neck, draw without touching the ampule's inner rim, discard the stem and ampule in the sharps container. Vials are rubber-stoppered glass or plastic bottles, single- or multi-dose; a multi-dose vial is no longer sterile on the outside once punctured, so wipe the stopper with alcohol before every re-entry.",
+     "zh": "安瓿瓶是一次性玻璃容器（1-10 mL）——沿刻痕掰断瓶颈，抽药时不要碰到安瓿内壁，用完的瓶身和断颈都丢进锐器盒。西林瓶是橡胶塞玻璃或塑料瓶，分单剂量和多剂量；多剂量西林瓶一旦被扎穿，瓶外就不再是无菌状态，每次重新抽取前都要用酒精先擦拭橡胶塞。",
+     "hard": false
+    },
+    {
+     "en": "Two specialty packaging formats: reconstitution — two-vial powder-plus-diluent drugs (glucagon) get the diluent injected into the powder vial then shaken to mix, while Mix-o-Vial single-container drugs (methylprednisolone/Solu-Medrol) get their two halves squeezed together to release the centre stopper, then shaken; and prefilled syringes — a two-part glass-cartridge-plus-barrel design or a fully pre-assembled unit, which speed up delivery in time-critical calls like cardiac arrest (brand families include Tubex, Abboject, Carpuject).",
+     "zh": "两种特殊包装：复溶型——双瓶粉剂+稀释液（如 glucagon）把稀释液注入粉剂瓶后摇匀，Mix-o-Vial 单瓶双室型（如甲泼尼龙 Solu-Medrol）把上下两室对捏使隔膜脱落后摇匀；预填充注射器——玻璃药筒+外筒身的两件式或已组装好的一体式，能显著加快心跳骤停等争分夺秒场景下的给药速度（常见品牌 Tubex、Abboject、Carpuject）。",
+     "hard": false
+    },
+    {
+     "en": "Intradermal injection: under 1 mL, a 25-27 gauge 1-2.5 cm needle, bevel-up at a 10-15° angle into the forearm or upper back, producing a visible wheal. Almost never used prehospital except as a local-anesthetic step before an IV — its usual home is allergy testing or TB skin tests.",
+     "zh": "皮内注射：剂量 <1 mL，25-27 号、1-2.5 cm 针头，斜面向上以 10-15° 角刺入前臂或上背部，成功会鼓起一个可见的皮丘。院前几乎用不上，唯一场景是穿刺静脉前先局部麻醉——它的正职是过敏测试或结核菌素皮试。",
+     "hard": true
+    },
+    {
+     "en": "Subcutaneous injection: up to 1 mL, a 24-26 gauge 1.27-2.5 cm needle, 45° angle into the upper arm, anterior thigh or abdomen; aspirate first — blood return means the needle is in a vessel, so remove it and restart at a new site with new equipment. 'SC' and 'SubQ' are flagged as error-prone abbreviations; spell it out instead.",
+     "zh": "皮下注射：剂量最多 1 mL，24-26 号、1.27-2.5 cm 针头，以 45° 角刺入上臂、大腿前侧或腹部；先回抽——见血说明扎进了血管，要拔出后换新部位、新器材重来。『SC』『SubQ』这两种缩写被列为容易出错的写法，建议全称书写。",
+     "hard": true
+    },
+    {
+     "en": "Intramuscular injection: up to 5 mL, a 21-22 gauge 2.5-5 cm needle, 90° angle; the four accepted sites are vastus lateralis, rectus femoris, the upper-outer gluteal area, and the deltoid (about 4-5 cm below the acromion). Aspirate before injecting, same rule as SC. Both SC and IM require adequate peripheral perfusion to absorb — skip both routes in shock or cardiac arrest and go IV/IO instead.",
+     "zh": "肌肉注射：剂量最多 5 mL，21-22 号、2.5-5 cm 针头，以 90° 角刺入；四个公认部位是股外侧肌、股直肌、臀部外上象限、三角肌（肩峰下方约 4-5 cm 处）。给药前同样要先回抽。皮下和肌注都依赖良好的外周灌注才能吸收——休克或心跳骤停患者这两条路都别选，直接走静脉或骨髓腔。",
+     "hard": true
+    },
+    {
+     "en": "IV bolus: pinch the tubing off proximal to the injection port before pushing — otherwise the drug just takes the path of least resistance back into the bag instead of into the vein — push at the drug-specific rate, then flush (briefly wide open, or a 20 mL normal saline bolus) before resetting the maintenance rate. A saline-lock push follows the same logic with a blood-return check first. IO medication administration mirrors this technique exactly, but because the marrow space resists flow more than a vein, the push and flush both need real effort behind them, not gravity alone.",
+     "zh": "静脉推注：推药前先在注射港近端捏住管路——不这样做，药物就会顺着阻力最小的路径流回液体袋而不是进入血管——按该药规定的速度推注，随后冲管（短暂全开，或用 20 mL 生理盐水冲）再把速度调回维持量。经盐水锁推药同样逻辑，只是先要回抽确认见血。经 IO 给药操作完全相同，但骨髓腔对液体阻力比静脉大，推药和冲管都要真正用力，不能只靠重力。",
+     "hard": true
+    },
+    {
+     "en": "Adding medication to an IV bag for a maintenance infusion (e.g., dopamine, lidocaine, epinephrine — all needing careful titration): check bag clarity and expiry, compute and draw up the drug volume, inject through the medication port, agitate to mix, then label with the drug name, amount added, resulting concentration, date/time and your name. When available, run the infusion through a pump — it delivers a programmed, precise rate by positive pressure and alarms on occlusion or depletion, but that same positive pressure can drive an infiltration harder than gravity flow would, so an alarm is never a substitute for visually checking the site; pump tubing is brand- and model-specific and generally not interchangeable.",
+     "zh": "把药加进液体袋做维持输注（如多巴胺、利多卡因、肾上腺素——都需要精细滴定）：先检查液体袋是否澄清、有没有过期，计算并抽取所需药量，从加药口注入，轻轻摇匀，再在袋上标注药名、加入量、最终浓度、日期时间和自己的姓名。有条件就用输液泵——靠正压输出精确的编程速率，并在堵塞或药物用尽时报警，但同样这股正压如果发生渗出会比重力输液渗得更快更狠，报警响不等于不用看穿刺点；输液泵管路是厂牌型号专属的，通常不能跨品牌通用。",
+     "hard": false
+    },
+    {
+     "en": "Percutaneous routes bypass the GI tract via skin and mucous membranes: transdermal patches/creams (nitroglycerin, nicotine, estrogen — sustained slow release; always check for a hidden patch, since an unnoticed narcotic or nitro patch can explain otherwise unexplained hypotension); sublingual (highly vascular, fast — nitroglycerin spray or tablet is the classic example; glove up, since it absorbs through your own skin too); buccal (cheek-gum pocket, also fast, common in special-needs pediatric care); ocular and aural (drops/ointments — essentially never prehospital-initiated, only assisting a patient's own prescription); and intranasal, via a mucosal atomizer device on a syringe, which beats IM for onset because it skips muscle absorption even though only a handful of drugs cross the nasal mucosa well — BC's real examples are naloxone 4 mg IN as a single dose (versus the titrated 0.4→0.4→0.8→2.0 mg IV/IM ladder) and glucagon 3 mg IN, repeatable once after 15 minutes with no response.",
+     "zh": "经皮给药途径通过皮肤和黏膜绕开消化道：透皮贴剂/药膏（硝酸甘油、尼古丁、雌激素——缓慢持续释放；评估时一定要找有没有藏着的贴片，没发现的麻醉或硝酸甘油贴片能解释莫名其妙的低血压）；舌下（血供丰富、吸收快，最经典的是硝酸甘油喷雾或含片；操作要戴手套，因为它也会透过你自己的皮肤吸收）；颊黏膜（脸颊与牙龈之间，同样吸收快，特殊需求儿童患者中较常见）；眼部与耳部给药（滴剂/药膏——院前基本不会主动使用，只是协助患者使用自己的处方药）；以及经鼻给药——靠接在注射器上的雾化喷头（mucosal atomizer device），起效比肌注快因为绕开了肌肉吸收这一步，但只有少数药物能有效透过鼻黏膜。BC 的真实例子：纳洛酮经鼻 4 mg 单次给药（对应静脉/肌注 0.4→0.4→0.8→2.0 mg 逐级滴定）；胰高血糖素经鼻 3 mg，若 15 分钟后无反应可重复一次。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Medications Administered by the Inhalation Route",
+   "titleZh": "吸入给药：MDI、雾化与气管内给药",
+   "points": [
+    {
+     "en": "MDI and nebulizer both aerosolize a drug into the lower airway — most often a beta-2 agonist bronchodilator (salbutamol) or an anticholinergic (ipratropium). Oxygen itself, by volume of use, is technically the most commonly inhaled drug in EMS.",
+     "zh": "MDI（定量吸入器）和雾化器都是把药物雾化送入下呼吸道——最常用的是 β2 受体激动剂（沙丁胺醇）或抗胆碱能药（异丙托溴铵）。按使用量算，氧气本身其实才是 EMS 里用得最多的『吸入药物』。",
+     "hard": false
+    },
+    {
+     "en": "MDI technique: shake first, remove any oxygen mask, have the patient exhale fully then seal the lips around the mouthpiece; a spacer improves delivery and is standard for children or anyone who cannot coordinate the breath-and-press timing. Depress the canister while the patient inhales deeply, then hold the breath as long as tolerable.",
+     "zh": "MDI 操作：先摇匀，撤下任何氧气面罩，让患者先深呼一口气再把嘴唇包住吸嘴；用储雾罐能提高送药效率，对儿童或无法配合『按压同步吸气』动作的患者是标配。患者深吸气的同时按压药罐，然后尽量屏气。",
+     "hard": false
+    },
+    {
+     "en": "Small-volume nebulizer technique: unmixed drug is diluted to about 3 mL with normal saline in the nebulizer bowl, driven by oxygen or compressed air at 6 L/min to make a steady mist; coach the patient to breathe as deeply as possible and hold each breath 3-5 seconds before exhaling. Cardiac monitoring is advised during beta-agonist nebulization; if a dysrhythmia appears, stop the medication, give high-flow oxygen if indicated, and contact medical control.",
+     "zh": "小容量雾化器操作：未预混的药物在雾化罐里加生理盐水稀释到约 3 mL，用氧气或压缩空气以 6 L/min 驱动产生持续雾气；指导患者尽量深吸气，每次屏气 3-5 秒再呼出。雾化 β 受体激动剂期间建议接心电监护；一旦出现心律失常，立即停药、按需给高流量氧、联系医疗指导。",
+     "hard": true
+    },
+    {
+     "en": "Current evidence favours MDI-plus-spacer over nebulizer for two reasons: reliability (a nebulizer gives no certainty the patient inhaled the full dose, while an MDI delivers a consistent aerosol amount) and speed (no setup time, no compressed-gas source needed). Since more than half of home MDI users are estimated to use poor technique, the emergency call is also a chance to correct it.",
+     "zh": "现有证据支持 MDI+储雾罐优于雾化器，理由有两个：可靠性（雾化器无法保证患者吸进了完整剂量，MDI 给药量更一致）和速度（不需要设置时间，也不需要压缩气源）。据估计一半以上在家用 MDI 的患者手法不对，急救出诊也是顺手纠正患者用法的机会。",
+     "hard": true
+    },
+    {
+     "en": "A patient breathing too weakly to inhale effectively (inadequate tidal volume) cannot self-administer a nebulizer or MDI dose — bridge it in through a small-volume nebulizer placed inline with bag-mask ventilation, connected via a T-piece and a short length of corrugated tubing, on the mask or on a tracheal tube.",
+     "zh": "呼吸太弱、潮气量不足以自主有效吸药的患者，没法自己用雾化器或 MDI——这时把小容量雾化器接进球囊面罩通气回路，用 T 型接头和一小段波纹管连接，装在面罩或气管导管处继续给药。",
+     "hard": false
+    },
+    {
+     "en": "Tracheal drug administration (mnemonic LEAN: lidocaine, epinephrine, atropine, naloxone) at 2-2.5 times the IV dose is a textbook last-resort route for when no IV or IO access exists. None of BC's current PCP drug monographs list a tracheal or ET-tube route — treat LEAN as background knowledge rather than an expected BC exam pathway.",
+     "zh": "气管内给药（口诀 LEAN：利多卡因、肾上腺素、阿托品、纳洛酮）以静脉剂量的 2-2.5 倍给药，是教材里在没有 IV/IO 通路时的最后手段。BC 现行 PCP 药物专论没有任何一种药标注气管内（ET）给药途径——把 LEAN 当作背景知识记住即可，不要预期它会出现在 BC 考试的答题路径里。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Rates of Medication Absorption",
+   "titleZh": "各给药途径的吸收速度",
+   "points": [
+    {
+     "en": "Absorption speed ranking, fastest to slowest: IO and IV (30-60 seconds) tie for first, then tracheal and inhalation (2-3 minutes), then nasal atomization and sublingual (3-5 minutes), then intramuscular (10-20 minutes), then rectal (5-30 minutes) and subcutaneous (15-30 minutes) overlap, then oral (30-90 minutes), then topical (minutes to hours).",
+     "zh": "吸收速度从快到慢排序：IO 与 IV 并列最快（30-60 秒）；其次是气管内给药和吸入（2-3 分钟）；再来是经鼻雾化和舌下（3-5 分钟）；然后是肌肉注射（10-20 分钟）；直肠（5-30 分钟）和皮下注射（15-30 分钟）时间区间有重叠；口服最慢（30-90 分钟）；外用最不确定（几分钟到几小时）。",
+     "hard": true
+    },
+    {
+     "en": "This ranking only holds 'in a healthy person with adequate perfusion' — shock, hypothermia and vasoconstriction all slow absorption at every non-IV/IO route, which is exactly why a critically hypoperfused patient gets IV or IO access rather than an IM, SC or oral drug.",
+     "zh": "这张排序表的前提是『灌注正常的健康人』——休克、低体温、血管收缩都会拖慢除 IV/IO 外所有途径的吸收速度，这正是灌注差的危重患者要优先建立 IV 或 IO 通路、而不是选肌注/皮下/口服给药的原因。",
+     "hard": true
+    },
+    {
+     "en": "The six rights close out every administration regardless of route: right patient, right medication, right dose, right route, right time, right documentation — missing any single one turns an otherwise correct drug into a preventable harm event.",
+     "zh": "不论走哪条给药途径，收尾都要过一遍『六个正确』：正确的患者、药物、剂量、途径、时间、文书记录——缺了任何一项，一次『正确』的给药也会变成本可避免的伤害事件。",
+     "hard": true
+    },
+    {
+     "en": "Percentage-concentration math, tied together with a real BC contrast: the textbook's hypoglycemia example uses D50W at 50 g/100 mL, so its actual 50 mL prefilled syringe holds 25 g — 25,000 mg ÷ 50 mL = 500 mg/mL. BC's real protocol drug for the same indication is D10W: 10-25 g in 100-250 mL of 10% solution, i.e., 100 mg/mL — keep the concentration-math skill, swap the drug name for the exam.",
+     "zh": "百分比浓度换算，用真实 BC 对比收尾：教材的低血糖例题用的是 50% 葡萄糖（D50W，50 g/100 mL），实际 50 mL 预填充针剂里只装了 25 g——25,000 mg ÷ 50 mL ＝ 500 mg/mL。BC 现行 protocol 对应同一适应症用的却是 D10W：10-25 g 溶于 100-250 mL 的 10% 溶液，即 100 mg/mL——浓度换算这套技能保留，考试时药名要换成 D10W。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Total body water / compartments",
+   "itemZh": "总体液量与各体液腔占比",
+   "value": "TBW 60%体重（70kg病人约42L）＝ICF 45%（约28L）+ECF 15%（约14L，其中间质液10.5%/约10L、血管内液4.5%/约4L）"
+  },
+  {
+   "itemEn": "Normal blood glucose (textbook nonelectrolyte range)",
+   "itemZh": "教材给出的正常血糖范围",
+   "value": "4-8 mmol/L"
+  },
+  {
+   "itemEn": "Daily baseline fluid loss",
+   "itemZh": "每日基础体液丢失量",
+   "value": "约2-2.5 L（尿+呼气+皮肤）"
+  },
+  {
+   "itemEn": "Crystalloid-to-blood replacement ratio",
+   "itemZh": "等张晶体液置换失血比例",
+   "value": "3:1（输入液约2/3在约1小时内离开血管腔）"
+  },
+  {
+   "itemEn": "Textbook fluid bolus target (perfusion, not BP)",
+   "itemZh": "教材补液推注目标（恢复灌注而非升压）",
+   "value": "10-20 mL/kg"
+  },
+  {
+   "itemEn": "Catheter gauge range and clinical use",
+   "itemZh": "导管型号范围与临床用法",
+   "value": "常见最大14G～最小27G；成人无需补液用18-20G；需补液/血制品/手术用14-16G；儿科用20/22/24/26G"
+  },
+  {
+   "itemEn": "Drip set factors",
+   "itemZh": "滴系数",
+   "value": "微滴管60 gtt/mL；大滴管10或15 gtt/mL"
+  },
+  {
+   "itemEn": "Constricting band placement",
+   "itemZh": "止血带绑扎位置",
+   "value": "穿刺点上方约15-25 cm"
+  },
+  {
+   "itemEn": "Insertion angle sequence",
+   "itemZh": "穿刺角度变化",
+   "value": "进皮约45°，见回血后降到约15°"
+  },
+  {
+   "itemEn": "Saline lock fill volume",
+   "itemZh": "生理盐水锁灌注量",
+   "value": "约2 mL normal saline"
+  },
+  {
+   "itemEn": "IV bag change threshold",
+   "itemZh": "换袋时机",
+   "value": "袋内剩约50 mL时更换，不可等其流干"
+  },
+  {
+   "itemEn": "Blood tubing filter size",
+   "itemZh": "血液输液器滤网孔径",
+   "value": "约200微米"
+  },
+  {
+   "itemEn": "Opened IV bag usable window",
+   "itemZh": "拆封后IV液袋可用时限",
+   "value": "外层保护包装撕开后24小时内须用完（输液器本身破封后须立即使用，无24小时宽限）"
+  },
+  {
+   "itemEn": "Controlled-substance inventory count interval",
+   "itemZh": "管制药物盘点周期",
+   "value": "每12-24小时一次"
+  },
+  {
+   "itemEn": "Drug-label verification checks before administration",
+   "itemZh": "给药前标签核对次数",
+   "value": "3次（取药盒时/配药时/给药前）"
+  },
+  {
+   "itemEn": "Sodium-potassium pump exchange ratio",
+   "itemZh": "钠钾泵交换比例",
+   "value": "每2个K+进细胞，泵出3个Na+"
+  },
+  {
+   "itemEn": "Drop-rate master formula",
+   "itemZh": "滴速核心公式",
+   "value": "gtt/min ＝（总量 mL × 滴系数 gtt/mL）÷ 时间（分钟）"
+  },
+  {
+   "itemEn": "Quick mL/hr → gtt/min shortcut",
+   "itemZh": "mL/hr 转 gtt/min 快捷除数",
+   "value": "10 gtt/mL 除以 6；15 gtt/mL 除以 4；60 gtt/mL 除以 1"
+  },
+  {
+   "itemEn": "BC worked examples (identical formula)",
+   "itemZh": "BC 官方例题（同一公式）",
+   "value": "500 mL/12h @10 gtt/mL ≈7 gtt/min；25 mL D10W/60min @60 gtt/mL =25 gtt/min"
+  },
+  {
+   "itemEn": "BC default IV maintenance rate",
+   "itemZh": "BC 默认静脉维持速率",
+   "value": "约 75 mL/hr，途中每 5-15 分钟重评一次"
+  },
+  {
+   "itemEn": "Pounds-to-kilograms, two formulas",
+   "itemZh": "磅转千克两种公式",
+   "value": "lb÷2.2＝kg；或 (lb÷2)－10%＝kg"
+  },
+  {
+   "itemEn": "Temperature conversion",
+   "itemZh": "华氏/摄氏互换",
+   "value": "F→C=(F-32)×0.555；C→F=(C×1.8)+32；正常体温 37°C=98.6°F"
+  },
+  {
+   "itemEn": "Percent-concentration rule",
+   "itemZh": "百分比浓度换算规则",
+   "value": "1% = 1 g/100 mL = 10 mg/mL"
+  },
+  {
+   "itemEn": "D50W math vs BC's real D10W drug",
+   "itemZh": "教材 D50W 算法 vs BC 真实用药 D10W",
+   "value": "教材 D50W 实际浓度 500 mg/mL（25 g/50 mL）；BC 现用 D10W 10-25 g / 100-250 mL(10%)=100 mg/mL"
+  },
+  {
+   "itemEn": "BC universal weight-based fluid bolus",
+   "itemZh": "BC 通用体重法补液公式",
+   "value": "晶体液 20 mL/kg，上限 2 L，每 500 mL 重评一次（低血容量/烧伤/触电/恶心呕吐/过敏休克 5 个 protocol 共用）"
+  },
+  {
+   "itemEn": "Pediatric epinephrine dose (anaphylaxis)",
+   "itemZh": "儿童肾上腺素剂量（过敏性休克）",
+   "value": "0.01 mg/kg IM，单次上限＝成人剂量 0.5 mg"
+  },
+  {
+   "itemEn": "Naloxone titration ladder",
+   "itemZh": "纳洛酮递增给药阶梯",
+   "value": "IV/IM：0.4→0.4→0.8→2.0 mg，每 3 分钟一档，目标 SpO2≥94%且呼吸>10次/分；IN：单次 4 mg"
+  },
+  {
+   "itemEn": "Glucagon route-dose pairing",
+   "itemZh": "胰高血糖素给药途径与剂量配对",
+   "value": "IM 0.5-1 mg；IN 3 mg；15 分钟无反应可重复一次"
+  },
+  {
+   "itemEn": "TXA push rate and hard limits",
+   "itemZh": "TXA 推注速度与硬性限制",
+   "value": "2 g（2,000 mg）IV 推注 1 分钟推完；伤后>3 小时/<12 岁/孤立性 TBI 禁用"
+  },
+  {
+   "itemEn": "Pediatric salbutamol MDI, weight-banded",
+   "itemZh": "儿童沙丁胺醇 MDI 按体重分档",
+   "value": "<10 kg 不适用；10-20 kg 5×100 mcg；>20 kg 10×100 mcg（均可重复 3 次）"
+  },
+  {
+   "itemEn": "Ipratropium: single dose only",
+   "itemZh": "异丙托溴铵：仅单剂",
+   "value": "雾化 500 mcg 或 MDI 160 mcg，只给一次；新生儿<30 天禁用"
+  },
+  {
+   "itemEn": "Blood tube fill validity",
+   "itemZh": "采血管有效填充量",
+   "value": "至少四分之三满才可用于检验"
+  },
+  {
+   "itemEn": "Needle-angle ladder by route",
+   "itemZh": "各给药途径进针角度",
+   "value": "皮内 10-15°；皮下 45°；肌注/IO 90°"
+  },
+  {
+   "itemEn": "IM vs SC maximum volume",
+   "itemZh": "肌注 vs 皮下最大容量",
+   "value": "肌注最多 5 mL；皮下最多 1 mL"
+  },
+  {
+   "itemEn": "Absorption-speed ranking",
+   "itemZh": "吸收速度排序",
+   "value": "IO/IV 30-60秒 < 气管内/吸入 2-3分钟 < 经鼻/舌下 3-5分钟 < 肌注 10-20分钟 < 直肠5-30分钟≈皮下15-30分钟 < 口服 30-90分钟 < 外用数分钟至数小时"
+  },
+  {
+   "itemEn": "Arterial puncture direct pressure",
+   "itemZh": "误穿动脉直接加压时长",
+   "value": "至少 5 分钟"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Before grabbing any bag, ask three questions first: is the patient stable or critical, does the patient need fluid replacement, and will the patient need medications through this line — the answers, not what's within reach, decide isotonic versus hypotonic versus hypertonic.",
+   "zh": "拿液体袋之前先问三个问题：病人稳不稳定、要不要补液、这条通路要不要用来给药——答案决定选等张、低张还是高张，而不是手边有什么就用什么。"
+  },
+  {
+   "en": "Large, easily visible arm veins can be deceptively hard to cannulate because they roll side to side during the stick; apply lateral traction to lock a rolling vein into position before advancing the needle.",
+   "zh": "看起来又粗又明显的手臂血管反而常常不好扎，因为下针时它会左右滑动；下针前先做侧向牵引把血管固定住再进针。"
+  },
+  {
+   "en": "In patients with dark skin, iodine prep helps make veins more visible before venipuncture — as with any patient, confirm there is no iodine allergy first.",
+   "zh": "深色皮肤的病人，用碘伏备皮能让血管更容易看清——和对任何病人一样，用之前先确认没有碘过敏。"
+  },
+  {
+   "en": "After two failed attempts, let your partner try — this is a written practice guideline, not a personal failure.",
+   "zh": "两次穿刺失败后就换搭档来——这是操作规范写明的做法，不是谁没本事的问题。"
+  },
+  {
+   "en": "If you meet valve resistance, elevate the extremity and try again; if the line keeps infiltrating, try the next attempt without a constricting band.",
+   "zh": "遇到静脉瓣阻力时抬高肢体再试一次；如果反复渗液，下一次可以试着不用止血带。"
+  },
+  {
+   "en": "When rapid volume is needed, the patient is coding, or perfusion is otherwise failing, skip the usual distal-first search and go straight for the antecubital vein — hand and forearm veins tend to collapse under hypoperfusion long before this one does.",
+   "zh": "需要快速补液、心脏骤停或血流动力学不稳定的病人，直接选肘正中静脉，不用再按「先远端」的常规走——低灌注状态下手背/前臂血管往往已经瘪了，肘正中还看得见摸得到。"
+  },
+  {
+   "en": "Carry a calculator or EMS field guide for pounds-to-kilograms conversion and dose math — under call pressure, mental math is where ten-fold errors creep in.",
+   "zh": "随身带计算器或急救速查手册，专门用于磅转千克和剂量换算——出勤压力下心算最容易出十倍剂量错误。"
+  },
+  {
+   "en": "Drawing from an ampule or vial in a moving ambulance: brace the syringe against your palm with the needle pointing up, and use your thumb and forefinger to draw the ampule or vial down onto the needle — never stab the needle toward the container.",
+   "zh": "在行驶的救护车上从安瓿瓶或西林瓶抽药：把注射器抵在掌心、针尖朝上，用拇指和食指把瓶子往针尖方向拉下来抽药——绝不是拿针去戳瓶子，这样最不容易扎伤自己。"
+  },
+  {
+   "en": "Manually inserted IO needles rest at 90° to the bone and are easily dislodged — full, careful immobilization the moment it's placed is not optional, treat it exactly like an impaled object.",
+   "zh": "手动 IO 穿刺针与骨面呈 90°、极易松脱——置管成功后立刻彻底固定不是可选项，要按固定异物的标准来做。"
+  },
+  {
+   "en": "Diazepam's purpose-built rectal applicator has a tapered tip designed for direct insertion — when it's on hand, skip improvising with an NPA or catheter sheath.",
+   "zh": "地西泮专用直肠给药器前端做成锥形、可直接插入使用——手头有这个专用器械时，就不用再临时找鼻咽通气道或留置针外套管代替。"
+  },
+  {
+   "en": "Wear gloves when administering sublingual nitroglycerin — the drug absorbs through your own skin just as readily as through the patient's mucosa.",
+   "zh": "给患者舌下含服硝酸甘油时要戴手套——这药物透过你自己的皮肤吸收，和透过患者黏膜吸收一样容易。"
+  },
+  {
+   "en": "For older patients who need large-volume IV fluids, give it in small 200-300 mL boluses and check breath sounds before and after each one — this is how you catch circulatory overload before it becomes obvious.",
+   "zh": "老年患者需要大量补液时，改用 200-300 mL 一次的小剂量分次给，每次前后都听一遍呼吸音——这是在循环超负荷变得明显之前把它抓出来的办法。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Myth: once the line is in and fluid is running, the job is done. Reality: gauge, site, fluid type, and rate all need to be documented, and the site must keep being reassessed for infiltration or swelling.",
+   "zh": "误区：管路扎上、液体在流，任务就算完成了。事实：型号、部位、液体种类、滴速都要记录，而且穿刺点要持续复查有无渗液或肿胀。"
+  },
+  {
+   "en": "Myth: isotonic, hypotonic, and hypertonic solutions are roughly interchangeable — grab whichever bag is closest. Reality: the three move water in opposite directions relative to the cell; picking wrong can worsen cerebral or pulmonary edema, or mask ongoing blood loss.",
+   "zh": "误区：等张、低张、高张液体差不多，随手拿一袋就行。事实：三者让水在细胞内外流动的方向完全不同，选错了可能加重脑水肿或肺水肿，甚至掩盖持续失血。"
+  },
+  {
+   "en": "Myth: disinfectants (bleach, Virex, Cidex) and skin antiseptics (iodine, alcohol) are the same category and either can be used on a patient. Reality: disinfectants are toxic to living tissue and are for nonliving surfaces only — never apply one to skin.",
+   "zh": "误区：消毒液（漂白水、Virex、Cidex）和皮肤消毒用的碘伏/酒精是一回事，随便哪个都能擦病人。事实：消毒液对活组织有毒性，只能用在非生命体表面，绝不能用在皮肤上。"
+  },
+  {
+   "en": "Myth: a needle or IV line with an automatic retracting shield is already 'dealt with' once it retracts, so it can just be set aside. Reality: retraction only prevents a second stick — the item is still a biohazard sharp and must go straight into a sharps container.",
+   "zh": "误区：带自动回缩装置的针头或IV留置针一回缩就算处理完了，可以先放一边。事实：回缩只是防止二次扎伤，用过的东西仍是生物危害锐器，必须立刻丢进锐器盒。"
+  },
+  {
+   "en": "Myth: this textbook's 10-20 mL/kg bolus figure and BC's protocol-specific 20 mL/kg (max 2 L) figure are the same number and can be memorized interchangeably. Reality: they differ in both the target rate and the presence of a hard ceiling — the number that governs actual BC patient care is the protocol figure, not the textbook range (see bcAlerts).",
+   "zh": "误区：教材的10-20 mL/kg推注量和BC规程的20 mL/kg（封顶2升）是同一个数字，背哪个都行。事实：两者的目标速率和是否有硬性封顶都不一样——真正管BC实际病人处置的是规程数字，不是教材范围（详见bcAlerts）。"
+  },
+  {
+   "en": "Myth: the external jugular vein is just 'another arm vein, but in the neck' and can be approached the same way as a hand IV. Reality: it sits next to the carotid artery, carries risks (carotid puncture, hematoma, air embolism) that limb IVs do not, and is only attempted after peripheral options are exhausted and where protocol explicitly allows it.",
+   "zh": "误区：颈外静脉不过是「长在脖子上的另一条手臂静脉」，扎法跟手背IV一样。事实：它紧挨着颈动脉，有肢体IV没有的风险（误刺颈动脉、血肿、空气栓塞），必须先排除所有外周血管选项，且只在规程明确允许时才能尝试。"
+  },
+  {
+   "en": "'Thrombophlebitis shows up right after the line goes in.' False — it takes hours to develop, so a prehospital crew rarely sees it except on an interfacility transfer of an already-running line.",
+   "zh": "误区：『静脉炎置管后马上就会出现』。实际要数小时才会发展出来，院前团队几乎见不到，除非是转运一条已经在用的通路。"
+  },
+  {
+   "en": "'An occluded line gets fixed by pushing harder.' False — pushing a clot forward turns it into an embolus; only gently aspirate to dislodge it, and restart elsewhere if that fails.",
+   "zh": "误区：『堵塞的通路用力推就通了』。往前推血凝块会把它推成栓子；正确做法是轻轻回抽把它松开，不行就换地方重新开通路。"
+  },
+  {
+   "en": "'IO access is only for children.' Outdated — IO is now an accepted critical-access route in adults too, not just a pediatric fallback after failed IV attempts.",
+   "zh": "误区：『IO 只用于儿童』。这是过时说法——IO 现在也是成人危重患者建立通路的公认选项，不只是儿童静脉失败后的备用方案。"
+  },
+  {
+   "en": "'50% dextrose (D50W) is BC's standard hypoglycemia drug.' False for the current exam — BC's real PCP monograph drug is D10W (10-25 g in 100-250 mL of 10% solution); keep the textbook's D50W concentration math as a math-skill exercise, but never answer 'D50W' as the BC protocol drug.",
+   "zh": "误区：『50% 葡萄糖（D50W）是 BC 治疗低血糖的标准用药』。这在当前考纲下是错的——BC 现行 PCP 专论用的是 D10W（10-25 g 溶于 100-250 mL 的 10% 溶液）；教材 D50W 的浓度算法可以留着练计算技能，但答 BC protocol 用药时绝不能写 D50W。"
+  },
+  {
+   "en": "'Naloxone's goal is to wake the patient up fully.' False — the titration endpoint is SpO2 ≥94% and respirations >10/min; over-reversing risks precipitated withdrawal and combativeness.",
+   "zh": "误区：『纳洛酮的目标是把患者完全叫醒』。滴定终点其实是 SpO2 ≥94% 且呼吸 >10 次/分——逆转过头会诱发戒断反应和攻击性行为。"
+  },
+  {
+   "en": "'IM and SC injections work fine in a shocky patient.' False — both routes need adequate peripheral perfusion to absorb; in shock or arrest the drug just pools at the injection site, so go IV or IO instead.",
+   "zh": "误区：『休克患者照样能用肌注或皮下注射给药』。这两条途径都依赖良好的外周灌注才能吸收；休克或骤停时药物只会堆积在注射点原地，应该改走静脉或 IO。"
+  },
+  {
+   "en": "'Tracheal drug administration (LEAN) is a routine BC option.' False — it's textbook legacy content for a last-resort no-access scenario; none of BC's current PCP drug monographs list a tracheal/ET route.",
+   "zh": "误区：『气管内给药（LEAN）是 BC 的常规选项』。这是教材里针对无通路时的最后手段，属于遗留内容——BC 现行 PCP 药物专论没有任何一种药标注气管内途径。"
+  },
+  {
+   "en": "'An infusion pump alarm means the site is fine.' False — pump alarms catch occlusion or medication depletion, not a slowly infiltrating vein under positive pressure; still check the site by eye.",
+   "zh": "误区：『输液泵没报警就说明穿刺点没问题』。泵的报警只能抓到堵塞或药物用尽，抓不到正压下正在悄悄渗出的血管——穿刺点还是要用眼睛亲自检查。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "Six Rights",
+   "en": "Patient - Medication - Dose - Route - Time - Documentation: the six checks that must all pass before any drug leaves your hand.",
+   "zh": "六项正确：对的病人、对的药、对的剂量、对的途径、对的时间、对的记录——给药前这六件事缺一不可。"
+  },
+  {
+   "name": "Distal-to-proximal",
+   "en": "Always attempt the most distal usable vein first, so a failed or infiltrated site never costs you the access above it.",
+   "zh": "先远端后近端：最远的可用血管先扎，万一失败或渗液，近端血管还留着当后备。"
+  },
+  {
+   "name": "Tonicity direction",
+   "en": "Hypo pulls water IN to cells (they swell); hyper pulls water OUT of cells (they shrink) — sodium concentration relative to serum decides which way the water moves.",
+   "zh": "低张把水拉进细胞（细胞胀），高张把水拉出细胞（细胞缩）——比血清钠浓度高低决定水往哪边走。"
+  },
+  {
+   "name": "Red Blood Gives Life",
+   "en": "Blood-tube fill order: red (no additive, clotting/typing) → blue (EDTA, PT/PTT) → green (heparin, electrolytes/glucose) → lavender (sodium citrate, CBC).",
+   "zh": "采血管填充顺序：红（无添加剂，凝血/血型）→蓝（EDTA，PT/PTT）→绿（肝素，电解质/血糖）→薰衣草色（枸橼酸钠，全血细胞计数）。"
+  },
+  {
+   "name": "LEAN",
+   "en": "The four tracheal-tube drugs at 2-2.5× IV dose: Lidocaine, Epinephrine, Atropine, Naloxone — textbook legacy, not on BC's current drug/route list.",
+   "zh": "气管内给药四药、剂量为静脉的 2-2.5 倍：利多卡因(Lidocaine)、肾上腺素(Epinephrine)、阿托品(Atropine)、纳洛酮(Naloxone)——教材遗留内容，不在 BC 现行药物/途径清单里。"
+  },
+  {
+   "name": "量×滴÷时间",
+   "en": "The drop-rate formula in three pieces: volume (mL) × drop factor (gtt/mL) ÷ time (minutes) = gtt/min.",
+   "zh": "滴速公式三件套：总量(mL) × 滴系数(gtt/mL) ÷ 时间(分钟) ＝ 每分钟滴数(gtt/min)。"
+  },
+  {
+   "name": "6-4-1 捷径",
+   "en": "Converting mL/hr straight to gtt/min: divide by 6 for a 10 gtt/mL macrodrip, by 4 for a 15 gtt/mL macrodrip, by 1 for a 60 gtt/mL microdrip.",
+   "zh": "mL/hr 直接转 gtt/min 的捷径：10 gtt/mL 大滴除以 6，15 gtt/mL 大滴除以 4，60 gtt/mL 微滴除以 1（即不用除）。"
+  },
+  {
+   "name": "Six Rights",
+   "en": "Right patient, right medication, right dose, right route, right time, right documentation — the checklist that closes every administration, any route.",
+   "zh": "六个正确：正确的患者、药物、剂量、途径、时间、文书记录——不论走哪条给药途径，收尾都要过这六项。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A patient in hypovolemic shock needs fluid replacement. What catheter gauge should you select, and why?",
+   "qZh": "一名低血容量性休克病人需要补液，应该选什么型号的导管，为什么？",
+   "aEn": "14-16G — the largest bore practical, because gauge number is inverse to diameter and a larger diameter delivers more fluid faster; this size is also required if blood products or surgery are anticipated.",
+   "aZh": "14-16G——尽量选最粗的一号，因为型号数字和直径成反比，直径越大流速越快；如果预计要输血制品或送手术，也必须用这个粗细。"
+  },
+  {
+   "qEn": "You are treating a BC patient with confirmed hypoglycemia and vascular access already established. What concentration and dose of dextrose does BC protocol call for, and at what glucose threshold does correction start?",
+   "qZh": "一名BC病人确认低血糖，已建立静脉通路，BC规程要求用什么浓度和剂量的葡萄糖纠正，从多少血糖值开始纠正？",
+   "aEn": "D10W, 10-25 g (100-250 mL of 10% solution), triggered at confirmed BGL < 4.0 mmol/L — not the textbook illustrative example's 50% dextrose at 2 mmol/L.",
+   "aZh": "D10W，10-25克（即10%溶液100-250毫升），血糖确认低于4.0 mmol/L时启动——不是教材举例里的「2 mmol/L时用50%葡萄糖」。"
+  },
+  {
+   "qEn": "Calculate gtt/min for 500 mL normal saline over 12 hours on a 10 gtt/mL macrodrip, using both the full formula and the 6-4-1 shortcut. Do they agree?",
+   "qZh": "用完整公式和 6-4-1 捷径分别算：500 mL 生理盐水、12 小时、10 gtt/mL 大滴输液器，两种算法结果一致吗？",
+   "aEn": "Full formula: (500×10)÷(12×60)=5,000÷720≈6.9→7 gtt/min. Shortcut: 500mL÷12h≈41.7 mL/hr÷6≈7 gtt/min. Both agree at 7 gtt/min — this is BC's own worked example.",
+   "aZh": "完整公式：(500×10)÷(12×60)=5,000÷720≈6.9→7 gtt/min。捷径：500mL÷12h≈41.7 mL/hr÷6≈7 gtt/min。两种算法都得 7 gtt/min——这正是 BC 官方例题的答案。"
+  },
+  {
+   "qEn": "A 16 kg child needs epinephrine 0.01 mg/kg IM for anaphylaxis. What dose do you give, and does it exceed any cap?",
+   "qZh": "16 kg 的儿童过敏性休克需要肾上腺素 0.01 mg/kg IM，该给多少剂量？有没有超过上限？",
+   "aEn": "0.01 × 16 = 0.16 mg, rounds to about 0.2 mg — well under both the adult dose (0.5 mg) and the pediatric single-dose cap (0.5 mg).",
+   "aZh": "0.01 × 16 = 0.16 mg，约取 0.2 mg——远低于成人剂量（0.5 mg），也没超过儿科单次上限（0.5 mg）。"
+  },
+  {
+   "qEn": "Why does BC's drug list use D10W instead of the textbook's D50W for hypoglycemia, and what's the concentration difference?",
+   "qZh": "BC 药物清单为什么用 D10W 而不是教材的 D50W 治疗低血糖？两者浓度差多少？",
+   "aEn": "D10W is a 10% solution (100 mg/mL); the textbook's D50W example works out to 500 mg/mL once you account for the actual 50 mL prefilled syringe (25 g/50 mL). BC's monograph dose is 10-25 g in 100-250 mL of 10% solution — same math skill, different real-world drug and concentration.",
+   "aZh": "D10W 是 10% 溶液（100 mg/mL）；教材 D50W 例题按实际 50 mL 预填充针剂算出来是 500 mg/mL（25 g/50 mL）。BC 专论剂量是 10-25 g 溶于 100-250 mL 的 10% 溶液——算法技能相同，实际用药和浓度不同。"
+  },
+  {
+   "qEn": "Rank IV, sublingual, intramuscular and oral by absorption speed, fastest to slowest, with approximate onset times.",
+   "qZh": "按吸收速度从快到慢排列静脉、舌下、肌注、口服，并给出大致起效时间。",
+   "aEn": "IV (30-60 sec) < sublingual (3-5 min) < intramuscular (10-20 min) < oral (30-90 min) — and this ranking only holds for a patient with adequate perfusion.",
+   "aZh": "静脉（30-60 秒）< 舌下（3-5 分钟）< 肌注（10-20 分钟）< 口服（30-90 分钟）——且这个排序只在患者灌注正常时成立。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Who is authorized to start an IV / obtain vascular access",
+   "topicZh": "谁有资格建立静脉通路",
+   "bookEn": "The textbook presents peripheral/EJ IV cannulation and IO access as core 'paramedic' skills without separating licence levels — the generic term 'paramedic' used throughout this chapter conflates scopes that BC splits into two separate licences, EMR and PCP.",
+   "bookZh": "教材把外周/颈外静脉穿刺和骨髓腔通路都当作「paramedic」通用核心技能来讲，全章统一用这一个词，没有按执照等级拆开——这和BC把资格明确分成EMR、PCP两级的做法不对应。",
+   "bcEn": "Across every BC treatment protocol reviewed (traumatic brain injury, burns, stroke, hypovolemia, anaphylaxis, suspected narcotic overdose, diabetic emergencies), vascular access and IV therapy appear exclusively under the heading 'Additional Primary Care Paramedic Interventions' — never under 'Interventions of all License Levels' and never under the EMR-specific interventions block. In BC, EMR candidates do not initiate vascular access or IV therapy; it is PCP-exclusive scope.",
+   "bcZh": "查过的每一份BC治疗规程（脑外伤、烧伤、中风、低血容量、过敏反应、疑似麻醉药过量、糖尿病急症）里，静脉通路/IV治疗全部只出现在「额外的PCP级别处置」这一栏，从未出现在「所有执照等级通用处置」栏目，也没出现在EMR专属处置栏目里。也就是说在BC，EMR考生不建立血管通路，这是PCP独有的技能范围。",
+   "ref": "bc-exam-guidelines.txt IV Procedures p.38、IV Maintenance p.39，以及TBI/Burns/Stroke/Hypovolemia/Anaphylaxis/Suspected Narcotic Overdose/Diabetic Emergencies各规程页"
+  },
+  {
+   "topicEn": "Hypoglycemia correction concentration and threshold",
+   "topicZh": "低血糖纠正的浓度与阈值",
+   "bookEn": "This chapter's own worked example (Medical Direction section) describes an unresponsive diabetic patient with a confirmed glucose of 2 mmol/L, treated under standing order with 50% dextrose.",
+   "bookZh": "本章「医疗指导」一节自带的案例：一名无反应的糖尿病患者，血糖确认为2 mmol/L，按预立医嘱给予50%葡萄糖。",
+   "bcEn": "BC's Diabetic Emergencies protocol sets the correction threshold at confirmed BGL < 4.0 mmol/L (not 2 mmol/L), and the PCP-level IV correction fluid is D10W 10-25 g (100-250 mL of 10% solution) — not 50% dextrose. Glucagon is the fallback only when IV access cannot be obtained.",
+   "bcZh": "BC《糖尿病急症》规程的纠正阈值是确认血糖 < 4.0 mmol/L（不是2 mmol/L），PCP级别静脉纠正用的是D10W 10-25克（即10%溶液100-250毫升），不是50%葡萄糖；只有拿不到静脉通路时才退而用胰高血糖素。",
+   "ref": "bc-exam-guidelines.txt Diabetic Emergencies p.57"
+  },
+  {
+   "topicEn": "Fluid bolus volume for hypoperfusion",
+   "topicZh": "低灌注液体推注量",
+   "bookEn": "The IV Fluid Composition section gives a bolus range of 10-20 mL/kg aimed at restoring perfusion markers, without stating a total-volume ceiling anywhere in this chapter.",
+   "bookZh": "「IV液体组成」一节给出的推注范围是10-20 mL/kg，目标是恢复灌注指标，本章全文没有给出总量封顶。",
+   "bcEn": "BC's Hypovolemia and Anaphylaxis protocols both standardize the PCP fluid bolus at 20 mL/kg, capped at a maximum of 2 litres total, with mandatory reassessment every 500 mL infused.",
+   "bcZh": "BC《低血容量》和《过敏反应》规程都把PCP液体推注统一定为20 mL/kg，总量封顶2升，每输入500毫升必须重新评估一次。",
+   "ref": "bc-exam-guidelines.txt Hypovolemia p.54、Anaphylaxis p.55"
+  },
+  {
+   "topicEn": "External jugular (EJ) vein cannulation — BC scope not confirmed in this source",
+   "topicZh": "颈外静脉（EJ）穿刺——本源文件未确认BC授权范围",
+   "bookEn": "The textbook treats EJ cannulation as a standard fallback peripheral IV site, gated only by whether 'local or regional protocols' permit its use.",
+   "bookZh": "教材把颈外静脉穿刺当作标准的外周静脉备选部位，唯一限制条件是「当地/区域规程是否允许」。",
+   "bcEn": "The BC exam guidelines document used for this chapter does not mention the external jugular vein anywhere by name, and gives no site restriction alongside the generic 'obtain vascular access' language used in every protocol. Whether BC PCP scope specifically includes or restricts EJ cannulation could not be confirmed from this source — verify against the COPR competency profile or regional medical directives before treating it as confirmed exam-safe content.",
+   "bcZh": "本次审阅使用的BC考纲文件全文没有出现「external jugular」或颈外静脉字样，各规程都只统一写「建立血管通路」，没有部位限制。BC PCP范围是否明确包含（或限制）颈外静脉穿刺，本源文件无法确认——上线前需要对照COPR能力清单或区域医疗指导文件核实，暂时不能当作已确认的安全考点直接使用。",
+   "ref": "bc-exam-guidelines.txt 全文检索无「external jugular」/「EJ vein」匹配结果"
+  },
+  {
+   "topicEn": "TKVO rate and site-selection granularity in specific BC protocols",
+   "topicZh": "特定BC规程中的TKVO给液速率与选点细节",
+   "bookEn": "This chapter does not define TKVO (to keep vein open) as a distinct rate concept tied to a specific presentation, nor does it give protocol-specific gauge or site rules for individual conditions.",
+   "bookZh": "本章没有把TKVO（维持静脉通畅的最低速率）当作针对特定病情的独立速率概念来讲，也没有给出对应病情的型号/部位细则。",
+   "bcEn": "BC's TBI protocol specifies IV TKVO only if systolic BP is greater than 120 mmHg; the Stroke protocol specifies a preferred access site above the level of the wrist using an 18G catheter, preferably on the right side — this protocol-specific granularity layers on top of, not in place of, this chapter's general IV technique.",
+   "bcZh": "BC《脑外伤》规程规定只有收缩压大于120 mmHg时才用IV TKVO维持；《中风》规程规定优先在腕部以上选点、用18G导管，右侧优先——这类针对具体病情的细则是叠加在本章通用IV技术之上的，不是替代关系。",
+   "ref": "bc-exam-guidelines.txt TBI p.27、Stroke p.30"
+  },
+  {
+   "topicEn": "Hypoglycemia drug: D50W vs D10W",
+   "topicZh": "低血糖用药：D50W vs D10W",
+   "bookEn": "The textbook's worked concentration-math examples and its 'YOU are the Paramedic' case both use 50% dextrose (D50W), 25 g in a 50 mL prefilled syringe (500 mg/mL).",
+   "bookZh": "教材的浓度换算例题和『YOU are the Paramedic』案例都用 50% 葡萄糖（D50W），50 mL 预填充针剂含 25 g（500 mg/mL）。",
+   "bcEn": "BC's current PCP drug monograph carries D10W, not D50W: 10-25 g (100-250 mL of 10% solution) IV, contraindications 'None,' caution = extravasation causing tissue necrosis. Keep the textbook's percentage-concentration math skill, but answer D10W with its own numbers on the BC exam.",
+   "bcZh": "BC 现行 PCP 药物专论用的是 D10W，不是 D50W：10-25 g（100-250 mL 的 10% 溶液）静脉给药，禁忌症『无』，caution 是外渗致组织坏死。教材的百分比浓度算法技能保留，但 BC 考试作答时要用 D10W 及其自身数字。",
+   "ref": "BC Guidelines p.57, 61；drugs.json d10w"
+  },
+  {
+   "topicEn": "Intraosseous access absent from the BC guidelines document",
+   "topicZh": "BC 考纲全文未提及骨髓腔通路",
+   "bookEn": "The textbook devotes an entire section to IO technique and devices — manual needles, FAST1, EZ-IO, BIG — with detailed landmarks, complications and contraindications.",
+   "bookZh": "教材用整整一节讲 IO 技术与装置——手动针、FAST1、EZ-IO、骨枪，含详细定位、并发症和禁忌症。",
+   "bcEn": "Across the BC Provincial Examination Guidelines' 94 pages of protocols and drug monographs, the word 'intraosseous' does not appear once. Treat the textbook's IO content as background clinical knowledge and follow your own agency's skill list and local protocol for what's actually testable — do not assume the BC written exam names specific IO devices or landmarks.",
+   "bcZh": "BC 省级考纲全文 94 页的 protocol 和药物专论中，『intraosseous（骨髓腔）』一词一次都没出现。教材的 IO 内容当作背景临床知识保留即可，具体会不会考、考哪些装置或定位，以自己所在机构的技能清单和当地规程为准——不要假设 BC 笔试会指名考 IO 装置细节。",
+   "ref": "BC Guidelines 全文检索（94 页）"
+  },
+  {
+   "topicEn": "Tracheal (LEAN) drug route",
+   "topicZh": "气管内（LEAN）给药途径",
+   "bookEn": "The textbook lists tracheal administration (lidocaine, epinephrine, atropine, naloxone at 2-2.5× the IV dose) as a last-resort route when IV/IO access fails.",
+   "bookZh": "教材把气管内给药（利多卡因、肾上腺素、阿托品、纳洛酮，剂量为静脉的 2-2.5 倍）列为 IV/IO 都失败时的最后手段。",
+   "bcEn": "None of BC's 18 current PCP drug monographs (including epinephrine and naloxone, both on the LEAN list) name a tracheal or ET-tube route among their listed routes. Treat LEAN as legacy background, not an expected BC pathway.",
+   "bcZh": "BC 现行 18 个 PCP 药物专论（包括 LEAN 名单里的肾上腺素和纳洛酮）在各自的给药途径栏里都没有列出气管内或 ET 导管途径。把 LEAN 当作遗留背景知识记住即可，不要预期它是 BC 会考的给药路径。",
+   "ref": "drugs.json 全部条目 routes 字段"
+  },
+  {
+   "topicEn": "Weight-based fluid bolus is one BC-wide number",
+   "topicZh": "体重法补液是 BC 全局统一的一个数字",
+   "bookEn": "The textbook discusses weight-based dosing as a general math concept without a single standard fluid-bolus figure tied to it.",
+   "bookZh": "教材把体重法给药当作通用数学概念讲解，没有绑定一个统一的补液数字。",
+   "bcEn": "BC standardizes the crystalloid fluid-bolus formula at 20 mL/kg, capped at 2 litres, reassessing every 500 mL, and reuses it verbatim across at least five protocols: Hypovolemia, Burn Management, Electrical Contact, Nausea-Vomiting PCP, and Anaphylaxis. Memorize it once, apply it everywhere.",
+   "bcZh": "BC 把晶体液补液公式统一定为 20 mL/kg、上限 2 升、每 500 mL 重评一次，并在至少五个 protocol 里原样复用：低血容量、烧伤管理、触电、恶心呕吐 PCP、过敏性休克。这一个数字记熟，到处都能直接套用。",
+   "ref": "BC Guidelines p.28, 35, 48, 54, 55"
+  },
+  {
+   "topicEn": "Naloxone's exact titration ladder",
+   "topicZh": "纳洛酮的精确滴定阶梯",
+   "bookEn": "The textbook covers naloxone's mechanism and general dosing philosophy without a single standardized escalation sequence.",
+   "bookZh": "教材讲解纳洛酮的机制和给药思路，没有给出统一的标准递增序列。",
+   "bcEn": "BC's monograph specifies an exact ladder: 0.4 mg IV/IM, then 0.4 mg after 3 minutes if SpO2 ≥94% and respirations >10/min are not yet achieved, then 0.8 mg after another 3 minutes, then 2.0 mg after another 3 minutes — or a single 4 mg IN dose as an alternative. Answer with BC's own numbers, not a generic 'titrate to effect.'",
+   "bcZh": "BC 专论给出精确阶梯：首剂 0.4 mg IV/IM，3 分钟后若未达到 SpO2 ≥94% 且呼吸 >10 次/分再给 0.4 mg，再过 3 分钟给 0.8 mg，再过 3 分钟给 2.0 mg；或直接单次经鼻（IN）4 mg。答题要用 BC 这套精确数字，而不是笼统答『滴定至起效』。",
+   "ref": "drugs.json naloxone；BC Guidelines p.56, 72"
+  },
+  {
+   "topicEn": "BC's fixed default IV maintenance rate",
+   "topicZh": "BC 固定的默认静脉维持速率",
+   "bookEn": "The textbook teaches the gtt/min formula generically with no single default maintenance number attached.",
+   "bookZh": "教材只讲通用的 gtt/min 公式，没有绑定一个默认的维持速率数字。",
+   "bcEn": "When a BC protocol just says 'maintenance' without a specific rate, the guideline names roughly 75 mL/hr as the default, reassessed every 5-15 minutes — a concrete number worth memorizing on its own.",
+   "bcZh": "当某个 BC protocol 只写『维持』而没给具体数字时，考纲明确默认约 75 mL/hr，每 5-15 分钟重新评估一次——这是一个值得单独记住的具体数字。",
+   "ref": "BC Guidelines p.39"
+  }
+ ],
+ "sourcePages": "523-718"
+}

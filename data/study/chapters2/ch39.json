@@ -1,0 +1,1005 @@
+{
+ "id": "ch39",
+ "n": 39,
+ "titleEn": "Infectious and Communicable Diseases",
+ "titleZh": "传染性疾病",
+ "group": "ops",
+ "examWeight": 2,
+ "whyEn": "Infectious and Communicable Diseases sits at exam weight 2, but it punches above that in real-world consequence: this is the chapter that decides whether you protect yourself on literally every call, not just the ones that look obviously infectious. Expect questions built around three axes — the transmission-route logic (airborne vs droplet vs contact) that routine practices uses to pick PPE before any diagnosis exists, the hard numeric thresholds around occupational exposure (needlestick first aid, postexposure counselling windows, disinfection contact times), and the pathogen-specific facts examiners love to test as judgment traps — incubation periods, communicable periods, and which of the three airborne diseases (TB, measles, varicella) actually needs an N95 versus a surgical mask. The disinfection-trigger logic (what forces a compartment out of service) and the antibiotic-resistant-organism section round out the operational half of this chapter.",
+ "whyZh": "传染性与可传播疾病考纲权重为 2，但现实后果一点不轻：这一章决定你在每一趟出勤——而不只是看起来明显有传染性的那几趟——能不能保护好自己。预期考点集中在三条轴线上：常规预防措施用来在诊断出来之前就选好防护装备的传播途径逻辑（空气/飞沫/接触）；职业暴露相关的硬性数字门槛（针刺伤急救、暴露后咨询启动时限、消毒接触时间）；以及考官最爱设的病原体判断陷阱——潜伏期、传染期，以及三种空气传播疾病（结核、麻疹、水痘）里到底哪个该戴 N95、哪个普通外科口罩就够。本章关于消毒触发条件（什么情况必须停用车厢彻底消毒）和抗生素耐药菌的部分，补全了运营与职业安全这一半的内容。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics"
+  ],
+  "codes": [
+   "1.1.c",
+   "3.3.b",
+   "3.3.f",
+   "3.3.g",
+   "3.3.h",
+   "4.3.n"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction and the Public Health System",
+   "titleZh": "概论与公共卫生体系",
+   "points": [
+    {
+     "en": "A communicable disease is an infectious disease capable of spreading from one person to another; not every infectious disease qualifies, since some infections never pass between people at all.",
+     "zh": "可传播疾病（传染性疾病）指能在人与人之间扩散的感染性疾病；并非所有感染性疾病都算，有些感染压根不会人传人。",
+     "hard": false
+    },
+    {
+     "en": "In Canada, public health funding is a joint federal-provincial-territorial responsibility, but the actual delivery of health care and public health services is a provincial/territorial mandate — some provinces run public health at the provincial level, others push it down to local or regional health authorities.",
+     "zh": "在加拿大，公共卫生资金由联邦、省/领地三方共同承担，但医疗与公共卫生服务的实际提供是省/领地的职责——有的省在省级层面统管公共卫生，有的下放到地方/区域卫生局。",
+     "hard": false
+    },
+    {
+     "en": "Provincial and local public health departments (PHDs) are responsible for disease protection, epidemic prevention, outbreak management, contact follow-up, and running TB and immunization clinics — and each jurisdiction keeps a list of diseases that must be reported to public health when identified.",
+     "zh": "省/地方公共卫生部门（PHD）负责疾病防护、疫情预防、暴发管理、接触者随访，以及结核和免疫接种门诊——每个辖区都列有一份清单，一旦识别出清单上的疾病就必须上报公共卫生部门。",
+     "hard": false
+    },
+    {
+     "en": "Historical outbreaks that forced close paramedic-public health cooperation include SARS in Toronto, West Nile virus in Winnipeg, and E. coli in Calgary — know your local public health contacts before an outbreak happens, not during one.",
+     "zh": "曾迫使救护员与公共卫生部门紧密协作的历史暴发事件包括多伦多的 SARS、温尼伯的西尼罗病毒和卡尔加里的大肠杆菌疫情——要在疫情发生前就认识本地公共卫生联系人，而不是等疫情来了才现找。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Host Defence Mechanisms and the Chain of Infection",
+   "titleZh": "人体防御机制与感染链条",
+   "points": [
+    {
+     "en": "The body's first line of defence is intact skin plus its antibacterial secretions, which physically and chemically block pathogen entry; mucous membranes are the second barrier — tears dilute foreign material in the eyes, and respiratory-tract cells secrete lysozymes and deploy macrophages against airborne and droplet organisms.",
+     "zh": "人体第一道防线是完整的皮肤及其抗菌分泌物，物理加化学地阻挡病原体入侵；黏膜是第二道屏障——眼部的泪液稀释并冲走异物，呼吸道细胞分泌溶菌酶并派出巨噬细胞对抗空气和飞沫传播的病原体。",
+     "hard": false
+    },
+    {
+     "en": "Bloodborne pathogens are organisms present in human blood capable of causing disease — hepatitis B virus and HIV are the named examples — and the GI tract's goblet cells add another layer, secreting highly acidic and alkaline fluids that form a barrier against bacterial and some viral penetration.",
+     "zh": "血源性病原体是存在于人体血液中、能致病的微生物——乙肝病毒和 HIV 是常举的例子；消化道的杯状细胞再加一层防护，分泌高酸性和碱性液体，阻挡细菌及部分病毒的侵入。",
+     "hard": false
+    },
+    {
+     "en": "The chain of infection is a sequence of links a disease must travel through to spread; breaking any single link — including something as simple as handwashing — stops transmission, as illustrated by a real case in which one nurse's unwashed hands after emptying a hepatitis A patient's bedpan contaminated shared candy and infected a colleague through the fecal-oral route.",
+     "zh": "感染链是疾病扩散必须经过的一连串环节；打断其中任何一环——哪怕只是洗手这么简单的动作——就能阻断传播，一起真实病例可以说明这一点：一名护士处理完甲肝患儿的粪便后没洗手，摸过的共用糖果经粪-口途径传染给了同事。",
+     "hard": false
+    },
+    {
+     "en": "Solving why a specific person or group contracted a disease can be as simple as retracing an exposure, or can take infectious-disease investigators years — the analysis weighs age distribution, genetics, income, ethnicity, workplaces and schools, geography, and whether the disease is expanding, declining, or moving.",
+     "zh": "查明某个人或某群人为何染病，有时只需回溯暴露史就能解开，有时却要传染病调查员花上数年——分析要综合年龄分布、遗传因素、收入水平、族裔、工作场所与学校、地理边界，以及疾病是在扩散、消退还是转移。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Transmission Routes and the Formula for Infection",
+   "titleZh": "传播途径与感染的四要素",
+   "points": [
+    {
+     "en": "Airborne transmission carries pathogens light enough to stay suspended in air and travel beyond arm's reach before being inhaled; only three diseases are transmitted this way person-to-person — tuberculosis, measles, and chickenpox (varicella) — and ventilation, respirators, and covering a coughing patient's mouth all cut the risk.",
+     "zh": "空气传播的病原体轻到能悬浮在空气中、飘出手臂可及范围外仍被他人吸入；人传人经空气传播的疾病只有三种——结核、麻疹、水痘——通风、呼吸器和为咳嗽患者遮盖口鼻都能降低风险。",
+     "hard": true
+    },
+    {
+     "en": "Droplet transmission expels heavy respiratory droplets that fall to the ground within 1 to 2 metres — close contact within that range lets them be inhaled or land directly on unprotected eyes, nose, or mouth, and they can also be picked up off a contaminated surface by hand and carried to the face.",
+     "zh": "飞沫传播排出的是较重的呼吸道飞沫，会在 1 到 2 米内落地——在这个距离内近距离接触，飞沫可被吸入，也可能直接落在未防护的眼、鼻、口上；它们还能沾在污染表面，被手接触后带到脸上。",
+     "hard": true
+    },
+    {
+     "en": "Contact transmission moves an organism from a contaminated surface or unclean hands onto non-intact skin or an unprotected mucous membrane — conjunctivitis (pink eye) and Staphylococcus aureus impetigo are classic examples, and even a droplet disease like influenza can spread this way once its secretions dry onto a surface.",
+     "zh": "接触传播是病原体经污染表面或未清洁的手，转移到破损皮肤或未防护黏膜上——结膜炎（红眼病）和金黄色葡萄球菌脓疱疮是常举的例子；就连流感这类飞沫传播疾病，一旦分泌物干在物体表面，也能靠接触传播扩散。",
+     "hard": false
+    },
+    {
+     "en": "Vehicle transmission occurs when a person ingests contaminated food or water, or has direct contact with contaminated blood such as through a needle puncture — hepatitis A, hepatitis B, Salmonella, and E. coli are named examples.",
+     "zh": "载体传播指经摄入污染的食物或水、或直接接触污染血液（例如被针刺）而感染——常举例的疾病包括甲肝、乙肝、沙门氏菌和大肠杆菌。",
+     "hard": false
+    },
+    {
+     "en": "Vector-borne transmission requires an intermediate carrier such as a flea, mosquito, or other animal — malaria, rabies, and West Nile virus are named examples — and because the organism only transfers when the carrier bites or stings, a paramedic cannot catch these diseases directly from the patient.",
+     "zh": "病媒传播需要跳蚤、蚊子或其他动物作为中间携带者——常举例疟疾、狂犬病、西尼罗病毒——由于病原体只在携带者叮咬时传播，救护员不会因直接接触患者而染上这类病。",
+     "hard": false
+    },
+    {
+     "en": "Whether an exposure becomes an infection depends on four factors together — the dose (number of organisms present), the organism's virulence, whether it enters through the correct route, and the host's own resistance; a respiratory virus that enters through a skin cut, for instance, will not cause a respiratory infection because the entry route is wrong.",
+     "zh": "一次暴露是否会发展成感染，取决于四个因素的共同作用——剂量（病原体数量）、病原体的毒力、是否经正确途径侵入，以及宿主自身的抵抗力；比如呼吸道病毒经皮肤伤口进入并不会引起呼吸道感染，因为侵入途径不对。",
+     "hard": false
+    },
+    {
+     "en": "Organism dose thresholds vary hugely by species: producing foodborne illness typically takes 1 million to 100 million Salmonella organisms, but as few as 500 Campylobacter bacteria can make someone sick — and Salmonella can double its numbers every 15 to 20 minutes given the right temperature and nutrients.",
+     "zh": "不同病原体致病所需的剂量差异极大：沙门氏菌通常需要 100 万到 1 亿个菌体才会致病，但仅约 500 个空肠弯曲菌就能让人生病——而沙门氏菌在合适的温度和营养条件下，每 15 到 20 分钟就能繁殖一倍。",
+     "hard": true
+    },
+    {
+     "en": "Incubation period (exposure to first symptom) and communicable period (the window a person can actually transmit the disease) are different clocks: mumps incubates roughly 16 to 18 days while influenza incubates only 24 to 72 hours, and a chickenpox patient stays sick for 2 to 3 weeks but is only contagious for about a week — from 1 to 2 days before the rash appears to roughly 5 days after.",
+     "zh": "潜伏期（暴露到首发症状）和传染期（真正能把病传给别人的那段窗口）是两条不同的时间轴：腮腺炎潜伏期约 16 到 18 天，流感潜伏期只有 24 到 72 小时；水痘患者病程长达 2 到 3 周，但真正有传染性的时间只有约一周——从皮疹出现前 1 到 2 天到皮疹出现后约 5 天。",
+     "hard": true
+    },
+    {
+     "en": "Contamination and infection are not the same thing: an object carrying microorganisms is merely contaminated, and a person is not infected unless those organisms actually produce illness — some hepatitis B or C carriers have no symptoms at all yet can still pass the virus on through blood or sexual contact. A reservoir is a place organisms live and multiply, such as air-conditioning systems or showerheads for Legionella, or an ambulance's oxygen humidifier.",
+     "zh": "污染和感染不是一回事：物体上沾有微生物只算被污染，人要等这些微生物真正引发疾病才算被感染——部分乙肝、丙肝携带者完全没有症状，却仍能经血液或性接触把病毒传给别人。储存宿是病原体栖息繁殖的场所，比如军团菌可以寄居在空调系统或淋浴喷头里，救护车的氧气湿化器也是常被点名的储存宿。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Reportable Diseases and Routine Practices",
+   "titleZh": "上报制度与常规预防措施",
+   "points": [
+    {
+     "en": "Every province keeps a mandatory reportable disease list — TB, measles, meningococcal disease, pertussis, hepatitis A/B/C, hemorrhagic fevers such as Ebola, and SARS are examples — and the highest-priority diseases (plus any institutional influenza outbreak) must be phoned in to public health immediately, while the rest can wait until the next business day.",
+     "zh": "每个省都有一份法定报告疾病清单——结核、麻疹、脑膜炎球菌病、百日咳、甲/乙/丙型肝炎、埃博拉等出血热、SARS 都在列——其中优先级最高的疾病（以及任何机构内的流感暴发）必须立即电话上报公共卫生部门，其余的可以等到下一个工作日再报。",
+     "hard": true
+    },
+    {
+     "en": "Routine practices fold universal precautions and body substance isolation into one standard: you act on the signs, symptoms, and likely transmission route in front of you rather than waiting for a diagnosis, and you apply routine practices to every single patient contact because every patient is potentially infectious.",
+     "zh": "常规预防措施把通用防护（universal precautions）和体液隔离（BSI）合并成一套标准：你依据眼前的体征、症状和可能的传播途径行动，而不是等诊断出来才防护——并且对每一次患者接触都要用，因为每个患者都可能具有传染性。",
+     "hard": false
+    },
+    {
+     "en": "Routine practices have six named components — hand hygiene, PPE, sharps safety, patient accommodation and transport considerations, routine equipment cleaning, and routine vehicle cleaning and disinfection — and the standard requires cleaning and disinfecting equipment and the care environment after every single patient, not just the ones who look obviously infectious.",
+     "zh": "常规预防措施由六个固定要素组成——手卫生、个人防护装备、利器安全、患者安置与转运考量、器材日常清洁、车辆日常清洁与消毒——而且标准要求每一名患者之后都要清洁消毒器材和照护环境，而不只是看起来明显有传染性的那些患者。",
+     "hard": true
+    },
+    {
+     "en": "Additional precautions stack on top of routine practices by transmission route: contact precautions cover things like C. difficile, febrile respiratory illness, influenza, and SARS; droplet precautions add meningococcal meningitis, mumps, pertussis, and rubella to a similar respiratory list; and airborne precautions — the strictest tier — apply to exactly three diseases: tuberculosis, varicella, and measles.",
+     "zh": "在常规预防措施之上，还要按传播途径叠加额外防护：接触预防适用于艰难梭菌、发热性呼吸道疾病、流感、SARS 等；飞沫预防在类似的呼吸道疾病清单上再加脑膜炎球菌性脑膜炎、腮腺炎、百日咳、风疹；而级别最高的空气预防，只精确适用于三种病——结核、水痘、麻疹。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Recommended Immunizations for Health Care Providers",
+   "titleZh": "医护人员推荐免疫接种",
+   "points": [
+    {
+     "en": "Recommended immunizations for prehospital providers who are not already immune: hepatitis B, MMR (measles, mumps, rubella), varicella, tuberculosis testing, tetanus (boosted every 10 years), diphtheria, and an annual influenza shot.",
+     "zh": "院前医护人员（若尚未获得免疫）的推荐接种清单：乙肝、麻腮风三联（MMR）、水痘、结核检测、破伤风（每 10 年加强一次）、白喉，以及每年一次的流感疫苗。",
+     "hard": true
+    },
+    {
+     "en": "You may have the right to decline a specific vaccination, but declining can get you pulled from duty under circumstances such as a disease outbreak, when your non-immunized status would put patients and colleagues at risk.",
+     "zh": "你可能有权拒绝接种某种疫苗，但在诸如疫情暴发这类情况下，拒绝接种可能导致你被暂停执勤，因为未接种状态会让患者和同事暴露于风险之中。",
+     "hard": false
+    },
+    {
+     "en": "Provincial childhood immunization programs cut Haemophilus influenzae type b and measles cases by more than 95% and eliminated wild-type polio in Canada — but growing vaccine hesitancy has driven a real resurgence of measles outbreaks in Canada, the US, and other developed countries in recent years.",
+     "zh": "各省的儿童免疫接种计划曾让 b 型流感嗜血杆菌和麻疹病例下降超过 95%，并在加拿大消灭了野生型脊髓灰质炎——但近年疫苗接种意愿下降，已经导致加拿大、美国及其他发达国家出现真实的麻疹疫情反弹。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Personal Protective Equipment: Choosing by Task and Route",
+   "titleZh": "个人防护装备：按任务与传播途径选择",
+   "points": [
+    {
+     "en": "PPE is your second line of defence, layered on top of the body's own barriers — which specific items you put on depends on the task or procedure about to be performed, and your service's infection control manual should list the recommended PPE for each risk procedure.",
+     "zh": "个人防护装备是叠加在人体自身屏障之上的第二道防线——具体戴哪几件取决于即将执行的操作或步骤，你所在机构的感染控制手册应列出各类高风险操作对应的推荐装备。",
+     "hard": false
+    },
+    {
+     "en": "An N95 (submicron) respirator is specifically called for with SARS, smallpox, and active TB, and more broadly for other droplet/airborne infections. It only works if it has been individually fit-tested to your face — an ill-fitting respirator gives false reassurance — and fit-testing must be repeated after any major facial change, such as significant weight loss or gain.",
+     "zh": "N95（亚微米级）呼吸器明确适用于 SARS、天花和活动性结核，也更广泛地用于其他飞沫/空气传播感染。它只有经过针对个人的密合度测试才有效——不合脸型的呼吸器只会带来虚假的安全感——面部结构发生明显变化（如显著增重或减重）后必须重新测试。",
+     "hard": true
+    },
+    {
+     "en": "Beyond named diseases, put on the submicron respirator any time one of these triggers is present: a febrile patient with no known source, a coughing patient, a disease known to spread by droplet or airborne route, likely blood or body fluid splash, an aerosol-generating procedure such as intubation or suctioning, or cleaning the vehicle after transporting a droplet/airborne case or after gross blood/fluid contamination.",
+     "zh": "除了指名的疾病外，出现以下任一触发条件都要戴亚微米级呼吸器：发热且病因不明的患者、正在咳嗽的患者、已知经飞沫或空气传播的疾病、可能发生血液/体液喷溅、气溶胶生成操作（如插管、吸引），或者转运飞沫/空气传播病例之后清洁车辆、清理大量血液/体液污染时。",
+     "hard": false
+    },
+    {
+     "en": "Gloves must be nonlatex (vinyl, nitrile, or rubber) to cut the risk of latex allergy; utility-style cleaning gloves are reusable as long as they show no tears or holes. Never perform hand hygiene while wearing gloves — soap and alcohol sanitizer break down glove material — and never handle personal items or the driver's compartment with gloves on, since that spreads contamination to clean surfaces.",
+     "zh": "手套必须是非乳胶材质（乙烯基、丁腈或橡胶），以降低乳胶过敏风险；清洁用的工业手套只要没有破损撕裂就可以反复清洗使用。绝不能戴着手套做手卫生——肥皂和酒精消毒剂会破坏手套材质——也绝不能戴着手套碰个人物品或驾驶室，否则会把污染带到干净的地方。",
+     "hard": false
+    },
+    {
+     "en": "As a rule, PPE should never be worn into the driver's compartment because it can contaminate the surfaces and controls there — submicron respirators and eye protection are the only exceptions, and the rule itself flips when transporting a patient with a SARS-type respiratory illness or a viral hemorrhagic fever, since then the driver's compartment needs protecting too.",
+     "zh": "原则上个人防护装备不能带进驾驶室，因为会污染驾驶室的表面和操作部件——唯一的例外是亚微米级呼吸器和护目装备；而当转运的是 SARS 类呼吸道疾病或病毒性出血热患者时，这条规则本身会反过来——此时驾驶室同样需要防护。",
+     "hard": false
+    },
+    {
+     "en": "Cover gowns come out for large-splash situations such as childbirth or an uncontrolled haemorrhage, must cover the body completely front and back, and are never worn into the driver's compartment. If a gown is washable, it goes to a designated decontamination laundry service — a contaminated garment is never taken home.",
+     "zh": "遇到大量喷溅的情况（如接生、无法控制的大出血）要穿隔离衣，必须前后都完全覆盖身体，且绝不能穿进驾驶室。若隔离衣可水洗，要送到指定的去污洗涤点处理——被污染的衣物绝不能带回家。",
+     "hard": false
+    },
+    {
+     "en": "The PPE sequence runs in a fixed order both ways: put on the gown or coveralls first, then the mask/respirator, then eye protection, then gloves last; take it all off in reverse of contamination risk — gloves come off first because they are the most contaminated item, followed by gown/coveralls, then eye protection, with the mask or respirator removed last.",
+     "zh": "穿脱个人防护装备的顺序是固定的：穿的时候先穿隔离衣/连体服，再戴口罩/呼吸器，再戴护目装备，最后戴手套；脱的时候按污染程度从高到低——手套最脏所以最先脱，接着是隔离衣/连体服，再脱护目装备，口罩或呼吸器最后脱。",
+     "hard": true
+    },
+    {
+     "en": "Beyond blood itself, 'other potentially infectious materials' (OPIM) include cerebrospinal, pericardial, amniotic, synovial, and peritoneal fluid, plus any body fluid with visible blood mixed in — treat all of these as requiring the same barrier precautions as blood.",
+     "zh": "除血液本身外，「其他潜在传染性物质」（OPIM）还包括脑脊液、心包液、羊水、滑膜液、腹膜液，以及任何肉眼可见混有血液的体液——这些都要按血液同等标准做屏障防护。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Hand Hygiene",
+   "titleZh": "手卫生规范",
+   "points": [
+    {
+     "en": "Handwashing is described as the single most important step in preventing infection. Alcohol-based hand products cannot substitute for actual washing when hands are visibly dirty or grossly contaminated, and they do not kill spore-forming organisms — if Clostridioides difficile infection is known or suspected, you must wash with soap and water to physically remove the spores.",
+     "zh": "洗手被称为预防感染最重要的一步。手部肉眼可见脏污或严重污染时，含酒精手部消毒产品不能替代真正的洗手，而且它们杀不死芽孢类微生物——已知或怀疑艰难梭菌感染时，必须用肥皂和水物理洗掉芽孢。",
+     "hard": false
+    },
+    {
+     "en": "Hand hygiene has specific trigger points beyond 'whenever it feels dirty': start and end of shift, before and after every patient contact, before donning and after doffing PPE, before any invasive procedure, after cleaning equipment or the vehicle, before leaving the hospital, before and after eating or smoking, after any personal body function, and any time you cannot recall when you last washed.",
+     "zh": "手卫生有明确的触发时点，不只是「觉得脏了才洗」：交接班开始和结束时、每次接触患者前后、穿戴防护装备前和脱卸之后、任何侵入性操作之前、清洁器材或车辆之后、离开医院之前、进食或吸烟前后、任何个人生理行为之后，以及任何你想不起上次洗手是什么时候的时候。",
+     "hard": false
+    },
+    {
+     "en": "Correct technique: strip off hand and wrist jewellery, skip artificial nails, use warm water and enough soap to lather, scrub vigorously for a full 20 seconds covering hands and wrists, and rinse. Any open cut or sore on the hand needs a dressing — if it is too large to cover, you should not be doing high-risk tasks at all.",
+     "zh": "正确手法：摘掉手部和腕部的首饰，不戴假指甲，用温水和足量肥皂搓出泡沫，用力揉搓满 20 秒，覆盖手掌到手腕，最后冲净。手上有开放性伤口或疮口要用敷料盖住——如果面积大到盖不住，就根本不该去做高风险操作。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Sharps Safety",
+   "titleZh": "利器安全与针刺伤预防",
+   "points": [
+    {
+     "en": "An estimated 50,000 needlestick injuries occur among Canadian hospital health care workers every year, making the needlestick the single most common cause of bloodborne infection in health care settings — the actual per-incident transmission risk is low, but a formal sharps-safety system is what keeps that low risk low.",
+     "zh": "加拿大医院医护人员每年估计发生约 5 万起针刺伤，使针刺伤成为医疗环境中血源性感染最常见的成因——单次事件的实际传播风险不高，但正是靠一套正式的利器安全体系，才能把这个低风险继续压低。",
+     "hard": true
+    },
+    {
+     "en": "Sharps-handling discipline is procedural, not just physical: announce sharps aloud to the team ('sharps out,' 'sharps clear'), count every sharp used and confirm all are accounted for and disposed of at the end of the procedure, and never let a used sharp change hands from person to person.",
+     "zh": "利器操作的纪律是流程性的，不只是物理防护：向团队大声报出利器状态（「利器已出」「利器已清」），清点每一件用过的利器，操作结束时确认全部已妥善丢弃，且用过的利器绝不在人与人之间传递。",
+     "hard": false
+    },
+    {
+     "en": "Absolute sharps rules: never recap a needle, never bend or break a needle, never carry an uncapped sharp in a pocket, and never leave a used sharp for someone else to dispose of — use needleless or needlesafe devices wherever your service provides them.",
+     "zh": "利器绝对禁忌：绝不回套针帽，绝不弯折或折断针头，绝不把没盖帽的利器揣在口袋里，也绝不把用过的利器留给别人去丢——凡是机构配备了无针或安全针具的场合都要优先使用。",
+     "hard": false
+    },
+    {
+     "en": "A sharps container must be puncture-resistant, closable, leak-proof, and carry the biohazard symbol, and it gets swapped for a fresh one once it reaches its marked fill line — an overfull container is itself a sharps hazard.",
+     "zh": "利器盒必须防穿刺、可闭合、防漏，并印有生物危害标志；一旦装到标示的装满线就要更换新的——装得过满的利器盒本身就是一个扎伤风险源。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Postexposure Medical Follow-up and the Service's Infection Control Plan",
+   "titleZh": "职业暴露处置流程、时间窗与机构感染控制方案",
+   "points": [
+    {
+     "en": "Postexposure medical follow-up is the third layer of defence, after the body's own barriers and PPE. Follow-up begins with testing the source patient, not the exposed paramedic: standard source bloodwork is HIV, hepatitis B surface antigen, and rapid hepatitis C antibody, with syphilis testing added if either HIV or HCV comes back positive. HIV testing normally needs the source patient's consent, though some jurisdictions carve out an exception for occupational exposures.",
+     "zh": "职业暴露后医学随访是第三道防线，排在人体自身屏障和个人防护装备之后。随访从检测源患者开始，而不是从被暴露的救护员开始：源患者的标准血检项目是 HIV、乙肝表面抗原和快速丙肝抗体，若 HIV 或丙肝任一阳性还要加查梅毒。HIV 检测通常需要源患者本人同意，不过部分辖区对职业暴露设有例外。",
+     "hard": true
+    },
+    {
+     "en": "Postexposure counselling and treatment should start within 24 to 48 hours of the exposure, unless the source patient's test results come back and demand a faster response than that. In practice, HIV prophylaxis is far more time-critical than this outer bound suggests — it works best when started within one to two hours, and its benefit falls off steeply after that, so an exposed provider still goes for assessment as soon as possible rather than waiting toward the 24-48 hour mark.",
+     "zh": "暴露后咨询与治疗应在暴露后 24 到 48 小时内启动，除非源患者的检测结果提示需要更快处置。但实际上，HIV 暴露后预防用药比这个外部时限紧迫得多——数小时内启动效果最好，最好是一到两小时内，之后获益迅速下降，所以发生暴露的人员仍应尽快就医评估，而不是拖到接近 24-48 小时这个上限。",
+     "hard": true
+    },
+    {
+     "en": "Post-exposure prophylaxis exists for most bloodborne exposures, but there is no prophylaxis for hepatitis C virus — the consolation is that HCV infection, if it is actually acquired, can often be cured with treatment after the fact.",
+     "zh": "暴露后预防用药对大多数血源性暴露都有，但丙肝没有暴露后预防药——好在丙肝一旦真的感染，事后治疗往往可以治愈。",
+     "hard": true
+    },
+    {
+     "en": "Bloodborne exposure is not limited to needlesticks: it also includes blood or OPIM splashed into the eyes, nose, or mouth; blood or OPIM contacting broken skin such as a cut, abrasion, or dermatitis; a cut from a blood-covered sharp object; and a human bite that draws blood — in a bite, the 'source patient' is whoever was bleeding, not whoever did the biting.",
+     "zh": "血源性暴露不限于针刺伤：血液或 OPIM 溅入眼、鼻、口，血液或 OPIM 接触破损皮肤（割伤、擦伤、皮炎），被沾血的锐器割伤，以及造成流血的人咬伤都算——咬伤事件里，「源患者」是那个流血的人，而不是咬人的那一方。",
+     "hard": false
+    },
+    {
+     "en": "A service's written infection-control plan has ten defined components — from exposure determination and education through hepatitis B and TB programs, PPE, postexposure management, medical waste handling, compliance spot-checks, and record keeping — and its work-restriction guidelines dictate when a sick employee stays off high-risk patients, using ordinary sick time unless the illness itself came from an occupational exposure, in which case workers' compensation applies. These restrictions matter most during flu season.",
+     "zh": "机构的书面感染控制方案有十个固定要素——从暴露认定、教育培训，到乙肝和结核项目、个人防护装备、暴露后管理、医疗废物处理、合规抽查和记录保存；其工作限制指引规定了患病员工何时不得接触高风险患者，一般用病假处理，除非疾病本身来自职业暴露，那样就走工伤补偿。这些限制在流感季节尤为重要。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "General Assessment and Treatment Principles",
+   "titleZh": "评估与处置总原则",
+   "points": [
+    {
+     "en": "Assessment of a patient with a suspected infectious disease follows the same order as any medical patient: scene safety and routine practices first, then the initial assessment (mental status, airway, breathing, circulation) before a focused OPQRST history and SAMPLE — paying particular attention to current medications, the events leading up to today, and any recent travel.",
+     "zh": "评估疑似感染性疾病患者的顺序和评估任何内科患者一样：先确保现场安全并采取常规预防措施，再做初步评估（意识、气道、呼吸、循环），然后用 OPQRST 和 SAMPLE 做重点病史采集——尤其要问清目前用药、导致今天问题的事件经过，以及近期是否有旅行史。",
+     "hard": false
+    },
+    {
+     "en": "Typical chief complaints pointing toward an infectious cause are fever, nausea, rash, pleuritic chest pain, and difficulty breathing — none of them are specific enough alone to name a disease, which is exactly why the travel and contact history matters so much.",
+     "zh": "提示感染性病因的典型主诉是发热、恶心、皮疹、胸膜炎性胸痛和呼吸困难——单独任何一项都不足以指向具体疾病，这正是旅行史和接触史如此重要的原因。",
+     "hard": false
+    },
+    {
+     "en": "General treatment principles put life threats first (airway, oxygen/ventilation, bleeding control, circulatory support), then position the patient for comfort and warmth for the common presentation of unexplained fever or mild breathing difficulty, start an IV of normal saline or lactated Ringer's if early dehydration is present, and route every suction unit and item of reusable equipment through the service's infection prevention and control plan before reuse.",
+     "zh": "总体治疗原则是先处理危及生命的问题（气道、给氧/通气、止血、循环支持），再针对最常见的表现——不明原因发热或轻度呼吸困难——让患者保持舒适体位并保暖；若已有早期脱水迹象，可开放静脉通路输注生理盐水或乳酸林格液；每一台吸引装置和可重复使用器材，在再次使用前都要走一遍机构的感染预防与控制流程。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Airborne and Droplet-Transmitted Diseases",
+   "titleZh": "空气与飞沫传播疾病",
+   "points": [
+    {
+     "en": "A simple, high-yield rule prevents most droplet and airborne exposure at once: put a surgical mask on any patient presenting with fever plus a rash, before you have even worked out which disease it might be.",
+     "zh": "一条简单但高价值的规则能同时预防大多数飞沫和空气传播暴露：只要患者同时有发热和皮疹，先给患者戴上外科口罩，不必等你搞清楚具体是哪种病。",
+     "hard": false
+    },
+    {
+     "en": "Measles has a roughly 10-day incubation period overall, but its milestones spread out further — fever typically appears 7 to 18 days after exposure and the rash around day 14. The communicable window starts about 4 days before the rash and ends about 4 days after it. Masking the patient helps, but the only certain protection is immunity from prior infection or live vaccine, and no special ambulance disinfection is needed afterward — routine cleaning and laundering soiled linens is enough.",
+     "zh": "麻疹的整体潜伏期约 10 天，但各项里程碑其实分散得更开——发热通常在暴露后 7 到 18 天出现，皮疹约在第 14 天出现。传染窗口从皮疹出现前约 4 天开始，到皮疹出现后约 4 天结束。给患者戴口罩有帮助，但唯一确定的防护是既往感染或活疫苗带来的免疫力，事后也不需要对救护车做特殊消毒——常规清洁加换洗被污染床品就够了。",
+     "hard": true
+    },
+    {
+     "en": "Rubella incubates for 12 to 23 days and stays contagious for up to 7 days after the rash appears. Its real danger is not the mild illness itself but congenital rubella syndrome: infection during the first 3 to 4 months of pregnancy can cause fetal deafness, cataracts, developmental delay, and heart defects.",
+     "zh": "风疹潜伏期 12 到 23 天，出疹后仍有传染性长达 7 天。它真正的危险不在于本身症状轻微，而在于先天性风疹综合征：孕早期（前 3-4 个月）感染可导致胎儿耳聋、白内障、发育迟缓和心脏缺陷。",
+     "hard": true
+    },
+    {
+     "en": "Mumps incubates 16 to 18 days and stays communicable for 9 days after the salivary glands begin to swell. Past puberty, it can cause painful testicular inflammation in up to 25% of male patients (this does not cause sterility) — which is why an unimmunized male paramedic should worry about mumps the way rubella worries an unimmunized female one. Unlike measles or chickenpox, postexposure vaccination is not recommended for mumps; a work restriction applies instead.",
+     "zh": "腮腺炎潜伏期 16 到 18 天，从腮腺开始肿胀起传染性持续 9 天。青春期后感染可导致高达 25% 的男性患者出现痛苦的睾丸炎（但不会导致不育）——这正是为什么未获得免疫的男性救护员该为腮腺炎担心，就像未获得免疫的女性该为风疹担心一样。与麻疹或水痘不同，腮腺炎暴露后不建议接种疫苗补救，而是改为执行工作限制。",
+     "hard": true
+    },
+    {
+     "en": "Chickenpox (varicella) incubates 10 to 21 days and is communicable from 1 to 2 days before the rash to about 5 days after the first vesicles appear. Childhood infection usually gives lifelong immunity, but confirm it with a blood titre rather than assuming; if you are not immune and are pregnant or immunocompromised, varicella zoster immune globulin should be offered. The same virus lying dormant in a nerve ganglion is what later reactivates as herpes zoster (shingles).",
+     "zh": "水痘潜伏期 10 到 21 天，传染期从出疹前 1 到 2 天持续到首批水疱出现后约 5 天。儿童期感染通常带来终生免疫，但要用血清滴度检测确认，不能想当然；如果你没有免疫力且处于孕期或免疫抑制状态，应给予水痘带状疱疹免疫球蛋白（VZIG）。同一种病毒潜伏在神经节里，日后重新激活就是带状疱疹（herpes zoster）。",
+     "hard": true
+    },
+    {
+     "en": "Pertussis (whooping cough), caused by Bordetella pertussis, incubates 7 to 10 days and is most communicable in its early stage, before the cough turns paroxysmal — infectivity becomes negligible by about 3 weeks, even though the cough itself can drag on for 1 to 2 months. Incidence has been rising in adolescents and young adults, including previously vaccinated people whose immunity has waned; postexposure management can include antibiotics.",
+     "zh": "百日咳由百日咳鲍特菌引起，潜伏期 7 到 10 天，在早期、咳嗽尚未转为阵发性痉挛咳之前传染性最强——大约 3 周后传染性变得可以忽略，尽管咳嗽本身可能拖上 1 到 2 个月。青少年和年轻成人中的发病率一直在上升，包括那些接种过疫苗但免疫力已减弱的人；暴露后处置可包括抗生素治疗。",
+     "hard": true
+    },
+    {
+     "en": "Meningitis is droplet-transmitted, not airborne, and only the bacterial form is communicable — transmission needs direct contact with nasopharyngeal secretions (mouth-to-mouth, suctioning, intubation spray) or at least 8 hours of prolonged close contact, which is why transmission from patient to paramedic is rare. Incubation runs 2 to 10 days, and the organism generally clears from the patient's upper respiratory tract within 24 hours of starting antibiotics.",
+     "zh": "脑膜炎经飞沫传播，而非空气传播，且只有细菌型才具传染性——传播需要直接接触鼻咽分泌物（口对口、吸引、插管喷溅）或至少 8 小时的持续密切接触，这也是为什么患者传给救护员的情况很罕见。潜伏期 2 到 10 天，一旦开始使用抗生素，病原体通常在 24 小时内就从患者上呼吸道清除。",
+     "hard": true
+    },
+    {
+     "en": "Postexposure prophylaxis for meningococcal exposure is typically a single oral dose of ciprofloxacin, or rifampin for 2 days — neither is appropriate for someone on birth control pills, and rifampin should not be offered to pregnant patients. A meningitis vaccine exists but is not routinely recommended for health care workers as a group.",
+     "zh": "脑膜炎球菌暴露的暴露后预防用药通常是单次口服环丙沙星，或口服利福平共 2 天——这两种药都不适合正在服用避孕药的人，利福平也不应给孕妇使用。脑膜炎疫苗虽然存在，但并不作为医护人员群体的常规推荐接种项目。",
+     "hard": true
+    },
+    {
+     "en": "Tuberculosis comes in three types, and only the typical (pulmonary) form is communicable — atypical and extrapulmonary TB (bone, kidney, lymph glands) are not. TB incubates 4 to 12 weeks and is only communicable once an active lung lesion is expelling bacteria by coughing; after about 14 days of treatment, nearly all patients stop being communicable. TB is not highly communicable overall — real risk to a paramedic usually needs prolonged, intimate exposure such as living in the same household, or an advanced airway procedure on an actively untreated case.",
+     "zh": "结核分三种类型，只有典型（肺内）结核具有传染性——非典型结核和肺外结核（骨、肾、淋巴结等）都不传染。结核潜伏期 4 到 12 周，只有当肺部出现活动性病灶并经咳嗽向外排菌时才有传染性；治疗约 14 天后，几乎所有患者都不再具有传染性。结核整体上传染性不算高——救护员真正面临风险通常需要长期密切接触（比如同住一个屋檐下），或对未治疗的活动性病例做高级气道操作。",
+     "hard": true
+    },
+    {
+     "en": "Of people who test positive for TB exposure, only about 5% will progress to active disease within 18 to 24 months and 95% will settle into latent infection; of that latent group, 90% never develop active TB and only about 5% ever reactivate. All providers should have a baseline tuberculin skin test (or interferon-gamma release assay) at hire, and after a suspected exposure, get retested 8 to 10 weeks later — a positive result then triggers a chest radiograph and monthly liver function tests during antibiotic treatment, since the drugs are hepatotoxic and alcohol must be avoided.",
+     "zh": "结核暴露检测阳性的人中，只有约 5% 会在 18 到 24 个月内发展为活动性疾病，95% 会转为潜伏感染；而在潜伏感染人群里，90% 永远不会发展为活动性结核，只有约 5% 会在此生某个时点重新激活。所有医护人员入职时都应做基线结核菌素皮试（或干扰素释放试验），疑似暴露后应在 8 到 10 周后复测——若转阳则要做胸片并在抗生素治疗期间每月查肝功能，因为这类药物有肝毒性，用药期间必须禁酒。",
+     "hard": true
+    },
+    {
+     "en": "RSV is the leading cause of lower respiratory tract infection in infants, older adults, and immunocompromised patients, and it spreads two ways — direct contact with large droplets that travel less than 1 metre, or indirect contact via contaminated hands or surfaces. It survives less than 1 hour on hands but up to 30 hours on other surfaces, and incubates 2 to 8 days. A paramedic who develops RSV goes on work restriction and should not care for immunocompromised patients.",
+     "zh": "RSV（呼吸道合胞病毒）是婴儿、老年人和免疫抑制患者下呼吸道感染的头号病因，有两条传播途径——直接接触传播距离小于 1 米的大颗粒飞沫，或经污染的手或表面间接接触。它在手上存活不到 1 小时，但在其他表面上可存活长达 30 小时，潜伏期 2 到 8 天。救护员一旦感染 RSV 要执行工作限制，不能照护免疫抑制患者。",
+     "hard": true
+    },
+    {
+     "en": "Mononucleosis (Epstein-Barr virus) spreads through saliva, hence 'the kissing disease.' It incubates 4 to 6 weeks, and while the illness itself usually resolves in 2 to 4 weeks, pharyngeal viral shedding — and therefore the communicable period — can persist for a year or more after infection.",
+     "zh": "传染性单核细胞增多症（EB 病毒）经唾液传播，因此俗称「接吻病」。潜伏期 4 到 6 周，虽然病程本身通常在 2 到 4 周内消退，但咽部病毒排出——也就是传染期——可在感染后持续一年甚至更久。",
+     "hard": true
+    },
+    {
+     "en": "Influenza incubates only 1 to 4 days and is communicable from the day before symptoms begin until about 5 days after onset — a much tighter window than most of the diseases in this section. Its burden is enormous: roughly 1 billion cases worldwide every year, 3 to 5 million severe cases, and 500,000 deaths, with Canada alone seeing about 12,000 hospital admissions and 3,500 deaths annually. An unvaccinated provider with a known exposure may be offered antiviral drugs within 48 hours to blunt the illness if it develops.",
+     "zh": "流感潜伏期只有 1 到 4 天，传染期从症状出现前 1 天持续到发病后约 5 天——比本节大多数疾病的窗口都要短得多。它的疾病负担却极其巨大：全球每年约 10 亿例，其中 300 万到 500 万例为重症，死亡 50 万例；仅加拿大每年就有约 1.2 万人次住院、3,500 人死亡。未接种疫苗但已知暴露的医护人员，可在 48 小时内获得抗病毒药物以减轻可能发生的病情。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Sexually Transmitted Diseases",
+   "titleZh": "性传播疾病",
+   "points": [
+    {
+     "en": "Gonorrhea incubates 2 to 7 days and, left untreated, stays communicable for months — but treatment turns a patient noncommunicable within hours. Symptoms differ sharply by sex: men usually get a purulent urethral discharge and dysuria within days, while a woman's initial infection can be mild enough to go unnoticed until it progresses to pelvic inflammatory disease presenting as an acute abdomen.",
+     "zh": "淋病潜伏期 2 到 7 天，若不治疗可传染数月——但一旦治疗，数小时内就不再具传染性。男女症状差异明显：男性通常在数天内出现尿道脓性分泌物和排尿疼痛，女性的初期感染却可能轻微到毫无察觉，直到进展为以急腹症样表现出现的盆腔炎。",
+     "hard": true
+    },
+    {
+     "en": "Syphilis incubates 10 days to 3 months and, once treated with penicillin, becomes noncontagious within 48 hours. It progresses through three stages: a primary genital chancre, a secondary stage of rash and swollen lymph nodes, and — if still untreated — a tertiary stage that can attack the heart, eyes, hearing, central nervous system, and bone.",
+     "zh": "梅毒潜伏期 10 天到 3 个月，一旦用青霉素治疗，48 小时内就不再具传染性。病程分三期：一期是生殖器硬下疳，二期是皮疹和淋巴结肿大，若仍未治疗则进入三期，可侵犯心脏、眼睛、听力、中枢神经系统和骨骼。",
+     "hard": true
+    },
+    {
+     "en": "Genital herpes has two viral types — HSV-1 usually spreads through oral secretions, HSV-2 through sexual contact. It incubates 2 to 12 days; genital lesions stay infectious for 4 to 7 days, but viral shedding in saliva can persist up to 7 weeks after a lesion appears. There is no cure — antivirals given for 7 to 10 days only reduce outbreaks — and an infant can be infected passing through the birth canal of a mother with active disease.",
+     "zh": "生殖器疱疹有两种病毒型别——HSV-1 通常经口腔分泌物传播，HSV-2 经性接触传播。潜伏期 2 到 12 天；生殖器病灶传染性持续 4 到 7 天，但唾液中的病毒排出可在病灶出现后持续长达 7 周。这个病没有治愈方法——抗病毒药疗程 7 到 10 天只能减少发作次数——若母亲处于活动性感染期经阴道分娩，婴儿可能被感染。",
+     "hard": true
+    },
+    {
+     "en": "Chlamydia has the highest incidence of any STD and is often asymptomatic in women even as it progresses toward pelvic inflammatory disease. It incubates 7 to 14 days or longer, and perinatal transmission can cause premature rupture of membranes, preterm birth, or stillbirth.",
+     "zh": "衣原体感染是所有性传播疾病中发病率最高的一种，在女性身上常常没有症状，却可能悄悄进展为盆腔炎。潜伏期 7 到 14 天或更长，围产期传播可导致胎膜早破、早产或死产。",
+     "hard": true
+    },
+    {
+     "en": "Scabies and pubic lice are parasitic infestations, not fluid-exchange infections — they spread by skin-to-skin contact or sharing clothing, towels, and linens. Scabies incubates 4 to 6 weeks in someone never exposed before and stays communicable until treatment kills the mites and eggs; pubic lice incubate about 8 to 10 days after the eggs hatch. Routine vehicle cleaning and hot-water laundering of linens is sufficient for both, and a documented exposure can trigger treatment plus a work restriction until the paramedic is confirmed clear.",
+     "zh": "疥疮和阴虱是寄生虫感染，而不是靠体液交换传播的性病——它们经皮肤接触，或共用衣物、毛巾、床品传播。从未接触过的人感染疥疮潜伏期为 4 到 6 周，治疗杀死螨虫和虫卵之前一直有传染性；阴虱潜伏期约为虫卵孵化后 8 到 10 天。两者的车辆清洁只需常规清洁、床品用热水洗涤即可；一旦有记录在案的暴露，可能需要治疗并在确认清除前执行工作限制。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Bloodborne Diseases: Hepatitis and HIV/AIDS",
+   "titleZh": "血源性疾病：肝炎与 HIV/AIDS",
+   "points": [
+    {
+     "en": "HBV can survive outside the body in dried blood for up to 7 days — for example on stainless steel — and incubates widely, from 60 to 150 days, with symptoms typically starting around day 90. Fewer than 5% of infected adults become chronic carriers, but of those who do, 20% to 30% go on to cirrhosis or liver cancer; roughly half to 60% of acute infections are mild enough that the person never realizes they were infected.",
+     "zh": "乙肝病毒在体外干血中可存活长达 7 天——例如附着在不锈钢表面；潜伏期跨度很大，60 到 150 天，症状通常在约第 90 天出现。感染成人中不到 5% 会成为慢性携带者，但这部分人里有 20% 到 30% 会发展为肝硬化或肝癌；约一半到六成的急性感染症状轻微到患者自己都不知道曾经感染过。",
+     "hard": true
+    },
+    {
+     "en": "The hepatitis B vaccine series is three doses — initial, then 4 weeks later, then 6 months after the first — followed by a titre 1 to 2 months after the series to confirm your immune response; occupationally acquired HBV has fallen 95% since vaccination programs began. After an exposure, a documented positive titre on file means no further follow-up is needed; an unvaccinated provider exposed to an HBV-positive source is offered hepatitis B immune globulin plus the vaccine series, and infection risk climbs to 6% to 30% only when someone is both unvaccinated and never reports the exposure.",
+     "zh": "乙肝疫苗为三剂系列——首剂、4 周后第二剂、首剂后 6 个月第三剂——完成后 1 到 2 个月要查滴度确认免疫应答；自疫苗接种项目推行以来，职业获得性乙肝已下降 95%。暴露后，若档案里已有阳性滴度记录，就不需要进一步随访；未接种疫苗又暴露于乙肝阳性源患者的救护员，会获得乙肝免疫球蛋白加疫苗系列注射，而感染风险只有在「既未接种又未上报暴露」时才会升到 6% 到 30%。",
+     "hard": true
+    },
+    {
+     "en": "HCV is the leading cause of liver transplantation, and 75% to 80% of those infected progress to chronic infection; it incubates 2 to 24 weeks (averaging 6 to 7) and 75% of infected people never notice because they skip the symptomatic phase. HCV is not efficiently transmitted through ordinary occupational contact — the real risk combination is a deep needlestick with visible blood, a sharp that had been in the patient's vein or artery, a hollow-bore needle, and a source patient with a high viral load.",
+     "zh": "丙肝是肝移植的头号病因，感染者中 75% 到 80% 会进展为慢性感染；潜伏期 2 到 24 周（平均 6 到 7 周），75% 的感染者因为没经历有症状阶段而从未察觉。丙肝并不容易经普通职业接触传播——真正的高风险组合是：深部针刺伤、器械上有肉眼可见血迹、该锐器曾插入患者静脉或动脉、空心针头，且源患者病毒载量高。",
+     "hard": true
+    },
+    {
+     "en": "There is no vaccine and no postexposure medication to prevent HCV, but direct-acting antivirals now make it potentially curable once acquired — after an exposure to an HCV-positive source, retest at 4 to 6 weeks; a negative result there means you did not acquire it from that exposure.",
+     "zh": "丙肝没有疫苗，也没有暴露后预防药物，但直接抗病毒药物现已让它一旦感染也有可能治愈——暴露于丙肝阳性源患者后，应在 4 到 6 周复测，若为阴性说明未从这次暴露中被感染。",
+     "hard": true
+    },
+    {
+     "en": "Hepatitis D can only infect someone already infected with hepatitis B — it is essentially a parasite of HBV — and incubates 30 to 180 days, with the blood considered infectious through every phase of illness. There is no specific antiviral treatment for HDV, but if you are already protected against HBV, an HDV-positive source exposure needs no further treatment.",
+     "zh": "丁肝只能感染已经感染乙肝的人——本质上是乙肝的「寄生病毒」——潜伏期 30 到 180 天，病程各阶段血液都被视为具有传染性。丁肝目前没有特异性抗病毒治疗，但如果你已经对乙肝有免疫力，暴露于丁肝阳性源患者也无需进一步处置。",
+     "hard": true
+    },
+    {
+     "en": "P24 antigen testing can detect HIV as early as 1 to 6 days after infection. Mother-to-child transmission drops to just 1% to 3% when the mother is on antiretroviral drugs from the second trimester onward. HIV is not spread by casual or household contact, and it is neither airborne nor droplet-transmitted. Once inside the body, it takes about 7 days for the virus to envelop a cell, a process that may occur 4 to 6 weeks after exposure, and seroconversion — antibodies becoming detectable — usually happens within the first 3 months.",
+     "zh": "P24 抗原检测最早可在感染后 1 到 6 天检出 HIV。若母亲从孕中期起就接受抗逆转录病毒治疗，母婴传播率可降到仅 1% 到 3%。HIV 不经日常或家庭接触传播，也不经空气或飞沫传播。病毒进入体内后，约需 7 天包裹一个细胞，这个过程可能发生在暴露后 4 到 6 周，血清学转化（抗体可检出）通常发生在暴露后头 3 个月内。",
+     "hard": true
+    },
+    {
+     "en": "A high-risk HIV exposure combines all four factors — a deep stick with a large-gauge hollow-bore needle, visible blood on the device, a source patient who is HIV-positive with a high viral load, and a device that had been in the patient's vein or artery. Even at that high-risk combination, transmission risk is only 0.3% for a mucous membrane (eye) exposure and 0.09% for exposure through non-intact skin.",
+     "zh": "HIV 高风险暴露需要同时满足四个条件——大号空心针头深刺、器械上有肉眼可见血迹、源患者 HIV 阳性且病毒载量高、且该器械曾插入患者的静脉或动脉。即便符合这样的高风险组合，黏膜（眼部）暴露的传播风险也只有 0.3%，经破损皮肤暴露的风险只有 0.09%。",
+     "hard": true
+    },
+    {
+     "en": "Rapid HIV testing of the source patient is accurate and available in under 1 hour; a negative result ends the workup for the paramedic. A positive result triggers viral load assessment and up to 4 weeks of antiretroviral drugs may be offered, though newer viral-load evidence has reduced how often this is actually needed. Before starting antiretrovirals, baseline complete blood count, liver and kidney function, and (for a person of childbearing age) a pregnancy test are drawn, then repeated every 2 weeks during therapy. Surveys have found up to 6% of seriously ill or injured ED patients are HIV-positive — the working assumption in the field is to treat every patient as potentially HIV-positive, not just the ones who look high-risk.",
+     "zh": "对源患者做快速 HIV 检测准确且不到 1 小时就能出结果；阴性结果就此结束对救护员的检测流程。阳性结果会触发病毒载量评估，并可能提供长达 4 周的抗逆转录病毒药物，不过更新的病毒载量证据已经降低了实际需要用药的比例。开始用药前要查基线全血细胞计数、肝肾功能，育龄人群还要验孕，治疗期间每 2 周复查一次。调查显示，急诊科重症或外伤患者中高达 6% 为 HIV 阳性——院前的默认做法是把每一名患者都当作可能 HIV 阳性来对待，而不只是「看起来高风险」的那些。",
+     "hard": true
+    },
+    {
+     "en": "Not every body fluid carries bloodborne-disease risk: tears, sweat, urine, stool, vomitus, nasal secretions, and sputum do not transmit bloodborne pathogens unless visibly contaminated with blood — know this list so you are not over-gowning for a fluid that poses no bloodborne risk.",
+     "zh": "不是所有体液都携带血源性疾病风险：泪液、汗液、尿液、粪便、呕吐物、鼻分泌物和痰液，只要没有肉眼可见血液混入，就不传播血源性病原体——记住这份清单，别对本来不具血源性风险的体液过度防护。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Enteric (Intestinal) Diseases",
+   "titleZh": "肠道（消化道）传播疾病",
+   "points": [
+    {
+     "en": "Hepatitis A spreads by the fecal-oral route — contaminated water, milk, sliced meats, or undercooked shellfish are classic sources — and gives lifelong immunity once you've had it. It incubates 15 to 50 days (usually 2 to 4 weeks), and the communicable period runs from near the end of incubation through a few days after jaundice appears. No special vehicle cleaning is needed; gloves and handwashing after contact with stool is sufficient.",
+     "zh": "甲肝经粪-口途径传播——污染的饮用水、牛奶、切片熟肉或未煮熟的贝类是经典传播源——一旦得过就获得终生免疫。潜伏期 15 到 50 天（通常 2 到 4 周），传染期从潜伏期接近结束时开始，持续到黄疸出现后的几天。不需要对车辆做特殊清洁，接触粪便后戴手套加洗手就够了。",
+     "hard": true
+    },
+    {
+     "en": "Hepatitis E accounts for an estimated 50% of hepatitis cases in developing countries, spreads by the fecal-oral route through contaminated water, and is strongly linked to floods and poor sanitation. Unlike HBV or HCV, it does not become chronic, and it incubates 15 to 60 days.",
+     "zh": "戊肝在发展中国家估计占肝炎病例的 50%，经粪-口途径通过污染水传播，与洪灾和卫生条件差密切相关。与乙肝、丙肝不同，戊肝不会转为慢性，潜伏期 15 到 60 天。",
+     "hard": true
+    },
+    {
+     "en": "Gastroenteritis itself is usually mild in a healthy adult, but children, older adults, and patients with chronic illness are the groups who can develop serious dehydration from it — the age and health of the patient, not the organism, often determines how aggressively you manage fluids.",
+     "zh": "胃肠炎在健康成人身上通常不严重，但儿童、老年人和慢性病患者是可能因此发展成严重脱水的群体——决定补液处置力度的往往是患者的年龄和基础健康状况，而不是病原体本身。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Vector-borne Diseases",
+   "titleZh": "病媒传播疾病",
+   "points": [
+    {
+     "en": "West Nile virus spreads only by mosquito bite (roughly 1% of mosquitoes carry it) and is not transmitted person to person, so it has no communicable period at all. It incubates 2 to 6 days typically (range 2 to 14), and 70% to 80% of infected people never notice they had it; of the 20% who do develop symptoms, about 1 in 150 progresses to severe neuroinvasive disease such as encephalitis or meningitis.",
+     "zh": "西尼罗病毒只经蚊虫叮咬传播（约 1% 的蚊子携带该病毒），不会人传人，所以完全没有传染期这个概念。潜伏期通常 2 到 6 天（范围 2 到 14 天），70% 到 80% 的感染者从未察觉自己感染过；在出现症状的那 20% 里，约每 150 人中有 1 人会进展为脑炎、脑膜炎等严重的神经系统受累疾病。",
+     "hard": true
+    },
+    {
+     "en": "West Nile virus is not spread patient-to-patient by casual contact, but it has been transmitted through donated blood and organs, during hemodialysis, and via two documented laboratory needlestick injuries — so needlesafe devices still matter around a WNV-suspected patient even though there is no person-to-person respiratory or contact risk.",
+     "zh": "西尼罗病毒不会通过日常接触人传人，但确实曾经经献血、器官捐献、血液透析传播，也有两起实验室工作人员针刺伤感染的记录——所以即便疑似西尼罗病毒患者没有呼吸道或接触传播风险，处理利器时仍然要用安全针具。",
+     "hard": true
+    },
+    {
+     "en": "Lyme disease, from Borrelia burgdorferi carried by blacklegged ticks, has British Columbia's west coast as one of Canada's named endemic areas, alongside southern/eastern Ontario, southeastern Manitoba, and Nova Scotia — peak season is June to August. It incubates 3 to 32 days and moves through three stages: an early bull's-eye rash, an early disseminated stage with flu-like symptoms plus possible neurologic or cardiac involvement, and a late stage with arthritis that can begin days to years after the initial infection.",
+     "zh": "莱姆病由黑腿蜱携带的伯氏疏螺旋体引起，BC 省西海岸是加拿大官方点名的流行区之一，此外还有安大略省南部/东部、马尼托巴省东南部和新斯科舍省——高发季是 6 月到 8 月。潜伏期 3 到 32 天，病程分三期：早期的靶心样皮疹、早期播散期（流感样症状，可伴神经或心脏受累）、以及晚期的关节炎，晚期可在初次感染后数天到数年间的任何时候出现。",
+     "hard": true
+    },
+    {
+     "en": "Tick-bite antibiotic prophylaxis is not routinely warranted if the tick is found and removed within 72 hours of attachment — it becomes warranted in endemic areas only when the tick was not found and removed inside that 72-hour window. No additional PPE or equipment cleaning is needed for a vector-borne illness, since the patient cannot pass it to you directly.",
+     "zh": "如果蜱虫在附着后 72 小时内被发现并移除，通常不需要预防性使用抗生素；只有在流行区且蜱虫未能在 72 小时内被发现移除时，才需要预防用药。病媒传播疾病不需要额外的个人防护装备或器材清洁，因为患者不会直接把病传给你。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Zoonotic (Animal-borne) Diseases",
+   "titleZh": "动物源性疾病",
+   "points": [
+    {
+     "en": "Hantavirus comes from rodent urine, feces, and saliva — chiefly the deer mouse carrying the Sin Nombre strain in Canada — and infects through aerosol inhalation of that waste rather than a bite. It incubates 12 to 16 days (range 5 to 42), is not transmitted person to person, and can progress from a 3-to-8-day fever phase into a cardiopulmonary phase resembling ARDS.",
+     "zh": "汉坦病毒来自啮齿动物的尿液、粪便和唾液——在加拿大主要携带者是携带辛诺柏毒株的鹿鼠——感染方式是吸入这些排泄物形成的气溶胶，而不是被咬。潜伏期 12 到 16 天（范围 5 到 42 天），不会人传人，病程可从持续 3 到 8 天的发热期，进展为类似 ARDS 的心肺期。",
+     "hard": true
+    },
+    {
+     "en": "Rabies is nearly always fatal once symptoms begin, typically within 7 to 14 days, yet human rabies is extraordinarily rare in Canada — only 25 deaths since national reporting began in 1925, with the last Canadian-acquired case a 2007 bat exposure in Alberta. Despite that, 1,000 to 1,500 Canadians receive postexposure prophylaxis every year, since incubation runs 2 to 8 weeks and there is no way to know in advance who will develop disease. Raccoons, skunks, foxes, and bats are the animals most often found rabid in Canada, and there are no documented cases of human-to-human transmission.",
+     "zh": "狂犬病一旦出现症状几乎必然致命，通常在症状出现后 7 到 14 天内死亡，但加拿大的人类狂犬病极其罕见——自 1925 年开始全国上报以来仅有 25 例死亡，最近一例在加拿大境内感染的病例是 2007 年阿尔伯塔省的一起蝙蝠暴露。尽管如此，加拿大每年仍有 1,000 到 1,500 人接受暴露后预防注射，因为潜伏期长达 2 到 8 周，事先无从判断谁会真正发病。浣熊、臭鼬、狐狸和蝙蝠是加拿大最常见的染病动物，且没有人传人的记录病例。",
+     "hard": true
+    },
+    {
+     "en": "Rabies transmits primarily through the bite of an infected mammal, with the virus present in saliva from the moment the animal itself becomes infected. Non-bite routes — mucous membrane contamination, aerosol exposure, and corneal or organ transplantation — are documented but rare.",
+     "zh": "狂犬病主要经受感染哺乳动物的咬伤传播，动物自身一旦感染，唾液中就带有病毒。非咬伤途径——黏膜污染、气溶胶暴露、角膜或器官移植——虽有记录但很罕见。",
+     "hard": false
+    },
+    {
+     "en": "Tetanus spores enter through a puncture wound contaminated with soil, street dust, or animal feces, or through contaminated street drugs — it is not transmitted person to person. Incubation averages 14 days but can be as short as 3 days when contamination is heavier; Canada now averages about 3 reported cases a year (down from about 5 a year in the 1980s-90s), with only 6 deaths since 2000. Treatment includes tetanus immune globulin, typically a single intramuscular dose of 3,000 to 5,000 units, with part infiltrated around the wound if it can be identified.",
+     "zh": "破伤风孢子经被土壤、街道灰尘或动物粪便污染的穿刺伤进入体内，也可能经污染的街头毒品注射进入——不会人传人。潜伏期平均 14 天，但污染较重时可短至 3 天；加拿大目前平均每年约 3 例上报病例（低于 1980-90 年代的约 5 例/年），2000 年以来仅有 6 例死亡。治疗包括破伤风免疫球蛋白，通常单次肌注 3,000 到 5,000 单位，能定位伤口的话部分剂量要浸润注射在伤口周围。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Antibiotic-Resistant Organisms",
+   "titleZh": "抗生素耐药菌",
+   "points": [
+    {
+     "en": "MRSA is now overwhelmingly community-acquired rather than hospital-acquired, and studies show 50% to 90% of health care providers carry it in their nasal passages without ever getting sick — the pathogen mainly spreads via unwashed hands rather than contaminated surfaces. Its incubation period is 5 to 45 days, and while it typically causes soft-tissue infection treatable by incision and drainage alone, some strains are now showing resistance even to vancomycin, the drug once considered the last reliable option.",
+     "zh": "MRSA 如今绝大多数是社区获得性而非医院获得性，研究显示 50% 到 90% 的医护人员鼻腔携带这种病原体却从未发病——它主要靠未清洁的手传播，而不是污染表面。潜伏期 5 到 45 天，虽然通常只造成可靠切开引流处理的软组织感染，但部分菌株已经开始对曾被视为最后防线的万古霉素产生耐药。",
+     "hard": true
+    },
+    {
+     "en": "Contact with MRSA wound drainage while your own skin is intact does not count as an exposure at all — standard precautions (gloves plus good hand hygiene) around wounds and non-intact skin are the whole prevention strategy, and no postexposure treatment is recommended even after a real exposure; you simply document the incident carefully.",
+     "zh": "只要自己的皮肤是完整的，接触 MRSA 伤口引流液根本不算暴露——标准防护（手套加良好手卫生）就是应对伤口和破损皮肤的全部策略，即便发生真正的暴露也不建议做暴露后处置，只需仔细记录事件。",
+     "hard": false
+    },
+    {
+     "en": "VRE is primarily hospital-acquired — the first documented Canadian outbreak was in a Toronto renal unit in 1995, and it has since appeared in more than 100 facilities across 10 provinces. Unlike MRSA, the organism survives for long periods on contaminated surfaces, and only infected patients (not merely colonized ones) can transmit it. A cover gown is needed only if your uniform is likely to contact drainage, and no special cleaning solution or postexposure treatment is required.",
+     "zh": "VRE 主要是医院获得性感染——加拿大首次记录的暴发发生在 1995 年多伦多一家医院的肾病病房，此后已出现在 10 个省的 100 多家机构。与 MRSA 不同，这种病原体能在污染表面长期存活，且只有感染者（而非单纯携带者）才会传播。只有制服可能接触到引流液时才需要穿隔离衣，不需要特殊清洁溶液，也不需要暴露后处置。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "New and Emerging Diseases",
+   "titleZh": "新发与再发传染病",
+   "points": [
+    {
+     "en": "SARS's 2003 Toronto outbreak produced 375 probable/suspect cases and 44 deaths (including 3 health care workers), with over 28,000 residents placed in voluntary 10-day quarantine — and 526 of Toronto's 920 paramedics were themselves quarantined during the outbreak. Transmission needs close personal contact — living with, caring for, kissing, hugging, or talking within 1 metre of an infected person — and it incubates about 10 days. Worldwide, the 2003 outbreak totalled 8,098 cases and 774 deaths.",
+     "zh": "2003 年多伦多的 SARS 疫情共出现 375 例疑似/可能病例，44 人死亡（含 3 名医护人员），超过 28,000 名居民被要求自愿隔离 10 天——多伦多 920 名救护员中有 526 人在疫情期间被隔离。传播需要密切的人身接触——同住、照护、亲吻、拥抱，或在 1 米内交谈——潜伏期约 10 天。全球范围内，2003 年这波疫情共 8,098 例、774 人死亡。",
+     "hard": true
+    },
+    {
+     "en": "For a SARS-suspected patient, mask the patient with a surgical mask and wear a properly fit-tested N95 or P100 respirator yourself. A true unprotected exposure can trigger a 10-day quarantine — covered by workers' compensation — with daily temperature checks and follow-up through both the EMS service and public health.",
+     "zh": "对疑似 SARS 患者，给患者戴外科口罩，自己则要戴经过密合度测试的 N95 或 P100 呼吸器。真正的无防护暴露可能触发为期 10 天的隔离——由工伤补偿覆盖——期间需每日测体温，并同时向所在机构和公共卫生部门随访报到。",
+     "hard": true
+    },
+    {
+     "en": "Avian influenza first infected humans in Hong Kong in 1997 (18 cases, 6 deaths), and the death rate in cases since has run around 25% — yet there has been no rapid human-to-human spread documented; every human case traces to close contact with infected birds. A documented exposure can be offered an antiviral drug within 48 hours, which reduces severity but does not prevent the infection.",
+     "zh": "禽流感 1997 年在香港首次感染人类（18 例，6 例死亡），此后病例的死亡率约为 25%——但从未有记录显示存在快速人传人的情况，每一例人类病例都可追溯到与染病禽类的密切接触。有记录的暴露可在 48 小时内获得抗病毒药物，能减轻病情但不能预防感染。",
+     "hard": true
+    },
+    {
+     "en": "MERS, first reported in Saudi Arabia in 2012, is caused by a coronavirus linked to infected camels and can spread person to person through close, unprotected contact. About 30% of confirmed cases have died, and routine, contact, AND airborne precautions together are advised when caring for a suspected case — a stricter combination than most respiratory illnesses in this chapter.",
+     "zh": "MERS 于 2012 年首次在沙特阿拉伯报告，由与染病骆驼相关的冠状病毒引起，可经密切、无防护接触人传人。确诊病例中约 30% 死亡；照护疑似病例时建议同时采取常规、接触和空气三重预防措施——这比本章大多数呼吸道疾病要求的防护级别都更严格。",
+     "hard": true
+    },
+    {
+     "en": "Viral hemorrhagic fevers such as Ebola spread via direct contact with blood and body fluids once a human is infected from an animal reservoir, and mortality can approach 90%. The largest recorded Ebola outbreak (2013-2016, West Africa) caused more than 28,500 cases and 11,300 deaths. Symptoms typically appear 8 to 10 days after exposure but can take up to 21 days, which is why full PPE — gloves, mask, eye protection, face shield, and an impermeable gown — is essential for any suspected case.",
+     "zh": "埃博拉等病毒性出血热经动物储存宿感染人类后，靠直接接触血液和体液在人际间传播，病死率可高达约 90%。历史上最大规模的埃博拉疫情（2013-2016 年，西非）造成超过 28,500 例、11,300 人死亡。症状通常在暴露后 8 到 10 天出现，但最长可达 21 天——这正是为什么对任何疑似病例都必须做到全套防护：手套、口罩、护目装备、面屏和防渗透隔离衣。",
+     "hard": true
+    },
+    {
+     "en": "Zika virus spreads primarily by mosquito but also sexually and through blood or tissue products; only 1 in 4 infected people develop symptoms, and the virus persists longest in semen among all the body fluids it has been found in. It incubates 3 to 14 days, and congenital Zika syndrome — microcephaly, abnormal brain development, spasticity or seizures, club feet, and eye abnormalities — is why travellers to affected areas should wait at least 2 to 3 months before trying to conceive.",
+     "zh": "寨卡病毒主要经蚊虫传播，也可经性接触和血液/组织制品传播；感染者中只有四分之一会出现症状，而在所有能检出病毒的体液里，精液中病毒持续存在的时间最长。潜伏期 3 到 14 天，先天性寨卡综合征——小头畸形、脑发育异常、痉挛或癫痫、马蹄内翻足、眼部异常——正是前往疫区旅行者应在备孕前至少等待 2 到 3 个月的原因。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Ambulance Cleaning and Disinfection",
+   "titleZh": "救护车清洁与消毒",
+   "points": [
+    {
+     "en": "Equipment cleaning level follows a three-tier classification, not a one-size-fits-all rule: critical equipment that touches mucous membranes (laryngoscope blades, tracheal tubes, supraglottic airways) needs single-use disposal or high-level chemical sterilization at minimum; semicritical equipment touching only intact skin (stethoscopes, BP cuffs, splints, PPE) needs a solution labelled to kill HBV, such as bleach and water at a 1:100 dilution; noncritical surfaces (seats, floors, work surfaces) can be handled with hospital-grade cleaner or the same bleach solution.",
+     "zh": "器材清洁级别遵循三级分类，而不是一套标准打天下：接触黏膜的关键器材（喉镜片、气管导管、声门上气道）至少要单次使用或高水平化学灭菌；只接触完整皮肤的半关键器材（听诊器、血压袖带、夹板、防护装备）需要标注能杀灭乙肝病毒的清洁液，例如 1:100 稀释的漂白水；非关键的表面（座椅、地板、工作台面）用医院级清洁剂或同样的漂白水溶液即可。",
+     "hard": true
+    },
+    {
+     "en": "Disinfection only works after cleaning — you cannot disinfect through visible soil, so contaminated areas get washed with soap and water or a purpose-made hydrogen peroxide wipe first, and only then does the germicidal step happen. Used linens are stripped from the stretcher immediately into a bag or the designated hospital receptacle, and disposable equipment is sorted by your province's medical-waste definition — most of it actually counts as ordinary trash, not biohazard waste.",
+     "zh": "消毒只有在清洁之后才有效——不能隔着肉眼可见的污物做消毒，所以受污染的区域要先用肥皂水或专用双氧水湿巾清洁，之后才做杀菌步骤。用过的床品要立即从担架上撤下，装进袋子或送到医院指定的收纳处；一次性器材要按本省对医疗废物的定义分类——其中大多数其实算普通垃圾，而不是生物危害废物。",
+     "hard": false
+    },
+    {
+     "en": "Reusable equipment such as a bag-mask device gets disassembled and its components placed into a liquid sterilization solution exactly as the manufacturer specifies — you cannot disinfect a device around its own housing. Every service must also run a scheduled full vehicle cleaning (not just after-call spot cleaning), named by specific solution brand, and keep a written cleaning procedure for every individual piece of equipment.",
+     "zh": "面罩球囊等可重复使用器材要拆解，各部件按厂家说明放入液体灭菌溶液——不能隔着外壳给整个装置消毒。每个机构还必须安排定期的整车全面清洁（而不只是每趟任务后的局部清洁），指明使用的具体消毒剂品牌，并为每一件器材保留书面清洁流程。",
+     "hard": false
+    },
+    {
+     "en": "Cleaning priority goes to frequently touched items and anything the patient was in contact with, not an even sweep of the whole vehicle. Any spill anywhere in the compartment gets the same germicidal or bleach solution treatment. Preventing nosocomial infection — infection a patient picks up from the ambulance itself — is not just a cleaning task: staying current on vaccines and actually following work-restriction guidelines (not reporting for duty with a cold or sore throat) are described as equally part of the job.",
+     "zh": "清洁的重点是高频接触的物件和患者接触过的一切，而不是对整车不分主次地扫一遍。车厢内任何位置的溅洒污染都用同一种杀菌剂或漂白水溶液处理。预防医院感染（患者从救护车本身染上的感染）不只是清洁任务——保持疫苗接种最新，以及真正遵守工作限制指引（感冒或喉咙痛就不出勤），都被视为同样重要的一部分。",
+     "hard": false
+    },
+    {
+     "en": "Any airway manoeuvre or treatment that could aerosolize secretions counts as a high-risk procedure requiring elevated precautions: tracheal intubation, supraglottic airways (LMA, Combitube), CPAP/BiPAP, bag-mask ventilation without appropriate filtration, high-flow oxygen delivery, and nebulizer treatments are all named examples.",
+     "zh": "任何可能把分泌物变成气溶胶的气道操作或治疗，都算高风险操作、需要升级防护：气管插管、声门上气道（喉罩、Combitube）、CPAP/BiPAP、未加装适当过滤的面罩球囊通气、高流量给氧、雾化治疗都是明确点名的例子。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Airborne-transmitted diseases (person-to-person)",
+   "itemZh": "人传人经空气传播疾病",
+   "value": "仅 3 种：结核、麻疹、水痘"
+  },
+  {
+   "itemEn": "Droplet fall distance",
+   "itemZh": "飞沫飘散距离",
+   "value": "1-2 米内落地"
+  },
+  {
+   "itemEn": "Salmonella infective dose vs Campylobacter",
+   "itemZh": "沙门氏菌 vs 空肠弯曲菌感染剂量",
+   "value": "沙门氏菌 100 万-1 亿个菌体；弯曲菌低至约 500 个"
+  },
+  {
+   "itemEn": "Salmonella doubling time",
+   "itemZh": "沙门氏菌繁殖倍增时间",
+   "value": "适宜条件下每 15-20 分钟"
+  },
+  {
+   "itemEn": "Mumps incubation period",
+   "itemZh": "腮腺炎潜伏期",
+   "value": "约 16-18 天"
+  },
+  {
+   "itemEn": "Influenza incubation period",
+   "itemZh": "流感潜伏期",
+   "value": "24-72 小时"
+  },
+  {
+   "itemEn": "Chickenpox communicable period vs illness duration",
+   "itemZh": "水痘传染期 vs 病程",
+   "value": "病程 2-3 周，但仅传染约 1 周（出疹前 1 天至出疹后约 6 天）"
+  },
+  {
+   "itemEn": "Childhood immunization impact",
+   "itemZh": "儿童免疫接种计划成效",
+   "value": "Hib 和麻疹病例下降 >95%；加拿大已消灭野生型脊灰"
+  },
+  {
+   "itemEn": "HCP vaccination: tetanus booster interval",
+   "itemZh": "医护人员破伤风加强针间隔",
+   "value": "每 10 年一次"
+  },
+  {
+   "itemEn": "Hand hygiene scrub time",
+   "itemZh": "洗手揉搓时间",
+   "value": "至少 20 秒，覆盖手掌到手腕"
+  },
+  {
+   "itemEn": "Canadian hospital needlestick injuries per year",
+   "itemZh": "加拿大医院年针刺伤例数",
+   "value": "约 5 万起/年"
+  },
+  {
+   "itemEn": "Postexposure counselling start window vs HIV PEP effectiveness window",
+   "itemZh": "暴露后咨询启动窗口 vs HIV 预防用药有效窗口",
+   "value": "咨询/治疗启动上限 24-48 小时；HIV 暴露后预防最好 1-2 小时内开始"
+  },
+  {
+   "itemEn": "Measles timeline",
+   "itemZh": "麻疹时间轴",
+   "value": "潜伏期约 10 天；发热见于暴露后 7-18 天；出疹约第 14 天；传染期出疹前 4 天至出疹后 4 天"
+  },
+  {
+   "itemEn": "Rubella timeline and pregnancy window",
+   "itemZh": "风疹时间轴与妊娠风险窗",
+   "value": "潜伏期 12-23 天；出疹后传染 ≤7 天；先天性风疹综合征风险窗为孕早期 3-4 个月内"
+  },
+  {
+   "itemEn": "Mumps timeline and orchitis rate",
+   "itemZh": "腮腺炎时间轴与睾丸炎发生率",
+   "value": "潜伏期 16-18 天；腮腺肿胀后传染 9 天；青春期后男性睾丸炎发生率高达 25%"
+  },
+  {
+   "itemEn": "Chickenpox timeline",
+   "itemZh": "水痘时间轴",
+   "value": "潜伏期 10-21 天；传染期出疹前 1-2 天至首批水疱后约 5 天"
+  },
+  {
+   "itemEn": "Pertussis timeline",
+   "itemZh": "百日咳时间轴",
+   "value": "潜伏期 7-10 天；传染性约 3 周后降至可忽略；咳嗽可持续 1-2 个月"
+  },
+  {
+   "itemEn": "Meningococcal meningitis incubation and exposure threshold",
+   "itemZh": "脑膜炎球菌性脑膜炎潜伏期与暴露判定阈值",
+   "value": "潜伏期 2-10 天；需直接接触分泌物或 ≥8 小时持续密切接触；抗生素起效后约 24 小时清除"
+  },
+  {
+   "itemEn": "TB incubation, treatment window, and skin-test progression rates",
+   "itemZh": "结核潜伏期、治疗窗与皮试进展率",
+   "value": "潜伏期 4-12 周；治疗约 14 天后基本不再传染；阳性者 5% 于 18-24 月内进展为活动性，潜伏感染者中仅约 5% 终生重新激活；疑似暴露后 8-10 周复测"
+  },
+  {
+   "itemEn": "RSV survival and transmission distance",
+   "itemZh": "RSV 存活时间与传播距离",
+   "value": "手上存活 <1 小时，物体表面可达 30 小时；直接飞沫传播距离 <1 米；潜伏期 2-8 天"
+  },
+  {
+   "itemEn": "Influenza burden and timeline",
+   "itemZh": "流感疾病负担与时间轴",
+   "value": "潜伏期 1-4 天；传染期症状前 1 天至发病后约 5 天；全球每年约 10 亿例/50 万死亡；加拿大每年约 1.2 万住院/3,500 死亡；暴露后 48 小时内可给抗病毒药"
+  },
+  {
+   "itemEn": "Gonorrhea and syphilis timelines",
+   "itemZh": "淋病与梅毒时间轴",
+   "value": "淋病潜伏期 2-7 天，治疗后数小时内不再传染；梅毒潜伏期 10 天-3 个月，青霉素治疗后 48 小时不再传染"
+  },
+  {
+   "itemEn": "Genital herpes shedding vs lesion infectivity",
+   "itemZh": "生殖器疱疹病毒排出期 vs 病灶传染期",
+   "value": "潜伏期 2-12 天；病灶传染 4-7 天；唾液排毒可达病灶后 7 周"
+  },
+  {
+   "itemEn": "Scabies and pubic lice incubation",
+   "itemZh": "疥疮与阴虱潜伏期",
+   "value": "疥疮 4-6 周（无既往暴露者）；阴虱约虫卵孵化后 8-10 天"
+  },
+  {
+   "itemEn": "HBV timeline and chronic-carrier progression",
+   "itemZh": "乙肝时间轴与慢性化进展",
+   "value": "潜伏期 60-150 天（平均 90 天）；<5% 成年感染者成为慢性携带者；其中 20-30% 进展为肝硬化/肝癌；体外干血存活达 7 天"
+  },
+  {
+   "itemEn": "HBV vaccine series schedule",
+   "itemZh": "乙肝疫苗接种时间表",
+   "value": "首剂→4 周后第二剂→首剂后 6 个月第三剂→完成后 1-2 个月查滴度"
+  },
+  {
+   "itemEn": "HCV timeline and chronic progression",
+   "itemZh": "丙肝时间轴与慢性化比例",
+   "value": "潜伏期 2-24 周（平均 6-7 周）；75-80% 进展为慢性；暴露后 4-6 周复测"
+  },
+  {
+   "itemEn": "HDV incubation period",
+   "itemZh": "丁肝潜伏期",
+   "value": "30-180 天"
+  },
+  {
+   "itemEn": "HIV detection window and mother-to-child transmission rate",
+   "itemZh": "HIV 检测窗口与母婴传播率",
+   "value": "P24 抗原感染后 1-6 天可测；孕中期起用药可将母婴传播率降至 1-3%；血清转化通常在 3 个月内"
+  },
+  {
+   "itemEn": "HIV high-risk exposure transmission risk",
+   "itemZh": "HIV 高风险暴露传播风险",
+   "value": "黏膜（眼）暴露 0.3%；破损皮肤暴露 0.09%"
+  },
+  {
+   "itemEn": "Rapid HIV test turnaround and ED HIV prevalence",
+   "itemZh": "快速 HIV 检测时长与急诊 HIV 阳性率",
+   "value": "快速检测 <1 小时出结果；急诊重症/外伤患者中高达 6% HIV 阳性"
+  },
+  {
+   "itemEn": "Hepatitis A and E incubation",
+   "itemZh": "甲肝与戊肝潜伏期",
+   "value": "甲肝 15-50 天（通常 2-4 周）；戊肝 15-60 天"
+  },
+  {
+   "itemEn": "West Nile virus incubation and asymptomatic/severe rates",
+   "itemZh": "西尼罗病毒潜伏期与无症状/重症比例",
+   "value": "潜伏期 2-6 天（范围 2-14 天）；70-80% 无症状；症状者中约 1/150 进展为严重神经系统受累"
+  },
+  {
+   "itemEn": "Lyme disease incubation and tick-removal prophylaxis window",
+   "itemZh": "莱姆病潜伏期与蜱虫移除预防用药窗口",
+   "value": "潜伏期 3-32 天；蜱虫附着后 72 小时内移除则无需预防性抗生素"
+  },
+  {
+   "itemEn": "Hantavirus incubation",
+   "itemZh": "汉坦病毒潜伏期",
+   "value": "12-16 天（范围 5-42 天）；发热期持续 3-8 天"
+  },
+  {
+   "itemEn": "Rabies incubation, mortality window, and Canadian statistics",
+   "itemZh": "狂犬病潜伏期、致死时间窗与加拿大统计数据",
+   "value": "潜伏期 2-8 周；症状出现后 7-14 天内死亡；加拿大自 1925 年以来仅 25 例死亡；每年 1,000-1,500 人接受暴露后预防"
+  },
+  {
+   "itemEn": "Tetanus incubation and immune globulin dose",
+   "itemZh": "破伤风潜伏期与免疫球蛋白剂量",
+   "value": "潜伏期约 14 天（可短至 3 天）；免疫球蛋白单次肌注 3,000-5,000 单位"
+  },
+  {
+   "itemEn": "MRSA nasal carriage and incubation",
+   "itemZh": "MRSA 鼻腔携带率与潜伏期",
+   "value": "50-90% 医护人员鼻腔携带；潜伏期 5-45 天"
+  },
+  {
+   "itemEn": "VRE Canadian outbreak history",
+   "itemZh": "VRE 加拿大暴发史",
+   "value": "首次记录暴发 1995 年多伦多；现已见于 10 个省 100+ 家机构"
+  },
+  {
+   "itemEn": "SARS 2003 Toronto and worldwide statistics",
+   "itemZh": "2003 年 SARS 多伦多及全球统计",
+   "value": "多伦多 375 例/44 死（含 3 名医护）；526/920 名救护员被隔离；全球 8,098 例/774 死；潜伏期约 10 天；暴露后隔离 10 天"
+  },
+  {
+   "itemEn": "Avian influenza mortality",
+   "itemZh": "禽流感死亡率",
+   "value": "1997 年香港首例 18 例/6 死；此后死亡率约 25%；暴露后 48 小时内可给抗病毒药"
+  },
+  {
+   "itemEn": "MERS mortality",
+   "itemZh": "MERS 死亡率",
+   "value": "约 30%"
+  },
+  {
+   "itemEn": "Ebola mortality and 2013-2016 outbreak scale",
+   "itemZh": "埃博拉死亡率与 2013-2016 疫情规模",
+   "value": "死亡率可达约 90%；2013-2016 西非疫情 28,500+ 例/11,300 死；症状多在暴露后 8-10 天出现（最长 21 天）"
+  },
+  {
+   "itemEn": "Zika symptomatic rate and incubation",
+   "itemZh": "寨卡病毒症状发生率与潜伏期",
+   "value": "仅 1/4 感染者出现症状；潜伏期 3-14 天；备孕前建议等待 2-3 个月"
+  },
+  {
+   "itemEn": "Equipment cleaning tiers and bleach dilution",
+   "itemZh": "器材清洁三级分类与漂白水稀释比例",
+   "value": "关键器材（触黏膜）需单次使用或高水平灭菌；半关键/非关键器材可用 1:100 漂白水溶液（须标注可杀灭乙肝病毒）"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Assume every patient could be infectious and apply routine practices before you know the diagnosis — waiting for a diagnosis to start protecting yourself defeats the entire point of routine practices.",
+   "zh": "把每个患者都当作可能具有传染性，在诊断出来之前就用上常规预防措施——等诊断出来才开始防护，等于完全没理解常规预防措施的意义。"
+  },
+  {
+   "en": "The moment you suspect measles, chickenpox, mumps, rubella, pertussis, or TB, mask the patient with a surgical mask first — it is the single fastest way to contain droplet spread while you sort out the rest of your protection.",
+   "zh": "一旦怀疑麻疹、水痘、腮腺炎、风疹、百日咳或结核，先给患者戴上外科口罩——这是控制飞沫传播最快的一招，之后再从容安排自己的其余防护。"
+  },
+  {
+   "en": "Know your own immunization status cold — a mumps-vulnerable male paramedic or a rubella-vulnerable female paramedic is not a hypothetical, it is a specific gap that a titre test can close before you ever need it.",
+   "zh": "清楚自己的免疫接种状态——对腮腺炎易感的男性救护员、对风疹易感的女性救护员不是假设情境，而是一个具体的漏洞，滴度检测能在你真正用到之前就把它补上。"
+  },
+  {
+   "en": "Wash immediately, then report — for any bloodborne exposure, the sequence is always first aid before paperwork, but paperwork still happens the same day, not at the end of shift.",
+   "zh": "先冲洗，再上报——任何血源性暴露都遵循这个顺序：急救永远排在文书之前，但文书工作仍要当天完成，不能拖到下班。"
+  },
+  {
+   "en": "A tick found and removed within 72 hours needs no antibiotic prophylaxis; past that window in an endemic area, it does — the clock starts at attachment, not at discovery.",
+   "zh": "蜱虫在附着后 72 小时内被发现并移除，不需要预防性抗生素；超过这个窗口且在流行区，就需要——计时是从蜱虫附着开始算，不是从你发现它开始算。"
+  },
+  {
+   "en": "A bleach-and-water solution at 1:100 is the workhorse disinfectant for semicritical and noncritical equipment, but it only works after the surface has actually been cleaned of visible soil first.",
+   "zh": "1:100 稀释的漂白水是半关键和非关键器材的主力消毒剂，但前提是表面已经先清除了肉眼可见的污物。"
+  },
+  {
+   "en": "Don't let a low per-incident transmission risk (0.3% or 0.09% for HIV, for example) talk you out of full PPE — those low numbers are exactly why the system works, not a reason to skip it.",
+   "zh": "别被单次暴露的低传播风险（比如 HIV 的 0.3% 或 0.09%）说服自己省掉全套防护——这些低数字正是防护体系起作用的证明，不是可以省略的理由。"
+  },
+  {
+   "en": "Travel history belongs in every SAMPLE for a suspected infectious patient — it is the one question that turns 'unexplained fever' into 'possible SARS/avian flu/malaria exposure' fast enough to matter.",
+   "zh": "旅行史应该出现在每一份疑似感染患者的 SAMPLE 病史里——正是这一个问题，能迅速把「不明原因发热」变成「可能是 SARS/禽流感/疟疾暴露」，而且要在还来得及的时候问出来。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Confusing 'incubation period' with 'communicable period': incubation is exposure-to-symptoms, while communicable is when the patient can actually infect you — and for several diseases (chickenpox, measles) the communicable window starts before symptoms even appear, which is exactly why waiting for obvious signs before taking precautions is too late.",
+   "zh": "把「潜伏期」和「传染期」搞混：潜伏期是暴露到出现症状的时间，传染期是患者真正能传染给你的窗口——好几种病（水痘、麻疹）的传染期在症状出现之前就已经开始，这正是为什么等看到明显体征才防护已经太晚了。",
+   "hard": true
+  },
+  {
+   "en": "Assuming N95 is the safe default for everything: an N95 is for airborne disease (TB, measles, varicella) and aerosol-generating procedures — reaching for it on every call wastes the equipment and does nothing for droplet or contact risks, which call for a surgical mask, gloves, and gown instead.",
+   "zh": "以为 N95 是万能默认选项：N95 是给空气传播疾病（结核、麻疹、水痘）和气溶胶生成操作用的——每趟任务都戴 N95 只会浪费装备，对飞沫或接触风险毫无额外帮助，那些情况需要的是外科口罩、手套和隔离衣。"
+  },
+  {
+   "en": "Believing 'low transmission risk' means 'no need for PPE': HIV's per-exposure risk through non-intact skin is only 0.09%, but that number describes what happens across thousands of exposures where PPE was NOT used to begin with — it is an argument for consistent protection, not against it.",
+   "zh": "以为「传播风险低」就等于「不需要防护」：HIV 经破损皮肤单次暴露的风险只有 0.09%，但这个数字描述的是成千上万次「本来就没做防护」的暴露情况——它是支持持续防护的理由，而不是反对防护的理由。",
+   "hard": true
+  },
+  {
+   "en": "Thinking a patient must look sick to be infectious: hepatitis B and C carriers, and the 70% to 80% of West Nile virus infections that stay asymptomatic, remain capable of transmitting while producing no symptoms at all — 'looks healthy' is not a screening test.",
+   "zh": "以为患者看起来健康就不会传染：乙肝、丙肝携带者，以及 70%-80% 的西尼罗病毒感染者完全没有症状，却仍能传播——「看起来健康」从来不是一种筛查手段。"
+  },
+  {
+   "en": "Treating rabies risk as something that requires a visible bite: nonbite exposures (mucous membrane contamination, corneal or organ transplant) are documented, even though they are rare — and a bat found in a room with a sleeping or impaired person is treated as a possible exposure even without a visible bite mark.",
+   "zh": "认为狂犬病风险只来自咬伤：非咬伤暴露（黏膜污染、角膜或器官移植）虽罕见但确有记录——一只蝙蝠出现在熟睡者或意识受损者所在的房间里，即使没有明显咬痕，也要按可能暴露处理。"
+  },
+  {
+   "en": "Assuming vehicle disinfection is either 'nothing special' or 'full decontamination' with no middle ground: the real logic is a three-tier equipment classification plus specific triggers for full compartment disinfection — most calls need only routine cleaning of frequently touched surfaces, not a blanket protocol in either direction.",
+   "zh": "以为车辆消毒只有「不用特殊处理」和「全面停用彻底消毒」两个极端，没有中间地带：真正的逻辑是三级器材分类，加上明确触发全车消毒的特定条件——大多数任务只需要对高频接触表面做常规清洁，两个极端都不是常态。",
+   "hard": true
+  },
+  {
+   "en": "Confusing 'declining a vaccine is my right' with 'there are no consequences': you may have the right to decline, but a service can still pull you from duty during an outbreak specifically because your non-immunized status endangers others — the right to decline and the right to keep working are not the same right.",
+   "zh": "把「我有权拒绝接种」和「不会有后果」混为一谈：你或许有权拒绝，但机构仍可能在疫情期间因为你未接种的状态危及他人而暂停你的执勤——「拒绝接种的权利」和「继续上岗的权利」不是同一件事。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "TMV — the only three that float",
+   "en": "Only three diseases spread person-to-person by the airborne route: Tuberculosis, Measles, chickenpox (Varicella). Everything else that spreads through the air over short range is droplet, not airborne.",
+   "zh": "人传人经空气传播的疾病只有三种——结核（T）、麻疹（M）、水痘（V），记成「TMV，能飘的只有这三个」。其余经短距离空气扩散的都是飞沫传播，不是空气传播。"
+  },
+  {
+   "name": "Doff dirtiest first: G-G-E-M",
+   "en": "PPE removal order follows contamination, not the reverse of donning: Gloves, Gown, Eyewear, Mask/respirator — dirtiest to cleanest, mask always comes off last because its front is never touched by a contaminated hand.",
+   "zh": "脱卸个人防护装备的顺序按污染程度走，而不是简单倒着穿的顺序：手套（G）→隔离衣（G）→护目装备（E）→口罩/呼吸器（M）——从最脏到最干净，口罩永远最后脱，因为它的正面绝不能被污染的手碰到。"
+  },
+  {
+   "name": "The 72-hour tick rule",
+   "en": "Tick found and removed within 72 hours of attachment: no antibiotic prophylaxis needed. Past 72 hours in an endemic area: prophylaxis is warranted. The clock starts at attachment, not at discovery.",
+   "zh": "蜱虫附着后 72 小时内被发现并移除：不需要预防性抗生素。超过 72 小时且在流行区：需要预防用药。计时从附着开始算，不是从发现开始算。"
+  },
+  {
+   "name": "Three lines of defence",
+   "en": "Three layers of protection, in order: (1) your body's own barriers — skin and mucous membranes; (2) PPE; (3) postexposure medical follow-up. If layer 1 or 2 fails, layer 3 is what saves you — and it only works if you actually use it promptly.",
+   "zh": "三道防线，按顺序：（1）身体自身的屏障——皮肤和黏膜；（2）个人防护装备；（3）职业暴露后医学随访。前两道防线一旦失守，第三道防线就是救你的关键——但前提是你真的及时用了它。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A patient presents with fever, night sweats, and a chronic productive cough of 3 weeks' duration. What PPE do you and the patient need, and why?",
+   "qZh": "患者发热、盗汗，慢性咳痰已持续 3 周。你和患者各自需要什么防护装备，为什么？",
+   "aEn": "This presentation is consistent with suspected active TB. Place a surgical mask on the patient to contain secretions, and don a fit-tested N95 respirator yourself, since TB is one of only three diseases transmitted by the airborne route (with measles and varicella), and airborne precautions are the strictest PPE tier.",
+   "aZh": "该表现符合疑似活动性结核。应给患者戴外科口罩以控制分泌物，自己则要戴经过密合度测试的 N95 呼吸器，因为结核是仅有的三种经空气传播的疾病之一（另两种是麻疹和水痘），空气预防是防护级别最高的一层。"
+  },
+  {
+   "qEn": "You sustain a needlestick injury from a used IV catheter. Walk through your first three actions in order, and explain why the order matters.",
+   "qZh": "你被一支用过的静脉留置针刺伤。按顺序说出你的前三步行动，并解释为什么顺序很重要。",
+   "aEn": "First, wash the site immediately and copiously with soap and running water — first aid is time-critical and costs nothing operationally to do right away. Second, report the exposure to your supervisor the same day. Third, seek medical assessment as soon as possible — ideally within 1 to 2 hours if HIV is a possible source, since postexposure prophylaxis effectiveness drops off steeply with delay, well before the textbook's outer 24-48 hour counselling window.",
+   "aZh": "第一，立即用肥皂和流动水大量冲洗伤口（急救有时效性，且立刻做不会耽误任何运行环节）。第二，当天向主管上报暴露。第三，尽快就医评估——如果源患者可能是 HIV 阳性，最好在 1 到 2 小时内完成，因为暴露后预防用药的效果会随延迟迅速下降，远早于教材给出的 24-48 小时咨询启动上限。"
+  },
+  {
+   "qEn": "What determines whether a patient compartment needs full disinfection versus routine cleaning, and how does the choice of disinfectant differ by equipment category?",
+   "qZh": "什么情况决定患者舱需要彻底消毒而不是常规清洁？不同器材类别选用的消毒剂又有何不同？",
+   "aEn": "Full disinfection is triggered by specific findings such as visible blood/body fluid contamination or a suspected febrile respiratory illness or meningitis — not by call duration or patient history. Equipment itself follows a three-tier system: critical equipment touching mucous membranes needs single-use or high-level sterilization; semicritical equipment touching intact skin needs an HBV-labelled solution such as 1:100 bleach; noncritical surfaces need only hospital-grade cleaner — and disinfectant only works after visible soil has actually been cleaned off first.",
+   "aZh": "彻底消毒由特定发现触发，比如肉眼可见的血液/体液污染，或疑似发热性呼吸道疾病、脑膜炎——而不是由任务时长或患者病史决定。器材本身遵循三级体系：接触黏膜的关键器材需要单次使用或高水平灭菌；接触完整皮肤的半关键器材需要标注可杀灭乙肝病毒的清洁液，如 1:100 漂白水；非关键表面只需医院级清洁剂——而且消毒剂只有在先清除肉眼可见污物之后才有效。"
+  },
+  {
+   "qEn": "A coworker says mumps and chickenpox are basically the same risk for an unvaccinated paramedic. Is that true? What differs about postexposure management for each?",
+   "qZh": "一位同事说，对未接种疫苗的救护员而言，腮腺炎和水痘的风险基本一样。这个说法对吗？两者的暴露后处置有何不同？",
+   "aEn": "No — the risks differ by sex and by what postexposure care offers. Mumps past puberty carries a specific risk of painful testicular inflammation in up to 25% of male patients, and postexposure vaccination is NOT recommended for mumps (a work restriction applies instead). Chickenpox postexposure care DOES include vaccination if you are not immune, plus varicella zoster immune globulin if you are pregnant or immunocompromised and not immune — so an unvaccinated male paramedic and an unvaccinated pregnant paramedic face genuinely different management pathways.",
+   "aZh": "不对——风险因性别而异，暴露后处置提供的方案也不同。腮腺炎在青春期后有特定风险，男性患者高达 25% 会出现痛苦的睾丸炎，且腮腺炎暴露后不建议接种疫苗补救（改为执行工作限制）。水痘的暴露后处置则确实包括疫苗接种（若无免疫力），孕期或免疫抑制且无免疫力时还要给水痘带状疱疹免疫球蛋白——所以未接种的男性救护员和未接种的孕期救护员，面对的实际上是两条完全不同的处置路径。"
+  },
+  {
+   "qEn": "Why does the same disease (influenza) sometimes call for an N95 and sometimes just a surgical mask in this chapter's guidance?",
+   "qZh": "为什么同一种疾病（流感）在本章的指引里有时要戴 N95，有时只需外科口罩？",
+   "aEn": "It's driven by the specific trigger present, not by the disease name alone: a submicron respirator is called for with a febrile patient of unknown source, an actively coughing patient, likely blood/body fluid splash, or an aerosol-generating procedure such as intubation or suctioning. A stable influenza patient without those factors can be managed with a surgical mask on the patient and standard droplet precautions for the provider, since influenza itself is droplet-transmitted, not airborne.",
+   "aZh": "决定因素是具体触发条件，而不是疾病名字本身：发热病因不明的患者、正在咳嗽的患者、可能发生血液/体液喷溅，或插管、吸引等气溶胶生成操作，都要用亚微米级呼吸器；而一名没有这些触发因素的稳定流感患者，给患者戴外科口罩、医护人员采取标准飞沫预防就足够了，因为流感本身是飞沫传播，不是空气传播。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Mandatory reportable disease list and reporting authority",
+   "topicZh": "法定报告疾病清单与上报权责机关",
+   "bookEn": "The textbook's mandatory reportable disease table is explicitly sourced from Ontario Regulation 559/91 under Ontario's Health Protection and Promotion Act, and describes reports going to a Medical Officer of Health. That Ontario regulation was itself revoked on 1 May 2018 (O. Reg. 135/18), so the table is both out-of-province and out-of-date.",
+   "bookZh": "教材列出的法定报告疾病清单明确取自安大略省《健康保护与促进法》下的 O. Reg. 559/91，并描述上报对象为「首席医疗官」（Medical Officer of Health）。而且这条安大略法规本身已于 2018 年 5 月 1 日废止（由 O. Reg. 135/18 取代）——所以那张表既是外省的、又是过期的。",
+   "bcEn": "In British Columbia the governing framework is different: the Public Health Act (SBC 2008, c 28) and its Reporting Information Affecting Public Health Regulation (BC Reg 167/2018) define BC's own reportable/notifiable communicable disease schedule, and health professionals report to a Medical Health Officer (BC's title for the role), not Ontario's Medical Officer of Health. The specific disease list, thresholds, and timelines in BC can differ from Ontario's — always confirm reporting requirements against BC's own regulation and your local health authority, not the textbook's Ontario table.",
+   "bcZh": "在 BC，适用的框架不同：《公共卫生法》（Public Health Act, SBC 2008, c 28）及其下属的《公共卫生相关信息报告规例》（Reporting Information Affecting Public Health Regulation, BC Reg 167/2018）规定了 BC 自己的法定/须通报传染病清单，医护人员上报对象是「医疗健康官」（Medical Health Officer，BC 对这一职位的称呼），而不是安大略的「首席医疗官」。BC 的具体疾病清单、上报门槛和时限可能与安大略不同——务必以 BC 自己的法规和所在卫生局的要求为准，而不是教材里安大略的那张表。",
+   "ref": "BC Public Health Act, SBC 2008, c 28; Reporting Information Affecting Public Health Regulation, BC Reg 167/2018（已上网核实：BC Reg 167/2018 于 2019-01-01 生效；O. Reg. 559/91 于 2018-05-01 废止。通行法律知识，非 BC Exam Guidelines PDF 内容）"
+  },
+  {
+   "topicEn": "Postexposure counselling's '24-48 hour' window vs how urgent PEP actually is",
+   "topicZh": "暴露后咨询「24-48 小时」窗口 vs 暴露后预防用药的真实紧迫性",
+   "bookEn": "The textbook states that postexposure medical counselling and treatment should begin within 24 to 48 hours, unless the source patient's testing indicates a need for faster follow-up — framing 24-48 hours as the operative target.",
+   "bookZh": "教材写道：暴露后医学咨询与治疗应在 24 到 48 小时内启动，除非源患者的检测结果提示需要更快处置——把 24-48 小时表述成实际的操作目标。",
+   "bcEn": "Treat 24-48 hours as an outer administrative ceiling, not a target to aim for. For a high-risk bloodborne exposure where HIV post-exposure prophylaxis may be indicated, the drug is most effective when started within hours and its benefit falls off steeply after that — the standard already reflected in this program's verified operations-safety question bank is to seek assessment as soon as possible, ideally within 1 to 2 hours. Do not let the textbook's 24-48 hour phrasing read as permission to delay: wash immediately, report the same shift, and go for assessment right away rather than waiting toward the outer window.",
+   "bcZh": "把 24-48 小时当作行政上的外部上限，而不是应该瞄准的目标。对于可能需要 HIV 暴露后预防用药的高风险血源性暴露，该药物在数小时内启动效果最好，之后获益迅速下降——本项目已验收的运营与职业安全题库中体现的标准是「尽快就医评估，最好在 1 到 2 小时内」。不要把教材「24-48 小时」的措辞理解成可以拖延的许可：应立即冲洗、当班内上报，并马上去做评估，而不是拖到临近这个外部时限。",
+   "ref": "对照 data/written/parts/operations-safety.json ops-021（已验收）"
+  }
+ ],
+ "sourcePages": "3315-3399"
+}

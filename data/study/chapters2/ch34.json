@@ -1,0 +1,702 @@
+{
+ "id": "ch34",
+ "n": 34,
+ "titleEn": "Gastrointestinal Emergencies",
+ "titleZh": "消化系统急症",
+ "group": "medical",
+ "examWeight": 2,
+ "whyEn": "Gastrointestinal Emergencies carries a modest weight-2 label, but its real exam value is the risk-thinking habit it forces: 'common' complaints like pain, vomiting, and diarrhea sit on top of causes ranging from trivial to a ruptured aorta, and the chapter's job is teaching you to separate 'uncomfortable' from 'unstable, or heading there.' The two skills graded hardest are pattern recognition - reading pain location/radiation and stool/vomit appearance to localize a bleed or disease before any lab exists to confirm it - and vigilance for the four nontraumatic abdominal life threats (AMI, ruptured AAA, ruptured ectopic pregnancy, ruptured hollow viscus) hiding inside an ordinary-sounding 'stomach pain' dispatch. It is also the direct clinical home of BC's Nausea-Vomiting PCP protocol and intersects hard with the Hypovolemia and TXA protocols whenever GI bleeding causes shock - so its numbers (fluid caps, antiemetic doses, TXA exclusions) are graded reflexes, not background reading.",
+ "whyZh": "消化系统急症在教材里只挂着权重2的标签，但它真正的考试价值是逼你养成一种风险思维习惯：腹痛、呕吐、腹泻这些“常见”主诉背后，病因谱能从无关痛痒一路铺到主动脉破裂，这一章的任务就是教你把“难受”和“不稳定、或正在滑向不稳定”区分开来。这章判分最重的两项技能：一是模式识别——在还没有任何化验结果之前，光凭疼痛的定位和放射方向、呕吐物和大便的外观，就要大致判断出血或疾病的位置；二是对四个非创伤性腹痛致命病因（心梗、腹主动脉瘤破裂、异位妊娠破裂、空腔脏器破裂）保持警觉，它们经常就藏在一通听起来很普通的“肚子疼”派车单背后。这章也是BC恶心呕吐protocol的直接临床基础，一旦消化道出血引发休克，还会和低血容量protocol、TXA用药规程正面对接——这里的数字（补液上限、止吐药剂量、TXA排除标准）是要考的动作反射，不是背景知识。",
+ "competencies": {
+  "areas": [
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics"
+  ],
+  "codes": [
+   "3.3.a",
+   "3.3.f",
+   "3.3.g",
+   "3.3.h",
+   "4.2.a",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.2.e",
+   "4.2.f",
+   "4.3.a",
+   "4.3.b",
+   "4.3.g",
+   "4.4.a",
+   "4.4.b",
+   "4.4.d",
+   "4.4.e",
+   "4.4.i",
+   "4.5.a",
+   "5.2.a",
+   "5.5.b",
+   "5.5.c",
+   "5.5.d",
+   "5.8.a",
+   "5.8.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: Common Complaints, Uncommon Stakes",
+   "titleZh": "概述：常见主诉里藏着的高风险问题",
+   "points": [
+    {
+     "en": "GI complaints are common but never automatically benign - even the vestigial, functionless appendix can turn lethal once it is obstructed and infected. The paramedic's real job is to think past 'stomachache' toward which underlying process (bleeding, obstruction, infection, perforation) is actually producing the complaint.",
+     "zh": "消化系统主诉很常见，但绝不能因此默认它是良性的——就连那个没什么功能的阑尾，一旦堵塞感染也能要命。急救员真正要做的，是别停在“肚子疼”这三个字上，要往深处想：疼痛背后到底是出血、梗阻、感染，还是穿孔在作祟。",
+     "hard": false
+    },
+    {
+     "en": "Scale in Canada: all GI disorders combined affect an estimated 6 to 7 million people; among individual conditions, GERD alone touches 10% to 20% of the population, and infectious diarrhea causes roughly 19.5 million episodes every year nationwide.",
+     "zh": "加拿大规模：所有消化系统疾病合计影响约600到700万人；单个疾病里，胃食管反流病（GERD）就占人口的10%到20%，全国每年感染性腹泻发作次数估计约1950万次。",
+     "hard": true
+    },
+    {
+     "en": "Individually 'less common' does not mean rare in absolute terms: peptic ulcer disease affects about 1.5 million Canadians, and acute cholecystitis occurs at roughly 88 per 100,000 - both frequent enough that dismissing a GI call as routine is a costly, common error.",
+     "zh": "单个病种“不算最常见”不代表绝对数字小：消化性溃疡影响约150万加拿大人，急性胆囊炎发生率约每10万人88例——两者都常见到让你把GI出诊当成走过场，是一个代价不小的常见失误。",
+     "hard": true
+    },
+    {
+     "en": "Behavioural risk factors worth asking about: smoking raises gastric acid secretion (stomach/esophageal disease); alcohol breaks down the gastric mucosal barrier (peptic ulcer risk, plus stomach/esophageal/liver disease); ASA/NSAIDs/anticoagulants irritate the GI lining; a low-fibre diet predisposes to colon disease and constipation.",
+     "zh": "问诊时该问的行为风险因素：吸烟会增加胃酸分泌（伤食管/胃）；酒精会破坏胃黏膜屏障（提高消化性溃疡风险，也伤食管/胃/肝）；阿司匹林、NSAIDs、抗凝药会刺激消化道黏膜；低纤维饮食容易引发结肠疾病和便秘。",
+     "hard": true
+    },
+    {
+     "en": "Common misconception worth correcting: spicy food is not an established risk factor for stomach or esophageal disease. It can cause transient irritation-type discomfort, but it does not cause the underlying pathology the way smoking, alcohol, or NSAID use do.",
+     "zh": "该纠正的一个常见误解：辛辣食物并不是公认能致病的风险因素。它可能引起一时的刺激性不适，但不像吸烟、酒精或NSAIDs那样真正导致底层病变。",
+     "hard": false
+    },
+    {
+     "en": "Set up your suspicion framework early in the history: age, prior illness or surgery, family history, current medications, and substance use all reshape both the risk profile and how the disease will actually present - the same 'abdominal pain' chief complaint deserves a different index of suspicion in a 25-year-old versus an 80-year-old.",
+     "zh": "问病史时要早早搭好怀疑框架：年龄、既往病史或手术史、家族史、目前用药、物质使用，都会同时改变风险轮廓和疾病的实际表现方式——同样一句“腹痛”，25岁患者和80岁患者该给的怀疑等级完全不同。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy and Physiology: Key Turns in the Food's Journey",
+   "titleZh": "解剖生理：食物旅程里的几个关键转折点",
+   "points": [
+    {
+     "en": "Aspiration/ventilation mechanics: the collapsed proximal esophagus normally blocks air from entering the stomach, but bag-mask ventilation delivered at too high a pressure sends air down the path of least resistance - into the large, low-resistance esophagus/stomach rather than the narrower airway - causing gastric distention that can impede lung expansion and trigger regurgitation.",
+     "zh": "误吸/通气力学机制：近端食管平时是塌陷闭合的，能挡住空气进胃，但如果球囊面罩通气压力打得太高，空气会走阻力最小的路径——钻进容量大、阻力低的食管和胃，而不是更窄的气道——造成胃扩张，进而妨碍肺扩张、诱发反流。",
+     "hard": true
+    },
+    {
+     "en": "Esophageal varices mechanism: the veins around the esophagus drain into the portal vein, and because this venous network has no valves, anything that slows liver blood flow (classically cirrhosis) backs pressure up the whole system - even a small additional pressure rise can then rupture these already-dilated vessels.",
+     "zh": "食管静脉曲张的机制：食管周围的静脉最终汇入门静脉，这套静脉网没有瓣膜，所以只要肝脏血流变慢（典型如肝硬化），压力就会一路倒灌回整个系统——曲张的血管本就脆弱，压力再稍微一涨就可能破裂。",
+     "hard": true
+    },
+    {
+     "en": "The stomach absorbs water and fat-soluble substances (eg, alcohol) directly; the longer alcohol lingers in the stomach - as when a fatty meal delays gastric emptying - the slower its absorption, whereas the duodenum absorbs alcohol quickly, which is why a fatty meal 'slows down' a drink's effect.",
+     "zh": "胃能直接吸收水和脂溶性物质（比如酒精）；酒精在胃里停留越久（比如吃了高脂食物延缓胃排空），吸收就越慢；而十二指肠吸收酒精很快——这就是为什么吃油腻食物能“压一压”酒劲。",
+     "hard": false
+    },
+    {
+     "en": "The duodenum is the digestive crossroads: pancreas, liver, and gallbladder all empty into it - pancreatic enzymes plus bicarbonate (neutralizing stomach acid) arrive alongside liver-made, gallbladder-stored bile (which emulsifies fat) right at this one junction.",
+     "zh": "十二指肠是消化系统的十字路口：胰腺、肝脏、胆囊都在这里汇入——胰酶和碳酸氢盐（中和胃酸）与肝脏制造、胆囊储存的胆汁（乳化脂肪）在同一个节点同时抵达。",
+     "hard": true
+    },
+    {
+     "en": "The small intestine is the absorptive workhorse of the entire system: about 7 metres long, split into duodenum/jejunum/ileum, and responsible for roughly 90% of all nutrient absorption.",
+     "zh": "小肠是整个系统里吸收的主力：全长约7米，分十二指肠、空肠、回肠三段，承担了全身约90%的营养吸收工作。",
+     "hard": true
+    },
+    {
+     "en": "The large intestine (colon) runs about 2 metres; chyme becomes feces once it crosses the ileocecal valve into the cecum (right lower quadrant), then travels ascending, transverse, descending, sigmoid, rectum, anus - its main jobs are finishing water reabsorption and hosting the bacterial digestion that produces gas.",
+     "zh": "大肠（结肠）全长约2米；食糜一过回盲瓣进入盲肠（右下腹），就正式变成粪便，接着依次走升结肠、横结肠、降结肠、乙状结肠、直肠、肛门——它的主要工作是完成水分的最后吸收，以及靠细菌发酵产气来消化剩余物质。",
+     "hard": true
+    },
+    {
+     "en": "Whole-gut transit time runs 8 to 72 hours, which is exactly why a 'normal' bowel habit can range anywhere from three movements a day to just one every three days - that wide range is not, by itself, pathological.",
+     "zh": "整个消化道的通过时间是8到72小时，这也是为什么“正常”排便频率的范围可以很宽——从一天三次到三天一次都算正常，光凭频率本身判断不出问题。",
+     "hard": true
+    },
+    {
+     "en": "The liver's non-digestive load explains why liver failure is a whole-body emergency, not just a GI problem: it converts glycogen to glucose when blood sugar drops (and fat/protein to sugar in prolonged deficit), detoxifies medications, breaks down dead blood cells, and stores vitamins.",
+     "zh": "肝脏的工作远不止消化，这也是为什么肝衰竭是全身性急症，而不只是消化系统的事：血糖降低时它把糖原转化为葡萄糖（长期不足时连脂肪蛋白质都拿来转糖），还要负责药物解毒、分解衰老血细胞、储存维生素。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Abdominal Pain: Localization and Radiation Patterns",
+   "titleZh": "腹痛定位与放射痛规律",
+   "points": [
+    {
+     "en": "Visceral pain (from the poorly-innervated GI organs themselves) starts vague and poorly localized and may wax/wane with organ contractions; once disease irritates the richly-innervated parietal peritoneum, pain sharpens into well-localized somatic pain. Appendicitis is the textbook example of this shift: vague periumbilical visceral pain migrating to sharp right-lower-quadrant somatic pain.",
+     "zh": "内脏痛（来自神经支配稀疏的消化道器官本身）一开始模糊、定位不清，还可能随器官收缩时强时弱；一旦病变刺激到神经支配密集的壁腹膜，疼痛就会变得清晰、定位精准，变成躯体痛。阑尾炎是这种转变的教科书案例：从模糊的脐周内脏痛，转移到锐利的右下腹躯体痛。",
+     "hard": true
+    },
+    {
+     "en": "Referred pain travels along shared autonomic innervation to distant sites: biliary pain often radiates around to the right back and scapular angle; pancreatic pain drives straight through from the epigastrium to the midline back; blood or pus under the diaphragm can present as top-of-shoulder pain; a leaking or ruptured aortic aneurysm causes lumbosacral back pain that may radiate to the upper thighs; renal colic radiates from either flank to the groin and external genitalia; uterine and rectal pain present in the suprapubic region, the low back, or both.",
+     "zh": "牵涉痛沿着共享的自主神经支配跑到远处：胆道痛常绕到右侧背部和肩胛角；胰腺痛从上腹部直穿到背部正中线；膈下有血或脓可能表现为肩顶部疼痛；腹主动脉瘤渗漏或破裂会引起腰骶部背痛，还可能放射到大腿上段；肾绞痛从任一侧腰肋部放射到腹股沟和外生殖器；子宫和直肠的疼痛出现在耻骨上区、下背部，或两者都有。",
+     "hard": true
+    },
+    {
+     "en": "Four causes of acute nontraumatic abdominal pain that are immediate life threats and belong on a mental checklist every single call: acute myocardial infarction, ruptured abdominal aortic aneurysm, ruptured ectopic pregnancy, and a ruptured hollow viscus.",
+     "zh": "四个急性非创伤性腹痛的即刻致命病因，每次出诊都要在脑子里过一遍：急性心肌梗死、腹主动脉瘤破裂、异位妊娠破裂、空腔脏器破裂。",
+     "hard": true
+    },
+    {
+     "en": "The trap runs the other direction too: atypical cardiac pain can radiate into, or even originate in, the abdomen. Patients may describe it as aching, sharp, 'gassy,' or indigestion-like rather than classic chest pressure - do not let an abdominal-sounding description rule out the heart.",
+     "zh": "陷阱也会反过来出现：不典型的心源性疼痛可以放射到腹部，甚至就直接从腹部开始。患者可能形容成隐隐作痛、刺痛、“胀气感”或消化不良样，而不是典型的胸部压迫感——听起来像肠胃问题，不代表就能排除心脏。",
+     "hard": false
+    },
+    {
+     "en": "Perforation physiology: when an obstructed or ulcerated organ ruptures, its contents spill into the peritoneal cavity and irritate peritoneal nerves, producing generalized abdominal pain plus reflexive abdominal-wall guarding (peritonitis). If the spilled contents carry bacteria, fever and even septic shock can follow, as happens with a ruptured appendix.",
+     "zh": "穿孔的病理生理：一旦梗阻或溃疡的器官破裂，内容物漏进腹膜腔刺激腹膜神经，产生弥漫性腹痛加反射性腹壁肌卫（腹膜炎）。如果漏出物带有细菌，还会引发发热甚至脓毒性休克，阑尾破裂就是典型例子。",
+     "hard": false
+    },
+    {
+     "en": "Positioning is diagnostic, not incidental: patients with peritoneal irritation curl into a fetal position and stay still, because hip flexion relaxes the psoas muscle and any movement (even deep breathing) intensifies the pain. Colicky pain (renal, biliary, bowel), by contrast, tends to make patients restless, pacing, or writhing.",
+     "zh": "体位本身就是诊断线索，不是巧合：腹膜受刺激的患者会蜷成胎儿姿势一动不动，因为屈髋能放松腰大肌，任何移动（哪怕深呼吸）都会加重疼痛。相反，绞痛性质的疼痛（肾、胆道、肠道）反而会让患者坐立不安、来回踱步或翻滚呻吟。",
+     "hard": false
+    },
+    {
+     "en": "Non-GI organs can masquerade as GI pain - always weigh whether the pain could originate from the aorta, urinary tract, or reproductive system rather than assuming a digestive cause by default.",
+     "zh": "消化道以外的器官也能装成消化系统疼痛——永远要考虑疼痛是否来自主动脉、泌尿系统或生殖系统，不要默认它一定是消化道问题。",
+     "hard": false
+    },
+    {
+     "en": "A pain-timing detail worth memorizing specifically for peptic ulcer disease: the classic pattern burns or gnaws, eases right after eating, then returns 2 to 3 hours later - a rhythm distinct from most other GI pain patterns and a useful field clue even without imaging.",
+     "zh": "一个专门针对消化性溃疡的疼痛时序细节要记牢：典型模式是灼烧或啃咬样疼痛，进食后立刻缓解，2到3小时后又卷土重来——这个节律和大多数其他消化道疼痛不一样，就算没有影像检查也是有用的现场线索。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Identifying GI Bleeding, Fluid Loss, and Altered Bowel Habit",
+   "titleZh": "消化道出血识别、体液流失与排便习惯改变",
+   "points": [
+    {
+     "en": "Four ways blood announces itself from the GI tract, and what each implies: hematemesis with gross red blood = active upper-GI bleeding not yet exposed to stomach acid; coffee-ground emesis = upper-GI blood already transformed by acid; melena (black, tarry, sticky, blood indistinguishable from the stool itself) = upper-GI blood transformed by transit through the gut; hematochezia (blood and stool distinguishable from each other) = lower-GI bleeding, or occasionally a very brisk upper bleed.",
+     "zh": "血液从消化道现身的四种方式，各自提示什么：呕出鲜红血（呕血）＝活动性上消化道出血，还没被胃酸转化；咖啡渣样呕吐物＝上消化道出血已被胃酸转化；黑便（melena，黑色、柏油样、黏稠、血和便已经分不清）＝上消化道出血经肠道转化而来；便血（hematochezia，血和便能互相区分）＝下消化道出血，偶尔也可能是极凶猛的上消化道出血。",
+     "hard": true
+    },
+    {
+     "en": "Occult blood loss is bleeding invisible to both patient and provider, detectable only by fecal testing in hospital - a reminder that a clean-looking stool never rules out ongoing GI blood loss.",
+     "zh": "隐匿性失血是患者和急救员都看不出来的出血，只能靠医院的粪便检测才能查出——提醒自己：大便看起来干净，不代表消化道没有在持续出血。",
+     "hard": false
+    },
+    {
+     "en": "GI bleeding cannot be stopped with direct pressure the way external hemorrhage can, which is exactly why it can be fatal despite looking like 'just diarrhea with blood' on scene - assessment should focus on shock signs, not on trying to visually judge the source or severity.",
+     "zh": "消化道出血没办法像体表出血那样靠直接加压止住，这正是它明明现场看起来只是“带血的拉肚子”却能致命的原因——评估重点应放在休克征象上，而不是靠肉眼判断出血源或严重程度。",
+     "hard": false
+    },
+    {
+     "en": "Dehydration progression: initially normal vital signs plus thirst; as fluid loss continues the body shifts water from interstitial into vascular space to compensate, producing tachycardia; hypotension is a LATE sign meaning the body can no longer mobilize compensatory fluid - by the time BP drops, dehydration is already severe.",
+     "zh": "脱水的进展顺序：一开始生命体征正常，只有口渴；随着体液持续流失，身体把水分从组织间隙调往血管内代偿，出现心动过速；低血压是晚期信号，说明身体已经调不出更多液体来代偿了——等到血压掉下来，脱水已经很严重了。",
+     "hard": true
+    },
+    {
+     "en": "Electrolyte shifts driven by diarrhea/vomiting to watch for: hypokalemia causes muscle weakness, cramps, paralysis, dysrhythmias, and flattened T waves (possible U waves); hyperkalemia causes muscle weakness/cramps, dysrhythmias, and tall T waves; hyponatremia causes cell swelling (weakness, cramps, coma, convulsions); hypernatremia causes cell shrinkage (coma, convulsions).",
+     "zh": "腹泻呕吐引起的电解质紊乱要留意：低钾血症表现为肌无力、痉挛、麻痹、心律失常、T波低平（可能出现U波）；高钾血症表现为肌无力/痉挛、心律失常、T波高尖；低钠血症导致细胞肿胀（无力、痉挛、昏迷、抽搐）；高钠血症导致细胞皱缩（昏迷、抽搐）。",
+     "hard": true
+    },
+    {
+     "en": "Compensated versus decompensated shock from GI hemorrhage/dehydration follows the same catecholamine-driven sequence as trauma shock: tachycardia plus pale/cool/clammy skin plus a narrowing pulse pressure first (compensated), then falling blood pressure plus altered mental status plus decreased urine output once compensation fails (decompensated).",
+     "zh": "消化道出血或脱水引起的休克，代偿期和失代偿期走的是和创伤性休克一样的儿茶酚胺驱动路径：先是心动过速、皮肤苍白湿冷、脉压差变窄（代偿期），代偿机制失效后才出现血压下降、意识改变、尿量减少（失代偿期）。",
+     "hard": false
+    },
+    {
+     "en": "Altered bowel habit as a diagnostic axis: increased frequency usually means infection (Canada sees an estimated 11 to 13 million foodborne illness cases yearly, with up to 3% of cases developing chronic complications such as arthritis or kidney failure); decreased frequency points to constipation (opioids, immobility, low fibre) or true bowel obstruction.",
+     "zh": "排便习惯改变是一个诊断维度：频率增加通常是感染（加拿大每年估计有1100万到1300万例食源性疾病，其中最多3%会发展成慢性并发症，如关节炎或肾衰竭）；频率减少则指向便秘（阿片类药物、制动、低纤维饮食）或真正的肠梗阻。",
+     "hard": true
+    },
+    {
+     "en": "Bowel obstruction versus simple constipation, the quick field differentiator: obstruction brings crampy, poorly-localized pain, absence of BOTH stool and flatus, and often vomiting; constipation is uncomfortable but rarely causes vomiting, and patients can usually still pass flatus.",
+     "zh": "肠梗阻和单纯便秘的快速现场鉴别点：肠梗阻表现为绞痛、定位不清、大便和排气都停止，还常伴呕吐；单纯便秘虽然不舒服，但很少引起呕吐，患者通常仍能排气——这一点排气与否是最快的现场区分点。",
+     "hard": true
+    },
+    {
+     "en": "Feculent (stool-smelling) breath and vomitus is specifically a late-obstruction sign, worth naming explicitly when handing off a suspected bowel obstruction case.",
+     "zh": "呼气和呕吐物带粪臭味是肠梗阻晚期的特异表现，怀疑肠梗阻时交班要专门点出这一条。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Condition Quick-Reference I: Bleeding and Inflammatory Disease",
+   "titleZh": "特定疾病速查一：出血性与炎症性疾病",
+   "points": [
+    {
+     "en": "Esophageal varices: caused by portal hypertension, most often from alcohol-driven cirrhosis (industrialized countries) or viral hepatitis (developing countries). Once they bleed, the presentation is dramatic - sudden throat discomfort, copious bright-red hematemesis, hypotension, and shock; a less severe bleed shows hematemesis plus melena instead.",
+     "zh": "食管静脉曲张：由门静脉高压引起，最常见的原因是酒精性肝硬化（工业化国家）或病毒性肝炎（发展中国家）。一旦破裂出血，表现非常剧烈——突发咽喉部不适、大量鲜红呕血、低血压、休克；程度较轻的出血则表现为呕血加黑便。",
+     "hard": true
+    },
+    {
+     "en": "Mallory-Weiss syndrome: a mucosal tear of the esophageal lining from severe or repeated vomiting (in women, sometimes tied to hyperemesis gravidarum). Severity ranges from minor to severe hypovolemic shock with epigastric pain, hematemesis, and melena; it usually resolves on its own.",
+     "zh": "马洛里-魏斯综合征：剧烈或反复呕吐撕裂了食管黏膜（女性有时和妊娠剧吐有关）。严重程度从轻微到重度低血容量休克不等，伴上腹痛、呕血、黑便；大多数会自行缓解。",
+     "hard": false
+    },
+    {
+     "en": "Boerhaave syndrome is the rare, dangerous escalation of Mallory-Weiss: a full-thickness esophageal rupture that spills gastric contents into the mediastinum, risking pneumothorax and overwhelming sepsis. Because it classically strikes men age 50-70 with chest pain, treat as a possible MI until proven otherwise and avoid giving ASA.",
+     "zh": "布尔哈夫综合征是马洛里-魏斯的罕见危险升级版：食管全层破裂，胃内容物漏进纵隔，有引发气胸和爆发性脓毒症的风险。由于典型患者是50到70岁伴胸痛的男性，处理时要先按心梗对待，直到排除为止，且不要给阿司匹林。",
+     "hard": true
+    },
+    {
+     "en": "Hemorrhoids: swollen rectal blood vessels, present in roughly half the population by age 50. Pregnancy, straining, and chronic constipation raise pressure while anal intercourse and diarrhea cause irritation; bleeding looks dramatic in toilet water (a few drops tints a whole bowl) but is usually minor and resolves in 2 to 3 days with conservative care.",
+     "zh": "痔疮：直肠周围血管肿胀，到50岁时人群中约一半的人都得过。妊娠、用力排便、慢性便秘会增加压力，肛交和腹泻则会引起刺激；出血在马桶水里看起来很吓人（几滴血就能染红一整盆水），但通常量很小，保守处理2到3天就能缓解。",
+     "hard": true
+    },
+    {
+     "en": "Peptic ulcer disease: driven mainly by H pylori infection and NSAID use (alcohol/smoking make it worse). Many patients who bleed from an ulcer had no prior ulcer history at all, so the absence of a known GI history does not lower your suspicion.",
+     "zh": "消化性溃疡：主要由幽门螺杆菌感染和NSAIDs使用引起（酒精和吸烟会加重）。很多因溃疡出血的患者此前根本没有溃疡病史，所以没有已知消化道病史并不能降低怀疑等级。",
+     "hard": false
+    },
+    {
+     "en": "Cholecystitis: gallstones obstruct the cystic duct. Fatty-meal-triggered RUQ pain radiating to the right shoulder is biliary colic; added fever and tachycardia signals true gallbladder wall inflammation. A positive Murphy sign is when the patient halts a deep inspiration as the examiner presses the RUQ under the costal margin and the inflamed gallbladder descends onto the fingers.",
+     "zh": "胆囊炎：胆结石堵住了胆囊管。高脂餐后诱发的右上腹痛并放射到右肩，是胆绞痛；再加上发热和心动过速，就提示真正的胆囊壁炎症。墨菲征阳性：检查者按压右上腹肋缘下方时，发炎的胆囊随膈肌下降顶到手指，患者因疼痛突然中止深吸气。",
+     "hard": true
+    },
+    {
+     "en": "Cholecystitis risk-profile mnemonic ('5 Fs'): fair (Caucasian), fat, female, fertile, forty-to-fifty. Women get it 2 to 3 times more often than men, and older adults are more susceptible than younger ones.",
+     "zh": "胆囊炎高危画像速记（“5个F”）：fair（白种人）、fat（肥胖）、female（女性）、fertile（生育年龄）、forty-to-fifty（四五十岁）。女性发病率是男性的2到3倍，老年人比年轻人更易感。",
+     "hard": true
+    },
+    {
+     "en": "Appendicitis: obstruction (usually by fecal material) raises intraluminal pressure, cutting blood/lymph flow and inviting infection. Classic pain migrates from vague periumbilical to sharp RLQ; rebound tenderness suggests perforation. Adolescents have the highest incidence, but older adults have the highest mortality from it, and it is frequently missed in the young, elderly, and pregnant because symptoms are atypical in those groups.",
+     "zh": "阑尾炎：多由粪便堵塞导致腔内压力升高，血液和淋巴回流受阻，招致感染。典型疼痛从模糊的脐周转移到锐利的右下腹；反跳痛提示可能已穿孔。青少年发病率最高，但老年人死亡率最高，而且年轻人、老年人和孕妇最容易被漏诊，因为这几类人群的症状往往不典型。",
+     "hard": true
+    },
+    {
+     "en": "Diverticular disease: low-fibre diets raise colonic pressure, pushing out pouches (diverticula) that trap feces and become infected (diverticulitis). Pain localizes to the LEFT lower quadrant, unlike appendicitis's right-sided pattern. Typical patient is over age 60; it can also cause painless lower GI bleeding, and fistulas (often to the bladder) can form as a complication.",
+     "zh": "憩室病：低纤维饮食升高结肠内压力，把肠壁挤出一个个囊袋（憩室），囊袋里困住粪便后感染发炎（憩室炎）。疼痛定位在左下腹，正好和阑尾炎的右侧模式相反。典型患者年龄超过60岁；它也可以引起无痛性下消化道出血，还可能并发瘘管（常通向膀胱）。",
+     "hard": true
+    },
+    {
+     "en": "Pancreatitis: autodigestion of the pancreas by its own blocked-in enzymes, usually from alcohol or gallstones. Pain is epigastric/RUQ, sharp, often radiating straight to the back, with possible hypocalcemia-driven muscle spasms. Severe internal bleeding produces Grey Turner sign (flank bruising) or Cullen sign (periumbilical bruising), both pointing to retroperitoneal/intraperitoneal hemorrhage.",
+     "zh": "胰腺炎：胰酶被堵在体内、开始自我消化胰腺，通常由酒精或胆结石引起。疼痛位于上腹部/右上腹，尖锐，常直接放射到背部，还可能因低血钙引起肢体肌肉痉挛。严重内出血时会出现Grey Turner征（腰肋部瘀斑）或Cullen征（脐周瘀斑），两者都提示腹膜后/腹腔内出血。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Condition Quick-Reference II: IBD and Infectious Disease",
+   "titleZh": "特定疾病速查二：炎症性肠病与感染性疾病",
+   "points": [
+    {
+     "en": "Ulcerative colitis versus Crohn disease, side by side: UC is continuous inflammation confined to the colon, thinning/weakening the rectal wall, peak onset in the second decade of life with a second peak later, more common in women and Caucasians. Crohn disease can affect the ENTIRE GI tract (most often the ileum) in patchy 'skip lesion' segments between normal tissue, peak onset in the third decade, equal in men and women, elevated in people of Jewish descent, and essentially absent in people of African descent.",
+     "zh": "溃疡性结肠炎与克罗恩病对照：溃疡性结肠炎是局限在结肠的连续性炎症，使直肠壁变薄变弱，第一个发病高峰在20多岁，之后有第二个高峰，女性和白种人更常见。克罗恩病可以累及整个消化道（最常见回肠），呈斑片状“跳跃性病变”、正常组织之间夹杂病变段，发病高峰在30多岁，男女发病率相当，犹太裔发病率偏高，非洲裔几乎不发病。",
+     "hard": true
+    },
+    {
+     "en": "Both IBD types share strong genetic clustering - a first-degree relative with either disease raises risk - and both cause bloody diarrhea/hematochezia, but Crohn's chronic bleeding is typically slow (anemia building over time), and acute severe hemorrhage is rare in Crohn's specifically.",
+     "zh": "两种炎症性肠病都有很强的家族聚集性——一级亲属患有其中任何一种都会提高患病风险——两者都会引起血性腹泻/便血，但克罗恩病的慢性出血通常很缓慢（长期积累成贫血），急性大出血在克罗恩病里比较少见。",
+     "hard": false
+    },
+    {
+     "en": "Acute gastroenteritis: E coli, Salmonella, Shigella, Giardia, norovirus, C difficile, and rotavirus are the named culprits, entering via contaminated food/water or fecal-oral contact. Norovirus dominates adult viral gastroenteritis, rotavirus dominates in children; illness typically runs 2 to 3 days but can persist for weeks; watch for hypokalemia on the monitor as fluid losses mount.",
+     "zh": "急性肠胃炎：常见病原体包括大肠杆菌、沙门氏菌、志贺氏菌、贾第虫、诺如病毒、艰难梭菌、轮状病毒，经污染食物/水或粪口途径传播。诺如病毒是成人病毒性肠胃炎的主因，轮状病毒是儿童的主因；病程通常2到3天，但也可能持续数周；随着体液流失加重要留意心电监护上出现的低钾表现。",
+     "hard": true
+    },
+    {
+     "en": "Travel risk: traveler's diarrhea affects 20% to 90% of people traveling to high-risk regions for up to two weeks, and about 10% of those affected go on to have persistent diarrhea or other complications.",
+     "zh": "旅行风险：前往高风险地区旅行长达两周的人群中，20%到90%会得旅行者腹泻，其中约10%会发展成持续性腹泻或其他并发症。",
+     "hard": true
+    },
+    {
+     "en": "Acute hepatitis: incubation from infection to symptoms ranges 14 to 180 days. Hepatitis A/E spread fecal-oral, B/C/D spread via blood/sexual contact. The early phase mimics a mild viral illness (and can be mistaken for gastroenteritis), while the later phase shows jaundice, acholic stools, dark urine, RUQ pain, and an enlarged liver as liver failure sets in. Hepatitis B stays infectious in dried blood for over a week.",
+     "zh": "急性肝炎：从感染到出现症状的潜伏期是14到180天。甲肝、戊肝经粪口途径传播，乙肝、丙肝、丁肝经血液/性接触传播。早期表现像轻度病毒性疾病（容易被误认为肠胃炎），后期随着肝衰竭出现黄疸、陶土色大便、尿色变深、右上腹痛、肝脏肿大。乙肝病毒在干血中能保持传染性超过一周。",
+     "hard": true
+    },
+    {
+     "en": "Liver dysfunction changes your drug math: because the liver detoxifies medications, patients with hepatitis or liver failure need lower doses and longer intervals for anything you administer, and you should watch for cumulative drug effects.",
+     "zh": "肝功能不全会改变用药算法：因为药物解毒靠肝脏完成，肝炎或肝衰竭患者用任何药都要降低剂量、拉长给药间隔，还要留意药物蓄积效应。",
+     "hard": false
+    },
+    {
+     "en": "Bowel obstruction: usually from adhesions or twisting of the intestine (scar tissue, hernias) rather than a tumor in the acute setting; volvulus is a complete self-twist of the bowel. Presentation evolves from crampy pain and early 'bypass diarrhea,' through worsening constipation with decreased bowel sounds, to late vomiting and feculent breath/vomitus as the obstruction persists.",
+     "zh": "肠梗阻：急性情况下通常是肠道粘连或扭转（瘢痕组织、疝气）引起，而不是肿瘤；肠扭转是肠道整体自我打结。表现会逐步演变：先是绞痛和早期“绕过性腹泻”，接着便秘加重、肠鸣音减弱，梗阻持续下去最终出现呕吐和粪臭味的呼气/呕吐物。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Assessment: Scene, History, and Exam Technique",
+   "titleZh": "评估流程与专项检查手法",
+   "points": [
+    {
+     "en": "Scene-assessment red flag: a single-patient GI complaint is routine, but a cluster of people at one location all reporting abdominal pain, nausea, vomiting, or diarrhea should raise suspicion of a biologic or chemical agent release, not just 'bad food.'",
+     "zh": "现场评估的一个警示信号：单个患者的GI主诉很常见，但如果同一地点有多人同时报告腹痛、恶心、呕吐或腹泻，要怀疑生物或化学制剂泄漏，而不是简单归因于“食物坏了”。",
+     "hard": false
+    },
+    {
+     "en": "PPE for GI calls skews heavier than a typical medical call: gloves plus gowns (incontinence), masks (odour control), and extra linens/wash rags/basins/biohazard bags/sterile irrigation water should all be considered standard kit for a GI response.",
+     "zh": "GI出诊的个人防护装备要比一般医疗出诊更重：手套加隔离衣（应对失禁）、口罩（应对异味），外加备用床单、擦拭布、盆、生物危害袋、无菌冲洗水，都该算作GI出诊的标配装备。",
+     "hard": false
+    },
+    {
+     "en": "Odour is diagnostic, not just unpleasant: foul melena odour can flag an upper GI bleed and feculent breath can flag advanced bowel obstruction. Your sense of smell is sharpest for about the first minute, then loses over half its perceived intensity within 2 to 5 minutes - holding your ground briefly actually makes the environment more tolerable, not less.",
+     "zh": "气味本身是诊断线索，不只是难闻：黑便的恶臭可以提示上消化道出血，粪臭味呼气可以提示晚期肠梗阻。嗅觉在最初约1分钟最敏锐，之后2到5分钟内感知强度会衰减超过一半——短暂坚持一下，环境反而会变得更容易忍受，而不是更难。",
+     "hard": true
+    },
+    {
+     "en": "Quadrant palpation technique: start in the quadrant FARTHEST from the patient's pain and work toward the painful area last - this lowers anxiety, improves accuracy, and gives you a true baseline before the guarded area is touched. Indent the abdominal wall about 5 to 10 cm with a flat hand.",
+     "zh": "四象限触诊手法：从离疼痛最远的象限开始，最后才碰疼痛所在的象限——这样能降低患者焦虑、提高准确度，还能在触碰肌卫区域之前先拿到一个真实的基线。用平放的手掌把腹壁下压约5到10厘米。",
+     "hard": true
+    },
+    {
+     "en": "Rebound tenderness technique and meaning: press in 5 to 10 cm at the point of maximal tenderness, then pull fingers off QUICKLY - slow removal fails to trigger the sign. A positive result (pain on release, from a rapidly-moving irritated peritoneum) suggests serious, potentially life-threatening pathology such as hemorrhage or infection.",
+     "zh": "反跳痛的手法与意义：在最痛点下压5到10厘米，然后要快速抬起手指——抬得慢就诱发不出这个体征。阳性结果（松手时疼痛，是发炎的腹膜被快速震动所致）提示可能存在严重、甚至危及生命的病理，如出血或感染。",
+     "hard": true
+    },
+    {
+     "en": "Bowel sound thresholds worth knowing even though they're rarely practical in the field: normal = gurgles/clicks 5 to 30 times/min; borborygmi (loud, sometimes audible without a stethoscope) = hyperperistalsis, over 30/min; decreased = under 1 sound per 15 to 20 seconds, suggesting impending obstruction; true absence requires 2 full minutes of silence, which is why this finding is rarely usable prehospital - presence versus absence matters far more than the exact rate.",
+     "zh": "肠鸣音的判定阈值，虽然院前很少真能用上：正常＝每分钟5到30次咕噜声/咔哒声；肠鸣音亢进（borborygmi，有时不用听诊器都能听到）＝蠕动过度，每分钟超过30次；减弱＝每15到20秒不到1次，提示可能即将梗阻；真正的消失需要连续听2分钟都没有声音，所以这项发现在院前很难实际使用——有没有声音，比精确次数重要得多。",
+     "hard": true
+    },
+    {
+     "en": "Orthostatic vital sign testing procedure and thresholds: supine BP/HR first, then sit or stand after 1 to 2 minutes. A 20 mmHg systolic drop, a 10 mmHg diastolic rise (narrowing pulse pressure), OR a 20-beat HR increase each independently signal significant volume loss - typically once 15% to 20% of circulating volume is gone, while shock is almost always present once loss exceeds 30%.",
+     "zh": "体位性生命体征的测试流程与阈值：先平卧测血压心率，1到2分钟后坐起或站立再测一次。收缩压下降20 mmHg、舒张压升高10 mmHg（脉压差变窄）、或心率增加20次/分，任一项单独出现就提示明显的血容量丢失——通常发生在循环血量丢失15%到20%时，而超过30%时几乎必然出现休克。",
+     "hard": true
+    },
+    {
+     "en": "Special-population assessment traps: young patients are poor historians and frightened; elderly patients are poor historians with muted, atypical symptoms and often low or absent fever even with serious disease (an elderly patient with vague pain, vomiting, and altered mental status may actually have appendicitis); obesity/pregnancy can physically displace or hide organs; immunocompromised patients (AIDS, chemotherapy, transplant, the very young/old) may mount no typical inflammatory response despite severe underlying disease.",
+     "zh": "特殊人群评估陷阱：年轻患者病史陈述能力差、容易害怕；老年患者病史陈述能力差，症状轻微不典型，即使病情严重也常常低热或不发热（一个主诉模糊腹痛、呕吐、意识改变的老年患者，实际可能是阑尾炎）；肥胖/妊娠会让脏器移位或被遮挡；免疫功能低下的患者（艾滋病、化疗、器官移植、极年幼或极年老）即便底层病情严重，也可能完全不出现典型的炎症反应。",
+     "hard": false
+    },
+    {
+     "en": "In women of childbearing age, always weigh non-GI causes alongside GI ones: ectopic pregnancy, threatened or spontaneous abortion, ovarian cyst, or pelvic inflammatory disease.",
+     "zh": "对育龄期女性，永远要把非消化道病因和消化道病因放在一起考虑：异位妊娠、先兆流产或自然流产、卵巢囊肿、盆腔炎。",
+     "hard": false
+    },
+    {
+     "en": "Documentation precision matters more than euphemism: use the patient's own words but translate into standardized clinical terms for handoff (eg, distinguishing melena from hematochezia from simple soft stool), so the receiving team inherits an accurate picture of blood loss and hydration status, not a vague one.",
+     "zh": "记录的精准度比委婉措辞更重要：用患者自己的话问诊，但交班时要翻译成标准临床术语（比如区分黑便、便血和单纯软便），这样接手的团队才能拿到准确的失血和脱水情况，而不是一个模糊印象。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Prehospital Management and Medications",
+   "titleZh": "院前处置与用药",
+   "points": [
+    {
+     "en": "Core management sequence for the GI patient: routine precautions/PPE first, then manage the ABCs (position for drainage, prevent aspiration, keep suction ready), then attend to pain and nausea. GI disease itself is rarely something you can treat in the field, but its downstream effects - hypovolemia, pain, airway risk - absolutely are.",
+     "zh": "消化系统患者的核心处置顺序：先做好常规防护/PPE，再管理ABC（摆体位利于引流、预防误吸、备好吸引器），然后处理疼痛和恶心。消化系统疾病本身在院前很少能治好，但它引发的后果——低血容量、疼痛、气道风险——是完全可以处理的。",
+     "hard": false
+    },
+    {
+     "en": "Oxygen rule that trips people up: do not use a normal SpO2 reading to withhold oxygen from a GI-bleed patient. Pulse oximetry measures the SATURATION of available hemoglobin, and a patient who has lost a large volume of blood can read 96% while still being profoundly short of oxygen-carrying capacity - be liberal with oxygen in suspected GI bleeding.",
+     "zh": "一个容易踩坑的给氧规则：不要因为血氧饱和度正常就不给消化道出血患者吸氧。血氧仪测的是现有血红蛋白的饱和度，一个大量失血的患者血氧读数完全可能是96%，同时携氧能力却严重不足——怀疑消化道出血时，给氧要大方一些。",
+     "hard": true
+    },
+    {
+     "en": "Textbook fluid resuscitation for GI hypotension: a rapid bolus of 10 to 20 mL/kg of isotonic crystalloid (normal saline or lactated Ringer), titrated to maintain perfusion (mentation, skin, radial pulse) without precipitating pulmonary edema - auscultate lung sounds before every additional bolus.",
+     "zh": "教材对消化道相关低血压的补液方案：快速推注10到20 mL/kg等张晶体液（生理盐水或乳酸林格液），根据灌注情况（意识、皮肤、桡动脉搏动）滴定，避免诱发肺水肿——每次追加补液前都要先听诊肺部。",
+     "hard": true
+    },
+    {
+     "en": "Pain management myth-busting: the only TRUE contraindication to analgesia in the prehospital GI patient is hypotension - the old worry that analgesia masks symptoms or delays diagnosis is outdated, and current consensus favours humane pain control; just use it judiciously in anyone hemodynamically borderline.",
+     "zh": "破除镇痛用药的误区：院前GI患者使用镇痛药唯一真正的禁忌是低血压——过去担心镇痛会掩盖症状、延误诊断的观念已经过时，目前的共识是应该给予人道的疼痛管理；只是对血流动力学处于临界状态的患者要谨慎使用。",
+     "hard": true
+    },
+    {
+     "en": "Antiemetic notes from the textbook worth knowing even though BC's actual first-line drug choice differs (see BC alerts): ondansetron carries a fetal-risk caution that makes it a non-first-line choice in pregnancy, and diphenhydramine (an allergy drug with a secondary antiemetic effect) can cause drowsiness and a drop in blood pressure.",
+     "zh": "教材里的止吐药笔记（BC实际的一线用药有出入，见下方BC差异）：昂丹司琼有致畸风险提示，因此不是孕妇的首选一线药；苯海拉明（一款兼具止吐副作用的抗过敏药）可能引起嗜睡和血压下降。",
+     "hard": false
+    },
+    {
+     "en": "NG tube placement for GI bleeding is controversial and protocol-dependent - it can relieve nausea from a stomach full of blood and help confirm an upper-GI source, but is not universal. Iced saline lavage for hemostasis is described in the literature but essentially not practiced prehospital due to poor evidence and real risk.",
+     "zh": "消化道出血放置鼻胃管有争议、要看当地规程——它能缓解胃里满是血液带来的恶心，还能帮助确认是上消化道出血源，但不是通用做法。冰盐水灌洗止血在文献里有描述，但因证据不足且有实际风险，院前基本不采用。",
+     "hard": false
+    },
+    {
+     "en": "Vomitus or stool sample preservation can carry real diagnostic value for the receiving hospital, especially in unknown ingestions or GI bleeding of unclear origin - follow local protocol on collecting rather than discarding it.",
+     "zh": "保留呕吐物或大便样本对接诊医院可能有实际诊断价值，尤其是不明摄入物或病因不明的消化道出血——按当地规程收集，而不是直接处理掉。",
+     "hard": false
+    },
+    {
+     "en": "Two never-forget infection-control facts for GI calls: hepatitis B stays infectious in DRIED blood for over a week, and patients with acute gastroenteritis are actively contagious - routine precautions are not optional convenience here.",
+     "zh": "GI出诊两条不能忘的感染控制事实：乙肝病毒在干血中能保持传染性超过一周，急性肠胃炎患者本身具有传染性——常规防护在这里不是可有可无的选项。",
+     "hard": true
+    },
+    {
+     "en": "Medication-effectiveness matching from the textbook: ketorolac (a non-narcotic NSAID) works especially well for pain from inflamed abdominal organs but should be used cautiously in renal disease or active bleeding; opioids work broadly but carry more hypotension/respiratory-depression risk in an already hemodynamically fragile GI patient.",
+     "zh": "教材里的药物-病症匹配经验：酮咯酸（非麻醉性NSAID）对腹腔脏器炎症引起的疼痛效果特别好，但肾病或活动性出血患者要谨慎使用；阿片类药物适用范围更广，但对本就血流动力学脆弱的GI患者，低血压和呼吸抑制风险更高。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "GI disease burden in Canada",
+   "itemZh": "加拿大消化系统疾病负担",
+   "value": "全部GI疾病合计约600-700万人；GERD占人口10%-20%；感染性腹泻每年约1950万例"
+  },
+  {
+   "itemEn": "PUD / acute cholecystitis prevalence",
+   "itemZh": "消化性溃疡/急性胆囊炎患病率",
+   "value": "PUD约150万加拿大人；急性胆囊炎约每10万人88例"
+  },
+  {
+   "itemEn": "Small intestine length / absorption share",
+   "itemZh": "小肠长度/吸收占比",
+   "value": "约7米长，承担约90%的营养吸收"
+  },
+  {
+   "itemEn": "Large intestine length",
+   "itemZh": "大肠长度",
+   "value": "约2米"
+  },
+  {
+   "itemEn": "Whole-gut transit time / normal BM frequency range",
+   "itemZh": "全消化道通过时间/正常排便频率范围",
+   "value": "8-72小时；一天3次到3天1次都算正常"
+  },
+  {
+   "itemEn": "Orthostatic vital sign thresholds for significant volume loss",
+   "itemZh": "提示明显容量丢失的体位性生命体征阈值",
+   "value": "收缩压降20 mmHg，或舒张压升10 mmHg，或心率增20次/分（任一项）"
+  },
+  {
+   "itemEn": "Volume-loss percentage tied to orthostatic change / shock onset",
+   "itemZh": "体位性改变/休克出现对应的失血比例",
+   "value": "体位性改变常见于丢失15%-20%循环血量；丢失>30%几乎必然出现休克"
+  },
+  {
+   "itemEn": "Bowel sound rate thresholds",
+   "itemZh": "肠鸣音次数阈值",
+   "value": "正常5-30次/分；肠鸣音亢进>30次/分；减弱<1次/15-20秒；消失需连续听2分钟无声"
+  },
+  {
+   "itemEn": "Palpation / rebound tenderness depth",
+   "itemZh": "触诊/反跳痛下压深度",
+   "value": "5-10 cm"
+  },
+  {
+   "itemEn": "Cholecystitis '5 Fs' risk profile",
+   "itemZh": "胆囊炎“5个F”高危画像",
+   "value": "fair白种人/fat肥胖/female女性/fertile生育年龄/forty-to-fifty四五十岁；女性发病率是男性2-3倍"
+  },
+  {
+   "itemEn": "PUD pain-timing pattern",
+   "itemZh": "消化性溃疡疼痛时序",
+   "value": "进食后即刻缓解，2-3小时后复发"
+  },
+  {
+   "itemEn": "Diverticular disease typical patient age",
+   "itemZh": "憩室病典型患病年龄",
+   "value": ">60岁"
+  },
+  {
+   "itemEn": "Hemorrhoid population prevalence by age 50",
+   "itemZh": "痔疮到50岁人群患病率",
+   "value": "约一半人口"
+  },
+  {
+   "itemEn": "Hepatitis incubation period / dried-blood infectivity",
+   "itemZh": "肝炎潜伏期/干血传染性",
+   "value": "潜伏期14-180天；乙肝干血传染性可持续>1周"
+  },
+  {
+   "itemEn": "Traveler's diarrhea incidence / persistent complication rate",
+   "itemZh": "旅行者腹泻发生率/持续并发症比例",
+   "value": "高风险地区2周内发生率20%-90%；其中约10%发展为持续/其他并发症"
+  },
+  {
+   "itemEn": "Foodborne illness in Canada / chronic complication rate",
+   "itemZh": "加拿大食源性疾病/慢性并发症比例",
+   "value": "每年约1100-1300万例；最多3%发展为慢性并发症"
+  },
+  {
+   "itemEn": "Textbook fluid bolus for GI hypotension",
+   "itemZh": "教材GI相关低血压补液量",
+   "value": "10-20 mL/kg等张晶体液，无明确总量上限"
+  },
+  {
+   "itemEn": "BC fluid bolus cap (Nausea-Vomiting / Hypovolemia protocol)",
+   "itemZh": "BC补液推注上限（恶心呕吐/低血容量protocol）",
+   "value": "20 mL/kg，最多2升，每500 mL复评；目标收缩压90 mmHg"
+  },
+  {
+   "itemEn": "BC Dimenhydrinate dose",
+   "itemZh": "BC 茶苯海明剂量",
+   "value": "1 mg/kg，最大50 mg；体重<25kg需联系ER；IV稀释后1-2分钟推注（约25 mg/min）"
+  },
+  {
+   "itemEn": "BC Ondansetron dose",
+   "itemZh": "BC 昂丹司琼剂量",
+   "value": "成人4 mg PO；儿童6月-4岁2 mg PO，≥4岁4 mg PO"
+  },
+  {
+   "itemEn": "BC TXA dose / window / exclusions",
+   "itemZh": "BC TXA剂量/时限/排除标准",
+   "value": "2 g（2000 mg）静推1分钟；≤3小时内；≥12岁；非孤立性颅脑伤；对休克继发于隐匿性出血可考虑使用"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Keep abdominal-emergency patients strictly NPO until physician evaluation - an empty stomach lowers aspiration risk, avoids digestive-enzyme release that can worsen some conditions, and keeps surgical options open if the patient needs the OR.",
+   "zh": "腹部急症患者在医生评估前要严格禁食禁水——空腹能降低误吸风险，避免消化酶释放加重某些病情，也为后续可能的手术保留余地。"
+  },
+  {
+   "en": "Run the four-life-threat checklist on every acute nontraumatic abdominal pain call: acute MI, ruptured AAA, ruptured ectopic pregnancy, ruptured hollow viscus - all four can present as 'just a stomachache' early on.",
+   "zh": "每次急性非创伤性腹痛出诊都要过一遍四大致命病因清单：急性心梗、腹主动脉瘤破裂、异位妊娠破裂、空腔脏器破裂——这四个早期都可能只表现为“肚子有点疼”。"
+  },
+  {
+   "en": "Memorize the referral-pattern map, because it lets you localize disease before any test exists: biliary pain to the right back/scapula, pancreatic pain straight through to the midline back, subdiaphragmatic blood/pus to the top of the shoulder, a leaking aneurysm to the lumbosacral back and thighs, renal colic to the groin, uterine/rectal pain to the suprapubic region or low back.",
+   "zh": "把放射痛地图背下来，因为它能在还没有任何检查之前就帮你定位病变：胆道痛放射到右背/肩胛，胰腺痛直穿到背部正中线，膈下血/脓放射到肩顶部，动脉瘤渗漏放射到腰骶部和大腿，肾绞痛放射到腹股沟，子宫/直肠痛出现在耻骨上区或下背部。"
+  },
+  {
+   "en": "Orthostatic vital signs are your prehospital gauge of hidden blood/fluid loss - a 15% to 20% acute volume loss produces the classic orthostatic change, and shock is almost always present once loss exceeds 30%.",
+   "zh": "体位性生命体征是院前判断隐匿性失血/脱水的量尺——急性丢失15%到20%循环血量就会出现典型的体位性改变，超过30%时几乎必然出现休克。"
+  },
+  {
+   "en": "Four factors that specifically complicate the abdominal assessment: young age (poor historian, fear), old age (poor historian, muted/atypical symptoms), obesity or pregnancy (organs displaced or hidden), compromised immune systems (no typical inflammatory response to infection).",
+   "zh": "四类特别会让腹部评估变复杂的因素：年幼（陈述能力差、害怕）、年老（陈述能力差、症状轻微不典型）、肥胖或妊娠（脏器移位或被遮挡）、免疫功能低下（对感染没有典型炎症反应）。"
+  },
+  {
+   "en": "Match the medication to the pain type when protocol allows: pain from inflammation of abdominal organs responds especially well to ketorolac, while most other GI pain responds to opioids - just watch for hemodynamic compromise either way.",
+   "zh": "如果规程允许，按疼痛类型选药：腹腔脏器炎症引起的疼痛对酮咯酸反应特别好，其他大多数GI疼痛对阿片类药物反应好——不管用哪种，都要留意血流动力学是否受影响。"
+  },
+  {
+   "en": "Preserve vomitus or stool samples rather than cleaning them away when the cause is unclear - they can carry real diagnostic value for unknown ingestions, GI bleeding of unclear origin, or unexplained abdominal disease.",
+   "zh": "病因不明时，别急着把呕吐物或大便清理掉，先保留样本——对不明摄入物、病因不明的消化道出血或不明原因的腹部疾病，这些样本可能有实际诊断价值。"
+  },
+  {
+   "en": "Missed appendicitis clusters in three groups for the same underlying reason - atypical symptoms: the young, the elderly, and pregnant patients. Keep the index of suspicion higher in all three even with a vague presentation.",
+   "zh": "阑尾炎漏诊集中在三类人群身上，原因都一样——症状不典型：年轻人、老年人、孕妇。即使表现模糊，这三类人群的怀疑等级也要调高。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Common complaints are usually minor' is false - common symptoms like abdominal pain, nausea, and vomiting can still represent major disease; frequency and severity are two separate axes.",
+   "zh": "“常见主诉通常是小毛病”是错的——腹痛、恶心、呕吐这些常见症状照样可能代表重大疾病；发生频率和严重程度是两回事。"
+  },
+  {
+   "en": "'Pain severity alone tells you how serious it is' is false - perfusion status, overall appearance, and trend over time often matter more than the number the patient gives you on a 0-10 scale.",
+   "zh": "“疼痛程度本身就能说明严重性”是错的——灌注状态、整体外观、随时间的变化趋势，往往比患者报的0-10分数更重要。"
+  },
+  {
+   "en": "'A normal early appearance rules out danger' is false - GI emergencies evolve. Peritonitis takes hours to develop, and a patient who looks fine on first contact may be actively decompensating by the time you reach hospital.",
+   "zh": "“早期看起来正常就能排除危险”是错的——GI急症会不断演变。腹膜炎要几个小时才发展出来，第一次接触时看着还好的患者，到医院时可能已经在快速恶化。"
+  },
+  {
+   "en": "'A normal SpO2 means the patient does not need oxygen' is false for suspected GI bleeding specifically - pulse oximetry reads the saturation of whatever hemoglobin is present, not the total oxygen-carrying capacity, so a 96% reading can coexist with severe blood loss and real tissue hypoxia.",
+   "zh": "“血氧正常就不需要吸氧”这个判断对疑似消化道出血的患者不成立——血氧仪测的是现有血红蛋白的饱和度，不是总携氧能力，所以96%的读数完全可能和严重失血、真实组织缺氧同时存在。"
+  },
+  {
+   "en": "'Listening for bowel sounds gives you a reliable field answer' is false - true absence requires 2 full minutes of quiet listening that the scene/ambulance environment rarely allows; presence versus absence is more useful than trying to grade the exact rate.",
+   "zh": "“听肠鸣音能给出可靠的现场判断”是错的——判定真正的消失需要连续安静听诊2分钟，现场和救护车环境通常做不到；有没有声音，比精确评级次数更有用。"
+  },
+  {
+   "en": "Do not confuse dimenhydrinate (Gravol, anti-emetic/anti-vertigo, BC's primary Nausea-Vomiting protocol drug) with diphenhydramine (Benadryl, an allergy drug with a secondary drowsiness-causing antiemetic effect) - similar names, different classification, different primary indication.",
+   "zh": "别把茶苯海明（Gravol，止吐/抗眩晕药，BC恶心呕吐protocol的主力用药）和苯海拉明（Benadryl，抗过敏药，兼有致嗜睡的止吐副作用）搞混——名字相近，分类不同，主要适应症也不同。"
+  },
+  {
+   "en": "'Spicy food causes stomach or esophageal disease' is a popular but unsupported belief - it is not an established risk factor the way smoking, alcohol, or NSAID use are, even though it can cause transient irritation-type discomfort.",
+   "zh": "“吃辣会导致胃病或食管病”是一个流传很广但没有依据的说法——它不像吸烟、酒精、NSAIDs那样是公认的风险因素，虽然它确实可能引起一时的刺激性不适。"
+  },
+  {
+   "en": "'Withhold pain medication from GI patients to avoid masking the diagnosis' is outdated - the only TRUE contraindication to analgesia in the prehospital GI patient is hypotension; current consensus favours humane, judicious pain control.",
+   "zh": "“GI患者要少给镇痛药，免得掩盖诊断”是过时的观念——院前GI患者使用镇痛药唯一真正的禁忌是低血压；目前的共识是应该给予人道、谨慎的疼痛管理。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "四种血迹读法",
+   "en": "Four ways blood shows itself, four different meanings: hematemesis (fresh red vomit) = active upper-GI bleed; coffee-ground emesis = acid-transformed upper-GI blood; melena (black, tarry, blood indistinguishable from stool) = transformed upper-GI blood; hematochezia (blood and stool distinguishable) = lower-GI bleed, or a very brisk upper one.",
+   "zh": "血液现身的四种方式，各自意义不同：呕血（鲜红呕吐物）＝活动性上消化道出血；咖啡渣样呕吐物＝被胃酸转化的上消化道出血；黑便melena（黑色柏油样、血便不分）＝转化后的上消化道出血；便血hematochezia（血和便能分清）＝下消化道出血，或极凶猛的上消化道出血。"
+  },
+  {
+   "name": "5个F",
+   "en": "Cholecystitis risk profile in one phrase: fair (Caucasian), fat, female, fertile, forty-to-fifty.",
+   "zh": "胆囊炎高危画像一句话记：fair白种人、fat肥胖、female女性、fertile生育年龄、forty-to-fifty四五十岁。"
+  },
+  {
+   "name": "四个致命非创伤腹痛",
+   "en": "Four immediate life threats hiding inside acute nontraumatic abdominal pain: acute MI, ruptured AAA, ruptured ectopic pregnancy, ruptured hollow viscus.",
+   "zh": "急性非创伤性腹痛里藏着的四个即刻致命病因：急性心梗、腹主动脉瘤破裂、异位妊娠破裂、空腔脏器破裂。"
+  },
+  {
+   "name": "放射痛地图",
+   "en": "Referral-pattern quick map: biliary to right back/scapula, pancreatic straight to midline back, subdiaphragmatic to top of shoulder, leaking aneurysm to lumbosacral/thighs, renal colic to groin, uterine/rectal to suprapubic/low back.",
+   "zh": "放射痛速记地图：胆道→右背/肩胛，胰腺→背部正中线，膈下→肩顶部，动脉瘤渗漏→腰骶部/大腿，肾绞痛→腹股沟，子宫/直肠→耻骨上区/下背部。"
+  },
+  {
+   "name": "别认错止吐药",
+   "en": "Sound-alike drug trap: dimenhydrinate (Gravol) is the anti-emetic/anti-vertigo drug and BC's primary Nausea-Vomiting protocol choice; diphenhydramine (Benadryl) is the allergy drug whose antiemetic effect is just a drowsy side effect - do not swap them.",
+   "zh": "别把名字相近的两种药认错：茶苯海明（Gravol）是止吐/抗眩晕药，是BC恶心呕吐protocol的主力用药；苯海拉明（Benadryl）是抗过敏药，止吐效果只是它嗜睡副作用的副产品——两者不能互换。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A patient reports black, tarry, foul-smelling stool that blends with the blood so you cannot tell them apart. What is this called, and what does it tell you about the bleeding source?",
+   "qZh": "患者报告黑色、柏油样、恶臭的大便，血和便混在一起分不清。这叫什么？它提示出血来源在哪里？",
+   "aEn": "This is melena. It represents blood from the upper GI tract that has been transformed by acid and transit through the gut - distinguish it from hematochezia (blood and stool distinguishable from each other), which points to a lower-GI source or a very brisk upper-GI bleed.",
+   "aZh": "这叫黑便（melena）。代表上消化道出血经过胃酸和肠道转化后的产物——要和便血（hematochezia，血和便能互相区分）区分开，后者提示下消化道出血源，或极凶猛的上消化道出血。"
+  },
+  {
+   "qEn": "Name the four causes of acute nontraumatic abdominal pain that are immediate life threats.",
+   "qZh": "说出四个急性非创伤性腹痛的即刻致命病因。",
+   "aEn": "Acute myocardial infarction, ruptured abdominal aortic aneurysm, ruptured ectopic pregnancy, and a ruptured hollow viscus.",
+   "aZh": "急性心肌梗死、腹主动脉瘤破裂、异位妊娠破裂、空腔脏器破裂。"
+  },
+  {
+   "qEn": "A patient's supine BP/HR are normal. After standing for 1-2 minutes, systolic BP drops 25 mmHg and heart rate rises 25 beats/min. What does this indicate, and roughly what percentage of circulating volume has likely been lost?",
+   "qZh": "患者平卧时血压心率正常。站立1-2分钟后，收缩压下降25 mmHg，心率增加25次/分。这说明什么？大致丢失了多少比例的循环血量？",
+   "aEn": "This is a positive orthostatic change (exceeding both the 20 mmHg systolic-drop and 20-beat HR-increase thresholds), indicating significant volume loss - orthostatic changes like this typically appear once 15% to 20% of circulating volume has been lost.",
+   "aZh": "这是阳性的体位性改变（收缩压下降超过20 mmHg、心率增加超过20次/分两项阈值都达标），提示明显的血容量丢失——这类体位性改变通常出现在循环血量丢失15%到20%时。"
+  },
+  {
+   "qEn": "Your patient has suspected active GI bleeding/peptic ulcer disease and is also reporting chest pain consistent with possible cardiac ischemia. Per BC guidelines, can you give ASA?",
+   "qZh": "患者疑似有活动性消化道出血/消化性溃疡，同时主诉符合心肌缺血的胸痛。按BC规程，能给阿司匹林吗？",
+   "aEn": "No. BC's Aspirin (ASA) monograph explicitly lists 'active peptic ulcer or gastrointestinal bleeding' as a contraindication - this holds even with classic cardiac-sounding chest pain. Ibuprofen carries the same active GI hemorrhage/ulcer contraindication, so acetaminophen is the safer analgesic/antipyretic choice in this history.",
+   "aZh": "不能。BC阿司匹林（ASA）药物说明明确把“活动性消化性溃疡或消化道出血”列为禁忌，即使胸痛表现很典型也一样。布洛芬也有相同的活动性消化道出血/溃疡禁忌，所以有这类病史时对乙酰氨基酚是更安全的镇痛退热选择。"
+  },
+  {
+   "qEn": "Per BC's Nausea-Vomiting PCP protocol, what two antiemetics can a PCP consider, and what BC-specific safety check applies to one of them that the textbook never mentions?",
+   "qZh": "按BC恶心呕吐PCP protocol，PCP可以考虑哪两种止吐药？其中一种药有一条教材从未提及的BC专属安全核查，是什么？",
+   "aEn": "Dimenhydrinate (1 mg/kg, max 50 mg) and ondansetron (4 mg PO adult; 2 mg PO for ages 6 months-4 years, 4 mg PO for 4 years and older). Ondansetron is contraindicated in congenital long QT syndrome, and BC guidelines specifically advise asking Indigenous patients whether they or their family have been diagnosed with Long QT Syndrome (given a higher documented prevalence in this population) - if so, dimenhydrinate is the recommended alternative.",
+   "aZh": "茶苯海明（1 mg/kg，最大50 mg）和昂丹司琼（成人4 mg PO；6月-4岁儿童2 mg PO，4岁以上4 mg PO）。昂丹司琼在先天性长QT综合征患者中禁用，BC规程特别建议询问原住民患者本人或家族是否曾被诊断长QT综合征（因为该人群中记录到的患病率更高）——如果有，推荐改用茶苯海明。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "BC's primary antiemetic (dimenhydrinate) is not even named in this chapter, and ondansetron carries BC-specific safety checks the book never raises",
+   "topicZh": "BC的一线止吐药（茶苯海明）教材根本没提到，昂丹司琼还有教材从未提及的BC专属安全核查",
+   "bookEn": "This chapter's only named antiemetics are ondansetron (flagged only for a fetal-risk caution in pregnancy) and diphenhydramine (an allergy drug used off-label for its secondary antiemetic/sedative effect); dimenhydrinate is never mentioned anywhere in the chapter.",
+   "bookZh": "本章唯一点名的止吐药是昂丹司琼（只提到孕期致畸风险提示）和苯海拉明（一款借用其副作用来止吐/镇静的抗过敏药）；茶苯海明在全章中完全没有出现。",
+   "bcEn": "BC's Nausea-Vomiting PCP protocol offers dimenhydrinate (1 mg/kg, max 50 mg; contact ER if patient appears under 25 kg; IV dose diluted and given over 1-2 minutes) as one PCP-level option, and ondansetron (4 mg PO adult; weight/age-tiered pediatric dosing) as the other - with exclusions the book never raises: ondansetron is contraindicated in congenital long QT syndrome, cautioned in first-trimester pregnancy, and BC guidelines specifically direct paramedics to ask Indigenous patients about a personal or family history of Long QT Syndrome given its documented higher prevalence in that population, defaulting to dimenhydrinate if present.",
+   "bcZh": "BC恶心呕吐PCP protocol给出两个PCP级选项：茶苯海明（1 mg/kg，最大50 mg；患者体重疑似低于25kg要联系ER；静脉给药需稀释后1-2分钟推注）和昂丹司琼（成人4 mg PO；儿童按体重/年龄分级给药）——两者都带着教材从未提到的排除条件：昂丹司琼在先天性长QT综合征患者中禁用，孕早期慎用，BC规程还特别要求询问原住民患者本人或家族是否有长QT综合征病史（该人群记录到的患病率更高），如有则改用茶苯海明。",
+   "ref": "BC Provincial Examination Guidelines p.48（Nausea-Vomiting）、p.63（Dimenhydrinate）、p.75（Ondansetron）"
+  },
+  {
+   "topicEn": "Fluid bolus for GI-related hypotension: book titrates uncapped, BC caps volume and names a specific SBP target",
+   "topicZh": "GI相关低血压的补液：教材不设容量上限，BC封顶且明确收缩压目标",
+   "bookEn": "Recommends a rapid bolus of 10-20 mL/kg of isotonic crystalloid, titrated to maintain perfusion signs (mentation, skin, radial pulse), with no explicit total-volume ceiling given.",
+   "bookZh": "建议快速推注10-20 mL/kg等张晶体液，根据灌注体征（意识、皮肤、桡动脉搏动）滴定，没有给出明确的总量上限。",
+   "bcEn": "BC's Nausea-Vomiting protocol (and the Hypovolemia protocol it defers to for shock) caps the bolus at 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL, with a named correction target of systolic BP 90 mmHg. On a BC exam you stop at 2 litres and reassess rather than continuing to titrate indefinitely toward a pressure.",
+   "bcZh": "BC恶心呕吐protocol（休克情况下参照低血容量protocol）把推注量封顶在20 mL/kg、最多2升，每500 mL复评一次，并明确给出纠正目标——收缩压90 mmHg。BC考试里到2升就要停下来复评，而不是无限制地为了追一个血压数字持续滴定。",
+   "ref": "BC Provincial Examination Guidelines p.48（Nausea-Vomiting）、p.54（Hypovolemia）"
+  },
+  {
+   "topicEn": "TXA for occult/GI bleeding: book calls the evidence insufficient, BC gives an exact protocol answer",
+   "topicZh": "隐匿性/消化道出血的TXA：教材说证据不足，BC给出确切的规程答案",
+   "bookEn": "States that TXA is 'sometimes used in hemodynamically unstable GI bleeding' but that 'there is insufficient evidence at this time to recommend routine use,' directing paramedics to seek guidance from their EMS agency or medical director rather than giving a dose or criteria.",
+   "bookZh": "只说TXA“有时被用于血流动力学不稳定的消化道出血”，但“目前证据不足以推荐常规使用”，让急救员向所在机构或医疗指导寻求指引，并未给出剂量或标准。",
+   "bcEn": "BC's Hypovolemia protocol explicitly lists 'Consider tranexamic acid in cases of shock secondary to blood loss and hypovolemia secondary to OCCULT bleeding' as a PCP en-route intervention - a GI bleed is exactly this kind of occult/ongoing bleeding source. The exact answer: 2 g (2,000 mg) IV push over 1 minute, excluded if known TXA hypersensitivity, more than 3 hours have passed, patient is under 12, or the patient has an isolated TBI.",
+   "bcZh": "BC低血容量protocol明确把“对休克继发于失血、及低血容量继发于隐匿性出血的情况，可考虑使用氨甲环酸”列为PCP途中加做项——消化道出血正好属于这种隐匿性/持续性出血源。确切答案：2克（2000毫克）静脉推注1分钟，排除标准为已知TXA过敏、伤后超过3小时、患者小于12岁、或单纯性颅脑外伤。",
+   "ref": "BC Provincial Examination Guidelines p.54（Hypovolemia）、p.78（Tranexamic Acid）"
+  },
+  {
+   "topicEn": "ASA and ibuprofen are explicitly contraindicated with active PUD/GI bleeding - a cross-protocol trap the book never raises in this chapter",
+   "topicZh": "阿司匹林和布洛芬明确禁用于活动性PUD/消化道出血——教材本章从未提及的跨protocol陷阱",
+   "bookEn": "This chapter never discusses ASA or ibuprofen contraindications tied to GI bleeding or peptic ulcer disease anywhere in its text - the connection between the Chest Pain protocol's ASA and a patient's GI history is left entirely unaddressed here.",
+   "bookZh": "本章全文都没有讨论阿司匹林或布洛芬与消化道出血/消化性溃疡相关的禁忌——胸痛protocol里用的阿司匹林和患者GI病史之间的关联，本章完全没有涉及。",
+   "bcEn": "BC's Aspirin (ASA) monograph explicitly excludes 'Active peptic ulcer or gastrointestinal bleeding,' and the Ibuprofen monograph excludes 'Active GI hemorrhage or ulcers.' Practical implication: a chest-pain-protocol candidate with a known active PUD/GI-bleed history must NOT receive ASA even with classic cardiac-sounding pain, and a fever/pain patient with that same history should get acetaminophen, not ibuprofen.",
+   "bcZh": "BC阿司匹林（ASA）药物说明明确排除“活动性消化性溃疡或消化道出血”，布洛芬说明排除“活动性消化道出血或溃疡”。实操含义：即使胸痛表现很典型，已知有活动性PUD/消化道出血病史的患者也绝不能给阿司匹林；同样病史的发热/疼痛患者应改用对乙酰氨基酚而不是布洛芬。",
+   "ref": "BC Provincial Examination Guidelines p.60（Aspirin/ASA）、p.68（Ibuprofen）"
+  }
+ ],
+ "sourcePages": "2977-3044"
+}
