@@ -1,0 +1,607 @@
+{
+ "id": "ch35",
+ "n": 35,
+ "titleEn": "Renal and Urologic Emergencies",
+ "titleZh": "泌尿与肾脏急症",
+ "group": "medical",
+ "examWeight": 2,
+ "whyEn": "This chapter carries a moderate exam weight, but it hides some of the exam's highest-stakes scenario questions: a dialysis patient who missed treatment and is drifting into hyperkalemic cardiac arrest, a stem built around protecting an AV fistula, a renal-colic pain-management decision, or a sudden-onset scrotal-pain stem testing whether you recognize testicular torsion as time-critical. The chapter also trains you to read renal and urologic complaints as potential systemic illness — infection, obstruction, and fluid/electrolyte imbalance can all masquerade as just local pain.",
+ "whyZh": "本章考试权重中等，但它藏着几道高分值场景题：漏做透析、正滑向高钾血症性心脏骤停的患者；围绕保护动静脉瘘展开的题干；肾绞痛镇痛决策题；或用突发阴囊疼痛来测试你是否认得出睾丸扭转是分秒必争的急症。这一章真正训练的是把肾脏与泌尿系统主诉当成潜在的系统性疾病来读——感染、梗阻和液体电解质紊乱都可能伪装成只是局部疼痛。",
+ "competencies": {
+  "areas": [
+   "Area 2: Communication",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "2.4.b",
+   "4.3.a",
+   "4.3.b",
+   "4.3.h",
+   "5.3.a",
+   "5.3.d",
+   "5.5.c",
+   "5.5.d",
+   "5.5.o",
+   "5.5.q",
+   "5.8.a",
+   "5.8.b",
+   "6.1.d",
+   "6.1.l",
+   "6.3.a",
+   "6.3.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: The Scale of Kidney Disease",
+   "titleZh": "概论：肾脏疾病的规模",
+   "points": [
+    {
+     "en": "The kidneys run two jobs at once — acting like an accounting office that keeps electrolytes, water, and blood pH balanced, and like a treatment plant that clears metabolic waste, drug breakdown products, and excess fluid — together filtering about 200 L of blood every single day.",
+     "zh": "肾脏同时干两份工作：像账房一样维持电解质、水分和血液酸碱度的平衡，又像污水处理厂一样清除代谢废物、药物代谢产物和多余水分，两项工作合计每天要过滤大约200升血液。",
+     "hard": true
+    },
+    {
+     "en": "In Canada, an average of 15 people are newly diagnosed with kidney failure every day, new diagnoses climb roughly 7% each year, and close to 43,200 Canadians are currently being treated for it.",
+     "zh": "在加拿大，平均每天有15人被新诊断为肾衰竭，新增诊断数每年约增长7%，目前全国约有43,200人正在接受肾衰竭治疗。",
+     "hard": true
+    },
+    {
+     "en": "Dialysis care and post-transplant management cost the Canadian health system roughly $2.6 billion a year, and kidney disease itself drives up the risk of cardiovascular disease (including hypertension) and other chronic conditions that shorten life expectancy.",
+     "zh": "透析治疗和肾移植后管理每年给加拿大医疗系统带来约26亿加元的支出，而肾脏疾病本身还会推高心血管疾病（包括高血压）及其他缩短寿命的慢性病风险。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy and Physiology: From Nephron to Hormones",
+   "titleZh": "解剖生理：从肾单位到激素调节",
+   "points": [
+    {
+     "en": "The bean-shaped kidneys sit retroperitoneally, spanning roughly the 12th thoracic to 3rd lumbar vertebra, with the right kidney slightly lower than the left because it has to make room for the liver; the medial concave notch (the hilum) is where the renal artery, vein, ureter, lymphatics, and nerves all enter and exit.",
+     "zh": "两个豆形肾脏位于腹膜后间隙，大致跨越第12胸椎到第3腰椎水平；右肾因为要给肝脏让位置，比左肾略低。肾脏内侧凹陷处叫肾门，是肾动脉、肾静脉、输尿管、淋巴管和神经共同出入的通道。",
+     "hard": true
+    },
+    {
+     "en": "Internally the kidney has three zones: the outer cortex, the medulla (home to the cone-shaped renal pyramids and the renal columns between them), and the funnel-shaped renal pelvis, which collects urine through the major and minor calyces before it drains into the ureter.",
+     "zh": "肾脏内部分为三个区域：外层的皮质、内层的髓质（内含锥形的肾锥体，以及锥体间的肾柱），以及漏斗状的肾盂——尿液经大小肾盏汇集到肾盂后再流入输尿管。",
+     "hard": false
+    },
+    {
+     "en": "About one-quarter of the body's entire cardiac output passes through the kidneys every minute; blood enters via the renal artery, branches into afferent arterioles feeding the glomerulus (the kidney's main filter), then exits through efferent arterioles into a second, unique capillary bed — the peritubular capillaries — found nowhere else in the body.",
+     "zh": "人体大约四分之一的心输出量每分钟都要流经肾脏。血液经肾动脉进入，分支为入球小动脉供应肾小球（肾脏的主要过滤器），再经出球小动脉流入第二套毛细血管网——管周毛细血管，这种双毛细血管床结构是全身唯一仅见于肾脏的安排。",
+     "hard": true
+    },
+    {
+     "en": "Each kidney packs roughly 1.25 million nephrons — its structural and functional units — and each nephron is built from a glomerulus, the surrounding Bowman capsule, the proximal convoluted tubule, the loop of Henle, and the distal convoluted tubule.",
+     "zh": "每个肾脏大约含有125万个肾单位，即肾脏的结构与功能基本单位；每个肾单位由肾小球、包绕它的肾小囊（鲍曼囊）、近曲小管、髓袢（亨勒袢）和远曲小管组成。",
+     "hard": true
+    },
+    {
+     "en": "Special foot-shaped cells called podocytes wrap around the glomerular capillaries to form filtration slits; this filtration membrane lets water, salts, glucose, and wastes pass through but blocks large molecules such as plasma proteins — which is why protein showing up in the urine signals a problem.",
+     "zh": "肾小球毛细血管外包裹着形似脚掌的足细胞，共同形成滤过裂隙、构成滤过膜；这层膜允许水、盐、葡萄糖和代谢废物通过，却拦下血浆蛋白等大分子——这也是为什么尿液中出现蛋白质意味着有问题。",
+     "hard": false
+    },
+    {
+     "en": "The glomerular filtration rate (GFR) — the volume of filtrate produced per minute — normally holds steady around 125 mL/min in a healthy adult; most renal emergencies encountered in the field trace back to a change in this number.",
+     "zh": "肾小球滤过率（GFR，每分钟生成的滤液量）在健康成年人中通常稳定维持在约125 mL/分钟；院前遇到的多数肾脏急症，追根溯源都是这个数值出了变化。",
+     "hard": true
+    },
+    {
+     "en": "By the time filtrate reaches the distal convoluted tubule, about 80% of the water and 85% of the solutes originally pushed out of the glomerulus have already been reabsorbed back into the body; the final fine-tuning of urine composition happens in the DCT and collecting duct.",
+     "zh": "滤液流到远曲小管时，最初从肾小球滤出的水分中约80%、溶质中约85%已经被重新吸收回体内；尿液成分的最后微调则发生在远曲小管和集合管。",
+     "hard": true
+    },
+    {
+     "en": "The juxtaglomerular apparatus — pressure-sensing cells on the efferent arteriole plus chemical-sensing macula densa cells in the DCT — releases renin when blood pressure or filtrate content drops. This kicks off the renin-angiotensin cascade: angiotensin II constricts arterioles throughout the body (raising blood pressure) and boosts sodium — and therefore water — reabsorption in the proximal tubule.",
+     "zh": "球旁器由出球小动脉上感知压力的球旁细胞、和远曲小管上感知化学成分的致密斑细胞组成；当血压下降或滤液成分异常时，球旁细胞释放肾素，启动肾素-血管紧张素级联反应：血管紧张素II使全身小动脉收缩（升高血压），并增强近曲小管对钠（进而带动水）的重吸收。",
+     "hard": false
+    },
+    {
+     "en": "ADH (vasopressin, made in the hypothalamus and stored in the posterior pituitary) makes the DCT/collecting duct more permeable to water whenever blood solute concentration rises, pulling water back into the bloodstream; aldosterone (from the adrenal glands) increases sodium/chloride — and therefore water — reabsorption while pushing more potassium into the urine.",
+     "zh": "抗利尿激素（ADH，又称血管加压素，由下丘脑合成、储存在垂体后叶）在血液溶质浓度升高时增加远曲小管和集合管对水的通透性，把水重新拉回血液；醛固酮（由肾上腺分泌）则增强钠、氯（连带水分）的重吸收，同时把更多钾排入尿液。",
+     "hard": false
+    },
+    {
+     "en": "Diuretics raise urine output through different mechanisms: osmotic diuresis happens when an unreabsorbed solute like glucose drags water out with it (as in diabetes); alcohol suppresses ADH release; and drugs such as furosemide (Lasix) block sodium transport in the DCT and collecting ducts.",
+     "zh": "利尿剂通过不同机制增加尿量：渗透性利尿是指未被重吸收的溶质（如糖尿病患者尿中的葡萄糖）把水分一起带出体外；酒精通过抑制ADH释放来利尿；呋塞米（速尿）等药物则直接阻断远曲小管和集合管对钠的转运。",
+     "hard": false
+    },
+    {
+     "en": "The female urethra (about 4 cm) is far shorter than the male urethra (about 20 cm, running through prostatic, membranous, and spongy segments) — that anatomical gap is the main reason UTIs are so much more common in women.",
+     "zh": "女性尿道（约4厘米）远短于男性尿道（约20厘米，分前列腺部、膜部和海绵体部三段）——这个解剖学差距正是女性尿路感染远比男性常见的主要原因。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Urinary Tract Infections and Kidney Stones",
+   "titleZh": "尿路感染与肾结石",
+   "points": [
+    {
+     "en": "Most UTIs start in the lower tract when normal skin/perineal bacteria climb the urethra; women get them far more often because of the short urethra's closeness to the vagina and rectum. Left untreated, a lower UTI can ascend into pyelonephritis (kidney-lining infection) and, in severe cases, urosepsis.",
+     "zh": "大多数尿路感染起于下尿路，因为存在于会阴部的正常细菌逆行爬入尿道；女性因尿道短、且离阴道和直肠近，发病率远高于男性。下尿路感染若不治疗，可上行发展为肾盂肾炎（肾脏内壁感染），严重时甚至发展为尿源性脓毒症。",
+     "hard": false
+    },
+    {
+     "en": "Classic lower-UTI symptoms are dysuria (painful urination), frequency, and urgency, sometimes with hematuria or foul, cloudy urine; a UTI that's climbed to the kidney (pyelonephritis) adds flank pain plus systemic signs — fever, chills, and hemodynamic instability.",
+     "zh": "典型下尿路感染表现为排尿疼痛（尿痛）、尿频和尿急，有时伴血尿或尿液浑浊有异味；一旦感染上行到肾脏（肾盂肾炎），还会出现肋腹部疼痛加上发热、寒战、血流动力学不稳定等全身表现。",
+     "hard": false
+    },
+    {
+     "en": "In an elderly patient a UTI can show none of the classic urinary symptoms at all — just vague weakness and new confusion. Any older patient with unexplained altered mental status should be screened for a possible UTI.",
+     "zh": "老年患者尿路感染有时完全不表现出典型泌尿系统症状，只表现为莫名乏力和新发意识混乱。任何出现不明原因意识改变的老年患者，都应把尿路感染纳入排查范围。",
+     "hard": false
+    },
+    {
+     "en": "UTI field care is mostly supportive — position of comfort, and an IV fluid bolus with perfusion support if sepsis is suspected (this both supports circulation and helps flush/dilute the urinary tract) — analgesics are rarely needed since breathing and relaxation techniques usually control the discomfort.",
+     "zh": "尿路感染的院前处置以支持治疗为主：让患者采取舒适体位；若怀疑脓毒症则给予静脉补液支持灌注（这既能稳定循环，也有助于冲洗稀释尿路）；镇痛药通常不需要，呼吸放松技巧一般就能控制不适。",
+     "hard": false
+    },
+    {
+     "en": "Up to about 80% of kidney stones are calcium oxalate or calcium phosphate; uric acid and cystine stones are less common, and struvite stones — more common in women — are linked to chronic UTI or frequent catheterization. Risk climbs with a personal/family stone history, hypertension, gout, and gastric bypass surgery.",
+     "zh": "约多达80%的肾结石属于草酸钙或磷酸钙结石；尿酸结石和胱氨酸结石较少见；鸟粪石（磷酸铵镁）结石在女性中更常见，常与慢性尿路感染或频繁导尿有关。个人/家族结石史、高血压、痛风和胃旁路手术史都会推高发病风险。",
+     "hard": true
+    },
+    {
+     "en": "Classic renal-colic pain starts as vague flank discomfort, sharpens dramatically within about 30-60 minutes, and migrates forward toward the groin as the stone travels down the ureter. Many patients rate it as the worst pain of their life, and restless pacing (the kidney-stone dance) is a recognizable clue.",
+     "zh": "典型肾绞痛先表现为隐约的肋腹部不适，约30到60分钟内会急剧加重变成锐痛，并随结石沿输尿管下移而向腹股沟方向放射。许多患者形容这是此生最痛的经历，坐立不安、来回踱步（俗称肾结石舞）是一个可辨认的线索。",
+     "hard": true
+    },
+    {
+     "en": "Two once-common beliefs about renal colic are now known to be wrong: giving analgesia does not obscure the diagnosis (so treat pain early rather than confirming first), and IV fluid boluses do not speed stone passage — they can actually worsen the pain — so reserve IV fluids for medication delivery or genuine hypotension.",
+     "zh": "关于肾绞痛的两个曾经流行的说法已被证实是错的：镇痛不会掩盖诊断（所以应尽早止痛，而不是先确诊再治疗）；静脉补液也不会加快结石排出，反而可能加重疼痛，因此静脉补液只在需要给药或确有低血压时才使用。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Acute Kidney Injury and Chronic Kidney Disease",
+   "titleZh": "急性肾损伤与慢性肾病",
+   "points": [
+    {
+     "en": "Acute kidney injury (AKI) is a sudden drop (over hours to days) in glomerular filtration that lets toxins build up in the blood, most often triggered by sepsis. About 5-6% of ICU admissions involve an AKI, ICU mortality with AKI runs 50-60%, but the condition is reversible with timely treatment — survivors have roughly a 1-in-8 chance of needing long-term dialysis.",
+     "zh": "急性肾损伤（AKI）指肾小球滤过功能突然（数小时到数天内）下降、导致毒素在血液中蓄积，最常见的诱因是脓毒症。约5%-6%的ICU住院患者合并AKI，AKI相关的ICU死亡率高达50%-60%，但若能及时诊治，这个病是可逆的——幸存者中约每8人有1人最终需要长期透析。",
+     "hard": true
+    },
+    {
+     "en": "Oliguria means urine output under 500 mL/day; anuria means urine production stops entirely. Left untreated, AKI can progress to volume overload, hyperkalemia, uremia, and metabolic acidosis.",
+     "zh": "少尿指每日尿量低于500毫升；无尿指尿液生成完全停止。AKI若不处理，可进展为容量过负荷、高钾血症、尿毒症和代谢性酸中毒。",
+     "hard": true
+    },
+    {
+     "en": "AKI splits into three patterns by location, each with its own clue set: prerenal (poor kidney perfusion — hypotension, tachycardia, dizziness, thirst; often reversible once perfusion is restored), intrarenal (direct damage inside the kidney — flank pain, joint pain, oliguria, hypertension, headache, confusion, seizure), and postrenal (blocked outflow — pain in the lower flank/abdomen/groin/genitals, oliguria, distended bladder, hematuria, peripheral edema).",
+     "zh": "AKI按病变部位分三型，各有各的线索：肾前性（肾脏灌注不足——低血压、心动过速、头晕、口渴；一旦恢复灌注往往可逆）、肾性（肾脏本身直接受损——肋腹痛、关节痛、少尿、高血压、头痛、意识混乱、抽搐）、肾后性（尿液排出受阻——下肋腹/腹部/腹股沟/生殖器疼痛、少尿、膀胱膨胀、血尿、外周水肿）。",
+     "hard": false
+    },
+    {
+     "en": "Typical triggers by type: prerenal — hypovolemia, trauma, shock, sepsis, heart failure; intrarenal — immune-mediated disease, acute tubular necrosis from hypoperfusion or toxins (heavy metals), rhabdomyolysis (released myoglobin damages the tubules), or interstitial nephritis from drugs (antibiotics, chemotherapy agents), alcohol, or cocaine; postrenal — urethral blockage from an enlarged prostate, stones, clots, or strictures, which raises back-pressure until filtration stops.",
+     "zh": "各型常见诱因：肾前性——低血容量（出血或脱水）、创伤、休克、脓毒症、心力衰竭；肾性——免疫介导疾病、灌注不足或毒素（重金属）引起的急性肾小管坏死、横纹肌溶解（肌红蛋白损伤肾小管），或药物（抗生素、化疗药）、酒精、可卡因引起的间质性肾炎；肾后性——前列腺增生、结石、血块或狭窄阻塞尿道，逆压升高直至滤过停止。",
+     "hard": false
+    },
+    {
+     "en": "Chronic kidney disease (CKD) is progressive, irreversible nephron loss developing over months to years; more than half of all cases trace back to diabetes or hypertension, with congenital disease and chronic pyelonephritis as other causes. As nephrons die off, the kidney tissue scars and shrinks.",
+     "zh": "慢性肾病（CKD）是肾单位进行性、不可逆的丧失，病程发展需数月到数年；超过一半的病例源于糖尿病或高血压，先天性疾病和慢性肾盂肾炎是另外的病因。随着肾单位不断死亡，肾脏组织逐渐瘢痕化、萎缩。",
+     "hard": true
+    },
+    {
+     "en": "Both AKI and CKD raise blood urea (uremia) and nitrogenous waste (azotemia), driving hypertension, heart failure, anemia, and electrolyte imbalance; CKD in particular can add uremic frost on the skin, itching, muscle twitching, and increased thirst.",
+     "zh": "AKI和CKD都会导致血液中尿素（尿毒症）和含氮废物（氮质血症）升高，进而引起高血压、心力衰竭、贫血和电解质紊乱；CKD患者还常出现皮肤尿素霜、瘙痒、肌肉抽搐和口渴加重。",
+     "hard": false
+    },
+    {
+     "en": "Kidney disease impairs the body's ability to metabolize and excrete medications, so drug effects can last longer and hit harder than expected — avoid giving nonessential medications to a CKD patient unless your protocol specifically allows it or medical control directs it.",
+     "zh": "肾脏疾病会削弱身体代谢和排泄药物的能力，导致药效比预期更强、更持久——除非protocol明确允许或医疗指导下令，否则应避免给CKD患者使用非必要药物。",
+     "hard": false
+    },
+    {
+     "en": "Field management for AKI/CKD centers on supporting the ABCs: supplemental oxygen (with BVM support if needed) for hypoxia, supine positioning for the hypotensive patient to support brain/organ perfusion only if there's no pulmonary edema, and a cautious fluid bolus for shock (following the standard 20 mL/kg-to-2 L rule) since these patients tip into volume overload easily — watch closely for hyperkalemic ECG changes and involve medical control.",
+     "zh": "AKI/CKD的院前处置以支持ABC为核心：缺氧时给氧（必要时球囊面罩辅助）；低血压患者在无肺水肿的前提下取平卧位以支持脑与重要器官灌注；怀疑休克时谨慎给予补液（遵循20 mL/kg、上限2升的标准规则），因为这类患者极易发生容量过负荷——同时密切留意高钾血症相关心电图改变，并联系医疗指导。",
+     "hard": true
+    },
+    {
+     "en": "Because impaired clearance makes many drugs — especially antibiotics and analgesics — build up to toxic levels in AKI, consult medical control before continuing an antibiotic or analgesic infusion in a patient with suspected AKI.",
+     "zh": "由于清除能力受损，许多药物（尤其是抗生素和镇痛药）在AKI患者体内容易蓄积到中毒水平——若怀疑患者有AKI且正在输注抗生素或镇痛药，应先联系医疗指导再决定是否继续。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Dialysis and Its Emergencies",
+   "titleZh": "透析与透析相关急症",
+   "points": [
+    {
+     "en": "Dialysis substitutes for failed kidneys by filtering out toxins, removing excess fluid, and rebalancing electrolytes; it's used for severe AKI or end-stage CKD. Peritoneal dialysis lets dialysis fluid dwell in the abdominal cavity for 4-6 hours so waste diffuses across the peritoneal membrane — effective, but it carries a real risk of peritonitis and demands strict aseptic technique. Hemodialysis instead pumps the patient's blood through an external filter machine.",
+     "zh": "透析用来替代衰竭的肾脏——过滤毒素、清除多余水分、重新平衡电解质，适用于重度AKI或终末期CKD。腹膜透析让透析液在腹腔内停留4到6小时，让废物经腹膜弥散进入透析液，效果好但有腹膜炎风险，必须严格无菌操作。血液透析则是把患者的血液泵入体外的滤过机器过滤。",
+     "hard": true
+    },
+    {
+     "en": "Hemodialysis vascular access comes in several forms: an AV fistula (a surgical vein-artery connection, usually in the forearm/upper arm, that bulges under the skin), an AV graft, external shunts (a Scribner shunt uses two tubes joined near the wrist between the radial artery and cephalic vein; a Thomas shunt is similar but placed in the groin), or a Hemasite — a button-shaped device with a puncturable rubber septum, usually in the upper arm or thigh.",
+     "zh": "血液透析的血管通路有多种形式：动静脉瘘（外科手术连接静脉与动脉，多在前臂/上臂，皮下可摸到搏动隆起）、动静脉人工血管、外置分流管（Scribner分流管在桡动脉和头静脉各接一根管子、在腕部连接；Thomas分流管类似但置于腹股沟），或Hemasite——一种带可穿刺橡胶隔膜的纽扣状装置，常置于上臂或大腿近端。",
+     "hard": false
+    },
+    {
+     "en": "Never take a blood pressure or start a peripheral IV on the arm with an AV fistula or shunt — even a few minutes of impaired flow can trigger a thrombosis in that access, and IV catheterization risks introducing infection or damaging a vein that may be needed for future access.",
+     "zh": "绝不要在带有动静脉瘘或分流管的手臂上测血压或建立外周静脉通路——哪怕只是短暂几分钟的血流受阻，也可能诱发通路血栓；而静脉穿刺还可能引入感染，或损伤日后可能需要用来建立新通路的血管。",
+     "hard": false
+    },
+    {
+     "en": "Chronic hemodialysis patients typically dialyze every 2-3 days for 3-5 hours a session — in hospital, a community dialysis center, or at home. Home patients and their trained caregivers usually understand their own equipment better than the crew does, so ask them directly if a machine problem comes up.",
+     "zh": "长期血液透析患者通常每2到3天透析一次，每次持续3到5小时——地点可以是医院、社区透析中心或家中。居家透析的患者及其受过训练的照护者往往比急救员更懂自己的设备，机器出问题时应直接向他们请教。",
+     "hard": true
+    },
+    {
+     "en": "Hyperkalemia is the deadliest dialysis-patient complication: missed treatments let potassium build up because the injured kidneys can't excrete it, and the ECG changes are progressive and predictable — first tall, peaked T waves, then the P wave flattens and widens until it disappears, then the QRS widens until the tracing looks like a sine wave, which can evolve into an idioventricular rhythm, complete heart block, or asystole.",
+     "zh": "高钾血症是透析患者最致命的并发症：一旦漏做透析，受损肾脏无法排钾，血钾就会蓄积，心电图会出现一套可预测的渐进性改变——先是T波高尖，接着P波变平变宽直至消失，再到QRS波增宽直至图形呈正弦波样，最终可能演变为室性自主心律、完全性房室传导阻滞甚至心脏停搏。",
+     "hard": true
+    },
+    {
+     "en": "Any dialysis patient presenting with severe generalized muscle weakness plus these ECG changes should be treated as hyperkalemic until proven otherwise — especially if they've missed a recent session — and the receiving hospital should be notified early so they can prepare.",
+     "zh": "任何透析患者若出现明显全身肌无力、合并上述心电图改变，尤其是近期漏做过透析，都应按高钾血症对待，直到证明并非如此——并应尽早通知接收医院提前做好准备。",
+     "hard": false
+    },
+    {
+     "en": "Hypokalemia can also happen, typically right after an overly aggressive dialysis session, and tends to cause hypotension with bradycardia (or, less often, a long QT that predisposes to torsades de pointes) rather than the hyperkalemic ECG pattern. There's no prehospital fix for the potassium level itself — just treat the resulting dysrhythmia if it's hemodynamically unstable.",
+     "zh": "低钾血症也可能发生，通常出现在透析过强之后，往往表现为低血压合并心动过缓（少数情况下QT间期延长、诱发尖端扭转型室速），而不是高钾血症那套心电图改变。院前没有直接纠正血钾的手段——只在心律失常造成血流动力学不稳定时按常规处理。",
+     "hard": false
+    },
+    {
+     "en": "Disequilibrium syndrome occurs because dialysis drops blood urea faster than cerebrospinal fluid urea, so water shifts osmotically into the CSF and raises intracranial pressure — causing nausea, vomiting, headache, and confusion that usually resolves within hours as the levels re-equilibrate. Because dialysis patients are also prone to subdural hematoma, don't assume it's just disequilibrium syndrome — transport for a full neurologic evaluation.",
+     "zh": "失衡综合征的机制是：透析使血液中的尿素浓度下降速度快于脑脊液，水分因渗透压差从血液转移进入脑脊液，导致颅内压升高，出现恶心、呕吐、头痛和意识混乱，通常在数小时内随两侧浓度重新平衡而缓解。但由于透析患者本身也容易发生硬膜下血肿，不能想当然认为只是失衡综合征——应转运做完整的神经系统评估。",
+     "hard": false
+    },
+    {
+     "en": "Air embolism can enter through a loose dialysis line connection, causing sudden dyspnea, hypotension, and cyanosis — clamp and disconnect the patient from the machine immediately, then position them left-lateral recumbent with about 10° of head-down tilt to trap the air in the right heart, away from the lungs.",
+     "zh": "透析管路接口松脱可能让空气进入血管系统，引起突发呼吸困难、低血压和发绀——应立即夹闭并断开患者与透析机的连接，再让患者取左侧卧位、头低脚高约10度，把空气困在右心内、阻止其进入肺循环。",
+     "hard": true
+    },
+    {
+     "en": "A leaking shunt connection can sometimes just be tightened; if it's disconnected at the vein, clamp the cannula and take the patient off the machine. Deliberately opening one's own cannula is a recognized method of self-harm in this population — if you find this, clamp immediately and apply direct pressure, remembering these patients have often endured years of difficult treatment just to survive.",
+     "zh": "分流管接口渗漏有时只需拧紧即可；若在静脉端脱开，应夹闭插管并让患者脱离透析机。在这个人群中，故意打开自己的插管是已知的自伤方式之一——一旦发现，应立即夹闭并直接加压止血，同时记住这些患者往往已经忍受了多年艰难治疗才活到现在。",
+     "hard": false
+    },
+    {
+     "en": "Dialysis patients face the same illness spectrum as anyone else but are especially prone to sudden intradialytic hypotension (watch for lightheadedness, confusion, and excessive yawning — it can progress to cardiac arrest if missed), pericarditis, cardiac tamponade, and heart failure driven by fluid overload between sessions.",
+     "zh": "透析患者可能罹患的疾病谱和普通人一样，但他们特别容易出现透析中突发低血压（表现为头晕、意识混乱、异常打哈欠，漏诊可能进展为心脏骤停）、心包炎、心脏压塞，以及两次透析间期因液体过负荷引发的心力衰竭。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Genitourinary Trauma",
+   "titleZh": "泌尿生殖系统创伤",
+   "points": [
+    {
+     "en": "Genitourinary trauma (kidneys, ureters, bladder, urethra, reproductive organs) shows up in 10-20% of major trauma patients and 2-5% of all trauma patients, with the kidney involved in about 80% of all GU injuries — suspect it with any trauma to the lower ribs, abdomen, pelvis, or upper legs.",
+     "zh": "泌尿生殖系统创伤（肾脏、输尿管、膀胱、尿道、生殖器官）出现在10%-20%的重大创伤患者和2%-5%的全部创伤患者中，其中约80%的泌尿生殖损伤涉及肾脏——凡是下肋骨、腹部、骨盆或大腿上段受伤，都应怀疑合并泌尿生殖损伤。",
+     "hard": true
+    },
+    {
+     "en": "Kidney injury itself appears in under 5% of all trauma patients (about 75% of them younger than 45) because the ribcage, abdominal muscle, and perinephric fat protect it well — it usually takes major force (falls from height, high-speed collisions, contact-sport kidney punches) to injure. The classic sign is flank pain with hematuria, often not obvious until an ED workup, so suspect it with flank/lower-rib bruising or rib fractures.",
+     "zh": "肾脏创伤本身只出现在不到5%的全部创伤患者中（其中约75%小于45岁），因为肋骨、腹壁肌肉和肾周脂肪对肾脏保护良好，通常需要较大暴力（高处坠落、高速碰撞、接触性运动中的肾区撞击）才会造成损伤。典型表现是肋腹痛合并血尿，往往到急诊检查才被发现——遇到肋腹部/下肋骨挫伤或肋骨骨折时应提高警惕。",
+     "hard": true
+    },
+    {
+     "en": "Penetrating renal trauma (stab or gunshot) commonly damages nearby organs too — liver, lung, spleen; an upward stab wound can lacerate the kidney and cause a pneumothorax in the same motion. Field care follows standard abdominal-trauma principles: control external bleeding, treat for shock, and give IV fluids per local protocol only if resuscitation is truly needed.",
+     "zh": "穿透性肾脏创伤（刺伤或枪伤）常合并邻近器官损伤——肝、肺、脾；由下往上的刺伤动作可能同时造成肾裂伤和气胸。院前处理遵循标准腹部创伤原则：控制外部出血、按休克处理，仅在确实需要复苏时按当地protocol给予静脉补液。",
+     "hard": false
+    },
+    {
+     "en": "Ureteral injuries are almost impossible to identify in the field but rarely cause immediate life threat on their own. Bladder/urethral injury is different — suspect it with a pelvic fracture, lower-abdomen seatbelt bruising, or a patient who can't urinate, has blood at the penile opening, or has suprapubic tenderness; bladder rupture carries high mortality because it usually accompanies major organ/vascular damage and can spill urine into the abdominal cavity.",
+     "zh": "输尿管损伤在院前几乎无法识别，但单独发生时很少造成即刻生命威胁。膀胱/尿道损伤则不同——出现骨盆骨折、安全带压迫下腹部瘀伤，或患者无法排尿、尿道口见血、耻骨上区压痛时都应怀疑；膀胱破裂死亡率高，因为造成破裂的暴力往往同时损伤重要器官或血管，且尿液可能外溢入腹腔。",
+     "hard": false
+    },
+    {
+     "en": "A testicle deprived of blood flow by torsion (twisting on its own cord) is a true time-critical urologic emergency, not just a trauma finding — the sooner circulation is surgically restored, the better the chance of saving the testicle. Any male with sudden, severe unilateral scrotal or groin pain needs urgent transport, whether or not trauma was involved.",
+     "zh": "睾丸扭转（自身精索发生扭转导致血供中断）是一种真正争分夺秒的泌尿系统急症，而不仅仅是创伤表现——外科手术恢复血流的时间越早，保住睾丸的机会就越大。任何男性突发严重单侧阴囊或腹股沟疼痛，无论是否有外伤史，都需要紧急转运。",
+     "hard": false
+    },
+    {
+     "en": "Blunt testicular trauma can cause a simple contusion, a testicular rupture (tear of the tunica albuginea), or torsion; more than half of all testicular ruptures happen in sports participants. Tender scrotal swelling after trauma should raise suspicion even though rupture is hard to confirm in the field — don't dismiss testicular pain just because there's other, more obvious trauma, since intrascrotal bleeding can progress to pressure necrosis.",
+     "zh": "钝性睾丸创伤可造成单纯挫伤、睾丸破裂（白膜撕裂）或扭转；超过一半的睾丸破裂发生在运动参与者身上。创伤后出现触痛性阴囊肿胀应提高警惕，尽管院前很难确诊破裂——不要因为身上还有其他更明显的外伤就忽视睾丸疼痛，因为阴囊内出血可能进展为压迫性组织坏死。",
+     "hard": true
+    },
+    {
+     "en": "Priapism (a sustained, painful erection unrelated to arousal) is most often caused by erectile-dysfunction drugs or spinal cord injury; a fractured penis (tunica albuginea rupture) happens when an erect penis is forcefully bent, causing sudden pain and a large hematoma. Never try to remove a constricting object or foreign body from the genitals in the field — that risks tissue death; transport for definitive removal instead.",
+     "zh": "阴茎异常勃起（与性唤起无关的持续性痛性勃起）最常见的原因是勃起功能障碍药物或脊髓损伤；阴茎骨折（白膜撕裂）则发生在勃起状态下被强行弯折时，表现为突发疼痛和明显血肿。切勿在现场尝试取出缠绕生殖器的束缚物或异物——这可能造成组织坏死，应转运至医院做确定性处理。",
+     "hard": false
+    },
+    {
+     "en": "Pediatric penile injury is sometimes caused by a falling toilet seat, but should always raise the possibility of abuse and prompt transport for full evaluation.",
+     "zh": "儿童阴茎损伤有时是马桶盖突然掉落压伤所致，但都应同时考虑虐待的可能，并转运做全面评估。",
+     "hard": false
+    },
+    {
+     "en": "Vaginal/reproductive trauma can be blunt (motor vehicle collisions, straddle injuries such as landing on a bike seat) or penetrating (stabbing, gunshot). Look for hematoma/bruising of the lower pelvis and external genitalia, vaginal bleeding, and suprapubic tenderness; never attempt to remove an object from the vagina in the field — transport for hospital removal.",
+     "zh": "阴道/生殖系统创伤可为钝性（车祸、跨骑伤如摔坐在自行车座上）或穿透性（刺伤、枪伤）。评估要点包括下骨盆和外生殖器的血肿/瘀斑、阴道出血和耻骨上区压痛；切勿在现场尝试取出阴道内异物——应转运至医院处理。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Assessment and General Field Principles",
+   "titleZh": "评估要点与现场处置原则",
+   "points": [
+    {
+     "en": "Renal/urologic pain is usually visceral pain arising from stretch receptors in hollow structures (ureters, bladder, urethra) — it's poorly localized because only a few nerve fibers carry the signal, and it often refers to a different body region (e.g., bladder pain felt as low-back pain) because those fibers share spinal pathways with other organs.",
+     "zh": "肾脏/泌尿系统疼痛通常是内脏痛，来自输尿管、膀胱、尿道等空腔结构的牵张感受器——因为传导信号的神经纤维数量少，定位往往不精确，还常常放射到身体的另一个部位（比如膀胱疼痛被感知为腰背痛），原因是这些纤维和其他脏器共用了脊髓通路。",
+     "hard": false
+    },
+    {
+     "en": "Use SAMPLE and OPQRST systematically — about 80% of medical diagnoses rest on history alone, and the difference between pain started in the flank and pain is now in the right lower quadrant can be the difference between correctly suspecting a kidney stone and wrongly suspecting appendicitis.",
+     "zh": "系统地使用SAMPLE和OPQRST问诊法——大约80%的医学诊断依靠病史获得，而疼痛最初起于肋腹部和疼痛现在位于右下腹这两句话的区别，可能就是正确怀疑肾结石、还是误诊为阑尾炎的分水岭。",
+     "hard": true
+    },
+    {
+     "en": "Two classic body-language clues: a patient who can't stop shifting position or pacing (the kidney-stone dance) suggests colic, while one lying rigid and still with knees drawn up suggests peritonitis — either pattern makes the abdominal exam harder to interpret.",
+     "zh": "两个经典的体态线索：坐立难安、不停变换姿势甚至来回踱步（俗称肾结石舞）提示绞痛；蜷膝僵卧、一动不动则提示腹膜炎——这两种表现都会让腹部触诊变得更难判读。",
+     "hard": false
+    },
+    {
+     "en": "Get serial vital signs at least every 5 minutes whenever renal failure is suspected, and put every renal patient on a cardiac monitor — electrolyte shifts hit the heart fast, so any deterioration in vitals, rhythm, or level of consciousness calls for prompt action.",
+     "zh": "一旦怀疑肾衰竭，应至少每5分钟测一次生命体征，并给每位肾脏患者接上心电监护——电解质紊乱对心脏的影响来得很快，生命体征、心律或意识水平任何一项恶化都要立即处理。",
+     "hard": true
+    },
+    {
+     "en": "Withhold anything by mouth from a patient with a suspected urologic emergency, since oral intake may provoke vomiting or complicate an upcoming surgical procedure.",
+     "zh": "对疑似泌尿系统急症的患者应禁止经口进食进水，因为口服摄入可能诱发呕吐或影响接下来的外科手术。",
+     "hard": false
+    },
+    {
+     "en": "Pheochromocytoma (an adrenal tumor that floods the body with epinephrine/norepinephrine, malignant in under 10% of cases) can mimic many other emergencies — episodic hypertension, anxiety, chest/abdominal pain, fatigue, weight loss, vision changes, even seizures that grow more frequent and severe over time. Keep it on the differential for unexplained, episodic hypertensive spells.",
+     "zh": "嗜铬细胞瘤（肾上腺肿瘤，向体内大量释放肾上腺素/去甲肾上腺素，恶性比例不到10%）可以模仿很多其他急症——阵发性高血压、焦虑、胸腹痛、乏力、体重下降、视觉异常，甚至发作频率和严重程度会逐渐加重的抽搐。遇到不明原因的阵发性高血压危象，应把它纳入鉴别诊断。",
+     "hard": true
+    },
+    {
+     "en": "If an emergency needs a procedure beyond your scope (removing a blocked urinary catheter, adjusting a shunt or fistula), don't attempt it in the field — carry out your treatment plan, transport, and reassess en route rather than delaying transport to fix the device yourself.",
+     "zh": "如果情况需要超出你执业范围的操作（比如拔除堵塞的导尿管、调整分流管或动静脉瘘），不要在现场尝试处理——应执行既定治疗方案，尽快转运，在途中持续再评估，而不是为了自己排查设备而延误转运。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Kidney's daily blood filtration volume",
+   "itemZh": "肾脏每日血液滤过量",
+   "value": "约200升/天"
+  },
+  {
+   "itemEn": "Canada's new kidney-failure diagnosis rate",
+   "itemZh": "加拿大肾衰竭新增诊断速度",
+   "value": "日均15人新诊断，年增约7%，现患约4.32万人"
+  },
+  {
+   "itemEn": "Canadian dialysis/transplant annual cost",
+   "itemZh": "加拿大透析与移植后年支出",
+   "value": "约26亿加元"
+  },
+  {
+   "itemEn": "Renal share of cardiac output",
+   "itemZh": "肾脏血流占心输出量",
+   "value": "约25%（每分钟）"
+  },
+  {
+   "itemEn": "Nephrons per kidney",
+   "itemZh": "每肾肾单位数",
+   "value": "约125万个"
+  },
+  {
+   "itemEn": "Normal GFR",
+   "itemZh": "正常肾小球滤过率（GFR）",
+   "value": "约125 mL/分钟"
+  },
+  {
+   "itemEn": "Reabsorption completed by the DCT",
+   "itemZh": "远曲小管处水与溶质重吸收比例",
+   "value": "水约80%，溶质约85%"
+  },
+  {
+   "itemEn": "Urethra length, female vs male",
+   "itemZh": "男女尿道长度",
+   "value": "女性约4 cm，男性约20 cm"
+  },
+  {
+   "itemEn": "Oliguria and anuria thresholds",
+   "itemZh": "少尿与无尿阈值",
+   "value": "少尿 <500 mL/天；无尿=完全无尿液生成"
+  },
+  {
+   "itemEn": "AKI burden in the ICU",
+   "itemZh": "AKI相关ICU数据",
+   "value": "5%-6%的ICU患者合并AKI；ICU死亡率50%-60%；幸存者约1/8需长期透析"
+  },
+  {
+   "itemEn": "Leading causes of CKD",
+   "itemZh": "CKD主要病因占比",
+   "value": "逾半数由糖尿病或高血压引起"
+  },
+  {
+   "itemEn": "Standard shock fluid-bolus rule",
+   "itemZh": "休克补液标准（BC通用规则）",
+   "value": "20 mL/kg，上限2升，每500 mL复评一次"
+  },
+  {
+   "itemEn": "Peritoneal dialysis fluid dwell time",
+   "itemZh": "腹膜透析液留腹时间",
+   "value": "4-6小时"
+  },
+  {
+   "itemEn": "Chronic hemodialysis schedule",
+   "itemZh": "慢性血液透析频率",
+   "value": "每2-3天一次，每次3-5小时"
+  },
+  {
+   "itemEn": "Hyperkalemia ECG progression",
+   "itemZh": "高钾血症心电图演变顺序",
+   "value": "T波高尖 → P波变平消失 → QRS增宽呈正弦波 → 室性自主心律/完全性传导阻滞/心脏停搏"
+  },
+  {
+   "itemEn": "Dialysis air-embolism positioning",
+   "itemZh": "透析空气栓塞体位",
+   "value": "左侧卧位，头低约10度"
+  },
+  {
+   "itemEn": "GU trauma incidence",
+   "itemZh": "泌尿生殖创伤发生率",
+   "value": "占重大创伤10%-20%、全部创伤2%-5%；肾脏占GU损伤约80%"
+  },
+  {
+   "itemEn": "Renal trauma incidence",
+   "itemZh": "肾脏创伤发生率",
+   "value": "<5%的全部创伤患者，其中约75%年龄<45岁"
+  },
+  {
+   "itemEn": "History's contribution to diagnosis",
+   "itemZh": "病史对诊断的贡献",
+   "value": "约80%的医学诊断依靠病史"
+  },
+  {
+   "itemEn": "Vitals-check frequency when renal failure suspected",
+   "itemZh": "疑似肾衰竭时生命体征监测频率",
+   "value": "至少每5分钟一次"
+  },
+  {
+   "itemEn": "Pheochromocytoma malignancy rate",
+   "itemZh": "嗜铬细胞瘤恶性比例",
+   "value": "<10%"
+  },
+  {
+   "itemEn": "Dominant kidney-stone composition",
+   "itemZh": "肾结石主要成分占比",
+   "value": "至多80%为草酸钙/磷酸钙"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Treating renal-colic pain early does not compromise diagnosis — waiting to confirm the cause first only prolongs suffering for what is often rated the worst pain a patient has ever felt.",
+   "zh": "尽早处理肾绞痛不会妨碍诊断——非要等确诊了才给镇痛，只会让患者继续承受常被形容为此生最痛的煎熬。"
+  },
+  {
+   "en": "A dialysis patient with severe generalized weakness plus any ECG change should be treated as hyperkalemic until proven otherwise — this pairing is the single highest-yield pattern in this whole chapter.",
+   "zh": "透析患者若表现为明显全身乏力、合并任何心电图改变，都应先按高钾血症处理，直到证明并非如此——这个组合是整章里最值得记住的一条线索。"
+  },
+  {
+   "en": "If a home dialysis machine seems to be malfunctioning, ask the patient or their trained caregiver first — they often understand that specific device better than the crew does.",
+   "zh": "居家透析机看似故障时，先问患者本人或受过训练的照护者——他们往往比急救员更懂这台设备。"
+  },
+  {
+   "en": "Gather history and vitals before palpating a tender renal/urologic abdomen — palpation itself can change what you find afterward, and it rarely changes the transport decision anyway.",
+   "zh": "在触诊疑似肾脏/泌尿系统患者的压痛腹部之前，先完成病史采集和生命体征——触诊本身会改变之后的检查发现，而且往往也不会改变转运决定。"
+  },
+  {
+   "en": "Don't delay transport at the scene trying to fix a malfunctioning catheter, shunt, or fistula yourself — execute your treatment plan, transport, and reassess en route.",
+   "zh": "不要为了自己排查故障的导尿管、分流管或动静脉瘘而在现场耽误转运——按既定方案处置、尽快转运，途中持续再评估。"
+  },
+  {
+   "en": "Any elderly patient with unexplained new confusion deserves a UTI screen — it may be the only clue, since classic urinary symptoms are often absent in this age group.",
+   "zh": "任何出现不明原因新发意识混乱的老年患者都值得筛查尿路感染——因为这个年龄段常常缺乏典型泌尿系统症状，这可能是唯一的线索。"
+  },
+  {
+   "en": "Protect the AV fistula/shunt arm on every touch — no blood pressure cuff, no venipuncture, no IV line — a habit worth building before you're rushed on scene.",
+   "zh": "每次接触患者都要保护好带动静脉瘘/分流管的手臂——不测血压、不抽血、不建立静脉通路——这是一个值得在赶时间之前就养成的习惯。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Misconception: flank pain is always a local, low-stakes complaint. Reality: it can be the first sign of a systemic process — infection tracking toward sepsis, obstruction backing up into the kidney, or an AKI already underway.",
+   "zh": "误区：肋腹痛总是局部、不严重的主诉。事实：它可能是系统性问题的第一个信号——感染正走向脓毒症、梗阻正在向肾脏倒灌、或AKI已经在发生。"
+  },
+  {
+   "en": "Misconception: giving pain medication for suspected renal colic will mask the diagnosis. Reality: this has been disproven — early analgesia does not hinder assessment, and withholding it only adds unnecessary suffering.",
+   "zh": "误区：给疑似肾绞痛的患者用止痛药会掩盖诊断。事实：这个说法已被证伪——尽早镇痛不会妨碍评估，拖延止痛只会带来不必要的痛苦。"
+  },
+  {
+   "en": "Misconception: IV fluid boluses help a kidney stone pass faster. Reality: this has also been disproven — aggressive fluids don't speed passage and may worsen the pain; give IV fluids only for medication delivery or true hypotension.",
+   "zh": "误区：静脉大量补液能帮助肾结石更快排出。事实：这同样已被证伪——大量补液不会加快排石，反而可能加重疼痛；静脉补液只应用于给药或确有低血压的情况。"
+  },
+  {
+   "en": "Misconception: a dialysis patient's confusion after treatment is always just disequilibrium syndrome. Reality: dialysis patients are also prone to subdural hematoma, so don't assume — transport for a full neurologic evaluation.",
+   "zh": "误区：透析后患者出现意识混乱，肯定只是失衡综合征。事实：透析患者本身也容易发生硬膜下血肿，不能想当然——应转运做完整的神经系统评估。"
+  },
+  {
+   "en": "Misconception: sudden severe scrotal pain after minor trauma is just a contusion. Reality: it could be testicular torsion or rupture, both of which are time-sensitive and cannot be ruled out in the field — don't dismiss the complaint just because there's a more obvious injury elsewhere.",
+   "zh": "误区：轻微外伤后突发严重阴囊疼痛，应该只是挫伤。事实：也可能是睾丸扭转或破裂，两者都对时间敏感、院前无法排除——不要因为身上有更明显的伤而忽视这个主诉。"
+  },
+  {
+   "en": "Misconception: you should always start the IV and take blood pressure on whichever arm is closest or easiest. Reality: check both arms first for a dialysis shunt or fistula — using that arm risks thrombosis and infection at a lifeline the patient depends on.",
+   "zh": "误区：应该在最顺手、最方便的那侧手臂测血压、建立静脉通路。事实：先检查双臂是否有透析用的分流管或动静脉瘘——用了那侧手臂可能诱发血栓、引入感染，危及患者赖以生存的通路。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "OPQRST 用在肾结石上",
+   "en": "Apply OPQRST to a classic stone case: Onset (sudden, often after activity), Provokes/Palliates (nothing relieves it — the patient paces instead), Quality (vague ache that turns sharp), Region/Radiation (flank moving toward the groin), Severity (often rated as unbearable), Timing (constant but varying in intensity as the stone moves).",
+   "zh": "用OPQRST套一个典型肾结石病例：O(起病)常突然，可能活动后诱发；P(诱因/缓解)几乎没有任何体位能缓解，患者只能来回踱步；Q(性质)从隐痛发展为锐痛；R(部位/放射)从肋腹部向腹股沟放射；S(程度)患者常形容为无法忍受；T(时间)持续存在但随结石移动而强度变化。"
+  },
+  {
+   "name": "肾前-肾-肾后：一条排水管的三段",
+   "en": "Picture AKI like a clogged drainpipe: prerenal = not enough water reaching the pipe (poor blood supply), intrarenal = the pipe itself is damaged, postrenal = something is blocking the pipe downstream. Knowing which segment is broken tells you what to expect and whether it's reversible.",
+   "zh": "把AKI想象成一根堵塞的排水管：肾前性=水根本流不到这根管子(供血不足)；肾性=这根管子本身坏了；肾后性=管子下游被堵住了。搞清楚是哪一段出问题，就能预判表现和是否可逆。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A dialysis patient who missed their last two sessions presents with severe generalized weakness. Their ECG shows tall, peaked T waves. What's your leading concern, and what should you watch for if it worsens?",
+   "qZh": "一名漏做了最近两次透析的患者出现明显全身乏力，心电图显示T波高尖。你的首要怀疑是什么？如果病情恶化还要留意什么？",
+   "aEn": "Hyperkalemia. Watch for the ECG to progress — P wave flattening/disappearing, then QRS widening into a sine wave pattern — which can evolve into an idioventricular rhythm, complete heart block, or asystole; notify the receiving hospital early.",
+   "aZh": "高钾血症。要留意心电图是否继续演变——P波变平消失、QRS增宽呈正弦波样——这可能进一步发展为室性自主心律、完全性房室传导阻滞甚至心脏停搏；应尽早通知接收医院。"
+  },
+  {
+   "qEn": "Why should you never place a blood pressure cuff or start an IV on the arm with an AV fistula or shunt?",
+   "qZh": "为什么绝不应该在带有动静脉瘘或分流管的手臂上测血压或建立静脉通路？",
+   "aEn": "Even a few minutes of impaired blood flow in that arm can trigger a thrombosis in the access, and IV catheterization risks infection or damage to a vein that may be needed for future dialysis access.",
+   "aZh": "哪怕只是短暂几分钟的血流受阻，也可能诱发通路血栓；静脉穿刺还可能引入感染或损伤日后建立新通路所需的血管。"
+  },
+  {
+   "qEn": "What's the difference between oliguria and anuria, and why does that distinction matter in AKI?",
+   "qZh": "少尿和无尿有什么区别？这个区分在AKI中为什么重要？",
+   "aEn": "Oliguria is urine output under 500 mL/day; anuria is a complete stop in urine production. Both point toward AKI, but the degree helps gauge how far the kidneys' filtration has failed.",
+   "aZh": "少尿指每日尿量低于500毫升；无尿指尿液生成完全停止。两者都提示AKI，但程度不同能帮助判断肾脏滤过功能受损的严重程度。"
+  },
+  {
+   "qEn": "A young man reports sudden, severe one-sided scrotal pain with no clear trauma history. Why shouldn't you wait to see if it settles down?",
+   "qZh": "一名年轻男性主诉突发严重单侧阴囊疼痛，没有明确外伤史。为什么不应该等等看会不会自己缓解？",
+   "aEn": "This presentation raises concern for testicular torsion, where blood flow to the testicle is cut off — the sooner circulation is surgically restored, the better the chance of saving the testicle, so this warrants urgent transport regardless of trauma history.",
+   "aZh": "这种表现要考虑睾丸扭转的可能——睾丸血供被中断，外科手术恢复血流越早，保住睾丸的机会就越大，所以无论有无外伤史，都需要紧急转运。"
+  },
+  {
+   "qEn": "A dialysis patient becomes confused and starts vomiting shortly after finishing treatment. Should you assume it's disequilibrium syndrome and manage supportively?",
+   "qZh": "一名透析患者刚做完治疗不久就出现意识混乱和呕吐。你应该直接认定是失衡综合征、只做支持治疗吗？",
+   "aEn": "Not without caution — disequilibrium syndrome is a real possibility, but dialysis patients are also prone to subdural hematoma, so don't assume; transport for a full neurologic evaluation rather than treating supportively on the assumption it will resolve on its own.",
+   "aZh": "不能这么草率——失衡综合征确实可能，但透析患者本身也容易发生硬膜下血肿，不能想当然；应转运做完整的神经系统评估，而不是假设它会自行缓解、只做支持治疗。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Dialysis-emergency drug protocol",
+   "topicZh": "透析急症的用药方案",
+   "bookEn": "Nancy's Table 35-2 gives specific drug-level management for dialysis emergencies — 500 mL normal saline for intradialytic hypotension, and calcium/salbutamol/bicarbonate for hyperkalemia if a lab value is available from a sending facility.",
+   "bookZh": "Nancy教材的表35-2给出了透析急症的具体用药方案——透析中低血压给予500mL生理盐水；若能从转出机构获得化验结果，高钾血症可考虑使用钙剂、沙丁胺醇和碳酸氢盐。",
+   "bcEn": "BC's guidelines have no dialysis-specific protocol at all, and neither calcium chloride nor sodium bicarbonate appears anywhere in the BC EMR/PCP medication list. Hyperkalemia shows up only as one of the reversible H's in the cardiac-arrest causes list, with no drug treatment specified at this scope. This is a genuine content gap — don't invent BC dosing for hyperkalemia on the exam. The safe, generalizable answer: recognize the ECG progression (peaked T waves, then a widening/flattening P wave, then a wide QRS/sine wave), treat any resulting dysrhythmia or arrest with your standard protocols, notify the receiving hospital early, and transport rapidly.",
+   "bcZh": "BC考纲完全没有透析专项协议，钙剂和碳酸氢钠都不在BC EMR/PCP的用药清单里。高钾血症只是心脏骤停可逆病因清单（Hs and Ts）里的一项，本级别并未规定具体用药。这是一个真实的内容缺口——考试中不要为BC编造高钾血症的用药剂量。安全通用的答案是：识别心电图渐进性改变（T波高尖→P波变平变宽→QRS增宽呈正弦波），按标准protocol处理由此引发的心律失常或骤停，尽早通知接收医院，并快速转运。",
+   "ref": "BC Guidelines p.45（Treatable Causes of Cardiac Arrest — Hs and Ts）；BC Guidelines Appendix 5 用药清单（无钙剂/碳酸氢钠条目）"
+  },
+  {
+   "topicEn": "Renal-colic analgesia options",
+   "topicZh": "肾绞痛的镇痛选择",
+   "bookEn": "Nancy's default renal-colic recipe is an NSAID (ketorolac) plus an opioid (morphine/fentanyl), with naloxone kept ready in case of respiratory depression from the higher-than-usual opioid doses often needed.",
+   "bookZh": "Nancy教材给肾绞痛开出的默认处方是NSAID（酮咯酸）加阿片类药物（吗啡/芬太尼），并因常需较高剂量阿片类药物而备好纳洛酮以防呼吸抑制。",
+   "bcEn": "BC's EMR/PCP medication list has no injectable opioid at all — naloxone exists only to reverse a patient's own opioid overdose, not as backup for a provider-administered opioid. The actual BC toolkit for renal-colic pain is Entonox and self-administered Methoxyflurane (Penthrox), plus PO acetaminophen and ibuprofen. Two nuances worth knowing: Methoxyflurane is explicitly contraindicated in patients with a history of clinically significant renal impairment, and BC's ibuprofen entry specifically cautions against use in patients with a history of renal disease — exactly the population prone to kidney stones — making acetaminophen or Entonox the safer first reach in that setting.",
+   "bcZh": "BC的EMR/PCP用药清单里根本没有可注射的阿片类药物——纳洛酮只用来逆转患者自身的阿片过量，而不是给provider注射的阿片类药物当后备。BC实际能用于肾绞痛的工具是Entonox和患者自行吸入的美索比氟烷（Penthrox），外加口服的对乙酰氨基酚和布洛芬。有两点值得注意：Penthrox明确禁用于有临床显著肾功能损害病史的患者；BC的布洛芬条目也特别提醒对有肾病史的患者要谨慎使用——而这恰恰是容易长肾结石的人群——这种情况下对乙酰氨基酚或Entonox会是更安全的首选。",
+   "ref": "BC Guidelines p.68-69（Ibuprofen Cautions）；p.71（Methoxyflurane Contraindications）；p.72（Naloxone Indication）"
+  },
+  {
+   "topicEn": "AV fistula/shunt mechanics beyond BC's IV scope",
+   "topicZh": "动静脉瘘/分流管的操作细节超出BC静脉输液范围",
+   "bookEn": "Nancy teaches the specific mechanics of dialysis vascular access — Scribner shunts, Thomas shunts, Hemasites, AV fistulas/grafts — as background for handling a malfunctioning device.",
+   "bookZh": "Nancy教材详细讲解了透析血管通路的具体机制——Scribner分流管、Thomas分流管、Hemasite、动静脉瘘/人工血管——作为处理设备故障的背景知识。",
+   "bcEn": "BC's guidelines never mention fistulas, shunts, or dialysis access devices at all — this is the same coverage gap already flagged for CVCs/PICCs/ports in Chapter 48. The universal safety rule (no BP cuff, no venipuncture, no IV on the access arm) remains correct clinical practice and is fair game on the exam as general safe technique, but don't expect BC to test shunt brand names or internal mechanics. For any malfunctioning access device you don't recognize, the safe answer is the same: don't attempt to access, adjust, or repair it — manage the patient's ABCs, transport, and contact medical control early.",
+   "bcZh": "BC考纲完全没有提到动静脉瘘、分流管或任何透析通路装置——这与第48章已经标注过的CVC/PICC/输液港内容缺口是同一类问题。保护通路手臂的通用安全规则（不测血压、不穿刺、不建立静脉通路）仍然是正确的临床做法，考试中可以作为通用安全技巧来考；但不要指望BC会考分流管的品牌名称或内部机制。遇到任何不认识的故障通路装置，安全答案都一样：不要尝试操作、调整或修理它——处理患者的ABC、转运，并尽早联系医疗指导。",
+   "ref": "内容缺口——BC Guidelines全文无fistula/shunt相关条目；参照 ch48 bcAlerts 同类缺口"
+  }
+ ],
+ "sourcePages": "3045-3093"
+}

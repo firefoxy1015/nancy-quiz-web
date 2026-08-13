@@ -1,0 +1,619 @@
+{
+ "id": "ch41",
+ "n": 41,
+ "titleEn": "Gynecologic Emergencies",
+ "titleZh": "妇科急症",
+ "group": "obgyn",
+ "examWeight": 2,
+ "whyEn": "Gynecologic Emergencies earns its own chapter because BC's PCP exam treats abdominal pain in a woman of childbearing age as its own triage category: before anything else you must rule out a ruptured ectopic pregnancy - the chapter's one truly time-critical diagnosis - using history (the LORDS TRACHEA mnemonic), the classic triad, and a shock work-up, since you have no confirmatory test in the field. Expect questions built from hard numbers (97% tubal implantation, the 6-10 week rupture window, PID's 9% ectopic-pregnancy complication rate, pad/tampon blood-volume math) and from LORDS TRACHEA used to sort ectopic pregnancy, PID, ovarian torsion, and ruptured cyst apart - three of which cannot actually be told apart in the field and are managed identically. The chapter draws a firm line with two neighbours: Chapter 42 (Obstetrics) owns bleeding once pregnancy is confirmed (miscarriage, abruption, previa) and treats ectopic pregnancy as just one line among those causes, while this chapter makes ectopic pregnancy its own life-threatening centrepiece, because prehospital patients often present before anyone knows they are pregnant at all. Chapter 46 (Abuse) owns the legal, procedural, and mandatory-reporting side of sexual assault, so this chapter covers only what Chapter 46 does not: drug-facilitated assault toxicology and vaginal/anal foreign-body and impalement trauma.",
+ "whyZh": "妇科急症单独成章，是因为 BC 的 PCP 考试把「育龄女性腹痛」当成一个独立的分诊类别：在做任何其他判断之前，必须先排除异位妊娠破裂——这是本章唯一真正分秒必争的诊断——靠的是病史（LORDS TRACHEA 记忆法）、经典三联征和休克评估，而不是你手头没有的确诊检查。考试爱从硬数字出题（97% 着床在输卵管、6–10 周破裂窗口、PID 患者中 9% 会继发异位妊娠、产垫/卫生棉条估算失血量），也爱用 LORDS TRACHEA 来区分异位妊娠、PID、卵巢扭转和卵巢囊肿破裂——其中三种在现场根本分不清，处置却完全一样。本章和两个邻居章节划清了边界：第 42 章（产科）管确诊妊娠之后的出血（流产、胎盘早剥、前置胎盘），异位妊娠在那里只是众多病因中的一条；本章则把异位妊娠当成头号致命急症单独写透，因为院前遇到的病人往往连自己怀没怀孕都还不知道。第 46 章（虐待）管性侵的法律、程序和强制通报义务，本章只补第 46 章没讲的医学内容——药物迷奸的毒理学，以及阴道/肛门异物与贯通伤。",
+ "competencies": {
+  "areas": [
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "2.1.d",
+   "2.1.f",
+   "2.1.g",
+   "2.3.a",
+   "2.3.b",
+   "2.3.c",
+   "2.3.d",
+   "2.4.a",
+   "2.4.b",
+   "2.4.c",
+   "2.4.d",
+   "2.4.e",
+   "2.4.f",
+   "2.4.g",
+   "3.1.d",
+   "4.2.a",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.3.a",
+   "4.3.b",
+   "4.3.h",
+   "4.4.a",
+   "4.4.b",
+   "4.4.d",
+   "4.4.g",
+   "4.4.i",
+   "5.5.c",
+   "5.5.d",
+   "6.1.d",
+   "6.1.k",
+   "6.3.a"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Female Anatomy and Menstrual Physiology",
+   "titleZh": "女性解剖与月经生理",
+   "points": [
+    {
+     "en": "The vulva (pudendum) covers everything visible externally: the mons pubis fat pad over the pubic symphysis, hair-bearing labia majora and hairless labia minora guarding the vaginal and urethral openings, the perineum between vagina and anus, and the clitoris, which is embryologically homologous to the glans penis.",
+     "zh": "外阴（pudendum）指外部可见的全部结构：覆盖耻骨联合的阴阜脂肪垫、有毛的大阴唇和无毛的小阴唇（共同护住阴道口和尿道口）、阴道口与肛门之间的会阴，以及在胚胎学上与阴茎头同源的阴蒂。",
+     "hard": false
+    },
+    {
+     "en": "The female urethra runs only about 3.8 cm - far shorter than the male urethra - which is the anatomic reason women get urinary tract and bladder infections far more often than men do.",
+     "zh": "女性尿道全长仅约 3.8 cm，比男性短得多——这正是女性尿路和膀胱感染远比男性多发的解剖学原因。",
+     "hard": true
+    },
+    {
+     "en": "Bartholin glands sit just inside the lower vagina and secrete lubricating mucus; their ducts commonly block into cysts, and those cysts can become infected - including by gonorrhea - and progress to abscesses.",
+     "zh": "巴氏腺位于阴道下部内侧，分泌润滑黏液；腺管很容易堵塞形成囊肿，囊肿又可能被感染（包括淋病），进展成脓肿。",
+     "hard": false
+    },
+    {
+     "en": "The hymen normally borders the vaginal opening and can tear from first intercourse or ordinary activity like horseback riding or gymnastics, causing pain and bleeding. An imperforate hymen fully seals the opening; if missed until puberty it traps the first menses, producing acute pain, severe constipation, and low back pain, and can also result from scarring after childhood sexual abuse.",
+     "zh": "处女膜正常环绕阴道口，首次性交或骑马、体操等日常活动都可能把它撕裂，引起疼痛和出血。若处女膜完全封闭阴道口（处女膜闭锁），直到青春期才被发现，初潮经血就会被堵住，表现为急性疼痛、严重便秘和腰痛；这种闭锁也可能是童年性虐待造成的瘢痕所致。",
+     "hard": true
+    },
+    {
+     "en": "A normal menstrual cycle sheds 25 to 65 mL of blood, epithelial cells, mucus, and tissue over 24 to 35 days; assume 28 days if the patient does not know her own pattern. The ovarian cycle splits into follicular (days 1-13) and luteal (14-28) phases; the uterine cycle splits into proliferative (5-14) and secretory (15-28) phases.",
+     "zh": "正常月经周期会排出 25–65 mL 的血液、上皮细胞、黏液和组织，周期长度 24–35 天；病人说不清自己规律时按 28 天估算。卵巢周期分卵泡期（第 1–13 天）和黄体期（第 14–28 天）；子宫周期分增殖期（第 5–14 天）和分泌期（第 15–28 天）。",
+     "hard": true
+    },
+    {
+     "en": "Menarche arrives at an average age of 12 in Canada; menopause typically begins between 40 and 50, with the climacteric spanning the transition into and through it.",
+     "zh": "加拿大女性初潮平均年龄为 12 岁；绝经通常在 40–50 岁之间开始，围绝经期（climacteric）则贯穿这段过渡及之后的阶段。",
+     "hard": true
+    },
+    {
+     "en": "Falling estrogen through the climacteric can bring diaphoresis, hot flashes with tachycardia, cognitive change, mood disorders, and raised long-term risk of dementia, atherosclerosis, osteoporosis, and coronary disease; low estrogen also atrophies genitourinary tissue, causing vaginal dryness and bladder/urethral changes that show up as frequency, nocturia, and incontinence.",
+     "zh": "围绝经期雌激素下降会带来多汗、伴心动过速的潮热、认知变化、情绪障碍，并长期升高痴呆、动脉粥样硬化、骨质疏松和冠心病风险；雌激素低还会造成泌尿生殖道萎缩，表现为阴道干涩，以及膀胱尿道改变导致的尿频、夜尿和尿失禁。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Menstrual Disorders and Abnormal Bleeding Terms",
+   "titleZh": "月经紊乱与异常出血术语",
+   "points": [
+    {
+     "en": "Premenstrual syndrome bundles fluid-retention weight gain, muscle hypersensitivity, easy bruising, breast tenderness, headache or menstrual migraine, cramping, and mood change; it starts 7 to 14 days before flow and fades within 4 days of onset, affecting about one-third of reproductive-age women, most often in their 30s.",
+     "zh": "经前综合征（PMS）集合了水钠潴留性体重增加、肌肉敏感、易瘀伤、乳房胀痛、头痛或经期偏头痛、痉挛和情绪变化；它在经期开始前 7–14 天出现，经期开始后 4 天内消退，影响约三分之一育龄女性，30 多岁人群最常见。",
+     "hard": true
+    },
+    {
+     "en": "Mittelschmerz is midcycle pain from a ruptured ovarian follicle: sharp, one-sided, lower-abdominal, lasting minutes up to 48 hours (average 6 to 8), sometimes switching sides month to month. It is benign and usually settles with an over-the-counter analgesic.",
+     "zh": "Mittelschmerz（排卵中间痛）是卵泡破裂引起的周期中段疼痛：下腹一侧锐痛，持续几分钟到 48 小时不等（平均 6–8 小时），有时逐月换边。本身不严重，非处方止痛药通常就能缓解。",
+     "hard": true
+    },
+    {
+     "en": "Dysmenorrhea splits into primary (starts with the flow, lasts 1 to 2 days, hormonal, accounts for about 80% of painful-period presentations) and secondary (pain before, during, and after flow, organic in origin, and a possible flag for underlying disease).",
+     "zh": "痛经分原发性（随经期开始、持续 1–2 天、激素性、约占痛经就诊的 80%）和继发性（经前经中经后都痛、器质性、可能提示潜在疾病）两类。",
+     "hard": true
+    },
+    {
+     "en": "Amenorrhea (absent menses) is most often caused by pregnancy - always screen for it first - but can also come from exercise-induced low body fat in athletes, extreme stress acting on the hypothalamus, medications, structural or hormonal anomalies, or malnutrition from anorexia nervosa.",
+     "zh": "闭经最常见的原因是怀孕——永远先筛查这一条——但也可能来自运动员低体脂导致的运动性闭经、极端压力作用于下丘脑、药物、结构或激素异常，或神经性厌食造成的营养不良。",
+     "hard": true
+    },
+    {
+     "en": "Three terms distinguish abnormal bleeding patterns: menorrhagia is prolonged or excessive flow, polymenorrhea is bleeding recurring at intervals under 21 days, and metrorrhagia is irregular intermenstrual spotting or bleeding - the one paramedics should worry about most, since its causes range from hormone imbalance to malignancy to miscarriage.",
+     "zh": "三个术语区分不同的异常出血模式：经量过多/经期过长（menorrhagia）、月经频发（polymenorrhea，周期短于 21 天）、经间不规则出血（metrorrhagia）——急救员最该警惕的是最后一种，因为它的病因从激素失衡到恶性肿瘤到流产都有可能。",
+     "hard": true
+    },
+    {
+     "en": "Menorrhagia and polymenorrhea share four causes: organic (infection, bleeding disorders), endocrine (thyroid or pituitary dysfunction), anatomic (fibroids, polyps, pregnancy), and iatrogenic (IUD, medications).",
+     "zh": "经量过多和月经频发共享四类病因：器质性（感染、凝血障碍）、内分泌性（甲状腺或垂体功能异常）、解剖性（肌瘤、息肉、妊娠）、医源性（宫内节育器、药物）。",
+     "hard": false
+    },
+    {
+     "en": "In-hospital treatment for stable, nonpregnant heavy bleeding starts with oral tranexamic acid plus NSAIDs - the NSAIDs work by cutting endometrial prostaglandins to trigger uterine vasoconstriction - while an unstable patient gets high-dose IV estrogen as first-line therapy alongside resuscitation. This oral/hospital regimen is a different drug pathway from BC's prehospital IV TXA protocol.",
+     "zh": "院内对稳定、非孕的经量过多患者，一线是口服氨甲环酸加非甾体抗炎药（NSAID 通过降低子宫内膜前列腺素触发子宫血管收缩起效）；不稳定患者则以大剂量静脉雌激素为一线，同步复苏。这套口服/院内方案和 BC 院前静脉 TXA 协议走的是完全不同的用药路径。",
+     "hard": true
+    },
+    {
+     "en": "EMS gets called for a menstrual complaint for one of three reasons: the symptom is new for this patient, it is worse than her usual pattern, or she simply senses something is wrong - none of which should be waved off as \"just cramps.\"",
+     "zh": "因月经相关问题呼叫救护车通常出于三个原因之一：症状对这名患者是新出现的、比她平时严重，或者她单纯觉得不对劲——都不该被一句「就是痛经」打发过去。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Gynecologic Infections and Inflammatory Disease",
+   "titleZh": "妇科感染与炎症性疾病",
+   "points": [
+    {
+     "en": "Endometritis (uterine lining inflammation, usually infectious - often gonorrhea or chlamydia) can also follow gynecologic surgery, abortion, or IUD use. The postpartum form strikes within 24 to 48 hours to 6 weeks after delivery: about 1% to 3% of vaginal births versus 10% to 20% of cesarean births, and untreated it can trigger septic shock or, in a still-pregnant patient, miscarriage.",
+     "zh": "子宫内膜炎（子宫内膜炎症，多为感染性，常见淋病或衣原体）也可继发于妇科手术、流产或宫内节育器使用。产后型发生在产后 24–48 小时到 6 周内：顺产约 1%–3%，剖宫产则高达 10%–20%，不治疗可诱发感染性休克，若患者仍处于孕期还可能导致流产。",
+     "hard": true
+    },
+    {
+     "en": "Endometriosis affects 10% to 15% of reproductive-age women in Canada and is a leading infertility cause - 30% to 40% of affected women cannot conceive. Symptoms, when present, include lower back/pelvic/abdominal pain, heavy or prolonged flow, worsening menstrual cramping, painful intercourse, rectal pressure, and intermenstrual bleeding.",
+     "zh": "子宫内膜异位症影响加拿大 10%–15% 的育龄女性，是不孕的主要病因之一——受累女性中 30%–40% 无法自然受孕。有症状者可见腰骶/盆腔/腹部疼痛、经量多或经期长、痛经逐渐加重、性交痛、直肠坠胀感和经间出血。",
+     "hard": true
+    },
+    {
+     "en": "PID drives roughly 100,000 symptomatic cases a year in Canada, with hospitalization falling from 0.12% of women (1995) to 0.055% (2001). Among diagnosed cases, 18% develop chronic pelvic pain, 9% go on to an ectopic pregnancy, 8% become infertile, and about 15% are complicated by a tubo-ovarian abscess.",
+     "zh": "PID 在加拿大每年造成约 10 万例有症状病例，住院率从 1995 年的 0.12% 降到 2001 年的 0.055%。确诊病例中，18% 发展为慢性盆腔痛，9% 之后发生异位妊娠，8% 不孕，约 15% 并发输卵管卵巢脓肿。",
+     "hard": true
+    },
+    {
+     "en": "PID spreads step by step - organisms enter through the cervix, invade the uterine lining, then scar the fallopian tubes (setting up future ectopic pregnancy or infertility), then reach the ovaries and peritoneum. Main risk factors: an IUD (especially newly inserted), unprotected sex with multiple partners, an untreated STI or bacterial vaginosis, and a prior PID episode; it peaks at age 20 to 24 and declines after 30.",
+     "zh": "PID 逐级蔓延——病原体经宫颈进入、侵犯子宫内膜，再使输卵管形成瘢痕（为日后的异位妊娠或不孕埋下隐患），最终波及卵巢和腹膜。主要危险因素：宫内节育器（尤其新放置）、多个性伴侣的无保护性行为、未治疗的性传播感染或细菌性阴道病、既往 PID 病史；发病高峰在 20–24 岁，30 岁后逐渐下降。",
+     "hard": true
+    },
+    {
+     "en": "PID pain typically starts during or right after a period, is diffuse across both lower quadrants and achy, and worsens with walking or intercourse (intercourse pain suggests cervical involvement). Pain radiating to the right upper quadrant, shoulder, or arm points to perihepatitis (Fitz-Hugh-Curtis syndrome); watch for the patient wincing on palpation or every ambulance bump - a peritoneal irritation sign.",
+     "zh": "PID 的疼痛通常在经期中或刚结束时出现，弥漫分布在下腹两侧、呈钝痛，走路或性交会加重（性交痛提示宫颈受累）。若疼痛放射到右上腹、右肩或右臂，要想到肝周炎（Fitz-Hugh-Curtis 综合征）；救护车颠簸或触诊时患者皱眉退缩，是腹膜刺激征的提示。",
+     "hard": true
+    },
+    {
+     "en": "Toxic shock syndrome comes from a Streptococcus pyogenes or Staphylococcus aureus toxin; it first made headlines over superabsorbent tampons in the 1980s (now regulated as medical devices) but today more often follows endometritis, burns, sinusitis, wounds, or necrotizing fasciitis. It can progress to DIC, refractory hypotension, ARDS, dysrhythmia, and renal/hepatic failure; prehospital care is rapid transport plus high-flow oxygen, IV, and ECG - definitive treatment needs hospital antibiotics and possible surgery.",
+     "zh": "中毒性休克综合征由 A 族链球菌或金黄色葡萄球菌毒素引起；1980 年代因超强吸收力卫生棉条一度成为焦点（现已纳入医疗器械监管），如今更常继发于子宫内膜炎、烧伤、鼻窦炎、伤口或坏死性筋膜炎。可进展为 DIC、顽固性低血压、ARDS、心律失常及肾肝衰竭；院前处置是快速转运加高流量氧、静脉通路和心电监护——根治要靠院内抗生素和可能的手术。",
+     "hard": true
+    },
+    {
+     "en": "Bacterial vaginosis (overgrowth of normal vaginal flora - itching, burning, fishy discharge, treated with metronidazole) and yeast infection (Candida overgrowth when vaginal pH becomes less acidic from oral contraceptives, menses, pregnancy, diabetes, antibiotics, or douching - itching, thick white cottage-cheese discharge) are both common but, despite tracking with sexual activity, are not classified as STIs.",
+     "zh": "细菌性阴道病（正常阴道菌群过度增殖——瘙痒、灼热、鱼腥味分泌物，治疗用甲硝唑）和念珠菌感染（口服避孕药、月经、妊娠、糖尿病、抗生素或灌洗使阴道 pH 变碱，念珠菌趁机增殖——瘙痒、豆腐渣样白色分泌物）都很常见，虽然与性活动相关，但都不属于性传播感染。",
+     "hard": false
+    },
+    {
+     "en": "Interstitial cystitis/painful bladder syndrome affects an estimated 2% to 7% of women (about 90% of diagnosed cases are female), causing pelvic pressure, pain, and urinary frequency or urgency - some patients report urinating up to 60 times a day. There is no cure and antibiotics do not help; management is bladder training, diet changes, hydration, and sometimes antihistamines, antidepressants, or antiepileptics.",
+     "zh": "间质性膀胱炎/膀胱疼痛综合征估计影响 2%–7% 的女性（确诊病例约 90% 为女性），表现为盆腔压迫感、疼痛和尿频尿急——部分患者报告每天排尿多达 60 次。此病无法治愈，抗生素无效；处理靠膀胱训练、调整饮食、多饮水，有时加用抗组胺药、抗抑郁药或抗癫痫药。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Ovarian and Adnexal Emergencies",
+   "titleZh": "卵巢与附件急症",
+   "points": [
+    {
+     "en": "Ovarian cysts come in several forms: the functional/follicular cyst (egg matures but the sac never breaks open, usually resolves in 1 to 3 months on its own), the corpus luteum cyst (forms after the sac reseals post-ovulation, can grow to 10 cm and trigger torsion - fertility drugs raise the risk), polycystic ovary syndrome (high androgens, multiple cysts, possible insulin resistance and hypertension), the dermoid cyst (contains tissue like teeth or hair, can grow large and cause torsion), the endometrioma (endometrial tissue on the ovary, pain with menses or intercourse), the cystadenoma (thick mucus-filled, can enlarge and hurt), and the hemorrhagic cyst (a burst vessel fills the cyst, which can rupture and spill blood into the abdomen).",
+     "zh": "卵巢囊肿有多种类型：功能性/卵泡囊肿（卵子成熟但滤泡未破，通常 1–3 个月内自行消退）、黄体囊肿（排卵后滤泡重新封闭形成，可长到 10 cm 并诱发扭转——促排卵药会增加风险）、多囊卵巢综合征（雄激素高、多发囊肿、可伴胰岛素抵抗和高血压）、皮样囊肿（含牙齿、毛发等组织，可长大并引起扭转）、子宫内膜异位囊肿（子宫内膜组织长在卵巢上，经期或性交时痛）、囊腺瘤（内含浓稠黏液，可增大致痛）、出血性囊肿（囊壁血管破裂积血，破裂后血液可流入腹腔）。",
+     "hard": true
+    },
+    {
+     "en": "Ovarian torsion is a surgical emergency: partial or complete twisting of the tube-and-ovary complex on its supporting ligaments, most often set off by a lead-point cyst or mass over 5 cm. It presents as sudden, possibly intermittent, severe one-sided abdominal pain with nausea and vomiting; once vascular supply is cut off, viability is time-limited, and a nonviable adnexa is surgically removed.",
+     "zh": "卵巢扭转是外科急症：输卵管卵巢复合体在其支持韧带上部分或完全扭转，通常由超过 5 cm 的囊肿或肿物作为「引导点」诱发。表现为突发、可能间歇性的剧烈单侧腹痛伴恶心呕吐；血供一旦被切断，卵巢存活时间有限，若手术探查已不可存活则需切除该侧附件。",
+     "hard": true
+    },
+    {
+     "en": "Ovarian torsion risk climbs during pregnancy, peaking around 10 to 17 weeks of gestation; pregnant patients make up 10% to 20% of all torsion cases.",
+     "zh": "卵巢扭转风险在孕期升高，孕 10–17 周左右达高峰；孕妇患者占所有卵巢扭转病例的 10%–20%。",
+     "hard": true
+    },
+    {
+     "en": "Tubo-ovarian abscess is an infectious collection in the tube or ovary that complicates about 15% of PID cases - usually polymicrobial/anaerobic, sometimes gonorrhea or chlamydia, occasionally seeded by diverticulitis or a perforated appendix. Presentation ranges from normal vital signs to septic or peritonitic, and rupture spreads infection throughout the body.",
+     "zh": "输卵管卵巢脓肿是输卵管或卵巢内的感染性积液，约见于 15% 的 PID 病例——多为多种厌氧菌混合感染，也可为淋病或衣原体，偶尔由憩室炎或阑尾穿孔播散而来。表现可以是生命体征正常，也可以是脓毒症或腹膜炎；一旦破裂，感染会扩散至全身。",
+     "hard": true
+    },
+    {
+     "en": "The field reality: a ruptured ovarian cyst, a tubo-ovarian abscess, and ovarian torsion cannot be told apart from a ruptured ectopic pregnancy in the prehospital setting - manage all of them as suspected ectopic pregnancy, with shock precautions and rapid transport to a facility with surgical capability.",
+     "zh": "现场的现实是：卵巢囊肿破裂、输卵管卵巢脓肿和卵巢扭转，在院前根本无法与异位妊娠破裂区分开——一律按疑似异位妊娠处置：休克防护，快速转运至有手术能力的医院。",
+     "hard": true
+    },
+    {
+     "en": "Ovarian cyst presentation: dull achy low-back and thigh pain, abdominal pain or pressure, nausea/vomiting, breast tenderness, abnormal bleeding, painful menses or intercourse. Tubo-ovarian abscess presentation: severe pain, guarding, rebound tenderness, nausea/vomiting, abdominal distention, fever.",
+     "zh": "卵巢囊肿常见表现：腰背和大腿钝痛、腹痛或腹部压迫感、恶心呕吐、乳房胀痛、异常出血、经期或性交痛。输卵管卵巢脓肿常见表现：剧痛、肌紧张、反跳痛、恶心呕吐、腹胀、发热。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Ectopic Pregnancy: The Chapter's #1 Killer",
+   "titleZh": "异位妊娠：本章头号致命急症",
+   "points": [
+    {
+     "en": "Ectopic means the fertilized egg implants somewhere other than the uterine lining. In 97% of cases that means a fallopian tube, usually blocked from reaching the uterus by PID-related scarring or prior tubal surgery; the other 3% implant in the abdomen, cervix, or on an ovary.",
+     "zh": "异位妊娠指受精卵着床在子宫内膜以外的地方。97% 的情况着床在输卵管，通常是被 PID 造成的瘢痕或既往输卵管手术挡住去路；剩下 3% 着床在腹腔、宫颈或卵巢上。",
+     "hard": true
+    },
+    {
+     "en": "Ectopic pregnancy is the leading cause of maternal death in the first trimester and accounts for 6.5% of all pregnancy-related deaths in Canada. Nearly 1 in 66 pregnant women will have one, and about half of them carry a known risk factor.",
+     "zh": "异位妊娠是孕早期孕产妇死亡的首要原因，占加拿大全部妊娠相关死亡的 6.5%。近 1/66 的孕妇会经历一次异位妊娠，其中约一半带有已知危险因素。",
+     "hard": true
+    },
+    {
+     "en": "PID is the single most common cause of ectopic pregnancy; other contributors are pelvic surgery, a prior ectopic, smoking, fibroids, tubal tumours or cysts, tubal endometriosis, hormonal imbalance, and fertility treatment. An IUD does not raise overall ectopic risk - it lowers the risk of any pregnancy - but if pregnancy happens despite one, it is disproportionately likely to be ectopic.",
+     "zh": "PID 是异位妊娠最常见的单一病因；其他诱因包括盆腔手术史、既往异位妊娠、吸烟、肌瘤、输卵管肿瘤或囊肿、输卵管子宫内膜异位、激素失衡和生育治疗。宫内节育器本身不会提高异位妊娠的总体风险——它降低的是任何妊娠的整体概率——但如果戴环仍然怀孕，这次妊娠不成比例地更可能是异位妊娠。",
+     "hard": true
+    },
+    {
+     "en": "A tubal pregnancy keeps producing pregnancy hormones just like a normal one, so the missed period and breast tenderness can fool the patient into thinking all is well. The tube cannot stretch the way the uterus can, so the embryo eventually outgrows the space and the tube ruptures. Rupture most commonly occurs at 6 to 10 weeks of gestation, and a woman with irregular cycles may not even know she is pregnant.",
+     "zh": "输卵管妊娠同样会持续分泌妊娠激素，所以停经和乳房胀痛这些「正常」征象反而会让患者误以为一切正常。输卵管不像子宫那样能扩张，胚胎迟早会撑爆空间导致破裂，破裂最常发生在孕 6–10 周；月经不规律的女性甚至可能完全不知道自己怀孕。",
+     "hard": true
+    },
+    {
+     "en": "The classic triad is preceding amenorrhea (present in 75% of patients), new vaginal bleeding, and abdominal pain - but only about 50% of women show this full, typical picture, so a patient missing one leg of the triad is not thereby cleared.",
+     "zh": "经典三联征是先出现停经（见于 75% 的患者）、新发阴道出血和腹痛——但只有约 50% 的女性会出现完整的典型表现，所以三联征缺一项并不能排除异位妊娠。",
+     "hard": true
+    },
+    {
+     "en": "Early pain is crampy, intermittent, and one-sided; as the tube stretches to rupture, pain turns severe (sometimes causing syncope) and by the time EMS arrives it is often constant and diffuse across the abdomen. Visible vaginal bleeding is often light and is not a reliable gauge of internal blood loss - much of it is shed uterine lining, not the hemorrhage itself.",
+     "zh": "早期疼痛呈痉挛性、间歇性、局限一侧；随着输卵管被撑到破裂，疼痛转为剧烈（有时引发晕厥），到 EMS 到场时往往已变成持续、弥漫全腹的疼痛。可见的阴道出血量常常不大，并不能可靠反映腹内出血量——大部分排出的是脱落的子宫内膜，而不是真正的内出血。",
+     "hard": true
+    },
+    {
+     "en": "History timing is a real clue: in ectopic pregnancy, pain typically comes before bleeding; in spontaneous miscarriage, bleeding typically comes before pain.",
+     "zh": "病史中的先后顺序是真实的鉴别线索：异位妊娠通常先痛后出血；自然流产通常先出血后痛。",
+     "hard": true
+    },
+    {
+     "en": "Shock signs to watch for once the tube ruptures: pulse over 100 beats/min, systolic BP under 90 mm Hg, cold moist skin, fatigue, restlessness, and anxiety. But assess for shock in every woman presenting with abdominal pain plus vaginal bleeding regardless of whether these signs have appeared yet - a young healthy patient can compensate for a long time before vitals collapse.",
+     "zh": "输卵管破裂后要留意的休克征象：心率超过 100 次/分、收缩压低于 90 mmHg、皮肤湿冷、乏力、烦躁不安。但只要一名女性主诉腹痛加阴道出血，就要按休克评估，不管这些征象是否已经出现——年轻健康的患者往往能代偿很久，生命体征才会崩溃。",
+     "hard": true
+    },
+    {
+     "en": "Management sequence for suspected ectopic pregnancy: secure the airway and give supplemental oxygen if indicated, nothing by mouth including water, left lateral recumbent position even if unconscious and intubated, large-bore IV per local protocol, anticipate vomiting with suction ready, keep the patient warm, transport to the nearest facility with surgical capability, notify the receiving hospital of the suspected diagnosis and ETA, and recheck vitals frequently en route.",
+     "zh": "疑似异位妊娠的处置顺序：确保气道、按需给氧，禁食禁水（含水），左侧卧位（即便已昏迷插管），按本地协议建大口径静脉通路，预判呕吐并备好吸引器，保暖，转运至具备手术能力的最近医院，提前向接诊医院通报疑似诊断和预计到达时间，途中频繁复测生命体征。",
+     "hard": true
+    },
+    {
+     "en": "TXA is not an automatic reflex here: neither ruptured ectopic pregnancy nor hemorrhagic ovarian cyst is named anywhere in the BC TXA drug monograph's Indication or Considerations lists. They are covered only indirectly through the general Hypovolemia protocol's line about considering TXA for shock from occult bleeding - a medical-direction judgment call, not a standing order.",
+     "zh": "TXA 在这里不是条件反射：BC 的 TXA 专论里，无论「适应证」还是「考量」栏，都没点名异位妊娠破裂或卵巢囊肿出血。它们只能间接靠低血容量协议里「考虑用 TXA 处理隐匿出血导致的休克」这一条来覆盖——这是需要医疗指导判断的临床决策，不是标准医嘱。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Gynecologic History and Physical Exam",
+   "titleZh": "妇科病史采集与体格检查",
+   "points": [
+    {
+     "en": "LORDS TRACHEA structures abdominal pain history: Location (midline may suggest miscarriage, diffuse lower-abdominal ache may suggest PID, one-sided may suggest ectopic), Onset (pain starting during exercise may suggest a ruptured ovarian cyst), Radiation (to the shoulder may suggest a large volume of intra-abdominal blood), Duration, Severity (excruciating pain may point to torsion, ruptured ectopic, or a nongynecologic cause like renal colic or aortic dissection), Timing relative to LMP or contraceptive use, Relieving factors, Aggravating factors (PID pain often worsens with intercourse), Character (crampy suggests miscarriage, dull and steady suggests PID), Historic precedent, Eating (relevant to anesthetic planning if surgery follows), and Associated symptoms such as nausea, vomiting, or vertigo.",
+     "zh": "LORDS TRACHEA 用来结构化腹痛病史：位置 Location（正中线可能提示流产，弥漫下腹隐痛可能提示 PID，单侧可能提示异位妊娠）、起病 Onset（运动中起病可能提示卵巢囊肿破裂）、放射 Radiation（放射到肩部可能提示腹腔内大量积血）、持续时间 Duration、严重程度 Severity（剧痛可能指向扭转、异位妊娠破裂，或肾绞痛、主动脉夹层等非妇科病因）、与末次月经或避孕措施的时间关系 Timing、缓解因素 Relieving、加重因素 Aggravating（PID 疼痛常因性交加重）、性质 Character（痉挛性提示流产，钝痛持续提示 PID）、既往同类疼痛史 Historic、进食情况 Eating（关系到后续若需手术的麻醉方案）、伴随症状 Associated（如恶心、呕吐、眩晕）。",
+     "hard": true
+    },
+    {
+     "en": "Core gynecologic history starts with exact LMP dates and whether anything about that period was unusual, then a direct, nonjudgmental pregnancy screen. Reality check on contraceptive effectiveness: correct, consistent use of the pill or IUD is about 99.9% effective, but typical real-world pill use is only about 91% effective; with no contraception at all, 25% of women conceive within 1 month and 85% within 1 year.",
+     "zh": "妇科核心病史从末次月经的确切日期、以及这次月经是否有任何异常开始，然后直接、不带评判地筛查怀孕可能。避孕有效性的现实情况：正确、坚持使用避孕药或宫内节育器的理论有效率约 99.9%，但实际使用中口服避孕药的有效率只有约 91%；完全不避孕的情况下，25% 的女性会在 1 个月内怀孕，85% 会在 1 年内怀孕。",
+     "hard": true
+    },
+    {
+     "en": "Contraception history has clinical teeth: a newly inserted IUD raises PID risk, an IUD pregnancy raises ectopic risk, and an IUD can perforate the uterus or migrate to the cervix causing pain and bleeding. ACHES-S flags oral-contraceptive adverse effects worth asking about: Abdominal pain, Chest pain, severe Headache, Eyes (blurred vision), Spotting, and Severe leg pain.",
+     "zh": "避孕方式病史有真实临床意义：新放置的宫内节育器会提高 PID 风险，戴环妊娠会提高异位妊娠风险，节育器还可能穿透子宫或移位到宫颈引起疼痛和出血。ACHES-S 用来提醒该问哪些口服避孕药不良反应：腹痛 Abdominal pain、胸痛 Chest pain、剧烈头痛 severe Headache、视觉症状 Eyes（视物模糊）、点滴出血 Spotting、严重腿痛 Severe leg pain。",
+     "hard": true
+    },
+    {
+     "en": "Obstetric history vocabulary: gravida counts every pregnancy regardless of outcome, para (parity) counts live deliveries. A woman with 3 pregnancies - 1 live birth, 1 miscarriage, 1 therapeutic abortion - is documented as gravida 3, para 1.",
+     "zh": "产科病史术语：gravida（孕次）计所有妊娠，不论结局；para（产次）只计活产。一名孕过 3 次、1 次活产、1 次流产、1 次治疗性引产的女性，记作 gravida 3, para 1。",
+     "hard": false
+    },
+    {
+     "en": "Abdominal inspection for internal bleeding: Cullen sign is periumbilical ecchymosis, Grey Turner sign is flank ecchymosis - either points to internal hemorrhage, and bruising in these spots can also flag a ruptured abdominal aortic aneurysm. Also scan for abuse bruising (the abdomen is a favoured target, especially in pregnancy), surgical scars, and needle tracks. Auscultate before palpating or percussing, since the latter alter bowel-sound frequency; absent bowel sounds may indicate internal bleeding, and rebound tenderness suggests infection or peritonitis.",
+     "zh": "腹部视诊找内出血线索：Cullen 征是脐周瘀斑，Grey Turner 征是腰腹侧瘀斑——两者都提示内出血，这些部位的瘀斑也可能提示腹主动脉瘤破裂。同时留意提示虐待的瘀伤（腹部是常见目标，孕妇尤其如此）、手术瘢痕和针眼。先听诊再触诊和叩诊，因为后两者会改变肠鸣音频率；肠鸣音消失可能提示内出血，反跳痛提示感染或腹膜炎。",
+     "hard": true
+    },
+    {
+     "en": "Abdominal pain sorts into three types: visceral pain (hollow-organ dysfunction, poorly localized near the midline - hypogastric pain often traces to colon, bladder, or uterus), parietal pain (peritoneal inflammation, steady and aching, worse with movement or coughing, patient lies still), and referred pain (gallbladder to the right shoulder or posterior chest, pancreas/duodenum to the back, spleen to the left shoulder).",
+     "zh": "腹痛分三类：内脏痛（空腔脏器功能障碍，定位模糊、靠近正中线——下腹部痛常来自结肠、膀胱或子宫）、躯体痛（腹膜炎症，持续钝痛，活动或咳嗽加重，患者会尽量静卧）、牵涉痛（胆囊痛放射到右肩或胸背，胰腺/十二指肠痛放射到背部，脾脏病变放射到左肩）。",
+     "hard": false
+    },
+    {
+     "en": "Modesty and disclosure practice: limit the number of people present, offer a female paramedic if one is available and the patient prefers, and clear nonessential bystanders or family before taking the gynecologic history, since their presence can suppress accurate answers - sensitivity should sharpen your questioning, not soften it.",
+     "zh": "隐私与坦诚的实践要点：在场人数尽量少，若患者有此意愿且有条件就安排女急救员，采集妇科病史前请无关旁观者或家属回避，因为他们在场会压低回答的准确度——敏感应该让提问更精准，而不是让提问变得含糊。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Gynecologic Trauma and Blood Loss Estimation",
+   "titleZh": "妇科创伤与失血量评估",
+   "points": [
+    {
+     "en": "The genital area is highly vascular, so trauma from a crash, sport, assault, or even consensual sex can bleed profusely and painfully. External lacerations usually respond to direct pressure; bleeding from internal structures can be massive and hard to control - never blindly pack the vagina. Exsanguinating vaginal hemorrhage gets treated like any other major hemorrhage: shock management and rapid transport.",
+     "zh": "生殖器区域血管极为丰富，车祸、运动、袭击甚至合意性行为造成的创伤都可能出血汹涌、疼痛剧烈。外部裂伤通常直接加压就能控制；内部结构出血可能量大且难以控制——绝不能盲目填塞阴道。大量阴道出血导致的失血按其他大出血一样处理：休克处置加快速转运。",
+     "hard": true
+    },
+    {
+     "en": "Exam limits in the field: never perform an internal vaginal examination; examine the external genitalia only when there is active bleeding that needs treating, and only with the patient's consent.",
+     "zh": "现场检查的边界：绝不做阴道内检；只有在存在需要处理的活动性出血时才检查外阴，而且必须先取得患者同意。",
+     "hard": false
+    },
+    {
+     "en": "Quantify bleeding with pad and tampon math: a soaked pad holds roughly 30 mL of blood, a soaked tampon roughly 20 mL - ask how many have been used since bleeding started, and note blood colour, clots, and abdominal tenderness or distention as extra shock clues.",
+     "zh": "用产垫和卫生棉条估算出血量：一片浸透的产垫约含 30 mL 血，一支浸透的棉条约 20 mL——问清出血以来用了几片/几支，同时留意血色、血块和腹部压痛或膨隆等额外的休克线索。",
+     "hard": true
+    },
+    {
+     "en": "A rough circulating-volume rule of thumb: about 7% to 8% of body weight, or 70 to 80 mL/kg. A 70-kg patient carries roughly 5,000 mL; marked tachycardia, marked tachypnea, systolic hypotension, and altered mental status together suggest 1,500 to 2,000 mL already lost.",
+     "zh": "估算循环血量的经验法则：约为体重的 7%–8%，即 70–80 mL/kg。一名 70 kg 的患者约有 5,000 mL 循环血量；若同时出现明显心动过速、明显呼吸急促、收缩期低血压和意识改变，提示已失血 1,500–2,000 mL。",
+     "hard": true
+    },
+    {
+     "en": "Do not trust pulse alone: recent military data show heart rate can stay deceptively stable even in severe hemorrhagic shock. Read the whole picture instead - pallor, diaphoresis, thirst, restlessness, nausea - and remember visual blood-loss estimates are unreliable, especially since internal-cavity bleeding is invisible and trauma can coincide with menses.",
+     "zh": "不要只凭脉搏判断：近年军方数据显示，即使是严重失血性休克，心率也可能表现得反常地平稳。要综合看全局——面色苍白、多汗、口渴、烦躁、恶心——并记住目测估血量本就不可靠，尤其体腔内出血看不见，创伤又可能恰逢经期。",
+     "hard": true
+    },
+    {
+     "en": "General field management for gynecologic hemorrhage/shock: keep the patient recumbent, secure the airway, give high-flow oxygen, run normal saline or lactated Ringer through a large-bore IV, monitor the ECG, recheck vitals frequently, and consider the Trendelenburg position for transport.",
+     "zh": "妇科出血/休克的一般现场处置：让患者保持平卧、确保气道、给高流量氧、经大口径静脉通路输注生理盐水或乳酸林格液、监测心电图、频繁复测生命体征，转运时可考虑头低脚高位（Trendelenburg）。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Sexual Assault: Medical Topics Beyond Chapter 46",
+   "titleZh": "性侵：第 46 章之外的医学要点",
+   "points": [
+    {
+     "en": "This section covers only what Chapter 46 (Abuse) does not: drug-facilitated assault toxicology and vaginal/anal foreign-body trauma. Scene safety, evidence preservation, empowerment interviewing, PCR documentation, and reporting duty for sexual assault all live in Chapter 46 - do not re-derive them here.",
+     "zh": "本节只补第 46 章（虐待）没讲的内容：药物迷奸的毒理学，以及阴道/肛门异物创伤。性侵相关的现场安全、证据保全、赋权式问诊、PCR 记录和通报义务都在第 46 章，这里不再重复推导。",
+     "hard": false
+    },
+    {
+     "en": "GHB is a naturally occurring, colourless CNS-depressant neurotransmitter with amnestic effects; its salty taste is easily masked in a drink. Effects range from sleepiness and loss of muscle tone to seizure-like activity, and high doses depress respiration and heart rate into a coma lasting roughly 2 hours. There is no antidote - naloxone and flumazenil are both ineffective - and patients tend to wake up suddenly.",
+     "zh": "GHB 是一种天然存在的无色中枢神经抑制性神经递质，兼具遗忘作用；其咸味很容易在饮料中被掩盖。作用从嗜睡、肌张力丧失到类似癫痫发作的表现不等，大剂量会抑制呼吸和心率，陷入约持续 2 小时的昏迷。它没有解毒剂——纳洛酮和氟马西尼都无效——患者往往会突然清醒。",
+     "hard": true
+    },
+    {
+     "en": "Ketamine is a dissociative anesthetic that can trigger hallucinations (pleasant or terrifying) and an emergence reaction of severe agitation or violence, especially with underlying PTSD. Overdose brings nausea/vomiting, hypertension, and respiratory impairment. There is no prehospital antidote, though midazolam can treat the emergence reaction.",
+     "zh": "氯胺酮是一种分离性麻醉剂，可引起幻觉（愉悦或极度恐怖）和苏醒期反应（严重躁动或暴力，有创伤后应激障碍病史者尤甚）。过量表现为恶心呕吐、高血压和呼吸功能受损。院前没有解毒剂，但苏醒期反应可用咪达唑仑处理。",
+     "hard": true
+    },
+    {
+     "en": "Rohypnol (flunitrazepam) is illegal in Canada but legally sold in 64 other countries as a sedative/pre-op anesthetic. At high dose it produces anterograde amnesia - the victim cannot form memories of the assault. Onset is about 30 minutes, peak about 2 hours, duration about 8 hours; symptoms are hypotension, drowsiness, dizziness, and confusion. Naloxone has no effect on it, though flumazenil may help and naloxone may still be reasonable if a co-ingested opioid is suspected.",
+     "zh": "氟硝西泮（Rohypnol）在加拿大属非法药物，但在其他 64 个国家作为镇静/术前麻醉药合法销售。大剂量会造成顺行性遗忘——受害者无法形成对侵害过程的记忆。起效约 30 分钟，峰值约 2 小时，持续约 8 小时；症状为低血压、嗜睡、头晕和意识模糊。纳洛酮对它无效，氟马西尼可能有帮助；若怀疑合并使用了阿片类药物，给纳洛酮仍然合理。",
+     "hard": true
+    },
+    {
+     "en": "MDMA (ecstasy) is actually a stimulant, not a sedative - confusion and euphoria, not incapacitation, are what get exploited. Watch for rapid heart rate and rapid, sometimes fatal, hyperthermia, plus hypertension, hyponatremia/seizures from excessive water intake, and bruxism.",
+     "zh": "摇头丸（MDMA）其实是一种兴奋剂而非镇静剂——被利用的是它造成的意识混乱和欣快感，而非丧失行动能力。要警惕心率骤升和可能致命的体温骤升，以及高血压、过量饮水引起的低钠血症/抽搐，还有磨牙症。",
+     "hard": true
+    },
+    {
+     "en": "An Ontario study of drug-facilitated assault cases found cannabinoids, cocaine, and amphetamines turned up unexpectedly more often than the classic \"date rape drugs\" - don't anchor your differential only on GHB, Rohypnol, or ketamine.",
+     "zh": "一项针对安大略省药物迷奸案例的研究发现，大麻素、可卡因和苯丙胺类物质出现的频率意外地高于传统「迷奸药」——不要把鉴别诊断只锁定在 GHB、氟硝西泮或氯胺酮上。",
+     "hard": true
+    },
+    {
+     "en": "A vaginal or anal foreign body (such as a bottle that forms suction against internal tissue) should never be removed in the field: keep the patient calm, protect dignity, avoid unnecessary walking, and transport in whatever position is comfortable (knees flexed, legs together works well) while scanning the scene for sharp edges or glass that might mean internal fragments.",
+     "zh": "阴道或肛门异物（例如与内部组织形成吸附的瓶子）绝不能在现场取出：让患者保持平静、维护其尊严、避免不必要的行走，以患者舒适的体位转运（屈膝并腿是常用姿势），同时检查现场有无尖锐边缘或玻璃碎片，提示体内可能存在锐利异物。",
+     "hard": true
+    },
+    {
+     "en": "Fisting (a closed fist and wrist inserted into the vagina or rectum) carries a real risk of organ rupture and life-threatening peritonitis in either sex - treat a suspected fisting injury as a possible internal rupture, not a minor complaint, regardless of the patient's reluctance to describe what happened.",
+     "zh": "「拳交」（将握拳的手和手腕插入阴道或直肠）在男女双方都存在器官破裂和危及生命的腹膜炎风险——怀疑此类损伤时应按可能的内脏破裂处理，而不是当作小事，即便患者不愿说清经过。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Ectopic pregnancy — implantation site",
+   "itemZh": "异位妊娠——着床部位",
+   "value": "97% 输卵管；3% 腹腔/宫颈/卵巢"
+  },
+  {
+   "itemEn": "Ectopic pregnancy — typical rupture window",
+   "itemZh": "异位妊娠——典型破裂窗口",
+   "value": "孕 6–10 周"
+  },
+  {
+   "itemEn": "Ectopic pregnancy — classic triad frequency",
+   "itemZh": "异位妊娠——经典三联征出现率",
+   "value": "停经见于 75%；完整典型表现仅 50%"
+  },
+  {
+   "itemEn": "Ectopic pregnancy — Canadian mortality burden",
+   "itemZh": "异位妊娠——加拿大死亡负担",
+   "value": "占全部妊娠相关死亡 6.5%；约 1/66 孕妇发生"
+  },
+  {
+   "itemEn": "Ectopic pregnancy — shock vitals threshold",
+   "itemZh": "异位妊娠——休克生命体征阈值",
+   "value": "脉搏 >100/分；收缩压 <90 mmHg"
+  },
+  {
+   "itemEn": "PID complications",
+   "itemZh": "PID 并发症发生率",
+   "value": "18% 慢性盆腔痛；9% 异位妊娠；8% 不孕；~15% 输卵管卵巢脓肿"
+  },
+  {
+   "itemEn": "Ovarian torsion — lead-point size / pregnancy association",
+   "itemZh": "卵巢扭转——诱发肿物大小/孕期关联",
+   "value": "囊肿或肿物 >5 cm；孕 10–17 周风险高峰，占全部病例 10%–20%"
+  },
+  {
+   "itemEn": "Corpus luteum cyst — max size before torsion risk",
+   "itemZh": "黄体囊肿——诱发扭转前的最大尺寸",
+   "value": "可长至 10 cm"
+  },
+  {
+   "itemEn": "Menstrual cycle — volume and length",
+   "itemZh": "月经周期——出血量与周期长度",
+   "value": "25–65 mL；24–35 天（未知按 28 天估算）"
+  },
+  {
+   "itemEn": "Menarche — average age in Canada",
+   "itemZh": "初潮——加拿大平均年龄",
+   "value": "12 岁"
+  },
+  {
+   "itemEn": "Blood-loss estimation — pad and tampon capacity",
+   "itemZh": "失血量估算——产垫与棉条容量",
+   "value": "浸透产垫 ≈30 mL；浸透棉条 ≈20 mL"
+  },
+  {
+   "itemEn": "Circulating blood volume — rule of thumb",
+   "itemZh": "循环血量——经验法则",
+   "value": "体重的 7%–8%（70–80 mL/kg）；70 kg 患者约 5,000 mL"
+  },
+  {
+   "itemEn": "Contraceptive effectiveness — correct vs. typical use",
+   "itemZh": "避孕有效性——正确使用 vs 实际使用",
+   "value": "正确使用 ~99.9%；实际使用口服避孕药 ~91%"
+  },
+  {
+   "itemEn": "Unprotected sex — pregnancy odds",
+   "itemZh": "无保护性行为——怀孕概率",
+   "value": "1 个月内 25%；1 年内 85%"
+  },
+  {
+   "itemEn": "Postpartum endometritis incidence",
+   "itemZh": "产后子宫内膜炎发生率",
+   "value": "顺产 1%–3%；剖宫产 10%–20%"
+  },
+  {
+   "itemEn": "Endometriosis prevalence and infertility rate",
+   "itemZh": "子宫内膜异位症患病率与不孕率",
+   "value": "加拿大育龄女性 10%–15%；受累者 30%–40% 不孕"
+  },
+  {
+   "itemEn": "Rohypnol — onset/peak/duration",
+   "itemZh": "氟硝西泮——起效/峰值/持续时间",
+   "value": "约 30 分钟起效；2 小时达峰；持续约 8 小时"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "In any woman with abdominal pain, your number-one job is to hunt for signs of shock before anything else - the diagnosis can wait, the shock work-up cannot.",
+   "zh": "面对任何腹痛女性，你的头号任务是先找休克征象——诊断可以等，休克排查不能等。"
+  },
+  {
+   "en": "Ask specifically how many pads or tampons have been soaked since bleeding started; multiply by roughly 30 mL (pad) or 20 mL (tampon) for a quick supplement to your shock assessment, never a replacement for it.",
+   "zh": "具体问清出血以来用了几片产垫或几支棉条；按约 30 mL（产垫）或 20 mL（棉条）估算，作为休克评估的补充，绝不能替代休克评估本身。"
+  },
+  {
+   "en": "Never pack the vagina to control bleeding - it is dangerous and does not work. Treat exsanguinating vaginal hemorrhage exactly like any other major hemorrhage: shock management plus rapid transport.",
+   "zh": "绝不用填塞阴道来控制出血——这样做危险且无效。大量阴道出血一律按其他大出血处理：休克管理加快速转运。"
+  },
+  {
+   "en": "For suspected ectopic pregnancy or any gynecologic hemorrhagic shock, transport left lateral recumbent, keep the patient NPO including water, and head for the nearest facility with surgical capability, not just the nearest ED.",
+   "zh": "疑似异位妊娠或任何妇科出血性休克，转运时取左侧卧位、禁食禁水（含水），目标是最近的具备手术能力的医院，而不只是最近的急诊室。"
+  },
+  {
+   "en": "If a vaginal or anal foreign body is suspected, do not attempt removal - keep the patient calm and in a position of comfort, and scan the scene for sharp edges or glass fragments that might still be inside.",
+   "zh": "怀疑阴道或肛门内有异物时不要尝试取出——让患者保持平静并采用舒适体位，同时检查现场有无尖锐边缘或玻璃碎片，提示体内可能还有残留。"
+  },
+  {
+   "en": "Auscultate the abdomen before you palpate or percuss - palpation and percussion change bowel-sound frequency, so listening first protects the accuracy of your finding.",
+   "zh": "先听诊腹部再触诊、叩诊——触诊和叩诊会改变肠鸣音频率，先听能保住这项发现的准确性。"
+  },
+  {
+   "en": "Keep documentation secondary to the patient during a gynecologic call - your attention belongs to her comfort and emotional care; the paperwork can be finished after handoff.",
+   "zh": "妇科出勤中记录始终排在患者之后——你的注意力应该放在她的舒适和情绪照护上，文书工作交接后再补也来得及。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "\"A patient without the classic ectopic triad probably doesn't have one\" is wrong: amenorrhea appears in only 75% of cases and the full typical picture in only about 50%, so an atypical history does not clear the diagnosis.",
+   "zh": "「病人没有典型三联征，大概不是异位妊娠」是错的：停经只见于 75% 的病例，完整典型表现仅约 50%，不典型病史不能排除异位妊娠。"
+  },
+  {
+   "en": "\"Heavy visible vaginal bleeding means heavy internal blood loss in ectopic pregnancy\" is wrong: what you see is mostly shed uterine lining, not the internal hemorrhage, so light external bleeding can still sit on top of a large, invisible intra-abdominal bleed.",
+   "zh": "「异位妊娠外部出血多就代表内出血也多」是错的：肉眼可见的多是脱落的子宫内膜，而不是真正的内出血，所以外部出血少也可能掩盖着大量看不见的腹腔内出血。"
+  },
+  {
+   "en": "\"You can usually tell a ruptured ovarian cyst, tubo-ovarian abscess, or ovarian torsion apart from ectopic pregnancy by symptoms\" is wrong: they cannot be differentiated in the field and are managed identically.",
+   "zh": "「靠症状通常能把卵巢囊肿破裂、输卵管卵巢脓肿或卵巢扭转和异位妊娠区分开」是错的：这几种在现场根本无法鉴别，处置也完全一样。"
+  },
+  {
+   "en": "\"An IUD increases a woman's overall chance of ectopic pregnancy\" is wrong: an IUD lowers the overall chance of any pregnancy; it is only if pregnancy occurs despite the IUD that ectopic becomes disproportionately likely.",
+   "zh": "「戴宫内节育器会提高女性总体的异位妊娠概率」是错的：节育器降低的是任何妊娠的整体概率；只有在戴环仍然怀孕的前提下，这次妊娠才不成比例地更可能是异位妊娠。"
+  },
+  {
+   "en": "\"Bacterial vaginosis and yeast infections are STIs\" is wrong: despite tracking with sexual activity, neither is classified as a sexually transmitted infection.",
+   "zh": "「细菌性阴道病和念珠菌感染是性传播感染」是错的：虽然二者都与性活动相关，但都不被归类为性传播感染。"
+  },
+  {
+   "en": "\"Any heavily bleeding gynecologic patient qualifies for TXA\" is wrong: the formal drug-monograph Indication is trauma-anchored, postpartum hemorrhage sits only in the softer Considerations column, and ectopic pregnancy or ovarian hemorrhage is not named at all - it rides only on the Hypovolemia protocol's general occult-bleeding language.",
+   "zh": "「任何出血多的妇科患者都够格用 TXA」是错的：正式的「适应证」栏锚定在创伤，产后出血只列在更软的「考量」栏，异位妊娠或卵巢出血则哪一栏都没被点名——只能靠低血容量协议里针对隐匿出血的通用表述来覆盖。"
+  },
+  {
+   "en": "\"Naloxone will reverse a date-rape-drug sedation\" is wrong for both GHB and Rohypnol - neither has a reliable antidote, and naloxone specifically has no effect on either.",
+   "zh": "「纳洛酮能逆转迷奸药造成的镇静」对 GHB 和氟硝西泮都不成立——两者都没有可靠的解毒剂，纳洛酮对二者均无效。"
+  },
+  {
+   "en": "\"A normal or only mildly elevated pulse rules out severe shock\" is wrong: heart rate can stay deceptively stable even in severe hemorrhagic shock, so judge the whole clinical picture, not the pulse alone.",
+   "zh": "「脉搏正常或只轻度偏快，就能排除严重休克」是错的：即使在严重失血性休克中，心率也可能反常地保持平稳，要综合判断全局，而不是只看脉搏。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "LORDS TRACHEA",
+   "en": "History structure for gynecologic abdominal pain: Location, Onset, Radiation, Duration, Severity, Timing (relative to LMP/contraceptives), Relieving factors, Aggravating factors, Character, Historic precedent, Eaten (recently), Associated symptoms.",
+   "zh": "妇科腹痛病史结构记忆法：位置 Location、起病 Onset、放射 Radiation、持续时间 Duration、严重程度 Severity、与末次月经/避孕措施的时间关系 Timing、缓解因素 Relieving、加重因素 Aggravating、性质 Character、既往同类疼痛史 Historic、近期进食情况 Eaten、伴随症状 Associated。"
+  },
+  {
+   "name": "ACHES-S",
+   "en": "Oral-contraceptive adverse effects worth screening for: Abdominal pain, Chest pain, severe Headache, Eyes (blurred vision), Spotting, Severe leg pain.",
+   "zh": "口服避孕药值得筛查的不良反应：腹痛 Abdominal pain、胸痛 Chest pain、剧烈头痛 severe Headache、视觉症状 Eyes（视物模糊）、点滴出血 Spotting、严重腿痛 Severe leg pain。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Which three conditions cannot be told apart from a ruptured ectopic pregnancy in the field, and how should you manage them?",
+   "qZh": "现场有哪三种情况无法与异位妊娠破裂区分开？该怎么处置？",
+   "aEn": "Ruptured ovarian cyst, tubo-ovarian abscess, and ovarian torsion - manage all of them exactly like suspected ectopic pregnancy: shock precautions and rapid transport to a facility with surgical capability.",
+   "aZh": "卵巢囊肿破裂、输卵管卵巢脓肿、卵巢扭转——三者都按疑似异位妊娠处置：休克防护，快速转运至具备手术能力的医院。"
+  },
+  {
+   "qEn": "A patient's last period was on time and normal - does that rule out ectopic pregnancy?",
+   "qZh": "患者的末次月经按时、正常来潮——这能排除异位妊娠吗？",
+   "aEn": "No. Amenorrhea appears in only 75% of ectopic patients and the full classic triad in only about 50%, so a normal-sounding period does not clear the diagnosis.",
+   "aZh": "不能。停经只出现在 75% 的异位妊娠患者中，完整经典三联征更是只见于约 50%，所以听起来正常的月经史并不能排除异位妊娠。"
+  },
+  {
+   "qEn": "What is the key timing differentiator between ectopic pregnancy and spontaneous miscarriage in the history?",
+   "qZh": "异位妊娠和自然流产在病史时间顺序上的关键鉴别点是什么？",
+   "aEn": "In ectopic pregnancy, pain typically precedes bleeding; in miscarriage, bleeding typically precedes pain.",
+   "aZh": "异位妊娠通常先痛后出血；自然流产通常先出血后痛。"
+  },
+  {
+   "qEn": "A patient reports soaking 4 pads and 2 tampons. Roughly how much blood does that represent, and what is the limit of this estimate?",
+   "qZh": "患者称用了 4 片产垫和 2 支棉条，估算出血量大约多少？这种估算有什么局限？",
+   "aEn": "About 4 x 30 mL + 2 x 20 mL = 160 mL - but this is only a rough supplement to your shock assessment, not a substitute for it, since it says nothing about invisible internal bleeding.",
+   "aZh": "约 4×30 mL + 2×20 mL = 160 mL——但这只是休克评估的粗略补充，不能替代评估本身，因为它反映不出看不见的内出血。"
+  },
+  {
+   "qEn": "Why can't you just give naloxone if you suspect GHB or Rohypnol facilitated a sexual assault?",
+   "qZh": "怀疑 GHB 或氟硝西泮被用于迷奸时，为什么不能直接给纳洛酮解决？",
+   "aEn": "Neither drug has a reliable antidote, and naloxone specifically has no effect on either one - though it may still be reasonable to give if a co-ingested opioid is suspected.",
+   "aZh": "这两种药都没有可靠的解毒剂，纳洛酮对二者均无效——但如果怀疑合并使用了阿片类药物，给纳洛酮仍然合理。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "TXA and non-obstetric gynecologic hemorrhage",
+   "topicZh": "TXA 与非产科妇科出血",
+   "bookEn": "Nancy Caroline never mentions BC's prehospital IV TXA protocol; it only notes oral tranexamic acid as an in-hospital first-line drug for heavy menstrual bleeding in stable, nonpregnant patients.",
+   "bookZh": "教材完全没提 BC 的院前静脉 TXA 协议；它只提到口服氨甲环酸是稳定、非孕患者月经过多的院内一线用药。",
+   "bcEn": "BC's IV TXA (2 g push over 1 minute) has a formal drug-monograph Indication anchored on major trauma, or shock tied to a mechanism of injury, or findings suggesting occult/ongoing bleeding; postpartum hemorrhage is listed only under the separate, softer 'Considerations' heading (see Chapter 42's alert on this same drug). Ruptured ectopic pregnancy and hemorrhagic ovarian cyst/torsion are not named anywhere in the TXA monograph - not in Indication, not in Considerations. They are covered only indirectly, through the general Hypovolemia protocol line that says to 'consider tranexamic acid in cases of shock secondary to blood loss and hypovolemia secondary to occult bleeding.' Treat that as a medical-direction judgment call, not a default reflex - and the same contraindications apply regardless of the cause: more than 3 hours since symptom onset, under 12 years old, isolated TBI.",
+   "bcZh": "BC 的静脉 TXA（2 g 静推、1 分钟推完）在专论里的正式「适应证」锚定在重大创伤、与受伤机制相关的休克，或提示隐匿/持续出血的体征；产后出血只列在另一档更软的「考量」栏（参见第 42 章对同一药物的对应条目）。异位妊娠破裂和卵巢囊肿出血/扭转在 TXA 专论里哪一栏都没被点名——既不在「适应证」，也不在「考量」。它们只能间接靠低血容量协议里那句「因失血导致休克、隐匿出血导致低血容量时，考虑使用氨甲环酸」来覆盖。把它当成需要医疗指导判断的临床决策，而不是条件反射——禁忌证不因病因而变：症状发生超过 3 小时、12 岁以下、单纯颅脑外伤。",
+   "ref": "BC EMALB Provincial Examination Guidelines, June 2026, pp.54, 78"
+  },
+  {
+   "topicEn": "Fluid resuscitation numbers for gynecologic hemorrhagic shock",
+   "topicZh": "妇科出血性休克的补液数字",
+   "bookEn": "Nancy Caroline only says to \"initiate IV fluid therapy... following local protocol\" for a suspected ectopic pregnancy or other gynecologic hemorrhage, without giving a volume, rate, or reassessment interval.",
+   "bookZh": "教材对疑似异位妊娠或其他妇科出血只说「按本地协议启动静脉补液」，没有给出具体容量、速度或复评间隔。",
+   "bcEn": "BC's Hypovolemia protocol supplies the actual numbers that apply once systolic BP is under 90 mm Hg (or earlier, if the mechanism suggests hidden blood loss): a fluid bolus of 20 mL/kg up to a maximum of 2 L, reassessing every 500 mL, alongside external hemorrhage control, warmth, and oxygen to keep SpO2 at 94% or above. This is the same protocol pathway where the 'consider TXA' line for occult-bleeding shock sits.",
+   "bcZh": "BC 的低血容量协议给出了收缩压低于 90 mmHg 时（或病史机制提示隐匿失血更早时）实际适用的数字：液体推注 20 mL/kg，上限 2 L，每 500 mL 复评一次，同时控制外部出血、保暖、给氧维持 SpO2 ≥94%。「考虑用 TXA」处理隐匿出血休克的那句话，正是写在这同一条协议里。",
+   "ref": "BC EMALB Provincial Examination Guidelines, June 2026, p.54"
+  }
+ ],
+ "sourcePages": "3471-3527"
+}

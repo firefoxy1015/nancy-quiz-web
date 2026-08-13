@@ -1,0 +1,659 @@
+{
+ "id": "ch27",
+ "n": 27,
+ "titleEn": "Abdominal Injuries",
+ "titleZh": "腹部损伤",
+ "group": "trauma",
+ "examWeight": 2,
+ "whyEn": "A weight-2 trauma chapter that outpunches its numeric weight because abdominal trauma is the textbook lesson in 'looks fine now, isn't fine at all': up to 20% of patients with significant hemoperitoneum have a benign initial abdominal exam, and shock signs can stay hidden until more than 40% of circulating blood volume is already gone. The chapter's real density sits in three places - solid-organ injury-frequency numbers (spleen ~50%, liver ~30% in blunt trauma), the named signs with timing quirks (Kehr, Cullen, Grey Turner), and the two skills graded as automatic misses if botched: evisceration care (never reduce it, moist dressing plus occlusive layer) and pelvic-fracture hemorrhage control. It is also the direct clinical backbone of BC practical scenario tr-02 (blunt abdominal trauma with shock), so its fluid-bolus and TXA numbers are graded reflexes, not background trivia.",
+ "whyZh": "这是权重2的创伤章节，但实操价值远超它的权重数字——腹部创伤是“现在看着没事＝根本没用”的教科书案例：多达20%有明显腹腔积血的患者初次腹部查体完全正常，休克征象甚至要等到循环血量丢了40%以上才会显形。这一章真正的密度集中在三处：实质脏器损伤发生率（钝性伤脾脏约50%、肝脏约30%）、几个带时限陷阱的命名体征（Kehr征、Cullen征、Grey Turner征），以及两项一旦做错就直接判失败的技能——内脏脱出处理（绝不还纳、湿敷加封闭层）和骨盆骨折出血控制。它也是BC实操场景tr-02（高风险车祸钝性腹伤合并休克）的核心临床支撑，补液推注和TXA的数字不是背景知识，是要考的动作。",
+ "competencies": {
+  "areas": [
+   "Area 4: Assessment and Diagnostics（进行消化系统评估并解读发现；进行泌尿生殖系统评估并解读发现）",
+   "Area 6: Integration（处置出现消化系统症状体征的患者；处置出现泌尿生殖系统症状体征的患者）"
+  ],
+  "codes": [
+   "4.3.g",
+   "4.3.h",
+   "6.1.d",
+   "6.1.e"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction & Epidemiology",
+   "titleZh": "概述与流行病学",
+   "points": [
+    {
+     "en": "The abdominal cavity is the body's largest cavity, running from the diaphragm all the way to the pelvis - that huge span, plus how variable abdominal injury presentations are, is exactly why assessment must be fast rather than exhaustive.",
+     "zh": "腹腔是全身最大的体腔，上至膈肌下至骨盆——正因为跨度这么大、表现又千变万化，评估必须求快，而不是求全。",
+     "hard": true
+    },
+    {
+     "en": "Leading causes of major injury: motor vehicle collisions (40%) and unintentional falls (39%) together dominate, ahead of homicide/assault. Injury-type breakdown skews heavily internal: internal organ injury made up 81% of major injuries, and mechanism split 95% blunt, 4% penetrating, 1% burn.",
+     "zh": "重大创伤的头号病因：机动车碰撞（40%）和意外跌落（39%）合计占绝大多数，排在他杀/故意伤害之前。伤情类型高度偏向内伤：81%的重大创伤是内脏器官伤，受伤机制95%为钝性、4%穿透性、1%烧伤。",
+     "hard": true
+    },
+    {
+     "en": "Blunt abdominal trauma from motor vehicle collisions carries roughly 11% mortality - it accounts for the majority of significant abdominal injuries seen in Canada.",
+     "zh": "机动车碰撞造成的钝性腹部创伤死亡率约11%——它也是加拿大绝大多数严重腹部创伤的主要来源。",
+     "hard": true
+    },
+    {
+     "en": "Unrecognized abdominal trauma is a leading cause of unexpected trauma death - not because it is untreatable, but because a missed diagnosis delays surgical intervention past the point it could have helped.",
+     "zh": "未被识别的腹部创伤是意外创伤死亡的主要原因之一——不是因为它治不好，而是因为漏诊会把手术干预的时间拖过还能救的窗口。",
+     "hard": false
+    },
+    {
+     "en": "Abdominal injury is the direct primary cause of death in about 10% of trauma mortalities; in a substantial additional share of cases it contributes, but the exact cause of death is never fully clarified.",
+     "zh": "在约10%的创伤死亡中，腹部损伤是直接的首要死因；另有相当一部分病例中它是促成因素，但确切死因始终无法完全厘清。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital abdominal-trauma outcomes have improved on three fronts at once: paramedic education emphasizing rapid transport, hospital advances (ultrasonography, surgical technique, postoperative care), and broader trauma-system development enabling earlier detection and advanced intervention.",
+     "zh": "腹部创伤院前结局的改善来自三条线同时发力：急救员教育强调尽早转运、医院端进步（超声、手术技术、术后护理）、以及更完善的创伤系统带来更早发现和更高阶的干预。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Anatomy: Regions, Quadrants & Organs",
+   "titleZh": "解剖：分区、象限与脏器",
+   "points": [
+    {
+     "en": "External abdomen has three regions. Anterior abdomen: from about the nipple line/4th intercostal space down to the inguinal ligaments and pubic symphysis, laterally to the anterior axillary line. Flanks: between the anterior and posterior axillary lines, 6th intercostal space to the iliac crest. Back: between the posterior axillary lines, scapula to iliac crests.",
+     "zh": "外部腹壁分三区。前腹部：大约从乳头线/第4肋间往下到腹股沟韧带和耻骨联合，外侧到腋前线。腰肋部：腋前线与腋后线之间，第6肋间到髂嵴。背部：两侧腋后线之间，肩胛骨到髂嵴。",
+     "hard": true
+    },
+    {
+     "en": "Flank and back muscle bulk gives some protection against low-velocity penetrating trauma - but it does nothing to shield the organs underneath from blunt-force injury.",
+     "zh": "腰肋部和背部厚实的肌肉能挡一点低速穿透伤，但对钝性暴力造成的深部脏器损伤基本没有防护作用。",
+     "hard": false
+    },
+    {
+     "en": "Quadrant system for locating findings: an imaginary '+' centred on the umbilicus, vertical axis from pubic symphysis to xiphoid process, horizontal axis to both flanks, yields RUQ, RLQ, LLQ, LUQ, plus a periumbilical zone.",
+     "zh": "定位体征用四象限系统：以脐部为中心画一个想象的“+”，竖轴连耻骨联合到剑突，横轴延伸到两侧腰肋，划出右上腹、右下腹、左下腹、左上腹四个象限，外加脐周区。",
+     "hard": true
+    },
+    {
+     "en": "Internal abdomen has three structural regions. Peritoneal space holds liver, spleen, stomach, small bowel, colon, gallbladder, and (in women) the reproductive organs. Retroperitoneal space holds the aorta, vena cava, pancreas, kidneys, upper ureters, and parts of the duodenum/large intestine. Pelvis holds the rectum, lower ureters, pelvic vessels, pelvic bones, and reproductive organs.",
+     "zh": "内部腹腔按结构分三个区。腹膜腔：肝、脾、胃、小肠、结肠、胆囊，女性还包括生殖器官。腹膜后间隙：主动脉、下腔静脉、胰腺、肾脏、上段输尿管、十二指肠和大肠的部分节段。骨盆腔：直肠、下段输尿管、盆腔血管、骨盆骨骼、生殖器官。",
+     "hard": true
+    },
+    {
+     "en": "Liver: the abdomen's single largest solid organ, sitting in the RUQ up through the epigastrium. Its superior border can reach as high as the nipple line - so ANY right-sided chest trauma at or below the nipples should also trigger suspicion of a liver injury.",
+     "zh": "肝脏是腹腔里体积最大的实质脏器，位于右上腹并延伸到上腹部。它的上缘可以高到乳头线——所以只要是乳头线及以下的右侧胸部创伤，都要同时怀疑肝损伤。",
+     "hard": true
+    },
+    {
+     "en": "Spleen: a solid, highly vascular organ sitting in the LUQ, partly shielded by the left lower rib cage - protection that still fails often enough that it is the single most commonly injured organ in blunt trauma.",
+     "zh": "脾脏是实质性、血供极丰富的器官，位于左上腹，部分被左下肋骨保护——但这层保护经常不够用，脾脏仍是钝性创伤中最常受伤的单一器官。",
+     "hard": true
+    },
+    {
+     "en": "Diaphragm: the dome-shaped muscle separating thorax from abdomen, attached at the 12th rib in the flanks and peaking centrally at the 4th intercostal space - meaning part of what you think of as 'the abdomen' physically sits up inside the rib cage.",
+     "zh": "膈肌是分隔胸腔和腹腔的穹顶状肌肉，两侧附着点低到第12肋，中央顶点却高到第4肋间——也就是说，“腹腔”有一部分其实是被包在胸廓里面的。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Physiology: Where Blood Hides & Injury Frequency",
+   "titleZh": "生理：血液藏在哪里与损伤发生率",
+   "points": [
+    {
+     "en": "Enough blood loss to cause shock can pool in four places: the peritoneal cavity, the retroperitoneal space, the pelvis, and externally through open wounds. Because the abdomen and retroperitoneum can silently absorb large volumes, bleeding there may produce few signs - vitals and exam findings can both understate the true blood loss.",
+     "zh": "能引发休克的血量可以藏在四个地方：腹膜腔、腹膜后间隙、骨盆腔，以及经开放伤口向体外流失。腹腔和腹膜后能悄无声息地吸纳大量血液，所以生命体征和查体都可能大大低估实际失血量。",
+     "hard": true
+    },
+    {
+     "en": "Injury-frequency ranking by mechanism: in BLUNT trauma the spleen is hurt most often (about 50% of cases), the liver second (about 30%). In PENETRATING trauma the liver is the single most commonly injured organ, simply because of its large size.",
+     "zh": "按机制排损伤发生率：钝性创伤中脾脏最常受伤（约50%的病例），肝脏第二（约30%）。穿透伤中肝脏是最常受伤的单一器官，原因很简单——体积最大，最容易被打中。",
+     "hard": true
+    },
+    {
+     "en": "Solid organs (liver, spleen) crush easily under external blunt force and carry a large blood supply, so they bleed profusely - if a trauma patient shows unexplained shock, suspect abdominal trauma even without dramatic external findings.",
+     "zh": "实质脏器（肝、脾）在钝性外力下很容易被压碎，血供又丰富，所以出血凶猛——创伤患者出现说不清原因的休克，就该怀疑腹部创伤，哪怕体表看不出明显异常。",
+     "hard": false
+    },
+    {
+     "en": "Hollow organs resist blunt injury unless they are full, but their danger is different: they carry toxins (urine, feces, bile, gastric acid) that spill into the abdominal cavity on rupture, contaminating the normally sterile peritoneum and causing peritonitis - a life-threatening infection.",
+     "zh": "空腔脏器不满盈时抗钝性打击能力较强，但它们的危险性质不同：一旦破裂，里面的毒性内容物（尿液、粪便、胆汁、胃酸）会漏进腹腔，污染本应无菌的腹膜，引发威胁生命的腹膜炎感染。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Mechanism of Injury: Blunt Trauma",
+   "titleZh": "受伤机制：钝性创伤",
+   "points": [
+    {
+     "en": "Three blunt mechanisms to think through on every call: SHEARING (rapid deceleration - organs keep moving and tear at their attachment points; hits liver, kidneys, intestines, spleen), CRUSHING (contents crushed between the anterior wall and the spine or another structure, from a dashboard/hood/falling object - solid organs at greatest risk), and COMPRESSION (a direct blow or fixed-object pressure such as a lap belt or airbag deforms hollow organs and spikes intra-abdominal pressure enough to rupture bowel or diaphragm).",
+     "zh": "每次出诊都要过一遍的三种钝性机制：剪切（快速减速时脏器还在向前冲，在附着点被撕裂——常伤肝、肾、肠、脾）、挤压（腹腔内容物被夹在前腹壁和脊柱或其他结构之间，来自仪表板/引擎盖/坠落物——实质脏器风险最高）、压缩（直接打击或固定物体如安全带/气囊施压，使空腔脏器变形、腹内压骤升，足以撑破肠管或膈肌）。",
+     "hard": true
+    },
+    {
+     "en": "The 'third collision' shorthand for MVC shearing injury: 1st collision = car into the obstacle, 2nd = patient into the steering column, 3rd = the patient's own internal organs slamming into the inner surface of the ribs, sternum, and chest wall.",
+     "zh": "车祸剪切伤的“第三次碰撞”说法：第一次碰撞＝车撞上障碍物，第二次＝人撞上方向盘柱，第三次＝患者体内脏器撞上肋骨、胸骨和胸壁的内侧面。",
+     "hard": false
+    },
+    {
+     "en": "MOI-based associated-injury pattern recognition: lower rib cage fractures point to spleen and/or liver injury; upper abdominal injury points to chest trauma; pelvic fracture points to intra-abdominal trauma (specifically bladder laceration); penetrating wounds at or below the nipple line point to intra-abdominal trauma.",
+     "zh": "按受伤机制识别合并伤规律：下位肋骨骨折→怀疑脾和/或肝损伤；上腹部损伤→怀疑合并胸部创伤；骨盆骨折→怀疑腹腔内损伤（尤其是膀胱裂伤）；乳头线及以下的穿透伤→怀疑腹腔内损伤。",
+     "hard": true
+    },
+    {
+     "en": "Rear-impact MVCs carry lower abdominal-injury risk ONLY if the patient was properly restrained - improper or absent restraint removes that protection entirely, putting the patient back at full risk.",
+     "zh": "追尾车祸的腹部损伤风险较低，前提是患者正确使用了约束装置——一旦约束不当或根本没系，这层保护就完全失效，风险回到原点。",
+     "hard": false
+    },
+    {
+     "en": "Rollover crashes carry the greatest lethal-injury potential of all MVC patterns: unrestrained occupants can change direction repeatedly, with increased risk of ejection or partial ejection, plus collisions with both the vehicle interior and other occupants.",
+     "zh": "翻滚事故是所有车祸类型中致命伤风险最高的一种：未约束乘员可能反复变换撞击方向，被甩出或部分甩出车外的风险更高，还可能撞上车内结构或其他乘员。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Mechanism of Injury: Penetrating Trauma & Blast",
+   "titleZh": "受伤机制：穿透伤与爆炸伤",
+   "points": [
+    {
+     "en": "Organ pattern by penetrating weapon type: GUNSHOT wounds most commonly injure the small bowel, colon, liver, and vascular structures, and their extent is LESS predictable than stab wounds because damage depends heavily on weapon/bullet characteristics and the temporary cavitation the bullet creates lateral to its track. STAB wounds most commonly injure the liver, small bowel, diaphragm, and colon.",
+     "zh": "按穿透伤武器类型看受伤器官规律：枪伤最常伤及小肠、结肠、肝脏和血管结构，且损伤程度比刀刺伤更难预测，因为很大程度取决于武器和子弹特性，以及子弹在弹道两侧造成的临时空腔效应。刀刺伤最常伤及肝脏、小肠、膈肌和结肠。",
+     "hard": true
+    },
+    {
+     "en": "Penetrating-trauma velocity tiers: LOW velocity <70 m/s (knife, ice pick, handgun), MEDIUM velocity 70-700 m/s (9-mm handgun, shotgun), HIGH velocity >700 m/s (high-power sporting rifle, military weapon) - higher velocity means more temporary cavitation and more tissue damage lateral to the direct wound track.",
+     "zh": "穿透伤按速度分三档：低速<70 m/s（刀、冰锥、手枪），中速70-700 m/s（9毫米手枪、猎枪），高速>700 m/s（高功率步枪、军用武器）——速度越高，弹道两侧的临时空腔效应越强，造成的组织损伤范围也越大。",
+     "hard": true
+    },
+    {
+     "en": "Blast fragments from antipersonnel weapons (mines, grenades) can travel up to 1,400 m/s - nearly double the velocity of a high-speed rifle projectile. The four blast-injury mechanisms are primary (pressure wave), secondary (flying debris/fragments), tertiary (patient's body thrown into another object), and quaternary (burns/respiratory injury from heat or chemicals).",
+     "zh": "杀伤性武器（地雷、手榴弹）的破片速度最高可达1,400 m/s——几乎是高速步枪弹速度的两倍。爆炸伤四种机制：原发（冲击压力波）、继发（飞散碎片/弹片）、三发（人体被抛起撞上其他物体）、四发（高温或化学物质引起的烧伤/呼吸道损伤）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pathophysiology: Shock Signs & Solid Organ Injuries",
+   "titleZh": "病理生理：休克征象与实质脏器损伤",
+   "points": [
+    {
+     "en": "Hemorrhagic-shock progression sequence: rising heart rate and respiratory rate come first, narrowing pulse pressure comes next, then frank hypotension as blood loss continues; anxiety/agitation appear along the way. Severe hemorrhage's endpoint picture is marked tachycardia plus hypotension plus cool clammy skin plus altered mental status.",
+     "zh": "失血性休克的进展顺序：先是心率和呼吸频率上升，接着脉压差变窄，血液持续丢失后才出现明确低血压，过程中会出现焦虑烦躁。严重失血的终点表现是明显心动过速＋低血压＋皮肤湿冷苍白＋意识改变。",
+     "hard": true
+    },
+    {
+     "en": "When hollow/solid organ contents spill into the peritoneal or retroperitoneal space, enzymes/acids/bacteria irritate fascial nerve endings - pain stays LOCALIZED while contamination is confined, and turns GENERALIZED once the whole peritoneal cavity is involved.",
+     "zh": "空腔或实质脏器的内容物漏进腹膜腔或腹膜后间隙后，酶、酸、细菌会刺激筋膜里的神经末梢——污染局限时疼痛也局限，一旦扩散到整个腹膜腔，疼痛就变成弥漫性的。",
+     "hard": false
+    },
+    {
+     "en": "Liver injury releases BOTH blood and bile into the peritoneal cavity - blood loss alone can be massive enough to cause hypotension, tachycardia, shock, and death, while the leaked bile separately causes chemical peritonitis and pain on top of the hemorrhagic picture.",
+     "zh": "肝损伤会同时向腹膜腔释放血液和胆汁——单是失血量就可能大到造成低血压、心动过速、休克甚至死亡，漏出的胆汁还会额外引起化学性腹膜炎和疼痛，叠加在失血表现之上。",
+     "hard": true
+    },
+    {
+     "en": "Splenic rupture (Kehr sign): as many as 40% of patients with a ruptured spleen have NO symptoms at all. When a symptom does show, it may be ONLY referred left-shoulder pain (Kehr sign) from diaphragmatic irritation - and rupture has been documented even after relatively minor contact, especially with a spleen already enlarged by mononucleosis or other disease.",
+     "zh": "脾破裂（Kehr征）：多达40%的脾破裂患者完全没有症状。即使有症状，也可能只是因膈肌受刺激而产生的左肩牵涉痛（Kehr征）——即便是相对轻微的碰撞也曾造成脾破裂的记录，尤其是脾脏因单核细胞增多症等疾病已经肿大的患者。",
+     "hard": true
+    },
+    {
+     "en": "Pancreatic injury occurs in less than 5% of major abdominal trauma because its retroperitoneal position shields it - it takes high-energy force, usually penetrating (eg, a bullet) but also blunt (unrestrained driver into the steering column, cyclist into handlebars). Signs are subtle or absent at first, developing over HOURS TO DAYS as leaked enzymes damage surrounding tissue; the classic delayed presentation is vague upper/mid-abdominal pain radiating to the back.",
+     "zh": "胰腺损伤见于不到5%的重大腹部创伤，因为它藏在腹膜后受到较好保护——需要高能量暴力才会伤到，多为穿透伤（如子弹），也可见于钝性伤（未系安全带的司机撞上转向柱、骑车人撞上车把）。初期体征轻微或缺失，要经过数小时到数天，随着漏出的酶损伤周围组织才逐渐显现；典型的延迟表现是含糊的上/中腹痛并放射至背部。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pathophysiology: Hollow Organ, Diaphragm, Retroperitoneal & Vascular Injuries",
+   "titleZh": "病理生理：空腔脏器、膈肌、腹膜后与血管损伤",
+   "points": [
+    {
+     "en": "Diaphragmatic injury rarely travels alone - it typically comes bundled with thoracic, abdominal, head, and extremity injuries. Lateral MVC impact tends to shear/tear the diaphragm through chest-wall twisting; frontal impact tends to tear it via a steering-wheel/column strike that spikes abdominal pressure.",
+     "zh": "膈肌损伤很少单独出现，通常合并胸部、腹部、头部和肢体损伤。侧面撞击容易通过胸壁扭转剪切/撕裂膈肌；正面撞击容易因方向盘/转向柱撞击导致腹内压骤升而撕裂膈肌。",
+     "hard": true
+    },
+    {
+     "en": "Seat belt sign (a contusion/abrasion across the lower abdomen) usually signals that intraperitoneal injury is also present - an improperly placed lap belt specifically can rupture the small intestine, large intestine, or bladder through direct compression.",
+     "zh": "安全带征（下腹部一条挫伤/擦伤痕迹）通常提示同时存在腹膜腔内损伤——佩戴位置不对的腰带尤其可能因直接压迫造成小肠、大肠或膀胱破裂。",
+     "hard": true
+    },
+    {
+     "en": "Stomach injury is rare from blunt trauma (usually needs a recent meal or improper seatbelt use to occur) and mostly comes from penetrating trauma instead. When it does rupture, spilled gastric acid causes fast-onset chemical peritonitis and pain.",
+     "zh": "胃损伤在钝性创伤中很少见（通常要有刚进食或安全带佩戴不当才会发生），更多来自穿透伤。一旦破裂，漏出的胃酸会引起起病很快的化学性腹膜炎和疼痛。",
+     "hard": false
+    },
+    {
+     "en": "Bladder/urethra injury risk scales with BOTH mechanism severity and bladder fullness - a fuller bladder is more likely to rupture. It usually travels with a pelvic fracture from MVC, falls, or assault, and its signs are nonspecific: gross hematuria, suprapubic pain/tenderness, difficulty voiding, abdominal distention, guarding, or rebound tenderness.",
+     "zh": "膀胱/尿道损伤风险同时取决于受伤机制的严重度和膀胱的充盈程度——膀胱越满越容易破裂。它通常与车祸、跌落或攻击造成的骨盆骨折同时出现，体征都不特异：肉眼血尿、耻骨上疼痛压痛、排尿困难、腹胀、肌卫或反跳痛。",
+     "hard": true
+    },
+    {
+     "en": "Retroperitoneal injuries are hard to diagnose because blood/contaminants stay contained back there, rarely producing abdominal pain, peritoneal signs, or distention. The only occasional external clues are flank ecchymosis (Grey Turner sign) or periumbilical ecchymosis (Cullen sign) - and BOTH take 12-24 HOURS to appear, so their absence in the field proves nothing about ongoing retroperitoneal hemorrhage.",
+     "zh": "腹膜后损伤很难诊断，因为血液和污染物都被封在后面，很少引起腹痛、腹膜刺激征或腹胀。偶尔能看到的外部线索是腰肋部瘀斑（Grey Turner征）或脐周瘀斑（Cullen征）——但两者都要伤后12-24小时才出现，现场没看到并不能排除正在进行的腹膜后大出血。",
+     "hard": true
+    },
+    {
+     "en": "Retroperitoneal vascular structures (descending aorta and branches, superior/inferior phrenic arteries, inferior vena cava, mesenteric vessels) are mostly injured by PENETRATING trauma and usually come with multi-organ injury; blunt trauma can still shear them from their attachment points. Note: an existing abdominal aortic aneurysm can be made worse by abdominal trauma.",
+     "zh": "腹膜后血管结构（降主动脉及其分支、膈上/膈下动脉、下腔静脉、肠系膜血管）多因穿透伤受伤，且通常合并多脏器损伤；钝性伤也能把血管从附着点剪断。要点：已有的腹主动脉瘤可能因腹部创伤而恶化。",
+     "hard": true
+    },
+    {
+     "en": "Duodenal injury typically follows high-speed deceleration, spilling contents into the retroperitoneum - pain, fever, nausea, and vomiting may not appear for HOURS TO DAYS. Maintain high suspicion specifically after high-speed deceleration collisions even when the early exam looks unremarkable.",
+     "zh": "十二指肠损伤通常由高速减速引起，内容物漏进腹膜后间隙——疼痛、发热、恶心呕吐可能要数小时到数天后才出现。尤其在高速减速性车祸后，即使早期查体没有异常也要保持高度怀疑。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Assessment",
+   "titleZh": "评估",
+   "points": [
+    {
+     "en": "Priority sequencing rule: life-threatening hemorrhage or cardiac arrest is addressed even BEFORE airway and breathing concerns in a patient with abdominal trauma.",
+     "zh": "优先级铁律：合并腹部创伤的患者如出现威胁生命的大出血或心脏骤停，要在处理气道和呼吸之前先处理。",
+     "hard": true
+    },
+    {
+     "en": "About 20% of patients with significant hemoperitoneum (blood collecting in the abdominal cavity) have a completely BENIGN initial abdominal exam - a soft, non-tender belly does not clear a high-MOI patient.",
+     "zh": "约20%有明显腹腔积血（血液积聚在腹腔内）的患者，初次腹部查体完全正常、没有阳性发现——腹部软而不痛，不代表高机制患者就可以排除腹腔出血。",
+     "hard": true
+    },
+    {
+     "en": "A quiet, still patient (lying with knees drawn up, breathing rapid and shallow, guarding) may actually have MORE severe injury than one who is moving around - movement irritates an inflamed peritoneum, so patients minimize it on purpose.",
+     "zh": "安安静静躺着不动的患者（蜷膝、呼吸浅快、肌卫）反而可能比动来动去的患者伤得更重——移动会刺激发炎的腹膜，所以患者会本能地少动。",
+     "hard": false
+    },
+    {
+     "en": "Reject the common misconception that no abdominal pain plus normal vital signs means low risk. Reality: peritonitis takes hours to days to develop, and nonspecific shock signs (hypotension, tachycardia, confusion) may not appear until more than 40% of circulating blood volume is already lost.",
+     "zh": "要打破一个常见误区——没有腹痛加生命体征正常＝低风险。事实是：腹膜炎要数小时到数天才会发展出来，而低血压、心动过速、意识混乱这些非特异性休克表现，可能要等循环血量丢了40%以上才会出现。",
+     "hard": true
+    },
+    {
+     "en": "Abdominal distention is a LATE indication of abdominal trauma - it takes a significant volume of blood filling the cavity before distention becomes visible, so its absence early on means nothing.",
+     "zh": "腹部膨隆是腹部创伤的晚期表现——要有相当大量的血液充满腹腔，膨隆才会变得肉眼可见，所以早期没看到膨隆并不能说明什么。",
+     "hard": true
+    },
+    {
+     "en": "Auscultating bowel sounds is NOT a useful prehospital assessment tool - proper auscultation needs several quiet minutes, which the scene/ambulance environment rarely allows.",
+     "zh": "听诊肠鸣音在院前不是一个有用的评估手段——正确听诊需要几分钟的安静环境，而现场和救护车里通常做不到。",
+     "hard": false
+    },
+    {
+     "en": "Extremes-of-age patients have more flaccid abdominal walls (less muscle, more fat), raising intra-abdominal injury risk and often requiring firmer palpation to detect findings - keep the index of suspicion elevated in these patients whenever they report any abdominal pain at all.",
+     "zh": "年龄两端（很小或很老）的患者腹壁更松弛（肌肉少、脂肪多），腹内损伤风险更高，触诊也常需要更用力才能发现异常——只要这类患者主诉任何腹痛，都要保持更高的怀疑度。",
+     "hard": false
+    },
+    {
+     "en": "Evisceration (organs protruding through an abdominal wall wound) generally causes surprisingly LITTLE pain - do not let a calm-seeming patient with visible bowel outside the body lower your urgency, and never apply any material that will adhere to the exposed structures.",
+     "zh": "内脏脱出（脏器从腹壁伤口突出）通常疼痛感出乎意料地轻——不要因为患者“看起来还好”而放松警惕，也绝不能对暴露的脏器组织使用任何会粘连的材料。",
+     "hard": true
+    },
+    {
+     "en": "Impaled objects: stabilize in place, never remove or manipulate on scene - removal risks worsening the bleeding or injury. In unusual situations the protruding portion may be carefully shortened (not extracted) to allow transport, moving the object as little as possible.",
+     "zh": "异物刺入：现场固定，绝不拔除或移动——拔除可能加重出血或损伤。极少数情况下可以小心截短外露部分（不是拔出）以便转运，操作时尽量减少异物的移动。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Management & Evisceration Care",
+   "titleZh": "处置与内脏脱出护理",
+   "points": [
+    {
+     "en": "Core management sequence: open the airway with spinal precautions, give high-concentration oxygen via nonrebreathing mask, establish IV access with crystalloid per local protocol, minimize external hemorrhage with pressure dressings, apply cardiac monitor and pulse oximetry (plus capnography if available), then transport to the appropriate/trauma facility.",
+     "zh": "核心处置顺序：脊柱防护下开放气道，非再吸入面罩给高浓度氧，按当地规程建立静脉通路补充晶体液，用加压敷料控制体外出血，接心电监护和血氧饱和度（有条件加呼气末二氧化碳），转运至合适的创伤中心。",
+     "hard": true
+    },
+    {
+     "en": "Textbook fluid-resuscitation target absent traumatic brain injury: maintain systolic blood pressure at 80-90 mmHg. Do NOT delay transport in order to start an IV - establish lines en route whenever possible instead.",
+     "zh": "教材给出的补液复苏目标（无颅脑外伤时）：把收缩压维持在80-90 mmHg。不要为了建立静脉通路而耽误转运——尽量在转运途中完成静脉通路的建立。",
+     "hard": true
+    },
+    {
+     "en": "Evisceration care, never-do plus do: NEVER attempt to push protruding organs back into the body. DO cover the eviscerated tissue with a normal-saline-soaked sterile dressing, keep the area warm, and transport immediately to the closest appropriate hospital.",
+     "zh": "内脏脱出护理，禁忌与正确做法：绝不能把突出的脏器塞回体内。正确做法是用生理盐水湿润的无菌敷料覆盖脱出组织，保暖，立即转运至最近的合适医院。",
+     "hard": true
+    },
+    {
+     "en": "Repeated abdominal exams during ongoing assessment are the single best way to catch a worsening patient BEFORE vital signs change - perform them en route so re-examination never delays transport.",
+     "zh": "持续评估中反复复查腹部是在生命体征变化之前抓住病情恶化的最好办法——把复查放在转运途中做，不要因为要复查而拖延转运。",
+     "hard": false
+    },
+    {
+     "en": "Pain medication in abdominal trauma is historically controversial (it can mask symptoms and is often contraindicated by the patient's hypotension), but many modern medical directors now favour a more humane approach - follow local medical directives or consult medical control en route.",
+     "zh": "腹部创伤中的镇痛用药历来有争议（可能掩盖症状，且常因患者低血压而禁忌），但现在很多医疗指导已转向更人性化的镇痛立场——具体依照当地医疗规程或途中联系医疗指挥。",
+     "hard": false
+    },
+    {
+     "en": "Scene-time discipline: aim to keep scene time at 10 minutes or less for abdominal trauma patients; if extrication or another genuine issue requires more time, document the reason for the delay.",
+     "zh": "现场时间纪律：腹部创伤患者的现场时间目标是10分钟以内；如果确因困陷等原因需要更久，要记录延迟的原因。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Pelvic Fractures",
+   "titleZh": "骨盆骨折",
+   "points": [
+    {
+     "en": "The pelvis is a ring (sacrum, ilium, ischium, pubis held by ligaments) that requires large forces to break - so a pelvic fracture should make you suspect multisystem trauma until proven otherwise, commonly bundled with urethral disruption, bladder rupture, and abdominal/thoracic/head trauma.",
+     "zh": "骨盆是一个环状结构（骶骨、髂骨、坐骨、耻骨靠韧带连成一体），要很大的外力才能打断——所以骨盆骨折在排除之前都要按多系统创伤怀疑，常合并尿道断裂、膀胱破裂及腹部/胸部/头部创伤。",
+     "hard": true
+    },
+    {
+     "en": "Anteroposterior compression (eg, head-on collision) can produce an OPEN-BOOK fracture: the pubic symphysis spreads apart, pelvic VOLUME increases, and internal bleeding can be much larger than in a closed pelvis - these patients may stay hypotensive in the field despite fluids because bleeding remains ongoing and uncontained.",
+     "zh": "前后向挤压（如正面撞车）可造成“翻书样”骨折：耻骨联合裂开，骨盆容积增大，内出血量可能远超闭合骨盆——这类患者即使补液也可能持续低血压，因为出血仍在进行且没有被容纳。",
+     "hard": true
+    },
+    {
+     "en": "Lateral compression (side impact) generally does NOT destabilize the pelvis and actually REDUCES pelvic volume - carrying less life-threatening hemorrhage concern than an open-book injury.",
+     "zh": "侧向挤压（侧面撞击）一般不会破坏骨盆稳定性，反而会缩小骨盆容积——致命性大出血的风险比翻书样损伤要低。",
+     "hard": true
+    },
+    {
+     "en": "Vertical shear (falls from height): one side of the pelvis displaces up or down relative to the other, disrupting bone/ligament - this is an UNSTABLE fracture that, like the open-book pattern, increases pelvic volume and its hemorrhage risk.",
+     "zh": "垂直剪切（高处坠落）：骨盆一侧相对另一侧上下移位，破坏骨与韧带结构——这是不稳定骨折，和翻书样损伤一样会增大骨盆容积，出血风险随之升高。",
+     "hard": true
+    },
+    {
+     "en": "Saddle injury (falling astride an object) typically produces pubic rami fractures directly under the genitalia.",
+     "zh": "跨骑伤（骑跨式坠落在物体上）通常造成耻骨支骨折，位置正好在生殖器下方。",
+     "hard": false
+    },
+    {
+     "en": "Open pelvic fracture (bony fracture WITH an overlying skin wound - not to be confused with an 'open-book' fracture, which describes bone displacement, not skin) needs urgent antibiotics, pelvic stabilization, and surgical/vascular management to control bleeding; it can result from either blunt or penetrating trauma.",
+     "zh": "开放性骨盆骨折（骨折合并皮肤破损——不要和描述骨骼移位的“翻书样”骨折搞混）需要紧急抗生素、骨盆固定、手术/血管介入止血；钝性伤和穿透伤都可能造成。",
+     "hard": true
+    },
+    {
+     "en": "Management priority: never let a search for penetrating wounds delay transport and treatment of hypotension. If an open-book fracture is suspected in a hypotensive patient, wrap a sheet around the hips at the level of the superior anterior iliac crests to reduce pelvic volume, or use a faster, better-immobilizing commercial pelvic binder if available.",
+     "zh": "处置优先级：绝不能因为搜查穿透伤而拖延转运和低血压的处理。疑似翻书样骨折且患者低血压时，用床单在髂前上棘水平环绕骨盆包扎以缩小容积，若有商品化骨盆固定带则优先使用，固定更好、更快。",
+     "hard": true
+    },
+    {
+     "en": "PASG/MAST is controversial and rarely used today for pelvic stabilization - it can reduce pain and bleeding by limiting bone movement and pelvic volume, but can also INCREASE bleeding by compressing pelvic vessels; follow local protocol if your service still carries it.",
+     "zh": "PASG/MAST抗休克裤如今已有争议、很少使用——它靠限制骨骼移动和缩小骨盆容积来减轻疼痛和出血，但也可能因压迫盆腔血管而反而加重出血；如果所在单位仍配备，须遵循当地规程。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Injury frequency by organ, blunt vs penetrating",
+   "itemZh": "钝性伤vs穿透伤最常受伤器官",
+   "value": "钝性伤脾脏~50%(最常见)、肝脏~30%(第二)；穿透伤最常伤肝(因体积大)"
+  },
+  {
+   "itemEn": "Leading causes of major injury",
+   "itemZh": "重大创伤头号病因",
+   "value": "车祸40% + 意外跌落39%"
+  },
+  {
+   "itemEn": "Major injury type / mechanism breakdown",
+   "itemZh": "重大创伤类型/机制占比",
+   "value": "内脏器官伤81%；钝性95%/穿透4%/烧伤1%"
+  },
+  {
+   "itemEn": "Blunt abdominal MVC trauma mortality",
+   "itemZh": "钝性腹部车祸创伤死亡率",
+   "value": "约11%"
+  },
+  {
+   "itemEn": "Abdominal injury as direct primary cause of trauma death",
+   "itemZh": "腹伤为创伤死亡直接首要死因的比例",
+   "value": "约10%"
+  },
+  {
+   "itemEn": "Benign initial exam despite significant hemoperitoneum",
+   "itemZh": "显著腹腔积血但初查腹部检查正常的比例",
+   "value": "约20%"
+  },
+  {
+   "itemEn": "Blood-volume loss before shock signs may appear",
+   "itemZh": "休克征象可能延迟出现所需的失血比例",
+   "value": ">40%循环血量"
+  },
+  {
+   "itemEn": "Splenic rupture patients with no symptoms",
+   "itemZh": "脾破裂无症状患者占比",
+   "value": "多达40%"
+  },
+  {
+   "itemEn": "Pancreatic injury share of major abdominal trauma",
+   "itemZh": "胰腺损伤占重大腹部创伤比例",
+   "value": "<5%"
+  },
+  {
+   "itemEn": "Cullen sign / Grey Turner sign onset timing",
+   "itemZh": "Cullen征/Grey Turner征出现时限",
+   "value": "伤后12-24小时"
+  },
+  {
+   "itemEn": "Penetrating trauma velocity tiers",
+   "itemZh": "穿透伤速度分级",
+   "value": "低速<70 m/s；中速70-700 m/s；高速>700 m/s"
+  },
+  {
+   "itemEn": "Blast fragment velocity",
+   "itemZh": "爆炸破片速度",
+   "value": "最高达1,400 m/s(约为高速步枪弹的2倍)"
+  },
+  {
+   "itemEn": "Anterior abdomen upper boundary",
+   "itemZh": "前腹部上界",
+   "value": "乳头线/第4肋间"
+  },
+  {
+   "itemEn": "Flank region boundary",
+   "itemZh": "腰肋部范围",
+   "value": "第6肋间至髂嵴"
+  },
+  {
+   "itemEn": "Scene-time goal",
+   "itemZh": "现场时间目标",
+   "value": "≤10分钟"
+  },
+  {
+   "itemEn": "Textbook fluid resuscitation target SBP (no TBI)",
+   "itemZh": "教材补液复苏目标收缩压(无颅脑外伤)",
+   "value": "80-90 mmHg"
+  },
+  {
+   "itemEn": "BC Hypovolemia protocol entry threshold",
+   "itemZh": "BC低血容量protocol启动阈值",
+   "value": "收缩压<90 mmHg(或机制/病情提示休克风险)"
+  },
+  {
+   "itemEn": "BC fluid bolus cap",
+   "itemZh": "BC补液推注上限",
+   "value": "20 mL/kg，最多2升，每500 mL复评"
+  },
+  {
+   "itemEn": "BC TXA dose / window / exclusions",
+   "itemZh": "BC TXA剂量/时限/排除标准",
+   "value": "2g(2000mg)静推1分钟；伤后≤3小时；≥12岁；非孤立性颅脑伤"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Do not let the patient's OWN chief complaint set your priorities. A painful ankle can scream for attention while a quiet LUQ is where the real bleeding is - assess and manage what threatens life, not just what the patient points to.",
+   "zh": "别让患者自己的主诉牵着你的优先级走。脚踝痛得再大声，真正在出血的可能是那个安安静静的左上腹——先处理威胁生命的问题，而不是患者指给你看的那个地方。"
+  },
+  {
+   "en": "A calm-looking, non-distended abdomen right after injury is a snapshot, not a verdict - distention is a LATE sign and peritonitis takes hours to develop, so keep re-examining even when the first look seems reassuring.",
+   "zh": "刚受伤时腹部看起来平坦、不痛，只是这一刻的快照，不是结论——膨隆是晚期体征，腹膜炎要数小时才会发展出来，第一眼看着还行也要持续复查。"
+  },
+  {
+   "en": "Kehr sign is a trap in both directions: its presence (referred left shoulder pain) points hard at splenic injury, but its ABSENCE means nothing - up to 40% of ruptured spleens produce no symptoms at all.",
+   "zh": "Kehr征是双向陷阱：出现（左肩牵涉痛）强烈提示脾损伤，但不出现什么也说明不了——多达40%的脾破裂完全没有症状。"
+  },
+  {
+   "en": "Cullen sign and Grey Turner sign both take 12-24 hours to develop - do not use their absence in the field to reassure yourself that there is no retroperitoneal bleed; they simply have not had time to show yet.",
+   "zh": "Cullen征和Grey Turner征都要12-24小时才会出现——现场没看到不代表没有腹膜后出血，只是它们还没来得及显形。"
+  },
+  {
+   "en": "Evisceration rule in one line: never reduce it, never let anything adherent touch it, cover it moist and warm, transport now - the organ's exposure looks dramatic, but the patient's underlying pain may be surprisingly mild, so do not let their calm demeanour slow you down.",
+   "zh": "内脏脱出一句话原则：绝不还纳、绝不用会粘连的材料、湿润保暖覆盖、立即转运——脏器暴露看起来很吓人，但患者本身的疼痛感可能出乎意料地轻，别被这份“镇定”拖慢你的节奏。"
+  },
+  {
+   "en": "Impaled objects stay exactly where they are found. Stabilize in place; only in unusual transport-limiting situations may the protruding portion be carefully shortened, never extracted.",
+   "zh": "刺入异物待在被发现的位置不动。现场固定即可；只有在极少数确实妨碍转运的情况下，才可小心截短外露部分，绝不能拔出。"
+  },
+  {
+   "en": "Examine the back as thoroughly as the front - gunshot and stab wounds hide easily in skin creases, especially in obese patients or those with heavy body hair.",
+   "zh": "检查背部要和检查前面一样彻底——枪伤和刀伤很容易藏在皮肤褶皱里，肥胖或体毛浓密的患者尤其容易漏掉。"
+  },
+  {
+   "en": "A seat belt sign (bruise/abrasion across the lower abdomen) is not just a bruise - treat it as a flag for likely intraperitoneal injury underneath, especially bowel or bladder from an improperly placed lap belt.",
+   "zh": "安全带征（下腹一条挫伤/擦伤）不只是一道瘀青——要把它当成下方很可能有腹膜腔内损伤的信号，尤其是佩戴不当的腰带造成的肠管或膀胱损伤。"
+  },
+  {
+   "en": "Rear-impact MVC 'usually low risk' only holds if the restraint was worn correctly - do not extend that reassurance to an unrestrained or improperly restrained occupant.",
+   "zh": "“追尾车祸风险较低”这个经验只在约束装置佩戴正确时成立——不能把这份安心感套用到未系或佩戴不当的乘员身上。"
+  },
+  {
+   "en": "Prehospital ultrasonography (where available) can catch hemoperitoneum before it is clinically obvious, but it never sees retroperitoneal bleeding and must never substitute for a full exam or delay transport.",
+   "zh": "有条件时院前超声可以在临床表现明显之前发现腹腔积血，但它看不到腹膜后出血，也绝不能替代完整查体或拖延转运。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Normal vital signs rule out significant intra-abdominal injury' is false - nonspecific shock signs (hypotension, tachycardia, confusion) may not appear until more than 40% of circulating blood volume is already lost.",
+   "zh": "“生命体征正常就能排除严重腹腔内损伤”是错的——低血压、心动过速、意识混乱这些休克表现，可能要等循环血量丢了40%以上才出现。"
+  },
+  {
+   "en": "'A soft, non-tender abdomen on exam means the abdomen is fine' is false - about 20% of patients with significant hemoperitoneum have a completely benign initial abdominal exam.",
+   "zh": "“查体腹部软、不痛，就说明腹部没事”是错的——约20%有明显腹腔积血的患者初次腹部查体完全正常。"
+  },
+  {
+   "en": "'The patient is quiet and not moving, so they're probably not that badly hurt' has it backwards - a still, guarded, knees-drawn-up patient is minimizing movement BECAUSE peritoneal irritation makes movement painful, and may be worse off than a patient thrashing around.",
+   "zh": "“患者很安静不怎么动，应该伤得不重”正好想反了——蜷膝、肌卫、少动的患者往往是因为腹膜刺激让动一下就疼，反而可能比动来动去的患者伤得更重。"
+  },
+  {
+   "en": "'Listening for bowel sounds tells you something useful in the field' is false - proper auscultation needs several quiet minutes that scene and transport noise almost never allow, so this finding is not a reliable prehospital tool.",
+   "zh": "“现场听诊肠鸣音能提供有用信息”是错的——正确听诊需要几分钟的安静环境，现场和转运途中的噪音几乎从来做不到，所以这项检查在院前不可靠。"
+  },
+  {
+   "en": "Kehr sign, Cullen sign, and Grey Turner sign are all confirmatory when present but NEVER exclusionary when absent - up to 40% of splenic ruptures are silent, and the two ecchymosis signs simply have not had the 12-24 hours needed to appear yet.",
+   "zh": "Kehr征、Cullen征、Grey Turner征三者出现时都有诊断价值，但不出现时都不能排除损伤——多达40%的脾破裂完全无症状，两个瘀斑体征也可能只是还没到12-24小时的显形时间。"
+  },
+  {
+   "en": "'Distention shows up early if there's real bleeding' is false - distention is a LATE sign that requires a significant volume of blood to fill the cavity before it becomes visible.",
+   "zh": "“真出血的话膨隆会早点出现”是错的——膨隆是晚期体征，要相当大量的血液充满腹腔才会变得看得见。"
+  },
+  {
+   "en": "Do not conflate an 'open-book' pelvic fracture (bone displacement increasing pelvic volume) with an 'open' pelvic fracture (a bony fracture WITH an overlying skin wound) - they describe different problems and different urgencies.",
+   "zh": "别把“翻书样”骨盆骨折（骨骼移位、容积增大）和“开放性”骨盆骨折（骨折合并皮肤破损）混为一谈——这是两码事，紧急程度也不同。"
+  },
+  {
+   "en": "Lateral pelvic compression is not automatically 'the safer pattern' in every sense - it generally does not destabilize the ring and reduces pelvic volume (lower hemorrhage concern), but the mechanism causing it can still carry major associated injuries elsewhere.",
+   "zh": "侧向骨盆挤压不代表“绝对安全”——它一般不破坏环状结构、还会缩小骨盆容积（出血顾虑较低），但造成它的暴力本身仍可能带来其他部位的严重合并伤。"
+  },
+  {
+   "en": "Entonox/nitrous oxide analgesia lists abdominal distention as a CAUTION, not an outright contraindication in the BC drug monograph - but pneumothorax IS a listed contraindication, so a chest-plus-abdomen trauma patient needs both checked before self-administration begins.",
+   "zh": "在BC药物说明里，氧化亚氮（Entonox）对腹部膨隆只是“慎用”而非绝对禁忌——但气胸是明确列出的禁忌症，所以胸腹合并伤患者在开始自助给药前，两项都要核对清楚。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "血能藏的四个地方",
+   "en": "Four places that can hide shock-causing blood loss: peritoneal cavity, retroperitoneal space, pelvis, and external open wounds - the abdomen/retroperitoneum absorb large volumes almost silently.",
+   "zh": "能藏住致休克血量的四个地方：腹膜腔、腹膜后间隙、骨盆腔、体外开放伤口——腹腔和腹膜后几乎能悄无声息地吞下大量血液。"
+  },
+  {
+   "name": "剪挤压",
+   "en": "The three blunt mechanisms in one phrase: SHEAR (deceleration tears organs at attachment points), CRUSH (contents crushed against the spine from an external object), COMPRESS (direct/fixed-object pressure spikes intra-abdominal pressure).",
+   "zh": "钝性伤三机制一句话记：剪（减速时脏器在附着点被撕裂）、挤（外物把内容物压向脊柱）、压（直接或固定物压迫使腹内压骤升）。"
+  },
+  {
+   "name": "五脾三肝",
+   "en": "Injury-frequency shorthand: blunt trauma hits the spleen about half the time (~50%) and the liver about a third (~30%); penetrating trauma flips it - liver is the single most common target simply due to size.",
+   "zh": "损伤发生率速记：钝性伤脾脏约占一半（~50%）、肝脏约三成（~30%）；穿透伤反过来——肝脏因体积最大成为最常受伤的单一器官。"
+  },
+  {
+   "en": "Three named signs, three different jobs: Kehr = referred LEFT shoulder pain from a bleeding spleen (present in a minority, absent in up to 40%); Cullen = periumbilical bruising; Grey Turner = flank bruising (both retroperitoneal-bleed signs, both need 12-24 hours to show).",
+   "zh": "三个命名体征各管一段：Kehr征＝脾出血引起的左肩牵涉痛（只在少数患者出现，多达40%完全没有）；Cullen征＝脐周瘀斑；Grey Turner征＝腰肋部瘀斑（两者都提示腹膜后出血，都要12-24小时才显形）。",
+   "name": "三个命名体征"
+  },
+  {
+   "name": "翻书 vs 侧压 vs 剪切",
+   "en": "Pelvic fracture volume logic: anteroposterior compression (open-book) and vertical shear BOTH increase pelvic volume and hemorrhage risk; lateral compression REDUCES volume and generally does not destabilize the ring.",
+   "zh": "骨盆骨折容积逻辑：前后向挤压（翻书样）和垂直剪切都会增大骨盆容积、抬高出血风险；侧向挤压则会缩小容积，一般也不破坏环状结构的稳定性。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "A blunt-trauma patient has a completely soft, non-tender abdomen and normal vital signs on your first exam. Can you rule out significant intra-abdominal injury? Give the two numbers that explain your answer.",
+   "qZh": "钝性创伤患者初查腹部完全软、不痛，生命体征也正常。能排除严重腹腔内损伤吗？用两个数字说明理由。",
+   "aEn": "No. About 20% of patients with significant hemoperitoneum have a benign initial abdominal exam, and nonspecific shock signs (hypotension, tachycardia, confusion) may not appear until more than 40% of circulating blood volume is already lost. Base suspicion on MOI, not on a reassuring first look.",
+   "aZh": "不能。约20%有明显腹腔积血的患者初次腹部查体完全正常，休克征象（低血压、心动过速、意识混乱）可能要等循环血量丢了40%以上才出现。判断依据应该是受伤机制，而不是第一眼看起来还行。"
+  },
+  {
+   "qEn": "Which organ is injured most often in blunt abdominal trauma, and which in penetrating trauma? Give the approximate percentage for the blunt-trauma answer.",
+   "qZh": "钝性腹部创伤最常伤及哪个器官？穿透伤呢？给出钝性伤那个答案的大致百分比。",
+   "aEn": "Blunt trauma most often injures the spleen (about 50% of cases), with the liver second (about 30%). Penetrating trauma most often injures the liver, simply because of its large size.",
+   "aZh": "钝性创伤最常伤及脾脏（约50%的病例），肝脏第二（约30%）。穿透伤最常伤及肝脏，原因很简单——体积最大，最容易被打中。"
+  },
+  {
+   "qEn": "Define Kehr sign, Cullen sign, and Grey Turner sign, and explain the timing detail that makes two of them unreliable as a field 'rule-out' tool.",
+   "qZh": "定义Kehr征、Cullen征和Grey Turner征，并说明为什么其中两个不能作为现场“排除”工具的时限细节。",
+   "aEn": "Kehr sign = referred left shoulder pain from splenic injury/diaphragmatic irritation (up to 40% of splenic ruptures have no symptoms at all). Cullen sign = periumbilical ecchymosis; Grey Turner sign = flank ecchymosis - both signal retroperitoneal bleeding and both take 12-24 hours to appear, so their absence in the field does not rule out life-threatening abdominal or retroperitoneal hemorrhage.",
+   "aZh": "Kehr征＝脾损伤/膈肌受刺激引起的左肩牵涉痛（多达40%的脾破裂完全无症状）。Cullen征＝脐周瘀斑；Grey Turner征＝腰肋部瘀斑——两者都提示腹膜后出血，都要12-24小时才会出现，所以现场没看到并不能排除危及生命的腹部/腹膜后大出血。"
+  },
+  {
+   "qEn": "A patient has bowel protruding through a penetrating abdominal wound. Per BC guidelines, exactly what do you do with the wound, and what must you never do?",
+   "qZh": "患者腹部穿透伤伴肠管脱出。按BC考纲，伤口具体怎么处理？绝对不能做什么？",
+   "aEn": "Never place the protruding organ back into the abdominal cavity. Cover it with moist sterile dressings followed by an occlusive layer, protect against heat loss, position of comfort, and transport; PCP interventions en route add vascular access, correcting hypoperfusion, and TXA if indicated. Also never pack this wound - wound packing is never used on neck, chest, or abdominal wounds regardless of bleeding severity.",
+   "aZh": "绝不能把突出的脏器塞回腹腔。用湿润的无菌敷料覆盖，外加一层封闭层，保暖，采取舒适体位，转运；PCP途中加做建立静脉通路、纠正低灌注、指征符合时给TXA。另外绝不能对这个伤口做填塞——无论出血多严重，颈、胸、腹部的伤口都不能用填塞法。"
+  },
+  {
+   "qEn": "Per BC's Hypovolemia protocol, what exact fluid bolus and TXA numbers apply to a PCP treating a shocky patient with suspected occult intra-abdominal bleeding, and what are TXA's four exclusion criteria?",
+   "qZh": "按BC低血容量protocol，PCP处理疑似隐匿性腹腔出血的休克患者，补液推注和TXA的确切数字是多少？TXA的四条排除标准是什么？",
+   "aEn": "Fluid bolus: 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL. TXA: 2 g (2,000 mg) IV push over 1 minute. Exclusions: known hypersensitivity/allergy to TXA, more than 3 hours since injury, patient under 12 years old, and isolated traumatic brain injury.",
+   "aZh": "补液推注：20 mL/kg，最多2升，每500 mL复评一次。TXA：2克（2000毫克）静脉推注1分钟。排除标准：已知对TXA过敏、伤后超过3小时、患者小于12岁、单纯性颅脑外伤。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Wound packing is explicitly forbidden on abdominal wounds - the book never says this",
+   "topicZh": "腹部伤口明确禁止填塞——教材从未提到这条限制",
+   "bookEn": "This chapter discusses controlling external hemorrhage on abdominal wounds only in general terms - apply pressure dressings, minimize external hemorrhage - without ever discussing wound packing as a technique or naming any body region where it should not be used.",
+   "bookZh": "本章对腹部伤口外出血的控制只有笼统描述——用加压敷料、尽量减少外出血——从未讨论过“伤口填塞”这项技术，也没有提到任何禁止填塞的部位。",
+   "bcEn": "BC's Wound Care protocol spells out a strict hemorrhage-control order (direct pressure, tourniquet if amenable, then wound packing as a last resort for junctional bleeds) and explicitly states: 'Do not pack wounds on the neck, chest, or abdomen.' For a bleeding open abdominal wound, the field answer is direct pressure, positioning, and rapid transport - never packing, and a tourniquet is not anatomically applicable to the torso either.",
+   "bcZh": "BC的伤口处理protocol明确规定了止血手段的优先顺序（直接加压、可行时上止血带、最后才对交界区出血考虑填塞），并明文写道：“不要在颈、胸、腹部填塞伤口”。对腹部开放性出血伤口，现场正确答案是直接加压、体位调整、快速转运——绝不填塞，而躯干部位本身也无法使用止血带。",
+   "ref": "BC Provincial Examination Guidelines p.19（Wound Care）"
+  },
+  {
+   "topicEn": "Evisceration dressing needs a specific occlusive OUTER layer the book leaves out",
+   "topicZh": "内脏脱出敷料需要一层特定的封闭外层——教材没写这一步",
+   "bookEn": "The textbook's evisceration instruction stops at 'apply a normal saline-soaked sterile dressing over the top... cover the injured area to keep it warm' - it does not specify a second, occlusive outer layer.",
+   "bookZh": "教材对内脏脱出的处理写到“在上面覆盖生理盐水湿润的无菌敷料……盖住伤处保暖”就结束了——没有说明还需要加一层封闭外层。",
+   "bcEn": "BC's Abdominal Injuries protocol adds a specific second step: 'Cover extruded bowel or eviscerated abdominal contents with moist, sterile dressings FOLLOWED BY AN OCCLUSIVE LAYER. Do not place back in abdominal cavity.' The occlusive outer layer is a distinct, gradable step beyond the moist dressing alone - missing it on a practical exam is missing part of the skill, not just an omission of detail.",
+   "bcZh": "BC的腹部损伤protocol多写了一步：“用湿润无菌敷料覆盖脱出的肠管或腹腔内容物，外加一层封闭层。不要把内容物放回腹腔。”这层封闭外层是独立于湿敷料之外、会被单独打分的一步——实操考试里漏做这一步，不只是细节疏漏，是漏做了整项技能的一部分。",
+   "ref": "BC Provincial Examination Guidelines p.32（Abdominal Injuries）"
+  },
+  {
+   "topicEn": "TXA in abdominal trauma has a precise BC dose, window, and exclusion list the book never gives",
+   "topicZh": "腹部创伤中TXA的BC精确剂量、时限和排除标准，教材完全没给",
+   "bookEn": "This chapter's only mention of pharmacologic intervention is the historical controversy over PAIN medication (masking symptoms, contraindicated by hypotension) - it never discusses TXA, gives no dose, no timing window, and no exclusion criteria anywhere in the chapter.",
+   "bookZh": "本章唯一提到的药物干预话题是镇痛药物的历史争议（可能掩盖症状、因低血压而禁忌）——全章完全没有提到TXA，没有剂量、没有用药时限、也没有排除标准。",
+   "bcEn": "BC's Abdominal Injuries protocol lists 'TXA, if indicated' as a PCP-only enroute addition, and the Hypovolemia protocol plus the TXA drug monograph give the exact numbers: 2 g (2,000 mg) IV push over 1 minute, indicated for major trauma after the Hypovolemia protocol starts or when mechanism/findings suggest occult or ongoing bleeding; contraindicated if more than 3 hours have passed since injury, in patients under 12, in isolated TBI, or with known hypersensitivity. EMR does not give TXA at all.",
+   "bcZh": "BC的腹部损伤protocol把“如有指征给TXA”列为PCP专属的途中加做项，低血容量protocol和TXA药物说明给出了精确数字：2克（2000毫克）静脉推注1分钟，指征是重大创伤已启动低血容量protocol、或机制/查体提示隐匿性/持续性出血；禁忌为伤后超过3小时、患者小于12岁、单纯性颅脑外伤、或已知过敏。EMR完全不给TXA。",
+   "ref": "BC Provincial Examination Guidelines p.32（Abdominal Injuries）、p.54（Hypovolemia）、p.78（Tranexamic Acid）"
+  },
+  {
+   "topicEn": "Fluid resuscitation: BC caps the volume, the textbook titrates without one",
+   "topicZh": "液体复苏：BC 设容量上限，教材只按压力滴定不封顶",
+   "bookEn": "Titrates crystalloid to a systolic pressure in the 80-90 mmHg range for permissive hypotension, with no ceiling on total volume given.",
+   "bookZh": "按允许性低血压把晶体液滴定到收缩压 80-90 mmHg 区间，对总输液量不设上限。",
+   "bcEn": "BC's Hypovolemia protocol enters at SBP < 90 with other signs of shock, then gives a hard-capped bolus: 20 mL/kg to a maximum of 2 litres, reassessing every 500 mL, to correct the hypoperfusion or hypotension. The correction endpoint is that same 90 mmHg, but the volume ceiling is the part the textbook lacks — on a BC exam you stop at 2 litres and reassess, you do not keep running fluid to chase a pressure.",
+   "bcZh": "BC 低血容量规程的启动条件是收缩压低于 90 且伴其他休克征象，随后给的是硬性封顶的推注：20 mL/kg、上限 2 升、每 500 mL 复评，目的是纠正低灌注或低血压。纠正的终点同样是 90 mmHg，但\"容量封顶\"这一条是教材没有的——BC 考试里到 2 升就停下来复评，不会为了追一个血压数字无限输下去。",
+   "ref": "BC Guidelines p.54 Hypovolemia（适应证 SBP<90 / 推注 20 mL/kg 上限 2 L 每 500 mL 复评）"
+  }
+ ],
+ "sourcePages": "2232-2276"
+}
