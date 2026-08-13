@@ -69,7 +69,12 @@ def haystack_for(cid):
         if os.path.exists(p):
             parts.append(io.open(p, encoding='utf-8').read())
     h = '\n'.join(parts)
-    return h, h.replace(',', '')
+    # PDF extraction splits phrases and numbers across lines, so a literal
+    # search misses values that are genuinely present ("27.5 million" wrapping
+    # mid-phrase). Collapse whitespace, and keep a separator-stripped copy so
+    # "1,500" also matches "1500" and "1 500".
+    flat = re.sub(r'\s+', ' ', h)
+    return flat, flat.replace(',', '').replace(' ', '')
 
 idx = json.load(io.open(os.path.join(C2, 'index.json'), encoding='utf-8'))
 targets = sys.argv[1:] or [c['id'] for c in idx['chapters'] if c['status'] == 'v2']
