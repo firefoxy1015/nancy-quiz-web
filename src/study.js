@@ -1,5 +1,5 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=11';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=12';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -125,6 +125,9 @@ async function drawChapter(el, d, chId) {
     </div></div>`;
   const guardNote = `<div class="notice">${t('The textbook teaches the subject; the BC guidelines decide the exam. Where a dose, sequence or contraindication differs, follow the guidelines.',
       '教材负责把知识讲明白，但决定考试对错的是 BC 考纲。剂量、顺序、禁忌只要有出入，一律以考纲为准。')}</div>`;
+  // population chapters drill by the population axis: their questions sit under
+  // clinical topic groups, so a topic drill from here would come up (near) empty
+  const drill = { geriatric: 'pop=geriatric', peds: 'pop=pediatric' }[meta.group] || ('topic=' + meta.group);
   const head = (c2, extra = '') => `
     <a class="back-link" href="#/study/chapters">← ${t('All chapters', '全部章节')}</a>
     <div class="card">
@@ -132,7 +135,7 @@ async function drawChapter(el, d, chId) {
       <h2 style="margin-top:2px">${bi(meta.titleEn, meta.titleZh, 'span')}</h2>
       ${c2 && c2.whyEn ? bi(c2.whyEn, c2.whyZh) : ''}
       <div class="btn-row">
-        <a class="btn" href="#/practice?topic=${meta.group}">${t('Drill this domain', '刷这个域的题')} →</a>
+        <a class="btn" href="#/practice?${drill}">${t('Drill this domain', '刷这个域的题')} →</a>
       </div>
     </div>`;
 
@@ -155,8 +158,11 @@ async function drawChapter(el, d, chId) {
           </div>${a.ref ? `<p class="tiny">${esc(a.ref)}</p>` : ''}
         </div>`).join('')}
       </div>` : ''}
+      ${(v2.sections || []).length >= 8 ? `<div class="sec-toc">
+        ${v2.sections.map((s, i) => `<a href="#" data-sec="${i}">${i + 1} · ${esc(t(s.titleEn, s.titleZh)).slice(0, 26)}</a>`).join('')}
+      </div>` : ''}
       ${(v2.sections || []).map((s, i) => `
-        <details class="acc" ${i === 0 ? 'open' : ''}>
+        <details class="acc" id="sec-${i}" ${i === 0 ? 'open' : ''}>
           <summary><span class="step-num" style="flex:0 0 26px;height:26px;font-size:.8rem">${i + 1}</span> ${bi(s.titleEn, s.titleZh, 'span')}
             <span class="tag-count">${(s.points || []).length}</span></summary>
           <div class="acc-body"><ul class="pt-list">${(s.points || []).map(pt).join('')}</ul></div>
@@ -205,6 +211,27 @@ async function drawChapter(el, d, chId) {
     else S.chaptersRead[meta.id] = Date.now();
     save(); drawChapter(el, d, chId);
   };
+  // section TOC: open the target accordion, then jump to it
+  el.querySelectorAll('.sec-toc a').forEach(a => a.onclick = e => {
+    e.preventDefault();
+    const det = el.querySelector('#sec-' + a.dataset.sec);
+    if (det) { det.open = true; det.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+  ensureToTop();
+}
+
+// floating back-to-top for long chapter pages; one instance, shown past ~2 screens
+function ensureToTop() {
+  let btn = document.querySelector('.to-top');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.className = 'to-top'; btn.textContent = '↑'; btn.title = t('Back to top', '回到顶部');
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.appendChild(btn);
+    window.addEventListener('scroll', () => {
+      btn.classList.toggle('show', window.scrollY > 1200 && location.hash.includes('/study/chapters?ch='));
+    }, { passive: true });
+  }
 }
 
 async function sAssessment(el) {

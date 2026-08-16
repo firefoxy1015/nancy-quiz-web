@@ -1,9 +1,9 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=11';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=11';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=11';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=12';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=12';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=12';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -46,7 +46,7 @@ export function esc(s) {
 // Data files carry the same build tag as the modules. Without it the browser
 // serves a cached copy after a content update and users silently keep the old
 // question bank — bump this whenever data/ changes.
-const DATA_V = '11';
+const DATA_V = '12';
 const cache = {};
 export async function loadJSON(path) {
   if (cache[path]) return cache[path];
@@ -221,6 +221,7 @@ async function renderHome(el) {
   const mocks = S.mockHistory.filter(m => m.track === tr);
   const lastMock = mocks[mocks.length - 1];
   const scen = S.scenarioHistory.length;
+  const chaptersRead = Object.keys(S.chaptersRead || {}).length;
   const writtenFacts = tr === 'pcp'
     ? t('COPR · 200Q · 2×120 min · standard score', 'COPR 统考 · 200题 · 两段各120分钟 · 标准分制')
     : t('EMALB · 200Q · 2.5h · pass 75%', 'EMALB 自考 · 200题 · 2.5小时 · 75%及格');
@@ -248,6 +249,15 @@ async function renderHome(el) {
           <a class="btn" href="#/practical">${t('Enter', '进入')}</a>
         </div>
       </div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">${ico('cap')} ${t('Textbook progress', '教材进度')}</h3>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="progress-outer" style="flex:1;min-width:160px"><i style="width:${Math.round(chaptersRead / 54 * 100)}%"></i></div>
+        <b>${chaptersRead}/54</b>
+        <a class="btn secondary" href="#/study/chapters">${chaptersRead ? t('Continue reading', '继续读') : t('Start the chapter review', '开始章节精读')} →</a>
+      </div>
+      <p class="tiny" style="margin-bottom:0">${t('The Nancy Caroline chapter review, condensed for the exam — mark chapters read as you go.', 'Nancy Caroline 章节精读——读完一章记得点「标记已读」，进度会记在这里。')}</p>
     </div>
     <div class="card">
       <h3 style="margin-top:0">${t('Quick actions', '快捷入口')}</h3>
@@ -286,9 +296,12 @@ async function renderGuide(el) {
           <div class="btn-row"><a class="btn ghost" href="#/info">${t('Exam logistics', '考务流程')}</a></div>
         </div></div>
         <div class="step"><span class="step-num">3</span><div>
-          ${bi('Learn the content in the Study library. Start with the Patient Assessment Model (the backbone of everything), then Protocols, then Drugs. These come from the official BC exam guidelines — the only standard examiners are allowed to mark against.',
-              '进"学习内容库"打基础：先学患者评估模型（一切的主线），再学 13 个处置协议，再背 18 个药物卡。这些内容全部来自 BC 官方考纲——考官唯一被允许使用的评分标准。')}
-          <div class="btn-row"><a class="btn ghost" href="#/study">${t('Study library', '学习内容库')}</a></div>
+          ${bi('Learn the content in the Study library — it has two layers. The Nancy Caroline Chapter Review condenses the 4,700-page textbook chapter by chapter (knowledge map, every testable number, textbook-vs-BC conflicts flagged); read the ★★★ chapters first and drill each one\'s domain as you finish it. Then the guideline layer: the Patient Assessment Model, Protocols and Drugs, straight from the official BC exam guidelines — the only standard examiners may mark against.',
+              '进"学习内容库"打基础——它分两层。「Nancy Caroline 章节精读」把 4700 页教材逐章浓缩（知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注），先读 ★★★ 高权重章，每读完一章就顺手刷它对应的题。然后是考纲层：患者评估模型、13 个处置协议、18 个药物卡——全部来自 BC 官方考纲，考官唯一被允许使用的评分标准。')}
+          <div class="btn-row">
+            <a class="btn ghost" href="#/study/chapters">${t('Chapter review', '章节精读')}</a>
+            <a class="btn ghost" href="#/study">${t('Study library', '学习内容库')}</a>
+          </div>
         </div></div>
         <div class="step"><span class="step-num">4</span><div>
           ${bi('Drill with Practice mode (instant feedback, filter by topic), then take full timed Mock Exams that replicate the real format — including the two-part timer and break for PCP. Review every wrong answer in the Wrong-answer book.',

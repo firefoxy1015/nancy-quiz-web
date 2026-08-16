@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=11';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=12';
 
 let session = null; // current exam session (mock or practice)
 
@@ -26,7 +26,6 @@ export async function renderWrittenHub(el) {
   const bp = await loadJSON('./data/meta/cpcf-blueprint.json');
   const isPcp = tr === 'pcp';
   const mocks = S.mockHistory.filter(m => m.track === tr);
-  const topics = countBy(bank, q => q.topic);
   el.innerHTML = `
     <div class="card">
       <h2>${ico('pen')} ${t('Written Exam Camp', '笔试营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
@@ -87,17 +86,24 @@ export async function renderPractice(el, arg, params) {
   // topics are far too granular to scroll through
   const group = params.topic || 'all';
   const area = params.area || 'all';
+  // population axis: geriatric/pediatric content lives mostly under clinical
+  // topics, so a topic-group drill from those chapters would come up empty
+  // (EMR geriatric: 0 by topic, 87 by population). ?pop= filters that axis.
+  const pop = params.pop || '';
   const gCount = countBy(bank, q => topicGroup(q.topic));
   const groups = TOPIC_GROUPS.map(g => g[0]).filter(id => gCount[id]);
   if (gCount.other) groups.push('other');
   const areas = Object.entries(countBy(bank, q => q.cpcfArea)).sort();
-  let pool = bank.filter(q => (group === 'all' || topicGroup(q.topic) === group) && (area === 'all' || q.cpcfArea === area));
-  if (!session || session.mode !== 'practice' || session.filterKey !== group + area) {
-    session = { mode: 'practice', filterKey: group + area, order: shuffle(pool.map((_, i) => i)), pos: 0, right: 0, done: 0, pool };
+  let pool = bank.filter(q => (group === 'all' || topicGroup(q.topic) === group)
+    && (area === 'all' || q.cpcfArea === area)
+    && (!pop || q.population === pop));
+  if (!session || session.mode !== 'practice' || session.filterKey !== group + area + pop) {
+    session = { mode: 'practice', filterKey: group + area + pop, order: shuffle(pool.map((_, i) => i)), pos: 0, right: 0, done: 0, pool };
   }
-  drawPracticeQ(el, groups, gCount, areas, group, area);
+  drawPracticeQ(el, groups, gCount, areas, group, area, pop);
 }
-function drawPracticeQ(el, groups, gCount, areas, group, area) {
+const POP_LABEL = { geriatric: ['Geriatric patients', '老年患者'], pediatric: ['Pediatric patients', '儿科患者'], neonatal: ['Neonatal patients', '新生儿患者'], adult: ['Adult patients', '成人患者'] };
+function drawPracticeQ(el, groups, gCount, areas, group, area, pop) {
   const q = session.pool[session.order[session.pos]];
   el.innerHTML = `
     <div class="q-wrap">
@@ -112,6 +118,9 @@ function drawPracticeQ(el, groups, gCount, areas, group, area) {
           </div>
           <div class="muted">${t('Score', '得分')}: <b>${session.right}/${session.done}</b> · ${session.pool.length} ${t('in pool', '题可刷')}</div>
         </div>
+        ${pop && POP_LABEL[pop] ? `<p class="tiny" style="margin:0 0 8px">
+          ${t('Filtering by population:', '按人群筛选：')} <b>${t(POP_LABEL[pop][0], POP_LABEL[pop][1])}</b>
+          <a href="#/practice?topic=${group}&area=${area}" style="margin-left:6px">✕ ${t('clear', '清除')}</a></p>` : ''}
         ${q ? questionHTML(q, false) : `<p class="muted">${t('No questions match this filter.', '这个筛选下没有题。')}</p>`}
         <div class="btn-row">
           <button class="btn ghost" id="skipBtn">${t('Skip', '跳过')} →</button>
@@ -122,7 +131,7 @@ function drawPracticeQ(el, groups, gCount, areas, group, area) {
     </div>`;
   el.querySelector('#topicSel').onchange = e => nav('/practice?topic=' + encodeURIComponent(e.target.value) + '&area=' + area);
   el.querySelector('#areaSel').onchange = e => nav('/practice?topic=' + group + '&area=' + encodeURIComponent(e.target.value));
-  const goNext = () => { advance(); drawPracticeQ(el, groups, gCount, areas, group, area); };
+  const goNext = () => { advance(); drawPracticeQ(el, groups, gCount, areas, group, area, pop); };
   el.querySelector('#skipBtn').onclick = goNext;
   if (q) bindOptions(el, q, () => { // after answer
     const nextBtn = document.createElement('button');
