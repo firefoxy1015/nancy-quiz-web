@@ -8,309 +8,1059 @@
  "whyEn": "Overdose calls are daily work in BC — the province that declared the opioid crisis a public health emergency — and this 104-page chapter is where the exam draws its poisoning scenarios: the toxidrome table (the single richest multiple-choice mine in the book), naloxone done the BC way (ventilate FIRST, then titrate to breathing, never to wakefulness), carbon monoxide with its lying pulse oximeter, organophosphate cholinergic crisis, and the household killers from antifreeze to amitriptyline. Scene safety threads through everything: a toxic scene poisons rescuers as efficiently as patients.",
  "whyZh": "在 BC 跑车，过量就是日常——这个省最早把阿片危机宣布为公共卫生紧急状态。这 104 页正是考试出中毒题的题库：toxidrome 对照表（全书最高产的选择题矿脉）、BC 口径的 naloxone（先通气，滴定到呼吸恢复而不是叫醒人）、CO 中毒里会说谎的血氧仪、有机磷胆碱能危象，以及从防冻液到 amitriptyline 的居家杀手。现场安全贯穿全章：有毒的现场毒倒救援者和毒倒病人一样快。",
  "competencies": {
-  "areas": ["Area 4: Assessment and Diagnostics", "Area 5: Therapeutics", "Area 6: Integration", "Appendix 4: Pathophysiology", "Appendix 5: Medications"],
-  "codes": ["4.2.a", "4.2.b", "4.2.c", "4.2.d", "4.2.e", "4.2.f", "4.3.a", "4.3.b", "4.3.p", "4.5.a", "4.5.c", "5.1.a", "5.1.b", "5.1.c", "5.1.h", "5.2.a", "5.3.d", "5.4.a", "5.5.c", "5.5.d", "5.8.a", "5.8.b", "6.1.k", "6.3.a"]
+  "areas": [
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration",
+   "Appendix 4: Pathophysiology",
+   "Appendix 5: Medications"
+  ],
+  "codes": [
+   "4.2.a",
+   "4.2.b",
+   "4.2.c",
+   "4.2.d",
+   "4.2.e",
+   "4.2.f",
+   "4.3.a",
+   "4.3.b",
+   "4.3.p",
+   "4.5.a",
+   "4.5.c",
+   "5.1.a",
+   "5.1.b",
+   "5.1.c",
+   "5.1.h",
+   "5.2.a",
+   "5.3.d",
+   "5.4.a",
+   "5.5.c",
+   "5.5.d",
+   "5.8.a",
+   "5.8.b",
+   "6.1.k",
+   "6.3.a"
+  ]
  },
  "sections": [
   {
    "titleEn": "Types of Toxicologic Emergencies",
    "titleZh": "中毒急症的类型",
    "points": [
-    {"en": "Adult poisoning is most often intentional, classically suicide by medication. Canada's 2017 numbers: 4,108 of 4,392 poisoning deaths were drug overdoses, and the drug-death rate doubled from 5.8 per 100,000 (2011) to 11.9 (2019) — driven by fentanyl and its analogues.", "zh": "成人中毒最常见是故意的，经典就是用药物自杀。加拿大 2017 年数据：4,392 例中毒死亡里 4,108 例是药物过量；药物致死率从 2011 年的 5.8/10万 翻倍到 2019 年的 11.9/10万——推手正是 fentanyl 及其类似物。", "hard": true},
-    {"en": "Dosing errors can be idiosyncratic: the same 2 mg IV midazolam that mildly relaxes one patient can put another into respiratory arrest. A 'therapeutic dose' is never a safety guarantee.", "zh": "剂量反应可以很个体化：同样 2 mg IV midazolam，有人只是放松一点，有人直接呼吸停止。「治疗剂量」从来不等于安全保证。", "hard": true},
-    {"en": "Top exposures in children under 5 (Ontario Poison Centre, descending): pain relievers first, then cleaning substances, cosmetics/personal-care products, vitamins, foreign bodies. Pills get mistaken for candy — many pediatric medicines are deliberately made candy-like.", "zh": "5 岁以下儿童暴露排行（安省毒物中心，降序）：止痛药第一，其后是清洁剂、化妆品/个护产品、维生素、异物。药片会被当成糖——很多儿科药本来就故意做成糖果样来提高依从性。", "hard": true},
-    {"en": "The geriatric 'accidental overdose' pattern: diabetes plus early dementia — the patient forgets the morning insulin was taken and doses again, or stacks an old leftover prescription on top of the current one. Ask specifically about repeat dosing.", "zh": "老年「意外过量」的典型剧本：糖尿病叠加早期认知障碍——忘了早上已打过 insulin 又补一针，或者把没扔的旧处方药和现处方叠着吃。问诊要专门问有没有重复用药。"},
-    {"en": "Poisoning can be a crime against the patient: flunitrazepam (Rohypnol) and chloral hydrate have long been used to facilitate assault. Do not assume every exposure is self-inflicted.", "zh": "中毒也可能是别人对患者下的手：flunitrazepam（Rohypnol）和 chloral hydrate 长期被用于协助性侵/袭击。不要默认每次暴露都是自己造成的。"},
-    {"en": "Occupational toxins — CO, hydrogen sulphide, acids, alkalis — are often only identified after exposure has occurred (asbestos taught that lesson). Your own protection comes before assessment.", "zh": "职业毒物——CO、硫化氢、强酸强碱——常常是暴露发生之后才被识别（石棉就是前车之鉴）。先保护好你自己，再谈评估。"}
+    {
+     "en": "Adult poisoning is most often intentional, classically suicide by medication. Canada's 2017 numbers: 4,108 of 4,392 poisoning deaths were drug overdoses, and the drug-death rate doubled from 5.8 per 100,000 (2011) to 11.9 (2019) — driven by fentanyl and its analogues.",
+     "zh": "成人中毒最常见是故意的，经典就是用药物自杀。加拿大 2017 年数据：4,392 例中毒死亡里 4,108 例是药物过量；药物致死率从 2011 年的 5.8/10万 翻倍到 2019 年的 11.9/10万——推手正是 fentanyl 及其类似物。",
+     "hard": true
+    },
+    {
+     "en": "Dosing errors can be idiosyncratic: the same 2 mg IV midazolam that mildly relaxes one patient can put another into respiratory arrest. A 'therapeutic dose' is never a safety guarantee.",
+     "zh": "剂量反应可以很个体化：同样 2 mg IV midazolam，有人只是放松一点，有人直接呼吸停止。「治疗剂量」从来不等于安全保证。",
+     "hard": true
+    },
+    {
+     "en": "Top exposures in children under 5 (Ontario Poison Centre, descending): pain relievers first, then cleaning substances, cosmetics/personal-care products, vitamins, foreign bodies. Pills get mistaken for candy — many pediatric medicines are deliberately made candy-like.",
+     "zh": "5 岁以下儿童暴露排行（安省毒物中心，降序）：止痛药第一，其后是清洁剂、化妆品/个护产品、维生素、异物。药片会被当成糖——很多儿科药本来就故意做成糖果样来提高依从性。",
+     "hard": true
+    },
+    {
+     "en": "The geriatric 'accidental overdose' pattern: diabetes plus early dementia — the patient forgets the morning insulin was taken and doses again, or stacks an old leftover prescription on top of the current one. Ask specifically about repeat dosing.",
+     "zh": "老年「意外过量」的典型剧本：糖尿病叠加早期认知障碍——忘了早上已打过 insulin 又补一针，或者把没扔的旧处方药和现处方叠着吃。问诊要专门问有没有重复用药。"
+    },
+    {
+     "en": "Poisoning can be a crime against the patient: flunitrazepam (Rohypnol) and chloral hydrate have long been used to facilitate assault. Do not assume every exposure is self-inflicted.",
+     "zh": "中毒也可能是别人对患者下的手：flunitrazepam（Rohypnol）和 chloral hydrate 长期被用于协助性侵/袭击。不要默认每次暴露都是自己造成的。"
+    },
+    {
+     "en": "Occupational toxins — CO, hydrogen sulphide, acids, alkalis — are often only identified after exposure has occurred (asbestos taught that lesson). Your own protection comes before assessment.",
+     "zh": "职业毒物——CO、硫化氢、强酸强碱——常常是暴露发生之后才被识别（石棉就是前车之鉴）。先保护好你自己，再谈评估。"
+    }
    ]
   },
   {
    "titleEn": "Poison Centres in Canada",
    "titleZh": "加拿大毒物中心",
    "points": [
-    {"en": "British Columbia Drug and Poison Centre: 1-800-567-8911. There is NO universal Canadian poison number — some provinces/territories have no centre at all, New Brunswick routes calls through Telehealth, and Manitoba's line only works for Winnipeg-local callers.", "zh": "BC 药物与毒物中心：1-800-567-8911。加拿大没有全国统一毒物电话——有的省和地区根本没有中心，New Brunswick 走 Telehealth，Manitoba 的号码只有 Winnipeg 本地能打通。", "hard": true},
-    {"en": "Where a centre exists it runs 24/7 with specially trained RNs/pharmacists. They may give a paramedic advice to act on directly, but not information to relay onward — they will warn you the substance can seize the patient, but won't discuss dialysis you cannot perform.", "zh": "有中心的省份是 24/7 运转，接线的是受过专门训练的注册护士/药师。他们可以给 paramedic 直接可执行的建议，但不给「转达用」的信息——会提醒你这个毒物可能致抽搐，但不会跟你讨论你做不了的透析。", "hard": true},
-    {"en": "Record every finding about a poisoned patient even when you don't know what it means — someone at the Poison Centre will. Your call also feeds regional surveillance data that spots outbreaks and trends.", "zh": "中毒患者身上的所有发现都要记录，哪怕你不知道有什么意义——毒物中心的人知道。你的来电同时也在给区域监测喂数据，帮着发现新趋势和公共卫生问题。"},
-    {"en": "Classic reassurance example: philodendron leaves carry insoluble calcium-oxalate spicules — biting one burns the mouth instantly but causes no systemic toxicity, and the pain itself stops a child at one bite.", "zh": "经典的「虚惊」案例：philodendron（绿萝类）叶子含不可溶草酸钙针晶——咬一口嘴里立刻烧痛，但没有全身毒性，而且疼痛本身就让孩子咬不下第二口。"}
+    {
+     "en": "British Columbia Drug and Poison Centre: 1-800-567-8911. There is NO universal Canadian poison number — some provinces/territories have no centre at all, New Brunswick routes calls through Telehealth, and Manitoba's line only works for Winnipeg-local callers.",
+     "zh": "BC 药物与毒物中心：1-800-567-8911。加拿大没有全国统一毒物电话——有的省和地区根本没有中心，New Brunswick 走 Telehealth，Manitoba 的号码只有 Winnipeg 本地能打通。",
+     "hard": true
+    },
+    {
+     "en": "Where a centre exists it runs 24/7 with specially trained RNs/pharmacists. They may give a paramedic advice to act on directly, but not information to relay onward — they will warn you the substance can seize the patient, but won't discuss dialysis you cannot perform.",
+     "zh": "有中心的省份是 24/7 运转，接线的是受过专门训练的注册护士/药师。他们可以给 paramedic 直接可执行的建议，但不给「转达用」的信息——会提醒你这个毒物可能致抽搐，但不会跟你讨论你做不了的透析。",
+     "hard": true
+    },
+    {
+     "en": "Record every finding about a poisoned patient even when you don't know what it means — someone at the Poison Centre will. Your call also feeds regional surveillance data that spots outbreaks and trends.",
+     "zh": "中毒患者身上的所有发现都要记录，哪怕你不知道有什么意义——毒物中心的人知道。你的来电同时也在给区域监测喂数据，帮着发现新趋势和公共卫生问题。"
+    },
+    {
+     "en": "Classic reassurance example: philodendron leaves carry insoluble calcium-oxalate spicules — biting one burns the mouth instantly but causes no systemic toxicity, and the pain itself stops a child at one bite.",
+     "zh": "经典的「虚惊」案例：philodendron（绿萝类）叶子含不可溶草酸钙针晶——咬一口嘴里立刻烧痛，但没有全身毒性，而且疼痛本身就让孩子咬不下第二口。"
+    }
    ]
   },
   {
    "titleEn": "Routes of Absorption",
    "titleZh": "吸收途径",
    "points": [
-    {"en": "Four entry routes: ingestion, inhalation, injection, dermal absorption. Route plus amount plus metabolic speed set the bioavailability — and how much treatment time you have.", "zh": "四条入体途径：摄入、吸入、注射、皮肤吸收。途径 + 剂量 + 代谢速度共同决定生物利用度——也决定你手里有多少治疗时间。"},
-    {"en": "Ingestion is the most forgiving route: very little absorbs in the stomach, most uptake happens in the small intestine. That is why GI decontamination targets the first 30-60 minutes — binding falls off sharply after that.", "zh": "摄入是最宽容的途径：胃里几乎不吸收，大头在小肠。所以胃肠去污瞄准的是摄入后 30-60 分钟这个窗口——过了这段，结合毒物的效果掉得很快。", "hard": true},
-    {"en": "Ingestion clues: part-chewed plants or missing berries, stained lips/fingers/tongue, sudden GI cramping, empty pill bottles. Read the fill date — an empty bottle filled yesterday is ominous; one filled six months ago proves little.", "zh": "摄入线索：被啃过的植物或少了的浆果、嘴唇/手指/舌头染色、突发胃肠绞痛、空药瓶。一定看配药日期——昨天刚配就空了是凶兆；半年前配的空瓶说明不了什么。"},
-    {"en": "Inhalation means the whole environment is poisoned: the patient keeps absorbing until removed, and you absorb just as fast — SCBA before entry, and expect multiple patients. Household chemicals (bleach, cleaners) cause the most inhalation emergencies.", "zh": "吸入中毒意味着整个环境都有毒：患者不脱离就一直在吸收，你进去吸收得一样快——先上呼吸防护再进场，并且做好多名伤员的预期。家用化学品（漂白剂、清洁剂）是最常见的吸入急症来源。"},
-    {"en": "Inhaled toxins reach the alveoli and get near-instant access to circulation. CO binds hemoglobin roughly 250 times more avidly than oxygen — the treatment window is correspondingly short.", "zh": "吸入毒物直达肺泡，几乎瞬间进入循环。CO 与血红蛋白的结合力约是氧的 250 倍——留给治疗的窗口相应地短。", "hard": true},
-    {"en": "Injection: venom or drug entering a blood vessel spreads immediately — far more dangerous than the same toxin into muscle, which absorbs slowly. Canada's three native venomous snakes: Northern Pacific rattlesnake (BC), prairie rattlesnake (Alberta), Massasauga rattlesnake (parts of Ontario); exotic pets widen the possibilities.", "zh": "注射途径：毒液或药物直接进血管就是立刻全身扩散——比进肌肉危险得多，肌肉吸收慢。加拿大本土三种毒蛇：Northern Pacific 响尾蛇（BC）、草原响尾蛇（Alberta）、Massasauga 响尾蛇（安省部分地区）；异宠饲养让可能性更宽。", "hard": true},
-    {"en": "Dermal absorption: organophosphate pesticides are the most dangerous skin-route poisons. Scene safety is paramount; patients may need decontamination per protocol, possibly with a hazmat team.", "zh": "皮肤吸收：有机磷农药是这条途径里最危险的毒物。现场安全压倒一切；患者可能需要按预案去污，必要时呼叫 hazmat。"}
+    {
+     "en": "Four entry routes: ingestion, inhalation, injection, dermal absorption. Route plus amount plus metabolic speed set the bioavailability — and how much treatment time you have.",
+     "zh": "四条入体途径：摄入、吸入、注射、皮肤吸收。途径 + 剂量 + 代谢速度共同决定生物利用度——也决定你手里有多少治疗时间。"
+    },
+    {
+     "en": "Ingestion is the most forgiving route: very little absorbs in the stomach, most uptake happens in the small intestine. That is why GI decontamination targets the first 30-60 minutes — binding falls off sharply after that.",
+     "zh": "摄入是最宽容的途径：胃里几乎不吸收，大头在小肠。所以胃肠去污瞄准的是摄入后 30-60 分钟这个窗口——过了这段，结合毒物的效果掉得很快。",
+     "hard": true
+    },
+    {
+     "en": "Ingestion clues: part-chewed plants or missing berries, stained lips/fingers/tongue, sudden GI cramping, empty pill bottles. Read the fill date — an empty bottle filled yesterday is ominous; one filled six months ago proves little.",
+     "zh": "摄入线索：被啃过的植物或少了的浆果、嘴唇/手指/舌头染色、突发胃肠绞痛、空药瓶。一定看配药日期——昨天刚配就空了是凶兆；半年前配的空瓶说明不了什么。"
+    },
+    {
+     "en": "Inhalation means the whole environment is poisoned: the patient keeps absorbing until removed, and you absorb just as fast — SCBA before entry, and expect multiple patients. Household chemicals (bleach, cleaners) cause the most inhalation emergencies.",
+     "zh": "吸入中毒意味着整个环境都有毒：患者不脱离就一直在吸收，你进去吸收得一样快——先上呼吸防护再进场，并且做好多名伤员的预期。家用化学品（漂白剂、清洁剂）是最常见的吸入急症来源。"
+    },
+    {
+     "en": "Inhaled toxins reach the alveoli and get near-instant access to circulation. CO binds hemoglobin roughly 250 times more avidly than oxygen — the treatment window is correspondingly short.",
+     "zh": "吸入毒物直达肺泡，几乎瞬间进入循环。CO 与血红蛋白的结合力约是氧的 250 倍——留给治疗的窗口相应地短。",
+     "hard": true
+    },
+    {
+     "en": "Injection: venom or drug entering a blood vessel spreads immediately — far more dangerous than the same toxin into muscle, which absorbs slowly. Canada's three native venomous snakes: Northern Pacific rattlesnake (BC), prairie rattlesnake (Alberta), Massasauga rattlesnake (parts of Ontario); exotic pets widen the possibilities.",
+     "zh": "注射途径：毒液或药物直接进血管就是立刻全身扩散——比进肌肉危险得多，肌肉吸收慢。加拿大本土三种毒蛇：Northern Pacific 响尾蛇（BC）、草原响尾蛇（Alberta）、Massasauga 响尾蛇（安省部分地区）；异宠饲养让可能性更宽。",
+     "hard": true
+    },
+    {
+     "en": "Dermal absorption: organophosphate pesticides are the most dangerous skin-route poisons. Scene safety is paramount; patients may need decontamination per protocol, possibly with a hazmat team.",
+     "zh": "皮肤吸收：有机磷农药是这条途径里最危险的毒物。现场安全压倒一切；患者可能需要按预案去污，必要时呼叫 hazmat。"
+    }
    ]
   },
   {
    "titleEn": "Understanding and Using Toxidromes",
    "titleZh": "Toxidrome 识别与应用（核心考点）",
    "points": [
-    {"en": "A toxidrome is the syndrome-like fingerprint a drug class stamps on pupils, vitals, skin and mentation. Classify the class first and treat the pattern — the exact substance name can wait.", "zh": "Toxidrome 是一类药物压在瞳孔、生命体征、皮肤和意识上的「综合征指纹」。先归类、按模式处理——具体是哪个药可以晚点再查。"},
-    {"en": "Narcotic toxidrome: pinpoint pupils + marked respiratory depression + drowsiness/stupor sliding to coma, often with needle tracks. Heroin, morphine, hydromorphone, fentanyl and analogues all print the same pattern.", "zh": "麻醉剂 toxidrome：针尖样瞳孔 + 明显呼吸抑制 + 嗜睡/木僵滑向昏迷，常伴注射针痕。Heroin、morphine、hydromorphone、fentanyl 及类似物打出的是同一套指纹。", "hard": true},
-    {"en": "Cholinergic toxidrome (organophosphates, sarin, tabun, VX): DUMBELS — everything wet — plus respiratory depression, apnea, seizures, coma. Heart rate runs tachycardic EARLY, then flips to bradycardia as toxicity deepens.", "zh": "胆碱能 toxidrome（有机磷、sarin、tabun、VX）：DUMBELS——浑身是水——外加呼吸抑制、呼吸暂停、抽搐、昏迷。心率早期偏快，毒性加深后翻转成心动过缓。", "hard": true},
-    {"en": "Anticholinergic toxidrome (atropine, scopolamine, antihistamines, antipsychotics, tricyclics): dry flushed skin, hyperthermia, dilated pupils, blurred vision, tachycardia, dramatic delirium with mild hallucinations.", "zh": "抗胆碱能 toxidrome（atropine、scopolamine、抗组胺药、抗精神病药、三环类）：皮肤干燥潮红、高热、瞳孔散大、视物模糊、心动过速、戏剧化的谵妄伴轻度幻觉。", "hard": true},
-    {"en": "Sympathomimetic toxidrome (pseudoephedrine, phenylephrine, amphetamines, methamphetamine): hypertension, tachycardia, mydriasis, agitation, seizures, hyperthermia. The stimulant picture adds incessant talking, insomnia, anorexia, paranoia — and cardiac arrest at the far end.", "zh": "拟交感 toxidrome（pseudoephedrine、phenylephrine、amphetamine、methamphetamine）：高血压、心动过速、瞳孔散大、躁动、抽搐、高热。兴奋剂谱系再加上说个不停、失眠、厌食、偏执——最远端就是心搏骤停。", "hard": true},
-    {"en": "The anticholinergic-versus-sympathomimetic discriminator is the SKIN: bone-dry and flushed means anticholinergic; drenched in sweat points to sympathomimetic/stimulant. Both are hot, fast and dilated — the skin breaks the tie.", "zh": "抗胆碱能 vs 拟交感的鉴别点在皮肤：干燥潮红=抗胆碱能；大汗淋漓=拟交感/兴奋剂。两者都是发热、心快、瞳大——靠皮肤一锤定音。", "hard": true},
-    {"en": "Sedative-hypnotic toxidrome (phenobarbital, diazepam): drowsiness, disinhibition, ataxia, slurred speech, confusion, then progressive CNS and respiratory depression with hypotension.", "zh": "镇静催眠 toxidrome（phenobarbital、diazepam）：嗜睡、去抑制、共济失调、言语含糊、意识混乱，随后是进行性中枢和呼吸抑制加低血压。", "hard": true},
-    {"en": "Odour clues: bitter almonds = cyanide; garlic = arsenic/organophosphates/phosphorus; acetone = isopropyl or methyl alcohol, aspirin; wintergreen = methyl salicylate; pears = chloral hydrate.", "zh": "气味线索：苦杏仁味=氰化物；蒜味=砷/有机磷/磷；丙酮味=异丙醇或甲醇、aspirin；冬青油味=水杨酸甲酯；梨味=chloral hydrate。", "hard": true},
-    {"en": "Pupil clues: constricted → narcotics, organophosphates, jimsonweed, nutmeg; dilated → barbiturates, atropine, amphetamines, LSD, cyanide, CO.", "zh": "瞳孔线索：缩小 → 麻醉剂、有机磷、曼陀罗、肉豆蔻；散大 → 巴比妥类、atropine、amphetamine、LSD、氰化物、CO。", "hard": true},
-    {"en": "Vital-sign patterns worth memorizing: bradycardia → digitalis, narcotics, nicotine, mushrooms, cyanide; seizures → amphetamines, cocaine, camphor, strychnine, CO; coma → all CNS depressants plus CO and cyanide.", "zh": "值得背的生命体征套路：心动过缓 → digitalis、麻醉剂、尼古丁、蘑菇、氰化物；抽搐 → amphetamine、可卡因、樟脑、士的宁、CO；昏迷 → 所有中枢抑制剂，外加 CO 和氰化物。", "hard": true}
+    {
+     "en": "A toxidrome is the syndrome-like fingerprint a drug class stamps on pupils, vitals, skin and mentation. Classify the class first and treat the pattern — the exact substance name can wait.",
+     "zh": "Toxidrome 是一类药物压在瞳孔、生命体征、皮肤和意识上的「综合征指纹」。先归类、按模式处理——具体是哪个药可以晚点再查。"
+    },
+    {
+     "en": "Narcotic toxidrome: pinpoint pupils + marked respiratory depression + drowsiness/stupor sliding to coma, often with needle tracks. Heroin, morphine, hydromorphone, fentanyl and analogues all print the same pattern.",
+     "zh": "麻醉剂 toxidrome：针尖样瞳孔 + 明显呼吸抑制 + 嗜睡/木僵滑向昏迷，常伴注射针痕。Heroin、morphine、hydromorphone、fentanyl 及类似物打出的是同一套指纹。",
+     "hard": true
+    },
+    {
+     "en": "Cholinergic toxidrome (organophosphates, sarin, tabun, VX): DUMBELS — everything wet — plus respiratory depression, apnea, seizures, coma. Heart rate runs tachycardic EARLY, then flips to bradycardia as toxicity deepens.",
+     "zh": "胆碱能 toxidrome（有机磷、sarin、tabun、VX）：DUMBELS——浑身是水——外加呼吸抑制、呼吸暂停、抽搐、昏迷。心率早期偏快，毒性加深后翻转成心动过缓。",
+     "hard": true
+    },
+    {
+     "en": "Anticholinergic toxidrome (atropine, scopolamine, antihistamines, antipsychotics, tricyclics): dry flushed skin, hyperthermia, dilated pupils, blurred vision, tachycardia, dramatic delirium with mild hallucinations.",
+     "zh": "抗胆碱能 toxidrome（atropine、scopolamine、抗组胺药、抗精神病药、三环类）：皮肤干燥潮红、高热、瞳孔散大、视物模糊、心动过速、戏剧化的谵妄伴轻度幻觉。",
+     "hard": true
+    },
+    {
+     "en": "Sympathomimetic toxidrome (pseudoephedrine, phenylephrine, amphetamines, methamphetamine): hypertension, tachycardia, mydriasis, agitation, seizures, hyperthermia. The stimulant picture adds incessant talking, insomnia, anorexia, paranoia — and cardiac arrest at the far end.",
+     "zh": "拟交感 toxidrome（pseudoephedrine、phenylephrine、amphetamine、methamphetamine）：高血压、心动过速、瞳孔散大、躁动、抽搐、高热。兴奋剂谱系再加上说个不停、失眠、厌食、偏执——最远端就是心搏骤停。",
+     "hard": true
+    },
+    {
+     "en": "The anticholinergic-versus-sympathomimetic discriminator is the SKIN: bone-dry and flushed means anticholinergic; drenched in sweat points to sympathomimetic/stimulant. Both are hot, fast and dilated — the skin breaks the tie.",
+     "zh": "抗胆碱能 vs 拟交感的鉴别点在皮肤：干燥潮红=抗胆碱能；大汗淋漓=拟交感/兴奋剂。两者都是发热、心快、瞳大——靠皮肤一锤定音。",
+     "hard": true
+    },
+    {
+     "en": "Sedative-hypnotic toxidrome (phenobarbital, diazepam): drowsiness, disinhibition, ataxia, slurred speech, confusion, then progressive CNS and respiratory depression with hypotension.",
+     "zh": "镇静催眠 toxidrome（phenobarbital、diazepam）：嗜睡、去抑制、共济失调、言语含糊、意识混乱，随后是进行性中枢和呼吸抑制加低血压。",
+     "hard": true
+    },
+    {
+     "en": "Odour clues: bitter almonds = cyanide; garlic = arsenic/organophosphates/phosphorus; acetone = isopropyl or methyl alcohol, aspirin; wintergreen = methyl salicylate; pears = chloral hydrate.",
+     "zh": "气味线索：苦杏仁味=氰化物；蒜味=砷/有机磷/磷；丙酮味=异丙醇或甲醇、aspirin；冬青油味=水杨酸甲酯；梨味=chloral hydrate。",
+     "hard": true
+    },
+    {
+     "en": "Pupil clues: constricted → narcotics, organophosphates, jimsonweed, nutmeg; dilated → barbiturates, atropine, amphetamines, LSD, cyanide, CO.",
+     "zh": "瞳孔线索：缩小 → 麻醉剂、有机磷、曼陀罗、肉豆蔻；散大 → 巴比妥类、atropine、amphetamine、LSD、氰化物、CO。",
+     "hard": true
+    },
+    {
+     "en": "Vital-sign patterns worth memorizing: bradycardia → digitalis, narcotics, nicotine, mushrooms, cyanide; seizures → amphetamines, cocaine, camphor, strychnine, CO; coma → all CNS depressants plus CO and cyanide.",
+     "zh": "值得背的生命体征套路：心动过缓 → digitalis、麻醉剂、尼古丁、蘑菇、氰化物；抽搐 → amphetamine、可卡因、樟脑、士的宁、CO；昏迷 → 所有中枢抑制剂，外加 CO 和氰化物。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Overview of Substance Abuse",
    "titleZh": "物质滥用：术语与概念",
    "points": [
-    {"en": "Three dependences to keep straight: tolerance = needing ever-larger doses for the same effect; physical dependence = the body adapts and withdrawal appears on stopping; psychological dependence = the emotional craving to feel well. They can exist separately.", "zh": "三个「依赖」要分清：耐受=同样效果需要越来越大的剂量；躯体依赖=身体已适应，停药就出戒断；心理依赖=靠渴求药物来维持情绪上的好受。三者可以独立存在。", "hard": true},
-    {"en": "Withdrawal syndrome: a PREDICTABLE set of signs and symptoms, usually with altered CNS activity, after abrupt cessation or rapid dose reduction — predictability is what makes it a syndrome.", "zh": "戒断综合征：突然停药或快速减量后出现的一组「可预测」的症状体征，通常带中枢活动改变——可预测性正是它成为综合征的原因。"},
-    {"en": "Drug-interaction vocabulary: antagonist blocks a receptor; potentiation is one drug amplifying another; synergism is two drugs adding up to more than their sum (2 + 2 = 5).", "zh": "药物相互作用词汇：antagonist（拮抗剂）堵住受体；potentiation（增强）是一个药放大另一个药；synergism（协同）是两药相加大于各自之和（2 + 2 = 5）。", "hard": true},
-    {"en": "The designer-drug story never ended: 1980s chemists re-engineered existing agents into more potent versions, and today's illicit labs make fentanyl analogues hundreds to thousands of times more potent than fentanyl itself.", "zh": "「设计毒品」的故事从没结束：1980 年代化学家把现成药改造成更强版本，如今的地下实验室在造比 fentanyl 本尊强几百到几千倍的类似物。", "hard": true}
+    {
+     "en": "Three dependences to keep straight: tolerance = needing ever-larger doses for the same effect; physical dependence = the body adapts and withdrawal appears on stopping; psychological dependence = the emotional craving to feel well. They can exist separately.",
+     "zh": "三个「依赖」要分清：耐受=同样效果需要越来越大的剂量；躯体依赖=身体已适应，停药就出戒断；心理依赖=靠渴求药物来维持情绪上的好受。三者可以独立存在。",
+     "hard": true
+    },
+    {
+     "en": "Withdrawal syndrome: a PREDICTABLE set of signs and symptoms, usually with altered CNS activity, after abrupt cessation or rapid dose reduction — predictability is what makes it a syndrome.",
+     "zh": "戒断综合征：突然停药或快速减量后出现的一组「可预测」的症状体征，通常带中枢活动改变——可预测性正是它成为综合征的原因。"
+    },
+    {
+     "en": "Drug-interaction vocabulary: antagonist blocks a receptor; potentiation is one drug amplifying another; synergism is two drugs adding up to more than their sum (2 + 2 = 5).",
+     "zh": "药物相互作用词汇：antagonist（拮抗剂）堵住受体；potentiation（增强）是一个药放大另一个药；synergism（协同）是两药相加大于各自之和（2 + 2 = 5）。",
+     "hard": true
+    },
+    {
+     "en": "The designer-drug story never ended: 1980s chemists re-engineered existing agents into more potent versions, and today's illicit labs make fentanyl analogues hundreds to thousands of times more potent than fentanyl itself.",
+     "zh": "「设计毒品」的故事从没结束：1980 年代化学家把现成药改造成更强版本，如今的地下实验室在造比 fentanyl 本尊强几百到几千倍的类似物。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "General Principles of Assessment and Management",
    "titleZh": "评估与管理总则",
    "points": [
-    {"en": "Six answers to hunt on every tox call: WHAT was taken, WHEN, HOW MUCH, what ELSE, has the patient VOMITED, and WHY. Elapsed time drives the GI-decontamination decision; 'what else' matters because intentional overdoses are usually polydrug.", "zh": "每个中毒现场要追的六个答案：吃了什么、什么时候、吃了多少、还吃了别的没有、吐过没有、为什么吃。距摄入的时间决定胃肠去污怎么选；「还吃了什么」重要是因为故意过量多半是多药混合。", "hard": true},
-    {"en": "Alcohol is the most common co-ingestant in intentional self-poisoning. Also ask what the patient took as a home 'antidote' — that answer changes hospital testing.", "zh": "故意自我中毒里最常见的搭配就是酒精。还要问患者自己有没有吃「解药」——这个答案会改变医院的检验方向。"},
-    {"en": "Street doses count in hits and tabs: 'three hits of acid' means three times a standard LSD dose. Dose correlates with toxicity almost every time.", "zh": "街头剂量按 hit/tab 计：「三份 acid」就是三倍标准 LSD 剂量。剂量和毒性几乎永远正相关。"},
-    {"en": "Overdose patients can be dangerous: do a scene assessment every single time, stage for police or crisis backup when needed, and use PPE or full decontamination before contact when the route is dermal or inhaled.", "zh": "过量患者可能非常危险：每一单都要做现场评估，需要时等警察或危机小组，皮肤/吸入暴露的要先 PPE 或完成去污再接触。"},
-    {"en": "The ALS frame for every poisoning: safe scene with an exit, airway, adequate breathing, circulation, high-concentration oxygen, vascular access, anticipate shock/coma/seizures/dysrhythmias, transport early — left lateral recumbent if there is any vomiting risk.", "zh": "所有中毒共用的 ALS 骨架：现场安全且留好退路、气道、呼吸是否够用、循环、高浓度吸氧、开通血管通路、预判休克/昏迷/抽搐/心律失常、尽早转运——有呕吐风险就左侧卧。", "hard": true},
-    {"en": "Evidence rides along: capped containers with remaining contents, the actual plant part eaten, and (for mushroom ingestions only) a vomitus sample. Have someone count the pills left in the bottle — but never delay transport of a sick patient to collect.", "zh": "证据要随车走：盖好盖的容器和剩余内容物、吃下的那部分植物实物、（仅蘑菇中毒时）呕吐物样本。找人数一数瓶里剩几片药——但绝不为取证拖延重症转运。"},
-    {"en": "Absorption continues after you leave the scene: a stable tox patient can become unstable en route. Reassess continuously and expect vomiting at any point.", "zh": "离开现场后吸收还在继续：走的时候稳定的中毒患者，路上可能就不稳了。持续复评，随时防呕吐。"}
+    {
+     "en": "Six answers to hunt on every tox call: WHAT was taken, WHEN, HOW MUCH, what ELSE, has the patient VOMITED, and WHY. Elapsed time drives the GI-decontamination decision; 'what else' matters because intentional overdoses are usually polydrug.",
+     "zh": "每个中毒现场要追的六个答案：吃了什么、什么时候、吃了多少、还吃了别的没有、吐过没有、为什么吃。距摄入的时间决定胃肠去污怎么选；「还吃了什么」重要是因为故意过量多半是多药混合。",
+     "hard": true
+    },
+    {
+     "en": "Alcohol is the most common co-ingestant in intentional self-poisoning. Also ask what the patient took as a home 'antidote' — that answer changes hospital testing.",
+     "zh": "故意自我中毒里最常见的搭配就是酒精。还要问患者自己有没有吃「解药」——这个答案会改变医院的检验方向。"
+    },
+    {
+     "en": "Street doses count in hits and tabs: 'three hits of acid' means three times a standard LSD dose. Dose correlates with toxicity almost every time.",
+     "zh": "街头剂量按 hit/tab 计：「三份 acid」就是三倍标准 LSD 剂量。剂量和毒性几乎永远正相关。"
+    },
+    {
+     "en": "Overdose patients can be dangerous: do a scene assessment every single time, stage for police or crisis backup when needed, and use PPE or full decontamination before contact when the route is dermal or inhaled.",
+     "zh": "过量患者可能非常危险：每一单都要做现场评估，需要时等警察或危机小组，皮肤/吸入暴露的要先 PPE 或完成去污再接触。"
+    },
+    {
+     "en": "The ALS frame for every poisoning: safe scene with an exit, airway, adequate breathing, circulation, high-concentration oxygen, vascular access, anticipate shock/coma/seizures/dysrhythmias, transport early — left lateral recumbent if there is any vomiting risk.",
+     "zh": "所有中毒共用的 ALS 骨架：现场安全且留好退路、气道、呼吸是否够用、循环、高浓度吸氧、开通血管通路、预判休克/昏迷/抽搐/心律失常、尽早转运——有呕吐风险就左侧卧。",
+     "hard": true
+    },
+    {
+     "en": "Evidence rides along: capped containers with remaining contents, the actual plant part eaten, and (for mushroom ingestions only) a vomitus sample. Have someone count the pills left in the bottle — but never delay transport of a sick patient to collect.",
+     "zh": "证据要随车走：盖好盖的容器和剩余内容物、吃下的那部分植物实物、（仅蘑菇中毒时）呕吐物样本。找人数一数瓶里剩几片药——但绝不为取证拖延重症转运。"
+    },
+    {
+     "en": "Absorption continues after you leave the scene: a stable tox patient can become unstable en route. Reassess continuously and expect vomiting at any point.",
+     "zh": "离开现场后吸收还在继续：走的时候稳定的中毒患者，路上可能就不稳了。持续复评，随时防呕吐。"
+    }
    ]
   },
   {
    "titleEn": "Alcohol: Intoxication, Withdrawal, Delirium Tremens",
    "titleZh": "酒精：急性中毒、戒断与震颤谵妄",
    "points": [
-    {"en": "Alcohol is Canada's most widely abused drug: 19% of Canadians aged 12+ (about 5.8 million people) are heavy drinkers, and alcoholism shortens life by 10-20 years through liver, heart, pancreas, brain and CNS damage.", "zh": "酒精是加拿大被滥用最广的药物：12 岁以上人群 19%（约 580 万人）属重度饮酒，酒精依赖通过肝、心、胰、脑和中枢损害把寿命削短 10-20 年。", "hard": true},
-    {"en": "Severe intoxication is CNS-depressant poisoning: deaths reported at blood alcohol of 80 mmol/L or more — reachable by rapidly drinking about half a pint of whiskey. The legal driving limit in most provinces is 17 mmol/L; lethal is not that many multiples away.", "zh": "重度醉酒就是中枢抑制剂中毒：血醇 ≥80 mmol/L 即有死亡报告——快速灌下约半品脱威士忌就能达到。多数省份法定驾驶上限是 17 mmol/L；从「违法」到「致死」没差几倍。", "hard": true},
-    {"en": "The immediate killers in acute intoxication are respiratory depression and aspiration on a suppressed gag reflex. Gag intact → left lateral recumbent with suction ready; no gag → intubate. Always check glucose — the alcoholic liver runs out of sugar.", "zh": "急性醉酒最快杀人的是呼吸抑制和呕吐反射被压制后的误吸。呕吐反射在 → 左侧卧、吸引器备好；反射没了 → 插管。血糖必须查——酒精肝是会断糖的。", "hard": true},
-    {"en": "Why alcoholics get sicker from everything: subdural hematoma (falls + poor clotting), GI bleeding (gastritis, varices from cirrhosis), pancreatitis, hypoglycemia, aspiration pneumonia, burns, hypothermia, withdrawal seizures, dysrhythmias — and a 10-fold cancer risk.", "zh": "酒精依赖者什么病都更重的原因：硬膜下血肿（常摔 + 凝血差）、消化道出血（胃炎、肝硬化食管静脉曲张）、胰腺炎、低血糖、误吸性肺炎、烧伤、低体温、戒断抽搐、心律失常——癌症风险还高 10 倍。", "hard": true},
-    {"en": "Thiamine 100 mg by slow IV push (given on ED arrival) prevents Wernicke-Korsakoff syndrome, the acute thiamine-deficiency delirium of chronic drinkers.", "zh": "Thiamine 100 mg 缓慢静推（到 ED 后给）用来预防 Wernicke-Korsakoff 综合征——长期饮酒者硫胺素缺乏导致的急性谵妄。", "hard": true},
-    {"en": "Alcohol withdrawal seizures typically strike 12-48 hours after the last drink; simple ones are short and self-resolving. Care mirrors intoxication care, with medical-control consultation for benzodiazepines.", "zh": "酒精戒断抽搐典型出现在末次饮酒后 12-48 小时；单纯型短暂、能自行缓解。处理同醉酒方案，用 benzodiazepine 需联系医疗指挥。", "hard": true},
-    {"en": "Delirium tremens: onset usually 48-72 hours after the last drink (occasionally 7-10 days), mortality up to 15%. Catecholamine excess drives confusion, tremor, fever, diaphoresis, terrifying hallucinations, tachycardia — hypertensive early, then hypotensive from dehydration. Treatment: benzodiazepines plus normal saline, calm reassurance throughout.", "zh": "震颤谵妄（DTs）：通常末次饮酒后 48-72 小时起病（个别拖到 7-10 天），死亡率可达 15%。儿茶酚胺过量驱动意识混乱、震颤、发热、大汗、极度恐怖的幻觉、心动过速——早期偏高血压，随后因脱水转低血压。治疗：benzodiazepine 加生理盐水，全程安抚定向。", "hard": true},
-    {"en": "Nancy's warning: the patient with alcohol on the breath may be sick or injured from something else entirely. Don't let the smell impair YOUR judgement — hypoglycemia and head injury both smell like an excuse to stop thinking.", "zh": "Nancy 的提醒：一身酒气的患者，病因可能完全是别的。别让酒味把你的判断也灌醉——低血糖和颅脑损伤最喜欢躲在「他就是喝多了」后面。"}
+    {
+     "en": "Alcohol is Canada's most widely abused drug: 19% of Canadians aged 12+ (about 5.8 million people) are heavy drinkers, and alcoholism shortens life by 10-20 years through liver, heart, pancreas, brain and CNS damage.",
+     "zh": "酒精是加拿大被滥用最广的药物：12 岁以上人群 19%（约 580 万人）属重度饮酒，酒精依赖通过肝、心、胰、脑和中枢损害把寿命削短 10-20 年。",
+     "hard": true
+    },
+    {
+     "en": "Severe intoxication is CNS-depressant poisoning: deaths reported at blood alcohol of 80 mmol/L or more — reachable by rapidly drinking about half a pint of whiskey. The legal driving limit in most provinces is 17 mmol/L; lethal is not that many multiples away.",
+     "zh": "重度醉酒就是中枢抑制剂中毒：血醇 ≥80 mmol/L 即有死亡报告——快速灌下约半品脱威士忌就能达到。多数省份法定驾驶上限是 17 mmol/L；从「违法」到「致死」没差几倍。",
+     "hard": true
+    },
+    {
+     "en": "The immediate killers in acute intoxication are respiratory depression and aspiration on a suppressed gag reflex. Gag intact → left lateral recumbent with suction ready; no gag → intubate. Always check glucose — the alcoholic liver runs out of sugar.",
+     "zh": "急性醉酒最快杀人的是呼吸抑制和呕吐反射被压制后的误吸。呕吐反射在 → 左侧卧、吸引器备好；反射没了 → 插管。血糖必须查——酒精肝是会断糖的。",
+     "hard": true
+    },
+    {
+     "en": "Why alcoholics get sicker from everything: subdural hematoma (falls + poor clotting), GI bleeding (gastritis, varices from cirrhosis), pancreatitis, hypoglycemia, aspiration pneumonia, burns, hypothermia, withdrawal seizures, dysrhythmias — and a 10-fold cancer risk.",
+     "zh": "酒精依赖者什么病都更重的原因：硬膜下血肿（常摔 + 凝血差）、消化道出血（胃炎、肝硬化食管静脉曲张）、胰腺炎、低血糖、误吸性肺炎、烧伤、低体温、戒断抽搐、心律失常——癌症风险还高 10 倍。",
+     "hard": true
+    },
+    {
+     "en": "Thiamine 100 mg by slow IV push (given on ED arrival) prevents Wernicke-Korsakoff syndrome, the acute thiamine-deficiency delirium of chronic drinkers.",
+     "zh": "Thiamine 100 mg 缓慢静推（到 ED 后给）用来预防 Wernicke-Korsakoff 综合征——长期饮酒者硫胺素缺乏导致的急性谵妄。",
+     "hard": true
+    },
+    {
+     "en": "Alcohol withdrawal seizures typically strike 12-48 hours after the last drink; simple ones are short and self-resolving. Care mirrors intoxication care, with medical-control consultation for benzodiazepines.",
+     "zh": "酒精戒断抽搐典型出现在末次饮酒后 12-48 小时；单纯型短暂、能自行缓解。处理同醉酒方案，用 benzodiazepine 需联系医疗指挥。",
+     "hard": true
+    },
+    {
+     "en": "Delirium tremens: onset usually 48-72 hours after the last drink (occasionally 7-10 days), mortality up to 15%. Catecholamine excess drives confusion, tremor, fever, diaphoresis, terrifying hallucinations, tachycardia — hypertensive early, then hypotensive from dehydration. Treatment: benzodiazepines plus normal saline, calm reassurance throughout.",
+     "zh": "震颤谵妄（DTs）：通常末次饮酒后 48-72 小时起病（个别拖到 7-10 天），死亡率可达 15%。儿茶酚胺过量驱动意识混乱、震颤、发热、大汗、极度恐怖的幻觉、心动过速——早期偏高血压，随后因脱水转低血压。治疗：benzodiazepine 加生理盐水，全程安抚定向。",
+     "hard": true
+    },
+    {
+     "en": "Nancy's warning: the patient with alcohol on the breath may be sick or injured from something else entirely. Don't let the smell impair YOUR judgement — hypoglycemia and head injury both smell like an excuse to stop thinking.",
+     "zh": "Nancy 的提醒：一身酒气的患者，病因可能完全是别的。别让酒味把你的判断也灌醉——低血糖和颅脑损伤最喜欢躲在「他就是喝多了」后面。"
+    }
    ]
   },
   {
    "titleEn": "Stimulants, Cannabis, and Hallucinogens",
    "titleZh": "兴奋剂、大麻与致幻剂",
    "points": [
-    {"en": "Stimulant lethality list: dysrhythmias, acute MI, seizures, stroke, apnea, hyperthermia. Cocaine widens the QRS through membrane-stabilizing effects on cardiac conduction — watch the monitor, not just the behaviour.", "zh": "兴奋剂的致命清单：心律失常、急性心梗、抽搐、卒中、呼吸暂停、高热。可卡因通过对心脏传导的膜稳定效应把 QRS 拉宽——盯监护仪，别只盯行为。", "hard": true},
-    {"en": "Cocaine kinetics: snorted — effects in 1-2 minutes, peak at 20-30 minutes; smoked (crack) — onset in 8-10 seconds with a more intense high. Faster routes mean faster redosing and faster trouble.", "zh": "可卡因动力学：鼻吸 1-2 分钟起效、20-30 分钟到峰；抽吸（crack）8-10 秒起效、更冲。途径越快，补吸越勤，出事也越快。", "hard": true},
-    {"en": "Beta blockers (and calcium channel blockers) are absolutely contraindicated for stimulant/cocaine tachydysrhythmias. First-line for stimulant hypertension, tachycardia, anxiety AND seizures is the benzodiazepine; hyperthermia gets cooled IV fluids, ice packs or misting.", "zh": "β 受体阻滞剂（和钙通道阻滞剂）在兴奋剂/可卡因快速心律失常里绝对禁用。兴奋剂相关高血压、心动过速、焦虑和抽搐的一线药都是 benzodiazepine；高热用降温输液、冰袋或喷雾降温。", "hard": true},
-    {"en": "Methamphetamine is cheap, extremely addictive, and long-acting — up to 12 hours per dose, versus cocaine's fraction of an hour. Days-long binges without sleep breed paranoia and psychosis; meth labs are hazmat scenes, full stop.", "zh": "Methamphetamine 便宜、极易成瘾、作用长——单剂可撑 12 小时，可卡因只有几十分钟量级。连日不睡的 binge 会养出偏执和精神病性发作；制毒窝点一律按 hazmat 现场处理。", "hard": true},
-    {"en": "Synthetic cathinones ('bath salts', khat-derived, sold as Flakka/Cloud Nine in foil packs): stimulant effects at street-corner prices. Insufflation and injection carry the highest mortality; expect paranoia, hallucinations, remarkable strength, excited delirium, hyperthermia.", "zh": "合成卡西酮（「浴盐」，源自 khat 灌木，锡箔小包装叫 Flakka、Cloud Nine 之类）：便利店价格的兴奋剂效果。鼻吸和注射两条途径死亡率最高；预期偏执、幻觉、惊人力气、激越性谵妄、高热。", "hard": true},
-    {"en": "Marijuana: smoked THC acts in minutes and lasts 2-4 hours; eaten it takes hours to start and lasts about twice as long — the classic edible trap. It does NOT produce true hallucinations; management is reassurance, low-dose benzodiazepine if still anxious, transport rarely needed.", "zh": "大麻：抽吸的 THC 几分钟起效、持续 2-4 小时；吃下去的几小时才起效、持续时间还翻倍——食用大麻的经典陷阱。它不产生真性幻觉；处理以安抚为主，仍焦虑可小剂量 benzodiazepine，很少需要转运。", "hard": true},
-    {"en": "Spice (synthetic cannabinoids sprayed on plant material or vaped) is NOT safe marijuana: psychosis, hallucinations, tachycardia, vomiting, renal injury and seizures all occur, and the chemical blend varies batch to batch. Supportive care, fluids, benzodiazepines for seizures.", "zh": "Spice（喷在植物碎料上抽或加进电子烟的合成大麻素）不是「安全版大麻」：精神病性发作、幻觉、心动过速、呕吐、肾损伤、抽搐都会出现，而且每批配方都不一样。支持治疗、补液，抽搐用 benzodiazepine。"},
-    {"en": "LSD: CNS effects from as little as 25 mcg; a street hit is 25-100 mcg; trips typically run 3-4 hours but can last 12. A 'bad trip' is an anxiety storm — dim the stimulation, no lights-and-sirens, talk the patient through it.", "zh": "LSD：25 mcg 即可有中枢效应；街头一份 25-100 mcg；一趟通常 3-4 小时，最长可 12 小时。「bad trip」本质是焦虑风暴——降低刺激、别开警灯警笛、用语言陪患者走完。", "hard": true},
-    {"en": "PCP (dissociative anesthetic at NMDA receptors, 25-50 mg intoxicates, high lasts 4-6 hours): slurred speech, staggering, blank staring, horizontal nystagmus, opisthotonus-grade rigidity — plus near-superhuman strength, pain immunity and sudden violence. Protect everyone; benzodiazepines IM if no IV.", "zh": "PCP（作用于 NMDA 受体的解离性麻醉剂，25-50 mg 即中毒，兴奋期 4-6 小时）：言语含糊、步态蹒跚、长时间呆视、水平眼震、角弓反张级的肌僵直——外加近乎超人的力气、不知疼、说翻脸就翻脸。保护所有人；没有静脉通路就肌注 benzodiazepine。", "hard": true},
-    {"en": "Ketamine (PCP analogue, also hits mu-opioid receptors): oral 75-300 mg, snorted 15-200 mg. Low dose looks like cheerful inebriation; high dose is the 'K-hole' — nausea, immobility, out-of-body dissociation. Watch for BOTH agitation and profound sedation with respiratory compromise.", "zh": "Ketamine（PCP 类似物，还作用于 μ 阿片受体）：口服 75-300 mg，鼻吸 15-200 mg。小剂量像喝高了的兴奋；大剂量是「K-hole」——恶心、动不了、灵魂出窍式解离。要同时防两头：躁动，和深镇静伴呼吸抑制。", "hard": true},
-    {"en": "Psilocybin mushrooms: typical dose 4-10 mg (2-4 mushrooms), onset within 30 minutes, effects 4-6 hours, milder than LSD. The real danger is foraging: delayed vomiting/diarrhea WITHOUT hallucinations flags a hepatotoxic look-alike, not a magic mushroom.", "zh": "裸盖菇（迷幻蘑菇）：常用量 4-10 mg（约 2-4 朵），30 分钟内起效，持续 4-6 小时，比 LSD 温和。真正的危险在自采误食：延迟出现的呕吐/腹泻而「没有」幻觉，提示吃到的是肝毒性冒牌货，不是迷幻蘑菇。", "hard": true}
+    {
+     "en": "Stimulant lethality list: dysrhythmias, acute MI, seizures, stroke, apnea, hyperthermia. Cocaine widens the QRS through membrane-stabilizing effects on cardiac conduction — watch the monitor, not just the behaviour.",
+     "zh": "兴奋剂的致命清单：心律失常、急性心梗、抽搐、卒中、呼吸暂停、高热。可卡因通过对心脏传导的膜稳定效应把 QRS 拉宽——盯监护仪，别只盯行为。",
+     "hard": true
+    },
+    {
+     "en": "Cocaine kinetics: snorted — effects in 1-2 minutes, peak at 20-30 minutes; smoked (crack) — onset in 8-10 seconds with a more intense high. Faster routes mean faster redosing and faster trouble.",
+     "zh": "可卡因动力学：鼻吸 1-2 分钟起效、20-30 分钟到峰；抽吸（crack）8-10 秒起效、更冲。途径越快，补吸越勤，出事也越快。",
+     "hard": true
+    },
+    {
+     "en": "Beta blockers (and calcium channel blockers) are absolutely contraindicated for stimulant/cocaine tachydysrhythmias. First-line for stimulant hypertension, tachycardia, anxiety AND seizures is the benzodiazepine; hyperthermia gets cooled IV fluids, ice packs or misting.",
+     "zh": "β 受体阻滞剂（和钙通道阻滞剂）在兴奋剂/可卡因快速心律失常里绝对禁用。兴奋剂相关高血压、心动过速、焦虑和抽搐的一线药都是 benzodiazepine；高热用降温输液、冰袋或喷雾降温。",
+     "hard": true
+    },
+    {
+     "en": "Methamphetamine is cheap, extremely addictive, and long-acting — up to 12 hours per dose, versus cocaine's fraction of an hour. Days-long binges without sleep breed paranoia and psychosis; meth labs are hazmat scenes, full stop.",
+     "zh": "Methamphetamine 便宜、极易成瘾、作用长——单剂可撑 12 小时，可卡因只有几十分钟量级。连日不睡的 binge 会养出偏执和精神病性发作；制毒窝点一律按 hazmat 现场处理。",
+     "hard": true
+    },
+    {
+     "en": "Synthetic cathinones ('bath salts', khat-derived, sold as Flakka/Cloud Nine in foil packs): stimulant effects at street-corner prices. Insufflation and injection carry the highest mortality; expect paranoia, hallucinations, remarkable strength, excited delirium, hyperthermia.",
+     "zh": "合成卡西酮（「浴盐」，源自 khat 灌木，锡箔小包装叫 Flakka、Cloud Nine 之类）：便利店价格的兴奋剂效果。鼻吸和注射两条途径死亡率最高；预期偏执、幻觉、惊人力气、激越性谵妄、高热。",
+     "hard": true
+    },
+    {
+     "en": "Marijuana: smoked THC acts in minutes and lasts 2-4 hours; eaten it takes hours to start and lasts about twice as long — the classic edible trap. It does NOT produce true hallucinations; management is reassurance, low-dose benzodiazepine if still anxious, transport rarely needed.",
+     "zh": "大麻：抽吸的 THC 几分钟起效、持续 2-4 小时；吃下去的几小时才起效、持续时间还翻倍——食用大麻的经典陷阱。它不产生真性幻觉；处理以安抚为主，仍焦虑可小剂量 benzodiazepine，很少需要转运。",
+     "hard": true
+    },
+    {
+     "en": "Spice (synthetic cannabinoids sprayed on plant material or vaped) is NOT safe marijuana: psychosis, hallucinations, tachycardia, vomiting, renal injury and seizures all occur, and the chemical blend varies batch to batch. Supportive care, fluids, benzodiazepines for seizures.",
+     "zh": "Spice（喷在植物碎料上抽或加进电子烟的合成大麻素）不是「安全版大麻」：精神病性发作、幻觉、心动过速、呕吐、肾损伤、抽搐都会出现，而且每批配方都不一样。支持治疗、补液，抽搐用 benzodiazepine。"
+    },
+    {
+     "en": "LSD: CNS effects from as little as 25 mcg; a street hit is 25-100 mcg; trips typically run 3-4 hours but can last 12. A 'bad trip' is an anxiety storm — dim the stimulation, no lights-and-sirens, talk the patient through it.",
+     "zh": "LSD：25 mcg 即可有中枢效应；街头一份 25-100 mcg；一趟通常 3-4 小时，最长可 12 小时。「bad trip」本质是焦虑风暴——降低刺激、别开警灯警笛、用语言陪患者走完。",
+     "hard": true
+    },
+    {
+     "en": "PCP (dissociative anesthetic at NMDA receptors, 25-50 mg intoxicates, high lasts 4-6 hours): slurred speech, staggering, blank staring, horizontal nystagmus, opisthotonus-grade rigidity — plus near-superhuman strength, pain immunity and sudden violence. Protect everyone; benzodiazepines IM if no IV.",
+     "zh": "PCP（作用于 NMDA 受体的解离性麻醉剂，25-50 mg 即中毒，兴奋期 4-6 小时）：言语含糊、步态蹒跚、长时间呆视、水平眼震、角弓反张级的肌僵直——外加近乎超人的力气、不知疼、说翻脸就翻脸。保护所有人；没有静脉通路就肌注 benzodiazepine。",
+     "hard": true
+    },
+    {
+     "en": "Ketamine (PCP analogue, also hits mu-opioid receptors): oral 75-300 mg, snorted 15-200 mg. Low dose looks like cheerful inebriation; high dose is the 'K-hole' — nausea, immobility, out-of-body dissociation. Watch for BOTH agitation and profound sedation with respiratory compromise.",
+     "zh": "Ketamine（PCP 类似物，还作用于 μ 阿片受体）：口服 75-300 mg，鼻吸 15-200 mg。小剂量像喝高了的兴奋；大剂量是「K-hole」——恶心、动不了、灵魂出窍式解离。要同时防两头：躁动，和深镇静伴呼吸抑制。",
+     "hard": true
+    },
+    {
+     "en": "Psilocybin mushrooms: typical dose 4-10 mg (2-4 mushrooms), onset within 30 minutes, effects 4-6 hours, milder than LSD. The real danger is foraging: delayed vomiting/diarrhea WITHOUT hallucinations flags a hepatotoxic look-alike, not a magic mushroom.",
+     "zh": "裸盖菇（迷幻蘑菇）：常用量 4-10 mg（约 2-4 朵），30 分钟内起效，持续 4-6 小时，比 LSD 温和。真正的危险在自采误食：延迟出现的呕吐/腹泻而「没有」幻觉，提示吃到的是肝毒性冒牌货，不是迷幻蘑菇。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Sedative-Hypnotics: Barbiturates, Benzodiazepines, GHB",
    "titleZh": "镇静催眠药：巴比妥、苯二氮䓬、GHB",
    "points": [
-    {"en": "Barbiturates potentiate GABA; intoxication mimics alcohol (nystagmus, ataxia, slurred speech, confusion) sliding into unresponsiveness and respiratory depression. Airway protection and ventilatory support are the management priorities; crystalloid boluses, then vasopressor per protocol for refractory hypotension.", "zh": "巴比妥类增强 GABA；中毒表现像醉酒（眼震、共济失调、言语含糊、意识混乱），继续滑向无反应和呼吸抑制。管理优先级就是保护气道和支持通气；低血压先晶体液冲击，无效再按预案上升压药。", "hard": true},
-    {"en": "Barbiturate withdrawal is the dangerous direction: symptoms start about 24 hours after abrupt cessation, and life-threatening features (delirium, seizures, hyperthermia, cardiovascular collapse) can emerge up to 1 week out.", "zh": "巴比妥真正危险的方向是戒断：骤停药后约 24 小时出症状，危及生命的表现（谵妄、抽搐、高热、循环衰竭）可以拖到 1 周才爆发。", "hard": true},
-    {"en": "Phenobarbital elimination tricks — multi-dose activated charcoal and urinary alkalinization with IV sodium bicarbonate — are ED/medical-control territory. Charcoal into a CNS-depressed airway risks devastating aspiration; forced diuresis with furosemide does nothing.", "zh": "加速 phenobarbital 清除的手段——多次活性炭和静脉碳酸氢钠碱化尿液——属于 ED/医疗指挥的范围。给中枢抑制的气道灌活性炭，误吸进肺是灾难；用 furosemide 强行利尿则完全没用。", "hard": true},
-    {"en": "A single-agent benzodiazepine overdose rarely kills: expect drowsiness, confusion, slurred speech, ataxia. Severe respiratory depression, hypotension or coma means OTHER depressants (alcohol, opioids) are on board — treat the mixture, not the label.", "zh": "单纯 benzodiazepine 过量很少致死：常见就是嗜睡、意识混乱、言语含糊、共济失调。一旦出现严重呼吸抑制、低血压或昏迷，说明还混了别的抑制剂（酒精、阿片）——治的是混合物，不是药瓶标签。", "hard": true},
-    {"en": "Flumazenil is a trap more often than a tool: contraindicated with chronic benzodiazepine use, co-ingested TCAs (epileptogenic), or a seizure disorder — reversal can trigger intractable seizures with the receptor now blocked against your only treatment. Not routinely advised.", "zh": "Flumazenil 常常是陷阱而不是工具：长期用 benzodiazepine、混服三环类（致痫）、本身有癫痫的都属禁忌——一逆转可能触发顽固抽搐，而受体已被堵死，你唯一的抗抽药也失效了。常规不建议用。", "hard": true},
-    {"en": "GHB ('liquid ecstasy', the date-rape drug): colourless, near-tasteless in a drink, onset 30-60 minutes, causes disinhibition, passivity and anterograde amnesia. Hallmark is significant but FLUCTUATING CNS depression — the airway can fail between two reassessments.", "zh": "GHB（「液态摇头丸」，迷奸药）：无色、掺进饮料几乎尝不出，30-60 分钟起效，带来去抑制、顺从和顺行性遗忘。特征是明显但「起伏波动」的中枢抑制——两次复评之间气道就可能垮掉。", "hard": true}
+    {
+     "en": "Barbiturates potentiate GABA; intoxication mimics alcohol (nystagmus, ataxia, slurred speech, confusion) sliding into unresponsiveness and respiratory depression. Airway protection and ventilatory support are the management priorities; crystalloid boluses, then vasopressor per protocol for refractory hypotension.",
+     "zh": "巴比妥类增强 GABA；中毒表现像醉酒（眼震、共济失调、言语含糊、意识混乱），继续滑向无反应和呼吸抑制。管理优先级就是保护气道和支持通气；低血压先晶体液冲击，无效再按预案上升压药。",
+     "hard": true
+    },
+    {
+     "en": "Barbiturate withdrawal is the dangerous direction: symptoms start about 24 hours after abrupt cessation, and life-threatening features (delirium, seizures, hyperthermia, cardiovascular collapse) can emerge up to 1 week out.",
+     "zh": "巴比妥真正危险的方向是戒断：骤停药后约 24 小时出症状，危及生命的表现（谵妄、抽搐、高热、循环衰竭）可以拖到 1 周才爆发。",
+     "hard": true
+    },
+    {
+     "en": "Phenobarbital elimination tricks — multi-dose activated charcoal and urinary alkalinization with IV sodium bicarbonate — are ED/medical-control territory. Charcoal into a CNS-depressed airway risks devastating aspiration; forced diuresis with furosemide does nothing.",
+     "zh": "加速 phenobarbital 清除的手段——多次活性炭和静脉碳酸氢钠碱化尿液——属于 ED/医疗指挥的范围。给中枢抑制的气道灌活性炭，误吸进肺是灾难；用 furosemide 强行利尿则完全没用。",
+     "hard": true
+    },
+    {
+     "en": "A single-agent benzodiazepine overdose rarely kills: expect drowsiness, confusion, slurred speech, ataxia. Severe respiratory depression, hypotension or coma means OTHER depressants (alcohol, opioids) are on board — treat the mixture, not the label.",
+     "zh": "单纯 benzodiazepine 过量很少致死：常见就是嗜睡、意识混乱、言语含糊、共济失调。一旦出现严重呼吸抑制、低血压或昏迷，说明还混了别的抑制剂（酒精、阿片）——治的是混合物，不是药瓶标签。",
+     "hard": true
+    },
+    {
+     "en": "Flumazenil is a trap more often than a tool: contraindicated with chronic benzodiazepine use, co-ingested TCAs (epileptogenic), or a seizure disorder — reversal can trigger intractable seizures with the receptor now blocked against your only treatment. Not routinely advised.",
+     "zh": "Flumazenil 常常是陷阱而不是工具：长期用 benzodiazepine、混服三环类（致痫）、本身有癫痫的都属禁忌——一逆转可能触发顽固抽搐，而受体已被堵死，你唯一的抗抽药也失效了。常规不建议用。",
+     "hard": true
+    },
+    {
+     "en": "GHB ('liquid ecstasy', the date-rape drug): colourless, near-tasteless in a drink, onset 30-60 minutes, causes disinhibition, passivity and anterograde amnesia. Hallmark is significant but FLUCTUATING CNS depression — the airway can fail between two reassessments.",
+     "zh": "GHB（「液态摇头丸」，迷奸药）：无色、掺进饮料几乎尝不出，30-60 分钟起效，带来去抑制、顺从和顺行性遗忘。特征是明显但「起伏波动」的中枢抑制——两次复评之间气道就可能垮掉。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Narcotics, Opiates, and Opioids",
    "titleZh": "麻醉剂、阿片与阿片类药物",
    "points": [
-    {"en": "Narcotic classically splits into opiates (natural, from the poppy — morphine, codeine) versus opioids (synthetic, non-opium — fentanyl, oxycodone); this text uses 'opioid' as the umbrella term for both licit and illicit agents.", "zh": "「麻醉剂」传统上分两类：opiate（天然，源自罂粟——morphine、codeine）vs opioid（合成、非鸦片——fentanyl、oxycodone）；本书统一用「opioid」涵盖合法和非法药物。"},
-    {"en": "Potency benchmarks worth memorizing: roughly 80-100 mg meperidine, 10 mg morphine, and just 2 mg hydromorphone all give comparable analgesia lasting 4-5 hours — a huge potency spread for a similar clinical effect.", "zh": "值得记的效价基准：约 80-100 mg meperidine、10 mg morphine、仅 2 mg hydromorphone 都能产生大致相当、持续 4-5 小时的镇痛效果——效价跨度巨大，效果却「差不多」。", "hard": true},
-    {"en": "Canada's opioid crisis by the numbers: PHAC declared a public health emergency in 2016; over 11,500 opioid deaths occurred from January 2016 to December 2018, plus another 1,082 in just the first quarter of 2019 — nearly three-quarters tied to fentanyl and its analogues.", "zh": "加拿大阿片危机的数字：公共卫生署 2016 年宣布进入紧急状态；2016 年 1 月到 2018 年 12 月超过 11,500 人死于阿片过量，2019 年头三个月又添 1,082 例——近四分之三和 fentanyl 及其类似物有关。", "hard": true},
-    {"en": "Carfentanil (an elephant-tranquilizer-grade fentanyl analogue, far more potent than fentanyl itself) and desomorphine now turn up on the street — sometimes silently mixed into other drugs, so a user may not even know they took an opioid at all.", "zh": "Carfentanil（原本是大型动物用的镇静剂级 fentanyl 类似物，比 fentanyl 本身猛得多）和 desomorphine 已流入街头——有时被悄悄掺进别的毒品里，吸毒者可能根本不知道自己吃下了阿片类。"},
-    {"en": "Classic opioid overdose triad: euphoria plus hypotension plus respiratory depression plus pinpoint pupils. A heroin user who appears to 'nod off' after injecting is usually still lucid and aware, not truly unconscious.", "zh": "经典阿片过量三联征：欣快 + 低血压 + 呼吸抑制 + 针尖瞳孔。Heroin 使用者注射后看似「打盹」，其实多半神志清醒、听得懂周围在说什么。"},
-    {"en": "Opioid overdose can drop the respiratory rate to just 4-5 breaths/min, driving hypoxia and hypercapnia. The BC sequence is basic airway first: an OPA plus BVM at 15 L/min BEFORE reaching for naloxone — ventilation alone can improve the CO2-driven drop in consciousness.", "zh": "阿片过量可把呼吸频率压到 4-5 次/分，造成缺氧和高碳酸血症。BC 的顺序是先基础气道：口咽通气道 + BVM 15 L/min，再谈 naloxone——单靠通气就能改善 CO2 潴留造成的意识下降。", "hard": true},
-    {"en": "Naloxone is a competitive opioid-receptor antagonist. The treatment goal is restored breathing, NOT a fully awake patient — titrate to respiratory effort, because over-reversal both risks withdrawal and removes your only sedated, cooperative patient.", "zh": "Naloxone 是竞争性阿片受体拮抗剂。治疗目标是恢复呼吸，「不是」把人叫醒——按呼吸效果滴定剂量，逆转过头既会催发戒断，又会把一个原本安静配合的患者变得躁动。"},
-    {"en": "Naloxone's half-life is shorter than most opioids it reverses, so re-sedation and redosing are the expected norm, not an exception. Never let a patient refuse transport right after a dose — they can slide back under.", "zh": "Naloxone 半衰期比它要逆转的大多数阿片类都短，所以再次昏睡和补打 naloxone 是常态而非例外。刚打完针绝不能让患者拒绝转运——他随时可能再度昏睡过去。"},
-    {"en": "If naloxone doesn't restore adequate breathing, stop assuming 'just needs more' — think stroke or a polydrug overdose instead, secure an advanced airway, and transport without delay.", "zh": "如果 naloxone 打了还是通气不足，别一味以为「再加点就好」——要想到卒中或多药混合过量，改上高级气道，别耽误转运。"}
+    {
+     "en": "Narcotic classically splits into opiates (natural, from the poppy — morphine, codeine) versus opioids (synthetic, non-opium — fentanyl, oxycodone); this text uses 'opioid' as the umbrella term for both licit and illicit agents.",
+     "zh": "「麻醉剂」传统上分两类：opiate（天然，源自罂粟——morphine、codeine）vs opioid（合成、非鸦片——fentanyl、oxycodone）；本书统一用「opioid」涵盖合法和非法药物。"
+    },
+    {
+     "en": "Potency benchmarks worth memorizing: roughly 80-100 mg meperidine, 10 mg morphine, and just 2 mg hydromorphone all give comparable analgesia lasting 4-5 hours — a huge potency spread for a similar clinical effect.",
+     "zh": "值得记的效价基准：约 80-100 mg meperidine、10 mg morphine、仅 2 mg hydromorphone 都能产生大致相当、持续 4-5 小时的镇痛效果——效价跨度巨大，效果却「差不多」。",
+     "hard": true
+    },
+    {
+     "en": "Canada's opioid crisis by the numbers: PHAC declared a public health emergency in 2016; over 11,500 opioid deaths occurred from January 2016 to December 2018, plus another 1,082 in just the first quarter of 2019 — nearly three-quarters tied to fentanyl and its analogues.",
+     "zh": "加拿大阿片危机的数字：公共卫生署 2016 年宣布进入紧急状态；2016 年 1 月到 2018 年 12 月超过 11,500 人死于阿片过量，2019 年头三个月又添 1,082 例——近四分之三和 fentanyl 及其类似物有关。",
+     "hard": true
+    },
+    {
+     "en": "Carfentanil (an elephant-tranquilizer-grade fentanyl analogue, far more potent than fentanyl itself) and desomorphine now turn up on the street — sometimes silently mixed into other drugs, so a user may not even know they took an opioid at all.",
+     "zh": "Carfentanil（原本是大型动物用的镇静剂级 fentanyl 类似物，比 fentanyl 本身猛得多）和 desomorphine 已流入街头——有时被悄悄掺进别的毒品里，吸毒者可能根本不知道自己吃下了阿片类。"
+    },
+    {
+     "en": "Classic opioid overdose triad: euphoria plus hypotension plus respiratory depression plus pinpoint pupils. A heroin user who appears to 'nod off' after injecting is usually still lucid and aware, not truly unconscious.",
+     "zh": "经典阿片过量三联征：欣快 + 低血压 + 呼吸抑制 + 针尖瞳孔。Heroin 使用者注射后看似「打盹」，其实多半神志清醒、听得懂周围在说什么。"
+    },
+    {
+     "en": "Opioid overdose can drop the respiratory rate to just 4-5 breaths/min, driving hypoxia and hypercapnia. The BC sequence is basic airway first: an OPA plus BVM at 15 L/min BEFORE reaching for naloxone — ventilation alone can improve the CO2-driven drop in consciousness.",
+     "zh": "阿片过量可把呼吸频率压到 4-5 次/分，造成缺氧和高碳酸血症。BC 的顺序是先基础气道：口咽通气道 + BVM 15 L/min，再谈 naloxone——单靠通气就能改善 CO2 潴留造成的意识下降。",
+     "hard": true
+    },
+    {
+     "en": "Naloxone is a competitive opioid-receptor antagonist. The treatment goal is restored breathing, NOT a fully awake patient — titrate to respiratory effort, because over-reversal both risks withdrawal and removes your only sedated, cooperative patient.",
+     "zh": "Naloxone 是竞争性阿片受体拮抗剂。治疗目标是恢复呼吸，「不是」把人叫醒——按呼吸效果滴定剂量，逆转过头既会催发戒断，又会把一个原本安静配合的患者变得躁动。"
+    },
+    {
+     "en": "Naloxone's half-life is shorter than most opioids it reverses, so re-sedation and redosing are the expected norm, not an exception. Never let a patient refuse transport right after a dose — they can slide back under.",
+     "zh": "Naloxone 半衰期比它要逆转的大多数阿片类都短，所以再次昏睡和补打 naloxone 是常态而非例外。刚打完针绝不能让患者拒绝转运——他随时可能再度昏睡过去。"
+    },
+    {
+     "en": "If naloxone doesn't restore adequate breathing, stop assuming 'just needs more' — think stroke or a polydrug overdose instead, secure an advanced airway, and transport without delay.",
+     "zh": "如果 naloxone 打了还是通气不足，别一味以为「再加点就好」——要想到卒中或多药混合过量，改上高级气道，别耽误转运。"
+    }
    ]
   },
   {
    "titleEn": "Toxic Inhalants: Carbon Monoxide, Chlorine Gas, and Cyanide",
    "titleZh": "有毒吸入性气体：一氧化碳、氯气与氰化物",
    "points": [
-    {"en": "CO kills more people by accidental poisoning than any other single toxin. It's colourless, odourless, and tasteless — victims get zero warning — and a car idling in a closed garage can build a lethal concentration in about 30 minutes.", "zh": "CO 是意外中毒致死人数最多的单一毒物。它无色无味无嗅——受害者毫无预警——车库门关死、引擎空转，约 30 分钟就能积累致命浓度。", "hard": true},
-    {"en": "CO presentation mimics early flu: headache, nausea, vomiting, confusion. Bounding pulses, dilated pupils, and pallor or cyanosis may be found on exam — cherry-red skin is a textbook sign but shows up so late it usually means the patient is already dying.", "zh": "CO 中毒表现像早期流感：头痛、恶心、呕吐、意识混乱。查体可见脉搏洪大、瞳孔散大、面色苍白或发绀——「樱桃红」是教科书标志，但出现时往往已经快不行了。"},
-    {"en": "Multiple people, same building, simultaneous vague medical complaints — treat that pattern as CO poisoning until you prove otherwise, and remember CO is a hazard to YOU too before you enter.", "zh": "多名患者、同一栋建筑、同时出现说不清的不适——先按 CO 中毒处理，直到证明不是。也别忘了 CO 对你自己一样有危险，进场前先想好防护。"},
-    {"en": "Standard pulse oximetry cannot tell carboxyhemoglobin from oxyhemoglobin — a reassuring 99% SpO2 reading can mean the hemoglobin is fully saturated with the wrong gas. Dedicated CO-oximeters exist to catch what a normal pulse ox will miss.", "zh": "普通血氧仪分不清碳氧血红蛋白和氧合血红蛋白——读数 99% 看着很安心，实际可能是血红蛋白被 CO 占满了。专用 CO-血氧仪才能测出真相，普通仪器测不出来。", "hard": true},
-    {"en": "Carboxyhemoglobin elimination half-life: about 4 hours on room air, drops to roughly 1.5 hours on 100% oxygen, and to just 15-20 minutes under hyperbaric oxygen at 2.5 atmospheres — though hyperbaric use stays controversial.", "zh": "碳氧血红蛋白清除半衰期：呼吸室内空气约 4 小时，吸 100% 氧降到约 1.5 小时，2.5 个大气压高压氧下可压到 15-20 分钟——不过高压氧的应用仍有争议。", "hard": true},
-    {"en": "CO management: pull the patient out of the source, apply a tight-fitting non-rebreather at maximum FiO2 REGARDLESS of what the pulse oximeter reads, keep them still to cut oxygen demand, and prioritize a hyperbaric-capable facility if they're unresponsive or severely poisoned.", "zh": "CO 处理：脱离中毒源，戴紧密贴合的非重复呼吸面罩用最大 FiO2——「不管血氧仪读数多少」，让患者保持安静减少耗氧，无反应或重症要优先送有高压氧能力的医院。"},
-    {"en": "Structure fire or vehicle fire victims in shock: think combined CO-plus-cyanide poisoning from burning synthetic materials, and contact medical control about hydroxocobalamin or sodium thiosulfate if your service carries either.", "zh": "建筑或车辆火灾伤者出现休克：要想到合成材料燃烧产生的 CO + 氰化物混合中毒，联系医疗指挥，看是否需要用车上携带的 hydroxocobalamin 或硫代硫酸钠。"},
-    {"en": "Household chlorine gas usually comes from mixing bleach with an acidic cleaner while scrubbing a stain — the reaction forms hydrochloric acid on contact with mucous membranes, ranging from mild eye/throat burning up to cyanosis, crackles, seizures, and loss of consciousness at high exposure.", "zh": "家用氯气常见来源是漂白剂混了酸性清洁剂去擦污渍——反应生成的氯气碰到黏膜就变成盐酸，轻则眼喉灼烧，重则发绀、肺部湿啰音、抽搐、意识丧失。"},
-    {"en": "Chlorine gas care: hazmat-style scene positioning and PPE first, then irrigate eyes/skin, high-concentration humidified oxygen for respiratory distress, nebulized bronchodilators for wheeze, CPAP if pulmonary edema develops — medical control may order a nebulized 2 mL 8.4% sodium bicarbonate plus 2 mL sterile water mix for symptom relief.", "zh": "氯气处理：先按 hazmat 现场定位和 PPE，再冲洗眼睛/皮肤，呼吸窘迫给高浓度湿化氧，喘鸣用雾化支气管扩张剂，出现肺水肿考虑 CPAP——医疗指挥可能会开雾化 2 mL 8.4% 碳酸氢钠加 2 mL 无菌水来缓解症状。", "hard": true},
-    {"en": "Cyanide blocks cytochrome oxidase, shutting down cellular oxygen use even though the blood itself stays oxygen-rich — death can occur within seconds if inhaled, or within 1-2 hours if ingested. The classic bitter-almond breath odour is suggestive, not diagnostic — many people are genetically unable to smell it.", "zh": "氰化物阻断细胞色素氧化酶，血液里明明还有氧，细胞却用不了——吸入中毒可在几秒内致死，摄入则是几分钟到 1-2 小时。经典的苦杏仁味气息只是提示，不是确诊依据——不少人天生闻不出这个味。", "hard": true},
-    {"en": "Cyanide antidotes: amyl nitrite ampule (20 seconds under the nose, then 40 seconds of 100% oxygen, repeating the cycle) or sodium nitrite 300 mg IV over 2-4 minutes — NEITHER is safe if CO poisoning is also suspected. Hydroxocobalamin 5 g IV/IO over 15 minutes is the newer, safer option, with anaphylaxis as the main risk and harmless reddening of skin/eyes/urine as a side effect.", "zh": "氰化物解毒：amyl nitrite 安瓿（鼻下吸 20 秒，再吸 40 秒纯氧，循环重复）或 sodium nitrite 300 mg IV 推 2-4 分钟——「合并 CO 中毒时两者都不安全」。Hydroxocobalamin 5 g IV/IO 推 15 分钟是更新更安全的选择，主要风险是过敏，皮肤/眼睛/尿液变红是无害副作用。", "hard": true}
+    {
+     "en": "CO kills more people by accidental poisoning than any other single toxin. It's colourless, odourless, and tasteless — victims get zero warning — and a car idling in a closed garage can build a lethal concentration in about 30 minutes.",
+     "zh": "CO 是意外中毒致死人数最多的单一毒物。它无色无味无嗅——受害者毫无预警——车库门关死、引擎空转，约 30 分钟就能积累致命浓度。",
+     "hard": true
+    },
+    {
+     "en": "CO presentation mimics early flu: headache, nausea, vomiting, confusion. Bounding pulses, dilated pupils, and pallor or cyanosis may be found on exam — cherry-red skin is a textbook sign but shows up so late it usually means the patient is already dying.",
+     "zh": "CO 中毒表现像早期流感：头痛、恶心、呕吐、意识混乱。查体可见脉搏洪大、瞳孔散大、面色苍白或发绀——「樱桃红」是教科书标志，但出现时往往已经快不行了。"
+    },
+    {
+     "en": "Multiple people, same building, simultaneous vague medical complaints — treat that pattern as CO poisoning until you prove otherwise, and remember CO is a hazard to YOU too before you enter.",
+     "zh": "多名患者、同一栋建筑、同时出现说不清的不适——先按 CO 中毒处理，直到证明不是。也别忘了 CO 对你自己一样有危险，进场前先想好防护。"
+    },
+    {
+     "en": "Standard pulse oximetry cannot tell carboxyhemoglobin from oxyhemoglobin — a reassuring 99% SpO2 reading can mean the hemoglobin is fully saturated with the wrong gas. Dedicated CO-oximeters exist to catch what a normal pulse ox will miss.",
+     "zh": "普通血氧仪分不清碳氧血红蛋白和氧合血红蛋白——读数 99% 看着很安心，实际可能是血红蛋白被 CO 占满了。专用 CO-血氧仪才能测出真相，普通仪器测不出来。",
+     "hard": true
+    },
+    {
+     "en": "Carboxyhemoglobin elimination half-life: about 4 hours on room air, drops to roughly 1.5 hours on 100% oxygen, and to just 15-20 minutes under hyperbaric oxygen at 2.5 atmospheres — though hyperbaric use stays controversial.",
+     "zh": "碳氧血红蛋白清除半衰期：呼吸室内空气约 4 小时，吸 100% 氧降到约 1.5 小时，2.5 个大气压高压氧下可压到 15-20 分钟——不过高压氧的应用仍有争议。",
+     "hard": true
+    },
+    {
+     "en": "CO management: pull the patient out of the source, apply a tight-fitting non-rebreather at maximum FiO2 REGARDLESS of what the pulse oximeter reads, keep them still to cut oxygen demand, and prioritize a hyperbaric-capable facility if they're unresponsive or severely poisoned.",
+     "zh": "CO 处理：脱离中毒源，戴紧密贴合的非重复呼吸面罩用最大 FiO2——「不管血氧仪读数多少」，让患者保持安静减少耗氧，无反应或重症要优先送有高压氧能力的医院。"
+    },
+    {
+     "en": "Structure fire or vehicle fire victims in shock: think combined CO-plus-cyanide poisoning from burning synthetic materials, and contact medical control about hydroxocobalamin or sodium thiosulfate if your service carries either.",
+     "zh": "建筑或车辆火灾伤者出现休克：要想到合成材料燃烧产生的 CO + 氰化物混合中毒，联系医疗指挥，看是否需要用车上携带的 hydroxocobalamin 或硫代硫酸钠。"
+    },
+    {
+     "en": "Household chlorine gas usually comes from mixing bleach with an acidic cleaner while scrubbing a stain — the reaction forms hydrochloric acid on contact with mucous membranes, ranging from mild eye/throat burning up to cyanosis, crackles, seizures, and loss of consciousness at high exposure.",
+     "zh": "家用氯气常见来源是漂白剂混了酸性清洁剂去擦污渍——反应生成的氯气碰到黏膜就变成盐酸，轻则眼喉灼烧，重则发绀、肺部湿啰音、抽搐、意识丧失。"
+    },
+    {
+     "en": "Chlorine gas care: hazmat-style scene positioning and PPE first, then irrigate eyes/skin, high-concentration humidified oxygen for respiratory distress, nebulized bronchodilators for wheeze, CPAP if pulmonary edema develops — medical control may order a nebulized 2 mL 8.4% sodium bicarbonate plus 2 mL sterile water mix for symptom relief.",
+     "zh": "氯气处理：先按 hazmat 现场定位和 PPE，再冲洗眼睛/皮肤，呼吸窘迫给高浓度湿化氧，喘鸣用雾化支气管扩张剂，出现肺水肿考虑 CPAP——医疗指挥可能会开雾化 2 mL 8.4% 碳酸氢钠加 2 mL 无菌水来缓解症状。",
+     "hard": true
+    },
+    {
+     "en": "Cyanide blocks cytochrome oxidase, shutting down cellular oxygen use even though the blood itself stays oxygen-rich — death can occur within seconds if inhaled, or within 1-2 hours if ingested. The classic bitter-almond breath odour is suggestive, not diagnostic — many people are genetically unable to smell it.",
+     "zh": "氰化物阻断细胞色素氧化酶，血液里明明还有氧，细胞却用不了——吸入中毒可在几秒内致死，摄入则是几分钟到 1-2 小时。经典的苦杏仁味气息只是提示，不是确诊依据——不少人天生闻不出这个味。",
+     "hard": true
+    },
+    {
+     "en": "Cyanide antidotes: amyl nitrite ampule (20 seconds under the nose, then 40 seconds of 100% oxygen, repeating the cycle) or sodium nitrite 300 mg IV over 2-4 minutes — NEITHER is safe if CO poisoning is also suspected. Hydroxocobalamin 5 g IV/IO over 15 minutes is the newer, safer option, with anaphylaxis as the main risk and harmless reddening of skin/eyes/urine as a side effect.",
+     "zh": "氰化物解毒：amyl nitrite 安瓿（鼻下吸 20 秒，再吸 40 秒纯氧，循环重复）或 sodium nitrite 300 mg IV 推 2-4 分钟——「合并 CO 中毒时两者都不安全」。Hydroxocobalamin 5 g IV/IO 推 15 分钟是更新更安全的选择，主要风险是过敏，皮肤/眼睛/尿液变红是无害副作用。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Pesticides: Organophosphates, Carbamates, and Nerve Agents",
    "titleZh": "农药：有机磷、氨基甲酸酯与神经毒剂",
    "points": [
-    {"en": "Organophosphates and carbamates are acetylcholinesterase inhibitors — they stop the breakdown of acetylcholine at nerve synapses, so the message keeps firing indefinitely. The clinical picture is identical whether the route was ingestion, inhalation, or skin contact.", "zh": "有机磷和氨基甲酸酯是乙酰胆碱酯酶抑制剂——阻止突触里乙酰胆碱被分解，信号就一直发个不停。不管是摄入、吸入还是皮肤接触，临床表现都一样。"},
-    {"en": "Because acetylcholine also drives motor end plates, excess stimulation causes marked muscle weakness on top of the classic cholinergic secretions — don't mistake progressive weakness for something unrelated.", "zh": "乙酰胆碱同样作用于运动终板，过度刺激除了引出经典的胆碱能分泌症状外，还会造成明显肌无力——别把这种渐进性无力当成别的病。"},
-    {"en": "Commercial organophosphate products are usually dissolved in a hydrocarbon carrier solvent, so aspiration of that solvent adds its own respiratory injury on top of the cholinergic poisoning.", "zh": "市售有机磷产品通常溶解在碳氢化合物载体里，一旦误吸这种溶剂，会在胆碱能中毒之外再叠加一层呼吸道损伤。"},
-    {"en": "Decontamination comes before anything else: strip ALL contaminated clothing and ideally scrub with soap and water before loading the patient, bag clothing as hazmat waste, and wear PPE even for an ingestion case — vomiting after topical decon can re-expose you.", "zh": "去污永远排第一：上车前先脱光所有污染衣物、最好用肥皂水洗干净，污染衣物按 hazmat 废物装袋处理；就算是摄入病例也要穿 PPE——去污后呕吐照样可能让你再次暴露。"},
-    {"en": "Atropine is the antidote: 1 mg IV/IO, DOUBLING the dose every 3-5 minutes until bronchorrhea and bronchospasm resolve. The clinical endpoint is dry, clear lungs — heart rate and pupil size are unreliable and should NOT guide your dosing.", "zh": "Atropine 是解毒剂：1 mg IV/IO 起始，每 3-5 分钟把剂量「翻倍」，直到支气管分泌物变干、支气管痉挛缓解为止。临床终点是肺干净——心率和瞳孔大小不可靠，「不能」拿来指导给药。", "hard": true},
-    {"en": "Seizures get standard benzodiazepine dosing; intranasal midazolam may be the preferred route, but be aware the poisoning's own profuse nasal secretions can physically block the drug's absorption.", "zh": "抽搐按常规剂量用 benzodiazepine；鼻内给 midazolam 可能是首选途径，但要注意中毒本身造成的大量鼻分泌物可能会挡住药物吸收。"},
-    {"en": "Nerve agents (sarin, tabun, VX) are essentially extremely potent organophosphates built for chemical warfare — same cholinergic presentation, same escalating-atropine approach, but treat the scene as a probable mass-casualty CBRNE incident.", "zh": "神经毒剂（sarin、tabun、VX）本质就是威力极大、专为化学战设计的有机磷——表现同样是胆碱能中毒，处理同样是递增 atropine，但现场要按可能的大规模伤亡 CBRNE 事件来对待。"}
+    {
+     "en": "Organophosphates and carbamates are acetylcholinesterase inhibitors — they stop the breakdown of acetylcholine at nerve synapses, so the message keeps firing indefinitely. The clinical picture is identical whether the route was ingestion, inhalation, or skin contact.",
+     "zh": "有机磷和氨基甲酸酯是乙酰胆碱酯酶抑制剂——阻止突触里乙酰胆碱被分解，信号就一直发个不停。不管是摄入、吸入还是皮肤接触，临床表现都一样。"
+    },
+    {
+     "en": "Because acetylcholine also drives motor end plates, excess stimulation causes marked muscle weakness on top of the classic cholinergic secretions — don't mistake progressive weakness for something unrelated.",
+     "zh": "乙酰胆碱同样作用于运动终板，过度刺激除了引出经典的胆碱能分泌症状外，还会造成明显肌无力——别把这种渐进性无力当成别的病。"
+    },
+    {
+     "en": "Commercial organophosphate products are usually dissolved in a hydrocarbon carrier solvent, so aspiration of that solvent adds its own respiratory injury on top of the cholinergic poisoning.",
+     "zh": "市售有机磷产品通常溶解在碳氢化合物载体里，一旦误吸这种溶剂，会在胆碱能中毒之外再叠加一层呼吸道损伤。"
+    },
+    {
+     "en": "Decontamination comes before anything else: strip ALL contaminated clothing and ideally scrub with soap and water before loading the patient, bag clothing as hazmat waste, and wear PPE even for an ingestion case — vomiting after topical decon can re-expose you.",
+     "zh": "去污永远排第一：上车前先脱光所有污染衣物、最好用肥皂水洗干净，污染衣物按 hazmat 废物装袋处理；就算是摄入病例也要穿 PPE——去污后呕吐照样可能让你再次暴露。"
+    },
+    {
+     "en": "Atropine is the antidote: 1 mg IV/IO, DOUBLING the dose every 3-5 minutes until bronchorrhea and bronchospasm resolve. The clinical endpoint is dry, clear lungs — heart rate and pupil size are unreliable and should NOT guide your dosing.",
+     "zh": "Atropine 是解毒剂：1 mg IV/IO 起始，每 3-5 分钟把剂量「翻倍」，直到支气管分泌物变干、支气管痉挛缓解为止。临床终点是肺干净——心率和瞳孔大小不可靠，「不能」拿来指导给药。",
+     "hard": true
+    },
+    {
+     "en": "Seizures get standard benzodiazepine dosing; intranasal midazolam may be the preferred route, but be aware the poisoning's own profuse nasal secretions can physically block the drug's absorption.",
+     "zh": "抽搐按常规剂量用 benzodiazepine；鼻内给 midazolam 可能是首选途径，但要注意中毒本身造成的大量鼻分泌物可能会挡住药物吸收。"
+    },
+    {
+     "en": "Nerve agents (sarin, tabun, VX) are essentially extremely potent organophosphates built for chemical warfare — same cholinergic presentation, same escalating-atropine approach, but treat the scene as a probable mass-casualty CBRNE incident.",
+     "zh": "神经毒剂（sarin、tabun、VX）本质就是威力极大、专为化学战设计的有机磷——表现同样是胆碱能中毒，处理同样是递增 atropine，但现场要按可能的大规模伤亡 CBRNE 事件来对待。"
+    }
    ]
   },
   {
    "titleEn": "Poisonous Plants and Mushrooms",
    "titleZh": "有毒植物与蘑菇",
    "points": [
-    {"en": "Very few plant species are truly systemically toxic, and plants consistently rank in the top-10 Poison Centre exposures for both adults and children. You are not expected to identify the plant — treat the symptoms and bring a specimen to hospital.", "zh": "真正会造成全身性中毒的植物物种很少，但植物一直排在毒物中心成人和儿童暴露原因的前十名。你不需要认出是什么植物——按症状处理，把植物样本带去医院就行。"},
-    {"en": "Araceae houseplants (dieffenbachia, caladium, philodendron) contain insoluble calcium-oxalate crystals: chewing causes instant mouth burning that limits how much a child eats, but large amounts can still swell the upper airway.", "zh": "天南星科室内植物（黛粉叶、彩叶芋、绿萝）含不溶性草酸钙结晶：一咬嘴里立刻烧痛，这种疼痛会限制孩子继续吃，但吃下大量仍可能引起上气道水肿。"},
-    {"en": "Rhubarb LEAVES, unlike the houseplants above, contain SOLUBLE calcium oxalate — eating them can cause renal failure, a very different risk profile from the self-limiting insoluble-oxalate plants.", "zh": "大黄的「叶子」和上面那些室内植物不同，含的是「可溶性」草酸钙——吃下去可能导致肾衰竭，风险和那些自限性的不溶性草酸钙植物完全不是一回事。"},
-    {"en": "Stone-fruit pits (apricot, choke cherry, peach) release cyanide only if CHEWED — saliva activates the amygdalin inside; swallowing a pit whole is harmless. Black locust seeds work the same way — chewed seeds release the same toxalbumin found in castor beans, the source of ricin.", "zh": "杏、稠李、桃的果核只有「嚼碎」才会释放氰化物——唾液激活里面的苦杏仁苷；整颗吞下没有危险。刺槐种子同理，嚼碎才会释出和蓖麻籽（ricin 的来源）一样的毒蛋白。"},
-    {"en": "Cardiac-glycoside plants — foxglove (source of digoxin), monkshood, yew berries — are proarrhythmic; put any significant ingestion of these on a cardiac monitor. Jimsonweed and deadly nightshade carry atropine-like toxins that produce the full anticholinergic picture.", "zh": "含强心苷的植物——毛地黄（digoxin 的来源）、乌头、紫杉浆果——都有致心律失常风险，摄入量大就要上心电监护。曼陀罗和颠茄含 atropine 样毒素，会打出完整的抗胆碱能表现。"},
-    {"en": "Autumn crocus contains colchicine — a gout medicine that becomes a slow poison in overdose: it starts as ordinary gastroenteritis, then days later depletes white cells and opens the door to infection and sepsis, making it easy to underestimate in the field.", "zh": "秋水仙含 colchicine——治痛风的药，过量就是慢性毒药：一开始只是普通胃肠炎，几天后白细胞被耗竭，感染和脓毒症随之而来，现场很容易低估它的危险性。"},
-    {"en": "Mushroom poisoning prognosis clue: GI symptoms starting WITHIN 2 hours of ingestion usually predict a benign course; symptoms delayed PAST 6 hours are ominous and point toward the hepatotoxic Amanita/Lepiota species responsible for nearly all Canadian mushroom deaths — save a vomitus sample for these cases.", "zh": "蘑菇中毒的预后线索：摄入「2 小时内」出现胃肠道症状通常预示良性病程；「超过 6 小时」才发作则是凶兆，提示是造成加拿大几乎全部蘑菇中毒死亡的鹅膏/环柄菇类肝毒性蘑菇——这类病例要留一份呕吐物样本。", "hard": true}
+    {
+     "en": "Very few plant species are truly systemically toxic, and plants consistently rank in the top-10 Poison Centre exposures for both adults and children. You are not expected to identify the plant — treat the symptoms and bring a specimen to hospital.",
+     "zh": "真正会造成全身性中毒的植物物种很少，但植物一直排在毒物中心成人和儿童暴露原因的前十名。你不需要认出是什么植物——按症状处理，把植物样本带去医院就行。"
+    },
+    {
+     "en": "Araceae houseplants (dieffenbachia, caladium, philodendron) contain insoluble calcium-oxalate crystals: chewing causes instant mouth burning that limits how much a child eats, but large amounts can still swell the upper airway.",
+     "zh": "天南星科室内植物（黛粉叶、彩叶芋、绿萝）含不溶性草酸钙结晶：一咬嘴里立刻烧痛，这种疼痛会限制孩子继续吃，但吃下大量仍可能引起上气道水肿。"
+    },
+    {
+     "en": "Rhubarb LEAVES, unlike the houseplants above, contain SOLUBLE calcium oxalate — eating them can cause renal failure, a very different risk profile from the self-limiting insoluble-oxalate plants.",
+     "zh": "大黄的「叶子」和上面那些室内植物不同，含的是「可溶性」草酸钙——吃下去可能导致肾衰竭，风险和那些自限性的不溶性草酸钙植物完全不是一回事。"
+    },
+    {
+     "en": "Stone-fruit pits (apricot, choke cherry, peach) release cyanide only if CHEWED — saliva activates the amygdalin inside; swallowing a pit whole is harmless. Black locust seeds work the same way — chewed seeds release the same toxalbumin found in castor beans, the source of ricin.",
+     "zh": "杏、稠李、桃的果核只有「嚼碎」才会释放氰化物——唾液激活里面的苦杏仁苷；整颗吞下没有危险。刺槐种子同理，嚼碎才会释出和蓖麻籽（ricin 的来源）一样的毒蛋白。"
+    },
+    {
+     "en": "Cardiac-glycoside plants — foxglove (source of digoxin), monkshood, yew berries — are proarrhythmic; put any significant ingestion of these on a cardiac monitor. Jimsonweed and deadly nightshade carry atropine-like toxins that produce the full anticholinergic picture.",
+     "zh": "含强心苷的植物——毛地黄（digoxin 的来源）、乌头、紫杉浆果——都有致心律失常风险，摄入量大就要上心电监护。曼陀罗和颠茄含 atropine 样毒素，会打出完整的抗胆碱能表现。"
+    },
+    {
+     "en": "Autumn crocus contains colchicine — a gout medicine that becomes a slow poison in overdose: it starts as ordinary gastroenteritis, then days later depletes white cells and opens the door to infection and sepsis, making it easy to underestimate in the field.",
+     "zh": "秋水仙含 colchicine——治痛风的药，过量就是慢性毒药：一开始只是普通胃肠炎，几天后白细胞被耗竭，感染和脓毒症随之而来，现场很容易低估它的危险性。"
+    },
+    {
+     "en": "Mushroom poisoning prognosis clue: GI symptoms starting WITHIN 2 hours of ingestion usually predict a benign course; symptoms delayed PAST 6 hours are ominous and point toward the hepatotoxic Amanita/Lepiota species responsible for nearly all Canadian mushroom deaths — save a vomitus sample for these cases.",
+     "zh": "蘑菇中毒的预后线索：摄入「2 小时内」出现胃肠道症状通常预示良性病程；「超过 6 小时」才发作则是凶兆，提示是造成加拿大几乎全部蘑菇中毒死亡的鹅膏/环柄菇类肝毒性蘑菇——这类病例要留一份呕吐物样本。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Nonprescription Pain Medications: Acetaminophen, NSAIDs, and Salicylates",
    "titleZh": "非处方止痛药：对乙酰氨基酚、NSAID 与水杨酸盐",
    "points": [
-    {"en": "Acetaminophen's acute toxic threshold is roughly 150-200 mg/kg or more — its reputation as 'so safe' plus its hidden presence in countless combo cold/flu products is exactly why accidental cumulative overdoses happen.", "zh": "对乙酰氨基酚急性中毒阈值大约是 150-200 mg/kg 以上——正因为它被当成「绝对安全」，又藏在无数复方感冒药里，才最容易造成无意间的累积过量。", "hard": true},
-    {"en": "Acetaminophen toxicity unfolds in 4 stages: Stage I (<24h) nonspecific nausea/malaise; Stage II (24-72h) right-upper-quadrant pain/tender liver; Stage III (72-96h) acidosis, renal failure, coagulopathy; Stage IV (4-14+ days) slow recovery OR fatal liver failure. A patient can look fine right after even a lethal dose.", "zh": "对乙酰氨基酚中毒分 4 期：I 期（<24h）恶心不适不特异；II 期（24-72h）右上腹痛、肝区压痛；III 期（72-96h）酸中毒、肾衰竭、凝血异常；IV 期（4-14 天以上）缓慢恢复或肝衰竭致死。哪怕吃了致死量，患者一开始也可能看着没事。", "hard": true},
-    {"en": "N-acetylcysteine is most effective within 8-10 hours of ingestion — but it's an ED-level, lab-guided treatment, not something you give in the field. Your job is nailing down an accurate ingestion time.", "zh": "N-acetylcysteine 在摄入后 8-10 小时内使用效果最好——但它是急诊按检验结果给的治疗，不是院前用药。你的任务是问准确切的摄入时间。"},
-    {"en": "NSAIDs have a wide safety margin and half-lives from about 2-4 hours (ibuprofen) out to roughly 50 hours for some long-acting agents; acute severe overdose is genuinely rare — the real NSAID danger is chronic GI bleed and kidney injury, not a field emergency.", "zh": "NSAID 安全窗宽，半衰期从布洛芬约 2-4 小时到部分长效药约 50 小时不等；急性重度过量其实很少见——NSAID 真正的危险是长期使用造成的消化道出血和肾损伤，不是现场急症。"},
-    {"en": "NSAIDs slow renal clearance of lithium in patients taking both, pushing lithium toward toxic levels — and remember topical NSAID gels/patches count in the medication history just like pills do.", "zh": "同时服用 NSAID 会减慢锂盐的肾清除，把锂盐往中毒浓度推——外用 NSAID 凝胶/贴剂在问药物史时也要算进去，跟吃药一样算数。"},
-    {"en": "NSAID-triggered aseptic meningitis mimics real meningitis — stiff neck, headache, fever within hours of a dose — but resolves once the drug is stopped; the patient still needs an ED workup to rule out true infection.", "zh": "NSAID 诱发的无菌性脑膜炎会模仿真脑膜炎——服药后几小时内出现颈强直、头痛、发热——停药后会缓解，但仍需急诊排除真正的感染。"},
-    {"en": "Salicylate dose-response: mild toxicity at 150 mg/kg or less (nausea, vomiting, abdominal pain); moderate at 150-300 mg/kg (diaphoresis, hyperpnea, tinnitus, acid-base disturbance); severe at 300 mg/kg or more (combined respiratory alkalosis plus metabolic acidosis, pulmonary/cerebral edema).", "zh": "水杨酸盐剂量-反应：≤150 mg/kg 轻度中毒（恶心、呕吐、腹痛）；150-300 mg/kg 中度（大汗、过度通气、耳鸣、酸碱失衡）；≥300 mg/kg 重度（呼吸性碱中毒叠加代谢性酸中毒、肺/脑水肿）。", "hard": true},
-    {"en": "Hidden salicylate math: a single 30 mL dose of bismuth subsalicylate liquid carries about 261 mg of salicylate, and just 15 mL of pure methyl salicylate liniment equals roughly 7,000 mg — liniments are a sneaky route to chronic overdose, and this poisoning is commonly missed in confused older patients.", "zh": "隐藏的水杨酸盐算法：一次 30 mL 铋剂止泻液（Pepto-Bismol 类）含约 261 mg 水杨酸盐，纯的止痛药水（methyl salicylate）15 mL 就等于约 7,000 mg——外用止痛药水是慢性过量的隐蔽来源，这类中毒在意识混乱的老年人身上最容易被漏诊。", "hard": true}
+    {
+     "en": "Acetaminophen's acute toxic threshold is roughly 150-200 mg/kg or more — its reputation as 'so safe' plus its hidden presence in countless combo cold/flu products is exactly why accidental cumulative overdoses happen.",
+     "zh": "对乙酰氨基酚急性中毒阈值大约是 150-200 mg/kg 以上——正因为它被当成「绝对安全」，又藏在无数复方感冒药里，才最容易造成无意间的累积过量。",
+     "hard": true
+    },
+    {
+     "en": "Acetaminophen toxicity unfolds in 4 stages: Stage I (<24h) nonspecific nausea/malaise; Stage II (24-72h) right-upper-quadrant pain/tender liver; Stage III (72-96h) acidosis, renal failure, coagulopathy; Stage IV (4-14+ days) slow recovery OR fatal liver failure. A patient can look fine right after even a lethal dose.",
+     "zh": "对乙酰氨基酚中毒分 4 期：I 期（<24h）恶心不适不特异；II 期（24-72h）右上腹痛、肝区压痛；III 期（72-96h）酸中毒、肾衰竭、凝血异常；IV 期（4-14 天以上）缓慢恢复或肝衰竭致死。哪怕吃了致死量，患者一开始也可能看着没事。",
+     "hard": true
+    },
+    {
+     "en": "N-acetylcysteine is most effective within 8-10 hours of ingestion — but it's an ED-level, lab-guided treatment, not something you give in the field. Your job is nailing down an accurate ingestion time.",
+     "zh": "N-acetylcysteine 在摄入后 8-10 小时内使用效果最好——但它是急诊按检验结果给的治疗，不是院前用药。你的任务是问准确切的摄入时间。"
+    },
+    {
+     "en": "NSAIDs have a wide safety margin and half-lives from about 2-4 hours (ibuprofen) out to roughly 50 hours for some long-acting agents; acute severe overdose is genuinely rare — the real NSAID danger is chronic GI bleed and kidney injury, not a field emergency.",
+     "zh": "NSAID 安全窗宽，半衰期从布洛芬约 2-4 小时到部分长效药约 50 小时不等；急性重度过量其实很少见——NSAID 真正的危险是长期使用造成的消化道出血和肾损伤，不是现场急症。"
+    },
+    {
+     "en": "NSAIDs slow renal clearance of lithium in patients taking both, pushing lithium toward toxic levels — and remember topical NSAID gels/patches count in the medication history just like pills do.",
+     "zh": "同时服用 NSAID 会减慢锂盐的肾清除，把锂盐往中毒浓度推——外用 NSAID 凝胶/贴剂在问药物史时也要算进去，跟吃药一样算数。"
+    },
+    {
+     "en": "NSAID-triggered aseptic meningitis mimics real meningitis — stiff neck, headache, fever within hours of a dose — but resolves once the drug is stopped; the patient still needs an ED workup to rule out true infection.",
+     "zh": "NSAID 诱发的无菌性脑膜炎会模仿真脑膜炎——服药后几小时内出现颈强直、头痛、发热——停药后会缓解，但仍需急诊排除真正的感染。"
+    },
+    {
+     "en": "Salicylate dose-response: mild toxicity at 150 mg/kg or less (nausea, vomiting, abdominal pain); moderate at 150-300 mg/kg (diaphoresis, hyperpnea, tinnitus, acid-base disturbance); severe at 300 mg/kg or more (combined respiratory alkalosis plus metabolic acidosis, pulmonary/cerebral edema).",
+     "zh": "水杨酸盐剂量-反应：≤150 mg/kg 轻度中毒（恶心、呕吐、腹痛）；150-300 mg/kg 中度（大汗、过度通气、耳鸣、酸碱失衡）；≥300 mg/kg 重度（呼吸性碱中毒叠加代谢性酸中毒、肺/脑水肿）。",
+     "hard": true
+    },
+    {
+     "en": "Hidden salicylate math: a single 30 mL dose of bismuth subsalicylate liquid carries about 261 mg of salicylate, and just 15 mL of pure methyl salicylate liniment equals roughly 7,000 mg — liniments are a sneaky route to chronic overdose, and this poisoning is commonly missed in confused older patients.",
+     "zh": "隐藏的水杨酸盐算法：一次 30 mL 铋剂止泻液（Pepto-Bismol 类）含约 261 mg 水杨酸盐，纯的止痛药水（methyl salicylate）15 mL 就等于约 7,000 mg——外用止痛药水是慢性过量的隐蔽来源，这类中毒在意识混乱的老年人身上最容易被漏诊。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Household Products: Caustics, Metals, and Hydrocarbons",
    "titleZh": "家用产品：腐蚀剂、金属与碳氢化合物",
    "points": [
-    {"en": "Caustics are defined as strong acids (pH under 2.0) or strong alkalis (pH over 12.0); storing them in beverage bottles is what causes kids to mistake them for a drink, burning the mouth/tongue/face as they yank the bottle away mid-swallow.", "zh": "腐蚀剂定义：强酸（pH<2.0）或强碱（pH>12.0）；用饮料瓶装这类东西正是孩子误当成饮料的原因，一口下去边烧边扭头，嘴、舌、脸都会被烧伤。"},
-    {"en": "For an alert patient who just swallowed a caustic, dilute with a single glass of water OR milk. Never try to 'neutralize' it — that reaction generates heat and adds a thermal burn — and never pass a gastric tube, which can tear already-damaged tissue.", "zh": "神志清楚、刚吞下腐蚀剂的患者，用一杯水或牛奶稀释就好。绝不要试图「中和」——中和反应会放热，等于又加一层烫伤；也绝不能插胃管，会撕裂已经受损的组织。"},
-    {"en": "Acid skin exposure hurts immediately and intensely, which limits contact time; alkali exposure is more dangerous precisely because pain onset is delayed, so more damage accumulates before the patient reacts. Acids also rinse off faster than alkalis — alkali burns need longer, continuous irrigation.", "zh": "酸类皮肤接触立刻剧痛，反而让接触时间变短；碱类更危险恰恰是因为疼痛出现得晚，患者反应前损伤已经累积更多。酸也比碱冲洗得快——碱烧伤需要更长时间的持续冲洗。"},
-    {"en": "Anhydrous ammonia (an agricultural caustic) can cause blindness or cataracts from an eye splash in under a minute — which is why farmers commonly keep a rinse-water bottle in a shirt pocket for immediate self-irrigation.", "zh": "无水氨（农业用腐蚀剂）溅入眼睛，一分钟不到就能导致白内障甚至失明——这也是为什么农民常在衬衫口袋里备一小瓶水，方便第一时间自己冲洗。"},
-    {"en": "Field eye-irrigation rig: cut the prong section off a nasal cannula, seat it on the bridge of the nose, and run a macro IV set wide open for continuous flush — frees your hands for other tasks while irrigation continues.", "zh": "现场冲眼装置：把鼻导管的两个鼻塞剪掉，架在鼻梁上，接一套大孔径输液器全开冲洗——这样能持续冲洗，同时腾出手做别的事。"},
-    {"en": "Iron toxicity thresholds: mild-to-moderate at 20-60 mg/kg elemental iron, severe and potentially fatal above 60 mg/kg. Context matters here — an average adult's ENTIRE body iron supply is only about 4 grams, so a kid's multivitamin bottle is a real threat.", "zh": "铁中毒阈值：元素铁 20-60 mg/kg 为轻中度，超过 60 mg/kg 为重度、可致命。要有这个概念——成人全身铁储备总共才约 4 克，一瓶儿童复合维生素就能造成真正的威胁。", "hard": true},
-    {"en": "Hydrocarbon ingestion aspiration risk runs OPPOSITE to viscosity — thin, low-viscosity agents (kerosene, naphtha, toluene) aspirate most easily. Symptoms appearing within minutes of ingestion should be read as 'aspiration has already happened.'", "zh": "碳氢化合物摄入的误吸风险和黏度「成反比」——越稀（煤油、石脑油、甲苯）越容易误吸。摄入后几分钟内就出现症状，要按「已经误吸」来处理。"},
-    {"en": "Inhalant abuse ('huffing' a soaked rag, 'bagging' fumes in a plastic bag) gives a fast, intense high via the huge surface area of the alveoli; some agents — gasoline, toluene, benzene, trichloroethane — can cause sudden cardiac death from dysrhythmia even on a first try, on top of the permanent hearing/motor/balance damage from chronic use.", "zh": "吸入滥用（用浸湿的抹布「huffing」，或用塑料袋装烟雾「bagging」）靠肺泡巨大的表面积获得又快又猛的快感；汽油、甲苯、苯、三氯乙烷这类物质就算只吸一次，也可能诱发心律失常猝死，长期滥用还会造成永久性听力/运动/平衡损伤。"}
+    {
+     "en": "Caustics are defined as strong acids (pH under 2.0) or strong alkalis (pH over 12.0); storing them in beverage bottles is what causes kids to mistake them for a drink, burning the mouth/tongue/face as they yank the bottle away mid-swallow.",
+     "zh": "腐蚀剂定义：强酸（pH<2.0）或强碱（pH>12.0）；用饮料瓶装这类东西正是孩子误当成饮料的原因，一口下去边烧边扭头，嘴、舌、脸都会被烧伤。"
+    },
+    {
+     "en": "For an alert patient who just swallowed a caustic, dilute with a single glass of water OR milk. Never try to 'neutralize' it — that reaction generates heat and adds a thermal burn — and never pass a gastric tube, which can tear already-damaged tissue.",
+     "zh": "神志清楚、刚吞下腐蚀剂的患者，用一杯水或牛奶稀释就好。绝不要试图「中和」——中和反应会放热，等于又加一层烫伤；也绝不能插胃管，会撕裂已经受损的组织。"
+    },
+    {
+     "en": "Acid skin exposure hurts immediately and intensely, which limits contact time; alkali exposure is more dangerous precisely because pain onset is delayed, so more damage accumulates before the patient reacts. Acids also rinse off faster than alkalis — alkali burns need longer, continuous irrigation.",
+     "zh": "酸类皮肤接触立刻剧痛，反而让接触时间变短；碱类更危险恰恰是因为疼痛出现得晚，患者反应前损伤已经累积更多。酸也比碱冲洗得快——碱烧伤需要更长时间的持续冲洗。"
+    },
+    {
+     "en": "Anhydrous ammonia (an agricultural caustic) can cause blindness or cataracts from an eye splash in under a minute — which is why farmers commonly keep a rinse-water bottle in a shirt pocket for immediate self-irrigation.",
+     "zh": "无水氨（农业用腐蚀剂）溅入眼睛，一分钟不到就能导致白内障甚至失明——这也是为什么农民常在衬衫口袋里备一小瓶水，方便第一时间自己冲洗。"
+    },
+    {
+     "en": "Field eye-irrigation rig: cut the prong section off a nasal cannula, seat it on the bridge of the nose, and run a macro IV set wide open for continuous flush — frees your hands for other tasks while irrigation continues.",
+     "zh": "现场冲眼装置：把鼻导管的两个鼻塞剪掉，架在鼻梁上，接一套大孔径输液器全开冲洗——这样能持续冲洗，同时腾出手做别的事。"
+    },
+    {
+     "en": "Iron toxicity thresholds: mild-to-moderate at 20-60 mg/kg elemental iron, severe and potentially fatal above 60 mg/kg. Context matters here — an average adult's ENTIRE body iron supply is only about 4 grams, so a kid's multivitamin bottle is a real threat.",
+     "zh": "铁中毒阈值：元素铁 20-60 mg/kg 为轻中度，超过 60 mg/kg 为重度、可致命。要有这个概念——成人全身铁储备总共才约 4 克，一瓶儿童复合维生素就能造成真正的威胁。",
+     "hard": true
+    },
+    {
+     "en": "Hydrocarbon ingestion aspiration risk runs OPPOSITE to viscosity — thin, low-viscosity agents (kerosene, naphtha, toluene) aspirate most easily. Symptoms appearing within minutes of ingestion should be read as 'aspiration has already happened.'",
+     "zh": "碳氢化合物摄入的误吸风险和黏度「成反比」——越稀（煤油、石脑油、甲苯）越容易误吸。摄入后几分钟内就出现症状，要按「已经误吸」来处理。"
+    },
+    {
+     "en": "Inhalant abuse ('huffing' a soaked rag, 'bagging' fumes in a plastic bag) gives a fast, intense high via the huge surface area of the alveoli; some agents — gasoline, toluene, benzene, trichloroethane — can cause sudden cardiac death from dysrhythmia even on a first try, on top of the permanent hearing/motor/balance damage from chronic use.",
+     "zh": "吸入滥用（用浸湿的抹布「huffing」，或用塑料袋装烟雾「bagging」）靠肺泡巨大的表面积获得又快又猛的快感；汽油、甲苯、苯、三氯乙烷这类物质就算只吸一次，也可能诱发心律失常猝死，长期滥用还会造成永久性听力/运动/平衡损伤。"
+    }
    ]
   },
   {
    "titleEn": "Toxic Alcohols: Ethylene Glycol and Methanol",
    "titleZh": "毒性醇类：乙二醇与甲醇",
    "points": [
-    {"en": "'Toxic alcohols' are industrial, not beverage, alcohols — and the parent compound itself is fairly harmless. The real damage comes from what the liver's alcohol dehydrogenase enzyme converts them INTO.", "zh": "「毒性醇类」是工业用醇，不是拿来喝的——原型化合物本身其实毒性不大，真正造成伤害的是肝脏 alcohol dehydrogenase 酶把它们「转化成」的产物。"},
-    {"en": "Ethylene glycol (antifreeze, coolant, de-icer) is colourless, odourless, and slightly sweet-tasting — which is exactly why kids drink it. Estimated lethal dose is about 2 mL/kg, as little as 150 mL in an average adult.", "zh": "乙二醇（防冻液、冷却液、除冰剂）无色无味、带点甜味——这正是孩子会喝下去的原因。估计致死量约 2 mL/kg，成人只要约 150 mL 就够。", "hard": true},
-    {"en": "Ethylene glycol poisoning runs 3 stages: Stage 1 (0-12h) looks drunk — slurred speech, ataxia — but WITHOUT any alcohol smell, progressing to seizure/coma; Stage 2 (12-24h) cardiopulmonary — BP swings, pulmonary edema, hypocalcemia from calcium-oxalate precipitation; Stage 3 (24-72h) kidney — flank pain, anuria, hematuria, renal failure.", "zh": "乙二醇中毒分 3 期：1 期（0-12h）像喝醉——言语含糊、共济失调，但「没有」酒味，会进展到抽搐/昏迷；2 期（12-24h）心肺表现——血压波动、肺水肿、草酸钙沉积引起的低钙血症；3 期（24-72h）肾脏受损——腰痛、无尿、血尿、肾衰竭。", "hard": true},
-    {"en": "Methanol (wood alcohol, found in windshield-washer fluid and canned camp fuel) can poison at doses as small as 30 mL, about 2 tablespoons. Methanol itself is fairly harmless — its metabolites, formaldehyde and formic acid, do the real damage.", "zh": "甲醇（木精，见于挡风玻璃清洗液和罐装露营燃料）小到 30 mL（约 2 汤匙）就能中毒。甲醇本身危害不大——真正造成伤害的是它的代谢产物甲醛和甲酸。", "hard": true},
-    {"en": "Methanol symptoms typically wait 12-18 hours (up to 72h) to appear, so patients often don't connect them to a drink from a day or more earlier. Classic complaint is blurred vision described as 'looking through a snowstorm,' which can progress to blindness; bradycardia and hypotension are LATE, worrying signs.", "zh": "甲醇症状通常要等 12-18 小时（最长 72 小时）才出现，患者常常想不到跟一两天前喝的东西有关。典型主诉是「看东西像雪花一片」的视物模糊，可进展到失明；心动过缓和低血压是晚期的危险信号。"},
-    {"en": "Field care for both toxic alcohols is purely supportive — airway, IV, cardiac monitor, prompt transport, no field antidote. Medical control may order 10 mL of 10% calcium gluconate slow IV for ethylene-glycol hypocalcemia, but only after good urine output and after flushing the line clear of any bicarbonate; hospital-level care uses fomepizole or an ethanol infusion plus dialysis.", "zh": "两种毒性醇的现场处理都是纯支持性——气道、静脉通路、心电监护、尽快转运，没有院前解毒剂。医疗指挥可能会开 10% 葡萄糖酸钙 10 mL 缓慢静推来处理乙二醇引起的低钙血症，但前提是尿量良好、且管路已冲净碳酸氢钠；院内治疗用 fomepizole 或乙醇输注加透析。"}
+    {
+     "en": "'Toxic alcohols' are industrial, not beverage, alcohols — and the parent compound itself is fairly harmless. The real damage comes from what the liver's alcohol dehydrogenase enzyme converts them INTO.",
+     "zh": "「毒性醇类」是工业用醇，不是拿来喝的——原型化合物本身其实毒性不大，真正造成伤害的是肝脏 alcohol dehydrogenase 酶把它们「转化成」的产物。"
+    },
+    {
+     "en": "Ethylene glycol (antifreeze, coolant, de-icer) is colourless, odourless, and slightly sweet-tasting — which is exactly why kids drink it. Estimated lethal dose is about 2 mL/kg, as little as 150 mL in an average adult.",
+     "zh": "乙二醇（防冻液、冷却液、除冰剂）无色无味、带点甜味——这正是孩子会喝下去的原因。估计致死量约 2 mL/kg，成人只要约 150 mL 就够。",
+     "hard": true
+    },
+    {
+     "en": "Ethylene glycol poisoning runs 3 stages: Stage 1 (0-12h) looks drunk — slurred speech, ataxia — but WITHOUT any alcohol smell, progressing to seizure/coma; Stage 2 (12-24h) cardiopulmonary — BP swings, pulmonary edema, hypocalcemia from calcium-oxalate precipitation; Stage 3 (24-72h) kidney — flank pain, anuria, hematuria, renal failure.",
+     "zh": "乙二醇中毒分 3 期：1 期（0-12h）像喝醉——言语含糊、共济失调，但「没有」酒味，会进展到抽搐/昏迷；2 期（12-24h）心肺表现——血压波动、肺水肿、草酸钙沉积引起的低钙血症；3 期（24-72h）肾脏受损——腰痛、无尿、血尿、肾衰竭。",
+     "hard": true
+    },
+    {
+     "en": "Methanol (wood alcohol, found in windshield-washer fluid and canned camp fuel) can poison at doses as small as 30 mL, about 2 tablespoons. Methanol itself is fairly harmless — its metabolites, formaldehyde and formic acid, do the real damage.",
+     "zh": "甲醇（木精，见于挡风玻璃清洗液和罐装露营燃料）小到 30 mL（约 2 汤匙）就能中毒。甲醇本身危害不大——真正造成伤害的是它的代谢产物甲醛和甲酸。",
+     "hard": true
+    },
+    {
+     "en": "Methanol symptoms typically wait 12-18 hours (up to 72h) to appear, so patients often don't connect them to a drink from a day or more earlier. Classic complaint is blurred vision described as 'looking through a snowstorm,' which can progress to blindness; bradycardia and hypotension are LATE, worrying signs.",
+     "zh": "甲醇症状通常要等 12-18 小时（最长 72 小时）才出现，患者常常想不到跟一两天前喝的东西有关。典型主诉是「看东西像雪花一片」的视物模糊，可进展到失明；心动过缓和低血压是晚期的危险信号。"
+    },
+    {
+     "en": "Field care for both toxic alcohols is purely supportive — airway, IV, cardiac monitor, prompt transport, no field antidote. Medical control may order 10 mL of 10% calcium gluconate slow IV for ethylene-glycol hypocalcemia, but only after good urine output and after flushing the line clear of any bicarbonate; hospital-level care uses fomepizole or an ethanol infusion plus dialysis.",
+     "zh": "两种毒性醇的现场处理都是纯支持性——气道、静脉通路、心电监护、尽快转运，没有院前解毒剂。医疗指挥可能会开 10% 葡萄糖酸钙 10 mL 缓慢静推来处理乙二醇引起的低钙血症，但前提是尿量良好、且管路已冲净碳酸氢钠；院内治疗用 fomepizole 或乙醇输注加透析。"
+    }
    ]
   },
   {
    "titleEn": "Prescription Medications: Cardiac Drugs, Lithium, SSRIs/TCAs, and Oral Hypoglycemics",
    "titleZh": "处方药：心脏用药、锂盐、SSRI/三环类与口服降糖药",
    "points": [
-    {"en": "Cardiac-drug overdose (antiarrhythmics, beta blockers, calcium channel blockers, cardiac glycosides) produces the classic 'slow and low' toxidrome — bradycardia plus hypotension — with weakness, confusion, nausea, headache, and dyspnea. Many of these patients are on 3+ cardiac drugs at once.", "zh": "心脏用药过量（抗心律失常药、β 阻滞剂、钙通道阻滞剂、强心苷）打出经典的「慢而低」toxidrome——心动过缓加低血压——外加乏力、意识混乱、恶心、头痛、呼吸困难。这类患者常同时吃着 3 种以上心脏药。"},
-    {"en": "Antidote map worth memorizing: atropine for digoxin-overdose bradycardia; calcium gluconate for CCB-driven hypotension; high-dose insulin-euglycemia now favoured for BOTH beta-blocker AND CCB toxicity (glucagon is now controversial — it can worsen hypotension); digoxin immune Fab fragments for cardiac-glycoside overdose; sodium bicarbonate for sodium-channel-blocking antiarrhythmics.", "zh": "值得记的解毒地图：atropine 治 digoxin 过量的心动过缓；葡萄糖酸钙治 CCB 引起的低血压；大剂量胰岛素-正糖疗法现在被推荐用于 β 阻滞剂和 CCB 中毒「两者」（glucagon 现在有争议——可能让低血压更糟）；digoxin 免疫 Fab 片段治强心苷过量；钠通道阻滞类抗心律失常药用碳酸氢钠。"},
-    {"en": "Lithium is almost fully absorbed by about 8 hours post-ingestion. About two-thirds of a dose clears within 12 hours, but the remainder can take up to 2 WEEKS — a slow, drawn-out toxicity course unlike most overdoses.", "zh": "锂盐在摄入后约 8 小时几乎完全吸收。约三分之二的剂量在 12 小时内清除，但剩下的部分可能要拖到「2 周」——和大多数过量不同，是一个缓慢拖长的中毒过程。", "hard": true},
-    {"en": "Early lithium toxicity: nausea, vomiting, hand tremor, excess thirst, slurred speech — progressing to ataxia, hyperreflexia, seizure, coma. Management is supportive plus hydration (fluids actually IMPROVE lithium excretion here, unlike in most poisonings), with continuous ECG for AV block or ventricular dysrhythmia; severe cases need hospital dialysis.", "zh": "锂盐早期中毒：恶心、呕吐、手震颤、极度口渴、言语含糊——进展到共济失调、反射亢进、抽搐、昏迷。处理是支持治疗加补液（这里补液能「改善」锂盐排出，跟大多数中毒不一样），持续心电监护防房室阻滞或室性心律失常，重症需院内透析。"},
-    {"en": "SSRIs carry a far wider safety margin than TCAs — up to half of adult SSRI overdoses are entirely asymptomatic. Watch for tachycardia, mild hypotension, and lethargy especially when alcohol is co-ingested; QT prolongation and torsades are rare but possible.", "zh": "SSRI 的安全边际比三环类宽得多——多达一半的成人 SSRI 过量完全没有症状。要注意心动过速、轻度低血压和嗜睡，尤其是合并酒精时；QT 延长和 torsades 罕见但可能出现。"},
-    {"en": "Serotonin syndrome can follow any combination of serotonergic drugs (MAOIs, SSRIs, TCAs, lithium, stimulants, opioids), often within 6 hours of a dose change. Picture: vasomotor instability (fever, sweating, swinging BP, tachycardia) plus altered mental status plus neuromuscular findings like tremor and rigidity — there's no lab test, it's a clinical diagnosis of exclusion, treated supportively with cooling if hyperthermic.", "zh": "血清素综合征可以由任何血清素能药物组合触发（MAOI、SSRI、三环类、锂盐、兴奋剂、阿片类），常在剂量调整后 6 小时内出现。表现：血管运动不稳（发热、出汗、血压波动、心动过速）加意识状态改变加神经肌肉表现（震颤、僵直）——没有实验室检测，靠排除法临床诊断，支持治疗，高热就降温。"},
-    {"en": "TCA overdose is deceptively fast: low doses give an anticholinergic picture (dilated pupils, dry mouth/skin, fever, urinary retention, sinus tachycardia); high doses cause sodium-channel blockade — widened QRS, ventricular dysrhythmia, seizure — and a patient who looks merely drowsy can seize or arrest within moments.", "zh": "三环类过量的隐蔽杀伤力：低剂量是抗胆碱能表现（瞳孔散大、口干皮肤干、发热、尿潴留、窦性心动过速）；高剂量引起钠通道阻滞——QRS 增宽、室性心律失常、抽搐——一个看着只是有点犯困的患者可能几分钟内就抽搐或骤停。", "hard": true},
-    {"en": "TCA field management: be ready for an advanced airway on sudden deterioration, continuous ECG watching for QRS widening, sodium bicarbonate via medical control if QRS widens, benzodiazepines for seizure/agitation — and explicitly do NOT give flumazenil or physostigmine, both can provoke seizures.", "zh": "三环类现场处理：随时准备在意识突然恶化时上高级气道，持续心电监护盯 QRS 增宽，QRS 变宽就联系医疗指挥考虑碳酸氢钠，抽搐/躁动用 benzodiazepine——「明确不能」给 flumazenil 或 physostigmine，两者都可能诱发抽搐。"},
-    {"en": "Oral hypoglycemics (sulfonylureas, meglitinides) are dangerous in tiny amounts — a SINGLE tablet swallowed by a toddler can cause fatal hypoglycemia. Field treatment is IV dextrose plus ongoing monitoring; the hospital antidote octreotide prevents the hypoglycemia from rebounding after dextrose wears off.", "zh": "口服降糖药（磺脲类、格列奈类）极小剂量就危险——幼儿吞下「一片」就可能造成致命低血糖。现场处理是静脉给葡萄糖加持续监测；医院用的解毒剂 octreotide 能防止葡萄糖效果过后低血糖反跳。", "hard": true}
+    {
+     "en": "Cardiac-drug overdose (antiarrhythmics, beta blockers, calcium channel blockers, cardiac glycosides) produces the classic 'slow and low' toxidrome — bradycardia plus hypotension — with weakness, confusion, nausea, headache, and dyspnea. Many of these patients are on 3+ cardiac drugs at once.",
+     "zh": "心脏用药过量（抗心律失常药、β 阻滞剂、钙通道阻滞剂、强心苷）打出经典的「慢而低」toxidrome——心动过缓加低血压——外加乏力、意识混乱、恶心、头痛、呼吸困难。这类患者常同时吃着 3 种以上心脏药。"
+    },
+    {
+     "en": "Antidote map worth memorizing: atropine for digoxin-overdose bradycardia; calcium gluconate for CCB-driven hypotension; high-dose insulin-euglycemia now favoured for BOTH beta-blocker AND CCB toxicity (glucagon is now controversial — it can worsen hypotension); digoxin immune Fab fragments for cardiac-glycoside overdose; sodium bicarbonate for sodium-channel-blocking antiarrhythmics.",
+     "zh": "值得记的解毒地图：atropine 治 digoxin 过量的心动过缓；葡萄糖酸钙治 CCB 引起的低血压；大剂量胰岛素-正糖疗法现在被推荐用于 β 阻滞剂和 CCB 中毒「两者」（glucagon 现在有争议——可能让低血压更糟）；digoxin 免疫 Fab 片段治强心苷过量；钠通道阻滞类抗心律失常药用碳酸氢钠。"
+    },
+    {
+     "en": "Lithium is almost fully absorbed by about 8 hours post-ingestion. About two-thirds of a dose clears within 12 hours, but the remainder can take up to 2 WEEKS — a slow, drawn-out toxicity course unlike most overdoses.",
+     "zh": "锂盐在摄入后约 8 小时几乎完全吸收。约三分之二的剂量在 12 小时内清除，但剩下的部分可能要拖到「2 周」——和大多数过量不同，是一个缓慢拖长的中毒过程。",
+     "hard": true
+    },
+    {
+     "en": "Early lithium toxicity: nausea, vomiting, hand tremor, excess thirst, slurred speech — progressing to ataxia, hyperreflexia, seizure, coma. Management is supportive plus hydration (fluids actually IMPROVE lithium excretion here, unlike in most poisonings), with continuous ECG for AV block or ventricular dysrhythmia; severe cases need hospital dialysis.",
+     "zh": "锂盐早期中毒：恶心、呕吐、手震颤、极度口渴、言语含糊——进展到共济失调、反射亢进、抽搐、昏迷。处理是支持治疗加补液（这里补液能「改善」锂盐排出，跟大多数中毒不一样），持续心电监护防房室阻滞或室性心律失常，重症需院内透析。"
+    },
+    {
+     "en": "SSRIs carry a far wider safety margin than TCAs — up to half of adult SSRI overdoses are entirely asymptomatic. Watch for tachycardia, mild hypotension, and lethargy especially when alcohol is co-ingested; QT prolongation and torsades are rare but possible.",
+     "zh": "SSRI 的安全边际比三环类宽得多——多达一半的成人 SSRI 过量完全没有症状。要注意心动过速、轻度低血压和嗜睡，尤其是合并酒精时；QT 延长和 torsades 罕见但可能出现。"
+    },
+    {
+     "en": "Serotonin syndrome can follow any combination of serotonergic drugs (MAOIs, SSRIs, TCAs, lithium, stimulants, opioids), often within 6 hours of a dose change. Picture: vasomotor instability (fever, sweating, swinging BP, tachycardia) plus altered mental status plus neuromuscular findings like tremor and rigidity — there's no lab test, it's a clinical diagnosis of exclusion, treated supportively with cooling if hyperthermic.",
+     "zh": "血清素综合征可以由任何血清素能药物组合触发（MAOI、SSRI、三环类、锂盐、兴奋剂、阿片类），常在剂量调整后 6 小时内出现。表现：血管运动不稳（发热、出汗、血压波动、心动过速）加意识状态改变加神经肌肉表现（震颤、僵直）——没有实验室检测，靠排除法临床诊断，支持治疗，高热就降温。"
+    },
+    {
+     "en": "TCA overdose is deceptively fast: low doses give an anticholinergic picture (dilated pupils, dry mouth/skin, fever, urinary retention, sinus tachycardia); high doses cause sodium-channel blockade — widened QRS, ventricular dysrhythmia, seizure — and a patient who looks merely drowsy can seize or arrest within moments.",
+     "zh": "三环类过量的隐蔽杀伤力：低剂量是抗胆碱能表现（瞳孔散大、口干皮肤干、发热、尿潴留、窦性心动过速）；高剂量引起钠通道阻滞——QRS 增宽、室性心律失常、抽搐——一个看着只是有点犯困的患者可能几分钟内就抽搐或骤停。",
+     "hard": true
+    },
+    {
+     "en": "TCA field management: be ready for an advanced airway on sudden deterioration, continuous ECG watching for QRS widening, sodium bicarbonate via medical control if QRS widens, benzodiazepines for seizure/agitation — and explicitly do NOT give flumazenil or physostigmine, both can provoke seizures.",
+     "zh": "三环类现场处理：随时准备在意识突然恶化时上高级气道，持续心电监护盯 QRS 增宽，QRS 变宽就联系医疗指挥考虑碳酸氢钠，抽搐/躁动用 benzodiazepine——「明确不能」给 flumazenil 或 physostigmine，两者都可能诱发抽搐。"
+    },
+    {
+     "en": "Oral hypoglycemics (sulfonylureas, meglitinides) are dangerous in tiny amounts — a SINGLE tablet swallowed by a toddler can cause fatal hypoglycemia. Field treatment is IV dextrose plus ongoing monitoring; the hospital antidote octreotide prevents the hypoglycemia from rebounding after dextrose wears off.",
+     "zh": "口服降糖药（磺脲类、格列奈类）极小剂量就危险——幼儿吞下「一片」就可能造成致命低血糖。现场处理是静脉给葡萄糖加持续监测；医院用的解毒剂 octreotide 能防止葡萄糖效果过后低血糖反跳。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Environmental Toxins: Bites and Stings",
    "titleZh": "环境毒素：咬伤与蜇伤",
    "points": [
-    {"en": "Injected venom from a bite or sting spreads the fastest of any exposure route. This section covers the medically relevant arthropods — arachnids (spiders, scorpions, ticks), centipedes, and Hymenoptera — plus Canada's native snakes.", "zh": "咬伤或蜇伤注入的毒液是所有暴露途径中扩散最快的。这部分涵盖有医学意义的节肢动物——蛛形纲（蜘蛛、蝎子、蜱虫）、蜈蚣、膜翅目——以及加拿大本土蛇类。"},
-    {"en": "Scorpions are not native to Canada — envenomation only happens via imported luggage or produce shipments from the Caribbean, Mexico, or other endemic areas. Management is mostly pain control plus a call to your provincial Poison Centre.", "zh": "蝎子在加拿大不是本土物种——蜇伤只会发生在从加勒比、墨西哥或其他原产地进口的行李或农产品里夹带过来的情况。处理主要是止痛加联系省毒物中心。"},
-    {"en": "No spider native to Canada carries venom potent enough to cause systemic illness — exotic species do occasionally arrive via imported produce or furniture shipments. Care is ABCs, high-flow O2 as needed, IV access, analgesia for a painful exotic bite, and transport for evaluation; even potent exotic-spider deaths are never instantaneous.", "zh": "加拿大本土蜘蛛没有一种毒性强到能造成全身性疾病——偶尔会有进口农产品或家具里夹带的外来物种。处理是 ABC、按需高流量氧、静脉通路、疼痛明显的外来蜘蛛咬伤给镇痛，转运评估；就算是毒性很强的外来蜘蛛，死亡也绝不会是瞬间发生的。"},
-    {"en": "Ticks are mostly a disease-vector concern rather than an acute emergency — Lyme disease is Canada's main risk. The one true emergency is tick paralysis, which needs transport with spinal motion restriction.", "zh": "蜱虫主要是传播疾病的问题，而不是急性中毒——莱姆病是加拿大最主要的风险。真正算急症的是蜱虫麻痹，需要按脊柱运动限制转运。"},
-    {"en": "Tick removal: gloved curved forceps grasp the tick by the head, as close to the skin as possible, then steady straight-upward traction — no twisting or jerking, and never squeeze the body, which can inject more fluid. Dispose of the tick in alcohol, then wash the bite site with soap and water.", "zh": "蜱虫摘除：戴手套用弯头镊子夹住蜱虫头部、尽量贴着皮肤，稳定地垂直向上拔——不要扭转或猛拽，也绝不能捏挤虫体，那样会把更多液体挤进伤口。摘下的蜱虫泡进酒精处理，咬伤处用肥皂水清洗。"},
-    {"en": "Hymenoptera (bees, wasps, hornets, yellow jackets, ants) kill more people per year than any other venomous animal group — including snakes — because the deaths come from anaphylaxis, not from venom toxicity itself.", "zh": "膜翅目（蜜蜂、黄蜂、大黄蜂、黄夹克蜂、蚂蚁）每年致死人数超过任何其他有毒动物类群——「包括蛇在内」——因为致死原因是过敏反应，不是毒液本身的毒性。", "hard": true},
-    {"en": "Honeybees sting once, leaving the barbed stinger and venom sac behind; wasps, hornets, yellow jackets, and fire ants can sting repeatedly. Remove a retained stinger by SCRAPING with a scalpel blade edge — never pluck or tweeze it, since squeezing the sac pumps in more venom.", "zh": "蜜蜂只蜇一次，会把带倒钩的螫针和毒囊留在皮肤里；黄蜂、大黄蜂、黄夹克蜂、火蚁可以反复蜇。清除残留螫针要用手术刀片边缘「刮」出来——绝不能用镊子拔，捏挤毒囊会把更多毒液挤进去。"},
-    {"en": "Canada's 3 native venomous snakes are all pit vipers: triangular head, a heat-sensing pit below each eye, VERTICAL pupils, and long erectile fangs — but these ID features do not apply to an exotic pet snake.", "zh": "加拿大本土 3 种毒蛇都是响尾蛇科（蝮蛇）：三角形头、眼睛下方有热感应窝、瞳孔「竖直」、长而可伸缩的毒牙——但这些识别特征不适用于外来宠物蛇。"},
-    {"en": "1 in 4 pit-viper bites is 'dry' — no venom injected — but that can't be determined in the field, so every bite gets treated as a possible envenomation. Watch for a metallic taste, nausea/vomiting, tachycardia, hypotension, tachypnea, and swelling around the bite.", "zh": "四分之一的蝮蛇咬伤是「干咬」——没有注入毒液——但这在现场没法判断，所以每次咬伤都要按可能中毒处理。留意口中金属味、恶心呕吐、心动过速、低血压、呼吸急促以及咬伤处肿胀。", "hard": true},
-    {"en": "Snakebite field care: keep the patient calm, supine, and still to slow venom spread; immobilize the bitten limb in a neutral position; high-flow oxygen; IV access with a normal saline bolus if hypotensive; NO constricting bands, NO ice; transport promptly — antivenin for pit-viper bites exists but is a hospital-level treatment.", "zh": "蛇咬伤现场处理：让患者保持镇定、平卧、不要活动以减缓毒液扩散；把被咬的肢体固定在中立位；高流量吸氧；有低血压就开静脉通路推生理盐水；「不要」用止血带样的束带、「不要」用冰敷；尽快转运——蝮蛇抗蛇毒血清确实存在，但那是医院层面的治疗。"}
+    {
+     "en": "Injected venom from a bite or sting spreads the fastest of any exposure route. This section covers the medically relevant arthropods — arachnids (spiders, scorpions, ticks), centipedes, and Hymenoptera — plus Canada's native snakes.",
+     "zh": "咬伤或蜇伤注入的毒液是所有暴露途径中扩散最快的。这部分涵盖有医学意义的节肢动物——蛛形纲（蜘蛛、蝎子、蜱虫）、蜈蚣、膜翅目——以及加拿大本土蛇类。"
+    },
+    {
+     "en": "Scorpions are not native to Canada — envenomation only happens via imported luggage or produce shipments from the Caribbean, Mexico, or other endemic areas. Management is mostly pain control plus a call to your provincial Poison Centre.",
+     "zh": "蝎子在加拿大不是本土物种——蜇伤只会发生在从加勒比、墨西哥或其他原产地进口的行李或农产品里夹带过来的情况。处理主要是止痛加联系省毒物中心。"
+    },
+    {
+     "en": "No spider native to Canada carries venom potent enough to cause systemic illness — exotic species do occasionally arrive via imported produce or furniture shipments. Care is ABCs, high-flow O2 as needed, IV access, analgesia for a painful exotic bite, and transport for evaluation; even potent exotic-spider deaths are never instantaneous.",
+     "zh": "加拿大本土蜘蛛没有一种毒性强到能造成全身性疾病——偶尔会有进口农产品或家具里夹带的外来物种。处理是 ABC、按需高流量氧、静脉通路、疼痛明显的外来蜘蛛咬伤给镇痛，转运评估；就算是毒性很强的外来蜘蛛，死亡也绝不会是瞬间发生的。"
+    },
+    {
+     "en": "Ticks are mostly a disease-vector concern rather than an acute emergency — Lyme disease is Canada's main risk. The one true emergency is tick paralysis, which needs transport with spinal motion restriction.",
+     "zh": "蜱虫主要是传播疾病的问题，而不是急性中毒——莱姆病是加拿大最主要的风险。真正算急症的是蜱虫麻痹，需要按脊柱运动限制转运。"
+    },
+    {
+     "en": "Tick removal: gloved curved forceps grasp the tick by the head, as close to the skin as possible, then steady straight-upward traction — no twisting or jerking, and never squeeze the body, which can inject more fluid. Dispose of the tick in alcohol, then wash the bite site with soap and water.",
+     "zh": "蜱虫摘除：戴手套用弯头镊子夹住蜱虫头部、尽量贴着皮肤，稳定地垂直向上拔——不要扭转或猛拽，也绝不能捏挤虫体，那样会把更多液体挤进伤口。摘下的蜱虫泡进酒精处理，咬伤处用肥皂水清洗。"
+    },
+    {
+     "en": "Hymenoptera (bees, wasps, hornets, yellow jackets, ants) kill more people per year than any other venomous animal group — including snakes — because the deaths come from anaphylaxis, not from venom toxicity itself.",
+     "zh": "膜翅目（蜜蜂、黄蜂、大黄蜂、黄夹克蜂、蚂蚁）每年致死人数超过任何其他有毒动物类群——「包括蛇在内」——因为致死原因是过敏反应，不是毒液本身的毒性。",
+     "hard": true
+    },
+    {
+     "en": "Honeybees sting once, leaving the barbed stinger and venom sac behind; wasps, hornets, yellow jackets, and fire ants can sting repeatedly. Remove a retained stinger by SCRAPING with a scalpel blade edge — never pluck or tweeze it, since squeezing the sac pumps in more venom.",
+     "zh": "蜜蜂只蜇一次，会把带倒钩的螫针和毒囊留在皮肤里；黄蜂、大黄蜂、黄夹克蜂、火蚁可以反复蜇。清除残留螫针要用手术刀片边缘「刮」出来——绝不能用镊子拔，捏挤毒囊会把更多毒液挤进去。"
+    },
+    {
+     "en": "Canada's 3 native venomous snakes are all pit vipers: triangular head, a heat-sensing pit below each eye, VERTICAL pupils, and long erectile fangs — but these ID features do not apply to an exotic pet snake.",
+     "zh": "加拿大本土 3 种毒蛇都是响尾蛇科（蝮蛇）：三角形头、眼睛下方有热感应窝、瞳孔「竖直」、长而可伸缩的毒牙——但这些识别特征不适用于外来宠物蛇。"
+    },
+    {
+     "en": "1 in 4 pit-viper bites is 'dry' — no venom injected — but that can't be determined in the field, so every bite gets treated as a possible envenomation. Watch for a metallic taste, nausea/vomiting, tachycardia, hypotension, tachypnea, and swelling around the bite.",
+     "zh": "四分之一的蝮蛇咬伤是「干咬」——没有注入毒液——但这在现场没法判断，所以每次咬伤都要按可能中毒处理。留意口中金属味、恶心呕吐、心动过速、低血压、呼吸急促以及咬伤处肿胀。",
+     "hard": true
+    },
+    {
+     "en": "Snakebite field care: keep the patient calm, supine, and still to slow venom spread; immobilize the bitten limb in a neutral position; high-flow oxygen; IV access with a normal saline bolus if hypotensive; NO constricting bands, NO ice; transport promptly — antivenin for pit-viper bites exists but is a hospital-level treatment.",
+     "zh": "蛇咬伤现场处理：让患者保持镇定、平卧、不要活动以减缓毒液扩散；把被咬的肢体固定在中立位；高流量吸氧；有低血压就开静脉通路推生理盐水；「不要」用止血带样的束带、「不要」用冰敷；尽快转运——蝮蛇抗蛇毒血清确实存在，但那是医院层面的治疗。"
+    }
    ]
   }
  ],
  "hardNumbers": [
-  {"itemEn": "Naloxone stepped IM/IV dose (BC)", "itemZh": "Naloxone IM/IV 递增剂量（BC）", "value": "0.4 mg 起始 → 3 分钟后未达 SpO2≥94%+RR>10 则再 0.4 mg → 再 3 分钟 0.8 mg → 再 3 分钟 2.0 mg；或 IN 单次 4 mg"},
-  {"itemEn": "Opioid overdose respiratory rate", "itemZh": "阿片过量呼吸频率", "value": "可低至 4-5 次/分——先通气（OPA+BVM 15L/min）后 naloxone"},
-  {"itemEn": "CO-hemoglobin binding affinity vs O2", "itemZh": "CO 与血红蛋白结合力（对比 O2）", "value": "约为氧气的 250 倍以上"},
-  {"itemEn": "Carboxyhemoglobin elimination half-life", "itemZh": "碳氧血红蛋白清除半衰期", "value": "室内空气约 4 小时／100% 氧约 1.5 小时／高压氧 2.5 atm 可压到 15-20 分钟"},
-  {"itemEn": "Cyanide antidote — sodium nitrite", "itemZh": "氰化物解毒——sodium nitrite", "value": "300 mg IV，2-4 分钟推完（合并 CO 中毒禁用）"},
-  {"itemEn": "Cyanide antidote — hydroxocobalamin", "itemZh": "氰化物解毒——hydroxocobalamin", "value": "成人 5 g IV/IO，15 分钟内推完"},
-  {"itemEn": "Organophosphate antidote — atropine", "itemZh": "有机磷解毒——atropine", "value": "1 mg IV/IO 起始，每 3-5 分钟剂量翻倍，直到分泌物变干（不看心率/瞳孔）"},
-  {"itemEn": "Acetaminophen acute toxic dose", "itemZh": "对乙酰氨基酚急性中毒剂量", "value": "大于 150-200 mg/kg"},
-  {"itemEn": "Salicylate toxicity thresholds", "itemZh": "水杨酸盐中毒阈值", "value": "轻度 ≤150 ／中度 150-300 ／重度 ≥300 mg/kg"},
-  {"itemEn": "Elemental iron toxicity thresholds", "itemZh": "元素铁中毒阈值", "value": "轻中度 20-60 ／重度 >60 mg/kg（成人全身铁储备仅约 4 g）"},
-  {"itemEn": "Ethylene glycol lethal dose", "itemZh": "乙二醇致死量", "value": "约 2 mL/kg（成人约 150 mL）"},
-  {"itemEn": "Methanol toxic dose", "itemZh": "甲醇中毒剂量", "value": "低至 30 mL（约 2 汤匙）"},
-  {"itemEn": "Lithium elimination timeline", "itemZh": "锂盐清除时间线", "value": "约 2/3 剂量 12 小时内排出，其余可拖长达 2 周"},
-  {"itemEn": "Pit-viper dry-bite rate", "itemZh": "蝮蛇「干咬」比例", "value": "四分之一咬伤不注毒，现场无法判断，一律按中毒处理"},
-  {"itemEn": "Lethal vs legal blood alcohol", "itemZh": "致死血醇 vs 法定驾驶上限", "value": "致死 ≥80 mmol/L；加拿大多数省法定驾驶上限 17 mmol/L"}
+  {
+   "itemEn": "Naloxone stepped IM/IV dose (BC)",
+   "itemZh": "Naloxone IM/IV 递增剂量（BC）",
+   "value": "0.4 mg 起始 → 3 分钟后未达 SpO2≥94%+RR>10 则再 0.4 mg → 再 3 分钟 0.8 mg → 再 3 分钟 2.0 mg；或 IN 单次 4 mg"
+  },
+  {
+   "itemEn": "Opioid overdose respiratory rate",
+   "itemZh": "阿片过量呼吸频率",
+   "value": "可低至 4-5 次/分——先通气（OPA+BVM 15L/min）后 naloxone"
+  },
+  {
+   "itemEn": "CO-hemoglobin binding affinity vs O2",
+   "itemZh": "CO 与血红蛋白结合力（对比 O2）",
+   "value": "约为氧气的 250 倍以上"
+  },
+  {
+   "itemEn": "Carboxyhemoglobin elimination half-life",
+   "itemZh": "碳氧血红蛋白清除半衰期",
+   "value": "室内空气约 4 小时／100% 氧约 1.5 小时／高压氧 2.5 atm 可压到 15-20 分钟"
+  },
+  {
+   "itemEn": "Cyanide antidote — sodium nitrite",
+   "itemZh": "氰化物解毒——sodium nitrite",
+   "value": "300 mg IV，2-4 分钟推完（合并 CO 中毒禁用）"
+  },
+  {
+   "itemEn": "Cyanide antidote — hydroxocobalamin",
+   "itemZh": "氰化物解毒——hydroxocobalamin",
+   "value": "成人 5 g IV/IO，15 分钟内推完"
+  },
+  {
+   "itemEn": "Organophosphate antidote — atropine",
+   "itemZh": "有机磷解毒——atropine",
+   "value": "1 mg IV/IO 起始，每 3-5 分钟剂量翻倍，直到分泌物变干（不看心率/瞳孔）"
+  },
+  {
+   "itemEn": "Acetaminophen acute toxic dose",
+   "itemZh": "对乙酰氨基酚急性中毒剂量",
+   "value": "大于 150-200 mg/kg"
+  },
+  {
+   "itemEn": "Salicylate toxicity thresholds",
+   "itemZh": "水杨酸盐中毒阈值",
+   "value": "轻度 ≤150 ／中度 150-300 ／重度 ≥300 mg/kg"
+  },
+  {
+   "itemEn": "Elemental iron toxicity thresholds",
+   "itemZh": "元素铁中毒阈值",
+   "value": "轻中度 20-60 ／重度 >60 mg/kg（成人全身铁储备仅约 4 g）"
+  },
+  {
+   "itemEn": "Ethylene glycol lethal dose",
+   "itemZh": "乙二醇致死量",
+   "value": "约 2 mL/kg（成人约 150 mL）"
+  },
+  {
+   "itemEn": "Methanol toxic dose",
+   "itemZh": "甲醇中毒剂量",
+   "value": "低至 30 mL（约 2 汤匙）"
+  },
+  {
+   "itemEn": "Lithium elimination timeline",
+   "itemZh": "锂盐清除时间线",
+   "value": "约 2/3 剂量 12 小时内排出，其余可拖长达 2 周"
+  },
+  {
+   "itemEn": "Pit-viper dry-bite rate",
+   "itemZh": "蝮蛇「干咬」比例",
+   "value": "四分之一咬伤不注毒，现场无法判断，一律按中毒处理"
+  },
+  {
+   "itemEn": "Lethal vs legal blood alcohol",
+   "itemZh": "致死血醇 vs 法定驾驶上限",
+   "value": "致死 ≥80 mmol/L；加拿大多数省法定驾驶上限 17 mmol/L"
+  },
+  {
+   "itemEn": "BC Drug and Poison Centre",
+   "itemZh": "BC 药物与毒物中心专线",
+   "value": "1-800-567-8911（24/7；无全国统一毒物号码）"
+  },
+  {
+   "itemEn": "Alcohol withdrawal seizure window",
+   "itemZh": "酒精戒断抽搐时间窗",
+   "value": "末次饮酒后 12-48 小时"
+  },
+  {
+   "itemEn": "Delirium tremens onset & mortality",
+   "itemZh": "震颤性谵妄起病与死亡率",
+   "value": "通常 48-72 小时起病（偶至 7-10 天）；死亡率可达 15%"
+  },
+  {
+   "itemEn": "Thiamine to prevent Wernicke-Korsakoff",
+   "itemZh": "预防 Wernicke-Korsakoff 的硫胺素",
+   "value": "100 mg 缓慢静推（到院后给）"
+  },
+  {
+   "itemEn": "Cocaine kinetics by route",
+   "itemZh": "可卡因起效（按途径）",
+   "value": "鼻吸 1-2 分钟起效、20-30 分钟达峰；吸食（快克）8-10 秒起效"
+  },
+  {
+   "itemEn": "Methamphetamine duration vs cocaine",
+   "itemZh": "冰毒作用时长 vs 可卡因",
+   "value": "冰毒单剂可达 12 小时；远长于可卡因"
+  },
+  {
+   "itemEn": "THC kinetics by route",
+   "itemZh": "大麻起效（按途径）",
+   "value": "吸入数分钟起效、持续 2-4 小时；食用数小时起效、持续更久"
+  },
+  {
+   "itemEn": "Top pediatric exposures (<5 yrs)",
+   "itemZh": "5 岁以下儿童中毒暴露前列",
+   "value": "止痛药第一，其次清洁剂（安省毒物中心排序）"
+  },
+  {
+   "itemEn": "Canada adult poisoning profile (2017)",
+   "itemZh": "加拿大成人中毒画像（2017）",
+   "value": "4,392 例中毒死亡中 4,108 例为药物过量——成人中毒以蓄意（药物自杀）为主"
+  },
+  {
+   "itemEn": "Heavy drinking prevalence in Canada",
+   "itemZh": "加拿大重度饮酒比例",
+   "value": "12 岁以上人群约 19%（约 580 万人）"
+  },
+  {
+   "itemEn": "Benzodiazepine idiosyncrasy example",
+   "itemZh": "苯二氮卓个体差异示例",
+   "value": "同样 2 mg IV 咪达唑仑：一人轻度放松，另一人呼吸抑制"
+  },
+  {
+   "itemEn": "Ingestion vs inhalation absorption",
+   "itemZh": "食入 vs 吸入的吸收速度",
+   "value": "胃几乎不吸收、小肠为主（最\"宽容\"的途径）；吸入直达肺泡近乎即刻入血"
+  }
  ],
  "atScene": [
-  {"en": "Multiple patients with vague medical complaints, same building, same time — treat it as CO poisoning until proven otherwise, and remember CO is a hazard to rescuers too.", "zh": "多名患者、说不清的不适、同一栋楼、同一时段——先按 CO 中毒处理，直到证明不是。别忘了 CO 对救援者一样有危险。"},
-  {"en": "If a caustic-ingestion patient is in respiratory distress, do not linger on scene — get moving to the hospital and be mentally ready for a surgical airway if laryngeal edema is severe.", "zh": "吞下腐蚀剂的患者一旦呼吸窘迫，不要在现场耽搁——立刻转运，如果喉部水肿严重要有做外科气道的心理准备。"},
-  {"en": "Some caustic chemicals react violently with water — small spills flush safely, but larger amounts can release toxic fumes or explode when wet. Check the placard or label before flooding the area.", "zh": "有些腐蚀性化学品遇水反应剧烈——少量泼洒可以安全冲洗，但大量遇水可能释放毒气甚至爆炸。大范围冲水前先看标签或危化品标牌。"},
-  {"en": "For a suspected organophosphate or nerve-agent exposure, strip and decontaminate the patient BEFORE they go anywhere near your ambulance — most systems dispatch a dedicated hazmat crew to handle this first.", "zh": "疑似有机磷或神经毒剂暴露，一定要在患者靠近救护车之前先脱污衣、完成去污——大多数系统会先派专门的 hazmat 队伍处理这一步。"},
-  {"en": "A vehicle idling in a closed garage can build a lethal CO concentration in about 30 minutes — treat any 'found down near a running car in an enclosed space' call as CO poisoning from the first radio report.", "zh": "车辆在封闭车库里空转，约 30 分钟就能积累致命 CO 浓度——「在密闭空间里、车还在跑、人倒了」这类报警，从第一次电台通报起就按 CO 中毒处理。"},
-  {"en": "Snakebite scene management: keep the patient still and calm, immobilize the bitten limb in a neutral position, and skip the old first-aid myths — no constricting bands, no ice, no cutting or sucking the wound.", "zh": "蛇咬伤现场处理：让患者保持安静镇定，把被咬的肢体固定在中立位，别再用那些过时的急救土办法——不用束带、不用冰敷、不要切开或吸吮伤口。"}
+  {
+   "en": "Multiple patients with vague medical complaints, same building, same time — treat it as CO poisoning until proven otherwise, and remember CO is a hazard to rescuers too.",
+   "zh": "多名患者、说不清的不适、同一栋楼、同一时段——先按 CO 中毒处理，直到证明不是。别忘了 CO 对救援者一样有危险。"
+  },
+  {
+   "en": "If a caustic-ingestion patient is in respiratory distress, do not linger on scene — get moving to the hospital and be mentally ready for a surgical airway if laryngeal edema is severe.",
+   "zh": "吞下腐蚀剂的患者一旦呼吸窘迫，不要在现场耽搁——立刻转运，如果喉部水肿严重要有做外科气道的心理准备。"
+  },
+  {
+   "en": "Some caustic chemicals react violently with water — small spills flush safely, but larger amounts can release toxic fumes or explode when wet. Check the placard or label before flooding the area.",
+   "zh": "有些腐蚀性化学品遇水反应剧烈——少量泼洒可以安全冲洗，但大量遇水可能释放毒气甚至爆炸。大范围冲水前先看标签或危化品标牌。"
+  },
+  {
+   "en": "For a suspected organophosphate or nerve-agent exposure, strip and decontaminate the patient BEFORE they go anywhere near your ambulance — most systems dispatch a dedicated hazmat crew to handle this first.",
+   "zh": "疑似有机磷或神经毒剂暴露，一定要在患者靠近救护车之前先脱污衣、完成去污——大多数系统会先派专门的 hazmat 队伍处理这一步。"
+  },
+  {
+   "en": "A vehicle idling in a closed garage can build a lethal CO concentration in about 30 minutes — treat any 'found down near a running car in an enclosed space' call as CO poisoning from the first radio report.",
+   "zh": "车辆在封闭车库里空转，约 30 分钟就能积累致命 CO 浓度——「在密闭空间里、车还在跑、人倒了」这类报警，从第一次电台通报起就按 CO 中毒处理。"
+  },
+  {
+   "en": "Snakebite scene management: keep the patient still and calm, immobilize the bitten limb in a neutral position, and skip the old first-aid myths — no constricting bands, no ice, no cutting or sucking the wound.",
+   "zh": "蛇咬伤现场处理：让患者保持安静镇定，把被咬的肢体固定在中立位，别再用那些过时的急救土办法——不用束带、不用冰敷、不要切开或吸吮伤口。"
+  }
  ],
  "confusions": [
-  {"en": "Myth: cherry-red skin is a reliable early sign of CO poisoning. Reality: it's rare and usually appears so late that it essentially signals the patient is dying — don't wait for it to suspect CO.", "zh": "误区：樱桃红皮肤是 CO 中毒的可靠早期征象。事实：这个体征很少见，出现时往往已经病危——别等它出现才怀疑 CO。"},
-  {"en": "Myth: a normal pulse oximeter reading rules out CO poisoning. Reality: standard pulse ox cannot distinguish carboxyhemoglobin from oxyhemoglobin — a 'normal' 99% can be entirely wrong.", "zh": "误区：血氧仪读数正常就能排除 CO 中毒。事实：普通血氧仪分不出碳氧血红蛋白和氧合血红蛋白——「正常」的 99% 可能完全是假象。"},
-  {"en": "Myth: give naloxone until the patient is fully awake. Reality: the goal is adequate breathing, not wakefulness — over-reversal risks withdrawal and an uncooperative patient, and ventilate BEFORE reaching for the drug.", "zh": "误区：naloxone 要打到患者完全清醒为止。事实：目标是恢复足够的呼吸，不是叫醒人——逆转过头会催发戒断、患者也会变得不配合，而且要先通气再想到用药。"},
-  {"en": "Myth: flumazenil is a safe routine reversal for a sedated benzodiazepine patient. Reality: it's contraindicated with chronic benzo use, co-ingested TCAs, or a seizure history — it can trigger seizures that the now-blocked receptor leaves you unable to treat.", "zh": "误区：flumazenil 是苯二氮䓬中毒患者的常规安全逆转药。事实：长期用苯二氮䓬、混服三环类、有癫痫史都是禁忌——可能诱发抽搐，而受体已被堵死，你反而治不了。"},
-  {"en": "Myth: neutralize a swallowed caustic with an opposite-pH substance. Reality: never do this — the neutralization reaction itself generates heat and adds a thermal burn on top of the chemical one; dilute with water or milk instead.", "zh": "误区：吞下腐蚀剂后用相反 pH 的东西中和它。事实：绝不能这样做——中和反应本身会放热，在化学烧伤之外再加一层烫伤；应该用水或牛奶稀释。"},
-  {"en": "Myth: apply a tourniquet or ice to a snakebite. Reality: both are outdated and harmful — constricting bands and ice increase local tissue damage without slowing systemic venom spread; keep the limb still and neutral instead.", "zh": "误区：蛇咬伤要用止血带或冰敷。事实：两者都过时且有害——束带和冰敷会加重局部组织损伤，却不能减缓毒液全身扩散；正确做法是让肢体保持静止中立位。"},
-  {"en": "Myth: marijuana intoxication produces true hallucinations like LSD or PCP. Reality: it doesn't — users get a distorted sense of time and space, not genuine hallucinations, which changes how you frame reassurance.", "zh": "误区：大麻中毒会像 LSD 或 PCP 一样产生真性幻觉。事实：不会——使用者只是时间空间感扭曲，不是真的幻觉，这会影响你安抚患者的方式。"},
-  {"en": "Myth: beta blockers are a reasonable choice for cocaine- or stimulant-driven tachycardia. Reality: they're absolutely contraindicated — unopposed alpha stimulation can worsen hypertension and coronary vasospasm; benzodiazepines are first-line instead.", "zh": "误区：可卡因或兴奋剂引起的心动过速可以用 β 阻滞剂处理。事实：绝对禁忌——会导致 α 受体刺激失去对抗，让高血压和冠脉痉挛更严重；一线用药是 benzodiazepine。"}
+  {
+   "en": "Myth: cherry-red skin is a reliable early sign of CO poisoning. Reality: it's rare and usually appears so late that it essentially signals the patient is dying — don't wait for it to suspect CO.",
+   "zh": "误区：樱桃红皮肤是 CO 中毒的可靠早期征象。事实：这个体征很少见，出现时往往已经病危——别等它出现才怀疑 CO。"
+  },
+  {
+   "en": "Myth: a normal pulse oximeter reading rules out CO poisoning. Reality: standard pulse ox cannot distinguish carboxyhemoglobin from oxyhemoglobin — a 'normal' 99% can be entirely wrong.",
+   "zh": "误区：血氧仪读数正常就能排除 CO 中毒。事实：普通血氧仪分不出碳氧血红蛋白和氧合血红蛋白——「正常」的 99% 可能完全是假象。"
+  },
+  {
+   "en": "Myth: give naloxone until the patient is fully awake. Reality: the goal is adequate breathing, not wakefulness — over-reversal risks withdrawal and an uncooperative patient, and ventilate BEFORE reaching for the drug.",
+   "zh": "误区：naloxone 要打到患者完全清醒为止。事实：目标是恢复足够的呼吸，不是叫醒人——逆转过头会催发戒断、患者也会变得不配合，而且要先通气再想到用药。"
+  },
+  {
+   "en": "Myth: flumazenil is a safe routine reversal for a sedated benzodiazepine patient. Reality: it's contraindicated with chronic benzo use, co-ingested TCAs, or a seizure history — it can trigger seizures that the now-blocked receptor leaves you unable to treat.",
+   "zh": "误区：flumazenil 是苯二氮䓬中毒患者的常规安全逆转药。事实：长期用苯二氮䓬、混服三环类、有癫痫史都是禁忌——可能诱发抽搐，而受体已被堵死，你反而治不了。"
+  },
+  {
+   "en": "Myth: neutralize a swallowed caustic with an opposite-pH substance. Reality: never do this — the neutralization reaction itself generates heat and adds a thermal burn on top of the chemical one; dilute with water or milk instead.",
+   "zh": "误区：吞下腐蚀剂后用相反 pH 的东西中和它。事实：绝不能这样做——中和反应本身会放热，在化学烧伤之外再加一层烫伤；应该用水或牛奶稀释。"
+  },
+  {
+   "en": "Myth: apply a tourniquet or ice to a snakebite. Reality: both are outdated and harmful — constricting bands and ice increase local tissue damage without slowing systemic venom spread; keep the limb still and neutral instead.",
+   "zh": "误区：蛇咬伤要用止血带或冰敷。事实：两者都过时且有害——束带和冰敷会加重局部组织损伤，却不能减缓毒液全身扩散；正确做法是让肢体保持静止中立位。"
+  },
+  {
+   "en": "Myth: marijuana intoxication produces true hallucinations like LSD or PCP. Reality: it doesn't — users get a distorted sense of time and space, not genuine hallucinations, which changes how you frame reassurance.",
+   "zh": "误区：大麻中毒会像 LSD 或 PCP 一样产生真性幻觉。事实：不会——使用者只是时间空间感扭曲，不是真的幻觉，这会影响你安抚患者的方式。"
+  },
+  {
+   "en": "Myth: beta blockers are a reasonable choice for cocaine- or stimulant-driven tachycardia. Reality: they're absolutely contraindicated — unopposed alpha stimulation can worsen hypertension and coronary vasospasm; benzodiazepines are first-line instead.",
+   "zh": "误区：可卡因或兴奋剂引起的心动过速可以用 β 阻滞剂处理。事实：绝对禁忌——会导致 α 受体刺激失去对抗，让高血压和冠脉痉挛更严重；一线用药是 benzodiazepine。"
+  }
  ],
  "mnemonics": [
-  {"name": "DUMBELS", "en": "Cholinergic/organophosphate toxidrome: Diaphoresis/Diarrhea, Urination, Miosis, Bronchorrhea/Bronchospasm/Bradycardia, Emesis, Lacrimation, Salivation — 'everything wet, plus a slow heart.'", "zh": "胆碱能/有机磷中毒：出汗腹泻、排尿、瞳孔缩小、支气管分泌/痉挛/心动过缓、呕吐、流泪、流涎——「浑身是水，心还慢」。"},
-  {"name": "SLUDGE", "en": "An alternate cholinergic mnemonic seen in other EMS references: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis — different letters, same picture as DUMBELS, same answer: atropine.", "zh": "其他急救资料里常见的另一套胆碱能记忆法：流涎、流泪、排尿、排便、胃肠不适、呕吐——字母不同，表现和 DUMBELS 是同一套，答案也一样：上 atropine。"},
-  {"name": "Naloxone: Ventilate First", "en": "BC's naloxone sequence in one phrase: OPA plus BVM before the needle. Fix the airway, THEN give naloxone — never the reverse.", "zh": "BC 版 naloxone 顺序一句话记住：先口咽通气道+BVM，再打针。先修气道，「再」给 naloxone——顺序不能反。"},
-  {"name": "CO: Trust the Story, Not the Sat", "en": "Multiple sick people, same building, a normal-looking pulse ox — believe the pattern, not the number. High-flow oxygen regardless of what the SpO2 reads.", "zh": "CO 记忆钩子：多人同时病、同一栋楼、血氧仪读数看着正常——相信「情境」，别信「数字」。不管 SpO2 多少都上高流量氧。"}
+  {
+   "name": "DUMBELS",
+   "en": "Cholinergic/organophosphate toxidrome: Diaphoresis/Diarrhea, Urination, Miosis, Bronchorrhea/Bronchospasm/Bradycardia, Emesis, Lacrimation, Salivation — 'everything wet, plus a slow heart.'",
+   "zh": "胆碱能/有机磷中毒：出汗腹泻、排尿、瞳孔缩小、支气管分泌/痉挛/心动过缓、呕吐、流泪、流涎——「浑身是水，心还慢」。"
+  },
+  {
+   "name": "SLUDGE",
+   "en": "An alternate cholinergic mnemonic seen in other EMS references: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis — different letters, same picture as DUMBELS, same answer: atropine.",
+   "zh": "其他急救资料里常见的另一套胆碱能记忆法：流涎、流泪、排尿、排便、胃肠不适、呕吐——字母不同，表现和 DUMBELS 是同一套，答案也一样：上 atropine。"
+  },
+  {
+   "name": "Naloxone: Ventilate First",
+   "en": "BC's naloxone sequence in one phrase: OPA plus BVM before the needle. Fix the airway, THEN give naloxone — never the reverse.",
+   "zh": "BC 版 naloxone 顺序一句话记住：先口咽通气道+BVM，再打针。先修气道，「再」给 naloxone——顺序不能反。"
+  },
+  {
+   "name": "CO: Trust the Story, Not the Sat",
+   "en": "Multiple sick people, same building, a normal-looking pulse ox — believe the pattern, not the number. High-flow oxygen regardless of what the SpO2 reads.",
+   "zh": "CO 记忆钩子：多人同时病、同一栋楼、血氧仪读数看着正常——相信「情境」，别信「数字」。不管 SpO2 多少都上高流量氧。"
+  }
  ],
  "selfCheck": [
-  {"qEn": "A patient found unresponsive after opioid use is breathing 4 breaths/min. What's your very first action — before naloxone?", "qZh": "阿片过量的无反应患者呼吸只有 4 次/分，naloxone 之前你的第一步动作是什么？", "aEn": "Basic airway management first — insert an OPA and start BVM ventilation at 15 L/min oxygen. Fix the airway/breathing before reaching for naloxone; the BC protocol sequences ventilation ahead of the drug.", "aZh": "先处理基础气道——放口咽通气道，用 15 L/min 氧接 BVM 通气。先修气道/呼吸，再考虑 naloxone；BC 方案把通气排在给药前面。"},
-  {"qEn": "Your pulse oximeter reads 99% on a patient pulled from a house with a blocked furnace flue. Can you trust that number to rule out CO poisoning?", "qZh": "从堵塞烟道的房子里救出的患者，血氧仪读数 99%，这个数字能用来排除 CO 中毒吗？", "aEn": "No — standard pulse oximetry cannot distinguish carboxyhemoglobin from oxyhemoglobin, so a normal-looking reading can be entirely misleading in suspected CO poisoning. Treat based on the story, not the number.", "aZh": "不能——普通血氧仪分不清碳氧血红蛋白和氧合血红蛋白，看似正常的读数在疑似 CO 中毒时完全可能是假象。要按现场情境判断，不能只信数字。"},
-  {"qEn": "A patient with a cholinergic toxidrome from suspected organophosphate exposure has copious secretions. What's the atropine dosing rule, and what should you NOT use as your endpoint?", "qZh": "疑似有机磷中毒、胆碱能表现明显、分泌物很多的患者，atropine 给药规则是什么？不能拿什么当终点？", "aEn": "Give 1 mg IV/IO, doubling the dose every 3-5 minutes until secretions dry and bronchospasm resolves. Do NOT use heart rate or pupil size as your endpoint — both are unreliable in this poisoning.", "aZh": "给 1 mg IV/IO，每 3-5 分钟把剂量翻倍，直到分泌物变干、支气管痉挛缓解。「不能」拿心率或瞳孔大小当终点——这两个在此类中毒里都不可靠。"},
-  {"qEn": "A confused elderly patient has been using OTC liniment for joint pain for weeks and now has tinnitus, hyperpnea, and vomiting. What toxin should you suspect, and why is this diagnosis commonly missed?", "qZh": "一位意识有点混乱的老年患者，几周来一直用非处方止痛药水擦关节，现在出现耳鸣、过度通气、呕吐，该怀疑什么中毒？为什么这类诊断经常被漏诊？", "aEn": "Suspect chronic salicylate toxicity — methyl salicylate liniment is concentrated (15 mL of the pure product equals about 7,000 mg of salicylate). It's commonly missed because the presentation looks like generic confusion or illness in an older patient rather than an obvious overdose.", "aZh": "要怀疑慢性水杨酸盐中毒——methyl salicylate 止痛药水浓度很高（纯品 15 mL 约等于 7,000 mg 水杨酸盐）。这类诊断常被漏诊，是因为表现看着就是老年人普通的意识混乱或生病，不像明显的过量。"},
-  {"qEn": "A pit-viper bite patient has no pain and no swelling 10 minutes after the bite — does that mean you can rule out envenomation and skip the usual precautions?", "qZh": "蝮蛇咬伤 10 分钟后患者不疼也不肿，是不是就能排除中毒、不用按咬伤流程处理了？", "aEn": "No — about 1 in 4 pit-viper bites is 'dry' with no venom injected, but this cannot be determined in the field. Every bite is treated as a possible envenomation: keep the patient still, immobilize the limb in a neutral position, no ice or constricting bands, and transport.", "aZh": "不行——约四分之一的蝮蛇咬伤是「干咬」没注入毒液，但这在现场没法判断。每次咬伤都要按可能中毒处理：让患者保持静止、肢体固定在中立位，不用冰敷或束带，转运送医。"}
+  {
+   "qEn": "A patient found unresponsive after opioid use is breathing 4 breaths/min. What's your very first action — before naloxone?",
+   "qZh": "阿片过量的无反应患者呼吸只有 4 次/分，naloxone 之前你的第一步动作是什么？",
+   "aEn": "Basic airway management first — insert an OPA and start BVM ventilation at 15 L/min oxygen. Fix the airway/breathing before reaching for naloxone; the BC protocol sequences ventilation ahead of the drug.",
+   "aZh": "先处理基础气道——放口咽通气道，用 15 L/min 氧接 BVM 通气。先修气道/呼吸，再考虑 naloxone；BC 方案把通气排在给药前面。"
+  },
+  {
+   "qEn": "Your pulse oximeter reads 99% on a patient pulled from a house with a blocked furnace flue. Can you trust that number to rule out CO poisoning?",
+   "qZh": "从堵塞烟道的房子里救出的患者，血氧仪读数 99%，这个数字能用来排除 CO 中毒吗？",
+   "aEn": "No — standard pulse oximetry cannot distinguish carboxyhemoglobin from oxyhemoglobin, so a normal-looking reading can be entirely misleading in suspected CO poisoning. Treat based on the story, not the number.",
+   "aZh": "不能——普通血氧仪分不清碳氧血红蛋白和氧合血红蛋白，看似正常的读数在疑似 CO 中毒时完全可能是假象。要按现场情境判断，不能只信数字。"
+  },
+  {
+   "qEn": "A patient with a cholinergic toxidrome from suspected organophosphate exposure has copious secretions. What's the atropine dosing rule, and what should you NOT use as your endpoint?",
+   "qZh": "疑似有机磷中毒、胆碱能表现明显、分泌物很多的患者，atropine 给药规则是什么？不能拿什么当终点？",
+   "aEn": "Give 1 mg IV/IO, doubling the dose every 3-5 minutes until secretions dry and bronchospasm resolves. Do NOT use heart rate or pupil size as your endpoint — both are unreliable in this poisoning.",
+   "aZh": "给 1 mg IV/IO，每 3-5 分钟把剂量翻倍，直到分泌物变干、支气管痉挛缓解。「不能」拿心率或瞳孔大小当终点——这两个在此类中毒里都不可靠。"
+  },
+  {
+   "qEn": "A confused elderly patient has been using OTC liniment for joint pain for weeks and now has tinnitus, hyperpnea, and vomiting. What toxin should you suspect, and why is this diagnosis commonly missed?",
+   "qZh": "一位意识有点混乱的老年患者，几周来一直用非处方止痛药水擦关节，现在出现耳鸣、过度通气、呕吐，该怀疑什么中毒？为什么这类诊断经常被漏诊？",
+   "aEn": "Suspect chronic salicylate toxicity — methyl salicylate liniment is concentrated (15 mL of the pure product equals about 7,000 mg of salicylate). It's commonly missed because the presentation looks like generic confusion or illness in an older patient rather than an obvious overdose.",
+   "aZh": "要怀疑慢性水杨酸盐中毒——methyl salicylate 止痛药水浓度很高（纯品 15 mL 约等于 7,000 mg 水杨酸盐）。这类诊断常被漏诊，是因为表现看着就是老年人普通的意识混乱或生病，不像明显的过量。"
+  },
+  {
+   "qEn": "A pit-viper bite patient has no pain and no swelling 10 minutes after the bite — does that mean you can rule out envenomation and skip the usual precautions?",
+   "qZh": "蝮蛇咬伤 10 分钟后患者不疼也不肿，是不是就能排除中毒、不用按咬伤流程处理了？",
+   "aEn": "No — about 1 in 4 pit-viper bites is 'dry' with no venom injected, but this cannot be determined in the field. Every bite is treated as a possible envenomation: keep the patient still, immobilize the limb in a neutral position, no ice or constricting bands, and transport.",
+   "aZh": "不行——约四分之一的蝮蛇咬伤是「干咬」没注入毒液，但这在现场没法判断。每次咬伤都要按可能中毒处理：让患者保持静止、肢体固定在中立位，不用冰敷或束带，转运送医。"
+  }
  ],
  "bcAlerts": [
-  {"topicEn": "Naloxone dosing sequence", "topicZh": "Naloxone 给药顺序与剂量", "bookEn": "The textbook describes IV naloxone in a broad 0.4-2 mg range, titrated to improve breathing, without a fixed step sequence.", "bookZh": "教材把 IV naloxone 描述成宽泛的 0.4-2 mg 范围，滴定到呼吸改善即可，没有固定的阶梯顺序。", "bcEn": "BC protocol is a specific stepped ladder: 0.4 mg IM/IV first; if SpO2 ≥94% and RR >10 aren't reached, repeat 0.4 mg after 3 min, then 0.8 mg after another 3 min, then 2.0 mg after another 3 min — or give a single 4 mg intranasal dose instead. IV administration is an added PCP-level skill, not available at every licence level. Airway and ventilation always come before naloxone.", "bcZh": "BC 方案是明确的阶梯：先 0.4 mg IM/IV；未达 SpO2≥94% 且 RR>10 就 3 分钟后再 0.4 mg，再 3 分钟 0.8 mg，再 3 分钟 2.0 mg——或者直接单次给 4 mg IN。IV 给药是 PCP 层级才有的额外技能，不是每个执照等级都能做。永远先气道/通气，再给 naloxone。", "ref": "BC Provincial Examination Guidelines p.56, p.72"},
-  {"topicEn": "Oxygen delivery for CO poisoning", "topicZh": "CO 中毒的供氧方式", "bookEn": "The textbook advises 'high-concentration supplemental oxygen' generally for CO poisoning without naming a specific delivery device.", "bookZh": "教材对 CO 中毒只泛泛建议「高浓度补充氧」，没具体说用什么设备。", "bcEn": "BC guidelines specifically name the non-rebreather mask as indicated for CO poisoning and smoke inhalation, grouping it with SOB/shock patients as requiring high-flow O2 regardless of the pulse-oximetry reading — titrate flow up to 15 L/min via NRB, add a nasal cannula underneath at 15 L/min if still short of target, and PCPs may consider CPAP or assisted ventilation.", "bcZh": "BC 考纲明确点名非重复呼吸面罩用于 CO 中毒和烟雾吸入，把这类患者和呼吸困难/休克患者归为一类，都要求不管血氧仪读数如何都上高流量氧——面罩流量滴定到最高 15 L/min，不够再在面罩下加鼻导管 15 L/min，PCP 可考虑 CPAP/辅助通气。", "ref": "BC Provincial Examination Guidelines p.50"},
-  {"topicEn": "'Ventilate before naloxone' emphasis", "topicZh": "「先通气后 naloxone」的强调", "bookEn": "The textbook lists airway/ventilation as the first management step for opioid overdose, then discusses naloxone as the next intervention.", "bookZh": "教材把气道/通气列为阿片过量处理的第一步，naloxone 作为下一步来讨论。", "bcEn": "BC exam guidelines are explicit and sequential: manage the airway with positioning, suctioning, and adjuncts; support ventilation (consider a two-person BVM technique); get SpO2 to 94% or above; THEN administer naloxone — skipping straight to naloxone before securing ventilation is treated as an error on the exam.", "bcZh": "BC 考纲写得很明确、有顺序：先用体位/吸引/辅助工具处理气道，支持通气（考虑双人 BVM 技术），把 SpO2 拉到 94% 以上，「然后」才给 naloxone——考试把跳过通气直接给药当成扣分项。", "ref": "BC Provincial Examination Guidelines p.56"}
+  {
+   "topicEn": "Naloxone dosing sequence",
+   "topicZh": "Naloxone 给药顺序与剂量",
+   "bookEn": "The textbook describes IV naloxone in a broad 0.4-2 mg range, titrated to improve breathing, without a fixed step sequence.",
+   "bookZh": "教材把 IV naloxone 描述成宽泛的 0.4-2 mg 范围，滴定到呼吸改善即可，没有固定的阶梯顺序。",
+   "bcEn": "BC protocol is a specific stepped ladder: 0.4 mg IM/IV first; if SpO2 ≥94% and RR >10 aren't reached, repeat 0.4 mg after 3 min, then 0.8 mg after another 3 min, then 2.0 mg after another 3 min — or give a single 4 mg intranasal dose instead. IV administration is an added PCP-level skill, not available at every licence level. Airway and ventilation always come before naloxone.",
+   "bcZh": "BC 方案是明确的阶梯：先 0.4 mg IM/IV；未达 SpO2≥94% 且 RR>10 就 3 分钟后再 0.4 mg，再 3 分钟 0.8 mg，再 3 分钟 2.0 mg——或者直接单次给 4 mg IN。IV 给药是 PCP 层级才有的额外技能，不是每个执照等级都能做。永远先气道/通气，再给 naloxone。",
+   "ref": "BC Provincial Examination Guidelines p.56, p.72"
+  },
+  {
+   "topicEn": "Oxygen delivery for CO poisoning",
+   "topicZh": "CO 中毒的供氧方式",
+   "bookEn": "The textbook advises 'high-concentration supplemental oxygen' generally for CO poisoning without naming a specific delivery device.",
+   "bookZh": "教材对 CO 中毒只泛泛建议「高浓度补充氧」，没具体说用什么设备。",
+   "bcEn": "BC guidelines specifically name the non-rebreather mask as indicated for CO poisoning and smoke inhalation, grouping it with SOB/shock patients as requiring high-flow O2 regardless of the pulse-oximetry reading — titrate flow up to 15 L/min via NRB, add a nasal cannula underneath at 15 L/min if still short of target, and PCPs may consider CPAP or assisted ventilation.",
+   "bcZh": "BC 考纲明确点名非重复呼吸面罩用于 CO 中毒和烟雾吸入，把这类患者和呼吸困难/休克患者归为一类，都要求不管血氧仪读数如何都上高流量氧——面罩流量滴定到最高 15 L/min，不够再在面罩下加鼻导管 15 L/min，PCP 可考虑 CPAP/辅助通气。",
+   "ref": "BC Provincial Examination Guidelines p.50"
+  },
+  {
+   "topicEn": "'Ventilate before naloxone' emphasis",
+   "topicZh": "「先通气后 naloxone」的强调",
+   "bookEn": "The textbook lists airway/ventilation as the first management step for opioid overdose, then discusses naloxone as the next intervention.",
+   "bookZh": "教材把气道/通气列为阿片过量处理的第一步，naloxone 作为下一步来讨论。",
+   "bcEn": "BC exam guidelines are explicit and sequential: manage the airway with positioning, suctioning, and adjuncts; support ventilation (consider a two-person BVM technique); get SpO2 to 94% or above; THEN administer naloxone — skipping straight to naloxone before securing ventilation is treated as an error on the exam.",
+   "bcZh": "BC 考纲写得很明确、有顺序：先用体位/吸引/辅助工具处理气道，支持通气（考虑双人 BVM 技术），把 SpO2 拉到 94% 以上，「然后」才给 naloxone——考试把跳过通气直接给药当成扣分项。",
+   "ref": "BC Provincial Examination Guidelines p.56"
+  },
+  {
+   "topicEn": "The textbook's decontamination and antidote arsenal does not exist in BC",
+   "topicZh": "教材的去污与解毒武器库在 BC 一样都不存在",
+   "bookEn": "Teaches activated charcoal dosing, gastric lavage, whole-bowel irrigation, syrup of ipecac history, and specific antidotes including atropine and pralidoxime for organophosphates as core toxicology management.",
+   "bookZh": "教材把活性炭给药、洗胃、全肠灌洗、吐根糖浆沿革，以及有机磷的阿托品/解磷定等特效解毒剂当作中毒处置的核心内容来教。",
+   "bcEn": "Every one of those returns zero hits in the BC guidelines: activated charcoal, ipecac, gastric lavage, pralidoxime, atropine and whole-bowel irrigation are all absent from the document and from the 18-drug formulary. The only antidote a BC EMR or PCP carries is naloxone. BC field toxicology is scene safety, decontamination by removal from the source, ABCs with high-flow oxygen where indicated, glucose correction, naloxone per protocol, and rapid transport — answer a poisoning stem with supportive care, not with a decontamination or antidote the licence does not carry.",
+   "bcZh": "以上每一样在 BC 考纲里都是零命中：活性炭、吐根、洗胃、解磷定、阿托品、全肠灌洗——文件里没有，18 味药单里也没有。BC 的 EMR/PCP 手里唯一的解毒剂是 naloxone。BC 院前中毒处置就是：现场安全、脱离毒源、ABC（按指征高流量氧）、纠正血糖、按协议给 naloxone、快速转运。考题问中毒处置，答支持治疗——别答执照里根本没有的去污手段或解毒剂。",
+   "ref": "检索验证：activated charcoal/ipecac/gastric lavage/pralidoxime/atropine/whole bowel 在 BC Guidelines 全文均 0 命中；药物专论 pp.58-78"
+  }
  ],
  "sourcePages": "3094-3197"
 }

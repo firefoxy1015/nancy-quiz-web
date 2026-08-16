@@ -8,230 +8,856 @@
  "whyEn": "Heat stroke and severe hypothermia both sit on the official 'unstable patient' list, and hypothermic cardiac arrest carries BC-specific rules (30-45 s pulse check, maximum 3 defibrillations) that differ from the textbook — a favourite written-exam trap. Expect questions on temperature staging thresholds, cooling and rewarming endpoints, frostbite handling, drowning prognosis times, and the diving gas laws. The practical exam loves an environmental scenario because the whole call hinges on one vital sign: temperature.",
  "whyZh": "热射病和严重低体温都在官方「不稳定患者」清单上，而低体温骤停有 BC 特有规则（判脉 30-45 秒、最多除颤 3 次），与教材写法不同——这是笔试最爱挖的坑。常考点：体温分级阈值、降温/复温终点、冻伤处置、溺水时长与预后、潜水三气体定律。实操考官也偏爱环境场景，因为整个病例就压在一个生命体征上：体温。",
  "competencies": {
-  "areas": ["Area 1: Professional Responsibilities", "Area 3: Health and Safety", "Area 4: Assessment and Diagnostics", "Area 5: Therapeutics", "Area 6: Integration"],
-  "codes": ["1.1.c", "1.1.g", "3.3.a", "3.3.b", "4.2.c", "4.2.f", "4.4.c", "5.6.e", "6.1.n"]
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 5: Therapeutics",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "1.1.c",
+   "1.1.g",
+   "3.3.a",
+   "3.3.b",
+   "4.2.c",
+   "4.2.f",
+   "4.4.c",
+   "5.6.e",
+   "6.1.n"
+  ]
  },
  "sections": [
   {
    "titleEn": "Introduction: When the Environment Is the Disease",
    "titleZh": "引言：当环境本身就是病因",
    "points": [
-    {"en": "Canadian toll: roughly 80 hypothermia deaths per year, and about 1,200 deaths classified as heat related — environmental deaths are common, and most are preventable.", "zh": "加拿大每年约 80 人死于低体温，另有约 1,200 例死亡被归类为热相关——环境急症并不罕见，而且大多可以预防。", "hard": true},
-    {"en": "Definition: medical conditions caused or worsened by weather, terrain, or unusual atmospheric conditions (high altitude, underwater). The hard part is spotting them in atypical settings — endurance events, mass gatherings, the acutely confused older patient.", "zh": "定义：由天气、地形或特殊大气条件（高海拔、水下）引起或加重的疾病。难点不在典型场景，而在非典型场景的识别——耐力赛、大型集会、突然意识混乱的老年人。", "hard": true},
-    {"en": "Season and dress can mislead: an unprepared hiker can develop cold illness in a summer rainstorm, and an overdressed snow-sport enthusiast can die of heat illness during exertion.", "zh": "季节和穿着都会骗人：夏季暴雨里没准备的徒步者会得冷病，大冷天穿太多剧烈运动的人也会死于热病——温度极端不是必要条件。", "hard": true},
-    {"en": "Predisposing conditions to memorize: age extremes (infants and the elderly regulate temperature poorly), diabetes, cardiac disease (CAD, CHF), lung disease (COPD, asthma), traumatic brain injury, multisystem trauma, thyroid disease, psychiatric illness — plus overall fitness and the ability to acclimatize.", "zh": "要背的易感因素：年龄两极（婴幼儿与老人体温调节差）、糖尿病、心脏病（冠心病、心衰）、肺病（COPD、哮喘）、脑外伤、多系统创伤、甲状腺疾病、精神疾病；再加上整体健康水平和「驯化」（acclimatize，适应新环境）的能力。", "hard": true},
-    {"en": "The environment also fights the responder: wind, rain, snow, temperature extremes, humidity, and remote terrain all complicate assessment, care, and transport decisions.", "zh": "环境同时也在对付救援者：风、雨、雪、极端温度、湿度和偏远地形都会干扰评估、处置和转运决策——现场安全和转运计划要提前想。"}
+    {
+     "en": "Canadian toll: roughly 80 hypothermia deaths per year, and about 1,200 deaths classified as heat related — environmental deaths are common, and most are preventable.",
+     "zh": "加拿大每年约 80 人死于低体温，另有约 1,200 例死亡被归类为热相关——环境急症并不罕见，而且大多可以预防。",
+     "hard": true
+    },
+    {
+     "en": "Definition: medical conditions caused or worsened by weather, terrain, or unusual atmospheric conditions (high altitude, underwater). The hard part is spotting them in atypical settings — endurance events, mass gatherings, the acutely confused older patient.",
+     "zh": "定义：由天气、地形或特殊大气条件（高海拔、水下）引起或加重的疾病。难点不在典型场景，而在非典型场景的识别——耐力赛、大型集会、突然意识混乱的老年人。",
+     "hard": true
+    },
+    {
+     "en": "Season and dress can mislead: an unprepared hiker can develop cold illness in a summer rainstorm, and an overdressed snow-sport enthusiast can die of heat illness during exertion.",
+     "zh": "季节和穿着都会骗人：夏季暴雨里没准备的徒步者会得冷病，大冷天穿太多剧烈运动的人也会死于热病——温度极端不是必要条件。",
+     "hard": true
+    },
+    {
+     "en": "Predisposing conditions to memorize: age extremes (infants and the elderly regulate temperature poorly), diabetes, cardiac disease (CAD, CHF), lung disease (COPD, asthma), traumatic brain injury, multisystem trauma, thyroid disease, psychiatric illness — plus overall fitness and the ability to acclimatize.",
+     "zh": "要背的易感因素：年龄两极（婴幼儿与老人体温调节差）、糖尿病、心脏病（冠心病、心衰）、肺病（COPD、哮喘）、脑外伤、多系统创伤、甲状腺疾病、精神疾病；再加上整体健康水平和「驯化」（acclimatize，适应新环境）的能力。",
+     "hard": true
+    },
+    {
+     "en": "The environment also fights the responder: wind, rain, snow, temperature extremes, humidity, and remote terrain all complicate assessment, care, and transport decisions.",
+     "zh": "环境同时也在对付救援者：风、雨、雪、极端温度、湿度和偏远地形都会干扰评估、处置和转运决策——现场安全和转运计划要提前想。"
+    }
    ]
   },
   {
    "titleEn": "Homeostasis: Making and Shedding Heat",
    "titleZh": "体温稳态：产热与散热",
    "points": [
-    {"en": "The anterior hypothalamus is the body's thermostat, run on negative feedback: rising core body temperature (CBT) switches on heat-shedding (thermolysis, parasympathetic — vasodilation and sweating); falling CBT switches on heat production (thermogenesis, sympathetic — muscle tone, shivering, long-term thyroid hormone).", "zh": "下丘脑前部是人体恒温器，按负反馈工作：核心体温（CBT）升高就启动散热（thermolysis，副交感——血管扩张+出汗）；核心体温下降就启动产热（thermogenesis，交感——肌张力增加、寒战，长期靠甲状腺激素）。", "hard": true},
-    {"en": "Core temperature defends about 37°C; the periphery (skin, limbs) is allowed to swing widely and does the regulating. Lowest recorded survival of accidental hypothermia: 13.7°C.", "zh": "核心温度死守约 37°C；外周（皮肤、四肢）允许大幅波动，正是它们在干调温的活。意外低体温的最低存活纪录：13.7°C。", "hard": true},
-    {"en": "Temperature measurement: tympanic reflects core and works prehospital; oral is fine for general illness but distorted by mouth-breathing and drinks; axillary reads about 0.5°C below oral; rectal is the most accurate and handles extremes.", "zh": "测温：鼓膜温反映核心温度，院前可用；口温适合一般内科病，但张口呼吸或喝过冷热饮会失真；腋温比口温低约 0.5°C；直肠温最准，且能测极端值。", "hard": true},
-    {"en": "Basal metabolic rate: liver and skeletal muscle are the main producers; a 70-kg adult makes 60-70 kcal/h at rest. Biggest determinant is surface-area-to-volume ratio — of two people of equal weight, the shorter one has the higher BMR.", "zh": "基础代谢率（BMR）：肝和骨骼肌是主要产热器官；70 kg 成人静息约 60-70 kcal/h。最大影响因素是体表面积/体积比——体重相同时，个子矮的人 BMR 更高。", "hard": true},
-    {"en": "Exertion and sun load: a brisk walk generates about 300 kcal/h; standing in bright sun on a hot windless day can add up to 150 kcal/h of absorbed heat.", "zh": "运动与日晒负荷：快走产热约 300 kcal/h；烈日无风时站着不动也能额外吸热达 150 kcal/h。", "hard": true},
-    {"en": "Four cooling routes. Radiation: electromagnetic transfer, over 65% of loss in a cool setting, head loss prominent (worse in infants); above about 20°C ambient the body gains heat instead. Conduction: direct contact — air is a poor conductor (2%), the ground is good, water is best: immersion steals heat about 25 times faster than dry air at the same temperature, and soaked clothing does the same.", "zh": "四大散热途径之一二。辐射：电磁波传热，凉爽环境中占散热 65% 以上，头部散热突出（婴幼儿头占比更大、更明显）；环境高于约 20°C 时身体反而净吸热。传导：直接接触传热——空气是不良导体（仅占 2%），地面导热好，水最强：落水者失热比同温干燥空气快约 25 倍，被雨雪汗浸透的衣服同理。", "hard": true},
-    {"en": "Convection: moving air strips heat — the faster the wind, the faster the loss; the wind chill index quantifies it (1°C with a 58 km/h wind chills like -20°C). Evaporation: sweat liberates 1 kcal per 1.7 mL, normally about 30% of cooling, becomes the main route in high heat — but fails once relative humidity reaches about 75%.", "zh": "四大散热途径之三四。对流：流动空气带走热量——风越大失热越快，风寒指数就是在量化它（1°C 配 58 km/h 的风，体感相当于 -20°C）。蒸发：每 1.7 mL 汗液带走 1 kcal，平时约占散热 30%，高温下成为主力——但相对湿度达到约 75% 后蒸发就失效了。", "hard": true},
-    {"en": "Sweating has a ceiling: a healthy adult can produce about 1 L/h at most, and only for a few hours. When ambient temperature exceeds skin temperature, radiation and convection stop working and skin blood flow becomes counterproductive — evaporation is all that is left.", "zh": "出汗有上限：健康成人最多约 1 L/h，且只能维持几小时。环境温度一旦超过皮温，辐射和对流双双失效，皮肤血流增加反而促进吸热——只剩蒸发一条路。", "hard": true},
-    {"en": "Massive cutaneous vasodilation forces the heart to raise output; if vasomotor control is lost outright, blood pools peripherally and the patient slides into distributive (vasogenic) shock — relative hypovolemia from heat alone.", "zh": "皮肤血管大规模扩张迫使心脏加大输出；一旦血管舒缩控制彻底失守，血液淤积在外周，患者会滑入分布性（血管源性）休克——单靠热应激就能造成相对性低血容量。", "hard": true},
-    {"en": "Cold defence: skin acts as the thermostat — cold skin triggers shivering even before CBT falls; the hypothalamus adds peripheral vasoconstriction to shunt blood to the core and shuts down sweating. Thicker body fat insulates better. When these defences are overwhelmed, hypothermia begins.", "zh": "御寒机制：皮肤本身就是恒温器——皮肤一冷就触发寒战，哪怕核心体温还没降；下丘脑同时收缩外周血管把血分流回核心并停止出汗。脂肪层厚者隔热更好。当这套防线被压垮，低体温就开始了。", "hard": true}
+    {
+     "en": "The anterior hypothalamus is the body's thermostat, run on negative feedback: rising core body temperature (CBT) switches on heat-shedding (thermolysis, parasympathetic — vasodilation and sweating); falling CBT switches on heat production (thermogenesis, sympathetic — muscle tone, shivering, long-term thyroid hormone).",
+     "zh": "下丘脑前部是人体恒温器，按负反馈工作：核心体温（CBT）升高就启动散热（thermolysis，副交感——血管扩张+出汗）；核心体温下降就启动产热（thermogenesis，交感——肌张力增加、寒战，长期靠甲状腺激素）。",
+     "hard": true
+    },
+    {
+     "en": "Core temperature defends about 37°C; the periphery (skin, limbs) is allowed to swing widely and does the regulating. Lowest recorded survival of accidental hypothermia: 13.7°C.",
+     "zh": "核心温度死守约 37°C；外周（皮肤、四肢）允许大幅波动，正是它们在干调温的活。意外低体温的最低存活纪录：13.7°C。",
+     "hard": true
+    },
+    {
+     "en": "Temperature measurement: tympanic reflects core and works prehospital; oral is fine for general illness but distorted by mouth-breathing and drinks; axillary reads about 0.5°C below oral; rectal is the most accurate and handles extremes.",
+     "zh": "测温：鼓膜温反映核心温度，院前可用；口温适合一般内科病，但张口呼吸或喝过冷热饮会失真；腋温比口温低约 0.5°C；直肠温最准，且能测极端值。",
+     "hard": true
+    },
+    {
+     "en": "Basal metabolic rate: liver and skeletal muscle are the main producers; a 70-kg adult makes 60-70 kcal/h at rest. Biggest determinant is surface-area-to-volume ratio — of two people of equal weight, the shorter one has the higher BMR.",
+     "zh": "基础代谢率（BMR）：肝和骨骼肌是主要产热器官；70 kg 成人静息约 60-70 kcal/h。最大影响因素是体表面积/体积比——体重相同时，个子矮的人 BMR 更高。",
+     "hard": true
+    },
+    {
+     "en": "Exertion and sun load: a brisk walk generates about 300 kcal/h; standing in bright sun on a hot windless day can add up to 150 kcal/h of absorbed heat.",
+     "zh": "运动与日晒负荷：快走产热约 300 kcal/h；烈日无风时站着不动也能额外吸热达 150 kcal/h。",
+     "hard": true
+    },
+    {
+     "en": "Four cooling routes. Radiation: electromagnetic transfer, over 65% of loss in a cool setting, head loss prominent (worse in infants); above about 20°C ambient the body gains heat instead. Conduction: direct contact — air is a poor conductor (2%), the ground is good, water is best: immersion steals heat about 25 times faster than dry air at the same temperature, and soaked clothing does the same.",
+     "zh": "四大散热途径之一二。辐射：电磁波传热，凉爽环境中占散热 65% 以上，头部散热突出（婴幼儿头占比更大、更明显）；环境高于约 20°C 时身体反而净吸热。传导：直接接触传热——空气是不良导体（仅占 2%），地面导热好，水最强：落水者失热比同温干燥空气快约 25 倍，被雨雪汗浸透的衣服同理。",
+     "hard": true
+    },
+    {
+     "en": "Convection: moving air strips heat — the faster the wind, the faster the loss; the wind chill index quantifies it (1°C with a 58 km/h wind chills like -20°C). Evaporation: sweat liberates 1 kcal per 1.7 mL, normally about 30% of cooling, becomes the main route in high heat — but fails once relative humidity reaches about 75%.",
+     "zh": "四大散热途径之三四。对流：流动空气带走热量——风越大失热越快，风寒指数就是在量化它（1°C 配 58 km/h 的风，体感相当于 -20°C）。蒸发：每 1.7 mL 汗液带走 1 kcal，平时约占散热 30%，高温下成为主力——但相对湿度达到约 75% 后蒸发就失效了。",
+     "hard": true
+    },
+    {
+     "en": "Sweating has a ceiling: a healthy adult can produce about 1 L/h at most, and only for a few hours. When ambient temperature exceeds skin temperature, radiation and convection stop working and skin blood flow becomes counterproductive — evaporation is all that is left.",
+     "zh": "出汗有上限：健康成人最多约 1 L/h，且只能维持几小时。环境温度一旦超过皮温，辐射和对流双双失效，皮肤血流增加反而促进吸热——只剩蒸发一条路。",
+     "hard": true
+    },
+    {
+     "en": "Massive cutaneous vasodilation forces the heart to raise output; if vasomotor control is lost outright, blood pools peripherally and the patient slides into distributive (vasogenic) shock — relative hypovolemia from heat alone.",
+     "zh": "皮肤血管大规模扩张迫使心脏加大输出；一旦血管舒缩控制彻底失守，血液淤积在外周，患者会滑入分布性（血管源性）休克——单靠热应激就能造成相对性低血容量。",
+     "hard": true
+    },
+    {
+     "en": "Cold defence: skin acts as the thermostat — cold skin triggers shivering even before CBT falls; the hypothalamus adds peripheral vasoconstriction to shunt blood to the core and shuts down sweating. Thicker body fat insulates better. When these defences are overwhelmed, hypothermia begins.",
+     "zh": "御寒机制：皮肤本身就是恒温器——皮肤一冷就触发寒战，哪怕核心体温还没降；下丘脑同时收缩外周血管把血分流回核心并停止出汗。脂肪层厚者隔热更好。当这套防线被压垮，低体温就开始了。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Heat Illness: Who Cooks First",
    "titleZh": "热病总论：谁先被热垮",
    "points": [
-    {"en": "Heat illness = rising CBT from inadequate thermolysis, usually in hot humid conditions. When thermoregulation fails outright, CBT can soar from normal to about 41°C in under 15 minutes.", "zh": "热病 = 散热不足导致核心体温升高，多发生在湿热环境。体温调节一旦彻底失灵，核心体温可在 15 分钟内从正常飙到约 41°C。", "hard": true},
-    {"en": "Drug list that impairs heat handling: alcohol, anticholinergics (atropine, scopolamine), antihistamines, antipsychotics, beta blockers, calcium channel blockers, diuretics, hallucinogens, heroin, laxatives, lithium, MAO inhibitors, sympathomimetics (cocaine, amphetamines), thyroid agonists, tricyclics.", "zh": "损害散热的药物清单：酒精、抗胆碱能药（阿托品、东莨菪碱）、抗组胺药、抗精神病药、β 受体阻滞剂、钙通道阻滞剂、利尿剂、致幻剂、海洛因、泻药、锂盐、单胺氧化酶抑制剂、拟交感药（可卡因、安非他明）、甲状腺素类、三环类抗抑郁药。", "hard": true},
-    {"en": "Why the elderly cook: they sweat less, acclimatize slower, feel thirst late, move less, carry chronic disease, and take diuretics (near-dehydration, electrolyte loss) and beta blockers (blunted tachycardic response, on top of an age-lowered maximum heart rate).", "zh": "老人为什么先被热垮：出汗少、驯化慢、渴感迟钝、行动不便、慢病缠身，还常服利尿剂（长期接近脱水+电解质紊乱）和 β 阻滞剂（心率代偿被钝化，叠加年龄本身的最大心率下降）。", "hard": true},
-    {"en": "Why children cook: proportionately higher metabolic heat production, CBT that climbs faster during dehydration, and less efficient dissipation from smaller organ and vascular systems.", "zh": "儿童为什么危险：单位体重产热更高、脱水时核心体温升得更快、器官和血管系统小导致散热效率低。", "hard": true},
-    {"en": "Four-quadrant risk grid: increased internal production (exertion, fever, hyperthyroidism, agitation/tremor states, stimulant overdose); impaired dissipation (heat + humidity, obesity, impaired vasodilation, diabetes, alcoholism, drugs, sweat-gland failure, heavy tight clothing); increased absorption (unventilated quarters, hot worksites, parked cars); impaired response (dehydration, prior heatstroke, hypokalemia, cardiovascular disease, prior stroke or CNS lesion).", "zh": "四象限风险表：产热增加（运动、发热、甲亢、激越震颤状态、兴奋剂过量）；散热受阻（高温高湿、肥胖、血管扩张受损、糖尿病、酗酒、药物、汗腺功能障碍如囊性纤维化/烧伤瘢痕、厚重紧身衣物）；吸热增加（不通风的住所、高温工地、暴晒中停着的汽车）；应对能力受损（脱水、热射病史、低钾血症、心血管病、卒中或其他中枢病变史）。", "hard": true},
-    {"en": "Prior heatstroke permanently marks a patient as high-risk, and acclimatization takes days of progressive exertion in the heat — it cannot be rushed.", "zh": "得过一次热射病，就永远列入高危名单；驯化需要在热环境里连续数日渐进锻炼才能建立——没有速成。", "hard": true},
-    {"en": "Humidex (a Canadian invention) folds temperature and humidity into one perceived-temperature number: 30-39 some discomfort, 40-45 great discomfort (avoid exertion), above 45 dangerous, above 54 heatstroke imminent. Canadian record: 53 (Carman, Manitoba, July 25, 2007).", "zh": "湿热指数 Humidex（加拿大发明）把温度和湿度合成一个体感温度：30-39 有些不适，40-45 很不适（避免劳作），>45 危险，>54 热射病一触即发。加拿大纪录：53（2007 年 7 月 25 日，曼尼托巴省 Carman）。", "hard": true},
-    {"en": "Crew self-defence: acclimatize, park in shade with working AC, drink hourly in hot weather aiming for urination every 2 hours (dark urine = dehydrated), avoid sugary/caffeinated/alcoholic drinks, and stock a cooler with diluted sports drinks — plain water does not replace sweat sodium.", "zh": "队员自保：主动驯化、救护车停阴凉处并确认空调好用、酷热天每小时喝水并以每 2 小时排尿一次为目标（尿色深=已脱水）、避开高糖/含咖啡因/含酒精饮品、备好装稀释运动饮料的保温箱——白水补不回汗液丢失的钠。", "hard": true}
+    {
+     "en": "Heat illness = rising CBT from inadequate thermolysis, usually in hot humid conditions. When thermoregulation fails outright, CBT can soar from normal to about 41°C in under 15 minutes.",
+     "zh": "热病 = 散热不足导致核心体温升高，多发生在湿热环境。体温调节一旦彻底失灵，核心体温可在 15 分钟内从正常飙到约 41°C。",
+     "hard": true
+    },
+    {
+     "en": "Drug list that impairs heat handling: alcohol, anticholinergics (atropine, scopolamine), antihistamines, antipsychotics, beta blockers, calcium channel blockers, diuretics, hallucinogens, heroin, laxatives, lithium, MAO inhibitors, sympathomimetics (cocaine, amphetamines), thyroid agonists, tricyclics.",
+     "zh": "损害散热的药物清单：酒精、抗胆碱能药（阿托品、东莨菪碱）、抗组胺药、抗精神病药、β 受体阻滞剂、钙通道阻滞剂、利尿剂、致幻剂、海洛因、泻药、锂盐、单胺氧化酶抑制剂、拟交感药（可卡因、安非他明）、甲状腺素类、三环类抗抑郁药。",
+     "hard": true
+    },
+    {
+     "en": "Why the elderly cook: they sweat less, acclimatize slower, feel thirst late, move less, carry chronic disease, and take diuretics (near-dehydration, electrolyte loss) and beta blockers (blunted tachycardic response, on top of an age-lowered maximum heart rate).",
+     "zh": "老人为什么先被热垮：出汗少、驯化慢、渴感迟钝、行动不便、慢病缠身，还常服利尿剂（长期接近脱水+电解质紊乱）和 β 阻滞剂（心率代偿被钝化，叠加年龄本身的最大心率下降）。",
+     "hard": true
+    },
+    {
+     "en": "Why children cook: proportionately higher metabolic heat production, CBT that climbs faster during dehydration, and less efficient dissipation from smaller organ and vascular systems.",
+     "zh": "儿童为什么危险：单位体重产热更高、脱水时核心体温升得更快、器官和血管系统小导致散热效率低。",
+     "hard": true
+    },
+    {
+     "en": "Four-quadrant risk grid: increased internal production (exertion, fever, hyperthyroidism, agitation/tremor states, stimulant overdose); impaired dissipation (heat + humidity, obesity, impaired vasodilation, diabetes, alcoholism, drugs, sweat-gland failure, heavy tight clothing); increased absorption (unventilated quarters, hot worksites, parked cars); impaired response (dehydration, prior heatstroke, hypokalemia, cardiovascular disease, prior stroke or CNS lesion).",
+     "zh": "四象限风险表：产热增加（运动、发热、甲亢、激越震颤状态、兴奋剂过量）；散热受阻（高温高湿、肥胖、血管扩张受损、糖尿病、酗酒、药物、汗腺功能障碍如囊性纤维化/烧伤瘢痕、厚重紧身衣物）；吸热增加（不通风的住所、高温工地、暴晒中停着的汽车）；应对能力受损（脱水、热射病史、低钾血症、心血管病、卒中或其他中枢病变史）。",
+     "hard": true
+    },
+    {
+     "en": "Prior heatstroke permanently marks a patient as high-risk, and acclimatization takes days of progressive exertion in the heat — it cannot be rushed.",
+     "zh": "得过一次热射病，就永远列入高危名单；驯化需要在热环境里连续数日渐进锻炼才能建立——没有速成。",
+     "hard": true
+    },
+    {
+     "en": "Humidex (a Canadian invention) folds temperature and humidity into one perceived-temperature number: 30-39 some discomfort, 40-45 great discomfort (avoid exertion), above 45 dangerous, above 54 heatstroke imminent. Canadian record: 53 (Carman, Manitoba, July 25, 2007).",
+     "zh": "湿热指数 Humidex（加拿大发明）把温度和湿度合成一个体感温度：30-39 有些不适，40-45 很不适（避免劳作），>45 危险，>54 热射病一触即发。加拿大纪录：53（2007 年 7 月 25 日，曼尼托巴省 Carman）。",
+     "hard": true
+    },
+    {
+     "en": "Crew self-defence: acclimatize, park in shade with working AC, drink hourly in hot weather aiming for urination every 2 hours (dark urine = dehydrated), avoid sugary/caffeinated/alcoholic drinks, and stock a cooler with diluted sports drinks — plain water does not replace sweat sodium.",
+     "zh": "队员自保：主动驯化、救护车停阴凉处并确认空调好用、酷热天每小时喝水并以每 2 小时排尿一次为目标（尿色深=已脱水）、避开高糖/含咖啡因/含酒精饮品、备好装稀释运动饮料的保温箱——白水补不回汗液丢失的钠。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Heat Cramps, Heat Syncope, Heat Exhaustion",
    "titleZh": "热痉挛、热晕厥与热衰竭",
    "points": [
-    {"en": "Heat cramps: acute involuntary muscle pain (legs, abdomen, or both) from profuse sweating with sodium loss. Three ingredients: salt depletion + dehydration + muscle fatigue. Classically strikes the fit — athletes, soldiers, labourers — who replace sweat with plain water.", "zh": "热痉挛：大量出汗丢钠引起的急性不自主肌肉痛（下肢、腹部或两者）。三要素：缺盐+脱水+肌肉疲劳。典型受害者反而是体能好的人——运动员、军人、体力工人——因为他们只用白水补汗。", "hard": true},
-    {"en": "Heat cramp picture: sudden onset during strenuous activity; pain can be incapacitating; patient may be hypotensive and nauseated but stays alert; pulse rapid, skin pale and moist, temperature normal.", "zh": "热痉挛表现：剧烈活动中突然发作；疼痛可以让人动弹不得；可有低血压和恶心，但神志始终清楚；脉快、皮肤苍白湿冷、体温正常。", "hard": true},
-    {"en": "Heat cramp care: cool environment, lie down if faint; if not nauseated give 1-2 glasses of balanced electrolyte solution sipped slowly plus salty snacks; NO salt tablets (gastric irritant); if too nauseated for oral fluids, IV normal saline; NEVER massage cramping muscles — it worsens the pain.", "zh": "热痉挛处理：转移到阴凉处，头晕就平躺；不恶心者给 1-2 杯均衡电解质液慢慢喝，配咸味零食；禁给盐片（刺激胃黏膜、诱发呕吐）；恶心到喝不下就开静脉滴生理盐水；绝不按摩痉挛的肌肉——只会加重疼痛。", "hard": true},
-    {"en": "Heat syncope: orthostatic (near-)fainting in unacclimatized people under heat stress — prolonged standing at mass gatherings or standing up suddenly. Mechanism: peripheral vasodilation plus some dehydration. Care: supine position and fluid replacement; if the patient does not recover promptly when supine, suspect heat exhaustion or heatstroke.", "zh": "热晕厥：未驯化者在热应激下的直立性晕厥/近晕厥——大型集会久站或突然起身时发作。机制：外周血管扩张叠加一定程度脱水。处理：平卧+补液；平卧后不迅速恢复的，要怀疑热衰竭或热射病。", "hard": true},
-    {"en": "Heat exhaustion = volume depletion + heat stress, the milder station on the continuum toward heatstroke. Two classic forms: water-depleted (elderly with immobility/medications/blunted thirst; workers and athletes under-replacing fluid) and sodium-depleted (develops over hours to days: heavy sweating replaced with water only).", "zh": "热衰竭 = 容量丢失+热应激，是通往热射病连续谱上的较轻一站。经典分两型：缺水型（行动不便、服药、渴感迟钝的老人；补液不足的工人和运动员）和缺钠型（数小时到数日形成：大量出汗却只补白水）。", "hard": true},
-    {"en": "Exercise-associated hyponatremia: prolonged exertion in heat + excessive hypotonic fluid intake dilutes serum sodium; fluid shifts into cells. Early signs are vague (nausea, vomiting, weight GAIN, headache), then mental status changes, cerebral and pulmonary edema, seizures, coma. Current WMS consensus: let thirst drive fluid intake — the old 'drink before you are thirsty' teaching helped cause this disease.", "zh": "运动相关低钠血症：热环境长时间运动+大量低渗液体灌进去，血钠被稀释，液体向细胞内转移。早期表现含糊（恶心、呕吐、体重反而增加、头痛），随后意识改变、脑水肿、肺水肿、抽搐、昏迷。WMS 现行共识：以渴感驱动饮水——老一套「渴之前就要喝」的教法正是这种病的推手之一。", "hard": true},
-    {"en": "Heat exhaustion picture: headache, fatigue, dizziness, nausea/vomiting, sometimes abdominal cramps; profuse sweating with pale clammy skin; possibly mild disorientation; temperature normal or elevated but below 40°C; tachycardia (blunted by beta blockers); fast shallow breathing, possibly carpopedal spasm and low ETCO2 from hyperventilation; orthostatic hypotension. Brown urine = suspect rhabdomyolysis — hospital, always.", "zh": "热衰竭表现：头痛、乏力、头晕、恶心呕吐、有时腹部绞痛；大汗+皮肤苍白湿冷；可有轻度定向障碍；体温正常或升高但低于 40°C；心动过速（β 阻滞剂会掩盖）；呼吸快而浅，过度通气可致腕足痉挛和 ETCO2 降低；直立性低血压。尿呈棕色 = 怀疑横纹肌溶解（肌肉破坏释放钾和肌红蛋白）——必须送院。", "hard": true},
-    {"en": "Heat exhaustion care: remove from heat, strip excess clothing, supine with legs up; if temperature is up, sponge/spray tepid water and fan gently — do not overdo it or shivering restarts thermogenesis; oral rehydration must be no more than 6% carbohydrate (home recipe: 1 teaspoon salt + 2 tablespoons sugar in 1 L water); vomiting → IV normal saline titrated to HR and BP.", "zh": "热衰竭处理：脱离热环境、脱掉多余衣物、平卧抬腿；体温升高者用温水擦拭/喷洒加轻扇风——别过头，冷到寒战反而重新产热；口服补液碳水化合物浓度不得超过 6%（自制配方：1 茶匙盐+2 汤匙糖兑 1 L 水）；呕吐者开静脉生理盐水，按心率血压滴定。", "hard": true},
-    {"en": "If exertional hyponatremia is suspected: NO oral fluids — IV normal saline and transport for electrolyte evaluation. And whenever you cannot tell heat exhaustion from heatstroke, treat as heatstroke.", "zh": "疑运动性低钠血症：禁一切口服液体——静脉生理盐水并送院查电解质。另一条铁律：分不清是热衰竭还是热射病时，一律按热射病处理。", "hard": true},
-    {"en": "Endurance-athlete controversy: no more automatic large-bore IV plus copious oral fluids — first rule out hypoglycemia and let the athlete lie down a few minutes; rapid fluid loading can swing CBT abruptly and trigger metabolic disturbance and dysrhythmias.", "zh": "耐力运动员的争议点：不再一上来就大号留置针猛灌液——先排除低血糖、让选手平躺几分钟再说；快速补液可使核心体温骤变，诱发代谢紊乱和心律失常。", "hard": true}
+    {
+     "en": "Heat cramps: acute involuntary muscle pain (legs, abdomen, or both) from profuse sweating with sodium loss. Three ingredients: salt depletion + dehydration + muscle fatigue. Classically strikes the fit — athletes, soldiers, labourers — who replace sweat with plain water.",
+     "zh": "热痉挛：大量出汗丢钠引起的急性不自主肌肉痛（下肢、腹部或两者）。三要素：缺盐+脱水+肌肉疲劳。典型受害者反而是体能好的人——运动员、军人、体力工人——因为他们只用白水补汗。",
+     "hard": true
+    },
+    {
+     "en": "Heat cramp picture: sudden onset during strenuous activity; pain can be incapacitating; patient may be hypotensive and nauseated but stays alert; pulse rapid, skin pale and moist, temperature normal.",
+     "zh": "热痉挛表现：剧烈活动中突然发作；疼痛可以让人动弹不得；可有低血压和恶心，但神志始终清楚；脉快、皮肤苍白湿冷、体温正常。",
+     "hard": true
+    },
+    {
+     "en": "Heat cramp care: cool environment, lie down if faint; if not nauseated give 1-2 glasses of balanced electrolyte solution sipped slowly plus salty snacks; NO salt tablets (gastric irritant); if too nauseated for oral fluids, IV normal saline; NEVER massage cramping muscles — it worsens the pain.",
+     "zh": "热痉挛处理：转移到阴凉处，头晕就平躺；不恶心者给 1-2 杯均衡电解质液慢慢喝，配咸味零食；禁给盐片（刺激胃黏膜、诱发呕吐）；恶心到喝不下就开静脉滴生理盐水；绝不按摩痉挛的肌肉——只会加重疼痛。",
+     "hard": true
+    },
+    {
+     "en": "Heat syncope: orthostatic (near-)fainting in unacclimatized people under heat stress — prolonged standing at mass gatherings or standing up suddenly. Mechanism: peripheral vasodilation plus some dehydration. Care: supine position and fluid replacement; if the patient does not recover promptly when supine, suspect heat exhaustion or heatstroke.",
+     "zh": "热晕厥：未驯化者在热应激下的直立性晕厥/近晕厥——大型集会久站或突然起身时发作。机制：外周血管扩张叠加一定程度脱水。处理：平卧+补液；平卧后不迅速恢复的，要怀疑热衰竭或热射病。",
+     "hard": true
+    },
+    {
+     "en": "Heat exhaustion = volume depletion + heat stress, the milder station on the continuum toward heatstroke. Two classic forms: water-depleted (elderly with immobility/medications/blunted thirst; workers and athletes under-replacing fluid) and sodium-depleted (develops over hours to days: heavy sweating replaced with water only).",
+     "zh": "热衰竭 = 容量丢失+热应激，是通往热射病连续谱上的较轻一站。经典分两型：缺水型（行动不便、服药、渴感迟钝的老人；补液不足的工人和运动员）和缺钠型（数小时到数日形成：大量出汗却只补白水）。",
+     "hard": true
+    },
+    {
+     "en": "Exercise-associated hyponatremia: prolonged exertion in heat + excessive hypotonic fluid intake dilutes serum sodium; fluid shifts into cells. Early signs are vague (nausea, vomiting, weight GAIN, headache), then mental status changes, cerebral and pulmonary edema, seizures, coma. Current WMS consensus: let thirst drive fluid intake — the old 'drink before you are thirsty' teaching helped cause this disease.",
+     "zh": "运动相关低钠血症：热环境长时间运动+大量低渗液体灌进去，血钠被稀释，液体向细胞内转移。早期表现含糊（恶心、呕吐、体重反而增加、头痛），随后意识改变、脑水肿、肺水肿、抽搐、昏迷。WMS 现行共识：以渴感驱动饮水——老一套「渴之前就要喝」的教法正是这种病的推手之一。",
+     "hard": true
+    },
+    {
+     "en": "Heat exhaustion picture: headache, fatigue, dizziness, nausea/vomiting, sometimes abdominal cramps; profuse sweating with pale clammy skin; possibly mild disorientation; temperature normal or elevated but below 40°C; tachycardia (blunted by beta blockers); fast shallow breathing, possibly carpopedal spasm and low ETCO2 from hyperventilation; orthostatic hypotension. Brown urine = suspect rhabdomyolysis — hospital, always.",
+     "zh": "热衰竭表现：头痛、乏力、头晕、恶心呕吐、有时腹部绞痛；大汗+皮肤苍白湿冷；可有轻度定向障碍；体温正常或升高但低于 40°C；心动过速（β 阻滞剂会掩盖）；呼吸快而浅，过度通气可致腕足痉挛和 ETCO2 降低；直立性低血压。尿呈棕色 = 怀疑横纹肌溶解（肌肉破坏释放钾和肌红蛋白）——必须送院。",
+     "hard": true
+    },
+    {
+     "en": "Heat exhaustion care: remove from heat, strip excess clothing, supine with legs up; if temperature is up, sponge/spray tepid water and fan gently — do not overdo it or shivering restarts thermogenesis; oral rehydration must be no more than 6% carbohydrate (home recipe: 1 teaspoon salt + 2 tablespoons sugar in 1 L water); vomiting → IV normal saline titrated to HR and BP.",
+     "zh": "热衰竭处理：脱离热环境、脱掉多余衣物、平卧抬腿；体温升高者用温水擦拭/喷洒加轻扇风——别过头，冷到寒战反而重新产热；口服补液碳水化合物浓度不得超过 6%（自制配方：1 茶匙盐+2 汤匙糖兑 1 L 水）；呕吐者开静脉生理盐水，按心率血压滴定。",
+     "hard": true
+    },
+    {
+     "en": "If exertional hyponatremia is suspected: NO oral fluids — IV normal saline and transport for electrolyte evaluation. And whenever you cannot tell heat exhaustion from heatstroke, treat as heatstroke.",
+     "zh": "疑运动性低钠血症：禁一切口服液体——静脉生理盐水并送院查电解质。另一条铁律：分不清是热衰竭还是热射病时，一律按热射病处理。",
+     "hard": true
+    },
+    {
+     "en": "Endurance-athlete controversy: no more automatic large-bore IV plus copious oral fluids — first rule out hypoglycemia and let the athlete lie down a few minutes; rapid fluid loading can swing CBT abruptly and trigger metabolic disturbance and dysrhythmias.",
+     "zh": "耐力运动员的争议点：不再一上来就大号留置针猛灌液——先排除低血糖、让选手平躺几分钟再说；快速补液可使核心体温骤变，诱发代谢紊乱和心律失常。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Heatstroke: Recognize Fast, Cool Faster",
    "titleZh": "热射病：识别要快，降温要更快",
    "points": [
-    {"en": "Heatstroke is the least common and deadliest heat emergency: mortality up to 10% even when treated, 30-80% untreated. Diagnosis rests on two findings: core temperature above 40°C plus altered mental status.", "zh": "热射病是最少见也最致命的热急症：治疗后死亡率仍高达 10%，不治疗 30-80%。诊断就靠两条：核心体温超过 40°C + 意识状态改变。", "hard": true},
-    {"en": "Classic (passive) type: heat waves; elderly, very young, bedridden; chronic disease, alcoholism, diuretics/sedatives/anticholinergics; sweating may be absent, skin hot red dry; blood glucose normal or high; rhabdomyolysis and renal failure rare.", "zh": "经典型（被动型）：热浪期间发病；老人、婴幼儿、卧床者；慢病、酗酒、利尿剂/镇静剂/抗胆碱能药使用者；可以不出汗，皮肤热、红、干；血糖正常或偏高；横纹肌溶解和肾衰少见。", "hard": true},
-    {"en": "Exertional type: young fit people exercising in heat and humidity; sweating still present, skin moist and pale; hypoglycemia common; rhabdomyolysis and acute renal failure common; consider stimulant abuse.", "zh": "劳力型：年轻健壮者在湿热中运动发病；仍在出汗、皮肤湿冷苍白；常见低血糖；横纹肌溶解和急性肾衰常见；要想到兴奋剂滥用。", "hard": true},
-    {"en": "Earliest clue is often behaviour: irritability, combativeness, hallucinations — easily mislabelled as a psychiatric or drug call; in the elderly it can mimic stroke. Tremors, seizures, constricted pupils, and posturing may follow.", "zh": "最早线索往往是行为：易激惹、好斗、幻觉——极易被误判成精神科或吸毒警情；老年人则像卒中。之后可出现震颤、抽搐、瞳孔缩小、去皮质/去大脑体位。", "hard": true},
-    {"en": "Hyperdynamic vital signs: marked hyperthermia (usually >40°C), tachycardia, hyperventilation with ETCO2 under 20 mm Hg, low peripheral resistance with possible hypotension; dehydration further blocks heat delivery to the skin.", "zh": "高动力生命体征：显著高热（通常 >40°C）、心动过速、过度通气伴 ETCO2 低于 20 mm Hg、外周阻力下降可伴低血压；脱水进一步阻碍核心热血送到体表散热。", "hard": true},
-    {"en": "Mimics to sort out: fever/sepsis (pyrogens RAISE the hypothalamic set point — look for infection history, shaking chills); anticholinergic poisoning (DILATED pupils, versus usually constricted in heatstroke); neuroleptic malignant syndrome (antipsychotics/antiemetics: rigidity + hyperthermia); malignant hyperthermia (anaesthetics such as succinylcholine — rising ETCO2 comes before fever).", "zh": "需要甄别的假热射病：发热/脓毒症（致热原是把下丘脑调定点上移——找感染史、寒战史）；抗胆碱能中毒（瞳孔散大，而热射病瞳孔通常缩小）；抗精神病药恶性综合征 NMS（抗精神病药/止吐药：肌强直+高热）；恶性高热（琥珀胆碱等麻醉药——ETCO2 升高早于发热）。", "hard": true},
-    {"en": "What does NOT work: aspirin and NSAIDs (useless against heat illness, harmful with organ failure), dantrolene, wet sheets left covering the patient (blocks evaporation), massage for overcooling vasoconstriction. When in doubt about the cause of hyperthermia — treat as heatstroke.", "zh": "没用甚至有害的招：阿司匹林和 NSAID（对热病无效，器官衰竭时有害）、丹曲林、湿床单一直盖着（阻挡蒸发）、为对抗降温后血管收缩去按摩。搞不清高热原因时——按热射病治。", "hard": true},
-    {"en": "Cooling doctrine: remove from the environment, strip to underclothing, cool by the most expeditious means available, and cool FIRST, transport second. Ice-water immersion is the most effective method but impractical in an ambulance; the field standard is evaporative cooling — spray tepid water, fan hard, ice packs to neck, groin, axillae — with the rig's AC running. Ineffective alone: ice packs by themselves, fanning without water, cooling blankets.", "zh": "降温总纲：脱离热环境、脱到贴身衣物、用手头最快的方法降温，而且先降温、后转运。冰水浸泡最有效，但救护车里不现实；现场主力是蒸发降温——温水喷洒+大力扇风+冰袋敷颈部/腹股沟/腋下——同时车内空调开足。单独用冰袋、只扇风不喷水、降温毯，都被证明无效。", "hard": true},
-    {"en": "Endpoint and monitoring: check rectal or tympanic temperature every 10 minutes; stop active cooling once it falls below 39°C to avoid overshoot into shivering or hypothermia; watch the airway and for seizures throughout.", "zh": "终点与监测：每 10 分钟测一次直肠或鼓膜温度；降到 39°C 以下就停止主动降温，防止过冲引发寒战甚至低体温；全程盯紧气道和抽搐。", "hard": true},
-    {"en": "Supportive care: oxygen and airway readiness; IV normal saline with CAUTION — pulmonary edema is a known heatstroke complication and cooling itself vasoconstricts and raises BP; check glucose; monitor the rhythm (rhabdomyolysis → hyperkalemia); have benzodiazepines (lorazepam, midazolam, diazepam) ready for seizures.", "zh": "支持治疗：给氧并做好气道准备；静脉生理盐水要克制——肺水肿是热射病的已知并发症，而且降温本身会让外周血管收缩、血压回升；测血糖；持续心电监护（横纹肌溶解→高钾血症）；备好苯二氮䓬类（劳拉西泮、咪达唑仑、地西泮）随时抗抽搐。", "hard": true},
-    {"en": "BC exam sequence (matches the practical station): remove ALL clothing; cold wet towels to head, torso, and thighs; immerse feet and legs in ice water; convective cooling with ambulance AC at maximum cold; cool a minimum of 10 minutes on scene before conveyance; continue the most aggressive available cooling en route; initial vitals MUST include blood glucose if LOC is decreased; no oral fluids or antipyretics with altered LOC.", "zh": "BC 考试流程（与实操站一致）：脱光全部衣物；冷湿毛巾敷头、躯干、大腿；双脚小腿浸入冰水桶；救护车空调最大冷风做对流降温；现场至少降温 10 分钟再开始转运；途中继续用可得的最激进降温手段；意识下降者首套生命体征必须包含血糖；意识改变者禁口服液体和退烧药。", "hard": true}
+    {
+     "en": "Heatstroke is the least common and deadliest heat emergency: mortality up to 10% even when treated, 30-80% untreated. Diagnosis rests on two findings: core temperature above 40°C plus altered mental status.",
+     "zh": "热射病是最少见也最致命的热急症：治疗后死亡率仍高达 10%，不治疗 30-80%。诊断就靠两条：核心体温超过 40°C + 意识状态改变。",
+     "hard": true
+    },
+    {
+     "en": "Classic (passive) type: heat waves; elderly, very young, bedridden; chronic disease, alcoholism, diuretics/sedatives/anticholinergics; sweating may be absent, skin hot red dry; blood glucose normal or high; rhabdomyolysis and renal failure rare.",
+     "zh": "经典型（被动型）：热浪期间发病；老人、婴幼儿、卧床者；慢病、酗酒、利尿剂/镇静剂/抗胆碱能药使用者；可以不出汗，皮肤热、红、干；血糖正常或偏高；横纹肌溶解和肾衰少见。",
+     "hard": true
+    },
+    {
+     "en": "Exertional type: young fit people exercising in heat and humidity; sweating still present, skin moist and pale; hypoglycemia common; rhabdomyolysis and acute renal failure common; consider stimulant abuse.",
+     "zh": "劳力型：年轻健壮者在湿热中运动发病；仍在出汗、皮肤湿冷苍白；常见低血糖；横纹肌溶解和急性肾衰常见；要想到兴奋剂滥用。",
+     "hard": true
+    },
+    {
+     "en": "Earliest clue is often behaviour: irritability, combativeness, hallucinations — easily mislabelled as a psychiatric or drug call; in the elderly it can mimic stroke. Tremors, seizures, constricted pupils, and posturing may follow.",
+     "zh": "最早线索往往是行为：易激惹、好斗、幻觉——极易被误判成精神科或吸毒警情；老年人则像卒中。之后可出现震颤、抽搐、瞳孔缩小、去皮质/去大脑体位。",
+     "hard": true
+    },
+    {
+     "en": "Hyperdynamic vital signs: marked hyperthermia (usually >40°C), tachycardia, hyperventilation with ETCO2 under 20 mm Hg, low peripheral resistance with possible hypotension; dehydration further blocks heat delivery to the skin.",
+     "zh": "高动力生命体征：显著高热（通常 >40°C）、心动过速、过度通气伴 ETCO2 低于 20 mm Hg、外周阻力下降可伴低血压；脱水进一步阻碍核心热血送到体表散热。",
+     "hard": true
+    },
+    {
+     "en": "Mimics to sort out: fever/sepsis (pyrogens RAISE the hypothalamic set point — look for infection history, shaking chills); anticholinergic poisoning (DILATED pupils, versus usually constricted in heatstroke); neuroleptic malignant syndrome (antipsychotics/antiemetics: rigidity + hyperthermia); malignant hyperthermia (anaesthetics such as succinylcholine — rising ETCO2 comes before fever).",
+     "zh": "需要甄别的假热射病：发热/脓毒症（致热原是把下丘脑调定点上移——找感染史、寒战史）；抗胆碱能中毒（瞳孔散大，而热射病瞳孔通常缩小）；抗精神病药恶性综合征 NMS（抗精神病药/止吐药：肌强直+高热）；恶性高热（琥珀胆碱等麻醉药——ETCO2 升高早于发热）。",
+     "hard": true
+    },
+    {
+     "en": "What does NOT work: aspirin and NSAIDs (useless against heat illness, harmful with organ failure), dantrolene, wet sheets left covering the patient (blocks evaporation), massage for overcooling vasoconstriction. When in doubt about the cause of hyperthermia — treat as heatstroke.",
+     "zh": "没用甚至有害的招：阿司匹林和 NSAID（对热病无效，器官衰竭时有害）、丹曲林、湿床单一直盖着（阻挡蒸发）、为对抗降温后血管收缩去按摩。搞不清高热原因时——按热射病治。",
+     "hard": true
+    },
+    {
+     "en": "Cooling doctrine: remove from the environment, strip to underclothing, cool by the most expeditious means available, and cool FIRST, transport second. Ice-water immersion is the most effective method but impractical in an ambulance; the field standard is evaporative cooling — spray tepid water, fan hard, ice packs to neck, groin, axillae — with the rig's AC running. Ineffective alone: ice packs by themselves, fanning without water, cooling blankets.",
+     "zh": "降温总纲：脱离热环境、脱到贴身衣物、用手头最快的方法降温，而且先降温、后转运。冰水浸泡最有效，但救护车里不现实；现场主力是蒸发降温——温水喷洒+大力扇风+冰袋敷颈部/腹股沟/腋下——同时车内空调开足。单独用冰袋、只扇风不喷水、降温毯，都被证明无效。",
+     "hard": true
+    },
+    {
+     "en": "Endpoint and monitoring: check rectal or tympanic temperature every 10 minutes; stop active cooling once it falls below 39°C to avoid overshoot into shivering or hypothermia; watch the airway and for seizures throughout.",
+     "zh": "终点与监测：每 10 分钟测一次直肠或鼓膜温度；降到 39°C 以下就停止主动降温，防止过冲引发寒战甚至低体温；全程盯紧气道和抽搐。",
+     "hard": true
+    },
+    {
+     "en": "Supportive care: oxygen and airway readiness; IV normal saline with CAUTION — pulmonary edema is a known heatstroke complication and cooling itself vasoconstricts and raises BP; check glucose; monitor the rhythm (rhabdomyolysis → hyperkalemia); have benzodiazepines (lorazepam, midazolam, diazepam) ready for seizures.",
+     "zh": "支持治疗：给氧并做好气道准备；静脉生理盐水要克制——肺水肿是热射病的已知并发症，而且降温本身会让外周血管收缩、血压回升；测血糖；持续心电监护（横纹肌溶解→高钾血症）；备好苯二氮䓬类（劳拉西泮、咪达唑仑、地西泮）随时抗抽搐。",
+     "hard": true
+    },
+    {
+     "en": "BC exam sequence (matches the practical station): remove ALL clothing; cold wet towels to head, torso, and thighs; immerse feet and legs in ice water; convective cooling with ambulance AC at maximum cold; cool a minimum of 10 minutes on scene before conveyance; continue the most aggressive available cooling en route; initial vitals MUST include blood glucose if LOC is decreased; no oral fluids or antipyretics with altered LOC.",
+     "zh": "BC 考试流程（与实操站一致）：脱光全部衣物；冷湿毛巾敷头、躯干、大腿；双脚小腿浸入冰水桶；救护车空调最大冷风做对流降温；现场至少降温 10 分钟再开始转运；途中继续用可得的最激进降温手段；意识下降者首套生命体征必须包含血糖；意识改变者禁口服液体和退烧药。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Local Cold Injury: Frostbite, Trench Foot, and Chilblains",
    "titleZh": "局部冷伤：冻伤、战壕足与冻疮",
    "points": [
-    {"en": "Frostbite risk thresholds ride on wind chill, not just the thermometer: a wind chill of -25°C already carries frostbite risk, and once it drops to -45°C, exposed skin can freeze in minutes.", "zh": "冻伤风险跟着风寒指数走，不是单看温度计：风寒指数到 -25°C 就已经有冻伤风险，降到 -45°C 时，裸露皮肤几分钟内就能冻住。", "hard": true},
-    {"en": "Frostbite is a localized ischemic freezing injury, most common at the nose tip, ears, cheeks, fingers, and toes; it is classified superficial or deep depending on whether the tissue ultimately dies.", "zh": "冻伤是局部缺血性冷冻伤，最常发生在鼻尖、耳朵、脸颊、手指和脚趾；按组织最终是否坏死分为浅表和深部两种。", "hard": false},
-    {"en": "Frostnip is the mildest form: slow onset, usually painless, so patients often don't notice it happening. Fix it with steady body-heat contact — a warm hand over the ear/nose, or tuck the fingers into the armpit; redness and tingling signal the warmth returning. 'Windmilling' (swinging the arm in a big circle) forces blood back into a cold hand.", "zh": "冻疮初期（frostnip）是最轻的一种：起病慢、通常不痛，患者往往没察觉。处理靠体温接触——用温热的手捂住耳朵/鼻子，或把手指塞进腋下；发红发麻就是回暖的信号。「风车法」（手臂画大圈甩动）能把血液逼回冰冷的手。", "hard": false},
-    {"en": "Risk-factor checklist: no wind protection (mitts, toque, scarf); anything that impedes circulation — tight gloves/boots/socks, boots laced too tight, non-expanding plastic boots (felt-lined ones expand when wet, which is what you want); smoking (constricts arteries); alcohol (dilates peripheral vessels, speeding heat loss); being tired, dehydrated, or hungry; direct contact with a cold object. And the single most effective way to get a local cold injury is to let yourself become generally hypothermic first.", "zh": "易感因素清单：没做好防风（手套、卫生帽、围巾）；一切妨碍血循环的东西——手套/靴子/袜子太紧、鞋带绑太死、不会随水膨胀的塑料靴（毡衬靴才会吸水膨胀，这才是要的效果）；吸烟（收缩动脉）；饮酒（外周血管扩张，加速散热）；疲劳、脱水、饥饿；直接接触冰冷物体。而让局部冷伤最有效的一条路，恰恰是先让全身陷入低体温。", "hard": false},
-    {"en": "Superficial frostbite picture: altered sensation (numb, tingling, burning); skin looks white and waxy, described as feeling like frozen halibut — firm where it's frozen, but the tissue UNDERNEATH stays soft. After thawing: cyanotic colour, hot stinging pain, capillary-leak edema, blebs within hours, and dull/throbbing pain that can linger for days to weeks.", "zh": "浅表冻伤表现：感觉异常（麻木、刺痛、灼烧感）；皮肤发白发蜡，手感像「冻硬的比目鱼」——表面冻硬，但下方组织仍是软的。解冻后：皮肤转发绀、出现灼痛、毛细血管渗漏致水肿、数小时内起水疱，钝痛/搏动痛可持续数天到数周。", "hard": true},
-    {"en": "The superficial-vs-deep call is a palpation test, not a guess: if the tissue beneath the frozen skin feels soft, it's probably superficial. If it doesn't — or if you have ANY doubt — manage it as deep frostbite. Even a shallow injury can look frozen solid at first glance, so don't trust appearance alone.", "zh": "浅表还是深部，靠触诊而不是猜：冻住皮肤下方的组织摸起来软，多半是浅表；摸不出来软，或者你有任何怀疑，一律按深部冻伤处理。哪怕是浅表伤，乍看也可能像冻得梆硬，光看外观会判断错。", "hard": true},
-    {"en": "Superficial frostbite care: get the patient out of the cold; rewarm only with body heat (steady warm-hand pressure on an ear/nose/foot, or tuck a frostbitten hand into the axilla) — never radiant or dry heat; never rub or massage the area, it only adds damage; cover any blisters with a dry sterile dressing; transport with the injured part elevated and shielded from further cold.", "zh": "浅表冻伤处理：脱离冷环境；只用体温复温（温手稳定按压在耳朵/鼻子/脚上，或把冻伤的手塞进腋下）——绝不用辐射热或干热；绝不揉搓按摩，只会加重损伤；水疱用干燥无菌敷料覆盖；转运时抬高患肢并做好防寒保护。", "hard": false},
-    {"en": "Deep frostbite usually hits hands or feet: the frozen limb looks white, yellow-white, or mottled blue-white, and is firm, cold, and numb. The real damage happens on THAWING, not freezing — especially slow thawing, because any partial refreeze forms even bigger, more destructive ice crystals. As it thaws the area turns purple and becomes excruciatingly painful; gangrene can set in within days and may require amputation.", "zh": "深部冻伤多见于手脚：冻僵的肢体发白、黄白或斑驳蓝白色，质地硬、冰冷、麻木无感。真正的损伤发生在解冻的那一刻，而不是冻结时——尤其是缓慢解冻，因为中途部分复冻会形成更大、破坏力更强的冰晶。解冻过程中患处转紫、剧痛难忍；坏疽可在数天内出现，可能需要截肢。", "hard": true},
-    {"en": "Deep frostbite's field plan hinges on two questions: is the limb still frozen when you arrive, and how far is the hospital? If it's still frozen and you're roughly within an hour of a facility: leave it frozen, pad the limb to protect it from further trauma, keep it away from the heater or any dry-heat source, never massage it (the ice crystals inside would lacerate the tissue), and transport without delay.", "zh": "深部冻伤的现场决策看两条：到达时肢体还冻着吗？离医院多远？如果还冻着，且大约在 1 小时车程内能到医院：让它继续冻着，用衬垫保护患肢防止二次外伤，远离暖风口和一切干热源，绝不按摩（组织里的冰晶会把内部结构划伤），立即转运不要耽搁。", "hard": true},
-    {"en": "Active rewarming is reserved for a limb that's already partially thawed, or a delayed evacuation — and needs a call to medical control first. Technique: a water bath at 35-40°C, IV analgesia given BEFORE immersion because thawing pain is severe; keep a thermometer in the bath and pull the limb out to top up with hot water any time it drops below 38°C. The whole process takes 10-30 minutes and is done once the area is warm to the touch and deep red or bluish — and STAYS that colour after coming out of the water. No smoking during rewarming (nicotine constricts the vessels you're trying to open back up).", "zh": "主动复温只留给已经部分解冻的肢体，或转运会明显延误的情况——而且要先联系医疗指导。手法：水浴温度控制在 35-40°C，浸泡前先给静脉镇痛，因为解冻痛非常剧烈；水里放一支温度计，水温一旦降到 38°C 以下就把肢体拿出来加热水。整个过程 10-30 分钟，判断完成的标准是患处摸上去暖、呈深红或发蓝色，而且离开水后仍保持这个颜色。复温期间禁止吸烟（尼古丁会收缩你正努力打开的血管）。", "hard": true},
-    {"en": "After rewarming: pat the limb dry (never rub), apply sterile dressings gently, and separate frostbitten fingers or toes with gauze. And the golden rule from the At-the-Scene box: never attempt prehospital rewarming if there's any chance of refreezing en route, or if the patient will have to walk on the thawed foot afterward — a refreeze does far more damage than staying frozen the whole way to hospital.", "zh": "复温后：拍干（绝不揉搓）、轻柔上无菌敷料，冻伤的手指/脚趾之间用纱布隔开。现场实战铁律：如果转运途中有任何复冻风险，或者患者解冻后还要用那只脚走路，绝不在院前复温——中途复冻造成的伤害，远比一路冻着送到医院更严重。", "hard": false},
-    {"en": "Trench foot mimics frostbite but needs no freezing temperature at all — it can develop from prolonged cool, wet exposure at temperatures up to 15.5°C, through pure conduction (wet feet lose heat roughly 25 times faster than dry ones). Chilblains are itchy red or purple lesions on the face or extremities from longer exposure to temperatures just above freezing; treatment for both is simply removal from the cold plus room-temperature rewarming — no water bath needed.", "zh": "战壕足（trench foot）不需要结冰温度也能发生——长时间处于湿冷环境（温度高达 15.5°C 也可能中招），机制纯粹是传导散热（湿脚散热比干脚快约 25 倍）。冻疮（chilblains）是脸部或肢端出现的痒性红紫色皮损，源于长期暴露在略高于冰点的温度中；两者的处理都很简单——脱离寒冷环境+室温回暖即可，不需要水浴复温。", "hard": true}
+    {
+     "en": "Frostbite risk thresholds ride on wind chill, not just the thermometer: a wind chill of -25°C already carries frostbite risk, and once it drops to -45°C, exposed skin can freeze in minutes.",
+     "zh": "冻伤风险跟着风寒指数走，不是单看温度计：风寒指数到 -25°C 就已经有冻伤风险，降到 -45°C 时，裸露皮肤几分钟内就能冻住。",
+     "hard": true
+    },
+    {
+     "en": "Frostbite is a localized ischemic freezing injury, most common at the nose tip, ears, cheeks, fingers, and toes; it is classified superficial or deep depending on whether the tissue ultimately dies.",
+     "zh": "冻伤是局部缺血性冷冻伤，最常发生在鼻尖、耳朵、脸颊、手指和脚趾；按组织最终是否坏死分为浅表和深部两种。",
+     "hard": false
+    },
+    {
+     "en": "Frostnip is the mildest form: slow onset, usually painless, so patients often don't notice it happening. Fix it with steady body-heat contact — a warm hand over the ear/nose, or tuck the fingers into the armpit; redness and tingling signal the warmth returning. 'Windmilling' (swinging the arm in a big circle) forces blood back into a cold hand.",
+     "zh": "冻疮初期（frostnip）是最轻的一种：起病慢、通常不痛，患者往往没察觉。处理靠体温接触——用温热的手捂住耳朵/鼻子，或把手指塞进腋下；发红发麻就是回暖的信号。「风车法」（手臂画大圈甩动）能把血液逼回冰冷的手。",
+     "hard": false
+    },
+    {
+     "en": "Risk-factor checklist: no wind protection (mitts, toque, scarf); anything that impedes circulation — tight gloves/boots/socks, boots laced too tight, non-expanding plastic boots (felt-lined ones expand when wet, which is what you want); smoking (constricts arteries); alcohol (dilates peripheral vessels, speeding heat loss); being tired, dehydrated, or hungry; direct contact with a cold object. And the single most effective way to get a local cold injury is to let yourself become generally hypothermic first.",
+     "zh": "易感因素清单：没做好防风（手套、卫生帽、围巾）；一切妨碍血循环的东西——手套/靴子/袜子太紧、鞋带绑太死、不会随水膨胀的塑料靴（毡衬靴才会吸水膨胀，这才是要的效果）；吸烟（收缩动脉）；饮酒（外周血管扩张，加速散热）；疲劳、脱水、饥饿；直接接触冰冷物体。而让局部冷伤最有效的一条路，恰恰是先让全身陷入低体温。",
+     "hard": false
+    },
+    {
+     "en": "Superficial frostbite picture: altered sensation (numb, tingling, burning); skin looks white and waxy, described as feeling like frozen halibut — firm where it's frozen, but the tissue UNDERNEATH stays soft. After thawing: cyanotic colour, hot stinging pain, capillary-leak edema, blebs within hours, and dull/throbbing pain that can linger for days to weeks.",
+     "zh": "浅表冻伤表现：感觉异常（麻木、刺痛、灼烧感）；皮肤发白发蜡，手感像「冻硬的比目鱼」——表面冻硬，但下方组织仍是软的。解冻后：皮肤转发绀、出现灼痛、毛细血管渗漏致水肿、数小时内起水疱，钝痛/搏动痛可持续数天到数周。",
+     "hard": true
+    },
+    {
+     "en": "The superficial-vs-deep call is a palpation test, not a guess: if the tissue beneath the frozen skin feels soft, it's probably superficial. If it doesn't — or if you have ANY doubt — manage it as deep frostbite. Even a shallow injury can look frozen solid at first glance, so don't trust appearance alone.",
+     "zh": "浅表还是深部，靠触诊而不是猜：冻住皮肤下方的组织摸起来软，多半是浅表；摸不出来软，或者你有任何怀疑，一律按深部冻伤处理。哪怕是浅表伤，乍看也可能像冻得梆硬，光看外观会判断错。",
+     "hard": true
+    },
+    {
+     "en": "Superficial frostbite care: get the patient out of the cold; rewarm only with body heat (steady warm-hand pressure on an ear/nose/foot, or tuck a frostbitten hand into the axilla) — never radiant or dry heat; never rub or massage the area, it only adds damage; cover any blisters with a dry sterile dressing; transport with the injured part elevated and shielded from further cold.",
+     "zh": "浅表冻伤处理：脱离冷环境；只用体温复温（温手稳定按压在耳朵/鼻子/脚上，或把冻伤的手塞进腋下）——绝不用辐射热或干热；绝不揉搓按摩，只会加重损伤；水疱用干燥无菌敷料覆盖；转运时抬高患肢并做好防寒保护。",
+     "hard": false
+    },
+    {
+     "en": "Deep frostbite usually hits hands or feet: the frozen limb looks white, yellow-white, or mottled blue-white, and is firm, cold, and numb. The real damage happens on THAWING, not freezing — especially slow thawing, because any partial refreeze forms even bigger, more destructive ice crystals. As it thaws the area turns purple and becomes excruciatingly painful; gangrene can set in within days and may require amputation.",
+     "zh": "深部冻伤多见于手脚：冻僵的肢体发白、黄白或斑驳蓝白色，质地硬、冰冷、麻木无感。真正的损伤发生在解冻的那一刻，而不是冻结时——尤其是缓慢解冻，因为中途部分复冻会形成更大、破坏力更强的冰晶。解冻过程中患处转紫、剧痛难忍；坏疽可在数天内出现，可能需要截肢。",
+     "hard": true
+    },
+    {
+     "en": "Deep frostbite's field plan hinges on two questions: is the limb still frozen when you arrive, and how far is the hospital? If it's still frozen and you're roughly within an hour of a facility: leave it frozen, pad the limb to protect it from further trauma, keep it away from the heater or any dry-heat source, never massage it (the ice crystals inside would lacerate the tissue), and transport without delay.",
+     "zh": "深部冻伤的现场决策看两条：到达时肢体还冻着吗？离医院多远？如果还冻着，且大约在 1 小时车程内能到医院：让它继续冻着，用衬垫保护患肢防止二次外伤，远离暖风口和一切干热源，绝不按摩（组织里的冰晶会把内部结构划伤），立即转运不要耽搁。",
+     "hard": true
+    },
+    {
+     "en": "Active rewarming is reserved for a limb that's already partially thawed, or a delayed evacuation — and needs a call to medical control first. Technique: a water bath at 35-40°C, IV analgesia given BEFORE immersion because thawing pain is severe; keep a thermometer in the bath and pull the limb out to top up with hot water any time it drops below 38°C. The whole process takes 10-30 minutes and is done once the area is warm to the touch and deep red or bluish — and STAYS that colour after coming out of the water. No smoking during rewarming (nicotine constricts the vessels you're trying to open back up).",
+     "zh": "主动复温只留给已经部分解冻的肢体，或转运会明显延误的情况——而且要先联系医疗指导。手法：水浴温度控制在 35-40°C，浸泡前先给静脉镇痛，因为解冻痛非常剧烈；水里放一支温度计，水温一旦降到 38°C 以下就把肢体拿出来加热水。整个过程 10-30 分钟，判断完成的标准是患处摸上去暖、呈深红或发蓝色，而且离开水后仍保持这个颜色。复温期间禁止吸烟（尼古丁会收缩你正努力打开的血管）。",
+     "hard": true
+    },
+    {
+     "en": "After rewarming: pat the limb dry (never rub), apply sterile dressings gently, and separate frostbitten fingers or toes with gauze. And the golden rule from the At-the-Scene box: never attempt prehospital rewarming if there's any chance of refreezing en route, or if the patient will have to walk on the thawed foot afterward — a refreeze does far more damage than staying frozen the whole way to hospital.",
+     "zh": "复温后：拍干（绝不揉搓）、轻柔上无菌敷料，冻伤的手指/脚趾之间用纱布隔开。现场实战铁律：如果转运途中有任何复冻风险，或者患者解冻后还要用那只脚走路，绝不在院前复温——中途复冻造成的伤害，远比一路冻着送到医院更严重。",
+     "hard": false
+    },
+    {
+     "en": "Trench foot mimics frostbite but needs no freezing temperature at all — it can develop from prolonged cool, wet exposure at temperatures up to 15.5°C, through pure conduction (wet feet lose heat roughly 25 times faster than dry ones). Chilblains are itchy red or purple lesions on the face or extremities from longer exposure to temperatures just above freezing; treatment for both is simply removal from the cold plus room-temperature rewarming — no water bath needed.",
+     "zh": "战壕足（trench foot）不需要结冰温度也能发生——长时间处于湿冷环境（温度高达 15.5°C 也可能中招），机制纯粹是传导散热（湿脚散热比干脚快约 25 倍）。冻疮（chilblains）是脸部或肢端出现的痒性红紫色皮损，源于长期暴露在略高于冰点的温度中；两者的处理都很简单——脱离寒冷环境+室温回暖即可，不需要水浴复温。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Hypothermia: The Whole-Body Slowdown",
    "titleZh": "低体温：一场全身性的减速",
    "points": [
-    {"en": "Hypothermia is defined as core body temperature (CBT) starting below 35°C, and it can be triggered by anything colder than the body itself — an elderly patient alone in a 15.5°C home, a hiker caught in a summer rainstorm, or someone submerged in icy water are all classic setups.", "zh": "低体温定义为核心体温（CBT）跌破 35°C，任何比体温低的环境都能诱发——独居老人待在 15.5°C 的家里、夏季暴雨中被困的徒步者、落入冰水中的人，都是典型场景。", "hard": true},
-    {"en": "The balance sheet: if thermogenic factors plus heat-retention factors add up to less than the cold factors, hypothermia results. Thermogenic = exertion, shivering (raises BMR 2-5 times), energy stores; heat retention = vasoconstriction, body surface area, adipose tissue; cold factors = ambient temperature, wind chill, and wetness (conduction).", "zh": "这是一笔账：产热因素+保温因素之和小于寒冷因素，低体温就发生。产热因素=运动、寒战（可使 BMR 升高 2-5 倍）、能量储备；保温因素=血管收缩、体表面积、脂肪层；寒冷因素=环境温度、风寒、潮湿（传导散热）。", "hard": true},
-    {"en": "Alcohol is historically the single biggest driver of urban hypothermia: it blunts shivering (less heat production), dilates skin vessels (more heat loss), depletes liver glycogen, and clouds the judgment needed to get out of the cold. Sedatives, tricyclics, and phenothiazines cause similar damage by interfering with CNS-mediated vasoconstriction.", "zh": "酒精历来是城市低体温症最大的推手：它压制寒战（产热变少）、扩张皮肤血管（散热变多）、耗尽肝糖原储备，还搅乱了本该让人离开寒冷环境的判断力。镇静剂、三环类抗抑郁药、吩噻嗪类药物也会干扰中枢介导的血管收缩，造成类似的损害。", "hard": true},
-    {"en": "Trauma is the biggest hidden contributor to hypothermia: hypotension and hypovolemia disrupt thermoregulation, a CNS injury or shock blocks the shivering response, and hypothermia in a trauma patient worsens coagulopathy on top of it. Simply covering a patient on cold pavement isn't enough — heat keeps conducting into the ground underneath, so get them onto a blanket or backboard first.", "zh": "创伤是低体温最容易被忽视的推手：低血压和低血容量打乱体温调节，中枢神经损伤或休克阻断寒战反应，而创伤患者的低体温还会反过来加重凝血障碍。光给躺在冷路面上的患者盖毯子还不够——热量仍在源源不断传导进地面，得先把人挪到毯子或脊柱板上再谈保暖。", "hard": false},
-    {"en": "Two staging systems disagree, and the exam expects you to know which numbers belong to which: WMS stages mild as 35-32°C, moderate 32-28°C, severe below 28°C; ILCOR/2015 ACLS instead stages mild above 34°C, moderate 34-30°C, severe below 30°C. Signs and symptoms correlate poorly with the exact CBT either way, so treat the presentation in front of you, not just a number.", "zh": "两套分级体系互不一致，考试要求你分清哪套数字对应哪套标准：WMS 分级为轻度 35-32°C、中度 32-28°C、重度低于 28°C；ILCOR/2015 版 ACLS 则是轻度高于 34°C、中度 34-30°C、重度低于 30°C。而且体征症状和具体核心体温的相关性都不强，所以要看患者的实际表现，别只盯着数字。", "hard": true},
-    {"en": "The 'umbles' — stumbles, mumbles, fumbles, grumbles — are the public-facing clue set for mild hypothermia. In an older patient, the picture can be a dead ringer for stroke: flat affect, confusion, slurred/dysarthric speech, ataxic gait — a classic misdiagnosis trap.", "zh": "「四不稳」（走不稳、说不清、抓不牢、脾气差——stumbles/mumbles/fumbles/grumbles）是轻度低体温面向公众的识别口诀。在老年患者身上，这套表现可以和卒中一模一样：表情淡漠、意识混乱、口齿不清、步态不稳——是经典的误诊陷阱。", "hard": false},
-    {"en": "Cardiovascular cascade: peripheral vasoconstriction shunts blood to the core, and the body misreads that as volume overload — triggering cold diuresis (more urine output) even though the patient is actually becoming volume-depleted. Fluid also shifts out of the vessels into the tissues, thickening the blood. Net result: worsening hypovolemia hiding behind a falsely 'full' picture.", "zh": "心血管级联反应：外周血管收缩把血液分流回核心，身体却把这误读成容量过多——触发「冷利尿」（尿量增多），而患者实际上正在丢失容量。同时液体也从血管渗到组织间隙，让血液变稠。最终结果：低血容量在一副「看似充盈」的假象背后悄悄恶化。", "hard": true},
-    {"en": "Cardiac electrical cascade as CBT falls: tachycardia first, then progressive slowing and rhythm disruption. Around 32.2°C, dysrhythmias appear — atrial fibrillation, and a distinctive Osborn (J) wave that shivering artifact can hide on the ECG. Around 28°C the heart becomes prone to ventricular fibrillation.", "zh": "核心体温下降时的心电级联：先心动过速，随后逐渐减慢并出现节律紊乱。约 32.2°C 时开始出现心律失常（心房颤动），以及特征性的 Osborn（J）波——寒战伪影可能会把它盖在心电图上看不出来。约 28°C 时，心脏开始容易发生心室颤动。", "hard": true},
-    {"en": "Textbook stance on hypothermic VF: give ONE defibrillation attempt; repeated shocks are unlikely to succeed until CBT climbs back above 30°C, so don't keep burning through shock cycles chasing a rhythm a cold heart can't hold yet.", "zh": "教材对低体温室颤的立场：只给一次除颤尝试；在核心体温回升到 30°C 以上之前，反复电击大概率不会成功，所以别对着一颗还转不回来的冷心脏一直放电。", "hard": true},
-    {"en": "Respiratory and muscular slowdown: tachypnea early, then hypoventilation later; by 32.2°C protective airway reflexes decline and oxygen consumption drops by about half. Shivering itself shuts off once CBT falls below 32.7°C — after that, cold muscles just get weaker and stiffer, taking away the patient's physical ability to self-rescue.", "zh": "呼吸和肌肉系统的减速：早期呼吸加快，后期转为通气不足；到 32.2°C 时气道保护反射减弱，耗氧量下降约一半。核心体温跌破 32.7°C 后寒战本身就会停止——之后冷肌肉只会越来越弱越来越僵，患者也就失去了自救的体力。", "hard": true},
-    {"en": "Metabolic cascade: shivering burns through glucose stores, risking hypoglycemia; falling insulin blocks further glucose use, so the body switches to fat metabolism. The liver also metabolizes drugs more slowly in the cold, meaning any drug already on board — including opioids — lasts longer and hits harder than usual.", "zh": "代谢级联反应：寒战不断消耗葡萄糖储备，有低血糖风险；胰岛素水平下降又让葡萄糖代谢难以为继，身体转而代谢脂肪。寒冷还会让肝脏代谢药物变慢，意味着体内已有的任何药物（包括阿片类）作用时间更长、效果更强。", "hard": false},
-    {"en": "Afterdrop: active EXTERNAL rewarming (hot packs, heating blankets) can paradoxically drop CBT even further, as cold stagnant blood trapped in the limbs gets flushed back to the core once those vessels open up. It's more common in chronic hypothermia and in patients with frostbitten limbs — watch for it during rewarming.", "zh": "「复温后陷」（afterdrop）：主动体表复温（热包、加热毯）反而可能让核心体温进一步下降——四肢里滞留的冷血一旦血管重新开放，就会被冲回核心。这在慢性低体温和合并肢端冻伤的患者身上更常见——复温过程中要盯着这个现象。", "hard": true},
-    {"en": "Rewarming numbers worth memorizing: commercial forced-air warming devices can rewarm at up to 2.9°C/hr, versus roughly 1.2°C/hr for warm blankets alone; warmed IV fluid should run 39-41°C (some standards specify 42°C); WMS guidance says withhold vasoactive drugs until CBT is back above 30°C.", "zh": "值得背下来的复温数字：商用强制送风复温设备最高可达 2.9°C/小时，单纯温毯只有约 1.2°C/小时；加温静脉输液温度应在 39-41°C（部分标准要求 42°C）；WMS 指南建议血管活性药物要等核心体温回升到 30°C 以上再给。", "hard": true},
-    {"en": "Withholding or ceasing resuscitation: obviously lethal injuries (decapitation, truncal transection, incineration) or a chest wall too stiff to compress mean stop, full stop. But fixed/dilated pupils, apparent rigor mortis, and dependent lividity are NOT by themselves contraindications to resuscitating a severely hypothermic patient — there is no single agreed temperature cutoff below which survival is impossible (the lowest documented save sits at 13.7°C).", "zh": "终止/放弃复苏的判断：明显致命伤（斩首、躯干离断、烧焦炭化）或胸壁僵硬到无法按压，才是真正的停止指征。而瞳孔固定散大、看似尸僵、坠积性淤斑，单独出现并不能作为放弃复苏重度低体温患者的理由——目前没有公认的「低于此温度必死」的单一界限（有记录的最低存活温度是 13.7°C）。", "hard": true},
-    {"en": "The 'rough handling causes VF' myth is widespread but never clearly proven — don't let fear of triggering VF delay airway management or moving a patient who genuinely needs it, unless your local protocol explicitly says otherwise.", "zh": "「搬动粗暴会诱发室颤」是流传很广的说法，但从未被明确证实——除非本地方案另有明文规定，不要因为怕诱发室颤就拖延气道处置或该有的搬运。", "hard": false}
+    {
+     "en": "Hypothermia is defined as core body temperature (CBT) starting below 35°C, and it can be triggered by anything colder than the body itself — an elderly patient alone in a 15.5°C home, a hiker caught in a summer rainstorm, or someone submerged in icy water are all classic setups.",
+     "zh": "低体温定义为核心体温（CBT）跌破 35°C，任何比体温低的环境都能诱发——独居老人待在 15.5°C 的家里、夏季暴雨中被困的徒步者、落入冰水中的人，都是典型场景。",
+     "hard": true
+    },
+    {
+     "en": "The balance sheet: if thermogenic factors plus heat-retention factors add up to less than the cold factors, hypothermia results. Thermogenic = exertion, shivering (raises BMR 2-5 times), energy stores; heat retention = vasoconstriction, body surface area, adipose tissue; cold factors = ambient temperature, wind chill, and wetness (conduction).",
+     "zh": "这是一笔账：产热因素+保温因素之和小于寒冷因素，低体温就发生。产热因素=运动、寒战（可使 BMR 升高 2-5 倍）、能量储备；保温因素=血管收缩、体表面积、脂肪层；寒冷因素=环境温度、风寒、潮湿（传导散热）。",
+     "hard": true
+    },
+    {
+     "en": "Alcohol is historically the single biggest driver of urban hypothermia: it blunts shivering (less heat production), dilates skin vessels (more heat loss), depletes liver glycogen, and clouds the judgment needed to get out of the cold. Sedatives, tricyclics, and phenothiazines cause similar damage by interfering with CNS-mediated vasoconstriction.",
+     "zh": "酒精历来是城市低体温症最大的推手：它压制寒战（产热变少）、扩张皮肤血管（散热变多）、耗尽肝糖原储备，还搅乱了本该让人离开寒冷环境的判断力。镇静剂、三环类抗抑郁药、吩噻嗪类药物也会干扰中枢介导的血管收缩，造成类似的损害。",
+     "hard": true
+    },
+    {
+     "en": "Trauma is the biggest hidden contributor to hypothermia: hypotension and hypovolemia disrupt thermoregulation, a CNS injury or shock blocks the shivering response, and hypothermia in a trauma patient worsens coagulopathy on top of it. Simply covering a patient on cold pavement isn't enough — heat keeps conducting into the ground underneath, so get them onto a blanket or backboard first.",
+     "zh": "创伤是低体温最容易被忽视的推手：低血压和低血容量打乱体温调节，中枢神经损伤或休克阻断寒战反应，而创伤患者的低体温还会反过来加重凝血障碍。光给躺在冷路面上的患者盖毯子还不够——热量仍在源源不断传导进地面，得先把人挪到毯子或脊柱板上再谈保暖。",
+     "hard": false
+    },
+    {
+     "en": "Two staging systems disagree, and the exam expects you to know which numbers belong to which: WMS stages mild as 35-32°C, moderate 32-28°C, severe below 28°C; ILCOR/2015 ACLS instead stages mild above 34°C, moderate 34-30°C, severe below 30°C. Signs and symptoms correlate poorly with the exact CBT either way, so treat the presentation in front of you, not just a number.",
+     "zh": "两套分级体系互不一致，考试要求你分清哪套数字对应哪套标准：WMS 分级为轻度 35-32°C、中度 32-28°C、重度低于 28°C；ILCOR/2015 版 ACLS 则是轻度高于 34°C、中度 34-30°C、重度低于 30°C。而且体征症状和具体核心体温的相关性都不强，所以要看患者的实际表现，别只盯着数字。",
+     "hard": true
+    },
+    {
+     "en": "The 'umbles' — stumbles, mumbles, fumbles, grumbles — are the public-facing clue set for mild hypothermia. In an older patient, the picture can be a dead ringer for stroke: flat affect, confusion, slurred/dysarthric speech, ataxic gait — a classic misdiagnosis trap.",
+     "zh": "「四不稳」（走不稳、说不清、抓不牢、脾气差——stumbles/mumbles/fumbles/grumbles）是轻度低体温面向公众的识别口诀。在老年患者身上，这套表现可以和卒中一模一样：表情淡漠、意识混乱、口齿不清、步态不稳——是经典的误诊陷阱。",
+     "hard": false
+    },
+    {
+     "en": "Cardiovascular cascade: peripheral vasoconstriction shunts blood to the core, and the body misreads that as volume overload — triggering cold diuresis (more urine output) even though the patient is actually becoming volume-depleted. Fluid also shifts out of the vessels into the tissues, thickening the blood. Net result: worsening hypovolemia hiding behind a falsely 'full' picture.",
+     "zh": "心血管级联反应：外周血管收缩把血液分流回核心，身体却把这误读成容量过多——触发「冷利尿」（尿量增多），而患者实际上正在丢失容量。同时液体也从血管渗到组织间隙，让血液变稠。最终结果：低血容量在一副「看似充盈」的假象背后悄悄恶化。",
+     "hard": true
+    },
+    {
+     "en": "Cardiac electrical cascade as CBT falls: tachycardia first, then progressive slowing and rhythm disruption. Around 32.2°C, dysrhythmias appear — atrial fibrillation, and a distinctive Osborn (J) wave that shivering artifact can hide on the ECG. Around 28°C the heart becomes prone to ventricular fibrillation.",
+     "zh": "核心体温下降时的心电级联：先心动过速，随后逐渐减慢并出现节律紊乱。约 32.2°C 时开始出现心律失常（心房颤动），以及特征性的 Osborn（J）波——寒战伪影可能会把它盖在心电图上看不出来。约 28°C 时，心脏开始容易发生心室颤动。",
+     "hard": true
+    },
+    {
+     "en": "Textbook stance on hypothermic VF: give ONE defibrillation attempt; repeated shocks are unlikely to succeed until CBT climbs back above 30°C, so don't keep burning through shock cycles chasing a rhythm a cold heart can't hold yet.",
+     "zh": "教材对低体温室颤的立场：只给一次除颤尝试；在核心体温回升到 30°C 以上之前，反复电击大概率不会成功，所以别对着一颗还转不回来的冷心脏一直放电。",
+     "hard": true
+    },
+    {
+     "en": "Respiratory and muscular slowdown: tachypnea early, then hypoventilation later; by 32.2°C protective airway reflexes decline and oxygen consumption drops by about half. Shivering itself shuts off once CBT falls below 32.7°C — after that, cold muscles just get weaker and stiffer, taking away the patient's physical ability to self-rescue.",
+     "zh": "呼吸和肌肉系统的减速：早期呼吸加快，后期转为通气不足；到 32.2°C 时气道保护反射减弱，耗氧量下降约一半。核心体温跌破 32.7°C 后寒战本身就会停止——之后冷肌肉只会越来越弱越来越僵，患者也就失去了自救的体力。",
+     "hard": true
+    },
+    {
+     "en": "Metabolic cascade: shivering burns through glucose stores, risking hypoglycemia; falling insulin blocks further glucose use, so the body switches to fat metabolism. The liver also metabolizes drugs more slowly in the cold, meaning any drug already on board — including opioids — lasts longer and hits harder than usual.",
+     "zh": "代谢级联反应：寒战不断消耗葡萄糖储备，有低血糖风险；胰岛素水平下降又让葡萄糖代谢难以为继，身体转而代谢脂肪。寒冷还会让肝脏代谢药物变慢，意味着体内已有的任何药物（包括阿片类）作用时间更长、效果更强。",
+     "hard": false
+    },
+    {
+     "en": "Afterdrop: active EXTERNAL rewarming (hot packs, heating blankets) can paradoxically drop CBT even further, as cold stagnant blood trapped in the limbs gets flushed back to the core once those vessels open up. It's more common in chronic hypothermia and in patients with frostbitten limbs — watch for it during rewarming.",
+     "zh": "「复温后陷」（afterdrop）：主动体表复温（热包、加热毯）反而可能让核心体温进一步下降——四肢里滞留的冷血一旦血管重新开放，就会被冲回核心。这在慢性低体温和合并肢端冻伤的患者身上更常见——复温过程中要盯着这个现象。",
+     "hard": true
+    },
+    {
+     "en": "Rewarming numbers worth memorizing: commercial forced-air warming devices can rewarm at up to 2.9°C/hr, versus roughly 1.2°C/hr for warm blankets alone; warmed IV fluid should run 39-41°C (some standards specify 42°C); WMS guidance says withhold vasoactive drugs until CBT is back above 30°C.",
+     "zh": "值得背下来的复温数字：商用强制送风复温设备最高可达 2.9°C/小时，单纯温毯只有约 1.2°C/小时；加温静脉输液温度应在 39-41°C（部分标准要求 42°C）；WMS 指南建议血管活性药物要等核心体温回升到 30°C 以上再给。",
+     "hard": true
+    },
+    {
+     "en": "Withholding or ceasing resuscitation: obviously lethal injuries (decapitation, truncal transection, incineration) or a chest wall too stiff to compress mean stop, full stop. But fixed/dilated pupils, apparent rigor mortis, and dependent lividity are NOT by themselves contraindications to resuscitating a severely hypothermic patient — there is no single agreed temperature cutoff below which survival is impossible (the lowest documented save sits at 13.7°C).",
+     "zh": "终止/放弃复苏的判断：明显致命伤（斩首、躯干离断、烧焦炭化）或胸壁僵硬到无法按压，才是真正的停止指征。而瞳孔固定散大、看似尸僵、坠积性淤斑，单独出现并不能作为放弃复苏重度低体温患者的理由——目前没有公认的「低于此温度必死」的单一界限（有记录的最低存活温度是 13.7°C）。",
+     "hard": true
+    },
+    {
+     "en": "The 'rough handling causes VF' myth is widespread but never clearly proven — don't let fear of triggering VF delay airway management or moving a patient who genuinely needs it, unless your local protocol explicitly says otherwise.",
+     "zh": "「搬动粗暴会诱发室颤」是流传很广的说法，但从未被明确证实——除非本地方案另有明文规定，不要因为怕诱发室颤就拖延气道处置或该有的搬运。",
+     "hard": false
+    }
    ]
   },
   {
    "titleEn": "Drowning or Submersion: One Continuum, Not Two Diagnoses",
    "titleZh": "溺水：一条连续谱，不是两种诊断",
    "points": [
-    {"en": "The modern, official definition (2002 World Congress on Drowning): drowning is 'the process of experiencing respiratory impairment from submersion in liquid.' The term 'near drowning' has been formally retired — whether the patient walks away, survives with injury, or dies, it is all just drowning at different points on one continuum.", "zh": "现行官方定义（2002 年首届世界溺水大会）：溺水是「因浸没于液体中而经历呼吸功能损害的过程」。「近乎溺水」（near drowning）这个说法已被正式弃用——不管患者最后毫发无损、带伤存活还是死亡，都统称溺水，只是落在同一条连续谱上的不同位置。", "hard": false},
-    {"en": "Highest-risk groups: toddlers, youth aged 15-19, people with seizure disorders, recreational anglers; alcohol plus no personal flotation device is a recurring combination in boating deaths. By setting, toddlers tend to drown in bathtubs, school-age kids in pools, teens in lakes or rivers — though realistically it can happen to anyone, anywhere.", "zh": "高危人群：幼儿、15-19 岁青少年、有癫痫病史者、休闲垂钓者；饮酒+不穿救生衣是船只相关溺亡里反复出现的组合。按场景看，幼儿多溺于浴缸，学龄儿童多溺于泳池，青少年多溺于湖泊河流——但现实中任何人、任何地方都可能发生。", "hard": false},
-    {"en": "The drowning continuum runs: breath-holding → laryngospasm → CO2 buildup with inability to oxygenate → respiratory and cardiac arrest from multi-organ hypoxia. A patient can be pulled back from resuscitation at any point along this ladder — nothing about the sequence is fixed or irreversible until it is.", "zh": "溺水连续谱走向：屏气 → 喉痉挛 → 二氧化碳蓄积、无法氧合 → 多器官缺氧引发呼吸心跳骤停。患者在这条链上的任何一点都可能被救回来——在真正不可逆之前，没有哪一步是注定的。", "hard": false},
-    {"en": "Two branches after the initial gasp: 'dry drowning' (10-15% of drowning deaths) — laryngospasm seals the airway and the patient essentially suffocates with dry lungs; 'wet drowning' — water reaches the alveoli, triggering bronchoconstriction and pulmonary vessel constriction that stiffens the lungs (reduced compliance). Freshwater-vs-saltwater electrolyte theories make no clinically useful difference to prehospital management — treat them the same.", "zh": "初始呛咳之后分两条路：「干性溺水」（占溺水死亡的 10%-15%）——喉痉挛封住气道，患者实质上是在肺仍干燥的情况下窒息而死；「湿性溺水」——水进入肺泡，引发支气管收缩和肺血管收缩，让肺变「硬」（顺应性下降）。淡水 vs 海水的电解质理论在临床上没有实际处置意义——两者按同一套处理。", "hard": true},
-    {"en": "Airway and breathing priorities: never do manual thrusts (Heimlich) to clear lung water — it just pushes stomach contents into the lungs instead. Start BVM plus oxygen right away while checking for a pulse. Vomiting during resuscitation is extremely common (up to 86% of patients receiving chest compressions in one study), so have suction ready and standing by.", "zh": "气道呼吸优先级：绝不用海姆立克手法排出肺里的水——那只会把胃内容物挤压进肺里。立即开始球囊面罩+给氧，同时判断脉搏。复苏过程中呕吐极其常见（一项研究里接受胸外按压的患者中高达 86% 呕吐），吸引装置必须随时待命。", "hard": true},
-    {"en": "Spinal precautions are NOT routine for drowning — reserve them for a history of diving, waterslide use, obvious trauma, or a credible story involving alcohol. Otherwise, don't let an unnecessary collar delay the airway work that actually matters here.", "zh": "脊柱防护对溺水患者不是常规操作——只留给有跳水史、玩水滑梯、明显外伤，或有可信饮酒史的情况。其他情况下，别让不必要的颈托拖慢真正要紧的气道处置。", "hard": false},
-    {"en": "PEEP is the specific fix for drowning-pattern lung injury: it holds flooded alveoli open and pushes fluid back into the interstitium and capillaries. Use it for intubated patients or long-transport BVM cases — but the simple CPAP devices used for other respiratory complaints are NOT appropriate here, especially with any decrease in level of consciousness.", "zh": "呼气末正压（PEEP）是针对溺水肺损伤的专属对策：撑开被淹没的肺泡，把液体推回间质和毛细血管。用于已插管患者或长途转运的球囊面罩通气患者——但用于其他呼吸主诉的简易 CPAP 设备在这里不适用，尤其是意识水平有任何下降时更不能用。", "hard": false},
-    {"en": "Prognosis is a race against the clock, not a coin flip: submersion under 5 minutes carries about an 85% chance of a good outcome; over 10 minutes, that drops to about 4%; over 25 minutes, outcomes are almost uniformly poor. Cold water and pediatric patients are the exception to keep working for — full neurologic recovery has been documented after more than an hour submerged in icy water.", "zh": "预后是一场和时间的赛跑，不是抛硬币：浸没不到 5 分钟，良好预后约 85%；超过 10 分钟，骤降到约 4%；超过 25 分钟，几乎都是不良预后。冷水和儿童患者是值得继续全力抢救的例外——曾有浸没冰水超过 1 小时、最终完全恢复神经功能的病例记录。", "hard": true},
-    {"en": "Every submersion patient goes to hospital, even the ones who look completely fine on scene — ARDS, chemical/bacterial pneumonitis, and renal failure can all surface hours to days later behind nothing more than a subtle cough or mild tachypnea. Measure and manage core temperature throughout, since hypothermia frequently rides along with drowning and changes the resuscitation algorithm you should be using.", "zh": "每一个溺水患者都要送院，哪怕现场看起来完全正常——急性呼吸窘迫综合征、化学/细菌性肺炎、肾衰竭都可能在数小时到数天后才浮现，起初只有一声轻咳或轻微呼吸加快。全程测量并处理核心体温，因为低体温经常和溺水结伴出现，而且会改变你该用哪套复苏流程。", "hard": false}
+    {
+     "en": "The modern, official definition (2002 World Congress on Drowning): drowning is 'the process of experiencing respiratory impairment from submersion in liquid.' The term 'near drowning' has been formally retired — whether the patient walks away, survives with injury, or dies, it is all just drowning at different points on one continuum.",
+     "zh": "现行官方定义（2002 年首届世界溺水大会）：溺水是「因浸没于液体中而经历呼吸功能损害的过程」。「近乎溺水」（near drowning）这个说法已被正式弃用——不管患者最后毫发无损、带伤存活还是死亡，都统称溺水，只是落在同一条连续谱上的不同位置。",
+     "hard": false
+    },
+    {
+     "en": "Highest-risk groups: toddlers, youth aged 15-19, people with seizure disorders, recreational anglers; alcohol plus no personal flotation device is a recurring combination in boating deaths. By setting, toddlers tend to drown in bathtubs, school-age kids in pools, teens in lakes or rivers — though realistically it can happen to anyone, anywhere.",
+     "zh": "高危人群：幼儿、15-19 岁青少年、有癫痫病史者、休闲垂钓者；饮酒+不穿救生衣是船只相关溺亡里反复出现的组合。按场景看，幼儿多溺于浴缸，学龄儿童多溺于泳池，青少年多溺于湖泊河流——但现实中任何人、任何地方都可能发生。",
+     "hard": false
+    },
+    {
+     "en": "The drowning continuum runs: breath-holding → laryngospasm → CO2 buildup with inability to oxygenate → respiratory and cardiac arrest from multi-organ hypoxia. A patient can be pulled back from resuscitation at any point along this ladder — nothing about the sequence is fixed or irreversible until it is.",
+     "zh": "溺水连续谱走向：屏气 → 喉痉挛 → 二氧化碳蓄积、无法氧合 → 多器官缺氧引发呼吸心跳骤停。患者在这条链上的任何一点都可能被救回来——在真正不可逆之前，没有哪一步是注定的。",
+     "hard": false
+    },
+    {
+     "en": "Two branches after the initial gasp: 'dry drowning' (10-15% of drowning deaths) — laryngospasm seals the airway and the patient essentially suffocates with dry lungs; 'wet drowning' — water reaches the alveoli, triggering bronchoconstriction and pulmonary vessel constriction that stiffens the lungs (reduced compliance). Freshwater-vs-saltwater electrolyte theories make no clinically useful difference to prehospital management — treat them the same.",
+     "zh": "初始呛咳之后分两条路：「干性溺水」（占溺水死亡的 10%-15%）——喉痉挛封住气道，患者实质上是在肺仍干燥的情况下窒息而死；「湿性溺水」——水进入肺泡，引发支气管收缩和肺血管收缩，让肺变「硬」（顺应性下降）。淡水 vs 海水的电解质理论在临床上没有实际处置意义——两者按同一套处理。",
+     "hard": true
+    },
+    {
+     "en": "Airway and breathing priorities: never do manual thrusts (Heimlich) to clear lung water — it just pushes stomach contents into the lungs instead. Start BVM plus oxygen right away while checking for a pulse. Vomiting during resuscitation is extremely common (up to 86% of patients receiving chest compressions in one study), so have suction ready and standing by.",
+     "zh": "气道呼吸优先级：绝不用海姆立克手法排出肺里的水——那只会把胃内容物挤压进肺里。立即开始球囊面罩+给氧，同时判断脉搏。复苏过程中呕吐极其常见（一项研究里接受胸外按压的患者中高达 86% 呕吐），吸引装置必须随时待命。",
+     "hard": true
+    },
+    {
+     "en": "Spinal precautions are NOT routine for drowning — reserve them for a history of diving, waterslide use, obvious trauma, or a credible story involving alcohol. Otherwise, don't let an unnecessary collar delay the airway work that actually matters here.",
+     "zh": "脊柱防护对溺水患者不是常规操作——只留给有跳水史、玩水滑梯、明显外伤，或有可信饮酒史的情况。其他情况下，别让不必要的颈托拖慢真正要紧的气道处置。",
+     "hard": false
+    },
+    {
+     "en": "PEEP is the specific fix for drowning-pattern lung injury: it holds flooded alveoli open and pushes fluid back into the interstitium and capillaries. Use it for intubated patients or long-transport BVM cases — but the simple CPAP devices used for other respiratory complaints are NOT appropriate here, especially with any decrease in level of consciousness.",
+     "zh": "呼气末正压（PEEP）是针对溺水肺损伤的专属对策：撑开被淹没的肺泡，把液体推回间质和毛细血管。用于已插管患者或长途转运的球囊面罩通气患者——但用于其他呼吸主诉的简易 CPAP 设备在这里不适用，尤其是意识水平有任何下降时更不能用。",
+     "hard": false
+    },
+    {
+     "en": "Prognosis is a race against the clock, not a coin flip: submersion under 5 minutes carries about an 85% chance of a good outcome; over 10 minutes, that drops to about 4%; over 25 minutes, outcomes are almost uniformly poor. Cold water and pediatric patients are the exception to keep working for — full neurologic recovery has been documented after more than an hour submerged in icy water.",
+     "zh": "预后是一场和时间的赛跑，不是抛硬币：浸没不到 5 分钟，良好预后约 85%；超过 10 分钟，骤降到约 4%；超过 25 分钟，几乎都是不良预后。冷水和儿童患者是值得继续全力抢救的例外——曾有浸没冰水超过 1 小时、最终完全恢复神经功能的病例记录。",
+     "hard": true
+    },
+    {
+     "en": "Every submersion patient goes to hospital, even the ones who look completely fine on scene — ARDS, chemical/bacterial pneumonitis, and renal failure can all surface hours to days later behind nothing more than a subtle cough or mild tachypnea. Measure and manage core temperature throughout, since hypothermia frequently rides along with drowning and changes the resuscitation algorithm you should be using.",
+     "zh": "每一个溺水患者都要送院，哪怕现场看起来完全正常——急性呼吸窘迫综合征、化学/细菌性肺炎、肾衰竭都可能在数小时到数天后才浮现，起初只有一声轻咳或轻微呼吸加快。全程测量并处理核心体温，因为低体温经常和溺水结伴出现，而且会改变你该用哪套复苏流程。",
+     "hard": false
+    }
    ]
   },
   {
    "titleEn": "Diving Emergencies: Three Gas Laws Run the Whole Chapter",
    "titleZh": "潜水急症：三条气体定律统管全章",
    "points": [
-    {"en": "Four diving modes worth knowing as vocabulary: scuba (self-contained tank on the back), breath-hold/free diving (no equipment beyond maybe a snorkel), surface-tended diving (air piped down from the surface through a tube), and saturation diving (staying at depth for extended periods).", "zh": "四种潜水方式（词汇考点）：水肺潜水（背负式自给气瓶）、屏气/自由潜水（除了可能带的呼吸管外不需要装备）、水面供气潜水（气体经软管从水面输送）、饱和潜水（长时间停留在深处）。", "hard": false},
-    {"en": "Pressure-depth math: every 33 feet of seawater (fsw) adds 14.7 psi, equal to 1 more ATA — sea level is 1 ATA, 33 fsw is 2 ATA, 66 fsw is 3 ATA. Most recreational scuba happens between 60 and 120 fsw. Body tissue (mostly water) barely compresses, but gas-filled spaces — lungs, sinuses, GI tract, ears — absolutely do.", "zh": "深度换算：每下潜 33 英尺海水（fsw），压力增加 14.7 psi，相当于多 1 个大气压（ATA）——海平面是 1 ATA，33 fsw 是 2 ATA，66 fsw 是 3 ATA。大多数休闲水肺潜水在 60-120 fsw 之间进行。人体组织（主要是水）几乎不可压缩，但含气腔隙——肺、鼻窦、消化道、耳——完全会被压缩。", "hard": true},
-    {"en": "The three gas laws that explain everything in this chapter: Boyle's law (PV = k — pressure and gas volume are inversely proportional, which is why air spaces shrink on descent and expand on ascent); Dalton's law (the total pressure of a gas mixture equals the sum of each gas's own partial pressure — explains nitrogen narcosis, oxygen toxicity, and why an oximeter reads normal even during narcosis); Henry's law (dissolved gas is proportional to the partial pressure above the liquid — explains why nitrogen bubbles OUT of tissue on ascent, like a shaken soda bottle being opened).", "zh": "本章几乎所有现象都靠这三条气体定律解释：波义耳定律（PV=k——压力与气体体积成反比，所以气腔下潜时缩小、上升时膨胀）；道尔顿定律（混合气体总压等于各气体分压之和——解释了氮麻醉、氧中毒，以及为什么麻醉发作时血氧仪读数依然正常）；亨利定律（溶解在液体中的气体量与液面上方该气体的分压成正比——解释了上升过程中氮气为何会从组织里「冒泡」跑出来，就像摇过的汽水一开盖）。", "hard": true},
-    {"en": "Diving history essentials: timing of symptom onset relative to ascent (DCS shows up within about an hour of surfacing, certainly within 6 hours; symptoms within 10 minutes point toward air embolism instead, especially with loss of consciousness); tank type (Nitrox tanks are marked with yellow-and-green stripes); number of dives in the past 72 hours with depth, bottom time, and surface interval for each; and whether a dive computer or safety stops were used.", "zh": "潜水史要问的重点：症状相对于上升的出现时机（减压病通常在出水后 1 小时内出现，最迟不超过 6 小时；10 分钟内出现的症状则指向气体栓塞，尤其伴意识丧失时）；气瓶类型（Nitrox 富氧气瓶带黄绿条纹标识）；过去 72 小时的潜水次数，及每次的深度、水下时间、水面间隔；是否用了潜水电脑、是否做了安全停留。", "hard": true},
-    {"en": "Barotrauma is pressure-imbalance injury to any gas-filled body space (sinuses, middle/inner ear, teeth), and happens two ways — gas compression on descent ('squeeze') or gas expansion on ascent. A blocked eustachian tube or a failed Valsalva causes classic middle-ear squeeze: severe ear pain, and if the eardrum ruptures, nausea/vomiting/vertigo (worse in cold water) that can trigger panic and a dangerous rapid ascent.", "zh": "气压伤是任何含气腔隙（鼻窦、中耳/内耳、牙齿）因压力失衡受的伤，有两种成因——下潜时气体被压缩（「挤压伤」）或上升时气体膨胀。咽鼓管堵塞或瓦式动作失败会造成经典的中耳挤压伤：剧烈耳痛，若鼓膜破裂还会出现恶心呕吐眩晕（冷水中更明显），进而诱发恐慌和危险的快速上升。", "hard": false},
-    {"en": "Nitrogen narcosis ('rapture of the deep'): breathing compressed nitrogen at depth causes euphoria, reckless behaviour, inappropriate laughter, and tingling in the lips/gums/legs. Onset is around 100 fsw, pronounced by 150 fsw — exactly why sport divers shouldn't use plain compressed air below 120 fsw. The only real fix is a controlled ascent (to lower the nitrogen partial pressure) or switching to a Nitrox mix.", "zh": "氮麻醉（「深海狂喜」）：在深处呼吸压缩氮气会导致欣快感、行为鲁莽、无端发笑、嘴唇/牙龈/腿部刺痛。约 100 fsw 开始出现，150 fsw 时明显加重——这正是休闲潜水员不该在 120 fsw 以下使用普通压缩空气的原因。唯一有效的解法是可控上升（降低氮分压）或改用 Nitrox 混合气。", "hard": true},
-    {"en": "Pulmonary overpressurization syndrome (POPS, 'burst lung') happens when a panicked diver holds their breath during an emergency ascent instead of exhaling continuously; trapped lung gas expands and can rupture alveoli, causing pneumothorax, mediastinal/subcutaneous emphysema, alveolar hemorrhage, or arterial gas embolism (AGE). The danger is greatest near the surface, where the relative pressure/volume swing is biggest — even holding a breath for the last 2 m can do it. COPD and asthma raise the risk further.", "zh": "肺过度膨胀综合征（POPS，「爆肺」）发生在惊慌的潜水员上升时屏住呼吸而不是持续呼气；被困的肺内气体膨胀，可造成肺泡破裂，引发气胸、纵隔/皮下气肿、肺泡出血，或动脉气体栓塞（AGE）。危险在接近水面时最大，因为相对压力/体积变化在那里最剧烈——哪怕只是最后 2 米屏住呼吸都可能致伤。COPD 和哮喘患者风险更高。", "hard": false},
-    {"en": "POPS clinical picture: fullness in the throat, painful swallowing, dyspnea, substernal chest pain, a hoarse or brassy voice, palpable subcutaneous air above the clavicles, and a crunching sound timed with the heartbeat (mediastinal crunch) on auscultation. Always check for unequal breath sounds and hyperresonance — pneumothorax stays on the differential.", "zh": "POPS 的临床表现：咽喉部胀满感、吞咽疼痛、呼吸困难、胸骨后疼痛、声音嘶哑或带金属音、锁骨上方可触及皮下气肿，听诊可闻及与心跳同步的捻发音（纵隔捻发音）。始终要检查双侧呼吸音是否对称、有无过清音——气胸永远留在鉴别清单上。", "hard": false},
-    {"en": "AGE is the most dangerous form of POPS — second only to drowning as a cause of diver death. Ruptured alveolar bubbles travel through the pulmonary veins into the left heart, then either into the coronary arteries (mimicking a heart attack, including arrest) or — more often, since a diver's head is usually the highest point during ascent — straight into the cerebral circulation. Any loss of consciousness right after a dive is an air embolism until proven otherwise.", "zh": "动脉气体栓塞（AGE）是 POPS 里最危险的一种——是仅次于溺水的潜水员死因。破裂肺泡产生的气泡经肺静脉进入左心，之后要么冲进冠状动脉（表现类似心肌梗死甚至骤停），要么——因为上升时潜水员的头通常是身体最高点，气泡更容易——直冲脑循环。潜水后立刻意识丧失，在排除之前一律按气体栓塞处理。", "hard": true},
-    {"en": "AGE's clinical picture is dramatic and fast: usually within seconds to minutes, almost always within 10 minutes of surfacing. It can mimic almost any neurologic emergency — limb weakness or paralysis, seizure, unresponsiveness, paresthesia, visual disturbance, deafness, altered mental status.", "zh": "AGE 的临床表现来得又快又猛：通常在数秒到数分钟内出现，几乎都在出水后 10 分钟以内。它可以模仿几乎任何神经系统急症——肢体无力或瘫痪、抽搐、意识丧失、感觉异常、视觉障碍、耳聋、意识状态改变。", "hard": true},
-    {"en": "AGE/POPS field care: 100% oxygen by nonrebreather; if bagging is needed, avoid PEEP here (it works against off-gassing); position is generally supine, but LEFT LATERAL RECUMBENT if air embolism is suspected; if intubating for a patient headed to hyperbaric therapy, fill the tube cuff with SALINE instead of air (an air-filled cuff would expand or shrink as chamber pressure changes); ground transport beats air transport, since cabin altitude/pressure changes worsen bubble expansion.", "zh": "AGE/POPS 的现场处置：非再呼吸面罩给纯氧；如需球囊通气，这里要避免用 PEEP（会妨碍气体排出）；体位一般仰卧，怀疑气体栓塞时改左侧卧位；如果患者要送高压氧治疗需要插管，气囊要用生理盐水而不是空气充填（空气气囊会随舱内压力变化而膨胀或收缩）；地面转运优于空运，因为机舱高度/压力变化会让气泡进一步膨胀。", "hard": true},
-    {"en": "Decompression sickness (DCS, 'the bends'): nitrogen dissolved in the tissue during descent comes back out of solution too fast during ascent and forms bubbles, causing damage both mechanically (blocking circulation) and chemically (triggering inflammation). The CNS and spinal cord take the worst hit because nitrogen is fat-soluble. A patent foramen ovale (present in up to a third of the general population) lets venous bubbles bypass the lungs entirely and reach body tissue directly, raising DCS risk further; other risk factors include obesity, dehydration, fatigue, multiple dives without enough off-gassing time between them, and flying within 12-14 hours of diving.", "zh": "减压病（DCS，「潜水夫病」）：下潜时溶入组织的氮气，在上升时来不及正常排出、以气泡形式重新析出，既机械性阻塞循环，又化学性触发炎症反应。中枢神经和脊髓因为氮气高度脂溶性而受害最重。卵圆孔未闭（占普通人群多达三分之一）会让静脉里的气泡绕过肺直接进入体循环，进一步推高减压病风险；其他风险因素包括肥胖、脱水、疲劳、短时间内多次潜水未留够排氮时间，以及潜水后 12-14 小时内乘坐飞机。", "hard": true},
-    {"en": "DCS type I vs type II: Type I is the mild form, limited to skin, lymphatics, and the musculoskeletal system — joint pain (the most common symptom, can double a diver over) plus mottled, itchy skin. Type II covers everything else and is the more serious category.", "zh": "DCS 分 I 型和 II 型：I 型是轻型，仅限皮肤、淋巴系统和肌肉骨骼系统——关节痛（最常见症状，能把人疼得弯下腰）加上斑驳发痒的皮肤。II 型涵盖其他所有系统，属于更严重的一类。", "hard": false},
-    {"en": "Telling DCS from AGE in the field is mostly academic since treatment is basically the same either way — get to a hyperbaric facility in the best condition possible. As a rough pattern: AGE symptoms read as cerebral, DCS symptoms read as spinal cord, and any loss of consciousness leans toward AGE. DCS-specific field care adds: no inhaled nitrous oxide/oxygen mix (Nitronox) for pain — it will expand existing bubbles; target urine output 1-2 mL/kg/hr on long transports; call the Divers Alert Network (DAN) if the nearest hyperbaric facility is unclear.", "zh": "在院前区分 DCS 和 AGE 意义有限，因为处置基本一致——尽量以最佳状态送到高压氧中心。粗略规律是：AGE 症状偏脑部表现，DCS 症状偏脊髓表现，出现意识丧失更倾向 AGE。DCS 特有的处置要点：禁用吸入性一氧化二氮/氧气混合气（Nitronox）镇痛——会让已有的气泡膨胀；长途转运时尿量目标 1-2 mL/kg/小时；不确定最近的高压氧设施在哪就联系潜水员警报网络（DAN）。", "hard": true},
-    {"en": "Other gas hazards: divers using nitrogen-oxygen blend tanks get less DCS risk (less nitrogen breathed) but MORE oxygen toxicity risk — a CNS emergency causing dizziness, incoordination, confusion, twitching/paresthesia, and underwater seizures. Contaminated compressed air (carbon monoxide/carbon dioxide from a malfunctioning compressor) causes symptoms FAST, during or right after breathing it — unlike DCS, which shows up at or after surfacing, a useful timing clue to tell the two apart.", "zh": "其他气体隐患：使用氮氧混合气瓶的潜水员减压病风险更低（吸入氮气更少），但氧中毒风险更高——这是一种中枢神经系统急症，表现为头晕、协调障碍、意识混乱、抽动/感觉异常、水下抽搐。压缩空气受污染（压缩机故障导致的一氧化碳/二氧化碳混入）会在呼吸期间或呼吸后立刻发作——不像 DCS 要在出水时或出水后才出现，这个时间线索有助于两者鉴别。", "hard": false},
-    {"en": "Shallow water blackout: hyperventilating before a breath-hold dive lowers PaCO2 (suppressing the urge to breathe) while PaO2 stays high enough at depth to keep the swimmer conscious; on ascent, PaO2 crashes back down before the CO2 drive can kick in, causing blackout right near the surface — classically seen in adolescent boys competing to hold their breath longest. Treatment is the same as for any other drowning.", "zh": "浅水昏迷：屏气潜水前过度换气会降低 PaCO2（压制呼吸冲动），而在深处 PaO2 仍足够高，能维持游泳者的意识；上升时 PaO2 骤降得比二氧化碳驱动恢复得更快，导致快到水面时突然昏迷——典型见于比谁能憋气更久的青少年男孩。处理方式和其他溺水一样。", "hard": true}
+    {
+     "en": "Four diving modes worth knowing as vocabulary: scuba (self-contained tank on the back), breath-hold/free diving (no equipment beyond maybe a snorkel), surface-tended diving (air piped down from the surface through a tube), and saturation diving (staying at depth for extended periods).",
+     "zh": "四种潜水方式（词汇考点）：水肺潜水（背负式自给气瓶）、屏气/自由潜水（除了可能带的呼吸管外不需要装备）、水面供气潜水（气体经软管从水面输送）、饱和潜水（长时间停留在深处）。",
+     "hard": false
+    },
+    {
+     "en": "Pressure-depth math: every 33 feet of seawater (fsw) adds 14.7 psi, equal to 1 more ATA — sea level is 1 ATA, 33 fsw is 2 ATA, 66 fsw is 3 ATA. Most recreational scuba happens between 60 and 120 fsw. Body tissue (mostly water) barely compresses, but gas-filled spaces — lungs, sinuses, GI tract, ears — absolutely do.",
+     "zh": "深度换算：每下潜 33 英尺海水（fsw），压力增加 14.7 psi，相当于多 1 个大气压（ATA）——海平面是 1 ATA，33 fsw 是 2 ATA，66 fsw 是 3 ATA。大多数休闲水肺潜水在 60-120 fsw 之间进行。人体组织（主要是水）几乎不可压缩，但含气腔隙——肺、鼻窦、消化道、耳——完全会被压缩。",
+     "hard": true
+    },
+    {
+     "en": "The three gas laws that explain everything in this chapter: Boyle's law (PV = k — pressure and gas volume are inversely proportional, which is why air spaces shrink on descent and expand on ascent); Dalton's law (the total pressure of a gas mixture equals the sum of each gas's own partial pressure — explains nitrogen narcosis, oxygen toxicity, and why an oximeter reads normal even during narcosis); Henry's law (dissolved gas is proportional to the partial pressure above the liquid — explains why nitrogen bubbles OUT of tissue on ascent, like a shaken soda bottle being opened).",
+     "zh": "本章几乎所有现象都靠这三条气体定律解释：波义耳定律（PV=k——压力与气体体积成反比，所以气腔下潜时缩小、上升时膨胀）；道尔顿定律（混合气体总压等于各气体分压之和——解释了氮麻醉、氧中毒，以及为什么麻醉发作时血氧仪读数依然正常）；亨利定律（溶解在液体中的气体量与液面上方该气体的分压成正比——解释了上升过程中氮气为何会从组织里「冒泡」跑出来，就像摇过的汽水一开盖）。",
+     "hard": true
+    },
+    {
+     "en": "Diving history essentials: timing of symptom onset relative to ascent (DCS shows up within about an hour of surfacing, certainly within 6 hours; symptoms within 10 minutes point toward air embolism instead, especially with loss of consciousness); tank type (Nitrox tanks are marked with yellow-and-green stripes); number of dives in the past 72 hours with depth, bottom time, and surface interval for each; and whether a dive computer or safety stops were used.",
+     "zh": "潜水史要问的重点：症状相对于上升的出现时机（减压病通常在出水后 1 小时内出现，最迟不超过 6 小时；10 分钟内出现的症状则指向气体栓塞，尤其伴意识丧失时）；气瓶类型（Nitrox 富氧气瓶带黄绿条纹标识）；过去 72 小时的潜水次数，及每次的深度、水下时间、水面间隔；是否用了潜水电脑、是否做了安全停留。",
+     "hard": true
+    },
+    {
+     "en": "Barotrauma is pressure-imbalance injury to any gas-filled body space (sinuses, middle/inner ear, teeth), and happens two ways — gas compression on descent ('squeeze') or gas expansion on ascent. A blocked eustachian tube or a failed Valsalva causes classic middle-ear squeeze: severe ear pain, and if the eardrum ruptures, nausea/vomiting/vertigo (worse in cold water) that can trigger panic and a dangerous rapid ascent.",
+     "zh": "气压伤是任何含气腔隙（鼻窦、中耳/内耳、牙齿）因压力失衡受的伤，有两种成因——下潜时气体被压缩（「挤压伤」）或上升时气体膨胀。咽鼓管堵塞或瓦式动作失败会造成经典的中耳挤压伤：剧烈耳痛，若鼓膜破裂还会出现恶心呕吐眩晕（冷水中更明显），进而诱发恐慌和危险的快速上升。",
+     "hard": false
+    },
+    {
+     "en": "Nitrogen narcosis ('rapture of the deep'): breathing compressed nitrogen at depth causes euphoria, reckless behaviour, inappropriate laughter, and tingling in the lips/gums/legs. Onset is around 100 fsw, pronounced by 150 fsw — exactly why sport divers shouldn't use plain compressed air below 120 fsw. The only real fix is a controlled ascent (to lower the nitrogen partial pressure) or switching to a Nitrox mix.",
+     "zh": "氮麻醉（「深海狂喜」）：在深处呼吸压缩氮气会导致欣快感、行为鲁莽、无端发笑、嘴唇/牙龈/腿部刺痛。约 100 fsw 开始出现，150 fsw 时明显加重——这正是休闲潜水员不该在 120 fsw 以下使用普通压缩空气的原因。唯一有效的解法是可控上升（降低氮分压）或改用 Nitrox 混合气。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary overpressurization syndrome (POPS, 'burst lung') happens when a panicked diver holds their breath during an emergency ascent instead of exhaling continuously; trapped lung gas expands and can rupture alveoli, causing pneumothorax, mediastinal/subcutaneous emphysema, alveolar hemorrhage, or arterial gas embolism (AGE). The danger is greatest near the surface, where the relative pressure/volume swing is biggest — even holding a breath for the last 2 m can do it. COPD and asthma raise the risk further.",
+     "zh": "肺过度膨胀综合征（POPS，「爆肺」）发生在惊慌的潜水员上升时屏住呼吸而不是持续呼气；被困的肺内气体膨胀，可造成肺泡破裂，引发气胸、纵隔/皮下气肿、肺泡出血，或动脉气体栓塞（AGE）。危险在接近水面时最大，因为相对压力/体积变化在那里最剧烈——哪怕只是最后 2 米屏住呼吸都可能致伤。COPD 和哮喘患者风险更高。",
+     "hard": false
+    },
+    {
+     "en": "POPS clinical picture: fullness in the throat, painful swallowing, dyspnea, substernal chest pain, a hoarse or brassy voice, palpable subcutaneous air above the clavicles, and a crunching sound timed with the heartbeat (mediastinal crunch) on auscultation. Always check for unequal breath sounds and hyperresonance — pneumothorax stays on the differential.",
+     "zh": "POPS 的临床表现：咽喉部胀满感、吞咽疼痛、呼吸困难、胸骨后疼痛、声音嘶哑或带金属音、锁骨上方可触及皮下气肿，听诊可闻及与心跳同步的捻发音（纵隔捻发音）。始终要检查双侧呼吸音是否对称、有无过清音——气胸永远留在鉴别清单上。",
+     "hard": false
+    },
+    {
+     "en": "AGE is the most dangerous form of POPS — second only to drowning as a cause of diver death. Ruptured alveolar bubbles travel through the pulmonary veins into the left heart, then either into the coronary arteries (mimicking a heart attack, including arrest) or — more often, since a diver's head is usually the highest point during ascent — straight into the cerebral circulation. Any loss of consciousness right after a dive is an air embolism until proven otherwise.",
+     "zh": "动脉气体栓塞（AGE）是 POPS 里最危险的一种——是仅次于溺水的潜水员死因。破裂肺泡产生的气泡经肺静脉进入左心，之后要么冲进冠状动脉（表现类似心肌梗死甚至骤停），要么——因为上升时潜水员的头通常是身体最高点，气泡更容易——直冲脑循环。潜水后立刻意识丧失，在排除之前一律按气体栓塞处理。",
+     "hard": true
+    },
+    {
+     "en": "AGE's clinical picture is dramatic and fast: usually within seconds to minutes, almost always within 10 minutes of surfacing. It can mimic almost any neurologic emergency — limb weakness or paralysis, seizure, unresponsiveness, paresthesia, visual disturbance, deafness, altered mental status.",
+     "zh": "AGE 的临床表现来得又快又猛：通常在数秒到数分钟内出现，几乎都在出水后 10 分钟以内。它可以模仿几乎任何神经系统急症——肢体无力或瘫痪、抽搐、意识丧失、感觉异常、视觉障碍、耳聋、意识状态改变。",
+     "hard": true
+    },
+    {
+     "en": "AGE/POPS field care: 100% oxygen by nonrebreather; if bagging is needed, avoid PEEP here (it works against off-gassing); position is generally supine, but LEFT LATERAL RECUMBENT if air embolism is suspected; if intubating for a patient headed to hyperbaric therapy, fill the tube cuff with SALINE instead of air (an air-filled cuff would expand or shrink as chamber pressure changes); ground transport beats air transport, since cabin altitude/pressure changes worsen bubble expansion.",
+     "zh": "AGE/POPS 的现场处置：非再呼吸面罩给纯氧；如需球囊通气，这里要避免用 PEEP（会妨碍气体排出）；体位一般仰卧，怀疑气体栓塞时改左侧卧位；如果患者要送高压氧治疗需要插管，气囊要用生理盐水而不是空气充填（空气气囊会随舱内压力变化而膨胀或收缩）；地面转运优于空运，因为机舱高度/压力变化会让气泡进一步膨胀。",
+     "hard": true
+    },
+    {
+     "en": "Decompression sickness (DCS, 'the bends'): nitrogen dissolved in the tissue during descent comes back out of solution too fast during ascent and forms bubbles, causing damage both mechanically (blocking circulation) and chemically (triggering inflammation). The CNS and spinal cord take the worst hit because nitrogen is fat-soluble. A patent foramen ovale (present in up to a third of the general population) lets venous bubbles bypass the lungs entirely and reach body tissue directly, raising DCS risk further; other risk factors include obesity, dehydration, fatigue, multiple dives without enough off-gassing time between them, and flying within 12-14 hours of diving.",
+     "zh": "减压病（DCS，「潜水夫病」）：下潜时溶入组织的氮气，在上升时来不及正常排出、以气泡形式重新析出，既机械性阻塞循环，又化学性触发炎症反应。中枢神经和脊髓因为氮气高度脂溶性而受害最重。卵圆孔未闭（占普通人群多达三分之一）会让静脉里的气泡绕过肺直接进入体循环，进一步推高减压病风险；其他风险因素包括肥胖、脱水、疲劳、短时间内多次潜水未留够排氮时间，以及潜水后 12-14 小时内乘坐飞机。",
+     "hard": true
+    },
+    {
+     "en": "DCS type I vs type II: Type I is the mild form, limited to skin, lymphatics, and the musculoskeletal system — joint pain (the most common symptom, can double a diver over) plus mottled, itchy skin. Type II covers everything else and is the more serious category.",
+     "zh": "DCS 分 I 型和 II 型：I 型是轻型，仅限皮肤、淋巴系统和肌肉骨骼系统——关节痛（最常见症状，能把人疼得弯下腰）加上斑驳发痒的皮肤。II 型涵盖其他所有系统，属于更严重的一类。",
+     "hard": false
+    },
+    {
+     "en": "Telling DCS from AGE in the field is mostly academic since treatment is basically the same either way — get to a hyperbaric facility in the best condition possible. As a rough pattern: AGE symptoms read as cerebral, DCS symptoms read as spinal cord, and any loss of consciousness leans toward AGE. DCS-specific field care adds: no inhaled nitrous oxide/oxygen mix (Nitronox) for pain — it will expand existing bubbles; target urine output 1-2 mL/kg/hr on long transports; call the Divers Alert Network (DAN) if the nearest hyperbaric facility is unclear.",
+     "zh": "在院前区分 DCS 和 AGE 意义有限，因为处置基本一致——尽量以最佳状态送到高压氧中心。粗略规律是：AGE 症状偏脑部表现，DCS 症状偏脊髓表现，出现意识丧失更倾向 AGE。DCS 特有的处置要点：禁用吸入性一氧化二氮/氧气混合气（Nitronox）镇痛——会让已有的气泡膨胀；长途转运时尿量目标 1-2 mL/kg/小时；不确定最近的高压氧设施在哪就联系潜水员警报网络（DAN）。",
+     "hard": true
+    },
+    {
+     "en": "Other gas hazards: divers using nitrogen-oxygen blend tanks get less DCS risk (less nitrogen breathed) but MORE oxygen toxicity risk — a CNS emergency causing dizziness, incoordination, confusion, twitching/paresthesia, and underwater seizures. Contaminated compressed air (carbon monoxide/carbon dioxide from a malfunctioning compressor) causes symptoms FAST, during or right after breathing it — unlike DCS, which shows up at or after surfacing, a useful timing clue to tell the two apart.",
+     "zh": "其他气体隐患：使用氮氧混合气瓶的潜水员减压病风险更低（吸入氮气更少），但氧中毒风险更高——这是一种中枢神经系统急症，表现为头晕、协调障碍、意识混乱、抽动/感觉异常、水下抽搐。压缩空气受污染（压缩机故障导致的一氧化碳/二氧化碳混入）会在呼吸期间或呼吸后立刻发作——不像 DCS 要在出水时或出水后才出现，这个时间线索有助于两者鉴别。",
+     "hard": false
+    },
+    {
+     "en": "Shallow water blackout: hyperventilating before a breath-hold dive lowers PaCO2 (suppressing the urge to breathe) while PaO2 stays high enough at depth to keep the swimmer conscious; on ascent, PaO2 crashes back down before the CO2 drive can kick in, causing blackout right near the surface — classically seen in adolescent boys competing to hold their breath longest. Treatment is the same as for any other drowning.",
+     "zh": "浅水昏迷：屏气潜水前过度换气会降低 PaCO2（压制呼吸冲动），而在深处 PaO2 仍足够高，能维持游泳者的意识；上升时 PaO2 骤降得比二氧化碳驱动恢复得更快，导致快到水面时突然昏迷——典型见于比谁能憋气更久的青少年男孩。处理方式和其他溺水一样。",
+     "hard": true
+    }
    ]
   },
   {
    "titleEn": "Altitude Illness: AMS, HAPE, HACE",
    "titleZh": "高原病：急性高山病、高原肺水肿、高原脑水肿",
    "points": [
-    {"en": "Altitude illness is hypobaric hypoxia's effect on the CNS and lungs in someone who hasn't acclimatized. It typically starts above 2,500 m (8,000 ft) but can begin as low as 2,000 m (6,500 ft), usually within 6-10 hours of arrival. Altitude bands: high 1,500-3,500 m, very high 3,500-5,500 m, extreme above 5,500 m — a rapid trip to 5,500 m, even briefly, can turn severe or fatal.", "zh": "高原病是低压性缺氧对未适应者的中枢神经系统和肺造成的影响。通常在超过 2,500 米（8,000 英尺）时开始出现，最低可低至 2,000 米（6,500 英尺），一般在到达后 6-10 小时内发作。海拔分级：高海拔 1,500-3,500 米，甚高海拔 3,500-5,500 米，极高海拔超过 5,500 米——哪怕只是短暂快速登上 5,500 米，也可能致重症甚至致命。", "hard": true},
-    {"en": "Why altitude hurts: barometric pressure falls with elevation even though oxygen stays a constant 21% of the air mixture — so the actual partial pressure of oxygen available drops. At 5,500 m, barometric pressure is only half of sea level. Local weather can also shift the 'effective altitude' by 150-750 m, and it typically runs lower in winter.", "zh": "高原病的成因：氧气始终占大气的 21%，但海拔越高气压越低，所以真正可用的氧分压随之下降。5,500 米处的气压只有海平面的一半。局部天气还能让「实际感受海拔」波动 150-750 米，冬季通常更低。", "hard": true},
-    {"en": "Companion environmental stresses compound the hypoxia itself: temperature drops about 6.5°C for every 1,000 m of elevation, and UV exposure rises about 4% for every 300 m — both add risk on top of the low oxygen.", "zh": "伴随的环境应激会叠加在缺氧之上：海拔每升高 1,000 米，气温下降约 6.5°C；每升高 300 米，紫外线暴露增加约 4%——两者都在缺氧基础上进一步推高风险。", "hard": true},
-    {"en": "Risk factors: a prior episode of AMS is the single strongest predictor (means the next trip needs a slower ascent and prophylactic medication); normally living below 914 m, physical exertion, COPD, and sleeping above 2,438 m all raise risk further. Physical fitness does NOT protect against altitude illness, and older adults may actually be somewhat less susceptible than younger ones.", "zh": "风险因素：曾经得过急性高山病是最强的预测指标（意味着下次要放慢上升速度并考虑预防用药）；平时住在 914 米以下、剧烈运动、患 COPD、睡眠海拔超过 2,438 米，都会进一步推高风险。体能好坏对高原病没有保护作用，老年人反而可能比年轻人略不容易患病。", "hard": true},
-    {"en": "AMS diagnosis requires all three together: a recent gain in altitude + at least several hours already spent at the new altitude + a headache PLUS at least one of (fatigue/weakness, GI symptoms, dizziness, trouble sleeping). The headache classically throbs worse over the temples or occiput and gets worse with a Valsalva maneuver.", "zh": "急性高山病（AMS）诊断需要三条同时满足：近期升高海拔+已在新海拔停留至少数小时+头痛，并且伴以下至少一项——乏力、消化道症状（恶心呕吐或食欲差）、头晕、失眠。这种头痛典型表现为颞部或枕部搏动样加重，做瓦式动作会加重。", "hard": true},
-    {"en": "HAPE diagnosis: at least 2 symptoms (resting dyspnea, cough, weakness/reduced exercise tolerance, chest tightness) PLUS at least 2 signs (central cyanosis, crackles or wheeze in at least one lung field, tachypnea, tachycardia).", "zh": "高原肺水肿（HAPE）诊断：至少 2 项症状（静息呼吸困难、咳嗽、乏力/运动耐力下降、胸闷）加上至少 2 项体征（中心性发绀、至少一侧肺野闻及湿啰音或喘鸣、呼吸急促、心动过速）。", "hard": true},
-    {"en": "HACE diagnosis: mental status change and/or ataxia in someone who already has AMS — or mental status change AND ataxia together in someone who doesn't have AMS yet. HACE can progress all the way to coma, making it the deadliest of the three altitude syndromes.", "zh": "高原脑水肿（HACE）诊断：已有急性高山病的患者出现意识状态改变和/或共济失调——或者没有急性高山病的患者同时出现意识状态改变和共济失调。HACE 可进展至昏迷，是三种高原病中最致命的一种。", "hard": false},
-    {"en": "Red flags that point AWAY from altitude illness: symptoms starting 4 or more days after arrival, no headache at all, or no improvement after descent — any one of these should send you looking for a different diagnosis instead.", "zh": "提示「这不是高原病」的警示信号：到达 4 天或更久后才出现症状、根本没有头痛、下撤后症状没有改善——出现其中任何一条，都该考虑其他诊断。", "hard": false},
-    {"en": "Management triad: oxygen, descent, evacuation — descent is the single most effective treatment across all three syndromes, and delaying it to 'see if it gets better' is the classic mistake. Prevention leans on acclimatization, slower ascent rates, and sometimes prophylactic acetazolamide for high-risk patients.", "zh": "处置三件套：给氧、下撤、后送——下撤是这三种高原病共同的最有效治疗手段，「再等等看会不会自己好」是最典型的处置失误。预防靠适应性训练、放慢上升速度，高危患者有时还会预防性使用乙酰唑胺。", "hard": false}
+    {
+     "en": "Altitude illness is hypobaric hypoxia's effect on the CNS and lungs in someone who hasn't acclimatized. It typically starts above 2,500 m (8,000 ft) but can begin as low as 2,000 m (6,500 ft), usually within 6-10 hours of arrival. Altitude bands: high 1,500-3,500 m, very high 3,500-5,500 m, extreme above 5,500 m — a rapid trip to 5,500 m, even briefly, can turn severe or fatal.",
+     "zh": "高原病是低压性缺氧对未适应者的中枢神经系统和肺造成的影响。通常在超过 2,500 米（8,000 英尺）时开始出现，最低可低至 2,000 米（6,500 英尺），一般在到达后 6-10 小时内发作。海拔分级：高海拔 1,500-3,500 米，甚高海拔 3,500-5,500 米，极高海拔超过 5,500 米——哪怕只是短暂快速登上 5,500 米，也可能致重症甚至致命。",
+     "hard": true
+    },
+    {
+     "en": "Why altitude hurts: barometric pressure falls with elevation even though oxygen stays a constant 21% of the air mixture — so the actual partial pressure of oxygen available drops. At 5,500 m, barometric pressure is only half of sea level. Local weather can also shift the 'effective altitude' by 150-750 m, and it typically runs lower in winter.",
+     "zh": "高原病的成因：氧气始终占大气的 21%，但海拔越高气压越低，所以真正可用的氧分压随之下降。5,500 米处的气压只有海平面的一半。局部天气还能让「实际感受海拔」波动 150-750 米，冬季通常更低。",
+     "hard": true
+    },
+    {
+     "en": "Companion environmental stresses compound the hypoxia itself: temperature drops about 6.5°C for every 1,000 m of elevation, and UV exposure rises about 4% for every 300 m — both add risk on top of the low oxygen.",
+     "zh": "伴随的环境应激会叠加在缺氧之上：海拔每升高 1,000 米，气温下降约 6.5°C；每升高 300 米，紫外线暴露增加约 4%——两者都在缺氧基础上进一步推高风险。",
+     "hard": true
+    },
+    {
+     "en": "Risk factors: a prior episode of AMS is the single strongest predictor (means the next trip needs a slower ascent and prophylactic medication); normally living below 914 m, physical exertion, COPD, and sleeping above 2,438 m all raise risk further. Physical fitness does NOT protect against altitude illness, and older adults may actually be somewhat less susceptible than younger ones.",
+     "zh": "风险因素：曾经得过急性高山病是最强的预测指标（意味着下次要放慢上升速度并考虑预防用药）；平时住在 914 米以下、剧烈运动、患 COPD、睡眠海拔超过 2,438 米，都会进一步推高风险。体能好坏对高原病没有保护作用，老年人反而可能比年轻人略不容易患病。",
+     "hard": true
+    },
+    {
+     "en": "AMS diagnosis requires all three together: a recent gain in altitude + at least several hours already spent at the new altitude + a headache PLUS at least one of (fatigue/weakness, GI symptoms, dizziness, trouble sleeping). The headache classically throbs worse over the temples or occiput and gets worse with a Valsalva maneuver.",
+     "zh": "急性高山病（AMS）诊断需要三条同时满足：近期升高海拔+已在新海拔停留至少数小时+头痛，并且伴以下至少一项——乏力、消化道症状（恶心呕吐或食欲差）、头晕、失眠。这种头痛典型表现为颞部或枕部搏动样加重，做瓦式动作会加重。",
+     "hard": true
+    },
+    {
+     "en": "HAPE diagnosis: at least 2 symptoms (resting dyspnea, cough, weakness/reduced exercise tolerance, chest tightness) PLUS at least 2 signs (central cyanosis, crackles or wheeze in at least one lung field, tachypnea, tachycardia).",
+     "zh": "高原肺水肿（HAPE）诊断：至少 2 项症状（静息呼吸困难、咳嗽、乏力/运动耐力下降、胸闷）加上至少 2 项体征（中心性发绀、至少一侧肺野闻及湿啰音或喘鸣、呼吸急促、心动过速）。",
+     "hard": true
+    },
+    {
+     "en": "HACE diagnosis: mental status change and/or ataxia in someone who already has AMS — or mental status change AND ataxia together in someone who doesn't have AMS yet. HACE can progress all the way to coma, making it the deadliest of the three altitude syndromes.",
+     "zh": "高原脑水肿（HACE）诊断：已有急性高山病的患者出现意识状态改变和/或共济失调——或者没有急性高山病的患者同时出现意识状态改变和共济失调。HACE 可进展至昏迷，是三种高原病中最致命的一种。",
+     "hard": false
+    },
+    {
+     "en": "Red flags that point AWAY from altitude illness: symptoms starting 4 or more days after arrival, no headache at all, or no improvement after descent — any one of these should send you looking for a different diagnosis instead.",
+     "zh": "提示「这不是高原病」的警示信号：到达 4 天或更久后才出现症状、根本没有头痛、下撤后症状没有改善——出现其中任何一条，都该考虑其他诊断。",
+     "hard": false
+    },
+    {
+     "en": "Management triad: oxygen, descent, evacuation — descent is the single most effective treatment across all three syndromes, and delaying it to 'see if it gets better' is the classic mistake. Prevention leans on acclimatization, slower ascent rates, and sometimes prophylactic acetazolamide for high-risk patients.",
+     "zh": "处置三件套：给氧、下撤、后送——下撤是这三种高原病共同的最有效治疗手段，「再等等看会不会自己好」是最典型的处置失误。预防靠适应性训练、放慢上升速度，高危患者有时还会预防性使用乙酰唑胺。",
+     "hard": false
+    }
    ]
   }
  ],
  "hardNumbers": [
-  {"itemEn": "Canada's annual environmental death toll (heat + cold)", "itemZh": "加拿大每年环境相关死亡人数（热+冷）", "value": "约 80 例低体温死亡/年；约 1,200 例热相关死亡/年"},
-  {"itemEn": "Defended core temperature & lowest recorded hypothermia survival", "itemZh": "核心体温调定点与低体温存活纪录", "value": "核心体温死守 37°C；意外低体温最低存活纪录 13.7°C"},
-  {"itemEn": "Maximum sustainable sweat rate", "itemZh": "出汗速率上限", "value": "健康成人最多约 1 L/小时，只能维持几小时"},
-  {"itemEn": "Cold-water immersion heat loss vs dry air", "itemZh": "冷水浸泡散热速度 vs 干燥空气", "value": "约快 25 倍（湿衣服同理）"},
-  {"itemEn": "Uncontrolled core temperature rise rate", "itemZh": "体温调节失控时核心体温上升速度", "value": "15 分钟内从正常升到约 41°C"},
-  {"itemEn": "Humidex risk bands (Canadian index)", "itemZh": "湿热指数 Humidex 风险分级", "value": "30-39 有些不适 / 40-45 避免劳作 / >45 危险 / >54 热射病一触即发"},
-  {"itemEn": "Oral rehydration carbohydrate ceiling for heat exhaustion", "itemZh": "热衰竭口服补液碳水浓度上限", "value": "不超过 6%（自制配方：1 茶匙盐+2 汤匙糖/1 L 水）"},
-  {"itemEn": "Heatstroke diagnostic threshold & mortality", "itemZh": "热射病诊断阈值与死亡率", "value": "核心体温 >40°C+意识改变；治疗后死亡率仍达 10%，不治疗 30-80%"},
-  {"itemEn": "Active cooling stop point for heatstroke", "itemZh": "热射病主动降温终止点", "value": "降到 39°C 以下停止，每 10 分钟复测一次"},
-  {"itemEn": "Frostbite wind chill risk thresholds", "itemZh": "冻伤风寒指数阈值", "value": "-25°C 风寒开始有冻伤风险；-45°C 时皮肤数分钟内可冻结"},
-  {"itemEn": "Deep frostbite rewarming water bath", "itemZh": "深部冻伤复温水浴参数", "value": "水温 35-40°C，耗时 10-30 分钟，低于 38°C 就要加热水"},
-  {"itemEn": "Trench foot temperature ceiling", "itemZh": "战壕足发生的温度上限", "value": "长期湿冷暴露，温度高达 15.5°C 也可能发生"},
-  {"itemEn": "Hypothermia staging systems compared (WMS vs ILCOR/ACLS vs BC)", "itemZh": "低体温分级对照（WMS vs ILCOR/ACLS vs BC）", "value": "WMS：轻 35-32°C／中 32-28°C／重 <28°C；ILCOR/ACLS：轻 >34°C／中 34-30°C／重 <30°C；BC：轻 >32-<35°C／中 28-32°C／重 <28°C"},
-  {"itemEn": "Hypothermic VF risk onset & defibrillation futility point (textbook)", "itemZh": "低体温室颤风险起点与除颤失效点（教材版）", "value": "约 28°C 起易发室颤；重复除颤要等回升到 30°C 以上才可能成功"},
-  {"itemEn": "Active rewarming device rates", "itemZh": "主动复温设备速率", "value": "强制送风设备最高约 2.9°C/小时，单纯温毯约 1.2°C/小时"},
-  {"itemEn": "Submersion time vs good neurologic outcome", "itemZh": "浸没时长与良好神经预后概率", "value": "<5 分钟约 85% 良好；>10 分钟约 4% 良好；>25 分钟几乎均为不良预后"},
-  {"itemEn": "Diving pressure-depth conversion", "itemZh": "潜水深度-压力换算", "value": "每下潜 33 fsw，压力+14.7 psi，即+1 ATA"},
-  {"itemEn": "Nitrogen narcosis onset & compressed-air depth limit", "itemZh": "氮麻醉起效深度与压缩空气使用深度上限", "value": "约 100 fsw 起效，150 fsw 明显；运动潜水员不应在 120 fsw 以下用压缩空气"},
-  {"itemEn": "DCS vs AGE symptom onset timing", "itemZh": "减压病 vs 气体栓塞的症状出现时机", "value": "DCS 通常 1 小时内、最迟 6 小时内；AGE 通常出水后 10 分钟内"},
-  {"itemEn": "Altitude illness onset elevation & altitude bands", "itemZh": "高原病发病海拔与海拔分级", "value": "典型 >2,500 米，最低可到 2,000 米；高海拔 1,500-3,500／甚高 3,500-5,500／极高 >5,500 米"}
+  {
+   "itemEn": "Canada's annual environmental death toll (heat + cold)",
+   "itemZh": "加拿大每年环境相关死亡人数（热+冷）",
+   "value": "约 80 例低体温死亡/年；约 1,200 例热相关死亡/年"
+  },
+  {
+   "itemEn": "Defended core temperature & lowest recorded hypothermia survival",
+   "itemZh": "核心体温调定点与低体温存活纪录",
+   "value": "核心体温死守 37°C；意外低体温最低存活纪录 13.7°C"
+  },
+  {
+   "itemEn": "Maximum sustainable sweat rate",
+   "itemZh": "出汗速率上限",
+   "value": "健康成人最多约 1 L/小时，只能维持几小时"
+  },
+  {
+   "itemEn": "Cold-water immersion heat loss vs dry air",
+   "itemZh": "冷水浸泡散热速度 vs 干燥空气",
+   "value": "约快 25 倍（湿衣服同理）"
+  },
+  {
+   "itemEn": "Uncontrolled core temperature rise rate",
+   "itemZh": "体温调节失控时核心体温上升速度",
+   "value": "15 分钟内从正常升到约 41°C"
+  },
+  {
+   "itemEn": "Humidex risk bands (Canadian index)",
+   "itemZh": "湿热指数 Humidex 风险分级",
+   "value": "30-39 有些不适 / 40-45 避免劳作 / >45 危险 / >54 热射病一触即发"
+  },
+  {
+   "itemEn": "Oral rehydration carbohydrate ceiling for heat exhaustion",
+   "itemZh": "热衰竭口服补液碳水浓度上限",
+   "value": "不超过 6%（自制配方：1 茶匙盐+2 汤匙糖/1 L 水）"
+  },
+  {
+   "itemEn": "Heatstroke diagnostic threshold & mortality",
+   "itemZh": "热射病诊断阈值与死亡率",
+   "value": "核心体温 >40°C+意识改变；治疗后死亡率仍达 10%，不治疗 30-80%"
+  },
+  {
+   "itemEn": "Active cooling stop point for heatstroke",
+   "itemZh": "热射病主动降温终止点",
+   "value": "降到 39°C 以下停止，每 10 分钟复测一次"
+  },
+  {
+   "itemEn": "Frostbite wind chill risk thresholds",
+   "itemZh": "冻伤风寒指数阈值",
+   "value": "-25°C 风寒开始有冻伤风险；-45°C 时皮肤数分钟内可冻结"
+  },
+  {
+   "itemEn": "Deep frostbite rewarming water bath",
+   "itemZh": "深部冻伤复温水浴参数",
+   "value": "水温 35-40°C，耗时 10-30 分钟，低于 38°C 就要加热水"
+  },
+  {
+   "itemEn": "Trench foot temperature ceiling",
+   "itemZh": "战壕足发生的温度上限",
+   "value": "长期湿冷暴露，温度高达 15.5°C 也可能发生"
+  },
+  {
+   "itemEn": "Hypothermia staging systems compared (WMS vs ILCOR/ACLS vs BC)",
+   "itemZh": "低体温分级对照（WMS vs ILCOR/ACLS vs BC）",
+   "value": "WMS：轻 35-32°C／中 32-28°C／重 <28°C；ILCOR/ACLS：轻 >34°C／中 34-30°C／重 <30°C；BC：轻 >32-<35°C／中 28-32°C／重 <28°C"
+  },
+  {
+   "itemEn": "Hypothermic VF risk onset & defibrillation futility point (textbook)",
+   "itemZh": "低体温室颤风险起点与除颤失效点（教材版）",
+   "value": "约 28°C 起易发室颤；重复除颤要等回升到 30°C 以上才可能成功"
+  },
+  {
+   "itemEn": "Active rewarming device rates",
+   "itemZh": "主动复温设备速率",
+   "value": "强制送风设备最高约 2.9°C/小时，单纯温毯约 1.2°C/小时"
+  },
+  {
+   "itemEn": "Submersion time vs good neurologic outcome",
+   "itemZh": "浸没时长与良好神经预后概率",
+   "value": "<5 分钟约 85% 良好；>10 分钟约 4% 良好；>25 分钟几乎均为不良预后"
+  },
+  {
+   "itemEn": "Diving pressure-depth conversion",
+   "itemZh": "潜水深度-压力换算",
+   "value": "每下潜 33 fsw，压力+14.7 psi，即+1 ATA"
+  },
+  {
+   "itemEn": "Nitrogen narcosis onset & compressed-air depth limit",
+   "itemZh": "氮麻醉起效深度与压缩空气使用深度上限",
+   "value": "约 100 fsw 起效，150 fsw 明显；运动潜水员不应在 120 fsw 以下用压缩空气"
+  },
+  {
+   "itemEn": "DCS vs AGE symptom onset timing",
+   "itemZh": "减压病 vs 气体栓塞的症状出现时机",
+   "value": "DCS 通常 1 小时内、最迟 6 小时内；AGE 通常出水后 10 分钟内"
+  },
+  {
+   "itemEn": "Altitude illness onset elevation & altitude bands",
+   "itemZh": "高原病发病海拔与海拔分级",
+   "value": "典型 >2,500 米，最低可到 2,000 米；高海拔 1,500-3,500／甚高 3,500-5,500／极高 >5,500 米"
+  }
  ],
  "atScene": [
-  {"en": "Never attempt prehospital rewarming of a frozen limb if there's any chance it will refreeze en route, or if the patient will have to walk on the thawed foot afterward — leave it frozen and get moving instead.", "zh": "如果转运途中有任何复冻风险，或者患者解冻后还要用那只脚走路，绝不在院前尝试复温——让它继续冻着，直接转运。"},
-  {"en": "A patient found lying on cold pavement is not safe just because you threw a blanket over them — body heat keeps draining into the ground underneath. Get them up onto a blanket or backboard first, then layer on the warmth.", "zh": "躺在冷路面上的患者，光盖条毯子并不算安全——体热还在源源不断传导进地面。先把人挪到毯子或脊柱板上，再谈保暖分层。"},
-  {"en": "A shivering trauma patient in the back of your rig is not a reassuring sign — and if you need your heavy coat on, remember the patient needs warmth just as badly.", "zh": "创伤患者在车厢里还在打寒战，不是什么好兆头——如果你都要穿厚外套了，患者同样急需保暖。"},
-  {"en": "Any diver who loses consciousness right after surfacing has an arterial gas embolism until proven otherwise — treat and transport toward a hyperbaric facility even if the story sounds mild.", "zh": "任何潜水员出水后立刻意识丧失，在排除之前一律按动脉气体栓塞处理——即便听起来症状不重，也要按此处置并送往高压氧设施。"},
-  {"en": "A submersion patient who looks completely fine on scene still needs to go to hospital — ARDS, chemical pneumonitis, and renal failure can all surface hours later behind nothing more than a subtle cough.", "zh": "现场看起来完全没事的溺水患者仍然要送院——ARDS、化学性肺炎、肾衰竭都可能在数小时后才浮现，起初只有一声轻咳。"}
+  {
+   "en": "Never attempt prehospital rewarming of a frozen limb if there's any chance it will refreeze en route, or if the patient will have to walk on the thawed foot afterward — leave it frozen and get moving instead.",
+   "zh": "如果转运途中有任何复冻风险，或者患者解冻后还要用那只脚走路，绝不在院前尝试复温——让它继续冻着，直接转运。"
+  },
+  {
+   "en": "A patient found lying on cold pavement is not safe just because you threw a blanket over them — body heat keeps draining into the ground underneath. Get them up onto a blanket or backboard first, then layer on the warmth.",
+   "zh": "躺在冷路面上的患者，光盖条毯子并不算安全——体热还在源源不断传导进地面。先把人挪到毯子或脊柱板上，再谈保暖分层。"
+  },
+  {
+   "en": "A shivering trauma patient in the back of your rig is not a reassuring sign — and if you need your heavy coat on, remember the patient needs warmth just as badly.",
+   "zh": "创伤患者在车厢里还在打寒战，不是什么好兆头——如果你都要穿厚外套了，患者同样急需保暖。"
+  },
+  {
+   "en": "Any diver who loses consciousness right after surfacing has an arterial gas embolism until proven otherwise — treat and transport toward a hyperbaric facility even if the story sounds mild.",
+   "zh": "任何潜水员出水后立刻意识丧失，在排除之前一律按动脉气体栓塞处理——即便听起来症状不重，也要按此处置并送往高压氧设施。"
+  },
+  {
+   "en": "A submersion patient who looks completely fine on scene still needs to go to hospital — ARDS, chemical pneumonitis, and renal failure can all surface hours later behind nothing more than a subtle cough.",
+   "zh": "现场看起来完全没事的溺水患者仍然要送院——ARDS、化学性肺炎、肾衰竭都可能在数小时后才浮现，起初只有一声轻咳。"
+  }
  ],
  "confusions": [
-  {"en": "Thawed does not mean 'warm it with the car heater.' Direct, dry, or radiant heat on a frostbitten part causes burns on tissue that can no longer feel pain — only steady body-heat contact or a controlled water bath count as legitimate rewarming.", "zh": "「解冻了」不等于「拿车里的暖风吹一吹」。对冻伤部位使用直接、干燥或辐射热，会在已经失去痛觉的组织上造成烧伤——只有稳定的体温接触或受控水浴才算合格的复温方式。"},
-  {"en": "Massaging a cold-injured area feels like it should help — it never does. In frostbite the tissue is packed with ice crystals that would lacerate delicate structures; in trench foot or chilblains, rubbing just piles mechanical injury on top of ischemia.", "zh": "按摩冷伤部位感觉上应该有帮助——实际从不会有。冻伤组织里满是冰晶，揉搓会把内部结构划伤；战壕足和冻疮同理，揉搓只是在缺血基础上再加一层机械损伤。"},
-  {"en": "The 'umbles' picture of hypothermia in an elderly patient — slurred speech, ataxia, confusion — reads exactly like a stroke. A temperature and glucose check belongs in every 'possible CVA' workup on a cold day, not just a neuro exam.", "zh": "老年患者身上「四不稳」式的低体温表现——口齿不清、步态不稳、意识混乱——和卒中几乎一模一样。冷天遇到「疑似卒中」，测体温和血糖要和神经系统查体同时做，不能只顾后者。"},
-  {"en": "Fixed dilated pupils, apparent rigor mortis, and dependent lividity in a hypothermic patient look like proof of death — they are not, by themselves, a reason to stop resuscitating. 'Not dead until warm and dead' is the working rule, absent an obviously fatal injury.", "zh": "低体温患者身上的瞳孔固定散大、看似尸僵、坠积性淤斑，看起来像是死亡的证据——但单独出现并不能作为停止复苏的理由。除非有明显致命伤，「没回暖之前不能宣告死亡」才是该守的原则。"},
-  {"en": "Freshwater-versus-saltwater drowning electrolyte theories are a classic older-textbook distractor — they don't hold up clinically. Manage every drowning patient the same way regardless of the water type.", "zh": "淡水溺水和海水溺水的电解质差异理论，是老教材里的经典干扰项——临床上根本站不住脚。不管是哪种水，处理方式都一样。"},
-  {"en": "Nitrogen narcosis looks like a diver having the time of their life — euphoric, giggling, fearless — but pulse oximetry reads completely normal the whole time, because oximetry can't detect it. A normal SpO2 never rules it out.", "zh": "氮麻醉看起来像潜水员正玩得开心——欣快、傻笑、毫无畏惧——但血氧仪读数全程正常，因为血氧仪根本测不出氮麻醉。SpO2 正常从来不能排除氮麻醉。"}
+  {
+   "en": "Thawed does not mean 'warm it with the car heater.' Direct, dry, or radiant heat on a frostbitten part causes burns on tissue that can no longer feel pain — only steady body-heat contact or a controlled water bath count as legitimate rewarming.",
+   "zh": "「解冻了」不等于「拿车里的暖风吹一吹」。对冻伤部位使用直接、干燥或辐射热，会在已经失去痛觉的组织上造成烧伤——只有稳定的体温接触或受控水浴才算合格的复温方式。"
+  },
+  {
+   "en": "Massaging a cold-injured area feels like it should help — it never does. In frostbite the tissue is packed with ice crystals that would lacerate delicate structures; in trench foot or chilblains, rubbing just piles mechanical injury on top of ischemia.",
+   "zh": "按摩冷伤部位感觉上应该有帮助——实际从不会有。冻伤组织里满是冰晶，揉搓会把内部结构划伤；战壕足和冻疮同理，揉搓只是在缺血基础上再加一层机械损伤。"
+  },
+  {
+   "en": "The 'umbles' picture of hypothermia in an elderly patient — slurred speech, ataxia, confusion — reads exactly like a stroke. A temperature and glucose check belongs in every 'possible CVA' workup on a cold day, not just a neuro exam.",
+   "zh": "老年患者身上「四不稳」式的低体温表现——口齿不清、步态不稳、意识混乱——和卒中几乎一模一样。冷天遇到「疑似卒中」，测体温和血糖要和神经系统查体同时做，不能只顾后者。"
+  },
+  {
+   "en": "Fixed dilated pupils, apparent rigor mortis, and dependent lividity in a hypothermic patient look like proof of death — they are not, by themselves, a reason to stop resuscitating. 'Not dead until warm and dead' is the working rule, absent an obviously fatal injury.",
+   "zh": "低体温患者身上的瞳孔固定散大、看似尸僵、坠积性淤斑，看起来像是死亡的证据——但单独出现并不能作为停止复苏的理由。除非有明显致命伤，「没回暖之前不能宣告死亡」才是该守的原则。"
+  },
+  {
+   "en": "Freshwater-versus-saltwater drowning electrolyte theories are a classic older-textbook distractor — they don't hold up clinically. Manage every drowning patient the same way regardless of the water type.",
+   "zh": "淡水溺水和海水溺水的电解质差异理论，是老教材里的经典干扰项——临床上根本站不住脚。不管是哪种水，处理方式都一样。"
+  },
+  {
+   "en": "Nitrogen narcosis looks like a diver having the time of their life — euphoric, giggling, fearless — but pulse oximetry reads completely normal the whole time, because oximetry can't detect it. A normal SpO2 never rules it out.",
+   "zh": "氮麻醉看起来像潜水员正玩得开心——欣快、傻笑、毫无畏惧——但血氧仪读数全程正常，因为血氧仪根本测不出氮麻醉。SpO2 正常从来不能排除氮麻醉。"
+  }
  ],
  "mnemonics": [
-  {"name": "冻伤三禁", "en": "Frostbite's Three Nevers: never rub it, never use dry or radiant heat, never let a thawed part refreeze. Break any one of the three and a survivable frostbite becomes an amputation.", "zh": "冻伤三禁：绝不揉搓、绝不用干热或辐射热、绝不让解冻部位再次冻上。三条犯一条，本可保住的肢体就可能变成截肢。"},
-  {"name": "低体温三分级口诀", "en": "Three tiers, three actions: mild and moderate hypothermia in BC share one active-rewarm bundle (ambulance to 30°C, hot packs, warm blankets); severe hypothermia gets the opposite — insulate only, hands off, no active rewarming in the field.", "zh": "三级三动作：BC 里轻度和中度低体温共用同一套主动复温组合（救护车预热到 30°C+热包+温毯）；重度低体温反过来——只保温、别乱动、院前不做主动复温。"},
-  {"name": "潜水三定律 BDH", "en": "B-D-H runs the dive: Boyle squeezes the balloon (descend and a lung-full of air shrinks; ascend and it expands — hold your breath and it can burst you). Dalton splits the mix (each gas in the tank pulls its own partial-pressure weight — that's your narcosis and toxicity). Henry pours out the fizz (surface too fast and dissolved nitrogen bubbles out of solution, exactly like opening a shaken soda).", "zh": "B-D-H 三定律统管全程：波义耳（Boyle）挤气球——下潜时气体体积缩小，上升时膨胀，屏气不呼气就可能把肺撑爆；道尔顿（Dalton）分蛋糕——混合气体里每种气体各按自己的分压出力，氮麻醉和氧中毒都是它管的；亨利（Henry）开汽水——上升太快，溶在组织里的氮气就像摇过的汽水开盖一样，「噗」地冒出气泡。"}
+  {
+   "name": "冻伤三禁",
+   "en": "Frostbite's Three Nevers: never rub it, never use dry or radiant heat, never let a thawed part refreeze. Break any one of the three and a survivable frostbite becomes an amputation.",
+   "zh": "冻伤三禁：绝不揉搓、绝不用干热或辐射热、绝不让解冻部位再次冻上。三条犯一条，本可保住的肢体就可能变成截肢。"
+  },
+  {
+   "name": "低体温三分级口诀",
+   "en": "Three tiers, three actions: mild and moderate hypothermia in BC share one active-rewarm bundle (ambulance to 30°C, hot packs, warm blankets); severe hypothermia gets the opposite — insulate only, hands off, no active rewarming in the field.",
+   "zh": "三级三动作：BC 里轻度和中度低体温共用同一套主动复温组合（救护车预热到 30°C+热包+温毯）；重度低体温反过来——只保温、别乱动、院前不做主动复温。"
+  },
+  {
+   "name": "潜水三定律 BDH",
+   "en": "B-D-H runs the dive: Boyle squeezes the balloon (descend and a lung-full of air shrinks; ascend and it expands — hold your breath and it can burst you). Dalton splits the mix (each gas in the tank pulls its own partial-pressure weight — that's your narcosis and toxicity). Henry pours out the fizz (surface too fast and dissolved nitrogen bubbles out of solution, exactly like opening a shaken soda).",
+   "zh": "B-D-H 三定律统管全程：波义耳（Boyle）挤气球——下潜时气体体积缩小，上升时膨胀，屏气不呼气就可能把肺撑爆；道尔顿（Dalton）分蛋糕——混合气体里每种气体各按自己的分压出力，氮麻醉和氧中毒都是它管的；亨利（Henry）开汽水——上升太快，溶在组织里的氮气就像摇过的汽水开盖一样，「噗」地冒出气泡。"
+  }
  ],
  "selfCheck": [
-  {"qEn": "A hiker's frostbitten hand is still fully frozen when you reach them, and the hospital is 40 minutes away. What do you do, and why?", "qZh": "徒步者的冻伤手在你赶到时仍完全冻结，医院还有 40 分钟车程。你该怎么处理，为什么？", "aEn": "Leave it frozen — pad and protect the limb, keep it away from the ambulance heater or any dry heat, never massage it, and transport without delay. Active rewarming in the field only makes sense if the limb has already partially thawed or transport will be significantly delayed, and even then only after contacting medical control.", "aZh": "让它继续冻着——用衬垫保护患肢，远离救护车暖风口和一切干热源，绝不按摩，立即转运不耽搁。院前主动复温只在肢体已部分解冻，或转运会明显延误时才有意义，而且还要先联系医疗指导。"},
-  {"qEn": "How does BC's hypothermia protocol treat mild and moderate hypothermia differently from the textbook's WMS-based staging?", "qZh": "BC 的低体温处置方案，对轻度和中度低体温的处理，和教材基于 WMS 的分级有什么不同？", "aEn": "BC groups mild (>32-<35°C) and moderate (28-32°C) under one shared active-rewarm bundle: mild activity if appropriate, ambulance preheated to 30°C, hot packs wrapped in towels, and warm blankets for both tiers. Only severe (<28°C) gets passive-only care. The textbook instead stages mild as passive rewarming ONLY, reserving hot packs and active external rewarming for moderate.", "aZh": "BC 把轻度（>32-<35°C）和中度（28-32°C）合并成同一套主动复温组合：如适合可轻度活动、救护车预热到 30°C、毛巾包裹的热包、温毯——两级共用。只有重度（<28°C）才是纯被动处理。教材则不同：轻度只做被动复温，热包和主动体表复温留给中度才用。"},
-  {"qEn": "What's the BC-specific rule for checking a pulse and defibrillating a severely hypothermic cardiac arrest patient?", "qZh": "对重度低体温骤停患者，BC 特有的判脉和除颤规则是什么？", "aEn": "Take up to 30-45 seconds to confirm pulselessness (versus the usual 10 seconds or less), because a hypothermic pulse can be slow and weak. If the AED advises a shock, defibrillate up to three times while continuing CPR — after the third shock, stop pausing compressions for further analysis or shocks and just keep CPR running during rapid transport.", "aZh": "判脉时间可延长到 30-45 秒（平时是不超过 10 秒），因为低体温患者的脉搏可能又慢又弱。若 AED 提示除颤，最多可连续除颤三次，期间持续 CPR；第三次除颤后就不再为分析或除颤暂停按压，只管一路 CPR 快速转运。"},
-  {"qEn": "A diver surfaces and immediately loses consciousness. What's your leading diagnosis, and how does symptom-onset timing help distinguish it from decompression sickness?", "qZh": "潜水员出水后立刻意识丧失。你的首要诊断是什么？症状出现的时机如何帮你和减压病鉴别？", "aEn": "Arterial gas embolism (AGE) until proven otherwise — any loss of consciousness right after a dive is presumed AGE. Timing is the tell: AGE symptoms hit within seconds to minutes, almost always inside 10 minutes of surfacing, while DCS typically takes up to an hour and can still appear as late as 6 hours out.", "aZh": "在排除之前按动脉气体栓塞（AGE）处理——潜水后立刻意识丧失一律先当作 AGE。时机是关键线索：AGE 症状在数秒到数分钟内出现，几乎都在出水 10 分钟以内；而 DCS 通常要等到 1 小时左右，最迟可到 6 小时后才出现。"},
-  {"qEn": "Why does a submersion patient who 'looks fine' and wants to refuse transport still need to go to hospital?", "qZh": "看起来「完全没事」、想拒绝转运的溺水患者，为什么仍然必须送院？", "aEn": "Because ARDS, chemical or bacterial pneumonitis, and renal failure can all develop hours to days after submersion, sometimes with only a subtle cough or mild tachypnea as warning. Patients have died from drowning complications well after appearing stable at the scene.", "aZh": "因为急性呼吸窘迫综合征、化学性/细菌性肺炎、肾衰竭都可能在浸没后数小时到数天才出现，起初可能只有一声轻咳或轻微呼吸加快作为唯一征兆。已有患者在现场看似平稳后，仍因溺水并发症死亡。"}
+  {
+   "qEn": "A hiker's frostbitten hand is still fully frozen when you reach them, and the hospital is 40 minutes away. What do you do, and why?",
+   "qZh": "徒步者的冻伤手在你赶到时仍完全冻结，医院还有 40 分钟车程。你该怎么处理，为什么？",
+   "aEn": "Leave it frozen — pad and protect the limb, keep it away from the ambulance heater or any dry heat, never massage it, and transport without delay. Active rewarming in the field only makes sense if the limb has already partially thawed or transport will be significantly delayed, and even then only after contacting medical control.",
+   "aZh": "让它继续冻着——用衬垫保护患肢，远离救护车暖风口和一切干热源，绝不按摩，立即转运不耽搁。院前主动复温只在肢体已部分解冻，或转运会明显延误时才有意义，而且还要先联系医疗指导。"
+  },
+  {
+   "qEn": "How does BC's hypothermia protocol treat mild and moderate hypothermia differently from the textbook's WMS-based staging?",
+   "qZh": "BC 的低体温处置方案，对轻度和中度低体温的处理，和教材基于 WMS 的分级有什么不同？",
+   "aEn": "BC groups mild (>32-<35°C) and moderate (28-32°C) under one shared active-rewarm bundle: mild activity if appropriate, ambulance preheated to 30°C, hot packs wrapped in towels, and warm blankets for both tiers. Only severe (<28°C) gets passive-only care. The textbook instead stages mild as passive rewarming ONLY, reserving hot packs and active external rewarming for moderate.",
+   "aZh": "BC 把轻度（>32-<35°C）和中度（28-32°C）合并成同一套主动复温组合：如适合可轻度活动、救护车预热到 30°C、毛巾包裹的热包、温毯——两级共用。只有重度（<28°C）才是纯被动处理。教材则不同：轻度只做被动复温，热包和主动体表复温留给中度才用。"
+  },
+  {
+   "qEn": "What's the BC-specific rule for checking a pulse and defibrillating a severely hypothermic cardiac arrest patient?",
+   "qZh": "对重度低体温骤停患者，BC 特有的判脉和除颤规则是什么？",
+   "aEn": "Take up to 30-45 seconds to confirm pulselessness (versus the usual 10 seconds or less), because a hypothermic pulse can be slow and weak. If the AED advises a shock, defibrillate up to three times while continuing CPR — after the third shock, stop pausing compressions for further analysis or shocks and just keep CPR running during rapid transport.",
+   "aZh": "判脉时间可延长到 30-45 秒（平时是不超过 10 秒），因为低体温患者的脉搏可能又慢又弱。若 AED 提示除颤，最多可连续除颤三次，期间持续 CPR；第三次除颤后就不再为分析或除颤暂停按压，只管一路 CPR 快速转运。"
+  },
+  {
+   "qEn": "A diver surfaces and immediately loses consciousness. What's your leading diagnosis, and how does symptom-onset timing help distinguish it from decompression sickness?",
+   "qZh": "潜水员出水后立刻意识丧失。你的首要诊断是什么？症状出现的时机如何帮你和减压病鉴别？",
+   "aEn": "Arterial gas embolism (AGE) until proven otherwise — any loss of consciousness right after a dive is presumed AGE. Timing is the tell: AGE symptoms hit within seconds to minutes, almost always inside 10 minutes of surfacing, while DCS typically takes up to an hour and can still appear as late as 6 hours out.",
+   "aZh": "在排除之前按动脉气体栓塞（AGE）处理——潜水后立刻意识丧失一律先当作 AGE。时机是关键线索：AGE 症状在数秒到数分钟内出现，几乎都在出水 10 分钟以内；而 DCS 通常要等到 1 小时左右，最迟可到 6 小时后才出现。"
+  },
+  {
+   "qEn": "Why does a submersion patient who 'looks fine' and wants to refuse transport still need to go to hospital?",
+   "qZh": "看起来「完全没事」、想拒绝转运的溺水患者，为什么仍然必须送院？",
+   "aEn": "Because ARDS, chemical or bacterial pneumonitis, and renal failure can all develop hours to days after submersion, sometimes with only a subtle cough or mild tachypnea as warning. Patients have died from drowning complications well after appearing stable at the scene.",
+   "aZh": "因为急性呼吸窘迫综合征、化学性/细菌性肺炎、肾衰竭都可能在浸没后数小时到数天才出现，起初可能只有一声轻咳或轻微呼吸加快作为唯一征兆。已有患者在现场看似平稳后，仍因溺水并发症死亡。"
+  }
  ],
  "bcAlerts": [
-  {"topicEn": "Hypothermic cardiac arrest: pulse check duration and defibrillation limit", "topicZh": "低体温骤停：判脉时长与除颤次数上限", "bookEn": "Standard BLS teaching and the textbook's ACLS-based approach use the normal <=10-second pulse check and generally endorse only ONE defibrillation attempt, on the reasoning that repeated shocks are unlikely to succeed below 30°C core temperature.", "bookZh": "标准 BLS 教学和教材基于 ACLS 的做法都用常规≤10 秒判脉，且一般只主张给一次除颤，理由是核心体温回升到 30°C 以上之前重复电击大概率不会成功。", "bcEn": "BC explicitly extends the pulse check to 30-45 seconds in a severely hypothermic patient, since a slow, weak pulse is easy to miss. If the AED advises a shock, defibrillate up to THREE times while continuing CPR — but after the third shock, stop pausing compressions for further analysis or shocks and keep CPR running during rapid transport instead.", "bcZh": "BC 明确要求对重度低体温患者把判脉时间延长到 30-45 秒，因为脉搏又慢又弱很容易漏判。若 AED 提示除颤，最多连续除颤三次并持续 CPR；第三次除颤后就不再为分析或除颤暂停按压，改为一路 CPR 快速转运。", "ref": "BC Guidelines p.29（2026-06-15 版）"},
-  {"topicEn": "Hypothermia rewarming bands: mild/moderate/severe", "topicZh": "低体温复温分级：轻/中/重度处理差异", "bookEn": "The textbook stages care in three tiers with different techniques: mild gets PASSIVE rewarming only (remove wet clothes, warm blankets, movement/warm fluids if practical); moderate adds ACTIVE EXTERNAL rewarming (hot packs at groin/neck/axillae, forced hot air, warmed IV fluids); severe gets ACTIVE INTERNAL rewarming, which only happens in hospital.", "bookZh": "教材把处理分成三级、各有不同手法：轻度只做被动复温（脱湿衣、温毯、条件允许时活动+温热液体）；中度在此基础上加主动体表复温（腹股沟/颈/腋下热包、强制热风、加温静脉输液）；重度需要主动核心复温，但这只能在院内进行。", "bcEn": "BC groups mild (>32-<35°C) and moderate (28-32°C) under one shared active-rewarm bundle — mild activity if appropriate, ambulance preheated to 30°C, hot packs wrapped in towels, and warm blankets for BOTH tiers. Severe (<28°C) instead gets passive care only: insulate the patient, keep the ambulance at 30°C, avoid rough handling — no active rewarming is attempted in the field at all.", "bcZh": "BC 把轻度（>32-<35°C）和中度（28-32°C）合并成同一套主动复温组合——如适合可轻度活动、救护车预热到 30°C、毛巾包裹的热包、温毯，两级通用。重度（<28°C）则相反，只做被动处理：给患者保温、救护车维持 30°C、避免粗暴搬动——院前完全不做主动复温。", "ref": "BC Guidelines p.29（2026-06-15 版）"},
-  {"topicEn": "Drowning/near-drowning patient positioning", "topicZh": "溺水/近乎溺水患者的体位", "bookEn": "The chapter's drowning management table focuses entirely on airway, breathing, and oxygenation sequencing, and does not specify a body position for the conscious, breathing patient.", "bookZh": "教材关于溺水处置的表格全部聚焦在气道、呼吸、给氧的先后顺序上，没有对清醒、能自主呼吸的患者给出具体体位要求。", "bcEn": "BC's Drowning/Near Drowning protocol explicitly calls for positioning the patient SITTING UP — echoing its own Pulmonary Edema/CHF protocol, which also lists drowning as an indication. This reflects that early drowning lung injury behaves like pulmonary edema; don't default to supine out of habit.", "bcZh": "BC 的溺水/近乎溺水方案明确要求让患者取坐位——这和 BC 自己的肺水肿/充血性心衰方案是呼应的（该方案也把溺水列为适应证之一）。这反映出早期溺水肺损伤和肺水肿处理逻辑相通；不要凭习惯默认平卧。", "ref": "BC Guidelines p.33、p.37（2026-06-15 版）"},
-  {"topicEn": "Local cold injury has no standalone BC protocol", "topicZh": "局部冷伤在 BC 方案里没有独立条目", "bookEn": "The textbook gives frostbite, trench foot, and chilblains their own complete management sequences, entirely separate from systemic hypothermia care.", "bookZh": "教材为冻伤、战壕足、冻疮各自列出了完整的处置流程，和全身性低体温的处理是分开的。", "bcEn": "BC's guidelines contain no standalone frostbite protocol — the only official reference point is a single 'Gradual warming — Hypothermia' line in the primary-survey intervention table. For local cold injury specifics (body-heat rewarming, water-bath parameters, the never-refreeze rule), the exam falls back on standard textbook technique rather than a BC-specific override.", "bcZh": "BC 指南里没有独立的冻伤方案——唯一的官方落脚点是初步评估干预表里那一行「渐进复温——低体温」。局部冷伤的具体细节（体温复温法、水浴参数、绝不复冻的铁律），考试就按教材标准处理，没有 BC 特有的覆盖规则。", "ref": "BC Guidelines p.11、p.29（2026-06-15 版）"}
+  {
+   "topicEn": "Hypothermic cardiac arrest: pulse check duration and defibrillation limit",
+   "topicZh": "低体温骤停：判脉时长与除颤次数上限",
+   "bookEn": "Standard BLS teaching and the textbook's ACLS-based approach use the normal <=10-second pulse check and generally endorse only ONE defibrillation attempt, on the reasoning that repeated shocks are unlikely to succeed below 30°C core temperature.",
+   "bookZh": "标准 BLS 教学和教材基于 ACLS 的做法都用常规≤10 秒判脉，且一般只主张给一次除颤，理由是核心体温回升到 30°C 以上之前重复电击大概率不会成功。",
+   "bcEn": "BC explicitly extends the pulse check to 30-45 seconds in a severely hypothermic patient, since a slow, weak pulse is easy to miss. If the AED advises a shock, defibrillate up to THREE times while continuing CPR — but after the third shock, stop pausing compressions for further analysis or shocks and keep CPR running during rapid transport instead.",
+   "bcZh": "BC 明确要求对重度低体温患者把判脉时间延长到 30-45 秒，因为脉搏又慢又弱很容易漏判。若 AED 提示除颤，最多连续除颤三次并持续 CPR；第三次除颤后就不再为分析或除颤暂停按压，改为一路 CPR 快速转运。",
+   "ref": "BC Guidelines p.29（2026-06-15 版）"
+  },
+  {
+   "topicEn": "Hypothermia rewarming bands: mild/moderate/severe",
+   "topicZh": "低体温复温分级：轻/中/重度处理差异",
+   "bookEn": "The textbook stages care in three tiers with different techniques: mild gets PASSIVE rewarming only (remove wet clothes, warm blankets, movement/warm fluids if practical); moderate adds ACTIVE EXTERNAL rewarming (hot packs at groin/neck/axillae, forced hot air, warmed IV fluids); severe gets ACTIVE INTERNAL rewarming, which only happens in hospital.",
+   "bookZh": "教材把处理分成三级、各有不同手法：轻度只做被动复温（脱湿衣、温毯、条件允许时活动+温热液体）；中度在此基础上加主动体表复温（腹股沟/颈/腋下热包、强制热风、加温静脉输液）；重度需要主动核心复温，但这只能在院内进行。",
+   "bcEn": "BC groups mild (>32-<35°C) and moderate (28-32°C) under one shared active-rewarm bundle — mild activity if appropriate, ambulance preheated to 30°C, hot packs wrapped in towels, and warm blankets for BOTH tiers. Severe (<28°C) instead gets passive care only: insulate the patient, keep the ambulance at 30°C, avoid rough handling — no active rewarming is attempted in the field at all.",
+   "bcZh": "BC 把轻度（>32-<35°C）和中度（28-32°C）合并成同一套主动复温组合——如适合可轻度活动、救护车预热到 30°C、毛巾包裹的热包、温毯，两级通用。重度（<28°C）则相反，只做被动处理：给患者保温、救护车维持 30°C、避免粗暴搬动——院前完全不做主动复温。",
+   "ref": "BC Guidelines p.29（2026-06-15 版）"
+  },
+  {
+   "topicEn": "Drowning/near-drowning patient positioning",
+   "topicZh": "溺水/近乎溺水患者的体位",
+   "bookEn": "The chapter's drowning management table focuses entirely on airway, breathing, and oxygenation sequencing, and does not specify a body position for the conscious, breathing patient.",
+   "bookZh": "教材关于溺水处置的表格全部聚焦在气道、呼吸、给氧的先后顺序上，没有对清醒、能自主呼吸的患者给出具体体位要求。",
+   "bcEn": "BC's Drowning/Near Drowning protocol explicitly calls for positioning the patient SITTING UP — echoing its own Pulmonary Edema/CHF protocol, which also lists drowning as an indication. This reflects that early drowning lung injury behaves like pulmonary edema; don't default to supine out of habit.",
+   "bcZh": "BC 的溺水/近乎溺水方案明确要求让患者取坐位——这和 BC 自己的肺水肿/充血性心衰方案是呼应的（该方案也把溺水列为适应证之一）。这反映出早期溺水肺损伤和肺水肿处理逻辑相通；不要凭习惯默认平卧。",
+   "ref": "BC Guidelines p.33、p.37（2026-06-15 版）"
+  },
+  {
+   "topicEn": "Local cold injury has no standalone BC protocol",
+   "topicZh": "局部冷伤在 BC 方案里没有独立条目",
+   "bookEn": "The textbook gives frostbite, trench foot, and chilblains their own complete management sequences, entirely separate from systemic hypothermia care.",
+   "bookZh": "教材为冻伤、战壕足、冻疮各自列出了完整的处置流程，和全身性低体温的处理是分开的。",
+   "bcEn": "BC's guidelines contain no standalone frostbite protocol — the only official reference point is a single 'Gradual warming — Hypothermia' line in the primary-survey intervention table. For local cold injury specifics (body-heat rewarming, water-bath parameters, the never-refreeze rule), the exam falls back on standard textbook technique rather than a BC-specific override.",
+   "bcZh": "BC 指南里没有独立的冻伤方案——唯一的官方落脚点是初步评估干预表里那一行「渐进复温——低体温」。局部冷伤的具体细节（体温复温法、水浴参数、绝不复冻的铁律），考试就按教材标准处理，没有 BC 特有的覆盖规则。",
+   "ref": "BC Guidelines p.11、p.29（2026-06-15 版）"
+  },
+  {
+   "topicEn": "Heat illness has its own BC protocol page — with a cooling clock",
+   "topicZh": "热病在 BC 有专属协议页——而且带降温计时",
+   "bookEn": "Teaches evaporative and convective cooling in general terms and moves quickly to transport for heatstroke, with no fixed on-scene cooling duration.",
+   "bookZh": "教材泛泛讲蒸发与对流降温，热射病部分很快转入转运，没有固定的现场降温时长。",
+   "bcEn": "BC's Heat Exhaustion/Heatstroke protocol (p.36) is prescriptive: move to a cool area, remove all clothing, run vehicle air conditioning at maximum as convective cooling, apply cold wet towels to head, torso and thighs, immerse feet and legs in ice water where available — and continue cooling for a minimum of 10 minutes before beginning conveyance. If LOC is decreased, the initial vitals must include a blood glucose. The most aggressive cooling method available continues during transport. On the practical this creates a timing trade-off unique in the exam: heatstroke is an unstable finding demanding rapid transport, yet the same document orders 10 minutes of cooling first — candidates must do both, in that order.",
+   "bcZh": "BC 热衰竭/热射病协议（p.36）是硬性清单：移至阴凉处、脱去全部衣物、救护车空调开到最冷做对流降温、头/躯干/大腿敷湿冷毛巾、有条件时双脚小腿浸冰水——并且**转运出发前至少持续降温 10 分钟**。意识下降者首组生命体征必须含血糖。转运途中继续用可得的最强降温手段。实操里这构成全考试独一份的时序两难：热射病属不稳定表现要求快速转运，同一份文件却要求先降温 10 分钟——两条都要满足，顺序不能错。",
+   "ref": "BC Guidelines p.36 Heat Exhaustion/Heatstroke；与已验收场景 emd-06 一致"
+  }
  ],
  "sourcePages": "3239-3314"
 }
