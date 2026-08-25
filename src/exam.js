@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=13';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=14';
 
 let session = null; // current exam session (mock or practice)
 
@@ -30,8 +30,8 @@ export async function renderWrittenHub(el) {
     <div class="card">
       <h2>${ico('pen')} ${t('Written Exam Camp', '笔试营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${isPcp
-        ? bi('COPR national exam: 200 questions (180 scored) · two 120-minute parts with a 10-minute break · standard-score pass mark. September 2026 runs NOCP and CPCF sittings side by side — pick the one matching your training; from November 2026 it is CPCF only (this bank follows the CPCF blueprint).',
-             'COPR 全国统考：200 题（180 计分）· 两部分各 120 分钟，中间休息 10 分钟 · 标准分制。2026 年 9 月场 NOCP 和 CPCF 双轨并开——按你受教的框架报名；11 月起只有 CPCF（本站题库按 CPCF 蓝图）。')
+        ? bi('COPR national exam: 200 questions (180 scored) · two 120-minute parts with a 10-minute break · standard-score pass mark. Every sitting from November 2026 onward tests the 2024 CPCF — the old NOCP version is retired — and this bank follows the CPCF blueprint throughout.',
+             'COPR 全国统考：200 题（180 计分）· 两部分各 120 分钟，中间休息 10 分钟 · 标准分制。2026 年 11 月起每一场都按 2024 版 CPCF 出题——旧 NOCP 版已退役——本站题库全程按 CPCF 蓝图配比。')
         : bi("EMALB's own online exam: 200 questions · 2.5 hours · 75% to pass. Results are instant.",
              'EMALB 自己的在线考试：200 题 · 2.5 小时 · 75% 及格 · 交卷即出分。')}
       <div class="stat-row" style="margin-top:12px">

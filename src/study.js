@@ -1,5 +1,5 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=13';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=14';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -145,7 +145,7 @@ async function drawChapter(el, d, chId) {
     el.innerHTML = `
       ${head(v2)}
       ${v2.competencies && (v2.competencies.areas || []).length ? `<div class="card">
-        <h4 style="margin:0 0 6px">${t('NOCP competencies in this chapter', '本章覆盖的 NOCP 能力域')}</h4>
+        <h4 style="margin:0 0 6px">${t('Competency codes in this chapter (as printed in the textbook)', '本章覆盖的能力编码（教材原印）')}</h4>
         <p class="tiny">${(v2.competencies.areas || []).map(esc).join(' · ')}${(v2.competencies.codes || []).length ? ` · ${v2.competencies.codes.length} ${t('codes', '个编码')}` : ''}</p>
       </div>` : ''}
       ${(v2.bcAlerts || []).length ? `<div class="bc-alert">
