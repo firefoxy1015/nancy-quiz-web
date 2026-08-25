@@ -1,5 +1,5 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=12';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=13';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -615,10 +615,24 @@ export async function renderExamInfo(el) {
       ${w.scheduleNoteEn ? bi(w.scheduleNoteEn, w.scheduleNoteZh) : ''}
       ${w.seatReservationEn ? bi(w.seatReservationEn, w.seatReservationZh) : ''}
       ${w.resultsEn ? bi(w.resultsEn, w.resultsZh) : ''}
+      ${w.frameworkNoteEn ? `<div class="notice">${ico('info')} ${bi(w.frameworkNoteEn, w.frameworkNoteZh, 'span')}</div>` : ''}
+      ${(w.timelineEn || []).length ? `<details class="acc" style="margin-top:10px" open>
+        <summary> ${t('From application to results — the hard deadlines', '从报名到出分——所有硬节点')}</summary>
+        <div class="acc-body"><ul>${biList(w.timelineEn, w.timelineZh)}</ul></div>
+      </details>` : ''}
       ${(w.onlineRequirementsEn || []).length ? `<details class="acc" style="margin-top:10px">
         <summary> ${t('Online proctoring requirements — read before exam day', '在家考的硬性要求——考前必看')}</summary>
         <div class="acc-body"><ul>${biList(w.onlineRequirementsEn, w.onlineRequirementsZh)}</ul>
         ${w.techFailureEn ? bi(w.techFailureEn, w.techFailureZh) : ''}</div>
+      </details>` : ''}
+      ${w.securityEn ? `<details class="acc" style="margin-top:10px">
+        <summary> ${t('Confidentiality — what gets your result voided', '保密红线——哪些行为会让成绩作废')}</summary>
+        <div class="acc-body">${bi(w.securityEn, w.securityZh)}</div>
+      </details>` : ''}
+      ${w.afterFailEn || w.standardSettingEn ? `<details class="acc" style="margin-top:10px">
+        <summary> ${t('Scoring, verification and appeals', '判分·复核·申诉')}</summary>
+        <div class="acc-body">${w.standardSettingEn ? bi(w.standardSettingEn, w.standardSettingZh) : ''}
+        ${w.afterFailEn ? bi(w.afterFailEn, w.afterFailZh) : ''}</div>
       </details>` : ''}
     </div>
     <div class="card"><h3 style="margin-top:0"> ${t('Jurisprudence', '法规考')}</h3>
