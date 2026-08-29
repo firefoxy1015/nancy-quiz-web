@@ -60,7 +60,7 @@ def haystack_for(cid):
     d = os.path.join(SRC, 'nancy-chapters', cid)
     for f in glob.glob(os.path.join(d, '*.txt')):
         parts.append(io.open(f, encoding='utf-8', errors='replace').read())
-    for f in ('bc-exam-guidelines.txt', 'grading-criteria.txt'):
+    for f in ('bc-exam-guidelines.txt', 'grading-criteria.txt', 'examination-handbook.txt'):
         p = os.path.join(SRC, f)
         if os.path.exists(p):
             parts.append(io.open(p, encoding='utf-8', errors='replace').read())
