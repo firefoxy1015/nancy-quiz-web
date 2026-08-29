@@ -1,0 +1,672 @@
+{
+ "id": "ch50",
+ "n": 50,
+ "titleEn": "Medical Incident Command",
+ "titleZh": "医疗事故指挥",
+ "group": "ops",
+ "examWeight": 1,
+ "whyEn": "The exam weight here is modest, but this chapter owns the single most testable operations topic: multi-casualty triage. COPR explicitly requires you to rapidly assess an incident using triage principles, take on different roles, and manage a multiple-patient call. Expect the START physiologic cut-offs (the 30-2-can do rule), the four tag colours with their assignment logic, and the JumpSTART changes for children to appear as straight recall or as a mini-scenario. A second cluster of questions comes from ICS structure: who you report to, span of control, and what each medical-group officer actually does. Learn the numbers and the decision lines; skip nothing in the triage section.",
+ "whyZh": "本章权重不高，却包揽了运营类里最容易出题的主题——大规模伤亡检伤分类。COPR 能力清单明确要求：按检伤原则快速评估事件、在多伤员事件中承担不同角色并完成管理。START 的生理判定线（30-2-can do）、四色标签的分配逻辑、JumpSTART 针对儿童的改动，都可能以直接回忆题或小场景题出现。另一类考点来自 ICS 架构：你向谁汇报、管理跨度是多少、医疗组各岗位各管什么。把数字和判定线背实，检伤这一节一个点都别跳。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics"
+  ],
+  "codes": [
+   "1.3.c",
+   "1.5.a",
+   "1.6.a",
+   "1.6.b",
+   "1.6.c",
+   "2.2.a",
+   "3.3.b",
+   "3.3.e",
+   "4.1.a",
+   "4.1.b",
+   "4.1.c"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Disasters & the Emergency Management Cycle",
+   "titleZh": "灾难与应急管理四阶段",
+   "points": [
+    {
+     "en": "A disaster overwhelms responders not just through patient numbers but because critical infrastructure is knocked out — the power grid, communications, vehicle fuel, water supply, sewage removal, food, hospitals, and transportation networks.",
+     "zh": "灾难压垮救援体系的原因不只是伤员多，更在于关键基础设施被摧毁——电网、通信、车用燃料、供水、污水处理、食品、医院和交通系统都可能瘫痪。",
+     "hard": true
+    },
+    {
+     "en": "Emergency management planning runs through four phases — preparedness, mitigation, response, and recovery — and exams like to ask which phase a given activity belongs to.",
+     "zh": "应急管理规划分四个阶段：预备(preparedness)、减灾(mitigation)、响应(response)、恢复(recovery)。考题喜欢给一个具体活动让你归类到对应阶段。",
+     "hard": true
+    },
+    {
+     "en": "Beyond the four phases, planners also produce incident action plans before/during the event, then after-action reports and corrective action plans once it ends — three distinct documents with three distinct timings.",
+     "zh": "除四阶段外，规划者还要产出三类文件：事发前/事发中的事件行动计划(IAP)，结束后的行动后报告(after-action report)与整改计划(corrective action plan)——三种文件对应三个不同时间点。",
+     "hard": true
+    },
+    {
+     "en": "The governing principle of any large-scale event is to do the greatest good for the greatest number — a deliberate shift away from the everyday standard of giving one patient everything.",
+     "zh": "任何大规模事件的总原则都是『为最多的人做最大的好事』——这是对日常『倾尽全力救一个人』标准的刻意切换。",
+     "hard": true
+    },
+    {
+     "en": "Within an ICS, a paramedic's default home is the medical branch or group, but you must be ready to be assigned to other functions on a large incident.",
+     "zh": "在 ICS 架构下，护理人员的默认岗位在医疗分部/医疗组，但大型事件中你随时可能被派到其他职能位置。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Mass-Casualty Incidents: Open vs Closed",
+   "titleZh": "大规模伤亡事件：开放型与封闭型",
+   "points": [
+    {
+     "en": "An MCI is defined by ratio, not headcount: the moment patient numbers exceed what the initial responders can handle, it's an MCI — a crash with several critical patients qualifies in a one-ambulance town.",
+     "zh": "MCI 的定义看的是比例而非人数：只要伤员数量超过首批到场人员的处置能力就算 MCI——在只有一辆救护车的小镇，一起有数名危重伤员的车祸就够格。",
+     "hard": true
+    },
+    {
+     "en": "An open (uncontained) incident means some casualties haven't been located yet at the time of the first call, and the scene may keep generating new patients — school shootings, tornadoes, hazmat releases, rising floodwater.",
+     "zh": "开放型（未受控）事件指首次报警时仍有伤员没被找到，且现场可能持续产生新伤员——校园枪击、龙卷风、危险品泄漏、洪水上涨都属此类。",
+     "hard": true
+    },
+    {
+     "en": "A closed (contained) incident has all patients in one focal location with no more expected; they can be triaged and treated as they're pulled out. Classic example: a bus rollover.",
+     "zh": "封闭型（受控）事件的伤员集中在一处，预计不再新增；可以边转移边检伤边处置。经典例子：大巴翻车。",
+     "hard": true
+    },
+    {
+     "en": "A closed incident can flip open without warning — never treat the classification as fixed. Forest-fire smoke drifting into a community and worsening residents' medical conditions is the textbook 'expanding and escalating' example.",
+     "zh": "封闭型可能毫无预警地转为开放型——别把分类当成一锤定音。林火烟雾飘进社区、诱发居民基础病加重，就是教材里『扩张升级型』事件的标准例子。",
+     "hard": true
+    },
+    {
+     "en": "Communities set their own MCI activation thresholds; regular ICS use and drills are what actually build readiness, so agencies that run the system routinely respond better when a real MCI hits.",
+     "zh": "各社区可自行设定启动 MCI 响应的标准；真正积累实战能力的是平时反复使用 ICS 和参加演练——常态化用这套体系的机构，真遇到 MCI 时表现更好。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "ICS Principles & Structure",
+   "titleZh": "ICS 原则与组织架构",
+   "points": [
+    {
+     "en": "Two communication rules make multiagency work possible: common terminology and clear-text (plain language) transmissions — no agency-specific ten-codes at an MCI.",
+     "zh": "让多机构协作成立的两条通信规则：统一术语 + 明语通话(clear text)——MCI 现场不用各家自己的数字代码。",
+     "hard": true
+    },
+    {
+     "en": "The ICS exists to stop two specific failure modes: duplication of effort, and freelancing — units or agencies making independent, uncoordinated decisions about what to do next.",
+     "zh": "ICS 专门防两种失败模式：重复劳动，以及『单干』(freelancing)——个别单位或机构不经协调、自作主张地决定下一步行动。",
+     "hard": true
+    },
+    {
+     "en": "Span of control is the core number of this chapter: optimal ratio 1 supervisor to 5 responders, acceptable range 3 to 7 subordinates. More than 7 direct reports means the supervisor must split tasks and delegate.",
+     "zh": "管理跨度是本章的核心数字：最优比例为 1 名主管带 5 人，可接受范围是 3~7 名直接下属。超过 7 人汇报给同一个人时，必须拆分任务、往下再设一层。",
+     "hard": true
+    },
+    {
+     "en": "The organizational ladder runs: sections, then branches, then divisions and groups, then resources. Emergency operations centres sit outside this ladder — run by municipal, provincial, or federal governments and activated for natural disasters or events beyond local resources.",
+     "zh": "组织层级从上到下依次是：部门(section)→分部(branch)→区段与职能组(division/group)→资源(resource)。应急运行中心(EOC)不在这条链上——由市、省或联邦政府运营，在自然灾害或资源不足的事件中启动。",
+     "hard": true
+    },
+    {
+     "en": "A single command system (one person, one agency, one jurisdiction) fits short, limited incidents; a unified command system is for multiagency or multijurisdiction MCIs, with response plans drawn up in advance and decision-making shared.",
+     "zh": "单一指挥制适用于单机构、单辖区、持续时间短的有限事件；统一指挥制(unified command)用于多机构/跨辖区 MCI，预案提前由各协作机构共同制定、决策责任共担。",
+     "hard": true
+    },
+    {
+     "en": "Unified command plans pre-designate lead vs support agencies by incident type: the hazmat team leads a chemical leak, while the paramedic service might lead a multivehicle collision.",
+     "zh": "统一指挥的预案会按事件类型预先指定主导与支援机构：化学品泄漏由危险品队主导，多车相撞则可能由急救系统主导。",
+     "hard": true
+    },
+    {
+     "en": "Transfer of command goes to someone with more experience in the critical area, must be orderly and ideally face-to-face; only in extreme situations by phone, radio, or e-mail — always per agency SOP. Ending the incident requires a formal termination of command with demobilization procedures.",
+     "zh": "指挥权移交应交给在关键领域更有经验的人，过程必须有序、尽可能面对面完成；仅在极端情况下才可通过电话、无线电或电子邮件移交——一切按机构 SOP 走。事件收尾时要正式终止指挥并执行复员(demobilization)程序。",
+     "hard": true
+    },
+    {
+     "en": "You should be able to answer four things the moment you arrive under an ICS: who the IC is, where the command post is, how to reach your supervisor, and what your assigned role is — and the IC must know about tactical operations before they start, not after.",
+     "zh": "进入 ICS 现场你必须立刻搞清四件事：IC 是谁、指挥所在哪、怎么联系你的主管、你的角色是什么；而任何战术行动开始前——不是开始后——都必须先让主管或 IC 知情。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "ICS Roles: Command & General Staff",
+   "titleZh": "ICS 角色：指挥人员与总参谋部门",
+   "points": [
+    {
+     "en": "Minimum command staff is one person: the incident commander — possibly the first paramedic on scene. The IC assesses the incident, sets strategic objectives and priorities, and builds the management plan.",
+     "zh": "指挥人员的最低配置只有一个：事件指挥官(IC)——可能就是第一个到场的护理人员。IC 负责评估事件、确立战略目标与优先级、制定管理计划。",
+     "hard": true
+    },
+    {
+     "en": "How many command duties the IC delegates scales with incident size: small — the IC does everything; medium — delegates some (e.g., names a safety officer at a multipatient collision) but keeps the rest; complex — appoints people to all command roles.",
+     "zh": "IC 下放多少指挥职能取决于事件规模：小事件——IC 一人全包；中等事件——下放一部分（例如多伤员车祸时指定一名安全官）、其余自己保留；复杂事件——所有指挥岗位都派人。",
+     "hard": true
+    },
+    {
+     "en": "The safety officer watches for hazards to responders and patients and holds the single most exam-worthy power in the chapter: authority to stop an emergency operation whenever a rescuer is in danger.",
+     "zh": "安全官盯着一切可能伤及救援者和患者的危险，并握有本章最爱考的一项权力：只要有救援人员处于危险，安全官有权叫停正在进行的应急作业。",
+     "hard": true
+    },
+    {
+     "en": "The public information officer works away from both the command post and the incident itself, keeps media out of the operation, and may join other agencies' PIOs in a joint information centre to push panic-prevention and evacuation messaging.",
+     "zh": "公共信息官(PIO)的位置要远离指挥所、更要远离事发点，负责拦住媒体别卷进现场，并可与其他机构的 PIO 合组联合信息中心(JIC)，发布防恐慌与疏散指引信息。",
+     "hard": true
+    },
+    {
+     "en": "The liaison officer relays information and concerns among command, the general staff, and outside agencies — any agency without a seat in the command structure routes its questions through the LNO.",
+     "zh": "联络官(LNO)在指挥层、总参谋部门与外部机构之间传递信息和诉求——没有进入指挥架构的机构，一律通过 LNO 提问和反馈。",
+     "hard": true
+    },
+    {
+     "en": "The four general staff sections are operations, planning, logistics, and finance/administration — memorize what each owns, because 'which section handles X?' is a gift question.",
+     "zh": "总参谋部门共四个：行动、计划、后勤、财务/行政——每个部门管什么必须背下来，『X 归哪个部门管』属于送分题。",
+     "hard": true
+    },
+    {
+     "en": "Operations runs the tactical work the IC would handle alone on a routine call; its chief supervises everyone assigned to branches, divisions, and groups on scene — e.g., 12 staged ambulances evacuating a hospital threatened by a forest fire.",
+     "zh": "行动部门承担日常小事件里本由 IC 亲自抓的战术工作；行动部门主管统辖现场各分部、区段与职能组的人员——例如林火威胁医院时集结待命、执行疏散的 12 辆救护车。",
+     "hard": false
+    },
+    {
+     "en": "Planning solves problems as they arise: gathers data, reviews the previous incident plan, predicts what and who the next plan needs, pulls in technical experts, and charts the demobilization course.",
+     "zh": "计划部门负责边打边解题：收集数据、复盘上一版事件计划、预测新计划还缺什么人和物、请技术专家支援，并规划整个响应的复员路线。",
+     "hard": false
+    },
+    {
+     "en": "Logistics owns communications equipment, facilities, food and water, fuel, lighting, and medical supplies — including finding food, shelter, and health care for the responders themselves.",
+     "zh": "后勤部门管通信设备、设施、食品和饮水、燃料、照明与医疗物资——也包括为救援人员自己找到吃住和医疗保障。",
+     "hard": true
+    },
+    {
+     "en": "Finance documents every expenditure and tracks personnel hours for post-incident reimbursement; it's usually skipped at small incidents but essential for large or prolonged ones.",
+     "zh": "财务部门记录每一笔支出、统计工时，为事后报销和补偿做凭证；小事件通常不设，大型或持久事件必不可少。",
+     "hard": true
+    },
+    {
+     "en": "From the MCI supply table, two colour systems matter: sector vests (triage, treatment, transport, staging, command, rescue) and tarps in red, yellow, green, and black matching the triage categories.",
+     "zh": "MCI 物资清单里要记两套颜色系统：职能背心（检伤、处置、转运、集结、指挥、救援六种）和红、黄、绿、黑四色地布——地布颜色与检伤分类一一对应。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Paramedic Response Within the ICS",
+   "titleZh": "护理人员在 ICS 中的响应",
+   "points": [
+    {
+     "en": "Written disaster plans live in two places you can reach — every paramedic station and every vehicle — and medical facilities must stock disaster supplies to stay self-sufficient for at least the first 72 hours.",
+     "zh": "书面灾难预案放在你随手可及的两处——每个急救站和每辆急救车上；医疗机构则必须储备灾难物资，保证至少头 72 小时自给自足。",
+     "hard": true
+    },
+    {
+     "en": "Mutual aid agreements with surrounding organizations speed up help requests; partner agencies should share resource lists in advance and drill the plans together often.",
+     "zh": "与周边机构签互助协议能加快紧急求援；协议各方要提前互换资源清单，并经常合练预案。",
+     "hard": true
+    },
+    {
+     "en": "Personal readiness is testable too: have a family disaster plan, and keep influenza, hepatitis A and B, and tetanus immunizations up to date.",
+     "zh": "个人层面的准备同样可考：给家人立一份家庭灾难计划，并保持流感、甲肝、乙肝和破伤风疫苗接种在有效期内。",
+     "hard": true
+    },
+    {
+     "en": "Multiagency mock scenarios should run monthly; the classic preparedness failure is a plan untouched for years with no training to expose its weaknesses.",
+     "zh": "多机构联合模拟演练应当每月一次；预备阶段最典型的失败，就是预案多年不更新、也从不通过训练暴露它的弱点。",
+     "hard": true
+    },
+    {
+     "en": "First on scene at an MCI, drive everything with three questions, continuously reassessed: What do I have? What do I need to do? What resources do I need?",
+     "zh": "第一个到达 MCI 现场时，用三个问题驱动全部动作并反复重估：我面对的是什么？我需要做什么？我需要哪些资源？",
+     "hard": true
+    },
+    {
+     "en": "'What do I have' means: start with scene safety, broadcast hazards (hazmat, fuel spills, electrical) to all responders immediately, confirm the location, estimate casualty numbers, then radio a structured arrival report and announce that you are assuming command.",
+     "zh": "『我面对的是什么』的动作分解：先看现场安全，第一时间向所有响应单位通报危险品、燃油泄漏、电气隐患等风险，确认事发位置，估算伤员人数，然后用一段结构化的到场报告通知调度并宣布接管指挥。",
+     "hard": true
+    },
+    {
+     "en": "The response priority order is fixed: safety first, incident stabilization second, preservation of property and environment third — and within safety, you and your partner come before patients and bystanders, because an injured rescuer subtracts resources from everyone.",
+     "zh": "响应优先级顺序是死的：安全第一、稳定事态第二、保护财产与环境第三；而在安全内部，你和搭档排在患者与旁观者前面——救援者一旦受伤，反而会抽走现场资源。",
+     "hard": true
+    },
+    {
+     "en": "Command should be established early by the first-arriving, most experienced public safety official — that can be police, fire, paramedics, or local government, not automatically EMS.",
+     "zh": "指挥权应尽早由第一批到场、经验最丰富的公共安全官员建立——可以是警察、消防、护理人员或地方政府人员，不一定自动归急救系统。",
+     "hard": true
+    },
+    {
+     "en": "Communications is the classic MCI failure point: prefer face-to-face to cut radio traffic, ban codes and signals on air, pre-designate command channels, insist on reliable field-tested equipment with backups, and always have a Plan B for total communications failure.",
+     "zh": "通信是 MCI 最经典的崩溃点：能面对面就面对面以减少电台占用、无线电上禁用代码和暗语、提前指定指挥专用频道、设备必须可靠耐用且经过实测并留有备份，还要为通信全瘫准备 Plan B。",
+     "hard": true
+    },
+    {
+     "en": "If extrication is needed, call rescue and fire; if hazardous materials are involved, call the hazmat team immediately; large systems may also field mobile emergency room vehicles that treat dozens of patients on scene.",
+     "zh": "需要破拆救援就叫救援队和消防；一旦涉及危险品，立即召请危险品处置队；大型系统还可能出动能在现场处置数十名患者的移动急诊车。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Incident Command: The Medical Branch",
+   "titleZh": "医疗事故指挥：医疗分部各岗位",
+   "points": [
+    {
+     "en": "'Medical incident command' is simply the medical (paramedic) branch of the ICS. When an incident has a significant medical component, the IC appoints a medical group/branch leader who supervises the branch's three primary jobs: triage, treatment, and transport.",
+     "zh": "『医疗事故指挥』其实就是 ICS 里的医疗（护理）分部。事件涉及大量医疗任务时，IC 会任命一名医疗组/分部负责人，统管该分部的三大职能：检伤、处置、转运。",
+     "hard": true
+    },
+    {
+     "en": "The medical group leader enforces three ground rules: arriving units work inside the ICS, every unit gets a clear assignment before touching a patient, and crews stay with their vehicle in staging until assigned.",
+     "zh": "医疗组负责人要盯住三条铁规矩：到场单位必须纳入 ICS 运作；任何单位开工前必须先领到明确任务；人员在接到任务前必须留在集结区、守在自己车旁。",
+     "hard": true
+    },
+    {
+     "en": "The triage officer counts and prioritizes; the unit's mission is an initial assessment for every single patient. The hardest discipline of the role: no standard treatment until all patients are triaged — treating early sabotages the triage itself.",
+     "zh": "检伤官负责清点人数并排定优先级；检伤单元的使命是让每一名患者都得到初步评估。这个岗位最难的纪律是：所有患者检伤完成之前不得开始常规治疗——提前治疗会毁掉整个检伤工作。",
+     "hard": true
+    },
+    {
+     "en": "The treatment officer sets up a treatment area with one tier per priority level, ensures secondary triage happens there, delivers what care resources allow, helps move patients toward transport, and requisitions supplies through the medical group leader.",
+     "zh": "处置官负责选址并搭建处置区、按优先级各设一个分层，确保患者在此接受二次检伤，在资源允许范围内给予救治，协助把患者送往转运区，并通过医疗组负责人申领物资。",
+     "hard": true
+    },
+    {
+     "en": "The transportation officer distributes patients across receiving hospitals — talking to area hospitals about destinations (some regions pre-designate one hospital to coordinate) — and documents every vehicle, every patient, and every destination. Numbered or bar-coded triage tags carry the tracking when identities are unknown.",
+     "zh": "转运官负责把患者分配到各接收医院——与区域内医院沟通去向（有的地区预先指定一家医院统筹调配），并记录每辆车、每名患者、每个目的地。患者身份不明时，靠编号或条码检伤标签完成追踪。",
+     "hard": true
+    },
+    {
+     "en": "With only one trauma centre available, the transportation officer's play is to send patients to other local hospitals for stabilization first, then transfer to the trauma centre — an MCI disrupts the whole regional trauma system.",
+     "zh": "当区域内只有一家创伤中心时，转运官的打法是先把患者分流到其他本地医院稳定伤情、再转往创伤中心——因为 MCI 会打乱整个区域创伤体系的日常运转。",
+     "hard": true
+    },
+    {
+     "en": "The staging officer keeps vehicles out of the scene until directed in, sites the staging area away from the incident, tracks arrivals, plans access and exit routes, prevents vehicle congestion, and releases vehicles and supplies only on command's order.",
+     "zh": "集结官不放任何车辆未经指令进入现场，把集结区设在离事发点有距离的地方，登记到场单位，规划进出路线，防止救援车辆互相堵死，并且只有指挥部下令才放行车辆和物资。",
+     "hard": true
+    },
+    {
+     "en": "On-scene physicians do secondary triage in the treatment sector — deciding which priority patients ship out first — plus on-scene medical direction; any deployed physician must already have incident command, scene management, and scene safety training.",
+     "zh": "到场医生在处置区做二次检伤——裁定同级患者中谁先转运——并可提供现场医疗指导；任何被派往现场的医生都必须事先受过事件指挥、现场管理和现场安全培训。",
+     "hard": true
+    },
+    {
+     "en": "The rehabilitation area serves long incidents: shielded from the elements, away from exhaust fumes, crowds and media, and out of sight of the scene. It supplies rest, fluids and food, and the rehab officer watches responders for stress signs — fatigue, altered thinking, outright collapse. Defusing/debriefing is encouraged, never forced.",
+     "zh": "休整区服务于持久战：避风遮雨、远离尾气、避开人群和媒体、且看不到现场。这里提供休息、补液和食物，休整官同时监测救援人员的应激征象——疲惫、思维改变、直接垮掉。心理疏导和事后讲评鼓励参加，但绝不强制。",
+     "hard": true
+    },
+    {
+     "en": "Extrication/rescue officers usually sit under the medical branch because rescue is medically complex; some victims must be freed before they can even be triaged, and crew safety outranks speed throughout.",
+     "zh": "破拆/救援官通常挂在医疗分部之下，因为救援过程本身就医疗复杂度高；有些被困者必须先救出才能检伤，而全程救援人员安全高于速度。",
+     "hard": true
+    },
+    {
+     "en": "The morgue officer coordinates with medical examiners, coroners, mortuary assistance teams, and police; leave the dead where found until a removal and storage plan exists — body location aids identification and may be crime scene evidence — and any morgue area must be hidden from living patients and responders.",
+     "zh": "遗体管理官与法医、验尸官、灾难殡仪支援队和警方协调；在拟定搬运与存放方案之前，遗体应留在原地——位置信息有助于身份辨认，也可能是刑案证据；若需设遗体区，必须让幸存患者和救援人员看不到。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Triage Categories & Tags",
+   "titleZh": "检伤分类：类别与标签",
+   "points": [
+    {
+     "en": "Primary triage happens where patients lie in the field; secondary triage happens again as each patient reaches the treatment area. Primary triage attaches an identifier — the tag minimally needs a unique number plus a triage category.",
+     "zh": "初次检伤在患者倒地的现场完成；二次检伤在患者被送进处置区时再做一遍。初次检伤要给患者挂上标识——标签上最少要有唯一编号和检伤类别两项信息。",
+     "hard": true
+    },
+    {
+     "en": "After primary triage, four figures go up to the medical group leader: total patient count, count per category, recommendations for extrication and movement to treatment, and resources needed to finish triage and start moving patients.",
+     "zh": "初次检伤结束后，要向医疗组负责人上报四项内容：患者总数、各类别人数、破拆与向处置区转移的建议、以及完成检伤并启动转移所需的资源。",
+     "hard": true
+    },
+    {
+     "en": "The four categories follow IDME in strict priority order: Immediate (red), Delayed (yellow), Minimal (green — the walking wounded, 'hold' in some systems), Expectant (black). IDME is also the treatment-and-transport order.",
+     "zh": "四个类别按 IDME 的严格顺序排：立即(红)、延迟(黄)、轻微(绿——现场能走动的伤员，部分地区称『暂缓』)、濒死(黑)。IDME 同时就是治疗与转运的先后顺序。",
+     "hard": true
+    },
+    {
+     "en": "Red-tag conditions: airway/breathing trouble, uncontrolled or severe bleeding, severe medical problems, decreased mental status, signs of shock, severe burns, open chest or abdominal wounds — and note, injured rescuers ride in this lane too.",
+     "zh": "红标的典型伤情：气道/呼吸障碍、无法控制或严重的出血、严重内科问题、意识水平下降、休克征象、重度烧伤、开放性胸腹伤——注意，受伤的救援人员也走红标通道。",
+     "hard": true
+    },
+    {
+     "en": "Yellow-tag conditions: burns without airway involvement, major or multiple bone/joint injuries, and back injuries with or without spinal cord damage — that last pairing surprises people and is exam bait.",
+     "zh": "黄标的典型伤情：不伴气道问题的烧伤、严重或多发的骨与关节损伤、以及无论是否合并脊髓损伤的背部伤——最后这条出人意料，正是考题爱挖的坑。",
+     "hard": true
+    },
+    {
+     "en": "Green tags cover minor fractures and minor soft-tissue injuries (contusions, abrasions, lacerations); black tags cover obvious death, nonsurvivable injuries such as major open brain trauma, cardiac arrest — and respiratory arrest when resources are limited.",
+     "zh": "绿标对应轻微骨折和轻微软组织伤（挫伤、擦伤、裂伤）；黑标对应明显死亡、不可存活的损伤（如严重开放性脑外伤）、心搏骤停——以及资源不足时的呼吸骤停。",
+     "hard": true
+    },
+    {
+     "en": "Tags must be weatherproof, colour-coded, and carry symbols alongside colours so colour-blind rescuers can still read the category; the tag becomes part of the medical record.",
+     "zh": "标签必须防风雨、有颜色编码，并且颜色旁要配符号——色盲的救援者也得能读出类别；标签最终会成为病历的一部分。",
+     "hard": true
+    },
+    {
+     "en": "Tracking mechanics: a tear-off receipt on the tag, pulled by the transportation officer, links patient number to destination; digital photos catalogued against tag numbers (used effectively in Europe and Israel) help families identify loved ones; bar-coded tags allow real-time tracking from triage to hospital.",
+     "zh": "追踪机制有三层：标签上的撕角回执由转运官撕下，把患者编号与去向绑定；按标签号归档的数码照片（欧洲和以色列用得很成熟）可帮家属辨认亲人；条码标签配扫描枪则能实现从检伤到医院的实时追踪。",
+     "hard": true
+    },
+    {
+     "en": "A tag's quiet superpower: it ends the endless re-checking of the same casualties — a tagged patient visibly carries proof of at least one assessment. The hard part is crew habit, which is why some agencies run 'tag days' where every routine patient gets tagged for practice.",
+     "zh": "标签还有个容易被忽视的价值：终结对同一批伤员的反复重查——挂了签就等于当众证明此人至少被评估过一次。难点在于让队员养成用签的习惯，所以有的机构专门搞『标签日』，当天所有常规患者都挂签练手。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "START & JumpSTART",
+   "titleZh": "START 与 JumpSTART 检伤法",
+   "points": [
+    {
+     "en": "START (Simple Triage And Rapid Treatment, developed at Hoag Memorial Hospital) screens only four things: ability to walk, respirations, perfusion, and mental status. It is deliberately quick and coarse.",
+     "zh": "START（简单检伤与快速处置，Hoag 纪念医院开发）只筛四件事：能否行走、呼吸、灌注、神志。它刻意做得又快又粗。",
+     "hard": true
+    },
+    {
+     "en": "START step 1: shout for everyone who can hear you and walk to move to a landmark — all who walk out are green (third priority). Everything after this applies only to those who stayed down.",
+     "zh": "START 第一步：喊话『听得到我并且能走的人』到指定地标集合——凡是能自己走出来的都是绿标（第三优先级）。之后的所有步骤只针对留在原地的人。",
+     "hard": true
+    },
+    {
+     "en": "START breathing branch: not breathing → open the airway manually once; still apneic = black. Starts breathing after the manoeuvre = red, put in recovery position, move on. Breathing faster than 30/min = red. At or under 30/min → check perfusion.",
+     "zh": "START 呼吸分支：无呼吸→徒手开放气道一次；仍无呼吸=黑标。开放气道后恢复呼吸=红标，摆复原卧位后立刻去看下一个。呼吸频率超过 30 次/分=红标。不超过 30 次/分→进入灌注检查。",
+     "hard": true
+    },
+    {
+     "en": "START perfusion branch: no radial pulse means the patient is presumed hypotensive — red. Radial pulse present → assess mental status.",
+     "zh": "START 灌注分支：桡动脉摸不到即推定低血压——红标。摸得到桡动脉→进入神志评估。",
+     "hard": true
+    },
+    {
+     "en": "START mental-status branch: give a simple command like 'show me three fingers'. Unresponsive or can't comply = red; follows the command = yellow. Note the walking test already filtered the greens, so this branch only ends red or yellow.",
+     "zh": "START 神志分支：下一个简单指令，如『伸出三根手指给我看』。无反应或做不到=红标；能照做=黄标。注意绿标早在行走测试就被筛走了，所以这一支的结局只有红或黄。",
+     "hard": true
+    },
+    {
+     "en": "JumpSTART (Lou Romig, MD) is for children younger than 8 years or who look under 45 kg. Infants and children too young to walk or follow commands — including kids with special needs — skip the walking filter and go straight to the treatment sector for immediate secondary triage.",
+     "zh": "JumpSTART（Lou Romig 医生设计）适用于 8 岁以下或目测体重不足 45 kg 的儿童。还不会走路或听不懂指令的婴幼儿——包括有特殊需求的孩子——不做行走筛选，直接送处置区立即做二次检伤。",
+     "hard": true
+    },
+    {
+     "en": "JumpSTART's apnea branch is the big difference: not breathing → check the pulse first. No pulse = black. Pulse present → open the airway; still apneic → give 5 rescue breaths and recheck. Only if still not breathing after the 5 breaths is the child black. Rationale: pediatric cardiac arrest is usually respiratory in origin.",
+     "zh": "JumpSTART 的无呼吸分支是最大差异点：无呼吸→先摸脉搏。无脉=黑标。有脉→开放气道；仍无呼吸→给 5 次人工呼吸后再评估。5 次通气后仍无呼吸才定黑标。原理：儿童心搏骤停绝大多数由呼吸骤停引起。",
+     "hard": true
+    },
+    {
+     "en": "JumpSTART breathing thresholds are a band, not a ceiling: under 15/min or over 45/min = red; 15 to 45/min → continue the algorithm.",
+     "zh": "JumpSTART 的呼吸阈值是一个区间而非单一上限：低于 15 次/分或高于 45 次/分=红标；15~45 次/分之间→继续走流程。",
+     "hard": true
+    },
+    {
+     "en": "JumpSTART perfusion: feel for any distal pulse — whichever site you're most competent with, not necessarily brachial. Absent = red; present → neurologic check.",
+     "zh": "JumpSTART 灌注检查：摸任意一处远端脉搏——选你最有把握的部位，不非得是肱动脉。摸不到=红标；摸得到→进入神经学检查。",
+     "hard": true
+    },
+    {
+     "en": "JumpSTART uses a modified AVPU: unresponsive, posturing to pain, incomprehensible sounds, or unable to localize pain = red; alert, or localizes/withdraws from pain = yellow.",
+     "zh": "JumpSTART 用改良 AVPU 判神志：无反应、疼痛刺激下呈异常姿势、只发出无法理解的声音、或不能定位疼痛=红标；清醒、或能定位/回缩躲避疼痛=黄标。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "SALT, Special Cases & Transport Order",
+   "titleZh": "SALT、特殊情形与转运顺序",
+   "points": [
+    {
+     "en": "SALT (Sort, Assess, Lifesaving interventions, Treatment/Transport) opens with global sorting: walkers get assessed last; non-walkers who move purposefully or obey commands are second; those lying still or with obvious life threats are assessed first.",
+     "zh": "SALT（分拣-评估-救命干预-处置/转运）以整体分拣开场：能走的最后评估；不能走但有目的性活动或能听指令的排第二；一动不动或有明显致命伤的最先评估。",
+     "hard": true
+    },
+    {
+     "en": "SALT permits four rapid lifesaving interventions mid-triage: bleeding control, airway opening (plus two rescue breaths for children), needle decompression of tension pneumothorax, and auto-injector antidotes.",
+     "zh": "SALT 允许在检伤途中做四种快速救命干预：控制出血、开放气道（儿童加做 2 次人工呼吸）、张力性气胸针刺减压、自动注射器解毒剂。",
+     "hard": true
+    },
+    {
+     "en": "SALT runs five categories instead of four: the extra gray tag marks patients not expected to survive with current resources — unlike black (dead, don't move from point of injury), gray patients may be revisited once the immediates are handled.",
+     "zh": "SALT 用五个类别而非四个：多出来的灰标给『以现有资源救不回来』的患者——与黑标（已死亡，不得移离原地）不同，灰标患者在红标处理完后可以回头再管。",
+     "hard": true
+    },
+    {
+     "en": "Special case 1: a hysterical, disruptive patient can be bumped to immediate and shipped off site even with trivial injuries — panic breeds panic and degrades the whole operation.",
+     "zh": "特例一：歇斯底里、干扰救援的患者即使伤得不重，也可以升为红标并尽快转运离场——恐慌会传染，会拖垮整个行动。",
+     "hard": true
+    },
+    {
+     "en": "Special case 2: a rescuer who gets sick or hurt mid-operation is triaged immediate and moved off site fast, protecting the morale of the remaining crews; if quick treatment lets them return to work, even better.",
+     "zh": "特例二：救援中病倒或受伤的救援人员按红标处理、尽快撤离现场，以免动摇其余队伍的士气；若简单处置后还能重返岗位，更好。",
+     "hard": true
+    },
+    {
+     "en": "Special case 3: at hazmat or weapons-of-mass-destruction events, the hazmat team must sort patients into contaminated vs decontaminated before any regular triage — contamination reaching a treatment area or hospital can paralyze the entire system. Widely scattered victims may also demand multiple triage teams.",
+     "zh": "特例三：危险品或大规模杀伤性武器事件中，危险品处置队必须先把患者分为已污染/已洗消，然后才进入常规检伤——污染一旦带进处置区或医院，可让整个体系瘫痪。伤员分布很散时，还可能需要设多个检伤小组。",
+     "hard": true
+    },
+    {
+     "en": "Transport vehicles: reds and yellows go by ambulance or air ambulance. In very large events a bus may carry the walking wounded — to a hospital deliberately far from the site, with at least one paramedic or first responder riding along and an ambulance trailing so anyone who deteriorates can be transferred and diverted closer.",
+     "zh": "转运载具：红标和黄标优先用救护车或空中救护。特大事件中可用大巴运送轻伤员——目的地要刻意选远离现场的医院，车上至少配一名急救人员，后面还要跟一辆救护车，一旦有人恶化即可转移换乘、就近送医。",
+     "hard": true
+    },
+    {
+     "en": "Transport sequencing: immediates leave two at a time until none remain; then delayeds two or three at a time; then the walking wounded; expectant patients still alive get treatment and transport only at this final stage. The dead are handled per local SOP.",
+     "zh": "转运节奏：红标每次运 2 名，运完为止；然后黄标每次 2~3 名；再轮到轻伤员；仍存活的黑标患者要到这最后阶段才获得治疗与转运。遗体按当地 SOP 处理。",
+     "hard": true
+    },
+    {
+     "en": "Critical incident stress management starts inside the rehabilitation sector and is offered to everyone — but forcing participation can do more psychological harm than good; some rescuers genuinely recover better through personal support alone.",
+     "zh": "危机事件应激管理从休整区就要开始、向所有响应者开放——但强迫参加反而可能造成更大心理伤害；确实有救援者更适合靠个人支持系统自行恢复。",
+     "hard": true
+    },
+    {
+     "en": "Every incident ends with an after-action report and corrective action plan built by all responding agencies: keep what worked, fix or cut what didn't, put observations in writing, and pair every criticism with a proposed solution.",
+     "zh": "每次事件都要以行动后报告和整改计划收尾，所有参与机构共同完成：有效的保留，无效的修正或删除，观察所得尽量落成文字，并且每提一条批评就要配一条解决建议。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Optimal ICS span of control",
+   "itemZh": "ICS 最优管理跨度",
+   "value": "1:5（1 名主管带 5 人）"
+  },
+  {
+   "itemEn": "Acceptable span-of-control range; above it you must delegate",
+   "itemZh": "管理跨度可接受范围，超出必须拆分下放",
+   "value": "3~7 名直接下属；>7 人即须再分层"
+  },
+  {
+   "itemEn": "Large-event threshold where some systems switch to the term 'mass-casualty'",
+   "itemZh": "部分地区改称 mass-casualty 的大事件门槛",
+   "value": "约 >20 名患者（术语因地而异）"
+  },
+  {
+   "itemEn": "Medical facility disaster self-sufficiency",
+   "itemZh": "医疗机构灾难物资自给时长",
+   "value": "至少最初 72 小时"
+  },
+  {
+   "itemEn": "Recommended frequency of multiagency mock-scenario training",
+   "itemZh": "多机构联合模拟演练建议频率",
+   "value": "每月 1 次"
+  },
+  {
+   "itemEn": "START adult respiratory red-tag line",
+   "itemZh": "START 成人呼吸红标线",
+   "value": ">30 次/分 = 红标；≤30 继续查灌注"
+  },
+  {
+   "itemEn": "START perfusion check",
+   "itemZh": "START 灌注判定",
+   "value": "桡动脉消失 = 红标（经典口诀中的『2』= 毛细血管再充盈 >2 秒）"
+  },
+  {
+   "itemEn": "JumpSTART applicable population",
+   "itemZh": "JumpSTART 适用人群",
+   "value": "<8 岁，或目测体重 <45 kg"
+  },
+  {
+   "itemEn": "JumpSTART pediatric respiratory red-tag band",
+   "itemZh": "JumpSTART 儿童呼吸红标区间",
+   "value": "<15 或 >45 次/分 = 红标；15~45 继续流程"
+  },
+  {
+   "itemEn": "JumpSTART apneic child with a pulse",
+   "itemZh": "JumpSTART 无呼吸但有脉的儿童",
+   "value": "开放气道后仍无呼吸 → 给 5 次人工呼吸再判；仍无呼吸才定黑标"
+  },
+  {
+   "itemEn": "SALT categories & pediatric airway intervention",
+   "itemZh": "SALT 类别数与儿童气道干预",
+   "value": "5 个类别（多一个灰标）；儿童开放气道时加 2 次人工呼吸"
+  },
+  {
+   "itemEn": "MCI transport batching",
+   "itemZh": "MCI 转运节奏",
+   "value": "红标每车次 2 名运完为止 → 黄标每车次 2~3 名 → 轻伤员 → 仍存活的黑标"
+  },
+  {
+   "itemEn": "START system origin",
+   "itemZh": "START 诞生背景",
+   "value": "1980 年代初，加州 Newport Beach（Hoag 纪念医院）"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Terminology is local: some services say 'multiple-casualty' for any call with more than one patient and reserve 'mass-casualty' for large events above roughly 20 patients. The textbook lumps both under MCI — on the exam, read the stem's definition rather than assuming a fixed cut-off.",
+   "zh": "术语因地而异：有的系统把超过 1 名伤员就叫 multiple-casualty，把大约 20 人以上的大事件才叫 mass-casualty；教材则统一都称 MCI。考试时以题干给出的定义为准，别默认某个固定人数线。"
+  },
+  {
+   "en": "Table-top MCI exercises are the cheapest way to learn your role before the real thing — treat drill invitations as career-critical, not optional.",
+   "zh": "桌面推演是熟悉自己 MCI 角色成本最低的方式——把演练邀请当成职业必修课，而不是可去可不去的活动。"
+  },
+  {
+   "en": "After an MCI, get medically evaluated if you were injured, touched any hazardous substance, or inhaled dust, fumes, or smoke — exposure effects can surface years later and become impossible to link back to the event. Watch yourself and your colleagues for stress, and use the debriefing on offer.",
+   "zh": "MCI 结束后，只要你受了伤、接触过任何危险物质、或吸入过粉尘烟雾，都要接受医学评估——暴露的健康影响可能多年后才显现，届时很难再追溯到这次事件。同时留意自己和同事的应激迹象，主动用好事后心理讲评。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'MCI' does not mean a fixed headcount. The working definition is relative — patients exceed what the first-arriving resources can manage — so three critical patients in a one-ambulance town is an MCI, while 20 minor injuries next to a mass-gathering medical team may not be.",
+   "zh": "MCI 不是某个固定人数。它的定义是相对的——伤员超出首批到场资源的处置能力——所以在只有一辆救护车的小镇，3 名危重伤员就是 MCI；而大型活动医疗队旁边的 20 个轻伤员，反而可能不算。"
+  },
+  {
+   "en": "Under START the triage officer must not stop to treat until everyone is triaged; under SALT four lifesaving interventions ARE allowed mid-triage. Don't blend the two systems in an exam answer — check which algorithm the stem names.",
+   "zh": "START 体系下，检伤官在全员检伤完成前不得停下来治疗；SALT 体系却明确允许边检伤边做四种救命干预。答题时别把两套系统搅在一起——先看题干说的是哪种算法。"
+  },
+  {
+   "en": "Black tag does not mean abandonment. Expectant patients still alive receive treatment and transport in the final stage, and SALT's gray category is explicitly designed to be revisited once the reds are dealt with.",
+   "zh": "黑标不等于放弃。仍存活的濒死患者会在最后阶段得到治疗与转运；SALT 的灰标更是明文设计成红标处理完后可以回头再救的类别。"
+  },
+  {
+   "en": "Respiratory arrest is not one fixed category — it depends on age and resources. Adult under START: still apneic after one airway manoeuvre = black. Child under JumpSTART with a pulse: 5 rescue breaths first, and only persistent apnea earns black. And in the general table, adult respiratory arrest goes black only 'if limited resources'.",
+   "zh": "呼吸骤停并不对应某个固定类别——要看年龄和资源。START 下的成人：开放气道一次后仍无呼吸=黑标。JumpSTART 下有脉搏的儿童：先给 5 次人工呼吸，通气后仍无呼吸才是黑标。而在总分类表里，成人呼吸骤停也只有『资源有限时』才归黑标。"
+  },
+  {
+   "en": "Back injuries — even with spinal cord damage — are yellow, not red. Students instinctively upgrade anything spinal; the table says treatment and transport can wait behind airway, bleeding, and shock patients.",
+   "zh": "背部损伤——哪怕合并脊髓损伤——是黄标不是红标。学生本能地想把一切脊柱伤升级；但分类表明确：这类患者的处置和转运可以排在气道、出血和休克患者之后。"
+  },
+  {
+   "en": "The person who can halt an operation for rescuer danger is the safety officer, not the IC — and initial command goes to the first-arriving, most experienced public safety official, who may be police or fire rather than a paramedic.",
+   "zh": "因救援者陷入危险而叫停行动的权力在安全官手里，不在 IC——而最初的指挥权归第一批到场、经验最丰富的公共安全官员，完全可能是警察或消防而非护理人员。"
+  },
+  {
+   "en": "One triage pass is never enough. Primary triage in the field is followed by secondary triage in the treatment area (where physicians may re-sort transport order), and conditions keep shifting — triage is a rolling process, not a stamp.",
+   "zh": "检伤从来不是做一轮就完。现场初次检伤之后，处置区还有二次检伤（医生可能在这里重排转运顺序），而伤情随时在变——检伤是滚动过程，不是盖章定论。"
+  },
+  {
+   "en": "In an MCI, 'fair' does not mean treating everyone equally or the sickest first. The hysterical-but-barely-hurt patient may leave before sicker ones, and a cardiac-arrest patient may be passed over entirely — fairness here means maximizing total survival under real limits.",
+   "zh": "MCI 里的『公平』既不是人人平等对待，也不是最重的先治。歇斯底里但伤得不重的患者可能先被运走，心搏骤停的患者可能整个被跳过——这里的公平指的是在真实资源限制下让总生存最大化。"
+  },
+  {
+   "en": "The ICS is not paperwork or bureaucracy. Its measurable products — no freelancing, no duplicated effort, a working span of control — directly change patient outcomes, which is why 'experienced crews can self-organize' fails precisely when complexity peaks.",
+   "zh": "ICS 不是文书工作、不是官僚流程。它的产出是可衡量的——没人单干、没有重复劳动、管理跨度可控——这些直接改变患者结局；『有经验的人自然会配合』这种想法，恰恰在复杂度最高的时刻失灵。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "IDME",
+   "en": "Immediate (red) - Delayed (yellow) - Minimal (green) - Expectant (black): the four triage categories in exact priority order for both treatment and transport.",
+   "zh": "Immediate 立即(红) - Delayed 延迟(黄) - Minimal 轻微(绿) - Expectant 濒死(黑)：四个检伤类别，同时就是治疗与转运的优先顺序。"
+  },
+  {
+   "name": "30-2-can do",
+   "en": "The three START decision lines: respirations over 30/min, perfusion failing (capillary refill over 2 seconds — the textbook checks for an absent radial pulse instead), and can the patient do what you ask (obey a simple command). Fail any one = red tag.",
+   "zh": "START 三条判定线：呼吸超过 30 次/分；灌注不良（毛细血管再充盈超过 2 秒——教材版本改查桡动脉是否消失）；能否『照做』（服从简单指令）。任何一条不过关 = 红标。"
+  },
+  {
+   "name": "SALT",
+   "en": "Sort - Assess - Lifesaving interventions - Treatment/Transport: the newer five-category system whose extra gray tag separates 'not survivable with current resources' from 'already dead'.",
+   "zh": "Sort 分拣 - Assess 评估 - Lifesaving interventions 救命干预 - Treatment/Transport 处置/转运：较新的五类别体系，多出的灰标把『现有资源救不回』与『已经死亡』分开。"
+  },
+  {
+   "name": "备-减-响-复",
+   "en": "The four emergency-management phases in order: Preparedness, Mitigation, Response, Recovery.",
+   "zh": "应急管理四阶段顺序：预备(Preparedness)、减灾(Mitigation)、响应(Response)、恢复(Recovery)——『备减响复』四字连读帮你锁顺序。"
+  },
+  {
+   "name": "JumpSTART = START + 跳",
+   "en": "Remember JumpSTART as START with three 'jumps' for kids under 8 or under 45 kg: jump the apneic child to a pulse check and 5 rescue breaths; jump the rate window to 15-45; jump AVPU to a modified version where only localizing pain or better earns yellow.",
+   "zh": "把 JumpSTART 记成『START 加三跳』，适用 8 岁以下或 45 kg 以下：无呼吸先跳去摸脉、再给 5 次通气；呼吸线跳成 15~45 区间；AVPU 跳成改良版——能定位疼痛或更好才算黄标。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Plane crash, adult who cannot walk: nose bleeding, pale cool dry skin, alert and oriented, airway open, breathing adequate, radial pulse rapid and full. START category?",
+   "qZh": "空难现场，一名不能行走的成人：鼻部出血、皮肤苍白凉而干、清醒且定向力完好、气道通畅、呼吸充分、桡脉快而有力。START 归哪类？",
+   "aEn": "Yellow (delayed). Respirations are not over 30, the radial pulse is present, and an alert oriented patient can follow commands — every branch lands on delayed. Bleeding from the nose alone doesn't buy a red tag.",
+   "aZh": "黄标（延迟）。呼吸未超过 30 次/分、桡脉可及、清醒且定向完好意味着能服从指令——每条分支都落在延迟档。单纯鼻出血换不来红标。"
+  },
+  {
+   "qEn": "Same scene, a teenage boy: responsive only to pain, nonsucking chest puncture, rapid shallow laboured breathing, rapid weak radial pulse. START category and the deciding branch?",
+   "qZh": "同一现场，一名少年：仅对疼痛刺激有反应、胸部有非吸吮性穿刺伤、呼吸快浅而费力、桡脉快而弱。START 归哪类？决定性分支是哪条？",
+   "aEn": "Red (immediate). He cannot follow simple commands — the mental-status branch alone makes him immediate, before you even weigh the chest wound.",
+   "aZh": "红标（立即）。他无法服从简单指令——单凭神志分支就足以定红标，甚至还轮不到考虑那处胸部伤。"
+  },
+  {
+   "qEn": "A 6-year-old is apneic. You feel a pulse; a manual airway manoeuvre produces no breathing. Next move under JumpSTART — and how does the adult START answer differ?",
+   "qZh": "一名 6 岁儿童无呼吸。你摸到了脉搏；徒手开放气道后仍无呼吸。按 JumpSTART 下一步做什么？成人 START 的处理有何不同？",
+   "aEn": "Give 5 rescue breaths and reassess: breathing resumes = red; still apneic = black. An adult under START who stays apneic after the airway manoeuvre is tagged black straight away — no rescue breaths, because pediatric arrest is usually respiratory in origin and adult arrest is not.",
+   "aZh": "给 5 次人工呼吸后重新评估：恢复呼吸=红标；仍无呼吸=黑标。而 START 下的成人开放气道后仍无呼吸就直接黑标——不给人工呼吸，因为儿童骤停多源于呼吸，成人则不然。"
+  },
+  {
+   "qEn": "A treatment officer realizes 9 responders now report directly to her. What does ICS doctrine require, and what are the two numbers behind it?",
+   "qZh": "处置官发现直接向她汇报的人已经有 9 个。ICS 原则要求她怎么做？背后的两个数字是什么？",
+   "aEn": "Split the tasks and delegate supervision of some to another person. Span of control tops out at 7 direct reports (acceptable range 3-7), and the optimal ratio is 1 supervisor to 5 responders.",
+   "aZh": "拆分任务，把其中一部分的监管下放给另一个人。管理跨度上限是 7 名直接下属（可接受范围 3~7），最优比例是 1 名主管带 5 人。"
+  },
+  {
+   "qEn": "Mid-rescue, smoke shifts and a crew member is suddenly in danger. Who has the authority to stop the operation on the spot — and where did that authority come from?",
+   "qZh": "救援进行到一半，烟雾风向突变，一名队员骤然陷入危险。谁有权当场叫停行动？这个权力从何而来？",
+   "aEn": "The safety officer — the ICS grants that role standing authority to halt any emergency operation whenever a rescuer is in danger, without waiting for the IC's sign-off.",
+   "aZh": "安全官——ICS 赋予这个岗位常设权力：只要有救援人员处于危险，就可叫停任何应急作业，无需先等 IC 批准。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "What 'MCI' expands to",
+   "topicZh": "MCI 缩写的展开",
+   "bookEn": "The textbook uses MCI for 'mass-casualty incident' and applies it to any call where patients outnumber the initial responders' resources.",
+   "bookZh": "教材把 MCI 展开为 mass-casualty incident（大规模伤亡事件），并用它泛指伤员超出首批资源处置能力的任何呼叫。",
+   "bcEn": "The BC exam guideline's abbreviation table defines MCI as 'multi-casualty incident'. Same concept, different expansion — if a written question spells it out, don't let the wording throw you.",
+   "bcZh": "BC 考试指南的缩写表把 MCI 定义为 multi-casualty incident（多伤亡事件）。概念相同、展开不同——笔试若把全称写出来，别被措辞带偏。",
+   "ref": "EMALB examination guidelines, abbreviation list"
+  }
+ ],
+ "sourcePages": "4155-4194"
+}

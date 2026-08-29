@@ -1,0 +1,656 @@
+{
+ "id": "ch49",
+ "n": 49,
+ "titleEn": "Emergency Vehicle Operations",
+ "titleZh": "急救车辆驾驶",
+ "group": "ops",
+ "examWeight": 2,
+ "whyEn": "This chapter effectively owns Competency Area 7 (Transportation): vehicle checks, defensive and emergency driving, and aircraft safety all live here, and the exam treats it as a judgment chapter rather than a trivia chapter. Three ideas carry most of the marks: lights and siren only request the right of way and never cancel your duty of care (due regard); intersections are where ambulances crash; and emergency mode is an intervention with real risk that usually buys only a couple of minutes. Around that core sit very testable specifics — the daily vehicle check with its voltage and fluid criteria, the out-of-service triggers, spotter-guided backing, scene parking distances, and the helicopter landing-zone numbers. Scenario questions will tempt you to trade safety for speed; the safest defensible option is the correct answer.",
+ "whyZh": "本章几乎独占能力领域 7「转运」——车辆检查、防御性与紧急驾驶、航空器安全都在这里——考法偏判断题而不是死记题。三条主线最值钱：灯笛只是请求路权，从不免除谨慎义务（due regard）；路口是救护车事故的头号发生地；紧急驾驶本身是一种带真实风险的干预，通常只换来两三分钟。围绕这三条的是一批非常好出题的细节：每日检查里的电压与油液判据、必须立即停用车辆的情形、倒车引导规则、现场停车距离、直升机降落区的各项数字。情景题会反复引诱你拿安全换速度——选最安全、最站得住脚的那个就对了。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 5: Therapeutics",
+   "Area 7: Transportation"
+  ],
+  "codes": [
+   "1.1.f",
+   "1.4.a",
+   "1.5.a",
+   "2.2.b",
+   "3.2.a",
+   "3.2.b",
+   "3.2.c",
+   "3.2.d",
+   "5.1.a",
+   "5.1.i",
+   "5.1.j",
+   "5.2.a",
+   "5.2.b",
+   "5.3.a",
+   "5.3.b",
+   "5.4.b",
+   "5.4.c",
+   "5.4.d",
+   "5.5.b",
+   "5.5.c",
+   "5.5.o",
+   "5.5.p",
+   "5.5.u",
+   "7.1.a",
+   "7.1.b",
+   "7.1.c",
+   "7.2.a",
+   "7.2.b",
+   "7.2.c",
+   "7.3.a",
+   "7.3.b",
+   "7.3.c",
+   "7.4.a",
+   "7.4.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: Responsibility and the Right of Way",
+   "titleZh": "引言：责任与路权",
+   "points": [
+    {
+     "en": "Whoever takes the wheel of an ambulance answers for more than the crew and the patient: the driver carries legal and professional responsibility for the safe passage of every other vehicle and pedestrian the unit meets along the route.",
+     "zh": "握上救护车方向盘的人，要负责的不只是车组和患者：一路上遇到的其他车辆和行人能否安全通行，司机同样负有法律与职业责任。",
+     "hard": false
+    },
+    {
+     "en": "Activating the warning equipment guarantees nothing: other drivers may not hear the siren, may not understand what you want them to do, or may react in unpredictable ways — treat every warning device as fallible.",
+     "zh": "打开警示装置不保证任何事：其他司机可能听不见警笛、看不懂你的意图，甚至做出不可预测的反应——要把所有警示装置都当作会失效的东西来用。",
+     "hard": false
+    },
+    {
+     "en": "The most examinable sentence in the chapter: lights and siren are usually only a request for the right of way — they never grant it, and they never remove the duty to drive with due regard for everyone else's safety.",
+     "zh": "全章最容易出题的一句话：灯笛通常只是对路权的请求——它从不等于获得路权，也从不解除对他人安全的谨慎驾驶义务。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "History of Ground Ambulances",
+   "titleZh": "地面救护车简史",
+   "points": [
+    {
+     "en": "Mobile casualty transport dates to Dr. Dominique-Jean Larrey in the French Revolutionary Wars of the 1790s: horse-drawn 'flying ambulances' supported by a full corps — a physician, a quartermaster, a non-commissioned officer, a drummer boy carrying the bandages, and 24 infantrymen for protection — that could clear a casualty off the battlefield within 15 minutes.",
+     "zh": "移动伤员转运的构想始于 1790 年代法国大革命战争中的 Dominique-Jean Larrey 医生：马拉的『飞行救护车』配上一整支队伍——医生、军需官、军士、背绷带的鼓手男孩，外加 24 名护卫步兵——能在 15 分钟内把伤员撤离战场。",
+     "hard": true
+    },
+    {
+     "en": "Canada's first ambulance is believed to date to 1880, presented to the trustees of Toronto General Hospital; ambulances themselves were first commissioned in this country in the 1880s, and the fleet has since grown into a coordinated land-air-communications system.",
+     "zh": "加拿大的第一辆救护车据信出现在 1880 年，受赠方是多伦多总医院的董事会；本国的救护车正是从 1880 年代起投入使用，此后逐步发展成陆地、空中与通讯一体化的协同系统。",
+     "hard": true
+    },
+    {
+     "en": "Governance: delivering ambulance service is a provincial and municipal responsibility — each province writes its own vehicle standards (referenced at the provincial health ministry), and those standards are harmonized nationally because every province and territory sits at the Paramedic Chiefs of Canada table.",
+     "zh": "治理结构：救护车服务由省和市政府负责——车辆标准由各省自行制定（可在省卫生厅查询），又因为各省与地区都在加拿大急救主管协会（Paramedic Chiefs of Canada）中有席位，标准得以在全国范围内协调统一。",
+     "hard": false
+    },
+    {
+     "en": "Livery rules evolved: the original guideline required every ambulance to be painted Omaha orange and white for instant recognition; custom paint schemes are now permitted, provided the minimum illumination and reflective standards are still met.",
+     "zh": "涂装规则的演变：早期指南要求救护车一律漆成 Omaha 橙加白色，方便一眼认出；如今允许自定义配色，但最低照明与反光标准必须保留。",
+     "hard": false
+    },
+    {
+     "en": "Three North American body designs: Type I — conventional truck cab carrying a modular box that can be remounted on a newer chassis; Type II — standard van with integral cab and body; Type III — specialty van, also integral cab-body and also remountable. Most of the fleet is Type II and Type III.",
+     "zh": "北美三种车体设计：I 型——传统卡车头搭载可整体迁移到新底盘的模块化厢体；II 型——一体式标准厢式车；III 型——一体式特种厢式车，厢体同样可换底盘。车队主力是 II 型和 III 型。",
+     "hard": true
+    },
+    {
+     "en": "Modern safety re-engineering follows SAE International recommendations in three areas — how providers are restrained, how the stretcher is anchored in the rear, and how equipment is secured — layered on earlier gains such as a larger patient compartment, padded cabinet corners, and squad-bench safety nets.",
+     "zh": "新一代安全设计采纳 SAE International 的建议，集中在三处——人员如何约束、后舱担架如何锚定、装备如何固定——并叠加更早的改进：加大的患者舱、包了软垫的柜角、侧长凳上的防护网。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Ambulance Equipment",
+   "titleZh": "车载装备与标准",
+   "points": [
+    {
+     "en": "Layout principle: the patient compartment is packed like a jigsaw puzzle — everything fits tightly so nothing can fly loose, yet stays immediately reachable; storage design is itself an injury-prevention measure, not housekeeping.",
+     "zh": "布置原则：患者舱像拼图一样排布——每件物品都卡得紧，防止甩飞，同时又必须随手可及；储物设计本身就是防伤害措施，不是整理癖。",
+     "hard": false
+    },
+    {
+     "en": "Who writes the rules: infection-control practice (personal protective equipment, sharps containers, disinfection gear) is a provincial responsibility, in some provinces advised by a Medical Advisory Council working from current literature; the equipment standard and the minimum equipment list for every ambulance are written by the provincial Ministry of Health.",
+     "zh": "规则由谁定：感染控制实践（个人防护装备、利器盒、消毒器材）属省级职责，部分省份由医学顾问委员会依据最新文献提出建议；每辆救护车的装备标准与最低装备清单则由省卫生厅制定。",
+     "hard": true
+    },
+    {
+     "en": "Where things live: spinal stabilization and patient-moving equipment ride in the outside compartments where speed of access matters most; medications and temperature-sensitive items stay inside the climate-controlled patient compartment.",
+     "zh": "存放位置的逻辑：脊柱固定与搬运器材放在外侧舱，取用速度最快；药品和对温度敏感的物品放在有温控的患者舱内。",
+     "hard": true
+    },
+    {
+     "en": "Minimum kit found on every emergency ambulance: airway and ventilation equipment, basic wound-care supplies, monitoring devices (blood pressure cuff, pulse oximeter, ECG monitor/defibrillator), a selection of splints, childbirth supplies, patient-transfer equipment, and medications.",
+     "zh": "每辆急救车的最低配置：气道与通气器材、基础伤口处理用品、监测设备（血压计、血氧仪、心电监护/除颤器）、各型夹板、接生用品、患者转移器材，以及药品。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Checking the Ambulance",
+   "titleZh": "出车前检查与行驶中预警",
+   "points": [
+    {
+     "en": "The daily vehicle inspection is a legal act as much as a mechanical one: follow the service's written procedure, date and sign or initial the checklist (digital tools count), and store the record where it can be produced later — documented compliance is your protection if the shift ever ends up in court.",
+     "zh": "每日车检既是机械动作也是法律动作：按单位的书面流程执行，在检查单上写日期并签名或签缩写（电子记录同样有效），并把记录存放在日后找得到的地方——一旦这趟班要上法庭，书面的合规记录就是你的护身符。",
+     "hard": false
+    },
+    {
+     "en": "At every shift start: confirm the equipment is present and working, sweep medication expiry dates, and test or calibrate the diagnostic units — defibrillator, pulse oximeter, glucometer; anything used on a call gets cleaned or replaced and returned to service before the next call.",
+     "zh": "每个班次开始：核对装备齐全且可用、逐一查药品效期、测试或校准诊断设备——除颤器、血氧仪、血糖仪；每次出勤用过的物品都要清洁或更换，在下一趟任务前恢复到位。",
+     "hard": false
+    },
+    {
+     "en": "The four Ss an ambulance must deliver 100% of the time: start, steer, stop, stay running. A threat to any one of them puts the vehicle out of service immediately; in extreme weather, working wipers and lighting (visibility) and functional heat/air conditioning (interior environment) join the critical list.",
+     "zh": "救护车必须百分之百做到的四个 S：打得着（start）、转得动（steer）、刹得住（stop）、跑得稳（stay running）。任何一项受到威胁就立即停用该车；极端天气下，雨刮与灯光（视野）、暖风与空调（车内环境）同样升级为关键项。",
+     "hard": true
+    },
+    {
+     "en": "The check has a sequence: walk-around first (unreported body damage, major leaks, dead lights, damaged tires), then fuel — noting that some units carry two tanks — then the engine oil before the engine is ever started, judging both level and quality.",
+     "zh": "检查有先后：先绕车一周（未上报的车损、明显渗漏、坏灯、坏胎），再查油量——注意有的车配双油箱——然后在发动机点火之前查机油，既看液位也看油质。",
+     "hard": true
+    },
+    {
+     "en": "Know the volumes you are protecting: a gasoline V8 typically holds about 6 L of motor oil, a diesel more than 12 L — and all of it is critical to the engine surviving the shift; consult the owner's manual for your specific engine.",
+     "zh": "心里要有容量的数：汽油 V8 发动机机油通常约 6 升，柴油机超过 12 升——每一升都关系发动机能否撑完这个班；具体数值以随车手册为准。",
+     "hard": true
+    },
+    {
+     "en": "Transmission fluid is often checked with the engine running and the selector in park — set the parking brake first, because during this check you are standing directly in front of a running ambulance.",
+     "zh": "变速箱油常需在发动机运转、挡位在 P 挡时检查——先拉好驻车制动，因为这时你正站在一辆运转中的救护车正前方。",
+     "hard": true
+    },
+    {
+     "en": "Fluid forensics: healthy lubricants feel slippery, look clean, smell like fresh oil. Motor oil runs yellow-amber in a gasoline engine (grey or black is acceptable in a diesel) and must never smell of fuel — that means fuel is diluting the lubricant; transmission and steering fluids should be pink or yellow, and a charcoal smell means they are burnt; brake fluid is clear-to-yellow when fresh and amber after years of service; coolant is red or bright yellow-green.",
+     "zh": "油液鉴别：健康的油液摸着滑、看着净、闻着像新油。汽油机机油应呈黄琥珀色（柴油机呈灰黑色属正常），绝不能有燃油味——那说明燃油正在稀释机油；变速箱油和转向助力油应为粉色或黄色，闻到焦炭味说明已烧焦；制动液新液透明至淡黄，用上几年后转琥珀色；冷却液为红色或亮黄绿色。",
+     "hard": true
+    },
+    {
+     "en": "Two reservoirs stay capped during the check: the brake fluid reservoir (brake fluid pulls moisture out of the air the moment it is opened) and the coolant reservoir (the system is pressurized, and hot coolant can expand explosively and burn you).",
+     "zh": "有两个壶检查时不要开盖：制动液壶（一开盖制动液就开始吸收空气中的水分）和冷却液壶（系统带压，滚烫的冷却液会瞬间膨胀喷出烫伤人）。",
+     "hard": true
+    },
+    {
+     "en": "Not every puddle grounds the truck: plain water under the right front corner after the air conditioner has been running is normal condensate. What does matter: fluid leaks on the ground elsewhere, and brake fluid or rear-axle oil showing on the inner face of a tire.",
+     "zh": "不是每滩水都要停车：空调运转后车头右前角地面的清水是正常冷凝水。真正要紧的是：其他位置地面的油液渗漏，以及轮胎内侧出现的制动液或后桥油痕迹。",
+     "hard": true
+    },
+    {
+     "en": "Electrical criteria: battery terminals clean, battery tops dry and corrosion-free; system voltage 12–12.5 V at rest and 13.5–14.5 V with the engine running; a reading of 15 V or higher while running means the alternator's voltage regulator has failed and must be replaced immediately; the ammeter reads battery and alternator condition simultaneously.",
+     "zh": "电气判据：电瓶接线柱干净、顶面干燥无腐蚀；静置电压 12–12.5 伏，发动机运转时 13.5–14.5 伏；运转中升到 15 伏及以上，说明发电机的电压调节器已损坏、必须立即更换；电流表则同时反映电瓶与发电机的状态。",
+     "hard": true
+    },
+    {
+     "en": "A sewer-gas odour means a battery is boiling: it is venting sulphur dioxide (the smell) plus hydrogen, which is odourless and highly explosive. Take the unit out of service immediately, leave the hood closed, and do not start the engine.",
+     "zh": "闻到臭下水道味＝电瓶在沸腾：它正在释放二氧化硫（气味来源）和氢气——无味但极易爆炸。立即停用车辆，不要开引擎盖，也不要打火。",
+     "hard": true
+    },
+    {
+     "en": "Brake lights and back-up lights cannot be verified alone from the driver's seat: recruit a second person, or back the unit toward a window or another reflective surface — they matter to safe driving as much as any other exterior light.",
+     "zh": "刹车灯和倒车灯一个人坐在驾驶位上查不了：找第二个人帮忙看，或者把车尾对着橱窗等反光面倒一段——它们对行车安全的分量不亚于任何其他外部灯光。",
+     "hard": false
+    },
+    {
+     "en": "While driving, two findings ground the vehicle immediately: brake fade (the power brakes feel gone — even a single episode) and brake pull (the wheel jerks left or right when you brake). By contrast, belt noise — chirping or squealing in time with engine speed, not road speed — is always significant and will eventually stop the truck, but does not automatically mean immediate out-of-service.",
+     "zh": "行驶中有两类发现要立即停用车辆：刹车失灵感（助力刹车像消失了——哪怕只出现一次）和刹车跑偏（踩刹车时方向盘被拽向一侧）。相比之下，皮带异响——与发动机转速（而非车速）同步的吱吱或啸叫——虽然总是要紧、拖久了照样趴窝，但不必然立即停用。",
+     "hard": true
+    },
+    {
+     "en": "Steering diagnostics: a very slight rightward drift is normal (roads are crowned toward the gutters), but a consistent leftward drift is not; steering pull most often means uneven tire pressure or a flat and can cost you control in a sudden stop; noticeable steering play — especially with clunking or banging — demands immediate inspection; excessive steering effort points to low fluid, a failed power-steering pump, or a failed drive belt.",
+     "zh": "转向诊断：极轻微向右偏属正常（路面中间高、向两侧排水），持续向左偏则不正常；方向盘被持续拽住多半是胎压不均或爆胎，急停时可能失控；转向旷量明显——尤其伴随哐当异响——必须立即检修；打方向异常费力则提示转向油不足、助力泵或传动皮带故障。",
+     "hard": true
+    },
+    {
+     "en": "Vibration clues: a pulsating brake pedal points to warped rotors/drums or a bent wheel and always warrants service; wheel bounce — vibration in time with road speed, usually felt above 72 km/h — suggests a failed shock absorber, a tire bubble, or an unbalanced wheel (felt in the steering wheel = front, in the driver's seat = rear); wheel wobble at low speed means a bent wheel, most often from a pothole; tire squeal in turns is normal only on smooth concrete — on asphalt, think underinflation or misalignment.",
+     "zh": "振动线索：刹车踏板一顿一顿提示刹车盘/鼓变形或轮圈弯曲，一律送修；车轮跳动——与车速同步的振动，通常在 72 公里/小时以上才显现——提示减振器失效、轮胎鼓包或动平衡不良（方向盘上感到＝前轮，驾驶座上感到＝后轮）；低速下的车轮摆动说明轮圈变形，多半是坑洞砸的；转弯时胎叫只有在光滑水泥地面上才算正常——在沥青路上要先想到胎压不足或四轮定位问题。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Ambulance Staffing and Deployment",
+   "titleZh": "人员配置与部署",
+   "points": [
+    {
+     "en": "High-performance systems measure response with a fractile standard — a set fraction of all calls, usually 90%, must be reached inside a target time such as 8 minutes or less in an urban area — rather than with a simple average; the target may follow industry norms or be set provincially.",
+     "zh": "高绩效系统用分位数标准衡量反应时间——规定比例（通常 90%）的出勤必须在目标时限内到达，例如城市 8 分钟以内——而不是只看平均值；目标值可采用行业标准，也可由各省自行设定。",
+     "hard": true
+    },
+    {
+     "en": "Efficiency vocabulary: productivity is tracked as unit-hour utilization (patient transports per ambulance per hour); unit costs fold in paramedic salaries and benefits plus vehicle and equipment running costs per call and per active hour; the bill for the service itself is administered by municipal, regional, and provincial governments.",
+     "zh": "效率词汇表：生产率指标是单位小时利用率（每辆救护车每小时完成的转运次数）；单位成本把救护员的工资福利与车辆装备的运行开销折算到每次出勤和每个运行小时上；服务费用本身则由市、区域、省三级政府统筹管理。",
+     "hard": true
+    },
+    {
+     "en": "Since 2001, Canadian paramedic training programs have aligned to the National Occupational Competency Profile (NOCP) of the Paramedic Association of Canada — the template every program seeking accreditation must follow, and the framework this chapter's competency codes come from.",
+     "zh": "自 2001 年起，加拿大的救护员培训课程统一对齐加拿大急救员协会制定的国家职业能力档案（NOCP）——凡申请认证的课程都要以它为模板，本章的能力编码正是出自这套框架。",
+     "hard": true
+    },
+    {
+     "en": "Canada recognizes four certification levels: Emergency First Responder, Primary Care Paramedic (PCP), Advanced Care Paramedic (ACP), and Critical Care Paramedic (CCP). Most working paramedics are PCPs; public expectation is pushing ACP availability upward; CCP is typically reserved for interfacility transfers, air ambulance work, and specialty teams such as neonatal or pediatric.",
+     "zh": "加拿大承认四级认证：紧急第一反应者、初级救护员（PCP）、高级救护员（ACP）、危重症救护员（CCP）。在职救护员以 PCP 为主；公众的期待正在推动 ACP 覆盖面扩大；CCP 通常只投入院际转运、空中救护以及新生儿、儿科等高复杂度专科团队。",
+     "hard": true
+    },
+    {
+     "en": "System status management (conceived by Jack Stout in 1983) mines historical demand data for peak loads, then posts ambulances to predicted times and places using satellite vehicle location and GPS, with shift schedules stacked toward peak hours (say, more trucks 1200–1800 than midnight–0600).",
+     "zh": "系统状态管理（SSM，Jack Stout 于 1983 年提出）从历史需求数据中找出高峰负荷，再借助卫星车辆定位和 GPS 把救护车预置到预测的时段与地点，排班也向高峰倾斜（比如 1200–1800 的在勤车多于午夜至 0600）。",
+     "hard": true
+    },
+    {
+     "en": "Know SSM's fine print: the toll lands on personnel, who get little time out of the truck between calls — and the evidence is thin, with very few studies showing clinically significant response-time improvement after implementation, while vehicle and fuel costs rise.",
+     "zh": "SSM 的小字条款要记牢：代价压在人身上——两趟任务之间机组几乎回不了站休整；而且证据并不硬，实施后能显示反应时间有临床意义改善的研究寥寥无几，车辆与燃油成本反而上升。",
+     "hard": true
+    },
+    {
+     "en": "Station placement logic: in urban and suburban systems, call volume can outweigh raw distance; rural systems weigh distance and first-responder availability equally; call-generating facilities (such as long-term care) pull coverage toward them; and the building itself must house maintenance, cleaning, disinfection, storage, classrooms, and sleeping quarters.",
+     "zh": "站点选址逻辑：城市与近郊看呼叫量往往重于距离；乡村则距离与第一反应者的可得性并重；长期照护机构这类高呼叫设施会把运力『吸』过去；站房本身还要装得下维护、清洁、消毒、储物、教室和过夜宿舍。",
+     "hard": false
+    },
+    {
+     "en": "Professional conduct is an operational requirement, not a mood: severe stress or fatigue never suspends the duty to advocate for the patient, and the standard of care does not vary with the hour of the day, the address, or the patient's appearance or behaviour.",
+     "zh": "职业操守是运营要求，不是心情：再大的压力、再深的疲劳都不豁免为患者代言的义务；照护标准也不随时间、地段、患者的外表或举止而打折。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Emergency Vehicle Operation",
+   "titleZh": "紧急驾驶",
+   "points": [
+    {
+     "en": "Collision profile: the two most common causes of ambulance crashes are travelling in the wrong lane and driving too fast — both entirely under the driver's control. All the clinical skill in the system is worth nothing if the unit never arrives.",
+     "zh": "事故画像：救护车碰撞最常见的两个原因是不在正确车道行驶和车速过快——两者都完全掌握在司机手里。系统里再高的临床水平，车到不了现场就一文不值。",
+     "hard": true
+    },
+    {
+     "en": "History predicts: nearly half of the paramedics involved in an ambulance collision had a crash or moving violation within the previous 3 years — which is why services must screen driving records at hire and deliver emergency vehicle operations training afterward, and why any traffic-law exemption you hold is to be used sparingly.",
+     "zh": "历史会预告未来：卷入救护车碰撞的救护员中，近一半在事发前 3 年内已有事故或交通违章记录——所以用人单位既要在录用时审驾驶记录、之后又要提供紧急车辆驾驶培训；而你手里的任何交规豁免，都要省着用。",
+     "hard": true
+    },
+    {
+     "en": "Due regard is the legal spine of every provincial lights-and-siren statute: the warning equipment announces that you are in emergency mode, but no provision exempts you from operating the vehicle with due regard for the safety of everyone else on the road. Break that duty and the collision is legally yours.",
+     "zh": "「应有注意」（due regard）是各省灯笛法规的法律主轴：警示装置只是宣告你处于紧急模式，任何条款都不豁免你以应有的注意义务对待道路上其他人的安全。这条义务一旦失守，碰撞的法律责任就是你的。",
+     "hard": true
+    },
+    {
+     "en": "Intersections are the ambulance's number-one kill zone. Approach every one — favourable light or not — expecting cross traffic, and on multi-unit responses expecting another emergency vehicle converging on the same corner. Against a red light or stop sign the working standard is a complete stop, then advancing only lane by lane as each lane's traffic has visibly stopped for you.",
+     "zh": "路口是救护车的头号杀手。接近每一个路口——无论信号灯对你是否有利——都要预设有横向来车；多单位出勤时，还要预设另一辆应急车正逼近同一个路口。面对红灯或停车标志，通行标准是：完全停车，然后逐条车道推进，每条车道都要亲眼确认车辆已为你停下。",
+     "hard": true
+    },
+    {
+     "en": "Escorts and followers share one failure mode: the public sees only the first set of lights. Following a police unit through traffic invites drivers to pull out behind it straight into you — if you must follow, hang back far enough to stop and run a different siren tone so a second unit is audible. Likewise, instruct family at the scene never to tail the ambulance; give them directions and have them travel at normal speed.",
+     "zh": "警车开道和家属跟车栽在同一个坑里：公众只看得见第一组警灯。跟着警车穿越车流，让路的司机会在它过去后立刻汇入——正好插到你车头前。必须跟随时要拉开足够刹停的距离，并换一种警笛音调，让人听得出还有第二辆车。同理，离开现场前要明确告诉家属不许紧跟救护车：把路线交代清楚，让他们按正常速度自行前往。",
+     "hard": true
+    },
+    {
+     "en": "The lights-and-siren evidence is blunt: minimal time saved, questionable effect on patient outcome, clearly increased crash risk. Emergency mode is therefore an intervention that needs an indication — never a default, and never used to transport a non-emergent patient.",
+     "zh": "关于灯笛的证据很直白：省下的时间微乎其微，对患者结局的影响存疑，碰撞风险却明确升高。所以紧急模式是一种需要适应证的干预——绝不是默认选项，更绝不用于转运非急症患者。",
+     "hard": true
+    },
+    {
+     "en": "Who decides: en route to hospital, the paramedic attending the patient in the rear compartment makes the emergency-mode call — and makes it on patient stability alone, never on the surrounding traffic or on how close the shift is to ending. En route to the scene, the driver remains responsible for every action regardless of the dispatch mode assigned.",
+     "zh": "谁来决定：去医院的路上，是否用紧急模式由患者舱里照护患者的救护员拍板——而且只看患者是否稳定，与路况、离下班还有多久无关。去现场的路上，无论派遣定的是什么级别，方向盘后的每个动作都由司机本人负责。",
+     "hard": true
+    },
+    {
+     "en": "Route discipline: know your district's roads well enough to hold an alternative route to every common destination; plan around heavy traffic, construction zones, railway crossings, and school zones at start and dismissal times; pre-learn the special sites — medical facilities, airports, arenas and stadiums, chemical and research plants — including any predefined staging areas.",
+     "zh": "路线纪律：辖区道路要熟到对每个常去目的地都握有备用路线；提前避开大车流、施工区、铁路道口，以及上、放学时段的学校区；医院、机场、体育场馆、化工与科研设施这类特殊地点——连同预设的集结区——都要提前记牢。",
+     "hard": false
+    },
+    {
+     "en": "The nature of the call must never reach the accelerator: 'children involved' or 'a colleague is down' spikes adrenaline and tempts you to trade caution for speed. Professionalism means driving exactly as carefully to the worst call as to the mildest one, headlights on day and night.",
+     "zh": "任务性质绝不能传导到油门上：听到『涉及儿童』『同行倒下』，肾上腺素会瞬间飙升，诱惑你拿谨慎换速度。职业化的意思是：去最揪心的现场和去最平淡的现场，开车谨慎程度一模一样，且无论昼夜都开着大灯。",
+     "hard": false
+    },
+    {
+     "en": "Always brake in a straight line: take the speed off before the curve, not inside it. A tall, heavy vehicle asked to brake and turn at the same time is set up to skid or roll.",
+     "zh": "刹车永远走直线：速度要在进弯之前降下来，而不是在弯里踩。又高又重的车一边转弯一边刹车，就是打滑和侧翻的起手式。",
+     "hard": true
+    },
+    {
+     "en": "Mass changes the arithmetic: keep at least a 4-second following gap in good conditions — not the 2 seconds that serves a car — and stretch it further in rain or snow, on downgrades, or when heavily loaded. The high centre of gravity means an emergency swerve can become a rollover, so buy stopping distance instead of planning to dodge.",
+     "zh": "质量改变一切计算：良好路况下跟车至少留 4 秒——不是轿车够用的 2 秒——雨雪、下坡、重载时还要再加。重心高意味着紧急变线随时可能变成侧翻，所以要用刹停距离买安全，别指望靠闪避化解。",
+     "hard": true
+    },
+    {
+     "en": "Park to protect, not to punish: block a traffic lane when scene safety requires it, but only as much as it requires, and spare the uninvolved (do not box in residents' cars in an apartment complex). Off the pavement, remember two physics problems: a hot underside can ignite dry grass, and ambulance weight sinks into wet ground.",
+     "zh": "停车要护人而不添堵：现场安全确有需要才占车道，占也只占必要的宽度，并照顾无关人员（在公寓区别把住户的车堵死）。停到路面之外要想到两个物理问题：高温的底盘能点燃干草，车身的重量会陷进湿软地面。",
+     "hard": false
+    },
+    {
+     "en": "Night roadside parking has its own optics: distracted drivers steer toward what they stare at, and parked emergency vehicles get struck. Sometimes plain hazard flashers are safer than the full overhead package; on a two-lane road, kill the headlights so oncoming drivers are not blinded. Anyone stepping onto the roadway wears a reflective vest — it works by day too — and heavy protective clothing where extrication is under way.",
+     "zh": "夜间在路边停车有自己的光学规律：分神的司机会朝自己盯着的东西开过去，停着的应急车辆反而挨撞。有时只开双闪比开满顶灯更安全；在双车道公路上要关掉大灯，免得晃盲对向司机。凡是下车上路面的人一律穿反光背心——白天同样有用——有破拆作业时再加穿重型防护服。",
+     "hard": true
+    },
+    {
+     "en": "First unit at a highway crash: park upstream of the wreckage, between oncoming traffic and the scene, warning lights on, as a deliberate collision buffer, and manage traffic until police take it over. Hold a danger zone of at least 30 m — upwind and uphill where possible — when fire or escaping fuel or fumes are involved, and at least 15 m when they are not. Arriving after the scene is secured, park beyond the wreckage instead, out of the traffic stream, positioned to leave without backing.",
+     "zh": "第一辆抵达高速事故现场的车：停在残骸上游、来车与现场之间，开着警示灯，充当有意为之的碰撞缓冲，并接管交通直到警察接手。危险区距离：涉及起火或燃油、毒气泄漏时至少 30 米（尽量占上风、上坡位），没有时至少 15 米。若现场已被先到单位控制，则改停到残骸前方之外，脱离车流，并摆好不用倒车就能离场的朝向。",
+     "hard": true
+    },
+    {
+     "en": "Loading rules: every patient rides secured with shoulder and lap restraints, on the stretcher or in a seat, and the stretcher locks into its clamping mechanism with every lock visually checked. The accompanying person rides belted in the front passenger seat, with narrow exceptions (a parent kept in a young child's sight line, a translator, a police officer escorting a prisoner). With multiple patients aboard, load the most serious last so they are unloaded first. Power-load systems are rated for one operator, but keep both paramedics on the stretcher as good practice for uneven ground.",
+     "zh": "装载规则：每位患者都要用肩带加腰带固定，或在担架上或在座椅上；担架推入后必须锁进夹持机构，并逐个目视确认锁扣咬合。陪同者系好安全带坐副驾驶位，例外从严把握（需要留在幼儿视线内的家长、翻译、押解的警察）。一车装载多名患者时，最重的最后上车，到院最先下车。电动助升担架虽按单人操作设计，但地面不平时双人扶持才是好习惯。",
+     "hard": true
+    },
+    {
+     "en": "Backing is the most common source of ambulance vehicle damage, so the first move is an egress plan that avoids it. When unavoidable: brief the spotter before shifting into reverse, agree the hand signals — above all the STOP signal — keep the spotter in your mirror every second and freeze the instant you lose sight of them, crack the window to hear shouted warnings, walk around the vehicle first looking up as well as down, and keep the audible warning running whenever the vehicle moves. Cameras have reduced but not eliminated backing incidents, and a bystander is never your spotter.",
+     "zh": "倒车是救护车车损的第一大来源，所以第一步是规划一条不需要倒车的离场路线。避不开时：挂倒挡之前先与引导员沟通、约定手势——尤其是『停』的手势——引导员必须每一秒都在你的后视镜里，一看不见立刻停死；摇下一条车窗缝，听得见外面喊出的警告；先绕车一周，往上看也往下看；车辆移动全程开着声音警示。倒车影像减少了但从未消灭这类事故，路人永远不能充当引导员。",
+     "hard": true
+    },
+    {
+     "en": "Restraint policy: standard operating procedure puts everyone aboard in a seat belt — driver included — on every leg of every call. Children are never held on the stretcher with adult seat belts; use a purpose-built pediatric transport device.",
+     "zh": "约束政策：标准作业流程要求车上每一个人都系安全带——司机也不例外——每一趟的每一段都要系。儿童绝不能用成人安全带固定在担架上，必须使用专用的儿科转运装置。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Air Medical Transports",
+   "titleZh": "空中转运的决策门槛",
+   "points": [
+    {
+     "en": "Air medical transport is a risk trade gated by two questions asked before anything else: does this patient's condition justify the added risk of flight, and — once every minute of launch, landing, packaging, and transfer is counted — will the aircraft actually get the patient to definitive care sooner?",
+     "zh": "空中转运是一笔风险交换，启动前必须先过两道门：患者的病情配得上飞行附加的风险吗？把起飞、降落、打包、交接的每一分钟都算进去之后，飞机真的能更早把患者送到确定性治疗吗？",
+     "hard": true
+    },
+    {
+     "en": "Helicopters have transformed scene-to-trauma-centre times, but 'appropriate only in certain circumstances' is the operative phrase — and the paramedic on scene is the best judge of the patient's transport needs.",
+     "zh": "直升机确实大幅压缩了从现场到创伤中心的时间，但『仅在特定情形下合适』才是关键限定语——而现场救护员是判断患者转运需求的最佳人选。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Fixed-Wing and Rotary-Wing Operations",
+   "titleZh": "固定翼、旋翼机与降落区",
+   "points": [
+    {
+     "en": "Air evacuation began in 1917, when a wounded Camel Corps soldier reached hospital by a 45-minute flight instead of a 3-day overland trip; Queensland's 1928 service on a leased Qantas aircraft — 225 patients and 50 emergency flights in its first year, staffed by pilot, nurse, and physician — grew into the Royal Flying Doctor Service.",
+     "zh": "空中后送始于 1917 年：一名骆驼兵团的伤兵坐了 45 分钟飞机抵达医院，替代了原本 3 天的陆路转运；昆士兰 1928 年用租来的 Qantas 飞机开办的服务——首年救治 225 名患者、执行 50 次紧急飞行，机组为飞行员、护士加医生——后来发展成皇家飞行医生服务。",
+     "hard": true
+    },
+    {
+     "en": "Canadian milestones: North America's first civilian air ambulance was established by the Saskatchewan government in Regina in 1946 and still operates today; Ontario became the first province with helicopter air ambulance service in 1977. For context, the military first used rotary-wing evacuation in 1943 over Burma, and civilian helicopter EMS began in 1972 with Denver's Flight For Life.",
+     "zh": "加拿大里程碑：北美第一个民用空中救护机构由萨斯喀彻温省政府 1946 年设在里贾纳，至今仍在运营；安大略省 1977 年率先开通直升机空中救护。作为参照：军用旋翼机后送首见于 1943 年缅甸战区，民用直升机急救则始于 1972 年丹佛的 Flight For Life 项目。",
+     "hard": true
+    },
+    {
+     "en": "Airframe division of labour: fixed-wing covers the long hauls; rotary-wing flies the short legs and lands directly at the scene, moving the critically injured straight to a regional trauma centre. Crews blend paramedics with flight nurses, respiratory therapists, and flight physicians.",
+     "zh": "机型分工：固定翼负责长途；旋翼机飞短途并直接降落现场，把危重伤员一步送进区域创伤中心。机组由救护员与飞行护士、呼吸治疗师、飞行医生混编。",
+     "hard": false
+    },
+    {
+     "en": "Three advantages to quote: reduced transport time (protecting the Golden Hour/Period), access to patients in terrain no ground unit can cross, and an advanced-skills crew with advanced equipment brought to the patient. To bank them, request the aircraft as early in the call as possible and know your region's activation procedure cold.",
+     "zh": "三大优势要能背出：缩短转运时间（守住黄金一小时）、够得着地面车辆到不了的地形、把高阶技能的机组连同高阶装备送到患者身边。想兑现优势，就要在任务尽可能早的阶段申请飞机，并把本区域的启动流程背到滚瓜烂熟。",
+     "hard": true
+    },
+    {
+     "en": "When it is justified: in metropolitan areas ground is usually faster, so an urban launch needs severe congestion or a prolonged extrication to defend; rough terrain is an indication in its own right — a stabilized spinal patient can still be re-injured by a long, jolting ground carry or vehicle ride.",
+     "zh": "什么时候站得住脚：市区里地面转运通常更快，城市叫飞机得有严重拥堵或漫长破拆才说得过去；崎岖地形则本身就是适应证——脊柱伤患者即便已经固定，长距离颠簸的搬运或车程照样可能造成二次损伤。",
+     "hard": true
+    },
+    {
+     "en": "The arrest rule: cardiac arrest and peri-arrest patients go by ground to the nearest hospital — cabin space cripples in-flight arrest care, and waiting for the aircraft is usually slower anyway. After stabilization, the helicopter can rendezvous at that hospital for the onward transfer to a referral centre.",
+     "zh": "骤停规则：心脏骤停和濒临骤停的患者一律走地面、送最近的医院——机舱空间根本施展不开骤停抢救，等飞机通常还更慢。待患者稳定后，直升机可以到该院会合，接手向上级中心的转运。",
+     "hard": true
+    },
+    {
+     "en": "The disadvantage list is long and examinable: weather and visibility requirements, terrain and the lack of a safe landing site, altitude and airspeed limitations, cabin size, in-flight noise, cost, restrictions on the number of responders, patient conditions unsuited to flight, and the ever-present potential for a crash.",
+     "zh": "劣势清单又长又好考：天气与能见度门槛、地形与缺乏安全降落点、飞行高度与航速限制、机舱尺寸、飞行噪音、费用、可搭载人数限制、不适合飞行的病情，以及始终存在的坠机可能。",
+     "hard": false
+    },
+    {
+     "en": "Landing-zone specification: 30 × 30 m of firm, level ground, cleared of anything rotor wash can lift — debris, caps and scarves, IV poles, and the stretcher sheet, which comes off before the backboard goes on. Hunt for overhead wires (nearly invisible from the air), clear all non-essential vehicles and people, and remember the landing decision belongs to the pilot alone — never pressure it.",
+     "zh": "降落区规格：30 × 30 米、坚实平整，凡是旋翼下洗气流吹得动的东西全部清场——杂物、帽子围巾、输液架，还有担架床单（放脊板之前就要先撤掉）。要主动排查架空电线（从空中几乎看不见），撤走一切无关人车，并且记住：降不降完全由飞行员一人决定——绝不施压。",
+     "hard": true
+    },
+    {
+     "en": "Marking and night work: one visible light at each of the four corners, and mark the upwind side if you can — aircraft take off and land best into the wind. At night, never aim flashlights or spotlights at the descending aircraft, switch vehicle headlights off, consider parking a lit vehicle beneath overhead wires to flag the hazard, and know that some services will only land at designated helipads after dark.",
+     "zh": "标记与夜间作业：四个角各放一盏看得见的灯，有条件再标出上风侧——飞机迎风起降性能最好。夜间绝不能用手电或探照灯照正在下降的飞机，要关掉车辆大灯；可以把亮着灯的车停在架空电线正下方，用来标示这一危险；还要知道有的机构夜间只降指定停机坪。",
+     "hard": true
+    },
+    {
+     "en": "Ground guide and approach: the guide's job is to see the hazards the pilot cannot, with radio channels agreed in advance, the standard 'continue' and 'abort' arm signals, and eye protection on. Approach only on the crew's signal, ideally with rotors stopped; if the aircraft stays hot, the tail rotor is the deadliest component — approach from the front or side within the pilot's 9-to-3 o'clock view, crouched, because a gust can dip the main rotor to 1.5 m off the ground, and from the downhill side on any slope. Keep vehicles and traffic 30 m or more away, and allow no smoking within 100 m.",
+     "zh": "地面引导与接近：引导员的职责是替飞行员盯住他看不见的危险——通讯频道事先约定，使用标准的『继续／中止』手臂信号，戴好护目装备。必须等机组示意才能接近，最好等旋翼完全停转；若飞机热机待命，尾桨就是全机最致命的部件——只能从机头或侧面、飞行员 9 点到 3 点的视野范围内弯腰低姿接近，因为一阵风能把主旋翼压到离地 1.5 米；坡地上一律从坡下侧走。车辆与人群保持 30 米以外，100 米内禁止吸烟。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Larrey's 'flying ambulances' — time to clear a casualty off the battlefield",
+   "itemZh": "Larrey『飞行救护车』撤离战场伤员的用时",
+   "value": "≤ 15 min（1790 年代）"
+  },
+  {
+   "itemEn": "First ambulance in Canada — Toronto General Hospital",
+   "itemZh": "加拿大第一辆救护车——多伦多总医院",
+   "value": "1880 年"
+  },
+  {
+   "itemEn": "Motor oil capacity — gasoline V8 vs diesel",
+   "itemZh": "机油容量——汽油 V8 对比柴油机",
+   "value": "约 6 L ／ > 12 L"
+  },
+  {
+   "itemEn": "Battery voltage at rest",
+   "itemZh": "电瓶静置电压",
+   "value": "12–12.5 V"
+  },
+  {
+   "itemEn": "System voltage, engine running (healthy alternator)",
+   "itemZh": "发动机运转时的系统电压（发电机正常）",
+   "value": "13.5–14.5 V"
+  },
+  {
+   "itemEn": "Voltage regulator failed — replace immediately",
+   "itemZh": "电压调节器损坏、须立即更换的判据",
+   "value": "运转中 ≥ 15 V"
+  },
+  {
+   "itemEn": "Wheel bounce becomes detectable",
+   "itemZh": "车轮跳动可被察觉的车速",
+   "value": "> 72 km/h"
+  },
+  {
+   "itemEn": "Fractile response-time standard (urban example)",
+   "itemZh": "分位数反应时间标准（城市示例）",
+   "value": "90% 出勤 ≤ 8 min"
+  },
+  {
+   "itemEn": "Paramedics in collisions with a crash/violation in the prior 3 years",
+   "itemZh": "肇事救护员中前 3 年已有事故或违章记录的比例",
+   "value": "近 50%"
+  },
+  {
+   "itemEn": "Minimum following distance, good conditions (rain/snow, downgrade, heavy load: add more)",
+   "itemZh": "良好路况最小跟车距离（雨雪／下坡／重载需再加）",
+   "value": "≥ 4 s"
+  },
+  {
+   "itemEn": "Highway scene danger zone — fire or leaking fuel/fumes (park upwind, uphill)",
+   "itemZh": "高速现场危险区——有火或燃油/毒气泄漏（占上风、上坡位）",
+   "value": "≥ 30 m"
+  },
+  {
+   "itemEn": "Highway scene danger zone — no fire or leak",
+   "itemZh": "高速现场危险区——无火无泄漏",
+   "value": "≥ 15 m"
+  },
+  {
+   "itemEn": "Helicopter landing zone — size, firm and level",
+   "itemZh": "直升机降落区——坚实平整的场地尺寸",
+   "value": "30 × 30 m，四角各 1 盏灯"
+  },
+  {
+   "itemEn": "Main rotor can dip in a gust — hence the crouch",
+   "itemZh": "阵风下主旋翼可下压到的离地高度——所以必须弯腰",
+   "value": "低至 1.5 m"
+  },
+  {
+   "itemEn": "Standoff around a helicopter — traffic/vehicles; smoking",
+   "itemZh": "直升机周围的隔离距离——人车／吸烟",
+   "value": "≥ 30 m ／ 100 m 内禁烟"
+  },
+  {
+   "itemEn": "Canadian air milestones — Regina fixed-wing; Ontario helicopter EMS",
+   "itemZh": "加拿大航空里程碑——里贾纳固定翼；安大略直升机急救",
+   "value": "1946 年 ／ 1977 年"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Always brake in a straight line — the book prints this one with an exclamation mark. Set your speed before the curve; a loaded ambulance that brakes mid-turn is auditioning for a rollover.",
+   "zh": "刹车永远走直线——这句在书里是带着感叹号印出来的。进弯前把速度定好；满载救护车在弯中踩刹车，等于在给侧翻试镜。"
+  },
+  {
+   "en": "Boxed in at a red light when the patient deteriorates? Do not flip the lights and siren on while traffic has nowhere to go — startled drivers roll into the intersection against the red. Wait for the green, let the queue start moving, then upgrade.",
+   "zh": "堵在红灯车流里患者突然恶化？别在周围车辆无处可让时突然打开灯笛——被惊到的司机会闯红灯冲进路口。等绿灯亮、车队动起来，再升级。"
+  },
+  {
+   "en": "On multi-unit responses, treat every intersection as though another emergency vehicle is arriving at it in the same second — because police and fire are converging on the same address as you.",
+   "zh": "多单位出勤时，把每个路口都当成此刻正有另一辆应急车驶入——因为警车和消防车正和你奔向同一个地址。"
+  },
+  {
+   "en": "First-in on a highway: your ambulance IS the barrier. Angle it upstream between traffic and the working area, warning lights on, and accept the blocked lane — crew and patient stay on the protected side.",
+   "zh": "第一个到达高速现场：你的救护车本身就是屏障。斜停在残骸上游、来车与作业区之间，开着警示灯，坦然接受车道被堵——机组和患者始终待在被保护的一侧。"
+  },
+  {
+   "en": "The spotter contract: the moment your guide leaves the mirror, the vehicle stops — no exceptions, no creeping. Re-establish visual contact before a single further centimetre of reverse.",
+   "zh": "引导员契约：引导员从后视镜里消失的那一瞬间，车就停死——没有例外，不许蠕行。重新建立目视联系之前，一厘米也不许再倒。"
+  },
+  {
+   "en": "Around a hot helicopter, altitude discipline saves lives twice: stay crouched (the main rotor can dip to 1.5 m) and stay forward of the mast — the tail rotor spins too fast to see and sits at head height.",
+   "zh": "在热机直升机旁，『高度纪律』能救你两次命：保持弯腰（主旋翼可压到离地 1.5 米），并且只待在主轴之前——尾桨转得快到看不见，位置恰好在头部高度。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Lights and siren give me the right of way.' They only request it. Due regard survives every exemption: if another road user has not seen you, not heard you, or not yielded, you still owe them safe driving — and the law will agree with them, not you.",
+   "zh": "『开了灯笛我就有路权。』——灯笛只是请求路权。应有注意义务在任何豁免之下都继续存在：只要对方没看见、没听见或没让行，你就仍然欠他一份安全驾驶——法律也会站在他那边，不是你这边。"
+  },
+  {
+   "en": "'Emergency status lets me roll through reds and stop signs.' The standard is a complete stop, then lane-by-lane clearance as each driver visibly stops for you. School and playground zones get more caution in emergency mode, not less.",
+   "zh": "『紧急状态下红灯和停牌可以滑过去。』——标准是完全停车，然后逐条车道确认对方明确停下再通过。学校区和游乐区在紧急模式下要更谨慎，而不是更放肆。"
+  },
+  {
+   "en": "'Running lights without the siren removes the risk.' It removes warning, not risk: the driver still takes emergency-mode chances while other road users get less notice. Emergency mode is all-or-nothing, indicated by patient condition.",
+   "zh": "『只开警灯不拉警笛就没风险了。』——那是拿掉了警示，不是拿掉了风险：司机照样按紧急模式冒险，周围的人得到的提醒反而更少。紧急模式只有开或不开，依据是患者病情。"
+  },
+  {
+   "en": "'A police escort clears the road for us.' Drivers see the first set of lights, assume it is over, and pull out — directly into the second vehicle. If you must follow, drop far back and run a different siren tone.",
+   "zh": "『有警车开道，路就是我们的。』——司机只看见第一组警灯，以为过完了就汇入车流——正好插进第二辆车的路线。必须跟随时，把距离拉大，并换用不同的警笛音调。"
+  },
+  {
+   "en": "'Any brake noise means grounding the truck / belt squeal is nothing.' Backwards on both ends: belt noise is always significant but not automatically out-of-service, while a single episode of brake fade or brake pull grounds the vehicle immediately.",
+   "zh": "『刹车一响就得停用／皮带叫两声没事。』——两头都反了：皮带异响总是要紧事但不必然停用；而刹车失灵感或刹车跑偏哪怕只出现一次，车辆就要立即停用。"
+  },
+  {
+   "en": "'The helicopter is fastest, so fly the cardiac arrest.' Reversed: arrest and peri-arrest patients go by ground to the nearest hospital — you cannot work an arrest in that cabin, and waiting for the aircraft is usually slower. The helicopter joins later for the interfacility leg.",
+   "zh": "『直升机最快，骤停患者当然上飞机。』——正好相反：骤停和濒临骤停的患者走地面、送最近的医院——那个机舱里做不了骤停抢救，等飞机通常还更慢。直升机稍后在医院会合，接手院际那一程。"
+  },
+  {
+   "en": "'On a slope, approach the helicopter from uphill so the pilot sees you better.' Deadly reversal: uphill is where the rotor disc is closest to the ground. Approach from the downhill side, from the front or side, only on the crew's signal.",
+   "zh": "『坡地上从坡上侧接近直升机，飞行员看得更清楚。』——致命的颠倒：坡上侧恰恰是旋翼盘离地最近的一侧。必须从坡下侧、机头或侧面方向、且等机组示意后才接近。"
+  },
+  {
+   "en": "'Load the sickest patient first — sickest gets priority.' In multi-patient transport the priority runs at the destination: load the most serious last, so they come off first at hospital.",
+   "zh": "『最重的先上车，重伤优先嘛。』——多人转运的优先级体现在目的地：最重的最后上车，到医院才能最先下车。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "4S",
+   "en": "What the ambulance must do 100% of the time: Start, Steer, Stop, Stay running — any threat to one S takes the unit out of service immediately. Extreme weather adds two honorary members: Visibility (wipers, lights) and Ventilation/climate (heat, A/C).",
+   "zh": "救护车必须百分之百做到的四件事：Start 打得着、Steer 转得动、Stop 刹得住、Stay running 跑得稳——任何一个 S 受威胁立即停用。极端天气再加两个荣誉成员：视野（雨刮、灯光）与车内环境（暖风、空调）。"
+  },
+  {
+   "name": "12·14·15 电压梯",
+   "en": "Battery ladder: about 12 (12–12.5 V) at rest, about 14 (13.5–14.5 V) with the engine running, 15 V or more running = regulator dead, replace now.",
+   "zh": "电压阶梯：静置约 12（12–12.5 伏），运转约 14（13.5–14.5 伏），运转中到 15 伏及以上＝调节器报废，立刻换。"
+  },
+  {
+   "name": "请求 ≠ 授予",
+   "en": "Lights and siren ASK for the right of way; due regard means you never simply TAKE it. Every intersection: stop, make eye contact lane by lane, then move.",
+   "zh": "灯笛是『请求』路权，应有注意意味着你永远不能直接『拿走』它。每个路口：停车，逐条车道对上眼神，再走。"
+  },
+  {
+   "name": "30–30–100（+1.5）",
+   "en": "Helicopter numbers: 30 × 30 m landing zone, everyone and everything 30 m back, no smoking within 100 m — and crouch, because the main rotor can dip to 1.5 m.",
+   "zh": "直升机数字串：降落区 30 × 30 米，人车退到 30 米外，100 米内禁烟——并且弯腰，因为主旋翼能压到离地 1.5 米。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "You are transporting at routine status, stopped in a queue at a red light, and the patient suddenly deteriorates. When do you activate lights and siren, and why not immediately?",
+   "qZh": "普通状态转运途中停在红灯车队里，患者突然恶化。什么时候才打开灯笛？为什么不能立刻开？",
+   "aEn": "After the light turns green and the traffic around you starts moving. Activating while boxed in startles drivers who have nowhere to go, and some will enter the intersection against the red and cause a collision.",
+   "aZh": "等绿灯亮、周围车流开始移动之后再开。被围住时突然开启会惊吓到无处可让的司机，有人会闯红灯冲进路口酿成碰撞。"
+  },
+  {
+   "qEn": "Recite the electrical criteria: healthy battery voltage at rest, healthy system voltage with the engine running, and the number that means the voltage regulator has failed.",
+   "qZh": "背出电气判据：电瓶静置的正常电压、发动机运转时的正常系统电压，以及判定电压调节器已损坏的数值。",
+   "aEn": "12–12.5 V at rest; 13.5–14.5 V running; 15 V or higher while running means the regulator has failed and must be replaced immediately.",
+   "aZh": "静置 12–12.5 伏；运转 13.5–14.5 伏；运转中达到 15 伏及以上即调节器损坏，须立即更换。"
+  },
+  {
+   "qEn": "First on scene at a highway crash with fuel leaking: where does the ambulance park, and what are the two danger-zone distances to remember?",
+   "qZh": "第一个到达有燃油泄漏的高速事故现场：救护车停哪里？要记住的两个危险区距离是多少？",
+   "aEn": "Upstream of the wreckage, between oncoming traffic and the scene, warning lights on, as a collision buffer — upwind and uphill where possible. At least 30 m standoff with fire or leaking fuel/fumes; at least 15 m without.",
+   "aZh": "停在残骸上游、来车与现场之间，开警示灯充当碰撞缓冲——尽量占上风、上坡位。有火或燃油/毒气泄漏时至少退开 30 米；没有时至少 15 米。"
+  },
+  {
+   "qEn": "Mid-back-up, your spotter vanishes from the mirror. What do you do, and name three more rules of a safe back-up.",
+   "qZh": "倒车倒到一半，引导员从后视镜里消失了。你该怎么做？再说出三条安全倒车规则。",
+   "aEn": "Stop immediately and stay stopped until the spotter is back in sight. Also: brief and agree hand signals (especially STOP) before reversing; walk around the vehicle first, looking up and down; window cracked and audible warning on while moving — and never use a bystander as spotter.",
+   "aZh": "立即停车，直到重新看见引导员才继续。另外：挂倒挡前先沟通并约定手势（尤其是『停』）；先绕车一周、上下都看；行进中开窗缝、开倒车警示音——并且绝不让路人充当引导员。"
+  },
+  {
+   "qEn": "The helicopter is hot on a slight slope. Describe the approach that keeps you alive.",
+   "qZh": "直升机在缓坡上热机待命。描述一套能保命的接近动作。",
+   "aEn": "Wait for the flight crew's signal; approach from the downhill side, from the front or side within the pilot's 9-to-3 o'clock view; stay crouched because a gust can dip the main rotor to 1.5 m; never go near the tail rotor; keep vehicles and traffic 30 m back and permit no smoking within 100 m.",
+   "aZh": "等机组示意；从坡下侧、机头或侧面、飞行员 9 点到 3 点的视野内接近；全程弯腰，因为阵风能把主旋翼压到离地 1.5 米；绝不靠近尾桨；人车退到 30 米外，100 米内禁烟。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Emergency-vehicle exemptions — which law applies",
+   "topicZh": "紧急车辆豁免——适用哪部法律",
+   "bookEn": "The textbook says only that 'every province has laws' on lights-and-siren use and builds the chapter around the shared principle of due regard.",
+   "bookZh": "教材只说『各省都有法律』规范灯笛使用，全章围绕共同原则——应有注意义务——展开。",
+   "bcEn": "Exemption details genuinely differ province to province. In BC the framework is the Motor Vehicle Act (s. 122, emergency vehicle privileges) plus the Emergency Vehicle Driving Regulation (B.C. Reg. 133/98): privileges apply only on an actual emergency response with the required warning equipment operating, the driver must weigh the risk of the driving against the seriousness of the call, and nothing removes the duty of care to other road users. For the exam and for practice, answer with the principle (request-not-grant, due regard, complete stop and clear lane by lane) and defer specifics to current provincial law and employer policy.",
+   "bcZh": "豁免的具体条款各省确实不同。BC 的框架是《机动车法》第 122 条（紧急车辆特权）加《紧急车辆驾驶规例》（B.C. Reg. 133/98）：只有在真实紧急任务中、按规定开启警示装备时才享有特权；司机必须把驾驶行为的风险与任务的紧急程度相权衡；且任何条款都不解除对其他道路使用者的注意义务。考试与执业作答都以原则为准（请求而非授予、应有注意、完全停车逐道确认），具体细节以本省现行法律和雇主政策为准。",
+   "ref": "BC Motor Vehicle Act s.122；B.C. Reg. 133/98"
+  },
+  {
+   "topicEn": "Licence to drive an ambulance in BC",
+   "topicZh": "在 BC 开救护车需要的驾照",
+   "bookEn": "The textbook discusses driver screening and emergency vehicle operations courses but never mentions licensing classes.",
+   "bookZh": "教材谈了驾驶记录审查和紧急车辆驾驶课程，但完全没提驾照级别。",
+   "bcEn": "In BC, driving an ambulance requires a Class 4 (unrestricted) BC driver's licence together with an acceptable driving record — a standard BCEHS hiring requirement for paramedics, on top of the service-level EVO training the book describes.",
+   "bcZh": "在 BC，开救护车需要持 BC 4 级（无限制）驾照并有合格的驾驶记录——这是 BCEHS 招聘救护员的标准条件，叠加在教材所述的机构级紧急驾驶培训之上。",
+   "ref": "BCEHS 招聘要求；ICBC Class 4"
+  },
+  {
+   "topicEn": "Who launches the aircraft in BC",
+   "topicZh": "BC 谁来调派飞机",
+   "bookEn": "The textbook tells every paramedic to know how to activate 'the local or regional air medical program', implying regionally varied activation.",
+   "bookZh": "教材要求每名救护员熟悉如何启动『当地或区域的空中医疗项目』，暗示启动方式因区域而异。",
+   "bcEn": "In BC, air ambulance (both fixed-wing and rotary) is a single provincial system run by BC Emergency Health Services: crews request air resources through BCEHS dispatch, which tasks the aircraft — a field crew does not contact an air operator directly. The scene crew's jobs remain the ones in this chapter: early request, landing-zone setup, and aircraft safety.",
+   "bcZh": "在 BC，空中救护（固定翼与旋翼）是由 BC 紧急健康服务（BCEHS）统一运营的全省系统：机组通过 BCEHS 调度中心申请空中资源，由调度指派飞机——现场机组不会直接联系航空公司。现场人员的职责仍是本章这几件事：尽早申请、设置降落区、保障航空器周边安全。",
+   "ref": "BCEHS 空中救护体系"
+  }
+ ],
+ "sourcePages": "4119-4154"
+}

@@ -1,0 +1,773 @@
+{
+ "id": "ch53",
+ "n": 53,
+ "titleEn": "Hazardous Materials Incidents",
+ "titleZh": "危险物质事故",
+ "group": "ops",
+ "examWeight": 1,
+ "whyEn": "Hazmat questions on the BC exam are cheap marks if you memorize the lookup machinery: what a TDG placard class means, how to run the ERG (orange book) from placard or UN number to guide page to isolation distance, what each PPE level (A-D) protects against, and the golden rule that a contaminated patient is not your patient until decontamination. The written exam loves the vocabulary (UEL/LEL, TLV, IDLH, primary vs secondary contamination) and the scene-management geometry (hot/warm/cold zones, uphill-upwind). You will almost never treat inside the hot zone — the exam tests whether you know to stay out of it.",
+ "whyZh": "危险物质题在 BC 考试里属于'背了就拿分'的类型，核心是一套查询机制：TDG 菱形标牌各类别代表什么、怎么用 ERG 橙皮书从标牌/UN 编号查到指南页再查到隔离距离、A-D 四级防护服各挡什么，以及一条金规——未除污的患者不是你的患者。笔试爱考术语（UEL/LEL、TLV、IDLH、一次污染 vs 二次污染）和现场分区几何（热/暖/冷三区、上坡上风向）。你几乎永远不会进热区救治——考的就是你知不知道不该进。",
+ "competencies": {
+  "areas": [
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics"
+  ],
+  "codes": [
+   "3.3.a",
+   "3.3.b",
+   "3.3.c",
+   "3.3.e",
+   "3.3.g",
+   "3.3.h",
+   "4.1.a",
+   "4.1.b",
+   "4.1.c"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction, Laws, and Training Levels",
+   "titleZh": "导论、法规与训练等级",
+   "points": [
+    {
+     "en": "Canada sees roughly 10,000 hazardous materials releases per year, and about 10% of them are transportation-related — which is why highway and rail incidents demand a high index of suspicion.",
+     "zh": "加拿大每年发生约1万起危险物质泄漏事件，其中约10%与运输有关——所以公路、铁路事故必须保持高度警觉，默认可能涉及危险品。",
+     "hard": true
+    },
+    {
+     "en": "The default rule for paramedics at industrial or highway incidents: suspect hazmat early and stay away from it. Your job is recognition and notification, not entry.",
+     "zh": "护理人员在工业或公路事故现场的默认规则：早怀疑、远离危险物质。你的任务是识别与上报，而不是进入。",
+     "hard": true
+    },
+    {
+     "en": "Hazmat training levels come from NFPA 472 (2018 edition): all paramedics should be trained to at least the Awareness Level — recognize a release, isolate the area, and call for the right resources.",
+     "zh": "危险物质训练等级依据 NFPA 472（2018版）：所有护理人员至少应受过'意识级'(Awareness Level)训练——识别泄漏、隔离区域、呼叫相应资源。",
+     "hard": true
+    },
+    {
+     "en": "Operations Level (EMS/HM Level I) permits defensive actions and patient care in the cold zone, for patients who no longer pose a significant secondary-contamination risk.",
+     "zh": "'行动级'(Operations Level，即 EMS/HM Level I)允许采取防御性行动，并在冷区照护已不构成明显二次污染风险的患者。",
+     "hard": true
+    },
+    {
+     "en": "Technician Level (EMS/HM Level II) permits patient care in the warm zone with patients who may still carry contamination, use of specialized equipment, care during rescue, and incident management.",
+     "zh": "'技术级'(Technician Level，即 EMS/HM Level II)允许在暖区照护仍可能带污染的患者，使用专用装备、在营救过程中照护患者并管理整个事件。",
+     "hard": true
+    },
+    {
+     "en": "Federal, provincial, and local rules all govern hazmat use, storage, and transport; know the rules of the jurisdiction where you work.",
+     "zh": "联邦、省和地方法规共同管辖危险物质的使用、储存与运输；要熟悉自己执业地区的规定。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Paramedics and Hazmat Incidents",
+   "titleZh": "护理人员与危险物质事故",
+   "points": [
+    {
+     "en": "Classic hazmat settings to recognize: cargo tank or rail tank car leaks, fixed industrial facilities and refineries, ruptured underground natural gas lines, agricultural insecticide use, methane buildup in sewers and landfills, intentional criminal releases, and clandestine drug labs.",
+     "zh": "要能识别的典型危险物质场景：公路/铁路罐车泄漏、工厂与炼油厂等固定设施、地下天然气管道破裂、农业杀虫剂作业、下水道与垃圾填埋场的甲烷积聚、蓄意投放的犯罪事件，以及地下制毒实验室。",
+     "hard": true
+    },
+    {
+     "en": "Placards and labels appear in three places: on buildings where hazmat is made, used, or stored; on trucks and rail cars carrying regulated quantities; and on drums or storage vessels holding hazardous waste or materials.",
+     "zh": "标牌与标签出现在三类位置：生产/使用/储存危险物质的建筑物上、运载达到管制数量货物的卡车与铁路车厢上、装有危险废物或危险物质的桶与储罐上。",
+     "hard": true
+    },
+    {
+     "en": "On arriving and recognizing a hazmat incident, your single most important job is identifying the material involved — but labelling can be absent or misleading.",
+     "zh": "抵达并判断是危险物质事故后，你最重要的一项任务就是弄清涉事物质是什么——但标签可能缺失，甚至有误导性。",
+     "hard": true
+    },
+    {
+     "en": "Below threshold quantities, no placard is legally required: a truck carrying 100 kg each of three different hazardous materials may lawfully display nothing at all — so treat every truck or rail tanker collision with suspicion regardless of placards.",
+     "zh": "低于门槛数量时法律不要求挂标牌：一辆各装100 kg三种不同危险品的卡车可以完全合法地什么牌都不挂——所以无论有没有标牌，任何卡车或铁路罐车事故都要按可疑处理。",
+     "hard": true
+    },
+    {
+     "en": "Some cargoes are harmless alone but highly toxic when mixed, and regulations may not prohibit carrying them on the same vehicle; the driver or train conductor must carry shipping papers identifying the load — often your first real clue.",
+     "zh": "有些货物单独无害、混合后剧毒，而且法规未必禁止同车运输；卡车司机或列车长必须随身携带注明货物内容的运输文件——这往往是你的第一条可靠线索。",
+     "hard": true
+    },
+    {
+     "en": "Recognize a release by a visible cloud or odd smoke, a leak from a tank or vehicle (placarded or not), or a strong acrid odour. But some toxic gases (like carbon monoxide) are odourless — never rely on smell: if you can smell it, you are already exposed.",
+     "zh": "识别泄漏的线索：可见的烟云或异常烟雾、罐体/车辆的泄漏（有无标牌都算）、强烈刺鼻的气味。但有些毒气（如一氧化碳）完全无味——绝不能靠鼻子判断：闻得到就说明你已经暴露了。",
+     "hard": true
+    },
+    {
+     "en": "If more than one person at a scene has collapsed, is unconscious, or is in respiratory distress, suspect a hazardous materials agent.",
+     "zh": "现场若有不止一人倒地、昏迷或呼吸窘迫，就要怀疑存在危险物质。",
+     "hard": true
+    },
+    {
+     "en": "First ambulance on scene with hazmat signs: stop at a safe distance uphill and upwind, size up rapidly, isolate the area, deny entry, and call for additional resources.",
+     "zh": "救护车首先到达且现场有危险物质迹象时：在上坡、上风向的安全距离外停车，快速评估，隔离区域，禁止人员进入，并呼叫增援。",
+     "hard": true
+    },
+    {
+     "en": "When requesting resources, report: exact location, atmospheric conditions, container size and shape, substance name or chemical ID number if visible, victim count and symptoms, resources needed, safe staging location, and the command post location.",
+     "zh": "呼叫增援时要报告：确切位置、气象条件、容器的大小与形状、可见的物质名称或化学品识别编号、伤员人数与症状、所需资源、安全集结区位置，以及指挥所位置。",
+     "hard": true
+    },
+    {
+     "en": "Do not re-enter the scene and do not leave the area until the hazmat team clears you — leaving early can spread contamination.",
+     "zh": "在危险物质小组批准前，既不要重新进入现场，也不要离开该区域——提前离开可能把污染扩散出去。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Hazardous Materials Assessment",
+   "titleZh": "危险物质评估",
+   "points": [
+    {
+     "en": "If dispatch even hints at hazmat, respond as if it is confirmed. High-suspicion vehicles: tractor trailers, tanker trucks, alternative-fuel vehicles, pesticide control vehicles. High-suspicion sites: industrial facilities, warehouses, tank farms, pipelines, manufacturing, water treatment plants, chemical plants, and agricultural operations or supply stores.",
+     "zh": "只要调度提到可能涉及危险物质，就按已确认处理。高度可疑的车辆：半挂车、罐车、替代燃料车、除虫作业车。高度可疑的场所：工业设施、仓库、储罐区、管道设施、制造工厂、水处理厂、化工厂，以及农业作业点和农资商店。",
+     "hard": true
+    },
+    {
+     "en": "Consider terrorism when the location is a large office building, government building, or shopping centre.",
+     "zh": "地点是大型办公楼、政府建筑或购物中心时，还要把恐怖袭击纳入考虑。",
+     "hard": false
+    },
+    {
+     "en": "Hazardous materials can be solids, liquids, or gases: scan for spilled liquids or powders, vapour clouds, and odours on approach; if many people are reported ill, stop far away and plan before approaching.",
+     "zh": "危险物质可以是固体、液体或气体：接近时留意洒落的液体或粉末、蒸气云和气味；若报告多人不适，就在远处停下，先想清楚再接近。",
+     "hard": true
+    },
+    {
+     "en": "The rule-of-thumb distance test: hold your thumb out at arm's length — if it cannot cover the entire scene, you are too close. Use binoculars to gather details from a distance.",
+     "zh": "'拇指法则'距离测试：手臂伸直竖起拇指——若拇指盖不住整个现场，说明你离得太近。用望远镜在远处收集细节。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Identification of Hazardous Materials",
+   "titleZh": "危险物质的识别",
+   "points": [
+    {
+     "en": "Identifying the specific substance is the highest-value information you can hand the incoming hazmat team — it drives predictions about health effects and warns inbound EMS crews. Read markings and placards only when you can do so without risk.",
+     "zh": "查明具体是什么物质，是你能交给后续危险物质小组的最有价值情报——它决定了对健康影响的预判，也能提前警示赶来的 EMS 队伍。但读取标记和标牌的前提是不冒风险。",
+     "hard": true
+    },
+    {
+     "en": "At a fixed manufacturing or storage facility, ask for the safety data sheets (SDSs): they carry product identification, accidental-release measures, exposure control and PPE requirements, and toxicology across multiple pages — read the whole sheet, not just the first page.",
+     "zh": "在固定的生产或储存设施，要向现场人员索取安全数据表(SDS)：里面有产品标识、意外泄漏处置、暴露控制与个人防护要求以及毒理学信息，篇幅多页——要通读整份，不能只看第一页。",
+     "hard": true
+    },
+    {
+     "en": "The core placard code is the four-digit UN/North American number identifying the exact substance in transport; it keys directly into Transport Canada's Emergency Response Guidebook (ERG). Class symbols on the diamond give the general hazard class.",
+     "zh": "标牌上最核心的编码是四位数的 UN/北美编号，唯一标识运输中的具体物质；它直接对应加拿大交通部《应急响应指南》(ERG)中的条目。菱形牌上的类别符号则提示大类危害。",
+     "hard": true
+    },
+    {
+     "en": "Canada's Transportation of Dangerous Goods (TDG) diamond placards divide cargo into nine classes: 1 explosives; 2 gases; 3 flammable liquids; 4 flammable solids; 5 oxidizers and organic peroxides; 6 toxic and infectious substances; 7 radioactive materials; 8 corrosives; 9 miscellaneous. The class number sits at the bottom corner of the diamond.",
+     "zh": "加拿大《危险货物运输法规》(TDG)的菱形标牌把货物分为九类：1类爆炸品；2类气体；3类易燃液体；4类易燃固体；5类氧化剂与有机过氧化物；6类毒性与感染性物质；7类放射性物质；8类腐蚀品；9类杂项。类别数字标在菱形的下角。",
+     "hard": true
+    },
+    {
+     "en": "ERG lookup flow: (1) get the 4-digit UN number from the placard or shipping papers (or match the placard/material name); (2) the number points to a numbered guide page; (3) the guide gives the substance's properties and hazards, PPE advice, and recommended isolation distances. A current ERG should ride on every emergency response vehicle, and free copies are downloadable from the CANUTEC website.",
+     "zh": "ERG（橙皮书）查询流程：(1)从标牌或运输文件取得四位 UN 编号（或用标牌图样/物质名称对照）；(2)由编号查到对应的指南编号页；(3)指南页给出该物质的特性与危害、防护建议和推荐隔离距离。每辆应急车辆都应携带最新版 ERG，CANUTEC 网站可免费下载。",
+     "hard": true
+    },
+    {
+     "en": "Paper trail in transport: a truck's bill of lading (freight bill) rides with the driver in the cab; a train's waybill or consist is held by the conductor.",
+     "zh": "运输文件的位置：卡车的提货单(bill of lading/freight bill)在驾驶室司机手里；列车的运单(waybill/consist)由列车长保管。",
+     "hard": true
+    },
+    {
+     "en": "CANUTEC runs a 24-hour emergency line — collect call 613-996-6666, or *666 from a mobile phone. To help, it needs three things: the product, the shipper, and the transporter.",
+     "zh": "CANUTEC 提供24小时应急电话——对方付费拨 613-996-6666，手机直拨 *666。要获得协助需提供三项信息：产品、发货方、承运方。",
+     "hard": true
+    },
+    {
+     "en": "Digital references such as WISER (U.S. National Library of Medicine) and the ATSDR database detail PPE, toxicology, symptoms, and treatment for thousands of substances; learn your agency's chosen tool before the incident, not during it.",
+     "zh": "WISER（美国国家医学图书馆）和 ATSDR 数据库等电子工具收录了数千种物质的防护、毒理、症状与治疗信息；要在事故发生前就熟悉本机构选用的工具，别等到现场才学。",
+     "hard": false
+    },
+    {
+     "en": "Initial isolation before the technical team arrives: safe distances are farther than intuition suggests. If you can read a placard with the naked eye, you are probably too close. Default position is uphill and upwind.",
+     "zh": "技术小组到场前的初始隔离：安全距离比直觉认为的远得多。如果肉眼能读清标牌，你多半已经太近了。默认站位是上坡、上风向。",
+     "hard": true
+    },
+    {
+     "en": "Field wind check: tie about 1 m of narrow roller bandage to the top of the antenna, recheck wind direction periodically, and relocate if it shifts.",
+     "zh": "现场测风土办法：在天线顶端系约1米长的窄绷带条，定期查看风向，风向一变就换位置。",
+     "hard": true
+    },
+    {
+     "en": "Hazmat teams bring air monitoring (explosive limits, oxygen level, hydrogen sulphide, carbon monoxide), pH testing of spills, colourimetric agent testing, and CAMEO computer modelling to predict downwind concentrations.",
+     "zh": "危险物质小组会带来空气监测（爆炸极限、氧浓度、硫化氢、一氧化碳）、泄漏物 pH 检测、比色法特定物质检测，以及用 CAMEO 计算机模型预测下风向浓度。",
+     "hard": true
+    },
+    {
+     "en": "NFPA 704 is the fixed-facility diamond: it rates health hazard, fire hazard, and chemical reactivity, plus special hazards such as radiation or acids. Colour code: red = fire hazard, blue = health hazard, yellow = reactivity. It tells you the type and degree of protection needed before entering.",
+     "zh": "NFPA 704 是固定设施用的菱形标识：分别给健康危害、火灾危害、化学反应性打分，另标注放射性、酸类等特殊危害。颜色编码：红=火灾危害，蓝=健康危害，黄=反应性。进入前要靠它判断所需防护的类型与等级。",
+     "hard": true
+    },
+    {
+     "en": "Toxicity levels run 0-4, higher = more toxic. Level 0: little or no hazard, the only level needing no special PPE. Levels 1-2: slightly hazardous, but contact requires SCBA (level C suit). Level 3: extremely hazardous — full protection with no exposed skin (level A or B suit). Level 4: minimal exposure causes death — specialized gear for that specific hazard (level A suit).",
+     "zh": "毒性等级0-4，数字越大毒性越强。0级：几乎无危害，也是唯一不需要特殊防护的等级。1-2级：轻度危害，但接触即需自给式呼吸器 SCBA（C级防护服）。3级：极度危害——需皮肤零暴露的全面防护（A级或B级防护服）。4级：极微量接触即可致死——需针对该危害的专用装备（A级防护服）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Scene Management: Zones and PPE",
+   "titleZh": "现场管理：分区与防护等级",
+   "points": [
+    {
+     "en": "When a routine call turns out to be hazmat, do four things in order: protect yourself first; isolate the incident (the ERG in your vehicle gives initial isolation distances); notify dispatch and fire/police/EMS that a hazmat incident is in progress; and brief incoming units on wind direction, terrain, and a safe approach route.",
+     "zh": "普通出勤发现其实是危险物质事故时，按序做四件事：先保护自己；隔离事发区（车载 ERG 可查初始隔离距离）；通知调度及消防/警察/EMS 正在发生危险物质事故；向后续到场单位通报风向、地形和安全接近路线。",
+     "hard": true
+    },
+    {
+     "en": "Hot zone = the contamination zone, open only to properly trained rescuers in appropriate PPE. Warm zone surrounds it and typically contains the decontamination corridor — again, trained hazmat specialists in PPE only. Cold zone is the outer buffer: this is where paramedics normally do triage and patient treatment.",
+     "zh": "热区=污染区，只允许受过训练、穿戴相应防护的救援者进入。暖区环绕热区，除污通道通常设在暖区——同样只限穿防护装备的危险物质专业人员。冷区是最外层缓冲区：护理人员的检伤与救治通常都在冷区进行。",
+     "hard": true
+    },
+    {
+     "en": "Level A gives the greatest respiratory and skin protection: fully encapsulating and gastight, enclosing the wearer and the SCBA. Because of that, wearers need monitoring for heat stress — and you should know how to get a technician out of the suit for an in-suit emergency.",
+     "zh": "A级防护的呼吸道与皮肤防护最强：全密封、气密，把穿戴者连同 SCBA 一起罩在里面。正因如此，穿A级服的人需要监测热应激——你还应当会在'服内紧急状况'时协助脱服施救。",
+     "hard": true
+    },
+    {
+     "en": "Level B = high respiratory protection when the substance is not lethally absorbed through skin; not fully encapsulating, with SCBA or supplied air worn outside the suit. It is the usual dress of responders performing decontamination.",
+     "zh": "B级=呼吸道防护要求高、但物质经皮吸收不致命时使用；非全密封，SCBA 或供气系统穿在服外。执行除污作业的人员通常就穿B级。",
+     "hard": true
+    },
+    {
+     "en": "Level C protects against a known substance: minimal splash protection plus an air-purifying respirator (or PAPR) whose filters are chosen for that specific agent. Typical wearers: emergency department staff receiving exposed patients, and police holding the perimeter.",
+     "zh": "C级针对已知物质：少量防泼溅能力，加一个滤芯专门针对该物质选配的空气净化呼吸器(APR/PAPR)。典型使用者：急诊科接收暴露患者的人员、维持警戒线的警察。",
+     "hard": true
+    },
+    {
+     "en": "Level D is for cold-zone support personnel only, when the substance poses little or no threat; respiratory protection is at most a dust mask.",
+     "zh": "D级只给冷区的后勤支持人员用，前提是物质几乎无威胁；呼吸防护顶多是防尘口罩。",
+     "hard": true
+    },
+    {
+     "en": "After identifying the substance, the hazmat team consults a permeability chart for the breakthrough time of the Level A suit fabric, and chooses gloves and boots — possibly a double- or triple-glove system.",
+     "zh": "确定物质后，危险物质小组会查渗透性图表，确认A级服面料对该物质的击穿时间(breakthrough time)，并据此选手套和靴子——必要时用双层甚至三层手套。",
+     "hard": true
+    },
+    {
+     "en": "How much harm a substance does depends on: route of exposure, dose and concentration, contact time, and acute versus delayed toxicity. A chronic condition stacks the odds — a minor anhydrous ammonia exposure can be disproportionately dangerous to someone with pre-existing respiratory disease.",
+     "zh": "危害大小取决于：暴露途径、剂量与浓度、接触时长、急性还是迟发毒性。基础病会放大风险——本身有呼吸系统疾病的人，即使少量接触无水氨也可能远比预期危险。",
+     "hard": true
+    },
+    {
+     "en": "Primary contamination is direct exposure to the material; secondary contamination is transfer from a contaminated person or object. Preventing secondary contamination is why decontamination and zone discipline exist.",
+     "zh": "一次污染=直接接触危险物质；二次污染=经由被污染的人或物品转移而来。除污程序和分区纪律的意义正是阻断二次污染。",
+     "hard": true
+    },
+    {
+     "en": "Dermal (topical) exposure may stay local — redness, localized pain, blisters — but skin absorption can go systemic, hitting neurologic, renal, or hepatic systems; abrasions speed absorption, and effects can be delayed by hours to years (including cancer), which makes your scene documentation invaluable.",
+     "zh": "皮肤（局部）暴露可能只有局部表现——发红、局部疼痛、水疱——但一旦经皮吸收就可能全身化，损害神经、肾或肝系统；皮肤擦伤会加速吸收，且毒效可延迟数小时到数年才显现（包括致癌），因此现场记录格外珍贵。",
+     "hard": true
+    },
+    {
+     "en": "Dose effect principle: longer contact or higher concentration = greater harm. A brief splash delivers far less toxin than lying in a puddle of the same substance for 30 minutes.",
+     "zh": "剂量效应原则：接触越久、浓度越高，伤害越大。同一种物质，皮肤被溅到一下和在液坑里躺30分钟，摄入的毒量天差地别。",
+     "hard": true
+    },
+    {
+     "en": "The cycle of poison action: absorption into the body, delivery to target organs, binding to those organs, then biotransformation and elimination via the gastrointestinal, renal, or respiratory route. Decon decisions are made with this cycle in mind.",
+     "zh": "毒物作用循环：吸收入体→输送到靶器官→与器官结合→再经生物转化、由胃肠道/肾/呼吸道排出。除污决策要对照这个循环来做。",
+     "hard": true
+    },
+    {
+     "en": "Synergistic effect: two materials together can hurt far more than either alone — a patient lying in spilled gasoline while also breathing carbon monoxide will have a compounded drop in level of consciousness.",
+     "zh": "协同效应：两种物质同时作用的伤害可远超各自单独作用——躺在汽油里的被困者若同时吸入一氧化碳，意识水平会被双重压低。",
+     "hard": true
+    },
+    {
+     "en": "The other exposure routes: respiratory (efficient, rapid, potentially lethal — gas, vapour, or fine powder crossing the bronchial tree or alveoli straight into blood), parenteral (injected or entering through an open wound), and gastrointestinal (swallowed, e.g. organophosphate pesticide — often a deliberate ingestion, so interview with care).",
+     "zh": "其余暴露途径：呼吸道（高效、迅速、可致命——气体、蒸气或细粉经支气管树/肺泡直接入血）；肠道外（注入体内或经开放伤口进入）；胃肠道（吞入，如有机磷农药——这类摄入常是蓄意的，问诊要讲技巧）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Chemical Terms",
+   "titleZh": "化学术语",
+   "points": [
+    {
+     "en": "Physical properties x weather = threat estimate. A leaking liquid with a high boiling point on a cold day gives off little vapour; as air temperature climbs, vapour pressure climbs with it, and so should your concern about airborne toxin.",
+     "zh": "物性×天气=威胁估算。高沸点液体在低温天泄漏，蒸气很少；气温一升高，蒸气压跟着升高，你对空气中毒物的警惕也要同步升级。",
+     "hard": true
+    },
+    {
+     "en": "Vapour density compares a gas to air (air = 1). Heavier-than-air gases pool in valleys and ditches: propane, butane, carbon dioxide. Lighter-than-air gases rise and ride the wind: anhydrous ammonia, acetylene, methane, hydrogen. This behaviour is exactly why the approach is uphill and upwind.",
+     "zh": "蒸气密度以空气为基准(空气=1)。比空气重的气体沉积在洼地和沟渠：丙烷、丁烷、二氧化碳。比空气轻的气体上升随风扩散：无水氨、乙炔、甲烷、氢气。'上坡、上风向接近'的道理正在于此。",
+     "hard": true
+    },
+    {
+     "en": "Flash point is the temperature at which a material's vapours can be ignited by a spark; past the higher ignition temperature, the vapours erupt into sustained burning on their own.",
+     "zh": "闪点(flash point)：物质的蒸气可被火花点燃的温度；温度再升过更高的燃点(ignition temperature)，蒸气就会持续燃烧起来。",
+     "hard": true
+    },
+    {
+     "en": "A vapour-air mixture only burns within a window: below the lower explosive limit (LEL) it is too lean to ignite; above the upper explosive limit (UEL) it is too rich — not enough oxygen to sustain combustion. Between the two it can burn or explode.",
+     "zh": "蒸气-空气混合物只在一个窗口内可燃：低于爆炸下限(LEL)太稀点不着；高于爆炸上限(UEL)太浓——氧气不足以维持燃烧。在两者之间才会燃烧或爆炸。",
+     "hard": true
+    },
+    {
+     "en": "Water can cool a material or dilute its vapours — but before any water goes on, the hazmat team must decide whether the material is water-reactive or water-soluble, and check its specific gravity to predict whether it sinks or floats in water.",
+     "zh": "水能降温、也能稀释蒸气——但浇水之前，危险物质小组必须先判断该物质是否遇水反应、是否溶于水，并核对比重(specific gravity)以预判它在水中是下沉还是漂浮。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Toxicology Terms",
+   "titleZh": "毒理术语",
+   "points": [
+    {
+     "en": "Concentrations are quoted in parts per million (ppm) or parts per billion (ppb). The threshold limit value (TLV) is the maximum concentration tolerable across a 40-hour work week — and counterintuitively, a very LOW TLV means a very DANGEROUS substance.",
+     "zh": "浓度用百万分率(ppm)或十亿分率(ppb)表示。阈限值(TLV)是一个人在每周40小时工作制下可承受的最高浓度——注意反直觉之处：TLV 数值越低，物质越危险。",
+     "hard": true
+    },
+    {
+     "en": "TLV-STEL (short-term exposure limit) is the concentration tolerable only for a few brief windows — for example four 15-minute exposures in a day. TLV-CL (ceiling level) is the concentration no one should ever be exposed to at all.",
+     "zh": "短时接触限值(TLV-STEL)：只允许少数几次短暂接触的浓度——例如一天四次、每次15分钟。上限值(TLV-CL)：任何时候都不允许达到的浓度。",
+     "hard": true
+    },
+    {
+     "en": "PEL (permissible exposure limit) is the regulatory maximum a worker may be exposed to; in Canada, occupational exposure limits are set by provincial and territorial regulation, not federally.",
+     "zh": "容许暴露限值(PEL)是法规允许工人接触的最高浓度；在加拿大，职业暴露限值由各省和地区的法规规定，而非联邦统一制定。",
+     "hard": true
+    },
+    {
+     "en": "LD (lethal dose) is the amount of a substance certain to cause death. IDLH (immediately dangerous to life and health) describes an atmosphere — toxic, corrosive, or asphyxiant — that poses an immediate life threat, causes irreversible or delayed harm, or seriously impairs a team member's ability to escape.",
+     "zh": "致死剂量(LD)：确定会造成死亡的剂量。立即危及生命与健康(IDLH)：指毒性、腐蚀性或窒息性物质的空气浓度已构成即时生命威胁、会造成不可逆或迟发损害，或严重妨碍队员从危险环境中逃生。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Decontamination",
+   "titleZh": "除污",
+   "points": [
+    {
+     "en": "Even with a visible patient begging for rescue, the first-arriving paramedic must not rush in: the incident command system admits only trained, equipped hazmat personnel into the hot zone, and hands-on care starts only after the patient is decontaminated.",
+     "zh": "哪怕患者就在眼前等着救援，先到的护理人员也不能冲进去：事故指挥系统只允许受训且有装备的危险物质人员进入热区，动手救治必须等患者完成除污之后。",
+     "hard": true
+    },
+    {
+     "en": "Environmental priority is conditional: with non-life-threatening injuries, containing decon runoff is a major concern; when the patient is critical, runoff containment drops below patient care but never to zero.",
+     "zh": "环保优先级看伤情：伤情不危及生命时，围堵除污废水是重要考量；患者危重时，废水围堵让位于救治——但也不是完全不管。",
+     "hard": true
+    },
+    {
+     "en": "Four decontamination methods: dilution, absorption, neutralization, and disposal. Dilution — copious water flushing — is the most common and the easiest prehospital option, sometimes helped by a mild soap such as tincture of green soap.",
+     "zh": "四种除污方法：稀释、吸附、中和、丢弃。稀释——大量清水冲洗——最常用、院前最容易执行，有时辅以温和肥皂（如绿皂酊）。",
+     "hard": true
+    },
+    {
+     "en": "Dilution caveats: vegetable or mineral oil replaces water for water-reactive contaminants; go easy with brushes because abraded skin absorbs faster; solvents resist water-only washing and keep off-gassing — the transporting crew can become victims of the fumes.",
+     "zh": "稀释法注意事项：遇水反应的污染物改用植物油或矿物油；刷洗要轻，皮肤擦伤会加速吸收；溶剂类光用水很难洗净、会持续挥发——转运途中乘组自己可能被熏倒。",
+     "hard": true
+    },
+    {
+     "en": "Absorption uses large pads or towels to soak liquid off the patient. Neutralization (chemically converting the material to something less harmful) is almost never done on skin: acid-base reactions generate heat, and an uncontrolled exothermic reaction on a patient is a contraindication in itself.",
+     "zh": "吸附法用大吸垫或毛巾把液体从患者身上吸走。中和法（用化学品把危险物质转成低害物质）几乎从不用于皮肤：酸碱反应放热，失控的放热反应本身就是禁忌。",
+     "hard": true
+    },
+    {
+     "en": "Disposal is the by-product of decon: strip as much clothing as possible. Removing a chemically exposed person's clothing alone can cut contamination by 80% to 90%.",
+     "zh": "丢弃是除污的伴生环节：尽可能脱掉衣物。仅仅脱掉化学暴露者的衣服，就能减少80%~90%的污染量。",
+     "hard": true
+    },
+    {
+     "en": "Emergency (fast-breaking) decon PPE when no respirator is available: turnouts or a splash-resistant Tyvek jumpsuit, eye protection, a HEPA-type mask, at least two layers of gloves, and booties over footwear. Nitrile gloves outperform most materials; shed anything leather — leather soaks up hazardous materials.",
+     "zh": "紧急除污（事态急迫）且无呼吸器时的防护：消防战斗服或防泼溅 Tyvek 连体服、护目、高效滤过(HEPA)口罩、至少两层手套、鞋外加靴套。丁腈手套防护性能突出；皮革制品要脱掉——皮革会吸附危险物质。",
+     "hard": true
+    },
+    {
+     "en": "Emergency decon sequence (the two-step approach): protect yourself, never touch the product, have patients disrobe and self-strip contaminant, bag belongings in plastic; brush off powders before any water; skip water entirely for water-reactive agents — otherwise water is the universal decon solution, deliverable by unmanned hose streams.",
+     "zh": "紧急除污流程（两步法）：先自我防护、绝不接触污染物本体，让患者自行脱衣并尽量清除身上的污染物，随身物品装进塑料袋；粉末先刷掉再考虑用水；遇水反应的物质全程禁水——除此之外，水就是万能除污剂，可由无人值守水枪喷淋。",
+     "hard": true
+    },
+    {
+     "en": "Improvised decon corridor: park two fire engines parallel, 3 to 6 m apart, fit fog nozzles on the side discharge ports to make a fine-mist shower. Patients disrobe at one end and walk through single file, coached from a distance to scrub the hard-to-rinse spots — axillae, between fingers and toes, groin, scalp, between the buttocks — with soap and soft brushes available.",
+     "zh": "临时除污通道：两辆消防车平行停放、间距3~6米，侧出水口装雾化喷头形成细雾淋浴。患者在入口端脱衣、单列通过，由远处指导重点搓洗难冲部位——腋窝、指(趾)缝、腹股沟、头皮、臀缝——并提供肥皂和软刷。",
+     "hard": true
+    },
+    {
+     "en": "At the corridor exit: towels, blankets, and temporary garments. Watch for post-decon hypothermia in young children and older adults. This exit is where paramedics first touch patients and start triage. Contain the runoff, or at minimum stop it becoming a secondary contamination source.",
+     "zh": "通道出口端备好毛巾、毯子和临时衣物。幼儿和老年人除污后要警惕低体温。护理人员就在这个出口首次接触患者、开始检伤。废水要围堵，至少不能让它变成二次污染源。",
+     "hard": true
+    },
+    {
+     "en": "Technical decontamination is the responders' own eight-step cleanup of PPE, tools, and equipment: tools stay at the hot-zone end of the corridor; the decon team washing the entry team wears PPE no more than one level below the entry team's; runoff is contained (often a wading pool); respirator or SCBA mask and undergloves come off last; a personal shower when feasible; and the entry team finishes with medical monitoring.",
+     "zh": "技术除污是队员对防护服、工具和装备的八步彻底清洗：工具留在通道靠热区一端；给进入组冲洗的除污组，其防护等级最多只能比进入组低一级；废水必须围堵（常用充气小水池）；呼吸器/SCBA 面罩和内层手套最后才脱；条件允许时再洗一次个人淋浴；进入组最后接受医学监测。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Treatment of Exposed Patients and Transport",
+   "titleZh": "暴露患者的处置与转运",
+   "points": [
+    {
+     "en": "Minimize invasive procedures on a contaminated patient: intubation can carry contamination into the airway, and IV or IO access lets contamination bypass the skin barrier. Every invasive move is a risk-benefit decision.",
+     "zh": "对仍带污染的患者尽量少做侵入性操作：气管插管可能把污染物带进气道，静脉或骨内通路会让污染绕过皮肤屏障。每一项侵入操作都要权衡利弊后再做。",
+     "hard": true
+    },
+    {
+     "en": "Treatment references at a hazmat call: the ERG, CANUTEC, poison centres, the ATSDR, direct medical control, and the hazmat team's reference texts. You are the physician's eyes and ears — pass along everything the hazmat team tells you.",
+     "zh": "处置时可用的参考渠道：ERG、CANUTEC、中毒防治中心、ATSDR、直接医疗指挥，以及危险物质小组随队的参考书。你是医生在院前的眼睛和耳朵——把小组告诉你的信息全部转达。",
+     "hard": true
+    },
+    {
+     "en": "Corrosives: acids run pH 0-7, bases pH 7-14; both ends burn skin, eyes, and mucous membranes, and inhaled fumes can inflict life-threatening airway and lung burns. High-pH (alkaline) material reacts with skin into a soap-like film and takes considerably longer to flush off than acid.",
+     "zh": "腐蚀品：酸的 pH 为0-7，碱为7-14；两端都会烧伤皮肤、眼和黏膜，吸入烟雾还可造成危及生命的气道和肺烧伤。高 pH 的碱与皮肤反应生成皂样膜，冲洗所需时间明显比酸更长。",
+     "hard": true
+    },
+    {
+     "en": "Post-decon corrosive care is supportive: airway, oxygen, analgesia, burn care, and consideration of a burn centre. Hydrofluoric acid is the special case — it causes pain and hypocalcemia even without a visible burn, and some services carry calcium chloride or calcium gluconate for it on medical control's order.",
+     "zh": "腐蚀品除污后的救治以支持为主：气道、给氧、镇痛、烧伤处理，必要时送烧伤中心。氢氟酸是特例——即使看不到烧伤创面也会引起剧痛和低钙血症，部分机构备有氯化钙或葡萄糖酸钙，经医疗指挥授权使用。",
+     "hard": true
+    },
+    {
+     "en": "Hydrocarbon solvents (paint thinner, nail polish remover) dissolve other substances and give off potent vapours: inhalation can trigger immediate pulmonary edema; prolonged skin exposure can cause cardiac dysrhythmias and seizures.",
+     "zh": "烃类溶剂（稀料、洗甲水等）能溶解其他物质并释放强烈蒸气：吸入可立即诱发肺水肿；皮肤长时间接触可引起心律失常和癫痫发作。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary irritants such as chlorine and ammonia react with mucous-membrane moisture to burn and choke. First move: get the patient (and yourself) into fresh air; removing clothing helps trapped gas dissipate; manage pulmonary edema per protocol.",
+     "zh": "氯气、氨气等呼吸道刺激性气体会与黏膜水分反应造成灼伤和呛咳。第一步：把患者（和你自己）转移到新鲜空气中；脱去衣物有助于释放滞留气体；肺水肿按规程处理。",
+     "hard": true
+    },
+    {
+     "en": "Organophosphate and carbamate pesticides block acetylcholinesterase, causing runaway cholinergic firing: SLUDGE — Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis — plus copious pulmonary secretions. Emesis itself is a secondary-contamination hazard after ingestion.",
+     "zh": "有机磷和氨基甲酸酯类农药抑制乙酰胆碱酯酶，胆碱能神经过度放电：SLUDGE——流涎、流泪、排尿、排便、胃肠不适、呕吐——外加大量呼吸道分泌物。经口摄入者的呕吐物本身就是二次污染源。",
+     "hard": true
+    },
+    {
+     "en": "Pesticide treatment: aggressive decontamination, airway protection with intubation and frequent suctioning as needed, high-flow oxygen, and atropine to block muscarinic overstimulation. Pralidoxime is recommended for organophosphates but NOT for carbamates.",
+     "zh": "农药中毒的处置：积极除污，必要时插管保护气道并反复吸引，高流量给氧，用阿托品阻断毒蕈碱受体的过度兴奋。解磷定(pralidoxime)推荐用于有机磷，但不用于氨基甲酸酯类。",
+     "hard": true
+    },
+    {
+     "en": "Simple asphyxiants displace oxygen from the air — colourless, odourless gases like carbon monoxide and hydrogen sulphide in a confined space are classic traps that kill would-be rescuers. Chemical asphyxiants such as cyanide instead block oxygen use at the cellular level.",
+     "zh": "单纯性窒息剂把氧气从空气中排挤掉——密闭空间里无色无味的一氧化碳、硫化氢是经典的'救人者陷阱'。化学性窒息剂（如氰化物）则是在细胞水平阻断氧的利用。",
+     "hard": true
+    },
+    {
+     "en": "Cyanide context: hydrogen cyanide serves many industrial processes, but the most common exposure is breathing combustion by-products at structure fires. The 1984 Bhopal methyl isocyanate release, with thousands of deaths, is the textbook mass-casualty hazmat example.",
+     "zh": "氰化物背景：氰化氢广泛用于工业，但最常见的暴露场景其实是建筑火灾中吸入燃烧产物。1984年印度博帕尔甲基异氰酸酯泄漏致数千人死亡，是教科书级的群体伤亡危险物质事件。",
+     "hard": true
+    },
+    {
+     "en": "Cyanide antidotes: hydroxocobalamin binds cyanide into a nontoxic by-product — but warn the receiving hospital, because its intense red colour invalidates many blood tests. The older kit (for non-smoke exposures): inhale an amyl nitrite ampule 15 seconds of every minute, then IV sodium nitrite 300 mg, then sodium thiosulfate 12.5 g; nitrite toxicity has demoted this kit from first-line use.",
+     "zh": "氰化物解毒：羟钴胺素与氰离子结合生成无毒产物——但必须提前告知接收医院，它深红的颜色会干扰多项血液检验。旧式解毒包（非烟雾吸入者适用）：亚硝酸戊酯安瓿每分钟吸入15秒，续以静脉亚硝酸钠300 mg、再硫代硫酸钠12.5 g；因亚硝酸盐本身有毒性，此包已不再是一线方案。",
+     "hard": true
+    },
+    {
+     "en": "Carbon monoxide locks up hemoglobin so blood oxygen never reaches the cells. Treatment: remove from source and give 100% oxygen regardless of what the pulse oximeter claims; severe cases may warrant hyperbaric oxygen, which can change the transport destination — protocol or direct medical control decides.",
+     "zh": "一氧化碳把血红蛋白锁死，血中的氧到不了细胞。处置：脱离源头，给100%氧——不管脉搏血氧仪读数多好看；重症可考虑高压氧治疗，这会改变转运目的地——由规程或直接医疗指挥决定。",
+     "hard": true
+    },
+    {
+     "en": "Never assume a decontaminated patient is fully clean, and never transport one whose decon is insufficient — for example when residue is still generating toxic gas after a smoke or liquid-splash exposure. Before accepting the patient, wear appropriate PPE (the hazmat team can lend splash protection) and demand a full report: the material, the exposure source, and what decon and treatment were done.",
+     "zh": "永远别假设除污后的患者是完全干净的，除污不充分的患者绝不能上车转运——例如烟雾或液体泼溅暴露后残留物仍在释放毒气。接手患者前要穿好相应防护（危险物质小组可提供防泼溅装备），并索要完整交接报告：涉及什么物质、暴露来源、已做过哪些除污与处置。",
+     "hard": true
+    },
+    {
+     "en": "Transport prep: minimize what the patient touches — pull the stretcher mattress (the patient rides a backboard anyway), favour disposables, and stage removable ambulance supplies somewhere clean. Lining the ambulance interior with plastic is impractical; instead double-wrap the patient: a hypothermia-limiting sheet or plastic wrap first, then backboard, then stretcher.",
+     "zh": "转运准备：尽量减少患者接触到的物品——撤掉担架床垫（患者反正躺脊柱板）、多用一次性耗材、把车厢内可移动物资先搬到干净处存放。给车厢内壁蒙塑料布不现实；正解是给患者做双层包裹：先裹能防低体温的床单或塑料膜，再上脊柱板，最后上担架。",
+     "hard": true
+    },
+    {
+     "en": "Know in advance which local hospitals can receive potentially contaminated patients, and give the destination long notice so it can muster trained staff and open its dedicated decon/treatment room. Inadequately decontaminated patients have contaminated hospitals before — a receiving facility may bar the doors until its own decon is complete.",
+     "zh": "要提前摸清本地哪些医院具备接收疑似污染患者的条件，并尽早通知目的地，让其调集受训人员、启用专用除污/救治室。历史上发生过除污不彻底的患者污染整个医院的事件——接收医院有权把人拦在门外，直到完成院方自己的除污评估。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Medical Monitoring and Rehabilitation",
+   "titleZh": "医学监测与康复区",
+   "points": [
+    {
+     "en": "Paramedics often run medical monitoring for the hazmat team: PPE causes heat stress on top of the toxin risk, and a member's tolerance depends on fitness, workload, PPE level, and ambient temperature.",
+     "zh": "护理人员常负责危险物质小组的医学监测：防护装备带来的热应激叠加在毒物风险之上，队员的耐受度取决于体能、劳动强度、防护等级和环境温度。",
+     "hard": true
+    },
+    {
+     "en": "Monitoring documentation must capture: the materials involved and their toxic effects, the PPE worn and its permeability resistance (breakthrough time), and the decontamination method used — plus a standing plan for treatment, transport, and antidote availability should a team member go down.",
+     "zh": "监测记录必须写清：涉及的物质及其毒性效应、所穿防护装备及其抗渗透性能（击穿时间）、采用的除污方式——还要预先备好队员出事时的救治、转运与解毒剂预案。",
+     "hard": true
+    },
+    {
+     "en": "Assess entry team members before they suit up and again when they come out: complete vital signs, temperature, and body weight. Push water or sports drink before entry — a Level A suit is a walking sauna with zero heat loss by evaporation, conduction, convection, or radiation. Ask whether the team keeps baseline medical files on its members.",
+     "zh": "进入组穿服前、出来后各评估一次：完整生命体征、体温、体重。进热区前督促喝水或运动饮料——A级防护服就是行走的桑拿房，蒸发、传导、对流、辐射四条散热途径全被封死。记得问小组有没有队员的基线健康档案。",
+     "hard": true
+    },
+    {
+     "en": "The rehabilitation area sits in the cold zone. Before re-entry clearance: check hydration, vitals, and any symptoms matching the incident's toxin; have members doff protective clothing and rest; reassess vitals plus a neurologic screen (orientation to time, place, events) and fine motor skills.",
+     "zh": "康复区设在冷区。放行再次进入前要核查：水化状态、生命体征、有无与本次毒物相符的暴露症状；让队员脱下防护服休息；复测生命体征，并做神经学筛查（时间/地点/事件定向力）和精细动作评估。",
+     "hard": true
+    },
+    {
+     "en": "Red flags in rehab: an elevated temperature demands close watching for heat stroke, and lost body weight translates directly into lost fluid — dehydration and hypovolemia risk. Anyone with abnormal vitals or symptoms stays out of the hot zone until their status returns to normal.",
+     "zh": "康复区的警报指标：体温升高要严防热射病；体重下降直接等于体液丢失——提示脱水和低血容量风险。生命体征异常或有症状者一律不得返回热区，直到指标恢复正常。",
+     "hard": true
+    },
+    {
+     "en": "NFPA 704 defines a hazardous material broadly: any substance or waste that causes or may cause adverse effects on the health or safety of workers, the public, or the environment, including biological and disease-causing agents.",
+     "zh": "NFPA 704 对危险物质的定义很宽：任何对员工、公众或环境的健康与安全造成或可能造成不良影响的物质或废物，包括生物性与致病性因子。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Hazmat releases in Canada per year",
+   "itemZh": "加拿大每年危险物质泄漏事件数",
+   "value": "约 10,000 起，其中约 10% 与运输相关"
+  },
+  {
+   "itemEn": "Hazmat training standard",
+   "itemZh": "危险物质训练标准",
+   "value": "NFPA 472（2018 版）；行动级 = EMS/HM Level I，技术级 = EMS/HM Level II"
+  },
+  {
+   "itemEn": "CANUTEC 24-hour line",
+   "itemZh": "CANUTEC 24 小时热线",
+   "value": "对方付费 613-996-6666；手机直拨 *666"
+  },
+  {
+   "itemEn": "UN substance identifier on placards",
+   "itemZh": "标牌上的 UN 物质编号",
+   "value": "4 位数字，对应 ERG 指南条目"
+  },
+  {
+   "itemEn": "TDG placard classes",
+   "itemZh": "TDG 菱形标牌类别数",
+   "value": "9 类（1 爆炸品 → 9 杂项）"
+  },
+  {
+   "itemEn": "Toxicity levels and required suits",
+   "itemZh": "毒性等级与防护服对应",
+   "value": "0 级无需防护；1-2 级 SCBA（C 级服）；3 级 A/B 级服皮肤零暴露；4 级 A 级专用装备"
+  },
+  {
+   "itemEn": "Wind-direction field check",
+   "itemZh": "现场测风向",
+   "value": "约 1 m 窄绷带系在天线顶端"
+  },
+  {
+   "itemEn": "Vapour density reference",
+   "itemZh": "蒸气密度基准",
+   "value": "空气 = 1；>1 沉洼地（丙烷/丁烷/CO2），<1 上升（氨/乙炔/甲烷/氢）"
+  },
+  {
+   "itemEn": "TLV-STEL example pattern",
+   "itemZh": "TLV-STEL 典型允许模式",
+   "value": "每天 4 次、每次 15 分钟的短时暴露"
+  },
+  {
+   "itemEn": "Contamination removed by disrobing alone",
+   "itemZh": "仅脱衣即可去除的污染比例",
+   "value": "80%~90%"
+  },
+  {
+   "itemEn": "Emergency decon corridor engine spacing",
+   "itemZh": "紧急除污通道消防车间距",
+   "value": "两车平行，相距 3~6 m"
+  },
+  {
+   "itemEn": "Technical decontamination",
+   "itemZh": "技术除污",
+   "value": "8 步流程；除污组防护最多比进入组低 1 级"
+  },
+  {
+   "itemEn": "Corrosive pH ranges",
+   "itemZh": "腐蚀品 pH 范围",
+   "value": "酸 0-7；碱 7-14（碱冲洗耗时明显更长）"
+  },
+  {
+   "itemEn": "Legacy cyanide kit dosing",
+   "itemZh": "旧式氰化物解毒包剂量",
+   "value": "亚硝酸戊酯每分钟吸 15 秒 → 亚硝酸钠 300 mg IV → 硫代硫酸钠 12.5 g（已非一线）"
+  },
+  {
+   "itemEn": "Hydrofluoric acid IV calcium threshold (book case)",
+   "itemZh": "氢氟酸静脉钙剂指征（书中案例）",
+   "value": "浓度 >10% 且累及 ≥5% 体表面积；5 mL 10% 氯化钙或 10 mL 10% 葡萄糖酸钙"
+  },
+  {
+   "itemEn": "NFPA 704 colour code",
+   "itemZh": "NFPA 704 颜色编码",
+   "value": "红 = 火灾；蓝 = 健康；黄 = 反应性"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Learn NIMS/ICS before you need it: hazmat incident management feels laborious and slow by design — the extreme hazards mandate a cautious, structured approach that protects rescuers, health workers, and the public.",
+   "zh": "提前吃透 NIMS/ICS：危险物质事故的管理流程显得繁琐缓慢，这是刻意为之——极端危害要求用谨慎、结构化的方式保护救援者、医护和公众。"
+  },
+  {
+   "en": "No patient is ever completely decontaminated, even after the hazmat team's on-site decon. Protect yourself first, every time.",
+   "zh": "没有任何患者是'彻底除污'的，哪怕现场小组已经洗过——每一次接手都先保护好自己。"
+  },
+  {
+   "en": "At any road or rail collision, treat every cargo as dangerous until proven otherwise.",
+   "zh": "任何公路或铁路事故现场，一律把货物当危险品对待，直到证明无害为止。"
+  },
+  {
+   "en": "Do not rush into a hazmat scene — stop, assess, then act. Dead heroes cannot save lives.",
+   "zh": "危险物质现场绝不能往里冲——先停下、评估、再行动。死掉的英雄救不了任何人。"
+  },
+  {
+   "en": "If you are not dressed for the occasion, stay on the sidelines: no proper PPE means no role beyond the cold zone.",
+   "zh": "没穿对防护装备就老实站在场外：不具备相应 PPE，你的位置只能在冷区之外。"
+  },
+  {
+   "en": "If you can smell the product, you are already exposed — move, report, and get assessed.",
+   "zh": "闻得到就说明已经暴露——立刻撤离、上报、接受评估。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "\"No placard, no hazmat.\" Wrong: below threshold quantities the law requires no placard at all — a truck can legally carry three different hazardous materials with nothing displayed.",
+   "zh": "'没挂标牌就没有危险品'——错。低于门槛数量法律根本不要求挂牌，一辆车完全可以合法运着三种危险品却什么都不显示。"
+  },
+  {
+   "en": "\"I don't smell anything, so the air is safe.\" Wrong twice: some lethal gases (carbon monoxide) are odourless, and for the rest, smelling them means you are already exposed.",
+   "zh": "'没闻到味道，空气就是安全的'——双重错误：有些致命气体（一氧化碳）根本无味；而对有味的气体，闻到即暴露。"
+  },
+  {
+   "en": "\"Rescue first, safety second.\" Reversed: an unprotected rescuer becomes the next casualty. Care begins only after the patient clears decontamination.",
+   "zh": "'先救人，安全放后面'——顺序反了：不设防的施救者就是下一个伤员。救治从患者完成除污那一刻才开始。"
+  },
+  {
+   "en": "\"Neutralize the acid on the skin with a base.\" Almost always contraindicated: acid-base reactions dump heat into tissue. The prehospital answer is dilution with copious water.",
+   "zh": "'皮肤上的酸用碱中和掉'——几乎绝对禁忌：酸碱反应会向组织释放大量热。院前的正确答案是大量清水稀释冲洗。"
+  },
+  {
+   "en": "\"Decon finished = patient clean.\" Never true. Keep PPE on, minimize contact surfaces, and watch for off-gassing (especially solvents) during transport.",
+   "zh": "'除污完成＝患者干净了'——从来不成立。转运全程保持防护、减少接触面，并警惕挥发（尤其是溶剂类）。"
+  },
+  {
+   "en": "\"SpO2 is 100%, so the CO poisoning can't be serious.\" The oximeter reads carboxyhemoglobin as if it were oxygen: give 100% oxygen regardless of the number.",
+   "zh": "'血氧 100%，CO 中毒肯定不重'——血氧仪把碳氧血红蛋白当成携氧读数：无论读数多少都要给 100% 氧。"
+  },
+  {
+   "en": "\"Pralidoxime works for all pesticide poisonings.\" It is recommended for organophosphates only — not for carbamates.",
+   "zh": "'解磷定对所有农药中毒都管用'——它只推荐用于有机磷，氨基甲酸酯类不用。"
+  },
+  {
+   "en": "\"A high TLV means a dangerous chemical.\" Backwards: the LOWER the TLV, the more toxic the substance.",
+   "zh": "'TLV 数值高说明化学品危险'——正好相反：TLV 越低，物质毒性越强。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "SLUDGE",
+   "en": "Cholinergic crisis from organophosphates/carbamates: Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis — plus flooding pulmonary secretions.",
+   "zh": "有机磷/氨基甲酸酯的胆碱能危象：流涎(S)、流泪(L)、排尿(U)、排便(D)、胃肠不适(G)、呕吐(E)——再加满肺的分泌物。"
+  },
+  {
+   "name": "轻气上天，重气钻沟",
+   "en": "Lighter than air (rise and disperse): ammonia, acetylene, methane, hydrogen. Heavier than air (pool in ditches): propane, butane, carbon dioxide.",
+   "zh": "比空气轻、往上飘：氨、乙炔、甲烷、氢。比空气重、钻洼地：丙烷、丁烷、二氧化碳。上坡上风向站位就是躲这两类。"
+  },
+  {
+   "name": "热区烫、暖区洗、冷区治",
+   "en": "Hot zone = contamination, entry-team only; warm zone = decon corridor; cold zone = where paramedics triage and treat.",
+   "zh": "热区＝污染区只许进入组；暖区＝除污通道；冷区＝护理人员检伤救治的地盘。"
+  },
+  {
+   "name": "PPE 阶梯 A→D",
+   "en": "A = fully encapsulating and gastight (SCBA inside); B = SCBA outside, splash suit — the decon uniform; C = air-purifying respirator against a KNOWN agent; D = cold-zone work clothes, dust mask at most.",
+   "zh": "A＝全密封气密、SCBA 穿在里面；B＝SCBA 在外的防泼溅服——除污组制服；C＝滤毒呼吸器、只对已知物质；D＝冷区工作服、顶多防尘口罩。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Walk through the ERG lookup at a tanker rollover.",
+   "qZh": "罐车侧翻现场，说出 ERG 橙皮书的完整查询流程。",
+   "aEn": "Get the 4-digit UN number from the placard or shipping papers (or match by placard symbol/substance name); the number keys to a numbered guide page; the guide gives hazards, PPE advice, and initial isolation/protection distances.",
+   "aZh": "从标牌或运输文件读出 4 位 UN 编号（或用标牌图样/物质名对照）→ 编号对应指南编号页 → 指南页给出危害特性、防护建议和初始隔离/防护距离。"
+  },
+  {
+   "qEn": "Who may enter each control zone, and where do paramedics normally work?",
+   "qZh": "三个控制区各允许谁进入？护理人员通常在哪一区工作？",
+   "aEn": "Hot zone: only trained rescuers in appropriate PPE. Warm zone: hazmat specialists running the decon corridor. Cold zone: the buffer where paramedics do triage and treatment.",
+   "aZh": "热区：只许受训且穿相应防护的救援者。暖区：操作除污通道的危险物质专业人员。冷区：缓冲区，护理人员的检伤与救治都在这里。"
+  },
+  {
+   "qEn": "Spell out SLUDGE and state which pesticide class gets pralidoxime.",
+   "qZh": "逐项说出 SLUDGE，并回答哪类农药中毒用解磷定。",
+   "aEn": "Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis (plus heavy pulmonary secretions). Pralidoxime is for organophosphates only, not carbamates.",
+   "aZh": "流涎、流泪、排尿、排便、胃肠不适、呕吐（外加大量呼吸道分泌物）。解磷定只用于有机磷，氨基甲酸酯类不用。"
+  },
+  {
+   "qEn": "How much contamination does removing the patient's clothing eliminate, and why does that matter at a mass decon?",
+   "qZh": "脱掉患者衣物能去除多少污染？这对群体除污意味着什么？",
+   "aEn": "80% to 90%. It means disrobing at the corridor entrance is the single highest-yield decon step before any water is applied.",
+   "aZh": "80%~90%。这意味着在通道入口先脱衣，是浇水之前收益最大的一步除污动作。"
+  },
+  {
+   "qEn": "The CO-poisoned patient reads SpO2 100%. What do you give, and what does BC's oxygen guideline say?",
+   "qZh": "CO 中毒患者血氧读数 100%，你给什么处置？BC 给氧规则怎么说？",
+   "aEn": "100% high-flow oxygen regardless of the reading — the oximeter counts carboxyhemoglobin as saturation. BC's guideline agrees: CO poisoning and smoke inhalation get a nonrebreather at high flow; do not titrate down to 94% for these patients.",
+   "aZh": "无视读数，给 100% 高流量氧——血氧仪把碳氧血红蛋白也算进饱和度。BC 考纲同款采分点：CO 中毒与烟雾吸入用非再吸入面罩高流量给氧，不适用'滴定到 94%'的常规。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Pesticide antidotes (atropine / pralidoxime)",
+   "topicZh": "农药中毒解毒剂（阿托品/解磷定）",
+   "bookEn": "The chapter treats organophosphate poisoning with atropine for muscarinic overstimulation, adding pralidoxime for organophosphates (not carbamates).",
+   "bookZh": "本章写有机磷中毒用阿托品阻断毒蕈碱过度兴奋，有机磷再加解磷定（氨基甲酸酯不用）。",
+   "bcEn": "Neither drug is in BC's EMR/PCP medication list. For the licensing exam, your interventions are: aggressive decontamination, airway management with suction, high-flow oxygen, and rapid conveyance / ALS intercept.",
+   "bcZh": "这两种药都不在 BC 的 EMR/PCP 药物清单里。执照考试答题要点是：积极除污、气道管理并勤吸引、高流量给氧、快速转运或请 ALS 拦截。",
+   "ref": "BC Guidelines 药物附录（无 atropine/pralidoxime 条目）"
+  },
+  {
+   "topicEn": "Cyanide antidote kits",
+   "topicZh": "氰化物解毒包",
+   "bookEn": "The book describes hydroxocobalamin and the legacy amyl nitrite / sodium nitrite / sodium thiosulfate kit.",
+   "bookZh": "书中介绍了羟钴胺素和旧式亚硝酸戊酯/亚硝酸钠/硫代硫酸钠解毒包。",
+   "bcEn": "No cyanide antidote exists at BC's EMR/PCP level. Exam answer: remove from the source, high-flow oxygen by nonrebreather, supportive ventilation, rapid conveyance.",
+   "bcZh": "BC 的 EMR/PCP 层级没有任何氰化物解毒剂。考试答案：脱离污染源、非再吸入面罩高流量给氧、支持通气、快速转运。",
+   "ref": "BC Guidelines 药物附录（无氰化物解毒剂条目）"
+  },
+  {
+   "topicEn": "Calcium for hydrofluoric acid",
+   "topicZh": "氢氟酸的钙剂治疗",
+   "bookEn": "The book notes some EMS agencies carry calcium chloride/gluconate for hydrofluoric acid pain and hypocalcemia, on medical control's order.",
+   "bookZh": "书中说部分 EMS 机构备有氯化钙/葡萄糖酸钙，经医疗指挥授权用于氢氟酸引起的疼痛和低钙血症。",
+   "bcEn": "Calcium preparations are not in BC's EMR/PCP formulary. Answer with copious water decontamination, supportive burn care, analgesia within your licence, and conveyance — flag the HF exposure clearly to the receiving hospital.",
+   "bcZh": "钙剂不在 BC 的 EMR/PCP 用药范围内。答题按：大量清水冲洗除污、烧伤支持处置、执照范围内镇痛、转运——并向接收医院明确交代氢氟酸暴露。",
+   "ref": "BC Guidelines 药物附录（无钙剂条目）"
+  },
+  {
+   "topicEn": "Diuretics for inhalation pulmonary edema",
+   "topicZh": "吸入性肺水肿用利尿剂",
+   "bookEn": "The chapter suggests patients with pulmonary edema after an inhalation exposure may need diuretics, with medical control consulted.",
+   "bookZh": "本章提出吸入暴露继发肺水肿的患者可能需要利尿剂，并咨询医疗指挥。",
+   "bcEn": "Diuretics are not an EMR/PCP intervention in BC. The BC pathway for pulmonary edema is high-flow oxygen titration, CPAP (a PCP skill, with its contraindication list), and assisted ventilation including PEEP for PCPs.",
+   "bcZh": "利尿剂不属于 BC 的 EMR/PCP 干预。BC 处理肺水肿的路径是：高流量氧滴定、CPAP（PCP 技能，注意其禁忌清单）、辅助通气（PCP 可加 PEEP）。",
+   "ref": "BC Guidelines p.50-52（Oxygen Administration / CPAP）"
+  },
+  {
+   "topicEn": "Flushing time: burn cooling vs chemical decon",
+   "topicZh": "冲洗时长：烧伤降温 vs 化学除污",
+   "bookEn": "The book stresses that high-pH (alkaline) contamination takes considerably longer to flush from skin than acids.",
+   "bookZh": "书中强调高 pH 碱性污染物比酸需要长得多的皮肤冲洗时间。",
+   "bcEn": "BC's burn guideline caps cooling at 15-20 minutes with cool (not cold) running water, inclusive of bystander cooling — and the electrical-contact entry counts decontamination time inside that window. On the exam, answer burn-cooling duration questions with 15-20 minutes; treat 'flush until the contaminant is cleared' as the separate decon concept and don't conflate the two.",
+   "bcZh": "BC 烧伤规程规定降温 15-20 分钟、用凉（非冰）流动水，且含旁观者已降温的时间——电击伤条目还写明除污时间计入该窗口。考试问'烧伤降温多久'按 15-20 分钟作答；'冲到污染物洗净为止'是除污概念，两者别混为一谈。",
+   "ref": "BC Guidelines p.28（Burn Management）/ p.35（Electrical Contact）"
+  }
+ ],
+ "sourcePages": "4341-4383"
+}

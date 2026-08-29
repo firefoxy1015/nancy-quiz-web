@@ -1,0 +1,669 @@
+{
+ "id": "ch51",
+ "n": 51,
+ "titleEn": "Terrorism and CBRNE Events",
+ "titleZh": "恐怖袭击与 CBRNE 事件",
+ "group": "ops",
+ "examWeight": 1,
+ "whyEn": "This chapter is not about memorizing exotic poisons — it is about a response doctrine: the paramedic who rushes in becomes the next patient. Exams love the safety sequence (uphill, upwind, staging, secondary devices), the zone system (hot/warm/cold), decontamination logic, and the signature clues that separate a nerve agent from a vesicant, a pulmonary agent, cyanide, a biologic release, or radiation. Deep toxicology of organophosphates and cyanide lives in Chapter 36; here you learn the scene-level pattern recognition and the discipline of staying alive long enough to help.",
+ "whyZh": "这一章考的不是记住多少种毒剂，而是一整套响应纪律：冲进现场的救援者会变成下一个伤员。考点集中在安全序列（上风、上坡、集结待命、二次装置）、三区划分（热/暖/冷区）、去污逻辑，以及把神经性毒剂、糜烂性毒剂、肺损伤剂、氰化物、生物剂和辐射区分开的特征线索。有机磷与氰化物的深度毒理在第36章；本章练的是现场层面的模式识别，以及先保住自己才谈得上救人的克制。",
+ "competencies": {
+  "areas": [
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics",
+   "Area 8: Health Promotion and Public Safety"
+  ],
+  "codes": [
+   "2.4.f",
+   "3.3.a",
+   "3.3.b",
+   "3.3.c",
+   "3.3.e",
+   "3.3.f",
+   "3.3.g",
+   "3.3.h",
+   "4.1.a",
+   "4.1.b",
+   "4.1.c",
+   "8.2.a",
+   "8.3.a",
+   "8.3.b",
+   "8.3.c",
+   "8.3.d",
+   "8.3.e",
+   "8.3.f"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction — Canada Is a Target Too",
+   "titleZh": "引言：加拿大不是局外人",
+   "points": [
+    {
+     "en": "Canada's overseas military role makes it a terrorist target at home. In October 2014 two attacks came a day apart: a driver rammed two Canadian Armed Forces soldiers in a Quebec parking lot (one died), and the next day a gunman killed a ceremonial sentry at the Ottawa National War Memorial, triggering lockdowns of federal buildings and schools.",
+     "zh": "加拿大因海外反恐军事角色而成为本土袭击目标。2014年10月连续两天发生袭击：魁北克一停车场有人驾车撞击两名加军士兵（一人死亡）；次日一名枪手在渥太华国家战争纪念碑射杀一名礼仪哨兵，联邦机构和学校随即封锁。",
+     "hard": true
+    },
+    {
+     "en": "The April 2018 Toronto van attack killed 10 pedestrians and injured 16 — proof that a rented vehicle, with no exotic weapon at all, can produce a mass-casualty terror event.",
+     "zh": "2018年4月多伦多货车袭击造成10名行人死亡、16人受伤——一辆租来的货车不需要任何特殊武器就能制造大规模伤亡恐袭。",
+     "hard": true
+    },
+    {
+     "en": "Canadian terror history to know: FLQ domestic terrorism in 1970s Quebec; the 1985 Air India Flight 182 bombing killed 280 Canadians; 25 Canadians died in the 2001 World Trade Center attack.",
+     "zh": "必记的加拿大恐袭史：1970年代魁北克FLQ本土恐怖主义；1985年印度航空182号班机爆炸导致280名加拿大人遇难；2001年世贸中心袭击中有25名加拿大人丧生。",
+     "hard": true
+    },
+    {
+     "en": "Precursor cases show CBRNE ambitions inside Canada: 130 g of ricin seized at an Alaska–Yukon border crossing (1993), a pipe bomb with potassium cyanide found in an Edmonton luggage locker (1999), and a 2006 Toronto cell caught with 3 tons of ammonium nitrate — triple the amount used in the Oklahoma City bombing.",
+     "zh": "多起未遂案说明CBRNE企图早已出现在加拿大境内：1993年阿拉斯加—育空口岸查获130克蓖麻毒素；1999年埃德蒙顿行李寄存柜发现附带氰化钾的管状炸弹；2006年多伦多恐怖小组被查获3吨硝酸铵——是俄克拉何马城爆炸案用量的三倍。",
+     "hard": true
+    },
+    {
+     "en": "CSIS and the RCMP track more than violence: fundraising, bases of operation, weapons procurement, and pre-attack reconnaissance. Threat factors include camp-trained veterans residing in Canada, citizens returning from foreign insurgencies, and front organizations exploiting immigrant communities.",
+     "zh": "加拿大安全情报局（CSIS）和皇家骑警（RCMP）监控的不只是暴力行为，还包括筹款、活动据点、武器采购和袭击前踩点。威胁因素包括：受训营出身的老兵定居加拿大、参加境外武装后回流的公民、以及借壳组织渗透移民社区。",
+     "hard": false
+    },
+    {
+     "en": "Transnational groups share a profile: strike globally including previously untouched countries, pick soft (non-military) targets to maximize deaths, actively seek CBRNE weapons, use the internet for propaganda and recruiting, and recruit second-generation immigrants with no prior terror links.",
+     "zh": "跨国恐怖组织的共同特征：全球范围发动袭击（包括此前未被攻击的国家）、专挑软目标（非军事目标）以求最大杀伤、积极谋求CBRNE武器、利用互联网宣传和招募、吸收此前与恐怖主义毫无关联的第二代移民。",
+     "hard": true
+    },
+    {
+     "en": "Most espionage against Canada today is economic — covert attempts to steal proprietary technology. Canada's leadership in aerospace, biotechnology, chemicals, nuclear energy, and oil and gas also makes that infrastructure a physical target, such as a refinery in a dense urban area.",
+     "zh": "当今针对加拿大的间谍活动以经济间谍为主——秘密窃取专有技术情报。加拿大在航空航天、生物技术、化工、核能、油气领域的领先地位，也让这些基础设施本身成为实体袭击目标，例如人口稠密区的炼油厂。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Types of Terrorism",
+   "titleZh": "恐怖主义的类型",
+   "points": [
+    {
+     "en": "Canada's Anti-terrorism Act criminalizes four knowing acts: participating in or contributing to a terrorist group's activity, facilitating terrorist activity, instructing anyone to carry it out, and harbouring or concealing a person who has done so or is likely to.",
+     "zh": "加拿大《反恐怖主义法》把四种明知故犯的行为定为犯罪：参与或资助恐怖组织活动、为恐怖活动提供便利、指使他人实施恐怖活动、窝藏或隐匿已实施（或可能实施）恐怖活动的人。",
+     "hard": true
+    },
+    {
+     "en": "Four broad categories of groups that turn to terrorism: violent religious groups and doomsday cults (Aum Shinrikyo's Tokyo chemical and biologic attacks, 1994–1995); extremist political groups including violent separatists; technology terrorists such as cyberterrorists attacking infrastructure; and single-issue groups (anti-abortion, animal rights, anarchist, racist, ecoterrorist).",
+     "zh": "走向恐怖主义的组织分四大类：暴力宗教团体与末日邪教（如1994–1995年在东京实施化学和生物袭击的奥姆真理教）；极端政治团体（含暴力分离主义者）；攻击技术基础设施的技术恐怖分子（如网络恐怖分子）；单一议题团体（反堕胎、动物权利、无政府主义、种族主义、生态恐怖主义）。",
+     "hard": true
+    },
+    {
+     "en": "Most attacks need multiple coordinated actors — 19 hijackers on September 11, 2001, at least 4 bombers in the July 7, 2005 London subway attack — but lone terrorists carried out the 1996 Atlanta Olympics bombing, the 1997 abortion clinic attacks, and the Oklahoma City bombing. Never assume a single attacker means the threat is over.",
+     "zh": "多数袭击需要多人协同——9·11有19名劫机者，2005年7月7日伦敦地铁爆炸至少4人参与——但1996年亚特兰大奥运会爆炸、1997年堕胎诊所袭击、俄克拉何马城爆炸都是独狼作案。绝不能因为只发现一名袭击者就认定威胁解除。",
+     "hard": true
+    },
+    {
+     "en": "The March 2018 Salisbury poisoning was the first chemical-weapon use on UK soil: Novichok, a nerve agent developed at Russia's Shikhany military complex in the 1970s–80s, is estimated to be about 10 times more toxic than VX.",
+     "zh": "2018年3月索尔兹伯里投毒案是化学武器首次在英国本土使用：诺维乔克（Novichok）是苏联1970–80年代在希哈内军事基地研制的神经性毒剂，估计毒性约为VX的10倍。",
+     "hard": true
+    },
+    {
+     "en": "VX itself was used as an assassination weapon in February 2017 at Kuala Lumpur International Airport — a reminder that military nerve agents have already appeared in civilian public spaces, not just battlefields.",
+     "zh": "VX本身已于2017年2月在吉隆坡国际机场被用于暗杀——军用神经性毒剂早已出现在民用公共场所，而不只是战场。",
+     "hard": false
+    },
+    {
+     "en": "Scale reference points from recent attacks: Boston Marathon 2013 twin blasts killed 3 and wounded over 260; the 2017 Las Vegas shooter fired more than 1,100 rounds, killing 58 and injuring 851 — conventional weapons still cause the largest casualty counts.",
+     "zh": "近年袭击的伤亡量级参照：2013年波士顿马拉松双爆炸3死、260余伤；2017年拉斯维加斯枪击案枪手射出1100余发子弹，58死851伤——常规武器至今仍是制造最大伤亡的手段。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "CBRNE — The Agent Families",
+   "titleZh": "CBRNE：五大类武器总览",
+   "points": [
+    {
+     "en": "A CBRNE event is the uncontrolled release of chemical, biologic, or radioactive material into the environment, or an explosion causing widespread damage. It can be accidental or deliberate, and targets include people plus infrastructure — bridges, tunnels, airports, seaports.",
+     "zh": "CBRNE事件指化学、生物或放射性物质向环境的失控释放，或造成大范围破坏的爆炸。可以是事故也可以是蓄意袭击，目标既包括人群，也包括桥梁、隧道、机场、海港等基础设施。",
+     "hard": true
+    },
+    {
+     "en": "Explosives are the terrorists' weapon of choice and the most common CBRNE agent to date — truck and car bombs, pedestrian suicide bombers. Past attempts to use chemical or biologic weapons at full capacity have failed, but the clinical patterns still must be known.",
+     "zh": "爆炸物是恐怖分子迄今首选、也最常用的CBRNE武器——卡车/汽车炸弹、人体自杀式炸弹。以往化学和生物武器的全规模使用均未成功，但其临床表现仍必须掌握。",
+     "hard": true
+    },
+    {
+     "en": "Why CBRNE appeals to apocalyptic groups: agents are comparatively easy to obtain or make, recipes circulate on the internet, and post-Soviet expertise is purchasable. With better dissemination technique, the 1995 Tokyo subway sarin attack could have produced tens of thousands of casualties.",
+     "zh": "CBRNE对末日型组织的吸引力在于：毒剂相对容易获得或制造、配方在互联网上流传、前苏联解体后的技术专家可被收买。1995年东京地铁沙林袭击若采用更有效的播散手法，伤亡可能达数万人。",
+     "hard": true
+    },
+    {
+     "en": "Biologic agents are disease-causing organisms — natural in origin but cultivated, synthesized, or mutated in a lab. Weaponization means engineering the release to maximize population exposure. Three primary types: viruses, bacteria, and neurotoxins.",
+     "zh": "生物剂是能致病或致死的微生物——虽源于自然，但被实验室培养、合成或诱变。'武器化'指人为设计释放方式以最大化人群暴露。三大类型：病毒、细菌、神经毒素。",
+     "hard": true
+    },
+    {
+     "en": "Nuclear weapons have been used only twice (Hiroshima and Nagasaki, estimated 214,000 deaths). Building one is hard, so the realistic terror scenario is a radiologic dispersal device (RDD or dirty bomb) using stolen radioactive material — its main product is panic and civil disturbance rather than mass fatalities.",
+     "zh": "核武器仅被实际使用过两次（广岛与长崎，估计致死21.4万人）。自制核弹极难，现实的恐袭剧本是用盗取的放射性材料做放射性播散装置（RDD，俗称脏弹）——其主要杀伤是恐慌和社会动乱，而非大规模死亡。",
+     "hard": true
+    },
+    {
+     "en": "Chemical agents are human-made, first fielded in World War I, and can be liquid, powder, or vapour. Five classes by mechanism: vesicants/blister agents (mustard, lewisite); pulmonary/choking agents (phosgene, chlorine); nerve agents (sarin, soman, tabun, VX); metabolic/blood agents (hydrogen cyanide, cyanogen chloride); and irritating agents (mace, tear gas, pepper spray).",
+     "zh": "化学毒剂为人工合成，一战首次投入战场，可呈液态、粉末或蒸气。按机制分五类：糜烂性/起疱剂（芥子气、路易氏剂）；肺损伤/窒息剂（光气、氯气）；神经性毒剂（沙林、梭曼、塔崩、VX）；代谢/血液性毒剂（氢氰酸、氯化氰）；刺激性毒剂（催泪瓦斯、辣椒喷雾等）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Paramedic Response to Terrorism and CBRNE Events",
+   "titleZh": "医护对恐袭与 CBRNE 事件的响应",
+   "points": [
+    {
+     "en": "A CBRNE event differs from an ordinary hazmat incident in one decisive way: it is deliberate. You are responding to a crime scene where criminal activity may still be ongoing, with mass casualties that can swamp the medical system and force large-scale decontamination — some patients needing dry decon, others wet.",
+     "zh": "CBRNE事件与普通危险品事故的决定性区别在于：它是蓄意的。你进入的是犯罪现场，犯罪行为可能仍在进行；大量伤员会压垮医疗系统，并迫使开展大规模去污——有的伤员需要干式去污，有的需要湿式去污。",
+     "hard": true
+    },
+    {
+     "en": "Every CBRNE response is multi-agency by nature. After-action reports repeatedly name the same three failure points: communication, information sharing, and equipment compatibility. Effective response requires prior planning, equipment allocation, and multi-agency drills — not improvisation on the day.",
+     "zh": "CBRNE响应必然是多机构协同。历次事后复盘报告反复点名同样三个失败环节：通信、信息共享、装备兼容性。有效响应靠的是事先规划、装备配置和多机构联合演练，而不是临场发挥。",
+     "hard": true
+    },
+    {
+     "en": "All paramedics should be trained to at least the Awareness Level for CBRNE events, plus fit-tested respiratory protection and basic PPE and decontamination skills. Standard EMS PPE is built for short exposures; a CBRNE response can demand days or weeks of continuous PPE work.",
+     "zh": "所有医护应至少接受CBRNE认知级（Awareness Level）培训，并完成呼吸防护适配性测试（fit test）、掌握基础PPE和去污技能。日常PPE按短时暴露设计，而CBRNE响应可能需要连续数天甚至数周穿戴PPE作业。",
+     "hard": true
+    },
+    {
+     "en": "Hospitals will not absorb a CBRNE-scale patient surge, so plans pre-identify alternative treatment facilities — arenas, sports complexes, schools. High schools work especially well: water, restrooms, cafeterias, furniture, and public address systems are already in place. Ontario's Emergency Medical Assistance Team is a provincial example of a deployable multi-disciplinary team.",
+     "zh": "医院无法消化CBRNE量级的伤员潮，因此预案会预先指定替代救治场所——体育馆、运动中心、学校。高中尤其合适：自带供水、洗手间、食堂、桌椅和广播系统。安大略省的紧急医疗援助队（EMAT）是省级可部署多学科团队的范例。",
+     "hard": false
+    },
+    {
+     "en": "Patient tracking starts immediately: a waterproof, colour-coded triage tag records name, date of birth, chief complaint, and destination, with barcode stickers for belongings bags, destination rosters, and call reports. Belongings are criminal evidence — and remember that suspects may be hiding among your patients.",
+     "zh": "伤员追踪从第一时间开始：防水的分色检伤标签记录姓名、出生日期、主诉和转运去向，配套条码贴纸贴到随身物品袋、去向名册和出车报告上。伤员物品属于刑事证据——并且要记住：嫌疑人可能就混在你救治的伤员之中。",
+     "hard": true
+    },
+    {
+     "en": "Nearly every successful attack is preceded by reconnaissance and rehearsal, so spotting precursor activity is the first line of defence. In Canada, report an immediate threat via 9-1-1; report non-immediate national-security concerns to local police or CSIS at 613-993-9620.",
+     "zh": "几乎所有得手的袭击都有踩点和预演，识别前兆活动就是反恐的第一道防线。在加拿大：紧迫威胁拨9-1-1报警；非紧迫的国家安全线索报当地警方或加拿大安全情报局（613-993-9620）。",
+     "hard": true
+    },
+    {
+     "en": "High-value suspicious signs: stolen uniforms, credentials, or ID badges; photographing or sketching facilities; people cataloguing security cameras and bollards; abandoned vehicles or packages; repeat false alarms with onlookers studying the responder reaction; and bulk purchases of fertilizer or of acetone and peroxide — key ingredients of a devastating homemade explosive.",
+     "zh": "高价值可疑迹象：制服、证件、工作证被盗；对建筑设施拍照或画图；有人清点安保摄像头和防撞柱；被遗弃的车辆或包裹；反复假警报且有旁观者专门观察响应人员的反应；大量购买化肥或丙酮与过氧化物——后两者是威力巨大的自制炸药的关键原料。",
+     "hard": true
+    },
+    {
+     "en": "Warning features of a mail bomb: no return address, addressed only to a job title or with a wrong title, misspellings, restrictive markings like \"personal for\", oily stains or odd odours, excessive tape or twine, protruding wires, foil, or an antenna, a rigid envelope, or unusual weight and balance.",
+     "zh": "邮件炸弹的警示特征：无回邮地址、只写职务或职务写错、拼写错误、标注'亲启/仅限本人拆封'类限制语、油渍或异味、过度缠胶带或麻绳、露出电线/锡箔/天线、信封异常坚硬、重量或配重异常。",
+     "hard": true
+    },
+    {
+     "en": "Suicide-bomber cues: fervent praying or whispering, visible agitation, hugging a package or repeatedly checking a backpack, loose bulky clothing wrong for the weather, manoeuvring toward a VIP or dense crowd, and avoiding security contact until the moment of attack. Vehicle-bomb cues: chemical or burning smells, crude recent bodywork or welded patches, extra fuel tanks or antennas, sagging overloaded suspension, and a driver insisting on parking against a crowded target.",
+     "zh": "人弹征兆：狂热祈祷或喃喃自语、明显焦躁、紧抱包裹或反复查看背包、与天气不符的宽松臃肿衣物、向要人或密集人群移动、袭击前刻意回避安保。汽车炸弹征兆：化学或烧焦气味、粗糙的近期钣金或焊补痕迹、加装油箱或天线、悬挂被压得过低、司机执意停靠人群密集目标。",
+     "hard": true
+    },
+    {
+     "en": "On every call, run the five-item terrorism screen: preincident indicators (recent activism, credible threats); type of location (monument, infrastructure, temple, mass gathering); type of call (explosion, many people coughing, crowds fleeing); number of patients — multiple patients with the same signs and symptoms is the single most important clue; and victims' statements ('everyone is passing out') — the second best clue.",
+     "zh": "每一趟出车都过一遍五项恐袭筛查：事前迹象（近期激进活动、可信威胁）；地点类型（纪念性建筑、基础设施、宗教场所、大型集会）；呼叫类型（爆炸、大量人群咳嗽、人群逃散）；伤员数量——多名伤员出现相同症状体征是最重要的单一线索；伤员陈述（'大家都在昏倒'）——第二重要的线索。",
+     "hard": true
+    },
+    {
+     "en": "The five response actions, in order: ensure scene and personal safety; notify dispatch and supervisor; request additional and specialized resources; establish or coordinate with command; initiate mass-casualty incident procedures.",
+     "zh": "五步响应动作，按顺序：确保现场与个人安全；通知调度和主管；请求增援与专业力量；建立指挥或并入既有指挥；启动大规模伤亡事件（MCI）程序。",
+     "hard": true
+    },
+    {
+     "en": "Stage upwind and uphill, stop at a distance for a visual assessment (the Emergency Response Guidebook gives initial hazard distances), and park where you cannot be blocked in — a trapped ambulance can neither transport nor escape. The hazmat team defines the hot, warm, and cold zones, which double as the crime-scene perimeter; only trained, equipped personnel enter hot or warm, and paramedics triage and treat in the cold zone.",
+     "zh": "在上风、上坡处集结；先远距离停车做目视评估（《应急响应指南》ERG提供初始危险距离）；停车位置必须保证不被堵死——被围住的救护车既运不了伤员也逃不出去。危险品团队负责划定热区、暖区、冷区，这三区同时就是刑事现场警戒圈；只有受训且有装备的人员才能进入热区或暖区，医护的检伤与救治在冷区进行。",
+     "hard": true
+    },
+    {
+     "en": "Notification content: nature of the event, extra resources needed, estimated patient count, and the upwind or optimal approach route. Never direct incoming units to the building's front entrance — that is exactly where secondary devices get planted. Call the hazmat team as early as possible: shared regional teams need long assembly and travel time, and more than one agent or device may be present.",
+     "zh": "通报内容：事件性质、所需增援、估计伤员数、上风或最优接近路线。绝不能让后续单位开到建筑正门集合——那正是二次装置最常埋设的位置。危险品团队要尽早呼叫：区域共用团队集结和赶路耗时很长，而且现场可能不止一种毒剂或一个装置。",
+     "hard": true
+    },
+    {
+     "en": "First provider on scene establishes EMS or Medical Command under ICS until relieved; paramedics may serve as medical branch directors or triage, treatment, transportation, or logistics officers. If ICS already exists, report to the medical staging area manager for assignment.",
+     "zh": "第一个到场的医护要按ICS建立EMS/医疗指挥直至移交；医护可担任医疗分部主管，或检伤、救治、转运、后勤等职位。若ICS已建立，则直接向医疗集结区管理员报到领受任务。",
+     "hard": true
+    },
+    {
+     "en": "Secondary devices are aimed at responders and the media, timed to detonate after the first crews arrive. Reassessment never stops: a wind shift during a gas attack or a climbing count of contaminated patients means the danger has moved to you. Free reference apps for agent data: WISER, ERG, CHEMM, REMM, and the Household Products Database.",
+     "zh": "二次装置的打击对象就是响应人员和随后赶到的媒体，起爆时机设定在首批救援力量到场之后。现场再评估永不停止：毒气袭击中风向改变、或被污染伤员数量持续攀升，都意味着危险已经移向你。查毒剂资料的免费应用：WISER、ERG、CHEMM、REMM、家用产品数据库（HSDB）。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Chemical Agents",
+   "titleZh": "化学毒剂",
+   "points": [
+    {
+     "en": "Two axes classify every chemical weapon. Persistency: a persistent (nonvolatile) agent stays on surfaces more than 24 hours — VX can linger weeks to months; a nonpersistent (volatile) agent like sarin evaporates within seconds to minutes. Route of exposure: vapour-hazard agents enter via the respiratory tract; contact-hazard agents give off little vapour and enter through skin. Wind and enclosed spaces govern how far vapours reach.",
+     "zh": "每种化学毒剂都用两条轴定性。持久性：持久性（低挥发）毒剂在表面停留超过24小时——VX可残留数周至数月；非持久性（高挥发）毒剂如沙林数秒至数分钟内蒸发。暴露途径：蒸气型经呼吸道进入体内；接触型几乎不产生蒸气、经皮肤吸收。风向和封闭空间决定蒸气的波及范围。",
+     "hard": true
+    },
+    {
+     "en": "You do not need a war to meet these chemicals: phosgene, cyanide, ammonia, and chlorine travel Canadian highways daily, so chemical plants and transport routes are both accident risks and terror targets. Industrial exposure produces the same injuries as the weaponized versions.",
+     "zh": "遇到这些化学品不需要战争：光气、氰化物、氨和氯每天都在加拿大公路上运输，化工厂和运输线既有事故风险也是恐袭目标。工业暴露造成的损伤与武器化毒剂完全相同。",
+     "hard": true
+    },
+    {
+     "en": "PPE levels: Level A — fully encapsulating suit with SCBA inside, top vapour/gas protection, for the hot zone. Level B — liquid-splash protection with SCBA possibly worn outside the suit, so not vapour-tight. Level C — splash protection with an air-purifying respirator instead of SCBA, no protection in oxygen-deficient air; typical for hospital first receivers and cold-zone paramedics. Level D — coveralls and boots, routine wear, essentially no chemical protection.",
+     "zh": "防护装备分级：A级——全密闭化学服、SCBA置于服内，对蒸气/气体防护最高，用于热区。B级——防液体飞溅，SCBA可穿在服外，因此不防蒸气。C级——防飞溅+空气净化呼吸器（非SCBA），缺氧环境无保护；医院首批接收人员和冷区医护常用。D级——工作服加靴子，日常着装，基本不防化学品。",
+     "hard": true
+    },
+    {
+     "en": "Zone discipline: whoever enters the warm or hot zone counts as contaminated, and every person and patient must be decontaminated before crossing into the cold zone. EMS stages and works in the cold zone; most paramedics operate at Awareness level — recognize, protect yourself, call the specialists.",
+     "zh": "分区纪律：进入暖区或热区的人一律视为已被污染，所有人员和伤员必须去污后才能进入冷区。EMS在冷区集结和作业；多数医护按认知级运作——识别事件、保护自己、呼叫专业力量。",
+     "hard": true
+    },
+    {
+     "en": "Vesicants (H sulphur mustard, L lewisite, CX phosgene oxime) hit skin first and favour damp body areas — armpits, groin, airway. Look for burning redness, large blisters, swollen eyes with possible permanent blindness, and grey skin discolouration marking permanent damage from lewisite or phosgene oxime. Inhaled vapour adds hoarseness, stridor, hemoptysis, and severe dyspnea.",
+     "zh": "糜烂性毒剂（H芥子气、L路易氏剂、CX光气肟）首先攻击皮肤，偏好潮湿部位——腋窝、腹股沟、呼吸道。表现为烧灼样红斑、大水疱、眼睑肿胀甚至永久失明；皮肤灰变提示路易氏剂或光气肟造成的永久性损伤。吸入蒸气则出现声嘶、喘鸣、咯血和严重呼吸困难。",
+     "hard": true
+    },
+    {
+     "en": "Sulphur mustard is an oily yellow-brown liquid smelling of garlic or mustard, very persistent. It absorbs within seconds and starts irreversible cell damage in 1–2 minutes, yet visible symptoms wait 4–6 hours. It is a mutagen that also depletes bone-marrow white cells, so the main late complication is secondary infection. Blister fluid contains no agent — but the overlying skin is contaminated until formally decontaminated.",
+     "zh": "芥子气是油状黄棕色液体，有大蒜或芥末味，持久性极强。接触数秒即被吸收，1–2分钟内启动不可逆细胞损伤，但可见症状延迟4–6小时才出现。它是诱变剂，还会耗竭骨髓白细胞，因此后期主要并发症是继发感染。水疱液本身不含毒剂——但疱上覆盖的皮肤在正规去污前都算污染区。",
+     "hard": true
+    },
+    {
+     "en": "Lewisite and phosgene oxime blister like mustard but announce themselves: highly volatile, immediate intense pain, rapid onset, grey discolouration at the contact site, and no mustard-type delayed cellular injury. Antidotes: none for mustard or phosgene oxime; BAL (British anti-lewisite) exists for lewisite but is carried mainly by military specialty units. Decontaminate with soap and copious water before ABCDE; burn centres are the destination of choice.",
+     "zh": "路易氏剂和光气肟起疱类似芥子气，但会立刻'报到'：挥发性高、接触即剧痛、起效迅速、接触部位灰变，且没有芥子气那种迟发性细胞损伤。解毒剂：芥子气和光气肟没有；路易氏剂有BAL（英国抗路易氏剂），但基本只有军方特种单位配备。先用肥皂和大量清水去污再做ABCDE评估；转运首选烧伤中心。",
+     "hard": true
+    },
+    {
+     "en": "Chlorine (CL) — the first chemical ever used in warfare — smells of bleach and forms a green haze. It irritates immediately: choking, chest burning, hoarseness, stridor, gasping, watery eyes; severe exposure ends in pulmonary edema and airway obstruction. Mixing household bleach with ammonia creates a similar acid gas that overcomes hundreds of people every year.",
+     "zh": "氯气（CL）——史上第一种投入战争的化学毒剂——有漂白剂气味，释放时呈绿色雾团。刺激立竿见影：窒息感、胸部烧灼、声嘶、喘鸣、喘息、流泪；重度暴露以肺水肿和气道梗阻收场。家用漂白剂与氨混合会产生类似的酸性气体，每年放倒数百人。",
+     "hard": true
+    },
+    {
+     "en": "Phosgene (CG) is the sneak: it smells like freshly mown grass or hay and barely irritates, so victims keep breathing it. Onset is delayed by hours. It is also a combustion product — textile or house fires, metalwork, burning Freon — so ordinary fire calls can produce it. Severe exposure pours so much fluid into the lungs that the patient can become hypovolemic and hypotensive from pulmonary edema alone.",
+     "zh": "光气（CG）是伪装者：气味像新割的草或干草，几乎不刺激，受害者会不知不觉持续吸入。症状延迟数小时才出现。它同时是燃烧产物——纺织品或房屋火灾、金属加工、氟利昂燃烧都会产生——普通火警现场就可能遇到。重度暴露时肺内渗液之多，足以仅凭肺水肿就造成低血容量和低血压。",
+     "hard": true
+    },
+    {
+     "en": "Pulmonary agent care: get the patient out of the atmosphere (trained, protected personnel only), then aggressive ABC management — oxygenation, ventilation, suction. Forbid exertion; activity dramatically accelerates deterioration. No antidote exists: position of comfort with head elevated, IV access, standard bronchospasm and pulmonary edema therapy, positive pressure ventilation with oxygen, corticosteroids per medical direction, rapid transport.",
+     "zh": "肺损伤剂的处置：先由受训且有防护的人员把伤员撤出污染空气，然后积极管理ABC——氧合、通气、必要时吸引。严禁伤员活动；体力活动会显著加速恶化。没有解毒剂：坐位/头高位、开放静脉、按支气管痉挛和肺水肿常规用药、正压通气给氧、按医疗指示考虑糖皮质激素、快速转运。",
+     "hard": true
+    },
+    {
+     "en": "Nerve agents are organophosphates — discovered during pesticide research — that block cholinesterase and leave every organ overstimulated. Of roughly 900 pesticides available in Canada, about 37 are organophosphates. Weapon-strength versions can cause cardiac arrest within seconds to minutes; insecticide poisoning at a farm presents and is managed identically (full toxicology and atropine dosing: Chapter 36).",
+     "zh": "神经性毒剂属于有机磷——在研发杀虫剂过程中被发现——通过阻断胆碱酯酶让全身器官持续过度兴奋。加拿大在售的约900种农药中约37种是有机磷。武器级毒剂可在数秒至数分钟内导致心脏骤停；农场杀虫剂中毒的表现和处置与神经性毒剂完全一致（完整毒理与阿托品用法见第36章）。",
+     "hard": true
+    },
+    {
+     "en": "The four agents, ranked: Sarin (GB) — highly volatile, colourless, odourless, evaporates in seconds to minutes; LD50 about 1,700 mg per 70 kg (roughly one drop); a vapour hazard deadliest in enclosed spaces, and clothing off-gasses vapour continuously. Soman (GD) — twice as persistent as sarin, five times as lethal, fruity odour. Tabun (GA) — half the lethality of sarin but 36 times more persistent (days) and easy to manufacture. VX — over 100 times more lethal than sarin, odourless oil like baby oil, persists weeks to months; a contact hazard whose oily residue defies decontamination.",
+     "zh": "四种毒剂对比：沙林（GB）——高挥发、无色无味、数秒至数分钟蒸发；LD50约1700毫克/70公斤（约一滴）；属蒸气型，在封闭空间最致命，且沾染的衣物会持续放出蒸气。梭曼（GD）——持久性是沙林2倍、致死性5倍，有果香味。塔崩（GA）——致死性只有沙林一半，但持久性是其36倍（可达数日），且极易制造。VX——致死性超过沙林100倍，无味油状似婴儿油，可残留数周至数月；属接触型，油膜极难去污。",
+     "hard": true
+    },
+    {
+     "en": "Recognition: DUMBELS (defecation, urination, miosis, bradycardia/bronchorrhea/bronchoconstriction, emesis, lacrimation, salivation) beats the military SLUDGEM because the B holds the lethal triad. Miosis is the most common sign and can persist days to weeks — but stroke, basilar skull fracture, and opioid overdose also constrict pupils, so confirm with the full symptom set. Nerve-agent seizures do not self-terminate: they continue until antidote or death.",
+     "zh": "识别：DUMBELS（排便、排尿、瞳孔缩小、心动过缓/支气管大量分泌/支气管收缩、呕吐、流泪、流涎）比军用口诀SLUDGEM更有用，因为B字母装着致命三联。瞳孔缩小是最常见体征，可持续数天到数周——但卒中、颅底骨折和阿片过量同样会缩瞳，必须结合全套症状判断。神经性毒剂引发的抽搐不会自行停止：要么用上解毒剂，要么持续到死亡。",
+     "hard": true
+    },
+    {
+     "en": "Tokyo, March 20, 1995: sarin released in the subway sent more than 6,000 people to seek care; 13 died. Responding paramedics wore no protective clothing and most were cross-contaminated by patient contact. Deaths from severe nerve-agent exposure come from respiratory failure; treatment after decontamination is atropine 2–6 mg IV/IM repeated every 5 minutes to block overstimulation, plus 2-PAM chloride to free the enzyme and relieve respiratory-muscle paralysis and twitching.",
+     "zh": "1995年3月20日东京：地铁沙林袭击导致6000余人就医、13人死亡。到场医护无任何防护服，多数因接触伤员被交叉污染。重度神经性毒剂暴露死于呼吸衰竭；去污后的治疗为阿托品2–6毫克IV/IM、每5分钟重复以阻断过度兴奋，并用2-PAM（解磷定）复活胆碱酯酶、缓解呼吸肌麻痹和肌颤。",
+     "hard": true
+    },
+    {
+     "en": "Metabolic agents — hydrogen cyanide (AC) and cyanogen chloride (CK) — stop cells from using oxygen. Besides nerve agents, they are the only chemical weapons that kill within seconds to minutes, yet they are everywhere industrially: mining, photography, plastics, and burning textiles or plastics. Low dose: dizziness, headache, vomiting. High dose: gasping tachypnea, flushed skin, tachycardia, altered mentation, seizures, coma, apnea, arrest — all within minutes of heavy inhalation.",
+     "zh": "代谢性毒剂——氢氰酸（AC）与氯化氰（CK）——让细胞无法利用氧。除神经性毒剂外，它们是唯一能在数秒至数分钟内致死的化学武器，但在工业界随处可见：采矿、摄影冲印、塑料加工、纺织品或塑料燃烧。低剂量：头晕、头痛、呕吐。高剂量：喘息样呼吸急促、皮肤潮红、心动过速、意识改变、抽搐、昏迷、呼吸停止、心脏骤停——大量吸入后数分钟内全部出现。",
+     "hard": true
+    },
+    {
+     "en": "Cyanide care rules: strip all clothing even without liquid contact — trapped vapour off-gasses in the ambulance; never ventilate mouth-to-mouth or mouth-to-mask (vapours linger in the patient's airway), use a bag-mask or oxygen-powered ventilator only. Mild cases recover with removal from source plus oxygen; severe cases need aggressive oxygenation and IV hydroxocobalamin (Cyanokit) or sodium nitrate/sodium thiosulphate — kits usually live at major hospitals, not on ambulances. No antidote available? Transport immediately.",
+     "zh": "氰化物处置规则：即使没有液体沾染也要脱光全部衣物——残留蒸气会在救护车内持续释放；绝对禁止口对口或口对面罩通气（蒸气滞留在伤员气道内），只能用球囊面罩或氧动力通气装置。轻度暴露脱离源头加吸氧即可恢复；重度需要积极氧合并静脉给羟钴胺（Cyanokit）或亚硝酸钠/硫代硫酸钠——解毒包通常存放在大医院而非救护车上。没有解毒剂？立即转运。",
+     "hard": true
+    },
+    {
+     "en": "Odour intelligence — use victims' reports, never your own nose: bleach = chlorine; garlic or mustard = sulphur mustard; fresh-cut grass or hay = phosgene; fruity = soman or tabun; almonds = cyanide. Many people cannot smell these agents at all, so entering an area to sniff-test is never acceptable.",
+     "zh": "气味情报——只用伤员的描述，绝不用自己的鼻子：漂白剂味=氯气；大蒜/芥末味=芥子气；新割草/干草味=光气；果香味=梭曼或塔崩；杏仁味=氰化物。很多人天生闻不到这些毒剂，所以'进去闻一闻'永远不可接受。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Biologic Agents",
+   "titleZh": "生物剂",
+   "points": [
+    {
+     "en": "Biologic attacks are nearly invisible: agents are undetectable at release and early illness mimics everyday minor complaints. Master the vocabulary — dissemination (how the agent is spread: water supply, aerosol into a building's ventilation), vector (an infected animal that passes disease on: rats for plague, people for smallpox, mosquitoes for West Nile), communicability (ease of person-to-person spread; high communicability = contagious), incubation (exposure to symptom onset — a patient can be contagious before showing anything).",
+     "zh": "生物袭击几乎不可见：毒剂释放时无法察觉，早期病状与日常小病无异。四个术语必须掌握——播散（毒剂的散布方式：投毒水源、气溶胶灌入建筑通风系统）；媒介（受感染后传播疾病的动物：鼠传鼠疫、人传天花、蚊传西尼罗病毒）；传染性（人传人的难易；传染性高即具传染力）；潜伏期（从暴露到出现症状的间隔——病人可能在症状出现前就已具传染性）。",
+     "hard": true
+    },
+    {
+     "en": "Routine blood and airborne precautions block virtually all biologic-agent transmission. But a visible powder — like the October 2001 mailed anthrax letters — makes it a hazmat-specialist call, and anyone in direct contact must be decontaminated before EMS touches or treats them.",
+     "zh": "常规血源与空气传播防护措施足以阻断几乎所有生物剂传播。但一旦出现可见粉末——如2001年10月美国的炭疽邮件——就必须交给危险品专业人员处理，直接接触者须先去污，EMS才能接触和救治。",
+     "hard": true
+    },
+    {
+     "en": "Smallpox (last natural case: 1977) opens with fever of 38–40°C, body aches, and headache before any rash. The diagnostic shortcut: smallpox lesions are all at the identical stage of development, unlike chickenpox and other rashes with mixed stages; blisters start on face and extremities and move toward the trunk. The patient is most contagious as blisters form. Incubation runs 10–12 days, illness about 4 weeks. Exam gloves, a HEPA respirator, and eye protection sharply cut your risk; the vaccine carries rare serious complications, so it is pre-offered only to first responders.",
+     "zh": "天花（最后一例自然病例：1977年）先以38–40°C高热、周身酸痛、头痛起病，之后才出疹。鉴别捷径：天花的皮损全部处于同一发展阶段，而水痘等皮疹新旧混杂；疱疹从面部和四肢开始向躯干蔓延。起疱期传染性最强。潜伏期10–12天，病程约4周。检查手套+HEPA滤过呼吸器+护目装备即可大幅降低风险；疫苗有罕见严重并发症，故仅预先提供给一线响应人员。",
+     "hard": true
+    },
+    {
+     "en": "Viral hemorrhagic fevers (Ebola, Rift Valley, yellow fever) make blood seep from vessels and tissues: flulike onset, then internal and external bleeding. Spread is by direct contact with infected body fluids (aerosolizable for attack); mortality spans 5% to 90% depending on strain, patient age and health, and access to modern care. No specific treatment — full PPE, supportive ABCs, treat shock.",
+     "zh": "病毒性出血热（埃博拉、裂谷热、黄热病）使血液从血管和组织中渗出：起病似流感，随后内外出血。经直接接触感染者体液传播（袭击时可气溶胶化）；病死率5%至90%不等，取决于毒株、患者年龄与基础状况、以及现代医疗可及性。无特异治疗——全套PPE、支持性ABC管理、纠正休克。",
+     "hard": true
+    },
+    {
+     "en": "Bacteria differ from viruses in ways that matter clinically: no host needed, up to 100 times larger than the largest virus, fully self-sufficient cells — and treatable with antibiotics. Most bacterial agents open with flulike symptoms, which is exactly why a bio-attack is hard to tell from a natural epidemic.",
+     "zh": "细菌与病毒的差别具有临床意义：不需要宿主、可比最大的病毒大100倍、细胞结构完整能自给自足——而且抗生素有效。多数细菌性毒剂以流感样症状起病，这正是生物袭击难与自然流行相区分的原因。",
+     "hard": true
+    },
+    {
+     "en": "Anthrax survives dormant in spores found naturally in soil; entry is by inhalation, skin, or ingestion. Pulmonary (inhalation) anthrax is the killer: it masquerades as a severe cold, then after 3–5 days of flulike illness collapses into respiratory distress, shock, pulmonary edema, and respiratory failure — about 90% fatal untreated. Cutaneous anthrax starts as an itchy insect-bite-like bump that swells and develops a black centre with tender regional nodes. Antibiotics work, a vaccine exists, and only the cutaneous form is (rarely) communicable.",
+     "zh": "炭疽以芽孢形式在土壤中休眠，入侵途径为吸入、皮肤或食入。肺型（吸入性）炭疽最致命：先伪装成重感冒，流感样症状3–5天后骤然转为呼吸窘迫、休克、肺水肿、呼吸衰竭——不治疗病死率约90%。皮肤型炭疽起初像发痒的虫咬肿块，随后肿大并出现黑色中心痂，伴区域淋巴结肿痛。抗生素有效，有疫苗，且仅皮肤型有（罕见的）传染性。",
+     "hard": true
+    },
+    {
+     "en": "Plague has killed more humans than any other infection: the 14th-century Black Death took an estimated 33–42 million lives, and nearly 20 million more died in India and China in the early 19th century. Vectors are infected rodents and fleas. Bubonic plague infects the lymphatic system, swelling nodes into buboes up to tennis-ball size; untreated it can progress to sepsis, but it is not contagious. Pneumonic plague — inhaled into the lungs — is contagious, deadlier, and aerosolizable, making it the bioterror form.",
+     "zh": "鼠疫是人类史上致死人数最多的传染病：14世纪黑死病估计夺走3300万至4200万条命，19世纪初印度和中国又有近2000万人死亡。媒介是受染啮齿类和跳蚤。腺鼠疫感染淋巴系统，淋巴结肿成最大可达网球大小的腹股沟淋巴结炎块（buboes），不治疗可进展为脓毒症，但不具传染性。肺鼠疫——细菌被吸入肺部——具传染性、病死率更高、且可气溶胶化，因此才是生物恐袭会选的形态。",
+     "hard": true
+    },
+    {
+     "en": "Neurotoxins are the deadliest substances known: the strongest is 15,000 times more lethal than VX and 100,000 times more lethal than sarin. Sourced from plants, marine animals, moulds, and bacteria; routes are ingestion, aerosol inhalation, or injection. Unlike viruses and bacteria they are not contagious and act faster — but no terrorist use has yet succeeded.",
+     "zh": "神经毒素是已知最致命的物质：最强者的致死性是VX的1.5万倍、沙林的10万倍。来源于植物、海洋生物、霉菌和细菌；途径为食入、气溶胶吸入或注射。与病毒和细菌不同，它们不传染、起效更快——但迄今尚无恐怖分子成功使用的案例。",
+     "hard": true
+    },
+    {
+     "en": "Botulinum, the most potent neurotoxin, shuts down voluntary muscle control in a descending pattern: paralysis starts at the head and face — ptosis, blurred and double vision, dilated pupils, dry mouth, trouble swallowing and speaking — then marches down until accessory muscles and diaphragm fail and the patient arrests. Add urinary retention and constipation to the picture. Not communicable; a vaccine exists; care is ABCs with ventilatory support.",
+     "zh": "肉毒毒素是最强的神经毒素，以下行模式关闭随意肌：麻痹从头面部开始——眼睑下垂、视物模糊、复视、瞳孔散大、口干、吞咽和言语困难——然后一路向下，直至辅助呼吸肌和膈肌瘫痪、呼吸停止。还伴尿潴留和便秘。不传染；有疫苗；处置为ABC管理加通气支持。",
+     "hard": true
+    },
+    {
+     "en": "Ricin, from castor-bean mash, is 5 times more lethal than VX; 1–3 mg can kill an adult and one chewed seed can kill a child. Oral is paradoxically the least toxic route (poor gut absorption, early vomiting expels agent). Ingestion: onset 4–8 hours, hemorrhage and necrosis of liver, spleen, kidneys, and gut, death typically on day 3 without care. Inhalation: onset 4–8 hours with cough, chest tightness, pulmonary edema, cyanosis, convulsions, respiratory failure — profuse sweating hours later marks the symptoms ending. Injection: nothing but swelling at the site, then death. No antidote, no vaccine: supportive care, early intubation with PEEP, fluids and electrolytes for the massive GI losses.",
+     "zh": "蓖麻毒素提取自蓖麻籽榨渣，致死性是VX的5倍；1–3毫克可杀死成人，嚼碎一粒籽足以致死儿童。口服反而是毒性最低的途径（肠道吸收差、早期呕吐排出毒素）。食入：4–8小时起病，肝、脾、肾、胃肠道出血坏死，不救治通常第3天死亡。吸入：4–8小时起病，咳嗽、胸闷、肺水肿、发绀、抽搐、呼吸衰竭——数小时后大汗淋漓标志症状终结。注射：除注射点肿胀外无任何征象，随后死亡。无解毒剂无疫苗：支持治疗、早期插管加PEEP、补液补电解质对抗剧烈胃肠丢失。",
+     "hard": true
+    },
+    {
+     "en": "Two system-level paramedic roles in a biologic event. Syndromic surveillance: health departments track ED visits, EMS call volume, and over-the-counter drug sales to catch outbreaks early — dispatch should flag clusters of 'unexplainable flu' calls from one neighbourhood. Points of distribution (PODs): federal and provincial stockpiles of antibiotics and antidotes deploy through provincial warehouses; paramedics triage, treat, and transport, and every POD plan keeps at least one ambulance on standby.",
+     "zh": "生物事件中医护的两个系统层面角色。症候群监测：卫生部门追踪急诊就诊量、EMS呼叫量和非处方药销量以尽早发现疫情——调度应警觉同一社区扎堆出现的'原因不明流感'呼叫。分发点（POD）：联邦和省级储备的抗生素与解毒剂经省级仓储体系投放；医护负责检伤、救治和转运，每个POD预案都要求至少一辆救护车待命。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Radiologic and Nuclear Devices",
+   "titleZh": "放射性与核装置",
+   "points": [
+    {
+     "en": "Ionizing radiation comes from unstable material stabilizing itself through decay — a process lasting minutes to billions of years. Penetration ladder: alpha is stopped by a sheet of paper or intact skin; beta needs a layer of clothing; gamma (x-ray-like) passes through the body and needs several centimetres of lead or concrete; neutron radiation — fastest and most powerful — punches through lead and takes several metres of concrete to stop.",
+     "zh": "电离辐射来自不稳定物质通过衰变自我稳定的过程——衰变可持续几分钟到数十亿年。穿透力阶梯：α射线一张纸或完整皮肤即可挡住；β射线需要一层衣物；γ射线（性质类似X线）可穿透人体，需数厘米厚的铅或混凝土；中子辐射——速度最快、威力最强——连铅都能穿透，需数米厚的混凝土才能阻挡。",
+     "hard": true
+    },
+    {
+     "en": "Radioactive materials serve medicine, food irradiation, and construction; spent material becomes radiologic waste sitting at hospitals, universities, chemical and industrial sites, and power plants — and the waste is often poorly guarded. That accessibility, not sophistication, is what makes radiologic terrorism plausible.",
+     "zh": "放射性材料广泛用于医疗、食品辐照和建筑施工；用完的材料成为放射性废料，存放在医院、高校、化工与工业场所、电厂——而废料常常疏于看管。让放射性恐袭具有现实可能性的正是这种易得性，而不是什么高深技术。",
+     "hard": true
+    },
+    {
+     "en": "The dirty-bomb truth every responder must internalize: an RDD's physical harm equals that of its conventional explosive alone. If the bomb would kill 10 people without radioactive material, it kills 10 with it. The radiation adds long-term illness at most — the real payload is fear, which is exactly the terrorist's goal.",
+     "zh": "每个响应者都必须吃透的脏弹真相：RDD的物理杀伤力等于其所附常规炸药本身。没有放射性材料能炸死10个人的炸弹，加上放射性材料还是炸死10个人。辐射顶多增加远期疾病——真正的'弹头'是恐慌，而这正是恐怖分子要的效果。",
+     "hard": true
+    },
+    {
+     "en": "A true nuclear attack is considered remote: weapons sit in secure facilities, aspiring states lack delivery systems, and mutual annihilation deters. The loose end is the Soviet-era SADM 'suitcase nuke' built to destroy single targets like bridges or ships — perhaps as many as 80 were unaccounted for as of 1998, with no public update since.",
+     "zh": "真正的核袭击被认为可能性极低：核武器存于戒备森严的设施、图谋者缺乏投送手段、还有同归于尽的威慑。真正的隐患是苏联时期为摧毁桥梁、舰船等单一目标设计的SADM'手提箱核弹'——截至1998年估计多达80枚下落不明，此后再无公开消息。",
+     "hard": true
+    },
+    {
+     "en": "Three levels of radiation involvement: radioactive exposure (irradiated, body not necessarily contaminated); external contamination (radioactive material on the skin); internal contamination (material inside the body — inhaled fallout or dirty-bomb dust, or liquid absorbed through skin — irradiating the patient from within). Acute radiation sickness: dizziness, nausea, vomiting, internal and external bleeding, petechiae, diarrhea, altered mental status. A nuclear blast layers on thermal burns, blast trauma, flying-debris injuries, and eye injuries.",
+     "zh": "辐射受累分三级：放射暴露（受到照射，身体不一定被污染）；体表污染（放射性物质沾在皮肤上）；体内污染（物质进入体内——吸入落尘或脏弹粉尘、或液体经皮吸收——从体内持续照射患者）。急性放射病表现：头晕、恶心、呕吐、内外出血、瘀点、腹泻、意识改变。核爆炸还会叠加热烧伤、冲击伤、飞散物伤和眼损伤。",
+     "hard": true
+    },
+    {
+     "en": "Exposure alone does not make a patient contaminated or radioactive — but a patient carrying source material (dirty-bomb debris) is contaminated and belongs to hazmat first. Only after decontamination do you assess and treat: ABCs, then burns and trauma.",
+     "zh": "单纯受到照射不会让患者带有污染或放射性——但身上带着放射源（如脏弹碎屑）的患者属于污染人员，必须先交给危险品团队。去污完成后你才开始评估和处置：先ABC，再处理烧伤和创伤。",
+     "hard": true
+    },
+    {
+     "en": "Detection toolkit: the Geiger–Müller probe reads alpha, beta, and gamma and screens patients for particulate; electronic dosimeters log a wearer's cumulative dose in exposure-per-unit-time mode; radiation portal monitors mass-screen crowds like airport gates — in Ontario, every hospital ED keeps a mini-sentry gamma detector.",
+     "zh": "探测工具箱：盖革–米勒探头可测α、β、γ三种射线，用于筛查患者体表放射性颗粒；电子剂量计以'单位时间暴露量'模式记录佩戴者的累积剂量；辐射门式监测仪像机场安检门一样批量筛查人群——在安大略省，每家医院急诊科都配有mini-sentry γ射线探测器。",
+     "hard": true
+    },
+    {
+     "en": "No suit fully shields radiation and EMS has no lead-lined gear, so survival rests on three principles plus level C protection. Time: effects are cumulative — minimize every minute near the source. Distance: even a few feet can take you out of immediate danger; small moves cut dose sharply. Shielding: you cannot know the radiation type or direction, so assume the strongest form and put concrete — a building, a wall — between you and the source. In one atomic test, a house was levelled while the car parked on its far side was almost untouched.",
+     "zh": "没有任何防护服能完全屏蔽辐射，EMS也没有铅衬装备，保命靠三原则加C级防护。时间：辐射效应会累积——在源附近的每一分钟都要压缩。距离：哪怕退开几英尺就能脱离即刻危险；小小的位移就能大幅降低剂量。屏蔽：你无法判断射线类型和来向，所以一律按最强辐射对待，把混凝土——建筑物、墙体——挡在自己和放射源之间。一次核试验中，一栋房子被夷平，而停在房子背爆侧的汽车几乎毫发无损。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Persistent (nonvolatile) agent — time on surface",
+   "itemZh": "持久性（低挥发）毒剂的表面停留时间",
+   "value": "> 24 小时（VX 可达数周至数月）"
+  },
+  {
+   "itemEn": "Sarin (GB) lethality",
+   "itemZh": "沙林（GB）致死量",
+   "value": "LD50 约 1,700 mg/70 kg（约一滴）；数秒至数分钟内蒸发"
+  },
+  {
+   "itemEn": "Soman (GD) vs sarin",
+   "itemZh": "梭曼（GD）对比沙林",
+   "value": "持久性 2 倍，致死性 5 倍"
+  },
+  {
+   "itemEn": "Tabun (GA) vs sarin",
+   "itemZh": "塔崩（GA）对比沙林",
+   "value": "致死性约 1/2，持久性 36 倍（可残留数日）"
+  },
+  {
+   "itemEn": "VX vs sarin",
+   "itemZh": "VX 对比沙林",
+   "value": "致死性超过 100 倍；接触型，油膜极难去污"
+  },
+  {
+   "itemEn": "Sulphur mustard timeline",
+   "itemZh": "芥子气时间线",
+   "value": "数秒吸收 → 1–2 分钟细胞损伤 → 症状延迟 4–6 小时"
+  },
+  {
+   "itemEn": "Nerve agent antidote (this chapter)",
+   "itemZh": "神经毒剂解毒剂（本章剂量）",
+   "value": "阿托品 2–6 mg IV/IM，每 5 分钟重复；加用 2-PAM"
+  },
+  {
+   "itemEn": "Tokyo subway sarin attack (1995-03-20)",
+   "itemZh": "东京地铁沙林事件（1995-03-20）",
+   "value": "6,000 余人就医，13 人死亡"
+  },
+  {
+   "itemEn": "Smallpox key numbers",
+   "itemZh": "天花关键数字",
+   "value": "前驱发热 38–40°C；潜伏期 10–12 天；病程约 4 周"
+  },
+  {
+   "itemEn": "Pulmonary (inhalation) anthrax",
+   "itemZh": "肺型（吸入性）炭疽",
+   "value": "流感样症状 3–5 天后衰竭；不治疗病死率约 90%"
+  },
+  {
+   "itemEn": "Viral hemorrhagic fever mortality",
+   "itemZh": "病毒性出血热病死率",
+   "value": "5%–90%（取决于毒株、年龄、基础状况与医疗条件）"
+  },
+  {
+   "itemEn": "Strongest neurotoxin lethality",
+   "itemZh": "最强神经毒素致死性",
+   "value": "VX 的 15,000 倍；沙林的 100,000 倍"
+  },
+  {
+   "itemEn": "Ricin lethality",
+   "itemZh": "蓖麻毒素致死量",
+   "value": "VX 的 5 倍；1–3 mg 可杀死成人；1 粒籽可致死儿童；口服 4–8 小时起病，不治疗约第 3 天死亡"
+  },
+  {
+   "itemEn": "Radiation shielding requirements",
+   "itemZh": "辐射屏蔽需求",
+   "value": "α：一张纸/皮肤；β：一层衣物；γ：数厘米铅或混凝土；中子：数米混凝土"
+  },
+  {
+   "itemEn": "Missing Soviet 'suitcase nukes' (SADM)",
+   "itemZh": "下落不明的苏联手提箱核弹（SADM）",
+   "value": "截至 1998 年估计多达 80 枚"
+  },
+  {
+   "itemEn": "Hiroshima + Nagasaki estimated deaths",
+   "itemZh": "广岛+长崎估计死亡人数",
+   "value": "约 214,000 人（仅有的两次核武实战）"
+  },
+  {
+   "itemEn": "CSIS non-immediate threat line",
+   "itemZh": "CSIS 非紧迫威胁举报电话",
+   "value": "613-993-9620（紧迫威胁拨 9-1-1）"
+  },
+  {
+   "itemEn": "Organophosphates among Canadian pesticides",
+   "itemZh": "加拿大农药中的有机磷",
+   "value": "约 900 种农药中约 37 种为有机磷"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "The quickest way to tell a terrorist CBRNE event from an ordinary emergency: multiple victims showing the same signs and symptoms. One person seizing is medicine; a subway car full of people seizing with no smoke smell is an attack. Resist the urge to rush in.",
+   "zh": "区分恐袭CBRNE事件和普通急救的最快线索：多名伤员出现相同的症状体征。一个人抽搐是病；一节车厢的人集体抽搐又闻不到烟味，就是袭击。压住冲进去的冲动。"
+  },
+  {
+   "en": "Secondary devices are not always pipe bombs — they can be cell phones or pagers rigged to detonate when answered. Do not touch or answer electronic devices at the scene.",
+   "zh": "二次装置不一定是管状炸弹——也可能是接听即起爆的手机或寻呼机。现场的电子设备不要碰、不要接。"
+  },
+  {
+   "en": "If you become a victim, you help no one and you cost the team two rescuers: yourself, plus whoever now has to treat you. Avoid tunnel vision — keep scanning the scene while you work.",
+   "zh": "你一旦倒下，不但帮不了任何人，还让团队一次损失两份战力：你自己，加上必须来救你的同事。别陷入隧道视野——干活的同时持续扫视现场。"
+  },
+  {
+   "en": "Confirm decontamination by trained personnel before touching any patient. Chemical agents are mainly a vapour hazard, so all clothing comes off to stop off-gassing — and mouth-to-mouth or mouth-to-mask ventilation on a chemical casualty is never done, because vapours lingering in the airway will cross-contaminate you.",
+   "zh": "接触任何伤员前，先确认已由受训人员完成去污。化学毒剂主要是蒸气危害，必须脱除全部衣物阻断持续挥发——对化学伤员绝不做口对口或口对面罩通气，气道里残留的蒸气会把你交叉污染。"
+  },
+  {
+   "en": "Tokyo 1995 is the standing lesson: thousands fled the subway, over 6,000 sought care, 13 died — and unprotected paramedics became casualties through patient contact. Exposure is avoidable; do not become a victim yourself.",
+   "zh": "1995年东京是永远的教训：数千人逃出地铁，6000多人就医，13人死亡——而没有防护的医护因接触伤员相继中招。暴露完全可以避免；别让自己成为下一个伤员。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "\"A terror scene is just a bigger MCI.\" No — an ordinary MCI is over when the crash or fire ends; a terror scene may remain actively hostile, with secondary devices timed for responders and threat levels that keep evolving after you arrive.",
+   "zh": "『恐袭现场不过是个更大的MCI。』错——普通MCI在车祸或火灾结束时危险就结束了；恐袭现场可能持续敌对：二次装置专等响应者到场起爆，威胁等级在你到达后仍在变化。"
+  },
+  {
+   "en": "\"Urgency should override caution when people are dying.\" Reckless urgency manufactures more victims: an exposed paramedic subtracts a rescuer and adds a patient. The Tokyo sarin responders proved it — unprotected contact turned them into casualties.",
+   "zh": "『人命关天，紧迫感应该压倒谨慎。』鲁莽的紧迫感只会制造更多伤员：一名暴露的医护等于减掉一份救援力、多添一个病人。东京沙林事件的响应者就是例证——无防护接触让他们自己成了伤员。"
+  },
+  {
+   "en": "Phosgene vs phosgene oxime — the exam's favourite name trap. Phosgene (CG) is a pulmonary agent smelling of fresh-cut hay with hours-delayed lung flooding; phosgene oxime (CX) is a vesicant causing instant intense skin pain and grey discolouration. Same word, different agent classes.",
+   "zh": "光气 vs 光气肟——考试最爱的名字陷阱。光气（CG）是肺损伤剂，气味像新割干草，延迟数小时才出现肺部渗液；光气肟（CX）是糜烂剂，接触即剧痛、皮肤灰变。名字相近，类别完全不同。"
+  },
+  {
+   "en": "\"Pinpoint pupils = nerve agent.\" Miosis is the most common nerve-agent sign, but stroke, basilar skull fracture, bright light, and opioid overdose all constrict pupils too. Only the full DUMBELS pattern — especially the wet triad plus bradycardia and bronchoconstriction — confirms exposure.",
+   "zh": "『针尖样瞳孔=神经毒剂。』缩瞳确实是神经毒剂最常见体征，但卒中、颅底骨折、强光直射、阿片过量同样缩瞳。只有DUMBELS全套表现——尤其是'全身湿透'加心动过缓和支气管收缩——才能确认暴露。"
+  },
+  {
+   "en": "\"A dirty bomb is a nuclear weapon.\" An RDD's physical damage equals its conventional explosive alone — the added radioactive material changes the casualty count by nothing. Its real warhead is panic. Never let public fear reframe your triage.",
+   "zh": "『脏弹就是核武器。』RDD的物理破坏力只等于它所带的常规炸药——加了放射性材料也不会多炸死一个人。它真正的弹头是恐慌。别让公众的恐惧改写你的检伤逻辑。"
+  },
+  {
+   "en": "\"An irradiated patient is radioactive.\" Exposure alone leaves nothing on or in the patient — no decon needed, no danger to you. Contamination (source material on skin or inside the body) is what requires hazmat handling before contact.",
+   "zh": "『被辐射照过的病人带放射性。』单纯照射不会在患者身上留下任何东西——不需要去污，对你也没有危险。需要危险品团队先行处理的是'污染'（放射性物质沾在体表或进入体内）。"
+  },
+  {
+   "en": "\"Mustard blister fluid spreads the agent.\" The fluid inside the blisters contains no mustard at all — but the skin covering and surrounding them stays contaminated until formal decontamination. Handle the surface, not the fluid, as the hazard.",
+   "zh": "『芥子气水疱液会传播毒剂。』疱液里其实完全不含芥子气——但疱上及周围的皮肤在正规去污前始终是污染的。危险在表面，不在疱液。"
+  },
+  {
+   "en": "\"Level B protects against vapour.\" Level B is liquid-splash protection: the SCBA may be worn outside the suit, so vapour can reach the wearer. Only Level A's fully encapsulating suit is vapour-tight. And Level C's air-purifying respirator fails outright in oxygen-deficient air.",
+   "zh": "『B级防护能防蒸气。』B级只防液体飞溅：SCBA可能穿在服外，蒸气照样能接触佩戴者。只有A级全密闭服才是气密的。而C级的空气净化呼吸器在缺氧环境中会直接失效。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "DUMBELS",
+   "en": "Nerve-agent recognition: Defecation, Urination, Miosis, Bradycardia/Bronchorrhea/Bronchoconstriction, Emesis, Lacrimation, Salivation. Preferred over military SLUDGEM because the B bundles the three killers.",
+   "zh": "神经毒剂识别：D排便、U排尿、M瞳孔缩小、B心动过缓/支气管大量分泌/支气管收缩、E呕吐、L流泪、S流涎。比军用口诀SLUDGEM好用，因为B字母打包了三个致命项。"
+  },
+  {
+   "name": "SLUDGEM",
+   "en": "Military version of the same toxidrome: Salivation, Lacrimation, Urination, Defecation, Gastrointestinal distress, Emesis, Miosis — 'everything leaks'.",
+   "zh": "同一毒性综合征的军用版：S流涎、L流泪、U排尿、D排便、G胃肠不适、E呕吐、M缩瞳——『全身都在漏水』。"
+  },
+  {
+   "name": "Time–Distance–Shielding",
+   "en": "The radiation survival triad: cut exposure Time (effects accumulate), add Distance (a few steps slash the dose), put Shielding between you and the source (assume the strongest radiation; use concrete).",
+   "zh": "辐射保命三原则：压缩'时间'（剂量会累积）、拉开'距离'（退几步剂量骤降）、加'屏蔽'（一律按最强辐射对待，用混凝土挡在中间）。"
+  },
+  {
+   "name": "Uphill • Upwind",
+   "en": "Staging position at any CBRNE or hazmat release: uphill and upwind, stopped at a distance, with an escape route your vehicle can actually use.",
+   "zh": "任何CBRNE或危险品泄漏的集结位置：上坡+上风，远距离停车，并保证车辆真的开得出去的撤离路线。"
+  },
+  {
+   "name": "Odour clues",
+   "en": "Victim-reported smells (never sniff yourself): bleach → chlorine; garlic/mustard → sulphur mustard; fresh-cut hay → phosgene; fruity → soman/tabun; almonds → cyanide.",
+   "zh": "伤员报告的气味线索（绝不自己去闻）：漂白剂→氯气；大蒜/芥末→芥子气；新割干草→光气；果香→梭曼/塔崩；杏仁→氰化物。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Who marks the hot, warm, and cold zones at a CBRNE scene, and where do you work?",
+   "qZh": "CBRNE现场的热区、暖区、冷区由谁划定？你在哪个区工作？",
+   "aEn": "The fire department's hazmat team sets the zones, which also form the crime-scene perimeter. EMS stages, triages, and treats in the cold zone. Anyone entering warm or hot is considered contaminated and must be decontaminated before crossing back into cold.",
+   "aZh": "由消防的危险品团队划定，三区同时构成刑事现场警戒圈。EMS在冷区集结、检伤和救治。进入暖区或热区的人一律视为已污染，必须去污后才能回到冷区。"
+  },
+  {
+   "qEn": "What is the single most important clue that a CBRNE attack has occurred — and the second best?",
+   "qZh": "判断发生了CBRNE袭击最重要的单一线索是什么？第二重要的呢？",
+   "aEn": "First: multiple patients presenting with the same signs and symptoms. Second: victims' statements — crowds reporting 'everyone is passing out' or 'people are shaking on the ground'. Either one means do not rush in.",
+   "aZh": "第一：多名伤员出现相同的症状体征。第二：伤员的陈述——人群喊'大家都在昏倒''好多人躺在地上抽'。出现任何一条都意味着不能冲进去。"
+  },
+  {
+   "qEn": "Contrast sarin and VX on volatility, route, and lethality.",
+   "qZh": "从挥发性、暴露途径和致死性三方面对比沙林与VX。",
+   "aEn": "Sarin: highly volatile, evaporates in seconds to minutes, a vapour hazard entering by the respiratory tract, deadliest in enclosed spaces, LD50 about 1,700 mg/70 kg. VX: extremely persistent (weeks to months), a contact hazard absorbed through skin, oily residue nearly impossible to decontaminate, over 100 times more lethal than sarin.",
+   "aZh": "沙林：高挥发，数秒至数分钟蒸发，蒸气型经呼吸道进入，封闭空间最致命，LD50约1700毫克/70公斤。VX：极持久（数周至数月），接触型经皮吸收，油膜几乎无法去污，致死性超过沙林100倍。"
+  },
+  {
+   "qEn": "Why is phosgene more insidious than chlorine?",
+   "qZh": "为什么光气比氯气更阴险？",
+   "aEn": "Chlorine smells of bleach and irritates instantly, driving victims to flee. Phosgene smells like freshly mown hay and barely irritates, so victims keep inhaling it; symptoms are delayed for hours, and severe cases lose so much fluid into the lungs that pulmonary edema alone can cause hypovolemia and hypotension.",
+   "aZh": "氯气有漂白剂味且刺激立现，受害者会本能逃离。光气闻着像新割的干草、几乎不刺激，受害者会持续吸入；症状延迟数小时，重度者肺内渗液之多，仅肺水肿就能造成低血容量和低血压。"
+  },
+  {
+   "qEn": "A patient exposed to cyanide vapour needs ventilation. What is forbidden, and what do you do instead?",
+   "qZh": "氰化物蒸气暴露的伤员需要通气，什么做法被绝对禁止？正确做法是什么？",
+   "aEn": "Mouth-to-mouth and mouth-to-mask are forbidden — vapour lingering in the airway will cross-contaminate you. Strip all clothing to stop off-gassing even without liquid contact, then ventilate only with a bag-mask or oxygen-powered device; severe cases get hydroxocobalamin if available, otherwise transport immediately.",
+   "aZh": "绝对禁止口对口和口对面罩通气——气道内残留蒸气会交叉污染你。即使没有液体沾染也要脱光全部衣物阻断持续挥发，然后只用球囊面罩或氧动力装置通气；重度者有条件时给羟钴胺，没有解毒剂就立即转运。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Nerve agent antidotes and PCP scope",
+   "topicZh": "神经毒剂解毒剂与 PCP 执业范围",
+   "bookEn": "The chapter treats nerve-agent antidote kits (atropine 2–6 mg IV/IM every 5 minutes plus 2-PAM chloride) as the expected field treatment, with the case study administering them under Poison Centre advice.",
+   "bookZh": "本章把神经毒剂解毒剂包（阿托品2–6毫克IV/IM每5分钟重复，加2-PAM）当作现场标准治疗，案例中在毒物中心指导下给药。",
+   "bcEn": "The BC Provincial Examination Guidelines contain no atropine or pralidoxime entry at any licence level — antidote administration is not an independent PCP intervention in BC. For exam answers, the PCP response is: stay out until decon, PPE, support the ABCs, ventilate with a bag-mask, rapid transport, and contact the Poison Centre or higher-level support for antidote decisions.",
+   "bcZh": "BC省考指南全文没有任何执照层级的阿托品或解磷定条目——在BC，解毒剂给药不是PCP的独立干预。考试作答按PCP口径：去污前不进入、做好PPE、支持ABC、球囊通气、快速转运，解毒剂决策联系毒物中心或上级支援。",
+   "ref": "BC Provincial Examination Guidelines（全文无 atropine/2-PAM 条目）"
+  },
+  {
+   "topicEn": "Cyanide antidotes",
+   "topicZh": "氰化物解毒剂",
+   "bcEn": "Same scope logic: hydroxocobalamin (Cyanokit) and the nitrate/thiosulphate kits are hospital-held in Canada and absent from the BC guidelines. The PCP answer is removal from source by protected personnel, full clothing removal, aggressive oxygenation, bag-mask ventilation only, and immediate transport.",
+   "bcZh": "同样的范围逻辑：羟钴胺（Cyanokit）和亚硝酸盐/硫代硫酸盐解毒包在加拿大由医院持有，BC考纲中亦无相应条目。PCP答案是：由有防护的人员脱离毒源、脱除全部衣物、积极氧合、只用球囊面罩通气、立即转运。",
+   "bookEn": "The chapter itself notes antidote kits are 'typically not carried by paramedic agencies' — treat that as the exam-safe position.",
+   "bookZh": "本章自己也写明解毒包'通常不由救护机构携带'——考试就按这个口径答。",
+   "ref": "BC Provincial Examination Guidelines（无 cyanide 条目）"
+  },
+  {
+   "topicEn": "Decontamination flushing and hypothermia risk",
+   "topicZh": "去污冲洗与低体温风险",
+   "bookEn": "For vesicant casualties the book prescribes soap and copious water before assessment, without a time cap on flushing.",
+   "bookZh": "对糜烂剂伤员，教材要求评估前用肥皂和大量清水去污，未给冲洗时限。",
+   "bcEn": "BC's burn-related guidelines cap cooling at 15–20 minutes including decontamination time, and tell crews to consider the ambulance heater when large body-surface areas were cooled. Carry that principle into mass decon: wet, stripped patients become hypothermic fast — limit cooling time and actively rewarm during transport.",
+   "bcZh": "BC考纲烧伤相关条目规定降温（含去污时间）不超过15–20分钟，且大面积体表降温后要考虑打开救护车暖风。这一原则同样适用于大规模去污：湿身、脱衣的伤员会迅速失温——控制降温时长，转运途中主动保温复温。",
+   "ref": "BC Guidelines p.35（Electrical Contact/烧伤处置：降温含去污 ≤15–20 分钟）"
+  }
+ ],
+ "sourcePages": "4195-4262"
+}

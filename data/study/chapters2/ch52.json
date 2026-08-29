@@ -1,0 +1,668 @@
+{
+ "id": "ch52",
+ "n": 52,
+ "titleEn": "Rescue Awareness and Operations",
+ "titleZh": "救援意识与行动",
+ "group": "ops",
+ "examWeight": 1,
+ "whyEn": "This chapter is not testing whether you can cut a car apart — it is testing whether you know your boundary. The EMR/PCP exam core is the awareness-level role: recognize the hazard, secure the scene, call the right specialty team, and never operate above your training. Layered on top are facts examiners love because they are concrete: the three training levels, the three controlled zones and their tape colours, downed-wire distances, glass and airbag rules, and the hard survival numbers for cold water, confined spaces, and trenches. In the practical exam, every scenario opens with the Rescue Scene Evaluation — this chapter is where that habit is built.",
+ "whyZh": "这一章考的不是你会不会破拆汽车，而是你知不知道自己的边界。EMR/PCP 考试的核心是意识级职责：识别危险、封控现场、呼叫对口专业队、绝不越级操作。在此之上叠加的是考官偏爱的具体考点：三级训练体系、现场三区及警戒带颜色、断落电线的距离规则、玻璃与气囊常识，以及冷水、受限空间、沟槽的生存硬数字。实操考试每道题的开场都是 Rescue Scene Evaluation——这个习惯就是在本章养成的。",
+ "competencies": {
+  "areas": [
+   "Area 2: Communication",
+   "Area 3: Health and Safety",
+   "Area 4: Assessment and Diagnostics"
+  ],
+  "codes": [
+   "2.2.a",
+   "2.2.b",
+   "3.2.a",
+   "3.2.b",
+   "3.2.c",
+   "3.2.d",
+   "3.3.a",
+   "3.3.b",
+   "3.3.c",
+   "4.1.a",
+   "4.1.b",
+   "4.1.c"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: Technical Rescue and the Three Training Levels",
+   "titleZh": "导论：技术救援与三级训练体系",
+   "points": [
+    {
+     "en": "A technical rescue incident (TRI) is any complex rescue that demands specially trained teams and dedicated equipment: vehicle extrication; water, ice, or confined-space rescue; trench, structural, or other collapse; high-angle rope work; hazardous materials response; and wilderness search and rescue.",
+     "zh": "技术救援事件(TRI)指任何需要专门受训队伍与专用装备的复杂救援，包括：车辆破拆脱困；水面、冰面或受限空间救援；沟槽、建筑或其他坍塌；高角度绳索作业；危险品事故响应；以及荒野搜救。",
+     "hard": true
+    },
+    {
+     "en": "Technical rescue training has three levels, and the exam lives on the boundaries between them. Awareness: recognize the hazard, secure the scene, call the appropriate specialty team — no hands-on rescue skills whatsoever. Operations: work in the warm zone directly around the hazard, assisting the rescue in a limited, defined role. Technician: perform the rescue itself — specialized equipment, patient care during the rescue, and command of the incident and its personnel.",
+     "zh": "技术救援训练分三级，考点就压在级与级的边界上。意识级(Awareness)：识别危险、封控现场、呼叫对口专业队——不执行任何救援技术动作。操作级(Operations)：在紧邻危险源的温区工作，以有限、明确的角色协助救援。技师级(Technician)：亲自执行救援——操作专用装备、救援全程照护患者、指挥事件与现场人员。",
+     "hard": true
+    },
+    {
+     "en": "Most paramedic education sits at the awareness level. Your job when you arrive first is to identify hazards and secure the scene so no bystander or responder becomes an additional patient — not to attempt techniques you are not trained in.",
+     "zh": "Paramedic 的大部分教育停留在意识级。首先到场时你的任务是识别危险并封控现场，防止旁观者或救援者变成新的伤员——而不是尝试你没受过训练的技术。",
+     "hard": true
+    },
+    {
+     "en": "The first priority in rescue mirrors the first priority in all prehospital care: rescuer safety. Every rescue team should also operate under written SOPs that all members know.",
+     "zh": "救援的第一优先级与所有院前工作一致：救援者自身安全。此外，每支救援队都应有全员熟悉的书面标准作业程序(SOP)。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Guidelines for Rescue Operations",
+   "titleZh": "协助救援行动的五条准则",
+   "points": [
+    {
+     "en": "Five rules when assisting a rescue team: be safe, follow orders exactly as given (ask first if a task is unclear), work as a team, think, and follow the golden rule of public service — never forget the patient. \"Be safe\" is itself a trained skill: hidden killers like oxygen-deficient atmospheres and strong currents take education to recognize, and deciding that a scene is NOT safe to enter is a call that saves lives.",
+     "zh": "协助救援队的五条准则：保证安全、严格照原话执行指令（任务没听懂先问再动手）、团队协作、持续思考、遵守公共服务金律——永远别忘了患者本人。其中\"保证安全\"本身是训练出来的技能：缺氧环境、强水流这类隐形杀手要专门学过才认得出，而判定\"这个现场不能进\"正是能救命的决定。",
+     "hard": true
+    },
+    {
+     "en": "\"Think\" means continuously reassessing: you may notice what the incident commander cannot. Report changing weather, suspicious packages, or broken equipment to the IC or safety officer, and speak up if your assigned task looks unsafe.",
+     "zh": "\"持续思考\"指不断重新评估现场：你可能看到事件指挥官(IC)看不到的东西。天气变化、可疑包裹、装备损坏都要上报 IC 或安全官；觉得自己被分派的任务不安全也要直说。",
+     "hard": true
+    },
+    {
+     "en": "The FAILURE mnemonic lists why rescues go wrong: Failure to understand/underestimating the environment; Additional medical problems not considered; Inadequate rescue skills; Lack of teamwork or experience; Underestimating logistics; Rescue-versus-recovery mode not considered; Equipment not mastered.",
+     "zh": "FAILURE 助记词概括救援失败的原因：F-不了解或低估环境；A-漏掉伴随的内科问题；I-救援技能不足；L-缺乏团队配合或经验；U-低估后勤规模；R-没想清楚是救援还是遗体打捞；E-装备不熟练。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Eight Steps of Special Rescue",
+   "titleZh": "特种救援八步骤",
+   "points": [
+    {
+     "en": "Every special rescue follows the same eight steps in order: 1 preparation, 2 response, 3 arrival and assessment, 4 stabilization, 5 access, 6 disentanglement, 7 removal, 8 transport.",
+     "zh": "所有特种救援都按同一套八步骤依序推进：①准备，②出动，③到场与评估，④现场稳定，⑤接近患者，⑥解脱困陷，⑦移出，⑧转运。",
+     "hard": true
+    },
+    {
+     "en": "Response: TRIs need a dispatch protocol. A full response may include a rescue squad, fire engine, fire supervisors, an ambulance, and a paramedic supervisor — and utility companies should be notified when electricity, sewer lines, or heavy equipment are involved.",
+     "zh": "\"出动\"：TRI 应有既定派遣预案。完整出动可能包括救援班组、消防车、消防指挥、救护车和 paramedic 主管；涉及电力、下水管道或需要重型机械时，还要通知市政公用公司协助。",
+     "hard": true
+    },
+    {
+     "en": "Arrival: the IC assumes command immediately. Your assessment jobs are counting patients and gauging injury severity — that drives how many medic units get requested. Do NOT rush in: approaching a trench can trigger a second collapse; entering swift water can sweep you away; climbing into a well can drop you into an oxygen-deficient atmosphere.",
+     "zh": "\"到场\"：IC 立即接管指挥。你的评估任务是清点伤员人数、判断伤情轻重——这决定要请求多少医疗单元。绝不能冲进现场：靠近沟槽可能诱发二次坍塌，踏入急流会被冲走，爬进井里可能被缺氧空气放倒。",
+     "hard": true
+    },
+    {
+     "en": "Stabilization establishes three controlled zones, usually marked with tape: the hot zone (red tape) immediately surrounds the site — entry and rescue teams only; the warm zone (orange tape) admits only trained, equipped personnel for decontamination and hot-zone support; the cold zone (yellow tape) is the outer perimeter holding staged vehicles and the command post — and the public and media stay clear of even the cold zone. Police often enforce the lines.",
+     "zh": "现场稳定阶段要划出三个管控区，通常以警戒带标示：热区（红带）紧贴事故点——仅限进入组与救援组；温区（橙带）只许受训且有装备的人员进入，进行洗消与热区支援；冷区（黄带）是外围圈，停放待命车辆并设指挥所——公众和媒体连冷区都不得进入。封锁线常由警方执行。",
+     "hard": true
+    },
+    {
+     "en": "During stabilization, start atmospheric monitoring to detect IDLH (immediately dangerous to life and health) environments before anyone is committed to the space.",
+     "zh": "稳定阶段就要启动空气监测，在任何人进入之前先排查 IDLH（立即危及生命与健康）环境。",
+     "hard": true
+    },
+    {
+     "en": "Access: identify exactly what is trapping the patient (a dirt pile in a trench, fallen scaffolding, a toxic atmosphere) and begin emergency medical care the moment access is achieved. Talk to the patient throughout so the rescue itself doesn't injure them further.",
+     "zh": "\"接近\"：先弄清患者到底被什么困住（沟槽里的土堆、倒塌的脚手架、有毒空气），一旦接触到患者就立即开始急救。全程与患者保持沟通，确保救援动作本身不再添伤。",
+     "hard": true
+    },
+    {
+     "en": "Your main function during the operation phase is twofold: treat the patients, and stand by in case a rescue team member needs medical help. Patient stability must be re-checked continuously through a rescue that may run for hours.",
+     "zh": "作业阶段你的主要职能有两个：治疗患者，以及随时待命处置救援队员自己的伤病。救援可能持续数小时，患者的稳定性必须全程反复确认。",
+     "hard": true
+    },
+    {
+     "en": "Disentanglement frees the patient from whatever traps them. Unless there is an immediate threat like fire or explosion, do the initial assessment and life-threat interventions FIRST — spinal motion restriction, airway, oxygen, ventilation, bleeding control — then let disentanglement begin, with one team member staying beside the patient to direct the cutters.",
+     "zh": "\"解脱\"即把患者从困陷物中释放。除非存在起火、爆炸这类迫在眉睫的威胁，都应先完成初步评估和致命问题干预——脊柱制动、气道、给氧、通气、止血——再开始解脱作业，并留一名队员守在患者旁指挥破拆人员。",
+     "hard": true
+    },
+    {
+     "en": "Removal: control life threats, dress wounds, and stabilize fractures and the spine before moving. In cramped spaces, splinting arms to the trunk and legs to each other works until a long backboard or scoop stretcher becomes the whole-body splint; the KED stabilizes a seated patient.",
+     "zh": "\"移出\"：搬动前先控制致命问题、包扎伤口、固定骨折与脊柱。空间狭窄时可把双臂绑向躯干、双腿互绑作过渡，等患者上了长脊板或铲式担架，再由板/担架充当全身夹板；坐位患者用 KED 脱困固定装置。",
+     "hard": true
+    },
+    {
+     "en": "The only justification for moving a patient before initial care, assessment, and stabilization are complete is immediate danger to the patient's or a responder's life — deterioration or hazards like spilled fuel trigger rapid extrication instead of meticulous packaging.",
+     "zh": "唯一允许在初步照护、评估、稳定完成之前搬动患者的理由，是患者或救援者的生命面临即刻危险——伤情恶化或燃油泄漏这类危险出现时，改用快速脱困而非精细打包。",
+     "hard": true
+    },
+    {
+     "en": "Transport choice follows severity and distance: air transport suits critical patients or remote rescues; rough terrain may call for 4WD high-clearance vehicles or snowmobiles with sleds; helicopters evacuate quickly but are limited by bad weather.",
+     "zh": "转运方式取决于伤情与距离：危重患者或偏远救援可考虑空运；崎岖地形可能需要高底盘四驱车或拖橇雪地摩托；直升机撤离快，但受恶劣天气限制。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "General Rescue Scene Procedures",
+   "titleZh": "救援现场通用程序",
+   "points": [
+    {
+     "en": "Rescue PPE must be bright for daytime visibility and carry reflective material for night work, and PPE is mandatory at every motor vehicle collision, no exceptions.",
+     "zh": "救援 PPE 白天要够鲜亮、夜间要带反光材料以保证被看见；在所有机动车碰撞现场都必须穿戴 PPE，没有例外。",
+     "hard": true
+    },
+    {
+     "en": "Water rescue minimum PPE: a properly sized, mission-certified personal flotation device (PFD), thermal protection, a water-rescue helmet, a cutting device, a whistle, and contamination protection when needed — with all loose PFD straps secured against entanglement.",
+     "zh": "水域救援最低 PPE 配置：尺寸合身、按任务认证的个人漂浮装置(PFD)、保温防护、水域救援头盔、切割工具、哨子，必要时加防污染防护——PFD 松散的织带都要收紧固定，防止缠绕。",
+     "hard": true
+    },
+    {
+     "en": "Dispatch information to collect for a rescue: incident location and nature, number of vehicles, number of trapped or injured patients, patient condition and position, injury severity estimate, vehicle condition and position, special hazards such as confined spaces, and the caller's name and callback number.",
+     "zh": "接警时要收集的救援信息：事发地点与性质、车辆种类和数量、被困/受伤人数、患者状态与体位、伤情严重度估计、车辆状态与位置、受限空间等特殊危险，以及报警人姓名和回拨电话。",
+     "hard": true
+    },
+    {
+     "en": "Survey order: outer circle first — sweep the area around and beyond the wreck for ejected patients, rescuer ingress, patient egress, and approach hazards, resisting bystanders who wave you straight to the middle. Then the inner circle: a 360-degree walk around the core, checking over AND under the vehicles — that is how downed wires on a roof or a victim beneath the car get found.",
+     "zh": "勘查顺序：先外圈——扫视残骸周围及更远处，找被抛出的伤员、救援进入通道、患者撤出通道和接近路径上的危险，并顶住旁观者把你直接往中心拽的压力；再内圈——绕事件核心走完 360 度，车顶上方和车底下方都要看——搭在车顶的断落电线、压在车底的伤员就是这样被发现的。",
+     "hard": true
+    },
+    {
+     "en": "The first-arriving officer assumes command and stands up the ICS immediately: TRIs grow complex and multi-agency, and without ICS rescuer safety cannot be guaranteed.",
+     "zh": "首到的指挥人员立即接管指挥并启动事件指挥系统(ICS)：TRI 会演变得复杂、多机构参与，没有 ICS 就无法保障救援者安全。",
+     "hard": true
+    },
+    {
+     "en": "Downed electrical wires: park at least one truck span — about 15 metres — away, and treat every wire as live until the power company de-energizes it, even when the streetlights are dark. Electricity travels: anything conductive the wire touches becomes energized — a metal fence or guardrail can be live along its entire unbroken length, and running or standing water conducts too. Watch for a damaged pole dragging its neighbours down, especially after storms.",
+     "zh": "断落电线：至少停在一个车长跨距（约 15 米）之外；任何断线在电力公司确认断电前一律按带电处理，整条街的灯全黑也不例外。电会\"走\"：断线碰到的一切导电物都会带电——金属围栏、护栏可沿整段不间断的长度全程带电，流动与积存的水同样导电。还要提防受损电杆连带拖倒相邻电杆，风暴过后尤其如此。",
+     "hard": true
+    },
+    {
+     "en": "Natural gas and liquefied petroleum gas are flammable: on any gas leak, call the gas company at once and let the IC drive utility shut-off. Entering a gas-filled space to pull a patient out requires training, positive-pressure SCBA, and the IC's permission — otherwise it is not your entry to make.",
+     "zh": "天然气和液化石油气都易燃：遇气体泄漏立即通知燃气公司，由 IC 主导关断作业。要进入充满气体的空间救人，前提是受过训练、佩戴正压 SCBA 并获得 IC 许可——三者缺一，这个门就不归你进。",
+     "hard": true
+    },
+    {
+     "en": "The accountability system is the single most important process for rescuer safety: it lets the IC track every person's identity, assignment, and location, and bars anyone without a specific assignment from the rescue area.",
+     "zh": "人员追踪(accountability)系统是保障救援者安全最重要的一项机制：它让 IC 掌握每个人的身份、任务和位置，并把没有明确任务的人挡在救援区之外。",
+     "hard": true
+    },
+    {
+     "en": "Patient contact during a long rescue: assign one person to keep talking with the patient by radio, phone, or voice. Keep eye contact, tell the truth when asked direct questions, speak slowly at the patient's level, use their surname with Mr. or Ms., face a hard-of-hearing patient so they can read lips, and give them time to answer.",
+     "zh": "漫长救援中的患者沟通：专门指派一人通过对讲机、手机或喊话与患者持续交流。保持目光接触；被直接提问时说真话；语速慢、用患者听得懂的话；用\"先生/女士\"加姓氏称呼；对听障患者要正对其面部方便读唇；提问后给足回答时间。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Assisting Rescue Crews",
+   "titleZh": "协助专业救援队",
+   "points": [
+    {
+     "en": "Whatever the rescue type, the paramedic's three standing rules are: approach the scene cautiously, position the apparatus properly, and assist the specialized team as they direct — your ultimate goal is protecting the team and the patients.",
+     "zh": "无论哪类救援，paramedic 的三条常备守则是：谨慎接近现场、正确摆放车辆、按专业队的指挥提供协助——你的最终目标是保护团队和患者。",
+     "hard": true
+    },
+    {
+     "en": "Work along any roadway on the assumption that oncoming traffic cannot see you, and position and move accordingly.",
+     "zh": "在任何道路上作业时，都按\"来车看不见你\"来假设，并据此选择站位和移动方式。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Motor Vehicle Collisions: Positioning, Stabilization, Access and Disentanglement",
+   "titleZh": "机动车碰撞：车辆摆位、稳定、进入与解脱",
+   "points": [
+    {
+     "en": "Traffic flow is the single largest hazard of any highway operation. Request road closure without hesitation when needed, set up a protected ambulance loading zone, keep uninvolved apparatus off limited-access highways, and stage extra units away from the scene.",
+     "zh": "车流是所有公路作业中最大的单一危险。需要时果断请求封路，设置受保护的救护车装载区，与救援无直接关系的车辆不要停在高速路面上，增援单位在远离现场处集结。",
+     "hard": true
+    },
+    {
+     "en": "Park a large apparatus upstream as a physical barrier, angled to the crash so that if it is rear-ended it deflects sideways instead of into the workers. Turn headlights off, prefer amber scene lighting, run only essential warning lights, and let police own traffic control — and never assume drivers see you.",
+     "zh": "把大型车辆停在来车方向作物理屏障，与事故车呈一定角度——这样即使被追尾也会被推向侧面而不是撞进作业区。关掉大灯，改用琥珀色现场照明，只开必要的警示灯，交通管制交给警察——并且永远假设司机看不见你。",
+     "hard": true
+    },
+    {
+     "en": "Vehicle anatomy for radio-clear extrication talk: left and right always mean the vehicle's left and right from the driver's seat (driver sits on the left in Canada). A posts frame the windshield, B posts stand between front and rear doors, C posts sit behind the rear doors, and D posts appear on SUVs and vans with windows behind the rear doors.",
+     "zh": "破拆通话用的车辆解剖：左右永远指车辆自身的左右（以驾驶座为准，加拿大驾驶座在左侧）。A 柱构成挡风玻璃两侧，B 柱在前后车门之间，C 柱在后车门之后，D 柱见于后门之后还有车窗的 SUV 和厢式车。",
+     "hard": true
+    },
+    {
+     "en": "Alternative power vehicles: high-voltage cables wear orange insulation; the HV system shuts down when the vehicle powers off and is fully disabled by disconnecting the 12-volt battery — an IC or rescue-crew decision, and that battery often is not under the hood. A silent hybrid is not necessarily off. Never mark these scenes with flares — cones or reflective triangles only; ethanol and methanol flames burn pale blue and nearly smokeless, invisible on a clear day. Avoid all leaking fluids, treat leaking battery-pack chemicals as hazmat, and call the hazmat team early.",
+     "zh": "替代动力车辆：高压线束包橙色绝缘皮；整车下电后高压系统即关闭，断开 12 伏小电瓶可将其彻底解除——这由 IC 或救援组决定，而且这块电瓶常常不在引擎盖下。混动车没声音不代表已熄火断电。这类现场绝不用燃烧照明弹划设——只用锥筒或反光三角牌；乙醇、甲醇火焰淡蓝近乎无烟，晴天可能完全看不见。任何泄漏液体都别接触，电池包泄漏的化学物按危险品处理，并尽早呼叫危险品队。",
+     "hard": true
+    },
+    {
+     "en": "Every vehicle is stabilized before approach — even one upright on four wheels. Cribbing (robust 10 x 10 cm timber) blocks the wheels front and back; step blocks toward the front and rear kill the suspension bounce, then the tires are deflated by pulling the valve stems with pliers. A box crib (layers at right angles) substitutes when step blocks don't fit. A vehicle on its roof or side is critically unstable — box cribs or step blocks go at BOTH ends before anyone touches it — and wedges must match the cribbing width with tapered ends no thinner than 6 mm, because thinner tips shatter under load.",
+     "zh": "任何车辆接近前都要先稳定——四轮端正落地的也不例外。垫木（10×10 厘米方木）抵住车轮前后；车身前部与后部各塞一个阶梯垫块消除悬挂的弹跳，再用钳子拔气门芯给轮胎放气。没有合适的阶梯垫块，就用层间互相垂直的井字垫木堆替代。翻覆在车顶或侧面的车辆极不稳定——任何人接触之前，先在车身两端架好井字垫木或阶梯垫块；楔子要与垫木同宽、尖端不得薄于 6 毫米，再薄受载就会崩裂。",
+     "hard": true
+    },
+    {
+     "en": "Access order: after stabilization, try every door first — even badly damaged ones — releasing the lock and working inside and outside handles together. Only then think about glass, and only then heavy tools. Two rescuers leaning on an opened door will bend it wider for removal. Try before you pry.",
+     "zh": "进入顺序：稳定之后先试遍每一扇车门——哪怕看起来撞得很惨——解开门锁、内外把手同时拉。门都不行再考虑玻璃，最后才轮到重型工具。已打开的门由两人合力压推就能掰出更大开口。先试再撬。",
+     "hard": true
+    },
+    {
+     "en": "Glass rules: side and rear windows are tempered — a spring-loaded centre punch in a LOW CORNER (never the centre) shatters them into small cubes; the windshield is laminated, a punch merely marks it, so it is never your entry route. Pick the window farthest from the patient unless urgency dictates the closest. Procedure: warn the trapped occupants, tape or paper the pane so most of it lifts out as a sheet, lower the window as far as it goes, call out \"Breaking glass!\" and pause unless \"Stop\" is called, then rake the frame clean so nothing rains down — full PPE including dust mask and eye protection. Afterwards try the door lock again: jammed locks often yield once the glass is out.",
+     "zh": "玻璃规则：侧窗和后窗是钢化玻璃——弹簧中心冲敲击下角（绝不敲中央）即碎成小颗粒；挡风玻璃是夹层玻璃，中心冲只能敲出个白点，永远不是进入通道。优先选离患者最远的窗，除非伤情急到必须就近破窗。流程：先告知被困者，玻璃贴胶带或衬纸让大部分碎片成片取下，先把车窗尽量摇低，喊出\"破玻璃！\"并稍候（有人喊\"停\"即停），破后把窗框清理干净以免碎渣掉落——全套 PPE 含防尘口罩和护目装备。之后再试一次门锁：玻璃清掉后，卡死的锁常常就开了。",
+     "hard": true
+    },
+    {
+     "en": "Forcing a door — the most common displacement technique — uses hydraulic spreaders and cutters as the go-to tools: pry the sheet metal back, keep everyone out of the door's travel path, expose the hinges or latch, then spread until they separate, with 10 x 10 cm cribbing propping the door as it comes free. Never force a door the patient is leaning against.",
+     "zh": "强制开门——最常用的位移技术——首选液压扩张器和剪切器：先撬开外层钣金，所有人避开车门弹开的轨迹，暴露铰链或锁扣后扩张至断开，过程中用 10×10 厘米垫木托住车门。患者倚靠着的那扇门绝不能强行破拆。",
+     "hard": true
+    },
+    {
+     "en": "Disentanglement removes sheet metal and plastic from around the patient — you are not cutting the patient out. Perform only the procedures actually needed. The common ones: displacing the seat (slide it back on its track first — simplest move buys the most room), removing the windshield (laminated glass comes out as one glued-in piece, mandatory before roof removal), displacing the dash, and displacing the roof.",
+     "zh": "解脱是把钣金和塑料从患者周围拆走——不是把人从车里切出来。只做确实需要的步骤。常用手法：座椅位移（先顺导轨向后滑——最简单的一步换来最多空间）、挡风玻璃整体取出（夹层玻璃连胶整片取下，拆车顶前必做）、仪表板位移、车顶位移。",
+     "hard": true
+    },
+    {
+     "en": "Dash displacement (dash roll) lifts the dash up and forward off a trapped occupant: a technician-level job using relief cuts in the A posts plus a ram or high-lift jack based at the B post. The relief cut must be perpendicular to the A post — an angled cut risks slicing fuel or power lines hidden in the rocker panels. A backboard shields the patient from the cut point, and cribbing locks in every centimetre gained.",
+     "zh": "仪表板位移（dash roll）把仪表板向上向前顶离被困者：属技师级操作，在 A 柱做减张切口，再用底座顶在 B 柱根部的液压顶杆或高位千斤顶推顶。切口必须与 A 柱垂直——斜切有割断藏在门槛梁里的油路或电线的风险。切割点与患者之间垫脊板防护，顶出的每一厘米空间都用垫木锁定。",
+     "hard": true
+    },
+    {
+     "en": "Stored-energy hazards: a deployed airbag is spent and harmless, but an undeployed one can fire if wires are cut or circuits jostle — disconnect the battery and let the capacitor drain (drain time varies by model), never place a backboard between the patient and an undeployed bag, never cut a steering wheel whose column holds one, keep out of deployment paths, and check for side-mounted curtain airbags. Energy-absorbing bumpers hide the same kind of surprise — they can explode when heated and spring out when loaded — and a hot catalytic converter can ignite leaked fuel vapour.",
+     "zh": "储能危险：已弹出的气囊即已失效、无危险；未弹出的气囊在剪线或电路受扰时随时可能引爆——断开电瓶并等电容放电（放电时长因型号而异），绝不在患者与未弹气囊之间放脊板，转向柱内有未弹气囊时绝不切割方向盘，避开一切气囊展开轨迹，并留意侧面的帘式气囊。吸能保险杠藏着同类惊喜——受热可能爆裂、受压可能弹出；灼热的三元催化器还能点燃泄漏的油气。",
+     "hard": true
+    },
+    {
+     "en": "Roof removal: strip all glass first, cut the posts farthest from the patient first and the nearest post last, station a rescuer to support each post as it is cut, sever the shoulder-harness belts (they anchor to the roof), cut wide rear posts at their narrowest point, then lift the roof away and cap the sharp stubs. Full removal usually beats folding the roof back — same time cost, far more room, plus fresh air, equipment access, and a big exit route.",
+     "zh": "拆车顶：先清除全部玻璃；先切离患者最远的柱，最后切最近的柱；每切一根柱都要有人扶住；安全带肩带要剪断（很多车固定在车顶上）；宽大的后柱选最窄处下刀；整体抬走车顶后把锋利断柱包好。整体拆除通常优于向后折叠——耗时相同，空间大得多，还带来新鲜空气、器材通道和宽大的撤出通道。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Specialized Rescue: Confined Space, Trench, Water, Rope, Wilderness",
+   "titleZh": "特殊环境救援：受限空间、沟槽、水域、绳索、荒野",
+   "points": [
+    {
+     "en": "A confined space is not built for people to stay in and has limited entry and exit: silos, tanks, industrial pits, cisterns, well casings, septic tanks, even a car trunk. Poor ventilation means the air inside may be oxygen-deficient or poisonous — the technical team must sample the atmosphere with monitors before anyone enters.",
+     "zh": "受限空间指并非供人持续停留、进出口有限的结构：粮仓、储罐、工业深坑、蓄水池、井筒、化粪池，甚至汽车后备箱。通风不足意味着里面的空气可能缺氧或有毒——技术队进入前必须先用气体监测仪采样。",
+     "hard": true
+    },
+    {
+     "en": "Of all deaths at confined-space rescues, 60% are RESCUERS, not the original victims. The call may even be dispatched as a \"heart attack\" because the caller saw someone collapse inside. Assume an IDLH atmosphere at every confined-space call, and never enter without breathing apparatus and specialty training — do not risk your life for a patient who may already be dead.",
+     "zh": "受限空间救援的全部死亡者中，60% 是救援者而不是最初的被困者。这类警情甚至常被派成\"心脏病发作\"，因为报警人只看到有人在里面倒下。对每一起受限空间警情都按 IDLH 环境假设，没有呼吸器和专项训练绝不进入——不要为一个可能已经死亡的患者赌上自己的命。",
+     "hard": true
+    },
+    {
+     "en": "Confined-space gas profiles: hydrogen sulphide is heavier than air, smells pungent at first then rapidly kills your sense of smell (sewers, swamps, wells); carbon monoxide is colourless and odourless, binding hemoglobin with an affinity 200 to 250 times that of oxygen; carbon dioxide asphyxiates and tastes sour with a stinging nose; methane is nontoxic but reaches explosive concentrations well below asphyxiating ones; ammonia is toxic, corrosive, and lighter than air, so it collects at the TOP of the space; nitrogen dioxide is a toxic red-brown gas with a sharp, biting odour.",
+     "zh": "受限空间毒气档案：硫化氢比空气重，初闻刺鼻但很快麻痹嗅觉（下水道、沼泽、井）；一氧化碳无色无味，与血红蛋白的亲和力是氧的 200-250 倍；二氧化碳致窒息，口中发酸、鼻腔刺痛；甲烷本身无毒，但达到爆炸浓度远早于达到窒息浓度；氨有毒且腐蚀性强、比空气轻，聚在空间顶部；二氧化氮是红棕色毒气，气味尖锐刺鼻。",
+     "hard": true
+    },
+    {
+     "en": "Your awareness-level jobs at a confined space: recognize it, secure the scene, keep everyone out until the specialty team arrives, interview witnesses, then hand over a structured situation report — conditions observed versus reported, rescue attempts already made, hazards, any hazmat identified, and resources on hand.",
+     "zh": "受限空间现场的意识级任务：识别、封控、在专业队到达前不让任何人进入、询问目击者，然后交出一份有条理的现场报告——观察到的与最初报告的情况对比、已做过的施救尝试、危险源、已识别的危险品、现有资源。",
+     "hard": true
+    },
+    {
+     "en": "Most trench collapses happen in trenches less than 4 m deep and 2 m wide; the victim is buried by heavy soil and asphyxiates. A partly buried person can NOT be pulled out — they must be dug free, and rescuers enter only after shoring is in place.",
+     "zh": "多数沟槽坍塌发生在深不足 4 米、宽不足 2 米的沟里；被埋者被沉重的土压住而窒息。半埋的人不能硬拽——必须在支撑架设好之后再挖出来，救援者也只有在支撑到位后才可进入。",
+     "hard": true
+    },
+    {
+     "en": "Secondary collapse is the trench killer: triggered by machinery vibration, people standing at the trench lip, passing traffic, or water undercutting the soil. So shut down heavy equipment, divert traffic, keep everyone off the edges, stay clear of the spoil pile, and approach only if necessary — from the narrow end, where the ground is more stable.",
+     "zh": "二次坍塌是沟槽现场的头号杀手：机械震动、有人站在沟沿、过往车流、水流掏蚀都能诱发。因此要关停重型机械、分流交通、所有人远离沟沿、避开弃土堆；确有必要接近时从窄端靠近，那里土体相对稳定。",
+     "hard": true
+    },
+    {
+     "en": "Water rescue order: reach with a branch, pole, or paddle; throw a life buoy or throw bag (tell the person to grab the ROPE, not the bag — more rope keeps uncoiling from it); row out only if you can truly handle the boat, wearing a PFD; go into the water solely as a trained last resort. Anyone working within 3 m of the water wears an approved PFD at minimum; ice rescue adds weight-spreading ladders, capped hose-line flotation buoys, and flotation suits — all specialty-training territory. And if the current takes YOU: roll face-up and arch so the hips ride high, feet together pointing downstream, chin tucked, arms at your sides with hands steering.",
+     "zh": "水中救援顺序：伸——用树枝、长杆、船桨去够；抛——抛救生圈或抛绳袋（叮嘱对方抓绳子而不是袋子——袋里还会继续放绳）；划——真会操船才划出去，且必须穿 PFD；游——只作为受过救生训练者的最后手段。凡在距水 3 米以内作业者一律至少穿戴合规 PFD；冰面救援另有分散体重的梯子、封头充气的水带浮筒和漂浮救援服——都属专项训练范畴。若急流把你卷走：翻成仰面、拱腰让髋部抬高，双脚并拢朝向下游，收下颌，双臂贴身用手掌控方向。",
+     "hard": true
+    },
+    {
+     "en": "Cold water numbers: water steals heat 25 times faster than air; any water below 37 degrees C can cause hypothermia and below 32 degrees C the body cannot hold its heat; submersion in 4 degree C water is likely fatal within 15 to 20 minutes. The HELP position — knees to chest, arms pressed to sides, head and neck out of the water, wearing a PFD — cuts heat loss by about 60% compared with treading water; groups should huddle.",
+     "zh": "冷水的硬数字：水带走体热的速度是空气的 25 倍；任何低于 37 摄氏度的水都能造成低体温，低于 32 摄氏度人体就守不住热量；在 4 摄氏度的水中浸没 15-20 分钟即可能致死。HELP 减热姿势——屈膝抱胸、双臂夹紧体侧、头颈保持出水、身穿 PFD——比踩水减少约 60% 的热量流失；多人落水应挤成一团互相保温。",
+     "hard": true
+    },
+    {
+     "en": "Immersion below 21 degrees C can trigger the cold-protective response: hypothermia shields the vital organs from hypoxia and the diving reflex slows the heart, which is why a child has survived 66 minutes underwater. Therefore resuscitate every cold-water submersion patient fully until they respond or a physician pronounces death. Remove them from the water horizontally — cold diuresis leaves them dehydrated and prone to orthostatic collapse — and handle gently, because the hypothermic heart fibrillates easily.",
+     "zh": "浸没在低于 21 摄氏度的水中可能触发冷保护反应：低体温替重要器官挡住缺氧损害，潜水反射又使心率减慢——曾有儿童水下浸没 66 分钟仍获救存活。因此所有冷水淹溺患者都要全力复苏，直到恢复反应或由医生宣布死亡。出水时保持水平体位——冷利尿使患者脱水、直立位易致循环崩溃——并全程轻柔搬动，因为低体温的心脏极易被诱发心律失常。",
+     "hard": true
+    },
+    {
+     "en": "The most common North American swift-water rescue: a vehicle driven into floodwater, stalled, occupants stranded as the water climbs — treacherous because the depth around the car is unknowable. Other water killers: strainers (trees, debris, wire mesh that water passes through but bodies don't) and low-head dams, whose recirculating boil traps and re-submerges victims and rescuers in a loop — dam height says nothing about danger.",
+     "zh": "北美最常见的急流救援：车辆强行驶入洪水、熄火抛锚，乘员被上涨的水困住——危险在于车周水深无法判断。其他水中杀手：滤网状障碍物（树木、杂物、铁丝网——水能过、人过不去），以及低坝——回旋水流（翻滚流）把落水者和救援者反复卷入水下循环，坝的高矮与危险程度完全无关。",
+     "hard": true
+    },
+    {
+     "en": "Assume spinal injury in a submersion when diving or a fall started it, when the patient is unresponsive with an unknown mechanism, when they report limb weakness, paralysis, or numbness — or whenever your own suspicion says so, regardless of witnesses; most diving injuries strike the cervical spine. In-water handling: rotate the whole upper body as one unit into a face-up position (never twist just the head); start ventilation the moment the face clears the water — ventilation is the primary treatment of every submersion patient; float a buoyant backboard beneath them and secure trunk and head BEFORE lifting them out; then strip wet clothes, cover, and oxygenate or ventilate as findings dictate.",
+     "zh": "淹溺事件符合任一条即按脊柱损伤处理：因跳水或坠落入水；患者无反应且机制不明；诉肢体无力、瘫痪或麻木；或不论目击者怎么说、你自己起了疑心——跳水致脊柱伤绝大多数伤在颈椎。水中操作：将整个上半身作为一个整体翻成仰面（绝不能只转头）；面部一出水立即开始通气——通气是所有淹溺患者的首要处置；浮力脊板从患者身下托入，躯干和头都固定在板上之后才可出水；随后脱掉湿衣、覆盖保温，按评估结果给氧或正压通气。",
+     "hard": true
+    },
+    {
+     "en": "Rope rescue divides at the 45-degree line: low-angle (slope under 45 degrees) means rescuers stand on the ground and the rope is backup — hauling a basket up an embankment with a belay for fall protection; high-angle (over 45 degrees) means life depends on the rope system itself, raising or lowering when nothing else can. Rope jobs eat time: extensive rigging and equipment before the rescue even starts, so stay clear of the zone below the patient and any loose falling material.",
+     "zh": "绳索救援以 45 度为界：低角度（坡度小于 45 度）救援者以地面为主要支撑，绳索只是保险——如沿路堤向上拖拉救援吊篮，配保护绳防坠落；高角度（大于 45 度）则整条命都系在绳索系统上，用于别无他法时的升降。绳索任务极耗时：救援开始前要完成大量架设和装备组装，因此要避开患者正下方区域和一切可能坠落的松散物。",
+     "hard": true
+    },
+    {
+     "en": "Basket and litter logistics: a rescue basket takes a minimum of six rescuers, with fresh six-person teams rotated on long carries; a standard litter carry uses six to eight, three or four per side, commanded by the front-left position. Beyond what one team can cover in about 15 to 20 minutes, leapfrog two teams; over unstable footing or obstacles, switch to the caterpillar (lap) pass — two seated, alternating lines handing the litter between them.",
+     "zh": "吊篮与担架的人力账：救援吊篮至少 6 人操作，长距离搬运要以 6 人为一组轮换；标准担架搬运 6-8 人、每侧 3-4 人，由左前位者指挥。超出一组约 15-20 分钟能覆盖的距离就用两组蛙跳接力；遇到不稳路面或障碍改用毛毛虫式（腿上传递）——两列救援者面对面坐定、错位排开，把担架从中间依次传过去。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Prehospital Care During Rescue: Crush, Pain, Packaging",
+   "titleZh": "救援中的院前照护：挤压、镇痛、打包",
+   "points": [
+    {
+     "en": "Trench and confined-space entrapments set up crush injury and compartment syndrome: tissue starved of oxygenated blood runs anaerobic metabolism and stockpiles lactic acid, and when the compressed area is finally reperfused those by-products flood the circulation. High-flow oxygen or positive pressure ventilation plus sodium bicarbonate (per protocol) counter the respiratory and metabolic acidosis.",
+     "zh": "沟槽和受限空间的困陷会埋下挤压伤与骨筋膜室综合征的伏笔：得不到含氧血的组织转入无氧代谢、堆积乳酸，受压部位一旦恢复灌注，这些代谢产物会一齐涌入循环。高流量氧或正压通气，加上按 protocol 给予碳酸氢钠，可对抗呼吸性与代谢性酸中毒。",
+     "hard": true
+    },
+    {
+     "en": "A pinning object works like a tourniquet: expect the patient to crash when the load lifts. The classic pattern — stable vitals while pinned under the dashboard, then pallor, collapsing pressure, and lost consciousness the moment it is raised. Anticipate it: lines in, fluids ready, and extra hands standing by BEFORE the final lift.",
+     "zh": "压住患者的物体本身就像一条止血带：预期重物一抬、患者就垮。经典剧本——被仪表板压着时生命体征还稳，仪表板一抬离立刻面色苍白、血压崩塌、意识丧失。要提前布局：在最后起吊之前就开好静脉通路、备好液体、增援人手就位。",
+     "hard": true
+    },
+    {
+     "en": "Nonpharmacologic pain control belongs to every rescue: position of comfort, splinting and padding, gentle handling, talking the patient through it — and warmth, because shivering itself heightens pain.",
+     "zh": "非药物镇痛适用于每一场救援：舒适体位、夹板与衬垫、轻柔搬动、持续交谈分散注意——还有保温，因为寒战本身会放大疼痛。",
+     "hard": true
+    },
+    {
+     "en": "The chapter's rescue analgesia menu (always per local protocol and medical direction): morphine or fentanyl and nitrous oxide (Entonox) for moderate-severe pain, all used cautiously in volume-depleted or severely hypotensive patients; ketorolac, an NSAID whose real contraindication is aspirin/NSAID allergy; ketamine at low dose (under 0.2-0.3 mg/kg IV) for analgesia without deep sedation; and self-administered inhaled methoxyflurane (Penthrox). Push analgesics slowly and think antiemetic — nearly all of them provoke nausea.",
+     "zh": "本章的救援镇痛清单（一切以地方 protocol 和医疗指导为准）：吗啡或芬太尼、氧化亚氮(Entonox)用于中重度疼痛，容量不足或严重低血压者都要慎用；酮咯酸属 NSAID，真正的禁忌是阿司匹林/NSAID 过敏；氯胺酮低剂量（IV 低于 0.2-0.3 mg/kg）做镇痛、不至深镇静；以及患者自吸的甲氧氟烷(Penthrox)。镇痛药都要缓慢推注并考虑配止吐药——几乎个个都招恶心呕吐。",
+     "hard": true
+    },
+    {
+     "en": "Basket choice: the wire-mesh basket suits water rescue and helicopter hoists because water (1 kg per litre) and moving air pass through instead of spinning or dragging the litter — but it snags on every obstruction; the plastic or fibreglass basket slides over debris, ladders, and snow, making it the better pick for most other evacuations. Packaging anchors the pelvis — the body's fulcrum — with cord or webbing systems; with a fractured pelvis, splint the patient in a full-body vacuum mattress first and fasten the mattress into the basket, so the anchor is the splint rather than the broken pelvis.",
+     "zh": "吊篮选型：钢丝网吊篮适合水域救援和直升机吊运，因为水（每升 1 公斤）和气流能穿网而过，吊篮不会被水力气流带得旋转拖拽——但它逢障碍必挂；塑料/玻璃钢吊篮能滑过瓦砾、梯面和雪地，其余撤离场景多半选它。打包的原理是用绳索或织带系统锚定骨盆——人体的支点；骨盆骨折者先用全身真空垫固定成一个整体，再把真空垫扎进吊篮——受力的是夹板而不是断掉的骨盆。",
+     "hard": true
+    },
+    {
+     "en": "Spinal patients in baskets and tight spaces: most backboards are too wide for a rescue basket, so use a KED — it captures the head, shoulders, and pelvis, and was born extricating Formula One drivers — or lift the patient with manual spinal control, slide the basket beneath, and let the basket itself become the immobilizer. In passages too narrow even for a basket, combine the KED with a SKED, the heavy-polyethylene wrap-around litter that cocoons the patient for dragging through gaps. In-basket details win exams: secure the (preferably aluminum) oxygen bottle and its tubing, run IVs on a pressure infuser rather than gravity, insulate the patient (baskets are poor insulators — keep the IV warm too), and add helmet and goggles or a litter shield under falling debris. After evacuation, transfer to a backboard — the ambulance keeps its backboards; your team needs its one basket back.",
+     "zh": "吊篮与狭窄空间里的脊柱患者：多数脊板对吊篮来说太宽，改用 KED——它锁住头、肩、骨盆三个平面，最初就是为 F1 赛车手脱困设计的；或者徒手保护脊柱把患者抬起、吊篮从身下滑入，让吊篮本身充当固定装置。连吊篮都过不去的窄缝，用 KED 加 SKED——重型聚乙烯包裹式软担架，把患者裹成茧拖过狭道。篮内细节是考点：氧气瓶（优选铝瓶）连同管路都要固定；静脉输液用加压袋而不是重力滴注；给患者做好保温（吊篮完全不保温——输液管也要保暖）；有坠物风险时给患者戴头盔护目镜或加装护罩。撤出后把患者换到脊板上——救护车上有的是脊板，而你的队只有一个吊篮，别让它被拉走。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Technical rescue training levels",
+   "itemZh": "技术救援训练层级",
+   "value": "3 级：Awareness（识别+呼叫，不动手）/ Operations（温区协助）/ Technician（执行救援）"
+  },
+  {
+   "itemEn": "Steps of special rescue",
+   "itemZh": "特种救援步骤数",
+   "value": "8 步：准备→出动→到场评估→稳定→接近→解脱→移出→转运"
+  },
+  {
+   "itemEn": "Controlled zones and tape colours",
+   "itemZh": "现场三区与警戒带颜色",
+   "value": "热区=红带 / 温区=橙带 / 冷区=黄带"
+  },
+  {
+   "itemEn": "Rough-terrain litter padding (foam)",
+   "itemZh": "崎岖地形担架泡沫垫厚度",
+   "value": "10-15 cm"
+  },
+  {
+   "itemEn": "Parking distance from downed wires",
+   "itemZh": "断落电线的停车距离",
+   "value": "≥ 1 个车长跨距（约 15 m），断线未确认断电前一律按带电处理"
+  },
+  {
+   "itemEn": "Strobe light night visibility",
+   "itemZh": "频闪灯夜间可见距离",
+   "value": "约 1.6 km"
+  },
+  {
+   "itemEn": "Inner circle survey coverage",
+   "itemZh": "内圈勘查覆盖",
+   "value": "绕核心 360°，含车顶上方与车底下方"
+  },
+  {
+   "itemEn": "Cribbing timber size",
+   "itemZh": "垫木规格",
+   "value": "10 × 10 cm 方木"
+  },
+  {
+   "itemEn": "Wedge tapered-end minimum thickness",
+   "itemZh": "楔子尖端最小厚度",
+   "value": "≥ 6 mm（更薄受载会崩裂）"
+  },
+  {
+   "itemEn": "High-voltage cable identification (EV/hybrid)",
+   "itemZh": "电动/混动车高压线识别",
+   "value": "橙色绝缘皮；断 12V 电瓶可解除高压系统"
+  },
+  {
+   "itemEn": "Rescuer share of confined-space deaths",
+   "itemZh": "受限空间死亡中救援者占比",
+   "value": "60%"
+  },
+  {
+   "itemEn": "CO affinity for hemoglobin vs oxygen",
+   "itemZh": "CO 与血红蛋白亲和力（对比氧）",
+   "value": "200-250 倍"
+  },
+  {
+   "itemEn": "Typical trench collapse dimensions",
+   "itemZh": "沟槽坍塌典型尺寸",
+   "value": "深 < 4 m、宽 < 2 m"
+  },
+  {
+   "itemEn": "Water vs air heat loss rate",
+   "itemZh": "水中散热速度（对比空气）",
+   "value": "25 倍"
+  },
+  {
+   "itemEn": "Hypothermia water temperature thresholds",
+   "itemZh": "低体温水温阈值",
+   "value": "< 37°C 可致低体温；< 32°C 无法维持体热；< 21°C 可现冷保护反应"
+  },
+  {
+   "itemEn": "Survival window in 4°C water",
+   "itemZh": "4°C 水中致死时间",
+   "value": "浸没 15-20 分钟即可能致死"
+  },
+  {
+   "itemEn": "HELP position heat-loss reduction",
+   "itemZh": "HELP 姿势减少热量流失",
+   "value": "较踩水减少约 60%"
+  },
+  {
+   "itemEn": "PFD requirement distance from water",
+   "itemZh": "强制穿 PFD 的近水距离",
+   "value": "距水 3 m 以内"
+  },
+  {
+   "itemEn": "Low- vs high-angle rope rescue divide",
+   "itemZh": "低/高角度绳索救援分界",
+   "value": "坡度 45°：以下靠地面支撑，以上靠绳索系统"
+  },
+  {
+   "itemEn": "Rescue basket / litter staffing",
+   "itemZh": "吊篮/担架人力",
+   "value": "吊篮≥6 人（6 人一组轮换）；担架 6-8 人，每侧 3-4 人；单组连续搬运约 15-20 分钟即接力"
+  },
+  {
+   "itemEn": "Ketamine analgesic dose (rescue pain control)",
+   "itemZh": "氯胺酮镇痛剂量",
+   "value": "IV < 0.2-0.3 mg/kg（更高剂量转为镇静）"
+  },
+  {
+   "itemEn": "Weight of water (basket drainage rationale)",
+   "itemZh": "水的重量（吊篮排水的理由）",
+   "value": "1 kg/L"
+  },
+  {
+   "itemEn": "Basket packaging cord / webbing",
+   "itemZh": "吊篮打包绳索/织带规格",
+   "value": "5-6 mm 绳或 2.5 cm 管状织带；锚定点=骨盆"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "If fire or a technical team has not yet declared the scene safe, stage and wait — telling a trapped, talking patient that help is here and to keep still is care you can deliver from a safe position.",
+   "zh": "消防或技术队尚未宣布现场安全时，先停驻等待——隔着安全距离告诉受困且能对话的患者\"救援已到、保持不动、别转头颈\"，本身就是一种可以先行给出的照护。"
+  },
+  {
+   "en": "You may spot what the IC cannot — changing weather, a suspicious package, failing equipment. Reporting it to the IC or safety officer is part of your job, not stepping out of your lane.",
+   "zh": "你可能注意到 IC 看不到的情况——天气突变、可疑物品、装备故障。把它报给 IC 或安全官是你职责的一部分，不算越权。"
+  },
+  {
+   "en": "Sequence discipline: assessment and life-threat interventions come BEFORE disentanglement, and full packaging comes BEFORE removal — the order only inverts when fire, explosion, or another immediate life threat forces rapid extrication.",
+   "zh": "顺序纪律：评估和致命问题干预在解脱之前，完整打包在移出之前——只有起火、爆炸等即刻生命威胁才允许倒过来做快速脱困。"
+  },
+  {
+   "en": "Bystanders attempting their own rescue are themselves a hazard: part of your awareness-level job is stopping civilians from turning themselves into your next patients.",
+   "zh": "正在自行施救的旁观者本身就是危险源：意识级职责的一部分，就是拦住平民，别让他们变成你的下一个患者。"
+  },
+  {
+   "en": "Extrication noise is terrifying from inside the wreck. Tell the patient before each cut or spread what the bang and shriek will be — a warned patient stays still; a startled one moves their spine.",
+   "zh": "破拆噪音在残骸里听起来非常恐怖。每次切割或扩张前都先告诉患者接下来会有什么巨响——有预告的患者保持不动，被吓到的患者会猛动脊柱。"
+  },
+  {
+   "en": "A manhole, pit, or well that \"looks fine\" is the classic rescuer trap — the killer atmospheres are invisible and odour can vanish (H2S deadens smell). Your monitor, not your senses, decides whether air is safe.",
+   "zh": "看起来\"没什么问题\"的井口、深坑是最经典的救援者陷阱——致命空气看不见，气味还会消失（硫化氢会麻痹嗅觉）。判断空气安全的是检测仪，不是你的感官。"
+  },
+  {
+   "en": "At a trench lip your body weight is itself a load on the wall. Standing back from the edge is not timidity — it is the first act of the rescue.",
+   "zh": "站在沟沿上，你的体重本身就是压向沟壁的荷载。离沟沿远一点不是胆小——那是救援的第一个动作。"
+  },
+  {
+   "en": "When hydraulic tools start, hearing protection goes on the patient as well as the crew, and a blanket or shield covers you both against debris — the patient is inside the work zone too.",
+   "zh": "液压工具一启动，护耳用品要给患者也戴上，毯子或护罩把你和患者一起盖住防碎屑——患者同样身处作业区之内。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Misconception: rescue awareness training teaches you basic rescue moves. Reality: the awareness level performs zero rescue skills — its entire content is recognizing hazards, securing the scene, and calling the right team.",
+   "zh": "误区：意识级训练会教你一些基础救援动作。事实：意识级不执行任何救援技术动作——它的全部内容就是识别危险、封控现场、呼叫对口队伍。"
+  },
+  {
+   "en": "Misconception: in a car entrapment you free the patient by pulling them clear of the wreck. Reality: rescuers dismantle the vehicle away from the patient; the patient stays put, protected and treated, while the metal moves.",
+   "zh": "误区：车辆困陷=想办法把人拉出残骸。事实：救援是把车体从患者周围拆走；患者留在原位接受保护和治疗，动的是金属不是人。"
+  },
+  {
+   "en": "Misconception: if the streetlights are dark, the downed wire must be dead. Reality: never assume a wire is de-energized — only the power company's confirmation counts, and energized wires can also charge fences, guardrails, and water at a distance.",
+   "zh": "误区：整条街的灯都灭了，断线肯定没电。事实：永远不能假设电线已断电——只有电力公司的确认才算数；带电导线还会让远处的围栏、护栏和积水一并带电。"
+  },
+  {
+   "en": "Misconception: disconnecting the car battery makes an undeployed airbag safe. Reality: the airbag capacitor holds a charge after battery disconnection, and discharge time varies by model — treat the bag as live until deactivated.",
+   "zh": "误区：断了电瓶，未弹出的气囊就安全了。事实：断电后气囊电容仍存有电荷，放电时间因型号而异——在正式解除之前都要按\"随时会爆\"对待。"
+  },
+  {
+   "en": "Misconception: someone slumped at the bottom of a pit probably had a heart attack — go check. Reality: assume the atmosphere dropped them and will drop you too; the dispatch label \"medical call\" does not make the air breathable.",
+   "zh": "误区：坑底瘫着的人多半是心脏病发作——赶紧下去看看。事实：先假设是里面的空气放倒了他，同样会放倒你；派单写着\"内科警情\"不代表里面的空气能呼吸。"
+  },
+  {
+   "en": "Misconception: a partly buried trench victim just needs a strong pull. Reality: soil is crushingly heavy and pulling injures; the victim is dug out only after shoring stabilizes the walls.",
+   "zh": "误区：半截被埋的人，用力拉出来就行。事实：土的重量大得惊人，硬拉本身就会致伤；必须先架好支撑稳住沟壁，再把人挖出来。"
+  },
+  {
+   "en": "Misconception: a small, low dam is a small hazard. Reality: dam height has no bearing on danger — the low-head dam's recirculating current is nicknamed the drowning machine precisely because it looks harmless.",
+   "zh": "误区：又矮又小的坝没什么危险。事实：坝的高度与危险程度毫无关系——低坝的回旋流之所以被叫作\"溺水机器\"，正是因为它看起来人畜无害。"
+  },
+  {
+   "en": "Misconception: a pinned patient who cannot feel his legs must have a spinal cord injury. Reality: loss of distal perfusion from the crushing object produces the same numbness — and it warns of crush syndrome and circulatory collapse when the load is released.",
+   "zh": "误区：被压住的患者双腿没知觉=一定是脊髓损伤。事实：压迫物阻断远端灌注同样会造成麻木——而且它预警着挤压综合征，以及重物移开瞬间的循环崩塌。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "FAILURE",
+   "en": "Why rescues fail: Failure to understand the environment, Additional medical problems not considered, Inadequate rescue skills, Lack of teamwork/experience, Underestimating logistics, Rescue vs recovery not considered, Equipment not mastered.",
+   "zh": "救援失败七因：F-低估环境，A-漏看医疗问题，I-技能不足，L-缺团队/经验，U-低估后勤，R-救援还是打捞没想清，E-装备不熟。"
+  },
+  {
+   "name": "Reach-Throw-Row-Go",
+   "en": "The water rescue escalation order: Reach with a pole or branch; Throw a buoy or throw bag; Row out only if you can handle the boat; Go into the water only as a trained last resort.",
+   "zh": "水中救援升级顺序：伸（用杆/树枝够）→ 抛（救生圈/抛绳袋）→ 划（会操船才划出去）→ 游（受过救生训练的最后手段）。"
+  },
+  {
+   "name": "HELP",
+   "en": "Heat-Escape-Lessening Position for cold-water survival: knees drawn to chest, arms pressed to sides, head and neck out of the water, PFD on — cuts heat loss by about 60% versus treading water.",
+   "zh": "HELP 减热姿势（冷水求生）：屈膝抱胸、双臂夹紧体侧、头颈保持出水、身穿 PFD——比踩水减少约 60% 热量流失。"
+  },
+  {
+   "name": "Try Before You Pry",
+   "en": "Vehicle access order: try every door first, then tempered side/rear glass, and only then hydraulic tools. The easiest way into a vehicle is a door.",
+   "zh": "进车顺序口诀\"先试再撬\"：先试遍所有车门，其次砸钢化侧/后窗，最后才上液压工具。进入车辆最容易的路永远是车门。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Name the three levels of technical rescue training and state exactly what the awareness level does and does not allow.",
+   "qZh": "说出技术救援训练的三个级别，并说明意识级到底允许做什么、不允许做什么。",
+   "aEn": "Awareness: recognize hazards, secure the scene, call the appropriate specialty team — no hands-on rescue skills. Operations: assist in the warm zone with a limited, defined role. Technician: perform the rescue itself, run the specialized equipment, and manage the incident.",
+   "aZh": "意识级：识别危险、封控现场、呼叫对口专业队——不执行任何救援技术动作。操作级：在温区承担有限、明确的协助任务。技师级：亲自执行救援、操作专用装备并管理事件。"
+  },
+  {
+   "qEn": "List the eight steps of special rescue in order.",
+   "qZh": "按顺序说出特种救援的八个步骤。",
+   "aEn": "Preparation, response, arrival and assessment, stabilization, access, disentanglement, removal, transport.",
+   "aZh": "准备、出动、到场与评估、现场稳定、接近患者、解脱困陷、移出、转运。"
+  },
+  {
+   "qEn": "What are the three controlled zones, who belongs in each, and which tape colour marks each one?",
+   "qZh": "现场三区分别是什么、谁能进、各用什么颜色警戒带？",
+   "aEn": "Hot zone (red tape): entry and rescue teams only, immediately around the hazard. Warm zone (orange tape): trained, equipped personnel doing decontamination and hot-zone support. Cold zone (yellow tape): staging and command post; public and media stay out entirely.",
+   "aZh": "热区（红带）：仅限进入组和救援组，紧贴危险源。温区（橙带）：受训且有装备的人员做洗消和热区支援。冷区（黄带）：集结与指挥所在地；公众和媒体连冷区都不得进入。"
+  },
+  {
+   "qEn": "A power line is down across a car. How far away do you park, and when does the wire stop being treated as live?",
+   "qZh": "电线断落搭在车上：你把车停多远？断线什么时候才不按带电处理？",
+   "aEn": "Park at least one truck span — about 15 metres — away. The wire is treated as live until the power company de-energizes it, no matter how dark the streetlights are; everything conductive it touches is treated as live too.",
+   "aZh": "至少停在一个车长跨距（约 15 米）之外。在电力公司确认断电之前一律按带电处理——街灯全黑也不例外；断线碰到的一切导电物同样按带电对待。"
+  },
+  {
+   "qEn": "State the water rescue escalation order, and the PFD rule for rescuers near the water.",
+   "qZh": "说出水中救援的升级顺序，以及近水作业者的 PFD 规则。",
+   "aEn": "Reach, throw, row, go — entering the water is a last resort reserved for rescuers trained in water rescue. Anyone working within 3 metres of the water wears an approved PFD as minimum protection.",
+   "aZh": "伸、抛、划、游——下水是只留给受过水域救援训练者的最后手段。凡在距水 3 米以内作业的人，至少要穿戴合规 PFD。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Scene assessment framework",
+   "topicZh": "现场评估框架",
+   "bookEn": "The book teaches scene assessment as free-form lists — outer and inner circle surveys, hazard checklists, and an eight-item dispatch information list.",
+   "bookZh": "教材把现场评估教成开放式清单——外圈/内圈勘查、危险源清单、八项接警信息等。",
+   "bcEn": "BC's practical exam structures every scenario around the Rescue Scene Evaluation (RSE), verbalized in a fixed frame: Hazards, Environment, Mechanism of injury, People (number of patients), Additional resources, General impression. The book's surveys feed this frame — but on exam day, say the RSE out loud in these terms.",
+   "bcZh": "BC 实操考试把每道题都套在 Rescue Scene Evaluation (RSE) 框架里，按固定要素口述：危险源、环境、受伤机制、人数、增援资源、总体印象。教材的内外圈勘查是给这个框架喂料的——考试当天要按这套要素把 RSE 说出声。",
+   "ref": "BC Guidelines p.6/9（Patient Assessment Model: Rescue Scene Evaluation）"
+  },
+  {
+   "topicEn": "High-risk crash: hard numbers",
+   "topicZh": "高风险车祸的硬指标",
+   "bookEn": "The chapter describes dangerous collisions qualitatively — major intrusion, deformity, entrapment — without numeric thresholds.",
+   "bookZh": "本章对危险碰撞只做定性描述——严重侵入、变形、困陷——没有数字门槛。",
+   "bcEn": "BC defines a high-risk auto crash with numbers that make the patient unstable by mechanism: intrusion over 0.3 m on the occupant side or over 0.5 m at any site including the roof; ejection; death in the same passenger compartment; auto versus pedestrian/cyclist over 30 km/h; motorcycle crash over 30 km/h; and free fall over 6 m. Any of these drives an unstable classification and rapid transport.",
+   "bcZh": "BC 用数字定义高风险车祸，符合即按机制判为不稳定：乘员侧侵入超过 0.3 米，或包括车顶在内任意部位侵入超过 0.5 米；人员被抛出车外；同一乘员舱内有人死亡；汽车撞行人/骑车人时速超过 30 km/h；摩托车事故时速超过 30 km/h；坠落高度超过 6 米。命中任意一条即判不稳定并尽快转运。",
+   "ref": "BC Guidelines p.7-8（Findings in Unstable Adult Patients: Mechanism of Injury）"
+  },
+  {
+   "topicEn": "Your role boundary at an extrication",
+   "topicZh": "破拆现场的职责边界",
+   "bookEn": "The book walks through technician-level techniques in detail — dash displacement, roof removal, hydraulic spreader work — as paramedic knowledge.",
+   "bookZh": "教材把技师级技术——仪表板位移、拆车顶、液压扩张作业——当作 paramedic 知识细讲。",
+   "bcEn": "For the BC EMR/PCP candidate these techniques are recognition knowledge only. Exam expectations sit at the awareness level: identify hazards, secure the scene, confirm fire is tasked with extrication and police with traffic, and deliver patient care during and after disentanglement. Attempting technical rescue moves in a scenario reads as exceeding training, not initiative.",
+   "bcZh": "对 BC EMR/PCP 考生，这些技术只需\"识别即可\"。考试要求停在意识级：识别危险、封控现场、确认消防负责破拆、警方负责交通，并在解脱过程中与之后做好患者照护。在场景题里上手做技术救援动作会被视为越级操作，而不是主动性。",
+   "ref": "NOCP 3.3.c（basic extrication）+ BC 实操评分现场管理项；与已上线场景 tr-02/etr-09 一致"
+  },
+  {
+   "topicEn": "Cold-water submersion and hypothermia",
+   "topicZh": "冷水淹溺与低体温",
+   "bookEn": "The book instructs full resuscitation of every cold-water submersion patient until response or physician pronouncement, citing the cold-protective response.",
+   "bookZh": "教材要求对所有冷水淹溺患者全力复苏，直至恢复反应或由医生宣布死亡，依据是冷保护反应。",
+   "bcEn": "Consistent with BC: severe hypothermia is itself an unstable-patient criterion in the provincial guidelines, so these patients are transport priorities with gentle handling and horizontal removal from the water — and resuscitation decisions belong to a physician, not the roadside.",
+   "bcZh": "与 BC 一致：省考纲把重度低体温本身列为不稳定标准，这类患者是转运优先对象——轻柔搬动、水平出水；复苏终止的决定权在医生，不在现场。",
+   "ref": "BC Guidelines p.7（Findings in Unstable Adult Patients: Severe hypothermia）"
+  },
+  {
+   "topicEn": "Rescue analgesia and licence scope",
+   "topicZh": "救援镇痛与执照范围",
+   "bookEn": "The chapter's pain-management table spans morphine, fentanyl, nitrous oxide, ketorolac, ketamine, and methoxyflurane as paramedic options.",
+   "bookZh": "本章镇痛表把吗啡、芬太尼、氧化亚氮、酮咯酸、氯胺酮、甲氧氟烷都列为 paramedic 选项。",
+   "bcEn": "In BC, which analgesics you may touch is set by your licence schedule and local protocol, not by this table — for the EMR/PCP exam, know the drug facts for recognition, but answer scenario questions from your own scope: nonpharmacologic measures plus the agents your protocols actually authorize, with everything else framed as \"consult medical direction / higher level of care.\"",
+   "bcZh": "在 BC，你能碰哪种镇痛药由执照等级附表和地方 protocol 决定，而不是这张表——EMR/PCP 考试对表中药物\"识别即可\"，场景题要按自己的执业范围作答：非药物措施加上 protocol 真正授权的药物，其余一律表述为\"请示医疗指导/升级照护\"。",
+   "ref": "教材本节自身亦要求 consult local/regional protocols；EMA licence schedule"
+  }
+ ],
+ "sourcePages": "4263-4340"
+}
