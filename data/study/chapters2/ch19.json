@@ -1,0 +1,514 @@
+{
+ "id": "ch19",
+ "n": 19,
+ "titleEn": "Communications and Documentation",
+ "titleZh": "通讯与文书",
+ "group": "professional",
+ "examWeight": 1,
+ "whyEn": "Two skills you will use on literally every call: talking on the radio and writing the report. The exam mines this chapter for sequences and components — the phases of a call from notification to dispatch to prearrival instructions, what simplex/duplex/trunked actually mean, the ten rules of radio discipline, the fixed order of a hospital radio report, and the anatomy of a patient care report: subjective versus objective, the narrative formats, and the one legal way to fix a documentation error. The practical exam cares too: your handover report at the end of a station is a graded moment. Documentation's legal status, falsification, and privacy already live in Chapter 4 — here the focus is on how to build the record, not what the law does with it.",
+ "whyZh": "两门你每一趟出勤都要用的手艺：对着电台说话，和把报告写好。考试在这一章挖的是顺序与组件——一次呼叫从报警、派遣到到达前指导的完整链条；单工/双工/集群到底什么意思；电台纪律十条；向医院口头汇报的固定顺序；以及患者照护报告（PCR）的解剖：主观与客观之分、叙事格式、还有更正文书错误唯一合法的那一种写法。实操考同样在乎：每站结尾的交接汇报是被打分的环节。文书的法律地位、伪造后果与隐私披露已在第4章讲透——本章的重心是怎么把记录做出来，而不是法律拿它做什么。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication"
+  ],
+  "codes": [
+   "1.1.a",
+   "1.1.b",
+   "1.1.c",
+   "1.1.d",
+   "1.1.e",
+   "1.1.f",
+   "1.1.g",
+   "1.1.h",
+   "1.1.i",
+   "2.1.a",
+   "2.1.b",
+   "2.1.c",
+   "2.1.d",
+   "2.1.e",
+   "2.1.f",
+   "2.1.g",
+   "2.2.a",
+   "2.2.b",
+   "2.3.a",
+   "2.3.b",
+   "2.3.c",
+   "2.3.d",
+   "5.6.f"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Phases of Communication: Following a Call",
+   "titleZh": "通讯的各阶段：跟着一通呼叫走",
+   "points": [
+    {
+     "en": "Baseline vocabulary from the chapter introduction: subjective information is what the patient describes — symptoms, like the degree of pain; objective information is what you observe and measure — signs, like a blood pressure. Every call's record must carry both, in a report complete, accurate, and legible enough to serve as a legal defence, support quality care and hospital continuity, and feed billing.",
+     "zh": "章首打底的词汇：主观信息=患者自述的东西——症状，比如疼痛程度；客观信息=你观察和测量到的东西——体征，比如一个血压值。每趟出勤的记录都必须两者兼备，而且要完整、准确、可辨读——它既是法律程序中辩护的基石，也支撑着院前照护质量、院内照护的延续和账务。",
+     "hard": true
+    },
+    {
+     "en": "Phase one, notification: someone must tell EMS an emergency exists — usually by telephone or cell phone to the emergency medical dispatcher (EMD), via the universal emergency number, 9-1-1 in most of Canada; less often notification arrives by radio from law enforcement or another public agency.",
+     "zh": "第一阶段，报警：得有人告诉 EMS『出事了』——通常是打电话或手机给急救医疗调度员（EMD），拨的是通用紧急号码（加拿大大部分地区为9-1-1）；较少见的情况是警方或其他公共机构通过无线电报入。",
+     "hard": true
+    },
+    {
+     "en": "Phase two, dispatch: headquarters directs the responding team to the scene. Channels include telephone, pager, fax, two-way radio, and mobile data terminals; digital technology adds speed, privacy, programmability, mobility, and GPS-precise location, and most dispatch centres now run computer-aided dispatch systems that process incoming information and juggle multiple dispatcher tasks automatically.",
+     "zh": "第二阶段，派遣：调度总部把出勤团队指向现场。渠道有电话、寻呼机、传真、双向无线电、车载数据终端；数字技术带来速度、保密、可编程、机动性和 GPS 级精确定位，如今多数调度中心都跑着计算机辅助调度系统——自动处理进线信息、替调度员分担多线任务。",
+     "hard": true
+    },
+    {
+     "en": "Prearrival instructions give the dispatcher a zero response time: a trained EMD talks the caller through life-saving acts before any unit arrives — clearing an obstructed airway, performing chest compressions, guiding use of a naloxone kit, reassuring the patient — while also delivering emotional support and en-route updates to the responding crew. Services train dispatchers specifically so call-taking, dispatch, and prearrival instructions stay consistent.",
+     "zh": "到达前指导让调度员实现『零响应时间』：受训的 EMD 在任何车组抵达之前，就通过电话指挥报警人完成救命动作——解除气道梗阻、做胸外按压、指导使用纳洛酮包、安抚患者——同时给报警人情绪支撑、给赶路的车组滚动更新。各服务专门培训调度员，就是为了让接警、派遣、到达前指导三件事做得前后一致。",
+     "hard": true
+    },
+    {
+     "en": "On scene and rolling: contact direct medical control when care requires a delegated medical act outside your routine medical directives or standing orders — or simply as a consult even when it is inside them. The Heart and Stroke Foundation of Canada example: acquire a 12-lead ECG and either interpret it yourself for ischemic changes or transmit it to medical control for interpretation and early activation of hospital services such as the cardiac catheterization lab. Some systems transmit monitoring data straight to the receiving facility by cellular signal, Bluetooth, or wireless Internet.",
+     "zh": "在现场与途中：当救治涉及常规医疗指令或 standing orders 之外的受委托医疗行为时，要联络直接医疗指挥——即使在指令范围之内，也可以把它当顾问用。加拿大心脏与卒中基金会的例子：采集12导联心电图，要么自己判读缺血性改变，要么传给医疗指挥判读并提前激活院内资源（如心导管室团队）。有些系统还能把监护数据经蜂窝信号、蓝牙或无线网络直传接收医院。",
+     "hard": true
+    },
+    {
+     "en": "The complete system needs more than crew-to-hospital links: all area hospitals linked together (so a disaster's casualties are distributed sensibly and hospitals know what is coming — some regions display live bed availability for diversion decisions); interoperability with police, fire, public utilities, air medical and critical care transport, and poison centres; a backup radio network for when phone lines and frequencies overload during a mass-casualty incident; satellite phones that keep working when the cellular system is down; monitor/defibrillators with built-in telemetry; and awareness of community broadcast systems that can be recruited in a disaster.",
+     "zh": "完整的通讯系统不止『车组—医院』这一条线：区域内所有医院互联（灾难时伤员才能合理分流、医院才知道要接多少人——有的地区还能实时共享床位余量以支持转向决策）；与警察、消防、公用事业、空中医疗与重症转运、毒物中心互联互通；一张备份无线电网，应对大规模伤亡事件时电话线路与频率的过载；蜂窝系统瘫痪时仍然能用的卫星电话；自带遥测传输的监护/除颤仪；还有对社区广播系统的了解——灾难时它们也能被征调进通讯网。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Radio Systems, Frequencies, and Telemetry",
+   "titleZh": "无线电系统、频段与遥测",
+   "points": [
+    {
+     "en": "Radio rides electromagnetic waves, tuned by frequency — how often the wave recurs per second, measured in hertz: kHz is a thousand cycles per second, MHz a million, GHz a billion. The radio spectrum runs from 3 kHz to about 3,000 GHz, and a normal voice channel needs a minimum of 3 kHz. Frequency bands are slices of that spectrum assigned to specific uses; in Canada, federal agencies control frequency allocation, reserving VHF for general emergency communications and UHF assignments for ambulance-to-hospital telemetry.",
+     "zh": "无线电靠电磁波传播，调台调的是频率——波每秒重复的次数，单位赫兹：kHz 是每秒一千次，MHz 一百万次，GHz 十亿次。无线电频谱从 3 kHz 延伸到约 3,000 GHz，一条正常话音信道至少要占 3 kHz。频段就是从频谱里切出来指定专用的片段；在加拿大，频率分配由联邦机构掌管——VHF 留给一般应急通讯，UHF 的指配则用于救护车—医院遥测。",
+     "hard": true
+    },
+    {
+     "en": "The VHF band spans roughly 30 to 175 MHz, split into low band (30 to 50 MHz) and high band (150 to 175 MHz). Low band can reach up to 3,200 km — but unpredictably, because shifting ionospheric conditions cause skip interference with patchy dropouts. High band is almost free of skip at the price of much shorter range; EMS mostly lives in the 150 to 160 MHz slice.",
+     "zh": "VHF 频段大致从 30 到 175 MHz，再分低段（30–50 MHz）与高段（150–175 MHz）。低段传得远——最远可达3,200公里——但极不稳定：电离层条件一变就出现跳跃干扰，通讯东一块西一块地断。高段几乎没有跳跃干扰，代价是传输距离短得多；EMS 主要用 150–160 MHz 这一片。",
+     "hard": true
+    },
+    {
+     "en": "The UHF band runs 300 to 3,000 MHz, with medical traffic around 450 to 470 MHz: zero skip interference, minimal noise, better penetration in dense metropolitan cores, and usually adequate reception inside buildings — but shorter range than VHF, and its energy is readily soaked up by rain, trees, and brush. Radios at 800 MHz or higher go further still: excellent building penetration, minimal interference — and they enable trunking, letting multiple agencies share frequencies, with dispatchers reprogramming radios on the fly so services that never normally talk can link up at an MCI, rescue, or hazmat scene.",
+     "zh": "UHF 频段从 300 到 3,000 MHz，医疗通讯集中在 450–470 MHz 附近：完全没有跳跃干扰、噪声极小、在高楼密集的市区穿透更好、楼内接收通常也够用——但距离比 VHF 短，且能量容易被雨水、树木、灌丛吸掉。800 MHz 及以上的电台更进一步：穿楼一流、干扰极小——还支持集群（trunking），多家机构共享频率，调度员可以现场重编程电台，让平时互不通话的单位在大规模伤亡、救援或危险品现场即刻互联。",
+     "hard": true
+    },
+    {
+     "en": "Biotelemetry — telemetry for short — measures vital signs and transmits them to a distant terminal, ECG first and foremost. The trick: a standard ECG is a low-frequency signal (100 Hz or less) that a voice channel would filter out, so it is encoded onto a reference audio tone (for example 1,000 Hz) whose variations track the heart's electrical events; the receiving end amplifies and decodes it back into an exact replica. Over UHF, ECG telemetry carries only one lead — enough for rhythm interpretation, not for the full 12-lead read that acute coronary syndrome demands; modern systems send complete 12-leads by cellular or mobile Internet before the ambulance arrives.",
+     "zh": "生物遥测——简称遥测——是把生命体征测出来并传到远端终端，头号项目就是心电图。门道在于：标准心电图是低频信号（不超过100 Hz），直接进话音信道会被滤掉，所以要调制到一个参考音频（例如1,000 Hz）上——让音调随心脏电活动起伏——接收端再放大、解码，还原出与原始波形一致的复制品。走 UHF 的心电遥测只能传一个导联——判个心律够用，但确诊急性冠脉综合征需要完整12导联；现代系统用蜂窝或移动互联网，在救护车到院之前就把整份12导联传过去。",
+     "hard": true
+    },
+    {
+     "en": "Four named sources of ECG noise — distortion by extraneous spikes and waves: muscle tremor; loose ECG electrodes; 60-cycle alternating current from transformers, power lines, and electrical equipment; and attenuation of transmitter power from weak batteries or transmitting beyond range.",
+     "zh": "心电噪声——杂乱尖波把图形搅花——的四个点名来源：肌肉震颤；电极片贴得松；来自变压器、电力线和电气设备的60周交流电；以及发射功率衰减——电池没电或超出发射距离。",
+     "hard": true
+    },
+    {
+     "en": "Telemetry's near-death and comeback is a classic exam story: as paramedics grew skilled at dysrhythmia recognition, systems stopped asking physicians to confirm rhythms — then two developments revived it: research proved fibrinolytics work better the earlier they are given in acute MI, and cell phone and fax technology made it possible to transmit a 12-lead from a moving ambulance. Early diagnosis lets EMS bypass the closest hospital for a designated cardiac centre, warn the intervention lab to set up for immediate angioplasty and stenting — or in some systems, deliver fibrinolysis prehospital.",
+     "zh": "遥测的濒死与复活是个经典考试故事：随着救护员心律失常判读越来越熟练，各系统不再要求医师确认心律，遥测眼看要被淘汰——然后两件事把它救了回来：研究证实急性心梗时纤溶药给得越早、再灌注越好；手机与传真技术又让行驶中的救护车能把12导联发出去。提前确诊意味着 EMS 可以绕过最近的医院直奔指定心脏中心、通知介入导管室为到院即刻的血管成形与支架做好准备——有的系统甚至直接在院前给纤溶。",
+     "hard": true
+    },
+    {
+     "en": "Cell phones are just low-power portable radios — 3 watts or less — talking through interconnected repeater stations called cells; low mobile antennas limit unit communications to about 16 to 24 km over average terrain. Their edge over radio: the public can call 9-1-1 free, and built-in GPS tells responders where the patient is — enhanced 9-1-1 can locate the phone even with GPS switched off, and cellular 9-1-1 calls often route through a regional or provincial centre before being forwarded to the right public service answering point. The known weakness: easy access means cellular systems overload and jam in MCIs and disasters, so every service needs a backup communications plan.",
+     "zh": "手机本质上就是低功率便携电台——功率不超过3瓦——通过一串互联的中继站（即『蜂窝』）通话；车载天线离地低，平均地形下单机通讯距离只有约16到24公里。它对无线电的优势：公众可以免费拨9-1-1，内置 GPS 又能告诉救援者患者在哪——增强型9-1-1即使手机关了 GPS 也能定位，而蜂窝网络拨出的9-1-1常常先进区域或省级路由中心、再转往对应的公共安全应答点。它的已知短板：门槛低意味着大规模伤亡和灾难时蜂窝系统会过载瘫痪，所以每个服务都必须备有替代通讯预案。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Modes of Radio Operation and System Building Blocks",
+   "titleZh": "无线电工作模式与系统构件",
+   "points": [
+    {
+     "en": "The three modes, exam-ready: simplex — one frequency, so a unit can transmit or receive but not both at once; duplex — two frequencies used simultaneously, allowing telephone-style talk-and-listen; multiplex — two or more signals (the paramedic's voice plus the patient's ECG) combined for simultaneous transmission on a single frequency, with demultiplexing equipment at the base station to pull them apart.",
+     "zh": "三种模式，按考试口径记：单工（simplex）——只占一个频率，同一时刻要么发要么收，不能兼得；双工（duplex）——同时使用两个频率，实现电话式的边说边听；复用（multiplex）——把两路以上信号（救护员的话音＋患者的心电图）合并在同一频率上同时发射，基站端配解复用设备再把它们拆开。",
+     "hard": true
+    },
+    {
+     "en": "Cell phones increasingly carry ECG telemetry because they beat radio on four counts: full duplex capability, a multitude of available channels, a high-quality signal unlikely to degrade over distance, and much lower capital and maintenance cost. Next frontier: text-to-9-1-1 is in development, with several of Canada's largest cities exploring dispatch triggered by text message.",
+     "zh": "心电遥测越来越多走手机，因为它在四点上胜过无线电：全双工、可用信道多、信号质量高且几乎不随距离衰减、购置与维护成本低得多。下一个前沿：短信报9-1-1正在开发中，加拿大几座最大的城市已在探索由一条短信触发救护车派遣。",
+     "hard": true
+    },
+    {
+     "en": "Base station: at minimum a transmitter, receiver, and antenna; serves as the dispatch and coordination hub, ideally in contact with every element of the system; runs relatively high power — 45 to 275 watts — with the antenna sited on a hill or high building, because a good antenna system can compensate for limited power output and human-made signal distortion.",
+     "zh": "基站：最低配置是发射机、接收机加天线；充当派遣与协调枢纽，理想状态下能联通系统的每一个环节；功率相对高——45到275瓦——天线要架在山头或高楼上，因为一套好天线能弥补功率上限和人为信号干扰的损失。",
+     "hard": true
+    },
+    {
+     "en": "Mobile versus portable: a mobile transceiver is the two-way radio mounted in the vehicle — a 7.5-watt unit reaches 16 to 19 km over slightly hilly terrain (farther over water or flat ground, less among mountains or tall buildings), and today's typical mobiles run 20 to 50 watts. Portable handhelds top out around 5 watts with correspondingly limited range — but their signal can be boosted by retransmission through the vehicle.",
+     "zh": "车载与手持：车载收发机是装在车上的双向电台——7.5瓦的机器在略有起伏的地形上能传16到19公里（水面和平原更远，山区和高楼群缩水），现今典型车载台功率20到50瓦。手持台功率至多5瓦上下，距离相应受限——但它的信号可以借车载设备中继放大。",
+     "hard": true
+    },
+    {
+     "en": "Repeaters and remote consoles: a repeater is a miniature base station — fixed in place or carried on a vehicle — that catches a weak signal and retransmits it at higher power on another frequency, stretching the range of low-power portables so more of the system can hear each other. A remote console, usually in the hospital ED, receives telemetry and voice from the field and transmits back through the base station, linked by dedicated phone lines, microwave, or radio, and equipped with an amplifier and speaker, a telemetry decoder, and a microphone.",
+     "zh": "中继台与远端台：中继台是一座微型基站——或固定安装或随车携带——接住微弱信号后换一个频率、用更大功率重发，把低功率手持台的覆盖撑大，让系统里更多人彼此听得见。远端台通常设在医院急诊科，接收现场传来的遥测与话音、再经基站回传，靠专线电话、微波或无线电与基站相连，配有放大器加扬声器、遥测解码器和送话器。",
+     "hard": true
+    },
+    {
+     "en": "Backup layers: landline telephone links the fixed components — hospitals, public safety services, poison control — and a phone patch through the base station splices a telephone into the radio net, so field paramedics can talk to a physician at home. Cell phones round it out: cheaper than radios, clearer signal, and able to reach anyone with a telephone — the family physician, an injured child's parent, or a hazmat expert in another province.",
+     "zh": "备份层：固话专线串起系统的固定节点——医院、公共安全机构、毒物控制中心——而经基站的电话接驳（patch）能把一部电话接进无线电网，让现场救护员和在家的医师直接通话。手机补上最后一环：比电台便宜、信号更清晰，还能联系上任何有电话的人——家庭医生、受伤孩子的父母、或者外省的危险品专家。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Radio Discipline and the Verbal Report",
+   "titleZh": "电台纪律与口头汇报",
+   "points": [
+    {
+     "en": "The federal government owns the airwaves: it licenses stations, allocates frequencies, sets technical standards, and enforces the rules — monitoring transmissions, spot-checking base stations, and fining violators. Obscenities and non-medical messages are forbidden on EMS frequencies; a personal message means radioing the paramedic to phone the base, never chatting on air. Profanity can draw civil monetary penalties, licence revocation, or a denied renewal.",
+     "zh": "电波归联邦政府管：发照、分配频率、定技术标准、执法——监听各频率、突击抽查基站、违规就罚款。EMS 频率上禁止污言秽语和与医疗无关的讯息；有私事就用电台通知对方『打电话回基地』，绝不在空中闲聊。说脏话可招致民事罚款、吊销执照或续照被拒。",
+     "hard": true
+    },
+    {
+     "en": "Communication has four parts — sender, clear message, receiver, feedback loop — and radio clarity has drills: listen first so you never cut into another transmission; press the transmit key at least 1 second before speaking so your opening is not clipped; call the other unit first, then identify yourself ('Foothills Hospital, this is Medic 3' — reversing it forces a wasted 'what unit is calling?'); hold the microphone about 5 to 8 cm from your mouth; never shout (it distorts), never whisper (it does not transmit), keep a normal pitch and an emotion-free voice.",
+     "zh": "沟通有四要素——发送者、清晰的讯息、接收者、反馈回路——而电台清晰度靠操练：先听再说，绝不切进别人的通话；按下发射键至少1秒后再开口，开头的字才不会被吃掉；先呼对方台号、再报自己（『Foothills 医院，这里是 Medic 3』——顺序反了就得多来一轮『哪个单位在呼叫？』的浪费）；话筒离嘴大约5到8厘米；不吼（吼叫失真）、不耳语（传不出去），音调正常、声音里不带情绪。",
+     "hard": true
+    },
+    {
+     "en": "More discipline: keep transmissions brief — break a long message into 30-second segments and confirm reception after each; skip air-wasting phrases ('be advised', 'please', 'thank you'); spell confusable words with the international phonetic alphabet ('Dr. WHISKEY-INDIA-LIMA-BRAVO-YANKEE, Wilby'); give confusable numbers whole and then digit by digit ('respirations are sixteen, that is, one-six'); say 'affirmative' and 'negative' because 'yes' and 'no' vanish in static; echo every order back ('That is lidocaine, 75 milligrams, repeat, 75 milligrams, slowly IV. Is that confirmed?') and question any order you did not hear or understand.",
+     "zh": "纪律继续：发话要短——长讯息切成30秒一段，每段结束确认对方收到；砍掉浪费空时的词（『be advised』『请』『谢谢』）；容易听岔的词用国际音标字母拼出（『Wilby 医生——WHISKEY-INDIA-LIMA-BRAVO-YANKEE』）；容易听岔的数字先整读再逐位读（『呼吸十六，即一-六』）；用『affirmative/negative』代替 yes/no——后两个词在杂音里说没就没；每条医嘱都要复诵（『利多卡因75毫克，重复，75毫克，缓慢静推，确认吗？』），没听清或没听懂的医嘱必须追问。",
+     "hard": true
+    },
+    {
+     "en": "Anyone may be listening — ED staff, a patient at another hospital's front desk, a 12-year-old with a scanner — so privacy discipline is absolute: no patient names on air, no personal information; sensitive cases (sexual assault, psychiatric problems, confidential communicable disease history such as HIV status) travel by established code or wait for face-to-face at the ED. Cell phones are not exempt: market scanners tune into cellular frequencies. Stay impersonal ('we', not 'I'; 'Sergeant York', not 'Billy'), and never play comedian or critic on a medical frequency.",
+     "zh": "任何人都可能在收听——急诊科员工、另一家医院前台正在登记的患者、家里玩扫频仪的12岁孩子——所以隐私纪律没有弹性：空中不报患者姓名、不传个人信息；敏感案件（性侵、精神科问题、保密的传染病史如 HIV 状态）要么走既定代码，要么留到急诊科当面说。手机不豁免：市售扫频仪照样能收蜂窝频率。措辞保持非个人化（说『我们』不说『我』；称『York 警长』不叫『Billy』），更不许在医疗频率上说笑或嘲讽。",
+     "hard": true
+    },
+    {
+     "en": "Radio codes existed for four reasons: communication security, shorter air time, less misunderstanding through noise, and keeping the patient, family, and bystanders from following what is said — useful when your assessment ('probable acute MI, very serious') would alarm the patient. Rules of use: codes must be simple, standardized within the region, and posted at every radio terminal; the old ten-code system has been phased out in many EMS systems; and during an MCI, when unfamiliar personnel staff the radios and everyone is anxious, abandon codes for plain words everyone understands.",
+     "zh": "无线电代码的四个存在理由：通讯保密、压缩空时、减少噪音造成的误解、以及不让患者/家属/旁观者听懂内容——当你的判断（『疑似急性心梗，情况很重』）会吓到患者时特别有用。使用规则：代码要简单、区域内统一、张贴在每个电台终端旁；老式 ten-code 在许多 EMS 系统已被淘汰；大规模伤亡事件时电台常由不熟悉代码的人值守、人人紧张——这时要放弃代码，改说人人都懂的白话。",
+     "hard": true
+    },
+    {
+     "en": "The hospital radio report has a fixed order — nine items: 1) patient's age and sex; 2) chief complaint; 3) brief, pertinent history of the present illness or injury; 4) other relevant medical history — underlying conditions, medications, important allergies; 5) level of consciousness and degree of distress; 6) vital signs; 7) pertinent physical findings in head-to-toe order; 8) ECG findings; 9) treatment given and response. Done right it takes under 30 seconds; done ad lib it degenerates into the physician dragging facts out question by question. Since anyone can be rattled under pressure, write the format on a card fixed to your handheld or dashboard.",
+     "zh": "向医院的电台汇报有固定顺序——九项：① 患者年龄与性别；② 主诉；③ 简短而切题的现病史/受伤经过；④ 其他相关病史——基础疾病、用药、重要过敏；⑤ 意识水平与痛苦程度；⑥ 生命体征；⑦ 从头到脚顺序的阳性体格发现；⑧ 心电图所见；⑨ 已给的处置及反应。照着做，30秒以内说完；即兴发挥，就退化成医师一问一答地往外抠信息。谁都可能在压力下大脑一片空白，所以把这套格式写在卡片上，贴在手台或仪表板上。",
+     "hard": true
+    },
+    {
+     "en": "SBAR is the cross-checkable alternative many hospitals and EMS systems have adopted for handoffs and patches: S — Situation: identify yourself, identify the patient, describe chief complaint, symptoms, mechanism of injury; B — Background: past medical history, medications, allergies; A — Assessment: clinical impression, vital signs, physical exam, treatment provided; R — Recommendation: recommend immediate actions when applicable.",
+     "zh": "SBAR 是许多医院和 EMS 系统在交接与电台请示时采用的结构化替代格式：S——情境：报自己身份、报患者身份、说主诉、症状、受伤机制；B——背景：既往病史、用药、过敏；A——评估：临床印象、生命体征、体格检查、已给处置；R——建议：适用时提出应立即采取的行动。",
+     "hard": true
+    },
+    {
+     "en": "The bedside transfer has its own etiquette: mind what you say in the patient's hearing — step outside the room or lower your voice for sensitive history; add the details that never made the radio report; and hand over only to a practitioner of an equal or higher level of care, which is what protects you from abandonment while preserving confidentiality and continuity. A copy of the written report often stays with the receiving facility — follow local protocols on providing PCRs.",
+     "zh": "床旁交接有自己的礼数：注意患者听得见什么——敏感病史要么走出病房说、要么压低声音；补上电台汇报里没来得及讲的细节；而且只能移交给照护级别等于或高于你的执业者——这既是防『遗弃』指控的关键，也守住了保密与照护延续。书面报告通常留一份给接收机构——按本地 PCR 提交规程办。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Emergency Medical Dispatcher",
+   "titleZh": "急救医疗调度员（EMD）",
+   "points": [
+    {
+     "en": "The EMD is far more than a sender of ambulances: they extract maximum information about the emergency, direct the right vehicle to the scene, advise the caller until help arrives, monitor and coordinate field communications, and keep the written record of the response. Phone manners are protocol: answer within two or three rings, identify yourself and the agency, speak directly into the mouthpiece, stay calm and professional, and take charge of the conversation — safety questions come first. In cardiac arrest, dispatcher-delivered CPR instructions have been shown to improve survival.",
+     "zh": "EMD 远不只是『派车的』：他们要把突发事件的信息挖到最深、把对的车派往现场、在救援抵达前指导报警人、监控并协调现场通讯、还要保存这次响应的书面记录。接线礼仪就是规程：电话两三声内接起、报出自己和机构名称、对准话筒说话、保持冷静专业、并掌控对话主导权——安全问题永远先问。心搏骤停时，调度员电话指导的 CPR 已被证明能提高生存率。",
+     "hard": true
+    },
+    {
+     "en": "Call-taking is scripted, not improvised: the EMD works through predetermined call-taking and call-processing algorithms (the opening scripted questions are called case entry — is the patient conscious? breathing? bleeding badly?), so the interview is time-efficient, catches immediate threats to life, and is reproducible no matter who takes the call. The minimum data set: the exact location (street name and number, the right geographic designation — East Maple versus West Maple — the community, and rural landmarks); the call-back number; the caller's perception of the problem; and condition details that decide urgency and prearrival instructions.",
+     "zh": "接警是照本宣科，不是自由发挥：EMD 按预设的接警与处理算法走（开头那串脚本化问题叫 case entry——患者清醒吗？有呼吸吗？出血凶猛吗？），这样问话省时、能第一时间揪出致命威胁、而且不论换谁接线结果都一致。最低信息集：精确位置（街名与门牌号、正确的方位标注——East Maple 还是 West Maple——所在社区、乡村地区的地标）；回拨号码；报警人对问题的自述；以及决定紧急度与是否给到达前指导的伤病细节。",
+     "hard": true
+    },
+    {
+     "en": "Why the call-back number matters — four reasons: the line may cut out; crews often need to phone the caller when they cannot find the address; supplying a number deters prank callers; and the exchange can help pinpoint a traveller who does not know where they are. Enhanced 9-1-1 auto-captures number and location, leaving the EMD to confirm on screen. For a motor vehicle collision, add: the kinds of vehicles (and a truck's cargo — dynamite demands a different approach than bananas), the number injured and estimated severity, and scene hazards — heavy traffic, downed power lines, fire, spilled chemicals, peculiar odours — which tell the EMD which other agencies to call.",
+     "zh": "回拨号码为什么重要——四个理由：通话可能中断；车组找不到地址时常要回拨报警人；留电话能吓退恶作剧；号码归属还能帮忙定位不知自己身在何处的过路人。增强型9-1-1自动抓取号码与位置，EMD 只需在屏幕上确认。机动车碰撞另加三问：车辆种类（卡车还要问载货——拉炸药和拉香蕉是两种打法）；伤者人数与大致伤情；现场危险——车流、断落电线、火情、化学品泄漏、异味——这些决定 EMD 还要通知哪些机构。",
+     "hard": true
+    },
+    {
+     "en": "Dispatch and beyond: the crew choice depends on the nature and location of the call and unit availability; larger centres split call-taking from dispatching so one EMD stays on the line while another sends the ambulance. Mobile data terminals receive the location, priority, and details directly, with GPS-plus-traffic routing computed automatically. En-route relays serve two purposes: telling you whether to run with emergency warning devices, and letting you prepare for scene tasks — assembling delivery equipment, warning the cardiac centre. The Medical Priority Dispatch System (MPDS) formalizes triage: interrogative questions classify 9-1-1 calls by urgency, driving what resources go and on what priority.",
+     "zh": "派遣及其后：派哪组车取决于呼叫性质、地点和当时的单位可用性；大型调度中心把接警与派遣分开，一名 EMD 全程守着电话、另一名同时派车。车载数据终端直接收到位置、优先级和详情，系统还会结合 GPS 与路况自动算好路线。途中通报有两个用途：告诉你要不要开警灯警笛赶路；让你提前准备现场任务——组装接生器材、提前知会心脏中心。医疗优先级调度系统（MPDS）把分诊制度化：一串递进的问题把9-1-1呼叫按紧急度分类，决定派什么资源、用什么优先级。",
+     "hard": true
+    },
+    {
+     "en": "Six timestamps the crew radios in and the EMD records — departed for the scene, arrived on scene, patient contact, left the scene, arrived at hospital, back in service — plus the time the call was received. Nobody expects a paramedic mid-resuscitation to watch the clock; the communications centre keeps the times, and those metrics drive medical, administrative, and academic evaluation: deployment decisions from staffing patterns to station locations to patrol routes and staging. Times are documented in military time, on the radio and on paper.",
+     "zh": "车组报、EMD 记的六个时间戳——出发赴现场、到达现场、接触患者、离开现场、到达医院、恢复待命——外加接警时刻本身。没人指望抢救到一半的救护员盯着表；时间由通讯中心统一记录，而这些数据支撑着医疗、行政与学术三个层面的评估：从排班模式、站点选址到巡航路线和资源预置的部署决策全靠它。时间一律用军用24小时制——电台里这么报，纸面上也这么写。",
+     "hard": true
+    },
+    {
+     "en": "When communications degrade: radio tower failures, computer collisions, and audio faults happen — know and follow your local radio-failure protocol. Human factors count too: for communities whose languages you do not speak, know your telephone interpreter options and the multilingual members of your service before you meet the patient, and consider cultural-organization training sessions to lower communication barriers.",
+     "zh": "通讯掉链子时：信号塔故障、计算机冲突、音频问题都会发生——要熟悉并执行本地的电台失效预案。人的因素同样算数：面对语言不通的社区，要在见到患者之前就摸清电话翻译渠道和本服务里会多语的同事，还可以请社区文化组织来办培训，把沟通壁垒提前拆掉。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Documentation: Building the Patient Care Report",
+   "titleZh": "文书：把患者照护报告写扎实",
+   "points": [
+    {
+     "en": "The report answers to many names — patient care report (PCR), prehospital patient report, ambulance call report, trip sheet, run sheet, ePCR, electronic health record — but one job: it is the only written record of the call, the legal record, and part of the patient's medical record and the hospital's ED chart. Division of labour: the verbal report is a brief summary of findings and events; the written report is the detailed account from the moment the call began to its conclusion, painting a picture any reader can follow.",
+     "zh": "这份报告名字很多——患者照护报告（PCR）、院前患者报告、救护出勤报告、trip sheet、run sheet、ePCR、电子健康档案——职责只有一个：它是这趟出勤唯一的书面记录、法律记录，也是患者病历和医院急诊病历的一部分。分工明确：口头汇报是发现与经过的简报；书面报告则是从接警那一刻到结案的详细叙述，要写到任何读者都能在脑中还原现场。",
+     "hard": true
+    },
+    {
+     "en": "Whose subjectivity is allowed: the patient's — their statements about symptoms belong in the report; yours does not — no bias, no personal opinions, no jargon, no slang, nothing libellous. Nancy's rule of placement: symptoms belong in the history, signs belong in the physical examination. The stakes of sloppiness: omissions and errors can cascade into care errors downstream, and improper reports invite litigation, job loss, and a stained professional reputation — while your memory will fail in 5 years, the written report never changes.",
+     "zh": "谁的主观可以进报告：患者的——他们对症状的自述属于报告内容；你的不行——不带偏见、不写个人意见、不用行话俚语、不写任何可构成诽谤的话。Nancy 的归位法则：症状写进病史，体征写进体格检查。马虎的代价：漏项和错误会顺流而下酿成后续救治错误，不合格的报告招来诉讼、丢饭碗、砸职业名声——而你的记忆五年后必然靠不住，白纸黑字却一个字都不会变。",
+     "hard": true
+    },
+    {
+     "en": "Write every PCR as if your medical director will read it — because they may: reports feed quality assurance reviews, call reviews and medical audits, per-paramedic skill counts (intubations, medication administrations), billing that keeps the agency solvent, provincially mandated data submission (call volumes, call types, care provided, outcomes), and the research databases that justify or retire prehospital interventions.",
+     "zh": "写每一份 PCR 都当作医疗总监会亲自过目——因为真的可能：报告要喂给质量保证审查、病例复盘与医疗审计、按人头统计的技能次数（插管、给药）、维持机构运转的计费、省里强制的数据上报（呼叫量、呼叫类型、所给处置、患者结局），还有那些决定某项院前干预是去是留的研究数据库。",
+     "hard": true
+    },
+    {
+     "en": "Eight times to document on every report: time of call, time of dispatch, time of arrival at the scene, time with patient — which may differ from arrival, as when the patient is on the 17th floor of a high-rise — time of medication administration, time of departure from the scene, time of arrival at the medical facility, and time back in service. Compare your times against the dispatcher's record for accuracy.",
+     "zh": "每份报告要记的八个时间：接警时刻、派遣时刻、到达现场时刻、接触患者时刻——它和到达时刻可能不同，比如患者在高层建筑的17楼——给药时刻、离开现场时刻、抵达医疗机构时刻、恢复待命时刻。写完拿自己的时间和调度记录对一遍，保证准确。",
+     "hard": true
+    },
+    {
+     "en": "Narrative specificity is the difference between documentation and hand-waving: 'followed ACLS protocols' does not cut it — the standard reads like 'intubated with a 7.5 tracheal tube, ventilated with oxygen at 15 L/min, placement confirmed by breath sounds, chest rise, and tube check, secured at the 26 mark at the teeth, ETCO2 and SpO2 readings recorded.' Every direct medical control order and consultation goes in the narrative; 'see refusal on back' is named as exactly what not to write.",
+     "zh": "叙事的具体程度，就是『文书』与『糊弄』的分界：写『按 ACLS 协议处理』不合格——合格的样子是『以7.5号气管导管插管，15 L/min 氧气辅助通气，经呼吸音、胸廓起伏及导管测试确认位置，固定于门齿26刻度，记录 ETCO2 与 SpO2 读数』。每一条直接医疗指挥的医嘱和咨询都要写进叙事；『拒绝转运见背面』则被点名为反面教材。",
+     "hard": true
+    },
+    {
+     "en": "Four narrative formats to know by name: chronologic order — the story from dispatch to completion; SOAP — Subjective, Objective, Assessment, Plan; CHARTE — Chief complaint, History, Assessment, Treatment, Transport, Exceptions; and the body systems approach — head-to-toe by system, which the book flags as often too time-consuming for EMS. Pick the format your agency approves and use it every time: switching mid-stream is how essential details get dropped, and findings should always be reported in the same sequence regardless of the order you obtained them.",
+     "zh": "四种叙事格式要能报出名字：时间顺序式——从派遣讲到结案的完整故事；SOAP——主观、客观、评估、计划；CHARTE——主诉、病史、评估、处置、转运、例外；身体系统式——按系统从头到脚，书中点明它对 EMS 往往太耗时。选定机构认可的一种就每次都用它：中途换格式正是关键细节被弄丢的经典方式，而且发现要永远按同一顺序汇报——不管你实际获取它们的先后。",
+     "hard": true
+    },
+    {
+     "en": "Two content habits that prove your work: pertinent negatives — negative findings that warrant no intervention but show the exam happened ('denies shortness of breath; denies radiation of the chest pain'); and quotation discipline — any spoken account from the patient or bystanders goes down in their exact words, in quotation marks, with the speaker identified: statements about behaviour, mechanism of injury, weapons, disposition of valuables, admissions of suicidal intent, and bystander first aid. Also document mutual aid used (helicopters, rescue teams) and unusual occurrences — restraints applied, an extra lifting crew, a prolonged extrication explaining a long scene time.",
+     "zh": "两个能证明你干了活的内容习惯：阴性相关项——无需处置、但能证明你问了查了的阴性发现（『否认呼吸困难；否认胸痛放射』）；引语纪律——患者或旁观者的任何口头陈述都按原话、加引号、注明说话人：关于患者行为、受伤机制、武器、财物去向、自杀意图的自认、旁观者施救的说法都算。另外要记下动用的支援力量（直升机、救援队）和异常情况——上了约束带、加叫了抬抱人手、解释现场滞留过长的漫长破拆。",
+     "hard": true
+    },
+    {
+     "en": "Mechanics of a properly written report: every section completed even when not applicable — blank checkboxes raise questions about completeness; paper reports legible, in ink (black or blue standard), free of spills, stored securely until they reach the agency office; completed promptly, because stacking calls before writing means forgotten details or worse, wrong ones; some jurisdictions require a copy at the receiving facility within a set window such as 24 hours. Problems on a call — a crew injury, an infectious exposure, a delayed response, a scene conflict, an MCI — trigger the agency's special incident report. Review every PCR for completeness, accuracy, grammar, spelling, and terminology before submitting.",
+     "zh": "合格报告的工艺细节：每个栏目都要填、包括不适用的——空着的勾选框会让人质疑报告完整性；纸质报告须字迹可辨、用墨水笔写（标准色黑或蓝）、不沾污渍、妥善保管直至交回机构办公室；要及时完成——连跑几趟再补写，细节要么忘光、要么更糟地写错；有的辖区要求在规定时限内（如24小时）给接收机构留一份副本。出勤中出的状况——队员受伤、感染暴露、响应延迟、现场冲突、大规模伤亡——按机构规定另填特殊事件报告。每份 PCR 提交前都过一遍：完整性、准确性、语法、拼写、术语。",
+     "hard": true
+    },
+    {
+     "en": "Refusal documentation, the hardest kind: a competent adult may refuse care, and your job is making the refusal informed — explain in detail, in language the person understands, the consequences up to and including possible death. Assess and document mental status (oriented to person, time, place; no nonsensical statements — impairment can come from injury, electrolyte imbalance, hypoglycemia, mental illness, drugs or alcohol); attempt a full history, assessment, and baseline vital signs, and document any refusal of the assessment itself; bring in direct medical control when an obvious injury or condition needs immediate attention; have a witness throughout — doubly so if the patient will not sign — recording the witness's observations, name, and contact details; and always explain, politely, that the patient may change their mind and call EMS back.",
+     "zh": "拒绝救治的文书是最难写的一种：有行为能力的成年人有权拒绝救治，你的任务是让这次拒绝『知情』——用对方听得懂的语言，把后果讲透，直到『可能死亡』这一层。评估并记录精神状态（人物、时间、地点定向力齐全；无语无伦次——损伤、电解质紊乱、低血糖、精神疾病、毒品或酒精都可造成受损）；尽力完成完整病史、评估和基线生命体征，患者连评估都拒绝的话也要写明；有明显伤情或急症时请直接医疗指挥介入并记录经过；全程要有见证人——患者拒绝签字时更是如此——记下见证人的所见、姓名和联系方式；最后永远礼貌地讲清：患者随时可以改主意、再叫 EMS。",
+     "hard": true
+    },
+    {
+     "en": "Two refusal extensions: a patient who accepts transport but refuses one procedure — IV therapy, spinal motion restriction — gets the full refusal treatment for that procedure: risks explained, signature acknowledging the partial refusal, witness, complete documentation. And every nontransport of a competent refuser needs a documented follow-up care plan (discharge instructions): a description of the current problem, actions for the patient to take, follow-up with the primary care physician, and explicit triggers for calling EMS again — using the agency's release forms where they exist.",
+     "zh": "拒绝的两个延伸场景：患者接受转运却拒绝某个具体操作——静脉输液、脊柱活动限制——那就对这个操作走一遍完整的拒绝流程：讲清风险、请患者签字确认部分拒绝、有见证人、文书写全。而每一次有行为能力者拒绝后的不转运，都要留下成文的后续照护计划（出院指导）：当前问题的描述、患者接下来该做什么、找家庭医生随访、以及哪些情况必须再叫 EMS——机构有专用释放表格的就用表格。",
+     "hard": true
+    },
+    {
+     "en": "The one legal way to fix an error on a written PCR: draw a single horizontal line through it, initial and date the line, and write the correct information beside it. Never erase, scribble out, or reach for correction fluid or tape — the PCR is a legal document. Revisions carry the date, time, and purpose, the original is never discarded or destroyed, and only the person who wrote the original may revise it — additions by anyone else undermine the report's authenticity, and administrative handling (data entry, billing, QA) must never alter its content. Late material goes in an addendum or supplemental narrative — marked as a late entry with reason, date, time, and signature, physically attached to the original.",
+     "zh": "纸质 PCR 上改错只有一种合法写法：在错处画一条水平单线，在线旁签姓名缩写并注日期，把正确内容写在旁边。绝不涂抹、不乱划、不碰修正液和修正带——PCR 是法律文件。修订版要注明日期、时间和修订原因，原件永远不得丢弃或销毁，而且只有原作者本人可以修订——别人事后添加会动摇报告的真实性，行政流转（录入、计费、质量审查）也绝不许改动内容。事后想起的材料走补录或补充叙事——标明属于迟记、写清原因、日期、时间并签名，实体附在原件上。",
+     "hard": true
+    },
+    {
+     "en": "Lost reports and the digital fix: a lost PCR is a legal problem for the paramedic, the agency, and the medical director alike; do not keep personal copies (track internship skill counts through your training centre's policy instead), and know that recreating a lost PCR is irresponsible and possibly illegal. Electronic PCRs shrink the failure surface: dispatch data (location, priority, event times) upload automatically, monitor metrics — ECG, pulse oximetry, heart rate, respiratory rate, end-tidal CO2, blood pressure — flow in from the defibrillator, a copy emails to the receiving facility, and QA and billing get instant access. The cautionary tale for paper and pixels alike: an undocumented en-route medication can get the patient overmedicated at hospital — and Nancy's line stands: if you do not document it, you cannot prove you did it.",
+     "zh": "报告丢失与数字化解法：一份丢失的 PCR 对救护员、机构和医疗总监三方都是法律麻烦；不要私自留副本（实习技能次数按培训中心的规定另行统计），也要明白事后凭空重写丢失的 PCR 既不负责任、还可能违法。电子 PCR 把出错面收窄：调度数据（位置、优先级、事件时间）自动上传，监护参数——心电、血氧、心率、呼吸、呼气末二氧化碳、血压——从除颤监护仪直接灌入，副本自动发给接收机构，质量审查和计费即时可查。纸笔与像素通用的警世故事：途中给了药却没记录，患者到院可能被重复给药——Nancy 那句话立在这里：没写下来，你就无法证明你做过。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Minimum bandwidth for a normal voice channel",
+   "itemZh": "一条正常话音信道的最低带宽",
+   "value": "3 kHz"
+  },
+  {
+   "itemEn": "VHF band / low band / high band / EMS slice",
+   "itemZh": "VHF 频段 / 低段 / 高段 / EMS 常用段",
+   "value": "30–175 / 30–50 / 150–175 / 150–160 MHz"
+  },
+  {
+   "itemEn": "VHF low-band maximum range (with skip interference)",
+   "itemZh": "VHF 低段最远传输距离（伴跳跃干扰）",
+   "value": "可达 3,200 km"
+  },
+  {
+   "itemEn": "UHF band / medical communications slice",
+   "itemZh": "UHF 频段 / 医疗通讯常用段",
+   "value": "300–3,000 / 450–470 MHz"
+  },
+  {
+   "itemEn": "Trunking-capable radio frequency",
+   "itemZh": "支持集群（trunking）的电台频率",
+   "value": "800 MHz 及以上"
+  },
+  {
+   "itemEn": "Power outputs: base station / typical mobile / portable / cell phone",
+   "itemZh": "功率：基站 / 典型车载台 / 手持台 / 手机",
+   "value": "45–275 W / 20–50 W / ≤5 W / ≤3 W"
+  },
+  {
+   "itemEn": "7.5-watt mobile transmitter range over slightly hilly terrain",
+   "itemZh": "7.5 瓦车载发射机在略起伏地形的传输距离",
+   "value": "16–19 km"
+  },
+  {
+   "itemEn": "Microphone distance / transmit-key lead time / long-message segments",
+   "itemZh": "话筒距离 / 发射键提前量 / 长讯息分段",
+   "value": "5–8 cm / ≥1 秒 / 每段 30 秒"
+  },
+  {
+   "itemEn": "Hospital radio report: items and duration",
+   "itemZh": "向医院电台汇报：条目数与时长",
+   "value": "9 项固定顺序，<30 秒讲完"
+  },
+  {
+   "itemEn": "ECG signal frequency / encoding reference tone",
+   "itemZh": "心电信号频率 / 编码参考音",
+   "value": "≤100 Hz / 1,000 Hz"
+  },
+  {
+   "itemEn": "EMD answers the phone within",
+   "itemZh": "EMD 接听电话的时限",
+   "value": "2–3 声铃响"
+  },
+  {
+   "itemEn": "Incident times to document on the PCR",
+   "itemZh": "PCR 上要记录的事件时间数",
+   "value": "8 个（接警→派遣→到场→接触→给药→离场→到院→复位）"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "Nerves wipe memories: write the hospital-report format on a card and tape it to your handheld radio or the dashboard, so the sequence survives even when you are rattled.",
+   "zh": "紧张会清空大脑：把汇报格式写在卡片上，贴在手台或仪表板上——哪怕你被现场搞得心慌，顺序也丢不了。"
+  },
+  {
+   "en": "Reporting a 'probable acute MI, very serious' with the patient listening raises their anxiety and can worsen their condition — do not sit right next to the patient while transmitting your report, and at the bedside handover, step outside the room or drop your voice for the sensitive parts.",
+   "zh": "当着患者的面报『疑似急性心梗，情况很重』，只会推高其焦虑、甚至加重病情——发报告时别正坐在患者身边；床旁交接时，敏感内容要么出病房说、要么压低声音。"
+  },
+  {
+   "en": "Every order from medical control gets echoed back word for word — 'lidocaine, 75 milligrams, repeat, 75 milligrams, slowly IV, is that confirmed?' — and any order you did not hear clearly or do not understand gets questioned, never guessed at.",
+   "zh": "医疗指挥的每条医嘱都要逐字复诵——『利多卡因75毫克，重复，75毫克，缓慢静推，确认吗？』——没听清、没听懂的医嘱只能追问，绝不能靠猜。"
+  },
+  {
+   "en": "Pertinent negatives are cheap insurance: one line — 'denies shortness of breath, denies radiation of the pain' — proves the thorough exam happened; silence on those points looks like you never asked.",
+   "zh": "阴性相关项是最便宜的保险：一句『否认呼吸困难、否认疼痛放射』就能证明你问全查全了；只字不提，看上去就像你根本没问。"
+  },
+  {
+   "en": "Learn the MCI triage tags before the MCI: where they are stored, what fields they need, and when your agency expects them — a mass-casualty scene is the wrong classroom. And if a response is cancelled, record who cancelled it; if the patient left before you arrived, record what is known of the departure.",
+   "zh": "在大规模伤亡发生之前就把检伤分类牌学会：存放在哪、要填什么、机构规定何时启用——真到了群伤现场再学就晚了。另外：出勤被取消要记下是谁取消的；患者在你到场前已离开，要把已知的离开情况写清。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Simplex vs duplex vs multiplex: simplex = one frequency, transmit or receive but never both at once; duplex = two frequencies, simultaneous two-way like a telephone; multiplex = several signals (voice plus ECG) sharing one frequency at the same time.",
+   "zh": "单工 vs 双工 vs 复用：单工=一个频率，收发不能同时；双工=两个频率，像打电话一样边说边听；复用=多路信号（话音＋心电）挤在同一频率上同时传。"
+  },
+  {
+   "en": "VHF low band 'reaches farthest' but is the least reliable — ionospheric skip drops it unpredictably; UHF penetrates buildings best but has the shortest reach and gets eaten by rain and foliage. Range and reliability pull in opposite directions.",
+   "zh": "VHF 低段『传得最远』却最不可靠——电离层跳跃说断就断；UHF 穿楼最强却传得最近、还会被雨水和植被吃掉。距离和可靠性是一对反向拉扯的力。"
+  },
+  {
+   "en": "Subjective belongs to the patient, not to you: the patient's symptom statements go in the report; your opinions, bias, and editorializing do not. Symptoms live in the history; signs live in the physical examination.",
+   "zh": "『主观』属于患者，不属于你：患者的症状自述要写进报告；你的意见、偏见和评头论足不许进。症状归病史，体征归体格检查。"
+  },
+  {
+   "en": "Verbal report vs written report: the radio and bedside reports are deliberately brief summaries; the PCR is the detailed account of the entire call. Assuming the handover covered it is how details vanish from the permanent record.",
+   "zh": "口头汇报 vs 书面报告：电台和床旁汇报是刻意求短的摘要；PCR 才是整趟出勤的详细记载。以为『交接时说过了』就不用写——细节就是这样从永久记录里蒸发的。"
+  },
+  {
+   "en": "Correcting vs corrupting a report: the single-line-initial-date method is the only legal fix; erasing, scribbling, correction fluid, discarding the original, or letting anyone but the original author revise it turns a correction into a question of authenticity.",
+   "zh": "改报告 vs 毁报告：『单线划改＋缩写签名＋日期』是唯一合法改法；擦除、乱涂、修正液、扔掉原件、或让作者以外的任何人动笔，都会把一次更正变成一桩真实性疑案。"
+  },
+  {
+   "en": "'Followed ACLS protocols' feels like documentation but proves nothing: without tube size, depth mark, confirmation methods, and readings, there is no evidence of what was actually done — and what you cannot prove, you did not do.",
+   "zh": "『按 ACLS 协议处理』看着像文书，实则什么都证明不了：没有导管型号、深度刻度、确认方法和读数，就没有任何证据表明实际做了什么——而证明不了的事，等于没做。"
+  },
+  {
+   "en": "Codes protect and codes endanger: they shield the patient from alarming assessments and shorten air time — but at an MCI, with unfamiliar personnel on the radios and everyone anxious, codes breed error: switch to plain language everyone understands.",
+   "zh": "代码能保护也能坏事：平时它挡住吓人的判断词、压缩空时——可到了大规模伤亡现场，电台后坐着不熟代码的人、人人紧张，代码只会制造误会：这时要换成人人听得懂的白话。"
+  },
+  {
+   "en": "Time of arrival is not time with patient: the clock difference between pulling up and physically reaching a patient on the 17th floor matters — document both, or response-time data and clinical timelines both lie.",
+   "zh": "到达时刻不等于接触患者时刻：车停稳与真正走到17楼患者身边之间的那段时间是要紧的——两个时刻都要记，否则响应时间数据和临床时间线就双双失真。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "SBAR",
+   "en": "Situation (who you are, who the patient is, chief complaint and MOI), Background (history, meds, allergies), Assessment (impression, vitals, exam, treatment), Recommendation (immediate actions).",
+   "zh": "情境（你是谁、患者是谁、主诉与受伤机制）、背景（病史、用药、过敏）、评估（临床印象、生命体征、查体、已给处置）、建议（应立即采取的行动）。"
+  },
+  {
+   "name": "SOAP / CHARTE",
+   "en": "Two narrative skeletons: SOAP = Subjective, Objective, Assessment, Plan; CHARTE = Chief complaint, History, Assessment, Treatment, Transport, Exceptions.",
+   "zh": "两副叙事骨架：SOAP=主观、客观、评估、计划；CHARTE=主诉、病史、评估、处置、转运、例外。"
+  },
+  {
+   "name": "呼叫顺序：先人后己",
+   "en": "On air, call the other unit first, yourself second — 'Foothills Hospital, this is Medic 3' — so they are already listening when your identity arrives.",
+   "zh": "开口先呼对方、后报自己——『Foothills 医院，这里是 Medic 3』——对方被点名时已竖起耳朵，你的台号一次就能被听见。"
+  },
+  {
+   "name": "报告九链",
+   "en": "The hospital report chain: age/sex → chief complaint → present illness → relevant history/meds/allergies → LOC and distress → vitals → head-to-toe findings → ECG → treatment and response.",
+   "zh": "医院汇报九连环：年龄性别→主诉→现病史→相关既往史/用药/过敏→意识与痛苦程度→生命体征→从头到脚的阳性发现→心电图→处置与反应。"
+  },
+  {
+   "name": "改错三件套",
+   "en": "Fixing a written error takes exactly three moves: one line through, initial and date, correct text beside. Anything more is tampering.",
+   "zh": "纸面改错只有三个动作：划一条线、签缩写注日期、旁边写上正确内容。多一个动作都算篡改。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Recite the nine items of the hospital radio report, in order.",
+   "qZh": "按顺序背出向医院电台汇报的九项内容。",
+   "aEn": "1) Age and sex; 2) chief complaint; 3) brief pertinent history of the present illness or injury; 4) other relevant history — underlying conditions, medications, important allergies; 5) level of consciousness and degree of distress; 6) vital signs; 7) pertinent physical findings in head-to-toe order; 8) ECG findings; 9) treatment given and response.",
+   "aZh": "① 年龄与性别；② 主诉；③ 简短切题的现病史/受伤经过；④ 其他相关病史——基础疾病、用药、重要过敏；⑤ 意识水平与痛苦程度；⑥ 生命体征；⑦ 从头到脚顺序的阳性体格发现；⑧ 心电图所见；⑨ 已给处置及其反应。"
+  },
+  {
+   "qEn": "Define simplex, duplex, and multiplex radio operation.",
+   "qZh": "定义单工、双工、复用三种无线电工作模式。",
+   "aEn": "Simplex: one frequency — transmit or receive, never both simultaneously. Duplex: two frequencies used at once for telephone-style simultaneous two-way talk. Multiplex: two or more signals, such as voice plus ECG, combined for simultaneous transmission on one frequency.",
+   "aZh": "单工：一个频率——发或收，不能同时。双工：同时占用两个频率，实现电话式双向对讲。复用：两路以上信号（如话音＋心电）合并在同一频率上同时发射。"
+  },
+  {
+   "qEn": "You wrote the wrong blood pressure on a paper PCR. What is the only legal correction — and name three things you must never do.",
+   "qZh": "你在纸质 PCR 上写错了血压。唯一合法的改法是什么？说出三件绝对不能做的事。",
+   "aEn": "Draw a single horizontal line through the error, initial and date it, and write the correct value beside it. Never: erase or scribble out the error, use correction fluid or tape, or discard/destroy the original — and no one but the original author may revise the report.",
+   "aZh": "在错处划一条水平单线，签姓名缩写并注日期，把正确数值写在旁边。绝不能：擦除或涂改、用修正液/修正带、丢弃或销毁原件——而且除原作者外任何人都不得修订这份报告。"
+  },
+  {
+   "qEn": "A patient refuses transport. List the documentation essentials before you leave the scene.",
+   "qZh": "患者拒绝转运。离开现场前，文书上必须落实哪些要件？",
+   "aEn": "Confirm and document competence and mental status (oriented to person, time, place; no nonsensical statements; consider injury, hypoglycemia, mental illness, drugs, alcohol); a full assessment and baseline vitals attempted, with any refusal of assessment noted; a detailed informed-refusal discussion in language the patient understands, including risk of death; direct medical control involved for obvious serious conditions; a witness with recorded observations and contact details — especially if the patient will not sign; the right to change their mind and re-call EMS explained; and a documented follow-up care plan with PCP follow-up and re-call triggers.",
+   "aZh": "确认并记录行为能力与精神状态（人物/时间/地点定向齐全、无语无伦次；考虑外伤、低血糖、精神疾病、毒品、酒精）；尽力完成全套评估与基线生命体征，患者拒绝评估也要写明；用患者听得懂的语言做知情拒绝谈话并详记，讲到『可能死亡』；有明显重症时请直接医疗指挥介入并记录；全程有见证人、记下其所见与联系方式——患者拒签时尤其如此；讲明患者可随时改主意再叫 EMS；最后写下后续照护计划——家庭医生随访与再呼叫 EMS 的触发条件。"
+  },
+  {
+   "qEn": "Expand SBAR and state what belongs under each letter in an EMS handoff.",
+   "qZh": "展开 SBAR，说明 EMS 交接中每个字母下装什么。",
+   "aEn": "S — Situation: identify yourself and the patient; chief complaint, symptoms, mechanism of injury. B — Background: past medical history, medications, allergies. A — Assessment: clinical impression, vital signs, physical exam, treatment provided. R — Recommendation: immediate actions recommended, when applicable.",
+   "aZh": "S——情境：报自己与患者的身份；主诉、症状、受伤机制。B——背景：既往病史、用药、过敏。A——评估：临床印象、生命体征、体格检查、已给处置。R——建议：适用时提出应立即采取的行动。"
+  },
+  {
+   "qEn": "Which six timestamps does the crew radio in for the EMD to record, and why does the communications centre keep them instead of the crew?",
+   "qZh": "车组要向 EMD 报哪六个时间戳？为什么由通讯中心而不是车组来记录？",
+   "aEn": "Departed for the scene, arrived on scene, patient contact, left the scene, arrived at hospital, back in service (the call-received time is logged at the centre). Paramedics giving emergency care cannot keep checking watches — so they radio each milestone and the EMD records it; the resulting metrics drive medical, administrative, and academic evaluation and deployment decisions.",
+   "aZh": "出发赴现场、到达现场、接触患者、离开现场、到达医院、恢复待命（接警时刻由中心自动在案）。正在抢救的救护员没法一直看表——所以每到一个节点报一声、由 EMD 记录；这些数据支撑医疗、行政、学术三层评估和资源部署决策。"
+  },
+  {
+   "qEn": "What is a pertinent negative, and why document it? Give an example.",
+   "qZh": "什么是阴性相关项？为什么要记？举一例。",
+   "aEn": "A negative finding that warrants no care or intervention but proves a thorough history and exam were performed. Example: 'Patient denies shortness of breath with the chest pain; denies radiation of the pain' — showing you asked beyond the presenting complaint.",
+   "aZh": "无需处置或干预、但能证明你完整问诊查体过的阴性发现。例：『患者胸痛但否认呼吸困难；否认疼痛放射』——证明你问的不止主诉那一件事。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "BC grades the hospital notification and hand-off report with fixed content lists",
+   "topicZh": "BC 实操考按固定清单给医院通报与交接汇报打分",
+   "bookEn": "The textbook teaches a nine-item radio report and SBAR as general formats, with contents chosen by pertinence.",
+   "bookZh": "教材教的是九项电台汇报和 SBAR 这类通用格式，内容按相关性取舍。",
+   "bcEn": "BC's practical grading criteria hard-code the lists and the penalties. A hospital notification must include: age and gender, chief complaint, mechanism of injury if applicable, history of chief complaint, vital signs, treatments/protocols given, and relevant physical findings — failing to notify the hospital at any time for a critical patient is a 5% deduction. The verbal hand-off report adds: initial AND final vital signs, medical history, medications, and allergies — failing to provide a report, or gross deficiencies, or omitting critical information detrimental to care costs 5%; a disorganized report or missing non-critical information costs 3%; inaccuracies not detrimental to care cost 1%.",
+   "bcZh": "BC 实操评分标准把清单和扣分都写死了。医院通报必须包含：年龄与性别、主诉、适用时的受伤机制、主诉病史、生命体征、已给处置/协议、相关体格发现——危重患者全程未通报医院直接扣5%。口头交接汇报在此之上再加：初始与最终两组生命体征、既往病史、用药、过敏——不给汇报或不会汇报、汇报有重大缺陷、遗漏可能危及照护的关键信息扣5%；汇报无条理或漏报非关键信息扣3%；有不影响照护的小误差扣1%。",
+   "ref": "EMALB BC Practical Examination Grading Criteria p.38"
+  },
+  {
+   "topicEn": "The PCR itself is a graded deliverable on the BC practical exam",
+   "topicZh": "PCR 本身是 BC 实操考的评分交付物",
+   "bookEn": "The textbook frames the PCR as a legal and clinical record completed per agency policy after the call.",
+   "bookZh": "教材把 PCR 定位为出勤后按机构政策完成的法律与临床记录。",
+   "bcEn": "In BC's practical exam the candidate must complete and submit a PCR for the scenario, handed to the evaluator before the next scenario begins. Deductions: 5% for not submitting a PCR or submitting an illegible one; also 5% when significant data fields are missed (three or more relevant fields) or the data do not match what occurred in the simulation (medications and allergies mismatched); minor deficiencies — one or two missing relevant fields — cost less. Evaluators review the PCR focusing on the history (chief complaint, history of chief complaint, past medical history, medications, allergies), vital signs, treatments, and relevant findings.",
+   "bcZh": "BC 实操考要求考生为该情景完成并提交一份 PCR，且要在下一情景开始前交给考官。扣分：不交 PCR、或交了但字迹无法辨认，扣5%；漏掉重要数据字段（相关字段缺三项及以上）、或所填内容与模拟中实际发生不符（用药和过敏对不上），同样重扣；小缺陷——漏一到两个相关字段——扣得较轻。考官审 PCR 的重点：病史（主诉、主诉病史、既往病史、用药、过敏）、生命体征、处置、相关发现。",
+   "ref": "EMALB BC Practical Examination Grading Criteria p.38"
+  }
+ ],
+ "sourcePages": "1606-1668"
+}

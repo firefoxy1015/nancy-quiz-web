@@ -1,0 +1,679 @@
+{
+ "id": "ch14",
+ "n": 14,
+ "titleEn": "Mechanical Ventilation",
+ "titleZh": "机械通气",
+ "group": "airway",
+ "examWeight": 2,
+ "whyEn": "Chapter 13 taught you to open an airway and squeeze a bag; this chapter hands the squeezing over to a machine and asks whether you understand what the machine is doing. The exam mines it for definitions and numbers: how a pressure-controlled breath differs from a volume-controlled one, what each mode (AC, SIMV, PCV, pressure support, CPAP, BPAP) guarantees and what it leaves to the patient, the standard settings for tidal volume, rate, FiO2, PEEP and inspiratory time, and the troubleshooting logic behind the low-pressure, high-pressure and apnea alarms. It also carries the transport questions BC loves: why a ventilated patient suddenly turns hypotensive, which alarm points to a leak and which to an obstruction, and when noninvasive CPAP/BPAP is enough versus forbidden.",
+ "whyZh": "第13章教你打开气道、捏皮球；这一章把捏皮球的活交给机器，考的是你懂不懂机器在干什么。笔试从这里挖的是定义和数字：压力控制呼吸与容量控制呼吸的区别、每种模式（AC、SIMV、PCV、压力支持、CPAP、BPAP）机器保证什么/留给患者什么、潮气量/频率/FiO2/PEEP/吸气时间的标准设定值，以及低压、高压、窒息三大报警背后的排障逻辑。它还承包了BC爱考的转运题：上机患者为什么突然低血压、哪种报警指向漏气哪种指向堵塞、无创CPAP/BPAP什么时候够用、什么时候是禁区。",
+ "competencies": {
+  "areas": [],
+  "codes": []
+ },
+ "sections": [
+  {
+   "titleEn": "Why Ventilate — and What It Costs the Body",
+   "titleZh": "为什么上机——以及身体付出的代价",
+   "points": [
+    {
+     "en": "Indications for mechanical ventilation run the full spectrum from apnea, through managing the work of breathing, to every cause of respiratory failure. The technique is lifesaving — and simultaneously harmful to several body systems, which is why every parameter choice in this chapter is a compromise between support and injury.",
+     "zh": "机械通气的适应证覆盖整条谱系：从呼吸停止、到替患者分担呼吸做功、再到一切原因的呼吸衰竭。它救命，同时也伤害多个器官系统——所以本章每一个参数选择，本质上都是『支持』与『损伤』之间的折衷。",
+     "hard": true
+    },
+    {
+     "en": "Positive-pressure ventilation raises intrathoracic and intra-alveolar pressure, producing two named injuries you must tell apart: barotrauma — pressure injury, classically pneumothorax — and volutrauma — overstretch injury to alveoli with impaired surfactant function.",
+     "zh": "正压通气升高胸腔内压和肺泡内压，带来两种必须分清的损伤：气压伤（barotrauma）——压力造成的损伤，典型表现是气胸；容积伤（volutrauma）——肺泡被过度牵张、表面活性物质功能受损。",
+     "hard": true
+    },
+    {
+     "en": "The hemodynamic chain: raised intrathoracic pressure reduces venous return to the right heart, cardiac output falls, hypotension may follow, and blood flow to the liver and kidneys drops. This is the first place to look when a patient becomes hypotensive shortly after going on the ventilator.",
+     "zh": "血流动力学连锁：胸腔内压升高→回右心的静脉回流减少→心输出量下降→可能出现低血压→肝肾血流减少。患者上机后不久出现低血压，第一个要想到的就是这条链。",
+     "hard": true
+    },
+    {
+     "en": "The endocrine sequel: diminished venous return and hepatorenal blood flow fool the body into reading itself as volume depleted — vasopressin and aldosterone activity rise, atrial natriuretic hormone falls, and the net result is fluid retention.",
+     "zh": "内分泌续集：静脉回流和肝肾血流的减少让身体误判自己『缺血容量』——血管加压素与醛固酮活性升高、心房钠尿激素下降，最终结果是水钠潴留。",
+     "hard": true
+    },
+    {
+     "en": "The competence doctrine: ventilators differ in characteristics, capabilities and features, and the Emergency Care Research Institute (through its journal Health Devices) stresses that no one should operate a ventilator — neonatal, pediatric or adult — without being properly educated on that specific device.",
+     "zh": "能力信条：不同呼吸机的特性、能力和功能各不相同；急救护理研究所（ECRI，经其期刊 Health Devices）强调，无论用于新生儿、儿童还是成人，任何人都不应在未接受该具体机型培训的情况下操作呼吸机。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "The Anatomy Every Ventilator Shares",
+   "titleZh": "每台呼吸机共有的解剖",
+   "points": [
+    {
+     "en": "Six features common to all ventilators: a power source, a cycling variable, a breath-delivery method, modes and parameters, a patient circuit, and alarms. Power can be electric (AC or DC, usually with internal rechargeable batteries) and/or pneumatic — oxygen alone or oxygen plus air — with gas regulated to the industry standard of 50 psi.",
+     "zh": "所有呼吸机共有六大件：动力源、切换变量、送气方式、模式与参数、患者管路、报警系统。动力源可以是电（交流或直流，通常配内置可充电电池）和/或气动——纯氧或氧气加空气——气源压力按行业标准调定为 50 psi。",
+     "hard": true
+    },
+    {
+     "en": "Cycling names the variable that terminates the inspiratory phase of a breath: pressure, volume, time, or flow. Some machines fix it; on others the clinician chooses. This single definition is the key that unlocks the whole mode table.",
+     "zh": "『切换』（cycling）指的是终止吸气相的那个变量：压力、容量、时间或流量。有的机器出厂固定，有的由临床人员选择。这一个定义是打开整张模式表的钥匙。",
+     "hard": true
+    },
+    {
+     "en": "Alarm doctrine: alarms are set for each individual patient and are never disabled. An alarm you silenced is a malfunction you will not hear.",
+     "zh": "报警信条：报警限必须按每一名患者单独设置，且永远不得关闭。你静音掉的那个报警，就是你将听不见的那次故障。",
+     "hard": true
+    },
+    {
+     "en": "Negative-pressure ventilators descend from the polio-era iron lung: they pull the external chest wall outward, recreating the diaphragm's vacuum so air is drawn in. Modern forms are the cuirass (a strapped-on 'turtle shell' chest plate) and the airtight poncho jacket; both demand an airtight seal around the thorax.",
+     "zh": "负压呼吸机是脊髓灰质炎大流行年代『铁肺』的后代：它把胸壁向外拉开，复刻膈肌制造的负压，让空气被『吸』进肺里。现代形态是胸甲式（cuirass，绑在胸前的『龟壳』板）和密闭的夹克式（poncho）；两者都要求躯干周围保持气密。",
+     "hard": true
+    },
+    {
+     "en": "Where negative-pressure machines live: not in acute care. They serve rehabilitation, complex/long-term care facilities and home patients who control their own airway but have suboptimal diaphragm function — neuromuscular disease and spinal cord injury are the textbook examples.",
+     "zh": "负压呼吸机的栖息地：不在急症医疗机构。它们服务于康复机构、复杂/长期护理机构和居家患者——这类患者能自己控制气道、但膈肌功能欠佳，教科书举的例子是神经肌肉疾病和脊髓损伤。",
+     "hard": true
+    },
+    {
+     "en": "Positive-pressure ventilators — by far the dominant type — push gas in at above-ambient pressure, the exact opposite of spontaneous breathing. The price of reversing physiology: pneumothorax, subcutaneous emphysema, and decreased cardiac output. A bag-mask device is itself positive-pressure ventilation.",
+     "zh": "正压呼吸机——占绝对主流——以高于大气压的压力把气体压进肺里，与自主呼吸的方向完全相反。逆转生理的代价：气胸、皮下气肿、心输出量下降。你手里的球囊面罩，本身就是正压通气。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "How a Breath Ends: Pressure-, Volume-, Flow- and Time-Cycled",
+   "titleZh": "一口气怎么收尾：压力、容量、流量、时间四种切换",
+   "points": [
+    {
+     "en": "Most positive-pressure ventilators can deliver either a pressure-controlled or a volume-controlled breath; the evidence calls the choice a non-argument — in skilled hands either provides safe, effective ventilation. What the exam wants is that you know what each one holds constant and what it lets drift.",
+     "zh": "大多数正压呼吸机既能送压力控制呼吸，也能送容量控制呼吸；证据认为这个选择根本不构成争论——在熟练者手里两者同样安全有效。考试要的是你知道：每种方式『锁死』的是什么、放任漂移的又是什么。",
+     "hard": true
+    },
+    {
+     "en": "A pressure-controlled breath ends when a clinician-preset pressure is reached, so delivered volume floats with airway resistance and lung compliance. A volume-controlled breath ends when the set tidal volume has gone in, so pressure floats instead. Flow-cycled breaths end at a predetermined flow rate; time-cycled breaths end when the set inspiratory time elapses.",
+     "zh": "压力控制呼吸在达到预设压力时结束——送入的容量随气道阻力和肺顺应性漂移；容量控制呼吸在送完预设潮气量时结束——漂移的换成压力。流量切换在流速降到预定值时收尾；时间切换在设定的吸气时间走完时收尾。",
+     "hard": true
+    },
+    {
+     "en": "The pressure-control trap: a patient biting the tracheal tube or a mucus-obstructed tube still lets the machine hit its target circuit pressure — while actual tidal volume shrinks toward zero. Rising airway resistance and falling compliance do the same silently. So on pressure ventilation you monitor breath sounds, SpO2, ETCO2 and exhaled tidal volume, plus visual chest rise and fall.",
+     "zh": "压力控制的陷阱：患者咬住气管导管、或导管被痰栓堵住，机器照样能在管路里做出目标压力——而真正进肺的潮气量掉到接近零。气道阻力升高、顺应性下降同样会无声地干这件事。所以用压力通气时必须盯：呼吸音、SpO2、ETCO2、呼出潮气量，再加肉眼看胸廓起伏。",
+     "hard": true
+    },
+    {
+     "en": "The volume-control mirror image: the set volume always goes in, but the pressure needed depends on tidal volume size, flow rate, airway resistance and lung–chest wall compliance — and these change over time (bronchospasm raises resistance, so pressure climbs). Your watch-item is peak airway pressure, guarded by the high-pressure alarm set roughly 10 cm H2O above the patient's average peak pressure. Secretions, bronchospasm and falling thoracic or pulmonary compliance all push airway pressures up.",
+     "zh": "容量控制的镜像：设定的容量总能送进去，但所需压力取决于潮气量大小、流速、气道阻力和肺-胸壁顺应性——而这些会随病情变化（支气管痉挛让阻力上升，压力随之爬高）。你的监测重点是气道峰压，由设在患者平均峰压之上约 10 cm H2O 的高压报警把守。分泌物、支气管痉挛、胸廓或肺顺应性下降，都会推高气道压。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Circuit: A Closed System or Nothing",
+   "titleZh": "管路：要么闭合，要么出事",
+   "points": [
+    {
+     "en": "Three circuit configurations: dual-limb (independent inspiratory and expiratory limbs); coaxial (one limb encased inside the other, looking like a single limb — the favourite for transport because fewer limbs tangle); and single-limb (exhalation valve placed close to the patient's mouth to minimize rebreathing of expired gas).",
+     "zh": "管路三种构型：双管路——吸气支与呼气支各自独立；同轴管路——一支套在另一支里、外观像单管，是转运首选，因为可缠绕的管子更少；单管路——呼气阀尽量靠近患者口端，把重复吸入呼出气的死腔压到最小。",
+     "hard": true
+    },
+    {
+     "en": "Every circuit must let expired gas escape: either an exhalation valve in the expiratory limb — cyclically pressurizing to hold PEEP in expiration and the delivery pressure in inspiration — or, in many noninvasive circuits, a cluster of flush openings near the patient that a constant ventilator flow washes clear during expiration.",
+     "zh": "任何管路都得给呼出气留出口：要么是呼气支上的呼气阀——周期性加压/泄压，呼气时维持PEEP、吸气时维持送气压力；要么如许多无创管路那样，在患者附近开一簇冲洗孔，靠呼吸机持续气流在呼气相把废气冲走。",
+     "hard": true
+    },
+    {
+     "en": "The closed-system rule: any loose connection, crack or disconnection between ventilator and patient is a malfunction and potentially life-threatening. The integrity of the patient–ventilator connection is visually inspected throughout transport — not once at loading.",
+     "zh": "闭合系统法则：呼吸机与患者之间任何松脱的接头、裂缝或断开都是故障，且可能危及生命。患者-呼吸机连接的完整性要在整个转运过程中反复目视检查——不是装车时看一眼就完。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Noninvasive Ventilation: CPAP and BPAP",
+   "titleZh": "无创通气：CPAP 与 BPAP",
+   "points": [
+    {
+     "en": "The dividing line: invasive ventilation runs through an artificial airway, chiefly a tracheal tube; noninvasive ventilation is any mechanical ventilation without one, delivered by nasal or full-face masks or mouthpieces. Its selling points — fewer tube hazards, preserved speech, and support you can pause briefly.",
+     "zh": "分界线：有创通气经人工气道进行，主要是气管导管；无创通气则是不经人工气道的任何机械通气，靠鼻罩、全面罩或咬嘴送气。它的卖点——避开导管的各种危害、保留说话能力、支持可以短暂摘下来。",
+     "hard": true
+    },
+    {
+     "en": "CPAP raises the breathing baseline above ambient pressure across the entire cycle, buying two effects: it stents the airway open — hence its popularity in obstructive sleep apnea — and it raises functional residual capacity, which in a hypoinflated lung (pulmonary edema is the model) enlarges lung surface area, improving both oxygenation and compliance so a spontaneous tidal volume comes easier.",
+     "zh": "CPAP 把整个呼吸周期的基线压力抬到大气压之上，换来两个效应：像支架一样撑开气道——所以它是阻塞性睡眠呼吸暂停的主流支持手段；同时抬高功能残气量（FRC），在低充气肺（肺水肿是模型病）里扩大肺表面积，氧合和顺应性双双改善，患者自己吸出一口潮气量也更省力。",
+     "hard": true
+    },
+    {
+     "en": "BPAP is CPAP plus inspiratory help: a lower expiratory positive airway pressure (EPAP) and a higher inspiratory positive airway pressure (IPAP), with IPAP set at least 4 cm H2O above EPAP. The extra inspiratory pressure works like pressure support, augmenting tidal volume generation — so BPAP improves ventilation as well as oxygenation.",
+     "zh": "BPAP 等于 CPAP 加吸气助推：呼气相维持较低的呼气正压（EPAP），吸气相切换到较高的吸气正压（IPAP），IPAP 至少比 EPAP 高 4 cm H2O。多出来的吸气压力起压力支持的作用、帮患者做大潮气量——所以 BPAP 在改善氧合之外还改善通气。",
+     "hard": true
+    },
+    {
+     "en": "The translation table between invasive and noninvasive vocabularies: PIP is the equivalent of IPAP, and PEEP is the equivalent of EPAP. Exam questions love asking this pairing straight.",
+     "zh": "有创与无创词汇的对照表：PIP 对应 IPAP，PEEP 对应 EPAP。考题非常喜欢直接考这组对应关系。",
+     "hard": true
+    },
+    {
+     "en": "Current EMS research: field CPAP is well tolerated and can significantly improve oxygenation and ventilation, potentially sparing the patient an intubation. That 'avoided tube' is the whole prehospital case for carrying it.",
+     "zh": "现有的院前研究结论：现场使用 CPAP 耐受性好，能显著改善氧合与通气，有可能让患者免于插管。『省下一根管』就是救护车上带 CPAP 的全部理由。",
+     "hard": true
+    },
+    {
+     "en": "Contraindications and fine print: CPAP and BPAP are both contraindicated in patients who cannot protect their airway, have unstable facial fractures, or are uncooperative. Success requires an intact, appropriate respiratory drive — these modes augment spontaneous breathing, which is why neither counts as life support equipment.",
+     "zh": "禁忌与小字条款：不能保护自身气道、面部骨折不稳定、不配合的患者，CPAP 和 BPAP 一律禁用。成功的前提是完整且合格的自主呼吸驱动——这两种模式只是给自主呼吸『加持』，所以都不算生命支持设备。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Assisted Ventilation in the Field: CPAP at Work, BPAP, Transport Ventilators",
+   "titleZh": "现场辅助通气：CPAP 实战、BPAP 与转运呼吸机",
+   "points": [
+    {
+     "en": "Two different CPAPs share one name: the home unit worn nightly for obstructive sleep apnea (via nasal pillows, nasal mask or face mask) merely holds the posterior pharynx stable during sleep, limiting hypoxic episodes and snoring — and it is not what you apply to the critically ill. Therapeutic CPAP for respiratory failure is almost always a strapped-on face mask, and it works only with a good seal and minimal leakage.",
+     "zh": "两种 CPAP 共用一个名字：家用机是阻塞性睡眠呼吸暂停患者夜间戴的（鼻枕、鼻罩或面罩），只负责在睡眠中稳住咽后壁、减少低氧发作和打鼾——那不是你给危重患者上的东西。治疗呼吸衰竭的 CPAP 几乎都是用绑带固定的面罩，而且只有密封良好、漏气极少才起效。",
+     "hard": true
+    },
+    {
+     "en": "Prehospital CPAP is usually driven by 100% supplemental oxygen — and it drinks it: depending on the flow and the patient's respiratory rate, some units can empty a D cylinder in as little as 5 to 10 minutes. Gas-supply vigilance is part of the therapy.",
+     "zh": "院前 CPAP 的驱动气通常是纯氧——而且极其耗氧：视流量和患者呼吸频率而定，有些机型 5 到 10 分钟就能吸干一个 D 瓶。盯紧气源余量本身就是治疗的一部分。",
+     "hard": true
+    },
+    {
+     "en": "The mask's pressure-relief valve fixes the delivered pressure (5 cm H2O, for example). Subjectively the patient faces a gale-force wind on inspiration and must push a valve open to exhale — it looks exhausting for someone already decompensating, yet many patients who seem to be taking their last breaths turn around dramatically once CPAP goes on.",
+     "zh": "面罩上的泄压阀决定输送压力（例如 5 cm H2O）。患者的主观感受是：吸气像顶着狂风，呼气还得把阀门顶开——对一个已在失代偿的人来说看似要命，但许多眼看要咽气的患者，一上 CPAP 就出现戏剧性好转。",
+     "hard": true
+    },
+    {
+     "en": "The claustrophobia playbook: some patients fight the mask. Talk them through it; if your equipment allows, first apply the mask with free-flowing oxygen and no positive pressure, then add pressure per local protocol once tolerated. Never wrestle an unwilling patient into the mask — you only drive up anxiety, cardiac workload and myocardial oxygen consumption, a bad trade-off.",
+     "zh": "幽闭恐惧应对手册：有的患者会抗拒面罩。先用语言引导；设备允许的话，先只给自由流量的氧、不加正压，患者耐受后再按本地protocol上压力。绝不要和不愿意戴面罩的患者硬来——那只会推高焦虑、心脏负荷和心肌耗氧，是笔亏本买卖。",
+     "hard": true
+    },
+    {
+     "en": "The success test is written in the respiratory rate: within several minutes of application SpO2 should climb and RR should fall. RR soon after application is the crude predictor — if it rises, the therapy is likely to fail and you prepare the next step (usually intubation); if it falls, CPAP is likely to succeed.",
+     "zh": "成败写在呼吸频率上：上机后几分钟内，SpO2 应该升、呼吸频率应该降。刚上机后的呼吸频率就是粗判指标——它在涨，治疗多半要失败，你该准备下一步（通常是插管）；它在降，CPAP 多半会成功。",
+     "hard": true
+    },
+    {
+     "en": "Two CPAP hazards to guard: it raises chest pressure, so in a patient whose blood pressure is already low, too much CPAP can cut venous return and drop the pressure suddenly — monitor BP whenever CPAP runs, especially above 10 cm H2O. And CPAP can convert a simple pneumothorax into a tension pneumothorax within a few breaths.",
+     "zh": "CPAP 的两大暗雷：它升高胸内压，血压本就偏低的患者，CPAP 给多了会掐断静脉回流、血压骤降——只要在用 CPAP 就要盯血压，超过 10 cm H2O 时尤其要盯。另外，CPAP 能在几口呼吸之内把单纯性气胸吹成张力性气胸。",
+     "hard": true
+    },
+    {
+     "en": "The evidence verdict, exactly as the exam wants it: large emergency department and hospital studies show noninvasive ventilation improves respiratory-distress symptoms and can avert tracheal intubation — with no effect on mortality.",
+     "zh": "证据结论，按考试要的原样记：大型急诊科和医院研究显示，无创通气能改善呼吸窘迫症状、可以避免气管插管——但对死亡率没有影响。",
+     "hard": true
+    },
+    {
+     "en": "BPAP in practice: instead of 8 cm H2O of CPAP you might run 16/8 — 16 cm H2O on inspiration, 8 on exhalation — cutting the work of breathing and enlarging tidal volumes, which improves ventilation and CO2 elimination. The trade: a more complex, more expensive device, uncommon in the prehospital setting.",
+     "zh": "BPAP 的实战面目：与其给 8 cm H2O 的 CPAP，不如设 16/8——吸气 16、呼气 8 cm H2O——既减少呼吸做功又做大潮气量，通气和 CO2 清除同时改善。代价：设备更复杂、更贵，院前并不常见。",
+     "hard": true
+    },
+    {
+     "en": "Automated transport ventilators (ATVs) are flow-restricted oxygen-powered ventilation devices with timers: set a volume and a rate and they free up a pair of hands, at their best replacing bag-mask ventilation in cardiac or respiratory arrest. Basic units may lack alarms, flow control, or multiple modes — they are not little ventilators, and no patient on one goes without direct observation by a skilled paramedic.",
+     "zh": "自动转运呼吸机（ATV）本质是加了定时器的限流氧动力通气装置：设好容量和频率，它就替你腾出一双手，最佳用途是在心搏或呼吸骤停时接替球囊面罩通气。基础机型可能没有报警、不能调流量、没有多种模式——它们不是『小号呼吸机』，用它通气的患者必须始终有熟练救护员直接盯守。",
+     "hard": true
+    },
+    {
+     "en": "The flow mismatch you must know cold: responsive patients need up to 150 L/min of flow to breathe comfortably, while FROPVDs and ATVs are preset to 40 L/min — the optimal flow for mask-ventilating a cardiac arrest without causing gastric distention, but extremely uncomfortable for anyone breathing spontaneously.",
+     "zh": "必须背熟的流量错配：有反应的患者要舒适呼吸需要高达 150 L/min 的流量，而 FROPVD 和 ATV 出厂固定在 40 L/min——这恰是面罩通气心搏骤停患者、又不吹胀胃的最优流量，但对任何还有自主呼吸的人都极不舒服。",
+     "hard": true
+    },
+    {
+     "en": "Special population: patients at term pregnancy run a tidal volume about 40% above baseline and live in a compensated respiratory alkalosis — adjust ventilator settings with that physiology in mind, not against it.",
+     "zh": "特殊人群：足月孕妇的潮气量比基线高约 40%，且长期处于代偿性呼吸性碱中毒——调呼吸机参数时要顺着这套生理来，别对着干。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Modes: What the Machine Guarantees, What the Patient Keeps",
+   "titleZh": "模式：机器保证什么，患者保留什么",
+   "points": [
+    {
+     "en": "Control ventilation (CV): the machine delivers a set rate and a set volume or pressure and neither recognizes nor responds to patient effort. The book calls it a concept only — if you truly want no patient participation, you must set ventilation to meet metabolic demand and add deep sedation or chemical paralysis as indicated.",
+     "zh": "控制通气（CV）：机器按设定频率送设定容量或压力的呼吸，对患者的自主努力既不识别也不回应。原书说它『仅作概念看待』——你若真要患者完全不参与，就必须把通气量调到满足代谢需求，并按需给予深镇静或化学肌松。",
+     "hard": true
+    },
+    {
+     "en": "Assist/control (AC): the ventilator guarantees a minimum rate; the patient may trigger extra breaths above it, but every breath — triggered or mandatory — carries the clinician-set characteristics. It hinges on a properly set sensitivity: the amount of negative pressure or flow the patient must generate to trigger a breath.",
+     "zh": "辅助/控制（AC）：机器保证一个最低频率；患者可以在此之上自行触发额外呼吸，但无论触发还是强制，每一口都按临床设定的参数送出。成败系于灵敏度的正确设置：即患者需要产生多大负压或流量才能触发一次送气。",
+     "hard": true
+    },
+    {
+     "en": "SIMV: a clinician-set minimum minute ventilation is delivered; the patient may add breaths synchronized with the mandatory ones, and those extra breaths' characteristics are determined solely by the patient. Historically the weaning mode — dial the mandatory minute ventilation down and let the patient take over — but current pulmonary physiology has pushed SIMV out of favour.",
+     "zh": "SIMV：机器交付一个临床设定的最低分钟通气量；患者可以在强制呼吸之间加自己的呼吸，机器负责同步，而这些附加呼吸的特性完全由患者自己决定。它历史上是撤机模式——把强制分钟通气量逐步调低、让患者逐渐接管——但按现今对肺力学与生理的认识，SIMV 已经失宠。",
+     "hard": true
+    },
+    {
+     "en": "Pressure control ventilation (PCV): a preset pressure is reached and held in the circuit until inspiratory time elapses; tidal volume floats with pulmonary mechanics. Its deliberate indication: heterogeneous lung disease, where a fixed-volume breath would preferentially overinflate the more compliant alveolar units and cause barotrauma.",
+     "zh": "压力控制通气（PCV）：达到预设压力后在管路内维持该压力直到吸气时间走完；潮气量随肺力学漂移。它被『刻意选用』的场景：不均质肺病——固定容量的呼吸会优先灌爆顺应性更好的那部分肺泡单位，造成气压伤。",
+     "hard": true
+    },
+    {
+     "en": "Volume control ventilation (VCV): a preset volume ends inspiration; breath-to-breath pressures vary with pulmonary mechanics. The book is explicit that there is no specific indication for choosing volume control over pressure control.",
+     "zh": "容量控制通气（VCV）：送完预设容量即终止吸气；压力随肺力学逐口变化。原书明说：并不存在『必须选容量控制而非压力控制』的特定适应证。",
+     "hard": true
+    },
+    {
+     "en": "Pressure support: a clinician-selected boost of positive pressure fired by the patient's own inspiratory effort, existing purely to cut the work of breathing — helping the patient beat airflow resistance and lung compliance. It is only available where spontaneous breaths exist: SIMV, CPAP, and noninvasive ventilation.",
+     "zh": "压力支持：由患者自主吸气努力触发、临床设定大小的一股正压助推，存在的唯一目的是降低呼吸做功——帮患者克服气流阻力和肺顺应性。它只出现在允许自主呼吸的模式里：SIMV、CPAP、无创通气。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Parameters: The Numbers You Set and Defend",
+   "titleZh": "参数：你亲手设、亲手守的数字",
+   "points": [
+    {
+     "en": "Tidal volume: normal physiologic setting 6–8 mL/kg of ideal body weight — not actual weight. Smaller volumes of 4–6 mL/kg are used to keep peak inspiratory and plateau pressures below 30 cm H2O and so minimize alveolar injury.",
+     "zh": "潮气量：正常生理设定为理想体重的 6–8 mL/kg——注意是理想体重，不是实际体重。为把峰压和平台压压在 30 cm H2O 以下、减少肺泡损伤，可改用 4–6 mL/kg 的小潮气量。",
+     "hard": true
+    },
+    {
+     "en": "Respiratory rate: adult normal 12–16 breaths/min, adjusted against the desired end-tidal CO2 target — the rate knob is your CO2 knob.",
+     "zh": "呼吸频率：成人正常设 12–16 次/分，依据目标呼气末 CO2 调整——频率旋钮就是你的 CO2 旋钮。",
+     "hard": true
+    },
+    {
+     "en": "FiO2: expressed as a decimal from 0.21 to 1.0. Initial management starts at 1.0 (100% oxygen), then titrates downward to the lowest FiO2 that keeps SpO2 above 92% — ideally below 50% to avoid oxygen toxicity.",
+     "zh": "FiO2：用小数表示，范围 0.21–1.0。初始处置从 1.0（纯氧）起步，随后向下滴定到能维持 SpO2 高于 92% 的最低值——理想情况下降到 50% 以下，以避免氧中毒。",
+     "hard": true
+    },
+    {
+     "en": "PEEP: the ventilator stops exhalation at a prescribed pressure instead of letting the lung fall back to ambient. Many practitioners give every patient 5 cm H2O — 'physiologic PEEP.' It raises functional residual capacity, splints alveoli open in the hypoinflated lung, improves oxygen exchange, reduces the shunt fraction, increases compliance, and is titrated upward against hypoxemia so the FiO2 can come down.",
+     "zh": "PEEP：呼吸机让呼气停在一个预定压力上，而不是放任肺塌回大气压。许多临床者给每位患者都上 5 cm H2O——所谓『生理性 PEEP』。它抬高功能残气量、把低充气肺里的肺泡撑住不塌、改善氧交换、降低分流分数、提高顺应性；遇到低氧血症就向上滴定 PEEP，好把 FiO2 降下来。",
+     "hard": true
+    },
+    {
+     "en": "Inspiratory time and flow: adult inspiratory time typically 1.0–1.5 seconds; in volume-control mode the inspiratory flow you set determines how fast the tidal volume goes in.",
+     "zh": "吸气时间与吸气流量：成人吸气时间通常设 1.0–1.5 秒；容量控制模式下，你设的吸气流量决定潮气量多快送完。",
+     "hard": true
+    },
+    {
+     "en": "Expiratory time is not a settable parameter — it is whatever remains once respiratory rate and inspiratory time are fixed, and that remainder defines the inspiration-to-expiration (I:E) ratio.",
+     "zh": "呼气时间不是可设参数——频率和吸气时间一旦定下，剩下的就是呼气时间，这个『剩余』决定了吸呼比（I:E）。",
+     "hard": true
+    },
+    {
+     "en": "Peak inspiratory pressure (PIP): the highest pressure reached during inspiration — a set parameter in pressure control, a varying observation in volume control. Keep it as low as possible, ideally at or below 30 cm H2O, to minimize barotrauma and volutrauma.",
+     "zh": "峰压（PIP）：吸气相达到的最高压力——压力控制下是设定值，容量控制下是逐口变化的观察值。原则是能多低就多低，理想不超过 30 cm H2O，以减少气压伤和容积伤。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Alarms: Reading the Machine's Distress Calls",
+   "titleZh": "报警：听懂机器的求救信号",
+   "points": [
+    {
+     "en": "Low-pressure alarm = a leak in the system, most often a patient disconnect. It is set 5–10 cm H2O below the average peak inspiratory pressure. Treat it as 'find the opening in the circuit — now.'",
+     "zh": "低压报警＝系统有漏，最常见的原因是患者端断开。设定值比平均峰压低 5–10 cm H2O。把它当成一句话听：『管路上有个口子——马上找』。",
+     "hard": true
+    },
+    {
+     "en": "High-pressure alarm = the machine is fighting abnormally high circuit pressures: patient coughing, circuit pinched between bed rails, patient biting the tracheal tube. It is set 10 cm H2O above the PIP.",
+     "zh": "高压报警＝机器在对抗异常高的管路压力：患者咳嗽、管路被担架床栏夹住、患者咬住气管导管。设定值比峰压高 10 cm H2O。",
+     "hard": true
+    },
+    {
+     "en": "Apnea alarm: fires when no breath — ventilator-delivered or spontaneous — is detected within the interval, typically 15 seconds; the interval is adjustable on some machines.",
+     "zh": "窒息报警：在设定间隔内（通常 15 秒）检测不到任何呼吸——无论机器送的还是患者自己的——即触发；部分机型的间隔可调。",
+     "hard": true
+    },
+    {
+     "en": "Power failure / low battery / low pressure-source alarm: the ventilator is dying, not the patient. Battery life on a full charge varies between ventilators — knowing yours is part of transport planning.",
+     "zh": "断电／低电量／气源低压报警：这次垂危的是呼吸机，不是患者。满电续航因机型而异——知道自己那台能撑多久，本身就是转运规划的一部分。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Putting a Patient on a Portable Ventilator",
+   "titleZh": "把患者接上转运呼吸机",
+   "points": [
+    {
+     "en": "Four indications for a portable ventilator in transport: impending or actual respiratory failure; inadequate respiratory drive or apnea; inadequate gas exchange; and increased work of breathing with its oxygen cost. Memorize them as a list — they are a classic multiple-select stem.",
+     "zh": "转运中使用便携呼吸机的四个适应证：即将发生或已经发生的呼吸衰竭；呼吸驱动不足或呼吸停止；气体交换不足；呼吸做功增加及其耗氧代价。按清单背——这是典型的多选题干。",
+     "hard": true
+    },
+    {
+     "en": "The complication list is longer than the indication list, which is itself an exam point: mechanical failure, patient anxiety, improper settings causing patient–ventilator asynchrony, increased intrapulmonary pressure, cardiovascular compromise, gastrointestinal disturbances, infection, and impaired clearance with drying of secretions.",
+     "zh": "并发症清单比适应证清单还长，这本身就是个考点：机械故障、患者焦虑、参数设置不当导致人机对抗、肺内压升高、心血管受累、胃肠道紊乱、感染、分泌物清除受阻并变干。",
+     "hard": true
+    },
+    {
+     "en": "The setup sequence, in order: attach the circuit to the ventilator plus a test lung; initiate power; select rate, inspiratory time, tidal volume or pressures (for PC), pressure support, PEEP and FiO2; select the mode (CPAP, IMV/SIMV, AC, or NiPPV); only then remove the test lung and connect the circuit to the patient interface — tracheal tube, supraglottic airway, or face mask.",
+     "zh": "上机步骤，按顺序：管路接呼吸机、接测试肺；开机；设频率、吸气时间、潮气量或压力（PC 模式）、压力支持、PEEP、FiO2；选模式（CPAP、IMV/SIMV、AC 或 NiPPV）；这些全部完成后才摘下测试肺，把管路接到患者接口上——气管导管、声门上气道或面罩。",
+     "hard": true
+    },
+    {
+     "en": "The buried logic of the test lung: settings and mode are dialed in and proven on the test lung first, so the patient's first machine breath is already correct — you never tune a ventilator by experimenting on the patient.",
+     "zh": "测试肺背后的逻辑：参数和模式先在测试肺上调好、验证过，患者接上时吃到的第一口机器呼吸就已经是对的——绝不拿患者当试验品来调机。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Managing Ventilation in Transport: Two Knobs, Six Duties",
+   "titleZh": "转运中管理通气：两个旋钮、六项职责",
+   "points": [
+    {
+     "en": "The whole console reduces to two knobs. Oxygenation is controlled with FiO2 and PEEP. Ventilation (CO2 clearance) is controlled with tidal volume times rate — minute ventilation. Set VT at 6–8 mL/kg ideal body weight; if that keeps PIP under 30 cm H2O, leave the volume alone and steer CO2 with the rate. In transport, make only necessary adjustments.",
+     "zh": "整块面板可以简化成两个旋钮。氧合归 FiO2 和 PEEP 管；通气（清 CO2）归潮气量×频率＝分钟通气量管。潮气量设理想体重的 6–8 mL/kg；只要峰压还在 30 cm H2O 以下，容量就不要动，CO2 全靠频率来调。转运途中，只做必要的调整。",
+     "hard": true
+    },
+    {
+     "en": "Initiation guidelines once the airway is secured — in most interfacility moves you simply keep the sending facility's settings: FiO2 starts at 1.0 and titrates down to hold SpO2 at 92% to 94%; assist/control is the mode of choice for managing the work of breathing; VT 6–8 mL/kg IBW; rate 12–16. And remember that an occult pneumothorax or pneumomediastinum may worsen the moment positive pressure begins.",
+     "zh": "气道稳固后的上机指引——跨机构转运多数情况下直接沿用送出机构的参数：FiO2 从 1.0 起步、向下滴定到 SpO2 维持 92%–94%；管理呼吸做功首选辅助/控制（AC）模式；潮气量 6–8 mL/kg 理想体重；频率 12–16。另外记住：隐匿性气胸或纵隔气肿可能在正压通气开始的那一刻恶化。",
+     "hard": true
+    },
+    {
+     "en": "Auto-PEEP, defined and prevented: an unintended rise in end-alveolar pressure caused by incomplete expiration and air trapping. The fix lives in the inspiratory-time knob — shape inspiration to the patient's pattern and leave enough expiratory time for the lung to actually empty.",
+     "zh": "auto-PEEP 的定义与预防：呼气不完全、气体陷闭导致的呼气末肺泡压意外升高。解药在吸气时间旋钮上——让吸气贴合患者自己的呼吸型态，并留足呼气时间，让肺真正排空。",
+     "hard": true
+    },
+    {
+     "en": "Sensitivity: the control setting how much negative pressure or flow the patient must generate to trigger a breath — typically −2 to −3 cm H2O, or 3 L/min of flow, in adults. Set it too sensitive and the ventilator auto-cycles, firing breaths nobody asked for.",
+     "zh": "灵敏度：决定患者要产生多大负压或流量才能触发一次送气的设置——成人通常为 −2 到 −3 cm H2O，或流量 3 L/min。调得过灵，呼吸机就会自动循环，送出谁都没要的呼吸。",
+     "hard": true
+    },
+    {
+     "en": "The transport team's six duties for a ventilated patient: keep the airway stable and patent; verify and document ventilator settings before, during and after the move; secure power and oxygen supply throughout; assess and document breath sounds before, during (when possible) and after; monitor SpO2 and ETCO2 continuously; and always have a manual resuscitator within reach.",
+     "zh": "转运团队对上机患者的六项职责：维持气道稳定通畅；转运前、中、后核对并记录呼吸机参数；全程保障电源和氧源；转运前、中（可行时）、后听诊并记录呼吸音；持续监测 SpO2 和 ETCO2；手动复苏器（球囊面罩）永远放在伸手可及处。",
+     "hard": true
+    },
+    {
+     "en": "Flight considerations: pneumatic-controlled ventilators are not accurate in flight — air transport calls for electronic-controlled machines. Watch for pneumothorax in the air, and for interfacility patients with significant respiratory compromise, run a 15-to-30-minute trial on the transport ventilator before departure to prove the changes will be tolerated.",
+     "zh": "飞行相关：气动控制的呼吸机在飞行中不准——空中转运要用电子控制机型。空中要警惕气胸；对呼吸功能明显受损的跨机构转运患者，起飞前先在转运呼吸机上试运行 15–30 分钟，证明患者受得了这套参数再走。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Troubleshooting: Start at the Patient, Walk Toward the Machine",
+   "titleZh": "排障：从患者开始，一步步走向机器",
+   "points": [
+    {
+     "en": "The master rule: a manual resuscitator accompanies every ventilated patient, and whenever ventilator function is in doubt, you take the patient off the machine and bag by hand — that guarantees safety while you think. The troubleshooting direction is fixed: start with the patient and work methodically toward the ventilator.",
+     "zh": "总则：每一名上机患者身边都必须跟着一个手动复苏器；只要对呼吸机功能有怀疑，就把患者摘下来改手捏——先保安全，再想问题。排障方向是固定的：从患者开始，有条不紊地一路查向呼吸机。",
+     "hard": true
+    },
+    {
+     "en": "Low battery / power source alarm: the electrical supply is inadequate or the gas inlet pressure is low; the correction is simply restoring the power source. It is the one alarm whose fix is never on the patient.",
+     "zh": "低电量／电源报警：供电不足或进气压力过低；处理就是恢复动力源。这是唯一一个答案绝不在患者身上的报警。",
+     "hard": true
+    },
+    {
+     "en": "Low-pressure alarm drill, in strict order. Step 1: inspect the ventilator–patient interface for a disconnection and tighten every connection. Step 2: if the alarm persists, disconnect the ventilator and bag the patient. Step 3: seal a gloved finger over the patient connector and watch the next cycle — if the manometer climbs and the high-pressure alarm fires, the circuit itself is intact and the leak is at the patient: think a leaking or deflated tracheal or tracheostomy tube cuff.",
+     "zh": "低压报警操作序列，顺序不能乱。第一步：检查呼吸机-患者接口有无脱开，把所有接头拧紧。第二步：报警不消，断开呼吸机、改用球囊给患者通气。第三步：戴手套的手指堵住患者端接头，观察下一个送气周期——压力表能升起来、高压报警响了，说明管路本身完好，漏点在患者那头：想到气管导管或气切套管的套囊漏气或放了气。",
+     "hard": true
+    },
+    {
+     "en": "High-pressure alarm cause ladder, common to catastrophic: bronchospasm, secretions, kinks in the external circuit or airway, biting the tube, coughing, gagging, breathing out of sync ('bucking' the ventilator), and alveolar overdistention. The two serious causes that change everything: the tracheal tube migrating into the esophagus, and pneumothorax. Assess the patient carefully and intervene accordingly.",
+     "zh": "高压报警的原因阶梯，从常见排到致命：支气管痉挛、分泌物、外部管路或气道打折、咬管、咳嗽、恶心干呕、人机不同步（『对抗』呼吸机）、肺泡过度充气。改变一切的两个严重原因：气管导管移位滑进食管、气胸。仔细评估患者，按病因处置。",
+     "hard": true
+    },
+    {
+     "en": "The I:E ratio: a range of 1:3 to 1:4 is typical for adults. Patients with expiratory airflow obstruction — COPD is the model — need a longer expiratory time. Hyperinflation follows from worsening expiratory obstruction and/or an inappropriate I:E ratio, and it presents to you as a high-pressure alarm.",
+     "zh": "吸呼比（I:E）：成人典型范围 1:3 到 1:4。呼气气流受阻的患者——COPD 是代表——需要更长的呼气时间。呼气受阻加重和/或吸呼比设置不当会导致肺过度充气，而它在你面前的表现就是一声高压报警。",
+     "hard": true
+    },
+    {
+     "en": "Respiratory failure comes in two types, and the chapter case makes you define them. Type 1 (hypoxemic): blood oxygen below normal with CO2 normal or low — the hypoxemia drives alveolar hyperventilation; its mechanisms are V/Q mismatch, cardiac or pulmonary right-to-left shunt, reduced alveolar/capillary surface area, and hypoventilation. Type 2 (hypercapnic): hypoxemia plus hypercapnia.",
+     "zh": "呼吸衰竭分两型，本章案例逼你给出定义。1 型（低氧型）：血氧低于正常而 CO2 正常或偏低——低氧血症驱动肺泡过度通气；机制包括通气/血流比例失调、心内或肺内右向左分流、肺泡/毛细血管交换面积减少、通气不足。2 型（高碳酸型）：低氧血症加高碳酸血症。",
+     "hard": true
+    },
+    {
+     "en": "Why CPAP transforms the pulmonary edema patient — the mechanism in one chain: it enlarges alveolar/capillary surface area, so V/Q matching improves, oxygen diffusion rises and arterial oxygen content climbs; simultaneously it displaces lung fluid, compliance improves, and each breath costs less effort.",
+     "zh": "CPAP 为什么能让肺水肿患者起死回生——机制一条链讲完：它扩大肺泡/毛细血管交换面积→通气/血流匹配改善→氧弥散增加→动脉血氧含量上升；同时它把肺内液体挤开→顺应性改善→每一口呼吸都更省力。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Pneumatic power source gas regulation (industry standard)",
+   "itemZh": "气动动力源的气源调定压力（行业标准）",
+   "value": "50 psi"
+  },
+  {
+   "itemEn": "IPAP above EPAP in BPAP",
+   "itemZh": "BPAP 中 IPAP 高于 EPAP 的幅度",
+   "value": "≥4 cm H2O"
+  },
+  {
+   "itemEn": "Tidal volume, normal physiologic",
+   "itemZh": "潮气量（正常生理设定）",
+   "value": "6–8 mL/kg 理想体重"
+  },
+  {
+   "itemEn": "Tidal volume, lung-protective",
+   "itemZh": "潮气量（肺保护策略）",
+   "value": "4–6 mL/kg，维持 PIP／平台压 <30 cm H2O"
+  },
+  {
+   "itemEn": "Adult ventilator respiratory rate",
+   "itemZh": "成人呼吸机频率设定",
+   "value": "12–16 次/分"
+  },
+  {
+   "itemEn": "FiO2 range and oxygenation target",
+   "itemZh": "FiO2 范围与氧合目标",
+   "value": "0.21–1.0；SpO2 >92%，理想 FiO2 <50%"
+  },
+  {
+   "itemEn": "Physiologic PEEP",
+   "itemZh": "生理性 PEEP",
+   "value": "5 cm H2O"
+  },
+  {
+   "itemEn": "Adult inspiratory time",
+   "itemZh": "成人吸气时间",
+   "value": "1.0–1.5 秒"
+  },
+  {
+   "itemEn": "PIP ceiling to minimize baro-/volutrauma",
+   "itemZh": "峰压上限（减少气压伤/容积伤）",
+   "value": "≤30 cm H2O"
+  },
+  {
+   "itemEn": "Low-pressure alarm setting",
+   "itemZh": "低压报警设定",
+   "value": "低于平均 PIP 5–10 cm H2O"
+  },
+  {
+   "itemEn": "High-pressure alarm setting",
+   "itemZh": "高压报警设定",
+   "value": "高于 PIP 10 cm H2O"
+  },
+  {
+   "itemEn": "Apnea alarm interval",
+   "itemZh": "窒息报警间隔",
+   "value": "通常 15 秒内"
+  },
+  {
+   "itemEn": "CPAP oxygen consumption — D cylinder can empty in",
+   "itemZh": "CPAP 耗氧——一个 D 瓶最快可在多久内吸干",
+   "value": "5–10 分钟"
+  },
+  {
+   "itemEn": "CPAP level demanding extra blood-pressure vigilance",
+   "itemZh": "需要格外盯血压的 CPAP 压力水平",
+   "value": ">10 cm H2O"
+  },
+  {
+   "itemEn": "Comfortable inspiratory flow for a responsive patient vs ATV preset flow",
+   "itemZh": "清醒患者的舒适吸气流量 vs 自动转运呼吸机固定流量",
+   "value": "最高 150 L/min vs 固定 40 L/min"
+  },
+  {
+   "itemEn": "Tidal volume increase at term pregnancy",
+   "itemZh": "足月妊娠潮气量的增幅",
+   "value": "约 +40%"
+  },
+  {
+   "itemEn": "SpO2 target when initiating transport ventilation",
+   "itemZh": "转运上机时的 SpO2 滴定目标",
+   "value": "92%–94%"
+  },
+  {
+   "itemEn": "Adult trigger sensitivity",
+   "itemZh": "成人触发灵敏度",
+   "value": "−2 至 −3 cm H2O，或流量 3 L/min"
+  },
+  {
+   "itemEn": "Typical adult I:E ratio",
+   "itemZh": "成人典型吸呼比",
+   "value": "1:3 至 1:4（呼气受阻者需更长呼气时间）"
+  },
+  {
+   "itemEn": "Pre-departure trial on the transport ventilator (significant respiratory compromise)",
+   "itemZh": "重度呼吸受损者起飞/出发前的转运呼吸机试运行",
+   "value": "15–30 分钟"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "PEEP's dark side, straight from the At the Scene box: decreased venous return with a resultant fall in cardiac output, increased intracranial pressure, decreased renal and portal blood flow, and a higher risk of barotrauma. PEEP is contraindicated in untreated pneumothorax and bronchopleural fistula, and its value is judged by whether it improves PaO2 while letting you lower the FiO2.",
+   "zh": "PEEP 的阴暗面（At the Scene 框原意）：静脉回流减少并连带心输出量下降、颅内压升高、肾和门静脉血流减少、气压伤风险升高。未处理的气胸和支气管胸膜瘘禁用 PEEP；PEEP 设多少，以『能否改善 PaO2 并让 FiO2 降下来』为裁判标准。"
+  },
+  {
+   "en": "Transport rule: keep the PEEP even when you switch to hand-bagging — attach an external PEEP valve to the bag-mask device, and monitor hemodynamics and oxygenation closely whenever PEEP is applied or adjusted.",
+   "zh": "转运铁则：换成手捏球囊时 PEEP 也不能丢——给球囊面罩装上外接 PEEP 阀，并且在施加或调整 PEEP 的整个过程中密切监测血流动力学和氧合。"
+  },
+  {
+   "en": "The moment any ventilator behaviour puzzles you, stop debugging on the patient's lungs: disconnect, bag by hand, and troubleshoot from the patient toward the machine. A bagged patient is safe; a puzzled paramedic staring at a beeping box is not.",
+   "zh": "只要机器的表现让你起疑，就别在患者的肺上做调试：断开、改手捏球囊，然后从患者一端向机器一端逐级排查。被手动通气的患者是安全的；对着蜂鸣的盒子发呆的救护员不是。"
+  },
+  {
+   "en": "Before wheels roll with a CPAP patient, do the oxygen math out loud: driving gas is 100% O2 and some units drain a D cylinder in 5 to 10 minutes — plan cylinders against transport time, not against hope.",
+   "zh": "带着 CPAP 患者出发前，把耗氧账当众算一遍：驱动气是纯氧，有的机型 5–10 分钟就能吸干一个 D 瓶——氧瓶按转运时长配，不是按运气配。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Barotrauma versus volutrauma: both are children of positive pressure, but barotrauma is pressure injury — the classic result is pneumothorax — while volutrauma is overstretch injury to the alveoli with impaired surfactant function. An exam stem that says 'pneumothorax after high pressures' wants barotrauma.",
+   "zh": "气压伤 vs 容积伤：都是正压的产物，但气压伤是压力性损伤——经典结局是气胸；容积伤是肺泡被过度牵张、表面活性物质功能受损。题干写『高压后出现气胸』，答案要的是气压伤。"
+  },
+  {
+   "en": "'Pressure control guarantees the patient is ventilated.' Wrong — it only guarantees the pressure. A bitten or mucus-plugged tube still lets the machine reach its target while tidal volume falls toward zero, which is exactly why exhaled volume, ETCO2 and chest rise stay on your monitoring list.",
+   "zh": "『压力控制＝患者一定有通气』——错，它保证的只是压力。咬管或痰栓堵管时机器照样打到目标压力，而潮气量趋近于零；这正是呼出潮气量、ETCO2 和胸廓起伏必须留在监测清单上的原因。"
+  },
+  {
+   "en": "IPAP/EPAP versus PIP/PEEP: same physiology, different vocabularies. PIP is the invasive twin of IPAP; PEEP is the invasive twin of EPAP. Mixing the pairs across columns is a favourite distractor.",
+   "zh": "IPAP/EPAP 与 PIP/PEEP：同一套生理、两套词汇。PIP 是 IPAP 的有创孪生，PEEP 是 EPAP 的有创孪生。把两组配对交叉错配，是出题人最爱的干扰项。"
+  },
+  {
+   "en": "'A high-pressure alarm means the ventilator is broken.' Almost never — the machine is reporting the patient or the circuit: bronchospasm, secretions, kinks, biting, coughing, bucking, hyperinflation, and at the serious end esophageal tube migration or pneumothorax. The alarm that actually points at the machine is the power/gas-source alarm.",
+   "zh": "『高压报警＝机器坏了』——几乎从不是。机器是在报告患者或管路的问题：支气管痉挛、分泌物、打折、咬管、咳嗽、人机对抗、过度充气，重则导管滑进食管或气胸。真正指向机器本身的，是电源/气源报警。"
+  },
+  {
+   "en": "'CPAP and BPAP are life support.' They are not — both merely augment spontaneous breathing and demand an intact respiratory drive. A patient who cannot protect the airway, has unstable facial fractures, or will not cooperate is a contraindication, not a candidate.",
+   "zh": "『CPAP/BPAP 是生命支持』——不是。两者只是给自主呼吸加持，前提是呼吸驱动完好。不能保护气道、面部骨折不稳定、不配合的患者是禁忌证，不是适用对象。"
+  },
+  {
+   "en": "'An automated transport ventilator is just a small ventilator.' The book says the opposite: ATVs are FROPVDs with timers, may lack alarms, flow control and modes, and are never left running without a skilled paramedic watching. Their fixed 40 L/min flow suits cardiac arrest — not the awake patient who needs up to 150 L/min to feel comfortable.",
+   "zh": "『自动转运呼吸机就是小号呼吸机』——原书态度恰恰相反：ATV 是带定时器的限流氧动力装置，可能没有报警、不能调流量、没有模式，而且绝不允许在无熟练救护员盯守下运转。它固定的 40 L/min 流量适合心搏骤停——不适合需要高达 150 L/min 才觉得舒服的清醒患者。"
+  },
+  {
+   "en": "'Set the expiratory time longer for COPD.' There is no expiratory-time knob — expiratory time is what remains after rate and inspiratory time are chosen. You buy a longer expiration (and dodge auto-PEEP) by lowering the rate or shortening inspiratory time, which is the same thing as stretching the I:E ratio.",
+   "zh": "『COPD 就把呼气时间调长』——面板上根本没有呼气时间旋钮：频率和吸气时间定了，剩下的才是呼气时间。想买到更长的呼气（并躲开 auto-PEEP），手段是调低频率或缩短吸气时间——也就是把吸呼比拉长。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "两个旋钮",
+   "en": "Oxygen problems? Touch FiO2 and PEEP. CO2 problems? Touch VT and rate. Every ventilator question about 'which setting do you adjust' resolves to these two knobs.",
+   "zh": "氧的问题，动 FiO2 和 PEEP；CO2 的问题，动潮气量和频率。所有『该调哪个参数』的考题，最后都落回这两个旋钮。"
+  },
+  {
+   "name": "I 配 I，E 配 E",
+   "en": "Across the invasive/noninvasive divide the letters pair themselves: IPAP is the noninvasive PIP (both inspiratory), EPAP is the noninvasive PEEP (both expiratory). Match the I's and match the E's.",
+   "zh": "跨过有创/无创的分界线，字母自己配对：IPAP 就是无创的 PIP（都管吸气），EPAP 就是无创的 PEEP（都管呼气）。I 配 I，E 配 E。"
+  },
+  {
+   "name": "低漏·高堵·哑电",
+   "en": "Alarm triage in six words: low-pressure = a leak (usually a disconnect); high-pressure = a block or a fight (secretions, kink, bite, bronchospasm, bucking); a dying machine = power or gas. Leak, block, power — in that mental order.",
+   "zh": "报警分诊六个字：低压＝漏（多半是断开）；高压＝堵或抗（分泌物、打折、咬管、痉挛、人机对抗）；机器蔫了＝电或气。漏、堵、电，按这个顺序想。"
+  },
+  {
+   "name": "频率判官",
+   "en": "CPAP's verdict is read from the respiratory rate minutes after application: rate falling — therapy winning; rate climbing — therapy failing, ready the next step (usually intubation).",
+   "zh": "CPAP 的成败由上机几分钟后的呼吸频率宣判：频率在降——治疗在赢；频率在升——治疗要输，准备下一步（通常是插管）。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Three minutes after you start positive-pressure ventilation, the patient's blood pressure sags. Walk the mechanism, and name the ceiling number that was supposed to prevent injury.",
+   "qZh": "正压通气开始三分钟后患者血压往下掉。请讲出机制链，并说出本应预防损伤的那个压力上限。",
+   "aEn": "Raised intrathoracic pressure reduces venous return to the right heart, cardiac output falls, hypotension follows, hepatic and renal flow drop. Keep PIP (and plateau) at or below 30 cm H2O; also consider evolving tension pneumothorax from barotrauma.",
+   "aZh": "胸腔内压升高→右心静脉回流减少→心输出量下降→低血压→肝肾血流减少。峰压（和平台压）应控制在 30 cm H2O 及以下；同时要想到气压伤演变成张力性气胸的可能。"
+  },
+  {
+   "qEn": "Recite the standard initial transport-ventilator recipe for an adult.",
+   "qZh": "背出成人转运上机的标准初始配方。",
+   "aEn": "Assist/control mode; VT 6–8 mL/kg of ideal body weight; rate 12–16/min; FiO2 1.0 titrated down to SpO2 92–94%; inspiratory time 1.0–1.5 s with enough expiratory time to avoid auto-PEEP; sensitivity −2 to −3 cm H2O (or 3 L/min); PIP kept ≤30 cm H2O; usually carry over the sending facility's settings.",
+   "aZh": "AC 模式；潮气量 6–8 mL/kg 理想体重；频率 12–16 次/分；FiO2 从 1.0 向下滴定至 SpO2 92%–94%；吸气时间 1.0–1.5 秒并留足呼气时间防 auto-PEEP；灵敏度 −2 至 −3 cm H2O（或 3 L/min）；峰压 ≤30 cm H2O；跨机构转运通常沿用送出机构的参数。"
+  },
+  {
+   "qEn": "The low-pressure alarm sounds mid-transport. Give the three-step drill in order, and interpret a positive finger-occlusion test.",
+   "qZh": "转运途中低压报警响了。按顺序说出三步操作，并解释指堵试验阳性意味着什么。",
+   "aEn": "1) Inspect the ventilator–patient interface and tighten all connections. 2) Still alarming — disconnect and bag the patient. 3) Cover the patient connector with a gloved finger and watch a cycle: if the manometer rises and the high-pressure alarm fires, the circuit is intact and the leak is at the patient — think a leaking or deflated tube cuff.",
+   "aZh": "1）检查呼吸机-患者接口、拧紧所有接头。2）报警不消——断开呼吸机，改球囊通气。3）戴手套的手指堵住患者端接头观察一个周期：压力表升起、高压报警响，说明管路完好、漏点在患者一侧——想到导管套囊漏气或放气。"
+  },
+  {
+   "qEn": "List five common causes and the two serious causes of a high-pressure alarm.",
+   "qZh": "列出高压报警的五个常见原因和两个严重原因。",
+   "aEn": "Common: bronchospasm, secretions, circuit or airway kinks, biting the tube, coughing/gagging, patient–ventilator asynchrony, hyperinflation (any five). Serious: tracheal tube migrated into the esophagus, and pneumothorax.",
+   "aZh": "常见：支气管痉挛、分泌物、管路或气道打折、咬管、咳嗽/干呕、人机对抗、过度充气（任答五个）。严重：气管导管移位入食管、气胸。"
+  },
+  {
+   "qEn": "In which modes can pressure support exist, and what is its sole purpose?",
+   "qZh": "压力支持只可能出现在哪些模式里？它唯一的目的是什么？",
+   "aEn": "Only where spontaneous breaths exist: SIMV, CPAP, and noninvasive ventilation. Its sole purpose is to cut the work of breathing by helping the patient's own breaths overcome airflow resistance and lung compliance.",
+   "aZh": "只出现在允许自主呼吸的模式里：SIMV、CPAP、无创通气。唯一目的：帮患者的自主呼吸克服气流阻力和肺顺应性，降低呼吸做功。"
+  },
+  {
+   "qEn": "Define type 1 versus type 2 respiratory failure by blood gases.",
+   "qZh": "用血气定义 1 型与 2 型呼吸衰竭。",
+   "aEn": "Type 1 (hypoxemic): oxygen content below normal with CO2 normal or low, because hypoxemia drives alveolar hyperventilation; mechanisms include V/Q mismatch, right-to-left shunt, reduced alveolar/capillary surface area, hypoventilation. Type 2 (hypercapnic): hypoxemia plus hypercapnia.",
+   "aZh": "1 型（低氧型）：血氧低于正常而 CO2 正常或偏低——低氧驱动肺泡过度通气；机制含 V/Q 失调、右向左分流、肺泡/毛细血管面积减少、通气不足。2 型（高碳酸型）：低氧血症＋高碳酸血症。"
+  },
+  {
+   "qEn": "Name the contraindications to CPAP/BPAP, and the two hazards you monitor for once CPAP is running.",
+   "qZh": "说出 CPAP/BPAP 的禁忌证，以及 CPAP 运行中要盯防的两大危险。",
+   "aEn": "Contraindicated: inability to protect the airway, unstable facial fractures, uncooperative patient — and it needs an intact respiratory drive. Running hazards: sudden hypotension from reduced venous return (watch BP, especially above 10 cm H2O) and conversion of a simple pneumothorax into a tension pneumothorax within a few breaths.",
+   "aZh": "禁忌：不能保护气道、面部骨折不稳定、不配合——且必须有完好的呼吸驱动。运行中盯防：静脉回流减少导致的骤发低血压（盯血压，尤其超过 10 cm H2O 时），以及几口呼吸内单纯性气胸被吹成张力性气胸。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "CPAP is a PCP-level skill in BC, gated by a precise written checklist",
+   "topicZh": "在 BC，CPAP 是 PCP 级技能，且有一张精确的书面准入清单",
+   "bookEn": "The textbook contraindicates CPAP/BPAP loosely: inability to protect the airway, unstable facial fractures, uncooperative patient, absent respiratory drive.",
+   "bookZh": "教材对 CPAP/BPAP 的禁忌写得笼统：不能保护气道、面部骨折不稳定、不配合、无呼吸驱动。",
+   "bcEn": "BC marks CPAP (and BVM PEEP) as PCP interventions — not EMR — and writes a hard gate. Indications: age 13 or older, significant respiratory distress, awake and following commands, patent airway, and ALL of RR >24, SpO2 <94% on oxygen, and accessory muscle use. Contraindications: age 12 or less, decreased LOC or unable to follow commands, respiratory arrest or hypoventilation, imminent/actual respiratory failure (slow, shallow breaths with falling LOC — these patients get BVM, possibly with PEEP), mask that will not fit, vomiting or aspiration risk, traumatic cause of the distress, tracheostomy, suspected or known pneumothorax, and systolic BP under 90 mm Hg.",
+   "bcZh": "BC 把 CPAP（和球囊 PEEP 阀）标为 PCP 干预——EMR 不可用——并写死一道门槛。适应证：年龄 ≥13 岁、显著呼吸窘迫、清醒且能遵嘱、气道通畅，且同时满足 RR >24、吸氧下 SpO2 <94%、辅助呼吸肌参与三条。禁忌证：≤12 岁、意识下降或不能遵嘱、呼吸停止或通气不足、即将或已经呼吸衰竭（呼吸慢而浅、意识在下滑——这类患者上 BVM，可加 PEEP）、面罩无法贴合、呕吐或误吸风险、创伤性呼吸窘迫、气管切开、疑似或确诊气胸、收缩压 <90 mmHg。",
+   "ref": "EMALB BC Provincial Examination Guidelines p.50-52（Current to June 15, 2026）"
+  },
+  {
+   "topicEn": "Does CPAP reduce mortality? Book says no, BC says yes",
+   "topicZh": "CPAP 降不降死亡率？教材说不降，BC 说降",
+   "bookEn": "The textbook cites large emergency department and hospital studies: noninvasive ventilation improves respiratory-distress symptoms and can avert intubation, with no effect on mortality.",
+   "bookZh": "教材引用大型急诊科和医院研究：无创通气改善呼吸窘迫症状、可避免插管，但对死亡率没有影响。",
+   "bcEn": "BC's guideline states flatly that CPAP application has been shown to reduce intubation requirements and mortality. On the BC exam, answer with the BC position.",
+   "bcZh": "BC 指南直接写明：CPAP 的应用已被证明能降低插管需求和死亡率。在 BC 考试里按 BC 的说法作答。",
+   "ref": "EMALB BC Provincial Examination Guidelines p.51（Current to June 15, 2026）"
+  },
+  {
+   "topicEn": "Titration ceilings: BC caps CPAP and BVM-PEEP at 10 cm H2O with a written escape plan",
+   "topicZh": "滴定天花板：BC 给 CPAP 和球囊 PEEP 都封顶 10 cm H2O，并写明撤退预案",
+   "bookEn": "The book gives CPAP levels like 5 cm H2O, advises extra BP vigilance above 10, and describes PEEP as titrated upward against hypoxemia without naming a prehospital cap.",
+   "bookZh": "教材给出 5 cm H2O 之类的 CPAP 压力、提醒超过 10 时要格外盯血压，并把 PEEP 描述为随低氧向上滴定，但没给院前封顶值。",
+   "bcEn": "BC writes the numbers: start CPAP at 5 cm H2O with 5 L/min oxygen flow, reassess, then climb in 2.5 cm H2O increments to a maximum of 10 cm H2O; if the patient deteriorates, remove CPAP and go to BVM with assisted ventilations. For BVM PEEP: valve on the exhaust port, start at 5 cm H2O, ventilate at no more than 8–10 breaths/min, increase by 2.5 up to 10 cm H2O maximum — and remove the PEEP valve if the patient becomes hypotensive (systolic <90) or arrests.",
+   "bcZh": "BC 把数字写死：CPAP 从 5 cm H2O、氧流量 5 L/min 起步，复评后按 2.5 cm H2O 一档往上加，封顶 10 cm H2O；患者恶化就摘掉 CPAP、改球囊辅助通气。球囊 PEEP：阀装在排气口、从 5 cm H2O 起步、通气频率不超过 8–10 次/分、按 2.5 一档加到最高 10 cm H2O——患者低血压（收缩压 <90）或心搏骤停时立即摘除 PEEP 阀。",
+   "ref": "EMALB BC Provincial Examination Guidelines p.52-53（Current to June 15, 2026）"
+  }
+ ],
+ "sourcePages": "1265-1302"
+}

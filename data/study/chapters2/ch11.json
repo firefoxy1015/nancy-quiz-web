@@ -1,0 +1,513 @@
+{
+ "id": "ch11",
+ "n": 11,
+ "titleEn": "Research and Quality",
+ "titleZh": "科研与质量管理",
+ "group": "professional",
+ "examWeight": 1,
+ "whyEn": "This chapter turns 'the study says' into something you can actually judge. The written exam likes it for clean one-liners: which study design sits where on the evidence hierarchy, what a p value under 0.05 actually claims, which bias ruins which sampling plan, what a REB is allowed to waive, and how quality assurance differs from research and from quality improvement. None of it needs memorizing whole trials — it needs the vocabulary sorted into pairs you can tell apart: prospective/retrospective, observational/experimental, mean/median, consent/assent, QA/QI. Low weight, but the definitions are cheap marks if the pairs are straight and expensive ones if they are tangled.",
+ "whyZh": "这一章教你把『研究表明』四个字拆开来掂量。笔试爱在这里出干净利落的单句题：某种研究设计在证据层级里排第几、p<0.05 到底在主张什么、哪种偏倚毁掉哪种抽样方案、研究伦理委员会（REB）有权豁免什么、质量保证与科研及质量改进的区别在哪。这些都不用背整篇论文——要的是把词汇整理成一对对能分清的概念：前瞻/回顾、观察/实验、均值/中位数、知情同意/未成年人同意、QA/QI。权重不高，但概念题是最便宜的分：配对理得清就白捡，理不清就白丢。",
+ "competencies": {
+  "areas": [],
+  "codes": []
+ },
+ "sections": [
+  {
+   "titleEn": "The Role of Science in Paramedicine",
+   "titleZh": "科学在救护实践中的角色",
+   "points": [
+    {
+     "en": "Modern science dates to the early 17th century, when systematic observation replaced the authority of philosophers and religious teaching as the basis for truth — the same shift the chapter asks of paramedicine: practice guided by best available evidence, not by tradition, by what works elsewhere in health care, or by what an influential person says.",
+     "zh": "现代科学诞生于17世纪初：系统观察取代了哲学家权威和宗教教义，成为『真理』的依据——本章要求救护行业完成同一场转变：实践跟着现有最佳证据走，而不是跟着传统、跟着『别的医疗场景有效』、或跟着某位有影响力的人的说法走。",
+     "hard": true
+    },
+    {
+     "en": "Two definitions worth quoting on a written paper: science is systematic observation and/or experimentation aimed at explaining and predicting natural phenomena; research (per Canada's Tri-Council Policy Statement) is an undertaking that extends knowledge through disciplined inquiry or systematic investigation. The two load-bearing features of research: a systematic plan, and results that push knowledge beyond the one situation studied.",
+     "zh": "两条值得在笔试里原样搬出的定义：科学=以解释和预测自然现象为目的的系统观察和/或实验；研究（按加拿大三大理事会政策声明 TCPS）=通过有纪律的探究或系统调查来扩展知识的活动。研究的两个承重特征：有系统的计划；成果能把知识推到所研究的那一个情境之外。",
+     "hard": true
+    },
+    {
+     "en": "Chapter terminology: 'paramedic' covers all three Canadian levels — primary, advanced, critical care — and 'paramedic system' means the organization coordinating everything paramedics do, including traditional EMS plus newer activities like community paramedicine.",
+     "zh": "本章的用词约定：paramedic 一词涵盖加拿大全部三个级别——初级（PCP）、高级（ACP）、重症（CCP）；paramedic system 指统筹救护员全部活动的组织，既包括传统 EMS，也包括社区急救等新业务。",
+     "hard": true
+    },
+    {
+     "en": "Why experience alone fails — the graveyard of 'obviously effective' treatments: thalidomide for morning sickness caused malformed babies worldwide; routine IV lidocaine in heart attack, given to prevent dysrhythmias, actually triggered fatal rhythms; and the paramedic-specific classic, MAST pneumatic trousers for hypotensive trauma, inflated like a giant BP cuff to push blood to the core — until a landmark 1980s study showed longer on-scene times and lower survival with them on.",
+     "zh": "为什么单靠经验会翻车——那些『显然有效』疗法的坟场：沙利度胺治孕吐，造成全球范围的畸形儿；心梗患者常规静推利多卡因，本想预防心律失常，结果反而诱发致命心律；救护行业自己的经典教训是 MAST 抗休克充气裤——给低血压创伤患者穿上、像巨型血压袖带一样充气把血『挤』回躯干核心——直到1980年代一项里程碑研究发现：用了它，现场滞留时间更长，生存率反而更低。",
+     "hard": true
+    },
+    {
+     "en": "The same correction is happening now to tracheal intubation, long called the gold standard: accumulating evidence shows harm in pediatric patients and in some adult groups such as traumatic brain injury, so paramedics now intubate those patients far less often. The moral: research determines an intervention's effect systematically; common sense and clinical experience matter but can mislead, so evidence plus expertise together drive best care.",
+     "zh": "同样的纠错此刻正发生在气管插管身上——它曾长期被称为金标准：不断累积的证据显示它对儿科患者以及部分成人群体（如创伤性脑损伤）有害，所以如今救护员对这些患者的插管远比从前少。教训是：研究以系统的方式判定一项干预的效果；常识和临床经验重要，但会骗人——证据加上专业判断，才撑得起最佳救治。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Study Designs: Quantitative and Qualitative",
+   "titleZh": "研究设计：定量与定性",
+   "points": [
+    {
+     "en": "Vocabulary pair the book flags in a box: methodology is the broad approach of inquiry — the best way to conduct a study — while methods are the practical activities, like data collection and analysis. Quantitative research observes and measures to make inferences: generalizing from the sample studied to the larger population.",
+     "zh": "书里用方框特意标出的一对词：methodology（方法论）指探究的总体路径——怎样做这项研究最合适；methods（方法）指具体操作，如数据收集与分析。定量研究的套路是先观察和测量，再做推断（inference）：把在样本上得到的结果推广到更大的总体。",
+     "hard": true
+    },
+    {
+     "en": "Two validities to keep straight: internal validity is your confidence that the study's own conclusions are accurate — did the design skew the results? External validity is how well findings generalize beyond the sample to other people, events, and settings. Researchers routinely trade one against the other to keep a study feasible.",
+     "zh": "必须分清的两种效度：内部效度=对研究自身结论准不准的信心——设计本身有没有把结果带偏？外部效度=结果能否推广到样本之外的人群、事件和场景。为了让研究做得成，研究者经常拿一种效度换另一种。",
+     "hard": true
+    },
+    {
+     "en": "The great divide in quantitative design: in experimental studies the researcher intervenes to decide who gets which treatment; in observational studies the researcher assigns nothing and only collects data on exposures and outcomes. Experimental designs exist to demonstrate causality; observational designs can reveal relationships but not prove cause to the same degree.",
+     "zh": "定量设计的大分水岭：实验性研究里，研究者亲自介入、决定谁接受哪种处理；观察性研究里，研究者什么都不分配，只收集暴露与结局的数据。实验设计的使命是证明因果；观察设计能发现关联，但证明因果的力度到不了同一级别。",
+     "hard": true
+    },
+    {
+     "en": "Experimental versus quasi-experimental hinges on one word: randomization. A randomized controlled trial (RCT) assigns each participant to intervention or control purely by chance, so the two groups match on everything except the intervention — which is what crushes bias and confounding and buys strong internal validity. The price: heavy time, planning, and funding, and entry criteria so tight that external validity can shrink. Quasi-experimental designs assign groups without true randomization (say, stocking half the ambulances with the study drug) and must then check the groups really are comparable.",
+     "zh": "实验性与准实验性的分界只在一个词：随机化。随机对照试验（RCT）让每名受试者纯凭机会进入干预组或对照组，两组因此除了干预以外几乎处处相同——这正是它能压制偏倚与混杂、换来强内部效度的原因。代价是：耗时间、耗规划、耗经费，而且入组标准卡得太紧时外部效度会缩水。准实验设计不做真随机分组（比如只给一半救护车配研究药物），事后必须仔细核对两组是否真的可比。",
+     "hard": true
+    },
+    {
+     "en": "The three observational workhorses: cross-sectional studies collect exposure and outcome at one moment — a snapshot that can describe (like a burnout survey) but never establish cause and effect. Case-control studies start from outcome: the case group has the disease, the controls do not, and researchers look backward for differing exposures. Cohort studies start from exposure: recruit by exposed/unexposed status, then follow forward — often for years — to see who develops the condition.",
+     "zh": "三种主力观察设计：横断面研究在同一时点收集暴露与结局——一张快照，能描述现状（比如职业倦怠问卷），但永远定不了因果。病例对照研究从结局出发：病例组有病、对照组没有，回头找两组暴露史的差别。队列研究从暴露出发：按『暴露/未暴露』招募，再向前随访——常常一追数年——看谁发展出目标疾病。",
+     "hard": true
+    },
+    {
+     "en": "Bias is systematic error — something in the design steers conclusions away from truth. Confounding is the flagship case: a third factor that influences both who receives the intervention and the outcome itself (patients likely to die have poor veins, so they get no IV thrombolytics — clinical stability confounds the mortality comparison). Control it by design (randomization) or in analysis — but statistical adjustment only works if you knew about the confounder and collected it.",
+     "zh": "偏倚=系统误差——设计里的某个环节把结论从真相处带偏。混杂是头号典型：某个第三因素既影响谁接受干预、又影响结局本身（濒死患者外周血管差、打不上IV、于是拿不到院前溶栓——病情稳定度就这样混杂了死亡率比较）。对付它要么靠设计（随机化），要么靠统计校正——而校正的前提是你事先知道这个混杂因素并收集了它的数据。",
+     "hard": true
+    },
+    {
+     "en": "Two more named biases: selection bias — a systematic difference between who is in the study and who is not (survey sent to work email reaches only full-timers if part-time staff have no accounts); and misclassification bias — a variable sorted into the wrong box (a crew staged out for police clearance but logged 'arrived', filed under 'response under 8 minutes' when the real arrival was later).",
+     "zh": "还有两种要点名的偏倚：选择偏倚——进入研究的人与没进入的人存在系统性差别（问卷发工作邮箱，而兼职员工没有邮箱账号，样本里就只剩全职）；错分偏倚——变量被归错了格子（车组因等警方清场在外待命却点了『到达现场』，事件被归入『响应<8分钟』组，实际到达远在8分钟之后）。",
+     "hard": true
+    },
+    {
+     "en": "Random error is the difference chance alone can produce. Its two statistical faces: a type I error concludes a difference exists when in truth it does not; a type II error concludes there is no difference when one actually exists. Both are managed at the design stage by recruiting a sample big enough for the difference you want to detect.",
+     "zh": "随机误差是仅凭机会就可能出现的差异。它的两副统计面孔：I型错误——断言两组有差异，而真相是没有；II型错误——断言两组没差异，而真相是有。两者都在设计阶段应对：按你想检测的差异大小，招募足够大的样本。",
+     "hard": true
+    },
+    {
+     "en": "Quantitative versus qualitative at a glance (the book's contrast table): objective vs subjective; description-and-measurement vs why-and-how; causality vs understanding; controlling bias vs reflexivity (the researcher acknowledges shaping the study); large groups vs small groups. Qualitative data live in words — rich description of meaning, values, and social processes — not numbers. A study using both approaches on the same question is mixed-methods.",
+     "zh": "定量与定性的对照表（书中原表的五行）：客观 vs 主观；描述与测量 vs 为什么与怎么样；因果 vs 理解；控制偏倚 vs 反身性（研究者承认自己会影响研究）；大样本 vs 小样本。定性研究的数据是文字——对意义、价值观与社会过程的厚描述——而不是数字。同一问题上并用两种取径的研究叫混合方法（mixed-methods）。",
+     "hard": true
+    },
+    {
+     "en": "Four qualitative traditions to tell apart on a matching question: descriptive (summarize events in everyday terms, least interpretation — 'how are paramedics using the new device?'); phenomenology (the lived experience of individuals and the meaning they make of it); grounded theory (build a new theory from participants' views through iterative-inductive collection-plus-analysis, used where little theory exists; comes in positivist and constructivist strains); ethnography (understand a group's culture through fieldwork and participant observation, capturing shared values, beliefs, and language).",
+     "zh": "四种定性传统，连线题式地分开记：描述性研究——用当事人的日常语言概括事件，解读成分最少（『救护员实际怎么用这台新设备？』）；现象学——个体的亲历体验及其意义建构；扎根理论——用『边收集边分析』的迭代归纳流程，从参与者的视角里长出一套新理论，适用于几乎没有现成理论的领域，分实证主义与建构主义两大流派；民族志——靠田野工作与参与式观察理解一个群体的文化：共享的价值观、信念和语言。",
+     "hard": true
+    },
+    {
+     "en": "Qualitative rigour is judged not by internal/external validity but by trustworthiness, built on credibility (detailed transparency about the research process, including reflexivity) and authenticity (rich, detailed description and analysis). Named techniques: prolonged time in the field, member checking (returning findings to participants to confirm meaning), constant comparison of data sources, and negative-case analysis.",
+     "zh": "定性研究的严谨性不用内部/外部效度来评，而看可信赖度（trustworthiness），它立在两根柱子上：可信性（把研究过程交代得足够透明细致，包括反身性）与真实性（对现象给出厚实细致的描述与分析）。可点名的技法：长期驻扎田野、成员核验（把发现拿回给参与者确认含义）、多数据源持续比对、负面案例分析。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Research Process: From Question to Publication",
+   "titleZh": "研究流程：从提问到发表",
+   "points": [
+    {
+     "en": "Every quantitative study walks the same four steps: 1) planning, 2) data collection, 3) data analysis, 4) writing, presenting, and sharing. Planning starts by defining a problem space — the gap between what research already knows and what we want it to know — found by shuttling between the problem, a draft question, and the literature until a genuine gap emerges.",
+     "zh": "每一项定量研究都走同样四步：① 规划 ② 数据收集 ③ 数据分析 ④ 撰写、汇报与分享。规划的起点是划定问题空间——现有研究知识与想要达到的知识之间的缺口——做法是在『问题—初版研究问题—文献』之间来回穿梭，直到找到一个真实存在的缺口。",
+     "hard": true
+    },
+    {
+     "en": "Two question-building frameworks to memorize by letter. FINER tests whether a question is worth asking: Feasible, Interesting, Novel, Ethical, Relevant. PICO structures the question itself: Population, Intervention, Comparison, Outcome (outcome does not fit every design — and PICO does not fit qualitative questions at all).",
+     "zh": "两套按字母背的提问框架。FINER 检验一个问题值不值得问：可行（Feasible）、有意思（Interesting）、新颖（Novel）、合伦理（Ethical）、有相关性（Relevant）。PICO 搭起问题本身的骨架：人群（Population）、干预（Intervention）、对照（Comparison）、结局（Outcome）——结局一项并非所有设计都适用，而 PICO 整个框架都套不上定性研究的问题。",
+     "hard": true
+    },
+    {
+     "en": "A hypothesis is a tentative, testable prediction of the relationship between variables — it must be logical, testable, and refutable. Distinguish outcome from results: the outcome is what researchers set out to measure (defined in the PICO, found in the methods section); the results are what the data actually showed for each outcome (found in the results section).",
+     "zh": "假设=对变量间关系的一个试探性、可检验的预测——必须合逻辑、可检验、可被推翻。再分清 outcome 与 results：outcome（结局指标）是研究者事先定好要测什么，写在 PICO 里、见于方法部分；results（结果）是数据对每个结局指标实际给出的答案，见于结果部分。",
+     "hard": true
+    },
+    {
+     "en": "Population is everyone the researcher cares about; the sample is the subset actually enrolled. Narrow the sample (age 35-55, no comorbidities, paramedic-witnessed arrest) and internal feasibility rises while external validity falls — the findings speak for a sliver of real patients. Sample size is calculated before the study: too small and it cannot represent the population or show the difference sought; needlessly large and it wastes resources and enrols participants unethically.",
+     "zh": "总体=研究者关心的全部人群；样本=真正入组的那一小撮。把样本收窄（35-55岁、无合并症、救护员目击的骤停），可行性上去了，外部效度就下来了——结论只能代表真实患者里的一小片。样本量要在开工前算好：太小，既代表不了总体也测不出想找的差异；无谓地大，则浪费资源、还把不必要的受试者拉进研究，本身就不合伦理。",
+     "hard": true
+    },
+    {
+     "en": "In an experimental study the independent (predictor) variable is what the researcher manipulates — the cooling drug; the dependent (outcome) variable is what is hypothesized to change because of it — neurologic status. Several dependent variables are allowed, but researchers name one primary outcome and rank the rest secondary.",
+     "zh": "实验性研究里，自变量（预测变量）是研究者操纵的东西——降温药物；因变量（结局变量）是假设会因此改变的东西——神经学状态。因变量可以有好几个，但研究者要指定唯一的主要结局，其余列为次要结局。",
+     "hard": true
+    },
+    {
+     "en": "Qualitative planning differs on purpose: a purpose statement declares the study's intent, sample size is never calculated a priori — what matters is sample significance. Purposive sampling recruits people whose shared attributes speak to the phenomenon (interview students who are living the experience now); theoretical sampling chases specific conceptual hunches, including deviant cases with divergent views. Collection stops at theoretical sufficiency — in grounded theory, saturation — when new data no longer force changes to the analysis.",
+     "zh": "定性研究的规划刻意不同：先写目的陈述宣告研究意图；样本量从不事先计算——要紧的是样本的意义性。目的性抽样招募那些共同特征最能说明现象的人（要研究养成期的职业认同，就采访正身处其中的学生）；理论抽样追着具体的概念线索走，包括专找观点相左的异例。收集何时停止？到理论充分性为止——扎根理论里叫饱和：新数据再也不会迫使分析框架大改的那一刻。",
+     "hard": true
+    },
+    {
+     "en": "Every study involving human subjects — quantitative or qualitative — must pass a Research Ethics Board (REB) before it begins. The REB's job: participants treated fairly, safely, confidentially, and never coerced; all potential participants get the chance to give informed consent except in exceptional circumstances. Outside Canada the same body is called an institutional review board (IRB) or ethics committee (EC).",
+     "zh": "任何涉及人类受试者的研究——不论定量定性——开工前都必须过研究伦理委员会（REB）这一关。REB 管的是：受试者被公平、安全、保密地对待，绝不能被胁迫参与；所有潜在受试者都必须获得知情同意的机会，除非属于极特殊的例外情形。在加拿大以外，同类机构叫机构审查委员会（IRB）或伦理委员会（EC）。",
+     "hard": true
+    },
+    {
+     "en": "Reliability is consistency: the same measurement repeated gives the same reading — tested as intrarater (same person, two time points) and inter-rater (two people, same time). Validity is accuracy of meaning: does the instrument measure what you claim it measures (does a written test measure intelligence, or just reading comprehension)? Fixes: use tools already tested for both, standardize the method (cortisol drawn at the same time of day for everyone), automate where possible (auto time-stamps on 9-1-1 calls).",
+     "zh": "信度=一致性：同一测量重复做，读数不变——检验方式分评分者内（同一人、两个时点）与评分者间（两个人、同一时点）。效度=测得对不对：这个工具量的真是你声称要量的东西吗（笔试量的是智力，还是只是阅读理解）？改进手段：选用信效度已被验证过的现成工具；统一测量方法（皮质醇全员在每天同一时刻抽）；能自动化就自动化（9-1-1 接线自动打时间戳）。",
+     "hard": true
+    },
+    {
+     "en": "Retrospective versus prospective collection: retrospective digs through records that already exist (PCRs, dispatch logs, ED charts) — cheap and fast, but the data were never collected for your question, pieces are missing, and their reliability is unknowable. Prospective starts collecting after the study begins — crews can be trained, purpose-built forms capture exactly what is needed, internal validity improves — at the cost of far more time and effort.",
+     "zh": "回顾式与前瞻式收集：回顾式翻已经存在的记录（PCR、调度日志、急诊病历）——省钱省时，但那些数据当初不是为你的问题收的，缺项常见、信度无从考证。前瞻式在研究启动后才开始收数据——可以先培训人员、用专门设计的表格精确采集所需信息，内部效度随之改善——代价是投入的时间精力大得多。",
+     "hard": true
+    },
+    {
+     "en": "Descriptive statistics summarize the data in hand: categorical variables (dead/alive) as counts and percentages; continuous variables (pulse rate, weight) as a mean (sum divided by n) or median (the middle value — the 50th percentile of the ordered list). Inferential statistics go further: they use the sample to draw conclusions about the population, quantifying how much chance could explain.",
+     "zh": "描述统计只总结手头的数据：分类变量（死亡/存活）报计数和百分比；连续变量（脉率、体重）报均值（总和除以例数）或中位数（把数值从低到高排开取正中间那个——第50百分位）。推断统计更进一步：用样本对总体下结论，并量化『纯属偶然』能解释多少。",
+     "hard": true
+    },
+    {
+     "en": "Hypothesis testing in three moves: state the null hypothesis (no relationship between the variables) and the alternative; calculate a P value from the data; interpret. The P value, running 0 to 1, estimates the probability of seeing the observed difference or a larger one if the null were true. Convention sets the line at 0.05: P below it and you reject the null — a statistically significant finding; P above it and you say you failed to find a difference, never that the treatments are equivalent (equivalence needs a different design).",
+     "zh": "假设检验三步走：写出零假设（变量间无关系）与备择假设；用数据算出 P 值；解读。P 值在0到1之间，估计的是『假如零假设为真，看到当前差异或更大差异』的概率。惯例把线画在0.05：P 低于它就拒绝零假设——这叫有统计学意义；P 高于它只能说『未能发现差异』，绝不能说两种处理等效——证等效需要另一种专门设计。",
+     "hard": true
+    },
+    {
+     "en": "Statistical significance is not clinical significance: a real-but-tiny difference in neurologic outcome can clear P<0.05 yet change nothing that matters to patients. No formula decides clinical significance — the medical community and system leaders weigh it against patient safety and cost, which is why a positive trial does not trigger an instant protocol change.",
+     "zh": "统计学意义不等于临床意义：神经学结局上一个真实但微小的差异，完全可能跨过 P<0.05 这道线，却对患者毫无实际影响。临床意义没有公式可算——要由医学界和系统管理层对着患者安全与成本去权衡，这正是『试验阳性』不会立即变成『协议改写』的原因。",
+     "hard": true
+    },
+    {
+     "en": "Qualitative analysis names to recognize: thematic analysis finds patterns and themes across the whole dataset, not within a single interview; content analysis hunts specific words or phrases, either inductively (codes emerge from the data) or deductively (codes fixed in advance from existing frameworks) — and context matters more than raw word counts.",
+     "zh": "要认得出的定性分析名词：主题分析在整个数据集范围内找模式与主题——不是只在单次访谈内部找；内容分析追踪特定词句，分归纳式（编码从数据里长出来）与演绎式（编码由现成框架预先定死）——而且看重语境，绝不只是数词频。",
+     "hard": true
+    },
+    {
+     "en": "Four vehicles carry findings to the community: the abstract, a 250-to-350-word structured summary (background, objective, methods, results, conclusions); the poster, a visual summary for conferences; the oral presentation, 10 to 60 minutes, chosen from the abstract pool for quality and fit; and the manuscript — the only form with enough detail to critically appraise and replicate the study, vetted by peer review before publication. Sharing is half of science: knowledge translation means findings get disseminated, distilled into reviews and guidelines, and used.",
+     "zh": "研究成果走向社区的四种载体：摘要——250到350词的结构化概要（背景、目的、方法、结果、结论）；海报——会议上的可视化总结；口头报告——10到60分钟，从摘要池里按质量与契合度遴选；论文——唯一详细到足以供人批判性评价并复现研究的形式，发表前须过同行评审。分享占了科学的一半：知识转化就是让发现被传播、被提炼成综述和指南、最终被用起来。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Evidence-Based Practice: Finding and Appraising Research",
+   "titleZh": "循证实践：检索与评读研究",
+   "points": [
+    {
+     "en": "Evidence-based practice (EBP) borrows Sackett's 1996 definition of evidence-based medicine — the conscious, explicit, judicious use of current best evidence in decisions about individual patients. Crucial exam distinction: EBP is about using research, not conducting it; every paramedic must be able to find, understand, criticize, and apply studies without becoming a researcher.",
+     "zh": "循证实践（EBP）沿用 Sackett 1996 年对循证医学的定义——在个体患者的诊疗决策中，自觉、明确、审慎地使用现有最佳证据。考试爱考的分界：EBP 是用研究，不是做研究；每名救护员都要会找、会读、会挑毛病、会应用，但不必人人都当研究者。",
+     "hard": true
+    },
+    {
+     "en": "Knowledge translation (KT) has two components: synthesizing information from multiple sources, and disseminating it in a usable form — also called 'knowledge to action', because research only matters once clinicians, managers, policymakers, and educators apply it. Scope contrast: KT is the broad, system-level process; EBP is the individual paramedic's practice. Model example: ILCOR resuscitation guidelines are now reviewed continuously instead of on the old 5-year release cycle.",
+     "zh": "知识转化（KT）由两个环节组成：把多来源的信息综合起来，再以能落地的形式传播出去——它还有个别名『从知识到行动』，因为研究只有被临床人员、管理者、政策制定者和教育者用起来才有意义。范围对比：KT 是覆盖整个系统的宏观过程；EBP 落在单个救护员的实践上。范例：ILCOR 复苏指南已从旧的每5年发布一版，改为持续滚动修订。",
+     "hard": true
+    },
+    {
+     "en": "The five lifelong steps of EBP, in order: 1) convert your information need into an answerable question; 2) search for the best evidence efficiently; 3) critically appraise it for internal validity, external validity, and usefulness; 4) apply the results to your practice; 5) evaluate how the change performed. Step 1 means recasting hallway complaints ('why can't we cool patients here?') into a PICO-format review question.",
+     "zh": "EBP 终身循环的五步，按顺序：① 把信息需求转写成一个可回答的问题；② 高效检索最佳证据；③ 批判性评读其内部效度、外部效度与可用性；④ 把结果用到自己的实践里；⑤ 评估这次改变的成效。第一步的意思是：把走廊里的抱怨（『别的服务都在给患者降温，我们怎么不行？』）改写成 PICO 格式的综述问题。",
+     "hard": true
+    },
+    {
+     "en": "Two database families: primary research databases hold citations of original studies — PubMed/Medline (US-based, citations back to 1966, over 100 emergency medicine journals), EMBASE (biomedical, 90 countries), CINAHL (nursing and allied health, since 1981), Web of Science (back to 1900, tracks how often an article is cited). Appraised/synthesized databases do the appraising for you: the Canadian Prehospital Evidence-based Practice (PEP) project (studies scored by level and direction of evidence), BestBETs, and the Cochrane Database — the worldwide gold standard for systematic reviews. Google finds the un-peer-reviewed grey literature; Google Scholar returns scholarly sources.",
+     "zh": "数据库分两族：原始研究数据库收录一手研究的文献条目——PubMed/Medline（美国建库，条目回溯到1966年，收录100多种急诊医学期刊）、EMBASE（生物医学，覆盖90个国家）、CINAHL（护理与联合健康学科，1981年起）、Web of Science（回溯到1900年，还能查一篇文章被引了多少次）。已评读/已综合数据库替你把评读做完了：加拿大院前循证实践项目 PEP（每项研究按证据等级和证据方向打分）、BestBETs、以及 Cochrane 数据库——全球公认的系统综述金标准。用 Google 搜到的未经同行评审的信息叫灰色文献；Google Scholar 则专门返回学术文献。",
+     "hard": true
+    },
+    {
+     "en": "Search mechanics: join synonyms within one PICO component with OR (broadens — catches authors who used a different word), join the PICO components together with AND (narrows); NOT excludes. The wildcard * sweeps every ending: paramed* catches paramedic, paramedicine, paramedical, paramedics. Watch national spelling (pediatric vs paediatric). Then narrow with database filters — language, species, study type, publication dates. The chapter's worked example returned 385 PubMed hits on the day it was run.",
+     "zh": "检索的机械原理：同一个 PICO 成分内部的同义词用 OR 连接（放宽——作者用了你没想到的词也能捞到）；各 PICO 成分之间用 AND 连接（收窄）；NOT 用来排除。通配符 * 扫掉所有词尾：paramed* 能同时命中 paramedic、paramedicine、paramedical、paramedics。留心各国拼写差异（pediatric 与 paediatric）。最后用数据库筛选器收口——语言、物种、研究类型、发表日期。书中示例检索当天在 PubMed 命中385条。",
+     "hard": true
+    },
+    {
+     "en": "The Canadian PEP levels of evidence — the scale to reproduce on a written question: Level I, at least one properly randomized controlled trial, or a systematic review/meta-analysis containing RCTs; Level II, nonrandomized studies with a comparison group (registry-type comparisons included) or systematic reviews of them; Level III, studies with no comparison group, simulation studies, or animal studies. Each study also gets a direction of evidence: supportive, opposing, or neutral (no significant difference).",
+     "zh": "加拿大 PEP 证据等级——笔试要能原样写出的量表：I 级=至少一项规范的随机对照试验，或包含 RCT 的系统综述/荟萃分析；II 级=有对照组的非随机研究（含注册库式对比研究）或对它们的系统综述；III 级=无对照组的研究、模拟研究或动物研究。每项研究还要标一个证据方向：支持、反对、或中性（未见显著差异）。",
+     "hard": true
+    },
+    {
+     "en": "The evidence pyramid comes with two caveats the book flags: a well-conducted observational study can outweigh a poorly conducted RCT despite sitting lower on the pyramid; and the hierarchy only ranks effectiveness questions — for 'how satisfied were patients and paramedics with the new protocol?', a qualitative design is the stronger evidence, which is why some authors prefer a typology (best method for the question) over a hierarchy.",
+     "zh": "证据金字塔附带两条书里点明的但书：一项做得漂亮的观察性研究，可以胜过一项做得糟糕的 RCT——尽管它在塔上的位置更低；而且这套层级只适用于『有效性』问题——若问的是『患者和救护员对新协议满意吗』，定性设计反而是更强的证据。正因如此，有学者主张用『类型学』（给问题配最合适的方法）取代『层级』。",
+     "hard": true
+    },
+    {
+     "en": "Appraising a quantitative study: open with three questions — what was the research question/PICO, what was the design, and was that design right for the question? Identify the design by two forks: was there a comparison group, and if prospective with one, were patients randomized (the chapter's example: sealed envelopes at dispatch, opened only at enrolment, so nobody chooses the arm)? Then check bias control: find the table of group characteristics (usually Table 1), ask whether the groups matched on age, sex, cardiac history — and if not, whether statistics adjusted for it or the limitations own up to it.",
+     "zh": "评读定量研究：先问三个问题——研究问题/PICO 是什么？用了什么设计？这个设计配得上这个问题吗？判定设计走两个岔路口：有没有对照组？若是带对照组的前瞻研究，患者随机了吗（书中示例：随机顺序的密封信封放在调度中心，患者入组时才拆——没有任何人能挑选分组）？接着查偏倚控制：找组间特征表（通常是文章的 Table 1），看两组年龄、性别、心脏病史是否相当——不相当的话，是用统计方法校正了，还是至少在局限性一节承认了。",
+     "hard": true
+    },
+    {
+     "en": "Publication bias distorts what the literature seems to say: researchers shelve studies with boring results, and journals prefer findings that are new, significant, or agree with what came before — so publication alone guarantees neither quality nor clinical importance. External validity stays a judgment call: are the study's patients similar enough to yours for the results to transfer?",
+     "zh": "发表偏倚会歪曲文献呈现的整体印象：结果平淡的研究，研究者往往压着不投；期刊又偏爱新颖、显著、或与既往结论一致的发现——所以『发表了』既不担保质量，也不担保临床重要性。外部效度始终要你自己拍板：研究里的患者和你手上的患者，像到结果可以搬过来用的程度了吗？",
+     "hard": true
+    },
+    {
+     "en": "Appraising a qualitative study asks alignment questions instead: is there a clear question or purpose (allowed to evolve, but must be stated); do methodology, sampling, and analysis all line up with it; how were participants purposively selected and deviant cases handled; is the researcher's relationship to participants disclosed (reflexivity — including any power relationship, like studying your own employees); were transcription, member checking, and coder disagreements described? Generalizability is replaced by theoretical generalizability — whether the findings resonate with your local setting through their connection to broader theory.",
+     "zh": "评读定性研究问的则是一串『对齐』问题：有没有清晰的研究问题或目的陈述（允许中途演化，但必须写明）？方法论、抽样、分析策略与之对齐吗？参与者如何目的性选取、异例怎么处理？研究者与参与者的关系交代了没有（反身性——包括权力关系，比如研究对象正是自己管的员工）？转录、成员核验、多名编码者的分歧处理写清了吗？『可推广性』在这里换成理论可推广性——借助与更大理论脉络的联系，判断这些发现在你的本地情境里是否成立。",
+     "hard": true
+    },
+    {
+     "en": "Pulling it together: a critically appraised topic (CAT) is a concise summary of every kept study — design, PICO components, main results, agreements and contradictions — capped with a clinical bottom line: is the evidence enough to change practice or policy, or must more be studied first? And the loop never closes at publication: after implementing a change, the system evaluates it — costs, uptake, appropriate use, improvement opportunities, local effect — which may itself run as a quality management project rather than research.",
+     "zh": "收官动作：写一篇批判性评读专题（CAT）——把留下的每项研究的设计、PICO 成分、主要结果、彼此的一致与矛盾做成精炼摘要，最后压上一句临床底线：现有证据够不够改实践、改政策？还是得先补研究？循环也从不在发表处终止：改变落地后，系统还要评估它——成本、使用率、用得对不对、改进空间、本地效果——这一步本身常以质量管理项目而非研究的形式来做。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Research versus Quality Management",
+   "titleZh": "科研与质量管理的分界",
+   "points": [
+    {
+     "en": "Quality management is the umbrella for three activities: quality assurance — regularly monitoring activities to ensure they meet the highest achievable standard; quality improvement — projects intended to bring about an improvement in a care process (handwashing) or a clinical outcome (fewer nosocomial infections); and programme evaluation — collecting information on a specific programme to judge its effectiveness and refine it. The shared DNA: a systematic approach to checking the organization is doing the right things.",
+     "zh": "质量管理是一把伞，罩着三种活动：质量保证（QA）——定期监测各项工作，确保它们达到可实现的最高标准；质量改进（QI）——旨在带来改善的项目，改的可以是照护流程（手卫生）或临床结局（减少院内感染）；项目评估——针对某个具体项目收集信息，判断其成效并加以改进。三者共同的基因：用系统化的方式核查组织『做的事对不对』。",
+     "hard": true
+    },
+    {
+     "en": "The practical dividing line between research and quality management is the intended use of the results: quality management targets one specific setting and applies its findings right there; research is designed to create knowledge that generalizes beyond the situation studied. Both use focused plans, systematic approaches, and often identical data-collection and analysis techniques — which is exactly why the line is hard to see.",
+     "zh": "科研与质量管理之间实用的分界线是结果的用途：质量管理瞄准一个具体场景，结论就用在那个场景里；科研则从设计之初就要产出能推广到所研究情境之外的知识。两者都有明确计划、都走系统化路径、连数据收集和分析技术都常常一模一样——这正是分界难认的原因。",
+     "hard": true
+    },
+    {
+     "en": "The book's three-row contrast table: purpose — research generates new knowledge applicable to all patients, quality management improves internal processes or outcomes locally; REB approval — required for research, not required for quality management; time — research can take a long stretch, quality management is immediate and ongoing, with projects repeated regularly.",
+     "zh": "书中对照表的三行：目的——科研产出适用于所有患者的新知识，质量管理改善本机构内部的流程或结局；REB 审批——科研必须过，质量管理不需要；时间——科研可能耗时很长，质量管理即刻启动、持续运转，项目还会定期重复。",
+     "hard": true
+    },
+    {
+     "en": "Same data, two destinies — the intubation example: a research team compares outcomes after prolonged versus normal prehospital intubation attempts, producing knowledge usable across systems and even in-hospital. An organization uses the same data for QA (classify each attempt as prolonged or acceptable), finds too many prolonged attempts, launches a QI project (continuing education plus mandatory annual airway training), then runs programme evaluation to see whether the training actually cut prolonged attempts. 'Not research' still demands sound ethics — it just carries no explicit REB requirement; when unsure which side a project falls on, ask the chair of the local REB.",
+     "zh": "同一批数据，两种命运——插管的例子：研究团队比较院前插管尝试『过长』与『正常』者的结局，产出的知识跨系统可用、甚至能搬进医院。而机构拿同一批数据做 QA（把每次插管尝试归类为过长或可接受），发现过长的次数太多，于是上马 QI 项目（继续医学教育＋强制性年度气道培训），再做项目评估看这套培训到底有没有把过长尝试压下来。『不算科研』不等于不讲伦理——只是没有强制的 REB 审查要求；拿不准某个项目算哪边时，去问本地 REB 的主席。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Quality Management and Patient Safety",
+   "titleZh": "质量管理与患者安全",
+   "points": [
+    {
+     "en": "Why quality management exists: paramedic systems are the public's link into formal health care, run under heavy public scrutiny and on tax dollars — quality management is the primary tool by which the organization stays accountable, showing care is effective and public funds are spent efficiently.",
+     "zh": "质量管理为什么存在：救护系统是公众接入正规医疗体系的入口，顶着强烈的公众监督、花的又是税金——质量管理正是机构向公众交代的主要工具：证明救治有效、公帑花得值。",
+     "hard": false
+    },
+    {
+     "en": "Evaluating quality assesses three linked components of health service delivery: structures — the physical infrastructure, including clinician qualifications (and equipment: a malfunctioning device is a structure problem); processes — the activities performed within the system; outcomes — the patient states that result from those processes. Improve structures and processes, and outcomes should follow.",
+     "zh": "评估质量要看医疗服务递送的三个相互衔接的组件：结构——物理基础设施，包括人员资质（也包括设备：仪器出故障属于结构问题）；过程——系统内实际执行的各项活动；结局——这些过程作用之后患者呈现的状态。把结构和过程改好，结局理应随之改善。",
+     "hard": true
+    },
+    {
+     "en": "The PDSA cycle, stage by stage: Plan — set an objective and a plan to reach it; Do — execute the plan; Study — review whether the objective was met; Act — set new targets if it was, change the plan if it was not, then spin the cycle again. Worked example: objective of more than 90% of chest-pain encounters following the aspirin protocol, chart audits to find deviations and their causes, feedback to crews, restudy.",
+     "zh": "PDSA 循环逐段拆：计划（Plan）——定目标、定实现路径；执行（Do）——照计划做；检查（Study）——复盘目标达成没有；处置（Act）——达成了就定新目标，没达成就改计划，然后再转一圈。书中实例：目标定为90%以上的胸痛接诊符合阿司匹林协议，靠审阅病历找偏离及其原因，向一线反馈，再复查。",
+     "hard": true
+    },
+    {
+     "en": "Metric versus indicator — the exam's favourite pair in this section: a metric is a simple descriptive statistic representing something important (number of protocol-compliant events; response time, defined as 9-1-1 call received at dispatch to first unit arriving on scene); an indicator is a metric tied to a performance target (over 90% of responses at or under 8.5 minutes). Charts carry a target line and an upper limit — deviations beyond it trigger investigation. Funders often set the indicators.",
+     "zh": "指标（metric）与考核指标（indicator）——本节考试最爱的一对：metric 是代表某件要事的简单描述统计量（符合协议的事件数；响应时间——从调度中心接到9-1-1呼叫到首个单位抵达现场）；indicator 是绑上了绩效目标的 metric（90%以上的响应要在8.5分钟以内）。监测图上画着目标线和一条上限线——越过上限的偏离就要启动调查。indicator 往往由出资方来定。",
+     "hard": true
+    },
+    {
+     "en": "The balanced scorecard applies performance targets to the whole organization through four equally weighted quadrants: customer service, operations, finance, and innovation and learning. Goals also cascade in layers — system, organization, department, individual — each aligned with the one above: a system target of raising out-of-hospital cardiac arrest survival 1% a year for 5 years becomes an organizational annual CPR skills review for every paramedic, a departmental 100%-compliance target, and an individual's skill focus.",
+     "zh": "平衡计分卡把绩效目标铺到整个组织，四个象限同等重要：客户服务、运营、财务、创新与学习。目标还要逐层级联——系统、机构、部门、个人——层层对齐上一层：系统层定下『院外心搏骤停生存率连续5年每年提高1%』，机构层就变成全员年度 CPR 技能复核，部门层定 100% 参核率，个人层落到把这项技能练扎实。",
+     "hard": true
+    },
+    {
+     "en": "Patient safety is quality management's close cousin with a narrower aim: reducing harm to patients caused by clinical and operational activities. The 2004 Canadian Adverse Events Study put numbers on the problem: an estimated 7.5% of hospitalized patients sustained an adverse event, roughly 70,000 patients a year harmed in ways that were otherwise preventable. Paramedicine has never been systematically measured — and there is no reason to believe its care is different.",
+     "zh": "患者安全是质量管理的近亲，目标更聚焦：减少临床与运营活动本身对患者造成的伤害。2004年加拿大不良事件研究给这个问题标了数：约7.5%的住院患者经历过不良事件，每年约7万名患者受到本可避免的伤害。院前领域从未做过系统测量——但没有任何理由相信救护车上的情况会更好。",
+     "hard": true
+    },
+    {
+     "en": "An adverse event is an injury or illness caused by clinical care that would not have arisen from the patient's underlying condition. Three named categories: system errors (the system's design allowed it — look-alike vials stored side by side), no-fault errors (unpredictable and unpreventable), and cognitive errors (flowing from the clinician's decisions — no double-check of the drug). One event can be two categories at once: the dimenhydrinate/furosemide mix-up is both a system error and a cognitive error.",
+     "zh": "不良事件=临床救治造成的、单凭患者基础疾病不会发生的伤害或疾病。三个点名的类别：系统错误（系统设计放任其发生——长得像的药瓶紧挨着放）；无过失错误（无法预测也无法预防）；认知错误（源于临床人员的决定——没有二次核对药物）。同一事件可以同时归两类：把呋塞米当茶苯海明抽出来打了，既是系统错误也是认知错误。",
+     "hard": true
+    },
+    {
+     "en": "A near miss is the same unplanned event caught in time: it had the potential to cause injury, illness, or damage, but did not — you followed the drug-check procedure (name, dose, concentration, route) and spotted the wrong vial before administration. Near misses are reportable just like adverse events, because the system lesson is identical whether or not the patient was hurt.",
+     "zh": "未遂事件（near miss）是被及时截住的同一种意外：它本有造成伤害、疾病或损失的可能，但没有成真——你按用药核对流程（药名、剂量、浓度、途径）走了一遍，在给药前发现抽错了瓶。未遂事件与不良事件同样必须上报，因为不管患者伤没伤到，系统层面的教训一模一样。",
+     "hard": true
+    },
+    {
+     "en": "After an adverse event you owe a report in three directions: the patient, the receiving health care providers, and your organization. Anonymous reporting schemes exist precisely so errors get disclosed without fear of discipline — reported events drive system fixes (reorganized drug kits, colour-coded vial labels) that stop the same error recurring. A common paramedic-specific contributor: the uncontrolled work environment — bad lighting, too many or too few people, thin clinical support.",
+     "zh": "不良事件发生后，报告要送往三个方向：患者本人、接手的医疗人员、所属机构。匿名上报机制的存在正是为了让人敢于披露而不怕处分——上报的事件才推得动系统级修正（重新编排药箱、给药瓶贴彩色标签），让同一错误不再重演。院前特有的常见推手：不受控的工作环境——光线差、人手过多或过少、临床支援单薄。",
+     "hard": true
+    },
+    {
+     "en": "Learning structures: patient safety huddles (also called mortality and morbidity sessions or rounds) are informal meetings where paramedics share safety experiences and prevention strategies — they only work if everyone agrees the purpose is collective learning and patient details stay confidential. The wider horizon: automobile manufacturing, aviation, and nuclear power achieve exceptional safety through systems management and human factors engineering — paramedicine still has lessons to import.",
+     "zh": "学习机制：患者安全碰头会（又叫死亡与并发症讨论会/查房）是救护员分享安全经历与预防策略的非正式会议——成立的前提是所有人认同目的在于共同学习、且患者信息严格保密。更远的参照系：汽车制造、航空、核电靠系统管理和人因工程做到了超常安全——院前急救还有很多课要从这些行业搬回来。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Conventional P value threshold for statistical significance",
+   "itemZh": "统计学意义的常规 P 值门槛",
+   "value": "P < 0.05"
+  },
+  {
+   "itemEn": "Canadian PEP levels of evidence",
+   "itemZh": "加拿大 PEP 证据等级数",
+   "value": "3 级（I=RCT/含RCT综述；II=非随机有对照；III=无对照/模拟/动物）"
+  },
+  {
+   "itemEn": "Abstract length",
+   "itemZh": "研究摘要的篇幅",
+   "value": "250–350 词"
+  },
+  {
+   "itemEn": "Conference oral presentation length",
+   "itemZh": "会议口头报告时长",
+   "value": "10–60 分钟"
+  },
+  {
+   "itemEn": "PubMed/Medline citation coverage",
+   "itemZh": "PubMed/Medline 收录起点",
+   "value": "1966 年至今；急诊医学期刊 100+ 种"
+  },
+  {
+   "itemEn": "Common response-time indicator",
+   "itemZh": "常见响应时间考核指标",
+   "value": ">90% 的响应 ≤8.5 分钟"
+  },
+  {
+   "itemEn": "Canadian Adverse Events Study (2004): hospitalized patients sustaining an adverse event",
+   "itemZh": "加拿大不良事件研究（2004）：住院患者不良事件发生率",
+   "value": "7.5%；每年约 70,000 人受可预防伤害"
+  },
+  {
+   "itemEn": "Balanced scorecard quadrants",
+   "itemZh": "平衡计分卡象限数",
+   "value": "4 个（客户服务/运营/财务/创新与学习）"
+  },
+  {
+   "itemEn": "ILCOR resuscitation guideline review cycle",
+   "itemZh": "ILCOR 复苏指南修订周期",
+   "value": "旧制每 5 年一版 → 现为持续滚动修订"
+  },
+  {
+   "itemEn": "EBP lifelong cycle",
+   "itemZh": "EBP 终身循环步数",
+   "value": "5 步（提问→检索→评读→应用→评估）"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "A study is running in your service? Learn exactly how to complete the study documents — research forms that are complete and accurate are what keep the whole study internally valid, and that part is in your hands.",
+   "zh": "你的机构里正跑着一项研究？先弄清研究表格到底怎么填——填写完整、准确的研究表单，是整项研究内部效度的命根子，而这一环恰恰握在你手里。"
+  },
+  {
+   "en": "Before trusting any human-subject study, check it passed a Research Ethics Board: fair, safe, confidential treatment, no coercion, informed consent offered to every potential participant except in exceptional circumstances.",
+   "zh": "信任任何人体研究之前，先确认它过了研究伦理委员会（REB）那一关：受试者被公平、安全、保密对待，无胁迫，除极特殊例外情形外每名潜在受试者都获得了知情同意的机会。"
+  },
+  {
+   "en": "A positive trial hits the news and your system does not scramble to adopt it — that is often correct behaviour: statistical significance is not clinical significance, and leaders must weigh the size of the benefit against patient safety and cost before changing protocols.",
+   "zh": "阳性试验上了新闻，你的系统却没连夜改协议——这常常是对的：统计学意义不等于临床意义，管理层得先掂量获益的实际大小、患者安全和成本，才动协议。"
+  },
+  {
+   "en": "Googling a clinical question is legitimate as a first pass — that is searching the grey literature for an overview — but the answer you act on should come from peer-reviewed sources; Google Scholar at least confines results to scholarly literature.",
+   "zh": "用 Google 搜临床问题作第一遍摸底完全正当——这叫检索灰色文献、先看个全貌——但真正拿来指导行动的答案要出自同行评审来源；Google Scholar 至少把结果限定在学术文献里。"
+  },
+  {
+   "en": "Drew up the wrong drug and caught it before pushing? That is a near miss — report it anyway. Reported near misses are how drug kits get reorganized and labels get colour-coded before somebody's patient is hurt.",
+   "zh": "抽错了药、推注前自己发现了？这是未遂事件——照样要上报。正是这些被上报的未遂事件，才让药箱在真的伤到哪位患者之前被重新编排、贴上彩色标签。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Statistically significant vs clinically significant: P<0.05 says the difference is unlikely to be chance — it says nothing about whether the difference is big enough to matter to patients. A trial can clear the statistics and still not justify a protocol change.",
+   "zh": "统计学显著 vs 临床显著：P<0.05 只说明差异不太可能是巧合——完全没说这个差异大到对患者有实际意义。一项试验可以在统计上过关，却仍然撑不起一次协议修改。"
+  },
+  {
+   "en": "P above 0.05 does not prove the treatments are equal. The correct wording is 'failed to find a difference' — demonstrating equivalence requires a differently designed study altogether.",
+   "zh": "P 大于 0.05 不等于证明两种治疗等效。正确说法是『未能发现差异』——要证明等效，得换一种专门为此设计的研究。"
+  },
+  {
+   "en": "Reliability vs validity: a thermometer that reads 35.4°C twice in a row is reliable; whether a written test truly measures intelligence rather than reading skill is validity. An instrument can be perfectly consistent and consistently wrong.",
+   "zh": "信度 vs 效度：体温计连测两次都是35.4°C，这是信度；笔试量的到底是智力还是阅读能力，这是效度。一台仪器可以极其稳定——稳定地错。"
+  },
+  {
+   "en": "Internal vs external validity: skewed design and uncontrolled confounding are internal problems; ED studies generalized to the prehospital setting is an external problem — the study can be flawless and still not speak for your patients.",
+   "zh": "内部效度 vs 外部效度：设计有偏、混杂没控住，是内部问题；把急诊科里做的研究推广到院前环境，是外部问题——研究本身可以毫无瑕疵，却依然代表不了你的患者。"
+  },
+  {
+   "en": "Type I vs type II error: type I claims a difference that does not exist; type II misses a difference that does. Both are creatures of chance, managed up front with an adequate sample size.",
+   "zh": "I 型 vs II 型错误：I 型是宣称了并不存在的差异；II 型是漏掉了确实存在的差异。两者都是机会的产物，都靠事先算够样本量来对付。"
+  },
+  {
+   "en": "Case-control vs cohort: case-control starts at the outcome (has the disease / does not) and looks backward for exposures; cohort starts at the exposure (exposed / unexposed) and follows forward to the outcome. Cross-sectional does neither — it is a single-moment snapshot with no cause-effect power.",
+   "zh": "病例对照 vs 队列：病例对照从结局出发（有病/没病），向后追暴露史；队列从暴露出发（暴露/未暴露），向前追结局。横断面两头都不占——单一时点的快照，没有任何因果判定力。"
+  },
+  {
+   "en": "Research vs quality management: the same intubation data can serve either — what divides them is whether results are meant to generalize (research, REB required) or to fix one local setting (quality management, no REB required, but still done ethically).",
+   "zh": "科研 vs 质量管理：同一批插管数据两边都能用——分界只在结果的去向：要推广到别处（科研，必须过 REB）还是只修本机构这一处（质量管理，不需要 REB，但照样要讲伦理）。"
+  },
+  {
+   "en": "Metric vs indicator: response time is a metric; 'over 90% of responses within 8.5 minutes' is an indicator — the metric with a performance target bolted on.",
+   "zh": "metric vs indicator：响应时间本身是 metric；『90%以上的响应在8.5分钟以内』才是 indicator——给 metric 拧上一个绩效目标，它就成了 indicator。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "FINER",
+   "en": "A question worth researching is FINER: Feasible, Interesting, Novel, Ethical, Relevant.",
+   "zh": "值得研究的问题要够 FINER：可行（Feasible）、有意思（Interesting）、新颖（Novel）、合伦理（Ethical）、有相关性（Relevant）。"
+  },
+  {
+   "name": "PICO",
+   "en": "Structure any clinical question as PICO: Population, Intervention, Comparison, Outcome — synonyms joined by OR, components joined by AND.",
+   "zh": "临床问题按 PICO 搭骨架：人群（P）、干预（I）、对照（C）、结局（O）——同义词之间用 OR，成分之间用 AND。"
+  },
+  {
+   "name": "PDSA",
+   "en": "Quality spins on PDSA: Plan the objective, Do the plan, Study whether it worked, Act — new targets or a new plan.",
+   "zh": "质量管理转 PDSA 轮：计划（定目标）、执行（照做）、检查（成没成）、处置（成了定新目标，没成改计划）。"
+  },
+  {
+   "name": "SPO 三件套",
+   "en": "Quality lives in Structures (what you have), Processes (what you do), Outcomes (what the patient gets) — broken equipment is structure, a skipped checklist is process, survival is outcome.",
+   "zh": "质量看三件套：结构（你有什么）、过程（你做什么）、结局（患者得到什么）——设备坏了算结构，漏做核对算过程，生存率是结局。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Name the three common observational designs and the direction each one 'starts' from.",
+   "qZh": "说出三种常见观察性设计，以及各自从哪一头『起步』。",
+   "aEn": "Cross-sectional: exposure and outcome captured at one moment — a snapshot, no causality. Case-control: starts at the outcome (cases have the disease, controls do not) and looks backward at exposures. Cohort: starts at exposure status and follows participants forward to see who develops the condition.",
+   "aZh": "横断面：暴露与结局同一时点采集——快照，不能定因果。病例对照：从结局起步（病例有病、对照无病），回头查暴露史。队列：从暴露状态起步，向前随访看谁发展出疾病。"
+  },
+  {
+   "qEn": "A trial reports P = 0.016 for its primary outcome. What do you conclude, and what may you NOT conclude?",
+   "qZh": "一项试验主要结局的 P=0.016。你能下什么结论？不能下什么结论？",
+   "aEn": "P is below the conventional 0.05 line, so reject the null hypothesis — a statistically significant finding. You may NOT conclude the effect is clinically significant: whether the difference is big enough to matter is weighed separately against patient safety and cost.",
+   "aZh": "P 低于常规的0.05线，拒绝零假设——统计学上显著。但不能就此断言临床显著：差异是否大到有实际意义，要另行对着患者安全与成本去权衡。"
+  },
+  {
+   "qEn": "Recite the Canadian PEP levels of evidence I through III.",
+   "qZh": "背出加拿大 PEP 证据等级 I 到 III。",
+   "aEn": "Level I: at least one properly randomized controlled trial, or a systematic review/meta-analysis containing RCTs. Level II: nonrandomized studies with a comparison group (registry comparisons included) or systematic reviews of them. Level III: studies with no comparison group, simulation studies, or animal studies.",
+   "aZh": "I 级：至少一项规范 RCT，或包含 RCT 的系统综述/荟萃分析。II 级：有对照组的非随机研究（含注册库式对比）或其系统综述。III 级：无对照组的研究、模拟研究或动物研究。"
+  },
+  {
+   "qEn": "Give the three table-row differences between research and quality management.",
+   "qZh": "说出科研与质量管理对照表里的三行差异。",
+   "aEn": "Purpose: research generates knowledge applicable to all patients; quality management improves local processes or outcomes. REB approval: required for research, not for quality management. Time: research can take a long time; quality management is immediate, ongoing, and regularly repeated.",
+   "aZh": "目的：科研产出适用于所有患者的知识；质量管理改善本机构的流程或结局。REB 审批：科研必须，质量管理不需要。时间：科研可能旷日持久；质量管理即刻启动、持续运转、定期重复。"
+  },
+  {
+   "qEn": "You draw up furosemide instead of dimenhydrinate. Classify the incident (a) if you catch it before administration, (b) if the patient receives it — and name the error categories involved.",
+   "qZh": "你把呋塞米当茶苯海明抽了出来。(a) 给药前发现了，(b) 患者已被注射——各算什么事件？涉及哪些错误类别？",
+   "aEn": "(a) A near miss — potential for harm, caught in time; still reportable. (b) An adverse event — harm from care, not from the underlying condition. It is simultaneously a system error (look-alike vials stored together) and a cognitive error (no double-check). Report to the patient, the receiving providers, and your organization.",
+   "aZh": "(a) 未遂事件——本可致害、被及时截住；照样要上报。(b) 不良事件——伤害来自救治而非基础疾病。它同时是系统错误（相似药瓶挨着放）和认知错误（没做二次核对）。要向患者、接手医疗人员和所属机构三方报告。"
+  },
+  {
+   "qEn": "Define metric and indicator, using the response-time example.",
+   "qZh": "用响应时间的例子定义 metric 与 indicator。",
+   "aEn": "Metric: a simple descriptive statistic representing something important — response time, measured from the 9-1-1 call reaching dispatch to the first unit arriving on scene. Indicator: that metric tied to a performance target — more than 90% of responses at or under 8.5 minutes, with an upper limit whose breaches trigger investigation.",
+   "aZh": "Metric：代表要事的简单描述统计量——响应时间，从9-1-1呼叫抵达调度中心量到首个单位到场。Indicator：绑上绩效目标的 metric——90%以上的响应不超过8.5分钟，另设上限线，越线即启动调查。"
+  },
+  {
+   "qEn": "In evidence-based practice, what are the five lifelong steps?",
+   "qZh": "循证实践的终身五步是什么？",
+   "aEn": "1) Convert the information need into an answerable question; 2) search for the best evidence efficiently; 3) critically appraise it for internal validity, external validity, and usefulness; 4) apply the results to practice; 5) evaluate the performance of the change.",
+   "aZh": "① 把信息需求转成可回答的问题；② 高效检索最佳证据；③ 批判性评读内部效度、外部效度与可用性；④ 把结果应用于实践；⑤ 评估这次改变的成效。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Patient safety is graded on the BC practical exam",
+   "topicZh": "患者安全在 BC 实操考中是评分项",
+   "bookEn": "The textbook treats patient safety as an organizational quality-management concept — adverse events, near misses, reporting systems.",
+   "bookZh": "教材把患者安全当作组织层面的质量管理概念来讲——不良事件、未遂事件、上报机制。",
+   "bcEn": "BC's practical examination grading criteria make it personal: among the two Progressive Goals evaluators score, 'Overall Patient Care' explicitly assesses the candidate's ability to demonstrate patient-centred care with a focus on patient safety — alongside 'Overall Call Management' for assessment, treatment, communication, and timing across the call.",
+   "bcZh": "BC 实操考评分标准把它落到个人头上：考官打分的两大 Progressive Goals 里，『整体患者照护』一项明确考察考生展现以患者为中心、以患者安全为核心的照护能力——另一项『整体呼叫管理』则考核全程的评估、处置、沟通与时间掌控。",
+   "ref": "EMALB BC Practical Examination Grading Criteria p.10"
+  }
+ ],
+ "sourcePages": "799-867"
+}

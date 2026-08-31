@@ -1,0 +1,665 @@
+{
+ "id": "ch04",
+ "n": 4,
+ "titleEn": "Medical and Legal Issues",
+ "titleZh": "医疗法律问题",
+ "group": "professional",
+ "examWeight": 1,
+ "whyEn": "This chapter is the rulebook for the questions you will actually face on shift: can this person refuse me, when may I treat without asking, when does leaving become abandonment, and what do I write down so a lawyer three years from now finds a defence instead of a weapon? The written exam concentrates on a handful of testable structures — the four elements of negligence, the three types of consent and the capacity test behind refusal, the definitions that separate assault, battery, and false imprisonment, the two forms of defamation, and the short list of situations where confidential information may leave your hands. Weight is low (one or two questions), but the consent-and-refusal logic also runs underneath every practical-station patient interaction, and documentation rules decide whether your paperwork protects you in all the other chapters too.",
+ "whyZh": "这一章是你上岗后真正会遇到的问题的规则手册：眼前这个人有没有资格拒绝我？什么情况下我可以不问就治？什么时候一转身离开就构成遗弃？记录该怎么写，才能让三年后的律师从里面读出辩护而不是把柄？笔试考点非常集中——过失四要素、三种同意与拒绝背后的行为能力判定、assault／battery／非法拘禁的定义区分、诽谤的两种形式，以及患者信息可以外泄的那几种法定情形。权重不高（一两题），但同意与拒绝的逻辑贯穿实操考每一站的医患互动，而文书规则决定你在其余所有章节里写下的记录到底是护身符还是呈堂证供。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities"
+  ],
+  "codes": [
+   "1.1.e",
+   "1.1.j",
+   "1.3.a",
+   "1.3.b",
+   "1.3.c",
+   "1.4.a",
+   "1.7.a",
+   "1.7.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "Introduction: Laws, Ethics, and Why the Difference Matters",
+   "titleZh": "导言：法律与伦理，差别在哪",
+   "points": [
+    {
+     "en": "The dividing line the exam wants: laws are rules laid down by the federal or provincial government and carry enforceable sanctions when broken; ethics are principles — personal or societal — that define right and wrong but punish nothing by themselves. Enforceability is the difference.",
+     "zh": "考试要的那条分界线：法律是联邦或省政府定下的规则，违反就有可强制执行的制裁；伦理是判断对错的原则（个人的或社会的），本身不带惩罚。可强制执行——这就是两者的差别。",
+     "hard": true
+    },
+    {
+     "en": "Five bodies of law frame every response you run: motor vehicle law governing emergency vehicle operation; EMS legislation; medical licensing statutes and regulations; civil and criminal statutes about touching, treating, transporting, and possibly injuring a person; and confidentiality law — federally, PIPEDA (Personal Information Protection and Electronic Documents Act).",
+     "zh": "框住你每一次出勤的五类法律：管急救车驾驶的机动车法；EMS 立法；医疗执照类的成文法与规章；关于触碰、治疗、转运乃至伤及他人的民事与刑事法律；以及保密法——联邦层面就是 PIPEDA（《个人信息保护与电子文档法》）。",
+     "hard": true
+    },
+    {
+     "en": "Practising outside the law exposes you on four separate tracks at once: civil liability (malpractice suits against paramedics are rising), criminal liability, provincial regulatory action such as a disciplinary hearing, and action by your own agency or medical director. One incident can fire on all four.",
+     "zh": "越出法律执业，四条追责轨道会同时向你开放：民事责任（针对救护员的失职诉讼在增加）、刑事责任、省级监管处置（如纪律听证会），以及所属机构或医疗主任的内部处理。一起事件可以四条线一起来。",
+     "hard": true
+    },
+    {
+     "en": "The book's single best-protection formula, worth memorizing verbatim in spirit: a careful, detailed patient assessment plus appropriate prehospital care, followed by complete and accurate documentation. No legal tactic outperforms doing the job well and writing it down properly.",
+     "zh": "原书给出的最佳法律保护公式，值得整段记进脑子：细致完整的患者评估＋恰当的院前处置，再加上完整准确的文书记录。没有任何法律技巧比『把活干好、把记录写实』更能保护你。",
+     "hard": true
+    },
+    {
+     "en": "Many laws and legal obligations differ province to province — the textbook is a framework, not legal advice. Know the statutes of the province you work in; provincial EMS offices and your employer's legal counsel are the proper sources when a real question arises.",
+     "zh": "许多法律和法定义务省与省之间并不相同——教材只是框架，不是法律意见。要了解你执业那个省的法规；遇到真问题时，省 EMS 主管机构和雇主的法律顾问才是正确的求助对象。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "The Legal System in Canada: Branches, Jurisdiction, and Two Kinds of Court",
+   "titleZh": "加拿大法律体系：三权、管辖权与两类官司",
+   "points": [
+    {
+     "en": "Government at both federal and provincial levels has three branches: executive (formally the Crown, but real power sits with Cabinet — the Prime Minister and Ministers answerable to Parliament), legislative (Parliament = House of Commons + Senate + the Monarch or Governor General, whose royal assent is largely ceremonial), and judicial (interprets and applies law, gives impartial judgements, and builds the common law through precedent). Agencies reporting to the executive — Transport Canada federally, the Ministry of Health provincially — fill in the detail through regulations.",
+     "zh": "联邦和省两级政府都是三权架构：行政权（名义在王室，实权在内阁——总理与各部部长，向议会负责）；立法权（议会＝下议院＋参议院＋君主或其代表总督，御准基本只是仪式）；司法权（解释与适用法律、作出公正裁判，并通过判例充实普通法）。隶属行政的机构——联邦如加拿大交通部、省级如卫生厅——再用规章把细节补齐。",
+     "hard": true
+    },
+    {
+     "en": "Jurisdiction is split by the Constitution: the federal Parliament legislates for Canada as a whole — interprovincial trade, national defence, criminal law, money, patents, postal service — while provinces own education, property, civil rights, administration of justice, hospitals, and municipalities. That split is why paramedic-specific legislation is almost always provincial: paramedic practice falls under the Ministry of Health, a provincial responsibility, and some provinces have gone further and created Colleges of Paramedicine to regulate the profession the way Colleges of Physicians and Surgeons regulate medicine.",
+     "zh": "立法管辖权由宪法切分：联邦议会管涉及全国的事务——省际贸易、国防、刑法、货币、专利、邮政；省管教育、财产、民事权利、司法行政、医院、市政。这个切分正是『救护员立法几乎全在省级』的原因：救护执业归卫生厅管，而卫生是省的职责；有些省更进一步设立了 College of Paramedicine（护理医学监管学院），像医师学院管医生那样管救护员。",
+     "hard": true
+    },
+    {
+     "en": "Two kinds of law take a paramedic to court, with two different burdens of proof: civil law, where a patient sues for a perceived injury and wins by showing that the majority of the believable evidence favours their side (malpractice lives here), and criminal law, where the provincial or federal government prosecutes a statute violation and must prove guilt beyond all reasonable doubt (many medication-misuse cases live here). The same wrongful act can trigger both at once.",
+     "zh": "把救护员送上法庭的法律分两种，举证门槛完全不同：民事法——患者为自认受到的伤害起诉你，只需让多数可信证据倒向他那边就能赢（失职诉讼走这条线）；刑事法——省或联邦政府就违反法律条文提起公诉，必须排除一切合理怀疑地证明有罪（许多药物滥用案走这条线）。同一个行为可以同时点燃两条线。",
+     "hard": true
+    },
+    {
+     "en": "Civil-suit vocabulary the exam borrows: the person suing is the plaintiff, the person sued is the defendant, and the wrongful act behind the suit is a tort. Torts come in two classes — unintentional torts (negligence) and intentional torts (acts meant to cause harm). The usual objective is damages: compensation for physical suffering, mental anguish, medical bills, and lost earnings — plus punitive damages when the provider's misconduct was intentional or showed reckless disregard for public safety.",
+     "zh": "笔试会借用的民事诉讼词汇表：起诉方叫原告（plaintiff），被诉方叫被告（defendant），引发诉讼的不当行为叫侵权（tort）。侵权分两类——非故意侵权（即过失/negligence）和故意侵权（有意造成伤害）。诉讼目的通常是损害赔偿：身体痛苦、精神折磨、医疗费、误工损失；若救护员的不当行为属故意或对公共安全放任不管，法院还可判惩罚性赔偿。",
+     "hard": true
+    },
+    {
+     "en": "A bad outcome alone does not make you negligent: the plaintiff must prove every element of negligence before the suit can succeed, and a claim containing all the elements is called an actionable cause. The two highest-risk zones for paramedic lawsuits: (1) non-transport and delayed-response calls — a signed refusal form by itself may not protect you; what defends you is proper assessment and thorough documentation done at the time of refusal, sound system policies, and documented reasons for any deviation from the expected response; (2) quality of care — clinical errors of omission (treatment left out) and commission (unnecessary or harmful intervention).",
+     "zh": "坏结局本身不等于过失：原告必须把过失的每一个要素都证明齐全，官司才立得住——各要素俱全的主张才称得上 actionable cause（可诉因由）。救护员吃官司的两大高危地带：其一，未转运与延迟响应——患者签了拒绝转运表并不自动保护你，真正的防线是拒绝当时就做足评估、写足记录，加上健全的系统政策和对偏离预期响应的原因记录；其二，救治质量——漏做该做的（omission）与做了不该做的（commission）两类临床错误。",
+     "hard": true
+    },
+    {
+     "en": "Ambulance crashes from imprudent emergency driving injure patients, bystanders, and crews every year and can produce civil suits — though provincial no-fault insurance programs have made such suits less common in Canada.",
+     "zh": "急救车因驾驶不谨慎发生的碰撞，每年都在伤害患者、路人和车组人员，并可能引来民事诉讼——不过加拿大多省的无过错保险制度已让这类诉讼变得少见。",
+     "hard": false
+    },
+    {
+     "en": "The three criminal charges most likely to touch prehospital care, with clean definitions: assault — instilling fear of immediate bodily harm or breach of bodily security, whether or not the threat is carried out; battery — touching a person in a harmful or offensive way without consent; false imprisonment — intentionally and unjustifiably detaining a person against their will (transporting without consent, wrongful use of restraints). The book's working line: 'I'm going to kick your teeth in' is assault; actually kicking them in is battery — and almost any treatment without consent can be both at once.",
+     "zh": "最容易落到院前工作头上的三项刑事指控，定义要背干净：assault（威吓）——让对方恐惧即将到来的身体伤害或人身安全被侵犯，威胁是否兑现无所谓；battery（殴击）——未经同意以有害或冒犯的方式触碰他人身体；false imprisonment（非法拘禁）——故意且无正当理由地违背他人意愿加以扣留（未经同意转运、错误使用约束带都算）。原书给的口语版分界：说『我要踢掉你的牙』是 assault，真踢下去是 battery——而几乎任何未经同意的救治可以同时构成两者。",
+     "hard": true
+    },
+    {
+     "en": "Defamation is intentionally making a false statement, written or spoken, that injures someone's good name — split into libel (written; 'the patient appears to be drunk' on a PCR is the textbook example of a phrase to avoid) and slander (spoken; watch your wording when handing over to emergency department staff). Write and speak as if the patient were your own family and the PCR were being read aloud in court.",
+     "zh": "诽谤（defamation）＝故意作出损害他人名誉的虚假陈述，按载体分两种：libel 是书面诽谤——PCR 上写『患者看起来喝醉了』就是教科书级的反面示范；slander 是口头诽谤——向急诊科交接时同样要管住措辞。写记录、做交接时，就当患者是你自己的家人、这份 PCR 会在法庭上被当众朗读。",
+     "hard": true
+    },
+    {
+     "en": "Anatomy of a lawsuit, in order: statement of claim filed in the court of original jurisdiction → claim and summons served on everyone named → discovery period (a few months to more than 2 years: written questions answered under oath, records exchanged, depositions taken) → motions argued before the judge → most cases end in settlement, via mediation (a conference to agree on a dollar figure) or arbitration (a minitrial decided by one or more arbitrators) → if not settled, trial. Most Canadian civil trials are decided by a judge alone; when a civil jury sits, it has six jurors and needs only five of six to agree. Start to finish can take years — which is exactly why the record you write today is your memory then.",
+     "zh": "一场诉讼的解剖图，按顺序：起诉书（statement of claim）递交至初审法院 → 起诉书连同传票送达每一个被点名的人 → 证据开示期（几个月到两年以上：书面质询宣誓作答、交换病历文件、录取宣誓证词）→ 双方向法官提出各类动议 → 多数案件走和解收场——调解（mediation，坐下来谈一个赔偿数额）或仲裁（arbitration，由一名或数名仲裁员裁决的小型审判）→ 谈不拢才开庭。加拿大多数民事案由法官独审；若设民事陪审团，只有六人，六人中五人同意即可定案。全程可拖数年——这正是『今天写下的记录就是将来的记忆』的原因。",
+     "hard": true
+    },
+    {
+     "en": "Notes from Nancy distils the chapter: the most important law affecting paramedics appears in no statute book — it is the law of doing what is best for the patient.",
+     "zh": "Notes from Nancy 一句话点题：对救护员最重要的那条法律不在任何法典里——它叫『做对患者最有利的事』。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Legal Accountability: Authority Lines, Scope, Privacy, Immunity",
+   "titleZh": "法律责任：权力线、执业范围、隐私与豁免",
+   "points": [
+    {
+     "en": "Base every field decision on the standards of good medical care, never on fear of legal consequences — paramedics are trained in medicine, not law, and doing what is best for the patient is both the way to stay out of trouble and your strongest defence if trouble comes anyway.",
+     "zh": "现场每一个决定都以良好医疗标准为依据，而不是以『会不会被告』为依据——救护员学的是医学不是法律，把患者利益放在第一位，既最不容易惹上官司，真被告了也是最硬的辩护理由。",
+     "hard": false
+    },
+    {
+     "en": "You answer to three lines of authority: your medical director, your licensing agency (where one exists), and your employer. Advanced life-support skills are typically performed only as delegated by a delegating physician, and the medical director sits in a medical-oversight, supervisory relationship with you.",
+     "zh": "你头上有三条权力线：医疗主任、发照机构（如果所在省有）、雇主。高级生命支持操作通常只能在授权医师的委托下执行，医疗主任对你处于医疗监督与督导关系之中。",
+     "hard": true
+    },
+    {
+     "en": "Delegation versus transfer of function (Manitoba College position statement as the model): under delegation the physician stays accountable to the patient for the whole management program, must ensure you are trained, the patient must accept your care, and you must accept responsibility under a named supervising physician. Transfer of function means performing a medical function independent of a physician — allowed only for members of a group certified by education, training, and examination, and it can never extend to independent provision of primary care.",
+     "zh": "委托（delegation）与职能移转（transfer of function）要分清（以曼尼托巴医师学院立场声明为样板）：委托之下，医师对整个诊疗方案始终对患者负责，必须确认你受过相应训练，患者须接受由你施治，你须认账并承认指定医师的督导地位；职能移转则是脱离医师独立执行某项医疗职能——只开放给经教育、训练、考试认证合格的群体，且永远不能延伸为独立提供初级诊疗。",
+     "hard": true
+    },
+    {
+     "en": "Your actions are your own, not the physician's — you are accountable for them. The medical director can still be liable for failing to supervise you closely enough or failing to act on substandard performance, and may restrict your practice, order remedial training, or withdraw supervision entirely; but medical directors are generally not legally responsible for disciplinary actions your employer takes.",
+     "zh": "你的行为算你自己的，不算医师的——你为自己的操作负责。医疗主任仍可能因督导不力、或明知你表现不达标却不处理而担责，他有权限缩你的执业、要求补训、甚至完全撤回督导；但雇主作出的纪律处分，一般不由医疗主任承担法律责任。",
+     "hard": true
+    },
+    {
+     "en": "Physician orders reach you two ways: direct medical control (phone or radio) and indirect medical control (medical directives, standing orders, practice guidelines, protocols). You may not disregard or reverse a physician's order unless you truly believe carrying it out will harm the patient. Deviating from protocol in unusual circumstances: consult direct medical control and document it thoroughly on the PCR.",
+     "zh": "医嘱通过两条通道到达你手上：直接医疗控制（电话或电台）与间接医疗控制（医疗指令、standing orders、执业指南、协议）。除非你确实认为执行医嘱会伤害患者，否则无权无视或推翻它。因特殊情况偏离协议时：先联系直接医疗控制，再把经过在 PCR 上写透。",
+     "hard": true
+    },
+    {
+     "en": "Bystander physician on scene: verify they are licensed in your province and document their name and contact information before letting them touch the patient. If they perform procedures outside your protocols or take over care, they should ride in to the hospital with you. When you and an on-scene physician disagree, direct medical control resolves the conflict — not you.",
+     "zh": "现场冒出的路过医生：先核实其持有本省执照，记下姓名和联系方式，才能放手让他参与救治。若他做了超出你协议范围的操作、或接管了患者，就该随车一路护送到医院。你和现场医生意见相左时，由直接医疗控制来裁决——轮不到你自己拍板。",
+     "hard": true
+    },
+    {
+     "en": "Know the difference the exam loves: scope of practice is what the province permits you to do under your licence or certification (set in EMS legislation or regulation; your medical director may narrow it, and some provinces build it as an independent scope plus additions by delegation or transfer). Standard of care is what a reasonable paramedic in a similar situation would do. Practising outside your scope can constitute negligence — in some provinces even a criminal offence. And a licence is a privilege granted by a government agency, not a right.",
+     "zh": "考试最爱考的一组区分：执业范围（scope of practice）是省依据你的执照/认证允许你做的事（写在 EMS 立法或规章里；医疗主任可以再收窄，有些省则反过来设『独立执业范围』再靠委托/移转往上加）；照护标准（standard of care）是『处于相似情境的合格救护员会怎么做』。超范围执业可构成过失，在某些省甚至是刑事犯罪。还有一句要背：执照是政府机构授予的特权，不是权利。",
+     "hard": true
+    },
+    {
+     "en": "Privacy law: PIPEDA and its provincial equivalents carry both criminal sanctions and civil penalties for unauthorized release of patient information. Disclosure is generally allowed only when necessary for the patient's treatment or for administrative operations, with the patient's authorization; research access needs Research Ethics Board approval with safeguards (minimal aggregated data, identifiers stripped). Every agency has a privacy officer; all subpoenas for personal health information go to that officer, and actual release of records is delegated only to senior management.",
+     "zh": "隐私法：PIPEDA 及各省对应法规对擅自泄露患者信息同时设有刑事制裁和民事处罚。披露原则上只限两种情形——治疗所需、或经患者授权的行政运营所需；科研调阅须经研究伦理委员会批准并附保护措施（只取最少量的汇总数据、去除身份标识）。每个机构须设隐私官；索取个人健康信息（PHI）的传票一律先交隐私官，病历的实际放行只能由机构高层管理者决定。",
+     "hard": true
+    },
+    {
+     "en": "Privacy in daily practice: PCRs never sit in an unsecured spot in the ambulance or station; only the medical staff receiving the patient and authorized EMS personnel (billing, data collection) may access the report. No case talk where anyone can overhear — elevators, coffee shops, war stories with friends. Social media posts must contain nothing that could identify a patient: no scene photos, no descriptions of a recent difficult call, no image of a broken limb or radiograph. Know your service's ride-along and personal-device policies.",
+     "zh": "日常执业中的隐私纪律：PCR 绝不能扔在救护车或站里无人看管的地方；能看这份报告的只有接手的医疗人员和系统内的授权人员（计费、数据统计用途）。任何可能被旁人听到的场合都不谈病例——电梯里、咖啡店里、跟朋友吹『战场故事』都不行。社交媒体上不得出现任何可能识别患者的内容：不发现场照片、不描述最近的疑难出勤、不拍骨折的肢体或 X 光片。随车参观和个人设备的使用政策也要事先弄清。",
+     "hard": true
+    },
+    {
+     "en": "Interfacility transfers: Canada has no national standard, but most provinces make the referring hospital responsible for the patient until a receiving hospital accepts them. Before you roll: confirm the patient will not need care beyond your scope in transit, confirm they are stable enough to move, assess whether the back of the ambulance needs more than one provider (an intubated, ventilated patient usually does), and collect all paperwork — medical records, lab results, radiographs. If the patient needs a higher level of care than you can give, say so to the sending staff and call your direct medical control; supplying appropriate escort staff is ultimately the sending hospital's responsibility.",
+     "zh": "院间转运：加拿大没有全国统一标准，但多数省规定，在接收医院正式接手之前，患者由转出医院负责。出发前四查：途中所需处置是否会超出你的执业范围；患者是否稳定到可以转运；车厢里是否需要不止一名医疗人员（已插管上呼吸机的患者通常需要）；病历、化验单、影像等文件是否已拿齐。若患者需要的照护级别高于你的能力，向转出方明说并联系直接医疗控制——派出合格的随行人员，最终是转出医院的责任。",
+     "hard": true
+    },
+    {
+     "en": "Emergency vehicle laws define what an emergency vehicle is and what other traffic must do, but they never authorize unsafe driving: blowing through a red light without stopping to confirm opposing traffic has yielded, or carrying speed you cannot stop from, can make the driver civilly at fault and criminally charged after a collision. Some systems monitor paramedic driving and cap ambulance speed. The Star of Life exempts you from nothing — defensive driving still applies.",
+     "zh": "急救车法规定义了什么是急救车、其他车辆该如何避让，但从不授权危险驾驶：闯红灯前不停车确认对向车流已让行、开出刹不住的车速，一旦撞车，驾驶者可在民事上被认定有责，还可能被刑事起诉。有些系统会监控救护员的驾驶行为并给救护车限速。车身上的生命之星不豁免任何义务——防御性驾驶照样适用。",
+     "hard": true
+    },
+    {
+     "en": "Good Samaritan legislation is provincial — Ontario and BC each have a Good Samaritan Act, Alberta an Emergency Medical Aid Act, Nova Scotia a Volunteer Services Act, and Quebec's Charter of Human Rights and Freedoms goes further, imposing a general duty to respond. Canadian versions were written to protect off-duty health care personnel who stop to help (unlike the US originals aimed at encouraging bystanders). The protection has three walls: the help must be voluntary and free of charge, it must occur away from a facility with proper equipment, and it never covers gross negligence — action or omission in reckless disregard of consequences, such as attempting an intervention you were never trained or certified to do.",
+     "zh": "好撒玛利亚人立法属省级——安省和 BC 各有 Good Samaritan Act，阿尔伯塔叫 Emergency Medical Aid Act，新斯科舍叫 Volunteer Services Act，魁北克的《人权与自由宪章》更进一步，规定了普遍的施救义务。加拿大版立法的出发点是保护下班后停车施救的医疗人员（不同于美国版的鼓励路人帮忙）。这层保护有三堵墙：施救必须自愿且分文不取；必须发生在缺乏正规设备的场所（医院里不算）；且永远不保护重大过失（gross negligence）——即对后果放任不管的作为或不作为，比如做一项你从未受训、未获认证的操作。",
+     "hard": true
+    },
+    {
+     "en": "The Good Samaritan trap answers: an on-duty paramedic responding in the course of employment has a legal duty to the patient, so Good Samaritan law does not apply. And under Ontario's Regulated Health Professions Act paramedics are not classed as health care professionals, so an off-duty Ontario paramedic is covered only under the lay-rescuer clause of the Act.",
+     "zh": "好撒玛利亚人法的两个陷阱答案：在岗救护员因履职而对患者负有法定义务，所以该法不适用于上班状态；而按安省《受监管卫生职业法》，救护员不算 health care professional，下班的安省救护员只能按普通施救者条款受保护。",
+     "hard": true
+    },
+    {
+     "en": "Two liability shields to know by name: governmental immunity in Canada was narrowed by the Just decision — government cannot be sued for governing, but when it supplies services it answers to ordinary negligence principles. Vicarious liability makes employers compensate for harm their employees cause in the course of employment; the employee stays personally liable, but recovery usually comes from the insured employer, and some provinces mandate a minimum liability insurance for EMS operators.",
+     "zh": "两个要记名字的责任挡板：政府豁免在加拿大被 Just 判例大幅收窄——政府『治理』行为不可诉，但政府『提供服务』时就按普通过失原则担责。替代责任（vicarious liability）让雇主为雇员在履职过程中造成的伤害埋单；雇员本人依然负个人责任，但赔偿实际多由投了保的雇主承担，有些省还强制规定 EMS 运营方必须购买最低限额的责任险。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Negligence: Four Elements, Abandonment, Advance Directives",
+   "titleZh": "过失：四要素、遗弃与预立指示",
+   "points": [
+    {
+     "en": "Negligence stands only when the plaintiff proves all four elements: (1) duty — the paramedic or EMS system owed the patient a legal duty to act; (2) breach of duty — failure to act as another person with similar training would have in the same or similar circumstances; (3) proximate cause — the failure was the first event in the chain that produced the injury; (4) harm resulted. Knock out any one element and the claim collapses.",
+     "zh": "过失指控要成立，原告必须四个要素一个不落地证明：①义务——救护员或 EMS 系统对患者负有法定救治义务；②违反义务——没有做到受同等训练者在相同或相似情境下会做的事；③近因——这个失误是引发伤害的因果链条上的第一环；④造成了实际损害。四环里砍断任何一环，指控就立不住。",
+     "hard": true
+    },
+    {
+     "en": "Breach comes in two flavours worth naming: an error of omission is doing less than you were trained to do (failing to splint an injured limb); an error of commission is doing more than you were trained to do (an emergency medical responder suturing a laceration outside their scope).",
+     "zh": "违反义务分两种，名字要记：不作为错误（omission）＝该做的没做——比如伤肢没上夹板；过度作为错误（commission）＝做了没资格做的——比如 EMR 越出范围去缝合伤口。",
+     "hard": true
+    },
+    {
+     "en": "Foreseeability is the thread running through negligence: could the harm have been predicted in advance and avoided with proper precautions? Giving a wrong drug dose foreseeably harms the patient; running a red light en route foreseeably causes a collision. Your counter-weapon: work to established procedures and standards — provincial licensing standards and the National Occupational Competency Profiles — because even non-statutory standards can be introduced as evidence, and keep the ambulance maintained and equipped to prevailing standards.",
+     "zh": "可预见性是贯穿过失概念的那根线：伤害是否事先可以预见、采取妥当预防就能避免？给错药量可预见会伤人，出勤路上闯红灯可预见会撞车。你的反制武器：一切按既定程序和标准来——省级发照标准、全国职业能力档案（NOCP）——因为即使不是法律的标准也能被呈上法庭当证据；救护车也要按现行标准保养和配置。",
+     "hard": true
+    },
+    {
+     "en": "Duty, dissected: your first duty is primum non nocere — first, do no harm. Off duty, in every common-law province you have no legal obligation to stop at a roadside collision — the pull you feel is moral, not statutory, and a paramedic sticker on your car creates no duty either. But two switches flip it on: being on shift or on call obligates you to respond, and voluntarily stopping to help obligates you to meet the standard of care and not abandon the patient — though once the on-duty crew arrives, you may hand over a report of what you saw and did, and leave.",
+     "zh": "把『义务』拆开看：第一义务是 primum non nocere——首先，不伤害。下了班，在所有普通法省份你都没有停车救助路边车祸的法定义务——那股冲动是道德的，不是法律的；车上贴个 paramedic 贴纸同样不产生义务。但两个开关会把义务打开：在班上或在待命名单里，就必须应召出勤；一旦自愿停车施救，就必须达到照护标准且不得中途弃患——不过等在岗车组到场后，交代完所见所做，你就可以离开。",
+     "hard": true
+    },
+    {
+     "en": "Quebec is the one exception: its Charter of Human Rights and Freedoms (1975) and Civil Code impose on everyone a duty to aid a person in peril, provided it can be done without serious risk to the rescuer or a third person; the Civil Code further requires everyone to act as a 'bon père de famille' — a reasonably prudent person.",
+     "zh": "魁北克是唯一的例外：其《人权与自由宪章》（1975 年）与《民法典》要求人人都有救助危难者的义务——前提是施救不给自己或第三人带来严重风险；《民法典》还要求每个人都以 bon père de famille（审慎善良之人）的标准行事。",
+     "hard": true
+    },
+    {
+     "en": "Duty stretches beyond the call itself: keeping your licence current, attending continuing education, maintaining skills and your own physical and psychological health, checking that all equipment works at the start of every shift, and honouring the patient's rights to privacy and to refuse or limit care. Agencies carry duty too — responding to calls, invoking mutual aid when their own volume is too heavy, and honouring any contracted minimum response times.",
+     "zh": "义务的射程远不止出勤那一刻：保持执照有效、参加继续教育、维持技能、照顾好自己的身心状态、每班开始检查所有设备是否好用、尊重患者的隐私权和拒绝／限制救治的权利。机构同样背着义务——必须应召响应，呼叫量超载时要恰当调用互援资源，签了合同的还要兑现最低响应时间。",
+     "hard": true
+    },
+    {
+     "en": "In a breach-of-duty fight, expert witnesses on both sides tell the jury what a reasonable paramedic would have done, drawing on their own training and yours, textbooks, protocols, national standards, standard operating procedures — and your PCR. Two thresholds exist: gross negligence requires wilful or wanton conduct (reckless disregard, utter indifference, or conscious disregard for others' safety) and is very hard to prove, with good faith as a working defence; ordinary negligence — a simple mistake or failure to act that causes harm — is all a plaintiff needs to show for torts committed in the course of employment, and is far easier to prove.",
+     "zh": "在『是否违反义务』的攻防里，双方专家证人向法庭说明合格救护员本该怎么做，依据包括他们和你的训练经历、教科书、协议、国家标准、标准作业程序——还有你的 PCR。门槛有两级：重大过失要求行为达到恣意妄为（对他人安全放任不管、彻底漠视、明知故犯），极难证明，『善意行事』就是可用的抗辩；而普通过失——一个造成伤害的简单失误或不作为——是履职期间侵权诉讼的全部举证门槛，好证得多。",
+     "hard": true
+    },
+    {
+     "en": "Proximate cause is the hardest element for a plaintiff: an unbroken, natural and continuous sequence from your act to the injury, with no intervening cause. The book's classic scenarios: failing to secure a patient to a backboard can proximately cause a severed cord; drop the stretcher of a collision patient with a spinal injury and the plaintiff will argue the drop, not the crash, caused the deficit — which is why documenting neurologic status at first contact is your defence. Harm, the final element, goes beyond physical injury: emotional distress, loss of income, loss of enjoyment of life, loss of spousal consortium, loss of household services, and loss of future earning capacity are all claimable.",
+     "zh": "近因是原告最难啃的一环：从你的行为到损害之间必须是一条自然、连续、未被其他原因打断的因果链。原书的经典场景：没把患者固定牢在脊柱板上，可以成为脊髓离断的近因；抬着车祸脊柱伤患者时摔了担架，原告就会主张损伤来自那一摔而非车祸本身——所以初次接触时就记录神经学状态，就是你的辩护底牌。至于第四要素『损害』，范围远不止身体伤：精神痛苦、误工收入、生活乐趣丧失、配偶陪伴丧失、家务能力丧失、未来赚钱能力受损，全都可以索赔。",
+     "hard": true
+    },
+    {
+     "en": "Abandonment is negligence by exit: terminating care without the patient's consent while they still need treatment, where the abrupt stop causes later injury or death. Once you respond, you may not leave the patient until another competent professional of equal or higher training takes responsibility — transfer of care means handing over to a health care professional, not to a stretcher or a clerk. Never leave without a full report to a physician, physician assistant, or nurse, and leave a copy of the PCR: you are the only provider with first-hand knowledge of the scene. A waiting-room drop-off is acceptable only when, after your report, you and the receiving staff agree the acuity is low enough and the staff explicitly acknowledge the patient is now theirs.",
+     "zh": "遗弃就是『用离开完成的过失』：患者还需要治疗时未经其同意终止照护，且这一骤停导致了后续伤亡。一旦出勤接手，在另一名同级或更高级别的合格医疗人员接管之前，你不得离开患者——交接的对象是医疗专业人员，不是担架，更不是登记员。给医生、医师助理或护士做完完整交班报告之前绝不离开，并留下一份 PCR：全场只有你亲眼见过现场。把患者留在候诊区只有一种合法情形：交班之后，你和接收方一致认为病情轻缓可以等，且对方明确认账『这个患者归我们了』。",
+     "hard": true
+    },
+    {
+     "en": "Not every non-transport is abandonment: some callers genuinely need neither treatment nor transport (protocols from your medical director govern these), and in tiered or rural systems an advanced care paramedic who responds first may hand transport to a basic-level crew when only basic care is required — contact medical control if in doubt. The liability trap runs the other way too: a BLS crew that wrongly cancels an incoming ALS crew exposes the whole system, so cancellation criteria must be written into protocol.",
+     "zh": "不是所有『没送医』都算遗弃：有的呼叫者确实既不需要治疗也不需要转运（这类情形按医疗主任的协议走）；在分级响应或乡村系统里，先到场的高级救护员在患者只需基础照护时，可以把转运交给基础级车组——拿不准就呼叫医疗控制。但责任陷阱也会反着来：BLS 车组错误取消正在赶来的 ALS 车组，会把整个系统拖进诉讼，所以取消的判定标准必须白纸黑字写进协议。",
+     "hard": true
+    },
+    {
+     "en": "An advance directive is usually written but can be an oral statement — it expresses what care the patient wants or refuses once unable to speak for themselves; living wills and organ donation orders both qualify. A DNR order specifies which life-sustaining procedures to perform when the heart or breathing stops — it is never a 'do not care for the patient' order. Canadian wrinkle: a DNR is generally not considered an advance directive here, because the patient may not have initiated it — DNRs are typically written by the physician for terminal patients in a nursing home, hospital, or hospice, often in consultation with family or a legal designate, and remain valid only while the patient is under that physician's direct care or in that facility.",
+     "zh": "预立指示（advance directive）通常是书面文件，也可以是口头声明——表达患者在丧失表达能力后想要或拒绝哪些医疗；生前预嘱和器官捐献指令都属于此类。DNR（不施行心肺复苏指令）规定的是心跳或呼吸停止时该做哪些维生操作——它绝不是『不用管这个患者』的指令。加拿大的特殊之处：DNR 在这里一般不算预立指示，因为文件未必由患者本人发起——DNR 通常由医生为养老院、医院或安宁疗护中的终末期患者签发，常与家属或法定代理人商定，且只在患者处于该医生直接照护下或身在签发机构内时有效。",
+     "hard": true
+    },
+    {
+     "en": "Two DNR-adjacent field problems: a terminal patient sent home to die, whose panicking family dials 911 at the end — the patient is no longer under the facility's direct care, so you may be required to treat; know your province's law and the DNR document formats you will meet. And for critically ill patients identified as organ donors, you may be asked to perform procedures that keep organs viable before procurement — contact direct medical control for direction, and help your system build an organ-donation protocol if none exists.",
+     "zh": "两个 DNR 边上的实战难题：一是签了 DNR 回家等待离世的终末期患者，临终时家属慌了神拨打 911——患者此刻已不在机构的直接照护下，你可能必须施救；所以要吃透本省法律和你会遇到的各种 DNR 文件格式。二是被确认为器官捐献者的危重患者，你可能要在获取器官前执行维持器官活性的操作——联系直接医疗控制听取指示，系统若还没有器官捐献协议，就推动建一个。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Licensure, Certification, and Due Process",
+   "titleZh": "执照、认证与正当程序",
+   "points": [
+    {
+     "en": "Certification versus licensure, definitions apart: certification attests that you met minimum-competency criteria — a credential level built on training hours and assessment examinations. Licensure is the privilege to practise at a carefully defined level, granted by a provincial government agency or a self-governing professional authority such as a government-sanctioned College of Paramedics, which often writes and administers the licensing exams itself. Depending on the province, paramedics may be licensed, certified, or both — and a licence is conditional: keep up the authority's requirements for professional behaviour, continuing education, and renewal, or lose the privilege.",
+     "zh": "认证与执照，定义要掰开：认证（certification）证明你达到了最低胜任标准——一个建立在训练学时与考核之上的资历等级；执照（licensure）则是在明确界定的级别上执业的特权，由省政府机构或政府认可的自治职业机构（如 College of Paramedics）授予，这些机构往往自己出题、自己主持执照考试。各省做法不一：有的发照、有的认证、有的两者都有——而执照是有条件的：职业操守、继续教育、按期换照，哪样跟不上，特权就可能被收回。",
+     "hard": true
+    },
+    {
+     "en": "When the licensing agency moves against you — to restrict, suspend, or revoke — you are owed due process, which has exactly two components: Notice and the Opportunity to Be Heard. The sequence: a certified letter carrying a Notice of Contemplated Action arrives, naming the alleged infraction, the regulation sections said to be violated, and your right to request a hearing; the hearing is where you tell your side; if the agency still finds action warranted, it issues a Notice of Final Action — after which you may still hold appeal rights.",
+     "zh": "发照机构要动你的执照——限制、吊扣或吊销——你享有正当程序，它恰好由两部分组成：告知（Notice）与陈述机会（Opportunity to Be Heard）。流程是：一封挂号信送达《拟处分通知》，写明被指控的行为、涉嫌违反的规章条款、以及你申请听证的权利和程序；听证会上你讲你的版本；机构听完仍认为该处分，就发出《最终处分通知》——此后你通常还保有上诉权。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Consent, Refusal, Restraint: The Heart of the Chapter",
+   "titleZh": "同意、拒绝与约束：本章的心脏",
+   "points": [
+    {
+     "en": "The right behind everything here: Canadian common law — with roots in the Magna Carta, and entrenched in the Constitution Act, 1982 — protects every person's bodily integrity. No one may administer treatment contrary to a person's wish, even when treatment is necessary to preserve life or health. Valid consent has four common-law prerequisites: it must be voluntary; the patient must have legal and mental capacity; it must be specific to both the treatment and the person administering it; and it must be informed.",
+     "zh": "这一节所有规则背后的那项权利：加拿大普通法——渊源可追至《大宪章》，并写进了 1982 年《宪法法案》——保护每个人的身体完整性。任何人都不得违背本人意愿施予治疗，哪怕治疗是保命所必需。有效同意有四个普通法前提：出于自愿；患者具备法律与心智上的行为能力；同意针对特定的治疗和特定的施治者；且必须是知情的。",
+     "hard": true
+    },
+    {
+     "en": "Emergency exception and age lines: common law permits treatment without consent in an emergency, provided the provider knows of no contrary wish the patient expressed while capable. Adults are presumed competent, and several provinces extend that presumption by statute to everyone older than 16. Below 16, the common-law mature minor rule applies: a minor with a full appreciation of the nature and consequences of the treatment may consent to it — or refuse it. For an incapable adult, only a court-appointed guardian, or the court itself under its parens patriae jurisdiction, can consent or refuse on their behalf.",
+     "zh": "紧急例外与年龄线：普通法允许在紧急情况下未经同意施治——前提是施救者不知道患者在尚有行为能力时表达过相反意愿。成年人被推定有行为能力，若干省更以成文法把这一推定扩展到 16 岁以上的所有人。16 岁以下适用普通法的成熟未成年人规则：对治疗的性质与后果有充分理解的未成年人，可以自行同意——也可以拒绝。至于丧失行为能力的成年人，只有法院指定的监护人、或法院本身依 parens patriae（国家亲权）管辖权，才能代其同意或拒绝。",
+     "hard": true
+    },
+    {
+     "en": "Informed consent is built in four spoken steps: (1) describe the suspected injury or illness; (2) describe the treatment you propose and its potential risks; (3) discuss available alternatives; (4) advise on the potential consequences of refusing. Language barriers, emotional states, and mental abilities all interfere — take the patient somewhere quiet, like the back of the unit, and explain in terms they can absorb. Then document how you obtained the consent.",
+     "zh": "知情同意靠说出口的四步搭建：①说明你怀疑的伤病是什么；②说明你想做的处置及其潜在风险；③讨论还有哪些替代方案；④告知拒绝治疗可能的后果。语言障碍、情绪状态、心智能力都会干扰这个过程——把患者带到安静处（比如车厢里），用他消化得了的方式讲清楚。最后，把你如何取得同意写进记录。",
+     "hard": true
+    },
+    {
+     "en": "Three consent labels to keep straight: expressed consent — the patient says so or acts so (rolling up a sleeve for the blood pressure cuff counts); implied consent — assumed for unconscious adults, or adults too ill or injured to answer, for emergency life-saving treatment; and 'involuntary consent' — which does not exist in law. The term is an oxymoron misapplied to permission granted by police or a guardian for someone in custody, incapacitated, or a minor; consent can never be involuntary. Field habit to match: never announce a procedure — ask, even for a blood pressure, and explain why.",
+     "zh": "三个同意的标签要摆正：明示同意——患者用话或用动作表态（卷起袖子让你量血压就算）；默示同意——对意识不清、或伤病重到无法应答的成年人，就抢救性治疗推定其同意；还有『非自愿同意』——法律上根本没有这种东西，这个自相矛盾的词被误用来描述警察或监护人替被拘押者、失能者、未成年人给的许可，但同意从来不可能是非自愿的。配套的现场习惯：任何操作都别用通知的口气——哪怕量个血压也要先问，并说明为什么要量。",
+     "hard": true
+    },
+    {
+     "en": "Minors have no legal status to consent or refuse, with two carve-outs: provinces whose statutes extend consent rights to those 16 and older (or to any child with the apparent maturity to fully appreciate the treatment), and the mature minor rule. Otherwise consent comes from the parent or legal guardian when possible — and when no guardian is available, life-sustaining emergency treatment proceeds under implied consent.",
+     "zh": "未成年人原则上没有同意或拒绝的法律资格，但有两个豁口：一是有些省立法把同意权延伸到 16 岁及以上（或延伸到心智成熟到能充分理解治疗性质与后果的孩子）；二是成熟未成年人规则。除此之外，尽可能找家长或法定监护人取得同意——找不到监护人时，维持生命的紧急救治按默示同意进行。",
+     "hard": true
+    },
+    {
+     "en": "Decision-making capacity — the gate both consent and refusal pass through — is the ability to understand the information you give, process it, and make an appropriate choice about care. Your best evaluation tool is conversation; pulse oximetry and blood glucose readings outside normal ranges add measurable evidence that capacity is compromised. Document the capacity assessment in the PCR: a refusal is only as strong as the capacity behind it.",
+     "zh": "行为决策能力——同意和拒绝都要过的那道闸——指患者能听懂你给的信息、能加工这些信息、并能就医疗做出适合自己的选择。评估它最好的工具就是跟患者交谈；脉搏血氧和血糖超出正常范围，则为『能力受损』提供了可量化的证据。把能力评估写进 PCR：一份拒绝的效力，完全取决于它背后的决策能力。",
+     "hard": true
+    },
+    {
+     "en": "A responsive patient with decision-making capacity who refuses cannot be treated without a court order. Your playbook: consult direct medical control; explain the consequences of refusal calmly and sympathetically — many refusals are fear or denial (the middle-aged man denying his heart attack needs to hear that EMS diagnostics are limited and a heart attack can be real even when the 12-lead shows nothing); offer a radio or phone conversation with the medical control physician; and never close the door — tell them it is fine to change their mind, help them make concrete follow-up plans, and if they refuse transport, try to ensure someone stays with them and tell them to call back anytime.",
+     "zh": "有反应、有决策能力的患者拒绝救治，没有法院命令就不能碰他。你的应对手册：联系直接医疗控制；平静而有同理心地讲清拒绝的后果——很多拒绝出自恐惧或否认（那个否认自己心梗的中年男人，需要听到『EMS 的诊断手段有限，12 导联没显示不等于没在心梗』）；可以让患者跟医疗控制的医生通个电台或电话；并且永远不把门关死——告诉他改主意随时欢迎，帮他把后续就医安排落实成具体计划；若拒绝转运，尽量安排有人陪着他，并叮嘱需要时马上回拨。",
+     "hard": true
+    },
+    {
+     "en": "Refusal documentation, the full recipe: the patient's history; every physical and mental-status finding; the patient's stated reasons for refusing; every piece of advice you gave, including the explained risks; and how much time you spent trying. Signed by the patient and an impartial observer — and the witness must actually hear the exchange, not just lend a signature; collecting signatures from bystanders who heard nothing creates its own legal problem. Above all: a signed refusal form is not an informed refusal and does not protect you — what protects you is having genuinely informed the patient in a way they could understand. Courts have upheld refusals precisely where paramedics documented capacity and the explained consequences with care.",
+     "zh": "拒绝文书的完整配方：患者病史；体格与精神状态检查的全部所见；患者自述的拒绝理由；你给出的每一条劝告，包括讲明的风险；以及你花了多长时间劝。由患者和一名中立见证人共同签字——而见证人必须真的听到了整段对话，不是来借个名字的；拉着没听过对话的旁观者签名，本身就会制造法律问题。最关键的一句：签了拒绝表不等于知情拒绝，那张纸保护不了你——真正保护你的，是你确实用对方听得懂的方式告知过。法院支持患者拒绝有效的判例，恰恰都发生在救护员细致记录了决策能力与后果告知的案子里。",
+     "hard": true
+    },
+    {
+     "en": "The competence checklist your protocols should spell out: oriented to person, place, and day; answers questions appropriately; no significant impairment from alcohol, drugs, head injury, or organic illness (ask family whether this is their normal); demonstrates understanding of the condition and the risks of staying home — which requires your thorough explanation first; can describe a reasonable follow-up plan; oxygen saturation within normal limits; blood glucose within normal limits.",
+     "zh": "协议里该写明的行为能力清单：对人、地点、日期定向正常；能切题回答问题；没有酒精、毒品、头部外伤或器质性疾病造成的明显损害（有家属在就问一句『他平时是这样吗』）；能表现出对自身病情和不去医院之风险的理解——这以你先做完整讲解为前提；能说出一套合理的后续就医计划；血氧饱和度正常；血糖正常。",
+     "hard": true
+    },
+    {
+     "en": "When the illness is potentially life-threatening and capacity is in any doubt, transport — even against the patient's will. Whether an impaired patient may refuse is a medical decision requiring judgment and experience, best made by a doctor in the hospital, not a paramedic on the street. The book's risk arithmetic: the legal exposure of reasonable force to bring a patient in (false imprisonment) is far smaller than the legal and medical fallout of releasing someone who needed care (wrongful death, malpractice). Err toward transport, confer with direct medical control first — and where provincial law empowers police to transport a patient incapable of informed consent or refusal, call police before laying a hand on anyone.",
+     "zh": "伤病可能危及生命、而决策能力存疑时——转运，哪怕违背患者意愿。让一个可能受损的患者拒绝治疗，是需要判断力和经验的医疗决定，该由医院里的医生做，不该由街头的救护员做。原书算过这笔风险账：用合理强制把人送医的法律风险（非法拘禁）远小于把需要救治的人留在现场的法律与医疗后果（过失致死、失职）。宁可偏向转运，但动手前先请示直接医疗控制——若本省法律授权警察转运无法作出知情同意/拒绝的患者，那就先叫警察，再考虑碰人。",
+     "hard": true
+    },
+    {
+     "en": "Psychiatric emergencies flip the authority map: when life is not in danger, generally only a police officer may restrain and transport a person against their will — EMS should do so only at the express request of police. Neither a physician nor the family can authorize forcible transport; they may authorize involuntary commitment, but that authority stops short of forcing the ride. Every EMS system needs pre-written protocols, built on local law, defining each agency's role (BC's Mental Health Act sections 22/28 and Form 4 are covered in Chapter 40).",
+     "zh": "精神科急症把权力地图翻了个面：生命无危险时，一般只有警察有权违背本人意愿实施约束和转运——EMS 只能应警方明确请求协助。医生和家属都无权授权强制转运；他们可以启动非自愿收治程序，但这份权力到『强行押送上车』为止。每个 EMS 系统都需要依据当地法律预先写好协议，明确各机构的分工（BC 的 Mental Health Act 第 22/28 条与 Form 4 属第 40 章内容）。",
+     "hard": true
+    },
+    {
+     "en": "Use-of-force law for paramedics: force only in response to the patient's force against you — self-defence, never initiation. Disabling sprays, knives, and firearms sit outside paramedic scope and are usually prohibited by the agency. The lawful ceiling: force equal to or slightly greater than what the patient offers, always responsive to their actions. And the standing rule above all of it: do not enter an unsafe scene until law enforcement secures it.",
+     "zh": "救护员的用武力规则：只有在患者先对你动武时才能用力回应——是自卫，绝不是先动手。致瘫喷雾、刀具、枪械都在救护员执业范围之外，机构通常也明令禁止。合法的力度上限：与患者施加的力相当或略高，且必须是对其行为的回应。凌驾于这一切之上的铁则：现场不安全，警方没控住之前，不进。",
+     "hard": true
+    },
+    {
+     "en": "Restraint is medical, never punitive: restrain only a patient who is a danger to themselves or others, remembering that violence may be driven by hypoxia, hypoglycemia, mental illness, brain injury, drug overdose, or alcohol — reasons the patient needs a hospital, not a lesson. Protocols must name the approved devices and medications; many systems use chemical restraint — benzodiazepines or antipsychotics — to calm violent patients for transport, and a proper physical restraint takes several strong people.",
+     "zh": "约束是医疗手段，永远不是惩罚：只能约束对自己或他人构成危险的患者，并且要记住，暴力背后可能是缺氧、低血糖、精神疾病、脑损伤、药物过量或酒精——这些恰恰是他需要进医院的理由，不是教训他的理由。协议必须写明允许使用的器具和药物；许多系统采用化学约束——苯二氮䓬类或抗精神病药——让暴力患者安静下来接受转运；而真要physically按住一个人，得好几个壮劳力。",
+     "hard": true
+    },
+    {
+     "en": "Destination rules: transport to the hospital of the patient's choice when possible and reasonable — but system protocols route certain patients (trauma, stroke, cardiac, homeless, mentally ill, bariatric) to designated hospitals matched to capability, and delivering a patient to a facility that cannot treat their condition can itself create liability for you.",
+     "zh": "送往哪家医院的规则：在可能且合理时尊重患者自选的医院——但系统协议会把特定患者（创伤、卒中、心脏事件、无家可归者、精神疾病患者、肥胖患者）定向送往有相应能力的指定医院；把患者送进一家治不了他这个病的机构，本身就可能给你招来法律责任。",
+     "hard": true
+    },
+    {
+     "en": "Notes from Nancy, the chapter's compass: place the welfare of the patient ahead of all other considerations, and you will rarely — if ever — commit an unethical act in medical care.",
+     "zh": "Notes from Nancy 给全章定的罗盘：把患者的福祉摆在一切考虑之前，你在医疗中就几乎不可能做出不合伦理的事。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Crime Scene and Emergency Scene Responsibilities",
+   "titleZh": "犯罪现场与突发现场中的职责",
+   "points": [
+    {
+     "en": "It may take police considerable time to determine whether a death scene was suicide, homicide, or something else — so treat every death or potential crime scene as evidence until proven otherwise: touch nothing you do not have to (phones and doorknobs hold fingerprints), move nothing at a vehicle collision unless you must (glass, metal, even a beer can), limit how many EMS personnel enter, tell police about anything you did move, and leave dead bodies in place until the coroner or medical examiner arrives. (The full evidence-preservation doctrine — paths, clothing cuts, documentation pillars — lives in Chapter 54.)",
+     "zh": "警方可能要花很长时间才能判定一个死亡现场是自杀、他杀还是别的——所以在结论出来之前，把每个死亡或疑似犯罪现场都当证据对待：能不碰的都不碰（电话和门把手上有指纹）；车祸现场能不挪的都不挪（碎玻璃、金属片、甚至一个啤酒罐）；控制进场的 EMS 人数；挪动过什么就告知警方；遗体留在原位，等验尸官或法医来查验。（完整的证据保全要领——路径、剪衣、文书三支柱——在第 54 章。）",
+     "hard": true
+    },
+    {
+     "en": "Two chapter-specific reminders: in rape cases the victim's own body carries vital evidence — fibre, hair, sperm, blood — protect it while you care for them; and if a death is on scene, stay with the body until police arrive, shielding the scene from bystanders, family, media, and even extra EMS personnel. Also document witness statements carefully and take their contact information.",
+     "zh": "两条本章特有的提醒：性侵案中，受害者身上本身就带着关键证据——纤维、毛发、精液、血迹——救治的同时要保护好这些证据；现场有死者时，守在遗体旁直到警察到场，把围观者、家属、媒体、乃至多余的 EMS 人员都挡在现场之外。此外要细致记录目击者的陈述，并留下他们的联系方式。",
+     "hard": true
+    },
+    {
+     "en": "The tie-breaker rule: any doubt about whether the patient can be saved — start resuscitation. Contact direct medical control for direction or transport, and know what your local protocol says for exactly this situation. And stay aware that the perpetrator may still be at or near the scene, shaping when and how you reach your patient.",
+     "zh": "拿不准就救的裁定规则：只要对患者还有没有救存有一丝怀疑——就启动复苏。可联系直接医疗控制请求指示或直接转运，并事先弄清本地协议对这种情形的规定。同时别忘了：行凶者可能还在现场或附近，这会左右你什么时候、用什么方式接近患者。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Documentation: The Record That Testifies for You",
+   "titleZh": "文书：替你出庭作证的那份记录",
+   "points": [
+    {
+     "en": "Even the most skilled professional may end up in court as witness or defendant, and your best protection there is a thorough, accurate medical record containing only facts — your findings and your treatment. You were at the scene and the emergency physician was not: the PCR's job is to paint the picture of what you experienced there.",
+     "zh": "再高明的专业人员也可能有一天以证人或被告身份走进法庭，而你在那里最好的护身符就是一份完整准确、只写事实的医疗记录——你的所见和你的处置。现场只有你在、急诊医生不在：PCR 的使命就是替他把现场画出来。",
+     "hard": true
+    },
+    {
+     "en": "The six building blocks of an effective PCR: (1) dates and times — call received, scene arrival, scene departure, hospital arrival; (2) history — what patient and bystanders told you, with direct quotes attributed and inside quotation marks; (3) scene observations, especially those suggesting how the injury happened; (4) physical examination in detail, including every pertinent negative for body areas you examined and found normal; (5) treatment, with precision — not 'IV therapy was given' but which physician ordered it, catheter gauge, site, fluid, and rate; (6) changes in the patient's status while in your care.",
+     "zh": "一份合格 PCR 的六块积木：①日期与时间——接警、到达现场、离开现场、抵达医院四个时刻；②病史——患者和旁观者的陈述，直接引语要注明出处并加引号；③现场观察，尤其是能提示受伤机制的细节；④详尽的体格检查，包括每一处查过且正常的部位的阴性所见（pertinent negatives）；⑤处置，写到精确——不是『做了静脉输液』，而是哪位医生下的医嘱、几号留置针、穿刺部位、什么液体、什么速度；⑥患者在你照护期间的每一次状态变化。",
+     "hard": true
+    },
+    {
+     "en": "Write the report as soon as possible after the call — details blur within hours. Handwritten: legible, in ink; electronic: proofread before transmitting. The governing maxim: if you did not document it, you cannot prove you did it. The PCR becomes a permanent part of the patient's record, is a legal document, and reflects on its author.",
+     "zh": "出勤一结束就尽快写报告——几个小时后细节就开始模糊。手写要工整、用墨水笔；电子报告发送前要通读纠错。统摄一切的格言：没写下来的，就等于无法证明你做过。PCR 会成为患者病历的永久组成部分，是一份法律文件，也是作者水准的镜子。",
+     "hard": true
+    },
+    {
+     "en": "Neatness is legal armour: a sloppy, incomplete record tells the reader — and the court — that the care may have been sloppy and incomplete too, and plaintiff's attorneys read such records as an invitation to sue. Document unusual events factually and objectively: equipment failures, bystander interference, getting lost en route. All crew members sign legibly with their crew numbers — not just the author.",
+     "zh": "工整本身就是法律铠甲：一份潦草残缺的记录会让读者——包括法庭——推断救治大概也同样潦草残缺，原告律师看到这种记录就当收到了起诉请柬。异常事件要如实、客观地记下：设备故障、旁观者干扰、途中迷路。全体车组成员都要清晰签名并注明编号——不只是执笔的那位。",
+     "hard": true
+    },
+    {
+     "en": "The never list for medical records: no creative writing; no flippant or derogatory remarks about the patient; never use the record to blame another provider for an adverse event; and never vent frustrations with the EMS administration there — in a lawsuit, that paragraph hurts every side of the system issue you were complaining about.",
+     "zh": "病历的禁写清单：不搞文学创作；不写对患者轻佻或贬损的话；不借病历指责其他医疗人员造成不良事件；更不在病历里发泄对 EMS 管理层的不满——一旦打起官司，那段牢骚只会把你抱怨的系统问题变得对谁都更糟。",
+     "hard": true
+    },
+    {
+     "en": "Always leave a copy of the written report at the emergency department: the staff needs how you found the patient, what you did, and what changed — without it, treatment gets duplicated and the trigger for the call gets lost. The copy joins the patient's permanent hospital record, and racing out the door with only a verbal report leaves you exposed with both the legal system and the hospital.",
+     "zh": "永远在急诊科留下一份书面报告：接诊团队需要知道你见到患者时什么样、做了什么、发生了什么变化——没有这份记录，处置会被重复做，呼叫的起因也会失传。这份副本会并入患者在医院的永久病历；只做口头交接就夺门而出，等于同时在法律系统和医院两边给自己埋雷。",
+     "hard": true
+    },
+    {
+     "en": "Retention and custody: call reports are kept for a period set by provincial law — and providers must never keep personal copies of PCRs, because of the confidential information they contain.",
+     "zh": "保存与归属：出勤报告按本省法律规定的年限留存——而救护员绝不能私自留存 PCR 副本，因为里面装的是保密信息。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Reportable Cases and Coroner Notifications",
+   "titleZh": "法定报告情形与验尸官通报",
+   "points": [
+    {
+     "en": "The reportable-case list — categories most provinces oblige paramedics to report to the proper authorities: neglect or abuse of children; neglect or abuse of older people; domestic violence; injury sustained during the commission of a felony or injuries of suspicious origin (gunshot and stab wounds); drug-related injuries; childbirth outside a licensed medical facility; rape; animal bites; and certain communicable diseases. Virtually every province mandates reporting suspected child and elder abuse (the recognition details and reporting mechanics are Chapter 46 material) — and elder abuse is as prevalent as child abuse, so watch for it just as hard.",
+     "zh": "法定报告清单——多数省要求救护员向主管机关报告的情形：儿童忽视或虐待；老年人忽视或虐待；家庭暴力；重罪实施过程中受的伤或来源可疑的伤（枪伤、刀刺伤）；毒品相关损伤；在持牌医疗机构之外发生的分娩；强奸；动物咬伤；以及某些传染病。几乎每个省都强制报告疑似儿童和老人虐待（识别要点与上报流程属第 46 章内容）——而老人虐待的普遍程度不亚于儿童虐待，警觉度要拉到一样高。",
+     "hard": true
+    },
+    {
+     "en": "Two counterweights to remember: Canada's growing emphasis on health-information privacy can restrict what you may report, and reporting requirements vary widely between provinces — so the real rule is always 'learn the laws of your province and observe the obligations that apply to you.'",
+     "zh": "两个反向砝码要记住：加拿大对健康信息隐私日益严格的要求，可能反过来限制你能报告的内容；而各省的报告规定差异很大——所以真正的规则永远是『吃透本省法律，履行落在你头上的那份义务』。",
+     "hard": false
+    },
+    {
+     "en": "Notify the coroner or medical examiner service of all deaths, and the book lists four categories by name: (1) obvious or suspected homicide; (2) obvious or suspected suicide; (3) any other violent or sudden, unexpected death; (4) death of a prison inmate. Every EMS system should hold written procedures for coroner and medical examiner cases, and police get notified of death scenes per local protocol.",
+     "zh": "所有死亡都应通报验尸官或法医服务，原书点名列出四类：①明显或疑似他杀；②明显或疑似自杀；③其他任何暴力性或突然的、意料之外的死亡；④在押囚犯死亡。每个 EMS 系统都该备有验尸官/法医案件的成文流程，死亡现场还要按当地协议通知警方。",
+     "hard": true
+    },
+    {
+     "en": "The chapter case's exam-grade takeaways: body language predicts violence better than words — back turned, shoulders raised, fists clenched; keep a safe distance and never let the patient get between you and your exit. Safe restraint takes a minimum of four trained personnel, one per limb — without them, leaving the immediate area is the correct action, and it is defensible against an abandonment claim because you stayed ready to treat once the patient was safely restrained. And remember the medical layer: hypoglycemia and hypoxia can themselves produce bizarre, combative behaviour — the violent diabetic may be a patient in crisis, not a criminal.",
+     "zh": "本章案例值得进考场的几个结论：肢体语言比言语更早预告暴力——背对着你、耸起肩、攥紧拳；保持安全距离，绝不让患者站到你和出口之间。安全约束一个人至少需要四名受训人员、一人控一肢——凑不齐人手时，撤出现场就是正确动作，而且面对『遗弃』指控站得住脚，因为你一直待命，患者被妥善约束后立即恢复救治。还要记住医学那一层：低血糖和缺氧本身就能造成怪异、好斗的行为——那个动手的糖尿病患者可能是危重病人，不是罪犯。",
+     "hard": true
+    },
+    {
+     "en": "The final answer of the chapter case doubles as the chapter's verdict: anyone can file a lawsuit for almost any reason — you cannot prevent the filing. What you control is whether it succeeds: follow local protocols, document each call thoroughly, and act in the patient's best interest.",
+     "zh": "案例最后一问的答案，也是全章的判词：任何人几乎可以为任何理由起诉——你阻止不了『被起诉』这件事。你能控制的是官司的胜负：照本地协议做事、每一趟出勤都写足记录、始终以患者利益为先。",
+     "hard": false
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Elements of negligence a plaintiff must prove",
+   "itemZh": "原告必须证明的过失要素数",
+   "value": "4（义务/违反义务/近因/损害）"
+  },
+  {
+   "itemEn": "Common-law prerequisites of a valid consent",
+   "itemZh": "普通法下有效同意的前提条件数",
+   "value": "4（自愿/有行为能力/特定/知情）"
+  },
+  {
+   "itemEn": "Steps to obtain informed consent",
+   "itemZh": "取得知情同意的步骤数",
+   "value": "4（说明伤病/说明治疗与风险/讨论替代方案/告知拒绝后果）"
+  },
+  {
+   "itemEn": "Statutory extension of the competence presumption in various provinces",
+   "itemZh": "若干省成文法把『推定有行为能力』扩展到的年龄",
+   "value": "> 16 岁"
+  },
+  {
+   "itemEn": "Civil jury size and votes needed for a verdict",
+   "itemZh": "民事陪审团人数与定案所需票数",
+   "value": "6 人陪审团，5/6 同意即可"
+  },
+  {
+   "itemEn": "Length of the discovery period in a lawsuit",
+   "itemZh": "诉讼证据开示期的时长",
+   "value": "数月至 2 年以上"
+  },
+  {
+   "itemEn": "Components of due process in a licensure action",
+   "itemZh": "执照处分中正当程序的组成部分数",
+   "value": "2（告知＋陈述机会）"
+  },
+  {
+   "itemEn": "Death categories to notify the coroner / medical examiner",
+   "itemZh": "须通报验尸官/法医的死亡类别数",
+   "value": "4（他杀/自杀/其他暴力或突然意外死亡/在押囚犯死亡）"
+  },
+  {
+   "itemEn": "Minimum trained personnel to safely restrain a patient",
+   "itemZh": "安全约束一名患者所需的最少受训人数",
+   "value": "4 人（一人控一肢）"
+  },
+  {
+   "itemEn": "Quebec Charter of Human Rights and Freedoms (duty to aid) enacted",
+   "itemZh": "魁北克《人权与自由宪章》（施救义务来源）颁布年份",
+   "value": "1975 年"
+  },
+  {
+   "itemEn": "Constitution Act entrenching the right to bodily integrity",
+   "itemZh": "将身体完整性权利入宪的《宪法法案》年份",
+   "value": "1982 年"
+  },
+  {
+   "itemEn": "History of ambulance services in Canada",
+   "itemZh": "加拿大救护车服务的历史",
+   "value": "超过 130 年"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "The best legal protection has no legal jargon in it: a careful, detailed assessment, appropriate prehospital care, then complete and accurate documentation. Everything else in this chapter is commentary on that sentence.",
+   "zh": "最好的法律保护里没有一个法律词：细致完整的评估、恰当的院前处置、再加完整准确的记录。本章其余内容都是这句话的注脚。"
+  },
+  {
+   "en": "Courtesy is litigation prevention: most complaints start as unanswered questions. Explain why you were delayed, why a procedure is hard — silent criticism from a patient is what ripens into a courtroom.",
+   "zh": "礼貌就是诉讼预防：大多数投诉都始于没被回答的问题。晚到了要解释为什么，操作难要说明难在哪——患者闷在心里的不满，才是最后长成法庭传票的那颗种子。"
+  },
+  {
+   "en": "Never announce a procedure — request it. Even a blood pressure gets an 'if I may' and a why. The habit costs seconds and closes off assault-and-battery arguments before they start.",
+   "zh": "任何操作都不用通知句式——用请求句式。哪怕量个血压也先问一句『可以吗』、说一句为什么。这个习惯只花几秒钟，却把 assault/battery 的指控空间提前封死。"
+  },
+  {
+   "en": "The transport tie-breaker: the legal risk of reasonably forcing a patient to hospital (false imprisonment) is far smaller than the legal and medical fallout of releasing someone who needed care. Err toward transport, confer with direct medical control first, and involve police before any restraint where they are empowered to transport.",
+   "zh": "转运的裁定法则：用合理强制送医的法律风险（非法拘禁）远小于放走一个需要救治者的法律与医疗后果。宁可偏向转运，先请示直接医疗控制；在警方有权转运的省份，动任何约束之前先让警察介入。"
+  },
+  {
+   "en": "Elder abuse is as prevalent as child abuse. Keep the same index of suspicion for the 80-year-old as for the 8-year-old, and report suspicious findings to the proper authorities.",
+   "zh": "老人虐待和儿童虐待一样普遍。对 80 岁老人保持与对 8 岁孩子同等的警觉，可疑迹象照章上报主管机关。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "Assault versus battery: assault is instilling fear of immediate bodily harm — no touch required; battery is the unconsented harmful or offensive touch itself. The threat is assault; carrying it out is battery; treatment without consent can be both at once.",
+   "zh": "Assault 与 battery 分不清：assault 是让对方恐惧即将到来的身体伤害——不需要碰到人；battery 是未经同意的有害或冒犯性触碰本身。放话威胁是 assault，动手兑现是 battery；未经同意的救治可以同时构成两者。"
+  },
+  {
+   "en": "Scope of practice versus standard of care: scope is what the province licenses you to do — a list; standard is what a reasonable paramedic would have done in that situation — a benchmark. You can breach the standard while acting inside your scope, and stepping outside the scope may itself be negligence or even a criminal offence.",
+   "zh": "执业范围与照护标准混为一谈：范围是省照允许你做什么——一张清单；标准是合格救护员在那个情境下会怎么做——一把标尺。完全在范围内做事也可能跌破标准；而跨出范围本身就可能构成过失，甚至刑事犯罪。"
+  },
+  {
+   "en": "'The patient signed the refusal form, so I'm covered.' A signature is not an informed refusal. Protection comes from explaining the condition and the risks in terms the patient could understand, verifying capacity, documenting all of it — and having a witness who actually heard the exchange, not one recruited for a signature.",
+   "zh": "『患者签了拒绝表，我就没事了。』——签名不等于知情拒绝。真正保护你的是：用患者听得懂的话讲清病情与风险、核实决策能力、全部写进记录——外加一位真听到了整段对话的见证人，而不是拉来凑签名的路人。"
+  },
+  {
+   "en": "'Involuntary consent' from police or a guardian: no such thing exists in law — consent can never be involuntary. Permission granted by others for a person in custody or an incapacitated person travels under different doctrines, not under 'consent.'",
+   "zh": "『警察/监护人给的非自愿同意』——法律里没有这种东西，同意从来不可能是非自愿的。他人替被拘押者或失能者给出的许可另有法理依据，不叫『同意』。"
+  },
+  {
+   "en": "'Good Samaritan law covers me on shift.' It never does: responding in the course of employment creates a legal duty, and the law's shelter is for gratuitous off-duty help — and even then it stops at gross negligence, the wilful or wanton kind.",
+   "zh": "『上班时也受好撒玛利亚人法保护。』——从来不。履职响应本身产生法定义务，这部法罩着的是下班后无偿的施救——而且即便下班，保护也到重大过失为止：恣意妄为不在庇护范围内。"
+  },
+  {
+   "en": "'A DNR means stop caring for the patient.' A DNR only addresses life-sustaining procedures when the heart or breathing stops; comfort, oxygen, analgesia, and transport decisions all remain. And in Canada a DNR is generally not an advance directive at all, because the patient may not have initiated it.",
+   "zh": "『有 DNR 就是不用管这个患者了。』——DNR 只回答心跳或呼吸停止时做不做维生操作；安慰照护、给氧、镇痛、转运决定都照旧。而且在加拿大，DNR 一般根本不算预立指示，因为文件未必出自患者本人之手。"
+  },
+  {
+   "en": "'As a paramedic I'm legally required to stop at any roadside crash.' In every common-law province, no — off duty you have a moral pull, not a legal duty, and no vehicle sticker changes that. Quebec is the exception, and once you do stop anywhere, the standard of care and the no-abandonment rule attach.",
+   "zh": "『我是救护员，路过车祸就有法定义务停车。』——在所有普通法省份都不是：下班时那是道德牵引，不是法律义务，车上贴纸也改变不了。魁北克是唯一例外；而无论在哪，你一旦停车施救，照护标准和不得弃患规则就立刻挂到你身上。"
+  },
+  {
+   "en": "Licensure versus certification: certification says you met minimum competency (training hours plus exams); licensure grants the privilege to practise at a defined level. Provinces mix the two — and a licence, being a privilege, can be restricted, suspended, or revoked through due process.",
+   "zh": "执照与认证的错位：认证证明你达到了最低胜任线（学时＋考试）；执照授予的是在特定级别执业的特权。各省叫法混用——而执照既是特权，就能经正当程序被限制、吊扣或吊销。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "过失四要素",
+   "en": "A Duty, Breached, Proximately causing, Harm — all four or the claim dies. Think of a chain with four links: owe it, break it, cause it, hurt it.",
+   "zh": "『欠—破—因—伤』四环链：欠着义务（duty）、破了标准（breach）、因你而起（近因）、伤得真实（harm）——原告四环缺一，指控就断。"
+  },
+  {
+   "name": "VIPS 有效同意",
+   "en": "Valid consent is for VIPS: Voluntary, Informed, Person-and-procedure specific, Sound capacity.",
+   "zh": "有效同意招待 VIPS：Voluntary 自愿、Informed 知情、指向特定的人与操作（Person/Procedure-specific）、Sound capacity 心智健全。"
+  },
+  {
+   "name": "知情同意四句话",
+   "en": "The informed-consent script in four lines: what I found, what I want to do (and its risks), what else could be done, what happens if you say no.",
+   "zh": "知情同意就是四句话：我发现了什么；我想做什么（有什么风险）；还有什么别的办法；你说不，会怎么样。"
+  },
+  {
+   "name": "验尸官四报",
+   "en": "Coroner gets: Homicide, Suicide, Violent or sudden unexpected death, and any Inmate death — 'His Sudden Violent Imprisonment.'",
+   "zh": "验尸官必报四类：他杀、自杀、暴力或突然意外死亡、在押囚犯死亡——记『两杀、一暴、一狱』。"
+  },
+  {
+   "name": "三条权力线",
+   "en": "Who owns a piece of you: the Medical director (practice), the Licensing agency (privilege), the Employer (job) — MLE.",
+   "zh": "谁各管你一段：医疗主任管执业（医）、发照机构管特权（照）、雇主管饭碗（雇）——『医·照·雇』三条线。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Name the four elements of negligence, who must prove them, and to what standard in a civil case.",
+   "qZh": "说出过失四要素，由谁举证，民事案件的证明标准是什么？",
+   "aEn": "Duty, breach of duty, proximate cause, and harm — the plaintiff must prove all four, and in a civil suit only needs the majority of believable evidence to favour their position. A bad outcome alone proves nothing.",
+   "aZh": "义务、违反义务、近因、损害——四个要素全部由原告证明，民事案只需让多数可信证据倒向原告一方。坏结局本身什么都证明不了。"
+  },
+  {
+   "qEn": "Define assault, battery, and false imprisonment with one paramedic example each.",
+   "qZh": "分别定义 assault、battery、非法拘禁，并各举一个救护场景的例子。",
+   "aEn": "Assault: instilling fear of immediate bodily harm ('now I'm going to stick you with this needle' to an unconsenting patient). Battery: harmful or offensive touching without consent (starting the IV anyway). False imprisonment: intentional, unjustifiable detention against a person's will (transporting without consent, wrongful restraints).",
+   "aZh": "Assault：让对方恐惧即将到来的身体伤害（对不同意的患者说『我这就给你扎针』）；battery：未经同意的有害或冒犯性触碰（不顾拒绝真把针扎下去）；非法拘禁：故意且无正当理由地违背意愿扣留（未经同意就转运、错误使用约束带）。"
+  },
+  {
+   "qEn": "A conscious adult refuses transport. Walk through what you must do before you may leave, and what the documentation must contain.",
+   "qZh": "一名清醒成人拒绝转运。离开之前你必须做完哪些事？文书里必须写进什么？",
+   "aEn": "Verify decision-making capacity (orientation, appropriate answers, no impairment from alcohol/drugs/head injury/illness, understands condition and risks after your full explanation, has a follow-up plan, normal SpO2 and glucose); explain consequences sympathetically, offer direct medical control contact, leave the door open. Document history, exam and mental-status findings, the patient's stated reasons, all advice and risks explained, time spent — signed by the patient and an impartial witness who actually heard the exchange.",
+   "aZh": "先核实决策能力（定向、切题应答、无酒精/毒品/头伤/疾病损害、经完整讲解后能复述病情与风险、有后续就医计划、血氧血糖正常）；再有同理心地讲清后果，可让其与直接医疗控制通话，并把门留着。文书要写：病史、体格与精神状态所见、患者自述的拒绝理由、你给的全部劝告与讲明的风险、劝说所花时间——由患者和一名真正听到对话的中立见证人共同签字。"
+  },
+  {
+   "qEn": "What are the four common-law prerequisites of a valid consent, and the four steps of obtaining informed consent?",
+   "qZh": "普通法下有效同意的四个前提是什么？取得知情同意的四个步骤是什么？",
+   "aEn": "Prerequisites: voluntary; legal and mental capacity; specific to the treatment and the person giving it; informed. Steps: describe the suspected illness/injury; describe the proposed treatment and its risks; discuss alternatives; advise on the consequences of refusal.",
+   "aZh": "四前提：自愿；具备法律与心智行为能力；针对特定治疗和特定施治者；知情。四步骤：说明怀疑的伤病；说明拟做的处置及风险；讨论替代方案；告知拒绝的后果。"
+  },
+  {
+   "qEn": "When does Good Samaritan legislation protect you, and where does the protection end?",
+   "qZh": "好撒玛利亚人立法什么时候保护你？保护到哪里为止？",
+   "aEn": "Off duty, helping voluntarily and free of charge, away from a facility with proper equipment. It ends at gross negligence — wilful or wanton conduct in reckless disregard of others' safety, such as attempting a skill you were never trained or certified in — and it never applies on duty, where employment creates a legal duty.",
+   "aZh": "下班、自愿、分文不取、且施救地点不具备正规医疗设备时保护你。保护止于重大过失——对他人安全放任不管的恣意行为，比如做你从未受训认证的操作；在班上则完全不适用，因为履职本身已产生法定义务。"
+  },
+  {
+   "qEn": "Which deaths must be reported to the coroner or medical examiner?",
+   "qZh": "哪些死亡必须通报验尸官或法医？",
+   "aEn": "Generally all deaths — and by name: obvious or suspected homicide; obvious or suspected suicide; any other violent or sudden, unexpected death; and the death of a prison inmate.",
+   "aZh": "原则上所有死亡都要通报——点名的四类：明显或疑似他杀；明显或疑似自杀；其他任何暴力性或突然的意外死亡；在押囚犯死亡。"
+  },
+  {
+   "qEn": "Your patient is 15 and alone with anaphylaxis; no guardian is reachable. On what legal bases do you treat?",
+   "qZh": "患者 15 岁，独自一人，发生过敏性休克，联系不上监护人。你依据什么法律基础施救？",
+   "aEn": "Implied consent for life-sustaining emergency treatment when no parent or guardian is available — and depending on the province, a mature minor who fully appreciates the nature and consequences of treatment may consent in their own right.",
+   "aZh": "监护人不在场时，维持生命的紧急治疗适用默示同意；视省份而定，一个能充分理解治疗性质与后果的成熟未成年人也可以自行给出同意。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "Who licenses you in BC, and which written exam you face",
+   "topicZh": "BC 谁给你发照、你考哪张笔试卷",
+   "bookEn": "The textbook describes provincial licensure generically — government agencies or Colleges of Paramedicine that write and administer their own exams.",
+   "bookZh": "教材只泛泛描述省级发照——由政府机构或护理医学监管学院自行命题、主持考试。",
+   "bcEn": "In BC, EMRs and paramedics are licensed by the Emergency Medical Assistants Licensing Board (EMALB) under the Emergency Medical Assistants Regulation (BC Reg 133/98). The EMR written exam is EMALB's own examination; PCP candidates instead write the CPCF (Canadian Paramedic Competency Framework) exam administered through COPR. BC has no College of Paramedicine.",
+   "bcZh": "在 BC，EMR 和救护员由紧急医疗助理发照委员会（EMALB）依《紧急医疗助理条例》（BC Reg 133/98）发照。EMR 笔试考 EMALB 自己的卷子；PCP 考生考的则是经 COPR 体系的 CPCF（加拿大救护员能力框架）卷。BC 没有 College of Paramedicine。",
+   "ref": "EMALB 官方规定；BC Reg 133/98（官方 PDF 已核实）"
+  },
+  {
+   "topicEn": "Minors' consent: BC uses the Infants Act mature-minor standard, no fixed age",
+   "topicZh": "未成年人同意：BC 用 Infants Act 的成熟未成年人标准，不设固定年龄",
+   "bookEn": "The book presents two provincial patterns: statutes extending consent rights to those over 16, and the common-law mature minor rule for younger children.",
+   "bookZh": "教材给出两种省级模式：成文法把同意权扩展到 16 岁以上，以及针对更小孩子的普通法成熟未成年人规则。",
+   "bcEn": "BC's Infants Act codifies the mature-minor approach with no age threshold at all: a minor of any age may consent to health care if the provider is satisfied the minor understands the nature, consequences, benefits, and risks of the care and that it is in the minor's best interests. Capacity, not birthday, is the test in BC.",
+   "bcZh": "BC 的《Infants Act》把成熟未成年人路线写进了成文法，而且完全不设年龄门槛：任何年龄的未成年人，只要施治者确信其理解该医疗的性质、后果、益处与风险，且该医疗符合其最佳利益，就可以自行同意。在 BC，判定标准是心智能力，不是生日。",
+   "ref": "BC Infants Act（成熟未成年人原则）；通行法律知识，非考纲内容"
+  },
+  {
+   "topicEn": "Privacy statutes: PIPEDA is not the operative law inside BC",
+   "topicZh": "隐私立法：在 BC 境内，实际适用的不是 PIPEDA",
+   "bookEn": "The textbook names PIPEDA and 'its provincial equivalents' as the confidentiality framework.",
+   "bookZh": "教材把 PIPEDA 及『各省对应法规』并称为保密框架。",
+   "bcEn": "BC is one of the provinces with private-sector privacy legislation deemed substantially similar to PIPEDA — its Personal Information Protection Act (PIPA) governs private organizations, while public bodies (including the provincial ambulance service) fall under BC's Freedom of Information and Protection of Privacy Act (FIPPA). The duty of confidentiality is identical in spirit; only the statute names change.",
+   "bcZh": "BC 属于拥有『与 PIPEDA 实质相似』的私营部门隐私立法的省份——私营机构适用其《个人信息保护法》（PIPA），公共机构（包括省救护服务）则适用《信息自由与隐私保护法》（FIPPA）。保密义务的精神完全一致，变的只是法律的名字。",
+   "ref": "通行法律知识，非考纲内容"
+  }
+ ],
+ "sourcePages": "219-275"
+}

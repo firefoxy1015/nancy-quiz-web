@@ -1,0 +1,622 @@
+{
+ "id": "ch18",
+ "n": 18,
+ "titleEn": "Clinical Decisions",
+ "titleZh": "临床决策",
+ "group": "assessment",
+ "examWeight": 2,
+ "whyEn": "This is the chapter about how a paramedic thinks, and the exam treats its vocabulary as testable anatomy: the four cornerstones of practice, why protocols and standing orders fail exactly when patients stop being textbook-classic, the spectrum from critical life threat to non-life-threatening presentations, and — most bankable of all — the named components and the six R's of critical thinking, in order. Written questions quote these lists nearly verbatim; scenario questions hide them inside a patient whose dispatch information turns out to be wrong. Learn the skeleton here and half the 'what should the paramedic do next' stems across the whole exam become pattern-matching exercises.",
+ "whyZh": "这一章讲的是救护员的脑子怎么运转，而考试把它的词汇表当成解剖结构来考：执业四大基石、protocol 和 standing order 为什么恰恰在患者『不像教科书』的时候失灵、从危及生命到不危及生命的病情谱系，以及最值钱的——批判性思维的命名组件和六个 R，连名字带顺序。笔试几乎原样引用这些清单；情景题则把它们藏在一个『调度信息其实是错的』的患者身上。把这副骨架学下来，全卷一半的『救护员下一步该做什么』题都会变成模式匹配练习。",
+ "competencies": {
+  "areas": [
+   "Area 1: Professional Responsibilities",
+   "Area 2: Communication",
+   "Area 6: Integration"
+  ],
+  "codes": [
+   "1.6.a",
+   "1.6.b",
+   "1.6.c",
+   "2.3.a",
+   "2.3.b",
+   "2.3.c",
+   "2.3.d",
+   "2.4.a",
+   "2.4.b",
+   "2.4.d",
+   "2.4.f",
+   "6.1.a",
+   "6.1.b",
+   "6.1.c",
+   "6.1.d",
+   "6.1.e",
+   "6.1.f",
+   "6.1.g",
+   "6.1.h",
+   "6.1.i",
+   "6.1.j",
+   "6.1.k",
+   "6.1.l",
+   "6.1.m",
+   "6.1.n",
+   "6.1.o",
+   "6.1.p",
+   "6.2.b",
+   "6.2.c",
+   "6.2.d",
+   "6.2.e",
+   "6.3.a",
+   "6.3.b"
+  ]
+ },
+ "sections": [
+  {
+   "titleEn": "The Job in One Sentence — and Why 'Cookbook Medicine' Needs a Thinking Cook",
+   "titleZh": "一句话说清这份工作——以及『菜谱医学』为什么需要会思考的厨师",
+   "points": [
+    {
+     "en": "The paramedic's day-to-day work reduces to four steps in fixed order: identify problems, set patient care priorities, develop a prehospital care plan, and execute that plan. The book concedes this sounds like cookbook medicine — and then insists the cook must think, because real patients rarely present the way the textbook describes them.",
+     "zh": "救护员的日常工作可以压缩成固定顺序的四步：识别问题、确定救治优先级、制定院前救治计划、执行计划。原书承认这听着像『菜谱医学』——但紧接着强调掌勺的必须会思考，因为真实患者极少按教科书的写法出场。",
+     "hard": true
+    },
+    {
+     "en": "The second complication is the setting itself: the prehospital environment is constantly changing, which can affect the stability of any scene. You are expected to work inside that flux, react to changing circumstances, and still deliver quality care — decision making in chaos is a learnable skill, and this chapter is its manual.",
+     "zh": "第二重复杂性来自环境本身：院前环境时刻在变，任何现场的稳定性都可能被改变。你被要求在这种流动中工作、对变化做出反应、同时保证救治质量——在混乱中做决策是一项可以学会的技能，这一章就是它的手册。",
+     "hard": true
+    },
+    {
+     "en": "The chapter's own map, worth knowing because exam stems follow it: part one explains critical thinking — the science of thinking; part two applies it in the streets, built on cornerstone processes and terms you are expected to name.",
+     "zh": "这章自带的地图值得记住，因为题干就按它出：第一部分讲批判性思维——思考的科学；第二部分讲怎么把它用到街头，靠的是一组你必须能点名的基石流程与术语。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "Cornerstone 1: Gather, Evaluate, Synthesize",
+   "titleZh": "基石一：收集、评估、综合",
+   "points": [
+    {
+     "en": "The first cornerstone of effective practice is gathering, evaluating and synthesizing information. Gathering is obstructed from every side: patients differ in age, education and ability to communicate; most do not know which details matter to you; alcohol or drugs blunt their answers; the illness or injury itself can garble the story. Meanwhile your partner and team may be harvesting clues from bystanders — which is why every team member must be comfortable sharing ideas.",
+     "zh": "有效执业的第一块基石是信息的收集、评估与综合。收集这一步四面受阻：患者的年龄、教育程度、表达能力各不相同；大多数人不知道哪些细节对你有用；酒精或药物会钝化他们的回答；疾病或损伤本身也会把叙述搅乱。与此同时，搭档和团队可能正从旁观者那里挖到线索——所以团队每个成员都必须能自在地交换想法。",
+     "hard": true
+    },
+    {
+     "en": "Evaluation means checking the validity of what you gathered, and the book's test case is a patient with a minor sprained ankle who immediately asks for morphine. Three live possibilities: an illicit drug user; a health care professional or medically knowledgeable person with low pain tolerance; or a wrong presumptive diagnosis hiding a fracture or an infected joint that genuinely hurts that much — which makes reassessment the correct move, not judgment.",
+     "zh": "评估指的是核验所得信息的有效性，原书的试金石是：一个踝关节轻度扭伤的患者张口就要吗啡。三种可能同时成立：他是药物滥用者；他是医护人员或懂医的人、痛阈本来就低；或者『扭伤』这个推定诊断根本是错的，底下藏着真有那么痛的骨折或感染性关节——所以正确动作是重新评估，而不是下判断。",
+     "hard": true
+    },
+    {
+     "en": "The At the Scene ethic attached to that case: professional ethics demand you consider all the possibilities when communicating with a patient. You must not judge — your task is to figure out what the patient needs.",
+     "zh": "附在这个案例上的 At the Scene 伦理：职业伦理要求你在与患者沟通时把所有可能性都摆上桌。你不许下道德判断——你的任务只有一个：搞清楚患者需要什么。",
+     "hard": true
+    },
+    {
+     "en": "Synthesis is defined by demonstration: a 64-year-old with new chest pain, type 1 diabetes since childhood, smoking since high school, COPD since his 50s. Diabetes is a metabolic dysfunction that includes a circulation disorder and erodes every organ over years; COPD is a disease of gas exchange ending in some mix of hypoxia and hypercarbia; new chest pain raises coronary occlusion with heart muscle beginning to necrose. Synthesized: a patient with diseases of both circulation and gas exchange whose heart may be dying for lack of oxygenated blood — treat the combined effect, not three separate facts.",
+     "zh": "综合（synthesis）是用演示来定义的：64 岁男性，新发胸痛，儿时起的 1 型糖尿病，高中开始吸烟，五十多岁起的 COPD。糖尿病是含循环障碍的代谢紊乱，常年侵蚀每个器官；COPD 是气体交换的疾病，终点是低氧与高碳酸的某种组合；新发胸痛则指向冠脉阻塞、心肌开始坏死。综合起来读：一个循环和气体交换双双有病的患者，心脏可能正因得不到含氧血而坏死——要治的是叠加效应，不是三条孤立的病史。",
+     "hard": true
+    },
+    {
+     "en": "The one-line definition to memorize: synthesis is taking the patient's conditions and assessing their potential for life-threatening impact.",
+     "zh": "要背的一句话定义：综合＝把患者的各项状况放在一起，评估它们威胁生命的潜力。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cornerstone 2: The Care Plan — and the Exact Place Protocols Stop Working",
+   "titleZh": "基石二：救治计划——以及 protocol 恰好失灵的位置",
+   "points": [
+    {
+     "en": "Cornerstone two is developing and implementing a patient care plan. Once the chief complaint and an initial diagnosis identify the primary problem, the plan is almost always defined by the protocols or standing orders of your system: they set the essential standard of care for given injuries, illnesses and behavioural conditions, and they specify your performance parameters — what you may or may not do without direct medical control, and when you must contact medical control before acting.",
+     "zh": "基石二是制定并执行患者救治计划。一旦主诉和初步诊断锁定了主要问题，计划几乎总是由你所在系统的 protocol 或 standing order 来定义：它们为特定的伤、病、行为状况设定基本救治标准，并划出你的执业参数——不经直接医疗指导你能做什么、不能做什么，以及哪些操作必须先联系医疗指导。",
+     "hard": true
+    },
+    {
+     "en": "Their collective purpose: protocols and standing orders promote a standard approach and a standard of quality care as defined by regional, provincial or national standards — consistency is the product.",
+     "zh": "它们的集体使命：protocol 与 standing order 按地区、省或国家标准，推动『统一的处置路径』和『统一的质量标准』——它们的产品就是一致性。",
+     "hard": true
+    },
+    {
+     "en": "Now the failure boundary, the most examinable sentence in the section: protocols, standing orders and care algorithms address only classic presentations. They frequently do not cover vague symptoms that fit no neat clinical description, patients with multiple disease etiologies, or patients needing multiple treatment modalities. At that boundary your next step is defined not by the book but by the patient's best interest.",
+     "zh": "然后是失效边界——本节最可考的一句：protocol、standing order 和救治算法只覆盖经典表现。它们常常管不了『对不上任何清晰临床描述』的模糊症状、多病因并存的患者、需要多种治疗手段并用的患者。到了这条边界，你的下一步不再由文件定义，而由患者的最大利益定义。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Cornerstones 3 and 4: Independent Judgment, and Thinking Under Pressure",
+   "titleZh": "基石三与四：独立判断，与高压下的思考",
+   "points": [
+    {
+     "en": "Cornerstone three — judgment and independent decision making — is taught by arithmetic: a machinist with a gash over the femoral artery, blood gushing with every heartbeat. Radioing a base-station doctor, identifying yourself, presenting the problem and waiting for directions takes longer than the patient has; even under the best circumstances he dies before the process completes. So you recognize the severed artery as an immediate life threat and act — continuous direct pressure, possibly with a tourniquet.",
+     "zh": "基石三——判断与独立决策——是用一道算术题教的：机械工大腿上部撕裂伤正对股动脉，血随每次心跳喷出。呼叫基地医院、报单位报身份、汇报病情、等指示，这套流程的耗时比患者剩下的时间长；哪怕一切顺利，人也会在流程走完之前死掉。所以你把断裂的动脉认定为即刻生命威胁并直接行动——持续直接压迫，必要时加止血带。",
+     "hard": true
+    },
+    {
+     "en": "The same cornerstone, taught by geography: a cardiac arrest on a front porch blocks from the hospital gets CPR, a shock, airway, oxygen, load and go. The identical patient in a third-storey attic with a narrow, hard-to-access stairway cannot be moved quickly — so you manage her to an end point on scene: either call off the resuscitation or stabilize before packaging. As circumstances change, so may the care plan — but only if your critical thinking is actually running.",
+     "zh": "同一块基石，再用地理课教一遍：离医院几个街区的门廊上的心搏骤停，做 CPR、除颤、开气道、给氧、装车就走。同一位患者换到三楼阁楼、楼梯狭窄难以进出，就没法快速搬运——那就在现场把她管理到一个终点：要么终止复苏，要么先稳定再打包。环境一变，计划就得跟着变——前提是你的批判性思维真的在运转。",
+     "hard": true
+    },
+    {
+     "en": "The documentation footnote with legal weight: record the difficulties you worked around — darkness, limited access, unruly crowds — because they are what later explain your prehospital care decisions.",
+     "zh": "带法律分量的文书脚注：把你绕过的困难写进记录——黑暗、通道受限、失控的人群——因为日后能解释你各项救治决定的，正是这些。",
+     "hard": true
+    },
+    {
+     "en": "Cornerstone four is thinking and working under pressure, cast as a doorbell scene: a hysterical mother hands you the cyanotic, apneic 2-year-old she just pulled from the bathtub. The thought must arrive instantly — get this child breathing now or face a full cardiac arrest and shrinking odds of survival. Averting that disaster takes the pairing the book names explicitly: excellent knowledge plus excellent psychomotor clinical skills, performed quickly and effectively under extreme pressure.",
+     "zh": "基石四是高压下的思考与工作，场景是一声门铃：歇斯底里的母亲把刚从浴缸底捞起来的两岁孩子塞到你手里——发绀、无呼吸。念头必须瞬间到位：现在就让孩子恢复呼吸，否则就是完全的心搏骤停，生还概率一路缩水。避免这场灾难靠的是原书点名的组合：过硬的知识＋过硬的精神运动临床技能，并且要在极端压力下又快又有效地使出来。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Sick or Not Sick: The Range of Patient Conditions",
+   "titleZh": "病重还是不重：患者病情的谱系",
+   "points": [
+    {
+     "en": "'Sick' means something different across the stretcher: to the patient it can be a bad cold; to an emergency provider it asks exactly two questions — does this patient have an acute life-threatening process, and is this patient unstable? Quantifying how sick then drives what care happens on scene versus in the back of the ambulance en route.",
+     "zh": "『病得重』这个词在担架两头意思不同：患者嘴里可能只是重感冒；在急救人员这里它只问两个问题——这名患者有没有急性的危及生命的病程？他稳不稳定？再把『有多重』量化出来，就决定了哪些救治在现场做、哪些留到救护车后舱途中做。",
+     "hard": true
+    },
+    {
+     "en": "Experienced paramedics, nurses and physicians can split sick from not sick within seconds of looking at the patient. The training method the book prescribes: make the determination consciously on every single patient until, over time, it becomes an immediate, unconscious, reflexive call.",
+     "zh": "有经验的救护员、护士和医生看患者一眼、几秒之内就能分出重不重。原书开出的训练处方：对你见到的每一名患者都有意识地做一次这个判定，日积月累，它就会变成即时的、无意识的、反射式的判断。",
+     "hard": true
+    },
+    {
+     "en": "The pediatric corollary from the Special Considerations box: the way to recognize sick infants and small children is to know how not-sick children behave at each age. Building that library takes deliberate effort — assess children at every opportunity, take every pediatric continuing-education course, read every article you can.",
+     "zh": "特殊考量框给出的儿科推论：认出『病重』婴幼儿的办法，是先知道各年龄段『不重』的孩子什么样。攒这座样本库要下笨功夫——逮住每个机会评估儿童、上每一门儿科继续教育课、能读的文献都读。",
+     "hard": true
+    },
+    {
+     "en": "Clear thinking in chaos starts with a triage model of four groups: critical patients need immediate prehospital care to survive; serious patients need care within the next few minutes to possibly the next half-hour — or they become critical; the remaining two groups are the mortally wounded or dead, and the walking wounded or minimally injured.",
+     "zh": "混乱中的清晰思考从一个四组检伤模型开始：危重患者需要立刻的院前救治才能活下来；严重患者需要在接下来几分钟到最多半小时内得到处置——否则就滑进危重组；剩下两组是濒死/已死者，和所谓『能走动的伤员』（轻伤员）。",
+     "hard": true
+    },
+    {
+     "en": "The critical-life-threat roster, worth reciting: major multisystem trauma; devastating single-system trauma; airway compromise or an unsecured airway; severe hemodynamic instability from blood loss, sepsis or arrhythmia; severe burns including facial or airway burns and inhalation injury; and acute presentations of chronic conditions.",
+     "zh": "危重名单，值得背诵：重大多系统创伤；毁灭性的单系统创伤；气道受累或未确保的气道；失血、脓毒症或心律失常导致的严重血流动力学不稳定；重度烧伤（含面部/气道烧伤和吸入性损伤）；以及慢性病的急性发作。",
+     "hard": true
+    },
+    {
+     "en": "The 'serious' tier is defined by trajectories, not snapshots: multisystem trauma with relatively stable vitals; pneumonia or COPD exacerbation showing early fatigue — which progresses to respiratory failure if not corrected; altered mental status from mild hypoglycemia — which progresses to coma and seizure if not corrected; significant burn injury. The parenthetical 'will progress if not corrected' is the whole point of the category.",
+     "zh": "『严重』这一档是用走势而非快照定义的：生命体征相对平稳的多系统创伤；已露疲态的肺炎或 COPD 加重——不纠正就滑向呼吸衰竭；轻度低血糖导致的意识改变——不纠正就滑向昏迷和抽搐；面积可观的烧伤。括号里那句『不纠正就会进展』正是这一档存在的意义。",
+     "hard": true
+    },
+    {
+     "en": "The minimal tier: small lacerations with minimal bleeding and normal vital signs; minor or long-standing complaints with no new changes and normal vitals; partial-thickness burns of an extremity covering less than 5% of body surface area.",
+     "zh": "轻伤档：出血很少、生命体征正常的小裂伤；轻微或长期存在、没有新变化且生命体征正常的主诉；肢体部分皮层烧伤且面积小于体表面积的 5%。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "Critical Thinking, Stage by Stage: The Five-Step Model",
+   "titleZh": "批判性思维五阶段：逐级拆解",
+   "points": [
+    {
+     "en": "The chapter demands command of the vocabulary psychologists and philosophers use for thinking, and it names five stages in a fixed sequence: concept formation, data interpretation, application of principle, reflection in action, and reflection on action. This ordered list is the single most bankable skeleton in the chapter — know the names and the order.",
+     "zh": "本章要求你掌握心理学家和哲学家描述思考过程的那套词汇，并按固定顺序点出五个阶段：概念形成、数据解读、原则应用、行动中反思、行动后反思。这份带顺序的清单是全章最值钱的骨架——名字和先后都要记死。",
+     "hard": true
+    },
+    {
+     "en": "Stage one, concept formation: gathering what you see, hear, smell and feel. Its inputs: the initial assessment, the general impression including the patient's affect, the vital signs, and readings from diagnostic tools. It begins the moment you arrive — scene safety for team and patient, mechanism of injury for trauma or nature of illness for medical calls, how the patient presents, and level of consciousness, which serves double duty: it decides whether the patient is a reliable informant and it sets the baseline every later change is measured against.",
+     "zh": "第一阶段·概念形成：收集你看到、听到、闻到、摸到的一切。它的输入包括：初步评估、含患者情感状态在内的总体印象、生命体征、各种诊断工具的读数。它从你到场那一刻就开始——先从团队和患者的安全角度评估现场，创伤看受伤机制、内科看现病性质，患者是什么样的呈现，再评估意识水平——意识水平一肩挑两职：判断患者是不是可靠的信息来源，并立下之后一切变化对照的基线。",
+     "hard": true
+    },
+    {
+     "en": "Affect, defined and weaponized: the emotional state reflected in physical behaviour. The test is the match — story and affect should agree. The book's example: a patient showing the manic behaviour of amphetamine abuse who denies all drug use, with paraphernalia in view. When story and affect do not reasonably match, the mandatory next thought is: why not?",
+     "zh": "情感状态（affect）的定义与用法：由外在行为反映出来的情绪状态。检验方法是『对表』——叙述和情感状态应该吻合。原书例子：一名患者满身安非他明滥用式的躁狂举动，却矢口否认用药，而吸毒用具就摆在眼前。当叙述与情感状态对不上时，强制的下一个念头是：为什么对不上？",
+     "hard": true
+    },
+    {
+     "en": "The primary diagnostic toolkit, listed for recall: glucometer, pulse oximeter, capnometer, cardiac monitor, blood pressure cuff, and stethoscope.",
+     "zh": "初级诊断工具箱，按清单记：血糖仪、脉搏血氧仪、二氧化碳监测仪、心电监护仪、血压计袖带、听诊器。",
+     "hard": true
+    },
+    {
+     "en": "Stage two, data interpretation, runs on three fuels: a good grounding in anatomy, physiology and pathophysiology; your accumulated experience; and — the part the exam moralizes about — your attitude. No call is a waste of your time or talent; a comment like disbelief that someone called for 'this' betrays missing compassion; and a negative attitude toward any patient almost guarantees the care will be suboptimal. Best care for every patient. Period.",
+     "zh": "第二阶段·数据解读，烧三种燃料：扎实的解剖、生理与病理生理功底；积累的经验；还有考试爱上纲上线的那一项——你的态度。没有哪次出勤是浪费你的时间或才华；那句『就这点事也叫救护车』暴露的是同情心的缺失；对任何患者抱负面态度，几乎注定救治质量打折。给每一位患者最好的救治，没有下文。",
+     "hard": true
+    },
+    {
+     "en": "Stage three, application of principle: you form the initial diagnosis — explicitly 'tentative' or 'preliminary' — as the root problem your care will target, while the other possibilities parked in the back of your mind constitute the differential diagnosis. The care plan itself is driven by protocols, standing orders and guidelines, which double as the fence line: what you may do freely, and what requires orders from direct medical control.",
+     "zh": "第三阶段·原则应用：你形成初步诊断——原书特意注明是『暂定的』『初步的』——它是你救治要瞄准的根本问题；而停在脑海后排的其他可能性，合起来就是鉴别诊断。救治计划本身由 protocol、standing order 和指南驱动，它们同时也是围栏：哪些你可以自行做，哪些必须先取得直接医疗指导的医嘱。",
+     "hard": true
+    },
+    {
+     "en": "Stage four, reflection in action — thinking while doing. The model scene: dyspnea, nonrebreathing mask at 15 L/min, and a few minutes later the question 'is it getting easier to breathe?' That question is reassessment, and it is what too many paramedics skip while stacking intervention on intervention. Reassessment also audits your preliminary diagnosis: an unexpected response to treatment is your cue to reconsider it and give the differential list a harder look.",
+     "zh": "第四阶段·行动中反思——边做边想。样板场景：呼吸困难，非重复呼吸面罩 15 L/min，几分钟后问一句『呼吸有没有轻松点？』这一问就是再评估，也是太多救护员一个操作叠一个操作时漏掉的东西。再评估同时在审计你的初步诊断：治疗反应不符合预期，就是重新考虑诊断、把鉴别清单再过一遍的信号。",
+     "hard": true
+    },
+    {
+     "en": "The rock-mover case shows stage four changing a plan mid-call: a 58-year-old gets chest pain moving landscaping rocks — right age group for a first cardiac event, pain located directly over the heart. Then the killer detail: holding his left arm still makes the pain vanish, and movement makes it severe. Heart-attack pain is not usually relieved by keeping an arm still, so a musculoskeletal cause climbs the differential — you may treat for musculoskeletal pain instead of giving aspirin, nitroglycerin and high-flow oxygen — and if the picture shifts again with further questions or examination, the plan shifts again.",
+     "zh": "搬石头案例演示第四阶段如何在出勤中途改写计划：58 岁男性搬造景石时胸痛——年龄正好在首发心脏事件的高危段，痛点还正对心脏。接着出现关键细节：左臂保持不动疼痛就消失，一动就剧痛。心梗的疼痛通常不会因为固定一条手臂就缓解，于是肌肉骨骼性病因在鉴别清单上蹿升——你可以改按肌肉骨骼疼痛处理，而不是给阿司匹林、硝酸甘油和高流量氧——如果继续问诊或查体让图景再变，计划就再改。",
+     "hard": true
+    },
+    {
+     "en": "Stage five, reflection on action, happens after the call — the territory of call review and critique. Its hardest skill is pronouncing the words 'I was wrong' or 'I made a mistake'; no provider is exempt from error. It is also where atypical presentations get filed: a neck fracture with no pain exists, because pain — though the single best predictor of possible spine injury — is not absolute 100% of the time, and some patients come from cultures that deny having pain.",
+     "zh": "第五阶段·行动后反思，发生在出勤结束之后——复盘和讲评的领地。它最难的技能是把『我错了』『我犯了个错误』说出口；没有哪个医疗人员能免于犯错。它也是归档非典型表现的地方：不痛的颈椎骨折真实存在——疼痛虽是脊柱损伤唯一最佳的预测指标，却不是百分之百绝对；而且有的患者来自否认疼痛的文化。",
+     "hard": true
+    },
+    {
+     "en": "The growth clauses attached to stage five: treat a continuous quality improvement audit as an outside reviewer helping you grow, not an ambush; growth is impossible if you cannot admit mistakes or refuse to learn; finishing the paramedic class is merely the starting point of the career; and the most important trait for a lifetime in this work is a true desire to become better and better.",
+     "zh": "挂在第五阶段上的成长条款：把持续质量改进（CQI）审核当成外部评审员帮你成长，而不是伏击；不肯认错、不愿学习，成长就无从谈起；读完 paramedic 课程只是职业生涯的起点；而支撑终身职业最重要的特质，是真心想变得越来越好。",
+     "hard": false
+    }
+   ]
+  },
+  {
+   "titleEn": "The Nine Abilities of a Critical Thinker",
+   "titleZh": "批判性思考者的九项能力",
+   "points": [
+    {
+     "en": "The chapter closes its theory half with a nine-item self-audit — read each and ask 'do I have this yet?': an adequate fund of knowledge in anatomy and pathophysiology; gathering and organizing data and forming concepts; focusing on specific and multiple elements of data; identifying and dealing with medical ambiguity; differentiating relevant from irrelevant data; analyzing and comparing similar situations; analyzing and comparing contrary situations; constructing arguments and articulating your reasoning; and beginning to act when needed while still gathering information.",
+     "zh": "理论篇收尾是一张九条自查表——逐条问自己『这条我有了吗』：足够的解剖与病理生理知识储备；收集、组织数据并形成概念；能同时聚焦单项与多项数据要素；识别并处理医学模糊性；区分相关与无关数据；分析比较相似情境；分析比较相反情境；构建论证并清楚说出自己的推理；以及在信息还没收集完时就能按需开始行动。",
+     "hard": true
+    },
+    {
+     "en": "Two items deserve close-ups. Medical ambiguity is defined in the list itself: uncertainty regarding the specific cause of the patient's condition — and the book adds that few calls will follow the scripts in your protocols. And the final ability — acting while still gathering information — is the formal permission slip for prehospital work: waiting for complete data is a luxury the field rarely grants.",
+     "zh": "有两条值得特写。『医学模糊性』在清单里自带定义：对患者状况具体病因的不确定——原书还补了一句，很少有出勤会照着 protocol 的剧本走。而最后一条——边收集信息边开始行动——是院前工作的正式许可证：等数据齐了再动手，是现场极少赏赐的奢侈。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "From Theory to the Street: Variables, the Midpoint Trap, Fight-or-Flight, CRM",
+   "titleZh": "从理论到街头：变量、中段陷阱、应激反应与 CRM",
+   "points": [
+    {
+     "en": "Every call is unique because variables multiply: the book's demonstration is a single car with four passengers spun into a ditch — now add that nobody wore a seat belt, that the car was doing 100 km/h, that it landed on its roof, that it is −10°C and the crash sat undiscovered for at least an hour. Each added variable spawns dozens of possible new outcomes, and the management challenge scales with them.",
+     "zh": "每次出勤都独一无二，因为变量会相乘：原书的演示是一辆载四人的轿车甩进沟里——现在往上叠加：没人系安全带、车速 100 km/h、车翻过来顶朝下、室外 −10°C 且事故至少一小时后才被发现。每加一个变量就衍生出几十种新的可能结局，管理难度随之翻倍。",
+     "hard": true
+    },
+    {
+     "en": "Perspective clause: few day-to-day calls are true life-threatening emergencies. That makes them less challenging to your medical expertise — never less important. Every call, however trivial it looks to you, matters to the patient and can teach everyone involved.",
+     "zh": "视角条款：日常出勤里真正危及生命的紧急事件很少。这只说明它们对你医学功力的挑战小——绝不说明它们不重要。任何一次出勤，在你眼里再琐碎，对患者都是大事，对所有参与者都可能是一课。",
+     "hard": true
+    },
+    {
+     "en": "The midpoint doctrine, a favourite exam stem: minor medical and traumatic events pose limited challenge — decision making is relatively easy. Patients with obvious life threats also pose limited critical-thinking challenge — the decisions are simple. The patients who most tax a paramedic's critical thinking sit at the midpoint of the spectrum, between 'no big deal' and 'oh my gosh.'",
+     "zh": "中段信条，出题人的心头好：轻微的内科或创伤事件挑战有限——决策相对容易。有明显生命威胁的患者对批判性思维的挑战同样有限——决策很简单。真正最消耗救护员批判性思维的，是坐在谱系正中段的患者——介于『没什么大不了』和『天哪不好了』之间。",
+     "hard": true
+    },
+    {
+     "en": "Behind the uniform you are a person, and extreme calls trigger your own fight-or-flight response (sensory overload). The hormonal surge cuts both ways — credits: enhanced visual and auditory acuity, improved reflexes and muscle strength; debits: impaired critical thinking, diminished concentration and assessment ability. Both columns are exam-quotable.",
+     "zh": "制服底下你也是普通人，极端出勤会触发你自己的『战或逃』反应（感官过载）。激素浪潮是把双刃剑——进账：视觉与听觉敏锐度提升、反射与肌力增强；出账：批判性思维受损、专注力和评估能力下降。两栏都可能被原样搬进考题。",
+     "hard": true
+    },
+    {
+     "en": "The antidote the book prescribes is mental conditioning: drill your skills in the lab until they run almost instinctively, on command, nearly flawlessly. Only skills automated to that level stay available under real-world stress — freeing your conscious mind for assessment and decision making.",
+     "zh": "原书开出的解药叫心理调训：在技能实验室里把操作练到几乎出于本能、随叫随到、近乎零瑕疵。只有自动化到这个程度的技能，才能在真实压力下依然可用——把你的意识腾出来，专心做评估和决策。",
+     "hard": true
+    },
+    {
+     "en": "Crew resource management (CRM), imported from aviation where it was built to mitigate the human factors behind plane crashes: no plan prevents all error, so every team member actively watches the others for impending error or confusion, and no one on scene may be blocked from asking for clarification or pointing out an inconsistency. The recognized error sources: communication failures, workload, external factors — weather, crowds, noise — and fatigue.",
+     "zh": "机组资源管理（CRM），从航空业引进——那里发明它就是为了压制导致坠机的人为因素：没有任何方案能杜绝一切差错，所以团队每个成员都要主动盯着其他人有没有临近出错或陷入混乱，而且现场任何人都不得被禁止要求澄清或指出矛盾。公认的差错来源：沟通失误、工作负荷、外部因素——天气、人群、噪音——以及疲劳。",
+     "hard": true
+    },
+    {
+     "en": "The six-step mental checklist for thinking under pressure, memorized in order: 1) pause to scan the whole scene — situational awareness comes first; 2) a second pause: stop, then think; 3) decide and act in the patient's interest; 4) keep calm, keeping mental control clear and concise; 5) build regular, continuous reevaluation of the patient into the plan; 6) operate as a team — clear communication, mutual support.",
+     "zh": "高压下思考的六步心理清单，按顺序背：1）花一瞬间扫描全局、保持情境意识；2）再花一瞬间停下来想；3）为患者做出决定并行动；4）保持冷静，维持清晰简洁的心智控制；5）计划性地、持续不断地重新评估患者；6）以团队方式工作，保证沟通顺畅、相互支援。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Six Rs, Part 1: Read the Scene, Read the Patient",
+   "titleZh": "六个R·上：读现场、读患者",
+   "points": [
+    {
+     "en": "Street-level critical thinking compresses into the Six Rs: Read the scene, Read the patient, React, Reevaluate, Revise the plan, Review your performance. Like the five stages, this list is tested by name and by order.",
+     "zh": "街头版的批判性思维压缩成六个R：读现场（Read the scene）、读患者（Read the patient）、反应（React）、再评估（Reevaluate）、修订计划（Revise）、复盘表现（Review）。和五阶段一样，这张清单连名带序都会被考。",
+     "hard": true
+    },
+    {
+     "en": "R1, read the scene — a goldmine with an expiry date: the information exists only at the scene and becomes unavailable the moment transport begins. Mine it for overall safety, environmental conditions, the immediate surroundings, access and exit issues, and the mechanism of injury. MVC version: length of skid marks (or their absence), what the vehicle struck, passenger-compartment intrusion, seat-belt use. Unconscious-elder-at-home version: neatness or disarray, presence or absence of multiple pill bottles, and exactly where the patient was found — bed or floor.",
+     "zh": "R1·读现场——一座带保质期的金矿：这些信息只存在于现场，转运一启动就永远拿不到了。要挖的是：整体安全、环境条件、近旁物件、进出通道问题、受伤机制。车祸版：刹车痕的长度（或压根没有）、车撞了什么、驾乘舱被挤入多少、系没系安全带。独居老人昏迷版：屋里是整洁还是狼藉、有没有成堆的药瓶、患者被发现时的确切位置——床上还是地板上。",
+     "hard": true
+    },
+    {
+     "en": "The Notes from Nancy verdict on scene safety, quotable in spirit: a paramedic who rockets out of the ambulance without looking around is likely to join the casualty list — an injured paramedic adds a victim, diverts the remaining rescuers, and dilutes everyone else's care. Dead heroes cannot save lives; injured heroes are a nuisance. Check for hazards before you begin.",
+     "zh": "Notes from Nancy 对现场安全的裁决：不看四周就从救护车里弹出去的救护员，很可能自己名列伤员——受伤的救护员凭空多添一名受害者、分走剩余救援者的人手、稀释其他所有患者的救治。死掉的英雄救不了人；受伤的英雄是累赘。动手之前，先查隐患。",
+     "hard": true
+    },
+    {
+     "en": "R2 opens with the handshake trick: as you approach, note whether the patient sees and tracks you with the eyes; introduce yourself and offer a hand (if infection control permits); ask who called 9-1-1 and why. A patient who takes your hand and answers appropriately has just demonstrated a Glasgow Coma Scale of 15 — spontaneous eye opening, follows commands, appropriate verbal response — before you touched any equipment.",
+     "zh": "R2 以握手戏法开场：走近时观察患者是否看见你、目光是否追着你移动；自我介绍并伸出手（感染控制允许的话）；问是谁打的 9-1-1、为什么打。患者握住你的手并恰当作答，就当场演示了格拉斯哥昏迷评分 15 分——自发睁眼、遵嘱动作、言语应答恰当——而你还没碰任何仪器。",
+     "hard": true
+    },
+    {
+     "en": "Reading the patient runs on five verbs plus one demand: observe (LOC, comfort or distress, skin colour, position, work of breathing, deformity or asymmetry); talk (chief complaint — new problem or a worsened preexisting one — plus histories); touch (skin temperature and moisture, pulse rate, regularity and strength); auscultate (lung sounds, adequacy of respirations, airway patency); identify life threats (correct airway, breathing and circulation threats in the order found).",
+     "zh": "读患者靠五个动词加一条硬要求：看——意识水平、舒适还是痛苦、肤色、体位、呼吸做功、畸形或不对称；谈——主诉（新发问题还是旧病加重）加各项病史；摸——皮温与湿度、脉搏的频率/节律/强度；听——肺音、呼吸是否充分、气道是否通畅；辨——识别生命威胁，按发现顺序纠正气道、呼吸、循环的问题。",
+     "hard": true
+    },
+    {
+     "en": "The vital-signs arithmetic: a baseline set is mandatory for every patient, transfer patients included. Serious problems earn two sets — comparison. Critical patients earn three or more — trend, direction, and if worsening, an estimate of how fast. Fold the measuring into timely movement toward the hospital: decide what must happen now and what can wait for the ride.",
+     "zh": "生命体征的算术：每一名患者——包括转院患者——必须有一组基线值。病情严重者量两组——有了对比。危重者量三组以上——能看趋势、辨方向，恶化时还能估算恶化的速度。把测量嵌进及时后送的节奏里：分清哪些必须现在做、哪些可以留到车上。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Six Rs, Part 2: React, Reevaluate, Revise, Review",
+   "titleZh": "六个R·下：反应、再评估、修订、复盘",
+   "points": [
+    {
+     "en": "R3, react, has a fixed priority order: first correct life threats in the order found; second, name the worst-case scenario behind the symptoms and rule it in or out; third, settle on the most common and probable cause. Chasing the worst case first is how you avoid catastrophes — the merely likely can wait its turn.",
+     "zh": "R3·反应，优先级顺序是死的：第一，按发现顺序纠正生命威胁；第二，点名症状背后的最坏情形，把它排除或坐实；第三，才去锁定最常见、最可能的病因。先追杀最坏情形是躲开灾难的方法——『大概率』可以排队等。",
+     "hard": true
+    },
+    {
+     "en": "When assessment ends without an initial diagnosis, treating the presenting signs and symptoms is explicitly acceptable: difficulty breathing gets high-flow oxygen and a position of comfort; the shock picture gets elevated feet, a cover for warmth, high-flow oxygen and an 18-gauge IV while the search for a cause continues. Given the prehospital environment's limited resources against the universe of diagnoses, you will regularly transport patients no one can diagnose before the hospital — sometimes the diagnosis eludes the doctor too. That is a reality of medicine, not a failure.",
+     "zh": "评估做完仍没有初步诊断时，按表现的体征和症状治疗是原书明说可以接受的：呼吸困难就给高流量氧加舒适体位；休克征象就抬高双脚、盖上保暖、高流量氧、开一条 18 号静脉通路，同时继续找病因。拿院前有限的物力和技术去对抗全宇宙的诊断可能，你会经常运送『到医院前谁也诊断不了』的患者——有时连医生也抓不住诊断。这是医学的现实，不是你的失败。",
+     "hard": true
+    },
+    {
+     "en": "The Controversies box plants three questions the profession still argues about — prophylactic treatments given without supporting evidence: must every trauma patient be fully immobilized on a backboard? Should every unconscious person get naloxone? Should every chest-pain patient get oxygen?",
+     "zh": "Controversies 框埋下三个行业仍在争论的问题——那些缺乏证据支持的预防性处置：每个创伤患者都必须上长板全脊柱固定吗？每个昏迷的人都该给纳洛酮吗？每个胸痛患者都该给氧吗？",
+     "hard": true
+    },
+    {
+     "en": "R4, reevaluate: follow up on every intervention — did the splint ease the leg pain, did the antidysrhythmic actually resolve the rhythm on the monitor? Treatment mode is a known trap: doing thing after thing while forgetting to check whether any of it is improving the patient.",
+     "zh": "R4·再评估：每一项干预都要回头验收——夹板上了，腿痛减了吗？抗心律失常药给了，监护仪上的心律真转回来了吗？『治疗模式』是个有名的陷阱：一件接一件地做，却忘了核实做的这些是否真在让患者变好。",
+     "hard": true
+    },
+    {
+     "en": "Reevaluation also merges the focused exam into the initial picture, and the book's example shows why: a small pneumothorax from a fractured rib is not an immediate life threat in a relatively healthy person — but stack it on bilateral femur fractures, significant blood loss and a minor head injury, and it becomes a complicating factor. In multi-pathophysiology patients, especially trauma, your job is making sure nothing fixable on scene gets overlooked.",
+     "zh": "再评估还要把细致查体的发现并进最初的图景，原书的例子说明了为什么：肋骨骨折造成的小气胸，在一个相对健康的人身上不算即刻生命威胁——但叠加到双侧股骨骨折、大量失血和轻度头部损伤上，它就成了搅局因素。面对多重病理生理并存的患者（尤其创伤），你的职责是确保现场能处理的问题一个都没被漏掉。",
+     "hard": true
+    },
+    {
+     "en": "R5, revise the plan: what looked like a head injury may reveal itself as glue sniffing — two very different causes. However sure you are of the initial diagnosis, part of the thought process stays open to alternatives, and as the call unfolds you stand ready to change direction. The book's phrase for the posture: staying mentally light on your feet — the working antidote to tunnel vision.",
+     "zh": "R5·修订计划：看着像头部外伤的，可能最终是吸胶毒——两种截然不同的病因。无论你对初步诊断多有把握，思维过程都要留一块给其他可能性；随着出勤展开，随时准备改道。原书给这个姿态起的名字：让头脑始终『脚步轻盈』——这是对隧道视野现成的解药。",
+     "hard": true
+    },
+    {
+     "en": "R6, review your performance — in a formal CQI meeting or just with your partner back at the station. Success feels good but teaches little; the real growth hides in errors, and extracting it means asking the three review questions: was it a system problem? did I misjudge the call? did we work well as a team? Future errors are only avoidable once you understand how and why this one happened.",
+     "zh": "R6·复盘表现——可以在正式的 CQI 会议上，也可以回站里和搭档聊。成功让人愉快，但教不了多少东西；真正的成长藏在差错里，而挖出它要问三个复盘问题：是系统的问题吗？是我误判了这次出勤吗？我们的团队协作到位吗？只有弄懂这次差错如何发生、为何发生，将来的差错才可能避免。",
+     "hard": true
+    }
+   ]
+  },
+  {
+   "titleEn": "The Case Debrief: Pearls Hidden in the Chapter's Q&A",
+   "titleZh": "案例复盘：藏在章末问答里的珍珠",
+   "points": [
+    {
+     "en": "When does patient assessment begin? Most say at dispatch — the book argues one step earlier: preplanning. Like fire departments inspecting buildings in their district, good paramedics know their primary service area, so a dispatch to a local orchard for difficulty breathing already raises anaphylaxis from a bee sting or pesticide inhalation before the wheels stop.",
+     "zh": "患者评估从什么时候开始？多数人说从接到调度开始——原书把起点再往前推一步：预先规划。就像消防部门会巡查辖区建筑一样，好的救护员熟悉自己的主责区域，所以一听到『果园里有人呼吸困难』的派遣，人还没到，蜂蜇过敏反应和农药吸入这两个念头就已经立起来了。",
+     "hard": true
+    },
+    {
+     "en": "Dispatch information: dispatchers gather and distill what callers say, calm them, instruct them, and send resources — but the product may or may not be accurate. Use it to see the big picture, anticipate extra resources, and assign crew roles en route. The bottom line as the book prints it: generate a list of possible causes, but be flexible — refrain from diagnosing off the dispatch ticket.",
+     "zh": "调度信息：调度员从报警人那里收集并提炼信息、安抚、给指导、派资源——但成品未必准确。拿它看全局、预判要不要加派资源、在途中分配你和搭档的角色。原书印出来的底线是：列一张可能病因清单，但保持灵活——别照着派遣单下诊断。",
+     "hard": true
+    },
+    {
+     "en": "Pertinent negatives, defined: findings you would expect in a suspected condition but do not find. Suspecting infection, you ask about productive cough, fever, chills; the patient denies all three — each denial is a pertinent negative nudging infection down the list. The geriatric asterisk: elderly patients do not always mount a fever, so its absence never rules infection out.",
+     "zh": "有意义的阴性（pertinent negatives）定义：在你怀疑的疾病里本该出现、实际却没找到的表现。怀疑感染，就问咳痰、发热、寒战；患者三样都否认——每一个否认都是一条有意义的阴性，把感染在清单上往下压。老年科的星号注释：老年患者不一定烧得起来，所以没有发热永远不能排除感染。",
+     "hard": true
+    },
+    {
+     "en": "The patient's opinion is data, not a diagnosis: patients self-diagnose and often just want reassurance that they need not go to hospital. Respect the feelings — but weigh them against your physical findings, and never let a patient talk you out of what the examination shows.",
+     "zh": "患者的意见是数据，不是诊断：患者会自我诊断，常常只想要一句『不用去医院』的安心话。尊重这份心情——但要拿它和你的体检发现对秤，绝不让患者把你劝离检查结果指向的方向。",
+     "hard": true
+    },
+    {
+     "en": "Sex differences in acute illness, with the historical reason attached: many early heart-attack studies enrolled only English-speaking men, so the 'classic chest pain' script is a biased sample. Chest pain is not required to suspect myocardial infarction — postmenopausal women may present with nothing but sudden generalized weakness, fatigue, dizziness, or shortness of breath. A thorough risk-factor history is what narrows the list.",
+     "zh": "急性疾病的性别差异，连历史原因一起记：早年许多心梗研究只招募说英语的男性，『典型胸痛』的剧本本身就是抽样偏倚的产物。怀疑心肌梗死并不需要胸痛这一条——绝经后女性的表现可能只有突发的全身乏力、疲倦、头晕或气短。能收窄清单的，是一份彻底的危险因素病史。",
+     "hard": true
+    },
+    {
+     "en": "The error post-mortem distilled into doctrine: good paramedics do err, and errors here can cost lives — so assess and reassess. Personal feelings must never harm care: being tired, hungry or distracted is not the patient's concern, and the patient's needs come first, second only to the safety of yourself and your crew. Avoiding the missed-MI error: keep a cause list on every call, stay suspicious for life threats, rule the worst case in or out, never get complacent — an early locked-in diagnosis makes you disregard the clues that would have corrected it.",
+     "zh": "差错尸检提炼成信条：好救护员也会犯错，而这行的差错可能以生命计价——所以要评估、再评估。个人情绪永远不许伤害救治：累了、饿了、分心了都不关患者的事；患者的需求排第一，只排在你和同事的安全之后。避开那次漏诊心梗的方法：每次出勤都备一张病因清单、对生命威胁保持怀疑、把最坏情形排除或坐实、绝不自满——过早锁死诊断，会让你对本可纠正它的线索视而不见。",
+     "hard": true
+    }
+   ]
+  }
+ ],
+ "hardNumbers": [
+  {
+   "itemEn": "Care window for 'serious' patients before they become critical",
+   "itemZh": "『严重』患者恶化为危重前的处置窗口",
+   "value": "几分钟至最多约半小时"
+  },
+  {
+   "itemEn": "Extremity partial-thickness burn counted as minimal / non-life-threatening",
+   "itemZh": "可归入轻伤档的肢体部分皮层烧伤面积",
+   "value": "<5% 体表面积"
+  },
+  {
+   "itemEn": "What the handshake test proves (takes your hand + answers appropriately)",
+   "itemZh": "握手测试证明的分值（握住你的手＋恰当作答）",
+   "value": "GCS 15（自发睁眼/遵嘱/言语恰当）"
+  },
+  {
+   "itemEn": "Vital-sign sets: every patient / serious / critical",
+   "itemZh": "生命体征组数：所有患者／严重／危重",
+   "value": "1 组基线／2 组／≥3 组"
+  },
+  {
+   "itemEn": "IV catheter for the undiagnosed shock picture",
+   "itemZh": "不明原因休克征象的静脉通路规格",
+   "value": "18 号（18-gauge）"
+  },
+  {
+   "itemEn": "Nonrebreathing mask flow in the reflection-in-action example",
+   "itemZh": "行动中反思示例里非重复呼吸面罩的氧流量",
+   "value": "15 L/min"
+  },
+  {
+   "itemEn": "Cornerstones of effective paramedic practice",
+   "itemZh": "有效执业的基石数",
+   "value": "4 块（收集综合/救治计划/独立判断/高压思考）"
+  },
+  {
+   "itemEn": "Stages of the critical thinking process",
+   "itemZh": "批判性思维过程的阶段数",
+   "value": "5 个（概念形成→数据解读→原则应用→行动中反思→行动后反思）"
+  },
+  {
+   "itemEn": "The Rs of street-level critical thinking",
+   "itemZh": "街头批判性思维的 R 数",
+   "value": "6 个（读现场/读患者/反应/再评估/修订/复盘）"
+  },
+  {
+   "itemEn": "Abilities on the critical-thinker checklist",
+   "itemZh": "批判性思考者能力清单的条目数",
+   "value": "9 项"
+  },
+  {
+   "itemEn": "Steps on the under-pressure mental checklist",
+   "itemZh": "高压下心理清单的步骤数",
+   "value": "6 步"
+  }
+ ],
+ "atScene": [
+  {
+   "en": "The nonjudgment rule, straight from the At the Scene box: consider every possibility when communicating with a patient, refuse to judge, and keep one question in the centre of the encounter — what does this patient need?",
+   "zh": "不评判法则，出自 At the Scene 框：与患者沟通时把每一种可能性都纳入考虑，拒绝下道德判断，把一个问题钉在接触的正中央——这位患者需要的是什么？"
+  },
+  {
+   "en": "Read the family like a second patient: do they look worried or nervous? Does dialing 9-1-1 seem routine to them? Are they huddled in a corner crying — or watching television while you assess? Stay alert for scenes that are not what they seem.",
+   "zh": "把家属当第二名患者来读：他们显得担忧、紧张吗？打 9-1-1 对他们来说是不是『家常便饭』？他们是缩在角落哭，还是在你评估时看电视？时刻警惕那些『不像表面那么回事』的现场。"
+  },
+  {
+   "en": "The chapter's bluntest warning, verbatim in spirit: tunnel vision — seeing little and missing a lot — is the demise of many paramedics. Keep the mind open to every possible cause, because the heart attack in front of you may present in a way no textbook printed.",
+   "zh": "全章最不客气的警告：隧道视野——看见得很少、漏掉得很多——是许多救护员栽跟头的死因。对每一种可能病因保持开放，因为你眼前的心梗，可能用一种任何教科书都没印过的方式登场。"
+  },
+  {
+   "en": "Documentation's second half, from the Documentation & Communication boxes: record not only the procedures done and medications given but what effect each had, if any — and record the obstacles (darkness, limited access, unruly crowds) that shaped your decisions.",
+   "zh": "文书的后半句，来自两处 Documentation & Communication 框：不仅要记做了什么操作、给了什么药，还要记每项处置产生了什么效果（哪怕没有效果）——同时记下塑造了你决策的障碍（黑暗、通道受限、失控人群）。"
+  },
+  {
+   "en": "Never be fooled by a patient who initially appears uninjured or healthy — and never hesitate to do a thorough evaluation, history, and physical examination. First appearances are a hypothesis, not a conclusion.",
+   "zh": "永远别被一开始『看着没伤、看着健康』的患者骗到——也永远别在完整评估、病史采集和体格检查面前犹豫。第一眼印象只是假设，不是结论。"
+  }
+ ],
+ "confusions": [
+  {
+   "en": "'Protocols cover my whole practice.' They cover classic presentations only — vague symptoms with no neat clinical label, multiple disease etiologies, and multi-modality treatment needs all fall outside them, and there the governing standard becomes the patient's best interest, exercised through your own judgment.",
+   "zh": "『protocol 罩得住我的全部执业』——它只罩经典表现。贴不上清晰临床标签的模糊症状、多病因并存、需要多种治疗手段的情形都在它之外；在那里，说了算的标准变成患者的最大利益，靠你自己的判断去落实。"
+  },
+  {
+   "en": "'The sickest patients demand the hardest thinking.' Backwards: obvious life threats make decisions simple, and minor complaints make them easy. The hardest critical thinking lives at the midpoint of the spectrum — the patient who is neither 'no big deal' nor obviously crashing.",
+   "zh": "『病最重的患者最考验思维』——正好说反。明显的生命威胁让决策变得简单，轻微主诉让决策变得容易。最难的批判性思维住在谱系正中段——那个既不是『没事』也没有明显垮掉的患者身上。"
+  },
+  {
+   "en": "Reflection in action versus reflection on action: the first happens during the call — thinking while doing, checking whether each intervention works; the second happens after the call — the review, the critique, the words 'I was wrong.' Swapping the two is a free mark lost.",
+   "zh": "行动中反思 vs 行动后反思：前者发生在出勤当中——边做边想、验收每项干预有没有起效；后者发生在出勤之后——复盘、讲评、那句『我错了』。把两者调换，等于白送一分。"
+  },
+  {
+   "en": "'No pain, no spine injury.' Pain is the single best predictor of possible spine injury — and still not absolute 100% of the time: painless neck fractures exist, and some patients come from cultures that deny pain. Predictor is not guarantor.",
+   "zh": "『不痛就没有脊柱损伤』——疼痛是脊柱损伤唯一最佳的预测指标，但仍不是百分之百绝对：不痛的颈椎骨折真实存在，还有患者来自否认疼痛的文化。预测指标不等于担保人。"
+  },
+  {
+   "en": "'Afebrile elderly patient — infection excluded.' Elderly patients do not always mount a fever; its absence helps nothing get ruled out. The same trap in mirror image: a denied symptom is a pertinent negative that lowers a probability — it never zeroes one.",
+   "zh": "『老人不发烧——排除感染』——老年患者不一定烧得起来，没有发热什么也排除不了。同一陷阱的镜像：患者否认的症状是一条有意义的阴性，它只能压低概率——永远压不到零。"
+  },
+  {
+   "en": "'No chest pain, so no heart attack.' Chest pain is not required to suspect MI. The classic script came from early studies that enrolled only English-speaking men; a postmenopausal woman's whole presentation may be sudden weakness, fatigue, dizziness, or shortness of breath.",
+   "zh": "『不胸痛，就不是心梗』——怀疑心梗根本不需要胸痛这一条。那套『经典剧本』出自只收说英语男性的早期研究；绝经后女性的全部表现可能就是突发乏力、疲倦、头晕或气短。"
+  },
+  {
+   "en": "'Adrenaline makes me perform better.' Only half true: fight-or-flight sharpens vision, hearing, reflexes and muscle strength — while impairing exactly the faculties this chapter is about: critical thinking, concentration, and assessment. Skills drilled to near-instinct are the insurance policy.",
+   "zh": "『肾上腺素让我发挥更好』——只对一半。战或逃反应确实让视觉、听觉、反射、肌力变锐——同时削弱的恰恰是本章讲的那些能力：批判性思维、专注力、评估力。练到近乎本能的技能，才是那份保险。"
+  }
+ ],
+ "mnemonics": [
+  {
+   "name": "六个R",
+   "en": "Read the scene, Read the patient, React, Reevaluate, Revise, Review — two readings, one action, three afterthoughts that keep the action honest.",
+   "zh": "读现场、读患者、反应、再评估、修订、复盘——两个『读』、一个『动』、三个『回头看』，后三者负责让那一个『动』保持诚实。"
+  },
+  {
+   "name": "五阶段一条线",
+   "en": "Concept formation → data interpretation → application of principle → reflection in action → reflection on action: gather it, weigh it, act on it, watch it while acting, judge it afterward.",
+   "zh": "概念形成→数据解读→原则应用→行动中反思→行动后反思：先收集、再掂量、然后出手、出手时盯着、收工后审判。"
+  },
+  {
+   "name": "体征 1-2-3",
+   "en": "Vital-sign sets climb with acuity: 1 baseline for everyone, 2 for the serious (comparison), 3 or more for the critical (trend and speed of deterioration).",
+   "zh": "生命体征组数跟着病情爬：所有人 1 组打底，严重者 2 组作对比，危重者 3 组以上看趋势、算恶化速度。"
+  },
+  {
+   "name": "先最坏，后最像",
+   "en": "The React order: fix life threats as found, then rule the worst-case scenario in or out, and only then settle on the most common and probable cause.",
+   "zh": "反应的顺序：先按发现顺序处理生命威胁，再把最坏情形排除或坐实，最后才落到最常见、最可能的病因上。"
+  }
+ ],
+ "selfCheck": [
+  {
+   "qEn": "Name the five stages of the critical thinking process, in order, and say which one contains the differential diagnosis.",
+   "qZh": "按顺序说出批判性思维过程的五个阶段，并指出鉴别诊断属于哪个阶段。",
+   "aEn": "Concept formation, data interpretation, application of principle, reflection in action, reflection on action. The differential diagnosis belongs to application of principle — it is the list of other possibilities behind the tentative initial diagnosis.",
+   "aZh": "概念形成、数据解读、原则应用、行动中反思、行动后反思。鉴别诊断属于原则应用阶段——它是暂定初步诊断背后那张『其他可能性』清单。"
+  },
+  {
+   "qEn": "Recite the Six Rs, and state what makes the information in the first R uniquely perishable.",
+   "qZh": "背出六个R，并说明第一个R里的信息为什么独一无二地『易腐』。",
+   "aEn": "Read the scene, read the patient, react, reevaluate, revise the plan, review your performance. Scene information exists only at the scene — it becomes unavailable the moment transport begins, so it must be mined before leaving.",
+   "aZh": "读现场、读患者、反应、再评估、修订计划、复盘表现。现场信息只存在于现场——转运一开始它就永远拿不到了，所以必须在离开前挖走。"
+  },
+  {
+   "qEn": "Where exactly do protocols and standing orders stop working, and what takes over at that boundary?",
+   "qZh": "protocol 和 standing order 到底在哪里失灵？过了那条线由什么接管？",
+   "aEn": "They address only classic presentations — they frequently fail on vague symptoms that fit no neat description, patients with multiple disease etiologies, and patients needing multiple treatment modalities. Beyond that line, the patient's best interest, exercised through your judgment and independent decision making, governs.",
+   "aZh": "它们只覆盖经典表现——面对贴不上清晰描述的模糊症状、多病因并存、需要多种治疗手段的患者时经常失灵。过了那条线，接管的是患者的最大利益，由你的判断与独立决策来落实。"
+  },
+  {
+   "qEn": "How many sets of vital signs for a routine patient, a serious patient, and a critical patient — and what does each additional set buy?",
+   "qZh": "普通、严重、危重患者各测几组生命体征？每多一组换来什么？",
+   "aEn": "One baseline set for every patient including transfers; two sets for serious patients, buying comparison; three or more for critical patients, buying trends — whether the patient is stabilizing, improving or worsening, and how fast the deterioration is running.",
+   "aZh": "所有患者（含转院）1 组基线；严重患者 2 组，换来对比；危重患者 3 组以上，换来趋势——在趋稳、好转还是恶化，以及恶化跑得多快。"
+  },
+  {
+   "qEn": "A patient with a minor sprained ankle immediately asks for morphine. List the possibilities the book requires you to hold, and the correct move.",
+   "qZh": "踝关节轻度扭伤的患者张口就要吗啡。列出原书要求你同时握住的可能性，以及正确动作。",
+   "aEn": "Three live possibilities: illicit drug use; a health care professional or medically knowledgeable person with low pain tolerance; or a wrong presumptive diagnosis hiding a fracture or infected joint. The move is reassessment and objective evaluation — never judgment.",
+   "aZh": "三种可能并存：药物滥用；医护人员或懂医者、痛阈本就低；或推定诊断有误，底下藏着骨折或感染性关节。正确动作是重新评估、保持客观——绝不是下道德判断。"
+  },
+  {
+   "qEn": "Define a pertinent negative and give the infection example, plus the geriatric caveat.",
+   "qZh": "给『有意义的阴性』下定义，举感染的例子，并附上老年科的注意事项。",
+   "aEn": "A finding you would expect in the suspected condition but do not find. Suspecting infection you ask about productive cough, fever, chills — each denial is a pertinent negative lowering the probability. Caveat: elderly patients do not always mount a fever, so an absent fever never rules infection out.",
+   "aZh": "在怀疑的疾病中本应出现、实际却没有找到的表现。怀疑感染时问咳痰、发热、寒战——每个否认都是压低概率的有意义阴性。注意：老年患者不一定发得起烧，没有发热永远排除不了感染。"
+  },
+  {
+   "qEn": "You cannot form an initial diagnosis by the end of assessment. What is acceptable practice, and what is the shock recipe?",
+   "qZh": "评估结束仍形成不了初步诊断，什么做法是可接受的？休克的处置配方是什么？",
+   "aEn": "Treat the presenting signs and symptoms. Difficulty breathing: high-flow oxygen and a position of comfort. Shock picture: elevate the feet, cover for warmth, high-flow oxygen, establish an 18-gauge IV — and keep hunting for the cause. Many patients cannot be diagnosed before hospital; that is a reality of medicine.",
+   "aZh": "按表现的体征和症状治疗。呼吸困难：高流量氧＋舒适体位。休克征象：抬高双脚、覆盖保暖、高流量氧、建立 18 号静脉通路——同时继续找病因。很多患者到医院前无法确诊；这是医学的现实。"
+  },
+  {
+   "qEn": "Recite the six-step mental checklist for thinking under pressure.",
+   "qZh": "背出高压下思考的六步心理清单。",
+   "aEn": "1) Pause and scan — situational awareness first; 2) pause again: stop, think; 3) decide and act for the patient; 4) stay calm, mental control clear and concise; 5) reevaluate the patient regularly, continually; 6) function as a team — clear communication, mutual support.",
+   "aZh": "1）扫描全局、保持情境意识；2）停下来想；3）为患者做决定并行动；4）保持冷静、维持清晰简洁的心智控制；5）规律且持续地再评估患者；6）团队作业，保证沟通与支援。"
+  }
+ ],
+ "bcAlerts": [
+  {
+   "topicEn": "The Controversies box asks three questions — BC's guidelines answer all three in writing",
+   "topicZh": "Controversies 框抛出三问——BC 指南三问全都白纸黑字作了答",
+   "bookEn": "The chapter leaves them open as debates about prophylactic treatment without evidence: backboard every trauma patient? Naloxone for every unconscious person? Oxygen for every chest pain?",
+   "bookZh": "教材把它们留作『无证据的预防性处置』之争：每个创伤患者都上长板？每个昏迷者都给纳洛酮？每个胸痛都给氧？",
+   "bcEn": "BC has decided. Spinal: spinal motion restriction follows the NEXUS criteria and Canadian C-Spine Guidelines — applied on clinical indication, not on every trauma patient (p.25). Naloxone: indicated to reverse respiratory depression or depressed mental status from actual or suspected narcotic overdose — the protocol targets decreased LOC with depressed respiratory drive and opioid signs, corrects glucose ≤4 mmol/L first, and reserves IV naloxone (PCP) for continued unconsciousness with apnea (p.56, 72). Oxygen in cardiac chest pain: applied as required to maintain SpO2 ≥94% — titrated, not universal (p.47).",
+   "bcZh": "BC 已经拍板。脊柱：脊柱运动限制按 NEXUS 标准和加拿大颈椎规则执行——按临床指征上，不是每个创伤患者都上（p.25）。纳洛酮：适应证是逆转实际或疑似麻醉剂过量所致的呼吸抑制/意识抑制——protocol 针对的是意识下降伴呼吸驱动受抑、有阿片征象的患者，先纠正 ≤4 mmol/L 的低血糖，静脉纳洛酮（PCP）只留给持续昏迷伴呼吸停止者（p.56、72）。心源性胸痛的氧：按需给、维持 SpO2 ≥94%——是滴定，不是人人有份（p.47）。",
+   "ref": "EMALB BC Provincial Examination Guidelines p.25, 47, 56, 72（Current to June 15, 2026）"
+  },
+  {
+   "topicEn": "Direct medical control: the book builds a fence, BC has removed most of it",
+   "topicZh": "直接医疗指导：教材筑了一圈围栏，BC 已把大半拆掉",
+   "bookEn": "The chapter repeatedly frames the care plan around performance parameters — what you may not do without direct medical control, and when you must contact medical control before providing care.",
+   "bookZh": "本章反复用『执业参数』框住救治计划——不经直接医疗指导不能做什么、哪些处置必须先联系医疗指导。",
+   "bcEn": "In BC's current exam guidelines the mandatory consult has shrunk to a single trigger: consult medical oversight during a cardiac arrest to discontinue the arrest at the scene (p.42). The amendment log confirms the direction — 'remove medical oversight with the exception of DC CPR' (2026-02-10, p.94). For exam scenarios, act on the printed guidelines; the one call you must make is before terminating resuscitation on scene.",
+   "bcZh": "在 BC 现行考试指南里，强制咨询已缩到唯一一个触发点：心搏骤停期间若要在现场终止复苏，须咨询医疗监督（p.42）。修订日志印证了这一走向——『除终止 CPR 外，移除医疗监督要求』（2026-02-10，p.94）。考试情境按印在指南上的做；你必须打的那通电话，只有现场终止复苏这一件事之前。",
+   "ref": "EMALB BC Provincial Examination Guidelines p.42, 94（Current to June 15, 2026）"
+  }
+ ],
+ "sourcePages": "1570-1605"
+}
