@@ -1,0 +1,1002 @@
+{
+ "meta": {
+  "part": "aet-sync",
+  "count": 26,
+  "languages": [
+   "en",
+   "zh"
+  ],
+  "noteEn": "Original questions organised by AET PCP course module (field 'aet'). Not AET's own quiz items. Pilot: modules 7G and 8A.",
+  "noteZh": "按 AET PCP 课程模块编排的原创题（字段 aet）。不是学校原题。试点：7G、8A 两门。"
+ },
+ "questions": [
+  {
+   "id": "aet-7g-01",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ecg-junctional-rhythm",
+   "difficulty": "intermediate",
+   "questionEn": "A 3-lead strip shows a regular rhythm at 48/min. The QRS complexes are narrow and there are no P waves in front of them. Where is this rhythm most likely coming from?",
+   "questionZh": "三导联条图：节律规整，48 次/分，QRS 窄，前面没有 P 波。这个节律最可能起源于哪里？",
+   "options": [
+    {
+     "key": "A",
+     "en": "The AV junction",
+     "zh": "房室交界区"
+    },
+    {
+     "key": "B",
+     "en": "The SA node",
+     "zh": "窦房结"
+    },
+    {
+     "key": "C",
+     "en": "The ventricles",
+     "zh": "心室"
+    },
+    {
+     "key": "D",
+     "en": "A re-entry circuit in the atria",
+     "zh": "心房内的折返环路"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Each pacemaker site has an intrinsic rate: SA node 60–100, AV junction 40–60, ventricles 20–40. A narrow QRS means the impulse still travels down the normal His–Purkinje pathway, so it starts at or above the bundle of His. Rate 40–60 with absent (or inverted, retrograde) P waves is a junctional escape rhythm. An SA-node rhythm would have an upright P before every QRS; a ventricular escape rhythm is wide and usually 20–40/min; an atrial re-entry rhythm such as flutter is fast, not 48.",
+   "explanationZh": "各起搏点有固有频率：窦房结 60–100、房室交界区 40–60、心室 20–40。QRS 窄，说明冲动仍沿正常的希氏束–浦肯野系统下传，起源在希氏束或以上。频率 40–60、没有 P 波（或 P 波倒置、逆传）就是交界性逸搏心律。窦房结心律每个 QRS 前都有直立 P 波；室性逸搏 QRS 宽、多为 20–40 次/分；心房折返（如房扑）频率快，不会是 48。"
+  },
+  {
+   "id": "aet-7g-02",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "ecg-paper-intervals",
+   "difficulty": "foundation",
+   "questionEn": "On standard ECG paper running at 25 mm/s, a QRS complex spans exactly three small boxes. How long is it?",
+   "questionZh": "标准心电图纸速 25 mm/s，一个 QRS 波正好占 3 个小格。它的时长是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "0.06 s",
+     "zh": "0.06 秒"
+    },
+    {
+     "key": "B",
+     "en": "0.12 s",
+     "zh": "0.12 秒"
+    },
+    {
+     "key": "C",
+     "en": "0.20 s",
+     "zh": "0.20 秒"
+    },
+    {
+     "key": "D",
+     "en": "0.60 s",
+     "zh": "0.60 秒"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "At 25 mm/s one small (1 mm) box is 0.04 s and one large (5 mm) box is 0.20 s. Three small boxes = 3 × 0.04 = 0.12 s, which is exactly the cut-off for a wide QRS. The common trap is to give 0.20 s, the value of a whole large box.",
+   "explanationZh": "纸速 25 mm/s 时，一个小格（1 mm）= 0.04 秒，一个大格（5 mm）= 0.20 秒。3 个小格 = 3 × 0.04 = 0.12 秒，正好是「宽 QRS」的分界线。常见陷阱是答 0.20 秒——那是一整个大格。"
+  },
+  {
+   "id": "aet-7g-03",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ecg-rate-calculation",
+   "difficulty": "foundation",
+   "questionEn": "On a regular rhythm strip the R waves are exactly four large boxes apart. What is the heart rate?",
+   "questionZh": "节律规整的条图上，相邻 R 波之间正好隔 4 个大格。心率是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "60/min",
+     "zh": "60 次/分"
+    },
+    {
+     "key": "B",
+     "en": "100/min",
+     "zh": "100 次/分"
+    },
+    {
+     "key": "C",
+     "en": "75/min",
+     "zh": "75 次/分"
+    },
+    {
+     "key": "D",
+     "en": "150/min",
+     "zh": "150 次/分"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "For a regular rhythm, divide 300 by the number of large boxes between R waves: 300 ÷ 4 = 75. (The sequence to memorise is 1 box = 300, 2 = 150, 3 = 100, 4 = 75, 5 = 60, 6 = 50.) This shortcut only works when the rhythm is regular — for an irregular rhythm count the QRS complexes in a 6-second strip and multiply by 10.",
+   "explanationZh": "节律规整时，用 300 除以两个 R 波之间的大格数：300 ÷ 4 = 75。要背的序列：1 格 = 300，2 = 150，3 = 100，4 = 75，5 = 60，6 = 50。这个捷径只适用于规整节律——不规整时数 6 秒条图里的 QRS 个数再乘 10。"
+  },
+  {
+   "id": "aet-7g-04",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "ecg-rate-calculation",
+   "difficulty": "foundation",
+   "questionEn": "The rhythm is irregularly irregular. Which method gives the most reliable heart rate?",
+   "questionZh": "节律绝对不规整。用哪种方法算心率最可靠？",
+   "options": [
+    {
+     "key": "A",
+     "en": "300 ÷ the number of large boxes between two R waves",
+     "zh": "300 ÷ 两个 R 波之间的大格数"
+    },
+    {
+     "key": "B",
+     "en": "1500 ÷ the number of small boxes between two R waves",
+     "zh": "1500 ÷ 两个 R 波之间的小格数"
+    },
+    {
+     "key": "C",
+     "en": "Count the P waves in a 6-second strip and multiply by 10",
+     "zh": "数 6 秒条图里的 P 波个数，乘以 10"
+    },
+    {
+     "key": "D",
+     "en": "Count the QRS complexes in a 6-second strip and multiply by 10",
+     "zh": "数 6 秒条图里的 QRS 个数，乘以 10"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Both the 300 and 1500 methods measure a single R–R interval, so in an irregular rhythm the answer changes depending on which pair of beats you pick. Counting QRS complexes over 6 seconds averages out the irregularity. Counting P waves gives the atrial rate, not the ventricular (pulse) rate — and in atrial fibrillation there are no P waves to count.",
+   "explanationZh": "300 法和 1500 法都只量一个 R–R 间期，节律不规整时选哪两个心搏结果就不一样。数 6 秒内的 QRS 个数可以把不规整平均掉。数 P 波得到的是心房率，不是心室（脉搏）率——房颤根本没有 P 波可数。"
+  },
+  {
+   "id": "aet-7g-05",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ecg-av-block",
+   "difficulty": "intermediate",
+   "questionEn": "Rate 72/min, regular. Every P wave is followed by a QRS, and the PR interval is constant at 0.28 s. What is the rhythm?",
+   "questionZh": "心率 72 次/分，规整。每个 P 波后面都跟着 QRS，PR 间期恒定为 0.28 秒。这是什么心律？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Sinus rhythm with first-degree AV block",
+     "zh": "窦性心律伴一度房室传导阻滞"
+    },
+    {
+     "key": "B",
+     "en": "Second-degree AV block, Mobitz I",
+     "zh": "二度 I 型房室传导阻滞（文氏）"
+    },
+    {
+     "key": "C",
+     "en": "Second-degree AV block, Mobitz II",
+     "zh": "二度 II 型房室传导阻滞"
+    },
+    {
+     "key": "D",
+     "en": "Third-degree AV block",
+     "zh": "三度房室传导阻滞"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "A normal PR interval is 0.12–0.20 s. A PR that is long but constant, with no dropped beats, is first-degree AV block — a delay, not a block. Both second-degree blocks drop QRS complexes (Mobitz I after progressive PR lengthening, Mobitz II without warning). In third-degree block the P waves and QRS complexes have no relationship at all.",
+   "explanationZh": "正常 PR 间期 0.12–0.20 秒。PR 延长但恒定、没有漏搏，就是一度房室传导阻滞——只是延迟，不是阻断。两种二度阻滞都会漏掉 QRS（I 型在 PR 逐渐延长后漏，II 型毫无预兆地漏）。三度阻滞时 P 波和 QRS 完全没有关系。"
+  },
+  {
+   "id": "aet-7g-06",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ecg-av-block",
+   "difficulty": "intermediate",
+   "questionEn": "The PR interval gets longer over three beats, then a P wave appears with no QRS after it, and the cycle repeats. What is the rhythm?",
+   "questionZh": "PR 间期连续三拍越来越长，然后出现一个后面没有 QRS 的 P 波，接着周而复始。这是什么心律？",
+   "options": [
+    {
+     "key": "A",
+     "en": "First-degree AV block",
+     "zh": "一度房室传导阻滞"
+    },
+    {
+     "key": "B",
+     "en": "Second-degree AV block, Mobitz I (Wenckebach)",
+     "zh": "二度 I 型房室传导阻滞（文氏）"
+    },
+    {
+     "key": "C",
+     "en": "Second-degree AV block, Mobitz II",
+     "zh": "二度 II 型房室传导阻滞"
+    },
+    {
+     "key": "D",
+     "en": "Sinus arrhythmia",
+     "zh": "窦性心律不齐"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Progressive PR lengthening until a beat is dropped, giving 'group beating', is Mobitz I (Wenckebach). The block is usually in the AV node and is generally the more benign second-degree block. Mobitz II drops beats with a constant PR and sits lower in the conduction system, so it can deteriorate suddenly to complete heart block.",
+   "explanationZh": "PR 逐渐延长直到漏掉一拍，形成「成组心搏」，就是二度 I 型（文氏）。阻滞部位通常在房室结，是两种二度阻滞里较良性的一种。二度 II 型在 PR 恒定的情况下突然漏搏，阻滞部位更低，可能突然恶化成完全性传导阻滞。"
+  },
+  {
+   "id": "aet-7g-07",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "ecg-av-block-unstable-brady",
+   "difficulty": "advanced",
+   "questionEn": "A 74-year-old woman is dizzy and pale. BP 78/40. The monitor shows regular P waves at 80/min and regular, wide QRS complexes at 32/min with no relationship between them. What is the most appropriate PCP management?",
+   "questionZh": "74 岁女性头晕、面色苍白，BP 78/40。监护仪：P 波规整 80 次/分，QRS 规整、宽，32 次/分，两者毫无关系。PCP 最恰当的处置是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Vagal manoeuvres to slow the atrial rate",
+     "zh": "迷走神经刺激，减慢心房率"
+    },
+    {
+     "key": "B",
+     "en": "Nitroglycerin 0.4 mg SL for possible ischemia",
+     "zh": "疑似缺血，舌下含服硝酸甘油 0.4 mg"
+    },
+    {
+     "key": "C",
+     "en": "Support ABCs and oxygenation, request ALS intercept for pacing, and transport promptly",
+     "zh": "维持 ABC 与氧合，呼叫 ALS 会合准备起搏，尽快转运"
+    },
+    {
+     "key": "D",
+     "en": "Repeat the 12-lead in 15 minutes before deciding",
+     "zh": "15 分钟后复查 12 导联再决定"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "This is third-degree (complete) AV block with a wide ventricular escape rhythm, and the patient is unstable. Definitive treatment is pacing, which is ALS — so the PCP supports airway, breathing and oxygenation, requests an ALS intercept and transports without delay. Vagal manoeuvres would slow the heart further; nitroglycerin is contraindicated (BC requires SBP ≥110 and HR 50–150); delaying for a repeat 12-lead wastes time in a pre-arrest patient. Note: the AET glossary mentions atropine with 'confirm your scope' — atropine is not on the BC licensing-exam formulary, and it is often ineffective for a block below the AV node anyway.",
+   "explanationZh": "这是三度（完全性）房室传导阻滞伴宽 QRS 的室性逸搏，且患者不稳定。根本治疗是起搏，属于 ALS 范围——所以 PCP 要维持气道、呼吸和氧合，呼叫 ALS 会合，并立即转运。迷走刺激会让心率更慢；硝酸甘油禁用（BC 要求 SBP ≥110、HR 50–150）；为复查 12 导联而拖延，对濒临骤停的患者是在浪费时间。注意：AET 术语表把阿托品写成「确认你的执业范围」——BC 执照考试的药单里没有阿托品，而且对房室结以下的阻滞本来就常常无效。"
+  },
+  {
+   "id": "aet-7g-08",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "ecg-12-lead-acquisition",
+   "difficulty": "foundation",
+   "questionEn": "Which statement about acquiring a standard 12-lead ECG is correct?",
+   "questionZh": "关于采集标准 12 导联心电图，哪一项正确？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Twelve electrodes are placed, one for each lead",
+     "zh": "贴 12 个电极，每个导联一个"
+    },
+    {
+     "key": "B",
+     "en": "V1 goes in the 4th intercostal space at the left sternal border",
+     "zh": "V1 放在第 4 肋间胸骨左缘"
+    },
+    {
+     "key": "C",
+     "en": "V4 goes in the 4th intercostal space at the anterior axillary line",
+     "zh": "V4 放在第 4 肋间腋前线"
+    },
+    {
+     "key": "D",
+     "en": "Ten electrodes are placed: four limb and six precordial",
+     "zh": "贴 10 个电极：4 个肢体、6 个胸前"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Ten electrodes (RA, LA, RL, LL plus V1–V6) generate twelve leads, because the limb leads are calculated from combinations of the limb electrodes. V1 is the 4th intercostal space at the RIGHT sternal border (V2 is the left); V4 is the 5th intercostal space at the mid-clavicular line, with V5 and V6 level with it at the anterior and mid-axillary lines.",
+   "explanationZh": "10 个电极（RA、LA、RL、LL 加 V1–V6）产生 12 个导联，因为肢体导联是由肢体电极两两组合计算出来的。V1 在第 4 肋间胸骨**右**缘（V2 才在左缘）；V4 在第 5 肋间锁骨中线，V5、V6 与它同一水平，分别在腋前线和腋中线。"
+  },
+  {
+   "id": "aet-7g-09",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ecg-stemi-localization",
+   "difficulty": "intermediate",
+   "questionEn": "A 12-lead shows ST elevation of 2 mm in II, III and aVF, with ST depression in I and aVL. What does this pattern represent?",
+   "questionZh": "12 导联：II、III、aVF 导联 ST 抬高 2 mm，I、aVL 导联 ST 压低。这代表什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Inferior STEMI with reciprocal changes",
+     "zh": "下壁 STEMI 伴对应性改变"
+    },
+    {
+     "key": "B",
+     "en": "Lateral STEMI",
+     "zh": "侧壁 STEMI"
+    },
+    {
+     "key": "C",
+     "en": "Pericarditis",
+     "zh": "心包炎"
+    },
+    {
+     "key": "D",
+     "en": "Normal variant early repolarization",
+     "zh": "正常变异的早期复极"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "II, III and aVF look at the inferior wall (usually the right coronary artery). ST elevation ≥1 mm in two or more contiguous limb leads meets STEMI criteria, and ST depression in the opposite leads (I, aVL) is a reciprocal change that strengthens the diagnosis. Pericarditis and early repolarization cause widespread elevation without reciprocal depression; a lateral STEMI would elevate I, aVL, V5–V6.",
+   "explanationZh": "II、III、aVF 看的是下壁（通常是右冠状动脉）。两个以上相邻肢体导联 ST 抬高 ≥1 mm 即符合 STEMI 标准，而对侧导联（I、aVL）的 ST 压低是对应性改变，让诊断更确定。心包炎和早期复极会出现广泛抬高、没有对应性压低；侧壁 STEMI 抬高的是 I、aVL、V5–V6。"
+  },
+  {
+   "id": "aet-7g-10",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "nitro-inferior-stemi",
+   "difficulty": "advanced",
+   "questionEn": "A 66-year-old man has crushing chest pain. The 12-lead shows an inferior STEMI. BP 96/60, HR 58, SpO₂ 95% on room air. What is correct regarding nitroglycerin?",
+   "questionZh": "66 岁男性压榨性胸痛，12 导联提示下壁 STEMI。BP 96/60，HR 58，室内空气 SpO₂ 95%。关于硝酸甘油，哪项正确？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give 0.4 mg SL now and repeat every 5 minutes",
+     "zh": "现在舌下含 0.4 mg，每 5 分钟重复"
+    },
+    {
+     "key": "B",
+     "en": "Withhold it — SBP is below 110, and inferior MI may involve a preload-dependent right ventricle",
+     "zh": "不给——SBP 低于 110，且下壁心梗可能累及依赖前负荷的右心室"
+    },
+    {
+     "key": "C",
+     "en": "Give one 0.4 mg dose, then reassess",
+     "zh": "先给一次 0.4 mg 再复评"
+    },
+    {
+     "key": "D",
+     "en": "Give it only after a 500 mL fluid bolus raises the BP",
+     "zh": "先补液 500 mL 把血压升上来再给"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Under the BC examination guidelines nitroglycerin is contraindicated when SBP is below 110 mmHg (also HR <50 or >150, and PDE-5 inhibitor use: Viagra/Levitra within 24 h, Cialis within 48 h). Here SBP is 96, so it is withheld regardless of the ECG. The AET course calls the inferior-MI case the 'Nitro Trap': right-ventricular infarction makes cardiac output depend on preload, and a venodilator can cause profound hypotension. Fluid-loading so that you can give nitro is not a recognised strategy.",
+   "explanationZh": "按 BC 考纲，SBP 低于 110 mmHg 禁用硝酸甘油（另有 HR <50 或 >150、24 小时内用过 Viagra/Levitra 或 48 小时内用过 Cialis）。本题 SBP 96，不论心电图如何都不能给。AET 课上把下壁心梗这一情况叫作「Nitro Trap（硝酸甘油陷阱）」：右室梗死时心排量依赖前负荷，扩静脉药会引发严重低血压。为了能给硝酸甘油而先补液，不是公认的做法。"
+  },
+  {
+   "id": "aet-7g-11",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ecg-atrial-fibrillation",
+   "difficulty": "foundation",
+   "questionEn": "The ventricular rate is about 130/min and irregularly irregular. There are no identifiable P waves, only a wavy baseline. What is the rhythm?",
+   "questionZh": "心室率约 130 次/分，绝对不规整。看不到可辨认的 P 波，只有起伏不定的基线。这是什么心律？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Atrial flutter",
+     "zh": "心房扑动"
+    },
+    {
+     "key": "B",
+     "en": "Multifocal atrial tachycardia",
+     "zh": "多源性房性心动过速"
+    },
+    {
+     "key": "C",
+     "en": "Atrial fibrillation",
+     "zh": "心房颤动"
+    },
+    {
+     "key": "D",
+     "en": "Sinus tachycardia",
+     "zh": "窦性心动过速"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Irregularly irregular with no P waves and a fibrillatory baseline is atrial fibrillation. Atrial flutter shows regular sawtooth flutter waves and is often regular (classically 150/min with 2:1 block). Multifocal atrial tachycardia is irregular but has visible P waves of at least three different shapes. Sinus tachycardia is regular with a normal P before every QRS.",
+   "explanationZh": "绝对不规整、没有 P 波、基线呈颤动波，就是心房颤动。房扑是规整的锯齿状扑动波，节律常常规整（典型为 2:1 下传、150 次/分）。多源性房速虽然不规整，但能看到至少三种形态的 P 波。窦速规整，每个 QRS 前都有正常 P 波。"
+  },
+  {
+   "id": "aet-7g-12",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "ecg-artifact",
+   "difficulty": "intermediate",
+   "questionEn": "Your patient is sitting up and talking to you when lead II suddenly shows a chaotic, irregular waveform with no clear QRS complexes. What should you do first?",
+   "questionZh": "患者正坐着和你说话，II 导联突然出现杂乱无章、没有清晰 QRS 的波形。你首先该做什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Defibrillate immediately",
+     "zh": "立即除颤"
+    },
+    {
+     "key": "B",
+     "en": "Start chest compressions",
+     "zh": "开始胸外按压"
+    },
+    {
+     "key": "C",
+     "en": "Print a 12-lead to confirm ventricular fibrillation",
+     "zh": "打印 12 导联确认室颤"
+    },
+    {
+     "key": "D",
+     "en": "Assess the patient and check the electrodes and cables for artifact",
+     "zh": "评估患者，检查电极和导线有无伪差"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Treat the patient, not the monitor. A patient in ventricular fibrillation is pulseless and unresponsive within seconds; someone who is talking to you has a perfusing rhythm. Movement, shivering, loose electrodes or cable interference are the usual causes. Shocking or compressing a conscious patient with a pulse would be harmful.",
+   "explanationZh": "看病人，不看监护仪。室颤患者几秒内就会无脉、无反应；正在和你说话的人一定有有效灌注的心律。常见原因是身体活动、寒战、电极松脱或导线干扰。给有脉搏、清醒的患者除颤或按压会造成伤害。"
+  },
+  {
+   "id": "aet-7g-13",
+   "aet": "7G",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.6",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "ecg-wide-complex-tachycardia",
+   "difficulty": "advanced",
+   "questionEn": "A 58-year-old with a previous MI has a regular wide-complex tachycardia at 180/min. He has a pulse and is alert. How should the rhythm be treated until proven otherwise?",
+   "questionZh": "58 岁、既往心梗，出现规整的宽 QRS 心动过速，180 次/分，有脉搏、清醒。在证明不是之前，这个心律该按什么处理？",
+   "options": [
+    {
+     "key": "A",
+     "en": "As ventricular tachycardia",
+     "zh": "按室性心动过速处理"
+    },
+    {
+     "key": "B",
+     "en": "As SVT with aberrant conduction",
+     "zh": "按室上速伴差异性传导处理"
+    },
+    {
+     "key": "C",
+     "en": "As sinus tachycardia from anxiety",
+     "zh": "按焦虑引起的窦速处理"
+    },
+    {
+     "key": "D",
+     "en": "As artifact until a 12-lead is printed",
+     "zh": "打印 12 导联前先当伪差"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "A wide-complex tachycardia — especially in a patient with structural heart disease such as a previous MI — is VT until proven otherwise. Treating VT as SVT (for example with drugs meant for SVT) can cause collapse. Clues that confirm VT include AV dissociation and fusion beats. For a PCP the plan is monitoring, oxygen as needed, IV access, an early ALS intercept and readiness to defibrillate if he becomes pulseless.",
+   "explanationZh": "宽 QRS 心动过速——尤其是既往心梗等有结构性心脏病的患者——在证明不是之前一律当室速。把室速当室上速处理（比如用治室上速的药）可能导致循环崩溃。支持室速的线索包括房室分离和融合波。PCP 的做法是监护、按需给氧、建立静脉、尽早呼叫 ALS 会合，并做好一旦无脉立即除颤的准备。"
+  },
+  {
+   "id": "aet-8a-01",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "iv-drip-rate-calculation",
+   "difficulty": "foundation",
+   "questionEn": "You are to infuse 500 mL of normal saline over 2 hours using a 10 gtt/mL administration set. What drip rate do you set?",
+   "questionZh": "用 10 滴/mL 的输液器，在 2 小时内输完 500 mL 生理盐水。滴速应调到多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "About 21 gtt/min",
+     "zh": "约 21 滴/分"
+    },
+    {
+     "key": "B",
+     "en": "About 42 gtt/min",
+     "zh": "约 42 滴/分"
+    },
+    {
+     "key": "C",
+     "en": "About 83 gtt/min",
+     "zh": "约 83 滴/分"
+    },
+    {
+     "key": "D",
+     "en": "250 gtt/min",
+     "zh": "250 滴/分"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Drops per minute = volume (mL) × drop factor (gtt/mL) ÷ time (minutes) = 500 × 10 ÷ 120 = 41.7, so about 42 gtt/min. The usual error is forgetting to convert hours to minutes (500 × 10 ÷ 2 = 2500) or dividing by 60 instead of 120 (≈83).",
+   "explanationZh": "滴速（滴/分）= 容量（mL）× 滴系数（滴/mL）÷ 时间（分钟）= 500 × 10 ÷ 120 = 41.7，约 42 滴/分。常见错误是忘了把小时换成分钟（500 × 10 ÷ 2 = 2500），或者除以 60 而不是 120（≈83）。"
+  },
+  {
+   "id": "aet-8a-02",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "epinephrine-pediatric-dose",
+   "difficulty": "intermediate",
+   "questionEn": "An 18-kg child is in anaphylaxis. Using epinephrine 1 mg/mL (1:1,000) IM at the BC dose, how much do you give?",
+   "questionZh": "18 公斤的孩子发生过敏性休克。用 1 mg/mL（1:1,000）肾上腺素肌注、按 BC 剂量，应给多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "1.8 mL (1.8 mg)",
+     "zh": "1.8 mL（1.8 mg）"
+    },
+    {
+     "key": "B",
+     "en": "0.5 mL (0.5 mg)",
+     "zh": "0.5 mL（0.5 mg）"
+    },
+    {
+     "key": "C",
+     "en": "0.18 mL (0.18 mg)",
+     "zh": "0.18 mL（0.18 mg）"
+    },
+    {
+     "key": "D",
+     "en": "1.8 mL of 1:10,000 (0.18 mg)",
+     "zh": "1:10,000 的 1.8 mL（0.18 mg）"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC dose: 0.01 mg/kg IM, maximum 0.5 mg per dose, repeat every 5 minutes up to 3 times. 18 kg × 0.01 = 0.18 mg; at 1 mg/mL that is 0.18 mL. The 1.8 mL choice of 1:10,000 contains the right milligram amount but uses the 1:10,000 (0.1 mg/mL) preparation, which is not the IM anaphylaxis concentration. Note: the AET glossary caps the paediatric dose at 0.3 mg; the BC examination guidelines cap it at 0.5 mg. For an 18-kg child both give 0.18 mg.",
+   "explanationZh": "BC 剂量：0.01 mg/kg 肌注，单次最大 0.5 mg，每 5 分钟可重复，最多 3 次。18 kg × 0.01 = 0.18 mg；1 mg/mL 的浓度就是 0.18 mL。「1:10,000 的 1.8 mL」那个选项毫克数对，但用的是 1:10,000（0.1 mg/mL）制剂，那不是肌注抗过敏的浓度。注意：AET 术语表写儿童上限 0.3 mg，BC 考纲上限是 0.5 mg；18 kg 的孩子两种算法都是 0.18 mg。"
+  },
+  {
+   "id": "aet-8a-03",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "drug-concentration-epinephrine",
+   "difficulty": "foundation",
+   "questionEn": "How many milligrams of epinephrine are in 1 mL of a 1:10,000 solution?",
+   "questionZh": "1 mL 的 1:10,000 肾上腺素溶液含多少毫克？",
+   "options": [
+    {
+     "key": "A",
+     "en": "0.01 mg",
+     "zh": "0.01 mg"
+    },
+    {
+     "key": "B",
+     "en": "1 mg",
+     "zh": "1 mg"
+    },
+    {
+     "key": "C",
+     "en": "10 mg",
+     "zh": "10 mg"
+    },
+    {
+     "key": "D",
+     "en": "0.1 mg",
+     "zh": "0.1 mg"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "A ratio of 1:1,000 means 1 g in 1,000 mL = 1 mg/mL. 1:10,000 is ten times more dilute = 0.1 mg/mL. Mixing the two up is a tenfold error: 1:1,000 is the IM anaphylaxis preparation; 1:10,000 is the IV cardiac-arrest preparation used by ALS.",
+   "explanationZh": "1:1,000 表示 1 g 溶于 1,000 mL = 1 mg/mL。1:10,000 稀释十倍 = 0.1 mg/mL。两者搞混就是十倍剂量错误：1:1,000 是肌注抗过敏用的，1:10,000 是 ALS 心脏骤停静推用的。"
+  },
+  {
+   "id": "aet-8a-04",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "txa-contraindications",
+   "difficulty": "advanced",
+   "questionEn": "Under the BC examination guidelines, which of these trauma patients should NOT receive TXA?",
+   "questionZh": "按 BC 考纲，下列哪位创伤患者**不应**给 TXA？",
+   "options": [
+    {
+     "key": "A",
+     "en": "A 10-year-old in hemorrhagic shock 30 minutes after a fall",
+     "zh": "10 岁，摔伤后 30 分钟，失血性休克"
+    },
+    {
+     "key": "B",
+     "en": "A 40-year-old driver 1 hour after a crash, SBP 82, pale and tachycardic",
+     "zh": "40 岁司机，车祸后 1 小时，SBP 82，苍白、心动过速"
+    },
+    {
+     "key": "C",
+     "en": "A 25-year-old with an abdominal stab wound 20 minutes ago and signs of shock",
+     "zh": "25 岁，20 分钟前腹部刀刺伤，有休克征象"
+    },
+    {
+     "key": "D",
+     "en": "A 70-year-old with an unstable pelvis 2 hours after injury and signs of shock",
+     "zh": "70 岁，伤后 2 小时，骨盆不稳定，有休克征象"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "The BC examination guidelines list TXA contraindications as: more than 3 hours since injury, patient younger than 12, isolated traumatic brain injury, and known allergy. The 10-year-old is excluded by age; the other three are within 3 hours and show shock. Note: the AET pharmacology module teaches BCEHS paediatric weight-based TXA (15 mg/kg). That is employer practice; on the EMALB licensing exam, under-12 is a contraindication.",
+   "explanationZh": "BC 考纲列出的 TXA 禁忌：受伤超过 3 小时、年龄小于 12 岁、单纯颅脑外伤、已知过敏。10 岁患儿因年龄被排除；其余三位都在 3 小时内且有休克。注意：AET 药理模块教的是 BCEHS 的儿童按体重给 TXA（15 mg/kg），那是雇主的执业规范；在 EMALB 执照考试里，12 岁以下就是禁忌。"
+  },
+  {
+   "id": "aet-8a-05",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "txa-dose",
+   "difficulty": "foundation",
+   "questionEn": "What is the adult TXA dose and administration in the BC examination guidelines?",
+   "questionZh": "BC 考纲里成人 TXA 的剂量和给药方式是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "1 g IV over 10 minutes",
+     "zh": "1 g 静脉，10 分钟推完"
+    },
+    {
+     "key": "B",
+     "en": "2 g IV push over 1 minute",
+     "zh": "2 g 静脉推注，1 分钟推完"
+    },
+    {
+     "key": "C",
+     "en": "2 g IM into the lateral thigh",
+     "zh": "2 g 大腿外侧肌注"
+    },
+    {
+     "key": "D",
+     "en": "15 mg/kg IV over 10 minutes",
+     "zh": "15 mg/kg 静脉，10 分钟推完"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC: 2 g (2,000 mg) IV push over 1 minute, given after the hypovolemia protocol has been started; the caution is further hypotension if pushed too fast. The 1 g over 10 minutes regimen comes from the older CRASH-2 hospital protocol. Be aware that the AET course material quotes both regimens in different places — for the licensing exam, use 2 g over 1 minute.",
+   "explanationZh": "BC：2 g（2,000 mg）静脉推注，1 分钟推完，在启动低血容量处置后给；注意事项是推得太快会进一步降低血压。「1 g 10 分钟」来自较早的 CRASH-2 院内方案。要知道 AET 课程材料在不同地方两种方案都出现过——考执照时按 2 g、1 分钟。"
+  },
+  {
+   "id": "aet-8a-06",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "naloxone-dosing",
+   "difficulty": "intermediate",
+   "questionEn": "A suspected opioid overdose received naloxone 0.4 mg IM three minutes ago while being ventilated with a BVM. RR is 6 and SpO₂ 90%. According to the BC dosing sequence, what is next?",
+   "questionZh": "疑似阿片过量，3 分钟前在 BVM 通气的同时肌注了纳洛酮 0.4 mg。现在 RR 6，SpO₂ 90%。按 BC 的给药顺序，下一步是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Continue BVM ventilation and give 0.8 mg",
+     "zh": "继续 BVM 通气，给 0.8 mg"
+    },
+    {
+     "key": "B",
+     "en": "Stop ventilating and give 2.0 mg",
+     "zh": "停止通气，给 2.0 mg"
+    },
+    {
+     "key": "C",
+     "en": "Continue BVM ventilation and give a second 0.4 mg dose",
+     "zh": "继续 BVM 通气，再给第二剂 0.4 mg"
+    },
+    {
+     "key": "D",
+     "en": "Wait 10 more minutes for the first dose to work",
+     "zh": "再等 10 分钟让第一剂起效"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC sequence: 0.4 mg → 0.4 mg → 0.8 mg → 2.0 mg (IM or IV) every 3 minutes until SpO₂ ≥94% and ventilations >10, or a single 4 mg intranasal dose. The second step is another 0.4 mg, not 0.8 mg. Ventilation comes first and never stops for the drug — the AET course drills this as 'Airway-First'. Titrate to breathing, not to full wakefulness, to avoid precipitating violent withdrawal.",
+   "explanationZh": "BC 顺序：0.4 mg → 0.4 mg → 0.8 mg → 2.0 mg（IM 或 IV），每 3 分钟一次，直到 SpO₂ ≥94% 且通气 >10 次/分；或者鼻喷一次 4 mg。第二步还是 0.4 mg，不是 0.8 mg。通气永远优先、不因给药而中断——AET 课上叫「Airway-First」。按呼吸滴定，而不是按完全清醒滴定，避免诱发剧烈戒断。"
+  },
+  {
+   "id": "aet-8a-07",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "naloxone-pharmacology",
+   "difficulty": "intermediate",
+   "questionEn": "A patient wakes up after naloxone for a long-acting opioid overdose and wants to leave. Why is this dangerous?",
+   "questionZh": "长效阿片过量的患者用纳洛酮后醒了，想离开。为什么这很危险？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Naloxone is a partial agonist and will itself depress breathing",
+     "zh": "纳洛酮是部分激动剂，本身会抑制呼吸"
+    },
+    {
+     "key": "B",
+     "en": "Naloxone permanently blocks opioid receptors",
+     "zh": "纳洛酮会永久阻断阿片受体"
+    },
+    {
+     "key": "C",
+     "en": "Naloxone causes delayed hypoglycemia",
+     "zh": "纳洛酮会引起迟发性低血糖"
+    },
+    {
+     "key": "D",
+     "en": "Naloxone's effect can wear off before the opioid's, so respiratory depression can return",
+     "zh": "纳洛酮的作用可能比阿片先消退，呼吸抑制会再次出现"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Naloxone is a competitive opioid-receptor antagonist: it displaces the opioid but is cleared relatively quickly (roughly 30–90 minutes of effect). Long-acting opioids can outlast it, so the patient can re-narcotize after you leave. This is why a refusal after naloxone needs a careful capacity assessment, a clear explanation of the risk, and good documentation.",
+   "explanationZh": "纳洛酮是阿片受体的竞争性拮抗剂：能把阿片从受体上挤下来，但清除得相对快（作用约 30–90 分钟）。长效阿片的作用可能比它更久，你走后患者可能再次被麻醉。所以纳洛酮后拒绝转运，必须认真评估行为能力、讲清风险并做好记录。"
+  },
+  {
+   "id": "aet-8a-08",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "pharmacokinetics-first-pass",
+   "difficulty": "foundation",
+   "questionEn": "Why is nitroglycerin given sublingually rather than swallowed?",
+   "questionZh": "为什么硝酸甘油要舌下含服，而不是吞服？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Swallowed nitroglycerin is mostly destroyed by first-pass metabolism in the liver",
+     "zh": "吞服的硝酸甘油大多在肝脏首过代谢中被破坏"
+    },
+    {
+     "key": "B",
+     "en": "The tablet irritates the stomach lining",
+     "zh": "药片会刺激胃黏膜"
+    },
+    {
+     "key": "C",
+     "en": "Sublingual absorption lasts longer",
+     "zh": "舌下吸收维持时间更长"
+    },
+    {
+     "key": "D",
+     "en": "Swallowing causes immediate hypotension",
+     "zh": "吞服会立刻引起低血压"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Drugs absorbed from the gut travel through the portal vein to the liver before reaching the systemic circulation, and the liver breaks most nitroglycerin down — the first-pass effect. The sublingual mucosa drains directly into the systemic veins, bypassing the liver, so the onset is fast (1–3 minutes) though the duration is short.",
+   "explanationZh": "从胃肠道吸收的药物要先经门静脉进肝脏，再进入体循环，而肝脏会把大部分硝酸甘油分解掉——这就是首过效应。舌下黏膜的血液直接回流到体循环静脉，绕开肝脏，所以起效快（1–3 分钟），但维持时间短。"
+  },
+  {
+   "id": "aet-8a-09",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "drug-absorption-shock",
+   "difficulty": "intermediate",
+   "questionEn": "Why can an IM medication act slowly or unpredictably in a patient in severe shock?",
+   "questionZh": "为什么严重休克患者肌注的药可能起效慢或不可预测？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Shock speeds up liver metabolism of the drug",
+     "zh": "休克加快了肝脏对药物的代谢"
+    },
+    {
+     "key": "B",
+     "en": "Peripheral vasoconstriction reduces blood flow through muscle, slowing absorption",
+     "zh": "外周血管收缩，肌肉血流减少，吸收变慢"
+    },
+    {
+     "key": "C",
+     "en": "Muscle tissue binds the drug permanently",
+     "zh": "肌肉组织会把药物永久结合"
+    },
+    {
+     "key": "D",
+     "en": "IM drugs must pass through the gut first",
+     "zh": "肌注药物要先经过肠道"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "In shock the body shunts blood away from skin and skeletal muscle to the core organs. A drug deposited in poorly perfused muscle is absorbed slowly, then may be absorbed all at once when perfusion returns. IV (or IO, ALS) delivery is the most predictable route — 100% bioavailability.",
+   "explanationZh": "休克时，身体把血液从皮肤和骨骼肌调往核心器官。注射在灌注差的肌肉里的药吸收慢，等灌注恢复时又可能一下子全部吸收。静脉（或 ALS 的骨髓腔）给药最可预测——生物利用度 100%。"
+  },
+  {
+   "id": "aet-8a-10",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "pharmacodynamics-receptors",
+   "difficulty": "foundation",
+   "questionEn": "In anaphylaxis, which receptor action of epinephrine directly reverses bronchospasm?",
+   "questionZh": "过敏性休克时，肾上腺素的哪种受体作用直接缓解支气管痉挛？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Alpha-1: vasoconstriction",
+     "zh": "α1：血管收缩"
+    },
+    {
+     "key": "B",
+     "en": "Beta-1: increased heart rate and contractility",
+     "zh": "β1：心率和收缩力增加"
+    },
+    {
+     "key": "C",
+     "en": "Beta-2: bronchial smooth-muscle relaxation",
+     "zh": "β2：支气管平滑肌松弛"
+    },
+    {
+     "key": "D",
+     "en": "Histamine-1 blockade",
+     "zh": "阻断 H1 组胺受体"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Epinephrine acts on all three adrenergic receptors: α1 vasoconstriction raises BP and reduces airway swelling, β1 increases heart rate and contractility, and β2 relaxes bronchial smooth muscle — the bronchodilation. It does not block histamine receptors; that is what diphenhydramine does, which is why an antihistamine is only an adjunct and never replaces epinephrine.",
+   "explanationZh": "肾上腺素作用于三种肾上腺素能受体：α1 收缩血管，升压并减轻气道水肿；β1 增加心率和收缩力；β2 松弛支气管平滑肌——也就是扩张支气管。它不阻断组胺受体，那是苯海拉明的作用；所以抗组胺药只是辅助，永远不能替代肾上腺素。"
+  },
+  {
+   "id": "aet-8a-11",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "pharmacodynamics-potency",
+   "difficulty": "intermediate",
+   "questionEn": "Drug A reaches the same maximum effect as Drug B, but at one-tenth of the dose. Which statement is correct?",
+   "questionZh": "药物 A 能达到和药物 B 一样的最大效应，但剂量只要 B 的十分之一。哪项说法正确？",
+   "options": [
+    {
+     "key": "A",
+     "en": "A has greater efficacy; potency is equal",
+     "zh": "A 效能更大；效价强度相同"
+    },
+    {
+     "key": "B",
+     "en": "A has a longer half-life",
+     "zh": "A 半衰期更长"
+    },
+    {
+     "key": "C",
+     "en": "A has lower affinity for the receptor",
+     "zh": "A 对受体的亲和力更低"
+    },
+    {
+     "key": "D",
+     "en": "A is more potent; the two have equal efficacy",
+     "zh": "A 效价强度更高；两者效能相同"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Potency is how much drug is needed to produce an effect; efficacy is the maximum effect the drug can produce at all. Same maximum effect = equal efficacy; less drug needed = higher potency. A more potent drug usually binds its receptor more strongly (higher affinity), not less. Half-life describes elimination and is unrelated to this comparison.",
+   "explanationZh": "效价强度（potency）指产生效应需要多少药；效能（efficacy）指药物最多能产生多大效应。最大效应相同 = 效能相同；所需剂量更少 = 效价强度更高。效价强度高的药通常与受体结合更牢（亲和力更高），而不是更低。半衰期描述的是消除，和这个比较无关。"
+  },
+  {
+   "id": "aet-8a-12",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "pharmacokinetics-half-life",
+   "difficulty": "intermediate",
+   "questionEn": "A drug has a half-life of 2 hours. About how long until roughly 97% of a single dose has been eliminated?",
+   "questionZh": "某药半衰期 2 小时。单次给药后，大约多久能消除约 97%？",
+   "options": [
+    {
+     "key": "A",
+     "en": "10 hours",
+     "zh": "10 小时"
+    },
+    {
+     "key": "B",
+     "en": "2 hours",
+     "zh": "2 小时"
+    },
+    {
+     "key": "C",
+     "en": "4 hours",
+     "zh": "4 小时"
+    },
+    {
+     "key": "D",
+     "en": "24 hours",
+     "zh": "24 小时"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Each half-life removes half of what is left: 50% → 75% → 87.5% → 93.75% → 96.9% after five half-lives. Five half-lives × 2 hours = 10 hours. The rule of thumb is that a drug is essentially gone after 4–5 half-lives.",
+   "explanationZh": "每过一个半衰期，剩下的再减半：50% → 75% → 87.5% → 93.75% → 五个半衰期后 96.9%。5 × 2 小时 = 10 小时。经验法则：4–5 个半衰期后药物基本清除。"
+  },
+  {
+   "id": "aet-8a-13",
+   "aet": "8A",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A1",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "scope-of-practice-medication",
+   "difficulty": "advanced",
+   "questionEn": "Your licence permits a medication, but your employer's clinical guideline requires an online physician consult before giving it to patients in this age group. What should you do?",
+   "questionZh": "你的执照允许使用某种药，但雇主的临床指南规定：给这个年龄段的患者用之前必须先在线咨询医生。你该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give it — the licence is the higher authority",
+     "zh": "直接给——执照是更高的授权"
+    },
+    {
+     "key": "B",
+     "en": "Consult as the guideline requires, then document the consult and the advice received",
+     "zh": "按指南先咨询，再记录咨询过程和得到的建议"
+    },
+    {
+     "key": "C",
+     "en": "Withhold it and do not mention it to anyone",
+     "zh": "不给，也不跟任何人提"
+    },
+    {
+     "key": "D",
+     "en": "Give half the usual dose without consulting",
+     "zh": "不咨询，给常规剂量的一半"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "You must practise within BOTH your licensed scope and your employer's protocols — whichever is more restrictive applies. A licence defines what you may legally do; an employer guideline can add conditions such as a mandatory consult. Following the consult requirement and documenting the reason and the advice protects the patient and you. The AET course uses the example of IN ketamine in children, where BCEHS requires a CliniCall consult.",
+   "explanationZh": "你必须同时守住执照范围和雇主规程——两者中更严格的那个说了算。执照规定你在法律上可以做什么；雇主指南可以额外加条件，比如强制咨询。按要求先咨询，并记录原因和得到的建议，既保护患者也保护你自己。AET 课上举的例子是给儿童鼻喷氯胺酮：BCEHS 要求先打 CliniCall 咨询。"
+  }
+ ]
+}

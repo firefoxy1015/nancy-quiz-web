@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=15';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=16';
 
 let session = null; // current exam session (mock or practice)
 
@@ -64,6 +64,12 @@ export async function renderWrittenHub(el) {
       </div>
     </div>
     <div class="card">
+      <h3 style="margin-top:0">${ico('target')} AET EXAMS · ${t('Course-sync practice', '课程同步练习')}</h3>
+      ${bi('Original practice questions organised by the 25 online modules of the AET PCP course, with notes wherever the course teaches BCEHS practice that the licensing exam answers differently.',
+           '按 AET PCP 课程 25 门线上模块编排的原创练习题；课上教的 BCEHS 做法和执照考试答案不一样的地方，解析里都标出来了。')}
+      <div class="btn-row"><a class="btn secondary" href="#/aet">${t('Open AET modules', '打开 AET 模块')} →</a></div>
+    </div>
+    <div class="card">
       <h3 style="margin-top:0">${ico('x')} ${t('Wrong-answer book', '错题本')}</h3>
       ${bi('Re-drill every question you have ever missed until none are left.', '把你错过的每道题反复刷，刷到清零为止。')}
       <div class="btn-row"><a class="btn secondary" href="#/wrong">${t('Open', '打开')} (${Object.keys(S.wrong).length})</a></div>
@@ -77,10 +83,48 @@ export async function renderWrittenHub(el) {
 
 function countBy(arr, fn) { const m = {}; for (const x of arr) { const k = fn(x) || '?'; m[k] = (m[k] || 0) + 1; } return m; }
 
+/* ---------------- AET course-sync ---------------- */
+export async function renderAetHub(el) {
+  const data = await loadJSON('./data/aet/modules.json');
+  if (!data) { el.innerHTML = emptyBank(); return; }
+  const bank = await loadBank('pcp');
+  const n = countBy(bank.filter(q => q.aet), q => q.aet);
+  const total = Object.values(n).reduce((a, b) => a + b, 0);
+  const byWeekend = {};
+  for (const m of data.modules) (byWeekend[m.weekend] = byWeekend[m.weekend] || []).push(m);
+  el.innerHTML = `
+    <div class="card">
+      <h2 style="margin-top:0">${ico('target')} ${t(data.meta.titleEn, data.meta.titleZh)}</h2>
+      ${bi(data.meta.noteEn, data.meta.noteZh)}
+      <div class="stat-row" style="margin-top:12px">
+        <div class="stat"><b>${total}</b><span>${t('questions', '题')}</span></div>
+        <div class="stat"><b>${Object.keys(n).length} / ${data.modules.length}</b><span>${t('modules ready', '模块已上题')}</span></div>
+      </div>
+      ${total ? `<div class="btn-row"><a class="btn" href="#/practice?aet=all">${t('Practise all AET questions', '全部 AET 题混合练习')}</a></div>` : ''}
+    </div>
+    ${Object.keys(byWeekend).sort((a, b) => a - b).map(w => `
+      <h3 style="margin:18px 4px 8px">${t('Weekend ' + w, '第 ' + w + ' 周末')}</h3>
+      <div class="list-wrap">${byWeekend[w].map(m => n[m.code]
+        ? `<a class="list-item" href="#/practice?aet=${encodeURIComponent(m.code)}" style="color:inherit;text-decoration:none">
+            <span class="tag-count" style="flex:0 0 auto">${esc(m.code)}</span>
+            <span>${bi(m.titleEn, m.titleZh, 'span')}</span>
+            <span class="tag-count" style="color:var(--accent);border-color:var(--accent)">${n[m.code]}</span>
+            <span class="li-arrow">›</span></a>`
+        : `<div class="list-item" style="opacity:.55">
+            <span class="tag-count" style="flex:0 0 auto">${esc(m.code)}</span>
+            <span>${bi(m.titleEn, m.titleZh, 'span')}</span>
+            <span class="tiny" style="margin-left:auto">${t('coming soon', '待上题')}</span></div>`).join('')}
+      </div>`).join('')}
+    <div class="btn-row"><a class="btn ghost" href="#/written">← ${t('Written Exam Camp', '笔试营')}</a></div>`;
+}
+
 /* ---------------- practice ---------------- */
 export async function renderPractice(el, arg, params) {
   const tr = S.track;
-  const bank = await loadBank(tr);
+  // AET course-sync items are PCP-only; an EMR learner opening an AET module
+  // still needs to see them, so that drill always draws from the PCP pool
+  const aet = params.aet || '';
+  const bank = await loadBank(aet ? 'pcp' : tr);
   if (!bank.length) { el.innerHTML = emptyBank(); return; }
   // filter by clinical-domain group, not raw topic — the bank's 255 authoring
   // topics are far too granular to scroll through
@@ -96,25 +140,29 @@ export async function renderPractice(el, arg, params) {
   const areas = Object.entries(countBy(bank, q => q.cpcfArea)).sort();
   let pool = bank.filter(q => (group === 'all' || topicGroup(q.topic) === group)
     && (area === 'all' || q.cpcfArea === area)
-    && (!pop || q.population === pop));
-  if (!session || session.mode !== 'practice' || session.filterKey !== group + area + pop) {
-    session = { mode: 'practice', filterKey: group + area + pop, order: shuffle(pool.map((_, i) => i)), pos: 0, right: 0, done: 0, pool };
+    && (!pop || q.population === pop)
+    && (!aet || (aet === 'all' ? !!q.aet : q.aet === aet)));
+  const key = group + area + pop + '|' + aet;
+  if (!session || session.mode !== 'practice' || session.filterKey !== key) {
+    session = { mode: 'practice', filterKey: key, order: shuffle(pool.map((_, i) => i)), pos: 0, right: 0, done: 0, pool };
   }
-  drawPracticeQ(el, groups, gCount, areas, group, area, pop);
+  drawPracticeQ(el, groups, gCount, areas, group, area, pop, aet);
 }
 const POP_LABEL = { geriatric: ['Geriatric patients', '老年患者'], pediatric: ['Pediatric patients', '儿科患者'], neonatal: ['Neonatal patients', '新生儿患者'], adult: ['Adult patients', '成人患者'] };
-function drawPracticeQ(el, groups, gCount, areas, group, area, pop) {
+function drawPracticeQ(el, groups, gCount, areas, group, area, pop, aet) {
   const q = session.pool[session.order[session.pos]];
   el.innerHTML = `
     <div class="q-wrap">
       <div class="card">
         <div class="q-meta">
           <div>
+            ${aet ? `<b>AET ${aet === 'all' ? t('· all modules', '· 全部模块') : esc(aet)}</b>
+              <a class="tiny" href="#/aet" style="margin-left:6px">← ${t('AET modules', 'AET 模块')}</a>` : `
             <select id="topicSel" class="lang-btn">${['all', ...groups].map(g =>
               `<option value="${g}" ${g === group ? 'selected' : ''}>${g === 'all' ? t('All topics', '全部主题')
                 : (g === 'other' ? t('Other', '其他') : groupLabel(g)) + ' (' + gCount[g] + ')'}</option>`).join('')}</select>
             <select id="areaSel" class="lang-btn">${['all', ...areas.map(x => x[0])].map(a =>
-              `<option value="${a}" ${a === area ? 'selected' : ''}>${a === 'all' ? t('All areas', '全部能力域') : 'Area ' + a}</option>`).join('')}</select>
+              `<option value="${a}" ${a === area ? 'selected' : ''}>${a === 'all' ? t('All areas', '全部能力域') : 'Area ' + a}</option>`).join('')}</select>`}
           </div>
           <div class="muted">${t('Score', '得分')}: <b>${session.right}/${session.done}</b> · ${session.pool.length} ${t('in pool', '题可刷')}</div>
         </div>
@@ -129,9 +177,11 @@ function drawPracticeQ(el, groups, gCount, areas, group, area, pop) {
         <p class="tiny">${t('Keys: A–D answer · Enter next', '键盘：A–D 选答案 · Enter 下一题')}</p>
       </div>
     </div>`;
-  el.querySelector('#topicSel').onchange = e => nav('/practice?topic=' + encodeURIComponent(e.target.value) + '&area=' + area);
-  el.querySelector('#areaSel').onchange = e => nav('/practice?topic=' + group + '&area=' + encodeURIComponent(e.target.value));
-  const goNext = () => { advance(); drawPracticeQ(el, groups, gCount, areas, group, area, pop); };
+  if (!aet) {
+    el.querySelector('#topicSel').onchange = e => nav('/practice?topic=' + encodeURIComponent(e.target.value) + '&area=' + area);
+    el.querySelector('#areaSel').onchange = e => nav('/practice?topic=' + group + '&area=' + encodeURIComponent(e.target.value));
+  }
+  const goNext = () => { advance(); drawPracticeQ(el, groups, gCount, areas, group, area, pop, aet); };
   el.querySelector('#skipBtn').onclick = goNext;
   if (q) bindOptions(el, q, () => { // after answer
     const nextBtn = document.createElement('button');

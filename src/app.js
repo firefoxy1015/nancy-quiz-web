@@ -1,9 +1,9 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong } from './exam.js?v=15';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=15';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=15';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=16';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=16';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=16';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -46,7 +46,7 @@ export function esc(s) {
 // Data files carry the same build tag as the modules. Without it the browser
 // serves a cached copy after a content update and users silently keep the old
 // question bank — bump this whenever data/ changes.
-const DATA_V = '15';
+const DATA_V = '16';
 const cache = {};
 export async function loadJSON(path) {
   if (cache[path]) return cache[path];
@@ -143,7 +143,7 @@ export async function loadBank(track) { // merged question pool for a licence tr
 const routes = {
   '': renderHome, 'home': renderHome, 'guide': renderGuide, 'info': renderExamInfo,
   'study': renderStudyHub, 'study-section': renderStudySection,
-  'written': renderWrittenHub, 'practice': renderPractice, 'mock': renderMock, 'wrong': renderWrong,
+  'written': renderWrittenHub, 'practice': renderPractice, 'mock': renderMock, 'wrong': renderWrong, 'aet': renderAetHub,
   'practical': renderPracticalHub, 'scenarios': renderScenarioList, 'scenario': renderScenarioPlayer,
   'rubric': renderRubricBrowser, 'autofails': renderAutoFails,
   'juris': renderJurisHub,
@@ -175,7 +175,7 @@ async function route() {
   updateNav(name);
 }
 function updateNav(name) {
-  const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', juris: 'juris' };
+  const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'written', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', juris: 'juris' };
   document.querySelectorAll('#bottomNav a').forEach(a => a.classList.toggle('active', a.dataset.nav === (map[name] || '')));
   syncTrackUI();
 }
