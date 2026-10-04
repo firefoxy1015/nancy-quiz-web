@@ -41,9 +41,10 @@ bad = 0
 for path in sys.argv[1:]:
     d = json.load(io.open(path, encoding='utf-8'))
     share, ratio = length_bias(d['questions'])
-    flag = share > 0.40 or ratio > 1.35
+    # too low is a cue as well: "never pick the longest" would then remove one option for free
+    flag = share > 0.40 or share < 0.15 or ratio > 1.35
     print(f'  length bias: key is longest option in {share:.0%} of items, key/distractor length ratio {ratio:.2f}'
-          + ('  <-- FAIL (limits: ≤40%, ≤1.35)' if flag else ''))
+          + ('  <-- FAIL (limits: 15–40%, ≤1.35)' if flag else ''))
     bad += flag
     for q in d['questions']:
         texts = [q.get('questionEn', ''), q.get('explanationEn', '')] + [o.get('en', '') for o in q.get('options', [])]
