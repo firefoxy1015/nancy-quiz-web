@@ -1,9 +1,9 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=17';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=17';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=17';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=18';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=18';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=18';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -180,6 +180,10 @@ function updateNav(name) {
   syncTrackUI();
 }
 function syncTrackUI() {
+  if (S.track) document.documentElement.dataset.track = S.track;
+  else delete document.documentElement.dataset.track;
+  const tc = document.querySelector('meta[name="theme-color"][media*="light"]');
+  if (tc) tc.content = S.track === 'emr' ? '#1d4ed8' : '#0d5c5c';
   document.querySelectorAll('#trackSwitch button').forEach(b => {
     b.className = '';
     if (S.track === b.dataset.track) b.classList.add('active-' + S.track);

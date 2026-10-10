@@ -103,6 +103,23 @@
   }
 }
 
+/* EMR track: the whole UI takes the EMR blue instead of the PCP petrol,
+   so the two tracks are distinguishable at a glance on every page. */
+:root[data-track="emr"] {
+  --accent: #1d4ed8; --accent-hover: #1e40af; --accent-soft: #e4ebfb; --accent-ink: #1e40af;
+  --ring: 0 0 0 3px rgba(29, 78, 216, .18);
+}
+:root[data-theme="dark"][data-track="emr"] {
+  --accent: #7aa2f7; --accent-hover: #9ab8fa; --accent-soft: #1a2340; --accent-ink: #a8c0fb;
+  --ring: 0 0 0 3px rgba(122, 162, 247, .25);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])[data-track="emr"] {
+    --accent: #7aa2f7; --accent-hover: #9ab8fa; --accent-soft: #1a2340; --accent-ink: #a8c0fb;
+    --ring: 0 0 0 3px rgba(122, 162, 247, .25);
+  }
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
 /* background lives on <html>, not <body>: a body background is propagated to
