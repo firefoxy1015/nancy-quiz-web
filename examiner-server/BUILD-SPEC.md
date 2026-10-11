@@ -202,10 +202,11 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 ## 11. 已知问题与待办（按优先级）
 
 ### P1 收尾（接手先做）
-- [ ] **E2E 第二轮复核**：看 `scratchpad/e2e_md02_run2.txt`（如不存在就重跑），确认：事件不再重报、体征不再重复播报、协议缺失是 25 不是 100、交接"缺失"判断正确。
-- [ ] 模型偶尔漏记明显动作（例：说了 "Gloves and eye protection on" 没给 E04）。缓解：系统提示里把 `expected` 的 `triggers` 强调为"必须逐条对照"；或在 `_normalize_events` 后做一次**基于 triggers 的本地关键词兜底匹配**（仅对 weight ≤15 的项，避免误给高权重分）。
+- [x] E2E 四轮迭代已做完（2026-10-11）：事件不再重报（277→51）、体征不重复播报、协议缺失封顶 25、同句三项体征算一组、动作同句复评算数、打包/RTC/通报/交接关键词兜底、交接"缺失"以考生原话+剧本事实为准、被原话否定的主观扣分自动剔除。最后一轮输出在 `scratchpad/e2e_md02_run4.txt`。
+- [ ] 模型偶尔漏记明显动作（例：说了 "Gloves and eye protection on" 没给 E04）。目前靠"同 itemId 已有事件则不扣"兜底（只对 weight<100 生效）。可做：基于 `expected[].triggers` 的本地关键词匹配（仅 weight ≤15 的项，避免误给高权重分）。
 - [ ] 模型回话里的 "Noted." 过多；患者答史一次吐六个问题的答案（真实患者会一个个答）。提示词微调。
-- [ ] 速度：试 `output_config={'effort': 'low'}`（验证 cc-vibe 是否剥掉）；或 Sonnet 5.5 做逐轮、Opus 做收尾，用金标准脚本对比识别准确率后决定。
+- [ ] 速度：每轮 10-17 秒。试 `output_config={'effort': 'low'}`（验证 cc-vibe 是否剥掉）；或 Sonnet 5.5 做逐轮、Opus 做收尾，用 `e2e_candidate.py` 对比识别准确率后决定。
+- [ ] 收尾评审偶尔把"PCR 漏了一个细节"报成 mismatch（应为 1% 轻微缺陷而非 3% 矛盾）；已在提示词里写明，若仍出现改为引擎只接受含 "vs" 对比的条目。
 
 ### P2 内容
 - [ ] 剩余 33 场剧本（按 §5.1 管线，每代理 1 份；优先通用池 16 场，再 EMR 专属 20 场）。
