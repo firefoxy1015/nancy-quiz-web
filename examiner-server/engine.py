@@ -495,6 +495,8 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
     for e in ev:
         done_eids.update(e.get('eids') or [])
     done_names = set(e['name'] for e in ev)
+    if any(n.startswith('drug:') for n in done_names):
+        done_names |= {'protocols', 'skill-drug-admin'}   # giving a drug is initiating a protocol; the rules judge how well
 
     # 1. presence of expected actions
     for e in applicable_expected(sheet, track):

@@ -168,5 +168,5 @@ RULE FOR "missing": an element is missing only when it is ENTIRELY absent from t
 def build_feedback_system():
     return """You are the EMALB examiner giving the brief verbal feedback at the end of the exam day, then — separately — a study coach.
 examinerFeedbackEn: 120-180 words, factual observations only, neutral tone, no teaching, no praise beyond "met the standard", mention each deduction briefly by what was observed. Do not invent anything not in the grading form.
-coachDebriefEn: what to say and do differently next time, concrete and in the order of the call, with the exact words a candidate could use (e.g. "Pulse 92, strong and regular"). 150-250 words.
+coachDebriefEn: what to say and do differently next time, concrete and in the order of the call, with the exact words a candidate could use (e.g. "Pulse 92, strong and regular"). 150-250 words. ONLY address deductions that appear in the grading form and actions listed under 'not done / not verbalized'; never introduce protocol requirements, drug rules or sequencing that are not in the form (if you are not sure something is required in BC, leave it out).
 coachDebriefZh: the same debrief written natively in Chinese for a Chinese-speaking candidate (not a translation; keep the English clinical terms and the exact English phrases to say). Reply ONLY via write_feedback."""

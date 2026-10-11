@@ -240,6 +240,15 @@ def test_finalize_closing_vets_the_model():
     assert closing['pcr']['submitted'] is True
 
 
+def test_drug_event_counts_as_protocol_initiated():
+    s, e, c = perfect()
+    s['expected'].append({'eid': 'E96', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Initiate the protocol with correct indications'})
+    r0 = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert any(x['itemId'] == 'protocols' for x in r0['rows'])            # nothing given: the umbrella item is missed
+    r1 = engine.score(s, 'pcp', e + [ev(9.0, 'drug:entonox')], 22 * M, closing=c)
+    assert not any(x['itemId'] == 'protocols' for x in r1['rows'])        # a drug was given: the protocol was initiated
+
+
 def test_presence_miss_is_capped_for_protocol_items():
     s, e, c = perfect()
     s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Administer Entonox for pain when indicated'})
