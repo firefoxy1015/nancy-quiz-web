@@ -7,13 +7,14 @@
   <meta name="theme-color" content="#0d5c5c" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0d1211" media="(prefers-color-scheme: dark)" />
   <title>BC EMR/PCP Exam Prep · BC急救员考证系统</title>
-  <link rel="stylesheet" href="./styles.css?v=18" />
+  <link rel="stylesheet" href="./styles.css?v=19" />
   <script>
-    // apply the saved theme and track colour before first paint to avoid a flash
+    // apply the saved theme, track colour and language before first paint to avoid a flash
     try {
       var s = JSON.parse(localStorage.getItem('bcprep2') || '{}');
       if (s.theme === 'light' || s.theme === 'dark') document.documentElement.dataset.theme = s.theme;
       if (s.track === 'emr' || s.track === 'pcp') document.documentElement.dataset.track = s.track;
+      document.documentElement.dataset.lang = (s.langChosen && (s.lang === 'zh' || s.lang === 'both')) ? s.lang : 'en';
     } catch (e) {}
   </script>
 </head>
@@ -57,7 +58,7 @@
           <button data-track="emr">EMR</button>
           <button data-track="pcp">PCP</button>
         </div>
-        <button class="lang-btn" id="langBtn" title="Language 语言">EN+中</button>
+        <button class="lang-btn" id="langBtn" title="Language 语言">EN</button>
         <button class="icon-btn" id="themeBtn" title="Theme 主题" aria-label="Toggle theme">
           <svg class="icon icon-sun"><use href="#i-sun"/></svg>
           <svg class="icon icon-moon"><use href="#i-moon"/></svg>
@@ -66,23 +67,23 @@
     </header>
 
     <nav class="bottom-nav" id="bottomNav">
-      <a href="#/" data-nav="home"><span class="nav-ico"><svg class="icon"><use href="#i-home"/></svg></span><span class="nav-label">Home<br>首页</span></a>
-      <a href="#/study" data-nav="study"><span class="nav-ico"><svg class="icon"><use href="#i-book"/></svg></span><span class="nav-label">Study<br>学习</span></a>
-      <a href="#/written" data-nav="written"><span class="nav-ico"><svg class="icon"><use href="#i-pen"/></svg></span><span class="nav-label">Written<br>笔试</span></a>
-      <a href="#/practical" data-nav="practical"><span class="nav-ico"><svg class="icon"><use href="#i-ambulance"/></svg></span><span class="nav-label">Practical<br>实操</span></a>
-      <a href="#/juris" data-nav="juris"><span class="nav-ico"><svg class="icon"><use href="#i-scale"/></svg></span><span class="nav-label">Juris<br>法规</span></a>
+      <a href="#/" data-nav="home"><span class="nav-ico"><svg class="icon"><use href="#i-home"/></svg></span><span class="nav-label"><span class="t-en">Home</span><br class="t-both"><span class="t-zh">首页</span></span></a>
+      <a href="#/study" data-nav="study"><span class="nav-ico"><svg class="icon"><use href="#i-book"/></svg></span><span class="nav-label"><span class="t-en">Study</span><br class="t-both"><span class="t-zh">学习</span></span></a>
+      <a href="#/written" data-nav="written"><span class="nav-ico"><svg class="icon"><use href="#i-pen"/></svg></span><span class="nav-label"><span class="t-en">Written</span><br class="t-both"><span class="t-zh">笔试</span></span></a>
+      <a href="#/practical" data-nav="practical"><span class="nav-ico"><svg class="icon"><use href="#i-ambulance"/></svg></span><span class="nav-label"><span class="t-en">Practical</span><br class="t-both"><span class="t-zh">实操</span></span></a>
+      <a href="#/juris" data-nav="juris"><span class="nav-ico"><svg class="icon"><use href="#i-scale"/></svg></span><span class="nav-label"><span class="t-en">Juris</span><br class="t-both"><span class="t-zh">法规</span></span></a>
     </nav>
 
     <main id="view" class="view-root"></main>
 
     <footer class="site-footer">
-      <p><strong>Unofficial study tool 非官方备考工具</strong> — Not affiliated with EMALB or COPR. Practice content is original and modeled on public official documents. Always verify with
+      <p><strong>Unofficial study tool<span class="t-zh"> 非官方备考工具</span></strong> — Not affiliated with EMALB or COPR. Practice content is original and modeled on public official documents. Always verify with
       <a href="https://www2.gov.bc.ca/gov/content/health/about-bc-s-health-care-system/partners/colleges-boards-and-commissions/emergency-medical-assistants-licensing-board" target="_blank" rel="noopener">EMALB</a> ·
       <a href="https://copr.ca" target="_blank" rel="noopener">COPR</a>.
-      与 EMALB/COPR 无关联；练习内容为自研模拟，一切以官方文件为准。</p>
+      <span class="t-zh">与 EMALB/COPR 无关联；练习内容为自研模拟，一切以官方文件为准。</span></p>
       <p class="align-note">Content aligned to: BC Provincial Examination Guidelines (June 15, 2026) · EMALB Grading Criteria (Mar 2025) · COPR Handbook (Jul 9, 2026) · CPCF 2024</p>
     </footer>
   </div>
-  <script type="module" src="./src/app.js?v=18"></script>
+  <script type="module" src="./src/app.js?v=19"></script>
 </body>
 </html>

@@ -1,19 +1,25 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=18';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=18';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=18';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=19';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=19';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=19';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
 export const S = loadState();
 function loadState() {
-  try { return Object.assign(defaultState(), JSON.parse(localStorage.getItem(LS_KEY) || '{}')); }
+  try {
+    const st = Object.assign(defaultState(), JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
+    // English is the default; bilingual/Chinese is an explicit choice. States saved
+    // before this rule carried the old 'both' default without the visitor choosing it.
+    if (!st.langChosen) st.lang = 'en';
+    return st;
+  }
   catch { return defaultState(); }
 }
 function defaultState() {
-  return { track: null, lang: 'both', theme: 'auto', wrong: {}, mockHistory: [], scenarioHistory: [], practiceStats: {}, jurisHistory: [] };
+  return { track: null, lang: 'en', theme: 'auto', wrong: {}, mockHistory: [], scenarioHistory: [], practiceStats: {}, jurisHistory: [] };
 }
 export function save() { localStorage.setItem(LS_KEY, JSON.stringify(S)); }
 
@@ -188,6 +194,8 @@ function syncTrackUI() {
     b.className = '';
     if (S.track === b.dataset.track) b.classList.add('active-' + S.track);
   });
+  document.documentElement.dataset.lang = S.lang;
+  document.documentElement.lang = S.lang === 'zh' ? 'zh' : 'en';
   const langBtn = document.getElementById('langBtn');
   langBtn.textContent = S.lang === 'both' ? 'EN+中' : (S.lang === 'en' ? 'EN' : '中文');
 }
@@ -339,6 +347,7 @@ document.getElementById('trackSwitch').addEventListener('click', e => {
 });
 document.getElementById('langBtn').addEventListener('click', () => {
   S.lang = S.lang === 'both' ? 'en' : (S.lang === 'en' ? 'zh' : 'both');
+  S.langChosen = true;
   save(); route();
 });
 document.getElementById('view').addEventListener('click', e => {

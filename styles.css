@@ -242,6 +242,9 @@ h3 { font-size: 1.03rem; }
 .lang-en .bi-zh { display: none; }
 .lang-zh .bi-en { display: none; }
 .lang-zh .bi-zh { color: inherit; font-size: 1em; margin-top: 0; }
+/* chrome outside #view (nav, footer) follows the same switch via the root attribute */
+:root[data-lang="en"] .t-zh, :root[data-lang="en"] .t-both { display: none; }
+:root[data-lang="zh"] .t-en, :root[data-lang="zh"] .t-both { display: none; }
 
 /* ---------------- buttons ---------------- */
 .btn {
