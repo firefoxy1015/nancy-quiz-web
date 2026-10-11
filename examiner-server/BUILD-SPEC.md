@@ -207,7 +207,7 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 - [ ] 教练复盘偶尔编造不存在的协议要求（例："给 ASA 前必须测血糖"）；已在提示词里限制为只谈评分表里的项，若仍出现改为把 `expected[].actionEn` 清单显式传给反馈调用并要求逐条引用。
 - [ ] 模型偶尔漏记明显动作（例：说了 "Gloves and eye protection on" 没给 E04）。目前靠"同 itemId 已有事件则不扣"兜底（只对 weight<100 生效）。可做：基于 `expected[].triggers` 的本地关键词匹配（仅 weight ≤15 的项，避免误给高权重分）。
 - [ ] 模型回话里的 "Noted." 过多；患者答史一次吐六个问题的答案（真实患者会一个个答）。提示词微调。
-- [ ] 速度：每轮 10-17 秒。试 `output_config={'effort': 'low'}`（验证 cc-vibe 是否剥掉）；或 Sonnet 5.5 做逐轮、Opus 做收尾，用 `e2e_candidate.py` 对比识别准确率后决定。
+- [x] 速度实测（`tools/speed_probe.py`，2026-10-11）：Opus 5.5 每轮约 9 秒，effort default 和 low 一样（cc-vibe 多半剥掉了 effort）；**Sonnet 5.5 反而慢（20-22 秒）且无视"只报最新一句"把全部旧动作重报**——结论：逐轮也用 Opus 5.5，不换 Sonnet。延迟主要来自输出 token（约 450）；下一步可做：`events[].key` 改为可选以减少输出、或流式（`eager_input_streaming`）边生成边播报 `say`。
 - [ ] 收尾评审偶尔把"PCR 漏了一个细节"报成 mismatch（应为 1% 轻微缺陷而非 3% 矛盾）；已在提示词里写明，若仍出现改为引擎只接受含 "vs" 对比的条目。
 
 ### P2 内容
