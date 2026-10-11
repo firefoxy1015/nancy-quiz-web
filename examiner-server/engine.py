@@ -121,7 +121,7 @@ def derive_vitals_sets(events):
                     sets[-1]['items'].setdefault(name, ev['t'])
                 continue
             # a lone core vital (e.g. a BP recheck before a nitro dose) is a spot check, not a set
-            partner = any(x['name'] in VITAL_ITEMS and x['name'] != name and 0 < x['t'] - ev['t'] <= VITALS_SET_MAX_MS for x in vit[i + 1:])
+            partner = any(x['name'] in VITAL_ITEMS and x['name'] != name and 0 <= x['t'] - ev['t'] <= VITALS_SET_MAX_MS for x in vit[i + 1:])
             if not partner:
                 continue
             cur = {'start': ev['t'], 'items': {}, 'complete': None}
@@ -326,6 +326,26 @@ CLOSING_EVIDENCE = {   # regex evidence that an element IS present in a report
 }
 
 
+QUALITY_VETO = [   # (substring of the official error string, regex in the candidate's words that refutes it)
+    ('prime the S/L spray', r'\bprim(e|ed|ing)\b'),
+    ('verbalize strength and/or rhythm', r'\b(strength|rhythm|regular|irregular|strong|weak|thready|bounding)\b'),
+    ('verbalize depth', r'\b(depth|shallow|deep|adequate|laboured|labored)\b'),
+    ('verbalize lubricating', r'\blubric'),
+    ('does not verbalize a', r'\b(alert|avpu)\b'),
+]
+
+
+def veto_quality(quality, candidate_text):
+    low = ' ' + (candidate_text or '').lower() + ' '
+    out = []
+    for q in quality or []:
+        err = (q.get('errorEn') or '').lower()
+        if any(sub.lower() in err and _re.search(rx, low) for sub, rx in QUALITY_VETO):
+            continue
+        out.append(q)
+    return out
+
+
 def closing_sanity(missing, report_text):
     """Drop 'missing' elements that the candidate's own report plainly contains."""
     low = ' ' + (report_text or '').lower() + ' '
@@ -498,7 +518,7 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
         for m in moves:
             if end_ms - m['t'] < 60000:
                 continue   # scenario ended right after the move; no chance to reassess
-            if not any(m['t'] < r <= m['t'] + REASSESS_WINDOW_MS for r in reassess):
+            if not any(m['t'] <= r <= m['t'] + REASSESS_WINDOW_MS for r in reassess):
                 form.add('ongoing-abc-i', 15, 'Does not reassess A.B.C. I\'s after each major "move"', {'t': m['t'], 'quote': m.get('quote', m['name'])})
                 break
     elif not reassess:

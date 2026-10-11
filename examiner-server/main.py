@@ -248,10 +248,12 @@ def finish(req: FinishReq):
             tms = (tsec or 0) * 1000 if (tsec or 0) < 10000 else tsec
             near = sorted(cand, key=lambda e: abs(e.get('t', 0) - tms))[:2]
             return ' '.join(e.get('text', '') for e in near)
+        facts = {'notification': sheet.get('notificationFacts') or {}, 'handoff': sheet.get('handoffFacts') or {}}
         for key in ('notification', 'handoff'):
             c = closing[key]
             if c.get('given'):
-                c['missing'] = engine.closing_sanity(c.get('missing'), report_near(c.get('t')))
+                c['missing'] = [m for m in engine.closing_sanity(c.get('missing'), report_near(c.get('t'))) if facts[key].get(m)]
+        quality = engine.veto_quality(quality, ' '.join(e.get('text', '') for e in cand))
         closing['pcr'] = dict(inp.get('pcr', {}), submitted=pcr_submitted)
         quality = inp.get('quality') or []
     form = engine.score(sheet, track, req.events, end_ms, closing=closing, quality=quality)

@@ -174,6 +174,38 @@ def test_closing_sanity_trusts_the_candidates_words():
     assert engine.closing_sanity(['initialVitals', 'finalVitals', 'meds', 'allergies', 'pmhx'], report) == ['pmhx']
 
 
+def test_same_utterance_vitals_form_a_complete_set():
+    s, e, c = perfect()
+    e = [x for x in e if x['name'] not in ('blood-pressure', 'pulse', 'respirations', 'gcs')]
+    e += [ev(8.2, 'blood-pressure'), ev(8.2, 'pulse', [], ['rate', 'rhythm', 'strength']), ev(8.2, 'respirations', [], ['rate', 'depth']), ev(8.2, 'gcs')]
+    e += [ev(11.0, 'blood-pressure')]                                                   # lone recheck before a dose
+    e += [ev(15.0, 'blood-pressure'), ev(15.0, 'pulse'), ev(15.0, 'respirations')]   # 6.8 min after set 1: inside the priority interval
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert [v['complete'] for v in r['vitalsSets']] == [int(8.2 * M), 15 * M], r['vitalsSets']
+    assert not any(x['itemId'] == 'overall-call-management' for x in r['rows']), r['rows']
+    sheet = dict(s, protocolRules=[{'id': 'x', 'check': 'ordered', 'first': 'vitals-set-1-complete', 'then': 'drug:entonox',
+                                    'deduct': {'itemId': 'protocols', 'weight': 100, 'errorEn': 'Does not complete baseline vital signs prior to initiating the protocol'}}])
+    r2 = engine.score(sheet, 'pcp', e + [ev(9.5, 'drug:entonox')], 22 * M, closing=c)
+    assert not any(x['itemId'] == 'protocols' for x in r2['rows']), r2['rows']
+
+
+def test_reassessment_in_same_utterance_as_move_counts():
+    s, e, c = perfect()
+    e = [x for x in e if x['name'] not in ('ongoing-abc-i',) and not x['name'].startswith('move:')]
+    e += [ev(10.0, 'move:lift-to-cot'), ev(10.0, 'ongoing-abc-i'), ev(12.0, 'move:load'), ev(12.0, 'ongoing-abc-i')]
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert not any(x['itemId'] == 'ongoing-abc-i' for x in r['rows']), r['rows']
+
+
+def test_quality_veto_drops_refuted_picks():
+    q = [{'itemId': 'skill-drug-admin', 'weight': 10, 'errorEn': 'Does not verbalize they would prime the S/L spray prior to use', 'quote': 'priming', 't': 1},
+         {'itemId': 'pulse', 'weight': 3, 'errorEn': 'Consistently fails to verbalize strength and/or rhythm two or more times', 'quote': 'pulse 96', 't': 2}]
+    kept = engine.veto_quality(q, "I'm priming the nitro spray. Pulse 96.")
+    assert [x['itemId'] for x in kept] == ['pulse']
+    kept2 = engine.veto_quality(q, "Pulse 96, strong and regular. Nitro spray, one spray.")
+    assert [x['itemId'] for x in kept2] == ['skill-drug-admin']
+
+
 def test_presence_miss_is_capped_for_protocol_items():
     s, e, c = perfect()
     s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Verbalize the maximum doses'})
