@@ -1,0 +1,1370 @@
+{
+ "id": "md-04",
+ "titleEn": "Suspected Opioid Overdose - Ventilate First, Then Naloxone",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-04",
+ "patient": {
+  "name": "Jordan Miles",
+  "age": 31,
+  "sex": "male",
+  "affectEn": "at first completely unresponsive, lying on his back in a hallway, lips blue, chest barely moving; after naloxone he wakes confused and irritable, tries to pull off the oxygen mask and vomits",
+  "speechEn": "no speech at all while unresponsive (history comes from building staff and a resident). After naloxone: short, irritable, slightly confused answers; cooperative if spoken to calmly."
+ },
+ "scene": {
+  "settingEn": "Single-room-occupancy hotel in Vancouver's Downtown Eastside, 0210 hrs. Dim, narrow hallway with worn carpet; room temperature about 20 degrees C. Building staff hold the door. The patient lies on his back on the hallway floor. Beside him: a used syringe with the needle exposed and a piece of foil. Two other residents watch from a doorway; they are not aggressive. Police are en route but not yet on scene. One patient.",
+  "hazardsEn": [
+   "used syringe with an exposed needle beside the patient - a genuine sharps hazard that must be managed before kneeling or working over him",
+   "drug paraphernalia (foil) beside the patient",
+   "dim, narrow, confined hallway",
+   "two residents watching from a doorway (not aggressive); police not yet on scene"
+  ],
+  "bystanders": [
+   {
+    "who": "building staff member",
+    "knowsEn": "Found him down in the hallway roughly 5 minutes before calling 911 for help. He was 'barely breathing' and blue around the lips. Did not see him fall, no trauma seen, no seizure seen. Is holding the door and will help with doors or lighting if asked. Does not know his medical history."
+   },
+   {
+    "who": "resident (one of the two in the doorway)",
+    "knowsEn": "Saw him smoke off foil and then inject about 20 minutes ago. Believes it was 'down' (fentanyl-contaminated). He was alone in the hallway when he used. No fall, no seizure seen. Does not know his medications or allergies."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "sharps container",
+   "bag-valve mask with oxygen reservoir and tubing",
+   "oral and nasal airways (OPA/NPA)",
+   "portable suction unit",
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "thermometer",
+   "naloxone for IM injection with syringes and IM needles, and intranasal naloxone",
+   "blankets",
+   "cot (stretcher)",
+   "AED",
+   "PCP only: IV start kit with normal saline"
+  ]
+ },
+ "dispatchEn": "0210 hrs. Code 3 to a single-room-occupancy hotel in Vancouver's Downtown Eastside. 31-year-old male found unresponsive in a hallway by building staff. Police are en route but not yet on scene. Hospital is 7 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: staff report he is 'barely breathing' and blue around the lips. A bystander says he used 'down' about 20 minutes ago.",
+ "arrivalEn": "Building staff hold the front door and lead you down a dim, narrow hallway with worn carpet. A man lies on his back on the floor. Right beside him is a used syringe with the needle exposed and a piece of foil. Two residents watch from a doorway; they are not aggressive. Police are not on scene yet. Room temperature. One patient.",
+ "firstLookEn": "A 31-year-old man on his back on the hallway floor, lips blue, chest barely moving, snoring sounds. He does not react to your arrival. A used syringe with an exposed needle and a piece of foil lie right beside his arm.",
+ "primary": {
+  "locEn": "Unresponsive: no response to voice and no response to a trapezius pinch (AVPU = U). He cannot protect his own airway.",
+  "airwayEn": "Snoring respirations, with vomit residue at the corner of the mouth - the airway needs SUCTION. Once suctioned, an OPA is tolerated (no gag reflex).",
+  "breathingEn": "Respirations 4 per minute, shallow and ineffective - inadequate; the chest barely moves. (Once BVM ventilations are started and chest rise is confirmed, the chest rises with each ventilation.)",
+  "circulationEn": "Carotid pulse 116, weak. Radial pulse absent. No external bleeding.",
+  "rbsEn": "Modified rapid body survey: no trauma, no medical alert; PINPOINT PUPILS; a fresh injection site in the left antecubital fossa. Skin cyanotic centrally, pale and cool peripherally (skin is given automatically during the RBS). No trauma and no fall witnessed - c-spine is not indicated once this has been checked.",
+  "skinEn": "cyanotic centrally, pale and cool peripherally"
+ },
+ "history": {
+  "ccEn": "(Before naloxone he cannot answer. Building staff: \"We found him like this - he's barely breathing and his lips are blue.\") After naloxone: \"What happened? ... I used. I must have gone down.\"",
+  "opqrst": {
+   "oEn": "(Before naloxone - resident: \"He smoked off the foil and then injected, about 20 minutes ago.\" Staff: \"We found him down about 5 minutes before we called.\") After naloxone: \"I used in the hallway, by myself.\"",
+   "pEn": "(He cannot answer while unresponsive. Bystanders: \"Nothing - he just went down.\") After naloxone: \"I don't know. Nothing.\"",
+   "qEn": "(He cannot answer while unresponsive.) After naloxone: \"I feel sick. Short of breath.\"",
+   "rEn": "(He cannot answer while unresponsive.) After naloxone: \"No, nothing like that.\"",
+   "sEn": "(He cannot answer while unresponsive.) After naloxone: \"I feel awful.\"",
+   "tEn": "(Resident: \"He used about 20 minutes ago.\" Staff: \"Found him about 5 minutes before we called 911 for help.\")"
+  },
+  "painScoreEn": "(He cannot answer while unresponsive.) After naloxone he does not give a number: \"I don't hurt. I just feel sick.\" (No numeric pain score is given in this scenario.)",
+  "sample": {
+   "sEn": "(Bystanders: \"Barely breathing, blue lips.\") After naloxone: \"I feel sick, short of breath, my head hurts.\"",
+   "aEn": "(Bystanders do not know.) After naloxone: \"No allergies.\"",
+   "mEn": "(Bystanders do not know.) After naloxone: \"Nothing prescribed. I'm not on methadone or anything like that.\"",
+   "pEn": "(Bystanders do not know.) After naloxone: \"Hep C. I've overdosed before - I've been revived twice. I had asthma as a kid.\"",
+   "lEn": "(Bystanders do not know.) After naloxone: \"Three beers tonight. Food yesterday afternoon.\"",
+   "eEn": "(Resident: \"He smoked off the foil and then injected - it was 'down' - about 20 minutes ago. No fall, no seizure.\") After naloxone: \"I used alone, here in the hallway. Nothing else tonight except the 3 beers. I've used every day for 3 years.\""
+  },
+  "fe": {
+   "generalEn": "I've lost weight. I sleep rough some nights.",
+   "cnsEn": "My head hurts now. No seizure. No weakness anywhere.",
+   "respiratoryEn": "I feel short of breath and sick since I woke up.",
+   "cardiovascularEn": "My heart is racing.",
+   "giGuEn": "I feel like I'm going to throw up.",
+   "integumentaryEn": "Old track marks. That's where I just used, on my left arm.",
+   "musculoskeletalEn": "I'm aching all over.",
+   "endocrineEn": "No, nothing like that.",
+   "eentEn": "No, nothing like that."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No trauma, no tongue biting. Vomit residue at the mouth (cleared once suctioned). No neck stiffness. Pupils pinpoint and equal before naloxone; 3 mm and reactive after naloxone.",
+  "chestLungsEn": "Clear and equal at all 6 sites once he is being ventilated; no crackles.",
+  "abdomenEn": "Soft, non-tender.",
+  "backEn": "No injury (checked with a careful roll while ventilations are maintained).",
+  "lowerExtremitiesEn": "Track marks. No injury. No needle in situ.",
+  "upperExtremitiesEn": "Fresh injection site in the left antecubital fossa; old track marks on both arms. Circulation, sensation and movement intact."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline with ventilations in progress, before naloxone (BGL is mandatory before naloxone)",
+   "gcs": {
+    "total": 3,
+    "e": 1,
+    "v": 1,
+    "m": 1
+   },
+   "bp": "96/58",
+   "pulse": {
+    "rate": 116,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "116 weak carotid, radial absent"
+   },
+   "resp": {
+    "rate": 4,
+    "depth": "shallow",
+    "character": "spontaneous rate 4, ineffective; assisted with BVM at 10 per minute",
+    "rawEn": "4 spontaneous, assisted at 10"
+   },
+   "skin": "central cyanosis, cool pale peripherally",
+   "pupils": "pinpoint, equal",
+   "spo2": "72% rising to 96% with ventilation",
+   "bgl": "5.9 mmol/L",
+   "temp": "35.8 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "allOf": [
+       {
+        "afterEvent": "drug:naloxone"
+       },
+       {
+        "elapsedMs": 600000
+       }
+      ]
+     },
+     {
+      "afterEvent": "drug:naloxone",
+      "count": 2
+     }
+    ]
+   },
+   "unlockNoteEn": "about 4 minutes after naloxone 0.4 mg, en route; awake, confused and irritable, vomiting",
+   "gcs": {
+    "total": 13,
+    "e": 3,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "118/70",
+   "pulse": {
+    "rate": 104,
+    "rhythm": "regular",
+    "strength": "normal, radial now palpable",
+    "rawEn": "104 regular, radial palpable"
+   },
+   "resp": {
+    "rate": 16,
+    "depth": "adequate",
+    "character": "spontaneous and adequate",
+    "rawEn": "16 spontaneous, adequate"
+   },
+   "skin": "pink warm dry",
+   "pupils": "3 mm, reactive",
+   "spo2": "97% on O2",
+   "bgl": "5.9 mmol/L",
+   "temp": "35.9 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "not-ventilated",
+   "when": {
+    "elapsedMs": 180000,
+    "missingEvent": "ventilations-started"
+   },
+   "examinerLineEn": "He is still barely breathing; his lips are still blue and his chest is hardly moving."
+  },
+  {
+   "id": "wakes-after-naloxone",
+   "when": {
+    "afterEvent": "drug:naloxone",
+    "elapsedMs": 600000
+   },
+   "examinerLineEn": "He opens his eyes to your voice, confused and irritable, and tries to pull off the mask. He is vomiting."
+  },
+  {
+   "id": "combative-after-excess-naloxone",
+   "when": {
+    "afterEvent": "naloxone-off-ladder"
+   },
+   "examinerLineEn": "He wakes abruptly, combative, pushes the mask away and says he is not going anywhere. He refuses care."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan BVM with oxygen, suction, OPA/NPA, naloxone, glucometer",
+   "triggers": [
+    "copy dispatch",
+    "bring the BVM and suction",
+    "bring the airway kit",
+    "bring the naloxone",
+    "bring the glucometer"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate respiratory failure - ventilation is the priority, not the drug",
+   "triggers": [
+    "he's probably in respiratory failure",
+    "ventilation is the priority",
+    "we'll need to bag him",
+    "airway and breathing first",
+    "likely an opioid overdose"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards - exposed needle and drug paraphernalia, dim confined hallway, bystanders, police not yet on scene",
+   "triggers": [
+    "scene safety",
+    "there's an exposed needle",
+    "drug paraphernalia",
+    "dim narrow hallway",
+    "police aren't on scene yet",
+    "watch the bystanders"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "ACT on the sharps hazard: move or safely dispose of the needle before working over the patient",
+   "triggers": [
+    "move the needle",
+    "sharps container",
+    "dispose of the syringe",
+    "kick the needle away",
+    "secure the sharps before I kneel"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection (splash and airway secretions)",
+   "triggers": [
+    "gloves on",
+    "gloves and eye protection",
+    "BSI",
+    "PPE on",
+    "face shield for the airway"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: cyanotic lips, minimal chest movement, drug paraphernalia beside him",
+   "triggers": [
+    "his lips are blue",
+    "he's cyanotic",
+    "barely breathing",
+    "general impression",
+    "paraphernalia beside him",
+    "chest isn't moving much"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Unresponsive - this patient cannot protect his own airway",
+   "triggers": [
+    "hello can you hear me",
+    "trapezius pinch",
+    "he's unresponsive",
+    "AVPU",
+    "no response to pain",
+    "level of consciousness"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (no trauma found, no fall witnessed) after a deliberate check",
+   "triggers": [
+    "c-spine not indicated",
+    "no trauma so no c-spine",
+    "no fall witnessed",
+    "no mechanism for spinal injury",
+    "did he fall"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Open the airway, SUCTION the vomit (10-15 seconds in an adult) and insert a correctly sized OPA",
+   "triggers": [
+    "open the airway",
+    "head tilt chin lift",
+    "suction the vomit",
+    "insert an OPA",
+    "measure the OPA",
+    "jaw thrust"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Recognize inadequate respirations and BEGIN ASSISTED VENTILATIONS IMMEDIATELY - this is the single most important action of the station",
+   "triggers": [
+    "start bagging",
+    "assist ventilations",
+    "BVM at 10 a minute",
+    "he's breathing 4 a minute",
+    "inadequate respirations",
+    "begin ventilating now"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Use the C-A-B approach for the unconscious patient and check the carotid pulse",
+   "triggers": [
+    "check a carotid",
+    "carotid pulse",
+    "C-A-B",
+    "no radial pulse",
+    "pulse is weak and fast"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Modified rapid body survey: look for trauma, injection sites, patches and paraphernalia",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "check for injection sites",
+    "any patches",
+    "look for trauma"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: central cyanosis, cool and pale peripherally",
+   "triggers": [
+    "skin is cyanotic",
+    "he's pale and cool",
+    "central cyanosis",
+    "skin signs",
+    "feel his skin"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Deliver oxygen via the BVM to bring SpO2 to 94 percent or above",
+   "triggers": [
+    "oxygen on the BVM",
+    "hook the bag to oxygen",
+    "15 litres to the BVM",
+    "target 94 percent",
+    "connect the reservoir"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position supine for ventilation; do NOT place a patient requiring assisted respirations in the recovery position",
+   "triggers": [
+    "keep him supine",
+    "flat on his back to ventilate",
+    "not in the recovery position",
+    "position for ventilation",
+    "lay him flat"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "primary",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Use two-person BVM technique with the partner, confirming an effective seal and chest rise",
+   "triggers": [
+    "two-person BVM",
+    "partner squeeze the bag",
+    "I'll hold the seal",
+    "good mask seal",
+    "confirm chest rise",
+    "two hands on the mask"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "he's unstable",
+    "priority patient",
+    "load and go",
+    "code 3 to hospital"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes with ventilations maintained throughout the move",
+   "triggers": [
+    "keep bagging during the move",
+    "ventilate while we move him",
+    "ready to load within 15",
+    "let's package him",
+    "lift him onto the cot"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Maintain RTC status even if he wakes - verbalize the risk of re-sedation as naloxone wears off",
+   "triggers": [
+    "he can re-sedate",
+    "naloxone wears off",
+    "still RTC even though he's awake",
+    "he needs to go to hospital",
+    "re-sedation risk"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: unresponsiveness with respiratory depression, suspected opioid overdose",
+   "triggers": [
+    "what happened",
+    "what's going on",
+    "chief complaint",
+    "why did you call",
+    "suspected overdose"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C from bystanders: substance, route, time of use, time found down, co-ingestants, previous overdoses",
+   "triggers": [
+    "what did he take",
+    "when did he use",
+    "how did he take it",
+    "how long has he been down",
+    "anything else with it",
+    "has he overdosed before"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx (hepatitis C, previous overdoses, asthma)",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "past history",
+    "previous overdoses",
+    "hep C",
+    "any history of asthma"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications incl opioid agonist therapy status",
+   "triggers": [
+    "what medications",
+    "is he on methadone",
+    "opioid agonist therapy",
+    "Suboxone",
+    "any prescriptions",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications",
+    "NKA",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI incl alcohol",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "any alcohol tonight",
+    "anything to drink",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components (E1 V1 M1 = 3)",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 3",
+    "E1 V1 M1"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "I'm taking a BP",
+    "cuff on",
+    "auscultate a pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse - assess the carotid when the radial is absent, and state rate, strength and rhythm",
+   "triggers": [
+    "carotid pulse rate",
+    "pulse",
+    "rate rhythm and strength",
+    "heart rate",
+    "count the carotid"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations - rate, depth and effectiveness both spontaneous and assisted",
+   "triggers": [
+    "respirations",
+    "spontaneous rate",
+    "resp rate and depth",
+    "assisted at 10",
+    "count his own breaths"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": [
+    "skin",
+    "colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "still cyanotic"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - identify pinpoint pupils as an opioid sign",
+   "triggers": [
+    "pupils",
+    "pinpoint pupils",
+    "check his pupils",
+    "PERL",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration; document the improvement with ventilation",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "sats are coming up with the bagging"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - explicitly required by the Narcotic Overdose protocol",
+   "triggers": [
+    "blood sugar",
+    "BGL",
+    "glucometer",
+    "check his glucose",
+    "rule out hypoglycemia",
+    "finger poke"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - hypothermia is a listed feature of opioid overdose",
+   "triggers": [
+    "temperature",
+    "temp",
+    "check his temp",
+    "is he cold",
+    "tympanic"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been lately",
+    "any weight loss",
+    "where are you staying",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any headache",
+    "any seizures",
+    "weakness or numbness",
+    "dizziness",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (pertinent)",
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "how's your breathing",
+    "breathing problems",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "heart racing",
+    "palpitations",
+    "cardiovascular enquiry",
+    "is your heart pounding"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (vomiting risk after naloxone)",
+   "triggers": [
+    "nausea",
+    "do you feel like vomiting",
+    "abdominal pain",
+    "bowels and bladder",
+    "are you going to throw up"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (injection sites)",
+   "triggers": [
+    "track marks",
+    "injection sites",
+    "any skin infections",
+    "where did you inject",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "muscle aches",
+    "aching all over",
+    "any injuries",
+    "joint pain",
+    "musculoskeletal"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "blood sugar problems",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision changes",
+    "any trouble swallowing",
+    "nosebleeds"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl airway clearance and trauma screen",
+   "triggers": [
+    "head and neck",
+    "any head injury",
+    "tongue biting",
+    "neck stiffness",
+    "look in the mouth"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation - screen for aspiration and pulmonary edema",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "listen for crackles",
+    "any aspiration"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "soft non-tender",
+    "abdominal exam"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check the back",
+    "roll him to check the back",
+    "back exam",
+    "palpate the spine",
+    "keep bagging while we roll"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities - check for concealed needles before palpating",
+   "triggers": [
+    "lower extremities",
+    "check his legs",
+    "careful of needles",
+    "check pockets for needles",
+    "pedal pulses"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities - injection sites and CSM",
+   "triggers": [
+    "upper extremities",
+    "check his arms",
+    "injection site in the left arm",
+    "track marks on the arms",
+    "CSM"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assist ventilations BEFORE giving naloxone - ventilation is the life-saving intervention",
+   "triggers": [
+    "ventilate first then naloxone",
+    "we're bagging before the Narcan",
+    "oxygenate before naloxone",
+    "naloxone after ventilations are going",
+    "ventilations established"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Obtain a BGL before or alongside naloxone as the protocol requires, and correct it if 4 mmol/L or less",
+   "triggers": [
+    "BGL before naloxone",
+    "sugar is 5.9 so no glucose needed",
+    "check the sugar before the Narcan",
+    "glucose is above 4",
+    "rule out hypoglycemia first"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Naloxone 0.4 mg IM/IV with the 6 rights, correct site and needle",
+   "triggers": [
+    "naloxone 0.4 milligrams IM",
+    "Narcan 0.4 IM",
+    "into the deltoid",
+    "into the thigh",
+    "six rights",
+    "4 milligrams intranasal"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize the escalation schedule: repeat at 3-minute intervals 0.4, 0.8 then 2.0 mg if SpO2 94 percent or above and rate above 10 are not achieved",
+   "triggers": [
+    "repeat in 3 minutes",
+    "0.4 then 0.8 then 2",
+    "escalate to 0.8",
+    "if sats aren't 94 and rate isn't above 10",
+    "dose ladder"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway skill: suction correctly, size and insert the OPA properly, keep suction at hand for post-naloxone vomiting",
+   "triggers": [
+    "suction ready",
+    "keep suction at hand",
+    "size the OPA",
+    "measure from the corner of the mouth to the earlobe",
+    "suction 10 to 15 seconds",
+    "he may vomit after the Narcan"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ventilation skill: BVM connected to oxygen, good seal, 8-10 breaths per minute, chest rise confirmed, no hyperventilation",
+   "triggers": [
+    "bag connected to oxygen",
+    "8 to 10 breaths a minute",
+    "one breath every 6 seconds",
+    "watch for chest rise",
+    "don't hyperventilate",
+    "good seal"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after naloxone and after every change in LOC",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "his LOC changed so I'm rechecking ABCs",
+    "reassessing after the naloxone",
+    "is he breathing on his own now",
+    "ABC check after the move"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes, including a repeat pupil check",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "recheck pupils",
+    "pupils are 3 mm now",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Manage post-naloxone vomiting: suction and airway positioning immediately",
+   "triggers": [
+    "he's vomiting, suction",
+    "roll him on his side to clear the vomit",
+    "suction now",
+    "turn him to drain the airway",
+    "clear the airway"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "De-escalate agitation professionally and keep the patient monitored; maintain RTC status because of the re-sedation risk",
+   "triggers": [
+    "it's okay you're safe",
+    "you overdosed and we gave you naloxone",
+    "please keep the mask on",
+    "talk to him calmly",
+    "you need to come to hospital"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification stating that the apneic patient was ventilated",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "we've been ventilating him"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with naloxone dose/route/time, ventilation support and re-sedation risk",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 31-year-old male",
+    "report to the nurse",
+    "naloxone given at",
+    "risk of re-sedation"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "ventilations-started",
+   "descriptionEn": "candidate starts (or has the partner start) assisted ventilations with a BVM / bag-valve mask"
+  },
+  {
+   "key": "naloxone-before-ventilation",
+   "descriptionEn": "candidate gives (or has the partner give) naloxone while the patient's inadequate respirations are NOT yet being assisted with a BVM - i.e. ventilations have not been started at or before the time of the naloxone"
+  },
+  {
+   "key": "sharps-hazard-not-managed",
+   "descriptionEn": "candidate kneels beside, works over, or moves the patient without first moving the exposed needle out of the way or disposing of it in a sharps container"
+  },
+  {
+   "key": "recovery-position-while-ventilating",
+   "descriptionEn": "candidate places the patient in the recovery / lateral position while he still requires assisted ventilations (before he is breathing adequately on his own)"
+  },
+  {
+   "key": "naloxone-off-ladder",
+   "descriptionEn": "candidate gives a naloxone dose outside the BC ladder: a first dose larger than 0.4 mg IM/IV (or other than 4 mg IN), a repeat dose larger than the next step (0.4 -> 0.4 -> 0.8 -> 2.0 mg), or a skipped step"
+  },
+  {
+   "key": "hyperventilation",
+   "descriptionEn": "candidate hyperventilates the patient: rate clearly and repeatedly far above 8-10 breaths per minute, or rapid continuous squeezing of the bag"
+  },
+  {
+   "key": "accepts-refusal",
+   "descriptionEn": "after he wakes, candidate accepts his refusal, leaves him on scene, or downgrades him to non-urgent transport because he is awake (ignoring the re-sedation risk)"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "naloxone",
+   "namesEn": [
+    "naloxone",
+    "Narcan",
+    "nasal naloxone",
+    "intranasal Narcan",
+    "Narcan nasal spray"
+   ],
+   "doseEn": "0.4 mg IM or IV; then 0.4 mg after 3 minutes, 0.8 mg after a further 3 minutes, 2.0 mg after a further 3 minutes - each repeat only if SpO2 >= 94% and ventilating > 10 have not been achieved; 4 mg IN. Only after ventilations are assisted and a baseline set of vitals including BGL. Target is adequate ventilation, not full arousal. PCP: IV route in continued unconsciousness and apnea.",
+   "licence": "both",
+   "indicationsEn": "respiratory depression / depressed mental status secondary to actual or suspected narcotic use (decreased LOC, respirations 4 and ineffective, pinpoint pupils)",
+   "contraindicationsEn": "allergy or known hypersensitivity",
+   "cautionsEn": "patient combativeness; may precipitate withdrawal symptoms"
+  },
+  {
+   "key": "glucose-correction",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Glucogel",
+    "dextrose",
+    "D10W",
+    "glucagon"
+   ],
+   "doseEn": "NOT indicated - BGL is 5.9 mmol/L (correction only if 4 mmol/L or less); oral glucose must never be given to an unresponsive patient - withhold",
+   "licence": "both"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "ventilate-before-naloxone",
+   "check": "ordered",
+   "first": "ventilations-started",
+   "then": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "naloxone-before-ventilation-reported",
+   "check": "absent",
+   "event": "naloxone-before-ventilation",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "naloxone-given",
+   "check": "present",
+   "event": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "naloxone-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "bgl-before-naloxone",
+   "check": "ordered",
+   "first": "blood-glucose",
+   "then": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "breathing-assessed-before-naloxone",
+   "check": "ordered",
+   "first": "breathing",
+   "then": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "naloxone-ladder",
+   "check": "absent",
+   "event": "naloxone-off-ladder",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "naloxone-max-4",
+   "check": "max_count",
+   "event": "drug:naloxone",
+   "max": 4,
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-glucose-correction",
+   "check": "absent",
+   "event": "drug:glucose-correction",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "sharps-managed",
+   "check": "absent",
+   "event": "sharps-hazard-not-managed",
+   "licence": "both",
+   "deduct": {
+    "itemId": "scene-ppe",
+    "weight": 5,
+    "errorEn": "Identifies a hazard during the SA but fails to act to make the scene safe"
+   }
+  },
+  {
+   "id": "no-recovery-position-while-ventilating",
+   "check": "absent",
+   "event": "recovery-position-while-ventilating",
+   "licence": "both",
+   "deduct": {
+    "itemId": "patient-position",
+    "weight": 15,
+    "errorEn": "Positions the patient incorrectly detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-hyperventilation",
+   "check": "absent",
+   "event": "hyperventilation",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-breathing-mgmt",
+    "weight": 15,
+    "errorEn": "Ventilates at a rate not appropriate for patient"
+   }
+  },
+  {
+   "id": "no-refusal-accepted",
+   "check": "absent",
+   "event": "accepts-refusal",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "31-year-old male",
+  "cc": "unresponsive with respiratory depression - suspected opioid overdose",
+  "moi": null,
+  "hxcc": "witnessed to smoke off foil and then inject suspected fentanyl-contaminated 'down' about 20 minutes before; found down roughly 5 minutes before the 911 call; previous overdoses",
+  "vitals": "on arrival GCS 3, respirations 4 and ineffective, carotid 116 weak with no radial, BP 96/58, pinpoint pupils, SpO2 72% rising to 96% with ventilation, BGL 5.9, temperature 35.8; after naloxone GCS 13, respirations 16 spontaneous, BP 118/70, pulse 104, SpO2 97%",
+  "treatments": "sharps hazard managed; suction and OPA; two-person BVM ventilation with oxygen at 10 per minute (the apneic patient was ventilated); BGL 5.9 before naloxone; naloxone 0.4 mg IM at 0219; suction kept at hand; ETA 7 minutes",
+  "findings": "pinpoint pupils resolving to 3 mm reactive; fresh injection site left antecubital fossa; vomiting since waking; re-sedation risk"
+ },
+ "handoffFacts": {
+  "ageSex": "31-year-old male",
+  "cc": "found unresponsive with respiratory depression in an SRO hallway - suspected opioid overdose",
+  "moi": null,
+  "hxcc": "found at approximately 0205; witnesses saw him smoke and then inject what is believed to be fentanyl-contaminated down about 20 minutes before; used alone; daily use for 3 years; revived twice before; 3 beers tonight, no other drugs",
+  "initialVitals": "GCS 3 (E1 V1 M1), respirations 4 and ineffective (assisted at 10), carotid 116 weak, radial absent, BP 96/58, skin cyanotic centrally, cool and pale peripherally, pupils pinpoint and equal, SpO2 72% rising to 96% with ventilation, BGL 5.9, temperature 35.8",
+  "finalVitals": "4 minutes after naloxone: GCS 13 (E3 V4 M6), respirations 16 spontaneous and adequate, BP 118/70, pulse 104 regular with a palpable radial, skin pink warm dry, pupils 3 mm and reactive, SpO2 97% on oxygen, BGL 5.9, temperature 35.9",
+  "pmhx": "hepatitis C, previous overdoses, childhood asthma",
+  "meds": "none prescribed; not on opioid agonist therapy",
+  "allergies": "no known allergies",
+  "treatments": "needle secured before patient contact; vomit suctioned and OPA inserted; two-person BVM ventilations with oxygen at 10 per minute bringing SpO2 to 96%; BGL checked before naloxone; naloxone 0.4 mg IM at 0219; suction kept at hand for post-naloxone vomiting",
+  "findings": "pinpoint pupils now 3 mm reactive; fresh injection site left antecubital fossa, old track marks; chest clear at 6 sites; has vomited once since waking; remains RTC because naloxone wears off before the opioid does (re-sedation risk)"
+ },
+ "pcrFacts": {
+  "cc": "Unresponsive with respiratory depression, suspected opioid overdose",
+  "hxcc": "Witnessed to smoke then inject suspected fentanyl-contaminated 'down' ~20 min before arrival; found down ~5 min before 911; used alone; daily use 3 years; two previous overdoses",
+  "pmhx": "Hepatitis C, previous overdoses, childhood asthma",
+  "meds": "None prescribed; not on opioid agonist therapy",
+  "allergies": "NKA",
+  "treatments": [
+   "Sharps hazard managed before patient contact",
+   "Suction of vomit, OPA inserted",
+   "Two-person BVM ventilation with O2 at 10/min - SpO2 72% to 96%",
+   "BGL obtained (5.9) before naloxone",
+   "Naloxone 0.4 mg IM at 0219; escalation schedule verbalized",
+   "Suction kept at hand for post-naloxone vomiting; RTC maintained"
+  ],
+  "findings": [
+   "GCS 3 improving to 13; pinpoint pupils resolving to 3 mm reactive",
+   "Respirations 4 and ineffective improving to 16 spontaneous",
+   "Radial pulse absent initially, palpable after ventilation and naloxone",
+   "Fresh injection site left antecubital, old track marks",
+   "Temperature 35.8 - mild hypothermia from exposure and opioid effect"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "He is unresponsive: no response to your voice and no response to the trapezius pinch.",
+  "breathingNotDepictedEn": "His own breathing is very slow, shallow and ineffective - the chest barely moves and his lips are blue.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives naloxone 0.4 mg IM (or 4 mg IN) on the same escalation schedule, with ventilation, suction, OPA/NPA and oxygen. EMR does not establish IV access, so persistent apnea is managed with continued BVM ventilation, repeat IM doses and rapid transport. No Functional Enquiry.",
+  "pcpEn": "PCP may establish vascular access and give naloxone intravenously in continued unconsciousness and apnea (IV onset 1 minute versus 3 minutes IM). PCP also completes the Functional Enquiry once the patient can answer (no deduction for systems he cannot answer while unresponsive). The titration target is unchanged: adequate ventilation, not full arousal."
+ },
+ "sourcePages": "Scenario md-04 (data/practical/scenarios.json): dispatch, scene (exposed needle), primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing, handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC / unconsciousness, respiratory distress / respiratory arrest = unstable); p.50 Oxygen Administration (consider assisted ventilations); p.52 PEEP use (ventilate usually no more than 8-10 breaths per minute); p.56 Suspected Narcotic Overdose (airway with positioning, suction and adjuncts; support ventilations, consider two-person BVM; SpO2 >= 94%; history and baseline vitals including BGL; correct glucose if <= 4 mmol/L; administer naloxone; transport and continue en route; PCP: vascular access and IV naloxone in continued unconsciousness and apnea); p.72 Naloxone (0.4 mg IM/IV, then 0.4 mg, 0.8 mg and 2.0 mg each after 3 minutes if SpO2 >= 94% and ventilating > 10 have not been achieved; 4 mg IN; onset IV 1 minute, IM/IN 3 minutes; cautions combativeness and withdrawal).",
+ "keywordEvents": [
+  {
+   "event": "ventilations-started",
+   "regex": "\\b(bvm|bag|bagging|bag[- ]?valve|bag[- ]?mask|ventilat\\w*|rescue breath\\w*|breaths? (every|at|per)|(give|giving|deliver\\w*) (him )?(a )?breaths?|assist(ed|ing)? (his |the )?(breathing|ventilations?|respirations?|resps)|pocket mask|positive pressure|ppv|squeez\\w*)\\b"
+  }
+ ]
+}

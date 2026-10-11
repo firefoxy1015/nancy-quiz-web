@@ -143,12 +143,16 @@ def feedback_tool():
 
 
 def quality_catalogue(already_top):
-    """Official error strings per item, excluding items the engine already deducted at the top weight."""
+    """Official error strings per item the model may judge: not the engine/closing-owned items,
+    not items already deducted at the top weight, and never a 100% string."""
+    from engine import QUALITY_EXCLUDED
     out = []
     for iid, it in items().items():
-        if iid in already_top:
+        if iid in already_top or iid in QUALITY_EXCLUDED:
             continue
-        out.append({'itemId': iid, 'nameEn': it['nameEn'], 'options': [{'weight': b['weight'], 'errorsEn': b['errorsEn']} for b in it['errorsByWeight']]})
+        opts = [{'weight': b['weight'], 'errorsEn': b['errorsEn']} for b in it['errorsByWeight'] if b['weight'] < 100]
+        if opts:
+            out.append({'itemId': iid, 'nameEn': it['nameEn'], 'options': opts})
     return out
 
 

@@ -1,0 +1,1437 @@
+{
+ "id": "tr-02",
+ "titleEn": "High-Risk MVA - Blunt Abdominal Trauma With Shock",
+ "type": "trauma",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#tr-02",
+ "patient": {
+  "name": "Gary Holt",
+  "age": 45,
+  "sex": "male",
+  "affectEn": "pale and anxious, lying supine on a blanket on the road, holding and guarding his left side (left upper abdomen); breathing in hurts him",
+  "speechEn": "short sentences because of the pain; alert, anxious, cooperative and follows instructions",
+  "weightEn": "Not given in the scenario. If asked his weight the patient says he is not sure of the exact number; the candidate must estimate it. Never state a number."
+ },
+ "scene": {
+  "settingEn": "Intersection of No. 3 Road and Westminster Highway, Richmond, at 1740 hrs in rush-hour traffic. Two-vehicle collision. Police have closed the lane; fire has controlled the leaking fluids and disconnected the battery. The patient's sedan was T-boned on the driver side at an estimated 60 km/h: 0.4 m of intrusion into the driver door, airbags deployed. Fire has extricated the driver (no entrapment); he lies supine on a blanket on the road 5 metres from the wreck. One patient - the other driver has refused care and is with police. Daylight, dry road, 18 degrees C.",
+  "hazardsEn": [
+   "traffic - rush hour; police have closed the lane",
+   "broken glass around the vehicles",
+   "leaking vehicle fluids - controlled by fire; battery disconnected"
+  ],
+  "bystanders": [
+   {
+    "who": "fire crew (captain)",
+    "knowsEn": "Fire extricated him from the driver seat - there was no entrapment - and laid him supine on the blanket. He felt faint when they lifted him out and he was on his feet. He has been awake the whole time. MVA critical history if asked: single impact, no fatality, moderate cabin intrusion of 0.4 m into the driver door, airbags deployed. The crash happened just before the 911 call. Leaking fluids are controlled and the battery is disconnected. The crew will bring the cot, clear the way, carry equipment and help with the roll and lift - only when told exactly what to do."
+   },
+   {
+    "who": "police officer",
+    "knowsEn": "The lane is closed to traffic. Single impact between two vehicles, no fatality. The other driver has refused care and is with police. Nothing else about the patient."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "hard collars (sizing kit)",
+   "spinal immobilization device with straps and head blocks / foam rollers",
+   "oxygen kit with NRB and nasal cannula",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "trauma kit with dressings and triangular bandages",
+   "commercial pelvic binder",
+   "blankets",
+   "cot",
+   "Entonox",
+   "PCP: IV start kit (18 G catheters) and tubing",
+   "PCP: normal saline",
+   "PCP: TXA (tranexamic acid)",
+   "PCP: acetaminophen, ibuprofen, dimenhydrinate"
+  ]
+ },
+ "dispatchEn": "1740 hrs. Code 3 to the intersection of No. 3 Road and Westminster Highway, Richmond, for a two-vehicle collision. Fire and police are on scene. Your patient is the 45-year-old male driver of a sedan T-boned on the driver side at an estimated 60 km/h. Hospital is 10 minutes away.",
+ "dispatchUpdateEn": "Rush-hour traffic. Fire reports the patient is out of the vehicle, lying on a blanket on the road, awake. No entrapment.",
+ "arrivalEn": "Police have closed the lane and wave you in. Fire has controlled the leaking fluids and disconnected the battery. The sedan has been T-boned on the driver side: 0.4 m of intrusion into the driver door, airbags deployed, broken glass on the road. Fire extricated the driver - no entrapment - and he is lying supine on a blanket on the road about 5 metres from the wreck, holding his left side. One patient: the other driver has refused care and is with police. Daylight, dry road, 18 degrees C.",
+ "firstLookEn": "Pale 45-year-old male lying supine on a blanket, awake and talking in short sentences, holding and guarding his left side over the left upper abdomen.",
+ "primary": {
+  "locEn": "Alert (AVPU = A). Oriented; anxious; answers in short sentences and complains of severe left upper abdominal pain.",
+  "airwayEn": "Open and clear; he is talking in short sentences. No blood, vomit or foreign material in the mouth.",
+  "breathingEn": "Respirations 24, shallow - breathing in hurts his left side. If the chest is exposed: seatbelt bruising across the chest; chest rise equal on both sides. SpO2 91% on room air if checked now.",
+  "circulationEn": "Radial pulse 124, weak and rapid, regular. No external hemorrhage anywhere.",
+  "rbsEn": "Head and neck: no injuries found. Chest: seatbelt bruising across the chest. Abdomen: seatbelt bruising across the abdomen; the left upper quadrant is tender and guarded. Pelvis: stable on a single gentle assessment (if the candidate springs, rocks or compresses it a second time, report pelvis-sprung-repeatedly). Arms and legs: no long bone fractures, no deformity. No external hemorrhage anywhere. Skin is given automatically during the RBS: pale, cool, clammy. If the candidate applies a pelvic binder (commercial binder or three overlapping broad triangular bandages, centred on the greater trochanters, without rolling the patient), it is applied.",
+  "skinEn": "pale, cool, clammy"
+ },
+ "history": {
+  "ccEn": "My stomach. Up here on the left. It really hurts.",
+  "opqrst": {
+   "oEn": "The second the car hit my door. It just happened - somebody called 911 right away.",
+   "pEn": "Breathing in makes it worse. Nothing makes it better.",
+   "qEn": "Sharp.",
+   "rEn": "It stays right here, top left of my belly. It doesn't go anywhere else.",
+   "sEn": "Eight out of ten.",
+   "tEn": "It's been there since the impact."
+  },
+  "painScoreEn": "8 out of 10",
+  "sample": {
+   "sEn": "Really bad pain top left of my stomach. It hurts to breathe in. I feel sick to my stomach. I felt faint when they stood me up.",
+   "aEn": "Penicillin. It gives me a rash.",
+   "mEn": "Ramipril. Five milligrams, once a day.",
+   "pEn": "High blood pressure. That's it.",
+   "lEn": "A coffee. About two hours ago.",
+   "eEn": "I was driving. Seatbelt on - lap and shoulder. The other car hit my door hard. The airbags went off. I was dazed, but I don't think I passed out. Fire got me out of the car."
+  },
+  "fe": {
+   "generalEn": "I've been healthy. No recent illness.",
+   "cnsEn": "No headache. No numbness or tingling anywhere.",
+   "respiratoryEn": "It hurts when I take a deep breath. I'm not short of breath lying still.",
+   "cardiovascularEn": "No pain in the middle of my chest. No palpitations.",
+   "giGuEn": "The pain top left of my belly is really bad. I feel nauseated. I felt faint when fire lifted me out and stood me up. No vomiting.",
+   "integumentaryEn": "There's a bruise from the seatbelt. No other cuts that I know of.",
+   "musculoskeletalEn": "My left ribs are sore. Nothing else - arms and legs are fine.",
+   "endocrineEn": "No, nothing like that. No diabetes, no thyroid problems.",
+   "eentEn": "No, nothing. Eyes, ears, nose, throat are all fine."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No DOTS (deformity, open wound, tenderness, swelling) to the head, face or neck. Trachea midline.",
+  "chestLungsEn": "Seatbelt bruise across the left chest. Tender over the left lower ribs. Equal air entry in all 6 sites on auscultation. No crepitus.",
+  "abdomenEn": "Seatbelt bruising across the abdomen. Left upper quadrant guarding and tenderness. The abdomen is increasingly distended.",
+  "backEn": "Assessed during the coordinated roll onto the spinal device on scene: no deformity.",
+  "lowerExtremitiesEn": "No injuries. Pelvis review: it was stable on the single gentle check - nothing new. Distal circulation, sensation and movement (CSM) intact in both legs.",
+  "upperExtremitiesEn": "No injuries. Distal circulation, sensation and movement (CSM) intact in both arms."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "88/62",
+   "pulse": {
+    "rate": 124,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "124 weak regular"
+   },
+   "resp": {
+    "rate": 24,
+    "depth": "shallow",
+    "character": "shallow, painful on deep inspiration",
+    "rawEn": "24 shallow"
+   },
+   "skin": "pale cool clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "94% on 15 L NRB (91% on room air before oxygen)",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "afterEvent": "move:load"
+     },
+     {
+      "elapsedMs": 720000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route (after loading, or 12 minutes into the call) - deteriorating despite treatment",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "84/58",
+   "pulse": {
+    "rate": 132,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "132 weak regular"
+   },
+   "resp": {
+    "rate": 26,
+    "depth": "shallow",
+    "character": "shallow, painful on deep inspiration",
+    "rawEn": "26 shallow"
+   },
+   "skin": "pale cool clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "95% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "still-on-scene-15min",
+   "when": {
+    "elapsedMs": 900000,
+    "missingEvent": "move:load"
+   },
+   "examinerLineEn": "The patient is increasingly anxious, and his abdomen looks more distended than when you arrived.",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "faint-when-upright",
+   "when": {
+    "afterEvent": "patient-sits-or-walks"
+   },
+   "examinerLineEn": "As he comes upright he says he feels faint - the same as when fire stood him up - and becomes paler.",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "anxious-en-route",
+   "when": {
+    "afterEvent": "move:load"
+   },
+   "examinerLineEn": "En route the patient is becoming increasingly anxious.",
+   "vitalsPatch": {}
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge dispatch; anticipate a high-risk MVA: spinal equipment, oxygen, trauma kit, early transport mindset",
+   "triggers": [
+    "acknowledge dispatch",
+    "high-risk MVA",
+    "bring the spinal equipment",
+    "bring the board and collar",
+    "trauma kit and oxygen",
+    "plan for early transport"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate hazards: traffic, glass, leaking fluids; plan PPE",
+   "triggers": [
+    "traffic hazard",
+    "watch for broken glass",
+    "leaking fluids",
+    "gloves and eye protection",
+    "PPE for the crash scene",
+    "is the scene safe"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (traffic, glass, fluids controlled), environment, MOI (60 km/h T-bone, 0.4 m intrusion = high-risk auto crash) and number of patients",
+   "triggers": [
+    "scene is safe",
+    "lane is closed",
+    "fluids are controlled",
+    "mechanism is a T-bone",
+    "intrusion into the driver door",
+    "one patient"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "safety glasses",
+    "BSI",
+    "PPE on",
+    "donning gloves"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: pale male, supine, guarding his left flank, talking",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "he looks pale",
+    "guarding his left side",
+    "holding his abdomen",
+    "sick looking patient"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC and verbalize AVPU: Alert",
+   "triggers": [
+    "AVPU",
+    "alert",
+    "alert and oriented",
+    "can you hear me",
+    "what's your name",
+    "level of consciousness"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Take manual c-spine control immediately (high-risk MOI)",
+   "triggers": [
+    "manual c-spine",
+    "hold c-spine",
+    "don't move your head",
+    "take spinal precautions",
+    "partner take c-spine",
+    "manual in-line stabilization"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway",
+    "airway is clear",
+    "patent airway",
+    "look in the mouth",
+    "talking so the airway is open",
+    "check the airway"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing; expose the chest given the MOI",
+   "triggers": [
+    "breathing",
+    "expose the chest",
+    "rate and quality",
+    "chest rise",
+    "look listen and feel",
+    "how is he breathing"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess radial pulse; recognize weak rapid pulse as shock",
+   "triggers": [
+    "radial pulse",
+    "rate and quality of the pulse",
+    "weak and rapid",
+    "he is in shock",
+    "check circulation",
+    "any major bleeding"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rapid body survey: find seatbelt sign and tender guarded LUQ; single gentle pelvis check only",
+   "triggers": [
+    "rapid body survey",
+    "head to toe",
+    "palpate the abdomen",
+    "check the pelvis once",
+    "seatbelt sign",
+    "RBS"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale cool clammy",
+   "triggers": [
+    "skin colour",
+    "pale cool clammy",
+    "skin condition",
+    "diaphoretic",
+    "skin temperature",
+    "how does the skin feel"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Apply high-flow oxygen (15 L/min NRB) for shock and SpO2 91%",
+   "triggers": [
+    "oxygen",
+    "15 litres",
+    "non-rebreather",
+    "NRB",
+    "high flow O2",
+    "high-flow oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Keep supine to support blood pressure; blanket for warmth; limit movement to reduce clot disruption",
+   "triggers": [
+    "keep him supine",
+    "lay him flat",
+    "keep him still",
+    "blanket",
+    "keep him warm",
+    "limit movement"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "rapid transport",
+    "RTC",
+    "load and go",
+    "unstable",
+    "priority patient",
+    "critical patient"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Assess, package (spinal device, secured) and be ready to load within 15 minutes",
+   "triggers": [
+    "package him",
+    "onto the board",
+    "secure the straps",
+    "ready to load",
+    "onto the cot",
+    "let's go"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate fire/partner: cot to patient, egress cleared, notify en route",
+   "triggers": [
+    "bring the cot",
+    "can fire help",
+    "clear the way",
+    "fire can help with the lift",
+    "partner notify the hospital",
+    "can you grab"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Confirm chief complaint: left upper abdominal pain",
+   "triggers": [
+    "what happened",
+    "chief complaint",
+    "what's bothering you most",
+    "main problem",
+    "where does it hurt",
+    "tell me what's wrong"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Obtain HxC/C with OPQRRRST plus MVA critical history (speed, intrusion, restraints, airbags, LOC, other occupants)",
+   "triggers": [
+    "when did the pain start",
+    "how fast were you going",
+    "were you wearing a seatbelt",
+    "did the airbags go off",
+    "did you lose consciousness",
+    "anyone else in the car"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain pain score 0-10",
+   "triggers": [
+    "pain scale",
+    "zero to ten",
+    "rate your pain",
+    "how bad is the pain",
+    "out of ten",
+    "pain score"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain PMHx (hypertension)",
+   "triggers": [
+    "medical history",
+    "any medical conditions",
+    "past history",
+    "high blood pressure",
+    "see a doctor for anything",
+    "health problems"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain medications (ramipril)",
+   "triggers": [
+    "medications",
+    "taking any meds",
+    "prescriptions",
+    "what do you take",
+    "any pills",
+    "blood thinners"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain allergies (penicillin - rash)",
+   "triggers": [
+    "allergies",
+    "allergic to anything",
+    "allergic to any medications",
+    "drug allergies",
+    "reaction to any medication",
+    "penicillin"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain LOI",
+   "triggers": [
+    "last ate",
+    "last oral intake",
+    "when did you eat",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components (15)",
+   "triggers": [
+    "GCS",
+    "Glasgow Coma",
+    "eyes verbal motor",
+    "E4 V5 M6",
+    "GCS fifteen",
+    "coma scale"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - recognize 88/62 as hypotension",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a BP",
+    "he is hypotensive",
+    "systolic",
+    "take a pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, strength, rhythm",
+   "triggers": [
+    "pulse rate",
+    "rate rhythm and strength",
+    "heart rate",
+    "count the pulse",
+    "pulse quality",
+    "weak and regular"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate, depth, character",
+   "triggers": [
+    "respiratory rate",
+    "resp rate",
+    "respirations",
+    "breathing rate",
+    "count respirations",
+    "rate depth and quality"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin reassessed hands-on",
+   "triggers": [
+    "skin",
+    "skin colour temperature condition",
+    "feel the skin",
+    "clammy",
+    "recheck the skin",
+    "CTC"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils size, equality, reactivity",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "pupils equal and reactive",
+    "pen light",
+    "check the eyes",
+    "pupil size"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration check against pulse",
+   "triggers": [
+    "SpO2",
+    "sat",
+    "pulse ox",
+    "oxygen saturation",
+    "sats",
+    "matches the pulse"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling",
+    "recent illness",
+    "fever or chills",
+    "feeling unwell lately",
+    "overall health"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "headache",
+    "dizziness",
+    "numbness or tingling",
+    "weakness",
+    "seizures",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "shortness of breath",
+    "cough",
+    "trouble breathing",
+    "hurts to breathe",
+    "respiratory",
+    "lungs"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "palpitations",
+    "heart racing",
+    "cardiac history",
+    "cardiovascular",
+    "heart"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (nausea, faintness - pertinent to shock)",
+   "triggers": [
+    "nausea",
+    "vomiting",
+    "abdominal pain",
+    "feel faint",
+    "bowel",
+    "bladder"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "rashes",
+    "skin problems",
+    "other wounds",
+    "bruising",
+    "integumentary",
+    "cuts"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "other injuries",
+    "joint pain",
+    "sore ribs",
+    "muscle",
+    "musculoskeletal",
+    "move everything"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "sugars",
+    "thyroid",
+    "endocrine",
+    "hormones",
+    "insulin"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "vision",
+    "hearing",
+    "sore throat",
+    "EENT",
+    "nosebleed"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam",
+   "triggers": [
+    "palpate the head",
+    "check the neck",
+    "trachea",
+    "DOTS",
+    "head and neck",
+    "scalp"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation, bilateral comparison",
+   "triggers": [
+    "auscultate",
+    "listen to the chest",
+    "lung sounds",
+    "six fields",
+    "air entry",
+    "palpate the ribs"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam - recognize increasing distension as ongoing bleed",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "belly",
+    "abdomen is distended",
+    "abdominal exam",
+    "distension"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined during the scene roll",
+   "triggers": [
+    "check the back",
+    "palpate the spine",
+    "back exam",
+    "back during the roll",
+    "posterior",
+    "spine"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities incl pelvis review, CSM",
+   "triggers": [
+    "check the legs",
+    "lower extremities",
+    "pedal pulses",
+    "distal CMS legs",
+    "pelvis review",
+    "feet"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities, CSM",
+   "triggers": [
+    "check the arms",
+    "upper extremities",
+    "radial pulses both arms",
+    "distal CMS arms",
+    "grip strength",
+    "hands"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Execute the Hypovolemia protocol: supine, warm, high-flow O2, minimal movement, no delay on scene",
+   "triggers": [
+    "hypovolemia protocol",
+    "treat for shock",
+    "supine and warm",
+    "shock treatment",
+    "minimal movement",
+    "rapid transport for shock"
+   ]
+  },
+  {
+   "itemId": "skill-spinal-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Spinal packaging skill performed correctly",
+   "triggers": [
+    "size the collar",
+    "apply the hard collar",
+    "roll onto the board",
+    "secure the body then the head",
+    "head blocks",
+    "spinal motion restriction"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "PCP: IV access and 20 mL/kg bolus (max 2 L), reassess every 500 mL against target SBP 90",
+   "triggers": [
+    "start an IV",
+    "18 gauge",
+    "fluid bolus 20 mL per kilo",
+    "reassess every 500",
+    "maximum 2 litres",
+    "target systolic 90"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: TXA 2 g IV over 1 minute with 6 rights and contraindications ruled out (time of injury, age, allergy, isolated TBI)",
+   "triggers": [
+    "TXA",
+    "tranexamic acid",
+    "2 grams over 1 minute",
+    "six rights",
+    "time of injury under 3 hours",
+    "any allergies to TXA"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after each major move and each 500 mL",
+   "triggers": [
+    "reassess ABCs",
+    "recheck the airway breathing circulation",
+    "reassess after the move",
+    "ABCs again",
+    "check after 500 mL",
+    "recheck interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes; recognize the deteriorating trend",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "trending",
+    "getting worse",
+    "reassess vitals",
+    "another set"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "Continue the fluid protocol correctly against the SBP 90 target (PCP)",
+   "triggers": [
+    "continue the bolus",
+    "another 500",
+    "BP still under 90",
+    "keep running fluids",
+    "reassess after each 500",
+    "target systolic of 90"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Early en-route notification for a critical patient",
+   "triggers": [
+    "notify the hospital",
+    "call ahead",
+    "patch to the hospital",
+    "trauma alert",
+    "radio report",
+    "ETA"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete organized hand-off with initial and final vitals and treatment response",
+   "triggers": [
+    "hand over",
+    "handoff report",
+    "report to the nurse",
+    "this is a 45 year old",
+    "transfer of care",
+    "verbal report"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "document",
+    "chart",
+    "paperwork",
+    "write it up"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "moves-before-cspine",
+   "descriptionEn": "candidate moves the patient, asks him to lift or turn his head or sit up, or applies a pain stimulus (e.g. palpating the tender abdomen or ribs) before manual in-line c-spine control has been established"
+  },
+  {
+   "key": "releases-cspine-early",
+   "descriptionEn": "candidate (or the partner on the candidate's instruction) lets go of manual c-spine control before the patient is fully secured to the spinal device with body straps and head blocks; applying the collar alone does not permit release. Handing manual control directly to another rescuer (e.g. a firefighter) without a gap is NOT a release."
+  },
+  {
+   "key": "pelvis-sprung-repeatedly",
+   "descriptionEn": "candidate springs, rocks or compresses the pelvis more than once (the pelvis gets one gentle assessment only)"
+  },
+  {
+   "key": "patient-sits-or-walks",
+   "descriptionEn": "candidate lets or asks the patient to sit up, stand or walk at any point (e.g. to get to the cot)"
+  },
+  {
+   "key": "head-secured-before-body",
+   "descriptionEn": "candidate secures the head to the spinal device (head blocks or head straps) before the body straps are secured"
+  },
+  {
+   "key": "head-taped",
+   "descriptionEn": "candidate tapes the patient's head to the spinal device"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the saline bolus past 500 mL, or onto the next 500 mL, without reassessing the patient (BP / vitals / ABCs) in between"
+  },
+  {
+   "key": "bolus-volume-error",
+   "descriptionEn": "PCP orders a total fluid volume above the 2 L maximum, or a per-kilogram dose other than 20 mL/kg"
+  },
+  {
+   "key": "txa-wrong-dose",
+   "descriptionEn": "PCP prepares or gives a TXA dose other than 2 g (2000 mg), or by a route other than IV"
+  },
+  {
+   "key": "txa-pushed-too-fast",
+   "descriptionEn": "PCP pushes the TXA rapidly instead of over 1 minute (e.g. push it all at once)"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "20 mL/kg IV bolus to a maximum of 2 L, reassessing after every 500 mL; target systolic BP 90 (18 G access en route)",
+   "licence": "pcp"
+  },
+  {
+   "key": "txa",
+   "namesEn": [
+    "TXA",
+    "tranexamic acid",
+    "Cyklokapron"
+   ],
+   "doseEn": "2 g (2000 mg) IV push over 1 minute - single dose",
+   "licence": "pcp",
+   "indicationsEn": "major trauma after initiating the Hypovolemia protocol; signs of shock with a mechanism and findings suggesting occult or ongoing bleeding (seatbelt sign, tender guarded and distending LUQ)",
+   "contraindicationsEn": "known hypersensitivity or allergy to TXA; more than 3 hours after injury; patient under 12 years; isolated TBI - none apply (the crash happened just before the 911 call; he is 45; his only allergy is penicillin)",
+   "cautionsEn": "further hypotension if administered too quickly"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O",
+    "the gas"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this scenario: Entonox is cautioned in shock and with abdominal distention. A statement of withholding it is NOT drug:entonox.",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol",
+    "APAP"
+   ],
+   "doseEn": "500 - 1000 mg PO - WITHHELD in this scenario: indicated for mild to moderate pain only, cautioned in hypovolemia",
+   "licence": "pcp"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin",
+    "NSAID"
+   ],
+   "doseEn": "300 - 400 mg PO - WITHHELD in this scenario: indicated for mild to moderate pain only; not for a patient in shock from suspected internal bleeding",
+   "licence": "pcp"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol",
+    "Dramamine",
+    "anti-emetic"
+   ],
+   "doseEn": "1 mg/kg to a maximum of 50 mg, IV diluted with NS over 1-2 minutes or IM, for nausea; caution: cardiovascular disease (hypertension) - this patient is hypertensive",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "log-roll",
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "no-movement-before-cspine",
+   "check": "absent",
+   "event": "moves-before-cspine",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 15,
+    "errorEn": "C-spine control taken late, or out of sequence with potentially negative consequences, including pain stimulus prior to C-spine control, and/or"
+   }
+  },
+  {
+   "id": "no-early-cspine-release",
+   "check": "absent",
+   "event": "releases-cspine-early",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 100,
+    "errorEn": "Releasing C-spine control when it is required, detrimental to patient care"
+   }
+  },
+  {
+   "id": "pelvis-single-gentle-check",
+   "check": "absent",
+   "event": "pelvis-sprung-repeatedly",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-sitting-or-walking",
+   "check": "absent",
+   "event": "patient-sits-or-walks",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "body-before-head",
+   "check": "absent",
+   "event": "head-secured-before-body",
+   "deduct": {
+    "itemId": "skill-spinal-mgmt",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-head-tape",
+   "check": "absent",
+   "event": "head-taped",
+   "deduct": {
+    "itemId": "skill-spinal-mgmt",
+    "weight": 10,
+    "errorEn": "Performs the skill with an isolated error not detrimental to patient care"
+   }
+  },
+  {
+   "id": "entonox-withheld",
+   "check": "absent",
+   "event": "drug:entonox",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "acetaminophen-withheld",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "ibuprofen-withheld",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "saline-given",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "bolus-volume",
+   "check": "absent",
+   "event": "bolus-volume-error",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "txa-given",
+   "check": "present",
+   "event": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "txa-after-baseline",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "txa-time-of-injury-known",
+   "check": "ordered",
+   "first": "history-of-cc",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-allergies-known",
+   "check": "ordered",
+   "first": "allergies",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-dose",
+   "check": "absent",
+   "event": "txa-wrong-dose",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "txa-rate",
+   "check": "absent",
+   "event": "txa-pushed-too-fast",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "emr-no-txa",
+   "check": "absent",
+   "event": "drug:txa",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "45-year-old male",
+  "cc": "severe left upper quadrant abdominal pain after a high-risk MVA, with signs of shock",
+  "moi": "restrained driver of a sedan T-boned on the driver side at about 60 km/h, 0.4 m intrusion, airbags deployed",
+  "hxcc": "dazed, no confirmed LOC; extricated by fire; pain 8/10 sharp, worse on breathing, since impact",
+  "vitals": "GCS 15, BP 88/62 now 84/58, pulse 124 now 132 weak, resps 24 shallow, skin pale cool clammy, SpO2 94% on 15 L NRB",
+  "treatments": "c-spine and full spinal packaging, high-flow oxygen 15 L NRB, supine and warm, movement limited; PCP: IV 18 G with normal saline bolus reassessed every 500 mL, TXA 2 g IV over 1 minute",
+  "findings": "seatbelt sign chest and abdomen, LUQ tenderness and guarding with increasing distension - suspected intra-abdominal bleeding; pelvis stable; deteriorating; ETA about 10 minutes"
+ },
+ "handoffFacts": {
+  "ageSex": "45-year-old male",
+  "cc": "severe left upper quadrant abdominal pain with seatbelt bruising, guarding and increasing distension - treated as intra-abdominal bleeding with shock",
+  "moi": "restrained driver of a sedan T-boned on his door at about 60 km/h, 0.4 m intrusion, airbags deployed",
+  "hxcc": "dazed, no confirmed LOC; extricated by fire; pain 8/10 sharp, worse on breathing, non-radiating, since impact; felt faint when stood up",
+  "initialVitals": "GCS 15, BP 88/62, pulse 124 weak regular, resps 24 shallow, skin pale cool clammy, pupils equal and reactive, SpO2 94% on 15 L NRB (91% on room air)",
+  "finalVitals": "GCS 15 and increasingly anxious, BP 84/58, pulse 132 weak, resps 26 shallow, skin pale cool clammy, SpO2 95% on 15 L NRB - trending down",
+  "pmhx": "hypertension",
+  "meds": "ramipril 5 mg daily",
+  "allergies": "penicillin (rash)",
+  "treatments": "manual c-spine, collar and full spinal packaging; high-flow oxygen 15 L NRB; kept supine and warm, movement limited; rapid transport; PCP: IV 18 G with normal saline bolus (20 mL/kg, max 2 L, reassessed every 500 mL), TXA 2 g IV over 1 minute; Entonox withheld",
+  "findings": "seatbelt sign across chest and abdomen; tender left lower ribs with equal air entry in all 6 sites; LUQ tenderness, guarding and increasing distension; pelvis stable on a single gentle check; no external hemorrhage; CSM intact in all limbs"
+ },
+ "pcrFacts": {
+  "cc": "Severe LUQ abdominal pain post high-risk MVA (60 km/h T-bone, 0.4 m intrusion)",
+  "hxcc": "Restrained driver, airbags deployed, dazed no confirmed LOC, extricated by fire; pain 8/10 sharp, worse on breathing, since impact",
+  "pmhx": "Hypertension",
+  "meds": "Ramipril 5 mg daily",
+  "allergies": "Penicillin (rash)",
+  "treatments": [
+   "Manual c-spine, collar, full spinal packaging",
+   "High-flow O2 15 L NRB",
+   "Supine, warmth, movement limited",
+   "RTC transport within 15 min",
+   "PCP: IV 18 G, NS bolus 20 mL/kg reassessed q500 mL, TXA 2 g IV over 1 min"
+  ],
+  "findings": [
+   "Seatbelt sign chest and abdomen",
+   "LUQ tenderness, guarding, increasing distension",
+   "BP 88/62 falling to 84/58, pulse 124 rising to 132",
+   "Pelvis stable on single gentle check"
+  ],
+  "vitals": "Set 1 (baseline): GCS 15 (E4V5M6), BP 88/62, P 124 weak regular, R 24 shallow, skin pale cool clammy, PERL, SpO2 94% on 15 L NRB (91% RA). Set 2 (en route, deteriorating): GCS 15 anxious, BP 84/58, P 132 weak regular, R 26 shallow, skin pale cool clammy, PERL, SpO2 95% on 15 L NRB"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": "You completed your rapid body survey - what did you find when you examined the chest and the abdomen?"
+ },
+ "trackNotes": {
+  "emrEn": "EMR: no vascular access, no TXA. The station is won on shock recognition, supine positioning, warmth, high-flow oxygen, 15-minute packaging and en-route reassessment. Secondary survey en route. Entonox is withheld (cautions: shock, abdominal distention).",
+  "pcpEn": "PCP adds en-route vascular access (18 G), 20 mL/kg NS bolus to max 2 L reassessing every 500 mL (target SBP 90), and TXA 2 g IV over 1 minute for shock with suspected occult bleeding. Functional Enquiry en route, kept efficient. Entonox is withheld (cautions: shock, abdominal distention); oral acetaminophen and ibuprofen are not given (severe pain, shock)."
+ },
+ "sourcePages": "scenario tr-02 (data/practical/scenarios.json); BC Provincial Examination Guidelines (current to June 15, 2026): p.7-8 RTC criteria (cool pale clammy skin secondary to suspected shock; high risk automobile crash - intrusion >0.3m on the occupant side), p.24 Pelvis binding, p.25 Spinal Management (manual stabilization, hard collar, spinal device, foam blocks, secure the body; do not tape the head), p.32 Abdominal Injuries (limit movement to reduce clot disruption, protect against heat loss; PCP en route: vascular access, TXA if indicated), p.54 Hypovolemia (SBP < 90; supine, warm, oxygen to SpO2 >= 94%; PCP: fluid bolus 20 mL/kg to a maximum of 2 litres reassessing every 500 mL; consider TXA), p.58 Acetaminophen (mild to moderate pain; caution hypovolemia), p.63 Dimenhydrinate, p.65 Entonox (contraindication pneumothorax; cautions shock, abdominal distention), p.68 Ibuprofen (mild to moderate pain), p.78 Tranexamic Acid (2 g / 2000 mg IV push over 1 minute; contraindicated > 3 hours after injury, < 12 years, isolated TBI)"
+}

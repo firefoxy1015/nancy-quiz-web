@@ -1,0 +1,1312 @@
+{
+ "id": "md-01",
+ "titleEn": "Anaphylaxis After Peanut Exposure",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-01",
+ "patient": {
+  "name": "Hannah Lee",
+  "age": 24,
+  "sex": "female",
+  "affectEn": "frightened and drowsy; slumped sideways in a restaurant booth, flushed, face and lips obviously swollen, one hand clutching her throat; audible wheeze and stridor",
+  "speechEn": "can only manage one or two words at a time between breaths ('can't... breathe'); her friend answers most history questions for her. After epinephrine she improves and can talk in short sentences."
+ },
+ "scene": {
+  "settingEn": "A busy Thai restaurant in New Westminster at 1915 hrs. Staff have cleared a path to a corner booth. Room temperature, no hazards. One patient. Her friend sits beside her still holding the plate of pad thai she was eating.",
+  "hazardsEn": [
+   "no scene hazards",
+   "ongoing allergen exposure: the plate of pad thai (the suspected peanut source) is still right in front of her"
+  ],
+  "bystanders": [
+   {
+    "who": "friend (dining with her)",
+    "knowsEn": "She took her first mouthful of the pad thai about 8 minutes ago; she told the server 'no peanuts'. Within 2 minutes she said she was itchy and her throat felt tight, then her face and lips started swelling. She has a known peanut anaphylaxis: two previous ER visits and she has used an EpiPen once before. She also has mild asthma and uses a salbutamol inhaler when she needs it. Her EpiPen is not with her tonight and it expired last month. Allergies: peanuts (anaphylaxis) and shellfish (hives). She has had only the pad thai and water. Does not know anything else."
+   },
+   {
+    "who": "restaurant staff",
+    "knowsEn": "They called 911 and cleared a path to the booth. They know nothing about her medical history. They will hold doors or move tables if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "bag-valve mask with oral and nasal airways",
+   "suction unit",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "epinephrine for IM injection, with syringes and IM needles",
+   "salbutamol for nebulizer and MDI",
+   "cot (stretcher)",
+   "blankets",
+   "AED",
+   "PCP only: IV start kit with normal saline",
+   "PCP only: diphenhydramine"
+  ]
+ },
+ "dispatchEn": "1915 hrs. Code 3 to a Thai restaurant in New Westminster. 24-year-old female with a known peanut allergy has an allergic reaction. Staff say she is having trouble breathing. Hospital is 9 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: caller says her face is swelling and she used to carry an EpiPen but does not have it tonight.",
+ "arrivalEn": "Restaurant staff meet you at the door; they have cleared a path through the busy dining room to a corner booth. Room temperature, no hazards. One patient: a young woman slumped sideways in the booth. Her friend is beside her, still holding a plate of pad thai.",
+ "firstLookEn": "A 24-year-old woman slumped sideways in the booth, flushed, with obvious facial and lip swelling. You can hear wheeze and stridor from where you stand. She clutches her throat and manages: \"Can't... breathe.\"",
+ "primary": {
+  "locEn": "Drowsy and confused; responds to your voice (AVPU = V). Eyes open, answers in one or two words only, clutching her throat: \"Can't... breathe.\"",
+  "airwayEn": "Lips and tongue swollen, stridor present, but she is still moving air. No vomit, no blood, no foreign body in the mouth.",
+  "breathingEn": "Respirations 30, laboured, with accessory muscle use and audible wheeze. Chest rises equally.",
+  "circulationEn": "Radial pulse 130, weak, regular. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: no trauma, no injection sites, no stinger. Widespread urticaria (hives) over the chest and arms. Skin flushed, warm and moist (skin is given automatically during the RBS). C-spine not indicated - no trauma.",
+  "skinEn": "flushed, widespread urticaria (hives) over chest and arms, warm and moist"
+ },
+ "history": {
+  "ccEn": "Throat... closing. Can't... breathe. (Friend: \"She's having an allergic reaction - her throat is swelling and she can't breathe.\")",
+  "opqrst": {
+   "oEn": "Peanuts... the noodles. (Friend: \"Her first mouthful of the pad thai was about 8 minutes ago. She told the server no peanuts. Within 2 minutes she was itchy and said her throat felt tight, then her face started swelling.\")",
+   "pEn": "Nothing... helps. (Friend: \"Nothing has made it better.\")",
+   "qEn": "Tight... throat. Itchy. (Friend: \"She says her throat feels tight and she's itchy.\")",
+   "rEn": "Throat... face. (Friend: \"Her face and lips are swelling, and she's got hives on her chest and arms.\")",
+   "sEn": "Worst... ever. (Friend: \"She says this is the worst reaction she's ever had - worse than the two times she went to the ER.\")",
+   "tEn": "Sudden. Getting... worse. (Friend: \"It came on all at once, within 2 minutes of eating, and the swelling has kept getting worse.\")"
+  },
+  "painScoreEn": "She shakes her head: \"Not... pain. Can't... breathe.\" (No numeric pain score is given in this scenario.)",
+  "sample": {
+   "sEn": "Throat tight... can't breathe... itchy. (Friend: \"Her face and lips are swelling and she's covered in hives.\")",
+   "aEn": "Peanuts. (Friend: \"Peanuts - that's anaphylaxis for her. And shellfish gives her hives.\")",
+   "mEn": "Puffer. (Friend: \"A salbutamol inhaler when she needs it. She has an EpiPen but it's not with her tonight - it expired last month.\")",
+   "pEn": "Peanuts... asthma. (Friend: \"Peanut anaphylaxis - she's been to the ER twice for it and used her EpiPen once before. And mild asthma.\")",
+   "lEn": "Noodles... water. (Friend: \"Just the pad thai, right now, and water.\")",
+   "eEn": "Ate... pad thai. (Friend: \"We were having dinner. She told the server no peanuts. About 2 minutes after her first mouthful she got itchy and her throat went tight.\")"
+  },
+  "fe": {
+   "generalEn": "I felt fine until dinner.",
+   "cnsEn": "I felt faint. No headache.",
+   "respiratoryEn": "My throat was tight and I was wheezing. It's getting better now.",
+   "cardiovascularEn": "My heart is racing.",
+   "giGuEn": "My stomach is crampy and I feel sick to my stomach.",
+   "integumentaryEn": "I'm itchy all over and I've got hives everywhere.",
+   "musculoskeletalEn": "No, nothing like that.",
+   "endocrineEn": "No, nothing like that. No diabetes, no thyroid problems.",
+   "eentEn": "My lips and tongue are swollen, and my eyes are itchy and puffy."
+  }
+ },
+ "findings": {
+  "headNeckEn": "Lip and tongue swelling (angioedema); eyes puffy. Stridor present before epinephrine; once epinephrine has been given the stridor is decreasing. No JVD.",
+  "chestLungsEn": "Expiratory wheeze in all fields on 6-site auscultation, equal both sides; the wheeze improves after salbutamol (only if salbutamol has been given). Urticaria across the chest.",
+  "abdomenEn": "Soft, with mild generalized tenderness. No distension.",
+  "backEn": "Urticaria across the back. No other findings.",
+  "lowerExtremitiesEn": "Urticaria on both legs. Circulation, sensation and movement intact.",
+  "upperExtremitiesEn": "Urticaria on both arms. Circulation, sensation and movement intact."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, before epinephrine (required before initiating the protocol); unchanged until epinephrine has had time to work",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "84/50",
+   "pulse": {
+    "rate": 130,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "130 weak regular"
+   },
+   "resp": {
+    "rate": 30,
+    "depth": "laboured, with accessory muscle use",
+    "character": "laboured with audible wheeze",
+    "rawEn": "30 laboured with wheeze"
+   },
+   "skin": "flushed, urticaria, warm moist",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "88% on room air",
+   "bgl": "6.1 mmol/L",
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "allOf": [
+       {
+        "afterEvent": "drug:epinephrine"
+       },
+       {
+        "elapsedMs": 600000
+       }
+      ]
+     },
+     {
+      "afterEvent": "drug:epinephrine",
+      "count": 2
+     }
+    ]
+   },
+   "unlockNoteEn": "about 5 minutes after epinephrine, en route; improving (stridor resolved, wheeze reduced) - document the response",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "106/68",
+   "pulse": {
+    "rate": 118,
+    "rhythm": "regular",
+    "strength": "stronger",
+    "rawEn": "118 stronger regular"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "less laboured",
+    "character": "wheeze reduced, stridor resolved",
+    "rawEn": "22, wheeze reduced, stridor resolved"
+   },
+   "skin": "flushed, hives fading, warm dry",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "96% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "no-epinephrine-yet",
+   "when": {
+    "elapsedMs": 480000,
+    "missingEvent": "drug:epinephrine"
+   },
+   "examinerLineEn": "She is not improving: still drowsy and confused, stridor and wheeze persist, still flushed with hives, pulse still weak."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan epinephrine, oxygen, salbutamol, BVM, early transport",
+   "triggers": [
+    "copy dispatch",
+    "bring the epi and the airway kit",
+    "thinking epinephrine and high-flow oxygen",
+    "bring the BVM in case",
+    "plan for early transport"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize from dispatch this is likely an unstable anaphylaxis call",
+   "triggers": [
+    "this sounds like anaphylaxis",
+    "likely unstable",
+    "possible anaphylaxis with airway involvement",
+    "this could be time critical",
+    "she's going to be a priority patient"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment, nature of illness (allergic reaction / possible ongoing allergen), number of patients (1)",
+   "triggers": [
+    "scene is safe",
+    "no hazards",
+    "one patient",
+    "nature of illness is an allergic reaction",
+    "is she still eating the food",
+    "room temperature environment"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves on",
+    "putting on gloves and eye protection",
+    "BSI",
+    "PPE on",
+    "donning gloves"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: flushed, facial/lip swelling, audible stridor and wheeze, slumped posture",
+   "triggers": [
+    "she's flushed",
+    "her face and lips are swelling",
+    "I can hear stridor",
+    "audible wheeze",
+    "she's slumped over",
+    "general impression"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "scene",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Remove/stop the allergen exposure (clear the food away)",
+   "triggers": [
+    "take the food away",
+    "remove the allergen",
+    "move the plate away from her",
+    "stop her eating",
+    "get the pad thai away"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: responds to Verbal, drowsy - a decreased LOC finding",
+   "triggers": [
+    "AVPU",
+    "she responds to voice",
+    "she's drowsy",
+    "level of consciousness",
+    "decreased LOC",
+    "is she confused"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (medical, no trauma)",
+   "triggers": [
+    "c-spine not indicated",
+    "no c-spine concern",
+    "medical call, no spinal",
+    "no trauma so no c-spine",
+    "no mechanism for spinal injury"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway - identify swelling and stridor as an airway threat",
+   "triggers": [
+    "check her airway",
+    "her airway is swelling",
+    "stridor means airway threat",
+    "look in her mouth",
+    "she's still moving air",
+    "lips and tongue swollen"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing - rate, effort, accessory muscle use, wheeze",
+   "triggers": [
+    "breathing rate",
+    "accessory muscle use",
+    "how's her breathing",
+    "she's working hard to breathe",
+    "I can hear wheezing",
+    "count her respirations"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation - weak rapid radial pulse",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse is weak and fast",
+    "rapid weak radial",
+    "any major bleeding",
+    "how's the pulse"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey looking for hives, stinger/injection site and other causes",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "check for a stinger",
+    "any injection sites",
+    "looking for hives"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: flushed, urticaria, warm moist",
+   "triggers": [
+    "skin is flushed",
+    "she has hives",
+    "skin colour temperature condition",
+    "warm and moist",
+    "urticaria",
+    "skin signs"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen 15 L NRB to target SpO2 at or above 94%",
+   "triggers": [
+    "high-flow oxygen",
+    "non-rebreather at 15",
+    "15 litres NRB",
+    "put her on oxygen",
+    "target 94 percent",
+    "NRB"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position SUPINE to support blood pressure and do NOT walk the patient (per Anaphylaxis guideline)",
+   "triggers": [
+    "lay her flat",
+    "position her supine",
+    "lie her down",
+    "do not let her walk",
+    "keep her lying down for her pressure",
+    "supine for blood pressure"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "she's unstable",
+    "priority patient",
+    "load and go",
+    "code 3 to hospital"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Epinephrine given on scene, then ready to load within 15 minutes",
+   "triggers": [
+    "epi then we go",
+    "give the epi here then transport",
+    "ready to load within 15",
+    "let's package her",
+    "no full secondary on scene",
+    "get her to the truck"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate crew members to prep egress (explicitly required by the Anaphylaxis guideline)",
+   "triggers": [
+    "partner, prep the egress",
+    "get the cot ready",
+    "bring the stretcher to the booth",
+    "clear a path to the door",
+    "delegate",
+    "staff, move those tables"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: difficulty breathing and throat swelling after eating",
+   "triggers": [
+    "what's going on today",
+    "what's happening",
+    "chief complaint",
+    "can you tell me what's wrong",
+    "why did you call us"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C with OPQRRRST/LOTARP: onset, allergen, time from exposure, progression, previous reactions, severity",
+   "triggers": [
+    "when did this start",
+    "what did she eat",
+    "how long after eating",
+    "has this happened before",
+    "is it getting worse",
+    "OPQRST"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx (peanut anaphylaxis, asthma)",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "past history",
+    "does she have asthma",
+    "previous reactions",
+    "has she been to the ER for this"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications incl EpiPen availability and expiry",
+   "triggers": [
+    "what medications",
+    "does she take any medications",
+    "does she have an EpiPen",
+    "where is her EpiPen",
+    "inhaler",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies with consequence detail",
+   "triggers": [
+    "any allergies",
+    "what is she allergic to",
+    "what happens when she eats it",
+    "allergic to anything else",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI - identifies the exposure",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "what did she eat tonight",
+    "anything to eat or drink",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "history",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Use the friend as a history source when the patient cannot speak",
+   "triggers": [
+    "can you tell me what happened",
+    "friend, can you help",
+    "are you her friend",
+    "ask the friend",
+    "does she have any history you know of"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components (14: E4 V4 M6)",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 14",
+    "E4 V4 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - recognize BP under 90 systolic as an anaphylaxis instability criterion",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "I'm taking a BP",
+    "cuff on",
+    "systolic under 90",
+    "she's hypotensive"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm",
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "count the pulse",
+    "radial for 30 seconds"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character incl wheeze",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths",
+    "still wheezing"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on: temperature, colour, condition, extent of urticaria",
+   "triggers": [
+    "skin",
+    "colour temperature moisture",
+    "feel her skin",
+    "skin condition",
+    "hives spreading"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "pupils equal and reactive",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "check the waveform matches the pulse"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - reasonable with altered LOC",
+   "triggers": [
+    "blood sugar",
+    "BGL",
+    "glucometer",
+    "check her glucose",
+    "finger poke"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling lately",
+    "were you well before dinner",
+    "any recent illness",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any fainting",
+    "do you feel faint",
+    "headache",
+    "dizziness",
+    "weakness or numbness",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (pertinent)",
+   "triggers": [
+    "how's your breathing now",
+    "throat tightness",
+    "still wheezy",
+    "any cough",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "palpitations",
+    "heart racing",
+    "chest pain",
+    "is your heart pounding",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (abdominal cramps are an anaphylaxis sign)",
+   "triggers": [
+    "any nausea",
+    "stomach cramps",
+    "abdominal pain",
+    "vomiting",
+    "bowels and bladder"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (urticaria)",
+   "triggers": [
+    "itching",
+    "hives",
+    "rash",
+    "skin itchy",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "any muscle or joint pain",
+    "musculoskeletal",
+    "any injuries",
+    "aches anywhere",
+    "did you hurt yourself"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "blood sugar problems",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT (angioedema)",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "lips and tongue swelling",
+    "eyes itchy",
+    "any swelling in your mouth"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl airway swelling reassessment",
+   "triggers": [
+    "head and neck",
+    "check the swelling in her lips",
+    "is the stridor better",
+    "JVD",
+    "look at her neck",
+    "tongue swelling"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation, bilateral comparison",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "both sides",
+    "listen to her chest",
+    "wheeze in all fields"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "abdominal exam",
+    "any tenderness in the belly"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check the back",
+    "back exam",
+    "hives on her back",
+    "look at her back",
+    "palpate the spine"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities",
+   "triggers": [
+    "lower extremities",
+    "check her legs",
+    "pedal pulses",
+    "CSM in the feet",
+    "hives on the legs"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities",
+   "triggers": [
+    "upper extremities",
+    "check her arms",
+    "CSM in the hands",
+    "grip strength",
+    "hives on the arms"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Initiate the Anaphylaxis protocol with correct indications (signs + exposure + instability) and baseline vitals done",
+   "triggers": [
+    "anaphylaxis protocol",
+    "starting the anaphylaxis protocol",
+    "she meets the criteria for epi",
+    "signs, exposure and unstable",
+    "baseline vitals are done so I'll give epi"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Administer epinephrine 0.5 mg IM with the 6 rights, correct site (anterolateral thigh) and IM needle",
+   "triggers": [
+    "epinephrine 0.5 milligrams IM",
+    "epi into the thigh",
+    "anterolateral thigh",
+    "IM needle",
+    "six rights",
+    "right patient right drug right dose"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize repeat dosing: may repeat 0.5 mg IM every 5 minutes up to 3 doses if no improvement",
+   "triggers": [
+    "repeat every 5 minutes",
+    "up to 3 doses",
+    "if no improvement I'll repeat the epi",
+    "second dose at 5 minutes",
+    "max three doses"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: salbutamol for bronchospasm only AFTER epinephrine; diphenhydramine 25-50 mg; IV with fluid bolus if still hypotensive",
+   "triggers": [
+    "salbutamol after the epi",
+    "neb salbutamol for the wheeze",
+    "diphenhydramine 50",
+    "Benadryl",
+    "start an IV",
+    "fluid bolus 20 per kilo"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Do not allow the patient to stand or walk to the stretcher",
+   "triggers": [
+    "don't stand up",
+    "do not walk her",
+    "we'll lift you onto the stretcher",
+    "bring the cot to her",
+    "she is not walking"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after epinephrine and after each move",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "how's her airway now",
+    "reassessing after the epi",
+    "is the stridor gone",
+    "ABC check after the move"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes and interpret the response to epinephrine",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "she's responding to the epi",
+    "BP is coming up",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize the plan for a repeat dose if deterioration or no improvement occurs",
+   "triggers": [
+    "if she gets worse I'll give another epi",
+    "repeat dose if no improvement",
+    "second epi ready",
+    "plan for another dose",
+    "if the pressure drops again"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification for a critical patient",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "anaphylaxis inbound"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with epinephrine time, dose, route and response",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 24-year-old female",
+    "report to the nurse",
+    "epi given at",
+    "response to the epinephrine"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets the patient stand up or walk (e.g. walks her to the stretcher, the door or the ambulance)"
+  },
+  {
+   "key": "sat-up-while-hypotensive",
+   "descriptionEn": "candidate deliberately positions the patient sitting upright (sits her up, high or semi-Fowler's on the cot) while she is still hypotensive, instead of supine"
+  },
+  {
+   "key": "epi-wrong-dose",
+   "descriptionEn": "candidate gives epinephrine at a dose other than 0.5 mg (adult)"
+  },
+  {
+   "key": "epi-wrong-route",
+   "descriptionEn": "candidate gives epinephrine by a route other than IM (e.g. IV, subcutaneous)"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the saline bolus past 500 mL or onto the next bag without reassessing the patient (BP / vitals / ABCs) in between"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "epinephrine",
+   "namesEn": [
+    "epinephrine",
+    "epi",
+    "adrenaline",
+    "EpiPen",
+    "IM epi"
+   ],
+   "doseEn": "0.5 mg IM (adult), anterolateral thigh, after baseline vitals; may repeat every 5 minutes up to 3 times if no improvement",
+   "licence": "both",
+   "indicationsEn": "anaphylaxis: signs of anaphylaxis + exposure to an allergen + unstable (decreased LOC, BP < 90 mmHg, respiratory distress) - all present here",
+   "contraindicationsEn": "no absolute contraindications in life-threatening situations such as anaphylaxis",
+   "cautionsEn": "further hypotension if administered too quickly"
+  },
+  {
+   "key": "salbutamol",
+   "namesEn": [
+    "salbutamol",
+    "Ventolin",
+    "albuterol",
+    "salbutamol neb",
+    "puffer"
+   ],
+   "doseEn": "5 mg by nebulizer, or MDI 4 x 100 mcg (adult); repeat as required - for bronchospasm ONLY AFTER epinephrine has been given",
+   "licence": "both"
+  },
+  {
+   "key": "diphenhydramine",
+   "namesEn": [
+    "diphenhydramine",
+    "Benadryl",
+    "antihistamine"
+   ],
+   "doseEn": "25-50 mg IM, IV or PO - adjunct to limit the histamine response, ONLY AFTER epinephrine",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "20 mL/kg IV bolus to a maximum of 2 L, reassessing every 500 mL, if she remains hypotensive or hypoperfused",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "epi-given",
+   "check": "present",
+   "event": "drug:epinephrine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "epi-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:epinephrine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "salbutamol-not-before-epi",
+   "check": "ordered",
+   "first": "drug:epinephrine",
+   "then": "drug:salbutamol",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Major delay in treatment or subsequent doses of medication (IV dextrose, epinephrine) detrimental to patient care"
+   }
+  },
+  {
+   "id": "diphenhydramine-not-before-epi",
+   "check": "ordered",
+   "first": "drug:epinephrine",
+   "then": "drug:diphenhydramine",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Major delay in treatment or subsequent doses of medication (IV dextrose, epinephrine) detrimental to patient care"
+   }
+  },
+  {
+   "id": "epi-max-3",
+   "check": "max_count",
+   "event": "drug:epinephrine",
+   "max": 3,
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "epi-dose",
+   "check": "absent",
+   "event": "epi-wrong-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "epi-route",
+   "check": "absent",
+   "event": "epi-wrong-route",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Administers a medication by the incorrect route"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "supine-not-sat-up",
+   "check": "absent",
+   "event": "sat-up-while-hypotensive",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-diphenhydramine",
+   "check": "absent",
+   "event": "drug:diphenhydramine",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "24-year-old female",
+  "cc": "anaphylaxis after peanut exposure: throat swelling and difficulty breathing",
+  "moi": null,
+  "hxcc": "first mouthful of pad thai about 8 minutes before our arrival despite asking for no peanuts; itching and throat tightness within 2 minutes, then progressive facial and lip swelling; known peanut anaphylaxis, worst reaction to date",
+  "vitals": "baseline GCS 14, BP 84/50, pulse 130 weak, resp 30 laboured with wheeze, SpO2 88% on room air; 5 minutes after epinephrine GCS 15, BP 106/68, pulse 118, resp 22, SpO2 96% on 15 L NRB",
+  "treatments": "allergen removed, supine and not walked, high-flow oxygen 15 L NRB, epinephrine 0.5 mg IM at 1922; PCP: salbutamol nebulizer after epinephrine, diphenhydramine 50 mg, IV with saline; ETA 9 minutes",
+  "findings": "stridor (resolved after epinephrine), wheeze, facial and lip angioedema, widespread urticaria, abdominal cramping and nausea"
+ },
+ "handoffFacts": {
+  "ageSex": "24-year-old female",
+  "cc": "throat swelling and difficulty breathing about 8 minutes after eating pad thai - anaphylaxis after peanut exposure",
+  "moi": null,
+  "hxcc": "asked for no peanuts; itching and throat tightness within 2 minutes of the first mouthful, then progressive facial and lip swelling; worst reaction to date; two previous ER visits and one previous EpiPen use",
+  "initialVitals": "GCS 14 (E4 V4 M6), BP 84/50, pulse 130 weak regular, resp 30 laboured with wheeze, skin flushed with urticaria warm moist, pupils equal and reactive, SpO2 88% on room air, BGL 6.1",
+  "finalVitals": "5 minutes post-epinephrine: GCS 15, BP 106/68, pulse 118 stronger regular, resp 22 with wheeze reduced and stridor resolved, skin flushed with hives fading warm dry, pupils equal, SpO2 96% on 15 L NRB",
+  "pmhx": "peanut anaphylaxis, mild asthma",
+  "meds": "salbutamol MDI as needed; EpiPen expired last month and not with her",
+  "allergies": "peanuts (anaphylaxis), shellfish (hives)",
+  "treatments": "allergen removed; supine, not walked; high-flow oxygen 15 L NRB; epinephrine 0.5 mg IM left anterolateral thigh at 1922; PCP: salbutamol by nebulizer after epinephrine, diphenhydramine 50 mg, IV with saline running",
+  "findings": "stridor, wheeze, facial and lip angioedema, widespread urticaria at baseline; stridor resolved and wheeze reduced after epinephrine; abdomen soft with mild generalized tenderness"
+ },
+ "pcrFacts": {
+  "cc": "Throat swelling and difficulty breathing after peanut exposure (anaphylaxis)",
+  "hxcc": "Ate pad thai ~8 min prior despite requesting no peanuts; itching and throat tightness within 2 min, progressive swelling, worst reaction to date; 2 previous ER visits",
+  "pmhx": "Peanut anaphylaxis, mild asthma",
+  "meds": "Salbutamol MDI prn; EpiPen (expired, not carried)",
+  "allergies": "Peanuts (anaphylaxis), shellfish (hives)",
+  "treatments": [
+   "Allergen removed",
+   "Supine, not ambulated",
+   "High-flow O2 15 L NRB",
+   "Epinephrine 0.5 mg IM anterolateral thigh at 1922",
+   "PCP: salbutamol neb after epi, diphenhydramine 50 mg, IV + fluid for hypotension",
+   "RTC transport with en-route notification"
+  ],
+  "findings": [
+   "Stridor, wheeze, facial/lip angioedema, widespread urticaria",
+   "Baseline GCS 14, BP 84/50, pulse 130, SpO2 88% RA",
+   "Post-epinephrine GCS 15, BP 106/68, SpO2 96%, stridor resolved",
+   "Abdominal cramping and nausea"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "She is drowsy and confused: she opens her eyes and responds to your voice, but only manages one or two words.",
+  "breathingNotDepictedEn": "She is working hard to breathe: laboured, with accessory muscle use, audible wheeze and stridor.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives epinephrine 0.5 mg IM (repeat q5 min up to 3 doses), oxygen, supine positioning, delegates egress prep and transports rapidly. EMR does NOT give diphenhydramine or IV fluids. Salbutamol for bronchospasm is acceptable at EMR level (SOB with Asthma/COPD protocol; she is a known asthmatic) but only AFTER epinephrine. No Functional Enquiry.",
+  "pcpEn": "PCP adds vascular access with a 20 mL/kg bolus (max 2 L, reassess q500 mL) if she remains hypotensive or hypoperfused, salbutamol after epinephrine for bronchospasm, diphenhydramine 25-50 mg, and the 9-system Functional Enquiry en route."
+ },
+ "sourcePages": "Scenario md-01 (data/practical/scenarios.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing, handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC, respiratory distress, anaphylaxis = unstable); p.49 SOB with History of Asthma/COPD (salbutamol at all licence levels); p.50 Oxygen Administration (SOB or shock = high-flow O2, NRB 15 L/min); p.55 Anaphylaxis (indications: signs + allergen exposure + unstable incl. BP < 90 mmHg; supine and do not walk; remove allergen; SpO2 >= 94%; delegate egress; history and baseline vitals; epinephrine; PCP: vascular access with 20 mL/kg bolus to a maximum of 2 L reassessing every 500 mL, salbutamol after epinephrine, diphenhydramine); p.64 Diphenhydramine (25-50 mg IM/IV/PO); p.66 Epinephrine (adult 0.5 mg IM every 5 minutes, may repeat up to 3 times; no absolute contraindications in anaphylaxis; caution further hypotension); p.77 Salbutamol (5 mg nebulized, MDI 4 x 100 mcg adult; anaphylaxis bronchospasm)."
+}

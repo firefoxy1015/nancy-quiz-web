@@ -1,0 +1,1365 @@
+{
+ "id": "md-07",
+ "titleEn": "Mild Hypothermia - Elderly Woman in an Unheated Home",
+ "type": "medical",
+ "priority": "non-rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-07",
+ "patient": {
+  "name": "Edith Lawson",
+  "age": 82,
+  "sex": "female",
+  "affectEn": "sitting in a recliner wrapped in a thin blanket over a housecoat; pale and SHIVERING VIGOROUSLY; slow to respond; knows her name and that she is at home but is muddled about the day and date; apologetic, did not want to bother anyone",
+  "speechEn": "answers slowly in short, hesitant sentences; polite and cooperative; hearing aid not in, so she sometimes asks you to repeat; does not volunteer information that is not asked for (police and the neighbour can fill in details when asked)"
+ },
+ "scene": {
+  "settingEn": "Detached house in Chilliwack at 0900 hrs. Dim and very cold inside: a thermometer on the wall reads 8 degrees C; outside it is minus 4 degrees C. Police have opened the front door, letting in more cold air. The patient sits in a recliner in the living room wrapped in a thin blanket, wearing a housecoat that is damp at the back from incontinence. Two days of newspapers lie on the mat. A space heater is unplugged. No heating source running and no CO source running. One patient.",
+  "hazardsEn": [
+   "cold environment: 8 degrees C indoors, minus 4 degrees C outside",
+   "front door left open by police - cold air coming in and worsening her heat loss until someone closes it",
+   "space heater unplugged; no CO source running (none found)"
+  ],
+  "bystanders": [
+   {
+    "who": "police officer",
+    "knowsEn": "They gained entry for the wellness check and found her awake in the recliner, cold to the touch and 'a bit muddled'. They opened the front door when they came in. They know nothing about her medical history. Will close the door, fetch things or hold doors if asked."
+   },
+   {
+    "who": "neighbour (the caller)",
+    "knowsEn": "Called for the wellness check because she had not seen her for two days and the newspapers were piling up on the mat. Knows the furnace has been broken since the power outage two days ago. Does not know her medications or medical history."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "tympanic thermometer",
+   "glucometer",
+   "oral glucose gel (15 g doses)",
+   "warm blankets and towels",
+   "hot packs",
+   "oxygen kit with nasal cannula and non-rebreather mask",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter with finger and ear probes",
+   "suction unit",
+   "AED",
+   "cot (stretcher)",
+   "glucagon",
+   "PCP only: IV start kit with normal saline, D10W"
+  ]
+ },
+ "dispatchEn": "0900 hrs. Code 3 to a detached house in Chilliwack. 82-year-old female, wellness check requested by a neighbour who has not seen her for two days. The furnace has been broken since a power outage. Outside temperature is minus 4 degrees C. Hospital is 15 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: police attended, gained entry and report the patient is awake, cold to touch and 'a bit muddled'. Fire is not attending.",
+ "arrivalEn": "A police officer meets you at the open front door: \"She's in the living room. She's awake, but she's cold and a bit muddled.\" Inside, the house is dim and very cold - a thermometer on the wall reads 8 degrees C - and the open front door is letting more cold air in. Two days of newspapers lie on the mat and a space heater sits unplugged. The neighbour who called is waiting in the hallway. One patient. No heating source running, no CO source.",
+ "firstLookEn": "An 82-year-old woman sitting in a recliner, wrapped in a thin blanket over a housecoat. She is pale and shivering vigorously, and turns her head slowly toward you; she is slow to respond. The back of her housecoat looks damp.",
+ "primary": {
+  "locEn": "Awake with her eyes open spontaneously (AVPU = Alert). Answers slowly; knows her name and that she is at home, but is disoriented to the day and the date. Shivering vigorously.",
+  "airwayEn": "Clear and self-maintained. She is talking; no abnormal sounds, no secretions.",
+  "breathingEn": "Respirations 16, regular, adequate depth, equal chest rise, not laboured.",
+  "circulationEn": "Radial pulse 56, regular and weak - in her cold wrist it takes up to 30-45 seconds of careful palpation to be sure of it. No external bleeding.",
+  "rbsEn": "Modified rapid body survey: no trauma and no sign of injury from a fall (she says she did not fall); mild dependent edema in both ankles; no focal weakness. The housecoat is damp at the back from urinary incontinence. Skin is given automatically during the RBS: pale, COLD to touch centrally including the trunk and abdomen, dry apart from the damp clothing.",
+  "skinEn": "pale, cold centrally (trunk and abdomen), dry apart from the damp clothing"
+ },
+ "history": {
+  "ccEn": "I'm just so cold, dear. Cold all the way through. And I feel ever so weak.",
+  "opqrst": {
+   "oEn": "It came on gradually, over the two days since the furnace stopped. The power went out and the heat never came back on.",
+   "pEn": "The blankets helped at first. Nothing seems to help now.",
+   "qEn": "Cold all the way through. I can't stop shivering and I'm stiff all over.",
+   "rEn": "It doesn't go anywhere. I just ache all over.",
+   "sEn": "I feel weaker than I did yesterday.",
+   "tEn": "It's been the same the whole time. Two days now."
+  },
+  "painScoreEn": "It's not really a pain, dear. Just a general ache all over from the cold and the stiffness.",
+  "sample": {
+   "sEn": "I'm cold, I can't stop shaking, I'm stiff and achy all over and I feel weak. I'm afraid I wet myself - I was too cold and stiff to get up.",
+   "aEn": "No allergies that I know of.",
+   "mEn": "My thyroid pill, the levothyroxine, and amlodipine for my blood pressure. And acetaminophen - Tylenol - when my arthritis is bad. (Only if asked whether she has been taking them: \"I think I've missed some of my thyroid pills these last few days.\" Strengths: \"I don't remember, dear.\")",
+   "pEn": "An underactive thyroid, arthritis, high blood pressure, and the doctor told me last year that I have a bit of dementia.",
+   "lEn": "Half a piece of toast and some tea yesterday afternoon. I haven't eaten much at all. I've mostly been drinking tea.",
+   "eEn": "The furnace stopped working when the power went out, two days ago. I didn't want to bother anyone, so I stayed in my chair under the blanket most of the time. I didn't fall. (If asked: no chest pain, not short of breath, no alcohol - \"No, nothing like that.\")"
+  },
+  "fe": {
+   "generalEn": "I feel weak and I haven't had much appetite. I haven't been myself these two days.",
+   "cnsEn": "I'm a bit mixed up about the date, I suppose. No headache. No weakness on one side. I didn't fall or hit my head.",
+   "respiratoryEn": "No cough. I'm not short of breath.",
+   "cardiovascularEn": "No chest pain. No palpitations, no racing heart.",
+   "giGuEn": "I've wet myself because I couldn't get up - I was too cold and stiff. No diarrhea. I haven't had much to drink except the tea.",
+   "integumentaryEn": "My skin feels cold and it looks blotchy. My fingers and toes are cold, but they look all right - nothing black or blistered.",
+   "musculoskeletalEn": "I'm stiff and aching all over. My arthritis is always worse in the cold.",
+   "endocrineEn": "I have an underactive thyroid. I think I've missed some of my levothyroxine these last few days.",
+   "eentEn": "No ear pain. My hearing aid isn't in, so you'll have to speak up. Nothing wrong with my eyes or throat."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No trauma, no signs of a fall. Mucous membranes dry.",
+  "chestLungsEn": "Clear and equal at all 6 sites, no crackles. Equal chest rise.",
+  "abdomenEn": "Soft, non-tender, COLD to touch.",
+  "backEn": "Sacral skin damp and reddened but intact - no pressure ulcer. No injury.",
+  "lowerExtremitiesEn": "Mild ankle edema bilaterally. Feet cold and mottled; pedal pulses weak but present. NO frostbite - the toes blanch and refill.",
+  "upperExtremitiesEn": "Cold hands, no frostbite, circulation, sensation and movement intact, no injury."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, before rewarming and glucose",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "104/62",
+   "pulse": {
+    "rate": 56,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "56 regular weak"
+   },
+   "resp": {
+    "rate": 16,
+    "depth": "normal",
+    "character": "regular",
+    "rawEn": "16 regular"
+   },
+   "skin": "pale, cold centrally, dry",
+   "pupils": "equal, reactive but sluggish",
+   "spo2": "89% on a cold finger with a poor trace (peripherally shut down, unreliable); 95% on a warmed ear probe",
+   "bgl": "3.6 mmol/L",
+   "temp": "33.4 C tympanic"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "anyOf": [
+       {
+        "afterEvent": "drug:oral-glucose"
+       },
+       {
+        "afterEvent": "drug:d10w"
+       },
+       {
+        "afterEvent": "drug:glucagon"
+       }
+      ]
+     },
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "after active rewarming and glucose, en route (about 15 minutes after baseline); if glucose is never given set 1 stays current",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "112/68",
+   "pulse": {
+    "rate": 66,
+    "rhythm": "regular",
+    "strength": "stronger",
+    "rawEn": "66 regular, stronger"
+   },
+   "resp": {
+    "rate": 16,
+    "depth": "normal",
+    "character": "regular",
+    "rawEn": "16 regular"
+   },
+   "skin": "pink returning, warmer centrally, dry",
+   "pupils": "PERL, less sluggish",
+   "spo2": "96%",
+   "bgl": "5.4 mmol/L",
+   "temp": "34.6 C tympanic"
+  }
+ ],
+ "stateChanges": [],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan thermometer, warm blankets, hot packs, glucometer, and preheat the ambulance to 30 degrees C",
+   "triggers": [
+    "copy dispatch",
+    "bring the thermometer and the glucometer",
+    "bring warm blankets and hot packs",
+    "possible hypothermia",
+    "turn the heat up in the ambulance",
+    "preheat the truck"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate that the ambulance interior must be warmed BEFORE the patient is loaded",
+   "triggers": [
+    "preheat the ambulance to 30 degrees",
+    "get the back of the truck warm before we load",
+    "partner, crank the heater in the ambulance",
+    "warm the box before she goes in",
+    "heat on in the back"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (cold environment, open door worsening heat loss, possible CO from heating attempts - none found), environment, nature of illness (environmental exposure), one patient",
+   "triggers": [
+    "scene is cold",
+    "any hazards",
+    "one patient",
+    "nature of illness is environmental exposure",
+    "no CO source",
+    "space heater is unplugged"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "ACT on the environmental hazard: close the door and stop ongoing heat loss before beginning the assessment",
+   "triggers": [
+    "close the front door",
+    "shut the door",
+    "can you close that door please",
+    "stop the cold air coming in",
+    "stop further heat loss"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves on",
+    "gloves and eye protection",
+    "PPE on",
+    "BSI",
+    "donning gloves"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: elderly female, shivering, pale, slow to respond, damp clothing, cold room",
+   "triggers": [
+    "she's shivering",
+    "general impression",
+    "she looks pale and cold",
+    "her clothes look damp",
+    "slow to respond",
+    "elderly female in a recliner"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert but disoriented - note that confusion is itself a hypothermia sign",
+   "triggers": [
+    "AVPU",
+    "she's alert but disoriented",
+    "alert and oriented",
+    "do you know what day it is",
+    "level of consciousness",
+    "confusion from the cold"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated after confirming there was no fall",
+   "triggers": [
+    "did you fall",
+    "no c-spine indicated",
+    "no mechanism for spinal injury",
+    "she denies a fall so no c-spine",
+    "c-spine not required"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway is clear",
+    "airway patent",
+    "she's talking so her airway is open",
+    "check the airway",
+    "self-maintaining her airway"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing",
+   "triggers": [
+    "breathing rate",
+    "how's her breathing",
+    "chest rise",
+    "respiratory effort",
+    "breathing adequately"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation, taking 30-45 seconds to confirm a pulse in a cold patient before concluding pulselessness",
+   "triggers": [
+    "radial pulse",
+    "feel for a pulse for 30 to 45 seconds",
+    "take my time with the pulse because she's cold",
+    "pulse rate and quality",
+    "slow weak pulse"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Modified rapid body survey looking for occult injury, especially a fall she may not recall",
+   "triggers": [
+    "rapid body survey",
+    "modified RBS",
+    "check for injuries from a fall",
+    "quick head-to-toe",
+    "any trauma",
+    "RBS"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Assess skin temperature CENTRALLY (trunk/abdomen), not just at the hands",
+   "triggers": [
+    "feel her skin on the trunk",
+    "check her abdomen for temperature",
+    "skin is cold centrally",
+    "skin colour temperature condition",
+    "pale and cold"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "REMOVE the damp clothing and cover with dry blankets - stopping heat loss is the first intervention",
+   "triggers": [
+    "remove the wet clothing",
+    "get that damp housecoat off",
+    "dry her off",
+    "cover her with dry blankets",
+    "wrap her in warm blankets",
+    "cut off the wet clothes"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Verbalize the oxygen decision and recognize the unreliable peripheral SpO2 reading in a cold patient",
+   "triggers": [
+    "SpO2 on her finger is unreliable",
+    "warm ear probe",
+    "oxygen not needed at 95",
+    "poor waveform because she's cold",
+    "titrate oxygen to 94",
+    "nasal cannula"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position of comfort, handle gently, and avoid rough handling",
+   "triggers": [
+    "position of comfort",
+    "handle her gently",
+    "keep her sitting comfortably",
+    "no rough movement",
+    "careful with her when we move her"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize correctly as non-RTC and justify it with the temperature band and her mental status",
+   "triggers": [
+    "she's non-RTC",
+    "stable patient",
+    "mild hypothermia so non-priority",
+    "temperature 33.4 is mild",
+    "she's alert and shivering so stable",
+    "non-rapid transport"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 30 minutes, with active rewarming started on scene",
+   "triggers": [
+    "ready to load within 30 minutes",
+    "start rewarming on scene",
+    "let's package her",
+    "get her onto the cot",
+    "rewarm then load"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize the temperature thresholds and how the plan would change with severe hypothermia",
+   "triggers": [
+    "mild is 32 to 35",
+    "moderate is 28 to 32",
+    "below 28 is severe",
+    "if she were severe I would not actively rewarm",
+    "severe would be insulate only and rapid transport",
+    "temperature thresholds"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: feeling cold, weak and confused after two days without heating",
+   "triggers": [
+    "what's bothering you today",
+    "what's wrong today",
+    "chief complaint",
+    "why did the neighbour call",
+    "how are you feeling"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C with OPQRRRST/LOTARP plus exposure history: duration, ambient temperature, wet clothing, food and fluid intake, alcohol, any fall",
+   "triggers": [
+    "how long have you been cold",
+    "when did the furnace stop",
+    "have you been eating and drinking",
+    "did you have anything to drink, any alcohol",
+    "did you fall",
+    "OPQRST"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx - hypothyroidism is a key predisposing cause of hypothermia",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "thyroid problems",
+    "past history",
+    "do you see a doctor for anything"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": [
+    "what medications do you take",
+    "any pills",
+    "have you been taking your medications",
+    "missed any doses",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to any medications",
+    "allergies to anything",
+    "drug allergies",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI - poor intake contributes to hypoglycemia and reduced heat production",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor",
+    "GCS 14",
+    "E4 V4 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a pressure",
+    "cuff on",
+    "systolic"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse - allow 30-45 seconds in a cold patient and report rate, strength and rhythm",
+   "triggers": [
+    "pulse for a full 30 to 45 seconds",
+    "heart rate",
+    "rate rhythm and strength",
+    "pulse is slow",
+    "count the pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths",
+    "breathing rate"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed centrally, hands-on",
+   "triggers": [
+    "skin on her trunk",
+    "feel the skin centrally",
+    "colour temperature condition",
+    "skin is cold",
+    "skin condition"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "pupils equal and reactive",
+    "sluggish pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 - recognize and comment on an unreliable peripheral reading in a cold patient",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "reading is unreliable because she's cold",
+    "use the ear probe",
+    "check the waveform"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - mandatory with decreased LOC; 3.6 mmol/L is below 4.0 and must be corrected",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "check her sugar",
+    "glucometer",
+    "finger poke",
+    "3.6 is low"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "TEMPERATURE - explicitly required in environmental patients and it drives the entire treatment plan",
+   "triggers": [
+    "take her temperature",
+    "tympanic temp",
+    "core temperature",
+    "temperature 33.4",
+    "thermometer in her ear",
+    "temp"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling lately",
+    "appetite",
+    "feeling yourself",
+    "any recent illness"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (confusion, fall screen)",
+   "triggers": [
+    "any confusion",
+    "headache",
+    "weakness on one side",
+    "did you hit your head",
+    "neuro",
+    "numbness"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "trouble breathing",
+    "respiratory",
+    "chest congestion"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "palpitations",
+    "racing heart",
+    "cardiovascular",
+    "heart problems"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (intake and incontinence)",
+   "triggers": [
+    "nausea or vomiting",
+    "bowels",
+    "waterworks",
+    "incontinence",
+    "have you been drinking fluids",
+    "urine"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (frostbite screen)",
+   "triggers": [
+    "frostbite",
+    "fingers and toes",
+    "skin changes",
+    "blotchy skin",
+    "rash or sores",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "joint pain",
+    "stiffness",
+    "arthritis",
+    "aches",
+    "musculoskeletal",
+    "any injuries"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (hypothyroidism is pertinent and may be the underlying cause)",
+   "triggers": [
+    "thyroid",
+    "underactive thyroid",
+    "diabetes",
+    "missed thyroid pills",
+    "endocrine",
+    "levothyroxine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "hearing aid",
+    "ear pain",
+    "vision",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam with a fall and trauma screen",
+   "triggers": [
+    "head and neck",
+    "palpate the scalp",
+    "any signs of a fall on the head",
+    "mucous membranes",
+    "check the neck",
+    "trachea"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "listen to her lungs",
+    "chest exam",
+    "crackles"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam - a cold abdomen confirms core cooling",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "abdomen is cold",
+    "soft non-tender",
+    "abdominal exam"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam incl skin integrity after two days in a chair",
+   "triggers": [
+    "check her back",
+    "sacrum",
+    "pressure areas",
+    "skin breakdown",
+    "back exam",
+    "palpate the spine"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with a frostbite check and distal pulses",
+   "triggers": [
+    "lower extremities",
+    "check her feet for frostbite",
+    "pedal pulses",
+    "ankle edema",
+    "toes blanch",
+    "legs"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with a frostbite check",
+   "triggers": [
+    "upper extremities",
+    "check her hands for frostbite",
+    "radial pulses both sides",
+    "CSM in the hands",
+    "arms",
+    "grip strength"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Remove wet and cold clothing and cover with dry blankets - the single most important intervention",
+   "triggers": [
+    "remove the wet clothing",
+    "get her out of the damp housecoat",
+    "dry clothes and blankets",
+    "stop the heat loss",
+    "cover her with blankets",
+    "take off the wet clothes"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Correctly classify the hypothermia by temperature and choose ACTIVE rewarming for mild hypothermia",
+   "triggers": [
+    "temperature 33.4 is mild hypothermia",
+    "she's mild so we actively rewarm",
+    "active rewarming",
+    "classify the hypothermia",
+    "mild hypothermia protocol",
+    "hypothermia guideline"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Preheat the ambulance interior to 30 degrees C before loading",
+   "triggers": [
+    "preheat the ambulance to 30",
+    "heat the truck to 30 degrees",
+    "warm up the back of the ambulance",
+    "ambulance heater on",
+    "get the box warm before loading"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Apply hot packs WRAPPED IN TOWELS to the axillae, groin and neck - never directly against the skin",
+   "triggers": [
+    "hot packs wrapped in towels",
+    "heat packs in the armpits and groin",
+    "hot packs to the axillae",
+    "wrap the hot packs so they don't burn her",
+    "hot packs on the neck over a towel",
+    "never directly on the skin"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Correct the BGL of 3.6 with oral glucose 15 g since she is alert with an intact swallow, and recheck",
+   "triggers": [
+    "oral glucose 15 grams",
+    "glucose gel in her cheek",
+    "her sugar is 3.6 so I'll give oral glucose",
+    "can you swallow for me",
+    "insta-glucose",
+    "recheck the sugar in 5 minutes"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Handle gently and avoid rough movement, which can precipitate arrhythmias in a cold heart",
+   "triggers": [
+    "handle her gently",
+    "no rough handling",
+    "move her slowly and carefully",
+    "careful, a cold heart is irritable",
+    "gentle transfer to the cot",
+    "avoid jostling her"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each move",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "ABCs after the move",
+    "how are you feeling now",
+    "recheck the hot packs and blankets",
+    "reassessing"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within the non-RTC interval, including a repeat temperature and BGL",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "recheck the temperature",
+    "another set with a temp and sugar",
+    "vitals again",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Confirm the temperature is rising and the LOC is improving; document both trends",
+   "triggers": [
+    "temperature is coming up",
+    "she's more oriented now",
+    "rewarming is working",
+    "temp went from 33.4 to 34.6",
+    "GCS improved to 15",
+    "trend"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Recheck the BGL after oral glucose",
+   "triggers": [
+    "recheck her sugar",
+    "repeat BGL",
+    "check the glucose again",
+    "BGL after the glucose",
+    "sugar recheck"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Notify the receiving facility with the temperature and exposure duration",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "call ahead",
+    "radio report",
+    "pre-alert",
+    "ETA 15 minutes"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with both temperatures, rewarming method, BGL correction and the social situation",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is an 82-year-old female",
+    "report to the nurse",
+    "transfer of care",
+    "verbal report"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "hypoglycemia-corrected",
+   "descriptionEn": "candidate gives glucose to correct the BGL of 3.6 mmol/L: oral glucose gel to the oral mucosa (or, PCP, D10W IV; or glucagon) - record it together with the drug event"
+  },
+  {
+   "key": "hot-packs-applied",
+   "descriptionEn": "candidate applies hot packs (heat packs) to the patient anywhere on the body, wrapped or not"
+  },
+  {
+   "key": "hot-packs-on-bare-skin",
+   "descriptionEn": "candidate states that the hot packs are placed directly against her bare skin, with no towel or cloth layer between the pack and the skin"
+  },
+  {
+   "key": "rough-handling",
+   "descriptionEn": "candidate moves or handles the patient roughly or abruptly: drags or yanks her out of the recliner, jostles her or drops her onto the cot, or rushes the transfer"
+  },
+  {
+   "key": "fluid-bolus-given",
+   "descriptionEn": "PCP gives a fluid bolus (runs normal saline wide open or orders a set volume such as 20 mL/kg or 500 mL); starting an IV with saline at TKVO is NOT this event"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "Glucogel",
+    "Glutose",
+    "sugar gel"
+   ],
+   "doseEn": "15 g glucose PO (gel to the oral mucosa) for BGL below 4.0 mmol/L in a patient with sufficient mentation to maintain her airway; repeat at 5 minutes as necessary, no limit; only after baseline vitals including the BGL",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "GlucaGen",
+    "Baqsimi"
+   ],
+   "doseEn": "IM 0.5-1 mg or IN 3 mg - NOT indicated here: she is alert with sufficient mentation and an intact swallow, so oral glucose is the treatment (EMR: glucagon only for insufficient mentation or an unprotected airway; PCP: only when IV access is unsuccessful). Record drug:glucagon only if the candidate actually gives it.",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%",
+    "dextrose",
+    "IV dextrose"
+   ],
+   "doseEn": "10-25 g (100-250 mL of 10% solution) IV for confirmed hypoglycemia; would replace oral glucose if her mentation fell",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "IV fluids",
+    "fluid bolus"
+   ],
+   "doseEn": "vascular access at TKVO only if she deteriorates; NO fluid bolus is indicated (systolic 104, no signs of shock)",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "hypoglycemia-corrected",
+   "check": "present",
+   "event": "hypoglycemia-corrected",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "oral-glucose-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:oral-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "d10w-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:d10w",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "oral-glucose-after-bgl",
+   "check": "ordered",
+   "first": "blood-glucose",
+   "then": "drug:oral-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "d10w-after-bgl",
+   "check": "ordered",
+   "first": "blood-glucose",
+   "then": "drug:d10w",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "glucagon-not-indicated",
+   "check": "absent",
+   "event": "drug:glucagon",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-d10w",
+   "check": "absent",
+   "event": "drug:d10w",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-iv-fluids",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-fluid-bolus",
+   "check": "absent",
+   "event": "fluid-bolus-given",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "hot-packs-not-on-bare-skin",
+   "check": "absent",
+   "event": "hot-packs-on-bare-skin",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "temperature-before-active-rewarming",
+   "check": "ordered",
+   "first": "temperature",
+   "then": "hot-packs-applied",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "gentle-handling",
+   "check": "absent",
+   "event": "rough-handling",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "82-year-old female",
+  "cc": "cold, weak and confused after two days in an unheated house - mild hypothermia with hypoglycemia",
+  "moi": null,
+  "hxcc": "furnace broken since a power outage two days ago, indoor temperature 8 degrees C; stayed in a recliner, ate very little, incontinent of urine and sitting in damp clothing; denies a fall; found on a neighbour-requested wellness check",
+  "vitals": "GCS 14 (disoriented to time), BP 104/62, pulse 56 regular weak, resp 16, tympanic temperature 33.4 C, BGL 3.6 mmol/L, SpO2 95% on a warmed ear probe; latest GCS 15, BP 112/68, pulse 66, temperature 34.6 C, BGL 5.4 mmol/L",
+  "treatments": "door closed and heat loss stopped, wet clothing removed, dried and wrapped in warm blankets, ambulance preheated to 30 degrees C, hot packs wrapped in towels to the axillae, groin and neck, oral glucose 15 g with BGL rechecked, gentle handling; non-RTC, ETA 15 minutes",
+  "findings": "shivering, cold centrally, no frostbite, no trauma; hypothyroid and thinks she has missed levothyroxine doses"
+ },
+ "handoffFacts": {
+  "ageSex": "82-year-old female",
+  "cc": "generalized cold, weakness and confusion after two days in an unheated house",
+  "moi": null,
+  "hxcc": "found on a neighbour-requested wellness check after two days in an unheated house (8 degrees C inside, minus 4 outside) after the furnace failed in a power outage; stayed in a recliner, ate little, incontinent of urine and in damp clothing; denies falling, chest pain or shortness of breath",
+  "initialVitals": "GCS 14 (E4 V4 M6, disoriented to time), BP 104/62, pulse 56 regular weak, resp 16 regular, skin pale and cold centrally, dry, pupils equal and reactive but sluggish, SpO2 95% on a warmed ear probe (finger reading 89% unreliable), BGL 3.6 mmol/L, tympanic temperature 33.4 C",
+  "finalVitals": "GCS 15 (E4 V5 M6, oriented), BP 112/68, pulse 66 regular and stronger, resp 16, skin pink returning and warmer centrally, pupils equal and reactive, less sluggish, SpO2 96%, BGL 5.4 mmol/L, tympanic temperature 34.6 C; shivering decreasing",
+  "pmhx": "hypothyroidism (likely contributing), osteoarthritis, hypertension, mild dementia diagnosed last year",
+  "meds": "levothyroxine (thinks she has missed some doses), amlodipine, acetaminophen as needed",
+  "allergies": "no known allergies",
+  "treatments": "front door closed to stop heat loss; damp clothing removed, dried and wrapped in warm blankets; ambulance preheated to 30 degrees C before loading; hot packs wrapped in towels to the axillae, groin and neck; oral glucose 15 g with the BGL rechecked; gentle handling throughout; non-RTC transport",
+  "findings": "mild hypothermia 33.4 rising to 34.6 C; BGL 3.6 corrected to 5.4; no frostbite (toes blanch and refill), no trauma, sacral skin reddened but intact, mild ankle edema; last ate half a piece of toast and tea yesterday afternoon; socially cannot return home until the furnace is repaired"
+ },
+ "pcrFacts": {
+  "cc": "Cold, weak and confused after two days in an unheated home (mild hypothermia, temp 33.4 C)",
+  "hxcc": "Furnace failed two days ago after a power outage; remained in a recliner, minimal food, incontinent of urine, did not call for help; denies fall, chest pain or SOB; found on a neighbour-requested wellness check",
+  "pmhx": "Hypothyroidism, osteoarthritis, hypertension, mild dementia",
+  "meds": "Levothyroxine (doses possibly missed), amlodipine, acetaminophen prn",
+  "allergies": "NKA",
+  "vitals": "Set 1 (baseline): GCS 14 (E4 V4 M6), BP 104/62, P 56 regular weak, R 16 regular, skin pale cold centrally dry, pupils equal and reactive but sluggish, SpO2 95% on a warmed ear probe (89% on a cold finger, unreliable), BGL 3.6 mmol/L, temp 33.4 C tympanic. Set 2 (en route): GCS 15 (E4 V5 M6), BP 112/68, P 66 regular stronger, R 16 regular, skin pink returning and warmer centrally, PERL less sluggish, SpO2 96%, BGL 5.4 mmol/L, temp 34.6 C tympanic",
+  "treatments": [
+   "Door closed and heat loss stopped before assessment",
+   "Wet clothing removed, patient dried and wrapped in warm blankets",
+   "Ambulance preheated to 30 C before loading",
+   "Towel-wrapped hot packs to axillae, groin and neck",
+   "Oral glucose 15 g for BGL 3.6 (alert, intact swallow); BGL rechecked",
+   "Gentle handling to avoid arrhythmia"
+  ],
+  "findings": [
+   "Tympanic temperature 33.4 rising to 34.6 C - mild hypothermia, actively rewarmed",
+   "GCS 14 disoriented to time, improving to 15 and oriented",
+   "Bradycardia 56 improving to 66 with rewarming",
+   "BGL 3.6 corrected to 5.4",
+   "No frostbite, no trauma, skin intact; peripheral SpO2 unreliable when cold"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR performs the entire hypothermia guideline: removal of wet clothing, blankets, temperature measurement, active rewarming for mild and moderate hypothermia, preheating the ambulance to 30 degrees C, wrapped hot packs and gentle handling. Oral glucose 15 g is within EMR scope for this alert patient with an intact swallow; glucagon would be used only if she could not protect her airway, so it is withheld here. No IV, no D10W. No Functional Enquiry.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry and may obtain vascular access if the patient deteriorates; D10W would replace oral glucose if her mentation fell. No fluid bolus is indicated with a systolic of 104 and no signs of shock. Glucagon is not indicated. Hypothyroidism should be flagged to the receiving team as a likely predisposing cause."
+ },
+ "sourcePages": "Scenario md-07 (data/practical/scenarios.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing, handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (severe hypothermia is unstable; this patient is mild); p.11 Primary survey interventions (gradual warming for hypothermia; oxygen indications); p.29 Hypothermia (up to 30-45 seconds to determine pulselessness; remove wet and cold clothing and cover; take a temperature; mild >32 and <35 and moderate >28 and <32: actively rewarm - mild activity if appropriate, preheat the ambulance interior to 30 C, hot packs wrapped in towels, warm blankets; severe <28: do not actively rewarm, insulate, heat the ambulance to 30 C, avoid rough handling); p.54 Hypovolemia (fluid bolus only with SBP < 90 and signs of shock); p.57 Diabetic Emergencies (baseline vitals including BGL first; correct BGL < 4.0 with glucose gel when mentation is sufficient; EMR glucagon only for insufficient mentation or an unprotected airway; PCP D10W 10-25 g, glucagon if IV access fails); p.61 D10W; p.67 Glucagon; p.76 Oral Glucose (15 g PO, repeat at 5 minutes as necessary, only with sufficient mentation to maintain an airway).",
+ "keywordEvents": [
+  {
+   "event": "hypoglycemia-corrected",
+   "regex": "\\b(giv\\w*|administer\\w*|apply\\w*|applied|squeez\\w*|put\\w*|plac\\w*|rub\\w*|push\\w*|hang\\w*|spik\\w*|start\\w*)\\b[^.]{0,40}\\b(oral glucose|glucose gel|insta-?glucose|glucogel|glutose|glucose|dextrose|d10w?|glucagon)\\b|\\b(oral glucose|glucose gel|insta-?glucose|glucogel|glutose)\\b[^.]{0,30}\\b(cheek|gums?|buccal|mucosa)\\b"
+  }
+ ]
+}

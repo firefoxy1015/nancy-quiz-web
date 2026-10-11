@@ -47,9 +47,25 @@ def build(sheet, track):
         script.append((round(t, 2), text))
         t += step
 
+    # drugs a competent candidate gives here: required by a present-rule, or Appendix A analgesia
+    give = []
+    for r in sheet.get('protocolRules', []):
+        if r.get('check') == 'present' and str(r.get('event', '')).startswith('drug:') and r.get('licence', 'both') in ('both', track):
+            give.append(r['event'].split(':', 1)[1])
+    pm = sheet.get('painManagement') or {}
+    if pm.get('applies'):
+        give = ['entonox'] + (['acetaminophen', 'ibuprofen'] if track == 'pcp' else []) + give
+    drugs = {d['key']: d for d in sheet.get('drugs', [])}
+    give_lines = []
+    for k in dict.fromkeys(give):
+        d = drugs.get(k)
+        if d and d.get('licence', 'both') in ('both', track):
+            give_lines.append(f"Contraindications ruled out, six rights checked. Giving {(d.get('namesEn') or [k])[0]} {d.get('doseEn', '')} now.")
     for ph in PHASES:
         acts = by_phase.get(ph) or []
         if ph == 'interventions':
+            for line in give_lines:      # analgesia before any splinting/realignment (Appendix A)
+                say(line)
             for i in range(0, len(acts), CHUNK):
                 say('. '.join(acts[i:i + CHUNK]) + '.')
             # packaging, with a reassessment after every major move
@@ -66,6 +82,8 @@ def build(sheet, track):
     say('Hand-off report to the receiving team: ' + '. '.join(flat(v) for v in hf.values() if v) + '.')
     pf = sheet.get('pcrFacts') or {}
     pcr = {k: flat(pf.get(k)) for k in ('cc', 'hxcc', 'pmhx', 'meds', 'allergies', 'vitals', 'treatments', 'findings')}
+    if not pcr['vitals']:
+        pcr['vitals'] = ' | '.join(f"set {v['set']}: BP {v.get('bp')}, P {v['pulse'].get('rate')}, R {v['resp'].get('rate')}, SpO2 {v.get('spo2')}, GCS {v['gcs'].get('total')}" for v in sheet.get('vitalsSets', []))
     pcr['narrative'] = flat(pf.get('narrative') or pf.get('times') or '')
     return script, pcr
 

@@ -1,0 +1,1442 @@
+{
+ "id": "md-05",
+ "titleEn": "COPD Exacerbation - Salbutamol, Ipratropium and CPAP",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-05",
+ "patient": {
+  "name": "Margaret Doyle",
+  "age": 71,
+  "sex": "female",
+  "affectEn": "alert but exhausted and frightened; sitting bolt upright on a kitchen chair, leaning forward on her elbows (tripod position), pursed-lip breathing, using her neck muscles to breathe; home nasal cannula on; refuses to lie down",
+  "speechEn": "speaks only one or two words at a time between breaths; her daughter fills in most of the history. Cooperative and follows instructions."
+ },
+ "scene": {
+  "settingEn": "Small, overheated ground-floor apartment in Nanaimo at 0815 hrs; room about 26 degrees C. A home oxygen concentrator is running in the corner with its tubing across the floor. No lit smoking materials. The patient sits on a kitchen chair; her anxious daughter is beside her, talking over her. One patient.",
+  "hazardsEn": [
+   "home oxygen concentrator running, tubing across the floor - a trip hazard and an oxygen-safety consideration (no lit smoking materials present)",
+   "overheated room (about 26 degrees C)",
+   "infectious respiratory presentation (fever, productive cough) - mask as part of PPE"
+  ],
+  "bystanders": [
+   {
+    "who": "daughter",
+    "knowsEn": "She called 911. Her mother has COPD and home oxygen at 2 L/min. Three days of worsening breathlessness with a productive cough and green sputum, fever yesterday; much worse since 0600 this morning. She used her blue inhaler many times this morning without relief (she has lost count). Two hospital admissions for COPD in the past year. She is anxious and talks over her mother, but answers whatever she is asked and will hold doors or move furniture if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "nebulizer kit",
+   "salbutamol nebules and salbutamol MDI with spacer",
+   "bag-valve mask with PEEP valve, oral and nasal airways",
+   "suction unit",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "thermometer (tympanic)",
+   "glucometer",
+   "surgical masks / respirator masks for PPE",
+   "cot (stretcher)",
+   "blankets",
+   "AED",
+   "PCP only: ipratropium",
+   "PCP only: dexamethasone",
+   "PCP only: CPAP device",
+   "PCP only: epinephrine for IM injection"
+  ]
+ },
+ "dispatchEn": "0815 hrs. Code 3 to a ground-floor apartment in Nanaimo. 71-year-old female with known COPD, increasing shortness of breath over three days, now unable to speak in full sentences. Her daughter called. Hospital is 10 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: she has home oxygen and has used her blue inhaler many times this morning without relief.",
+ "arrivalEn": "The daughter opens the door of a small ground-floor apartment. It is overheated - about 26 degrees C. A home oxygen concentrator hums in the corner and its tubing runs across the floor to the patient. No lit smoking materials. The patient sits bolt upright on a kitchen chair; the daughter, anxious, starts talking over her mother as soon as you walk in. One patient.",
+ "firstLookEn": "A 71-year-old woman sitting bolt upright on a kitchen chair, leaning forward on her elbows in a tripod position, pursed-lip breathing, neck muscles straining with each breath, her home nasal cannula in place. She looks up and manages: \"Can't... breathe.\"",
+ "primary": {
+  "locEn": "Alert (AVPU = A) and oriented, but exhausted. Speaks one or two words at a time. Will not lie down.",
+  "airwayEn": "Clear and self-maintained. No secretions, no stridor.",
+  "breathingEn": "Respirations 32, laboured with marked accessory muscle use, prolonged expiration, audible wheeze, pursed-lip breathing. On auscultation: widespread expiratory wheeze with poor air entry at both bases.",
+  "circulationEn": "Radial pulse 118, regular. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: barrel chest, no trauma, no pedal edema, no calf swelling. Skin pale with dusky lips, warm and moist (skin is given automatically during the RBS). No trauma - c-spine not indicated.",
+  "skinEn": "pale with dusky lips, warm and moist"
+ },
+ "history": {
+  "ccEn": "Can't... breathe. (Daughter: \"Her breathing has been getting worse for three days and now she can't finish a sentence.\")",
+  "opqrst": {
+   "oEn": "Three days. (Daughter: \"It came on gradually over three days, and it got much worse at about 0600 this morning.\")",
+   "pEn": "Sitting up... helps. (Daughter: \"Sitting forward like this helps a little; she can't lie down at all. Her blue inhaler helped at first, but not now.\")",
+   "qEn": "Tight. Can't... get air out.",
+   "rEn": "No... pain. (Daughter: \"No chest pain. It doesn't go anywhere.\")",
+   "sEn": "Worst... since hospital. (Daughter: \"This is the worst she's been since her last admission.\")",
+   "tEn": "All the time. Worse. (Daughter: \"Constant, and it keeps getting worse.\")"
+  },
+  "painScoreEn": "She shakes her head: \"No... pain.\" (No chest pain; no numeric pain score is given in this scenario.)",
+  "sample": {
+   "sEn": "Breathless... coughing. (Daughter: \"Three days of getting more short of breath, coughing up green phlegm, and she had a fever yesterday.\")",
+   "aEn": "None. (Daughter: \"No allergies that we know of.\")",
+   "mEn": "Puffers... oxygen. (Daughter: \"Her blue salbutamol inhaler - she's used it lots of times this morning, I've lost count, and it isn't helping. Tiotropium. Home oxygen at 2 litres. And amlodipine for her blood pressure.\")",
+   "pEn": "COPD. (Daughter: \"COPD - she's been admitted twice in the past year. She smoked for years - 50 pack-years - and quit 2 years ago. High blood pressure. No heart problems.\")",
+   "lEn": "Tea. (Daughter: \"Just tea this morning. She's had a poor appetite for two days.\")",
+   "eEn": "Just... worse. (Daughter: \"Nothing happened - she's been getting worse for three days with the cough and the green phlegm, and it got much worse at about 0600.\")"
+  },
+  "fe": {
+   "generalEn": "Feverish... not eating. (Daughter: \"She's been feverish and off her food for two days.\")",
+   "cnsEn": "No. (Daughter: \"She's not confused - that's her normal. No headache.\")",
+   "respiratoryEn": "Green... phlegm. (Daughter: \"Green sputum, no blood in it, no chest pain. She's much worse than her usual.\")",
+   "cardiovascularEn": "No. (Daughter: \"She always sleeps on two pillows - that's no different. No ankle swelling, no palpitations.\")",
+   "giGuEn": "No, nothing like that.",
+   "integumentaryEn": "No, nothing like that.",
+   "musculoskeletalEn": "No, nothing like that.",
+   "endocrineEn": "No. (Daughter: \"She's not diabetic.\")",
+   "eentEn": "Sore throat... last week. (Daughter: \"She had a sore throat and a runny nose last week.\")"
+  }
+ },
+ "findings": {
+  "headNeckEn": "Pursed-lip breathing, accessory neck muscle use. No JVD.",
+  "chestLungsEn": "Barrel-shaped chest, hyperresonant. Widespread expiratory wheeze at all 6 sites with poor air entry at both bases; no crackles. After bronchodilators (and CPAP for a PCP), air entry improves and the wheeze is reduced.",
+  "abdomenEn": "Soft, non-tender.",
+  "backEn": "Posterior auscultation confirms the same findings: widespread expiratory wheeze, poor air entry at both bases, no crackles. No sacral edema.",
+  "lowerExtremitiesEn": "No pedal edema. No calf tenderness.",
+  "upperExtremitiesEn": "Nicotine staining of the fingers, no clubbing change. Circulation, sensation and movement intact."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline before medication; SpO2 84% on her home 2 L nasal cannula, rising to 90% on high-flow oxygen; temperature indicated (infectious symptoms); BGL not indicated. CPAP eligibility (PCP): RR above 24, SpO2 under 94% on oxygen, accessory muscle use, awake and following commands, systolic above 90 - she qualifies",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "158/88",
+   "pulse": {
+    "rate": 118,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "118 regular"
+   },
+   "resp": {
+    "rate": 32,
+    "depth": "laboured, marked accessory muscle use",
+    "character": "laboured, prolonged expiration, audible wheeze",
+    "rawEn": "32 laboured, accessory muscle use"
+   },
+   "skin": "pale with dusky lips, warm moist",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "84% on 2 L NC, 90% on high flow",
+   "bgl": null,
+   "temp": "38.1 C tympanic"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "drug:salbutamol"
+     },
+     {
+      "afterEvent": "drug:cpap"
+     },
+     {
+      "elapsedMs": 900000
+     }
+    ]
+   },
+   "unlockNoteEn": "PCP course only: after salbutamol/ipratropium and about 10 minutes of CPAP, en route; improving - air entry improved, wheeze reduced. (No set-2 values are scripted for a course without CPAP; set 1 values persist.)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "142/84",
+   "pulse": {
+    "rate": 106,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "106 regular"
+   },
+   "resp": {
+    "rate": 24,
+    "depth": "less laboured, accessory muscle use reduced",
+    "character": "less laboured, improved air entry with reduced wheeze",
+    "rawEn": "24, less laboured"
+   },
+   "skin": "pink warm moist",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "93% on CPAP 7.5 cmH2O",
+   "bgl": null,
+   "temp": "38.1 C tympanic"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "no-oxygen-increase",
+   "when": {
+    "elapsedMs": 300000,
+    "missingEvent": "oxygen"
+   },
+   "examinerLineEn": "Her lips are still dusky and she is tiring; she can still only manage one or two words."
+  },
+  {
+   "id": "loc-falls-on-cpap",
+   "when": {
+    "afterEvent": "cpap-applied-incorrectly"
+   },
+   "examinerLineEn": "Her level of consciousness is falling: she is drowsy and can no longer follow your commands."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan nebulizer with salbutamol and ipratropium, oxygen, BVM with PEEP, CPAP (PCP), and a stretcher to the door",
+   "triggers": [
+    "copy dispatch",
+    "bring the neb kit",
+    "salbutamol and ipratropium",
+    "bring the BVM with PEEP",
+    "bring the CPAP",
+    "bring the stretcher to the door"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate that this patient must not be walked - bring equipment and the stretcher to her",
+   "triggers": [
+    "she won't be walking",
+    "we'll bring the stretcher to her",
+    "don't let her walk",
+    "carry her out",
+    "bring everything in so she doesn't exert herself"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (oxygen tubing trip hazard, oxygen safety, overheated room), environment, nature of illness (respiratory distress), one patient",
+   "triggers": [
+    "scene is safe",
+    "oxygen tubing is a trip hazard",
+    "home oxygen running",
+    "any smoking materials",
+    "it's hot in here",
+    "one patient"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves, eye protection, and verbalize a mask given an infectious respiratory presentation",
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "put a mask on",
+    "surgical mask for the infectious symptoms",
+    "PPE on"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: tripod position, pursed-lip breathing, accessory muscle use, one-to-two-word sentences",
+   "triggers": [
+    "she's tripoding",
+    "pursed-lip breathing",
+    "accessory muscle use",
+    "one or two word sentences",
+    "general impression",
+    "she looks exhausted"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert (but note exhaustion - a falling LOC would signal impending failure)",
+   "triggers": [
+    "AVPU",
+    "she's alert",
+    "alert but tired",
+    "level of consciousness",
+    "is she oriented",
+    "do you know where you are"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated",
+   "triggers": [
+    "c-spine not indicated",
+    "no c-spine concern",
+    "medical call, no spinal",
+    "no trauma",
+    "no mechanism for spinal injury"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway is clear",
+    "airway patent",
+    "she's talking so her airway is open",
+    "check the airway",
+    "self-maintained airway"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing thoroughly: rate, depth, effort, accessory muscle use, air entry and wheeze",
+   "triggers": [
+    "breathing rate",
+    "accessory muscle use",
+    "prolonged expiration",
+    "how's her breathing",
+    "count respirations",
+    "work of breathing"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Auscultate the chest as part of the SOB assessment - the guideline lists auscultation explicitly",
+   "triggers": [
+    "auscultate the chest",
+    "listen to her lungs",
+    "air entry",
+    "wheeze bilaterally",
+    "poor air entry at the bases",
+    "listen front and back"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse is fast",
+    "how's the pulse",
+    "any major bleeding"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Modified rapid body survey appropriate to the presentation (barrel chest, edema, calf swelling)",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "barrel chest",
+    "any pedal edema",
+    "calf swelling"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale with dusky lips, warm moist",
+   "triggers": [
+    "skin is pale",
+    "dusky lips",
+    "skin colour temperature condition",
+    "warm and moist",
+    "skin signs"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Apply HIGH-FLOW oxygen: a COPD patient complaining of SOB with SpO2 84 percent requires high-flow oxygen titrated to a target of 94 percent - do not withhold oxygen for fear of hypoxic drive",
+   "triggers": [
+    "high-flow oxygen",
+    "non-rebreather at 15",
+    "take her off the 2 litres",
+    "titrate to 94 percent",
+    "high flow is indicated even with COPD",
+    "NRB"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Keep her sitting upright and leaning forward; do not lay her flat and do not let her walk",
+   "triggers": [
+    "keep her sitting up",
+    "stay leaning forward",
+    "position of comfort sitting",
+    "don't lay her flat",
+    "don't walk",
+    "upright on the stretcher"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "she's unstable",
+    "priority patient",
+    "load and go",
+    "code 3 to hospital"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Transport after the first salbutamol dose, ready to load within 15 minutes",
+   "triggers": [
+    "first neb then we go",
+    "transport after the first dose",
+    "ready to load within 15",
+    "let's package her",
+    "neb en route"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate the partner to prep egress and bring the stretcher to the patient; manage the anxious daughter",
+   "triggers": [
+    "partner, prep the egress",
+    "bring the stretcher to her",
+    "move the oxygen tubing",
+    "daughter, can you get her medications",
+    "clear a path",
+    "delegate"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: worsening shortness of breath",
+   "triggers": [
+    "what's going on today",
+    "what's wrong",
+    "chief complaint",
+    "why did you call",
+    "tell me about your breathing"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C with OPQRRRST/LOTARP plus a respiratory-specific history: sputum, fever, orthopnea, puffer use and effect, comparison with previous exacerbations",
+   "triggers": [
+    "when did this start",
+    "any cough",
+    "what colour is the sputum",
+    "any fever",
+    "how many times did you use your puffer",
+    "is this like your previous flare-ups"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx incl COPD severity, admissions and smoking history",
+   "triggers": [
+    "medical history",
+    "how bad is her COPD",
+    "any hospital admissions",
+    "does she smoke",
+    "pack-years",
+    "past history"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications incl how many puffs she has already taken this morning",
+   "triggers": [
+    "what medications",
+    "how many puffs this morning",
+    "home oxygen rate",
+    "tiotropium",
+    "any inhalers",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to any medications",
+    "NKA",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "LOI",
+    "how's her appetite"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 15",
+    "E4 V5 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - required before CPAP (systolic must be above 90)",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "I'm taking a BP",
+    "cuff on",
+    "systolic is above 90",
+    "auscultate a pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm",
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "count the pulse",
+    "radial for 30 seconds"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character - the key vital in this call",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths",
+    "still using accessory muscles"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": [
+    "skin",
+    "colour temperature moisture",
+    "feel her skin",
+    "skin condition",
+    "still dusky"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "pupils equal and reactive",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration; record the change with each oxygen and drug intervention",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "sats on high flow",
+    "check the waveform matches the pulse"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated with infectious respiratory symptoms",
+   "triggers": [
+    "temperature",
+    "temp",
+    "tympanic temp",
+    "check her temperature",
+    "is she febrile"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health (fever, appetite)",
+   "triggers": [
+    "general health",
+    "any fever",
+    "how's your appetite",
+    "feeling unwell lately",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (baseline mentation)",
+   "triggers": [
+    "any confusion",
+    "headache",
+    "is this her normal mental status",
+    "dizziness",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (pertinent: sputum, hemoptysis, baseline exercise tolerance)",
+   "triggers": [
+    "what colour is the phlegm",
+    "any blood in the sputum",
+    "how is this compared to your usual",
+    "chest pain",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (differentiating COPD from CHF: orthopnea, edema)",
+   "triggers": [
+    "how many pillows do you sleep on",
+    "ankle swelling",
+    "palpitations",
+    "orthopnea",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU",
+   "triggers": [
+    "nausea",
+    "vomiting",
+    "bowels",
+    "urine",
+    "abdominal pain"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "any rash",
+    "skin changes",
+    "integumentary",
+    "any sores",
+    "bruising"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "muscle aches",
+    "joint pain",
+    "musculoskeletal",
+    "any injuries",
+    "any falls"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "blood sugar problems",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT (recent URTI)",
+   "triggers": [
+    "sore throat",
+    "runny nose",
+    "recent cold",
+    "eyes ears nose throat",
+    "EENT"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl JVD and accessory muscle use",
+   "triggers": [
+    "head and neck",
+    "JVD",
+    "accessory neck muscles",
+    "trachea midline",
+    "look at the neck veins"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation before and after bronchodilators, comparing bilaterally",
+   "triggers": [
+    "six sites",
+    "auscultate before and after the neb",
+    "compare both sides",
+    "lung sounds",
+    "air entry at the bases",
+    "any crackles"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "abdominal exam",
+    "soft non-tender"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam with posterior auscultation and sacral edema check",
+   "triggers": [
+    "check the back",
+    "listen to her back",
+    "sacral edema",
+    "posterior lung sounds",
+    "back exam"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities - edema and calf tenderness to screen for CHF and DVT",
+   "triggers": [
+    "lower extremities",
+    "pedal edema",
+    "calf tenderness",
+    "check her legs",
+    "ankle swelling"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities",
+   "triggers": [
+    "upper extremities",
+    "check her arms",
+    "clubbing",
+    "nicotine staining",
+    "CSM in the hands"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Initiate the SOB protocol with correct sequence: position, oxygen, auscultate, baseline vitals, then salbutamol, then transport",
+   "triggers": [
+    "SOB protocol",
+    "shortness of breath protocol",
+    "baseline vitals done, starting salbutamol",
+    "position, oxygen, auscultate, vitals, then salbutamol",
+    "starting the protocol"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Salbutamol 5 mg by nebulizer (or MDI with spacer) with the 6 rights, repeated as required",
+   "triggers": [
+    "salbutamol 5 milligrams",
+    "salbutamol neb",
+    "four puffs with the spacer",
+    "repeat the salbutamol",
+    "six rights",
+    "right patient right drug right dose"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: ipratropium 500 mcg as a SINGLE dose combined in the same nebulizer as salbutamol",
+   "triggers": [
+    "ipratropium 500 micrograms",
+    "add the Atrovent",
+    "ipratropium in the same neb",
+    "ipratropium is a single dose",
+    "Atrovent once only"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: dexamethasone 8 mg PO",
+   "triggers": [
+    "dexamethasone 8 milligrams",
+    "dexamethasone PO",
+    "oral dexamethasone",
+    "steroid",
+    "Decadron"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "PCP: apply CPAP only after confirming ALL indications and NO contraindications; start at 5 cmH2O with 5 L/min and titrate in 2.5 cmH2O steps to a maximum of 10",
+   "triggers": [
+    "CPAP",
+    "check CPAP contraindications",
+    "start CPAP at 5",
+    "titrate CPAP by 2.5",
+    "maximum CPAP 10",
+    "she meets CPAP criteria"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize the deterioration plan: remove CPAP and ventilate with BVM plus PEEP if she can no longer maintain respiratory effort",
+   "triggers": [
+    "if she deteriorates I'll remove CPAP and bag her",
+    "BVM with PEEP if she tires",
+    "if her LOC drops we take off the CPAP",
+    "if she tires I'll assist ventilations with the BVM",
+    "ready to ventilate",
+    "deterioration plan"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each drug, each CPAP change and each move",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing after the neb",
+    "how's your breathing now",
+    "ABC check after the move",
+    "recheck after the CPAP change"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes with a repeat auscultation to document the response",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "re-auscultate",
+    "she's responding to the neb",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Titrate oxygen and CPAP to the SpO2 target and document each change",
+   "triggers": [
+    "titrate the oxygen",
+    "titrate the CPAP",
+    "SpO2 target",
+    "document the change in sats",
+    "sats are improving"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "If LOC falls: remove CPAP and ventilate with a BVM plus PEEP valve at 5 cmH2O",
+   "triggers": [
+    "remove the CPAP and start bagging",
+    "ventilate with the BVM and PEEP at 5",
+    "if her LOC falls I'll remove CPAP and ventilate with PEEP",
+    "if she can't keep breathing on her own I'll assist with the BVM",
+    "assist ventilations with PEEP"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification for a critical respiratory patient",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "COPD exacerbation inbound"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with drugs, CPAP settings, SpO2 trend and auscultation findings",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 71-year-old female",
+    "report to the nurse",
+    "CPAP at 7.5",
+    "neb given at"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets the patient stand up or walk (to the stretcher, the door or the ambulance) - any self-exertion"
+  },
+  {
+   "key": "laid-flat",
+   "descriptionEn": "candidate lays the patient flat / supine (instead of keeping her sitting upright and leaning forward)"
+  },
+  {
+   "key": "low-flow-oxygen-only",
+   "descriptionEn": "candidate keeps her on her home nasal cannula at 2 L/min or other low-flow oxygen and does not give high-flow oxygen, e.g. because of COPD / hypoxic drive concerns"
+  },
+  {
+   "key": "cpap-screened",
+   "descriptionEn": "PCP verbalizes checking CPAP indications and contraindications before applying it (awake and following commands, systolic above 90, no vomiting / aspiration risk, no pneumothorax, no trauma, no tracheostomy, mask fits)"
+  },
+  {
+   "key": "cpap-applied-incorrectly",
+   "descriptionEn": "PCP applies CPAP incorrectly: starts above 5 cmH2O, increases by more than 2.5 cmH2O per step, goes above the 10 cmH2O maximum, or leaves a poor mask seal uncorrected"
+  },
+  {
+   "key": "cpap-continued-despite-falling-loc",
+   "descriptionEn": "after being told her LOC has fallen and she can no longer follow commands, candidate keeps CPAP on instead of removing it and ventilating with a BVM (plus PEEP)"
+  },
+  {
+   "key": "peep-settings-error",
+   "descriptionEn": "PCP sets the PEEP valve above 5 cmH2O to start, increases by more than 2.5 cmH2O per step, goes above 10 cmH2O, or keeps PEEP on when systolic falls below 90 or she arrests"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "salbutamol",
+   "namesEn": [
+    "salbutamol",
+    "Ventolin",
+    "albuterol",
+    "blue puffer",
+    "salbutamol neb"
+   ],
+   "doseEn": "5 mg by nebulizer, or 4 x 100 mcg by MDI with a spacer (adult; MDI and spacer strongly recommended with infectious respiratory symptoms); repeat as required; transport after the first dose; after baseline vitals",
+   "licence": "both",
+   "cautionsEn": "coronary disease; COPD patients with degenerative heart disease; diabetes"
+  },
+  {
+   "key": "ipratropium",
+   "namesEn": [
+    "ipratropium",
+    "Atrovent",
+    "ipratropium bromide"
+   ],
+   "doseEn": "500 mcg by nebulizer, combined with salbutamol in the same nebulizer - SINGLE dose only (salbutamol may be repeated); MDI alternative 160 mcg (8 x 20 mcg)",
+   "licence": "pcp",
+   "cautionsEn": "not for monotherapy - acts with salbutamol; narrow-angle glaucoma; prostatic hyperplasia or bladder neck obstruction"
+  },
+  {
+   "key": "dexamethasone",
+   "namesEn": [
+    "dexamethasone",
+    "Decadron",
+    "dex",
+    "steroid"
+   ],
+   "doseEn": "8 mg PO (PO preferred; IV/IO/IM possible)",
+   "licence": "pcp",
+   "contraindicationsEn": "systemic fungal infection; hypersensitivity to dexamethasone or other corticosteroids",
+   "cautionsEn": "heart failure or hypertension (fluid retention) - she has hypertension"
+  },
+  {
+   "key": "cpap",
+   "namesEn": [
+    "CPAP",
+    "continuous positive airway pressure",
+    "CPAP mask"
+   ],
+   "doseEn": "start at 5 L/min with the CPAP valve at 5 cmH2O; obtain a facial seal; reassess patient and vitals; increase in 2.5 cmH2O increments to a maximum of 10 cmH2O (oxygen flow per the CPAP setting table: 5 cmH2O = 5 L/min, 7.5 = 7, 10 = 8). If she deteriorates: remove CPAP and ventilate with a BVM (consider PEEP).",
+   "licence": "pcp",
+   "indicationsEn": "13 years or older in significant respiratory distress, awake and following commands, maintains a patent airway, and RR > 24, SpO2 < 94% on oxygen and accessory muscle use - she qualifies",
+   "contraindicationsEn": "12 years or less; decreased LOC or inability to follow commands; respiratory arrest or hypoventilation / imminent respiratory failure; unable to fit the mask; vomiting or other aspiration risk; traumatic cause; tracheostomy; suspected or known pneumothorax; systolic BP < 90 mmHg"
+  },
+  {
+   "key": "epinephrine",
+   "namesEn": [
+    "epinephrine",
+    "epi",
+    "adrenaline",
+    "IM epi"
+   ],
+   "doseEn": "PCP only: 0.5 mg IM every 5-20 minutes for severe bronchospasm with impending arrest; consider when SpO2 < 90% and/or moderate to severe bronchospasm is unresolved with salbutamol",
+   "licence": "pcp",
+   "cautionsEn": "further hypotension if administered too quickly"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "salbutamol-given",
+   "check": "present",
+   "event": "drug:salbutamol",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "salbutamol-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:salbutamol",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "not-laid-flat",
+   "check": "absent",
+   "event": "laid-flat",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "high-flow-oxygen",
+   "check": "absent",
+   "event": "low-flow-oxygen-only",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 15,
+    "errorEn": "Oxygen is administered by incorrect delivery device for patient presentation detrimental to patient care and/or"
+   }
+  },
+  {
+   "id": "ipratropium-given",
+   "check": "present",
+   "event": "drug:ipratropium",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "ipratropium-single-dose",
+   "check": "max_count",
+   "event": "drug:ipratropium",
+   "max": 1,
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "ipratropium-with-salbutamol",
+   "check": "ordered",
+   "first": "drug:salbutamol",
+   "then": "drug:ipratropium",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "cpap-after-bp",
+   "check": "ordered",
+   "first": "blood-pressure",
+   "then": "drug:cpap",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "cpap-contraindications-screened",
+   "check": "before_each",
+   "event": "drug:cpap",
+   "requires": "cpap-screened",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "cpap-settings",
+   "check": "absent",
+   "event": "cpap-applied-incorrectly",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "cpap-removed-when-loc-falls",
+   "check": "absent",
+   "event": "cpap-continued-despite-falling-loc",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "peep-settings",
+   "check": "absent",
+   "event": "peep-settings-error",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-breathing-mgmt",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "epi-only-after-salbutamol",
+   "check": "ordered",
+   "first": "drug:salbutamol",
+   "then": "drug:epinephrine",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-ipratropium",
+   "check": "absent",
+   "event": "drug:ipratropium",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-dexamethasone",
+   "check": "absent",
+   "event": "drug:dexamethasone",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-cpap",
+   "check": "absent",
+   "event": "drug:cpap",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-epinephrine",
+   "check": "absent",
+   "event": "drug:epinephrine",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "",
+  "cc": "",
+  "moi": null,
+  "hxcc": "",
+  "vitals": "",
+  "treatments": "",
+  "findings": ""
+ },
+ "handoffFacts": {
+  "ageSex": "",
+  "cc": "",
+  "moi": null,
+  "hxcc": "",
+  "initialVitals": "",
+  "finalVitals": "",
+  "pmhx": "",
+  "meds": "",
+  "allergies": "",
+  "treatments": "",
+  "findings": ""
+ },
+ "pcrFacts": {
+  "cc": "Worsening shortness of breath over 3 days in known COPD, unable to speak full sentences",
+  "hxcc": "Gradual onset over 3 days, much worse since 0600; productive green sputum, fever yesterday; own MDI ineffective this morning; worst since last admission; no orthopnea beyond baseline, no chest pain, no leg swelling",
+  "pmhx": "COPD with 2 admissions in the past year, 50 pack-year ex-smoker, hypertension",
+  "meds": "Salbutamol MDI, tiotropium, home O2 2 L/min, amlodipine",
+  "allergies": "NKA",
+  "treatments": [
+   "Upright leaning-forward position, carried to the ambulance",
+   "O2 titrated to target SpO2 94% (high flow indicated)",
+   "Salbutamol 5 mg neb, repeated as required",
+   "PCP: ipratropium 500 mcg single dose combined in the same neb",
+   "PCP: dexamethasone 8 mg PO",
+   "PCP: CPAP 5 cmH2O titrated to 7.5, BVM with PEEP on standby"
+  ],
+  "findings": [
+   "Tripod position, pursed-lip breathing, accessory muscle use",
+   "Widespread expiratory wheeze, poor basal air entry, no crackles",
+   "SpO2 84% on 2 L improving to 93% on CPAP; RR 32 to 24",
+   "Temperature 38.1 with purulent sputum - infective exacerbation",
+   "No JVD, no pedal edema - argues against CHF"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives salbutamol 5 mg by nebulizer or 4 x 100 mcg by MDI with a spacer, repeated as required, plus positioning, high-flow oxygen titrated to 94 percent, auscultation and rapid transport. EMR does NOT have ipratropium, dexamethasone, CPAP or IM epinephrine for bronchospasm. If she deteriorates, EMR assists ventilations with a BVM. No Functional Enquiry.",
+  "pcpEn": "PCP adds ipratropium 500 mcg as a single combined nebulizer dose, dexamethasone 8 mg PO, CPAP from 5 cmH2O titrated in 2.5 cmH2O steps to a maximum of 10 cmH2O with matched oxygen flow, a PEEP valve on the BVM if ventilation becomes necessary, and epinephrine 0.5 mg IM for severe bronchospasm with impending arrest. Functional Enquiry en route, kept brief."
+ },
+ "_phaseScripts": {
+  "dispatch": "Dispatch adds: she has home oxygen and has used her blue inhaler many times this morning without relief.",
+  "scene": "EXAMINER SCRIPT: Small overheated apartment, a home oxygen concentrator running in the corner with tubing across the floor - a trip hazard and an oxygen-safety consideration. No smoking materials lit. The patient sits bolt upright on a kitchen chair, leaning forward on her elbows in a tripod position, pursed-lip breathing. Her daughter is anxious and talking over her. One patient. Room about 26 degrees C.",
+  "primary": "ACTOR: alert but exhausted, speaks 1-2 words at a time, will not lie down. EXAMINER (give when assessed): airway clear and self-maintained; respirations 32, laboured with marked accessory muscle use, prolonged expiration, audible wheeze; radial pulse 118, regular. Skin: pale with dusky lips, warm and moist. Modified RBS: barrel chest, no trauma, no pedal edema, no calf swelling. Auscultation: widespread expiratory wheeze with poor air entry at both bases. SpO2 84 percent on her home nasal cannula at 2 L/min. UNSTABLE: respiratory distress with accessory muscle use.",
+  "transport": "Decision point. Respiratory distress with accessory muscle use = UNSTABLE, RTC. The guideline says transport immediately if able, delegating crew to prep egress otherwise, and to transport after the first salbutamol dose. Ready to load within 15 minutes; carry her, do not walk her.",
+  "history": "ACTOR AND DAUGHTER (patient answers in 1-2 words, daughter fills in): three days of worsening breathlessness with a productive cough and green sputum, fever yesterday. O - gradual over 3 days, much worse since 0600. P - sitting forward helps a little, lying down is impossible; her blue inhaler helped at first, not now. Q - tight, cannot get air out. R - no chest pain, no radiation. S - the worst she has been since her last admission. T - constant, progressive. She sleeps on two pillows normally, no worse than usual (against CHF), no leg swelling, no chest pain. PMHx: COPD with two admissions in the past year, 50 pack-year smoking history (quit 2 years ago), hypertension, no cardiac history. Meds: salbutamol MDI, tiotropium, home oxygen at 2 L/min, amlodipine. Allergies: none known. LOI: tea this morning, poor appetite for two days.",
+  "vitals": "Set 1 - baseline before medication: GCS 15 (E4V5M6); BP 158/88; pulse 118 regular; respirations 32 laboured; skin pale with dusky lips, warm moist; pupils equal reactive; SpO2 84 percent on 2 L nasal cannula, rising to 90 percent on high-flow; temperature 38.1 tympanic - indicated with infectious symptoms; BGL not indicated. Note for CPAP eligibility (PCP): RR above 24, SpO2 under 94 percent on oxygen, accessory muscle use, awake and following commands, systolic above 90 - she qualifies. RTC interval 5-6 minutes.",
+  "fe": "PCP ONLY, en route, kept very brief because she is breathless. ACTOR/DAUGHTER: general - feverish and off her food for two days; CNS - no confusion at baseline, no headache; respiratory - productive green sputum, no hemoptysis, no chest pain, worse than her usual baseline; cardiovascular - no orthopnea beyond her usual two pillows, no ankle swelling, no palpitations; GI/GU - nil; integumentary - nil; musculoskeletal - nil; endocrine - no diabetes; EENT - sore throat and coryza last week.",
+  "exam": "EN ROUTE head-to-toe: head/neck - pursed-lip breathing, accessory neck muscle use, no JVD; chest - barrel-shaped, hyperresonant, widespread expiratory wheeze at all 6 sites with poor basal air entry, no crackles (against pulmonary edema); abdomen - soft, non-tender; back - posterior auscultation confirms the same findings, no sacral edema; lower extremities - no pedal edema, no calf tenderness (against DVT/PE); upper extremities - nicotine staining, no clubbing change, CSM intact.",
+  "interventions": "SOB with history of asthma/COPD protocol. ALL LEVELS: sit upright leaning forward, limit movement, primary survey, oxygen titrated to a target SpO2 of 94 percent (high flow is indicated in a COPD patient who is short of breath), AUSCULTATE, transport after the first dose, history and baseline vitals, SALBUTAMOL 5 mg by nebulizer (or 4 x 100 mcg by MDI with a spacer - MDI and spacer are strongly recommended with infectious respiratory symptoms), repeated as required. PCP ADDITIONS: ipratropium 500 mcg by nebulizer combined with salbutamol in the same nebulizer - ipratropium is a SINGLE dose while salbutamol may be repeated; dexamethasone 8 mg PO (preferred route); CPAP starting at 5 cmH2O with 5 L/min, increasing in 2.5 cmH2O steps to a maximum of 10 cmH2O; and for severe disease or imminent respiratory failure with SpO2 under 90 percent unresolved by salbutamol, epinephrine 0.5 mg IM. If she deteriorates and cannot maintain her own respiratory effort, REMOVE CPAP and ventilate with a BVM plus a PEEP valve starting at 5 cmH2O.",
+  "ongoing": "Reassess ABCs, air entry and SpO2 after every intervention. Set 2 (after salbutamol/ipratropium and 10 minutes of CPAP, en route): GCS 15; BP 142/84; pulse 106 regular; respirations 24, less laboured, accessory muscle use reduced; skin pink, warm, moist; pupils equal reactive; SpO2 93 percent on CPAP at 7.5 cmH2O; temperature 38.1; auscultation shows improved air entry with reduced wheeze. Improving. EXAMINER ALTERNATIVE: if the candidate applies CPAP incorrectly or misses a contraindication, the patient's LOC falls and she can no longer follow commands - CPAP must then be removed and BVM ventilation with PEEP started.",
+  "handoff": "Critical patient - notify the receiving facility en route. Hand-off must include drug doses and times, CPAP pressure and the response. PCR within 5 minutes."
+ },
+ "_handoffModelEn": "This is a 71-year-old female with known COPD and two admissions in the past year, presenting with three days of worsening shortness of breath, productive green sputum and fever, now unable to speak more than one or two words at a time. On arrival she was tripoding with accessory muscle use, respirations 32 and laboured, widespread expiratory wheeze with poor basal air entry, SpO2 84 percent on her home 2 litres, BP 158/88, pulse 118, temperature 38.1. She is now respirations 24 with reduced accessory muscle use, SpO2 93 percent on CPAP at 7.5, BP 142/84, pulse 106, with improved air entry. History of COPD, 50 pack-year ex-smoker and hypertension; medications salbutamol, tiotropium, home oxygen and amlodipine; no known allergies. Treatments: kept upright and carried out, oxygen titrated toward 94 percent, salbutamol 5 milligrams with ipratropium 500 micrograms combined by nebulizer at 0824, dexamethasone 8 milligrams orally, and CPAP started at 5 and titrated to 7.5 centimetres of water. No crackles and no peripheral edema, so this looks like an infective exacerbation rather than pulmonary edema.",
+ "_criticalPitfallsEn": [
+  "Withholding oxygen from a hypoxic COPD patient for fear of hypoxic drive - the guideline states high-flow oxygen IS indicated for COPD patients complaining of SOB; SpO2 84 percent must be treated",
+  "Walking the patient to the ambulance or laying her flat - exertion and positioning errors, up to 100%",
+  "Not auscultating the chest - the SOB guideline lists auscultation as a required step",
+  "PCP: applying CPAP without checking all indications and contraindications (LOC, systolic under 90, vomiting risk, pneumothorax, trauma) - protocol error up to 100%",
+  "PCP: repeating ipratropium - it is a single dose only; salbutamol is the drug that may be repeated",
+  "Leaving CPAP on a patient whose LOC is falling instead of switching to BVM with PEEP - major protocol error"
+ ],
+ "sourcePages": "",
+ "keywordEvents": [
+  {
+   "event": "cpap-screened",
+   "regex": "\\b(contraindicat\\w*|pneumothorax|tracheostomy|follow(s|ing)? (my |our )?(commands|instructions)|aspirat\\w*|vomit\\w*|mask (fit|seal)\\w*|cpap criteria|indications? for cpap|meets? (the )?criteria)\\b"
+  }
+ ]
+}

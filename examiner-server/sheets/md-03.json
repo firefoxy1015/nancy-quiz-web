@@ -1,0 +1,1433 @@
+{
+ "id": "md-03",
+ "titleEn": "Hypoglycemia With Decreased LOC - Glucagon and D10W",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-03",
+ "patient": {
+  "name": "Edith Lawson",
+  "age": 74,
+  "sex": "female",
+  "affectEn": "before treatment: slumped forward in her armchair, chin on chest, eyes closed, snoring loudly, pale and very sweaty; does not respond to voice, groans and withdraws only to a painful stimulus. After glucagon or D10W: awake, oriented, embarrassed about the fuss, insists she feels fine and wants to stay home",
+  "speechEn": "before treatment: no words at all, only incomprehensible groaning to pain - she cannot give any history (all history comes from the care aide and the medication record). After treatment: clear speech, polite, a little embarrassed, answers for herself in short full sentences. When she wakes she asks to stay home; if the candidate strongly recommends transport, explains that the long-acting insulin can drop her sugar again and involves the care aide, she agrees to go to hospital"
+ },
+ "scene": {
+  "settingEn": "Small warm suite in an assisted-living building in Victoria at 0730 hrs. Good lighting. The patient is slumped in an armchair. On the side table beside her: an insulin pen, a used insulin needle, and an untouched breakfast tray. No spilled pills, no alcohol. One patient.",
+  "hazardsEn": [
+   "used insulin needle (sharps) lying on the side table right beside the patient - must be secured or moved to a sharps container before working around her"
+  ],
+  "bystanders": [
+   {
+    "who": "care aide",
+    "knowsEn": "She took her usual 18 units of long-acting insulin at 0700; she was talking normally then, said she felt nauseated and refused breakfast. The aide came back and found her unresponsive in the armchair at 0725; she is the one who called 911 and let you in. Two similar episodes in the past year, both treated by paramedics with sugar. No fall, no seizure seen, no fever, nothing that looked like a stroke (no droop, no one-sided weakness noticed before). PMHx: type 1 diabetes for 40 years, atrial fibrillation, hypothyroidism, previous seizures from low blood sugar. Medications (can hand over the medication record if asked): insulin glargine 18 units daily, insulin aspart with meals, apixaban, levothyroxine. No known allergies. Nothing to eat today; supper at 1800 yesterday. The aide has not given her anything. Willing to help if told exactly what to do."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "airway kit: OPA and NPA sets, portable suction unit",
+   "BVM",
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer with lancets",
+   "thermometer",
+   "sharps container",
+   "oral glucose gel (15 g)",
+   "glucagon kit (1 mg) with IM syringe and needle",
+   "naloxone",
+   "cot (stretcher)",
+   "blankets",
+   "AED",
+   "PCP only: IV start kit and administration set",
+   "PCP only: D10W (dextrose 10% in water) 250 mL bag"
+  ]
+ },
+ "dispatchEn": "0730 hrs. Code 3 to an assisted-living apartment in Victoria. 74-year-old female, known insulin-dependent diabetic, found by a care aide unresponsive in her armchair. Hospital is 11 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: the care aide says she took her morning insulin but refused breakfast. She is breathing but will not wake up.",
+ "arrivalEn": "The care aide lets you into a small, warm, well-lit suite. The patient is slumped in an armchair, head fallen forward onto her chest, snoring loudly. On the side table beside her is an insulin pen, a used needle and an untouched breakfast tray. No spilled pills, no alcohol. One patient. Your partner is right behind you with the kits.",
+ "firstLookEn": "A 74-year-old woman slumped forward in her armchair with her chin on her chest, eyes closed, snoring loudly. She is pale and sweaty and does not look up or move as you come in. The breakfast tray beside her has not been touched.",
+ "primary": {
+  "locEn": "No response to voice. To a painful stimulus (e.g. trapezius pinch) she withdraws and makes incomprehensible groaning sounds; her eyes do not open. AVPU = P (responds to pain only) - a significantly decreased LOC. She cannot protect her own airway.",
+  "airwayEn": "Snoring - partially obstructed by the tongue because her chin has fallen onto her chest. Opens with a head-tilt chin-lift or jaw thrust and improves markedly once she is laid supine with the airway held open, or positioned lateral / three-quarter prone. No blood, vomit or foreign material in the mouth.",
+  "breathingEn": "Respirations 16, adequate depth once the airway is open, equal chest rise, no accessory muscle use. Snoring until the airway is opened.",
+  "circulationEn": "Radial pulse 104, strong, irregular. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: no trauma anywhere - head, neck, chest, abdomen, pelvis and all four limbs unremarkable; no incontinence. A medical alert bracelet IS present on the LEFT wrist reading 'Insulin Dependent Diabetic' - give it only if the candidate checks the wrists or looks for medical identification. Insulin injection sites on the abdomen if the abdomen is exposed. Skin pale, cool, very diaphoretic (skin is given automatically with the RBS). She was seated and did not fall: c-spine is not indicated.",
+  "skinEn": "pale, cool, very diaphoretic"
+ },
+ "history": {
+  "ccEn": "WHILE HER LOC IS DECREASED THE PATIENT CANNOT ANSWER - the care aide answers: \"She's a diabetic and I couldn't wake her up. She's breathing but she just won't wake up.\" After she wakes (GCS 15) the patient says: \"I took my insulin this morning and I didn't feel like eating. I felt sick to my stomach.\"",
+  "opqrst": {
+   "oEn": "Care aide: \"She took her usual insulin at 0700 and she was talking normally then - she told me she felt sick and didn't want breakfast. When I came back at 0725 she was slumped like this and wouldn't wake up.\" (Last seen normal: about 0700 hrs.)",
+   "pEn": "Care aide: \"Nothing has changed it. I called her name and she didn't wake up. I haven't given her anything.\"",
+   "qEn": "Care aide: \"She just won't wake up. She was snoring like that when I found her.\"",
+   "rEn": "Care aide: \"She's had two episodes like this in the past year - both times the paramedics gave her sugar. This morning there was no shaking or seizure that I saw, and she didn't fall.\"",
+   "sEn": "Care aide: \"She doesn't wake up at all when I talk to her.\"",
+   "tEn": "Care aide: \"I found her at 0725, so at least since then. She was fine and talking at 0700 this morning.\""
+  },
+  "painScoreEn": "Cannot be obtained while she responds to pain only. After she wakes: \"No, nothing hurts.\"",
+  "sample": {
+   "sEn": "Care aide: \"She said she felt sick to her stomach this morning and didn't want breakfast. Since I found her she's been sweaty and pale and snoring.\" After she wakes, the patient: \"I've had a poor appetite and felt queasy for two days.\"",
+   "aEn": "Care aide (or the patient once awake): \"No known allergies - it's on her record.\"",
+   "mEn": "Care aide, from the medication record: \"Insulin glargine 18 units once a day - she took it at 0700 this morning - insulin aspart with meals, apixaban, and levothyroxine.\" (No other doses are on the record.)",
+   "pEn": "Care aide: \"Type 1 diabetes for 40 years, atrial fibrillation, and an underactive thyroid. She's had seizures from low blood sugar before, and two low-sugar episodes this past year that the paramedics treated with sugar.\"",
+   "lEn": "Care aide: \"Nothing today - she refused her breakfast. Her last meal was supper at 1800 yesterday.\"",
+   "eEn": "Care aide: \"She took her insulin at 0700, said she felt nauseated and wouldn't eat. I came back at 0725 and she was slumped in the chair. No fall, no seizure that I saw, no fever.\""
+  },
+  "fe": {
+   "generalEn": "(Patient, once awake) \"I haven't been hungry and I've felt queasy for two days. No fever.\"",
+   "cnsEn": "\"No headache now. No weakness or numbness anywhere, and my vision is fine.\"",
+   "respiratoryEn": "\"No, my breathing is fine. No cough.\"",
+   "cardiovascularEn": "\"I know I have an irregular heartbeat. No chest pain.\"",
+   "giGuEn": "\"I've been nauseated for two days but I haven't thrown up. No diarrhea. My waterworks are normal.\"",
+   "integumentaryEn": "\"I was clammy earlier, they tell me. My skin feels dry now. No rashes or sores.\"",
+   "musculoskeletalEn": "\"No, nothing like that. No aches, no injuries.\"",
+   "endocrineEn": "\"I've been a type 1 diabetic for 40 years. I'll admit I sometimes skip meals, but I still take my full insulin. I take a thyroid pill too.\"",
+   "eentEn": "\"Nothing. Eyes, ears, nose and throat are all fine.\""
+  }
+ },
+ "findings": {
+  "headNeckEn": "No trauma to the head or neck. No tongue biting. No facial droop; once she is awake her speech is clear. No incontinence noted. Trachea midline.",
+  "chestLungsEn": "Clear and equal air entry at all 6 sites. Heart rhythm irregularly irregular. No chest wall injury.",
+  "abdomenEn": "Soft, non-tender in all quadrants. Insulin injection sites visible on the abdomen.",
+  "backEn": "No findings: no tenderness, no deformity, no injury.",
+  "lowerExtremitiesEn": "No edema. Once she is awake she moves both legs normally; strength and sensation equal on both sides. No injury.",
+  "upperExtremitiesEn": "Medical alert bracelet on the LEFT wrist reading 'Insulin Dependent Diabetic'. Once she is awake, grip strength symmetrical, no motor or sensory deficit. No injury."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, before treatment",
+   "gcs": {
+    "total": 8,
+    "e": 1,
+    "v": 2,
+    "m": 5
+   },
+   "bp": "142/86",
+   "pulse": {
+    "rate": 104,
+    "rhythm": "irregular",
+    "strength": "strong",
+    "rawEn": "104 strong irregular (atrial fibrillation)"
+   },
+   "resp": {
+    "rate": 16,
+    "depth": "adequate once the airway is open",
+    "character": "snoring (partial obstruction) until the airway is opened",
+    "rawEn": "16 adequate once airway open"
+   },
+   "skin": "pale, cool, diaphoretic",
+   "pupils": "equal and reactive (PERL), 3 mm",
+   "spo2": "92% on room air",
+   "bgl": "1.8 mmol/L",
+   "temp": "36.6 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "afterEvent": "drug:d10w"
+     },
+     {
+      "afterEvent": "drug:glucagon"
+     }
+    ]
+   },
+   "unlockNoteEn": "after D10W (PCP) or glucagon (EMR) - the scenario gives this set about 6 minutes after treatment, en route; awake and oriented. Untreated, she stays on set 1.",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "138/82",
+   "pulse": {
+    "rate": 92,
+    "rhythm": "irregular",
+    "strength": "normal",
+    "rawEn": "92 irregular"
+   },
+   "resp": {
+    "rate": 14,
+    "depth": "normal",
+    "character": "regular",
+    "rawEn": "14 regular"
+   },
+   "skin": "pink, warm, dry",
+   "pupils": "equal and reactive (PERL), 3 mm",
+   "spo2": "98% on oxygen",
+   "bgl": "7.4 mmol/L",
+   "temp": "36.6 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "oxygen-applied",
+   "when": {
+    "afterEvent": "oxygen"
+   },
+   "examinerLineEn": "Oxygen is on. Her level of consciousness has not changed.",
+   "vitalsPatch": {
+    "spo2": "98% on oxygen"
+   }
+  },
+  {
+   "id": "wakes-after-d10w",
+   "when": {
+    "afterEvent": "drug:d10w"
+   },
+   "examinerLineEn": "A few minutes after the D10W she stirs, opens her eyes and starts to talk. She is now awake and oriented, a little embarrassed, and says: \"I feel fine now. I don't want to go to the hospital - I'd rather stay home.\"",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "wakes-after-glucagon",
+   "when": {
+    "afterEvent": "drug:glucagon",
+    "missingEvent": "drug:d10w"
+   },
+   "examinerLineEn": "A few minutes after the glucagon she stirs, opens her eyes and starts to talk. She is now awake and oriented, a little embarrassed, and says: \"I feel fine now. I don't want to go to the hospital - I'd rather stay home.\"",
+   "vitalsPatch": {}
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan glucometer, glucose gel, glucagon (EMR) or D10W (PCP), suction, oxygen, BVM",
+   "triggers": [
+    "copy dispatch",
+    "bring the glucometer and the glucagon",
+    "bring the D10W and IV kit",
+    "bring suction and the BVM",
+    "thinking hypoglycemia",
+    "bring the airway kit"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate an unresponsive medical patient - airway first, and BGL is mandatory",
+   "triggers": [
+    "unresponsive diabetic, airway first",
+    "we will need a blood sugar",
+    "BGL is mandatory",
+    "possible low blood sugar",
+    "airway is my priority",
+    "decreased LOC call"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (used sharps on the table - important), environment, nature of illness (unresponsive diabetic), one patient",
+   "triggers": [
+    "scene is safe",
+    "there's a used needle on the table",
+    "sharps hazard",
+    "one patient",
+    "nature of illness is an unresponsive diabetic",
+    "environment is warm and well lit"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection; act on the sharps hazard before working around it",
+   "triggers": [
+    "gloves and eye protection",
+    "PPE on",
+    "put the needle in the sharps container",
+    "secure the sharps first",
+    "move the needle away from her",
+    "donning gloves"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: elderly female slumped forward, snoring respirations, pale and sweaty, untouched breakfast",
+   "triggers": [
+    "she's slumped forward",
+    "she's snoring",
+    "pale and sweaty",
+    "breakfast hasn't been touched",
+    "general impression",
+    "she looks unresponsive"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: responds to Pain only - a significantly decreased LOC",
+   "triggers": [
+    "AVPU",
+    "can you hear me",
+    "trapezius pinch",
+    "responds to pain only",
+    "she's a P on AVPU",
+    "level of consciousness"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (no trauma, seated, no fall) - do not immobilize unnecessarily",
+   "triggers": [
+    "no c-spine concern",
+    "c-spine not indicated",
+    "she didn't fall",
+    "no trauma so no spinal precautions",
+    "medical call, no need for c-spine"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Open and maintain the airway with a manual technique; she cannot protect her own airway",
+   "triggers": [
+    "head tilt chin lift",
+    "jaw thrust",
+    "open the airway",
+    "snoring, partial obstruction",
+    "reposition her head",
+    "maintain the airway"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "primary",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Consider a correctly sized airway adjunct and have suction immediately available",
+   "triggers": [
+    "suction ready",
+    "size an OPA",
+    "measure an NPA",
+    "airway adjunct",
+    "suction at the head"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing rate and adequacy once the airway is open",
+   "triggers": [
+    "check her breathing",
+    "chest rise",
+    "look listen and feel",
+    "breathing is adequate",
+    "count respirations",
+    "respiratory effort"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse is irregular",
+    "any major bleeding",
+    "pulse rate and quality"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey; look for a medical alert bracelet, injection sites and any injury",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "medical alert bracelet",
+    "look for injection sites",
+    "check for injuries",
+    "modified RBS"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale cool diaphoretic - classic hypoglycemia",
+   "triggers": [
+    "skin is pale cool and diaphoretic",
+    "she's clammy",
+    "skin signs",
+    "feel her skin",
+    "skin colour temperature condition"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Apply oxygen to maintain SpO2 at or above 94%",
+   "triggers": [
+    "put her on oxygen",
+    "non-rebreather",
+    "titrate to 94",
+    "nasal cannula",
+    "sats are 92 so oxygen",
+    "high flow oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position lateral or three-quarter prone to protect the airway (recovery position for the unconscious medical patient)",
+   "triggers": [
+    "recovery position",
+    "lateral position",
+    "three-quarter prone",
+    "roll her onto her side",
+    "semi-prone",
+    "left lateral"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "she's unstable",
+    "priority patient",
+    "decreased LOC means RTC",
+    "load and go"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Correct the hypoglycemia first, then ready to load within 15 minutes",
+   "triggers": [
+    "treat on scene, then go",
+    "transport after the first dose",
+    "glucagon then we load",
+    "ready to load within 15",
+    "after the D10 we move"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate crew members to prep egress (required by the Diabetic Emergencies guideline)",
+   "triggers": [
+    "partner, prep the egress",
+    "partner, get the cot",
+    "bring the stretcher in",
+    "set up the cot beside the chair",
+    "prepare for egress",
+    "delegate"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: unresponsiveness in a known diabetic",
+   "triggers": [
+    "what happened",
+    "why did you call",
+    "chief complaint",
+    "what's going on with her",
+    "what made you call 911"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C from the care aide: insulin taken, dose and time, food missed, time last seen normal, progression, previous similar episodes",
+   "triggers": [
+    "when did you find her",
+    "when was she last seen normal",
+    "how much insulin did she take",
+    "what time did she take her insulin",
+    "did she eat after her insulin",
+    "has this happened before"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx incl duration of diabetes and previous hypoglycemic events",
+   "triggers": [
+    "medical history",
+    "how long has she been diabetic",
+    "previous low blood sugars",
+    "any other conditions",
+    "past history",
+    "any seizures before"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications with doses and schedules from the medication record",
+   "triggers": [
+    "what medications",
+    "medication record",
+    "what insulin does she take",
+    "any blood thinners",
+    "meds list",
+    "insulin dose"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications",
+    "no known allergies",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI - critical here: she missed breakfast after taking insulin",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "did she eat breakfast",
+    "LOI",
+    "last meal"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "history",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Evaluate for stroke signs and symptoms as the guideline requires in diabetic emergencies",
+   "triggers": [
+    "check for stroke",
+    "FAST assessment",
+    "facial droop",
+    "any signs of stroke",
+    "arm drift",
+    "stroke assessment"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components (E1 V2 M5 = 8)",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS of 8",
+    "E1 V2 M5"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "cuff on",
+    "auscultate a pressure",
+    "I'm taking a BP"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse - note the irregular rhythm (atrial fibrillation)",
+   "triggers": [
+    "check her pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "pulse is irregular",
+    "irregularly irregular",
+    "count the pulse for a full minute"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths",
+    "breathing rate"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": [
+    "skin check",
+    "colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "still diaphoretic"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - required with any decreased LOC",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "penlight",
+    "pupils equal and reactive"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "check the waveform matches the pulse"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL with correct technique and a clean, uncontaminated sample site - mandatory in decreased LOC",
+   "triggers": [
+    "blood sugar",
+    "BGL",
+    "glucometer",
+    "check her glucose",
+    "clean the finger first",
+    "finger poke"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - reasonable to screen for infection as a cause of altered LOC",
+   "triggers": [
+    "temperature",
+    "temp",
+    "thermometer",
+    "tympanic temperature",
+    "check for fever"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health (recent illness, appetite)",
+   "triggers": [
+    "general health",
+    "have you been unwell lately",
+    "how's your appetite",
+    "any fevers",
+    "recent illness"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (stroke screen post-recovery)",
+   "triggers": [
+    "any headache",
+    "weakness or numbness",
+    "vision changes",
+    "any trouble speaking",
+    "dizziness"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "breathing problems",
+    "respiratory enquiry",
+    "chest infection"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (atrial fibrillation)",
+   "triggers": [
+    "any chest pain",
+    "palpitations",
+    "irregular heartbeat",
+    "heart problems",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (nausea and poor intake - the precipitant)",
+   "triggers": [
+    "nausea",
+    "vomiting",
+    "diarrhea",
+    "bowels and urine",
+    "stomach upset"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "skin changes",
+    "any rash",
+    "any sores",
+    "clammy",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "aches or pains",
+    "any injuries",
+    "joint problems",
+    "musculoskeletal",
+    "any falls"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (pertinent: insulin regimen and adherence)",
+   "triggers": [
+    "diabetes control",
+    "how is your sugar control",
+    "insulin regimen",
+    "do you skip meals",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision problems",
+    "hearing",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl tongue biting and facial droop (seizure and stroke differentials)",
+   "triggers": [
+    "head and neck",
+    "check her tongue",
+    "tongue biting",
+    "facial droop",
+    "smile for me",
+    "trachea midline"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "heart sounds",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "soft non-tender",
+    "injection sites on the abdomen"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check the back",
+    "palpate the spine",
+    "back exam",
+    "any back injury",
+    "roll to check the back"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with motor and sensory comparison",
+   "triggers": [
+    "lower extremities",
+    "check her legs",
+    "pedal edema",
+    "wiggle your toes",
+    "push against my hands with your feet",
+    "sensation in the legs"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities incl the medical alert bracelet and injection sites",
+   "triggers": [
+    "upper extremities",
+    "check her arms",
+    "medical alert bracelet",
+    "squeeze my hands",
+    "grip strength"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Initiate the Diabetic Emergencies protocol on correct indications with a BGL below 4.0 confirmed and baseline vitals done",
+   "triggers": [
+    "diabetic emergencies protocol",
+    "BGL is 1.8, below 4",
+    "hypoglycemia protocol",
+    "baseline vitals done, starting the protocol",
+    "confirmed hypoglycemia"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Recognize oral glucose is CONTRAINDICATED with insufficient mentation and an unprotected airway",
+   "triggers": [
+    "no oral glucose",
+    "oral glucose is contraindicated",
+    "she can't protect her airway so no glucose gel",
+    "not giving glucose gel",
+    "insufficient mentation for oral glucose"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "EMR: glucagon 0.5-1 mg IM with 6 rights, correct IM site and needle; PCP: D10W 10-25 g IV, glucagon only if IV access fails",
+   "triggers": [
+    "glucagon 1 mg IM",
+    "intramuscular in the thigh",
+    "six rights",
+    "D10W 25 grams",
+    "IV access",
+    "250 mL of D10"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway management skill: correct positioning, suction if needed, properly sized adjunct",
+   "triggers": [
+    "suction the airway",
+    "insert an NPA",
+    "measure the OPA",
+    "lubricate the NPA",
+    "maintain the airway with positioning"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "interventions",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Recheck the BGL after treatment and document the response",
+   "triggers": [
+    "recheck the blood sugar",
+    "repeat BGL",
+    "check her sugar again",
+    "BGL after the treatment",
+    "glucose recheck"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after treatment and after every change in LOC",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "her LOC has changed, reassessing",
+    "how are you feeling now",
+    "reassessing"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes including a repeat BGL",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set with a BGL",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Once she can protect her airway, give complex carbohydrate and explain the risk of recurrent hypoglycemia from long-acting insulin",
+   "triggers": [
+    "give her something to eat",
+    "complex carbohydrate",
+    "a sandwich or toast",
+    "can she eat something now",
+    "your sugar could drop again",
+    "long-acting insulin"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Manage the refusal professionally: strongly recommend transport, involve the care aide, do not simply accept the refusal",
+   "triggers": [
+    "I strongly recommend you come to hospital",
+    "your sugar can drop again",
+    "the care aide can help",
+    "risk of going low again",
+    "we'd really like to take you in",
+    "talk to the care aide"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Notify the receiving facility with the BGL and treatment",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "hypoglycemic patient inbound"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with initial and final GCS, both BGLs, drug time/dose/route and response",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 74-year-old female",
+    "report to the nurse",
+    "BGL went from 1.8 to 7.4"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "oral-glucose-while-dloc",
+   "descriptionEn": "candidate gives oral glucose gel (or puts any food, drink or glucose in her mouth) while she is NOT yet fully awake - i.e. before she has woken up after glucagon or D10W (log drug:oral-glucose as well). Giving oral glucose or food AFTER she is awake and able to swallow is correct and is NOT this event."
+  },
+  {
+   "key": "airway-left-unmanaged",
+   "descriptionEn": "candidate has found the snoring / partially obstructed airway and moves on to breathing, circulation, the RBS, vitals or history WITHOUT opening it (head-tilt chin-lift or jaw thrust) or positioning her lateral / three-quarter prone"
+  },
+  {
+   "key": "spinal-immobilized",
+   "descriptionEn": "candidate applies manual c-spine control, a cervical collar or spinal motion restriction although there is no trauma (she was seated and did not fall)"
+  },
+  {
+   "key": "refusal-accepted",
+   "descriptionEn": "after she wakes and asks to stay home, candidate accepts the refusal and agrees not to transport her without strongly recommending transport and explaining that the long-acting insulin can drop her sugar again"
+  },
+  {
+   "key": "drug-wrong-dose",
+   "descriptionEn": "candidate states or gives a dose outside the protocol: glucagon other than 0.5-1 mg IM or 3 mg IN; D10W more than 25 g (250 mL of 10% solution) as one dose; oral glucose other than 15 g"
+  },
+  {
+   "key": "drug-wrong-route",
+   "descriptionEn": "candidate gives glucagon by a route other than IM or IN (e.g. IV or SQ), or D10W by a route other than IV"
+  },
+  {
+   "key": "wrong-dextrose-concentration",
+   "descriptionEn": "candidate prepares or gives a dextrose solution other than D10W (e.g. D50W, D25W or D5W) - BC uses D10W only"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "glucagon IM",
+    "intranasal glucagon",
+    "glucagon kit"
+   ],
+   "doseEn": "0.5-1 mg IM (or 3 mg IN, repeat after 15 minutes if no clinical response); onset 15 minutes. EMR: the treatment for this patient (insufficient mentation / unprotected airway). PCP: only if IV access cannot be obtained.",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%",
+    "dextrose 10 percent in water",
+    "D-ten",
+    "IV dextrose"
+   ],
+   "doseEn": "10-25 g IV (100-250 mL of 10% solution); immediate onset; caution: extravasation causes tissue necrosis. BC uses D10W only - there is no D50W in BC.",
+   "licence": "pcp"
+  },
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Glucogel",
+    "Insta-Glucose",
+    "glucose tablets",
+    "dextrose gel"
+   ],
+   "doseEn": "15 g PO / gel to the oral mucosa, repeat at 5 minutes as necessary - ONLY for a patient with sufficient mentation to maintain her own airway. CONTRAINDICATED while she responds to pain only; appropriate only after she is fully awake and able to swallow.",
+   "licence": "both"
+  },
+  {
+   "key": "naloxone",
+   "namesEn": [
+    "naloxone",
+    "Narcan"
+   ],
+   "doseEn": "NOT indicated in this call: no actual or suspected narcotic use, respirations 16 with adequate depth, pupils 3 mm and reactive (indication is respiratory depression / depressed mental status secondary to narcotic use; 0.4 mg IM or IV, 4 mg IN). If given, report drug:naloxone.",
+   "licence": "both"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "bgl-before-glucagon",
+   "check": "ordered",
+   "first": "blood-glucose",
+   "then": "drug:glucagon",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "bgl-before-d10w",
+   "check": "ordered",
+   "first": "blood-glucose",
+   "then": "drug:d10w",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "glucagon-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:glucagon",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "d10w-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:d10w",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "emr-glucagon-given",
+   "check": "present",
+   "event": "drug:glucagon",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "pcp-d10w-given",
+   "check": "present",
+   "event": "drug:d10w",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "pcp-glucagon-only-without-iv",
+   "check": "absent",
+   "event": "drug:glucagon",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-d10w",
+   "check": "absent",
+   "event": "drug:d10w",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-oral-glucose-in-dloc",
+   "check": "absent",
+   "event": "oral-glucose-while-dloc",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "airway-managed",
+   "check": "absent",
+   "event": "airway-left-unmanaged",
+   "licence": "both",
+   "deduct": {
+    "itemId": "airway",
+    "weight": 100,
+    "errorEn": "Determines airway problems but fails to act to correct them and/or"
+   }
+  },
+  {
+   "id": "naloxone-not-indicated",
+   "check": "absent",
+   "event": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "glucagon-single-dose",
+   "check": "max_count",
+   "event": "drug:glucagon",
+   "max": 1,
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "treat-before-load-emr",
+   "check": "ordered",
+   "first": "drug:glucagon",
+   "then": "move:load",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "transport",
+    "weight": 15,
+    "errorEn": "Makes decision to transport a patient as Priority prior to treatment potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "treat-before-load-pcp",
+   "check": "ordered",
+   "first": "drug:d10w",
+   "then": "move:load",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "transport",
+    "weight": 15,
+    "errorEn": "Makes decision to transport a patient as Priority prior to treatment potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "dose-correct",
+   "check": "absent",
+   "event": "drug-wrong-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "route-correct",
+   "check": "absent",
+   "event": "drug-wrong-route",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Administers a medication by the incorrect route"
+   }
+  },
+  {
+   "id": "d10w-only",
+   "check": "absent",
+   "event": "wrong-dextrose-concentration",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Choses the wrong IV fluid and/or"
+   }
+  },
+  {
+   "id": "no-spinal-without-trauma",
+   "check": "absent",
+   "event": "spinal-immobilized",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 5,
+    "errorEn": "C-spine control taken when not indicated by mechanism of Injury"
+   }
+  },
+  {
+   "id": "refusal-not-simply-accepted",
+   "check": "absent",
+   "event": "refusal-accepted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "74-year-old female",
+  "cc": "unresponsive known insulin-dependent (type 1) diabetic, hypoglycemia with BGL 1.8 mmol/L",
+  "moi": null,
+  "hxcc": "took her usual 18 units of long-acting insulin at 0700, refused breakfast because of nausea, found unresponsive in her armchair by the care aide at 0725; two similar episodes in the past year",
+  "vitals": "initially GCS 8 (E1 V2 M5), BP 142/86, pulse 104 irregular, resp 16, SpO2 92% on room air, BGL 1.8; after treatment GCS 15, BP 138/82, pulse 92 irregular, resp 14, SpO2 98% on oxygen, BGL 7.4",
+  "treatments": "airway opened and maintained, lateral positioning, oxygen to SpO2 94% or above, oral glucose withheld; PCP: D10W 25 g IV (EMR: glucagon 1 mg IM); BGL rechecked; ETA 11 minutes",
+  "findings": "pale cool diaphoretic skin, irregular pulse consistent with known atrial fibrillation, no stroke signs, no trauma, no seizure witnessed"
+ },
+ "handoffFacts": {
+  "ageSex": "74-year-old female",
+  "cc": "found unresponsive by her care aide - hypoglycemia in a known type 1 diabetic",
+  "moi": null,
+  "hxcc": "type 1 diabetic for 40 years; took her usual 18 units of long-acting insulin at 0700 then refused breakfast because of nausea; found unresponsive in her armchair at 0725; two similar episodes in the past year treated by paramedics; at risk of recurrent hypoglycemia because the long-acting insulin is still on board",
+  "initialVitals": "responsive to pain only, GCS 8 (E1 V2 M5), snoring respirations; BP 142/86, pulse 104 strong irregular, resp 16, skin pale cool diaphoretic, pupils equal and reactive 3 mm, SpO2 92% on room air, BGL 1.8 mmol/L, temperature 36.6",
+  "finalVitals": "GCS 15 (E4 V5 M6) and fully oriented; BP 138/82, pulse 92 irregular, resp 14, skin pink warm dry, pupils equal and reactive 3 mm, SpO2 98% on oxygen, BGL 7.4 mmol/L",
+  "pmhx": "type 1 diabetes for 40 years, atrial fibrillation, hypothyroidism, previous hypoglycemic seizures",
+  "meds": "insulin glargine 18 units daily, insulin aspart with meals, apixaban, levothyroxine",
+  "allergies": "no known allergies",
+  "treatments": "airway opened and maintained with lateral positioning, suction available; oxygen to keep SpO2 94% or above; oral glucose withheld (insufficient mentation); PCP: IV access and D10W 25 g IV at 0741 (EMR: glucagon 1 mg IM) with the glucose rechecked afterwards; complex carbohydrate once she could protect her airway",
+  "findings": "no trauma, no tongue biting, no facial droop, no stroke signs; chest clear at all 6 sites with an irregularly irregular rhythm; abdomen soft with insulin injection sites; medical alert bracelet on the left wrist; no deficit in any limb once awake"
+ },
+ "pcrFacts": {
+  "cc": "Unresponsive known insulin-dependent diabetic (BGL 1.8 mmol/L)",
+  "hxcc": "Took 18 units long-acting insulin at 0700, refused breakfast due to nausea, found unresponsive 0725; two similar episodes in the past year",
+  "pmhx": "Type 1 diabetes 40 years, atrial fibrillation, hypothyroidism, previous hypoglycemic seizures",
+  "meds": "Insulin glargine 18 units daily, insulin aspart with meals, apixaban, levothyroxine",
+  "allergies": "NKA",
+  "treatments": [
+   "Airway opened, lateral/recovery positioning, suction available",
+   "O2 titrated to SpO2 94% or above",
+   "Oral glucose withheld - insufficient mentation",
+   "PCP: IV access and D10W 25 g IV at 0741 (EMR: glucagon 1 mg IM)",
+   "BGL rechecked after treatment; complex carbohydrate given once airway protected"
+  ],
+  "findings": [
+   "GCS 8 (E1V2M5) improving to 15 (E4V5M6)",
+   "BGL 1.8 rising to 7.4 mmol/L",
+   "Pale cool diaphoretic skin resolving",
+   "Irregular pulse consistent with known atrial fibrillation",
+   "No stroke signs, no trauma, no seizure witnessed"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "The patient's eyes are closed and she does not respond as you approach. Show me how you would assess her level of consciousness.",
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR treats insufficient mentation with GLUCAGON 0.5-1 mg IM (or 3 mg IN, repeat after 15 minutes if no response). Oral glucose 15 g is EMR scope but only for patients with sufficient mentation to protect the airway - not this patient until she has woken up. EMR does not establish IV access or give D10W. No Functional Enquiry.",
+  "pcpEn": "PCP obtains vascular access (IV access is obtainable in this scenario) and gives D10W 10-25 g (100-250 mL of 10% solution) IV as first-line, reserving glucagon for failed IV access. BC uses D10W only (no D50W). PCP also performs the 9-system Functional Enquiry once she is alert. Watch for extravasation - D10W causes tissue necrosis."
+ },
+ "sourcePages": "Scenario md-03 (data/practical/scenarios.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing (refusal after recovery), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC = unstable); p.11 Primary Survey interventions (airway maintenance and suctioning for decreased LOC; oxygen for altered LOC; c-spine only when trauma cannot be ruled out); p.13 AVPU (P: monitor airway closely, semi-prone); p.57 Diabetic Emergencies (airway, SpO2 >= 94%, lateral or 3/4 prone, delegate egress prep, baseline vitals incl. BGL, evaluate for stroke, BGL < 4.0 mmol/L, glucose gel only with sufficient mentation, EMR glucagon for insufficient mentation, PCP vascular access and D10W 10-25 g, glucagon if no IV access, transport after the first dose); p.61 D10W (10-25 g IV, caution extravasation); p.67 Glucagon (0.5-1 mg IM, 3 mg IN repeat after 15 minutes, onset 15 minutes); p.72 Naloxone (indication: narcotic use); p.76 Oral Glucose (15 g, only with sufficient mentation to maintain an airway)."
+}

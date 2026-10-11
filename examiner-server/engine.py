@@ -25,7 +25,10 @@ VITALS_SET_MAX_MS = 3 * 60000
 VITAL_ITEMS = ('blood-pressure', 'pulse', 'respirations')          # a "set" needs these three
 VITAL_ALL = ('gcs', 'blood-pressure', 'pulse', 'respirations', 'skin-vitals', 'pupils', 'pulse-oximetry', 'blood-glucose', 'temperature')
 PRESENCE_EXEMPT = ('overall-call-management', 'overall-patient-care',   # judged at the end, never by presence alone
-                   'notification', 'hand-off-report', 'documentation')  # judged by the closing review
+                   'notification', 'hand-off-report', 'documentation',  # judged by the closing review
+                   'transport')                                         # judged by the engine: category + packaging time
+# items the model may never add a "quality" deduction to: the engine or the closing review owns them
+QUALITY_EXCLUDED = {'notification', 'hand-off-report', 'documentation', 'transport', 'ongoing-abc-i'}
 CAPS = {'functional-enquiries': 15, 'physical-exam': 15}
 # A missed *expected action* is never worth more than this for these items: the
 # 100% protocol/skill errors are conditions (wrong dose, no baseline vitals...)
@@ -321,6 +324,37 @@ def keyword_events(text, sheet, t, already):
     return out
 
 
+DRUG_GIVE = r'\b(giv(e|ing|en)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
+DOSE = r'\b\d+(\.\d+)?\s*(mg|g|grams?|mcg|micrograms?|ml|millilit\w*|milligrams?|units?|puffs?|sprays?|l/min|litres?)\b'
+DRUG_BLOCK = r"\b(not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|max(imum)?|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
+
+
+def drug_events(text, sheet, track, t, reported):
+    """A sentence that names an allowed drug AND says it is being given (a give-verb or a dose)
+    AND has no negation/conditional/history word -> drug:<key>. Only for drugs the model did not
+    report this turn. Conservative by design: a missed drug costs a point, a phantom drug can
+    trigger an absent-rule."""
+    out = []
+    have = {e['name'] for e in reported}
+    for sent in _re.split(r'(?<=[.;!?])\s+|\s+(?:but|then)\s+', text or ''):
+        low = sent.lower()
+        if not low.strip() or _re.search(DRUG_BLOCK, low):
+            continue
+        if not (_re.search(DRUG_GIVE, low) or _re.search(DOSE, low)):
+            continue
+        for d in sheet.get('drugs', []):
+            if d.get('licence', 'both') not in ('both', track):
+                continue
+            name = 'drug:' + d['key']
+            if name in have:
+                continue
+            aliases = [d['key'].replace('-', ' ')] + [a.lower() for a in d.get('namesEn', [])]
+            if any(_re.search(r'\b' + _re.escape(a) + r'\b', low) for a in aliases if len(a) >= 3):
+                out.append({'t': t, 'name': name, 'eids': [], 'quote': sent[:120], 'components': ['keyword']})
+                have.add(name)
+    return out
+
+
 CLOSING_EVIDENCE = {   # regex evidence that an element IS present in a report
     'ageSex': r'\b\d{1,3}[- ]?(year|yo|y/o|yr)s?[- ]?old\b|\b(male|female|man|woman)\b',
     'cc': r'\b(chief complaint|complain(ing|s)? of|c/c|presenting with)\b',
@@ -348,10 +382,19 @@ QUALITY_VETO = [   # (substring of the official error string, regex in the candi
 
 def veto_quality(quality, candidate_text):
     low = ' ' + (candidate_text or '').lower() + ' '
+    cand_norm = _norm(candidate_text)
     out = []
     for q in quality or []:
+        if q.get('itemId') in QUALITY_EXCLUDED or (q.get('weight') or 0) >= 100:
+            continue   # engine/closing-owned items; a model judgement never auto-fails a candidate
         err = (q.get('errorEn') or '').lower()
         if any(sub.lower() in err and _re.search(rx, low) for sub, rx in QUALITY_VETO):
+            continue
+        quote = q.get('quote') or ''
+        if _re.search(r'\b(examiner|patient|partner|engine)\s*:', quote, _re.I):
+            continue   # evidence must be the candidate's own words
+        qn = _norm(_re.sub(r'^\s*\[?\d{1,2}:\d{2}\]?\s*(candidate\s*:)?', '', quote, flags=_re.I))
+        if len(qn) >= 12 and qn[:30] not in cand_norm:
             continue
         out.append(q)
     return out

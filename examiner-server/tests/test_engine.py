@@ -249,6 +249,41 @@ def test_drug_event_counts_as_protocol_initiated():
     assert not any(x['itemId'] == 'protocols' for x in r1['rows'])        # a drug was given: the protocol was initiated
 
 
+def test_transport_items_are_engine_judged():
+    s, e, c = perfect('rtc')
+    s['expected'].append({'eid': 'E95', 'itemId': 'transport', 'weight': 25, 'licence': 'both', 'actionEn': 'Ready to load within 15 minutes'})
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert not any(x['itemId'] == 'transport' for x in r['rows']), r['rows']   # packaged at 12 min: nothing to deduct
+
+
+DRUG_SHEET = {'drugs': [{'key': 'txa', 'namesEn': ['TXA', 'tranexamic acid'], 'licence': 'pcp'},
+                        {'key': 'entonox', 'namesEn': ['Entonox', 'nitrous'], 'licence': 'both'},
+                        {'key': 'asa', 'namesEn': ['ASA', 'aspirin'], 'licence': 'both'}]}
+
+
+def test_drug_keyword_fallback_affirmative_only():
+    f = lambda text, track='pcp', rep=(): [e['name'] for e in engine.drug_events(text, DRUG_SHEET, track, 1000, list(rep))]
+    assert f('TXA 2 g IV over 1 minute with the 6 rights.') == ['drug:txa']
+    assert f("Giving Entonox now, he'll self-administer.") == ['drug:entonox']
+    assert f('No Entonox, he is in shock.') == []
+    assert f('Entonox is contraindicated with a pneumothorax.') == []
+    assert f('If his pain gets worse I would consider Entonox.') == []
+    assert f('Have you taken any aspirin today?') == []
+    assert f('TXA 2 g IV over 1 minute.', track='emr') == []                      # not an EMR drug
+    assert f('Giving ASA 160 mg chewed.', rep=[{'name': 'drug:asa'}]) == []        # model already reported it
+
+
+def test_quality_picks_filtered():
+    cand = 'Radio to the receiving hospital: 52-year-old male. Pulse 120. Pulse 118.'
+    q = [{'itemId': 'notification', 'weight': 5, 'errorEn': 'x', 'quote': 'Radio to the receiving hospital', 't': 1},
+         {'itemId': 'rapid-body-survey', 'weight': 15, 'errorEn': 'y', 'quote': '[01:30] Examiner: The time of tourniquet application is 1006 hours.', 't': 2},
+         {'itemId': 'protocols', 'weight': 100, 'errorEn': 'z', 'quote': 'Pulse 120', 't': 3},
+         {'itemId': 'pulse', 'weight': 3, 'errorEn': 'Consistently fails to verbalize strength and/or rhythm two or more times', 'quote': '[00:30] Candidate: Pulse 120. Pulse 118.', 't': 4},
+         {'itemId': 'pulse', 'weight': 3, 'errorEn': 'Consistently fails to verbalize strength and/or rhythm two or more times', 'quote': 'words the candidate never said at all', 't': 5}]
+    kept = engine.veto_quality(q, cand)
+    assert [(x['itemId'], x['t']) for x in kept] == [('pulse', 4)]
+
+
 def test_presence_miss_is_capped_for_protocol_items():
     s, e, c = perfect()
     s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Administer Entonox for pain when indicated'})

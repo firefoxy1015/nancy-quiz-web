@@ -1,0 +1,1390 @@
+{
+ "id": "md-06",
+ "titleEn": "Acute Stroke - FAST-VAN and the Last-Seen-Normal Clock",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-06",
+ "patient": {
+  "name": "Linda Okafor",
+  "age": 68,
+  "sex": "female",
+  "affectEn": "awake, frightened and tearful; sitting on a kitchen chair propped up by her husband; right side of the face drooping, drooling slightly; right arm hanging limp; follows every command and understands everything said around her",
+  "speechEn": "speech slurred and effortful (dysarthria) with some word-finding difficulty; can answer yes/no and give short words, so the husband supplies most of the history; never confused about who or where she is"
+ },
+ "scene": {
+  "settingEn": "Kitchen of a garden-suite home in Surrey at 1105 hrs. Warm, well lit. A dropped mug and spilled tea are on the floor beside the patient - a slip hazard. The patient sits on a kitchen chair, propped by her husband. Nothing suggests a fall or head strike. One patient.",
+  "hazardsEn": [
+   "dropped mug and spilled tea on the kitchen floor - slip hazard"
+  ],
+  "bystanders": [
+   {
+    "who": "husband",
+    "knowsEn": "She was completely normal at 1050, talking to him while she made tea; the mug fell from her right hand and her face changed within seconds (LAST SEEN NORMAL 1050, WITNESSED ONSET). He called 911 within minutes. No headache, no vomiting, no seizure, no fall, no head strike. Her symptoms have not improved. Two weeks ago she had a similar episode lasting 10 minutes that went away completely; she did not seek care. PMHx: atrial fibrillation, high blood pressure, type 2 diabetes, previous TIA. Meds: apixaban 5 mg twice daily (last dose 0800 today), metoprolol, metformin, perindopril. No known allergies. Tea and toast at 0900; nothing since the onset. He answers only what he is asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "portable suction unit, OPA and NPA sets",
+   "BVM",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer with lancets",
+   "thermometer",
+   "penlight",
+   "stroke assessment tool (FAST-VAN card)",
+   "ASA, oral glucose gel and nitroglycerin spray (in the drug kit)",
+   "cot (stretcher)",
+   "pillows and blankets",
+   "AED",
+   "PCP only: IV start kit with 18 G catheters, normal saline and administration set"
+  ]
+ },
+ "dispatchEn": "1105 hrs. Code 3 to a garden-suite home in Surrey. 68-year-old female with sudden right-sided weakness and slurred speech. Her husband called within minutes of onset. The nearest stroke-capable centre is 22 minutes away; the closest hospital without imaging is 8 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: onset was witnessed at about 1050 while she was making tea. She is awake but cannot lift her right arm.",
+ "arrivalEn": "The husband meets you at the door and leads you to the kitchen. A dropped mug and spilled tea are on the floor. His wife sits on a kitchen chair and he is propping her up. The room is warm and well lit. One patient. Your partner is right behind you with the kits.",
+ "firstLookEn": "A 68-year-old woman sitting on a kitchen chair, held upright by her husband. The right side of her face is drooping and she is drooling slightly. Her right arm hangs limp at her side. She is awake, looks at you, and is frightened and tearful.",
+ "primary": {
+  "locEn": "Alert. Eyes open spontaneously, follows commands, knows who and where she is; she understands everything but her speech is slurred and effortful with some word-finding difficulty. AVPU = A. (Dysarthria is a focal deficit, not a decreased LOC.)",
+  "airwayEn": "Patent, but she is drooling and has a weak swallow - aspiration risk. No foreign material, no vomit.",
+  "breathingEn": "Respirations 18, regular, adequate depth, equal chest rise, no distress.",
+  "circulationEn": "Radial pulse 88, irregularly irregular. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: no trauma anywhere, no incontinence. Right-sided facial droop. Right arm and leg weak - she cannot hold the right arm up against gravity; grip absent on the right, normal on the left. Skin pink, warm, dry (skin is given automatically with the RBS). No fall and no head strike: c-spine is not indicated.",
+  "skinEn": "pink, warm, dry"
+ },
+ "history": {
+  "ccEn": "Husband: \"She suddenly couldn't use her right arm and her speech went slurred.\" Patient (slurred, effortful): \"My arm... won't... work.\"",
+  "opqrst": {
+   "oEn": "Husband: \"She was completely normal at 1050, talking to me while she made tea. The mug fell out of her right hand and her face changed within seconds.\" (Last seen normal 1050, witnessed onset.)",
+   "pEn": "Husband: \"Nothing makes it better or worse. It hasn't improved at all since it started.\"",
+   "qEn": "Husband: \"Her right arm and leg are weak, the right side of her face is drooping, her words are slurred and she's struggling to find words.\"",
+   "rEn": "Husband: \"Two weeks ago she had something like this that lasted about 10 minutes and then went away completely. She didn't see anyone about it.\"",
+   "sEn": "Patient (shakes her head, slurred): \"Can't... lift... my arm.\" Husband: \"She can't lift her right arm at all.\"",
+   "tEn": "Husband: \"It started at about 1050 and it hasn't changed since.\""
+  },
+  "painScoreEn": "No pain: she shakes her head - \"No... no pain.\" No headache.",
+  "sample": {
+   "sEn": "Husband: \"Weak right arm and leg, her face is drooping, slurred speech and some drooling. No headache, no vomiting, no seizure, she didn't fall and didn't hit her head.\"",
+   "aEn": "Husband: \"No allergies that we know of.\" Patient shakes her head.",
+   "mEn": "Husband: \"Apixaban 5 milligrams twice a day - she took this morning's dose at 0800 - plus metoprolol, metformin and perindopril.\"",
+   "pEn": "Husband: \"Atrial fibrillation, high blood pressure, type 2 diabetes, and she's had a TIA before.\"",
+   "lEn": "Husband: \"Tea and toast at 0900 this morning, and nothing since this started.\"",
+   "eEn": "Husband: \"She was making tea and talking to me. Then the mug fell out of her right hand and her face changed. She didn't fall and she didn't hit her head.\""
+  },
+  "fe": {
+   "generalEn": "(Yes/no answers, husband helps) Well until today.",
+   "cnsEn": "Right-sided weakness and numbness. No headache, no loss of vision, no seizure. One previous TIA two weeks ago.",
+   "respiratoryEn": "No, nothing - no shortness of breath, no cough.",
+   "cardiovascularEn": "Known atrial fibrillation; she takes a blood thinner (apixaban). No chest pain.",
+   "giGuEn": "No incontinence. Swallowing feels difficult. No vomiting.",
+   "integumentaryEn": "No, nothing - no rashes or sores.",
+   "musculoskeletalEn": "Right arm and leg are weak. No injuries.",
+   "endocrineEn": "Type 2 diabetes; her sugars are usually well controlled.",
+   "eentEn": "No double vision. No numbness on the left side of the face."
+  }
+ },
+ "findings": {
+  "headNeckEn": "Right facial droop involving the lower face with forehead sparing. Tongue deviates to the right. No trauma to the head or neck. No neck stiffness.",
+  "chestLungsEn": "Clear and equal air entry at all 6 sites. Heart rhythm irregular.",
+  "abdomenEn": "Soft, non-tender in all quadrants.",
+  "backEn": "No findings: no tenderness, no deformity, no injury.",
+  "lowerExtremitiesEn": "Right leg weak at 2 out of 5 versus 5 out of 5 on the left; sensation reduced on the right.",
+  "upperExtremitiesEn": "Right arm 1 out of 5 with no grip; left arm 5 out of 5. The right arm drifts and falls immediately when raised.",
+  "fastVanEn": "FAST-VAN, given element by element only as the candidate tests it: Face - right droop (positive); Arm - right arm drift (positive); Speech - slurred (positive); Time - last seen normal 1050; Vision - no visual field loss; Aphasia - mild word-finding difficulty; Neglect - none."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline on scene",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "186/104",
+   "pulse": {
+    "rate": 88,
+    "rhythm": "irregularly irregular",
+    "strength": "normal",
+    "rawEn": "88 irregularly irregular"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "adequate",
+    "character": "regular",
+    "rawEn": "18 regular"
+   },
+   "skin": "pink, warm, dry",
+   "pupils": "equal and reactive (PERL), 3 mm",
+   "spo2": "96% on room air",
+   "bgl": "8.9 mmol/L",
+   "temp": "36.8 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "afterEvent": "move:load"
+     },
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, deficit unchanged (FAST-VAN unchanged, right arm still 1 out of 5)",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "178/98",
+   "pulse": {
+    "rate": 92,
+    "rhythm": "irregularly irregular",
+    "strength": "normal",
+    "rawEn": "92 irregularly irregular"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "adequate",
+    "character": "regular",
+    "rawEn": "18 regular"
+   },
+   "skin": "pink, warm, dry",
+   "pupils": "equal and reactive (PERL), 3 mm",
+   "spo2": "96% on room air",
+   "bgl": "8.9 mmol/L",
+   "temp": "36.8 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "deteriorates-without-reassessment",
+   "when": {
+    "elapsedMs": 900000,
+    "missingEvent": "ongoing-abc-i"
+   },
+   "examinerLineEn": "Her speech has become unintelligible and she begins to vomit.",
+   "vitalsPatch": {}
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan glucometer, oxygen, stroke assessment tool, and a stretcher to the patient",
+   "triggers": [
+    "copy dispatch",
+    "bring the glucometer",
+    "bring the stretcher to her",
+    "bring the stroke assessment card",
+    "possible stroke call",
+    "oxygen and suction with us"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize this is a time-critical call where the last-seen-normal time and destination choice determine the outcome",
+   "triggers": [
+    "this is time critical",
+    "we need the last seen normal time",
+    "stroke centre is 22 minutes",
+    "possible stroke, time is brain",
+    "think about destination early"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (spilled liquid and broken mug), environment, nature of illness (possible stroke), one patient",
+   "triggers": [
+    "scene is safe",
+    "spilled tea on the floor",
+    "slip hazard",
+    "broken mug",
+    "one patient",
+    "nature of illness is a possible stroke"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves and eye protection",
+    "PPE on",
+    "BSI",
+    "donning gloves",
+    "gloves on"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: right facial droop, drooling, right arm hanging limp, awake and frightened",
+   "triggers": [
+    "right facial droop",
+    "she's drooling",
+    "right arm is limp",
+    "she's awake and frightened",
+    "general impression",
+    "her face is drooping"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "scene",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Confirm with the husband whether she fell or struck her head before deciding on spinal precautions",
+   "triggers": [
+    "did she fall",
+    "did she hit her head",
+    "any trauma",
+    "how did she get to the chair",
+    "was there a fall"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert - and note that dysarthria is not a decreased LOC",
+   "triggers": [
+    "AVPU",
+    "she's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "speech is slurred but she's alert",
+    "do you know where you are"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated after confirming no fall or head strike",
+   "triggers": [
+    "no c-spine concern",
+    "c-spine not indicated",
+    "no fall, no head strike",
+    "no need for spinal precautions",
+    "medical call, no c-spine"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway and recognize the aspiration risk from drooling and a weak swallow - keep her NPO and have suction ready",
+   "triggers": [
+    "airway is patent",
+    "she's drooling",
+    "weak swallow",
+    "aspiration risk",
+    "suction ready",
+    "nothing by mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing",
+   "triggers": [
+    "breathing rate",
+    "how's her breathing",
+    "chest rise",
+    "respiratory effort",
+    "breathing adequate",
+    "count respirations"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation and note the irregularly irregular pulse (atrial fibrillation - a stroke risk factor)",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse is irregular",
+    "irregularly irregular",
+    "any major bleeding",
+    "atrial fibrillation"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Modified rapid body survey including a check for trauma and incontinence",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "check for trauma",
+    "any incontinence",
+    "squeeze my hands"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pink warm dry",
+   "triggers": [
+    "skin is pink warm dry",
+    "skin signs",
+    "feel her skin",
+    "skin colour temperature condition",
+    "skin is normal"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Provide supplemental oxygen only to maintain SpO2 at or above 94 percent - at 96 percent none is required; verbalize the decision",
+   "triggers": [
+    "SpO2 is 96 so no oxygen needed",
+    "titrate to 94",
+    "oxygen not indicated",
+    "holding off on oxygen",
+    "nasal cannula",
+    "put her on oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position with the head of the bed elevated and the affected side supported; protect the airway given the drooling",
+   "triggers": [
+    "head elevated",
+    "sit her up",
+    "support the right arm",
+    "support the affected side",
+    "position of comfort",
+    "pillow under the right arm"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "she's unstable",
+    "priority patient",
+    "suspected stroke means RTC",
+    "load and go"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes - on-scene time is brain tissue",
+   "triggers": [
+    "ready to load within 15",
+    "minimal scene time",
+    "let's package her",
+    "time is brain",
+    "head-to-toe en route",
+    "get moving"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Choose the stroke-capable centre and verbalize the bypass rationale; notify the facility while en route",
+   "triggers": [
+    "bypass to the stroke centre",
+    "stroke-capable centre",
+    "bypass the closer hospital",
+    "it has imaging",
+    "notify the stroke team",
+    "go to the stroke centre"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: sudden right-sided weakness and slurred speech",
+   "triggers": [
+    "what's going on today",
+    "what happened",
+    "chief complaint",
+    "why did you call",
+    "what's bothering her"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C centred on the LAST SEEN NORMAL time and whether onset was witnessed, plus progression, headache, vomiting, seizure and previous TIA",
+   "triggers": [
+    "when was she last seen normal",
+    "what time did this start",
+    "did you see it happen",
+    "any headache or vomiting",
+    "any seizure",
+    "has this happened before"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx incl atrial fibrillation, diabetes, hypertension and previous TIA",
+   "triggers": [
+    "medical history",
+    "any heart problems",
+    "atrial fibrillation",
+    "any previous strokes or TIAs",
+    "is she diabetic",
+    "high blood pressure"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications - especially anticoagulants and the exact time of the last dose",
+   "triggers": [
+    "what medications",
+    "is she on a blood thinner",
+    "anticoagulants",
+    "when was her last dose",
+    "apixaban",
+    "meds list"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications",
+    "no known allergies",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI - relevant to both anesthesia planning and aspiration risk",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "LOI",
+    "last meal"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 14",
+    "E4 V4 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - document the hypertension; do NOT attempt to lower it",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "cuff on",
+    "auscultate a pressure",
+    "she's hypertensive",
+    "we won't treat the pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse - identify the irregularly irregular rhythm",
+   "triggers": [
+    "check her pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "irregularly irregular",
+    "count for a full minute"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths",
+    "breathing rate"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": [
+    "skin check",
+    "colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "skin is warm and dry"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - required in a neurological presentation and repeated every set",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "penlight",
+    "pupils equal and reactive"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "check the waveform matches the pulse"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - explicitly required by the Stroke guideline to exclude hypoglycemia as a stroke mimic",
+   "triggers": [
+    "blood sugar",
+    "BGL",
+    "glucometer",
+    "check her glucose",
+    "rule out hypoglycemia",
+    "stroke mimic"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "vitals",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform and document a formal FAST-VAN assessment for accurate recognition",
+   "triggers": [
+    "FAST-VAN",
+    "face arm speech time",
+    "vision aphasia neglect",
+    "smile for me",
+    "hold both arms out",
+    "stroke scale"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "have you been well lately",
+    "any recent illness",
+    "any fevers",
+    "were you well until today"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (the core system here: weakness, numbness, vision, headache, previous TIA)",
+   "triggers": [
+    "any headache",
+    "weakness or numbness",
+    "vision loss",
+    "any seizure",
+    "previous TIA",
+    "neuro enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "breathing problems",
+    "respiratory enquiry",
+    "chest infection"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (atrial fibrillation and anticoagulation)",
+   "triggers": [
+    "any chest pain",
+    "palpitations",
+    "irregular heartbeat",
+    "blood thinner",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (swallowing, incontinence)",
+   "triggers": [
+    "trouble swallowing",
+    "any incontinence",
+    "nausea or vomiting",
+    "bowels and bladder",
+    "difficulty swallowing"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "skin changes",
+    "any rash",
+    "any sores",
+    "integumentary",
+    "bruising"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "aches or pains",
+    "any injuries",
+    "weakness in the limbs",
+    "musculoskeletal",
+    "any falls"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (diabetes)",
+   "triggers": [
+    "diabetes",
+    "how are your sugars",
+    "blood sugar control",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT (diplopia, facial sensation)",
+   "triggers": [
+    "double vision",
+    "eyes ears nose throat",
+    "EENT",
+    "facial numbness",
+    "vision problems"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl facial symmetry, tongue deviation and trauma screen",
+   "triggers": [
+    "head and neck",
+    "facial symmetry",
+    "stick out your tongue",
+    "tongue deviation",
+    "check for head trauma",
+    "neck stiffness"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "heart sounds",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "soft non-tender",
+    "abdominal exam"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check the back",
+    "palpate the spine",
+    "back exam",
+    "any back injury",
+    "roll to check the back"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with bilateral strength and sensory comparison documented",
+   "triggers": [
+    "lower extremities",
+    "push against my hands with your feet",
+    "leg strength",
+    "compare both legs",
+    "sensation in the legs",
+    "wiggle your toes"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with bilateral grip strength and arm drift documented",
+   "triggers": [
+    "upper extremities",
+    "grip strength",
+    "squeeze my hands",
+    "arm drift",
+    "compare both arms",
+    "hold your arms out"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Execute the Stroke protocol: ABCs, oxygen to target, positioning, BGL, FAST-VAN, timely transport with notification",
+   "triggers": [
+    "stroke protocol",
+    "stroke guideline",
+    "ABCs, oxygen, position, BGL",
+    "FAST-VAN and timely transport",
+    "notify the receiving facility"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Establish and document the last-seen-normal time precisely - it determines thrombolysis and thrombectomy eligibility",
+   "triggers": [
+    "last seen normal at 1050",
+    "last known well",
+    "onset time is 1050",
+    "within the window",
+    "document the onset time",
+    "witnessed onset"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Keep the patient NPO and have suction available given the drooling and weak swallow",
+   "triggers": [
+    "keep her NPO",
+    "nothing by mouth",
+    "no food or drink",
+    "suction available",
+    "weak swallow, NPO"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: vascular access en route with an 18 G above the wrist, preferably on the right",
+   "triggers": [
+    "IV en route",
+    "18 gauge",
+    "right arm above the wrist",
+    "vascular access",
+    "start a line in the truck",
+    "saline lock"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Do not give ASA, oral glucose, or anything by mouth in a suspected stroke with a swallowing deficit",
+   "triggers": [
+    "no ASA for stroke",
+    "not giving aspirin",
+    "no oral glucose",
+    "nothing by mouth",
+    "ASA is not indicated",
+    "no aspirin"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after each move and each change in presentation",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing after the move",
+    "how are you doing now",
+    "neuro check again"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes plus a repeat neurological assessment",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "repeat FAST-VAN",
+    "vitals again",
+    "another neuro check",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Manage any vomiting immediately with suction and positioning without compromising the airway",
+   "triggers": [
+    "suction her",
+    "roll her onto her side",
+    "she's vomiting, suction",
+    "lateral position",
+    "clear the airway"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Continue to protect the affected limbs and reassure a frightened patient who can hear and understand everything",
+   "triggers": [
+    "support the right arm",
+    "you're doing well",
+    "we're taking good care of you",
+    "protect the weak side",
+    "reassure her",
+    "I know you can hear me"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Early en-route stroke-team notification stating the last-seen-normal time",
+   "triggers": [
+    "notify the stroke team",
+    "stroke pre-alert",
+    "patch to the stroke centre",
+    "last seen normal 1050",
+    "code stroke",
+    "call ahead"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off leading with last-seen-normal, FAST-VAN findings, BGL and anticoagulant use with the time of the last dose",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "last seen normal was 1050",
+    "she's on apixaban, last dose 0800",
+    "this is a 68-year-old female",
+    "report to the nurse"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "lsn-established",
+   "descriptionEn": "candidate asks for or states the last-seen-normal / onset time (e.g. 'when was she last seen normal?', 'what time did this start?', 'last known well 1050')"
+  },
+  {
+   "key": "closest-hospital-chosen",
+   "descriptionEn": "candidate decides to transport to the closer hospital without imaging (8 minutes away) instead of the stroke-capable centre (22 minutes away)"
+  },
+  {
+   "key": "given-by-mouth",
+   "descriptionEn": "candidate gives her anything by mouth - food, a drink, water, tablets, ASA or oral glucose - despite the weak swallow (log drug:asa or drug:oral-glucose as well when those are given)"
+  },
+  {
+   "key": "vomit-airway-ignored",
+   "descriptionEn": "after the examiner says she is vomiting, the candidate does not suction and reposition her (e.g. onto her side) but carries on with other tasks"
+  },
+  {
+   "key": "spinal-immobilized",
+   "descriptionEn": "candidate applies manual c-spine control, a cervical collar or spinal motion restriction although there was no fall and no head strike"
+  },
+  {
+   "key": "airway-adjunct-alert",
+   "descriptionEn": "candidate inserts an OPA or NPA in this alert patient (treating the dysarthria as a decreased LOC)"
+  },
+  {
+   "key": "ventilated-unnecessarily",
+   "descriptionEn": "candidate assists or provides ventilations with a BVM although she is alert and breathing adequately at 18"
+  },
+  {
+   "key": "high-flow-oxygen-at-96",
+   "descriptionEn": "candidate applies high-flow oxygen by non-rebreather while SpO2 is 96% on room air without a titration rationale"
+  },
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets or asks her to stand up or walk (e.g. to the stretcher or out of the house) despite the right-sided weakness"
+  },
+  {
+   "key": "full-exam-on-scene",
+   "descriptionEn": "candidate delays leaving the scene to complete the full head-to-toe examination of every body region, the functional enquiry or the IV before moving her to the cot or loading (a focused FAST-VAN, grip and arm-drift check on scene is correct and is NOT this event)"
+  },
+  {
+   "key": "fluid-bolus",
+   "descriptionEn": "PCP gives a fluid bolus (e.g. 20 mL/kg or runs the saline wide open) although her blood pressure is high"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "asa",
+   "namesEn": [
+    "ASA",
+    "aspirin",
+    "acetylsalicylic acid",
+    "baby aspirin"
+   ],
+   "doseEn": "WITHHELD in this call: ASA (160 mg PO) is indicated in the BC guidelines only for chest pain / symptoms consistent with cardiac ischemia - not for a suspected stroke; she also cannot swallow safely and takes apixaban (anticoagulant caution). If given, report drug:asa.",
+   "licence": "both"
+  },
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Glucogel",
+    "Insta-Glucose",
+    "glucose tablets"
+   ],
+   "doseEn": "WITHHELD in this call: BGL is 8.9 mmol/L (not hypoglycemic) and she has a weak swallow; oral glucose (15 g) is only for a hypoglycemic patient with sufficient mentation to maintain an airway. If given, report drug:oral-glucose.",
+   "licence": "both"
+  },
+  {
+   "key": "nitroglycerin",
+   "namesEn": [
+    "nitro",
+    "nitroglycerin",
+    "NTG",
+    "nitro spray",
+    "GTN"
+   ],
+   "doseEn": "WITHHELD in this call: the indication is chest discomfort that appears cardiac (0.4 mg SL); she has no chest pain, and the hypertension of a suspected stroke is not treated pre-hospitally. If given, report drug:nitroglycerin.",
+   "licence": "both"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "IV fluids",
+    "saline lock"
+   ],
+   "doseEn": "PCP, en route: vascular access with an 18 G above the level of the wrist, preferably on the right side; saline lock or keep-vein-open only - no fluid bolus is indicated with this blood pressure.",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "lsn-established",
+   "check": "present",
+   "event": "lsn-established",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "bgl-obtained",
+   "check": "present",
+   "event": "blood-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "stroke-centre-destination",
+   "check": "absent",
+   "event": "closest-hospital-chosen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-call-management",
+    "weight": 25,
+    "errorEn": "Displays poor management and indecisiveness, does not display sufficient control or direction throughout the simulation detrimental to patient care or outcome (e.g. excessive delays spent locating equipment)"
+   }
+  },
+  {
+   "id": "no-asa-in-stroke",
+   "check": "absent",
+   "event": "drug:asa",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-oral-glucose",
+   "check": "absent",
+   "event": "drug:oral-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-nitro-for-hypertension",
+   "check": "absent",
+   "event": "drug:nitroglycerin",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "npo-maintained",
+   "check": "absent",
+   "event": "given-by-mouth",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "vomit-airway-managed",
+   "check": "absent",
+   "event": "vomit-airway-ignored",
+   "licence": "both",
+   "deduct": {
+    "itemId": "airway",
+    "weight": 100,
+    "errorEn": "Determines airway problems but fails to act to correct them and/or"
+   }
+  },
+  {
+   "id": "no-spinal-without-trauma",
+   "check": "absent",
+   "event": "spinal-immobilized",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 5,
+    "errorEn": "C-spine control taken when not indicated by mechanism of Injury"
+   }
+  },
+  {
+   "id": "no-adjunct-in-alert-patient",
+   "check": "absent",
+   "event": "airway-adjunct-alert",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-airway-mgmt",
+    "weight": 15,
+    "errorEn": "Chooses the wrong airway adjunct based on patient presentation"
+   }
+  },
+  {
+   "id": "no-unneeded-ventilation",
+   "check": "absent",
+   "event": "ventilated-unnecessarily",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 15,
+    "errorEn": "Ventilates a patient when not required"
+   }
+  },
+  {
+   "id": "oxygen-titrated-not-high-flow",
+   "check": "absent",
+   "event": "high-flow-oxygen-at-96",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 3,
+    "errorEn": "Applies oxygen but it is applied with minor deficiencies"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-scene-delay-for-full-exam",
+   "check": "absent",
+   "event": "full-exam-on-scene",
+   "licence": "both",
+   "deduct": {
+    "itemId": "transport",
+    "weight": 10,
+    "errorEn": "Delays treatment and/or transport performing non-Priority tasks"
+   }
+  },
+  {
+   "id": "pcp-no-fluid-bolus",
+   "check": "absent",
+   "event": "fluid-bolus",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-iv-fluids",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "68-year-old female",
+  "cc": "sudden right-sided weakness and slurred speech - suspected acute stroke (code stroke)",
+  "moi": null,
+  "hxcc": "witnessed onset, last seen normal 1050 while making tea; no headache, vomiting, seizure or fall; similar 10-minute episode two weeks ago that resolved; on apixaban, last dose 0800 today",
+  "vitals": "GCS 14 (E4 V4 M6), BP 186/104, pulse 88 irregularly irregular, resp 18, SpO2 96% on room air, BGL 8.9; latest BP 178/98, pulse 92, deficit unchanged",
+  "treatments": "ABCs managed, suction available, kept NPO, head elevated with the right side supported, oxygen not required at 96%; PCP: IV 18 G right forearm; bypassing the closer hospital to the stroke-capable centre, ETA 22 minutes",
+  "findings": "FAST-VAN positive: right facial droop, right arm drift (1 out of 5, no grip), right leg 2 out of 5, slurred speech with mild word-finding difficulty, no visual field loss, no neglect"
+ },
+ "handoffFacts": {
+  "ageSex": "68-year-old female",
+  "cc": "sudden right-sided weakness and slurred speech, suspected acute stroke",
+  "moi": null,
+  "hxcc": "witnessed onset - LAST SEEN NORMAL 1050 while making tea, about 35 minutes from onset at hand-off; the mug fell from her right hand and her face changed within seconds; no headache, vomiting, seizure, fall or head strike; no improvement; a similar 10-minute episode two weeks ago resolved and was not reported",
+  "initialVitals": "GCS 14 (E4 V4 M6), BP 186/104, pulse 88 irregularly irregular, resp 18 regular, skin pink warm dry, pupils equal and reactive 3 mm, SpO2 96% on room air, BGL 8.9 mmol/L, temperature 36.8",
+  "finalVitals": "GCS 14, BP 178/98, pulse 92 irregularly irregular, resp 18, skin pink warm dry, pupils equal and reactive 3 mm, SpO2 96% on room air, BGL 8.9; FAST-VAN unchanged, right arm still 1 out of 5",
+  "pmhx": "atrial fibrillation, hypertension, type 2 diabetes, previous TIA (the episode two weeks ago)",
+  "meds": "apixaban 5 mg twice daily - LAST DOSE 0800 TODAY; metoprolol, metformin, perindopril",
+  "allergies": "no known allergies",
+  "treatments": "airway monitored with suction available; kept nil by mouth for a weak swallow; head elevated with the right side supported; oxygen not required (SpO2 96%); BGL checked (8.9) to exclude a hypoglycemic mimic; FAST-VAN performed; PCP: IV 18 G in the right forearm; bypassed the local hospital to the stroke-capable centre with pre-notification",
+  "findings": "right lower facial droop with forehead sparing, tongue deviates right; right arm 1 out of 5 with no grip and immediate drift, left 5 out of 5; right leg 2 out of 5 with reduced sensation, left 5 out of 5; dysarthria with mild word-finding difficulty; no visual field loss, no neglect; chest clear, irregular rhythm"
+ },
+ "pcrFacts": {
+  "cc": "Sudden right-sided weakness and slurred speech (suspected acute CVA)",
+  "hxcc": "Witnessed onset, last seen normal 1050 while making tea; mug dropped from right hand, face changed within seconds; no headache, vomiting, seizure or fall; similar 10-minute episode two weeks ago that resolved",
+  "pmhx": "Atrial fibrillation, hypertension, type 2 diabetes, previous TIA",
+  "meds": "Apixaban 5 mg BID (last dose 0800 today), metoprolol, metformin, perindopril",
+  "allergies": "NKA",
+  "treatments": [
+   "ABCs assessed, suction available, kept NPO for weak swallow",
+   "O2 not required (SpO2 96%) - target 94% or above stated",
+   "Head elevated, affected limbs supported",
+   "BGL obtained (8.9) to exclude hypoglycemic mimic",
+   "FAST-VAN performed and documented; last-seen-normal established",
+   "Stroke-centre bypass with en-route notification",
+   "PCP: IV 18 G right forearm above the wrist"
+  ],
+  "findings": [
+   "FAST-VAN positive: right facial droop, right arm 1/5 no grip, right leg 2/5, dysarthria with word-finding difficulty",
+   "Irregularly irregular pulse consistent with atrial fibrillation",
+   "BP 186/104 - not treated pre-hospitally",
+   "Deficit unchanged between both assessments",
+   "Anticoagulated on apixaban, last dose 0800"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR performs the entire Stroke guideline: ABCs, oxygen titrated to 94 percent or above, positioning, blood glucose check, FAST-VAN recognition, NPO, timely transport and notification. EMR does not establish vascular access. No Functional Enquiry. EMR must not give ASA for a stroke - ASA in the BC guidelines is for cardiac chest pain, not CVA.",
+  "pcpEn": "PCP adds en-route vascular access with an 18 gauge above the wrist, preferably on the right side so the left is free for imaging and intervention, plus the 9-system Functional Enquiry adapted to her speech deficit (yes/no questions, husband helps). No fluid bolus is indicated, and the hypertension must not be treated pre-hospitally."
+ },
+ "sourcePages": "Scenario md-06 (data/practical/scenarios.json): dispatch, scene, primary, transport (bypass to the stroke-capable centre), history (last seen normal 1050, apixaban last dose 0800), vitals sets 1-2 and FAST-VAN, FE, exam, interventions, ongoing (examiner option: unintelligible speech and vomiting if not reassessing), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (suspected CVA, new onset neurological deficits = unstable); p.11 Primary Survey interventions (c-spine only with an indication; oxygen indications); p.13 AVPU (alert); p.30 Stroke (ABCs, SpO2 >= 94%, position, blood glucose check, FAST-VAN, timely transport and en-route notification; PCP en-route vascular access 18 G above the wrist, preferably on the right); p.60 Aspirin (indication: chest pain / cardiac ischemia; contraindication inability to swallow; caution anticoagulants); p.73 Nitroglycerin (indication: cardiac chest discomfort); p.76 Oral Glucose (only with sufficient mentation to maintain an airway).",
+ "keywordEvents": [
+  {
+   "event": "lsn-established",
+   "regex": "\\b(last (seen|known) (normal|well)|last normal|known well|lsn|onset|(what time|when) did (this|it|that|all this|the [a-z]+|these [a-z]+|her [a-z]+ (start|begin|happen|come on)|you (first )?notice)|when (was|did) she last (seen|look|seem|act|appear)|when was she (last )?(normal|well)|what time was (this|it|that))\\b"
+  }
+ ]
+}
