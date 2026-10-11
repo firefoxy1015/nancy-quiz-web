@@ -502,7 +502,7 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
     for e in applicable_expected(sheet, track):
         if e['itemId'] in PRESENCE_EXEMPT:
             continue
-        if e['eid'] in done_eids or (e['itemId'] in done_names and e['weight'] < 100):
+        if e['eid'] in done_eids or (e['itemId'] in done_names and (e['weight'] < 100 or e['itemId'] in PRESENCE_CAP)):
             continue
         w = min(e['weight'], PRESENCE_CAP.get(e['itemId'], 10**9))
         it = items().get(e['itemId'])
