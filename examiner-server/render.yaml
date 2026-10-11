@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: bcprep-examiner
+    runtime: python
+    rootDir: examiner-server
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: CCVIBE_API_KEY
+        sync: false
+      - key: CCVIBE_BASE_URL
+        value: https://cc-vibe.com
+      - key: EXAMINER_MODEL
+        value: claude-opus-5-5
+      - key: EXAMINER_DAILY_CAP
+        value: "4"
+      - key: EXAMINER_ORIGINS
+        value: https://firefoxy1015.github.io

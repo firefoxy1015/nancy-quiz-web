@@ -1,6 +1,6 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=19';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=20';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -69,6 +69,12 @@ export async function renderPracticalHub(el) {
       ${bi('Exactly like the real day: the system randomly draws one medical and one trauma scenario. Run both under the clock; you must score 70%+ on each to pass. When time expires the scenario ends and everything not done counts against you.',
            '完全复刻真实考试日：系统随机抽 1 个内科 + 1 个创伤场景，连考两场。每场都要 70% 以上才算通过；40 分钟一到当场收卷，没做的项目全部按漏做扣分。')}
       <div class="btn-row"><button class="btn big" id="startPMock" ${pm && pm.active ? 'disabled' : ''}>▶ ${t('Draw my two scenarios', '抽签开考')}</button></div>
+    </div>
+    <div class="card" style="border-color:var(--yellow)">
+      <h3 style="margin-top:0">${ico('ambulance')} ${t('AI Examiner — talk to a simulated examiner', '考官机器人——和模拟考官对话')} <span class="pill gray">BETA</span></h3>
+      ${bi('A live station: the examiner answers only what you assess or ask, in English, never coaches, and grades you on the official form at the end. Three stations to start.',
+           '真人式考站：考官只回答你评估到、问到的内容，全程英文，不教不提示，结束按官方评分表给分。首批三个考站。')}
+      <div class="btn-row"><a class="btn" href="#/examiner">${t('Open the examiner', '进入考官机器人')}</a></div>
     </div>
     <div class="grid-2">
       <div class="card">

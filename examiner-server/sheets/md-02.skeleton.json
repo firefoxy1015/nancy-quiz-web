@@ -1,0 +1,704 @@
+{
+ "id": "md-02",
+ "titleEn": "Cardiac Chest Pain - ASA and Nitroglycerin",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-02",
+ "patient": {
+  "name": "",
+  "age": null,
+  "sex": "",
+  "affectEn": "",
+  "speechEn": ""
+ },
+ "scene": {
+  "settingEn": "",
+  "hazardsEn": [],
+  "bystanders": [],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": []
+ },
+ "dispatchEn": "0640 hrs. Code 3 to a townhouse complex in Coquitlam. 62-year-old male with central chest pain that woke him from sleep. His wife made the call. Hospital with a cath lab is 14 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: he is conscious, sweating, and has not taken anything for the pain. No prescribed nitroglycerin in the house.",
+ "arrivalEn": "",
+ "firstLookEn": "",
+ "primary": {
+  "locEn": "",
+  "airwayEn": "",
+  "breathingEn": "",
+  "circulationEn": "",
+  "rbsEn": "",
+  "skinEn": ""
+ },
+ "history": {
+  "ccEn": "",
+  "opqrst": {
+   "oEn": "",
+   "pEn": "",
+   "qEn": "",
+   "rEn": "",
+   "sEn": "",
+   "tEn": ""
+  },
+  "painScoreEn": "",
+  "sample": {
+   "sEn": "",
+   "aEn": "",
+   "mEn": "",
+   "pEn": "",
+   "lEn": "",
+   "eEn": ""
+  },
+  "fe": {
+   "generalEn": "",
+   "cnsEn": "",
+   "respiratoryEn": "",
+   "cardiovascularEn": "",
+   "giGuEn": "",
+   "integumentaryEn": "",
+   "musculoskeletalEn": "",
+   "endocrineEn": "",
+   "eentEn": ""
+  }
+ },
+ "findings": {
+  "headNeckEn": "",
+  "chestLungsEn": "",
+  "abdomenEn": "",
+  "backEn": "",
+  "lowerExtremitiesEn": "",
+  "upperExtremitiesEn": ""
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, before nitroglycerin",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "148/92",
+   "pulse": {
+    "rate": 96,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "96 regular normal strength"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "",
+    "character": "",
+    "rawEn": "22 slightly laboured"
+   },
+   "skin": "pale cool diaphoretic",
+   "pupils": "PERL",
+   "spo2": "96% RA",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "after 2 doses of nitroglycerin, en route",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "122/78",
+   "pulse": {
+    "rate": 88,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "88 regular"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "",
+    "character": "",
+    "rawEn": "18 regular"
+   },
+   "skin": "pink warm, drying",
+   "pupils": "PERL",
+   "spo2": "97% RA",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan ASA, nitroglycerin, oxygen, cot to the patient, minimal-exertion approach",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate a time-critical cardiac call and plan early transport with hospital notification",
+   "triggers": []
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (stair egress), environment, nature of illness (chest pain), number of patients (1)",
+   "triggers": []
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": []
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: grey, diaphoretic, clenched fist over sternum (Levine sign)",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "scene",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan the stair egress early and bring equipment to the patient rather than walking him",
+   "triggers": []
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert",
+   "triggers": []
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (medical presentation)",
+   "triggers": []
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": []
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing rate, depth and effort",
+   "triggers": []
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess radial pulse rate, strength and regularity",
+   "triggers": []
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey appropriate to a medical patient",
+   "triggers": []
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale cool diaphoretic",
+   "triggers": []
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Titrate oxygen only to maintain SpO2 at or above 94% - at 96% RA supplemental oxygen is not required; verbalize the decision",
+   "triggers": []
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Keep at rest in a position of comfort; limit all patient movement and exertion",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Administer ASA 160 mg chewed and swallowed after the rapid body survey (ASA is the one drug not requiring vitals first)",
+   "triggers": []
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": []
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes; carry the patient down the stairs, do not let him walk",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate the partner to prep egress and the stair chair while you run the protocol",
+   "triggers": []
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: central chest pain",
+   "triggers": []
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Full OPQRRRST pain assessment including radiation, recurrence and severity",
+   "triggers": []
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain a 0-10 pain score",
+   "triggers": []
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx with cardiac risk factors and time scales",
+   "triggers": []
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications - and specifically screen for Viagra/Levitra in 24 h or Cialis in 48 h before nitroglycerin",
+   "triggers": []
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies incl aspirin sensitivity before giving ASA",
+   "triggers": []
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI",
+   "triggers": []
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components",
+   "triggers": []
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - confirm systolic above 110 before nitroglycerin",
+   "triggers": []
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm - confirm HR is not under 50 or over 150",
+   "triggers": []
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": []
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": []
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": []
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration check",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (syncope screen)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (orthopnea, cough)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (pertinent: palpitations, edema, prior episodes)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (nausea, indigestion differential)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal (reproducible chest wall pain?)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (diabetes screen)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl JVD assessment",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation; palpate to test reproducibility of the pain",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities incl pedal edema and pulses",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities incl bilateral pulse comparison",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Initiate the Cardiac Chest Pain protocol with correct indications and sequence (ASA after RBS, nitroglycerin after baseline vitals)",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "ASA 160 mg PO chewed with 6 rights; rule out allergy, active GI bleed/peptic ulcer, inability to swallow, prior dose taken",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Nitroglycerin 0.4 mg SL with contraindications ruled out (SBP under 110, HR under 50 or over 150, nitrate allergy, PDE5 inhibitor use) and vitals repeated before each dose",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize the maximum of 3 nitroglycerin doses in 30 minutes and the Entonox rule (5 minutes after the last nitroglycerin dose)",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: vascular access with running fluid; consider dimenhydrinate for nausea",
+   "triggers": []
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each dose and each move",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Full second set of vitals within 5-6 minutes and before the next nitroglycerin dose",
+   "triggers": []
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Reassess the pain score after each dose and titrate to pain-free",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Withhold nitroglycerin if systolic falls below 110 and switch to the Entonox pathway",
+   "triggers": []
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification of a possible acute coronary syndrome",
+   "triggers": []
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with ASA and nitroglycerin times, doses and BP trend",
+   "triggers": []
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": []
+  }
+ ],
+ "specialEvents": [],
+ "drugs": [],
+ "majorMoves": [],
+ "protocolRules": [],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "",
+  "cc": "",
+  "moi": null,
+  "hxcc": "",
+  "vitals": "",
+  "treatments": "",
+  "findings": ""
+ },
+ "handoffFacts": {
+  "ageSex": "",
+  "cc": "",
+  "moi": null,
+  "hxcc": "",
+  "initialVitals": "",
+  "finalVitals": "",
+  "pmhx": "",
+  "meds": "",
+  "allergies": "",
+  "treatments": "",
+  "findings": ""
+ },
+ "pcrFacts": {
+  "cc": "Central chest pressure at rest, radiating to left jaw and arm",
+  "hxcc": "Woke from sleep 0615; heavy band-like pressure 8/10; radiates left jaw/arm; nausea and diaphoresis; two exertional episodes earlier in the week; not reproducible on palpation",
+  "pmhx": "Hypertension, dyslipidemia, ex-smoker 30 pack-years, family history of MI",
+  "meds": "Amlodipine 5 mg, rosuvastatin 10 mg; no PDE5 inhibitors",
+  "allergies": "NKA",
+  "treatments": [
+   "Rest, position of comfort, carried down stairs",
+   "O2 titrated to keep SpO2 94% or above (none required at 96%)",
+   "ASA 160 mg PO chewed at 0652",
+   "Nitroglycerin 0.4 mg SL at 0658 and 0703, BP rechecked before each",
+   "RTC transport with cath-lab notification",
+   "PCP: IV with running fluid"
+  ],
+  "findings": [
+   "Levine sign, pale cool diaphoretic",
+   "BP 148/92 down to 122/78, pain 8/10 down to 3/10",
+   "No JVD, chest clear, no reproducible chest wall pain",
+   "SpO2 96-97% throughout"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives ASA 160 mg PO and nitroglycerin 0.4 mg SL under the same protocol (no physician order required), plus oxygen titration, rest, and rapid transport. EMR does not establish IV access or give dimenhydrinate. Entonox is available at both levels for the post-3-dose pathway. No Functional Enquiry.",
+  "pcpEn": "PCP adds vascular access with running fluid, dimenhydrinate 1 mg/kg to a maximum of 50 mg for nausea, and the 9-system Functional Enquiry en route. Everything else is identical."
+ },
+ "_phaseScripts": {
+  "dispatch": "Dispatch adds: he is conscious, sweating, and has not taken anything for the pain. No prescribed nitroglycerin in the house.",
+  "scene": "EXAMINER SCRIPT: Wife meets you at the door and leads you upstairs to the bedroom. Warm room, well lit, stairs are the only egress challenge - 14 steps, narrow turn. The patient sits on the edge of the bed, grey and diaphoretic, fist clenched over his sternum. One patient. No hazards, no pets, no smoking materials.",
+  "primary": "ACTOR: alert and oriented, speaking in short sentences because of the pain, says it feels like a weight on his chest. EXAMINER (give when assessed): airway clear; respirations 22, slightly laboured, no wheeze; radial pulse 96, regular, normal strength. Skin: pale, cool, diaphoretic. Modified rapid body survey: no trauma, no edema, no obvious abnormality; abdomen soft. SpO2 96% RA. C-spine not indicated. UNSTABLE by BC criteria: suspected cardiac chest pain.",
+  "transport": "Decision point. Suspected cardiac chest pain = UNSTABLE, RTC. The guideline says transport immediately if able; if not, delegate crew to prep egress. Ready to load within 15 minutes. Give nitroglycerin, then transport after the first dose if not already moving.",
+  "history": "ACTOR ANSWERS: woke at 0615 with central chest pressure. O - at rest, woke him. P - nothing makes it better, deep breathing does not change it. Q - heavy pressure, like a band. R - radiates to the left jaw and down the left arm. R (relief) - none. R (recurrence) - had two similar milder episodes with exertion this week that settled with rest. S - 8/10. T - constant for 25 minutes. Associated: nausea, sweating, short of breath. PMHx: hypertension, high cholesterol, ex-smoker (quit 3 years, 30 pack-years), father died of MI at 58. Meds: amlodipine 5 mg, rosuvastatin 10 mg. NO erectile dysfunction medication - specifically denies Viagra, Levitra or Cialis. Allergies: none known. LOI: dinner at 1900 last night, nothing since.",
+  "vitals": "Set 1 - baseline BEFORE nitroglycerin: GCS 15 (E4V5M6); BP 148/92; pulse 96 regular; respirations 22; skin pale cool diaphoretic; pupils equal reactive; SpO2 96% RA. BGL not routinely indicated; temperature not indicated. Systolic is above 110 and HR is between 50 and 150, so nitroglycerin is not contraindicated on vitals. RTC interval 5-6 minutes; repeat vitals before EVERY nitroglycerin dose.",
+  "fe": "PCP ONLY, en route. ACTOR: general - well until this week; CNS - no syncope, no headache; respiratory - short of breath with the pain, no cough, no orthopnea; cardiovascular - chest pressure with radiation, no palpitations, no ankle swelling, two exertional episodes this week; GI/GU - nauseated, no vomiting, no indigestion pattern; integumentary - sweating heavily; musculoskeletal - no chest wall injury, pain not reproducible on palpation; endocrine - no diabetes; EENT - nil.",
+  "exam": "EN ROUTE head-to-toe: head/neck - no JVD, trachea midline; chest - no chest wall tenderness, pain NOT reproducible on palpation, air entry equal and clear in all 6 sites, no crackles; abdomen - soft, non-tender; back - no findings; lower extremities - no pedal edema, pulses equal; upper extremities - pulses equal bilaterally, no deficit.",
+  "interventions": "Cardiac Chest Pain protocol, all levels: position of comfort, limit movement, oxygen only to keep SpO2 at or above 94%, ASA 160 mg PO chewed after the RBS, initiate transport, history and baseline vitals, then NITROGLYCERIN 0.4 mg SL every 3-5 minutes provided systolic BP stays above 110, to a maximum of 3 doses in any 30-minute period, until pain free. Repeat vital signs before EVERY dose. Do not shake the spray; verbalize priming. If pain persists beyond 3 doses or systolic falls below 110, give Entonox 5 minutes after the last nitroglycerin dose. PCP ADDITIONS: vascular access with running fluid; consider dimenhydrinate 1 mg/kg to a max 50 mg for nausea.",
+  "ongoing": "Reassess ABCs and pain after every dose and every move. Set 2 (after 2 doses of nitroglycerin, en route): GCS 15; BP 122/78; pulse 88 regular; respirations 18; skin pink, warm, drying; pupils equal reactive; SpO2 97% RA; pain down from 8/10 to 3/10. Note the systolic remains above 110, so a third dose is permitted if pain persists. If the candidate does not recheck BP before dosing, EXAMINER drops the BP to 96/60 to test whether they withhold the next dose.",
+  "handoff": "Critical patient - notify the receiving facility en route (possible STEMI, cath lab). Hand-off with all drug times, doses and pain response; PCR within 5 minutes."
+ },
+ "_handoffModelEn": "This is a 62-year-old male, chief complaint of central chest pressure that woke him at 0615, so about 45 minutes of pain now. It is a heavy band-like pressure radiating to the left jaw and left arm, 8 out of 10 at onset, associated with nausea and diaphoresis, not reproducible on palpation, and he had two exertional episodes earlier this week. Initial vitals GCS 15, BP 148/92, pulse 96 regular, resps 22, skin pale cool diaphoretic, SpO2 96% on room air; latest BP 122/78, pulse 88, SpO2 97%, pain now 3 out of 10. History of hypertension and dyslipidemia, ex-smoker, father died of an MI at 58, takes amlodipine and rosuvastatin, no PDE5 inhibitors, no known allergies, last ate at 1900 yesterday. Treatments: kept at rest and carried out, ASA 160 milligrams chewed at 0652, nitroglycerin 0.4 milligrams sublingual at 0658 and 0703 with blood pressure rechecked before each dose, IV established en route.",
+ "_criticalPitfallsEn": [
+  "Giving nitroglycerin without a baseline set of vital signs, or without rechecking BP before each dose - 100% (Protocols)",
+  "Not screening for Viagra/Levitra in the last 24 h or Cialis in the last 48 h before nitroglycerin - failure to rule out contraindications, up to 100%",
+  "Letting the patient walk down the stairs to the ambulance - exertion in cardiac chest pain, overall patient care deduction up to 100%",
+  "Applying high-flow oxygen when SpO2 is 96% - oxygen is titrated to 94% or above in a patient who is not SOB or shocked",
+  "Omitting ASA when not contraindicated, or giving it before the rapid body survey - protocol sequencing error"
+ ],
+ "sourcePages": ""
+}

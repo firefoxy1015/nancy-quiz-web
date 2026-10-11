@@ -1,0 +1,1348 @@
+{
+ "id": "md-02",
+ "titleEn": "Cardiac Chest Pain - ASA and Nitroglycerin",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#md-02",
+ "patient": {
+  "name": "Robert Hale",
+  "age": 62,
+  "sex": "male",
+  "affectEn": "anxious and frightened; grey and diaphoretic; sitting on the edge of the bed with one fist clenched over the middle of his sternum (Levine sign); does not want to move",
+  "speechEn": "speaks in short sentences because of the pain; cooperative, answers every question but does not volunteer information that is not asked for"
+ },
+ "scene": {
+  "settingEn": "Upstairs bedroom of a townhouse in Coquitlam at 0640 hrs. Warm, well-lit room. The only way in or out is the staircase you climbed: 14 steps with a narrow turn. No pets, no smoking materials, no other hazards. One patient.",
+  "hazardsEn": [
+   "stair egress: 14 narrow steps with a tight turn, the only way out"
+  ],
+  "bystanders": [
+   {
+    "who": "wife",
+    "knowsEn": "He woke at 0615 with chest pain and has been sweating since. He has not taken anything for it. There is no nitroglycerin in the house; he has never had heart trouble before. She called 911 and waited at the door for you. She can fetch his pill bottles from the kitchen if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "ASA chewable tablets (160 mg dose)",
+   "nitroglycerin 0.4 mg sublingual spray",
+   "Entonox kit",
+   "stair chair",
+   "cot (stretcher) left at the bottom of the stairs",
+   "blankets",
+   "suction unit",
+   "AED",
+   "PCP only: IV start kit with normal saline, dimenhydrinate"
+  ]
+ },
+ "dispatchEn": "0640 hrs. Code 3 to a townhouse complex in Coquitlam. 62-year-old male with central chest pain that woke him from sleep. His wife made the call. Hospital with a cath lab is 14 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: he is conscious, sweating, and has not taken anything for the pain. No prescribed nitroglycerin in the house.",
+ "arrivalEn": "Wife meets you at the front door, visibly worried, and leads you up the stairs to the bedroom. The room is warm and well lit. The staircase you just climbed is the only way back down: 14 steps with a narrow turn. Your partner is right behind you with the kits. One patient. No pets, no smoking materials, no other hazards.",
+ "firstLookEn": "A 62-year-old man sitting on the edge of the bed, grey and diaphoretic, one fist clenched over the middle of his sternum. He looks up at you and speaks in short sentences: \"It feels like a weight on my chest.\"",
+ "primary": {
+  "locEn": "Alert. Oriented to person, place, time and event. Answers in short sentences because of the pain.",
+  "airwayEn": "Open and clear. Speaking in short sentences, no abnormal sounds, no secretions.",
+  "breathingEn": "Rate 22, slightly laboured, adequate depth, equal chest rise, no wheeze.",
+  "circulationEn": "Radial pulse 96, regular, normal strength. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: no trauma, no edema, no obvious abnormality; abdomen soft. Skin pale, cool, diaphoretic (skin is given automatically with the RBS).",
+  "skinEn": "pale, cool, diaphoretic"
+ },
+ "history": {
+  "ccEn": "It's my chest. Right in the middle. It feels like a weight sitting on it.",
+  "opqrst": {
+   "oEn": "I was asleep. It woke me up at about a quarter past six. I wasn't doing anything, I was in bed.",
+   "pEn": "Nothing makes it better. I tried sitting up, I tried lying back down. Taking a deep breath doesn't change it either.",
+   "qEn": "Heavy. Like a pressure, like a band pulled tight around my chest.",
+   "rEn": "It goes up into my left jaw and down my left arm. Nothing has given me any relief. I had two milder ones like this earlier this week when I was exerting myself, but those went away once I sat down and rested.",
+   "sEn": "It's bad. An 8 out of 10.",
+   "tEn": "It's been constant since it woke me, about 25 minutes now. It hasn't let up at all."
+  },
+  "painScoreEn": "8 out of 10",
+  "sample": {
+   "sEn": "The chest pressure, I feel sick to my stomach, I'm sweating, and I'm a bit short of breath.",
+   "aEn": "No allergies that I know of. Not to aspirin, not to anything.",
+   "mEn": "Amlodipine 5 milligrams for my blood pressure and rosuvastatin 10 milligrams for cholesterol. That's all I take. (Only if specifically asked about Viagra, Levitra, Cialis or erectile dysfunction medication: \"No. None of those. Never have.\" Only if asked about nitro at home: \"No, I've never been given any.\")",
+   "pEn": "High blood pressure and high cholesterol, both on pills. I quit smoking 3 years ago; before that it was about a pack a day for 30 years. My father died of a heart attack at 58. I've never had heart trouble myself before this week. No diabetes.",
+   "lEn": "Dinner at 1900 last night, about 7 o'clock. Nothing since.",
+   "eEn": "Nothing. I was asleep. It just woke me up. No exertion, no argument, no fall."
+  },
+  "fe": {
+   "generalEn": "I've been well, fit for my age, until this week. No fevers, no weight loss, no change in energy before this.",
+   "cnsEn": "No fainting, no blackouts, no headache. No weakness or numbness anywhere.",
+   "respiratoryEn": "I'm a bit short of breath with the pain. No cough. I don't need extra pillows to sleep and I don't wake up breathless.",
+   "cardiovascularEn": "This pressure that goes into my jaw and arm. No palpitations, no racing heart. No swollen ankles. Two milder episodes this week when I was exerting myself; both settled with rest.",
+   "giGuEn": "I feel nauseated but I haven't thrown up. It's not heartburn and it's not like indigestion. Bowels and waterworks are normal.",
+   "integumentaryEn": "I'm sweating heavily. No rash, no bruising, no sores.",
+   "musculoskeletalEn": "I haven't hurt my chest. No fall, no lifting, no strain. It doesn't hurt any more when you press on it.",
+   "endocrineEn": "No diabetes. No thyroid problems.",
+   "eentEn": "Nothing. Eyes, ears, nose and throat are all fine."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No JVD. Trachea midline. Nothing else of note.",
+  "chestLungsEn": "No chest wall tenderness; the pain is NOT reproducible on palpation. Air entry equal and clear in all 6 sites, no crackles, no wheeze. Equal chest rise.",
+  "abdomenEn": "Soft, non-tender in all quadrants. No distension.",
+  "backEn": "No findings: no tenderness, no deformity.",
+  "lowerExtremitiesEn": "No pedal edema. Pedal pulses present and equal bilaterally. Normal colour, movement and sensation.",
+  "upperExtremitiesEn": "Radial pulses equal bilaterally. No motor or sensory deficit; grip strength equal."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, before nitroglycerin",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "148/92",
+   "pulse": {
+    "rate": 96,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "96 regular normal strength"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "adequate",
+    "character": "slightly laboured, no wheeze",
+    "rawEn": "22 slightly laboured"
+   },
+   "skin": "pale, cool, diaphoretic",
+   "pupils": "equal and reactive",
+   "spo2": "96% on room air",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "afterEvent": "drug:nitroglycerin",
+      "count": 2
+     },
+     {
+      "elapsedMs": 900000
+     }
+    ]
+   },
+   "unlockNoteEn": "after 2 doses of nitroglycerin, en route; pain down from 8/10 to 3/10; systolic still above 110 so a third dose is permitted if pain persists",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "122/78",
+   "pulse": {
+    "rate": 88,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "88 regular"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "normal",
+    "character": "regular, unlaboured",
+    "rawEn": "18 regular"
+   },
+   "skin": "pink, warm, drying",
+   "pupils": "equal and reactive",
+   "spo2": "97% on room air",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "bp-drops-after-unchecked-nitro",
+   "when": {
+    "afterEvent": "nitro-without-bp-check"
+   },
+   "examinerLineEn": "The patient tells you he feels light-headed and washed out. When a blood pressure is next taken it is 96/60, systolic now below 110: the next nitroglycerin dose must be withheld and the Entonox pathway considered 5 minutes after the last dose.",
+   "vitalsPatch": {
+    "bp": "96/60"
+   }
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan ASA, nitroglycerin, oxygen, cot to the patient, minimal-exertion approach",
+   "triggers": [
+    "copy dispatch",
+    "I'll bring the cot and the stair chair up to the patient",
+    "thinking ASA and nitro",
+    "I'm planning for a cardiac call",
+    "bring everything up so he does not have to walk"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate a time-critical cardiac call and plan early transport with hospital notification",
+   "triggers": [
+    "this is time critical",
+    "cath lab is 14 minutes out",
+    "we will want to be moving early",
+    "I'll pre-notify the hospital",
+    "possible STEMI, early transport"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (stair egress), environment, nature of illness (chest pain), number of patients (1)",
+   "triggers": [
+    "scene is safe",
+    "any hazards",
+    "one patient",
+    "nature of illness is chest pain",
+    "the stairs are our egress problem",
+    "environment is warm and well lit"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves on",
+    "I'm putting on gloves and eye protection",
+    "BSI",
+    "PPE on",
+    "donning gloves"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: grey, diaphoretic, clenched fist over sternum (Levine sign)",
+   "triggers": [
+    "he looks grey",
+    "Levine sign",
+    "fist on his chest",
+    "general impression",
+    "he's sweaty and grey",
+    "he looks sick"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "scene",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan the stair egress early and bring equipment to the patient rather than walking him",
+   "triggers": [
+    "partner, set up the stair chair",
+    "we'll carry him down",
+    "bring the kit to him",
+    "don't let him walk",
+    "plan the stairs now",
+    "stair chair ready at the top"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert",
+   "triggers": [
+    "AVPU",
+    "he's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "do you know where you are",
+    "oriented times three"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (medical presentation)",
+   "triggers": [
+    "no c-spine concern",
+    "c-spine not indicated",
+    "medical call, no spinal",
+    "no mechanism for spinal injury",
+    "no need to hold c-spine"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway is open",
+    "airway patent",
+    "he's talking so his airway is clear",
+    "check the airway",
+    "look in the mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing rate, depth and effort",
+   "triggers": [
+    "breathing rate",
+    "how's his breathing",
+    "chest rise",
+    "respiratory effort",
+    "breathing is laboured",
+    "count respirations"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess radial pulse rate, strength and regularity",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse rate and quality",
+    "how's the pulse",
+    "regular and strong",
+    "any major bleeding"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey appropriate to a medical patient",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "quick head-to-toe",
+    "any obvious abnormality",
+    "check for edema and trauma"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale cool diaphoretic",
+   "triggers": [
+    "skin is pale cool and diaphoretic",
+    "skin colour temperature condition",
+    "feel his skin",
+    "he's clammy",
+    "skin signs"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Titrate oxygen only to maintain SpO2 at or above 94% - at 96% RA supplemental oxygen is not required; verbalize the decision",
+   "triggers": [
+    "SpO2 is 96 so no oxygen needed",
+    "titrate to 94",
+    "oxygen not indicated",
+    "holding off on oxygen",
+    "I'll put him on oxygen",
+    "nasal cannula"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Keep at rest in a position of comfort; limit all patient movement and exertion",
+   "triggers": [
+    "position of comfort",
+    "stay sitting",
+    "don't move, we'll do everything",
+    "keep him at rest",
+    "no exertion",
+    "sit him up"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Administer ASA 160 mg chewed and swallowed after the rapid body survey (ASA is the one drug not requiring vitals first)",
+   "triggers": [
+    "give ASA",
+    "aspirin 160 chewed",
+    "chew these",
+    "two baby aspirin",
+    "ASA after the RBS",
+    "acetylsalicylic acid"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "he's unstable",
+    "priority patient",
+    "load and go",
+    "code 3 to hospital"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes; carry the patient down the stairs, do not let him walk",
+   "triggers": [
+    "we'll carry him down",
+    "stair chair",
+    "load within 15",
+    "let's package him",
+    "get him to the truck",
+    "no walking, we carry"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate the partner to prep egress and the stair chair while you run the protocol",
+   "triggers": [
+    "partner, prep the egress",
+    "set up the stair chair while I give the nitro",
+    "partner, get the cot ready at the bottom",
+    "clear the stairs",
+    "delegate"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: central chest pain",
+   "triggers": [
+    "what's going on today",
+    "what's bothering you",
+    "chief complaint",
+    "tell me about the pain",
+    "why did you call us"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Full OPQRRRST pain assessment including radiation, recurrence and severity",
+   "triggers": [
+    "OPQRST",
+    "what were you doing when it started",
+    "what does it feel like",
+    "does it go anywhere",
+    "anything make it better or worse",
+    "has this happened before"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Obtain a 0-10 pain score",
+   "triggers": [
+    "zero to ten",
+    "scale of 1 to 10",
+    "how bad is the pain",
+    "pain score",
+    "rate your pain"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx with cardiac risk factors and time scales",
+   "triggers": [
+    "medical history",
+    "any heart problems",
+    "past history",
+    "do you have high blood pressure",
+    "do you smoke",
+    "family history of heart disease"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications - and specifically screen for Viagra/Levitra in 24 h or Cialis in 48 h before nitroglycerin",
+   "triggers": [
+    "what medications",
+    "are you on any pills",
+    "Viagra Levitra Cialis",
+    "erectile dysfunction medication",
+    "any nitro at home",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies incl aspirin sensitivity before giving ASA",
+   "triggers": [
+    "any allergies",
+    "allergic to aspirin",
+    "allergies to medications",
+    "any reaction to aspirin before",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 15",
+    "E4 V5 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - confirm systolic above 110 before nitroglycerin",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "I'm taking a BP",
+    "auscultate a pressure",
+    "cuff on",
+    "systolic"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm - confirm HR is not under 50 or over 150",
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "count the pulse for 30 seconds",
+    "radial for a full minute"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "breathing rate",
+    "count his breaths"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": [
+    "skin",
+    "colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "still diaphoretic"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "pupils equal and reactive",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration check",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "check the waveform matches the pulse",
+    "calibration"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling lately",
+    "any fevers or weight loss",
+    "feeling well until now",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (syncope screen)",
+   "triggers": [
+    "any fainting",
+    "syncope",
+    "dizziness",
+    "headache",
+    "weakness or numbness",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (orthopnea, cough)",
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "orthopnea",
+    "sleep on extra pillows",
+    "wake up breathless",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (pertinent: palpitations, edema, prior episodes)",
+   "triggers": [
+    "palpitations",
+    "racing heart",
+    "swollen ankles",
+    "ankle swelling",
+    "chest pain before",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (nausea, indigestion differential)",
+   "triggers": [
+    "nausea",
+    "vomiting",
+    "indigestion",
+    "heartburn",
+    "bowels",
+    "urine"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "sweating",
+    "rash",
+    "skin changes",
+    "bruising",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal (reproducible chest wall pain?)",
+   "triggers": [
+    "hurt your chest",
+    "injury to the chest",
+    "does it hurt when I press",
+    "lifting or straining",
+    "musculoskeletal",
+    "reproducible"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (diabetes screen)",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "blood sugar problems",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision changes",
+    "sore throat",
+    "any ear or eye problems"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl JVD assessment",
+   "triggers": [
+    "head and neck",
+    "JVD",
+    "jugular venous distension",
+    "trachea midline",
+    "look at the neck veins",
+    "neck"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation; palpate to test reproducibility of the pain",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "palpate the chest",
+    "does that hurt when I press",
+    "chest wall tenderness"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "soft non-tender",
+    "abdominal exam"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "back",
+    "check the back",
+    "palpate the spine",
+    "any back pain",
+    "back exam"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities incl pedal edema and pulses",
+   "triggers": [
+    "lower extremities",
+    "legs",
+    "pedal edema",
+    "pedal pulses",
+    "ankle swelling",
+    "feet"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities incl bilateral pulse comparison",
+   "triggers": [
+    "upper extremities",
+    "arms",
+    "compare radials",
+    "pulses both sides",
+    "grip strength",
+    "squeeze my hands"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Initiate the Cardiac Chest Pain protocol with correct indications and sequence (ASA after RBS, nitroglycerin after baseline vitals)",
+   "triggers": [
+    "cardiac chest pain protocol",
+    "starting the chest pain protocol",
+    "ASA then nitro",
+    "I'll run the protocol",
+    "ASA after the RBS, nitro after vitals",
+    "protocol"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "ASA 160 mg PO chewed with 6 rights; rule out allergy, active GI bleed/peptic ulcer, inability to swallow, prior dose taken",
+   "triggers": [
+    "six rights",
+    "right patient right drug right dose",
+    "any stomach ulcer or bleeding",
+    "can you swallow",
+    "have you taken any aspirin today",
+    "160 milligrams chewed"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Nitroglycerin 0.4 mg SL with contraindications ruled out (SBP under 110, HR under 50 or over 150, nitrate allergy, PDE5 inhibitor use) and vitals repeated before each dose",
+   "triggers": [
+    "nitro 0.4 sublingual",
+    "one spray under the tongue",
+    "systolic is above 110",
+    "heart rate between 50 and 150",
+    "any Viagra or Cialis",
+    "rechecking BP before the dose"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize the maximum of 3 nitroglycerin doses in 30 minutes and the Entonox rule (5 minutes after the last nitroglycerin dose)",
+   "triggers": [
+    "max three doses in 30 minutes",
+    "three doses",
+    "every 3 to 5 minutes",
+    "Entonox 5 minutes after the last nitro",
+    "if pain persists after three",
+    "no Entonox within 5 minutes of nitro"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: vascular access with running fluid; consider dimenhydrinate for nausea",
+   "triggers": [
+    "IV",
+    "start a line",
+    "vascular access",
+    "running saline",
+    "TKVO",
+    "Gravol for nausea"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each dose and each move",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "how are you doing now",
+    "reassessing",
+    "still alert",
+    "ABC check after the move"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Full second set of vitals within 5-6 minutes and before the next nitroglycerin dose",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "recheck BP before the next dose",
+    "vitals again",
+    "another set",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Reassess the pain score after each dose and titrate to pain-free",
+   "triggers": [
+    "pain now",
+    "where's the pain now out of 10",
+    "has the pain changed",
+    "still an 8",
+    "pain score after the nitro",
+    "any better"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Withhold nitroglycerin if systolic falls below 110 and switch to the Entonox pathway",
+   "triggers": [
+    "systolic is below 110 so I'm holding the nitro",
+    "withhold nitro",
+    "no more nitro",
+    "switch to Entonox",
+    "BP's too low for nitro",
+    "pressure dropped"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification of a possible acute coronary syndrome",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "possible STEMI inbound",
+    "cath lab activation"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with ASA and nitroglycerin times, doses and BP trend",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 62-year-old male",
+    "report to the nurse",
+    "ASA at",
+    "nitro times"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets the patient stand and walk, walk to the stairs, or walk down the stairs to the ambulance (any self-exertion)"
+  },
+  {
+   "key": "nitro-without-bp-check",
+   "descriptionEn": "candidate gives a nitroglycerin dose without taking a blood pressure in the minutes immediately before that dose"
+  },
+  {
+   "key": "pde5-screened",
+   "descriptionEn": "candidate asks about Viagra, Levitra, Cialis or erectile dysfunction medication (PDE5 inhibitor screen) before nitroglycerin"
+  },
+  {
+   "key": "nitro-with-sbp-below-110",
+   "descriptionEn": "candidate gives nitroglycerin after a blood pressure with systolic below 110 has been reported (e.g. 96/60)"
+  },
+  {
+   "key": "nitro-spray-not-primed",
+   "descriptionEn": "candidate administers nitroglycerin spray without verbalizing priming the spray, or shakes the container"
+  },
+  {
+   "key": "high-flow-oxygen-at-96",
+   "descriptionEn": "candidate applies high-flow oxygen by non-rebreather while SpO2 is 96% on room air without a titration rationale"
+  },
+  {
+   "key": "entonox-within-5-min-of-nitro",
+   "descriptionEn": "candidate gives Entonox less than 5 minutes after the last nitroglycerin dose"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "asa",
+   "namesEn": [
+    "ASA",
+    "aspirin",
+    "acetylsalicylic acid",
+    "Aspirin 160",
+    "baby aspirin"
+   ],
+   "doseEn": "160 mg PO, chewed and swallowed, single dose after the RBS; the only medication that does not need vitals first",
+   "licence": "both"
+  },
+  {
+   "key": "nitroglycerin",
+   "namesEn": [
+    "nitro",
+    "nitroglycerin",
+    "NTG",
+    "nitro spray",
+    "Nitrolingual",
+    "GTN"
+   ],
+   "doseEn": "0.4 mg SL spray, repeat every 3-5 minutes while systolic BP stays above 110 and pain persists, maximum 3 doses in any 30-minute period; vitals before every dose; do not shake, verbalize priming",
+   "licence": "both"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous",
+    "nitrous oxide",
+    "N2O",
+    "the gas"
+   ],
+   "doseEn": "self-administered by inhalation; only 5 minutes or more after the last nitroglycerin dose, when pain persists beyond 3 doses or systolic falls below 110",
+   "licence": "both"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol",
+    "Dramamine",
+    "anti-emetic"
+   ],
+   "doseEn": "1 mg/kg to a maximum of 50 mg, IV diluted and given slowly or IM, for nausea",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "stair-chair",
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "nitro-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:nitroglycerin",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "bp-before-each-nitro",
+   "check": "before_each",
+   "event": "drug:nitroglycerin",
+   "requires": "blood-pressure",
+   "withinMs": 180000,
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "nitro-without-bp-check-reported",
+   "check": "absent",
+   "event": "nitro-without-bp-check",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "pde5-screen-before-nitro",
+   "check": "before_each",
+   "event": "drug:nitroglycerin",
+   "requires": "pde5-screened",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-nitro-when-sbp-below-110",
+   "check": "absent",
+   "event": "nitro-with-sbp-below-110",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "asa-given",
+   "check": "present",
+   "event": "drug:asa",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "nitro-given",
+   "check": "present",
+   "event": "drug:nitroglycerin",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "asa-after-rbs",
+   "check": "ordered",
+   "first": "rapid-body-survey",
+   "then": "drug:asa",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "nitro-max-3",
+   "check": "max_count",
+   "event": "drug:nitroglycerin",
+   "max": 3,
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "nitro-spray-primed",
+   "check": "absent",
+   "event": "nitro-spray-not-primed",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 10,
+    "errorEn": "Does not verbalize they would prime the S/L spray prior to use"
+   }
+  },
+  {
+   "id": "oxygen-titrated-not-high-flow",
+   "check": "absent",
+   "event": "high-flow-oxygen-at-96",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 3,
+    "errorEn": "Applies oxygen but it is applied with minor deficiencies"
+   }
+  },
+  {
+   "id": "entonox-not-within-5-min-of-nitro",
+   "check": "absent",
+   "event": "entonox-within-5-min-of-nitro",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "62-year-old male",
+  "cc": "central chest pressure, suspected acute coronary syndrome / possible STEMI",
+  "moi": null,
+  "hxcc": "woke from sleep at 0615 with heavy band-like central chest pressure 8/10 radiating to the left jaw and left arm, with nausea and diaphoresis; two milder exertional episodes earlier this week",
+  "vitals": "GCS 15, BP 148/92, pulse 96 regular, resp 22, SpO2 96% on room air; latest BP 122/78, pulse 88, resp 18, SpO2 97%, pain now 3/10",
+  "treatments": "kept at rest and carried out; ASA 160 mg chewed; nitroglycerin 0.4 mg SL x2 with BP rechecked before each dose; PCP: IV en route; ETA 14 minutes",
+  "findings": "Levine sign, pale cool diaphoretic; no JVD, chest clear, pain not reproducible on palpation; no pedal edema"
+ },
+ "handoffFacts": {
+  "ageSex": "62-year-old male",
+  "cc": "central chest pressure that woke him from sleep",
+  "moi": null,
+  "hxcc": "onset 0615 at rest (woke him), about 45 minutes of pain by hand-off; heavy band-like pressure radiating to the left jaw and left arm; 8/10 at onset; associated nausea, diaphoresis and shortness of breath; not reproducible on palpation; two milder exertional episodes earlier this week relieved by rest",
+  "initialVitals": "GCS 15 (E4 V5 M6), BP 148/92, pulse 96 regular normal strength, resp 22 slightly laboured, skin pale cool diaphoretic, pupils equal and reactive, SpO2 96% on room air",
+  "finalVitals": "GCS 15, BP 122/78, pulse 88 regular, resp 18, skin pink warm drying, pupils equal and reactive, SpO2 97% on room air, pain 3/10",
+  "pmhx": "hypertension, dyslipidemia, ex-smoker (quit 3 years ago, 30 pack-years), father died of an MI at 58",
+  "meds": "amlodipine 5 mg, rosuvastatin 10 mg; no Viagra, Levitra or Cialis (no PDE5 inhibitors)",
+  "allergies": "no known allergies; no aspirin sensitivity",
+  "treatments": "kept at rest and carried down the stairs; oxygen not required (SpO2 96%); ASA 160 mg PO chewed at 0652; nitroglycerin 0.4 mg SL at 0658 and 0703 with BP rechecked before each dose; RTC transport with cath-lab notification; PCP: IV with running fluid en route",
+  "findings": "Levine sign; no JVD, trachea midline; chest clear in all 6 sites, pain not reproducible on palpation; abdomen soft; no pedal edema; pulses equal bilaterally"
+ },
+ "pcrFacts": {
+  "cc": "Central chest pressure at rest, radiating to left jaw and arm",
+  "hxcc": "Woke from sleep 0615; heavy band-like pressure 8/10; radiates left jaw/arm; nausea and diaphoresis; two exertional episodes earlier in the week; not reproducible on palpation",
+  "pmhx": "Hypertension, dyslipidemia, ex-smoker 30 pack-years, family history of MI",
+  "meds": "Amlodipine 5 mg, rosuvastatin 10 mg; no PDE5 inhibitors",
+  "allergies": "NKA",
+  "treatments": [
+   "Rest, position of comfort, carried down stairs",
+   "O2 titrated to keep SpO2 94% or above (none required at 96%)",
+   "ASA 160 mg PO chewed at 0652",
+   "Nitroglycerin 0.4 mg SL at 0658 and 0703, BP rechecked before each",
+   "RTC transport with cath-lab notification",
+   "PCP: IV with running fluid"
+  ],
+  "findings": [
+   "Levine sign, pale cool diaphoretic",
+   "BP 148/92 down to 122/78, pain 8/10 down to 3/10",
+   "No JVD, chest clear, no reproducible chest wall pain",
+   "SpO2 96-97% throughout"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives ASA 160 mg PO and nitroglycerin 0.4 mg SL under the same protocol (no physician order required), plus oxygen titration, rest, and rapid transport. EMR does not establish IV access or give dimenhydrinate. Entonox is available at both levels for the post-3-dose pathway. No Functional Enquiry.",
+  "pcpEn": "PCP adds vascular access with running fluid, dimenhydrinate 1 mg/kg to a maximum of 50 mg for nausea, and the 9-system Functional Enquiry en route. Everything else is identical."
+ },
+ "sourcePages": "Scenario md-02 (data/practical/scenarios.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing (BP 96/60 if no recheck before dosing), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (suspected cardiac chest pain = unstable); p.47 Cardiac Chest Pain protocol (position of comfort and limit movement, oxygen to SpO2 >= 94%, ASA chewed, transport / delegate egress prep, history and baseline vitals, nitroglycerin, PCP IV and dimenhydrinate, Entonox 5 minutes after the last nitroglycerin dose, 3-dose / 30-minute limit, SBP < 110 pathway); p.60 Aspirin (160 mg PO, after the RBS, the only medication not requiring vitals, contraindications); p.63 Dimenhydrinate (1 mg/kg to a maximum of 50 mg); p.65 Entonox (contraindication: nitroglycerin used in the last 5 minutes); p.73 Nitroglycerin (contraindications SBP < 110, HR < 50 or > 150, Viagra/Levitra in 24 h or Cialis in 48 h; 0.4 mg SL q 3-5 min; maximum 3 doses in any 30-minute period; do not shake the spray)."
+}

@@ -1,0 +1,1463 @@
+{
+ "id": "tr-04",
+ "titleEn": "Table Saw Partial Amputation - Tourniquet and TXA",
+ "type": "trauma",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#tr-04",
+ "patient": {
+  "name": "Dale Brennan",
+  "age": 52,
+  "sex": "male",
+  "affectEn": "alert but pale and frightened; sitting on the floor gripping a blood-soaked towel over his left forearm; keeps looking down at the hand and asking whether it can be saved",
+  "speechEn": "full sentences, voice shaky; cooperative and follows instructions; answers questions directly"
+ },
+ "scene": {
+  "settingEn": "Cabinet-making shop in an industrial park in Surrey, mid-morning. The patient sits on the dry concrete floor leaning against a cabinet beside the table saw. The saw is OFF and locked out. Good lighting, room to work, clear path to the loading door for the cot. One patient.",
+  "hazardsEn": [
+   "table saw - powered off and locked out by coworkers; confirm before approaching",
+   "large pool of blood on the floor (about 700 mL) - splash exposure and slip hazard"
+  ],
+  "bystanders": [
+   {
+    "who": "coworker (shop foreman) who led you in",
+    "knowsEn": "saw jammed, he reached over the blade to clear it and his glove caught; happened about 8 minutes before you arrived; they shut the saw off and locked it out right away and have been holding a towel on the arm since; he never passed out; foreman called 911; willing to help if told exactly what to do"
+   },
+   {
+    "who": "second coworker",
+    "knowsEn": "nothing beyond what the foreman says; can fetch the cot, hold doors, or prepare the amputated-part container under your direction"
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "commercial tourniquet",
+   "pressure dressings and trauma dressings",
+   "roller bandages and triangular bandages",
+   "sterile gauze and normal saline (for the amputated part)",
+   "sealable plastic bag, protective container and ice",
+   "trauma shears",
+   "oxygen kit with NRB",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "blankets",
+   "cot",
+   "PCP: IV start kit and tubing",
+   "PCP: normal saline",
+   "PCP: TXA (tranexamic acid)"
+  ]
+ },
+ "dispatchEn": "1005 hrs. Code 3 to a cabinet-making shop in an industrial park in Surrey. 52-year-old male caught his left forearm in a table saw. Coworkers report severe bleeding. Hospital is 12 minutes away.",
+ "dispatchUpdateEn": "Dispatch update en route: coworkers are holding a towel on the arm and the machine has been shut off.",
+ "arrivalEn": "The foreman meets you at the shop door and leads you in: \"He's over here. We shut the saw off and locked it out. We've been holding a towel on it the whole time but it keeps soaking through.\" The patient is on the floor leaning against a cabinet, a blood-soaked towel clamped to his left forearm. An estimated 700 mL of blood is pooled on the floor around him. Table saw is off and locked out. One patient, good lighting, no other hazards.",
+ "firstLookEn": "Pale, frightened 52-year-old male, awake and watching you, sitting on the floor gripping a blood-soaked towel over his left forearm. A large pool of blood on the floor. The left hand is attached only by a soft-tissue bridge just proximal to the wrist - a near-complete amputation.",
+ "primary": {
+  "locEn": "Alert. Oriented to person, place and time; answers appropriately but is frightened. (AVPU = A.)",
+  "airwayEn": "Open and clear. Speaking in full sentences, no blood or debris in the mouth, no stridor.",
+  "breathingEn": "Respirations 22, regular, adequate depth, equal chest rise, not laboured. No accessory muscle use.",
+  "circulationEn": "RIGHT radial pulse 122, weak, regular. If the candidate reaches for the LEFT wrist: the hand is nearly detached - there is no usable radial pulse on that side (report pulse-on-injured-arm). Together with the pale, cool, clammy skin this is shock.",
+  "rbsEn": "When the towel is lifted, bright red blood SPURTS from the wound in pulses. If the candidate applies direct pressure through dressings: it does NOT control it - the dressing soaks through immediately and blood keeps spurting around it. Do not suggest a tourniquet. Once a tourniquet is applied proximal to the wound on the forearm and tightened until the bleeding stops: the bleeding stops. If the candidate does not state the time of application, do not remind them (report tourniquet-time-not-noted). The hand is attached only by a soft-tissue bridge just proximal to the wrist. Rest of the RBS: no other injuries - head, neck, chest, abdomen, pelvis, both legs and the right arm are unremarkable; no blood anywhere else. Skin is given automatically during the RBS: pale, cool, clammy. No fall and no head involvement - machine injury only, c-spine not indicated.",
+  "skinEn": "pale, cool, clammy"
+ },
+ "history": {
+  "ccEn": "The saw got my hand. It's hanging off and it won't stop bleeding.",
+  "opqrst": {
+   "oEn": "All at once, about eight minutes before you got here - around 0957 - the saw jammed, I reached over the blade to clear it, my glove caught and it pulled my arm in.",
+   "pEn": "Nothing makes it better. Moving the arm or pressing on it makes it worse.",
+   "qEn": "Deep, throbbing, burning. Like it's on fire.",
+   "rEn": "It stays in the wrist and forearm. It doesn't go anywhere else.",
+   "sEn": "Nine out of ten. Worst pain I have ever had.",
+   "tEn": "Since it happened - constant, it hasn't let up at all."
+  },
+  "painScoreEn": "9 out of 10",
+  "sample": {
+   "sEn": "My hand is nearly cut off and I've bled a lot. I feel lightheaded, my heart is pounding, and I'm a bit sick to my stomach.",
+   "aEn": "Sulfa drugs - they give me hives. Nothing else that I know of.",
+   "mEn": "Metformin for my sugar and atorvastatin for cholesterol. I take them every morning.",
+   "pEn": "Type 2 diabetes and high cholesterol. Nothing else - no heart problems, no bleeding problems, no surgeries.",
+   "lEn": "Breakfast at 0700 - eggs and toast - and coffee since then. Nothing else.",
+   "eEn": "I was cutting panels and the saw jammed. I reached over the blade to clear it, my glove caught and it pulled my arm in. I didn't pass out and nothing else touched the blade - just the left arm."
+  },
+  "fe": {
+   "generalEn": "I felt really lightheaded sitting on the floor back there. No fever, no illness lately, no weight change.",
+   "cnsEn": "No headache, no dizziness apart from feeling lightheaded, no numbness or weakness anywhere else, I never blacked out.",
+   "respiratoryEn": "No trouble breathing, no cough, no chest tightness.",
+   "cardiovascularEn": "My heart is pounding. No chest pain, no palpitations before today.",
+   "giGuEn": "I feel nauseated. No vomiting, no belly pain, no bowel or bladder problems.",
+   "integumentaryEn": "Just the wound on my arm. No other cuts, no rashes, no bruising elsewhere.",
+   "musculoskeletalEn": "Nothing else hurts - no neck or back pain, my legs are fine, the right arm is fine.",
+   "endocrineEn": "The diabetes is well controlled - I check my sugars and they've been fine. No thyroid problems.",
+   "eentEn": "No problems with my eyes, ears, nose or throat. Nothing got in my eyes."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No injuries. No lacerations, no deformity, no tenderness of the scalp, face or neck. Trachea midline, no JVD. Pupils equal and reactive.",
+  "chestLungsEn": "Chest clear with equal air entry in all 6 sites on auscultation. No tenderness, no deformity, equal rise and fall.",
+  "abdomenEn": "Soft, non-tender in all four quadrants, no distension, no bruising.",
+  "backEn": "No tenderness, no deformity, no wounds. (Log-roll not required - no spinal mechanism.)",
+  "lowerExtremitiesEn": "No injuries. No deformity or tenderness; moves both legs; distal circulation, sensation and movement present in both feet.",
+  "upperExtremitiesEn": "LEFT: tourniquet in place on the forearm, bleeding controlled, dressing dry with no strike-through. Distal part cool and pulseless - expected distal to a tourniquet. Hand attached only by a soft-tissue bridge just proximal to the wrist. RIGHT arm: normal, no injury, radial pulse present; this is the arm for the BP cuff, SpO2 probe and IV."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, tourniquet on",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "96/64",
+   "pulse": {
+    "rate": 122,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "122 weak regular"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "normal",
+    "character": "regular, unlaboured",
+    "rawEn": "22 regular"
+   },
+   "skin": "pale cool clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "95% on 15 L NRB",
+   "bgl": "7.8 mmol/L",
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "afterEvent": "drug:txa"
+     },
+     {
+      "afterEvent": "move:load"
+     },
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route; after TXA / after loading / or at 10 minutes - improving with fluids (PCP) or with hemorrhage control, warmth and O2 (EMR)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "102/66",
+   "pulse": {
+    "rate": 114,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "114 weak regular"
+   },
+   "resp": {
+    "rate": 20,
+    "depth": "normal",
+    "character": "regular, unlaboured",
+    "rawEn": "20 regular"
+   },
+   "skin": "pale cool",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "96% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "bleed-uncontrolled-4min",
+   "when": {
+    "elapsedMs": 240000,
+    "missingEvent": "rapid-body-survey"
+   },
+   "examinerLineEn": "The towel is now soaked through and dripping onto the floor. The patient is visibly more pale and his pulse is faster and harder to feel. He says: \"I feel like I'm going to pass out.\"",
+   "vitalsPatch": {
+    "skin": "very pale, cold, clammy"
+   }
+  },
+  {
+   "id": "rebleed-after-release",
+   "when": {
+    "afterEvent": "tourniquet-release"
+   },
+   "examinerLineEn": "As soon as the tourniquet is loosened, bright red blood spurts from under the dressing again and the patient becomes more pale and more frightened.",
+   "vitalsPatch": {
+    "skin": "very pale, cold, clammy"
+   }
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan tourniquet, pressure dressings, oxygen, amputated-part care, early transport",
+   "triggers": [
+    "acknowledge dispatch",
+    "bring the tourniquet in",
+    "plan for tourniquet and pressure dressings",
+    "bring the amputation kit",
+    "this will be a load and go",
+    "prepare for severe bleeding"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate machine hazard and blood exposure; PPE incl eye protection",
+   "triggers": [
+    "machine hazard",
+    "make sure the saw is off",
+    "eye protection",
+    "safety glasses",
+    "blood exposure",
+    "gloves and goggles"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (machine locked out, blood), environment, MOI (table saw), one patient; estimate blood loss",
+   "triggers": [
+    "scene is safe",
+    "saw is locked out",
+    "mechanism is a table saw",
+    "one patient",
+    "estimate the blood loss",
+    "how much blood is on the floor"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection (splash risk)",
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "goggles",
+    "face shield",
+    "BSI",
+    "PPE"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: pale male, awake, large blood pool, near-complete amputation at the wrist",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "he looks pale",
+    "a lot of blood",
+    "the hand is hanging off",
+    "sick looking patient"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert",
+   "triggers": [
+    "AVPU",
+    "alert",
+    "alert and oriented",
+    "can you hear me",
+    "what's your name",
+    "level of consciousness"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Attempt direct pressure; when it fails, apply a tourniquet proximal to the wound, tighten to stop the bleed, NOTE THE TIME, do not release",
+   "triggers": [
+    "direct pressure",
+    "apply a tourniquet",
+    "tourniquet high and tight",
+    "tighten until the bleeding stops",
+    "note the time",
+    "proximal to the wound"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway",
+    "is your airway open",
+    "patent",
+    "look in the mouth",
+    "talking so the airway is clear",
+    "airway is clear"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing",
+   "triggers": [
+    "breathing",
+    "rate and quality",
+    "chest rise",
+    "look listen and feel",
+    "respirations",
+    "how is he breathing"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation on the uninjured side; recognize shock",
+   "triggers": [
+    "radial pulse",
+    "pulse on the right arm",
+    "uninjured side",
+    "rate and quality of the pulse",
+    "he is in shock",
+    "compensated shock"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Complete the RBS for other injuries",
+   "triggers": [
+    "rapid body survey",
+    "head to toe for other injuries",
+    "check the rest of the body",
+    "any other bleeding",
+    "pelvis and legs",
+    "RBS"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale cool clammy",
+   "triggers": [
+    "skin colour",
+    "pale cool clammy",
+    "skin condition",
+    "diaphoretic",
+    "skin temperature",
+    "how does the skin feel"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen 15 L NRB (shock)",
+   "triggers": [
+    "oxygen",
+    "15 litres",
+    "non-rebreather",
+    "NRB",
+    "high flow O2",
+    "high-flow oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position supine, keep warm with blankets",
+   "triggers": [
+    "supine",
+    "lay him flat",
+    "lie him down",
+    "blanket",
+    "keep him warm",
+    "shock position"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Bandage the wound once hemorrhage is controlled",
+   "triggers": [
+    "bandage the wound",
+    "pressure dressing",
+    "dress the wound",
+    "wrap the stump",
+    "cover the wound",
+    "secure the dressing"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "rapid transport",
+    "RTC",
+    "load and go",
+    "unstable",
+    "priority patient",
+    "critical patient"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Packaged and ready to load within 15 minutes",
+   "triggers": [
+    "ready to load",
+    "package him",
+    "on the cot",
+    "let's go",
+    "move to the ambulance",
+    "load him up"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate bystanders effectively (cot, doors, part preservation under direction)",
+   "triggers": [
+    "get the cot",
+    "hold the door",
+    "get a bag ready for the hand",
+    "can you help",
+    "can you grab",
+    "bring the stretcher"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Confirm chief complaint",
+   "triggers": [
+    "what happened",
+    "chief complaint",
+    "what's bothering you most",
+    "main problem",
+    "tell me what's wrong",
+    "where does it hurt"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C: mechanism, time of injury (critical for TXA window), blade contact points, LOC",
+   "triggers": [
+    "when did this happen",
+    "what time did it happen",
+    "how did it happen",
+    "did you pass out",
+    "lose consciousness",
+    "anything else touch the blade"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain score",
+   "triggers": [
+    "pain scale",
+    "zero to ten",
+    "rate your pain",
+    "how bad is the pain",
+    "out of ten",
+    "pain score"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx (diabetes)",
+   "triggers": [
+    "medical history",
+    "any medical conditions",
+    "are you diabetic",
+    "past history",
+    "see a doctor for anything",
+    "health problems"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": [
+    "medications",
+    "taking any meds",
+    "prescriptions",
+    "what do you take",
+    "any pills",
+    "blood thinners"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies (sulfa)",
+   "triggers": [
+    "allergies",
+    "allergic to anything",
+    "allergic to any medications",
+    "drug allergies",
+    "reaction to any medication",
+    "sulfa"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI",
+   "triggers": [
+    "last ate",
+    "last oral intake",
+    "when did you eat",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components",
+   "triggers": [
+    "GCS",
+    "Glasgow Coma",
+    "eyes verbal motor",
+    "E4 V5 M6",
+    "GCS fifteen",
+    "coma scale"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation on the uninjured arm",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a BP",
+    "cuff on the right arm",
+    "pressure",
+    "systolic"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm",
+   "triggers": [
+    "pulse rate",
+    "rate rhythm and strength",
+    "heart rate",
+    "count the pulse",
+    "pulse quality",
+    "pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations",
+   "triggers": [
+    "respiratory rate",
+    "resp rate",
+    "respirations",
+    "breathing rate",
+    "count respirations",
+    "rate depth and quality"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": [
+    "skin",
+    "skin colour temperature condition",
+    "feel the skin",
+    "clammy",
+    "diaphoresis",
+    "CTC"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "pupils equal and reactive",
+    "pen light",
+    "check the eyes",
+    "pupil size"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 (probe on uninjured hand)",
+   "triggers": [
+    "SpO2",
+    "sat",
+    "pulse ox",
+    "oxygen saturation",
+    "sats",
+    "probe on the right hand"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - indicated in a known diabetic",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "blood sugar",
+    "glucometer",
+    "finger poke",
+    "check his sugar"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling",
+    "fever or chills",
+    "weight loss",
+    "general",
+    "feeling unwell lately"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "headache",
+    "dizziness",
+    "numbness or tingling",
+    "weakness",
+    "seizures",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "shortness of breath",
+    "cough",
+    "trouble breathing",
+    "wheeze",
+    "respiratory",
+    "lungs"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "palpitations",
+    "heart racing",
+    "cardiac history",
+    "cardiovascular",
+    "heart"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU",
+   "triggers": [
+    "nausea",
+    "vomiting",
+    "abdominal pain",
+    "bowel",
+    "bladder",
+    "urine"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "rashes",
+    "skin problems",
+    "other wounds",
+    "bruising",
+    "integumentary",
+    "sores"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "other injuries",
+    "joint pain",
+    "neck or back pain",
+    "muscle",
+    "musculoskeletal",
+    "move everything"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (diabetes pertinent)",
+   "triggers": [
+    "diabetes controlled",
+    "sugars",
+    "thyroid",
+    "endocrine",
+    "how is your diabetes",
+    "insulin"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "vision",
+    "hearing",
+    "sore throat",
+    "EENT",
+    "anything in your eyes"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam",
+   "triggers": [
+    "palpate the head",
+    "check the neck",
+    "trachea",
+    "JVD",
+    "head and neck",
+    "scalp"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with auscultation",
+   "triggers": [
+    "auscultate",
+    "listen to the chest",
+    "lung sounds",
+    "six fields",
+    "air entry",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "belly",
+    "abdomen soft",
+    "abdominal exam",
+    "distension"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check the back",
+    "palpate the spine",
+    "back exam",
+    "run my hands down the back",
+    "posterior",
+    "spine"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities",
+   "triggers": [
+    "check the legs",
+    "lower extremities",
+    "pedal pulses",
+    "distal CMS legs",
+    "legs",
+    "feet"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: tourniquet site, dressing, wound recheck",
+   "triggers": [
+    "check the arms",
+    "upper extremities",
+    "look at the tourniquet",
+    "recheck the dressing",
+    "distal circulation",
+    "right arm"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Wound management skill: tourniquet technique correct, time noted, bleeding controlled, wound bandaged",
+   "triggers": [
+    "tourniquet technique",
+    "windlass",
+    "two to three inches above the wound",
+    "tighten until bleeding stops",
+    "write the time on the tourniquet",
+    "secure the windlass"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Preserve the amputated part correctly (moist sterile gauze, bag, kept cool, not on ice, transported with patient)",
+   "triggers": [
+    "wrap the hand in moist gauze",
+    "saline-moistened gauze",
+    "plastic bag",
+    "keep it cool",
+    "rinse with sterile water",
+    "transport the part with the patient"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Execute the Hypovolemia protocol (supine, warm, O2, rapid transport)",
+   "triggers": [
+    "hypovolemia protocol",
+    "treat for shock",
+    "supine and warm",
+    "shock treatment",
+    "keep him warm",
+    "rapid transport for shock"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "PCP: IV, 20 mL/kg bolus reassessed q500 mL, and TXA 2 g IV over 1 min with 6 rights",
+   "triggers": [
+    "start an IV",
+    "vascular access on the right arm",
+    "fluid bolus 20 mL per kilo",
+    "reassess every 500",
+    "TXA 2 grams over 1 minute",
+    "six rights"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Verbalize withholding Entonox due to shock caution",
+   "triggers": [
+    "withhold Entonox",
+    "no Entonox because of shock",
+    "Entonox is cautioned in shock",
+    "not giving nitrous",
+    "hold the Entonox",
+    "analgesia withheld"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs plus tourniquet/dressing after each move and each 500 mL",
+   "triggers": [
+    "reassess ABCs",
+    "recheck the tourniquet",
+    "check the dressing",
+    "any bleeding through",
+    "reassess after the move",
+    "ABCs again"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full vitals within 5-6 minutes; interpret the improving trend",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "trending",
+    "vitals are improving",
+    "reassess vitals",
+    "another set"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Never release or loosen the tourniquet",
+   "triggers": [
+    "do not release the tourniquet",
+    "leave the tourniquet on",
+    "tourniquet stays on",
+    "not loosening",
+    "keep it tight",
+    "no release"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification incl tourniquet time",
+   "triggers": [
+    "notify the hospital",
+    "call ahead",
+    "patch to the hospital",
+    "trauma alert",
+    "radio report",
+    "ETA"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off incl part preservation and drug times",
+   "triggers": [
+    "hand over",
+    "handoff report",
+    "report to the nurse",
+    "this is a 52 year old",
+    "transfer of care",
+    "verbal report"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes (tourniquet and TXA times documented)",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "document",
+    "chart",
+    "paperwork",
+    "write it up"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "tourniquet-release",
+   "descriptionEn": "candidate loosens, releases, converts or removes the tourniquet at any time after it is applied (including 'to check if it is still bleeding')"
+  },
+  {
+   "key": "tourniquet-time-not-noted",
+   "descriptionEn": "tourniquet applied but the candidate never states, writes or asks the time of application"
+  },
+  {
+   "key": "tourniquet-incorrect-technique",
+   "descriptionEn": "tourniquet placed distal to the wound or over the wrist / soft-tissue bridge, not tightened until the bleeding stops, or not secured (e.g. windlass left loose)"
+  },
+  {
+   "key": "bleed-left-uncontrolled",
+   "descriptionEn": "candidate has seen the spurting bleed (towel lifted / direct pressure failed) and moves on to airway, breathing, vitals, history, oxygen or packaging while it is still uncontrolled"
+  },
+  {
+   "key": "part-on-ice-direct",
+   "descriptionEn": "candidate places the amputated part directly on ice, in water, in dry ice, or warms it"
+  },
+  {
+   "key": "part-left-behind",
+   "descriptionEn": "candidate leaves the amputated part at the scene or does not transport it with the patient"
+  },
+  {
+   "key": "entonox-given-in-shock",
+   "descriptionEn": "candidate administers Entonox to this patient despite the shock caution (log drug:entonox as well)"
+  },
+  {
+   "key": "pulse-on-injured-arm",
+   "descriptionEn": "candidate assesses the pulse, BP or SpO2 on the injured left arm, or tries to start the IV in it"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the saline bolus past 500 mL or onto the next bag without reassessing the patient (BP / vitals / ABCs) in between"
+  },
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets the patient stand up or walk to the cot"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "txa",
+   "namesEn": [
+    "TXA",
+    "tranexamic acid",
+    "Cyklokapron"
+   ],
+   "doseEn": "2 g (2000 mg) IV push over 1 minute - single dose",
+   "licence": "pcp",
+   "indicationsEn": "shock secondary to blood loss after initiating the Hypovolemia protocol; injury at approximately 0957 is well inside the 3-hour window",
+   "contraindicationsEn": "known hypersensitivity or allergy to TXA; more than 3 hours after injury; patient under 12 years; isolated TBI",
+   "cautionsEn": "further hypotension if administered too quickly"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "20 mL/kg IV bolus to a maximum of 2 L, reassessing after every 500 mL; target systolic BP 90",
+   "licence": "pcp"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this scenario: Entonox is cautioned in shock (if given, report drug:entonox and entonox-given-in-shock)",
+   "licence": "both"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "hemorrhage-controlled",
+   "check": "present",
+   "event": "rapid-body-survey",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Finds life threatening hemorrhage but then does not control the bleeding"
+   }
+  },
+  {
+   "id": "bleed-not-left-uncontrolled",
+   "check": "absent",
+   "event": "bleed-left-uncontrolled",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Determines life/limb threatening conditions and fails to intervene"
+   }
+  },
+  {
+   "id": "rbs-before-load",
+   "check": "ordered",
+   "first": "rapid-body-survey",
+   "then": "move:load",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "A rapid exam or modified exam is not performed during the initial assessment or is performed in a manner insufficient to locate life/limb threatening conditions and/or"
+   }
+  },
+  {
+   "id": "tourniquet-technique",
+   "check": "absent",
+   "event": "tourniquet-incorrect-technique",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 15,
+    "errorEn": "Uses a tourniquet unnecessarily or uses an incorrect technique"
+   }
+  },
+  {
+   "id": "tourniquet-never-released",
+   "check": "absent",
+   "event": "tourniquet-release",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "tourniquet-time-skill",
+   "check": "absent",
+   "event": "tourniquet-time-not-noted",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "tourniquet-time-records",
+   "check": "absent",
+   "event": "tourniquet-time-not-noted",
+   "deduct": {
+    "itemId": "hand-off-report",
+    "weight": 3,
+    "errorEn": "Fails to provide critical information in a record or report potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "part-not-on-ice",
+   "check": "absent",
+   "event": "part-on-ice-direct",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 25,
+    "errorEn": "Does not meet the standards for wound management detrimental to patient care (e.g. does not apply a chest seal to sucking chest wound)"
+   }
+  },
+  {
+   "id": "part-transported",
+   "check": "absent",
+   "event": "part-left-behind",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 25,
+    "errorEn": "Does not meet the standards for wound management detrimental to patient care (e.g. does not apply a chest seal to sucking chest wound)"
+   }
+  },
+  {
+   "id": "entonox-withheld",
+   "check": "absent",
+   "event": "drug:entonox",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "entonox-withheld-special",
+   "check": "absent",
+   "event": "entonox-given-in-shock",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "pulse-correct-side",
+   "check": "absent",
+   "event": "pulse-on-injured-arm",
+   "deduct": {
+    "itemId": "circulation",
+    "weight": 5,
+    "errorEn": "Assesses pulses in incorrect place based on patient's presentation (e.g., only assesses carotid pulse on a conscious patient when not indicated)"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "txa-given",
+   "check": "present",
+   "event": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-after-baseline",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "txa-time-of-injury-known",
+   "check": "ordered",
+   "first": "history-of-cc",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-allergies-known",
+   "check": "ordered",
+   "first": "allergies",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-single-dose",
+   "check": "max_count",
+   "event": "drug:txa",
+   "max": 1,
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "saline-given",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-txa",
+   "check": "absent",
+   "event": "drug:txa",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "52-year-old male",
+  "cc": "near-complete amputation of the left hand just proximal to the wrist with arterial bleeding",
+  "moi": "table saw - glove caught and the arm was pulled into the blade at approximately 0957",
+  "hxcc": "direct pressure failed; tourniquet applied to the left forearm at 1012 and not released; estimated 700 mL blood loss on scene; no LOC; pain 9/10",
+  "vitals": "GCS 15, BP 96/64, pulse 122 weak regular, resps 22, skin pale cool clammy, SpO2 95% on 15 L NRB, BGL 7.8",
+  "treatments": "tourniquet at 1012, pressure dressing, supine with warmth, high-flow oxygen; PCP: IV with normal saline bolus running, TXA 2 g IV at 1025; amputated part wrapped in saline-moistened gauze, bagged, kept cool, coming with the patient",
+  "findings": "shock from blood loss; no other injuries; ETA about 12 minutes"
+ },
+ "handoffFacts": {
+  "ageSex": "52-year-old male",
+  "cc": "near-complete amputation of the left hand just proximal to the wrist, arterial bleeding uncontrolled by direct pressure",
+  "moi": "table saw - reached over the blade to clear a jam, glove caught and the arm was pulled in, at approximately 0957",
+  "hxcc": "no LOC; nothing else touched the blade; pain 9/10; estimated 700 mL blood loss on scene; tourniquet applied to the left forearm at 1012 and has not been released",
+  "initialVitals": "GCS 15, BP 96/64, pulse 122 weak regular, resps 22, skin pale cool clammy, pupils equal and reactive, SpO2 95% on 15 L NRB, BGL 7.8",
+  "finalVitals": "GCS 15, BP 102/66, pulse 114 weak regular, resps 20, skin pale cool, SpO2 96% on 15 L NRB - improving (PCP: after one litre of saline)",
+  "pmhx": "type 2 diabetes, dyslipidemia (high cholesterol)",
+  "meds": "metformin, atorvastatin",
+  "allergies": "sulfa (hives)",
+  "treatments": "tourniquet at 1012 (never released), pressure dressing over the wound, supine with warmth, high-flow oxygen; PCP: IV on the right arm, normal saline bolus reassessed every 500 mL, TXA 2 g IV at 1025; amputated part rinsed, wrapped in saline-moistened sterile gauze, bagged, kept cool, transported with the patient; Entonox withheld (shock caution)",
+  "findings": "estimated 700 mL blood loss; shock improving; distal part cool and pulseless below the tourniquet (expected); dressing dry; no other injuries"
+ },
+ "pcrFacts": {
+  "cc": "Near-complete left hand amputation proximal to wrist, arterial hemorrhage",
+  "hxcc": "Table saw caught glove while clearing jam ~0957; no LOC; pain 9/10; ~700 mL loss on scene",
+  "pmhx": "Type 2 diabetes, dyslipidemia",
+  "meds": "Metformin, atorvastatin",
+  "allergies": "Sulfa (hives)",
+  "treatments": [
+   "Direct pressure failed - tourniquet left forearm at 1012, never released",
+   "Pressure dressing over wound",
+   "Supine, warmth, high-flow O2",
+   "Part: saline-moist gauze, bagged, kept cool, transported with patient",
+   "PCP: IV, NS bolus q500 mL reassess, TXA 2 g IV at 1025"
+  ],
+  "findings": [
+   "Estimated 700 mL blood loss",
+   "Shock: BP 96/64, pulse 122, pale cool clammy",
+   "Improving after fluids: BP 102/66, pulse 114",
+   "BGL 7.8 (diabetic)"
+  ],
+  "vitals": "Set 1 (baseline, tourniquet on): GCS 15, BP 96/64, P 122 weak regular, R 22, skin pale cool clammy, PERL, SpO2 95% on 15 L NRB, BGL 7.8 mmol/L. Set 2 (en route): GCS 15, BP 102/66, P 114 weak regular, R 20, skin pale cool, PERL, SpO2 96% on 15 L NRB",
+  "times": "injury approximately 0957; tourniquet applied 1012 (never released); PCP: TXA 2 g IV 1025"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": "You have dealt with the left arm - what did the rest of your rapid body survey show? What about the head, chest, abdomen, pelvis, legs and the right arm?"
+ },
+ "trackNotes": {
+  "emrEn": "EMR: tourniquet, part preservation, shock positioning, warmth, high-flow O2 and a 15-minute clock are all EMR-level skills - no IV, no TXA. Entonox withheld (shock caution).",
+  "pcpEn": "PCP adds vascular access on the intact arm, 20 mL/kg NS bolus (max 2 L, reassess q500 mL, target SBP 90) and TXA 2 g IV over 1 minute within the 3-hour window. Functional Enquiry en route."
+ },
+ "sourcePages": "scenario tr-04 (data/practical/scenarios.json); BC Provincial Examination Guidelines (current to June 15, 2026): p.7 RTC criteria (hemorrhage requiring tourniquet application; amputation proximal to wrist; cool pale clammy skin secondary to suspected shock), p.19 Wound Care / Hemorrhage Control (direct pressure, then tourniquet proximal to the wound if direct pressure fails; note the time and do not release once applied; bandage once controlled), p.20 Preservation of Amputated Parts (rinse with cool sterile water, saline-moistened sterile gauze, plastic bag, keep cool, transport with patient; never warm, never in water, never directly on ice, never dry ice), p.54 Hypovolemia (control hemorrhage, supine, keep warm, oxygen; PCP: vascular access, fluid bolus 20 mL/kg to a maximum of 2 L reassessing every 500 mL, consider TXA in shock secondary to blood loss), p.65 Entonox (caution: shock), p.78 Tranexamic Acid (2 g / 2000 mg IV push over 1 minute; contraindicated if more than 3 hours after injury, under 12 years, isolated TBI)"
+}
