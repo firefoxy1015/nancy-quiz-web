@@ -206,9 +206,43 @@ def test_quality_veto_drops_refuted_picks():
     assert [x['itemId'] for x in kept2] == ['skill-drug-admin']
 
 
+def test_rule_row_beats_presence_row_on_a_tie():
+    s, e, c = perfect('rtc')
+    s['expected'].append({'eid': 'E98', 'itemId': 'transport', 'weight': 25, 'licence': 'both', 'actionEn': 'Ready to load within 15 minutes'})
+    e = [x for x in e if not x['name'].startswith('move:')] + [ev(18.0, 'move:lift-to-cot'), ev(18.1, 'ongoing-abc-i'), ev(19.0, 'move:load'), ev(19.1, 'ongoing-abc-i')]
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    row = next(x for x in r['rows'] if x['itemId'] == 'transport')
+    assert row['weight'] == 25 and 'ready to load in 15 minutes' in row['errorEn'] and row['source'] == 'engine'
+
+
+def test_verbalize_items_cap_at_15():
+    s, e, c = perfect()
+    s['expected'].append({'eid': 'E97', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Verbalize the maximum of 3 doses'})
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    row = next(x for x in r['rows'] if x['itemId'] == 'protocols')
+    assert row['weight'] == 15 and 'cautions' in row['errorEn']
+
+
+def test_finalize_closing_vets_the_model():
+    sheet = {'notificationFacts': {'ageSex': 'x', 'cc': 'x', 'moi': None, 'vitals': 'x'}, 'handoffFacts': {'ageSex': 'x', 'meds': 'x', 'allergies': 'x', 'moi': None}}
+    log = [{'t': 9 * M + 30000, 'role': 'candidate', 'text': "I'm priming the nitro spray and giving one spray."},
+           {'t': 18 * M, 'role': 'candidate', 'text': 'Radio to the hospital: 62-year-old male, chest pain, BP 148 over 92.'},
+           {'t': 24 * M, 'role': 'candidate', 'text': 'Hand-off: meds amlodipine, allergies none known.'}]
+    inp = {'notification': {'given': True, 't': 1080, 'missing': ['moi', 'vitals']},
+           'handoff': {'given': True, 't': 1440, 'missing': ['moi', 'meds', 'allergies', 'ageSex']},
+           'pcr': {'missingFields': [], 'mismatches': []},
+           'quality': [{'itemId': 'skill-drug-admin', 'weight': 10, 'errorEn': 'Does not verbalize they would prime the S/L spray prior to use', 'quote': 'priming', 't': 570},
+                       {'itemId': 'pulse', 'weight': 3, 'errorEn': 'Consistently fails to verbalize strength and/or rhythm two or more times', 'quote': 'pulse', 't': 1}]}
+    closing, quality = engine.finalize_closing(inp, sheet, log, True)
+    assert closing['notification']['missing'] == []                      # vitals present in the radio report; moi not applicable
+    assert closing['handoff']['missing'] == []                           # meds/allergies present; age/sex found in the adjacent radio line; moi n/a
+    assert [q['itemId'] for q in quality] == ['pulse']                   # the priming pick is refuted by the candidate's words
+    assert closing['pcr']['submitted'] is True
+
+
 def test_presence_miss_is_capped_for_protocol_items():
     s, e, c = perfect()
-    s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Verbalize the maximum doses'})
+    s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Administer Entonox for pain when indicated'})
     r = engine.score(s, 'pcp', e, 22 * M, closing=c)
     row = next(x for x in r['rows'] if x['itemId'] == 'protocols')
     assert row['weight'] == 25 and not r['autofail'] and 'Fails to administer' in row['errorEn']

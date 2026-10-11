@@ -237,25 +237,7 @@ def finish(req: FinishReq):
             + '\n\nQUALITY_CATALOGUE:\n' + json.dumps(prompts.quality_catalogue(already_top), ensure_ascii=False))
     inp, ch, status = llm.tool_call(prompts.build_finish_system(sheet, track), [{'role': 'user', 'content': user}], prompts.finish_tool(),
                                     model=llm.FINISH_MODEL, max_tokens=4000)
-    closing = {'notification': {'given': False}, 'handoff': {'given': False}, 'pcr': {'submitted': pcr_submitted, 'missingFields': [], 'mismatches': []}}
-    quality = []
-    if status == 'ok' and inp:
-        closing['notification'] = inp.get('notification', closing['notification'])
-        closing['handoff'] = inp.get('handoff', closing['handoff'])
-        # the candidate's own words beat the model's "missing" verdict
-        cand = [e for e in req.log if e.get('role') == 'candidate']
-        def report_near(tsec):
-            tms = (tsec or 0) * 1000 if (tsec or 0) < 10000 else tsec
-            near = sorted(cand, key=lambda e: abs(e.get('t', 0) - tms))[:2]
-            return ' '.join(e.get('text', '') for e in near)
-        facts = {'notification': sheet.get('notificationFacts') or {}, 'handoff': sheet.get('handoffFacts') or {}}
-        for key in ('notification', 'handoff'):
-            c = closing[key]
-            if c.get('given'):
-                c['missing'] = [m for m in engine.closing_sanity(c.get('missing'), report_near(c.get('t'))) if facts[key].get(m)]
-        quality = engine.veto_quality(quality, ' '.join(e.get('text', '') for e in cand))
-        closing['pcr'] = dict(inp.get('pcr', {}), submitted=pcr_submitted)
-        quality = inp.get('quality') or []
+    closing, quality = engine.finalize_closing(inp if status == 'ok' else None, sheet, req.log, pcr_submitted)
     form = engine.score(sheet, track, req.events, end_ms, closing=closing, quality=quality)
     # feedback
     fb_user = ('GRADING FORM:\n' + json.dumps({k: form[k] for k in ('score', 'pass', 'autofail', 'rows', 'vitalsSets', 'transport')}, ensure_ascii=False, indent=1)

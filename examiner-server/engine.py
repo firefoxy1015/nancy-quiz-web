@@ -32,6 +32,7 @@ CAPS = {'functional-enquiries': 15, 'physical-exam': 15}
 # and are enforced by sheet protocolRules, not by "did not verbalize X".
 PRESENCE_CAP = {'protocols': 25, 'skill-airway-mgmt': 25, 'skill-breathing-mgmt': 25, 'skill-cpr-aed': 25, 'skill-spinal-mgmt': 25,
                 'skill-fracture-mgmt': 25, 'skill-wound-mgmt': 25, 'skill-drug-admin': 25, 'transport': 25}
+PREFERRED_MISS_VERBALIZE = {'protocols': 'Does not rule out all the cautions of a medication'}
 PREFERRED_MISS = {   # official string to cite when an expected action was simply not done
     'protocols': 'Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g Entonox for pain)',
     'transport': 'Fails to place the patient in the correct category (Priority or Non-Priority – Medical/Trauma) at the end of the initial assessment and treats as such detrimental to patient care and/or',
@@ -346,6 +347,33 @@ def veto_quality(quality, candidate_text):
     return out
 
 
+def finalize_closing(inp, sheet, candidate_log, pcr_submitted):
+    """Turn the closing_review tool output into the engine's closing dict + vetted quality picks.
+    The candidate's own words beat the model's 'missing' verdicts; elements the sheet marks
+    as not applicable (fact is null) are never 'missing'; refuted quality picks are dropped."""
+    closing = {'notification': {'given': False}, 'handoff': {'given': False},
+               'pcr': {'submitted': pcr_submitted, 'missingFields': [], 'mismatches': []}}
+    quality = []
+    if not inp:
+        return closing, quality
+    closing['notification'] = inp.get('notification', closing['notification'])
+    closing['handoff'] = inp.get('handoff', closing['handoff'])
+    closing['pcr'] = dict(inp.get('pcr', {}), submitted=pcr_submitted)
+    cand = [e for e in candidate_log if e.get('role') == 'candidate']
+    facts = {'notification': sheet.get('notificationFacts') or {}, 'handoff': sheet.get('handoffFacts') or {}}
+
+    def report_near(tsec):
+        tms = (tsec or 0) * 1000 if (tsec or 0) < 10000 else tsec
+        near = sorted(cand, key=lambda e: abs(e.get('t', 0) - tms))[:2]
+        return ' '.join(e.get('text', '') for e in near)
+    for key in ('notification', 'handoff'):
+        c = closing[key]
+        if c.get('given'):
+            c['missing'] = [m for m in closing_sanity(c.get('missing'), report_near(c.get('t'))) if facts[key].get(m)]
+    quality = veto_quality(inp.get('quality') or [], ' '.join(e.get('text', '') for e in cand))
+    return closing, quality
+
+
 def closing_sanity(missing, report_text):
     """Drop 'missing' elements that the candidate's own report plainly contains."""
     low = ' ' + (report_text or '').lower() + ' '
@@ -373,10 +401,12 @@ class Form:
 
     def consolidate(self):
         """One deduction per item at its highest level; section caps; total."""
+        prio = {'engine': 2, 'engine-presence': 1, 'examiner-judgement': 0}
         best = {}
         for r in self.rows:
             k = r['itemId']
-            if k not in best or r['weight'] > best[k]['weight']:
+            key = (r['weight'], prio.get(r['source'], 0))
+            if k not in best or key > (best[k]['weight'], prio.get(best[k]['source'], 0)):
                 best[k] = r
         rows = sorted(best.values(), key=lambda r: -r['weight'])
         by_section = {}
@@ -476,7 +506,10 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
         it = items().get(e['itemId'])
         if it and w not in it['weights']:
             w = max([x for x in it['weights'] if x <= w] or [it['weights'][-1]])
-        form.add(e['itemId'], w, PREFERRED_MISS.get(e['itemId']), {'t': end_ms, 'quote': 'not done / not verbalized: ' + e['actionEn']})
+        if e['itemId'] in PRESENCE_CAP and e['actionEn'].lower().startswith('verbalize'):
+            w = min(w, 15)   # not saying a ceiling/rule aloud is a caution, not a failed treatment
+        form.add(e['itemId'], w, PREFERRED_MISS_VERBALIZE.get(e['itemId']) if w == 15 and e['actionEn'].lower().startswith('verbalize') else PREFERRED_MISS.get(e['itemId']),
+                 {'t': end_ms, 'quote': 'not done / not verbalized: ' + e['actionEn']}, source='engine-presence')
 
     # 2. vitals timing (Overall Call Management)
     sets = derive_vitals_sets(ev)
