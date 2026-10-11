@@ -90,6 +90,8 @@ export async function renderExaminerHub(el) {
   try { list = (await api('/api/examiner/scenarios')).scenarios; } catch (e) { err = e.message; }
   const hist = S.examinerHistory || [];
   const live = S.examinerRun && !S.examinerRun.finished ? S.examinerRun : null;
+  const mock = S.examinerMock;
+  const canMock = list.some(x => x.type === 'medical') && list.some(x => x.type === 'trauma');
   el.innerHTML = `
     <a class="back-link" href="#/practical">← ${t('Practical camp', '实操营')}</a>
     <div class="card">
@@ -105,6 +107,15 @@ export async function renderExaminerHub(el) {
     ${live ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">${ico('clock')} ${bi('A station is in progress.', '有一场考站进行中。', 'span')}
       <a class="btn" style="margin-left:auto" href="#/examiner-run/${live.id}">${t('Resume', '继续')} →</a>
       <button class="btn ghost" id="exAbandon">${t('Abandon', '放弃')}</button></div>` : ''}
+    ${mock && mock.active ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">${ico('cap')} ${bi(`Exam-day mock in progress — next: the ${mock.stage} station.`, `考试日模考进行中——下一场：${mock.stage === 'medical' ? '内科' : '创伤'}站。`, 'span')}
+      <a class="btn" style="margin-left:auto" href="#/examiner-run/${mock.ids[mock.stage]}">${t('Continue', '继续')} →</a>
+      <button class="btn ghost" id="exMockAbandon">${t('Abandon', '放弃')}</button></div>` : ''}
+    <div class="card" style="border-color:var(--accent)">
+      <h3 style="margin-top:0">${ico('cap')} ${t('Exam-day mock — one medical + one trauma', '考试日模考——1 内科 + 1 创伤')}</h3>
+      ${bi('Like the real day: one medical and one trauma station drawn at random, back to back. You need 70% on each, with no critical deduction, to pass.',
+           '和真实考试日一样：随机抽 1 个内科站 + 1 个创伤站，连考两场。每场都要 70% 以上且没有 100% 扣分项才算通过。')}
+      <div class="btn-row"><button class="btn big" id="exMockStart" ${live || (mock && mock.active) || !canMock ? 'disabled' : ''}>▶ ${t('Draw my two stations', '抽签开考')}</button></div>
+    </div>
     <div class="card">
       <h3 style="margin-top:0">${ico('film')} ${t('Choose a station', '选一个考站')}</h3>
       ${err ? `<p class="muted">${t('Examiner server unreachable:', '考官服务器连不上：')} ${esc(err)}</p>` : ''}
@@ -119,6 +130,15 @@ export async function renderExaminerHub(el) {
   el.querySelector('#exVoicePref').onchange = e => { S.examinerVoice = e.target.checked; save(); if (S.examinerVoice && TTS) speak([{ role: 'examiner', text: 'Voice mode on.' }]); };
   const ab = el.querySelector('#exAbandon');
   if (ab) ab.onclick = () => armed(ab, t('Tap again to abandon', '再点一次确认放弃'), () => { S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
+  const ms = el.querySelector('#exMockStart');
+  if (ms) ms.onclick = () => {
+    const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+    const ids = { medical: pick(list.filter(x => x.type === 'medical')).id, trauma: pick(list.filter(x => x.type === 'trauma')).id };
+    S.examinerMock = { active: true, ids, stage: 'medical', results: {} }; S.examinerRun = null; run = null; save();
+    nav('/examiner-run/' + ids.medical);
+  };
+  const ma = el.querySelector('#exMockAbandon');
+  if (ma) ma.onclick = () => armed(ma, t('Tap again to abandon the mock', '再点一次放弃模考'), () => { S.examinerMock = null; S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
 }
 // two-tap confirmation (confirm() dialogs are blocked in some embedded browsers and awkward on phones)
 function armed(btn, label, fn) {
@@ -126,6 +146,27 @@ function armed(btn, label, fn) {
   const orig = btn.textContent;
   btn.dataset.armed = '1'; btn.textContent = label; btn.classList.add('danger');
   setTimeout(() => { if (btn.dataset.armed) { delete btn.dataset.armed; btn.textContent = orig; btn.classList.remove('danger'); } }, 4000);
+}
+
+/* ---------------- exam-day mock ---------------- */
+function inMock() {
+  const m = S.examinerMock;
+  return !!(m && m.active && run && m.ids[m.stage] === run.id);
+}
+function mockPanel() {
+  const m = S.examinerMock;
+  if (!m || !run || !run.mockStage) return '';
+  if (run.mockStage === 'medical') {
+    return `<div class="card" style="border-color:var(--accent)"><h3 style="margin-top:0">${ico('cap')} ${t('Exam-day mock: station 1 of 2 done', '考试日模考：第 1 场完成')}</h3>
+      ${bi('Take a breath. The trauma station is next — on the real day you would move straight to the next room.', '缓口气，接下来是创伤站——真实考试日你会直接进下一个考场。')}
+      <div class="btn-row"><button class="btn big" id="exMockNext">${t('Next station: trauma', '下一场：创伤站')} →</button></div></div>`;
+  }
+  const r = m.results, both = r.medical && r.trauma && r.medical.pass && r.trauma.pass;
+  const cell = x => x ? `<b style="color:${x.pass ? 'var(--green)' : 'var(--red)'}">${x.autofail ? 'FAIL (critical)' : x.score + '%'}</b>` : '—';
+  return `<div class="card" style="border-color:${both ? 'var(--green)' : 'var(--red)'}"><h3 style="margin-top:0">${ico('cap')} ${t('Exam-day mock result', '考试日模考结果')}: ${both ? t('PASS', '通过') : t('NOT YET', '未通过')}</h3>
+    <table class="vitals-table"><tr><th>${t('Medical', '内科')}</th><td>${esc(r.medical ? r.medical.title : '')}</td><td>${cell(r.medical)}</td></tr>
+    <tr><th>${t('Trauma', '创伤')}</th><td>${esc(r.trauma ? r.trauma.title : '')}</td><td>${cell(r.trauma)}</td></tr></table>
+    ${both ? '' : bi('On the real exam only the failed station type is retaken (another scenario of that type).', '真实考试中只补考没过的那一类（换一个同类场景）。')}</div>`;
 }
 
 /* ---------------- run ---------------- */
@@ -151,7 +192,7 @@ function drawBrief(el) {
   el.innerHTML = `
     <a class="back-link" href="#/examiner">← ${t('AI Examiner', '考官机器人')}</a>
     <div class="card">
-      <div class="q-meta"><h2 style="font-size:1.05rem">${esc(sc.titleEn)}</h2><span class="pill ${sc.type}">${sc.type}</span></div>
+      <div class="q-meta"><h2 style="font-size:1.05rem">${esc(sc.titleEn)}</h2><span style="display:flex;gap:6px">${inMock() ? `<span class="pill gray">${ico('cap')} ${t('MOCK', '模考')} ${S.examinerMock.stage === 'medical' ? '1/2' : '2/2'}</span>` : ''}<span class="pill ${sc.type}">${sc.type}</span></span></div>
       <div class="sc-info"><div class="sc-label">Dispatch</div><p>${esc(b.dispatchEn)}</p>${b.dispatchUpdateEn ? `<p>${esc(b.dispatchUpdateEn)}</p>` : ''}</div>
       <div class="sc-info"><div class="sc-label">Equipment on scene</div><p>${(b.equipmentEn || []).map(esc).join(' · ')}</p></div>
       <div class="sc-info"><div class="sc-label">Your partner</div><p>${esc(b.partnerEn || '')}</p></div>
@@ -281,6 +322,15 @@ async function finish(el) {
   run.phase = 'result'; run.finished = true;
   const f = run.result.form;
   (S.examinerHistory = S.examinerHistory || []).push({ id: run.id, title: run.brief.scenario.titleEn, date: new Date().toISOString().slice(0, 10), score: f.score, pass: f.pass, autofail: f.autofail });
+  if (inMock()) {
+    const m = S.examinerMock;
+    m.results[m.stage] = { id: run.id, title: run.brief.scenario.titleEn, score: f.score, pass: f.pass, autofail: f.autofail };
+    run.mockStage = m.stage;
+    if (m.stage === 'trauma') {
+      m.active = false;
+      (S.examinerMockHistory = S.examinerMockHistory || []).push({ date: new Date().toISOString().slice(0, 10), results: m.results, pass: !!(m.results.medical && m.results.medical.pass && m.results.trauma.pass) });
+    }
+  }
   S.examinerRun = null; save();
   draw(el);
 }
@@ -323,7 +373,10 @@ function drawResult(el) {
       ${TTS ? `<div class="btn-row"><button class="btn ghost" id="exReadFb">🔊 ${t('Read it to me', '读给我听')}</button></div>` : ''}</div>
     <details class="acc card"><summary>${ico('cap')} ${t('Coach debrief (not part of the real exam)', '教练复盘（真实考试没有这个）')}</summary>
       <div class="acc-body"><p>${esc(zh ? fb.coachDebriefZh || fb.coachDebriefEn : fb.coachDebriefEn)}</p></div></details>
+    ${mockPanel()}
     <div class="btn-row"><a class="btn" href="#/examiner">${t('Another station', '再来一场')}</a><a class="btn ghost" href="#/practical">${t('Practical camp', '实操营')}</a></div>`;
+  const nx = el.querySelector('#exMockNext');
+  if (nx) nx.onclick = () => { S.examinerMock.stage = 'trauma'; save(); run = null; nav('/examiner-run/' + S.examinerMock.ids.trauma); };
   const rb = el.querySelector('#exReadFb');
   if (rb) rb.onclick = () => { const was = S.examinerVoice; S.examinerVoice = true; speak([{ role: 'examiner', text: fb.examinerFeedbackEn }]); S.examinerVoice = was; };
 }

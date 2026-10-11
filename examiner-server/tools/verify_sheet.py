@@ -89,6 +89,18 @@ def verify(sid):
     # gate 3: protocolRules
     known_events = set(ITEMS) | {f"drug:{d['key']}" for d in sh.get('drugs', [])} | {f'move:{m}' for m in sh.get('majorMoves', [])} \
         | {se['key'] for se in sh.get('specialEvents', [])} | {f'vitals-set-{i}-complete' for i in range(1, 5)} | {'transport:rtc', 'transport:non-rtc', 'notification', 'handoff'}
+    for kw in sh.get('keywordEvents', []):
+        if kw.get('event') not in known_events: errs.append(f'keywordEvents: unknown event {kw.get("event")!r}')
+        try: re.compile(kw.get('regex', ''))
+        except re.error as ex: errs.append(f'keywordEvents {kw.get("event")}: bad regex ({ex})')
+    rule100 = [r for r in sh.get('protocolRules', []) if (r.get('deduct') or {}).get('weight') == 100]
+    specials = {se['key'] for se in sh.get('specialEvents', [])}
+    kw_events = {kw.get('event') for kw in sh.get('keywordEvents', [])}
+    for r in rule100:
+        # a 100% rule that needs the model to report a GOOD special act is a false-auto-fail risk
+        dep = r.get('requires') if r.get('check') == 'before_each' else (r.get('event') if r.get('check') == 'present' else (r.get('first') if r.get('check') == 'ordered' else None))
+        if dep in specials and dep not in kw_events:
+            warns.append(f'rule {r.get("id")}: 100% rule depends on the model reporting special event {dep!r} - add a keywordEvents detector or lower the weight')
     for r in sh.get('protocolRules', []):
         if r.get('check') not in CHECKS: errs.append(f'rule {r.get("id")}: unknown check {r.get("check")}')
         for key in ('event', 'first', 'then', 'requires', 'after'):

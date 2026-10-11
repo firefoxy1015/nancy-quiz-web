@@ -308,6 +308,16 @@ def keyword_events(text, sheet, t, already):
             continue
         if _re.search(rx, low):
             out.append({'t': t, 'name': name, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
+    raw = (text or '').lower()
+    for kw in sheet.get('keywordEvents', []):   # sheet-declared detectors for good acts the model may miss
+        ev = kw.get('event')
+        if not ev or ev in names or any(o['name'] == ev for o in out):
+            continue
+        try:
+            if _re.search(kw['regex'], raw, _re.I):
+                out.append({'t': t, 'name': ev, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
+        except _re.error:
+            pass
     return out
 
 
