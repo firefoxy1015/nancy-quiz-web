@@ -270,10 +270,10 @@ def finish(req: FinishReq):
 import asyncio, collections, hashlib
 from fastapi.responses import Response
 
-VOICES = {   # the newer conversational ("Multilingual") voices sound least synthetic
-    'examiner': os.environ.get('EXAMINER_VOICE', 'en-US-AvaMultilingualNeural'),
-    'partner': os.environ.get('PARTNER_VOICE', 'en-US-AndrewMultilingualNeural'),
-    'patient-male': os.environ.get('PATIENT_MALE_VOICE', 'en-US-BrianMultilingualNeural'),
+VOICES = {   # chosen by the site owner 2026-10-11: examiner Clara, (male) patient Andrew
+    'examiner': os.environ.get('EXAMINER_VOICE', 'en-CA-ClaraNeural'),
+    'partner': os.environ.get('PARTNER_VOICE', 'en-CA-LiamNeural'),
+    'patient-male': os.environ.get('PATIENT_MALE_VOICE', 'en-US-AndrewMultilingualNeural'),
     'patient-female': os.environ.get('PATIENT_FEMALE_VOICE', 'en-US-EmmaMultilingualNeural'),
     'patient-child': 'en-US-AnaNeural',
 }
