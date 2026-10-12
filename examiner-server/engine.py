@@ -414,10 +414,10 @@ def trigger_events(text, sheet, track, t, already):
     return out
 
 
-DRUG_GIVE = r'\b(giv(e|ing)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
+DRUG_GIVE = r'\b(giv(e|ing)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal(e|ing)\b|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
 DRUG_NOW = r"\b(giving|administering|pushing|spraying|starting|hanging|bolusing|i'?m giving|i am giving)\b"
 DOSE = r'\b\d+(\.\d+)?\s*(mg|g|grams?|mcg|micrograms?|ml|millilit\w*|milligrams?|units?|puffs?|sprays?|l/min|litres?)\b'
-DRUG_BLOCK = r"\b(given|gave|received|can'?t|cannot|unable|shouldn'?t|scope|ruled out|(is|are) out|had|already|last dose|was|were|will|i'll|we'll|going to|gonna|need\w*|once|plan\w*|did|do you|do we|have you|any|should|can give|could give|can be given|pcp|als|advanced care|criteria|en route|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
+DRUG_BLOCK = r"\b(given|gave|received|can'?t|cannot|unable|shouldn'?t|scope|ruled out|(is|are) out|had|already|last dose|was|were|will|i'll|we'll|going to|gonna|need\w*|once|plan\w*|did|do you|do we|have you|any|should|can give|could give|can be given|pcp|als|advanced care|criteria|en route|medications?|meds|uses|history|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
 
 
 def drug_events(text, sheet, track, t, reported):
@@ -485,8 +485,8 @@ def veto_quality(quality, candidate_text):
     cand_norm = _norm(candidate_text)
     out = []
     for q in quality or []:
-        if q.get('itemId') in QUALITY_EXCLUDED or (q.get('weight') or 0) >= 100:
-            continue   # engine/closing-owned items; a model judgement never auto-fails a candidate
+        if q.get('itemId') in QUALITY_EXCLUDED or (q.get('weight') or 0) > 15:
+            continue   # engine/closing-owned items; a model judgement never fails a candidate on its own (max 15)
         err = (q.get('errorEn') or '').lower()
         if any(sub.lower() in err and _re.search(rx, low) for sub, rx in QUALITY_VETO):
             continue

@@ -45,10 +45,19 @@ def build(sheet, track):
         tr = (e.get('triggers') or [''])[0]
         by_phase.setdefault(e['phase'], []).append(f'{a} - {tr}' if tr else a)
     script, t = [], 0.3
+    interval = 5.0 if sheet['priority'] == 'rtc' else 14.0
+    last_vitals = [None]
+    CORE = 'blood pressure by auscultation, pulse rate strength and rhythm, respirations rate depth and character'
 
     def say(text, step=0.6):
         nonlocal t
+        if last_vitals[0] is not None and t - last_vitals[0] >= interval and 'vital signs' not in text.lower():
+            script.append((round(t, 2), f'Repeat vital signs: {CORE}, SpO2.'))
+            last_vitals[0] = t
+            t += 0.6
         script.append((round(t, 2), text))
+        if 'vital signs' in text.lower():
+            last_vitals[0] = t
         t += step
 
     # drugs a competent candidate gives here: required by a present-rule, or Appendix A analgesia
@@ -72,9 +81,13 @@ def build(sheet, track):
     for k in dict.fromkeys(give):
         d = drugs.get(k)
         if d and d.get('licence', 'both') in ('both', track):
-            give_lines.append(f"Contraindications ruled out, six rights checked. Giving {(d.get('namesEn') or [k])[0]} {d.get('doseEn', '')} now.")
+            nm = (d.get('namesEn') or [k])[0]
+            give_lines.append(f"I've asked about allergies, current medications and the contraindications for {nm}, and there are none. "
+                              f"Six rights checked. Giving {nm} {d.get('doseEn', '')} now.")
     for ph in PHASES:
         acts = by_phase.get(ph) or []
+        if ph == 'vitals':
+            say(f'Baseline vital signs: {CORE}.')
         if ph == 'transport':
             pr = sheet['priority']
             say(f"Transport decision: this patient is {'RTC, unstable' if pr == 'rtc' else 'non-RTC, stable'}. "
@@ -101,8 +114,9 @@ def build(sheet, track):
     say('Hand-off report to the receiving team: ' + '. '.join(flat(v) for v in hf.values() if v) + '.')
     pf = sheet.get('pcrFacts') or {}
     pcr = {k: flat(pf.get(k)) for k in ('cc', 'hxcc', 'pmhx', 'meds', 'allergies', 'vitals', 'treatments', 'findings')}
-    if not pcr['vitals']:
-        pcr['vitals'] = ' | '.join(f"set {v['set']}: BP {v.get('bp')}, P {v['pulse'].get('rate')}, R {v['resp'].get('rate')}, SpO2 {v.get('spo2')}, GCS {v['gcs'].get('total')}" for v in sheet.get('vitalsSets', []))
+    # the PCR records what the examiner gave (the vitals sets), never a paraphrase that could disagree with it
+    pcr['vitals'] = ' | '.join(f"set {v['set']}: BP {v.get('bp')}, P {v['pulse'].get('rate')}, R {v['resp'].get('rate')}, SpO2 {v.get('spo2')}, GCS {v['gcs'].get('total')}"
+                               + (f", BGL {v['bgl']}" if v.get('bgl') else '') for v in sheet.get('vitalsSets', []))
     pcr['narrative'] = flat(pf.get('narrative') or pf.get('times') or '')
     return script, pcr
 
