@@ -33,6 +33,12 @@ Per sheet:
 - `primary.rbsEn` says what the RBS reveals and that skin is given automatically during the RBS.
 - `expected[].triggers`: 4–6 phrases a candidate would actually say. Prefer multi-word phrases
   ("check his pupils", "four quadrants") over single generic words ("back", "skin").
+  **The engine credits the action itself when the candidate says a trigger** (so a model miss is never a false
+  deduction). Therefore every trigger must be something said only while DOING or verbalizing that action:
+  - never a finding the examiner gives back ("BP is 90 over 60"), never a phrase that also fits a different
+    expected action of the same item (two `breathing` actions → "count respirations" vs "auscultate the chest");
+  - never a bare word that is said all the time ("pain", "leg", "oxygen" alone); "apply oxygen", "non-rebreather" are fine;
+  - triggers of `primary` actions only count before the first full vitals set; vital-sign items are never trigger-credited.
 - `licence`: "pcp" for every `fe` item and every action that starts with "PCP:"; otherwise "both".
 - `drugs`: every drug a candidate at either level might give or must withhold in this call, with `namesEn`
   aliases, `doseEn` and `licence` (EMR drugs: oral glucose, ASA, nitroglycerin (assist), Entonox, epinephrine

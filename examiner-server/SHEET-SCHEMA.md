@@ -115,6 +115,13 @@ scenario file (`data/practical/*.json`) or the BC guidelines — never invent nu
 
   "painManagement": { "applies": true, "indicatedForPcp": true, "realignmentEvent": "skill-fracture-mgmt" },  // Appendix A logic; omit if N/A
 
+  "acceptedPriorities": ["non-rtc", "rtc"],   // optional: only when the guidelines make BOTH categories defensible
+                                              // (e.g. altered LOC = unstable, guideline p.7); packaging limit follows the choice
+  "keywordEvents": [                          // optional: engine-side detectors for GOOD special events a 100% rule needs
+    { "event": "traction-splint-applied", "regex": "\\b(traction splint|sager)\\b",
+      "blockRegex": "\\b(will|going to|after|once|prepar\\w*)\\b" }   // per sentence: planning talk is not doing
+  ],
+
   "notificationFacts": {             // the 7 official elements, as the facts the engine checks against
     "ageSex": "62-year-old male", "cc": "central chest pressure", "moi": null,
     "hxcc": "woke at 0615, 8/10, radiates to left jaw and arm", "vitals": "BP 148/92, pulse 96, resp 22, SpO2 96%",
