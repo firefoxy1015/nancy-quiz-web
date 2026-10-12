@@ -1,0 +1,765 @@
+{
+ "id": "tr-06",
+ "titleEn": "Assault With Traumatic Brain Injury - Declining GCS",
+ "type": "trauma",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios.json#tr-06",
+ "patient": {
+  "name": "Ryan Kowalski",
+  "age": 38,
+  "sex": "male",
+  "affectEn": "lying on his left side on the wet grass, moaning; blood in the hair over the right temple; vomit on the grass beside him; eyes open only when spoken to; confused and restless, keeps asking for his bag",
+  "speechEn": "confused, halting speech ('where... where is... my bag'); obeys simple commands slowly; cannot give a reliable history - police, the witness and his wife (by phone) supply the facts. After the decline (state change): eyes open only to pain, still confused words, no longer follows commands"
+ },
+ "scene": {
+  "settingEn": "Park pathway in Abbotsford at 2320 hrs. Dark - lit by police flashlights and your scene lights. Wet grass, 9 degrees C, light rain. Police have detained the assailant and secured a baseball bat as evidence; officers remain with you. The patient lies on his left side on the grass where he fell; a bystander rolled him there because he vomited. One patient.",
+  "hazardsEn": [
+   "darkness - work under scene lights and police flashlights",
+   "wet, slippery grass, 9 degrees C and light rain - cold exposure for the patient",
+   "assault scene - assailant detained by police and the bat secured as evidence; police remain with you",
+   "blood and vomit - splash exposure"
+  ],
+  "bystanders": [
+   {
+    "who": "police officer",
+    "knowsEn": "He was struck once on the right side of the head with a baseball bat about 15 minutes ago (around 2305) and fell backwards onto the grass. Witnesses say he was knocked out for roughly 2 minutes, then woke up confused and has vomited twice. No other blows were seen. The assailant is detained and the bat is secured. Can phone his wife for his medical history if asked, and can hold lights or help carry under your direction."
+   },
+   {
+    "who": "bystander (witness)",
+    "knowsEn": "Saw the single blow; he went down and was out for about 2 minutes; when he came round he was confused and vomited, so she rolled him onto his left side; he has vomited twice in total; she has not moved him since."
+   },
+   {
+    "who": "his wife (by phone through police)",
+    "knowsEn": "Nothing significant medically; he takes no medications and is NOT on any blood thinners (anticoagulants); no known allergies; no diabetes; he has been fit and well."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "spinal immobilization device (spine board or scoop stretcher)",
+   "hard cervical collars in all adult sizes",
+   "head blocks (foam rollers) and spinal straps",
+   "portable suction unit with rigid tip",
+   "OPA and NPA kits",
+   "BVM with oxygen reservoir",
+   "oxygen kit with nasal cannula and non-rebreather mask",
+   "trauma dressings and roller bandages",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "thermometer",
+   "penlight",
+   "blankets",
+   "Entonox kit",
+   "cot (stretcher)",
+   "PCP only: IV start kit with normal saline",
+   "PCP only: TXA (tranexamic acid)"
+  ]
+ },
+ "dispatchEn": "2320 hrs. Code 3 to a park pathway in Abbotsford. 38-year-old male assaulted, struck in the head with a baseball bat. Police are on scene and have detained the assailant. Trauma centre is 20 minutes away; the local hospital is 8 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: witnesses say he was knocked out and is now awake but 'not making sense'. Police confirm the scene is safe.",
+ "arrivalEn": "A police officer meets you on the dark park pathway with a flashlight: \"He took one swing from a bat to the head. We've got the guy who did it and the bat's secured - the scene's safe.\" Wet grass, light rain, 9 degrees C, your scene lights on. The patient lies on his left side on the grass with vomit beside him; a bystander stands nearby. One patient.",
+ "firstLookEn": "A 38-year-old man lying on his left side on the wet grass, moaning, with blood in the hair over his right temple and vomit on the grass beside him.",
+ "primary": {
+  "locEn": "Eyes open to your voice (AVPU = V). Confused speech: \"where... where is... my bag\". Obeys simple commands slowly. A decreased LOC. (After the decline state change: eyes open only to pain, speech still confused, localizes to pain but no longer obeys commands.)",
+  "airwayEn": "Vomit in the mouth - the airway needs SUCTION (10-15 seconds at a time in an adult) and ongoing monitoring because he may vomit again. Once suctioned: clear and patent. He is talking, gag reflex intact.",
+  "breathingEn": "Respirations 14, regular, adequate depth, equal chest rise.",
+  "circulationEn": "Radial pulse 58, strong and bounding. Slow venous bleeding from a right temporal scalp wound.",
+  "rbsEn": "6 cm boggy swelling and laceration over the right temporal scalp with slow venous bleeding that controls with direct pressure; no depressed skull fracture felt; no CSF from the ears or nose; no other injuries - chest, abdomen, pelvis, back and all four limbs unremarkable. Skin is given automatically during the RBS: pale, warm, dry. He is lying on his left side on cold, wet grass in light rain.",
+  "skinEn": "pale, warm, dry"
+ },
+ "history": {
+  "ccEn": "My head... it hurts. Where... where is my bag?",
+  "opqrst": {
+   "oEn": "(Confused) \"I don't... what happened?\" Police and the witness: struck once on the right side of the head with a baseball bat about 15 minutes ago.",
+   "pEn": "(Confused) \"I don't know.\"",
+   "qEn": "\"It just... hurts. My head.\"",
+   "rEn": "\"My head.\" Nothing else.",
+   "sEn": "\"Maybe... six?\" (unreliable - he is confused)",
+   "tEn": "(Confused) \"I don't know how long.\" Witnesses: since the blow, about 15 minutes ago."
+  },
+  "painScoreEn": "\"My head hurts... maybe six?\" - an unreliable score because of his confusion.",
+  "sample": {
+   "sEn": "\"My head hurts.\" Witnesses: knocked out for about 2 minutes, confused since, and he has vomited twice.",
+   "aEn": "Patient: \"I... don't know.\" His wife, by phone through police: no known allergies.",
+   "mEn": "Patient: \"No...\" His wife, by phone: he takes no medications.",
+   "pEn": "Patient cannot answer reliably. His wife, by phone: nothing significant, and he is NOT on any blood thinners (anticoagulants).",
+   "lEn": "\"Dinner... around seven. Two beers.\"",
+   "eEn": "Patient: \"I don't remember.\" Police and the witness: struck once on the right side of the head with a baseball bat about 15 minutes ago; fell backwards onto the grass; knocked out for roughly 2 minutes; awake but confused since; vomited twice; no other blows seen; a bystander rolled him onto his left side because he vomited."
+  },
+  "fe": {
+   "generalEn": "His wife, by phone: fit, no recent illness. (He cannot answer reliably.)",
+   "cnsEn": "\"My head hurts.\" Witnesses: knocked out for about 2 minutes, confused since; no seizure seen.",
+   "respiratoryEn": "\"No...\" - nothing reported by witnesses or his wife.",
+   "cardiovascularEn": "\"No...\" - nothing reported by witnesses or his wife.",
+   "giGuEn": "Witnesses: he has vomited twice.",
+   "integumentaryEn": "The cut on the right side of his head; nothing else.",
+   "musculoskeletalEn": "\"No...\" - no other injuries reported or found.",
+   "endocrineEn": "His wife, by phone: no diabetes.",
+   "eentEn": "\"Things looked blurry... before.\" No fluid from his ears or nose."
+  }
+ },
+ "findings": {
+  "headNeckEn": "6 cm right temporal laceration with boggy swelling; bleeding controlled by direct pressure; no depression palpable; no CSF from the ears or nose; no Battle sign or raccoon eyes yet. No midline cervical tenderness elicited, but he is an unreliable patient.",
+  "chestLungsEn": "Clear and equal at all 6 sites. No injury.",
+  "abdomenEn": "Soft. No injury.",
+  "backEn": "Checked during the roll onto the device: no injury.",
+  "lowerExtremitiesEn": "Moves both legs to command; no injury. (After the decline he no longer follows commands.)",
+  "upperExtremitiesEn": "Moves both arms; grip equal; no injury. (After the decline he no longer follows commands; he localizes to pain.)"
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline",
+   "gcs": {
+    "total": 13,
+    "e": 3,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "168/92",
+   "pulse": {
+    "rate": 58,
+    "rhythm": "",
+    "strength": "strong",
+    "rawEn": "58 strong bounding"
+   },
+   "resp": {
+    "rate": 14,
+    "depth": "",
+    "character": "",
+    "rawEn": "14 regular"
+   },
+   "skin": "pale warm dry",
+   "pupils": "UNEQUAL - R 5 mm sluggish, L 3 mm brisk",
+   "spo2": "93% RA, 98% on O2",
+   "bgl": "5.6 mmol/L",
+   "temp": "36.2 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, deteriorating",
+   "gcs": {
+    "total": 11,
+    "e": 2,
+    "v": 4,
+    "m": 5
+   },
+   "bp": "178/88",
+   "pulse": {
+    "rate": 52,
+    "rhythm": "",
+    "strength": "normal",
+    "rawEn": "52 bounding"
+   },
+   "resp": {
+    "rate": 12,
+    "depth": "",
+    "character": "",
+    "rawEn": "12, becoming irregular"
+   },
+   "skin": "pale warm dry",
+   "pupils": "R 6 mm non-reactive, L 3 mm reactive",
+   "spo2": "97% on O2 with assisted ventilations",
+   "bgl": "5.6 mmol/L",
+   "temp": "36.2 C"
+  }
+ ],
+ "stateChanges": [],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan spinal equipment, oxygen, BVM, suction, and a rapid trauma-centre transport",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate a head injury with altered LOC - plan for airway compromise and vomiting",
+   "triggers": []
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (dark, wet, cold, assault scene - police present), environment, MOI (blunt head trauma with bat), one patient",
+   "triggers": []
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection (blood and vomit)",
+   "triggers": []
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: patient on his side, moaning, blood in the hair on the right temple, vomit beside him",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "scene",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Protect from the environment: get the patient off the cold wet ground promptly and shield from rain",
+   "triggers": []
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: responds to Voice, confused - a decreased LOC",
+   "triggers": []
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Take manual c-spine control immediately - blunt head trauma with altered LOC is a NEXUS-positive indication",
+   "triggers": []
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway and SUCTION the vomit; keep the airway clear throughout",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "primary",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Consider and correctly size an airway adjunct (OPA only if the gag reflex is absent; NPA is an option if not contraindicated)",
+   "triggers": []
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing rate and adequacy; be ready to assist ventilations if the rate falls",
+   "triggers": []
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation - recognize bradycardia with a bounding pulse as a possible rising-ICP sign",
+   "triggers": []
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Complete the RBS; control scalp bleeding with direct pressure; palpate for depressed skull fracture and check ears/nose for fluid",
+   "triggers": []
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale warm dry",
+   "triggers": []
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Apply oxygen to keep SpO2 at or above 94% - TBI patients must not be allowed to desaturate",
+   "triggers": []
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Manage position: spinal precautions with the head of the bed elevated 30 degrees once packaged, and airway protection given the vomiting",
+   "triggers": []
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": []
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Packaged and ready to load within 15 minutes with the airway managed",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize the trauma-centre destination decision and notify early",
+   "triggers": []
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: head injury with altered mental status",
+   "triggers": []
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C from witnesses: number of blows, weapon, duration of LOC, vomiting, behaviour since, any lucid interval",
+   "triggers": []
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain score if obtainable; document that reliability is limited by confusion",
+   "triggers": []
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx from family/police - specifically anticoagulant use",
+   "triggers": []
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": []
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": []
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI including alcohol",
+   "triggers": []
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components and the correct total (E3 V4 M6 = 13, moderate TBI)",
+   "triggers": []
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - recognize hypertension with a widening pulse pressure",
+   "triggers": []
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse - recognize bradycardia with a bounding character",
+   "triggers": []
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character; watch for irregular patterns",
+   "triggers": []
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on",
+   "triggers": []
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - identify and act on the unequal, sluggish right pupil; repeat with every set",
+   "triggers": []
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration; keep at or above 94%",
+   "triggers": []
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - indicated with any altered LOC",
+   "triggers": []
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated after exposure on cold wet ground",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health (from witnesses/family)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (pertinent: LOC duration, headache, seizure, vision)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (vomiting is a TBI red flag)",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": []
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT (vision, ear/nose discharge)",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam: DOTS, skull depression, CSF from ears/nose, Battle sign, raccoon eyes",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam during the roll",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with motor and sensory check",
+   "triggers": []
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with grip strength comparison",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Maintain oxygenation at or above 94% and be prepared to assist ventilations without routine hyperventilation",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Elevate the head of the bed 30 degrees and loosen the hard collar after securing",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-spinal-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Spinal packaging performed correctly (collar, device, body before head, no head tape)",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway management: suction correctly (10-15 seconds adult), adjunct sized and inserted appropriately, patient positioned to protect against aspiration",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Do NOT administer TXA - contraindicated in isolated TBI",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: IV TKVO with systolic above 120, and keep BGL between 4.0 and 8.0",
+   "triggers": []
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each major move and after any change in LOC",
+   "triggers": []
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes including a repeat GCS and pupils",
+   "triggers": []
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Recognize the deteriorating GCS and pupil change and escalate care (assist ventilations, suction ready, urgent notification)",
+   "triggers": []
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Assist ventilations at an appropriate rate with the BVM connected to oxygen, confirming chest rise",
+   "triggers": []
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Urgent trauma-centre notification including GCS trend and unequal pupils",
+   "triggers": []
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with both GCS scores broken down by component",
+   "triggers": []
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes",
+   "triggers": []
+  }
+ ],
+ "specialEvents": [],
+ "drugs": [],
+ "majorMoves": [],
+ "protocolRules": [],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "",
+  "cc": "",
+  "moi": null,
+  "hxcc": "",
+  "vitals": "",
+  "treatments": "",
+  "findings": ""
+ },
+ "handoffFacts": {
+  "ageSex": "",
+  "cc": "",
+  "moi": null,
+  "hxcc": "",
+  "initialVitals": "",
+  "finalVitals": "",
+  "pmhx": "",
+  "meds": "",
+  "allergies": "",
+  "treatments": "",
+  "findings": ""
+ },
+ "pcrFacts": {
+  "cc": "Head injury with altered mental status after assault with a bat",
+  "hxcc": "Single blow to right temple ~2305, LOC approx 2 min, confused since, vomited twice; witnessed by police and bystanders",
+  "pmhx": "Nil significant; no anticoagulants (confirmed with spouse)",
+  "meds": "None",
+  "allergies": "NKA",
+  "treatments": [
+   "Suction of vomit, airway maintained",
+   "O2 titrated to SpO2 94% or above; assisted ventilations when resps fell",
+   "Manual c-spine, collar, full spinal packaging; collar loosened after securing",
+   "Head of bed elevated 30 degrees",
+   "Direct pressure to scalp laceration",
+   "PCP: IV TKVO (SBP above 120); TXA withheld - contraindicated in isolated TBI"
+  ],
+  "findings": [
+   "GCS 13 (E3V4M6) falling to 11 (E2V4M5)",
+   "Unequal pupils: R 5 mm sluggish then 6 mm non-reactive, L 3 mm reactive",
+   "Bradycardia 58 to 52 with hypertension 168/92 to 178/88 - Cushing pattern",
+   "6 cm right temporal laceration with boggy swelling; no CSF, no palpable depression"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR: spinal packaging, suction, airway adjuncts, oxygenation at or above 94%, assisted ventilations, head of bed at 30 degrees, collar loosened, serial GCS and pupils, and rapid transport. No IV, no blood-sugar correction beyond recognizing the BGL. No Functional Enquiry. TXA is not in EMR scope and remains contraindicated regardless.",
+  "pcpEn": "PCP adds IV TKVO (only if systolic is above 120 mmHg), maintenance of blood sugar between 4.0 and 8.0 mmol/L, maintenance of systolic above 120 mmHg, and the Functional Enquiry as far as the patient's confusion allows. TXA remains contraindicated."
+ },
+ "_phaseScripts": {
+  "dispatch": "Dispatch adds: witnesses say he was knocked out and is now awake but 'not making sense'. Police confirm the scene is safe.",
+  "scene": "EXAMINER SCRIPT: Dark pathway lit by police flashlights and your scene lights. Wet grass, 9 degrees C, light rain. A baseball bat has been secured by police as evidence. The patient lies on his left side on the grass where he fell; a bystander rolled him there because he vomited. One patient. Police remain with you.",
+  "primary": "ACTOR: eyes open to voice, confused speech ('where... where is... my bag'), obeys simple commands slowly. EXAMINER (give when assessed): airway - vomit in the mouth requiring SUCTION (10-15 seconds in an adult) and ongoing airway monitoring; respirations 14, adequate depth; radial pulse 58, strong and bounding. Skin: pale, warm, dry. RBS: 6 cm boggy swelling and laceration over the right temporal scalp with slow venous bleeding, no depressed skull fracture felt, no CSF from ears or nose, no other injuries. SpO2 93% RA. UNSTABLE: altered LOC with head trauma.",
+  "transport": "Decision point. Altered LOC after head trauma = UNSTABLE, RTC. Package with spinal precautions and be ready to load within 15 minutes. Destination: this patient meets trauma-centre criteria for a moderate TBI; verbalize the destination decision and notify.",
+  "history": "ACTOR is confused - use POLICE AND WITNESSES: struck once on the right side of the head with a bat about 15 minutes ago, fell backwards onto grass, unconscious for roughly 2 minutes, then awake but confused and vomited twice. No other blows seen. He cannot describe the pain reliably; when asked he says his head hurts, maybe 6/10. PMHx (from his wife by phone): none significant, no anticoagulants. Meds: none. Allergies: none known. LOI: dinner around 1900, two beers.",
+  "vitals": "Set 1: GCS 13 (E3 V4 M6 - eyes to voice, confused, obeys commands); BP 168/92; pulse 58 strong bounding; respirations 14 regular; skin pale warm dry; PUPILS - right 5 mm sluggish, left 3 mm brisk (UNEQUAL - a critical finding); SpO2 93% RA rising to 98% on oxygen; BGL 5.6 (indicated with altered LOC); temperature 36.2 (indicated - cold wet ground). Widening pulse pressure with bradycardia and unequal pupils suggests rising intracranial pressure. RTC interval 5-6 minutes and pupils MUST be repeated every set.",
+  "fe": "PCP ONLY, en route, limited by the patient's confusion. EXAMINER NOTE: no deduction for FE systems the patient cannot answer - document the limitation and obtain what you can from witnesses. Available: general - fit, no recent illness; CNS - LOC 2 minutes, confused, headache, no seizure witnessed; respiratory nil; cardiovascular nil; GI/GU - vomited twice; integumentary - scalp laceration; musculoskeletal nil; endocrine - no diabetes; EENT - blurred vision reported once, no fluid from ears.",
+  "exam": "Head-to-toe (mostly en route): head/neck - 6 cm right temporal laceration with boggy swelling, bleeding controlled by direct pressure, no depression palpable, no CSF from ears or nose, no Battle sign or raccoon eyes yet, no midline cervical tenderness elicited but he is unreliable; chest - clear and equal 6 sites; abdomen - soft; back - checked during the roll onto the device, no injury; lower extremities - moves both to command, no injury; upper extremities - moves both, grip equal, no injury.",
+  "interventions": "TBI guideline, all levels: maintain SpO2 at or above 94% (assist ventilations if respirations fail, keeping SpO2 at or above 94% - do NOT hyperventilate routinely); elevate the head of the bed 30 degrees; LOOSEN the hard collar once the patient is secured; suction as needed; dress the scalp laceration with direct pressure. Spinal packaging with the head elevated. PCP ADDITIONS: maintain blood sugar 4.0-8.0 mmol/L; maintain systolic BP above 120 mmHg; IV TKVO if systolic is above 120. TXA IS CONTRAINDICATED in isolated TBI - a candidate who gives it here commits a major protocol error.",
+  "ongoing": "Reassess ABCs, GCS and PUPILS after every move and at least every 5 minutes. Set 2 (en route, 6 minutes later): GCS 11 (E2 V4 M5 - eyes to pain now, still confused, localizes); BP 178/88; pulse 52 bounding; respirations 12 and becoming irregular; skin pale warm dry; pupils right 6 mm non-reactive, left 3 mm reactive; SpO2 97% on oxygen; BGL 5.6. He is DETERIORATING - the candidate must recognize the falling GCS, support ventilations to keep SpO2 at or above 94%, keep suction ready, and expedite transport with an urgent notification.",
+  "handoff": "Critical patient - urgent en-route notification to the trauma centre stating the GCS trend and pupil findings. Structured hand-off; PCR within 5 minutes."
+ },
+ "_handoffModelEn": "This is a 38-year-old male assaulted at approximately 2305, struck once to the right temple with a baseball bat, with about 2 minutes of loss of consciousness and two episodes of vomiting since. Chief complaint is head injury with altered mental status. On our arrival GCS was 13, eyes to voice, confused, obeying commands, with BP 168/92, pulse 58 and bounding, resps 14, SpO2 93% on room air, BGL 5.6, temperature 36.2, and an unequal right pupil at 5 millimetres and sluggish. Six minutes later he is GCS 11, eyes to pain now, BP 178/88, pulse 52, resps 12 and irregular, right pupil 6 millimetres and non-reactive - he is deteriorating with signs of rising intracranial pressure. No significant medical history, no anticoagulants, no known allergies, two beers with dinner. Treatments: airway suctioned, oxygen to keep saturations above 94 percent with ventilations now assisted, manual c-spine and full spinal packaging with the collar loosened and head of bed at 30 degrees, scalp laceration controlled with direct pressure, IV TKVO. No TXA - contraindicated in isolated head injury.",
+ "_criticalPitfallsEn": [
+  "Giving TXA for an isolated TBI - explicitly contraindicated, major protocol error 100%",
+  "No c-spine control with blunt head trauma and altered LOC - 100%",
+  "Not suctioning a vomiting patient with a decreased LOC, or leaving him unprotected against aspiration - 100% (Airway)",
+  "Not repeating pupils and GCS with every set and missing the deterioration - pupil/GCS deductions plus a major protocol failure",
+  "Routine hyperventilation, or allowing SpO2 to fall below 94% in a TBI patient - protocol error"
+ ],
+ "sourcePages": ""
+}

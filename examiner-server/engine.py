@@ -529,7 +529,11 @@ def pain_management(sheet, track, events, form):
             form.add('pain-management', 25, 'Administering Acetaminophen and Ibuprofen for pain but not Entonox', {'t': realign or 0}, name_en=name)
         elif ent is None and orals == 1:
             form.add('pain-management', 25, 'Administering one of either Acetaminophen and Ibuprofen for pain but not both and does not administer Entonox', {'t': realign or 0}, name_en=name)
-    if ent is None and realign is not None:
+    if ent is not None and realign is not None and ent > realign:
+        # Entonox was indicated before the fracture management and came only after it: the
+        # detriment the 100% line describes, at either licence level, with or without orals
+        form.add('pain-management', 100, 'Does not administer Entonox in the instance when indicated where it does cause further detriment to the patient condition (realigning a limb/performed fracture management)', {'t': realign, 'quote': 'Entonox given only after the fracture management'}, name_en=name)
+    elif ent is None and realign is not None:
         form.add('pain-management', 100, 'Does not administer Entonox in the instance when indicated where it does cause further detriment to the patient condition (realigning a limb/performed fracture management)', {'t': realign}, name_en=name)
     elif ent is None:
         form.add('pain-management', 25, 'Does not administer Entonox in the instance when it is indicated where it does not cause further detriment for the patient', {'t': 0}, name_en=name)

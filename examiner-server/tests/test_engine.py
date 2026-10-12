@@ -284,6 +284,18 @@ def test_quality_picks_filtered():
     assert [(x['itemId'], x['t']) for x in kept] == [('pulse', 4)]
 
 
+def test_late_entonox_is_100_at_every_level():
+    s, e, c = perfect()
+    s['painManagement']['applies'] = True
+    late = e + [ev(9.0, 'skill-fracture-mgmt'), ev(9.5, 'drug:entonox')]          # no orals
+    for track in ('emr', 'pcp'):
+        r = engine.score(s, track, late, 22 * M, closing=c)
+        assert r['autofail'] and any(x['itemId'] == 'pain-management' and x['weight'] == 100 for x in r['rows']), (track, r['rows'])
+    early = e + [ev(8.5, 'drug:entonox'), ev(9.0, 'skill-fracture-mgmt')]
+    r = engine.score(s, 'emr', early, 22 * M, closing=c)
+    assert not any(x['itemId'] == 'pain-management' for x in r['rows']), r['rows']
+
+
 def test_presence_miss_is_capped_for_protocol_items():
     s, e, c = perfect()
     s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Administer Entonox for pain when indicated'})
