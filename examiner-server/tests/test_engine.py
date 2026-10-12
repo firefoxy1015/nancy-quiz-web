@@ -520,6 +520,7 @@ def test_explicit_vitals_statements_are_recorded_by_the_engine():
         ['blood-pressure', 'pulse', 'pulse-oximetry', 'respirations']
     assert v("Taking a full set of vitals now.") == ['blood-pressure', 'pulse', 'respirations']
     assert v("What's the BP?") == ['blood-pressure']
-    for s in ['Do you have high blood pressure?', "I'll take vitals after the splint.", 'Any history of high blood pressure?',
+    for s in ['Initiate the SOB protocol with correct sequence: position, oxygen, auscultate, baseline vitals, then salbutamol.',
+              'Do you have high blood pressure?', "I'll take vitals after the splint.", 'Any history of high blood pressure?',
               'Is he on blood pressure medication?', 'Radio report: vitals were BP 148/92, pulse 96.', 'Gloves on, scene is safe.']:
         assert v(s) == [], (s, v(s))

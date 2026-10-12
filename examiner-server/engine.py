@@ -358,7 +358,7 @@ VITALS_WORDS = [   # (event, regex on a normalized sentence, components to infer
     ('pulse-oximetry', r'\b(spo2|sp o2|sats?|saturation|pulse ox\w*)\b', []),
 ]
 VITALS_CONTEXT = r'\b(what s|what is|whats|vital signs?|vitals|baseline|repeat\w*|recheck\w*|re check\w*|taking|checking|measuring|getting|obtaining|by auscultation|second set|set of)\b'
-VITALS_BLOCK = r"\b(do you|have you|does (he|she)|are you|any|will|i'll|we'll|going to|plan\w*|once|after (we|the)|later|before (we|the)|if|history|high blood pressure|low blood pressure|hypertension|medication\w*|meds|takes|normal for (him|her)|usually|last (bp|set)|was|were)\b"
+VITALS_BLOCK = r"\b(do you|have you|does (he|she)|are you|any|then|sequence|protocol|order|steps?|will|i'll|we'll|going to|plan\w*|once|after (we|the)|later|before (we|the)|if|history|high blood pressure|low blood pressure|hypertension|medication\w*|meds|takes|normal for (him|her)|usually|last (bp|set)|was|were)\b"
 
 
 def vitals_events(text, t, already_now):
