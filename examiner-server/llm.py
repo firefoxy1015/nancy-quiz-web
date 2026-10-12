@@ -14,12 +14,21 @@ if os.environ.get('CCVIBE_API_KEY'):
     CHANNELS.append({'name': 'cc-vibe', 'client': anthropic.Anthropic(api_key=os.environ['CCVIBE_API_KEY'],
                                                                       base_url=os.environ.get('CCVIBE_BASE_URL', 'https://cc-vibe.com'),
                                                                       max_retries=1, timeout=120.0)})
+if os.environ.get('CCVIBE_BACKUP_KEY'):   # same relay, second key: used when the first hits its daily limit
+    CHANNELS.append({'name': 'cc-vibe-backup', 'client': anthropic.Anthropic(api_key=os.environ['CCVIBE_BACKUP_KEY'],
+                                                                             base_url=os.environ.get('CCVIBE_BASE_URL', 'https://cc-vibe.com'),
+                                                                             max_retries=1, timeout=120.0)})
 if os.environ.get('ANTHROPIC_API_KEY'):
     CHANNELS.append({'name': 'anthropic', 'client': anthropic.Anthropic(max_retries=1, timeout=120.0)})
 
 MODEL = os.environ.get('EXAMINER_MODEL', 'claude-opus-5-5')
 FINISH_MODEL = os.environ.get('EXAMINER_FINISH_MODEL', MODEL)
 _dead = {}   # channel name -> unix time until which it is skipped
+
+
+def _daily(e):
+    m = str(e).lower()
+    return 'daily' in m and 'limit' in m
 
 
 def _call(fn):
@@ -32,10 +41,12 @@ def _call(fn):
         except anthropic.AuthenticationError as e:
             _dead[ch['name']] = time.time() + 600; last = e
         except anthropic.RateLimitError as e:
-            _dead[ch['name']] = time.time() + 60; last = e
+            _dead[ch['name']] = time.time() + (1800 if _daily(e) else 60); last = e
         except anthropic.APIStatusError as e:
             if e.status_code >= 500:
                 _dead[ch['name']] = time.time() + 30
+            elif _daily(e):
+                _dead[ch['name']] = time.time() + 1800   # daily quota gone: stop trying this key for half an hour
             last = e
         except anthropic.APIConnectionError as e:
             _dead[ch['name']] = time.time() + 30; last = e

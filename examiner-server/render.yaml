@@ -8,6 +8,8 @@ services:
     envVars:
       - key: CCVIBE_API_KEY
         sync: false
+      - key: CCVIBE_BACKUP_KEY
+        sync: false
       - key: CCVIBE_BASE_URL
         value: https://cc-vibe.com
       - key: EXAMINER_MODEL
