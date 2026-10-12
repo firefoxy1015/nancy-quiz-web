@@ -225,7 +225,7 @@ def turn(req: TurnReq):
     raw_events += engine.drug_events(req.text, sheet, track, t, raw_events)
     raw_events += engine.trigger_events(req.text, sheet, track, t, raw_events + req.events)
     cand_lines = [{'t': e.get('t', 0), 'text': e.get('text', '')} for e in req.log if e.get('role') == 'candidate'] + [{'t': t, 'text': req.text}]
-    events, vital_events = engine.merge_events(req.events, raw_events, cand_lines, t)
+    events, vital_events = engine.merge_events(req.events, raw_events, cand_lines, t, strict=engine.bad_act_names(sheet))
     say = _strip_vital_numbers([s for s in inp.get('say', []) if s.get('text') and not _filler(s)], vital_events)
     if vital_events:   # a pulse/BP/resp check is a defined assessment: the manual says give the value, not "what are you assessing?"
         say = [s for s in say if not (s['role'] == 'examiner' and CLARIFY.search(s['text']))]

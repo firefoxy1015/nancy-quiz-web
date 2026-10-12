@@ -456,3 +456,39 @@ def test_second_primary_100_action_of_an_item_is_capped():
     s['expected'].append({'eid': 'E98', 'itemId': 'rapid-body-survey', 'weight': 100, 'licence': 'both', 'phase': 'primary', 'actionEn': 'Shorten scene time'})
     r = engine.score(s, 'pcp', e, 22 * M, closing=c)
     assert [x['weight'] for x in r['rows'] if x['itemId'] == 'rapid-body-survey'] == [15] and not r['autofail'], r['rows']
+
+
+def test_early_pulse_check_does_not_start_a_slow_vitals_set():
+    sets = engine.derive_vitals_sets([ev(1, 'pulse'), ev(3.5, 'blood-pressure'), ev(3.8, 'pulse'), ev(4.2, 'respirations')])
+    assert sets[0]['complete'] == int(4.2 * M) and sets[0]['start'] == int(3.5 * M)
+    s, e, c = perfect()
+    e = [x for x in e if x['name'] not in engine.VITAL_ALL] + [ev(1, 'pulse'), ev(3.5, 'blood-pressure'), ev(3.8, 'pulse'), ev(4.2, 'respirations'),
+                                                             ev(9, 'blood-pressure'), ev(9.2, 'pulse'), ev(9.4, 'respirations')]
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert not any('less than 3 minutes' in x['errorEn'] for x in r['rows']), r['rows']
+
+
+def test_malformed_closing_output_and_quality_requirements():
+    closing, q = engine.finalize_closing({'notification': 'yes', 'quality': ['some string', {'itemId': 'skill-drug-admin', 'weight': 10,
+                                          'errorEn': 'Does not verbalize they would prime the S/L spray prior to use', 'quote': 'Giving ibuprofen 400 mg'}]},
+                                         sheet(), [{'t': 1, 'role': 'candidate', 'text': 'Giving ibuprofen 400 mg'}], True)
+    assert closing['notification'] == {'given': False} and q == []
+
+
+def test_present_rule_accepts_any_of_several_events():
+    rule = {'id': 'x', 'check': 'present', 'event': ['hypoglycemia-corrected', 'drug:oral-glucose']}
+    assert engine.check_rule(rule, [ev(5, 'drug:oral-glucose')], 20 * M) is None
+    assert engine.check_rule(rule, [], 20 * M) is not None
+
+
+def test_bad_act_needs_the_candidates_words():
+    sh = sheet()
+    sh['protocolRules'].append({'id': 'no-water', 'check': 'absent', 'event': 'oral-fluids-given',
+                                'deduct': {'itemId': 'overall-patient-care', 'weight': 25, 'errorEn': 'x'}})
+    strict = engine.bad_act_names(sh)
+    log = [{'t': 600000, 'text': "No, nothing to drink for now, I'm sorry."}]
+    new = [{'name': 'oral-fluids-given', 'eids': [], 'quote': 'Can I please have some water?'}]
+    out, _ = engine.merge_events([], new, log, 600000, strict=strict)
+    assert out == []
+    out, _ = engine.merge_events([], [dict(new[0], quote='Here, have a sip of water')], [{'t': 600000, 'text': 'Here, have a sip of water.'}], 600000, strict=strict)
+    assert [e['name'] for e in out] == ['oral-fluids-given']

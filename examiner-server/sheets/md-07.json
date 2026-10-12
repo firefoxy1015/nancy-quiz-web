@@ -1167,7 +1167,12 @@
   {
    "id": "hypoglycemia-corrected",
    "check": "present",
-   "event": "hypoglycemia-corrected",
+   "event": [
+    "hypoglycemia-corrected",
+    "drug:oral-glucose",
+    "drug:glucagon",
+    "drug:d10w"
+   ],
    "licence": "both",
    "deduct": {
     "itemId": "protocols",

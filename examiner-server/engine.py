@@ -131,8 +131,11 @@ def derive_vitals_sets(events):
             cur = {'start': ev['t'], 'items': {}, 'complete': None}
             sets.append(cur)
         cur['items'].setdefault(name, ev['t'])
+        if core:
+            cur.setdefault('last', {})[name] = ev['t']
         if cur['complete'] is None and all(k in cur['items'] for k in VITAL_ITEMS):
             cur['complete'] = ev['t']
+            cur['start'] = min(cur['last'][k] for k in VITAL_ITEMS)
             cur = None
     return sets
 
@@ -254,12 +257,25 @@ REPORT_RX = _re.compile(r"\b(radio|patch(ing)?|pre-?alert|notif\w*|this is (unit
 DRUG_SAME_DOSE_MS = 150000   # no BC drug repeats faster than q3 min: mentions closer together are one administration
 
 
-def merge_events(existing, new, candidate_log, now_ms):
+def bad_act_names(sheet):
+    """Events that cost points when they happen (absent / max_count / the 'then' of ordered rules)."""
+    out = set()
+    for r in sheet.get('protocolRules', []):
+        if r.get('check') in ('absent', 'max_count') and isinstance(r.get('event'), str):
+            out.add(r['event'])
+        elif r.get('check') == 'ordered':
+            out.add(r.get('then'))
+    return out
+
+
+def merge_events(existing, new, candidate_log, now_ms, strict=()):
     """Attach each newly reported event to the candidate utterance its quote came
     from (the model tends to re-list earlier actions), drop exact repeats, and
     return (accepted_events, newly_measured_vitals).
 
-    candidate_log: [{'t', 'text'}] for candidate lines, newest last (incl. current)."""
+    candidate_log: [{'t', 'text'}] for candidate lines, newest last (incl. current).
+    strict: event names that are only accepted with a quote from the candidate's own words
+    (a bad act must never be pinned on an examiner / patient line)."""
     lines = [(c['t'], _norm(c['text'])) for c in candidate_log]
     raw_by_t = {c['t']: c['text'] for c in candidate_log}
     out = []
@@ -268,8 +284,12 @@ def merge_events(existing, new, candidate_log, now_ms):
     for ev in new:
         q = _norm(ev.get('quote', ''))[:60]
         t = now_ms
+        if ev['name'] in strict and len(q) < 8:
+            continue   # a bad act needs the candidate's words as evidence
         if q and len(q) >= 8:
             hit = next((lt for lt, txt in reversed(lines) if q[:40] in txt), None)
+            if hit is None and ev['name'] in strict:
+                continue
             if hit is None:
                 # quote not from the candidate at all: keep only if it fulfils something new
                 if not (set(ev.get('eids') or []) - seen_eids) and ev['name'] in {e['name'] for e in existing}:
@@ -294,7 +314,7 @@ def merge_events(existing, new, candidate_log, now_ms):
 
 KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous in a BC practical
     ('move:load', r'\b(load(ing|ed)?\b[^.]{0,40}\b(ambulance|unit|truck|rig)|into the (ambulance|unit|truck|rig)\b|load(ing)? (him|her|them|the patient)\b|major move\W+(now\W+)?load)'),
-    ('move:lift-to-cot', r'\b(on(to)? the (cot|stretcher)|to the (cot|stretcher)|(lift\w*|transfer\w*|mov(e|ing))\b[^.]{0,30}\b(cot|stretcher)\b|straps? (are )?(secured|done up|on)|strapped (in|down))'),
+    ('move:lift-to-cot', r'\b(onto the (cot|stretcher)|on to the (cot|stretcher)|to the (cot|stretcher)|(lift\w*|transfer\w*|mov(e|ing))\b[^.]{0,30}\b(cot|stretcher)\b|straps? (are )?(secured|done up|on)|strapped (in|down))'),
     ('transport:rtc', r'(?<!non )\b(rtc|rapid transport|priority patient|load and go|unstable[, ]+(we are|we\'re) going)\b'),
     ('transport:non-rtc', r'\b(non[- ]?rtc|non[- ]?priority|stable patient|we have time)\b'),
     ('notification', r'\b(radio|patch|pre-?alert|notif(y|ication)|call(ing)? (the )?(hospital|receiving)|this is unit)\b'),
@@ -304,7 +324,7 @@ KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous
 ]
 
 
-MOVE_PLAN_RX = r"\b(will|i'll|we'll|we will|going to|gonna|plan\w*|prepar\w*|ready to|get ready|once|when we|after (we|the|splint\w*)|not|no|don'?t|won'?t|can'?t)\b"
+MOVE_PLAN_RX = r"\b(will|i'll|we'll|we will|going to|gonna|plan\w*|prepar\w*|anticipat\w*|expect\w*|consider\w*|should|would|could|might|may|need\w*|ready to|get ready|once|when we|after (we|the|splint\w*)|not|no|don'?t|won'?t|can'?t)\b"
 TRANSPORT_COND_RX = r"\b(if|would|we'd|could|unless|in case|upgrade\w*|downgrade\w*|may|might|otherwise|not)\b"
 
 
@@ -397,7 +417,7 @@ def trigger_events(text, sheet, track, t, already):
 DRUG_GIVE = r'\b(giv(e|ing)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
 DRUG_NOW = r"\b(giving|administering|pushing|spraying|starting|hanging|bolusing|i'?m giving|i am giving)\b"
 DOSE = r'\b\d+(\.\d+)?\s*(mg|g|grams?|mcg|micrograms?|ml|millilit\w*|milligrams?|units?|puffs?|sprays?|l/min|litres?)\b'
-DRUG_BLOCK = r"\b(given|gave|received|can'?t|cannot|unable|shouldn'?t|scope|ruled out|(is|are) out|had|already|last dose|was|were|will|i'll|we'll|going to|gonna|need\w*|once|plan\w*|did|do you|do we|have you|any|should|can give|could give|can be given|pcp|als|advanced care|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
+DRUG_BLOCK = r"\b(given|gave|received|can'?t|cannot|unable|shouldn'?t|scope|ruled out|(is|are) out|had|already|last dose|was|were|will|i'll|we'll|going to|gonna|need\w*|once|plan\w*|did|do you|do we|have you|any|should|can give|could give|can be given|pcp|als|advanced care|criteria|en route|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
 
 
 def drug_events(text, sheet, track, t, reported):
@@ -455,6 +475,11 @@ QUALITY_VETO = [   # (substring of the official error string, regex in the candi
 ]
 
 
+QUALITY_REQUIRES = [   # (substring of the official string, regex the candidate's words must contain for it to apply)
+    ('S/L spray', r'\b(nitro\w*|spray)\b'),
+]
+
+
 def veto_quality(quality, candidate_text):
     low = ' ' + (candidate_text or '').lower() + ' '
     cand_norm = _norm(candidate_text)
@@ -465,6 +490,8 @@ def veto_quality(quality, candidate_text):
         err = (q.get('errorEn') or '').lower()
         if any(sub.lower() in err and _re.search(rx, low) for sub, rx in QUALITY_VETO):
             continue
+        if any(sub.lower() in err and not _re.search(rx, low) for sub, rx in QUALITY_REQUIRES):
+            continue   # e.g. "prime the S/L spray" when no spray was ever used
         quote = q.get('quote') or ''
         if _re.search(r'\b(examiner|patient|partner|engine)\s*:', quote, _re.I):
             continue   # evidence must be the candidate's own words
@@ -484,9 +511,11 @@ def finalize_closing(inp, sheet, candidate_log, pcr_submitted):
     quality = []
     if not inp:
         return closing, quality
-    closing['notification'] = inp.get('notification', closing['notification'])
-    closing['handoff'] = inp.get('handoff', closing['handoff'])
-    closing['pcr'] = dict(inp.get('pcr', {}), submitted=pcr_submitted)
+    if isinstance(inp.get('notification'), dict):
+        closing['notification'] = inp['notification']
+    if isinstance(inp.get('handoff'), dict):
+        closing['handoff'] = inp['handoff']
+    closing['pcr'] = dict(inp.get('pcr') if isinstance(inp.get('pcr'), dict) else {}, submitted=pcr_submitted)
     cand = [e for e in candidate_log if e.get('role') == 'candidate']
     facts = {'notification': sheet.get('notificationFacts') or {}, 'handoff': sheet.get('handoffFacts') or {}}
 
@@ -498,7 +527,8 @@ def finalize_closing(inp, sheet, candidate_log, pcr_submitted):
         c = closing[key]
         if c.get('given'):
             c['missing'] = [m for m in closing_sanity(c.get('missing'), report_near(c.get('t'))) if facts[key].get(m)]
-    quality = veto_quality(inp.get('quality') or [], ' '.join(e.get('text', '') for e in cand))
+    picks = inp.get('quality') if isinstance(inp.get('quality'), list) else []
+    quality = veto_quality([q for q in picks if isinstance(q, dict)], ' '.join(e.get('text', '') for e in cand))
     return closing, quality
 
 
@@ -553,9 +583,10 @@ class Form:
 def check_rule(rule, events, end_ms):
     """Evaluate one protocolRule; return evidence dict if it fires, else None."""
     c = rule['check']
-    if c == 'present':
-        if first_time(events, rule['event']) is None:
-            return {'t': end_ms, 'quote': f"never recorded: {rule['event']}"}
+    if c == 'present':   # event may be a list: any one of them satisfies the rule
+        evs = rule['event'] if isinstance(rule['event'], list) else [rule['event']]
+        if all(first_time(events, x) is None for x in evs):
+            return {'t': end_ms, 'quote': f"never recorded: {' / '.join(evs)}"}
     elif c == 'absent':
         t = first_time(events, rule['event'])
         if t is not None:
@@ -667,7 +698,9 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
     # 2. vitals timing (Overall Call Management)
     sets = derive_vitals_sets(ev)
     for s in sets:
-        took = (s['complete'] if s['complete'] is not None else end_ms) - s['start']
+        if s['complete'] is None:
+            continue   # an unfinished set is a missing vital (presence rows), not a slow set
+        took = s['complete'] - s['start']
         if took > VITALS_SET_MAX_MS:
             form.add('overall-call-management', 15, 'Does not complete a set of vital signs in less than 3 minutes and/or', {'t': s['start'], 'quote': f'set took {took/60000:.1f} min'})
             break

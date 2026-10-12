@@ -7,7 +7,7 @@ action the model cannot map, is a sheet bug (or a prompt bug).
 Usage: python examiner-server/tools/e2e_synthetic.py md-02 tr-01 ... [--track pcp|emr|both] [--base URL]
 Pass: score >= 80 and no auto-fail. Spends real model calls (~20 per sheet per track).
 """
-import argparse, io, json, os, sys, time, urllib.request
+import argparse, io, json, os, re, sys, time, urllib.request
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -60,6 +60,14 @@ def build(sheet, track):
     if pm.get('applies'):
         give = ['entonox'] + list(pm.get('oralsIndicated', ['acetaminophen', 'ibuprofen'])) + give
     drugs = {d['key']: d for d in sheet.get('drugs', [])}
+    specials = {x['key']: x for x in sheet.get('specialEvents', [])}
+    good_lines = []
+    for r in sheet.get('protocolRules', []):
+        evs = r.get('event') if isinstance(r.get('event'), list) else [r.get('event')]
+        if r.get('check') == 'present' and r.get('licence', 'both') in ('both', track) and evs[0] in specials:
+            d = specials[evs[0]].get('descriptionEn') or evs[0].replace('-', ' ')
+            d = re.sub(r'^(the )?candidate (verbali[sz]es|states|says|confirms|performs|does)?\s*', '', d, flags=re.I)
+            good_lines.append('Verbalizing: ' + d.rstrip('. ') + '.')
     give_lines = []
     for k in dict.fromkeys(give):
         d = drugs.get(k)
@@ -74,6 +82,8 @@ def build(sheet, track):
             continue
         if ph == 'interventions':
             for line in give_lines:      # analgesia before any splinting/realignment (Appendix A)
+                say(line)
+            for line in good_lines:      # good acts a present-rule needs (e.g. "chest rise confirmed")
                 say(line)
             for i in range(0, len(acts), CHUNK):
                 say('. '.join(acts[i:i + CHUNK]) + '.')
@@ -105,7 +115,10 @@ def run(base, sid, track, verbose):
     t0 = time.time()
     for minute, text in script:
         tms = int(minute * 60000)
-        r = post(base, '/api/examiner/turn', {'scenarioId': sid, 'track': track, 'elapsedMs': tms, 'text': text, 'log': log, 'events': events, 'fired': fired})
+        body = {'scenarioId': sid, 'track': track, 'elapsedMs': tms, 'text': text, 'log': log, 'events': events, 'fired': fired}
+        r = post(base, '/api/examiner/turn', body)
+        if any(str(f).startswith('model-') for f in r.get('flags', [])):
+            r = post(base, '/api/examiner/turn', body)   # "Please repeat that." - the candidate says it again
         log.append({'t': tms, 'role': 'candidate', 'text': text})
         for s in r['say']:
             log.append({'t': tms, 'role': s['role'], 'text': s['text']})

@@ -114,12 +114,16 @@ def verify(sid):
     for r in rule100:
         # a 100% rule that needs the model to report a GOOD special act is a false-auto-fail risk
         dep = r.get('requires') if r.get('check') == 'before_each' else (r.get('event') if r.get('check') == 'present' else (r.get('first') if r.get('check') == 'ordered' else None))
+        if isinstance(dep, list):   # present-any: risky only if every alternative is a model-only special
+            dep = None if any(x not in specials or x in kw_events for x in dep) else dep[0]
         if dep in specials and dep not in kw_events:
             warns.append(f'rule {r.get("id")}: 100% rule depends on the model reporting special event {dep!r} - add a keywordEvents detector or lower the weight')
     for r in sh.get('protocolRules', []):
         if r.get('check') not in CHECKS: errs.append(f'rule {r.get("id")}: unknown check {r.get("check")}')
         for key in ('event', 'first', 'then', 'requires', 'after'):
-            if key in r and r[key] not in known_events: errs.append(f'rule {r.get("id")}: unknown event {r[key]!r} in {key}')
+            vals = r[key] if (key == 'event' and r.get('check') == 'present' and isinstance(r.get(key), list)) else [r.get(key)]
+            for v in vals:
+                if key in r and v not in known_events: errs.append(f'rule {r.get("id")}: unknown event {v!r} in {key}')
         d = r.get('deduct') or {}
         it = ITEMS.get(d.get('itemId'))
         if not it: errs.append(f'rule {r.get("id")}: deduct.itemId unknown'); continue
