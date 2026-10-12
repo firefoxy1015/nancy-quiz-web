@@ -152,12 +152,13 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 
 | 步骤 | 规则 | 官方依据 |
 |---|---|---|
-| 1 期望动作缺失 | 每个 `expected` 没有对应事件（eid 或同 itemId）→ 按其 weight 扣；**协议/技能/转运类封顶 25**（`PRESENCE_CAP`），100 只由规则触发；`overall-call-management / overall-patient-care / notification / hand-off / documentation` 不按缺失扣（分别由收尾评审和模型判断） | 评分表各项"Fails to…" |
-| 2 体征组计时 | 一组（BP+脉搏+呼吸）>3 分钟 → OCM 15；两组间隔：危重 >9 分钟 15 / 7-8 分钟 10，稳定 >19 / 17-18 | p.35 注 |
-| 3 转运 | 无判定或判错 → 25；打包（`move:load` 或 `lift-to-cot`）超 15/30 分钟 → 25 | p.19 |
+| 0 引擎自己的识别（不靠模型） | ① 剧本 `triggers` 原话 → 记该期望动作（初检类只在第一组完整体征之前算；体征项不靠原话记；通报/交接句不给分）；② 初检通用词（airway/breathing/pulse/RBS/skin/c-spine）→ 记该项名；③ 关键词兜底：装车/上担架（计划句、否定句不算）、RTC/非 RTC（"non-RTC"、条件句不算）、通报、交接、颈托、ABC-I 复评（可重复）；④ 给药兜底：说"giving X"或"X 剂量"即记，问句/否定/计划/病史/"PCP 可以给"/剂量换算不算 | 模型漏记好动作绝不能变成误判不及格 |
+| 1 期望动作缺失 | 每个 `expected` 没有对应事件（eid；或同 itemId 且该项 <100、封顶类、或该项只有这一条动作）→ 按其 weight 扣；**协议/技能/转运类封顶 25**（`PRESENCE_CAP`）；**100 只给该项的核心初检动作**（同项第二条 100 动作、或非初检阶段的 100 动作，缺失封顶 15）；`overall-call-management / overall-patient-care / notification / hand-off / documentation / transport` 不按缺失扣；给药只算"药物相关"的协议动作已做 | 评分表各项"Fails to…" |
+| 2 体征组计时 | 一组（BP+脉搏+呼吸）>3 分钟 → OCM 15；两组间隔：危重 >9 分钟 15 / 7-9 分钟 10，稳定 >19 / 17-19 | p.35 注 |
+| 3 转运 | 无判定或判错 → 25；打包（`lift-to-cot` 与 `load` 取较早，即"上担架绑好=可装车"）超 15/30 分钟 → 25；剧本可设 `packagingFromEvent`（心跳骤停从 `state:rosc` 起算；没恢复自主循环就不判） | p.19 |
 | 4 持续复评 | 每个 `move:*` 后 3 分钟内无 `ongoing-abc-i` → 15（场景结束前 60 秒内的动作豁免）；从未复评 → 15 | p.37 |
 | 5 剧本规则 | `protocolRules` 逐条 | 剧本 |
-| 6 附录 A | PCP：给了口服未给 Entonox 25；只给 Entonox 10；复位后才给 Entonox 100…；EMR：该给 Entonox 未给且已复位 100 | p.39 |
+| 6 附录 A | **两个级别相同**（口服对乙酰氨基酚/布洛芬镇痛属 EMR 范围，考纲 p.58/68 只有退热标 "PCP:"）：给了口服未给 Entonox 25；只给 Entonox 10；复位后才给 Entonox 100…；剧本 `oralsIndicated` 只列没禁忌的口服药（如抗凝 → 只列对乙酰氨基酚） | p.39 |
 | 7 收尾 | 通报缺失 5（危重）/3；交接缺关键要素 3、缺 ≥5 项 5；PCR 未交 5、缺 ≥3 字段或矛盾 3、缺 1-2 字段 1 | p.38 |
 | 8 模型主观项 | 只接受 rubric 原句 + 合法权重；不会抬高引擎已定档次 | |
 | 汇总 | 每项取最高一档；系统问诊、体检各封顶 15；任一 100 → autofail（score 0，场景仍走完） | p.9, p.26-27 |
@@ -181,11 +182,14 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 
 ## 9. 测试
 
-- 单元：`python -m pytest -q examiner-server/tests/test_engine.py`（用绝对路径，cwd 在 Windows 下不稳）。12 个用例：完美脚本 100 分、EMR 忽略 PCP 项、漏颈椎自动不及格、体征超时与大间隔、RTC 打包超时/分级错、动作后未复评、附录 A、收尾扣分、主观项只认原句、"rate only"、事件去重、协议缺失封顶。
+- 单元：`python -m pytest -q examiner-server/tests/test_engine.py`（用绝对路径，cwd 在 Windows 下不稳）。现 39 个用例（2026-10-11），最早 12 个：完美脚本 100 分、EMR 忽略 PCP 项、漏颈椎自动不及格、体征超时与大间隔、RTC 打包超时/分级错、动作后未复评、附录 A、收尾扣分、主观项只认原句、"rate only"、事件去重、协议缺失封顶。
 - 端到端：`python examiner-server/tools/e2e_candidate.py md-02 pcp`（本地服务需先起：`$env:CCVIBE_API_KEY='…'; uvicorn main:app --port 8787`）。第一次跑发现并修掉了 3 个真问题：模型重报旧事件（→ `merge_events`）、"没口述上限"被当 100（→ `PRESENCE_CAP`）、收尾评审把"不完整"当"缺失"（→ 提示词）。
 - 浏览器：本地 `.claude/launch.json` 的 `bcprep` 预览（端口 8765），已验证 hub → brief → live（一轮真实对话）→ 两步确认 → PCR → result。
 
-**每次改引擎或提示词后，三样都要跑。**
+- 完美考生验收：`python examiner-server/tools/e2e_synthetic.py <ids…> --track both`：按剧本自己的期望动作（动作原文 + 第一条 trigger，每句 3 个）生成考生，过线 ≥80 且无自动不及格。新剧本必须过这一关；可开 4 个进程并行（不同剧本）。
+- 干净基线：`e2e_candidate.py md-02:clean pcp` 须 ≥85（现 100）；故意缺陷版 `e2e_candidate.py md-02 pcp` 须不及格且扣到埋的缺陷（现 32 分）。
+
+**每次改引擎或提示词后，这几样都要跑。**
 
 ---
 
@@ -203,9 +207,9 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 
 ### P1 收尾（接手先做）
 - [x] E2E 五轮迭代已做完（2026-10-11）：事件不再重报（277→51）、体征不重复播报（55→14 行）、协议缺失封顶 25/口述类 15、同句三项体征算一组、动作同句复评算数、打包/RTC/通报/交接关键词兜底、交接"缺失"以考生原话+剧本事实为准、被原话否定的主观扣分剔除（`finalize_closing`）、规则行与"没做"行同分时取规则行、给药即视为协议已启动。第五轮：17 轮 149 秒、51 事件、得分 2 且无自动不及格，剩余扣分全部是脚本故意留的缺陷。
-- [ ] **写一份"干净"的 E2E 脚本**（15 分钟内打包、两组体征间隔 ≤6 分钟、做 FE 和体检、PCR 与交接一致），作为回归基线：应得 ≥85 分；现有 `e2e_candidate.py` 的脚本是故意有缺陷的。
+- [x] 干净 E2E 基线 `md-02:clean`（100 分）。
 - [ ] 教练复盘偶尔编造不存在的协议要求（例："给 ASA 前必须测血糖"）；已在提示词里限制为只谈评分表里的项，若仍出现改为把 `expected[].actionEn` 清单显式传给反馈调用并要求逐条引用。
-- [ ] 模型偶尔漏记明显动作（例：说了 "Gloves and eye protection on" 没给 E04）。目前靠"同 itemId 已有事件则不扣"兜底（只对 weight<100 生效）。可做：基于 `expected[].triggers` 的本地关键词匹配（仅 weight ≤15 的项，避免误给高权重分）。
+- [x] 模型漏记明显动作 → 引擎按剧本 `triggers` 原话自己记（§7 第 0 行）。
 - [ ] 模型回话里的 "Noted." 过多；患者答史一次吐六个问题的答案（真实患者会一个个答）。提示词微调。
 - [x] 速度实测（`tools/speed_probe.py`，2026-10-11）：Opus 5.5 每轮约 9 秒，effort default 和 low 一样（cc-vibe 多半剥掉了 effort）；**Sonnet 5.5 反而慢（20-22 秒）且无视"只报最新一句"把全部旧动作重报**——结论：逐轮也用 Opus 5.5，不换 Sonnet。延迟主要来自输出 token（约 450）；下一步可做：`events[].key` 改为可选以减少输出、或流式（`eager_input_streaming`）边生成边播报 `say`。
 - [ ] 收尾评审偶尔把"PCR 漏了一个细节"报成 mismatch（应为 1% 轻微缺陷而非 3% 矛盾）；已在提示词里写明，若仍出现改为引擎只接受含 "vs" 对比的条目。
@@ -215,9 +219,13 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 - **tr-02 要上骨盆带**：考纲 p.24「高风险机制 + 任一条（心率 >100 等）」即适应证，不要求骨盆不稳定；该车祸为驾驶侧 T 字撞击、乘员侧凹进 0.4 m（p.7 高风险），心率 124 → 适应证成立。新增期望动作「打包前上骨盆带、不翻身」fracture management 25%。
 - **意识改变 = 不稳定**（考纲 p.7）：md-07、md-08 场景写的是非 RTC，用 `acceptedPriorities` 两种分级都接受，打包时限跟考生选的分级走。以后遇到场景与考纲 p.7 冲突的，一律这样处理。
 
+### 按官方改了、待用户确认的口径（2026-10-11）
+- **口服对乙酰氨基酚、布洛芬镇痛属 EMR 范围**：考纲（2026-06-15 版）p.58/p.68 两药的镇痛用法都没有 "PCP:" 标记，只有退热（Pyrexia）标 "PCP:"；EMR 专属场景原文也这么写。所以：tr-05/tr-08 删掉"EMR 给口服药=100"的守卫；附录 A 两级别同样适用；练习模式 `scenarios.json` 里 tr-01/05/08 的"EMR 仅 Entonox"同步改正（中英文）。
+- **两组体征间隔**：评分标准 p.35 把危重 7-8 分钟、稳定 17-18 分钟定为"中度延误"，考纲 p.27 写"vital signs q 5 minutes"。20 场 EMR 专属场景原文把 7-8 / 17-18 当成目标（考生照做会被扣 10%），已改成"5-6 分钟内 / 15 分钟内"（中英文共 86 处）。
+
 ### P2 内容
-- [ ] 剩余 33 场剧本（按 §5.1 管线，每代理 1 份；优先通用池 16 场，再 EMR 专属 20 场）。
-- [ ] 抽签两场模考（复用 `S.practicalMock` 的思路：随机 1 内科 + 1 创伤，连考，各自成绩）。
+- [x] 36 场剧本全部写完（通用 16 + EMR 专属 20，2026-10-11；EMR 专属 20 场由 7 个 Opus 代理并行写，每代理 2-3 份约 40 万 token / 25-35 分钟）。
+- [x] 考试日模考（1 内科 + 1 创伤）。
 - [ ] 结果页"和自评模式对比"、错题趋势。
 
 ### P3 打磨
