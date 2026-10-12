@@ -634,3 +634,10 @@ details.acc.passage .vitals-table th { width: 38%; background: var(--surface); }
 .ex-mic { padding: 0 14px; font-size: 1.15rem; }
 .ex-mic.listening { background: var(--red-soft); border-color: var(--red); color: var(--red); animation: exPulse 1s ease-in-out infinite; }
 @keyframes exPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(168, 50, 43, .35); } 50% { box-shadow: 0 0 0 8px rgba(168, 50, 43, 0); } }
+.ex-conv { display: flex; align-items: center; gap: 8px; padding: 9px 12px; margin: 0 0 8px; border-radius: var(--radius-sm); font-size: .88rem; font-weight: 600; background: var(--bg-tint); color: var(--ink-2); border: 1px solid var(--line); }
+.ex-conv.listening { background: var(--accent-soft); color: var(--accent-ink); border-color: var(--accent); }
+.ex-conv.speaking { background: var(--yellow-soft); color: var(--yellow); border-color: var(--yellow); }
+.ex-conv-dot { width: 9px; height: 9px; border-radius: 50%; background: currentColor; flex: none; }
+.ex-conv.listening .ex-conv-dot { animation: exPulse 1s ease-in-out infinite; }
+.ex-conv.thinking .ex-conv-dot { animation: exBlink 1s steps(2) infinite; }
+@keyframes exBlink { 50% { opacity: .2; } }

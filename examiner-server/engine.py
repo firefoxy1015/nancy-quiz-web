@@ -13,7 +13,7 @@ Event names:
     "transport:rtc" | "transport:non-rtc", special event keys from the sheet,
     and engine-derived "vitals-set-<n>-complete".
 """
-import io, json, os
+import io, json, os, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RUBRIC_PATH = os.path.join(ROOT, 'data', 'practical', 'rubric.json')
@@ -197,49 +197,45 @@ def due_state_changes(sheet, events, elapsed, fired):
     return out
 
 
+def _bp_spoken(bp):
+    return re.sub(r'\s*/\s*', ' over ', str(bp or '')).strip()
+
+
 def format_vital(vset, name, components):
-    """Compose the examiner's reply for one requested vital, giving only what
-    was asked for (the manual: candidate reports 'pulse 64' -> 'rate only')."""
+    """The examiner's reply for one requested vital, giving only what was asked for
+    (manual: candidate reports "pulse 64" -> rate only), phrased the way it is said aloud."""
     comps = set(c.lower() for c in (components or []))
     if name == 'blood-pressure':
-        return f"BP {vset['bp']}."
+        return f"BP's {_bp_spoken(vset['bp'])}."
     if name == 'pulse':
         p = vset['pulse']
-        parts = []
-        if not comps or 'rate' in comps:
-            parts.append(f"rate {p['rate']}")
-        if 'rhythm' in comps:
-            parts.append(p.get('rhythm', ''))
-        if 'strength' in comps:
-            parts.append(p.get('strength', ''))
-        if comps and not ({'rhythm', 'strength'} & comps):
-            return f"Pulse: rate {p['rate']} — rate only."
-        return 'Pulse: ' + ', '.join(x for x in parts if x) + '.'
+        extra = []
+        if 'rhythm' in comps and p.get('rhythm'):
+            extra.append(p['rhythm'])
+        if 'strength' in comps and p.get('strength'):
+            extra.append(p['strength'] if p['strength'] not in ('normal',) else 'normal strength')
+        return f"Pulse is {p['rate']}" + (', ' + ' and '.join(extra) if extra else '') + '.'
     if name == 'respirations':
         r = vset['resp']
-        parts = []
-        if not comps or 'rate' in comps:
-            parts.append(f"rate {r['rate']}")
-        if 'depth' in comps:
-            parts.append(r.get('depth', ''))
-        if 'character' in comps or 'rhythm' in comps or 'quality' in comps:
-            parts.append(r.get('character', ''))
-        if comps and not ({'depth', 'character', 'rhythm', 'quality'} & comps):
-            return f"Respirations: rate {r['rate']} — rate only."
-        return 'Respirations: ' + ', '.join(x for x in parts if x) + '.'
+        extra = []
+        if 'depth' in comps and r.get('depth'):
+            extra.append(r['depth'])
+        if comps & {'character', 'rhythm', 'quality', 'effort'} and r.get('character'):
+            extra.append(r['character'])
+        return f"Resps are {r['rate']}" + (', ' + ' and '.join(extra) if extra else '') + '.'
     if name == 'gcs':
         g = vset['gcs']
-        return f"GCS {g['total']} (E{g['e']} V{g['v']} M{g['m']})." if g.get('e') else f"GCS {g['total']}."
+        return f"GCS is {g['total']}. Eyes {g['e']}, verbal {g['v']}, motor {g['m']}." if g.get('e') else f"GCS is {g['total']}."
     if name == 'skin-vitals':
-        return f"Skin: {vset['skin']}."
+        return f"Skin's {vset['skin']}."
     if name == 'pupils':
-        return f"Pupils: {vset['pupils']}."
+        return f"Pupils are {vset['pupils']}."
     if name == 'pulse-oximetry':
-        return f"SpO2 {vset['spo2']}."
+        return f"SpO2 is {vset['spo2']}."
     if name == 'blood-glucose':
-        return f"BGL {vset['bgl']}." if vset.get('bgl') else 'BGL: not indicated in this simulation — no reading available.'
+        return f"Blood sugar is {vset['bgl']}." if vset.get('bgl') else "There's no glucose reading in this scenario."
     if name == 'temperature':
-        return f"Temperature {vset['temp']}." if vset.get('temp') else 'Temperature: not available in this simulation.'
+        return f"Temp is {vset['temp']}." if vset.get('temp') else "There's no temperature in this scenario."
     return ''
 
 

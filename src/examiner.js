@@ -1,7 +1,7 @@
 // AI Examiner — a simulated EMALB practical station: dispatch → live call → PCR → grading form.
 // The browser owns the run (crash-safe in localStorage); the server owns the sheet, the model and the scoring.
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=21';
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=23';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}
@@ -25,42 +25,186 @@ let run = null;
 const persist = () => { S.examinerRun = run; save(); };
 
 /* ---------------- voice ---------------- */
+// Hands-free conversation: listen → (1.7 s of silence) → send → examiner thinks → examiner speaks → listen again.
+// The microphone is closed while the examiner speaks so the synthetic voice is never transcribed as the candidate.
 const voiceOn = () => !!S.examinerVoice;
-let voice = null;
-function pickVoice() {
-  if (!TTS) return null;
-  const vs = speechSynthesis.getVoices();
-  return vs.find(v => /en-CA/i.test(v.lang)) || vs.find(v => /^en-(US|GB|AU)/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+const handsFree = () => voiceOn() && !!SR && S.examinerHandsFree !== false;
+const patientSex = () => (run && run.brief && run.brief.scenario && run.brief.scenario.patientSex) || '';
+// --- neural voices (server) ---
+let actx = null, curSrc = null, speakToken = 0, speaking = false;
+function audioUnlock() {   // call inside a tap: lets later replies play without another tap (iOS/Android autoplay rules)
+  try {
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    if (actx.state === 'suspended') actx.resume();
+    const b = actx.createBuffer(1, 1, 22050), src = actx.createBufferSource();
+    src.buffer = b; src.connect(actx.destination); src.start(0);
+  } catch (e) { actx = null; }
 }
-if (TTS) speechSynthesis.onvoiceschanged = () => { voice = pickVoice(); };
-function speak(lines) {
-  if (!voiceOn() || !TTS) return;
-  if (!voice) voice = pickVoice();
-  for (const l of lines) {
-    const u = new SpeechSynthesisUtterance(l.text);
-    u.lang = 'en-CA'; u.rate = 1; u.pitch = l.role === 'patient' ? 0.85 : l.role === 'partner' ? 1.15 : 1;
-    if (voice) u.voice = voice;
-    speechSynthesis.speak(u);
+async function fetchVoice(line) {
+  const r = await fetch(API + '/api/examiner/tts', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Device': deviceId() },
+    body: JSON.stringify({ text: line.text, role: line.role, sex: patientSex() }) });
+  if (!r.ok) throw new Error('tts ' + r.status);
+  const buf = await r.arrayBuffer();
+  return await new Promise((ok, bad) => actx.decodeAudioData(buf, ok, bad));
+}
+function playBuffer(ab) {
+  return new Promise(res => {
+    let done = false;
+    const end = () => { if (done) return; done = true; clearTimeout(guard); if (curSrc === src) curSrc = null; res(); };
+    const src = actx.createBufferSource();
+    src.buffer = ab; src.connect(actx.destination);
+    src.onended = end;
+    const guard = setTimeout(end, ab.duration * 1000 + 1500);   // never let a missing onended stall the conversation
+    curSrc = src;
+    try { src.start(0); } catch (e) { end(); }
+  });
+}
+// --- browser voices (fallback): a different voice per role where the device has them ---
+const FEMALE = /(zira|linda|clara|jenny|aria|samantha|karen|moira|tessa|victoria|allison|ava|susan|serena|fiona|catherine|heather|natasha|libby|sonia|female|woman)/i;
+const MALE = /(david|mark|richard|guy|liam|davis|daniel|alex|fred|tom|aaron|eric|christopher|ryan|thomas|william|male|\bman\b)/i;
+const vscore = v => (/natural|neural|online|premium|enhanced|google/i.test(v.name) ? 10 : 0) + (/en-CA/i.test(v.lang) ? 3 : /^en-(US|GB|AU)/i.test(v.lang) ? 2 : 0);
+let roleVoices = null;
+function browserVoices() {
+  if (roleVoices || !TTS) return roleVoices;
+  const vs = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang)).sort((x, y) => vscore(y) - vscore(x));
+  if (!vs.length) return null;
+  const examiner = vs[0];
+  const male = /^m/i.test(patientSex()) || !/^f/i.test(patientSex());
+  const patient = vs.find(v => v !== examiner && (male ? MALE : FEMALE).test(v.name)) || vs.find(v => v !== examiner) || examiner;
+  const partner = vs.find(v => v !== examiner && v !== patient) || examiner;
+  roleVoices = { examiner, patient, partner };
+  return roleVoices;
+}
+if (TTS) speechSynthesis.onvoiceschanged = () => { roleVoices = null; };
+const sentences = text => (String(text).match(/[^.!?;]+[.!?;]*|\S+/g) || [String(text)]).map(x => x.trim()).filter(Boolean);
+function browserSpeak(lines, token) {
+  if (!TTS) return Promise.resolve();
+  const rv = browserVoices() || {};
+  return new Promise(resolve => {
+    const parts = [];
+    for (const l of lines) for (const c of sentences(l.text)) parts.push({ role: l.role, text: c });   // short chunks: long utterances get cut off in Chrome
+    if (!parts.length) { resolve(); return; }
+    let left = parts.length, done = false;
+    const finish = () => { if (done) return; done = true; clearTimeout(guard); resolve(); };
+    const guard = setTimeout(finish, parts.reduce((n, x) => n + 700 + x.text.length * 80, 3000));   // onend is unreliable on some browsers
+    for (const x of parts) {
+      if (token !== speakToken) { finish(); return; }
+      const u = new SpeechSynthesisUtterance(x.text);
+      u.lang = 'en-CA'; u.rate = x.role === 'patient' ? 0.95 : 1.02;
+      const v = rv[x.role] || rv.examiner; if (v) u.voice = v;
+      if (rv.patient === rv.examiner && x.role === 'patient') u.pitch = 0.85;   // only one voice on this device
+      u.onend = u.onerror = () => { if (--left <= 0) finish(); };
+      speechSynthesis.speak(u);
+    }
+  });
+}
+function speak(lines, force) {
+  if ((!voiceOn() && !force) || !lines.length) return Promise.resolve();
+  const token = ++speakToken;
+  speaking = true;
+  const done = () => { if (token === speakToken) speaking = false; };
+  if (S.examinerNeural !== false && actx && actx.state === 'running') {   // a context the browser has not unlocked plays nothing: use device voices
+    return (async () => {
+      const bufs = lines.map(l => fetchVoice(l).catch(() => null));   // all lines synthesised in parallel, played in order
+      for (let i = 0; i < lines.length; i++) {
+        const b = await bufs[i];
+        if (token !== speakToken) break;
+        if (b) await playBuffer(b); else await browserSpeak([lines[i]], token);
+      }
+      done();
+    })();
   }
+  return browserSpeak(lines, token).then(done);
 }
-const hush = () => { if (TTS) speechSynthesis.cancel(); };
+function hush() {
+  speakToken++; speaking = false;
+  if (curSrc) { try { curSrc.stop(); } catch (e) {} curSrc = null; }
+  if (TTS) speechSynthesis.cancel();
+}
+
+const SILENCE_MS = 1700, MAX_UTTER_MS = 45000;
+const conv = { state: 'off', rec: null, prev: '', sess: '', silenceT: null, maxT: null };
+function convStatus(el) {
+  const box = el && el.querySelector('#exConv');
+  const mic = el && el.querySelector('#exMic');
+  const map = {
+    listening: ['🎙', t('Listening — just talk. A short pause sends it.', '正在听——直接说，停顿一下就发送')],
+    thinking: ['⏳', t('The examiner is thinking…', '考官思考中…')],
+    speaking: ['🔊', t('The examiner is speaking — tap 🎤 to cut in', '考官说话中——点 🎤 可打断')],
+    paused: ['⏸', t('Paused — tap 🎤 to talk, or type below', '已暂停——点 🎤 继续说，或在下面打字')],
+    off: ['', ''],
+  };
+  const [icon, label] = map[conv.state] || map.off;
+  if (box) { box.className = 'ex-conv ' + conv.state; box.innerHTML = icon ? `<span class="ex-conv-dot"></span>${icon} ${esc(label)}` : ''; box.hidden = !handsFree(); }
+  if (mic) { mic.classList.toggle('listening', conv.state === 'listening' || listening); mic.textContent = conv.state === 'listening' || listening ? '⏸' : '🎤'; }
+}
+function clearConvTimers() { clearTimeout(conv.silenceT); clearTimeout(conv.maxT); conv.silenceT = conv.maxT = null; }
+function stopRec() {
+  const r = conv.rec; conv.rec = null;
+  if (r) { try { r.abort(); } catch (e) {} }
+}
+function stopConv(el, state = 'paused') {
+  clearConvTimers(); stopRec(); conv.prev = conv.sess = '';
+  conv.state = state; convStatus(el);
+}
+function convListen(el) {
+  if (!SR || !run || run.phase !== 'live' || busy || !document.getElementById('exChat')) return;
+  hush(); stopRec(); clearConvTimers();
+  conv.prev = conv.sess = ''; conv.state = 'listening'; convStatus(el);
+  startRec(el);
+}
+function startRec(el) {
+  const r = new SR();
+  r.lang = 'en-CA'; r.interimResults = true; r.continuous = true; r.maxAlternatives = 1;
+  conv.rec = r;
+  const ta = el.querySelector('#exText');
+  r.onresult = e => {
+    let txt = '';
+    for (const x of e.results) txt += x[0].transcript;
+    conv.sess = txt.trim();
+    if (ta) ta.value = (conv.prev + ' ' + conv.sess).trim();
+    clearTimeout(conv.silenceT);
+    conv.silenceT = setTimeout(() => finalize(el), SILENCE_MS);
+    if (!conv.maxT) conv.maxT = setTimeout(() => finalize(el), MAX_UTTER_MS);
+  };
+  r.onerror = ev => {
+    if (ev.error === 'not-allowed' || ev.error === 'service-not-allowed') {
+      stopConv(el, 'paused');
+      alert(t('Microphone blocked — allow it in the browser settings, or type instead.', '麦克风被禁用——在浏览器设置里允许，或改用打字。'));
+    }
+  };
+  r.onend = () => {   // Android Chrome ends a session at every pause: keep the words, reopen the mic
+    if (conv.rec !== r) return;
+    conv.rec = null;
+    conv.prev = (conv.prev + ' ' + conv.sess).trim(); conv.sess = '';
+    if (conv.state === 'listening') setTimeout(() => { if (conv.state === 'listening' && !conv.rec) startRec(el); }, 120);
+  };
+  try { r.start(); } catch (e) { stopConv(el, 'paused'); }
+}
+function finalize(el) {
+  if (conv.state !== 'listening') return;
+  const text = (conv.prev + ' ' + conv.sess).trim();
+  clearConvTimers(); stopRec(); conv.prev = conv.sess = '';
+  if (!document.getElementById('exChat')) { conv.state = 'off'; return; }
+  if (!text) { convListen(el); return; }
+  const ta = el.querySelector('#exText'); if (ta) ta.value = '';
+  candidateSays(el, text);
+}
+window.addEventListener('hashchange', () => { if (!/^#\/examiner-run\//.test(location.hash)) { stopConv(null, 'off'); hush(); } });
+
+// push-to-talk (voice on, hands-free off)
 let rec = null, listening = false, autoTimer = null, autoLeft = 0;
-function setMic(el) {
-  const b = el.querySelector('#exMic'); if (!b) return;
-  b.classList.toggle('listening', listening);
-  b.textContent = listening ? '⏹' : '🎤';
-  b.title = listening ? t('Stop listening', '停止') : t('Speak', '说话');
-}
+function setMic(el) { convStatus(el); }
 function cancelAuto(el) {
   clearInterval(autoTimer); autoTimer = null;
-  const s = el.querySelector('#exAuto'); if (s) s.textContent = '';
+  const x = el.querySelector('#exAuto'); if (x) x.textContent = '';
 }
 function scheduleAuto(el, send) {
   cancelAuto(el);
   autoLeft = AUTOSEND_MS / 1000;
-  const s = el.querySelector('#exAuto');
+  const x = el.querySelector('#exAuto');
   const tickFn = () => {
-    if (s) s.textContent = t(`Sending in ${autoLeft}s — tap the text to edit`, `${autoLeft} 秒后发送——点文字可修改`);
+    if (x) x.textContent = t(`Sending in ${autoLeft}s — tap the text to edit`, `${autoLeft} 秒后发送——点文字可修改`);
     if (autoLeft <= 0) { cancelAuto(el); send(); }
     autoLeft--;
   };
@@ -101,8 +245,8 @@ export async function renderExaminerHub(el) {
       <div class="notice" style="margin-top:10px">${bi('It grades what you say; the real examiner grades what you do. Narrate every action with specifics: "Radial pulse, 15 seconds times 4 — 92, strong and regular."',
         '它评你说的；真考官评你做的。所以每个动作都要说具体："Radial pulse, 15 seconds times 4 — 92, strong and regular."')}</div>
       <label class="chk" style="margin-top:10px"><input type="checkbox" id="exVoicePref" ${voiceOn() ? 'checked' : ''} ${SR || TTS ? '' : 'disabled'}/>
-        <span>${bi(`Voice mode — speak to the examiner and hear the replies (${SR ? 'microphone available' : 'no speech recognition in this browser'}${TTS ? '' : ', no speech output'})`,
-                   `语音模式——对考官说话、听回复（${SR ? '本浏览器支持听写' : '本浏览器不支持听写'}${TTS ? '' : '，不支持朗读'}）`, 'span')}</span></label>
+        <span>${bi(`Voice conversation — the examiner reads the dispatch and speaks every reply; you just talk, a short pause sends it, and the microphone reopens after each reply. ${SR ? '' : '(This browser has no speech recognition: use Chrome on Android or desktop.)'}${TTS ? '' : ' (No speech output in this browser.)'}`,
+                   `语音对话——考官念派遣信息、念出每一句回复；你直接开口说，停顿一下就自动发送，考官说完自动继续听。${SR ? '' : '（本浏览器不支持语音识别，请用安卓或电脑上的 Chrome。）'}${TTS ? '' : '（本浏览器不支持朗读。）'}`, 'span')}</span></label>
     </div>
     ${live ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">${ico('clock')} ${bi('A station is in progress.', '有一场考站进行中。', 'span')}
       <a class="btn" style="margin-left:auto" href="#/examiner-run/${live.id}">${t('Resume', '继续')} →</a>
@@ -127,7 +271,7 @@ export async function renderExaminerHub(el) {
     </div>
     ${hist.length ? `<div class="card"><h3 style="margin-top:0">${ico('list')} ${t('Your stations', '你的考站记录')}</h3>
       <table class="vitals-table">${hist.slice().reverse().slice(0, 12).map(h => `<tr><td>${h.date}</td><td>${esc(h.title)}</td><td><b style="color:${h.pass ? 'var(--green)' : 'var(--red)'}">${h.autofail ? 'FAIL (critical)' : h.score + '%'}</b></td></tr>`).join('')}</table></div>` : ''}`;
-  el.querySelector('#exVoicePref').onchange = e => { S.examinerVoice = e.target.checked; save(); if (S.examinerVoice && TTS) speak([{ role: 'examiner', text: 'Voice mode on.' }]); };
+  el.querySelector('#exVoicePref').onchange = e => { S.examinerVoice = e.target.checked; save(); if (S.examinerVoice) { audioUnlock(); speak([{ role: 'examiner', text: "Voice is on. I'll read you the dispatch when you start." }]); } };
   const ab = el.querySelector('#exAbandon');
   if (ab) ab.onclick = () => armed(ab, t('Tap again to abandon', '再点一次确认放弃'), () => { S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
   const ms = el.querySelector('#exMockStart');
@@ -197,14 +341,28 @@ function drawBrief(el) {
       <div class="sc-info"><div class="sc-label">Equipment on scene</div><p>${(b.equipmentEn || []).map(esc).join(' · ')}</p></div>
       <div class="sc-info"><div class="sc-label">Your partner</div><p>${esc(b.partnerEn || '')}</p></div>
       ${b.trackNoteEn ? `<div class="notice">${run.track.toUpperCase()}: ${esc(b.trackNoteEn)}</div>` : ''}
-      ${bi(`When you press Begin, the 40-minute clock starts and the examiner says "You may begin." ${voiceOn() ? 'Voice mode is on: tap the microphone, speak, and your words are sent after a short countdown.' : 'Everything you type is heard by the examiner.'} ${run.brief.dailyLeft} station(s) left today.`,
-           `按下开始后 40 分钟计时启动，考官会说 "You may begin."。${voiceOn() ? '语音模式已开：点麦克风说话，说完几秒后自动发送。' : '你输入的每句话考官都听得到。'}今天还剩 ${run.brief.dailyLeft} 场。`)}
+      <div class="notice">${bi('Like the real exam, the examiner only answers what you ask or assess — nothing is volunteered. You cannot see the patient here, so say what you look at or check ("What do I see on approach?", "I\'m looking at his chest — what do I see?", "Radial pulse, rate, rhythm and strength"). If you are vague, the examiner will ask what you are assessing.',
+        '和真实考试一样，考官只回答你问到的、你做了评估的内容，不会主动告诉你任何东西。这里你看不到病人，所以要说出你在看什么、查什么（"What do I see on approach?"、"I\'m looking at his chest — what do I see?"、"Radial pulse, rate, rhythm and strength"）。说得含糊，考官会反问你在评估什么。')}</div>
+      ${bi(`${voiceOn() ? 'Voice conversation is on: when you press Begin the examiner reads the dispatch aloud, then says "You may begin" and the 40-minute clock starts. From then on just talk — a short pause sends what you said, and the microphone reopens after every reply.' : 'When you press Begin, the 40-minute clock starts and the examiner says "You may begin." Everything you type is heard by the examiner.'} ${run.brief.dailyLeft} station(s) left today.`,
+           `${voiceOn() ? '语音对话已开：按开始后考官先念派遣信息，然后说 "You may begin"，40 分钟计时开始。之后直接开口说——停顿一下就发送，考官每次说完会自动继续听。' : '按下开始后 40 分钟计时启动，考官会说 "You may begin."。你输入的每句话考官都听得到。'}今天还剩 ${run.brief.dailyLeft} 场。`)}
       <div class="btn-row"><button class="btn big" id="exBegin">▶ ${t('Begin the station', '开始考站')}</button></div>
     </div>`;
-  el.querySelector('#exBegin').onclick = () => {
+  const beginBtn = el.querySelector('#exBegin');
+  beginBtn.onclick = async () => {
+    beginBtn.disabled = true;
+    audioUnlock();
+    if (voiceOn() && TTS) {
+      beginBtn.textContent = t('The examiner is reading the dispatch…', '考官正在念派遣信息…');
+      await speak([{ role: 'examiner', text: 'Dispatch. ' + b.dispatchEn + (b.dispatchUpdateEn ? ' ' + b.dispatchUpdateEn : '') }]);
+    }
     run.phase = 'live'; run.startedAt = Date.now();
-    const first = { t: 0, role: 'examiner', text: 'You may begin. Talk me through everything you do.' };
-    run.log.push(first); persist(); draw(el); speak([first]);
+    const first = { t: 0, role: 'examiner', text: 'Okay. You may begin.' };
+    run.log.push(first); persist();
+    const said = speak([first]);   // sets speaking before the live view opens, so the mic waits
+    if (handsFree()) conv.state = 'speaking';
+    draw(el);
+    await said;
+    if (handsFree()) convListen(el);
   };
 }
 const elapsed = () => Date.now() - run.startedAt;
@@ -220,6 +378,7 @@ function drawLive(el) {
         <span id="exVit" style="margin-left:auto" class="tiny">${t('vitals', '体征')}: <b id="exVitAge">—</b></span>
       </div>
       <div class="ex-chat" id="exChat"></div>
+      <div id="exConv" class="ex-conv" hidden></div>
       <div class="ex-input">
         ${SR ? `<button class="btn ghost ex-mic" id="exMic" title="${t('Speak', '说话')}">🎤</button>` : ''}
         <textarea id="exText" rows="2" placeholder="${t('What are you doing / saying? (English)', '你在做什么、说什么？（英文）')}"></textarea>
@@ -227,20 +386,40 @@ function drawLive(el) {
       </div>
       <div class="tiny muted" id="exAuto" style="min-height:1.2em"></div>
       <div class="btn-row" style="justify-content:space-between">
-        <label class="tiny muted" style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="exVoiceLive" ${voiceOn() ? 'checked' : ''} ${SR || TTS ? '' : 'disabled'}/> 🔊 ${t('voice', '语音')}</label>
+        <span style="display:flex;gap:14px;flex-wrap:wrap">
+          <label class="tiny muted" style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="exVoiceLive" ${voiceOn() ? 'checked' : ''} ${SR || TTS ? '' : 'disabled'}/> 🔊 ${t('voice', '语音')}</label>
+          ${SR ? `<label class="tiny muted" style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="exHandsFree" ${handsFree() ? 'checked' : ''} ${voiceOn() ? '' : 'disabled'}/> 🎙 ${t('hands-free', '免手动对话')}</label>` : ''}
+        </span>
         <button class="btn ghost" id="exEnd">${t('Hand-off done → write PCR', '交接完毕 → 写 PCR')}</button>
       </div>
     </div>`;
   renderChat(el);
   const ta = el.querySelector('#exText');
-  const send = () => { const v = ta.value.trim(); cancelAuto(el); if (!v || busy) return; ta.value = ''; candidateSays(el, v); };
+  const send = () => { const v = ta.value.trim(); cancelAuto(el); if (!v || busy) return; ta.value = ''; stopConv(el, 'thinking'); candidateSays(el, v); };
   el.querySelector('#exSend').onclick = send;
   ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } };
-  ta.onfocus = () => cancelAuto(el);
+  ta.onfocus = () => { cancelAuto(el); if (conv.state === 'listening' && !ta.value.trim()) stopConv(el, 'paused'); };   // tapping the box to type pauses the mic
   ta.oninput = () => cancelAuto(el);
   const mic = el.querySelector('#exMic');
-  if (mic) { mic.onclick = () => listen(el, send); setMic(el); }
-  el.querySelector('#exVoiceLive').onchange = e => { S.examinerVoice = e.target.checked; save(); if (!S.examinerVoice) hush(); };
+  if (mic) mic.onclick = () => {
+    audioUnlock();
+    if (!handsFree()) { listen(el, send); return; }
+    if (conv.state === 'listening') { if ((conv.prev + conv.sess).trim()) finalize(el); else stopConv(el, 'paused'); }   // tap while talking = send now
+    else if (conv.state === 'speaking' || conv.state === 'paused' || conv.state === 'off') convListen(el);           // cut in / resume
+  };
+  el.querySelector('#exVoiceLive').onchange = e => {
+    S.examinerVoice = e.target.checked; save();
+    if (!S.examinerVoice) { hush(); stopConv(el, 'off'); }
+    const hf = el.querySelector('#exHandsFree'); if (hf) { hf.disabled = !S.examinerVoice; hf.checked = handsFree(); }
+    if (handsFree() && !busy) convListen(el); else convStatus(el);
+  };
+  const hfBox = el.querySelector('#exHandsFree');
+  if (hfBox) hfBox.onchange = e => {
+    S.examinerHandsFree = e.target.checked; save();
+    if (handsFree() && !busy && !speaking) convListen(el); else stopConv(el, handsFree() ? 'paused' : 'off');
+  };
+  convStatus(el);
+  if (handsFree() && !busy && !speaking && conv.state !== 'speaking') setTimeout(() => convListen(el), 300);   // resume after a refresh
   const endBtn = el.querySelector('#exEnd');
   endBtn.onclick = () => armed(endBtn, t('Tap again to end the call', '再点一次结束出勤'), () => endCall(el));
   clearInterval(tick);
@@ -268,18 +447,21 @@ async function candidateSays(el, text) {
   const tms = Math.min(elapsed(), EXAM_MS);
   run.log.push({ t: tms, role: 'candidate', text }); persist();
   busy = true; renderChat(el); hush();
+  if (handsFree()) { clearConvTimers(); stopRec(); conv.state = 'thinking'; convStatus(el); }
   const spoken = [];
   try {
     const r = await api('/api/examiner/turn', { scenarioId: run.id, track: run.track, elapsedMs: tms, text, log: run.log.slice(0, -1), events: run.events, fired: run.fired });
     for (const s of r.say) { const l = { t: tms, role: s.role, text: s.text }; run.log.push(l); spoken.push(l); }
     for (const l of r.engineLines) { const x = { t: tms, role: 'examiner', text: l }; run.log.push(x); spoken.push(x); }
     run.events.push(...r.events); run.fired = r.fired;
-    if (!r.say.length && !r.engineLines.length) { const x = { t: tms, role: 'examiner', text: 'Noted.' }; run.log.push(x); spoken.push(x); }
   } catch (e) {
     run.log.push({ t: tms, role: 'examiner', text: '(connection problem — please repeat that) ' + e.message });
   }
-  busy = false; persist(); renderChat(el); speak(spoken);
-  if (tms >= EXAM_MS) timeUp(el);
+  busy = false; persist(); renderChat(el);
+  if (tms >= EXAM_MS || run.phase !== 'live') { if (run.phase === 'live') timeUp(el); return; }
+  if (handsFree()) { conv.state = 'speaking'; convStatus(el); }
+  await speak(spoken);
+  if (handsFree() && run.phase === 'live' && conv.state === 'speaking') convListen(el);
 }
 function timeUp(el) {
   const l = { t: EXAM_MS, role: 'examiner', text: 'Time. The scenario is over. Please complete your patient care report.' };
@@ -287,7 +469,8 @@ function timeUp(el) {
   endCall(el, true);
 }
 function endCall(el, timed) {
-  hush(); if (listening) { try { rec.stop(); } catch (e) {} }
+  stopConv(el, 'off'); if (listening) { try { rec.stop(); } catch (e) {} }
+  if (!timed) hush();
   run.phase = 'pcr'; run.endMs = timed ? EXAM_MS : Math.min(elapsed(), EXAM_MS); run.pcrStartedAt = Date.now(); persist(); draw(el);
 }
 const PCR_FIELDS = [['cc', 'Chief complaint'], ['hxcc', 'History of chief complaint'], ['pmhx', 'Past medical history'], ['meds', 'Medications'], ['allergies', 'Allergies'],
@@ -378,5 +561,5 @@ function drawResult(el) {
   const nx = el.querySelector('#exMockNext');
   if (nx) nx.onclick = () => { S.examinerMock.stage = 'trauma'; save(); run = null; nav('/examiner-run/' + S.examinerMock.ids.trauma); };
   const rb = el.querySelector('#exReadFb');
-  if (rb) rb.onclick = () => { const was = S.examinerVoice; S.examinerVoice = true; speak([{ role: 'examiner', text: fb.examinerFeedbackEn }]); S.examinerVoice = was; };
+  if (rb) rb.onclick = () => speak([{ role: 'examiner', text: fb.examinerFeedbackEn }], true);
 }

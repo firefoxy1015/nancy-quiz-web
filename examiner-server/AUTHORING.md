@@ -27,6 +27,8 @@ Per sheet:
 - Every fact comes from the scenario file or the BC guidelines (`D:\Claude\bcexam-sources\bc-exam-guidelines.txt`).
   Where the script is silent, give a plain NEGATIVE ("No, nothing like that"). Never invent a positive finding,
   a number, a drug, or a history item.
+- `firstLookEn` is only what can be seen and heard from the doorway — NO patient dialogue in it (the chief complaint
+  must be asked for; a gasping patient is "too short of breath to say more than a word or two", not a quote).
 - `primary.circulationEn` must contain vitals set 1's pulse rate and `primary.breathingEn` its resp rate.
 - `primary.rbsEn` says what the RBS reveals and that skin is given automatically during the RBS.
 - `expected[].triggers`: 4–6 phrases a candidate would actually say. Prefer multi-word phrases

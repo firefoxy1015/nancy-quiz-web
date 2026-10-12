@@ -128,10 +128,11 @@ def test_vitals_reply_rate_only():
     v = {'set': 1, 'bp': '128/82', 'pulse': {'rate': 92, 'rhythm': 'regular', 'strength': 'strong'},
          'resp': {'rate': 18, 'depth': 'normal', 'character': 'regular'}, 'gcs': {'total': 15, 'e': 4, 'v': 5, 'm': 6},
          'skin': 'pink', 'pupils': 'PERL', 'spo2': '97% RA'}
-    assert engine.format_vital(v, 'pulse', ['rate']) == 'Pulse: rate 92 — rate only.'
-    assert engine.format_vital(v, 'pulse', ['rate', 'rhythm', 'strength']) == 'Pulse: rate 92, regular, strong.'
-    assert engine.format_vital(v, 'respirations', ['rate']) == 'Respirations: rate 18 — rate only.'
-    assert 'E4 V5 M6' in engine.format_vital(v, 'gcs', [])
+    assert engine.format_vital(v, 'pulse', ['rate']) == 'Pulse is 92.'                       # rate only
+    assert engine.format_vital(v, 'pulse', ['rate', 'rhythm', 'strength']) == 'Pulse is 92, regular and strong.'
+    assert engine.format_vital(v, 'respirations', ['rate']) == 'Resps are 18.'
+    assert engine.format_vital(v, 'blood-pressure', []) == "BP's 128 over 82."
+    assert 'Eyes 4, verbal 5, motor 6' in engine.format_vital(v, 'gcs', [])
 
 
 def test_merge_events_dedupes_relisted_actions():

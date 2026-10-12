@@ -85,7 +85,8 @@ def start(req: StartReq, x_device: Optional[str] = Header(default=None)):
     n = _count(device, 1)
     sc = sheet['scene']
     return {
-        'scenario': {'id': sheet['id'], 'titleEn': sheet['titleEn'], 'type': sheet['type']},
+        'scenario': {'id': sheet['id'], 'titleEn': sheet['titleEn'], 'type': sheet['type'],
+                     'patientSex': (sheet.get('patient') or {}).get('sex', '')},
         'brief': {'dispatchEn': sheet['dispatchEn'], 'dispatchUpdateEn': sheet.get('dispatchUpdateEn'),
                   'equipmentEn': sc.get('equipmentEn', []), 'partnerEn': sc.get('partnerEn', ''),
                   'trackNoteEn': (sheet.get('trackNotes') or {}).get(req.track + 'En', '')},
@@ -182,6 +183,18 @@ def _strip_vital_numbers(say, vital_events):
     return out
 
 
+FILLER = re.compile(r"^\s*(ok(ay)?|alright|all right|noted|understood|acknowledged|sure|go ahead|proceed|continue|carry on)"
+                    r"([\s,.!-]+(go ahead|and|then|please|count|counting|proceed|continue|carry on|noted))*[\s.!]*$", re.I)
+
+
+CLARIFY = re.compile(r'what (are|exactly are) you (assessing|checking|looking for|looking at)', re.I)
+
+
+def _filler(line):
+    """Examiner acknowledgements carry no information; real examiners stay silent."""
+    return line.get('role') == 'examiner' and bool(FILLER.match(line.get('text', '')))
+
+
 @app.post('/api/examiner/turn')
 def turn(req: TurnReq):
     sheet = engine.load_sheet(req.scenarioId)
@@ -212,7 +225,9 @@ def turn(req: TurnReq):
     raw_events += engine.drug_events(req.text, sheet, track, t, raw_events)
     cand_lines = [{'t': e.get('t', 0), 'text': e.get('text', '')} for e in req.log if e.get('role') == 'candidate'] + [{'t': t, 'text': req.text}]
     events, vital_events = engine.merge_events(req.events, raw_events, cand_lines, t)
-    say = _strip_vital_numbers([s for s in inp.get('say', []) if s.get('text')], vital_events)
+    say = _strip_vital_numbers([s for s in inp.get('say', []) if s.get('text') and not _filler(s)], vital_events)
+    if vital_events:   # a pulse/BP/resp check is a defined assessment: the manual says give the value, not "what are you assessing?"
+        say = [s for s in say if not (s['role'] == 'examiner' and CLARIFY.search(s['text']))]
     # engine speaks the vitals, only what was measured, from the unlocked set (re-evaluated with the new events)
     vset_now = engine.current_vitals_set(sheet, req.events + events, t, fired)
     for v in vital_events:
@@ -247,3 +262,64 @@ def finish(req: FinishReq):
                                  model=llm.FINISH_MODEL, max_tokens=3000)
     feedback = fb if (st2 == 'ok' and fb) else {'examinerFeedbackEn': 'Feedback unavailable.', 'coachDebriefEn': '', 'coachDebriefZh': ''}
     return {'form': form, 'closing': closing, 'feedback': feedback, 'channel': ch, 'finishStatus': status}
+
+
+# ---------------------------------------------------------------- neural voices
+# Microsoft neural voices via edge-tts: examiner, patient (by sex) and partner each get their own voice.
+# Only simulation lines are sent (never the candidate's words).
+import asyncio, collections, hashlib
+from fastapi.responses import Response
+
+VOICES = {   # the newer conversational ("Multilingual") voices sound least synthetic
+    'examiner': os.environ.get('EXAMINER_VOICE', 'en-US-AvaMultilingualNeural'),
+    'partner': os.environ.get('PARTNER_VOICE', 'en-US-AndrewMultilingualNeural'),
+    'patient-male': os.environ.get('PATIENT_MALE_VOICE', 'en-US-BrianMultilingualNeural'),
+    'patient-female': os.environ.get('PATIENT_FEMALE_VOICE', 'en-US-EmmaMultilingualNeural'),
+    'patient-child': 'en-US-AnaNeural',
+}
+_tts_cache = collections.OrderedDict()
+
+
+class TtsReq(BaseModel):
+    text: str
+    role: str = 'examiner'
+    sex: str = ''
+
+
+async def _edge(text, voice, rate):
+    import edge_tts
+    buf = b''
+    async for ch in edge_tts.Communicate(text, voice, rate=rate).stream():
+        if ch['type'] == 'audio':
+            buf += ch['data']
+    return buf
+
+
+@app.post('/api/examiner/tts')
+async def tts(req: TtsReq):
+    text = (req.text or '').strip()[:600]
+    if not text:
+        raise HTTPException(400, 'empty')
+    if req.role == 'patient':
+        sx = (req.sex or '').lower()
+        voice = VOICES['patient-child'] if 'child' in sx or 'girl' in sx or 'boy' in sx else (VOICES['patient-female'] if sx.startswith('f') else VOICES['patient-male'])
+        rate = '-8%'
+    elif req.role == 'partner':
+        voice, rate = VOICES['partner'], '+4%'
+    else:
+        voice, rate = VOICES['examiner'], '+0%'
+    key = hashlib.sha1(f'{voice}|{rate}|{text}'.encode()).hexdigest()
+    if key in _tts_cache:
+        _tts_cache.move_to_end(key)
+        audio = _tts_cache[key]
+    else:
+        try:
+            audio = await asyncio.wait_for(_edge(text, voice, rate), timeout=12)
+        except Exception as e:
+            raise HTTPException(502, f'tts unavailable: {type(e).__name__}')
+        if not audio:
+            raise HTTPException(502, 'tts returned no audio')
+        _tts_cache[key] = audio
+        while len(_tts_cache) > 400:
+            _tts_cache.popitem(last=False)
+    return Response(content=audio, media_type='audio/mpeg', headers={'Cache-Control': 'public, max-age=86400'})
