@@ -85,6 +85,9 @@ def verify(sid):
 
     # gate 2: expected
     for e in sh.get('expected', []):
+        a = e.get('actionEn', '')
+        if a.startswith('PCP:') and e.get('licence') != 'pcp': errs.append(f'"PCP:" action must have licence pcp: {a[:50]}')
+        if a.startswith('EMR:') and e.get('licence') != 'emr': errs.append(f'"EMR:" action must have licence emr: {a[:50]}')
         if e.get('itemId') not in ITEMS: errs.append(f'expected item unknown rubric id {e.get("itemId")!r}: {e.get("actionEn","")[:50]}')
         if len(e.get('triggers') or []) < 3: errs.append(f'expected item needs >=3 triggers: {e.get("actionEn","")[:60]}')
         if e.get('weight') not in ITEMS.get(e.get('itemId'), {}).get('weights', [e.get('weight')]):
@@ -95,8 +98,10 @@ def verify(sid):
         | {se['key'] for se in sh.get('specialEvents', [])} | {f'vitals-set-{i}-complete' for i in range(1, 5)} | {'transport:rtc', 'transport:non-rtc', 'notification', 'handoff'}
     for kw in sh.get('keywordEvents', []):
         if kw.get('event') not in known_events: errs.append(f'keywordEvents: unknown event {kw.get("event")!r}')
-        try: re.compile(kw.get('regex', ''))
-        except re.error as ex: errs.append(f'keywordEvents {kw.get("event")}: bad regex ({ex})')
+        for k in ('regex', 'blockRegex'):
+            if k in kw or k == 'regex':
+                try: re.compile(kw.get(k, ''))
+                except re.error as ex: errs.append(f'keywordEvents {kw.get("event")}: bad {k} ({ex})')
     rule100 = [r for r in sh.get('protocolRules', []) if (r.get('deduct') or {}).get('weight') == 100]
     specials = {se['key'] for se in sh.get('specialEvents', [])}
     kw_events = {kw.get('event') for kw in sh.get('keywordEvents', [])}

@@ -248,6 +248,11 @@ def _norm(s):
     return _re.sub(r'[^a-z0-9]+', ' ', (s or '').lower()).strip()
 
 
+REPORT_RX = _re.compile(r"\b(radio|patch(ing)?|pre-?alert|notif\w*|this is (unit|medic|ambulance)|hand[- ]?off|handover|hand over|"
+                        r"report to|en route with|receiving (hospital|facility|team|ed))\b", _re.I)
+DRUG_SAME_DOSE_MS = 150000   # no BC drug repeats faster than q3 min: mentions closer together are one administration
+
+
 def merge_events(existing, new, candidate_log, now_ms):
     """Attach each newly reported event to the candidate utterance its quote came
     from (the model tends to re-list earlier actions), drop exact repeats, and
@@ -255,6 +260,7 @@ def merge_events(existing, new, candidate_log, now_ms):
 
     candidate_log: [{'t', 'text'}] for candidate lines, newest last (incl. current)."""
     lines = [(c['t'], _norm(c['text'])) for c in candidate_log]
+    raw_by_t = {c['t']: c['text'] for c in candidate_log}
     out = []
     seen = {(e['name'], e['t']) for e in existing}
     seen_eids = {x for e in existing for x in (e.get('eids') or [])}
@@ -271,6 +277,11 @@ def merge_events(existing, new, candidate_log, now_ms):
                 t = hit
         if (ev['name'], t) in seen:
             continue
+        if ev['name'].startswith('drug:'):
+            if REPORT_RX.search(raw_by_t.get(t, '')):
+                continue   # "given ASA 160" in a radio report or hand-off is a report, not a dose
+            if any(e['name'] == ev['name'] and abs(e['t'] - t) < DRUG_SAME_DOSE_MS for e in existing + out):
+                continue
         if ev['name'] in VITAL_ALL and any(e['name'] == ev['name'] and abs(e['t'] - t) < 45000 for e in existing + out):
             continue
         ev = dict(ev, t=t, eids=[x for x in (ev.get('eids') or []) if x not in seen_eids])
@@ -287,6 +298,7 @@ KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous
     ('transport:non-rtc', r'\b(non[- ]?rtc|non[- ]?priority|stable patient|we have time)\b'),
     ('notification', r'\b(radio|patch|pre-?alert|notif(y|ication)|call(ing)? (the )?(hospital|receiving)|this is unit)\b'),
     ('hand-off-report', r'\b(hand[- ]?off|handover|report to the (nurse|doctor|hospital|receiving))\b'),
+    ('skill-spinal-mgmt', r'\b(hard collar|c collar|cervical collar|collar (is )?on|sized? (the |a )?collar|spinal (board|device)|backboard|long board|scoop( stretcher)?|vacuum mattress|head blocks|foam blocks)\b'),
 ]
 
 
@@ -305,6 +317,8 @@ def keyword_events(text, sheet, t, already):
             continue
         if name.startswith('transport:') and any(n.startswith('transport:') for n in names):
             continue
+        if name in items() and not any(e['itemId'] == name for e in sheet.get('expected', [])):
+            continue
         if _re.search(rx, low):
             out.append({'t': t, 'name': name, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
     raw = (text or '').lower()
@@ -313,16 +327,20 @@ def keyword_events(text, sheet, t, already):
         if not ev or ev in names or any(o['name'] == ev for o in out):
             continue
         try:
-            if _re.search(kw['regex'], raw, _re.I):
-                out.append({'t': t, 'name': ev, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
+            for sent in _re.split(r'(?<=[.;!?])\s+', raw):
+                if kw.get('blockRegex') and _re.search(kw['blockRegex'], sent, _re.I):
+                    continue
+                if _re.search(kw['regex'], sent, _re.I):
+                    out.append({'t': t, 'name': ev, 'eids': [], 'quote': sent[:120], 'components': ['keyword']})
+                    break
         except _re.error:
             pass
     return out
 
 
-DRUG_GIVE = r'\b(giv(e|ing|en)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
+DRUG_GIVE = r'\b(giv(e|ing)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
 DOSE = r'\b\d+(\.\d+)?\s*(mg|g|grams?|mcg|micrograms?|ml|millilit\w*|milligrams?|units?|puffs?|sprays?|l/min|litres?)\b'
-DRUG_BLOCK = r"\b(not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|max(imum)?|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
+DRUG_BLOCK = r"\b(given|gave|received|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|max(imum)?|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
 
 
 def drug_events(text, sheet, track, t, reported):
@@ -331,6 +349,8 @@ def drug_events(text, sheet, track, t, reported):
     report this turn. Conservative by design: a missed drug costs a point, a phantom drug can
     trigger an absent-rule."""
     out = []
+    if REPORT_RX.search(text or ''):
+        return out
     have = {e['name'] for e in reported}
     for sent in _re.split(r'(?<=[.;!?])\s+|\s+(?:but|then)\s+', text or ''):
         low = sent.lower()
@@ -366,6 +386,8 @@ CLOSING_EVIDENCE = {   # regex evidence that an element IS present in a report
 
 
 QUALITY_VETO = [   # (substring of the official error string, regex in the candidate's words that refutes it)
+    ('delay in reassessing vital signs', r'.'),          # timed by the engine
+    ('set of vital signs in less than 3 minutes', r'.'),  # timed by the engine
     ('prime the S/L spray', r'\bprim(e|ed|ing)\b'),
     ('verbalize strength and/or rhythm', r'\b(strength|rhythm|regular|irregular|strong|weak|thready|bounding)\b'),
     ('verbalize depth', r'\b(depth|shallow|deep|adequate|laboured|labored)\b'),

@@ -63,6 +63,11 @@ def build(sheet, track):
             give_lines.append(f"Contraindications ruled out, six rights checked. Giving {(d.get('namesEn') or [k])[0]} {d.get('doseEn', '')} now.")
     for ph in PHASES:
         acts = by_phase.get(ph) or []
+        if ph == 'transport':
+            pr = sheet['priority']
+            say(f"Transport decision: this patient is {'RTC, unstable' if pr == 'rtc' else 'non-RTC, stable'}. "
+                f"Partner, start packaging; we'll be ready to load within {'15' if pr == 'rtc' else '30'} minutes.")
+            continue
         if ph == 'interventions':
             for line in give_lines:      # analgesia before any splinting/realignment (Appendix A)
                 say(line)

@@ -307,6 +307,30 @@ def test_accepted_priorities():
     assert not any(x['itemId'] == 'transport' for x in r['rows']), r['rows']     # both accepted; packaged at 12 < 15 min
 
 
+def test_drug_mentions_are_not_extra_doses():
+    log = [{'t': 300000, 'text': 'Giving TXA 2 grams IV over one minute.'},
+           {'t': 360000, 'text': 'TXA 2 g IV over 1 min with the 6 rights.'},                       # same dose, re-stated
+           {'t': 700000, 'text': 'Radio to the hospital: given TXA 2 grams at 5 minutes.'},          # report
+           {'t': 900000, 'text': 'Second nitro, giving TXA again.'}]
+    ev = lambda t, q: {'t': t, 'name': 'drug:txa', 'eids': [], 'quote': q, 'components': []}
+    out1, _ = engine.merge_events([], [ev(300000, 'Giving TXA 2 grams IV over one minute.')], log, 300000)
+    out2, _ = engine.merge_events(out1, [ev(360000, 'TXA 2 g IV over 1 min with the 6 rights.')], log, 360000)
+    out3, _ = engine.merge_events(out1, [ev(700000, 'Radio to the hospital: given TXA 2 grams')], log, 700000)
+    out4, _ = engine.merge_events(out1, [ev(900000, 'Second nitro, giving TXA again.')], log, 900000)
+    assert len(out1) == 1 and out2 == [] and out3 == [] and len(out4) == 1
+    sheet = {'drugs': [{'key': 'txa', 'namesEn': ['TXA'], 'licence': 'pcp'}]}
+    assert engine.drug_events('Radio to the hospital: TXA 2 g given.', sheet, 'pcp', 1, []) == []
+    assert engine.drug_events('TXA was given at 0957.', sheet, 'pcp', 1, []) == []
+
+
+def test_sheet_keyword_block_regex():
+    sheet = {'expected': [], 'majorMoves': [], 'keywordEvents': [
+        {'event': 'traction-splint-applied', 'regex': r'\b(traction splint|sager)\b', 'blockRegex': r'\b(will|going to|after|once|get the)\b'}]}
+    f = lambda txt: [e['name'] for e in engine.keyword_events(txt, sheet, 1, [])]
+    assert f("Once the Entonox is working I'll get the traction splint.") == []
+    assert f('Applying the Sager traction splint now, 10 percent of body weight.') == ['traction-splint-applied']
+
+
 def test_presence_miss_is_capped_for_protocol_items():
     s, e, c = perfect()
     s['expected'].append({'eid': 'E99', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Administer Entonox for pain when indicated'})

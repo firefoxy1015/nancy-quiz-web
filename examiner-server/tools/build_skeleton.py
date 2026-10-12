@@ -59,6 +59,8 @@ def skeleton(s):
             txt = e['actionEn']
             if txt.startswith('PCP') or txt.startswith('PCP:'):
                 lic = 'pcp'
+            elif txt.startswith('EMR:') or txt.startswith('EMR '):
+                lic = 'emr'
             expected.append({'itemId': e.get('rubricRef'), 'phase': p['id'], 'weight': e['weight'],
                              'licence': lic, 'actionEn': txt, 'triggers': []})
     sheet = {
