@@ -1317,14 +1317,15 @@
   },
   {
    "id": "fluids-after-baseline-vitals",
-   "check": "absent",
-   "event": "fluids-before-baseline-vitals",
+   "check": "ordered",
    "licence": "pcp",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
     "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
-   }
+   },
+   "first": "vitals-set-1-complete",
+   "then": "drug:normal-saline"
   },
   {
    "id": "bolus-reassess-q500",

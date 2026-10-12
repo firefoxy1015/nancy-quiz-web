@@ -351,6 +351,38 @@ MOVE_PLAN_RX = r"\b(will|i'll|we'll|we will|going to|gonna|plan\w*|prepar\w*|ant
 TRANSPORT_COND_RX = r"\b(if|would|we'd|could|unless|in case|upgrade\w*|downgrade\w*|may|might|otherwise|not)\b"
 
 
+VITALS_WORDS = [   # (event, regex on a normalized sentence, components to infer)
+    ('blood-pressure', r'\b(bp|blood pressure)\b', []),
+    ('pulse', r'\b(pulse|heart rate)\b', ['rate', 'rhythm', 'strength']),
+    ('respirations', r'\b(resps|respirations?|respiratory rate|resp rate|breathing rate)\b', ['rate', 'depth', 'character']),
+    ('pulse-oximetry', r'\b(spo2|sp o2|sats?|saturation|pulse ox\w*)\b', []),
+]
+VITALS_CONTEXT = r'\b(what s|what is|whats|vital signs?|vitals|baseline|repeat\w*|recheck\w*|re check\w*|taking|checking|measuring|getting|obtaining|by auscultation|second set|set of)\b'
+VITALS_BLOCK = r"\b(do you|have you|does (he|she)|are you|any|will|i'll|we'll|going to|plan\w*|once|after (we|the)|later|before (we|the)|if|history|high blood pressure|low blood pressure|hypertension|medication\w*|meds|takes|normal for (him|her)|usually|last (bp|set)|was|were)\b"
+
+
+def vitals_events(text, t, already_now):
+    """Engine fallback for EXPLICIT vital-sign measurements ("Baseline vitals: BP by auscultation, pulse, resps",
+    "Repeat vital signs"). The engine then speaks the values - the candidate named them, so this is not volunteering."""
+    if REPORT_RX.search(text or ''):
+        return []
+    out, have = [], {e['name'] for e in already_now}
+    for sent in _re.split(r'(?<=[.;!?])\s+', text or ''):
+        low = sent.lower()
+        if not _re.search(VITALS_CONTEXT, ' ' + _norm(sent) + ' ') or _re.search(VITALS_BLOCK, low):
+            continue
+        n = ' ' + _norm(sent) + ' '
+        full = _re.search(r'\b(vital signs?|vitals|second set|set of)\b', n) and not any(_re.search(rx, n) for _, rx, _ in VITALS_WORDS[:3])
+        for name, rx, comps in VITALS_WORDS:
+            if name in have:
+                continue
+            if _re.search(rx, n) or (full and name != 'pulse-oximetry'):
+                c = [x for x in comps if _re.search(r'\b' + x, n)] or comps[:1]
+                out.append({'t': t, 'name': name, 'eids': [], 'quote': sent[:120], 'components': c})
+                have.add(name)
+    return out
+
+
 def keyword_events(text, sheet, t, already):
     """Engine-side fallback: add the events above when the candidate's words plainly
     state them and the model did not report them this turn. Only the move keys the

@@ -226,6 +226,7 @@ def turn(req: TurnReq):
     own = engine.keyword_events(req.text, sheet, t, req.events)
     own += engine.drug_events(req.text, sheet, track, t, own)   # this turn only: a repeat dose is legitimate; merge dedupes
     own += engine.trigger_events(req.text, sheet, track, t, req.events + own)
+    own += engine.vitals_events(req.text, t, own)   # merge keeps one reading per vital (45 s) whichever source
     raw_events += own
     cand_lines = [{'t': e.get('t', 0), 'text': e.get('text', '')} for e in req.log if e.get('role') == 'candidate'] + [{'t': t, 'text': req.text}]
     events, vital_events = engine.merge_events(req.events, raw_events, cand_lines, t, strict=engine.bad_act_names(sheet))

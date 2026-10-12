@@ -22,6 +22,7 @@ if __name__ == '__main__':
         new = engine.keyword_events(text, sheet, t, events)
         new += engine.drug_events(text, sheet, a.track, t, events + new)
         new += engine.trigger_events(text, sheet, a.track, t, events + new)
+        new += engine.vitals_events(text, t, new)
         events += new
         names = [e['name'] + (('/' + ','.join(e['eids'])) if e['eids'] else '') for e in new]
         if not a.grep or a.grep.lower() in (text + ' '.join(names)).lower():

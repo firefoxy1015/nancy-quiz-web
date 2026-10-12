@@ -512,3 +512,14 @@ def test_primary_pulse_and_breathing_checks_do_not_open_a_vitals_set():
     assert len(sets) == 1 and sets[0]['start'] == int(6.9 * M) and sets[0]['complete'] == int(7.5 * M)
     slow = engine.derive_vitals_sets([ev(0, 'blood-pressure'), ev(2, 'pulse'), ev(4, 'respirations')])
     assert slow[0]['complete'] - slow[0]['start'] == 4 * M          # a genuinely slow set is still caught
+
+
+def test_explicit_vitals_statements_are_recorded_by_the_engine():
+    v = lambda s: sorted(e['name'] for e in engine.vitals_events(s, M, []))
+    assert v('Repeat vital signs: blood pressure by auscultation, pulse rate strength and rhythm, respirations rate depth and character, SpO2.') == \
+        ['blood-pressure', 'pulse', 'pulse-oximetry', 'respirations']
+    assert v("Taking a full set of vitals now.") == ['blood-pressure', 'pulse', 'respirations']
+    assert v("What's the BP?") == ['blood-pressure']
+    for s in ['Do you have high blood pressure?', "I'll take vitals after the splint.", 'Any history of high blood pressure?',
+              'Is he on blood pressure medication?', 'Radio report: vitals were BP 148/92, pulse 96.', 'Gloves on, scene is safe.']:
+        assert v(s) == [], (s, v(s))

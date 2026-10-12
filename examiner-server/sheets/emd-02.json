@@ -1145,14 +1145,15 @@
   },
   {
    "id": "salbutamol-after-baseline-vitals",
-   "check": "absent",
-   "event": "salbutamol-before-baseline-vitals",
+   "check": "ordered",
    "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
     "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
-   }
+   },
+   "first": "vitals-set-1-complete",
+   "then": "drug:salbutamol"
   },
   {
    "id": "salbutamol-by-mdi-and-spacer",
