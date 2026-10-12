@@ -921,7 +921,7 @@
    "phase": "interventions",
    "weight": 25,
    "licence": "both",
-   "actionEn": "Administer the drugs with the 6 rights (PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox; EMR: Entonox, cylinder inverted 3 times)",
+   "actionEn": "Administer the drugs with the 6 rights (acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox, cylinder inverted 3 times; same at EMR and PCP)",
    "triggers": [
     "acetaminophen 1000 milligrams",
     "ibuprofen 400 milligrams",
@@ -1148,7 +1148,7 @@
     "APAP"
    ],
    "doseEn": "1000 mg PO (guideline range 500-1000 mg PO; may repeat once after 4 hours)",
-   "licence": "pcp",
+   "licence": "both",
    "contraindicationsEn": "hypersensitivity; severe hepatic impairment or severe active liver disease; acetaminophen within the past 4 hours; suspected overdose"
   },
   {
@@ -1160,7 +1160,7 @@
     "NSAID"
    ],
    "doseEn": "400 mg PO (guideline range 300-400 mg PO; may repeat every 4-6 hours)",
-   "licence": "pcp",
+   "licence": "both",
    "contraindicationsEn": "hypersensitivity to ibuprofen or other NSAIDs; active GI hemorrhage or ulcers; pregnancy; anticoagulants"
   }
  ],
@@ -1186,7 +1186,7 @@
    "check": "ordered",
    "first": "vitals-set-1-complete",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
@@ -1198,7 +1198,7 @@
    "check": "ordered",
    "first": "vitals-set-1-complete",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
@@ -1234,7 +1234,7 @@
    "check": "ordered",
    "first": "medications",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1246,7 +1246,7 @@
    "check": "ordered",
    "first": "past-medical-history",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1258,7 +1258,7 @@
    "check": "ordered",
    "first": "allergies",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1270,7 +1270,7 @@
    "check": "ordered",
    "first": "medications",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1282,7 +1282,7 @@
    "check": "ordered",
    "first": "past-medical-history",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1294,7 +1294,7 @@
    "check": "ordered",
    "first": "allergies",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1306,7 +1306,7 @@
    "check": "max_count",
    "event": "drug:acetaminophen",
    "max": 1,
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "skill-drug-admin",
     "weight": 25,
@@ -1318,7 +1318,7 @@
    "check": "max_count",
    "event": "drug:ibuprofen",
    "max": 1,
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "skill-drug-admin",
     "weight": 25,
@@ -1345,28 +1345,6 @@
     "itemId": "skill-drug-admin",
     "weight": 10,
     "errorEn": "Performs the skill with an isolated error not detrimental to patient care"
-   }
-  },
-  {
-   "id": "emr-no-acetaminophen",
-   "check": "absent",
-   "event": "drug:acetaminophen",
-   "licence": "emr",
-   "deduct": {
-    "itemId": "protocols",
-    "weight": 100,
-    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
-   }
-  },
-  {
-   "id": "emr-no-ibuprofen",
-   "check": "absent",
-   "event": "drug:ibuprofen",
-   "licence": "emr",
-   "deduct": {
-    "itemId": "protocols",
-    "weight": 100,
-    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
    }
   },
   {
@@ -1461,7 +1439,7 @@
   "moi": "opponent's knee struck the outside of his right thigh at about 1414 during a soccer game; no head strike, no loss of consciousness",
   "hxcc": "heard a crack and collapsed; leg not moved since; deep, sharp, grinding pain 10/10, constant, non-radiating; no neck or back pain (NEXUS negative)",
   "vitals": "GCS 15, BP 132/78, pulse 112 strong regular, resps 24 regular, skin pink warm dry, SpO2 98% on room air",
-  "treatments": "manual stabilization, cold applied; PCP: acetaminophen 1000 mg PO and ibuprofen 400 mg PO at 1428 with Entonox from 1430 (EMR: Entonox only); Sager traction splint at 12 lb (10% of body weight), not released",
+  "treatments": "manual stabilization, cold applied; Acetaminophen 1000 mg PO and ibuprofen 400 mg PO at 1428 with Entonox from 1430 (same at EMR and PCP); Sager traction splint at 12 lb (10% of body weight), not released",
   "findings": "closed fracture with mid-thigh angulation, swelling and shortening; distal pulses, sensation and toe movement present before and after splinting; no signs of shock; stable, non-RTC; ETA about 18 minutes"
  },
  "handoffFacts": {
@@ -1474,7 +1452,7 @@
   "pmhx": "none; no bleeding disorder, no liver or GI disease",
   "meds": "none; no anticoagulants; no analgesics taken today",
   "allergies": "no known allergies; no NSAID or acetaminophen allergy",
-  "treatments": "manual stabilization; cold applied 10 minutes on / 5 off; PCP: acetaminophen 1000 mg PO and ibuprofen 400 mg PO at 1428, Entonox self-administered from 1430 (EMR: Entonox only, cylinder inverted 3 times); then Sager traction splint at 12 lb (10% of body weight), not released",
+  "treatments": "manual stabilization; cold applied 10 minutes on / 5 off; PCP: acetaminophen 1000 mg PO and ibuprofen 400 mg PO at 1428, Entonox self-administered from 1430 (same at EMR and PCP; cylinder inverted 3 times); then Sager traction splint at 12 lb (10% of body weight), not released",
   "findings": "closed mid-thigh angulation, swelling and shortening; dorsalis pedis and posterior tibial pulses, sensation and toe movement present before and after splinting and at every reassessment; no other injuries; last ate pasta and a sports drink at 1230"
  },
  "pcrFacts": {
@@ -1487,7 +1465,7 @@
   "treatments": [
    "Manual stabilization, leg kept in line with the body",
    "Cold applied 10 min on / 5 min off",
-   "PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO at 1428, Entonox self-administered from 1430 (EMR: Entonox only)",
+   "Acetaminophen 1000 mg PO + ibuprofen 400 mg PO at 1428, Entonox self-administered from 1430 (same at EMR and PCP)",
    "Sager traction splint at 12 lbs (10% body weight) applied AFTER analgesia; traction not released",
    "Distal CSM checked before, after and at every move"
   ],
@@ -1506,7 +1484,7 @@
   "missedInjuryEn": "You looked at the right leg during your rapid body survey - what did you find?"
  },
  "trackNotes": {
-  "emrEn": "EMR performs the same traction splint and the same sequencing, but analgesia is Entonox only - acetaminophen and ibuprofen are not in EMR scope. The Appendix A pain-management weightings that involve the oral agents therefore do not apply to EMR; what still applies in full is giving Entonox BEFORE fracture management. No Functional Enquiry.",
+  "emrEn": "EMR performs the same traction splint, the same sequencing and the same analgesia (oral acetaminophen and ibuprofen for pain are within EMR licence; only pyrexia is PCP-only, guidelines p.58/68), so Appendix A applies in full, including Entonox BEFORE fracture management. No Functional Enquiry.",
   "pcpEn": "PCP uses the full three-drug ladder: acetaminophen 500-1000 mg PO and ibuprofen 300-400 mg PO on-boarded early (they take 30-60 minutes to work), with Entonox covering the splinting itself. PCP also completes the 9-system Functional Enquiry. IV access is not required for an isolated stable femur fracture with no shock."
  },
  "sourcePages": "scenario tr-08 (data/practical/scenarios.json); BC Provincial Examination Guidelines (current to June 15, 2026): p.7-8 Findings in Unstable Adult Patients (none met: one long-bone fracture, distal pulses present, no shock), p.11 Primary Survey interventions (stabilizing fractures; realigning limb fractures that are grossly deformed or pulseless), p.21 Musculoskeletal Injuries (check distal pulses and reassess throughout; apply cold; provide analgesia prior to movement in stable patients; apply traction if appropriate; immobilize the joints above and below), p.23 Fracture Management - Traction Splint (indication: suspected mid-shaft femur fracture in a stable patient; assess distal circulation, sensation and function; cold 10 minutes on / 5 off; analgesia if not contraindicated; supine, leg in line; STAPLES; closed mid-shaft: 10% of body weight to a maximum of 15 lbs (7 kg), open: maximum 5 lbs; once traction is applied do NOT release it; reassess and correct traction with each movement and each set of vitals), p.25 Spinal Management (NEXUS / Canadian C-Spine), p.58 Acetaminophen (500-1,000 mg PO; contraindications incl. severe liver disease and acetaminophen within 4 hours), p.65 Entonox (contraindications; before use: primary survey, pain severity, baseline vitals incl. SpO2, history and exam to rule out contraindications; invert cylinder 3 X), p.68 Ibuprofen (300-400 mg PO; contraindications incl. NSAID hypersensitivity, active GI hemorrhage or ulcers, anticoagulants); EMALB Practical Examination Grading Criteria: Fracture Management (not applying the Sager splint to a non-Priority femur fracture when indicated; incorrect amount of traction; does not assess distal circulation or function; ice 10 min on / 5 min off) and Appendix A (Pain Management weighting, handled by the engine)",

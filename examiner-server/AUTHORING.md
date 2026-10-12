@@ -42,7 +42,11 @@ Per sheet:
 - `licence`: "pcp" for every `fe` item and every action that starts with "PCP:"; otherwise "both".
 - `drugs`: every drug a candidate at either level might give or must withhold in this call, with `namesEn`
   aliases, `doseEn` and `licence` (EMR drugs: oral glucose, ASA, nitroglycerin (assist), Entonox, epinephrine
-  auto-injector, naloxone, salbutamol (assist) — check the guidelines; PCP adds IV/IM/SQ per protocol).
+  auto-injector, naloxone, salbutamol (assist), oral acetaminophen and ibuprofen for pain (p.58/68: only pyrexia is
+  "PCP:") — check the guidelines; PCP adds IV/IM/SQ per protocol).
+- Drug detector: the engine also records a drug from the candidate's words ("Giving Entonox now", "TXA 2 g IV").
+  It ignores questions, negations, plans, history, inability and other-provider talk ("can't give", "I'll give",
+  "she had", "the PCP can give"), so `absent drug:x` rules are safe again for withheld drugs.
 - `majorMoves`: the physical moves of this call (e.g. "log-roll", "lift-to-cot", "load", "stair-chair").
   Always include "load" (or "lift-to-cot") — packaging time is measured from it.
 - `examinerPrompts.missedInjuryEn`: one neutral question for a trauma patient whose injury the candidate missed;

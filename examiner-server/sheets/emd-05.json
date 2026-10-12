@@ -1,0 +1,1423 @@
+{
+ "id": "emd-05",
+ "titleEn": "Confused and Hypotensive at 82 - Suspected Sepsis From a Urinary Source",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-05",
+ "patient": {
+  "name": "Dorothy Pearce",
+  "age": 82,
+  "sex": "female",
+  "affectEn": "slumped in her recliner, eyes half open, mumbling; drowsy and drifts off between answers; face flushed; breathing fast; does not try to get up. Later in the call she becomes harder to rouse and her words stop making sense.",
+  "speechEn": "mumbled fragments (\"I'm fine dear... I'm fine\"); cannot say where she is or what year it is; when asked directly about pain she points to her lower belly. Most of the history comes from the care aide."
+ },
+ "scene": {
+  "settingEn": "Assisted-living residence in Nanaimo, 1420 hrs. Clean, warm suite, adequate lighting, no hazards. One patient: an 82-year-old woman slumped in her recliner, eyes half open, mumbling. A care aide is with her and has the full medication list. Strong smell of urine; her incontinence pad is soaked. Her walker is beside the chair; full drink glasses sit untouched on the side table. Nanaimo Regional General Hospital is 8 minutes away; the nearest PCP car is 15 minutes out.",
+  "hazardsEn": [
+   "no physical hazards",
+   "undifferentiated febrile patient - infection-control precautions"
+  ],
+  "bystanders": [
+   {
+    "who": "care aide",
+    "knowsEn": "BASELINE: she is normally fully oriented and independent with a walker, and does her own crossword every morning; she has mild memory problems but is oriented. She was her usual self yesterday. Over the last two days she has been going to the toilet more often, complaining of burning, and eating and drinking almost nothing; last night she was up all night; this morning she was confused and had an unwitnessed fall in the bathroom - nobody knows whether she hit her head. No cough, no shortness-of-breath complaint, no chest pain, no vomiting, no diarrhea. She has had \"water infections\" twice before, and the last one also made her confused. PMHx: high blood pressure, atrial fibrillation, osteoarthritis, mild cognitive impairment but oriented. Meds (full list from the nursing station): apixaban, bisoprolol, acetaminophen as needed. Allergy: sulfa - rash. LOI: a few sips of tea this morning, no solid food for 24 hours. Does not know her weight. Will hand over the medication list if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "portable suction unit",
+   "BVM with oxygen reservoir",
+   "oropharyngeal and nasopharyngeal airways",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "tympanic thermometer",
+   "blankets",
+   "hard collars, head blocks and a spinal immobilization device",
+   "stretcher (cot)",
+   "oral glucose gel",
+   "glucagon",
+   "PCP only: IV start kit with normal saline, D10W, dimenhydrinate, ondansetron"
+  ]
+ },
+ "dispatchEn": "1420 hrs. Code 3 to an assisted-living residence in Nanaimo. Staff report an 82-year-old woman is 'not herself' - confused since this morning, will not get out of her chair, and feels hot to touch. Nanaimo Regional General Hospital is 8 minutes away; the nearest PCP car is 15 minutes out.",
+ "dispatchUpdateEn": "Dispatch adds: staff say she was her usual self yesterday. She has been drinking very little for two days and has had one unwitnessed fall in her suite this morning. There is a full medication list at the nursing station.",
+ "arrivalEn": "A care aide meets you at the door of a clean, warm suite with the medication list in her hand: \"She's not herself today.\" Adequate lighting, no hazards. One patient.",
+ "firstLookEn": "An elderly woman slumped in a recliner, eyes half open, mumbling. Her face is flushed and she is breathing fast. There is a strong smell of urine and her incontinence pad is soaked. Full drink glasses sit untouched on the side table; her walker is beside the chair.",
+ "primary": {
+  "locEn": "Opens her eyes to your voice, mumbles \"I'm fine dear... I'm fine\" and drifts off again. She cannot tell you where she is or what year it is - disoriented (AVPU = V).",
+  "airwayEn": "Patent. No vomit; secretions minimal.",
+  "breathingEn": "Respirations 26, shallow. Clear air entry on both sides.",
+  "circulationEn": "Radial pulse 116, weak, regular. Hands and feet cool and mottled; capillary refill 4 seconds. No external bleeding.",
+  "rbsEn": "Small bruise on the left hip from the morning fall. No head injury found. No midline neck tenderness; she moves all four limbs on command. Chest non-tender. Abdomen non-tender except the suprapubic area, which is tender to gentle palpation. No external bleeding. Strong smell of urine, soaked incontinence pad. Skin hot and flushed on the trunk, cool and mottled at the hands and feet (skin is given automatically during the RBS).",
+  "skinEn": "trunk hot and flushed; hands and feet cool and mottled; capillary refill 4 seconds"
+ },
+ "history": {
+  "ccEn": "Patient: \"I'm fine, dear... I'm fine.\" Care aide: \"She's not herself. She's been confused since this morning, she won't get out of her chair, and she feels hot.\"",
+  "opqrst": {
+   "oEn": "Care aide: \"She was her usual self yesterday. This morning she was confused - and she had a fall in the bathroom that nobody saw.\"",
+   "pEn": "Care aide: \"Nothing that I've noticed.\"",
+   "qEn": "Care aide: \"She's muddled. She doesn't know where she is - she's normally completely with it.\"",
+   "rEn": "(Patient, if asked directly where it hurts:) she points to her lower belly: \"Down... here...\"",
+   "sEn": "(Patient:) \"Sore... down there...\" She cannot give a number.",
+   "tEn": "Care aide: \"Two days of going to the toilet a lot and burning, and hardly eating or drinking. Up all night last night. Confused since this morning.\""
+  },
+  "painScoreEn": "When asked directly about pain she points to her lower belly and says \"Sore... down there\"; she cannot give a number.",
+  "sample": {
+   "sEn": "Care aide: \"Burning and going to the toilet more for two days, hardly eating or drinking, up all night, confused this morning, and she feels hot.\"",
+   "aEn": "Care aide: \"Sulfa - it gives her a rash.\"",
+   "mEn": "Care aide: \"Apixaban, bisoprolol, and acetaminophen when she needs it. Here's the full list from the nursing station.\"",
+   "pEn": "Care aide: \"High blood pressure, atrial fibrillation, osteoarthritis, and some mild memory problems - but she's oriented, she does her crossword every morning. She's had water infections twice before, and the last one made her confused too.\"",
+   "lEn": "Care aide: \"A few sips of tea this morning. No solid food for about 24 hours.\"",
+   "eEn": "Care aide: \"She fell in the bathroom this morning. Nobody saw it, so we don't know if she hit her head. She's been in her recliner since and won't get up.\""
+  },
+  "fe": {
+   "generalEn": "Care aide: \"She's normally independent with her walker and sharp for her age. It's all changed over the last two days.\"",
+   "cnsEn": "Care aide: \"Just the confusion. No weakness on one side, her face isn't drooping, and her speech is only muddled.\"",
+   "respiratoryEn": "Care aide: \"No cough, no phlegm, no pain when she breathes.\"",
+   "cardiovascularEn": "Care aide: \"No chest pain. She has atrial fibrillation - that's not new.\"",
+   "giGuEn": "Care aide: \"Burning when she pees, going more often, and the urine smells strong. No vomiting, no diarrhea. Her belly only hurts when it's pressed.\"",
+   "integumentaryEn": "Care aide: \"No rash, no pressure sores. Just the small bruise on her hip from the fall.\"",
+   "musculoskeletalEn": "Care aide: \"Only the fall this morning. No deformity that I can see.\"",
+   "endocrineEn": "Care aide: \"No diabetes.\"",
+   "eentEn": "Care aide: \"No, nothing like that.\""
+  }
+ },
+ "findings": {
+  "headNeckEn": "No scalp laceration or hematoma; no blood or fluid from the ears or nose. Tongue and lips dry. Neck supple with no midline tenderness, no JVD.",
+  "chestLungsEn": "Equal air entry, no crackles, no wheeze.",
+  "abdomenEn": "Soft; tender in the suprapubic region; no rebound, no distension.",
+  "backEn": "Inspected during the transfer: no pressure sores, no other findings.",
+  "lowerExtremitiesEn": "Bruise over the left greater trochanter with no shortening or rotation; both legs move on command; pedal pulses weak but present.",
+  "upperExtremitiesEn": "Skin tenting on the forearm; cool hands; radial pulses weak but present bilaterally."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline on scene",
+   "gcs": {
+    "total": 13,
+    "e": 3,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "88/52",
+   "pulse": {
+    "rate": 116,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "116 weak regular"
+   },
+   "resp": {
+    "rate": 26,
+    "depth": "shallow",
+    "character": "rapid; clear air entry on both sides",
+    "rawEn": "26 shallow"
+   },
+   "skin": "trunk hot flushed, peripheries cool mottled, CR 4 s",
+   "pupils": "PERL",
+   "spo2": "92% RA, 96% on 15 L",
+   "bgl": "9.8 mmol/L",
+   "temp": "38.7 C tympanic"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "elapsedMs": 540000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, about 7 minutes after set 1 - deteriorating (GCS and blood pressure falling); keep her supine, oxygen on, airway protected, update the hospital, keep driving",
+   "gcs": {
+    "total": 12,
+    "e": 3,
+    "v": 3,
+    "m": 6
+   },
+   "bp": "84/50",
+   "pulse": {
+    "rate": 122,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "122 weak regular"
+   },
+   "resp": {
+    "rate": 28,
+    "depth": "shallow",
+    "character": "rapid",
+    "rawEn": "28 shallow"
+   },
+   "skin": "trunk hot, hands cold and mottled",
+   "pupils": "PERL",
+   "spo2": "95% on 15 L",
+   "bgl": "9.8 mmol/L",
+   "temp": "38.9 C tympanic"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "loc-falls",
+   "when": {
+    "elapsedMs": 540000,
+    "afterEvent": "blood-pressure"
+   },
+   "examinerLineEn": "She is harder to rouse now. She opens her eyes when you speak to her, but her words no longer make sense."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan equipment: oxygen, suction, blood glucose meter, thermometer, blankets, stretcher taken to the patient's room",
+   "triggers": [
+    "bring oxygen, suction, glucometer and thermometer",
+    "stretcher to her room",
+    "glucometer and thermometer",
+    "bring blankets",
+    "equipment to the patient"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan to collect the medication list and, if available, the staff's baseline notes - in a geriatric altered-LOC call the baseline is the single most valuable piece of information",
+   "triggers": [
+    "get the medication list",
+    "what's her baseline",
+    "baseline notes",
+    "bring the med list",
+    "her normal mental status"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate the differential before arrival: infection, hypoglycemia, stroke, occult head injury from the unwitnessed fall, medication effect, and dehydration",
+   "triggers": [
+    "could be infection",
+    "rule out hypoglycemia",
+    "possible stroke",
+    "head injury from the fall",
+    "medication effect",
+    "differential"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment (warm indoor room), nature of illness (altered LOC of gradual onset), people (one patient plus a care aide who can give collateral history) and resources (PCP car en route)",
+   "triggers": [
+    "scene is safe",
+    "no hazards",
+    "one patient",
+    "nature of illness is altered LOC",
+    "the aide can give history",
+    "PCP car en route"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection; add a mask given an undifferentiated febrile patient",
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "put on a mask",
+    "surgical mask",
+    "PPE on",
+    "droplet precautions"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: elderly woman, drowsy and mumbling, flushed face, breathing fast, untouched drinks and a soaked pad pointing to poor intake and a urinary source",
+   "triggers": [
+    "general impression",
+    "first impression",
+    "she looks drowsy",
+    "flushed and breathing fast",
+    "untouched drinks",
+    "soaked pad"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: responds to voice but is disoriented - and compare it against her stated baseline of full orientation, because 'confused' means nothing without a baseline",
+   "triggers": [
+    "AVPU",
+    "responds to voice",
+    "is this normal for her",
+    "how is she normally",
+    "level of consciousness",
+    "what's her baseline"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Apply the NEXUS criteria to the unwitnessed fall and state the conclusion: no midline tenderness, no focal deficit, no intoxication, no distracting injury - but her altered mental status means alertness is NOT normal, so spinal motion restriction is indicated and manual stabilization is taken",
+   "triggers": [
+    "NEXUS",
+    "manual stabilization",
+    "hold her head",
+    "take c-spine",
+    "spinal motion restriction is indicated",
+    "not alert so NEXUS fails"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway and keep suction at hand - her LOC is decreased and she may vomit",
+   "triggers": [
+    "airway is patent",
+    "check her airway",
+    "look in her mouth",
+    "airway clear",
+    "any vomit in the mouth",
+    "suction ready"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing: rate 26 and shallow, auscultate both sides - tachypnea in an elderly patient is an early and frequently ignored sign of sepsis",
+   "triggers": [
+    "count her respirations",
+    "listen to her chest",
+    "auscultate both sides",
+    "breath sounds",
+    "respiratory rate",
+    "she's tachypneic"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: weak radial pulse of 116 with cool mottled peripheries and 4-second capillary refill - state out loud that this is shock despite the warm flushed trunk",
+   "triggers": [
+    "radial pulse",
+    "check her pulse",
+    "capillary refill",
+    "cap refill",
+    "peripheries are mottled",
+    "this is shock"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a full rapid body survey, including gentle abdominal and suprapubic palpation to look for the infection source, and check for injuries from the unwitnessed fall",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "head to toe",
+    "palpate the suprapubic",
+    "check for injuries from the fall",
+    "palpate her abdomen"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Identify shock with an altered LOC as a life threat you cannot correct on scene and act on it by shortening scene time",
+   "triggers": [
+    "she's in shock",
+    "signs of shock",
+    "septic shock",
+    "can't fix this on scene",
+    "minimize scene time",
+    "short scene time"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: trunk hot and flushed, peripheries cool and mottled",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel her skin",
+    "trunk is hot",
+    "hands are cold",
+    "check her peripheries",
+    "skin signs"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Oxygen to maintain SpO2 at or above 94%: she is at 92% with evidence of shock and an altered LOC, so high-flow oxygen is indicated",
+   "triggers": [
+    "non-rebreather",
+    "high-flow oxygen",
+    "15 litres",
+    "oxygen on",
+    "apply oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position supine to support blood pressure, and keep her covered - she is hypotensive and moves poorly on her own",
+   "triggers": [
+    "lay her flat",
+    "supine",
+    "position her supine",
+    "keep her covered",
+    "blanket over her",
+    "lie her down"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC out loud, citing the altered LOC and the shock findings",
+   "triggers": [
+    "she's RTC",
+    "rapid transport",
+    "priority patient",
+    "she's unstable",
+    "load and go"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes, with the secondary survey completed en route",
+   "triggers": [
+    "ready to load",
+    "package her",
+    "secondary en route",
+    "load within 15",
+    "finish the assessment en route"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State that definitive care is intravenous fluid and antibiotics at hospital - transport now rather than waiting on scene for the PCP car",
+   "triggers": [
+    "she needs antibiotics",
+    "IV fluids at the hospital",
+    "don't wait for the PCP",
+    "transport now",
+    "definitive care at hospital"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: new confusion in a previously oriented 82-year-old, with fever and poor intake",
+   "triggers": [
+    "what's going on today",
+    "chief complaint",
+    "what's changed",
+    "why did you call",
+    "what's wrong with her"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C from the collateral source: time of onset and rate of change, the baseline mental status, urinary symptoms, oral intake, and the unwitnessed fall including whether the head was struck",
+   "triggers": [
+    "when did this start",
+    "what's she like normally",
+    "any urinary symptoms",
+    "did she hit her head",
+    "was the fall witnessed",
+    "how much has she been drinking"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Ask about pain despite the confusion: she localizes discomfort to the lower abdomen when asked directly - elderly patients under-report pain",
+   "triggers": [
+    "any pain",
+    "where does it hurt",
+    "does it hurt anywhere",
+    "pain scale",
+    "point to where it hurts"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history, including the two previous urinary infections that also presented as confusion",
+   "triggers": [
+    "medical history",
+    "any infections before",
+    "past history",
+    "any heart problems",
+    "history of UTIs"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications - the anticoagulant matters twice over: it raises the stakes of the unwitnessed fall, and the beta blocker can blunt the tachycardia you would expect in sepsis",
+   "triggers": [
+    "what medications",
+    "medication list",
+    "blood thinners",
+    "anticoagulant",
+    "beta blocker",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake - almost nothing for 24 hours, which compounds the hypovolemia",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "last drink",
+    "eating and drinking",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately and compared to her baseline of 15",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation - recognize 88/52 as hypotension in an 82-year-old whose usual pressure is high",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "cuff on"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality - and note that the beta blocker may be masking how tachycardic she should be",
+   "triggers": [
+    "pulse rate",
+    "rate rhythm and strength",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character with both lung fields auscultated",
+   "triggers": [
+    "resp rate",
+    "respirations",
+    "rate depth and character"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on centrally and peripherally - the split between a hot trunk and cold hands is the finding",
+   "triggers": [
+    "skin",
+    "central and peripheral skin",
+    "skin condition"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction, important after an unwitnessed fall on an anticoagulant",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 recorded before and after oxygen, with the reading checked against the pulse on a cool peripheral finger",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Blood glucose - mandatory in any patient with a decreased level of consciousness",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "blood sugar",
+    "glucometer"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated in suspected infection; document the route used",
+   "triggers": [
+    "temperature",
+    "tympanic temp",
+    "temp"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health (the 48-hour trajectory from independent to confused is the story)",
+   "triggers": [
+    "general health",
+    "how has she been lately",
+    "any recent illness",
+    "normally independent"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (screen for stroke: no facial droop, no unilateral weakness)",
+   "triggers": [
+    "facial droop",
+    "weakness on one side",
+    "stroke symptoms",
+    "speech changes",
+    "numbness"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (pneumonia is the other common septic source in the elderly)",
+   "triggers": [
+    "any cough",
+    "sputum",
+    "short of breath",
+    "pain when breathing"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "palpitations",
+    "heart rhythm",
+    "cardiovascular"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (dysuria, frequency and strong-smelling urine point to the source)",
+   "triggers": [
+    "burning when she pees",
+    "urine smell",
+    "going more often",
+    "vomiting or diarrhea",
+    "belly pain"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (look for cellulitis and pressure sores as alternative sources)",
+   "triggers": [
+    "pressure sores",
+    "any rash",
+    "skin problems",
+    "any wounds"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "any falls",
+    "joint pain",
+    "musculoskeletal",
+    "bones or joints"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "thyroid",
+    "endocrine",
+    "blood sugar problems"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision changes",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined specifically for occult injury from the unwitnessed fall in an anticoagulated patient",
+   "triggers": [
+    "head and neck",
+    "check her scalp",
+    "blood from the ears",
+    "check her head for injury",
+    "JVD",
+    "neck exam"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest auscultated at all six sites, listening for the crackles of a pneumonic source",
+   "triggers": [
+    "all six sites",
+    "six sites",
+    "auscultate the chest",
+    "any crackles",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined in four quadrants with the suprapubic tenderness reported as the likely source",
+   "triggers": [
+    "abdomen",
+    "four quadrants",
+    "palpate the belly",
+    "abdominal exam",
+    "belly exam"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined during the transfer, checking for pressure sores as an alternative source",
+   "triggers": [
+    "check her back",
+    "pressure sores on the back",
+    "back exam",
+    "look at her back"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with skin turgor and bilateral radial pulses documented",
+   "triggers": [
+    "upper extremities",
+    "skin turgor",
+    "skin tenting",
+    "compare radials",
+    "radial pulses both sides"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities: assess the hip after the fall for shortening or rotation, and document pedal pulses",
+   "triggers": [
+    "lower extremities",
+    "shortening or rotation",
+    "check her hip",
+    "pedal pulses",
+    "check her legs"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Measure the blood glucose before attributing the altered LOC to infection, and correctly withhold oral glucose and glucagon with a BGL of 9.8 - giving glucose here would be initiating a protocol without indications",
+   "triggers": [
+    "BGL is normal so no glucose",
+    "no oral glucose",
+    "no glucagon",
+    "glucose is not indicated",
+    "rule out hypoglycemia",
+    "check her sugar first"
+   ]
+  },
+  {
+   "itemId": "skill-spinal-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Spinal management applied correctly for the unwitnessed fall with altered mental status: manual stabilization, sized hard collar, moved as a unit onto the stretcher, head not taped",
+   "triggers": [
+    "hard collar",
+    "size the collar",
+    "move her as a unit",
+    "don't tape the head",
+    "head blocks",
+    "scoop"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway management: suction at the head and a plan to tip the whole device if she vomits",
+   "triggers": [
+    "suction at the head",
+    "tip the whole device",
+    "tip the board",
+    "plan to tip",
+    "suction set up"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Oxygen and positioning per the hypovolemia approach: supine to support blood pressure, oxygen to SpO2 94% or above, kept covered and warm",
+   "triggers": [
+    "oxygen to 94",
+    "keep her warm",
+    "supine for her blood pressure",
+    "hypovolemia approach",
+    "supine with blankets",
+    "blanket over her"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "emr",
+   "actionEn": "EMR: Verbalize that IV fluid and antibiotics are outside EMR scope, and that the treatment an EMR controls here is oxygen, position, warmth and speed",
+   "triggers": [
+    "outside EMR scope",
+    "IV fluids are outside my scope",
+    "antibiotics at the hospital",
+    "outside my scope",
+    "the PCP can start fluids"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Treat her with dignity throughout: explain each step even though she is confused, keep her covered during exposure, and bring the medication list",
+   "triggers": [
+    "explain what we're doing",
+    "cover her up",
+    "I'm going to",
+    "bring the medication list",
+    "dignity"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each move and at least every 5 minutes",
+   "triggers": [
+    "reassess ABCs",
+    "recheck ABCs",
+    "ABCs after the move",
+    "airway breathing circulation and interventions",
+    "reassessing her"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes, and interpret the falling GCS with falling blood pressure out loud as worsening septic shock",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set",
+    "she's getting worse"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Protect the airway as the GCS falls: suction in hand, ready to tip the device, ready to assist ventilation if the respirations become inadequate",
+   "triggers": [
+    "protect her airway",
+    "suction in hand",
+    "ready to tip",
+    "if she vomits",
+    "ready to assist ventilations",
+    "ready to bag her"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Keep her supine and covered, and update the receiving hospital with the deterioration rather than stopping to re-examine",
+   "triggers": [
+    "keep driving",
+    "update the hospital",
+    "keep her supine",
+    "no need to stop",
+    "update the receiving"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification describing a hypotensive febrile elderly patient with an altered LOC",
+   "triggers": [
+    "notify the hospital",
+    "pre-alert",
+    "patch to the hospital",
+    "radio ahead",
+    "call ahead"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off including the baseline mental status, the suspected urinary source, the anticoagulant and the unwitnessed fall",
+   "triggers": [
+    "hand-off report",
+    "handover",
+    "report to the nurse",
+    "this is an 82-year-old woman",
+    "baseline is fully oriented"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR completed within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "documentation",
+    "charting"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "cspine-control",
+   "descriptionEn": "candidate initiates c-spine control / spinal motion restriction for the unwitnessed fall (manual stabilization, hard collar, head blocks, spinal device)"
+  },
+  {
+   "key": "baseline-established",
+   "descriptionEn": "candidate asks for or establishes her baseline mental status (what she is normally like) from the aide or the records"
+  },
+  {
+   "key": "glucose-given-normal-bgl",
+   "descriptionEn": "candidate actually administers oral glucose, glucagon or D10W although her BGL is 9.8 (record the drug event as well). Asking or deciding whether glucose is indicated, or saying it is withheld, is NOT this event"
+  },
+  {
+   "key": "low-flow-oxygen",
+   "descriptionEn": "candidate gives only low-flow oxygen (nasal cannula, or a mask at a low flow) although she is in shock with an altered LOC - high-flow oxygen is required"
+  },
+  {
+   "key": "not-supine",
+   "descriptionEn": "candidate leaves her sitting up in the recliner, or sits her up for transport, instead of positioning her supine for shock"
+  },
+  {
+   "key": "given-by-mouth",
+   "descriptionEn": "candidate gives her anything by mouth (drinks, food, tablets, oral glucose) despite her decreased LOC"
+  },
+  {
+   "key": "waits-on-scene",
+   "descriptionEn": "candidate delays loading or transport to wait for the PCP car, or to start an IV or fluids on scene - vascular access belongs en route"
+  },
+  {
+   "key": "stops-to-reexamine",
+   "descriptionEn": "after her GCS and blood pressure fall, the candidate stops or delays transport to repeat the physical examination instead of supporting her and updating the hospital"
+  },
+  {
+   "key": "head-taped",
+   "descriptionEn": "candidate tapes her head to the spinal device"
+  },
+  {
+   "key": "emr-iv-fluids",
+   "descriptionEn": "an EMR-level candidate personally starts an IV or gives IV fluid (outside EMR scope; record the drug event as well). Saying IV fluids are outside EMR scope, or that the PCP or the hospital will give them, is NOT this event"
+  },
+  {
+   "key": "fluids-before-baseline-vitals",
+   "descriptionEn": "PCP actually starts the fluid bolus before a full baseline set of vital signs (blood pressure, pulse and respirations) has been taken"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the bolus past 500 mL or onto the next bag without reassessing her (BP / vitals / ABCs) in between"
+  },
+  {
+   "key": "antiemetic-not-indicated",
+   "descriptionEn": "PCP actually gives dimenhydrinate or ondansetron although she has no nausea or vomiting"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "glucogel",
+    "dextrose gel"
+   ],
+   "doseEn": "WITHHELD in this scenario: 15 g PO, repeat at 5 minutes as necessary - only for known or suspected hypoglycemia in a conscious patient with sufficient mentation to maintain her airway. Her BGL is 9.8 and her LOC is decreased: not indicated, and contraindicated.",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "GlucaGen"
+   ],
+   "doseEn": "WITHHELD in this scenario: 0.5-1 mg IM or 3 mg IN for hypoglycemia only. Her BGL is 9.8 - not indicated.",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%"
+   ],
+   "doseEn": "WITHHELD in this scenario (PCP): 10-25 g (100-250 mL of 10% solution) IV only for confirmed hypoglycemia. Her BGL is 9.8.",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "sodium chloride"
+   ],
+   "doseEn": "PCP: vascular access en route; fluid bolus 20 mL/kg IV to a maximum of 2 L, reassessing every 500 mL, target systolic 90 mmHg (hypotensive with clinical signs of shock and 24 hours of almost no intake). Her weight is not known on scene.",
+   "licence": "pcp"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol"
+   ],
+   "doseEn": "PCP: 1 mg/kg to a maximum of 50 mg IM, or IV diluted over 1-2 minutes - only if she becomes nauseated or vomits; caution in the elderly. Not indicated in this scenario (no nausea or vomiting).",
+   "licence": "pcp"
+  },
+  {
+   "key": "ondansetron",
+   "namesEn": [
+    "ondansetron",
+    "Zofran"
+   ],
+   "doseEn": "PCP: 4 mg PO (adult) - only for moderate to severe nausea or vomiting; monitor for CNS effects in the elderly. Not indicated in this scenario (no nausea or vomiting).",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "cspine-initiated",
+   "check": "present",
+   "event": "cspine-control",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 100,
+    "errorEn": "Fails to initiate C-spine control at any time when indicated and/or"
+   }
+  },
+  {
+   "id": "cspine-before-moving",
+   "check": "ordered",
+   "first": "cspine-control",
+   "then": "move:lift-to-cot",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 15,
+    "errorEn": "C-spine control taken late, or out of sequence with potentially negative consequences, including pain stimulus prior to C-spine control, and/or"
+   }
+  },
+  {
+   "id": "no-head-tape",
+   "check": "absent",
+   "event": "head-taped",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-spinal-mgmt",
+    "weight": 10,
+    "errorEn": "Improper strapping not detrimental to patient care"
+   }
+  },
+  {
+   "id": "bgl-obtained",
+   "check": "present",
+   "event": "blood-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "no-glucose-with-normal-bgl",
+   "check": "absent",
+   "event": "glucose-given-normal-bgl",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "baseline-established",
+   "check": "present",
+   "event": "baseline-established",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "high-flow-oxygen",
+   "check": "absent",
+   "event": "low-flow-oxygen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 15,
+    "errorEn": "Oxygen is administered by incorrect delivery device for patient presentation detrimental to patient care and/or"
+   }
+  },
+  {
+   "id": "supine-for-shock",
+   "check": "absent",
+   "event": "not-supine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "patient-position",
+    "weight": 5,
+    "errorEn": "Positions the patient incorrectly with the potential to be detrimental to patient care (e.g. delaying sitting a patient who is dizzy or delaying putting a shock patient supine)"
+   }
+  },
+  {
+   "id": "nothing-by-mouth",
+   "check": "absent",
+   "event": "given-by-mouth",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-scene-delay-for-iv",
+   "check": "absent",
+   "event": "waits-on-scene",
+   "licence": "both",
+   "deduct": {
+    "itemId": "transport",
+    "weight": 10,
+    "errorEn": "Delays treatment and/or transport performing non-Priority tasks"
+   }
+  },
+  {
+   "id": "no-stop-to-reexamine",
+   "check": "absent",
+   "event": "stops-to-reexamine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "transport",
+    "weight": 10,
+    "errorEn": "Delays treatment and/or transport performing non-Priority tasks"
+   }
+  },
+  {
+   "id": "emr-no-iv-fluids",
+   "check": "absent",
+   "event": "emr-iv-fluids",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "saline-given",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "fluids-after-baseline-vitals",
+   "check": "absent",
+   "event": "fluids-before-baseline-vitals",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-antiemetic-without-nausea",
+   "check": "absent",
+   "event": "antiemetic-not-indicated",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "82-year-old female",
+  "cc": "acute confusion, fever and hypotension - suspected sepsis from a urinary source",
+  "moi": null,
+  "hxcc": "normally fully oriented and independent; 48 hours of burning, frequency and almost no intake; acutely confused this morning; unwitnessed fall in the bathroom this morning while on apixaban",
+  "vitals": "GCS 13 (E3 V4 M6), BP 88/52, pulse 116 weak regular, resp 26 shallow, trunk hot and flushed with cool mottled peripheries and capillary refill 4 seconds, SpO2 92% on room air and 96% on 15 L, BGL 9.8, temp 38.7 tympanic; latest GCS 12, BP 84/50, pulse 122, resp 28, temp 38.9 - deteriorating",
+  "treatments": "high-flow oxygen, supine with blankets, spinal motion restriction for the unwitnessed fall, suction at the head; no glucose given (BGL 9.8); PCP: IV with fluid bolus en route; ETA 8 minutes",
+  "findings": "suprapubic tenderness, chest clear, no focal neurological deficit, no scalp injury found, pupils equal and reactive"
+ },
+ "handoffFacts": {
+  "ageSex": "82-year-old woman from an assisted-living residence",
+  "cc": "acute confusion with fever and hypotension - suspected urosepsis",
+  "moi": null,
+  "hxcc": "baseline fully oriented and independent with a walker; 48 hours of burning on urination, increased frequency and almost no oral intake; up all night, acutely confused this morning; unwitnessed fall in the bathroom this morning - unknown whether she struck her head - while on apixaban; two previous urinary infections that also presented as confusion",
+  "initialVitals": "GCS 13 (E3 V4 M6), BP 88/52, pulse 116 weak regular, resp 26 shallow, trunk hot and flushed with cool mottled peripheries and capillary refill 4 seconds, pupils equal and reactive, SpO2 92% on room air and 96% on 15 L, BGL 9.8 mmol/L, temp 38.7 C tympanic",
+  "finalVitals": "GCS 12 (E3 V3 M6), BP 84/50, pulse 122 weak regular, resp 28 shallow, trunk hot with cold mottled hands, pupils equal and reactive, SpO2 95% on 15 L, temp 38.9 C tympanic - deteriorating",
+  "pmhx": "hypertension, atrial fibrillation, osteoarthritis, mild cognitive impairment but oriented at baseline; two previous urinary infections",
+  "meds": "apixaban, bisoprolol (may blunt the heart-rate response), acetaminophen as needed",
+  "allergies": "sulfa - rash",
+  "treatments": "oxygen at 15 L (SpO2 up to 95-96%), supine, blankets, spinal motion restriction for the unwitnessed fall, suction at the head; BGL 9.8 so no glucose given; medication list brought; rapid transport with early notification; PCP: IV with fluid bolus reassessed every 500 mL",
+  "findings": "suprapubic tenderness, chest clear, no focal neurological deficit, no scalp injury, pupils equal and reactive, dry mucous membranes and skin tenting, left hip bruise without shortening or rotation; last real intake 24 hours ago"
+ },
+ "pcrFacts": {
+  "cc": "Acute confusion, fever and hypotension in a previously oriented 82-year-old",
+  "hxcc": "48 hours of dysuria, frequency and strong-smelling urine with almost no oral intake; acute confusion this morning; unwitnessed fall in the bathroom on apixaban; baseline per care aide is fully oriented and independent; two previous urinary infections presenting as confusion",
+  "pmhx": "Hypertension, atrial fibrillation, osteoarthritis, mild cognitive impairment but oriented at baseline",
+  "meds": "Apixaban, bisoprolol, acetaminophen PRN",
+  "allergies": "Sulfa - rash",
+  "treatments": [
+   "Oxygen titrated to SpO2 94% or above (92% RA to 95-96% on 15 L)",
+   "Supine positioning to support blood pressure, blankets for warmth",
+   "Spinal motion restriction for the unwitnessed fall - NEXUS alertness criterion not met due to altered mental status",
+   "Suction at the head with a plan to tip the device if she vomits",
+   "BGL 9.8 measured - hypoglycemia excluded, oral glucose and glucagon correctly withheld",
+   "Temperature measured tympanically; medication list brought to hospital",
+   "RTC transport with early ED notification; IV fluids and antibiotics verbalized as out of EMR scope"
+  ],
+  "findings": [
+   "GCS 13 falling to 12 against a documented baseline of 15",
+   "Hypotension 88/52 falling to 84/50 with a weak pulse of 116 to 122",
+   "Hot flushed trunk with cool mottled peripheries and capillary refill of 4 seconds",
+   "Temperature 38.7 rising to 38.9; suprapubic tenderness; chest clear",
+   "No focal neurological deficit, no scalp injury found despite the unwitnessed fall on an anticoagulant",
+   "Dry mucous membranes and reduced skin turgor consistent with 24 hours of poor intake"
+  ],
+  "vitals": "Set 1 (baseline on scene): GCS 13 (E3 V4 M6), BP 88/52, P 116 weak regular, R 26 shallow, skin trunk hot flushed / peripheries cool mottled, CR 4 s, PERL, SpO2 92% RA and 96% on 15 L, BGL 9.8 mmol/L, T 38.7 C tympanic. Set 2 (en route, about 7 minutes later): GCS 12 (E3 V3 M6), BP 84/50, P 122 weak regular, R 28 shallow, skin trunk hot / hands cold mottled, PERL, SpO2 95% on 15 L, T 38.9 C tympanic"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "She opens her eyes when you speak to her, mumbles \"I'm fine dear... I'm fine\" and drifts off again. She cannot tell you where she is or what year it is.",
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR runs this as a recognition-and-speed call: establish the baseline mental status from the aide, measure the blood glucose to exclude hypoglycemia and then correctly withhold glucose, oxygen to SpO2 94% or above (high flow - shock with altered LOC), supine positioning with blankets, spinal motion restriction because the confused patient fails the NEXUS alertness criterion after an unwitnessed fall, suction at the head, a temperature that supports the infective picture, and rapid transport with early notification. IV fluids and antibiotics are outside EMR scope - the EMR contribution is early recognition and a short scene time. No Functional Enquiry.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry and vascular access en route with a fluid bolus of 20 mL/kg to a maximum of 2 L, reassessed every 500 mL and titrated to a systolic of 90 - she is hypotensive with clinical signs of shock and 24 hours of almost no intake. Dimenhydrinate or ondansetron only if she vomits (she does not in this scenario), weighing the cautions in the elderly. Everything else is identical."
+ },
+ "sourcePages": "Scenario emd-05 (data/practical/emr-medical-1.json): dispatch, scene, primary (V on AVPU against a baseline of full orientation, shock with mottled peripheries, suprapubic tenderness, NEXUS fails on alertness), transport, history (care aide), vitals sets 1-2, FE, exam, interventions (glucose trap: BGL 9.8), ongoing (deteriorating GCS and BP), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC; cool pale clammy skin secondary to suspected shock); p.11 primary-survey interventions (c-spine stabilization when NEXUS or Canadian C-Spine indicated; airway maintenance and suctioning in decreased LOC; oxygen for altered LOC and evidence of shock); p.13 AVPU; p.25 Spinal Management (NEXUS / Canadian C-Spine; manual stabilization, hard collar, spinal immobilization device, foam blocks; do not tape the head); p.50 Oxygen Administration (shock requires high-flow oxygen); p.54 Hypovolemia (supine, keep warm, oxygen to SpO2 94% or above; PCP: vascular access en route, fluid bolus 20 mL/kg to a maximum of 2 L reassessing every 500 mL); p.48 Nausea - Vomiting (PCP antiemetics only for nausea or vomiting; target systolic 90); p.57 Diabetic Emergencies (decreased LOC without a known cause; baseline vitals including BGL; glucose gel only with sufficient mentation; glucagon / D10W only for hypoglycemia); p.61 D10W; p.63 Dimenhydrinate (1 mg/kg to a maximum of 50 mg; caution: elderly); p.67 Glucagon; p.75 Ondansetron (4 mg PO; CNS effects in the elderly); p.76 Oral Glucose (15 g PO; only with sufficient mentation to maintain an airway). Grading criteria p.19 (packaging goal times), p.35 (vitals intervals).",
+ "keywordEvents": [
+  {
+   "event": "cspine-control",
+   "regex": "\\b(c[- ]?spine|cervical spine|manual (stabili[sz]\\w*|in[- ]?line)|in[- ]?line stabili[sz]\\w*|hold\\w* (her|the) head|collar|spinal motion restriction|smr|spinal precautions|immobili[sz]\\w*|head blocks|foam blocks|vacuum mattress|scoop|log[- ]?roll\\w*)\\b",
+   "blockRegex": "\\b(not (needed|indicated|required|necessary)|no need|don'?t need|doesn'?t need|unnecessary|isn'?t (needed|indicated|required)|clear(ed)?|ruled? out|without|no (c[- ]?spine|collar|spinal))\\b"
+  },
+  {
+   "event": "baseline-established",
+   "regex": "\\b(baseline|normally|usual(ly)? (self|like)|normal for her|is she always|is this normal|her usual|what is she (usually|normally) like|what'?s she (usually|normally) like)\\b"
+  }
+ ]
+}

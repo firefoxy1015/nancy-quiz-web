@@ -58,7 +58,7 @@ def build(sheet, track):
             give.append(r['event'].split(':', 1)[1])
     pm = sheet.get('painManagement') or {}
     if pm.get('applies'):
-        give = ['entonox'] + (['acetaminophen', 'ibuprofen'] if track == 'pcp' else []) + give
+        give = ['entonox'] + list(pm.get('oralsIndicated', ['acetaminophen', 'ibuprofen'])) + give
     drugs = {d['key']: d for d in sheet.get('drugs', [])}
     give_lines = []
     for k in dict.fromkeys(give):

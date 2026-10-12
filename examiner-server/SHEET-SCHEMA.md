@@ -113,8 +113,14 @@ scenario file (`data/practical/*.json`) or the BC guidelines — never invent nu
       "deduct": { "itemId": "overall-patient-care", "weight": 100, "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)" } }
   ],
 
-  "painManagement": { "applies": true, "indicatedForPcp": true, "realignmentEvent": "skill-fracture-mgmt" },  // Appendix A logic; omit if N/A
+  "painManagement": { "applies": true, "realignmentEvent": "skill-fracture-mgmt", "oralsIndicated": ["acetaminophen", "ibuprofen"] },
+                                    // Appendix A, both licences (oral analgesia is EMR scope, guidelines p.58/68); list only the
+                                    // orals that are NOT contraindicated (e.g. on apixaban: ["acetaminophen"]); omit if N/A
 
+  "packagingFromEvent": ["state:rosc"],     // optional: the packaging clock starts at this event (cardiac arrest: ROSC;
+                                            // grading criteria p.19). "state:<id>" = a stateChange firing. Never fired = not judged
+  "disableKeywords": ["transport:rtc", "transport:non-rtc"],   // optional: engine keyword fallbacks to switch off
+                                            // (multi-patient triage: "P1 is a stable patient" is not this patient's category)
   "acceptedPriorities": ["non-rtc", "rtc"],   // optional: only when the guidelines make BOTH categories defensible
                                               // (e.g. altered LOC = unstable, guideline p.7); packaging limit follows the choice
   "keywordEvents": [                          // optional: engine-side detectors for GOOD special events a 100% rule needs

@@ -1183,7 +1183,7 @@
     "APAP"
    ],
    "doseEn": "500-1000 mg PO per guideline - NOT part of this call: hypovolemia is a listed caution (record only if actually given)",
-   "licence": "pcp"
+   "licence": "both"
   },
   {
    "key": "ibuprofen",
@@ -1194,7 +1194,7 @@
     "NSAID"
    ],
    "doseEn": "300-400 mg PO per guideline - not part of this scenario's treatment plan (record only if actually given)",
-   "licence": "pcp"
+   "licence": "both"
   }
  ],
  "majorMoves": [
@@ -1318,7 +1318,7 @@
    "id": "acetaminophen-caution-hypovolemia",
    "check": "absent",
    "event": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 15,

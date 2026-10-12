@@ -1,0 +1,1417 @@
+{
+ "id": "emd-06",
+ "titleEn": "Roofer Down in a Heat Wave - Exertional Heat Stroke",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-06",
+ "patient": {
+  "name": "Tyler Brandt",
+  "age": 34,
+  "sex": "male",
+  "affectEn": "restless and disoriented: moves restlessly on the tarp, pulls at his shirt, opens his eyes to your voice and follows simple commands only some of the time; flushed dark red and very hot",
+  "speechEn": "jumbled, inappropriate words (\"Tuesday... shingles... I'm fine\"); cannot give his own address or a coherent history - the two coworkers answer the history questions. After about 12 minutes of combined cooling (GCS 13) he is confused but can answer simple questions in short phrases."
+ },
+ "scene": {
+  "settingEn": "Residential re-roofing job in Kelowna at 1505 hrs on the fourth day of a heat wave, 38 degrees C in the shade. The patient lies supine on a tarp in an open, shaded garage that is still very hot - about 33 degrees C inside. A ladder leans against the eaves and roofing debris is scattered on the driveway; the crew has stopped work. One patient, two coworkers with him; one coworker has a jug of ice water from the crew's cooler. Kelowna General Hospital is 14 minutes away; the nearest PCP car is 18 minutes out.",
+  "hazardsEn": [
+   "ladder against the eaves - work has stopped",
+   "roofing debris on the driveway (trip hazard)",
+   "extreme heat - 38 degrees C outside, about 33 degrees C in the garage (this is the mechanism)"
+  ],
+  "bystanders": [
+   {
+    "who": "coworker who called 911",
+    "knowsEn": "They have been on the roof since 0700 with two short breaks, on the fourth day of the heat wave. He drank maybe one bottle of water all day and a large energy drink at lunch; half a sandwich at 1200 and nothing since. He complained of a headache and leg cramps at about 1300, seemed vague by 1400 and stopped sweating around 1400, then walked down the ladder and collapsed on the driveway at about 1455 - he did NOT fall. No seizure or shaking seen. No drugs or alcohol that he knows of. No medical problems that he knows of, not diabetic as far as he knows, no medications or supplements apart from the energy drink. Does not know about allergies. He is fit and works outdoors year round, no recent illness. Felt sick earlier but did not throw up, and has not been to pee all afternoon. Will help if told exactly what to do."
+   },
+   {
+    "who": "second coworker (with the jug of ice water)",
+    "knowsEn": "Nothing beyond what the first coworker says. Has the crew's cooler with ice and a jug of ice water; can fetch it, soak towels or sheets, hold up a sheet for privacy, or help set up a basin of ice water for his feet and lower legs if he is asked. Gives the patient nothing to drink unless the candidate tells him to."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "cold packs",
+   "water, sheets and towels that can be soaked",
+   "trauma shears (to cut off clothing)",
+   "the crew's cooler with ice and a jug of ice water (can be used for an improvised ice-water basin)",
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "suction unit",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "thermometer",
+   "oral glucose gel",
+   "glucagon",
+   "AED",
+   "cot",
+   "ambulance with patient-compartment air conditioning",
+   "PCP only: IV start kit with normal saline, D10W, acetaminophen and ibuprofen tablets"
+  ]
+ },
+ "dispatchEn": "1505 hrs on the fourth day of a heat wave, 38 degrees C in the shade. Code 3 to a residential re-roofing job in Kelowna. A 34-year-old roofer has become confused and collapsed on the driveway. Coworkers have moved him into the shade of the garage. Kelowna General Hospital is 14 minutes away; the nearest PCP car is 18 minutes out.",
+ "dispatchUpdateEn": "Dispatch adds: he has been on the roof since 0700 and stopped sweating about an hour ago according to a coworker. He is awake but 'talking nonsense'. Nobody saw him fall from any height - he walked down the ladder and collapsed on the driveway.",
+ "arrivalEn": "A coworker waves you into the open garage. It is shaded but still very hot - about 33 degrees C inside. A ladder leans against the eaves and roofing debris is scattered across the driveway; the crew has stopped work. One patient on a tarp on the garage floor, two coworkers kneeling beside him. Your partner is right behind you with the kits.",
+ "firstLookEn": "A young man lying on his back on a tarp in the shade of the garage, still in long pants, a long-sleeved shirt, boots and a hard hat. His skin is flushed dark red. He is moving restlessly and pulling at his shirt. Two coworkers are beside him; one is holding a jug of ice water.",
+ "primary": {
+  "locEn": "Awake but disoriented and restless: eyes open to your voice, pulls at his shirt, answers \"Tuesday... shingles... I'm fine\", cannot give his own address, obeys simple commands only some of the time. After about 12 minutes of combined cooling he is less restless and confused but answering simple questions.",
+  "airwayEn": "Patent, but it needs repositioning as he thrashes. No vomit or secretions at the moment; suction ready if needed.",
+  "breathingEn": "Respirations 30, shallow; clear air entry on both sides; equal chest rise.",
+  "circulationEn": "Radial pulse 138, weak, regular. No external bleeding.",
+  "rbsEn": "Rapid body survey: no head injury, no neck tenderness, moves all four limbs, no deformity, no bleeding - he did not fall from a height (he walked down the ladder and collapsed). Skin very hot to touch, flushed dark red, still slightly moist from earlier sweating (skin is given automatically during the RBS). He is still in long pants, a long-sleeved shirt, boots and a hard hat until the candidate removes them. Cooling, once started, is tolerated: no shivering.",
+  "skinEn": "very hot to touch, flushed dark red, slightly moist"
+ },
+ "history": {
+  "ccEn": "Patient: \"I'm fine... shingles...\" (jumbled words). Coworker: \"He's been out of it - talking nonsense - and then he came down the ladder and just collapsed on the driveway.\"",
+  "opqrst": {
+   "oEn": "Coworker: \"He said he had a headache and cramps around one o'clock, he was vague by two and stopped sweating around then, and he came down the ladder and collapsed on the driveway at about 1455, just before three.\"",
+   "pEn": "Coworker: \"Nothing made it better. We just got him into the shade of the garage.\"",
+   "qEn": "Coworker: \"He said he had a headache and his legs were cramping. Now he's just confused.\"",
+   "rEn": "Coworker: \"I don't know. He never said.\"",
+   "sEn": "The patient cannot say. Coworker: \"He didn't say how bad it was.\"",
+   "tEn": "Coworker: \"Headache and cramps from about one, vague and not sweating from about two, down on the driveway since just before three.\""
+  },
+  "painScoreEn": "He cannot give a score (jumbled words); the coworkers know he complained of a headache and leg cramps at about 1300 but not how bad they were.",
+  "sample": {
+   "sEn": "Coworker: \"Headache and leg cramps this afternoon, then he got confused, stopped sweating, and collapsed.\"",
+   "aEn": "Coworker: \"No idea. I don't know if he's allergic to anything.\"",
+   "mEn": "Coworker: \"Not that I know of. No supplements - just a big energy drink at lunch.\"",
+   "pEn": "Coworker: \"Nothing I know of. He's healthy. Not diabetic as far as I know.\"",
+   "lEn": "Coworker: \"Half a sandwich at noon. He drank maybe one bottle of water all day, plus the big energy drink at lunch.\"",
+   "eEn": "Coworker: \"We've been on the roof since seven with two short breaks - fourth day of this heat wave. He's in long sleeves and long pants. He walked down the ladder and collapsed on the driveway - he didn't fall. No seizure, no shaking. No drugs or drinking that I know of.\""
+  },
+  "fe": {
+   "generalEn": "Coworker: \"He's fit - works outside all year. He hasn't been sick lately.\"",
+   "cnsEn": "Coworker: \"Headache since about one, then confused and restless. No seizure that we saw.\"",
+   "respiratoryEn": "Coworker: \"No cough. He wasn't short of breath that I noticed.\"",
+   "cardiovascularEn": "Coworker: \"He never mentioned chest pain.\" (If his pulse or heart is asked about: his heart is racing.)",
+   "giGuEn": "Coworker: \"He said he felt sick earlier but he didn't throw up. He hasn't gone to pee all afternoon.\"",
+   "integumentaryEn": "Dark red, flushed skin; sunburn on his forearms.",
+   "musculoskeletalEn": "Coworker: \"His legs were cramping at about one.\"",
+   "endocrineEn": "Coworker: \"He's not diabetic that we know of.\"",
+   "eentEn": "Coworker: \"Nothing that I know of.\""
+  }
+ },
+ "findings": {
+  "headNeckEn": "No injury from the collapse; mucous membranes very dry; no neck tenderness.",
+  "chestLungsEn": "Equal air entry at all six sites; no crackles.",
+  "abdomenEn": "Soft, non-tender in all four quadrants.",
+  "backEn": "Inspected during the transfer: no injury; skin hot everywhere.",
+  "lowerExtremitiesEn": "Calf muscles tight and tender from the cramps; pedal pulses weak but present; moves all limbs.",
+  "upperExtremitiesEn": "Sunburn on both forearms; weak radial pulses bilaterally; no tremor at rest."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, taken while cooling is already running, completed in under 3 minutes; blood glucose is mandatory in this set (heat patient with a decreased LOC)",
+   "gcs": {
+    "total": 11,
+    "e": 3,
+    "v": 3,
+    "m": 5
+   },
+   "bp": "96/54",
+   "pulse": {
+    "rate": 138,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "138 weak regular"
+   },
+   "resp": {
+    "rate": 30,
+    "depth": "shallow",
+    "character": "rapid",
+    "rawEn": "30 shallow"
+   },
+   "skin": "very hot, flushed dark red, slightly moist",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "96% on room air",
+   "bgl": "5.1 mmol/L",
+   "temp": "41.2 degrees C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "afterEvent": "cooling-started"
+     },
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, 8 minutes after set 1, after roughly 12 minutes of combined cooling - improving (temperature down 1.8 degrees); only unlocks once cooling has been started",
+   "gcs": {
+    "total": 13,
+    "e": 4,
+    "v": 4,
+    "m": 5
+   },
+   "bp": "104/62",
+   "pulse": {
+    "rate": 124,
+    "rhythm": "regular",
+    "strength": "stronger",
+    "rawEn": "124 stronger regular"
+   },
+   "resp": {
+    "rate": 26,
+    "depth": "adequate",
+    "character": "regular",
+    "rawEn": "26"
+   },
+   "skin": "hot but less flushed",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "97% on oxygen",
+   "bgl": "5.1 mmol/L",
+   "temp": "39.4 degrees C"
+  }
+ ],
+ "stateChanges": [],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan cooling equipment before arrival: cold packs, water, sheets or towels that can be soaked, the ambulance air conditioning set to maximum cold, oxygen, blood glucose meter and thermometer",
+   "triggers": [
+    "plan cooling",
+    "bring cold packs",
+    "sheets and towels to soak",
+    "bring the thermometer",
+    "glucometer and thermometer",
+    "cooling equipment"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize the pattern from dispatch: prolonged exertion in extreme heat, altered mental status, and reported cessation of sweating - this is heat stroke until proven otherwise, and heat stroke is an unstable finding",
+   "triggers": [
+    "heat stroke until proven otherwise",
+    "this sounds like heat stroke",
+    "stopped sweating and confused",
+    "altered mental status in the heat",
+    "heat stroke is unstable"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Pre-cool the patient compartment on the way so the ambulance itself becomes a cooling tool on arrival",
+   "triggers": [
+    "pre-cool the ambulance",
+    "AC on max",
+    "air conditioning to maximum cold",
+    "pre-cool the patient compartment",
+    "crank the AC"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (ladder, roofing debris - work stopped), environment (extreme heat, this is the mechanism), nature of illness (heat illness after prolonged exertion), people (one patient plus two coworkers who can help cool him) and resources",
+   "triggers": [
+    "scene is safe",
+    "ladder and debris",
+    "work has stopped",
+    "extreme heat",
+    "nature of illness is heat",
+    "one patient two coworkers"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves and eye protection",
+    "gloves on",
+    "eye protection",
+    "PPE on",
+    "BSI"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: young man, flushed dark red, restless and answering incorrectly, over-dressed for the conditions - start stripping the clothing as part of the first hands-on approach",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "what do I see",
+    "he's flushed",
+    "he looks hot",
+    "over-dressed for the heat"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: awake but disoriented and restless - central nervous system dysfunction is what separates heat stroke from heat exhaustion",
+   "triggers": [
+    "AVPU",
+    "level of consciousness",
+    "is he oriented",
+    "what's your name",
+    "do you know where you are",
+    "he's disoriented"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway and keep repositioning it as he thrashes; suction available",
+   "triggers": [
+    "airway is open",
+    "airway patent",
+    "check his airway",
+    "reposition his airway",
+    "suction ready",
+    "airway is clear"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing: 30 and shallow, auscultate both sides",
+   "triggers": [
+    "how's his breathing",
+    "breathing rate",
+    "auscultate both sides",
+    "chest rise",
+    "listen to his lungs",
+    "respiratory effort"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: weak radial pulse of 138 - heat stroke produces a distributive and hypovolemic shock picture",
+   "triggers": [
+    "radial pulse",
+    "check his pulse",
+    "pulse rate and quality",
+    "any major bleeding",
+    "check circulation"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a full rapid body survey - a collapse on a work site still needs an injury sweep even when the cause looks medical",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "head to toe for injuries",
+    "injury sweep",
+    "check for injuries from the collapse",
+    "did he hit his head"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Identify heat stroke as the life threat and begin cooling immediately as a primary survey intervention - rapid cooling is the indicated intervention for hyperthermia and it starts now, not after the secondary survey",
+   "triggers": [
+    "start cooling now",
+    "begin cooling",
+    "cool him down",
+    "rapid cooling",
+    "get his clothes off",
+    "strip him down"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: very hot, flushed dark red, slightly moist",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel his skin",
+    "skin is hot",
+    "skin signs",
+    "check his skin"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Oxygen for the altered LOC and shock picture, titrated to keep SpO2 at or above 94%",
+   "triggers": [
+    "apply oxygen",
+    "non-rebreather",
+    "nasal cannula",
+    "titrate oxygen to 94",
+    "oxygen on",
+    "high flow oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position supine to support the blood pressure, out of the sun, with dignity maintained while the clothing comes off",
+   "triggers": [
+    "keep him supine",
+    "lay him flat",
+    "supine",
+    "lying flat",
+    "out of the sun",
+    "sheet over him for dignity"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC out loud: heat stroke with an altered LOC",
+   "triggers": [
+    "RTC",
+    "rapid transport",
+    "priority patient",
+    "he's unstable",
+    "unstable heat stroke"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State and follow the timing rule: continue cooling for a minimum of 10 minutes before beginning conveyance, using that time for the history and the first set of vitals rather than standing still",
+   "triggers": [
+    "ten minutes of cooling",
+    "cool for 10 minutes before we go",
+    "minimum of 10 minutes",
+    "cooling before conveyance",
+    "leave after 10 minutes of cooling"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Continue the most aggressive available cooling during transport - the ambulance air conditioning on maximum cold plus soaked towels to head, torso and thighs",
+   "triggers": [
+    "keep cooling en route",
+    "cool during transport",
+    "AC on max in the back",
+    "soaked towels during transport",
+    "continue cooling in the ambulance"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Do not delay departure to wait for the PCP car - cooling is the treatment and an EMR can deliver all of it",
+   "triggers": [
+    "not waiting for the PCP car",
+    "we won't wait for the PCP",
+    "intercept en route",
+    "meet us en route",
+    "leave without the PCP"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: confusion and collapse after prolonged work in extreme heat",
+   "triggers": [
+    "what happened",
+    "what's going on",
+    "chief complaint",
+    "what's wrong today",
+    "why did you call"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C: hours of exposure and exertion, fluid intake, clothing, when symptoms started, when sweating stopped, whether anyone saw a fall or a seizure, and how long he has been down",
+   "triggers": [
+    "how long has he been working",
+    "how much has he had to drink",
+    "when did he stop sweating",
+    "did he fall",
+    "did anyone see a seizure",
+    "how long has he been down"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Ask about the earlier headache and cramps and score them - these were the warning signs of heat illness hours before the collapse",
+   "triggers": [
+    "any headache",
+    "any cramps",
+    "how bad was the headache",
+    "rate the pain",
+    "pain scale",
+    "zero to ten"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history from the coworkers, and document that it is second-hand",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "past history",
+    "health conditions",
+    "is he diabetic"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications and any supplements or stimulants, including the energy drink",
+   "triggers": [
+    "medications",
+    "any meds",
+    "supplements",
+    "energy drinks",
+    "stimulants",
+    "any pills"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies - document as unknown rather than assuming none",
+   "triggers": [
+    "allergies",
+    "allergic to anything",
+    "drug allergies",
+    "allergies unknown"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake, quantifying the fluid deficit across the shift",
+   "triggers": [
+    "last ate",
+    "last oral intake",
+    "how much water",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "E3 V3 M5"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a pressure",
+    "cuff on"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality",
+   "triggers": [
+    "pulse rate",
+    "rate rhythm and strength",
+    "heart rate",
+    "count the pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character with both lung fields auscultated",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count his breaths"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on - and do not let the residual moisture talk you out of heat stroke",
+   "triggers": [
+    "skin colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "skin vitals"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 recorded and monitored",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Blood glucose - explicitly required in the initial vital signs of a heat patient with a decreased LOC",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "blood sugar",
+    "glucometer",
+    "check his sugar"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature measured and repeated - it is the number that drives the cooling and the endpoint",
+   "triggers": [
+    "temperature",
+    "temp",
+    "thermometer",
+    "tympanic",
+    "core temperature"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "been sick lately",
+    "recent illness",
+    "functional enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (headache, confusion and restlessness define heat stroke rather than heat exhaustion)",
+   "triggers": [
+    "headache",
+    "confusion",
+    "seizure activity",
+    "neuro"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "shortness of breath",
+    "any cough",
+    "trouble breathing",
+    "respiratory"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "palpitations",
+    "heart racing",
+    "cardiovascular"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (no urine output all afternoon quantifies the dehydration)",
+   "triggers": [
+    "nausea",
+    "vomiting",
+    "urinated",
+    "last time he peed",
+    "bowel or bladder"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "sunburn",
+    "rashes",
+    "skin problems",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal (the 1300 cramps were the first stage of heat illness)",
+   "triggers": [
+    "cramps",
+    "muscle cramps",
+    "joint pain",
+    "musculoskeletal"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined, including mucous membranes as a hydration marker",
+   "triggers": [
+    "head and neck",
+    "mucous membranes",
+    "check his mouth for dryness",
+    "palpate his neck",
+    "dry mucous membranes"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest auscultated at all six sites",
+   "triggers": [
+    "auscultate six sites",
+    "six sites",
+    "chest exam",
+    "air entry",
+    "listen to his chest"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined in four quadrants",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "abdominal exam",
+    "check his abdomen"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined during the transfer",
+   "triggers": [
+    "check his back",
+    "back exam",
+    "inspect his back",
+    "look at his back during the transfer"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with pulses and skin condition documented",
+   "triggers": [
+    "upper extremities",
+    "check his arms",
+    "radial pulses both sides",
+    "compare radials",
+    "skin on his arms"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with cramping muscles and pedal pulses documented",
+   "triggers": [
+    "lower extremities",
+    "check his legs",
+    "pedal pulses",
+    "calf muscles",
+    "cramping muscles"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Move him to the coolest available area and remove all clothing, using a sheet to preserve dignity",
+   "triggers": [
+    "remove all his clothing",
+    "cut off his clothes",
+    "take his boots off",
+    "sheet for dignity",
+    "move him to the coolest area"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Apply cold wet towels to the head, torso and thighs and run convective cooling with the air conditioning on maximum cold, combining methods rather than using one alone",
+   "triggers": [
+    "cold wet towels",
+    "towels to the head torso and thighs",
+    "evaporative cooling",
+    "convective cooling",
+    "AC on maximum cold",
+    "soak the sheet"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Improvise ice-water immersion of the feet and lower legs using the coworkers' cooler, and delegate the coworkers to help",
+   "triggers": [
+    "ice water for his feet",
+    "immerse his feet",
+    "basin of ice water",
+    "use the cooler",
+    "feet and lower legs in ice water",
+    "ice bath for his legs"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Deliver a minimum of 10 minutes of cooling before beginning conveyance, and continue the most aggressive available cooling throughout transport",
+   "triggers": [
+    "minimum of 10 minutes of cooling",
+    "10 minutes before we leave",
+    "cooling for 10 minutes",
+    "10 minutes of cooling before conveyance",
+    "most aggressive cooling during transport"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Withhold oral fluids and oral antipyretics: he cannot reliably protect his airway, and antipyretics do not lower temperature in heat stroke",
+   "triggers": [
+    "no oral fluids",
+    "nothing by mouth",
+    "NPO",
+    "no antipyretics",
+    "no Tylenol",
+    "antipyretics won't work"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "emr",
+   "actionEn": "Verbalize that intravenous fluid replacement is outside EMR scope and does not justify delaying cooling or transport",
+   "triggers": [
+    "IV fluids are outside my scope",
+    "IV is outside EMR scope",
+    "the hospital will give IV fluids",
+    "fluids are not in my scope",
+    "won't delay for an IV"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after each intervention and at least every 5 minutes",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing after the move",
+    "ABCs again",
+    "recheck my interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes with a repeat temperature, and interpret the falling temperature and improving GCS out loud",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "temperature is coming down",
+    "another set"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Keep cooling through transport and re-check the temperature repeatedly - improvement is not a reason to stop cooling",
+   "triggers": [
+    "keep cooling",
+    "don't stop cooling",
+    "recheck his temperature",
+    "repeat the temperature",
+    "cooling continues to hospital",
+    "temperature again"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State the seizure plan: protect the airway, keep cooling, do not restrain the limbs, and reassess breathing afterwards",
+   "triggers": [
+    "if he seizes",
+    "if he has a seizure",
+    "seizure plan",
+    "seizure precautions",
+    "don't restrain his limbs",
+    "watch for seizures"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification of heat stroke with an altered LOC and active cooling",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "call ahead",
+    "pre-alert",
+    "heat stroke coming in"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off with the temperature trend and the cooling methods and duration",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 34-year-old",
+    "report to the nurse",
+    "temperature trend"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR completed within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "documentation",
+    "charting",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "cooling-started",
+   "descriptionEn": "the candidate actually starts cooling the patient: removes his clothing, applies cold wet towels / soaked sheets, cold packs or ice water, immerses his feet and lower legs, or puts him in the cold air-conditioned ambulance (planning or pre-cooling the ambulance on the way is NOT this event)"
+  },
+  {
+   "key": "clothing-left-on",
+   "descriptionEn": "the candidate cools him over his clothing, or leaves his shirt, pants or boots on instead of removing all clothing"
+  },
+  {
+   "key": "cooling-stopped",
+   "descriptionEn": "before hospital arrival the candidate stops the cooling - removes the soaked towels / ice and does not replace them, turns the air conditioning off or down, or says cooling can stop because he is improving or talking sense. Briefly lifting towels for an exam or a transfer and re-applying them, or re-soaking them, is NOT this event."
+  },
+  {
+   "key": "conveyance-before-10-min-cooling",
+   "descriptionEn": "the candidate begins conveyance (the ambulance leaves for hospital) before at least 10 minutes of cooling have been delivered - compare the transcript times of the departure and of the start of cooling. Loading him into the cold ambulance and continuing to cool there before driving is NOT this event."
+  },
+  {
+   "key": "waits-for-pcp-car",
+   "descriptionEn": "the candidate delays departure on scene to wait for the PCP car after the 10 minutes of cooling have been delivered (asking for a PCP intercept en route is NOT this event)"
+  },
+  {
+   "key": "oral-fluids-given",
+   "descriptionEn": "the candidate gives, or lets a coworker give, the patient anything to drink by mouth (water, ice water, sports or energy drink). Pouring or sponging water OVER him to cool him is NOT this event."
+  },
+  {
+   "key": "patient-walks",
+   "descriptionEn": "the candidate lets or asks the patient to stand up or walk (e.g. to the ambulance or the cot)"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol",
+    "APAP"
+   ],
+   "doseEn": "500-1000 mg PO (PCP) - WITHHELD in this call: antipyretics do not lower the temperature in heat stroke (the problem is heat load, not a raised set point) and he cannot reliably protect his airway (if given, record drug:acetaminophen)",
+   "licence": "both"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin",
+    "NSAID"
+   ],
+   "doseEn": "300-400 mg PO (PCP) - WITHHELD in this call: antipyretics do not lower the temperature in heat stroke and he cannot reliably protect his airway (if given, record drug:ibuprofen)",
+   "licence": "both"
+  },
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "Glucogel",
+    "dextrose gel",
+    "sugar gel"
+   ],
+   "doseEn": "15 g PO for BGL below 4.0 mmol/L only in a patient with sufficient mentation to maintain his airway - NOT indicated: BGL is 5.1 mmol/L and his mentation is insufficient (if given, record drug:oral-glucose)",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "GlucaGen",
+    "Baqsimi",
+    "intranasal glucagon"
+   ],
+   "doseEn": "for hypoglycemia (BGL below 4.0 mmol/L) with insufficient mentation - NOT indicated: BGL is 5.1 mmol/L (if given, record drug:glucagon)",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%",
+    "IV dextrose"
+   ],
+   "doseEn": "PCP: 10-25 g (100-250 mL of 10% solution) IV for confirmed hypoglycemia - NOT indicated: BGL is 5.1 mmol/L (if given, record drug:d10w)",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "IV fluids",
+    "sodium chloride",
+    "fluid bolus"
+   ],
+   "doseEn": "PCP only: IV fluid replacement for the signs and symptoms of dehydration (no urine all afternoon, dry mucous membranes, weak pulse 138, BP 96/54), started en route without slowing the cooling; outside EMR scope",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "cooling-started",
+   "check": "present",
+   "event": "cooling-started",
+   "licence": "both",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Determines life/limb threatening conditions and fails to intervene"
+   }
+  },
+  {
+   "id": "cooling-before-baseline-vitals",
+   "check": "ordered",
+   "first": "cooling-started",
+   "then": "vitals-set-1-complete",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Delay in treatment or subsequent doses of medication (e.g. Epinephrine) potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "all-clothing-removed",
+   "check": "absent",
+   "event": "clothing-left-on",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "cooling-not-stopped",
+   "check": "absent",
+   "event": "cooling-stopped",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "ten-minutes-cooling-before-conveyance",
+   "check": "absent",
+   "event": "conveyance-before-10-min-cooling",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-waiting-for-pcp-car",
+   "check": "absent",
+   "event": "waits-for-pcp-car",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-call-management",
+    "weight": 25,
+    "errorEn": "Displays poor management and indecisiveness, does not display sufficient control or direction throughout the simulation detrimental to patient care or outcome (e.g. excessive delays spent locating equipment)"
+   }
+  },
+  {
+   "id": "no-oral-fluids",
+   "check": "absent",
+   "event": "oral-fluids-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "bgl-in-initial-vitals",
+   "check": "ordered",
+   "first": "blood-glucose",
+   "then": "vitals-set-2-complete",
+   "licence": "both",
+   "deduct": {
+    "itemId": "blood-glucose",
+    "weight": 5,
+    "errorEn": "Fails to obtain blood glucose when indicated by patient presentation and/or past history"
+   }
+  },
+  {
+   "id": "no-acetaminophen",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-ibuprofen",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-oral-glucose",
+   "check": "absent",
+   "event": "drug:oral-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-glucagon",
+   "check": "absent",
+   "event": "drug:glucagon",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-d10w",
+   "check": "absent",
+   "event": "drug:d10w",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-iv-fluids",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "pcp-fluid-replacement",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "34-year-old male",
+  "cc": "exertional heat stroke with an altered LOC - confusion and collapse after a full shift roofing in extreme heat",
+  "moi": null,
+  "hxcc": "on the roof since 0700 on day four of a heat wave, 38 degrees C in the shade, long sleeves and long pants, about one bottle of water all day; headache and cramps at 1300, vague and stopped sweating around 1400, walked down the ladder and collapsed at 1455 - no fall, no witnessed seizure",
+  "vitals": "GCS 11 (E3 V3 M5), BP 96/54, pulse 138 weak regular, resp 30 shallow, SpO2 96% on room air, BGL 5.1, temperature 41.2; latest GCS 13, BP 104/62, pulse 124, resp 26, SpO2 97% on oxygen, temperature 39.4",
+  "treatments": "all clothing removed; cold wet towels to head, torso and thighs; feet and lower legs in ice water; ambulance AC on maximum cold; at least 10 minutes of cooling before departure and cooling continuing en route; oxygen; supine; no oral fluids, no antipyretics; PCP: IV fluid replacement en route",
+  "findings": "very hot, flushed dark red, slightly moist skin; dry mucous membranes; no urine output all afternoon; no injuries from the collapse; ETA 14 minutes"
+ },
+ "handoffFacts": {
+  "ageSex": "34-year-old male roofer",
+  "cc": "confusion and collapse after a full shift roofing in extreme heat - exertional heat stroke",
+  "moi": null,
+  "hxcc": "on the roof since 0700 on the fourth day of the heat wave, 38 degrees C in the shade, in long sleeves and long pants, roughly one bottle of water all day plus a large energy drink; headache and leg cramps at 1300, vague and stopped sweating around 1400, walked down the ladder and collapsed on the driveway at 1455; no fall from height, no witnessed seizure",
+  "initialVitals": "GCS 11 (E3 V3 M5), BP 96/54, pulse 138 weak regular, resp 30 shallow, skin very hot, flushed dark red, slightly moist, pupils equal and reactive, SpO2 96% on room air, BGL 5.1 mmol/L, temperature 41.2 degrees C",
+  "finalVitals": "GCS 13 (E4 V4 M5), BP 104/62, pulse 124 stronger, resp 26, skin hot but less flushed, pupils equal and reactive, SpO2 97% on oxygen, temperature 39.4 degrees C - improving, cooling still running",
+  "pmhx": "none known (second-hand from coworkers); no known diabetes",
+  "meds": "none known; large energy drink at lunch",
+  "allergies": "unknown - coworkers unable to say",
+  "treatments": "moved to the coolest area; all clothing removed with dignity preserved; cold wet towels to head, torso and thighs; improvised ice-water immersion of the feet and lower legs from the crew's cooler; ambulance AC on maximum cold; continuous cooling for about 12 minutes and still running, at least 10 minutes before conveyance; oxygen titrated to 94% or above; supine; suction at hand; no oral fluids and no antipyretics; PCP: IV fluid replacement en route",
+  "findings": "very hot, flushed dark red, slightly moist skin; dry mucous membranes; tight tender calf muscles; sunburn on the forearms; weak radial and pedal pulses; no injuries from the collapse; no urine output all afternoon"
+ },
+ "pcrFacts": {
+  "cc": "Confusion and collapse after a full shift roofing in extreme heat",
+  "hxcc": "On the roof from 0700 in long sleeves on day four of a heat wave, 38 C in shade; roughly one bottle of water all shift plus an energy drink; headache and leg cramps 1300, vague and stopped sweating ~1400, walked down ladder and collapsed 1455; no fall from height, no witnessed seizure, no urine output all afternoon",
+  "pmhx": "None known (second-hand from coworkers), no diabetes",
+  "meds": "None; large energy drink at lunch",
+  "allergies": "Unknown - coworkers unable to say",
+  "treatments": [
+   "Moved to coolest available area; all clothing removed with dignity preserved",
+   "Evaporative cooling with cold wet towels to head, torso and thighs",
+   "Convective cooling with ambulance air conditioning on maximum cold, pre-cooled en route to scene",
+   "Improvised ice-water immersion of feet and lower legs using the crew's cooler",
+   "Minimum 10 minutes of cooling delivered before conveyance; cooling continued throughout transport",
+   "Oxygen titrated to SpO2 94% or above; supine; suction at hand",
+   "No oral fluids and no antipyretics given - altered LOC and antipyretics ineffective in heat stroke",
+   "IV fluid replacement verbalized as out of EMR scope"
+  ],
+  "findings": [
+   "Temperature 41.2 C falling to 39.4 C after ~12 minutes of combined cooling",
+   "GCS 11 improving to 13; restless, disoriented, obeying commands inconsistently",
+   "Pulse 138 weak improving to 124, BP 96/54 to 104/62, resps 30 to 26",
+   "Skin very hot and flushed dark red, slightly moist - dry skin not required for the diagnosis",
+   "BGL 5.1 measured as required for a heat patient with decreased LOC",
+   "Dry mucous membranes, no urine output all afternoon, tight tender calf muscles"
+  ],
+  "vitals": "Set 1 (cooling running): GCS 11 (E3 V3 M5), BP 96/54, P 138 weak regular, R 30 shallow, skin very hot flushed dark red slightly moist, PERL, SpO2 96% RA, BGL 5.1 mmol/L, temp 41.2 C. Set 2 (en route): GCS 13 (E4 V4 M5), BP 104/62, P 124 stronger regular, R 26, skin hot less flushed, PERL, SpO2 97% on O2, temp 39.4 C",
+  "times": "on roof from 0700; headache and cramps 1300; stopped sweating about 1400; collapse 1455; call 1505"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "He opens his eyes to your voice, is restless and disoriented, says jumbled words and follows simple commands only some of the time.",
+  "breathingNotDepictedEn": "He is breathing fast and shallow.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "Every element of definitive prehospital care here is EMR-level: recognition of heat stroke by exposure plus central nervous system dysfunction, moving him to the coolest area, complete undressing with dignity preserved, combined evaporative and convective cooling with soaked towels to head, torso and thighs plus maximum-cold air conditioning, improvised ice-water immersion of the feet and lower legs, a minimum of 10 minutes of cooling before conveyance with cooling continued all the way in, oxygen to 94% or above, supine positioning, airway watch with suction, a mandatory blood glucose, and repeated temperatures. Only intravenous fluid replacement sits outside EMR scope. No oral fluids, no oral antipyretics, no glucose (BGL 5.1). Do not wait on scene for the PCP car once the 10 minutes of cooling have been delivered.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry and considers fluid replacement for the signs and symptoms of dehydration - no urine output all afternoon, dry mucous membranes and a weak pulse of 138 after a shift with roughly one bottle of water. Cooling remains the priority and is identical at both levels; fluids are given en route without slowing the cooling. Antipyretics (acetaminophen, ibuprofen) are withheld; D10W and glucagon are not indicated (BGL 5.1)."
+ },
+ "sourcePages": "Scenario emd-06 (data/practical/emr-medical-1.json): dispatch, scene, primary (cooling as a primary-survey intervention), transport (RTC; minimum 10 minutes of cooling before conveyance; keep cooling en route), history from coworkers, vitals sets 1-2, FE, exam, interventions, ongoing (seizure plan), handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC; heat stroke); p.11 Primary survey intervention indications (rapid cooling for hyperthermia; oxygen for altered LOC and evidence of shock; airway maintenance and suctioning for decreased LOC); p.36 Heat Exhaustion/Heatstroke (move to a cool area; remove all clothing; convective cooling with AC on maximum cold; cold wet towels to head, torso and thighs; immersion of feet and legs in ice water; minimum 10 minutes of cooling before conveyance; blood glucose in the initial vitals if decreased LOC; most aggressive cooling during transport; PCP: consider fluid replacement for dehydration); p.50 Oxygen Administration (titrate to SpO2 94%); p.57 Diabetic Emergencies (BGL in the baseline vitals; correct hypoglycemia below 4.0 mmol/L); p.58 Acetaminophen; p.61 D10W; p.67 Glucagon; p.68 Ibuprofen; p.76 Oral Glucose (only with sufficient mentation to maintain an airway).",
+ "keywordEvents": [
+  {
+   "event": "cooling-started",
+   "regex": "\\b(cool(ing)?|cold (wet )?(towels?|packs?|compress\\w*|water|sheets?)|wet (towels?|sheets?)|soak\\w*|ice[- ]?(water|packs?|bath)|immers\\w*|strip(ping)? (him|his|off|down)|(clothes|clothing) off|remov\\w* (all )?(of )?(his )?(clothes|clothing|shirt|boots)|undress\\w*|air ?condition\\w*|fan(ning)? him)\\b",
+   "blockRegex": "\\b(if|would|bring|grab|pack|packing|plan\\w*|prepar\\w*|ready|in case|pre-?cool\\w*|on the way|compartment|arriv\\w*|get there)\\b"
+  }
+ ]
+}

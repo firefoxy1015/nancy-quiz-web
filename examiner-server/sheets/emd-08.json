@@ -1,0 +1,1352 @@
+{
+ "id": "emd-08",
+ "titleEn": "Agitated and Hyperthermic in a Parkade - Suspected Stimulant Toxicity",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-08",
+ "patient": {
+  "name": "Jordan Price",
+  "age": 25,
+  "sex": "male",
+  "affectEn": "a man in his mid-twenties, stripped to the waist in a cold parkade, flushed and drenched in sweat, restless; pacing and shouting at nobody in particular, then abruptly sitting on the floor; eyes open but looking past you; frightened and suspicious - will not let anyone crowd him, but allows a slow, calm approach from the front by one person speaking in a low voice",
+  "speechEn": "fragments only, clear but disorganized: 'they're in the walls... don't touch me... I'm hot'. Does not know the day or where he is and cannot give a history. Becomes louder and more agitated if crowded, touched suddenly, cornered or shouted at; calmer with one quiet voice and simple choices"
+ },
+ "scene": {
+  "settingEn": "0340 hrs. An underground parkade in downtown Victoria: concrete, poorly lit, cold air, a low ceiling, cars parked on both sides and occasional vehicles moving through. Police arrived 2 minutes ahead of you; two officers are already with the patient. A backpack and a scattered set of belongings lie near him. Security stands back. There is one exit route behind you and it stays clear. One patient. Royal Jubilee Hospital is 11 minutes away; a PCP car is 20 minutes out.",
+  "hazardsEn": [
+   "agitated, disoriented patient - approach only once police confirm the scene is secure",
+   "poor lighting and moving vehicles in the parkade",
+   "unknown items in his backpack and belongings - possible sharps; never search them yourself (police function)",
+   "cold environment"
+  ],
+  "bystanders": [
+   {
+    "who": "two police officers (with the patient)",
+    "knowsEn": "When the candidate asks or checks in with them: the scene is secure, he is not armed, and they have found no weapons. They have not restrained him. They will deal with his backpack and belongings. One officer will stay with the patient and ride in the ambulance if asked. They know nothing about his medical history."
+   },
+   {
+    "who": "security guard",
+    "knowsEn": "He arrived in the parkade at about 0300 and has been shouting at cars, sweating heavily and refusing to sit down, getting more agitated, not less. He has not threatened anyone but will not let anybody near him. Nobody saw him fall or hit his head. Security made the 911 call."
+   },
+   {
+    "who": "friend (arrives during the call - see the state change friend-arrives; does not exist before that)",
+    "knowsEn": "He has been awake for two days and used 'a lot' of crystal methamphetamine last night. He had a beer earlier, but no opioids that she knows of - 'he doesn't touch that stuff'. She does not know the route or the exact time. No history of seizures, he is not diabetic, he takes no prescription medication, no psychiatric history that she knows of, and he has never been like this before. No head injury and no fall that she knows of. She does not know whether he has any allergies. He has barely eaten in two days."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "glucometer",
+   "thermometer",
+   "oxygen with non-rebreather mask and nasal cannula",
+   "BVM with OPA and NPA",
+   "portable suction unit",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "cold packs and towels with water for cold wet towels",
+   "ambulance air conditioning",
+   "cot (stretcher)",
+   "AED",
+   "naloxone",
+   "oral glucose gel",
+   "glucagon kit",
+   "PCP only: IV start kit with normal saline"
+  ]
+ },
+ "dispatchEn": "0340 hrs. Code 3 to an underground parkade in downtown Victoria. Security reports a man in his twenties shouting at cars, sweating heavily and refusing to sit down. Police are en route and will arrive before you. Royal Jubilee Hospital is 11 minutes away; a PCP car is 20 minutes out.",
+ "dispatchUpdateEn": "Dispatch adds: security says he has been there about 40 minutes and has become more agitated, not less. He has not threatened anyone but will not let anybody near him. Police ETA is 2 minutes ahead of yours.",
+ "arrivalEn": "You pull into the underground parkade. It's concrete, poorly lit and cold, with a low ceiling and cars parked on both sides; the odd vehicle drives through. Police got here a couple of minutes ahead of you: two officers are standing with a man further down the row. A security guard stands well back. There's one exit route behind you, and it's clear.",
+ "firstLookEn": "A man in his mid-twenties, stripped to the waist despite the cold, flushed and drenched in sweat. He paces and shouts at nobody in particular, then abruptly sits down on the concrete floor. He is restless and does not engage with anyone. His pupils look obviously large. A backpack and scattered belongings lie on the floor nearby. Two police officers stand with him.",
+ "primary": {
+  "locEn": "Eyes open, looking past you. Answers only in fragments; does not know the day or where he is. Speech clear but disorganized. Altered level of consciousness (awake but disoriented).",
+  "airwayEn": "Patent. Speech clear but disorganized. No secretions, no vomit.",
+  "breathingEn": "Respirations 28, unlaboured, adequate depth, clear and equal air entry on both sides. His respiratory drive is intact.",
+  "circulationEn": "Radial pulse 148, strong, regular. He lets you hold his wrist if you approach slowly, from the front, with one crew member speaking in a calm, low voice. No external bleeding.",
+  "rbsEn": "Done as far as he permits: no head injury found - no scalp wound or swelling; no neck tenderness; no needle marks on the arms; no wounds; no medical-alert jewelry; tremor in both hands. Skin is given automatically during the RBS: hot, flushed and drenched with sweat.",
+  "skinEn": "hot, flushed, drenched with sweat"
+ },
+ "history": {
+  "ccEn": "Patient (fragments only): \"I'm hot... they're in the walls... don't touch me.\" Security: \"He's been down here shouting at cars and sweating for about 40 minutes, and he keeps getting worse.\"",
+  "opqrst": {
+   "oEn": "Security: \"He showed up down here at about 0300 and he's been like this since, getting worse.\" Friend (once she has arrived): \"He's been awake for two days. He used a lot of crystal meth last night.\" The patient cannot answer.",
+   "pEn": "Security: \"Nothing's calmed him down - he's more worked up now, not less. He won't let anybody near him.\" The patient cannot answer.",
+   "qEn": "Patient (fragments only): \"Hot... I'm so hot... they're in the walls.\"",
+   "rEn": "Friend (once she has arrived): \"No, he's never been like this before.\" The patient cannot answer.",
+   "sEn": "Security: \"He's getting worse, not better.\" The patient cannot give a severity.",
+   "tEn": "Security: \"About 40 minutes down here, since around 0300 or so.\" Friend: \"He's been up for two days, and he used last night.\""
+  },
+  "painScoreEn": "Not obtainable - he answers only in fragments and does not report pain. (In this scenario the pain-scale item is used for the non-judgemental substance history: the friend answers as in the opqrst and sample entries.)",
+  "sample": {
+   "sEn": "Patient (fragments): \"I'm hot.\" Security: \"Shouting at cars, sweating, won't sit down.\" Friend: \"He's been awake two days. No seizures that I know of, and he didn't fall or hit his head.\"",
+   "aEn": "Friend: \"I don't know if he's allergic to anything.\" (Allergies: unknown.)",
+   "mEn": "Friend: \"He doesn't take any prescription meds.\" If asked about substances: \"A lot of crystal meth last night, and a beer earlier. No opioids that I know of - he doesn't touch that stuff.\" She does not know the route or how much exactly.",
+   "pEn": "Friend: \"Nothing that I know of. No seizures, he's not diabetic, nothing psychiatric that I know of. He's never been like this before.\"",
+   "lEn": "Friend: \"I don't know when he last ate. He's barely eaten anything in two days.\"",
+   "eEn": "Friend: \"He's been awake for two days and used a lot of crystal meth last night, plus a beer earlier. No opioids that I know of. Nobody saw him fall or hit his head.\""
+  },
+  "fe": {
+   "generalEn": "Friend: \"He's been awake two days and barely eating.\"",
+   "cnsEn": "Friend: \"He's seeing and hearing things that aren't there and he's really worked up. I didn't see a seizure and I don't know of any head injury.\"",
+   "respiratoryEn": "Friend: \"No cough, and he hasn't said he's short of breath.\"",
+   "cardiovascularEn": "Heart racing. No chest pain reported - although he cannot reliably report it.",
+   "giGuEn": "Friend: \"I don't know what he's had to eat or drink. I haven't seen him throw up.\"",
+   "integumentaryEn": "Drenched in sweat. No needle marks. Some abrasions on the knuckles.",
+   "musculoskeletalEn": "Tremor in both hands; his muscles feel rigid to touch.",
+   "endocrineEn": "Friend: \"He's not diabetic.\"",
+   "eentEn": "Nil."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No scalp laceration or hematoma. No blood or fluid from the ears. Pupils 6 mm and reactive. No neck tenderness.",
+  "chestLungsEn": "Clear and equal air entry. No injury.",
+  "abdomenEn": "Soft, no guarding.",
+  "backEn": "Inspected during the move to the cot: no injury.",
+  "lowerExtremitiesEn": "No injury. Strong pedal pulses. Muscles tight to palpation.",
+  "upperExtremitiesEn": "Abrasions over the knuckles. Tremor. No needle tracks. Strong radial pulses."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, taken as he permits - within 3 minutes",
+   "gcs": {
+    "total": 13,
+    "e": 4,
+    "v": 3,
+    "m": 6
+   },
+   "bp": "158/98",
+   "pulse": {
+    "rate": 148,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "148 strong regular"
+   },
+   "resp": {
+    "rate": 28,
+    "depth": "adequate",
+    "character": "unlaboured",
+    "rawEn": "28 unlaboured"
+   },
+   "skin": "hot, flushed, drenched in sweat",
+   "pupils": "equal, dilated at about 6 mm, reactive",
+   "spo2": "97% on room air",
+   "bgl": "6.4 mmol/L",
+   "temp": "39.6 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "active-cooling-started"
+     },
+     {
+      "elapsedMs": 720000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, about 7 minutes after set 1 with cooling running - settling. Without active cooling he stays at set 1 values.",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "146/90",
+   "pulse": {
+    "rate": 138,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "138 strong regular"
+   },
+   "resp": {
+    "rate": 24,
+    "depth": "adequate",
+    "character": "unlaboured",
+    "rawEn": "24 unlaboured"
+   },
+   "skin": "hot but less flushed",
+   "pupils": "equal, dilated at about 6 mm, reactive",
+   "spo2": "98%",
+   "bgl": "6.4 mmol/L",
+   "temp": "39.0 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "friend-arrives",
+   "when": {
+    "elapsedMs": 300000
+   },
+   "examinerLineEn": "A young woman hurries over. She says she's his friend and she's been looking for him.",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "goes-quiet",
+   "when": {
+    "afterEvent": "active-cooling-started",
+    "elapsedMs": 780000
+   },
+   "examinerLineEn": "He has stopped shouting and pacing and is sitting quietly now, eyes open.",
+   "vitalsPatch": {}
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and stage: do not enter the parkade until police confirm the scene is secure - your own safety is the first item of the rescue scene evaluation",
+   "triggers": [
+    "stage until police clear the scene",
+    "wait for police",
+    "we won't go in until police confirm",
+    "staging"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan equipment for a possible medical cause of agitation: blood glucose meter, thermometer, oxygen, BVM, suction, and cooling supplies",
+   "triggers": [
+    "bring the glucometer",
+    "bring a thermometer",
+    "cooling supplies",
+    "bring the BVM and suction"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Build the differential before contact: hypoglycemia, hypoxia, head injury, hyperthermia, infection, psychiatric illness, and drug toxicity - agitation is a presentation, not a diagnosis",
+   "triggers": [
+    "could be hypoglycemia",
+    "rule out a head injury",
+    "differential",
+    "could be hyperthermia",
+    "agitation is a presentation"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (agitated patient, poor lighting, moving vehicles, unknown items in the belongings - never search a bag or pockets yourself), environment (cold parkade), nature of illness (agitation with heavy sweating), people (one patient, two officers, security) and resources",
+   "triggers": [
+    "poor lighting",
+    "moving vehicles",
+    "don't search his bag",
+    "two officers and security",
+    "cold parkade",
+    "agitated patient is a hazard"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Confirm with police that the scene is secure before approaching, and position yourself with an unobstructed exit behind you throughout the call",
+   "triggers": [
+    "is the scene secure",
+    "is he armed",
+    "any weapons",
+    "keep my exit clear",
+    "exit behind me"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: young man, undressed in the cold, flushed and drenched in sweat, restless and non-conversational, pupils obviously large - a sympathomimetic picture, and hyperthermia is the immediate threat",
+   "triggers": [
+    "drenched in sweat",
+    "his pupils are huge",
+    "looks sympathomimetic",
+    "he looks hyperthermic",
+    "general impression",
+    "stripped to the waist"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "primary",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Use a calm de-escalating approach: one crew member speaks, approach slowly from the front, keep your distance and hands visible, give simple choices, and never crowd or corner him",
+   "triggers": [
+    "one of us will talk",
+    "approach slowly from the front",
+    "hands where he can see them",
+    "nobody crowd him",
+    "can I check your pulse"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: awake but disoriented with disorganized speech - this is an altered level of consciousness and it makes him an unstable patient",
+   "triggers": [
+    "AVPU",
+    "he's disoriented",
+    "altered LOC",
+    "level of consciousness",
+    "do you know where you are",
+    "what day is it"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway; keep suction available",
+   "triggers": [
+    "airway is patent",
+    "airway is clear",
+    "check his airway",
+    "he's talking so his airway is open",
+    "suction available"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing: 28 and unlaboured with clear air entry - specifically note that his respiratory drive is INTACT, which is the finding that rules naloxone out",
+   "triggers": [
+    "breathing rate and effort",
+    "respiratory drive is intact",
+    "auscultate both sides",
+    "breath sounds",
+    "chest rise",
+    "he's not hypoventilating"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: strong regular radial pulse of 148",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse rate and quality",
+    "any major bleeding",
+    "feel for a radial"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform the rapid body survey as far as he permits, looking specifically for occult head injury as an alternative cause of the agitation, and do not search his pockets or bag - that is a police function",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "check his head for injury",
+    "look for needle marks",
+    "quick head to toe",
+    "medic alert bracelet"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: hot, flushed and drenched with sweat - and recognize hyperthermia in an agitated patient as an immediate life threat requiring cooling",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel his skin",
+    "how's his skin",
+    "skin signs",
+    "he feels hot"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Oxygen titrated to keep SpO2 at or above 94%, offered in the least confrontational way he will accept",
+   "triggers": [
+    "titrate to 94",
+    "offer him oxygen",
+    "nasal cannula if he'll tolerate it",
+    "oxygen to keep sats above 94",
+    "blow-by oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position: let him sit or lie where he chooses as long as it is safe; never place or leave any patient face-down",
+   "triggers": [
+    "let him sit where he's comfortable",
+    "never face down",
+    "position of comfort",
+    "let him sit on the cot",
+    "keep him off his stomach"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC out loud: altered LOC plus hyperthermia",
+   "triggers": [
+    "RTC",
+    "rapid transport",
+    "he's unstable",
+    "priority patient",
+    "altered LOC and hyperthermia"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State the scope boundary: restraint is a police function, an EMA does not apply restraints, and there is no sedating medication at either EMR or PCP level",
+   "triggers": [
+    "restraint is a police function",
+    "we don't restrain",
+    "no sedation at our level",
+    "no sedating medication"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "If police restrain him: never face-down, an officer travels with the patient, and airway, breathing and circulation are monitored continuously and documented",
+   "triggers": [
+    "if police restrain him",
+    "an officer rides with us",
+    "never transport him face down",
+    "monitor his breathing continuously"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Address consent explicitly: he lacks capacity because of his condition, so treatment and transport proceed under implied consent, and the reasoning is documented",
+   "triggers": [
+    "implied consent",
+    "he lacks capacity",
+    "he can't consent",
+    "document the consent reasoning"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: acute agitation with hyperthermia and an altered LOC",
+   "triggers": [
+    "what's going on tonight",
+    "what's bothering you",
+    "chief complaint",
+    "why are you down here",
+    "how are you feeling"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C from collateral sources: what was taken, how much, by what route, when, whether anything else was used, how long he has been awake, whether there was any head injury, seizure or fall, and how his behaviour has trended",
+   "triggers": [
+    "what did he take",
+    "how much did he use",
+    "when did he take it",
+    "did he hit his head",
+    "how long has he been awake",
+    "anything else with it"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Take a non-judgemental substance history and document it as reported - the receiving team needs it and the way you ask determines whether you get it",
+   "triggers": [
+    "what has he used",
+    "any drugs or alcohol",
+    "any substances tonight",
+    "did he use anything",
+    "no judgement"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history from the friend, including any seizure or psychiatric history",
+   "triggers": [
+    "medical history",
+    "any seizures before",
+    "is he diabetic",
+    "any psychiatric history",
+    "any medical problems"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": [
+    "any medications",
+    "what medications",
+    "does he take any pills",
+    "any prescriptions"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies - document as unknown",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies unknown"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake - unknown, with almost no food for two days",
+   "triggers": [
+    "when did he last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP by auscultation",
+    "cuff on"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality",
+   "triggers": [
+    "pulse rate rhythm and strength",
+    "count the pulse",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character with both lung fields auscultated - document that the respiratory drive is intact",
+   "triggers": [
+    "respiratory rate",
+    "rate depth and character",
+    "count his respirations"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on - hot and drenched",
+   "triggers": [
+    "skin colour temperature and condition",
+    "feel his skin hands-on",
+    "skin is hot and wet"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction; dilated and reactive pupils argue against an opioid",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 recorded and monitored",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Blood glucose - mandatory in any patient with an altered LOC, and it excludes hypoglycemia as the cause of the agitation",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "check his sugar",
+    "glucometer"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - the agitated hyperthermic patient is the one who dies, so this reading is not optional",
+   "triggers": [
+    "temperature",
+    "tympanic temp",
+    "check his temp",
+    "thermometer"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "been well lately",
+    "sleeping and eating",
+    "any recent illness"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (hallucinations and agitation, and screen for an unwitnessed seizure)",
+   "triggers": [
+    "seeing things",
+    "hearing voices",
+    "any seizure",
+    "nervous system"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "any cough",
+    "short of breath",
+    "trouble breathing",
+    "respiratory system"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (stimulant toxicity can cause cardiac ischemia even in young patients)",
+   "triggers": [
+    "any chest pain",
+    "heart racing",
+    "palpitations",
+    "cardiovascular"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU",
+   "triggers": [
+    "any vomiting",
+    "eating and drinking",
+    "bowels and bladder",
+    "GI GU"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (check for injection sites and injuries)",
+   "triggers": [
+    "any rash",
+    "skin injuries",
+    "injection sites",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal (rigidity and sustained exertion drive the hyperthermia and muscle breakdown)",
+   "triggers": [
+    "muscle stiffness",
+    "rigid muscles",
+    "musculoskeletal",
+    "any muscle pain"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetic",
+    "diabetes",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose and throat",
+    "EENT",
+    "vision changes",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined for occult injury - a head injury can look exactly like drug-induced agitation",
+   "triggers": [
+    "head and neck exam",
+    "check his scalp",
+    "fluid from the ears",
+    "palpate the neck",
+    "inspect the head"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest auscultated",
+   "triggers": [
+    "auscultate the chest",
+    "full chest exam",
+    "listen to his lungs",
+    "examine his chest",
+    "inspect and palpate the chest"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined",
+   "triggers": [
+    "four quadrants",
+    "palpate the abdomen",
+    "abdominal exam",
+    "is his belly soft"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined during the move to the cot",
+   "triggers": [
+    "check his back",
+    "back exam",
+    "look at his back as we move",
+    "palpate the spine"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities examined for injection sites and injuries",
+   "triggers": [
+    "upper extremities",
+    "check his arms for track marks",
+    "knuckle abrasions",
+    "check his hands",
+    "radial pulses both sides"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities examined with pulses documented",
+   "triggers": [
+    "lower extremities",
+    "pedal pulses",
+    "check his legs",
+    "feel his calves"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Measure the blood glucose before attributing the agitation to drugs, and correctly withhold oral glucose and glucagon at 6.4 mmol/L",
+   "triggers": [
+    "rules out hypoglycemia",
+    "no oral glucose",
+    "withhold glucagon",
+    "not hypoglycemic",
+    "glucose is normal so no glucose"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Withhold naloxone and state why: his respirations are 28 with an SpO2 of 97% and dilated reactive pupils - there is no respiratory depression and no opioid picture, so the protocol has no indications",
+   "triggers": [
+    "no naloxone",
+    "naloxone not indicated",
+    "withhold Narcan",
+    "no respiratory depression",
+    "not an opioid picture",
+    "pupils are dilated so not opioids"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Begin active cooling for a temperature of 39.6: cold packs to the neck, armpits and groin, cold wet towels to head, torso and thighs, air conditioning on maximum cold, with the temperature re-checked",
+   "triggers": [
+    "cold packs to the neck armpits and groin",
+    "cold wet towels",
+    "AC on max cold",
+    "start active cooling",
+    "cool him down"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Do not apply restraints and do not search his belongings; if police restrain him, an officer travels with him and he is never positioned face-down",
+   "triggers": [
+    "don't search his bag",
+    "police can deal with his belongings",
+    "we won't restrain him",
+    "no restraints"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Reduce stimulation: dim lights, no sirens where avoidable, one voice, calm movements",
+   "triggers": [
+    "dim the lights",
+    "no sirens",
+    "one voice",
+    "keep it quiet",
+    "calm and slow"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize that no sedating medication exists at either EMR or PCP level, and that IV fluids for the muscle breakdown are a PCP and hospital intervention",
+   "triggers": [
+    "no sedation at EMR or PCP",
+    "IV fluids at the hospital",
+    "no sedating meds",
+    "fluids are a PCP intervention"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after each intervention and at least every 5 minutes, documenting each reassessment",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing",
+    "ABC check after the move",
+    "recheck interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes including a repeat temperature, with the trend interpreted out loud",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "another set of vitals",
+    "vitals again",
+    "recheck his temperature"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State and act on the sudden-quiet rule: any abrupt drop in agitation triggers an immediate pulse and breathing check, because collapse follows prolonged agitation with hyperthermia",
+   "triggers": [
+    "he's gone quiet",
+    "check his pulse now that he's quiet",
+    "sudden quiet",
+    "recheck pulse and breathing",
+    "quiet could mean he's crashing"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Keep cooling running with repeated temperatures until the temperature is controlled",
+   "triggers": [
+    "keep cooling",
+    "continue cooling",
+    "keep the cold packs on",
+    "recheck his temp",
+    "cooling until his temp is controlled"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification: agitated hyperthermic patient with suspected stimulant toxicity, arriving with police",
+   "triggers": [
+    "notify the hospital",
+    "patch to Royal Jubilee",
+    "pre-alert",
+    "call ahead",
+    "arriving with police"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off stating the temperature trend, the blood glucose, that naloxone was withheld and why, and any restraint applied by police",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "report to the nurse",
+    "naloxone was withheld"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate, factual and non-judgemental PCR within 5 minutes, documenting the substance history as reported, the consent reasoning, and every reassessment",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documented as reported"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "scene-secure-confirmed",
+   "descriptionEn": "the candidate asks the police whether the scene is secure / whether he is armed, or states that police have confirmed the scene is secure, before approaching the patient"
+  },
+  {
+   "key": "active-cooling-started",
+   "descriptionEn": "the candidate starts (or directs the partner to start) active cooling: cold packs to the neck, armpits and groin, cold wet towels to the head, torso and thighs, ambulance air conditioning on maximum cold, or removing clothing to cool him"
+  },
+  {
+   "key": "naloxone-given",
+   "descriptionEn": "the candidate actually administers naloxone (Narcan) by any route (also report drug:naloxone). Saying naloxone is withheld, not indicated or cannot be given is NOT this event."
+  },
+  {
+   "key": "glucose-agent-given",
+   "descriptionEn": "the candidate actually administers oral glucose / glucose gel, glucagon or D10W (also report the drug event). Saying these are withheld or not indicated is NOT this event."
+  },
+  {
+   "key": "prone-positioning",
+   "descriptionEn": "the candidate places, holds or transports the patient face-down (prone), or leaves a restrained patient face-down"
+  },
+  {
+   "key": "crew-applies-restraint",
+   "descriptionEn": "the candidate or partner physically restrains the patient: holding or pinning him down, tying or strapping his limbs. Standard cot safety straps for transport, holding a wrist he allows for a pulse, and restraint applied by police are NOT this event."
+  },
+  {
+   "key": "crew-searches-belongings",
+   "descriptionEn": "the candidate or partner searches his pockets, backpack or belongings (for drugs, ID or anything else) instead of leaving that to police"
+  },
+  {
+   "key": "judgemental-remarks",
+   "descriptionEn": "the candidate makes derogatory or judgemental remarks about the patient or his drug use (e.g. calling him a junkie or tweaker, or saying he did this to himself)"
+  },
+  {
+   "key": "emr-pcp-treatment",
+   "descriptionEn": "an EMR candidate actually starts an IV or runs a fluid bolus. Saying IV fluids are a PCP or hospital intervention is NOT this event."
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "a PCP runs the saline bolus past 500 mL or onto the next bag without reassessing the patient (BP / vitals / ABCs) in between"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "naloxone",
+   "namesEn": [
+    "naloxone",
+    "Narcan"
+   ],
+   "doseEn": "0.4 mg IM/IV (4 mg IN) to reverse respiratory depression or depressed mental status from suspected narcotic use - NOT indicated here: respirations 28, SpO2 97%, pupils 6 mm and reactive. Report drug:naloxone and naloxone-given only if the candidate actually gives it.",
+   "licence": "both"
+  },
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "glucogel",
+    "dextrose gel"
+   ],
+   "doseEn": "15 g PO - NOT indicated: BGL 6.4 mmol/L, and he cannot safely take anything by mouth",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "GlucaGen"
+   ],
+   "doseEn": "IM 0.5-1 mg or IN 3 mg for hypoglycemia - NOT indicated: BGL 6.4 mmol/L",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%"
+   ],
+   "doseEn": "10-25 g IV for confirmed hypoglycemia - NOT indicated: BGL 6.4 mmol/L",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS bolus",
+    "saline bolus",
+    "sodium chloride"
+   ],
+   "doseEn": "PCP: 20 mL/kg IV bolus to a maximum of 2 L, reassessing every 500 mL, for dehydration and muscle breakdown after prolonged agitation with hyperthermia",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "scene-secure-before-contact",
+   "check": "ordered",
+   "first": "scene-secure-confirmed",
+   "then": "loc-avpu",
+   "licence": "both",
+   "deduct": {
+    "itemId": "scene-ppe",
+    "weight": 5,
+    "errorEn": "Fails to assess a hazard when clearly presented"
+   }
+  },
+  {
+   "id": "no-naloxone",
+   "check": "absent",
+   "event": "naloxone-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-glucose-agents",
+   "check": "absent",
+   "event": "glucose-agent-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "bgl-measured",
+   "check": "present",
+   "event": "blood-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "temperature-measured",
+   "check": "present",
+   "event": "temperature",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "active-cooling",
+   "check": "present",
+   "event": "active-cooling-started",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is detrimental to patient care"
+   }
+  },
+  {
+   "id": "never-prone",
+   "check": "absent",
+   "event": "prone-positioning",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "no-crew-restraint",
+   "check": "absent",
+   "event": "crew-applies-restraint",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-search",
+   "check": "absent",
+   "event": "crew-searches-belongings",
+   "licence": "both",
+   "deduct": {
+    "itemId": "scene-ppe",
+    "weight": 5,
+    "errorEn": "Identifies a hazard during the SA but fails to act to make the scene safe"
+   }
+  },
+  {
+   "id": "no-judgemental-remarks",
+   "check": "absent",
+   "event": "judgemental-remarks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Displays behaviour that is unacceptable towards the patient (e.g. un-ethical remarks or inappropriate behaviour)"
+   }
+  },
+  {
+   "id": "emr-scope",
+   "check": "absent",
+   "event": "emr-pcp-treatment",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "male in his mid-twenties",
+  "cc": "acute agitation with hyperthermia and an altered LOC - suspected stimulant (crystal methamphetamine) toxicity; arriving with police",
+  "moi": null,
+  "hxcc": "awake two days, a large amount of crystal methamphetamine last night plus a beer, no opioids known; agitated in the parkade since about 0300 and worsening; no witnessed seizure, head injury or fall",
+  "vitals": "GCS 13 (E4 V3 M6), BP 158/98, pulse 148 strong regular, resp 28 unlaboured, SpO2 97% on room air, BGL 6.4 mmol/L, temp 39.6 C, pupils 6 mm reactive; latest GCS 14, pulse 138, resp 24, temp 39.0 C",
+  "treatments": "active cooling (cold packs to neck, armpits and groin, cold wet towels, AC on maximum cold); oxygen titrated to 94% or above; naloxone and glucose withheld; no restraints; officer accompanying; PCP: IV fluid bolus; ETA 11 minutes",
+  "findings": "disoriented with hallucinations, hot flushed and drenched, tremor, muscles tight; no head injury, no needle marks; respiratory drive intact"
+ },
+ "handoffFacts": {
+  "ageSex": "male in his mid-twenties",
+  "cc": "acute agitation with hyperthermia and an altered level of consciousness - suspected stimulant toxicity",
+  "moi": null,
+  "hxcc": "per friend: awake two days, a large amount of crystal methamphetamine last night and one beer, no opioids that she knows of, never like this before; per security: in the parkade from about 0300, increasingly agitated over about 40 minutes; no witnessed seizure, head injury or fall; police secured the scene before contact",
+  "initialVitals": "GCS 13 (E4 V3 M6), BP 158/98, pulse 148 strong regular, resp 28 unlaboured with clear air entry, skin hot flushed and drenched, pupils 6 mm equal and reactive, SpO2 97% on room air, BGL 6.4 mmol/L, temp 39.6 C",
+  "finalVitals": "GCS 14 (E4 V4 M6), BP 146/90, pulse 138 strong regular, resp 24, skin hot but less flushed, pupils 6 mm reactive, SpO2 98%, temp 39.0 C; settling",
+  "pmhx": "none known (no seizures, not diabetic, no psychiatric history known)",
+  "meds": "none",
+  "allergies": "unknown",
+  "treatments": "staged until police confirmed the scene secure; verbal de-escalation with one speaker and reduced stimulation; BGL measured - glucose withheld; naloxone withheld (no respiratory depression, dilated reactive pupils); active cooling with cold packs, cold wet towels and AC on maximum cold, temperature rechecked; oxygen titrated to 94% or above; no restraints by the crew, never face-down, officer travelled with the patient; implied consent (lacks capacity); PCP: IV bolus reassessed every 500 mL",
+  "findings": "no head injury, no needle marks, knuckle abrasions, bilateral hand tremor, muscles tight to palpation, chest clear, abdomen soft, strong pulses throughout"
+ },
+ "pcrFacts": {
+  "cc": "Acute agitation with hyperthermia and an altered level of consciousness in an underground parkade",
+  "hxcc": "As reported by a friend: awake two days, large amount of crystal methamphetamine last night plus one beer, no opioids known, agitation worsening over 40 minutes per security; no witnessed seizure, no witnessed head injury or fall; no seizure history, not diabetic, no prescription medications",
+  "pmhx": "None known",
+  "meds": "None",
+  "allergies": "Unknown",
+  "vitals": "GCS 13 then 14; BP 158/98 then 146/90; pulse 148 then 138; resp 28 then 24; SpO2 97% RA then 98%; BGL 6.4 mmol/L; temp 39.6 C then 39.0 C; pupils 6 mm reactive",
+  "treatments": [
+   "Staged until police confirmed the scene secure; exit route kept clear throughout",
+   "Verbal de-escalation: one speaker, slow front approach, reduced stimulation, dim light",
+   "Blood glucose 6.4 measured - hypoglycemia excluded; oral glucose and glucagon correctly withheld",
+   "Naloxone withheld - no respiratory depression, RR 28, SpO2 97%, pupils 6 mm reactive; protocol indications absent",
+   "Active cooling for 39.6 C: packs to neck, armpits and groin, cold wet towels to head, torso and thighs, air conditioning on maximum cold, temperature re-checked",
+   "Oxygen titrated to SpO2 94% or above",
+   "No restraints applied by the crew; officer travelled with the patient; never positioned face-down",
+   "Treated under implied consent with the capacity reasoning documented; belongings left for police"
+  ],
+  "findings": [
+   "GCS 13 improving to 14; disoriented with disorganized speech and hallucinations",
+   "Temperature 39.6 C falling to 39.0 C with active cooling",
+   "Pulse 148 to 138, BP 158/98 to 146/90, respirations 28 to 24, SpO2 97-98%",
+   "Pupils 6 mm and reactive - inconsistent with an opioid; respiratory drive intact throughout",
+   "Skin hot, flushed and drenched; bilateral hand tremor; muscles tight on palpation",
+   "No head injury, no needle marks, knuckle abrasions only"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "He is awake with his eyes open but looking past you; he does not know the day or where he is, and he speaks only in disorganized fragments.",
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR provides everything this patient needs before hospital: staging until police secure the scene, verbal de-escalation with one voice and an open exit, an RBS looking for a head injury, a mandatory blood glucose, a temperature, active cooling (cold packs, cold wet towels, AC on maximum cold), oxygen to 94% or above, continuous monitoring for the sudden-quiet collapse and a factual hand-off. Naloxone and glucose are withheld. No sedating medication exists at either level, restraint is a police function, and IV fluid is a PCP/hospital intervention. No Functional Enquiry.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry and vascular access en route with a fluid bolus of 20 mL/kg to a maximum of 2 L, reassessed every 500 mL, for dehydration and muscle breakdown. There is still no sedating medication at the PCP level, and cooling remains the priority intervention."
+ },
+ "sourcePages": "Scenario emd-08 (data/practical/emr-medical-1.json): dispatch, scene, primary, transport (RTC; restraint and consent boundaries), collateral history, vitals sets 1-2, FE, exam, interventions (naloxone trap, cooling), ongoing (sudden-quiet rule), handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC; heat stroke); p.9 Rescue Scene Evaluation; p.11 primary survey interventions (rapid cooling for hyperthermia; oxygen for altered LOC); p.36 Heat Exhaustion/Heatstroke (remove clothing, AC on maximum cold, cold wet towels to head, torso and thighs, blood glucose if decreased LOC, most aggressive cooling during transport; PCP fluid replacement for dehydration); p.50 Oxygen Administration (titrate to SpO2 94%); p.56 Suspected Narcotic Overdose (indication: decreased LOC with depressed respiratory drive, pinpoint pupils; blood glucose in baseline vitals); p.57 Diabetic Emergencies (correct hypoglycemia BGL < 4.0 mmol/L only); p.67 Glucagon (hypoglycemia); p.72 Naloxone (to reverse respiratory depression/depressed mental status from actual or suspected narcotic use; 0.4 mg IM/IV, 4 mg IN; caution combativeness); p.76 Oral Glucose.",
+ "keywordEvents": [
+  {
+   "event": "scene-secure-confirmed",
+   "regex": "\\b(scene|area|parkade)\\b[^.?!]{0,25}\\b(secure\\w*|safe)\\b|\\b(is he|he is|he's|he isn't|he is not) (armed|unarmed|not armed)\\b|\\bany weapons\\b|\\b(police|officers?|cops?)\\b[^.?!]{0,40}\\b(secure\\w*|safe|clear\\w*|confirm\\w*)\\b|\\bsafe to (approach|go in|enter)\\b|\\bwait (for|until) (the )?police\\b|\\bstag(e|ing)\\b"
+  },
+  {
+   "event": "active-cooling-started",
+   "regex": "\\b(cold packs?|ice packs?|cool(ing)? packs?|cold,? wet towels?|wet towels?|soak\\w* towels?|maximum cold|max cold|active(ly)? cool\\w*|(start|begin|initiat)\\w* (active )?cooling|cool(ing)? him( down)?|evaporative cooling|convective cooling|ice water)\\b|\\b(a/?c|air[- ]?con\\w*)\\b[^.]{0,20}\\b(max\\w*|full|high|cold)\\b"
+  }
+ ]
+}

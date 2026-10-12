@@ -1,0 +1,1378 @@
+{
+ "id": "emd-03",
+ "titleEn": "Imminent Childbirth at Home - Field Delivery and Newborn Assessment",
+ "type": "medical",
+ "priority": "non-rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-03",
+ "patient": {
+  "name": "Megan Doherty",
+  "age": 31,
+  "sex": "female",
+  "affectEn": "in active second-stage labour: working hard and breathless through each strong contraction, calmer between them; bears down involuntarily with every contraction and keeps saying the baby is coming now; anxious but trusting and cooperative",
+  "speechEn": "cannot talk during a contraction (each lasts about 75 seconds, every 2 minutes); answers in short phrases between contractions; does what she is told; her partner fills in details she cannot give. The newborn (after the birth) has no voice: his state is described by the examiner from this sheet."
+ },
+ "scene": {
+  "settingEn": "Bedroom of a house in Squamish in the early hours of the morning. Warm, clean, well-lit room; no hazards. The mother is on the bed; the towels under her are wet with CLEAR amniotic fluid. One patient for now - about to become two (mother and newborn). Squamish General Hospital is 20 minutes away; the nearest second crew is 25 minutes out.",
+  "hazardsEn": [
+   "no physical hazards: warm, clean, well-lit bedroom",
+   "high body-fluid exposure (amniotic fluid, blood): gloves, gown and eye protection"
+  ],
+  "bystanders": [
+   {
+    "who": "her partner",
+    "knowsEn": "Anxious but helpful. This is her second baby; the first labour was only 4 hours and was a normal vaginal delivery. Due date is in 5 days (39 weeks and 2 days). Regular prenatal care, a single baby on every ultrasound, no gestational diabetes, no high blood pressure, no complications. Contractions started around 2300; her water broke at about 0125 and the fluid was clear. No medical problems, takes prenatal vitamins only, no allergies, dinner at 1900 and water since. He called 911 because she kept saying the baby was coming now. Will fetch towels and blankets or hold things if he is asked; does nothing on his own."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "obstetrics (OB) kit: cord clamps, scissors, sanitary pads, a bag for the placenta, a baby hat",
+   "plenty of towels and warm blankets",
+   "infant (neonatal) BVM and adult BVM",
+   "suction unit",
+   "oxygen kit",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "AED",
+   "Entonox kit",
+   "methoxyflurane (Penthrox) inhaler",
+   "cot",
+   "PCP only: IV start kit with normal saline"
+  ]
+ },
+ "dispatchEn": "0155 hrs. Code 3 to a house in Squamish. A 31-year-old woman, 39 weeks pregnant with her second child, is in labour with contractions two minutes apart. Her partner says she is telling him 'the baby is coming NOW'. Squamish General Hospital is 20 minutes away; the nearest second crew is 25 minutes out.",
+ "dispatchUpdateEn": "Dispatch adds: second pregnancy, first labour lasted only four hours. Her water broke about 30 minutes ago. She has a strong urge to push.",
+ "arrivalEn": "Her partner meets you at the front door, visibly anxious, and hurries you to the bedroom. The room is warm, clean and well lit. No hazards. One patient: a 31-year-old woman on the bed in the middle of a contraction, working hard. Your partner is right behind you with the kits.",
+ "firstLookEn": "A 31-year-old woman on the bed, alert and working hard through a strong contraction. The towels under her are wet with clear fluid and there is no visible blood. As the contraction peaks she bears down involuntarily and the baby's head is visible at the perineum - she is crowning.",
+ "primary": {
+  "locEn": "Mother: alert and oriented to person, place, time and event; answers in short phrases between contractions, cannot talk during one. Newborn (only after the birth): floppy and limp with no cry - see examinerPrompts; tone improves only after step 2 of the newborn ladder (30 seconds of BVM ventilation on room air).",
+  "airwayEn": "Mother: open and clear, talking between contractions, no secretions, no abnormal sounds. Newborn (after the birth, when assessed or positioned): nothing obstructing the airway; the fluid was clear, no meconium.",
+  "breathingEn": "Mother: rate 22, deep with the contractions, equal chest rise, adequate between contractions (after the delivery she settles to 18). Newborn at birth: not crying and not breathing effectively. After step 1 (30 seconds of drying, stimulating and warming): unchanged, still limp and not crying. After step 2 (30 seconds of BVM ventilation on ROOM AIR): he cries, his tone improves and he breathes well with equal chest rise; from then on he keeps breathing well with a strong cry on every recheck.",
+  "circulationEn": "Mother: radial pulse 100, strong, regular; no external bleeding (after the delivery she settles to 96). Newborn heart rate - only when the candidate checks it at the brachial artery or the umbilical cord stump (the examiner gives it from this line; it is not a vital-sign value from the engine): at birth about 90; after step 1 still about 90; after step 2 (BVM on room air for 30 seconds) 128, and above 100 on every recheck after that.",
+  "rbsEn": "Modified rapid body survey (mother): crowning confirmed - the baby's head is visible at the perineum with each contraction; the fluid is clear; no abnormal bleeding; no cord visible at the perineum; abdomen consistent with a term pregnancy; no injuries. Skin warm, pink and moist with effort (skin is given automatically during the RBS). The baby will be born here, on this bed. When the candidate performs the delivery: the head delivers with the next contraction; there is NO cord around the neck when they check; the body delivers with the following contraction - a boy (scenario clock 0214; the candidate must note the time of birth themselves). As soon as he is delivered he is floppy and limp, not crying and not breathing effectively (examinerPrompts) - say so if the engine has not already announced it.",
+  "skinEn": "warm, pink, moist with effort"
+ },
+ "history": {
+  "ccEn": "The baby's coming... I have to push. I can't stop it.",
+  "opqrst": {
+   "oEn": "The contractions started around eleven last night. My water broke at about twenty-five past one.",
+   "pEn": "Nothing makes it better. Nothing I do changes it - my body just wants to push.",
+   "qEn": "Really strong contractions, and huge pressure down low. I have to push - it feels like I need to go to the bathroom.",
+   "rEn": "No, it doesn't go anywhere else. It's all down low.",
+   "sEn": "I can't put a number on it... they're really strong, and I can't stop pushing.",
+   "tEn": "Every two minutes now, and each one lasts more than a minute. They started around eleven."
+  },
+  "painScoreEn": "She cannot give a number: \"I don't know... they're just really strong, and I have to push.\"",
+  "sample": {
+   "sEn": "Strong contractions and I have to push. My water broke. No bleeding, no headache, nothing else.",
+   "aEn": "No allergies.",
+   "mEn": "Just prenatal vitamins.",
+   "pEn": "I'm healthy - no medical problems. This is my second baby. My first labour was only four hours and it was a normal delivery. I'm due in five days - 39 weeks and 2 days. I've had regular check-ups, there's one baby on every ultrasound, and no gestational diabetes, no high blood pressure, no complications this time.",
+   "lEn": "Dinner at seven last night. Just water since.",
+   "eEn": "Nothing happened - the contractions just started at home around eleven, and my water broke at about twenty-five past one. (Only if asked about the colour of the fluid: \"It was clear. No colour to it at all.\")"
+  },
+  "fe": {
+   "generalEn": "I've been healthy the whole pregnancy.",
+   "cnsEn": "No headaches, no changes in my vision, no spots in front of my eyes. No fainting.",
+   "respiratoryEn": "My breathing's fine apart from the contractions. No cough.",
+   "cardiovascularEn": "Just the normal ankle swelling at the end. No other swelling. No chest pain, no racing heart.",
+   "giGuEn": "The baby was moving normally right up until labour. No bleeding at any time in the pregnancy. No bladder or bowel problems.",
+   "integumentaryEn": "No rashes, no skin problems.",
+   "musculoskeletalEn": "My pelvis has ached for the last month - they told me that's normal. Nothing else.",
+   "endocrineEn": "No gestational diabetes. No thyroid problems.",
+   "eentEn": "No. My eyes, ears, nose and throat are all fine."
+  }
+ },
+ "findings": {
+  "headNeckEn": "Mother: no findings. Newborn (quick head-to-toe under a warm towel): fontanelles normal, palate intact.",
+  "chestLungsEn": "Mother: chest clear on auscultation, breathing settled after the delivery. Newborn: chest rising equally with a strong cry (once he has responded to step 2 of the ladder).",
+  "abdomenEn": "Mother: after the placenta has delivered, the fundus is firm at the level of the umbilicus (it stays firm on every recheck). Cord (when checked after the baby has responded): pulsation has stopped - it can now be clamped and cut. Placenta: delivers spontaneously on its own (the engine announces it); it is never pulled out and it travels to hospital with the patients. Newborn: abdomen soft; cord clamped with no oozing from the stump.",
+  "backEn": "Mother: back - no findings. Perineum and lochia (on inspection after the delivery): small first-degree tear with oozing that is controlled with a pad and gentle pressure; lochia moderate, not soaking pads (one pad in 20 minutes at the later check). Newborn: back - no findings.",
+  "lowerExtremitiesEn": "Mother: no findings. Newborn: legs moving equally; feet slightly blue (acrocyanosis - normal) while the trunk is pink.",
+  "upperExtremitiesEn": "Mother: no findings. Newborn: arms moving equally; hands slightly blue (acrocyanosis - normal) while the trunk is pink. If the candidate does the newborn's quick head-to-toe as one exam: fontanelles normal, palate intact, chest rising equally with a strong cry, cord clamped with no oozing, abdomen soft, limbs moving equally, hands and feet slightly blue (acrocyanosis) with a pink trunk."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "mother, after the delivery is complete (baseline set, taken in under 3 minutes); before the delivery her primary-survey pulse is 100 and resps 22 with the contractions",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "118/76",
+   "pulse": {
+    "rate": 96,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "96 strong regular"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "normal",
+    "character": "regular, unlaboured",
+    "rawEn": "18"
+   },
+   "skin": "warm, pink, moist",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "98% on room air",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "elapsedMs": 900000
+     }
+    ]
+   },
+   "unlockNoteEn": "mother, the second set (17 minutes after set 1 in the scenario) - stable; fundus still firm, lochia moderate, one pad in 20 minutes. The newborn is reassessed continuously on his own track (primary/findings), not in the vitals engine",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "114/72",
+   "pulse": {
+    "rate": 88,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "88 strong regular"
+   },
+   "resp": {
+    "rate": 16,
+    "depth": "normal",
+    "character": "regular, unlaboured",
+    "rawEn": "16"
+   },
+   "skin": "warm, pink",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "98% on room air",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "baby-born",
+   "when": {
+    "afterEvent": "baby-delivered"
+   },
+   "examinerLineEn": "The baby is out - a boy. He's floppy and limp, he isn't crying and he isn't breathing effectively."
+  },
+  {
+   "id": "placenta-delivers",
+   "when": {
+    "afterEvent": "baby-delivered",
+    "elapsedMs": 900000
+   },
+   "examinerLineEn": "The placenta delivers on its own."
+  },
+  {
+   "id": "second-crew-arrives",
+   "when": {
+    "afterEvent": "second-crew-requested",
+    "elapsedMs": 1500000
+   },
+   "examinerLineEn": "The second crew has arrived and is at the bedroom door, ready to take over care of the newborn under your direction."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan equipment: obstetrics kit, plenty of towels and blankets, infant-sized BVM, suction, oxygen, and a warm place to work",
+   "triggers": [
+    "bring the OB kit",
+    "obstetrics kit",
+    "infant BVM",
+    "towels and blankets",
+    "bring suction and oxygen",
+    "warm place to deliver"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize the imminent-delivery pattern from dispatch alone: multipara with a fast previous labour, contractions two minutes apart, ruptured membranes and an urge to push - plan to assess for crowning, not to scoop and run",
+   "triggers": [
+    "delivery is imminent",
+    "this baby is coming fast",
+    "precipitous labour",
+    "fast first labour",
+    "assess for crowning",
+    "not a scoop and run"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan for two patients: request the second crew early so mother and newborn each have care",
+   "triggers": [
+    "request a second crew",
+    "second unit",
+    "another ambulance",
+    "two patients",
+    "a crew for the newborn",
+    "start the second car"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment (warm - keep it that way for the newborn), situation (active second-stage labour), people (one patient about to become two) and resources (second crew status)",
+   "triggers": [
+    "scene is safe",
+    "no hazards",
+    "keep the room warm",
+    "room is warm",
+    "one patient about to be two",
+    "where is the second crew"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves, gown and eye protection - childbirth is a high fluid-exposure call",
+   "triggers": [
+    "gloves gown and eye protection",
+    "putting on a gown",
+    "eye protection",
+    "PPE on",
+    "BSI",
+    "full PPE"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: alert labouring woman, involuntary pushing, crowning visible during contractions, clear fluid, no visible hemorrhage",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "what do I see",
+    "she's crowning",
+    "I can see the head",
+    "she's pushing"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC: alert and oriented between contractions",
+   "triggers": [
+    "AVPU",
+    "she's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "do you know where you are",
+    "oriented times four"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway",
+   "triggers": [
+    "airway is open",
+    "airway patent",
+    "she's talking so her airway is clear",
+    "check her airway",
+    "airway is clear"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing",
+   "triggers": [
+    "breathing rate",
+    "how's her breathing",
+    "chest rise",
+    "respiratory effort",
+    "count her respirations",
+    "breathing is adequate"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: radial pulse rate and quality",
+   "triggers": [
+    "radial pulse",
+    "her pulse",
+    "pulse rate and quality",
+    "any major bleeding",
+    "check circulation",
+    "check a radial"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey: confirm crowning, check the fluid colour, look for abnormal bleeding and for a visible cord at the perineum",
+   "triggers": [
+    "rapid body survey",
+    "modified RBS",
+    "RBS",
+    "check for a prolapsed cord",
+    "any abnormal bleeding",
+    "confirm crowning"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Make and state the field-delivery decision: crowning means the baby is delivered here - moving her now would risk delivery in the stairwell or the ambulance",
+   "triggers": [
+    "deliver the baby here",
+    "delivering on scene",
+    "we are not moving her",
+    "no time to transport",
+    "we deliver here",
+    "prepare to deliver"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: warm, pink, moist",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel her skin",
+    "skin signs",
+    "check her skin",
+    "skin is warm"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position her for delivery: semi-reclined on the bed, knees flexed, towels under the hips, a clear warm surface ready to receive the baby",
+   "triggers": [
+    "semi-reclined",
+    "knees bent",
+    "knees flexed",
+    "towels under her hips",
+    "position her for delivery",
+    "semi-sitting on the bed"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State the on-scene delivery decision out loud at the moment crowning is confirmed",
+   "triggers": [
+    "we're delivering before we transport",
+    "not transporting until the baby is out",
+    "delivery before transport",
+    "crowning means we stay",
+    "stay and deliver"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "After delivery, categorize both patients as stable non-RTC and be ready to transport both within 30 minutes",
+   "triggers": [
+    "non-RTC",
+    "both stable",
+    "non-priority",
+    "ready to transport within 30 minutes",
+    "stable mother and baby"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State the upgrade triggers: post-partum hemorrhage, boggy uterus, retained placenta with bleeding, or a newborn needing ongoing resuscitation",
+   "triggers": [
+    "upgrade to RTC if",
+    "if she hemorrhages",
+    "boggy uterus",
+    "retained placenta",
+    "if the baby needs ongoing resuscitation"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: active labour at term with an urge to push",
+   "triggers": [
+    "what's going on",
+    "how are you feeling",
+    "chief complaint",
+    "tell me what's happening",
+    "do you feel the urge to push"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the obstetric HxC/C: due date, gravida and para, singleton or multiples on ultrasound, prenatal complications, speed of the previous labour, time of rupture and the fluid colour",
+   "triggers": [
+    "when are you due",
+    "how many weeks",
+    "how many pregnancies",
+    "is this your first baby",
+    "how long was your first labour",
+    "when did your water break",
+    "one baby or twins"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Ask specifically whether the fluid was clear or stained - meconium changes the newborn airway plan",
+   "triggers": [
+    "was the fluid clear",
+    "what colour was the fluid",
+    "any meconium",
+    "was the water green or brown",
+    "clear or stained"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "past history",
+    "any health conditions",
+    "conditions you see a doctor for"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": [
+    "medications",
+    "taking any meds",
+    "any pills",
+    "prenatal vitamins",
+    "what do you take"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "allergies",
+    "allergic to anything",
+    "any drug allergies",
+    "allergic to any medications"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake",
+   "triggers": [
+    "last ate",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "E4 V5 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a pressure",
+    "cuff on"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality",
+   "triggers": [
+    "radial pulse rate",
+    "rate rhythm and strength",
+    "count her pulse",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on",
+   "triggers": [
+    "skin colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "skin vitals"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 recorded",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess the newborn's heart rate at the brachial artery or umbilical stump - never the carotid in a neonate",
+   "triggers": [
+    "brachial pulse",
+    "the baby's heart rate",
+    "umbilical stump",
+    "feel the cord for a heart rate",
+    "newborn heart rate",
+    "listen to the baby's heart"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "healthy pregnancy",
+    "how has the pregnancy been",
+    "feeling well lately",
+    "functional enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (headache and visual changes would flag pre-eclampsia)",
+   "triggers": [
+    "any headaches",
+    "vision changes",
+    "blurry vision",
+    "seeing spots",
+    "pre-eclampsia"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "shortness of breath",
+    "any cough",
+    "trouble breathing",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "any swelling",
+    "swollen ankles",
+    "chest pain",
+    "palpitations",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (fetal movement, bleeding during pregnancy)",
+   "triggers": [
+    "fetal movement",
+    "baby moving normally",
+    "any bleeding during the pregnancy",
+    "bladder or bowel problems",
+    "nausea or vomiting"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "rashes",
+    "skin problems",
+    "itching",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "pelvic pain",
+    "pelvis aching",
+    "joint pain",
+    "musculoskeletal"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "gestational diabetes",
+    "diabetes in pregnancy",
+    "thyroid",
+    "blood sugar problems",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "sore throat",
+    "ear or eye problems"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Mother: head and neck examined",
+   "triggers": [
+    "head and neck",
+    "check her neck",
+    "palpate her head",
+    "JVD",
+    "trachea midline"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Mother: chest auscultated",
+   "triggers": [
+    "auscultate her chest",
+    "listen to her lungs",
+    "lung sounds",
+    "air entry",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Mother: fundus checked and described - firm at the umbilicus is the goal; a boggy fundus gets massage",
+   "triggers": [
+    "palpate the fundus",
+    "check the fundus",
+    "feel the top of the uterus",
+    "fundal height",
+    "fundal check"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Mother: perineum and lochia assessed, pads counted as the bleeding measure",
+   "triggers": [
+    "check the perineum for tears",
+    "perineal tear",
+    "check the lochia",
+    "lochia",
+    "how many pads",
+    "inspect the perineum after delivery"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Newborn: quick head-to-toe under a warm cover, cord stump checked for oozing",
+   "triggers": [
+    "head to toe on the baby",
+    "check the baby over",
+    "fontanelles",
+    "check the palate",
+    "check the cord stump",
+    "newborn exam"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Newborn: recognize acrocyanosis of the hands and feet as normal while central colour is pink",
+   "triggers": [
+    "acrocyanosis",
+    "blue hands and feet are normal",
+    "check his colour",
+    "central colour",
+    "peripheral cyanosis"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Deliver correctly: support the head, check for a nuchal cord, support the body - no pulling at any stage, and note the time of birth",
+   "triggers": [
+    "support the head",
+    "check for a nuchal cord",
+    "cord around the neck",
+    "support the body",
+    "time of birth",
+    "no pulling"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Run the newborn ladder in order with 30-second steps: dry-stimulate-warm, then BVM on room air, reassessing the heart rate after each step against the below-100 threshold",
+   "triggers": [
+    "dry stimulate and warm",
+    "drying and stimulating",
+    "dry and stimulate",
+    "stimulate the baby",
+    "BVM on room air",
+    "ventilate on room air"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State the escalation steps had the HR stayed below 100: BVM with 100% oxygen for 30 seconds, then compressions with ventilations at 3:1 - and that no AED is used on a neonate",
+   "triggers": [
+    "100% oxygen",
+    "attach oxygen to the BVM",
+    "compressions at 3 to 1",
+    "three to one",
+    "no AED on a neonate",
+    "if the heart rate stays below 100"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Keep the newborn warm at every step: dried immediately, hat, warm blankets, skin-to-skin - cold stress is the most preventable newborn threat",
+   "triggers": [
+    "dry him off",
+    "put a hat on",
+    "warm blankets",
+    "skin to skin",
+    "keep the baby warm",
+    "cover his head"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Manage the third stage correctly: cord clamped and cut after pulsation stops, placenta delivered spontaneously without cord traction, placenta transported with the patients, fundal massage afterwards",
+   "triggers": [
+    "clamp and cut the cord",
+    "wait until the cord stops pulsating",
+    "let the placenta deliver on its own",
+    "don't pull on the cord",
+    "bag the placenta",
+    "bring the placenta"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Control perineal oozing with a pad and gentle pressure, and monitor pad count",
+   "triggers": [
+    "pad on the perineum",
+    "gentle pressure on the tear",
+    "pressure on the perineum",
+    "sanitary pad",
+    "keep track of the pads",
+    "pad count"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess the mother's ABCs, fundus and pad count after each move and at regular intervals",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing after the move",
+    "ABCs again",
+    "recheck her fundus and pads"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of maternal vitals within 15 minutes, trend interpreted out loud",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "trending her vitals",
+    "another set"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Reassess the newborn continuously: breathing, heart rate, colour, tone, warmth - and restart the ladder immediately if the HR falls below 100 or breathing becomes inadequate",
+   "triggers": [
+    "reassess the baby",
+    "recheck the baby's heart rate",
+    "is the baby still breathing",
+    "keep watching the baby",
+    "restart the ladder",
+    "how's the baby doing"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Watch the mother for post-partum hemorrhage: a boggy fundus gets massage, soaking pads upgrades the call to RTC",
+   "triggers": [
+    "post-partum hemorrhage",
+    "postpartum hemorrhage",
+    "PPH",
+    "fundal massage",
+    "massage the fundus",
+    "monitor her bleeding"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Notification to the receiving hospital that a field delivery is coming in - two patients",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "call ahead",
+    "field delivery coming in",
+    "pre-alert"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off covering both patients, including the newborn resuscitation steps and times",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 31-year-old",
+    "report to the nurse",
+    "time of birth was"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCRs completed within 5 minutes, one per patient",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "one PCR per patient",
+    "documentation",
+    "charting"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "transport-while-crowning",
+   "descriptionEn": "BEFORE the baby is delivered, the candidate moves or starts to move the mother toward the cot, the stairs or the ambulance, or announces leaving for the hospital (crowning means the delivery happens here)"
+  },
+  {
+   "key": "patient-walks",
+   "descriptionEn": "BEFORE or DURING the delivery, the candidate lets or tells the mother get up, stand or walk - including to the toilet or bathroom because of her urge to push"
+  },
+  {
+   "key": "baby-delivered",
+   "descriptionEn": "the baby's body is actually delivered: the candidate supports the body / shoulders as he is born, or states the time of birth at the moment of birth (planning talk before the birth is NOT this event)"
+  },
+  {
+   "key": "newborn-assessment",
+   "descriptionEn": "the candidate assesses the NEWBORN's heart rate (brachial artery or umbilical cord stump), breathing, tone, colour or cry. Record THIS event (with the matching expected eids) and NOT a pulse, respirations or skin vital: the vitals engine speaks only the mother's values. Give the newborn's findings yourself from the Newborn parts of primary and findings."
+  },
+  {
+   "key": "newborn-ventilated",
+   "descriptionEn": "the candidate actually ventilates the newborn with the BVM (on room air or with oxygen). Saying what they would do if the heart rate stayed below 100 is NOT this event."
+  },
+  {
+   "key": "newborn-compressions-not-indicated",
+   "descriptionEn": "the candidate actually starts chest compressions on the newborn (his heart rate is never below 60 in this scenario). Verbalizing the escalation steps ('compressions at 3 to 1 if the heart rate stays below 60') is NOT this event."
+  },
+  {
+   "key": "aed-on-neonate",
+   "descriptionEn": "the candidate actually applies AED pads to, or analyzes / shocks, the newborn. Saying that no AED is used on a neonate is NOT this event."
+  },
+  {
+   "key": "carotid-on-neonate",
+   "descriptionEn": "the candidate checks the newborn's heart rate at the carotid (neck) instead of the brachial artery or the umbilical cord stump"
+  },
+  {
+   "key": "ladder-step-skipped",
+   "descriptionEn": "the candidate escalates the newborn ladder out of order or without completing the previous step: ventilates before 30 seconds of drying, stimulating and warming; attaches 100% oxygen before 30 seconds of room-air BVM ventilation; or moves to the next step without rechecking the heart rate against the below-100 threshold"
+  },
+  {
+   "key": "cord-traction",
+   "descriptionEn": "the candidate pulls or tugs on the umbilical cord to deliver the placenta (or to hurry it). Saying they will NOT pull on the cord is NOT this event."
+  },
+  {
+   "key": "pulls-on-baby",
+   "descriptionEn": "the candidate pulls on the baby's head or body during the delivery instead of only supporting it"
+  },
+  {
+   "key": "newborn-left-cold",
+   "descriptionEn": "the newborn is left wet and/or uncovered: not dried and covered after the birth, unwrapped for an exam and not re-covered, or placed on a cold surface without blankets, hat or skin-to-skin contact"
+  },
+  {
+   "key": "newborn-unattended",
+   "descriptionEn": "the candidate leaves the newborn alone or unobserved (e.g. on the bed or a surface away from the mother with no one assigned to watch him) while the crew is busy packaging, lifting or moving the mother"
+  },
+  {
+   "key": "second-crew-requested",
+   "descriptionEn": "the candidate requests (or confirms with dispatch) a second crew / unit / ambulance for the newborn"
+  },
+  {
+   "key": "fluid-bolus-given",
+   "descriptionEn": "PCP gives a fluid bolus (normal saline wide open or a set volume such as 20 mL/kg or 500 mL) to the mother; starting an IV at TKVO is NOT this event"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "methoxyflurane",
+   "namesEn": [
+    "methoxyflurane",
+    "Penthrox",
+    "green whistle"
+   ],
+   "doseEn": "3 mL self-administered via inhaler, may repeat after 20 minutes, maximum 6 mL - WITHHELD in this call: contraindicated in pregnancy, intended pregnancy or current breast-feeding (if given, record drug:methoxyflurane)",
+   "licence": "both"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - not part of this scenario's care plan (the scenario has no medication at either licence level); if given, record drug:entonox",
+   "licence": "both"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "IV fluids",
+    "sodium chloride",
+    "fluid bolus"
+   ],
+   "doseEn": "PCP only: vascular access and a 20 mL/kg IV bolus to a maximum of 2 L, reassessing every 500 mL - only if post-partum hemorrhage with hypotension develops; not indicated in this call",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "deliver-on-scene",
+   "check": "absent",
+   "event": "transport-while-crowning",
+   "licence": "both",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Intervenes incorrectly detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-walking-before-delivery",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "newborn-ventilated",
+   "check": "present",
+   "event": "newborn-ventilated",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "no-compressions-with-hr-above-60",
+   "check": "absent",
+   "event": "newborn-compressions-not-indicated",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "no-aed-on-neonate",
+   "check": "absent",
+   "event": "aed-on-neonate",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "neonate-pulse-site",
+   "check": "absent",
+   "event": "carotid-on-neonate",
+   "licence": "both",
+   "deduct": {
+    "itemId": "pulse",
+    "weight": 15,
+    "errorEn": "Location of pulse check makes it highly unlikely that a pulse could be palpated, displays gross errors in technique"
+   }
+  },
+  {
+   "id": "ladder-in-order",
+   "check": "absent",
+   "event": "ladder-step-skipped",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-cord-traction",
+   "check": "absent",
+   "event": "cord-traction",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "no-traction-on-baby",
+   "check": "absent",
+   "event": "pulls-on-baby",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "newborn-kept-warm",
+   "check": "absent",
+   "event": "newborn-left-cold",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "newborn-attended",
+   "check": "absent",
+   "event": "newborn-unattended",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-call-management",
+    "weight": 25,
+    "errorEn": "Does not manage the simulation effectively or efficiently: including not using additional resources causing excessive delays, or not communicating with patient, partner, or bystander that would have benefitted patient care."
+   }
+  },
+  {
+   "id": "no-methoxyflurane",
+   "check": "absent",
+   "event": "drug:methoxyflurane",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "pcp-no-bolus",
+   "check": "absent",
+   "event": "fluid-bolus-given",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "31-year-old female, G2P1 at 39 weeks and 2 days, and her newborn baby boy - two patients",
+  "cc": "precipitous labour with a field delivery at home",
+  "moi": null,
+  "hxcc": "contractions since 2300, membranes ruptured at 0125 with clear fluid, previous labour 4 hours; crowning on arrival, delivered on scene at 0214, no nuchal cord; newborn initially floppy and not crying with a heart rate about 90 - responded to 30 seconds of BVM ventilation on room air; placenta delivered spontaneously at 0230",
+  "vitals": "Mother: GCS 15, BP 118/76, pulse 96 strong regular, resp 18, SpO2 98% on room air; latest BP 114/72, pulse 88, resp 16, SpO2 98%. Newborn: crying, breathing well, heart rate 128 after ventilation and above 100 since, trunk pink",
+  "treatments": "controlled delivery; newborn dried, stimulated and warmed, then BVM on room air for 30 seconds; hat, warm blankets, skin-to-skin; cord clamped and cut after pulsation stopped; placenta delivered without traction and coming with us; fundal massage; perineal pad pressure; ETA 20 minutes",
+  "findings": "fundus firm at the umbilicus; small first-degree perineal tear with oozing controlled, one pad in 20 minutes; newborn acrocyanosis with a pink trunk"
+ },
+ "handoffFacts": {
+  "ageSex": "31-year-old female (G2P1, 39 weeks and 2 days) and her newborn baby boy",
+  "cc": "precipitous labour - baby delivered at home at 0214",
+  "moi": null,
+  "hxcc": "contractions from 2300; membranes ruptured at 0125 with clear fluid; previous labour 4 hours with a normal vaginal delivery; crowning on arrival so delivered on scene; no nuchal cord; newborn floppy and not crying with a brachial heart rate about 90 at birth: dried, stimulated and warmed for 30 seconds with no change, then BVM on room air for 30 seconds - cried, tone improved, heart rate 128; placenta delivered spontaneously at 0230",
+  "initialVitals": "Mother: GCS 15 (E4 V5 M6), BP 118/76, pulse 96 strong regular, resp 18, skin warm pink moist, pupils equal and reactive, SpO2 98% on room air. Newborn at birth: floppy, not crying, heart rate about 90",
+  "finalVitals": "Mother: GCS 15, BP 114/72, pulse 88 strong regular, resp 16, skin warm pink, pupils equal and reactive, SpO2 98% on room air; fundus firm, one pad in 20 minutes. Newborn: breathing well, strong cry, heart rate above 100, trunk pink",
+  "pmhx": "G2P1; uncomplicated pregnancy with regular prenatal care, singleton on ultrasound, no gestational diabetes, no hypertension; no other medical history",
+  "meds": "prenatal vitamins only",
+  "allergies": "no known allergies",
+  "treatments": "controlled delivery with head and body supported, no traction; newborn ladder steps 1 and 2 (dry-stimulate-warm 30 seconds, BVM on room air 30 seconds), escalation not needed; newborn dried, hat, warm blankets, skin-to-skin, reassessed continuously; cord clamped and cut after pulsation stopped; placenta delivered without traction and transported with the patients; fundal massage; perineal oozing controlled with pad pressure; non-RTC transport, second crew for the newborn",
+  "findings": "fundus firm at the umbilicus; small first-degree perineal tear, oozing controlled; lochia moderate, one pad in 20 minutes; newborn head-to-toe normal, acrocyanosis of the hands and feet with a pink trunk, cord stump not oozing"
+ },
+ "pcrFacts": {
+  "cc": "Term labour with urge to push; field delivery at 0214",
+  "hxcc": "G2P1, 39+2, contractions from 2300, membranes ruptured 0125 with clear fluid, previous labour 4 hours, crowning on arrival - delivered on scene; newborn initially floppy, not crying, HR ~90",
+  "pmhx": "Uncomplicated pregnancy, singleton on ultrasound, no GDM, no hypertension",
+  "meds": "Prenatal vitamins",
+  "allergies": "None",
+  "treatments": [
+   "Controlled delivery: head supported, nuchal cord check negative, no traction, time of birth 0214",
+   "Newborn ladder: dry-stimulate-warm 30 s (no response, HR ~90), BVM room air 30 s - cried, HR 128; escalation steps stated (BVM + 100% O2, then 3:1 compressions until HR > 60, no AED)",
+   "Newborn warmth: dried, hat, blankets, skin-to-skin; continuous reassessment",
+   "Cord clamped and cut after pulsation stopped; placenta delivered spontaneously 0230 without traction, transported with patients; fundal massage after delivery",
+   "Perineal oozing controlled with pad pressure; pad count monitored",
+   "Both patients stable: non-RTC transport, second crew for the newborn"
+  ],
+  "findings": [
+   "Crowning on arrival with clear fluid, no cord at the perineum",
+   "Newborn: floppy, apneic cry-less at birth, brachial HR ~90, responded to step 2 of the ladder; trunk pink with acrocyanosis",
+   "Mother: fundus firm at umbilicus, small first-degree tear, moderate lochia - one pad in 20 minutes",
+   "Maternal vitals stable across two sets; newborn breathing well, HR above 100"
+  ],
+  "vitals": "Mother set 1 (after the delivery): GCS 15, BP 118/76, P 96 strong regular, R 18, skin warm pink moist, PERL, SpO2 98% RA. Set 2: GCS 15, BP 114/72, P 88 strong regular, R 16, skin warm pink, PERL, SpO2 98% RA. Newborn: HR about 90 at birth, 128 after BVM on room air, then above 100",
+  "times": "contractions from 2300; membranes ruptured 0125; birth 0214; placenta 0230"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "The newborn - as soon as he is delivered, and until he has had 30 seconds of BVM ventilation on room air - is floppy and limp, with no cry.",
+  "breathingNotDepictedEn": "The newborn - as soon as he is delivered - isn't crying and isn't breathing effectively. After 30 seconds of BVM ventilation on room air he cries and breathes well.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "The entire call sits inside EMR scope: recognizing imminent delivery, the hands-on delivery itself, the BC newborn ladder (dry-stimulate-warm 30 seconds, BVM room air 30 seconds, BVM with 100% oxygen 30 seconds, then 3:1 compressions with ventilations and 100% oxygen until the HR is above 60), third-stage management without cord traction, warmth for the newborn, hemorrhage watch for the mother, and non-RTC transport of two stable patients. There are no medications in this call at either licence level. Methoxyflurane is withheld (contraindicated in pregnancy and breast-feeding); IV fluids are outside EMR scope.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry on the mother and would obtain vascular access en route if post-partum hemorrhage developed, treating hypotension with a 20 mL/kg fluid bolus to a maximum of 2 L, reassessing every 500 mL. The delivery steps and the newborn ladder are identical at both levels. No vascular access or fluid bolus is indicated while the mother stays stable; methoxyflurane is withheld at both levels."
+ },
+ "sourcePages": "Scenario emd-03 (data/practical/emr-medical-1.json): dispatch, scene, primary (crowning = deliver here), transport (non-RTC after delivery, upgrade triggers), history, mother vitals sets 1-2, FE, exam (mother and newborn), interventions (delivery, newborn ladder, third stage), ongoing, handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (none present once both patients are stable); p.41 Child Infant CPR/AED (neonate 3:1; CPR only if no pulse or pulse < 60 with inadequate perfusion); p.44 Neonate up to 28 days (3:1 compression ratio, no AED) and the Newborn ladder (floppy, limp, not breathing or heart rate < 100: dry, stimulate, keep warm 30 seconds; BVM on room air 30 seconds; BVM with 100% oxygen 30 seconds; compressions with ventilations and 100% oxygen until heart rate is above 60); p.50 Oxygen Administration; p.54 Hypovolemia (PCP fluid bolus 20 mL/kg to a maximum of 2 L, reassess every 500 mL); p.65 Entonox; p.71 Methoxyflurane (contraindicated in pregnancy, intended pregnancy or current breast-feeding; 3 mL, may repeat after 20 minutes, maximum 6 mL).",
+ "keywordEvents": [
+  {
+   "event": "newborn-ventilated",
+   "regex": "\\b(bvm|bag[- ]?valve[- ]?mask|bag[- ]?valve|bag[- ]mask|bagg(ing|ed)|bag (him|the baby|the newborn|baby)|ventilat\\w*|positive[- ]pressure|ppv|rescue breaths?)\\b",
+   "blockRegex": "\\b(if|would|need|needs|bring|grab|pack|packing|kit|equipment|in case|size|sizing)\\b"
+  },
+  {
+   "event": "second-crew-requested",
+   "regex": "\\b(second|another|additional|extra|backup|back-up)\\s+(crew|unit|car|ambulance|truck|rig|team)\\b|\\b(request\\w*|call\\w*|send|need)\\s+(for\\s+)?(backup|back-up|more help|more resources|additional resources)\\b"
+  },
+  {
+   "event": "baby-delivered",
+   "regex": "\\b(deliver(s|ing|ed)? the (body|shoulders?)|support(ing)? the (body|shoulders?)|(the )?baby is (out|born|delivered)|time of birth|born at)\\b",
+   "blockRegex": "\\b(will|if|would|plan\\w*|prepar\\w*|ready|bring|once|when|may|might|could|need to|should)\\b|'ll\\b"
+  }
+ ]
+}

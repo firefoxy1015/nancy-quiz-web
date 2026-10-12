@@ -235,6 +235,8 @@ def turn(req: TurnReq):
         line = engine.format_vital(vset_now, v['name'], v.get('components'))
         if line:
             engine_lines.append(line)
+    for sc in due:   # a fired state change is part of the record (e.g. ROSC starts the packaging clock)
+        events.append({'t': t, 'name': 'state:' + sc['id'], 'eids': [], 'quote': '', 'components': ['state']})
     return {'say': say, 'events': events, 'fired': sorted(fired), 'engineLines': engine_lines,
             'flags': [f for f in inp.get('flags', []) if f][:5], 'channel': ch}
 

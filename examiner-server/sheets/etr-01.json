@@ -1,0 +1,1498 @@
+{
+ "id": "etr-01",
+ "titleEn": "Construction Fall From 7.5 Metres - Multi-System Trauma With Spinal Injury",
+ "type": "trauma",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-trauma-1.json#etr-01",
+ "patient": {
+  "name": "Kyle Morrison",
+  "age": 34,
+  "sex": "male",
+  "affectEn": "confused and frightened; keeps asking what happened and cannot remember the fall; pale, breathing fast and shallow, guarding the right side of his chest; lying supine on wet gravel in the rain",
+  "speechEn": "short, confused sentences; needs questions repeated; amnesic to the fall; answers simple questions about himself but the site superintendent has to fill in how he fell"
+ },
+ "scene": {
+  "settingEn": "Four-storey wood-frame construction site on 152 Street in Surrey at 0910 hrs. Steady rain, 9 degrees C, mud everywhere. Scaffolding overhead with all work now stopped, loose lumber and exposed nails around the patient, a generator running nearby. Surrey Fire is on scene; the site is shut down and the site superintendent confirms the machine and overhead hazards are locked out. One patient, supine on wet compacted gravel about 7.5 metres below the third-floor deck he fell from; his cracked hard hat is lying two metres away. Coworkers rolled him from his left side onto his back before you arrived. A PCP car is 12 minutes behind you; Royal Columbian Hospital trauma centre is 20 minutes by ground.",
+  "hazardsEn": [
+   "overhead scaffolding - all overhead work stopped; controlled by fire and the site superintendent",
+   "loose lumber and exposed nails around the patient",
+   "mud and wet gravel - slip hazard",
+   "generator running nearby",
+   "steady cold rain, 9 degrees C - heat loss for the patient and the crew"
+  ],
+  "bystanders": [
+   {
+    "who": "site superintendent",
+    "knowsEn": "What happened: the framer fell about 7.5 metres in a free fall from the third-floor deck straight down onto compacted gravel at about 0905 this morning. He did not hit anything on the way down. He landed on his left side, and coworkers then rolled him onto his back. He was unconscious for about 30 seconds, then woke up confused. No seizure. He had no medical complaint before the fall. He was wearing his fall-arrest harness but it was not clipped in. The machine and overhead hazards are locked out. He does not know the worker's medical history, medications or allergies."
+   },
+   {
+    "who": "Surrey Fire crew (captain)",
+    "knowsEn": "Fire has stopped all overhead work and is holding the ladder access. The crew can carry equipment, help with the scoop transfer and the lift to the cot, and bring the cot to the patient - only when told exactly what to do. They know nothing more about the fall than the superintendent."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "hard collars (adult sizes)",
+   "scoop stretcher",
+   "spinal device (long board) with head blocks and body straps",
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "BVM with oxygen reservoir",
+   "portable suction",
+   "OPA and NPA sets",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "thermometer",
+   "padded board splints, SAM splints and triangular bandages",
+   "blankets",
+   "trauma shears and dressings",
+   "cot (stretcher)",
+   "AED",
+   "Entonox kit",
+   "methoxyflurane (Penthrox) inhaler",
+   "oral acetaminophen and ibuprofen",
+   "PCP only: IV start kit, normal saline, TXA"
+  ]
+ },
+ "dispatchEn": "0910 hrs. Code 3 to a four-storey wood-frame construction site on 152 Street in Surrey. A framer has fallen from the third floor to the ground. Surrey Fire is on scene, the site has been shut down and WorkSafeBC has been notified. Steady rain, 9 degrees C. You are the EMR crew; Royal Columbian Hospital trauma centre is 20 minutes by ground and a PCP car is 12 minutes behind you.",
+ "dispatchUpdateEn": "Dispatch adds: fire reports the worker fell approximately 7.5 metres onto compacted gravel, was unconscious for about half a minute, and is now awake but confused. His fall-arrest harness was not clipped in. Fire has stopped all overhead work and is holding the ladder access for you.",
+ "arrivalEn": "The site superintendent meets you at the gate and walks you in. Muddy site, steady rain, scaffolding overhead with all work now stopped, loose lumber and exposed nails around the patient, a generator running nearby. He confirms the machine and overhead hazards are locked out and that fire is holding the ladder access. One patient, supine on wet gravel about 7.5 metres below the third-floor deck; a cracked hard hat lies two metres away. He tells you the coworkers rolled him from his left side onto his back before you got here.",
+ "firstLookEn": "A young adult male lying on his back on wet gravel in the rain, eyes open, awake but confused. He is pale and breathing fast and shallow, guarding the right side of his chest, and his left forearm is obviously deformed. No blood on the ground around him.",
+ "primary": {
+  "locEn": "Eyes open, awake and responds to your voice, but confused: he keeps asking what happened and does not remember the fall. Not oriented to the event. This is an altered level of consciousness.",
+  "airwayEn": "Clear. No blood, no vomit, no foreign material; he is talking in short sentences.",
+  "breathingEn": "Respirations 26, shallow. Right chest tender with crepitus on palpation; air entry decreased at the right base on auscultation, left side clear. No flail segment, no open wound.",
+  "circulationEn": "Radial pulse 122, weak, regular. No external hemorrhage anywhere.",
+  "rbsEn": "Head: scalp abrasion over the left parietal area, no depression. Neck: non-tender, but he is confused so it cannot be cleared. Chest: right lateral crepitus. Abdomen: firm and tender in the left upper quadrant. Pelvis: stable on one gentle assessment. Arms: closed deformity of the mid-left forearm, radial pulse present, normal sensation. Legs: no deformity. Back: assessed when he is moved onto the scoop - no step deformity. No external hemorrhage anywhere. Skin is given automatically during the RBS: pale, cool and clammy.",
+  "skinEn": "pale, cool, clammy"
+ },
+ "history": {
+  "ccEn": "My chest... and my belly. They hurt. What happened? I don't remember.",
+  "opqrst": {
+   "oEn": "I was up on the third floor deck... I think I stepped back... I don't remember hitting the ground. (If asked of the superintendent: free fall of about 7.5 metres straight down onto compacted gravel at about 0905; nothing struck on the way down; landed on his left side; coworkers rolled him onto his back; unconscious about 30 seconds.)",
+   "pEn": "My chest is worse when I breathe in. Nothing makes any of it better.",
+   "qEn": "The chest is sharp. My belly is a dull ache... it's there all the time. My arm just hurts.",
+   "rEn": "Right side of my chest. My belly up on the left. And my left arm. The belly ache goes up into my left shoulder.",
+   "sEn": "My chest... a 7. My belly is a 6. My arm, a 6.",
+   "tEn": "Since I fell... I don't know how long. It hasn't changed. (The superintendent: the fall was at about 0905 this morning.)"
+  },
+  "painScoreEn": "Right chest 7 out of 10 (sharp, worse on breathing in); left upper abdomen 6 out of 10 (dull, constant); left forearm 6 out of 10",
+  "sample": {
+   "sEn": "My chest hurts, my belly hurts, my left arm hurts... I feel sick to my stomach. My head hurts a bit.",
+   "aEn": "Penicillin. I get a rash.",
+   "mEn": "No. I don't take anything. No blood thinners.",
+   "pEn": "The doctor said my blood pressure is borderline high. No surgeries. Nothing else.",
+   "lEn": "Coffee and a muffin... at 7 this morning.",
+   "eEn": "I was working on the deck... I think I stepped back. I don't remember falling. (The superintendent: harness worn but not clipped in; no medical complaint before the fall; no seizure; unconscious about 30 seconds, then confused.)"
+  },
+  "fe": {
+   "generalEn": "I'm healthy. I work six days a week. I haven't been sick.",
+   "cnsEn": "I don't remember the fall. My head hurts, about a 4. My arms and legs aren't weak. No numbness.",
+   "respiratoryEn": "It hurts to take a deep breath. No cough. No blood.",
+   "cardiovascularEn": "My heart's pounding. No pressure in my chest.",
+   "giGuEn": "I feel sick. My belly aches up on the left and it goes up to the tip of my left shoulder. I haven't thrown up. No problems peeing.",
+   "integumentaryEn": "I scraped my head. And my left hip is grazed.",
+   "musculoskeletalEn": "My left arm. And my ribs on the right.",
+   "endocrineEn": "No. No diabetes.",
+   "eentEn": "Right after I fell my vision was blurry for a bit. It's clear now."
+  }
+ },
+ "findings": {
+  "headNeckEn": "Left parietal abrasion with a small hematoma, no depression. No blood or fluid from the ears or nose. Trachea midline, no JVD. (The neck can only be fully inspected before the collar goes on; once the collar is on it can only be re-checked visually.)",
+  "chestLungsEn": "Right lateral tenderness with crepitus over ribs 6 to 9. Air entry decreased at the right base; the left side is clear. Equal chest rise. No flail segment, no open wound.",
+  "abdomenEn": "Firm and tender in the left upper quadrant. No distension yet. No seat-belt sign.",
+  "backEn": "Inspected and palpated during the scoop transfer: grazed left flank, no step deformity.",
+  "lowerExtremitiesEn": "Grazed left hip, no deformity. Distal pulses, sensation and movement intact in both feet.",
+  "upperExtremitiesEn": "Closed mid-shaft deformity of the left forearm. Left radial pulse present; sensation and finger movement intact. Right arm normal."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline (the scenario has it taken en route, completed in under 3 minutes); SpO2 90% on room air becomes 96% once 15 L oxygen is on (state change oxygen-applied)",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "92/64",
+   "pulse": {
+    "rate": 122,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "122 weak regular"
+   },
+   "resp": {
+    "rate": 26,
+    "depth": "shallow",
+    "character": "rapid and shallow",
+    "rawEn": "26 shallow"
+   },
+   "skin": "pale cool clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "90% on room air",
+   "bgl": "5.4 mmol/L",
+   "temp": "36.1 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "elapsedMs": 960000
+     }
+    ]
+   },
+   "unlockNoteEn": "deteriorating (worsening hemorrhagic shock) from 16 minutes into the call, normally en route; unlocks together with state change deterioration. The scenario scripts it 7 minutes after set 1.",
+   "gcs": {
+    "total": 13,
+    "e": 3,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "86/58",
+   "pulse": {
+    "rate": 130,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "130 weak regular"
+   },
+   "resp": {
+    "rate": 28,
+    "depth": "shallow",
+    "character": "faster and shallower than before",
+    "rawEn": "28 shallow"
+   },
+   "skin": "pale cool clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "94% on 15 L NRB",
+   "bgl": "5.4 mmol/L",
+   "temp": "35.8 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "oxygen-applied",
+   "when": {
+    "afterEvent": "oxygen"
+   },
+   "examinerLineEn": "Noted.",
+   "vitalsPatch": {
+    "spo2": "96% on 15 L NRB"
+   }
+  },
+  {
+   "id": "deterioration",
+   "when": {
+    "elapsedMs": 960000
+   },
+   "examinerLineEn": "The patient is changing. He is drowsier now - his eyes only open when you speak to him - and his breathing is faster and shallower. His abdomen is now visibly distended.",
+   "vitalsPatch": {
+    "spo2": "94% on 15 L NRB"
+   }
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge the call and plan equipment before arrival: spinal device, hard collar, oxygen, suction, BVM, splints, blankets and the stretcher at the patient's side",
+   "triggers": [
+    "copy dispatch",
+    "bring the scoop and the collar",
+    "bring the cot to the patient",
+    "we'll need the spinal device",
+    "bring suction and the BVM",
+    "bring blankets"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize from dispatch alone that a free fall greater than 6 metres meets the mechanism criteria for an unstable patient, and plan a Rapid Transport Category call",
+   "triggers": [
+    "fall over 6 metres",
+    "more than 6 metres",
+    "more than 20 feet",
+    "the mechanism alone makes him RTC",
+    "planning for rapid transport",
+    "high mechanism fall"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan early for additional resources: confirm fire manpower for the lift and request the PCP car to intercept en route rather than waiting on scene for it",
+   "triggers": [
+    "ask fire for manpower for the lift",
+    "fire can help us lift",
+    "request the PCP car to intercept",
+    "have the PCP unit meet us",
+    "we won't wait for the PCP car"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (overhead work, nails, lumber, mud, generator - controlled by fire and the site superintendent), environment (cold rain), MOI (free fall 7.5 metres onto gravel, harness not clipped), people (one patient) and additional resources",
+   "triggers": [
+    "scene safety",
+    "overhead hazards locked out",
+    "watch for the nails",
+    "mechanism is a fall from height",
+    "one patient",
+    "it's cold and raining"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don site-appropriate PPE: gloves and eye protection plus hard hat, high-visibility vest and boots for a construction site",
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "hard hat on",
+    "high visibility vest",
+    "PPE on",
+    "safety boots"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: young adult male supine on wet gravel, awake but confused, pale, breathing fast and shallow, guarding the right chest with an obviously deformed left forearm",
+   "triggers": [
+    "general impression",
+    "he looks pale",
+    "he's guarding his chest",
+    "his left forearm is deformed",
+    "he looks confused",
+    "first impression"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: alert to voice but confused and amnesic to the event - this is an altered level of consciousness",
+   "triggers": [
+    "AVPU",
+    "level of consciousness",
+    "is he oriented",
+    "what day is it",
+    "do you know where you are",
+    "responds to voice"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Take manual in-line c-spine control as your very first hands-on action and maintain it without release until the head is secured to the device",
+   "triggers": [
+    "manual c-spine",
+    "holding c-spine",
+    "in-line stabilization",
+    "hold his head",
+    "don't move your head",
+    "manual stabilization"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway with a jaw thrust technique; keep suction at the head of the patient because his LOC is decreased and he may vomit",
+   "triggers": [
+    "jaw thrust",
+    "check his airway",
+    "airway is clear",
+    "airway is patent",
+    "look in his mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing: expose the chest, look-listen-feel, auscultate both sides, and recognize the shallow rate of 26 with decreased right basal air entry as inadequate ventilation requiring oxygen and readiness to assist with a BVM",
+   "triggers": [
+    "expose the chest",
+    "look listen and feel",
+    "auscultate both sides",
+    "listen to his lungs",
+    "rate and depth of his breathing",
+    "chest rise"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: radial pulse rate and quality, and interpret a weak pulse of 122 with pale cool clammy skin as shock from internal bleeding",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "any major bleeding",
+    "pulse rate and quality",
+    "signs of shock"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a full rapid body survey head to toe, with a single gentle pelvic assessment and the back checked during the scoop transfer",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "rapid trauma survey",
+    "quick head to toe",
+    "gentle pelvic check",
+    "check the pelvis once"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Recognize the firm tender left upper quadrant as a life threat you cannot fix on scene, and act on it by shortening the scene time rather than by continuing the secondary survey on the ground",
+   "triggers": [
+    "internal bleeding",
+    "bleeding into his abdomen",
+    "possible spleen injury",
+    "secondary survey en route",
+    "we need to go now",
+    "package and go"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin as pale, cool and clammy in the primary survey",
+   "triggers": [
+    "skin is pale cool and clammy",
+    "skin signs",
+    "feel his skin",
+    "he's clammy",
+    "skin colour and temperature"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen 15 L via non-rebreather for trauma, shock, altered LOC and SpO2 90%; target SpO2 at or above 94%",
+   "triggers": [
+    "non-rebreather",
+    "high flow oxygen",
+    "apply oxygen",
+    "NRB at 15",
+    "oxygen at 15 litres"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position supine on a spinal device and get him off the cold wet gravel; blanket for warmth before the shock worsens",
+   "triggers": [
+    "keep him supine",
+    "flat on the board",
+    "get him off the wet ground",
+    "lay him flat",
+    "blanket under and over him"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize the patient as RTC out loud and act with visible urgency from that point on",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "priority patient",
+    "load and go",
+    "he's unstable"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Packaged on the spinal device and ready to be lifted onto the cot within 15 minutes; do the secondary survey en route",
+   "triggers": [
+    "package him on the board",
+    "ready to lift onto the cot",
+    "within 15 minutes",
+    "do the head to toe en route",
+    "get him on the cot"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State the destination decision (trauma centre) and arrange the PCP intercept en route instead of delaying scene departure",
+   "triggers": [
+    "trauma centre",
+    "Royal Columbian",
+    "closest trauma centre",
+    "arrange the intercept",
+    "PCP meets us on the way"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: chest and abdominal pain after a fall from height, with confusion",
+   "triggers": [
+    "what's bothering you",
+    "where does it hurt",
+    "chief complaint",
+    "what hurts",
+    "tell me what's wrong"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C with OPQRRRST and the critical fall questions: where from, height, free fall or struck objects, landing surface, what hit first, has he been moved, loss of consciousness, and what caused the fall",
+   "triggers": [
+    "how far did he fall",
+    "what did he land on",
+    "did he hit anything on the way down",
+    "did he lose consciousness",
+    "has he been moved",
+    "what caused the fall"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Score each pain complaint separately (chest, abdomen, forearm) and use a collateral history source because the patient is amnesic",
+   "triggers": [
+    "zero to ten",
+    "out of 10",
+    "rate your pain",
+    "pain score",
+    "how bad is the pain"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "past history",
+    "any surgeries",
+    "health problems"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications, including any blood thinners",
+   "triggers": [
+    "any medications",
+    "blood thinners",
+    "do you take any pills",
+    "what medications",
+    "anticoagulants"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications",
+    "drug allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake",
+   "triggers": [
+    "last ate",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal",
+    "when did you last eat"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation; recognize a narrowing pulse pressure with a systolic of 92 as early decompensation",
+   "triggers": [
+    "blood pressure",
+    "auscultate a pressure",
+    "pulse pressure",
+    "BP cuff"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality",
+   "triggers": [
+    "pulse rate",
+    "rate rhythm and strength",
+    "check his pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character, with both lung fields auscultated",
+   "triggers": [
+    "respiratory rate",
+    "rate depth and character",
+    "count his breaths"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on for colour, temperature and moisture",
+   "triggers": [
+    "skin colour temperature and moisture",
+    "skin condition",
+    "skin vitals"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction, important with a head strike and amnesia",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "penlight",
+    "pupil size and reaction"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with the probe checked against the pulse, noting the reading is unreliable on a cold clammy finger",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "check the waveform against the pulse"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Blood glucose - indicated by the altered LOC, to rule out a medical cause for the fall",
+   "triggers": [
+    "blood glucose",
+    "blood sugar",
+    "BGL",
+    "glucometer"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated after prolonged exposure to cold rain on wet ground",
+   "triggers": [
+    "temperature",
+    "tympanic temp",
+    "check his temp",
+    "is he hypothermic"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "have you been sick lately",
+    "how's your health in general",
+    "recent illness"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (amnesia and headache are pertinent to the head strike)",
+   "triggers": [
+    "any headache",
+    "numbness or weakness",
+    "do you remember what happened",
+    "neuro enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (pleuritic pain suggests rib injury or pneumothorax)",
+   "triggers": [
+    "does it hurt to breathe",
+    "any cough",
+    "coughing up blood",
+    "short of breath"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "palpitations",
+    "heart racing",
+    "any chest pressure",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (left shoulder tip pain with LUQ tenderness is a classic referred sign of splenic injury)",
+   "triggers": [
+    "any nausea",
+    "have you vomited",
+    "pain in your shoulder tip",
+    "any problems peeing",
+    "bowels"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "any cuts or scrapes",
+    "skin injuries",
+    "integumentary",
+    "grazes"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "anywhere else hurt",
+    "any other bones or joints",
+    "musculoskeletal enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "any vision problems",
+    "blurred vision",
+    "eyes ears nose and throat",
+    "EENT",
+    "ringing in your ears"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined before the collar goes on, including ears and nose for CSF or blood",
+   "triggers": [
+    "check the ears and nose",
+    "CSF",
+    "blood from the ears",
+    "trachea midline",
+    "JVD",
+    "palpate the scalp"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest examined with auscultation at all six sites and palpation for crepitus and flail",
+   "triggers": [
+    "six sites",
+    "auscultate the chest",
+    "palpate the ribs",
+    "check for flail",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined in four quadrants; report the firm tender LUQ",
+   "triggers": [
+    "four quadrants",
+    "palpate the abdomen",
+    "abdominal exam",
+    "check his belly"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined during the scoop transfer without a log roll onto the injured side",
+   "triggers": [
+    "check his back",
+    "back during the scoop",
+    "feel down the spine",
+    "back exam"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with CSM documented above and below the forearm deformity",
+   "triggers": [
+    "CSM in the left hand",
+    "check the left forearm",
+    "upper extremities",
+    "squeeze my fingers",
+    "radial pulse on that arm"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with distal pulses, sensation and motor function bilaterally",
+   "triggers": [
+    "lower extremities",
+    "pedal pulses",
+    "wiggle your toes",
+    "check his legs",
+    "CSM in both feet"
+   ]
+  },
+  {
+   "itemId": "skill-spinal-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Spinal management done correctly: manual stabilization held throughout, hard collar sized and applied, patient moved onto the device with a scoop rather than a log roll, head blocks and straps applied, head not taped",
+   "triggers": [
+    "hard collar",
+    "size the collar",
+    "head blocks",
+    "scoop him",
+    "strap him to the board",
+    "don't tape the head"
+   ]
+  },
+  {
+   "itemId": "skill-fracture-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Splint the deformed left forearm immobilizing the joint above and below, with CSM checked before and after, without delaying an RTC departure",
+   "triggers": [
+    "splint the forearm",
+    "joint above and below",
+    "CSM before and after",
+    "padded board splint",
+    "SAM splint",
+    "immobilize the wrist and elbow"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway and breathing management: suction ready at the head, oxygen at 15 L, BVM within reach, and assisted ventilation started if tidal volume falls",
+   "triggers": [
+    "BVM ready",
+    "BVM at the head",
+    "bag valve mask ready",
+    "BVM standing by",
+    "connect the BVM to oxygen"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rule out and verbalize the analgesia contraindications: no Entonox with an altered LOC or a suspected pneumothorax, and no oral analgesia with a suspected intra-abdominal bleed and possible surgery",
+   "triggers": [
+    "no Entonox",
+    "Entonox is contraindicated",
+    "no oral analgesia",
+    "withholding analgesia",
+    "no pain medication",
+    "contraindicated because of his LOC"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Cover with blankets and get him out of the rain early - hypothermia in a bleeding trauma patient makes the bleeding worse",
+   "triggers": [
+    "cover him with blankets",
+    "get him out of the rain",
+    "prevent heat loss",
+    "hypothermia makes the bleeding worse"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "emr",
+   "actionEn": "Verbalize that IV fluid and TXA are outside EMR scope: transport now and take the PCP intercept en route rather than waiting on scene",
+   "triggers": [
+    "IV is outside my scope",
+    "TXA is outside EMR scope",
+    "outside my scope",
+    "meet the PCP en route",
+    "we won't wait on scene"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each move and at least every 5 minutes",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing after the move",
+    "ABC check",
+    "recheck the collar and splint"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes of the first, and interpret the trend out loud as worsening haemorrhagic shock",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals are trending worse",
+    "he's getting worse"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Recognize the falling GCS with shallower respirations and begin assisted ventilation with a BVM at 10-12 breaths per minute, keeping SpO2 at or above 94%",
+   "triggers": [
+    "assist ventilations",
+    "assisting ventilations",
+    "start bagging",
+    "bagging him",
+    "assist with the BVM",
+    "ventilate him"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Keep suction in hand as the LOC drops; be ready to tip the whole spinal device if he vomits",
+   "triggers": [
+    "suction ready",
+    "suction at the head",
+    "keep suction",
+    "tip the board",
+    "tilt the spinal device",
+    "if he vomits"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route trauma-centre notification with an update when the patient deteriorates",
+   "triggers": [
+    "notify the trauma centre",
+    "patch to Royal Columbian",
+    "pre-alert",
+    "update the hospital"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off including the mechanism, the LOC, the abdominal findings and both sets of vitals",
+   "triggers": [
+    "hand-off report",
+    "handover",
+    "this is a 34-year-old male",
+    "report to the trauma team"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR completed within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "documentation",
+    "charting"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "moves-before-cspine",
+   "descriptionEn": "candidate moves the patient, asks him to lift or turn his head or sit up, or applies a pain stimulus (e.g. pressing on the tender chest or abdomen) before manual in-line c-spine control has been established. The coworkers' roll before the crew arrived is NOT this event."
+  },
+  {
+   "key": "releases-cspine-early",
+   "descriptionEn": "candidate (or the partner on the candidate's instruction) lets go of manual c-spine control before the patient is fully secured to the spinal device with body straps and head blocks; applying the collar alone does not permit release. Handing manual control directly to another rescuer (partner or firefighter) without a gap is NOT a release."
+  },
+  {
+   "key": "head-taped",
+   "descriptionEn": "candidate tapes the patient's head to the spinal device"
+  },
+  {
+   "key": "pelvis-sprung-repeatedly",
+   "descriptionEn": "candidate springs, rocks or compresses the pelvis more than once (the pelvis gets one gentle assessment only); a single gentle assessment on the RBS is correct and must NOT be recorded"
+  },
+  {
+   "key": "log-rolled-onto-injured-side",
+   "descriptionEn": "candidate log-rolls the patient onto his LEFT side (deformed left forearm, tender left upper quadrant) to check the back or place a board, instead of moving him with the scoop"
+  },
+  {
+   "key": "full-secondary-on-scene",
+   "descriptionEn": "after the firm tender left upper quadrant and the shock have been found, the candidate deliberately starts a complete head-to-toe secondary examination or the Functional Enquiry while the patient is still on the ground at the scene, before he is packaged and loaded. A quick look at the head and neck before the collar goes on, checks made during the scoop transfer or packaging, and a short history taken while the crew prepares the scoop are NOT this event."
+  },
+  {
+   "key": "waits-on-scene-for-pcp",
+   "descriptionEn": "candidate keeps the patient on scene to wait for the PCP car (e.g. so that an IV, fluids or TXA can be started) instead of transporting and meeting the PCP en route"
+  },
+  {
+   "key": "deterioration-not-ventilated",
+   "descriptionEn": "after the examiner has described the deterioration (drowsier, eyes open only to voice, faster and shallower breathing, distended abdomen), the candidate spends two or more later turns on other tasks (history, Functional Enquiry, head-to-toe, radio, PCR) without starting BVM-assisted ventilations. Re-checking LOC, airway and breathing first is NOT this event; if BVM-assisted ventilation is already under way this event cannot occur."
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the saline bolus past 500 mL, or onto the next 500 mL, without reassessing the patient (BP / vitals / ABCs) in between"
+  },
+  {
+   "key": "bolus-volume-error",
+   "descriptionEn": "PCP orders a total fluid volume above the 2 L maximum, or a per-kilogram dose other than 20 mL/kg"
+  },
+  {
+   "key": "txa-wrong-dose-or-rate",
+   "descriptionEn": "PCP gives TXA at a dose other than 2 g (2000 mg), by a route other than IV, or pushes it faster than over 1 minute"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this scenario: contraindicated by the altered level of consciousness and the suspected right-sided pneumothorax",
+   "licence": "both"
+  },
+  {
+   "key": "methoxyflurane",
+   "namesEn": [
+    "methoxyflurane",
+    "Penthrox",
+    "green whistle"
+   ],
+   "doseEn": "3 mL self-administered via inhaler - WITHHELD in this scenario: contraindicated by the decreased level of consciousness and the head injury",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol"
+   ],
+   "doseEn": "500 - 1,000 mg PO - WITHHELD in this scenario: he is confused and nauseated, has a suspected intra-abdominal bleed and is likely heading for surgery (caution: hypovolemia)",
+   "licence": "both"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin",
+    "NSAID"
+   ],
+   "doseEn": "300-400 mg PO - WITHHELD in this scenario: suspected internal bleeding (an NSAID would worsen it), confused, nauseated, likely surgery",
+   "licence": "both"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "20 mL/kg IV bolus to a maximum of 2 litres, reassessing every 500 mL, titrated to a systolic of 90",
+   "licence": "pcp"
+  },
+  {
+   "key": "txa",
+   "namesEn": [
+    "TXA",
+    "tranexamic acid",
+    "Cyklokapron"
+   ],
+   "doseEn": "2 g (2000 mg) IV push over 1 minute - single dose",
+   "licence": "pcp",
+   "indicationsEn": "shock with a mechanism and findings suggesting ongoing internal bleeding, after initiating the Hypovolemia protocol; injury at about 0905 is well inside the 3-hour window",
+   "contraindicationsEn": "known hypersensitivity or allergy to TXA; more than 3 hours after injury; patient under 12 years; isolated TBI (not isolated here)",
+   "cautionsEn": "further hypotension if administered too quickly"
+  }
+ ],
+ "majorMoves": [
+  "scoop-transfer",
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "no-early-cspine-release",
+   "check": "absent",
+   "event": "releases-cspine-early",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 100,
+    "errorEn": "Releasing C-spine control when it is required, detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-movement-before-cspine",
+   "check": "absent",
+   "event": "moves-before-cspine",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 15,
+    "errorEn": "C-spine control taken late, or out of sequence with potentially negative consequences, including pain stimulus prior to C-spine control, and/or"
+   }
+  },
+  {
+   "id": "no-head-tape",
+   "check": "absent",
+   "event": "head-taped",
+   "deduct": {
+    "itemId": "skill-spinal-mgmt",
+    "weight": 10,
+    "errorEn": "Improper strapping not detrimental to patient care"
+   }
+  },
+  {
+   "id": "pelvis-single-gentle-check",
+   "check": "absent",
+   "event": "pelvis-sprung-repeatedly",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-log-roll-onto-injured-side",
+   "check": "absent",
+   "event": "log-rolled-onto-injured-side",
+   "deduct": {
+    "itemId": "skill-spinal-mgmt",
+    "weight": 10,
+    "errorEn": "Performs the skill with an isolated error not detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-full-secondary-on-scene",
+   "check": "absent",
+   "event": "full-secondary-on-scene",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Determines life/limb threatening conditions and fails to intervene"
+   }
+  },
+  {
+   "id": "no-waiting-for-pcp",
+   "check": "absent",
+   "event": "waits-on-scene-for-pcp",
+   "deduct": {
+    "itemId": "overall-call-management",
+    "weight": 25,
+    "errorEn": "Does not manage the simulation effectively or efficiently: including not using additional resources causing excessive delays, or not communicating with patient, partner, or bystander that would have benefitted patient care."
+   }
+  },
+  {
+   "id": "deterioration-ventilated",
+   "check": "absent",
+   "event": "deterioration-not-ventilated",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "entonox-contraindicated",
+   "check": "absent",
+   "event": "drug:entonox",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "methoxyflurane-contraindicated",
+   "check": "absent",
+   "event": "drug:methoxyflurane",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "acetaminophen-withheld",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "ibuprofen-withheld",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "saline-given",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "bolus-volume",
+   "check": "absent",
+   "event": "bolus-volume-error",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "txa-given",
+   "check": "present",
+   "event": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "txa-after-baseline",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "txa-time-of-injury-known",
+   "check": "ordered",
+   "first": "history-of-cc",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-allergies-known",
+   "check": "ordered",
+   "first": "allergies",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-single-dose",
+   "check": "max_count",
+   "event": "drug:txa",
+   "max": 1,
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "txa-dose-and-rate",
+   "check": "absent",
+   "event": "txa-wrong-dose-or-rate",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "emr-no-txa",
+   "check": "absent",
+   "event": "drug:txa",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "34-year-old male",
+  "cc": "chest and abdominal pain with confusion after a fall from height",
+  "moi": "free fall of 7.5 metres from a third-floor deck onto compacted gravel at about 0905, harness not clipped, landed on his left side, unconscious about 30 seconds",
+  "hxcc": "amnesic to the event; right chest pain 7/10 worse on breathing, left upper abdominal pain 6/10 radiating to the left shoulder tip, left forearm pain 6/10",
+  "vitals": "GCS 14, BP 92/64, pulse 122 weak, resp 26 shallow, SpO2 90% on room air rising to 96% on 15 L; update: GCS 13, BP 86/58, pulse 130, resp 28 shallower, SpO2 94% on 15 L",
+  "treatments": "manual c-spine, hard collar, scoop transfer to a spinal device with blocks and straps, oxygen 15 L NRB, BVM-assisted ventilation once he deteriorated, left forearm splinted, blankets; all analgesia withheld; PCP intercept arranged; ETA 20 minutes",
+  "findings": "altered LOC, right lateral rib crepitus with decreased air entry at the right base, firm tender left upper quadrant now distended, closed left forearm deformity with intact CSM, left parietal scalp abrasion"
+ },
+ "handoffFacts": {
+  "ageSex": "34-year-old male framer",
+  "cc": "right chest pain 7/10 and left upper abdominal pain 6/10 with confusion after a fall from height",
+  "moi": "free fall of 7.5 metres from a third-floor deck onto compacted gravel at 0905, harness not clipped in, nothing struck on the way down, landed on his left side, rolled onto his back by coworkers",
+  "hxcc": "unconscious about 30 seconds and amnesic to the event; chest pain sharp and worse on breathing; left upper abdominal pain dull and constant with left shoulder tip radiation; left forearm pain 6/10; no medical complaint before the fall",
+  "initialVitals": "GCS 14 (E4 V4 M6), BP 92/64, pulse 122 weak regular, resp 26 shallow, skin pale cool clammy, pupils equal and reactive, SpO2 90% on room air (96% on 15 L), BGL 5.4 mmol/L, temperature 36.1 C",
+  "finalVitals": "GCS 13 (E3 V4 M6), BP 86/58, pulse 130 weak, resp 28 and shallower, skin pale cool clammy, pupils equal and reactive, SpO2 94% on 15 L, temperature 35.8 C; abdomen now distended",
+  "pmhx": "borderline hypertension, no surgeries",
+  "meds": "none; no blood thinners",
+  "allergies": "penicillin - rash",
+  "treatments": "manual in-line stabilization from first contact, hard collar, scoop transfer to a spinal device with head blocks and straps (head not taped), jaw thrust with suction at the head, oxygen 15 L NRB, BVM-assisted ventilation started when GCS fell and respirations became shallower, left forearm splinted with CSM intact before and after, blankets and early removal from the wet scene, rapid transport to the trauma centre with a PCP intercept en route; all analgesia withheld - Entonox for the altered LOC and suspected pneumothorax, oral analgesia for the suspected intra-abdominal bleed",
+  "findings": "left parietal abrasion with small hematoma, no CSF or blood from ears or nose; right lateral rib crepitus over ribs 6 to 9 with decreased air entry at the right base; firm tender left upper quadrant progressing to distension; closed mid-shaft left forearm deformity with intact distal CSM; grazed left flank and hip; last oral intake coffee and a muffin at 0700"
+ },
+ "pcrFacts": {
+  "cc": "Chest and abdominal pain with confusion after a 7.5 metre free fall at work",
+  "hxcc": "Free fall 7.5 m from a third-floor deck onto compacted gravel at 0905, harness not clipped, nothing struck on the way down, landed left side, rolled supine by coworkers, LOC about 30 seconds, amnesic to the event, no medical complaint before the fall; chest pain 7/10 pleuritic, LUQ pain 6/10 with left shoulder tip radiation, forearm pain 6/10",
+  "pmhx": "Borderline hypertension, no surgeries",
+  "meds": "None",
+  "allergies": "Penicillin - rash",
+  "treatments": [
+   "Manual in-line c-spine stabilization from first contact, hard collar, scoop transfer, head blocks and straps, head not taped",
+   "Jaw thrust airway with suction at the head; BVM assisted ventilation started when GCS fell and respirations became shallow",
+   "Oxygen 15 L NRB, target SpO2 94% or above",
+   "Left forearm splinted, joints above and below immobilized, CSM intact before and after",
+   "Blankets and early removal from the wet cold scene",
+   "All analgesia withheld - Entonox contraindicated (altered LOC, suspected pneumothorax); oral analgesia withheld (suspected intra-abdominal bleed, nausea, likely surgery)",
+   "RTC to trauma centre with PCP intercept arranged en route"
+  ],
+  "findings": [
+   "Altered LOC, GCS 14 falling to 13, amnesic to the event",
+   "Right lateral rib crepitus with decreased air entry at the right base",
+   "Firm tender left upper quadrant progressing to visible distension",
+   "Shock: BP 92/64 falling to 86/58, pulse 122 rising to 130, pale cool clammy skin",
+   "Closed left forearm deformity with intact distal CSM",
+   "Left parietal scalp abrasion with a small hematoma, no depression, no CSF or blood from ears or nose"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "He is awake with his eyes open but confused: he keeps asking what happened and cannot remember the fall.",
+  "breathingNotDepictedEn": "He is breathing fast and shallow and is guarding the right side of his chest.",
+  "missedInjuryEn": "You assessed his abdomen and his arms during your rapid body survey - what did you find there?"
+ },
+ "trackNotes": {
+  "emrEn": "EMR runs this call as a package-and-go: manual c-spine into a hard collar, scoop transfer onto the spinal device with blocks and straps, jaw thrust with suction at the head, high-flow oxygen with a BVM ready and used as he deteriorates, a quick forearm splint with CSM checks, blankets for warmth, and ready to lift within 15 minutes. All analgesia is withheld with the contraindications stated out loud - Entonox is barred by the altered LOC and the suspected pneumothorax, and oral acetaminophen and ibuprofen are barred by the suspected intra-abdominal bleed, the nausea and the likelihood of surgery. IV access, a fluid bolus, TXA and CPAP are all outside EMR scope; the correct EMR answer is early transport with a PCP intercept en route, not a longer scene time.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry en route, vascular access with a 20 mL/kg bolus to a maximum of 2 L reassessed every 500 mL and titrated to a systolic of 90, and TXA 2 g IV over 1 minute - indicated here because there is shock with a mechanism suggesting ongoing haemorrhage, within 3 hours, in a patient over 12 years, and this is not an isolated traumatic brain injury. PCP would also monitor for a developing tension pneumothorax on the right and reassess air entry after every ventilation change. On the PCP track the dispatch line 'You are the EMR crew' still stands for the call; the PCP car behind you remains an extra resource to meet en route, and none of the PCP additions justify a longer scene time."
+ },
+ "sourcePages": "Scenario etr-01 (data/practical/emr-trauma-1.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions (EMR scope, analgesia trap, out-of-scope IV/TXA), ongoing (deterioration - assist ventilations), handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC, cool pale clammy skin secondary to suspected shock, free fall > 6 m); p.11 primary survey interventions (c-spine stabilization, airway maintenance and suctioning with decreased LOC, assisting shallow respirations with decreasing LOC, oxygen for trauma/shock/altered LOC, gradual warming); p.12 critical history questions for a fall; p.21 Musculoskeletal Injuries; p.25 Spinal Management (collar, device, foam blocks, do not tape the head); p.29 Hypothermia (remove wet clothing, cover with blankets); p.32 Abdominal Injuries (limit movement, protect against heat loss, transport; PCP vascular access and TXA en route); p.34 Chest Trauma; p.54 Hypovolemia (supine, warm, oxygen to SpO2 >= 94%; PCP bolus 20 mL/kg to a maximum of 2 L reassessing every 500 mL, consider TXA); p.58-59 Acetaminophen (caution: hypovolemia); p.65 Entonox (contraindicated: altered LOC, pneumothorax); p.68 Ibuprofen; p.71 Methoxyflurane (contraindicated: decreased LOC or head injury); p.78 Tranexamic Acid (2 g IV push over 1 minute; contraindicated > 3 hours, < 12 years, isolated TBI). EMALB Practical Grading Criteria p.35 (priority vitals: 7-8 minutes between sets = moderate delay, > 9 minutes = major)."
+}

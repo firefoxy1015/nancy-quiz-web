@@ -1,0 +1,1335 @@
+{
+ "id": "emd-07",
+ "titleEn": "Type 1 Diabetic With Kussmaul Respirations - Suspected Diabetic Ketoacidosis",
+ "type": "medical",
+ "priority": "non-rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-07",
+ "patient": {
+  "name": "Ethan Morrison",
+  "age": 19,
+  "sex": "male",
+  "affectEn": "alert and fully oriented but tired, weak and very thirsty; sitting on the edge of his bed leaning forward, breathing deeply and rapidly without any struggle; worried that his pump will not work",
+  "speechEn": "full sentences between deep breaths; cooperative; answers what he is asked; lets his roommate fill in details he is unsure of"
+ },
+ "scene": {
+  "settingEn": "1120 hrs. A small dorm room in a student residence at a college in Prince George. Tidy enough, no hazards, one window open. One patient sitting on the edge of his bed. A bucket beside him holds clear vomit. His roommate is present and worried. An insulin pump clipped to his waistband has a red alarm light flashing; a glucose meter sits on the desk. No PCP car is available in town this morning. University Hospital of Northern BC is 9 minutes away.",
+  "hazardsEn": [
+   "no physical hazards in the room; one window open",
+   "active vomiting - body-fluid splash exposure"
+  ],
+  "bystanders": [
+   {
+    "who": "roommate",
+    "knowsEn": "He has had a sore throat, fever and poor appetite for three days and turned his pump down because he was hardly eating. The pump started alarming yesterday afternoon and he could not fix it; the infusion site on his belly looks red. He started vomiting yesterday evening - more than ten times now. He has been drinking a lot and was up all night urinating, then hardly at all this morning. His meter read 'HI' when he tested last night. The roommate called 911 because his breathing looked weird. Can fetch the pump supplies and the glucose meter if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "glucometer",
+   "oxygen with non-rebreather mask and nasal cannula",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "thermometer",
+   "portable suction unit",
+   "emesis bags",
+   "BVM with OPA and NPA",
+   "oral glucose gel",
+   "glucagon kit",
+   "Entonox kit",
+   "blankets",
+   "stretcher (cot)",
+   "AED",
+   "PCP only: IV start kit with normal saline, D10W, ondansetron, dimenhydrinate, acetaminophen, ibuprofen"
+  ]
+ },
+ "dispatchEn": "1120 hrs. Code 2 to a student residence at a college in Prince George. A 19-year-old man with type 1 diabetes has been vomiting since yesterday and his roommate says he is 'breathing weird'. University Hospital of Northern BC is 9 minutes away. No PCP car is available in town this morning.",
+ "dispatchUpdateEn": "Dispatch adds: he is awake and answering the phone questions himself. His insulin pump alarm has been going off since last night. He has had flu-like symptoms for three days.",
+ "arrivalEn": "The roommate meets you at the residence entrance and leads you to a small dorm room. It's tidy enough, there are no hazards, and a window is open. One patient, sitting on the edge of his bed. His roommate stays in the doorway, worried.",
+ "firstLookEn": "A young man sitting on the edge of his bed, leaning forward, breathing deeply and rapidly but without any obvious struggle. His lips look dry and his eyes look sunken. A bucket beside him holds clear vomit. An insulin pump clipped to his waistband has a red alarm light flashing, and there's a glucose meter on the desk. As you get close you notice a sweet, acetone-like smell on his breath.",
+ "primary": {
+  "locEn": "Alert (AVPU = A). Fully oriented to person, place, time and event. Tired.",
+  "airwayEn": "Patent. Speaking in full sentences between deep breaths. No vomit in the mouth right now, but he has been vomiting repeatedly.",
+  "breathingEn": "Respirations 32, deep and regular. No accessory muscle use. Clear and equal air entry on both sides. He is not struggling to breathe.",
+  "circulationEn": "Radial pulse 118, present, regular, slightly thready. No external bleeding.",
+  "rbsEn": "No trauma. Abdomen generally tender without guarding or rebound. No rash. No calf tenderness. Skin is given automatically during the RBS: warm, dry, flushed, with poor turgor and very dry mucous membranes.",
+  "skinEn": "warm, dry, flushed, poor turgor, very dry mucous membranes"
+ },
+ "history": {
+  "ccEn": "I've been throwing up since yesterday. My pump kept alarming and I couldn't get it working. I'm so thirsty.",
+  "opqrst": {
+   "oEn": "I've been sick for three days - sore throat, fever, not eating. The pump started alarming yesterday afternoon and the throwing up started last night.",
+   "pEn": "Nothing makes it better or worse that I've noticed.",
+   "qEn": "My belly just aches, all over.",
+   "rEn": "It doesn't go anywhere. It's all over my belly.",
+   "sEn": "The belly ache is about a 4 out of 10.",
+   "tEn": "The pump's been broken since yesterday afternoon, so about 18 hours with no insulin. I've thrown up more than ten times since last night."
+  },
+  "painScoreEn": "4 out of 10 (generalized abdominal ache, no radiation)",
+  "sample": {
+   "sEn": "Throwing up, really thirsty, peeing a ton all night and then hardly at all this morning. My belly aches, I'm weak, and my vision's blurry. No chest pain, no headache.",
+   "aEn": "No allergies.",
+   "mEn": "Just my insulin, through the pump. Nothing else. I turned the pump down a few days ago because I was hardly eating. It's been alarming since yesterday afternoon and I couldn't fix it, so I don't think I've had any insulin since then.",
+   "pEn": "Type 1 diabetes since I was 11. I've been on the pump for three years. I was in hospital once for ketoacidosis when I was 15.",
+   "lEn": "Just sips of water this morning. Nothing solid since yesterday morning.",
+   "eEn": "I've had a sore throat and a fever for three days and I wasn't eating, so I turned my pump down. Yesterday afternoon it started alarming and I couldn't get it working - my roommate says the site looks red. I tested my sugar last night and the meter just said HI."
+  },
+  "fe": {
+   "generalEn": "My diabetes was well controlled until this. Three days of sore throat and fever.",
+   "cnsEn": "I'm weak and tired. I'm not confused. No headache, no weakness on one side.",
+   "respiratoryEn": "No cough, no pain when I breathe. It feels like I can't get enough air, but it isn't hard work.",
+   "cardiovascularEn": "My heart's pounding. No chest pain.",
+   "giGuEn": "I've thrown up more than ten times. My belly aches all over. I was peeing huge amounts all night and now almost nothing this morning.",
+   "integumentaryEn": "My skin's really dry. The pump site on my belly is red and sore.",
+   "musculoskeletalEn": "I'm weak all over and my legs keep cramping.",
+   "endocrineEn": "Type 1 diabetes. My pump's been broken for about 18 hours.",
+   "eentEn": "Sore throat. My vision's blurry."
+  }
+ },
+ "findings": {
+  "headNeckEn": "Very dry lips and tongue, sunken eyes, sweet acetone odour on the breath, throat red, neck supple.",
+  "chestLungsEn": "Clear and equal air entry at all six sites. Deep, regular respirations; no accessory muscle use.",
+  "abdomenEn": "Soft, generally tender without guarding or rebound. Red, tender pump infusion site in the left lower quadrant. Bowel sounds present.",
+  "backEn": "Nil - no findings.",
+  "lowerExtremitiesEn": "Calf cramping. Pedal pulses present. No swelling and no tenderness suggesting a clot.",
+  "upperExtremitiesEn": "Skin tenting on the forearm. Radial pulses present bilaterally. Capillary refill 3 seconds."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "on scene, baseline - within 3 minutes",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "104/68",
+   "pulse": {
+    "rate": 118,
+    "rhythm": "regular",
+    "strength": "slightly thready",
+    "rawEn": "118 regular, slightly thready"
+   },
+   "resp": {
+    "rate": 32,
+    "depth": "deep",
+    "character": "regular, not laboured, no accessory muscle use",
+    "rawEn": "32 deep and regular"
+   },
+   "skin": "warm, dry, flushed, poor turgor",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "98% on room air",
+   "bgl": "HI - above the meter's range (no number is displayed)",
+   "temp": "37.6 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "anyOf": [
+     {
+      "afterEvent": "move:load"
+     },
+     {
+      "elapsedMs": 900000
+     }
+    ]
+   },
+   "unlockNoteEn": "en route (or about 16 minutes after set 1): slowly worsening but still no unstable criterion; he has vomited twice more",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "100/64",
+   "pulse": {
+    "rate": 124,
+    "rhythm": "regular",
+    "strength": "slightly thready",
+    "rawEn": "124 regular"
+   },
+   "resp": {
+    "rate": 34,
+    "depth": "deep",
+    "character": "regular, not laboured, no accessory muscle use",
+    "rawEn": "34 deep and regular"
+   },
+   "skin": "warm, dry, poor turgor",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "98% on room air",
+   "bgl": "HI - above the meter's range (no number is displayed)",
+   "temp": "37.6 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "vomits-on-scene",
+   "when": {
+    "elapsedMs": 540000
+   },
+   "examinerLineEn": "He leans forward and vomits clear fluid again.",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "asks-for-water",
+   "when": {
+    "elapsedMs": 660000
+   },
+   "examinerLineEn": "He looks up and asks: \"Can I please have some water? I'm so thirsty.\"",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "vomits-en-route",
+   "when": {
+    "afterEvent": "move:load",
+    "elapsedMs": 960000
+   },
+   "examinerLineEn": "He vomits again, clear fluid.",
+   "vitalsPatch": {}
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan equipment: blood glucose meter, oxygen, suction, thermometer, emesis bags, blankets and the stretcher",
+   "triggers": [
+    "bring the glucometer",
+    "bring suction",
+    "bring emesis bags",
+    "bring the stretcher",
+    "thermometer and oxygen"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize the pattern from dispatch: a type 1 diabetic with an insulin delivery failure, days of illness and vomiting, and abnormal breathing - suspect ketoacidosis before you walk in",
+   "triggers": [
+    "suspect DKA",
+    "diabetic ketoacidosis",
+    "thinking DKA",
+    "insulin pump failure",
+    "this sounds like ketoacidosis"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan to bring the insulin pump and his glucose log with the patient - the receiving team needs to know how long insulin delivery has failed",
+   "triggers": [
+    "plan to bring the insulin pump",
+    "we'll want his glucose log",
+    "how long the pump has failed"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment, nature of illness (three days of illness with vomiting in a type 1 diabetic), people (one patient plus a roommate who can give collateral history) and resources (no PCP available - this is an EMR-only call)",
+   "triggers": [
+    "no hazards",
+    "scene is safe",
+    "one patient",
+    "nature of illness",
+    "no PCP available",
+    "roommate can give history"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection - he is actively vomiting",
+   "triggers": [
+    "gloves and eye protection",
+    "gloves on",
+    "PPE on",
+    "eye protection because he's vomiting",
+    "BSI"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: young man, alert, deep rapid unlaboured breathing, dry lips, sunken eyes, a flashing pump alarm - and note the sweet acetone smell on his breath",
+   "triggers": [
+    "he's breathing deep and fast",
+    "sunken eyes",
+    "dry lips",
+    "pump alarm is flashing",
+    "fruity smell on his breath",
+    "general impression"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: alert and fully oriented, GCS 15 - and state that any drop from this is the finding that would change everything",
+   "triggers": [
+    "AVPU",
+    "he's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "fully oriented",
+    "any drop in LOC changes everything"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway; keep suction beside him because he is vomiting repeatedly",
+   "triggers": [
+    "airway is patent",
+    "airway is clear",
+    "check his airway",
+    "he's talking so his airway is open",
+    "look in his mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing and interpret it correctly: 32 per minute, deep, regular, no accessory muscle use, clear air entry - Kussmaul respiration compensating for acidosis, NOT respiratory distress and NOT a reason for assisted ventilation",
+   "triggers": [
+    "count his respirations",
+    "breathing rate and depth",
+    "auscultate both sides",
+    "Kussmaul",
+    "compensating for acidosis",
+    "not respiratory distress"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: radial pulse 118, present and slightly thready with poor skin turgor - volume depletion from osmotic diuresis and vomiting",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse rate and quality",
+    "any major bleeding",
+    "feel for a radial"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform the rapid body survey including a gentle abdominal examination - abdominal pain is common in ketoacidosis but a surgical abdomen must not be assumed away",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "quick head to toe",
+    "gently palpate his abdomen",
+    "check his calves"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: warm, dry, flushed, poor turgor, very dry mucous membranes",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel his skin",
+    "check his skin turgor",
+    "skin signs",
+    "how's his skin"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reason the oxygen decision out loud: his SpO2 is 98% and his tachypnea is compensatory, not hypoxic, so oxygen is titrated only to keep SpO2 at or above 94% and is not required now - reassess with every set of vitals",
+   "triggers": [
+    "no oxygen needed right now",
+    "oxygen not indicated at 98",
+    "titrate to 94",
+    "holding off on oxygen",
+    "oxygen only if he drops below 94"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position of comfort, sitting or semi-reclined with an emesis bag and suction, ready to move him lateral if his LOC falls",
+   "triggers": [
+    "position of comfort",
+    "sit him up",
+    "semi-reclined",
+    "emesis bag in his lap",
+    "keep him sitting up"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Correctly categorize as non-RTC and justify it against the unstable criteria one by one",
+   "triggers": [
+    "non-RTC",
+    "non-priority",
+    "he's stable by the criteria",
+    "no unstable criteria",
+    "doesn't meet RTC"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State the findings that would upgrade him immediately: falling LOC, systolic below 90, absent radial pulses, or slowing respirations from fatigue",
+   "triggers": [
+    "if his LOC drops",
+    "systolic below 90",
+    "if he loses his radial pulses",
+    "upgrade to RTC",
+    "what would make him RTC"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready for transport within 30 minutes without dawdling, and take the insulin pump and glucose meter with the patient",
+   "triggers": [
+    "ready to go within 30 minutes",
+    "let's move, he's getting worse",
+    "pump and meter come with us"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: vomiting, thirst and abnormal breathing in a type 1 diabetic with a failed insulin pump",
+   "triggers": [
+    "what's going on today",
+    "what's bothering you",
+    "chief complaint",
+    "why did you call",
+    "how are you feeling"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C: how long insulin delivery has been interrupted, the precipitating illness, vomiting frequency, thirst, urine output overnight and today, and the last glucose reading",
+   "triggers": [
+    "when did the pump stop working",
+    "how many times have you vomited",
+    "when was your last insulin",
+    "how much are you peeing",
+    "what was your last sugar",
+    "how long have you been sick"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Score the abdominal pain and characterize it - abdominal pain is common in ketoacidosis but must still be described properly",
+   "triggers": [
+    "scale of zero to ten",
+    "rate your belly pain",
+    "pain score",
+    "how bad is the belly pain",
+    "zero to ten"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history, including the previous ketoacidosis admission",
+   "triggers": [
+    "medical history",
+    "any other medical problems",
+    "ever had DKA before",
+    "been in hospital for this before",
+    "how long have you been diabetic"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications - insulin by pump only, and when the last effective dose was actually delivered",
+   "triggers": [
+    "any medications",
+    "what medications",
+    "what insulin are you on",
+    "pump settings",
+    "any other meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation - 104/68 is above the hypotension threshold but low for a 19-year-old and must be trended",
+   "triggers": [
+    "blood pressure",
+    "BP by auscultation",
+    "cuff on"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality",
+   "triggers": [
+    "pulse rate rhythm and strength",
+    "count the pulse",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character with both lung fields auscultated, and describe the pattern as deep and regular rather than laboured",
+   "triggers": [
+    "respiratory rate",
+    "rate depth and character",
+    "resps deep and regular"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on including turgor and mucous membranes",
+   "triggers": [
+    "skin colour temperature and condition",
+    "check his skin hands-on",
+    "skin turgor"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 recorded - and not used as evidence that the breathing is fine, because a normal saturation does not exclude a severe metabolic acidosis",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Blood glucose measured and documented honestly as above the meter's range",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "check his sugar",
+    "glucometer"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated because an infection appears to have precipitated this episode",
+   "triggers": [
+    "temperature",
+    "tympanic temp",
+    "check for a fever"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "been well lately",
+    "how's your diabetes control",
+    "any recent illness"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (no confusion yet - this is the system to watch)",
+   "triggers": [
+    "any confusion",
+    "weakness or numbness",
+    "any headache",
+    "nervous system"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (air hunger without laboured breathing is the classic ketoacidosis description)",
+   "triggers": [
+    "any cough",
+    "short of breath",
+    "hard to breathe",
+    "respiratory system"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "any chest pain",
+    "palpitations",
+    "heart pounding",
+    "cardiovascular"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (the swing from polyuria overnight to almost no urine this morning quantifies the volume loss)",
+   "triggers": [
+    "how much are you urinating",
+    "any diarrhea",
+    "bowels and bladder",
+    "GI GU"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (inspect the pump infusion site - a red tender site explains the insulin failure)",
+   "triggers": [
+    "any rash",
+    "skin changes",
+    "look at the pump site",
+    "integumentary"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "muscle cramps",
+    "musculoskeletal",
+    "any aches",
+    "joint pain"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (how long insulin delivery has been interrupted is the key number)",
+   "triggers": [
+    "endocrine",
+    "thyroid",
+    "how long has the pump been off",
+    "blood sugar control"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "sore throat",
+    "eyes ears nose and throat",
+    "blurry vision",
+    "EENT"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined, including mucous membranes and the breath odour",
+   "triggers": [
+    "head and neck exam",
+    "mucous membranes",
+    "smell his breath",
+    "look in his throat",
+    "palpate the neck"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest auscultated at all six sites to confirm the lungs are clear - the tachypnea is metabolic, not pulmonary",
+   "triggers": [
+    "auscultate all six sites",
+    "full chest exam",
+    "inspect and palpate the chest",
+    "examine his chest",
+    "listen in six places"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined in four quadrants, including inspection of the pump infusion site",
+   "triggers": [
+    "four quadrants",
+    "palpate the abdomen",
+    "abdominal exam",
+    "check the infusion site",
+    "inspect the pump site"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined",
+   "triggers": [
+    "check the back",
+    "palpate the spine",
+    "back exam",
+    "look at his back"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with skin turgor and capillary refill documented as dehydration markers",
+   "triggers": [
+    "upper extremities",
+    "skin tenting",
+    "capillary refill",
+    "radial pulses both sides",
+    "check his arms"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities with pedal pulses documented",
+   "triggers": [
+    "lower extremities",
+    "pedal pulses",
+    "check his legs",
+    "calf tenderness",
+    "feel his feet"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Measure the blood glucose and correctly withhold oral glucose and glucagon with a reading above the meter's range - giving glucose to a hyperglycemic patient is initiating a protocol without indications",
+   "triggers": [
+    "no oral glucose",
+    "withhold the glucagon",
+    "glucose is not indicated",
+    "his sugar is high so no glucose",
+    "BGL is HI so no glucose"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rule out and verbalize the analgesia contraindications before considering anything for the abdominal pain: he cannot retain oral medication while vomiting, and Entonox is cautioned in shock and abdominal distension",
+   "triggers": [
+    "he can't keep oral meds down",
+    "Entonox is cautioned",
+    "no oral analgesia",
+    "withholding pain medication",
+    "cautioned in shock"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Evaluate for stroke signs and symptoms as the Diabetic Emergencies protocol requires",
+   "triggers": [
+    "stroke assessment",
+    "FAST VAN",
+    "facial droop",
+    "arm drift",
+    "stroke signs"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway management: emesis bag and suction within reach, positioned upright or lateral, with a stated plan to go fully lateral if the LOC falls",
+   "triggers": [
+    "emesis bag",
+    "suction within reach",
+    "set up suction",
+    "suction at the bedside",
+    "bag for vomit"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize that intravenous fluid and insulin are outside EMR scope and are the reason he is going to hospital now rather than later",
+   "triggers": [
+    "IV fluids are outside my scope",
+    "he needs IV fluids and insulin",
+    "insulin at the hospital",
+    "outside EMR scope"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Bring the insulin pump, the infusion set and the glucose meter with the patient and document the infusion site appearance",
+   "triggers": [
+    "bring the pump, infusion set and meter",
+    "bag the infusion set",
+    "document the infusion site",
+    "take the pump with us"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after each move and at regular intervals",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassessing",
+    "ABC check after the move",
+    "recheck interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 15 minutes and interpret the trend out loud as slow worsening that still does not meet unstable criteria",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "another set of vitals",
+    "vitals again"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State the decompensation trigger: if the deep respirations slow as he tires, that is respiratory failure and assisted ventilation with a BVM begins immediately",
+   "triggers": [
+    "if his breathing slows",
+    "if his respirations slow",
+    "if he starts to tire",
+    "respiratory failure",
+    "BVM if he tires",
+    "decompensating"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Protect the airway through repeated vomiting, with suction in hand and a plan to go lateral if the LOC falls",
+   "triggers": [
+    "suction in hand",
+    "protect his airway",
+    "roll him lateral if he vomits",
+    "lateral if his LOC drops",
+    "suction him if he vomits"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Notify the receiving hospital of a suspected ketoacidosis so intravenous fluid and insulin can be prepared",
+   "triggers": [
+    "notify the hospital",
+    "patch to UHNBC",
+    "pre-alert",
+    "call ahead",
+    "suspected DKA inbound"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off including the duration of insulin interruption, the glucose reading and the respiratory pattern",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "report to the nurse",
+    "no insulin for 18 hours"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR completed within 5 minutes, documenting the glucose as above meter range rather than a guessed number",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "document HI"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "glucose-agent-given",
+   "descriptionEn": "the candidate actually administers oral glucose / glucose gel, glucagon or D10W to this patient (also report the drug event). Saying that glucose or glucagon is withheld, not indicated, cannot be given or is not needed is NOT this event."
+  },
+  {
+   "key": "ventilations-on-kussmaul",
+   "descriptionEn": "the candidate starts assisted ventilations (BVM, pocket mask, assisting breaths, positive pressure) while the patient is alert and breathing deeply and regularly on his own. Stating a plan to ventilate IF his breathing slows or he tires is NOT this event."
+  },
+  {
+   "key": "oral-fluids-given",
+   "descriptionEn": "the candidate gives the patient water or any other oral fluid to drink, or tells him he can drink"
+  },
+  {
+   "key": "oral-analgesia-given",
+   "descriptionEn": "a PCP candidate actually gives acetaminophen or ibuprofen by mouth to this patient, who has vomited more than ten times (also report the drug event)"
+  },
+  {
+   "key": "entonox-given",
+   "descriptionEn": "the candidate actually administers Entonox to this patient (cautioned in shock and abdominal distension; nausea and vomiting are adverse effects); also report drug:entonox. Saying Entonox is withheld or cautioned is NOT this event."
+  },
+  {
+   "key": "emr-pcp-treatment",
+   "descriptionEn": "an EMR candidate actually starts an IV, runs a fluid bolus, or gives ondansetron, dimenhydrinate, acetaminophen, ibuprofen or D10W. Saying these are outside EMR scope is NOT this event."
+  },
+  {
+   "key": "high-flow-oxygen-at-98",
+   "descriptionEn": "the candidate applies high-flow oxygen by non-rebreather while the SpO2 is 98% on room air, without a stated rationale"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "a PCP runs the saline bolus past 500 mL or onto the next bag without reassessing the patient (BP / vitals / ABCs) in between"
+  },
+  {
+   "key": "stroke-screened",
+   "descriptionEn": "the candidate evaluates for stroke signs and symptoms (e.g. FAST-VAN: facial droop, arm drift, speech, vision, neglect), as the Diabetic Emergencies protocol requires"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "glucogel",
+    "dextrose gel"
+   ],
+   "doseEn": "15 g PO to the oral mucosa - NOT indicated here: the protocol corrects hypoglycemia (BGL below 4.0 mmol/L) and this meter reads HI. Report drug:oral-glucose only if the candidate actually gives it.",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "GlucaGen"
+   ],
+   "doseEn": "IM 0.5-1 mg or IN 3 mg for hypoglycemia - NOT indicated here (BGL reads HI). Report drug:glucagon only if the candidate actually gives it.",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%",
+    "dextrose"
+   ],
+   "doseEn": "10-25 g IV (100-250 mL of 10%) for confirmed hypoglycemia - NOT indicated here (BGL reads HI)",
+   "licence": "pcp"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this call: cautioned in shock and abdominal distension, and nausea and vomiting are adverse effects in a patient vomiting repeatedly",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol"
+   ],
+   "doseEn": "500-1,000 mg PO - WITHHELD: he cannot retain oral medication after vomiting more than ten times",
+   "licence": "both"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin"
+   ],
+   "doseEn": "300-400 mg PO - WITHHELD: he cannot retain oral medication after vomiting more than ten times",
+   "licence": "both"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS bolus",
+    "saline bolus",
+    "sodium chloride"
+   ],
+   "doseEn": "PCP: 20 mL/kg IV bolus to a maximum of 2 L, reassessing every 500 mL, for the volume depletion",
+   "licence": "pcp"
+  },
+  {
+   "key": "ondansetron",
+   "namesEn": [
+    "ondansetron",
+    "Zofran"
+   ],
+   "doseEn": "PCP may consider 4 mg PO (adult) for moderate to severe nausea and vomiting",
+   "licence": "pcp"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol",
+    "Dramamine"
+   ],
+   "doseEn": "PCP may consider 1 mg/kg to a maximum of 50 mg, IV diluted over 2 minutes or IM",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "no-glucose-agents",
+   "check": "absent",
+   "event": "glucose-agent-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "bgl-measured",
+   "check": "present",
+   "event": "blood-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "no-ventilation-of-kussmaul",
+   "check": "absent",
+   "event": "ventilations-on-kussmaul",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 15,
+    "errorEn": "Ventilates a patient when not required"
+   }
+  },
+  {
+   "id": "no-oral-fluids",
+   "check": "absent",
+   "event": "oral-fluids-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-oral-analgesia",
+   "check": "absent",
+   "event": "oral-analgesia-given",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "entonox-cautions",
+   "check": "absent",
+   "event": "entonox-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "emr-scope",
+   "check": "absent",
+   "event": "emr-pcp-treatment",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "oxygen-titrated",
+   "check": "absent",
+   "event": "high-flow-oxygen-at-98",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 3,
+    "errorEn": "Applies oxygen but it is applied with minor deficiencies"
+   }
+  },
+  {
+   "id": "stroke-screen",
+   "check": "present",
+   "event": "stroke-screened",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 10,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is not detrimental to patient care"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "19-year-old male",
+  "cc": "vomiting, thirst and deep rapid breathing in a type 1 diabetic with a failed insulin pump - suspected diabetic ketoacidosis",
+  "moi": null,
+  "hxcc": "three days of sore throat and fever with poor intake, pump turned down; pump alarming since yesterday afternoon with a red infusion site - about 18 hours without effective insulin; vomited more than ten times since last night; polyuria overnight then almost none this morning",
+  "vitals": "GCS 15, BP 104/68, pulse 118 regular slightly thready, resp 32 deep and regular, SpO2 98% on room air, BGL HI (above meter range), temp 37.6 C; latest BP 100/64, pulse 124, resp 34",
+  "treatments": "BGL measured - oral glucose and glucagon withheld; airway protected with suction and emesis bag, positioned upright; oxygen not required at 98%; no oral fluids or analgesia; pump and meter with the patient; PCP: IV fluid bolus en route; ETA 9 minutes",
+  "findings": "alert GCS 15, deep regular respirations without accessory muscle use, clear chest, acetone breath, very dry mucous membranes and poor turgor, generalized abdominal tenderness without guarding, red tender pump site left lower quadrant"
+ },
+ "handoffFacts": {
+  "ageSex": "19-year-old male",
+  "cc": "vomiting, thirst and abnormal deep breathing with a failed insulin pump - suspected diabetic ketoacidosis",
+  "moi": null,
+  "hxcc": "three days of sore throat and fever with very poor intake, turned his pump down; pump alarming since yesterday afternoon and could not be fixed, infusion site red and tender - roughly 18 hours without effective insulin; vomited more than ten times since last night; extreme thirst; large urine volumes overnight, almost none this morning; generalized abdominal ache 4/10; last self-test read HI",
+  "initialVitals": "GCS 15 (E4 V5 M6), BP 104/68, pulse 118 regular slightly thready, resp 32 deep and regular, skin warm dry flushed with poor turgor, pupils equal and reactive, SpO2 98% on room air, BGL HI (above meter range), temp 37.6 C",
+  "finalVitals": "GCS 15, BP 100/64, pulse 124 regular, resp 34 deep and regular, skin warm dry with poor turgor, pupils equal and reactive, SpO2 98% on room air, BGL HI, temp 37.6 C; vomited twice more",
+  "pmhx": "type 1 diabetes since age 11, insulin pump for three years, one previous admission for ketoacidosis at 15",
+  "meds": "insulin by pump only (no effective delivery for about 18 hours)",
+  "allergies": "none",
+  "treatments": "BGL measured - oral glucose and glucagon withheld; suction and emesis bag, positioned upright with a plan to go lateral; oxygen not required at SpO2 98%; no oral fluids, no oral analgesia, Entonox withheld; stroke screen done; pump, infusion set and meter brought; non-RTC with upgrade triggers monitored; PCP: IV bolus reassessed every 500 mL",
+  "findings": "Kussmaul-pattern breathing with clear air entry, acetone odour, very dry mucous membranes, sunken eyes, skin tenting, capillary refill 3 seconds, generalized abdominal tenderness without guarding or rebound, red tender pump site in the left lower quadrant, pedal pulses present"
+ },
+ "pcrFacts": {
+  "cc": "Vomiting, thirst and abnormal deep breathing in a type 1 diabetic with a failed insulin pump",
+  "hxcc": "Three days of sore throat and fever with poor intake, pump rate reduced by the patient; pump alarming since yesterday afternoon with a red tender infusion site - no effective insulin for ~18 hours; vomited 10+ times since last night; polyuria overnight then almost anuric this morning; generalized abdominal ache 4/10; last self-test read HI; previous DKA admission at age 15",
+  "pmhx": "Type 1 diabetes since age 11, one previous admission for ketoacidosis",
+  "meds": "Insulin by pump only",
+  "allergies": "None",
+  "vitals": "GCS 15; BP 104/68 then 100/64; pulse 118 then 124; resp 32 then 34 deep and regular; SpO2 98% on room air; BGL HI - above meter range (document HI, not a number); temp 37.6 C",
+  "treatments": [
+   "Blood glucose measured - above meter range; oral glucose and glucagon correctly withheld",
+   "Airway kept clear with emesis bag and suction; positioned upright with a plan to go lateral if LOC fell",
+   "Oxygen not required at SpO2 98%; reassessed with every set of vitals, titration threshold 94% stated",
+   "Oral fluids and oral analgesia withheld with reasons stated; Entonox cautions verbalized",
+   "Stroke signs and symptoms evaluated as required by the Diabetic Emergencies protocol",
+   "Insulin pump, infusion set and glucose meter transported with the patient",
+   "Non-RTC transport with upgrade triggers stated and monitored; IV fluid and insulin verbalized as out of EMR scope"
+  ],
+  "findings": [
+   "GCS 15 throughout; alert and fully oriented",
+   "Kussmaul respirations 32 rising to 34 - deep, regular, no accessory muscle use, clear air entry",
+   "Pulse 118 to 124, BP 104/68 to 100/64, SpO2 98% RA, temperature 37.6",
+   "Glucose above meter range; acetone breath odour",
+   "Severe dehydration: dry mucous membranes, poor skin turgor, capillary refill 3 seconds, near-anuria this morning",
+   "Red tender pump infusion site in the left lower quadrant explaining the insulin failure",
+   "Generalized abdominal tenderness without guarding or rebound"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": "He is breathing deeply and rapidly, but regularly and without any struggle: no accessory muscle use.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "The EMR contribution is judgement rather than intervention: measure the glucose and correctly do nothing with it, read the deep breathing as compensation rather than distress, keep the airway clear through repeated vomiting, call it non-RTC while still moving with purpose, withhold oral glucose, glucagon, oral fluids and analgesia with the reasons stated, evaluate for stroke signs, take the pump and meter along, and hand over a precise history. IV fluid and insulin are outside EMR scope. No Functional Enquiry.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry and vascular access en route with a fluid bolus of 20 mL/kg to a maximum of 2 L, reassessed every 500 mL; ondansetron or dimenhydrinate may be considered for the vomiting. Oral analgesia is withheld (he cannot retain it). Insulin is not carried at either level."
+ },
+ "sourcePages": "Scenario emd-07 (data/practical/emr-medical-1.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions (glucose, fluid and analgesia traps), ongoing, handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (none met - non-RTC); p.48 Nausea - Vomiting PCP (suction ready, position, dimenhydrinate or ondansetron, fluid bolus 20 mL/kg to a maximum of 2 litres reassessing every 500 mL); p.50 Oxygen Administration (titrate to SpO2 94% if not SOB or in shock); p.57 Diabetic Emergencies (baseline vitals including blood glucose, evaluate for stroke signs and symptoms, correct hypoglycemia BGL < 4.0 mmol/L with glucose gel; EMR glucagon for insufficient mentation; PCP D10W 10-25 g, glucagon if no IV access); p.58 Acetaminophen (500-1,000 mg PO); p.63 Dimenhydrinate (1 mg/kg to a maximum of 50 mg); p.65 Entonox (cautions: shock, abdominal distention; adverse effects nausea and vomiting); p.67 Glucagon (indication hypoglycemia; IM 0.5-1 mg, IN 3 mg); p.68 Ibuprofen (300-400 mg PO); p.75 Ondansetron (4 mg PO); p.76 Oral Glucose (15 g PO).",
+ "keywordEvents": [
+  {
+   "event": "stroke-screened",
+   "regex": "\\b(fast[- ]?van|be[- ]?fast|fast (exam|assessment|screen|test|check)|stroke (signs|screen\\w*|scale|assessment|exam|check)|signs of (a )?stroke|facial droop|arm drift|pronator drift|smile for me|show me your teeth|raise (both|your) arms|hold (both|your) arms out|any (facial|arm) weakness)\\b"
+  }
+ ]
+}

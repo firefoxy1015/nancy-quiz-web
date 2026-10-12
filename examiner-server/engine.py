@@ -183,6 +183,7 @@ def current_vitals_set(sheet, events, elapsed, fired=()):
 def due_state_changes(sheet, events, elapsed, fired):
     """State changes whose conditions are met and that have not fired yet."""
     out = []
+    events = with_derived(events)
     for sc in sheet.get('stateChanges', []):
         if sc['id'] in fired:
             continue
@@ -292,9 +293,9 @@ def merge_events(existing, new, candidate_log, now_ms):
 
 
 KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous in a BC practical
-    ('move:load', r'\b(load(ing|ed)?\b[^.]{0,40}\b(ambulance|unit|truck|rig)|in(to)? the (ambulance|unit|truck|rig)\b|load(ing)? (him|her|them|the patient)\b|major move\W+(now\W+)?load)'),
+    ('move:load', r'\b(load(ing|ed)?\b[^.]{0,40}\b(ambulance|unit|truck|rig)|into the (ambulance|unit|truck|rig)\b|load(ing)? (him|her|them|the patient)\b|major move\W+(now\W+)?load)'),
     ('move:lift-to-cot', r'\b(on(to)? the (cot|stretcher)|to the (cot|stretcher)|(lift\w*|transfer\w*|mov(e|ing))\b[^.]{0,30}\b(cot|stretcher)\b|straps? (are )?(secured|done up|on)|strapped (in|down))'),
-    ('transport:rtc', r'\b(rtc|rapid transport|priority patient|load and go|unstable[, ]+(we are|we\'re) going)\b'),
+    ('transport:rtc', r'(?<!non )\b(rtc|rapid transport|priority patient|load and go|unstable[, ]+(we are|we\'re) going)\b'),
     ('transport:non-rtc', r'\b(non[- ]?rtc|non[- ]?priority|stable patient|we have time)\b'),
     ('notification', r'\b(radio|patch|pre-?alert|notif(y|ication)|call(ing)? (the )?(hospital|receiving)|this is unit)\b'),
     ('hand-off-report', r'\b(hand[- ]?off|handover|report to the (nurse|doctor|hospital|receiving))\b'),
@@ -303,7 +304,8 @@ KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous
 ]
 
 
-MOVE_PLAN_RX = r"\b(will|i'll|we'll|we will|going to|gonna|plan\w*|prepar\w*|ready to|get ready|once|when we|after (we|the|splint\w*))\b"
+MOVE_PLAN_RX = r"\b(will|i'll|we'll|we will|going to|gonna|plan\w*|prepar\w*|ready to|get ready|once|when we|after (we|the|splint\w*)|not|no|don'?t|won'?t|can'?t)\b"
+TRANSPORT_COND_RX = r"\b(if|would|we'd|could|unless|in case|upgrade\w*|downgrade\w*|may|might|otherwise|not)\b"
 
 
 def keyword_events(text, sheet, t, already):
@@ -314,8 +316,9 @@ def keyword_events(text, sheet, t, already):
     low = ' ' + _norm(text) + ' '
     names = {e['name'] for e in already}
     moves = set(sheet.get('majorMoves', []))
+    off = set(sheet.get('disableKeywords') or [])   # e.g. multi-patient triage: "P1 is a stable patient" is not this patient's category
     for name, rx in KEYWORD_EVENTS:
-        if name in names:
+        if name in off or (name in names and name != 'ongoing-abc-i'):
             continue
         if name.startswith('move:') and name.split(':', 1)[1] not in moves:
             continue
@@ -323,8 +326,9 @@ def keyword_events(text, sheet, t, already):
             continue
         if name in items() and name != 'ongoing-abc-i' and not any(e['itemId'] == name for e in sheet.get('expected', [])):
             continue   # (ABC-I after moves is checked on every sheet)
-        if name.startswith('move:'):   # a planned move is not a move: judge each sentence on its own
-            if any(_re.search(rx, ' ' + _norm(s) + ' ') and not _re.search(MOVE_PLAN_RX, s.lower())
+        if name.startswith('move:') or name.startswith('transport:'):   # plans / conditionals are not acts: judge each sentence
+            block = MOVE_PLAN_RX if name.startswith('move:') else TRANSPORT_COND_RX
+            if any(_re.search(rx, ' ' + _norm(s) + ' ') and not _re.search(block, s.lower())
                    for s in _re.split(r'(?<=[.;!?])\s+', text or '')):
                 out.append({'t': t, 'name': name, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
             continue
@@ -393,7 +397,7 @@ def trigger_events(text, sheet, track, t, already):
 DRUG_GIVE = r'\b(giv(e|ing)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
 DRUG_NOW = r"\b(giving|administering|pushing|spraying|starting|hanging|bolusing|i'?m giving|i am giving)\b"
 DOSE = r'\b\d+(\.\d+)?\s*(mg|g|grams?|mcg|micrograms?|ml|millilit\w*|milligrams?|units?|puffs?|sprays?|l/min|litres?)\b'
-DRUG_BLOCK = r"\b(given|gave|received|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
+DRUG_BLOCK = r"\b(given|gave|received|can'?t|cannot|unable|shouldn'?t|scope|ruled out|(is|are) out|had|already|last dose|was|were|will|i'll|we'll|going to|gonna|need\w*|once|plan\w*|did|do you|do we|have you|any|should|can give|could give|can be given|pcp|als|advanced care|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
 
 
 def drug_events(text, sheet, track, t, reported):
@@ -409,10 +413,10 @@ def drug_events(text, sheet, track, t, reported):
         low = sent.lower()
         if not low.strip() or _re.search(DRUG_BLOCK, low):
             continue
-        if _re.search(r'\bmax(imum)?\b', low) and not _re.search(DRUG_NOW, low):
-            continue   # stating a ceiling is not a dose unless the drug is being given in the same breath
-        if not (_re.search(DRUG_GIVE, low) or _re.search(DOSE, low)):
-            continue
+        if low.rstrip().endswith('?') or not (_re.search(DRUG_GIVE, low) or _re.search(DOSE, low)):
+            continue   # questions are never doses
+        if _re.search(r"\bmax(imum)?\b|/\s*kg\b|per kilo\w*|\bthat('s| is)\b|\bwhich is\b|works out|\bequals\b", low) and not _re.search(DRUG_NOW, low):
+            continue   # a ceiling or a dose calculation is not a dose unless the drug is being given in the same breath
         for d in sheet.get('drugs', []):
             name = 'drug:' + d['key']
             if name in have:
@@ -588,8 +592,13 @@ def pain_management(sheet, track, events, form):
     ibu = first_time(events, 'drug:ibuprofen')
     realign = first_time(events, pm.get('realignmentEvent', 'skill-fracture-mgmt'))
     name = 'Pain Management (Appendix A)'
-    if track == 'pcp':
-        orals = sum(1 for x in (ace, ibu) if x is not None)
+    lic = {d['key']: d.get('licence', 'both') for d in sheet.get('drugs', [])}
+    ind = pm.get('oralsIndicated', ['acetaminophen', 'ibuprofen'] if pm.get('indicatedForPcp', True) else [])
+    ind = [k for k in ind if lic.get(k, 'both') in ('both', track)]   # contraindicated or out-of-licence orals are not "indicated"
+    if ind:
+        given = {'acetaminophen': ace, 'ibuprofen': ibu}
+        got = sum(1 for k in ind if given.get(k) is not None)
+        orals = 2 if got == len(ind) else (1 if got else 0)   # "both" = every indicated oral
         if ent is not None and orals == 2 and realign is not None and ent > realign:
             form.add('pain-management', 100, 'Delaying the Entonox until after they have realigned or performed fracture management when they have administered Acetaminophen and Ibuprofen', {'t': ent}, name_en=name)
         elif ent is not None and orals == 0:
@@ -623,21 +632,30 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
     for e in ev:
         done_eids.update(e.get('eids') or [])
     done_names = set(e['name'] for e in ev)
-    if any(n.startswith('drug:') for n in done_names):
-        done_names |= {'protocols', 'skill-drug-admin'}   # giving a drug is initiating a protocol; the rules judge how well
+    drug_credit = set()
+    if any(n.startswith('drug:') for n in done_names):   # giving a drug is initiating a protocol; the rules judge how well
+        words = ['medication', 'drug', 'dose', 'analges'] + [a.lower() for d in sheet.get('drugs', []) for a in [d['key'].replace('-', ' ')] + (d.get('namesEn') or []) if len(a) >= 3]
+        for e in applicable_expected(sheet, track):
+            if e['itemId'] in ('protocols', 'skill-drug-admin') and any(_re.search(r'\b' + _re.escape(w), e['actionEn'].lower()) for w in words):
+                drug_credit.add(e['eid'])
 
     # 1. presence of expected actions
     exp = applicable_expected(sheet, track)
     per_item = {}
+    first100 = {}
     for e in exp:
         per_item[e['itemId']] = per_item.get(e['itemId'], 0) + 1
+        if e['weight'] == 100 and e.get('phase', 'primary') == 'primary':
+            first100.setdefault(e['itemId'], e['eid'])
     for e in exp:
         if e['itemId'] in PRESENCE_EXEMPT:
             continue
         # name-level credit: below 100, capped items, or the item's only action (no other action it could be confused with)
-        if e['eid'] in done_eids or (e['itemId'] in done_names and (e['weight'] < 100 or e['itemId'] in PRESENCE_CAP or per_item[e['itemId']] == 1)):
+        if e['eid'] in done_eids or e['eid'] in drug_credit or (e['itemId'] in done_names and (e['weight'] < 100 or e['itemId'] in PRESENCE_CAP or per_item[e['itemId']] == 1)):
             continue
         w = min(e['weight'], PRESENCE_CAP.get(e['itemId'], 10**9))
+        if w == 100 and (e.get('phase', 'primary') != 'primary' or e['eid'] != first100.get(e['itemId'])):
+            w = 15   # the 100% strings describe the item's core initial-assessment act; other actions of the item are judged by the sheet's rules
         it = items().get(e['itemId'])
         if it and w not in it['weights']:
             w = max([x for x in it['weights'] if x <= w] or [it['weights'][-1]])
@@ -660,7 +678,7 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
         gap_min = (nxt - sets[0]['complete']) / 60000
         if gap_min > major:
             form.add('overall-call-management', 15, 'Major delay in reassessing vital signs', {'t': nxt, 'quote': f'{gap_min:.0f} min between sets'})
-        elif mod_lo <= gap_min <= mod_hi:
+        elif gap_min >= mod_lo:   # 7-9 (priority) / 17-19 (stable): moderate
             form.add('overall-call-management', 10, 'Moderate delay in reassessing vital signs', {'t': nxt, 'quote': f'{gap_min:.0f} min between sets'})
 
     # 3. transport decision and packaging time
@@ -675,9 +693,16 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
     elif decided != correct:
         form.add('transport', 25, 'Fails to place the patient in the correct category (Priority or Non-Priority – Medical/Trauma) at the end of the initial assessment and treats as such detrimental to patient care and/or', {'t': t_rtc if decided == 'rtc' else t_non, 'quote': f'decided {decided}, correct {correct}'})
     load_moves = [m for m in sheet.get('majorMoves', []) if m in ('load', 'lift-to-cot')]
-    t_pack = first_time(ev, 'move:load') or first_time(ev, 'move:lift-to-cot')
+    t_pack = min([x for x in (first_time(ev, 'move:load'), first_time(ev, 'move:lift-to-cot')) if x is not None], default=None)
     limit = 15 if correct == 'rtc' else 30
-    if t_pack is None or t_pack > limit * 60000:
+    t0 = 0
+    pf = sheet.get('packagingFromEvent')   # e.g. ["state:rosc"]: an arrest is packaged from ROSC, not from the door
+    if pf:
+        starts = [x for x in (first_time(ev, k) for k in ([pf] if isinstance(pf, str) else pf)) if x is not None]
+        t0 = min(starts) if starts else None
+    if t0 is None:
+        pass   # e.g. no ROSC in the run: packaging time is not judged
+    elif t_pack is None or t_pack - t0 > limit * 60000:
         s = ('Does not assess, package, and have a Priority patient ready to load in 15 minutes or less where appropriate' if correct == 'rtc'
              else 'Does not assess, package, and have a non-Priority patient ready to load in 30 minutes or less where appropriate')
         form.add('transport', 25, s, {'t': t_pack or end_ms, 'quote': 'not packaged within %d min' % limit if t_pack else 'never packaged'})

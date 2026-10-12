@@ -1,0 +1,1467 @@
+{
+ "id": "etr-11",
+ "titleEn": "Rugby Collision - Clavicle and Shoulder Injury Hiding a Pneumothorax",
+ "type": "trauma",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-trauma-2.json#etr-11",
+ "patient": {
+  "name": "Liam Douglas",
+  "age": 22,
+  "sex": "male",
+  "affectEn": "in obvious pain; sitting on a bench leaning slightly to the left, supporting his left arm against his body; breathing a little fast and shallow, splinting his left side; worried but cooperative",
+  "speechEn": "speaks in short phrases between breaths; says it hurts to breathe in; answers clearly in everyday words; does not volunteer anything that is not asked for"
+ },
+ "scene": {
+  "settingEn": "Men's rugby match at Exhibition Park, Kamloops, 1425 hrs. Dry, sunny, 24 degrees C, firm turf. The patient sits on a bench on the sideline surrounded by a crowd of teammates; the team physiotherapist has already put a triangular bandage on his left arm. The ambulance is about 60 metres away across the grass. One patient. Royal Inland Hospital is 9 minutes away.",
+  "hazardsEn": [
+   "crowd of teammates around the patient - no room to work and no privacy to expose the chest until they are moved back",
+   "60-metre carry across the grass to the ambulance; uneven footing on the turf"
+  ],
+  "bystanders": [
+   {
+    "who": "team physiotherapist",
+    "knowsEn": "Thinks the collarbone is broken and the shoulder 'looks out'. Helped him walk off the field and put a triangular bandage on the left arm. The tackle was about six minutes ago. He did not see a head strike and the player never lost consciousness. He will keep the crowd back and help carry if asked. He has not given any medication."
+   },
+   {
+    "who": "teammates",
+    "knowsEn": "Saw the tackle: full speed, his left shoulder hit the ground and the tackler's knee went into his left ribs at the same time. They will step back if asked and can help carry the cot or carry chair across the grass if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "BVM",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "triangular bandages, sling and swathe material and padding",
+   "cold packs",
+   "sterile saline and dressings for the abrasions",
+   "Entonox kit",
+   "methoxyflurane (Penthrox) inhaler",
+   "acetaminophen and ibuprofen tablets",
+   "hard collar and scoop (if spinal precautions are elected)",
+   "cot and carry chair",
+   "blankets",
+   "PCP only: IV start kit with normal saline"
+  ]
+ },
+ "dispatchEn": "1425 hrs. Code 2 to a men's rugby match at Exhibition Park, Kamloops. A 22-year-old male winger was tackled and is holding his left shoulder; the team physiotherapist has him sitting on the sideline. Dry and 24 degrees C. Ambulance access is across 60 metres of grass. Royal Inland Hospital is 9 minutes away.",
+ "dispatchUpdateEn": "En-route update: the physiotherapist says he thinks the collarbone is broken and the shoulder 'looks out'. The player walked off the field with help and is talking normally. On the face of it this sounds like a stable isolated extremity injury - do not let that expectation decide the call for you.",
+ "arrivalEn": "You stop as close to the sideline as you can - about 60 metres from the patient across the grass. A crowd of teammates surrounds a player sitting on a bench. The team physiotherapist waves you over. Dry, sunny afternoon, firm turf. One patient.",
+ "firstLookEn": "A young man sits on a bench leaning slightly to the left, holding his left arm against his body in a triangular bandage. He is breathing a little fast and is speaking in short phrases between breaths. He looks to be in a lot of pain.",
+ "primary": {
+  "locEn": "Alert and oriented; answers appropriately. (AVPU = A.)",
+  "airwayEn": "Open and clear. Speaking in short phrases between breaths; no blood or debris; no stridor.",
+  "breathingEn": "Respirations 22, shallow, splinted on the left; no accessory muscle use yet. ONLY if the candidate auscultates: air entry is DECREASED at the LEFT BASE compared with the right; the right side is clear. Trachea midline, no JVD, no flail segment, no open wound, no subcutaneous emphysema yet.",
+  "circulationEn": "Radial pulse 96, strong, regular. No external bleeding.",
+  "rbsEn": "Chest (once exposed): bruising over the left lateral ribs 5 to 7; no flail segment, no open wound, no subcutaneous emphysema yet; trachea midline, no JVD. Obvious mid-shaft LEFT clavicle deformity with the skin tented but not broken. LEFT shoulder held slightly abducted and externally rotated, with fullness at the front and a hollow beneath the acromion. Turf abrasions on the left flank. No other injuries: head, neck, abdomen, pelvis, legs and right arm are unremarkable. Left arm distally: radial pulse present, capillary refill 2 seconds, but reduced sensation over the outer (lateral) deltoid. Skin is given automatically during the RBS: warm, dry, pink. C-spine, only if assessed: no loss of consciousness, no neck pain, no midline cervical tenderness, no neurological symptoms in the legs, walked off the field, can rotate his neck 45 degrees each way - Canadian C-Spine Rule negative. Electing spinal precautions anyway because of the distracting shoulder injury is defensible and is not penalized.",
+  "skinEn": "warm, dry, pink"
+ },
+ "history": {
+  "ccEn": "My left shoulder... and my ribs. It hurts to breathe in.",
+  "opqrst": {
+   "oEn": "I got tackled, full speed, about six minutes ago. My shoulder hit the ground first and his knee went into my ribs at the same time. I felt it crack - I heard it.",
+   "pEn": "The ribs are worse when I take a deep breath. Nothing's made anything better.",
+   "qEn": "The rib pain is sharp. The shoulder just hurts - a lot.",
+   "rEn": "The shoulder pain stays in the shoulder and the collarbone. The rib pain is on my left side. Neither goes anywhere else.",
+   "sEn": "The shoulder's an 8 out of 10. The ribs are a 6.",
+   "tEn": "Since the tackle, about six minutes ago. And I've been short of breath since then - right from the hit."
+  },
+  "painScoreEn": "8 out of 10 in the left shoulder; a separate sharp 6 out of 10 in the left ribs, worse on deep breath",
+  "sample": {
+   "sEn": "My shoulder, my ribs, and I can't get a proper breath - it hurts to breathe in. (Only if asked about numbness: the outside of his left shoulder feels numb.)",
+   "aEn": "No allergies.",
+   "mEn": "Nothing regularly. (Only if asked about painkillers or anything taken today: \"I had an ibuprofen this morning - 400 milligrams, at about 7:30, for a sore knee.\")",
+   "pEn": "I dislocated this same shoulder two years ago - they put it back in at the hospital. Nothing else. No asthma, no lung problems.",
+   "lEn": "Pasta at about 11:30. Water during the game.",
+   "eEn": "I was running with the ball on the wing and got hit full speed. My shoulder hit the ground and his knee went into my ribs. I didn't hit my head and I didn't black out. The physio helped me walk off."
+  },
+  "fe": {
+   "generalEn": "I'm fit - I train four times a week. No illnesses.",
+   "cnsEn": "No headache, I never blacked out, no numbness in my legs. But the outside of my left shoulder feels numb.",
+   "respiratoryEn": "I've been short of breath since the tackle. It hurts to take a deep breath. No cough, no blood.",
+   "cardiovascularEn": "My heart's pounding. No chest pressure.",
+   "giGuEn": "No, nothing like that.",
+   "integumentaryEn": "Just the turf burns on my left side.",
+   "musculoskeletalEn": "My left shoulder and collarbone. I dislocated that shoulder before, two years ago.",
+   "endocrineEn": "No. Nothing like that.",
+   "eentEn": "No, nothing."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No head injury. No midline cervical tenderness; full, pain-free neck rotation. Trachea midline and no JVD (still midline and still no JVD on every recheck).",
+  "chestLungsEn": "Bruising over the left lateral ribs 5 to 7 with point tenderness; no flail segment; no open wound. While vitals set 1 is current: air entry decreased at the LEFT BASE, right side clear, no crepitus. Once vitals set 2 is current (on recheck): air entry decreased THROUGHOUT the left field and fine crepitus over the left lateral chest wall; trachea still midline, no JVD.",
+  "abdomenEn": "Soft and non-tender in all four quadrants; turf abrasion on the left flank.",
+  "backEn": "No tenderness, no deformity.",
+  "lowerExtremitiesEn": "Normal. No injury; moves both legs normally; pedal pulses present.",
+  "upperExtremitiesEn": "LEFT: mid-shaft clavicle deformity with tented skin, not broken; shoulder held abducted and externally rotated with fullness at the front and a hollow under the acromion; radial pulse present, capillary refill 2 seconds, reduced sensation over the lateral deltoid; he can move his fingers. RIGHT arm: normal."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline (scenario time 1434, on the sideline, before oxygen)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "132/80",
+   "pulse": {
+    "rate": 96,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "96 strong regular"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "shallow",
+    "character": "splinted on the left; air entry decreased at the left base",
+    "rawEn": "22 shallow, splinted on the left"
+   },
+   "skin": "warm, dry, pink",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "96% on room air; 99% on 15 L by non-rebreather",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "anyOf": [
+       {
+        "afterEvent": "move:load"
+       },
+       {
+        "elapsedMs": 600000
+       }
+      ]
+     }
+    ]
+   },
+   "unlockNoteEn": "en route on 15 L (scenario time 1446) - deteriorating: anxious and wanting to sit further up; not a tension pneumothorax yet",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "118/76",
+   "pulse": {
+    "rate": 118,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "118 regular"
+   },
+   "resp": {
+    "rate": 30,
+    "depth": "shallow",
+    "character": "accessory muscle use; air entry markedly decreased throughout the left field, new crepitus",
+    "rawEn": "30 shallow with accessory muscle use"
+   },
+   "skin": "pale, cool, clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "90% on 15 L by non-rebreather",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "visible-respiratory-deterioration",
+   "when": {
+    "elapsedMs": 600000
+   },
+   "examinerLineEn": "He looks more anxious now. He is breathing faster and shallower, using his neck and shoulder muscles to breathe, and he keeps trying to sit further up."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan: full assessment including the chest, splint in the position found, analgesia if indicated, and reassess before deciding it is 'just a shoulder'",
+   "triggers": [
+    "full assessment including the chest",
+    "not just a shoulder",
+    "don't assume it's just the collarbone",
+    "we'll check his chest too",
+    "splint it in the position found"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan the 60-metre grass carry: bring the cot or a carry chair and ask the team for help",
+   "triggers": [
+    "bring the cot",
+    "bring the carry chair",
+    "60 metre carry",
+    "ask the team to help carry",
+    "we'll need help with the carry"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate a crowd, uneven turf and body fluid exposure; gloves on before contact",
+   "triggers": [
+    "gloves on",
+    "PPE on",
+    "body fluid precautions",
+    "watch the uneven turf",
+    "expect a crowd"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (crowd control, 60 m carry), environment, MOI (high-energy tackle with a direct blow to the left chest and shoulder) and one patient",
+   "triggers": [
+    "scene size-up",
+    "hazards are the crowd and the carry",
+    "mechanism is a high-energy tackle",
+    "one patient",
+    "environment is dry and sunny"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Gloves on and move the crowd back to get room and privacy to expose the chest",
+   "triggers": [
+    "move the crowd back",
+    "can everyone step back",
+    "give us some room",
+    "clear the area",
+    "privacy to expose his chest"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: young male sitting, leaning to the injured side, guarding the left arm, speaking in short phrases - that is a respiratory finding, not just pain",
+   "triggers": [
+    "general impression",
+    "what do I see",
+    "first impression",
+    "how does he look",
+    "looking at him as I approach"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert",
+   "triggers": [
+    "AVPU",
+    "he's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "do you know where you are",
+    "oriented times three"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess and document the cervical spine deliberately (mechanism, midline tenderness, neurology, ambulation, rotation) and state your decision with the rationale",
+   "triggers": [
+    "any neck pain",
+    "Canadian C-Spine Rule",
+    "any midline tenderness",
+    "turn your head 45 degrees",
+    "NEXUS",
+    "c-spine not indicated"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway is patent",
+    "airway is clear",
+    "check his airway",
+    "he's talking so his airway is open",
+    "look in his mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing properly and AUSCULTATE BOTH SIDES - the decreased air entry at the left base is the finding this whole call turns on",
+   "triggers": [
+    "auscultate both sides",
+    "listen to both lungs",
+    "compare air entry",
+    "breath sounds",
+    "count his respirations",
+    "chest rise"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "feel for a pulse",
+    "any major bleeding",
+    "pulse rate and quality"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rapid body survey: expose the chest, find the rib bruising, the clavicle deformity and the shoulder deformity, and check distal circulation, motor and sensation in the left arm",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "expose his chest",
+    "rapid trauma survey",
+    "quick head to toe",
+    "cut his jersey off"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: warm, dry, pink at this stage",
+   "triggers": [
+    "assess his skin",
+    "skin colour temperature condition",
+    "feel his skin",
+    "skin signs",
+    "skin check"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Oxygen - trauma with a chest injury and abnormal air entry; start with a non-rebreather at 15 L and titrate to his condition",
+   "triggers": [
+    "non-rebreather at 15",
+    "high flow oxygen",
+    "apply oxygen",
+    "15 litres by NRB",
+    "put him on O2"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position sitting up or in the position of comfort - a chest trauma patient should be positioned as soon as possible",
+   "triggers": [
+    "sit him up",
+    "position of comfort",
+    "keep him upright",
+    "sitting up for his breathing",
+    "let him sit the way he's comfortable"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Support the left arm in the position found; do NOT attempt to reduce the dislocation",
+   "triggers": [
+    "support his arm",
+    "support the arm",
+    "in the position found",
+    "not reducing the shoulder",
+    "don't try to put it back",
+    "leave the triangular bandage on"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC because of respiratory distress and decreased air entry after chest trauma, not because of the fracture",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "he's unstable",
+    "priority patient",
+    "load and go",
+    "RTC because of his breathing"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes including the 60-metre carry",
+   "triggers": [
+    "let's package him",
+    "get him on the cot",
+    "carry him to the ambulance",
+    "ready to load",
+    "move him now"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Use the team to help with the carry and keep the crowd back; notify the hospital of a suspected pneumothorax",
+   "triggers": [
+    "can your teammates help carry",
+    "keep the crowd back",
+    "notify Royal Inland",
+    "suspected pneumothorax",
+    "team help with the cot"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Confirm the chief complaint - and note that he gives you TWO complaints: the shoulder and the ribs with breathlessness",
+   "triggers": [
+    "what happened",
+    "what's bothering you",
+    "where does it hurt",
+    "chief complaint",
+    "does anything else hurt"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C with OPQRRRST for both pains: exact mechanism, what struck the chest, time of injury, whether the breathlessness started at impact or afterwards, any head strike or LOC",
+   "triggers": [
+    "what hit your chest",
+    "what time did this happen",
+    "did you hit your head",
+    "when did the breathing start",
+    "did you hear a crack",
+    "OPQRST"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain scores recorded separately for the shoulder and the chest",
+   "triggers": [
+    "zero to ten",
+    "rate your pain",
+    "pain score",
+    "how bad is the shoulder",
+    "how bad are your ribs",
+    "out of 10"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx: previous dislocation of the same shoulder, no asthma or lung disease",
+   "triggers": [
+    "medical history",
+    "any lung problems",
+    "do you have asthma",
+    "has this shoulder come out before",
+    "past history"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications: ask specifically what analgesia he has already taken today and at what time, because it changes what you can give",
+   "triggers": [
+    "what medications",
+    "have you taken anything for pain today",
+    "what time did you take it",
+    "any painkillers today",
+    "any pills"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies: none known",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications",
+    "drug allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor",
+    "GCS components"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure on the uninjured right arm",
+   "triggers": [
+    "blood pressure",
+    "BP on the right arm",
+    "cuff on the right arm",
+    "auscultate a BP",
+    "taking a pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, strength and rhythm",
+   "triggers": [
+    "pulse rate and rhythm",
+    "heart rate",
+    "pulse strength",
+    "count the pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations with a full description - rate, depth, splinting and air entry compared side to side",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "compare air entry side to side",
+    "count his breaths"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel his skin",
+    "skin condition",
+    "skin check"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 on the uninjured hand, recorded before and after oxygen",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "sats before oxygen"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "vitals",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Baseline vitals must be complete BEFORE any analgesia protocol is started",
+   "triggers": [
+    "baseline vitals before analgesia",
+    "vitals before any pain meds",
+    "vitals first then analgesia",
+    "full set before the Tylenol",
+    "baseline set first"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how is your health in general",
+    "any recent illness",
+    "how fit are you",
+    "functional enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS (numbness over the lateral deltoid suggests axillary nerve involvement)",
+   "triggers": [
+    "any numbness or tingling",
+    "any headache",
+    "numbness in your shoulder",
+    "any weakness",
+    "neuro enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (the key system in this call)",
+   "triggers": [
+    "short of breath",
+    "does it hurt to breathe",
+    "any cough",
+    "coughing up blood",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "palpitations",
+    "heart racing",
+    "is your heart pounding",
+    "any chest pressure",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU",
+   "triggers": [
+    "any nausea or vomiting",
+    "belly pain",
+    "bowels and bladder",
+    "any blood in your urine",
+    "GI GU"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "any cuts or scrapes",
+    "skin changes",
+    "any abrasions",
+    "integumentary",
+    "any other wounds"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "any other bones hurt",
+    "any other pain",
+    "has this shoulder dislocated before",
+    "musculoskeletal",
+    "any other injuries"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "any vision changes",
+    "any ear problems",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examination including cervical midline palpation",
+   "triggers": [
+    "head and neck exam",
+    "palpate the cervical spine",
+    "neck exam",
+    "trachea midline",
+    "check for JVD",
+    "palpate the scalp"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest examination with auscultation at six sites and palpation for crepitus - repeat it, because the findings change",
+   "triggers": [
+    "auscultate six sites",
+    "palpate for crepitus",
+    "chest exam",
+    "palpate the ribs",
+    "listen to his chest again",
+    "subcutaneous emphysema"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdominal examination",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "abdominal exam",
+    "soft non-tender",
+    "check his belly"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examination",
+   "triggers": [
+    "check his back",
+    "palpate the spine",
+    "back exam",
+    "any back pain",
+    "step deformity"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: clavicle, shoulder position, and circulation, motor and sensation before and after splinting",
+   "triggers": [
+    "check the clavicle",
+    "check his left shoulder",
+    "CSM in the left arm",
+    "sensation over the deltoid",
+    "upper extremities",
+    "wiggle your fingers"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities",
+   "triggers": [
+    "lower extremities",
+    "check his legs",
+    "pedal pulses",
+    "wiggle your toes",
+    "any leg pain"
+   ]
+  },
+  {
+   "itemId": "skill-fracture-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Fracture management skill: sling and swathe supporting the clavicle and shoulder in the position found, padded, with circulation, motor and sensation checked before and after",
+   "triggers": [
+    "sling and swathe",
+    "pad the gap",
+    "pad between the arm and the chest",
+    "immobilize the shoulder",
+    "splint the clavicle",
+    "pillow under the arm"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Breathing management skill: high-flow oxygen, upright positioning, and continuous monitoring for a developing tension pneumothorax",
+   "triggers": [
+    "watch for a tension pneumothorax",
+    "keep him upright on high flow",
+    "monitoring for a tension",
+    "ready to assist ventilations",
+    "BVM ready"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Wound management skill: clean and dress the turf abrasions once the priorities are handled",
+   "triggers": [
+    "clean the abrasions",
+    "dress the turf burns",
+    "dressing on the flank",
+    "clean and dress",
+    "cover the abrasions"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Withhold Entonox and say why - pneumothorax is an absolute contraindication and nitrous oxide expands a closed air space",
+   "triggers": [
+    "no Entonox",
+    "Entonox is contraindicated",
+    "withholding Entonox",
+    "pneumothorax so no Entonox",
+    "nitrous expands the air space"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Give BOTH acetaminophen 1000 mg PO and ibuprofen 400 mg PO after confirming the last dose times, with the six rights and a documented reassessment",
+   "triggers": [
+    "acetaminophen 1000",
+    "ibuprofen 400",
+    "Tylenol and Advil",
+    "six rights",
+    "1000 mg acetaminophen PO",
+    "400 mg ibuprofen PO"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Do not attempt to reduce the dislocation - that is outside EMR scope and can jeopardize the limb",
+   "triggers": [
+    "not going to reduce it",
+    "no reduction attempt",
+    "outside my scope to reduce",
+    "leave it out of joint",
+    "don't relocate it"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and re-auscultate both lungs after every move and every few minutes",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "re-auscultate",
+    "ABCs after the move",
+    "reassessing"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second complete set of vitals within 5-6 minutes and state the deteriorating trend out loud",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set",
+    "he's getting worse"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Actively look for tension pneumothorax signs: tracheal deviation, JVD, absent air entry, falling blood pressure, and report them if they appear",
+   "triggers": [
+    "check for tracheal deviation",
+    "any JVD",
+    "tension pneumothorax signs",
+    "is the trachea still midline",
+    "absent air entry",
+    "watching his BP for a drop"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Reassess the pain and the effect of the analgesia already given, and reconfirm that Entonox stays withheld",
+   "triggers": [
+    "pain now",
+    "how's the pain now",
+    "pain score after the Tylenol",
+    "any better",
+    "has the pain changed"
+   ]
+  },
+  {
+   "itemId": "skill-fracture-mgmt",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recheck circulation, motor and sensation in the splinted arm after each move",
+   "triggers": [
+    "recheck CSM",
+    "recheck the radial pulse",
+    "circulation in the left hand",
+    "check the sling",
+    "distal pulse after the move"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification stating a suspected pneumothorax that is worsening",
+   "triggers": [
+    "notify Royal Inland",
+    "patch to the hospital",
+    "pre-alert",
+    "radio the hospital",
+    "call ahead"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off giving the air entry and vital sign TREND, the neurological finding at the deltoid, and the analgesia decisions",
+   "triggers": [
+    "hand-off report",
+    "handover",
+    "this is a 22-year-old male",
+    "report to the nurse",
+    "air entry trend"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes documenting drug times and the Entonox contraindication",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "document why Entonox was withheld"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "chest-auscultated",
+   "descriptionEn": "candidate auscultates the chest / listens to both lungs and compares air entry side to side (at any time in the call)"
+  },
+  {
+   "key": "dislocation-reduction-attempted",
+   "descriptionEn": "candidate (or anyone on the candidate's instruction) pulls, rotates, levers or otherwise manipulates the dislocated left shoulder to put it back in; supporting the arm in the position found, padding the gap and placing the sling and swathe are NOT this event"
+  },
+  {
+   "key": "arm-forced-to-chest",
+   "descriptionEn": "candidate forces or straps the abducted left arm against the chest wall instead of padding the gap between the arm and the chest"
+  },
+  {
+   "key": "splint-without-distal-csm",
+   "descriptionEn": "candidate applies the sling and swathe without checking circulation, movement and sensation in the left arm and hand first, or does not recheck them once the sling and swathe is on"
+  },
+  {
+   "key": "oral-analgesic-wrong-dose",
+   "descriptionEn": "candidate gives acetaminophen outside 500-1000 mg PO or ibuprofen outside 300-400 mg PO (PCP: IV acetaminophen 1000 mg is acceptable)"
+  },
+  {
+   "key": "chest-decompression-attempted",
+   "descriptionEn": "candidate attempts or simulates a needle (or any) decompression of the chest"
+  },
+  {
+   "key": "patient-walks-to-ambulance",
+   "descriptionEn": "candidate lets or asks the patient to stand and walk to the ambulance (or anywhere) after the assessment, instead of carrying him on the cot or carry chair"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - CONTRAINDICATED in this scenario: suspected pneumothorax (nitrous oxide expands a closed air space); record drug:entonox only if it is actually given",
+   "licence": "both",
+   "contraindicationsEn": "inability to comply; inability to ventilate an enclosed treatment area; decompression sickness; altered level of consciousness; pneumothorax; air embolism; inhalation injury; nitroglycerin used in the last 5 minutes"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol",
+    "APAP"
+   ],
+   "doseEn": "1000 mg PO; guideline range 500-1000 mg PO, may repeat once after 4 hours; none taken today; PCP may consider 1000 mg IV over 15 minutes if the oral route is not tolerated",
+   "licence": "both",
+   "contraindicationsEn": "hypersensitivity; severe hepatic impairment or severe active liver disease; acetaminophen in the past 4 hours or over the daily maximum; suspected overdose"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin",
+    "NSAID"
+   ],
+   "doseEn": "400 mg PO; guideline range 300-400 mg PO, may repeat every 4-6 hours, maximum 1,200 mg/day; his last dose was 400 mg at 0730, well outside the interval",
+   "licence": "both",
+   "contraindicationsEn": "hypersensitivity to ibuprofen or other NSAIDs; active GI hemorrhage or ulcers; pregnancy; anticoagulants"
+  },
+  {
+   "key": "methoxyflurane",
+   "namesEn": [
+    "methoxyflurane",
+    "Penthrox",
+    "green whistle"
+   ],
+   "doseEn": "3 mL self-administered via inhaler, may repeat after 20 minutes, maximum 6 mL - NOT used by default here: his respiratory status is deteriorating (CHECK caution: respiratory depression); discuss with medical direction instead (record only if actually given)",
+   "licence": "both",
+   "contraindicationsEn": "under 18 years; pregnancy or breast-feeding; inadequate understanding or lack of cooperation; decreased level of consciousness or head injury; clinically significant renal impairment; liver dysfunction after halogenated anesthetics; tetracycline antibiotics; malignant hyperthermia; muscular dystrophy",
+   "cautionsEn": "CHECK: cardiac instability or respiratory depression; hypersensitivity; consciousness; kidneys"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "carry-to-ambulance",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "chest-auscultated",
+   "check": "present",
+   "event": "chest-auscultated",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Fails to fully assess the patient's adequacy and quality of breathing and/or"
+   }
+  },
+  {
+   "id": "entonox-contraindicated-pneumothorax",
+   "check": "absent",
+   "event": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "methoxyflurane-respiratory-caution",
+   "check": "absent",
+   "event": "drug:methoxyflurane",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "acetaminophen-given",
+   "check": "present",
+   "event": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "ibuprofen-given",
+   "check": "present",
+   "event": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "acetaminophen-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "ibuprofen-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "acetaminophen-meds-screen",
+   "check": "ordered",
+   "first": "medications",
+   "then": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "acetaminophen-pmhx-screen",
+   "check": "ordered",
+   "first": "past-medical-history",
+   "then": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "acetaminophen-allergy-screen",
+   "check": "ordered",
+   "first": "allergies",
+   "then": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "ibuprofen-meds-screen",
+   "check": "ordered",
+   "first": "medications",
+   "then": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "ibuprofen-pmhx-screen",
+   "check": "ordered",
+   "first": "past-medical-history",
+   "then": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "ibuprofen-allergy-screen",
+   "check": "ordered",
+   "first": "allergies",
+   "then": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "acetaminophen-single-dose",
+   "check": "max_count",
+   "event": "drug:acetaminophen",
+   "max": 1,
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "ibuprofen-single-dose",
+   "check": "max_count",
+   "event": "drug:ibuprofen",
+   "max": 1,
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "oral-analgesic-dose",
+   "check": "absent",
+   "event": "oral-analgesic-wrong-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "no-shoulder-reduction",
+   "check": "absent",
+   "event": "dislocation-reduction-attempted",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "arm-padded-not-forced",
+   "check": "absent",
+   "event": "arm-forced-to-chest",
+   "deduct": {
+    "itemId": "skill-fracture-mgmt",
+    "weight": 15,
+    "errorEn": "Improper strapping/padding, use of splint or incorrect amount of traction detrimental to patient care"
+   }
+  },
+  {
+   "id": "sling-distal-csm",
+   "check": "absent",
+   "event": "splint-without-distal-csm",
+   "deduct": {
+    "itemId": "skill-fracture-mgmt",
+    "weight": 15,
+    "errorEn": "Does not assess distal circulation or function"
+   }
+  },
+  {
+   "id": "no-chest-decompression",
+   "check": "absent",
+   "event": "chest-decompression-attempted",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "no-walking-to-ambulance",
+   "check": "absent",
+   "event": "patient-walks-to-ambulance",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "22-year-old male",
+  "cc": "left chest trauma with a suspected pneumothorax that is worsening, plus a left clavicle fracture and anterior shoulder dislocation",
+  "moi": "full-speed rugby tackle at about 1428: left shoulder struck the ground while the tackler's knee struck the left lateral chest",
+  "hxcc": "short of breath since impact; shoulder pain 8/10 and pleuritic left rib pain 6/10; no head strike, no loss of consciousness",
+  "vitals": "first BP 132/80, pulse 96, resp 22 shallow, SpO2 96% on room air; now BP 118/76, pulse 118, resp 30 with accessory muscle use, SpO2 90% on 15 L",
+  "treatments": "oxygen 15 L NRB, upright, sling and swathe in the position found; acetaminophen 1000 mg and ibuprofen 400 mg PO at 1440; Entonox withheld for the suspected pneumothorax",
+  "findings": "air entry decreased at the left base, now markedly decreased throughout the left field with new crepitus; trachea midline, no JVD; reduced sensation over the lateral deltoid; ETA 9 minutes"
+ },
+ "handoffFacts": {
+  "ageSex": "22-year-old male rugby player",
+  "cc": "left chest trauma with a worsening suspected pneumothorax, a mid-shaft left clavicle fracture and an anterior left shoulder dislocation",
+  "moi": "tackled at full speed at about 1428; left shoulder hit the ground while the tackler's knee struck the left lateral chest; audible crack",
+  "hxcc": "short of breath since impact; shoulder pain 8/10; pleuritic left rib pain 6/10 worse on deep breath; no head strike, no LOC; Canadian C-Spine Rule negative",
+  "initialVitals": "1434: GCS 15, BP 132/80, pulse 96 strong regular, resp 22 shallow and splinted, skin warm dry pink, pupils equal and reactive, SpO2 96% on room air then 99% on 15 L; air entry decreased at the left base",
+  "finalVitals": "1446: GCS 15 but anxious, BP 118/76, pulse 118 regular, resp 30 shallow with accessory muscle use, skin pale cool clammy, SpO2 90% on 15 L; air entry markedly decreased throughout the left field, new crepitus; trachea midline, no JVD",
+  "pmhx": "previous dislocation of the same left shoulder two years ago; no asthma or lung disease",
+  "meds": "none regularly; ibuprofen 400 mg PO at 0730 today",
+  "allergies": "no known allergies",
+  "treatments": "oxygen 15 L NRB, sitting upright; sling and swathe with padding, arm immobilized in the position found, no reduction attempted; circulation, motor and sensation checked before and after and after each move; cold to the clavicle; acetaminophen 1000 mg and ibuprofen 400 mg PO at 1440; Entonox NOT given because of the suspected pneumothorax; abrasions cleaned and dressed; RTC with early notification",
+  "findings": "bruising over left ribs 5 to 7; mid-shaft left clavicle deformity with tented skin; anterior shoulder dislocation with reduced sensation over the lateral deltoid, radial pulse and 2-second capillary refill intact; no tension pneumothorax at hand-off but trending that way"
+ },
+ "pcrFacts": {
+  "cc": "Left clavicle fracture and shoulder dislocation with left chest trauma and progressive shortness of breath",
+  "hxcc": "Tackled at full speed at approximately 1428; left shoulder struck the ground while the tackler's knee struck the left lateral chest; audible crack; no head strike or LOC; shoulder pain 8/10, pleuritic left rib pain 6/10; short of breath since impact",
+  "pmhx": "Previous anterior dislocation of the same left shoulder two years ago; no asthma or lung disease",
+  "meds": "None regularly; ibuprofen 400 mg PO at 0730 today",
+  "allergies": "None known",
+  "treatments": [
+   "Oxygen 15 L NRB, upright position of comfort",
+   "Sling and swathe with padding, arm immobilized in the position found; no reduction attempted",
+   "Circulation, motor and sensation checked before and after splinting and after each move",
+   "Cold applied to the clavicle with distal circulation intact",
+   "Acetaminophen 1000 mg PO and ibuprofen 400 mg PO at 1440 after confirming last dose times",
+   "Entonox WITHHELD - suspected pneumothorax is an absolute contraindication; rationale documented",
+   "Turf abrasions cleaned and dressed; reclassified as RTC and transported with early notification"
+  ],
+  "findings": [
+   "Air entry decreased at left base at 1434, markedly decreased throughout the left field by 1446 with new chest wall crepitus",
+   "Respirations 22 to 30 with accessory muscle use; SpO2 99% to 90% on 15 L; pulse 96 to 118; skin warm dry to pale cool clammy",
+   "Trachea midline and no JVD - no tension pneumothorax at time of hand-off",
+   "Mid-shaft left clavicle deformity with tented skin; anterior shoulder dislocation with reduced sensation over the lateral deltoid",
+   "Canadian C-Spine Rule negative: no midline tenderness, ambulatory, full pain-free rotation"
+  ],
+  "vitals": "Set 1 (1434, sideline): GCS 15 (E4 V5 M6), BP 132/80, P 96 strong regular, R 22 shallow splinted left, skin warm dry pink, PERL, SpO2 96% RA / 99% on 15 L NRB; air entry decreased left base. Set 2 (1446, en route on 15 L): GCS 15 anxious, BP 118/76, P 118 regular, R 30 shallow with accessory muscle use, skin pale cool clammy, PERL, SpO2 90% on 15 L NRB; air entry markedly decreased throughout the left field, new crepitus, trachea midline, no JVD",
+  "times": "injury approximately 1428; dispatch 1425; acetaminophen 1000 mg PO and ibuprofen 400 mg PO at 1440; previous ibuprofen 400 mg at 0730"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": "You did your rapid body survey - what did you find on his chest and his left shoulder?"
+ },
+ "trackNotes": {
+  "emrEn": "This call is entirely within EMR scope and tests assessment discipline: auscultate before you medicate, reassess before you relax. EMR gives oxygen, upright positioning, a padded sling and swathe in the position found with circulation checks, cold to the clavicle, acetaminophen 1000 mg and ibuprofen 400 mg by mouth, withholds Entonox for the pneumothorax, reassesses continuously for tension, and transports RTC. Out of scope: chest decompression, an IV, and any attempt to reduce the dislocation. EMR cannot decompress a tension pneumothorax, so early recognition, high-flow oxygen and rapid transport are the whole plan. No Functional Enquiry.",
+  "pcpEn": "PCP adds vascular access en route and the 9-system Functional Enquiry, and may consider IV acetaminophen if the oral route is not tolerated. The analgesia reasoning is identical: Entonox is contraindicated by the pneumothorax at every licence level, acetaminophen and ibuprofen are both indicated, methoxyflurane is not a default choice while his breathing deteriorates. A PCP communicates the risk of progression to tension clearly on the notification."
+ },
+ "sourcePages": "Scenario etr-11 (data/practical/emr-trauma-2.json): dispatch, scene, primary (decreased air entry left base), transport (RTC trap), history, vitals sets 1-2 (deterioration), FE, exam, interventions (analgesia logic), ongoing, handoff, criticalPitfallsEn. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (respiratory distress / accessory muscle use), p.11 Primary Survey Interventions (oxygen for respiratory distress and trauma; assisting shallow or distressed respirations), p.19 Wound Care (clean and dress minor wounds; cold only if distal circulation is not impaired), p.21 Musculoskeletal Injuries (stabilize, check distal pulses throughout, analgesia prior to movement in stable appropriate patients, apply cold), p.25 Spinal Management (NEXUS / Canadian C-Spine), p.34 Chest Trauma (assist oxygenation and ventilation, position the patient ASAP, monitor for tension pneumothorax), p.58 Acetaminophen (500-1000 mg PO; not within 4 hours of a previous dose), p.65 Entonox (contraindication: pneumothorax), p.68 Ibuprofen (300-400 mg PO, may repeat every 4-6 hours, maximum 1,200 mg/day; contraindications), p.71 Methoxyflurane (CHECK cautions: respiratory depression).",
+ "keywordEvents": [
+  {
+   "event": "chest-auscultated",
+   "regex": "\\b(auscultat\\w*|listen\\w* to (his|the|both) (chest|lungs?|sides)|air entry|breath sounds|lung sounds|stethoscope)\\b"
+  }
+ ]
+}

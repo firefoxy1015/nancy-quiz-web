@@ -1,0 +1,1505 @@
+{
+ "id": "etr-12",
+ "titleEn": "Dog Bite to the Forearm - Elderly Patient on an Anticoagulant",
+ "type": "trauma",
+ "priority": "non-rtc",
+ "sourceScenario": "data/practical/emr-trauma-2.json#etr-12",
+ "patient": {
+  "name": "Evelyn Harper",
+  "age": 78,
+  "sex": "female",
+  "affectEn": "alert, tearful and anxious, mainly about what will happen to the dog; sitting at the kitchen table holding a blood-soaked tea towel around her left forearm; keeps saying the dog did not mean it and asking you not to let them take him away; wears hearing aids in both ears and hears you best when you face her and speak clearly",
+  "speechEn": "full sentences, polite, a little shaky; answers what she is asked. When going to hospital is first raised she says: \"Can you just bandage it up? My son can drive me tomorrow.\" She agrees to go once the risks are explained in plain language (infection from a bite, the blood thinner, possible tendon damage, her tetanus being out of date) and her son is involved."
+ },
+ "scene": {
+  "settingEn": "Single-storey house in Saanich at 1610 hrs. Private home, good lighting, clear path from the kitchen to the front door. The patient is at the kitchen table; there is blood on the floor and on the table, perhaps 200 mL in total. One patient. Victoria General Hospital is 15 minutes away.",
+  "hazardsEn": [
+   "two dogs in the home: the son's German Shepherd that bit her, and her own small terrier - the scene is safe only once the son confirms the Shepherd is in the back yard behind a closed and latched door and the terrier is shut in a bedroom",
+   "blood on the kitchen floor and table - slip and blood-exposure hazard"
+  ],
+  "bystanders": [
+   {
+    "who": "son (dog's owner)",
+    "knowsEn": "Answers only what is asked. If asked about the dogs: the German Shepherd is in the fenced back yard behind a closed and latched door, and the small terrier is shut in a bedroom. The Shepherd is his dog, has lived with his mother for a year, is up to date on its shots and is not a stray. It went for her terrier over a bone at about 1600 and she reached in to separate them. She did not fall. He called 911 because the bleeding would not stop; dispatch has notified the police, who will pass it to animal control. He can help reassure her, can bring her medications, and will come to the hospital with her."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "gauze, pressure dressings and trauma dressings",
+   "sterile saline for irrigation",
+   "sterile non-adherent dressings",
+   "tubular bandage and roller bandages",
+   "tape",
+   "commercial tourniquet",
+   "cold packs",
+   "pillows and blankets",
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "thermometer",
+   "glucometer",
+   "Entonox kit",
+   "methoxyflurane (Penthrox) inhaler",
+   "acetaminophen and ibuprofen tablets",
+   "cot",
+   "PCP only: IV start kit with normal saline, ondansetron, dimenhydrinate, diphenhydramine"
+  ]
+ },
+ "dispatchEn": "1610 hrs. Code 2 to a single-storey house in Saanich. A 78-year-old woman was bitten on the left forearm by her son's German Shepherd while trying to separate it from her own small dog. Her son called and says the bleeding 'will not stop'. Victoria General Hospital is 15 minutes away.",
+ "dispatchUpdateEn": "En-route update: the son says he has put the German Shepherd outside in the fenced back yard and the door is closed. The patient is anxious, mainly about what will happen to the dog. Dispatch has notified the police, who will pass it to animal control.",
+ "arrivalEn": "You pull up at a single-storey house in Saanich. The son meets you at the front door and holds it open - his mother is in the kitchen.",
+ "firstLookEn": "An elderly woman sits at the kitchen table, alert and tearful, talking in full sentences. A blood-soaked tea towel is wrapped around her left forearm. There is blood on the floor and on the table, perhaps 200 mL in total. She does not have the pallor of major blood loss. Good lighting, clear path back to the door.",
+ "primary": {
+  "locEn": "Alert and oriented; upset and tearful but answers appropriately. (AVPU = A.)",
+  "airwayEn": "Clear; speaking in full sentences.",
+  "breathingEn": "Respirations 18, unlaboured; chest clear with equal air entry.",
+  "circulationEn": "Radial pulse 92 at the right wrist, IRREGULARLY IRREGULAR (chronic atrial fibrillation), normal strength. Bleeding from the left forearm under the towel - see the RBS.",
+  "rbsEn": "When the tea towel is lifted: steady VENOUS oozing from four puncture wounds and two lacerations (3 cm and 5 cm) on the LEFT forearm, plus a 6 x 4 cm skin flap avulsed on the back of the forearm, still attached at its base. It slows and stops with direct pressure over gauze and elevation (a pressure dressing holds it). There is NO arterial spurting and NO indication for a tourniquet. RIGHT forearm: two superficial skin tears from the dog's paws. LEFT shin: a bruise. Head, neck, chest, abdomen, pelvis and back: no injury. She did not fall and did not hit her head - no indication for spinal precautions. Left hand: distal pulse, capillary refill, movement and sensation all normal. Skin is given automatically during the RBS: warm, dry, slightly pale.",
+  "skinEn": "warm, dry, slightly pale"
+ },
+ "history": {
+  "ccEn": "The dog bit my arm and it won't stop bleeding. Please don't let them take him away - he didn't mean it.",
+  "opqrst": {
+   "oEn": "Around four o'clock. The big dog went for my little terrier over a bone, and I reached in with both hands to pull them apart. He got my arm.",
+   "pEn": "It's worse when my arm hangs down.",
+   "qEn": "Throbbing.",
+   "rEn": "It stays in my left forearm.",
+   "sEn": "About a 6 out of 10.",
+   "tEn": "Since he bit me, around four. It's been throbbing ever since."
+  },
+  "painScoreEn": "6 out of 10, throbbing, worse when the arm hangs down (after she has used Entonox: 3 out of 10)",
+  "sample": {
+   "sEn": "My arm hurts and it's been bleeding. And I'm upset about the dog. Nothing else.",
+   "aEn": "Penicillin. It gives me hives.",
+   "mEn": "Apixaban, 5 milligrams twice a day, for my heart rhythm. Metoprolol and amlodipine. And I took some Tylenol this afternoon for my arthritis. (Only if asked when or how much: \"Two extra-strength - 1000 milligrams - at three o'clock.\")",
+   "pEn": "Atrial fibrillation - six years now. Kidney disease, stage 3, the doctor says. High blood pressure. Arthritis and osteoporosis. (Only if asked about tetanus: \"Oh... sometime in my sixties, I think.\")",
+   "lEn": "Tea and toast at about three o'clock.",
+   "eEn": "The big dog went for my little terrier over a bone. I reached in with both hands to pull them apart and he got my arm. I didn't fall and I didn't hit my head. He's my son's dog - he's had all his shots, my son says. He's not a bad dog, he's not a stray."
+  },
+  "fe": {
+   "generalEn": "I live on my own here. I do my own shopping and cooking. No, I haven't lost any weight.",
+   "cnsEn": "No dizziness. I haven't had a fall in the last year. I didn't black out today.",
+   "respiratoryEn": "No cough, no trouble breathing.",
+   "cardiovascularEn": "I've had the atrial fibrillation for six years - I'm on a blood thinner for it. No chest pain. My ankles swell a bit in the evening.",
+   "giGuEn": "Everything's normal. No black stools and no blood in my urine.",
+   "integumentaryEn": "I bruise very easily, and I get skin tears from the smallest knock.",
+   "musculoskeletalEn": "Arthritis in both hands, and osteoporosis. I use a cane when I'm outside.",
+   "endocrineEn": "I'm not diabetic, and my thyroid is normal.",
+   "eentEn": "I wear hearing aids in both ears, and glasses for reading."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No injury. Hearing aids in place in both ears.",
+  "chestLungsEn": "Clear with equal air entry on both sides; irregular heart rhythm.",
+  "abdomenEn": "Soft and non-tender in all four quadrants.",
+  "backEn": "No injury - she did not fall.",
+  "lowerExtremitiesEn": "A 5 cm bruise on the left shin; pedal pulses present; she can bear weight normally.",
+  "upperExtremitiesEn": "LEFT forearm: four puncture wounds, a 3 cm and a 5 cm laceration, and a 6 x 4 cm avulsed skin flap on the back of the forearm, still attached at its base and viable; oozing has stopped under the dressing (dry, no strike-through on recheck); radial pulse present, capillary refill 2 seconds, full finger movement, sensation intact. RIGHT forearm: two superficial skin tears from the dog's paws."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline (scenario time 1622, seated at the table, arm dressed and elevated)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "152/88",
+   "pulse": {
+    "rate": 92,
+    "rhythm": "irregularly irregular",
+    "strength": "normal",
+    "rawEn": "92 irregularly irregular (chronic AF)"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "normal",
+    "character": "unlaboured",
+    "rawEn": "18 unlaboured"
+   },
+   "skin": "warm, dry, slightly pale",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "96% on room air",
+   "bgl": null,
+   "temp": "36.6 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "anyOf": [
+       {
+        "afterEvent": "move:load"
+       },
+       {
+        "elapsedMs": 900000
+       }
+      ]
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, arm elevated (scenario time 1636, after Entonox): stable; dressing dry with no strike-through",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "144/84",
+   "pulse": {
+    "rate": 88,
+    "rhythm": "irregularly irregular",
+    "strength": "normal",
+    "rawEn": "88 irregularly irregular"
+   },
+   "resp": {
+    "rate": 16,
+    "depth": "normal",
+    "character": "unlaboured",
+    "rawEn": "16 unlaboured"
+   },
+   "skin": "warm and dry, colour improved",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "97% on room air",
+   "bgl": null,
+   "temp": "36.7 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "bleeding-not-addressed-5min",
+   "when": {
+    "elapsedMs": 300000,
+    "missingEvent": "rapid-body-survey"
+   },
+   "examinerLineEn": "The tea towel on her forearm is soaked through now and blood is dripping onto the floor."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan: confirm the dog is secured before entry, then bleeding control, wound care, analgesia and a full geriatric assessment",
+   "triggers": [
+    "confirm the dog is secured",
+    "make sure the dog is locked up",
+    "bleeding control then wound care",
+    "plan for analgesia",
+    "full geriatric assessment"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate an anticoagulated elderly patient: bleeding that is slow to stop, fragile skin, and the need to ask about blood thinners early",
+   "triggers": [
+    "she may be on blood thinners",
+    "anticoagulated",
+    "fragile skin",
+    "bleeding will be slow to stop",
+    "ask about blood thinners"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate the animal hazard and blood exposure; gloves and eye protection before entering",
+   "triggers": [
+    "gloves and eye protection",
+    "PPE on",
+    "gloves on",
+    "animal hazard",
+    "eye protection"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Confirm both dogs are secured behind a closed door BEFORE entering - a bitten dog owner's home is an animal hazard until proven otherwise",
+   "triggers": [
+    "where are the dogs",
+    "are both dogs secured",
+    "is the dog locked up",
+    "is the German Shepherd secured",
+    "where is the other dog",
+    "dogs behind a closed door"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (dogs, blood on the floor), environment (private home, clear exit path), MOI (dog bite while separating two animals) and one patient",
+   "triggers": [
+    "scene size-up",
+    "hazards are the dogs and the blood on the floor",
+    "mechanism is a dog bite",
+    "one patient",
+    "clear exit path"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: alert elderly woman, upset but talking in full sentences, no pallor of major blood loss, blood-soaked dressing on the left forearm",
+   "triggers": [
+    "general impression",
+    "what do I see",
+    "first impression",
+    "how does she look",
+    "looking at her from the doorway"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "scene",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Introduce yourself facing her, speak clearly - she wears hearing aids - and address her fear about the dog before you start hurting her arm",
+   "triggers": [
+    "my name is",
+    "I'm a paramedic",
+    "facing her so she can hear",
+    "the dog will be okay",
+    "can you hear me okay"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert and oriented",
+   "triggers": [
+    "AVPU",
+    "she's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "do you know where you are",
+    "oriented times three"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "airway is patent",
+    "airway is clear",
+    "check her airway",
+    "she's talking so her airway is open",
+    "look in her mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing",
+   "triggers": [
+    "count her respirations",
+    "breathing rate",
+    "listen to her chest",
+    "chest rise",
+    "respiratory effort",
+    "auscultate her chest"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation and identify the irregularly irregular pulse as chronic atrial fibrillation, not a new problem",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "feel for a pulse",
+    "pulse rate and quality",
+    "check the rhythm of the pulse"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Control the bleeding by escalating appropriately: direct pressure over gauze, then a pressure dressing, then elevation of the limb - no tourniquet is indicated for controllable venous bleeding",
+   "triggers": [
+    "direct pressure",
+    "pressure dressing",
+    "elevate the arm",
+    "hold pressure over gauze",
+    "control the bleeding",
+    "no tourniquet needed"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Complete the rapid body survey - elderly patients often have a second injury they have not mentioned; ask specifically whether she fell",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "did you fall",
+    "any other injuries",
+    "quick head to toe",
+    "rapid trauma survey"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: warm, dry, slightly pale",
+   "triggers": [
+    "assess her skin",
+    "skin colour temperature condition",
+    "feel her skin",
+    "skin signs",
+    "skin check"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Oxygen is not indicated - she has no altered LOC, no respiratory distress and no evidence of shock; say so rather than applying it reflexively",
+   "triggers": [
+    "oxygen not indicated",
+    "no oxygen needed",
+    "holding off on oxygen",
+    "she doesn't need oxygen",
+    "oxygen is not required"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position of comfort, seated, with the injured arm supported and elevated",
+   "triggers": [
+    "position of comfort",
+    "keep her seated",
+    "support and elevate the arm",
+    "pillow under her arm",
+    "keep the arm up"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as non-RTC / stable with a 30-minute package time, and say why she still does not meet any unstable criteria",
+   "triggers": [
+    "this is non-RTC",
+    "non-priority",
+    "she's stable",
+    "stable patient",
+    "30 minutes to package",
+    "no unstable criteria"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 30 minutes, with the wound properly dressed rather than rushed",
+   "triggers": [
+    "let's package her",
+    "get her on the cot",
+    "ready to load",
+    "package her carefully",
+    "move her to the cot"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Address the reluctance to go: explain infection risk, the anticoagulant, possible tendon injury and tetanus, involve the son, obtain consent and document the conversation",
+   "triggers": [
+    "you need to go to the hospital",
+    "risk of infection",
+    "because of the blood thinner",
+    "your tetanus is out of date",
+    "do we have your consent",
+    "could damage the tendons"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Confirm the chief complaint",
+   "triggers": [
+    "what happened",
+    "what's bothering you",
+    "where are you hurt",
+    "chief complaint",
+    "what brought us here"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C: which animal, whose dog, vaccination status, whether it was provoked, time of the bite, how much blood was lost before you arrived, and specifically whether she fell during the struggle",
+   "triggers": [
+    "which dog bit you",
+    "whose dog is it",
+    "is the dog vaccinated",
+    "what time did it happen",
+    "did you fall during the struggle",
+    "how much blood did you lose"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain score",
+   "triggers": [
+    "zero to ten",
+    "rate your pain",
+    "pain score",
+    "how bad is the pain",
+    "out of 10"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx including atrial fibrillation, chronic kidney disease and tetanus status - each one changes a drug decision in this call",
+   "triggers": [
+    "medical history",
+    "any heart problems",
+    "any kidney problems",
+    "when was your last tetanus shot",
+    "past history"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications: the apixaban AND the exact time and dose of the Tylenol she has already taken today",
+   "triggers": [
+    "what medications",
+    "are you on blood thinners",
+    "have you taken any painkillers today",
+    "what time did you take the Tylenol",
+    "how much Tylenol"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies: penicillin - relevant because dog bites are usually treated with a penicillin-family antibiotic",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergic to penicillin",
+    "allergies to medications",
+    "drug allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "anything to eat or drink",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor",
+    "GCS components"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure on the uninjured right arm - never on the bitten limb",
+   "triggers": [
+    "blood pressure",
+    "BP on the right arm",
+    "cuff on the right arm",
+    "not on the bitten arm",
+    "taking a pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, strength and rhythm - document the irregular rhythm and link it to the atrial fibrillation and the anticoagulant",
+   "triggers": [
+    "pulse rate and rhythm",
+    "heart rate",
+    "check the rhythm",
+    "count the pulse",
+    "pulse strength"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "count her breaths",
+    "rate depth and character"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel her skin",
+    "skin condition",
+    "skin check"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 on the uninjured hand",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "on her right hand"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - a baseline matters in a contaminated wound that may become infected",
+   "triggers": [
+    "temperature",
+    "temp",
+    "thermometer",
+    "check her temp"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "vitals",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Complete baseline vitals BEFORE starting any analgesia protocol",
+   "triggers": [
+    "baseline vitals before analgesia",
+    "vitals before any pain meds",
+    "vitals first then Entonox",
+    "full set before the Entonox",
+    "baseline set first"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health including independence and function at home",
+   "triggers": [
+    "general health",
+    "do you live alone",
+    "do you manage on your own",
+    "any weight loss",
+    "functional enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS including falls in the last year",
+   "triggers": [
+    "any falls in the last year",
+    "any dizziness",
+    "did you black out",
+    "any numbness or weakness",
+    "neuro enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "any trouble breathing",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (atrial fibrillation on apixaban)",
+   "triggers": [
+    "palpitations",
+    "any chest pain",
+    "ankle swelling",
+    "how long have you had atrial fibrillation",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU including any sign of occult bleeding on the anticoagulant",
+   "triggers": [
+    "black stools",
+    "blood in your urine",
+    "bowels and bladder",
+    "any nausea or vomiting",
+    "GI GU"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (easy bruising and fragile skin)",
+   "triggers": [
+    "do you bruise easily",
+    "skin tears",
+    "integumentary",
+    "any other wounds",
+    "skin changes"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "arthritis",
+    "osteoporosis",
+    "do you use a cane",
+    "musculoskeletal",
+    "any other pain"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT (hearing aids - speak facing her)",
+   "triggers": [
+    "hearing aids",
+    "eyes ears nose throat",
+    "EENT",
+    "do you wear glasses",
+    "any vision changes"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examination",
+   "triggers": [
+    "head and neck exam",
+    "palpate the scalp",
+    "check her head",
+    "neck exam",
+    "hearing aids in place"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest examination with auscultation",
+   "triggers": [
+    "auscultate the chest",
+    "listen to her lungs",
+    "six sites",
+    "heart sounds",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdominal examination",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "abdominal exam",
+    "soft non-tender",
+    "check her belly"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examination - confirm there was no fall and no unreported second injury",
+   "triggers": [
+    "check her back",
+    "palpate the spine",
+    "back exam",
+    "any back pain",
+    "step deformity"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: count and describe every wound on BOTH arms, and check circulation, movement and sensation distal to the injury",
+   "triggers": [
+    "count the wounds",
+    "check both arms",
+    "upper extremities",
+    "CSM in the left hand",
+    "wiggle your fingers",
+    "check the right forearm"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities including the shin bruise and weight bearing",
+   "triggers": [
+    "lower extremities",
+    "check her legs",
+    "the shin bruise",
+    "pedal pulses",
+    "can you bear weight"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Wound management skill: gentle sterile saline irrigation, flap replaced anatomically, sterile non-adherent dressing, secured without tape on fragile skin",
+   "triggers": [
+    "irrigate with sterile saline",
+    "replace the skin flap",
+    "lay the flap back",
+    "non-adherent dressing",
+    "tubular bandage",
+    "no tape on her skin"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Elevate the limb, apply cold only with intact distal circulation, and recheck the dressing for strike-through in an anticoagulated patient",
+   "triggers": [
+    "elevate the limb",
+    "cold pack",
+    "check for strike-through",
+    "check the dressing",
+    "cold only if circulation is intact"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rule out each analgesic out loud: acetaminophen contraindicated (dose at 1500), ibuprofen contraindicated (apixaban), methoxyflurane contraindicated (chronic kidney disease)",
+   "triggers": [
+    "no acetaminophen because she had Tylenol at 1500",
+    "no ibuprofen because of the apixaban",
+    "no Penthrox because of her kidneys",
+    "acetaminophen is contraindicated",
+    "ibuprofen is contraindicated",
+    "methoxyflurane is contraindicated"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Offer Entonox, which has no contraindication in this patient: self-administered, cylinder inverted three times, area ventilated, with reassessment of the pain score",
+   "triggers": [
+    "offer Entonox",
+    "invert the cylinder three times",
+    "self-administered Entonox",
+    "ventilate the area",
+    "Entonox for the pain"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Document the dog's vaccination status and ownership and confirm that police or animal control have been notified - it is a reportable bite",
+   "triggers": [
+    "has animal control been notified",
+    "have the police been notified",
+    "document the dog's vaccination status",
+    "reportable bite",
+    "dog's owner"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Handle her fragile skin deliberately: minimal tape, gentle handling, and no dragging her by the forearms during the transfer",
+   "triggers": [
+    "minimal tape",
+    "gentle with her skin",
+    "don't pull her by the arms",
+    "lift her carefully",
+    "careful of her fragile skin"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs after the transfer to the cot and after loading",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "ABCs after the move",
+    "reassessing",
+    "ABC check after loading"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second complete set of vitals within 15 minutes for a non-priority patient",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set",
+    "recheck the vitals"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Recheck the dressing for strike-through and the distal circulation, movement and sensation after every move",
+   "triggers": [
+    "recheck the dressing",
+    "any strike-through",
+    "recheck CSM",
+    "check her fingers again",
+    "distal circulation after the move"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Reassess the pain score after the Entonox and document the effect",
+   "triggers": [
+    "pain now",
+    "how's the pain now",
+    "pain score after the Entonox",
+    "any better",
+    "has the pain changed"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Keep her warm and keep talking to her about the dog and what happens next - anxiety management is patient care",
+   "triggers": [
+    "keep her warm",
+    "blanket over her",
+    "the dog will be looked after",
+    "what happens next",
+    "your son can come with us"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Recognize that a priority notification is not required, and give the routine arrival report per local practice",
+   "triggers": [
+    "routine arrival report",
+    "no priority notification needed",
+    "notify Victoria General",
+    "call ahead",
+    "patch to the hospital"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off including anticoagulation, the acetaminophen taken at 1500, the penicillin allergy, tetanus status and the dog's details",
+   "triggers": [
+    "hand-off report",
+    "handover",
+    "this is a 78-year-old female",
+    "report to the nurse",
+    "tetanus is out of date"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes describing each wound, the analgesia reasoning and the reporting of the bite",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "document the consent discussion"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "entered-before-dogs-confirmed",
+   "descriptionEn": "candidate walks into the house or approaches the patient before asking the son whether the dogs are secured (relying only on the dispatch update is not confirmation); asking at the door first and then entering is correct and must NOT be recorded"
+  },
+  {
+   "key": "entonox-cylinder-not-inverted",
+   "descriptionEn": "candidate gives Entonox without verbalizing inverting the cylinder (3 times) before use"
+  },
+  {
+   "key": "tourniquet-applied",
+   "descriptionEn": "candidate applies (or tells someone to apply) a tourniquet to the bitten arm - the bleeding is venous and is controlled by direct pressure and elevation"
+  },
+  {
+   "key": "flap-discarded",
+   "descriptionEn": "candidate cuts off, removes or discards the avulsed skin flap instead of laying it back in its anatomical position"
+  },
+  {
+   "key": "tape-on-fragile-skin",
+   "descriptionEn": "candidate secures the dressings with tape stuck directly onto her skin instead of a tubular or roller bandage"
+  },
+  {
+   "key": "bite-wound-closed-or-packed",
+   "descriptionEn": "candidate closes, glues, steri-strips or packs the bite wounds"
+  },
+  {
+   "key": "bp-on-bitten-arm",
+   "descriptionEn": "candidate puts the BP cuff on, or takes the blood pressure on, the bitten left arm"
+  },
+  {
+   "key": "patient-pulled-by-forearms",
+   "descriptionEn": "candidate (or helpers on instruction) pulls, lifts or drags her by the forearms or hands during the transfer to the cot"
+  },
+  {
+   "key": "refusal-accepted-without-explanation",
+   "descriptionEn": "candidate accepts her request to 'just bandage it up' and go tomorrow - plans to leave her at home or has her sign a refusal - without explaining the infection, bleeding, tendon and tetanus risks"
+  },
+  {
+   "key": "oxygen-applied-not-indicated",
+   "descriptionEn": "candidate applies supplemental oxygen by non-rebreather or nasal cannula although SpO2 is 96% or higher on room air with no distress, without a titration rationale (the Entonox mouthpiece is NOT oxygen therapy)"
+  },
+  {
+   "key": "spine-immobilized-unnecessarily",
+   "descriptionEn": "candidate takes manual c-spine control, applies a hard collar or immobilizes her on a spinal device although she did not fall and has no spinal indication"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O",
+    "the gas"
+   ],
+   "doseEn": "self-administered by inhalation, titrated to effect; INDICATED in this scenario; invert the cylinder 3 times before use; ventilate the treatment area (vehicle ventilation on in the ambulance); only after the primary survey, the pain assessment and a baseline set of vitals including SpO2",
+   "licence": "both",
+   "contraindicationsEn": "inability to comply; inability to ventilate an enclosed treatment area; decompression sickness; altered level of consciousness; pneumothorax; air embolism; inhalation injury; nitroglycerin used in the last 5 minutes - none present in this patient",
+   "cautionsEn": "shock; abdominal distention; depressant drugs; COPD; facial injuries - none present"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol",
+    "APAP",
+    "extra-strength Tylenol"
+   ],
+   "doseEn": "500-1000 mg PO per guideline - CONTRAINDICATED in this scenario: she took 1000 mg at 1500, inside the 4-hour interval (record only if actually given)",
+   "licence": "both",
+   "contraindicationsEn": "hypersensitivity; severe hepatic impairment or severe active liver disease; acetaminophen within the past 4 hours from all sources or over the daily maximum; suspected overdose"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin",
+    "NSAID"
+   ],
+   "doseEn": "300-400 mg PO per guideline - CONTRAINDICATED in this scenario: she takes apixaban, an anticoagulant (record only if actually given)",
+   "licence": "both",
+   "contraindicationsEn": "hypersensitivity to ibuprofen or other NSAIDs; active GI hemorrhage or ulcers; pregnancy; anticoagulants"
+  },
+  {
+   "key": "methoxyflurane",
+   "namesEn": [
+    "methoxyflurane",
+    "Penthrox",
+    "green whistle"
+   ],
+   "doseEn": "3 mL self-administered via inhaler, may repeat after 20 minutes, maximum 6 mL - CONTRAINDICATED in this scenario: chronic kidney disease stage 3 is clinically significant renal impairment (record only if actually given)",
+   "licence": "both",
+   "contraindicationsEn": "under 18 years; pregnancy or breast-feeding; inadequate understanding or lack of cooperation; decreased level of consciousness or head injury; clinically significant renal impairment; liver dysfunction after halogenated anesthetics; tetracycline antibiotics; malignant hyperthermia; muscular dystrophy"
+  },
+  {
+   "key": "ondansetron",
+   "namesEn": [
+    "ondansetron",
+    "Zofran"
+   ],
+   "doseEn": "PCP only: 4 mg PO for moderate to severe nausea and vomiting - NOT indicated: she has no nausea",
+   "licence": "pcp"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol"
+   ],
+   "doseEn": "PCP only: 1 mg/kg to a maximum of 50 mg IM or IV for nausea, vomiting or vertigo - NOT indicated: no nausea, not a treatment for anxiety, and elderly is a listed caution",
+   "licence": "pcp"
+  },
+  {
+   "key": "diphenhydramine",
+   "namesEn": [
+    "diphenhydramine",
+    "Benadryl"
+   ],
+   "doseEn": "PCP only: 25-50 mg IV or PO for allergic reactions or motion sickness - NOT indicated: not a treatment for anxiety",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "dogs-confirmed-before-entry",
+   "check": "absent",
+   "event": "entered-before-dogs-confirmed",
+   "deduct": {
+    "itemId": "scene-ppe",
+    "weight": 5,
+    "errorEn": "Fails to assess a hazard when clearly presented"
+   }
+  },
+  {
+   "id": "acetaminophen-contraindicated-recent-dose",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "ibuprofen-contraindicated-anticoagulant",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "methoxyflurane-contraindicated-renal",
+   "check": "absent",
+   "event": "drug:methoxyflurane",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "entonox-given",
+   "check": "present",
+   "event": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "entonox-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "pain-investigated-before-entonox",
+   "check": "ordered",
+   "first": "pain-scale",
+   "then": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "spo2-before-entonox",
+   "check": "ordered",
+   "first": "pulse-oximetry",
+   "then": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "entonox-cylinder-inverted",
+   "check": "absent",
+   "event": "entonox-cylinder-not-inverted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 10,
+    "errorEn": "Performs the skill with an isolated error not detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-unnecessary-tourniquet",
+   "check": "absent",
+   "event": "tourniquet-applied",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 15,
+    "errorEn": "Uses a tourniquet unnecessarily or uses an incorrect technique"
+   }
+  },
+  {
+   "id": "flap-preserved",
+   "check": "absent",
+   "event": "flap-discarded",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 25,
+    "errorEn": "Does not meet the standards for wound management detrimental to patient care (e.g. does not apply a chest seal to sucking chest wound)"
+   }
+  },
+  {
+   "id": "no-tape-on-fragile-skin",
+   "check": "absent",
+   "event": "tape-on-fragile-skin",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 10,
+    "errorEn": "Performs the skill with an isolated error not detrimental to patient care"
+   }
+  },
+  {
+   "id": "bite-wounds-not-closed",
+   "check": "absent",
+   "event": "bite-wound-closed-or-packed",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "bp-not-on-bitten-arm",
+   "check": "absent",
+   "event": "bp-on-bitten-arm",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "no-pulling-by-forearms",
+   "check": "absent",
+   "event": "patient-pulled-by-forearms",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "refusal-not-accepted-without-explanation",
+   "check": "absent",
+   "event": "refusal-accepted-without-explanation",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "oxygen-not-reflexive",
+   "check": "absent",
+   "event": "oxygen-applied-not-indicated",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 3,
+    "errorEn": "Applies oxygen but it is applied with minor deficiencies"
+   }
+  },
+  {
+   "id": "no-unnecessary-spinal-immobilization",
+   "check": "absent",
+   "event": "spine-immobilized-unnecessarily",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 5,
+    "errorEn": "C-spine control taken when not indicated by mechanism of Injury"
+   }
+  },
+  {
+   "id": "emr-no-ondansetron",
+   "check": "absent",
+   "event": "drug:ondansetron",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-dimenhydrinate",
+   "check": "absent",
+   "event": "drug:dimenhydrinate",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-diphenhydramine",
+   "check": "absent",
+   "event": "drug:diphenhydramine",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "78-year-old female",
+  "cc": "multiple dog bite wounds and an avulsed skin flap to the left forearm in an anticoagulated patient",
+  "moi": "bitten by her son's German Shepherd at about 1600 while separating it from her own dog; no fall",
+  "hxcc": "venous bleeding controlled with direct pressure, pressure dressing and elevation; about 200 mL lost on scene; pain 6/10",
+  "vitals": "GCS 15, BP 152/88, pulse 92 irregularly irregular (chronic atrial fibrillation), resp 18, SpO2 96% on room air, temp 36.6",
+  "treatments": "wounds irrigated and dressed, flap replaced, limb elevated, Entonox self-administered; acetaminophen, ibuprofen and methoxyflurane withheld",
+  "findings": "stable, non-priority; on apixaban; distal circulation, movement and sensation intact; ETA 15 minutes"
+ },
+ "handoffFacts": {
+  "ageSex": "78-year-old female",
+  "cc": "multiple dog bite wounds to the left forearm with an avulsed skin flap, in a patient on an anticoagulant",
+  "moi": "bitten by her son's German Shepherd at about 1600 while separating it from her own small dog; provoked; she did not fall and did not hit her head",
+  "hxcc": "four puncture wounds, a 3 cm and a 5 cm laceration and a 6 x 4 cm avulsed flap on the dorsal left forearm; venous bleeding, about 200 mL on scene, controlled with direct pressure, a pressure dressing and elevation; pain 6/10 throbbing",
+  "initialVitals": "GCS 15, BP 152/88, pulse 92 irregularly irregular, resp 18, skin warm dry slightly pale, pupils equal and reactive, SpO2 96% on room air, temp 36.6",
+  "finalVitals": "GCS 15, BP 144/84, pulse 88 irregularly irregular, resp 16, skin warm dry with colour improved, SpO2 97% on room air, temp 36.7; dressing dry; pain 3/10 after Entonox",
+  "pmhx": "atrial fibrillation, chronic kidney disease stage 3, hypertension, osteoarthritis, osteoporosis; tetanus out of date (probably more than ten years)",
+  "meds": "apixaban 5 mg twice daily, metoprolol, amlodipine; acetaminophen 1000 mg PO taken at 1500",
+  "allergies": "penicillin (hives) - relevant to the antibiotic choice for a bite",
+  "treatments": "direct pressure, pressure dressing and elevation, no tourniquet; sterile saline irrigation; flap replaced anatomically; non-adherent sterile dressings secured with a tubular bandage, no tape on her skin; cold with distal circulation intact; acetaminophen withheld (1000 mg at 1500), ibuprofen withheld (apixaban), methoxyflurane withheld (chronic kidney disease); Entonox self-administered, pain 6/10 to 3/10; consent to transport obtained after the risks were explained",
+  "findings": "two superficial skin tears on the right forearm and a bruise on the left shin; distal circulation, movement and sensation in the left hand normal and unchanged; the dog is her son's, up to date on its vaccinations; police and animal control notified"
+ },
+ "pcrFacts": {
+  "cc": "Multiple dog bite wounds and an avulsed skin flap to the left forearm in an anticoagulated 78-year-old",
+  "hxcc": "Bitten at approximately 1600 by the son's German Shepherd while separating it from her own dog; provoked, known vaccinated animal; no fall, no head strike; pain 6/10 throbbing, worse dependent; approximately 200 mL blood loss on scene",
+  "pmhx": "Atrial fibrillation, chronic kidney disease stage 3, hypertension, osteoarthritis, osteoporosis; tetanus out of date (over 10 years)",
+  "meds": "Apixaban 5 mg BID, metoprolol, amlodipine; acetaminophen 1000 mg PO taken at 1500",
+  "allergies": "Penicillin (hives) - relevant to bite antibiotic choice",
+  "treatments": [
+   "Scene entered only after both dogs confirmed secured behind closed doors",
+   "Direct pressure over gauze, pressure dressing and elevation - no tourniquet indicated",
+   "Sterile saline irrigation; avulsed flap replaced anatomically; non-adherent sterile dressings secured with tubular bandage, no tape on fragile skin",
+   "Cold applied with distal circulation confirmed intact; limb elevated",
+   "Acetaminophen withheld (1000 mg at 1500, inside 4 hours); ibuprofen withheld (apixaban); methoxyflurane withheld (chronic kidney disease)",
+   "Entonox self-administered with cylinder inverted three times and area ventilated; pain 6/10 to 3/10",
+   "Consent obtained after explaining infection, bleeding and tetanus risk; bite reported to police and animal control"
+  ],
+  "findings": [
+   "Four punctures, 3 cm and 5 cm lacerations, 6 x 4 cm viable avulsed flap left forearm; two skin tears right forearm; left shin bruise",
+   "Bleeding venous and controllable; dressing dry with no strike-through through transport",
+   "Pulse irregularly irregular consistent with chronic atrial fibrillation; stable vitals throughout",
+   "Distal circulation, movement and sensation intact in the left hand before and after dressing",
+   "No unstable criteria met - non-priority transport"
+  ],
+  "vitals": "Set 1 (1622, seated, arm dressed and elevated): GCS 15 (E4 V5 M6), BP 152/88, P 92 irregularly irregular, R 18 unlaboured, skin warm dry slightly pale, PERL, SpO2 96% RA, temp 36.6 C. Set 2 (1636, en route, after Entonox): GCS 15, BP 144/84, P 88 irregularly irregular, R 16 unlaboured, skin warm dry colour improved, PERL, SpO2 97% RA, temp 36.7 C",
+  "times": "bite approximately 1600; dispatch 1610; previous acetaminophen 1000 mg PO at 1500"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": "You did your rapid body survey - what did you find on her other arm and her legs?"
+ },
+ "trackNotes": {
+  "emrEn": "Every intervention this patient needs is EMR scope; the exam value is drug reasoning. Direct pressure, a pressure dressing, elevation, saline irrigation, flap replacement, non-adherent dressings secured without tape, cold, and gentle handling of fragile skin are EMR wound care. Acetaminophen, ibuprofen and methoxyflurane are in the EMR formulary and all three are contraindicated in THIS patient (acetaminophen 1000 mg at 1500, apixaban, chronic kidney disease); Entonox is indicated - say why for each one. Out of scope: an IV, ondansetron, dimenhydrinate or diphenhydramine. No Functional Enquiry.",
+  "pcpEn": "PCP adds vascular access only if it were needed (it is not in a stable patient with controlled bleeding) and completes the 9-system Functional Enquiry, which is worth doing thoroughly in a geriatric patient. A PCP could give ondansetron if she became nauseated from the Entonox; she is not nauseated in this scenario. The wound care and the analgesia reasoning are identical: the same three drugs are ruled out at both licence levels and Entonox is the analgesic."
+ },
+ "sourcePages": "Scenario etr-12 (data/practical/emr-trauma-2.json): dispatch, scene (dogs must be confirmed secured), primary, transport (non-RTC; reluctance to go), history, vitals sets 1-2, FE, exam, interventions (analgesia reasoning), ongoing, handoff, criticalPitfallsEn. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (none met), p.11 Primary Survey Interventions (oxygen indications; c-spine indications), p.19 Wound Care (hemorrhage control in order of preference: direct pressure, pressure dressing, elevation, positioning, tourniquet; clean and dress minor wounds; cold only if distal circulation is not impaired), p.25 Spinal Management, p.48 Nausea-Vomiting (ondansetron and dimenhydrinate are PCP interventions), p.55 Anaphylaxis (diphenhydramine is a PCP intervention), p.58 Acetaminophen (not within 4 hours of a previous dose from all sources), p.63 Dimenhydrinate (caution: elderly), p.64 Diphenhydramine, p.65 Entonox (indication: isolated extremity injuries; contraindications; before use: primary survey, pain investigated, baseline vitals including SpO2, invert cylinder 3 times, ventilation), p.68 Ibuprofen (contraindication: anticoagulants), p.71 Methoxyflurane (contraindication: clinically significant renal impairment), p.75 Ondansetron."
+}

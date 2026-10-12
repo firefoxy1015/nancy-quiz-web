@@ -33,7 +33,8 @@ def strings(o, out=None):
     out = [] if out is None else out
     if isinstance(o, dict):
         for k, v in o.items():
-            strings(v, out)
+            if k not in ('keywordEvents', 'regex', 'blockRegex'):   # detector patterns are not facts
+                strings(v, out)
     elif isinstance(o, list):
         for x in o:
             strings(x, out)
@@ -43,7 +44,7 @@ def strings(o, out=None):
 
 
 def numbers(text):
-    return {m.group(0).replace(',', '') for m in re.finditer(r'\d[\d,]*\.?\d*', text)}
+    return {m.group(0).replace(',', '') for m in re.finditer(r'\d+(?:,\d{3})*(?:\.\d+)?', text)}
 
 
 SKIP_NUMS = {str(n) for n in range(0, 16)} | {'20', '24', '25', '30', '40', '45', '50', '60', '100', '911', '15'}
@@ -84,6 +85,11 @@ def verify(sid):
         errs.append('acceptedPriorities must be a list of rtc/non-rtc that includes priority')
 
     # gate 2: expected
+    pf = sh.get('packagingFromEvent')
+    if pf:
+        ok = {'state:' + sc['id'] for sc in sh.get('stateChanges', [])} | {x['key'] for x in sh.get('specialEvents', [])}
+        for k in ([pf] if isinstance(pf, str) else pf):
+            if k not in ok: errs.append(f'packagingFromEvent {k}: not a special event or "state:<stateChange id>"')
     for e in sh.get('expected', []):
         a = e.get('actionEn', '')
         if a.startswith('PCP:') and e.get('licence') != 'pcp': errs.append(f'"PCP:" action must have licence pcp: {a[:50]}')

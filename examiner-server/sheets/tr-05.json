@@ -956,7 +956,7 @@
    "phase": "interventions",
    "weight": 25,
    "licence": "both",
-   "actionEn": "Administer analgesia with 6 rights (PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox; EMR: Entonox)",
+   "actionEn": "Administer analgesia with 6 rights (acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox; same at EMR and PCP)",
    "triggers": [
     "Entonox",
     "six rights",
@@ -1128,7 +1128,7 @@
     "APAP"
    ],
    "doseEn": "1000 mg PO (guideline range 500-1000 mg PO; may repeat once after 4 hours - not within 4 hours of any previous dose)",
-   "licence": "pcp"
+   "licence": "both"
   },
   {
    "key": "ibuprofen",
@@ -1139,7 +1139,7 @@
     "NSAID"
    ],
    "doseEn": "400 mg PO (guideline range 300-400 mg PO; may repeat every 4-6 hours)",
-   "licence": "pcp"
+   "licence": "both"
   },
   {
    "key": "normal-saline",
@@ -1176,7 +1176,7 @@
    "check": "ordered",
    "first": "vitals-set-1-complete",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
@@ -1188,7 +1188,7 @@
    "check": "ordered",
    "first": "vitals-set-1-complete",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
@@ -1212,7 +1212,7 @@
    "check": "ordered",
    "first": "allergies",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1224,7 +1224,7 @@
    "check": "ordered",
    "first": "allergies",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1247,7 +1247,7 @@
    "check": "max_count",
    "event": "drug:acetaminophen",
    "max": 1,
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
@@ -1259,33 +1259,11 @@
    "check": "max_count",
    "event": "drug:ibuprofen",
    "max": 1,
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 25,
     "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
-   }
-  },
-  {
-   "id": "emr-no-acetaminophen",
-   "check": "absent",
-   "event": "drug:acetaminophen",
-   "licence": "emr",
-   "deduct": {
-    "itemId": "protocols",
-    "weight": 100,
-    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
-   }
-  },
-  {
-   "id": "emr-no-ibuprofen",
-   "check": "absent",
-   "event": "drug:ibuprofen",
-   "licence": "emr",
-   "deduct": {
-    "itemId": "protocols",
-    "weight": 100,
-    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
    }
   },
   {
@@ -1405,7 +1383,7 @@
    "Wet clothing and watch removed",
    "Sterile dry non-stick dressings after cooling",
    "Hypothermia prevention with blankets, temperature monitored",
-   "PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox (EMR: Entonox only)"
+   "Acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox (same at EMR and PCP)"
   ],
   "findings": [
    "18% BSA partial thickness by Rule of Nines (right arm 9% + anterior chest 9%)",
@@ -1420,7 +1398,7 @@
   "missedInjuryEn": "You exposed the patient during your rapid body survey - what did you find on his arm and chest?"
  },
  "trackNotes": {
-  "emrEn": "EMR: cooling, BSA calculation, dry sterile non-stick dressings, hypothermia prevention and Entonox for analgesia are all EMR-level. EMR does not give oral analgesics or establish IV access. No Functional Enquiry. Appendix A: Entonox is indicated for pain associated with burns - omitting it costs 25%, and omitting it while dressing the burn is treated like realigning without analgesia (100%).",
+  "emrEn": "EMR: cooling, BSA calculation, dry sterile non-stick dressings, hypothermia prevention and Entonox for analgesia are all EMR-level. EMR gives the same oral acetaminophen and ibuprofen but does not establish IV access. No Functional Enquiry. Appendix A: Entonox is indicated for pain associated with burns - omitting it costs 25%, and omitting it while dressing the burn is treated like realigning without analgesia (100%).",
   "pcpEn": "PCP adds acetaminophen and ibuprofen to the analgesia ladder and the 9-system Functional Enquiry. IV fluid is only indicated for burns over 20% BSA or hypotension - at 18% with normal blood pressure a fluid bolus is NOT indicated, and giving one is a non-indicated intervention. Appendix A applies: acetaminophen and ibuprofen without Entonox is 25%; Entonox delayed until after the dressing is applied is up to 100%."
  },
  "sourcePages": "Scenario tr-05 (data/practical/scenarios.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions (Burn Management and Pain Management), ongoing, handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (major burns: partial thickness > 20% BSA, full thickness > 10%, facial or airway burns, burns that fully encircle a limb - 18% partial thickness with none of these is stable); p.11 Primary survey interventions (initiating cooling of burns; oxygen indications); p.28 Burn Management (expose and examine; initiate cooling for 15-20 minutes inclusive of bystander cooling, with cool not cold running water; high-flow oxygen only for suspected inhalation injury or SOB; calculate BSA by the Rule of Nines; consider pain management; once cooling has finished dress with sterile, nonstick, dry gauze; PCP IV if indicated, hypotensive 20 ml/kg to a maximum of 2 litres); p.35 (do not cool burns longer than 15-20 minutes); p.54 Hypovolemia (indication includes burns > 20% BSA); p.58 Acetaminophen (500-1,000 mg PO, not within 4 hours of a previous dose); p.65 Entonox (indication: pain associated with burns; contraindications incl. inhalation injury and altered LOC; before use: primary survey, pain complaint incl. severity, baseline vitals incl. SpO2, history and physical to rule out contraindications; invert cylinder 3 X); p.68 Ibuprofen (300-400 mg PO; contraindications incl. active GI hemorrhage or ulcers and anticoagulants); EMALB Practical Examination Grading Criteria Appendix A (Pain Management weighting, as in tr-01)."

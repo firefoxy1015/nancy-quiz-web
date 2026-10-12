@@ -1,0 +1,1373 @@
+{
+ "id": "emd-02",
+ "titleEn": "Six-Year-Old With Severe Asthma Exacerbation - Pediatric Respiratory Distress",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-02",
+ "patient": {
+  "name": "Ava Thompson",
+  "age": 6,
+  "sex": "female",
+  "affectEn": "sitting bolt upright on her mother's lap, leaning forward on her hands; anxious and tired but still interactive, clinging to her mother; pale; loud wheeze. If a stranger tries to force equipment on her, lay her down or take her off her mother's lap she pulls away and cries.",
+  "speechEn": "only 2-3 words at a time (\"can't... breathe...\"); her mother answers most history questions. After the first salbutamol course she manages 4-5 word phrases."
+ },
+ "scene": {
+  "settingEn": "Tidy townhouse living room in Langley, 1930 hrs. Good lighting, no hazards. One patient: a 6-year-old girl sitting bolt upright on her mother's lap, leaning forward on her hands. Her mother is alone with her - frightened but cooperative. A used salbutamol MDI sits on the table. No fire response tonight; the nearest PCP car is 10 minutes out. Langley Memorial Hospital is 12 minutes away.",
+  "hazardsEn": [
+   "no physical hazards",
+   "infectious respiratory symptoms (two-day cold) - droplet precautions"
+  ],
+  "bystanders": [
+   {
+    "who": "mother",
+    "knowsEn": "Asthma diagnosed at age 4. Two ER visits last winter, one of them an overnight admission - never intubated, never in ICU. A cold started two days ago; the wheeze began this afternoon and got worse tonight. She gave the salbutamol puffer twice this evening - two puffs each time, without a spacer - and it barely helped. Colds are her trigger. No pain - \"she says it's hard to breathe, it doesn't hurt\". Other history: eczema. Medications: salbutamol puffer as needed; fluticasone inhaler daily, \"but we've been forgetting it lately\". No known allergies - no food or drug allergies. A small dinner at 1800; drinking poorly today. Weight: about 21 kilos. She will hold a mask or the spacer for her daughter if asked, and wants to ride along in the ambulance."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "pediatric and adult BVMs with masks",
+   "oxygen kit with pediatric masks (non-rebreather and simple) and tubing",
+   "salbutamol MDI (100 mcg per puff) with spacer and pediatric mask",
+   "salbutamol nebules and nebulizer kit",
+   "pediatric BP cuff and stethoscope",
+   "pulse oximeter with pediatric probe",
+   "thermometer",
+   "glucometer",
+   "portable suction unit",
+   "blankets",
+   "stretcher (cot)",
+   "PCP only: ipratropium (MDI and nebules), dexamethasone, epinephrine for IM injection, CPAP kit"
+  ]
+ },
+ "dispatchEn": "1930 hrs. Code 3 to a townhouse in Langley. A 6-year-old girl with known asthma is having severe difficulty breathing. Her mother says she 'can barely talk'. Langley Memorial Hospital is 12 minutes away. No fire response tonight; the nearest PCP car is 10 minutes out.",
+ "dispatchUpdateEn": "Dispatch adds: the child has had a cold for two days and her puffer \"is not working tonight\". She is conscious. Mother is alone with her.",
+ "arrivalEn": "The mother opens the door of a tidy townhouse and leads you into the living room: \"She can barely talk. Her puffer isn't working tonight.\" Good lighting, no hazards. One patient - her daughter, on her lap. A used salbutamol inhaler sits on the table.",
+ "firstLookEn": "From the doorway: a small girl sitting bolt upright on her mother's lap, leaning forward on her hands. She looks anxious and tired but is watching you and clinging to her mother. You can hear her wheezing from the doorway; her nostrils flare and the skin between and below her ribs pulls in with every breath. She is pale, with no blue colour.",
+ "primary": {
+  "locEn": "Alert and interactive: clinging to her mother, watching you, answers in 2-3 words (AVPU = A). Anxious and tired.",
+  "airwayEn": "Patent. No stridor, no drooling, no barking cough. She can only get 2-3 words out between breaths.",
+  "breathingEn": "Rate 40, laboured: prolonged expiration with a diffuse expiratory wheeze in all fields on both sides, intercostal and subcostal retractions, nasal flaring.",
+  "circulationEn": "Radial pulse 132, strong, regular. Capillary refill 2 seconds. No bleeding.",
+  "rbsEn": "Rapid body survey (toe-to-head for her age): no hives or rash anywhere, no swelling of the lips or tongue, no injuries; dry eczema patches in the elbow creases. Skin pale, warm and dry, no cyanosis (skin is given automatically during the RBS).",
+  "skinEn": "pale, warm, dry, no cyanosis"
+ },
+ "history": {
+  "ccEn": "Child: \"Can't... breathe...\" Mother: \"She's been wheezing since this afternoon, and tonight she can barely talk.\"",
+  "opqrst": {
+   "oEn": "Mother: \"She's had a cold for two days. The wheeze started this afternoon and got worse tonight.\"",
+   "pEn": "Mother: \"Nothing helps. I gave her puffer twice this evening - two puffs each time, without the spacer - and it barely did anything.\"",
+   "qEn": "Child: \"Hard... to breathe.\" Mother: \"It's the wheeze. She's working so hard.\"",
+   "rEn": "Mother: \"She says it doesn't hurt anywhere.\"",
+   "sEn": "Mother: \"She can only get two or three words out.\"",
+   "tEn": "Mother: \"The cold started two days ago, the wheeze this afternoon, and it's been getting worse all evening.\""
+  },
+  "painScoreEn": "No pain. Child: \"Doesn't... hurt.\" Mother: \"She says it's hard to breathe, it doesn't hurt.\" (No numeric pain score applies.)",
+  "sample": {
+   "sEn": "Mother: \"Wheezing, can't catch her breath, the cough and runny nose from her cold.\"",
+   "aEn": "Mother: \"No allergies. No food or drug allergies.\"",
+   "mEn": "Mother: \"Her salbutamol puffer when she needs it - I gave it twice tonight, two puffs each time, without the spacer. And a fluticasone inhaler every day, but we've been forgetting it lately.\"",
+   "pEn": "Mother: \"Asthma since she was 4, and eczema. Two ER visits last winter - one time she stayed overnight. She's never needed a breathing tube and she's never been in ICU.\"",
+   "lEn": "Mother: \"A small dinner at six. She's hardly drunk anything today.\"",
+   "eEn": "Mother: \"She's had a cold for two days. The wheeze started this afternoon and tonight it got really bad. Colds always set her off.\""
+  },
+  "fe": {
+   "generalEn": "Mother: \"Just the cold for two days. Nothing else.\"",
+   "cnsEn": "Mother: \"No, nothing like that.\"",
+   "respiratoryEn": "Mother: \"A cough and the wheeze since this afternoon. No high-pitched noise when she breathes in - not at any point.\"",
+   "cardiovascularEn": "Mother: \"No, nothing like that.\"",
+   "giGuEn": "Mother: \"She's hardly drinking today and she's been to the toilet less. No vomiting.\"",
+   "integumentaryEn": "Mother: \"Just her eczema. No new rash.\"",
+   "musculoskeletalEn": "Mother: \"No, nothing like that.\"",
+   "endocrineEn": "Mother: \"No, nothing like that.\"",
+   "eentEn": "Mother: \"A runny nose. No ear pain, no sore throat.\""
+  }
+ },
+ "findings": {
+  "headNeckEn": "Nasal flaring and a mild tracheal tug. No stridor, no drooling. Lips moist.",
+  "chestLungsEn": "Intercostal and subcostal retractions. Expiratory wheeze in all six auscultation sites, equal air entry, no crackles, no silent zones.",
+  "abdomenEn": "Soft, moving with respiration. No other findings.",
+  "backEn": "Posterior lung fields auscultated: wheeze throughout.",
+  "lowerExtremitiesEn": "No findings. No cyanosis, no clubbing.",
+  "upperExtremitiesEn": "No findings. Capillary refill 2 seconds."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "on scene, done gently on her mother's lap, before salbutamol (baseline)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "98/64",
+   "pulse": {
+    "rate": 132,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "132 strong regular"
+   },
+   "resp": {
+    "rate": 40,
+    "depth": "laboured, with accessory muscle use",
+    "character": "prolonged expiration with diffuse expiratory wheeze",
+    "rawEn": "40 laboured, expiratory wheeze"
+   },
+   "skin": "pale warm dry",
+   "pupils": "PERL",
+   "spo2": "89% RA, 92% on O2",
+   "bgl": null,
+   "temp": "37.9 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "drug:salbutamol"
+     },
+     {
+      "anyOf": [
+       {
+        "afterEvent": "move:load"
+       },
+       {
+        "elapsedMs": 600000
+       }
+      ]
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, about 7 minutes after set 1, after the first salbutamol course - improving; the pulse rise to 140 is the expected salbutamol effect",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "100/66",
+   "pulse": {
+    "rate": 140,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "140 strong regular (salbutamol effect)"
+   },
+   "resp": {
+    "rate": 32,
+    "depth": "less laboured",
+    "character": "wheeze still present, air entry improved; speaking 4-5 word phrases",
+    "rawEn": "32, less laboured"
+   },
+   "skin": "pale warm",
+   "pupils": "PERL",
+   "spo2": "94% on O2",
+   "bgl": null,
+   "temp": "37.9 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "child-agitated",
+   "when": {
+    "afterEvent": "child-forced"
+   },
+   "examinerLineEn": "She screams and pulls away, clinging to her mother. Her breathing is faster and even more laboured, and she can't get any words out."
+  },
+  {
+   "id": "tiring-without-bronchodilator",
+   "when": {
+    "elapsedMs": 900000,
+    "missingEvent": "drug:salbutamol"
+   },
+   "examinerLineEn": "She is getting tired. She has gone quiet, her eyes keep closing, and you can barely hear the wheeze any more.",
+   "vitalsPatch": {
+    "resp": {
+     "rate": "slower than before",
+     "depth": "shallow",
+     "character": "tiring; the wheeze is barely audible - a quiet chest"
+    },
+    "spo2": "falling, lower than the last reading"
+   }
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan pediatric-sized equipment: pediatric BVM and masks, pediatric oxygen delivery, MDI spacer with a pediatric mask, and suction",
+   "triggers": [
+    "pediatric BVM",
+    "pediatric masks",
+    "spacer with a pediatric mask",
+    "pediatric equipment",
+    "bring the peds bag",
+    "pediatric oxygen mask"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan the pediatric approach in advance: assess from the doorway, keep the child on her mother's lap, get to her eye level, and never force interventions that will agitate her",
+   "triggers": [
+    "assess from the doorway",
+    "keep her on mom's lap",
+    "keep her on her mother's lap",
+    "get to her eye level",
+    "don't force anything",
+    "nothing forced"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Anticipate a Rapid Transport Category call: a child in respiratory distress whose home salbutamol is failing",
+   "triggers": [
+    "this will be RTC",
+    "anticipate rapid transport",
+    "her puffer is failing",
+    "likely a load and go",
+    "priority call"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment, nature of illness (asthma exacerbation on top of a cold), people (one patient plus mother) and resources (PCP car en route)",
+   "triggers": [
+    "scene is safe",
+    "no hazards",
+    "one patient plus mom",
+    "nature of illness is asthma",
+    "PCP car en route",
+    "environment is safe"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves; use a mask given the child's infectious respiratory symptoms",
+   "triggers": [
+    "gloves on",
+    "I'm putting on a mask",
+    "surgical mask",
+    "procedure mask",
+    "PPE on",
+    "droplet precautions"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete the Pediatric Assessment Triangle from the doorway and state the conclusion: abnormal work of breathing with a still-interactive child - respiratory distress, sick, move quickly",
+   "triggers": [
+    "pediatric assessment triangle",
+    "appearance work of breathing circulation",
+    "from the doorway she looks",
+    "she looks sick",
+    "increased work of breathing",
+    "circulation to skin"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC age-appropriately: alert, interactive with her mother - and recognize that agitation or drowsiness in this child would signal deterioration",
+   "triggers": [
+    "AVPU",
+    "she's alert",
+    "alert and interactive",
+    "level of consciousness",
+    "watching for drowsiness",
+    "agitation or drowsiness"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway and actively differentiate: no stridor, no drooling, no barking cough - lower airway bronchospasm, not croup or epiglottitis",
+   "triggers": [
+    "airway is patent",
+    "any stridor",
+    "no stridor",
+    "any drooling",
+    "barking cough",
+    "check her airway"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing fully: rate 40, prolonged expiration, diffuse expiratory wheeze on auscultation of both sides, retractions and nasal flaring - inadequate and worsening",
+   "triggers": [
+    "count her respirations",
+    "listen to her chest",
+    "auscultate both sides",
+    "breath sounds",
+    "work of breathing",
+    "prolonged expiration"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: radial pulse 132 strong with capillary refill 2 seconds - perfusion still adequate",
+   "triggers": [
+    "radial pulse",
+    "check her pulse",
+    "capillary refill",
+    "cap refill",
+    "pulse quality",
+    "perfusion is adequate"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rapid body survey done toe-to-head for a young child, specifically checking for hives, lip or tongue swelling to rule out anaphylaxis",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "toe to head",
+    "check for hives",
+    "any rash",
+    "lip or tongue swelling"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: pale, warm, dry, no cyanosis",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel her skin",
+    "skin signs",
+    "any cyanosis",
+    "she's pale"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen for SpO2 89% with respiratory distress, delivered the least frightening way - mother holds the mask, or blow-by if the mask is refused; target SpO2 at or above 94%",
+   "triggers": [
+    "blow-by",
+    "mom can hold the mask",
+    "mother holds the mask",
+    "high-flow oxygen",
+    "non-rebreather",
+    "start oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position of comfort: leave her sitting upright on her mother's lap - never force her supine and never separate her from her mother",
+   "triggers": [
+    "position of comfort",
+    "keep her sitting up",
+    "stay on mom's lap",
+    "stay on her mother's lap",
+    "don't lay her down",
+    "sitting upright"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC out loud: pediatric respiratory distress with accessory muscle use and failing home salbutamol",
+   "triggers": [
+    "she's RTC",
+    "rapid transport",
+    "priority patient",
+    "she's unstable",
+    "load and go"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ready to load within 15 minutes, transported sitting up, with the remaining assessment done en route",
+   "triggers": [
+    "ready to load",
+    "package her",
+    "transport sitting up",
+    "rest of the assessment en route",
+    "load within 15"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Bring the mother in the ambulance: she is the child's consent-giver, historian, and the best tool for keeping the child calm",
+   "triggers": [
+    "mom comes with us",
+    "mother rides in the ambulance",
+    "you can come with us",
+    "ride with her",
+    "mom in the back"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: severe shortness of breath in a known asthmatic with a two-day cold",
+   "triggers": [
+    "what's going on tonight",
+    "chief complaint",
+    "what's wrong",
+    "why did you call",
+    "tell me what's happening"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C: onset and progression, what home treatment was given (doses, times, spacer or not) and its effect, plus the severity markers - prior admissions, ICU stays or intubations",
+   "triggers": [
+    "when did it start",
+    "how many puffs",
+    "did you use a spacer",
+    "did the puffer help",
+    "ever been admitted",
+    "ever been intubated",
+    "ever been in ICU"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Ask the child's weight - every pediatric drug dose depends on it",
+   "triggers": [
+    "how much does she weigh",
+    "her weight",
+    "weight in kilos",
+    "how heavy is she",
+    "weight in kilograms"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history",
+   "triggers": [
+    "medical history",
+    "when was she diagnosed",
+    "any other medical problems",
+    "past history",
+    "any other conditions"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications, including tonight's salbutamol doses and adherence to the daily preventer",
+   "triggers": [
+    "what medications",
+    "her puffers",
+    "daily inhaler",
+    "any preventer",
+    "fluticasone",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "food or drug allergies",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake, noting poor fluid intake today",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "drinking today",
+    "last meal",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure with a pediatric cuff",
+   "triggers": [
+    "blood pressure",
+    "pediatric cuff",
+    "BP"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality - and note 132 as the pre-salbutamol baseline for later comparison",
+   "triggers": [
+    "pulse rate",
+    "rate rhythm and strength",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character with both lung fields auscultated",
+   "triggers": [
+    "resp rate",
+    "respirations",
+    "rate depth and character"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on",
+   "triggers": [
+    "skin",
+    "colour temperature moisture",
+    "skin condition"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 monitored continuously, on and off oxygen values recorded",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sats on and off oxygen"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated with two days of infectious symptoms",
+   "triggers": [
+    "temperature",
+    "temp",
+    "thermometer"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "been unwell lately",
+    "any other illness",
+    "how has she been lately"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any seizures",
+    "any headaches",
+    "neuro history",
+    "any weakness"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (no stridor at any point keeps the diagnosis in the lower airway)",
+   "triggers": [
+    "any cough",
+    "any stridor at any point",
+    "noisy breathing in",
+    "respiratory history"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "heart problems",
+    "palpitations",
+    "cardiovascular",
+    "racing heart"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (poor intake and fewer wet diapers or toilet trips flag dehydration in a child)",
+   "triggers": [
+    "any vomiting",
+    "wet diapers",
+    "trips to the toilet",
+    "drinking and peeing",
+    "tummy pain"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "new rash",
+    "eczema",
+    "skin problems",
+    "itchy skin"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "any injuries",
+    "bones or joints",
+    "musculoskeletal",
+    "muscle aches"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "thyroid",
+    "endocrine",
+    "blood sugar problems"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "runny nose",
+    "ear pain",
+    "sore throat",
+    "eyes ears nose throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined: work-of-breathing signs documented, airway red flags (stridor, drooling) rechecked",
+   "triggers": [
+    "head and neck",
+    "nasal flaring",
+    "tracheal tug",
+    "check her neck",
+    "recheck for stridor"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest auscultated at all six sites, listening specifically for silent zones - a quiet chest in asthma means worsening, not improvement",
+   "triggers": [
+    "all six sites",
+    "six sites",
+    "listening for silent zones",
+    "auscultate the chest",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined",
+   "triggers": [
+    "abdomen",
+    "tummy",
+    "palpate the abdomen",
+    "abdominal exam",
+    "four quadrants"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined with posterior lung fields auscultated",
+   "triggers": [
+    "posterior lung fields",
+    "listen to her back",
+    "check her back",
+    "back exam"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities with capillary refill",
+   "triggers": [
+    "upper extremities",
+    "capillary refill in the fingers",
+    "check her arms",
+    "cap refill on the hands"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities checked for cyanosis",
+   "triggers": [
+    "lower extremities",
+    "check her legs",
+    "any cyanosis in the feet",
+    "check her toes"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Administer salbutamol by MDI with spacer and pediatric mask: 10 x 100 mcg for a 21 kg child, repeatable up to 3 times, with the 6 rights verbalized",
+   "triggers": [
+    "10 puffs",
+    "ten puffs",
+    "100 micrograms",
+    "six rights",
+    "with the spacer",
+    "right patient right drug"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Choose MDI with spacer over the nebulizer and say why: infectious respiratory symptoms make aerosol-generating nebulization the wrong first choice",
+   "triggers": [
+    "MDI with spacer instead of a neb",
+    "no nebulizer",
+    "not nebulizing",
+    "aerosol generating",
+    "spacer rather than nebulizer",
+    "nebulizer aerosolizes"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Transport after the first course rather than staying on scene to finish all repeats",
+   "triggers": [
+    "transport after the first course",
+    "repeat en route",
+    "give the rest on the way",
+    "no need to stay for all three"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Keep the BVM sized and within reach, and state the triggers for assisted ventilation: tiring, falling respiratory rate, decreasing LOC, or a silent chest",
+   "triggers": [
+    "pediatric BVM ready",
+    "size the BVM",
+    "BVM within reach",
+    "bag ready",
+    "BVM is sized"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "emr",
+   "actionEn": "EMR: Verbalize what is outside EMR scope - ipratropium, dexamethasone, IM epinephrine, CPAP - and that CPAP is contraindicated at age 6 in any case",
+   "triggers": [
+    "outside EMR scope",
+    "ipratropium is PCP",
+    "no CPAP under 13",
+    "dexamethasone is PCP",
+    "outside my scope"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Keep the child calm throughout: interventions delivered on mother's lap, nothing forced",
+   "triggers": [
+    "keep her calm",
+    "on mom's lap",
+    "explain to her",
+    "let mom help",
+    "gently"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and interventions after each salbutamol course and at least every 5 minutes",
+   "triggers": [
+    "reassess ABCs",
+    "recheck her breathing after the salbutamol",
+    "reassess after the treatment",
+    "ABCs after the move",
+    "airway breathing circulation and interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes, with the trend interpreted out loud as improving",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set",
+    "improving trend"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Attribute the pulse rise from 132 to 140 to salbutamol rather than deterioration, and keep treating",
+   "triggers": [
+    "pulse up from the salbutamol",
+    "expected side effect",
+    "tachycardia is from the salbutamol",
+    "salbutamol raises the heart rate",
+    "keep treating"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State the deterioration triggers one more time: quiet child, silent chest, falling rate or LOC means BVM ventilation now",
+   "triggers": [
+    "silent chest",
+    "quiet chest",
+    "if she tires",
+    "if she gets tired",
+    "if she gets drowsy",
+    "falling respiratory rate"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification to the receiving hospital for a pediatric respiratory patient",
+   "triggers": [
+    "notify the hospital",
+    "pre-alert",
+    "patch to the hospital",
+    "radio ahead",
+    "call ahead"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off: severity history, treatment times and doses, and response to salbutamol",
+   "triggers": [
+    "hand-off report",
+    "handover",
+    "report to the nurse",
+    "this is a 6-year-old girl",
+    "21 kilograms"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR completed within 5 minutes, weight documented",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "documentation",
+    "weight documented"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "salbutamol-wrong-delivery",
+   "descriptionEn": "candidate gives the salbutamol by nebulizer (aerosol-generating) despite her infectious respiratory symptoms, or by MDI without a spacer and pediatric mask"
+  },
+  {
+   "key": "drug-wrong-dose",
+   "descriptionEn": "candidate gives a dose other than the sheet dose for this 21 kg child: a salbutamol MDI course other than 10 x 100 mcg (e.g. 4 or 5 puffs) or a nebulized dose other than 5 mg; PCP: ipratropium other than 80 mcg MDI or 250 mcg nebulized, dexamethasone other than 0.5 mg/kg PO (maximum 16 mg), epinephrine other than 0.01 mg/kg IM (maximum 0.5 mg)"
+  },
+  {
+   "key": "salbutamol-stopped-for-tachycardia",
+   "descriptionEn": "candidate stops or withholds the next salbutamol course because the pulse rose to 140 (treating the expected salbutamol tachycardia as a reason to stop)"
+  },
+  {
+   "key": "all-courses-on-scene",
+   "descriptionEn": "candidate stays on scene to give a second or third salbutamol course before loading, instead of transporting after the first course"
+  },
+  {
+   "key": "laid-supine",
+   "descriptionEn": "candidate lays the child down flat / supine (or tells the mother to lay her down) while she is in respiratory distress"
+  },
+  {
+   "key": "child-forced",
+   "descriptionEn": "candidate takes the child off her mother's lap against her will, holds her down, or straps a mask on her while she fights it"
+  },
+  {
+   "key": "oxygen-abandoned",
+   "descriptionEn": "candidate gives up on oxygen because the child resists the mask, instead of switching to blow-by or a mother-held mask"
+  },
+  {
+   "key": "quiet-chest-not-ventilated",
+   "descriptionEn": "after the examiner has described the child going quiet, drowsy, with a barely audible wheeze, the candidate calls it improvement or does not start BVM ventilation"
+  },
+  {
+   "key": "ventilated-unnecessarily",
+   "descriptionEn": "candidate starts BVM ventilations on this alert, interactive child while she is still breathing on her own and talking (no tiring, no silent chest, no falling LOC)"
+  },
+  {
+   "key": "cpap-applied",
+   "descriptionEn": "candidate (either level) applies CPAP to this 6-year-old - CPAP is contraindicated at 12 years and under. Saying CPAP is contraindicated or not an option is NOT this event"
+  },
+  {
+   "key": "emr-pcp-drug-given",
+   "descriptionEn": "an EMR-level candidate personally gives (or has the partner give) ipratropium, dexamethasone or epinephrine - all outside EMR scope for this call (record the drug event as well). Naming them as outside EMR scope, or saying a PCP would give them, is NOT this event"
+  },
+  {
+   "key": "salbutamol-before-baseline-vitals",
+   "descriptionEn": "candidate actually administers salbutamol (or any other medication) before a full baseline set of vital signs - blood pressure, pulse and respirations - has been taken. Announcing the plan to give it after the vitals is NOT this event"
+  },
+  {
+   "key": "ipratropium-repeated",
+   "descriptionEn": "PCP actually gives a second dose of ipratropium (it is a single-dose drug)"
+  },
+  {
+   "key": "ipratropium-without-salbutamol",
+   "descriptionEn": "PCP actually gives ipratropium on its own, before or without any salbutamol (ipratropium is not for monotherapy)"
+  },
+  {
+   "key": "epinephrine-before-salbutamol",
+   "descriptionEn": "PCP actually gives IM epinephrine before any salbutamol course has been given"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "salbutamol",
+   "namesEn": [
+    "salbutamol",
+    "Ventolin",
+    "albuterol"
+   ],
+   "doseEn": "MDI with spacer and pediatric mask: 10 x 100 mcg per course for a child over 20 kg (she is about 21 kg); may repeat up to 3 times; transport after the first course and repeat en route as required. Nebulized dose for age over 1 year is 5 mg, but MDI with spacer is strongly recommended here because of her infectious respiratory symptoms. Expect the pulse to rise. Contraindication: known hypersensitivity to salbutamol.",
+   "licence": "both"
+  },
+  {
+   "key": "ipratropium",
+   "namesEn": [
+    "ipratropium",
+    "Atrovent"
+   ],
+   "doseEn": "PCP pediatric dose for severe bronchospasm in asthma: 80 mcg via MDI (20 mcg x 4) with spacer - the route for this child with infectious symptoms; 250 mcg (1/2 nebule) via nebulizer only when nebulization is appropriate. Single dose, given with salbutamol (never as monotherapy).",
+   "licence": "pcp"
+  },
+  {
+   "key": "dexamethasone",
+   "namesEn": [
+    "dexamethasone",
+    "Decadron",
+    "dex"
+   ],
+   "doseEn": "PCP: 0.5 mg/kg PO to a maximum of 16 mg - about 10.5 mg for this 21 kg child; PO preferred, may be mixed with juice.",
+   "licence": "pcp"
+  },
+  {
+   "key": "epinephrine",
+   "namesEn": [
+    "epinephrine",
+    "epi",
+    "adrenaline",
+    "EpiPen"
+   ],
+   "doseEn": "PCP: 0.01 mg/kg IM to a maximum of 0.5 mg, only for severe bronchospasm unresolved by salbutamol with SpO2 below 90%. Not indicated while she is improving after salbutamol.",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "salbutamol-given",
+   "check": "present",
+   "event": "drug:salbutamol",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "salbutamol-after-baseline-vitals",
+   "check": "absent",
+   "event": "salbutamol-before-baseline-vitals",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "salbutamol-by-mdi-and-spacer",
+   "check": "absent",
+   "event": "salbutamol-wrong-delivery",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "dose-correct",
+   "check": "absent",
+   "event": "drug-wrong-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "salbutamol-continued-despite-tachycardia",
+   "check": "absent",
+   "event": "salbutamol-stopped-for-tachycardia",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Moderate delay in treatment or subsequent doses of medication (Nitro or Narcan)"
+   }
+  },
+  {
+   "id": "transport-after-first-course",
+   "check": "absent",
+   "event": "all-courses-on-scene",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-call-management",
+    "weight": 15,
+    "errorEn": "Manages the simulation to the desired outcome but with moderate deficiencies in call management. (e.g. little to no communication with patient, partner or bystanders, poor decision making, indecisiveness)"
+   }
+  },
+  {
+   "id": "not-laid-supine",
+   "check": "absent",
+   "event": "laid-supine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "patient-position",
+    "weight": 15,
+    "errorEn": "Positions the patient incorrectly detrimental to patient care"
+   }
+  },
+  {
+   "id": "nothing-forced",
+   "check": "absent",
+   "event": "child-forced",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "oxygen-not-abandoned",
+   "check": "absent",
+   "event": "oxygen-abandoned",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 15,
+    "errorEn": "Does not apply oxygen at any time during the initial assessment when indicated by patient presentation and/or"
+   }
+  },
+  {
+   "id": "quiet-chest-ventilated",
+   "check": "absent",
+   "event": "quiet-chest-not-ventilated",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "no-unneeded-ventilation",
+   "check": "absent",
+   "event": "ventilated-unnecessarily",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 15,
+    "errorEn": "Ventilates a patient when not required"
+   }
+  },
+  {
+   "id": "no-cpap-age-12-and-under",
+   "check": "absent",
+   "event": "cpap-applied",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-pcp-drugs",
+   "check": "absent",
+   "event": "emr-pcp-drug-given",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "ipratropium-single-dose",
+   "check": "absent",
+   "event": "ipratropium-repeated",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "ipratropium-with-salbutamol",
+   "check": "absent",
+   "event": "ipratropium-without-salbutamol",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "epinephrine-only-after-salbutamol",
+   "check": "absent",
+   "event": "epinephrine-before-salbutamol",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "6-year-old female, about 21 kg",
+  "cc": "severe asthma exacerbation - pediatric respiratory distress",
+  "moi": null,
+  "hxcc": "known asthmatic with a two-day cold; wheeze since this afternoon, worse tonight; two home salbutamol doses (2 puffs each, no spacer) with little effect; one overnight admission last winter, never intubated",
+  "vitals": "GCS 15, BP 98/64, pulse 132 strong regular, resp 40 laboured with expiratory wheeze, SpO2 89% on room air and 92% on oxygen, temp 37.9; after salbutamol pulse 140, resp 32, SpO2 94% on oxygen",
+  "treatments": "oxygen the least-distressing way, salbutamol 10 x 100 mcg by MDI with spacer and pediatric mask, sitting upright on her mother's lap, BVM sized and ready; ETA 12 minutes",
+  "findings": "retractions and nasal flaring, diffuse expiratory wheeze, no stridor, no drooling, no hives; improving after the first course"
+ },
+ "handoffFacts": {
+  "ageSex": "6-year-old girl, about 21 kg",
+  "cc": "severe shortness of breath in a known asthmatic with a two-day cold",
+  "moi": null,
+  "hxcc": "asthma diagnosed at age 4; one overnight admission last winter, never intubated, never in ICU; cold for two days, severe wheeze this evening; mother gave two doses of home salbutamol MDI without a spacer with little effect; on arrival alert on her mother's lap, speaking 2-3 words, rate 40 with diffuse expiratory wheeze, retractions and nasal flaring; no stridor, no drooling, no hives at any point",
+  "initialVitals": "GCS 15, BP 98/64, pulse 132 strong regular, resp 40 laboured with expiratory wheeze, skin pale warm dry, pupils equal and reactive, SpO2 89% on room air and 92% on oxygen, temp 37.9 C",
+  "finalVitals": "GCS 15, BP 100/66, pulse 140 strong regular (salbutamol effect), resp 32 less laboured, skin pale warm, SpO2 94% on oxygen, temp 37.9 C; speaking 4-5 word phrases, air entry improved",
+  "pmhx": "asthma since age 4, eczema",
+  "meds": "salbutamol MDI as needed; fluticasone inhaler daily with poor recent adherence",
+  "allergies": "no known allergies - no food or drug allergies",
+  "treatments": "oxygen throughout, delivered the least-distressing way; salbutamol 10 x 100 mcg by MDI with spacer and pediatric mask at 1948, transported after the first course; sitting upright on her mother's lap, mother with her; BVM sized and ready",
+  "findings": "retractions, nasal flaring, mild tracheal tug, expiratory wheeze in all fields, no silent zones; improving after the first course; small dinner at 1800 with poor fluids today"
+ },
+ "pcrFacts": {
+  "cc": "Severe shortness of breath in a 6-year-old known asthmatic",
+  "hxcc": "Cold for 2 days, wheeze from this afternoon worsening tonight; two home salbutamol MDI doses without spacer, little effect; severity markers: one overnight admission last winter, never intubated, never ICU; speaking 2-3 words on arrival; no stridor, no barking cough, no allergen exposure",
+  "pmhx": "Asthma diagnosed age 4, eczema",
+  "meds": "Salbutamol MDI PRN; fluticasone daily with recent poor adherence",
+  "allergies": "None known",
+  "treatments": [
+   "Oxygen delivered least-distressing way, titrated toward SpO2 94% or above",
+   "Salbutamol 10 x 100 mcg MDI with spacer and pediatric mask at 1948 (21 kg dosing), 6 rights verbalized; repeatable up to 3 courses",
+   "MDI with spacer chosen over nebulizer due to infectious respiratory symptoms",
+   "Transported sitting upright on mother's lap after the first course, mother in the ambulance",
+   "Pediatric BVM sized and ready; ventilation triggers stated",
+   "PCP-level options verbalized as out of scope: ipratropium, dexamethasone, IM epinephrine, CPAP (also age-contraindicated)"
+  ],
+  "findings": [
+   "PAT: abnormal work of breathing, normal appearance apart from anxiety and fatigue, pale skin",
+   "Rate 40 with diffuse expiratory wheeze, intercostal and subcostal retractions, nasal flaring, mild tracheal tug",
+   "SpO2 89% RA rising to 94% with oxygen and salbutamol",
+   "Pulse 132 rising to 140 after salbutamol - expected drug effect",
+   "No stridor, drooling, hives or lip swelling at any point; temperature 37.9",
+   "Improving after first course: resps 32, speaking 4-5 word phrases"
+  ],
+  "vitals": "Set 1 (on scene, baseline): GCS 15 (E4 V5 M6), BP 98/64, P 132 strong regular, R 40 laboured with expiratory wheeze, skin pale warm dry, PERL, SpO2 89% RA and 92% on O2, T 37.9 C. Set 2 (en route, about 7 minutes later, after the first salbutamol course): GCS 15, BP 100/66, P 140 strong regular, R 32 less laboured, skin pale warm, PERL, SpO2 94% on O2, T 37.9 C",
+  "times": "salbutamol 10 x 100 mcg MDI with spacer at 1948",
+  "weight": "about 21 kg (dose basis)"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": "She is breathing fast with a loud wheeze; the skin between and below her ribs pulls in with every breath and her nostrils flare.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR delivers the complete first-line treatment for this call: least-distressing oxygen titrated toward 94% or above, salbutamol 10 x 100 mcg by MDI with spacer and pediatric mask (repeatable up to 3 courses) with transport after the first course, position of comfort on her mother's lap, and a sized BVM ready with clearly stated triggers - a tiring child, falling rate, falling LOC, or a silent chest. Ipratropium, dexamethasone, IM epinephrine and CPAP belong to the PCP, and CPAP is contraindicated at this age regardless. No Functional Enquiry.",
+  "pcpEn": "PCP adds ipratropium (pediatric: 80 mcg via MDI with spacer - the right route for this child with infectious symptoms - or 250 mcg nebulized only when nebulization is appropriate; single dose, always with salbutamol), dexamethasone 0.5 mg/kg PO to a maximum of 16 mg - about 10.5 mg for this 21 kg child, mixable with juice - and, for severe bronchospasm unresolved by salbutamol with SpO2 below 90%, IM epinephrine 0.01 mg/kg to a maximum of 0.5 mg. CPAP remains contraindicated: she is under 13. Plus the 9-system Functional Enquiry from the mother en route."
+ },
+ "sourcePages": "Scenario emd-02 (data/practical/emr-medical-1.json): dispatch, scene (Pediatric Assessment Triangle), primary, transport, history (mother), vitals sets 1-2, FE, exam, interventions, ongoing (pulse 140 = salbutamol effect; quiet chest / tiring = ventilate), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Patients (respiratory distress / accessory muscle use); p.11 primary-survey interventions (assisting inadequate or failing respirations; oxygen for respiratory distress); p.13 AVPU; p.49 SOB With History of Asthma/COPD (position of comfort, oxygen to SpO2 94% or above, auscultation, transport after the first dose, MDI and spacer strongly recommended for influenza-like or other infectious respiratory conditions; PCP: salbutamol with ipratropium, IM epinephrine for SpO2 below 90% and/or symptoms unresolved by salbutamol, consider dexamethasone, consider CPAP); p.50 Oxygen Administration (SOB requires high-flow oxygen); p.52 CPAP Guidelines (indication 13 years or older; contraindicated 12 years and less); p.62 Dexamethasone (0.5 mg/kg to a maximum of 16 mg, PO preferred, may combine with juice); p.66 Epinephrine (pediatric 0.01 mg/kg IM to a maximum of 0.5 mg for severe bronchospasm); p.70 Ipratropium (pediatric PCP: 250 mcg nebulized or 80 mcg MDI, 20 mcg x 4; single dose; not for monotherapy); p.77 Salbutamol (nebulized 5 mg over 1 year; MDI over 20 kg 10 x 100 mcg per course, may repeat up to 3 times). Grading criteria p.19 (packaging goal times), p.35 (vitals intervals)."
+}

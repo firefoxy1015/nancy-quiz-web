@@ -892,7 +892,7 @@
    "phase": "interventions",
    "weight": 25,
    "licence": "both",
-   "actionEn": "Administer analgesia with the 6 rights (PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox; EMR: Entonox, invert cylinder 3 times)",
+   "actionEn": "Administer analgesia with the 6 rights (acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox, invert cylinder 3 times; same at EMR and PCP)",
    "triggers": [
     "acetaminophen 1000 milligrams",
     "ibuprofen 400 milligrams",
@@ -1064,7 +1064,7 @@
     "APAP"
    ],
    "doseEn": "1000 mg PO (guideline range 500-1000 mg PO; may repeat once after 4 hours)",
-   "licence": "pcp"
+   "licence": "both"
   },
   {
    "key": "ibuprofen",
@@ -1075,7 +1075,7 @@
     "NSAID"
    ],
    "doseEn": "400 mg PO (guideline range 300-400 mg PO; may repeat every 4-6 hours)",
-   "licence": "pcp"
+   "licence": "both"
   }
  ],
  "majorMoves": [
@@ -1151,7 +1151,7 @@
    "check": "ordered",
    "first": "vitals-set-1-complete",
    "then": "drug:acetaminophen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
@@ -1163,7 +1163,7 @@
    "check": "ordered",
    "first": "vitals-set-1-complete",
    "then": "drug:ibuprofen",
-   "licence": "pcp",
+   "licence": "both",
    "deduct": {
     "itemId": "protocols",
     "weight": 100,
@@ -1257,7 +1257,7 @@
   "pmhx": "none",
   "meds": "none",
   "allergies": "no known allergies",
-  "treatments": "manual c-spine then correctly sized hard collar; full spinal immobilization on the device (body before head, no head tape); right wrist splinted in position found with padding, joints above and below immobilized, cold 10 minutes on / 5 off; Entonox prior to movement (PCP: acetaminophen 1000 mg PO and ibuprofen 400 mg PO on-boarded early plus Entonox; EMR: Entonox only)",
+  "treatments": "manual c-spine then correctly sized hard collar; full spinal immobilization on the device (body before head, no head tape); right wrist splinted in position found with padding, joints above and below immobilized, cold 10 minutes on / 5 off; Entonox prior to movement (PCP: acetaminophen 1000 mg PO and ibuprofen 400 mg PO on-boarded early plus Entonox; same at EMR)",
   "findings": "midline C5-C6 tenderness, no deformity; dorsally deformed, swollen right wrist with distal CSM intact before and after splinting; chest clear and equal in all 6 sites; abdomen soft, non-tender; no thoracolumbar tenderness; no neurological deficit; last oral intake sandwich and coffee about 1 hour before the call"
  },
  "pcrFacts": {
@@ -1271,7 +1271,7 @@
    "Manual c-spine then hard collar",
    "Full spinal immobilization on device (body before head, no head tape)",
    "Right wrist splint in position found, cold 10-on/5-off",
-   "PCP: acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox before movement (EMR: Entonox only)"
+   "Acetaminophen 1000 mg PO + ibuprofen 400 mg PO + Entonox before movement (same at EMR and PCP)"
   ],
   "findings": [
    "Midline C5-C6 tenderness",
@@ -1286,7 +1286,7 @@
   "missedInjuryEn": "You looked at the right arm during your rapid body survey - what did you see at the wrist?"
  },
  "trackNotes": {
-  "emrEn": "EMR carries no oral analgesics: pain management is Entonox only (rule out pneumothorax, ALOC, inability to comply; invert cylinder 3 times). No Functional Enquiry phase. All spinal and fracture skills are identical to PCP.",
+  "emrEn": "EMR pain management is the same as PCP: oral acetaminophen and ibuprofen plus Entonox (rule out each drug's contraindications; invert the Entonox cylinder 3 times). No Functional Enquiry phase. All spinal and fracture skills are identical to PCP.",
   "pcpEn": "PCP adds the full 9-system Functional Enquiry and the three-drug analgesia ladder: acetaminophen 500-1000 mg PO and ibuprofen 300-400 mg PO on-boarded early, Entonox during packaging/splinting. Appendix A weighting applies: omitting Entonox when indicated after giving the oral agents, or sequencing it after fracture management, is a 100% error."
  },
  "sourcePages": "scenario tr-01 (data/practical/scenarios.json); BC Provincial Examination Guidelines p.7 (Findings in Unstable Adult Patients: free fall from a height > 6 m is the auto-RTC mechanism; this fall is about 4 m), p.11 (Primary Survey interventions: cervical spine stabilization when NEXUS or Canadian C-Spine indications are met), p.21 (Musculoskeletal Injuries: stabilize, check distal pulses and reassess throughout, apply cold, provide analgesia prior to movement in stable patients, immobilize the joints above and below), p.23 (cold: ice on for 10 minutes, off for 5), p.25 (Spinal Management: manual stabilization, hard collar, spinal immobilization device, foam blocks, secure the body, do not tape the head), p.58 (Acetaminophen: 500-1,000 mg PO, may repeat once after 4 hours, contraindications incl. severe liver disease and recent acetaminophen), p.65 (Entonox: contraindications incl. inability to comply, altered level of consciousness, pneumothorax; before use complete the primary survey, investigate the pain complaint incl. severity, obtain baseline vitals incl. SpO2, rule out contraindications; invert cylinder 3 X), p.68 (Ibuprofen: 300-400 mg PO, contraindications incl. active GI hemorrhage/ulcers and anticoagulants); EMALB Practical Examination Grading Criteria p.39 (Appendix A, Pain Management weighting)"

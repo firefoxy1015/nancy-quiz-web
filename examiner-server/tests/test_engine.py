@@ -101,8 +101,11 @@ def test_pain_management_appendix_a():
     r = engine.score(s, 'pcp', e, 22 * M, closing=c)
     assert r['autofail'] and any(x['itemId'] == 'pain-management' and x['weight'] == 100 for x in r['rows'])
     e2 = [x for x in e if not x['name'].startswith('drug:')] + [ev(8.5, 'drug:entonox')]
-    r2 = engine.score(s, 'emr', e2, 22 * M, closing=c)
-    assert not any(x['itemId'] == 'pain-management' for x in r2['rows']), r2['rows']
+    r2 = engine.score(s, 'emr', e2, 22 * M, closing=c)   # orals are within EMR licence too (guidelines p.58/68)
+    assert [x['weight'] for x in r2['rows'] if x['itemId'] == 'pain-management'] == [10], r2['rows']
+    s['painManagement']['oralsIndicated'] = []          # e.g. NPO / contraindicated: Entonox alone is complete
+    r3 = engine.score(s, 'emr', e2, 22 * M, closing=c)
+    assert not any(x['itemId'] == 'pain-management' for x in r3['rows']), r3['rows']
 
 
 def test_closing_deductions():
@@ -243,11 +246,14 @@ def test_finalize_closing_vets_the_model():
 
 def test_drug_event_counts_as_protocol_initiated():
     s, e, c = perfect()
-    s['expected'].append({'eid': 'E96', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Initiate the protocol with correct indications'})
+    s['expected'].append({'eid': 'E96', 'itemId': 'protocols', 'weight': 100, 'licence': 'both', 'actionEn': 'Initiate the Entonox protocol with correct indications'})
     r0 = engine.score(s, 'pcp', e, 22 * M, closing=c)
     assert any(x['itemId'] == 'protocols' for x in r0['rows'])            # nothing given: the umbrella item is missed
     r1 = engine.score(s, 'pcp', e + [ev(9.0, 'drug:entonox')], 22 * M, closing=c)
     assert not any(x['itemId'] == 'protocols' for x in r1['rows'])        # a drug was given: the protocol was initiated
+    s['expected'][-1]['actionEn'] = 'Newborn ladder: dry, warm, stimulate, then ventilate'
+    r2 = engine.score(s, 'pcp', e + [ev(9.0, 'drug:entonox')], 22 * M, closing=c)
+    assert any(x['itemId'] == 'protocols' for x in r2['rows'])            # a drug does not credit a non-drug protocol action
 
 
 def test_transport_items_are_engine_judged():
@@ -292,7 +298,7 @@ def test_late_entonox_is_100_at_every_level():
     for track in ('emr', 'pcp'):
         r = engine.score(s, track, late, 22 * M, closing=c)
         assert r['autofail'] and any(x['itemId'] == 'pain-management' and x['weight'] == 100 for x in r['rows']), (track, r['rows'])
-    early = e + [ev(8.5, 'drug:entonox'), ev(9.0, 'skill-fracture-mgmt')]
+    early = e + [ev(8.0, 'drug:acetaminophen'), ev(8.1, 'drug:ibuprofen'), ev(8.5, 'drug:entonox'), ev(9.0, 'skill-fracture-mgmt')]
     r = engine.score(s, 'emr', early, 22 * M, closing=c)
     assert not any(x['itemId'] == 'pain-management' for x in r['rows']), r['rows']
 
@@ -365,7 +371,7 @@ def test_single_action_item_credited_by_name_but_shared_item_needs_eid():
     f = engine.score(sh, 'pcp', base + [ev(1, 'circulation'), ev(1, 'rapid-body-survey'), ev(1, 'breathing', ['E04'])], 20 * M)
     rows = {(r['itemId'], r['weight']) for r in f['rows'] if r['source'] == 'engine-presence'}
     assert ('circulation', 100) not in rows and ('rapid-body-survey', 100) not in rows   # only one action: the name is enough
-    assert ('breathing', 100) in rows                                                    # E99 (auscultation) still missing
+    assert ('breathing', 15) in rows                                                     # E99 (auscultation) still missing: the item's 2nd action, capped
 
 
 def test_move_keywords_are_acts_not_plans():
@@ -386,3 +392,67 @@ def test_max_dose_wording_and_abc_reassessment_keywords():
     k = lambda s: {e['name'] for e in engine.keyword_events(s, sh, M, [])}
     assert 'ongoing-abc-i' in k('On the cot. Reassessing airway, breathing, circulation and interventions.')
     assert 'ongoing-abc-i' not in k('Airway is clear.')
+
+
+def test_agent_reported_false_positives():
+    sh = sheet()
+    sh['drugs'] = [{'key': 'entonox', 'namesEn': ['entonox']}, {'key': 'acetaminophen', 'namesEn': ['tylenol']},
+                   {'key': 'ibuprofen', 'namesEn': ['ibuprofen', 'advil']}, {'key': 'txa', 'namesEn': ['TXA']}]
+    d = lambda s: {e['name'] for e in engine.drug_events(s, sh, 'pcp', M, [])}
+    for s in ["We can't give Entonox because of the pneumothorax.", 'I cannot give him Entonox.',
+              'Did you give him any Tylenol or Advil before we got here?', 'I will give TXA once vitals are done.',
+              'Ibuprofen 10 mg/kg, that is 200 mg.', 'She had 1000 mg of Tylenol at 1500.', 'Giving IV fluids is out of my scope.']:
+        assert not d(s), (s, d(s))
+    assert d('Giving Entonox now, self-administered.') == {'drug:entonox'}
+    for s in ['Should I give glucagon?', 'The PCP can give dexamethasone 0.5 mg/kg.', 'We will give salbutamol after baseline vitals.']:
+        assert not d(s), (s, d(s))
+    k = lambda s: {e['name'] for e in engine.keyword_events(s, sh, M, [])}
+    assert 'move:load' not in k('You can ride with us in the ambulance.')
+    assert 'move:lift-to-cot' not in k("We're not moving her to the cot yet.")
+    assert 'transport:rtc' not in k('If his GCS drops he becomes RTC.')
+    assert k('This patient is non-RTC, stable.') & {'transport:rtc', 'transport:non-rtc'} == {'transport:non-rtc'}
+    assert 'transport:rtc' not in k('Transport decision: non-RTC.') and 'transport:rtc' in k('Transport decision: RTC, unstable.')
+    sh['disableKeywords'] = ['transport:rtc', 'transport:non-rtc']
+    assert not k('P1 is a stable patient.') & {'transport:rtc', 'transport:non-rtc'}
+
+
+def test_vitals_gap_8_to_9_is_moderate_and_packaging_is_ready_to_load():
+    s, e, c = perfect()
+    e = [x for x in e if x['name'] not in engine.VITAL_ALL and not x['name'].startswith('move:')]
+    e += [ev(4, 'blood-pressure'), ev(4.2, 'pulse'), ev(4.4, 'respirations'), ev(12.9, 'blood-pressure'), ev(13, 'pulse'), ev(13.1, 'respirations')]
+    e += [ev(10, 'move:lift-to-cot'), ev(10.5, 'ongoing-abc-i'), ev(17, 'move:load'), ev(17.5, 'ongoing-abc-i')]
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    ocm = [x['weight'] for x in r['rows'] if x['itemId'] == 'overall-call-management']
+    assert 10 in ocm, r['rows']                                                   # 8.5 min gap on a priority call
+    assert not any(x['itemId'] == 'transport' for x in r['rows']), r['rows']      # strapped on the cot at 10 min
+
+
+def test_state_change_can_key_on_derived_vitals_set():
+    sh = sheet()
+    sh['stateChanges'] = [{'id': 'after-set-1', 'when': {'afterEvent': 'vitals-set-1-complete'}}]
+    evs = [ev(1, 'blood-pressure'), ev(1.2, 'pulse'), ev(1.4, 'respirations')]
+    assert [x['id'] for x in engine.due_state_changes(sh, evs, 2 * M, set())] == ['after-set-1']
+
+
+def test_late_100_action_outside_primary_is_not_an_initial_assessment_autofail():
+    s, e, c = perfect()
+    s['expected'].append({'eid': 'E97', 'itemId': 'airway', 'weight': 100, 'licence': 'both', 'phase': 'ongoing', 'actionEn': 'Keep suction ready'})
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert [x['weight'] for x in r['rows'] if x['itemId'] == 'airway'] == [15] and not r['autofail'], r['rows']
+
+
+def test_packaging_clock_can_start_at_rosc():
+    s, e, c = perfect()
+    s['packagingFromEvent'] = 'rosc'
+    e = [x for x in e if not x['name'].startswith('move:')] + [ev(9, 'rosc'), ev(20, 'move:lift-to-cot'), ev(20.5, 'ongoing-abc-i')]
+    r = engine.score(s, 'pcp', e, 30 * M, closing=c)
+    assert not any(x['itemId'] == 'transport' for x in r['rows']), r['rows']        # 11 min after ROSC
+    r = engine.score(s, 'pcp', [x for x in e if x['name'] != 'rosc'], 30 * M, closing=c)
+    assert not any(x['itemId'] == 'transport' for x in r['rows']), r['rows']        # no ROSC: not judged
+
+
+def test_second_primary_100_action_of_an_item_is_capped():
+    s, e, c = perfect()
+    s['expected'].append({'eid': 'E98', 'itemId': 'rapid-body-survey', 'weight': 100, 'licence': 'both', 'phase': 'primary', 'actionEn': 'Shorten scene time'})
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert [x['weight'] for x in r['rows'] if x['itemId'] == 'rapid-body-survey'] == [15] and not r['autofail'], r['rows']

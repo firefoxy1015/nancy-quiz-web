@@ -1,0 +1,1302 @@
+{
+ "id": "emd-04",
+ "titleEn": "Carbon Monoxide Poisoning - Four Patients in a Townhouse",
+ "type": "medical",
+ "priority": "non-rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-04",
+ "patient": {
+  "name": "Daniel Kowalski",
+  "age": 45,
+  "sex": "male",
+  "affectEn": "alert and cooperative but clearly unwell: band-like headache, nauseated (has vomited twice), dizzy whenever he stands; the most symptomatic of the four family members",
+  "speechEn": "full sentences; answers exactly what he is asked; can speak for the family's timeline (when everyone got sick, the furnace, the alarm) when asked"
+ },
+ "scene": {
+  "settingEn": "2040 hrs on a cold November evening outside a townhouse in Abbotsford. You stage on the street. The whole family has evacuated on dispatch's instruction and is standing on the front lawn in coats. Fire arrives, enters on air (SCBA), measures 380 ppm of carbon monoxide near the furnace closet, shuts the furnace down and begins ventilating. The house is NOT cleared for entry at any point during this call. Four patients: the father (45, your patient), the mother (43, 12 weeks pregnant) and two children aged 9 and 7. Only your ambulance is on scene: a second ambulance comes only if the candidate requests one. Abbotsford Regional Hospital is 15 minutes away.",
+  "hazardsEn": [
+   "carbon monoxide inside the townhouse: fire measured 380 ppm near the furnace closet; the structure is not cleared for entry",
+   "fuel-burning furnace that has run constantly for two days (shut down by fire)",
+   "cold November evening: the patients are outside and must be kept warm"
+  ],
+  "bystanders": [
+   {
+    "who": "mother (also a patient)",
+    "knowsEn": "She is 43 and has a moderate headache and nausea. She volunteers, as soon as anyone speaks to her, that she is 12 weeks pregnant. Her symptoms started the same evening as everyone else's and she felt better within minutes of getting outside. Alert and walking. She goes back into the house only if the candidate tells her she may (see the state change family-wants-back-in); otherwise she stays outside."
+   },
+   {
+    "who": "two children, aged 9 and 7 (also patients)",
+    "knowsEn": "Both have mild headaches that started this evening and felt better once outside. Both are alert and walking. They answer simple questions only."
+   },
+   {
+    "who": "fire officer",
+    "knowsEn": "Fire went in on air, measured 380 ppm of CO near the furnace closet, shut the furnace down and is ventilating. The house is NOT cleared for entry. Firefighters carried the family dog out; it is lethargic. Fire can retrieve items from the house if asked; the family and the crew cannot go in."
+   },
+   {
+    "who": "second ambulance crew (exists only after the candidate requests a second ambulance)",
+    "knowsEn": "Takes the mother and the children under the candidate's direction and puts them on oxygen as directed. Quick checks if asked: the mother's pulse is 92; both children are alert with strong, regular pulses."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen with adult and pediatric non-rebreather masks and nasal cannulas",
+   "BP cuffs (adult and pediatric) and stethoscope",
+   "pulse oximeter",
+   "thermometer",
+   "glucometer",
+   "portable suction unit",
+   "blankets",
+   "cot",
+   "AED",
+   "PCP only: IV start kit with normal saline, dimenhydrinate, ondansetron"
+  ]
+ },
+ "dispatchEn": "2040 hrs, a cold November evening. Code 3 to a townhouse in Abbotsford. A family of four all feel sick with headaches and nausea that started after dinner. The caller mentions their carbon monoxide alarm has been 'chirping' since the evening. Abbotsford Regional Hospital is 15 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: the furnace has been running hard since a cold snap started two days ago. Dispatch has instructed the family to get out of the house. Fire has been dispatched with gas monitors.",
+ "arrivalEn": "You stage on the street in front of the townhouse. It's cold and dark. The family of four is out on the front lawn in their coats. Fire pulls up behind you, masks up and goes into the house on air. A few minutes later the fire officer reports 380 ppm of carbon monoxide near the furnace closet; they've shut the furnace down and are ventilating. The house is not cleared for entry. A firefighter carries the family dog out and sets it on the lawn; it's lethargic.",
+ "firstLookEn": "Four people on the front lawn in winter coats: a man and a woman in their forties and two young children. All four are standing, walking and talking; no one is unconscious and no one is in obvious respiratory distress. The man looks the most unwell of the four. The family dog lies on the lawn, lethargic.",
+ "primary": {
+  "locEn": "Alert (AVPU = A). Oriented to person, place, time and event; answers appropriately in full sentences.",
+  "airwayEn": "Open and clear. Speaking in full sentences. He has vomited twice this evening; there is no vomit in the mouth now and no gurgling.",
+  "breathingEn": "Respirations 20, unlaboured, adequate depth, equal chest rise. Clear air entry on both sides on auscultation. No accessory muscle use.",
+  "circulationEn": "Radial pulse 104, strong, regular. No external bleeding.",
+  "rbsEn": "Rapid body survey: nil - no trauma, no rash, no injuries anywhere. Skin is given automatically during the RBS: normal colour to slightly flushed, warm, dry.",
+  "skinEn": "normal colour to slightly flushed, warm, dry"
+ },
+ "history": {
+  "ccEn": "It's my head. The worst headache I've had all evening, like a tight band around it. I feel sick to my stomach, I've thrown up twice, and I get dizzy when I stand up.",
+  "opqrst": {
+   "oEn": "It started around 7 o'clock, after dinner. We were all just at home. I wasn't doing anything in particular.",
+   "pEn": "It got worse all evening in the house. It got better almost as soon as we came outside - all of us felt better within a few minutes. Standing up makes me dizzy.",
+   "qEn": "Like a band squeezing around my head.",
+   "rEn": "It's all the way around my head. It doesn't go anywhere else. No, I've never had a headache like this before.",
+   "sEn": "At its worst tonight it was an 8 out of 10. It's a bit better since we got outside.",
+   "tEn": "Since about 7 o'clock, so a bit under two hours. It kept getting worse until we came outside."
+  },
+  "painScoreEn": "8 out of 10 at its worst this evening, a little better since coming outside; after about 15 minutes on high-flow oxygen (vitals set 2) it is down to 5 out of 10",
+  "sample": {
+   "sEn": "The headache, I feel sick, I've vomited twice, and I'm dizzy when I stand. No fever, no cough, no sore throat. My wife and the kids have headaches too - it started for all of us the same evening.",
+   "aEn": "No allergies.",
+   "mEn": "No, I don't take any medications.",
+   "pEn": "Nothing. I don't have any medical problems.",
+   "lEn": "Dinner at 6:30, so 1830. We all ate the same meal. Nothing since.",
+   "eEn": "We were all at home all evening. The furnace has been running nonstop for two days, ever since the cold snap started. It was last serviced years ago. The carbon monoxide alarm started chirping at dinner - we thought the battery was dying. We all got sick the same evening and we all felt better within minutes of coming outside."
+  },
+  "fe": {
+   "generalEn": "I was fine until tonight.",
+   "cnsEn": "The headache and the dizziness. I'm not confused, no weakness anywhere, and no changes in my vision.",
+   "respiratoryEn": "No cough. I'm not short of breath.",
+   "cardiovascularEn": "No chest pain. No palpitations, my heart isn't racing.",
+   "giGuEn": "I'm nauseated and I've vomited twice. Bowels and waterworks are normal.",
+   "integumentaryEn": "Nothing. No rash.",
+   "musculoskeletalEn": "Nothing. No aches, no injuries.",
+   "endocrineEn": "No diabetes.",
+   "eentEn": "No sore throat. Just the mild sniffles the whole family has had this winter, nothing more than that."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No trauma. Mucous membranes normal in colour.",
+  "chestLungsEn": "Clear and equal air entry throughout. No accessory muscle use.",
+  "abdomenEn": "Soft. Mildly tender in the epigastrium after vomiting; otherwise non-tender in all quadrants.",
+  "backEn": "Nil - no findings.",
+  "lowerExtremitiesEn": "Normal strength bilaterally; his gait was steady before he was seated. No focal neurological deficit.",
+  "upperExtremitiesEn": "Normal strength and sensation bilaterally. No focal deficit."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "father, outside, baseline - within 3 minutes",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "138/88",
+   "pulse": {
+    "rate": 104,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "104 strong regular"
+   },
+   "resp": {
+    "rate": 20,
+    "depth": "adequate",
+    "character": "regular, unlaboured",
+    "rawEn": "20 regular unlaboured"
+   },
+   "skin": "normal to slightly flushed, warm, dry",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "99%",
+   "bgl": null,
+   "temp": "36.8 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "oxygen"
+     },
+     {
+      "elapsedMs": 900000
+     }
+    ]
+   },
+   "unlockNoteEn": "father, about 15 minutes after set 1 on 15 L by non-rebreather - improving; headache now 5/10, no further vomiting. Without oxygen the father stays at set 1 values.",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "132/84",
+   "pulse": {
+    "rate": 96,
+    "rhythm": "regular",
+    "strength": "strong",
+    "rawEn": "96 strong regular"
+   },
+   "resp": {
+    "rate": 18,
+    "depth": "adequate",
+    "character": "regular, unlaboured",
+    "rawEn": "18 regular unlaboured"
+   },
+   "skin": "normal, warm, dry",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "99%",
+   "bgl": null,
+   "temp": "36.8 C"
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "family-wants-back-in",
+   "when": {
+    "elapsedMs": 420000
+   },
+   "examinerLineEn": "The mother turns toward the front door. She says she is just going to run back inside for her wallet before they go to the hospital.",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "family-questions-transport",
+   "when": {
+    "elapsedMs": 720000
+   },
+   "examinerLineEn": "The father says: \"We all feel a lot better out here now. Do my wife and the kids really have to go to the hospital?\"",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "second-ambulance-arrives",
+   "when": {
+    "afterEvent": "second-ambulance-requested",
+    "elapsedMs": 360000
+   },
+   "examinerLineEn": "The second ambulance has arrived. Its crew is ready to take patients under your direction.",
+   "vitalsPatch": {}
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize the pattern from dispatch alone: an entire household sick at the same time with headache and nausea, a fuel-burning appliance, and a chirping CO alarm - suspected carbon monoxide until proven otherwise",
+   "triggers": [
+    "sounds like carbon monoxide",
+    "suspect carbon monoxide poisoning",
+    "whole family sick at the same time",
+    "thinking CO exposure",
+    "CO until proven otherwise"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Plan to stage outside and NOT enter the structure until fire clears it; confirm the family has evacuated",
+   "triggers": [
+    "we'll stage outside",
+    "we won't enter until fire clears it",
+    "not going inside until fire clears it",
+    "confirm everyone is out of the house",
+    "is everyone out of the house"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Request additional resources early: this is four patients - a second ambulance at minimum",
+   "triggers": [
+    "request a second ambulance",
+    "we need another ambulance",
+    "four patients, we need more units",
+    "call for additional resources",
+    "send another unit"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (CO in the structure - do not enter until cleared), environment (cold - keep patients warm outside), MOI/nature (CO exposure over hours), people (FOUR patients) and resources (fire on air, second ambulance)",
+   "triggers": [
+    "carbon monoxide hazard",
+    "hazard is CO in the house",
+    "environment is cold",
+    "nature of illness is CO exposure",
+    "four patients",
+    "fire is on air"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Stay out of the structure; treat everyone where the air is clean",
+   "triggers": [
+    "we stay out of the house",
+    "treat them out here in the fresh air",
+    "not entering the structure",
+    "keep everyone outside in clean air",
+    "work in the fresh air"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look at all four: walking, talking, no one unconscious; identify the father as the most symptomatic and note the lethargic dog as corroborating evidence of CO",
+   "triggers": [
+    "all four are walking and talking",
+    "nobody is unconscious",
+    "the father looks the worst",
+    "the dog is lethargic",
+    "first look at all four",
+    "general impression"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC: alert and oriented - and note that any decreased LOC in a CO patient is an unstable finding",
+   "triggers": [
+    "AVPU",
+    "he's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "oriented times four",
+    "any drop in LOC makes him unstable"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess the airway",
+   "triggers": [
+    "airway is clear",
+    "airway patent",
+    "check his airway",
+    "he's talking so his airway is open",
+    "look in his mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing with auscultation of both lung fields",
+   "triggers": [
+    "listen to both lungs",
+    "auscultate both lung fields",
+    "air entry both sides",
+    "breath sounds",
+    "breathing rate and effort",
+    "chest rise"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: radial pulse rate and quality",
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse rate and quality",
+    "any major bleeding",
+    "feel for a radial"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform the rapid body survey",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "quick head to toe",
+    "check for trauma or rash",
+    "modified rapid body survey"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State that the SpO2 of 99% is unreliable in carbon monoxide poisoning and must not guide oxygen therapy",
+   "triggers": [
+    "SpO2 is unreliable",
+    "not reliable in carbon monoxide",
+    "can't trust the sats",
+    "pulse ox can't tell carboxyhemoglobin",
+    "carboxyhemoglobin",
+    "ignore the 99"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Apply high-flow oxygen by non-rebreather at 15 L to the father immediately - a non-rebreather is specifically indicated for CO poisoning - and direct oxygen for all four patients",
+   "triggers": [
+    "non-rebreather at 15",
+    "15 litres by non-rebreather",
+    "NRB at 15",
+    "high-flow oxygen on him",
+    "put him on oxygen"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: normal to slightly flushed, warm, dry",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel his skin",
+    "check his skin",
+    "skin signs",
+    "how's his skin"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position of comfort, seated, wrapped warm outside the house",
+   "triggers": [
+    "position of comfort",
+    "have him sit down",
+    "keep him seated",
+    "blanket around him",
+    "sit down for me"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Correctly categorize as non-RTC: all patients alert with normal vitals and no unstable criteria",
+   "triggers": [
+    "non-RTC",
+    "non-priority",
+    "he's stable",
+    "no unstable criteria",
+    "stable for transport"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Transport ALL four exposed patients for hospital evaluation, and explain to the family why feeling better outside does not mean they are safe",
+   "triggers": [
+    "all four go to the hospital",
+    "everyone needs to be checked at the hospital",
+    "feeling better doesn't mean you're safe",
+    "the kids need to come too",
+    "transport all four"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "State the upgrade triggers: decreased LOC, syncope, chest pain or seizure in any patient means RTC for that patient",
+   "triggers": [
+    "if his LOC drops he becomes RTC",
+    "syncope chest pain or seizure",
+    "upgrade to RTC",
+    "decreased LOC makes it priority"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Organize the multi-patient logistics: two ambulances, children each accompanied by a parent, oxygen for everyone during transport",
+   "triggers": [
+    "one parent with each child",
+    "split them between the two ambulances",
+    "oxygen for everyone during transport",
+    "mom goes with one of the kids"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint: band-like headache with nausea and dizziness in a shared indoor environment",
+   "triggers": [
+    "what's going on tonight",
+    "what's bothering you",
+    "chief complaint",
+    "why did you call",
+    "how are you feeling"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the exposure-focused HxC/C: who is affected, when symptoms started for each person, whether symptoms improve away from the house, what fuel-burning appliances are running, and the CO alarm history",
+   "triggers": [
+    "when did this start",
+    "who else is sick",
+    "do you feel better outside",
+    "any fuel-burning appliances",
+    "when did the alarm start",
+    "is the furnace running"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Score the headache and track its trend on oxygen",
+   "triggers": [
+    "scale of zero to ten",
+    "rate your headache",
+    "pain score",
+    "how bad is the headache",
+    "zero to ten"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history",
+   "triggers": [
+    "medical history",
+    "any medical problems",
+    "past history",
+    "any health conditions"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": [
+    "any medications",
+    "what medications",
+    "take any pills",
+    "any prescriptions"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake - and reason through why this is not food poisoning",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "what did you have for dinner",
+    "did everyone eat the same thing",
+    "not food poisoning"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation",
+   "triggers": [
+    "blood pressure",
+    "BP by auscultation",
+    "cuff on"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality",
+   "triggers": [
+    "pulse rate rhythm and strength",
+    "count the pulse",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate, depth and character",
+   "triggers": [
+    "respiratory rate",
+    "rate depth and character",
+    "count his respirations"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin assessed hands-on",
+   "triggers": [
+    "skin colour temperature and condition",
+    "feel his skin",
+    "skin hands-on"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 documented with the unreliability caveat stated - and oxygen NOT titrated down because of it",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "unreliable in CO"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated to differentiate CO exposure from a febrile illness affecting the household",
+   "triggers": [
+    "temperature",
+    "tympanic temp",
+    "check for a fever",
+    "thermometer"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "been well lately",
+    "any recent illness",
+    "any fevers"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any confusion",
+    "weakness or numbness",
+    "changes in your vision",
+    "nervous system"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "any cough",
+    "short of breath",
+    "trouble breathing",
+    "respiratory system"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (CO exposure can precipitate cardiac ischemia - ask about chest pain)",
+   "triggers": [
+    "any chest pain",
+    "palpitations",
+    "heart racing",
+    "cardiovascular"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU",
+   "triggers": [
+    "how many times did you throw up",
+    "any diarrhea",
+    "bowels and bladder",
+    "GI GU"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "any rash",
+    "skin changes",
+    "integumentary",
+    "any itching"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "muscle or joint pain",
+    "musculoskeletal",
+    "any injuries",
+    "any aches"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "endocrine"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "sore throat",
+    "eyes ears nose and throat",
+    "runny nose",
+    "EENT"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined including mucous membranes",
+   "triggers": [
+    "head and neck exam",
+    "mucous membranes",
+    "check his mouth and lips",
+    "inspect the head",
+    "palpate the neck"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest examined with full auscultation",
+   "triggers": [
+    "full chest exam",
+    "auscultate all six sites",
+    "inspect and palpate the chest",
+    "examine his chest",
+    "chest exam"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined in four quadrants",
+   "triggers": [
+    "four quadrants",
+    "palpate the abdomen",
+    "abdominal exam",
+    "is your belly tender"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined",
+   "triggers": [
+    "check the back",
+    "palpate the spine",
+    "back exam",
+    "look at his back"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: strength and sensation checked for focal deficit",
+   "triggers": [
+    "upper extremities",
+    "grip strength",
+    "squeeze my hands",
+    "sensation in both arms",
+    "arm strength"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities: strength checked, gait observation documented",
+   "triggers": [
+    "lower extremities",
+    "push against my hands with your feet",
+    "leg strength",
+    "his gait was steady",
+    "sensation in both legs"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "High-flow oxygen by non-rebreather at 15 L applied to all four patients and maintained throughout transport",
+   "triggers": [
+    "high-flow oxygen for all four",
+    "non-rebreathers on everyone",
+    "15 litres for each patient",
+    "oxygen on the kids too",
+    "pediatric non-rebreather"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Never titrate the oxygen down based on the pulse oximeter - state the reason out loud",
+   "triggers": [
+    "not titrating to the sats",
+    "SpO2 can't guide the oxygen",
+    "won't turn the oxygen down",
+    "ignore the sats for oxygen",
+    "oxygen regardless of the sats"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Enforce scene discipline: no one re-enters the house until fire clears it",
+   "triggers": [
+    "nobody goes back inside",
+    "don't go back in the house",
+    "wait until fire clears it",
+    "fire can get your things"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Keep all patients warm outside; suction available for the vomiting father",
+   "triggers": [
+    "blankets for everyone",
+    "keep them warm",
+    "suction ready",
+    "have suction available",
+    "get them warm"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize that hospital evaluation - not symptom relief - is the endpoint, especially for the pregnant mother",
+   "triggers": [
+    "the hospital needs to check your blood",
+    "the hospital will test",
+    "especially because you're pregnant",
+    "feeling better isn't the endpoint"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and oxygen delivery on all four patients at regular intervals",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "check the masks are still on",
+    "reassessing everyone",
+    "ABC check after the move"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals on the father within 15 minutes, with the improving headache trend interpreted",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "another set of vitals",
+    "vitals again"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Keep oxygen running on every patient for the entire transport - improvement is not a reason to remove it",
+   "triggers": [
+    "keep the oxygen on all the way",
+    "oxygen stays on until the hospital",
+    "leave the mask on even though you feel better",
+    "continue oxygen through transport"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Re-state the watch condition: any dip in LOC converts that patient to RTC",
+   "triggers": [
+    "if anyone's LOC drops",
+    "becomes RTC",
+    "watch for a drop in LOC",
+    "upgrade if anyone gets worse"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification: four CO-exposure patients including a pregnant woman",
+   "triggers": [
+    "notify the hospital",
+    "patch to Abbotsford Regional",
+    "pre-alert",
+    "call ahead"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off with the CO reading, exposure timeline and per-patient findings",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "report to the nurse",
+    "380 ppm"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCRs completed within 5 minutes, one per patient",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "one PCR per patient"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "crew-enters-structure",
+   "descriptionEn": "the candidate or their partner (on the candidate's direction) goes into the townhouse for any reason - to look for patients, check the furnace, get belongings - before fire has cleared it (the house is never cleared in this call). Firefighters on air going in is NOT this event."
+  },
+  {
+   "key": "family-reenters",
+   "descriptionEn": "the candidate tells or allows the mother (or any family member) to go back into the house for a wallet, pets, coats or anything else before fire has cleared it. Only an explicit permission or instruction counts; asking fire to retrieve an item is NOT this event."
+  },
+  {
+   "key": "oxygen-titrated-to-spo2",
+   "descriptionEn": "for any of the four patients, the candidate withholds oxygen, chooses a nasal cannula or a low flow, or turns the oxygen down / titrates it to the SpO2 because the oximeter reads 99% (saying they will NOT titrate is not this event; briefly lifting the mask so the father can vomit is not this event)"
+  },
+  {
+   "key": "oxygen-removed-on-improvement",
+   "descriptionEn": "the candidate removes or stops the oxygen for any patient before arrival at hospital because symptoms are improving or the patient feels better"
+  },
+  {
+   "key": "exposed-patient-left-at-scene",
+   "descriptionEn": "the candidate decides, or agrees with the family, that the mother, either child or the father does not need hospital evaluation and can stay home or at the scene (accepting a refusal without transport)"
+  },
+  {
+   "key": "second-ambulance-requested",
+   "descriptionEn": "the candidate requests a second ambulance / additional units for the four patients"
+  },
+  {
+   "key": "spo2-distrusted",
+   "descriptionEn": "the candidate states that the SpO2 reading is unreliable or falsely normal in carbon monoxide poisoning (oximetry cannot distinguish carboxyhemoglobin)"
+  },
+  {
+   "key": "ondansetron-to-pregnant-mother",
+   "descriptionEn": "PCP gives ondansetron to the mother, who is 12 weeks pregnant (relative contraindication in the first trimester); also report drug:ondansetron"
+  },
+  {
+   "key": "entonox-given",
+   "descriptionEn": "the candidate actually administers Entonox to any of the four patients (it would replace the high-flow oxygen); also report drug:entonox. Saying Entonox is not indicated or withheld is NOT this event."
+  },
+  {
+   "key": "emr-pcp-treatment",
+   "descriptionEn": "an EMR candidate actually gives dimenhydrinate or ondansetron, or starts an IV. Saying these are outside EMR scope is NOT this event."
+  }
+ ],
+ "drugs": [
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - NOT indicated in this call: the headache is caused by carbon monoxide and the treatment is high-flow oxygen by non-rebreather at 15 L/min, which Entonox would replace. If given, report drug:entonox and entonox-given.",
+   "licence": "both"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol",
+    "Dramamine"
+   ],
+   "doseEn": "1 mg/kg to a maximum of 50 mg; IV diluted with NS and given slowly over 2 minutes, or IM undiluted; for the father's nausea, after baseline vitals; caution in pregnancy",
+   "licence": "pcp"
+  },
+  {
+   "key": "ondansetron",
+   "namesEn": [
+    "ondansetron",
+    "Zofran"
+   ],
+   "doseEn": "4 mg PO (adult) for moderate to severe nausea and vomiting, after baseline vitals; relative contraindication in first-trimester pregnancy - not for the mother (12 weeks)",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "crew-stays-out",
+   "check": "absent",
+   "event": "crew-enters-structure",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "family-stays-out",
+   "check": "absent",
+   "event": "family-reenters",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "oxygen-given",
+   "check": "present",
+   "event": "oxygen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "oxygen-not-titrated-by-spo2",
+   "check": "absent",
+   "event": "oxygen-titrated-to-spo2",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "oxygen-kept-on",
+   "check": "absent",
+   "event": "oxygen-removed-on-improvement",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "all-four-transported",
+   "check": "absent",
+   "event": "exposed-patient-left-at-scene",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is detrimental to patient care"
+   }
+  },
+  {
+   "id": "second-ambulance",
+   "check": "present",
+   "event": "second-ambulance-requested",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-call-management",
+    "weight": 25,
+    "errorEn": "Does not manage the simulation effectively or efficiently: including not using additional resources causing excessive delays, or not communicating with patient, partner, or bystander that would have benefitted patient care."
+   }
+  },
+  {
+   "id": "spo2-caveat",
+   "check": "present",
+   "event": "spo2-distrusted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "pulse-oximetry",
+    "weight": 3,
+    "errorEn": "Reported SPO2 is inconsistent with patient's presentation without comment by candidate (e.g. candidate does not notice, or verbalize an incorrect reading)"
+   }
+  },
+  {
+   "id": "no-ondansetron-for-pregnant-mother",
+   "check": "absent",
+   "event": "ondansetron-to-pregnant-mother",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-entonox",
+   "check": "absent",
+   "event": "entonox-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-scope",
+   "check": "absent",
+   "event": "emr-pcp-treatment",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "45-year-old male, the most symptomatic of four patients from one household",
+  "cc": "headache, nausea and dizziness from suspected carbon monoxide exposure",
+  "moi": null,
+  "hxcc": "whole household sick from about 1900; furnace running constantly for two days; CO alarm chirping since dinner; fire measured 380 ppm near the furnace closet; all improved within minutes outside; father has a band-like headache 8/10 at worst, vomited twice, dizzy on standing",
+  "vitals": "GCS 15, BP 138/88, pulse 104 strong regular, resp 20, temp 36.8 C, SpO2 99% treated as unreliable in CO exposure; latest BP 132/84, pulse 96, resp 18, headache 5/10",
+  "treatments": "high-flow oxygen 15 L by non-rebreather for all four patients, kept warm outside, second ambulance, all four transported; ETA 15 minutes",
+  "findings": "father: no focal neurological deficit, chest clear, afebrile, no chest pain; also incoming with the second crew: the 43-year-old mother who is 12 weeks pregnant with moderate headache and nausea, and two children aged 9 and 7 with mild headaches, all stable on oxygen"
+ },
+ "handoffFacts": {
+  "ageSex": "45-year-old male (the father), one of four patients from a single household CO exposure",
+  "cc": "band-like headache with nausea, vomiting and dizziness from suspected carbon monoxide poisoning",
+  "moi": null,
+  "hxcc": "symptoms in all four occupants from about 1900; furnace running continuously for two days, last serviced years ago; CO alarm chirping since dinner; fire measured 380 ppm near the furnace closet; family dog lethargic; father: headache 8/10 at worst, vomited twice, dizzy on standing; everyone improved within minutes outside; no fever, cough or sore throat in the household",
+  "initialVitals": "GCS 15 (E4 V5 M6), BP 138/88, pulse 104 strong regular, resp 20 unlaboured, skin normal to slightly flushed warm dry, pupils equal and reactive, SpO2 99% (documented as unreliable in CO exposure), temp 36.8 C",
+  "finalVitals": "GCS 15, BP 132/84, pulse 96 strong regular, resp 18, skin normal warm dry, pupils equal and reactive, SpO2 99% (still unreliable), headache 5/10, no further vomiting",
+  "pmhx": "none",
+  "meds": "none",
+  "allergies": "none",
+  "treatments": "staged outside, no entry until fire cleared the house; high-flow oxygen 15 L by non-rebreather from arrival, never titrated by oximetry; kept warm; suction available; second ambulance requested; all four transported for evaluation",
+  "findings": "alert, no focal neurological deficit, chest clear, mild epigastric tenderness after vomiting, afebrile; mother 12 weeks pregnant with moderate headache and nausea, children 9 and 7 with mild headaches, all on oxygen and stable"
+ },
+ "pcrFacts": {
+  "cc": "Headache, nausea and dizziness in all four occupants of a CO-contaminated townhouse",
+  "hxcc": "Symptoms from ~1900 in all occupants, band-like headache 8/10 in the father with two vomits; furnace running two days, CO alarm chirping since dinner, fire measured 380 ppm; all improved within minutes outside; no fever, cough or sore throat in the household",
+  "pmhx": "Father: none. Mother: 12 weeks pregnant. Children: healthy",
+  "meds": "None",
+  "allergies": "None",
+  "vitals": "Father: GCS 15, BP 138/88, pulse 104, resp 20, temp 36.8 C, SpO2 99% (unreliable in CO); then BP 132/84, pulse 96, resp 18, SpO2 99%",
+  "treatments": [
+   "Staged outside; no crew entry until fire cleared the structure; family evacuation confirmed",
+   "High-flow oxygen 15 L by non-rebreather to all four patients, maintained through transport",
+   "SpO2 documented as unreliable in CO exposure; oxygen never titrated by oximetry",
+   "Second ambulance requested; patients split with a parent accompanying each child",
+   "Warmth outside; suction available for the vomiting father",
+   "All four transported for evaluation - pregnancy flagged to the receiving hospital"
+  ],
+  "findings": [
+   "Whole-household simultaneous onset improving with fresh air - consistent with CO, not infection or food poisoning",
+   "Fire department CO reading 380 ppm near the furnace closet; lethargic dog corroborates",
+   "Father: GCS 15 throughout, no focal deficits, afebrile, headache 8/10 improving to 5/10 on oxygen",
+   "SpO2 99% on room air - documented as unreliable",
+   "No unstable criteria in any patient; upgrade triggers stated and monitored"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR delivers the whole treatment: recognizing the household exposure pattern, staging outside, confirming evacuation, high-flow oxygen by non-rebreather at 15 L for every exposed patient with the SpO2 explicitly distrusted, warmth, airway watch with suction for the vomiting father, a second ambulance and transport of all four. No medication is indicated at EMR level - oxygen is the drug. No Functional Enquiry.",
+  "pcpEn": "PCP adds the 9-system Functional Enquiry and may treat the father's nausea after baseline vitals (dimenhydrinate 1 mg/kg to a maximum of 50 mg IV or IM, or ondansetron 4 mg PO); ondansetron has a relative contraindication in the first-trimester mother. Oxygen management is identical to EMR."
+ },
+ "sourcePages": "Scenario emd-04 (data/practical/emr-medical-1.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing, handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (none present - non-RTC); p.9 Rescue Scene Evaluation (hazards, environment, MOI, people, additional resources); p.48 Nausea - Vomiting PCP (position of comfort, suction ready, consider dimenhydrinate or ondansetron, stable patients may be treated on scene); p.50 Oxygen Administration (a non-rebreather mask is indicated for carbon monoxide poisoning; CO poisoning requires high-flow O2); p.63 Dimenhydrinate (1 mg/kg to a maximum of 50 mg, IV diluted over 2 minutes or IM; caution pregnancy); p.65 Entonox (relief of pain; not the treatment here); p.75 Ondansetron (4 mg PO adult; relative contraindication in first trimester pregnancy).",
+ "keywordEvents": [
+  {
+   "event": "oxygen",
+   "regex": "\\b(non[- ]?re-?breathers?|nrbs?|high[- ]flow (o2|oxygen)|15 ?(l|lpm|litres?|liters?)\\b|(o2|oxygen) (is )?(on|at 15|via|by)\\b)",
+   "blockRegex": "\\b(no|not|don'?t|doesn'?t|won'?t|without|withh?old\\w*|hold(ing)? off|remov\\w*|take (it|the mask) off|turn\\w* (it |the oxygen )?down|titrat\\w*|if)\\b"
+  },
+  {
+   "event": "second-ambulance-requested",
+   "regex": "\\b(second|another|additional|extra|more|2nd|backup|back-up)\\s+(ambulances?|units?|crews?|cars?|trucks?|rigs?|resources|als|bls)\\b|\\b(request\\w*|call\\w*|need|get|send|order\\w*)\\b[^.]{0,30}\\b(backup|back-up|ambulances|units)\\b",
+   "blockRegex": "\\b(cancel\\w*|don'?t need|no need|not needed)\\b"
+  },
+  {
+   "event": "spo2-distrusted",
+   "regex": "\\b(carboxy\\w*|cohb|co-?oximetr\\w*)\\b|\\b(spo2|sats?|saturations?|pulse ?ox\\w*|oximet\\w*|99)\\b[^.]{0,60}\\b(unreliable|not reliable|(can['’]?t|cannot|can not|don['’]?t|do not) (trust|rely|be trusted|be relied)|false\\w*|inaccurate|not accurate|misleading|meaningless|useless|(can['’]?t|cannot|doesn['’]?t|does not|won['’]?t) (tell|distinguish|differentiate|detect|see|read))\\b|\\b(unreliable|(can['’]?t|cannot|don['’]?t) trust|misleading|falsely (high|normal|reassuring))\\b[^.]{0,40}\\b(spo2|sats?|saturations?|pulse ?ox\\w*|oximet\\w*|reading)\\b"
+  }
+ ]
+}

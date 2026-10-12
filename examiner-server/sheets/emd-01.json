@@ -1,0 +1,1366 @@
+{
+ "id": "emd-01",
+ "titleEn": "Witnessed Collapse in a Gym - Adult Cardiac Arrest, CPR and AED",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/emr-medical-1.json#emd-01",
+ "patient": {
+  "name": "Walter Brandt",
+  "age": 68,
+  "sex": "male",
+  "affectEn": "in cardiac arrest on arrival: motionless on his back on a gym mat, skin grey, chest moving only with the bystander compressions; after ROSC he stays unresponsive (GCS 3, later 4) with slow, inadequate breaths that need BVM assistance",
+  "speechEn": "no speech at any point - he is unresponsive throughout. History comes from his wife (distraught and tearful, but answers what she is asked) and from the gym staff."
+ },
+ "scene": {
+  "settingEn": "Community recreation centre gym in Kamloops, 0715 hrs. Bright, open gym floor; the equipment has been pushed aside and the floor is dry. The patient lies supine on a rubber mat. A staff member is doing chest compressions; a second staff member is arriving with the wall-mounted AED. His wife stands nearby, distraught. Fire first responders are about 3 minutes out; the nearest PCP car is 8 minutes behind you; Royal Inland Hospital is 10 minutes away. One patient.",
+  "hazardsEn": [
+   "none identified - bright, dry, open gym floor with the equipment pushed aside"
+  ],
+  "bystanders": [
+   {
+    "who": "wife",
+    "knowsEn": "He said his chest felt heavy while he was warming up at about 0700, and at 0710 he grabbed his chest and went down onto the mat. The staff started CPR within about a minute and nobody stopped. History: heart attack in 2021 with two stents, high blood pressure, high cholesterol; he has had angina since 2021 and the episodes were more frequent this past week - he saw his GP two days ago. Medications: metoprolol, atorvastatin and a low-dose Aspirin every day. No known allergies. Toast and coffee at 0630. TRAP: she says \"He always said he wouldn't want machines keeping him alive.\" There is NO written DNR or No-CPR order - if asked for one or for any paperwork: \"No. There's nothing written down. He just always said that.\" She does not ask the crew to stop and does not produce any document."
+   },
+   {
+    "who": "gym staff member (doing compressions)",
+    "knowsEn": "Saw him collapse at 0710 and started compressions within about a minute; has not stopped since. He has not used the AED yet - his co-worker is just bringing the wall-mounted one over. Will keep compressing until told to stop and will follow instructions exactly."
+   },
+   {
+    "who": "second gym staff member",
+    "knowsEn": "Brought the wall-mounted AED. Knows nothing more about the patient. Will hold doors, clear space or fetch things if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "AED (yours; the gym's wall-mounted AED is also arriving with staff)",
+   "adult BVM with oxygen reservoir and tubing",
+   "oropharyngeal airways (sized set)",
+   "portable suction unit",
+   "oxygen kit with non-rebreather mask",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "blankets",
+   "stretcher (cot)",
+   "ASA chewable tablets",
+   "PCP only: supraglottic airway and IV start kit"
+  ]
+ },
+ "dispatchEn": "0715 hrs. Code 3 to a community recreation centre gym in Kamloops. A 68-year-old man has collapsed mid-workout. Staff are performing CPR and the wall-mounted AED is being brought over. Fire first responders are 4 minutes out. Royal Inland Hospital is 10 minutes away; the nearest PCP car is 8 minutes behind you.",
+ "dispatchUpdateEn": "Dispatch adds: the collapse was witnessed by staff at 0710, bystander CPR started within about a minute, and the caller states the patient is not breathing normally. His wife is on scene.",
+ "arrivalEn": "Gym staff wave you across a bright, open gym floor; the equipment has been pushed aside and the floor is dry. A man lies on his back on a rubber mat while a staff member does chest compressions; a second staff member is hurrying over with the wall-mounted AED. His wife stands nearby, distraught: \"He grabbed his chest and went down.\" Fire is about 3 minutes out. One patient, no hazards.",
+ "firstLookEn": "An older man lying motionless on his back on a rubber mat, skin grey. His chest moves only with the staff member's compressions. The AED is just arriving.",
+ "primary": {
+  "locEn": "Unresponsive: no response to voice and no response to a painful stimulus (AVPU = U). He cannot protect his own airway.",
+  "airwayEn": "Airway clear: no vomit, no secretions, nothing in the mouth. He cannot keep it open himself; once the head is tilted and an OPA is sized and inserted, it is tolerated. Keep suction within reach.",
+  "breathingEn": "DURING THE ARREST: when compressions pause for the check there are only occasional gasping (agonal) breaths - not effective breathing. With BVM ventilations the chest rises when the candidate looks for it. AFTER ROSC: respirations 6 per minute, agonal and inadequate - the breathing must still be assisted with the BVM at 10-12 per minute.",
+  "circulationEn": "DURING THE ARREST: NO carotid pulse (breathing and carotid pulse checked together, no more than 10 seconds). No external bleeding. Every pulse check before the engine announces signs of life finds NO pulse; a pulse check during the arrest is the circulation assessment, not a vital sign. AED (give the device prompt only when the candidate turns it on and analyzes): first analysis - \"Shock advised\"; second analysis, after 2 minutes of CPR - \"Shock advised\". AFTER the engine announces signs of life (ROSC): a carotid pulse check finds a pulse of 108, regular; a weak radial pulse is present. Any analysis after ROSC - \"No shock advised\".",
+  "rbsEn": "Modified rapid body survey during CPR: no hemorrhage anywhere; no medical-alert bracelet on either wrist; a chain around his neck carries a medic-alert tag on his chest that reads \"CAD - stents\". Nothing else of note. Skin is grey, cool and diaphoretic (skin is given automatically during the RBS).",
+  "skinEn": "grey, cool, diaphoretic"
+ },
+ "history": {
+  "ccEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He grabbed his chest and went down. His chest had been feeling heavy while he warmed up.\"",
+  "opqrst": {
+   "oEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He was warming up, about seven o'clock, and said his chest felt heavy. Then at ten past seven he grabbed his chest and collapsed onto the mat.\"",
+   "pEn": "(He cannot answer - he is unresponsive. His wife answers:) \"I don't know. Nothing that I saw.\"",
+   "qEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He said it was heavy. His chest felt heavy.\"",
+   "rEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He didn't say it went anywhere.\"",
+   "sEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He didn't give it a number. He just said heavy.\"",
+   "tEn": "(He cannot answer - he is unresponsive. His wife answers:) \"It started around seven, then he went down at ten past. The staff started CPR within about a minute, and nobody stopped.\""
+  },
+  "painScoreEn": "(The patient is unresponsive - no pain score can be obtained in this scenario.)",
+  "sample": {
+   "sEn": "(He cannot answer - he is unresponsive. His wife answers:) \"His chest felt heavy, and then he just collapsed.\"",
+   "aEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No allergies that we know of.\"",
+   "mEn": "(He cannot answer - he is unresponsive. His wife answers:) \"Metoprolol, atorvastatin, and a low-dose Aspirin every day.\"",
+   "pEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He had a heart attack in 2021 and they put in two stents. High blood pressure and high cholesterol.\"",
+   "lEn": "(He cannot answer - he is unresponsive. His wife answers:) \"Toast and coffee at half past six this morning.\"",
+   "eEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He was warming up at the gym. He said his chest felt heavy, then he grabbed it and went down on the mat. The staff started CPR straight away and brought the AED.\""
+  },
+  "fe": {
+   "generalEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He was well until this morning.\"",
+   "cnsEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No seizures, no strokes.\"",
+   "respiratoryEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No breathing problems.\"",
+   "cardiovascularEn": "(He cannot answer - he is unresponsive. His wife answers:) \"He's had angina since the heart attack in 2021, and this past week the episodes were coming more often. He saw his GP two days ago.\"",
+   "giGuEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No, nothing like that.\"",
+   "integumentaryEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No, nothing like that.\"",
+   "musculoskeletalEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No, nothing like that.\"",
+   "endocrineEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No diabetes.\"",
+   "eentEn": "(He cannot answer - he is unresponsive. His wife answers:) \"No, nothing like that.\""
+  }
+ },
+ "findings": {
+  "headNeckEn": "Small abrasion on the back of the head (occiput) from the fall onto the mat; no depression, no deformity. Trachea midline, no JVD. Medic-alert chain around the neck (\"CAD - stents\").",
+  "chestLungsEn": "Crepitus over the sternum, consistent with CPR. Equal air entry with the BVM ventilations. No wounds.",
+  "abdomenEn": "Soft and slightly distended (air from the ventilations). No other findings.",
+  "backEn": "Checked during the transfer to the stretcher: no findings.",
+  "lowerExtremitiesEn": "No injuries. Pedal pulses present.",
+  "upperExtremitiesEn": "No injuries. Radial pulses now present bilaterally."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "immediately post-ROSC - the first set; no vital signs exist during the arrest (CPR and the AED come first)",
+   "gcs": {
+    "total": 3,
+    "e": 1,
+    "v": 1,
+    "m": 1
+   },
+   "bp": "92/58",
+   "pulse": {
+    "rate": 108,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "108 weak regular (carotid and radial)"
+   },
+   "resp": {
+    "rate": 6,
+    "depth": "inadequate",
+    "character": "agonal; being assisted with the BVM at 10-12 per minute",
+    "rawEn": "6 agonal, assisted at 10-12/min"
+   },
+   "skin": "grey cool diaphoretic",
+   "pupils": "equal, sluggish",
+   "spo2": "91% assisted on 15 L, rising",
+   "bgl": "7.2 mmol/L",
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "anyOf": [
+       {
+        "afterEvent": "move:load"
+       },
+       {
+        "elapsedMs": 900000
+       }
+      ]
+     }
+    ]
+   },
+   "unlockNoteEn": "en route, about 7 minutes after set 1 - improving but at high risk of re-arrest",
+   "gcs": {
+    "total": 4,
+    "e": 1,
+    "v": 1,
+    "m": 2
+   },
+   "bp": "104/64",
+   "pulse": {
+    "rate": 96,
+    "rhythm": "regular",
+    "strength": "stronger",
+    "rawEn": "96 stronger regular"
+   },
+   "resp": {
+    "rate": 8,
+    "depth": "inadequate",
+    "character": "spontaneous but still inadequate; still assisted with the BVM",
+    "rawEn": "8 spontaneous, still assisted"
+   },
+   "skin": "pale, warming",
+   "pupils": "equal, reacting",
+   "spo2": "96% assisted on 15 L",
+   "bgl": "7.2 mmol/L",
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "fire-arrives",
+   "when": {
+    "elapsedMs": 180000
+   },
+   "examinerLineEn": "Fire first responders arrive and are ready to help on your direction."
+  },
+  {
+   "id": "wife-verbal-dnr",
+   "when": {
+    "elapsedMs": 240000
+   },
+   "examinerLineEn": "His wife, crying, says: \"He always said he wouldn't want machines keeping him alive.\""
+  },
+  {
+   "id": "rosc",
+   "when": {
+    "afterEvent": "aed-second-shock"
+   },
+   "examinerLineEn": "As compressions resume after the second shock, the patient coughs and moves his arm."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge and plan resuscitation equipment to the patient's side: AED, oxygen, BVM, oropharyngeal airways, suction, and the stretcher",
+   "triggers": [
+    "bring the AED, BVM and suction",
+    "everything to the patient's side",
+    "bring the airway kit and the stretcher",
+    "AED, oxygen, BVM, OPAs and suction",
+    "resuscitation gear to the patient"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Assign crew roles before arrival - who takes compressions, who manages the airway and AED - and plan to rotate compressors every 2 minutes",
+   "triggers": [
+    "I'll take compressions",
+    "you take the airway",
+    "assign roles",
+    "partner, you're on the BVM",
+    "rotate compressors every 2 minutes",
+    "who does compressions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize from dispatch that this is a witnessed arrest with early bystander CPR - a potentially shockable rhythm - and plan to run the resuscitation on scene rather than moving the patient early",
+   "triggers": [
+    "witnessed arrest",
+    "possibly a shockable rhythm",
+    "shockable rhythm",
+    "bystander CPR within a minute",
+    "run the resuscitation on scene",
+    "plan to work him on scene"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment (indoor, dry), nature of illness (witnessed medical collapse with chest pain - suspected cardiac arrest), people (one patient, bystanders performing CPR) and resources (fire for CPR manpower, PCP car en route)",
+   "triggers": [
+    "scene is safe",
+    "no hazards",
+    "one patient",
+    "nature of illness is cardiac arrest",
+    "bystanders doing CPR",
+    "fire for extra hands"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection before taking over patient contact",
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "BSI",
+    "PPE on",
+    "gloves and goggles"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: older man, motionless, skin grey, no chest movement apart from compressions; direct the bystander to continue CPR until your crew is positioned to take over without a gap",
+   "triggers": [
+    "general impression",
+    "first impression",
+    "he's grey and not moving",
+    "keep doing compressions until we take over",
+    "continue CPR while we set up",
+    "keep going with CPR"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC: unresponsive to voice and pain - U on AVPU",
+   "triggers": [
+    "AVPU",
+    "can you hear me",
+    "level of consciousness",
+    "trapezius squeeze",
+    "sternal rub",
+    "painful stimulus"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Confirm cardiac arrest correctly: assess breathing and the carotid pulse simultaneously, taking no more than 10 seconds, and treat gasping breaths as not breathing",
+   "triggers": [
+    "carotid and breathing at the same time",
+    "check pulse and breathing together",
+    "no more than 10 seconds",
+    "simultaneous pulse and breathing check",
+    "gasping is not breathing",
+    "carotid pulse check"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Take over high-quality compressions with no gap: rate 100-120 per minute, depth 5-6 cm, full recoil after each compression, interruptions kept under 5 seconds",
+   "triggers": [
+    "take over compressions",
+    "start compressions",
+    "I'm on compressions",
+    "begin CPR",
+    "starting CPR",
+    "taking over CPR"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Open the airway, insert an oropharyngeal airway, and keep suction within reach; ventilate at a 30:2 ratio with a BVM without over-ventilating",
+   "triggers": [
+    "open the airway",
+    "head tilt chin lift",
+    "insert an OPA",
+    "oral airway in",
+    "suction ready",
+    "suction within reach"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Attach oxygen to the BVM as soon as practical, but never delay compressions or the first ventilations to connect oxygen",
+   "triggers": [
+    "oxygen to the BVM",
+    "hook up oxygen",
+    "connect O2 to the bag",
+    "15 litres to the BVM",
+    "BVM on oxygen"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Position the AED and analyze as soon as it is available - CPR continues while the pads go on and while the AED charges",
+   "triggers": [
+    "pads on",
+    "attach the AED",
+    "apply the pads",
+    "turn on the AED",
+    "analyze the rhythm",
+    "AED is analyzing"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Complete a modified rapid body survey during CPR: check for hemorrhage and medical-alert identification, and report the 'CAD - stents' tag",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "check for bleeding",
+    "medic alert",
+    "medical alert"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note the skin: grey, cool, diaphoretic",
+   "triggers": [
+    "skin colour temperature condition",
+    "feel his skin",
+    "skin signs",
+    "he's cool and clammy",
+    "skin is grey"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize the on-scene resuscitation decision: adult arrest is worked where he lies because moving the patient degrades CPR quality; state the exceptions (paediatric, hypothermia, trauma, treatable causes)",
+   "triggers": [
+    "we work him where he lies",
+    "moving him degrades CPR",
+    "CPR is better stationary",
+    "no transport during the arrest",
+    "exceptions are paediatric, hypothermia, trauma",
+    "resuscitate here on scene"
+   ]
+  },
+  {
+   "itemId": "skill-cpr-aed",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Deliver single shocks with CPR resumed immediately after each, and continue compressions while the AED is charging",
+   "triggers": [
+    "shock delivered",
+    "resume CPR immediately",
+    "everyone clear",
+    "compress while it charges",
+    "continue compressions while charging",
+    "single shock"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize ROSC from signs of life, confirm the carotid pulse, and re-categorize as an unstable post-ROSC patient: RTC, ready to load within 15 minutes, AED still attached",
+   "triggers": [
+    "signs of life",
+    "we have ROSC",
+    "return of spontaneous circulation",
+    "he's coughing, pulse check",
+    "stop compressions, check a pulse",
+    "he's now RTC"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Arrange the PCP intercept en route instead of waiting on scene",
+   "triggers": [
+    "PCP intercept",
+    "meet the PCP car en route",
+    "intercept with the PCP",
+    "don't wait for the PCP",
+    "rendezvous with the PCP"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish the chief complaint from collateral sources: witnessed collapse with cardiac arrest, preceded by chest heaviness",
+   "triggers": [
+    "what happened to him",
+    "chief complaint",
+    "tell me what happened",
+    "why did he go down",
+    "what's going on with him"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Take the HxC/C from the wife: exact time of collapse, symptoms before it, whether CPR was immediate, and any down time without CPR",
+   "triggers": [
+    "what time did he collapse",
+    "when did he go down",
+    "how long was he down",
+    "how soon was CPR started",
+    "any time without CPR",
+    "did he complain of anything before"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "history",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Handle the DNR statement correctly: a verbal recollection is not a verifiable DNR - state that resuscitation continues, respectfully, and ask whether any written order exists",
+   "triggers": [
+    "is there a written DNR",
+    "do you have a DNR",
+    "no-CPR order",
+    "any paperwork",
+    "we will continue resuscitation",
+    "without a written order"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Past medical history",
+   "triggers": [
+    "medical history",
+    "any heart problems",
+    "past history",
+    "has he had a heart attack",
+    "any stents"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications",
+   "triggers": [
+    "what medications",
+    "does he take any medications",
+    "any pills",
+    "blood thinners",
+    "meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Last oral intake",
+   "triggers": [
+    "when did he last eat",
+    "last oral intake",
+    "last meal",
+    "anything to eat or drink",
+    "LOI"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with all three components stated separately",
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor",
+    "E1 V1 M1"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Blood pressure by auscultation - a systolic of 92 post-ROSC needs close tracking",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "cuff on",
+    "auscultate a pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate, rhythm and quality at the carotid and radial",
+   "triggers": [
+    "pulse rate",
+    "carotid and radial",
+    "rate rhythm and strength",
+    "heart rate"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respiratory rate and adequacy - 6 agonal breaths per minute is inadequate and assisted ventilation must continue",
+   "triggers": [
+    "resp rate",
+    "respirations",
+    "count his breaths",
+    "rate depth and character"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin colour, temperature and moisture assessed hands-on",
+   "triggers": [
+    "skin",
+    "colour temperature moisture",
+    "feel his skin",
+    "skin condition"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils - size, equality and reaction",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "penlight",
+    "check his pupils"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 monitored continuously during assisted ventilation, target 94% or above",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Blood glucose - indicated in every unconscious patient",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "blood sugar",
+    "glucometer"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "was he well before today",
+    "any recent illness",
+    "how has he been lately"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any seizures",
+    "any strokes",
+    "neuro history",
+    "weakness or numbness"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "any breathing problems",
+    "any cough",
+    "short of breath lately",
+    "respiratory history"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular (worsening angina this week is the key positive)",
+   "triggers": [
+    "any chest pain before",
+    "angina",
+    "palpitations",
+    "more episodes this week",
+    "heart symptoms lately"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU",
+   "triggers": [
+    "nausea or vomiting",
+    "bowels",
+    "urine",
+    "stomach problems"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "rash",
+    "skin problems",
+    "bruising",
+    "skin changes"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "joint problems",
+    "musculoskeletal",
+    "muscle or bone problems",
+    "any injuries recently"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "thyroid",
+    "blood sugar problems"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision changes",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head and neck examined, including the occiput for injury from the collapse",
+   "triggers": [
+    "head and neck",
+    "back of the head",
+    "occiput",
+    "check the scalp",
+    "JVD",
+    "trachea midline"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest examined with auscultation during ventilations; document the CPR-related sternal crepitus without stopping compressions-quality care",
+   "triggers": [
+    "auscultate the chest",
+    "listen to the lungs",
+    "chest exam",
+    "palpate the chest",
+    "six sites"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen examined in four quadrants; note gastric distension and keep suction ready",
+   "triggers": [
+    "abdomen",
+    "four quadrants",
+    "palpate the abdomen",
+    "abdominal exam",
+    "gastric distension"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back examined during the stretcher transfer",
+   "triggers": [
+    "check his back",
+    "back exam",
+    "palpate the spine",
+    "look at the back"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities examined with pulses reassessed",
+   "triggers": [
+    "upper extremities",
+    "radial pulses both sides",
+    "check his arms",
+    "compare radials"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities examined with pulses reassessed",
+   "triggers": [
+    "lower extremities",
+    "pedal pulses",
+    "check his legs",
+    "check his feet"
+   ]
+  },
+  {
+   "itemId": "skill-cpr-aed",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "CPR/AED skill performed to standard: correct hand position, rate 100-120, depth 5-6 cm, full recoil, operators switched every 2 minutes, compressions continued while the AED charges",
+   "triggers": [
+    "100 to 120",
+    "100-120",
+    "5 to 6 centimetres",
+    "5 to 6 cm",
+    "full recoil",
+    "hand position",
+    "switch compressors"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway management: OPA sized and inserted, suction used correctly for no more than 10-15 seconds per pass",
+   "triggers": [
+    "size the OPA",
+    "measure the OPA",
+    "corner of the mouth to the angle of the jaw",
+    "insert the OPA",
+    "suction 10 to 15 seconds",
+    "suction for no more than 15 seconds"
+   ]
+  },
+  {
+   "itemId": "skill-breathing-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Breathing management: two-person BVM technique with visible chest rise confirmed, 30:2 during the arrest, then 10-12 per minute after ROSC without hyperventilation",
+   "triggers": [
+    "two-person BVM",
+    "two person bag",
+    "good chest rise",
+    "chest rise with each breath",
+    "30 to 2",
+    "30:2"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Post-ROSC bundle: AED left attached, oxygen titrated to SpO2 at or above 94%, patient kept supine and warm, and the crew briefed to restart CPR immediately if the pulse is lost",
+   "triggers": [
+    "leave the AED attached",
+    "keep the pads on",
+    "AED stays on",
+    "keep him warm",
+    "titrate to 94",
+    "post-ROSC care"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "emr",
+   "actionEn": "EMR: Verbalize that supraglottic airways and IV medications are outside EMR scope; transport with the PCP intercept en route",
+   "triggers": [
+    "outside my scope",
+    "SGA is outside EMR scope",
+    "no IV for EMR",
+    "the PCP will do the IV",
+    "supraglottic is PCP"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs and all interventions after each move and at least every 5 minutes, with the carotid pulse specifically re-checked",
+   "triggers": [
+    "reassess ABCs",
+    "recheck ABCs",
+    "reassessing airway breathing circulation",
+    "ABCs after the move",
+    "airway breathing circulation and interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes of the first, with the improving trend interpreted out loud",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set",
+    "reassess vitals"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Continue assisted ventilation while spontaneous respirations remain inadequate at 8 per minute",
+   "triggers": [
+    "keep bagging",
+    "continue assisted ventilations",
+    "keep ventilating",
+    "continue ventilating",
+    "keep assisting his breathing",
+    "still needs assisted ventilations"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State the re-arrest plan: if any reassessment finds no pulse, compressions restart immediately and the AED analyzes",
+   "triggers": [
+    "if he loses his pulse",
+    "if he re-arrests",
+    "if he arrests again",
+    "if we lose the pulse",
+    "if the pulse is lost"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route hospital notification with the arrest and ROSC summary",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "radio the hospital",
+    "call ahead"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete verbal hand-off with times: collapse, CPR start, shocks, ROSC, and both vital sign sets",
+   "triggers": [
+    "hand-off report",
+    "handover",
+    "report to the nurse",
+    "this is a 68-year-old male",
+    "ROSC at"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR completed within 5 minutes",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "documentation",
+    "charting"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "aed-analysis",
+   "descriptionEn": "candidate turns on the AED / attaches the pads and has it analyze the rhythm (personally or by delegating)"
+  },
+  {
+   "key": "aed-second-shock",
+   "descriptionEn": "the SECOND AED shock of this call is delivered (by the candidate or on their instruction). Record it only for the second shock - not for the first shock and not for an analysis without a shock"
+  },
+  {
+   "key": "agonal-treated-as-breathing",
+   "descriptionEn": "candidate treats the occasional gasping (agonal) breaths as breathing - e.g. says he is breathing, puts him in the recovery position, or does not start or continue CPR because of them"
+  },
+  {
+   "key": "compressions-with-pulse",
+   "descriptionEn": "AFTER the examiner has described signs of life (coughing, moving), the candidate continues or restarts chest compressions in a later line without first checking for a pulse, or continues compressions after a pulse has been found. Never record this for the candidate line that the signs-of-life description was answering"
+  },
+  {
+   "key": "verbal-dnr-accepted",
+   "descriptionEn": "candidate stops, pauses or withholds resuscitation, or says they will, because of the wife's verbal statement about machines (no written DNR or No-CPR order exists)"
+  },
+  {
+   "key": "transport-during-arrest",
+   "descriptionEn": "candidate moves the patient onto the stretcher or into the ambulance, or starts transport, while he is still in cardiac arrest (before signs of life and a pulse)"
+  },
+  {
+   "key": "compressions-paused-for-charging",
+   "descriptionEn": "candidate stops compressions, or has everyone stand clear / hands off, while the AED is CHARGING (hands-off is correct only for the analysis and for the shock itself)"
+  },
+  {
+   "key": "cpr-interrupted",
+   "descriptionEn": "candidate stops compressions to place the pads, connect oxygen, insert the OPA or suction, or stops them for a pulse/breathing check that lasts longer than 10 seconds"
+  },
+  {
+   "key": "o2-before-ventilation",
+   "descriptionEn": "candidate delays the first ventilations (or the compressions) to connect oxygen to the BVM first"
+  },
+  {
+   "key": "hyperventilation",
+   "descriptionEn": "after ROSC, candidate ventilates clearly faster than 10-12 per minute (e.g. 20 or more a minute, or rapid continuous squeezing of the bag)"
+  },
+  {
+   "key": "assisted-ventilation-stopped",
+   "descriptionEn": "after ROSC, candidate stops assisting the ventilations (e.g. takes the BVM off and switches to a non-rebreather or nasal cannula) while his own respirations are still 6-8 per minute and inadequate"
+  },
+  {
+   "key": "aed-removed",
+   "descriptionEn": "after ROSC, candidate removes the AED pads, switches the AED off or packs it away"
+  },
+  {
+   "key": "chest-rise-confirmed",
+   "descriptionEn": "candidate verbalizes checking for or seeing chest rise with the BVM ventilations (or another sign that the ventilations are effective)"
+  },
+  {
+   "key": "emr-inserts-sga",
+   "descriptionEn": "an EMR-level candidate inserts a supraglottic airway (i-gel, King LT or similar) - outside EMR scope. Saying that an SGA is outside EMR scope, or that the PCP will place one, is NOT this event"
+  },
+  {
+   "key": "sga-before-cpr-established",
+   "descriptionEn": "PCP candidate stops or delays compressions or the AED analysis to insert the supraglottic airway before high-quality CPR and the AED are established"
+  },
+  {
+   "key": "asa-given",
+   "descriptionEn": "candidate actually gives ASA to this unresponsive patient (record drug:asa as well). Asking or deciding whether ASA is indicated, or saying it is contraindicated, is NOT this event"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "asa",
+   "namesEn": [
+    "ASA",
+    "aspirin",
+    "acetylsalicylic acid",
+    "baby aspirin"
+   ],
+   "doseEn": "WITHHELD in this scenario: 160 mg PO chewed is only for a patient who can chew and swallow - this patient is unresponsive (contraindication: inability to swallow). If it is actually given, record drug:asa and asa-given.",
+   "licence": "both"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "aed-used",
+   "check": "present",
+   "event": "aed-analysis",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-compressions-with-pulse",
+   "check": "absent",
+   "event": "compressions-with-pulse",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "gasps-are-not-breathing",
+   "check": "absent",
+   "event": "agonal-treated-as-breathing",
+   "licence": "both",
+   "deduct": {
+    "itemId": "circulation",
+    "weight": 100,
+    "errorEn": "Determines absent patient pulses but then does not intervene immediately (e.g., does not start CPR, does not position for hypotension at any time)"
+   }
+  },
+  {
+   "id": "no-stop-for-verbal-dnr",
+   "check": "absent",
+   "event": "verbal-dnr-accepted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "circulation",
+    "weight": 100,
+    "errorEn": "Determines absent patient pulses but then does not intervene immediately (e.g., does not start CPR, does not position for hypotension at any time)"
+   }
+  },
+  {
+   "id": "no-intra-arrest-transport",
+   "check": "absent",
+   "event": "transport-during-arrest",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "compress-while-charging",
+   "check": "absent",
+   "event": "compressions-paused-for-charging",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-cpr-aed",
+    "weight": 15,
+    "errorEn": "Does not continue chest compressions while AED is charging"
+   }
+  },
+  {
+   "id": "minimal-cpr-interruptions",
+   "check": "absent",
+   "event": "cpr-interrupted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-cpr-aed",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "ventilate-before-oxygen-hookup",
+   "check": "absent",
+   "event": "o2-before-ventilation",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-breathing-mgmt",
+    "weight": 10,
+    "errorEn": "Prioritizes connecting oxygen before starting ventilations."
+   }
+  },
+  {
+   "id": "no-hyperventilation",
+   "check": "absent",
+   "event": "hyperventilation",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-breathing-mgmt",
+    "weight": 15,
+    "errorEn": "Ventilates at a rate not appropriate for patient"
+   }
+  },
+  {
+   "id": "keep-assisting-inadequate-breathing",
+   "check": "absent",
+   "event": "assisted-ventilation-stopped",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "aed-left-attached",
+   "check": "absent",
+   "event": "aed-removed",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "chest-rise-checked",
+   "check": "present",
+   "event": "chest-rise-confirmed",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-breathing-mgmt",
+    "weight": 25,
+    "errorEn": "Does not assess effectiveness of ventilations (e.g. attempts to ventilate patient but does not confirm chest rise, or other indications of effective ventilations at any time)"
+   }
+  },
+  {
+   "id": "emr-no-sga",
+   "check": "absent",
+   "event": "emr-inserts-sga",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "pcp-sga-after-cpr-established",
+   "check": "absent",
+   "event": "sga-before-cpr-established",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-airway-mgmt",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-asa-unconscious",
+   "check": "absent",
+   "event": "asa-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "68-year-old male",
+  "cc": "witnessed cardiac arrest, now post-ROSC",
+  "moi": null,
+  "hxcc": "chest heaviness while warming up at 0700, witnessed collapse at 0710, bystander CPR within 1 minute with no down time without CPR; AED advised and delivered two shocks; ROSC at approximately 0722",
+  "vitals": "post-ROSC GCS 3, BP 92/58, pulse 108 weak regular, resp 6 agonal assisted with BVM at 10-12/min, SpO2 91% assisted on 15 L and rising, BGL 7.2; latest GCS 4, BP 104/64, pulse 96, resp 8 still assisted, SpO2 96%",
+  "treatments": "high-quality CPR 30:2, two single shocks, OPA, two-person BVM with oxygen, post-ROSC assisted ventilation at 10-12/min, AED left attached, kept supine and warm; PCP intercept en route; ETA 10 minutes",
+  "findings": "unresponsive with inadequate spontaneous respirations still assisted; medic-alert tag CAD - stents; no verifiable DNR"
+ },
+ "handoffFacts": {
+  "ageSex": "68-year-old male",
+  "cc": "witnessed cardiac arrest at a gym, preceded by chest heaviness",
+  "moi": null,
+  "hxcc": "chest heaviness while warming up at 0700; witnessed collapse at 0710; bystander CPR within one minute; pulselessness confirmed; AED advised two shocks, two delivered; ROSC at approximately 0722 - total downtime about 12 minutes with continuous CPR; no verifiable DNR - his wife raised a verbal recollection only",
+  "initialVitals": "GCS 3 (E1 V1 M1), BP 92/58, pulse 108 weak regular (carotid and radial), resp 6 agonal assisted with BVM at 10-12/min, skin grey cool diaphoretic, pupils equal and sluggish, SpO2 91% assisted on 15 L and rising, BGL 7.2 mmol/L",
+  "finalVitals": "GCS 4 (E1 V1 M2), BP 104/64, pulse 96 stronger regular, resp 8 spontaneous still assisted, skin pale and warming, pupils equal and reacting, SpO2 96% assisted on 15 L",
+  "pmhx": "MI in 2021 with two stents, hypertension, high cholesterol; angina since 2021, more frequent this past week, saw his GP two days ago",
+  "meds": "metoprolol, atorvastatin, low-dose Aspirin daily",
+  "allergies": "no known allergies",
+  "treatments": "high-quality CPR with operators rotated every 2 minutes; AED applied, two single shocks with compressions during charging; OPA, suction ready, two-person BVM with oxygen; post-ROSC assisted ventilation at 10-12/min titrated to SpO2 94% or above; AED still attached; kept supine and warm; last ate at 0630",
+  "findings": "medic-alert tag CAD - stents; sternal crepitus from CPR; small occipital abrasion from the fall; abdomen slightly distended; radial and pedal pulses now present"
+ },
+ "pcrFacts": {
+  "cc": "Witnessed cardiac arrest at 0710, preceded by chest heaviness",
+  "hxcc": "Chest heaviness at 0700 while warming up, witnessed collapse 0710, bystander CPR within 1 minute, no down time without CPR; two shocks delivered, ROSC approximately 0722; worsening angina over the past week per wife",
+  "pmhx": "MI 2021 with two stents, hypertension, hyperlipidemia",
+  "meds": "Metoprolol, atorvastatin, low-dose Aspirin daily",
+  "allergies": "None known",
+  "treatments": [
+   "Pulselessness confirmed with simultaneous breathing and carotid check under 10 seconds",
+   "High-quality CPR 30:2, operators rotated every 2 minutes, interruptions under 5 seconds",
+   "AED applied, two single shocks with compressions during charging, CPR resumed immediately after each",
+   "OPA inserted, suction ready, two-person BVM with oxygen",
+   "Post-ROSC: assisted ventilation 10-12/min titrated to SpO2 94% or above, AED left attached, warmth, supine",
+   "No verifiable DNR - resuscitation continued; wife's verbal statement documented",
+   "RTC transport with PCP intercept en route, hospital notified"
+  ],
+  "findings": [
+   "Unresponsive, agonal respirations, no carotid pulse on arrival",
+   "ROSC at approximately 0722 after two shocks, total downtime about 12 minutes",
+   "GCS 3 improving to 4, spontaneous respirations 8/min still inadequate",
+   "BP 92/58 to 104/64, pulse 108 to 96, SpO2 96% assisted",
+   "Medic-alert tag: CAD - stents; sternal crepitus from CPR; occipital abrasion from the fall"
+  ],
+  "vitals": "Set 1 (immediately post-ROSC): GCS 3 (E1 V1 M1), BP 92/58, P 108 weak regular, R 6 agonal assisted at 10-12/min, skin grey cool diaphoretic, pupils equal sluggish, SpO2 91% assisted on 15 L rising, BGL 7.2 mmol/L. Set 2 (en route, about 7 minutes later): GCS 4 (E1 V1 M2), BP 104/64, P 96 stronger regular, R 8 spontaneous still assisted, skin pale warming, pupils equal reacting, SpO2 96% assisted on 15 L",
+  "times": "chest heaviness 0700; collapse 0710; bystander CPR within 1 minute; two shocks; ROSC approximately 0722"
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "He does not respond to your voice or to a painful stimulus.",
+  "breathingNotDepictedEn": "When compressions pause for your check, there are only occasional gasping breaths. After ROSC his own breathing is slow and agonal - about 6 a minute - and inadequate.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR owns every life-saving intervention in this call: confirming arrest with a simultaneous breathing-and-pulse check under 10 seconds, uninterrupted high-quality compressions with 2-minute rotations, OPA and suction, 30:2 BVM ventilation with oxygen, the full AED sequence with single shocks and compressions during charging, and the post-ROSC bundle - assisted ventilation at 10-12 per minute titrated to SpO2 94% or above, warmth, AED left attached, and rapid transport with a PCP intercept. Supraglottic airways and IV access are outside EMR scope. No Functional Enquiry.",
+  "pcpEn": "PCP adds a supraglottic airway once high-quality arrest management is established, switching to continuous compressions with asynchronous ventilations, plus vascular access en route after ROSC, and the 9-system Functional Enquiry from the wife en route. The AED sequence, compression standards, stopping rules and post-ROSC ventilation targets are identical to EMR."
+ },
+ "sourcePages": "Scenario emd-01 (data/practical/emr-medical-1.json): dispatch, scene, primary (agonal gasps, no carotid pulse, CAD - stents tag), transport (shock advised, ROSC after the second shock, RTC post-ROSC), history (wife's verbal DNR trap, no written order), vitals sets 1-2, FE, exam, interventions, ongoing, handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (cardiac arrest); p.11 primary-survey interventions (performing CPR - absence of carotid pulse; ventilating the non-breathing patient; airway maintenance in decreased LOC); p.13 AVPU; p.40 Adult CPR/AED (breathing and pulse checked simultaneously in no more than 10 seconds, gasping = begin CPR, 30:2, AED as soon as possible, contraindication only a verifiable DNR or No-CPR order, stop at signs of life or 30/40-minute rules); p.42 CPR/AED basic concepts (interruptions under 5 seconds, change operators every 2 minutes, pulse check with ROSC, CPR more effective while stationary - intra-arrest transport only for paediatric, hypothermic, traumatic or treatable causes, early CPR and early defibrillation coexist, full recoil, avoid hyperventilation, SGA for PCPs); p.43 Adult CPR/AED basics (rate 100-120, depth 5.0-6.0 cm, single shocks, resume CPR immediately and during charging, valid DNR); p.45 treatable causes, suction 10-15 seconds in the adult; p.50 Oxygen Administration; p.60 Aspirin (contraindication: inability to swallow). Grading criteria p.19 (packaging goal times), p.35 (vitals intervals).",
+ "keywordEvents": [
+  {
+   "event": "aed-analysis",
+   "regex": "\\b(analy[sz](e|es|ing|ed)\\b|analysis\\b|shock(ing|ed)?\\b|pads? (are |is )?on\\b|(apply|applying|attach|attaching|place|placing|put|putting) (on )?(the )?(aed|pads|defib\\w*)|(turn|turning|power|powering) (on )?(the )?(aed|defib\\w*)|(stand|stay|everyone|all|i'?m) clear\\b)"
+  },
+  {
+   "event": "chest-rise-confirmed",
+   "regex": "\\b(chest ris(e|es|ing)|rise and fall|chest (is )?(going up|coming up|moving with)|see(ing)? (the |his )?chest (rise|go up|move)|good compliance|ventilations are effective|effective ventilations)\\b"
+  }
+ ],
+ "packagingFromEvent": [
+  "state:rosc"
+ ]
+}

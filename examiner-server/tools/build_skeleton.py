@@ -43,7 +43,7 @@ def parse_vitals(v):
                 'v': int(comp.group(2)) if comp else None, 'm': int(comp.group(3)) if comp else None},
         'bp': v.get('bp'),
         'pulse': {'rate': num(pulse_txt), 'rhythm': 'irregular' if 'irregular' in pulse_txt else ('regular' if 'regular' in pulse_txt else ''),
-                  'strength': 'weak' if 'weak' in pulse_txt else ('strong' if 'strong' in pulse_txt else 'normal'),
+                  'strength': 'weak' if ('weak' in pulse_txt or 'thready' in pulse_txt) else ('strong' if 'strong' in pulse_txt else 'normal'),
                   'rawEn': pulse_txt},
         'resp': {'rate': num(resp_txt), 'depth': '', 'character': '', 'rawEn': resp_txt},
         'skin': v.get('skin'), 'pupils': v.get('pupils'), 'spo2': v.get('spo2'),
@@ -86,7 +86,7 @@ def skeleton(s):
         'painManagement': {'applies': False},
         'notificationFacts': {'ageSex': '', 'cc': '', 'moi': None, 'hxcc': '', 'vitals': '', 'treatments': '', 'findings': ''},
         'handoffFacts': {'ageSex': '', 'cc': '', 'moi': None, 'hxcc': '', 'initialVitals': '', 'finalVitals': '', 'pmhx': '', 'meds': '', 'allergies': '', 'treatments': '', 'findings': ''},
-        'pcrFacts': dict(s.get('pcrKeyPoints') or {}),
+        'pcrFacts': dict({'vitals': ''}, **(s.get('pcrKeyPoints') or {})),
         'examinerPrompts': {'locNotDepictedEn': None, 'breathingNotDepictedEn': None, 'missedInjuryEn': None},
         'trackNotes': {'emrEn': s.get('emrVariantEn', ''), 'pcpEn': s.get('pcpVariantEn', '')},
         '_phaseScripts': {p['id']: p.get('infoEn') for p in s['phases']},   # author reference; deleted by verifier
