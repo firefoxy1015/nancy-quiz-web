@@ -531,7 +531,7 @@ QUALITY_VETO = [   # (substring of the official error string, regex in the candi
 
 
 QUALITY_REQUIRES = [   # (substring of the official string, regex the candidate's words must contain for it to apply)
-    ('S/L spray', r'\b(nitro\w*|spray)\b'),
+    ('S/L spray', r'\b(nitroglycerin|nitro|ntg)\b|\bspray\b'),   # not "nitrous oxide" (Entonox)
 ]
 
 

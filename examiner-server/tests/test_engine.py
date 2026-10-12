@@ -524,3 +524,9 @@ def test_explicit_vitals_statements_are_recorded_by_the_engine():
               'Do you have high blood pressure?', "I'll take vitals after the splint.", 'Any history of high blood pressure?',
               'Is he on blood pressure medication?', 'Radio report: vitals were BP 148/92, pulse 96.', 'Gloves on, scene is safe.']:
         assert v(s) == [], (s, v(s))
+
+
+def test_prime_spray_pick_needs_nitro_not_nitrous():
+    pick = [{'itemId': 'skill-drug-admin', 'weight': 10, 'errorEn': 'Does not verbalize they would prime the S/L spray prior to use', 'quote': 'Giving Entonox, nitrous oxide'}]
+    assert engine.veto_quality(pick, 'Giving Entonox, nitrous oxide 50:50, self-administered.') == []
+    assert engine.veto_quality(pick, 'Giving Entonox, nitrous oxide. Nitro 0.4 mg spray under the tongue.') != []
