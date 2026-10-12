@@ -12,7 +12,7 @@ import argparse, io, json, os, sys, time, urllib.request
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHASES = ['dispatch', 'scene', 'primary', 'transport', 'history', 'vitals', 'interventions', 'fe', 'exam', 'ongoing']
-CHUNK = 4
+CHUNK = 3
 MOVE_WORDS = {'load': 'Loading the patient into the ambulance now', 'lift-to-cot': 'Lifting the patient onto the cot now',
               'log-roll': 'Log-rolling the patient now', 'stair-chair': 'Moving the patient down in the stair chair now'}
 
@@ -41,7 +41,9 @@ def build(sheet, track):
     for e in exp:
         if e['itemId'] in ('notification', 'hand-off-report', 'documentation'):
             continue
-        by_phase.setdefault(e['phase'], []).append(e['actionEn'].replace('PCP: ', '').replace('PCP:', ''))
+        a = e['actionEn'].replace('PCP: ', '').replace('PCP:', '').replace('EMR: ', '').replace('EMR:', '').rstrip('. ')
+        tr = (e.get('triggers') or [''])[0]
+        by_phase.setdefault(e['phase'], []).append(f'{a} - {tr}' if tr else a)
     script, t = [], 0.3
 
     def say(text, step=0.6):

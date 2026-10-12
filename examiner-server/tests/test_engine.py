@@ -375,3 +375,14 @@ def test_move_keywords_are_acts_not_plans():
     assert 'move:load' in k('Loading him into the ambulance.')
     assert 'move:lift-to-cot' not in k("Once he's splinted we'll lift him onto the cot.")
     assert 'move:load' not in k("Partner, start packaging; we'll be ready to load within 15 minutes.")
+
+
+def test_max_dose_wording_and_abc_reassessment_keywords():
+    sh = sheet()
+    sh['drugs'] = [{'key': 'normal-saline', 'namesEn': ['normal saline'], 'licence': 'pcp'}, {'key': 'nitroglycerin', 'namesEn': ['nitro']}]
+    d = lambda s: {e['name'] for e in engine.drug_events(s, sh, 'pcp', M, [])}
+    assert 'drug:normal-saline' in d('Giving normal saline 20 mL/kg to a maximum of 2 L.')
+    assert 'drug:nitroglycerin' not in d('Nitro max is 3 sprays.')
+    k = lambda s: {e['name'] for e in engine.keyword_events(s, sh, M, [])}
+    assert 'ongoing-abc-i' in k('On the cot. Reassessing airway, breathing, circulation and interventions.')
+    assert 'ongoing-abc-i' not in k('Airway is clear.')

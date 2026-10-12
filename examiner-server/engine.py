@@ -298,6 +298,7 @@ KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous
     ('transport:non-rtc', r'\b(non[- ]?rtc|non[- ]?priority|stable patient|we have time)\b'),
     ('notification', r'\b(radio|patch|pre-?alert|notif(y|ication)|call(ing)? (the )?(hospital|receiving)|this is unit)\b'),
     ('hand-off-report', r'\b(hand[- ]?off|handover|report to the (nurse|doctor|hospital|receiving))\b'),
+    ('ongoing-abc-i', r'\b(reassess\w*|re assess\w*|recheck\w*|re check\w*)\b.{0,20}\b(abc\w*|a b c\w*|airway)\b'),
     ('skill-spinal-mgmt', r'\b(hard collar|c collar|cervical collar|collar (is )?on|sized? (the |a )?collar|spinal (board|device)|backboard|long board|scoop( stretcher)?|vacuum mattress|head blocks|foam blocks)\b'),
 ]
 
@@ -320,8 +321,8 @@ def keyword_events(text, sheet, t, already):
             continue
         if name.startswith('transport:') and any(n.startswith('transport:') for n in names):
             continue
-        if name in items() and not any(e['itemId'] == name for e in sheet.get('expected', [])):
-            continue
+        if name in items() and name != 'ongoing-abc-i' and not any(e['itemId'] == name for e in sheet.get('expected', [])):
+            continue   # (ABC-I after moves is checked on every sheet)
         if name.startswith('move:'):   # a planned move is not a move: judge each sentence on its own
             if any(_re.search(rx, ' ' + _norm(s) + ' ') and not _re.search(MOVE_PLAN_RX, s.lower())
                    for s in _re.split(r'(?<=[.;!?])\s+', text or '')):
@@ -390,8 +391,9 @@ def trigger_events(text, sheet, track, t, already):
 
 
 DRUG_GIVE = r'\b(giv(e|ing)|administer(ing|ed)?|push(ing)?|spray(ing)?|squirt|chew|self[- ]administer\w*|inhal\w*|hand(ing)? (him|her) the|start(ing)? (the|an?)|hang(ing)?|bolus|onboard\w*|draw(ing)? up)\b'
+DRUG_NOW = r"\b(giving|administering|pushing|spraying|starting|hanging|bolusing|i'?m giving|i am giving)\b"
 DOSE = r'\b\d+(\.\d+)?\s*(mg|g|grams?|mcg|micrograms?|ml|millilit\w*|milligrams?|units?|puffs?|sprays?|l/min|litres?)\b'
-DRUG_BLOCK = r"\b(given|gave|received|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|max(imum)?|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
+DRUG_BLOCK = r"\b(given|gave|received|not|no|never|without|withh?old\w*|hold(ing)? off|don'?t|won'?t|contraindicat\w*|caution\w*|avoid\w*|if|consider\w*|would|could|may|might|later|instead of|rather than|allerg\w*|taken|took|takes|on (a|any)|prescrib\w*|home)\b"
 
 
 def drug_events(text, sheet, track, t, reported):
@@ -407,6 +409,8 @@ def drug_events(text, sheet, track, t, reported):
         low = sent.lower()
         if not low.strip() or _re.search(DRUG_BLOCK, low):
             continue
+        if _re.search(r'\bmax(imum)?\b', low) and not _re.search(DRUG_NOW, low):
+            continue   # stating a ceiling is not a dose unless the drug is being given in the same breath
         if not (_re.search(DRUG_GIVE, low) or _re.search(DOSE, low)):
             continue
         for d in sheet.get('drugs', []):
