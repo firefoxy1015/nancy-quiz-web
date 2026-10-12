@@ -337,3 +337,41 @@ def test_presence_miss_is_capped_for_protocol_items():
     r = engine.score(s, 'pcp', e, 22 * M, closing=c)
     row = next(x for x in r['rows'] if x['itemId'] == 'protocols')
     assert row['weight'] == 25 and not r['autofail'] and 'Fails to administer' in row['errorEn']
+
+
+def test_trigger_credit_from_the_candidates_words():
+    sh = sheet()
+    for e in sh['expected']:
+        e['phase'] = 'primary' if e['itemId'] in ('airway', 'breathing', 'circulation', 'rapid-body-survey') else 'history'
+    sh['expected'].append({'eid': 'E99', 'itemId': 'breathing', 'weight': 100, 'licence': 'both', 'phase': 'primary',
+                           'actionEn': 'Auscultate', 'triggers': ['auscultate the chest', 'listen to his lungs', 'air entry']})
+    sh['expected'][11]['triggers'] = ['check a pulse', 'radial pulse', 'pulse rate']   # 'pulse' vital: never from triggers
+    got = engine.trigger_events('Auscultating the chest... I will auscultate the chest now, radial pulse is next.', sh, 'pcp', M, [])
+    names = {(e['name'], tuple(e['eids'])) for e in got}
+    assert ('breathing', ('E99',)) in names
+    assert not any(e['name'] == 'pulse' for e in got)                      # vitals are never credited by words
+    assert ('circulation', ()) in names                                    # plain initial-assessment words, item level
+    assert engine.trigger_events('Radio report: we auscultated the chest', sh, 'pcp', M, []) == []
+    full_set = [ev(0.5, 'blood-pressure'), ev(0.6, 'pulse'), ev(0.7, 'respirations')]
+    assert engine.trigger_events('I will auscultate the chest', sh, 'pcp', M, full_set) == []   # primary window closed
+
+
+def test_single_action_item_credited_by_name_but_shared_item_needs_eid():
+    sh = sheet()
+    sh['expected'].append({'eid': 'E99', 'itemId': 'breathing', 'weight': 100, 'licence': 'both', 'actionEn': 'Auscultate'})
+    base = [ev(0.5, n, [e['eid'] for e in sh['expected'] if e['itemId'] == n][:1]) for n in
+            ('loc-avpu', 'delicate-spine', 'airway', 'chief-complaint', 'history-of-cc', 'blood-pressure', 'pulse', 'respirations',
+             'gcs', 'ongoing-abc-i', 'oxygen', 'fe-cns')]
+    f = engine.score(sh, 'pcp', base + [ev(1, 'circulation'), ev(1, 'rapid-body-survey'), ev(1, 'breathing', ['E04'])], 20 * M)
+    rows = {(r['itemId'], r['weight']) for r in f['rows'] if r['source'] == 'engine-presence'}
+    assert ('circulation', 100) not in rows and ('rapid-body-survey', 100) not in rows   # only one action: the name is enough
+    assert ('breathing', 100) in rows                                                    # E99 (auscultation) still missing
+
+
+def test_move_keywords_are_acts_not_plans():
+    sh = sheet()
+    k = lambda s: {e['name'] for e in engine.keyword_events(s, sh, M, [])}
+    assert 'move:lift-to-cot' in k('Lifting the patient onto the cot now.')
+    assert 'move:load' in k('Loading him into the ambulance.')
+    assert 'move:lift-to-cot' not in k("Once he's splinted we'll lift him onto the cot.")
+    assert 'move:load' not in k("Partner, start packaging; we'll be ready to load within 15 minutes.")

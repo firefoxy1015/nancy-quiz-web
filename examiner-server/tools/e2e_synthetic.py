@@ -13,6 +13,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHASES = ['dispatch', 'scene', 'primary', 'transport', 'history', 'vitals', 'interventions', 'fe', 'exam', 'ongoing']
 CHUNK = 4
+MOVE_WORDS = {'load': 'Loading the patient into the ambulance now', 'lift-to-cot': 'Lifting the patient onto the cot now',
+              'log-roll': 'Log-rolling the patient now', 'stair-chair': 'Moving the patient down in the stair chair now'}
 
 
 def post(base, path, body):
@@ -75,7 +77,7 @@ def build(sheet, track):
                 say('. '.join(acts[i:i + CHUNK]) + '.')
             # packaging, with a reassessment after every major move
             for m in sheet.get('majorMoves', []):
-                say(f"Major move now: {m.replace('-', ' ')}. Reassessing airway, breathing, circulation and all interventions after the move.", 0.7)
+                say(f"{MOVE_WORDS.get(m, 'Major move now: ' + m.replace('-', ' '))}. Reassessing airway, breathing, circulation and all interventions after the move.", 0.7)
             say('Repeat vital signs: blood pressure by auscultation, pulse rate strength and rhythm, respirations rate depth and character, SpO2.')
             continue
         for i in range(0, len(acts), CHUNK):

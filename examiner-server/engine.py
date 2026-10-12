@@ -275,7 +275,7 @@ def merge_events(existing, new, candidate_log, now_ms):
                     continue
             else:
                 t = hit
-        if (ev['name'], t) in seen:
+        if (ev['name'], t) in seen and not (set(ev.get('eids') or []) - seen_eids):
             continue
         if ev['name'].startswith('drug:'):
             if REPORT_RX.search(raw_by_t.get(t, '')):
@@ -292,14 +292,17 @@ def merge_events(existing, new, candidate_log, now_ms):
 
 
 KEYWORD_EVENTS = [   # (event name, regex) — only phrases that are unambiguous in a BC practical
-    ('move:load', r'\b(load(ing|ed)?\b[^.]{0,40}\b(ambulance|unit|truck|rig)|in(to)? the (ambulance|unit|truck|rig)\b)'),
-    ('move:lift-to-cot', r'\b(on(to)? the (cot|stretcher)|to the (cot|stretcher)|straps? (are )?(secured|done up|on)|strapped (in|down))'),
+    ('move:load', r'\b(load(ing|ed)?\b[^.]{0,40}\b(ambulance|unit|truck|rig)|in(to)? the (ambulance|unit|truck|rig)\b|load(ing)? (him|her|them|the patient)\b|major move\W+(now\W+)?load)'),
+    ('move:lift-to-cot', r'\b(on(to)? the (cot|stretcher)|to the (cot|stretcher)|(lift\w*|transfer\w*|mov(e|ing))\b[^.]{0,30}\b(cot|stretcher)\b|straps? (are )?(secured|done up|on)|strapped (in|down))'),
     ('transport:rtc', r'\b(rtc|rapid transport|priority patient|load and go|unstable[, ]+(we are|we\'re) going)\b'),
     ('transport:non-rtc', r'\b(non[- ]?rtc|non[- ]?priority|stable patient|we have time)\b'),
     ('notification', r'\b(radio|patch|pre-?alert|notif(y|ication)|call(ing)? (the )?(hospital|receiving)|this is unit)\b'),
     ('hand-off-report', r'\b(hand[- ]?off|handover|report to the (nurse|doctor|hospital|receiving))\b'),
     ('skill-spinal-mgmt', r'\b(hard collar|c collar|cervical collar|collar (is )?on|sized? (the |a )?collar|spinal (board|device)|backboard|long board|scoop( stretcher)?|vacuum mattress|head blocks|foam blocks)\b'),
 ]
+
+
+MOVE_PLAN_RX = r"\b(will|i'll|we'll|we will|going to|gonna|plan\w*|prepar\w*|ready to|get ready|once|when we|after (we|the|splint\w*))\b"
 
 
 def keyword_events(text, sheet, t, already):
@@ -319,6 +322,11 @@ def keyword_events(text, sheet, t, already):
             continue
         if name in items() and not any(e['itemId'] == name for e in sheet.get('expected', [])):
             continue
+        if name.startswith('move:'):   # a planned move is not a move: judge each sentence on its own
+            if any(_re.search(rx, ' ' + _norm(s) + ' ') and not _re.search(MOVE_PLAN_RX, s.lower())
+                   for s in _re.split(r'(?<=[.;!?])\s+', text or '')):
+                out.append({'t': t, 'name': name, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
+            continue
         if _re.search(rx, low):
             out.append({'t': t, 'name': name, 'eids': [], 'quote': text[:120], 'components': ['keyword']})
     raw = (text or '').lower()
@@ -335,6 +343,49 @@ def keyword_events(text, sheet, t, already):
                     break
         except _re.error:
             pass
+    return out
+
+
+PRIMARY_RX = {   # initial-assessment items in the words every candidate uses (credited only before baseline vitals)
+    'airway': r'\b(airway|patent|head tilt|jaw thrust|opa|npa|suction\w*)\b',
+    'breathing': r'\b(breathing|respirat\w*|resps|chest rise|auscultat\w*|air entry|breath sounds|lung sounds|listen\w* to (his|her|the) (chest|lungs))\b',
+    'circulation': r'\b(pulse|radial|carotid|circulation|major bleed\w*|bleeding)\b',
+    'rapid-body-survey': r'\b(rapid body survey|rbs|rapid (trauma )?(survey|exam|assessment)|head to toe|modified (rbs|survey|body survey))\b',
+    'delicate-spine': r'\b(c spine|manual (c spine|stabili[sz]\w*|inline)|in ?line stabili[sz]\w*|hold\w* (his|her|the) head|spinal precautions|spinal motion restriction|smr)\b',
+    'skin-primary': r'\bskin\b',
+}
+TRIGGER_SKIP = set(VITAL_ALL) | set(PRESENCE_EXEMPT)   # vitals are measured (and spoken) only through the model + engine
+
+
+def _phrase_rx(p):
+    return r'(?<![a-z0-9])' + _re.escape(_norm(p)) + r'(?![a-z0-9])'
+
+
+def trigger_events(text, sheet, track, t, already):
+    """Engine-side credit for expected actions: the sheet's own trigger phrases (per action)
+    and the plain words of the initial assessment (per item). A good act the model did not
+    map must never become a false auto-fail. Primary-survey credit closes once the first
+    full vitals set is in, and a radio report or hand-off never earns credit."""
+    if REPORT_RX.search(text or ''):
+        return []
+    low = ' ' + _norm(text) + ' '
+    if not low.strip():
+        return []
+    primary_open = not any(s['complete'] is not None for s in derive_vitals_sets(already))
+    have = {x for e in already for x in (e.get('eids') or [])}
+    exp = applicable_expected(sheet, track)
+    out = []
+    for e in exp:
+        if e['eid'] in have or e['itemId'] in TRIGGER_SKIP or (e['phase'] == 'primary' and not primary_open):
+            continue
+        if any(len(_norm(p)) >= 3 and _re.search(_phrase_rx(p), low) for p in e.get('triggers') or []):
+            out.append({'t': t, 'name': e['itemId'], 'eids': [e['eid']], 'quote': (text or '')[:120], 'components': ['trigger']})
+    if primary_open:
+        names = {e['name'] for e in already} | {o['name'] for o in out}
+        exp_ids = {e['itemId'] for e in exp}
+        for name, rx in PRIMARY_RX.items():
+            if name in exp_ids and name not in names and _re.search(rx, low):
+                out.append({'t': t, 'name': name, 'eids': [], 'quote': (text or '')[:120], 'components': ['keyword']})
     return out
 
 
@@ -572,10 +623,15 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
         done_names |= {'protocols', 'skill-drug-admin'}   # giving a drug is initiating a protocol; the rules judge how well
 
     # 1. presence of expected actions
-    for e in applicable_expected(sheet, track):
+    exp = applicable_expected(sheet, track)
+    per_item = {}
+    for e in exp:
+        per_item[e['itemId']] = per_item.get(e['itemId'], 0) + 1
+    for e in exp:
         if e['itemId'] in PRESENCE_EXEMPT:
             continue
-        if e['eid'] in done_eids or (e['itemId'] in done_names and (e['weight'] < 100 or e['itemId'] in PRESENCE_CAP)):
+        # name-level credit: below 100, capped items, or the item's only action (no other action it could be confused with)
+        if e['eid'] in done_eids or (e['itemId'] in done_names and (e['weight'] < 100 or e['itemId'] in PRESENCE_CAP or per_item[e['itemId']] == 1)):
             continue
         w = min(e['weight'], PRESENCE_CAP.get(e['itemId'], 10**9))
         it = items().get(e['itemId'])

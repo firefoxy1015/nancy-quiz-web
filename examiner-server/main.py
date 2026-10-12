@@ -223,6 +223,7 @@ def turn(req: TurnReq):
     raw_events = _normalize_events(sheet, track, inp.get('events'), t)
     raw_events += engine.keyword_events(req.text, sheet, t, raw_events + req.events)
     raw_events += engine.drug_events(req.text, sheet, track, t, raw_events)
+    raw_events += engine.trigger_events(req.text, sheet, track, t, raw_events + req.events)
     cand_lines = [{'t': e.get('t', 0), 'text': e.get('text', '')} for e in req.log if e.get('role') == 'candidate'] + [{'t': t, 'text': req.text}]
     events, vital_events = engine.merge_events(req.events, raw_events, cand_lines, t)
     say = _strip_vital_numbers([s for s in inp.get('say', []) if s.get('text') and not _filler(s)], vital_events)
