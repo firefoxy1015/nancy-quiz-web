@@ -13,6 +13,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='repla
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHASES = ['dispatch', 'scene', 'primary', 'transport', 'history', 'vitals', 'interventions', 'fe', 'exam', 'ongoing']
 CHUNK = 3
+DUMP = ''
 MOVE_WORDS = {'load': 'Loading the patient into the ambulance now', 'lift-to-cot': 'Lifting the patient onto the cot now',
               'log-roll': 'Log-rolling the patient now', 'stair-chair': 'Moving the patient down in the stair chair now'}
 
@@ -82,8 +83,10 @@ def build(sheet, track):
         d = drugs.get(k)
         if d and d.get('licence', 'both') in ('both', track):
             nm = (d.get('namesEn') or [k])[0]
+            dose = next((c.strip() for c in re.split(r'[;,(]', re.sub(r'^\s*(PCP|EMR)( only)?\s*:\s*', '', d.get('doseEn', '')))
+                         if re.search(r'\d', c)), '')
             give_lines.append(f"I've asked about allergies, current medications and the contraindications for {nm}, and there are none. "
-                              f"Six rights checked. Giving {nm} {d.get('doseEn', '')} now.")
+                              f"Six rights checked. Giving {nm} {dose} now.")
     for ph in PHASES:
         acts = by_phase.get(ph) or []
         if ph == 'vitals':
@@ -127,7 +130,16 @@ def run(base, sid, track, verbose):
     post(base, '/api/examiner/start', {'scenarioId': sid, 'track': track})
     log, events, fired = [{'t': 0, 'role': 'examiner', 'text': 'You may begin.'}], [], []
     t0 = time.time()
+    pending = []
     for minute, text in script:
+        for pt, ptext in pending:   # reactions to state changes go in before the next scripted line
+            body = {'scenarioId': sid, 'track': track, 'elapsedMs': pt, 'text': ptext, 'log': log, 'events': events, 'fired': fired}
+            rr = post(base, '/api/examiner/turn', body)
+            log.append({'t': pt, 'role': 'candidate', 'text': ptext})
+            for s in rr['say']:
+                log.append({'t': pt, 'role': s['role'], 'text': s['text']})
+            events += rr['events']; fired = rr['fired']
+        pending = []
         tms = int(minute * 60000)
         body = {'scenarioId': sid, 'track': track, 'elapsedMs': tms, 'text': text, 'log': log, 'events': events, 'fired': fired}
         r = post(base, '/api/examiner/turn', body)
@@ -136,6 +148,10 @@ def run(base, sid, track, verbose):
         log.append({'t': tms, 'role': 'candidate', 'text': text})
         for s in r['say']:
             log.append({'t': tms, 'role': s['role'], 'text': s['text']})
+        if set(r['fired']) - set(fired):   # something changed: a competent candidate stops and deals with it
+            react_t = tms + 6000
+            pending.append((react_t, 'I see that change. Reassessing now: airway - clearing and suctioning anything in it and protecting it, '
+                                     'breathing, circulation and bleeding, and all my interventions; managing what I find.'))
         for l in r['engineLines']:
             log.append({'t': tms, 'role': 'examiner', 'text': l})
         events += r['events']; fired = r['fired']
@@ -144,6 +160,9 @@ def run(base, sid, track, verbose):
     fin = post(base, '/api/examiner/finish', {'scenarioId': sid, 'track': track, 'endMs': int(script[-1][0] * 60000) + 60000,
                                               'log': log, 'events': events, 'pcr': pcr})
     f = fin['form']
+    if DUMP:
+        os.makedirs(DUMP, exist_ok=True)
+        json.dump({'log': log, 'events': events, 'form': f}, io.open(os.path.join(DUMP, f'{sid}-{track}.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     ok = (not f['autofail']) and f['score'] >= 80
     print(f"\n{sid} [{track}] {'PASS' if ok else 'FAIL'} score {f['score']}{' AUTO-FAIL' if f['autofail'] else ''} "
           f"| {len(script)} turns {time.time()-t0:.0f}s {len(events)} events")
@@ -158,7 +177,9 @@ if __name__ == '__main__':
     ap.add_argument('--track', default='pcp', choices=['pcp', 'emr', 'both'])
     ap.add_argument('--base', default='http://127.0.0.1:8787')
     ap.add_argument('-v', action='store_true')
+    ap.add_argument('--dump', default='', help='directory: save log/events/form per run')
     a = ap.parse_args()
+    DUMP = a.dump
     tracks = ['pcp', 'emr'] if a.track == 'both' else [a.track]
     results = [run(a.base, sid, tr, a.v) for sid in a.sheets for tr in tracks]
     print(f"\nSYNTHETIC {sum(results)}/{len(results)} PASS")

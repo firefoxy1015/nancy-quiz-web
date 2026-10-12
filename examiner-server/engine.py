@@ -124,8 +124,12 @@ def derive_vitals_sets(events):
                 if sets and ev['t'] - (sets[-1]['complete'] or sets[-1]['start']) <= VITALS_SET_MAX_MS:
                     sets[-1]['items'].setdefault(name, ev['t'])
                 continue
-            # a lone core vital (e.g. a BP recheck before a nitro dose) is a spot check, not a set
-            partner = any(x['name'] in VITAL_ITEMS and x['name'] != name and 0 <= x['t'] - ev['t'] <= VITALS_SET_MAX_MS for x in vit[i + 1:])
+            # a lone core vital (e.g. a BP recheck before a nitro dose) is a spot check, not a set; and a set is
+            # anchored on a blood pressure - the primary survey's pulse / breathing checks never start one
+            if name == 'blood-pressure':
+                partner = any(x['name'] in VITAL_ITEMS and x['name'] != name and 0 <= x['t'] - ev['t'] <= VITALS_SET_MAX_MS for x in vit[i + 1:])
+            else:
+                partner = any(x['name'] == 'blood-pressure' and 0 <= x['t'] - ev['t'] <= VITALS_SET_MAX_MS for x in vit[i + 1:])
             if not partner:
                 continue
             cur = {'start': ev['t'], 'items': {}, 'complete': None}
@@ -257,6 +261,23 @@ REPORT_RX = _re.compile(r"\b(radio|patch(ing)?|pre-?alert|notif\w*|this is (unit
 DRUG_SAME_DOSE_MS = 150000   # no BC drug repeats faster than q3 min: mentions closer together are one administration
 
 
+RTC_WORDS = r"(?<!non )\b(rtc|rapid transport|priority|load and go|(?<!un)unstable|critical|lights and sirens|code 3|time critical|urgent transport)\b"
+NON_RTC_WORDS = r"\b(non rtc|non priority|(?<!un)stable|routine|we have time|code 2|no rush)\b"
+
+
+def transport_stated(name, line):
+    """True when a sentence of the candidate's line states this category without a condition."""
+    for s in _re.split(r'(?<=[.;!?])\s+', line or ''):
+        if _re.search(TRANSPORT_COND_RX, s.lower()):
+            continue
+        n = ' ' + _norm(s) + ' '
+        if name == 'transport:rtc' and _re.search(RTC_WORDS, n) and not _re.search(NON_RTC_WORDS, n):
+            return True
+        if name == 'transport:non-rtc' and _re.search(NON_RTC_WORDS, n):
+            return True
+    return False
+
+
 def bad_act_names(sheet):
     """Events that cost points when they happen (absent / max_count / the 'then' of ordered rules)."""
     out = set()
@@ -298,6 +319,8 @@ def merge_events(existing, new, candidate_log, now_ms, strict=()):
                 t = hit
         if (ev['name'], t) in seen and not (set(ev.get('eids') or []) - seen_eids):
             continue
+        if ev['name'].startswith('transport:') and not transport_stated(ev['name'], raw_by_t.get(t, '')):
+            continue   # "if he deteriorates he becomes RTC" / a misread "non-RTC" is not the category decision
         if ev['name'].startswith('drug:'):
             if REPORT_RX.search(raw_by_t.get(t, '')):
                 continue   # "given ASA 160" in a radio report or hand-off is a report, not a dose

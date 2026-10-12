@@ -196,6 +196,15 @@
     "afterEvent": "aed-second-shock"
    },
    "examinerLineEn": "As compressions resume after the second shock, the patient coughs and moves his arm."
+  },
+  {
+   "id": "rosc-fallback",
+   "when": {
+    "afterEvent": "aed-analysis",
+    "elapsedMs": 480000,
+    "missingEvent": "aed-second-shock"
+   },
+   "examinerLineEn": "As compressions resume after the second shock, the patient coughs and moves his arm."
   }
  ],
  "expected": [
@@ -1358,9 +1367,15 @@
   {
    "event": "chest-rise-confirmed",
    "regex": "\\b(chest ris(e|es|ing)|rise and fall|chest (is )?(going up|coming up|moving with)|see(ing)? (the |his )?chest (rise|go up|move)|good compliance|ventilations are effective|effective ventilations)\\b"
+  },
+  {
+   "event": "aed-second-shock",
+   "regex": "\\b(second shock|shock(ing)? (him )?again|another shock|deliver\\w* (a |the )?second|shock (number|#) ?2|2nd shock)\\b",
+   "blockRegex": "\\b(if|will|i'll|we'll|going to|prepar\\w*|charg(e|ing) for|next|no shock|not)\\b"
   }
  ],
  "packagingFromEvent": [
-  "state:rosc"
+  "state:rosc",
+  "state:rosc-fallback"
  ]
 }

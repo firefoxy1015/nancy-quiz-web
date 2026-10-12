@@ -221,9 +221,12 @@ def turn(req: TurnReq):
         return {'say': [{'role': 'examiner', 'text': 'Please repeat that.'}], 'events': [], 'fired': sorted(fired),
                 'engineLines': [], 'flags': [f'model-{status}'], 'channel': ch}
     raw_events = _normalize_events(sheet, track, inp.get('events'), t)
-    raw_events += engine.keyword_events(req.text, sheet, t, raw_events + req.events)
-    raw_events += engine.drug_events(req.text, sheet, track, t, raw_events)
-    raw_events += engine.trigger_events(req.text, sheet, track, t, raw_events + req.events)
+    # the engine's own detectors look only at ACCEPTED history: a model event that merge_events later rejects
+    # (bad quote, conditional transport, report line) must not have suppressed the engine's correct one
+    own = engine.keyword_events(req.text, sheet, t, req.events)
+    own += engine.drug_events(req.text, sheet, track, t, own)   # this turn only: a repeat dose is legitimate; merge dedupes
+    own += engine.trigger_events(req.text, sheet, track, t, req.events + own)
+    raw_events += own
     cand_lines = [{'t': e.get('t', 0), 'text': e.get('text', '')} for e in req.log if e.get('role') == 'candidate'] + [{'t': t, 'text': req.text}]
     events, vital_events = engine.merge_events(req.events, raw_events, cand_lines, t, strict=engine.bad_act_names(sheet))
     say = _strip_vital_numbers([s for s in inp.get('say', []) if s.get('text') and not _filler(s)], vital_events)

@@ -146,10 +146,10 @@ def test_merge_events_dedupes_relisted_actions():
     new = [{'t': 150000, 'name': 'scene-ppe', 'eids': ['E04'], 'quote': 'Gloves on. Scene is safe', 'components': []},
            {'t': 150000, 'name': 'circulation', 'eids': ['E11'], 'quote': 'radial pulse for rate', 'components': []},
            {'t': 150000, 'name': 'blood-pressure', 'eids': ['E28'], 'quote': 'Blood pressure on the left arm', 'components': []},
-           {'t': 150000, 'name': 'transport:rtc', 'eids': ['E17'], 'quote': 'Scene is safe, one patient', 'components': []}]
+           {'t': 150000, 'name': 'visual-assessment', 'eids': ['E05'], 'quote': 'Scene is safe, one patient', 'components': []}]
     out, fresh = engine.merge_events(existing, new, log, 150000)
     names = [(e['name'], e['t']) for e in out]
-    assert ('blood-pressure', 150000) in names and ('transport:rtc', 30000) in names   # late catch keeps the real time
+    assert ('blood-pressure', 150000) in names and ('visual-assessment', 30000) in names   # late catch keeps the real time
     assert not any(n in ('scene-ppe', 'circulation') for n, _ in names)                # relisted actions dropped
     assert [e['name'] for e in fresh] == ['blood-pressure']
 
@@ -492,3 +492,23 @@ def test_bad_act_needs_the_candidates_words():
     assert out == []
     out, _ = engine.merge_events([], [dict(new[0], quote='Here, have a sip of water')], [{'t': 600000, 'text': 'Here, have a sip of water.'}], 600000, strict=strict)
     assert [e['name'] for e in out] == ['oral-fluids-given']
+
+
+def test_model_transport_category_must_be_stated_unconditionally():
+    st = engine.transport_stated
+    assert st('transport:rtc', 'Transport decision: this patient is RTC, unstable.')
+    assert not st('transport:rtc', 'Transport decision: this patient is non-RTC, stable.')
+    assert st('transport:non-rtc', 'Transport decision: this patient is non-RTC, stable.')
+    assert not st('transport:rtc', 'If his GCS drops he becomes RTC.')
+    assert not st('transport:rtc', 'Checking his pupils now.')
+    log = [{'t': 60000, 'text': 'Transport decision: non-RTC, stable.'}]
+    out, _ = engine.merge_events([], [{'name': 'transport:rtc', 'eids': [], 'quote': 'Transport decision: non-RTC, stable.'}], log, 60000)
+    assert out == []
+
+
+def test_primary_pulse_and_breathing_checks_do_not_open_a_vitals_set():
+    evs = [ev(2.1, 'respirations'), ev(2.1, 'pulse'), ev(6.9, 'blood-pressure'), ev(6.9, 'pulse'), ev(7.5, 'respirations')]
+    sets = engine.derive_vitals_sets(evs)
+    assert len(sets) == 1 and sets[0]['start'] == int(6.9 * M) and sets[0]['complete'] == int(7.5 * M)
+    slow = engine.derive_vitals_sets([ev(0, 'blood-pressure'), ev(2, 'pulse'), ev(4, 'respirations')])
+    assert slow[0]['complete'] - slow[0]['start'] == 4 * M          # a genuinely slow set is still caught
