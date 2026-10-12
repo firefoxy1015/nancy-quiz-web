@@ -112,7 +112,7 @@
    "unlock": {
     "always": true
    },
-   "unlockNoteEn": "baseline",
+   "unlockNoteEn": "baseline on scene (SpO2 becomes 98% once oxygen is applied - see state change oxygen-applied)",
    "gcs": {
     "total": 13,
     "e": 3,
@@ -122,19 +122,19 @@
    "bp": "168/92",
    "pulse": {
     "rate": 58,
-    "rhythm": "",
-    "strength": "strong",
+    "rhythm": "regular",
+    "strength": "strong, bounding",
     "rawEn": "58 strong bounding"
    },
    "resp": {
     "rate": 14,
-    "depth": "",
-    "character": "",
+    "depth": "adequate",
+    "character": "regular",
     "rawEn": "14 regular"
    },
-   "skin": "pale warm dry",
-   "pupils": "UNEQUAL - R 5 mm sluggish, L 3 mm brisk",
-   "spo2": "93% RA, 98% on O2",
+   "skin": "pale, warm, dry",
+   "pupils": "UNEQUAL - right 5 mm sluggish, left 3 mm brisk",
+   "spo2": "93% on room air",
    "bgl": "5.6 mmol/L",
    "temp": "36.2 C"
   },
@@ -143,11 +143,11 @@
    "unlock": {
     "anyOf": [
      {
-      "elapsedMs": 600000
+      "elapsedMs": 720000
      }
     ]
    },
-   "unlockNoteEn": "en route, deteriorating",
+   "unlockNoteEn": "deteriorating (rising ICP) from 12 minutes, normally en route; unlocks together with state change gcs-decline. SpO2 is patched by the oxygen / assisted-ventilation state changes",
    "gcs": {
     "total": 11,
     "e": 2,
@@ -157,24 +157,74 @@
    "bp": "178/88",
    "pulse": {
     "rate": 52,
-    "rhythm": "",
-    "strength": "normal",
+    "rhythm": "regular",
+    "strength": "bounding",
     "rawEn": "52 bounding"
    },
    "resp": {
     "rate": 12,
-    "depth": "",
-    "character": "",
+    "depth": "adequate",
+    "character": "becoming irregular",
     "rawEn": "12, becoming irregular"
    },
-   "skin": "pale warm dry",
-   "pupils": "R 6 mm non-reactive, L 3 mm reactive",
-   "spo2": "97% on O2 with assisted ventilations",
+   "skin": "pale, warm, dry",
+   "pupils": "right 6 mm non-reactive, left 3 mm reactive",
+   "spo2": "93% on room air",
    "bgl": "5.6 mmol/L",
    "temp": "36.2 C"
   }
  ],
- "stateChanges": [],
+ "stateChanges": [
+  {
+   "id": "oxygen-applied",
+   "when": {
+    "afterEvent": "oxygen"
+   },
+   "examinerLineEn": "Noted.",
+   "vitalsPatch": {
+    "spo2": "98% on oxygen"
+   }
+  },
+  {
+   "id": "gcs-decline",
+   "when": {
+    "elapsedMs": 720000
+   },
+   "examinerLineEn": "The patient is changing. He no longer opens his eyes when you speak to him - only to a painful stimulus. His words are still confused, and he no longer follows commands but reaches toward a painful stimulus. His breathing has slowed and is becoming irregular.",
+   "vitalsPatch": {
+    "gcs": {
+     "total": 11,
+     "e": 2,
+     "v": 4,
+     "m": 5
+    },
+    "bp": "178/88",
+    "pulse": {
+     "rate": 52,
+     "rhythm": "regular",
+     "strength": "bounding",
+     "rawEn": "52 bounding"
+    },
+    "resp": {
+     "rate": 12,
+     "depth": "adequate",
+     "character": "becoming irregular",
+     "rawEn": "12, becoming irregular"
+    },
+    "pupils": "right 6 mm non-reactive, left 3 mm reactive"
+   }
+  },
+  {
+   "id": "assisted-ventilations",
+   "when": {
+    "afterEvent": "skill-breathing-mgmt"
+   },
+   "examinerLineEn": "Noted.",
+   "vitalsPatch": {
+    "spo2": "97% on oxygen with assisted ventilations"
+   }
+  }
+ ],
  "expected": [
   {
    "itemId": "overall-call-management",
@@ -182,7 +232,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Acknowledge; plan spinal equipment, oxygen, BVM, suction, and a rapid trauma-centre transport",
-   "triggers": []
+   "triggers": [
+    "copy dispatch",
+    "bring the spinal equipment",
+    "bring suction and the BVM",
+    "plan for oxygen and airway management",
+    "this will be a trauma centre transport",
+    "load and go"
+   ]
   },
   {
    "itemId": "overall-call-management",
@@ -190,7 +247,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Anticipate a head injury with altered LOC - plan for airway compromise and vomiting",
-   "triggers": []
+   "triggers": [
+    "head injury with altered LOC",
+    "expect him to vomit",
+    "suction ready",
+    "possible airway compromise",
+    "plan for a decreasing LOC",
+    "be ready to ventilate"
+   ]
   },
   {
    "itemId": "scene-ppe",
@@ -198,7 +262,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Verbalize hazards (dark, wet, cold, assault scene - police present), environment, MOI (blunt head trauma with bat), one patient",
-   "triggers": []
+   "triggers": [
+    "scene is safe",
+    "police have the assailant",
+    "it's dark, get the scene lights on",
+    "wet grass and rain",
+    "mechanism is a bat to the head",
+    "one patient"
+   ]
   },
   {
    "itemId": "scene-ppe",
@@ -206,7 +277,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Don gloves and eye protection (blood and vomit)",
-   "triggers": []
+   "triggers": [
+    "gloves on",
+    "eye protection",
+    "gloves and goggles",
+    "PPE for blood and vomit",
+    "BSI"
+   ]
   },
   {
    "itemId": "visual-assessment",
@@ -214,7 +291,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "First look: patient on his side, moaning, blood in the hair on the right temple, vomit beside him",
-   "triggers": []
+   "triggers": [
+    "general impression",
+    "he's on his side moaning",
+    "blood in his hair on the right side",
+    "vomit beside him",
+    "he looks sick",
+    "first impression"
+   ]
   },
   {
    "itemId": "overall-patient-care",
@@ -222,7 +306,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Protect from the environment: get the patient off the cold wet ground promptly and shield from rain",
-   "triggers": []
+   "triggers": [
+    "get him off the wet ground",
+    "blanket over him",
+    "shield him from the rain",
+    "keep him warm",
+    "get him into the ambulance out of the cold",
+    "tarp or blanket under him"
+   ]
   },
   {
    "itemId": "loc-avpu",
@@ -230,7 +321,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Assess LOC / AVPU: responds to Voice, confused - a decreased LOC",
-   "triggers": []
+   "triggers": [
+    "AVPU",
+    "responds to voice",
+    "he's confused",
+    "decreased level of consciousness",
+    "can you hear me",
+    "what's your name"
+   ]
   },
   {
    "itemId": "delicate-spine",
@@ -238,7 +336,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Take manual c-spine control immediately - blunt head trauma with altered LOC is a NEXUS-positive indication",
-   "triggers": []
+   "triggers": [
+    "take c-spine",
+    "hold manual in-line stabilization",
+    "partner, hold his head",
+    "don't move your head",
+    "c-spine control",
+    "manual c-spine"
+   ]
   },
   {
    "itemId": "airway",
@@ -246,7 +351,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Assess the airway and SUCTION the vomit; keep the airway clear throughout",
-   "triggers": []
+   "triggers": [
+    "suction the vomit",
+    "suction his airway",
+    "clear the mouth",
+    "there's vomit in his airway",
+    "keep the suction ready",
+    "check the airway"
+   ]
   },
   {
    "itemId": "skill-airway-mgmt",
@@ -254,7 +366,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Consider and correctly size an airway adjunct (OPA only if the gag reflex is absent; NPA is an option if not contraindicated)",
-   "triggers": []
+   "triggers": [
+    "NPA",
+    "measure an airway adjunct",
+    "he has a gag reflex so no OPA",
+    "size the nasal airway",
+    "consider an airway adjunct",
+    "OPA only if no gag"
+   ]
   },
   {
    "itemId": "breathing",
@@ -262,7 +381,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Assess breathing rate and adequacy; be ready to assist ventilations if the rate falls",
-   "triggers": []
+   "triggers": [
+    "breathing rate",
+    "how's his breathing",
+    "chest rise",
+    "is he breathing adequately",
+    "ready to assist ventilations",
+    "respiratory effort"
+   ]
   },
   {
    "itemId": "circulation",
@@ -270,7 +396,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Assess circulation - recognize bradycardia with a bounding pulse as a possible rising-ICP sign",
-   "triggers": []
+   "triggers": [
+    "radial pulse",
+    "pulse is slow and bounding",
+    "check a pulse",
+    "rate and quality",
+    "bradycardic",
+    "any major bleeding"
+   ]
   },
   {
    "itemId": "rapid-body-survey",
@@ -278,7 +411,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Complete the RBS; control scalp bleeding with direct pressure; palpate for depressed skull fracture and check ears/nose for fluid",
-   "triggers": []
+   "triggers": [
+    "rapid body survey",
+    "direct pressure on the scalp wound",
+    "feel for a depressed skull fracture",
+    "check the ears and nose for fluid",
+    "any other injuries",
+    "RBS"
+   ]
   },
   {
    "itemId": "skin-primary",
@@ -286,7 +426,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Note skin: pale warm dry",
-   "triggers": []
+   "triggers": [
+    "skin colour temperature condition",
+    "pale warm and dry",
+    "feel his skin",
+    "skin signs",
+    "skin condition"
+   ]
   },
   {
    "itemId": "oxygen",
@@ -294,7 +440,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Apply oxygen to keep SpO2 at or above 94% - TBI patients must not be allowed to desaturate",
-   "triggers": []
+   "triggers": [
+    "oxygen",
+    "non-rebreather",
+    "keep his sats above 94",
+    "titrate oxygen to 94",
+    "high-flow oxygen",
+    "SpO2 is 93 so he needs oxygen"
+   ]
   },
   {
    "itemId": "patient-position",
@@ -302,7 +455,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Manage position: spinal precautions with the head of the bed elevated 30 degrees once packaged, and airway protection given the vomiting",
-   "triggers": []
+   "triggers": [
+    "head of the bed up 30 degrees",
+    "keep him on his side to protect the airway",
+    "elevate the head",
+    "spinal precautions",
+    "position for the airway",
+    "reverse Trendelenburg"
+   ]
   },
   {
    "itemId": "transport",
@@ -310,7 +470,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Categorize as RTC and act with urgency",
-   "triggers": []
+   "triggers": [
+    "he's RTC",
+    "rapid transport",
+    "load and go",
+    "unstable",
+    "priority patient",
+    "critical patient"
+   ]
   },
   {
    "itemId": "transport",
@@ -318,7 +485,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Packaged and ready to load within 15 minutes with the airway managed",
-   "triggers": []
+   "triggers": [
+    "ready to load within 15 minutes",
+    "package him",
+    "on the board",
+    "let's move",
+    "get him to the truck",
+    "load him up"
+   ]
   },
   {
    "itemId": "overall-call-management",
@@ -326,7 +500,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Verbalize the trauma-centre destination decision and notify early",
-   "triggers": []
+   "triggers": [
+    "trauma centre",
+    "go to the trauma centre not the local hospital",
+    "destination decision",
+    "notify the trauma centre early",
+    "bypass the local hospital",
+    "moderate TBI criteria"
+   ]
   },
   {
    "itemId": "chief-complaint",
@@ -334,7 +515,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Establish chief complaint: head injury with altered mental status",
-   "triggers": []
+   "triggers": [
+    "what happened",
+    "chief complaint",
+    "what's bothering you",
+    "where does it hurt",
+    "does your head hurt"
+   ]
   },
   {
    "itemId": "history-of-cc",
@@ -342,7 +529,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "HxC/C from witnesses: number of blows, weapon, duration of LOC, vomiting, behaviour since, any lucid interval",
-   "triggers": []
+   "triggers": [
+    "how many times was he hit",
+    "was he knocked out",
+    "how long was he out",
+    "has he vomited",
+    "how has he been acting since",
+    "did he wake up and then get worse"
+   ]
   },
   {
    "itemId": "pain-scale",
@@ -350,7 +544,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Pain score if obtainable; document that reliability is limited by confusion",
-   "triggers": []
+   "triggers": [
+    "pain scale",
+    "zero to ten",
+    "rate your pain",
+    "how bad is the headache",
+    "pain score",
+    "out of ten"
+   ]
   },
   {
    "itemId": "past-medical-history",
@@ -358,7 +559,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "PMHx from family/police - specifically anticoagulant use",
-   "triggers": []
+   "triggers": [
+    "medical history",
+    "is he on blood thinners",
+    "any anticoagulants",
+    "call his wife",
+    "any medical problems",
+    "past history"
+   ]
   },
   {
    "itemId": "medications",
@@ -366,7 +574,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Medications",
-   "triggers": []
+   "triggers": [
+    "medications",
+    "does he take any meds",
+    "any pills",
+    "prescriptions",
+    "blood thinners"
+   ]
   },
   {
    "itemId": "allergies",
@@ -374,7 +588,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Allergies",
-   "triggers": []
+   "triggers": [
+    "allergies",
+    "any allergies",
+    "allergic to any medications",
+    "drug allergies",
+    "allergic to anything"
+   ]
   },
   {
    "itemId": "last-oral-intake",
@@ -382,7 +602,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "LOI including alcohol",
-   "triggers": []
+   "triggers": [
+    "last oral intake",
+    "when did he last eat",
+    "has he been drinking",
+    "any alcohol",
+    "last meal",
+    "LOI"
+   ]
   },
   {
    "itemId": "gcs",
@@ -390,7 +617,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "GCS with all three components and the correct total (E3 V4 M6 = 13, moderate TBI)",
-   "triggers": []
+   "triggers": [
+    "GCS",
+    "Glasgow coma scale",
+    "eyes verbal motor",
+    "GCS 13",
+    "E3 V4 M6",
+    "moderate TBI"
+   ]
   },
   {
    "itemId": "blood-pressure",
@@ -398,7 +632,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "BP by auscultation - recognize hypertension with a widening pulse pressure",
-   "triggers": []
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a pressure",
+    "hypertensive",
+    "widening pulse pressure",
+    "systolic"
+   ]
   },
   {
    "itemId": "pulse",
@@ -406,7 +647,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Pulse - recognize bradycardia with a bounding character",
-   "triggers": []
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "bradycardia",
+    "bounding pulse",
+    "count the pulse"
+   ]
   },
   {
    "itemId": "respirations",
@@ -414,7 +662,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Respirations rate/depth/character; watch for irregular patterns",
-   "triggers": []
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "breathing pattern",
+    "irregular breathing",
+    "count his breaths"
+   ]
   },
   {
    "itemId": "skin-vitals",
@@ -422,7 +677,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Skin hands-on",
-   "triggers": []
+   "triggers": [
+    "skin",
+    "feel the skin",
+    "colour temperature condition",
+    "skin condition",
+    "pale warm dry"
+   ]
   },
   {
    "itemId": "pupils",
@@ -430,7 +691,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Pupils - identify and act on the unequal, sluggish right pupil; repeat with every set",
-   "triggers": []
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "unequal pupils",
+    "right pupil is sluggish",
+    "penlight"
+   ]
   },
   {
    "itemId": "pulse-oximetry",
@@ -438,7 +706,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "SpO2 with calibration; keep at or above 94%",
-   "triggers": []
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "check the waveform",
+    "sats"
+   ]
   },
   {
    "itemId": "blood-glucose",
@@ -446,7 +721,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "BGL - indicated with any altered LOC",
-   "triggers": []
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "check his sugar",
+    "glucometer",
+    "finger poke",
+    "blood sugar"
+   ]
   },
   {
    "itemId": "temperature",
@@ -454,7 +736,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Temperature - indicated after exposure on cold wet ground",
-   "triggers": []
+   "triggers": [
+    "temperature",
+    "take his temp",
+    "tympanic temperature",
+    "he's been on the cold ground",
+    "temp"
+   ]
   },
   {
    "itemId": "fe-general-health",
@@ -462,7 +750,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - General health (from witnesses/family)",
-   "triggers": []
+   "triggers": [
+    "general health",
+    "any recent illness",
+    "fit and well",
+    "general",
+    "how has he been lately"
+   ]
   },
   {
    "itemId": "fe-cns",
@@ -470,7 +764,14 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - CNS (pertinent: LOC duration, headache, seizure, vision)",
-   "triggers": []
+   "triggers": [
+    "headache",
+    "seizure",
+    "any seizure activity",
+    "loss of consciousness",
+    "neuro",
+    "blurred vision"
+   ]
   },
   {
    "itemId": "fe-respiratory",
@@ -478,7 +779,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Respiratory",
-   "triggers": []
+   "triggers": [
+    "short of breath",
+    "cough",
+    "trouble breathing",
+    "respiratory",
+    "chest"
+   ]
   },
   {
    "itemId": "fe-cardiovascular",
@@ -486,7 +793,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Cardiovascular",
-   "triggers": []
+   "triggers": [
+    "chest pain",
+    "palpitations",
+    "heart problems",
+    "cardiovascular",
+    "heart racing"
+   ]
   },
   {
    "itemId": "fe-gi-gu",
@@ -494,7 +807,14 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - GI/GU (vomiting is a TBI red flag)",
-   "triggers": []
+   "triggers": [
+    "vomiting",
+    "how many times has he vomited",
+    "nausea",
+    "bowels",
+    "bladder",
+    "incontinence"
+   ]
   },
   {
    "itemId": "fe-integumentary",
@@ -502,7 +822,14 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Integumentary",
-   "triggers": []
+   "triggers": [
+    "skin",
+    "other cuts",
+    "wounds",
+    "bruising",
+    "integumentary",
+    "rash"
+   ]
   },
   {
    "itemId": "fe-musculoskeletal",
@@ -510,7 +837,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Musculoskeletal",
-   "triggers": []
+   "triggers": [
+    "any other injuries",
+    "neck or back pain",
+    "joint pain",
+    "musculoskeletal",
+    "can you move everything"
+   ]
   },
   {
    "itemId": "fe-endocrine",
@@ -518,7 +851,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Endocrine",
-   "triggers": []
+   "triggers": [
+    "diabetes",
+    "endocrine",
+    "thyroid",
+    "blood sugar problems",
+    "hormone problems"
+   ]
   },
   {
    "itemId": "fe-eent",
@@ -526,7 +865,14 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - EENT (vision, ear/nose discharge)",
-   "triggers": []
+   "triggers": [
+    "eyes ears nose throat",
+    "blurry vision",
+    "fluid from the ears",
+    "fluid from the nose",
+    "EENT",
+    "vision"
+   ]
   },
   {
    "itemId": "pe-head-neck",
@@ -534,7 +880,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Head/neck exam: DOTS, skull depression, CSF from ears/nose, Battle sign, raccoon eyes",
-   "triggers": []
+   "triggers": [
+    "head and neck",
+    "DOTS",
+    "Battle sign",
+    "raccoon eyes",
+    "CSF from the ears",
+    "palpate the skull"
+   ]
   },
   {
    "itemId": "pe-chest-lungs",
@@ -542,7 +895,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Chest exam with 6-site auscultation",
-   "triggers": []
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "air entry",
+    "chest exam",
+    "listen to the chest"
+   ]
   },
   {
    "itemId": "pe-abdomen",
@@ -550,7 +910,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Abdomen exam",
-   "triggers": []
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "abdomen soft",
+    "abdominal exam",
+    "belly"
+   ]
   },
   {
    "itemId": "pe-back",
@@ -558,7 +924,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Back exam during the roll",
-   "triggers": []
+   "triggers": [
+    "check the back during the roll",
+    "back exam",
+    "palpate the spine",
+    "posterior",
+    "log roll and check the back"
+   ]
   },
   {
    "itemId": "pe-lower-extremities",
@@ -566,7 +938,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Lower extremities with motor and sensory check",
-   "triggers": []
+   "triggers": [
+    "lower extremities",
+    "move your feet",
+    "can you feel me touch your legs",
+    "check the legs",
+    "distal CMS legs",
+    "pedal pulses"
+   ]
   },
   {
    "itemId": "pe-upper-extremities",
@@ -574,7 +953,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Upper extremities with grip strength comparison",
-   "triggers": []
+   "triggers": [
+    "upper extremities",
+    "squeeze my hands",
+    "grip strength equal",
+    "check the arms",
+    "distal CMS arms",
+    "radial pulses"
+   ]
   },
   {
    "itemId": "protocols",
@@ -582,7 +968,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Maintain oxygenation at or above 94% and be prepared to assist ventilations without routine hyperventilation",
-   "triggers": []
+   "triggers": [
+    "keep SpO2 above 94",
+    "ready to assist ventilations",
+    "do not hyperventilate",
+    "maintain oxygenation",
+    "titrate oxygen",
+    "TBI guideline"
+   ]
   },
   {
    "itemId": "protocols",
@@ -590,7 +983,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Elevate the head of the bed 30 degrees and loosen the hard collar after securing",
-   "triggers": []
+   "triggers": [
+    "elevate the head of the bed 30 degrees",
+    "loosen the collar",
+    "loosen the hard collar once he's secured",
+    "head up 30",
+    "reverse Trendelenburg on the board",
+    "TBI positioning"
+   ]
   },
   {
    "itemId": "skill-spinal-mgmt",
@@ -598,7 +998,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Spinal packaging performed correctly (collar, device, body before head, no head tape)",
-   "triggers": []
+   "triggers": [
+    "apply a hard collar",
+    "size the collar",
+    "onto the spine board",
+    "secure the body first then the head",
+    "head blocks",
+    "don't tape the head"
+   ]
   },
   {
    "itemId": "skill-airway-mgmt",
@@ -606,7 +1013,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Airway management: suction correctly (10-15 seconds adult), adjunct sized and inserted appropriately, patient positioned to protect against aspiration",
-   "triggers": []
+   "triggers": [
+    "suction for 10 to 15 seconds",
+    "rigid suction tip",
+    "measure the NPA",
+    "lubricate the airway",
+    "position to protect against aspiration",
+    "suction as needed"
+   ]
   },
   {
    "itemId": "protocols",
@@ -614,7 +1028,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Do NOT administer TXA - contraindicated in isolated TBI",
-   "triggers": []
+   "triggers": [
+    "no TXA",
+    "TXA is contraindicated in isolated TBI",
+    "withhold TXA",
+    "not giving tranexamic acid",
+    "TXA not indicated for head injury",
+    "isolated head injury"
+   ]
   },
   {
    "itemId": "skill-drug-admin",
@@ -622,7 +1043,14 @@
    "weight": 25,
    "licence": "pcp",
    "actionEn": "PCP: IV TKVO with systolic above 120, and keep BGL between 4.0 and 8.0",
-   "triggers": []
+   "triggers": [
+    "start an IV TKVO",
+    "systolic is above 120 so TKVO",
+    "keep the BGL between 4 and 8",
+    "vascular access",
+    "IV to keep vein open",
+    "maintain systolic above 120"
+   ]
   },
   {
    "itemId": "ongoing-abc-i",
@@ -630,7 +1058,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Reassess ABCs and all interventions after each major move and after any change in LOC",
-   "triggers": []
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "ABCs after the move",
+    "reassess after the GCS change",
+    "recheck the suction and oxygen",
+    "reassessing"
+   ]
   },
   {
    "itemId": "overall-call-management",
@@ -638,7 +1073,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Second full set of vitals within 5-6 minutes including a repeat GCS and pupils",
-   "triggers": []
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "repeat the GCS and pupils",
+    "vitals again",
+    "another set",
+    "reassess vitals"
+   ]
   },
   {
    "itemId": "protocols",
@@ -646,7 +1088,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Recognize the deteriorating GCS and pupil change and escalate care (assist ventilations, suction ready, urgent notification)",
-   "triggers": []
+   "triggers": [
+    "his GCS is dropping",
+    "he's deteriorating",
+    "pupil is now fixed",
+    "signs of rising ICP",
+    "Cushing's triad",
+    "expedite transport"
+   ]
   },
   {
    "itemId": "skill-breathing-mgmt",
@@ -654,7 +1103,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Assist ventilations at an appropriate rate with the BVM connected to oxygen, confirming chest rise",
-   "triggers": []
+   "triggers": [
+    "assist ventilations with the BVM",
+    "bag him with oxygen",
+    "BVM on 15 litres",
+    "watch for chest rise",
+    "ventilate at a normal rate",
+    "assisting his breathing"
+   ]
   },
   {
    "itemId": "notification",
@@ -662,7 +1118,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Urgent trauma-centre notification including GCS trend and unequal pupils",
-   "triggers": []
+   "triggers": [
+    "notify the trauma centre",
+    "patch to the hospital",
+    "call ahead",
+    "trauma alert",
+    "radio report",
+    "GCS dropping from 13 to 11"
+   ]
   },
   {
    "itemId": "hand-off-report",
@@ -670,7 +1133,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Complete hand-off with both GCS scores broken down by component",
-   "triggers": []
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 38-year-old male",
+    "report to the nurse",
+    "transfer of care",
+    "verbal report"
+   ]
   },
   {
    "itemId": "documentation",
@@ -678,37 +1148,311 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Accurate PCR within 5 minutes",
-   "triggers": []
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "document",
+    "chart",
+    "write it up"
+   ]
   }
  ],
- "specialEvents": [],
- "drugs": [],
- "majorMoves": [],
- "protocolRules": [],
+ "specialEvents": [
+  {
+   "key": "moves-before-cspine",
+   "descriptionEn": "candidate rolls, sits up or otherwise moves the patient, lets him lift or turn his head, or applies a painful stimulus before manual in-line c-spine control is established (he was found on his left side and may be suctioned in that position)"
+  },
+  {
+   "key": "releases-cspine-early",
+   "descriptionEn": "candidate (or the partner on the candidate's instruction) releases manual c-spine control before the patient is fully secured to the spinal device with body straps and head blocks; applying the collar alone does not permit release"
+  },
+  {
+   "key": "vomit-left-in-airway",
+   "descriptionEn": "candidate has been told there is vomit in the mouth and moves on to breathing, circulation, the RBS, vitals, history or packaging without suctioning or otherwise clearing it"
+  },
+  {
+   "key": "suction-too-long",
+   "descriptionEn": "candidate states a single suction pass of longer than 15 seconds"
+  },
+  {
+   "key": "opa-with-gag-reflex",
+   "descriptionEn": "candidate inserts an oropharyngeal airway (OPA) while the patient is responding to voice with an intact gag reflex"
+  },
+  {
+   "key": "irregular-resps-not-assisted",
+   "descriptionEn": "after his breathing has been reported as slowing and becoming irregular (the decline), the candidate carries on with other tasks over the next turns without starting BVM-assisted ventilations"
+  },
+  {
+   "key": "hyperventilation",
+   "descriptionEn": "candidate ventilates at a deliberately fast rate or states that they will hyperventilate him to lower the intracranial pressure"
+  },
+  {
+   "key": "decline-not-recognized",
+   "descriptionEn": "after the examiner has described the decline (eyes only to pain, no longer obeying commands, breathing slowing), the candidate carries on with routine tasks (history, Functional Enquiry, head-to-toe) without reassessing his LOC/GCS, airway and breathing or escalating care"
+  },
+  {
+   "key": "head-taped",
+   "descriptionEn": "candidate tapes the patient's head to the spinal device"
+  },
+  {
+   "key": "fluid-bolus-given",
+   "descriptionEn": "PCP gives a fluid bolus (runs normal saline wide open or orders a set volume such as 20 mL/kg or 500 mL); starting an IV with saline at TKVO is NOT this event"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "txa",
+   "namesEn": [
+    "TXA",
+    "tranexamic acid",
+    "Cyklokapron"
+   ],
+   "doseEn": "2 g (2000 mg) IV push over 1 minute in other trauma - CONTRAINDICATED here: isolated TBI. Withhold. Record drug:txa only if the candidate actually gives it.",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "IV fluids",
+    "fluid bolus"
+   ],
+   "doseEn": "IV TKVO while the systolic is above 120 mmHg (maintain systolic above 120); no fluid bolus - he is hypertensive",
+   "licence": "pcp"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "N2O",
+    "the gas"
+   ],
+   "doseEn": "WITHHELD - contraindicated with an altered level of consciousness (head injury). Record drug:entonox only if the candidate actually gives it.",
+   "licence": "both"
+  },
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "Glucogel"
+   ],
+   "doseEn": "15 g PO - NOT indicated: BGL 5.6 mmol/L is within the 4.0-8.0 target and he cannot reliably maintain his own airway (vomiting, decreased LOC)",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%",
+    "IV dextrose"
+   ],
+   "doseEn": "10-25 g (100-250 mL of 10% solution) IV for hypoglycemia - NOT indicated: BGL 5.6 mmol/L is within the 4.0-8.0 target",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "log-roll",
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "txa-contraindicated",
+   "check": "absent",
+   "event": "drug:txa",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-movement-before-cspine",
+   "check": "absent",
+   "event": "moves-before-cspine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 100,
+    "errorEn": "Fails to initiate C-spine control at any time when indicated and/or"
+   }
+  },
+  {
+   "id": "no-early-cspine-release",
+   "check": "absent",
+   "event": "releases-cspine-early",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 100,
+    "errorEn": "Releasing C-spine control when it is required, detrimental to patient care"
+   }
+  },
+  {
+   "id": "vomit-cleared",
+   "check": "absent",
+   "event": "vomit-left-in-airway",
+   "licence": "both",
+   "deduct": {
+    "itemId": "airway",
+    "weight": 100,
+    "errorEn": "Determines airway problems but fails to act to correct them and/or"
+   }
+  },
+  {
+   "id": "suction-standard",
+   "check": "absent",
+   "event": "suction-too-long",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-airway-mgmt",
+    "weight": 15,
+    "errorEn": "Does not suction the airway as per the standards outlined in the skills checklist"
+   }
+  },
+  {
+   "id": "no-opa-with-gag",
+   "check": "absent",
+   "event": "opa-with-gag-reflex",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-airway-mgmt",
+    "weight": 15,
+    "errorEn": "Chooses the wrong airway adjunct based on patient presentation"
+   }
+  },
+  {
+   "id": "assist-irregular-resps",
+   "check": "absent",
+   "event": "irregular-resps-not-assisted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "breathing",
+    "weight": 100,
+    "errorEn": "Determines absent or irregular respirations but does not intervene immediately - this includes the primary survey and subsequent checks in the vital signs and ABC reassessments."
+   }
+  },
+  {
+   "id": "no-hyperventilation",
+   "check": "absent",
+   "event": "hyperventilation",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "decline-recognized",
+   "check": "absent",
+   "event": "decline-not-recognized",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Displays poor regard for patient care (e.g. gross delay in recognizing a decline in patient presentation, or ignoring voiced complaints from a patient)"
+   }
+  },
+  {
+   "id": "no-head-tape",
+   "check": "absent",
+   "event": "head-taped",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-spinal-mgmt",
+    "weight": 10,
+    "errorEn": "Performs the skill with an isolated error not detrimental to patient care"
+   }
+  },
+  {
+   "id": "entonox-contraindicated",
+   "check": "absent",
+   "event": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-oral-glucose",
+   "check": "absent",
+   "event": "drug:oral-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-d10w",
+   "check": "absent",
+   "event": "drug:d10w",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-iv-fluids",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-fluid-bolus",
+   "check": "absent",
+   "event": "fluid-bolus-given",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  }
+ ],
  "painManagement": {
   "applies": false
  },
  "notificationFacts": {
-  "ageSex": "",
-  "cc": "",
-  "moi": null,
-  "hxcc": "",
-  "vitals": "",
-  "treatments": "",
-  "findings": ""
+  "ageSex": "38-year-old male",
+  "cc": "head injury with altered mental status - moderate TBI, deteriorating",
+  "moi": "assault at approximately 2305 - struck once to the right temple with a baseball bat, fell backwards onto grass",
+  "hxcc": "knocked out for about 2 minutes, confused since, vomited twice",
+  "vitals": "GCS 13 (E3 V4 M6), BP 168/92, pulse 58 bounding, resp 14, SpO2 93% on room air, right pupil 5 mm sluggish; now GCS 11 (E2 V4 M5), BP 178/88, pulse 52, resp 12 and irregular, right pupil 6 mm non-reactive",
+  "treatments": "airway suctioned, oxygen with ventilations now assisted, manual c-spine and full spinal packaging with the collar loosened and the head of the bed at 30 degrees, direct pressure to the scalp laceration; PCP: IV TKVO; no TXA; RTC to the trauma centre, ETA 20 minutes",
+  "findings": "6 cm right temporal laceration with boggy swelling, no CSF, no palpable depression; signs of rising intracranial pressure"
  },
  "handoffFacts": {
-  "ageSex": "",
-  "cc": "",
-  "moi": null,
-  "hxcc": "",
-  "initialVitals": "",
-  "finalVitals": "",
-  "pmhx": "",
-  "meds": "",
-  "allergies": "",
-  "treatments": "",
-  "findings": ""
+  "ageSex": "38-year-old male",
+  "cc": "head injury with altered mental status",
+  "moi": "assaulted at approximately 2305, struck once to the right temple with a baseball bat, fell backwards onto grass",
+  "hxcc": "about 2 minutes of loss of consciousness, confused since, two episodes of vomiting; no other blows seen; lay on cold wet grass until our arrival",
+  "initialVitals": "GCS 13 (E3 V4 M6 - eyes to voice, confused, obeys commands), BP 168/92, pulse 58 strong bounding, resp 14 regular, skin pale warm dry, pupils unequal - right 5 mm sluggish, left 3 mm brisk, SpO2 93% on room air rising to 98% on oxygen, BGL 5.6 mmol/L, temperature 36.2 C",
+  "finalVitals": "GCS 11 (E2 V4 M5 - eyes to pain, confused, localizes), BP 178/88, pulse 52 bounding, resp 12 and becoming irregular, skin pale warm dry, right pupil 6 mm non-reactive, left 3 mm reactive, SpO2 97% on oxygen with assisted ventilations, BGL 5.6 mmol/L",
+  "pmhx": "no significant medical history (confirmed with his wife by phone); no anticoagulants",
+  "meds": "none",
+  "allergies": "no known allergies",
+  "treatments": "vomit suctioned and airway maintained; oxygen to keep SpO2 at or above 94%, ventilations assisted once respirations slowed and became irregular, no hyperventilation; manual c-spine, hard collar and full spinal packaging, collar loosened after securing, head of the bed elevated 30 degrees; direct pressure to the scalp laceration; PCP: IV TKVO (systolic above 120); TXA withheld - contraindicated in isolated TBI; RTC to the trauma centre",
+  "findings": "6 cm right temporal laceration with boggy swelling, bleeding controlled, no palpable depression, no CSF from the ears or nose, no Battle sign or raccoon eyes; GCS falling 13 to 11 with a dilating non-reactive right pupil, bradycardia and hypertension - signs of rising intracranial pressure; dinner at 1900 with two beers"
  },
  "pcrFacts": {
   "cc": "Head injury with altered mental status after assault with a bat",
@@ -716,6 +1460,7 @@
   "pmhx": "Nil significant; no anticoagulants (confirmed with spouse)",
   "meds": "None",
   "allergies": "NKA",
+  "vitals": "Set 1 (on scene): GCS 13 (E3 V4 M6), BP 168/92, P 58 strong bounding, R 14 regular, skin pale warm dry, pupils R 5 mm sluggish / L 3 mm brisk, SpO2 93% RA then 98% on O2, BGL 5.6 mmol/L, temp 36.2 C. Set 2 (deteriorating): GCS 11 (E2 V4 M5), BP 178/88, P 52 bounding, R 12 becoming irregular, skin pale warm dry, pupils R 6 mm non-reactive / L 3 mm reactive, SpO2 97% on O2 with assisted ventilations, BGL 5.6 mmol/L",
   "treatments": [
    "Suction of vomit, airway maintained",
    "O2 titrated to SpO2 94% or above; assisted ventilations when resps fell",
@@ -732,34 +1477,13 @@
   ]
  },
  "examinerPrompts": {
-  "locNotDepictedEn": null,
-  "breathingNotDepictedEn": null,
-  "missedInjuryEn": null
+  "locNotDepictedEn": "Volunteer whenever the candidate assesses LOC or GCS, because the actor cannot fully depict it. Before the decline: \"He opens his eyes to your voice, his speech is confused, and he obeys simple commands slowly.\" Once the gcs-decline state change is in effect: \"He no longer opens his eyes to your voice - only to a painful stimulus. His words are still confused. He no longer follows commands; he reaches toward a painful stimulus.\"",
+  "breathingNotDepictedEn": "Once the gcs-decline state change is in effect, volunteer when the candidate assesses breathing: \"His breathing has slowed and is becoming irregular.\" (The rate itself is spoken by the engine.)",
+  "missedInjuryEn": "You examined his head during your rapid body survey - what did you find on the right side of his scalp?"
  },
  "trackNotes": {
-  "emrEn": "EMR: spinal packaging, suction, airway adjuncts, oxygenation at or above 94%, assisted ventilations, head of bed at 30 degrees, collar loosened, serial GCS and pupils, and rapid transport. No IV, no blood-sugar correction beyond recognizing the BGL. No Functional Enquiry. TXA is not in EMR scope and remains contraindicated regardless.",
-  "pcpEn": "PCP adds IV TKVO (only if systolic is above 120 mmHg), maintenance of blood sugar between 4.0 and 8.0 mmol/L, maintenance of systolic above 120 mmHg, and the Functional Enquiry as far as the patient's confusion allows. TXA remains contraindicated."
+  "emrEn": "EMR: spinal packaging, suction, airway adjuncts, oxygenation at or above 94%, assisted ventilations, head of bed at 30 degrees, collar loosened, serial GCS and pupils, and rapid transport. No IV, no blood-sugar correction beyond recognizing the BGL (5.6 is normal). No Functional Enquiry. TXA is not in EMR scope and remains contraindicated regardless; Entonox is contraindicated (altered LOC).",
+  "pcpEn": "PCP adds IV TKVO (only if systolic is above 120 mmHg), maintenance of blood sugar between 4.0 and 8.0 mmol/L, maintenance of systolic above 120 mmHg, and the Functional Enquiry as far as the patient's confusion allows (no deduction for systems he cannot answer). TXA remains contraindicated in isolated TBI; no fluid bolus (hypertensive)."
  },
- "_phaseScripts": {
-  "dispatch": "Dispatch adds: witnesses say he was knocked out and is now awake but 'not making sense'. Police confirm the scene is safe.",
-  "scene": "EXAMINER SCRIPT: Dark pathway lit by police flashlights and your scene lights. Wet grass, 9 degrees C, light rain. A baseball bat has been secured by police as evidence. The patient lies on his left side on the grass where he fell; a bystander rolled him there because he vomited. One patient. Police remain with you.",
-  "primary": "ACTOR: eyes open to voice, confused speech ('where... where is... my bag'), obeys simple commands slowly. EXAMINER (give when assessed): airway - vomit in the mouth requiring SUCTION (10-15 seconds in an adult) and ongoing airway monitoring; respirations 14, adequate depth; radial pulse 58, strong and bounding. Skin: pale, warm, dry. RBS: 6 cm boggy swelling and laceration over the right temporal scalp with slow venous bleeding, no depressed skull fracture felt, no CSF from ears or nose, no other injuries. SpO2 93% RA. UNSTABLE: altered LOC with head trauma.",
-  "transport": "Decision point. Altered LOC after head trauma = UNSTABLE, RTC. Package with spinal precautions and be ready to load within 15 minutes. Destination: this patient meets trauma-centre criteria for a moderate TBI; verbalize the destination decision and notify.",
-  "history": "ACTOR is confused - use POLICE AND WITNESSES: struck once on the right side of the head with a bat about 15 minutes ago, fell backwards onto grass, unconscious for roughly 2 minutes, then awake but confused and vomited twice. No other blows seen. He cannot describe the pain reliably; when asked he says his head hurts, maybe 6/10. PMHx (from his wife by phone): none significant, no anticoagulants. Meds: none. Allergies: none known. LOI: dinner around 1900, two beers.",
-  "vitals": "Set 1: GCS 13 (E3 V4 M6 - eyes to voice, confused, obeys commands); BP 168/92; pulse 58 strong bounding; respirations 14 regular; skin pale warm dry; PUPILS - right 5 mm sluggish, left 3 mm brisk (UNEQUAL - a critical finding); SpO2 93% RA rising to 98% on oxygen; BGL 5.6 (indicated with altered LOC); temperature 36.2 (indicated - cold wet ground). Widening pulse pressure with bradycardia and unequal pupils suggests rising intracranial pressure. RTC interval 5-6 minutes and pupils MUST be repeated every set.",
-  "fe": "PCP ONLY, en route, limited by the patient's confusion. EXAMINER NOTE: no deduction for FE systems the patient cannot answer - document the limitation and obtain what you can from witnesses. Available: general - fit, no recent illness; CNS - LOC 2 minutes, confused, headache, no seizure witnessed; respiratory nil; cardiovascular nil; GI/GU - vomited twice; integumentary - scalp laceration; musculoskeletal nil; endocrine - no diabetes; EENT - blurred vision reported once, no fluid from ears.",
-  "exam": "Head-to-toe (mostly en route): head/neck - 6 cm right temporal laceration with boggy swelling, bleeding controlled by direct pressure, no depression palpable, no CSF from ears or nose, no Battle sign or raccoon eyes yet, no midline cervical tenderness elicited but he is unreliable; chest - clear and equal 6 sites; abdomen - soft; back - checked during the roll onto the device, no injury; lower extremities - moves both to command, no injury; upper extremities - moves both, grip equal, no injury.",
-  "interventions": "TBI guideline, all levels: maintain SpO2 at or above 94% (assist ventilations if respirations fail, keeping SpO2 at or above 94% - do NOT hyperventilate routinely); elevate the head of the bed 30 degrees; LOOSEN the hard collar once the patient is secured; suction as needed; dress the scalp laceration with direct pressure. Spinal packaging with the head elevated. PCP ADDITIONS: maintain blood sugar 4.0-8.0 mmol/L; maintain systolic BP above 120 mmHg; IV TKVO if systolic is above 120. TXA IS CONTRAINDICATED in isolated TBI - a candidate who gives it here commits a major protocol error.",
-  "ongoing": "Reassess ABCs, GCS and PUPILS after every move and at least every 5 minutes. Set 2 (en route, 6 minutes later): GCS 11 (E2 V4 M5 - eyes to pain now, still confused, localizes); BP 178/88; pulse 52 bounding; respirations 12 and becoming irregular; skin pale warm dry; pupils right 6 mm non-reactive, left 3 mm reactive; SpO2 97% on oxygen; BGL 5.6. He is DETERIORATING - the candidate must recognize the falling GCS, support ventilations to keep SpO2 at or above 94%, keep suction ready, and expedite transport with an urgent notification.",
-  "handoff": "Critical patient - urgent en-route notification to the trauma centre stating the GCS trend and pupil findings. Structured hand-off; PCR within 5 minutes."
- },
- "_handoffModelEn": "This is a 38-year-old male assaulted at approximately 2305, struck once to the right temple with a baseball bat, with about 2 minutes of loss of consciousness and two episodes of vomiting since. Chief complaint is head injury with altered mental status. On our arrival GCS was 13, eyes to voice, confused, obeying commands, with BP 168/92, pulse 58 and bounding, resps 14, SpO2 93% on room air, BGL 5.6, temperature 36.2, and an unequal right pupil at 5 millimetres and sluggish. Six minutes later he is GCS 11, eyes to pain now, BP 178/88, pulse 52, resps 12 and irregular, right pupil 6 millimetres and non-reactive - he is deteriorating with signs of rising intracranial pressure. No significant medical history, no anticoagulants, no known allergies, two beers with dinner. Treatments: airway suctioned, oxygen to keep saturations above 94 percent with ventilations now assisted, manual c-spine and full spinal packaging with the collar loosened and head of bed at 30 degrees, scalp laceration controlled with direct pressure, IV TKVO. No TXA - contraindicated in isolated head injury.",
- "_criticalPitfallsEn": [
-  "Giving TXA for an isolated TBI - explicitly contraindicated, major protocol error 100%",
-  "No c-spine control with blunt head trauma and altered LOC - 100%",
-  "Not suctioning a vomiting patient with a decreased LOC, or leaving him unprotected against aspiration - 100% (Airway)",
-  "Not repeating pupils and GCS with every set and missing the deterioration - pupil/GCS deductions plus a major protocol failure",
-  "Routine hyperventilation, or allowing SpO2 to fall below 94% in a TBI patient - protocol error"
- ],
- "sourcePages": ""
+ "sourcePages": "Scenario tr-06 (data/practical/scenarios.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing (deterioration to GCS 11), handoff, critical pitfalls. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (altered LOC is unstable); p.11 Primary survey interventions (c-spine stabilization when NEXUS/Canadian C-Spine indications are met; airway maintenance and suctioning with decreased LOC; assisting slow or failing respirations especially with decreasing LOC; oxygen for altered LOC and trauma); p.13 AVPU; p.25 Spinal Management (manual stabilization, hard collar, spinal immobilization device, foam blocks, secure the body, do not tape the head); p.27 Traumatic Brain Injuries (GCS 13 or more mild, 9-12 moderate, 8 or less severe; SpO2 94% or more, assist ventilations if needed keeping SpO2 at 94% or more; head of the bed at 30 degrees; loosen hard collar; PCP: BGL 4.0-8.0 mmol/L, systolic above 120 mmHg, IV TKVO if systolic is above 120; TXA contraindicated for isolated TBIs); p.57 Diabetic Emergencies and p.76 Oral Glucose (glucose only for BGL < 4.0; oral glucose only with sufficient mentation to maintain an airway); p.65 Entonox (contraindicated with altered level of consciousness); p.78 Tranexamic Acid (contraindicated in isolated TBIs)."
 }

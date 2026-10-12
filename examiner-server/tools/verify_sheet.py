@@ -79,6 +79,10 @@ def verify(sid):
     cjk = [s for s in strings(sh) if re.search(r'[\u4e00-\u9fff]', s)]
     if cjk: errs.append(f'{len(cjk)} strings contain Chinese (sheet must be English)')
 
+    ap = sh.get('acceptedPriorities')
+    if ap is not None and (not isinstance(ap, list) or sh.get('priority') not in ap or any(x not in ('rtc', 'non-rtc') for x in ap)):
+        errs.append('acceptedPriorities must be a list of rtc/non-rtc that includes priority')
+
     # gate 2: expected
     for e in sh.get('expected', []):
         if e.get('itemId') not in ITEMS: errs.append(f'expected item unknown rubric id {e.get("itemId")!r}: {e.get("actionEn","")[:50]}')

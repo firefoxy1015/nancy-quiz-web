@@ -3,6 +3,10 @@
  "titleEn": "Witnessed Seizure With Post-Ictal State - Altered LOC NYD",
  "type": "medical",
  "priority": "non-rtc",
+ "acceptedPriorities": [
+  "non-rtc",
+  "rtc"
+ ],
  "sourceScenario": "data/practical/scenarios.json#md-08",
  "patient": {
   "name": "Daniel Reyes",
@@ -71,13 +75,13 @@
    "sEn": "Witness: \"Stiffening, a cry, then shaking all over for about 90 seconds; his lips went blue.\" Patient, once oriented: \"My head aches, my left shoulder is sore, I ache all over, and I bit my tongue.\"",
    "aEn": "Witness: \"I don't know him.\" Patient, once oriented: \"No allergies.\"",
    "mEn": "Witness: \"I don't know.\" Patient, once oriented: \"Levetiracetam, 500 milligrams twice a day. But I ran out three days ago and I haven't refilled it, so I haven't had any for three days.\"",
-   "pEn": "Patient, once oriented: \"Epilepsy - I was diagnosed at 19. I usually have two or three seizures a year. No diabetes. No head injury before today.\"",
-   "lEn": "Patient, once oriented: \"Coffee at 1100. I didn't have lunch.\"",
+   "pEn": "Patient, once oriented: \"Epilepsy - I was diagnosed at 19 years old, and I usually have two or three seizures a year. No diabetes. No head injury before today.\"",
+   "lEn": "Patient, once oriented: \"Coffee at 1100 this morning, and I didn't have lunch.\"",
    "eEn": "Witness: \"He was reading quietly - nothing happened before it.\" Patient, once oriented: \"I've been sleeping badly and I was drinking the last two nights. I ran out of my pills three days ago. No fever, no headache before it, and no drugs.\""
   },
   "fe": {
    "generalEn": "(Once oriented) \"I haven't been sleeping well, I've been drinking more than usual the last two nights, and I've been missing meals.\"",
-   "cnsEn": "\"I've had epilepsy since I was 19. No warning or aura this time. I've got a headache now. No weakness anywhere. I bit my tongue.\"",
+   "cnsEn": "\"I've had epilepsy since I was 19 years old. No warning or aura this time. I've got a headache now. No weakness anywhere. I bit my tongue.\"",
    "respiratoryEn": "\"No cough, no trouble breathing.\"",
    "cardiovascularEn": "\"No palpitations, no chest pain, and I didn't feel faint before it.\"",
    "giGuEn": "\"I wet myself during it, I think. I haven't thrown up.\"",
@@ -101,7 +105,7 @@
    "unlock": {
     "always": true
    },
-   "unlockNoteEn": "baseline, post-ictal",
+   "unlockNoteEn": "baseline, taken while he is still post-ictal",
    "gcs": {
     "total": 11,
     "e": 3,
@@ -117,13 +121,13 @@
    },
    "resp": {
     "rate": 20,
-    "depth": "",
-    "character": "",
+    "depth": "adequate",
+    "character": "regular",
     "rawEn": "20 regular"
    },
-   "skin": "pink warm moist",
-   "pupils": "PERL 4 mm",
-   "spo2": "94% RA, 98% on O2",
+   "skin": "pink, warm, moist",
+   "pupils": "equal and reactive (PERL), 4 mm",
+   "spo2": "94% on room air",
    "bgl": "4.8 mmol/L",
    "temp": "37.0 C"
   },
@@ -132,11 +136,11 @@
    "unlock": {
     "anyOf": [
      {
-      "elapsedMs": 600000
+      "elapsedMs": 900000
      }
     ]
    },
-   "unlockNoteEn": "approx 15 min later, packaged and en route",
+   "unlockNoteEn": "about 15 minutes later, packaged and en route - normal post-ictal recovery, now fully oriented",
    "gcs": {
     "total": 15,
     "e": 4,
@@ -152,18 +156,45 @@
    },
    "resp": {
     "rate": 16,
-    "depth": "",
-    "character": "",
+    "depth": "adequate",
+    "character": "regular",
     "rawEn": "16 regular"
    },
-   "skin": "pink warm dry",
-   "pupils": "PERL 4 mm",
-   "spo2": "98% on O2",
+   "skin": "pink, warm, dry",
+   "pupils": "equal and reactive (PERL), 4 mm",
+   "spo2": "98% on oxygen",
    "bgl": "4.8 mmol/L",
    "temp": "37.0 C"
   }
  ],
- "stateChanges": [],
+ "stateChanges": [
+  {
+   "id": "oxygen-applied",
+   "when": {
+    "afterEvent": "oxygen"
+   },
+   "examinerLineEn": "Oxygen is on.",
+   "vitalsPatch": {
+    "spo2": "98% on oxygen"
+   }
+  },
+  {
+   "id": "waking-post-ictal",
+   "when": {
+    "elapsedMs": 240000
+   },
+   "examinerLineEn": "He is starting to wake: his eyes now open when you speak to him, he mumbles words that do not fit your questions, and he pushes your hand away from a painful stimulus. He is still confused.",
+   "vitalsPatch": {}
+  },
+  {
+   "id": "oriented-wants-home",
+   "when": {
+    "elapsedMs": 900000
+   },
+   "examinerLineEn": "He is now fully awake and oriented, embarrassed, and asking about his sore left shoulder. He says: \"I feel fine now. Can I just go home?\"",
+   "vitalsPatch": {}
+  }
+ ],
  "expected": [
   {
    "itemId": "overall-call-management",
@@ -171,7 +202,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Acknowledge; plan suction, oxygen, OPA/NPA, glucometer and a stretcher to the patient",
-   "triggers": []
+   "triggers": [
+    "copy dispatch",
+    "bring suction",
+    "bring the OPA and NPA",
+    "bring the glucometer",
+    "bring the stretcher in",
+    "oxygen with us"
+   ]
   },
   {
    "itemId": "overall-call-management",
@@ -179,7 +217,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Anticipate a post-ictal airway problem and the need to rule out hypoglycemia as the cause",
-   "triggers": []
+   "triggers": [
+    "post-ictal airway",
+    "expect secretions",
+    "rule out low blood sugar",
+    "check a BGL",
+    "airway is my priority",
+    "possible hypoglycemia as the cause"
+   ]
   },
   {
    "itemId": "scene-ppe",
@@ -187,7 +232,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Verbalize hazards (furniture, secretions, possible repeat seizure), environment, nature of illness (witnessed seizure with a fall), one patient",
-   "triggers": []
+   "triggers": [
+    "scene is safe",
+    "tipped chair and book cart",
+    "move the furniture back",
+    "secretions hazard",
+    "he may seize again",
+    "one patient"
+   ]
   },
   {
    "itemId": "scene-ppe",
@@ -195,7 +247,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Don gloves and eye protection (secretions)",
-   "triggers": []
+   "triggers": [
+    "gloves and eye protection",
+    "PPE on",
+    "BSI",
+    "eye protection for secretions",
+    "donning gloves"
+   ]
   },
   {
    "itemId": "visual-assessment",
@@ -203,7 +261,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "First look: young male on his side, snoring respirations, saliva at the mouth, not yet responsive to voice",
-   "triggers": []
+   "triggers": [
+    "he's on his side",
+    "he's snoring",
+    "saliva at his mouth",
+    "not responding to us",
+    "general impression",
+    "young male on the floor"
+   ]
   },
   {
    "itemId": "delicate-spine",
@@ -211,7 +276,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Note the tipped chair and identify that he fell at the onset - this changes the spinal decision",
-   "triggers": []
+   "triggers": [
+    "the chair is tipped over",
+    "did he fall",
+    "he fell at the start",
+    "did he hit his head",
+    "he hit the book cart"
+   ]
   },
   {
    "itemId": "loc-avpu",
@@ -219,7 +290,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Assess LOC / AVPU: initially responds to Pain only, and reassess as it changes",
-   "triggers": []
+   "triggers": [
+    "AVPU",
+    "can you hear me",
+    "trapezius pinch",
+    "responds to pain only",
+    "he's a P on AVPU",
+    "level of consciousness"
+   ]
   },
   {
    "itemId": "delicate-spine",
@@ -227,7 +305,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Take manual c-spine control: he fell at onset, struck his head, and had a decreased LOC - trauma cannot be reasonably ruled out at this point",
-   "triggers": []
+   "triggers": [
+    "take manual c-spine",
+    "hold c-spine",
+    "manual inline stabilization",
+    "he fell and hit his head, c-spine",
+    "partner, hold his head",
+    "spinal precautions"
+   ]
   },
   {
    "itemId": "airway",
@@ -235,7 +320,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Open and maintain the airway, SUCTION the pooled secretions, and consider a correctly sized NPA",
-   "triggers": []
+   "triggers": [
+    "suction the saliva",
+    "suction the airway",
+    "open the airway",
+    "jaw thrust",
+    "insert an NPA",
+    "keep him on his side"
+   ]
   },
   {
    "itemId": "breathing",
@@ -243,7 +335,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Assess breathing rate and adequacy",
-   "triggers": []
+   "triggers": [
+    "check his breathing",
+    "breathing rate",
+    "chest rise",
+    "breathing is adequate",
+    "count respirations",
+    "respiratory effort"
+   ]
   },
   {
    "itemId": "circulation",
@@ -251,7 +350,13 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Assess circulation",
-   "triggers": []
+   "triggers": [
+    "radial pulse",
+    "check a pulse",
+    "pulse is strong and regular",
+    "any major bleeding",
+    "pulse rate and quality"
+   ]
   },
   {
    "itemId": "rapid-body-survey",
@@ -259,7 +364,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Modified rapid body survey; find the occipital laceration, the tongue laceration and the incontinence",
-   "triggers": []
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "check the back of his head",
+    "check his tongue",
+    "he's been incontinent",
+    "head to toe sweep"
+   ]
   },
   {
    "itemId": "skin-primary",
@@ -267,7 +379,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Note skin: pink warm moist",
-   "triggers": []
+   "triggers": [
+    "skin is pink warm and moist",
+    "skin signs",
+    "feel his skin",
+    "skin colour temperature condition",
+    "he's a bit sweaty"
+   ]
   },
   {
    "itemId": "oxygen",
@@ -275,7 +393,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Apply oxygen to maintain SpO2 at or above 94 percent in a post-ictal patient",
-   "triggers": []
+   "triggers": [
+    "put him on oxygen",
+    "non-rebreather",
+    "titrate to 94",
+    "sats are 94 so oxygen",
+    "nasal cannula",
+    "high flow oxygen"
+   ]
   },
   {
    "itemId": "patient-position",
@@ -283,7 +408,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Position to protect the airway while maintaining spinal precautions; control bleeding from the scalp with direct pressure",
-   "triggers": []
+   "triggers": [
+    "keep him on his side",
+    "lateral position",
+    "recovery position with c-spine",
+    "direct pressure on the scalp",
+    "protect his airway",
+    "log roll to his side"
+   ]
   },
   {
    "itemId": "transport",
@@ -291,7 +423,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Categorize correctly as non-RTC for a single self-limiting seizure with steady recovery, and justify it",
-   "triggers": []
+   "triggers": [
+    "this is non-RTC",
+    "non-priority",
+    "he's stable",
+    "he's waking up steadily",
+    "single seizure, recovering",
+    "stable patient"
+   ]
   },
   {
    "itemId": "transport",
@@ -299,7 +438,13 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Ready to load within 30 minutes",
-   "triggers": []
+   "triggers": [
+    "ready to load within 30",
+    "let's package him",
+    "get him on the stretcher",
+    "load him up",
+    "package and go"
+   ]
   },
   {
    "itemId": "overall-call-management",
@@ -307,7 +452,13 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Verbalize what would change the category: a second seizure, a persistently decreased LOC, or a falling GCS would make this RTC",
-   "triggers": []
+   "triggers": [
+    "if he seizes again it becomes RTC",
+    "a second seizure would make this RTC",
+    "if his GCS drops we upgrade",
+    "status epilepticus would be RTC",
+    "upgrade to RTC if he doesn't wake up"
+   ]
   },
   {
    "itemId": "chief-complaint",
@@ -315,7 +466,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Establish chief complaint: witnessed generalized seizure with a post-ictal decreased LOC",
-   "triggers": []
+   "triggers": [
+    "what happened",
+    "why did you call",
+    "chief complaint",
+    "what's going on",
+    "tell me what you saw"
+   ]
   },
   {
    "itemId": "history-of-cc",
@@ -323,7 +480,14 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "HxC/C from the witness first: onset, duration, type of movement, cyanosis, number of seizures, recovery pattern, then the patient's own account",
-   "triggers": []
+   "triggers": [
+    "how long did the seizure last",
+    "what did the shaking look like",
+    "did his lips turn blue",
+    "how many seizures",
+    "did he fall",
+    "when did it start"
+   ]
   },
   {
    "itemId": "past-medical-history",
@@ -331,7 +495,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "PMHx - known epilepsy, and screen for diabetes, previous head injury and recent illness",
-   "triggers": []
+   "triggers": [
+    "medical history",
+    "do you have epilepsy",
+    "any history of seizures",
+    "are you diabetic",
+    "any head injuries before",
+    "past history"
+   ]
   },
   {
    "itemId": "medications",
@@ -339,7 +510,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Medications - critically, whether he has been taking his anticonvulsant (he has not for 3 days)",
-   "triggers": []
+   "triggers": [
+    "what medications",
+    "do you take seizure medication",
+    "have you been taking your meds",
+    "when did you last take it",
+    "levetiracetam",
+    "meds"
+   ]
   },
   {
    "itemId": "allergies",
@@ -347,7 +525,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Allergies",
-   "triggers": []
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "allergies to medications",
+    "no known allergies",
+    "allergies"
+   ]
   },
   {
    "itemId": "last-oral-intake",
@@ -355,7 +539,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "LOI - relevant to hypoglycemia as a seizure cause",
-   "triggers": []
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "did you eat lunch",
+    "LOI",
+    "last meal"
+   ]
   },
   {
    "itemId": "gcs",
@@ -363,7 +553,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "GCS with components (E3 V3 M5 = 11) and repeat it as he wakes",
-   "triggers": []
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 11",
+    "E3 V3 M5",
+    "repeat the GCS"
+   ]
   },
   {
    "itemId": "blood-pressure",
@@ -371,7 +568,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "BP by auscultation",
-   "triggers": []
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "cuff on",
+    "auscultate a pressure",
+    "I'm taking a BP"
+   ]
   },
   {
    "itemId": "pulse",
@@ -379,7 +582,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Pulse rate/strength/rhythm",
-   "triggers": []
+   "triggers": [
+    "check his pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "pulse is strong",
+    "count the pulse"
+   ]
   },
   {
    "itemId": "respirations",
@@ -387,7 +596,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Respirations rate/depth/character",
-   "triggers": []
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count his breaths",
+    "breathing rate"
+   ]
   },
   {
    "itemId": "skin-vitals",
@@ -395,7 +610,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Skin hands-on",
-   "triggers": []
+   "triggers": [
+    "skin check",
+    "colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "skin is moist"
+   ]
   },
   {
    "itemId": "pupils",
@@ -403,7 +624,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Pupils - required with a decreased LOC and a head injury, and repeated every set",
-   "triggers": []
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "penlight",
+    "pupils equal and reactive"
+   ]
   },
   {
    "itemId": "pulse-oximetry",
@@ -411,7 +638,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "SpO2 with calibration",
-   "triggers": []
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "check the waveform matches the pulse"
+   ]
   },
   {
    "itemId": "blood-glucose",
@@ -419,7 +652,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "BGL - mandatory in any seizure or altered LOC to exclude hypoglycemia",
-   "triggers": []
+   "triggers": [
+    "blood sugar",
+    "BGL",
+    "glucometer",
+    "check his glucose",
+    "rule out hypoglycemia",
+    "finger poke"
+   ]
   },
   {
    "itemId": "temperature",
@@ -427,7 +667,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Temperature - reasonable to exclude a febrile or infectious cause",
-   "triggers": []
+   "triggers": [
+    "temperature",
+    "temp",
+    "thermometer",
+    "tympanic temperature",
+    "check for fever"
+   ]
   },
   {
    "itemId": "fe-general-health",
@@ -435,7 +681,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - General health (sleep, alcohol, missed meals - all seizure triggers)",
-   "triggers": []
+   "triggers": [
+    "general health",
+    "how have you been sleeping",
+    "any alcohol",
+    "missed meals",
+    "recent illness"
+   ]
   },
   {
    "itemId": "fe-cns",
@@ -443,7 +695,14 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - CNS (the core system: aura, focal deficit, headache, previous seizure pattern)",
-   "triggers": []
+   "triggers": [
+    "any aura",
+    "any headache",
+    "weakness or numbness",
+    "usual seizure pattern",
+    "neuro enquiry",
+    "did you bite your tongue"
+   ]
   },
   {
    "itemId": "fe-respiratory",
@@ -451,7 +710,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Respiratory (aspiration screen)",
-   "triggers": []
+   "triggers": [
+    "short of breath",
+    "any cough",
+    "breathing problems",
+    "respiratory enquiry",
+    "did you choke"
+   ]
   },
   {
    "itemId": "fe-cardiovascular",
@@ -459,7 +724,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Cardiovascular (differentiating seizure from syncope)",
-   "triggers": []
+   "triggers": [
+    "any chest pain",
+    "palpitations",
+    "did you feel faint first",
+    "heart problems",
+    "cardiovascular enquiry"
+   ]
   },
   {
    "itemId": "fe-gi-gu",
@@ -467,7 +738,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - GI/GU (incontinence supports a true seizure)",
-   "triggers": []
+   "triggers": [
+    "did you wet yourself",
+    "incontinence",
+    "nausea or vomiting",
+    "bowels and bladder",
+    "any vomiting"
+   ]
   },
   {
    "itemId": "fe-integumentary",
@@ -475,7 +752,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Integumentary",
-   "triggers": []
+   "triggers": [
+    "skin changes",
+    "any cuts",
+    "any rash",
+    "integumentary",
+    "the cut on your head"
+   ]
   },
   {
    "itemId": "fe-musculoskeletal",
@@ -483,7 +766,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Musculoskeletal (injuries from the convulsion and the fall)",
-   "triggers": []
+   "triggers": [
+    "aches or pains",
+    "any injuries from the fall",
+    "sore shoulder",
+    "musculoskeletal",
+    "muscle aches"
+   ]
   },
   {
    "itemId": "fe-endocrine",
@@ -491,7 +780,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - Endocrine (diabetes screen)",
-   "triggers": []
+   "triggers": [
+    "diabetes",
+    "any blood sugar problems",
+    "thyroid",
+    "endocrine",
+    "are you diabetic"
+   ]
   },
   {
    "itemId": "fe-eent",
@@ -499,7 +794,13 @@
    "weight": 5,
    "licence": "pcp",
    "actionEn": "FE - EENT",
-   "triggers": []
+   "triggers": [
+    "eyes ears nose throat",
+    "EENT",
+    "vision problems",
+    "fluid from your ears",
+    "any visual aura"
+   ]
   },
   {
    "itemId": "pe-head-neck",
@@ -507,7 +808,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Head/neck exam incl the occipital laceration, skull palpation, CSF check and tongue",
-   "triggers": []
+   "triggers": [
+    "head and neck",
+    "palpate the skull",
+    "check the occipital laceration",
+    "check for CSF",
+    "check his tongue",
+    "any neck pain"
+   ]
   },
   {
    "itemId": "pe-chest-lungs",
@@ -515,7 +823,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Chest exam with 6-site auscultation to screen for aspiration",
-   "triggers": []
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "check for aspiration",
+    "chest exam"
+   ]
   },
   {
    "itemId": "pe-abdomen",
@@ -523,7 +837,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Abdomen exam",
-   "triggers": []
+   "triggers": [
+    "abdomen",
+    "palpate the belly",
+    "four quadrants",
+    "soft non-tender",
+    "abdominal exam"
+   ]
   },
   {
    "itemId": "pe-back",
@@ -531,7 +851,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Back exam during the controlled roll",
-   "triggers": []
+   "triggers": [
+    "check the back",
+    "check his back during the roll",
+    "palpate the spine",
+    "back exam",
+    "any back pain"
+   ]
   },
   {
    "itemId": "pe-lower-extremities",
@@ -539,7 +865,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Lower extremities with a focal-deficit check comparing both sides",
-   "triggers": []
+   "triggers": [
+    "lower extremities",
+    "check his legs",
+    "push against my hands with your feet",
+    "compare both legs",
+    "wiggle your toes",
+    "any focal weakness"
+   ]
   },
   {
    "itemId": "pe-upper-extremities",
@@ -547,7 +880,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Upper extremities incl the shoulder injured in the fall, with CSM",
-   "triggers": []
+   "triggers": [
+    "upper extremities",
+    "check his arms",
+    "check the shoulder",
+    "squeeze my hands",
+    "CSM",
+    "grip strength"
+   ]
   },
   {
    "itemId": "protocols",
@@ -555,7 +895,13 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Obtain a BGL as a mandatory step in any seizure or altered LOC, and correctly conclude that glucose is not indicated at 4.8 mmol/L",
-   "triggers": []
+   "triggers": [
+    "BGL is 4.8, normal",
+    "no glucose needed",
+    "glucose not indicated",
+    "BGL rules out hypoglycemia",
+    "sugar is normal"
+   ]
   },
   {
    "itemId": "skill-airway-mgmt",
@@ -563,7 +909,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Airway management skill: suction, correctly sized adjunct, positioning to prevent aspiration",
-   "triggers": []
+   "triggers": [
+    "suction",
+    "measure the NPA",
+    "lubricate the NPA",
+    "insert the NPA",
+    "keep him on his side to drain",
+    "airway adjunct"
+   ]
   },
   {
    "itemId": "skill-spinal-mgmt",
@@ -571,7 +924,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Spinal management: collar and packaging given the fall, head strike and decreased LOC",
-   "triggers": []
+   "triggers": [
+    "apply a collar",
+    "size the collar",
+    "backboard",
+    "log roll onto the board",
+    "head blocks",
+    "spinal packaging"
+   ]
   },
   {
    "itemId": "skill-wound-mgmt",
@@ -579,7 +939,13 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Dress the occipital laceration with direct pressure, without applying pressure over a suspected depressed fracture",
-   "triggers": []
+   "triggers": [
+    "direct pressure on the scalp",
+    "dress the head wound",
+    "trauma dressing",
+    "bandage the laceration",
+    "control the bleeding"
+   ]
   },
   {
    "itemId": "protocols",
@@ -587,7 +953,14 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Verbalize the recurrent-seizure plan: protect the airway, do not restrain, nothing in the mouth, time it, oxygen, upgrade to RTC",
-   "triggers": []
+   "triggers": [
+    "if he seizes again",
+    "don't restrain him",
+    "nothing in his mouth",
+    "time the seizure",
+    "protect his head",
+    "upgrade to RTC"
+   ]
   },
   {
    "itemId": "protocols",
@@ -595,7 +968,13 @@
    "weight": 100,
    "licence": "both",
    "actionEn": "Do not give oral glucose, analgesia or anything by mouth while his LOC is decreased",
-   "triggers": []
+   "triggers": [
+    "nothing by mouth",
+    "no oral glucose",
+    "no Entonox while he's post-ictal",
+    "no analgesia until he's alert",
+    "keep him NPO"
+   ]
   },
   {
    "itemId": "ongoing-abc-i",
@@ -603,7 +982,13 @@
    "weight": 15,
    "licence": "both",
    "actionEn": "Reassess ABCs and all interventions after each move and each change in LOC",
-   "triggers": []
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "his LOC has changed, reassessing",
+    "reassessing after the move",
+    "how are you feeling now"
+   ]
   },
   {
    "itemId": "overall-call-management",
@@ -611,7 +996,13 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Second full set of vitals within the non-RTC interval, with a repeat GCS and pupils",
-   "triggers": []
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "repeat GCS and pupils",
+    "reassess vitals"
+   ]
   },
   {
    "itemId": "overall-patient-care",
@@ -619,7 +1010,13 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Document the improving GCS trend from 11 to 15 as evidence of a normal post-ictal recovery",
-   "triggers": []
+   "triggers": [
+    "GCS has improved",
+    "GCS went from 11 to 15",
+    "he's recovering normally",
+    "normal post-ictal recovery",
+    "GCS trend"
+   ]
   },
   {
    "itemId": "overall-patient-care",
@@ -627,7 +1024,14 @@
    "weight": 25,
    "licence": "both",
    "actionEn": "Strongly recommend transport despite him feeling better, citing the head injury and the three days without levetiracetam",
-   "triggers": []
+   "triggers": [
+    "I strongly recommend you come to hospital",
+    "you hit your head",
+    "you've missed your medication",
+    "you could seize again",
+    "we'd really like to take you in",
+    "you need to be checked"
+   ]
   },
   {
    "itemId": "notification",
@@ -635,7 +1039,13 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Notify the receiving facility",
-   "triggers": []
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "radio the receiving facility"
+   ]
   },
   {
    "itemId": "hand-off-report",
@@ -643,7 +1053,14 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Complete hand-off with seizure duration, GCS trend, BGL, head injury and medication non-compliance",
-   "triggers": []
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 26-year-old male",
+    "report to the nurse",
+    "seizure lasted 90 seconds",
+    "missed levetiracetam"
+   ]
   },
   {
    "itemId": "documentation",
@@ -651,37 +1068,270 @@
    "weight": 5,
    "licence": "both",
    "actionEn": "Accurate PCR within 5 minutes",
-   "triggers": []
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
   }
  ],
- "specialEvents": [],
- "drugs": [],
- "majorMoves": [],
- "protocolRules": [],
+ "specialEvents": [
+  {
+   "key": "pain-stimulus-before-cspine",
+   "descriptionEn": "candidate applies a painful stimulus (e.g. trapezius pinch), rolls or moves him, or turns his head BEFORE manual c-spine control is established - he fell and struck his head"
+  },
+  {
+   "key": "secretions-not-managed",
+   "descriptionEn": "candidate has found the snoring airway with pooled saliva and moves on to breathing, circulation, the RBS, vitals or history without suctioning it and opening / positioning the airway, or rolls him supine and leaves him there without suction ready and the airway maintained"
+  },
+  {
+   "key": "analgesia-while-dloc",
+   "descriptionEn": "candidate gives Entonox, acetaminophen, ibuprofen or anything by mouth while he is not yet fully awake and oriented (log the drug as well)"
+  },
+  {
+   "key": "seizure-restraint-or-mouth",
+   "descriptionEn": "candidate restrains his limbs or puts something in his mouth (bite block, tongue depressor, fingers, oral glucose) - or states that this is what they would do if he seized again. A correctly sized NPA, or suctioning, is NOT this event."
+  },
+  {
+   "key": "refusal-accepted",
+   "descriptionEn": "after he is oriented and asks to go home, candidate accepts the refusal and agrees not to transport him without strongly recommending transport and explaining the head injury, the three days without levetiracetam and the risk of another seizure"
+  },
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets or asks him to sit up, stand or walk (e.g. to the stretcher) while spinal precautions are indicated"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Glucogel",
+    "Insta-Glucose",
+    "glucose tablets"
+   ],
+   "doseEn": "NOT indicated: BGL 4.8 mmol/L is normal (the trigger is BGL < 4.0); also contraindicated while his LOC is decreased (only for a patient with sufficient mentation to maintain an airway). If given, report drug:oral-glucose.",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "glucagon IM",
+    "intranasal glucagon"
+   ],
+   "doseEn": "NOT indicated: BGL 4.8 mmol/L is normal (indication is hypoglycemia, BGL < 4.0). If given, report drug:glucagon.",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%",
+    "IV dextrose"
+   ],
+   "doseEn": "NOT indicated: BGL 4.8 mmol/L is normal; D10W 10-25 g IV would be given only for hypoglycemia (BGL < 4.0). BC uses D10W only - there is no D50W in BC. If given, report drug:d10w.",
+   "licence": "pcp"
+  },
+  {
+   "key": "naloxone",
+   "namesEn": [
+    "naloxone",
+    "Narcan"
+   ],
+   "doseEn": "NOT indicated: no actual or suspected narcotic use, respirations 20 with adequate depth, pupils 4 mm and reactive (indication is respiratory depression / depressed mental status secondary to narcotic use). If given, report drug:naloxone.",
+   "licence": "both"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "N2O",
+    "the gas"
+   ],
+   "doseEn": "self-administered by inhalation - CONTRAINDICATED with an altered level of consciousness or inability to comply; never while he is post-ictal (report analgesia-while-dloc as well).",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol"
+   ],
+   "doseEn": "500-1000 mg PO - nothing by mouth while his LOC is decreased (report analgesia-while-dloc if given before he is fully oriented); caution: alcohol use.",
+   "licence": "pcp"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin",
+    "NSAID"
+   ],
+   "doseEn": "300-400 mg PO - nothing by mouth while his LOC is decreased (report analgesia-while-dloc if given before he is fully oriented).",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "log-roll",
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "bgl-obtained",
+   "check": "present",
+   "event": "blood-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "no-oral-glucose-bgl-normal",
+   "check": "absent",
+   "event": "drug:oral-glucose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-glucagon-bgl-normal",
+   "check": "absent",
+   "event": "drug:glucagon",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-d10w-bgl-normal",
+   "check": "absent",
+   "event": "drug:d10w",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "naloxone-not-indicated",
+   "check": "absent",
+   "event": "drug:naloxone",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-analgesia-while-dloc",
+   "check": "absent",
+   "event": "analgesia-while-dloc",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "secretions-managed",
+   "check": "absent",
+   "event": "secretions-not-managed",
+   "licence": "both",
+   "deduct": {
+    "itemId": "airway",
+    "weight": 100,
+    "errorEn": "Determines airway problems but fails to act to correct them and/or"
+   }
+  },
+  {
+   "id": "cspine-before-stimulus",
+   "check": "absent",
+   "event": "pain-stimulus-before-cspine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "delicate-spine",
+    "weight": 15,
+    "errorEn": "C-spine control taken late, or out of sequence with potentially negative consequences, including pain stimulus prior to C-spine control, and/or"
+   }
+  },
+  {
+   "id": "no-restraint-or-mouth",
+   "check": "absent",
+   "event": "seizure-restraint-or-mouth",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "refusal-not-simply-accepted",
+   "check": "absent",
+   "event": "refusal-accepted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Does not perform an act that was required based on patient presentation that is potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  }
+ ],
  "painManagement": {
   "applies": false
  },
  "notificationFacts": {
-  "ageSex": "",
-  "cc": "",
-  "moi": null,
-  "hxcc": "",
-  "vitals": "",
-  "treatments": "",
-  "findings": ""
+  "ageSex": "26-year-old male",
+  "cc": "witnessed generalized seizure with a post-ictal decreased LOC and a head strike",
+  "moi": "fell sideways off his chair into a book cart at the onset of the seizure, striking the back of his head",
+  "hxcc": "known epileptic; witnessed generalized tonic-clonic seizure at about 1332 lasting about 90 seconds with cyanosis, no further seizures; ran out of levetiracetam 3 days ago",
+  "vitals": "initially GCS 11 (E3 V3 M5), BP 148/88, pulse 104 strong regular, resp 20, SpO2 94% on room air, BGL 4.8, temperature 37.0; now GCS 15, BP 132/78, pulse 88, resp 16, SpO2 98% on oxygen",
+  "treatments": "suction and airway positioning, oxygen to SpO2 94% or above, manual c-spine then collar and spinal packaging with the head of the bed elevated, direct pressure and dressing to the scalp laceration, BGL normal so no glucose given; ETA 12 minutes",
+  "findings": "2 cm left occipital laceration with haematoma, left lateral tongue laceration, urinary incontinence, tender left shoulder with full range of movement, no focal neurological deficit"
  },
  "handoffFacts": {
-  "ageSex": "",
-  "cc": "",
-  "moi": null,
-  "hxcc": "",
-  "initialVitals": "",
-  "finalVitals": "",
-  "pmhx": "",
-  "meds": "",
-  "allergies": "",
-  "treatments": "",
-  "findings": ""
+  "ageSex": "26-year-old male",
+  "cc": "witnessed generalized seizure with a post-ictal decreased LOC and a head strike",
+  "moi": "fell sideways off his chair into a book cart at the onset and struck the back of his head",
+  "hxcc": "known epilepsy since age 19; witnessed generalized tonic-clonic seizure in the library at about 1332, about 90 seconds, cyanosis during the event, no further seizure activity; ran out of levetiracetam three days ago, poor sleep and more alcohol than usual for two nights; no fever, no aura, no drug use",
+  "initialVitals": "responsive to pain only, GCS 11 (E3 V3 M5), snoring respirations with pooled secretions; BP 148/88, pulse 104 strong regular, resp 20 regular, skin pink warm moist, pupils equal and reactive 4 mm, SpO2 94% on room air, BGL 4.8 mmol/L, temperature 37.0",
+  "finalVitals": "GCS 15 (E4 V5 M6) and fully oriented; BP 132/78, pulse 88 strong regular, resp 16, skin pink warm dry, pupils equal and reactive 4 mm, SpO2 98% on oxygen, BGL 4.8",
+  "pmhx": "epilepsy diagnosed at age 19, usually 2-3 seizures a year; no diabetes; no previous head injury",
+  "meds": "levetiracetam 500 mg twice daily - none taken for 3 days (ran out)",
+  "allergies": "no known allergies",
+  "treatments": "suction and airway positioning; oxygen to keep SpO2 94% or above; manual c-spine, collar and spinal packaging with the head of the bed elevated; direct pressure and a dressing to the scalp laceration; BGL confirmed normal so no glucose given; nothing by mouth while his LOC was decreased",
+  "findings": "2 cm left occipital laceration with haematoma, no depression, no CSF; left lateral tongue laceration; urinary incontinence; tender left shoulder with full range of movement, CSM intact; chest clear; no focal neurological deficit"
  },
  "pcrFacts": {
   "cc": "Witnessed generalized seizure with post-ictal decreased LOC and a head strike",
@@ -706,35 +1356,13 @@
   ]
  },
  "examinerPrompts": {
-  "locNotDepictedEn": null,
+  "locNotDepictedEn": "He is lying on his side with his eyes closed and is not responding as you approach. Show me how you would assess his level of consciousness.",
   "breathingNotDepictedEn": null,
-  "missedInjuryEn": null
+  "missedInjuryEn": "You examined his head during your rapid body survey - what did you find at the back of his head?"
  },
  "trackNotes": {
-  "emrEn": "EMR manages this entirely within scope: airway with suction and adjuncts, oxygen to 94 percent or above, spinal precautions, BGL measurement, wound care and supportive care for any recurrent seizure. There is no EMR anticonvulsant. If the BGL had been below 4.0 with an unprotected airway, EMR would give glucagon. No Functional Enquiry.",
+  "emrEn": "EMR manages this entirely within scope: airway with suction and adjuncts, oxygen to 94 percent or above, spinal precautions, BGL measurement, wound care and supportive care for any recurrent seizure. There is no EMR anticonvulsant. If the BGL had been below 4.0 with an unprotected airway, EMR would give glucagon - at 4.8 no glucose of any kind is indicated. No Functional Enquiry.",
   "pcpEn": "PCP adds the 9-system Functional Enquiry once he is oriented and may establish vascular access; D10W would be given only if the BGL were below 4.0, which it is not. There is no PCP anticonvulsant in the BC drug list, so a recurrent seizure is still managed supportively with airway protection, oxygen and rapid transport."
  },
- "_phaseScripts": {
-  "dispatch": "Dispatch adds: the seizure lasted about 90 seconds and has stopped. Staff have cleared the area and put a jacket under his head.",
-  "scene": "EXAMINER SCRIPT: A quiet reading room; staff have moved chairs and tables away and asked the public to leave. A tipped-over chair and a knocked-down book cart mark where he fell - so a FALL DID OCCUR at the onset and a head strike cannot be excluded. The patient lies on his left side on the carpet, snoring, with saliva at his mouth. A witness who saw the whole event is available. One patient. Room temperature, good lighting.",
-  "primary": "ACTOR: initially responds only to pain with a groan and non-purposeful movement; over the next several minutes he progressively wakes, becoming drowsy but rousable, then confused, then oriented. EXAMINER (give when assessed): airway - snoring with pooled saliva requiring SUCTION and positioning; a nasopharyngeal airway is appropriate if he has an intact gag reflex; respirations 20, regular, adequate; radial pulse 104, strong and regular. Skin: pink, warm, moist. Modified RBS: a small laceration and a developing bruise on the left occiput where he struck the book cart - HE DID HIT HIS HEAD; tongue laceration on the left side; urinary incontinence; no other injury. SpO2 94 percent RA, 98 percent with oxygen.",
-  "transport": "Decision point. By the end of the primary survey he is waking steadily: rousable, protecting his own airway, breathing adequately, strong radial pulse, normal skin, SpO2 94 percent and no ongoing seizure. A single self-limiting seizure in a known epileptic who is recovering normally is STABLE, NON-RTC. Assess, treat, package and be ready to load within 30 minutes. EXAMINER: if the candidate is slow and a SECOND seizure occurs before packaging, the call becomes RTC - status epilepticus and a persistently decreased LOC are unstable findings.",
-  "history": "WITNESS FIRST, then the patient as he wakes. WITNESS: he was reading, suddenly went stiff, cried out, fell sideways off the chair into the book cart, then had generalized jerking of all four limbs for about 90 seconds; his lips went blue during it; no jerking since; he has been sleepy since it stopped; total time about 8 minutes ago. PATIENT (once oriented): he has epilepsy diagnosed at 19, usually two or three seizures a year, this one felt like his usual ones; he ran out of his levetiracetam three days ago and has not refilled it; he has been sleeping badly and had been drinking the last two nights. No fever, no headache before it, no recent head injury, no drug use. PMHx: epilepsy, no diabetes. Meds: levetiracetam 500 mg twice daily (NONE FOR 3 DAYS). Allergies: none known. LOI: coffee at 1100, no lunch.",
-  "vitals": "Set 1 - taken while he is still post-ictal: GCS 11 (E3 V3 M5 - eyes to voice, inappropriate words, localizes); BP 148/88; pulse 104 strong regular; respirations 20 regular; skin pink warm moist; pupils equal and reactive, 4 mm; SpO2 94 percent RA rising to 98 percent on oxygen; BGL 4.8 mmol/L - MANDATORY, hypoglycemia is a leading cause of seizures and D10W is indicated for coma or seizure NYD; temperature 37.0 - reasonable to exclude a febrile cause. Non-RTC: repeat within about 15 minutes.",
-  "fe": "PCP ONLY, once he is oriented. EXAMINER NOTE: no deduction for systems he could not answer while post-ictal. ACTOR: general - poor sleep, drinking more than usual for two nights, missed meals; CNS - known epilepsy since 19, no aura this time, headache now, no focal weakness, bit his tongue; respiratory - no cough, no aspiration symptoms; cardiovascular - no palpitations, no chest pain, no syncope pattern; GI/GU - incontinent of urine during the seizure, no vomiting; integumentary - scalp laceration; musculoskeletal - aching all over from the convulsion, left shoulder sore from the fall; endocrine - no diabetes; EENT - no visual aura, no ear discharge.",
-  "exam": "Head-to-toe: head/neck - 2 cm laceration with a haematoma over the left occiput, no depression, no CSF from ears or nose, tongue laceration on the left lateral border, no midline cervical tenderness once he can answer reliably; chest - clear and equal at all 6 sites, no aspiration signs; abdomen - soft, non-tender; back - no tenderness or deformity, checked during the roll onto the spinal device; lower extremities - no injury, moves all four limbs equally, no focal weakness (important - a persistent focal deficit after a seizure would suggest a structural cause); upper extremities - left shoulder tender with full range of movement, no dislocation, CSM intact.",
-  "interventions": "Altered Mental Status NYD approach: manage the airway with positioning, suction and adjuncts; oxygen to maintain SpO2 at or above 94 percent; protect from injury; obtain a BGL - this is not optional, because hypoglycemia is a treatable cause and D10W is indicated for coma or seizure NYD. His BGL of 4.8 is normal, so glucose is NOT indicated and giving it would be a non-indicated intervention. Spinal management: he fell and struck his head with a decreased LOC, so apply a collar and package on a spinal device; the head of the bed may be elevated 30 degrees for the head injury. Dress the occipital laceration with direct pressure. There is no BC-authorized anticonvulsant at the EMR or PCP level - management of a recurrent seizure is supportive: protect the airway, do not restrain the limbs, do not put anything in the mouth, time the seizure, oxygen, and upgrade to rapid transport with notification. Do NOT give Entonox or any analgesia requiring compliance to a post-ictal patient with an altered LOC.",
-  "ongoing": "Reassess ABCs after every move and after every change in LOC - a changing GCS demands a full ABC reassessment. Set 2 (about 15 minutes later, packaged and en route): GCS 15 (E4V5M6) - now fully oriented, embarrassed, asking about his shoulder; BP 132/78; pulse 88 strong regular; respirations 16; skin pink warm dry; pupils equal and reactive, 4 mm; SpO2 98 percent on oxygen; BGL 4.8; temperature 37.0. He is recovering as expected for a post-ictal state. EXAMINER: he may now say he feels fine and wants to go home - the candidate must recommend transport, explaining the head injury, the missed anticonvulsant and the risk of another seizure.",
-  "handoff": "Notify the receiving facility. The hand-off must include the seizure duration, the post-ictal GCS trend, the BGL, the head strike and the missed anticonvulsant. PCR within 5 minutes."
- },
- "_handoffModelEn": "This is a 26-year-old male with known epilepsy since age 19 who had a witnessed generalized tonic-clonic seizure in the library at approximately 1332, lasting about 90 seconds, with cyanosis during the event and no further seizure activity since. He fell sideways off his chair into a book cart at the onset and struck the back of his head, so we have maintained spinal precautions. On arrival he responded only to pain, GCS 11, with snoring respirations and pooled secretions requiring suction, BP 148/88, pulse 104, resps 20, SpO2 94 percent on room air, blood glucose 4.8 and temperature 37.0. He is now GCS 15 and fully oriented, BP 132/78, pulse 88, SpO2 98 percent on oxygen. Findings include a 2 centimetre occipital laceration with a haematoma, a left lateral tongue laceration, urinary incontinence and a tender left shoulder with full range of movement; no focal neurological deficit. He has epilepsy on levetiracetam 500 milligrams twice daily but ran out three days ago, has been sleeping poorly and drinking more than usual. No known allergies, last ate this morning. Treatments: suction and airway positioning, oxygen to keep saturations above 94 percent, collar and spinal packaging with the head of the bed elevated, direct pressure and a dressing to the scalp, blood glucose confirmed normal so no glucose given.",
- "_criticalPitfallsEn": [
-  "Not obtaining a blood glucose in a seizure or altered LOC - hypoglycemia is a treatable cause and D10W is indicated for seizure NYD",
-  "Giving glucose or D10W with a normal BGL of 4.8 - initiating a protocol without proper indications is a 100% error",
-  "Not applying c-spine precautions when he fell, struck his head and had a decreased LOC - 100%",
-  "Leaving a post-ictal patient with pooled secretions unsuctioned or supine without airway protection - 100% (Airway)",
-  "Restraining the limbs or placing anything in the mouth if another seizure occurs - harmful and non-indicated",
-  "Accepting his refusal of transport without addressing the head injury and the three days without anticonvulsant medication"
- ],
- "sourcePages": ""
+ "sourcePages": "Scenario md-08 (data/practical/scenarios.json): dispatch, scene (fall at onset), primary (P to oriented over several minutes, suction, NPA if gag intact, occipital laceration, tongue laceration, incontinence), transport (non-RTC single self-limiting seizure with steady recovery), history, vitals sets 1-2, FE, exam, interventions (BGL mandatory, no glucose at 4.8, spinal packaging, no anticonvulsant, no Entonox while LOC altered), ongoing (refusal once oriented), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.11 Primary Survey interventions (c-spine for an unconscious patient where trauma cannot be ruled out; airway maintenance and suctioning for decreased LOC; oxygen for altered LOC); p.13 AVPU; p.57 Diabetic Emergencies (BGL < 4.0 mmol/L trigger; decreased LOC without a known cause); p.61 D10W (indication includes coma or seizure NYD; 10-25 g); p.65 Entonox (contraindications: inability to comply, altered level of consciousness); p.67 Glucagon (indication hypoglycemia); p.72 Naloxone (indication narcotic use); p.76 Oral Glucose (only with sufficient mentation to maintain an airway); p.58 Acetaminophen and p.68 Ibuprofen (PO doses)."
 }

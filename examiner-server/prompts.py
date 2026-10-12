@@ -36,6 +36,7 @@ EVENT RECORDING (this is how the candidate gets credit, so be precise and comple
 - quote = the candidate's words that justify the event (verbatim fragment).
 - components = for vitals: which parts they measured ("rate","rhythm","strength","depth","character"); for drugs: what they verbalized of the 6 rights / contraindications (e.g. "dose","route","allergy-check","sbp-check").
 - "ongoing-abc-i" is recorded only when they re-check airway, breathing, circulation AND their interventions after a move or change.
+- Record a drug event for ANY drug the candidate actually gives, even one outside their licence level (each drug's licence is on the sheet). Never warn them; the engine judges scope. Saying they will NOT give a drug, or that it is contraindicated, is not a drug event.
 """
 
 
@@ -44,7 +45,6 @@ def sheet_for_prompt(sheet, track, vset, fired):
     s = {k: sheet[k] for k in ('id', 'titleEn', 'type', 'patient', 'scene', 'dispatchEn', 'dispatchUpdateEn', 'arrivalEn', 'firstLookEn',
                                'primary', 'history', 'findings', 'specialEvents', 'drugs', 'majorMoves', 'examinerPrompts') if k in sheet}
     if track == 'emr':
-        s['drugs'] = [d for d in sheet.get('drugs', []) if d.get('licence', 'both') in ('both', 'emr')]
         s['history'] = dict(s['history']); s['history'].pop('fe', None)   # no functional enquiry at EMR level
     s['trackNoteEn'] = (sheet.get('trackNotes') or {}).get(track + 'En', '')
     s['currentVitalsSet'] = {'set': vset['set'], 'note': 'values are spoken by the engine, not by you'}

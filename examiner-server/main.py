@@ -95,7 +95,7 @@ def start(req: StartReq, x_device: Optional[str] = Header(default=None)):
 
 
 def _normalize_events(sheet, track, raw, t):
-    drug_keys = {d['key'] for d in sheet.get('drugs', []) if d.get('licence', 'both') in ('both', track)}
+    drug_keys = {d['key'] for d in sheet.get('drugs', [])}   # out-of-licence drugs too: the sheet's guard rules judge them
     moves = set(sheet.get('majorMoves', []))
     specials = {s['key'] for s in sheet.get('specialEvents', [])}
     valid_eids = {e['eid'] for e in sheet['expected']}

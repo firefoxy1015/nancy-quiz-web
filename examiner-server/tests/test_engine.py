@@ -269,7 +269,7 @@ def test_drug_keyword_fallback_affirmative_only():
     assert f('Entonox is contraindicated with a pneumothorax.') == []
     assert f('If his pain gets worse I would consider Entonox.') == []
     assert f('Have you taken any aspirin today?') == []
-    assert f('TXA 2 g IV over 1 minute.', track='emr') == []                      # not an EMR drug
+    assert f('TXA 2 g IV over 1 minute.', track='emr') == ['drug:txa']            # out of scope is still recorded: the sheet's guard judges it
     assert f('Giving ASA 160 mg chewed.', rep=[{'name': 'drug:asa'}]) == []        # model already reported it
 
 
@@ -294,6 +294,16 @@ def test_late_entonox_is_100_at_every_level():
     early = e + [ev(8.5, 'drug:entonox'), ev(9.0, 'skill-fracture-mgmt')]
     r = engine.score(s, 'emr', early, 22 * M, closing=c)
     assert not any(x['itemId'] == 'pain-management' for x in r['rows']), r['rows']
+
+
+def test_accepted_priorities():
+    s, e, c = perfect('non-rtc')
+    e = [x for x in e if not x['name'].startswith('transport:')] + [ev(3.0, 'transport:rtc')]
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert any(x['itemId'] == 'transport' for x in r['rows'])                    # single category: RTC is wrong
+    s['acceptedPriorities'] = ['non-rtc', 'rtc']
+    r = engine.score(s, 'pcp', e, 22 * M, closing=c)
+    assert not any(x['itemId'] == 'transport' for x in r['rows']), r['rows']     # both accepted; packaged at 12 < 15 min
 
 
 def test_presence_miss_is_capped_for_protocol_items():

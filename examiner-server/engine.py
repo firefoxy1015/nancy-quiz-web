@@ -343,8 +343,6 @@ def drug_events(text, sheet, track, t, reported):
         if not (_re.search(DRUG_GIVE, low) or _re.search(DOSE, low)):
             continue
         for d in sheet.get('drugs', []):
-            if d.get('licence', 'both') not in ('both', track):
-                continue
             name = 'drug:' + d['key']
             if name in have:
                 continue
@@ -590,7 +588,10 @@ def score(sheet, track, events, end_ms, closing=None, quality=None):
     # 3. transport decision and packaging time
     t_rtc, t_non = first_time(ev, 'transport:rtc'), first_time(ev, 'transport:non-rtc')
     correct = sheet['priority']
+    accepted = sheet.get('acceptedPriorities') or [correct]   # e.g. post-ictal: guideline p.7 says altered LOC = unstable
     decided = 'rtc' if t_rtc is not None and (t_non is None or t_rtc < t_non) else ('non-rtc' if t_non is not None else None)
+    if decided in accepted:
+        correct = decided   # packaging limit follows the candidate's (acceptable) category
     if decided is None:
         form.add('transport', 25, 'Fails to place the patient in the correct category (Priority or Non-Priority – Medical/Trauma) at the end of the initial assessment and treats as such detrimental to patient care and/or', {'t': end_ms, 'quote': 'no transport decision'})
     elif decided != correct:

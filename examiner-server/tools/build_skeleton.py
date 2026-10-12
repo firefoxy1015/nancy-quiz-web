@@ -42,7 +42,7 @@ def parse_vitals(v):
         'gcs': {'total': num(gcs), 'e': int(comp.group(1)) if comp else None,
                 'v': int(comp.group(2)) if comp else None, 'm': int(comp.group(3)) if comp else None},
         'bp': v.get('bp'),
-        'pulse': {'rate': num(pulse_txt), 'rhythm': 'regular' if 'regular' in pulse_txt else '',
+        'pulse': {'rate': num(pulse_txt), 'rhythm': 'irregular' if 'irregular' in pulse_txt else ('regular' if 'regular' in pulse_txt else ''),
                   'strength': 'weak' if 'weak' in pulse_txt else ('strong' if 'strong' in pulse_txt else 'normal'),
                   'rawEn': pulse_txt},
         'resp': {'rate': num(resp_txt), 'depth': '', 'character': '', 'rawEn': resp_txt},
