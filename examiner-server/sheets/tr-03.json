@@ -379,7 +379,7 @@
   {
    "itemId": "rapid-body-survey",
    "phase": "primary",
-   "weight": 100,
+   "weight": 10,
    "licence": "both",
    "actionEn": "Complete the RBS including the BACK - check for an exit wound",
    "triggers": [
@@ -1111,6 +1111,10 @@
   {
    "key": "bolus-no-reassess",
    "descriptionEn": "PCP runs a saline bolus past 500 mL, or onto the next 500 mL, without reassessing the patient (BP / vitals / ABCs) in between"
+  },
+  {
+   "key": "exit-wound-checked",
+   "descriptionEn": "candidate checks the back / posterior chest for an exit wound"
   }
  ],
  "drugs": [
@@ -1305,6 +1309,16 @@
     "weight": 100,
     "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
    }
+  },
+  {
+   "id": "exit-wound-checked",
+   "check": "present",
+   "event": "exit-wound-checked",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 10,
+    "errorEn": "Deduction if the candidate does not check for an exit wound in a patient with an open chest wound."
+   }
   }
  ],
  "painManagement": {
@@ -1371,6 +1385,10 @@
   {
    "event": "tension-watch-verbalized",
    "regex": "\\b(tension|burp\\w*|trachea\\w*|jvd|jugular)\\b|\\b(check\\w*|recheck\\w*|reassess\\w*|monitor\\w*)\\s+(the\\s+|his\\s+)?(chest\\s+)?(seal|dressing)\\b|\\bseal\\s+(is\\s+)?(intact|still|holding)\\b"
+  },
+  {
+   "event": "exit-wound-checked",
+   "regex": "\\b(exit wound|check(ing)? (his|the) back|(his|the) back for|posterior (chest|wound)|look(ing)? (at|under) (his|the) back|roll(ing)? (him|the patient)[^.]{0,30}back)\\b"
   }
  ]
 }

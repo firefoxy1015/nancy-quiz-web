@@ -364,6 +364,21 @@
    ]
   },
   {
+   "itemId": "skill-fracture-mgmt",
+   "phase": "primary",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Apply a pelvic binder before packaging (major side-impact mechanism with HR over 100 - guideline p.24), without rolling the patient",
+   "triggers": [
+    "pelvic binder",
+    "bind the pelvis",
+    "SAM splint",
+    "three triangular bandages",
+    "centred on the greater trochanters",
+    "binder before we package"
+   ]
+  },
+  {
    "itemId": "skin-primary",
    "phase": "primary",
    "weight": 5,
@@ -1376,6 +1391,16 @@
     "weight": 100,
     "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
    }
+  },
+  {
+   "id": "binder-applied",
+   "check": "present",
+   "event": "skill-fracture-mgmt",
+   "deduct": {
+    "itemId": "skill-fracture-mgmt",
+    "weight": 25,
+    "errorEn": "Does not meet the standards for fracture management detrimental to patient care (not applying a pelvic binder when indicated)"
+   }
   }
  ],
  "painManagement": {
@@ -1387,7 +1412,7 @@
   "moi": "restrained driver of a sedan T-boned on the driver side at about 60 km/h, 0.4 m intrusion, airbags deployed",
   "hxcc": "dazed, no confirmed LOC; extricated by fire; pain 8/10 sharp, worse on breathing, since impact",
   "vitals": "GCS 15, BP 88/62 now 84/58, pulse 124 now 132 weak, resps 24 shallow, skin pale cool clammy, SpO2 94% on 15 L NRB",
-  "treatments": "c-spine and full spinal packaging, high-flow oxygen 15 L NRB, supine and warm, movement limited; PCP: IV 18 G with normal saline bolus reassessed every 500 mL, TXA 2 g IV over 1 minute",
+  "treatments": "Pelvic binder applied before packaging (no roll); c-spine and full spinal packaging, high-flow oxygen 15 L NRB, supine and warm, movement limited; PCP: IV 18 G with normal saline bolus reassessed every 500 mL, TXA 2 g IV over 1 minute",
   "findings": "seatbelt sign chest and abdomen, LUQ tenderness and guarding with increasing distension - suspected intra-abdominal bleeding; pelvis stable; deteriorating; ETA about 10 minutes"
  },
  "handoffFacts": {
@@ -1400,7 +1425,7 @@
   "pmhx": "hypertension",
   "meds": "ramipril 5 mg daily",
   "allergies": "penicillin (rash)",
-  "treatments": "manual c-spine, collar and full spinal packaging; high-flow oxygen 15 L NRB; kept supine and warm, movement limited; rapid transport; PCP: IV 18 G with normal saline bolus (20 mL/kg, max 2 L, reassessed every 500 mL), TXA 2 g IV over 1 minute; Entonox withheld",
+  "treatments": "Pelvic binder applied before packaging (no roll); manual c-spine, collar and full spinal packaging; high-flow oxygen 15 L NRB; kept supine and warm, movement limited; rapid transport; PCP: IV 18 G with normal saline bolus (20 mL/kg, max 2 L, reassessed every 500 mL), TXA 2 g IV over 1 minute; Entonox withheld",
   "findings": "seatbelt sign across chest and abdomen; tender left lower ribs with equal air entry in all 6 sites; LUQ tenderness, guarding and increasing distension; pelvis stable on a single gentle check; no external hemorrhage; CSM intact in all limbs"
  },
  "pcrFacts": {

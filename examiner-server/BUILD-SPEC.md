@@ -210,6 +210,11 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 - [x] 速度实测（`tools/speed_probe.py`，2026-10-11）：Opus 5.5 每轮约 9 秒，effort default 和 low 一样（cc-vibe 多半剥掉了 effort）；**Sonnet 5.5 反而慢（20-22 秒）且无视"只报最新一句"把全部旧动作重报**——结论：逐轮也用 Opus 5.5，不换 Sonnet。延迟主要来自输出 token（约 450）；下一步可做：`events[].key` 改为可选以减少输出、或流式（`eager_input_streaming`）边生成边播报 `say`。
 - [ ] 收尾评审偶尔把"PCR 漏了一个细节"报成 mismatch（应为 1% 轻微缺陷而非 3% 矛盾）；已在提示词里写明，若仍出现改为引擎只接受含 "vs" 对比的条目。
 
+### 用户已拍板的口径（2026-10-11）
+- **场景权重与官方评分手册冲突时，按官方**：tr-03「未查出口伤」= rapid-body-survey 10%（不是 100）；tr-07「未上骨盆带」= fracture management 25%（不是 RBS 100）。练习模式的 `data/practical/scenarios.json` 同步改了。
+- **tr-02 要上骨盆带**：考纲 p.24「高风险机制 + 任一条（心率 >100 等）」即适应证，不要求骨盆不稳定；该车祸为驾驶侧 T 字撞击、乘员侧凹进 0.4 m（p.7 高风险），心率 124 → 适应证成立。新增期望动作「打包前上骨盆带、不翻身」fracture management 25%。
+- **意识改变 = 不稳定**（考纲 p.7）：md-07、md-08 场景写的是非 RTC，用 `acceptedPriorities` 两种分级都接受，打包时限跟考生选的分级走。以后遇到场景与考纲 p.7 冲突的，一律这样处理。
+
 ### P2 内容
 - [ ] 剩余 33 场剧本（按 §5.1 管线，每代理 1 份；优先通用池 16 场，再 EMR 专属 20 场）。
 - [ ] 抽签两场模考（复用 `S.practicalMock` 的思路：随机 1 内科 + 1 创伤，连考，各自成绩）。
