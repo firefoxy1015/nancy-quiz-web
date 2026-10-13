@@ -198,13 +198,14 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 
 ---
 
-## 10. 部署（待用户说推）
+## 10. 部署（2026-10-12 已上线）
 
-1. Render 新建 Blueprint，指向本仓库 `examiner-server/render.yaml`；在 Dashboard 设 `CCVIBE_API_KEY`（不要写进 yaml）。
-2. 服务起来后 `GET /health` 应列出 3 个剧本和通道 `["cc-vibe"]`。
-3. 若 Render 分配的域名不是 `bcprep-examiner.onrender.com`，改 `src/examiner.js` 的 API 常量并升版本串。
-4. Render 免费层会休眠，首次请求慢 30-60 秒；前端 brief 阶段已有 loading 文案，可考虑在 hub 页预热（`fetch('/health')`）。
-5. `git push`（只在用户说推时）→ GitHub Pages 自动部署前端。
+- 前端：GitHub Pages，`git push origin main` 即部署（只在用户说推时）。线上 v23 / DATA_V 19。
+- 考官服务：Render Blueprint **bcprep-examiner**（Starter 付费常驻，约 7 美元/月），读本仓库 `examiner-server/render.yaml`，
+  地址 `https://bcprep-examiner.onrender.com`（与 `src/examiner.js` 的 API 常量一致）。推到 main 会自动同步重新部署。
+- 密钥只在 Render Dashboard 的环境变量里：`CCVIBE_API_KEY`（主，…4ec8，与星轨共用）+ `CCVIBE_BACKUP_KEY`（备，…1eee）。
+  主 key 报日额度用完会自动切备 key 30 分钟。**绝不写进 yaml / 代码 / git。**
+- 自查：`GET /health` 应返回 `channels: ["cc-vibe","cc-vibe-backup"]` 和 36 个剧本；每台设备每天 4 场（`EXAMINER_DAILY_CAP`）。
 
 ---
 
