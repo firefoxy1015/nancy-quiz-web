@@ -1,7 +1,7 @@
 // AI Examiner — a simulated EMALB practical station: dispatch → live call → PCR → grading form.
 // The browser owns the run (crash-safe in localStorage); the server owns the sheet, the model and the scoring.
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=23';
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=24';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}
@@ -337,22 +337,22 @@ function drawBrief(el) {
     <a class="back-link" href="#/examiner">← ${t('AI Examiner', '考官机器人')}</a>
     <div class="card">
       <div class="q-meta"><h2 style="font-size:1.05rem">${esc(sc.titleEn)}</h2><span style="display:flex;gap:6px">${inMock() ? `<span class="pill gray">${ico('cap')} ${t('MOCK', '模考')} ${S.examinerMock.stage === 'medical' ? '1/2' : '2/2'}</span>` : ''}<span class="pill ${sc.type}">${sc.type}</span></span></div>
+      <div class="btn-row" style="margin-top:4px"><button class="btn big ex-begin">▶ ${t('Begin the station', '开始考站')}</button></div>
       <div class="sc-info"><div class="sc-label">Dispatch</div><p>${esc(b.dispatchEn)}</p>${b.dispatchUpdateEn ? `<p>${esc(b.dispatchUpdateEn)}</p>` : ''}</div>
       <div class="sc-info"><div class="sc-label">Equipment on scene</div><p>${(b.equipmentEn || []).map(esc).join(' · ')}</p></div>
       <div class="sc-info"><div class="sc-label">Your partner</div><p>${esc(b.partnerEn || '')}</p></div>
-      ${b.trackNoteEn ? `<div class="notice">${run.track.toUpperCase()}: ${esc(b.trackNoteEn)}</div>` : ''}
       <div class="notice">${bi('Like the real exam, the examiner only answers what you ask or assess — nothing is volunteered. You cannot see the patient here, so say what you look at or check ("What do I see on approach?", "I\'m looking at his chest — what do I see?", "Radial pulse, rate, rhythm and strength"). If you are vague, the examiner will ask what you are assessing.',
         '和真实考试一样，考官只回答你问到的、你做了评估的内容，不会主动告诉你任何东西。这里你看不到病人，所以要说出你在看什么、查什么（"What do I see on approach?"、"I\'m looking at his chest — what do I see?"、"Radial pulse, rate, rhythm and strength"）。说得含糊，考官会反问你在评估什么。')}</div>
       ${bi(`${voiceOn() ? 'Voice conversation is on: when you press Begin the examiner reads the dispatch aloud, then says "You may begin" and the 40-minute clock starts. From then on just talk — a short pause sends what you said, and the microphone reopens after every reply.' : 'When you press Begin, the 40-minute clock starts and the examiner says "You may begin." Everything you type is heard by the examiner.'} ${run.brief.dailyLeft} station(s) left today.`,
            `${voiceOn() ? '语音对话已开：按开始后考官先念派遣信息，然后说 "You may begin"，40 分钟计时开始。之后直接开口说——停顿一下就发送，考官每次说完会自动继续听。' : '按下开始后 40 分钟计时启动，考官会说 "You may begin."。你输入的每句话考官都听得到。'}今天还剩 ${run.brief.dailyLeft} 场。`)}
-      <div class="btn-row"><button class="btn big" id="exBegin">▶ ${t('Begin the station', '开始考站')}</button></div>
+      <div class="btn-row"><button class="btn big ex-begin">▶ ${t('Begin the station', '开始考站')}</button></div>
     </div>`;
-  const beginBtn = el.querySelector('#exBegin');
-  beginBtn.onclick = async () => {
-    beginBtn.disabled = true;
+  const beginBtns = [...el.querySelectorAll('.ex-begin')];
+  beginBtns.forEach(btn => btn.onclick = async () => {
+    beginBtns.forEach(x => x.disabled = true);
     audioUnlock();
     if (voiceOn() && TTS) {
-      beginBtn.textContent = t('The examiner is reading the dispatch…', '考官正在念派遣信息…');
+      beginBtns.forEach(x => x.textContent = t('The examiner is reading the dispatch…', '考官正在念派遣信息…'));
       await speak([{ role: 'examiner', text: 'Dispatch. ' + b.dispatchEn + (b.dispatchUpdateEn ? ' ' + b.dispatchUpdateEn : '') }]);
     }
     run.phase = 'live'; run.startedAt = Date.now();
@@ -363,7 +363,7 @@ function drawBrief(el) {
     draw(el);
     await said;
     if (handsFree()) convListen(el);
-  };
+  });
 }
 const elapsed = () => Date.now() - run.startedAt;
 let tick = null, busy = false;
@@ -555,7 +555,8 @@ function drawResult(el) {
     <div class="card"><h3 style="margin-top:0">${t("Examiner's verbal feedback", '考官口头反馈')}</h3><p>${esc(fb.examinerFeedbackEn)}</p>
       ${TTS ? `<div class="btn-row"><button class="btn ghost" id="exReadFb">🔊 ${t('Read it to me', '读给我听')}</button></div>` : ''}</div>
     <details class="acc card"><summary>${ico('cap')} ${t('Coach debrief (not part of the real exam)', '教练复盘（真实考试没有这个）')}</summary>
-      <div class="acc-body"><p>${esc(zh ? fb.coachDebriefZh || fb.coachDebriefEn : fb.coachDebriefEn)}</p></div></details>
+      <div class="acc-body"><p>${esc(zh ? fb.coachDebriefZh || fb.coachDebriefEn : fb.coachDebriefEn)}</p>
+        ${run.brief && run.brief.brief && run.brief.brief.trackNoteEn ? `<p><strong>${t('What this station expects at your level', '这个考站对你这个级别的要求')} (${run.track.toUpperCase()}):</strong> ${esc(run.brief.brief.trackNoteEn)}</p>` : ''}</div></details>
     ${mockPanel()}
     <div class="btn-row"><a class="btn" href="#/examiner">${t('Another station', '再来一场')}</a><a class="btn ghost" href="#/practical">${t('Practical camp', '实操营')}</a></div>`;
   const nx = el.querySelector('#exMockNext');
