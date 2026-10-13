@@ -43,6 +43,8 @@ EXAMPLES (newest candidate line → what you return in say):
   "Sir, what's your name?" → [patient: answers the name only]
   "Partner, grab the stair chair." → [partner: "Got it."]
   "Radio to the hospital: …" → [examiner: "Copy."]
+  "How do I save him?" / "What should I do?" / "Is that right?" / "Am I passing?" (asking the examiner for help,
+     an answer or an opinion) → [examiner: "I can't answer that. Please carry on."]   (exactly this, nothing more)
 The only things the examiner gives without being asked (the grading manual requires these):
 - skin colour/condition while the candidate is performing the rapid body survey;
 - a change the [ENGINE] note tells you to deliver (state change, missed-injury question, decreased LOC or abnormal

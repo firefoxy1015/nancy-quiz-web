@@ -187,7 +187,7 @@ FILLER = re.compile(r"^\s*(ok(ay)?|alright|all right|noted|understood|acknowledg
                     r"([\s,.!-]+(go ahead|and|then|please|count|counting|proceed|continue|carry on|noted))*[\s.!]*$", re.I)
 
 
-CLARIFY = re.compile(r'what (are|exactly are) you (assessing|checking|looking for|looking at)', re.I)
+CLARIFY = re.compile(r'\bwhat (are|exactly are) you (assessing|checking|looking for|looking at|asking)\b|\brepeat (that|it)\b|\bsay (that|it) again\b|\bcan.?t answer that\b', re.I)   # dropped whenever the engine gave the vital asked for
 
 
 def _filler(line):

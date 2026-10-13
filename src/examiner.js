@@ -1,7 +1,7 @@
 // AI Examiner — a simulated EMALB practical station: dispatch → live call → PCR → grading form.
 // The browser owns the run (crash-safe in localStorage); the server owns the sheet, the model and the scoring.
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=24';
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=25';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}
@@ -439,7 +439,8 @@ function drawLive(el) {
 }
 function renderChat(el) {
   const box = el.querySelector('#exChat'); if (!box) return;
-  box.innerHTML = run.log.map(l => `<div class="ex-line ${l.role}"><span class="ex-who">${l.role === 'candidate' ? 'You' : l.role.charAt(0).toUpperCase() + l.role.slice(1)} <i>${fmt(l.t)}</i></span><div>${esc(l.text)}</div></div>`).join('')
+  box.innerHTML = run.log.map(l => `<div class="ex-line ${l.role}"><span class="ex-who">${l.role === 'candidate' ? 'You' : l.role.charAt(0).toUpperCase() + l.role.slice(1)} <i>${fmt(l.t)}</i></span><div>${esc(l.text)}</div></div>`
+      + (l.silent ? `<div class="ex-silent">${t('(heard — the examiner has nothing to say to that)', '（已收到——考官对这句没有回应）')}</div>` : '')).join('')
     + (busy ? `<div class="ex-line examiner"><span class="ex-who">Examiner</span><div class="muted">…</div></div>` : '');
   box.scrollTop = box.scrollHeight;
 }
@@ -453,6 +454,7 @@ async function candidateSays(el, text) {
     const r = await api('/api/examiner/turn', { scenarioId: run.id, track: run.track, elapsedMs: tms, text, log: run.log.slice(0, -1), events: run.events, fired: run.fired });
     for (const s of r.say) { const l = { t: tms, role: s.role, text: s.text }; run.log.push(l); spoken.push(l); }
     for (const l of r.engineLines) { const x = { t: tms, role: 'examiner', text: l }; run.log.push(x); spoken.push(x); }
+    if (!spoken.length) { const me = run.log.filter(l => l.role === 'candidate').pop(); if (me) me.silent = true; }
     run.events.push(...r.events); run.fired = r.fired;
   } catch (e) {
     run.log.push({ t: tms, role: 'examiner', text: '(connection problem — please repeat that) ' + e.message });
