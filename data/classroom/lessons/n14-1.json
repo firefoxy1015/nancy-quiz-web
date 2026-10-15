@@ -1,0 +1,164 @@
+{
+ "id": "n14-1",
+ "book": "Nancy Caroline · Chapter 14 · Mechanical Ventilation",
+ "title": "Ventilators, CPAP and PEEP: Positive Pressure for the PCP",
+ "minutes": 12,
+ "next": "Chapter 15: Patient History",
+ "slides": [
+  {
+   "kind": "slide",
+   "title": "Today's lesson",
+   "body": "<p class=\"lead\">As an EMR you already give oxygen and ventilate with a BVM. Today, as a PCP:</p><ol class=\"steps\"><li>Understand what <b>positive pressure</b> does to the chest, good and bad</li><li>See where <b>CPAP and PEEP</b>, PCP-only tools in BC, fit in</li><li>Keep a ventilated patient safe when the <b>alarm</b> sounds</li></ol><p class=\"src\">Textbook: Chapter 14, PDF pages 1265–1302</p>",
+   "say": "Welcome back. As EMRs, you already give oxygen and squeeze a BVM, so you already push air into the lungs. That's called positive pressure ventilation, and this chapter is about the machines that do it for us: ventilators, CPAP, and the devices in between. Ventilator settings are not part of the BC PCP protocols, but the ideas in this chapter explain why your PCP tools, CPAP and the PEEP valve, work, and why they can also do harm. Today we'll cover three things: what positive pressure does to the chest, where CPAP and PEEP fit in, and what to do when a ventilated patient gets into trouble.",
+   "sayZh": "欢迎回来。作为 EMR，你们已经会给氧、会捏 BVM，也就是已经在把气体推进肺里了。这叫正压通气，本章讲的就是替我们做这件事的机器：呼吸机、CPAP，以及介于两者之间的设备。呼吸机参数设置不在 BC 的 PCP 流程里，但本章的原理能解释你的 PCP 工具，也就是 CPAP 和 PEEP 阀，为什么有效，又为什么会造成伤害。今天讲三件事：正压对胸腔做了什么；CPAP 和 PEEP 处在什么位置；上了呼吸机的病人出问题时该怎么办。",
+   "audio": "audio/n14-1-01.mp3",
+   "dur": 39.38
+  },
+  {
+   "kind": "slide",
+   "title": "Two ways to move air",
+   "body": "<div class=\"grid3\"><div class=\"cell\"><span class=\"k\">Negative</span><span>pulls the chest wall outward</span><em>shell or jacket devices: home, long-term care</em></div><div class=\"cell\"><span class=\"k\">Invasive</span><span>positive pressure through a tube</span><em>mainly a tracheal tube</em></div><div class=\"cell\"><span class=\"k\">Noninvasive</span><span>positive pressure through a mask</span><em>CPAP, BPAP: patient can still talk</em></div></div><p class=\"note\">Your BVM is <b>positive pressure</b> too: the opposite of normal breathing.</p>",
+   "say": "There are two ways a machine can move air. Normal breathing is negative pressure: the diaphragm drops, the pressure in the chest falls, and air is sucked in. Negative-pressure ventilators copy that from the outside. Today, shell or jacket devices do this at home and in long-term care, for people who control their own airway but have weak breathing muscles. Almost everything else is positive pressure, which pushes air in. Through a tube in the trachea, it's called invasive. Through a mask, it's noninvasive, like CPAP. And your BVM? That's positive pressure too, the opposite of normal breathing.",
+   "sayZh": "机器让空气进出肺有两种方式。正常呼吸是负压：膈肌下降，胸腔内压力下降，空气被吸进来。负压呼吸机从外面模仿这个过程。现在用的是胸甲式或夹克式装置，用于家中和长期照护机构，适合能自己管住气道、但呼吸肌无力的人。其余几乎都是正压，把气体推进去。经气管里的导管送气叫有创；经面罩送气叫无创，比如 CPAP。那你的 BVM 呢？它也是正压，正好和正常呼吸相反。",
+   "audio": "audio/n14-1-02.mp3",
+   "dur": 39.43
+  },
+  {
+   "kind": "slide",
+   "title": "What positive pressure costs",
+   "body": "<div class=\"flow\"><span>Chest pressure ↑</span><i>→</i><span>less blood returns to the heart</span><i>→</i><span>cardiac output and BP ↓</span></div><ul class=\"bul\"><li><b>Barotrauma</b>: too much pressure → pneumothorax</li><li><b>Volutrauma</b>: too much volume → damaged alveoli</li><li>Same physics in your <b>BVM, CPAP and PEEP valve</b></li></ul>",
+   "say": "Pushing air in saves lives, but it has a price, and you need to understand it before you use CPAP or PEEP. When the pressure inside the chest rises, it's harder for blood to flow back into the chest. Less blood coming in means less blood going out: the cardiac output falls, and the blood pressure can drop. Too much pressure can tear the lung and cause a pneumothorax; that's barotrauma. Too much volume can damage the tiny air sacs; that's volutrauma. The same physics applies to your BVM, CPAP and PEEP valve. That's why both BC pressure tools come with a blood pressure rule.",
+   "sayZh": "把气推进去能救命，但有代价，用 CPAP 或 PEEP 之前必须弄懂。胸腔内压力升高，血液就更难流回胸腔。回来的血少了，泵出去的也少：心输出量下降，血压可能掉。压力太大会撑破肺，造成气胸，叫气压伤；容量太大会损伤细小的肺泡，叫容积伤。同样的物理原理也适用于你的 BVM、CPAP 和 PEEP 阀，所以 BC 的这两种正压工具都附带一条血压规则。",
+   "audio": "audio/n14-1-03.mp3",
+   "dur": 37.49
+  },
+  {
+   "kind": "slide",
+   "title": "Pressure control vs volume control",
+   "body": "<table class=\"tbl\"><tr><th></th><th>Pressure control</th><th>Volume control</th></tr><tr><td>Fixed</td><td>the pressure</td><td>the tidal volume</td></tr><tr><td>Changes</td><td>the volume</td><td>the pressure</td></tr><tr><td>Danger</td><td>volume drops, even to zero</td><td>pressure climbs</td></tr><tr><td>Watch</td><td>chest rise, SpO₂, ETCO₂</td><td>peak pressure, high-pressure alarm</td></tr></table>",
+   "say": "Ventilators end each breath in different ways; the two main ones are pressure control and volume control. Think of filling a balloon. With pressure control, you blow until you feel a certain pressure, then stop. With volume control, you blow in a set amount of air, whatever pressure it takes. Here's the trap. If a patient on pressure control bites the tube or plugs it with mucus, the machine still reaches its pressure, so the numbers look fine, but almost no air goes in. So you watch the chest rise, the oxygen saturation and the end-tidal carbon dioxide. With volume control, the volume stays the same, so watch the pressure instead; if it climbs, something is in the way.",
+   "sayZh": "呼吸机结束每口气的方式不同，主要有两种：压力控制和容量控制。想象吹气球：压力控制是吹到感觉到某个压力就停；容量控制是吹进固定的气量，不管需要多大压力。陷阱在这里：压力控制下，如果病人咬住导管或导管被痰堵住，机器照样能达到设定压力，数字看起来正常，但几乎没有气进去。所以要看胸廓起伏、血氧饱和度和呼气末二氧化碳。容量控制下，气量不变，就要盯压力；压力往上爬，说明有东西挡路。",
+   "audio": "audio/n14-1-04.mp3",
+   "dur": 43.92
+  },
+  {
+   "kind": "quiz",
+   "q": "A ventilated patient on pressure control starts biting the tube. The pressure reading looks normal. What is the real danger?",
+   "options": [
+    "Very high pressure tearing the lung",
+    "Little or no air actually reaching the lungs",
+    "The oxygen concentration rising too high",
+    "The ventilator switching itself off"
+   ],
+   "answer": 1,
+   "say": "Let's check. A ventilated patient on pressure control starts biting the tube, and the pressure reading looks normal. What's the real danger? A, very high pressure tearing the lung. B, little or no air actually reaching the lungs. C, the oxygen concentration rising too high. D, the ventilator switching itself off. Tap your answer.",
+   "sayZh": "考考你：一位用压力控制模式的上机病人开始咬导管，压力读数看起来正常。真正的危险是什么？A 压力过高撑破肺；B 几乎没有空气真正进到肺里；C 氧浓度升得太高；D 呼吸机自己关机。点选你的答案。",
+   "explain": "The answer is B. In pressure control, the machine ends each breath once it reaches the set pressure. A bitten tube lets it reach that pressure quickly, so the display looks normal while the tidal volume falls, possibly to zero. A is the worry in volume control, where the pressure climbs instead. Biting doesn't change the oxygen concentration, and the ventilator keeps cycling; that's exactly why the problem is easy to miss. Watch the chest rise and the end-tidal carbon dioxide.",
+   "explainZh": "答案是 B。压力控制下，机器一达到设定压力就结束这口气。导管被咬住时很快就能达到这个压力，所以显示正常，而潮气量却在下降，甚至可能降到零。A 是容量控制下要担心的，那时上升的是压力。咬管不会改变氧浓度，呼吸机也照常送气，这正是问题容易被漏掉的原因。要看胸廓起伏和呼气末二氧化碳。",
+   "audioQ": "audio/n14-1-05q.mp3",
+   "audioA": "audio/n14-1-05a.mp3",
+   "durQ": 23.81,
+   "durA": 32.18
+  },
+  {
+   "kind": "slide",
+   "title": "Oxygen in, carbon dioxide out",
+   "body": "<table class=\"tbl\"><tr><th>Goal</th><th>Ventilator</th><th>Your BVM</th></tr><tr><td>Oxygen in (SpO₂)</td><td>FIO₂ + PEEP</td><td>O₂ + PEEP valve (PCP)</td></tr><tr><td>CO₂ out (ETCO₂)</td><td>tidal volume × rate</td><td>breath size × rate</td></tr></table><ul class=\"bul\"><li>Tidal volume: 6–8 mL/kg ideal body weight</li><li>Adult rate: 12–16 breaths/min</li><li>Peak pressure: ideally ≤ 30 cmH₂O</li><li>PEEP 5 cmH₂O: \"physiologic PEEP\"</li></ul>",
+   "say": "This simple rule works for any ventilator, and for your BVM. Oxygenation, getting oxygen in, depends on two things: the oxygen concentration, called FIO2, and PEEP, the pressure kept in the lungs at the end of each breath out. Ventilation, getting carbon dioxide out, depends on the size of each breath, the tidal volume, times the rate. The book's usual starting points are six to eight millilitres per kilogram of ideal body weight, twelve to sixteen breaths a minute, a peak pressure of thirty centimetres of water or less, and a PEEP of five. So if your bagged patient's saturation stays low, think oxygen and the PEEP valve. If the carbon dioxide is off, think rate and volume.",
+   "sayZh": "这条简单的规则适用于任何呼吸机，也适用于你的 BVM。氧合，也就是把氧送进去，取决于两样：吸入氧浓度（FIO2）和 PEEP，即每次呼气末留在肺里的压力。通气，也就是把二氧化碳排出去，取决于每口气的大小（潮气量）乘以频率。书里常用的起点是：每公斤理想体重六到八毫升，每分钟十二到十六次，峰压不超过三十厘米水柱，PEEP 五厘米水柱。所以，你捏球囊的病人血氧上不去时，想氧气和 PEEP 阀；二氧化碳不对时，想频率和潮气量。",
+   "audio": "audio/n14-1-06.mp3",
+   "dur": 45.14
+  },
+  {
+   "kind": "slide",
+   "title": "Ventilator modes in plain words",
+   "body": "<table class=\"tbl\"><tr><th>Mode</th><th>In plain words</th></tr><tr><td>AC</td><td>minimum rate; every breath gets the set size</td></tr><tr><td>SIMV</td><td>minimum set; extra breaths are the patient's own</td></tr><tr><td>Pressure support</td><td>a push that helps the patient's own breath</td></tr><tr><td>CPAP</td><td>one steady pressure, in and out</td></tr><tr><td>BPAP</td><td>higher pressure in, lower pressure out</td></tr></table><p class=\"note\">BPAP is rarely used before hospital; the BC protocols list <b>CPAP</b>, not BPAP.</p>",
+   "say": "Here are the common modes in plain words. Assist control, or AC, guarantees a minimum rate; the patient can trigger extra breaths, but every breath gets the same set size. SIMV also guarantees a minimum, but any extra breaths are the patient's own size. Pressure support is a push that helps the patient's own breath and lowers their work. CPAP keeps one steady pressure through the whole breath; it holds the airway and the small air sacs open, so more lung surface takes part in gas exchange. BPAP adds a higher pressure on the way in. The textbook notes BPAP is rarely used before hospital, and the BC protocols list CPAP, not BPAP.",
+   "sayZh": "下面用白话说说常见模式。辅助/控制（AC）保证最低频率，病人可以多触发几次，但每一口都按设定的大小送气。SIMV 也保证最低量，但额外呼吸的大小由病人自己决定。压力支持是在病人自主吸气时帮着推一把，减少呼吸做功。CPAP 在整个呼吸周期维持同一个稳定压力，把气道和小肺泡撑开，让更多肺表面参与气体交换。BPAP 在吸气时再加一档更高的压力。书里说 BPAP 院前很少用，BC 流程里列的是 CPAP，没有 BPAP。",
+   "audio": "audio/n14-1-07.mp3",
+   "dur": 45.38
+  },
+  {
+   "kind": "slide",
+   "title": "Is CPAP working?",
+   "body": "<div class=\"stages\"><div class=\"st s1\"><b>Working</b><span>RR falls, SpO₂ rises</span><em>within minutes</em></div><div class=\"st s2\"><b>Watch</b><span>blood pressure</span><em>BC max is 10 cmH₂O</em></div><div class=\"st s3\"><b>Failing</b><span>RR rises</span><em>remove CPAP, use a BVM</em></div></div><ul class=\"bul\"><li>Can turn a simple pneumothorax into a <b>tension</b> one</li><li>Some units empty a D cylinder in <b>5–10 minutes</b></li><li>Frightened patient: coach, never force the mask</li></ul>",
+   "say": "The textbook gives you one simple test of whether CPAP is working: the respiratory rate. Within a few minutes, a patient who's improving breathes more slowly, and the saturation climbs. If the rate goes up instead, the therapy is probably failing. While CPAP runs, watch the blood pressure, because it raises the pressure in the chest. The book says the risk grows above ten centimetres of water; in BC, ten is already the maximum. CPAP can also turn a simple pneumothorax into a tension pneumothorax in a few breaths, so keep listening to the chest. Watch your oxygen, too: some units empty a D cylinder in five to ten minutes. And never fight a frightened patient for the mask; coach them instead.",
+   "sayZh": "课本给了一个判断 CPAP 是否有效的简单指标：呼吸频率。几分钟内，好转的病人呼吸变慢，血氧上升；如果频率反而上升，治疗很可能失败。CPAP 运行时要盯血压，因为它会升高胸腔内压力。书里说超过十厘米水柱风险更大；在 BC，十就是上限。CPAP 还可能在几口呼吸内把单纯气胸变成张力性气胸，所以要持续听诊。也要盯氧气：有些设备五到十分钟就能用完一个 D 瓶。还有，别跟害怕的病人抢面罩，要耐心引导。",
+   "audio": "audio/n14-1-08.mp3",
+   "dur": 47.54
+  },
+  {
+   "kind": "slide",
+   "title": "EMR vs PCP: CPAP and PEEP in BC",
+   "body": "<p class=\"src\">BC protocols: CHF / pulmonary edema, drowning, asthma / COPD, oxygen administration</p><div class=\"vs\"><div class=\"emr\"><h4>All licence levels (EMR + PCP)</h4><ul><li>Sit the patient up; keep at rest and warm</li><li>O₂ to SpO₂ ≥ 94%: NRB, then add a nasal cannula</li><li>BVM if LOC is altered or SpO₂ stays &lt; 94%</li><li>Salbutamol for asthma / COPD</li></ul></div><div class=\"pcp\"><h4>PCP adds</h4><ul><li>Consider <b>CPAP</b>: CHF, asthma / COPD, drowning</li><li>CPAP: start 5, up by 2.5, max 10 cmH₂O</li><li>Bagging? Consider a <b>PEEP valve</b>, 5 cmH₂O to start</li><li>PEEP: up by 2.5, max 10; remove if systolic &lt; 90</li></ul></div></div>",
+   "say": "Here's how the BC breathing protocols split the work. The left column is what you already do as an EMR: sit the patient up, keep them at rest and warm, and give oxygen to keep the saturation at ninety-four percent or higher. If the level of consciousness drops or the saturation stays under ninety-four, you assist ventilations with a BVM. The right column is new. As a PCP you may consider CPAP: start at five centimetres of water, and go up in steps of two point five to a maximum of ten. When you're bagging, you may add a PEEP valve, starting at five, with the same steps and maximum. Remove it if the systolic falls below ninety.",
+   "sayZh": "这是 BC 各个呼吸相关流程里的分工。左栏是你当 EMR 时就做的：让病人坐起、保持休息和保暖，给氧使血氧维持在九十四以上。意识下降或血氧仍低于九十四时，用 BVM 辅助通气。右栏是新的：作为 PCP，你可以考虑 CPAP，从五厘米水柱开始，每次加二点五，最高十。捏球囊时可以加 PEEP 阀，同样从五开始、每次加二点五、最高十；收缩压低于九十就把它取下。",
+   "audio": "audio/n14-1-09.mp3",
+   "dur": 41.86
+  },
+  {
+   "kind": "quiz",
+   "q": "You're running CPAP at 7.5 cmH₂O for pulmonary edema. Ten minutes later the RR has gone from 28 to 36, SpO₂ is falling and the patient is getting drowsy. What now?",
+   "options": [
+    "Increase CPAP to 15 cmH₂O",
+    "Remove CPAP and assist ventilations with a BVM; consider a PEEP valve",
+    "Keep going; CPAP needs at least 30 minutes to work",
+    "Switch to a nasal cannula at 6 L/min"
+   ],
+   "answer": 1,
+   "say": "Here's a PCP decision. You're running CPAP at seven point five centimetres of water for pulmonary edema. Ten minutes later, the respiratory rate has gone from twenty-eight to thirty-six, the saturation is falling, and the patient is getting drowsy. What now? A, increase CPAP to fifteen. B, remove CPAP and assist ventilations with a BVM, considering a PEEP valve. C, keep going, because CPAP needs at least thirty minutes to work. D, switch to a nasal cannula at six litres a minute. Tap your answer.",
+   "sayZh": "来一道 PCP 决策题。你正在给一位肺水肿病人用七点五厘米水柱的 CPAP。十分钟后，呼吸频率从二十八升到三十六，血氧在下降，病人开始嗜睡。现在怎么办？A 把 CPAP 调到十五；B 撤掉 CPAP，用 BVM 辅助通气，并考虑加 PEEP 阀；C 继续，CPAP 至少要三十分钟才起效；D 改用每分钟六升的鼻导管。点选你的答案。",
+   "explain": "The answer is B. A rising respiratory rate tells you CPAP is failing, and a drowsy patient no longer meets BC's criteria, because CPAP needs a patient who is awake and following commands. BC says that if the patient deteriorates, you remove CPAP and ventilate with a BVM, considering a PEEP valve. A is wrong because BC's CPAP maximum is ten. C is wrong because improvement should show within minutes. D gives much less support to a patient who is tiring out.",
+   "explainZh": "答案是 B。呼吸频率上升说明 CPAP 正在失败；病人嗜睡也已不符合 BC 标准，因为 CPAP 要求病人清醒并能遵嘱。BC 规定病人恶化时撤掉 CPAP，用 BVM 通气，并考虑 PEEP 阀。A 错在 BC 的 CPAP 上限是十；C 错在有效的话几分钟内就该看到改善；D 对一个正在力竭的病人来说支持太少。",
+   "audioQ": "audio/n14-1-10q.mp3",
+   "audioA": "audio/n14-1-10a.mp3",
+   "durQ": 36.94,
+   "durA": 31.27
+  },
+  {
+   "kind": "slide",
+   "title": "Automated transport ventilators",
+   "body": "<p class=\"big\">An ATV is an oxygen-powered device <b>with a timer</b></p><ul class=\"bul\"><li>Set a volume and a rate; it frees a pair of hands</li><li>Fixed at <b>40 L/min</b>: right for masks in cardiac arrest</li><li>Awake patients need up to <b>150 L/min</b>: very uncomfortable</li><li>Basic models may have <b>no alarms</b>: watch it constantly</li></ul><p class=\"note\">ATVs aren't in the BC protocols. Never use a ventilator you weren't trained on.</p>",
+   "say": "You may meet an automated transport ventilator, or ATV. It's basically a flow-restricted, oxygen-powered ventilation device with a timer: you set a volume and a rate, and it frees up a pair of hands. Most run at a fixed flow of forty litres a minute. That's ideal for ventilating a cardiac arrest patient by mask without filling the stomach, but an awake patient can need up to one hundred fifty litres a minute, so breathing against forty feels awful. Basic models may have no alarms at all, so it's not a small ventilator you can leave alone. The BC protocols don't list ATVs, and the book is clear: never use a ventilator you haven't been trained on.",
+   "sayZh": "你可能会遇到自动转运呼吸机，简称 ATV。它基本上就是带定时器的限流氧动力通气装置：设定好容量和频率，就能腾出一双手。大多数固定在每分钟四十升的流速。用面罩给心脏骤停病人通气时这个流速最理想，不容易把胃吹胀；但清醒病人可能需要每分钟多达一百五十升，所以顶着四十升呼吸会非常难受。基础款可能根本没有报警，所以它不是可以放着不管的小呼吸机。BC 流程没有列入 ATV，书里也说得很清楚：没受过培训的呼吸机绝对不要用。",
+   "audio": "audio/n14-1-11.mp3",
+   "dur": 43.32
+  },
+  {
+   "kind": "slide",
+   "title": "When the ventilator alarms",
+   "body": "<p class=\"big\">In doubt? <b>Disconnect and bag.</b></p><table class=\"tbl\"><tr><th>Alarm</th><th>Think of</th></tr><tr><td>Low pressure</td><td>a leak or a disconnection</td></tr><tr><td>High pressure</td><td>biting, kink, secretions, bronchospasm</td></tr><tr><td>High pressure, worst</td><td>tube in the esophagus, pneumothorax</td></tr><tr><td>Apnea</td><td>no breath detected, usually within 15 s</td></tr></table><p class=\"note\">Work from the <b>patient</b> toward the machine. Never switch alarms off.</p>",
+   "say": "Every patient on a ventilator must travel with a BVM, and that is your safety net. If you're ever unsure whether the machine is working, disconnect it and bag the patient. Then troubleshoot from the patient toward the machine. A low-pressure alarm usually means a leak or a disconnection, so tighten every connection first. A high-pressure alarm means the machine is pushing against something: biting, a kink, secretions, coughing or bronchospasm. The most dangerous causes are a tube that has slipped into the esophagus and a pneumothorax. An apnea alarm means no breath was detected, usually within fifteen seconds. Alarms are set for each patient and never switched off.",
+   "sayZh": "每位上呼吸机的病人都必须随带 BVM，这就是你的安全网。只要你怀疑机器不正常，就断开它，改用球囊通气。然后从病人一端往机器方向排查。低压报警通常是漏气或脱开，先把所有接口拧紧。高压报警说明机器在顶着什么东西送气：咬管、管路打折、分泌物、咳嗽或支气管痉挛。最危险的原因是导管滑进食管和气胸。窒息报警表示没测到呼吸，通常设在十五秒内。报警按每位病人设定，绝不能关掉。",
+   "audio": "audio/n14-1-12.mp3",
+   "dur": 44.74
+  },
+  {
+   "kind": "slide",
+   "title": "New for you as a PCP: watch out for",
+   "body": "<ul class=\"bul\"><li>Check BP <b>before</b> CPAP or PEEP and after every change</li><li>Systolic &lt; 90: <b>no CPAP</b>; remove the PEEP valve</li><li>Rising RR or falling LOC on CPAP: <b>remove it and bag</b></li><li>Sudden worsening, sounds gone on one side: think <b>pneumothorax</b></li><li>Needle decompression: outside EMR and PCP scope</li><li>CPAP uses a lot of O₂: watch the supply</li></ul>",
+   "say": "Here's what's new for you. CPAP and PEEP are pressure tools, so the blood pressure comes first: check it before you start and after every change. In BC, a systolic under ninety rules out CPAP and is a reason to remove the PEEP valve. On CPAP, a rising rate or a falling level of consciousness means it's failing: take it off and bag. A sudden worsening, or breath sounds that disappear on one side, may be a pneumothorax made worse by pressure. A suspected pneumothorax is a BC contraindication to CPAP, and needle decompression is outside EMR and PCP scope, so remove the pressure, support breathing, and transport. And CPAP uses a lot of oxygen, so watch your supply.",
+   "sayZh": "说说新要注意的。CPAP 和 PEEP 都是正压工具，所以血压第一：开始前测，每次调整后再测。在 BC，收缩压低于九十就不能用 CPAP，也要取下 PEEP 阀。用 CPAP 时频率上升或意识下降，说明在失败：撤掉，改捏球囊。突然恶化，或一侧呼吸音消失，可能是被正压加重的气胸。疑似气胸是 BC 的 CPAP 禁忌证，而针刺减压不在 EMR 和 PCP 范围内，所以要撤掉正压、支持呼吸、尽快转运。CPAP 耗氧多，要注意氧气余量。",
+   "audio": "audio/n14-1-13.mp3",
+   "dur": 46.49
+  },
+  {
+   "kind": "slide",
+   "title": "For the BC exam",
+   "body": "<ul class=\"bul bc\"><li>Book (ventilators): SpO₂ 92–94%; BC protocols: <b>≥ 94%</b></li><li>CPAP failing: book → intubation; BC → <b>remove, BVM ± PEEP</b></li><li>Book: watch BP above 10 cmH₂O; BC: CPAP <b>max 10</b></li><li>CPAP: age ≥ 13; not for trauma, pneumothorax, SBP &lt; 90</li><li>PEEP: start at 5; usually ≤ 8–10 breaths/min</li></ul>",
+   "say": "A few places where the book and BC differ. For ventilated patients, the book titrates oxygen down to a saturation of ninety-two to ninety-four percent; the BC protocols you're tested on aim for ninety-four percent or higher. When CPAP fails, the book's next step is usually intubation; BC tells you to remove CPAP and ventilate with a BVM, considering a PEEP valve. The book says to watch the blood pressure closely above ten centimetres of water; in BC, ten is the CPAP maximum. Also remember BC's CPAP rules: thirteen years or older, and not for a traumatic cause, a pneumothorax, or a systolic under ninety. With a PEEP valve, start at five and usually ventilate no more than eight to ten times a minute.",
+   "sayZh": "书和 BC 有几处不同。上呼吸机的病人，书里把氧下调到血氧九十二到九十四；你要考的 BC 流程目标是九十四或以上。CPAP 失败时，书里的下一步通常是插管；BC 要求撤掉 CPAP，用 BVM 通气，并考虑 PEEP 阀。书里说超过十厘米水柱要密切盯血压；在 BC，十就是 CPAP 上限。还要记住 BC 的 CPAP 规则：十三岁及以上，创伤性原因、气胸、收缩压低于九十都不能用。用 PEEP 阀时从五开始，通气频率通常不超过每分钟八到十次。",
+   "audio": "audio/n14-1-14.mp3",
+   "dur": 49.25
+  },
+  {
+   "kind": "slide",
+   "title": "Three things to remember",
+   "body": "<ol class=\"steps\"><li>Positive pressure helps oxygenation but can <b>drop the BP</b> and cause a pneumothorax</li><li>O₂ in: FIO₂ + PEEP. CO₂ out: rate × volume. CPAP works if the <b>RR falls</b></li><li>Ventilator in doubt? <b>Bag.</b> PCP adds CPAP and PEEP: 5 up to max 10 cmH₂O</li></ol><p class=\"next\">Next: Chapter 15, Patient History</p>",
+   "say": "Three things to remember. One: positive pressure improves oxygenation, but it raises the pressure in the chest, so it can drop the blood pressure and cause a pneumothorax. Two: oxygen in depends on the oxygen concentration and PEEP; carbon dioxide out depends on the rate and the size of each breath. And CPAP is working when the respiratory rate falls. Three: if you ever doubt a ventilator, take the patient off and bag. As a PCP in BC, you add CPAP and the PEEP valve, both starting at five and going no higher than ten. Next class, we start the assessment section with patient history. If anything was unclear, tap Ask.",
+   "sayZh": "收尾三句话。一，正压能改善氧合，但会升高胸腔内压力，可能让血压下降、造成气胸。二，送氧靠氧浓度和 PEEP；排二氧化碳靠频率和每口气的大小。CPAP 有效的标志是呼吸频率下降。三，只要怀疑呼吸机有问题，就断开改捏球囊。在 BC，PCP 多了 CPAP 和 PEEP 阀，都从五开始、最高十。下节课进入评估部分，讲病史采集。有不懂的点「Ask」。",
+   "audio": "audio/n14-1-15.mp3",
+   "dur": 44.54
+  }
+ ]
+}
