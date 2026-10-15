@@ -21,7 +21,7 @@ export async function renderStudyHub(el) {
     : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
   const chData = await loadJSON('./data/study/chapters2/index.json');
   const chV2 = chData ? chData.chapters.filter(c => c.status === 'v2').length : 0;
-  const clsData = await loadJSON('./data/classroom/index.json');
+  const clsData = await fetch('./data/classroom/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
   const clsAll = clsData ? clsData.units.flatMap(u => u.lessons) : [];
   const clsReady = clsAll.filter(l => l.ready).length;
   const cards = [
