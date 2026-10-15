@@ -1,8 +1,12 @@
 // PCP Classroom — spoken English lessons (slides + narration + quick questions), under Study.
 // Lessons and audio are built in D:\Claude\textbook-study-pdf (classroom/) and synced to data/classroom/.
-import { S, save, t, esc, loadJSON, ico } from './app.js?v=26';
+import { S, save, t, esc, ico } from './app.js?v=26';
 
 const BASE = './data/classroom/';
+// lessons go live in batches: always revalidate the index and lesson files (cheap ETag check) so new lessons show up at once
+async function loadJSON(path) {
+  try { const r = await fetch(path, { cache: 'no-cache' }); return r.ok ? await r.json() : null; } catch { return null; }
+}
 // "Ask the teacher" goes to the examiner service (same host the AI examiner uses; rate-limited server-side)
 const API = (location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:8787' : 'https://bcprep-examiner.onrender.com';
 function deviceId() {
