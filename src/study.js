@@ -1,5 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=25';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=26';
+import { sClassroom } from './classroom.js?v=26';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -20,7 +21,14 @@ export async function renderStudyHub(el) {
     : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
   const chData = await loadJSON('./data/study/chapters2/index.json');
   const chV2 = chData ? chData.chapters.filter(c => c.status === 'v2').length : 0;
+  const clsData = await loadJSON('./data/classroom/index.json');
+  const clsAll = clsData ? clsData.units.flatMap(u => u.lessons) : [];
+  const clsReady = clsAll.filter(l => l.ready).length;
   const cards = [
+    ['classroom', ico('film'), 'PCP Classroom — spoken lessons', 'PCP 课堂（英文语音课）',
+      'A teacher talks you through each topic in English, slide by slide, with quick questions: what changes when an EMR steps up to PCP.',
+      '老师用英文逐页讲解、随堂提问：从 EMR 升到 PCP，多做什么、要注意什么。课内可看中文翻译。',
+      clsData ? `<span class="tag-count">${clsReady} / ${clsAll.length}</span>` : ''],
     ['chapters', ico('cap'), 'Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读',
       `All 54 chapters of the Canadian edition. ${chV2} are rewritten in depth — knowledge map, every testable number, BC-guideline conflicts flagged.`,
       `加拿大版教材全部 54 章，其中 ${chV2} 章已深度重写——知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注。`,
@@ -62,7 +70,7 @@ export async function renderStudyHub(el) {
 
 /* ---------------- sections ---------------- */
 export async function renderStudySection(el, arg, params) {
-  const fn = { chapters: sChapters, assessment: sAssessment, protocols: sProtocols, treatments: sTreatments, drugs: sDrugs, reference: sReference }[arg];
+  const fn = { classroom: sClassroom, chapters: sChapters, assessment: sAssessment, protocols: sProtocols, treatments: sTreatments, drugs: sDrugs, reference: sReference }[arg];
   if (!fn) { renderStudyHub(el); return; }
   await fn(el, params);
 }

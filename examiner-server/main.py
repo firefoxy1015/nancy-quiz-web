@@ -330,3 +330,56 @@ async def tts(req: TtsReq):
         while len(_tts_cache) > 400:
             _tts_cache.popitem(last=False)
     return Response(content=audio, media_type='audio/mpeg', headers={'Cache-Control': 'public, max-age=86400'})
+
+
+# ---------------- PCP Classroom: "Ask the teacher" ----------------
+# The public site's spoken lessons let a student ask about the slide they're on. Each call spends the
+# shared cc-vibe quota, so it is capped per device, per IP and site-wide per day.
+ASK_DEVICE_CAP = int(os.environ.get('ASK_DAILY_CAP', '20'))
+ASK_GLOBAL_CAP = int(os.environ.get('ASK_GLOBAL_CAP', '300'))
+ASK_MODEL = os.environ.get('ASK_MODEL', llm.MODEL)
+_ask_usage: Dict[str, Dict[str, int]] = {}
+
+ASK_SYSTEM = """You are an instructor in a British Columbia PCP (Primary Care Paramedic) course. Your students already hold an EMR licence and are stepping up to PCP practice; many are native Chinese speakers preparing for the BC EMALB exams and the COPR, using Nancy Caroline's Emergency Care in the Streets (Canadian 8th edition).
+Answer like a teacher speaking in class: clear, simple English, short sentences, under 180 words, correct exam terminology. When it matters, say what a PCP does versus an EMR.
+If the question involves BC scope of practice, drug doses or exam rules, tell the student to confirm against the BC EMALB Provincial Examination Guidelines, and never invent a specific BC rule, dose or scope item. If you are not sure, say so.
+If the student wrote in Chinese, end with one short sentence in Simplified Chinese that sums up the answer. Stay on paramedic study topics; politely decline anything else. Output only the answer."""
+
+
+class AskReq(BaseModel):
+    lesson: str = ''
+    slide: str = ''
+    question: str
+
+
+def _ask_count(key, inc=0):
+    day = _ask_usage.setdefault(_today(), {})
+    for k in [k for k in _ask_usage if k != _today()]:
+        _ask_usage.pop(k, None)
+    day[key] = day.get(key, 0) + inc
+    return day[key]
+
+
+@app.post('/api/class/ask')
+def class_ask(req: AskReq, request: Request, x_device: Optional[str] = Header(default=None)):
+    q = (req.question or '').strip()
+    if not q:
+        raise HTTPException(400, 'empty question')
+    ip = (request.headers.get('x-forwarded-for') or (request.client.host if request.client else 'unknown')).split(',')[0].strip()
+    dev = 'dev:' + (x_device or 'anon')[:64]
+    if _ask_count('__all__') >= ASK_GLOBAL_CAP:
+        raise HTTPException(429, 'The class question box is full for today. Try again tomorrow.')
+    if _ask_count(dev) >= ASK_DEVICE_CAP or _ask_count('ip:' + ip) >= ASK_DEVICE_CAP:
+        raise HTTPException(429, f'You have used today\'s {ASK_DEVICE_CAP} questions. Try again tomorrow.')
+    user = (f"Lesson: {req.lesson[:300]}\nThe slide the student is on:\n{req.slide[:4000]}\n\n"
+            f"Student's question: {q[:600]}")
+    try:
+        resp, ch = llm._call(lambda c: c.messages.create(model=ASK_MODEL, max_tokens=700, system=ASK_SYSTEM,
+                                                         messages=[{'role': 'user', 'content': user}]))
+    except RuntimeError:
+        raise HTTPException(503, 'The teacher is unavailable right now. Try again in a few minutes.')
+    text = ''.join(b.text for b in resp.content if getattr(b, 'type', '') == 'text').strip()
+    if not text:
+        raise HTTPException(502, 'No answer came back. Try asking in a different way.')
+    _ask_count('__all__', 1); n = _ask_count(dev, 1); _ask_count('ip:' + ip, 1)
+    return {'answer': text, 'left': max(0, ASK_DEVICE_CAP - n)}
