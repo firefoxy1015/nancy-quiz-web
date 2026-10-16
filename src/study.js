@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=26';
-import { sClassroom } from './classroom.js?v=27';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=27';
+import { sClassroom } from './classroom.js?v=28';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -388,11 +388,12 @@ async function sTreatments(el, params) {
 }
 
 async function sDrugs(el, params) {
-  const d = await loadJSON('./data/study/drugs.json');
+  const [d, add] = await Promise.all([loadJSON('./data/study/drugs.json'), loadJSON('./data/study/drugs-added.json')]);
   if (!d) { el.innerHTML = backStudy() + deploying('Drugs'); return; }
+  const added = add ? add.drugs : [];
   const id = params.id;
   if (id) {
-    const dr = d.drugs.find(x => x.id === id);
+    const dr = d.drugs.find(x => x.id === id) || added.find(x => x.id === id);
     if (dr) { drawDrug(el, dr); return; }
   }
   const mine = d.drugs.filter(dr => (dr.licence || []).map(s => s.toLowerCase()).includes(S.track));
@@ -400,19 +401,23 @@ async function sDrugs(el, params) {
   el.innerHTML = `
     ${backStudy()}
     <div class="card"><h2>${ico('pill')} ${t('Drug Monographs', '药物专论')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
-      ${bi(`${mine.length} drugs in your scope · ${others.length} beyond it (still worth recognizing).`,
-           `你的授权范围内 ${mine.length} 个药 · 范围外 ${others.length} 个（也要认识）。`)}</div>
+      ${bi(`Licensing exam (EMALB): ${d.drugs.length} drugs. ${mine.length} in your scope · ${others.length} beyond it (still worth recognizing).`,
+           `执照考试（EMALB）共 ${d.drugs.length} 种药。你的授权范围内 ${mine.length} 个 · 范围外 ${others.length} 个（也要认识）。`)}</div>
     <div class="list-wrap">
       ${mine.map(dr => drugRow(dr)).join('')}
     </div>
     ${others.length ? `<div class="card"><h3 style="margin-top:0">${t('Beyond your scope', '超出你的授权')}</h3></div>
-    <div class="list-wrap">${others.map(dr => drugRow(dr)).join('')}</div>` : ''}`;
+    <div class="list-wrap">${others.map(dr => drugRow(dr)).join('')}</div>` : ''}
+    ${added.length ? `<div class="card"><h3 style="margin-top:0">${t('BCEHS added scope (school course)', 'BCEHS 扩展范围（学校课程）')} <span class="pill gray">${t('not on the licensing exam', '执照考试不考')}</span></h3>
+      ${bi('PCP drugs from the BCEHS Handbook that BC PCPs give after Schedule 1/2 training. Your school course teaches and tests them; the EMALB licensing exam does not. On the licensing exam, answer with the 18 drugs above.',
+           'BC 的 PCP 完成 Schedule 1/2 培训后，按 BCEHS 手册可以给的药。学校课程会教、会考；EMALB 执照考试不考。执照考试只按上面 18 种药作答。')}</div>
+    <div class="list-wrap">${added.map(dr => drugRow(dr)).join('')}</div>` : ''}`;
   el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
 }
 function drugRow(dr) {
   return `<button class="list-item" data-goto="/study/drugs?id=${dr.id}">
     <span>${bi(dr.nameEn, dr.nameZh, 'span')}</span>
-    <span style="display:flex;gap:4px">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}</span>
+    <span style="display:flex;gap:4px">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}${dr.scope === 'bcehs-added' ? '<span class="pill gray">BCEHS</span>' : ''}</span>
     <span class="li-arrow">›</span></button>`;
 }
 function drawDrug(el, dr) {
@@ -421,6 +426,7 @@ function drawDrug(el, dr) {
     <a class="back-link" href="#/study/drugs">← ${t('Drugs', '药物列表')}</a>
     <div class="card">
       <h2>${bi(dr.nameEn, dr.nameZh, 'span')}</h2>
+      ${dr.scope === 'bcehs-added' ? `<p class="notice">${t('BCEHS added scope: taught and tested in the school course, not on the EMALB licensing exam.', 'BCEHS 扩展范围：学校课程会教会考，EMALB 执照考试不考。')}</p>` : ''}
       <div style="display:flex;gap:6px;margin:6px 0">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}
         ${(dr.routes || []).map(r => `<span class="pill gray">${esc(r)}</span>`).join('')}</div>
       ${dr.classificationEn ? `<div class="detail-section"><h4>${t('Class', '分类')}</h4>${bi(dr.classificationEn, dr.classificationZh)}</div>` : ''}
@@ -434,7 +440,7 @@ function drawDrug(el, dr) {
       ${sec(t('Side effects', '副作用'), dr.sideEffectsEn, dr.sideEffectsZh)}
       ${sec(t('Notes', '备注'), dr.notesEn, dr.notesZh)}
       ${sec(ico('info') + ' ' + t('Exam tips', '考试要点'), dr.examTipsEn, dr.examTipsZh)}
-      <p class="tiny">p. ${dr.sourcePage || ''}</p>
+      <p class="tiny">${dr.sourceUrl ? `${t('Source', '来源')}: <a href="${dr.sourceUrl}" target="_blank" rel="noopener">BCEHS Handbook</a>` : `p. ${dr.sourcePage || ''}`}</p>
     </div>`;
 }
 
