@@ -253,11 +253,11 @@ h3 { font-size: 1.03rem; }
   background: var(--accent); color: #fff; text-align: center; letter-spacing: .005em;
   box-shadow: var(--shadow-sm); transition: all .18s var(--ease);
 }
-:root[data-theme="dark"] .btn { color: #08201f; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #08201f; } }
-@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .btn { color: #fff; } }
+:root[data-theme="dark"] .btn:not(.ghost):not(.secondary) { color: #08201f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn:not(.ghost):not(.secondary) { color: #08201f; } }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .btn:not(.ghost):not(.secondary) { color: #fff; } }
 .btn:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: var(--shadow); color: #fff; }
-:root[data-theme="dark"] .btn:hover { color: #08201f; }
+:root[data-theme="dark"] .btn:not(.ghost):not(.secondary):hover { color: #08201f; }
 .btn:active { transform: translateY(0); }
 .btn.secondary { background: var(--accent-soft); color: var(--accent-ink); box-shadow: none; }
 .btn.secondary:hover { background: color-mix(in srgb, var(--accent-soft) 82%, var(--accent)); color: var(--accent-ink); }

@@ -2,7 +2,9 @@
 // data/portal/vault.json is AES-256-GCM ciphertext (key = PBKDF2-SHA256 of the
 // password); it is built outside this repo, so the plain text never lands here.
 // The browser derives the key, decrypts and gunzips in memory only.
-import { t, esc, ico } from './app.js?v=28';
+// The vault carries the English text plus an English -> Chinese table (DOC.zh),
+// so every view follows the site's EN / 中文 / EN+中 switch.
+import { t, bi, esc, ico } from './app.js?v=29';
 
 const VAULT = './data/portal/vault.json';
 const KEY_LS = 'bcprepPortalKey';
@@ -13,6 +15,11 @@ let run = null;
 
 const b64d = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
 const b64e = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+
+/* ---------------- language ---------------- */
+const Z = s => (s && DOC && DOC.zh && DOC.zh[s]) || s;   // Chinese for an English string
+const L = (s, tag = 'div') => (s ? bi(s, Z(s), tag) : '');  // block text
+const T = s => esc(t(s, Z(s)));                           // short inline label
 
 async function fetchVault() {
   if (vaultMeta) return vaultMeta;
@@ -135,7 +142,6 @@ function bindShell(el) {
     if (location.hash === '#/portal') renderPortal(el, null, {}); else location.hash = '#/portal';
   };
 }
-const p = s => esc(s).replace(/\n/g, '<br>');
 
 /* ---------------- overview ---------------- */
 function viewHome(el) {
@@ -148,12 +154,13 @@ function viewHome(el) {
         <div class="stat"><b>${nQ}</b><span>${t('module quiz questions', '道随堂测验题')}</span></div>
         <div class="stat"><b>${DOC.glossary.length}</b><span>${t('glossary terms', '条术语')}</span></div>
       </div>
-      <p style="margin-top:14px">${esc(DOC.course.format)}</p>
-      <div class="tiny muted">${p(DOC.course.hub)}</div>
+      <div style="margin-top:14px">${L(DOC.course.format)}</div>
+      <div class="tiny muted" style="white-space:pre-line;margin-top:10px">${L(DOC.course.hub)}</div>
     </div>
     <div class="card">
       <h3 style="margin-top:0">${t('How the course runs', '课程怎么上')}</h3>
-      <table class="hard-table">${DOC.frameworks.map(([k, v]) => `<tr><th style="white-space:normal">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</table>
+      <table class="hard-table">${DOC.frameworks.map(([k, v]) =>
+        `<tr><th style="white-space:normal;width:32%">${L(k)}</th><td>${L(v)}</td></tr>`).join('')}</table>
     </div>
     <div class="notice">${t('The course teaches BCEHS practice. Where that differs from the EMALB licensing exam, the exam follows the BC Provincial Examination Guidelines — see "School vs exam".',
       '课程教的是 BCEHS 实际做法；和 EMALB 执照考试不一样的地方，考试按 BC 考纲——见「课堂与考试差异」。')}</div>`);
@@ -167,32 +174,34 @@ function viewWeeks(el, params) {
     const c = w.case;
     return `
     <details class="acc" id="w${w.n}" ${w.n === open ? 'open' : ''}>
-      <summary><span class="tag-count" style="margin:0 10px 0 0">W${w.n}</span>${esc(w.title)}
-        ${w.date ? `<span class="tiny muted" style="margin-left:8px">${esc(w.date)}</span>` : ''}</summary>
+      <summary><span class="tag-count" style="margin:0 10px 0 0">W${w.n}</span>
+        <span>${L(w.title, 'span')}${w.date ? `<span class="tiny muted">${T(w.date)}</span>` : ''}</span></summary>
       <div class="acc-body">
-        ${w.prior ? `<p><b>${t('Before class', '课前')}:</b> ${esc(w.prior)}</p>` : ''}
-        ${w.inClass ? `<p><b>${t('In class', '课上')}:</b> ${esc(w.inClass)}</p>` : ''}
+        ${w.prior ? `<p style="margin-bottom:4px"><b>${t('Before class', '课前')}</b></p>${L(w.prior)}` : ''}
+        ${w.inClass ? `<p style="margin-bottom:4px"><b>${t('In class', '课上')}</b></p>${L(w.inClass)}` : ''}
         ${w.modules.length ? `<p><b>${t('Online modules', '线上模块')}:</b> ${w.modules.map(m =>
           `<a class="pill gray" style="text-decoration:none;margin:0 4px 4px 0;display:inline-block" href="#/portal/quiz?m=${encodeURIComponent(m)}">${esc(m)}</a>`).join('')}</p>` : ''}
         ${c ? `
-          <h4 style="margin:14px 0 6px">${t('Wednesday live case study', '周三线上案例')}: ${esc(c.title)}</h4>
-          <p class="tiny muted">${esc(c.when)}</p>
+          <h4 style="margin:14px 0 6px">${t('Wednesday live case study', '周三线上案例')}</h4>
+          ${L(c.title)}
+          <div class="tiny muted" style="margin:2px 0 8px">${L(c.when)}</div>
           ${c.cases.map(k => `
             <div class="sc-info" style="margin-bottom:8px">
-              <div class="sc-label">${esc(k.name)}</div>
-              <div>${esc(k.presentation)}</div>
-              ${k.tieIns ? `<div class="tiny muted" style="margin-top:4px">${t('Tie-ins', '关联知识')}: ${esc(k.tieIns)}</div>` : ''}
-              <ul style="margin:6px 0 0 18px">${k.complications.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+              <div class="sc-label">${T(k.name)}</div>
+              ${L(k.presentation)}
+              ${k.tieIns ? `<div class="tiny muted" style="margin-top:4px"><b>${t('Tie-ins', '关联知识')}</b>${L(k.tieIns)}</div>` : ''}
+              <ul style="margin:6px 0 0 18px">${k.complications.map(x => `<li>${L(x)}</li>`).join('')}</ul>
             </div>`).join('')}
-          ${c.focus ? `<p><b>${t('Weekend focus', '周末重点')}:</b> ${esc(c.focus)}</p>` : ''}` : ''}
-        ${w.sessions.length ? `<p class="tiny">${w.sessions.map(s => `<b>${esc(s.name)}</b> — ${esc(s.desc)}`).join('<br>')}</p>` : ''}
-        ${w.folders.length ? `<p class="tiny muted">${t('Slide folders', '课件文件夹')}: ${w.folders.map(esc).join(' · ')}</p>` : ''}
+          ${c.focus ? `<p style="margin-bottom:4px"><b>${t('Weekend focus', '周末重点')}</b></p>${L(c.focus)}` : ''}` : ''}
+        ${w.sessions.length ? `<div class="tiny" style="margin-top:10px">${w.sessions.map(s =>
+          `<div style="margin-bottom:6px"><b>${L(s.name, 'span')}</b>${L(s.desc)}</div>`).join('')}</div>` : ''}
+        ${w.folders.length ? `<div class="tiny muted" style="margin-top:6px">${t('Slide folders', '课件文件夹')}: ${w.folders.map(f => L(f, 'span')).join('')}</div>` : ''}
         ${w.readings.length ? `
           <h4 style="margin:14px 0 6px">${t('Required reading', '必读')}</h4>
           <div style="overflow-x:auto"><table class="hard-table">
             <tr><th>${t('Book', '教材')}</th><th>${t('Chapter', '章节')}</th><th>${t('Pages', '页码')}</th><th>${t('Focus', '重点')}</th><th>NOCP / CPCF</th></tr>
-            ${w.readings.map(r => `<tr><td><b>${esc(r.book)}</b></td><td>${esc(r.chapter)}</td><td>${esc(r.pages)}</td>
-              <td>${esc(r.note)} <span class="tiny muted">(${esc(r.type)})</span></td><td class="tiny">${esc(r.nocp)}<br>${esc(r.cpcf)}</td></tr>`).join('')}
+            ${w.readings.map(r => `<tr><td><b>${T(r.book)}</b></td><td>${L(r.chapter)}</td><td>${esc(r.pages)}</td>
+              <td>${L(r.note)}<span class="tiny muted">(${T(r.type)})</span></td><td class="tiny">${esc(r.nocp)}<br>${esc(r.cpcf)}</td></tr>`).join('')}
           </table></div>` : ''}
       </div>
     </details>`;
@@ -204,17 +213,18 @@ function viewWeeks(el, params) {
 /* ---------------- medications ---------------- */
 const SCHOOL_ONLY = /ketamine|ketorolac|hydrocortisone|thiamine|palliative|b12|nebulized/i;
 function viewMeds(el) {
+  const only = `<span class="pill gray">${t('school only', '仅课程')}</span>`;
   el.innerHTML = shell('meds', `
     <div class="card">
       <p class="tiny muted" style="margin-top:0">${t('Drugs to learn before each weekend, as listed by the course.', '课程列出的每个周末前要学完的药物。')}
-        <span class="pill gray">${t('school only', '仅课程')}</span> ${t('= not on the EMALB licensing exam formulary.', '= 不在 EMALB 执照考试药单里。')}</p>
+        ${only} ${t('= not on the EMALB licensing exam formulary.', '= 不在 EMALB 执照考试药单里。')}</p>
       ${DOC.medications.map(ph => `
-        <h3 style="margin:16px 0 6px">${esc(ph.phase)}</h3>
+        <h3 style="margin:16px 0 6px">${L(ph.phase, 'span')}</h3>
         ${ph.groups.map(g => `
-          ${g.deadline ? `<div class="tiny" style="margin:8px 0 4px"><b>${t('Deadline', '截止')}:</b> ${esc(g.deadline)}</div>` : ''}
+          ${g.deadline ? `<div class="tiny" style="margin:8px 0 4px"><b>${t('Deadline', '截止')}</b>${L(g.deadline)}</div>` : ''}
           <table class="hard-table" style="margin-bottom:6px">${g.drugs.map(d => `
-            <tr><th style="white-space:normal;width:38%">${esc(d.name)}${SCHOOL_ONLY.test(d.name) ? ` <span class="pill gray">${t('school only', '仅课程')}</span>` : ''}</th>
-            <td>${esc(d.use)}</td></tr>`).join('')}</table>`).join('')}`).join('')}
+            <tr><th style="white-space:normal;width:38%">${L(d.name)}${SCHOOL_ONLY.test(d.name) ? only : ''}</th>
+            <td>${L(d.use)}</td></tr>`).join('')}</table>`).join('')}`).join('')}
     </div>`);
   bindShell(el);
 }
@@ -226,24 +236,25 @@ function viewGlossary(el) {
     <div class="card">
       <input id="gq" class="search-box" placeholder="${t('Search terms', '搜索术语')}" style="width:100%" />
       <div class="sec-toc" id="gcats"><a href="#" data-c="" style="border-color:var(--accent);color:var(--accent)">${t('All', '全部')}</a>
-        ${cats.map(c => `<a href="#" data-c="${esc(c)}">${esc(c)}</a>`).join('')}</div>
+        ${cats.map(c => `<a href="#" data-c="${esc(c)}">${T(c)}</a>`).join('')}</div>
     </div>
     <div id="glist"></div>`);
   bindShell(el);
   let cat = '';
+  const both = s => s + ' ' + Z(s);
   const draw = () => {
     const q = el.querySelector('#gq').value.trim().toLowerCase();
     const list = DOC.glossary.filter(g => (!cat || g.category === cat) &&
-      (!q || (g.term + ' ' + g.summary + ' ' + g.fields.map(f => f.join(' ')).join(' ')).toLowerCase().includes(q)));
+      (!q || [g.term, g.summary, ...g.fields.flat()].map(both).join(' ').toLowerCase().includes(q)));
     el.querySelector('#glist').innerHTML = list.map(g => `
       <details class="acc">
-        <summary>${esc(g.term)} <span class="pill gray" style="margin-left:8px">${esc(g.category)}</span></summary>
+        <summary>${L(g.term, 'span')}<span class="pill gray" style="margin-left:8px">${T(g.category)}</span></summary>
         <div class="acc-body">
-          <p style="margin-top:0">${esc(g.summary)}</p>
+          <div style="margin-bottom:8px">${L(g.summary)}</div>
           <table class="hard-table">${g.fields.map(([k, v]) => k
-            ? `<tr><th style="white-space:normal;width:30%">${esc(k)}</th><td>${esc(v)}</td></tr>`
-            : `<tr><td colspan="2">${esc(v)}</td></tr>`).join('')}</table>
-          ${g.warning ? `<div class="notice" style="margin-top:8px">${esc(g.warning)}</div>` : ''}
+            ? `<tr><th style="white-space:normal;width:30%">${L(k)}</th><td>${L(v)}</td></tr>`
+            : `<tr><td colspan="2">${L(v)}</td></tr>`).join('')}</table>
+          ${g.warning ? `<div class="notice" style="margin-top:8px">${L(g.warning)}</div>` : ''}
         </div>
       </details>`).join('') || `<p class="muted">${t('No matching terms.', '没有匹配的术语。')}</p>`;
   };
@@ -264,12 +275,12 @@ function viewExam(el) {
       '上课和工作按 BCEHS；考 EMALB 执照时，按 BC 考纲作答。')}</div>
     ${DOC.differences.map(d => `
       <div class="card">
-        <h3 style="margin-top:0">${esc(d.topic)}</h3>
+        <h3 style="margin-top:0">${L(d.topic, 'span')}</h3>
         <table class="hard-table">
-          <tr><th style="white-space:normal;width:22%">${t('Course', '课程')}</th><td>${esc(d.school)}</td></tr>
-          <tr><th>${t('Licensing exam', '执照考试')}</th><td>${esc(d.exam)}</td></tr>
+          <tr><th style="white-space:normal;width:22%">${t('Course', '课程')}</th><td>${L(d.school)}</td></tr>
+          <tr><th style="white-space:normal">${t('Licensing exam', '执照考试')}</th><td>${L(d.exam)}</td></tr>
         </table>
-        <p class="tiny muted" style="margin:6px 0 0">${esc(d.ref)}</p>
+        <div class="tiny muted" style="margin:6px 0 0">${L(d.ref)}</div>
       </div>`).join('')}`);
   bindShell(el);
 }
@@ -292,7 +303,7 @@ function viewQuiz(el, params) {
     else {
       const mod = DOC.modules.find(x => x.code === m);
       list = mod ? items.filter(q => q.mod === m) : [];
-      label = mod ? `${mod.code} · ${mod.title}` : m;
+      label = mod ? `${esc(mod.code)} · ${T(mod.title)}` : esc(m);
     }
     if (!run || run.key !== m) run = { key: m, list, label, i: 0, right: 0, done: 0 };
     drawQuestion(el);
@@ -329,7 +340,7 @@ function viewQuiz(el, params) {
         const r = mod.q.filter(q => st.st[q.id] === 1).length;
         return `<a class="list-item" href="#/portal/quiz?m=${encodeURIComponent(mod.code)}" style="color:inherit;text-decoration:none">
           <span class="tag-count" style="flex:0 0 auto;margin:0">${esc(mod.code)}</span>
-          <span>${esc(mod.title)}<div class="tiny muted">${esc(mod.source)}</div></span>
+          <span>${L(mod.title, 'span')}<span class="tiny muted">${L(mod.source)}</span></span>
           <span class="tag-count">${d}/${mod.q.length}${d ? ' · ' + Math.round(r / d * 100) + '%' : ''}</span>
           <span class="li-arrow">›</span></a>`;
       }).join('')}</div>`).join('')}`);
@@ -350,23 +361,24 @@ function drawQuestion(el) {
   const multi = q.y === 'mr', match = q.y === 'mt', fill = q.y === 'fb';
   const nRight = q.o.filter(o => o.k).length;
   const keyOf = i => String.fromCharCode(65 + i);
+  const scoreLine = () => `${t('Question', '第')} ${run.i + 1}/${run.list.length} · ${t('Score', '得分')} ${run.right}/${run.done}`;
   el.innerHTML = shell('quiz', `
     <div class="card">
       <div class="q-meta">
-        <div><b>${esc(run.label)}</b> <a class="tiny" href="#/portal/quiz" style="margin-left:6px">← ${t('Quiz bank', '题库')}</a></div>
-        <div class="muted">${t('Question', '第')} ${run.i + 1}/${run.list.length} · ${t('Score', '得分')} ${run.right}/${run.done}</div>
+        <div><b>${run.label}</b> <a class="tiny" href="#/portal/quiz" style="margin-left:6px">← ${t('Quiz bank', '题库')}</a></div>
+        <div class="muted">${scoreLine()}</div>
       </div>
-      <p class="tiny muted" style="margin:0 0 6px">${esc(q.mod)} · ${esc(q.l || '')}</p>
-      <div class="q-text" style="white-space:pre-wrap">${esc(q.q || t('(question text missing)', '（题干缺失）'))}</div>
+      <div class="tiny muted" style="margin:0 0 6px">${esc(q.mod)}${q.l ? ' · ' + T(q.l) : ''}</div>
+      <div class="q-text" style="white-space:pre-wrap">${q.q ? L(q.q) : t('(question text missing)', '（题干缺失）')}</div>
       ${multi ? `<p class="tiny" style="color:var(--accent);font-weight:700">${t(`Select all that apply — ${nRight} correct.`, `多选题——共 ${nRight} 个正确答案。`)}</p>` : ''}
       ${match ? `<p class="tiny" style="color:var(--accent);font-weight:700">${t('Matching: pair each item in your head, then show the answer and mark yourself.', '配对题：先在心里配好，再看答案自评。')}</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 16px">
-          <div><b class="tiny">${t('Items', '项目')}</b><ol>${q.o.map(o => `<li>${esc(o.t)}</li>`).join('')}</ol></div>
-          <div><b class="tiny">${t('Matches', '对应')}</b><ol type="A">${shuffle(q.o.map(o => o.m || '')).map(m => `<li>${esc(m)}</li>`).join('')}</ol></div>
+          <div><b class="tiny">${t('Items', '项目')}</b><ol>${q.o.map(o => `<li>${L(o.t)}</li>`).join('')}</ol></div>
+          <div><b class="tiny">${t('Matches', '对应')}</b><ol type="A">${shuffle(q.o.map(o => o.m || '')).map(m => `<li>${L(m)}</li>`).join('')}</ol></div>
         </div>` : ''}
       ${fill ? `<input id="fillIn" class="search-box" style="width:100%" placeholder="${t('Type your answer', '输入答案')}" />` : ''}
       ${!match && !fill ? `<div class="q-opts">${q.o.map((o, i) =>
-        `<button class="opt" data-i="${i}"><span class="opt-key">${keyOf(i)}</span><span style="white-space:pre-wrap">${esc(o.t)}</span></button>`).join('')}</div>` : ''}
+        `<button class="opt" data-i="${i}"><span class="opt-key">${keyOf(i)}</span><span style="white-space:pre-wrap">${L(o.t, 'span')}</span></button>`).join('')}</div>` : ''}
       <div id="res"></div>
       <div class="btn-row" id="qBtns">
         ${multi ? `<button class="btn secondary" id="submitQ">${t('Submit', '提交')}</button>` : ''}
@@ -384,8 +396,7 @@ function drawQuestion(el) {
     if (ok) delete st.wrong[q.id]; else st.wrong[q.id] = 1;
     saveProg(st);
     run.done++; if (ok) run.right++;
-    el.querySelector('.q-meta .muted').textContent =
-      `${t('Question', '第')} ${run.i + 1}/${run.list.length} · ${t('Score', '得分')} ${run.right}/${run.done}`;
+    el.querySelector('.q-meta .muted').textContent = scoreLine();
   };
   const showResult = ok => {
     answered = true;
@@ -397,10 +408,11 @@ function drawQuestion(el) {
     });
     el.querySelector('#res').innerHTML = `
       ${ok == null ? '' : `<p style="font-weight:700;color:var(--${ok ? 'green' : 'red'})">${ok ? t('✓ Correct', '✓ 答对了') : t('✗ Incorrect', '✗ 答错了')}</p>`}
-      ${match ? `<div class="explain"><b>${t('Correct pairs', '正确配对')}</b><ol>${q.o.map(o => `<li>${esc(o.t)} → ${esc(o.m || '')}</li>`).join('')}</ol></div>` : ''}
-      ${fill ? `<div class="explain"><b>${t('Answer', '答案')}:</b> ${esc(q.o.map(o => o.t).join(' / '))}</div>` : ''}
-      ${q.f ? `<div class="explain">${esc(q.f)}</div>` : ''}
-      ${q.n ? `<div class="notice" style="margin-top:8px">${esc(q.n)}</div>` : ''}`;
+      ${match ? `<div class="explain"><b>${t('Correct pairs', '正确配对')}</b><ol>${q.o.map(o =>
+        `<li>${L(o.t)}<div style="padding-left:1em">→ ${L(o.m || '', 'span')}</div></li>`).join('')}</ol></div>` : ''}
+      ${fill ? `<div class="explain"><b>${t('Answer', '答案')}</b>${q.o.map(o => L(o.t)).join('')}</div>` : ''}
+      ${q.f ? `<div class="explain">${L(q.f)}</div>` : ''}
+      ${q.n ? `<div class="notice" style="margin-top:8px">${L(q.n)}</div>` : ''}`;
     ['#submitQ', '#revealQ'].forEach(s => el.querySelector(s)?.remove());
     const nb = document.createElement('button');
     nb.className = 'btn';
@@ -429,8 +441,9 @@ function drawQuestion(el) {
   });
   el.querySelector('#revealQ')?.addEventListener('click', () => {
     if (fill) {
-      const v = (el.querySelector('#fillIn').value || '').trim().toLowerCase();
-      const ok = !!v && q.o.some(o => o.t.trim().toLowerCase() === v);
+      const norm = s => String(s || '').trim().toLowerCase().replace(/[.。!！]+$/, '');
+      const v = norm(el.querySelector('#fillIn').value);
+      const ok = !!v && q.o.some(o => norm(o.t) === v || norm(Z(o.t)) === v);
       record(ok);
       showResult(ok);
       return;
