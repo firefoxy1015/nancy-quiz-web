@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=27';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=28';
 
 let session = null; // current exam session (mock or practice)
 
@@ -100,7 +100,10 @@ export async function renderAetHub(el) {
         <div class="stat"><b>${total}</b><span>${t('questions', '题')}</span></div>
         <div class="stat"><b>${Object.keys(n).length} / ${data.modules.length}</b><span>${t('modules ready', '模块已上题')}</span></div>
       </div>
-      ${total ? `<div class="btn-row"><a class="btn" href="#/practice?aet=all">${t('Practise all AET questions', '全部 AET 题混合练习')}</a></div>` : ''}
+      <div class="btn-row">
+        ${total ? `<a class="btn" href="#/practice?aet=all">${t('Practise all AET questions', '全部 AET 题混合练习')}</a>` : ''}
+        <a class="btn secondary" href="#/portal">${ico('lock')} ${t('Class portal', '班级门户')}</a>
+      </div>
     </div>
     ${Object.keys(byWeekend).sort((a, b) => a - b).map(w => `
       <h3 style="margin:18px 4px 8px">${t('Weekend ' + w, '第 ' + w + ' 周末')}</h3>

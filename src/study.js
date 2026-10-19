@@ -1,5 +1,5 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=27';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=28';
 import { sClassroom } from './classroom.js?v=28';
 
 /* ---------------- study hub ---------------- */
