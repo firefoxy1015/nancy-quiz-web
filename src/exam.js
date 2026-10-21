@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=29';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=30';
 
 let session = null; // current exam session (mock or practice)
 
@@ -103,6 +103,7 @@ export async function renderAetHub(el) {
       <div class="btn-row">
         ${total ? `<a class="btn" href="#/practice?aet=all">${t('Practise all AET questions', '全部 AET 题混合练习')}</a>` : ''}
         <a class="btn secondary" href="#/portal">${ico('lock')} ${t('Class portal', '班级门户')}</a>
+        <a class="btn secondary" href="#/aet/class">${ico('film')} ${t('Class lectures', '课堂讲课')}</a>
       </div>
     </div>
     ${Object.keys(byWeekend).sort((a, b) => a - b).map(w => `
