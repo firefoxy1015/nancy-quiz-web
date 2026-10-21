@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=30';
-import { sClassroom } from './classroom.js?v=30';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=31';
+import { sClassroom } from './classroom.js?v=31';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -29,6 +29,9 @@ export async function renderStudyHub(el) {
       'A teacher talks you through each topic in English, slide by slide, with quick questions: what changes when an EMR steps up to PCP.',
       '老师用英文逐页讲解、随堂提问：从 EMR 升到 PCP，多做什么、要注意什么。课内可看中文翻译。',
       clsData ? `<span class="tag-count">${clsReady} / ${clsAll.length}</span>` : ''],
+    ['/aet', ico('target'), 'AET PCP Course — lectures, modules, class portal', 'AET PCP 课程（讲课、模块练习、班级门户）',
+      'Spoken lessons that follow the AET program weekend by weekend (class password), original practice questions by module, and the class portal.',
+      '按 AET 课程周末顺序讲的语音课（班级密码）、按模块编排的原创练习题，以及班级门户。', ''],
     ['chapters', ico('cap'), 'Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读',
       `All 54 chapters of the Canadian edition. ${chV2} are rewritten in depth — knowledge map, every testable number, BC-guideline conflicts flagged.`,
       `加拿大版教材全部 54 章，其中 ${chV2} 章已深度重写——知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注。`,
@@ -59,7 +62,7 @@ export async function renderStudyHub(el) {
         : `PCP 完整范围：${pAll} 个协议、${tAll} 个处置主题全部可用，药物 ${dMine}/${dAll} 在你的授权内。比 EMR 多出来的是 IV 治疗、CPAP、液体复苏和 PCP 专属药物。`)}
     </div>
     <div class="list-wrap">
-      ${cards.map(c => `<button class="list-item" data-goto="/study/${c[0]}">
+      ${cards.map(c => `<button class="list-item" data-goto="${c[0].startsWith('/') ? c[0] : '/study/' + c[0]}">
         <span style="display:inline-flex;color:var(--accent);font-size:1.15rem">${c[1]}</span>
         <span>${bi(c[2], c[3], 'span')}<div class="tiny">${t(c[4], c[5])}</div></span>
         ${c[6]}

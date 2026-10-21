@@ -1,5 +1,5 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=30';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=31';
 
 let session = null; // current exam session (mock or practice)
 
@@ -64,12 +64,6 @@ export async function renderWrittenHub(el) {
       </div>
     </div>
     <div class="card">
-      <h3 style="margin-top:0">${ico('target')} AET EXAMS · ${t('Course-sync practice', '课程同步练习')}</h3>
-      ${bi('Original practice questions organised by the 25 online modules of the AET PCP course, with notes wherever the course teaches BCEHS practice that the licensing exam answers differently.',
-           '按 AET PCP 课程 25 门线上模块编排的原创练习题；课上教的 BCEHS 做法和执照考试答案不一样的地方，解析里都标出来了。')}
-      <div class="btn-row"><a class="btn secondary" href="#/aet">${t('Open AET modules', '打开 AET 模块')} →</a></div>
-    </div>
-    <div class="card">
       <h3 style="margin-top:0">${ico('x')} ${t('Wrong-answer book', '错题本')}</h3>
       ${bi('Re-drill every question you have ever missed until none are left.', '把你错过的每道题反复刷，刷到清零为止。')}
       <div class="btn-row"><a class="btn secondary" href="#/wrong">${t('Open', '打开')} (${Object.keys(S.wrong).length})</a></div>
@@ -119,7 +113,7 @@ export async function renderAetHub(el) {
             <span>${bi(m.titleEn, m.titleZh, 'span')}</span>
             <span class="tiny" style="margin-left:auto">${t('coming soon', '待上题')}</span></div>`).join('')}
       </div>`).join('')}
-    <div class="btn-row"><a class="btn ghost" href="#/written">← ${t('Written Exam Camp', '笔试营')}</a></div>`;
+    <div class="btn-row"><a class="btn ghost" href="#/study">← ${t('Study library', '学习内容库')}</a></div>`;
 }
 
 /* ---------------- practice ---------------- */

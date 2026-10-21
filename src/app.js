@@ -1,12 +1,12 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=30';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=30';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=30';
-import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=30';
-import { renderPortal } from './portal.js?v=30';
-import { renderAetClass } from './aetclass.js?v=30';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=31';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=31';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=31';
+import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=31';
+import { renderPortal } from './portal.js?v=31';
+import { renderAetClass } from './aetclass.js?v=31';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -185,7 +185,7 @@ async function route() {
   updateNav(name);
 }
 function updateNav(name) {
-  const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'written', portal: 'written', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', examiner: 'practical', 'examiner-run': 'practical', juris: 'juris' };
+  const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'study', portal: 'study', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', examiner: 'practical', 'examiner-run': 'practical', juris: 'juris' };
   document.querySelectorAll('#bottomNav a').forEach(a => a.classList.toggle('active', a.dataset.nav === (map[name] || '')));
   syncTrackUI();
 }
