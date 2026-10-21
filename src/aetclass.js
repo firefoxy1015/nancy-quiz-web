@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted in the repo: the lesson text in data/aet-class/vault.json and each narration
 // clip in data/aet-class/audio/*.bin (12-byte IV + ciphertext). The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=31';
+import { S, save, t, esc, ico } from './app.js?v=32';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -110,8 +110,12 @@ function lockScreen(el, v, params) {
     if (!pw.value) return;
     btn.disabled = true; msg.textContent = t('Checking…', '验证中…');
     try {
-      const key = await deriveKey(pw.value, v);
-      DOC = await openVault(v, key); KEY = key;
+      let key = null;
+      for (const cand of [...new Set([pw.value, pw.value.toUpperCase(), pw.value.toLowerCase()])]) {   // the class password is case-insensitive
+        try { const k = await deriveKey(cand, v); DOC = await openVault(v, k); key = k; break; } catch {}
+      }
+      if (!key) throw new Error('wrong');
+      KEY = key;
       if (el.querySelector('#remember').checked) {
         try { localStorage.setItem(KEY_LS, JSON.stringify({ salt: v.salt, key: b64e(await crypto.subtle.exportKey('raw', key)) })); } catch {}
       }
