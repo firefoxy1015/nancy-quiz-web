@@ -102,7 +102,7 @@ function lockScreen(el, v, arg, params) {
     btn.disabled = true;
     msg.textContent = t('Checking…', '验证中…');
     try {
-      const key = await deriveKey(pw.value, v);
+      const key = await deriveKey(pw.value.trim().toLowerCase(), v);  // password is case-insensitive
       DOC = await openVault(v, key);
       if (el.querySelector('#remember').checked) {
         try { localStorage.setItem(KEY_LS, JSON.stringify({ salt: v.salt, key: b64e(await crypto.subtle.exportKey('raw', key)) })); }
