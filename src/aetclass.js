@@ -1,8 +1,8 @@
 // AET class lectures — spoken lessons (slides + narration + quick questions) behind the class password.
-// Everything is AES-256-GCM encrypted in the repo: the lesson text in data/aet-class/vault.json and each narration
-// clip in data/aet-class/audio/*.bin (12-byte IV + ciphertext). The browser derives the key from the password
+// Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
+// clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=32';
+import { S, save, t, esc, ico } from './app.js?v=33';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -51,10 +51,15 @@ async function tryRemembered(v) {
     return true;
   } catch { forgetKey(); return false; }
 }
+// Narration lives in the separate aet-audio Pages repo (same github.io origin; one Pages site is capped at 1 GB).
+// '../aet-audio/' resolves to /aet-audio/ on github.io and to a sibling folder on a local server rooted above both repos.
+const AUDIO_BASES = ['../aet-audio/audio/', BASE + 'audio/'];
 async function audioURL(rel) {
   if (urls.has(rel)) return urls.get(rel);
-  const r = await fetch(BASE + 'audio/' + rel.replace(/^audio\//, '').replace(/\.mp3$/, '.bin'));
-  if (!r.ok) throw new Error('audio ' + r.status);
+  const name = rel.replace(/^audio\//, '').replace(/\.mp3$/, '.bin');
+  let r = null;
+  for (const b of AUDIO_BASES) { r = await fetch(b + name).catch(() => null); if (r && r.ok) break; }
+  if (!r || !r.ok) throw new Error('audio ' + (r ? r.status : 'network'));
   const buf = new Uint8Array(await r.arrayBuffer());
   const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, KEY, buf.slice(12));
   const url = URL.createObjectURL(new Blob([plain], { type: 'audio/mpeg' }));
@@ -139,7 +144,7 @@ function drawCourse(el) {
         <h2 style="margin:0">${ico('film')} ${esc(course.title)}</h2>
         <button class="btn ghost" id="lockBtn" style="margin-left:auto">${t('Lock', '锁定')}</button>
       </div>
-      <p>Spoken lessons in English that follow the AET PCP program weekend by weekend: the week's online modules, the Wednesday case themes and the lab skills, taught from the BCEHS clinical practice guidelines — with a "BCEHS vs the licensing exam" check in every lesson.</p>
+      <p>Spoken lessons in English that follow the AET PCP program weekend by weekend: the week's online modules section by section, the assigned readings, the lab PPT topics and linked resources, the Wednesday cases and the lab skills — checked against the BCEHS clinical practice guidelines, with "module vs BCEHS vs the licensing exam" spelled out wherever they differ.</p>
       <p class="muted">${t('Tap 中文 inside a lesson to see the teacher\'s words in Chinese.', '课件和讲解都是英文；课内点「中文」可看老师这段话的中文翻译。')}</p>
       <div class="tiny">${ready} / ${all.length} ${t('lessons ready', '节已上线')} · ${done} ${t('finished', '节已学完')} · ${t('built', '更新')} ${esc(DOC.course.built || '')}</div>
     </div>
