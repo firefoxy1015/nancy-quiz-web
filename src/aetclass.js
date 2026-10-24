@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=38';
+import { S, save, t, esc, ico } from './app.js?v=39';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -96,9 +96,11 @@ export async function renderAetClass(el, arg, params) {
       done: () => renderAetClass(el, 'class', params) });
     return;
   }
+  if (params.test) { drawTest(el, +params.test); return; }
+  if (params.cards) { drawCards(el, +params.cards); return; }
   if (params.l) {
     const meta = DOC.index.units.flatMap(u => u.lessons).find(l => l.id === params.l);
-    if (meta && meta.ready && DOC.lessons[meta.id]) { await drawLesson(el, DOC.lessons[meta.id]); return; }
+    if (meta && meta.ready && DOC.lessons[meta.id]) { await drawLesson(el, DOC.lessons[meta.id], params.auto === '1'); return; }
   }
   drawCourse(el);
 }
@@ -158,22 +160,68 @@ function lockScreen(el, v, o) {
 }
 
 /* ---------------- course list ---------------- */
+// priority: "digest" = the weekend's overview lesson, "core" = must-listen, "deep" = the rest (nothing is dropped)
+const isCore = l => l.priority === 'digest' || l.priority === 'core' || !l.priority;
+const wkOf = u => +((u.label.match(/Weekend (\d+)/) || [])[1] || 0);
+const isReadingsUnit = u => /·\s*readings\s*$/.test(u.label);
+const testOf = l => store.get('test:' + l.id, null);                                   // {r, n} from the weekend's test-first run
+const mastered = l => { const r = testOf(l); return !!r && r.n > 0 && r.r === r.n; };
+const filterMode = () => store.get('filter', store.get('coreOnly', false) ? 'core' : 'all');   // all | core | need
+const isDone = l => store.get(l.id + ':done', false);
+// Which lessons the current filter lists. "need" hides what is finished or tested as mastered; readings stay listed
+// even when mastered, because the student's rule is to finish every reading first.
+function shows(l, u) {
+  const m = filterMode();
+  if (m === 'core') return isCore(l);
+  if (m === 'need') return !isDone(l) && (isReadingsUnit(u) || !mastered(l));
+  return true;
+}
+function nextLessonId(id) {
+  const seq = DOC.index.units.flatMap(u => u.lessons.filter(l => l.ready).map(l => ({ l, u })));
+  const k = seq.findIndex(x => x.l.id === id);
+  for (let j = k + 1; j < seq.length; j++) if (shows(seq[j].l, seq[j].u)) return seq[j].l.id;
+  return null;
+}
+const quizzesOf = L => (L ? L.slides.filter(s => s.kind === 'quiz') : []);
+const today = () => Math.floor(Date.now() / 864e5);
+// flashcards: a Leitner box per card — box 1 every day, box 2 every 3 days, box 3 every week; new cards are due at once
+const cardState = (wk, k) => store.get(`card:${wk}:${k}`, { box: 1, due: 0 });
+const cardsDue = wk => ((DOC.cards || {})[wk] || []).filter((_, k) => cardState(wk, k).due <= today()).length;
+const mins = ls => Math.round(ls.filter(l => l.ready).reduce((s, l) => s + (l.minutes || 0), 0) / 6) / 10;
+
 function drawCourse(el) {
   const course = DOC.index;
   const all = course.units.flatMap(u => u.lessons);
   const ready = all.filter(l => l.ready).length;
-  const done = all.filter(l => store.get(l.id + ':done', false)).length;
-  // priority: "digest" = the weekend's overview lesson, "core" = must-listen, "deep" = the rest (nothing is dropped)
-  const coreOnly = store.get('coreOnly', false);
-  const isCore = l => l.priority === 'digest' || l.priority === 'core' || !l.priority;
-  const mins = ls => Math.round(ls.filter(l => l.ready).reduce((s, l) => s + (l.minutes || 0), 0) / 6) / 10;
+  const done = all.filter(isDone).length;
+  const mode = filterMode(), autoNext = store.get('autoNext', true);
   const prTag = l => l.priority === 'digest' ? `<span class="cls-pr pr-digest">${t('Overview', '速览')}</span>`
     : l.priority === 'core' ? `<span class="cls-pr pr-core">${t('Core', '必听')}</span>`
     : l.priority === 'deep' ? `<span class="cls-pr pr-deep">${t('Deep dive', '深入')}</span>` : '';
+  const weekends = [...new Set(course.units.map(wkOf))];
+  const wkHead = wk => {
+    const units = course.units.filter(u => wkOf(u) === wk), ls = units.flatMap(u => u.lessons), rd = ls.filter(l => l.ready);
+    const theme = (units[0].label.split('·')[1] || '').trim();
+    const nQ = rd.reduce((s, l) => s + quizzesOf(DOC.lessons[l.id]).length, 0);
+    const left = mins(units.flatMap(u => u.lessons.filter(l => shows(l, u) && !isDone(l))));
+    const fin = rd.filter(isDone).length, due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
+    return `<div class="card cls-wk">
+      <div class="cls-wk-row"><b>${t('Weekend', '周末')} ${wk}</b> · ${esc(theme)}
+        <span class="tiny muted">${fin}/${rd.length} ${t('done', '已学完')} · ${t('left on your list', '还要听')} ${left} h</span></div>
+      <div class="btn-row" style="margin-top:6px">
+        ${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min</button>` : ''}
+        ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}</button>` : ''}
+      </div>
+      <div class="tiny muted" style="margin-top:6px">${t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
+        '建议节奏：周一二阅读课 · 周三模块课，直播案例前先听案例课 · 周四五实操课 · 然后再测一次、把闪卡清完。')}</div>
+    </div>`;
+  };
   el.innerHTML = `
     <style>.cls-pr{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:9px;margin-right:6px;vertical-align:1px}
       .pr-digest{background:#2563eb;color:#fff}.pr-core{background:#16a34a;color:#fff}.pr-deep{background:transparent;color:var(--muted,#888);border:1px solid currentColor}
-      .cls-filter{display:flex;gap:6px;margin-top:10px}.cls-filter .on{outline:2px solid currentColor}</style>
+      .cls-filter{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.cls-filter .on{outline:2px solid currentColor}
+      .cls-wk{margin-top:var(--s4,24px);padding:12px 16px}.cls-wk-row{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+      .cls-lesson .mast{color:#16a34a;border-color:#16a34a}</style>
     <a class="back-link" href="#/aet">← AET</a>
     <div class="card cls-intro">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -183,34 +231,136 @@ function drawCourse(el) {
       <p>Spoken lessons in English that follow the AET PCP program weekend by weekend: the week's online modules section by section, the assigned readings, the lab PPT topics and linked resources, the Wednesday cases and the lab skills — checked against the BCEHS clinical practice guidelines, with "module vs BCEHS vs the licensing exam" spelled out wherever they differ.</p>
       <p class="muted">${t('Subtitles show the teacher\'s words in English with the Chinese right underneath.', '课件和讲解都是英文；字幕同时显示英文和中文翻译。')}</p>
       <div class="tiny">${ready} / ${all.length} ${t('lessons ready', '节已上线')} · ${done} ${t('finished', '节已学完')} · ${t('built', '更新')} ${esc(DOC.course.built || '')}</div>
-      <p class="muted" style="margin:8px 0 0">${t('Order each weekend: the Overview, then all the readings (required), then the online modules, then the lab and case lessons. Fastest route: in the modules and lab, Core lessons first; Deep-dive lessons cover everything else the school teaches, so nothing is missed — use them when you have time or to check a topic. Lessons list the school\'s own videos, articles and module pages under "From the school".', '每个周末的顺序：先听「速览」，再把阅读课全部听完（必修），然后线上模块，最后实操和案例。最快路线：模块和实操里先听「必听」；「深入」课覆盖学校教的其余全部内容，保证不漏——有空再听，或用来查漏补缺。课里「学校的视频、文章和模块」列出学校原本的视频、文章和模块链接。')}</p>
+      <p class="muted" style="margin:8px 0 0">${t('Order each weekend: the Overview, then all the readings (required), then the online modules, then the lab and case lessons. To save time: tap "Test first" — the weekend\'s quiz questions, about 20 minutes — and the list then shows which lessons you can skip, skim or must hear. Lessons auto-continue to the next one, so a weekend can play like a podcast; the flashcards hold the numbers and rules to keep in your head.',
+        '每个周末的顺序：先听「速览」，再把阅读课全部听完（必修），然后线上模块，最后实操和案例。省时间：点「先测后听」——做完这周所有随堂题（约 20 分钟），列表就会标出哪些课可以跳过、快听、必听。课会自动连播，一个周末可以像播客一样连着听；「闪卡」装的是要记住的数字和规则。')}</p>
       <div class="cls-filter">
-        <button class="btn ghost${coreOnly ? '' : ' on'}" data-filter="all">${t('All lessons', '全部课程')}</button>
-        <button class="btn ghost${coreOnly ? ' on' : ''}" data-filter="core">${t('Overview + Core only', '只看速览 + 必听')}</button>
+        <button class="btn ghost${mode === 'all' ? ' on' : ''}" data-filter="all">${t('All lessons', '全部课程')}</button>
+        <button class="btn ghost${mode === 'core' ? ' on' : ''}" data-filter="core">${t('Overview + Core only', '只看速览 + 必听')}</button>
+        <button class="btn ghost${mode === 'need' ? ' on' : ''}" data-filter="need">${t('Only what I still need', '只看还没学会的')}</button>
+        <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
-    ${course.units.map(u => {
-      const shown = coreOnly ? u.lessons.filter(isCore) : u.lessons;
+    ${weekends.map(wk => wkHead(wk) + course.units.filter(u => wkOf(u) === wk).map(u => {
+      const shown = u.lessons.filter(l => shows(l, u));
       if (!shown.length) return '';
-      const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons);
+      const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons), hidden = u.lessons.length - shown.length;
       return `
       <div class="cls-unit">
         <h3>${esc(u.label)}</h3>
-        <div class="tiny muted" style="margin:-4px 0 6px">${t('Core', '必听')} ${coreMin} h · ${t('all', '全部')} ${allMin} h${coreOnly && shown.length < u.lessons.length ? ` · ${u.lessons.length - shown.length} ${t('deep-dive lessons hidden', '节「深入」已隐藏')}` : ''}</div>
+        <div class="tiny muted" style="margin:-4px 0 6px">${t('Core', '必听')} ${coreMin} h · ${t('all', '全部')} ${allMin} h${hidden ? ` · ${hidden} ${t('hidden by the filter', '节已按筛选隐藏')}` : ''}</div>
         <div class="list-wrap">
           ${shown.map(l => {
-            const fin = store.get(l.id + ':done', false);
-            const badge = !l.ready ? t('Soon', '待上线') : fin ? t('Done', '已学完') : t('Open', '上课');
+            const fin = isDone(l), r = testOf(l);
+            const badge = !l.ready ? t('Soon', '待上线') : fin ? t('Done', '已学完') : mastered(l) ? t('Mastered', '已掌握') : t('Open', '上课');
+            const tested = r && !fin ? `<span class="tiny"> · ${t('test', '测验')} ${r.r}/${r.n}${r.r === r.n ? (isReadingsUnit(u) ? ' · ' + t('reading: still on your list', '阅读课仍需听完') : ' · ' + t('skip or skim', '可跳过或快听')) : r.r ? ' · ' + t('skim at 1.3×', '可 1.3 倍速快听') : ' · ' + t('listen', '必听')}</span>` : '';
             return `<button class="list-item cls-lesson${fin ? ' done' : ''}" ${l.ready ? `data-l="${l.id}"` : 'disabled'}>
-              <span>${prTag(l)}${esc(l.title)}<div class="tiny">${l.ready ? l.minutes + ' min' : t('coming soon', '即将上线')}</div></span>
-              <span class="tag-count">${badge}</span></button>`;
+              <span>${prTag(l)}${esc(l.title)}<div class="tiny">${l.ready ? l.minutes + ' min' : t('coming soon', '即将上线')}${tested}</div></span>
+              <span class="tag-count${mastered(l) && !fin ? ' mast' : ''}">${badge}</span></button>`;
           }).join('')}
         </div>
       </div>`;
-    }).join('')}`;
+    }).join('')).join('')}`;
   el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
-  el.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { store.set('coreOnly', b.dataset.filter === 'core'); drawCourse(el); });
+  el.querySelectorAll('[data-test]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?test=' + b.dataset.test; });
+  el.querySelectorAll('[data-cards]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?cards=' + b.dataset.cards; });
+  el.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { store.set('filter', b.dataset.filter); drawCourse(el); });
+  el.querySelector('#autoBtn').onclick = () => { store.set('autoNext', !store.get('autoNext', true)); drawCourse(el); };
   el.querySelector('#lockBtn').onclick = () => { lock(); renderAetClass(el, 'class', {}); };
+}
+
+/* ---------------- test first: the weekend's own quiz questions, then a skip / skim / listen verdict per lesson ---------------- */
+function drawTest(el, wk) {
+  const units = DOC.index.units.filter(u => wkOf(u) === wk);
+  const items = [];
+  for (const u of units) for (const l of u.lessons.filter(l => l.ready)) {
+    const qs = quizzesOf(DOC.lessons[l.id]);
+    qs.forEach((s, k) => items.push({ lid: l.id, title: l.title, reading: isReadingsUnit(u), last: k === qs.length - 1, n: qs.length, s }));
+  }
+  if (!items.length) { location.hash = '#/aet/class'; return; }
+  const key = 'testrun:' + wk;
+  let run = store.get(key, { i: 0, got: {} });          // got[lid] = right answers so far in this run
+  const $ = id => el.querySelector('#' + id);
+
+  function finish() {
+    const rows = [];
+    for (const u of units) for (const l of u.lessons.filter(l => l.ready)) {
+      const n = quizzesOf(DOC.lessons[l.id]).length, r = run.got[l.id] || 0;
+      if (n) rows.push({ l, u, r, n });
+    }
+    const grp = (f, label, hint) => {
+      const xs = rows.filter(f); if (!xs.length) return '';
+      return `<h3>${label} <span class="tiny muted">(${xs.length})</span></h3><p class="tiny muted">${hint}</p><div class="list-wrap">` +
+        xs.map(x => `<button class="list-item" data-l="${x.l.id}"><span>${esc(x.l.title)}<div class="tiny">${x.r}/${x.n} · ${x.l.minutes} min</div></span><span class="tag-count">${t('Open', '上课')}</span></button>`).join('') + `</div>`;
+    };
+    const listen = rows.filter(x => x.r === 0), skim = rows.filter(x => x.r > 0 && x.r < x.n), skip = rows.filter(x => x.r === x.n);
+    const minutes = listen.reduce((s, x) => s + x.l.minutes, 0) + Math.round(skim.reduce((s, x) => s + x.l.minutes, 0) / 1.3) + skip.filter(x => isReadingsUnit(x.u)).reduce((s, x) => s + x.l.minutes, 0);
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>
+      <div class="card"><h2>${t('Weekend', '周末')} ${wk} · ${t('your listening plan', '你的听课计划')}</h2>
+      <p class="muted">${t('From the test:', '按测验结果：')} ${listen.length} ${t('to listen', '节必听')}, ${skim.length} ${t('to skim', '节快听')}, ${skip.length} ${t('mastered', '节已掌握')} · ${t('about', '大约')} ${Math.round(minutes / 6) / 10} h ${t('instead of', '而不是')} ${mins(rows.map(x => x.l))} h.
+      ${t('Mastered readings stay on your list (your rule: finish every reading); mastered module and lab lessons can be skipped.', '已掌握的阅读课仍留在清单里（你的规则：阅读课全部听完）；已掌握的模块和实操课可以跳过。')}</p>
+      <div class="btn-row"><button class="btn" id="needBtn">${t('Show only what I still need', '只看还没学会的')}</button><button class="btn ghost" id="retake">${t('Retake the test', '重测')}</button></div></div>
+      <div class="card">${grp(x => x.r === 0, t('Listen', '必听'), t('Both questions missed: hear the whole lesson.', '两题都错：整课听。'))}
+      ${grp(x => x.r > 0 && x.r < x.n, t('Skim', '快听'), t('One missed: play it at 1.3× and watch for the point you missed.', '错一题：1.3 倍速听，注意错的那一点。'))}
+      ${grp(x => x.r === x.n, t('Mastered', '已掌握'), t('All right: skip, or keep for revision.', '全对：可以跳过，或留作复习。'))}</div>`;
+    el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
+    $('needBtn').onclick = () => { store.set('filter', 'need'); location.hash = '#/aet/class'; };
+    $('retake').onclick = () => { rows.forEach(x => store.set('test:' + x.l.id, null)); store.set(key, null); drawTest(el, wk); };
+  }
+  function show() {
+    if (run.i >= items.length) { finish(); return; }
+    const it = items[run.i], s = it.s;
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>
+      <div class="card cls-stage"><div class="cls-meta"><span>${t('Weekend', '周末')} ${wk} · ${t('test first', '先测后听')}</span><span>${run.i + 1} / ${items.length}</span></div>
+      <div class="tiny muted">${esc(it.title)}</div>
+      <h2>${esc(s.q)}</h2><div class="cls-opts">${s.options.map((o, k) => `<button class="cls-opt" data-k="${k}"><b>${'ABCD'[k]}</b><span>${esc(o)}</span></button>`).join('')}</div>
+      <div id="tq"><p class="muted">${t('Tap an answer.', '点选答案。')}</p></div></div>`;
+    el.querySelectorAll('.cls-opt').forEach(b => b.onclick = () => {
+      const k = +b.dataset.k, right = k === s.answer;
+      el.querySelectorAll('.cls-opt').forEach(x => { const kk = +x.dataset.k; x.disabled = true; if (kk === s.answer) x.classList.add('right'); else if (kk === k) x.classList.add('wrong'); });
+      run.got[it.lid] = (run.got[it.lid] || 0) + (right ? 1 : 0);
+      if (it.last) store.set('test:' + it.lid, { r: run.got[it.lid], n: it.n });
+      run.i++; store.set(key, run);
+      $('tq').innerHTML = `<p class="cls-explain"><b>${right ? t('Correct! ', '对！') : t('Not quite. ', '不对。')}</b>${esc(s.explain)}${s.explainZh ? `<br><span class="cls-zh">${esc(s.explainZh)}</span>` : ''}</p>
+        <div class="btn-row"><button class="btn" id="nextQ">${run.i >= items.length ? t('See my plan', '看我的计划') : t('Next question', '下一题')}</button></div>`;
+      $('nextQ').onclick = show; $('nextQ').focus();
+    });
+  }
+  show();
+}
+
+/* ---------------- flashcards: the weekend's numbers and rules, Leitner boxes, a few minutes a day ---------------- */
+function drawCards(el, wk) {
+  const deck = (DOC.cards || {})[wk] || [];
+  const $ = id => el.querySelector('#' + id);
+  if (!deck.length) {
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card"><h2>${t('Flashcards', '闪卡')} · ${t('Weekend', '周末')} ${wk}</h2><p class="muted">${t('Being prepared.', '制作中。')}</p></div>`;
+    return;
+  }
+  let all = store.get('cardsAll:' + wk, false);
+  function queue() { return deck.map((c, k) => ({ c, k })).filter(x => all || cardState(wk, x.k).due <= today()); }
+  function show() {
+    const q = queue();
+    if (!q.length) {
+      el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card"><h2>${t('Flashcards', '闪卡')} · ${t('Weekend', '周末')} ${wk}</h2>
+        <p class="muted">${t('Nothing due today. Cards come back after 1, 3 or 7 days depending on how well you knew them.', '今天没有要复习的卡。按掌握程度，卡会在 1、3 或 7 天后再出现。')}</p>
+        <div class="btn-row"><button class="btn ghost" id="allBtn">${t('Go through all', '全部过一遍')} (${deck.length})</button></div></div>`;
+      $('allBtn').onclick = () => { all = true; store.set('cardsAll:' + wk, true); show(); };
+      return;
+    }
+    const { c, k } = q[0], st = cardState(wk, k);
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>
+      <div class="card cls-stage"><div class="cls-meta"><span>${t('Flashcards', '闪卡')} · ${t('Weekend', '周末')} ${wk}</span><span>${q.length} ${t('left', '张待复习')} · ${t('box', '盒')} ${st.box}</span></div>
+      <h2>${esc(c.q)}</h2>${c.qZh ? `<p class="cls-zh muted">${esc(c.qZh)}</p>` : ''}
+      <div id="ans" class="hidden"><div class="cls-body cls-card-a"><p><b>${esc(c.a)}</b></p>${c.aZh ? `<p class="cls-zh">${esc(c.aZh)}</p>` : ''}${c.src ? `<p class="tiny muted">${t('Source', '来源')}: ${esc(c.src)}</p>` : ''}</div>
+        <div class="btn-row"><button class="btn" id="knew">${t('Knew it', '记得')}</button><button class="btn ghost" id="missed">${t("Didn't", '没记住')}</button></div></div>
+      <div class="btn-row" id="rev"><button class="btn" id="flip">${t('Show answer', '看答案')}</button>${all ? '' : `<button class="btn ghost" id="allBtn">${t('All cards', '全部卡')}</button>`}</div></div>`;
+    $('flip').onclick = () => { $('ans').classList.remove('hidden'); $('rev').classList.add('hidden'); };
+    const allB = $('allBtn'); if (allB) allB.onclick = () => { all = true; store.set('cardsAll:' + wk, true); show(); };
+    $('knew').onclick = () => { const box = Math.min(3, st.box + 1); store.set(`card:${wk}:${k}`, { box, due: today() + [0, 1, 3, 7][box] }); show(); };
+    $('missed').onclick = () => { store.set(`card:${wk}:${k}`, { box: 1, due: today() + 1 }); show(); };
+  }
+  if (all && !queue().length) { all = false; store.set('cardsAll:' + wk, false); }
+  show();
 }
 
 /* ---------------- lesson player ---------------- */
@@ -222,7 +372,7 @@ function linksHtml(list) {
     `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a> <span class="tiny muted">${KIND[x.kind] || ''}${x.note ? ' · ' + esc(x.note) : ''}</span></li>`).join('') + `</ul>`;
 }
 
-async function drawLesson(el, L) {
+async function drawLesson(el, L, autoStart) {
   const answers = store.get(L.id + ':ans', {});
   const links = L.links || [];
   const linksHead = t('From the school: videos, articles and modules', '学校的视频、文章和模块');
@@ -328,7 +478,12 @@ async function drawLesson(el, L) {
     const s = L.slides[i];
     if (s.kind === 'quiz' && answers[i] == null) return;
     if (i < L.slides.length - 1) timer = setTimeout(() => go(i + 1, true), 1100);
-    else store.set(L.id + ':done', true);
+    else {
+      store.set(L.id + ':done', true);
+      // auto-continue: the next lesson the current filter lists, so a weekend plays through like a podcast
+      const nx = store.get('autoNext', true) ? nextLessonId(L.id) : null;
+      if (nx) timer = setTimeout(() => { location.hash = '#/aet/class?l=' + nx + '&auto=1'; }, 1800);
+    }
   });
   $('clsPlay').onclick = () => {
     if (playing) { audio.pause(); setPlaying(false); return; }
@@ -392,4 +547,5 @@ async function drawLesson(el, L) {
   $('clsGo').onclick = () => begin(true);
   const r = $('clsResume'); if (r) r.onclick = () => begin(false);
   live = { stop() { clearTimeout(timer); audio.pause(); playToken++; document.body.classList.remove('cls-playing'); } };
+  if (autoStart) begin(true);
 }
