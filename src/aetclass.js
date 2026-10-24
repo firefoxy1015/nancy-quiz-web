@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=34';
+import { S, save, t, esc, ico } from './app.js?v=35';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -86,7 +86,12 @@ export async function renderAetClass(el, arg, params) {
     return;
   }
   if (!DOC) await tryRemembered(v);
-  if (!DOC) { lockScreen(el, v, params); return; }
+  if (!DOC) {
+    lockScreen(el, v, { back: '#/aet', backLabel: 'AET', title: t('Class lectures', '课堂讲课'),
+      blurb: t('Spoken lessons that follow the AET PCP course weekend by weekend. Password-protected for the class.', '按 AET PCP 课程的周末顺序讲的语音课，班级专用，需要密码。'),
+      done: () => renderAetClass(el, 'class', params) });
+    return;
+  }
   if (params.l) {
     const meta = DOC.index.units.flatMap(u => u.lessons).find(l => l.id === params.l);
     if (meta && meta.ready && DOC.lessons[meta.id]) { await drawLesson(el, DOC.lessons[meta.id]); return; }
@@ -94,12 +99,29 @@ export async function renderAetClass(el, arg, params) {
   drawCourse(el);
 }
 
-function lockScreen(el, v, params) {
+// The whole AET section (the #/aet hub, its module drills, the lectures) sits behind the one class password.
+// The lecture vault is the check: whatever opens it opens the section, so no second secret lives in the repo.
+export async function aetUnlocked() {
+  if (DOC) return true;
+  try { return await tryRemembered(await fetchVault()); } catch { return false; }
+}
+export async function aetGate(el, done) {
+  let v;
+  try { v = await fetchVault(); } catch {
+    el.innerHTML = `<a class="back-link" href="#/study">← ${t('Study library', '学习内容库')}</a><div class="card"><h2>${t('AET PCP Course', 'AET PCP 课程')}</h2><p class="muted">${t('Could not load — check back shortly.', '加载失败，请稍后再来。')}</p></div>`;
+    return;
+  }
+  lockScreen(el, v, { back: '#/study', backLabel: t('Study library', '学习内容库'), title: t('AET PCP Course', 'AET PCP 课程'),
+    blurb: t('Lectures, module practice and the class portal for the AET PCP class. Password-protected for the class.', 'AET PCP 班的讲课、模块练习和班级门户，班级专用，需要密码。'),
+    done });
+}
+
+function lockScreen(el, v, o) {
   el.innerHTML = `
-    <a class="back-link" href="#/aet">← AET</a>
+    <a class="back-link" href="${o.back}">← ${o.backLabel}</a>
     <div class="card" style="max-width:520px;margin:0 auto">
-      <h2 style="margin-top:0">${ico('lock')} ${t('Class lectures', '课堂讲课')}</h2>
-      <p class="muted">${t('Spoken lessons that follow the AET PCP course weekend by weekend. Password-protected for the class.', '按 AET PCP 课程的周末顺序讲的语音课，班级专用，需要密码。')}</p>
+      <h2 style="margin-top:0">${ico('lock')} ${o.title}</h2>
+      <p class="muted">${o.blurb}</p>
       <form id="pwForm" autocomplete="off">
         <input id="pw" class="search-box" type="password" autocomplete="current-password" placeholder="${t('Password', '密码')}" style="width:100%;margin:8px 0" />
         <label class="tiny" style="display:flex;gap:8px;align-items:center;margin:6px 0 12px"><input type="checkbox" id="remember" /> ${t('Remember on this device', '在这台设备上记住')}</label>
@@ -124,7 +146,7 @@ function lockScreen(el, v, params) {
       if (el.querySelector('#remember').checked) {
         try { localStorage.setItem(KEY_LS, JSON.stringify({ salt: v.salt, key: b64e(await crypto.subtle.exportKey('raw', key)) })); } catch {}
       }
-      renderAetClass(el, 'class', params);
+      o.done();
     } catch {
       msg.textContent = t('Wrong password.', '密码不对。'); btn.disabled = false; pw.select();
     }
@@ -155,7 +177,7 @@ function drawCourse(el) {
         <button class="btn ghost" id="lockBtn" style="margin-left:auto">${t('Lock', '锁定')}</button>
       </div>
       <p>Spoken lessons in English that follow the AET PCP program weekend by weekend: the week's online modules section by section, the assigned readings, the lab PPT topics and linked resources, the Wednesday cases and the lab skills — checked against the BCEHS clinical practice guidelines, with "module vs BCEHS vs the licensing exam" spelled out wherever they differ.</p>
-      <p class="muted">${t('Tap 中文 inside a lesson to see the teacher\'s words in Chinese.', '课件和讲解都是英文；课内点「中文」可看老师这段话的中文翻译。')}</p>
+      <p class="muted">${t('Subtitles show the teacher\'s words in English with the Chinese right underneath.', '课件和讲解都是英文；字幕同时显示英文和中文翻译。')}</p>
       <div class="tiny">${ready} / ${all.length} ${t('lessons ready', '节已上线')} · ${done} ${t('finished', '节已学完')} · ${t('built', '更新')} ${esc(DOC.course.built || '')}</div>
       <p class="muted" style="margin:8px 0 0">${t('Fastest route: each weekend starts with an Overview lesson, then the Core lessons. Deep-dive lessons cover everything else the school teaches, so nothing is missed — use them when you have time or to check a topic.', '最快路线：每个周末先听「速览」，再听「必听」。「深入」课覆盖学校教的其余全部内容，保证不漏——有空再听，或用来查漏补缺。')}</p>
       <div class="cls-filter">
@@ -198,14 +220,13 @@ async function drawLesson(el, L) {
     <section class="card cls-start" id="clsStart">
       <div class="cls-kicker">${esc(L.book)}</div>
       <h2>${esc(L.title)}</h2>
-      <ul class="muted"><li>Spoken lesson, about ${L.minutes} minutes, ${L.slides.length} slides</li><li>${quizzes} quick questions along the way</li><li>${t('Stuck? Turn on Subtitles or 中文.', '听不懂可以开字幕或「中文」。')}</li></ul>
+      <ul class="muted"><li>Spoken lesson, about ${L.minutes} minutes, ${L.slides.length} slides</li><li>${quizzes} quick questions along the way</li><li>${t('Subtitles show English with Chinese underneath; tap the 字幕 button to switch.', '字幕默认英文+中文对照；点「字幕」按钮可切换。')}</li></ul>
       <div class="btn-row"><button class="btn" id="clsGo">Start class</button>
         ${store.get(L.id + ':pos', 0) > 0 ? `<button class="btn ghost" id="clsResume">Continue where I left off</button>` : ''}</div>
     </section>
     <div class="cls-progress hidden" id="clsProg"></div>
     <section class="card cls-stage hidden" id="clsStage" aria-live="polite"></section>
-    <section class="card cls-panel hidden" id="clsSubs"><h4>The teacher is saying</h4><div class="cls-tx" id="clsTx"></div></section>
-    <section class="card cls-panel hidden" id="clsZhP"><h4>中文翻译</h4><div class="cls-tx cls-zh" id="clsZh"></div></section>
+    <section class="card cls-panel hidden" id="clsSubs"><div class="cls-tx" id="clsTx"></div><div class="cls-tx cls-zh" id="clsZh" style="margin-top:10px"></div></section>
     <section class="card cls-panel hidden" id="clsAskP"><h4>Ask the teacher</h4>
       <textarea id="clsQ" class="cls-q" rows="3" placeholder="e.g. When does the school want the 12-lead done? (中文也可以问)"></textarea>
       <div class="btn-row"><button class="btn" id="clsAskGo">Ask</button><button class="btn ghost hidden" id="clsRead">Read it to me</button></div>
@@ -215,9 +236,8 @@ async function drawLesson(el, L) {
     <nav class="cls-bar hidden" id="clsBar">
       <button id="clsPrev" aria-label="Previous slide">‹‹</button>
       <button id="clsSpeed" aria-label="Speed"></button>
-      <button id="clsSubBtn" aria-pressed="false">Subtitles</button>
+      <button id="clsSubBtn" aria-label="Subtitles"></button>
       <button id="clsPlay" class="cls-play" aria-label="Play">▶</button>
-      <button id="clsZhBtn" aria-pressed="false">中文</button>
       <button id="clsAskBtn" aria-pressed="false">Ask</button>
       <button id="clsNext" aria-label="Next slide">››</button>
     </nav>
@@ -301,9 +321,17 @@ async function drawLesson(el, L) {
   $('clsPrev').onclick = () => go(i - 1, true);
   $('clsNext').onclick = () => go(i + 1, true);
   $('clsSpeed').onclick = () => { speedIx = (speedIx + 1) % SPEEDS.length; audio.playbackRate = SPEEDS[speedIx]; $('clsSpeed').textContent = speedLabel(); store.set('speed', speedIx); };
-  const toggle = (btn, panel, key) => { const on = $(panel).classList.contains('hidden'); $(panel).classList.toggle('hidden', !on); $(btn).setAttribute('aria-pressed', String(on)); store.set(key, on); };
-  $('clsSubBtn').onclick = () => toggle('clsSubBtn', 'clsSubs', 'subs');
-  $('clsZhBtn').onclick = () => toggle('clsZhBtn', 'clsZhP', 'zh');
+  // subtitles: English with the Chinese right under it by default; one button cycles 中英 → EN → 中文 → off
+  const SUB_MODES = ['both', 'en', 'zh', 'off'];
+  const SUB_LABEL = { both: '字幕 EN+中', en: '字幕 EN', zh: '字幕 中文', off: '字幕 关' };
+  const applySub = () => {
+    const m = store.get('subMode', 'both');
+    $('clsSubs').classList.toggle('hidden', m === 'off');
+    $('clsTx').classList.toggle('hidden', m === 'zh');
+    $('clsZh').classList.toggle('hidden', m === 'en');
+    $('clsSubBtn').textContent = SUB_LABEL[m]; $('clsSubBtn').setAttribute('aria-pressed', String(m !== 'off'));
+  };
+  $('clsSubBtn').onclick = () => { const m = store.get('subMode', 'both'); store.set('subMode', SUB_MODES[(SUB_MODES.indexOf(m) + 1) % SUB_MODES.length]); applySub(); };
 
   let lastAnswer = '';
   $('clsAskBtn').onclick = () => {
@@ -339,8 +367,7 @@ async function drawLesson(el, L) {
   function begin(fromStart) {
     $('clsStart').classList.add('hidden');
     ['clsProg', 'clsStage', 'clsBar'].forEach(id => $(id).classList.remove('hidden'));
-    if (store.get('subs', false)) { $('clsSubs').classList.remove('hidden'); $('clsSubBtn').setAttribute('aria-pressed', 'true'); }
-    if (store.get('zh', false)) { $('clsZhP').classList.remove('hidden'); $('clsZhBtn').setAttribute('aria-pressed', 'true'); }
+    applySub();
     document.body.classList.add('cls-playing');
     go(fromStart ? 0 : store.get(L.id + ':pos', 0), true);
     try { navigator.wakeLock?.request('screen').catch(() => {}); } catch {}

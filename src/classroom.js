@@ -1,6 +1,6 @@
 // PCP Classroom — spoken English lessons (slides + narration + quick questions), under Study.
 // Lessons and audio are built in D:\Claude\textbook-study-pdf (classroom/) and synced to data/classroom/.
-import { S, save, t, esc, ico } from './app.js?v=34';
+import { S, save, t, esc, ico } from './app.js?v=35';
 
 const BASE = './data/classroom/';
 // lessons go live in batches: always revalidate the index and lesson files (cheap ETag check) so new lessons show up at once
