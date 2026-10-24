@@ -1,5 +1,6 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=35';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=36';
+import { aetUnlocked, aetGate } from './aetclass.js?v=36';
 
 let session = null; // current exam session (mock or practice)
 
@@ -79,6 +80,7 @@ function countBy(arr, fn) { const m = {}; for (const x of arr) { const k = fn(x)
 
 /* ---------------- AET course-sync ---------------- */
 export async function renderAetHub(el) {
+  if (!(await aetUnlocked())) { await aetGate(el, () => renderAetHub(el)); return; }
   const data = await loadJSON('./data/aet/modules.json');
   if (!data) { el.innerHTML = emptyBank(); return; }
   const bank = await loadBank('pcp');
@@ -122,6 +124,7 @@ export async function renderPractice(el, arg, params) {
   // AET course-sync items are PCP-only; an EMR learner opening an AET module
   // still needs to see them, so that drill always draws from the PCP pool
   const aet = params.aet || '';
+  if (aet && !(await aetUnlocked())) { await aetGate(el, () => renderPractice(el, arg, params)); return; }
   const bank = await loadBank(aet ? 'pcp' : tr);
   if (!bank.length) { el.innerHTML = emptyBank(); return; }
   // filter by clinical-domain group, not raw topic — the bank's 255 authoring

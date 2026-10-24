@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=35';
-import { sClassroom } from './classroom.js?v=35';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=36';
+import { sClassroom } from './classroom.js?v=36';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -30,8 +30,8 @@ export async function renderStudyHub(el) {
       '老师用英文逐页讲解、随堂提问：从 EMR 升到 PCP，多做什么、要注意什么。课内可看中文翻译。',
       clsData ? `<span class="tag-count">${clsReady} / ${clsAll.length}</span>` : ''],
     ['/aet', ico('target'), 'AET PCP Course — lectures, modules, class portal', 'AET PCP 课程（讲课、模块练习、班级门户）',
-      'Spoken lessons that follow the AET program weekend by weekend (class password), original practice questions by module, and the class portal.',
-      '按 AET 课程周末顺序讲的语音课（班级密码）、按模块编排的原创练习题，以及班级门户。', ''],
+      'Class password required. Spoken lessons that follow the AET program weekend by weekend, original practice questions by module, and the class portal.',
+      '需要班级密码。按 AET 课程周末顺序讲的语音课、按模块编排的原创练习题，以及班级门户。', `<span style="display:inline-flex;color:var(--muted)">${ico('lock')}</span>`],
     ['chapters', ico('cap'), 'Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读',
       `All 54 chapters of the Canadian edition. ${chV2} are rewritten in depth — knowledge map, every testable number, BC-guideline conflicts flagged.`,
       `加拿大版教材全部 54 章，其中 ${chV2} 章已深度重写——知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注。`,

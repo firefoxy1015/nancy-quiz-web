@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=35';
+import { S, save, t, esc, ico } from './app.js?v=36';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
