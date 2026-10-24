@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=33';
+import { S, save, t, esc, ico } from './app.js?v=34';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -137,7 +137,17 @@ function drawCourse(el) {
   const all = course.units.flatMap(u => u.lessons);
   const ready = all.filter(l => l.ready).length;
   const done = all.filter(l => store.get(l.id + ':done', false)).length;
+  // priority: "digest" = the weekend's overview lesson, "core" = must-listen, "deep" = the rest (nothing is dropped)
+  const coreOnly = store.get('coreOnly', false);
+  const isCore = l => l.priority === 'digest' || l.priority === 'core' || !l.priority;
+  const mins = ls => Math.round(ls.filter(l => l.ready).reduce((s, l) => s + (l.minutes || 0), 0) / 6) / 10;
+  const prTag = l => l.priority === 'digest' ? `<span class="cls-pr pr-digest">${t('Overview', '速览')}</span>`
+    : l.priority === 'core' ? `<span class="cls-pr pr-core">${t('Core', '必听')}</span>`
+    : l.priority === 'deep' ? `<span class="cls-pr pr-deep">${t('Deep dive', '深入')}</span>` : '';
   el.innerHTML = `
+    <style>.cls-pr{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:9px;margin-right:6px;vertical-align:1px}
+      .pr-digest{background:#2563eb;color:#fff}.pr-core{background:#16a34a;color:#fff}.pr-deep{background:transparent;color:var(--muted,#888);border:1px solid currentColor}
+      .cls-filter{display:flex;gap:6px;margin-top:10px}.cls-filter .on{outline:2px solid currentColor}</style>
     <a class="back-link" href="#/aet">← AET</a>
     <div class="card cls-intro">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
@@ -147,21 +157,33 @@ function drawCourse(el) {
       <p>Spoken lessons in English that follow the AET PCP program weekend by weekend: the week's online modules section by section, the assigned readings, the lab PPT topics and linked resources, the Wednesday cases and the lab skills — checked against the BCEHS clinical practice guidelines, with "module vs BCEHS vs the licensing exam" spelled out wherever they differ.</p>
       <p class="muted">${t('Tap 中文 inside a lesson to see the teacher\'s words in Chinese.', '课件和讲解都是英文；课内点「中文」可看老师这段话的中文翻译。')}</p>
       <div class="tiny">${ready} / ${all.length} ${t('lessons ready', '节已上线')} · ${done} ${t('finished', '节已学完')} · ${t('built', '更新')} ${esc(DOC.course.built || '')}</div>
+      <p class="muted" style="margin:8px 0 0">${t('Fastest route: each weekend starts with an Overview lesson, then the Core lessons. Deep-dive lessons cover everything else the school teaches, so nothing is missed — use them when you have time or to check a topic.', '最快路线：每个周末先听「速览」，再听「必听」。「深入」课覆盖学校教的其余全部内容，保证不漏——有空再听，或用来查漏补缺。')}</p>
+      <div class="cls-filter">
+        <button class="btn ghost${coreOnly ? '' : ' on'}" data-filter="all">${t('All lessons', '全部课程')}</button>
+        <button class="btn ghost${coreOnly ? ' on' : ''}" data-filter="core">${t('Overview + Core only', '只看速览 + 必听')}</button>
+      </div>
     </div>
-    ${course.units.map(u => `
+    ${course.units.map(u => {
+      const shown = coreOnly ? u.lessons.filter(isCore) : u.lessons;
+      if (!shown.length) return '';
+      const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons);
+      return `
       <div class="cls-unit">
         <h3>${esc(u.label)}</h3>
+        <div class="tiny muted" style="margin:-4px 0 6px">${t('Core', '必听')} ${coreMin} h · ${t('all', '全部')} ${allMin} h${coreOnly && shown.length < u.lessons.length ? ` · ${u.lessons.length - shown.length} ${t('deep-dive lessons hidden', '节「深入」已隐藏')}` : ''}</div>
         <div class="list-wrap">
-          ${u.lessons.map(l => {
+          ${shown.map(l => {
             const fin = store.get(l.id + ':done', false);
             const badge = !l.ready ? t('Soon', '待上线') : fin ? t('Done', '已学完') : t('Open', '上课');
             return `<button class="list-item cls-lesson${fin ? ' done' : ''}" ${l.ready ? `data-l="${l.id}"` : 'disabled'}>
-              <span>${esc(l.title)}<div class="tiny">${l.ready ? l.minutes + ' min' : t('coming soon', '即将上线')}</div></span>
+              <span>${prTag(l)}${esc(l.title)}<div class="tiny">${l.ready ? l.minutes + ' min' : t('coming soon', '即将上线')}</div></span>
               <span class="tag-count">${badge}</span></button>`;
           }).join('')}
         </div>
-      </div>`).join('')}`;
+      </div>`;
+    }).join('')}`;
   el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
+  el.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { store.set('coreOnly', b.dataset.filter === 'core'); drawCourse(el); });
   el.querySelector('#lockBtn').onclick = () => { lock(); renderAetClass(el, 'class', {}); };
 }
 
