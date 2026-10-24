@@ -1,7 +1,7 @@
 // AI Examiner — a simulated EMALB practical station: dispatch → live call → PCR → grading form.
 // The browser owns the run (crash-safe in localStorage); the server owns the sheet, the model and the scoring.
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=37';
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=38';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}
