@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=36';
+import { S, save, t, esc, ico } from './app.js?v=37';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -51,14 +51,18 @@ async function tryRemembered(v) {
     return true;
   } catch { forgetKey(); return false; }
 }
-// Narration lives in the separate aet-audio Pages repo (same github.io origin; one Pages site is capped at 1 GB).
-// '../aet-audio/' resolves to /aet-audio/ on github.io and to a sibling folder on a local server rooted above both repos.
-const AUDIO_BASES = ['../aet-audio/audio/', BASE + 'audio/'];
+// Narration lives in separate Pages repos (same github.io origin; one Pages site is capped at 1 GB):
+// Weekends 1–8 in aet-audio, Weekend 9 onward in aet-audio2 (tools/build_vault.py splits them the same way).
+// '../aet-audio/' resolves to /aet-audio/ on github.io and to a sibling folder on a local server rooted above the repos.
+function audioBases(name) {
+  const wk = +((name.match(/^w(\d+)-/) || [])[1] || 0);
+  return [wk >= 9 ? '../aet-audio2/audio/' : '../aet-audio/audio/', BASE + 'audio/'];
+}
 async function audioURL(rel) {
   if (urls.has(rel)) return urls.get(rel);
   const name = rel.replace(/^audio\//, '').replace(/\.mp3$/, '.bin');
   let r = null;
-  for (const b of AUDIO_BASES) { r = await fetch(b + name).catch(() => null); if (r && r.ok) break; }
+  for (const b of audioBases(name)) { r = await fetch(b + name).catch(() => null); if (r && r.ok) break; }
   if (!r || !r.ok) throw new Error('audio ' + (r ? r.status : 'network'));
   const buf = new Uint8Array(await r.arrayBuffer());
   const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, KEY, buf.slice(12));
