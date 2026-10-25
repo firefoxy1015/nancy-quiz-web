@@ -812,3 +812,14 @@ body.cls-playing .view-root { padding-bottom: 170px; }
   .n2-row .n2-pts { gap: 4px; }
   .n2-row > div:first-child { font-size: .92rem; }
 }
+
+/* story lessons: the 中 / EN / 中英 switch and bilingual text (#view[data-tl]) */
+#view[data-tl="en"] .l-zh, #view[data-tl="zh"] .l-en { display: none; }
+#view[data-tl="both"] .l-zh { display: block; font-size: .84em; font-weight: 400; opacity: .78; margin-top: 1px; }
+#view[data-tl="both"] .l-zh.inl { display: inline; margin-left: .35em; }
+.cls-visual .v-scale .l-zh { opacity: .92; }
+.cls-tl { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; vertical-align: middle; margin-left: 8px; }
+.cls-tl button { border: 0; background: transparent; padding: 3px 9px; font-size: .8rem; color: var(--ink-2); cursor: pointer; font-weight: 600; }
+.cls-tl button.on { background: var(--accent); color: #fff; }
+.cls-meta-r { display: inline-flex; align-items: center; }
+.cls-start-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
