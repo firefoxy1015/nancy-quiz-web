@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=44';
-import { news2Drill } from './news2drill.js?v=44';
+import { S, save, t, esc, ico } from './app.js?v=45';
+import { news2Drill } from './news2drill.js?v=45';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -275,7 +275,7 @@ function drawCourse(el) {
             const badge = !l.ready ? t('Soon', '待上线') : fin ? t('Done', '已学完') : mastered(l) ? t('Mastered', '已掌握') : t('Open', '上课');
             const tested = r && !fin ? `<span class="tiny"> · ${t('test', '测验')} ${r.r}/${r.n}${r.r === r.n ? (isReadingsUnit(u) ? ' · ' + t('reading: still on your list', '阅读课仍需听完') : ' · ' + t('skip or skim', '可跳过或快听')) : r.r ? ' · ' + t('skim at 1.3×', '可 1.3 倍速快听') : ' · ' + t('listen', '必听')}</span>` : '';
             return `<button class="list-item cls-lesson${fin ? ' done' : ''}" ${l.ready ? `data-l="${l.id}"` : 'disabled'}>
-              <span>${prTag(l)}${esc(l.title)}<div class="tiny">${l.ready ? l.minutes + ' min' : t('coming soon', '即将上线')}${tested}</div></span>
+              <span>${prTag(l)}${esc(l.title)}<div class="tiny">${l.ready ? (l.zhMin ? `中文精讲 ${l.zhMin} 分钟 · ` : '') + l.minutes + ' min' : t('coming soon', '即将上线')}${tested}</div></span>
               <span class="tag-count${mastered(l) && !fin ? ' mast' : ''}">${badge}</span></button>`;
           }).join('')}
         </div>
@@ -413,7 +413,13 @@ function wireTodos(el) {
   el.querySelectorAll('input[data-todo]').forEach(c => c.onchange = () => store.set('todo:' + c.dataset.todo, c.checked));
 }
 
-async function drawLesson(el, L, autoStart) {
+// A lesson can carry a Chinese micro-lesson (L0.zh: ~7 min, Chinese narration, picture slides, a question every few
+// pages). It plays by default; the English original stays one tap away. Progress (pos, answers) is kept per version;
+// "done" and auto-continue use the lesson's own id either way.
+async function drawLesson(el, L0, autoStart) {
+  const zh = !!L0.zh && store.get('lang', 'zh') === 'zh';
+  const L = zh ? { ...L0, id: L0.id + '~zh', title: L0.zh.title, minutes: L0.zh.minutes || '~7', slides: L0.zh.slides } : L0;
+  const baseId = L0.id;
   const answers = store.get(L.id + ':ans', {});
   const links = L.links || [];
   const linksHead = t('From the school: videos, articles and modules', '学校的视频、文章和模块');
@@ -425,9 +431,11 @@ async function drawLesson(el, L, autoStart) {
     <section class="card cls-start" id="clsStart">
       <div class="cls-kicker">${esc(L.book)}</div>
       <h2>${esc(L.title)}</h2>
-      <ul class="muted"><li>Spoken lesson, about ${L.minutes} minutes, ${L.slides.length} slides</li><li>${quizzes} quick questions along the way</li><li>${t('Subtitles show English with Chinese underneath; tap the 字幕 button to switch.', '字幕默认英文+中文对照；点「字幕」按钮可切换。')}</li></ul>
-      <div class="btn-row"><button class="btn" id="clsGo">Start class</button>
-        ${store.get(L.id + ':pos', 0) > 0 ? `<button class="btn ghost" id="clsResume">Continue where I left off</button>` : ''}</div>
+      ${zh ? `<ul class="muted"><li>中文精讲，约 ${L.minutes} 分钟，${L.slides.length} 页图示</li><li>${quizzes} 道随堂小题</li><li>英文术语和考试原词保留在页面上</li></ul>`
+        : `<ul class="muted"><li>Spoken lesson, about ${L.minutes} minutes, ${L.slides.length} slides</li><li>${quizzes} quick questions along the way</li><li>${t('Subtitles show English with Chinese underneath; tap the 字幕 button to switch.', '字幕默认英文+中文对照；点「字幕」按钮可切换。')}</li></ul>`}
+      <div class="btn-row"><button class="btn" id="clsGo">${zh ? '开始上课' : 'Start class'}</button>
+        ${store.get(L.id + ':pos', 0) > 0 ? `<button class="btn ghost" id="clsResume">${zh ? '从上次的地方继续' : 'Continue where I left off'}</button>` : ''}
+        ${L0.zh ? `<button class="btn ghost" id="clsLang">${zh ? `English original · ${L0.minutes} min` : `中文精讲 · ${L0.zh.minutes || '~7'} 分钟`}</button>` : ''}</div>
       ${links.length ? `<h4>${linksHead}</h4>` + linksHtml(links) : ''}
     </section>
     <div class="cls-progress hidden" id="clsProg"></div>
@@ -464,7 +472,7 @@ async function drawLesson(el, L, autoStart) {
   }
   function render() {
     const s = L.slides[i], st = $('clsStage');
-    const head = `<div class="cls-meta"><span>${s.kind === 'quiz' ? 'Quick question' : 'Slide ' + (i + 1)}</span><span>${i + 1} / ${L.slides.length}</span></div>`;
+    const head = `<div class="cls-meta"><span>${s.kind === 'quiz' ? (zh ? '随堂小题' : 'Quick question') : (zh ? '第 ' + (i + 1) + ' 页' : 'Slide ' + (i + 1))}</span><span>${i + 1} / ${L.slides.length}</span></div>`;
     if (s.kind === 'quiz') {
       // qZh / optionsZh: the Chinese line under the question and each option, when the lesson has them
       st.innerHTML = head + `<h2>${esc(s.q)}</h2>${s.qZh ? `<p class="cls-zh muted">${esc(s.qZh)}</p>` : ''}<div class="cls-opts">` +
@@ -472,7 +480,7 @@ async function drawLesson(el, L, autoStart) {
         `</div><div id="clsQx"></div>`;
       st.querySelectorAll('.cls-opt').forEach(b => b.onclick = () => choose(+b.dataset.k));
       if (answers[i] != null) markQuiz(answers[i], false);
-      else st.querySelector('#clsQx').innerHTML = `<p class="muted">Pick an answer and the teacher will explain.</p>`;
+      else st.querySelector('#clsQx').innerHTML = `<p class="muted">${zh ? '选一个答案，老师会讲解。' : 'Pick an answer and the teacher will explain.'}</p>`;
     } else {
       // s.visual = the slide drawn as an infographic (icons, charts, flows); its [data-at] parts appear as the narration
       // reaches them (fraction of the clip). The plain bullet body stays one tap away ("Text version").
@@ -488,7 +496,7 @@ async function drawLesson(el, L, autoStart) {
       const vt = st.querySelector('#clsVt'); if (vt) vt.onclick = () => { store.set('textMode', !store.get('textMode', false)); render(); revealAll(); };
       if (vis) { if (playing) st.querySelectorAll('.cls-visual [data-at]').forEach(e => e.classList.add('v-off')); window.lucide?.createIcons(); }
     }
-    const [en, zh] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zh;
+    const [en, zhLine] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zhLine;
     const pg = $('clsProg'); pg.innerHTML = '';
     L.slides.forEach((x, k) => {
       const b = document.createElement('button');
@@ -505,8 +513,8 @@ async function drawLesson(el, L, autoStart) {
       const kk = +b.dataset.k; b.disabled = true;
       if (kk === s.answer) b.classList.add('right'); else if (kk === k) b.classList.add('wrong');
     });
-    $('clsStage').querySelector('#clsQx').innerHTML = `<p class="cls-explain"><b>${k === s.answer ? 'Correct! ' : 'Not quite. '}</b>${esc(s.explain)}</p>`;
-    const [en, zh] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zh;
+    $('clsStage').querySelector('#clsQx').innerHTML = `<p class="cls-explain"><b>${k === s.answer ? (zh ? '对！' : 'Correct! ') : (zh ? '不对。' : 'Not quite. ')}</b>${esc(s.explain)}</p>`;
+    const [en, zhLine] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zhLine;
     if (speak) play(s.audioA);
   }
   function choose(k) { if (answers[i] != null) return; answers[i] = k; store.set(L.id + ':ans', answers); markQuiz(k, true); }
@@ -546,9 +554,9 @@ async function drawLesson(el, L, autoStart) {
     if ((s.kind === 'quiz' && answers[i] == null) || s.drill) return;   // wait for the student on a question or a practice slide
     if (i < L.slides.length - 1) timer = setTimeout(() => go(i + 1, true), 1100);
     else {
-      store.set(L.id + ':done', true);
+      store.set(baseId + ':done', true);
       // auto-continue: the next lesson the current filter lists, so a weekend plays through like a podcast
-      const nx = store.get('autoNext', true) ? nextLessonId(L.id) : null;
+      const nx = store.get('autoNext', true) ? nextLessonId(baseId) : null;
       if (nx) timer = setTimeout(() => { location.hash = '#/aet/class?l=' + nx + '&auto=1'; }, 1800);
     }
   });
@@ -612,6 +620,7 @@ async function drawLesson(el, L, autoStart) {
     try { navigator.wakeLock?.request('screen').catch(() => {}); } catch {}
   }
   $('clsGo').onclick = () => begin(true);
+  const lg = $('clsLang'); if (lg) lg.onclick = () => { store.set('lang', zh ? 'en' : 'zh'); drawLesson(el, L0, false); };
   const r = $('clsResume'); if (r) r.onclick = () => begin(false);
   live = { stop() { clearTimeout(timer); audio.pause(); playToken++; document.body.classList.remove('cls-playing'); } };
   if (autoStart) begin(true);
