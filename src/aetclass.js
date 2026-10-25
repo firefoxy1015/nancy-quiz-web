@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=40';
+import { S, save, t, esc, ico } from './app.js?v=41';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -442,14 +442,16 @@ async function drawLesson(el, L, autoStart) {
     const s = L.slides[i], st = $('clsStage');
     const head = `<div class="cls-meta"><span>${s.kind === 'quiz' ? 'Quick question' : 'Slide ' + (i + 1)}</span><span>${i + 1} / ${L.slides.length}</span></div>`;
     if (s.kind === 'quiz') {
-      st.innerHTML = head + `<h2>${esc(s.q)}</h2><div class="cls-opts">` +
-        s.options.map((o, k) => `<button class="cls-opt" data-k="${k}"><b>${'ABCD'[k]}</b><span>${esc(o)}</span></button>`).join('') +
+      // qZh / optionsZh: the Chinese line under the question and each option, when the lesson has them
+      st.innerHTML = head + `<h2>${esc(s.q)}</h2>${s.qZh ? `<p class="cls-zh muted">${esc(s.qZh)}</p>` : ''}<div class="cls-opts">` +
+        s.options.map((o, k) => `<button class="cls-opt" data-k="${k}"><b>${'ABCD'[k]}</b><span>${esc(o)}${s.optionsZh && s.optionsZh[k] ? `<br><span class="cls-zh muted">${esc(s.optionsZh[k])}</span>` : ''}</span></button>`).join('') +
         `</div><div id="clsQx"></div>`;
       st.querySelectorAll('.cls-opt').forEach(b => b.onclick = () => choose(+b.dataset.k));
       if (answers[i] != null) markQuiz(answers[i], false);
       else st.querySelector('#clsQx').innerHTML = `<p class="muted">Pick an answer and the teacher will explain.</p>`;
     } else {
       st.innerHTML = head + `<h2>${esc(s.title)}</h2><div class="cls-body">${s.body}</div>` +   // our own lesson HTML, decrypted
+        (s.bodyZh ? `<div class="cls-body-zh">${esc(s.bodyZh)}</div>` : '') +                   // the slide's Chinese summary line
         (s.links && s.links.length ? linksHtml(s.links) : '');
     }
     const [en, zh] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zh;
