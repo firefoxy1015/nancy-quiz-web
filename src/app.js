@@ -1,13 +1,13 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=47';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=47';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=47';
-import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=47';
-import { renderPortal } from './portal.js?v=47';
-import { renderAetClass } from './aetclass.js?v=47';
-import { renderBackup } from './backup.js?v=47';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=48';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=48';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=48';
+import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=48';
+import { renderPortal } from './portal.js?v=48';
+import { renderAetClass } from './aetclass.js?v=48';
+import { renderBackup } from './backup.js?v=48';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -354,7 +354,10 @@ document.getElementById('trackSwitch').addEventListener('click', e => {
 document.getElementById('langBtn').addEventListener('click', () => {
   S.lang = S.lang === 'both' ? 'en' : (S.lang === 'en' ? 'zh' : 'both');
   S.langChosen = true;
-  save(); route();
+  save();
+  // a page that can take the change in place (the lesson player: switch the text, keep the lesson playing) says so
+  if (window.langInPlace && window.langInPlace(S.lang)) { syncTrackUI(); return; }
+  route();
 });
 document.getElementById('view').addEventListener('click', e => {
   const tb = e.target.closest('[data-pick-track]');

@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=47';
-import { news2Drill } from './news2drill.js?v=47';
+import { S, save, t, esc, ico } from './app.js?v=48';
+import { news2Drill } from './news2drill.js?v=48';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -472,13 +472,21 @@ async function drawLesson(el, L0, autoStart) {
 
   const $ = id => el.querySelector('#' + id);
   wireTodos(el);
-  el.dataset.tl = TL();
-  el.onclick = e => {                                   // the 中 / EN / 中英 switch (on the start card and every slide)
-    const b = e.target.closest('.cls-tl button'); if (!b) return;
-    store.set('tl', b.dataset.tl); el.dataset.tl = b.dataset.tl;
-    el.querySelectorAll('.cls-tl button').forEach(x => x.classList.toggle('on', x.dataset.tl === b.dataset.tl));
+  // text language: the 中 / EN / 中英 switch on the slide and the site's own language button (top bar) are one setting;
+  // either one changes the text in place, so the lesson keeps playing
+  function setTL(v) {
+    store.set('tl', v); el.dataset.tl = v;
+    el.querySelectorAll('.cls-tl button').forEach(x => x.classList.toggle('on', x.dataset.tl === v));
     applySub();
+  }
+  el.dataset.tl = TL();
+  el.onclick = e => {
+    const b = e.target.closest('.cls-tl button'); if (!b) return;
+    setTL(b.dataset.tl);
+    S.lang = b.dataset.tl; S.langChosen = true; save();                 // the top bar follows ('both' | 'en' | 'zh')
+    const lb = document.getElementById('langBtn'); if (lb) lb.textContent = S.lang === 'both' ? 'EN+中' : (S.lang === 'en' ? 'EN' : '中文');
   };
+  window.langInPlace = lang => { setTL(lang === 'en' || lang === 'zh' ? lang : 'both'); return true; };
   const audio = $('clsAudio');
   const setPlaying = p => { playing = p; $('clsPlay').textContent = p ? '❚❚' : '▶'; $('clsPlay').setAttribute('aria-label', p ? 'Pause' : 'Play'); };
   const speedLabel = () => SPEEDS[speedIx].toFixed(2).replace(/0$/, '') + '×';
@@ -641,6 +649,6 @@ async function drawLesson(el, L0, autoStart) {
   $('clsGo').onclick = () => begin(true);
   const lg = $('clsLang'); if (lg) lg.onclick = () => { store.set('lessonMode', story ? 'full' : 'story'); drawLesson(el, L0, false); };
   const r = $('clsResume'); if (r) r.onclick = () => begin(false);
-  live = { stop() { clearTimeout(timer); audio.pause(); playToken++; document.body.classList.remove('cls-playing'); } };
+  live = { stop() { clearTimeout(timer); audio.pause(); playToken++; document.body.classList.remove('cls-playing'); window.langInPlace = null; } };
   if (autoStart) begin(true);
 }
