@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=39';
+import { S, save, t, esc, ico } from './app.js?v=40';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -35,10 +35,27 @@ async function deriveKey(pw, v) {
   return crypto.subtle.deriveKey({ name: 'PBKDF2', hash: 'SHA-256', salt: b64d(v.salt), iterations: v.iter },
     base, { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
 }
-async function openVault(v, key) {
-  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64d(v.iv) }, key, b64d(v.ct));
+async function decryptJSON(blob, key) {
+  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64d(blob.iv) }, key, b64d(blob.ct));
   const text = await new Response(new Blob([plain]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
   return JSON.parse(text);
+}
+// v1 vaults hold the whole course; v2 vaults hold the head (course, index, cards) and the lesson text comes
+// per weekend from vault-wNN.json, fetched on first use — so unlocking costs a few hundred KB, not the whole course.
+async function openVault(v, key) {
+  const doc = await decryptJSON(v, key);
+  doc.lessons = doc.lessons || {};
+  return doc;
+}
+const weeksLoaded = new Set();
+const wkOfId = id => +((id.match(/^w(\d+)/) || [])[1] || 0);
+async function loadWeek(wk) {
+  if (!vaultMeta || vaultMeta.v < 2 || !wk || weeksLoaded.has(wk) || !KEY) return;
+  const r = await fetch(BASE + 'vault-w' + String(wk).padStart(2, '0') + '.json', { cache: 'no-cache' });
+  if (!r.ok) throw new Error('week ' + r.status);
+  const part = await decryptJSON(await r.json(), KEY);
+  Object.assign(DOC.lessons, part.lessons);
+  weeksLoaded.add(wk);
 }
 function storedKey() { try { return JSON.parse(localStorage.getItem(KEY_LS) || 'null'); } catch { return null; } }
 function forgetKey() { try { localStorage.removeItem(KEY_LS); } catch {} }
@@ -73,7 +90,7 @@ async function audioURL(rel) {
 function lock() {
   DOC = null; KEY = null; forgetKey();
   for (const u of urls.values()) URL.revokeObjectURL(u);
-  urls.clear();
+  urls.clear(); weeksLoaded.clear();
 }
 
 /* ---------------- entry ---------------- */
@@ -96,10 +113,11 @@ export async function renderAetClass(el, arg, params) {
       done: () => renderAetClass(el, 'class', params) });
     return;
   }
-  if (params.test) { drawTest(el, +params.test); return; }
+  if (params.test) { await loadWeek(+params.test); drawTest(el, +params.test); return; }
   if (params.cards) { drawCards(el, +params.cards); return; }
   if (params.l) {
     const meta = DOC.index.units.flatMap(u => u.lessons).find(l => l.id === params.l);
+    if (meta && meta.ready) await loadWeek(wkOfId(meta.id));
     if (meta && meta.ready && DOC.lessons[meta.id]) { await drawLesson(el, DOC.lessons[meta.id], params.auto === '1'); return; }
   }
   drawCourse(el);
@@ -202,7 +220,7 @@ function drawCourse(el) {
   const wkHead = wk => {
     const units = course.units.filter(u => wkOf(u) === wk), ls = units.flatMap(u => u.lessons), rd = ls.filter(l => l.ready);
     const theme = (units[0].label.split('·')[1] || '').trim();
-    const nQ = rd.reduce((s, l) => s + quizzesOf(DOC.lessons[l.id]).length, 0);
+    const nQ = rd.reduce((s, l) => s + (l.nq ?? quizzesOf(DOC.lessons[l.id]).length), 0);
     const left = mins(units.flatMap(u => u.lessons.filter(l => shows(l, u) && !isDone(l))));
     const fin = rd.filter(isDone).length, due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
     return `<div class="card cls-wk">

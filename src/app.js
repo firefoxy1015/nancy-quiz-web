@@ -1,12 +1,13 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=39';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=39';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=39';
-import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=39';
-import { renderPortal } from './portal.js?v=39';
-import { renderAetClass } from './aetclass.js?v=39';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=40';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=40';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=40';
+import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=40';
+import { renderPortal } from './portal.js?v=40';
+import { renderAetClass } from './aetclass.js?v=40';
+import { renderBackup } from './backup.js?v=40';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -155,7 +156,7 @@ const routes = {
   'written': renderWrittenHub, 'practice': renderPractice, 'mock': renderMock, 'wrong': renderWrong, 'aet': renderAetHub,
   'practical': renderPracticalHub, 'scenarios': renderScenarioList, 'scenario': renderScenarioPlayer,
   'rubric': renderRubricBrowser, 'autofails': renderAutoFails, 'examiner': renderExaminerHub, 'examiner-run': renderExaminerRun,
-  'juris': renderJurisHub, 'portal': renderPortal,
+  'juris': renderJurisHub, 'portal': renderPortal, 'backup': renderBackup,
 };
 export function nav(hash) { location.hash = hash; }
 export function parseRoute() {
@@ -171,7 +172,7 @@ async function route() {
   const el = document.getElementById('view');
   el.className = 'view-root lang-' + S.lang;
   // track required for most views
-  const noTrack = ['', 'home', 'guide', 'info', 'portal'];
+  const noTrack = ['', 'home', 'guide', 'info', 'portal', 'backup'];
   if (!S.track && !noTrack.includes(name) && !(name === 'aet' && arg === 'class')) { nav('/'); return; }
   let fn = routes[name] || renderHome;
   if (name === 'study' && arg) fn = renderStudySection;
@@ -283,6 +284,7 @@ async function renderHome(el) {
         <a class="btn secondary" href="#/wrong">${ico('x')} ${t(`Wrong answers (${wrongCount})`, `错题本 (${wrongCount})`)}</a>
         <a class="btn secondary" href="#/autofails">${ico('skull')} ${t('Auto-fail traps', '直接挂科陷阱')}</a>
         <a class="btn secondary" href="#/info">${ico('info')} ${t('Exam logistics & fees', '考务流程与费用')}</a>
+        <a class="btn secondary" href="#/backup">${ico('download')} ${t('Back up / restore progress', '备份 / 恢复进度')}</a>
       </div>
     </div>
     ${rules ? `<div class="card">
