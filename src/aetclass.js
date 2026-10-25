@@ -2,7 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=43';
+import { S, save, t, esc, ico } from './app.js?v=44';
+import { news2Drill } from './news2drill.js?v=44';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -115,6 +116,7 @@ export async function renderAetClass(el, arg, params) {
   }
   if (params.test) { await loadWeek(+params.test); drawTest(el, +params.test); return; }
   if (params.cards) { drawCards(el, +params.cards); return; }
+  if (params.drill === 'news2') { drawDrill(el); return; }
   if (params.l) {
     const meta = DOC.index.units.flatMap(u => u.lessons).find(l => l.id === params.l);
     if (meta && meta.ready) await loadWeek(wkOfId(meta.id));
@@ -255,6 +257,7 @@ function drawCourse(el) {
         <button class="btn ghost${mode === 'all' ? ' on' : ''}" data-filter="all">${t('All lessons', '全部课程')}</button>
         <button class="btn ghost${mode === 'core' ? ' on' : ''}" data-filter="core">${t('Overview + Core only', '只看速览 + 必听')}</button>
         <button class="btn ghost${mode === 'need' ? ' on' : ''}" data-filter="need">${t('Only what I still need', '只看还没学会的')}</button>
+        <button class="btn ghost" id="drillBtn">${t('NEWS2 trainer', 'NEWS2 练习器')}</button>
         <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
@@ -282,6 +285,7 @@ function drawCourse(el) {
   el.querySelectorAll('[data-test]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?test=' + b.dataset.test; });
   el.querySelectorAll('[data-cards]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?cards=' + b.dataset.cards; });
   el.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { store.set('filter', b.dataset.filter); drawCourse(el); });
+  el.querySelector('#drillBtn').onclick = () => { location.hash = '#/aet/class?drill=news2'; };
   el.querySelector('#autoBtn').onclick = () => { store.set('autoNext', !store.get('autoNext', true)); drawCourse(el); };
   el.querySelector('#lockBtn').onclick = () => { lock(); renderAetClass(el, 'class', {}); };
 }
@@ -381,6 +385,16 @@ function drawCards(el, wk) {
   show();
 }
 
+/* ---------------- NEWS2 trainer page (the same trainer sits inside the scoring lesson's practice slide) ---------------- */
+function drawDrill(el) {
+  el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>
+    <div class="card cls-stage"><h2>${t('NEWS2 trainer', 'NEWS2 练习器')}</h2>
+    <p class="muted">${t('Row drill until the border numbers are automatic, then the patient drill until 10 in a row are right. Scored on the published NEWS2 chart that BCEHS uses.',
+      '先用「单项练习」练到分界数字成条件反射，再用「整个病人」练到连续 10 个全对。按 BCEHS 使用的 NEWS2 官方评分表打分。')}</p>
+    <div id="n2Host"></div></div>`;
+  news2Drill(el.querySelector('#n2Host'), store);
+}
+
 /* ---------------- lesson player ---------------- */
 // The school's own videos, articles and module pages a lesson teaches from (lesson.links / slide.links):
 // {label, url, kind: video | article | module | page, note?}. Module pages open in the student's own Moodle / AET University login.
@@ -460,10 +474,19 @@ async function drawLesson(el, L, autoStart) {
       if (answers[i] != null) markQuiz(answers[i], false);
       else st.querySelector('#clsQx').innerHTML = `<p class="muted">Pick an answer and the teacher will explain.</p>`;
     } else {
-      st.innerHTML = head + `<h2>${esc(s.title)}</h2><div class="cls-body">${s.body}</div>` +   // our own lesson HTML, decrypted
+      // s.visual = the slide drawn as an infographic (icons, charts, flows); its [data-at] parts appear as the narration
+      // reaches them (fraction of the clip). The plain bullet body stays one tap away ("Text version").
+      const vis = s.visual && !store.get('textMode', false);
+      st.innerHTML = head + `<h2>${esc(s.title)}</h2>` +
+        (vis ? `<div class="cls-visual">${s.visual}</div>` : `<div class="cls-body">${s.body}</div>`) +   // our own lesson HTML, decrypted
         (s.bodyZh ? `<div class="cls-body-zh">${esc(s.bodyZh)}</div>` : '') +                   // the slide's Chinese summary line
+        (s.visual ? `<button class="btn ghost tiny cls-vt" id="clsVt">${store.get('textMode', false) ? t('Picture version', '图示版') : t('Text version', '文字版')}</button>` : '') +
+        (s.drill ? `<div id="clsDrill"></div>` : '') +                                         // a practice tool on this slide (s.drill: 'news2')
         (s.links && s.links.length ? linksHtml(s.links) : '');
       wireTodos(st);
+      if (s.drill === 'news2') news2Drill(st.querySelector('#clsDrill'), store);
+      const vt = st.querySelector('#clsVt'); if (vt) vt.onclick = () => { store.set('textMode', !store.get('textMode', false)); render(); revealAll(); };
+      if (vis) { if (playing) st.querySelectorAll('.cls-visual [data-at]').forEach(e => e.classList.add('v-off')); window.lucide?.createIcons(); }
     }
     const [en, zh] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zh;
     const pg = $('clsProg'); pg.innerHTML = '';
@@ -491,10 +514,10 @@ async function drawLesson(el, L, autoStart) {
     clearTimeout(timer);
     const token = ++playToken;
     let url;
-    try { url = await audioURL(p); } catch { setPlaying(false); return; }
+    try { url = await audioURL(p); } catch { setPlaying(false); revealAll(); return; }   // no clip: show the whole picture
     if (token !== playToken) return;                       // the student moved on while this clip was decrypting
     audio.src = url; audio.playbackRate = SPEEDS[speedIx];
-    audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    audio.play().then(() => setPlaying(true)).catch(() => { setPlaying(false); revealAll(); });
   }
   const srcFor = s => s.kind === 'quiz' ? (answers[i] != null ? s.audioA : s.audioQ) : s.audio;
   function go(k, auto) {
@@ -504,10 +527,23 @@ async function drawLesson(el, L, autoStart) {
     if (auto) play(srcFor(L.slides[i])); else setPlaying(false);
     const n = L.slides[i + 1]; if (n) audioURL(n.audio || n.audioQ).catch(() => {});   // decrypt the next clip early
   }
+  // reveal the visual's parts in step with the narration; anything still hidden when the clip ends or is paused shows
+  function revealAll() { $('clsStage').querySelectorAll('.v-off').forEach(e => e.classList.remove('v-off')); }
+  audio.addEventListener('play', () => {
+    if (L.slides[i].kind === 'quiz' || audio.currentTime > 0.5) return;
+    $('clsStage').querySelectorAll('.cls-visual [data-at]').forEach(e => { if (+e.dataset.at > 0.02) e.classList.add('v-off'); });
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (!audio.duration || L.slides[i].kind === 'quiz') return;
+    const f = audio.currentTime / audio.duration;
+    $('clsStage').querySelectorAll('.v-off').forEach(e => { if (+e.dataset.at <= f + 0.01) e.classList.remove('v-off'); });
+  });
+  audio.addEventListener('pause', () => setTimeout(() => { if (audio.paused) revealAll(); }, 400));
   audio.addEventListener('ended', () => {
+    revealAll();
     setPlaying(false);
     const s = L.slides[i];
-    if (s.kind === 'quiz' && answers[i] == null) return;
+    if ((s.kind === 'quiz' && answers[i] == null) || s.drill) return;   // wait for the student on a question or a practice slide
     if (i < L.slides.length - 1) timer = setTimeout(() => go(i + 1, true), 1100);
     else {
       store.set(L.id + ':done', true);
