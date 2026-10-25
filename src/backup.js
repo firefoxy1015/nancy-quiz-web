@@ -1,7 +1,7 @@
 // Back up / restore progress. Everything the site remembers lives in this browser's localStorage, so a cleared
 // browser or a new phone starts from zero. This writes it all to one JSON file and reads it back.
 // Passwords and remembered keys (class portal, class lectures) are left out on purpose: a backup is not a login.
-import { t, esc, ico } from './app.js?v=41';
+import { t, esc, ico } from './app.js?v=42';
 
 const EXACT = ['bcprep2', 'bcprepPortalQuiz'];          // site state (track, language, wrong answers, mocks, chapters read) · portal quiz progress
 const PREFIXES = ['pcpclass:', 'aetclass:'];           // Nancy classroom · AET class (done, tests, flashcard boxes)

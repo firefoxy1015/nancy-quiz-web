@@ -2,7 +2,7 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=41';
+import { S, save, t, esc, ico } from './app.js?v=42';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -384,10 +384,19 @@ function drawCards(el, wk) {
 /* ---------------- lesson player ---------------- */
 // The school's own videos, articles and module pages a lesson teaches from (lesson.links / slide.links):
 // {label, url, kind: video | article | module | page, note?}. Module pages open in the student's own Moodle / AET University login.
+// kind "todo" = something the school counts as done (a Moodle module, form or file; an AET University course or quiz):
+// shown first, with a checkbox the student ticks herself (kept on this device under todo:<label>).
 function linksHtml(list) {
-  const KIND = { video: t('Video', '视频'), article: t('Article', '文章'), module: t('School module', '学校模块'), page: t('Page', '网页') };
-  return `<ul class="cls-links">` + list.map(x =>
-    `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a> <span class="tiny muted">${KIND[x.kind] || ''}${x.note ? ' · ' + esc(x.note) : ''}</span></li>`).join('') + `</ul>`;
+  const KIND = { todo: t('TO DO', '要做'), video: t('Video', '视频'), article: t('Article', '文章'), module: t('School module', '学校模块'), page: t('Page', '网页') };
+  const row = x => x.kind === 'todo'
+    ? `<li class="cls-todo"><label><input type="checkbox" data-todo="${esc(x.label)}" ${store.get('todo:' + x.label, false) ? 'checked' : ''}/> <b>${KIND.todo}</b> <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a></label> <span class="tiny muted">${x.note ? esc(x.note) : ''}</span></li>`
+    : `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a> <span class="tiny muted">${KIND[x.kind] || ''}${x.note ? ' · ' + esc(x.note) : ''}</span></li>`;
+  const todos = list.filter(x => x.kind === 'todo'), rest = list.filter(x => x.kind !== 'todo');
+  return (todos.length ? `<p class="tiny muted" style="margin:6px 0 0">${t('The school records these — tick them off as you finish them there.', '学校会记录这些完成情况——在那边做完就在这里打勾。')}</p>` : '') +
+    `<ul class="cls-links">` + todos.map(row).join('') + rest.map(row).join('') + `</ul>`;
+}
+function wireTodos(el) {
+  el.querySelectorAll('input[data-todo]').forEach(c => c.onchange = () => store.set('todo:' + c.dataset.todo, c.checked));
 }
 
 async function drawLesson(el, L, autoStart) {
@@ -428,6 +437,7 @@ async function drawLesson(el, L, autoStart) {
     <audio id="clsAudio" preload="auto"></audio>`;
 
   const $ = id => el.querySelector('#' + id);
+  wireTodos(el);
   const audio = $('clsAudio');
   const setPlaying = p => { playing = p; $('clsPlay').textContent = p ? '❚❚' : '▶'; $('clsPlay').setAttribute('aria-label', p ? 'Pause' : 'Play'); };
   const speedLabel = () => SPEEDS[speedIx].toFixed(2).replace(/0$/, '') + '×';
@@ -453,6 +463,7 @@ async function drawLesson(el, L, autoStart) {
       st.innerHTML = head + `<h2>${esc(s.title)}</h2><div class="cls-body">${s.body}</div>` +   // our own lesson HTML, decrypted
         (s.bodyZh ? `<div class="cls-body-zh">${esc(s.bodyZh)}</div>` : '') +                   // the slide's Chinese summary line
         (s.links && s.links.length ? linksHtml(s.links) : '');
+      wireTodos(st);
     }
     const [en, zh] = texts(); $('clsTx').textContent = en; $('clsZh').textContent = zh;
     const pg = $('clsProg'); pg.innerHTML = '';

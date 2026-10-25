@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=41';
-import { sClassroom } from './classroom.js?v=41';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=42';
+import { sClassroom } from './classroom.js?v=42';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
