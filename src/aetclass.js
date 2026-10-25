@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=48';
-import { news2Drill } from './news2drill.js?v=48';
+import { S, save, t, esc, ico } from './app.js?v=49';
+import { news2Drill } from './news2drill.js?v=49';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -69,12 +69,13 @@ async function tryRemembered(v) {
     return true;
   } catch { forgetKey(); return false; }
 }
-// Narration lives in separate Pages repos (same github.io origin; one Pages site is capped at 1 GB):
-// Weekends 1–8 in aet-audio, Weekend 9 onward in aet-audio2 (tools/build_vault.py splits them the same way).
+// Narration lives in separate Pages repos (same github.io origin; one Pages site is capped at 1 GB): Weekends 1–2 in
+// aet-audio, 3–5 in aet-audio3, 6–8 in aet-audio4, 9 onward in aet-audio2 (tools/build_vault.py splits them the same way).
 // '../aet-audio/' resolves to /aet-audio/ on github.io and to a sibling folder on a local server rooted above the repos.
 function audioBases(name) {
   const wk = +((name.match(/^w(\d+)-/) || [])[1] || 0);
-  return [wk >= 9 ? '../aet-audio2/audio/' : '../aet-audio/audio/', BASE + 'audio/'];
+  const repo = wk >= 9 ? 'aet-audio2' : wk >= 6 ? 'aet-audio4' : wk >= 3 ? 'aet-audio3' : 'aet-audio';
+  return ['../' + repo + '/audio/', '../aet-audio/audio/', BASE + 'audio/'];   // the old home stays a fallback
 }
 async function audioURL(rel) {
   if (urls.has(rel)) return urls.get(rel);
