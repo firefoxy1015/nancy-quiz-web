@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=46';
-import { news2Drill } from './news2drill.js?v=46';
+import { S, save, t, esc, ico } from './app.js?v=47';
+import { news2Drill } from './news2drill.js?v=47';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -504,7 +504,9 @@ async function drawLesson(el, L0, autoStart) {
       // s.visual = the slide drawn as an infographic (icons, charts, flows); its [data-at] parts appear as the narration
       // reaches them (fraction of the clip). The plain bullet body stays one tap away ("Text version").
       const vis = s.visual && !store.get('textMode', false);
-      st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` +
+      // s.img: the slide's illustrated diagram (GPT Image, public, under data/aet-class/img); its numbers are explained below it
+      const fig = s.img && s.img.src ? `<figure class="cls-fig"><div class="cls-fig-in"><img src="${BASE + s.img.src}" alt=""></div>${s.img.caption ? `<figcaption>${two(s.img.caption, s.img.captionZh, 1)}</figcaption>` : ''}</figure>` : '';
+      st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` + fig +
         (vis ? `<div class="cls-visual">${s.visual}</div>` : `<div class="cls-body">${s.body}</div>`) +   // our own lesson HTML, decrypted
         (s.bodyZh && !(vis && s.titleZh) ? `<div class="cls-body-zh l-zh">${esc(s.bodyZh)}</div>` : '') +   // story pictures carry their own Chinese                   // the slide's Chinese summary line
         (s.visual ? `<button class="btn ghost tiny cls-vt" id="clsVt">${store.get('textMode', false) ? t('Picture version', '图示版') : t('Text version', '文字版')}</button>` : '') +

@@ -4,7 +4,7 @@
 // The browser derives the key, decrypts and gunzips in memory only.
 // The vault carries the English text plus an English -> Chinese table (DOC.zh),
 // so every view follows the site's EN / 中文 / EN+中 switch.
-import { t, bi, esc, ico } from './app.js?v=46';
+import { t, bi, esc, ico } from './app.js?v=47';
 
 const VAULT = './data/portal/vault.json';
 const KEY_LS = 'bcprepPortalKey';

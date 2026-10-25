@@ -823,3 +823,9 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-tl button.on { background: var(--accent); color: #fff; }
 .cls-meta-r { display: inline-flex; align-items: center; }
 .cls-start-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+
+/* story lessons: the illustrated diagram (GPT Image) on top of a slide */
+.cls-fig { margin: 4px 0 12px; }
+.cls-fig-in { overflow: hidden; border-radius: 14px; aspect-ratio: 3 / 2; background: #fff; border: 1px solid var(--line); }
+.cls-fig img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.cls-fig figcaption { font-size: .9rem; color: var(--ink-2); margin-top: 6px; font-style: italic; }
