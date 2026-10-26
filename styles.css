@@ -207,8 +207,13 @@ h3 { font-size: 1.03rem; }
 @media (max-width: 430px) {
   .topbar { padding: var(--s3) var(--s3); gap: var(--s2); }
   .brand-text { display: none; }
-  .track-switch button { padding: 5px 11px; }
+  .track-switch button { padding: 5px 11px; min-height: 30px; }
   .lang-btn { padding: 7px 9px; }
+}
+/* phones: thinner page and card margins, so text gets the width (24+16px a side left ~280px of a 360px screen) */
+@media (max-width: 480px) {
+  .view-root { padding-left: var(--s3); padding-right: var(--s3); }
+  .card { padding: var(--s4); }
 }
 :root[data-theme="dark"] .icon-sun, :root:not([data-theme="light"]) .icon-sun { display: none; }
 :root[data-theme="light"] .icon-sun { display: block; }
@@ -546,7 +551,7 @@ details.acc.passage .vitals-table th { width: 38%; background: var(--surface); }
 .bottom-nav a.active::before { width: 26px; }
 .bottom-nav .nav-ico { display: inline-flex; }
 .bottom-nav .nav-ico .icon { width: 20px; height: 20px; }
-.bottom-nav .nav-label { font-size: .58rem; text-align: center; line-height: 1.25; letter-spacing: .01em; }
+.bottom-nav .nav-label { font-size: .66rem; text-align: center; line-height: 1.25; letter-spacing: .01em; }
 @media (min-width: 900px) {
   .bottom-nav { position: sticky; top: 66px; bottom: auto; border-top: none; border-bottom: 1px solid var(--line);
     max-width: 860px; margin: 0 auto; width: 100%; border-radius: 0; }
@@ -602,7 +607,12 @@ details.acc.passage .vitals-table th { width: 38%; background: var(--surface); }
 
 /* chapter v2 polish: mobile table wrap + in-page nav */
 @media (max-width: 640px) {
-  .hard-table th { white-space: normal; word-break: break-word; }
+  /* break between words only: the column grows to the longest word instead of splitting "Dexametha-sone" */
+  .hard-table th { white-space: normal; overflow-wrap: break-word; }
+  /* portal medications: name over use, full width (two columns left the name ~90px wide) */
+  .meds-table, .meds-table tbody, .meds-table tr, .meds-table th, .meds-table td { display: block; }
+  .meds-table th { width: auto !important; border-bottom: 0; }
+  .meds-table tr + tr th { margin-top: 6px; }
 }
 .sec-toc { display: flex; flex-wrap: wrap; gap: 6px; margin: var(--s2) 0; }
 .sec-toc a { font-size: .76rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: var(--radius-pill); color: var(--ink-2); text-decoration: none; background: var(--surface-2); }
@@ -652,11 +662,13 @@ details.acc.passage .vitals-table th { width: 38%; background: var(--surface); }
 .cls-kicker { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
 .cls-start h2 { margin: 6px 0 10px; }
 .cls-start ul { margin: 0 0 var(--s4); padding-left: 20px; }
-.cls-progress { display: flex; gap: 3px; margin-bottom: var(--s3); }
-.cls-progress button { flex: 1; height: 8px; border: 0; border-radius: 4px; background: var(--line-strong); padding: 0; cursor: pointer; }
-.cls-progress button.done { background: color-mix(in srgb, var(--accent) 55%, var(--line)); }
-.cls-progress button.cur { background: var(--accent); }
-.cls-progress button.q { outline: 2px solid var(--yellow); outline-offset: -2px; }
+/* each slide's bar is 8px, but the button around it is 22px tall so a finger can hit it */
+.cls-progress { display: flex; gap: 3px; margin: -7px 0 calc(var(--s3) - 7px); }
+.cls-progress button { flex: 1; height: 22px; border: 0; background: none; padding: 0; cursor: pointer; position: relative; }
+.cls-progress button::before { content: ''; position: absolute; left: 0; right: 0; top: 7px; height: 8px; border-radius: 4px; background: var(--line-strong); }
+.cls-progress button.done::before { background: color-mix(in srgb, var(--accent) 55%, var(--line)); }
+.cls-progress button.cur::before { background: var(--accent); }
+.cls-progress button.q::before { outline: 2px solid var(--yellow); outline-offset: -2px; }
 .cls-stage { min-height: 340px; font-size: 1.06rem; line-height: 1.55; }
 .cls-stage h2 { font-size: 1.45rem; line-height: 1.25; margin: 4px 0 12px; text-wrap: balance; }
 .cls-meta { display: flex; justify-content: space-between; font-size: .76rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
@@ -721,7 +733,12 @@ details.cls-panel > summary { cursor: pointer; font-size: .72rem; letter-spacing
 .cls-bar .cls-play { background: var(--accent); color: #fff; width: 54px; height: 54px; font-size: 1.1rem; }
 body.cls-playing .view-root { padding-bottom: 170px; }
 @media (min-width: 900px) { .cls-bar { bottom: 0; padding-bottom: calc(8px + env(safe-area-inset-bottom)); } body.cls-playing .view-root { padding-bottom: 110px; } }
-@media (max-width: 420px) { .cls-body .grid3, .cls-body .vs { grid-template-columns: 1fr; } .cls-stage h2 { font-size: 1.28rem; } }
+@media (max-width: 420px) { .cls-body .grid3, .cls-body .vs { grid-template-columns: 1fr; } .cls-stage h2 { font-size: 1.28rem; }
+  /* a quiz question is a sentence, not a title: smaller, so the options start on the first screen */
+  .cls-stage h2:has(+ .cls-opts) { font-size: 1.1rem; line-height: 1.35; }
+  /* seven controls (PCP classroom) must fit a 320–360px bar */
+  .cls-bar { gap: 2px; padding: 8px 4px; }
+  .cls-bar button { min-width: 38px; padding: 0 6px; font-size: .8rem; } }
 .cls-q { width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; color: var(--ink); background: var(--surface-2);
   border: 1px solid var(--line-strong); border-radius: var(--radius-sm); padding: 10px; resize: vertical; margin-bottom: 8px; }
 .cls-q:focus { outline: none; box-shadow: var(--ring); border-color: var(--accent); }
@@ -821,8 +838,11 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-tl { display: inline-flex; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; vertical-align: middle; margin-left: 8px; }
 .cls-tl button { border: 0; background: transparent; padding: 6px 12px; font-size: .95rem; color: var(--ink-2); cursor: pointer; font-weight: 700; min-width: 40px; }
 .cls-tl button.on { background: var(--accent); color: #fff; }
-.cls-meta-r { display: inline-flex; align-items: center; }
-.cls-start-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cls-meta-r { display: inline-flex; align-items: center; white-space: nowrap; }
+.cls-tl button { white-space: nowrap; }
+@media (max-width: 360px) { .cls-tl { margin-left: 6px; } .cls-tl button { padding: 6px 8px; min-width: 32px; } }
+.cls-start-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.cls-start-top .cls-tl { flex-shrink: 0; margin-left: auto; }   /* a long kicker pushes the switch to its own line, never squeezes it */
 
 /* story lessons: the illustrated diagram (GPT Image) on top of a slide */
 .cls-fig { margin: 4px 0 12px; }

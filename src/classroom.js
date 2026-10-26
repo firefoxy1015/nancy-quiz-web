@@ -1,6 +1,6 @@
 // PCP Classroom — spoken English lessons (slides + narration + quick questions), under Study.
 // Lessons and audio are built in D:\Claude\textbook-study-pdf (classroom/) and synced to data/classroom/.
-import { S, save, t, esc, ico } from './app.js?v=49';
+import { S, save, t, esc, ico } from './app.js?v=50';
 
 const BASE = './data/classroom/';
 // lessons go live in batches: always revalidate the index and lesson files (cheap ETag check) so new lessons show up at once
@@ -81,7 +81,7 @@ async function drawLesson(el, meta, course) {
     <section class="card cls-start" id="clsStart">
       <div class="cls-kicker">${esc(L.book)}</div>
       <h2>${esc(L.title)}</h2>
-      <ul class="muted"><li>Spoken lesson, about ${L.minutes} minutes, ${L.slides.length} slides</li><li>${quizzes} quick questions along the way</li><li>${t('Stuck? Turn on Subtitles or 中文.', '听不懂可以开字幕或「中文」。')}</li></ul>
+      <ul class="muted"><li>Spoken lesson, about ${L.minutes} minutes, ${L.slides.length} slides</li><li>${quizzes} quick questions along the way</li><li>${t('Stuck? Turn on 字幕 (subtitles) or 中文.', '听不懂可以开字幕或「中文」。')}</li></ul>
       <div class="btn-row"><button class="btn" id="clsGo">Start class</button>
         ${store.get(L.id + ':pos', 0) > 0 ? `<button class="btn ghost" id="clsResume">Continue where I left off</button>` : ''}</div>
     </section>
@@ -98,7 +98,7 @@ async function drawLesson(el, meta, course) {
     <nav class="cls-bar hidden" id="clsBar">
       <button id="clsPrev" aria-label="Previous slide">‹‹</button>
       <button id="clsSpeed" aria-label="Speed"></button>
-      <button id="clsSubBtn" aria-pressed="false">Subtitles</button>
+      <button id="clsSubBtn" aria-pressed="false" aria-label="Subtitles">字幕</button>
       <button id="clsPlay" class="cls-play" aria-label="Play">▶</button>
       <button id="clsZhBtn" aria-pressed="false">中文</button>
       <button id="clsAskBtn" aria-pressed="false">Ask</button>

@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=49';
-import { news2Drill } from './news2drill.js?v=49';
+import { S, save, t, esc, ico } from './app.js?v=50';
+import { news2Drill } from './news2drill.js?v=50';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -565,14 +565,15 @@ async function drawLesson(el, L0, autoStart) {
     if (auto) play(srcFor(L.slides[i])); else setPlaying(false);
     const n = L.slides[i + 1]; if (n) audioURL(n.audio || n.audioQ).catch(() => {});   // decrypt the next clip early
   }
-  // reveal the visual's parts in step with the narration; anything still hidden when the clip ends or is paused shows
-  function revealAll() { $('clsStage').querySelectorAll('.v-off').forEach(e => e.classList.remove('v-off')); }
+  // reveal the visual's parts in step with the narration; anything still hidden when the clip ends or is paused shows.
+  // Leaving the lesson detaches the audio, and the browser then pauses it (pause/timeupdate fire with the stage gone).
+  function revealAll() { if (audio.isConnected) $('clsStage').querySelectorAll('.v-off').forEach(e => e.classList.remove('v-off')); }
   audio.addEventListener('play', () => {
-    if (L.slides[i].kind === 'quiz' || audio.currentTime > 0.5) return;
+    if (!audio.isConnected || L.slides[i].kind === 'quiz' || audio.currentTime > 0.5) return;
     $('clsStage').querySelectorAll('.cls-visual [data-at]').forEach(e => { if (+e.dataset.at > 0.02) e.classList.add('v-off'); });
   });
   audio.addEventListener('timeupdate', () => {
-    if (!audio.duration || L.slides[i].kind === 'quiz') return;
+    if (!audio.isConnected || !audio.duration || L.slides[i].kind === 'quiz') return;
     const f = audio.currentTime / audio.duration;
     $('clsStage').querySelectorAll('.v-off').forEach(e => { if (+e.dataset.at <= f + 0.01) e.classList.remove('v-off'); });
   });

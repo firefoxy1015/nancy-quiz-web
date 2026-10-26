@@ -4,7 +4,7 @@
 // The browser derives the key, decrypts and gunzips in memory only.
 // The vault carries the English text plus an English -> Chinese table (DOC.zh),
 // so every view follows the site's EN / 中文 / EN+中 switch.
-import { t, bi, esc, ico } from './app.js?v=49';
+import { t, bi, esc, ico } from './app.js?v=50';
 
 const VAULT = './data/portal/vault.json';
 const KEY_LS = 'bcprepPortalKey';
@@ -222,7 +222,7 @@ function viewMeds(el) {
         <h3 style="margin:16px 0 6px">${L(ph.phase, 'span')}</h3>
         ${ph.groups.map(g => `
           ${g.deadline ? `<div class="tiny" style="margin:8px 0 4px"><b>${t('Deadline', '截止')}</b>${L(g.deadline)}</div>` : ''}
-          <table class="hard-table" style="margin-bottom:6px">${g.drugs.map(d => `
+          <table class="hard-table meds-table" style="margin-bottom:6px">${g.drugs.map(d => `
             <tr><th style="white-space:normal;width:38%">${L(d.name)}${SCHOOL_ONLY.test(d.name) ? only : ''}</th>
             <td>${L(d.use)}</td></tr>`).join('')}</table>`).join('')}`).join('')}
     </div>`);
