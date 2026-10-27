@@ -1,6 +1,6 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=50';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=51';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -150,10 +150,11 @@ export async function renderScenarioList(el, arg, params) {
 /* ---------------- player ---------------- */
 let run = null;
 function persistRun() { S.scenarioRun = run ? { ...run } : null; save(); }
-export async function renderScenarioPlayer(el, id) {
+export async function renderScenarioPlayer(el, id, params = {}) {
   const data = await loadScenarios();
   const sc = data && data.scenarios.find(s => s.id === id);
   if (!sc) { el.innerHTML = `<div class="card">Scenario not found</div>`; return; }
+  if (params.sheet) { drawSheet(el, sc); return; }
   const phases = sc.phases.filter(p => !(p.id === 'fe' && S.track === 'emr'));
   if (!run || run.id !== id) {
     // resume a saved run after a refresh; otherwise start fresh
@@ -184,7 +185,10 @@ function drawPhase(el, sc, phases) {
                       '模考规则：40 分钟一到自动收卷，所有没勾的项目按漏做扣分——和真实考试一样。')
                  : bi('When you press start, the 40-minute exam clock begins. Work each phase as if the examiner is watching: do it, say it, then open the self-check list and be honest.',
                       '按下开始后 40 分钟考试计时启动。把每一幕当考官在场：先做、边做边口述，然后打开该幕的自评清单，诚实勾选。')}
-        <div class="btn-row"><button class="btn big" id="startRun">▶ ${t('Start scenario', '开始场景')}</button></div>`
+        <div class="btn-row"><button class="btn big" id="startRun">▶ ${t('Start scenario', '开始场景')}</button>
+          ${inMock ? '' : `<a class="btn ghost" href="#/scenario/${sc.id}?sheet=1">${ico('list')} ${t('Examiner\'s copy — full scenario sheet', '考官版——完整场景单')}</a>`}</div>
+        ${inMock ? '' : `<p class="tiny muted">${t('The examiner\'s copy holds every finding: use it to play examiner for a classmate, or to review afterwards. Reading it first spoils the scenario.',
+          '考官版里有全部发现：给同学当考官时用，或做完后复盘。先看会剧透。')}</p>`}`
       : `
         <div class="timer-bar">
           <span>⏱ <b id="mainClock">40:00</b></span>
@@ -196,8 +200,7 @@ function drawPhase(el, sc, phases) {
         <div class="phase-track">${phases.map((ph, i) =>
           `<span class="ph ${i < run.phaseIdx ? 'done' : i === run.phaseIdx ? 'now' : ''}">${phaseName(ph.id)}</span>`).join('')}</div>
         <h3 style="margin-top:0">${phaseName(p.id)}</h3>
-        ${p.infoEn ? `<div class="sc-info"><div class="sc-label">${t('Examiner info', '考官信息')}</div>${bi(p.infoEn, p.infoZh)}</div>` : ''}
-        ${p.id === 'vitals' || p.id === 'ongoing' ? vitalsTable(sc, p.id === 'ongoing' ? 1 : 0) : ''}
+        ${phaseInfo(sc, p)}
         ${p.id === 'transport' ? rtcChooser() : ''}
         <details class="acc" id="selfCheck">
           <summary>${ico('target')} ${t('Done it out loud? Open the self-check', '这幕做完口述完了？打开自评清单')}</summary>
@@ -252,6 +255,118 @@ function vitalsTable(sc, setIdx) {
   return `<details class="acc"><summary>${ico('cross')} ${t(`Vitals set ${v.set} (ask, then reveal)`, `第 ${v.set} 套生命体征（先测再看）`)}</summary>
     <div class="acc-body"><table class="vitals-table">${rows.map(r => `<tr><th>${r[0]}</th><td>${esc(r[1])}</td></tr>`).join('')}</table>
     <p class="tiny">${esc(v.timeHint || '')}</p></div></details>`;
+}
+/* ---------------- scenario sheet ----------------
+   The examiner information laid out like the school's scenario sheets: one labelled section per stage,
+   label | value rows, and the vitals as one row per set. sc.sheet is re-laid-out from the phase prose
+   (nothing added); a scenario without one falls back to the prose. */
+const SHEET = {
+  dispatch: ['Dispatch', '派遣'], scene: ['Scene Assessment', '现场评估'], initial: ['Initial Assessment', '初级评估'],
+  history: ['Focused History', '重点病史'], vitals: ['Vital Signs · Ongoing Assessments', '生命体征 · 持续复评'],
+  systems: ['Functional Enquiry (PCP)', '系统问诊（PCP）'], exam: ['Physical Examination', '体格检查'],
+};
+const ROW = {
+  ppe: ['Routine precautions / PPE', '常规防护 / PPE'], safety: ['Scene safety', '现场安全'], moi: ['MOI / NOI', '受伤机制 / 病因'],
+  patients: ['Number of patients', '患者人数'], resources: ['Additional resources', '额外资源'], cspine: ['C-spine consideration', '颈椎考虑'],
+  bystanders: ['Bystanders / family', '旁观者 / 家属'],
+  visual: ['Approach / visual assessment', '接近 / 目视评估'], mental: ['Mental status', '意识状态'], airway: ['Airway', '气道'],
+  breathing: ['Breathing', '呼吸'], circulation: ['Circulation', '循环'], skin: ['Skin', '皮肤'], spo2: ['SpO₂', 'SpO₂'],
+  rapid: ['Rapid body survey', '快速全身检查'],
+  cc: ['Chief complaint', '主诉'], ss: ['Signs & symptoms', '症状与体征'], o: ['Onset', 'O 发作'], p: ['Provocation / palliation', 'P 诱因 / 缓解'],
+  q: ['Quality', 'Q 性质'], r1: ['Region / radiation', 'R 部位 / 放射'], r2: ['Relief', 'R 缓解'], r3: ['Recurrence', 'R 复发'],
+  s: ['Severity', 'S 严重程度'], t: ['Time', 'T 时间'], assoc: ['Associated symptoms', '伴随症状'], allergies: ['Allergies', '过敏'],
+  meds: ['Medications', '用药'], pmh: ['Past medical history', '既往史'], loi: ['Last oral intake', '末次进食'], events: ['Events leading up', '事发经过'],
+  general: ['General', '一般情况'], cns: ['Neuro (CNS)', '神经'], resp: ['Resp', '呼吸系统'], cvs: ['CVS', '心血管'], gi: ['GI', '消化'],
+  gu: ['GU', '泌尿生殖'], gigu: ['GI / GU', '消化 / 泌尿'], integ: ['Integ', '皮肤'], msk: ['MSK', '肌肉骨骼'], endo: ['Endocrine', '内分泌'],
+  immune: ['Immune', '免疫'], eent: ['EENT', '五官'],
+  head: ['Head / face', '头面部'], neck: ['Neck', '颈部'], headneck: ['Head / neck', '头颈部'], chest: ['Chest / lungs', '胸部 / 肺'],
+  abdomen: ['Abdomen', '腹部'], pelvis: ['Pelvis', '骨盆'], back: ['Back', '背部'], upper: ['Upper extremities', '上肢'],
+  lower: ['Lower extremities', '下肢'], neuro: ['Nervous system', '神经系统'],
+};
+const PHASE_SECTION = { dispatch: 'dispatch', scene: 'scene', primary: 'initial', history: 'history', fe: 'systems', exam: 'exam' };
+function rowLabel(sec, r) {
+  if (r.k === 'other') return t(r.labelEn || 'Other', r.labelZh || '其他');
+  const L = sec === 'exam' && r.k === 'cvs' ? ['Cardiovascular system', '心血管系统'] : ROW[r.k] || [r.k, r.k];
+  return t(L[0], L[1]);
+}
+const shHead = (en, zh) => `<div class="sh-head">${t(en, zh)}</div>`;
+function sheetSection(sc, name, full = false) {
+  const s = sc.sheet[name];
+  const rows = s.rows || [];
+  return `<section class="sh-sec">
+    ${full ? shHead(SHEET[name][0], SHEET[name][1]) : ''}
+    ${full && name === 'dispatch' ? `<div class="sh-narr">${bi(sc.dispatchEn, sc.dispatchZh)}</div>` : ''}
+    ${s.narrativeEn ? `<div class="sh-narr">${bi(s.narrativeEn, s.narrativeZh)}</div>` : ''}
+    ${rows.length ? `<dl class="sh-rows${name === 'exam' ? ' sh-two' : ''}">${rows.map(r => `<dt>${rowLabel(name, r)}</dt><dd>${bi(r.en, r.zh)}</dd>`).join('')}</dl>` : ''}
+    ${s.noteEn ? `<div class="sh-note"><b>${t('Examiner', '考官')}</b>${bi(s.noteEn, s.noteZh)}</div>` : ''}
+  </section>`;
+}
+const VCOLS = [['pulse', 'Pulse', '脉搏'], ['skin', 'Skin', '皮肤'], ['resp', 'Resp', '呼吸'], ['bp', 'BP', '血压'], ['spo2', 'SpO₂', 'SpO₂'],
+  ['gcs', 'GCS', 'GCS'], ['pupils', 'Pupils', '瞳孔'], ['bgl', 'BGL', '血糖'], ['temp', 'Temp', '体温']];
+function vitalsGrid(sc, upto) {
+  const sets = (sc.vitalsSets || []).slice(0, upto);
+  if (!sets.length) return '';
+  const extra = (sc.sheet && sc.sheet.vitals && sc.sheet.vitals.sets) || [];
+  const ex = n => extra.find(x => x.set === n) || {};
+  const cols = VCOLS.filter(c => sets.some(v => v[c[0]]));
+  const pain = sets.some(v => ex(v.set).pain);
+  const ord = n => t(n + (['st', 'nd', 'rd'][n - 1] || 'th'), `第 ${n} 套`);
+  return `<div class="sh-scroll"><table class="sh-vitals">
+    <tr><th>${t('Set', '组')}</th>${cols.map(c => `<th>${t(c[1], c[2])}</th>`).join('')}${pain ? `<th>${t('Pain', '疼痛')}</th>` : ''}<th>${t('When / interventions', '时机 / 处置')}</th></tr>
+    ${sets.map(v => { const x = ex(v.set); return `<tr><th>${ord(v.set)}</th>${cols.map(c => `<td>${esc(v[c[0]] || '—')}</td>`).join('')}
+      ${pain ? `<td>${esc(x.pain || '—')}</td>` : ''}<td class="sh-when">${x.rxEn ? bi(x.rxEn, x.rxZh) : esc(v.timeHint || '')}</td></tr>`; }).join('')}
+  </table></div>`;
+}
+function vitalsBlock(sc, upto) {
+  const note = sc.sheet && sc.sheet.vitals;
+  return `${vitalsGrid(sc, upto)}${note && note.noteEn ? `<div class="sh-note"><b>${t('Examiner', '考官')}</b>${bi(note.noteEn, note.noteZh)}</div>` : ''}`;
+}
+// what the player shows for one phase: the sheet section if there is one, otherwise the original prose
+function phaseInfo(sc, p) {
+  const sec = PHASE_SECTION[p.id];
+  if (sc.sheet && sec && sc.sheet[sec]) return sheetSection(sc, sec);
+  if (sc.sheet && sc.sheet.vitals && (p.id === 'vitals' || p.id === 'ongoing')) {
+    const upto = p.id === 'vitals' ? 1 : (sc.vitalsSets || []).length;
+    return `<details class="acc"><summary>${ico('cross')} ${p.id === 'vitals' ? t('Vital signs, set 1 (measure, then reveal)', '第 1 套生命体征（先测再看）')
+      : t('All vital sign sets (measure, then reveal)', '全部生命体征（先测再看）')}</summary>
+      <div class="acc-body">${vitalsBlock(sc, upto)}</div></details>`;
+  }
+  return `${p.infoEn ? `<div class="sc-info"><div class="sc-label">${t('Examiner info', '考官信息')}</div>${bi(p.infoEn, p.infoZh)}</div>` : ''}
+    ${p.id === 'vitals' || p.id === 'ongoing' ? vitalsTable(sc, p.id === 'ongoing' ? 1 : 0) : ''}`;
+}
+// the whole scenario on one page, in sheet order — the examiner's copy (printable)
+function drawSheet(el, sc) {
+  const ph = id => sc.phases.find(p => p.id === id);
+  const prose = (en, zh, id) => { const p = ph(id); return p && p.infoEn ? `<section class="sh-sec">${shHead(en, zh)}${bi(p.infoEn, p.infoZh)}</section>` : ''; };
+  const sec = (name, phaseId, en, zh) => sc.sheet && sc.sheet[name] ? sheetSection(sc, name, true) : prose(en, zh, phaseId);
+  const variant = [[sc.emrVariantEn, sc.emrVariantZh, 'EMR'], [sc.pcpVariantEn, sc.pcpVariantZh, 'PCP']].filter(v => v[0]);
+  el.innerHTML = `
+    <a class="back-link" href="#/scenario/${sc.id}">← ${t('Back to the scenario', '返回场景')}</a>
+    <div class="card sh-sheet">
+      <div class="q-meta">
+        <h2 style="font-size:1.05rem">${bi(sc.titleEn, sc.titleZh, 'span')}</h2>
+        <span style="display:flex;gap:6px"><span class="pill ${sc.type}">${sc.type}</span><span class="pill gray">${sc.priority === 'rtc' ? 'RTC' : 'NON-RTC'}</span></span>
+      </div>
+      <p class="tiny muted no-print">${t('Examiner\'s copy. Give each finding only when the candidate assesses or asks for it.', '考官版。考生评估到、问到了才给对应的发现。')}
+        <button class="btn ghost" id="printSheet" style="margin-left:8px">${t('Print', '打印')}</button></p>
+      ${sc.sheet && sc.sheet.dispatch ? sheetSection(sc, 'dispatch', true)
+        : `<section class="sh-sec">${shHead('Dispatch', '派遣')}${bi(sc.dispatchEn, sc.dispatchZh)}${ph('dispatch') && ph('dispatch').infoEn ? bi(ph('dispatch').infoEn, ph('dispatch').infoZh) : ''}</section>`}
+      ${sec('scene', 'scene', 'Scene Assessment', '现场评估')}
+      ${sec('initial', 'primary', 'Initial Assessment', '初级评估')}
+      ${prose('Transport Decision', '转运决策', 'transport')}
+      ${sec('history', 'history', 'Focused History', '重点病史')}
+      <section class="sh-sec">${shHead(SHEET.vitals[0], SHEET.vitals[1])}
+        ${sc.sheet && sc.sheet.vitals ? vitalsBlock(sc, (sc.vitalsSets || []).length)
+          : `${vitalsGrid(sc, (sc.vitalsSets || []).length)}${['vitals', 'ongoing'].map(id => ph(id) && ph(id).infoEn ? `<div class="sh-note">${bi(ph(id).infoEn, ph(id).infoZh)}</div>` : '').join('')}`}
+      </section>
+      ${ph('fe') ? sec('systems', 'fe', 'Functional Enquiry (PCP)', '系统问诊（PCP）') : ''}
+      ${sec('exam', 'exam', 'Physical Examination', '体格检查')}
+      ${prose('Expected Care · Skills · Drugs', '应做处置 · 技能 · 给药', 'interventions')}
+      ${variant.map(v => `<section class="sh-sec">${shHead(v[2] + ' level', v[2] + ' 等级')}${bi(v[0], v[1])}</section>`).join('')}
+      ${prose('Notification · Hand-off · PCR', '通报 · 交接 · PCR', 'handoff')}
+      ${sc.handoffModelEn ? `<section class="sh-sec">${shHead('Model hand-off', '交接范例')}${bi(sc.handoffModelEn, sc.handoffModelZh)}</section>` : ''}
+    </div>`;
+  el.querySelector('#printSheet').onclick = () => window.print();
 }
 function scorePhase(sc, p) {
   (p.expected || []).forEach((ex, i) => {
@@ -397,6 +512,7 @@ function drawScenarioResult(el, sc) {
     <div class="btn-row">
       ${mockNextId || mockDone ? '' : `<button class="btn" id="againBtn">${ico('clock')} ${t('Run again', '再来一遍')}</button>
       <a class="btn ghost" href="#/scenarios">${t('Another scenario', '换个场景')}</a>`}
+      <a class="btn ghost" href="#/scenario/${sc.id}?sheet=1">${ico('list')} ${t('Full scenario sheet', '完整场景单')}</a>
     </div>`;
   const nextBtn = el.querySelector('#nextMock');
   if (nextBtn) nextBtn.onclick = () => { run = null; S.scenarioRun = null; save(); nav('/scenario/' + mockNextId); };

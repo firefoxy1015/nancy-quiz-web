@@ -459,6 +459,27 @@ h3 { font-size: 1.03rem; }
 .vitals-table th, .vitals-table td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; }
 .vitals-table th { background: var(--surface-2); font-weight: 600; color: var(--ink-2); white-space: nowrap; }
 .vitals-table td { font-variant-numeric: tabular-nums; }
+/* scenario sheet — the school's layout: a banded heading per section, label | value rows, vitals one row per set */
+.sh-sec { margin: 0 0 var(--s4); }
+.sh-head { background: var(--yellow-soft); border-left: 4px solid var(--yellow); color: var(--ink); font-weight: 700;
+  font-size: .76rem; letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; border-radius: 4px; margin-bottom: var(--s2); }
+.sh-narr { margin: 0 0 var(--s2); }
+.sh-rows { display: grid; grid-template-columns: minmax(92px, 32%) 1fr; gap: 7px 14px; margin: 0; }
+.sh-rows dt { font-weight: 600; font-size: .85rem; color: var(--ink-2); }
+.sh-rows dd { margin: 0; font-size: .9rem; min-width: 0; }
+@media (min-width: 760px) { .sh-two { grid-template-columns: minmax(110px, 15%) 1fr minmax(110px, 15%) 1fr; } }
+.sh-note { margin-top: var(--s2); font-size: .8rem; color: var(--ink-2); background: var(--surface-2); border-radius: 4px; padding: 6px 10px; }
+.sh-note > b { display: block; color: var(--yellow); text-transform: uppercase; font-size: .66rem; letter-spacing: .08em; margin-bottom: 2px; }
+.sh-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: var(--s2) 0; }
+.sh-vitals { border-collapse: collapse; font-size: .82rem; width: 100%; min-width: 600px; font-variant-numeric: tabular-nums; }
+.sh-vitals th, .sh-vitals td { border: 1px solid var(--line-strong, var(--line)); padding: 6px 8px; text-align: center; vertical-align: middle; }
+.sh-vitals th { background: var(--surface-2); font-weight: 600; white-space: nowrap; }
+.sh-vitals td.sh-when { text-align: left; min-width: 140px; }
+@media print {
+  .topbar, header, nav, .bottom-nav, .no-print, .back-link, footer { display: none !important; }
+  .sh-sheet { border: none; box-shadow: none; }
+  .sh-sec { break-inside: avoid; }
+}
 textarea.pcr-box {
   width: 100%; min-height: 150px; border: 1px solid var(--line); border-radius: var(--radius-sm);
   padding: var(--s3) var(--s4); font: inherit; font-size: .93rem; resize: vertical;
