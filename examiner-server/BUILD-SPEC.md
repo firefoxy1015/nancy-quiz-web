@@ -35,7 +35,7 @@
 | EMALB《Practical Examination Grading Criteria》2025-03 | `data/practical/rubric.json`（58 个评分项、三档权重、官方错误原句 EN/ZH、autoFails、附录 A 止痛规则、计时规则） | **引擎扣分的唯一依据**；所有 `errorEn` 必须是这里的原句 |
 | 原文 txt | `D:\Claude\bcexam-sources\grading-criteria.txt`（39 页） | 查考官行为规范原文 |
 | BC《Provincial Examination Guidelines》2026-06-15 | `D:\Claude\bcexam-sources\bc-exam-guidelines.txt`（94 页） | 协议/药物/技能标准；剧本数字回溯的语料 |
-| 场景库 | `data/practical/scenarios.json`（16 通用）+ `emr-*.json`（20 EMR 专属）= 36 场 | 剧本的源材料（派遣、11 幕考官脚本、期望动作+权重、两套体征、交接范本、PCR 要点） |
+| 场景库 | `data/practical/scenarios.json`（16 通用）+ `emr-*.json`（20 EMR 专属）+ `scenarios-2.json`（10 通用，2026-10-27）= 46 场 | 剧本的源材料（派遣、11 幕考官脚本、期望动作+权重、两套体征、交接范本、PCR 要点） |
 | 产品计划书 | `EXAMINER-BOT-PLAN.md` | 背景、考试流程、通道实测 |
 
 考试流程要点：1 内科 + 1 创伤，各 40 分钟硬停；RTC 15 分钟内打包（"on the cot with straps secured"）、非 RTC 30 分钟；场后 5 分钟 PCR；100% 起扣、70% 及格；考官只评不教。
@@ -205,7 +205,9 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
   地址 `https://bcprep-examiner.onrender.com`（与 `src/examiner.js` 的 API 常量一致）。推到 main 会自动同步重新部署。
 - 密钥只在 Render Dashboard 的环境变量里：`CCVIBE_API_KEY`（主，…4ec8，与星轨共用）+ `CCVIBE_BACKUP_KEY`（备，…1eee）。
   主 key 报日额度用完会自动切备 key 30 分钟。**绝不写进 yaml / 代码 / git。**
-- 自查：`GET /health` 应返回 `channels: ["cc-vibe","cc-vibe-backup"]` 和 36 个剧本；每台设备每天 4 场（`EXAMINER_DAILY_CAP`）。
+- 自查：`GET /health` 应返回 `channels: ["cc-vibe","cc-vibe-backup"]` 和 46 个剧本；每台设备每天 4 场（`EXAMINER_DAILY_CAP`）。
+- `e2e_synthetic.py` 2026-10-27 改了两处合成考生的说法：已经用「干净给药句」给过的药，不再照念含该药的期望动作原文（两句相隔 >150 s 会被算成第二剂，触发 max_count 规则）；期望动作里写「en route」的项目和这类药（静脉补液等，镇痛药除外）放到装车之后说（否则 RTC 15 分钟打包超时）。
+- 本地跑 `e2e_synthetic.py` 时要把这个上限放开（`EXAMINER_DAILY_CAP=1000`），否则测试工具的固定设备号跑 4 局后全部 429。
 
 ---
 
@@ -233,6 +235,7 @@ python examiner-server/tools/build_skeleton.py <id>        # 骨架
 - **两组体征间隔**：评分标准 p.35 把危重 7-8 分钟、稳定 17-18 分钟定为"中度延误"，考纲 p.27 写"vital signs q 5 minutes"。20 场 EMR 专属场景原文把 7-8 / 17-18 当成目标（考生照做会被扣 10%），已改成"5-6 分钟内 / 15 分钟内"（中英文共 86 处）。
 
 ### P2 内容
+- [x] 2026-10-27 第二批 10 场（`scenarios-2.json`，两级别通用：气道异物→骤停、肺水肿/CPAP、呕吐脱水+补液、儿童 commotio cordis、儿童过敏性休克、髋后脱位、腹部内脏外露、连枷胸、脊髓损伤低血压、孕 32 周车祸）：每条期望动作都标了考纲页（`guidelinePages`），剧本由 Sonnet 代理按 AUTHORING.md 写、`verify_sheet.py` 全 PASS，合成考生两级别验收见下方。
 - [x] 36 场剧本全部写完（通用 16 + EMR 专属 20，2026-10-11；EMR 专属 20 场由 7 个 Opus 代理并行写，每代理 2-3 份约 40 万 token / 25-35 分钟）。
 - [x] 考试日模考（1 内科 + 1 创伤）。
 - [ ] 结果页"和自评模式对比"、错题趋势。

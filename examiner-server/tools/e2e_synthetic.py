@@ -39,12 +39,16 @@ def build(sheet, track):
     """Return (script [(minute, text)], pcr dict)."""
     exp = [e for e in sheet['expected'] if e.get('licence', 'both') in ('both', track)]
     by_phase = {p: [] for p in PHASES}
+    drug_admin_acts = set()
     for e in exp:
         if e['itemId'] in ('notification', 'hand-off-report', 'documentation'):
             continue
         a = e['actionEn'].replace('PCP: ', '').replace('PCP:', '').replace('EMR: ', '').replace('EMR:', '').rstrip('. ')
         tr = (e.get('triggers') or [''])[0]
-        by_phase.setdefault(e['phase'], []).append(f'{a} - {tr}' if tr else a)
+        line = f'{a} - {tr}' if tr else a
+        by_phase.setdefault(e['phase'], []).append(line)
+        if e['itemId'] == 'skill-drug-admin':
+            drug_admin_acts.add(line)
     script, t = [], 0.3
     interval = 5.0 if sheet['priority'] == 'rtc' else 14.0
     last_vitals = [None]
@@ -78,15 +82,21 @@ def build(sheet, track):
             d = specials[evs[0]].get('descriptionEn') or evs[0].replace('-', ' ')
             d = re.sub(r'^(the )?candidate (verbali[sz]es|states|says|confirms|performs|does)?\s*', '', d, flags=re.I)
             good_lines.append('Verbalizing: ' + d.rstrip('. ') + '.')
-    give_lines = []
+    give_lines, give_later = [], []
+    acts_text = ' '.join(e['actionEn'].lower() for e in exp)
     for k in dict.fromkeys(give):
         d = drugs.get(k)
         if d and d.get('licence', 'both') in ('both', track):
             nm = (d.get('namesEn') or [k])[0]
             dose = next((c.strip() for c in re.split(r'[;,(]', re.sub(r'^\s*(PCP|EMR)( only)?\s*:\s*', '', d.get('doseEn', '')))
                          if re.search(r'\d', c)), '')
-            give_lines.append(f"I've asked about allergies, current medications and the contraindications for {nm}, and there are none. "
-                              f"Six rights checked. Giving {nm} {dose} now.")
+            line = (f"I've asked about allergies, current medications and the contraindications for {nm}, and there are none. "
+                    f"Six rights checked. Giving {nm} {dose} now.")
+            # a drug the scenario gives en route (its expected action says so) is given after the load, not on scene
+            names = [n.lower() for n in (d.get('namesEn') or []) + [k]]
+            later = any(('en route' in a or 'enroute' in a) and any(n in a for n in names)
+                        for a in (e['actionEn'].lower() for e in exp)) and k not in ('entonox', 'acetaminophen', 'ibuprofen')
+            (give_later if later else give_lines).append(line)
     for ph in PHASES:
         acts = by_phase.get(ph) or []
         if ph == 'vitals':
@@ -99,13 +109,27 @@ def build(sheet, track):
         if ph == 'interventions':
             for line in give_lines:      # analgesia before any splinting/realignment (Appendix A)
                 say(line)
-            for line in good_lines:      # good acts a present-rule needs (e.g. "chest rise confirmed")
-                say(line)
-            for i in range(0, len(acts), CHUNK):
-                say('. '.join(acts[i:i + CHUNK]) + '.')
+            for line in good_lines:      # good acts a present-rule needs (e.g. "chest rise confirmed") - short lines
+                say(line, 0.3)
+            # a drug already given by its clean clause above is not given again by reading its drug-administration
+            # action text (two dose statements more than 150 s apart would count as a second dose); and an action
+            # the scenario places en route is said after the load, where a real candidate does it
+            given_names = {n.lower() for k in give for n in ((drugs.get(k) or {}).get('namesEn') or []) + [k]}
+            on_scene, en_route = [], []
+            for a in acts:
+                al = a.lower()
+                if a in drug_admin_acts and any(n in al for n in given_names):
+                    continue
+                (en_route if 'en route' in al or 'enroute' in al else on_scene).append(a)
+            for i in range(0, len(on_scene), CHUNK):
+                say('. '.join(on_scene[i:i + CHUNK]) + '.')
             # packaging, with a reassessment after every major move
             for m in sheet.get('majorMoves', []):
                 say(f"{MOVE_WORDS.get(m, 'Major move now: ' + m.replace('-', ' '))}. Reassessing airway, breathing, circulation and all interventions after the move.", 0.7)
+            for line in give_later:
+                say(line)
+            for i in range(0, len(en_route), CHUNK):
+                say('. '.join(en_route[i:i + CHUNK]) + '.')
             say('Repeat vital signs: blood pressure by auscultation, pulse rate strength and rhythm, respirations rate depth and character, SpO2.')
             continue
         for i in range(0, len(acts), CHUNK):

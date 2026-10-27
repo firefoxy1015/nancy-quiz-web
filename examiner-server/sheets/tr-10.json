@@ -1,0 +1,1621 @@
+{
+ "id": "tr-10",
+ "titleEn": "Stab Wound to the Abdomen With Evisceration",
+ "type": "trauma",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios-2.json#tr-10",
+ "patient": {
+  "name": "Marcus Reid",
+  "age": 28,
+  "sex": "male",
+  "weightEn": "about 80 kg",
+  "affectEn": "pale, frightened, groaning and shivering; lying on his back on the floor with his knees drawn up, both hands pressing a blood-soaked bar towel to his left lower abdomen and trying to keep it there; smells of alcohol but is clear-headed and oriented",
+  "speechEn": "awake and alert, speaks in full sentences, wincing; answers only what he is asked ('he stabbed me... I can see my guts')"
+ },
+ "scene": {
+  "settingEn": "The back hallway of a pub in Langley, just after midnight (dispatch 2355). Good lighting. The floor is wet with spilled drink and some broken glass has been swept against the wall. The patient lies on the floor with about 500 mL of blood around him. Two RCMP officers stand at the end of the hallway; the scene is secure, the weapon has been seized and the knife is in an evidence bag, its blade about 10 cm long. One patient. Hospital is 10 minutes away.",
+  "hazardsEn": [
+   "wet floor (spilled drink) and broken glass swept against the wall",
+   "blood on the floor (about 500 mL) - splash exposure",
+   "RCMP on scene: scene secure, the second patient has left with the officers, the weapon is seized"
+  ],
+  "bystanders": [
+   {
+    "who": "bar staff (led you down the hallway)",
+    "knowsEn": "The patient slid down the wall, never lost consciousness, and they laid him on the floor. They have been holding a bar towel on the wound until you came. The second patient left with the officers. They will clear the hallway, hold doors and help with the stretcher or the lift if you tell them exactly what to do."
+   },
+   {
+    "who": "two RCMP officers (end of the hallway)",
+    "knowsEn": "The scene is secure and the weapon has been seized: the knife is in an evidence bag, its blade about 10 cm long. He was stabbed once during a fight. The second patient has left with the officers. They know nothing about his medical history. They will clear the hallway or hold doors if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "moist sterile dressings with sterile saline, dry sterile dressings and an occlusive dressing",
+   "trauma dressings, roller bandages and tape",
+   "trauma shears",
+   "BP cuff and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "blankets",
+   "stretcher (cot) with a scoop stretcher or slide sheet",
+   "Entonox kit, oral acetaminophen and oral ibuprofen",
+   "PCP only: IV start kit and tubing with normal saline",
+   "PCP only: TXA (tranexamic acid)"
+  ]
+ },
+ "dispatchEn": "2355 hrs. Code 3 to a pub in Langley. A fight has left a 28-year-old male stabbed in the abdomen; a second patient has minor injuries. RCMP are on scene. Hospital is 10 minutes away.",
+ "dispatchUpdateEn": "Dispatch update en route: RCMP report the scene is secure. The second patient has left with the officers and the weapon has been seized. Bar staff are holding a towel on the wound.",
+ "arrivalEn": "0004 hrs. Bar staff lead you down the back hallway of the pub. The lighting is good; the floor is wet with spilled drink and some broken glass has been swept against the wall. Two RCMP officers stand at the end of the hallway; the knife is in an evidence bag, its blade about 10 cm long. The scene is secure. Your partner is right behind you with the kits. One patient.",
+ "firstLookEn": "A pale man lying on his back on the floor with his knees drawn up, awake and watching you, groaning and shivering. Both hands press a blood-soaked bar towel to his left lower abdomen. About 500 mL of blood is on the floor around him.",
+ "primary": {
+  "locEn": "Awake and alert (AVPU = A): speaks in full sentences ('he stabbed me... I can see my guts'). He smells of alcohol but is clear-headed and oriented.",
+  "airwayEn": "Clear. He is speaking in full sentences.",
+  "breathingEn": "Rate 24, shallow. No chest wounds, air entry equal.",
+  "circulationEn": "Right radial pulse 124, weak, regular. The towel is soaked and dark blood is oozing from the abdominal wound; no other bleeding.",
+  "rbsEn": "When the abdomen is exposed: ONE 4 cm horizontal wound left of the umbilicus with a loop of small bowel about 10 cm long protruding, pink and glistening, dark blood oozing from the wound edge; abdomen guarded. No other wounds on the chest, flanks, groin, arms or legs; the back is seen only if he is moved. Skin pale, cool, clammy (skin is given automatically during the RBS). If a dry dressing is applied it sticks to the bowel; if the bowel is pushed back in he screams and the bleeding restarts. C-spine not indicated: a single penetrating wound to the abdomen, not struck on the head or neck, no neck pain.",
+  "skinEn": "pale, cool, clammy"
+ },
+ "history": {
+  "ccEn": "I got stabbed in the stomach.",
+  "opqrst": {
+   "oEn": "I was standing at the bar. A guy I didn't know pulled a folding knife and stabbed me once. It was about 2348, I think. Then I slid down the wall and the staff laid me on the floor.",
+   "pEn": "It's worse when I move and when I cough.",
+   "qEn": "Sharp. Burning. It doesn't let up.",
+   "rEn": "It doesn't go anywhere. It's just at the wound.",
+   "sEn": "Eight out of ten.",
+   "tEn": "It was about 2348, about sixteen minutes before you got here. It hasn't let up since."
+  },
+  "painScoreEn": "Eight out of ten at first. Once the second set of vitals is unlocked (about 6 minutes later) he says seven out of ten.",
+  "sample": {
+   "sEn": "My guts are out. I'm lightheaded, cold and thirsty. I haven't thrown up, I have no chest pain, and I can breathe okay.",
+   "aEn": "None that I know of.",
+   "mEn": "Pantoprazole, 40 milligrams every day. I took two acetaminophen, 500 milligrams each, at nine tonight for a headache.",
+   "pEn": "I had a stomach ulcer last year. Nothing else. I weigh about 80 kilos.",
+   "lEn": "A burger and fries around seven, and two beers. The last beer was around ten-thirty.",
+   "eEn": "I was standing at the bar when a guy I didn't know pulled a folding knife and stabbed me once. The blade was about ten centimetres long and two wide - a stab, not a slash. Just the one wound, nothing else, and nobody hit me on the head or neck. I slid down the wall and I never passed out."
+  },
+  "fe": {
+   "generalEn": "I'm cold, shivering and thirsty.",
+   "cnsEn": "I'm lightheaded when I lift my head. No headache.",
+   "respiratoryEn": "No shortness of breath. It hurts at the wound when I take a deep breath.",
+   "cardiovascularEn": "My heart is pounding. No chest pain.",
+   "giGuEn": "Just the wound pain. I haven't thrown up. No blood in my stool or my urine.",
+   "integumentaryEn": "Just the wound. No rash.",
+   "musculoskeletalEn": "No back pain and no pain in my arms or legs.",
+   "endocrineEn": "No, nothing like that. I'm not diabetic.",
+   "eentEn": "No, nothing like that."
+  }
+ },
+ "findings": {
+  "headNeckEn": "No trauma. Trachea midline, neck veins flat.",
+  "chestLungsEn": "Clear, with equal air entry in all 6 sites. No wounds or tenderness.",
+  "abdomenEn": "Dressing intact over the single 4 cm wound left of the umbilicus with the bowel covered, no new bleeding through (if the bowel has not been covered it is still exposed). Abdomen guarded and tender in all quadrants, not distended. Pelvis stable. If the dressing is lifted to look, he screams and the bleeding restarts.",
+  "backEn": "No wounds or tenderness (seen only if he is moved).",
+  "lowerExtremitiesEn": "Circulation, sensation and movement intact; pulses weak but present.",
+  "upperExtremitiesEn": "Radial pulses weak, circulation, sensation and movement intact. IV site clean and flushing freely (PCP, if an IV has been started)."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, en route, before fluids or TXA (required before initiating a protocol)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "88/54",
+   "pulse": {
+    "rate": 124,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "124 weak regular"
+   },
+   "resp": {
+    "rate": 24,
+    "depth": "shallow",
+    "character": "air entry equal",
+    "rawEn": "24 shallow"
+   },
+   "skin": "pale, cool, clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "96% on room air (99% on 15 L NRB)",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "afterEvent": "blood-pressure",
+      "count": 2
+     }
+    ]
+   },
+   "unlockNoteEn": "6 minutes after set 1, en route (PCP: after the first 500 mL of the bolus): improving or holding steady, the bleeding is still internal and transport continues. The scenario gives only the changed values; pulse rhythm and strength, breathing depth and character are carried over from set 1 (the en-route exam finds the pulses still weak)",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "96/60",
+   "pulse": {
+    "rate": 116,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "116"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "shallow",
+    "character": "air entry equal",
+    "rawEn": "22"
+   },
+   "skin": "pale, cool, less clammy",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "99% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "dry-dressing-sticks",
+   "when": {
+    "afterEvent": "dry-dressing-applied"
+   },
+   "examinerLineEn": "The dry dressing sticks to the bowel."
+  },
+  {
+   "id": "bowel-pushed-back-screams",
+   "when": {
+    "afterEvent": "bowel-pushed-back"
+   },
+   "examinerLineEn": "He screams, and the bleeding from the wound restarts."
+  },
+  {
+   "id": "dressing-lifted-screams",
+   "when": {
+    "afterEvent": "dressing-lifted"
+   },
+   "examinerLineEn": "He screams, and the bleeding from the wound restarts."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan oxygen, moist sterile dressings with an occlusive layer, warmth, IV equipment (PCP), minimal-movement lift and early transport",
+   "triggers": [
+    "copy dispatch",
+    "moist sterile dressings",
+    "bring an occlusive dressing",
+    "scoop or slide sheet",
+    "plan to keep him warm",
+    "early transport"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Recognize from dispatch a likely unstable penetrating torso injury (a stabbing to the abdomen); note that a second patient has already left with police",
+   "triggers": [
+    "stab to the abdomen",
+    "penetrating torso",
+    "likely unstable",
+    "second patient has already left",
+    "the other patient is gone",
+    "possible evisceration"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Confirm with dispatch that police have secured the scene and the weapon before approaching",
+   "triggers": [
+    "is the scene secure",
+    "confirm police have the scene",
+    "weapon secured",
+    "police to clear the scene",
+    "stage until the scene is secure",
+    "scene secure before we go in"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate blood exposure: PPE incl eye protection",
+   "triggers": [
+    "blood exposure",
+    "gloves and eye protection",
+    "safety glasses",
+    "full PPE",
+    "splash risk",
+    "goggles and gloves"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (broken glass, wet floor, blood; police have the scene and the weapon), environment, MOI (stabbed once in a fight), one patient; estimate blood loss",
+   "triggers": [
+    "scene is safe",
+    "broken glass",
+    "wet floor",
+    "stabbed once",
+    "one patient",
+    "estimate the blood loss",
+    "about 500 mL of blood"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection (blood splash risk)",
+   "triggers": [
+    "gloves on",
+    "putting on gloves",
+    "donning gloves",
+    "eye protection on",
+    "BSI",
+    "PPE on"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: pale male lying on his back with knees drawn up, awake, blood-soaked towel on the left lower abdomen, blood on the floor",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "he looks pale",
+    "knees drawn up",
+    "blood-soaked towel",
+    "a lot of blood on the floor"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "scene",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Ask police one question about what they know (weapon, number of wounds), then go straight to the patient - no time spent on a scene debrief",
+   "triggers": [
+    "officer, what do you know",
+    "how many times was he stabbed",
+    "what was the weapon",
+    "how long was the blade",
+    "quick question for the police",
+    "ask the RCMP"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert",
+   "triggers": [
+    "AVPU",
+    "level of consciousness",
+    "can you hear me",
+    "is he alert",
+    "what's your name",
+    "do you know where you are"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated: single penetrating wound to the abdomen, not struck on the head or neck, no neck pain (p.25)",
+   "triggers": [
+    "no c-spine concern",
+    "c-spine not indicated",
+    "no spinal precautions needed",
+    "not struck on the head or neck",
+    "no mechanism for spinal injury",
+    "no neck pain so no c-spine"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway",
+   "triggers": [
+    "check the airway",
+    "airway is clear",
+    "airway is patent",
+    "he's talking so the airway is clear",
+    "look in the mouth"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing: rate, depth, chest for wounds, air entry both sides",
+   "triggers": [
+    "check his breathing",
+    "breathing rate and depth",
+    "chest rise",
+    "look listen and feel",
+    "air entry both sides",
+    "count respirations"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation: radial pulse rate and strength; recognize shock; control any external hemorrhage",
+   "triggers": [
+    "radial pulse",
+    "check the pulse on the right",
+    "rate and strength of the pulse",
+    "he's in shock",
+    "any other bleeding",
+    "control the external bleeding"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rapid body survey: expose and find the single 4 cm wound and the protruding bowel, check chest, flanks, groin and limbs for other wounds, then cover the bowel with a moist sterile dressing followed by an occlusive layer - do not push it back or pack the wound (p.32, p.19)",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "expose the abdomen",
+    "cut his shirt off",
+    "check for other wounds",
+    "check the flanks and groin",
+    "head to toe"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: pale, cool, clammy",
+   "triggers": [
+    "check his skin",
+    "skin colour",
+    "skin temperature",
+    "skin condition",
+    "feel his skin"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen 15 L NRB (trauma and shock) to keep SpO2 94% or higher (p.11, p.54)",
+   "triggers": [
+    "high flow oxygen",
+    "apply oxygen",
+    "put him on oxygen",
+    "non-rebreather at 15",
+    "oxygen at 15",
+    "15 litres of oxygen",
+    "15 liters of oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Leave him supine in his position of comfort with the knees drawn up; limit movement; keep him warm with blankets (p.32, p.54)",
+   "triggers": [
+    "leave him supine",
+    "keep his knees up",
+    "position of comfort",
+    "knees bent",
+    "cover him with blankets",
+    "limit his movement",
+    "keep him warm"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC (major penetrating torso trauma, p.7; pale cool clammy skin from shock) and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "he's unstable",
+    "priority patient",
+    "load and go",
+    "code 3 to hospital"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Packaged and ready to load within 15 minutes; secondary survey (history, vitals, head-to-toe) en route, not on scene",
+   "triggers": [
+    "ready to load within 15",
+    "package him",
+    "secondary survey en route",
+    "do the history en route",
+    "no full secondary on scene",
+    "get him on the stretcher"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate bar staff and police effectively (hallway, doors, stretcher, lift)",
+   "triggers": [
+    "clear the hallway",
+    "hold the door",
+    "can you bring the stretcher",
+    "officer, can you help",
+    "bar staff, help us lift",
+    "get the stretcher"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Move him with the least movement possible - one coordinated lift with a scoop or slide sheet, knees kept up, dressing undisturbed (limit patient movement, p.32)",
+   "triggers": [
+    "one coordinated lift",
+    "scoop stretcher",
+    "slide sheet",
+    "lift on three",
+    "keep his knees up for the lift",
+    "minimal movement lift",
+    "one smooth lift"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: stabbed in the abdomen",
+   "triggers": [
+    "what happened",
+    "what's wrong",
+    "what's the problem",
+    "chief complaint",
+    "tell me what happened",
+    "where does it hurt"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C using the stabbing questions (p.13): weapon and blade size, stab or slash, number of wounds, other injuries, initial position and condition, LOC, plus pain features",
+   "triggers": [
+    "how big was the blade",
+    "was it a stab or a slash",
+    "how many wounds",
+    "did you lose consciousness",
+    "any other injuries",
+    "did you pass out",
+    "what kind of weapon"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Time of injury (2348) and weight (about 80 kg) - needed for the TXA window and the bolus calculation",
+   "triggers": [
+    "what time did it happen",
+    "when were you stabbed",
+    "time of injury",
+    "how much do you weigh",
+    "what's your weight",
+    "how long ago did this happen"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain score (8/10)",
+   "triggers": [
+    "pain scale",
+    "zero to ten",
+    "rate your pain",
+    "how bad is the pain",
+    "out of ten",
+    "pain score"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx (stomach ulcer) - a contraindication check for ibuprofen",
+   "triggers": [
+    "medical history",
+    "any medical conditions",
+    "past history",
+    "any ulcers",
+    "any stomach problems",
+    "see a doctor for anything"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications incl pantoprazole and the acetaminophen taken at 2100 (within 4 hours) - contraindication checks for the oral analgesics",
+   "triggers": [
+    "any medications",
+    "taking any meds",
+    "what medications",
+    "taken any Tylenol",
+    "taken anything for pain today",
+    "blood thinners"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies (none known) - also relevant to TXA",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "known allergies",
+    "drug allergies",
+    "allergic to any medications"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI (burger and fries, two beers)",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "last meal",
+    "anything to eat or drink",
+    "LOI",
+    "when did you last drink"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components (15: E4 V5 M6)",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "E4 V5 M6",
+    "GCS 15"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation - recognize SBP 88 (below 90) as a Hypovolemia protocol criterion",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "auscultate a BP",
+    "cuff on",
+    "systolic",
+    "take a BP"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm",
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "pulse quality",
+    "count the pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "breathing rate",
+    "respiratory rate",
+    "rate depth and character",
+    "count respirations"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on: temperature, colour, condition",
+   "triggers": [
+    "skin",
+    "colour temperature condition",
+    "feel the skin",
+    "clammy",
+    "skin signs"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check his pupils",
+    "pupils equal and reactive",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "sats",
+    "calibration"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 1,
+   "licence": "both",
+   "actionEn": "State BGL and temperature are not indicated (alert, not diabetic, cause evident)",
+   "triggers": [
+    "BGL not indicated",
+    "blood glucose is not indicated",
+    "temperature is not indicated",
+    "no glucose needed",
+    "alert and not diabetic so no BGL",
+    "no need for a temperature"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling",
+    "are you cold",
+    "any chills",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any headache",
+    "lightheaded",
+    "dizziness",
+    "numbness or weakness",
+    "neurological enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "shortness of breath",
+    "trouble breathing",
+    "pain when you breathe",
+    "any cough",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "chest pain",
+    "heart pounding",
+    "palpitations",
+    "heart racing",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (pertinent: vomiting, blood in stool or urine)",
+   "triggers": [
+    "any vomiting",
+    "blood in your stool",
+    "blood in your urine",
+    "bowel or bladder",
+    "GI GU enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "any rash",
+    "other wounds",
+    "skin problems",
+    "other cuts",
+    "integumentary enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "back pain",
+    "limb pain",
+    "neck or back pain",
+    "arm or leg pain",
+    "musculoskeletal enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "thyroid",
+    "endocrine enquiry",
+    "are you diabetic",
+    "any sugar problems"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose throat",
+    "vision",
+    "hearing",
+    "EENT",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl neck veins and trachea",
+   "triggers": [
+    "head and neck",
+    "check the neck veins",
+    "trachea midline",
+    "JVD",
+    "look at the neck",
+    "scalp"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation, bilateral comparison",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "listen to his chest",
+    "compare both sides"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam without disturbing the dressing: inspect, check the dressing is intact and not bleeding through, gentle palpation away from the wound; check the pelvis is stable",
+   "triggers": [
+    "check the dressing is intact",
+    "dressing not bleeding through",
+    "gentle palpation away from the wound",
+    "four quadrants",
+    "check the pelvis",
+    "abdominal exam"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam as far as the single controlled movement allowed",
+   "triggers": [
+    "check his back",
+    "back exam",
+    "palpate the spine",
+    "back when we move him",
+    "look at his back"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities: CSM, pulses",
+   "triggers": [
+    "check the legs",
+    "lower extremities",
+    "pedal pulses",
+    "CSM in the legs",
+    "check his feet"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: radial pulses, CSM, IV site (PCP)",
+   "triggers": [
+    "check the arms",
+    "upper extremities",
+    "radial pulses both sides",
+    "CSM in the arms",
+    "check the IV site"
+   ]
+  },
+  {
+   "itemId": "skill-wound-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Wound management skill: moist sterile (saline) dressing over the bowel, an occlusive layer over it, secured without pressure, bowel not pushed back, wound not packed, dressing left undisturbed",
+   "triggers": [
+    "moist sterile dressing",
+    "saline moistened dressing",
+    "saline dressing",
+    "saline gauze",
+    "moist gauze",
+    "moist dressing",
+    "moistened dressing",
+    "moist sterile",
+    "sterile saline",
+    "wet dressing",
+    "cover the bowel",
+    "covering the bowel",
+    "cover the exposed bowel",
+    "covering the exposed bowel",
+    "cover the protruding bowel",
+    "cover the evisceration",
+    "dress the bowel",
+    "dressing over the bowel",
+    "occlusive layer",
+    "occlusive dressing",
+    "secure the dressing without pressure"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Execute the Abdominal Injuries protocol: control external hemorrhage, limit movement, protect against heat loss, moist dressing plus occlusive layer, NEVER place the bowel back, position of comfort, transport (p.32)",
+   "triggers": [
+    "abdominal injuries protocol",
+    "do not push the bowel back",
+    "never put the bowel back in",
+    "not packing the wound",
+    "we don't pack the abdomen",
+    "bowel stays out"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Hypovolemia protocol with the indications stated (blood loss, SBP 88 below 90, signs of shock) and baseline vitals done: supine, warm, oxygen to SpO2 94% or higher, rapid transport (p.54)",
+   "triggers": [
+    "hypovolemia protocol",
+    "starting the hypovolemia protocol",
+    "blood loss with a systolic under 90",
+    "meets the hypovolemia criteria",
+    "signs of shock and a low pressure",
+    "baseline vitals are done so"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Pain management (Appendix A): rule out each drug's contraindications aloud and name the reasons - Entonox withheld (shock, p.65), ibuprofen withheld (ulcer history / possible bowel bleeding, p.68), acetaminophen withheld (taken within the past 4 hours, p.58)",
+   "triggers": [
+    "no Entonox because of shock",
+    "withhold the Entonox",
+    "no ibuprofen because of the ulcer",
+    "no acetaminophen he took some at nine",
+    "acetaminophen within four hours",
+    "analgesics withheld"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "PCP: vascular access en route with aseptic technique and a 20 mL/kg bolus (80 kg = 1,600 mL, max 2 L) reassessed every 500 mL (p.54, p.32, p.38)",
+   "triggers": [
+    "start an IV",
+    "vascular access",
+    "fluid bolus",
+    "20 mL per kilo",
+    "1600 mL",
+    "1,600 mL",
+    "reassess every 500 mL"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: TXA 2 g IV push over the full minute with the 6 rights, after stating the indication and checking the contraindications (injury 2348 - within 3 hours; no hypersensitivity; adult; no isolated TBI); record the time (p.78)",
+   "triggers": [
+    "TXA 2 grams",
+    "tranexamic acid",
+    "TXA over one minute",
+    "push over the full minute",
+    "less than three hours since the injury",
+    "six rights"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 10,
+   "licence": "both",
+   "actionEn": "Reassure him and ask him to stay still and not touch the dressing; keep him warm",
+   "triggers": [
+    "stay still",
+    "don't touch the dressing",
+    "I'm going to take care of you",
+    "try to stay calm",
+    "we're going to the hospital",
+    "keep still for me"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs, IV site (PCP) and warmth after each major move and after every 500 mL (p.10)",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassess after the move",
+    "check the IV site",
+    "recheck the dressing and ABCs",
+    "ABCs again"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Recheck the dressing is moist, in place and not bleeding through - without lifting it to look",
+   "triggers": [
+    "recheck the dressing",
+    "dressing is still moist",
+    "no bleeding through the dressing",
+    "check the dressing without lifting it",
+    "dressing still in place"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full vitals within 5-6 minutes; interpret the trend and the pain score (7/10)",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals are improving",
+    "recheck the blood pressure",
+    "another set of vitals",
+    "trending"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "PCP: reassess BP after each 500 mL of the bolus and continue per the reassessment while transport carries on (p.54)",
+   "triggers": [
+    "recheck the BP after 500",
+    "reassess after each 500",
+    "reassess the bolus",
+    "pressure after the first 500",
+    "BP after the bolus",
+    "check the pressure every 500"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "If the dressing slips or dries, re-cover with a fresh moist sterile dressing and occlusive layer - never push the bowel back (p.32)",
+   "triggers": [
+    "re-cover with a fresh moist dressing",
+    "fresh moist sterile dressing",
+    "if the dressing dries out",
+    "re-moisten the dressing",
+    "add another occlusive layer"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification for a critical patient: stabbing, evisceration, shock, ETA",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "trauma alert",
+    "radio report"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off: mechanism and weapon, time of injury, findings, baseline versus repeat vitals",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 28-year-old",
+    "report to the nurse",
+    "transfer of care",
+    "verbal report"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Treatments and times: dressing, fluids, TXA time; analgesics withheld and why; PMHx, medications incl the 2100 acetaminophen, allergies, LOI",
+   "triggers": [
+    "treatments and times",
+    "TXA given at",
+    "analgesics were withheld",
+    "why the analgesics were withheld",
+    "the fluids",
+    "last acetaminophen at"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes (time of injury, TXA time, bolus volume, pain scores)",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call",
+    "time of injury and TXA time"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "dry-dressing-applied",
+   "descriptionEn": "candidate covers the protruding bowel with a DRY dressing, dry gauze, a towel or a bandage only (no sterile saline moisture)"
+  },
+  {
+   "key": "occlusive-layer-applied",
+   "descriptionEn": "candidate actually puts an occlusive layer (occlusive dressing, plastic wrap or similar) over the moist dressing on the bowel. Saying they would do it later is NOT this event"
+  },
+  {
+   "key": "bowel-pushed-back",
+   "descriptionEn": "candidate pushes, tucks or replaces the protruding bowel back into the abdomen (or tells the partner or a bystander to)"
+  },
+  {
+   "key": "wound-packed",
+   "descriptionEn": "candidate packs the abdominal wound (pushes gauze or a dressing into the wound)"
+  },
+  {
+   "key": "dressing-lifted",
+   "descriptionEn": "candidate lifts, peels back or removes the dressing over the bowel to look at the bowel or wound again after it was applied. Checking the outside of the dressing for bleed-through, adding a fresh moist dressing and occlusive layer over a dressing that slipped or dried, and removing the bar towel to expose the wound at the start are NOT this event"
+  },
+  {
+   "key": "excess-movement",
+   "descriptionEn": "candidate moves him more than necessary: sits him up, stands him up or walks him, rolls him repeatedly, drags him, or lifts him roughly without a coordinated lift and with the knees straightened"
+  },
+  {
+   "key": "txa-too-fast",
+   "descriptionEn": "PCP says they push the TXA faster than over the full 1 minute (for example 'push it over 10 seconds' or 'rapid push')"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the fluid bolus past 500 mL, or hangs the next bag, without reassessing the patient (BP / vitals / ABCs) in between"
+  }
+ ],
+ "keywordEvents": [
+  {
+   "event": "occlusive-layer-applied",
+   "regex": "\\b(occlusive|plastic wrap|cling (wrap|film)|saran|plastic (sheet|film|bag)|foil)\\b",
+   "blockRegex": "\\b(will|i'll|we'll|going to|gonna|plan\\w*|prepar\\w*|would|could|should|may|might|need\\w*|if|ready|unless|grab|get|bring|pass|fetch|hand me)\\b"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "txa",
+   "namesEn": [
+    "TXA",
+    "tranexamic acid",
+    "Cyklokapron"
+   ],
+   "doseEn": "2 g (2000 mg) IV push over the full 1 minute - single dose; PCP only, after the Hypovolemia protocol has started and the baseline vitals are done",
+   "licence": "pcp",
+   "indicationsEn": "major trauma after the Hypovolemia protocol has started; signs of shock with a penetrating abdominal injury and ongoing bleeding; injury at about 2348 so he is well inside the 3-hour window",
+   "contraindicationsEn": "known hypersensitivity or allergy to TXA (none known); more than 3 hours after injury; patient under 12 years; isolated TBI",
+   "cautionsEn": "further hypotension if administered too quickly"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "20 mL/kg IV bolus to a maximum of 2 L: 80 kg = 1,600 mL, reassessing every 500 mL; target systolic BP 90; en route with aseptic technique",
+   "licence": "pcp"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this scenario: shock is a listed caution (p.65). If given, report drug:entonox",
+   "licence": "both"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin"
+   ],
+   "doseEn": "oral - WITHHELD in this scenario: stomach ulcer history and possible bleeding from the injured bowel (p.68 lists active GI hemorrhage or ulcers as a contraindication). If given, report drug:ibuprofen",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol",
+    "Tempra"
+   ],
+   "doseEn": "oral - WITHHELD in this scenario: he took two 500 mg tablets at 2100, within the past 4 hours (p.58). If given, report drug:acetaminophen",
+   "licence": "both"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "bowel-covered",
+   "check": "present",
+   "event": [
+    "skill-wound-mgmt",
+    "occlusive-layer-applied"
+   ],
+   "licence": "both",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Determines life/limb threatening conditions and fails to intervene"
+   }
+  },
+  {
+   "id": "bowel-not-pushed-back",
+   "check": "absent",
+   "event": "bowel-pushed-back",
+   "licence": "both",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Intervenes incorrectly detrimental to patient care"
+   }
+  },
+  {
+   "id": "wound-not-packed",
+   "check": "absent",
+   "event": "wound-packed",
+   "licence": "both",
+   "deduct": {
+    "itemId": "rapid-body-survey",
+    "weight": 100,
+    "errorEn": "Intervenes incorrectly detrimental to patient care"
+   }
+  },
+  {
+   "id": "dressing-not-lifted",
+   "check": "absent",
+   "event": "dressing-lifted",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "dressing-moist-not-dry",
+   "check": "absent",
+   "event": "dry-dressing-applied",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 25,
+    "errorEn": "Does not meet the standards for wound management detrimental to patient care (e.g. does not apply a chest seal to sucking chest wound)"
+   }
+  },
+  {
+   "id": "occlusive-layer-over-dressing",
+   "check": "present",
+   "event": "occlusive-layer-applied",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-wound-mgmt",
+    "weight": 25,
+    "errorEn": "Does not meet the standards for wound management detrimental to patient care (e.g. does not apply a chest seal to sucking chest wound)"
+   }
+  },
+  {
+   "id": "least-movement",
+   "check": "absent",
+   "event": "excess-movement",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "entonox-withheld-in-shock",
+   "check": "absent",
+   "event": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "ibuprofen-withheld-ulcer",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "acetaminophen-withheld-recent-dose",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-given",
+   "check": "present",
+   "event": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "txa-after-baseline",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "saline-after-baseline",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not sufficiently assess the patient to determine appropriate treatment (e.g. only assessing LOC to determine the need for Narcan)"
+   }
+  },
+  {
+   "id": "txa-time-of-injury-known",
+   "check": "ordered",
+   "first": "history-of-cc",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-allergies-known",
+   "check": "ordered",
+   "first": "allergies",
+   "then": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "txa-single-dose",
+   "check": "max_count",
+   "event": "drug:txa",
+   "max": 1,
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "txa-over-one-minute",
+   "check": "absent",
+   "event": "txa-too-fast",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "saline-given",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-txa",
+   "check": "absent",
+   "event": "drug:txa",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "28-year-old male, about 80 kg",
+  "cc": "single stab wound to the left abdomen with small bowel evisceration, in shock",
+  "moi": "stabbed once with a folding knife (blade about 10 cm) in a bar fight at about 2348",
+  "hxcc": "no loss of consciousness; pain 8/10; about 500 mL of blood lost externally; lightheaded, cold and thirsty; alert and oriented",
+  "vitals": "GCS 15, BP 88/54, pulse 124 weak regular, resp 24 shallow, SpO2 96% on room air (99% on 15 L NRB), skin pale cool clammy",
+  "treatments": "bowel covered with a moist sterile dressing and an occlusive layer and not replaced, supine with knees up, kept warm, minimal movement, high-flow oxygen 15 L NRB; PCP: IV with a 1,600 mL bolus running, TXA 2 g IV; ETA 10 minutes",
+  "findings": "one 4 cm wound left of the umbilicus with about 10 cm of small bowel protruding and dark blood oozing, abdomen guarded, no other wounds"
+ },
+ "handoffFacts": {
+  "ageSex": "28-year-old male, about 80 kg",
+  "cc": "single stab wound to the left abdomen with small bowel evisceration, in shock",
+  "moi": "stabbed once with a folding knife (blade about 10 cm long, 2 cm wide, a stab not a slash) in a bar fight at about 2348; scene secured by RCMP and the weapon seized",
+  "hxcc": "no loss of consciousness, no other injuries, not struck on the head or neck; pain 8/10, sharp and burning, worse with movement and coughing, no radiation; lightheaded, cold and thirsty; about 500 mL of blood lost externally; arrival at 0004, about 16 minutes after the injury",
+  "initialVitals": "GCS 15 (E4 V5 M6), BP 88/54, pulse 124 weak regular, resp 24 shallow, skin pale cool clammy, pupils equal and reactive, SpO2 96% on room air (99% on 15 L NRB); BGL and temperature not indicated",
+  "finalVitals": "6 minutes later, after the first 500 mL of the bolus: GCS 15, BP 96/60, pulse 116, resp 22, skin pale cool and less clammy, pupils equal and reactive, SpO2 99% on 15 L NRB, pain 7/10",
+  "pmhx": "stomach ulcer last year; last ate a burger and fries at 1900 and had two beers, the last at about 2230",
+  "meds": "pantoprazole 40 mg daily; acetaminophen 1,000 mg (two 500 mg tablets) taken at 2100",
+  "allergies": "no known allergies",
+  "treatments": "bowel covered with a moist sterile dressing and an occlusive layer and not replaced; supine with knees up, kept warm, minimal movement, one coordinated lift; high-flow oxygen 15 L NRB; PCP: IV with a 1,600 mL saline bolus reassessed every 500 mL, TXA 2 g IV push at 0021; Entonox withheld (shock), ibuprofen withheld (ulcer history and possible bowel bleeding), acetaminophen withheld (taken at 2100)",
+  "findings": "one 4 cm wound left of the umbilicus with about 10 cm of small bowel protruding, pink and glistening, dark blood oozing; abdomen guarded and tender in all quadrants, not distended; pelvis stable; no other wounds; chest clear; dressing intact and dry afterwards"
+ },
+ "pcrFacts": {
+  "times": "stabbed about 2348; arrival 0004; acetaminophen 1,000 mg taken at 2100; PCP: TXA 2 g IV at 0021 and the bolus started en route",
+  "weight": "about 80 kg per the patient - dose basis for the 20 mL/kg bolus (1,600 mL)",
+  "vitals": "Set 1 (en route, baseline before fluids or TXA): GCS 15 (E4 V5 M6), BP 88/54, P 124 weak regular, R 24 shallow, skin pale cool clammy, PERL, SpO2 96% RA (99% on 15 L NRB); BGL and temperature not indicated. Set 2 (6 minutes later, after the first 500 mL): GCS 15, BP 96/60, P 116, R 22, skin pale cool less clammy, PERL, SpO2 99% on 15 L NRB, pain 7/10",
+  "cc": "Stab wound to the left abdomen with small bowel evisceration, hypovolemic shock",
+  "hxcc": "Stabbed once ~2348 with a folding knife (blade ~10 cm) in a bar fight; no LOC; pain 8/10; ~500 mL external blood loss",
+  "pmhx": "Stomach ulcer last year",
+  "meds": "Pantoprazole 40 mg daily; acetaminophen 1,000 mg at 2100",
+  "allergies": "No known allergies",
+  "treatments": [
+   "Bowel covered with moist sterile dressing plus occlusive layer, not replaced",
+   "Supine, knees up, kept warm, minimal movement, high-flow O2 15 L NRB",
+   "PCP: IV, 1,600 mL bolus reassessed q500 mL, TXA 2 g IV push at 0021",
+   "Entonox, ibuprofen, acetaminophen withheld (shock; ulcer history; dose at 2100)",
+   "RTC transport with en-route notification"
+  ],
+  "findings": [
+   "One 4 cm wound left of the umbilicus, ~10 cm of small bowel protruding, dark blood oozing",
+   "Baseline GCS 15, BP 88/54, pulse 124, RR 24, SpO2 96% RA, pale cool clammy",
+   "After first 500 mL: BP 96/60, pulse 116, SpO2 99%, pain 7/10",
+   "BGL and temperature not indicated"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": "You have dealt with the abdominal wound - what did the rest of your rapid body survey show? What about the chest, flanks, groin, arms and legs?"
+ },
+ "trackNotes": {
+  "emrEn": "EMR: control external bleeding, cover the bowel with a moist sterile dressing and an occlusive layer (never replace it), leave him supine in his position of comfort with the knees up, keep him warm, high-flow oxygen, limit movement, and RTC with the secondary survey en route. No IV, no fluid bolus, no TXA. Pain: Entonox, ibuprofen and acetaminophen are all withheld with the reasons stated (shock, p.65; ulcer history and possible bowel bleeding, p.68; acetaminophen within 4 hours, p.58). (Textbook practice - not a BC rubric item: nothing by mouth with an open abdomen; nitrous oxide expands gas-filled bowel.) At the second check an EMR candidate with no fluids is holding steady rather than improving (BP 90/56, pulse 120, resps 24); the sheet's set 2 values are the PCP readings.",
+  "pcpEn": "PCP adds, en route, vascular access, a 20 mL/kg bolus (80 kg = 1,600 mL, max 2 L) reassessed every 500 mL with the SBP target of 90 from p.48, and TXA 2 g IV push over 1 minute once the Hypovolemia protocol has started (injury 2348, inside the 3-hour limit), plus the 9-system Functional Enquiry en route. (Textbook practice - not a BC rubric item: many systems accept a lower pressure target in penetrating torso trauma; the BC guideline gives the 20 mL/kg bolus and q500 mL reassessment.)"
+ },
+ "sourcePages": "Scenario tr-10 (data/practical/scenarios-2.json): dispatch, scene, primary, transport, history, vitals sets 1-2, FE, exam, interventions, ongoing, handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.6 Patient Assessment Model (load and transport at the decision point); p.7 Findings in Unstable Patients (major penetrating trauma to the torso; cool pale clammy skin secondary to suspected shock); p.10 Load and transport (reassess the ABCI after each major move; notification); p.11 Primary survey interventions (oxygen for trauma and evidence of shock); p.13 Stabbing history questions (weapon, size, slashed or stabbed, number of wounds, other injuries, initial position and condition, loss of consciousness); p.19 Wound Care (expose and examine; do not pack wounds on the neck, chest or abdomen); p.25 Spinal Management (NEXUS / Canadian C-Spine indications); p.32 Abdominal Injuries (control external hemorrhage, limit movement, protect against heat loss, cover extruded bowel with moist sterile dressings followed by an occlusive layer, do not place back, position of comfort, transport; PCP en route: vascular access, correct hypoperfusion, TXA if indicated); p.38 IV Procedures (aseptic technique); p.48 fluid bolus 20 mL/kg to a maximum of 2 L, reassessing every 500 mL, target systolic BP 90; p.54 Hypovolemia (systolic BP < 90, signs of shock; supine, warm, oxygen to SpO2 >= 94%; PCP vascular access and fluid bolus); p.58 Acetaminophen (not if given within the past 4 hours); p.65 Entonox (caution: shock); p.68 Ibuprofen (contraindication: active GI hemorrhage or ulcers); p.78 Tranexamic Acid (2 g IV push over 1 minute; contraindicated if more than 3 hours after injury, under 12 years, isolated TBI; caution: further hypotension if given too quickly)."
+}

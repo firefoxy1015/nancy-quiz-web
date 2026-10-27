@@ -1,0 +1,1641 @@
+{
+ "id": "md-11",
+ "titleEn": "Two Days of Vomiting - Dehydration, Antiemetics and a Fluid Bolus",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios-2.json#md-11",
+ "patient": {
+  "name": "Helen Marsh",
+  "age": 71,
+  "sex": "female",
+  "affectEn": "Weak, pale and sweaty, semi-reclined on the sofa under a blanket with a plastic basin in her lap; retching at intervals; dizzy and miserable; does not try to get up.",
+  "speechEn": "Weak, short sentences (\"I'm so dizzy... I can't stop being sick.\"); cooperative and answers only what she is asked; her daughter helps with the history and confirms her weight."
+ },
+ "scene": {
+  "settingEn": "Ground-floor townhouse in Chilliwack at 0840 hrs. The daughter leads you to the living room: a warm room, no hazards, and the ambulance can park at the door. One patient: a 71-year-old woman semi-reclined on the sofa under a blanket, a plastic basin in her lap and vomit-stained towels on the floor. Chilliwack General Hospital is 11 minutes away.",
+  "hazardsEn": [
+   "no physical hazards",
+   "vomit and stool exposure - gloves and eye protection"
+  ],
+  "bystanders": [
+   {
+    "who": "daughter",
+    "knowsEn": "She called 911 and met you at the door. Her mother has vomited about 12 times in the last 24 hours (watery, never any blood) and has had about 6 loose watery stools since yesterday, with no blood and nothing black. She has kept no fluid down since last night and nearly fainted this morning on the way to the bathroom, with no head strike. Her mother's grandson had a stomach bug last week. Her mother weighs about 62 kg. She will collect her mother's medications (ramipril, hydrochlorothiazide, metformin) if asked."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with non-rebreather mask and nasal cannula",
+   "portable suction unit",
+   "BP cuff (adult) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "thermometer",
+   "blankets",
+   "plastic basin",
+   "stretcher (cot)",
+   "Entonox kit",
+   "oral analgesics (acetaminophen, ibuprofen)",
+   "oral glucose gel",
+   "PCP only: IV start kit with normal saline, ondansetron, dimenhydrinate, methoxyflurane"
+  ]
+ },
+ "dispatchEn": "0840 hrs. Code 3 to a ground-floor townhouse in Chilliwack. 71-year-old female with vomiting and diarrhea for two days, now too dizzy to stand. Her daughter called. Chilliwack General Hospital is 11 minutes away.",
+ "dispatchUpdateEn": "Dispatch update en route: the daughter says her mother has not kept any fluid down since last night and nearly fainted on the way to the bathroom this morning.",
+ "arrivalEn": "The patient's daughter meets you at the door of a ground-floor townhouse and leads you to the living room. The room is warm, there are no hazards, and the ambulance can park at the door. One patient.",
+ "firstLookEn": "A woman semi-reclined on the sofa under a blanket, pale and sweaty, a plastic basin in her lap and vomit-stained towels on the floor. She is awake, looks weak and is retching into the basin.",
+ "primary": {
+  "locEn": "Alert (AVPU), GCS 15. Awake and speaking in short sentences: \"I'm so dizzy... I can't stop being sick.\"",
+  "airwayEn": "Patent; she is speaking and retching into the basin. The vomit is watery yellow-green with no blood or coffee-ground material.",
+  "breathingEn": "Respirations 24, shallow and regular, clear air entry on both sides, no accessory muscle use.",
+  "circulationEn": "Radial pulse 118, weak and regular. Capillary refill is delayed at 4 seconds. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: abdomen soft with mild diffuse tenderness around the umbilicus, no guarding or rigidity, not distended, no pulsatile mass. No signs of bleeding, no rash, no leg swelling. Skin cool, pale and clammy, with dry mucous membranes and poor turgor (skin is given automatically during the RBS).",
+  "skinEn": "cool, pale and clammy, with dry mucous membranes and poor turgor"
+ },
+ "history": {
+  "ccEn": "I can't stop being sick, and I'm so dizzy.",
+  "opqrst": {
+   "oEn": "It started two days ago. I've been sick about twelve times in the last day, and now it's only watery stuff, never any blood.",
+   "pEn": "It's worse whenever I try to drink anything. It eases off for a little while after I'm sick.",
+   "qEn": "Crampy. It comes in waves.",
+   "rEn": "Around my belly button. It doesn't go anywhere else.",
+   "sEn": "About a four out of ten.",
+   "tEn": "It started two days ago and it hasn't let up. The cramps come in waves."
+  },
+  "painScoreEn": "About a four out of ten.",
+  "sample": {
+   "sEn": "I can't stop being sick and I'm so dizzy. I'm dizzy when I stand and I nearly fainted this morning on the way to the bathroom - I didn't hit my head. I've been sick about twelve times in the last day, only watery stuff and never blood. I've had about six loose watery stools since yesterday, no blood and nothing black. I've only passed a small amount of dark urine since yesterday. I feel hot and cold but nobody has taken my temperature, and I have no chest pain.",
+   "aEn": "Penicillin - I get a rash. I've had Gravol before and had no reaction to it. No other allergies.",
+   "mEn": "Ramipril 5 milligrams once a day, hydrochlorothiazide 12.5 milligrams once a day, and metformin 500 milligrams twice a day. I haven't kept any of them down since yesterday morning - I vomited them up. No blood thinners.",
+   "pEn": "High blood pressure and type 2 diabetes. No heart failure, no kidney or liver disease, no ulcers, no glaucoma, no asthma or COPD. No problem with my heart rhythm, nobody in my family has long QT, and I don't have phenylketonuria.",
+   "lEn": "I had a few sips of water at six this morning and vomited them within minutes. The last solid food was toast yesterday morning.",
+   "eEn": "My grandson had a stomach bug last week. Nothing else - I haven't hurt myself, and I didn't hit my head when I nearly fainted."
+  },
+  "fe": {
+   "generalEn": "I've been tired and weak for two days, and I've felt hot and cold.",
+   "cnsEn": "I'm dizzy when I stand up. No headache and I'm not confused.",
+   "respiratoryEn": "No cough and no shortness of breath.",
+   "cardiovascularEn": "My heart races when I sit up. No chest pain and no swollen ankles.",
+   "giGuEn": "Crampy pain around the middle of my belly and I feel sick to my stomach. About twelve vomits and six watery stools. Only small amounts of dark urine. No blood in the vomit or the stool.",
+   "integumentaryEn": "My skin feels dry. No rash.",
+   "musculoskeletalEn": "I've had cramps in my calves. No joint pain.",
+   "endocrineEn": "Type 2 diabetes. I'm very thirsty, and I haven't checked my sugar at home for two days.",
+   "eentEn": "My mouth is dry and my lips are cracked. No change in my vision and no ear pain."
+  }
+ },
+ "findings": {
+  "headNeckEn": "Dry mucous membranes and tongue, sunken eyes, neck veins flat, trachea midline, no neck stiffness.",
+  "chestLungsEn": "Clear, with equal air entry at all 6 sites.",
+  "abdomenEn": "Soft, with mild diffuse tenderness around the umbilicus. No guarding or rebound, not distended, active bowel sounds, no pulsatile mass.",
+  "backEn": "No findings.",
+  "lowerExtremitiesEn": "Pedal pulses weak but present, feet cool, no swelling, calves soft and non-tender, movement and sensation intact.",
+  "upperExtremitiesEn": "Radial pulses weak, skin tents slowly on the forearm, movement and sensation intact."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "en route, baseline before any fluid or antiemetic; BP is taken supine - she is not sat or stood for an orthostatic check",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "86/54",
+   "pulse": {
+    "rate": 118,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "118 weak regular"
+   },
+   "resp": {
+    "rate": 24,
+    "depth": "shallow",
+    "character": "regular, clear air entry on both sides, no accessory muscle use",
+    "rawEn": "24 shallow regular"
+   },
+   "skin": "cool, pale, clammy, dry mucous membranes, poor turgor, capillary refill 4 seconds",
+   "pupils": "equal and reactive",
+   "spo2": "95% on room air, 98% on 15 L NRB",
+   "bgl": "5.2 mmol/L",
+   "temp": "37.8 C"
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "about 6 minutes after set 1, en route, with NO fluid running (EMR path, or a PCP who has not started the bolus): stays near baseline",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "88/54",
+   "pulse": {
+    "rate": 116,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "116 weak regular"
+   },
+   "resp": {
+    "rate": 24,
+    "depth": "shallow",
+    "character": "regular",
+    "rawEn": "24 shallow regular"
+   },
+   "skin": "cool, pale, clammy",
+   "pupils": "equal and reactive",
+   "spo2": "98% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 3,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "vitals-set-1-complete"
+     },
+     {
+      "afterEvent": "drug:normal-saline"
+     },
+     {
+      "elapsedMs": 600000
+     }
+    ]
+   },
+   "unlockNoteEn": "about 6 minutes after set 1, en route, with the first 500 mL of the bolus running (roughly 250 mL in; ondansetron onset is 15-30 minutes, so the nausea is unchanged): improving but not corrected",
+   "gcs": {
+    "total": 15,
+    "e": 4,
+    "v": 5,
+    "m": 6
+   },
+   "bp": "94/58",
+   "pulse": {
+    "rate": 110,
+    "rhythm": "regular",
+    "strength": "stronger than before",
+    "rawEn": "110 stronger regular"
+   },
+   "resp": {
+    "rate": 22,
+    "depth": "shallow",
+    "character": "regular",
+    "rawEn": "22"
+   },
+   "skin": "cool, less clammy",
+   "pupils": "equal and reactive",
+   "spo2": "99% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "vomits-during-second-set",
+   "when": {
+    "elapsedMs": 600000,
+    "afterEvent": "vitals-set-1-complete"
+   },
+   "examinerLineEn": "She retches and vomits a small amount of watery fluid into the basin."
+  }
+ ],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan oxygen, suction, a basin, blankets and (PCP) the IV and fluid set-up; anticipate dehydration or shock in an older patient",
+   "triggers": [
+    "copy dispatch",
+    "bringing oxygen suction and a basin",
+    "bring the suction and a basin",
+    "anticipating dehydration or shock",
+    "I'll set up for an IV and fluids",
+    "bring blankets and oxygen"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize from dispatch that near-fainting after two days of vomiting may be an unstable hypovolemia call, not 'just the flu'",
+   "triggers": [
+    "not just the flu",
+    "this could be shock",
+    "near fainting means she may be unstable",
+    "possible hypovolemia",
+    "she may be unstable",
+    "this is more than a stomach bug"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate vomit and stool exposure: gloves and eye protection ready",
+   "triggers": [
+    "gloves and eye protection ready",
+    "expect vomit and stool",
+    "bring gloves and goggles in",
+    "PPE ready for vomit",
+    "BSI ready for body fluids"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (none), environment, nature of illness (vomiting and diarrhea, possible infectious gastroenteritis), number of patients (1)",
+   "triggers": [
+    "scene is safe",
+    "no hazards",
+    "one patient",
+    "nature of illness is vomiting and diarrhea",
+    "possible gastroenteritis",
+    "ambulance can park at the door"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection (vomit splash risk)",
+   "triggers": [
+    "gloves on",
+    "putting on gloves and eye protection",
+    "donning gloves and goggles",
+    "PPE on",
+    "eye protection on",
+    "mask and goggles on"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: pale, sweaty, weak, semi-reclined with a basin and soiled towels - looks dehydrated and unwell",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "she looks pale and sweaty",
+    "she looks dehydrated",
+    "she looks unwell",
+    "she looks weak"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: Alert, GCS 15 - and state that any drift toward drowsiness would be a worsening sign",
+   "triggers": [
+    "AVPU",
+    "she's alert",
+    "alert and oriented",
+    "level of consciousness",
+    "do you know where you are",
+    "drowsiness would be a worsening sign"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (medical, no trauma)",
+   "triggers": [
+    "no c-spine concern",
+    "c-spine not indicated",
+    "medical call no trauma",
+    "no mechanism for spinal injury",
+    "no need for spinal precautions",
+    "no spinal motion restriction needed"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway; she is retching, so keep suction and the basin within reach and check the vomit for blood",
+   "triggers": [
+    "airway is patent",
+    "check the airway",
+    "airway is open",
+    "she's talking so the airway is clear",
+    "check the vomit for blood"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing - rate, depth, air entry both sides, accessory muscle use; no respiratory distress",
+   "triggers": [
+    "breathing rate",
+    "how's her breathing",
+    "respiratory effort",
+    "count the respirations",
+    "chest rise",
+    "work of breathing"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation - weak rapid radial pulse (118) and delayed capillary refill (4 seconds) mean poor perfusion; no external bleeding",
+   "triggers": [
+    "radial pulse",
+    "check the pulse",
+    "pulse rate and quality",
+    "capillary refill",
+    "any major bleeding",
+    "how's the pulse"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey with a gentle abdominal exam - look for a pulsatile mass, guarding, bleeding and other causes of shock",
+   "triggers": [
+    "rapid body survey",
+    "RBS",
+    "modified RBS",
+    "quick head to toe",
+    "look for other causes of shock",
+    "check for bleeding and a pulsatile mass"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: cool, pale, clammy, dry mucous membranes, poor turgor",
+   "triggers": [
+    "skin colour temperature and condition",
+    "feel her skin",
+    "check her mucous membranes",
+    "skin turgor",
+    "skin signs",
+    "pinch the skin"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen 15 L by non-rebreather - high flow is required in shock - and keep SpO2 at or above 94%",
+   "triggers": [
+    "apply oxygen",
+    "non-rebreather",
+    "high flow oxygen",
+    "oxygen at 15 litres",
+    "NRB at 15",
+    "keep sats above 94"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Position supine to support blood pressure and keep her warm, with suction and the basin at hand and a plan to turn her onto her side if she vomits",
+   "triggers": [
+    "position her supine",
+    "lay her flat",
+    "lie her down flat",
+    "keep her supine",
+    "supine to support her blood pressure",
+    "blankets to keep her warm"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and name the criterion: cool, pale, clammy skin secondary to suspected shock (p.7), not 'just the flu'",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "she's unstable",
+    "cool pale clammy skin means unstable",
+    "suspected shock so RTC",
+    "load and go"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Packaged supine, warm and ready to load within 15 minutes, with the secondary survey done en route",
+   "triggers": [
+    "load within 15 minutes",
+    "package her supine and warm",
+    "history and vitals en route",
+    "head to toe en route",
+    "do the secondary survey in the ambulance",
+    "get her ready to load"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate: the partner brings the stretcher, the daughter collects the medications; the patient is moved on the stretcher and never walked",
+   "triggers": [
+    "partner, bring the stretcher",
+    "get the stretcher to the sofa",
+    "ask her daughter to collect her medications",
+    "daughter, can you get her pills",
+    "she is not to walk",
+    "we'll move her on the stretcher"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: two days of vomiting with dizziness and weakness",
+   "triggers": [
+    "what's going on today",
+    "what's bothering you",
+    "chief complaint",
+    "why did you call us",
+    "what brought you in today",
+    "tell me what's happening"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C with OPQRST and quantify the fluid loss: about 12 vomits in 24 hours, about 6 watery stools, scant dark urine, no intake, near-fainting, sick contact, no blood in vomit or stool",
+   "triggers": [
+    "OPQRST",
+    "when did the vomiting start",
+    "how many times have you vomited",
+    "how many loose stools",
+    "have you vomited any blood",
+    "any sick contacts"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain scale: crampy periumbilical pain 4/10",
+   "triggers": [
+    "zero to ten",
+    "scale of 1 to 10",
+    "how bad is the pain",
+    "pain score",
+    "rate your pain",
+    "how strong are the cramps"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx, asking the pertinent negatives for the drugs she may need: hypertension and diabetes; no heart rhythm problem or family long QT, no glaucoma, no asthma/COPD, no ulcer or liver disease",
+   "triggers": [
+    "medical history",
+    "past medical history",
+    "any heart rhythm problems",
+    "any history of long QT",
+    "any glaucoma",
+    "any history of ulcers or liver disease"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications: ramipril, hydrochlorothiazide, metformin, none kept down since yesterday morning, no blood thinners",
+   "triggers": [
+    "what medications",
+    "are you on any pills",
+    "do you take blood thinners",
+    "what do you take for your blood pressure",
+    "medication list",
+    "any meds"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies: penicillin (rash); no prior reaction to dimenhydrinate (Gravol)",
+   "triggers": [
+    "any allergies",
+    "are you allergic to anything",
+    "allergies to medications",
+    "ever reacted to Gravol",
+    "allergic to Gravol",
+    "any drug allergies"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI: sips of water at 0600 and vomited; no solid food since yesterday morning",
+   "triggers": [
+    "when did you last eat",
+    "last oral intake",
+    "when did you last drink",
+    "last meal",
+    "LOI",
+    "anything to eat or drink today"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "history",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Ask her weight (about 62 kg) from the daughter - needed for the 20 mL/kg bolus and any weight-based antiemetic dose (PCP)",
+   "triggers": [
+    "how much does she weigh",
+    "what's her weight",
+    "her weight in kilograms",
+    "how many kilos",
+    "weight for dosing",
+    "approximate weight"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components (15: E4 V5 M6)",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "GCS 15",
+    "E4 V5 M6"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation, supine - recognize a systolic under 90 as the Hypovolemia protocol criterion and do not stand her for orthostatics",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "I'm taking a BP",
+    "BP by auscultation",
+    "cuff on",
+    "supine blood pressure"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm - rapid and weak",
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "radial for 30 seconds",
+    "pulse rate and strength"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/character",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "rate depth and character",
+    "count her breaths",
+    "respiratory rate"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on: temperature, colour, moisture, turgor, mucous membranes, capillary refill",
+   "triggers": [
+    "colour temperature moisture",
+    "feel the skin",
+    "skin condition",
+    "capillary refill time",
+    "check turgor",
+    "look at the mucous membranes"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "pupils equal and reactive",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration, noting the reading before and after oxygen",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "sats before and after oxygen",
+    "check the waveform"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - indicated: older diabetic on metformin who has barely eaten for two days",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "check her sugar",
+    "glucometer",
+    "fingerstick",
+    "blood sugar"
+   ]
+  },
+  {
+   "itemId": "temperature",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Temperature - indicated: gastroenteritis with possible infection",
+   "triggers": [
+    "temperature",
+    "take her temp",
+    "tympanic",
+    "check for fever",
+    "thermometer"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "how have you been feeling",
+    "any fevers or chills",
+    "tired and weak",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any headache",
+    "any confusion",
+    "dizziness on standing",
+    "weakness or numbness",
+    "neuro review"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory",
+   "triggers": [
+    "any cough",
+    "shortness of breath",
+    "any wheeze",
+    "respiratory enquiry",
+    "trouble breathing"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "heart racing",
+    "palpitations",
+    "any chest pain",
+    "swollen ankles",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (vomits, stools, urine output, any blood)",
+   "triggers": [
+    "bowel and bladder",
+    "bowel movements",
+    "urine output",
+    "any blood in your stool",
+    "GI and GU review"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary",
+   "triggers": [
+    "any rash",
+    "skin changes",
+    "is your skin dry",
+    "integumentary enquiry",
+    "any sores"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "any cramps",
+    "calf cramps",
+    "joint pain",
+    "muscle cramps",
+    "musculoskeletal enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine (diabetes pertinent)",
+   "triggers": [
+    "diabetes",
+    "diabetic",
+    "blood sugar at home",
+    "very thirsty",
+    "thyroid",
+    "endocrine enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT",
+   "triggers": [
+    "eyes ears nose and throat",
+    "EENT",
+    "dry mouth",
+    "vision changes",
+    "any ear pain"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam: mucous membranes, eyes, neck veins, trachea",
+   "triggers": [
+    "head and neck",
+    "neck veins",
+    "JVD",
+    "trachea midline",
+    "check the eyes",
+    "examine the head and neck"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation, recorded as the baseline before fluid",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "listen to the lungs",
+    "baseline lung sounds before the fluid",
+    "palpate the chest"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam: tenderness, guarding, distension, pulsatile mass",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "examine the abdomen",
+    "any guarding or rebound",
+    "bowel sounds",
+    "abdominal assessment"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check her back",
+    "back exam",
+    "palpate the back",
+    "any back tenderness",
+    "examine the back"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities: pulses, temperature, swelling, calves, CSM",
+   "triggers": [
+    "lower extremities",
+    "pedal pulses",
+    "check her calves",
+    "check the legs",
+    "feet and ankles",
+    "CSM in the legs"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: radial pulses, skin turgor, CSM, and choose the IV site",
+   "triggers": [
+    "upper extremities",
+    "radial pulses",
+    "skin turgor on the forearm",
+    "choose an IV site",
+    "CSM in the arms",
+    "check the arms"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Start the Hypovolemia protocol only with the indications confirmed and baseline vitals complete: fluid loss (about 12 vomits, 6 watery stools, no intake), systolic 86 (under 90) and other signs of shock (cool clammy skin, pulse 118, capillary refill 4 seconds)",
+   "triggers": [
+    "hypovolemia protocol",
+    "starting the hypovolemia protocol",
+    "the indications are met",
+    "systolic under 90 with signs of shock",
+    "fluid loss with hypotension",
+    "nausea and vomiting protocol"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Airway management for a vomiting patient: suction and basin within reach, supine for blood pressure but ready to turn her onto her side, suction any vomit at once",
+   "triggers": [
+    "suction within reach",
+    "basin within reach",
+    "turn her on her side if she vomits",
+    "keep the suction beside her",
+    "roll her to the side if she vomits",
+    "suction any vomit right away"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Rule out each analgesic aloud and withhold them all (at PCP level including methoxyflurane, which is limited to hemodynamically stable patients): Entonox (shock caution, causes nausea and vomiting), acetaminophen (hypovolemia caution, vomiting is a listed overdose symptom so the cause must be clear, no tablet will stay down), ibuprofen (cannot keep an oral tablet down); document the reasons",
+   "triggers": [
+    "withholding Entonox",
+    "not giving Entonox",
+    "no Entonox because of the shock",
+    "withholding the oral analgesics",
+    "not giving acetaminophen or ibuprofen",
+    "no methoxyflurane because she is hypotensive"
+   ]
+  },
+  {
+   "itemId": "overall-patient-care",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Nothing by mouth; say that the IV, the fluid bolus and the antiemetic are PCP additions and that at EMR level the care is oxygen, position, warmth and rapid transport",
+   "triggers": [
+    "nothing by mouth",
+    "she's NPO",
+    "no food or drink",
+    "IV and fluids are PCP level",
+    "the PCP will start the IV",
+    "EMR care is oxygen position warmth and transport"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: IV with aseptic technique, then the NS bolus calculated from the weight - 62 kg x 20 mL/kg = 1,240 mL, never above 2 L - given in 500 mL steps",
+   "triggers": [
+    "start an IV",
+    "aseptic technique",
+    "20 mL per kg",
+    "20 mL/kg",
+    "1,240 mL",
+    "500 mL steps"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "pcp",
+   "actionEn": "PCP: give the antiemetic en route only after ruling out its contraindications aloud - ondansetron 4 mg PO (allergy, congenital long QT in her and her family, phenylketonuria) or dimenhydrinate 1 mg/kg to a maximum of 50 mg (hypersensitivity; elderly and hypertension cautions)",
+   "triggers": [
+    "ondansetron 4 mg",
+    "ondansetron four milligrams",
+    "any long QT in the family",
+    "allergic to ondansetron",
+    "phenylketonuria",
+    "dimenhydrinate 50 mg"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs (including breath sounds), the IV site and the bolus after every move and after each 500 mL",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "recheck the IV site",
+    "reassess after the move",
+    "breath sounds again",
+    "reassessing her interventions"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes; interpret the trend out loud as improving but not yet corrected",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "vitals again",
+    "another set of vitals",
+    "improving but not corrected",
+    "the trend is improving"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Reassess after every 500 mL against the systolic target of 90 and complete the 20 mL/kg (1,240 mL) in 500 mL steps - not an open-ended or fixed volume",
+   "triggers": [
+    "reassess after every 500",
+    "recheck the pressure after each 500",
+    "target systolic of 90",
+    "systolic target is 90",
+    "continue the bolus",
+    "second 500 mL"
+   ]
+  },
+  {
+   "itemId": "skill-airway-mgmt",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Manage the vomit that happens during the set: suction and turn her onto her side, then resume the vitals",
+   "triggers": [
+    "suctioning the vomit",
+    "turning her onto her side",
+    "roll her to her side",
+    "clear the airway",
+    "suction now",
+    "resuming the vitals"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "ongoing",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Reassess the pain (4/10) and the nausea, and document that Entonox and oral analgesics stay withheld and why",
+   "triggers": [
+    "how's the pain now",
+    "pain now out of ten",
+    "reassess the pain",
+    "is the nausea any better",
+    "still withholding the analgesics",
+    "document why Entonox was withheld"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification for a critical patient: age, shock from fluid loss, blood pressure, treatment started",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "radio report",
+    "call ahead",
+    "critical patient inbound"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off with weight, fluid loss, vitals trend, fluid volume and time, antiemetic and time, and the analgesics withheld with reasons",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 71-year-old female",
+    "report to the nurse",
+    "verbal report",
+    "bolus volume and time"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes with drug and fluid times and the reasons Entonox and oral analgesics were withheld",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate stands her up, sits her up for an orthostatic blood pressure check, lets her walk, or walks her to the stretcher or ambulance (any self-exertion). Sitting her up for a moment so she can vomit is NOT this event."
+  },
+  {
+   "key": "supine-positioned",
+   "descriptionEn": "candidate positions her supine / lays her flat to support her blood pressure (also report the patient-position item)"
+  },
+  {
+   "key": "not-supine",
+   "descriptionEn": "candidate leaves her semi-reclined or sitting up for the whole call, or sits her up for transport, and never positions her supine although she is hypotensive. Turning her briefly onto her side to vomit is NOT this event."
+  },
+  {
+   "key": "oral-intake-given",
+   "descriptionEn": "candidate gives her anything by mouth - water, an oral rehydration drink, food or a tablet - other than the ondansetron 4 mg PO a PCP may give (also report the drug event for any medication). Saying nothing by mouth is NOT this event."
+  },
+  {
+   "key": "emr-pcp-treatment",
+   "descriptionEn": "an EMR candidate actually starts an IV or runs IV fluid (also report the drug event). Saying the IV and fluid are PCP skills is NOT this event."
+  },
+  {
+   "key": "waits-on-scene",
+   "descriptionEn": "candidate delays loading or transport on scene to start an IV, run fluid, give an antiemetic or finish the full head-to-toe, instead of loading first and treating en route (unstable patients are treated en route). The primary survey and baseline vital signs are NOT this event."
+  },
+  {
+   "key": "low-flow-oxygen",
+   "descriptionEn": "candidate chooses a nasal cannula or a low-flow mask for her, or says she needs no oxygen because the SpO2 reads 95%, although she is in shock and high flow by non-rebreather is required. Putting her on the non-rebreather is NOT this event."
+  },
+  {
+   "key": "glucose-agent-given",
+   "descriptionEn": "candidate actually administers oral glucose, glucagon or D10W (also report the drug event) although her BGL is 5.2 mmol/L. Asking whether glucose is indicated, or saying it is withheld, is NOT this event."
+  },
+  {
+   "key": "ondansetron-screened",
+   "descriptionEn": "candidate asks about, or states that they have ruled out, ondansetron's contraindications: congenital long QT or other heart rhythm problems in her or her family, phenylketonuria, or an ondansetron allergy"
+  },
+  {
+   "key": "dimenhydrinate-screened",
+   "descriptionEn": "candidate asks about, or states that they have ruled out, dimenhydrinate's contraindication or cautions: hypersensitivity or allergy (including an earlier reaction to Gravol), glaucoma, prostate or urinary obstruction"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the saline bolus past 500 mL, or onto the next 500 mL, without reassessing her (BP / vitals / breath sounds / ABCs) in between"
+  },
+  {
+   "key": "bolus-volume-error",
+   "descriptionEn": "PCP orders or runs a bolus that is not 20 mL/kg of her weight - for example a fixed 1 L or 2 L, a wide-open run with no calculation, or a total above the 2 L maximum. Her 62 kg gives 1,240 mL."
+  }
+ ],
+ "keywordEvents": [
+  {
+   "event": "supine-positioned",
+   "regex": "\\b(supine|lay(ing)?\\s+(her\\s+|the\\s+patient\\s+)?(down|flat|back)|lie\\s+(her\\s+|the\\s+patient\\s+)?(down|flat|back)|lying\\s+(down|flat)|flat\\s+on\\s+(her|the)\\s+back|on\\s+her\\s+back|trendelenburg|(elevat\\w*|rais\\w*)\\s+(her\\s+|the\\s+)?legs|legs\\s+(up|elevated|raised)|shock\\s+position)\\b"
+  },
+  {
+   "event": "ondansetron-screened",
+   "regex": "\\b(long\\s+qt|prolonged\\s+qt|qt|heart\\s+rhythm|rhythm\\s+problems?|arrhythmi\\w*|dysrhythmi\\w*|ecg|ekg|sudden\\s+(cardiac\\s+)?death|phenylketon\\w*|pku|allerg\\w*\\s+to\\s+(ondansetron|zofran)|ondansetron\\s+allerg\\w*)\\b"
+  },
+  {
+   "event": "dimenhydrinate-screened",
+   "regex": "\\b(allerg\\w*|hypersensitiv\\w*|glaucoma|prostat\\w*|urinary\\s+(obstruction|retention))\\b|\\b(gravol|dimenhydrinate)\\b[^.]{0,40}\\b(before|reaction|react\\w*)\\b|\\b(before|reaction|react\\w*)\\b[^.]{0,40}\\b(gravol|dimenhydrinate)\\b"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this call: shock is a listed caution, and nausea and vomiting are listed adverse effects in a patient who is already vomiting",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol"
+   ],
+   "doseEn": "500-1,000 mg PO - WITHHELD in this call: hypovolemia is a listed caution, vomiting is a listed symptom of overdose so the cause must be clear, and she cannot keep a tablet down",
+   "licence": "both"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin"
+   ],
+   "doseEn": "300-400 mg PO - WITHHELD in this call: an oral tablet cannot be retained while she vomits every few minutes",
+   "licence": "both"
+  },
+  {
+   "key": "methoxyflurane",
+   "namesEn": [
+    "methoxyflurane",
+    "Penthrox",
+    "green whistle"
+   ],
+   "doseEn": "3 mL self-administered via inhaler - WITHHELD in this call: limited to conscious, hemodynamically stable patients, cardiac instability is a listed caution and she is hypotensive",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "PCP: after vascular access en route, bolus 20 mL/kg IV to a maximum of 2 L, in 500 mL steps, reassessing after each and aiming for a systolic of 90; her 62 kg gives 1,240 mL",
+   "licence": "pcp"
+  },
+  {
+   "key": "ondansetron",
+   "namesEn": [
+    "ondansetron",
+    "Zofran"
+   ],
+   "doseEn": "PCP: 4 mg PO (adult) for nausea and vomiting once the IV is running and its contraindications are ruled out: allergy, congenital long QT in her and her family, phenylketonuria; onset 15-30 minutes",
+   "licence": "pcp"
+  },
+  {
+   "key": "dimenhydrinate",
+   "namesEn": [
+    "dimenhydrinate",
+    "Gravol",
+    "Dramamine"
+   ],
+   "doseEn": "PCP: 1 mg/kg to a maximum of 50 mg (50 mg here), IV diluted with NS over about 2 minutes or IM undiluted; contraindication hypersensitivity; cautions elderly and hypertension",
+   "licence": "pcp"
+  },
+  {
+   "key": "txa",
+   "namesEn": [
+    "TXA",
+    "tranexamic acid",
+    "Cyklokapron"
+   ],
+   "doseEn": "PCP: NOT indicated in this call - her shock is from fluid loss, not blood loss",
+   "licence": "pcp"
+  },
+  {
+   "key": "oral-glucose",
+   "namesEn": [
+    "oral glucose",
+    "glucose gel",
+    "Insta-Glucose",
+    "glucogel",
+    "dextrose gel"
+   ],
+   "doseEn": "15 g PO - NOT indicated: her BGL is 5.2 mmol/L and she is vomiting",
+   "licence": "both"
+  },
+  {
+   "key": "glucagon",
+   "namesEn": [
+    "glucagon",
+    "GlucaGen"
+   ],
+   "doseEn": "NOT indicated: her BGL is 5.2 mmol/L",
+   "licence": "both"
+  },
+  {
+   "key": "d10w",
+   "namesEn": [
+    "D10W",
+    "D10",
+    "dextrose 10%"
+   ],
+   "doseEn": "PCP: NOT indicated: her BGL is 5.2 mmol/L",
+   "licence": "pcp"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "fluid-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "supine-for-hypotension",
+   "check": "present",
+   "event": [
+    "supine-positioned",
+    "patient-position"
+   ],
+   "licence": "both",
+   "deduct": {
+    "itemId": "circulation",
+    "weight": 100,
+    "errorEn": "Determines absent patient pulses but then does not intervene immediately (e.g., does not start CPR, does not position for hypotension at any time)"
+   }
+  },
+  {
+   "id": "emr-no-iv",
+   "check": "absent",
+   "event": "emr-pcp-treatment",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-ondansetron",
+   "check": "absent",
+   "event": "drug:ondansetron",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-dimenhydrinate",
+   "check": "absent",
+   "event": "drug:dimenhydrinate",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "no-entonox",
+   "check": "absent",
+   "event": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-acetaminophen",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-ibuprofen",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-methoxyflurane",
+   "check": "absent",
+   "event": "drug:methoxyflurane",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-txa",
+   "check": "absent",
+   "event": "drug:txa",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-glucose-agents",
+   "check": "absent",
+   "event": "glucose-agent-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "ondansetron-contraindications-ruled-out",
+   "check": "before_each",
+   "event": "drug:ondansetron",
+   "requires": "ondansetron-screened",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "dimenhydrinate-contraindications-ruled-out",
+   "check": "before_each",
+   "event": "drug:dimenhydrinate",
+   "requires": "dimenhydrinate-screened",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-treatment-delay-on-scene",
+   "check": "absent",
+   "event": "waits-on-scene",
+   "licence": "both",
+   "deduct": {
+    "itemId": "transport",
+    "weight": 10,
+    "errorEn": "Delays treatment and/or transport performing non-Priority tasks"
+   }
+  },
+  {
+   "id": "not-left-semi-reclined",
+   "check": "absent",
+   "event": "not-supine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "patient-position",
+    "weight": 15,
+    "errorEn": "Positions the patient incorrectly detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-walking-or-standing",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "nothing-by-mouth",
+   "check": "absent",
+   "event": "oral-intake-given",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "high-flow-oxygen-in-shock",
+   "check": "absent",
+   "event": "low-flow-oxygen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "oxygen",
+    "weight": 15,
+    "errorEn": "Oxygen is administered by incorrect delivery device for patient presentation detrimental to patient care and/or"
+   }
+  },
+  {
+   "id": "bolus-reassess-q500",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "bolus-volume-by-weight",
+   "check": "absent",
+   "event": "bolus-volume-error",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "71-year-old female",
+  "cc": "two days of vomiting and diarrhea with dizziness and near-fainting - dehydration with signs of shock",
+  "moi": null,
+  "hxcc": "vomiting for 2 days, about 12 vomits in 24 hours and about 6 watery stools, scant dark urine, almost no intake, nearly fainted this morning; crampy periumbilical pain 4/10; no blood in the vomit or stool",
+  "vitals": "GCS 15, BP 86/54, pulse 118 weak regular, resp 24 shallow, skin cool pale clammy with capillary refill 4 seconds, SpO2 95% on room air and 98% on 15 L, BGL 5.2, temp 37.8; second set about 6 minutes later: with the bolus running (PCP) BP 94/58, pulse 110, resp 22, SpO2 99%; without fluid (EMR) BP 88/54, pulse 116, resp 24",
+  "treatments": "high-flow oxygen 15 L by non-rebreather, supine and warm, suction and basin ready, nothing by mouth, Entonox and oral analgesics withheld; PCP: IV and 20 mL/kg normal saline bolus (1,240 mL ordered) reassessed every 500 mL, ondansetron 4 mg PO; ETA 11 minutes",
+  "findings": "cool pale clammy skin, dry mucous membranes, poor turgor, capillary refill 4 seconds; abdomen soft with mild diffuse periumbilical tenderness, no guarding, no pulsatile mass; chest clear"
+ },
+ "handoffFacts": {
+  "ageSex": "71-year-old woman, about 62 kg",
+  "cc": "two days of vomiting and diarrhea with dizziness and near-fainting - dehydration with signs of shock",
+  "moi": null,
+  "hxcc": "vomiting began 2 days ago, about 12 vomits in the last 24 hours (watery, no blood), about 6 watery stools, scant dark urine, no intake; nearly fainted this morning with no head strike; crampy periumbilical pain 4/10; her grandson had a stomach bug last week",
+  "initialVitals": "GCS 15 (E4 V5 M6), BP 86/54 supine, pulse 118 weak regular, resp 24 shallow regular, skin cool pale clammy with dry mucous membranes, poor turgor and capillary refill 4 seconds, pupils equal and reactive, SpO2 95% on room air and 98% on 15 L, BGL 5.2 mmol/L, temp 37.8 C",
+  "finalVitals": "second set about 6 minutes later: with the bolus running (PCP) BP 94/58, pulse 110 stronger, resp 22, skin cool and less clammy, SpO2 99% on 15 L, GCS 15, pupils equal and reactive; without fluid (EMR) BP 88/54, pulse 116 weak, resp 24; pain still 4/10",
+  "pmhx": "hypertension and type 2 diabetes; no heart failure, kidney or liver disease, no ulcers, no glaucoma, no asthma or COPD, no heart rhythm problem or family history of long QT",
+  "meds": "ramipril 5 mg daily, hydrochlorothiazide 12.5 mg daily, metformin 500 mg twice daily - none kept down since yesterday morning; no blood thinners",
+  "allergies": "penicillin (rash); no prior reaction to dimenhydrinate (Gravol)",
+  "treatments": "high-flow oxygen 15 L by non-rebreather, supine positioning and warmth, suction and basin at hand, nothing by mouth, RTC transport; Entonox and oral analgesics withheld with the reasons (shock, vomiting, hypovolemia); PCP: IV and 20 mL/kg normal saline bolus (1,240 mL ordered) in 500 mL steps with reassessment, ondansetron 4 mg PO after long QT, allergy and PKU were ruled out",
+  "findings": "dry mucous membranes, sunken eyes, flat neck veins, chest clear, abdomen soft with mild diffuse periumbilical tenderness and no guarding or pulsatile mass, weak pedal and radial pulses, cool feet, slow skin tenting on the forearm; one small watery vomit during the second set"
+ },
+ "pcrFacts": {
+  "vitals": "Set 1 (baseline, before fluid): GCS 15 (E4 V5 M6), BP 86/54, pulse 118 weak regular, resp 24 shallow regular, skin cool pale clammy with capillary refill 4 s, pupils equal and reactive, SpO2 95% on room air and 98% on 15 L NRB, BGL 5.2 mmol/L, temp 37.8 C. Set 2 (about 6 minutes later): with the bolus running (PCP) BP 94/58, pulse 110, resp 22, SpO2 99% on 15 L NRB; without fluid (EMR) BP 88/54, pulse 116, resp 24",
+  "cc": "Two days of vomiting and diarrhea with dizziness and near-fainting (dehydration with signs of shock)",
+  "hxcc": "Vomiting began 2 days ago, about 12 vomits in 24 hours, about 6 watery stools, scant dark urine, no intake; nearly fainted this morning; crampy periumbilical pain 4/10; sick grandson last week; no blood in vomit or stool",
+  "pmhx": "Hypertension, type 2 diabetes; no heart failure, kidney or liver disease, no glaucoma, no asthma/COPD, no long QT",
+  "meds": "Ramipril 5 mg daily, hydrochlorothiazide 12.5 mg daily, metformin 500 mg twice daily - none kept down since yesterday morning; no blood thinners",
+  "allergies": "Penicillin (rash); no prior reaction to dimenhydrinate",
+  "treatments": [
+   "High-flow O2 15 L NRB",
+   "Supine, warm, suction and basin ready, nothing by mouth, RTC transport with secondary survey en route",
+   "PCP: IV and NS bolus 20 mL/kg (1,240 mL ordered) with the start time documented, reassessed every 500 mL",
+   "PCP: ondansetron 4 mg PO with the time documented, after long QT, allergy and PKU ruled out",
+   "Entonox and oral analgesics withheld - shock caution, vomiting, hypovolemia (reasons documented)"
+  ],
+  "findings": [
+   "Baseline GCS 15, BP 86/54, pulse 118 weak, resps 24, SpO2 95% RA (98% on 15 L), skin cool pale clammy, capillary refill 4 s",
+   "BGL 5.2 mmol/L, temperature 37.8 C",
+   "Abdomen soft, mild diffuse periumbilical tenderness, no guarding, no pulsatile mass",
+   "Second set about 6 minutes later: with fluid running BP 94/58, pulse 110, resps 22, SpO2 99%; without fluid BP 88/54, pulse 116, resps 24; one small watery vomit suctioned"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": null,
+  "breathingNotDepictedEn": null,
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives high-flow oxygen (required in shock), supine positioning with suction and a basin ready, warmth, nothing by mouth, a full baseline set including BGL and temperature, a clear RTC decision with the criterion named, and rapid transport. EMR does NOT start an IV, give a fluid bolus, or give ondansetron or dimenhydrinate - those are PCP additions - so without fluid set 2 stays near baseline (BP 88/54, pulse 116, respirations 24). Entonox and all oral analgesics are withheld at both levels, with the reasons said aloud. No Functional Enquiry.",
+  "pcpEn": "PCP adds, en route, vascular access with aseptic technique, a 20 mL/kg normal saline bolus (62 kg = 1,240 mL, maximum 2 L, reassess after every 500 mL, target systolic 90), an antiemetic once its contraindications are ruled out (ondansetron 4 mg PO, or dimenhydrinate 1 mg/kg to a maximum of 50 mg) and the 9-system Functional Enquiry. TXA is not indicated: this is fluid loss, not blood loss. Textbook practice - not a BC rubric item: ibuprofen is also unwise here because dehydration with an ACE inhibitor and a diuretic stresses the kidneys, and an ODT tablet dissolves on the tongue, which is why an oral antiemetic is still reasonable in a patient who is vomiting."
+ },
+ "sourcePages": "Scenario md-11 (data/practical/scenarios-2.json): dispatch, scene, primary (alert, shock from fluid loss, soft tender abdomen), transport (RTC), history (patient and daughter), vitals sets 1-2 (set 2 EMR path without fluid; improving path with the bolus running), FE, exam, interventions (analgesia trap, PCP bolus and antiemetic), ongoing (vomit during the set), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Adult Patients (cool pale clammy skin secondary to suspected shock); p.11 primary-survey interventions (airway maintenance and suctioning, oxygen for evidence of shock); p.13 AVPU; p.38 IV Procedures (aseptic technique, replace fluids due to hypovolemia); p.48 Nausea - Vomiting (position of comfort consistent with protecting the airway; PCP dimenhydrinate or ondansetron, fluid bolus 20 mL/kg to a maximum of 2 litres reassessing every 500 mL, target systolic 90; unstable patients treated en route; suction ready); p.50 Oxygen Administration (shock requires high-flow oxygen); p.54 Hypovolemia (indications: hypovolemia, systolic under 90, other signs of shock; supine, warm, oxygen to SpO2 94% or above; PCP vascular access en route, fluid bolus; TXA only for blood loss); p.58-59 Acetaminophen (do not give if overdose suspected - nausea, vomiting; caution hypovolemia); p.63 Dimenhydrinate (1 mg/kg to a maximum of 50 mg; hypersensitivity; cautions elderly, hypertension); p.65 Entonox (cautions shock; adverse effects nausea and vomiting); p.68 Ibuprofen; p.71 Methoxyflurane (conscious, hemodynamically stable patients; cautions cardiac instability); p.75 Ondansetron (4 mg PO; contraindications allergy, congenital long QT, PKU). Grading criteria p.19 (packaging goal times), p.35 (vitals intervals)."
+}

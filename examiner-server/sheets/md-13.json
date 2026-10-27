@@ -1,0 +1,1681 @@
+{
+ "id": "md-13",
+ "titleEn": "Five-Year-Old With a Bee Sting at the Park - Paediatric Anaphylaxis",
+ "type": "medical",
+ "priority": "rtc",
+ "sourceScenario": "data/practical/scenarios-2.json#md-13",
+ "patient": {
+  "name": "Lily Carter",
+  "age": 5,
+  "sex": "female",
+  "weightEn": "20 kg (her mother: she was weighed at her check-up last month)",
+  "affectEn": "limp, drowsy and whimpering; held upright on her mother's lap and slumping against her; face flushed, lips and eyelids visibly swollen; wet cough and audible wheeze",
+  "speechEn": "drowsy and breathless with a hoarse cry: answers her mother's voice with a word or two ('can't... breathe', 'tummy hurts'); her mother answers the history questions for her and the child adds a few words at most"
+ },
+ "scene": {
+  "settingEn": "Confederation Park in Burnaby, afternoon (dispatch 1432). Sunny, 24 °C, dry. The patient is on a grassy area beside the playground, about 10 m from a garbage bin where a few bees are still buzzing. A paved path lets the stretcher come to within 15 m of the patient. Other children and parents stand back. One patient. Hospital is 8 minutes away.",
+  "hazardsEn": [
+   "a few bees still buzzing around the garbage bin about 10 m from the patient - keep the crew and the patient clear",
+   "other children and parents nearby (standing back)"
+  ],
+  "bystanders": [
+   {
+    "who": "mother (holding the child upright on her lap)",
+    "knowsEn": "Her daughter is 5 years old and weighed 20 kg at her check-up last month. She was playing near the garbage bin and was stung once on the left forearm about 15 minutes before you arrived. Within minutes her lips swelled and she broke out in hives; she vomited once about 5 minutes before you arrived, then went floppy and sleepy. Onset sudden, the worst reaction she has ever had; the mother gave her nothing and nothing has helped. Last summer a sting caused a large local swelling only, with no breathing trouble. Mild eczema, no asthma, no medications. No known drug or food allergies; no EpiPen. Lunch at 1230, a popsicle about 1415. No one else was stung. She will ride along in the ambulance."
+   },
+   {
+    "who": "father",
+    "knowsEn": "He carried the child about 10 m away from the garbage bin. He has nothing to add beyond what the mother says."
+   },
+   {
+    "who": "parks worker",
+    "knowsEn": "He flagged you from the path to the grassy area. He knows nothing about the child. He will help, for example keep the paved path clear for the stretcher, if you ask him."
+   }
+  ],
+  "partnerEn": "one partner at your licence level; acts only on your delegation",
+  "equipmentEn": [
+   "oxygen kit with child-sized non-rebreather mask and nasal cannula",
+   "paediatric bag-valve mask with masks",
+   "portable suction unit",
+   "BP cuff (child size) and stethoscope",
+   "pulse oximeter",
+   "glucometer",
+   "epinephrine for IM injection, with syringes and IM needles",
+   "salbutamol (nebulizer kit and MDI with spacer)",
+   "stretcher (cot) and blankets",
+   "PCP only: IV start kit with normal saline",
+   "PCP only: diphenhydramine"
+  ]
+ },
+ "dispatchEn": "1432 hrs. Code 3 to a playground at Confederation Park in Burnaby. 5-year-old female stung by a bee. Her mother reports the child's lips are swelling and she is struggling to breathe. Hospital is 8 minutes away.",
+ "dispatchUpdateEn": "Dispatch adds: the mother says her daughter was stung once on the arm near a garbage bin, has no known bee allergy and no EpiPen, and is now very sleepy; a few bees are still around the bin.",
+ "arrivalEn": "A parks worker flags you from the path to a grassy area beside the playground. It is a sunny afternoon, 24 °C and dry, and the paved path lets the stretcher come to within 15 m. The father has carried the child about 10 m away from the garbage bin, where a few bees are still buzzing. Other children and parents are standing back. Your partner is right behind you with the kits. One patient.",
+ "firstLookEn": "A small girl limp and drowsy on her mother's lap, held upright and slumping against her mother. Her lips are visibly swollen and her face is flushed. She has a wet cough and you can hear a wheeze from where you stand. A small amount of vomit is on the grass beside them.",
+ "primary": {
+  "locEn": "Responds to voice (AVPU = V): drowsy and whimpering, answering her mother's voice with a word or two ('can't... breathe', 'tummy hurts').",
+  "airwayEn": "Lips and eyelids swollen, hoarse cry, no stridor. She vomited once and a little vomit is still in her mouth. Airway patent but at risk.",
+  "breathingEn": "Rate 36, laboured, with retractions and audible wheeze. Wet cough.",
+  "circulationEn": "Radial pulse 146, weak, regular. Hands cool. No external bleeding.",
+  "rbsEn": "Modified rapid body survey for a medical patient: one sting site on the left forearm with the stinger and venom sac still embedded and local swelling; widespread urticaria (hives) over the chest, back and limbs; no other stings; no trauma. Skin: face flushed, widespread hives, hands cool (skin is given automatically during the RBS). C-spine not indicated: a medical call, she sat down on the grass with no fall and no head strike.",
+  "skinEn": "face flushed, widespread urticaria (hives) over chest, back and limbs, hands cool"
+ },
+ "history": {
+  "ccEn": "Child (a word or two): \"Can't... breathe. Tummy hurts.\" Mother: \"A bee stung her on the arm and her lips swelled up. Now she's struggling to breathe and she's so sleepy.\"",
+  "opqrst": {
+   "oEn": "Mother: \"It was all at once. She was playing by the garbage bin and a bee stung her once on the left forearm. Within minutes her lips swelled and she broke out in hives.\"",
+   "pEn": "Mother: \"Nothing has helped. I didn't give her anything.\"",
+   "qEn": "Child: \"Tummy... hurts.\" Mother: \"She says it's hard to breathe. She hasn't said anything else about how it feels.\"",
+   "rEn": "Mother: \"The sting is on her left forearm. The hives are all over her chest, back, arms and legs, and her lips and eyelids are swollen.\"",
+   "sEn": "Mother: \"It's the worst reaction she's ever had.\"",
+   "tEn": "Mother: \"She was stung about 15 minutes before you got here. Her lips swelled within minutes, she threw up once about 5 minutes before you arrived, and then she went floppy and sleepy.\""
+  },
+  "painScoreEn": "Shown the faces scale for the bee sting on her arm, the child points to 2 out of 10.",
+  "sample": {
+   "sEn": "Mother: \"Her lips and eyelids are swollen, she's covered in hives, she's wheezy and coughing, she threw up once, and her tummy hurts. Now she's very sleepy.\" Child: \"Can't... breathe.\"",
+   "aEn": "Mother: \"No allergies that we know of - no drugs, no foods. She's never had an EpiPen. Last summer a sting gave her a big local swelling and that was all, no trouble with her breathing.\"",
+   "mEn": "Mother: \"Nothing. She doesn't take any medications. I haven't given her anything for this.\"",
+   "pEn": "Mother: \"She has mild eczema. No asthma. She's five and she weighed 20 kilos at her check-up last month.\"",
+   "lEn": "Mother: \"Lunch around 12:30, and a popsicle about a quarter past two.\"",
+   "eEn": "Mother: \"She was playing near the garbage bin when a bee stung her once on the left forearm, and then it all came on within minutes.\""
+  },
+  "fe": {
+   "generalEn": "Mother: \"She was healthy and playing normally until the sting.\"",
+   "cnsEn": "Mother: \"She's dizzy and sleepy. No headache, no seizure.\"",
+   "respiratoryEn": "Mother: \"She's got a wheezy cough and a hoarse voice.\" Child: \"My chest feels tight.\"",
+   "cardiovascularEn": "Child: \"My heart is going fast.\" Mother: \"She's never had any heart problems.\"",
+   "giGuEn": "Child: \"My tummy hurts.\" Mother: \"She threw up once. No diarrhea.\"",
+   "integumentaryEn": "Mother: \"She's itchy all over with hives, and she has mild eczema on her elbows.\"",
+   "musculoskeletalEn": "Mother: \"Her left forearm is sore where the bee stung her. Nothing else hurts.\"",
+   "endocrineEn": "Mother: \"No, nothing like that. She doesn't have diabetes.\"",
+   "eentEn": "Mother: \"Her lips and eyelids are swollen and her eyes are itchy.\" Child: \"My throat feels funny.\""
+  }
+ },
+ "findings": {
+  "headNeckEn": "Lip and eyelid swelling, hoarse voice, no stridor.",
+  "chestLungsEn": "Expiratory wheeze in all fields on 6-site auscultation, equal air entry on both sides.",
+  "abdomenEn": "Soft, with mild generalized tenderness.",
+  "backEn": "Urticaria across the back.",
+  "lowerExtremitiesEn": "Urticaria on both legs. Circulation, sensation and movement intact.",
+  "upperExtremitiesEn": "LEFT forearm: sting site red and swollen, about 4 cm across; the stinger has already been scraped off (if the candidate has not removed it, it is still embedded); urticaria; circulation, sensation and movement intact. RIGHT arm: urticaria; circulation, sensation and movement intact."
+ },
+ "vitalsSets": [
+  {
+   "set": 1,
+   "unlock": {
+    "always": true
+   },
+   "unlockNoteEn": "baseline, before epinephrine (required before initiating the protocol); unchanged until epinephrine has had time to work",
+   "gcs": {
+    "total": 13,
+    "e": 3,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "72/40",
+   "pulse": {
+    "rate": 146,
+    "rhythm": "regular",
+    "strength": "weak",
+    "rawEn": "146 weak regular"
+   },
+   "resp": {
+    "rate": 36,
+    "depth": "laboured, with retractions",
+    "character": "audible wheeze",
+    "rawEn": "36 laboured with wheeze and retractions"
+   },
+   "skin": "flushed, urticaria, hands cool",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "89% on room air",
+   "bgl": "5.6 mmol/L",
+   "temp": null
+  },
+  {
+   "set": 2,
+   "unlock": {
+    "allOf": [
+     {
+      "afterEvent": "drug:epinephrine"
+     },
+     {
+      "anyOf": [
+       {
+        "afterEvent": "move:load"
+       },
+       {
+        "elapsedMs": 480000
+       }
+      ]
+     }
+    ]
+   },
+   "unlockNoteEn": "about 5 minutes after the first epinephrine dose, en route: a PARTIAL response - BP still under 90 and she is still wheezing, so the second epinephrine dose is required now",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "82/50",
+   "pulse": {
+    "rate": 138,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "138 regular"
+   },
+   "resp": {
+    "rate": 30,
+    "depth": "wheeze reduced but still present",
+    "character": "no stridor",
+    "rawEn": "30, wheeze reduced but present, no stridor"
+   },
+   "skin": "flushed, hives, hands cool",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "94% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  },
+  {
+   "set": 3,
+   "unlock": {
+    "afterEvent": "drug:epinephrine",
+    "count": 2
+   },
+   "unlockNoteEn": "the next check about 5 minutes after the second epinephrine dose (and the PCP fluid bolus): improving. The scenario states only BP, pulse, SpO2 and the wheeze; every other value is carried over unchanged from set 2",
+   "gcs": {
+    "total": 14,
+    "e": 4,
+    "v": 4,
+    "m": 6
+   },
+   "bp": "94/58",
+   "pulse": {
+    "rate": 126,
+    "rhythm": "regular",
+    "strength": "normal",
+    "rawEn": "126 regular"
+   },
+   "resp": {
+    "rate": 30,
+    "depth": "wheeze mild",
+    "character": "no stridor",
+    "rawEn": "30, wheeze mild, no stridor"
+   },
+   "skin": "flushed, hives, hands cool",
+   "pupils": "equal and reactive (PERL)",
+   "spo2": "97% on 15 L NRB",
+   "bgl": null,
+   "temp": null
+  }
+ ],
+ "stateChanges": [],
+ "expected": [
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Acknowledge; plan epinephrine (weight-based paediatric dose), child-sized oxygen mask, suction, BVM, salbutamol, early transport",
+   "triggers": [
+    "copy dispatch",
+    "bring the epinephrine and the paediatric kit",
+    "bring the epinephrine and the pediatric kit",
+    "child-sized oxygen mask",
+    "suction and the BVM",
+    "weight-based epinephrine",
+    "early transport"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Recognize from dispatch a likely unstable paediatric anaphylaxis (lip swelling, breathing difficulty, sleepy child) and plan to obtain the child's weight on arrival",
+   "triggers": [
+    "sounds like anaphylaxis",
+    "likely anaphylaxis",
+    "this is likely unstable",
+    "possible airway swelling",
+    "I'll ask for her weight",
+    "get her weight on arrival"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "dispatch",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Anticipate bees still present at the scene; plan PPE and a safe approach",
+   "triggers": [
+    "bees are still around",
+    "bees still around the bin",
+    "stay clear of the bees",
+    "keep clear of the bees",
+    "watch for the bees",
+    "safe approach"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "dispatch",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assign crew roles before arrival: one member on the patient and the protocol, one on the stretcher and egress (p.55)",
+   "triggers": [
+    "I'll take the patient",
+    "you take the stretcher",
+    "you're on the stretcher and egress",
+    "I'll run the protocol",
+    "crew roles",
+    "assign roles"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize hazards (bees still near the garbage bin - keep crew and patient clear), environment, nature of illness (allergic reaction to a bee sting), number of patients (1)",
+   "triggers": [
+    "scene is safe",
+    "scene safety",
+    "bees near the garbage bin",
+    "one patient",
+    "nature of illness",
+    "any hazards",
+    "allergic reaction to a bee sting"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Don gloves and eye protection",
+   "triggers": [
+    "gloves on",
+    "putting on gloves",
+    "eye protection",
+    "goggles",
+    "PPE",
+    "BSI"
+   ]
+  },
+  {
+   "itemId": "visual-assessment",
+   "phase": "scene",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "First look: limp, drowsy child on her mother's lap, swollen lips, flushed face, wet cough and audible wheeze, vomit on the grass",
+   "triggers": [
+    "first impression",
+    "general impression",
+    "she looks limp",
+    "limp and drowsy",
+    "her lips are swollen",
+    "she's flushed"
+   ]
+  },
+  {
+   "itemId": "scene-ppe",
+   "phase": "scene",
+   "weight": 3,
+   "licence": "both",
+   "actionEn": "Confirm with the mother that no one else was stung",
+   "triggers": [
+    "anyone else stung",
+    "anyone else been stung",
+    "anyone else get stung",
+    "other people stung",
+    "other children stung"
+   ]
+  },
+  {
+   "itemId": "loc-avpu",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Assess LOC / AVPU: responds to Verbal, drowsy - a decreased LOC finding",
+   "triggers": [
+    "AVPU",
+    "level of consciousness",
+    "responds to voice",
+    "responds to verbal",
+    "can you hear me",
+    "alert or drowsy"
+   ]
+  },
+  {
+   "itemId": "delicate-spine",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Verbalize c-spine not indicated (medical, no fall, no head strike)",
+   "triggers": [
+    "no c-spine concern",
+    "c-spine not indicated",
+    "no spinal precautions",
+    "no head strike",
+    "no mechanism for spinal injury",
+    "medical call no spinal"
+   ]
+  },
+  {
+   "itemId": "airway",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess airway - swollen lips and eyelids, hoarse cry, vomit in the mouth; clear it and keep suction ready (paediatric suction 10 seconds at most, p.45)",
+   "triggers": [
+    "check the airway",
+    "airway is patent",
+    "airway is at risk",
+    "look in her mouth",
+    "suction the vomit",
+    "clear the vomit"
+   ]
+  },
+  {
+   "itemId": "breathing",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess breathing - rate, effort, retractions, wheeze",
+   "triggers": [
+    "check her breathing",
+    "assess her breathing",
+    "breathing rate",
+    "count her respirations",
+    "work of breathing",
+    "chest rise"
+   ]
+  },
+  {
+   "itemId": "circulation",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Assess circulation - fast, weak radial pulse; cool hands",
+   "triggers": [
+    "radial pulse",
+    "check her pulse",
+    "pulse rate and quality",
+    "feel her hands",
+    "any major bleeding",
+    "rate and strength of the pulse"
+   ]
+  },
+  {
+   "itemId": "rapid-body-survey",
+   "phase": "primary",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Perform a modified rapid body survey: find the sting site and the embedded stinger, look for hives and other stings, rule out trauma",
+   "triggers": [
+    "rapid body survey",
+    "modified RBS",
+    "RBS",
+    "look for the sting site",
+    "check for other stings",
+    "check for hives",
+    "head to toe"
+   ]
+  },
+  {
+   "itemId": "skin-primary",
+   "phase": "primary",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Note skin: flushed, urticaria, cool hands",
+   "triggers": [
+    "check her skin",
+    "skin colour",
+    "skin temperature",
+    "feel her skin",
+    "skin condition",
+    "colour temperature and condition"
+   ]
+  },
+  {
+   "itemId": "oxygen",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "High-flow oxygen 15 L/min by child-sized non-rebreather mask to keep SpO2 at or above 94% (shortness of breath and shock need high flow, p.50)",
+   "triggers": [
+    "high flow oxygen",
+    "apply oxygen",
+    "putting her on oxygen",
+    "non-rebreather at 15",
+    "oxygen at 15 litres",
+    "15 litres of oxygen",
+    "15 liters of oxygen"
+   ]
+  },
+  {
+   "itemId": "patient-position",
+   "phase": "primary",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Lay the child SUPINE (not held upright on her mother's lap) and do NOT walk her (per the Anaphylaxis protocol, p.55)",
+   "triggers": [
+    "lay her flat",
+    "lay her supine",
+    "lie her down",
+    "supine position",
+    "position her supine",
+    "put her flat"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Categorize as RTC and act with urgency",
+   "triggers": [
+    "this is RTC",
+    "rapid transport",
+    "she's unstable",
+    "priority patient",
+    "load and go",
+    "code 3 to hospital"
+   ]
+  },
+  {
+   "itemId": "transport",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Epinephrine given on scene, then ready to load within 15 minutes - no full secondary survey on scene",
+   "triggers": [
+    "epi then we go",
+    "give the epi here then transport",
+    "ready to load within 15",
+    "let's package her",
+    "no full secondary on scene",
+    "get her to the stretcher"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Delegate the partner to prepare the stretcher and egress (explicitly required by the Anaphylaxis protocol, p.55)",
+   "triggers": [
+    "partner, prep the stretcher",
+    "get the stretcher ready",
+    "prepare the egress",
+    "bring the stretcher up the path",
+    "have the cot ready",
+    "clear the path"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "transport",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Manage the parent: explain what is happening, keep the mother with the child, arrange for her to ride along, and keep the child supine for the carry to the stretcher",
+   "triggers": [
+    "you can ride along",
+    "you can ride with us",
+    "mom can come with us",
+    "I'll explain what we're doing",
+    "stay with her",
+    "we're giving her a medicine"
+   ]
+  },
+  {
+   "itemId": "chief-complaint",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Establish chief complaint: swollen lips and difficulty breathing after a bee sting",
+   "triggers": [
+    "what happened",
+    "what's the problem",
+    "why did you call",
+    "chief complaint",
+    "what's wrong with her",
+    "what's going on"
+   ]
+  },
+  {
+   "itemId": "history-of-cc",
+   "phase": "history",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "HxC/C with OPQRRRST/LOTARP: time of the sting, number of stings, time to the first signs, progression (lips, hives, vomiting, drowsiness), reaction to previous stings",
+   "triggers": [
+    "when was she stung",
+    "how many times was she stung",
+    "when did the sting happen",
+    "how quickly did the swelling start",
+    "has she been stung before",
+    "OPQRST"
+   ]
+  },
+  {
+   "itemId": "pain-scale",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pain score at the sting site using a faces scale",
+   "triggers": [
+    "faces scale",
+    "pain scale",
+    "how much does it hurt",
+    "show her the faces",
+    "rate the pain",
+    "pain score"
+   ]
+  },
+  {
+   "itemId": "past-medical-history",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "PMHx (mild eczema, no asthma)",
+   "triggers": [
+    "medical history",
+    "any medical conditions",
+    "does she have asthma",
+    "past medical history",
+    "health problems",
+    "any conditions"
+   ]
+  },
+  {
+   "itemId": "medications",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Medications, and whether anything was given for this reaction",
+   "triggers": [
+    "any medications",
+    "does she take any medicine",
+    "did you give her anything",
+    "give her anything for this",
+    "any inhalers",
+    "what medications"
+   ]
+  },
+  {
+   "itemId": "allergies",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Allergies (none known; previous large local reaction to a sting; no EpiPen)",
+   "triggers": [
+    "any allergies",
+    "allergic to anything",
+    "known allergies",
+    "drug allergies",
+    "food allergies",
+    "any allergy"
+   ]
+  },
+  {
+   "itemId": "last-oral-intake",
+   "phase": "history",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "LOI (lunch and a popsicle)",
+   "triggers": [
+    "when did she last eat",
+    "last oral intake",
+    "last meal",
+    "anything to eat or drink",
+    "LOI",
+    "what did she eat today"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "history",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Use the mother as the history source and get the child's weight (20 kg) before any drug dose is calculated",
+   "triggers": [
+    "how much does she weigh",
+    "what's her weight",
+    "what does she weigh",
+    "how many kilos",
+    "her weight in kilograms",
+    "ask the mother her weight"
+   ]
+  },
+  {
+   "itemId": "gcs",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "GCS with components, adapted for a child (13: E3 V4 M6)",
+   "triggers": [
+    "GCS",
+    "Glasgow coma",
+    "eyes verbal motor",
+    "E3 V4 M6",
+    "paediatric GCS",
+    "pediatric GCS"
+   ]
+  },
+  {
+   "itemId": "blood-pressure",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "BP by auscultation with a child-sized cuff - recognize systolic under 90 as an anaphylaxis instability criterion (p.55)",
+   "triggers": [
+    "blood pressure",
+    "BP",
+    "child-sized cuff",
+    "paediatric cuff",
+    "auscultate a BP",
+    "systolic"
+   ]
+  },
+  {
+   "itemId": "pulse",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Pulse rate/strength/rhythm",
+   "triggers": [
+    "pulse",
+    "heart rate",
+    "rate rhythm and strength",
+    "pulse quality",
+    "count the pulse"
+   ]
+  },
+  {
+   "itemId": "respirations",
+   "phase": "vitals",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Respirations rate/depth/work of breathing incl wheeze and retractions",
+   "triggers": [
+    "respirations",
+    "resp rate",
+    "respiratory rate",
+    "breathing rate",
+    "rate depth and work of breathing",
+    "count respirations"
+   ]
+  },
+  {
+   "itemId": "skin-vitals",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Skin hands-on: temperature, colour, condition, extent of urticaria",
+   "triggers": [
+    "skin",
+    "colour temperature condition",
+    "feel the skin",
+    "extent of the hives",
+    "skin signs"
+   ]
+  },
+  {
+   "itemId": "pupils",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Pupils",
+   "triggers": [
+    "pupils",
+    "PERL",
+    "check her pupils",
+    "pupils equal and reactive",
+    "penlight"
+   ]
+  },
+  {
+   "itemId": "pulse-oximetry",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "SpO2 with calibration",
+   "triggers": [
+    "SpO2",
+    "pulse ox",
+    "sat probe",
+    "oxygen saturation",
+    "sats",
+    "calibration"
+   ]
+  },
+  {
+   "itemId": "blood-glucose",
+   "phase": "vitals",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "BGL - reasonable with decreased LOC in a child (temperature is not indicated)",
+   "triggers": [
+    "blood glucose",
+    "BGL",
+    "blood sugar",
+    "glucometer",
+    "finger poke",
+    "check her sugar"
+   ]
+  },
+  {
+   "itemId": "fe-general-health",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - General health",
+   "triggers": [
+    "general health",
+    "has she been well",
+    "was she well before",
+    "any fever or illness lately",
+    "functional enquiry general"
+   ]
+  },
+  {
+   "itemId": "fe-cns",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - CNS",
+   "triggers": [
+    "any headache",
+    "is she dizzy",
+    "any seizure",
+    "dizziness",
+    "neurological enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-respiratory",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Respiratory (pertinent)",
+   "triggers": [
+    "any cough",
+    "chest tightness",
+    "does her chest feel tight",
+    "hoarse voice",
+    "respiratory enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-cardiovascular",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Cardiovascular",
+   "triggers": [
+    "heart racing",
+    "palpitations",
+    "heart problems",
+    "does her heart feel fast",
+    "cardiovascular enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-gi-gu",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - GI/GU (vomiting and abdominal pain are anaphylaxis signs, p.55)",
+   "triggers": [
+    "any vomiting",
+    "any diarrhea",
+    "does her tummy hurt",
+    "abdominal pain",
+    "GI GU enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-integumentary",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Integumentary (urticaria)",
+   "triggers": [
+    "is she itchy",
+    "any rash",
+    "any eczema",
+    "skin changes",
+    "integumentary enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-musculoskeletal",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Musculoskeletal",
+   "triggers": [
+    "does her arm hurt",
+    "any other pain",
+    "neck or back pain",
+    "muscle or joint pain",
+    "musculoskeletal enquiry"
+   ]
+  },
+  {
+   "itemId": "fe-endocrine",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - Endocrine",
+   "triggers": [
+    "diabetes",
+    "thyroid",
+    "endocrine enquiry",
+    "any sugar problems",
+    "is she diabetic"
+   ]
+  },
+  {
+   "itemId": "fe-eent",
+   "phase": "fe",
+   "weight": 5,
+   "licence": "pcp",
+   "actionEn": "FE - EENT (angioedema)",
+   "triggers": [
+    "eyes ears nose throat",
+    "itchy eyes",
+    "does her throat feel funny",
+    "swollen eyelids",
+    "EENT",
+    "sore throat"
+   ]
+  },
+  {
+   "itemId": "pe-head-neck",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Head/neck exam incl airway swelling reassessment",
+   "triggers": [
+    "head and neck",
+    "check the neck",
+    "trachea midline",
+    "reassess the lip swelling",
+    "look at the lips and eyelids",
+    "JVD"
+   ]
+  },
+  {
+   "itemId": "pe-chest-lungs",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Chest exam with 6-site auscultation, bilateral comparison",
+   "triggers": [
+    "auscultate the chest",
+    "lung sounds",
+    "six sites",
+    "listen to her chest",
+    "compare both sides",
+    "air entry"
+   ]
+  },
+  {
+   "itemId": "pe-abdomen",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Abdomen exam",
+   "triggers": [
+    "palpate the abdomen",
+    "four quadrants",
+    "abdominal exam",
+    "feel her belly",
+    "abdomen soft or tender"
+   ]
+  },
+  {
+   "itemId": "pe-back",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Back exam",
+   "triggers": [
+    "check her back",
+    "back exam",
+    "palpate the spine",
+    "run my hands down her back",
+    "posterior exam"
+   ]
+  },
+  {
+   "itemId": "pe-lower-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Lower extremities",
+   "triggers": [
+    "check her legs",
+    "lower extremities",
+    "both legs",
+    "CSM in the legs",
+    "feet and ankles"
+   ]
+  },
+  {
+   "itemId": "pe-upper-extremities",
+   "phase": "exam",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Upper extremities: sting site, confirm the stinger is removed, CSM",
+   "triggers": [
+    "check the arms",
+    "upper extremities",
+    "CSM in both arms",
+    "look at the left forearm",
+    "check her right arm",
+    "both arms"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Initiate the Anaphylaxis protocol with the correct indications (signs + bee-sting exposure + instability: systolic under 90, respiratory distress, decreased LOC) and with the baseline vitals done first (p.55)",
+   "triggers": [
+    "anaphylaxis protocol",
+    "initiating the anaphylaxis protocol",
+    "meets the criteria for epinephrine",
+    "indications for epinephrine are met",
+    "signs exposure and unstable"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Remove the allergen: scrape off the embedded stinger (p.55)",
+   "triggers": [
+    "scrape off the stinger",
+    "scrape the stinger",
+    "scraping the stinger",
+    "remove the stinger",
+    "flick off the stinger",
+    "take the stinger out"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "State the weight (20 kg) and calculate the epinephrine dose: 0.01 mg/kg x 20 kg = 0.2 mg IM, maximum 0.5 mg - never the 0.5 mg adult dose (p.66)",
+   "triggers": [
+    "0.01 milligrams per kilo",
+    "0.01 milligrams per kilogram",
+    "0.01 mg per kg",
+    "0.01 mg/kg",
+    "zero point zero one",
+    "weight based dose"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Administer epinephrine 0.2 mg IM with the 6 rights, correct site (anterolateral thigh) and IM needle; note the time",
+   "triggers": [
+    "epinephrine 0.2 milligrams IM",
+    "epinephrine 0.2 mg IM",
+    "0.2 milligrams IM",
+    "anterolateral thigh",
+    "IM needle",
+    "six rights"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Keep the child supine and do not walk her or carry her upright to the stretcher (p.55)",
+   "triggers": [
+    "keep her supine",
+    "keep her flat",
+    "she stays lying down",
+    "do not walk her",
+    "don't walk her",
+    "don't carry her upright",
+    "carry her flat"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Give epinephrine first: treat bronchospasm with salbutamol only AFTER epinephrine, and never use salbutamol or an antihistamine instead of it (p.55)",
+   "triggers": [
+    "epinephrine first",
+    "epi first",
+    "salbutamol after the epinephrine",
+    "salbutamol after the epi",
+    "diphenhydramine after the epi",
+    "epi before salbutamol"
+   ]
+  },
+  {
+   "itemId": "skill-drug-admin",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: after epinephrine give salbutamol at the weight-based dose (nebulized 5 mg, or MDI 5 x 100 mcg for the 10-20 kg band - 20 kg is not over 20 kg) and diphenhydramine (p.64: 25-50 mg, no paediatric dose printed - the lowest listed dose, 25 mg IV)",
+   "triggers": [
+    "salbutamol 5 mg",
+    "nebulized salbutamol",
+    "five puffs",
+    "5 puffs",
+    "diphenhydramine 25 milligrams",
+    "diphenhydramine 25 mg",
+    "Benadryl 25"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize repeat dosing: epinephrine 0.2 mg IM may be repeated up to 3 times if she is still unstable at the 5-6 minute reassessment",
+   "triggers": [
+    "repeat the epinephrine",
+    "repeat the epi",
+    "may repeat up to three times",
+    "up to 3 times",
+    "if she's still unstable repeat",
+    "reassess in five minutes and repeat"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "interventions",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Verbalize withholding Entonox (altered LOC, inability to comply, shock caution - p.65) and oral acetaminophen/ibuprofen (vomiting, drowsy); the mild sting-site pain does not delay epinephrine",
+   "triggers": [
+    "no Entonox",
+    "withhold the Entonox",
+    "Entonox is contraindicated",
+    "not giving Entonox",
+    "no oral pain medication",
+    "nothing by mouth"
+   ]
+  },
+  {
+   "itemId": "ongoing-abc-i",
+   "phase": "ongoing",
+   "weight": 15,
+   "licence": "both",
+   "actionEn": "Reassess ABCs, the airway swelling and all interventions 5 minutes after epinephrine and after each move (including loading the stretcher)",
+   "triggers": [
+    "reassess ABCs",
+    "recheck airway breathing circulation",
+    "reassess the airway swelling",
+    "reassess after the move",
+    "recheck my interventions",
+    "ABCs again"
+   ]
+  },
+  {
+   "itemId": "overall-call-management",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "both",
+   "actionEn": "Second full set of vitals within 5-6 minutes and interpret it as a partial response (BP still under 90, wheeze persists)",
+   "triggers": [
+    "second set of vitals",
+    "repeat vitals",
+    "another set of vitals",
+    "partial response",
+    "still hypotensive",
+    "recheck her blood pressure"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 100,
+   "licence": "both",
+   "actionEn": "Repeat epinephrine 0.2 mg IM (same weight-based dose) when the second set shows she is still hypotensive and wheezing; up to 3 repeats are allowed (p.66)",
+   "triggers": [
+    "second dose of epinephrine",
+    "second dose of epi",
+    "giving the second dose",
+    "repeating the epinephrine now",
+    "another 0.2 milligrams",
+    "second epinephrine"
+   ]
+  },
+  {
+   "itemId": "protocols",
+   "phase": "ongoing",
+   "weight": 25,
+   "licence": "pcp",
+   "actionEn": "PCP: vascular access and a 20 mL/kg (400 mL) fluid bolus because she remains hypotensive, reassessed when the bolus is in (p.55)",
+   "triggers": [
+    "start an IV",
+    "vascular access",
+    "fluid bolus",
+    "20 mL per kilo",
+    "400 mL",
+    "400 mils of saline"
+   ]
+  },
+  {
+   "itemId": "notification",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "En-route notification for a critical paediatric patient (airway swelling, hypotension, 20 kg)",
+   "triggers": [
+    "notify the hospital",
+    "patch to the hospital",
+    "pre-alert",
+    "call ahead",
+    "paediatric anaphylaxis inbound",
+    "pediatric anaphylaxis inbound"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Complete hand-off: age, weight, allergen exposure and timeline, baseline and repeat vitals, response to treatment",
+   "triggers": [
+    "handover",
+    "hand-off report",
+    "this is a 5-year-old",
+    "report to the nurse",
+    "transfer of care",
+    "verbal report"
+   ]
+  },
+  {
+   "itemId": "hand-off-report",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "State each epinephrine dose with its weight-based calculation, time, route and response (0.2 mg IM, twice)",
+   "triggers": [
+    "each epinephrine dose",
+    "0.2 milligrams IM twice",
+    "first dose at",
+    "two doses of 0.2",
+    "dose calculation",
+    "epinephrine times and doses"
+   ]
+  },
+  {
+   "itemId": "documentation",
+   "phase": "handoff",
+   "weight": 5,
+   "licence": "both",
+   "actionEn": "Accurate PCR within 5 minutes (weight and its source, dose calculation, time of each dose and of the fluid bolus)",
+   "triggers": [
+    "PCR",
+    "patient care report",
+    "charting",
+    "documentation",
+    "write up the call",
+    "weight and its source"
+   ]
+  }
+ ],
+ "specialEvents": [
+  {
+   "key": "patient-walks",
+   "descriptionEn": "candidate lets the child stand or walk (walks her, or asks her to walk, to the stretcher, along the path or to the ambulance)"
+  },
+  {
+   "key": "child-kept-upright",
+   "descriptionEn": "candidate deliberately keeps the child sitting up or upright as the plan of care or transport - leaves her sitting on her mother's lap, sits her up, or has her carried upright in someone's arms to the stretcher - after her low blood pressure or distress is known, instead of laying her supine. Holding her briefly to clear vomit or while setting up equipment is NOT this event"
+  },
+  {
+   "key": "epi-adult-dose",
+   "descriptionEn": "candidate actually gives (not merely mentions as the maximum) epinephrine at the 0.5 mg adult dose, or any adult-sized dose not calculated from her weight, to this 20 kg child. A dose stated and corrected before it is given is NOT this event"
+  },
+  {
+   "key": "epi-wrong-dose",
+   "descriptionEn": "candidate actually gives epinephrine at a dose other than 0.2 mg (0.01 mg/kg x 20 kg) that is not the adult dose. Record the 0.5 mg adult dose as epi-adult-dose instead"
+  },
+  {
+   "key": "epi-wrong-route",
+   "descriptionEn": "candidate gives epinephrine by a route other than IM (e.g. IV or subcutaneous)"
+  },
+  {
+   "key": "epi-second-dose",
+   "descriptionEn": "candidate actually gives a second epinephrine dose (the repeat after the first 0.2 mg IM dose). Saying they would repeat it if she stays unstable is NOT this event"
+  },
+  {
+   "key": "salbutamol-wrong-dose",
+   "descriptionEn": "candidate actually gives salbutamol at a dose other than the 10-20 kg band dose for this 20 kg child: nebulized other than 5 mg, or MDI other than 5 x 100 mcg (for example 10 x 100 mcg, the over 20 kg dose)"
+  },
+  {
+   "key": "diphenhydramine-wrong-dose",
+   "descriptionEn": "PCP actually gives diphenhydramine at more than 25 mg (for example the full 50 mg adult dose). 25 mg, or a weight-based 1 mg/kg (about 20 mg), is acceptable"
+  },
+  {
+   "key": "bolus-no-reassess",
+   "descriptionEn": "PCP runs the fluid bolus past the 20 mL/kg (400 mL) volume, or hangs another bag, without reassessing the patient (BP / vitals / ABCs) once the 400 mL is in"
+  }
+ ],
+ "keywordEvents": [
+  {
+   "event": "epi-second-dose",
+   "regex": "\\b(second|2nd|another|repeat(?:ing|ed)?|again|further|next)\\b[^;!?]{0,40}\\b(?:epi|epinephrine|adrenaline)\\b|\\b(?:epi|epinephrine|adrenaline)\\b[^;!?]{0,25}\\b(?:again|second|2nd)\\b",
+   "blockRegex": "\\b(will|i'll|we'll|going to|gonna|if|plan\\w*|prepar\\w*|would|could|should|may|might|need\\w*|consider\\w*|ready|until|unless|whether|not|no|never|without|can't|cannot|don't|won't|then repeat)\\b"
+  }
+ ],
+ "drugs": [
+  {
+   "key": "epinephrine",
+   "namesEn": [
+    "epinephrine",
+    "epi",
+    "adrenaline",
+    "EpiPen",
+    "IM epi"
+   ],
+   "doseEn": "0.01 mg/kg IM to a maximum of 0.5 mg: 0.2 mg IM for this 20 kg child (NEVER the 0.5 mg adult dose), into the anterolateral thigh with an IM needle, after the baseline vitals; may be repeated up to 3 times - a second 0.2 mg dose is due at the 5-6 minute reassessment when she is still hypotensive and wheezing",
+   "licence": "both",
+   "indicationsEn": "anaphylaxis: signs + exposure to an allergen + unstable (BP < 90 mmHg, decreased LOC, respiratory distress) - all present here",
+   "contraindicationsEn": "no absolute contraindications in life-threatening situations such as anaphylaxis",
+   "cautionsEn": "further hypotension if administered too quickly"
+  },
+  {
+   "key": "salbutamol",
+   "namesEn": [
+    "salbutamol",
+    "Ventolin",
+    "albuterol",
+    "salbutamol neb",
+    "puffer"
+   ],
+   "doseEn": "she weighs exactly 20 kg, the 10-20 kg band: nebulized 5 mg, or MDI 5 x 100 mcg per course (NOT the over 20 kg dose of 10 x 100 mcg); may repeat; for bronchospasm ONLY AFTER epinephrine. Contraindication: known hypersensitivity to salbutamol",
+   "licence": "both"
+  },
+  {
+   "key": "diphenhydramine",
+   "namesEn": [
+    "diphenhydramine",
+    "Benadryl",
+    "antihistamine"
+   ],
+   "doseEn": "p.64 lists 25-50 mg IV or PO and no paediatric dose: give the lowest listed dose, 25 mg IV (she is vomiting); a weight-based 1 mg/kg, about 20 mg, is also acceptable textbook practice; ONLY AFTER epinephrine; hypotension is a listed adverse effect, so give it with the bolus running",
+   "licence": "pcp"
+  },
+  {
+   "key": "normal-saline",
+   "namesEn": [
+    "normal saline",
+    "NS",
+    "saline",
+    "fluid bolus",
+    "IV fluids",
+    "sodium chloride"
+   ],
+   "doseEn": "20 mL/kg IV bolus = 400 mL for 20 kg (maximum 2 L, reassess every 500 mL; a 400 mL bolus is reassessed when it is in), because she remains hypotensive",
+   "licence": "pcp"
+  },
+  {
+   "key": "entonox",
+   "namesEn": [
+    "Entonox",
+    "nitrous oxide",
+    "nitrous",
+    "laughing gas",
+    "N2O"
+   ],
+   "doseEn": "self-administered by inhalation - WITHHELD in this scenario: altered level of consciousness and inability to comply are contraindications and shock is a caution (p.65); the mild sting-site pain never delays epinephrine. If given, report drug:entonox",
+   "licence": "both"
+  },
+  {
+   "key": "acetaminophen",
+   "namesEn": [
+    "acetaminophen",
+    "Tylenol",
+    "paracetamol",
+    "Tempra"
+   ],
+   "doseEn": "oral - WITHHELD in this scenario: she is vomiting and drowsy with a threatened airway (p.58: nausea and vomiting argue against it). If given, report drug:acetaminophen",
+   "licence": "both"
+  },
+  {
+   "key": "ibuprofen",
+   "namesEn": [
+    "ibuprofen",
+    "Advil",
+    "Motrin"
+   ],
+   "doseEn": "oral - WITHHELD in this scenario: nothing by mouth for a drowsy, vomiting child with a threatened airway (p.68 pediatric dose is weight-based, 10 mg/kg PO). If given, report drug:ibuprofen",
+   "licence": "both"
+  }
+ ],
+ "majorMoves": [
+  "lift-to-cot",
+  "load"
+ ],
+ "protocolRules": [
+  {
+   "id": "epi-given",
+   "check": "present",
+   "event": "drug:epinephrine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Fails to administer a medication indicated by the protocol detrimental to patient care"
+   }
+  },
+  {
+   "id": "epi-after-baseline-vitals",
+   "check": "ordered",
+   "first": "vitals-set-1-complete",
+   "then": "drug:epinephrine",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not complete baseline vital signs prior to initiating the protocol"
+   }
+  },
+  {
+   "id": "epi-repeated-when-still-unstable",
+   "check": "present",
+   "event": "epi-second-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Delay in treatment or subsequent doses of medication (e.g. Epinephrine) potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "epi-max-4-doses",
+   "check": "max_count",
+   "event": "drug:epinephrine",
+   "max": 4,
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "epi-not-the-adult-dose",
+   "check": "absent",
+   "event": "epi-adult-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Performs the protocol with gross incompetence and/or with two or more errors"
+   }
+  },
+  {
+   "id": "epi-weight-based-dose",
+   "check": "absent",
+   "event": "epi-wrong-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "epi-im-route",
+   "check": "absent",
+   "event": "epi-wrong-route",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Administers a medication by the incorrect route"
+   }
+  },
+  {
+   "id": "salbutamol-not-before-epi",
+   "check": "ordered",
+   "first": "drug:epinephrine",
+   "then": "drug:salbutamol",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Major delay in treatment or subsequent doses of medication (IV dextrose, epinephrine) detrimental to patient care"
+   }
+  },
+  {
+   "id": "diphenhydramine-not-before-epi",
+   "check": "ordered",
+   "first": "drug:epinephrine",
+   "then": "drug:diphenhydramine",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Major delay in treatment or subsequent doses of medication (IV dextrose, epinephrine) detrimental to patient care"
+   }
+  },
+  {
+   "id": "salbutamol-weight-band-dose",
+   "check": "absent",
+   "event": "salbutamol-wrong-dose",
+   "licence": "both",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 25,
+    "errorEn": "Gives incorrect dose/volume of drug or fluid"
+   }
+  },
+  {
+   "id": "diphenhydramine-not-full-dose",
+   "check": "absent",
+   "event": "diphenhydramine-wrong-dose",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "skill-drug-admin",
+    "weight": 15,
+    "errorEn": "Performs the skill with an isolated error with the potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "no-walking",
+   "check": "absent",
+   "event": "patient-walks",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 100,
+    "errorEn": "Performs an act that may jeopardize the life/limb of the patient that is not already captured in the major performance criteria (e.g. performing chest compressions on a patient with a pulse)"
+   }
+  },
+  {
+   "id": "supine-not-kept-upright",
+   "check": "absent",
+   "event": "child-kept-upright",
+   "licence": "both",
+   "deduct": {
+    "itemId": "overall-patient-care",
+    "weight": 25,
+    "errorEn": "Performs an act that could aggravate the patient's condition or injury that is not already captured in the major performance criteria (e.g. excessively bumping a fractured leg which causes gross movement and pain)"
+   }
+  },
+  {
+   "id": "entonox-withheld",
+   "check": "absent",
+   "event": "drug:entonox",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Does not rule out all the contraindications, detrimental to patient care"
+   }
+  },
+  {
+   "id": "acetaminophen-withheld",
+   "check": "absent",
+   "event": "drug:acetaminophen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Does not rule out all the contraindications, potentially detrimental to patient care"
+   }
+  },
+  {
+   "id": "ibuprofen-withheld",
+   "check": "absent",
+   "event": "drug:ibuprofen",
+   "licence": "both",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 15,
+    "errorEn": "Does not rule out all the cautions of a medication"
+   }
+  },
+  {
+   "id": "salbutamol-given",
+   "check": "present",
+   "event": "drug:salbutamol",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "diphenhydramine-given",
+   "check": "present",
+   "event": "drug:diphenhydramine",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "saline-given",
+   "check": "present",
+   "event": "drug:normal-saline",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Fails to administer a medication indicated by the protocol not detrimental to patient care (e.g. Entonox for pain)"
+   }
+  },
+  {
+   "id": "bolus-reassess-when-in",
+   "check": "absent",
+   "event": "bolus-no-reassess",
+   "licence": "pcp",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 25,
+    "errorEn": "Performs the protocol with isolated error with potential to be detrimental to patient care"
+   }
+  },
+  {
+   "id": "emr-no-diphenhydramine",
+   "check": "absent",
+   "event": "drug:diphenhydramine",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  },
+  {
+   "id": "emr-no-saline",
+   "check": "absent",
+   "event": "drug:normal-saline",
+   "licence": "emr",
+   "deduct": {
+    "itemId": "protocols",
+    "weight": 100,
+    "errorEn": "Initiated protocol without proper indications (e.g. patient is not DLOC)"
+   }
+  }
+ ],
+ "painManagement": {
+  "applies": false
+ },
+ "notificationFacts": {
+  "ageSex": "5-year-old female, 20 kg",
+  "cc": "anaphylaxis after a bee sting: lip and eyelid swelling, difficulty breathing, drowsy",
+  "moi": null,
+  "hxcc": "stung once on the left forearm by a bee about 15 minutes before our arrival; lips swelled and hives within minutes, vomited once, then went floppy and sleepy; worst reaction she has had; large local reaction to a sting last summer",
+  "vitals": "baseline GCS 13, BP 72/40, pulse 146 weak regular, resp 36 laboured with wheeze and retractions, SpO2 89% on room air, BGL 5.6; 5 minutes after epinephrine GCS 14, BP 82/50, pulse 138, resp 30, SpO2 94% on 15 L NRB",
+  "treatments": "stinger scraped off, supine and not walked, high-flow oxygen 15 L child-sized NRB, epinephrine 0.2 mg IM at 1448 repeated at 1454; PCP: IV with 400 mL fluid bolus, salbutamol after the first epinephrine, diphenhydramine 25 mg IV; ETA 8 minutes",
+  "findings": "lip and eyelid angioedema, hoarse voice, no stridor, wheeze in all fields, widespread urticaria, vomiting; partial response after the first epinephrine dose"
+ },
+ "handoffFacts": {
+  "ageSex": "5-year-old female, 20 kg",
+  "cc": "lip and eyelid swelling and difficulty breathing after a bee sting - anaphylaxis",
+  "moi": null,
+  "hxcc": "stung once on the left forearm near a garbage bin about 15 minutes before our arrival; lip and eyelid swelling and hives within minutes, vomited once about 5 minutes before we arrived, then went floppy and sleepy; sudden onset, worst reaction she has had; nothing given before our arrival; weight 20 kg from her mother",
+  "initialVitals": "GCS 13 (E3 V4 M6), BP 72/40, pulse 146 weak regular, resp 36 laboured with wheeze and retractions, skin flushed with urticaria and cool hands, pupils equal and reactive, SpO2 89% on room air, BGL 5.6",
+  "finalVitals": "5 minutes after the first epinephrine dose: GCS 14 (E4 V4 M6), BP 82/50, pulse 138 regular, resp 30 with wheeze reduced but present and no stridor, skin flushed with hives and cool hands, pupils equal and reactive, SpO2 94% on 15 L NRB - a partial response; if a further check was taken after the second dose: BP 94/58, pulse 126, SpO2 97% on 15 L, wheeze mild",
+  "pmhx": "mild eczema, no asthma; a large local reaction to a sting last summer",
+  "meds": "none; nothing given for this reaction",
+  "allergies": "no known drug or food allergies; no EpiPen; large local reaction to a bee sting last summer",
+  "treatments": "stinger scraped off; supine, not walked; high-flow oxygen 15 L child-sized NRB; epinephrine 0.2 mg IM (0.01 mg/kg x 20 kg) into the anterolateral thigh at 1448 and again at 1454; PCP: IV with a 400 mL fluid bolus, salbutamol after the first epinephrine, diphenhydramine 25 mg IV; Entonox and oral analgesics withheld; RTC transport with en-route notification",
+  "findings": "lip and eyelid angioedema, hoarse voice, no stridor, expiratory wheeze in all fields, widespread urticaria, abdomen soft with mild generalized tenderness, sting site on the left forearm red and swollen with the stinger scraped off; last ate at 1415 (popsicle, lunch at 1230)"
+ },
+ "pcrFacts": {
+  "vitals": "Set 1 (baseline, before epinephrine): GCS 13 (E3 V4 M6), BP 72/40, P 146 weak regular, R 36 laboured with wheeze and retractions, skin flushed with urticaria and cool hands, PERL, SpO2 89% RA, BGL 5.6 mmol/L. Set 2 (5 min after epinephrine, en route): GCS 14 (E4 V4 M6), BP 82/50, P 138 regular, R 30 wheeze reduced but present, no stridor, skin flushed with hives and cool hands, PERL, SpO2 94% on 15 L NRB. If rechecked after the second dose: BP 94/58, P 126, SpO2 97% on 15 L, wheeze mild",
+  "times": "sting about 15 minutes before arrival; vomited about 5 minutes before arrival; epinephrine 0.2 mg IM at 1448 and 1454; PCP: fluid bolus and diphenhydramine at the times the candidate gave them",
+  "weight": "20 kg per her mother (check-up last month) - dose basis for epinephrine, salbutamol and the 20 mL/kg bolus",
+  "cc": "Swollen lips and difficulty breathing after a bee sting (paediatric anaphylaxis)",
+  "hxcc": "Stung once on the left forearm about 15 min before arrival; lip/eyelid swelling and hives within minutes, vomited once, then drowsy; worst reaction ever; weight 20 kg per mother; large local reaction to a sting last summer; sting-site pain 2/10",
+  "pmhx": "Mild eczema; no asthma",
+  "meds": "None; nothing given for this reaction",
+  "allergies": "No known drug or food allergies; no EpiPen; large local reaction to a bee sting last summer",
+  "treatments": [
+   "Stinger scraped off",
+   "Supine, not walked",
+   "High-flow O2 15 L child-sized NRB",
+   "Epinephrine 0.2 mg IM (0.01 mg/kg x 20 kg) anterolateral thigh at 1448; second 0.2 mg IM at 1454",
+   "PCP: IV, 400 mL fluid bolus, salbutamol after epinephrine, diphenhydramine 25 mg IV",
+   "Entonox and oral analgesics withheld (altered LOC, vomiting)",
+   "RTC transport with en-route notification"
+  ],
+  "findings": [
+   "Lip/eyelid angioedema, hoarse voice, wheeze, urticaria, vomiting",
+   "Baseline GCS 13, BP 72/40, pulse 146, SpO2 89% RA, BGL 5.6",
+   "5 min post-epinephrine: GCS 14, BP 82/50, pulse 138, SpO2 94% on 15 L - partial response",
+   "Sting site: left forearm, local swelling, stinger embedded until scraped off"
+  ]
+ },
+ "examinerPrompts": {
+  "locNotDepictedEn": "She is limp and drowsy: she responds to voice only, answering her mother with a word or two ('can't... breathe', 'tummy hurts').",
+  "breathingNotDepictedEn": "She is breathing fast and laboured, with retractions and an audible wheeze.",
+  "missedInjuryEn": null
+ },
+ "trackNotes": {
+  "emrEn": "EMR gives epinephrine 0.2 mg IM (0.01 mg/kg x 20 kg; repeat up to 3 times), scrapes off the stinger, gives high-flow oxygen, keeps the child supine and transports rapidly. Salbutamol is within EMR scope (p.49, p.77) and may follow epinephrine for bronchospasm, although p.55 lists it among the PCP additions; EMR does NOT give diphenhydramine or IV fluids. No Functional Enquiry. Entonox and oral analgesics are withheld (altered LOC, vomiting). Textbook practice (not a BC rubric item): do not squeeze the venom sac when removing the stinger.",
+  "pcpEn": "PCP adds vascular access with a 20 mL/kg (400 mL) fluid bolus for persistent hypotension (reassessed when the bolus is in; the 500 mL checkpoint is not reached), salbutamol after epinephrine (nebulized 5 mg, or MDI 5 x 100 mcg for the 10-20 kg band), diphenhydramine (p.64: 25-50 mg and no paediatric dose printed, so the lowest listed dose, 25 mg IV; textbook practice — not a BC rubric item — is a weight-based 1 mg/kg, about 20 mg), and the 9-system Functional Enquiry en route."
+ },
+ "sourcePages": "Scenario md-13 (data/practical/scenarios-2.json): dispatch, scene, primary, transport, history (mother), vitals sets 1-2 (set 3 = the scenario's 'next check about 5 minutes later'), FE, exam, interventions, ongoing (partial response: second epinephrine dose required), handoff. BC Provincial Examination Guidelines (current to June 15, 2026): p.7 Findings in Unstable Patients (altered LOC, respiratory distress / accessory muscle use, anaphylaxis; the list is headed Adult, no separate paediatric list); p.13 AVPU (V = responds to verbal, drowsy); p.45 Suctioning (10 seconds in the paediatric patient); p.49 SOB with History of Asthma/COPD (salbutamol within EMR scope); p.50 Oxygen Administration (SOB or shock = high-flow O2, NRB 15 L/min); p.54 Hypovolemia (fluid bolus 20 mL/kg to a maximum of 2 L, reassessing every 500 mL); p.55 Anaphylaxis (indications: signs + allergen exposure + unstable incl. BP < 90 mmHg; supine and do not walk; scrape off the stinger; SpO2 >= 94%; delegate egress; history and baseline vitals; epinephrine; PCP: vascular access with a 20 mL/kg bolus reassessing every 500 mL, salbutamol after epinephrine, diphenhydramine); p.58 Acetaminophen (nausea / vomiting argue against it); p.64 Diphenhydramine (25-50 mg IV or PO, no paediatric dose printed); p.65 Entonox (contraindications: inability to comply, altered level of consciousness; caution: shock); p.66 Epinephrine (paediatric 0.01 mg/kg IM to a maximum of 0.5 mg, may repeat up to 3 times; no absolute contraindications in anaphylaxis); p.68 Ibuprofen (paediatric 10 mg/kg PO); p.77 Salbutamol (nebulized 5 mg over 1 year; MDI 10-20 kg: 5 x 100 mcg, over 20 kg: 10 x 100 mcg, may repeat up to 3 times)."
+}
