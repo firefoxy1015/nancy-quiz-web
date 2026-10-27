@@ -1,6 +1,6 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=51';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=53';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -23,10 +23,14 @@ async function loadScenarios() {
   scenarioPool = { scenarios };
   return scenarioPool;
 }
-// scenarios usable on the current track: universal ones plus this track's focused ones
+// every scenario is open to both tracks (each carries EMR and PCP notes and a PCP-only FE phase);
+// the list puts this track's focused ones first, universal ones next, the other track's last
+const rank = s => !s.focus ? 1 : s.focus === S.track ? 0 : 2;
 function trackPool(scenarios) {
-  return scenarios.filter(s => !s.focus || s.focus === S.track);
+  return [...scenarios].sort((a, b) => rank(a) - rank(b));
 }
+// the exam-day mock draws only from scenarios written at this level or for both
+const ownPool = scenarios => scenarios.filter(s => !s.focus || s.focus === S.track);
 
 const PHASE_NAMES = {
   dispatch: ['Dispatch', '派遣'], scene: ['Scene Assessment + PPE', '现场评估+PPE'],
@@ -100,8 +104,8 @@ export async function renderPracticalHub(el) {
       '网站能练决策、流程和时间感；动手技能（BVM、包扎、脊柱滚动）必须用真实器材线下实练。')}</div>`;
   const startBtn = el.querySelector('#startPMock');
   if (startBtn) startBtn.onclick = async () => {
-    const meds = pool.filter(s => s.type === 'medical');
-    const tras = pool.filter(s => s.type === 'trauma');
+    const meds = ownPool(pool).filter(s => s.type === 'medical');
+    const tras = ownPool(pool).filter(s => s.type === 'trauma');
     if (!meds.length || !tras.length) { alert(t('Scenario pool incomplete.', '场景池还不完整。')); return; }
     const pick = arr => arr[Math.floor(Math.random() * arr.length)];
     S.practicalMock = { active: true, stage: 'medical', ids: { medical: pick(meds).id, trauma: pick(tras).id }, results: [] };
@@ -120,14 +124,14 @@ export async function renderScenarioList(el, arg, params) {
   const data = await loadScenarios();
   if (!data) { el.innerHTML = `<div class="card"><h2>${t('Scenarios deploying…', '场景库部署中…')}</h2></div>`; return; }
   const type = params.type || 'all';
-  const list = trackPool(data.scenarios)
-    .filter(s => type === 'all' || s.type === type)
-    .sort((a, b) => (b.focus === S.track ? 1 : 0) - (a.focus === S.track ? 1 : 0));
+  const list = trackPool(data.scenarios).filter(s => type === 'all' || s.type === type);
   const mine = list.filter(s => s.focus === S.track).length;
+  const other = list.filter(s => s.focus && s.focus !== S.track).length;
   el.innerHTML = `
     <div class="card">
       <h2>${ico('film')} ${t('Scenarios', '场景库')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
       ${mine ? `<p class="tiny">${t(`${mine} scenario(s) written specifically for your scope are listed first.`, `其中 ${mine} 个是专门按你的授权范围写的，排在前面。`)}</p>` : ''}
+      ${other ? `<p class="tiny">${t(`${other} scenario(s) at the end were written at the ${S.track === 'pcp' ? 'EMR' : 'PCP'} level; each carries notes for your level and the same marking.`, `最后 ${other} 个是按 ${S.track === 'pcp' ? 'EMR' : 'PCP'} 等级写的，每个都附你这个等级的处置说明，评分标准相同。`)}</p>` : ''}
       <div class="btn-row">
         ${['all', 'medical', 'trauma'].map(x => `<a class="btn ${type === x ? '' : 'ghost'}" href="#/scenarios?type=${x}">${x === 'all' ? t('All', '全部') : x}</a>`).join('')}
       </div>
@@ -138,7 +142,8 @@ export async function renderScenarioList(el, arg, params) {
         return `<button class="list-item" data-open="${esc(s.id)}">
           <span class="pill ${s.type}">${s.type}</span>
           <span>${bi(s.titleEn, s.titleZh, 'span')}
-            ${s.focus === S.track ? `<span class="tiny" style="color:var(--${S.track})"> ${t(S.track.toUpperCase() + '-focused', S.track.toUpperCase() + ' 专属')}</span>` : ''}</span>
+            ${s.focus === S.track ? `<span class="tiny" style="color:var(--${S.track})"> ${t(S.track.toUpperCase() + '-focused', S.track.toUpperCase() + ' 专属')}</span>`
+              : s.focus ? `<span class="tiny muted"> ${t('written at ' + s.focus.toUpperCase() + ' level', '按 ' + s.focus.toUpperCase() + ' 等级写')}</span>` : ''}</span>
           <span class="tag-count">${best ? best + '%' : t('new', '未练')}</span>
           <span class="li-arrow">›</span>
         </button>`;
