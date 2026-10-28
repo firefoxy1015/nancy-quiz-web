@@ -2,7 +2,7 @@
 // Row drill = one value at a time; patient drill = a full set of vitals, every row, then the response level.
 // Values are drawn band by band, and often right on a border number, because borders are where scores go wrong.
 // Progress (streaks, misses per row) stays on this device through the store the caller passes in.
-import { t, esc } from './app.js?v=53';
+import { t, esc } from './app.js?v=54';
 
 const INF = Infinity;
 // bands: [low, high, points]; gen: the range to draw from when a band is open-ended

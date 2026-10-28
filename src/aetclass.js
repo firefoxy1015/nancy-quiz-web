@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=53';
-import { news2Drill } from './news2drill.js?v=53';
+import { S, save, t, esc, ico } from './app.js?v=54';
+import { news2Drill } from './news2drill.js?v=54';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -208,7 +208,10 @@ const today = () => Math.floor(Date.now() / 864e5);
 // flashcards: a Leitner box per card — box 1 every day, box 2 every 3 days, box 3 every week; new cards are due at once
 const cardState = (wk, k) => store.get(`card:${wk}:${k}`, { box: 1, due: 0 });
 const cardsDue = wk => ((DOC.cards || {})[wk] || []).filter((_, k) => cardState(wk, k).due <= today()).length;
-const mins = ls => Math.round(ls.filter(l => l.ready).reduce((s, l) => s + (l.minutes || 0), 0) / 6) / 10;
+// hours of listening, counted in the version that plays (the story lesson unless the student switched to full lessons)
+const lessonMin = l => (store.get('lessonMode', 'story') === 'story' && l.miniMin) || l.minutes || 0;
+const mins = ls => Math.round(ls.filter(l => l.ready).reduce((s, l) => s + lessonMin(l), 0) / 6) / 10;
+let backFrom = null;   // the lesson just left, so the list can scroll back to it
 
 function drawCourse(el) {
   const course = DOC.index;
@@ -220,16 +223,27 @@ function drawCourse(el) {
     : l.priority === 'core' ? `<span class="cls-pr pr-core">${t('Core', '必听')}</span>`
     : l.priority === 'deep' ? `<span class="cls-pr pr-deep">${t('Deep dive', '深入')}</span>` : '';
   const weekends = [...new Set(course.units.map(wkOf))];
-  const wkHead = wk => {
-    const units = course.units.filter(u => wkOf(u) === wk), ls = units.flatMap(u => u.lessons), rd = ls.filter(l => l.ready);
+  const wkUnits = wk => course.units.filter(u => wkOf(u) === wk);
+  const wkReady = wk => wkUnits(wk).flatMap(u => u.lessons).filter(l => l.ready);
+  const wkFinished = wk => { const rd = wkReady(wk); return rd.length > 0 && rd.every(isDone); };
+  // Each weekend folds. Open: the ones the student opened herself, else only the weekend she is on (the last lesson
+  // she opened, or the first weekend with lessons left), so the list is 17 short rows instead of 342 lessons.
+  const openSt = store.get('wkOpen', {});
+  const cur = store.get('lastWk', 0) || weekends.find(wk => !wkFinished(wk)) || weekends[0];
+  const backWk = backFrom ? wkOfId(backFrom) : 0;                // back from a lesson: its weekend is always open
+  const isOpen = wk => wk === backWk || (openSt[wk] ?? wk === cur);
+  const wkSummary = wk => {
+    const units = wkUnits(wk), rd = wkReady(wk), fin = rd.filter(isDone).length;
     const theme = (units[0].label.split('·')[1] || '').trim();
-    const nQ = rd.reduce((s, l) => s + (l.nq ?? quizzesOf(DOC.lessons[l.id]).length), 0);
     const left = mins(units.flatMap(u => u.lessons.filter(l => shows(l, u) && !isDone(l))));
-    const fin = rd.filter(isDone).length, due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
-    return `<div class="card cls-wk">
-      <div class="cls-wk-row"><b>${t('Weekend', '周末')} ${wk}</b> · ${esc(theme)}
-        <span class="tiny muted">${fin}/${rd.length} ${t('done', '已学完')} · ${t('left on your list', '还要听')} ${left} h</span></div>
-      <div class="btn-row" style="margin-top:6px">
+    return `<summary class="card cls-wk"><span class="cls-wk-h"><span><b>${t('Weekend', '周末')} ${wk}</b> · ${esc(theme)}</span>
+      <span class="tiny muted">${fin}/${rd.length} ${t('done', '已学完')}${wkFinished(wk) ? ' ✓' : ` · ${t('left on your list', '还要听')} ${left} h`}</span></span></summary>`;
+  };
+  const wkTools = wk => {
+    const nQ = wkReady(wk).reduce((s, l) => s + (l.nq ?? quizzesOf(DOC.lessons[l.id]).length), 0);
+    const due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
+    return `<div class="cls-wk-tools">
+      <div class="btn-row">
         ${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min</button>` : ''}
         ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}</button>` : ''}
       </div>
@@ -241,7 +255,6 @@ function drawCourse(el) {
     <style>.cls-pr{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:9px;margin-right:6px;vertical-align:1px}
       .pr-digest{background:#2563eb;color:#fff}.pr-core{background:#16a34a;color:#fff}.pr-deep{background:transparent;color:var(--muted,#888);border:1px solid currentColor}
       .cls-filter{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.cls-filter .on{outline:2px solid currentColor}
-      .cls-wk{margin-top:var(--s4,24px);padding:12px 16px}.cls-wk-row{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
       .cls-lesson .mast{color:#16a34a;border-color:#16a34a}</style>
     <a class="back-link" href="#/aet">← AET</a>
     <div class="card cls-intro">
@@ -249,11 +262,16 @@ function drawCourse(el) {
         <h2 style="margin:0">${ico('film')} ${esc(course.title)}</h2>
         <button class="btn ghost" id="lockBtn" style="margin-left:auto">${t('Lock', '锁定')}</button>
       </div>
+      <div class="tiny">${ready} / ${all.length} ${t('lessons ready', '节已上线')} · ${done} ${t('finished', '节已学完')} · ${t('built', '更新')} ${esc(DOC.course.built || '')}</div>
+      <details class="cls-how"><summary>${t('How this course works', '怎么用')}</summary>
       <p>Spoken lessons in English that follow the AET PCP program weekend by weekend: the week's online modules section by section, the assigned readings, the lab PPT topics and linked resources, the Wednesday cases and the lab skills — checked against the BCEHS clinical practice guidelines, with "module vs BCEHS vs the licensing exam" spelled out wherever they differ.</p>
       <p class="muted">${t('Subtitles show the teacher\'s words in English with the Chinese right underneath.', '课件和讲解都是英文；字幕同时显示英文和中文翻译。')}</p>
-      <div class="tiny">${ready} / ${all.length} ${t('lessons ready', '节已上线')} · ${done} ${t('finished', '节已学完')} · ${t('built', '更新')} ${esc(DOC.course.built || '')}</div>
       <p class="muted" style="margin:8px 0 0">${t('Order each weekend: the Overview, then all the readings (required), then the online modules, then the lab and case lessons. To save time: tap "Test first" — the weekend\'s quiz questions, about 20 minutes — and the list then shows which lessons you can skip, skim or must hear. Lessons auto-continue to the next one, so a weekend can play like a podcast; the flashcards hold the numbers and rules to keep in your head.',
         '每个周末的顺序：先听「速览」，再把阅读课全部听完（必修），然后线上模块，最后实操和案例。省时间：点「先测后听」——做完这周所有随堂题（约 20 分钟），列表就会标出哪些课可以跳过、快听、必听。课会自动连播，一个周末可以像播客一样连着听；「闪卡」装的是要记住的数字和规则。')}</p>
+      </details>
+      <div class="cls-jump" aria-label="${t('Jump to a weekend', '跳到周末')}"><span class="tiny muted">${t('Weekend', '周末')}</span>
+        ${weekends.map(wk => `<button data-jump="${wk}" class="${wkFinished(wk) ? 'fin' : ''}${wk === cur ? ' cur' : ''}">${wk}</button>`).join('')}
+        <button class="btn ghost" id="foldAll">${t('Collapse all', '全部收起')}</button></div>
       <div class="cls-filter">
         <button class="btn ghost${mode === 'all' ? ' on' : ''}" data-filter="all">${t('All lessons', '全部课程')}</button>
         <button class="btn ghost${mode === 'core' ? ' on' : ''}" data-filter="core">${t('Overview + Core only', '只看速览 + 必听')}</button>
@@ -262,7 +280,7 @@ function drawCourse(el) {
         <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
-    ${weekends.map(wk => wkHead(wk) + course.units.filter(u => wkOf(u) === wk).map(u => {
+    ${weekends.map(wk => `<details class="cls-wkd" data-wk="${wk}" id="wk${wk}"${isOpen(wk) ? ' open' : ''}>` + wkSummary(wk) + wkTools(wk) + wkUnits(wk).map(u => {
       const shown = u.lessons.filter(l => shows(l, u));
       if (!shown.length) return '';
       const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons), hidden = u.lessons.length - shown.length;
@@ -281,8 +299,25 @@ function drawCourse(el) {
           }).join('')}
         </div>
       </div>`;
-    }).join('')).join('')}`;
+    }).join('') + `</details>`).join('')}`;
   el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
+  const saveOpen = (wk, open) => { const st = store.get('wkOpen', {}); st[wk] = open; store.set('wkOpen', st); };
+  el.querySelectorAll('details.cls-wkd').forEach(d => d.addEventListener('toggle', () => saveOpen(d.dataset.wk, d.open)));
+  el.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => {
+    const d = el.querySelector('#wk' + b.dataset.jump);
+    d.open = true; saveOpen(b.dataset.jump, true);
+    d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  el.querySelector('#foldAll').onclick = () => {
+    const st = {}; el.querySelectorAll('details.cls-wkd').forEach(d => { d.open = false; st[d.dataset.wk] = false; });
+    store.set('wkOpen', st);
+  };
+  // back from a lesson: land on it, not on the top of a long list
+  if (backFrom) {
+    const b = el.querySelector(`details[open] [data-l="${backFrom}"]`);
+    if (b) b.scrollIntoView({ block: 'center' });
+    backFrom = null;
+  }
   el.querySelectorAll('[data-test]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?test=' + b.dataset.test; });
   el.querySelectorAll('[data-cards]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?cards=' + b.dataset.cards; });
   el.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { store.set('filter', b.dataset.filter); drawCourse(el); });
@@ -429,6 +464,7 @@ const two = (en, zh, inl) => zh ? `<span class="l-en">${esc(en)}</span><span cla
 // (pos, answers) is kept per version; "done" and auto-continue use the lesson's own id either way.
 async function drawLesson(el, L0, autoStart) {
   const story = !!L0.mini && store.get('lessonMode', 'story') === 'story';
+  store.set('lastWk', wkOfId(L0.id)); backFrom = L0.id;          // the list opens this weekend and lands on this lesson
   const L = story ? { ...L0, id: L0.id + '~mini', title: L0.mini.title, titleZh: L0.mini.titleZh, minutes: L0.mini.minutes || '~7', slides: L0.mini.slides } : L0;
   const baseId = L0.id;
   const answers = store.get(L.id + ':ans', {});
