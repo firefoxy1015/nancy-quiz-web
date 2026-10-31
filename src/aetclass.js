@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=54';
-import { news2Drill } from './news2drill.js?v=54';
+import { S, save, t, esc, ico } from './app.js?v=55';
+import { news2Drill } from './news2drill.js?v=55';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -56,6 +56,7 @@ async function loadWeek(wk) {
   if (!r.ok) throw new Error('week ' + r.status);
   const part = await decryptJSON(await r.json(), KEY);
   Object.assign(DOC.lessons, part.lessons);
+  if (part.brief) (DOC.briefs = DOC.briefs || {})[wk] = part.brief;   // the weekend's 精讲: pass card, chapters, school quiz
   weeksLoaded.add(wk);
 }
 function storedKey() { try { return JSON.parse(localStorage.getItem(KEY_LS) || 'null'); } catch { return null; } }
@@ -115,6 +116,7 @@ export async function renderAetClass(el, arg, params) {
       done: () => renderAetClass(el, 'class', params) });
     return;
   }
+  if (params.brief) { await loadWeek(+params.brief); drawBrief(el, +params.brief, params.ch || ''); return; }
   if (params.test) { await loadWeek(+params.test); drawTest(el, +params.test); return; }
   if (params.cards) { drawCards(el, +params.cards); return; }
   if (params.drill === 'news2') { drawDrill(el); return; }
@@ -229,6 +231,10 @@ function drawCourse(el) {
   // Each weekend folds. Open: the ones the student opened herself, else only the weekend she is on (the last lesson
   // she opened, or the first weekend with lessons left), so the list is 17 short rows instead of 342 lessons.
   const openSt = store.get('wkOpen', {});
+  // a weekend with a 精讲 (pass card + condensed book) shows those first and folds its lessons under "参考课程"
+  const briefOf = wk => (DOC.index.briefs || {})[wk];
+  const refSt = store.get('refOpen', {});
+  if (backFrom && briefOf(wkOfId(backFrom))) refSt[wkOfId(backFrom)] = true;   // back from a folded lesson: keep its fold open
   const cur = store.get('lastWk', 0) || weekends.find(wk => !wkFinished(wk)) || weekends[0];
   const backWk = backFrom ? wkOfId(backFrom) : 0;                // back from a lesson: its weekend is always open
   const isOpen = wk => wk === backWk || (openSt[wk] ?? wk === cur);
@@ -242,12 +248,21 @@ function drawCourse(el) {
   const wkTools = wk => {
     const nQ = wkReady(wk).reduce((s, l) => s + (l.nq ?? quizzesOf(DOC.lessons[l.id]).length), 0);
     const due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
+    const bm = briefOf(wk), opt = bm ? ` · ${t('optional', '可选')}` : '';
     return `<div class="cls-wk-tools">
+      ${bm ? `<div class="cls-brief-row">
+        <button class="btn" data-brief="${wk}" data-ch="card">${t('Pass card', '必过卡')} · ~10 min</button>
+        <button class="btn" data-brief="${wk}">${t('Condensed book', '精讲')} · ${bm.n} ${t('chapters', '章')} · ~${bm.min} min</button>
+        ${bm.pdf ? `<button class="btn ghost" data-brief="${wk}" data-ch="pdf">PDF</button>` : ''}
+      </div>` : ''}
       <div class="btn-row">
-        ${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min</button>` : ''}
-        ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}</button>` : ''}
+        ${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min${opt}</button>` : ''}
+        ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}${opt}</button>` : ''}
+        ${bm && bm.school ? `<button class="btn ghost" data-brief="${wk}" data-ch="school">${t('School quiz points', '学校小测要点')} · ${bm.school}${opt}</button>` : ''}
       </div>
-      <div class="tiny muted" style="margin-top:6px">${t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
+      <div class="tiny muted" style="margin-top:6px">${bm ? t('Order: pass card → condensed book → then, if you have time, the optional test, flashcards and school quiz points → the lessons below are reference.',
+        '顺序：必过卡 → 精讲 → 有时间再做可选的测验、闪卡、学校小测要点 → 下面的课是参考，有时间再上。')
+        : t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
         '建议节奏：周一二阅读课 · 周三模块课，直播案例前先听案例课 · 周四五实操课 · 然后再测一次、把闪卡清完。')}</div>
     </div>`;
   };
@@ -280,7 +295,7 @@ function drawCourse(el) {
         <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
-    ${weekends.map(wk => `<details class="cls-wkd" data-wk="${wk}" id="wk${wk}"${isOpen(wk) ? ' open' : ''}>` + wkSummary(wk) + wkTools(wk) + wkUnits(wk).map(u => {
+    ${weekends.map(wk => { const units = wkUnits(wk).map(u => {
       const shown = u.lessons.filter(l => shows(l, u));
       if (!shown.length) return '';
       const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons), hidden = u.lessons.length - shown.length;
@@ -299,10 +314,14 @@ function drawCourse(el) {
           }).join('')}
         </div>
       </div>`;
-    }).join('') + `</details>`).join('')}`;
+    }).join('');
+      const body = briefOf(wk) ? `<details class="cls-ref" data-ref="${wk}"${refSt[wk] ? ' open' : ''}><summary>${t('Reference lessons — if you have time', '参考课程 · 有时间再上')} · ${wkReady(wk).length} ${t('lessons', '节')} · ${mins(wkReady(wk))} h</summary>${units}</details>` : units;
+      return `<details class="cls-wkd" data-wk="${wk}" id="wk${wk}"${isOpen(wk) ? ' open' : ''}>` + wkSummary(wk) + wkTools(wk) + body + `</details>`; }).join('')}`;
   el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
   const saveOpen = (wk, open) => { const st = store.get('wkOpen', {}); st[wk] = open; store.set('wkOpen', st); };
   el.querySelectorAll('details.cls-wkd').forEach(d => d.addEventListener('toggle', () => saveOpen(d.dataset.wk, d.open)));
+  el.querySelectorAll('details.cls-ref').forEach(d => d.addEventListener('toggle', () => { const st = store.get('refOpen', {}); st[d.dataset.ref] = d.open; store.set('refOpen', st); }));
+  el.querySelectorAll('[data-brief]').forEach(b => b.onclick = () => { location.hash = `#/aet/class?brief=${b.dataset.brief}` + (b.dataset.ch ? '&ch=' + b.dataset.ch : ''); });
   el.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => {
     const d = el.querySelector('#wk' + b.dataset.jump);
     d.open = true; saveOpen(b.dataset.jump, true);
@@ -324,6 +343,82 @@ function drawCourse(el) {
   el.querySelector('#drillBtn').onclick = () => { location.hash = '#/aet/class?drill=news2'; };
   el.querySelector('#autoBtn').onclick = () => { store.set('autoNext', !store.get('autoNext', true)); drawCourse(el); };
   el.querySelector('#lockBtn').onclick = () => { lock(); renderAetClass(el, 'class', {}); };
+}
+
+/* ---------------- 精讲: the weekend's pass card, condensed chapters, the school's quiz points and the PDF ---------------- */
+// Built from D:\Claude\aet-class\condensed\wNN\ (EMALB answers first; school/BCEHS differences as flags). Chapter HTML is
+// shipped inside the weekend part and rendered under .cls-book; "read" marks live in localStorage like lesson progress.
+function drawBrief(el, wk, ch) {
+  const B = (DOC.briefs || {})[wk];
+  const back = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>`;
+  if (!B) { el.innerHTML = `${back}<div class="card"><h2>${t('Condensed book', '精讲')} · ${t('Weekend', '周末')} ${wk}</h2><p class="muted">${t('Being prepared.', '制作中。')}</p></div>`; return; }
+  const chaps = B.chapters, card = chaps.find(c => c.id === 'ch-card'), rest = chaps.filter(c => c.id !== 'ch-card');
+  const readKey = 'brief:' + wk, read = store.get(readKey, {});
+  const keyOf = c => c.id === 'ch-card' ? 'card' : c.id;
+  const go = c => { location.hash = `#/aet/class?brief=${wk}` + (c ? '&ch=' + c : ''); };
+  const chip = (id, label, cur) => `<button data-go="${id}" class="${cur === id ? 'cur' : read[id] ? 'read' : ''}">${label}</button>`;
+  const nav = cur => `<div class="cls-book-nav">${chip('', t('Contents', '目录'), cur)}${card ? chip('card', t('Pass card', '必过卡'), cur) : ''}${rest.map((c, i) => chip(c.id, String(i + 1), cur)).join('')}${B.school && B.school.length ? chip('school', t('School quiz', '学校小测'), cur) : ''}</div>`;
+  const wire = () => {
+    el.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
+    const p = el.querySelector('#briefPdf'); if (p) p.onclick = () => downloadBrief(wk, B.pdf, p);
+  };
+  window.scrollTo({ top: 0, behavior: 'instant' });   // html has scroll-behavior: smooth; a new page must start at the top
+  if (!ch || ch === 'pdf') {                                                   // contents page
+    const total = rest.reduce((s, c) => s + c.min, 0), done = rest.filter(c => read[c.id]).length;
+    el.innerHTML = `${back}<div class="card"><h2>${t('Weekend', '周末')} ${wk} · ${t('Condensed book', '精讲版')}</h2>
+      <p class="muted">${t('Everything this weekend tests, with the EMALB answer first; the full lessons stay under the weekend as reference.', '这个周末会考的都在这里，答案以 EMALB 为准；完整课程折在周末下面当参考，有时间再上。')}</p>
+      <p class="tiny muted">${t('Pass card', '必过卡')} ~10 min · ${rest.length} ${t('chapters', '章')} ~${total} min · ${t('read', '已读')} ${done}/${rest.length}</p>
+      ${nav('')}
+      <div class="list-wrap">
+        ${card ? `<button class="list-item${read.card ? ' done' : ''}" data-go="card"><span><b>${esc(card.title)}</b><div class="tiny">${esc(card.k)} · ~10 min</div></span><span class="tag-count">${read.card ? t('Read', '已读') : t('Open', '打开')}</span></button>` : ''}
+        ${rest.map(c => `<button class="list-item${read[c.id] ? ' done' : ''}" data-go="${c.id}"><span>${esc(c.title)}<div class="tiny">${esc(c.k)} · ${c.min} min</div></span><span class="tag-count">${read[c.id] ? t('Read', '已读') : t('Open', '打开')}</span></button>`).join('')}
+      </div>
+      <div class="btn-row" style="margin-top:10px">
+        ${B.pdf ? `<button class="btn ghost" id="briefPdf">${t('Download PDF', '下载 PDF')}</button>` : ''}
+        ${B.school && B.school.length ? `<button class="btn ghost" data-go="school">${t('School quiz points', '学校小测要点')} · ${B.school.length} · ${t('optional', '可选')}</button>` : ''}
+        <button class="btn ghost" id="briefTest">${t('Test', '测验')} · ${t('optional', '可选')}</button>
+        <button class="btn ghost" id="briefCards">${t('Flashcards', '闪卡')} · ${t('optional', '可选')}</button>
+      </div></div>`;
+    wire();
+    el.querySelector('#briefTest').onclick = () => { location.hash = '#/aet/class?test=' + wk; };
+    el.querySelector('#briefCards').onclick = () => { location.hash = '#/aet/class?cards=' + wk; };
+    if (ch === 'pdf') { const p = el.querySelector('#briefPdf'); if (p) p.click(); }
+    return;
+  }
+  if (ch === 'school') {
+    const groups = [...new Set(B.school.map(q => q.m))];
+    el.innerHTML = `${back}<div class="card"><h2>${t('School quiz points', '学校小测要点')} · ${t('Weekend', '周末')} ${wk}</h2>
+      <p class="muted">${t("The school's knowledge-check points for this weekend's modules, as question → answer. Optional; tap a question to see the answer.", '学校这周末各模块知识检查的题点，题 → 答案。可选；点题看答案。')}</p>${nav('school')}
+      ${groups.map(g => `<h3>${esc(g)}</h3>` + B.school.filter(q => q.m === g).map(q => `<details class="cls-qa"><summary>${esc(q.q)}</summary><p>${esc(q.a)}</p></details>`).join('')).join('')}</div>`;
+    read.school = true; store.set(readKey, read);
+    wire(); return;
+  }
+  const k = chaps.findIndex(c => keyOf(c) === ch);
+  if (k < 0) { go(''); return; }
+  const c = chaps[k], prev = chaps[k - 1], next = chaps[k + 1], key = keyOf(c);
+  el.innerHTML = `${back}<div class="card">${nav(key)}<div class="cls-book">${c.html}</div>
+    <div class="btn-row" style="margin-top:14px">
+      ${prev ? `<button class="btn ghost" data-go="${keyOf(prev)}">← ${esc(prev.title)}</button>` : ''}
+      <button class="btn" id="markRead">${read[key] ? t('Read ✓', '已读 ✓') : t('Mark as read', '标记已读')}${next ? ' → ' + t('next', '下一章') : ''}</button>
+    </div></div>`;
+  wire();
+  el.querySelector('#markRead').onclick = () => { read[key] = true; store.set(readKey, read); go(next ? keyOf(next) : ''); };
+}
+// the PDF is one more encrypted file in the audio repo (wNN-brief.bin): fetch, decrypt in memory, hand the browser a blob
+async function downloadBrief(wk, name, btn) {
+  btn.disabled = true; const label = btn.textContent; btn.textContent = t('Decrypting…', '解密中…');
+  try {
+    let r = null;
+    for (const b of audioBases(name)) { r = await fetch(b + name).catch(() => null); if (r && r.ok) break; }
+    if (!r || !r.ok) throw new Error('pdf');
+    const buf = new Uint8Array(await r.arrayBuffer());
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, KEY, buf.slice(12));
+    const url = URL.createObjectURL(new Blob([plain], { type: 'application/pdf' }));
+    const a = document.createElement('a'); a.href = url; a.download = `AET-W${wk}-精讲.pdf`; a.target = '_blank'; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    btn.textContent = label; btn.disabled = false;
+    if (!btn.nextElementSibling || !btn.nextElementSibling.matches('a')) btn.insertAdjacentHTML('afterend', ` <a class="tiny" href="${url}" target="_blank" rel="noopener">${t('Open in a new tab', '在新标签页打开')}</a>`);
+  } catch { btn.textContent = t('Could not load the PDF', 'PDF 加载失败'); }
 }
 
 /* ---------------- test first: the weekend's own quiz questions, then a skip / skim / listen verdict per lesson ---------------- */

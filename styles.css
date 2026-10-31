@@ -888,3 +888,60 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-fig-in { overflow: hidden; border-radius: 14px; aspect-ratio: 3 / 2; background: #fff; border: 1px solid var(--line); }
 .cls-fig img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .cls-fig figcaption { font-size: .9rem; color: var(--ink-2); margin-top: 6px; font-style: italic; }
+
+/* AET 精讲 (condensed book) rendered in the player: the textbook chapter classes in site colours, both themes */
+.cls-book { line-height: 1.7; font-size: 1.02rem; }
+.cls-book .chap-k { font-size: .72rem; font-weight: 700; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; }
+.cls-book h1 { font-size: 1.4rem; margin: 4px 0 14px; padding-left: 12px; border-left: 4px solid var(--accent); line-height: 1.3; }
+.cls-book h1 .en, .cls-book h2 .en { display: block; font-size: .78rem; font-weight: 400; color: var(--ink-3); margin-top: 2px; }
+.cls-book h2 { font-size: 1.15rem; margin: 22px 0 8px; padding-bottom: 4px; border-bottom: 1.5px solid var(--accent); }
+.cls-book h3 { font-size: 1.02rem; margin: 14px 0 6px; }
+.cls-book p { margin: 0 0 8px; }
+.cls-book ul, .cls-book ol { margin: 0 0 8px; padding-left: 22px; }
+.cls-book li { margin-bottom: 4px; }
+.cls-book .why, .cls-book .goals, .cls-book .ex, .cls-book .tip, .cls-book .trap, .cls-book .answers, .cls-book .say, .cls-book .mn, .cls-book .fail { border-radius: 8px; padding: 10px 14px; margin: 10px 0; }
+.cls-book .why { background: color-mix(in srgb, #e0b553 16%, var(--bg-tint)); }
+.cls-book .why b:first-child, .cls-book .trap b:first-child, .cls-book .answers b:first-child, .cls-book .goals b:first-child { display: block; margin-bottom: 4px; }
+.cls-book .goals { background: var(--accent-soft); }
+.cls-book .ex { border-left: 4px solid #e0b553; background: color-mix(in srgb, #e0b553 10%, var(--bg-tint)); border-radius: 0 8px 8px 0; }
+.cls-book .lab { font-size: .72rem; font-weight: 700; letter-spacing: .1em; color: #a16207; margin-bottom: 4px; }
+.cls-book .note { display: block; font-size: .9rem; color: var(--ink-2, var(--ink-3)); margin-top: 4px; }
+.cls-book .tip { background: var(--bg-tint); font-size: .95rem; }
+.cls-book .say { border: 1.5px solid var(--accent); }
+.cls-book .say .lab { color: var(--accent); }
+.cls-book .say .e { margin: 6px 0 0; font-style: italic; }
+.cls-book .say .z { margin: 0 0 6px; font-size: .92rem; color: var(--ink-2, var(--ink-3)); }
+.cls-book .trap { background: color-mix(in srgb, #b91c1c 10%, var(--bg-tint)); }
+.cls-book .trap ul { margin: 0; }
+.cls-book .fail { border-left: 4px solid #b91c1c; background: color-mix(in srgb, #b91c1c 9%, var(--bg-tint)); border-radius: 0 8px 8px 0; }
+.cls-book .fail b { color: #dc2626; }
+.cls-book .answers { background: color-mix(in srgb, #15803d 12%, var(--bg-tint)); font-size: .95rem; }
+.cls-book .mn { border: 2px dashed var(--accent); text-align: center; }
+.cls-book .mn b { display: block; font-size: .72rem; letter-spacing: .1em; color: var(--accent); }
+.cls-book .flag { display: inline-block; font-size: .8rem; line-height: 1.4; color: #92400e; background: color-mix(in srgb, #e0b553 22%, var(--bg-tint)); border-radius: 4px; padding: 0 6px; margin-left: 4px; vertical-align: 1px; }
+:root[data-theme="dark"] .cls-book .flag { color: #fcd34d; }
+:root[data-theme="dark"] .cls-book .lab { color: #fbbf24; }
+.cls-book table.t { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 8px 0 12px; line-height: 1.45; display: block; overflow-x: auto; }
+.cls-book table.t th, .cls-book table.t td { border: 1px solid var(--line-strong); padding: 5px 8px; text-align: left; vertical-align: top; }
+.cls-book table.t th { background: var(--accent-soft); font-size: .82rem; }
+.cls-book .steps5 { display: grid; gap: 6px; margin: 6px 0 10px; }
+.cls-book .steps5 div { background: var(--accent-soft); border-radius: 6px; padding: 6px 10px; }
+.cls-book .steps5 b { display: inline-block; min-width: 7em; color: var(--accent); }
+.cls-book .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0 12px; }
+.cls-book .card-grid div { border: 1px solid var(--line-strong); border-radius: 6px; padding: 6px 10px; font-size: .92rem; line-height: 1.45; }
+.cls-book .card-grid div > b:first-child { display: block; color: var(--accent); font-size: .74rem; letter-spacing: .08em; }
+@media (max-width: 520px) { .cls-book .card-grid { grid-template-columns: 1fr; } .cls-book { font-size: 1rem; } }
+/* the brief's chapter chips, the folded reference lessons, the school quiz Q→A */
+.cls-brief-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.cls-ref { margin-top: 10px; }
+.cls-ref > summary { cursor: pointer; list-style: none; font-size: .9rem; color: var(--ink-2, var(--ink-3)); padding: 8px 4px; border-top: 1px dashed var(--line-strong); }
+.cls-ref > summary::-webkit-details-marker { display: none; }
+.cls-ref > summary::before { content: "▸ "; color: var(--accent); }
+.cls-ref[open] > summary::before { content: "▾ "; }
+.cls-book-nav { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 12px; }
+.cls-book-nav button { font-size: .8rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--bg-tint); color: inherit; cursor: pointer; min-height: 30px; }
+.cls-book-nav button.cur { background: var(--accent); color: #fff; border-color: var(--accent); }
+.cls-book-nav button.read { border-color: #16a34a; color: #16a34a; }
+.cls-qa { border-bottom: 1px solid var(--line); }
+.cls-qa > summary { cursor: pointer; padding: 8px 0; font-weight: 600; }
+.cls-qa > p { margin: 0 0 10px; padding-left: 14px; border-left: 3px solid var(--accent); color: var(--ink-2, var(--ink-3)); }
