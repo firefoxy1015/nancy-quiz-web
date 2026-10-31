@@ -932,7 +932,21 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-book .card-grid div > b:first-child { display: block; color: var(--accent); font-size: .74rem; letter-spacing: .08em; }
 @media (max-width: 520px) { .cls-book .card-grid { grid-template-columns: 1fr; } .cls-book { font-size: 1rem; } }
 /* the brief's chapter chips, the folded reference lessons, the school quiz Q→A */
-.cls-brief-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.cls-plan { display: grid; gap: 6px; }
+.cls-plan-row { display: flex; gap: 6px; }
+.cls-plan-row .main { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 8px 12px; border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line-strong)); background: var(--accent-soft); color: var(--accent-ink); font: inherit; text-align: left; cursor: pointer; }
+.cls-plan-row .main:hover { background: color-mix(in srgb, var(--accent-soft) 82%, var(--accent)); }
+.cls-plan-row .n { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700; display: grid; place-items: center; }
+.cls-plan-row .lab { flex: 1; min-width: 0; font-weight: 600; }
+.cls-plan-row .lab small { font-weight: 400; font-size: .8rem; opacity: .8; margin-left: 4px; }
+.cls-plan-row .meta { flex: none; font-size: .8rem; opacity: .8; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.cls-plan-row .side { flex: none; padding: 0 14px; border-radius: 12px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink-2); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.cls-plan-row .side:hover { background: var(--surface-2); color: var(--ink); }
+.cls-plan-opt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 2px; }
+.cls-plan-opt .k { font-size: .78rem; color: var(--ink-3); margin-right: 2px; }
+.cls-plan-opt button { font: inherit; font-size: .8rem; padding: 4px 11px; min-height: 30px; border-radius: 999px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink-2); cursor: pointer; }
+.cls-plan-opt button:hover { background: var(--surface-2); color: var(--ink); }
 .cls-ref { margin-top: 10px; }
 .cls-ref > summary { cursor: pointer; list-style: none; font-size: .9rem; color: var(--ink-2, var(--ink-3)); padding: 8px 4px; border-top: 1px dashed var(--line-strong); }
 .cls-ref > summary::-webkit-details-marker { display: none; }

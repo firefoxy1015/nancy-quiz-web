@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=55';
-import { news2Drill } from './news2drill.js?v=55';
+import { S, save, t, esc, ico } from './app.js?v=56';
+import { news2Drill } from './news2drill.js?v=56';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -248,23 +248,25 @@ function drawCourse(el) {
   const wkTools = wk => {
     const nQ = wkReady(wk).reduce((s, l) => s + (l.nq ?? quizzesOf(DOC.lessons[l.id]).length), 0);
     const due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
-    const bm = briefOf(wk), opt = bm ? ` · ${t('optional', '可选')}` : '';
-    return `<div class="cls-wk-tools">
-      ${bm ? `<div class="cls-brief-row">
-        <button class="btn" data-brief="${wk}" data-ch="card">${t('Pass card', '必过卡')} · ~10 min</button>
-        <button class="btn" data-brief="${wk}">${t('Condensed book', '精讲')} · ${bm.n} ${t('chapters', '章')} · ~${bm.min} min</button>
-        ${bm.pdf ? `<button class="btn ghost" data-brief="${wk}" data-ch="pdf">PDF</button>` : ''}
-      </div>` : ''}
-      <div class="btn-row">
-        ${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min${opt}</button>` : ''}
-        ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}${opt}</button>` : ''}
-        ${bm && bm.school ? `<button class="btn ghost" data-brief="${wk}" data-ch="school">${t('School quiz points', '学校小测要点')} · ${bm.school}${opt}</button>` : ''}
-      </div>
-      <div class="tiny muted" style="margin-top:6px">${bm ? t('Order: pass card → condensed book → then, if you have time, the optional test, flashcards and school quiz points → the lessons below are reference.',
-        '顺序：必过卡 → 精讲 → 有时间再做可选的测验、闪卡、学校小测要点 → 下面的课是参考，有时间再上。')
-        : t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
+    const bm = briefOf(wk);
+    const chip = (attrs, label) => `<button ${attrs}>${label}</button>`;
+    const opts = [
+      nQ ? chip(`data-test="${wk}"`, `${t('Test', '测验')} · ${nQ} ${t('Q', '题')} · ${Math.round(nQ * 0.35)} min`) : '',
+      hasCards ? chip(`data-cards="${wk}"`, `${t('Flashcards', '闪卡')} · ${due}`) : '',
+      bm && bm.school ? chip(`data-brief="${wk}" data-ch="school"`, `${t('School quiz', '学校小测')} · ${bm.school}`) : ''].filter(Boolean);
+    if (!bm) return `<div class="cls-wk-tools">
+      <div class="btn-row">${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min</button>` : ''}
+        ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}</button>` : ''}</div>
+      <div class="tiny muted" style="margin-top:6px">${t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
         '建议节奏：周一二阅读课 · 周三模块课，直播案例前先听案例课 · 周四五实操课 · 然后再测一次、把闪卡清完。')}</div>
     </div>`;
+    // condensed weekend: two numbered steps (pass card, condensed book + PDF), then the optional extras as small chips
+    return `<div class="cls-wk-tools"><div class="cls-plan">
+      <div class="cls-plan-row"><button class="main" data-brief="${wk}" data-ch="card"><span class="n">1</span><span class="lab">${t('Pass card', '必过卡')}</span><span class="meta">10 min</span></button></div>
+      <div class="cls-plan-row"><button class="main" data-brief="${wk}"><span class="n">2</span><span class="lab">${t('Condensed book', '精讲')} <small>${bm.n} ${t('chapters', '章')}</small></span><span class="meta">${bm.min} min</span></button>
+        ${bm.pdf ? `<button class="side" data-brief="${wk}" data-ch="pdf">PDF</button>` : ''}</div>
+      ${opts.length ? `<div class="cls-plan-opt"><span class="k">${t('If you have time', '有时间再做')}</span>${opts.join('')}</div>` : ''}
+    </div></div>`;
   };
   el.innerHTML = `
     <style>.cls-pr{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:9px;margin-right:6px;vertical-align:1px}
