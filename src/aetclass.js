@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=56';
-import { news2Drill } from './news2drill.js?v=56';
+import { S, save, t, esc, ico } from './app.js?v=57';
+import { news2Drill } from './news2drill.js?v=57';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -231,10 +231,9 @@ function drawCourse(el) {
   // Each weekend folds. Open: the ones the student opened herself, else only the weekend she is on (the last lesson
   // she opened, or the first weekend with lessons left), so the list is 17 short rows instead of 342 lessons.
   const openSt = store.get('wkOpen', {});
-  // a weekend with a 精讲 (pass card + condensed book) shows those first and folds its lessons under "参考课程"
+  // a weekend with a 精讲 (pass card + condensed book) shows those first, then its lessons under a "参考课程" heading
+  // (always listed, never folded: a new student would not know to tap a fold)
   const briefOf = wk => (DOC.index.briefs || {})[wk];
-  const refSt = store.get('refOpen', {});
-  if (backFrom && briefOf(wkOfId(backFrom))) refSt[wkOfId(backFrom)] = true;   // back from a folded lesson: keep its fold open
   const cur = store.get('lastWk', 0) || weekends.find(wk => !wkFinished(wk)) || weekends[0];
   const backWk = backFrom ? wkOfId(backFrom) : 0;                // back from a lesson: its weekend is always open
   const isOpen = wk => wk === backWk || (openSt[wk] ?? wk === cur);
@@ -317,12 +316,11 @@ function drawCourse(el) {
         </div>
       </div>`;
     }).join('');
-      const body = briefOf(wk) ? `<details class="cls-ref" data-ref="${wk}"${refSt[wk] ? ' open' : ''}><summary>${t('Reference lessons — if you have time', '参考课程 · 有时间再上')} · ${wkReady(wk).length} ${t('lessons', '节')} · ${mins(wkReady(wk))} h</summary>${units}</details>` : units;
+      const body = briefOf(wk) ? `<div class="cls-ref"><div class="cls-ref-h">${t('Reference lessons — if you have time', '参考课程 · 有时间再上')} · ${wkReady(wk).length} ${t('lessons', '节')} · ${mins(wkReady(wk))} h</div>${units}</div>` : units;
       return `<details class="cls-wkd" data-wk="${wk}" id="wk${wk}"${isOpen(wk) ? ' open' : ''}>` + wkSummary(wk) + wkTools(wk) + body + `</details>`; }).join('')}`;
   el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
   const saveOpen = (wk, open) => { const st = store.get('wkOpen', {}); st[wk] = open; store.set('wkOpen', st); };
   el.querySelectorAll('details.cls-wkd').forEach(d => d.addEventListener('toggle', () => saveOpen(d.dataset.wk, d.open)));
-  el.querySelectorAll('details.cls-ref').forEach(d => d.addEventListener('toggle', () => { const st = store.get('refOpen', {}); st[d.dataset.ref] = d.open; store.set('refOpen', st); }));
   el.querySelectorAll('[data-brief]').forEach(b => b.onclick = () => { location.hash = `#/aet/class?brief=${b.dataset.brief}` + (b.dataset.ch ? '&ch=' + b.dataset.ch : ''); });
   el.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => {
     const d = el.querySelector('#wk' + b.dataset.jump);

@@ -948,10 +948,7 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-plan-opt button { font: inherit; font-size: .8rem; padding: 4px 11px; min-height: 30px; border-radius: 999px; border: 1px solid var(--line-strong); background: transparent; color: var(--ink-2); cursor: pointer; }
 .cls-plan-opt button:hover { background: var(--surface-2); color: var(--ink); }
 .cls-ref { margin-top: 10px; }
-.cls-ref > summary { cursor: pointer; list-style: none; font-size: .9rem; color: var(--ink-2, var(--ink-3)); padding: 8px 4px; border-top: 1px dashed var(--line-strong); }
-.cls-ref > summary::-webkit-details-marker { display: none; }
-.cls-ref > summary::before { content: "▸ "; color: var(--accent); }
-.cls-ref[open] > summary::before { content: "▾ "; }
+.cls-ref-h { font-size: .9rem; font-weight: 600; color: var(--ink-2, var(--ink-3)); padding: 10px 4px 2px; border-top: 1px dashed var(--line-strong); }
 .cls-book-nav { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0 12px; }
 .cls-book-nav button { font-size: .8rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--bg-tint); color: inherit; cursor: pointer; min-height: 30px; }
 .cls-book-nav button.cur { background: var(--accent); color: #fff; border-color: var(--accent); }
