@@ -1,6 +1,6 @@
 # BC EMR/PCP Exam Prep · BC 省急救员考证备考系统
 
-**[▶ Open the site 打开网站](https://firefoxy1015.github.io/nancy-quiz-web/)**
+**[▶ Open the site 打开网站](https://bcmedicprep.com/)** · also at https://firefoxy1015.github.io/nancy-quiz-web/
 
 A bilingual (English / 中文) study system for the three exams that stand between you and a British Columbia paramedic licence — built from the current official documents, not from a generic US EMT textbook.
 

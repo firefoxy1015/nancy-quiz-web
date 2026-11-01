@@ -13,7 +13,9 @@ from typing import Any, Dict, List, Optional
 import engine, prompts, llm
 
 app = FastAPI(title='bcprep examiner')
-ORIGINS = [o.strip() for o in os.environ.get('EXAMINER_ORIGINS', 'https://firefoxy1015.github.io,http://localhost:8765,http://127.0.0.1:8765').split(',') if o.strip()]
+# Addresses the site is served from. Always allowed, on top of EXAMINER_ORIGINS (the Render variable replaces the default list).
+SITE_ORIGINS = ['https://firefoxy1015.github.io', 'https://bcmedicprep.com']
+ORIGINS = sorted(set(SITE_ORIGINS) | {o.strip() for o in os.environ.get('EXAMINER_ORIGINS', 'http://localhost:8765,http://127.0.0.1:8765').split(',') if o.strip()})
 app.add_middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=['*'], allow_headers=['*'])
 
 DAILY_CAP = int(os.environ.get('EXAMINER_DAILY_CAP', '4'))

@@ -1,0 +1,10 @@
+# https://bcmedicprep.com — custom-domain front for the GitHub Pages site (see worker.js); the github.io address keeps working.
+# Deploy: npx wrangler deploy (from this folder).
+name = "bcprep-domain"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = false
+routes = [
+  { pattern = "bcmedicprep.com", custom_domain = true },
+  { pattern = "www.bcmedicprep.com", custom_domain = true },
+]
