@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=57';
-import { news2Drill } from './news2drill.js?v=57';
+import { S, save, t, esc, ico } from './app.js?v=58';
+import { news2Drill } from './news2drill.js?v=58';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -120,6 +120,7 @@ export async function renderAetClass(el, arg, params) {
   if (params.test) { await loadWeek(+params.test); drawTest(el, +params.test); return; }
   if (params.cards) { drawCards(el, +params.cards); return; }
   if (params.drill === 'news2') { drawDrill(el); return; }
+  if (params.lab === 'ecg') { await drawLab(el, params); return; }
   if (params.l) {
     const meta = DOC.index.units.flatMap(u => u.lessons).find(l => l.id === params.l);
     if (meta && meta.ready) await loadWeek(wkOfId(meta.id));
@@ -264,6 +265,7 @@ function drawCourse(el) {
       <div class="cls-plan-row"><button class="main" data-brief="${wk}" data-ch="card"><span class="n">1</span><span class="lab">${t('Pass card', '必过卡')}</span><span class="meta">10 min</span></button></div>
       <div class="cls-plan-row"><button class="main" data-brief="${wk}"><span class="n">2</span><span class="lab">${t('Condensed book', '精讲')} <small>${bm.n} ${t('chapters', '章')}</small></span><span class="meta">${bm.min} min</span></button>
         ${bm.pdf ? `<button class="side" data-brief="${wk}" data-ch="pdf">PDF</button>` : ''}</div>
+      ${LABS[wk] ? `<div class="cls-plan-row"><button class="main" data-lab="${LABS[wk].id}"><span class="n">3</span><span class="lab">${t(LABS[wk].en, LABS[wk].zh)} <small>${t(LABS[wk].sub, LABS[wk].subZh)}</small></span><span class="meta">${LABS[wk].min} min</span></button></div>` : ''}
       ${opts.length ? `<div class="cls-plan-opt"><span class="k">${t('If you have time', '有时间再做')}</span>${opts.join('')}</div>` : ''}
     </div></div>`;
   };
@@ -293,6 +295,7 @@ function drawCourse(el) {
         <button class="btn ghost${mode === 'core' ? ' on' : ''}" data-filter="core">${t('Overview + Core only', '只看速览 + 必听')}</button>
         <button class="btn ghost${mode === 'need' ? ' on' : ''}" data-filter="need">${t('Only what I still need', '只看还没学会的')}</button>
         <button class="btn ghost" id="drillBtn">${t('NEWS2 trainer', 'NEWS2 练习器')}</button>
+        <button class="btn ghost" data-lab="ecg">${t('ECG lab', '心电图练习室')}</button>
         <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
@@ -322,6 +325,7 @@ function drawCourse(el) {
   const saveOpen = (wk, open) => { const st = store.get('wkOpen', {}); st[wk] = open; store.set('wkOpen', st); };
   el.querySelectorAll('details.cls-wkd').forEach(d => d.addEventListener('toggle', () => saveOpen(d.dataset.wk, d.open)));
   el.querySelectorAll('[data-brief]').forEach(b => b.onclick = () => { location.hash = `#/aet/class?brief=${b.dataset.brief}` + (b.dataset.ch ? '&ch=' + b.dataset.ch : ''); });
+  el.querySelectorAll('[data-lab]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?lab=' + b.dataset.lab; });
   el.querySelectorAll('[data-jump]').forEach(b => b.onclick = () => {
     const d = el.querySelector('#wk' + b.dataset.jump);
     d.open = true; saveOpen(b.dataset.jump, true);
@@ -378,9 +382,11 @@ function drawBrief(el, wk, ch) {
         ${B.school && B.school.length ? `<button class="btn ghost" data-go="school">${t('School quiz points', '学校小测要点')} · ${B.school.length} · ${t('optional', '可选')}</button>` : ''}
         <button class="btn ghost" id="briefTest">${t('Test', '测验')} · ${t('optional', '可选')}</button>
         <button class="btn ghost" id="briefCards">${t('Flashcards', '闪卡')} · ${t('optional', '可选')}</button>
+        ${LABS[wk] ? `<button class="btn secondary" data-lab="${LABS[wk].id}">${t(LABS[wk].en, LABS[wk].zh)}</button>` : ''}
       </div></div>`;
     wire();
     el.querySelector('#briefTest').onclick = () => { location.hash = '#/aet/class?test=' + wk; };
+    el.querySelectorAll('[data-lab]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?lab=' + b.dataset.lab; });
     el.querySelector('#briefCards').onclick = () => { location.hash = '#/aet/class?cards=' + wk; };
     if (ch === 'pdf') { const p = el.querySelector('#briefPdf'); if (p) p.click(); }
     return;
@@ -516,6 +522,16 @@ function drawCards(el, wk) {
   }
   if (all && !queue().length) { all = false; store.set('cardsAll:' + wk, false); }
   show();
+}
+
+/* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
+const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
+async function drawLab(el, params) {
+  el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
+    <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
+    <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
+  const { ecgLab } = await import('./ecglab.js?v=58');
+  ecgLab(el.querySelector('#labHost'), store, params);
 }
 
 /* ---------------- NEWS2 trainer page (the same trainer sits inside the scoring lesson's practice slide) ---------------- */
