@@ -2,8 +2,8 @@
 // Every concept is drawn on a real-scale strip from ecgstrip.js, and every step ends in practice with instant feedback.
 // Seven steps: one beat → the paper → rate → the six steps → rhythm atlas → rhythm drill → the 12-lead.
 // Progress and drill scores stay on this device through the store the caller passes in (prefix aetclass:).
-import { t, esc, bi } from './app.js?v=58';
-import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=58';
+import { t, esc, bi } from './app.js?v=59';
+import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=59';
 
 const STEPS = [['beat', 'One beat', '一个心跳'], ['paper', 'The paper', '格子与量尺'], ['rate', 'Rate', '算心率'], ['six', 'Six steps', '六步法'],
   ['atlas', 'Rhythm atlas', '节律图鉴'], ['drill', 'Rhythm drill', '节律训练'], ['twelve', '12-lead', '12 导联']];
@@ -27,12 +27,30 @@ const CONFUSE = { nsr: ['sarr', 'avb1', 'sbrady'], sbrady: ['junc', 'nsr', 'avb1
   avb1: ['nsr', 'avb2w', 'sbrady'], avb2w: ['avb2m', 'pac', 'sarr'], avb2m: ['avb2w', 'avb3', 'spause'], avb3: ['avb2m', 'ivr', 'junc'], bbb: ['vt', 'paced', 'pvc'], paced: ['bbb', 'vt', 'ivr'], artifact: ['vf', 'torsades', 'afib'] };
 const BASIC = ['nsr', 'sbrady', 'stachy', 'afib', 'flutter', 'svt', 'vt', 'vf', 'asys', 'avb1', 'avb3', 'pvc', 'paced', 'artifact'];
 
-export function ecgLab(host, store, params = {}) {
+export function ecgLab(host, store, params = {}, io = {}) {
   const done = () => store.get('ecg:done', {});
+  /* ---- teacher narration: one shared player; each section has a play button keyed to a clip (w03-lab-ecg-<key>) ---- */
+  const player = document.createElement('div'); player.className = 'lab-player'; player.innerHTML = `<audio preload="none"></audio><span class="who">${t('Teacher', '老师')}</span><span class="what"></span><button class="spd" type="button">1×</button><button class="x" type="button" title="${t('Stop', '停止')}">✕</button>`;
+  const au = player.querySelector('audio'); let cur = null, rate = store.get('ecg:speed', 1);
+  const paintPlay = () => host.querySelectorAll('.say-btn').forEach(b => { const on = cur && b.dataset.say === cur; b.classList.toggle('on', !!on); b.classList.toggle('paused', !!on && au.paused); });
+  const stopSay = () => { au.pause(); cur = null; player.classList.remove('show'); paintPlay(); };
+  async function say(key, label) {
+    if (cur === key) { if (au.paused) au.play(); else au.pause(); paintPlay(); return; }
+    cur = key; player.classList.add('show'); player.querySelector('.what').textContent = label || ''; paintPlay();
+    try { au.src = await io.audio('audio/w03-lab-ecg-' + key + '.mp3'); au.playbackRate = rate; await au.play(); }
+    catch { player.querySelector('.what').textContent = t('This clip is not available yet.', '这段还没有录音。'); cur = null; paintPlay(); }
+  }
+  au.onended = () => { cur = null; paintPlay(); player.classList.remove('show'); };
+  au.onpause = au.onplay = paintPlay;
+  player.querySelector('.x').onclick = stopSay;
+  player.querySelector('.spd').onclick = e => { rate = rate >= 1.5 ? 1 : +(rate + 0.25).toFixed(2); au.playbackRate = rate; store.set('ecg:speed', rate); e.target.textContent = rate + '×'; };
+  player.querySelector('.spd').textContent = rate + '×';
+  const sayBtn = (key, label) => io.audio ? `<button class="say-btn" type="button" data-say="${key}" data-label="${esc(label || '')}" title="${t('Teacher explains this', '老师讲这一段')}"><span class="ic">▶</span>${t('Teacher', '老师讲')}</button>` : '';
   const markDone = k => { const d = done(); if (!d[k]) { d[k] = true; store.set('ecg:done', d); paintTabs(); } };
   let step = STEPS.some(s => s[0] === params.s) ? params.s : store.get('ecg:step', 'beat');
   host.innerHTML = `<div class="lab-tabs" id="labTabs"></div><div id="labBody"></div>`;
-  host.addEventListener('click', e => { const z = e.target.closest('.ecg-zoom'); if (z) z.parentElement.classList.toggle('zoom'); });
+  host.addEventListener('click', e => { const z = e.target.closest('.ecg-zoom'); if (z) z.parentElement.classList.toggle('zoom'); const sb = e.target.closest('.say-btn'); if (sb) say(sb.dataset.say, sb.dataset.label); });
+  host.appendChild(player);
   const tabs = host.querySelector('#labTabs'), body = host.querySelector('#labBody');
   function paintTabs() {
     const d = done();
@@ -41,6 +59,7 @@ export function ecgLab(host, store, params = {}) {
   }
   const nextBar = () => { const i = STEPS.findIndex(s => s[0] === step); const n = STEPS[i + 1]; return `<div class="btn-row lab-next">${i > 0 ? `<button class="btn ghost" data-go="${STEPS[i - 1][0]}">← ${t(STEPS[i - 1][1], STEPS[i - 1][2])}</button>` : ''}${n ? `<button class="btn" data-go="${n[0]}">${t('Next', '下一步')}: ${t(n[1], n[2])} →</button>` : `<a class="btn" href="#/aet/class?brief=3">${t('Back to the condensed book', '回到精讲')}</a>`}</div>`; };
   function draw() {
+    stopSay();
     ({ beat: stepBeat, paper: stepPaper, rate: stepRate, six: stepSix, atlas: stepAtlas, drill: stepDrill, twelve: stepTwelve })[step](body);
     body.insertAdjacentHTML('beforeend', nextBar());
     body.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { step = b.dataset.go; store.set('ecg:step', step); paintTabs(); draw(); window.scrollTo({ top: 0, behavior: 'instant' }); });
@@ -73,11 +92,12 @@ export function ecgLab(host, store, params = {}) {
       const w = WAVES.find(x => x[0] === key);
       seen[key] = true; store.set('ecg:waves', seen); if (WAVES.every(x => seen[x[0]])) markDone('beat');
       el.querySelector('#beatStrip').innerHTML = stripSVG(s, { pxPerMm: 7, win, baseMm: 20, heightMm: 30, textMm: 1.6, overlays: [{ type: 'wave', k: 1, wave: key }, { type: 'baseline' }, ...(key === 'J' ? [{ type: 'j', n: 9, label: true }] : []), ...(key === 'PR' ? [{ type: 'pr', k: 1, boxWord: ' ' + t('sm', '小格') }] : []), ...(key === 'QRS' ? [{ type: 'qrs', k: 1, boxWord: ' ' + t('sm', '小格') }] : []), ...(key === 'QT' ? [{ type: 'qt', k: 1 }] : [])] });
-      el.querySelector('#beatText').innerHTML = `<b>${t(w[1], w[2])}</b>${bi(w[3], w[4])}`;
+      el.querySelector('#beatText').innerHTML = `<b>${t(w[1], w[2])} ${sayBtn('wave-' + key, t(w[1], w[2]))}</b>${bi(w[3], w[4])}`;
+      if (cur && cur.startsWith('wave-') && cur !== 'wave-' + key) say('wave-' + key, t(w[1], w[2]));
       el.querySelector('#beatHeart').innerHTML = heartSVG(w[5]);
       el.querySelectorAll('[data-w]').forEach(b => b.classList.toggle('on', b.dataset.w === key));
     };
-    el.innerHTML = `<h2>${t('1 · One beat on paper', '1 · 纸上的一次心跳')}</h2>
+    el.innerHTML = `<h2>${t('1 · One beat on paper', '1 · 纸上的一次心跳')} ${sayBtn('beat-intro', t('One beat', '一个心跳'))}</h2>
       ${bi('The ECG is not a picture of the heart. It is a graph of its electricity against time, drawn on squared paper. One heartbeat leaves three marks: a small bump (P), a tall spike (QRS) and a broad bump (T). Tap each part to see where it comes from.',
         '心电图不是心脏的照片，是心脏的电随时间画在方格纸上的曲线。一次心跳留下三个记号：一个小包（P）、一个高尖（QRS）、一个宽包（T）。点每个部分，看它从哪里来。')}
       <div class="ecg-chips">${WAVES.map(w => `<button data-w="${w[0]}" class="${seen[w[0]] ? 'seen' : ''}">${w[0]}</button>`).join('')}</div>
@@ -93,14 +113,14 @@ export function ecgLab(host, store, params = {}) {
     const s = makeStrip('nsr', 5, 3);
     const zoom = stripSVG(s, { pxPerMm: 8, win: [0.45, 2.05], baseMm: 21, heightMm: 30, textMm: 1.5, overlays: [{ type: 'box', t: 0.5, y: 2, text: '1 mm = 0.04 s' }, { type: 'box', t: 0.5, y: 5, big: true, text: '5 mm = 0.20 s' }, { type: 'mv', t: 1.95 }, { type: 'baseline' }] });
     const prog = store.get('ecg:paper', { n: 0, ok: 0 });
-    el.innerHTML = `<h2>${t('2 · The paper, and how to measure on it', '2 · 格子，以及怎么在上面量')}</h2>
+    el.innerHTML = `<h2>${t('2 · The paper, and how to measure on it', '2 · 格子，以及怎么在上面量')} ${sayBtn('paper-intro', t('The paper', '格子'))}</h2>
       ${bi('The paper moves at 25 mm per second. Sideways is time, up and down is voltage. That gives every box a fixed meaning, and all ECG numbers are just boxes counted.',
         '纸以每秒 25 mm 的速度走。横向是时间，纵向是电压。于是每个格子都有固定的含义，心电图的所有数字都只是数格子。')}
       <div class="ecg-wrap fitx">${zoom}</div>
       <table class="ecg-six"><tr><th>${t('1 small box (1 mm)', '1 小格（1 mm）')}</th><td><b>0.04 s</b></td></tr><tr><th>${t('1 big box (5 small)', '1 大格（5 小格）')}</th><td><b>0.20 s</b></td></tr><tr><th>${t('5 big boxes', '5 大格')}</th><td><b>1 s</b></td></tr><tr><th>${t('30 big boxes', '30 大格')}</th><td><b>6 s</b> ${t('(the strip you count rate on)', '（算心率用的那一段）')}</td></tr><tr><th>${t('10 mm up', '向上 10 mm')}</th><td><b>1 mV</b></td></tr></table>
       ${note('Three numbers to own: PR 0.12–0.20 s = 3–5 small boxes. QRS under 0.12 s = under 3 small boxes. QT about 0.35–0.45 s. The school quiz key once called a small box 0.20 s: that is the big box; a small box is 0.04 s.',
         '要记死的三个数：PR 0.12–0.20 s = 3–5 小格；QRS 不到 0.12 s = 不到 3 小格；QT 约 0.35–0.45 s。学校题库答案键曾把小格写成 0.20 s：那是大格，小格是 0.04 s。', 'ecg-key')}
-      <h3>${t('Caliper: drag across the strip', '量尺：在条带上拖一下')}</h3>
+      <h3>${t('Caliper: drag across the strip', '量尺：在条带上拖一下')} ${sayBtn('paper-caliper', t('Caliper', '量尺'))}</h3>
       ${bi('Put your finger on the start of what you measure, drag to its end, and read the boxes. Try the PR (start of P to start of QRS) and the QRS (start to the J point).', '手指放在要量的起点，拖到终点，读格数。试试 PR（P 起点到 QRS 起点）和 QRS（起点到 J 点）。')}
       <div id="cal" class="ecg-wrap cal"></div><div id="calOut" class="ecg-readout">${t('Drag to measure', '拖动测量')}</div>
       <h3>${t('Practice: long or normal?', '练习：长还是正常？')} <span class="tiny muted" id="paperScore"></span></h3>
@@ -144,10 +164,10 @@ export function ecgLab(host, store, params = {}) {
   function stepRate(el) {
     const s6 = makeStrip('nsr', 23, 6), sReg = makeStrip('nsr', 31, 6), prog = store.get('ecg:rate', { n: 0, ok: 0 });
     el.innerHTML = `<h2>${t('3 · Counting the rate', '3 · 算心率')}</h2>
-      <h3>${t('Method 1 · six seconds × 10 (works for every rhythm)', '方法一 · 6 秒 × 10（任何节律都能用）')}</h3>
+      <h3>${t('Method 1 · six seconds × 10 (works for every rhythm)', '方法一 · 6 秒 × 10（任何节律都能用）')} ${sayBtn('rate-six', t('Six-second method', '6 秒法'))}</h3>
       ${bi('Thirty big boxes are six seconds. Count the R waves inside them and multiply by ten. Tap the button to count.', '30 个大格就是 6 秒。数这 6 秒里有几个 R 波，乘以 10。点按钮数一数。')}
       <div id="r6"></div><div class="btn-row"><button class="btn ghost" id="cnt">${t('Count the R waves', '数 R 波')}</button><span id="r6out" class="ecg-readout"></span></div>
-      <h3>${t('Method 2 · 300-150-100-75-60-50 (regular rhythms only)', '方法二 · 300-150-100-75-60-50（只用于规则节律）')}</h3>
+      <h3>${t('Method 2 · 300-150-100-75-60-50 (regular rhythms only)', '方法二 · 300-150-100-75-60-50（只用于规则节律）')} ${sayBtn('rate-300', t('300 rule', '300 法'))}</h3>
       ${bi('Find an R wave that lands on a thick line. The next thick lines are 300, 150, 100, 75, 60, 50. Read the number nearest to the next R wave. One big box between R waves = 300, two = 150, three = 100, four = 75, five = 60.',
         '找一个正好落在粗线上的 R 波。后面每条粗线依次是 300、150、100、75、60、50。看下一个 R 落在哪条附近，就读那个数。两个 R 之间隔 1 大格 = 300，2 格 = 150，3 格 = 100，4 格 = 75，5 格 = 60。')}
       ${box(sReg, { overlays: [{ type: 'thick', k: 1 }] })}
@@ -185,7 +205,7 @@ export function ecgLab(host, store, params = {}) {
       ['QRS width', 'QRS 宽窄', 'Under 3 small boxes = narrow = the beat came from above the ventricles. 3 or more = wide = ventricular origin or bundle branch block. Width names the rhythm; speed does not.', '不到 3 小格 = 窄 = 来自心室以上。3 格或以上 = 宽 = 室性起源或束支阻滞。宽窄决定命名，快慢不决定。', [{ type: 'qrs', k: 0 }, { type: 'qrs', k: 1 }]],
       ['ST and T', 'ST 与 T', 'Find the TP baseline, then look at the J point: is the ST raised or dropped? Are the T waves peaked or inverted? On a monitor strip this is only a flag: ST is read on a printed 12-lead.', '先找 TP 基线，再看 J 点：ST 抬了还是压了？T 波高尖还是倒置？在监护条上这只是提示：ST 要在打印的 12 导上读。', [{ type: 'baseline', label: 'TP' }, { type: 'j', n: 4, label: true }]]];
     let ex = 0, k = 0; const seenEx = store.get('ecg:six', {});
-    el.innerHTML = `<h2>${t('4 · The six steps, in order, every time', '4 · 六步法：每次都按同一个顺序')}</h2>
+    el.innerHTML = `<h2>${t('4 · The six steps, in order, every time', '4 · 六步法：每次都按同一个顺序')} ${sayBtn('six-intro', t('Six steps', '六步法'))}</h2>
       ${bi('Do not name a rhythm by its look. Walk the six steps on a clean six-second piece of lead II, and the name falls out of whichever step fails. Here is normal sinus rhythm first, then three strips where one step breaks.',
         '不要凭长相叫节律。拿一段干净的 II 导 6 秒条，走完六步，名字自然从「哪一步不正常」里掉出来。先看正常窦律，再看三条各有一步出问题的。')}
       <div class="ecg-chips" id="exChips">${EX.map((e, i) => `<button data-ex="${i}">${name(RHYTHM[e[0]])}</button>`).join('')}</div>
@@ -199,9 +219,9 @@ export function ecgLab(host, store, params = {}) {
       const keys = ['rate', 'reg', 'p', 'pr', 'qrs', 'st'];
       { const o = { overlays: k < 6 ? STEP6[k][4] : [] }, h = el.querySelector('#sixStrip'); if (h.querySelector('.ecg-svg')) rebox(h, st, o); else h.innerHTML = box(st, o); }
       if (k < 6) { const s = STEP6[k], fail = bad.includes(keys[k]); const finding = keys[k] === 'st' ? t('Nothing to call on this strip.', '这条上没有要报的。') : t(R.find[keys[k]][0], R.find[keys[k]][1]);
-        el.querySelector('#sixText').innerHTML = `<b>${k + 1} · ${t(s[0], s[1])}</b>${bi(s[2], s[3])}<div class="ecg-finding ${fail ? 'bad' : 'ok'}">${fail ? '✗' : '✓'} ${t('This strip', '这条')}: ${finding}</div>`;
+        el.querySelector('#sixText').innerHTML = `<b>${k + 1} · ${t(s[0], s[1])} ${sayBtn('six-' + (k + 1), t(s[0], s[1]))}</b>${bi(s[2], s[3])}<div class="ecg-finding ${fail ? 'bad' : 'ok'}">${fail ? '✗' : '✓'} ${t('This strip', '这条')}: ${finding}</div>`;
         el.querySelector('#sixTable').innerHTML = ''; }
-      else { el.querySelector('#sixText').innerHTML = `<b>${t('Conclusion', '结论')}: ${name(R)}</b>${bi(R.tell[0], R.tell[1])}${bad.length ? bi('The steps that failed are marked. That is the whole diagnosis.', '失败的步骤已标红。诊断就是这几步。') : bi('Every step passed: a normal rhythm that still needs a patient assessment.', '六步全过：正常节律，病人照样要评估。')}`;
+      else { el.querySelector('#sixText').innerHTML = `<b>${t('Conclusion', '结论')}: ${name(R)} ${sayBtn('six-concl-' + id, name(R))}</b>${bi(R.tell[0], R.tell[1])}${bad.length ? bi('The steps that failed are marked. That is the whole diagnosis.', '失败的步骤已标红。诊断就是这几步。') : bi('Every step passed: a normal rhythm that still needs a patient assessment.', '六步全过：正常节律，病人照样要评估。')}`;
         el.querySelector('#sixTable').innerHTML = six(R, bad); }
     };
     el.querySelectorAll('[data-ex]').forEach(b => b.onclick = () => { ex = +b.dataset.ex; k = 0; paint(); });
@@ -212,7 +232,7 @@ export function ecgLab(host, store, params = {}) {
   /* ================= 5 · atlas ================= */
   function stepAtlas(el) {
     let group = store.get('ecg:group', 'sinus'); const seenG = store.get('ecg:atlas', {});
-    el.innerHTML = `<h2>${t('5 · Rhythm atlas', '5 · 节律图鉴')}</h2>
+    el.innerHTML = `<h2>${t('5 · Rhythm atlas', '5 · 节律图鉴')} ${sayBtn('atlas-intro', t('Rhythm atlas', '节律图鉴'))}</h2>
       ${bi('Grouped by where the beat starts, because that is what the strip is telling you: SA node → atria → AV junction → ventricles. Each card: the strip, the six findings, how to recognise it, and what a PCP does. “Redraw” gives a fresh example of the same rhythm: learn the pattern, not one picture.',
         '按心跳从哪里发起分组，因为条带告诉你的就是这个：SA 结 → 心房 → 交界区 → 心室。每张卡：条带、六步发现、怎么认、PCP 在车上做什么。「重画」给同一节律的新例子：学的是规律，不是一张图。')}
       <div class="ecg-chips" id="gChips">${GROUPS.map(g => `<button data-g="${g[0]}" class="${seenG[g[0]] ? 'seen' : ''}">${t(g[1], g[2])}</button>`).join('')}</div><div id="cards"></div>`;
@@ -220,7 +240,7 @@ export function ecgLab(host, store, params = {}) {
       seenG[group] = true; store.set('ecg:atlas', seenG); store.set('ecg:group', group); if (GROUPS.every(g => seenG[g[0]])) markDone('atlas');
       el.querySelectorAll('[data-g]').forEach(b => { b.classList.toggle('on', b.dataset.g === group); b.classList.toggle('seen', !!seenG[b.dataset.g]); });
       const list = RHYTHMS.filter(R => R.group === group);
-      el.querySelector('#cards').innerHTML = list.map(R => `<div class="ecg-card" data-id="${R.id}"><h3>${esc(R.en)} <span class="zh">${esc(R.zh)}</span></h3><div data-strip></div>
+      el.querySelector('#cards').innerHTML = list.map(R => `<div class="ecg-card" data-id="${R.id}"><h3>${esc(R.en)} <span class="zh">${esc(R.zh)}</span> ${sayBtn('rh-' + R.id, name(R))}</h3><div data-strip></div>
         <div class="btn-row"><button class="btn ghost" data-redraw>${t('Redraw', '重画')}</button><button class="btn ghost" data-marks>${t('Show the clues', '标出线索')}</button></div>
         ${six(R)}<div class="ecg-note"><b>${t('How to recognise it', '怎么认')}</b>${bi(R.tell[0], R.tell[1])}</div><div class="ecg-note act"><b>${t('What a PCP does', 'PCP 做什么')}</b>${bi(R.act[0], R.act[1])}</div></div>`).join('');
       el.querySelectorAll('.ecg-card').forEach(card => {
@@ -238,11 +258,11 @@ export function ecgLab(host, store, params = {}) {
     let mode = store.get('ecg:mode', 'name'), pool = store.get('ecg:pool', 'basic');
     const sc = store.get('ecg:score', { n: 0, ok: 0, streak: 0, best: 0, per: {}, arrestN: 0, arrestOk: 0 });
     const save = () => store.set('ecg:score', sc);
-    el.innerHTML = `<h2>${t('6 · Rhythm drill', '6 · 节律训练')}</h2>
+    el.innerHTML = `<h2>${t('6 · Rhythm drill', '6 · 节律训练')} <span id="drillSay"></span></h2>
       <div class="ecg-chips" id="modes"><button data-m="name">${t('Name the rhythm', '认节律')}</button><button data-m="arrest">${t('Arrest: shock or not?', '骤停：电不电？')}</button></div>
       <div class="ecg-chips small" id="pools"><button data-p="basic">${t('Starter set (14)', '入门 14 种')}</button><button data-p="all">${t('All rhythms (23)', '全部 23 种')}</button></div>
       <div id="dq"></div><div id="dstats"></div>`;
-    const paintChips = () => { el.querySelectorAll('[data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode)); el.querySelectorAll('[data-p]').forEach(b => b.classList.toggle('on', b.dataset.p === pool)); el.querySelector('#pools').style.display = mode === 'name' ? '' : 'none'; };
+    const paintChips = () => { el.querySelector('#drillSay').innerHTML = sayBtn(mode === 'arrest' ? 'drill-arrest' : 'drill-intro', mode === 'arrest' ? t('Arrest drill', '骤停训练') : t('Rhythm drill', '节律训练')); el.querySelectorAll('[data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode)); el.querySelectorAll('[data-p]').forEach(b => b.classList.toggle('on', b.dataset.p === pool)); el.querySelector('#pools').style.display = mode === 'name' ? '' : 'none'; };
     el.querySelectorAll('[data-m]').forEach(b => b.onclick = () => { mode = b.dataset.m; store.set('ecg:mode', mode); paintChips(); ask(); });
     el.querySelectorAll('[data-p]').forEach(b => b.onclick = () => { pool = b.dataset.p; store.set('ecg:pool', pool); paintChips(); ask(); });
     const stats = () => {
@@ -325,7 +345,7 @@ export function ecgLab(host, store, params = {}) {
     const LAND = { V1: ['4th intercostal space, right sternal border', '第 4 肋间，右胸骨缘'], V2: ['4th intercostal space, left sternal border', '第 4 肋间，左胸骨缘'], V3: ['halfway between V2 and V4 (place V4 first)', 'V2 与 V4 正中间（先放 V4）'], V4: ['5th intercostal space, mid-clavicular line (usually below the left nipple)', '第 5 肋间，锁骨中线（一般在左乳头下方）'], V5: ['anterior axillary line, level with V4', '腋前线，与 V4 同水平'], V6: ['mid-axillary line, level with V4', '腋中线，与 V4 同水平'] };
     function subElectrodes(b) {
       const prog = tw(); let mode = 'twelve';
-      b.innerHTML = `${bi('Ten electrodes make twelve leads. The four limb electrodes have fixed colours: RA white, LA black, LL red, RL green (“snow over grass, smoke over fire”: white above green on the right, black above red on the left). RL is only a reference; it is not in any lead. Read the letters on the wires, never trust the colours alone.',
+      b.innerHTML = `<p>${sayBtn('l12-electrodes', t('Electrodes', '电极'))}</p>${bi('Ten electrodes make twelve leads. The four limb electrodes have fixed colours: RA white, LA black, LL red, RL green (“snow over grass, smoke over fire”: white above green on the right, black above red on the left). RL is only a reference; it is not in any lead. Read the letters on the wires, never trust the colours alone.',
         '10 个电极得到 12 个导联。四个肢体电极颜色固定：RA 白、LA 黑、LL 红、RL 绿（「雪在草上、烟在火上」：右侧白在绿上，左侧黑在红上）。RL 只是参考，不参与任何导联。读导线上的字母，别只认颜色。')}
         <div class="ecg-chips small"><button data-tm="twelve" class="on">${t('12-lead: limbs on the limbs + V1–V6', '12 导：肢体电极放肢体 + V1–V6')}</button><button data-tm="monitor">${t('3- / 4-lead monitoring: on the torso', '3 导 / 4 导监护：贴躯干')}</button></div>
         <div class="ecg-two"><div id="torso"></div><div class="ecg-note" id="torsoText"></div></div>
@@ -378,10 +398,10 @@ export function ecgLab(host, store, params = {}) {
         <text class="hcap" x="110" y="178" text-anchor="middle">${t('Horizontal plane: V1–V6 round the left chest', '水平面：V1–V6 绕着左前胸')}</text></svg>`; };
       const grid = () => `<div class="ecg-l12 names">${LAYOUT.flat().map(L => `<div style="border-color:${col(L)};color:${col(L)}" data-l="${L}">${L}<small>${t((WALLS[wallOf(L)] || { en: 'cavity' }).en, (WALLS[wallOf(L)] || { zh: '心腔' }).zh)}</small></div>`).join('')}</div>`;
       let cur = 'II';
-      b.innerHTML = `${bi('A lead is not a wire. It is one viewpoint: the machine compares two electrodes and draws what the heart’s electricity looks like from that direction. Twelve leads are twelve cameras around the same heart. Six limb leads look at it in the frontal plane; six chest leads look in the horizontal plane. Tap any lead.',
+      b.innerHTML = `<p>${sayBtn('l12-views', t('Twelve views', '十二个视角'))}</p>${bi('A lead is not a wire. It is one viewpoint: the machine compares two electrodes and draws what the heart’s electricity looks like from that direction. Twelve leads are twelve cameras around the same heart. Six limb leads look at it in the frontal plane; six chest leads look in the horizontal plane. Tap any lead.',
         '导联不是一根线，是一个视角：机器比较两个电极，画出从那个方向看过去心脏的电是什么样。12 个导联就是围着同一个心脏的 12 台摄像机。6 个肢体导联在额面看它，6 个胸导联在水平面看它。点任何一个导联。')}
         <div class="ecg-two" id="views"></div><div class="ecg-note" id="viewText"></div>
-        <h3>${t('The printout: cameras that face the same wall sit together', '打印出来：看同一面墙的摄像机挨在一起')}</h3>
+        <h3>${t('The printout: cameras that face the same wall sit together', '打印出来：看同一面墙的摄像机挨在一起')} ${sayBtn('l12-layout', t('The printout', '打印排版'))}</h3>
         ${bi('This is the standard 12-lead layout. The colours are the walls. “Contiguous leads” just means two or more cameras pointing at the same wall. A real STEMI lights up a wall, not random leads.', '这是 12 导联的标准排版。颜色就是墙。「相邻导联」只是说两台以上的摄像机对着同一面墙。真的 STEMI 点亮的是一面墙，不是零散的导联。')}
         <div id="grid"></div>
         <table class="ecg-six walls">${Object.entries(WALLS).map(([k, w]) => `<tr><th style="color:${w.color}">${t(w.en, w.zh)}</th><td><b>${w.leads.join(', ')}</b> · ${w.artery} ${t('', w.arteryZh)}<br><span class="tiny">${t({ inferior: 'Right coronary. Beware right-ventricular involvement (hypotension: nitroglycerin can crash the pressure) and AV node ischemia (bradycardia, blocks).', septal: 'Proximal LAD. Watch for bundle branch blocks; often extends into the anterior wall.', anterior: 'LAD, the “widowmaker”: a big territory, highest risk of cardiogenic shock and VF.', lateral: 'Circumflex. Subtle changes; the wall you miss by not reading every lead.' }[k],
@@ -397,7 +417,7 @@ export function ecgLab(host, store, params = {}) {
       const single = (o, lab) => `<div class="ecg-mini"><div class="ecg-wrap fit">${stripSVG(customStrip([beat(Object.assign({ t0: 0.35 }, o))], [], 1.1), { pxPerMm: 5, baseMm: 20, heightMm: 30, fit: true, overlays: [{ type: 'baseline' }, ...(o.st ? [{ type: 'j', n: 1, label: true }] : [])] })}</div><div class="tiny">${lab}</div></div>`;
       const cascade = `<div class="ecg-minis">${single({}, t('Normal', '正常'))}${single({ tAmp: 0.7 }, t('Hyperacute T: minutes in', '高尖 T：刚开始几分钟'))}${single({ st: 0.3, tAmp: 0.5 }, t('ST elevation: injury (STEMI)', 'ST 抬高：损伤（STEMI）'))}${single({ st: -0.2 }, t('ST depression: ischemia, or a mirror', 'ST 压低：缺血，或镜像'))}${single({ tInv: true }, t('Inverted T: ischemia', '倒置 T：缺血'))}${single({ q: 0.5, r: 0.7, tInv: true }, t('Deep Q: old infarct, scar', '深 Q：陈旧梗死，瘢痕'))}</div>`;
       let kind = 'inferior', marks = false, sd = 5; const prog = tw();
-      b.innerHTML = `<h3>${t('What injury looks like in one lead', '损伤在一个导联里长什么样')}</h3>
+      b.innerHTML = `<h3>${t('What injury looks like in one lead', '损伤在一个导联里长什么样')} ${sayBtn('l12-cascade', t('Injury in one lead', '损伤长什么样'))}</h3>
         ${bi('An artery closes and the muscle behind it goes through a sequence: ischemia (T wave changes), injury (ST elevation: this is the STEMI sign, and it is still saveable), infarction (a deep Q wave: scar, too late). The leads looking at that wall show it; the leads on the opposite wall show the mirror image, ST depression.',
           '一条动脉堵了，它后面的肌肉按顺序变化：缺血（T 波改变）→ 损伤（ST 抬高：这就是 STEMI 的标志，还救得回来）→ 梗死（深 Q 波：瘢痕，晚了）。看那面墙的导联显示它；对面墙的导联显示镜像，ST 压低。')}
         ${cascade}
@@ -421,7 +441,7 @@ export function ecgLab(host, store, params = {}) {
         return `<div class="tile ${cls}">${stripSVG(ld, { pxPerMm: 2.6, heightMm: 36, baseMm: 20, label: L, fit: true, overlays: mk && st ? [{ type: 'baseline' }, { type: 'j', n: 9 }] : [] })}${mk && st ? `<span class="st">${st > 0 ? '↑' : '↓'} ${Math.abs(st).toFixed(1)} mm</span>` : ''}</div>`; }).join('')}</div>`;
       const paint = () => { const e = make12(kind, sd); b.querySelector('#l12').innerHTML = tiles(e, marks); b.querySelector('#marks').classList.toggle('on', marks);
         b.querySelectorAll('[data-k]').forEach(x => x.classList.toggle('on', x.dataset.k === kind));
-        const w = PATTERNS[kind].wall && WALLS[PATTERNS[kind].wall]; b.querySelector('#l12text').innerHTML = `<b>${t(PATTERNS[kind].en, PATTERNS[kind].zh)}</b>${w ? ` · <span style="color:${w.color}">${w.leads.join(', ')} · ${w.artery}</span>` : ''}${bi(TEXT[kind][0], TEXT[kind][1])}`; };
+        const w = PATTERNS[kind].wall && WALLS[PATTERNS[kind].wall]; b.querySelector('#l12text').innerHTML = `<b>${t(PATTERNS[kind].en, PATTERNS[kind].zh)} ${sayBtn('l12-' + kind, t(PATTERNS[kind].en, PATTERNS[kind].zh))}</b>${w ? ` · <span style="color:${w.color}">${w.leads.join(', ')} · ${w.artery}</span>` : ''}${bi(TEXT[kind][0], TEXT[kind][1])}`; };
       b.querySelectorAll('[data-k]').forEach(x => x.onclick = () => { kind = x.dataset.k; paint(); }); b.querySelector('#marks').onclick = () => { marks = !marks; paint(); }; b.querySelector('#redraw').onclick = () => { sd = seed(); paint(); }; paint();
       const q = b.querySelector('#wallQ');
       function ask() {
@@ -438,7 +458,7 @@ export function ecgLab(host, store, params = {}) {
     /* ---- artifact ---- */
     function subArtifact(b) {
       const prog = tw();
-      b.innerHTML = `${bi('Lead I = RA to LA. Lead II = RA to LL. Lead III = LA to LL. So a bad electrode spoils exactly the two leads that use it, and the third lead, which does not, stays clean. Read the clean lead and it names the guilty electrode.',
+      b.innerHTML = `<p>${sayBtn('l12-artifact', t('Artifact', '伪差'))}</p>${bi('Lead I = RA to LA. Lead II = RA to LL. Lead III = LA to LL. So a bad electrode spoils exactly the two leads that use it, and the third lead, which does not, stays clean. Read the clean lead and it names the guilty electrode.',
         'I 导 = RA 到 LA。II 导 = RA 到 LL。III 导 = LA 到 LL。所以一个坏电极恰好毁掉用到它的两个导联，而不用它的第三个导联是干净的。看哪个干净，它就指出了坏的那个电极。')}
         <table class="ecg-six"><tr><th>${t('Noisy', '有噪')}</th><th>${t('Clean', '干净')}</th><th>${t('Fix', '查')}</th></tr><tr><td>I + II</td><td>III</td><td><b>RA</b> ${t('(white)', '（白）')}</td></tr><tr><td>I + III</td><td>II</td><td><b>LA</b> ${t('(black)', '（黑）')}</td></tr><tr><td>II + III</td><td>I</td><td><b>LL</b> ${t('(red)', '（红）')}</td></tr><tr><td>${t('one V lead', '单个 V 导')}</td><td>${t('the rest', '其余')}</td><td>${t('that chest electrode', '那个胸电极')}</td></tr><tr><td>${t('all leads', '全部')}</td><td>${t('none', '没有')}</td><td>${t('the patient (moving, shivering), the vehicle, interference', '病人（动、发抖）、车、电磁干扰')}</td></tr></table>
         ${note('The order never changes: look at the patient and feel the pulse (a talking patient is not in VF) → which leads are noisy → fix the cause (press the electrode, fresh electrode, off bone and muscle, re-prep the skin; check the wire; warm and still patient, arms relaxed, legs uncrossed; phones and radios away, vehicle stopped) → acquire again. One round, then leave: do not stay on scene for a perfect tracing.',
@@ -464,7 +484,7 @@ export function ecgLab(host, store, params = {}) {
 
     /* ---- actions ---- */
     function subActions(b) {
-      b.innerHTML = `${bi('The ECG never changes the first things you do. For the licensing exam, the EMALB chest-pain protocol (p.47) has no ECG step at all: comfort, oxygen to 94%, chewed ASA 160 mg, start transport, history and vitals, nitroglycerin when the gates are met (SBP over 110 before each dose, pulse 50–150 by palpation). The monitor must never delay ASA or transport.',
+      b.innerHTML = `<p>${sayBtn('l12-actions', t('What you do', '动作'))}</p>${bi('The ECG never changes the first things you do. For the licensing exam, the EMALB chest-pain protocol (p.47) has no ECG step at all: comfort, oxygen to 94%, chewed ASA 160 mg, start transport, history and vitals, nitroglycerin when the gates are met (SBP over 110 before each dose, pulse 50–150 by palpation). The monitor must never delay ASA or transport.',
         '心电图从不改变你最先做的事。执照考试里，EMALB 胸痛规程（p.47）根本没有 ECG 这一步：舒适体位、氧到 94%、嚼服阿司匹林 ASA 160 mg、启动转运、病史和生命体征、符合门槛时给硝酸甘油 nitroglycerin（每剂前 SBP > 110，脉搏 50–150，摸出来的）。监护仪绝不能延误阿司匹林和转运。')}
         <h3>${t('When a PCP acquires a 12-lead · BCEHS C01 (Acute Coronary Syndrome)', 'PCP 什么时候做 12 导 · BCEHS C01（急性冠脉综合征）')}</h3>
         <ol class="ecg-list"><li>${t('Trained (online + in-person) with EMALB endorsement.', '完成线上 + 面授培训，有 EMALB 背书。')}</li><li>${t('Patient over 18.', '病人 > 18 岁。')}</li><li>${t('New, non-traumatic chest pain under 12 hours, suspicious for ACS. Never let it delay priority care; if you cannot, consider an ACP intercept to acquire it.', '< 12 小时新发、非创伤性、疑 ACS 的胸痛。不能干扰优先处置；自己做不了，考虑请 ACP 拦截来做。')}</li></ol>

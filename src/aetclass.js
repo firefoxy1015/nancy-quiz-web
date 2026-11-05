@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=58';
-import { news2Drill } from './news2drill.js?v=58';
+import { S, save, t, esc, ico } from './app.js?v=59';
+import { news2Drill } from './news2drill.js?v=59';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -357,6 +357,9 @@ function drawBrief(el, wk, ch) {
   const back = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>`;
   if (!B) { el.innerHTML = `${back}<div class="card"><h2>${t('Condensed book', '精讲')} · ${t('Weekend', '周末')} ${wk}</h2><p class="muted">${t('Being prepared.', '制作中。')}</p></div>`; return; }
   const chaps = B.chapters, card = chaps.find(c => c.id === 'ch-card'), rest = chaps.filter(c => c.id !== 'ch-card');
+  // chapter prose is Chinese by design (English terms inline); the list itself follows the site language
+  const ttl = c => S.lang === 'en' && c.en ? esc(c.en) : S.lang === 'both' && c.en ? `${esc(c.title)}<div class="tiny" style="margin-top:2px">${esc(c.en)}</div>` : esc(c.title);
+  const kick = c => S.lang === 'zh' ? esc(c.k) : esc(c.k.replace(/第 (\d+) 周末 · 精讲 (\d+)/, 'Weekend $1 · Chapter $2').replace(/第 (\d+) 周末 · 必过卡/, 'Weekend $1 · Pass card').replace(/第 (\d+) 周末 · 附录/, 'Weekend $1 · Appendix'));
   const readKey = 'brief:' + wk, read = store.get(readKey, {});
   const keyOf = c => c.id === 'ch-card' ? 'card' : c.id;
   const go = c => { location.hash = `#/aet/class?brief=${wk}` + (c ? '&ch=' + c : ''); };
@@ -374,8 +377,8 @@ function drawBrief(el, wk, ch) {
       <p class="tiny muted">${t('Pass card', '必过卡')} ~10 min · ${rest.length} ${t('chapters', '章')} ~${total} min · ${t('read', '已读')} ${done}/${rest.length}</p>
       ${nav('')}
       <div class="list-wrap">
-        ${card ? `<button class="list-item${read.card ? ' done' : ''}" data-go="card"><span><b>${esc(card.title)}</b><div class="tiny">${esc(card.k)} · ~10 min</div></span><span class="tag-count">${read.card ? t('Read', '已读') : t('Open', '打开')}</span></button>` : ''}
-        ${rest.map(c => `<button class="list-item${read[c.id] ? ' done' : ''}" data-go="${c.id}"><span>${esc(c.title)}<div class="tiny">${esc(c.k)} · ${c.min} min</div></span><span class="tag-count">${read[c.id] ? t('Read', '已读') : t('Open', '打开')}</span></button>`).join('')}
+        ${card ? `<button class="list-item${read.card ? ' done' : ''}" data-go="card"><span><b>${ttl(card)}</b><div class="tiny">${kick(card)} · ~10 min</div></span><span class="tag-count">${read.card ? t('Read', '已读') : t('Open', '打开')}</span></button>` : ''}
+        ${rest.map(c => `<button class="list-item${read[c.id] ? ' done' : ''}" data-go="${c.id}"><span>${ttl(c)}<div class="tiny">${kick(c)} · ${c.min} min</div></span><span class="tag-count">${read[c.id] ? t('Read', '已读') : t('Open', '打开')}</span></button>`).join('')}
       </div>
       <div class="btn-row" style="margin-top:10px">
         ${B.pdf ? `<button class="btn ghost" id="briefPdf">${t('Download PDF', '下载 PDF')}</button>` : ''}
@@ -404,7 +407,7 @@ function drawBrief(el, wk, ch) {
   const c = chaps[k], prev = chaps[k - 1], next = chaps[k + 1], key = keyOf(c);
   el.innerHTML = `${back}<div class="card">${nav(key)}<div class="cls-book">${c.html}</div>
     <div class="btn-row" style="margin-top:14px">
-      ${prev ? `<button class="btn ghost" data-go="${keyOf(prev)}">← ${esc(prev.title)}</button>` : ''}
+      ${prev ? `<button class="btn ghost" data-go="${keyOf(prev)}">← ${S.lang === 'en' && prev.en ? esc(prev.en) : esc(prev.title)}</button>` : ''}
       <button class="btn" id="markRead">${read[key] ? t('Read ✓', '已读 ✓') : t('Mark as read', '标记已读')}${next ? ' → ' + t('next', '下一章') : ''}</button>
     </div></div>`;
   wire();
@@ -530,8 +533,8 @@ async function drawLab(el, params) {
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=58');
-  ecgLab(el.querySelector('#labHost'), store, params);
+  const { ecgLab } = await import('./ecglab.js?v=59');
+  ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
 /* ---------------- NEWS2 trainer page (the same trainer sits inside the scoring lesson's practice slide) ---------------- */

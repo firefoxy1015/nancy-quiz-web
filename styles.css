@@ -1023,3 +1023,13 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ecg-mini .ecg-wrap { margin: 0 0 4px; } .ecg-mini .tiny { text-align: center; }
 .ecg-list { padding-left: 22px; } .ecg-list li { margin-bottom: 6px; }
 .btn.small { font-size: .82rem; padding: 6px 12px; min-height: 32px; }
+
+/* teacher narration in the labs */
+.say-btn { display: inline-flex; align-items: center; gap: 5px; vertical-align: middle; margin-left: 6px; padding: 3px 10px 3px 7px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-ink); font: inherit; font-size: .78rem; font-weight: 600; line-height: 1.4; cursor: pointer; }
+.say-btn .ic { font-size: .7rem; } .say-btn.on { background: var(--accent); color: #fff; } .say-btn.on .ic::before { content: '❚❚ '; } .say-btn.on .ic { font-size: 0; } .say-btn.on.paused .ic::before { content: '▶ '; }
+.say-btn:hover { filter: brightness(1.05); }
+.lab-player { position: fixed; left: 50%; bottom: 72px; transform: translate(-50%, 20px); z-index: 30; display: none; align-items: center; gap: 10px; max-width: min(92vw, 520px); padding: 8px 10px 8px 14px; border-radius: 999px; background: var(--accent); color: #fff; box-shadow: var(--shadow); font-size: .9rem; opacity: 0; transition: opacity .2s, transform .2s; }
+.lab-player.show { display: flex; opacity: 1; transform: translate(-50%, 0); }
+.lab-player .who { font-weight: 700; } .lab-player .what { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; opacity: .9; }
+.lab-player button { font: inherit; font-size: .8rem; font-weight: 700; padding: 4px 9px; border-radius: 999px; border: 1px solid rgba(255,255,255,.5); background: transparent; color: #fff; cursor: pointer; }
+.lab-player audio { display: none; }
