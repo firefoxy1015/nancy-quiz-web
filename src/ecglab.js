@@ -2,8 +2,8 @@
 // Every concept is drawn on a real-scale strip from ecgstrip.js, and every step ends in practice with instant feedback.
 // Seven steps: one beat → the paper → rate → the six steps → rhythm atlas → rhythm drill → the 12-lead.
 // Progress and drill scores stay on this device through the store the caller passes in (prefix aetclass:).
-import { t, esc, bi } from './app.js?v=66';
-import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=66';
+import { t, esc, bi } from './app.js?v=67';
+import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=67';
 
 const STEPS = [['beat', 'One beat', '一个心跳'], ['paper', 'The paper', '格子与量尺'], ['rate', 'Rate', '算心率'], ['six', 'Six steps', '六步法'],
   ['atlas', 'Rhythm atlas', '节律图鉴'], ['drill', 'Rhythm drill', '节律训练'], ['twelve', '12-lead', '12 导联']];
@@ -261,6 +261,7 @@ export function ecgLab(host, store, params = {}, io = {}) {
     el.innerHTML = `<h2>${t('6 · Rhythm drill', '6 · 节律训练')} <span id="drillSay"></span></h2>
       <div class="ecg-chips" id="modes"><button data-m="name">${t('Name the rhythm', '认节律')}</button><button data-m="arrest">${t('Arrest: shock or not?', '骤停：电不电？')}</button></div>
       <div class="ecg-chips small" id="pools"><button data-p="basic">${t('Starter set (14)', '入门 14 种')}</button><button data-p="all">${t('All rhythms (23)', '全部 23 种')}</button></div>
+      <div class="tiny muted" style="margin:4px 0 8px">${t('Prefer paper? The printable workbook (32 strips at true scale, measured with a ruler) is under this weekend’s PDF button.', '想在纸上练？打印版练习册（32 条真实比例条带，拿尺子量）在本周末的 PDF 按钮里。')} <a href="#/aet/class?brief=3&ch=pdf">${t('Open', '打开')} →</a></div>
       <div id="dq"></div><div id="dstats"></div>`;
     const paintChips = () => { el.querySelector('#drillSay').innerHTML = sayBtn(mode === 'arrest' ? 'drill-arrest' : 'drill-intro', mode === 'arrest' ? t('Arrest drill', '骤停训练') : t('Rhythm drill', '节律训练')); el.querySelectorAll('[data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode)); el.querySelectorAll('[data-p]').forEach(b => b.classList.toggle('on', b.dataset.p === pool)); el.querySelector('#pools').style.display = mode === 'name' ? '' : 'none'; };
     el.querySelectorAll('[data-m]').forEach(b => b.onclick = () => { mode = b.dataset.m; store.set('ecg:mode', mode); paintChips(); ask(); });

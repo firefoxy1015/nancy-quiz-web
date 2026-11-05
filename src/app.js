@@ -1,13 +1,13 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=66';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=66';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=66';
-import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=66';
-import { renderPortal } from './portal.js?v=66';
-import { renderAetClass } from './aetclass.js?v=66';
-import { renderBackup } from './backup.js?v=66';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=67';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=67';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=67';
+import { renderExaminerHub, renderExaminerRun } from './examiner.js?v=67';
+import { renderPortal } from './portal.js?v=67';
+import { renderAetClass } from './aetclass.js?v=67';
+import { renderBackup } from './backup.js?v=67';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';

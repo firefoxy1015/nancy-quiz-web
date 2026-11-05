@@ -2,9 +2,9 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=66';
-import { news2Drill } from './news2drill.js?v=66';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=66';
+import { S, save, t, esc, ico } from './app.js?v=67';
+import { news2Drill } from './news2drill.js?v=67';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=67';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -391,7 +391,9 @@ function drawBrief(el, wk, ch) {
   const pdfBtns = () => {
     const zh = B.pdf ? `<button class="btn ghost" data-pdf="${B.pdf}" data-tag="精讲">${S.lang === 'both' ? '下载 PDF（中文）' : t('Download PDF', '下载 PDF')}</button>` : '';
     const en = B.pdfEn ? `<button class="btn ghost" data-pdf="${B.pdfEn}" data-tag="condensed-EN">${S.lang === 'both' ? 'Download PDF (English)' : t('Download PDF', '下载 PDF')}</button>` : '';
-    return S.lang === 'en' ? (en || zh) : S.lang === 'zh' ? (zh || en) : zh + en;
+    // the printable practice workbook (wNN-workbook.bin): strips at true paper scale, printed at 100 % and measured with a ruler
+    const wb = B.workbook ? `<button class="btn ghost" data-pdf="${B.workbook}" data-tag="ECG-workbook">${t('ECG practice workbook (print at 100 %, measure with a ruler)', '心电图练习册（100 % 打印，拿尺子量）')}</button>` : '';
+    return (S.lang === 'en' ? (en || zh) : S.lang === 'zh' ? (zh || en) : zh + en) + wb;
   };
   const wire = () => {
     el.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
@@ -563,7 +565,7 @@ function drawCards(el, wk) {
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=66', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=67', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
@@ -585,14 +587,14 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=66'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=67'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=66');
+  const { ecgLab } = await import('./ecglab.js?v=67');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
