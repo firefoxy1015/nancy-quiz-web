@@ -953,6 +953,10 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-book-nav button { font-size: .8rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--bg-tint); color: inherit; cursor: pointer; min-height: 30px; }
 .cls-book-nav button.cur { background: var(--accent); color: #fff; border-color: var(--accent); }
 .cls-book-nav button.read { border-color: #16a34a; color: #16a34a; }
+/* bilingual mode: the condensed chapter's 中文 / English switch (segmented, Chinese first) */
+.cls-book-lang { display: inline-flex; margin: 0 0 12px; border: 1px solid var(--line-strong); border-radius: 999px; overflow: hidden; }
+.cls-book-lang button { font-size: .8rem; padding: 4px 14px; border: 0; background: var(--bg-tint); color: inherit; cursor: pointer; min-height: 30px; }
+.cls-book-lang button.cur { background: var(--accent); color: #fff; }
 .cls-qa { border-bottom: 1px solid var(--line); }
 .cls-qa > summary { cursor: pointer; padding: 8px 0; font-weight: 600; }
 .cls-qa > p { margin: 0 0 10px; padding-left: 14px; border-left: 3px solid var(--accent); color: var(--ink-2, var(--ink-3)); }

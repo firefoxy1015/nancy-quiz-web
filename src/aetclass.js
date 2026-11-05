@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=59';
-import { news2Drill } from './news2drill.js?v=59';
+import { S, save, t, esc, ico } from './app.js?v=60';
+import { news2Drill } from './news2drill.js?v=60';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -263,8 +263,8 @@ function drawCourse(el) {
     // condensed weekend: two numbered steps (pass card, condensed book + PDF), then the optional extras as small chips
     return `<div class="cls-wk-tools"><div class="cls-plan">
       <div class="cls-plan-row"><button class="main" data-brief="${wk}" data-ch="card"><span class="n">1</span><span class="lab">${t('Pass card', '必过卡')}</span><span class="meta">10 min</span></button></div>
-      <div class="cls-plan-row"><button class="main" data-brief="${wk}"><span class="n">2</span><span class="lab">${t('Condensed book', '精讲')} <small>${bm.n} ${t('chapters', '章')}</small></span><span class="meta">${bm.min} min</span></button>
-        ${bm.pdf ? `<button class="side" data-brief="${wk}" data-ch="pdf">PDF</button>` : ''}</div>
+      <div class="cls-plan-row"><button class="main" data-brief="${wk}"><span class="n">2</span><span class="lab">${t('Condensed book', '精讲')} <small>${bm.n} ${t('chapters', '章')}</small></span><span class="meta">${S.lang === 'en' && bm.minEn ? bm.minEn : bm.min} min</span></button>
+        ${bm.pdf || bm.pdfEn ? `<button class="side" data-brief="${wk}" data-ch="pdf">PDF</button>` : ''}</div>
       ${LABS[wk] ? `<div class="cls-plan-row"><button class="main" data-lab="${LABS[wk].id}"><span class="n">3</span><span class="lab">${t(LABS[wk].en, LABS[wk].zh)} <small>${t(LABS[wk].sub, LABS[wk].subZh)}</small></span><span class="meta">${LABS[wk].min} min</span></button></div>` : ''}
       ${opts.length ? `<div class="cls-plan-opt"><span class="k">${t('If you have time', '有时间再做')}</span>${opts.join('')}</div>` : ''}
     </div></div>`;
@@ -357,31 +357,45 @@ function drawBrief(el, wk, ch) {
   const back = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>`;
   if (!B) { el.innerHTML = `${back}<div class="card"><h2>${t('Condensed book', '精讲')} · ${t('Weekend', '周末')} ${wk}</h2><p class="muted">${t('Being prepared.', '制作中。')}</p></div>`; return; }
   const chaps = B.chapters, card = chaps.find(c => c.id === 'ch-card'), rest = chaps.filter(c => c.id !== 'ch-card');
-  // chapter prose is Chinese by design (English terms inline); the list itself follows the site language
+  // the list follows the site language (every chapter carries its English title)
   const ttl = c => S.lang === 'en' && c.en ? esc(c.en) : S.lang === 'both' && c.en ? `${esc(c.title)}<div class="tiny" style="margin-top:2px">${esc(c.en)}</div>` : esc(c.title);
   const kick = c => S.lang === 'zh' ? esc(c.k) : esc(c.k.replace(/第 (\d+) 周末 · 精讲 (\d+)/, 'Weekend $1 · Chapter $2').replace(/第 (\d+) 周末 · 必过卡/, 'Weekend $1 · Pass card').replace(/第 (\d+) 周末 · 附录/, 'Weekend $1 · Appendix'));
+  // the chapter prose exists in Chinese (html) and, where written, as an English edition (htmlEn, condensed/wNN/en/):
+  // English interface → English edition; Chinese → Chinese; bilingual → Chinese with a 中文 / English switch above the
+  // text (the student's choice is kept; nothing is hidden by itself). A chapter without an English edition shows Chinese.
+  const hasEn = c => !!c.htmlEn;
+  const mins = c => S.lang === 'en' && c.minEn ? c.minEn : c.min;
+  const bothEn = S.lang === 'both' && store.get('briefLang', 'zh') === 'en';
+  const body = c => hasEn(c) && (S.lang === 'en' || bothEn) ? c.htmlEn : c.html;
   const readKey = 'brief:' + wk, read = store.get(readKey, {});
   const keyOf = c => c.id === 'ch-card' ? 'card' : c.id;
   const go = c => { location.hash = `#/aet/class?brief=${wk}` + (c ? '&ch=' + c : ''); };
   const chip = (id, label, cur) => `<button data-go="${id}" class="${cur === id ? 'cur' : read[id] ? 'read' : ''}">${label}</button>`;
   const nav = cur => `<div class="cls-book-nav">${chip('', t('Contents', '目录'), cur)}${card ? chip('card', t('Pass card', '必过卡'), cur) : ''}${rest.map((c, i) => chip(c.id, String(i + 1), cur)).join('')}${B.school && B.school.length ? chip('school', t('School quiz', '学校小测'), cur) : ''}</div>`;
+  // the PDFs: one per edition (wNN-brief.bin Chinese, wNN-brief-en.bin English); the site language picks the button,
+  // bilingual mode offers both. The first [data-pdf] button is what the weekend list's PDF chip (ch=pdf) presses.
+  const pdfBtns = () => {
+    const zh = B.pdf ? `<button class="btn ghost" data-pdf="${B.pdf}" data-tag="精讲">${S.lang === 'both' ? '下载 PDF（中文）' : t('Download PDF', '下载 PDF')}</button>` : '';
+    const en = B.pdfEn ? `<button class="btn ghost" data-pdf="${B.pdfEn}" data-tag="condensed-EN">${S.lang === 'both' ? 'Download PDF (English)' : t('Download PDF', '下载 PDF')}</button>` : '';
+    return S.lang === 'en' ? (en || zh) : S.lang === 'zh' ? (zh || en) : zh + en;
+  };
   const wire = () => {
     el.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
-    const p = el.querySelector('#briefPdf'); if (p) p.onclick = () => downloadBrief(wk, B.pdf, p);
+    el.querySelectorAll('[data-pdf]').forEach(p => p.onclick = () => downloadBrief(wk, p.dataset.pdf, p, p.dataset.tag));
   };
   window.scrollTo({ top: 0, behavior: 'instant' });   // html has scroll-behavior: smooth; a new page must start at the top
   if (!ch || ch === 'pdf') {                                                   // contents page
-    const total = rest.reduce((s, c) => s + c.min, 0), done = rest.filter(c => read[c.id]).length;
+    const total = rest.reduce((s, c) => s + mins(c), 0), done = rest.filter(c => read[c.id]).length;
     el.innerHTML = `${back}<div class="card"><h2>${t('Weekend', '周末')} ${wk} · ${t('Condensed book', '精讲版')}</h2>
       <p class="muted">${t('Everything this weekend tests, with the EMALB answer first; the full lessons stay under the weekend as reference.', '这个周末会考的都在这里，答案以 EMALB 为准；完整课程折在周末下面当参考，有时间再上。')}</p>
       <p class="tiny muted">${t('Pass card', '必过卡')} ~10 min · ${rest.length} ${t('chapters', '章')} ~${total} min · ${t('read', '已读')} ${done}/${rest.length}</p>
       ${nav('')}
       <div class="list-wrap">
         ${card ? `<button class="list-item${read.card ? ' done' : ''}" data-go="card"><span><b>${ttl(card)}</b><div class="tiny">${kick(card)} · ~10 min</div></span><span class="tag-count">${read.card ? t('Read', '已读') : t('Open', '打开')}</span></button>` : ''}
-        ${rest.map(c => `<button class="list-item${read[c.id] ? ' done' : ''}" data-go="${c.id}"><span>${ttl(c)}<div class="tiny">${kick(c)} · ${c.min} min</div></span><span class="tag-count">${read[c.id] ? t('Read', '已读') : t('Open', '打开')}</span></button>`).join('')}
+        ${rest.map(c => `<button class="list-item${read[c.id] ? ' done' : ''}" data-go="${c.id}"><span>${ttl(c)}<div class="tiny">${kick(c)} · ${mins(c)} min</div></span><span class="tag-count">${read[c.id] ? t('Read', '已读') : t('Open', '打开')}</span></button>`).join('')}
       </div>
       <div class="btn-row" style="margin-top:10px">
-        ${B.pdf ? `<button class="btn ghost" id="briefPdf">${t('Download PDF', '下载 PDF')}</button>` : ''}
+        ${pdfBtns()}
         ${B.school && B.school.length ? `<button class="btn ghost" data-go="school">${t('School quiz points', '学校小测要点')} · ${B.school.length} · ${t('optional', '可选')}</button>` : ''}
         <button class="btn ghost" id="briefTest">${t('Test', '测验')} · ${t('optional', '可选')}</button>
         <button class="btn ghost" id="briefCards">${t('Flashcards', '闪卡')} · ${t('optional', '可选')}</button>
@@ -391,7 +405,7 @@ function drawBrief(el, wk, ch) {
     el.querySelector('#briefTest').onclick = () => { location.hash = '#/aet/class?test=' + wk; };
     el.querySelectorAll('[data-lab]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?lab=' + b.dataset.lab; });
     el.querySelector('#briefCards').onclick = () => { location.hash = '#/aet/class?cards=' + wk; };
-    if (ch === 'pdf') { const p = el.querySelector('#briefPdf'); if (p) p.click(); }
+    if (ch === 'pdf') { const p = el.querySelector('[data-pdf]'); if (p) p.click(); }
     return;
   }
   if (ch === 'school') {
@@ -405,16 +419,20 @@ function drawBrief(el, wk, ch) {
   const k = chaps.findIndex(c => keyOf(c) === ch);
   if (k < 0) { go(''); return; }
   const c = chaps[k], prev = chaps[k - 1], next = chaps[k + 1], key = keyOf(c);
-  el.innerHTML = `${back}<div class="card">${nav(key)}<div class="cls-book">${c.html}</div>
+  const sw = S.lang === 'both' && hasEn(c) ? `<div class="cls-book-lang"><button data-blang="zh" class="${bothEn ? '' : 'cur'}">中文</button><button data-blang="en" class="${bothEn ? 'cur' : ''}">English</button></div>` : '';
+  const note = S.lang === 'en' && !hasEn(c) ? `<p class="tiny muted">${t('This chapter is in Chinese for now; its English edition is being written.', '')}</p>` : '';
+  el.innerHTML = `${back}<div class="card">${nav(key)}${sw}${note}<div class="cls-book">${body(c)}</div>
     <div class="btn-row" style="margin-top:14px">
       ${prev ? `<button class="btn ghost" data-go="${keyOf(prev)}">← ${S.lang === 'en' && prev.en ? esc(prev.en) : esc(prev.title)}</button>` : ''}
       <button class="btn" id="markRead">${read[key] ? t('Read ✓', '已读 ✓') : t('Mark as read', '标记已读')}${next ? ' → ' + t('next', '下一章') : ''}</button>
     </div></div>`;
   wire();
+  el.querySelectorAll('[data-blang]').forEach(b => b.onclick = () => { store.set('briefLang', b.dataset.blang); drawBrief(el, wk, ch); });
   el.querySelector('#markRead').onclick = () => { read[key] = true; store.set(readKey, read); go(next ? keyOf(next) : ''); };
 }
-// the PDF is one more encrypted file in the audio repo (wNN-brief.bin): fetch, decrypt in memory, hand the browser a blob
-async function downloadBrief(wk, name, btn) {
+// the PDF is one more encrypted file in the audio repo (wNN-brief.bin, wNN-brief-en.bin): fetch, decrypt in memory, hand
+// the browser a blob; `tag` names the saved file (AET-W3-精讲.pdf / AET-W3-condensed-EN.pdf)
+async function downloadBrief(wk, name, btn, tag = '精讲') {
   btn.disabled = true; const label = btn.textContent; btn.textContent = t('Decrypting…', '解密中…');
   try {
     let r = null;
@@ -423,7 +441,7 @@ async function downloadBrief(wk, name, btn) {
     const buf = new Uint8Array(await r.arrayBuffer());
     const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, KEY, buf.slice(12));
     const url = URL.createObjectURL(new Blob([plain], { type: 'application/pdf' }));
-    const a = document.createElement('a'); a.href = url; a.download = `AET-W${wk}-精讲.pdf`; a.target = '_blank'; a.rel = 'noopener';
+    const a = document.createElement('a'); a.href = url; a.download = `AET-W${wk}-${tag}.pdf`; a.target = '_blank'; a.rel = 'noopener';
     document.body.appendChild(a); a.click(); a.remove();
     btn.textContent = label; btn.disabled = false;
     if (!btn.nextElementSibling || !btn.nextElementSibling.matches('a')) btn.insertAdjacentHTML('afterend', ` <a class="tiny" href="${url}" target="_blank" rel="noopener">${t('Open in a new tab', '在新标签页打开')}</a>`);
@@ -533,7 +551,7 @@ async function drawLab(el, params) {
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=59');
+  const { ecgLab } = await import('./ecglab.js?v=60');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
