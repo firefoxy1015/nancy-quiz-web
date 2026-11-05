@@ -360,3 +360,26 @@ export function heartSVG({ labels = {}, on = '', at = null } = {}) {
     <g${d('v')}><path class="hp${on === 'v' ? ' on' : ''}" d="M104 88v22M104 110l-28 30M104 110l28 30M76 140l-14 24M76 140l14 24M132 140l-14 24M132 140l14 24"/><text class="hs" x="112" y="104">His</text><text class="hs" x="140" y="178">${L.purk}</text></g></svg>`;
 }
 
+/* ---------------- the torso: where the electrodes go ---------------- */
+// mode 'twelve' = limb electrodes on the limbs + V1–V6 (BCEHS PR16); 'monitor' = the 3-/4-lead monitoring positions on
+// the torso; 'blank' = no electrodes. labels = the landmark words in the page's language; at = {RA, LA, LL, RL, V1…V6}
+// narration fractions (each electrode gets data-at); show = only these electrode ids.
+export const TORSO_SPOTS = { RA: [24, 62], LA: [176, 62], LL: [162, 224], RL: [38, 224], V1: [92, 92], V2: [108, 92], V3: [122, 102], V4: [136, 112], V5: [158, 112], V6: [176, 112] };
+export function torsoSVG({ mode = 'twelve', labels = {}, at = null, show = null } = {}) {
+  const L = { notch: 'sternal notch', louis: 'Angle of Louis · 2nd rib', mcl: 'mid-clavicular', aal: 'ant. axillary', mal: 'mid-axillary', right: 'patient’s RIGHT', left: 'patient’s LEFT', ...labels };
+  const col = { RA: ['#fff', '#777'], LA: ['#222', '#222'], LL: ['#d33', '#d33'], RL: ['#2a2', '#2a2'], V1: ['#d33', '#d33'], V2: ['#dc0', '#aa0'], V3: ['#2a2', '#2a2'], V4: ['#36c', '#36c'], V5: ['#e82', '#e82'], V6: ['#92c', '#92c'] };
+  const mon = { RA: [54, 54], LA: [146, 54], LL: [150, 176], RL: [50, 176] };
+  const ids = mode === 'blank' ? [] : mode === 'monitor' ? ['RA', 'LA', 'LL', 'RL'] : Object.keys(TORSO_SPOTS);
+  const dots = ids.filter(id => !show || show.includes(id)).map(id => { const [x, y] = mode === 'monitor' ? mon[id] : TORSO_SPOTS[id], [f, st] = col[id], d = at && at[id] != null ? ` data-at="${at[id]}"` : '';
+    return `<g class="te" data-e="${id}"${d}><circle cx="${x}" cy="${y}" r="6.5" fill="${f}" stroke="${st}"/><text x="${x}" y="${y + 2.6}" text-anchor="middle" font-size="6" font-weight="700" fill="${f === '#fff' || f === '#dc0' ? '#222' : '#fff'}">${id}</text></g>`; }).join('');
+  return `<svg class="ecg-torso" viewBox="0 0 200 236" xmlns="http://www.w3.org/2000/svg">
+    <path class="tb" d="M86 0h28v24l48 14 14 24-4 90c-2 36-14 56-32 72l-6 12H66l-6-12C42 208 30 188 28 152l-4-90 14-24 48-14z"/>
+    <path class="tl" d="M100 38v84"/><path class="tl thin" d="M40 48L98 38M160 48L102 38"/><path class="tl thin" d="M94 58h12"/>
+    <path class="tl rib" d="M62 72q38 10 76 0M60 84q40 12 80 0M58 96q42 14 84 0M58 108q42 16 84 0M60 120q40 18 80 0"/>
+    <circle class="tn" cx="64" cy="100" r="3"/><circle class="tn" cx="136" cy="100" r="3"/>
+    <path class="tl dash" d="M136 46v90M158 60v80M176 66v80"/>
+    <text class="tt" x="100" y="33" text-anchor="middle">${L.notch}</text><text class="tt" x="112" y="61">${L.louis}</text>
+    <text class="tt small" x="137" y="142" text-anchor="middle">${L.mcl}</text><text class="tt small" x="159" y="150" text-anchor="middle">${L.aal}</text><text class="tt small" x="178" y="156" text-anchor="middle">${L.mal}</text>
+    <text class="tt small" x="12" y="20">${L.right}</text><text class="tt small" x="146" y="20">${L.left}</text>${dots}</svg>`;
+}
+

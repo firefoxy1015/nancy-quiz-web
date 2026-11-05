@@ -2,9 +2,9 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=64';
-import { news2Drill } from './news2drill.js?v=64';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG } from './ecgstrip.js?v=64';
+import { S, save, t, esc, ico } from './app.js?v=65';
+import { news2Drill } from './news2drill.js?v=65';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=65';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -555,7 +555,7 @@ function drawCards(el, wk) {
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=64', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=65', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
 const caseOf = id => Object.entries(CASES).flatMap(([wk, cs]) => cs.map(c => ({ ...c, wk: +wk }))).find(c => c.id === id);
 async function drawLab(el, params) {
   const c = caseOf(params.lab);
@@ -564,14 +564,14 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=64'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=65'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=64');
+  const { ecgLab } = await import('./ecglab.js?v=65');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
@@ -594,17 +594,21 @@ function ecgHTML(e) {
   if (!e) return '';
   if (Array.isArray(e)) return e.map(ecgHTML).join('');          // several strips stacked (e.g. the four AV blocks side by side)
   const cap = e.caption ? `<div class="ecg-cap">${t(esc(e.caption), esc(e.captionZh || e.caption))}</div>` : '';
-  if (e.heart) return `<div class="cls-ecg">${heartSVG({ on: e.heart.on || '', at: e.heart.at || null, labels: { ra: t('Right atrium', '右心房'), la: t('Left atrium', '左心房'), rv: t('Right ventricle', '右心室'), lv: t('Left ventricle', '左心室'), purk: t('Purkinje 20–40', '浦肯野 20–40') } })}${cap}</div>`;
+  const dA = e.at != null ? ` data-at="${e.at}"` : '';            // the whole block appears when the narration reaches it
+  if (e.torso) return `<div class="cls-ecg"${dA}>${torsoSVG({ mode: e.torso.mode || 'twelve', at: e.torso.at || null, show: e.torso.show || null, labels: { notch: t('sternal notch', '胸骨上切迹'), louis: t('Angle of Louis · 2nd rib', 'Louis 角 · 第 2 肋'), mcl: t('mid-clavicular', '锁骨中线'), aal: t('ant. axillary', '腋前线'), mal: t('mid-axillary', '腋中线'), right: t('patient’s RIGHT', '病人的右侧'), left: t('patient’s LEFT', '病人的左侧') } })}${cap}</div>`;
+  if (e.map) return `<div class="cls-ecg"${dA}><div class="ecg-l12 names">${LAYOUT.flat().map(L => { const w = wallOf(L), W = WALLS[w], c = W ? W.color : 'var(--line-strong)', d = e.map.at && W && e.map.at[w] != null ? ` data-at="${e.map.at[w]}"` : '';
+    return `<div style="border-color:${c};color:${c}"${d}>${L}<small>${W ? t(W.en, W.zh) + (e.map.artery ? ' · ' + W.artery : '') : t('cavity', '心腔')}</small></div>`; }).join('')}</div>${cap}</div>`;
+  if (e.heart) return `<div class="cls-ecg"${dA}>${heartSVG({ on: e.heart.on || '', at: e.heart.at || null, labels: { ra: t('Right atrium', '右心房'), la: t('Left atrium', '左心房'), rv: t('Right ventricle', '右心室'), lv: t('Left ventricle', '左心室'), purk: t('Purkinje 20–40', '浦肯野 20–40') } })}${cap}</div>`;
   const uniform = svg => svg.replace(/ preserveAspectRatio="none"/, ' preserveAspectRatio="xMidYMid meet"').replace(/ style="[^"]*"/, ' style="width:100%;height:auto"');
   if (e.twelve) {
     const E = make12(e.twelve, e.seed || 1);
     const atOf = L => { const m = Array.isArray(e.marks) ? e.marks.find(x => x.leads && x.leads.includes(L)) : null; return m ? m.at : null; };
-    return `<div class="cls-ecg"><div class="ecg-l12">${LAYOUT.flat().map(L => { const ld = E.leads.find(x => x.id === L), st = E.pat.st[L] || 0, at = atOf(L), mark = e.marks === true || at != null, cls = st >= 1 ? 'up' : st <= -0.8 ? 'down' : '', d = at != null ? ` data-at="${at}"` : '';
+    return `<div class="cls-ecg"${dA}><div class="ecg-l12">${LAYOUT.flat().map(L => { const ld = E.leads.find(x => x.id === L), st = E.pat.st[L] || 0, at = atOf(L), mark = e.marks === true || at != null, cls = st >= 1 ? 'up' : st <= -0.8 ? 'down' : '', d = at != null ? ` data-at="${at}"` : '';
       let svg = stripSVG(ld, { pxPerMm: 2.6, heightMm: 36, baseMm: 20, label: L, fit: true });
       if (mark && st) svg = svg.replace('</svg>', `<g class="ovl"${d}>${overlaysSVG(ld, { heightMm: 36, baseMm: 20, overlays: [{ type: 'baseline' }, { type: 'j', n: 9 }] })}</g></svg>`);
       return `<div class="tile">${svg}${mark && cls ? `<span class="frame ${cls}"${d}></span><span class="st"${d}>${st > 0 ? '↑' : '↓'} ${Math.abs(st).toFixed(1)} mm</span>` : ''}</div>`; }).join('')}</div>${cap}</div>`;
   }
-  const strip = makeStrip(e.id || 'nsr', e.seed || 1, e.sec || 6);
+  const strip = e.custom ? customStrip(e.custom.beats.map(b => beat(b)), [], e.custom.sec || 2, e.seed || 1) : makeStrip(e.id || 'nsr', e.seed || 1, e.sec || 6);
   let win = e.win;
   if (win && !Array.isArray(win)) { const b = strip.beats.filter(x => !x.dropped && !x.pOnly && x.t0 >= 0.05)[win.beat ?? 1]; win = b ? [Math.max(0, b.t0 - (win.before ?? 0.4)), b.t0 + (win.after ?? 0.6)] : undefined; }
   const o = { pxPerMm: 4, heightMm: e.height || 34, baseMm: e.base || 18, textMm: e.text || (win && win[1] - win[0] < 2 ? 1.6 : 2.6), win, overlays: e.fixed || [], label: e.label || '' };   // 34 mm tall: a QRS bracket's label (at -1.0 mV) stays inside
@@ -612,7 +616,7 @@ function ecgHTML(e) {
   let svg = uniform(stripSVG(strip, o));
   const groups = (e.marks || []).map(m => `<g class="ovl" data-at="${m.at}">${overlaysSVG(strip, { ...o, overlays: m.ov || [] })}</g>`).join('');
   svg = svg.replace('</svg>', groups + '</svg>');
-  return `<div class="cls-ecg"><div class="ecg-wrap zoomable" style="--zw:${Math.round(W * 4.6)}px"><button class="ecg-zoom" type="button" title="zoom">⤢</button><div class="ecg-svg">${svg}</div></div>${cap}</div>`;
+  return `<div class="cls-ecg"${dA}><div class="ecg-wrap zoomable" style="--zw:${Math.round(W * 4.6)}px"><button class="ecg-zoom" type="button" title="zoom">⤢</button><div class="ecg-svg">${svg}</div></div>${cap}</div>`;
 }
 // The school's own videos, articles and module pages a lesson teaches from (lesson.links / slide.links):
 // {label, url, kind: video | article | module | page, note?}. Module pages open in the student's own Moodle / AET University login.
