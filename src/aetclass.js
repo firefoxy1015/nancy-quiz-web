@@ -2,8 +2,8 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=61';
-import { news2Drill } from './news2drill.js?v=61';
+import { S, save, t, esc, ico } from './app.js?v=62';
+import { news2Drill } from './news2drill.js?v=62';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -270,12 +270,17 @@ function drawCourse(el) {
       ${opts.length ? `<div class="cls-plan-opt"><span class="k">${t('If you have time', '有时间再做')}</span>${opts.join('')}</div>` : ''}
     </div></div>`;
   };
+  // one obvious thing to do today, above everything else (she said the page had too much and she could not find things)
+  const todayCard = () => { const c = Object.entries(CASES).flatMap(([wk, cs]) => cs.map(x => ({ ...x, wk: +wk }))).slice(-1)[0]; if (!c) return '';
+    const b = store.get(`case:w${String(c.wk).padStart(2, '0')}-${c.id}:best`, null);
+    return `<div class="card cls-today"><div class="k">${t('Do this one today', '今天就做这个')}</div><div class="row"><div><b>${t(c.en, c.zh)}</b><div class="tiny muted">${t('Weekend', '周末')} ${c.wk} · ${t(c.sub, c.subZh)}${b ? ` · ${t('best', '最好')} ${b.ok}/${b.total}` : ''}</div></div><button class="btn" data-lab="${c.id}">${b ? t('Run it again', '再跑一次') : t('Start', '开始')} →</button></div></div>`; };
   el.innerHTML = `
     <style>.cls-pr{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:9px;margin-right:6px;vertical-align:1px}
       .pr-digest{background:#2563eb;color:#fff}.pr-core{background:#16a34a;color:#fff}.pr-deep{background:transparent;color:var(--muted,#888);border:1px solid currentColor}
       .cls-filter{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.cls-filter .on{outline:2px solid currentColor}
       .cls-lesson .mast{color:#16a34a;border-color:#16a34a}</style>
     <a class="back-link" href="#/aet">← AET</a>
+    ${todayCard()}
     <div class="card cls-intro">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <h2 style="margin:0">${ico('film')} ${esc(course.title)}</h2>
@@ -549,7 +554,7 @@ function drawCards(el, wk) {
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=61', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=62', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
 const caseOf = id => Object.entries(CASES).flatMap(([wk, cs]) => cs.map(c => ({ ...c, wk: +wk }))).find(c => c.id === id);
 async function drawLab(el, params) {
   const c = caseOf(params.lab);
@@ -558,14 +563,14 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=61'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=62'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=61');
+  const { ecgLab } = await import('./ecglab.js?v=62');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 

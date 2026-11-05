@@ -1062,3 +1062,7 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .case-end { text-align: center; padding: 8px 0; } .case-end .big { font-size: 2.4rem; font-weight: 800; line-height: 1; margin: 8px 0 4px; font-variant-numeric: tabular-nums; } .case-end .sub { color: var(--ink-2); }
 .case-end ul { text-align: left; padding-left: 18px; line-height: 1.5; } .case-end ul li { margin: 6px 0; } .case-end .case-teach { text-align: left; } .case-end .btn-row { justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .case-warm { font-size: .78rem; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft); padding: 2px 9px; border-radius: 999px; display: inline-block; margin-bottom: 6px; }
+
+/* the class page's single "do this today" card: one obvious entry above the folds */
+.cls-today { border: 2px solid var(--accent); } .cls-today .k { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px; }
+.cls-today .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; } .cls-today .row b { font-size: 1.1rem; } .cls-today .btn { min-height: 44px; }
