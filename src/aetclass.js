@@ -2,8 +2,9 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=63';
-import { news2Drill } from './news2drill.js?v=63';
+import { S, save, t, esc, ico } from './app.js?v=64';
+import { news2Drill } from './news2drill.js?v=64';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG } from './ecgstrip.js?v=64';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -554,7 +555,7 @@ function drawCards(el, wk) {
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=63', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=64', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
 const caseOf = id => Object.entries(CASES).flatMap(([wk, cs]) => cs.map(c => ({ ...c, wk: +wk }))).find(c => c.id === id);
 async function drawLab(el, params) {
   const c = caseOf(params.lab);
@@ -563,14 +564,14 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=63'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=64'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=63');
+  const { ecgLab } = await import('./ecglab.js?v=64');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
@@ -585,6 +586,34 @@ function drawDrill(el) {
 }
 
 /* ---------------- lesson player ---------------- */
+// slide.ecg: the slide's picture is drawn by ecgstrip.js, so every box and interval is exact (an AI-drawn grid is not).
+//   { id, seed, sec, win: [a, b] | { beat, before, after }, height, base, text, fixed: [overlays], marks: [{ at, ov: [overlays] }], caption, captionZh }
+//   { twelve: pattern, seed, marks: true | [{ at, leads: [...] }] }      { heart: { on, at: { sa, av, v } } }
+// marks get data-at, so the player reveals them with the narration like a visual's blocks; the ⤢ button switches to paper scale.
+function ecgHTML(e) {
+  if (!e) return '';
+  if (Array.isArray(e)) return e.map(ecgHTML).join('');          // several strips stacked (e.g. the four AV blocks side by side)
+  const cap = e.caption ? `<div class="ecg-cap">${t(esc(e.caption), esc(e.captionZh || e.caption))}</div>` : '';
+  if (e.heart) return `<div class="cls-ecg">${heartSVG({ on: e.heart.on || '', at: e.heart.at || null, labels: { ra: t('Right atrium', '右心房'), la: t('Left atrium', '左心房'), rv: t('Right ventricle', '右心室'), lv: t('Left ventricle', '左心室'), purk: t('Purkinje 20–40', '浦肯野 20–40') } })}${cap}</div>`;
+  const uniform = svg => svg.replace(/ preserveAspectRatio="none"/, ' preserveAspectRatio="xMidYMid meet"').replace(/ style="[^"]*"/, ' style="width:100%;height:auto"');
+  if (e.twelve) {
+    const E = make12(e.twelve, e.seed || 1);
+    const atOf = L => { const m = Array.isArray(e.marks) ? e.marks.find(x => x.leads && x.leads.includes(L)) : null; return m ? m.at : null; };
+    return `<div class="cls-ecg"><div class="ecg-l12">${LAYOUT.flat().map(L => { const ld = E.leads.find(x => x.id === L), st = E.pat.st[L] || 0, at = atOf(L), mark = e.marks === true || at != null, cls = st >= 1 ? 'up' : st <= -0.8 ? 'down' : '', d = at != null ? ` data-at="${at}"` : '';
+      let svg = stripSVG(ld, { pxPerMm: 2.6, heightMm: 36, baseMm: 20, label: L, fit: true });
+      if (mark && st) svg = svg.replace('</svg>', `<g class="ovl"${d}>${overlaysSVG(ld, { heightMm: 36, baseMm: 20, overlays: [{ type: 'baseline' }, { type: 'j', n: 9 }] })}</g></svg>`);
+      return `<div class="tile">${svg}${mark && cls ? `<span class="frame ${cls}"${d}></span><span class="st"${d}>${st > 0 ? '↑' : '↓'} ${Math.abs(st).toFixed(1)} mm</span>` : ''}</div>`; }).join('')}</div>${cap}</div>`;
+  }
+  const strip = makeStrip(e.id || 'nsr', e.seed || 1, e.sec || 6);
+  let win = e.win;
+  if (win && !Array.isArray(win)) { const b = strip.beats.filter(x => !x.dropped && !x.pOnly && x.t0 >= 0.05)[win.beat ?? 1]; win = b ? [Math.max(0, b.t0 - (win.before ?? 0.4)), b.t0 + (win.after ?? 0.6)] : undefined; }
+  const o = { pxPerMm: 4, heightMm: e.height || 34, baseMm: e.base || 18, textMm: e.text || (win && win[1] - win[0] < 2 ? 1.6 : 2.6), win, overlays: e.fixed || [], label: e.label || '' };   // 34 mm tall: a QRS bracket's label (at -1.0 mV) stays inside
+  const W = (win ? win[1] - win[0] : strip.sec) * 25;
+  let svg = uniform(stripSVG(strip, o));
+  const groups = (e.marks || []).map(m => `<g class="ovl" data-at="${m.at}">${overlaysSVG(strip, { ...o, overlays: m.ov || [] })}</g>`).join('');
+  svg = svg.replace('</svg>', groups + '</svg>');
+  return `<div class="cls-ecg"><div class="ecg-wrap zoomable" style="--zw:${Math.round(W * 4.6)}px"><button class="ecg-zoom" type="button" title="zoom">⤢</button><div class="ecg-svg">${svg}</div></div>${cap}</div>`;
+}
 // The school's own videos, articles and module pages a lesson teaches from (lesson.links / slide.links):
 // {label, url, kind: video | article | module | page, note?}. Module pages open in the student's own Moodle / AET University login.
 // kind "todo" = something the school counts as done (a Moodle module, form or file; an AET University course or quiz):
@@ -690,7 +719,7 @@ async function drawLesson(el, L0, autoStart) {
     const head = `<div class="cls-meta"><span>${s.kind === 'quiz' ? 'Quick question' : 'Slide ' + (i + 1)}</span><span class="cls-meta-r">${i + 1} / ${L.slides.length} ${tlSwitch()}</span></div>`;
     if (s.kind === 'quiz') {
       // qZh / optionsZh: the Chinese line under the question and each option, when the lesson has them
-      st.innerHTML = head + `<h2>${two(s.q, s.qZh)}</h2><div class="cls-opts">` +
+      st.innerHTML = head + `<h2>${two(s.q, s.qZh)}</h2>` + ecgHTML(s.ecg) + `<div class="cls-opts">` +
         s.options.map((o, k) => `<button class="cls-opt" data-k="${k}"><b>${'ABCD'[k]}</b><span>${two(o, s.optionsZh && s.optionsZh[k])}</span></button>`).join('') +
         `</div><div id="clsQx"></div>`;
       st.querySelectorAll('.cls-opt').forEach(b => b.onclick = () => choose(+b.dataset.k));
@@ -702,13 +731,15 @@ async function drawLesson(el, L0, autoStart) {
       const vis = s.visual && !store.get('textMode', false);
       // s.img: the slide's illustrated diagram (GPT Image, public, under data/aet-class/img); its numbers are explained below it
       const fig = s.img && s.img.src ? `<figure class="cls-fig"><div class="cls-fig-in"><img src="${BASE + s.img.src}" alt=""></div>${s.img.caption ? `<figcaption>${two(s.img.caption, s.img.captionZh, 1)}</figcaption>` : ''}</figure>` : '';
-      st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` + fig +
+      st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` + fig + ecgHTML(s.ecg) +
         (vis ? `<div class="cls-visual">${s.visual}</div>` : `<div class="cls-body">${s.body}</div>`) +   // our own lesson HTML, decrypted
         (s.bodyZh && !(vis && s.titleZh) ? `<div class="cls-body-zh l-zh">${esc(s.bodyZh)}</div>` : '') +   // story pictures carry their own Chinese                   // the slide's Chinese summary line
         (s.visual ? `<button class="btn ghost tiny cls-vt" id="clsVt">${store.get('textMode', false) ? t('Picture version', '图示版') : t('Text version', '文字版')}</button>` : '') +
         (s.drill ? `<div id="clsDrill"></div>` : '') +                                         // a practice tool on this slide (s.drill: 'news2')
         (s.links && s.links.length ? linksHtml(s.links) : '');
       wireTodos(st);
+      st.querySelectorAll('.ecg-zoom').forEach(b => b.onclick = () => b.parentElement.classList.toggle('zoom'));
+      if (playing) st.querySelectorAll('.cls-ecg [data-at]').forEach(e => e.classList.add('v-off'));
       if (s.drill === 'news2') news2Drill(st.querySelector('#clsDrill'), store);
       const vt = st.querySelector('#clsVt'); if (vt) vt.onclick = () => { store.set('textMode', !store.get('textMode', false)); render(); revealAll(); };
       if (vis) { if (playing) st.querySelectorAll('.cls-visual [data-at]').forEach(e => e.classList.add('v-off')); window.lucide?.createIcons(); }
@@ -757,7 +788,7 @@ async function drawLesson(el, L0, autoStart) {
   function revealAll() { if (audio.isConnected) $('clsStage').querySelectorAll('.v-off').forEach(e => e.classList.remove('v-off')); }
   audio.addEventListener('play', () => {
     if (!audio.isConnected || L.slides[i].kind === 'quiz' || audio.currentTime > 0.5) return;
-    $('clsStage').querySelectorAll('.cls-visual [data-at]').forEach(e => { if (+e.dataset.at > 0.02) e.classList.add('v-off'); });
+    $('clsStage').querySelectorAll('.cls-visual [data-at], .cls-ecg [data-at]').forEach(e => { if (+e.dataset.at > 0.02) e.classList.add('v-off'); });
   });
   audio.addEventListener('timeupdate', () => {
     if (!audio.isConnected || !audio.duration || L.slides[i].kind === 'quiz') return;

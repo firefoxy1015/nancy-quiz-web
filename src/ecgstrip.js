@@ -343,3 +343,20 @@ export function make12(kind = 'normal', seed = 1, sec = 2.5) {
 }
 export const LAYOUT = [['I', 'aVR', 'V1', 'V4'], ['II', 'aVL', 'V2', 'V5'], ['III', 'aVF', 'V3', 'V6']];
 export function wallOf(L) { return Object.keys(WALLS).find(w => WALLS[w].leads.includes(L)) || ''; }
+
+/* ---------------- the conduction system, as a diagram ---------------- */
+// A plain box-heart with the SA node, AV node, bundle of His and Purkinje fibres. labels = {ra, la, rv, lv, purk} (the
+// page's language); on = the part to highlight ('sa' | 'av' | 'v'); at = {sa, av, v} narration fractions for a staged
+// reveal (each part gets data-at so the lesson player shows it as the teacher reaches it).
+export function heartSVG({ labels = {}, on = '', at = null } = {}) {
+  const L = { ra: 'Right atrium', la: 'Left atrium', rv: 'Right ventricle', lv: 'Left ventricle', purk: 'Purkinje 20–40', ...labels };
+  const d = k => at && at[k] != null ? ` data-at="${at[k]}"` : '';
+  return `<svg class="ecg-heart" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg">
+    <path class="hb" d="M40 20h140a14 14 0 0 1 14 14v52H26V34a14 14 0 0 1 14-14z"/><path class="hb" d="M26 86h154v70a30 30 0 0 1-30 30H56a30 30 0 0 1-30-30z"/>
+    <path class="hl" d="M110 20v170"/><path class="hl" d="M26 86h154"/>
+    <text class="ht" x="68" y="50">${L.ra}</text><text class="ht" x="150" y="50">${L.la}</text><text class="ht" x="68" y="140">${L.rv}</text><text class="ht" x="150" y="140">${L.lv}</text>
+    <g${d('sa')}><circle class="hn${on === 'sa' ? ' on' : ''}" cx="48" cy="32" r="7"/><text class="hs" x="60" y="30">SA 60–100</text><path class="hw${on === 'sa' ? ' on' : ''}" d="M55 38c10 10 20 14 48 16"/><path class="hw${on === 'sa' ? ' on' : ''}" d="M55 38c30 6 70 6 110 10"/></g>
+    <g${d('av')}><circle class="hn${on === 'av' ? ' on' : ''}" cx="104" cy="82" r="7"/><text class="hs" x="80" y="78">AV 40–60</text></g>
+    <g${d('v')}><path class="hp${on === 'v' ? ' on' : ''}" d="M104 88v22M104 110l-28 30M104 110l28 30M76 140l-14 24M76 140l14 24M132 140l-14 24M132 140l14 24"/><text class="hs" x="112" y="104">His</text><text class="hs" x="140" y="178">${L.purk}</text></g></svg>`;
+}
+

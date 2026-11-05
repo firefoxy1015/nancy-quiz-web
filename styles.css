@@ -1069,3 +1069,9 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 
 .case-teach .say.need { background: var(--accent); color: #fff; border-color: var(--accent); padding: 5px 14px; font-size: .9rem; animation: case-pulse 1.2s ease-in-out infinite; }
 @keyframes case-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+
+/* lesson slides that carry a strip drawn by ecgstrip.js (slide.ecg): the strip is the picture; its marks reveal with the narration */
+.cls-ecg { margin: 4px 0 10px; } .cls-ecg .ecg-wrap { margin: 0; } .cls-ecg .ecg-heart { max-width: 300px; }
+.cls-ecg .v-off { opacity: 0; } .cls-ecg [data-at] { transition: opacity .45s ease; }
+.cls-ecg .ecg-l12 .tile .frame { position: absolute; inset: 0; border: 2px solid transparent; border-radius: 8px; pointer-events: none; } .cls-ecg .ecg-l12 .tile .frame.up { border-color: #d0383b; } .cls-ecg .ecg-l12 .tile .frame.down { border-color: #3b6fd6; }
+.cls-ecg .ecg-cap { font-size: .9rem; color: var(--ink-2); margin-top: 6px; font-style: italic; }
