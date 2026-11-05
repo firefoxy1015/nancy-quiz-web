@@ -2,8 +2,8 @@
 // Every concept is drawn on a real-scale strip from ecgstrip.js, and every step ends in practice with instant feedback.
 // Seven steps: one beat → the paper → rate → the six steps → rhythm atlas → rhythm drill → the 12-lead.
 // Progress and drill scores stay on this device through the store the caller passes in (prefix aetclass:).
-import { t, esc, bi } from './app.js?v=65';
-import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=65';
+import { t, esc, bi } from './app.js?v=66';
+import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=66';
 
 const STEPS = [['beat', 'One beat', '一个心跳'], ['paper', 'The paper', '格子与量尺'], ['rate', 'Rate', '算心率'], ['six', 'Six steps', '六步法'],
   ['atlas', 'Rhythm atlas', '节律图鉴'], ['drill', 'Rhythm drill', '节律训练'], ['twelve', '12-lead', '12 导联']];

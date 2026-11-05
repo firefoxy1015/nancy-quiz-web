@@ -1075,3 +1075,10 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-ecg .v-off { opacity: 0; } .cls-ecg [data-at] { transition: opacity .45s ease; }
 .cls-ecg .ecg-l12 .tile .frame { position: absolute; inset: 0; border: 2px solid transparent; border-radius: 8px; pointer-events: none; } .cls-ecg .ecg-l12 .tile .frame.up { border-color: #d0383b; } .cls-ecg .ecg-l12 .tile .frame.down { border-color: #3b6fd6; }
 .cls-ecg .ecg-cap { font-size: .9rem; color: var(--ink-2); margin-top: 6px; font-style: italic; }
+
+/* the weekend's learning path: one numbered order, lessons and labs, the next step highlighted */
+.cls-path { display: grid; gap: 6px; margin: 2px 0 10px; }
+.cls-path-h { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin-bottom: 2px; } .cls-path-h .k { font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-3); } .cls-path-h b { flex: 1 1 200px; min-width: 0; font-size: .95rem; }
+.cls-plan-row .main.done { background: transparent; border-color: var(--line); color: var(--ink-2); } .cls-plan-row .main.done .n { background: #15803d; }
+.cls-plan-row .main.next { box-shadow: 0 0 0 2px var(--accent); }
+.cls-path-pos { font-size: .85rem; color: var(--accent-ink); background: var(--accent-soft); display: inline-block; padding: 3px 10px; border-radius: 999px; margin: 4px 0 8px; }
