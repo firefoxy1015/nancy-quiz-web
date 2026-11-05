@@ -4,8 +4,8 @@
 // A level is a list of steps: scene | header | choose | multi | order | type | end. Scored steps remember whether the first
 // try was right; the misses go to case:misses and come back as a warm-up at the start of the next run of that level.
 // Narration clips are named <level.clip><key> (e.g. w03-lab-chestpain-asa) and reach the page through io.audio.
-import { t, esc, bi } from './app.js?v=62';
-import { make12, stripSVG, LAYOUT } from './ecgstrip.js?v=62';
+import { t, esc, bi } from './app.js?v=63';
+import { make12, stripSVG, LAYOUT } from './ecgstrip.js?v=63';
 
 const SCORED = new Set(['choose', 'multi', 'order', 'type']);
 const rnd = n => Math.floor(Math.random() * n);
@@ -41,16 +41,30 @@ export function caseLevel(host, store, L, io = {}) {
   } else if (st.wk && st.wk.length) queue = withWarm(st.wk);
   /* ---- the teacher's voice: one audio element; the line after each answer plays by itself unless she mutes it ---- */
   const au = new Audio(); let cur = null, voice = store.get('case:voice', true);
-  const paintSay = () => host.querySelectorAll('.case-teach .say').forEach(b => { const on = cur && b.dataset.say === cur && !au.paused; b.classList.toggle('on', !!on); b.textContent = on ? '❚❚' : '▶'; });
+  // Phones refuse play() until the page has been tapped (iOS: until this very element has played inside a tap). So:
+  // clips are decrypted ahead of time (ready), a tap on the button plays synchronously, the first tap anywhere plays a
+  // silent clip to unlock the element, and a refused autoplay turns the button into "tap to hear" instead of failing.
+  const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+  const ready = new Map(), fetching = new Map(); let pending = null, unlocked = false;
+  const getURL = key => { if (ready.has(key)) return Promise.resolve(ready.get(key)); if (!fetching.has(key)) fetching.set(key, io.audio('audio/' + L.clip + key + '.mp3').then(u => { ready.set(key, u); return u; })); return fetching.get(key); };
+  const btnOf = key => host.querySelector(`.case-teach .say[data-say="${key}"]`);
+  const paintSay = () => host.querySelectorAll('.case-teach .say').forEach(b => { const on = cur && b.dataset.say === cur && !au.paused && au.src !== SILENT; b.classList.toggle('on', !!on); b.textContent = b.classList.contains('need') ? t('▶ Tap to hear', '▶ 点一下听') : on ? '❚❚' : '▶'; });
+  const needTap = key => { pending = key; const b = btnOf(key); if (b) b.classList.add('need'); paintSay(); };
+  const playNow = key => { au.src = ready.get(key); return au.play().then(() => { unlocked = true; if (pending === key) pending = null; const b = btnOf(key); if (b) b.classList.remove('need'); paintSay(); })
+    .catch(e => { if (e && e.name === 'NotAllowedError') needTap(key); else cur = null; paintSay(); }); };
   async function play(key) {
     if (!io.audio) return;
-    if (cur === key) { if (au.paused) au.play(); else au.pause(); paintSay(); return; }
+    if (cur === key && pending !== key) { if (au.paused) au.play().catch(() => {}); else au.pause(); paintSay(); return; }
     cur = key; paintSay();
-    try { au.src = await io.audio('audio/' + L.clip + key + '.mp3'); await au.play(); }
-    catch { cur = null; const b = host.querySelector(`.case-teach .say[data-say="${key}"]`); if (b) { b.disabled = true; b.title = t('No recording yet', '还没有录音'); } paintSay(); }
+    if (!ready.has(key)) { try { await getURL(key); } catch { if (cur === key) cur = null; const b = btnOf(key); if (b) { b.disabled = true; b.title = t('No recording yet', '还没有录音'); } paintSay(); return; } }
+    if (cur !== key) return;                               // she moved on while the clip was decrypting
+    await playNow(key);
   }
+  const prefetch = q => { if (!io.audio) return; const k = q && (q.say || q.key); if (k && q.teach) getURL(k).catch(() => {}); };
   const stop = () => { au.pause(); cur = null; paintSay(); };
-  au.onended = () => { cur = null; paintSay(); }; au.onpause = au.onplay = paintSay;
+  au.onended = () => { if (au.src === SILENT) return; cur = null; paintSay(); }; au.onpause = au.onplay = paintSay;
+  host.addEventListener('pointerdown', e => { if (unlocked || e.target.closest('.case-teach .say')) return;   // first tap anywhere: unlock the element (iOS) with a silent clip
+    try { au.src = SILENT; au.play().then(() => { unlocked = true; if (au.src === SILENT) au.pause(); }).catch(() => {}); } catch {} }, true);
   const teach = (q, key = q.key) => q.teach ? `<div class="case-teach"><div class="av">${t('T', '师')}</div><div class="body"><div class="who">${t('Teacher', '老师')}${io.audio && (q.say || key) ? `<button class="say" type="button" data-say="${q.say || key}">▶</button>` : ''}</div>${bb(q.teach)}</div></div>` : '';
   const sayNow = q => { const k = q.say || q.key; if (voice && k && io.audio) play(k); };
 
@@ -79,7 +93,7 @@ export function caseLevel(host, store, L, io = {}) {
   function advance() { stop(); st.idx++; save(); draw(); window.scrollTo({ top: 0, behavior: 'instant' }); }
 
   function draw() {
-    const q = queue[st.idx];
+    const q = queue[st.idx]; prefetch(q); prefetch(queue[st.idx + 1]); if (L.outro && st.idx >= queue.length - 2) getURL('outro').catch(() => {});
     bar.style.width = Math.round(100 * st.idx / queue.length) + '%'; num.textContent = `${Math.min(st.idx + 1, queue.length)} / ${queue.length}`;
     if (!q || q.kind === 'end') return finish();
     let html = head(q);

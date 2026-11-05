@@ -1066,3 +1066,6 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 /* the class page's single "do this today" card: one obvious entry above the folds */
 .cls-today { border: 2px solid var(--accent); } .cls-today .k { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 6px; }
 .cls-today .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; } .cls-today .row b { font-size: 1.1rem; } .cls-today .btn { min-height: 44px; }
+
+.case-teach .say.need { background: var(--accent); color: #fff; border-color: var(--accent); padding: 5px 14px; font-size: .9rem; animation: case-pulse 1.2s ease-in-out infinite; }
+@keyframes case-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
