@@ -2,9 +2,9 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=67';
-import { news2Drill } from './news2drill.js?v=67';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=67';
+import { S, save, t, esc, ico } from './app.js?v=68';
+import { news2Drill } from './news2drill.js?v=68';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=68';
 
 const BASE = './data/aet-class/';
 const KEY_LS = 'aetclassKey';
@@ -313,13 +313,14 @@ function drawCourse(el) {
       </div>
     </div>
     ${weekends.map(wk => { const units = wkUnits(wk).map(u => {
-      const shown = u.lessons.filter(l => shows(l, u) && !onPath(l.id));
-      if (!shown.length) return '';
-      const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons), hidden = u.lessons.length - shown.length;
+      // lessons on the weekend's learning path are listed up there, not here — say so, instead of counting them as "hidden"
+      const shown = u.lessons.filter(l => shows(l, u) && !onPath(l.id)), onP = u.lessons.filter(l => onPath(l.id)).length;
+      if (!shown.length && !onP) return '';
+      const coreMin = mins(u.lessons.filter(isCore)), allMin = mins(u.lessons), hidden = u.lessons.length - shown.length - onP;
       return `
       <div class="cls-unit">
         <h3>${esc(u.label)}</h3>
-        <div class="tiny muted" style="margin:-4px 0 6px">${t('Core', '必听')} ${coreMin} h · ${t('all', '全部')} ${allMin} h${hidden ? ` · ${hidden} ${t('hidden by the filter', '节已按筛选隐藏')}` : ''}</div>
+        <div class="tiny muted" style="margin:-4px 0 6px">${t('Core', '必听')} ${coreMin} h · ${t('all', '全部')} ${allMin} h${onP ? ` · ${onP} ${t('on the learning path above', '节在上面的学习路线里')}` : ''}${hidden ? ` · ${hidden} ${t('hidden by the filter', '节已按筛选隐藏')}` : ''}</div>
         <div class="list-wrap">
           ${shown.map(l => {
             const fin = isDone(l), r = testOf(l);
@@ -565,7 +566,7 @@ function drawCards(el, wk) {
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=67', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=68', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
@@ -578,7 +579,9 @@ function nextTarget(id) { const p = pathPos(id); if (p) return p.next ? stepHash
 const pathHTML = wk => { const P = pathOf(wk); if (!P) return ''; const next = P.steps.findIndex(s => !stepDone(s, wk));
   return `<div class="cls-path"><div class="cls-path-h"><span class="k">${t('Learning path', '学习路线')} · ${P.steps.length} ${t('steps', '步')}</span><b>${t(esc(P.en), esc(P.zh))}</b>${next >= 0 ? `<button class="btn small" data-go="${esc(stepHash(P.steps[next]))}">${next === 0 ? t('Start', '开始') : t('Continue', '继续')} ${next + 1}/${P.steps.length} →</button>` : `<span class="tiny">✓ ${t('all done', '全部完成')}</span>`}</div>
     ${P.steps.map((s, i) => { const d = stepDone(s, wk), m = s.id ? lessonMeta(s.id) : null, mins = s.min || (m ? (m.miniMin || m.minutes) : '');
-      return `<div class="cls-plan-row"><button class="main${d ? ' done' : ''}${i === next ? ' next' : ''}" data-go="${esc(stepHash(s))}"><span class="n">${d ? '✓' : i + 1}</span><span class="lab">${t(esc(s.en), esc(s.zh))}</span><span class="meta">${mins ? mins + ' min' : ''}</span></button></div>`; }).join('')}</div>`; };
+      // the step's story label, then the lesson's own title underneath, so a lesson can still be found by what it covers
+      // ("Peripheral IV and tibial IO…" under "Call 4 · the flat veins") — without it the IV lessons looked deleted
+      return `<div class="cls-plan-row"><button class="main${d ? ' done' : ''}${i === next ? ' next' : ''}" data-go="${esc(stepHash(s))}"><span class="n">${d ? '✓' : i + 1}</span><span class="lab">${t(esc(s.en), esc(s.zh))}${m && m.title ? `<small class="ttl">${esc(m.title)}</small>` : ''}</span><span class="meta">${mins ? mins + ' min' : ''}</span></button></div>`; }).join('')}</div>`; };
 const caseOf = id => Object.entries(CASES).flatMap(([wk, cs]) => cs.map(c => ({ ...c, wk: +wk }))).find(c => c.id === id);
 async function drawLab(el, params) {
   const c = caseOf(params.lab);
@@ -587,14 +590,14 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=67'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=68'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=67');
+  const { ecgLab } = await import('./ecglab.js?v=68');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
