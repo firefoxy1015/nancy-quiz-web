@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=68';
-import { sClassroom } from './classroom.js?v=68';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=69';
+import { sClassroom } from './classroom.js?v=69';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -417,10 +417,14 @@ async function sDrugs(el, params) {
     <div class="list-wrap">${added.map(dr => drugRow(dr)).join('')}</div>` : ''}`;
   el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
 }
+// label | value line under a drug's name; both-language mode keeps the short English label
+const drugLine = (en, zh, labelEn, labelZh) => en ? `<div class="tiny drug-line"><b>${S.lang === 'zh' ? labelZh : labelEn}</b>${bi(en, zh)}</div>` : '';
 function drugRow(dr) {
   return `<button class="list-item" data-goto="/study/drugs?id=${dr.id}">
-    <span>${bi(dr.nameEn, dr.nameZh, 'span')}</span>
-    <span style="display:flex;gap:4px">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}${dr.scope === 'bcehs-added' ? '<span class="pill gray">BCEHS</span>' : ''}</span>
+    <span class="drug-main">${bi(dr.nameEn, dr.nameZh, 'span')}
+      <span class="drug-pills">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}${dr.scope === 'bcehs-added' ? '<span class="pill gray">BCEHS</span>' : ''}</span>
+      ${drugLine(dr.forEn, dr.forZh, 'Indications', '适应指征')}
+      ${drugLine(dr.whatEn, dr.whatZh, 'What it does', '作用')}</span>
     <span class="li-arrow">›</span></button>`;
 }
 function drawDrug(el, dr) {
@@ -432,6 +436,7 @@ function drawDrug(el, dr) {
       ${dr.scope === 'bcehs-added' ? `<p class="notice">${t('BCEHS added scope: taught and tested in the school course, not on the EMALB licensing exam.', 'BCEHS 扩展范围：学校课程会教会考，EMALB 执照考试不考。')}</p>` : ''}
       <div style="display:flex;gap:6px;margin:6px 0">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}
         ${(dr.routes || []).map(r => `<span class="pill gray">${esc(r)}</span>`).join('')}</div>
+      ${dr.whatEn ? `<div class="detail-section"><h4>${t('What it does', '作用')}</h4>${bi(dr.whatEn, dr.whatZh)}</div>` : ''}
       ${dr.classificationEn ? `<div class="detail-section"><h4>${t('Class', '分类')}</h4>${bi(dr.classificationEn, dr.classificationZh)}</div>` : ''}
       ${sec(t('Indications', '适应指征'), dr.indicationsEn, dr.indicationsZh)}
       ${sec(' ' + t('Contraindications', '禁忌'), dr.contraindicationsEn, dr.contraindicationsZh)}

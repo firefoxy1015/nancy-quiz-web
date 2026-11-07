@@ -4,8 +4,8 @@
 // A level is a list of steps: scene | header | choose | multi | order | type | end. Scored steps remember whether the first
 // try was right; the misses go to case:misses and come back as a warm-up at the start of the next run of that level.
 // Narration clips are named <level.clip><key> (e.g. w03-lab-chestpain-asa) and reach the page through io.audio.
-import { t, esc, bi } from './app.js?v=68';
-import { make12, stripSVG, LAYOUT } from './ecgstrip.js?v=68';
+import { t, esc, bi } from './app.js?v=69';
+import { make12, stripSVG, LAYOUT } from './ecgstrip.js?v=69';
 
 const SCORED = new Set(['choose', 'multi', 'order', 'type']);
 const rnd = n => Math.floor(Math.random() * n);

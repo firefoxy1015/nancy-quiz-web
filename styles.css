@@ -1083,3 +1083,10 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-plan-row .main.done { background: transparent; border-color: var(--line); color: var(--ink-2); } .cls-plan-row .main.done .n { background: #15803d; }
 .cls-plan-row .main.next { box-shadow: 0 0 0 2px var(--accent); }
 .cls-path-pos { font-size: .85rem; color: var(--accent-ink); background: var(--accent-soft); display: inline-block; padding: 3px 10px; border-radius: 999px; margin: 4px 0 8px; }
+/* drug list: name, licence pills, then the indication and what the drug does */
+.drug-main { flex: 1; min-width: 0; }
+.drug-pills { display: flex; gap: 4px; flex-wrap: wrap; margin: 6px 0 4px; }
+.drug-line { display: grid; grid-template-columns: 6.6em minmax(0, 1fr); gap: 0 8px; margin-top: 4px; line-height: 1.45; }
+.lang-zh .drug-line { grid-template-columns: 4.6em minmax(0, 1fr); }
+.drug-line b { color: var(--ink-2); font-weight: 600; }
+.drug-line .bi-en, .drug-line .bi-zh { font-size: inherit; margin-top: 0; }
