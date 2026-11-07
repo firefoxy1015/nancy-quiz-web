@@ -1,12 +1,24 @@
 // AET class lectures — spoken lessons (slides + narration + quick questions) behind the class password.
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
-// clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repo. The browser derives the key from the password
+// clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repos; the vaults and slide images in aet-class-data. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=69';
-import { news2Drill } from './news2drill.js?v=69';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=69';
+import { S, save, t, esc, ico } from './app.js?v=70';
+import { news2Drill } from './news2drill.js?v=70';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=70';
 
 const BASE = './data/aet-class/';
+// The vaults and slide images live in their own Pages repo (aet-class-data, same github.io origin, also passed
+// through by the bcmedicprep.com worker) so the main site stays small enough to deploy; the old folder is a fallback.
+const DATA_BASES = ['../aet-class-data/', BASE];
+let dataBase = DATA_BASES[0];      // the base the vault head was found at; weekend parts and images follow it
+async function fetchData(name) {
+  let r = null;
+  for (const b of DATA_BASES) {
+    r = await fetch(b + name, { cache: 'no-cache' }).catch(() => null);
+    if (r && r.ok) { dataBase = b; return r; }
+  }
+  return r || { ok: false, status: 'network' };
+}
 const KEY_LS = 'aetclassKey';
 const API = (location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:8787' : 'https://bcprep-examiner.onrender.com';
 const SPEEDS = [1.0, 1.15, 1.3, 0.9, 0.8];
@@ -28,7 +40,7 @@ window.addEventListener('hashchange', () => { if (live) { live.stop(); live = nu
 /* ---------------- crypto ---------------- */
 async function fetchVault() {
   if (vaultMeta) return vaultMeta;
-  const r = await fetch(BASE + 'vault.json', { cache: 'no-cache' });
+  const r = await fetchData('vault.json');
   if (!r.ok) throw new Error('vault ' + r.status);
   return (vaultMeta = await r.json());
 }
@@ -53,7 +65,7 @@ const weeksLoaded = new Set();
 const wkOfId = id => +((id.match(/^w(\d+)/) || [])[1] || 0);
 async function loadWeek(wk) {
   if (!vaultMeta || vaultMeta.v < 2 || !wk || weeksLoaded.has(wk) || !KEY) return;
-  const r = await fetch(BASE + 'vault-w' + String(wk).padStart(2, '0') + '.json', { cache: 'no-cache' });
+  const r = await fetchData('vault-w' + String(wk).padStart(2, '0') + '.json');
   if (!r.ok) throw new Error('week ' + r.status);
   const part = await decryptJSON(await r.json(), KEY);
   Object.assign(DOC.lessons, part.lessons);
@@ -566,7 +578,7 @@ function drawCards(el, wk) {
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=69', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=70', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
@@ -590,14 +602,14 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=69'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=70'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=69');
+  const { ecgLab } = await import('./ecglab.js?v=70');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
@@ -761,7 +773,7 @@ async function drawLesson(el, L0, autoStart) {
       // reaches them (fraction of the clip). The plain bullet body stays one tap away ("Text version").
       const vis = s.visual && !store.get('textMode', false);
       // s.img: the slide's illustrated diagram (GPT Image, public, under data/aet-class/img); its numbers are explained below it
-      const fig = s.img && s.img.src ? `<figure class="cls-fig"><div class="cls-fig-in"><img src="${BASE + s.img.src}" alt=""></div>${s.img.caption ? `<figcaption>${two(s.img.caption, s.img.captionZh, 1)}</figcaption>` : ''}</figure>` : '';
+      const fig = s.img && s.img.src ? `<figure class="cls-fig"><div class="cls-fig-in"><img src="${dataBase + s.img.src}" alt=""></div>${s.img.caption ? `<figcaption>${two(s.img.caption, s.img.captionZh, 1)}</figcaption>` : ''}</figure>` : '';
       st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` + fig + ecgHTML(s.ecg) +
         (vis ? `<div class="cls-visual">${s.visual}</div>` : `<div class="cls-body">${s.body}</div>`) +   // our own lesson HTML, decrypted
         (s.bodyZh && !(vis && s.titleZh) ? `<div class="cls-body-zh l-zh">${esc(s.bodyZh)}</div>` : '') +   // story pictures carry their own Chinese                   // the slide's Chinese summary line

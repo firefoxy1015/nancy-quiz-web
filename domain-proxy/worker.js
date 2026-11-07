@@ -2,9 +2,10 @@
 // Every request is passed straight through to GitHub Pages, so a push to main updates both addresses; nothing is stored here.
 //   /…            → https://firefoxy1015.github.io/nancy-quiz-web/…
 //   /aet-audio…/… → https://firefoxy1015.github.io/aet-audio…/…   (narration repos the class reaches as ../aet-audioN/)
+//   /aet-class-data/… → https://firefoxy1015.github.io/aet-class-data/…   (class vaults and slide images, ../aet-class-data/)
 const UPSTREAM = 'https://firefoxy1015.github.io';
 const SITE = '/nancy-quiz-web';
-const SIBLING = /^\/aet-audio\d*\//;
+const SIBLING = /^\/(aet-audio\d*|aet-class-data)\//;
 const PASS = ['accept', 'accept-encoding', 'accept-language', 'range', 'if-none-match', 'if-modified-since', 'user-agent'];
 
 export default {
