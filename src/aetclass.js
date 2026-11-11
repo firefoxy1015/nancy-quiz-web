@@ -2,9 +2,10 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repos; the vaults and slide images in aet-class-data. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=70';
-import { news2Drill } from './news2drill.js?v=70';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=70';
+import { S, save, t, esc, ico } from './app.js?v=71';
+import { news2Drill } from './news2drill.js?v=71';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=71';
+import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=71';
 
 const BASE = './data/aet-class/';
 // The vaults and slide images live in their own Pages repo (aet-class-data, same github.io origin, also passed
@@ -288,8 +289,11 @@ function drawCourse(el) {
   };
   // one obvious thing to do today, above everything else (she said the page had too much and she could not find things)
   const todayCard = () => {
-    const P = pathOf(cur); if (P) { const k = P.steps.findIndex(s => !stepDone(s, cur)); if (k >= 0) { const s = P.steps[k];
-      return `<div class="card cls-today"><div class="k">${t('Do this one today', '今天就做这个')}</div><div class="row"><div><b>${t(esc(s.en), esc(s.zh))}</b><div class="tiny muted">${t('Weekend', '周末')} ${cur} · ${t('learning path', '学习路线')} ${k + 1} / ${P.steps.length}</div></div><button class="btn" data-go="${esc(stepHash(s))}">${k === 0 ? t('Start', '开始') : t('Continue', '继续')} →</button></div></div>`; } }
+    const P = pathOf(cur); if (P) { const sh = shortOn(cur), A = P.steps.filter(s => !sh || s.must), k = A.findIndex(s => !stepDone(s, cur)); if (k >= 0) { const s = A[k];
+      return `<div class="card cls-today"><div class="k">${t('Do this one today', '今天就做这个')}</div><div class="row"><div><b>${t(esc(s.en), esc(s.zh))}</b><div class="tiny muted">${t('Weekend', '周末')} ${cur} · ${sh ? t('short route', '必做路线') : t('learning path', '学习路线')} ${k + 1} / ${A.length}${minsOf(s) ? ' · ' + Math.round(minsOf(s)) + ' min' : ''}</div></div><button class="btn" data-go="${esc(stepHash(s))}">${k === 0 ? t('Start', '开始') : t('Continue', '继续')} →</button></div></div>`; }
+      // route finished: the numbers room is the five minutes a day that keeps it (new numbers each round)
+      const lab = LABS[cur]; if (lab && lab.id === 'numbers') { const d = new Date(), day = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        if (!(store.get('num:w04', {}).days || {})[day]) return `<div class="card cls-today"><div class="k">${t('Today’s five minutes', '今天的 5 分钟')}</div><div class="row"><div><b>${t(lab.en, lab.zh)}</b><div class="tiny muted">${t('Weekend', '周末')} ${cur} · ${t(lab.sub, lab.subZh)} · ${t('new numbers every round', '每轮换新数字')}</div></div><button class="btn" data-lab="numbers">${t('Start', '开始')} →</button></div></div>`; } }
     const c = Object.entries(CASES).flatMap(([wk, cs]) => cs.map(x => ({ ...x, wk: +wk }))).slice(-1)[0]; if (!c) return '';
     const b = store.get(`case:w${String(c.wk).padStart(2, '0')}-${c.id}:best`, null);
     return `<div class="card cls-today"><div class="k">${t('Do this one today', '今天就做这个')}</div><div class="row"><div><b>${t(c.en, c.zh)}</b><div class="tiny muted">${t('Weekend', '周末')} ${c.wk} · ${t(c.sub, c.subZh)}${b ? ` · ${t('best', '最好')} ${b.ok}/${b.total}` : ''}</div></div><button class="btn" data-lab="${c.id}">${b ? t('Run it again', '再跑一次') : t('Start', '开始')} →</button></div></div>`; };
@@ -321,6 +325,7 @@ function drawCourse(el) {
         <button class="btn ghost${mode === 'need' ? ' on' : ''}" data-filter="need">${t('Only what I still need', '只看还没学会的')}</button>
         <button class="btn ghost" id="drillBtn">${t('NEWS2 trainer', 'NEWS2 练习器')}</button>
         <button class="btn ghost" data-lab="ecg">${t('ECG lab', '心电图练习室')}</button>
+        <button class="btn ghost" data-lab="numbers">${t('Numbers room', '数字练习室')}</button>
         <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
@@ -349,6 +354,8 @@ function drawCourse(el) {
       return `<details class="cls-wkd" data-wk="${wk}" id="wk${wk}"${isOpen(wk) ? ' open' : ''}>` + wkSummary(wk) + wkTools(wk) + body + `</details>`; }).join('')}`;
   el.querySelectorAll('[data-l]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?l=' + b.dataset.l; });
   el.querySelectorAll('[data-go]').forEach(b => b.onclick = () => { location.hash = b.dataset.go; });
+  el.querySelectorAll('[data-short]').forEach(b => b.onclick = () => { const [wk, on] = b.dataset.short.split(':'), y = window.scrollY;
+    store.set('path:short:' + wk, on === '1'); drawCourse(el); window.scrollTo(0, y); });
   const saveOpen = (wk, open) => { const st = store.get('wkOpen', {}); st[wk] = open; store.set('wkOpen', st); };
   el.querySelectorAll('details.cls-wkd').forEach(d => d.addEventListener('toggle', () => saveOpen(d.dataset.wk, d.open)));
   el.querySelectorAll('[data-brief]').forEach(b => b.onclick = () => { location.hash = `#/aet/class?brief=${b.dataset.brief}` + (b.dataset.ch ? '&ch=' + b.dataset.ch : ''); });
@@ -576,24 +583,37 @@ function drawCards(el, wk) {
 }
 
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
-const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 } };
+const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 },
+  4: { id: 'numbers', en: 'Numbers room', zh: '数字练习室', sub: '8 questions, you type the number', subZh: '8 题，自己打数字', min: 5 } };
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=70', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=71', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
+  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=71', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
 const stepHash = s => s.id ? '#/aet/class?l=' + s.id : '#/aet/class?lab=' + s.lab;
-const stepDone = (s, wk) => s.id ? isDone({ id: s.id }) : s.lab === 'ecg' ? Object.keys(store.get('ecg:done', {})).length >= 7 : !!store.get(`case:w${String(wk).padStart(2, '0')}-${s.lab}:best`, null);
+const stepDone = (s, wk) => s.id ? isDone({ id: s.id }) : s.lab === 'ecg' ? Object.keys(store.get('ecg:done', {})).length >= 7 : s.lab === 'numbers' ? (store.get('num:w04', {}).rounds || 0) >= 1 : !!store.get(`case:w${String(wk).padStart(2, '0')}-${s.lab}:best`, null);
 const lessonMeta = id => DOC.index.units.flatMap(u => u.lessons).find(l => l.id === id);
-const pathPos = id => { for (const [wk, P] of Object.entries((DOC.index && DOC.index.paths) || {})) { const k = P.steps.findIndex(s => s.id === id); if (k >= 0) return { wk: +wk, P, k, next: P.steps[k + 1] || null }; } return null; };
+// short route: when a path marks some steps `must`, she can take just those (default on: "I do not have the time").
+// Nothing is hidden: the other steps stay listed with their titles, only quieter, and one tap shows the full route.
+const hasMust = wk => { const P = pathOf(wk); return !!P && P.steps.some(s => s.must); };
+const shortOn = wk => hasMust(wk) && store.get('path:short:' + wk, true);
+const minsOf = s => { const m = s.id ? lessonMeta(s.id) : null; return +(s.min || (m ? (m.miniMin || m.minutes) : 0)) || 0; };
+const pathPos = id => { for (const [wk, P] of Object.entries((DOC.index && DOC.index.paths) || {})) { const k = P.steps.findIndex(s => s.id === id); if (k >= 0) { const sh = shortOn(wk);
+  return { wk: +wk, P, k, next: P.steps.slice(k + 1).find(s => !sh || s.must) || null }; } } return null; };
 // where the player goes when a lesson ends: the next step of its path (a lesson, or a lab), else the next listed lesson
 function nextTarget(id) { const p = pathPos(id); if (p) return p.next ? stepHash(p.next) + (p.next.id ? '&auto=1' : '') : null; const nx = nextLessonId(id); return nx ? '#/aet/class?l=' + nx + '&auto=1' : null; }
-const pathHTML = wk => { const P = pathOf(wk); if (!P) return ''; const next = P.steps.findIndex(s => !stepDone(s, wk));
-  return `<div class="cls-path"><div class="cls-path-h"><span class="k">${t('Learning path', '学习路线')} · ${P.steps.length} ${t('steps', '步')}</span><b>${t(esc(P.en), esc(P.zh))}</b>${next >= 0 ? `<button class="btn small" data-go="${esc(stepHash(P.steps[next]))}">${next === 0 ? t('Start', '开始') : t('Continue', '继续')} ${next + 1}/${P.steps.length} →</button>` : `<span class="tiny">✓ ${t('all done', '全部完成')}</span>`}</div>
+const pathHTML = wk => { const P = pathOf(wk); if (!P) return ''; const sh = shortOn(wk), hm = hasMust(wk), act = s => !sh || s.must;
+  const A = P.steps.filter(act), next = P.steps.findIndex(s => act(s) && !stepDone(s, wk)), pos = next >= 0 ? A.indexOf(P.steps[next]) : -1;
+  const tot = ss => Math.round(ss.reduce((a, s) => a + minsOf(s), 0)), M = P.steps.filter(s => s.must);
+  // the two routes with their real minutes, so the choice is an honest one
+  const toggle = hm ? `<div class="cls-short" role="group"><button class="${sh ? 'on' : ''}" data-short="${wk}:1">${t('Short route', '只走必做')} · ${M.length} ${t('steps', '步')} · ≈${tot(M)} min</button><button class="${sh ? '' : 'on'}" data-short="${wk}:0">${t('Everything', '全部')} · ${P.steps.length} ${t('steps', '步')} · ≈${tot(P.steps)} min</button></div>` : '';
+  return `<div class="cls-path"><div class="cls-path-h"><span class="k">${t('Learning path', '学习路线')} · ${A.length} ${t('steps', '步')}</span><b>${t(esc(P.en), esc(P.zh))}</b>${next >= 0 ? `<button class="btn small" data-go="${esc(stepHash(P.steps[next]))}">${pos === 0 ? t('Start', '开始') : t('Continue', '继续')} ${pos + 1}/${A.length} →</button>` : `<span class="tiny">✓ ${sh ? t('short route done', '必做全部完成') : t('all done', '全部完成')}</span>`}${toggle}</div>
     ${P.steps.map((s, i) => { const d = stepDone(s, wk), m = s.id ? lessonMeta(s.id) : null, mins = s.min || (m ? (m.miniMin || m.minutes) : '');
       // the step's story label, then the lesson's own title underneath, so a lesson can still be found by what it covers
       // ("Peripheral IV and tibial IO…" under "Call 4 · the flat veins") — without it the IV lessons looked deleted
-      return `<div class="cls-plan-row"><button class="main${d ? ' done' : ''}${i === next ? ' next' : ''}" data-go="${esc(stepHash(s))}"><span class="n">${d ? '✓' : i + 1}</span><span class="lab">${t(esc(s.en), esc(s.zh))}${m && m.title ? `<small class="ttl">${esc(m.title)}</small>` : ''}</span><span class="meta">${mins ? mins + ' min' : ''}</span></button></div>`; }).join('')}</div>`; };
+      const tag = !hm ? '' : s.must ? `<em class="cls-tag must">${s.id ? t('Must', '必听') : t('Must', '必做')}</em>` : sh ? `<em class="cls-tag">${t('Later', '有空再听')}</em>` : '';
+      return `<div class="cls-plan-row"><button class="main${d ? ' done' : ''}${i === next ? ' next' : ''}${sh && !s.must ? ' opt' : ''}" data-go="${esc(stepHash(s))}"><span class="n">${d ? '✓' : i + 1}</span><span class="lab">${t(esc(s.en), esc(s.zh))}${tag}${m && m.title ? `<small class="ttl">${esc(m.title)}</small>` : ''}</span><span class="meta">${mins ? mins + ' min' : ''}</span></button></div>`; }).join('')}</div>`; };
 const caseOf = id => Object.entries(CASES).flatMap(([wk, cs]) => cs.map(c => ({ ...c, wk: +wk }))).find(c => c.id === id);
 async function drawLab(el, params) {
   const c = caseOf(params.lab);
@@ -602,14 +622,21 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=70'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=71'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
+    return;
+  }
+  if (params.lab === 'numbers') {
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Numbers room', '数字练习室')} · ${t('Weekend', '周末')} 4</h2>
+      <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
+    const { numLab } = await import('./numlab.js?v=71');
+    numLab(el.querySelector('#labHost'), store);
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=70');
+  const { ecgLab } = await import('./ecglab.js?v=71');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
@@ -694,6 +721,12 @@ async function drawLesson(el, L0, autoStart) {
   const linksHead = t('From the school: videos, articles and modules', '学校的视频、文章和模块');
   const quizzes = L.slides.filter(s => s.kind === 'quiz').length;
   let i = 0, playing = false, speedIx = store.get('speed', 0), timer = null, playToken = 0;
+  // skill slides (s.dia, s.guess, s.ask → src/skilldia.js): she guesses on the drawing before the teacher explains,
+  // and the last slide ends in numbers she types. answers['g' + i] = her pick ('-' = skipped), answers['a' + i + '_' + j] = a typed number
+  let cueDone = -1;
+  const guessOf = s => (s && s.kind !== 'quiz' && s.guess && GUESS[s.guess]) || null;
+  const pend = k => !!guessOf(L.slides[k]) && answers['g' + k] == null;
+  const askGet = k => j => answers['a' + k + '_' + j];
 
   el.innerHTML = `
     <a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a>
@@ -755,6 +788,7 @@ async function drawLesson(el, L0, autoStart) {
   function texts() {
     const s = L.slides[i], a = answers[i] != null;
     if (s.kind === 'quiz') return [s.say + (a ? '\n\n' + s.explain : ''), (s.sayZh || '') + (a && s.explainZh ? '\n\n' + s.explainZh : '')];
+    if (pend(i)) return guessOf(s).cue;                    // "you tell me first": the teacher's question, not the lecture yet
     return [s.say, s.sayZh || ''];
   }
   function render() {
@@ -773,13 +807,22 @@ async function drawLesson(el, L0, autoStart) {
       // reaches them (fraction of the clip). The plain bullet body stays one tap away ("Text version").
       const vis = s.visual && !store.get('textMode', false);
       // s.img: the slide's illustrated diagram (GPT Image, public, under data/aet-class/img); its numbers are explained below it
-      const fig = s.img && s.img.src ? `<figure class="cls-fig"><div class="cls-fig-in"><img src="${dataBase + s.img.src}" alt=""></div>${s.img.caption ? `<figcaption>${two(s.img.caption, s.img.captionZh, 1)}</figcaption>` : ''}</figure>` : '';
-      st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` + fig + ecgHTML(s.ecg) +
+      const wait = pend(i), asks = s.ask && s.ask.length ? s.ask : null;
+      const fig = s.dia ? skFigure(s, answers['g' + i]) : s.img && s.img.src ? `<figure class="cls-fig"><div class="cls-fig-in"><img src="${dataBase + s.img.src}" alt=""></div>${s.img.caption ? `<figcaption>${two(s.img.caption, s.img.captionZh, 1)}</figcaption>` : ''}</figure>` : '';
+      st.innerHTML = head + `<h2>${two(s.title, s.titleZh)}</h2>` + fig + (wait ? '' : ecgHTML(s.ecg) +
         (vis ? `<div class="cls-visual">${s.visual}</div>` : `<div class="cls-body">${s.body}</div>`) +   // our own lesson HTML, decrypted
         (s.bodyZh && !(vis && s.titleZh) ? `<div class="cls-body-zh l-zh">${esc(s.bodyZh)}</div>` : '') +   // story pictures carry their own Chinese                   // the slide's Chinese summary line
         (s.visual ? `<button class="btn ghost tiny cls-vt" id="clsVt">${store.get('textMode', false) ? t('Picture version', '图示版') : t('Text version', '文字版')}</button>` : '') +
         (s.drill ? `<div id="clsDrill"></div>` : '') +                                         // a practice tool on this slide (s.drill: 'news2')
-        (s.links && s.links.length ? linksHtml(s.links) : '');
+        (s.links && s.links.length ? linksHtml(s.links) : '') +
+        (asks ? `<div id="clsType"></div><div id="clsTypeNx"></div>` : ''));
+      if (s.dia) wireSk(st, pickGuess);
+      if (asks && !wait) {
+        const k = i, done = () => { store.set(baseId + ':done', true); const nx = nextTarget(baseId), h = st.querySelector('#clsTypeNx');
+          if (h) h.innerHTML = `<a class="btn sk-done" href="${nx ? esc(nx) : '#/aet/class'}">${nx ? two('Next step →', '下一步 →', 1) : two('Back to the class', '回到课程', 1)}</a>`; };
+        askBlock(st.querySelector('#clsType'), asks, askGet(k), (j, v) => { answers['a' + k + '_' + j] = v; store.set(L.id + ':ans', answers); }, done);
+        if (askDone(asks, askGet(k))) done();
+      }
       wireTodos(st);
       st.querySelectorAll('.ecg-zoom').forEach(b => b.onclick = () => b.parentElement.classList.toggle('zoom'));
       if (playing) st.querySelectorAll('.cls-ecg [data-at]').forEach(e => e.classList.add('v-off'));
@@ -809,6 +852,8 @@ async function drawLesson(el, L0, autoStart) {
     if (speak) play(s.audioA);
   }
   function choose(k) { if (answers[i] != null) return; answers[i] = k; store.set(L.id + ':ans', answers); markQuiz(k, true); }
+  // her guess on a skill drawing: show where it really goes and why, then the teacher teaches the slide
+  function pickGuess(k) { if (!pend(i)) return; answers['g' + i] = k; store.set(L.id + ':ans', answers); cueDone = -1; render(); play(L.slides[i].audio); }
   async function play(p) {
     clearTimeout(timer);
     const token = ++playToken;
@@ -818,7 +863,7 @@ async function drawLesson(el, L0, autoStart) {
     audio.src = url; audio.playbackRate = SPEEDS[speedIx];
     audio.play().then(() => setPlaying(true)).catch(() => { setPlaying(false); revealAll(); });
   }
-  const srcFor = s => s.kind === 'quiz' ? (answers[i] != null ? s.audioA : s.audioQ) : s.audio;
+  const srcFor = s => s.kind === 'quiz' ? (answers[i] != null ? s.audioA : s.audioQ) : pend(i) ? 'audio/' + guessOf(s).clip + '.mp3' : s.audio;
   function go(k, auto) {
     if (k < 0 || k >= L.slides.length) return;
     clearTimeout(timer); audio.pause();
@@ -843,10 +888,12 @@ async function drawLesson(el, L0, autoStart) {
     revealAll();
     setPlaying(false);
     const s = L.slides[i];
+    if (pend(i)) { cueDone = i; return; }                                // the teacher asked; the drawing waits for her tap
     if ((s.kind === 'quiz' && answers[i] == null) || s.drill) return;   // wait for the student on a question or a practice slide
     if (i < L.slides.length - 1) timer = setTimeout(() => go(i + 1, true), 1100);
     else {
       store.set(baseId + ':done', true);
+      if (s.ask && s.ask.length && !askDone(s.ask, askGet(i))) return;   // numbers still to type: the Next button appears when they are in
       // auto-continue: the next lesson the current filter lists, so a weekend plays through like a podcast
       const nx = store.get('autoNext', true) ? nextTarget(baseId) : null;
       if (nx) timer = setTimeout(() => { location.hash = nx; }, 1800);
@@ -854,6 +901,7 @@ async function drawLesson(el, L0, autoStart) {
   });
   $('clsPlay').onclick = () => {
     if (playing) { audio.pause(); setPlaying(false); return; }
+    if (pend(i) && cueDone === i) { pickGuess('-'); return; }
     if (!audio.src || audio.ended) { play(srcFor(L.slides[i])); return; }
     audio.play().then(() => setPlaying(true)).catch(() => {});
   };
