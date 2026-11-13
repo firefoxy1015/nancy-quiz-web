@@ -1,10 +1,10 @@
-// Skill diagrams (Weekend 4): real labelled drawings for the hands-on lessons, replacing the decorative pictures.
+// Skill diagrams (Weekends 4 and 5): real labelled drawings for the hands-on lessons, replacing the decorative pictures.
 // A lesson slide carries `dia` (which drawing) and `guess` (which "you first" question). The player shows the drawing
 // with tappable spots before the teacher explains; her answer is marked on the drawing, then the slide plays as usual.
 // The last slide of each skill lesson carries `ask`: two or three numbers she has to type, no options.
 // Facts follow EMALB (the exam) first, then the BCEHS procedure, each named with its title.
-import { esc } from './app.js?v=71';
-import { isRight } from './numlab.js?v=71';
+import { esc } from './app.js?v=72';
+import { isRight } from './numlab.js?v=72';
 
 const two = (en, zh, inl) => `<span class="l-en">${esc(en)}</span><span class="l-zh${inl ? ' inl' : ''}">${esc(zh)}</span>`;
 const tube = (d, w = 9) => `<path class="bo" d="${d}" stroke-width="${w}"/><path class="bi" d="${d}" stroke-width="${w - 2.6}"/>`;
@@ -91,10 +91,71 @@ export const GUESS = {
       { k: 'B', en: 'Mid-shaft femur', zh: '股骨干中段', why: ['A suspected mid-shaft femur fracture in a stable patient (EMALB).', '稳定病人的疑似股骨干中段骨折（EMALB）。'] },
       { k: 'C', en: 'Knee / distal femur', zh: '膝关节 / 股骨远端', why: ['Knee or distal femur involved: no traction. You would be pulling across an injured joint.', '累及膝关节或股骨远端：不牵引，否则是在跨着受伤的关节拉。'] },
       { k: 'D', en: 'Ankle or foot', zh: '踝或足', why: ['The ankle hitch pulls on the ankle and foot. If they are broken, no traction.', '踝带是拉在踝和足上的。踝或足骨折就不能牵引。'] }] },
+  // ---- Weekend 5 ----
+  pads: { dia: 'pads', v: 'pads', ok: 'B', clip: 'w05-lab-dia5-pads',
+    cue: ['You first. Adult in VF, chest bare and dry. The first pad is already on, below his right collarbone. Where does the second one go? Tap a spot.',
+      '你先来。成人室颤，胸口已经擦干露出来。第一片电极片已经贴在他右锁骨下。第二片贴哪儿？点一个位置。'],
+    q: ['Pad 1 is below the right collarbone. Where does pad 2 go?', '第一片在右锁骨下。第二片贴哪儿？'],
+    options: [
+      { k: 'A', en: 'On the breastbone', zh: '胸骨上', why: ['Over the sternum the current takes a short path and misses most of the heart; bone also resists it.', '贴在胸骨上，电流走捷径，绕过大部分心脏；骨头还会挡电流。'] },
+      { k: 'B', en: 'Left side, beside the nipple', zh: '左侧胸壁，乳头旁', why: ['Left lateral chest, beside the nipple and below the chest muscle: the heart sits between the two pads.', '左侧胸壁，乳头旁、胸肌下方：心脏正好夹在两片之间。'] },
+      { k: 'C', en: 'Below the left collarbone', zh: '左锁骨下', why: ['Two pads across the top of the chest send the current above the heart.', '两片都在胸口上方，电流从心脏上面穿过去。'] },
+      { k: 'D', en: 'On the belly', zh: '肚子上', why: ['Too low: the current passes below the heart.', '太低了，电流从心脏下面过去。'] }] },
+  crew: { dia: 'crew', v: 'crew', ok: 'C', clip: 'w05-lab-dia5-crew',
+    cue: ['Your guess first. Five of you, one man on the floor, seen from above. Where does the team lead stand? Tap a spot.',
+      '你先猜。五个人，一个病人躺在地上，从上往下看。队长站在哪儿？点一个位置。'],
+    q: ['Seen from above: where does the team lead stand?', '从上往下看：队长站在哪儿？'],
+    options: [
+      { k: 'A', en: 'At the head', zh: '头侧', why: ['The head belongs to the airway provider: bag, iGel, oxygen, the EtCO₂ line.', '头侧是气道负责人的位置：球囊、iGel、氧气、EtCO₂ 管路。'] },
+      { k: 'B', en: 'Kneeling at the chest', zh: '跪在胸旁', why: ['That is a compressor\'s place. A lead with hands on the chest cannot see the room.', '那是按压者的位置。手在胸口上的队长看不到全局。'] },
+      { k: 'C', en: 'At the feet, hands off', zh: '脚边，不动手', why: ['At the feet the lead sees every person and the monitor, and keeps hands off: roles, decisions, "What else?", CliniCall.', '在脚边，队长能看到每一个人和监护仪，而且不动手：分工、决策、“还可能是什么？”、CliniCall。'] },
+      { k: 'D', en: 'At the monitor', zh: '监护仪旁', why: ['The pads-and-monitor person is there. The screen is turned toward the lead instead.', '那里是电极片和监护仪负责人的位置。屏幕要转向队长。'] }] },
+  etco2: { dia: 'cap', v: 'etco2', ok: 'C', clip: 'w05-lab-dia5-etco2',
+    cue: ['You first. This is twelve minutes of EtCO₂ during good CPR with an iGel in. Four things happen on the line. Which one means: pulse check, now? Tap it.',
+      '你先来。这是放好 iGel、CPR 质量很好时，十二分钟的 EtCO₂ 曲线。线上发生了四件事。哪一件的意思是：马上摸脉搏？点它。'],
+    q: ['Which change on the EtCO₂ trend means "pulse check, now"?', 'EtCO₂ 趋势上的哪个变化意思是“马上摸脉搏”？'],
+    options: [
+      { k: 'A', en: 'A slow fall', zh: '慢慢下降', why: ['A slow fall usually means the compressor is tiring: swap.', '慢慢下降通常是按压的人累了：换人。'] },
+      { k: 'B', en: 'A sudden drop to zero', zh: '突然掉到零', why: ['A sudden drop means the iGel or the line has come off, or he has re-arrested. Check the airway first.', '突然掉下来，说明 iGel 或管路脱了，或者再次骤停。先查气道。'] },
+      { k: 'C', en: 'A sudden rise that stays', zh: '突然升高并保持', why: ['A sudden, sustained rise (16 to 42) means ROSC is likely: "EtCO₂ up, pulse check", 10 seconds or less.', '突然而且持续的升高（16 到 42）说明很可能 ROSC：“EtCO₂ 上来了，摸脉搏”，不超过 10 秒。'] },
+      { k: 'D', en: 'Steady at 18', zh: '稳定在 18', why: ['Steady means keep going and say the trend at the analysis: "EtCO₂ eighteen, steady."', '稳定就继续，分析时把趋势说出来：“EtCO₂ 十八，稳定。”'] }] },
+  v1: { dia: 'leads', v: 'v1', ok: 'A', clip: 'w05-lab-dia5-v1',
+    cue: ['You first. The limb electrodes are on, and you are starting the chest leads. Where does V1 go? Tap a spot.',
+      '你先来。肢体电极已经贴好，你开始贴胸导联。V1 贴在哪儿？点一个位置。'],
+    q: ['Chest leads: where does V1 go?', '胸导联：V1 贴在哪儿？'],
+    options: [
+      { k: 'A', en: '4th space, right of the sternum', zh: '胸骨右缘第 4 肋间', why: ['BCEHS PR16 12-Lead ECG Acquisition: V1 is at the fourth intercostal space on the right of the sternum.', 'BCEHS PR16 12-Lead ECG Acquisition（12 导联采集）：V1 在胸骨右侧第 4 肋间。'] },
+      { k: 'B', en: '4th space, left of the sternum', zh: '胸骨左缘第 4 肋间', why: ['That is V2, the mirror of V1 across the sternum.', '那是 V2，和 V1 隔着胸骨对称。'] },
+      { k: 'C', en: '2nd space, right of the sternum', zh: '胸骨右缘第 2 肋间', why: ['Two spaces too high. Count down from the angle of Louis: the 2nd rib, then the 2nd, 3rd and 4th spaces.', '高了两个肋间。从胸骨角往下数：第 2 肋，再往下第 2、3、4 肋间。'] },
+      { k: 'D', en: '5th space, mid-clavicular', zh: '锁骨中线第 5 肋间', why: ['That is V4, usually just below the left nipple.', '那是 V4，通常在左乳头下方。'] }] },
 };
 
 /* ---------------- what stays under each drawing once she has answered ---------------- */
 const LEGEND = {
+  pads: { src: ['Lesson w05-8 QUIK-COMBO pads · EMALB p.43–44 Infant/Child CPR/AED basics · BCEHS PR54 Vector Change/Pad Placement Change', '课 w05-8 QUIK-COMBO 电极片 · EMALB 第 43–44 页 婴儿/儿童 CPR/AED · BCEHS PR54 Vector Change/Pad Placement Change（换向量/换电极片位置）'], rows: [
+    ['Bare, clean, dry chest; shave heavy hair; check the expiry date', '胸口裸露、干净、干燥；毛多先剃；查有效期'],
+    ['Adult: one pad below the right collarbone, just right of the sternum; one on the left side beside the nipple, below the chest muscle', '成人：一片在右锁骨下、胸骨右侧；一片在左侧胸壁乳头旁、胸肌下方'],
+    ['Child or infant: sized pads, front and back. Exam: pads within 2.5 cm of each other → front and back', '儿童或婴儿：合适尺寸的电极片，前后贴。考试：两片相距 2.5 cm 以内 → 改前后贴'],
+    ['Exam: child 0–8 with no child pads → adult pads at adult joules', '考试：0–8 岁没有儿童电极片 → 用成人电极片、成人能量'],
+    ['BCEHS N02 Adult Cardiac Arrest: 3 shock-advised analyses in a row without success → vector change (front and back) and CliniCall', 'BCEHS N02 Adult Cardiac Arrest（成人心脏骤停）：连续 3 次建议电击未成功 → 换向量（前后贴）并打 CliniCall']] },
+  crew: { src: ['Lesson w05-22 Saturday lab: the pit crew · EMALB p.42 CPR/AED basic concepts', '课 w05-22 周六实验课：维修站分工 · EMALB 第 42 页 CPR/AED 基本概念'], rows: [
+    ['Compressors (2): opposite sides of the chest; swap at each analysis (exam: every 2 minutes)', '按压者（2 人）：胸口两侧相对；每次分析时换（考试：每 2 分钟）'],
+    ['Airway: at the head; BVM 30:2 → iGel, then 1 breath every 6 s; oxygen; EtCO₂ line', '气道：头侧；BVM 30:2 → iGel，然后每 6 秒一口气；氧气；EtCO₂ 管路'],
+    ['Pads and monitor: at the side, screen toward the lead; analyze, charge, shock (COACHED)', '电极片和监护仪：侧面，屏幕朝向队长；分析、充电、电击（COACHED）'],
+    ['Team lead: at the feet, hands off: roles, decisions, "What else?", CliniCall', '队长：脚边，不动手：分工、决策、“还可能是什么？”、CliniCall'],
+    ['Recorder: beside the lead; clock, shocks, EtCO₂; calls each 2-minute mark. With four people the lead also records', '记录员：在队长旁；时间、电击、EtCO₂；每 2 分钟报时。只有四个人时队长兼记录']] },
+  cap: { src: ['Lesson w05-22 the EtCO₂ ROSC drill · BCEHS N02 Adult Cardiac Arrest', '课 w05-22 EtCO₂ ROSC 演练 · BCEHS N02 Adult Cardiac Arrest（成人心脏骤停）'], rows: [
+    ['Steady: say the trend at each analysis ("EtCO₂ eighteen, steady")', '稳定：每次分析时说出趋势（“EtCO₂ 十八，稳定”）'],
+    ['Slow fall: a tiring compressor → swap', '慢慢下降：按压的人累了 → 换人'],
+    ['Sudden drop: iGel or line off, or re-arrest → check the airway', '突然下降：iGel 或管路脱落，或再次骤停 → 先查气道'],
+    ['Sudden, sustained rise (e.g. 16 → 42): "EtCO₂ up, pulse check", 10 s or less', '突然而持续的升高（如 16 → 42）：“EtCO₂ 上来了，摸脉搏”，不超过 10 秒'],
+    ['Under 10: fix the CPR. Never a stop rule on its own', '低于 10：改善 CPR。它本身永远不是停止标准']] },
+  leads: { src: ['BCEHS PR16 12-Lead ECG Acquisition', 'BCEHS PR16 12-Lead ECG Acquisition（12 导联心电图采集）'], rows: [
+    ['V1: 4th intercostal space, right of the sternum · V2: 4th space, left of the sternum', 'V1：胸骨右侧第 4 肋间 · V2：胸骨左侧第 4 肋间'],
+    ['V4: 5th space on the mid-clavicular line, usually below the left nipple', 'V4：锁骨中线第 5 肋间，通常在左乳头下方'],
+    ['V3: between V2 and V4; place it after V4 (order V1, V2, V4, V3, V5, V6)', 'V3：V2 和 V4 之间；先贴 V4 再贴 V3（顺序 V1、V2、V4、V3、V5、V6）'],
+    ['V5: 5th space, anterior axillary line · V6: level with V5, mid-axillary line', 'V5：腋前线第 5 肋间 · V6：与 V5 同一水平，腋中线'],
+    ['Age and sex in; still for 10 seconds; acquire, read aloud, transmit', '输入年龄和性别；保持不动 10 秒；采集、读出来、传输']] },
   leg: { src: ['EMALB bleeding control (p.19) · BCEHS PR03 (tourniquet)', 'EMALB 出血控制（第 19 页）· BCEHS PR03（止血带）'], rows: [
     ['On bare skin, 5–8 cm above the wound; source unclear → as high as possible', '贴皮肤，伤口上方 5–8 cm；找不到出血点 → 尽量靠近肢体根部'],
     ['Never over a joint', '绝不绑在关节上'],
@@ -254,10 +315,84 @@ function drawTraction(v, done, cls) {
     s += `<path class="lead" d="M${mx},36 L${x},${y}"/>` + mk(k, mx, 22, cls(k)) + labs(mx + 17, 19, [TNAME[k][0]], TNAME[k][1]);
   return s;
 }
-const DRAW = { leg: drawLeg, pelvis: drawPelvis, chest: drawChest, traction: drawTraction };
-const DIA_OF = { tq: ['leg', 'tq'], binder: ['pelvis', 'binder'], seal: ['chest', 'seal'], needle: ['chest', 'needle'], traction: ['traction', 'traction'] };
+
+/* ---------------- Weekend 5 drawings ---------------- */
+const CLAV = 'M166,44 C140,41 112,46 92,52 M194,44 C220,41 248,46 268,52';
+const side = () => lab(8, 14, "patient's right", '病人右侧') + lab(352, 14, "patient's left", '病人左侧', 'end');
+// adult pads, front view (the patient's right is on the viewer's left)
+function drawPads(v, done, cls) {
+  let s = `<path class="skin" d="${TORSO}"/><path class="crease" d="${CLAV} M180,50 V168"/><circle class="nip" cx="122" cy="150" r="3"/><circle class="nip" cx="238" cy="150" r="3"/>` + side();
+  if (done) s += `<path class="heart" d="M170,104 C194,94 226,108 226,134 C224,158 200,170 182,164 C168,152 162,118 170,104 Z"/>`;
+  s += `<rect class="pad" x="122" y="58" width="44" height="34" rx="6"/><text class="padn" x="144" y="80">1</text>`;
+  const at = { A: [162, 102, 36, 40], B: [232, 150, 32, 42], C: [196, 58, 44, 34], D: [160, 196, 40, 34] };
+  for (const k of Object.keys(at)) { if (done && k === 'B') continue; const [x, y, w, h] = at[k], c = cls(k); s += `<rect class="cand${c ? ' ' + c : ''}" x="${x}" y="${y}" width="${w}" height="${h}" rx="5"/>`; }
+  if (done) s += `<rect class="pad" x="232" y="150" width="32" height="42" rx="6"/><text class="padn" x="248" y="176">2</text>` +
+    `<path class="zap" d="M150,92 L176,118 L168,124 L198,152 L190,156 L236,170"/>` + labs(96, 112, ['current through', 'the heart'], '电流穿过心脏', 'end', 'r') +
+    labs(272, 210, ['below the chest muscle,', 'beside the nipple'], '胸肌下方、乳头旁', 'middle', 'g');
+  s += labs(100, 66, ['pad 1: below the', 'right collarbone'], '第一片：右锁骨下', 'end');
+  const mkAt = { A: [180, 152], B: [296, 171], C: [218, 108], D: [180, 244] };
+  for (const k of Object.keys(mkAt)) { const [x, y] = mkAt[k]; if (k === 'B') s += `<path class="lead" d="M266,171 H284"/>`; s += mk(k, x, y > 240 ? 236 : y, cls(k), 10); }
+  return s;
+}
+// the pit crew from above: head at the top
+function drawCrew(v, done, cls) {
+  let s = `<rect class="bed" x="70" y="18" width="220" height="214" rx="10" opacity=".35"/>` +
+    `<circle class="skin" cx="180" cy="46" r="17"/><path class="skin" d="M152,66 C152,62 208,62 208,66 L214,150 C214,156 146,156 146,150 Z"/>` +
+    `<path class="skin" d="M152,152 L148,214 L170,214 L178,156 Z M208,152 L212,214 L190,214 L182,156 Z"/><path class="skin" d="M152,72 L126,122 L134,126 L160,84 Z M208,72 L234,122 L226,126 L200,84 Z"/>` +
+    `<rect class="pad" x="160" y="74" width="16" height="12" rx="2"/><rect class="pad" x="198" y="102" width="12" height="16" rx="2"/>` +
+    `<rect class="mon" x="262" y="150" width="34" height="24" rx="3"/>` + (done ? labs(279, 186, ['pads / monitor'], '电极片/监护仪', 'middle') : lab(279, 186, 'monitor', '监护仪', 'middle'));
+  const role = (x, y, c = '') => `<g class="role${c ? ' ' + c : ''}"><circle cx="${x}" cy="${y}" r="12"/></g>`;
+  if (done) s += role(124, 96) + labs(104, 92, ['compressor'], '按压者', 'end') + role(236, 96) + labs(256, 74, ['compressor'], '按压者') +
+    role(180, 12) + labs(198, 10, ['airway'], '气道') + role(279, 132) +
+    role(180, 228, 'lead5') + `<circle class="okring" cx="180" cy="228" r="17"/>` + labs(158, 226, ['team lead,', 'hands off'], '队长，不动手', 'end', 'g') +
+    role(232, 228) + labs(250, 226, ['recorder'], '记录员') + labs(60, 150, ['swap at', 'each analysis'], '每次分析时换', 'middle');
+  const at = { A: [180, 14], B: [124, 96], C: [180, 232], D: [300, 128] };
+  if (!done) for (const k of Object.keys(at)) { const [x, y] = at[k]; s += mk(k, x, y > 240 ? 236 : y, cls(k)); }
+  return s;
+}
+// EtCO2 trend during CPR: steady, slow fall, sudden drop, sudden sustained rise
+function drawCap(v, done, cls) {
+  const X = t => 34 + t * 1.04, Y = e => 206 - e * 3.6;
+  const pts = [[0, 18], [55, 18], [60, 18], [105, 11], [112, 18], [140, 18], [143, 0], [158, 0], [161, 18], [205, 17], [209, 42], [240, 44], [270, 43], [300, 44]];
+  const d = 'M' + pts.map(([t, e]) => `${X(t).toFixed(1)},${Y(e).toFixed(1)}`).join(' L');
+  let s = `<path class="axis" d="M34,24 V206 H346"/>` + [10, 20, 30, 40, 50].map(e => `<path class="grid" d="M34,${Y(e)} H346"/><text class="tick" x="28" y="${Y(e) + 3.5}">${e}</text>`).join('') +
+    `<path class="ref" d="M34,${Y(10)} H346"/>` + labs(344, Y(10) + 12, ['under 10: fix the CPR'], '低于 10：改善 CPR', 'end', 'r') +
+    lab(36, 16, 'EtCO₂ (mmHg)', '') + lab(346, 222, 'time →', '时间 →', 'end') + `<path class="trace" d="${d}"/>`;
+  const at = { D: [X(28), Y(18)], A: [X(85), Y(14)], B: [X(150), Y(0)], C: [X(209), Y(42)] };
+  for (const k of Object.keys(at)) {
+    const [x, y] = at[k];
+    if (k === 'C') { s += `<path class="lead" d="M${x.toFixed(1)},${y.toFixed(1)} L${(x - 18).toFixed(1)},${(y - 10).toFixed(1)}"/>` + mk(k, x - 26, y - 14, cls(k), 10); continue; }
+    if (k === 'B') { s += `<path class="lead" d="M${x.toFixed(1)},${y.toFixed(1)} V${(y + 8).toFixed(1)}"/>` + mk(k, x, y + 18, cls(k), 9); continue; }
+    s += `<path class="lead" d="M${x.toFixed(1)},${y.toFixed(1)} V${(y - 14).toFixed(1)}"/>` + mk(k, x, y - 24, cls(k), 10); }
+  if (done) s += `<rect class="okring" x="${X(204)}" y="${Y(47)}" width="${X(222) - X(204)}" height="${Y(14) - Y(47)}" rx="7"/>` +
+    labs(X(200), Y(30), ['pulse check,', '10 s or less'], '摸脉搏，≤ 10 秒', 'end', 'g') + labs(X(85), Y(14) + 30, ['tired: swap'], '累了：换人', 'middle') +
+    labs(X(150) + 14, Y(0) + 16, ['airway?'], '查气道', 'start', 'r') + labs(X(28), Y(18) + 16, ['say the trend'], '说出趋势', 'middle');
+  return s;
+}
+// chest electrodes: ribs numbered at the sternum, V1-V6 once answered
+function drawLeads(v, done, cls) {
+  const half = tube('M168,54 C152,52 134,56 120,64', 7) + RIBS.map(d => tube(d, 9)).join('') + tube('M166,44 C140,40 112,46 88,52', 8);
+  let s = `<path class="skin" d="${TORSO}"/>` + half + mirror(half) +
+    `<path class="bone" d="M164,40 L196,40 L192,73 L168,73 Z"/><path class="bone" d="M168,75 L192,75 L190,166 L170,166 Z"/><path class="bone" d="M174,168 L186,168 L180,182 Z"/>` +
+    [[206, 76], [206, 100.5], [206, 125.5], [206, 151], [204, 176.5]].map(([x, y], i) => `<text class="ribn" x="${x}" y="${y}">${i + 2}</text>`).join('') +
+    `<circle class="nip" cx="238" cy="143" r="3"/>` + side() + dot(1, 180, 75, 5) + lab(16, 34, 'angle of Louis = 2nd rib', '胸骨角 = 第 2 肋', 'start');
+  const at = { A: [158, 134], B: [202, 134], C: [158, 86], D: [234, 170] };
+  if (done) {
+    s += `<path class="mcl" d="M234,40 V236"/>` + labs(236, 232, ['mid-clavicular'], '锁骨中线', 'start', 'b');
+    const E = [['V1', 158, 134], ['V2', 202, 134], ['V3', 218, 152], ['V4', 234, 170], ['V5', 252, 172], ['V6', 266, 174]];
+    s += E.map(([n, x, y]) => `<g class="elec"><circle cx="${x}" cy="${y}" r="7"/><text x="${x}" y="${y + 3}">${n.slice(1)}</text></g>`).join('') +
+      `<path class="lead" d="M154,140 L132,196"/>` + labs(136, 206, ['V1: 4th space,', 'right of sternum'], 'V1：胸骨右侧第 4 肋间', 'end', 'g') +
+      `<path class="lead" d="M268,180 L300,192"/>` + labs(316, 202, ['V4–V6:', '5th space'], '第 5 肋间', 'middle');
+  } else for (const k of Object.keys(at)) { const [x, y] = at[k]; s += mk(k, x, y, cls(k), 9); }
+  return s;
+}
+const DRAW = { leg: drawLeg, pelvis: drawPelvis, chest: drawChest, traction: drawTraction, pads: drawPads, crew: drawCrew, cap: drawCap, leads: drawLeads };
+const DIA_OF = { tq: ['leg', 'tq'], binder: ['pelvis', 'binder'], seal: ['chest', 'seal'], needle: ['chest', 'needle'], traction: ['traction', 'traction'],
+  pads: ['pads', 'pads'], crew: ['crew', 'crew'], etco2: ['cap', 'etco2'], v1: ['leads', 'v1'] };
 const ALT = { leg: 'A leg seen from the side, with the places a tourniquet could go', pelvis: 'A pelvis seen from the front, with the places a binder could go',
-  chest: 'A chest seen from the front', traction: 'Both legs seen from the front, with a traction splint' };
+  chest: 'A chest seen from the front', traction: 'Both legs seen from the front, with a traction splint',
+  pads: 'An adult chest seen from the front, with the places a defibrillation pad could go', crew: 'A resuscitation team seen from above, around a patient on the floor',
+  cap: 'An EtCO2 trend line during CPR with four marked changes', leads: 'A chest seen from the front with the ribs numbered, for the 12-lead chest electrodes' };
 
 // the figure for a slide: pending (pick == null, the question and its choices), or answered / skipped ('-')
 export function skFigure(s, pick) {

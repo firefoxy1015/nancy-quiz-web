@@ -1,10 +1,10 @@
-// Numbers room (Weekend 4): five minutes of typed answers, no options to recognise.
+// Numbers room (one per weekend; Weekend 4's makers live here, Weekend 5's in numlab5.js): five minutes of typed answers, no options to recognise.
 // Traction weight from body weight, the fluid bolus, TXA go / no-go from the clock and the age, a GCS from three
 // descriptions, a burn area from a shaded figure, and one bare number to recall. New numbers every round; a miss
 // brings the same kind of question back at the end of the round and first in the next one.
 // Numbers follow EMALB (the exam): traction p.23, hypovolemia p.54, TXA p.78, TBI p.27, burns p.28; where EMALB is
 // silent the BCEHS procedure is named in the question (PR03 tourniquet, PR04 wound packing, PR02 pelvic binder).
-import { t, esc } from './app.js?v=71';
+import { t, esc } from './app.js?v=72';
 
 const rnd = n => Math.floor(Math.random() * n);
 const pick = xs => xs[rnd(xs.length)];
@@ -197,18 +197,24 @@ function mkRecall(miss) {
   return { type: 'recall', key: 'r-' + r.k, unit: r.unit, unitZh: r.unitZh, answer: r.answer, lo: r.lo, hi: r.hi, show: r.show, tol: 0, q: r.q,
     hint: ['Not that one. One more try, then I will show you.', '不是这个。再试一次，再错我就告诉你。'], why: r.why };
 }
-const MAKE = { trac: mkTrac, tracX: mkTracX, bolus: mkBolus, txa: mkTxa, gcs: mkGcs, burn: mkBurn, recall: mkRecall };
-const SLOT_OF = key => key.startsWith('r-') ? 'recall' : key.startsWith('txa') ? 'txa' : key === 'tracOpen' || key === 'tracNo' ? 'tracX' : key;
-export const _test = { MAKE, RECALL, BURN_UNITS };
+const MAKE4 = { trac: mkTrac, tracX: mkTracX, bolus: mkBolus, txa: mkTxa, gcs: mkGcs, burn: mkBurn, recall: mkRecall };
+const SLOT_OF4 = key => key.startsWith('r-') ? 'recall' : key.startsWith('txa') ? 'txa' : key === 'tracOpen' || key === 'tracNo' ? 'tracX' : key;
+export const _test = { MAKE: MAKE4, RECALL, BURN_UNITS };
+const TXA_YN = [['Give TXA', '给 TXA'], ['No TXA', '不给 TXA']];
+const W4 = { key: 'num:w04', TAG, MAKE: MAKE4, SLOT_OF: SLOT_OF4, SLOTS: ['trac', 'tracX', 'bolus', 'txa', 'txa', 'gcs', 'burn', 'recall'] };
 
 /* ---------------- the room ---------------- */
-export function numLab(host, store) {
-  const st = Object.assign({ rounds: 0, best: 0, miss: {}, last: [], days: {} }, store.get('num:w04', {}));
-  const saveSt = () => store.set('num:w04', st);
+// wk picks the weekend's question makers; progress is stored per weekend ("num:w04", "num:w05")
+export async function numLab(host, store, wk = 4) {
+  const C = wk === 4 ? W4 : Object.assign({ key: 'num:w' + String(wk).padStart(2, '0') }, await import(`./numlab${wk}.js?v=72`));
+  const { TAG, MAKE, SLOT_OF } = C;
+  const st = Object.assign({ rounds: 0, best: 0, miss: {}, last: [], days: {} }, store.get(C.key, {}));
+  const saveSt = () => store.set(C.key, st);
+  const yn = q => q.yn || TXA_YN;
   let queue = [], i = 0, firstTry = 0, base = 0, extras = 0, missed = [];
 
   function start() {
-    const slots = ['trac', 'tracX', 'bolus', 'txa', 'txa', 'gcs', 'burn', 'recall'];
+    const slots = C.SLOTS;
     const first = [...new Set((st.last || []).map(SLOT_OF))].filter(s => slots.includes(s));
     const rest = slots.slice(); first.forEach(s => rest.splice(rest.indexOf(s), 1));
     queue = first.concat(shuffle(rest)).map(s => MAKE[s](st.miss));
@@ -216,7 +222,7 @@ export function numLab(host, store) {
     ask();
   }
   const unitOf = q => q.unitZh ? t(q.unit, q.unitZh) : q.unit;
-  const answerText = q => q.yes != null ? (q.yes ? t('Give TXA', '给 TXA') : t('No TXA', '不给 TXA')) : `${q.show || fmtN(q.answer)}${q.unit === '%' || q.unit === '°' ? '' : ' '}${unitOf(q)}`.trim();
+  const answerText = q => q.yes != null ? t(...yn(q)[q.yes ? 0 : 1]) : `${q.show || fmtN(q.answer)}${q.unit === '%' || q.unit === '°' ? '' : ' '}${unitOf(q)}`.trim();
   function onMiss(q) {
     st.miss[q.key] = (st.miss[q.key] || 0) + 1; missed.push(q);
     if (extras < 3) { extras++; queue.push(Object.assign(MAKE[SLOT_OF(q.key)](st.miss), { back: true })); }
@@ -234,7 +240,7 @@ export function numLab(host, store) {
         ${q.fig ? `<div class="nl-fig">${q.fig}</div>` : ''}
         ${q.list ? `<ul class="nl-list">${q.list.map((x, k) => `<li><b>${'EVM'[k]}</b><span>${L2(x[0], x[1])}</span></li>`).join('')}</ul>` : ''}
         <p class="case-q">${L2(q.q[0], q.q[1])}</p>
-        ${q.yes != null ? `<div class="nl-yn"><button class="btn" data-y="1">${esc(t('Give TXA', '给 TXA'))}</button><button class="btn" data-y="0">${esc(t('No TXA', '不给 TXA'))}</button></div>`
+        ${q.yes != null ? `<div class="nl-yn"><button class="btn" data-y="1">${esc(t(...yn(q)[0]))}</button><button class="btn" data-y="0">${esc(t(...yn(q)[1]))}</button></div>`
           : `<div class="case-type"><input id="nlIn" inputmode="decimal" autocomplete="off" enterkeyhint="done" aria-label="${esc(t('Your answer', '你的答案'))}"><span class="unit">${esc(unitOf(q))}</span><button class="btn" id="nlGo">${esc(t('Check', '核对'))}</button></div>
             ${q.note ? `<p class="tiny muted nl-note">${L2(q.note[0], q.note[1])}</p>` : ''}`}
         <div id="nlFb"></div>

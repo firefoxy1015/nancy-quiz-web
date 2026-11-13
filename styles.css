@@ -1170,3 +1170,35 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-short { display: inline-flex; border: 1px solid var(--line-strong); border-radius: 999px; overflow: hidden; flex: 1 1 100%; max-width: 420px; }
 .cls-short button { flex: 1; font: inherit; font-size: .84rem; font-weight: 600; padding: 7px 10px; border: 0; background: transparent; color: var(--ink-2); cursor: pointer; line-height: 1.25; }
 .cls-short button.on { background: var(--accent); color: #fff; }
+
+/* ---------------- detailed weekend quiz (src/weekquiz.js): 50+ questions per weekend, by topic ---------------- */
+.cls-quizrow { margin-top: 8px; } .cls-quizrow .main { border: 1px dashed var(--accent); }
+.wq-lead { font-size: 1.02rem; line-height: 1.6; margin: 4px 0 12px; }
+.wq-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 14px; }
+.wq-stats > div { padding: 10px 6px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); text-align: center; }
+.wq-stats b { display: block; font-size: 1.35rem; font-variant-numeric: tabular-nums; line-height: 1.2; } .wq-stats span { font-size: .76rem; color: var(--ink-2); }
+.wq-go { flex-wrap: wrap; gap: 8px; } .wq-go .btn { min-height: 46px; }
+.wq-h { font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); margin: 18px 0 8px; }
+.wq-secs { display: grid; gap: 6px; }
+.wq-sec { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.wq-sec:hover { background: var(--surface-2); }
+.wq-sec .n { flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: .8rem; font-weight: 700; }
+.wq-sec .nm { flex: 1; min-width: 0; font-weight: 600; line-height: 1.35; } .wq-sec .sc { flex: none; font-size: .82rem; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.wq-sec.full .n { background: #15803d; } .wq-sec.full .sc { color: #15803d; font-weight: 700; }
+.wq-pick { margin: 2px 0 8px; font-weight: 600; color: var(--accent-ink); }
+.wq-opts { grid-template-columns: 1fr; } .wq-opts .eo { text-align: left; padding-right: 14px; }
+.wq-src { margin-top: 8px; font-size: .8rem; color: var(--ink-2); line-height: 1.4; }
+.wq-break { display: grid; gap: 4px; margin: 14px auto; max-width: 520px; text-align: left; }
+.wq-break > div { display: flex; justify-content: space-between; gap: 12px; padding: 7px 12px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--line); line-height: 1.35; }
+.wq-break > div b { flex: none; font-variant-numeric: tabular-nums; } .wq-break > div.full b { color: #15803d; } .wq-break > div.low { border-color: color-mix(in srgb, #d0383b 45%, transparent); } .wq-break > div.low b { color: #d0383b; }
+#wqIn { max-width: 190px; }
+@media (max-width: 520px) { .wq-stats { grid-template-columns: repeat(2, 1fr); } }
+/* Weekend 5 skill drawings: pads, pit crew, EtCO2 trend, chest electrodes */
+.sk-svg .pad { fill: #e5e7eb; stroke: #1f2937; stroke-width: 1.6; } .sk-svg .padn { font-size: 13px; font-weight: 800; fill: #1f2937; text-anchor: middle; }
+.sk-svg .zap { fill: none; stroke: #f59e0b; stroke-width: 2.4; stroke-linejoin: round; stroke-dasharray: 5 3; }
+.sk-svg .mon { fill: #1f2937; stroke: #0f172a; stroke-width: 1; }
+.sk-svg .role circle { fill: #2563eb; stroke: #fff; stroke-width: 2; } .sk-svg .role.lead5 circle { fill: #1e8e4e; }
+.sk-svg .axis { fill: none; stroke: #334155; stroke-width: 1.4; } .sk-svg .grid { fill: none; stroke: #e2e8f0; stroke-width: 1; }
+.sk-svg .tick { font-size: 9.5px; fill: #64748b; text-anchor: end; } .sk-svg .ref { fill: none; stroke: #c0392b; stroke-width: 1.2; stroke-dasharray: 5 4; }
+.sk-svg .trace { fill: none; stroke: #0f766e; stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.sk-svg .elec circle { fill: #fff; stroke: #1f2937; stroke-width: 1.6; } .sk-svg .elec text { font-size: 8.5px; font-weight: 800; fill: #1f2937; text-anchor: middle; }

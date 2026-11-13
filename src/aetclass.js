@@ -2,10 +2,10 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repos; the vaults and slide images in aet-class-data. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=71';
-import { news2Drill } from './news2drill.js?v=71';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=71';
-import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=71';
+import { S, save, t, esc, ico } from './app.js?v=72';
+import { news2Drill } from './news2drill.js?v=72';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=72';
+import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=72';
 
 const BASE = './data/aet-class/';
 // The vaults and slide images live in their own Pages repo (aet-class-data, same github.io origin, also passed
@@ -70,7 +70,8 @@ async function loadWeek(wk) {
   if (!r.ok) throw new Error('week ' + r.status);
   const part = await decryptJSON(await r.json(), KEY);
   Object.assign(DOC.lessons, part.lessons);
-  if (part.brief) (DOC.briefs = DOC.briefs || {})[wk] = part.brief;   // the weekend's 精讲: pass card, chapters, school quiz
+  if (part.brief) (DOC.briefs = DOC.briefs || {})[wk] = part.brief;
+  if (part.quiz) (DOC.quizzes = DOC.quizzes || {})[wk] = part.quiz;       // the weekend's detailed quiz (src/weekquiz.js)   // the weekend's 精讲: pass card, chapters, school quiz
   weeksLoaded.add(wk);
 }
 function storedKey() { try { return JSON.parse(localStorage.getItem(KEY_LS) || 'null'); } catch { return null; } }
@@ -132,6 +133,7 @@ export async function renderAetClass(el, arg, params) {
   }
   if (params.brief) { await loadWeek(+params.brief); drawBrief(el, +params.brief, params.ch || ''); return; }
   if (params.test) { await loadWeek(+params.test); drawTest(el, +params.test); return; }
+  if (params.quiz) { await loadWeek(+params.quiz); await drawQuiz(el, +params.quiz); return; }
   if (params.cards) { drawCards(el, +params.cards); return; }
   if (params.drill === 'news2') { drawDrill(el); return; }
   if (params.lab) { await drawLab(el, params); return; }
@@ -264,19 +266,21 @@ function drawCourse(el) {
     const due = cardsDue(wk), hasCards = !!((DOC.cards || {})[wk] || []).length;
     const bm = briefOf(wk);
     const chip = (attrs, label) => `<button ${attrs}>${label}</button>`;
+    const nZ = ((DOC.index.quiz || {})[wk]) || 0, zOk = nZ ? Object.values(store.get('quiz:w' + String(wk).padStart(2, '0'), {}).ans || {}).filter(x => x && x.ok).length : 0;
+    const quizRow = nZ ? `<div class="cls-plan cls-quizrow"><div class="cls-plan-row"><button class="main" data-quiz="${wk}"><span class="n">?</span><span class="lab">${t('Detailed quiz', '详细测验')} <small>${nZ} ${t('questions, by topic, every answer explained', '题，按主题分组，每题有讲解')}</small></span><span class="meta">${zOk ? `${zOk} / ${nZ}` : t('new', '新')}</span></button></div></div>` : '';
     const opts = [
       nQ ? chip(`data-test="${wk}"`, `${t('Test', '测验')} · ${nQ} ${t('Q', '题')} · ${Math.round(nQ * 0.35)} min`) : '',
       hasCards ? chip(`data-cards="${wk}"`, `${t('Flashcards', '闪卡')} · ${due}`) : '',
       bm && bm.school ? chip(`data-brief="${wk}" data-ch="school"`, `${t('School quiz', '学校小测')} · ${bm.school}`) : ''].filter(Boolean);
-    if (!bm) return `<div class="cls-wk-tools">
+    if (!bm && !pathOf(wk)) return `<div class="cls-wk-tools">${quizRow}
       <div class="btn-row">${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min</button>` : ''}
         ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}</button>` : ''}</div>
       <div class="tiny muted" style="margin-top:6px">${t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
         '建议节奏：周一二阅读课 · 周三模块课，直播案例前先听案例课 · 周四五实操课 · 然后再测一次、把闪卡清完。')}</div>
     </div>`;
-    if (pathOf(wk)) return `<div class="cls-wk-tools">${pathHTML(wk)}<div class="cls-plan-opt"><span class="k">${t('Companions', '配套')}</span>${[
-      chip(`data-brief="${wk}" data-ch="card"`, t('Pass card', '必过卡')), chip(`data-brief="${wk}"`, `${t('Condensed book', '精讲')} · ${bm.n} ${t('chapters', '章')}`),
-      bm.pdf || bm.pdfEn ? chip(`data-brief="${wk}" data-ch="pdf"`, 'PDF') : '', ...opts].join('')}</div></div>`;
+    if (pathOf(wk)) return `<div class="cls-wk-tools">${pathHTML(wk)}${quizRow}<div class="cls-plan-opt"><span class="k">${t('Companions', '配套')}</span>${[
+      bm ? chip(`data-brief="${wk}" data-ch="card"`, t('Pass card', '必过卡')) : '', bm ? chip(`data-brief="${wk}"`, `${t('Condensed book', '精讲')} · ${bm.n} ${t('chapters', '章')}`) : '',
+      bm && (bm.pdf || bm.pdfEn) ? chip(`data-brief="${wk}" data-ch="pdf"`, 'PDF') : '', ...opts].join('')}</div></div>`;
     // condensed weekend: two numbered steps (pass card, condensed book + PDF), then the optional extras as small chips
     return `<div class="cls-wk-tools"><div class="cls-plan">
       <div class="cls-plan-row"><button class="main" data-brief="${wk}" data-ch="card"><span class="n">1</span><span class="lab">${t('Pass card', '必过卡')}</span><span class="meta">10 min</span></button></div>
@@ -285,15 +289,15 @@ function drawCourse(el) {
       ${LABS[wk] ? `<div class="cls-plan-row"><button class="main" data-lab="${LABS[wk].id}"><span class="n">3</span><span class="lab">${t(LABS[wk].en, LABS[wk].zh)} <small>${t(LABS[wk].sub, LABS[wk].subZh)}</small></span><span class="meta">${LABS[wk].min} min</span></button></div>` : ''}
       ${(CASES[wk] || []).map((c, i) => { const b = store.get('case:w' + String(wk).padStart(2, '0') + '-' + c.id + ':best', null); return `<div class="cls-plan-row"><button class="main" data-lab="${c.id}"><span class="n">${(LABS[wk] ? 4 : 3) + i}</span><span class="lab">${t(c.en, c.zh)} <small>${t(c.sub, c.subZh)}</small></span><span class="meta">${b ? `${b.ok}/${b.total}` : t('new', '新')}</span></button></div>`; }).join('')}
       ${opts.length ? `<div class="cls-plan-opt"><span class="k">${t('If you have time', '有时间再做')}</span>${opts.join('')}</div>` : ''}
-    </div></div>`;
+    </div>${quizRow}</div>`;
   };
   // one obvious thing to do today, above everything else (she said the page had too much and she could not find things)
   const todayCard = () => {
     const P = pathOf(cur); if (P) { const sh = shortOn(cur), A = P.steps.filter(s => !sh || s.must), k = A.findIndex(s => !stepDone(s, cur)); if (k >= 0) { const s = A[k];
       return `<div class="card cls-today"><div class="k">${t('Do this one today', '今天就做这个')}</div><div class="row"><div><b>${t(esc(s.en), esc(s.zh))}</b><div class="tiny muted">${t('Weekend', '周末')} ${cur} · ${sh ? t('short route', '必做路线') : t('learning path', '学习路线')} ${k + 1} / ${A.length}${minsOf(s) ? ' · ' + Math.round(minsOf(s)) + ' min' : ''}</div></div><button class="btn" data-go="${esc(stepHash(s))}">${k === 0 ? t('Start', '开始') : t('Continue', '继续')} →</button></div></div>`; }
       // route finished: the numbers room is the five minutes a day that keeps it (new numbers each round)
-      const lab = LABS[cur]; if (lab && lab.id === 'numbers') { const d = new Date(), day = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-        if (!(store.get('num:w04', {}).days || {})[day]) return `<div class="card cls-today"><div class="k">${t('Today’s five minutes', '今天的 5 分钟')}</div><div class="row"><div><b>${t(lab.en, lab.zh)}</b><div class="tiny muted">${t('Weekend', '周末')} ${cur} · ${t(lab.sub, lab.subZh)} · ${t('new numbers every round', '每轮换新数字')}</div></div><button class="btn" data-lab="numbers">${t('Start', '开始')} →</button></div></div>`; } }
+      const lab = LABS[cur]; if (lab && isNum(lab.id)) { const d = new Date(), day = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        if (!(store.get(numKey(lab.id), {}).days || {})[day]) return `<div class="card cls-today"><div class="k">${t('Today’s five minutes', '今天的 5 分钟')}</div><div class="row"><div><b>${t(lab.en, lab.zh)}</b><div class="tiny muted">${t('Weekend', '周末')} ${cur} · ${t(lab.sub, lab.subZh)} · ${t('new numbers every round', '每轮换新数字')}</div></div><button class="btn" data-lab="${lab.id}">${t('Start', '开始')} →</button></div></div>`; } }
     const c = Object.entries(CASES).flatMap(([wk, cs]) => cs.map(x => ({ ...x, wk: +wk }))).slice(-1)[0]; if (!c) return '';
     const b = store.get(`case:w${String(c.wk).padStart(2, '0')}-${c.id}:best`, null);
     return `<div class="card cls-today"><div class="k">${t('Do this one today', '今天就做这个')}</div><div class="row"><div><b>${t(c.en, c.zh)}</b><div class="tiny muted">${t('Weekend', '周末')} ${c.wk} · ${t(c.sub, c.subZh)}${b ? ` · ${t('best', '最好')} ${b.ok}/${b.total}` : ''}</div></div><button class="btn" data-lab="${c.id}">${b ? t('Run it again', '再跑一次') : t('Start', '开始')} →</button></div></div>`; };
@@ -325,7 +329,7 @@ function drawCourse(el) {
         <button class="btn ghost${mode === 'need' ? ' on' : ''}" data-filter="need">${t('Only what I still need', '只看还没学会的')}</button>
         <button class="btn ghost" id="drillBtn">${t('NEWS2 trainer', 'NEWS2 练习器')}</button>
         <button class="btn ghost" data-lab="ecg">${t('ECG lab', '心电图练习室')}</button>
-        <button class="btn ghost" data-lab="numbers">${t('Numbers room', '数字练习室')}</button>
+        <button class="btn ghost" data-lab="${LABS[cur] && isNum(LABS[cur].id) ? LABS[cur].id : 'numbers'}">${t('Numbers room', '数字练习室')}</button>
         <button class="btn ghost" id="autoBtn" style="margin-left:auto">${t('Auto-continue', '自动连播')}: ${autoNext ? t('on', '开') : t('off', '关')}</button>
       </div>
     </div>
@@ -376,6 +380,7 @@ function drawCourse(el) {
     backFrom = null;
   }
   el.querySelectorAll('[data-test]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?test=' + b.dataset.test; });
+  el.querySelectorAll('[data-quiz]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?quiz=' + b.dataset.quiz; });
   el.querySelectorAll('[data-cards]').forEach(b => b.onclick = () => { location.hash = '#/aet/class?cards=' + b.dataset.cards; });
   el.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { store.set('filter', b.dataset.filter); drawCourse(el); });
   el.querySelector('#drillBtn').onclick = () => { location.hash = '#/aet/class?drill=news2'; };
@@ -584,15 +589,19 @@ function drawCards(el, wk) {
 
 /* ---------------- interactive labs: a weekend's hands-on learning session (Weekend 3: the ECG lab) ---------------- */
 const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 steps, drawn on real strips', subZh: '7 步，全画在真条带上', min: 60 },
-  4: { id: 'numbers', en: 'Numbers room', zh: '数字练习室', sub: '8 questions, you type the number', subZh: '8 题，自己打数字', min: 5 } };
+  4: { id: 'numbers', en: 'Numbers room', zh: '数字练习室', sub: '8 questions, you type the number', subZh: '8 题，自己打数字', min: 5 },
+  5: { id: 'numbers5', en: 'Numbers room', zh: '数字练习室', sub: '8 questions, you type the number', subZh: '8 题，自己打数字', min: 5 } };
+// the numbers room exists per weekend: lab id "numbers" is Weekend 4 (kept for old links), "numbers5" is Weekend 5
+const isNum = id => /^numbers\d*$/.test(id || ''), numWk = id => +String(id).slice(7) || 4, numKey = id => 'num:w' + String(numWk(id)).padStart(2, '0');
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=71', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
-  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=71', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=72', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
+  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=72', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }],
+  5: [{ id: 'checkout', file: './case-w05-checkout.js?v=72', en: 'The arrest at the checkout', zh: '收银台前的心跳骤停', sub: '18 decisions, about 14 min', subZh: '18 个决定，约 14 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
 const stepHash = s => s.id ? '#/aet/class?l=' + s.id : '#/aet/class?lab=' + s.lab;
-const stepDone = (s, wk) => s.id ? isDone({ id: s.id }) : s.lab === 'ecg' ? Object.keys(store.get('ecg:done', {})).length >= 7 : s.lab === 'numbers' ? (store.get('num:w04', {}).rounds || 0) >= 1 : !!store.get(`case:w${String(wk).padStart(2, '0')}-${s.lab}:best`, null);
+const stepDone = (s, wk) => s.id ? isDone({ id: s.id }) : s.lab === 'ecg' ? Object.keys(store.get('ecg:done', {})).length >= 7 : isNum(s.lab) ? (store.get(numKey(s.lab), {}).rounds || 0) >= 1 : !!store.get(`case:w${String(wk).padStart(2, '0')}-${s.lab}:best`, null);
 const lessonMeta = id => DOC.index.units.flatMap(u => u.lessons).find(l => l.id === id);
 // short route: when a path marks some steps `must`, she can take just those (default on: "I do not have the time").
 // Nothing is hidden: the other steps stay listed with their titles, only quieter, and one tap shows the full route.
@@ -615,6 +624,14 @@ const pathHTML = wk => { const P = pathOf(wk); if (!P) return ''; const sh = sho
       const tag = !hm ? '' : s.must ? `<em class="cls-tag must">${s.id ? t('Must', '必听') : t('Must', '必做')}</em>` : sh ? `<em class="cls-tag">${t('Later', '有空再听')}</em>` : '';
       return `<div class="cls-plan-row"><button class="main${d ? ' done' : ''}${i === next ? ' next' : ''}${sh && !s.must ? ' opt' : ''}" data-go="${esc(stepHash(s))}"><span class="n">${d ? '✓' : i + 1}</span><span class="lab">${t(esc(s.en), esc(s.zh))}${tag}${m && m.title ? `<small class="ttl">${esc(m.title)}</small>` : ''}</span><span class="meta">${mins ? mins + ' min' : ''}</span></button></div>`; }).join('')}</div>`; };
 const caseOf = id => Object.entries(CASES).flatMap(([wk, cs]) => cs.map(c => ({ ...c, wk: +wk }))).find(c => c.id === id);
+async function drawQuiz(el, wk) {
+  const QZ = (DOC.quizzes || {})[wk];
+  if (!QZ) { location.hash = '#/aet/class'; return; }
+  el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Detailed quiz', '详细测验')} · ${t('Weekend', '周末')} ${wk}</h2>
+    <p class="muted">${t(esc(QZ.title), esc(QZ.titleZh || QZ.title))}</p><div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
+  const { weekQuiz } = await import('./weekquiz.js?v=72');
+  weekQuiz(el.querySelector('#labHost'), store, QZ, wk);
+}
 async function drawLab(el, params) {
   const c = caseOf(params.lab);
   if (c) {
@@ -622,21 +639,21 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=71'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=72'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
-  if (params.lab === 'numbers') {
-    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Numbers room', '数字练习室')} · ${t('Weekend', '周末')} 4</h2>
+  if (isNum(params.lab)) {
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Numbers room', '数字练习室')} · ${t('Weekend', '周末')} ${numWk(params.lab)}</h2>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const { numLab } = await import('./numlab.js?v=71');
-    numLab(el.querySelector('#labHost'), store);
+    const { numLab } = await import('./numlab.js?v=72');
+    numLab(el.querySelector('#labHost'), store, numWk(params.lab));
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=71');
+  const { ecgLab } = await import('./ecglab.js?v=72');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
