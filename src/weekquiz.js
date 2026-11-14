@@ -3,8 +3,8 @@
 // One question at a time; the explanation and its source show after each answer; wrong ones come back until clear.
 // Content lives in the encrypted weekend part (aet-class/classroom/quiz/wNN.json -> build_vault.py).
 // Where the exam (EMALB) and BCEHS differ the exam is the answer and the explanation names the difference.
-import { t, esc } from './app.js?v=72';
-import { isRight } from './numlab.js?v=72';
+import { t, esc } from './app.js?v=73';
+import { isRight } from './numlab.js?v=73';
 
 const rnd = n => Math.floor(Math.random() * n);
 const shuffle = xs => { const a = xs.slice(); for (let i = a.length - 1; i > 0; i--) { const j = rnd(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };

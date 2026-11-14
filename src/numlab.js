@@ -4,7 +4,7 @@
 // brings the same kind of question back at the end of the round and first in the next one.
 // Numbers follow EMALB (the exam): traction p.23, hypovolemia p.54, TXA p.78, TBI p.27, burns p.28; where EMALB is
 // silent the BCEHS procedure is named in the question (PR03 tourniquet, PR04 wound packing, PR02 pelvic binder).
-import { t, esc } from './app.js?v=72';
+import { t, esc } from './app.js?v=73';
 
 const rnd = n => Math.floor(Math.random() * n);
 const pick = xs => xs[rnd(xs.length)];
@@ -206,7 +206,7 @@ const W4 = { key: 'num:w04', TAG, MAKE: MAKE4, SLOT_OF: SLOT_OF4, SLOTS: ['trac'
 /* ---------------- the room ---------------- */
 // wk picks the weekend's question makers; progress is stored per weekend ("num:w04", "num:w05")
 export async function numLab(host, store, wk = 4) {
-  const C = wk === 4 ? W4 : Object.assign({ key: 'num:w' + String(wk).padStart(2, '0') }, await import(`./numlab${wk}.js?v=72`));
+  const C = wk === 4 ? W4 : Object.assign({ key: 'num:w' + String(wk).padStart(2, '0') }, await import(`./numlab${wk}.js?v=73`));
   const { TAG, MAKE, SLOT_OF } = C;
   const st = Object.assign({ rounds: 0, best: 0, miss: {}, last: [], days: {} }, store.get(C.key, {}));
   const saveSt = () => store.set(C.key, st);
