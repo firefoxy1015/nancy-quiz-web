@@ -3,8 +3,8 @@
 // with tappable spots before the teacher explains; her answer is marked on the drawing, then the slide plays as usual.
 // The last slide of each skill lesson carries `ask`: two or three numbers she has to type, no options.
 // Facts follow EMALB (the exam) first, then the BCEHS procedure, each named with its title.
-import { esc } from './app.js?v=73';
-import { isRight } from './numlab.js?v=73';
+import { esc } from './app.js?v=74';
+import { isRight } from './numlab.js?v=74';
 
 const two = (en, zh, inl) => `<span class="l-en">${esc(en)}</span><span class="l-zh${inl ? ' inl' : ''}">${esc(zh)}</span>`;
 const tube = (d, w = 9) => `<path class="bo" d="${d}" stroke-width="${w}"/><path class="bi" d="${d}" stroke-width="${w - 2.6}"/>`;

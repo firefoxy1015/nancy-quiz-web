@@ -2,10 +2,10 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repos; the vaults and slide images in aet-class-data. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=73';
-import { news2Drill } from './news2drill.js?v=73';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=73';
-import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=73';
+import { S, save, t, esc, ico } from './app.js?v=74';
+import { news2Drill } from './news2drill.js?v=74';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=74';
+import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=74';
 
 const BASE = './data/aet-class/';
 // The vaults and slide images live in their own Pages repo (aet-class-data, same github.io origin, also passed
@@ -599,9 +599,9 @@ const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 
 // the numbers room exists per weekend: lab id "numbers" is Weekend 4 (kept for old links), "numbers5" is Weekend 5
 const isNum = id => /^numbers\d*$/.test(id || ''), numWk = id => +String(id).slice(7) || 4, numKey = id => 'num:w' + String(numWk(id)).padStart(2, '0');
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=73', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
-  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=73', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }],
-  5: [{ id: 'checkout', file: './case-w05-checkout.js?v=73', en: 'The arrest at the checkout', zh: '收银台前的心跳骤停', sub: '18 decisions, about 14 min', subZh: '18 个决定，约 14 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=74', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
+  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=74', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }],
+  5: [{ id: 'checkout', file: './case-w05-checkout.js?v=74', en: 'The arrest at the checkout', zh: '收银台前的心跳骤停', sub: '18 decisions, about 14 min', subZh: '18 个决定，约 14 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
@@ -634,7 +634,7 @@ async function drawQuiz(el, wk) {
   if (!QZ) { location.hash = '#/aet/class'; return; }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Detailed quiz', '详细测验')} · ${t('Weekend', '周末')} ${wk}</h2>
     <p class="muted">${t(esc(QZ.title), esc(QZ.titleZh || QZ.title))}</p><div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { weekQuiz } = await import('./weekquiz.js?v=73');
+  const { weekQuiz } = await import('./weekquiz.js?v=74');
   weekQuiz(el.querySelector('#labHost'), store, QZ, wk);
 }
 async function drawCases(el, wk, n) {
@@ -645,7 +645,7 @@ async function drawCases(el, wk, n) {
     el.innerHTML = `<a class="back-link" href="#/aet/class?sc=${wk}">← ${t('All scenarios', '全部病例')}</a><div class="card cls-stage"><h2>${t(esc(S.title.en), esc(S.title.zh))}</h2>
       <p class="muted">${t('Full scenario', '完整病例')} ${n} / ${ALL.length} · ${t('Weekend', '周末')} ${wk} · ${t(esc(S.sub.en), esc(S.sub.zh))}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const { caseLevel } = await import('./caselevel.js?v=73');
+    const { caseLevel } = await import('./caselevel.js?v=74');
     caseLevel(el.querySelector('#labHost'), store, S, { audio: audioURL });
     const nx = ALL.find(c => c.n === n + 1);
     if (nx) { const host = el.querySelector('#labHost'); new MutationObserver((m, o) => { const e = host.querySelector('.case-end .btn-row'); if (e && !e.querySelector('[data-scnext]')) {
@@ -665,21 +665,21 @@ async function drawLab(el, params) {
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=73'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=74'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   if (isNum(params.lab)) {
     el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Numbers room', '数字练习室')} · ${t('Weekend', '周末')} ${numWk(params.lab)}</h2>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const { numLab } = await import('./numlab.js?v=73');
+    const { numLab } = await import('./numlab.js?v=74');
     numLab(el.querySelector('#labHost'), store, numWk(params.lab));
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=73');
+  const { ecgLab } = await import('./ecglab.js?v=74');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 

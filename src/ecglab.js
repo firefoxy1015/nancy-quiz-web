@@ -2,8 +2,8 @@
 // Every concept is drawn on a real-scale strip from ecgstrip.js, and every step ends in practice with instant feedback.
 // Seven steps: one beat → the paper → rate → the six steps → rhythm atlas → rhythm drill → the 12-lead.
 // Progress and drill scores stay on this device through the store the caller passes in (prefix aetclass:).
-import { t, esc, bi } from './app.js?v=73';
-import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=73';
+import { t, esc, bi } from './app.js?v=74';
+import { RHYTHMS, RHYTHM, GROUPS, makeStrip, stripSVG, overlaysSVG, customStrip, beat, make12, LAYOUT, WALLS, PATTERNS, wallOf, rng, NOISE } from './ecgstrip.js?v=74';
 
 const STEPS = [['beat', 'One beat', '一个心跳'], ['paper', 'The paper', '格子与量尺'], ['rate', 'Rate', '算心率'], ['six', 'Six steps', '六步法'],
   ['atlas', 'Rhythm atlas', '节律图鉴'], ['drill', 'Rhythm drill', '节律训练'], ['twelve', '12-lead', '12 导联']];
@@ -25,6 +25,7 @@ const GIVEAWAY = { nsr: [{ type: 'p' }, { type: 'pr', k: 1 }], sbrady: [{ type: 
 const CONFUSE = { nsr: ['sarr', 'avb1', 'sbrady'], sbrady: ['junc', 'nsr', 'avb1'], stachy: ['svt', 'afib', 'flutter'], sarr: ['afib', 'nsr', 'pac'], spause: ['avb2m', 'sbrady', 'sarr'], pac: ['pvc', 'sarr', 'afib'], flutter: ['svt', 'stachy', 'afib'], afib: ['sarr', 'flutter', 'pac'],
   svt: ['stachy', 'flutter', 'vt'], junc: ['sbrady', 'ivr', 'avb3'], pvc: ['pac', 'bbb', 'vt'], vt: ['svt', 'torsades', 'paced'], torsades: ['vf', 'vt', 'artifact'], vf: ['artifact', 'torsades', 'asys'], ivr: ['avb3', 'junc', 'paced'], asys: ['vf', 'spause', 'pea'],
   avb1: ['nsr', 'avb2w', 'sbrady'], avb2w: ['avb2m', 'pac', 'sarr'], avb2m: ['avb2w', 'avb3', 'spause'], avb3: ['avb2m', 'ivr', 'junc'], bbb: ['vt', 'paced', 'pvc'], paced: ['bbb', 'vt', 'ivr'], artifact: ['vf', 'torsades', 'afib'] };
+const BOARD = ['nsr', 'pac', 'pvc', 'afib', 'flutter', 'junc', 'avb1', 'avb2w', 'avb2m', 'avb3', 'vt', 'torsades', 'vf'];   // the instructor's whiteboard list: what every student must name
 const BASIC = ['nsr', 'sbrady', 'stachy', 'afib', 'flutter', 'svt', 'vt', 'vf', 'asys', 'avb1', 'avb3', 'pvc', 'paced', 'artifact'];
 
 export function ecgLab(host, store, params = {}, io = {}) {
@@ -255,26 +256,32 @@ export function ecgLab(host, store, params = {}, io = {}) {
 
   /* ================= 6 · drill ================= */
   function stepDrill(el) {
-    let mode = store.get('ecg:mode', 'name'), pool = store.get('ecg:pool', 'basic');
+    let mode = store.get('ecg:mode', 'name'), pool = store.get('ecg:pool2', 'board');
     const sc = store.get('ecg:score', { n: 0, ok: 0, streak: 0, best: 0, per: {}, arrestN: 0, arrestOk: 0 });
     const save = () => store.set('ecg:score', sc);
     el.innerHTML = `<h2>${t('6 · Rhythm drill', '6 · 节律训练')} <span id="drillSay"></span></h2>
       <div class="ecg-chips" id="modes"><button data-m="name">${t('Name the rhythm', '认节律')}</button><button data-m="arrest">${t('Arrest: shock or not?', '骤停：电不电？')}</button></div>
-      <div class="ecg-chips small" id="pools"><button data-p="basic">${t('Starter set (14)', '入门 14 种')}</button><button data-p="all">${t('All rhythms (23)', '全部 23 种')}</button></div>
+      <div class="ecg-chips small" id="pools"><button data-p="board">${t('Instructor’s list (13)', '老师白板 13 种')}</button><button data-p="basic">${t('Starter set (14)', '入门 14 种')}</button><button data-p="all">${t('All rhythms (23)', '全部 23 种')}</button></div>
       <div class="tiny muted" style="margin:4px 0 8px">${t('Prefer paper? The printable workbook (32 strips at true scale, measured with a ruler) is under this weekend’s PDF button.', '想在纸上练？打印版练习册（32 条真实比例条带，拿尺子量）在本周末的 PDF 按钮里。')} <a href="#/aet/class?brief=3&ch=pdf">${t('Open', '打开')} →</a></div>
-      <div id="dq"></div><div id="dstats"></div>`;
+      <div id="board"></div><div id="dq"></div><div id="dstats"></div>`;
     const paintChips = () => { el.querySelector('#drillSay').innerHTML = sayBtn(mode === 'arrest' ? 'drill-arrest' : 'drill-intro', mode === 'arrest' ? t('Arrest drill', '骤停训练') : t('Rhythm drill', '节律训练')); el.querySelectorAll('[data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode)); el.querySelectorAll('[data-p]').forEach(b => b.classList.toggle('on', b.dataset.p === pool)); el.querySelector('#pools').style.display = mode === 'name' ? '' : 'none'; };
     el.querySelectorAll('[data-m]').forEach(b => b.onclick = () => { mode = b.dataset.m; store.set('ecg:mode', mode); paintChips(); ask(); });
-    el.querySelectorAll('[data-p]').forEach(b => b.onclick = () => { pool = b.dataset.p; store.set('ecg:pool', pool); paintChips(); ask(); });
+    el.querySelectorAll('[data-p]').forEach(b => b.onclick = () => { pool = b.dataset.p; store.set('ecg:pool2', pool); paintChips(); ask(); });
     const stats = () => {
       const rows = Object.entries(sc.per).filter(([, v]) => v[1] >= 2).map(([id, v]) => [id, v[0] / v[1], v]).sort((a, b) => a[1] - b[1]);
       el.querySelector('#dstats').innerHTML = `<div class="ecg-stats"><span>${t('Named', '认节律')} <b>${sc.ok}/${sc.n}</b></span><span>${t('Streak', '连对')} <b>${sc.streak}</b> · ${t('best', '最高')} ${sc.best}</span><span>${t('Arrest', '骤停题')} <b>${sc.arrestOk}/${sc.arrestN}</b></span></div>` +
         (rows.length ? `<details class="ecg-weak"><summary>${t('By rhythm', '按节律')} · ${t('weakest first', '最弱的在前')}</summary>${rows.map(([id, r, v]) => `<div class="${r < 0.7 ? 'bad' : ''}">${name(RHYTHM[id])} <b>${v[0]}/${v[1]}</b></div>`).join('')}</details>` : '');
-      if (sc.n >= 20 && sc.arrestN >= 8) markDone('drill'); };
+      if (sc.n >= 20 && sc.arrestN >= 8) markDone('drill');
+      const bd = el.querySelector('#board');
+      if (mode !== 'name' || pool !== 'board') { bd.innerHTML = ''; return; }
+      const st = id => { const v = sc.per[id]; return !v ? 0 : v[1] >= 3 && v[0] / v[1] >= 0.8 ? 2 : 1; };
+      const got = BOARD.filter(id => st(id) === 2).length;
+      bd.innerHTML = `<div class="ecg-board"><div class="hd"><b>${t('Instructor’s list', '老师白板清单')}</b> · ${t('mastered', '已掌握')} <b>${got}/${BOARD.length}</b> <span class="tiny muted">${t('(mastered = named right at least 80% of the time, at least 3 tries)', '（掌握 = 至少练 3 次、正确率 ≥ 80%）')}</span></div>
+        <div class="grid">${BOARD.map(id => { const v = sc.per[id], k = st(id); return `<span class="s${k}" title="${v ? v[0] + '/' + v[1] : ''}">${k === 2 ? '✓' : k === 1 ? '…' : '○'} ${RHYTHM[id].short}</span>`; }).join('')}</div></div>`; };
     const dq = el.querySelector('#dq');
     function ask() {
       if (mode === 'arrest') return askArrest();
-      const ids = pool === 'basic' ? BASIC : RHYTHMS.map(R => R.id).filter(id => id !== 'pea');
+      const ids = pool === 'board' ? BOARD : pool === 'basic' ? BASIC : RHYTHMS.map(R => R.id).filter(id => id !== 'pea');
       // weakest rhythms come up more often
       const weighted = ids.flatMap(id => { const v = sc.per[id]; const w = !v ? 2 : v[1] < 3 ? 2 : v[0] / v[1] < 0.7 ? 3 : 1; return Array(w).fill(id); });
       const id = pick(weighted), R = RHYTHM[id], st = makeStrip(id, seed(), 6);
