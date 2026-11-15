@@ -1,7 +1,9 @@
 // AI Examiner — a simulated EMALB practical station: dispatch → live call → PCR → grading form.
 // The browser owns the run (crash-safe in localStorage); the server owns the sheet, the model and the scoring.
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=75';
+// Every station is also kept word for word in this browser (localStorage bcprepExaminerLog, last 12) with how each
+// line got in (voice / typed / recognition confidence) and what the examiner credited for it — viewer at #/examiner-log/<sid>.
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=76';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}
@@ -22,7 +24,39 @@ async function api(path, body) {
 }
 const fmt = ms => { const s = Math.max(0, Math.floor(ms / 1000)); return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`; };
 let run = null;
-const persist = () => { S.examinerRun = run; save(); };
+const persist = (keep = true) => { S.examinerRun = run; save(); if (keep) archiveRun(run); };
+
+/* ---------------- session records ----------------
+   The server stores nothing, so the only copy of a station is the one in this browser. Every station is kept here turn by
+   turn (last ARCH_MAX): what the microphone heard, what the examiner answered, what the examiner credited for each line,
+   and the grading form — so a wrong deduction or a misheard sentence can be traced afterwards. */
+const ARCH_KEY = 'bcprepExaminerLog', ARCH_MAX = 12, APP_V = 76;
+const newSid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+function archLoad() {
+  try { const a = JSON.parse(localStorage.getItem(ARCH_KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; }
+}
+function archSave(list) {
+  list = list.slice(-ARCH_MAX);
+  while (list.length) {
+    try { localStorage.setItem(ARCH_KEY, JSON.stringify(list)); return; } catch (e) { list.shift(); }   // storage full: drop the oldest
+  }
+  try { localStorage.removeItem(ARCH_KEY); } catch (e) {}
+}
+function archiveRun(r, status) {
+  if (!r || !r.startedAt || !r.sid) return;   // nothing said yet
+  const list = archLoad(), i = list.findIndex(x => x.sid === r.sid);
+  const sc = (r.brief && r.brief.scenario) || {}, b = (r.brief && r.brief.brief) || {};
+  const rec = {
+    sid: r.sid, id: r.id, title: sc.titleEn || r.id, type: sc.type || '', track: r.track,
+    startedAt: r.startedAt, savedAt: Date.now(), endMs: r.endMs != null ? r.endMs : null,
+    status: status || (r.result ? 'graded' : r.phase),
+    voice: voiceOn(), handsFree: handsFree(), app: APP_V, ua: navigator.userAgent,
+    dispatch: [b.dispatchEn, b.dispatchUpdateEn].filter(Boolean).join(' '),
+    log: r.log, events: r.events, pcr: r.pcr, result: r.result || null,
+  };
+  if (i >= 0) list[i] = rec; else list.push(rec);
+  archSave(list);
+}
 
 /* ---------------- voice ---------------- */
 // Hands-free conversation: listen → (1.7 s of silence) → send → examiner thinks → examiner speaks → listen again.
@@ -123,7 +157,11 @@ function hush() {
 }
 
 const SILENCE_MS = 1700, MAX_UTTER_MS = 45000;
-const conv = { state: 'off', rec: null, prev: '', sess: '', silenceT: null, maxT: null };
+const conv = { state: 'off', rec: null, prev: '', sess: '', silenceT: null, maxT: null, conf: [], sessConf: [] };
+// how sure the browser's speech recognition was (0–1; many phones report nothing) — kept with the line in the session record
+const confOf = results => { const c = []; try { for (const x of results) if (x.isFinal && x[0].confidence > 0) c.push(x[0].confidence); } catch (e) {} return c; };
+const meanConf = c => c.length ? Math.round(c.reduce((a, b) => a + b, 0) / c.length * 100) / 100 : null;
+let micText = '', micConf = null;   // what the microphone last put in the text box (to tell voice from typing)
 function convStatus(el) {
   const box = el && el.querySelector('#exConv');
   const mic = el && el.querySelector('#exMic');
@@ -144,13 +182,13 @@ function stopRec() {
   if (r) { try { r.abort(); } catch (e) {} }
 }
 function stopConv(el, state = 'paused') {
-  clearConvTimers(); stopRec(); conv.prev = conv.sess = '';
+  clearConvTimers(); stopRec(); conv.prev = conv.sess = ''; conv.conf = []; conv.sessConf = [];
   conv.state = state; convStatus(el);
 }
 function convListen(el) {
   if (!SR || !run || run.phase !== 'live' || busy || !document.getElementById('exChat')) return;
   hush(); stopRec(); clearConvTimers();
-  conv.prev = conv.sess = ''; conv.state = 'listening'; convStatus(el);
+  conv.prev = conv.sess = ''; conv.conf = []; conv.sessConf = []; conv.state = 'listening'; convStatus(el);
   startRec(el);
 }
 function startRec(el) {
@@ -161,8 +199,9 @@ function startRec(el) {
   r.onresult = e => {
     let txt = '';
     for (const x of e.results) txt += x[0].transcript;
-    conv.sess = txt.trim();
+    conv.sess = txt.trim(); conv.sessConf = confOf(e.results);
     if (ta) ta.value = (conv.prev + ' ' + conv.sess).trim();
+    micText = (conv.prev + ' ' + conv.sess).trim(); micConf = meanConf(conv.conf.concat(conv.sessConf));
     clearTimeout(conv.silenceT);
     conv.silenceT = setTimeout(() => finalize(el), SILENCE_MS);
     if (!conv.maxT) conv.maxT = setTimeout(() => finalize(el), MAX_UTTER_MS);
@@ -177,6 +216,7 @@ function startRec(el) {
     if (conv.rec !== r) return;
     conv.rec = null;
     conv.prev = (conv.prev + ' ' + conv.sess).trim(); conv.sess = '';
+    conv.conf = conv.conf.concat(conv.sessConf); conv.sessConf = [];
     if (conv.state === 'listening') setTimeout(() => { if (conv.state === 'listening' && !conv.rec) startRec(el); }, 120);
   };
   try { r.start(); } catch (e) { stopConv(el, 'paused'); }
@@ -184,11 +224,13 @@ function startRec(el) {
 function finalize(el) {
   if (conv.state !== 'listening') return;
   const text = (conv.prev + ' ' + conv.sess).trim();
-  clearConvTimers(); stopRec(); conv.prev = conv.sess = '';
+  const conf = meanConf(conv.conf.concat(conv.sessConf));
+  clearConvTimers(); stopRec(); conv.prev = conv.sess = ''; conv.conf = []; conv.sessConf = [];
   if (!document.getElementById('exChat')) { conv.state = 'off'; return; }
   if (!text) { convListen(el); return; }
   const ta = el.querySelector('#exText'); if (ta) ta.value = '';
-  candidateSays(el, text);
+  micText = '';
+  candidateSays(el, text, { via: 'voice', conf });
 }
 window.addEventListener('hashchange', () => { if (!/^#\/examiner-run\//.test(location.hash)) { stopConv(null, 'off'); hush(); } });
 
@@ -221,6 +263,7 @@ function listen(el, send) {
     let fin = '', interim = '';
     for (const r of e.results) { if (r.isFinal) fin += r[0].transcript; else interim += r[0].transcript; }
     if (ta) ta.value = (fin || interim).trim();
+    micText = (fin || interim).trim(); micConf = meanConf(confOf(e.results));
   };
   rec.onend = () => { listening = false; setMic(el); if (ta && ta.value.trim()) scheduleAuto(el, send); };
   rec.onerror = ev => { listening = false; setMic(el); if (ev.error === 'not-allowed') alert(t('Microphone blocked — allow it in the browser, or type instead.', '麦克风被禁用——在浏览器里允许，或改用打字。')); };
@@ -269,20 +312,21 @@ export async function renderExaminerHub(el) {
           <a class="btn" href="#/examiner-run/${s.id}" ${live ? 'style="pointer-events:none;opacity:.5"' : ''}>${t('Start', '开始')}</a>
         </div>`).join('')}</div>
     </div>
+    ${recordsCard()}
     ${hist.length ? `<div class="card"><h3 style="margin-top:0">${ico('list')} ${t('Your stations', '你的考站记录')}</h3>
       <table class="vitals-table">${hist.slice().reverse().slice(0, 12).map(h => `<tr><td>${h.date}</td><td>${esc(h.title)}</td><td><b style="color:${h.pass ? 'var(--green)' : 'var(--red)'}">${h.autofail ? 'FAIL (critical)' : h.score + '%'}</b></td></tr>`).join('')}</table></div>` : ''}`;
   el.querySelector('#exVoicePref').onchange = e => { S.examinerVoice = e.target.checked; save(); if (S.examinerVoice) { audioUnlock(); speak([{ role: 'examiner', text: "Voice is on. I'll read you the dispatch when you start." }]); } };
   const ab = el.querySelector('#exAbandon');
-  if (ab) ab.onclick = () => armed(ab, t('Tap again to abandon', '再点一次确认放弃'), () => { S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
+  if (ab) ab.onclick = () => armed(ab, t('Tap again to abandon', '再点一次确认放弃'), () => { archiveRun(S.examinerRun, 'abandoned'); S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
   const ms = el.querySelector('#exMockStart');
   if (ms) ms.onclick = () => {
     const pick = arr => arr[Math.floor(Math.random() * arr.length)];
     const ids = { medical: pick(list.filter(x => x.type === 'medical')).id, trauma: pick(list.filter(x => x.type === 'trauma')).id };
-    S.examinerMock = { active: true, ids, stage: 'medical', results: {} }; S.examinerRun = null; run = null; save();
+    S.examinerMock = { active: true, ids, stage: 'medical', results: {} }; archiveRun(S.examinerRun, 'abandoned'); S.examinerRun = null; run = null; save();
     nav('/examiner-run/' + ids.medical);
   };
   const ma = el.querySelector('#exMockAbandon');
-  if (ma) ma.onclick = () => armed(ma, t('Tap again to abandon the mock', '再点一次放弃模考'), () => { S.examinerMock = null; S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
+  if (ma) ma.onclick = () => armed(ma, t('Tap again to abandon the mock', '再点一次放弃模考'), () => { archiveRun(S.examinerRun, 'abandoned'); S.examinerMock = null; S.examinerRun = null; run = null; save(); renderExaminerHub(el); });
 }
 // two-tap confirmation (confirm() dialogs are blocked in some embedded browsers and awkward on phones)
 function armed(btn, label, fn) {
@@ -317,8 +361,9 @@ function mockPanel() {
 export async function renderExaminerRun(el, id) {
   if (!run || run.id !== id) {
     const saved = S.examinerRun;
-    run = (saved && saved.id === id) ? saved : { id, track: S.track, phase: 'brief', startedAt: null, log: [], events: [], fired: [], pcr: {}, pcrStartedAt: null, result: null, finished: false, brief: null };
+    run = (saved && saved.id === id) ? saved : { id, sid: newSid(), track: S.track, phase: 'brief', startedAt: null, log: [], events: [], fired: [], pcr: {}, pcrStartedAt: null, result: null, finished: false, brief: null };
   }
+  if (!run.sid) run.sid = newSid();   // a station begun before records existed
   if (!run.brief) {
     try { run.brief = await api('/api/examiner/start', { scenarioId: id, track: run.track }); persist(); }
     catch (e) { el.innerHTML = `<a class="back-link" href="#/examiner">← ${t('AI Examiner', '考官机器人')}</a><div class="card"><p>${esc(e.message)}</p></div>`; return; }
@@ -395,11 +440,17 @@ function drawLive(el) {
     </div>`;
   renderChat(el);
   const ta = el.querySelector('#exText');
-  const send = () => { const v = ta.value.trim(); cancelAuto(el); if (!v || busy) return; ta.value = ''; stopConv(el, 'thinking'); candidateSays(el, v); };
+  const send = () => {
+    const v = ta.value.trim(); cancelAuto(el); if (!v || busy) return;
+    // for the session record: was this line spoken, spoken then corrected by hand (keep what the mic heard), or typed?
+    const meta = micText && v === micText ? { via: 'voice', conf: micConf } : micText ? { via: 'voice-edited', heard: micText, conf: micConf } : { via: 'typed' };
+    micText = ''; micConf = null;
+    ta.value = ''; stopConv(el, 'thinking'); candidateSays(el, v, meta);
+  };
   el.querySelector('#exSend').onclick = send;
   ta.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } };
   ta.onfocus = () => { cancelAuto(el); if (conv.state === 'listening' && !ta.value.trim()) stopConv(el, 'paused'); };   // tapping the box to type pauses the mic
-  ta.oninput = () => cancelAuto(el);
+  ta.oninput = () => { cancelAuto(el); if (!ta.value.trim()) micText = ''; };
   const mic = el.querySelector('#exMic');
   if (mic) mic.onclick = () => {
     audioUnlock();
@@ -444,9 +495,15 @@ function renderChat(el) {
     + (busy ? `<div class="ex-line examiner"><span class="ex-who">Examiner</span><div class="muted">…</div></div>` : '');
   box.scrollTop = box.scrollHeight;
 }
-async function candidateSays(el, text) {
+async function candidateSays(el, text, meta) {
   const tms = Math.min(elapsed(), EXAM_MS);
-  run.log.push({ t: tms, role: 'candidate', text }); persist();
+  const me = { t: tms, role: 'candidate', text };
+  if (meta) {   // session record only — the server reads role / text / t and ignores the rest
+    me.via = meta.via;
+    if (meta.conf != null) me.conf = meta.conf;
+    if (meta.heard) me.heard = meta.heard;
+  }
+  run.log.push(me); persist();
   busy = true; renderChat(el); hush();
   if (handsFree()) { clearConvTimers(); stopRec(); conv.state = 'thinking'; convStatus(el); }
   const spoken = [];
@@ -454,9 +511,13 @@ async function candidateSays(el, text) {
     const r = await api('/api/examiner/turn', { scenarioId: run.id, track: run.track, elapsedMs: tms, text, log: run.log.slice(0, -1), events: run.events, fired: run.fired });
     for (const s of r.say) { const l = { t: tms, role: s.role, text: s.text }; run.log.push(l); spoken.push(l); }
     for (const l of r.engineLines) { const x = { t: tms, role: 'examiner', text: l }; run.log.push(x); spoken.push(x); }
-    if (!spoken.length) { const me = run.log.filter(l => l.role === 'candidate').pop(); if (me) me.silent = true; }
+    if (!spoken.length) me.silent = true;
+    me.got = (r.events || []).map(e => e.name);   // what the examiner credited for this line
+    if (r.flags && r.flags.length) me.flags = r.flags;
+    if (r.channel) me.ch = r.channel;
     run.events.push(...r.events); run.fired = r.fired;
   } catch (e) {
+    me.err = e.message;
     run.log.push({ t: tms, role: 'examiner', text: '(connection problem — please repeat that) ' + e.message });
   }
   busy = false; persist(); renderChat(el);
@@ -485,7 +546,7 @@ function drawPcr(el) {
       ${PCR_FIELDS.map(([k, label]) => `<label class="pcr-field"><span>${label}</span><textarea data-pcr="${k}" rows="${k === 'narrative' ? 4 : 2}">${esc(run.pcr[k] || '')}</textarea></label>`).join('')}
       <div class="btn-row"><button class="btn big" id="pcrSubmit">${t('Submit PCR & get graded', '交 PCR，出成绩')}</button></div>
     </div>`;
-  el.querySelectorAll('[data-pcr]').forEach(ta => ta.oninput = () => { run.pcr[ta.dataset.pcr] = ta.value; persist(); });
+  el.querySelectorAll('[data-pcr]').forEach(ta => ta.oninput = () => { run.pcr[ta.dataset.pcr] = ta.value; persist(false); });
   const submit = () => { clearInterval(pcrTick); finish(el); };
   el.querySelector('#pcrSubmit').onclick = submit;
   clearInterval(pcrTick);
@@ -516,26 +577,15 @@ async function finish(el) {
       (S.examinerMockHistory = S.examinerMockHistory || []).push({ date: new Date().toISOString().slice(0, 10), results: m.results, pass: !!(m.results.medical && m.results.medical.pass && m.results.trauma.pass) });
     }
   }
+  archiveRun(run, 'graded');
   S.examinerRun = null; save();
   draw(el);
 }
-function drawResult(el) {
-  const r = run.result, f = r.form, fb = r.feedback;
-  const secs = {};
+// grading form + timeline — used by the result page and by the saved-record viewer
+function formCards(r, zh) {
+  const f = r.form, secs = {};
   for (const row of f.rows) (secs[row.section] = secs[row.section] || []).push(row);
-  const zh = S.lang !== 'en';
-  el.innerHTML = `
-    <a class="back-link" href="#/examiner">← ${t('AI Examiner', '考官机器人')}</a>
-    <div class="card" style="border-color:${f.pass ? 'var(--green)' : 'var(--red)'}">
-      <h2 style="margin-top:0">${esc(run.brief.scenario.titleEn)}</h2>
-      <div class="stat-row">
-        <div class="stat"><b style="color:${f.pass ? 'var(--green)' : 'var(--red)'}">${f.autofail ? 'FAIL' : f.score + '%'}</b><span>${f.autofail ? t('critical deduction', '100% 扣分项') : t('score (pass 70%)', '得分（70% 及格）')}</span></div>
-        <div class="stat"><b>${f.rows.length}</b><span>${t('deductions', '扣分项')}</span></div>
-        <div class="stat"><b>${fmt(f.durationMs)}</b><span>${t('call length', '出勤时长')}</span></div>
-        <div class="stat"><b>${f.transport.decided ? f.transport.decided.toUpperCase() : '—'}</b><span>${t('your category', '你的分级')} (${f.transport.correct.toUpperCase()})</span></div>
-      </div>
-      ${f.autofail ? `<div class="notice" style="background:var(--red-soft);border-color:var(--red)">${bi('A 100% deduction was recorded — in the real exam this station is failed regardless of everything else.', '记录到 100% 扣分项——真实考试中本站直接不及格，其余表现不计。')}</div>` : ''}
-    </div>
+  return `
     <div class="card">
       <h3 style="margin-top:0">${ico('list')} ${t('Grading form', '评分表')}</h3>
       ${!f.rows.length ? `<p>${t('No deductions.', '无扣分。')}</p>` : Object.entries(secs).map(([sec, rows]) => `
@@ -553,16 +603,187 @@ function drawResult(el) {
         <tr><th>${t('Notification', '医院通报')}</th><td>${r.closing.notification.given ? '✓' : '✗'}</td></tr>
         <tr><th>${t('Hand-off', '交接')}</th><td>${r.closing.handoff.given ? '✓' : '✗'}</td></tr>
       </table>
+    </div>`;
+}
+function drawResult(el) {
+  const r = run.result, f = r.form, fb = r.feedback;
+  const zh = S.lang !== 'en';
+  el.innerHTML = `
+    <a class="back-link" href="#/examiner">← ${t('AI Examiner', '考官机器人')}</a>
+    <div class="card" style="border-color:${f.pass ? 'var(--green)' : 'var(--red)'}">
+      <h2 style="margin-top:0">${esc(run.brief.scenario.titleEn)}</h2>
+      <div class="stat-row">
+        <div class="stat"><b style="color:${f.pass ? 'var(--green)' : 'var(--red)'}">${f.autofail ? 'FAIL' : f.score + '%'}</b><span>${f.autofail ? t('critical deduction', '100% 扣分项') : t('score (pass 70%)', '得分（70% 及格）')}</span></div>
+        <div class="stat"><b>${f.rows.length}</b><span>${t('deductions', '扣分项')}</span></div>
+        <div class="stat"><b>${fmt(f.durationMs)}</b><span>${t('call length', '出勤时长')}</span></div>
+        <div class="stat"><b>${f.transport.decided ? f.transport.decided.toUpperCase() : '—'}</b><span>${t('your category', '你的分级')} (${f.transport.correct.toUpperCase()})</span></div>
+      </div>
+      ${f.autofail ? `<div class="notice" style="background:var(--red-soft);border-color:var(--red)">${bi('A 100% deduction was recorded — in the real exam this station is failed regardless of everything else.', '记录到 100% 扣分项——真实考试中本站直接不及格，其余表现不计。')}</div>` : ''}
     </div>
+    ${formCards(r, zh)}
     <div class="card"><h3 style="margin-top:0">${t("Examiner's verbal feedback", '考官口头反馈')}</h3><p>${esc(fb.examinerFeedbackEn)}</p>
       ${TTS ? `<div class="btn-row"><button class="btn ghost" id="exReadFb">🔊 ${t('Read it to me', '读给我听')}</button></div>` : ''}</div>
     <details class="acc card"><summary>${ico('cap')} ${t('Coach debrief (not part of the real exam)', '教练复盘（真实考试没有这个）')}</summary>
       <div class="acc-body"><p>${esc(zh ? fb.coachDebriefZh || fb.coachDebriefEn : fb.coachDebriefEn)}</p>
         ${run.brief && run.brief.brief && run.brief.brief.trackNoteEn ? `<p><strong>${t('What this station expects at your level', '这个考站对你这个级别的要求')} (${run.track.toUpperCase()}):</strong> ${esc(run.brief.brief.trackNoteEn)}</p>` : ''}</div></details>
     ${mockPanel()}
+    <div class="notice">${bi('The whole conversation of this station is saved on this device — every line the microphone heard and what the examiner credited for it. If a deduction looks wrong, open it and check.', '这一场的完整对话已经存在这台设备上——麦克风听到的每一句、考官每句话记到了什么。觉得哪条扣分不对，点开核对。', 'span')}
+      <div class="btn-row" style="margin-top:8px"><a class="btn secondary" href="#/examiner-log/${run.sid}">${ico('list')} ${t('Full conversation record', '完整对话记录')}</a></div></div>
     <div class="btn-row"><a class="btn" href="#/examiner">${t('Another station', '再来一场')}</a><a class="btn ghost" href="#/practical">${t('Practical camp', '实操营')}</a></div>`;
   const nx = el.querySelector('#exMockNext');
   if (nx) nx.onclick = () => { S.examinerMock.stage = 'trauma'; save(); run = null; nav('/examiner-run/' + S.examinerMock.ids.trauma); };
   const rb = el.querySelector('#exReadFb');
   if (rb) rb.onclick = () => speak([{ role: 'examiner', text: fb.examinerFeedbackEn }], true);
+}
+
+/* ---------------- saved session records: list + viewer ---------------- */
+const pad2 = n => String(n).padStart(2, '0');
+const stamp = ms => { const d = new Date(ms); return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())} ${pad2(d.getHours())}:${pad2(d.getMinutes())}`; };
+const WHO = { candidate: 'You', examiner: 'Examiner', patient: 'Patient', partner: 'Partner' };
+const who = r => WHO[r] || (String(r).charAt(0).toUpperCase() + String(r).slice(1));
+const recLen = rec => rec.endMs != null ? rec.endMs : (rec.log.length ? rec.log[rec.log.length - 1].t : 0);
+function recStatus(rec) {
+  const f = rec.result && rec.result.form;
+  if (f) return { text: f.autofail ? 'FAIL (critical)' : f.score + '%', color: f.pass ? 'var(--green)' : 'var(--red)' };
+  const liveNow = S.examinerRun && S.examinerRun.sid === rec.sid;
+  return { text: liveNow ? t('in progress', '进行中') : rec.status === 'abandoned' ? t('abandoned', '已放弃') : t('not finished', '未完成'), color: 'var(--ink-3)' };
+}
+// what the examiner credited for one candidate line: stored on the line, or (older lines) matched by its time
+const gotOf = (rec, l) => [...new Set(l.got || (rec.events || []).filter(e => e.t === l.t).map(e => e.name))];
+const viaLabel = l => l.via === 'voice' ? '🎤 ' + t('voice', '语音') : l.via === 'voice-edited' ? '🎤 ' + t('voice, then corrected by hand', '语音，手动改过') : l.via === 'typed' ? '⌨ ' + t('typed', '打字') : '';
+function recordsCard() {
+  const recs = archLoad().slice().reverse();
+  return `<div class="card"><h3 style="margin-top:0">${ico('list')} ${t('Saved conversations', '保存的完整对话')}</h3>
+    ${bi(`Your last ${ARCH_MAX} stations, word for word: every line the microphone heard, every reply, what the examiner credited for each line, and the grading form. Stored only in this browser — open one to copy or download it.`,
+         `最近 ${ARCH_MAX} 场考站的完整记录：麦克风听到的每一句、考官的每一句回答、每句话记到了什么、还有扣分表。只存在这台设备的浏览器里——点开可以复制或下载。`)}
+    ${recs.length ? `<div class="list">${recs.map(r => { const st = recStatus(r); return `
+      <div class="list-row">
+        <div><b>${esc(r.title)}</b><div class="tiny muted">${stamp(r.startedAt)} · ${esc(String(r.track).toUpperCase())} · ${r.log.filter(l => l.role === 'candidate').length} ${t('lines', '句')} · <b style="color:${st.color}">${st.text}</b></div></div>
+        <a class="btn ghost" href="#/examiner-log/${r.sid}">${t('Open', '打开')}</a>
+      </div>`; }).join('')}</div>` : `<p class="tiny muted">${t('Nothing saved yet — records start with your next station.', '还没有记录——从你下一场考站开始保存。')}</p>`}
+  </div>`;
+}
+function recText(rec) {
+  const L = [], f = rec.result && rec.result.form;
+  L.push('BC Medic Prep - AI Examiner - session record');
+  L.push(`Station : ${rec.title} (${rec.id})${rec.type ? ' - ' + rec.type : ''}`);
+  L.push(`Level   : ${String(rec.track).toUpperCase()}`);
+  L.push(`Started : ${stamp(rec.startedAt)} - call length ${fmt(recLen(rec))}`);
+  L.push('Result  : ' + (f ? (f.autofail ? 'FAIL (critical deduction)' : `${f.score}% (${f.pass ? 'PASS' : 'FAIL'})`) + `, ${f.rows.length} deductions` : rec.status === 'abandoned' ? 'abandoned, not graded' : 'not finished, not graded'));
+  L.push(`Input   : voice ${rec.voice ? 'on' : 'off'}${rec.voice ? ', hands-free ' + (rec.handsFree ? 'on' : 'off') : ''} - site v${rec.app}`);
+  L.push(`Browser : ${rec.ua}`);
+  if (rec.dispatch) L.push('', 'Dispatch: ' + rec.dispatch);
+  L.push('', '==== TRANSCRIPT ====');
+  for (const l of rec.log) {
+    if (l.role !== 'candidate') { L.push(`[${fmt(l.t)}] ${who(l.role).toUpperCase()}: ${l.text}`); continue; }
+    const tag = [l.via, l.conf != null ? `recognition confidence ${Math.round(l.conf * 100)}%` : ''].filter(Boolean).join(', ');
+    L.push(`[${fmt(l.t)}] YOU${tag ? ' (' + tag + ')' : ''}: ${l.text}`);
+    if (l.heard) L.push(`        microphone heard: ${l.heard}`);
+    const g = gotOf(rec, l);
+    L.push(`        -> credited: ${g.length ? g.join(', ') : 'nothing'}`);
+    if (l.silent) L.push('        -> the examiner said nothing to this line');
+    if (l.flags) L.push('        -> flags: ' + l.flags.join(', '));
+    if (l.err) L.push('        -> connection error: ' + l.err);
+  }
+  L.push('', '==== EVERYTHING THE EXAMINER CREDITED ====');
+  if (!(rec.events || []).length) L.push('(nothing)');
+  for (const e of rec.events || []) L.push(`[${fmt(e.t)}] ${e.name}${e.components && e.components.length ? ' {' + e.components.join(', ') + '}' : ''}${e.quote ? ' - "' + e.quote + '"' : ''}`);
+  if (f) {
+    L.push('', '==== GRADING FORM ====');
+    let sec = null;
+    for (const row of f.rows) {
+      if (row.section !== sec) { sec = row.section; L.push(`[${sec}]`); }
+      L.push(`  -${row.weight}%  ${row.nameEn} - ${row.errorEn}`);
+      const ev = row.evidence;
+      if (ev && (ev.quote || ev.t != null)) L.push(`         evidence: ${ev.t != null ? '[' + fmt(ev.t) + '] ' : ''}${ev.quote || ''}${row.source === 'examiner-judgement' ? ' (examiner judgement)' : ''}`);
+    }
+    if (!f.rows.length) L.push('No deductions.');
+    L.push('', '==== TIMELINE ====');
+    (f.vitalsSets || []).forEach((v, i) => L.push(`Vitals set ${i + 1}: ${fmt(v.start)} -> ${v.complete != null ? fmt(v.complete) : 'incomplete'}`));
+    const tr = f.transport || {}, cl = rec.result.closing || {};
+    L.push(`Transport category: ${tr.decided ? String(tr.decided).toUpperCase() : 'none'} (correct: ${String(tr.correct || '').toUpperCase()}) - packaged: ${tr.packagedAt != null ? fmt(tr.packagedAt) : 'no'}`);
+    L.push(`Notification: ${cl.notification && cl.notification.given ? 'given' : 'not given'} - Hand-off: ${cl.handoff && cl.handoff.given ? 'given' : 'not given'}`);
+  }
+  const pcr = PCR_FIELDS.filter(([k]) => rec.pcr && (rec.pcr[k] || '').trim());
+  if (pcr.length) { L.push('', '==== PCR ===='); for (const [k, label] of pcr) L.push(`${label}: ${rec.pcr[k].trim()}`); }
+  const fb = rec.result && rec.result.feedback;
+  if (fb) {
+    L.push('', '==== EXAMINER FEEDBACK ====', fb.examinerFeedbackEn || '');
+    if (fb.coachDebriefEn) L.push('', '==== COACH DEBRIEF ====', fb.coachDebriefEn);
+  }
+  return L.join('\n');
+}
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; } catch (e) {}
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(ta); ta.select();
+    const ok = document.execCommand('copy'); ta.remove(); return ok;
+  } catch (e) { return false; }
+}
+export async function renderExaminerLog(el, sid) {
+  const rec = archLoad().find(r => r.sid === sid);
+  const back = `<a class="back-link" href="#/examiner">← ${t('AI Examiner', '考官机器人')}</a>`;
+  if (!rec) { el.innerHTML = `${back}<div class="card"><p>${t('This record is no longer on this device.', '这台设备上已经没有这条记录了。')}</p></div>`; return; }
+  const st = recStatus(rec), zh = S.lang !== 'en', fb = rec.result && rec.result.feedback;
+  const said = rec.log.filter(l => l.role === 'candidate');
+  const pcr = PCR_FIELDS.filter(([k]) => rec.pcr && (rec.pcr[k] || '').trim());
+  el.innerHTML = `${back}
+    <div class="card">
+      <h2 style="margin-top:0">${esc(rec.title)}</h2>
+      <div class="tiny muted">${stamp(rec.startedAt)} · ${esc(String(rec.track).toUpperCase())}${rec.type ? ' · ' + esc(rec.type) : ''} · ${rec.voice ? '🎤 ' + t('voice', '语音') + (rec.handsFree ? ' (' + t('hands-free', '免手动') + ')' : '') : '⌨ ' + t('typing', '打字')}</div>
+      <div class="stat-row" style="margin-top:10px">
+        <div class="stat"><b style="color:${st.color}">${st.text}</b><span>${t('result', '结果')}</span></div>
+        <div class="stat"><b>${said.length}</b><span>${t('lines you said', '你说的句数')}</span></div>
+        <div class="stat"><b>${(rec.events || []).length}</b><span>${t('actions credited', '记到的动作')}</span></div>
+        <div class="stat"><b>${fmt(recLen(rec))}</b><span>${t('call length', '出勤时长')}</span></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="lgCopy">${t('Copy everything', '复制全部')}</button>
+        <button class="btn secondary" id="lgDl">${t('Download .txt', '下载 .txt')}</button>
+        ${navigator.share ? `<button class="btn secondary" id="lgShare">${t('Share', '发送 / 分享')}</button>` : ''}
+        <button class="btn ghost" id="lgDel">${t('Delete', '删除')}</button>
+      </div>
+      <p class="tiny" id="lgMsg" style="min-height:1.2em"></p>
+      <p class="tiny muted">${t('This record exists only in this browser. To report a problem with the examiner, copy or download it and send it along.', '这份记录只存在这台设备的浏览器里。要反馈考官的问题，复制或下载后发出来就行。')}</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">${ico('film')} ${t('The whole conversation', '完整对话')}</h3>
+      ${bi('Your lines are exactly what the examiner received. Under each one: how it got in (voice or typing) and what the examiner credited for it. If the words are not what you said, the microphone misheard; if the words are right but nothing was credited, the examiner missed it.',
+           '你的每一句都是考官实际收到的原文。每句下面写着：怎么输入的（语音还是打字）、考官从这句话里记到了什么。字不是你说的那样＝麦克风听错了；字是对的却什么都没记到＝考官漏判了。')}
+      <div class="ex-chat full">${rec.log.map(l => {
+        const line = `<div class="ex-line ${esc(l.role)}"><span class="ex-who">${who(l.role)} <i>${fmt(l.t)}</i></span><div>${esc(l.text)}</div></div>`;
+        if (l.role !== 'candidate') return line;
+        const g = gotOf(rec, l), bits = [];
+        if (viaLabel(l)) bits.push(viaLabel(l) + (l.conf != null ? ` · ${t('recognition confidence', '识别把握')} ${Math.round(l.conf * 100)}%` : ''));
+        if (l.heard) bits.push(`${t('microphone heard', '麦克风原本听到')}: “${esc(l.heard)}”`);
+        bits.push(g.length ? `${t('credited', '记到')}: <b>${g.map(esc).join(', ')}</b>` : `<span class="none">${t('nothing credited', '什么都没记到')}</span>`);
+        if (l.silent) bits.push(t('examiner said nothing', '考官没回应'));
+        if (l.flags) bits.push('⚠ ' + l.flags.map(esc).join(', '));
+        if (l.err) bits.push('⚠ ' + esc(l.err));
+        return line + `<div class="ex-got">${bits.join(' · ')}</div>`;
+      }).join('')}</div>
+    </div>
+    ${rec.result ? formCards(rec.result, zh) : `<div class="notice">${bi('This station was not graded, so there is no grading form — only the conversation above.', '这一场没有打分，所以没有扣分表——只有上面的对话。', 'span')}</div>`}
+    ${pcr.length ? `<div class="card"><h3 style="margin-top:0">📝 PCR</h3>${pcr.map(([k, label]) => `<div class="ex-row"><b>${label}</b><div class="tiny" style="white-space:pre-wrap">${esc(rec.pcr[k].trim())}</div></div>`).join('')}</div>` : ''}
+    ${fb ? `<div class="card"><h3 style="margin-top:0">${t("Examiner's verbal feedback", '考官口头反馈')}</h3><p>${esc(fb.examinerFeedbackEn || '')}</p>
+      ${fb.coachDebriefEn ? `<h4 class="ex-sec">${t('Coach debrief', '教练复盘')}</h4><p>${esc(zh ? fb.coachDebriefZh || fb.coachDebriefEn : fb.coachDebriefEn)}</p>` : ''}</div>` : ''}`;
+  const msg = el.querySelector('#lgMsg'), text = () => recText(rec);
+  const name = `examiner-${rec.id}-${stamp(rec.startedAt).replace(/[: ]/g, '-')}.txt`;
+  el.querySelector('#lgCopy').onclick = async () => {
+    msg.textContent = (await copyText(text())) ? t('Copied — paste it wherever you want to send it.', '已复制——到要发的地方粘贴就行。') : t('Copy was blocked by the browser — use Download instead.', '浏览器不让复制——改用下载。');
+  };
+  el.querySelector('#lgDl').onclick = () => {
+    // the readable record, then the raw data (event ids, evidence) for whoever debugs it
+    const blob = new Blob([text() + '\n\n==== RAW DATA ====\n' + JSON.stringify(rec)], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    msg.textContent = t('Saved as ', '已保存为 ') + name;
+  };
+  const sh = el.querySelector('#lgShare');
+  if (sh) sh.onclick = () => { navigator.share({ title: 'AI Examiner — ' + rec.title, text: text() }).catch(() => {}); };
+  const del = el.querySelector('#lgDel');
+  del.onclick = () => armed(del, t('Tap again to delete', '再点一次确认删除'), () => { archSave(archLoad().filter(r => r.sid !== sid)); nav('/examiner'); });
 }
