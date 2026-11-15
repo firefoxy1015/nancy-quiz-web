@@ -1,6 +1,6 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=76';
-import { aetUnlocked, aetGate } from './aetclass.js?v=76';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=77';
+import { aetUnlocked, aetGate } from './aetclass.js?v=77';
 
 let session = null; // current exam session (mock or practice)
 
