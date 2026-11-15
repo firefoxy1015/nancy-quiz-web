@@ -1,13 +1,13 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=77';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=77';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=77';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=77';
-import { renderPortal } from './portal.js?v=77';
-import { renderAetClass } from './aetclass.js?v=77';
-import { renderBackup } from './backup.js?v=77';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=78';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=78';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=78';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=78';
+import { renderPortal } from './portal.js?v=78';
+import { renderAetClass } from './aetclass.js?v=78';
+import { renderBackup } from './backup.js?v=78';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -56,7 +56,7 @@ export function esc(s) {
 // Data files carry the same build tag as the modules. Without it the browser
 // serves a cached copy after a content update and users silently keep the old
 // question bank — bump this whenever data/ changes.
-const DATA_V = '25';
+const DATA_V = '26';
 const cache = {};
 export async function loadJSON(path) {
   if (cache[path]) return cache[path];
