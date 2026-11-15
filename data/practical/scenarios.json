@@ -759,6 +759,11 @@
      "noteEn": "Give per region examined.",
      "noteZh": "按考生检查的区域给出。"
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A fall from a ladder with midline neck pain: NEXUS is positive (midline tenderness). Hands on the head before any movement or pain stimulus.",
+    "whyZh": "从梯子上摔下，颈部正中疼痛：NEXUS 阳性（中线压痛）。在任何移动或疼痛刺激之前先固定头颈。"
    }
   },
   {
@@ -1508,6 +1513,11 @@
      "noteEn": "En route head-to-toe. Give per region.",
      "noteZh": "途中从头到脚查体。按区域给出。"
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A high-risk crash (T-boned on the driver's side) and a patient in shock: a dangerous mechanism, and nobody in shock can be cleared at the roadside.",
+    "whyZh": "高风险车祸（驾驶侧被侧面撞击）加上休克：危险机制，休克病人在现场不可能排除颈椎。"
    }
   },
   {
@@ -2259,6 +2269,11 @@
      "noteEn": "En route head-to-toe.",
      "noteZh": "途中从头到脚。"
     }
+   },
+   "cspine": {
+    "indicated": false,
+    "whyEn": "An isolated stab wound to the chest: no fall, no blunt blow, no neurological complaint. There is no mechanism for a spinal injury, so the NEXUS questions never start. Say so out loud and move on.",
+    "whyZh": "孤立的胸部刺伤：没有摔倒、没有钝性撞击、没有神经症状。没有脊柱受伤的机制，NEXUS 根本不用开始问。大声说出来，然后继续。"
    }
   },
   {
@@ -3005,6 +3020,11 @@
      "noteEn": "En route head-to-toe.",
      "noteZh": "途中从头到脚。"
     }
+   },
+   "cspine": {
+    "indicated": false,
+    "whyEn": "A table-saw injury to the forearm: no fall, no head or neck involvement. No mechanism for a spinal injury.",
+    "whyZh": "前臂被台锯所伤：没有摔倒，头颈没有受累。没有脊柱受伤的机制。"
    }
   },
   {
@@ -3777,6 +3797,11 @@
      "noteEn": "",
      "noteZh": ""
     }
+   },
+   "cspine": {
+    "indicated": false,
+    "whyEn": "A scald from a stockpot: no fall, no blunt mechanism. No mechanism for a spinal injury.",
+    "whyZh": "汤锅烫伤：没有摔倒，没有钝性机制。没有脊柱受伤的机制。"
    }
   },
   {
@@ -4542,6 +4567,11 @@
      "noteEn": "Head-to-toe, mostly en route.",
      "noteZh": "从头到脚（主要在途中完成）。"
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "Blunt head trauma with a falling GCS: NEXUS is positive (altered level of consciousness), and a head wound is an obvious injury above the clavicles.",
+    "whyZh": "钝性头部外伤、GCS 在下降：NEXUS 阳性（意识改变），头部伤口也是锁骨以上的明显损伤。"
    }
   },
   {
@@ -5296,6 +5326,11 @@
      "noteEn": "En route head-to-toe.",
      "noteZh": "途中从头到脚检查。"
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "Thrown from a motorcycle at highway speed: a dangerous mechanism and multi-system trauma. Hands on the head before the helmet comes off.",
+    "whyZh": "高速行驶中从摩托车上被甩出：危险机制，多系统创伤。摘头盔之前先固定头颈。"
    }
   },
   {
@@ -5357,8 +5392,8 @@
     },
     {
      "id": "primary",
-     "infoEn": "ACTOR: alert and oriented, shouting with pain but able to answer. EXAMINER (give when assessed): airway clear; respirations 24, regular; radial pulse 112, strong and regular. Skin: pink, warm, dry (no shock). RBS: isolated CLOSED mid-shaft right femur fracture with obvious angulation and a swollen, tense thigh; DORSALIS PEDIS AND POSTERIOR TIBIAL PULSES PRESENT, sensation intact, he can wiggle his toes; no other injuries anywhere; no head, neck or back pain. SpO2 98% RA. C-spine NOT indicated: no head strike, no LOC, no neck pain, no distracting head/neck injury, alert and non-intoxicated - NEXUS negative. STABLE.",
-     "infoZh": "患者演员：清醒、定向力正常，痛得喊叫但能回答问题。考官（评估时给出）：气道通畅；呼吸 24 次/分、规则；桡动脉 112 次/分、有力规则。皮肤：红润、温暖、干燥（无休克）。RBS：孤立性右股骨干闭合骨折，明显成角，大腿肿胀紧张；足背动脉与胫后动脉搏动可及，感觉正常，脚趾能活动；全身无其他损伤；无头颈背疼痛。SpO2 室内空气 98%。无颈椎固定指征：头部未撞击、无昏迷、无颈痛、无分散注意力的头颈部损伤、清醒且未醉酒——NEXUS 阴性。患者稳定。",
+     "infoEn": "ACTOR: alert and oriented, shouting with pain but able to answer. EXAMINER (give when assessed): airway clear; respirations 24, regular; radial pulse 112, strong and regular. Skin: pink, warm, dry (no shock). RBS: isolated CLOSED mid-shaft right femur fracture with obvious angulation and a swollen, tense thigh; DORSALIS PEDIS AND POSTERIOR TIBIAL PULSES PRESENT, sensation intact, he can wiggle his toes; no other injuries anywhere; no head, neck or back pain. SpO2 98% RA. C-spine IS indicated: a hard tackle and a collapse onto the ground is a blunt mechanism. He has no head strike, no LOC, no neck pain or midline tenderness and is alert and sober, but the 10/10 femur fracture is a MAJOR DISTRACTING INJURY, so NEXUS cannot clear his neck. STABLE.",
+     "infoZh": "患者演员：清醒、定向力正常，痛得喊叫但能回答问题。考官（评估时给出）：气道通畅；呼吸 24 次/分、规则；桡动脉 112 次/分、有力规则。皮肤：红润、温暖、干燥（无休克）。RBS：孤立性右股骨干闭合骨折，明显成角，大腿肿胀紧张；足背动脉与胫后动脉搏动可及，感觉正常，脚趾能活动；全身无其他损伤；无头颈背疼痛。SpO2 室内空气 98%。有颈椎固定指征：被大力铲倒摔在地上是钝性机制。他头部未撞击、无昏迷、无颈痛、中线无压痛、清醒未醉酒，但 10/10 的股骨骨折是严重的分散注意力损伤，NEXUS 无法排除颈椎。患者稳定。",
      "expected": [
       {
        "actionEn": "Assess LOC / AVPU: Alert",
@@ -5367,8 +5402,8 @@
        "rubricRef": "loc-avpu"
       },
       {
-       "actionEn": "Question sufficiently to rule OUT c-spine using NEXUS criteria and verbalize the reasoning",
-       "actionZh": "用 NEXUS 标准充分问诊以排除颈椎固定指征，并口述推理过程",
+       "actionEn": "Work through all five NEXUS questions and verbalize why the neck cannot be cleared: the femur is a major distracting injury",
+       "actionZh": "逐条问完 NEXUS 五个问题，并口述为什么排除不了颈椎：股骨骨折是严重的分散注意力损伤",
        "weight": 15,
        "rubricRef": "delicate-spine"
       },
@@ -5602,12 +5637,12 @@
     },
     {
      "id": "exam",
-     "infoEn": "Head-to-toe: head/neck - no injury, no midline tenderness, NEXUS negative; chest - no injury, clear and equal 6 sites; abdomen - soft, non-tender; back - no tenderness or deformity on a careful check; lower extremities - right mid-thigh angulation, swelling and shortening; distal pulses, sensation and toe movement PRESENT and to be rechecked before and after splinting; left leg normal; upper extremities - no injury, CSM intact bilaterally.",
-     "infoZh": "从头到脚：头颈——无损伤、无中线压痛、NEXUS 阴性；胸部——无损伤、6 点听诊清晰对称；腹部——软、无压痛；背部——仔细检查无压痛无畸形；下肢——右大腿中段成角、肿胀、缩短；远端脉搏、感觉与脚趾活动均存在，夹板前后须复查；左腿正常；上肢——无损伤、双侧 CSM 完好。",
+     "infoEn": "Head-to-toe: head/neck - no injury, no midline tenderness, but NEXUS still cannot clear him while the femur distracts; chest - no injury, clear and equal 6 sites; abdomen - soft, non-tender; back - no tenderness or deformity on a careful check; lower extremities - right mid-thigh angulation, swelling and shortening; distal pulses, sensation and toe movement PRESENT and to be rechecked before and after splinting; left leg normal; upper extremities - no injury, CSM intact bilaterally.",
+     "infoZh": "从头到脚：头颈——无损伤、无中线压痛，但股骨骨折仍在分散注意力，NEXUS 仍无法排除；胸部——无损伤、6 点听诊清晰对称；腹部——软、无压痛；背部——仔细检查无压痛无畸形；下肢——右大腿中段成角、肿胀、缩短；远端脉搏、感觉与脚趾活动均存在，夹板前后须复查；左腿正常；上肢——无损伤、双侧 CSM 完好。",
      "expected": [
       {
-       "actionEn": "Head/neck exam confirming NEXUS-negative status",
-       "actionZh": "头颈查体确认 NEXUS 阴性",
+       "actionEn": "Head/neck exam with midline palpation, stating that the distracting femur still prevents clearance",
+       "actionZh": "头颈查体并触诊中线，口述股骨骨折仍在分散注意力、无法排除颈椎",
        "weight": 5,
        "rubricRef": "pe-head-neck"
       },
@@ -5645,8 +5680,8 @@
     },
     {
      "id": "interventions",
-     "infoEn": "SEQUENCE IS THE WHOLE POINT OF THIS STATION. 1) Assess distal circulation, sensation and function. 2) Apply cold if appropriate, 10 minutes on and 5 off. 3) GIVE ANALGESIA BEFORE MOVING OR SPLINTING - PCP: acetaminophen 500-1000 mg PO and ibuprofen 300-400 mg PO, PLUS Entonox self-administered (invert the cylinder 3 times, ventilate the treatment area; contraindications: inability to comply, ALOC, pneumothorax, inhalation injury, decompression sickness, air embolism, nitroglycerin in the last 5 minutes). EMR: the same (oral acetaminophen and ibuprofen for pain are within EMR licence; only pyrexia is PCP-only, guidelines p.58/68). 4) Patient supine with the injured leg in line with the body. 5) Apply the traction splint using STAPLES: Size, Thigh strap, Ankle harness above the malleoli, Padding, Lbs of traction (closed mid-shaft = 10 percent of body weight to a MAXIMUM of 15 lbs / 7 kg; open mid-shaft = maximum 5 lbs), Elevate the bottom of the Sager to align neutral, Straps - three elasticized straps, blanket between the legs and legs strapped together. 6) NEVER release traction once applied. 7) Reassess distal pulses after splinting and with every movement, correcting traction as needed.",
-     "infoZh": "本站的核心就是顺序。1）评估远端循环、感觉与活动。2）适当时冰敷，敷 10 分钟停 5 分钟。3）在移动或夹板之前先给镇痛——PCP：对乙酰氨基酚 500-1000 mg 口服加布洛芬 300-400 mg 口服，再加患者自控吸入 Entonox（气瓶倒转 3 次、保证治疗区通风；禁忌：无法配合、意识改变、气胸、吸入性损伤、减压病、空气栓塞、5 分钟内用过硝酸甘油）。EMR：相同（口服对乙酰氨基酚和布洛芬镇痛属于 EMR 执照范围，只有退热是 PCP 专属，考纲第 58/68 页）。4）患者仰卧，患肢与躯干成一直线。5）按 STAPLES 上牵引夹板：Size 量长度、Thigh 大腿带、Ankle 踝部吊带置于踝骨上方、Padding 加衬垫、Lbs 牵引重量（闭合股骨干=体重的 10%，上限 15 磅/7 kg；开放股骨干=最多 5 磅）、Elevate 抬高 Sager 尾端使其与腿保持中立对线、Straps 三条弹性绑带并在两腿间垫毯后把双腿绑在一起。6）牵引一旦施加绝不可放松。7）夹板后及每次移动时复查远端脉搏，必要时调整牵引。",
+     "infoEn": "SEQUENCE IS THE WHOLE POINT OF THIS STATION. 1) Assess distal circulation, sensation and function. 2) Apply cold if appropriate, 10 minutes on and 5 off. 3) GIVE ANALGESIA BEFORE MOVING OR SPLINTING - PCP: acetaminophen 500-1000 mg PO and ibuprofen 300-400 mg PO, PLUS Entonox self-administered (invert the cylinder 3 times, ventilate the treatment area; contraindications: inability to comply, ALOC, pneumothorax, inhalation injury, decompression sickness, air embolism, nitroglycerin in the last 5 minutes). EMR: the same (oral acetaminophen and ibuprofen for pain are within EMR licence; only pyrexia is PCP-only, guidelines p.58/68). 4) Patient supine with the injured leg in line with the body. 5) Apply the traction splint using STAPLES: Size, Thigh strap, Ankle harness above the malleoli, Padding, Lbs of traction (closed mid-shaft = 10 percent of body weight to a MAXIMUM of 15 lbs / 7 kg; open mid-shaft = maximum 5 lbs), Elevate the bottom of the Sager to align neutral, Straps - three elasticized straps, blanket between the legs and legs strapped together. 6) NEVER release traction once applied. 7) Reassess distal pulses after splinting and with every movement, correcting traction as needed. SPINE: manual head stabilization from first contact (partner, or a bystander under direction), a hard collar after the primary survey, and once the analgesia and the traction splint are on, a scoop onto the spinal device with foam blocks, body secured, head not taped.",
+     "infoZh": "本站的核心就是顺序。1）评估远端循环、感觉与活动。2）适当时冰敷，敷 10 分钟停 5 分钟。3）在移动或夹板之前先给镇痛——PCP：对乙酰氨基酚 500-1000 mg 口服加布洛芬 300-400 mg 口服，再加患者自控吸入 Entonox（气瓶倒转 3 次、保证治疗区通风；禁忌：无法配合、意识改变、气胸、吸入性损伤、减压病、空气栓塞、5 分钟内用过硝酸甘油）。EMR：相同（口服对乙酰氨基酚和布洛芬镇痛属于 EMR 执照范围，只有退热是 PCP 专属，考纲第 58/68 页）。4）患者仰卧，患肢与躯干成一直线。5）按 STAPLES 上牵引夹板：Size 量长度、Thigh 大腿带、Ankle 踝部吊带置于踝骨上方、Padding 加衬垫、Lbs 牵引重量（闭合股骨干=体重的 10%，上限 15 磅/7 kg；开放股骨干=最多 5 磅）、Elevate 抬高 Sager 尾端使其与腿保持中立对线、Straps 三条弹性绑带并在两腿间垫毯后把双腿绑在一起。6）牵引一旦施加绝不可放松。7）夹板后及每次移动时复查远端脉搏，必要时调整牵引。脊柱：首次接触即徒手固定头颈（搭档，或在指导下由旁人协助），初级评估后上硬颈托；镇痛和牵引夹板完成后，用铲式担架移到脊柱固定装置上，放泡沫头块，固定躯干，头部不贴胶带。",
      "expected": [
       {
        "actionEn": "Initiate the Pain Management protocol with baseline vitals complete and contraindications ruled out for each drug",
@@ -5777,7 +5812,7 @@
     "Giving Entonox but omitting acetaminophen and ibuprofen when indicated (PCP) - 10%",
     "Applying more than 15 lbs of traction, or releasing traction once applied - fracture management failure 25%",
     "Not checking distal circulation, sensation and function before and after splinting - explicit 15% fracture-management deduction",
-    "Immobilizing the spine on a NEXUS-negative patient - non-indicated skill causing delay"
+    "Clearing the neck because 'it was only a tackle' - a 10/10 femur fracture is a major distracting injury, so NEXUS cannot clear him; failing to take C-spine control when indicated is a 100% deduction"
    ],
    "criticalPitfallsZh": [
     "已给对乙酰氨基酚和布洛芬，却把 Entonox 拖到复位或骨折处理之后——扣 100%（附录 A 第 6 条）",
@@ -5785,17 +5820,17 @@
     "给了 Entonox 却在有指征时不给对乙酰氨基酚和布洛芬（PCP）——扣 10%",
     "牵引重量超过 15 磅，或施加牵引后又放松——骨折处理失分 25%",
     "夹板前后不查远端循环、感觉与活动——评分手册明列扣 15%",
-    "对 NEXUS 阴性患者做脊柱固定——非指征操作并造成延误"
+    "因为「只是被铲了一下」就排除颈椎——10/10 的股骨骨折是严重的分散注意力损伤，NEXUS 无法排除；有指征却不做 C-spine 控制扣 100%"
    ],
    "emrVariantEn": "EMR performs the same traction splint, the same sequencing and the same analgesia (oral acetaminophen and ibuprofen for pain are within EMR licence; only pyrexia is PCP-only, guidelines p.58/68), so Appendix A applies in full, including Entonox BEFORE fracture management. No Functional Enquiry.",
    "emrVariantZh": "EMR 使用同样的牵引夹板、同样的顺序和同样的镇痛（口服对乙酰氨基酚和布洛芬镇痛属于 EMR 执照范围，只有退热是 PCP 专属，考纲第 58/68 页），所以附录 A 完全适用，包括 Entonox 必须在骨折处理之前给。无功能问诊。",
    "pcpVariantEn": "PCP uses the full three-drug ladder: acetaminophen 500-1000 mg PO and ibuprofen 300-400 mg PO on-boarded early (they take 30-60 minutes to work), with Entonox covering the splinting itself. PCP also completes the 9-system Functional Enquiry. IV access is not required for an isolated stable femur fracture with no shock.",
    "pcpVariantZh": "PCP 使用完整三联镇痛阶梯：尽早口服对乙酰氨基酚 500-1000 mg 和布洛芬 300-400 mg（起效需 30-60 分钟），夹板操作本身由 Entonox 覆盖。PCP 还需完成 9 系统功能问诊。孤立性、无休克的稳定股骨骨折不需要建立静脉通路。",
-   "handoffModelEn": "This is a 19-year-old male with an isolated closed mid-shaft right femur fracture, sustained at about 1414 when an opponent's knee struck the outside of his thigh during a soccer game. He heard a crack, dropped, and has not moved the leg since; no head strike, no loss of consciousness, no neck or back pain, so he is NEXUS negative and we have not immobilized his spine. Initial vitals GCS 15, BP 132/78, pulse 112, resps 24, skin pink warm and dry with no signs of shock, SpO2 98% on room air, pain 10 out of 10; latest BP 126/76, pulse 92, pain now 4 out of 10. No medical history, no medications, no known allergies, ate at 1230. Treatments: manual stabilization, cold applied, acetaminophen 1000 milligrams and ibuprofen 400 milligrams orally at 1428 with Entonox self-administered from 1430, then a Sager traction splint applied at 12 pounds of traction, which is 10 percent of his body weight, and has not been released. Dorsalis pedis and posterior tibial pulses, sensation and toe movement have been present before and after splinting and at every reassessment.",
-   "handoffModelZh": "患者 19 岁男性，孤立性右股骨干闭合骨折，约 14:14 在足球比赛中被对方球员膝盖撞击大腿外侧所致。他听到「咔」声后倒地，此后未活动患肢；头部未撞击、无意识丧失、无颈背疼痛，故 NEXUS 阴性，我们未做脊柱固定。首组生命体征 GCS 15、血压 132/78、脉搏 112、呼吸 24、皮肤红润温干无休克征象、SpO2 室内空气 98%，疼痛 10/10；末组血压 126/76、脉搏 92，疼痛降至 4/10。无既往史、无用药、无已知过敏，12:30 进食。处置：徒手固定、冰敷，14:28 口服对乙酰氨基酚 1000 mg 与布洛芬 400 mg，14:30 起自控吸入 Entonox，随后上 Sager 牵引夹板、牵引重量 12 磅（为其体重的 10%），此后未放松。夹板前后及每次复评时，足背与胫后动脉搏动、感觉和脚趾活动均正常。",
+   "handoffModelEn": "This is a 19-year-old male with an isolated closed mid-shaft right femur fracture, sustained at about 1414 when an opponent's knee struck the outside of his thigh during a soccer game. He heard a crack, dropped, and has not moved the leg since; no head strike, no loss of consciousness, no neck or back pain, but with a 10 out of 10 femur fracture NEXUS cannot clear his neck, so he is in spinal motion restriction. Initial vitals GCS 15, BP 132/78, pulse 112, resps 24, skin pink warm and dry with no signs of shock, SpO2 98% on room air, pain 10 out of 10; latest BP 126/76, pulse 92, pain now 4 out of 10. No medical history, no medications, no known allergies, ate at 1230. Treatments: manual stabilization, cold applied, acetaminophen 1000 milligrams and ibuprofen 400 milligrams orally at 1428 with Entonox self-administered from 1430, then a Sager traction splint applied at 12 pounds of traction, which is 10 percent of his body weight, and has not been released. Dorsalis pedis and posterior tibial pulses, sensation and toe movement have been present before and after splinting and at every reassessment.",
+   "handoffModelZh": "患者 19 岁男性，孤立性右股骨干闭合骨折，约 14:14 在足球比赛中被对方球员膝盖撞击大腿外侧所致。他听到「咔」声后倒地，此后未活动患肢；头部未撞击、无意识丧失、无颈背疼痛，但股骨骨折疼痛 10/10，NEXUS 无法排除颈椎，故已做脊柱运动限制。首组生命体征 GCS 15、血压 132/78、脉搏 112、呼吸 24、皮肤红润温干无休克征象、SpO2 室内空气 98%，疼痛 10/10；末组血压 126/76、脉搏 92，疼痛降至 4/10。无既往史、无用药、无已知过敏，12:30 进食。处置：徒手固定、冰敷，14:28 口服对乙酰氨基酚 1000 mg 与布洛芬 400 mg，14:30 起自控吸入 Entonox，随后上 Sager 牵引夹板、牵引重量 12 磅（为其体重的 10%），此后未放松。夹板前后及每次复评时，足背与胫后动脉搏动、感觉和脚趾活动均正常。",
    "pcrKeyPoints": {
     "cc": "Isolated closed mid-shaft right femur fracture, pain 10/10",
-    "hxcc": "Opponent's knee struck outside of right thigh at ~1414 during soccer; audible crack, immediate collapse, leg not moved since; no head strike, no LOC, no neck/back pain (NEXUS negative)",
+    "hxcc": "Opponent's knee struck outside of right thigh at ~1414 during soccer; audible crack, immediate collapse, leg not moved since; no head strike, no LOC, no neck/back pain (NEXUS cannot clear: major distracting injury)",
     "pmhx": "None; no bleeding disorder, no liver or GI disease",
     "meds": "None; no anticoagulants; no analgesics taken today",
     "allergies": "NKA; no NSAID or acetaminophen allergy",
@@ -5811,7 +5846,7 @@
      "Distal pulses, sensation and toe movement intact throughout",
      "No signs of shock: skin pink warm dry, BP 132/78",
      "Pain 10/10 down to 4/10 after analgesia",
-     "Spine cleared clinically - NEXUS negative"
+     "Spine NOT cleared - the femur is a major distracting injury; SMR applied"
     ]
    },
    "sheet": {
@@ -5881,8 +5916,8 @@
       },
       {
        "k": "cspine",
-       "en": "NOT indicated: no head strike, no LOC, no neck pain, no distracting head/neck injury, alert and non-intoxicated - NEXUS negative",
-       "zh": "无颈椎固定指征：头部未撞击、无昏迷、无颈痛、无分散注意力的头颈部损伤、清醒且未醉酒——NEXUS 阴性"
+       "en": "INDICATED: blunt mechanism (tackle and collapse); no head strike, no LOC, no neck pain, alert and sober, but the 10/10 femur is a major distracting injury - NEXUS cannot clear",
+       "zh": "有固定指征：钝性机制（被铲倒摔地）；头部未撞击、无昏迷、无颈痛、清醒未醉酒，但 10/10 股骨骨折是严重的分散注意力损伤——NEXUS 无法排除"
       }
      ],
      "noteEn": "Give findings only when assessed. Stability: STABLE.",
@@ -6037,8 +6072,8 @@
      "rows": [
       {
        "k": "headneck",
-       "en": "No injury, no midline tenderness, NEXUS negative",
-       "zh": "无损伤、无中线压痛、NEXUS 阴性"
+       "en": "No injury, no midline tenderness - NEXUS still cannot clear while the femur distracts",
+       "zh": "无损伤、无中线压痛——股骨骨折仍在分散注意力，NEXUS 无法排除"
       },
       {
        "k": "chest",
@@ -6069,6 +6104,11 @@
      "noteEn": "",
      "noteZh": ""
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A hard tackle and a collapse onto the ground is a blunt mechanism, so NEXUS has to be passed, all five questions. He has no head strike, no neck pain and no midline tenderness, and he is alert and sober, but a 10 out of 10 femur fracture is a major distracting injury: you cannot trust his “my neck is fine”. NEXUS cannot clear him.",
+    "whyZh": "被大力铲倒摔在地上，是钝性机制，所以 NEXUS 五个问题都要过。他头部没撞、脖子不疼、中线无压痛、清醒没喝酒，但 10/10 的股骨骨折是严重的分散注意力损伤：他说「脖子没事」不可信。NEXUS 排除不了。"
    }
   },
   {

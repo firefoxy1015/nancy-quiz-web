@@ -1,6 +1,6 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=74';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=75';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -165,7 +165,7 @@ export async function renderScenarioPlayer(el, id, params = {}) {
     // resume a saved run after a refresh; otherwise start fresh
     const saved = S.scenarioRun;
     if (saved && saved.id === id && !saved.finished) run = { ...saved };
-    else run = { id, phaseIdx: 0, checks: {}, deductions: [], startedAt: null, rtcChoice: null, finished: false, timeUp: false };
+    else run = { id, phaseIdx: 0, checks: {}, deductions: [], startedAt: null, rtcChoice: null, csChoice: null, finished: false, timeUp: false };
   }
   drawPhase(el, sc, phases);
 }
@@ -207,6 +207,7 @@ function drawPhase(el, sc, phases) {
         <h3 style="margin-top:0">${phaseName(p.id)}</h3>
         ${phaseInfo(sc, p)}
         ${p.id === 'transport' ? rtcChooser() : ''}
+        ${p.id === 'primary' && sc.cspine ? csChooser(sc, inMock) : ''}
         <details class="acc" id="selfCheck">
           <summary>${ico('target')} ${t('Done it out loud? Open the self-check', '这幕做完口述完了？打开自评清单')}</summary>
           <div class="acc-body">
@@ -234,8 +235,10 @@ function drawPhase(el, sc, phases) {
     updateScoreNow();
   });
   el.querySelectorAll('[data-rtc]').forEach(b => b.onclick = () => { run.rtcChoice = b.dataset.rtc; persistRun(); drawPhase(el, sc, phases); });
+  el.querySelectorAll('[data-cs]').forEach(b => b.onclick = () => { if (run.csChoice && !inMock) return; run.csChoice = b.dataset.cs; persistRun(); drawPhase(el, sc, phases); });
   el.querySelector('#nextPhase').onclick = () => {
     if (p.id === 'transport' && !run.rtcChoice) { alert(t('Make your transport decision first.', '先做出转运决策。')); return; }
+    if (p.id === 'primary' && sc.cspine && !run.csChoice) { alert(t('Make your C-spine decision first.', '先做出 C-spine（颈椎）决定。')); return; }
     scorePhase(sc, p);
     if (run.phaseIdx >= phases.length - 1) finishRun(el, sc);
     else { run.phaseIdx++; persistRun(); drawPhase(el, sc, phases); }
@@ -252,6 +255,21 @@ function rtcChooser() {
     <button class="btn ${run.rtcChoice === 'rtc' ? 'danger' : 'ghost'}" data-rtc="rtc">${ico('cross')} ${t('RTC / Priority — package in 15 min', 'RTC 危重——15 分钟内打包')}</button>
     <button class="btn ${run.rtcChoice === 'non-rtc' ? '' : 'ghost'}" data-rtc="non-rtc">${ico('target')} ${t('Non-RTC / Stable — package in 30 min', '非 RTC 稳定——30 分钟内打包')}</button>
   </div>`;
+}
+// C-spine: the decision the exam grades under Delicate Spine. Two buttons, then (outside a mock) the verdict and the reason at once.
+function csChooser(sc, inMock) {
+  const c = sc.cspine, ch = run.csChoice, want = c.indicated ? 'yes' : 'no';
+  const btn = (v, en, zh) => `<button class="btn ${ch === v ? (inMock || v === want ? '' : 'danger') : 'ghost'}" data-cs="${v}" ${ch && !inMock ? 'disabled' : ''}>${t(en, zh)}</button>`;
+  let fb = '';
+  if (ch && !inMock) {
+    const ok = ch === want;
+    const cost = ok ? '' : ch === 'no' ? t(`Exam: failing to take C-spine control when indicated, −${c.missWeight || 100}%.`, `考试：该做 C-spine 却没做，扣 ${c.missWeight || 100}%。`)
+                                       : t('Exam: C-spine control taken when not indicated by the mechanism, −5%.', '考试：受伤机制没有指征却做了 C-spine，扣 5%。');
+    fb = `<div class="notice" style="margin-top:8px;${ok ? '' : 'background:var(--red-soft);border-color:var(--red)'}"><b>${ok ? '✓' : '✗'} ${c.indicated ? t('C-spine / SMR IS indicated', '需要 C-spine / SMR') : t('C-spine / SMR is NOT indicated', '不需要 C-spine / SMR')}</b>${cost ? ` · ${cost}` : ''}${bi(c.whyEn, c.whyZh)}</div>`;
+  }
+  return `<div class="sc-info" style="margin-top:10px"><div class="sc-label">${t('Decision: the neck', '决定：颈椎')}</div>
+    ${bi('Before you leave the primary survey: does this patient need C-spine control and spinal motion restriction? Say your reason out loud, then choose.', '离开初级评估之前：这个病人要不要 C-spine 控制和脊柱运动限制（SMR）？先把理由大声说出来，再选。')}
+    <div class="btn-row">${btn('yes', 'Indicated: hold the head, SMR', '要：固定头颈，做 SMR')}${btn('no', 'Not indicated: rule it out', '不要：排除')}</div>${fb}</div>`;
 }
 function vitalsTable(sc, setIdx) {
   const v = (sc.vitalsSets || [])[setIdx];
@@ -295,15 +313,17 @@ function rowLabel(sec, r) {
   return t(L[0], L[1]);
 }
 const shHead = (en, zh) => `<div class="sh-head">${t(en, zh)}</div>`;
-function sheetSection(sc, name, full = false) {
+// before the C-spine decision is made, the player hides any row or note that gives the verdict away (findings stay)
+const CS_VERDICT = /indicated|warranted|NEXUS|SMR|spinal precaution|cannot be cleared|in-line|stabiliz/i;
+function sheetSection(sc, name, full = false, hideSpine = false) {
   const s = sc.sheet[name];
-  const rows = s.rows || [];
+  const rows = (s.rows || []).filter(r => !(hideSpine && r.k === 'cspine' && CS_VERDICT.test(r.en)));
   return `<section class="sh-sec">
     ${full ? shHead(SHEET[name][0], SHEET[name][1]) : ''}
     ${full && name === 'dispatch' ? `<div class="sh-narr">${bi(sc.dispatchEn, sc.dispatchZh)}</div>` : ''}
     ${s.narrativeEn ? `<div class="sh-narr">${bi(s.narrativeEn, s.narrativeZh)}</div>` : ''}
     ${rows.length ? `<dl class="sh-rows${name === 'exam' ? ' sh-two' : ''}">${rows.map(r => `<dt>${rowLabel(name, r)}</dt><dd>${bi(r.en, r.zh)}</dd>`).join('')}</dl>` : ''}
-    ${s.noteEn ? `<div class="sh-note"><b>${t('Examiner', '考官')}</b>${bi(s.noteEn, s.noteZh)}</div>` : ''}
+    ${s.noteEn && !(hideSpine && CS_VERDICT.test(s.noteEn)) ? `<div class="sh-note"><b>${t('Examiner', '考官')}</b>${bi(s.noteEn, s.noteZh)}</div>` : ''}
   </section>`;
 }
 const VCOLS = [['pulse', 'Pulse', '脉搏'], ['skin', 'Skin', '皮肤'], ['resp', 'Resp', '呼吸'], ['bp', 'BP', '血压'], ['spo2', 'SpO₂', 'SpO₂'],
@@ -329,7 +349,7 @@ function vitalsBlock(sc, upto) {
 // what the player shows for one phase: the sheet section if there is one, otherwise the original prose
 function phaseInfo(sc, p) {
   const sec = PHASE_SECTION[p.id];
-  if (sc.sheet && sec && sc.sheet[sec]) return sheetSection(sc, sec);
+  if (sc.sheet && sec && sc.sheet[sec]) return sheetSection(sc, sec, false, p.id === 'primary' && !!sc.cspine && (!run.csChoice || isMockRun(sc)));
   if (sc.sheet && sc.sheet.vitals && (p.id === 'vitals' || p.id === 'ongoing')) {
     const upto = p.id === 'vitals' ? 1 : (sc.vitalsSets || []).length;
     return `<details class="acc"><summary>${ico('cross')} ${p.id === 'vitals' ? t('Vital signs, set 1 (measure, then reveal)', '第 1 套生命体征（先测再看）')
@@ -358,6 +378,7 @@ function drawSheet(el, sc) {
         : `<section class="sh-sec">${shHead('Dispatch', '派遣')}${bi(sc.dispatchEn, sc.dispatchZh)}${ph('dispatch') && ph('dispatch').infoEn ? bi(ph('dispatch').infoEn, ph('dispatch').infoZh) : ''}</section>`}
       ${sec('scene', 'scene', 'Scene Assessment', '现场评估')}
       ${sec('initial', 'primary', 'Initial Assessment', '初级评估')}
+      ${sc.cspine ? `<section class="sh-sec">${shHead('C-spine decision', 'C-spine 决定')}<p><b>${sc.cspine.indicated ? t('INDICATED', '需要固定') : t('NOT indicated', '不需要固定')}</b></p>${bi(sc.cspine.whyEn, sc.cspine.whyZh)}</section>` : ''}
       ${prose('Transport Decision', '转运决策', 'transport')}
       ${sec('history', 'history', 'Focused History', '重点病史')}
       <section class="sh-sec">${shHead(SHEET.vitals[0], SHEET.vitals[1])}
@@ -379,6 +400,11 @@ function scorePhase(sc, p) {
       run.deductions.push({ phase: p.id, actionEn: ex.actionEn, actionZh: ex.actionZh, weight: ex.weight, ref: ex.rubricRef });
     }
   });
+  if (p.id === 'primary' && sc.cspine && run.csChoice && run.csChoice !== (sc.cspine.indicated ? 'yes' : 'no')) {
+    run.deductions.push(sc.cspine.indicated
+      ? { phase: 'primary', actionEn: 'Did not take C-spine control when indicated', actionZh: '有指征却没做 C-spine 控制', weight: sc.cspine.missWeight || 100, ref: 'delicate-spine' }
+      : { phase: 'primary', actionEn: 'C-spine control taken when not indicated by the mechanism', actionZh: '受伤机制没有指征却做了 C-spine 控制', weight: 5, ref: 'delicate-spine' });
+  }
   if (p.id === 'transport' && run.rtcChoice && run.rtcChoice !== sc.priority) {
     run.deductions.push({ phase: 'transport', actionEn: `Wrong transport category (correct: ${sc.priority.toUpperCase()})`, actionZh: `转运分类错误（正确：${sc.priority === 'rtc' ? 'RTC 危重' : '非 RTC 稳定'}）`, weight: 25, ref: 'transport' });
   }

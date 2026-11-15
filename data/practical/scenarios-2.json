@@ -2,7 +2,7 @@
  "meta": {
   "title": "BC Practical Exam Scenarios - Set 2 (both levels)",
   "version": 1,
-  "count": 10,
+  "count": 11,
   "languages": [
    "en",
    "zh"
@@ -5080,7 +5080,12 @@
     58,
     65,
     68
-   ]
+   ],
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A frontal crash with a new numb foot and a dislocated hip: NEXUS is positive twice (a focal deficit and a major distracting injury), and limb paresthesia is a Canadian C-Spine high-risk factor.",
+    "whyZh": "正面车祸，新出现足部麻木，加上髋关节脱位：NEXUS 两条阳性（局灶性神经缺损和严重的分散注意力损伤），肢体感觉异常也是加拿大颈椎规则的高危因素。"
+   }
   },
   {
    "id": "tr-10",
@@ -5944,7 +5949,12 @@
     65,
     68,
     78
-   ]
+   ],
+   "cspine": {
+    "indicated": false,
+    "whyEn": "A single stab wound to the abdomen: not struck on the head or neck, no fall, no neck pain. No mechanism for a spinal injury.",
+    "whyZh": "腹部单处刺伤：头颈没有被打，没有摔倒，脖子不疼。没有脊柱受伤的机制。"
+   }
   },
   {
    "id": "tr-11",
@@ -6749,6 +6759,11 @@
      "noteEn": "En route head-to-toe.",
      "noteZh": "途中从头到脚。"
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A horse kick to the chest with a flail segment: no midline tenderness, alert, no deficit, sober, but a 9 out of 10 flail chest is a major distracting injury. NEXUS cannot clear him.",
+    "whyZh": "马踢胸部、连枷胸：中线无压痛、清醒、无神经缺损、没喝酒，但 9/10 的连枷胸是严重的分散注意力损伤。NEXUS 排除不了。"
    }
   },
   {
@@ -7628,7 +7643,12 @@
     65,
     68,
     78
-   ]
+   ],
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A trampoline fall with midline neck tenderness and a focal neurological deficit: NEXUS is positive twice.",
+    "whyZh": "蹦床摔伤，颈部正中压痛，加上局灶性神经缺损：NEXUS 两条阳性。"
+   }
   },
   {
    "id": "tr-13",
@@ -8445,7 +8465,807 @@
      "noteEn": "En route head-to-toe, on the spinal device.",
      "noteZh": "途中从头到脚检查，在脊柱固定装置上。"
     }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "A high-risk crash with intrusion, midline neck tenderness and a painful distracting injury. Climbing out of the car and sitting down does not clear a spine.",
+    "whyZh": "有车厢挤入的高风险车祸、颈部正中压痛，再加上疼痛的分散注意力损伤。自己爬出车、坐下来，并不能排除脊柱损伤。"
    }
+  },
+  {
+   "id": "tr-14",
+   "type": "trauma",
+   "titleEn": "Fall From a Kitchen Chair - Distracting Tib/Fib Fracture, Pulseless Foot and the C-Spine Decision",
+   "titleZh": "从厨房椅子上摔下——分散注意力的胫腓骨骨折、无脉的足部，以及颈椎的决定",
+   "protocols": [
+    "Spinal Management",
+    "Musculoskeletal Injuries",
+    "Pain Management"
+   ],
+   "priority": "non-rtc",
+   "dispatchEn": "1610 hrs. Code 3 to a ground-floor suite in Burnaby for a fall. A 34-year-old male was standing on a kitchen chair reaching into a top cupboard when the chair tipped. Leg injury reported. Hospital is 12 minutes away.",
+   "dispatchZh": "16:10，Code 3 前往本拿比一处一楼单元，有人摔倒。34 岁男性站在厨房椅子上够顶柜时椅子翻倒。报告腿部受伤。医院车程 12 分钟。",
+   "phases": [
+    {
+     "id": "dispatch",
+     "infoEn": "Dispatch adds: he is conscious; his wife is with him; he says he cannot move his left leg.",
+     "infoZh": "调度补充：患者清醒；妻子在旁；他说左腿动不了。",
+     "expected": [
+      {
+       "actionEn": "Acknowledge; plan the splint kit, analgesia (acetaminophen, ibuprofen, Entonox), oxygen, collar and spinal device, cot",
+       "actionZh": "确认；准备夹板、镇痛用品（对乙酰氨基酚、布洛芬、Entonox）、氧气、颈托和脊柱固定装置、担架床",
+       "weight": 25,
+       "rubricRef": "overall-call-management"
+      },
+      {
+       "actionEn": "Anticipate the two decisions of a low fall with a limb injury: the neck (is the injury distracting?) and the limb (circulation)",
+       "actionZh": "预判低处摔倒伴肢体伤的两个决定：颈椎（损伤是否分散注意力？）和肢体（远端循环）",
+       "weight": 25,
+       "rubricRef": "overall-call-management"
+      }
+     ]
+    },
+    {
+     "id": "scene",
+     "infoEn": "EXAMINER SCRIPT: Small kitchen, tile floor, an overturned wooden chair (seat about 45 cm high), a smashed glass jar on the floor. The dog has been shut in the bedroom. The patient lies on his right side between the table and the counter, holding his left shin. His wife is kneeling beside him. One patient. Tight space: the cot will not fit into the kitchen.",
+     "infoZh": "考官脚本：小厨房，瓷砖地面，一把翻倒的木椅（椅面约 45 厘米高），地上有一个摔碎的玻璃罐。狗已关进卧室。患者右侧卧在餐桌和台面之间，抱着左小腿。妻子跪在旁边。单一患者。空间狭窄：担架床推不进厨房。",
+     "expected": [
+      {
+       "actionEn": "Verbalize hazards (broken glass on tile, dog secured, tight space), MOI (fall from a chair seat about 45 cm onto tile, landing on the left leg) and one patient",
+       "actionZh": "口述危险源（瓷砖上的碎玻璃、狗已关好、空间狭窄）、受伤机制（从约 45 厘米高的椅面摔到瓷砖上，左腿着地）和单一患者",
+       "weight": 5,
+       "rubricRef": "scene-ppe"
+      },
+      {
+       "actionEn": "Don gloves and eye protection; clear the glass before kneeling",
+       "actionZh": "戴手套和护目镜；跪下前先清理碎玻璃",
+       "weight": 5,
+       "rubricRef": "scene-ppe"
+      },
+      {
+       "actionEn": "First look: alert male, severe pain, obvious deformity of the left shin",
+       "actionZh": "第一眼：男性清醒、剧痛、左小腿明显畸形",
+       "weight": 5,
+       "rubricRef": "visual-assessment"
+      }
+     ]
+    },
+    {
+     "id": "primary",
+     "infoEn": "ACTOR: alert and oriented, groaning, both hands round his left shin: 'My neck's fine, it's my LEG!' He keeps trying to sit up to look at it. EXAMINER (give when assessed): airway clear, full sentences; respirations 22, regular; radial pulse 108, strong, regular; skin pink, warm, dry. RBS: CLOSED mid-shaft LEFT tibia/fibula fracture, angulated about 30 degrees, skin intact; LEFT FOOT COOL AND DUSKY, NO DORSALIS PEDIS OR POSTERIOR TIBIAL PULSE, sensation reduced over the foot, toes move weakly. Right knee: tender over the kneecap where it hit the floor, no deformity, distal pulses and sensation intact. Head: no injury. Neck: no midline tenderness when palpated, but he is not paying attention to it. No tingling in the hands. No other injuries. SpO2 97% RA. C-SPINE IS INDICATED: the fall is low (feet about 45 cm off the floor, below 3 feet, so no Canadian C-Spine high-risk factor), but the 8/10 angulated tib/fib is a MAJOR DISTRACTING INJURY - NEXUS cannot clear his neck. The pulseless foot is the second decision: one attempt at realignment is allowed, AFTER analgesia (see interventions). If circulation returns he is stable; if not, he is unstable.",
+     "infoZh": "患者演员：清醒、定向力正常，在呻吟，双手抱着左小腿：「我脖子没事，是我的腿！」他一直想坐起来看腿。考官（评估时给出）：气道通畅，能说完整句子；呼吸 22 次/分、规则；桡动脉 108 次/分、有力规则；皮肤红润、温暖、干燥。RBS：左胫腓骨中段闭合骨折，成角约 30 度，皮肤完整；左足发凉发暗，足背动脉和胫后动脉均摸不到，足部感觉减退，脚趾活动无力。右膝：髌骨处撞地有压痛，无畸形，远端脉搏和感觉正常。头部：无损伤。颈部：触诊中线无压痛，但他根本没注意脖子。双手无麻木。无其他损伤。SpO2 室内空气 97%。需要 C-spine：摔得低（脚离地约 45 厘米，不到 3 英尺，没有加拿大颈椎规则的高危因素），但 8/10 的成角胫腓骨骨折是严重的分散注意力损伤——NEXUS 无法排除颈椎。无脉的足部是第二个决定：可以尝试复位一次，但要在镇痛之后（见处置）。循环恢复则为稳定；不恢复则为不稳定。",
+     "expected": [
+      {
+       "actionEn": "Assess LOC / AVPU: Alert",
+       "actionZh": "评估意识 / AVPU：Alert",
+       "weight": 15,
+       "rubricRef": "loc-avpu"
+      },
+      {
+       "actionEn": "Take manual head stabilization at first contact, then walk all five NEXUS questions out loud and state why the neck cannot be cleared: the tib/fib is a major distracting injury",
+       "actionZh": "首次接触即徒手固定头颈，然后大声逐条问完 NEXUS 五个问题，并说明为什么排除不了颈椎：胫腓骨骨折是严重的分散注意力损伤",
+       "weight": 15,
+       "rubricRef": "delicate-spine"
+      },
+      {
+       "actionEn": "Assess airway",
+       "actionZh": "评估气道",
+       "weight": 100,
+       "rubricRef": "airway"
+      },
+      {
+       "actionEn": "Assess breathing",
+       "actionZh": "评估呼吸",
+       "weight": 100,
+       "rubricRef": "breathing"
+      },
+      {
+       "actionEn": "Assess circulation",
+       "actionZh": "评估循环",
+       "weight": 100,
+       "rubricRef": "circulation"
+      },
+      {
+       "actionEn": "Rapid body survey: expose the leg, find the angulated closed tib/fib AND the pulseless, dusky left foot; compare with the right leg; find the right knee injury",
+       "actionZh": "快速查体：暴露下肢，发现成角的闭合性胫腓骨骨折和无脉、发暗的左足；与右腿对比；发现右膝损伤",
+       "weight": 100,
+       "rubricRef": "rapid-body-survey"
+      },
+      {
+       "actionEn": "Note skin: pink, warm, dry",
+       "actionZh": "注意皮肤：红润、温暖、干燥",
+       "weight": 5,
+       "rubricRef": "skin-primary"
+      },
+      {
+       "actionEn": "Oxygen (indicated for trauma), titrated",
+       "actionZh": "给氧（创伤为指征），按需调节",
+       "weight": 15,
+       "rubricRef": "oxygen"
+      },
+      {
+       "actionEn": "Keep him supine; stop him sitting up to look at the leg",
+       "actionZh": "保持仰卧；阻止他坐起来看腿",
+       "weight": 15,
+       "rubricRef": "patient-position"
+      }
+     ]
+    },
+    {
+     "id": "transport",
+     "infoEn": "Decision point, made after the one realignment attempt. Before it the foot is pulseless (an unstable finding); after analgesia and one correct attempt the pulse returns, so he can be treated as STABLE, NON-RTC (guideline note: if circulation returns the patient can be treated as stable; if the limb remains pulseless, unstable). Had the pulse stayed absent: RTC, package within 15 minutes.",
+     "infoZh": "决策点，在尝试一次复位之后做出。复位前足部无脉（不稳定的发现）；镇痛后一次正确的复位使脉搏恢复，因此可按稳定、非 RTC 处理（指南注释：循环恢复则可按稳定处理；肢体仍无脉则为不稳定）。如果脉搏一直回不来：RTC，15 分钟内打包。",
+     "expected": [
+      {
+       "actionEn": "Categorize as non-RTC once the pulse has returned, and say what would have made it RTC (still pulseless after one attempt)",
+       "actionZh": "脉搏恢复后判定为非 RTC，并说明什么情况下会变成 RTC（一次复位后仍无脉）",
+       "weight": 25,
+       "rubricRef": "transport"
+      },
+      {
+       "actionEn": "Ready to load within 30 minutes while working with purpose",
+       "actionZh": "在保持工作节奏的前提下 30 分钟内可装载",
+       "weight": 25,
+       "rubricRef": "transport"
+      },
+      {
+       "actionEn": "Plan the extraction: scoop in the kitchen, carry to the cot in the hallway; use the wife for the head only under direction",
+       "actionZh": "规划搬运：在厨房上铲式担架，抬到走廊的担架床上；妻子只在指导下扶头",
+       "weight": 25,
+       "rubricRef": "overall-call-management"
+      }
+     ]
+    },
+    {
+     "id": "history",
+     "infoEn": "ACTOR ANSWERS: standing on the chair reaching for a jar on the top shelf about 8 minutes ago; the chair tipped and he landed on his left leg; he 'heard it go'. Did not hit his head, did not black out. O - sudden at landing. P - any movement makes it worse. Q - sharp, 'like it's snapped'. R - stays in the shin; right knee also sore. S - 8/10 left shin, 4/10 right knee. T - constant since the fall. Foot 'feels weird and cold'. PMHx: none; no ulcers, no bleeding problems. Meds: none - no blood thinners, no painkillers today. Allergies: none known. LOI: lunch at 1230.",
+     "infoZh": "患者演员回答：约 8 分钟前站在椅子上够顶层的一个罐子；椅子翻倒，他左腿着地，「听见它断了」。头没撞，没有昏过去。O——落地时突然发生。P——一动就更疼。Q——锐痛，「像断了一样」。R——局限在小腿；右膝也疼。S——左小腿 8/10，右膝 4/10。T——摔倒后持续存在。脚「感觉怪怪的、发凉」。既往史：无；无溃疡、无出血问题。用药：无——没吃抗凝药，今天没吃止痛药。过敏：无已知。最后进食：12:30 午饭。",
+     "expected": [
+      {
+       "actionEn": "Chief complaint: left leg pain and deformity (and right knee pain)",
+       "actionZh": "主诉：左腿疼痛与畸形（以及右膝疼痛）",
+       "weight": 15,
+       "rubricRef": "chief-complaint"
+      },
+      {
+       "actionEn": "OPQRRRST, mechanism detail (chair height, how he landed, head strike, LOC) and a neck screen",
+       "actionZh": "OPQRRRST、受伤机制细节（椅子高度、怎么落地、头是否撞到、有无昏迷）和颈部筛查",
+       "weight": 15,
+       "rubricRef": "history-of-cc"
+      },
+      {
+       "actionEn": "0-10 pain score before analgesia",
+       "actionZh": "镇痛前 0-10 疼痛评分",
+       "weight": 5,
+       "rubricRef": "pain-scale"
+      },
+      {
+       "actionEn": "PMHx including ulcers, GI bleeding and bleeding disorders (ibuprofen screen)",
+       "actionZh": "既往史，含溃疡、消化道出血和出血性疾病（布洛芬筛查）",
+       "weight": 5,
+       "rubricRef": "past-medical-history"
+      },
+      {
+       "actionEn": "Medications: anticoagulants, and any acetaminophen in the last 4 hours",
+       "actionZh": "用药：抗凝药，以及 4 小时内是否服过对乙酰氨基酚",
+       "weight": 5,
+       "rubricRef": "medications"
+      },
+      {
+       "actionEn": "Allergies, specifically to acetaminophen and NSAIDs",
+       "actionZh": "过敏史，特别是对乙酰氨基酚和非甾体抗炎药",
+       "weight": 5,
+       "rubricRef": "allergies"
+      },
+      {
+       "actionEn": "Last oral intake",
+       "actionZh": "最后进食",
+       "weight": 5,
+       "rubricRef": "last-oral-intake"
+      }
+     ]
+    },
+    {
+     "id": "vitals",
+     "infoEn": "Set 1 - baseline BEFORE any analgesia: GCS 15 (E4V5M6); BP 136/84; pulse 108 strong regular; respirations 22 regular; skin pink warm dry; pupils equal reactive 4 mm; SpO2 97% RA. BGL and temperature not indicated.",
+     "infoZh": "第 1 组——任何镇痛前的基线：GCS 15（E4V5M6）；血压 136/84；脉搏 108 有力规则；呼吸 22 规则；皮肤红润温干；瞳孔等大有反应 4 mm；SpO2 室内空气 97%。血糖与体温无指征。",
+     "expected": [
+      {
+       "actionEn": "GCS with components",
+       "actionZh": "GCS 及分项",
+       "weight": 5,
+       "rubricRef": "gcs"
+      },
+      {
+       "actionEn": "BP by auscultation, before Entonox",
+       "actionZh": "听诊测血压，用 Entonox 前",
+       "weight": 15,
+       "rubricRef": "blood-pressure"
+      },
+      {
+       "actionEn": "Pulse rate, strength and rhythm",
+       "actionZh": "脉搏频率、强度与节律",
+       "weight": 15,
+       "rubricRef": "pulse"
+      },
+      {
+       "actionEn": "Respirations",
+       "actionZh": "呼吸",
+       "weight": 15,
+       "rubricRef": "respirations"
+      },
+      {
+       "actionEn": "Skin",
+       "actionZh": "皮肤",
+       "weight": 5,
+       "rubricRef": "skin-vitals"
+      },
+      {
+       "actionEn": "Pupils",
+       "actionZh": "瞳孔",
+       "weight": 5,
+       "rubricRef": "pupils"
+      },
+      {
+       "actionEn": "SpO2, required before Entonox",
+       "actionZh": "SpO2，用 Entonox 前必须有",
+       "weight": 5,
+       "rubricRef": "pulse-oximetry"
+      }
+     ]
+    },
+    {
+     "id": "fe",
+     "infoEn": "PCP ONLY. ACTOR: general - well; CNS - no headache, no dizziness, no tingling in the hands, left foot numb and cold; respiratory - no SOB, no recent diving, no chest injury (Entonox screen); cardiovascular - heart racing from the pain; GI/GU - no ulcers, no GI bleeding (ibuprofen screen); integumentary - skin intact over the fracture; musculoskeletal - left shin and right knee only; endocrine - none; EENT - no facial injury.",
+     "infoZh": "仅 PCP。患者演员：整体——健康；中枢神经——无头痛、无头晕、双手无麻木，左足麻木发凉；呼吸——无气促、近期未潜水、胸部无损伤（Entonox 筛查）；心血管——疼得心跳快；消化/泌尿——无溃疡、无消化道出血（布洛芬筛查）；皮肤——骨折处皮肤完整；肌肉骨骼——只有左小腿和右膝；内分泌——无；眼耳鼻喉——面部无损伤。",
+     "expected": [
+      {
+       "actionEn": "FE - General health",
+       "actionZh": "功能问诊——整体健康",
+       "weight": 5,
+       "rubricRef": "fe-general-health"
+      },
+      {
+       "actionEn": "FE - CNS",
+       "actionZh": "功能问诊——中枢神经",
+       "weight": 5,
+       "rubricRef": "fe-cns"
+      },
+      {
+       "actionEn": "FE - Respiratory (Entonox screen)",
+       "actionZh": "功能问诊——呼吸（Entonox 筛查）",
+       "weight": 5,
+       "rubricRef": "fe-respiratory"
+      },
+      {
+       "actionEn": "FE - Cardiovascular",
+       "actionZh": "功能问诊——心血管",
+       "weight": 5,
+       "rubricRef": "fe-cardiovascular"
+      },
+      {
+       "actionEn": "FE - GI/GU (ibuprofen screen)",
+       "actionZh": "功能问诊——消化/泌尿（布洛芬筛查）",
+       "weight": 5,
+       "rubricRef": "fe-gi-gu"
+      },
+      {
+       "actionEn": "FE - Integumentary (open or closed)",
+       "actionZh": "功能问诊——皮肤（开放还是闭合）",
+       "weight": 5,
+       "rubricRef": "fe-integumentary"
+      },
+      {
+       "actionEn": "FE - Musculoskeletal",
+       "actionZh": "功能问诊——肌肉骨骼",
+       "weight": 5,
+       "rubricRef": "fe-musculoskeletal"
+      },
+      {
+       "actionEn": "FE - Endocrine",
+       "actionZh": "功能问诊——内分泌",
+       "weight": 5,
+       "rubricRef": "fe-endocrine"
+      },
+      {
+       "actionEn": "FE - EENT",
+       "actionZh": "功能问诊——眼耳鼻喉",
+       "weight": 5,
+       "rubricRef": "fe-eent"
+      }
+     ]
+    },
+    {
+     "id": "exam",
+     "infoEn": "Head-to-toe: head/neck - no injury, no midline tenderness, but NEXUS still cannot clear him while the leg distracts; chest - no injury, clear and equal; abdomen - soft, non-tender; back - checked on the scoop transfer, no tenderness; lower extremities - left mid-shaft tib/fib angulation (before realignment) with a pulseless dusky foot, after realignment weak pedal pulse, foot pink, sensation improving; right knee tender over the patella, no deformity, CSM intact; upper extremities - no injury, CSM intact.",
+     "infoZh": "从头到脚：头颈——无损伤、中线无压痛，但腿在分散注意力，NEXUS 仍无法排除；胸部——无损伤、呼吸音清晰对称；腹部——软、无压痛；背部——铲式担架转移时检查，无压痛；下肢——左胫腓骨中段成角（复位前）伴无脉发暗的足部，复位后足背动脉微弱可及、足部转红、感觉好转；右膝髌骨处压痛、无畸形、CSM 正常；上肢——无损伤、CSM 正常。",
+     "expected": [
+      {
+       "actionEn": "Head/neck exam with midline palpation, stating that the distracting leg still prevents clearance",
+       "actionZh": "头颈查体并触诊中线，口述腿部损伤仍在分散注意力、无法排除颈椎",
+       "weight": 5,
+       "rubricRef": "pe-head-neck"
+      },
+      {
+       "actionEn": "Chest exam",
+       "actionZh": "胸部查体",
+       "weight": 5,
+       "rubricRef": "pe-chest-lungs"
+      },
+      {
+       "actionEn": "Abdomen exam",
+       "actionZh": "腹部查体",
+       "weight": 5,
+       "rubricRef": "pe-abdomen"
+      },
+      {
+       "actionEn": "Back exam during the transfer",
+       "actionZh": "转移时检查背部",
+       "weight": 5,
+       "rubricRef": "pe-back"
+      },
+      {
+       "actionEn": "Lower extremities: both legs, CSM before and after realignment and splinting",
+       "actionZh": "下肢：双腿，复位与夹板前后的 CSM",
+       "weight": 5,
+       "rubricRef": "pe-lower-extremities"
+      },
+      {
+       "actionEn": "Upper extremities with CSM",
+       "actionZh": "上肢及 CSM",
+       "weight": 5,
+       "rubricRef": "pe-upper-extremities"
+      }
+     ]
+    },
+    {
+     "id": "interventions",
+     "infoEn": "THE ORDER IS THE STATION. 1) Manual head stabilization from first contact (the wife can hold the head under your direction while you work), then a hard collar after the primary survey. 2) Manually stabilize the left leg in the position found; check and compare distal circulation, sensation and function in BOTH legs. 3) Baseline vitals including SpO2, and a quick contraindication screen for the analgesics: allergies, anticoagulants, ulcers or GI bleeding, acetaminophen taken in the last 4 hours. 4) ANALGESIA BEFORE YOU TOUCH THE ANGULATION: acetaminophen 500-1,000 mg PO and ibuprofen 300-400 mg PO, plus Entonox self-administered (contraindications: inability to comply, altered LOC, pneumothorax, inhalation injury, decompression sickness, air embolism, nitroglycerin in the last 5 minutes; ventilate the kitchen). Realigning before the Entonox, when it is indicated, is a 100% deduction (Appendix A, item 6). 5) ONE attempt to realign the pulseless limb to the anatomical position with gentle in-line traction; recheck pulse, sensation and movement. EXAMINER: after a correct attempt, a weak dorsalis pedis pulse returns and the foot pinks up. 6) Splint immobilizing the joints above and below (knee and ankle), padded; recheck CSM after splinting. Cold only now that distal circulation is restored. 7) Spinal packaging after the splint: scoop onto the spinal device, foam blocks, body secured, head NOT taped. The right knee gets cold and support. 8) The neck decision does not reverse when the pain settles: he is still on Entonox, whose listed adverse effects include sedation and disorientation, and NEXUS needs judgement and pain sensation intact.",
+     "infoZh": "本站的核心就是顺序。1）首次接触即徒手固定头颈（可在你指导下让他妻子扶住头部），初级评估后上硬颈托。2）在发现时的位置徒手固定左腿；检查并对比双腿的远端循环、感觉与活动。3）包括 SpO2 在内的基础生命体征，并快速筛查镇痛药禁忌：过敏、抗凝药、溃疡或消化道出血、4 小时内是否服过对乙酰氨基酚。4）碰成角之前先镇痛：对乙酰氨基酚 500–1,000 mg 口服、布洛芬 300–400 mg 口服，再加患者自控吸入 Entonox（禁忌：无法配合、意识改变、气胸、吸入性损伤、减压病、空气栓塞、5 分钟内用过硝酸甘油；厨房要通风）。有指征时先复位、后给 Entonox，扣 100%（附录 A 第 6 条）。5）对无脉肢体只尝试一次复位，用轻柔的轴向牵引拉回解剖位置；复查脉搏、感觉和活动。考官：复位操作正确后，足背动脉微弱恢复，足部转红。6）夹板固定上下两个关节（膝和踝），加衬垫；夹板后复查 CSM。远端循环恢复后才冰敷。7）夹板后做脊柱包装：铲式担架移到脊柱固定装置上，泡沫头块，固定躯干，头部不贴胶带。右膝冰敷并支托。8）疼痛缓解后，颈椎的决定也不会推翻：他还在吸 Entonox，其写明的副作用包括镇静和定向障碍，而 NEXUS 需要判断力和痛觉完好。",
+     "expected": [
+      {
+       "actionEn": "Initiate the Pain Management protocol with baseline vitals and a contraindication screen",
+       "actionZh": "以基线生命体征和禁忌筛查启动镇痛协议",
+       "weight": 100,
+       "rubricRef": "protocols"
+      },
+      {
+       "actionEn": "Give Entonox (plus acetaminophen and ibuprofen) BEFORE realigning or splinting",
+       "actionZh": "复位或夹板之前先给 Entonox（加对乙酰氨基酚和布洛芬）",
+       "weight": 100,
+       "rubricRef": "protocols"
+      },
+      {
+       "actionEn": "Drugs with the 6 rights: acetaminophen 500-1,000 mg PO, ibuprofen 300-400 mg PO, Entonox self-administered",
+       "actionZh": "按 6 个正确给药：对乙酰氨基酚 500–1,000 mg 口服、布洛芬 300–400 mg 口服、Entonox 自控吸入",
+       "weight": 25,
+       "rubricRef": "skill-drug-admin"
+      },
+      {
+       "actionEn": "ONE realignment attempt of the pulseless limb, with CSM checked before and after",
+       "actionZh": "对无脉肢体只尝试一次复位，前后检查 CSM",
+       "weight": 25,
+       "rubricRef": "skill-fracture-mgmt"
+      },
+      {
+       "actionEn": "Splint immobilizing the knee and the ankle, padded; CSM after splinting",
+       "actionZh": "夹板固定膝关节和踝关节，加衬垫；夹板后查 CSM",
+       "weight": 25,
+       "rubricRef": "skill-fracture-mgmt"
+      },
+      {
+       "actionEn": "Spinal motion restriction: collar, scoop onto the device, foam blocks, body secured, head not taped",
+       "actionZh": "脊柱运动限制：颈托、铲式担架移到装置上、泡沫头块、固定躯干、头部不贴胶带",
+       "weight": 25,
+       "rubricRef": "skill-spinal-mgmt"
+      },
+      {
+       "actionEn": "Cold to the fracture only after distal circulation is restored; cold and support to the right knee",
+       "actionZh": "远端循环恢复后才冰敷骨折处；右膝冰敷并支托",
+       "weight": 5,
+       "rubricRef": "skill-fracture-mgmt"
+      }
+     ]
+    },
+    {
+     "id": "ongoing",
+     "infoEn": "Set 2 (after analgesia, realignment and splinting, on the device): GCS 15; BP 128/80; pulse 90 strong regular; respirations 18; skin pink warm dry; SpO2 98% on oxygen; pain left shin 8/10 down to 3/10. Weak left dorsalis pedis pulse present, foot pink, sensation improving. He asks: 'My neck's honestly fine - can the collar come off?' The answer is no: the decision stands while he is on Entonox and the leg still hurts.",
+     "infoZh": "第 2 组（镇痛、复位、夹板后，已上固定装置）：GCS 15；血压 128/80；脉搏 90 有力规则；呼吸 18；皮肤红润温干；吸氧下 SpO2 98%；左小腿疼痛由 8/10 降至 3/10。左足背动脉微弱可及，足部红润，感觉好转。他问：「我脖子真的没事，颈托能摘吗？」答案是不能：他还在吸 Entonox、腿还在疼，决定不变。",
+     "expected": [
+      {
+       "actionEn": "Reassess ABCs and all interventions after each move",
+       "actionZh": "每次移动后复评 ABC 与全部处置",
+       "weight": 15,
+       "rubricRef": "ongoing-abc-i"
+      },
+      {
+       "actionEn": "Second full set of vitals within the non-RTC interval",
+       "actionZh": "在非 RTC 时限内完成第二组完整生命体征",
+       "weight": 25,
+       "rubricRef": "overall-call-management"
+      },
+      {
+       "actionEn": "Recheck the left foot pulse, sensation and movement after every move",
+       "actionZh": "每次移动后复查左足脉搏、感觉和活动",
+       "weight": 25,
+       "rubricRef": "skill-fracture-mgmt"
+      },
+      {
+       "actionEn": "Keep the collar on and explain why in one sentence",
+       "actionZh": "保留颈托，用一句话解释原因",
+       "weight": 5,
+       "rubricRef": "delicate-spine"
+      }
+     ]
+    },
+    {
+     "id": "handoff",
+     "infoEn": "Non-critical: notify the receiving facility. Hand-off must state the pulseless foot, the one realignment and its result, the analgesia with times, and why he is in SMR. PCR within 5 minutes.",
+     "infoZh": "非危重：通知接收医院。交接须说明足部曾无脉、一次复位及其结果、镇痛用药及时间，以及为什么做了 SMR。5 分钟内完成 PCR。",
+     "expected": [
+      {
+       "actionEn": "Notify the receiving facility",
+       "actionZh": "向接收医院预报",
+       "weight": 5,
+       "rubricRef": "notification"
+      },
+      {
+       "actionEn": "Complete hand-off including the realignment, CSM course, analgesia times and the SMR reason",
+       "actionZh": "完整交接，包括复位、CSM 变化、镇痛时间和做 SMR 的理由",
+       "weight": 5,
+       "rubricRef": "hand-off-report"
+      },
+      {
+       "actionEn": "Accurate PCR within 5 minutes",
+       "actionZh": "5 分钟内完成准确 PCR",
+       "weight": 5,
+       "rubricRef": "documentation"
+      }
+     ]
+    }
+   ],
+   "vitalsSets": [
+    {
+     "set": 1,
+     "timeHint": "baseline, before analgesia",
+     "gcs": "15 (E4V5M6)",
+     "bp": "136/84",
+     "pulse": "108 strong regular",
+     "resp": "22 regular",
+     "skin": "pink warm dry",
+     "pupils": "PERL 4 mm",
+     "spo2": "97% RA",
+     "bgl": null,
+     "temp": null
+    },
+    {
+     "set": 2,
+     "timeHint": "after analgesia, realignment and splinting",
+     "gcs": "15 (E4V5M6)",
+     "bp": "128/80",
+     "pulse": "90 strong regular",
+     "resp": "18 regular",
+     "skin": "pink warm dry",
+     "pupils": "PERL 4 mm",
+     "spo2": "98% on O2",
+     "bgl": null,
+     "temp": null
+    }
+   ],
+   "criticalPitfallsEn": [
+    "Clearing the neck because 'it was only a chair' - the low fall only means no Canadian C-Spine high-risk factor; the 8/10 tib/fib is a major distracting injury, so NEXUS cannot clear him; failing to take C-spine control when indicated is a 100% deduction",
+    "Realigning or splinting before the Entonox when it is indicated - 100% (Appendix A, item 6)",
+    "Acetaminophen and ibuprofen without Entonox - 25%; Entonox without the orals - 10%",
+    "Splinting the pulseless limb as found without the one realignment attempt, or making more than one attempt",
+    "Not checking circulation, sensation and function before and after realignment and splinting - fracture-management deduction",
+    "Taking the collar off because the pain has settled - he is on Entonox and the leg still hurts; the neck was never cleared",
+    "Giving ibuprofen without asking about anticoagulants, ulcers, GI bleeding and NSAID allergy"
+   ],
+   "criticalPitfallsZh": [
+    "因为「只是从椅子上摔下来」就排除颈椎——摔得低只说明没有加拿大颈椎规则的高危因素；8/10 的胫腓骨骨折是严重的分散注意力损伤，NEXUS 无法排除；有指征却不做 C-spine 控制扣 100%",
+    "有指征时，在 Entonox 之前复位或上夹板——扣 100%（附录 A 第 6 条）",
+    "给了对乙酰氨基酚和布洛芬却不给 Entonox——扣 25%；给了 Entonox 却不给两种口服药——扣 10%",
+    "不尝试那一次复位，就按原样固定无脉的肢体；或者尝试不止一次",
+    "复位和夹板前后不查循环、感觉与活动——骨折处理扣分",
+    "因为疼痛缓解了就摘颈托——他在吸 Entonox，腿仍在疼，颈椎从未被排除",
+    "不问抗凝药、溃疡、消化道出血和非甾体抗炎药过敏就给布洛芬"
+   ],
+   "emrVariantEn": "EMR runs the same call: manual head stabilization, collar and spinal device, one realignment of the pulseless limb (an all-licence-level intervention), splinting, oxygen, and the same analgesia - oral acetaminophen and ibuprofen for pain are within EMR licence, plus Entonox before the realignment. No Functional Enquiry.",
+   "emrVariantZh": "EMR 处理同样的病例：徒手固定头颈、颈托和脊柱固定装置、对无脉肢体复位一次（所有执照级别都可做）、夹板、给氧，以及同样的镇痛——口服对乙酰氨基酚和布洛芬镇痛在 EMR 执照范围内，再加复位前的 Entonox。无功能问诊。",
+   "pcpVariantEn": "PCP runs the same sequence and adds the 9-system Functional Enquiry. IV access is not required for an isolated closed fracture with no shock.",
+   "pcpVariantZh": "PCP 按同样的顺序处理，并加做 9 系统功能问诊。孤立闭合骨折、无休克，不需要建立静脉通路。",
+   "handoffModelEn": "This is a 34-year-old male who fell from a kitchen chair, a seat about 45 centimetres high, at about 1602, landing on his left leg. No head strike, no loss of consciousness. He has a closed, angulated mid-shaft left tib-fib fracture. On our arrival the left foot was cool, dusky and pulseless. After baseline vitals he had acetaminophen 1,000 mg and ibuprofen 400 mg PO at 1618 and self-administered Entonox from 1619; one realignment at 1622 restored a weak dorsalis pedis pulse, and it has stayed present through splinting and every move since. Pain 8 out of 10 down to 3. His right knee is bruised and tender, CSM intact. He has no neck pain or midline tenderness, but with a distracting fracture NEXUS could not clear his neck, so he is in spinal motion restriction. Initial vitals BP 136/84, pulse 108, resps 22, SpO2 97 percent; latest BP 128/80, pulse 90, SpO2 98 percent on oxygen. No history, no medications, no allergies, ate at 1230.",
+   "handoffModelZh": "患者 34 岁男性，约 16:02 从厨房椅子（椅面约 45 厘米高）上摔下，左腿着地。头部未撞击，无意识丧失。左胫腓骨中段闭合性骨折伴成角。我们到达时左足发凉、发暗、无脉。测完基础生命体征后，16:18 口服对乙酰氨基酚 1,000 mg 和布洛芬 400 mg，16:19 起自控吸入 Entonox；16:22 复位一次，足背动脉微弱恢复，夹板固定及此后每次搬动都保持可及。疼痛由 8/10 降至 3/10。右膝瘀青压痛，CSM 正常。他颈部不疼、中线无压痛，但有分散注意力的骨折，NEXUS 无法排除颈椎，因此已做脊柱运动限制。首组生命体征血压 136/84、脉搏 108、呼吸 22、SpO2 97%；末组血压 128/80、脉搏 90、吸氧下 SpO2 98%。无既往史、无用药、无过敏，12:30 进食。",
+   "pcrKeyPoints": {
+    "cc": "Closed angulated mid-shaft left tib/fib fracture with a pulseless foot; right knee contusion",
+    "hxcc": "Fell from a kitchen chair (seat ~45 cm) at ~1602 onto the left leg; no head strike, no LOC; NEXUS cannot clear: major distracting injury",
+    "pmhx": "None; no ulcers, GI bleeding or bleeding disorder",
+    "meds": "None; no anticoagulants; no analgesics today",
+    "allergies": "NKA",
+    "treatments": [
+     "Manual head stabilization, collar, scoop to spinal device, foam blocks, head not taped",
+     "Acetaminophen 1,000 mg PO + ibuprofen 400 mg PO at 1618; Entonox self-administered from 1619",
+     "One realignment of the pulseless limb at 1622 after the Entonox: weak DP pulse restored",
+     "Padded splint, knee and ankle immobilized; cold after circulation restored",
+     "Oxygen titrated"
+    ],
+    "findings": [
+     "Left foot pulseless and dusky before realignment; weak DP pulse, pink, sensation improving after",
+     "No midline neck tenderness, but the neck was not cleared (distracting injury)",
+     "Right patella tender, no deformity, CSM intact",
+     "Pain 8/10 down to 3/10",
+     "Stable once circulation returned: non-RTC"
+    ]
+   },
+   "sheet": {
+    "dispatch": {
+     "narrativeEn": "He is conscious; his wife is with him; he says he cannot move his left leg.",
+     "narrativeZh": "患者清醒；妻子在旁；他说左腿动不了。"
+    },
+    "scene": {
+     "narrativeEn": "The patient lies on his right side between the table and the counter, holding his left shin.",
+     "narrativeZh": "患者右侧卧在餐桌和台面之间，抱着左小腿。",
+     "rows": [
+      {
+       "k": "safety",
+       "en": "Tile floor with broken glass; dog shut in the bedroom; tight space, the cot will not fit into the kitchen",
+       "zh": "瓷砖地上有碎玻璃；狗已关进卧室；空间狭窄，担架床推不进厨房"
+      },
+      {
+       "k": "patients",
+       "en": "One",
+       "zh": "单一患者"
+      },
+      {
+       "k": "bystanders",
+       "en": "His wife, kneeling beside him; she saw the chair tip",
+       "zh": "他妻子跪在旁边；她看到椅子翻倒"
+      }
+     ],
+     "noteEn": "",
+     "noteZh": ""
+    },
+    "initial": {
+     "rows": [
+      {
+       "k": "mental",
+       "en": "Alert and oriented; 'My neck's fine, it's my LEG!'",
+       "zh": "清醒、定向力正常；「我脖子没事，是我的腿！」"
+      },
+      {
+       "k": "airway",
+       "en": "Clear",
+       "zh": "通畅"
+      },
+      {
+       "k": "breathing",
+       "en": "22, regular",
+       "zh": "22 次/分、规则"
+      },
+      {
+       "k": "circulation",
+       "en": "Radial pulse 108, strong and regular",
+       "zh": "桡动脉 108 次/分、有力规则"
+      },
+      {
+       "k": "skin",
+       "en": "Pink, warm, dry",
+       "zh": "红润、温暖、干燥"
+      },
+      {
+       "k": "spo2",
+       "en": "97% RA",
+       "zh": "室内空气 97%"
+      },
+      {
+       "k": "rapid",
+       "en": "Closed mid-shaft LEFT tib/fib, angulated ~30 degrees; LEFT FOOT COOL, DUSKY, NO DP OR PT PULSE, sensation reduced, toes weak. Right knee tender, no deformity, CSM intact. Head: no injury. Neck: no midline tenderness when palpated, but his attention is all on the leg. No tingling in the hands. No other injuries",
+       "zh": "左胫腓骨中段闭合骨折，成角约 30 度；左足发凉发暗，足背和胫后动脉均摸不到，感觉减退，脚趾无力。右膝压痛、无畸形、CSM 正常。头部无损伤。颈部触诊中线无压痛，但他的注意力全在腿上。双手无麻木。无其他损伤"
+      },
+      {
+       "k": "cspine",
+       "en": "INDICATED: low fall (no CCR high-risk factor), but the 8/10 tib/fib is a major distracting injury - NEXUS cannot clear",
+       "zh": "需要固定：摔得低（无加拿大颈椎规则高危因素），但 8/10 胫腓骨骨折是严重的分散注意力损伤——NEXUS 无法排除"
+      }
+     ],
+     "noteEn": "Give findings only when assessed. After analgesia and one correct realignment a weak DP pulse returns: STABLE.",
+     "noteZh": "评估时才给出相应发现。镇痛后一次正确复位，足背动脉微弱恢复：稳定。"
+    },
+    "history": {
+     "rows": [
+      {
+       "k": "ss",
+       "en": "Reaching into the top cupboard from a kitchen chair about 8 minutes ago; the chair tipped, he landed on the left leg and 'heard it go'",
+       "zh": "约 8 分钟前站在厨房椅子上够顶柜；椅子翻倒，左腿着地，「听见它断了」"
+      },
+      {
+       "k": "o",
+       "en": "Sudden at landing",
+       "zh": "落地时突然发生"
+      },
+      {
+       "k": "p",
+       "en": "Any movement makes it worse",
+       "zh": "一动就更疼"
+      },
+      {
+       "k": "q",
+       "en": "Sharp, 'like it's snapped'",
+       "zh": "锐痛，「像断了一样」"
+      },
+      {
+       "k": "r1",
+       "en": "Stays in the shin; right knee also sore",
+       "zh": "局限在小腿；右膝也疼"
+      },
+      {
+       "k": "r2",
+       "en": "None",
+       "zh": "无"
+      },
+      {
+       "k": "r3",
+       "en": "First time",
+       "zh": "第一次"
+      },
+      {
+       "k": "s",
+       "en": "8/10 left shin, 4/10 right knee",
+       "zh": "左小腿 8/10，右膝 4/10"
+      },
+      {
+       "k": "t",
+       "en": "Constant since the fall",
+       "zh": "摔倒后持续存在"
+      },
+      {
+       "k": "assoc",
+       "en": "No head strike, no LOC; left foot 'weird and cold'",
+       "zh": "头没撞、没昏迷；左脚「怪怪的、发凉」"
+      },
+      {
+       "k": "allergies",
+       "en": "None known",
+       "zh": "无已知"
+      },
+      {
+       "k": "meds",
+       "en": "None - no blood thinners, no painkillers today",
+       "zh": "无——没吃抗凝药，今天没吃止痛药"
+      },
+      {
+       "k": "pmh",
+       "en": "None; no ulcers, no bleeding problems",
+       "zh": "无；无溃疡、无出血问题"
+      },
+      {
+       "k": "loi",
+       "en": "Lunch at 1230",
+       "zh": "12:30 午饭"
+      }
+     ],
+     "noteEn": "Actor answers.",
+     "noteZh": "由患者演员回答。"
+    },
+    "vitals": {
+     "sets": [
+      {
+       "set": 1,
+       "pain": "8/10",
+       "rxEn": "Baseline, before analgesia",
+       "rxZh": "基线，镇痛前"
+      },
+      {
+       "set": 2,
+       "pain": "8/10 → 3/10",
+       "rxEn": "After analgesia, realignment and splinting",
+       "rxZh": "镇痛、复位、夹板后"
+      }
+     ],
+     "noteEn": "Set 1 is the baseline BEFORE any analgesia (needed before Entonox). Non-RTC once the pulse returns: repeat within about 15 minutes. Recheck the left foot after every move.",
+     "noteZh": "第 1 组为任何镇痛前的基线（用 Entonox 前必须有）。脉搏恢复后为非 RTC：约 15 分钟内复测。每次搬动后复查左足。"
+    },
+    "systems": {
+     "rows": [
+      {
+       "k": "general",
+       "en": "Well",
+       "zh": "健康"
+      },
+      {
+       "k": "cns",
+       "en": "No headache or dizziness; no tingling in the hands; left foot numb and cold",
+       "zh": "无头痛头晕；双手无麻木；左足麻木发凉"
+      },
+      {
+       "k": "resp",
+       "en": "No SOB, no recent diving, no chest injury",
+       "zh": "无气促、近期未潜水、胸部无损伤"
+      },
+      {
+       "k": "cvs",
+       "en": "Heart racing from the pain",
+       "zh": "疼得心跳快"
+      },
+      {
+       "k": "gigu",
+       "en": "No ulcers, no GI bleeding",
+       "zh": "无溃疡、无消化道出血"
+      },
+      {
+       "k": "integ",
+       "en": "Skin intact over the fracture",
+       "zh": "骨折处皮肤完整"
+      },
+      {
+       "k": "msk",
+       "en": "Left shin and right knee only",
+       "zh": "只有左小腿和右膝"
+      },
+      {
+       "k": "endo",
+       "en": "None",
+       "zh": "无"
+      },
+      {
+       "k": "eent",
+       "en": "No facial injury",
+       "zh": "面部无损伤"
+      }
+     ],
+     "noteEn": "PCP only.",
+     "noteZh": "仅 PCP。"
+    },
+    "exam": {
+     "rows": [
+      {
+       "k": "headneck",
+       "en": "No injury, no midline tenderness - NEXUS still cannot clear while the leg distracts",
+       "zh": "无损伤、中线无压痛——腿部损伤仍在分散注意力，NEXUS 无法排除"
+      },
+      {
+       "k": "chest",
+       "en": "No injury, clear and equal",
+       "zh": "无损伤，呼吸音清晰对称"
+      },
+      {
+       "k": "abdomen",
+       "en": "Soft, non-tender",
+       "zh": "软、无压痛"
+      },
+      {
+       "k": "back",
+       "en": "Checked on the scoop transfer, no tenderness",
+       "zh": "铲式担架转移时检查，无压痛"
+      },
+      {
+       "k": "upper",
+       "en": "No injury, CSM intact",
+       "zh": "无损伤，CSM 正常"
+      },
+      {
+       "k": "lower",
+       "en": "Left tib/fib angulated, foot pulseless before realignment; weak DP pulse, pink after. Right patella tender, CSM intact",
+       "zh": "左胫腓骨成角，复位前足部无脉；复位后足背动脉微弱可及、转红。右髌骨压痛，CSM 正常"
+      }
+     ],
+     "noteEn": "",
+     "noteZh": ""
+    }
+   },
+   "cspine": {
+    "indicated": true,
+    "whyEn": "The fall itself is small: his feet were about 45 cm off the floor, below 3 feet, he is 34 and has no tingling, so there is no Canadian C-Spine high-risk factor. That only gets him past step 1. NEXUS still needs five clear no's, and the fifth fails: an 8 out of 10 angulated tib-fib is a major distracting injury, so his “my neck's fine” cannot be trusted. On the exam the indication is “NEXUS or Canadian C-Spine”: SMR.",
+    "whyZh": "摔法本身很轻：他脚离地约 45 厘米，不到 3 英尺，34 岁，没有发麻，所以没有加拿大颈椎规则的高危因素。这只让他过了第一步。NEXUS 还要五个都明确为「否」，第五条过不了：8/10 的成角胫腓骨骨折是严重的分散注意力损伤，他说「脖子没事」不可信。考试的指征是「NEXUS 或加拿大颈椎规则」：要做 SMR。"
+   },
+   "guidelinePages": [
+    11,
+    23,
+    25,
+    58,
+    65,
+    68
+   ]
   }
  ]
 }
