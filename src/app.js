@@ -1,13 +1,13 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=78';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=78';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=78';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=78';
-import { renderPortal } from './portal.js?v=78';
-import { renderAetClass } from './aetclass.js?v=78';
-import { renderBackup } from './backup.js?v=78';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=79';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=79';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=79';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=79';
+import { renderPortal } from './portal.js?v=79';
+import { renderAetClass } from './aetclass.js?v=79';
+import { renderBackup } from './backup.js?v=79';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -281,6 +281,7 @@ async function renderHome(el) {
       <div class="btn-row">
         <a class="btn secondary" href="#/guide">${ico('cap')} ${t('How to use / study path', '使用指南·备考路线')}</a>
         <a class="btn secondary" href="#/study">${ico('book')} ${t('Study library', '学习内容库')}</a>
+        <a class="btn secondary" href="./drugs/">${ico('pill')} ${t('Drug Drill (practice app)', '药箱（药物练习）')}</a>
         <a class="btn secondary" href="#/wrong">${ico('x')} ${t(`Wrong answers (${wrongCount})`, `错题本 (${wrongCount})`)}</a>
         <a class="btn secondary" href="#/autofails">${ico('skull')} ${t('Auto-fail traps', '直接挂科陷阱')}</a>
         <a class="btn secondary" href="#/info">${ico('info')} ${t('Exam logistics & fees', '考务流程与费用')}</a>

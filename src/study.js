@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=78';
-import { sClassroom } from './classroom.js?v=78';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=79';
+import { sClassroom } from './classroom.js?v=79';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -44,6 +44,9 @@ export async function renderStudyHub(el) {
       'Wound care, spinal, burns, CPR, environmental — every testable topic.', '伤口/脊柱/烧伤/CPR/环境急症——每个可考主题。', scopeTag(tMine, tAll)],
     ['drugs', ico('pill'), 'Drug Monographs', '药物专论',
       'Doses, contraindications, and who may give what.', '剂量、禁忌、给药权限。', scopeTag(dMine, dAll)],
+    ['./drugs/', ico('pill'), 'Drug Drill — practice app', '药箱 — 药物练习小程序',
+      'Three-minute rounds on your phone: the exam drugs, the BCEHS drugs, and the medicines patients take at home.',
+      '手机上三分钟一轮：考试药、出车药、病人在家吃的药。', ''],
     ['reference', ico('abc'), 'Reference', '速查参考',
       'Abbreviations, GCS, AVPU, history mnemonics, PCR fields.', '缩写表、GCS、AVPU、病史口诀、PCR 字段。', ''],
   ];
@@ -62,13 +65,14 @@ export async function renderStudyHub(el) {
         : `PCP 完整范围：${pAll} 个协议、${tAll} 个处置主题全部可用，药物 ${dMine}/${dAll} 在你的授权内。比 EMR 多出来的是 IV 治疗、CPAP、液体复苏和 PCP 专属药物。`)}
     </div>
     <div class="list-wrap">
-      ${cards.map(c => `<button class="list-item" data-goto="${c[0].startsWith('/') ? c[0] : '/study/' + c[0]}">
+      ${cards.map(c => `<button class="list-item" data-goto="${/^\.?\//.test(c[0]) ? c[0] : '/study/' + c[0]}">
         <span style="display:inline-flex;color:var(--accent);font-size:1.15rem">${c[1]}</span>
         <span>${bi(c[2], c[3], 'span')}<div class="tiny">${t(c[4], c[5])}</div></span>
         ${c[6]}
         <span class="li-arrow">›</span></button>`).join('')}
     </div>`;
-  el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
+  // './…' is a page of its own (the Drug Drill app), everything else is a route inside this site
+  el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { if (b.dataset.goto.startsWith('./')) location.href = b.dataset.goto; else nav(b.dataset.goto); });
 }
 
 /* ---------------- sections ---------------- */
