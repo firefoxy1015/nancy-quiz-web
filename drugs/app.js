@@ -39,6 +39,8 @@
     check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>',
     cross: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     spk: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 010 7"/></svg>',
+    back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
+    arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
     gear: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-2.8 1.2V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-2.9-1.2l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00-1.2-2.8H3a2 2 0 110-4h.1a1.7 1.7 0 001.2-2.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 002.8-1.2V3a2 2 0 114 0v.1a1.7 1.7 0 002.9 1.2l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 001.2 2.8H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>',
   };
 
@@ -50,7 +52,7 @@
     return Object.assign({ lang: null, items: {}, cards: {}, seen: {}, days: {}, streak: { n: 0, last: 0, best: 0 }, xp: 0, last: 'emalb', sound: false, blitzBest: 0 }, s);
   })();
   if (!S.lang) {
-    S.lang = 'both';
+    S.lang = 'en';
     try { const site = JSON.parse(localStorage.getItem('bcprep2') || '{}'); if (site.langChosen && site.lang) S.lang = site.lang; } catch (e) { /* keep default */ }
   }
   const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch (e) { /* private mode: play without saving */ } };
@@ -62,7 +64,7 @@
   const T = o => { // bilingual object → html for the current language mode
     if (o == null) return '';
     if (typeof o === 'string') return esc(o);
-    if (S.lang === 'en') return esc(o.en);
+    if (S.lang === 'en') return esc(o.en) + '<span class="zh">' + esc(o.zh) + '</span>';
     if (S.lang === 'zh') return esc(o.zh);
     return esc(o.en) + '<span class="zh">' + esc(o.zh) + '</span>';
   };
@@ -170,7 +172,7 @@
       case 'mcq':
         return { ui: 'opts', ask: d.q, opts: opts(d.opts[0], d.opts.slice(1)), why: d.why };
       case 'bag':
-        return { ui: 'opts', stem: d.stem, bottles: d.meds, ask: d.ask, opts: opts(d.opts[0], d.opts.slice(1)), why: d.why, bad: d.bad };
+        return { ui: 'opts', stem: d.stem, meds: d.cards.map((id, i) => ({ id, label: d.meds[i].g })), ask: d.ask, opts: opts(d.opts[0], d.opts.slice(1)), why: d.why, bad: d.bad };
       case 'chips': {
         const list = (c.no || []).filter(x => !/^(none\b|no (absolute |listed |known )?contraindication)/i.test(x.en)); // "None noted" is a statement, not something to tap
         const real = shuffle(list.filter(x => x.key)).concat(shuffle(list.filter(x => !x.key))).slice(0, 3);
@@ -201,7 +203,7 @@
       case 'tells': {
         if (!c.tells || !c.tellsFake || c.tellsFake.length < 3) return null;
         const ex = pick(c.examples);
-        return { ui: 'opts', bottles: [ex],
+        return { ui: 'opts', meds: [{ id: c.id, label: ex.g + (ex.b ? ' · ' + ex.b : '') }],
           ask: { en: `You find ${ex.g}${ex.b ? ` (${ex.b})` : ''} in the patient's bag. They most likely have…`, zh: `你在病人的药袋里看到 ${ex.g} ${ex.zh}${ex.b ? `（${ex.b}）` : ''}。病人最可能有…` },
           opts: opts(pick(c.tells), shuffle(c.tellsFake).slice(0, 3)),
           why: { en: `${c.name}: ` + c.tells.map(u => u.en).join(', ') + '.', zh: `${c.zh}：` + c.tells.map(u => u.zh).join('、') + '。' } };
@@ -293,6 +295,7 @@
   }
 
   /* ---------------- views ---------------- */
+  // Sticker-book design (2026-11-18): dot-grid paper, one real object per screen, BC ambulance Battenburg check as the one loud motif.
   const app = document.getElementById('app');
   function go(hash) { if (location.hash === hash) render(); else location.hash = hash; }
   function route() { const h = location.hash.replace(/^#\/?/, ''); const seg = h.split('/'); return { name: seg[0] || 'home', a: seg[1], b: seg[2] }; }
@@ -307,136 +310,154 @@
     if (r.name === 'settings') return viewSettings();
     viewHome();
   }
-  const topbar = (title, back) => `<div class="top">${back ? `<button class="back" data-go="${back}">‹ ${inl('Back', '返回')}</button>` : ''}<h1>${title}</h1>
-    <button class="iconbtn" data-act="lang" aria-label="Language">${S.lang === 'both' ? 'EN中' : S.lang === 'en' ? 'EN' : '中'}</button>
-    <button class="iconbtn" data-go="#/settings" aria-label="Settings">${I.gear}</button></div>`;
-
+  const NUM = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+  const tilt = id => { let h = 0; for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) | 0; return (Math.abs(h) % 11) - 5; };
+  const stk = (id, cls = '', style = '') => `<img class="stk ${cls}" src="img/${esc(id)}.webp" alt="" draggable="false" style="--r:${tilt(id)}deg;${style}" onerror="this.style.visibility='hidden'">`;
+  const zhChip = () => S.lang === 'en' ? `<button class="zhchip" data-act="peek" aria-label="Show Chinese">中文</button>` : '';
+  const rawT = o => S.lang === 'zh' ? o.zh : S.lang === 'both' ? o.en + '<span class="zh">' + o.zh + '</span>' : o.en + '<span class="zh">' + o.zh + '</span>';
+  const head = (title, back) => `<header class="top">${back ? `<button class="iconbtn back" data-go="${back}" aria-label="Back">${I.back}</button>` : ''}<div class="top-t">${title}</div><button class="iconbtn" data-go="#/settings" aria-label="Settings">${I.gear}</button></header>`;
+  const deckName = dk => inl(DK[dk].en, DK[dk].zh);
   function deckStats(dk) {
     const cards = deckCards(dk), seen = cards.filter(c => S.seen[key(c)]);
     const m = cards.length ? cards.reduce((s, c) => s + mastery(c), 0) / cards.length : 0;
     return { n: cards.length, seen: seen.length, m, due: dueCards(cards).length };
   }
+  const meter = (pct, cls = '') => `<span class="meter ${cls}"><i style="width:${Math.max(pct ? 3 : 0, Math.round(pct))}%"></i></span>`;
+
   function viewHome() {
-    const t = today(), d = S.days[t] || { q: 0, ok: 0 }, st = curStreak();
-    const week = [6, 5, 4, 3, 2, 1, 0].map(i => `<i class="${(S.days[t - i] || {}).q >= ROUND ? 'on' : ''}"></i>`).join('');
-    const live = DECK_ORDER.filter(k => deckCards(k).length);
-    const mostDue = live.map(k => [deckStats(k).due, k]).sort((x, y) => y[0] - x[0])[0];
-    const last = mostDue && mostDue[0] > 0 ? mostDue[1] : (live.includes(S.last) ? S.last : live[0]);
-    const ls = deckStats(last);
-    const ctaSub = ls.due ? inl(`${ls.due} drug${ls.due > 1 ? 's' : ''} to review`, `${ls.due} 个药待复习`) : ls.seen < ls.n ? inl('a new drug is waiting', '有新药等你') : inl('keep it sharp', '保持手感');
-    let h = topbar(`Drug Drill <small>药箱</small>`) + `<main>
-      <div class="hero">
-        <div class="ring" style="--p:${Math.min(100, Math.round(d.q / GOAL * 100))}"><div><div><b>${d.q}</b><span>/ ${GOAL}</span></div></div></div>
-        <div class="hero-txt">
-          <div class="streak"><span class="flame ${st ? '' : 'off'}">${I.flame}</span>${st} ${inl('day streak', '天连续')}</div>
-          <p>${d.q >= GOAL ? tx('Goal done. Anything more is a bonus.', '今天的目标完成了，再练都是赚的。') : d.q ? tx(`${GOAL - d.q} more to hit today's goal.`, `再做 ${GOAL - d.q} 题就达标。`) : tx('Ten questions is one round. About three minutes.', '一轮 10 题，大约 3 分钟。')}</p>
-          <div class="week">${week}</div>
-        </div>
+    const st = curStreak(), live = DECK_ORDER.filter(k => deckCards(k).length);
+    const stats = Object.fromEntries(live.map(k => [k, deckStats(k)]));
+    const dueAll = live.reduce((s, k) => s + stats[k].due, 0);
+    const mostDue = live.map(k => [stats[k].due, k]).sort((x, y) => y[0] - x[0])[0];
+    const deck = mostDue && mostDue[0] > 0 ? mostDue[1] : (live.includes(S.last) ? S.last : live[0]);
+    const fresh = deckCards(deck).find(c => !S.seen[key(c)]);
+    let pile = dueCards(deckCards(deck)).slice(0, 3);
+    if (pile.length < 3 && fresh) pile.push(fresh);
+    for (const c of deckCards(deck)) { if (pile.length >= 3) break; if (!pile.includes(c)) pile.push(c); }
+    const title = dueAll
+      ? { en: `${NUM[dueAll] || dueAll} drug${dueAll > 1 ? 's are' : ' is'} due <em>today</em>.`, zh: `今天有 <em>${dueAll}</em> 个药要复习。` }
+      : fresh ? { en: 'A new drug is <em>waiting</em>.', zh: '有一个<em>新药</em>在等你。' }
+        : { en: 'All caught up. Keep it <em>sharp</em>.', zh: '都复习完了，<em>保持手感</em>。' };
+    const slots = [
+      { s: 'left:2%;top:96px', mh: 150, mw: 210, tag: 'left:6%;top:250px' },
+      { s: 'left:34%;top:6px', mh: 210, mw: 150, tag: 'left:38%;top:214px' },
+      { s: 'right:2%;top:24px', mh: 180, mw: 150, tag: 'right:5%;top:196px' },
+    ];
+    const date = new Date().toLocaleDateString(S.lang === 'zh' ? 'zh-CN' : 'en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
+    let h = `<header class="top home-top"><span class="date">${esc(date)}</span><span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st} ${inl(st === 1 ? 'day' : 'days', '天')}</span><button class="iconbtn" data-go="#/settings" aria-label="Settings">${I.gear}</button></header>
+      <main class="home">
+      <h1 class="h1">${rawT(title)}</h1>
+      <div class="pile">${pile.map((c, i) => `<img class="stk" src="img/${esc(c.id)}.webp" alt="" draggable="false" style="position:absolute;${slots[i].s};max-height:${slots[i].mh}px;max-width:${slots[i].mw}px;--r:${[-12, -4, 9][i]}deg" onerror="this.style.visibility='hidden'"><span class="tag" style="${slots[i].tag};--r:${[-4, 3, 5][i]}deg">${esc(short(c.name))}</span>`).join('')}</div>
+      <button class="go" data-act="start" data-deck="${deck}"><span>${inl('Start a round', '开始一轮')}<small>${deckName(deck)} · ${inl('10 questions, about 3 minutes', '10 题，大约 3 分钟')}</small></span><span class="arrow">${I.arrow}</span></button>
+      <div class="shelves">${live.map(k => { const s = stats[k]; return `<button class="shelf" data-go="#/deck/${k}"><b>${deckName(k)}</b>${s.due ? `<span class="due">${s.due}</span>` : ''}<span class="cnt">${s.seen} / ${s.n}</span>${meter(s.seen / s.n * 100)}</button>`; }).join('')}</div>
+      <div class="games">
+        <button class="game" data-act="blitz"><span class="gi">${I.bolt}</span><b>${inl('60-second blitz', '60 秒快答')}</b><span>${S.blitzBest ? inl(`Best: ${S.blitzBest}`, `最高 ${S.blitzBest}`) : inl('True or false, fast', '对还是错，越快越好')}</span></button>
+        ${(D.bags || []).length ? `<button class="game" data-act="bags"><img class="gimg" src="img/beta-blockers.webp" alt=""><b>${inl('Med bag detective', '药袋侦探')}</b><span>${inl('Read the bottles', '看药瓶，猜病人')}</span></button>` : ''}
       </div>
-      <div class="cta d-${last}"><button class="btn" data-act="start" data-deck="${last}">${tx('Start a round', '开始一轮')}<span class="zh" style="font-size:13px">${esc(S.lang === 'zh' ? DK[last].zh : DK[last].en)} · ${ctaSub}</span></button></div>
-      <input class="search" id="q" type="search" placeholder="${inl('Find a drug', '查一个药')}" autocomplete="off" />
-      <div id="found"></div><div id="shelves">
-      <div class="sect">${inl('Three medicine shelves', '三个药柜')}</div>`;
-    for (const dk of DECK_ORDER) {
-      const s = deckStats(dk); if (!s.n) continue;
-      h += `<div class="deck d-${dk}"><div class="deck-h"><div class="deck-ico">${I[DK[dk].ico]}</div>
-        <div class="deck-t"><b>${tx(DK[dk].en, DK[dk].zh)}</b><span>${T(DK[dk].sub)}</span></div>${s.due ? `<span class="due">${s.due}</span>` : ''}</div>
-        <div class="bar"><i style="width:${Math.round(s.m * 100)}%"></i></div>
-        <div class="deck-f"><span>${inl(`${s.seen} of ${s.n} learned`, `已学 ${s.seen}/${s.n}`)}</span><b>${Math.round(s.m * 100)}%</b></div>
-        <div class="deck-btns"><button class="btn small" data-act="start" data-deck="${dk}">${inl('Practice', '练习')}</button><button class="btn ghost small" data-go="#/deck/${dk}">${inl('Browse', '看药卡')}</button></div></div>`;
-    }
-    h += `<div class="sect">${inl('Quick games', '小游戏')}</div><div class="games">
-      <button class="game d-bcehs" data-act="blitz"><div class="gi">${I.bolt}</div><b>${inl('60-second blitz', '60 秒快答')}</b><span>${tx('True or false, as fast as you can.', '对还是错，越快越好。')}${S.blitzBest ? ` ${inl('Best', '最高')} ${S.blitzBest}` : ''}</span></button>
-      ${(D.bags || []).length ? `<button class="game d-home" data-act="bags"><div class="gi">${I.bag}</div><b>${inl('Med bag detective', '药袋侦探')}</b><span>${tx('Read the bottles, read the patient.', '看药瓶，猜病人。')}</span></button>` : ''}
-      </div>
-      <p class="foot">${tx('Sources: EMALB Provincial Examination Guidelines (June 2026), BCEHS Clinical Practice Guidelines drug monographs, Nancy Caroline’s Emergency Care in the Streets. A study aid. On the road, the current BCEHS guideline and medical oversight decide.',
-        '资料来源：EMALB 省考考纲（2026 年 6 月）、BCEHS 临床指南药物专论、Nancy Caroline 教材。这是学习工具，出车以现行 BCEHS 指南和医疗监督为准。')}<br><a href="../">${inl('Back to the main site', '回主站')}</a></p></div></main>`;
+      <input class="search" id="q" type="search" placeholder="${inl('Find a drug or a pill', '查一个药')}" autocomplete="off" />
+      <div id="found"></div>
+      <p class="foot">${tx('Sources: EMALB Provincial Examination Guidelines (June 2026), BCEHS drug monographs, Nancy Caroline’s Emergency Care in the Streets. A study aid. On the road, the current BCEHS guideline and medical oversight decide.',
+        '资料来源：EMALB 省考考纲（2026 年 6 月）、BCEHS 药物专论、Nancy Caroline 教材。这是学习工具，出车以现行 BCEHS 指南和医疗监督为准。')}<br><a href="../">${inl('Back to the main site', '回主站')}</a></p>
+      </main>`;
     app.innerHTML = h;
     $('#q').addEventListener('input', e => {
-      const q = e.target.value.trim().toLowerCase(), found = $('#found'), shelves = $('#shelves');
-      if (!q) { found.innerHTML = ''; shelves.style.display = ''; return; }
+      const q = e.target.value.trim().toLowerCase(), found = $('#found');
+      if (!q) { found.innerHTML = ''; return; }
       const hay = c => (c.name + ' ' + c.zh + ' ' + (c.brand || []).join(' ') + ' ' + (c.examples || []).map(x => x.g + ' ' + x.zh + ' ' + x.b).join(' ') + ' ' + (c.stem || '')).toLowerCase();
       const hits = DECK_ORDER.flatMap(deckCards).filter(c => hay(c).includes(q)).slice(0, 12);
-      shelves.style.display = 'none';
-      found.innerHTML = hits.length ? `<div class="grid" style="margin-top:12px">${hits.map(c => `<div class="d-${c.deck}" style="display:contents">${tile(c, true)}</div>`).join('')}</div>`
-        : `<p class="muted" style="text-align:center;margin:24px 0">${inl('Nothing by that name.', '没找到这个名字。')}</p>`;
+      found.innerHTML = hits.length ? `<div class="hits">${hits.map(c => `<button class="hit" data-go="#/card/${key(c)}">${stk(c.id, 'thumb')}<span><b>${esc(c.name)}</b><small>${esc(c.zh)} · ${inl(DK[c.deck].tag.en, DK[c.deck].tag.zh)}</small></span></button>`).join('')}</div>`
+        : `<p class="muted center">${inl('Nothing by that name.', '没找到这个名字。')}</p>`;
     });
   }
 
-  function tile(c, tag) {
-    const seen = S.seen[key(c)], m = mastery(c);
-    return `<button class="tile ${seen ? '' : 'new'}" data-go="#/card/${key(c)}">${tag ? `<span class="pill" style="align-self:flex-start;margin-bottom:6px">${inl(DK[c.deck].tag.en, DK[c.deck].tag.zh)}</span>` : ''}<b>${esc(c.name)}</b><span class="nzh">${esc(c.zh)}</span>
-      <span class="stars">${seen ? stars(m) : `<span class="lock">${inl('NEW', '未学')}</span>`}</span><i class="fill" style="width:${Math.round(m * 100)}%"></i></button>`;
+  function slot(c) {
+    const seen = S.seen[key(c)];
+    return `<button class="slot ${seen ? '' : 'unseen'}" data-go="#/card/${key(c)}"><span class="slot-img">${stk(c.id)}</span><span class="slot-name">${esc(short(c.name))}</span><span class="slot-stars">${seen ? stars(mastery(c)) : `<em>${inl('new', '未学')}</em>`}</span></button>`;
   }
   function viewDeck(dk) {
     const cards = deckCards(dk), s = deckStats(dk);
-    let h = topbar(tx(DK[dk].en, DK[dk].zh), '#/') + `<main class="d-${dk}">
-      <div class="cta" style="margin-top:4px"><button class="btn" data-act="start" data-deck="${dk}">${tx('Practice this shelf', '练这个药柜')}<span class="zh" style="font-size:13px">${inl(`${s.seen} of ${s.n} learned`, `已学 ${s.seen}/${s.n}`)}${s.due ? ' · ' + inl(`${s.due} drug${s.due > 1 ? 's' : ''} to review`, `${s.due} 个药待复习`) : ''}</span></button></div>`;
+    let h = head(deckName(dk), '#/') + `<main class="deckpage">
+      <p class="deck-sub">${T(DK[dk].sub)}</p>
+      <button class="go" data-act="start" data-deck="${dk}"><span>${inl('Practice this shelf', '练这个药柜')}<small>${inl(`${s.seen} of ${s.n} learned`, `已学 ${s.seen}/${s.n}`)}${s.due ? ' · ' + inl(`${s.due} due`, `${s.due} 个待复习`) : ''}</small></span><span class="arrow">${I.arrow}</span></button>`;
     if (dk === 'home') {
       for (const g of Object.keys(GROUPS)) {
         const cs = cards.filter(c => c.group === g); if (!cs.length) continue;
-        h += `<div class="grp">${inl(GROUPS[g][0], GROUPS[g][1])}</div><div class="grid">${cs.map(tile).join('')}</div>`;
+        h += `<h2 class="grp">${inl(GROUPS[g][0], GROUPS[g][1])}</h2><div class="book">${cs.map(slot).join('')}</div>`;
       }
-    } else h += `<div class="grid">${cards.map(tile).join('')}</div>`;
+    } else h += `<div class="book">${cards.map(slot).join('')}</div>`;
     app.innerHTML = h + '</main>';
   }
 
-  const li = (arr, cls) => (arr || []).map(x => `<li class="${cls && x.key ? 'key' : ''}">${x.who && x.who !== 'all' ? `<span class="who">${inl(x.who === 'adult' ? 'Adult' : 'Child', x.who === 'adult' ? '成人' : '儿童')}</span>` : ''}${T(x)}</li>`).join('');
-  const sec = (en, zh, arr, cls = '') => arr && arr.length ? `<div class="sec ${cls}"><h3>${inl(en, zh)}</h3><ul>${li(arr, cls)}</ul></div>` : '';
-  const bottles = exs => `<div class="bottles">${exs.map(e => `<div class="bottle"><b>${esc(e.g)}</b><span>${esc(e.zh)}${e.b ? ' · ' + esc(e.b) : ''}</span></div>`).join('')}</div>`;
-  function cardHead(c) {
-    const lvl = c.lvl ? `<span class="pill grey">${esc(c.lvl === 'ACP' ? 'ACP+' : c.lvl + '+')}</span>` : '';
-    const noExam = c.deck === 'bcehs' && !CARD['emalb/' + c.id] ? ` <span class="pill grey">${inl('Not on the exam', '执照考试不考')}</span>` : '';
-    return `<span class="pill">${inl(DK[c.deck].tag.en, DK[c.deck].tag.zh)}</span> ${lvl}${noExam}
-      <div class="dname" style="margin-top:8px">${esc(c.name)}</div><div class="dzh">${esc(c.zh)}${c.brand && c.brand.length ? ' · ' + esc(c.brand.join(', ')) : ''}</div>
-      ${c.say ? `<button class="say" data-say="${esc(c.name)}">${I.spk}<span>${esc(c.say)}</span></button>` : ''}
-      ${c.stem ? `<div><span class="stemtag">${esc(c.stem)}</span></div>` : ''}`;
-  }
-  function cardBody(c, part) { // part: 0 what, 1 when/how much, 2 never/careful, undefined = everything
-    const all = part === undefined; let h = '';
-    if (all || part === 0) {
-      h += `<div class="hook">${T(c.hook)}</div><div class="how">${T(c.how)}</div><div style="margin-top:10px"><span class="pill grey">${T(c.cls).replace('<span class="zh">', ' <span>')}</span></div>`;
-      if (isHome(c)) h += bottles(c.examples);
-    }
-    if (all || part === 1) {
-      if (isHome(c)) h += sec('If you find it, the patient probably has', '看到它，病人多半有', c.tells) + sec('What it does for them', '它在治什么', c.use) + (c.medic ? `<div class="note"><h3>${inl('What it changes for you', '对你意味着什么')}</h3><ul style="margin:0;padding-left:18px">${c.medic.map(m => `<li style="margin:6px 0">${T(m)}</li>`).join('')}</ul></div>` : '');
-      else h += sec('Give it for', '什么时候给', c.use) + sec('Dose', '剂量', c.dose) + (c.pk ? `<p class="tiny muted" style="margin:10px 0 0">${T(c.pk)}</p>` : '');
-    }
-    if (all || part === 2) {
-      h += sec(isHome(c) ? 'Should not be used with' : 'Never give if', isHome(c) ? '这些情况不该用' : '这些情况绝对不给', c.no, 'never') + sec('Be careful', '要小心', c.care) + sec('Side effects', '副作用', c.fx);
-      if (c.pearl) h += `<div class="note"><h3>${inl('Teacher says', '老师说')}</h3>${T(c.pearl)}</div>`;
-      if (c.diff) h += `<div class="note diff"><h3>${inl(c.deck === 'emalb' ? 'Exam vs the road' : 'The road vs the exam', c.deck === 'emalb' ? '考试和出车的差别' : '出车和考试的差别')}</h3>${T(c.diff)}</div>`;
-    }
-    if (all) h += `<p class="srcline">${esc(c.src || '')}</p>`;
-    return h;
-  }
+  // pharmacy-label block: the dose and the hard stops, set like a dispensing label
+  const whoTag = x => x.who && x.who !== 'all' ? `<span class="who">${inl(x.who === 'adult' ? 'ADULT' : 'CHILD', x.who === 'adult' ? '成人' : '儿童')}</span>` : '';
+  const label = (left, right, items, stop) => items && items.length ? `<div class="label ${stop ? 'stop' : ''}"><div class="lh"><span>${left}</span><span>${right || ''}</span></div>${items.map(x => `<div class="ll ${x.key ? 'key' : ''}">${whoTag(x)}<span>${T(x)}</span></div>`).join('')}</div>` : '';
+  const list = (en, zh, arr) => arr && arr.length ? `<section class="sec"><h3>${inl(en, zh)}</h3><ul>${arr.map(x => `<li>${T(x)}</li>`).join('')}</ul></section>` : '';
+  const note = (en, zh, body, cls = '') => body ? `<div class="note ${cls}"><h3>${inl(en, zh)}</h3>${T(body)}</div>` : '';
+  const pills = c => {
+    const lvl = c.lvl ? `<span class="pill">${esc(c.lvl === 'ACP' ? 'BCEHS: ACP+' : c.lvl + '+')}</span>` : '';
+    const noExam = c.deck === 'bcehs' && !CARD['emalb/' + c.id] ? `<span class="pill">${inl('Not on the exam', '执照考试不考')}</span>` : '';
+    return lvl || noExam ? `<div class="pills">${lvl}${noExam}</div>` : '';
+  };
+  const nameBlock = c => `<div class="dname">${esc(c.name)}</div><div class="dzh">${esc(c.zh)}${c.brand && c.brand.length ? ' · ' + esc(c.brand.join(', ')) : ''}</div>
+    <div class="namerow">${c.say ? `<button class="say" data-say="${esc(c.name)}">${I.spk}<span>${esc(c.say)}</span></button>` : ''}${c.stem ? `<span class="stemtag">${esc(c.stem)}</span>` : ''}</div>`;
+  const examples = c => c.examples ? `<div class="exs">${c.examples.map(e => `<span><b>${esc(e.g)}</b> ${esc(e.zh)}${e.b ? ` <i>${esc(e.b)}</i>` : ''}</span>`).join('')}</div>` : '';
+  const neverLabel = (c, onlyKey) => {
+    const arr = (c.no || []).filter(x => !onlyKey || x.key);
+    const shown = arr.length ? arr : (c.no || []);
+    return label(isHome(c) ? inl('SHOULD NOT BE USED WITH', '这些情况不该用') : inl('NEVER GIVE IF', '这些情况绝对不给'), '', shown, true);
+  };
   function viewCard(c) {
     const twinDeck = c.deck === 'emalb' ? 'bcehs' : c.deck === 'bcehs' ? 'emalb' : null;
     const sib = twinDeck && CARD[twinDeck + '/' + c.id];
     const tabs = sib ? `<div class="tabs">${['emalb', 'bcehs'].map(dk => `<button class="${dk === c.deck ? 'on' : ''}" data-go="#/card/${dk}/${c.id}">${inl(DK[dk].tag.en, DK[dk].tag.zh)}</button>`).join('')}</div>` : '';
-    app.innerHTML = topbar('', '#/deck/' + c.deck) + `<main class="d-${c.deck}">${tabs}<div class="dcard">${cardHead(c)}${cardBody(c)}</div>
-      <div class="stick"><button class="btn" data-act="startcard" data-card="${key(c)}">${tx('Practice this one', '就练这个')}</button></div></main>`;
+    let b = `<div class="cardhero">${stk(c.id, 'big')}</div>${nameBlock(c)}${pills(c)}<p class="hook">${T(c.hook)}</p><p class="how">${T(c.how)}</p><p class="cls">${T(c.cls)}</p>`;
+    if (isHome(c)) {
+      b += examples(c) + list('If you find it, the patient probably has', '看到它，病人多半有', c.tells) + list('What it does for them', '它在治什么', c.use)
+        + (c.medic ? `<div class="note"><h3>${inl('What it changes for you', '对你意味着什么')}</h3><ul>${c.medic.map(m => `<li>${T(m)}</li>`).join('')}</ul></div>` : '')
+        + neverLabel(c) + list('Be careful', '要小心', c.care) + list('Side effects', '副作用', c.fx);
+    } else {
+      b += list('Give it for', '什么时候给', c.use) + label(esc(short(c.name).toUpperCase()), inl(DK[c.deck].tag.en.toUpperCase(), DK[c.deck].tag.zh), c.dose)
+        + (c.pk ? `<p class="pk">${T(c.pk)}</p>` : '') + neverLabel(c) + list('Be careful', '要小心', c.care) + list('Side effects', '副作用', c.fx);
+    }
+    b += note('Teacher says', '老师说', c.pearl, 'teacher');
+    if (c.diff) b += note(c.deck === 'emalb' ? 'Exam vs the road' : 'The road vs the exam', c.deck === 'emalb' ? '考试和出车的差别' : '出车和考试的差别', c.diff, 'diff');
+    b += `<p class="srcline">${esc(c.src || '')}</p>`;
+    app.innerHTML = head('', '#/deck/' + c.deck) + `<main class="cardpage"><div class="cardtools">${tabs}<span class="sp"></span>${zhChip()}</div>${b}
+      <div class="stick"><button class="go" data-act="startcard" data-card="${key(c)}"><span>${inl('Practice this one', '就练这个')}</span><span class="arrow">${I.arrow}</span></button></div></main>`;
   }
 
   /* ---------------- play ---------------- */
-  function progress() { const done = R.i, n = R.steps.length; return Math.round(done / n * 100); }
-  const playTop = extra => `<div class="play-top"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button><div class="prog"><i style="width:${Math.max(4, progress())}%"></i></div>${extra || `<span class="combo">${R.combo >= 2 ? '×' + R.combo : ''}</span>`}</div>`;
+  const segs = () => {
+    const n = R.steps.length;
+    if (n > 18) return `<div class="segs cont">${meter(R.i / n * 100)}</div>`;
+    return `<div class="segs">${R.steps.map((s, i) => `<i class="${i < R.i ? 'on' : i === R.i ? 'now' : ''}"></i>`).join('')}</div>`;
+  };
+  const playTop = extra => `<div class="bar"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button>${segs()}${extra === undefined ? `<span class="combo">${R.combo >= 2 ? '×' + R.combo : ''}</span>` : extra}</div>`;
+  const HIDE_NAME = ['hook', 'stem', 'brand'];
   function viewPlay() {
+    app.classList.remove('peek');
     if (R.i >= R.steps.length) return viewDone();
     const st = R.steps[R.i];
     if (st.t === 'learn') return viewLearn(st);
     const it = st.item, c = it.card, q = st.q || (st.q = build(it));
     if (!q) { R.i++; return viewPlay(); }
-    let h = playTop() + `<div class="stage d-${c.deck}"><div class="qhead"><span class="pill">${inl(DK[c.deck].tag.en, DK[c.deck].tag.zh)}</span><span class="qdrug">${nameHtml(c)}</span>${st.retry ? `<span class="pill grey">${inl('Again', '再来一次')}</span>` : ''}</div>`;
-    if (q.stem) h += `<div class="stem">${T(q.stem)}</div>`;
-    if (q.bottles) h += bottles(q.bottles);
+    const hide = HIDE_NAME.includes(it.type), call = ['gh', 'pick', 'bag'].includes(it.type);
+    const what = hide || it.type === 'bag' ? inl(DK[c.deck].tag.en, DK[c.deck].tag.zh) : esc(short(c.name)) + ' · ' + inl(DK[c.deck].tag.en, DK[c.deck].tag.zh);
+    let h = playTop() + `<div class="stage">
+      <div class="qhd">${call ? '<i class="dot"></i>' : ''}<span>${call ? inl('Call', '出车') + ' · ' : ''}${what}</span>${st.retry ? `<span class="again">${inl('again', '再来')}</span>` : ''}<span class="sp"></span>${zhChip()}</div>`;
+    if (q.stem) h += `<div class="bubble">${T(q.stem)}</div>`;
+    if (q.meds) h += `<div class="medrow">${q.meds.map(m => `<span class="med">${stk(m.id, 'mid')}<span class="tag">${esc(m.label)}</span></span>`).join('')}</div>`;
     if (q.quote) h += `<div class="quote">${T(q.quote)}</div>`;
-    h += `<div class="ask">${T(q.ask)}</div>`;
-    if (q.ui === 'opts') h += `<div class="opts">${q.opts.map((o, i) => `<button class="opt" data-ans="${i}">${T(o.t)}</button>`).join('')}</div><div class="spacer"></div>`;
-    if (q.ui === 'chips') h += `<div class="chips">${q.chips.map((o, i) => `<button class="chip" data-chip="${i}">${T(o.t)}</button>`).join('')}</div><div class="spacer"></div><div id="chk"><button class="btn" data-act="check" disabled>${tx('Check', '检查')}</button></div>`;
-    if (q.ui === 'two') h += q.mode === 'gh'
-      ? `<div class="two"><button class="give" data-two="1">${tx('Give', '给')}</button><button class="hold" data-two="0">${tx('Hold', '不给')}</button></div>`
-      : `<div class="two"><button class="tr" data-two="1">${tx('True', '对')}</button><button class="fa" data-two="0">${tx('False', '错')}</button></div>`;
+    if (q.ui === 'two') {
+      h += `<div class="herostk">${hide ? '' : stk(c.id, 'hero')}<span class="stamp" hidden></span></div><div class="ask center">${T(q.ask)}</div>`;
+      h += q.mode === 'gh'
+        ? `<div class="two"><button class="give" data-two="1">${inl('Give', '给')}</button><button class="hold" data-two="0">${inl('Hold', '不给')}</button></div>`
+        : `<div class="two"><button class="give" data-two="1">${inl('True', '对')}</button><button class="hold" data-two="0">${inl('False', '错')}</button></div>`;
+    } else {
+      h += `<div class="askrow"><div class="ask">${T(q.ask)}</div>${hide || q.meds ? '' : stk(c.id, 'mini')}</div>`;
+      if (q.ui === 'opts') h += `<div class="opts">${q.opts.map((o, i) => `<button class="opt" data-ans="${i}">${T(o.t)}</button>`).join('')}</div>`;
+      if (q.ui === 'chips') h += `<div class="chips">${q.chips.map((o, i) => `<button class="chip" data-chip="${i}">${T(o.t)}</button>`).join('')}</div><div id="chk"><button class="nextbtn wide" data-act="check" disabled>${inl('Check', '检查')}</button></div>`;
+    }
     h += `<div id="sheet"></div></div>`;
     app.innerHTML = h;
     window.scrollTo(0, 0);
@@ -445,61 +466,62 @@
     const st = R.steps[R.i], it = st.item, q = st.q, c = it.card;
     $('.stage').classList.add('locked');
     if (!st.retry) { grade(it, ok); R.first++; if (ok) R.right++; }
-    if (ok) { R.combo++; R.best = Math.max(R.best, R.combo); R.xp += st.retry ? 5 : 10; S.xp += st.retry ? 5 : 10; }
-    else { R.combo = 0; if (!st.retry) R.steps.push({ t: 'q', item: it, retry: true }); }
+    if (ok) { R.combo++; R.best = Math.max(R.best, R.combo); } else { R.combo = 0; if (!st.retry) R.steps.push({ t: 'q', item: it, retry: true }); }
     save(); beep(ok); if (!ok) buzz(70);
-    const praise = [['Correct', '对了'], ['Nailed it', '漂亮'], ['Exactly', '没错'], ['Yes', '对']];
-    const p = pick(praise);
+    const cb = $('.combo'); if (cb) cb.textContent = R.combo >= 2 ? '×' + R.combo : '';
+    if (q.mode === 'gh') { const s = $('.stamp'); if (s) { s.textContent = q.a ? inl('GIVE', '给') : inl('HOLD', '不给'); s.className = 'stamp ' + (q.a ? 'g' : 'h'); s.hidden = false; } }
+    const p = pick([['Right call.', '判断对了。'], ['Exactly.', '没错。'], ['Nailed it.', '漂亮。'], ['Yes.', '对。']]);
     const chk = $('#chk'); if (chk) chk.remove();
-    $('#sheet').innerHTML = `<div class="sheet ${ok ? 'ok' : 'no'}"><h2>${ok ? I.check : I.cross}${ok ? inl(p[0], p[1]) : inl('Not quite', '不对')}</h2>
+    const holdLabel = q.mode === 'gh' && !isHome(c) && (c.no || []).some(x => x.key && !/^none/i.test(x.en)) ? neverLabel(c, true) : '';
+    $('#sheet').innerHTML = `<div class="sheet ${ok ? 'ok' : 'no'}"><div class="verdict"><b>${ok ? I.check : I.cross}</b>${ok ? inl(p[0], p[1]) : inl('Not quite.', '不对。')}</div>
       ${!ok && q.bad ? `<p class="conseq">${T(q.bad)}</p>` : ''}${!ok && detail ? `<p class="ans">${detail}</p>` : ''}
-      ${q.why ? `<p class="why">${T(q.why)}</p>` : ''}
-      <button class="btn" data-act="next">${tx('Continue', '继续')}</button>${c.src ? `<p class="srcline">${esc(c.src)}</p>` : ''}</div>`;
+      ${q.why ? `<p class="why">${T(q.why)}</p>` : ''}${holdLabel}
+      <div class="next">${zhChip()}<span class="sp"></span><button class="nextbtn" data-act="next">${inl('Continue', '继续')} ${I.arrow}</button></div></div>`;
     const sh = $('.sheet'); if (sh && sh.scrollIntoView) sh.scrollIntoView({ block: 'end', behavior: 'smooth' });
   }
-  function learnBody(c, p) { // three short screens. Everything else is on the full card and in the questions.
-    if (p === 0) return cardBody(c, 0);
+  function learnBody(c, p) { // three short screens; the full card and the questions carry the rest
+    if (p === 0) return `<div class="cardhero">${stk(c.id, 'big')}</div>${nameBlock(c)}${pills(c)}<p class="hook">${T(c.hook)}</p><p class="how">${T(c.how)}</p>${isHome(c) ? examples(c) : ''}`;
     if (p === 1) {
-      if (isHome(c)) return sec('If you find it, the patient probably has', '看到它，病人多半有', c.tells)
-        + `<div class="note"><h3>${inl('What it changes for you', '对你意味着什么')}</h3><ul style="margin:0;padding-left:18px">${(c.medic || []).slice(0, 2).map(m => `<li style="margin:6px 0">${T(m)}</li>`).join('')}</ul></div>`;
-      const more = (c.dose || []).length - 2;
-      return sec('Give it for', '什么时候给', c.use) + sec('Dose', '剂量', (c.dose || []).slice(0, 2))
-        + (more > 0 ? `<p class="tiny muted" style="margin:8px 0 0">${inl(`${more} more dose line${more > 1 ? 's' : ''} on the full card.`, `完整药卡里还有 ${more} 条剂量说明。`)}</p>` : '');
+      if (isHome(c)) return `<div class="learnname">${stk(c.id, 'mini')}<b>${esc(c.name)}</b></div>` + list('If you find it, the patient probably has', '看到它，病人多半有', c.tells)
+        + `<div class="note"><h3>${inl('What it changes for you', '对你意味着什么')}</h3><ul>${(c.medic || []).slice(0, 2).map(m => `<li>${T(m)}</li>`).join('')}</ul></div>`;
+      const more = (c.dose || []).length - 3;
+      return `<div class="learnname">${stk(c.id, 'mini')}<b>${esc(c.name)}</b></div>` + list('Give it for', '什么时候给', c.use) + label(esc(short(c.name).toUpperCase()), inl(DK[c.deck].tag.en.toUpperCase(), DK[c.deck].tag.zh), (c.dose || []).slice(0, 3))
+        + (more > 0 ? `<p class="pk">${inl(`${more} more dose line${more > 1 ? 's' : ''} on the full card.`, `完整药卡里还有 ${more} 条剂量说明。`)}</p>` : '');
     }
-    const keys = (c.no || []).filter(x => x.key), show = keys.length ? keys : (c.no || []).slice(0, 3), rest = (c.no || []).length - show.length;
-    return sec(isHome(c) ? 'Should not be used with' : 'Never give if', isHome(c) ? '这些情况不该用' : '这些情况绝对不给', show, 'never')
-      + (rest > 0 ? `<p class="tiny muted" style="margin:8px 0 0">${inl(`Plus ${rest} more on the full card. The questions will bring them up.`, `完整药卡里还有 ${rest} 条，做题时会遇到。`)}</p>` : '')
-      + (c.pearl ? `<div class="note"><h3>${inl('Teacher says', '老师说')}</h3>${T(c.pearl)}</div>` : '');
+    const keys = (c.no || []).filter(x => x.key), rest = (c.no || []).length - (keys.length || (c.no || []).length);
+    return `<div class="learnname">${stk(c.id, 'mini')}<b>${esc(c.name)}</b></div>` + neverLabel(c, true)
+      + (rest > 0 ? `<p class="pk">${inl(`Plus ${rest} more on the full card. The questions will bring them up.`, `完整药卡里还有 ${rest} 条，做题时会遇到。`)}</p>` : '')
+      + note('Teacher says', '老师说', c.pearl, 'teacher');
   }
   function viewLearn(st) {
     const c = st.card, p = st.p || 0;
-    app.innerHTML = playTop('<span class="combo"></span>') + `<div class="stage d-${c.deck}"><div class="learn">
-      <span class="newtag">${inl('NEW', '新药')} · ${inl(DK[c.deck].tag.en, DK[c.deck].tag.zh)}</span>
-      <div class="dcard">${p === 0 ? cardHead(c) : `<div class="qdrug" style="font-size:18px">${nameHtml(c)}</div>`}${learnBody(c, p)}</div>
-      <div class="dots">${[0, 1, 2].map(i => `<i class="${i === p ? 'on' : ''}"></i>`).join('')}</div><div class="spacer"></div></div></div>
-      <div class="actbar d-${c.deck}"><button class="btn" data-act="learnnext">${p < 2 ? tx('Next', '下一页') : tx('Got it. Quiz me', '记住了，考我')}</button></div>`;
+    app.innerHTML = playTop('<span class="combo"></span>') + `<div class="stage learn">
+      <div class="qhd"><span class="newtag">${inl('New drug', '新药')}</span><span>${inl(DK[c.deck].tag.en, DK[c.deck].tag.zh)}</span><span class="sp"></span>${zhChip()}</div>
+      ${learnBody(c, p)}
+      <div class="dots">${[0, 1, 2].map(i => `<i class="${i === p ? 'on' : ''}"></i>`).join('')}</div>
+      <div class="stick"><button class="go" data-act="learnnext"><span>${p < 2 ? inl('Next', '下一页') : inl('Got it. Quiz me', '记住了，考我')}</span><span class="arrow">${I.arrow}</span></button></div></div>`;
     window.scrollTo(0, 0);
   }
   function viewDone() {
     const acc = R.first ? Math.round(R.right / R.first * 100) : 0, st = curStreak();
     const back = c => { const r = crec(c); if (!r) return ''; const d = r.due - today(); return d <= 0 ? inl('again today', '今天再练') : d === 1 ? inl('back tomorrow', '明天再见') : inl(`back in ${d} days`, `${d} 天后再见`); };
-    const gains = R.cards.map(c => `<div><span class="gname">${nameHtml(c)}</span><span class="gstars">${stars(mastery(c))}</span><b class="gback">${back(c)}</b></div>`).join('');
-    const msg = acc >= 90 ? ['Sharp.', '很稳。'] : acc >= 70 ? ['Solid round.', '这轮不错。'] : ['The misses come back tomorrow. That is how it sticks.', '错的明天会再出现，这样才记得住。'];
-    const scope = R.scope;
-    app.innerHTML = `<div class="top"><h1></h1></div><main class="done d-${scope.deck || 'home'}">
-      <div class="big">${acc}<small>%</small></div><h2>${tx(msg[0], msg[1])}</h2>
-      <div class="stats"><div class="stat"><b>${R.right}/${R.first}</b><span>${inl('first try', '一次答对')}</span></div><div class="stat"><b>×${R.best}</b><span>${inl('best combo', '最长连对')}</span></div><div class="stat"><b>${st}</b><span>${inl('day streak', '天连续')}</span></div></div>
-      ${R.learned.length ? `<p class="muted" style="margin:0 0 10px">${inl('New today:', '今天新学：')} ${R.learned.map(c => esc(c.name)).join(', ')}</p>` : ''}
-      ${gains ? `<div class="gain">${gains}</div>` : ''}
-      <button class="btn" data-act="again">${tx('One more round', '再来一轮')}</button>
-      <div style="height:12px"></div><button class="btn ghost" data-go="#/">${tx('Done for now', '先到这儿')}</button></main>`;
+    const fan = R.cards.slice(0, 5);
+    const msg = acc >= 90 ? ['Sharp.', '很稳。'] : acc >= 70 ? ['Solid round.', '这轮不错。'] : ['The misses come back tomorrow.', '错的明天会再出现。'];
+    const sub = acc >= 70 ? ['That is how it sticks.', '就是这样记住的。'] : ['That is how it sticks.', '这样才记得住。'];
+    app.innerHTML = `<main class="done">
+      <div class="fan">${fan.map((c, i) => stk(c.id, 'fanstk', `--r:${(i - (fan.length - 1) / 2) * 9}deg;z-index:${10 - Math.abs(i - 2)}`)).join('')}</div>
+      <div class="score">${acc}<small>%</small></div><h2 class="h2">${inl(msg[0], msg[1])}</h2><p class="muted center">${inl(sub[0], sub[1])}</p>
+      <div class="stats"><div><b>${R.right}/${R.first}</b><span>${inl('first try', '一次答对')}</span></div><div><b>×${R.best}</b><span>${inl('best combo', '最长连对')}</span></div><div><b>${st}</b><span>${inl('day streak', '天连续')}</span></div></div>
+      ${R.cards.length ? `<div class="gain">${R.cards.map(c => `<div>${stk(c.id, 'thumb')}<span class="gname">${esc(short(c.name))}${R.learned.includes(c) ? ` <em>${inl('new', '新')}</em>` : ''}</span><span class="gstars">${stars(mastery(c))}</span><span class="gback">${back(c)}</span></div>`).join('')}</div>` : ''}
+      <button class="go" data-act="again"><span>${inl('One more round', '再来一轮')}</span><span class="arrow">${I.arrow}</span></button>
+      <button class="ghostbtn" data-go="#/">${inl('Done for now', '先到这儿')}</button></main>`;
     if (acc >= 80) confetti();
     const keep = R.scope; R = null; viewDone.scope = keep;
     window.scrollTo(0, 0);
   }
   function confetti() {
     const box = document.createElement('div'); box.className = 'confetti';
-    const cols = ['#5753d0', '#0c9483', '#e2702f', '#e0a100', '#1f9d55'];
+    const cols = ['#DCEB3F', '#0E6A44', '#15181B', '#DCEB3F', '#C8402B'];
     for (let i = 0; i < 36; i++) { const s = document.createElement('i'); s.style.left = Math.random() * 100 + '%'; s.style.background = cols[i % 5]; s.style.animationDuration = 1.4 + Math.random() * 1.6 + 's'; s.style.animationDelay = Math.random() * 0.4 + 's'; box.appendChild(s); }
     document.body.appendChild(box); setTimeout(() => box.remove(), 3600);
   }
@@ -511,37 +533,39 @@
     const pool = shuffle(cards.flatMap(c => (c.tf || []).map(d => ({ c, d }))));
     if (!pool.length) return;
     R = { blitz: true, pool, i: 0, score: 0, n: 0, miss: [], end: Date.now() + 60000 };
-    R.timer = setInterval(() => { if (!R || !R.blitz) return; const left = Math.max(0, Math.ceil((R.end - Date.now()) / 1000)); const el = $('.clock'); if (el) el.textContent = left + 's'; if (left <= 0) endBlitz(); }, 250);
+    R.timer = setInterval(() => { if (!R || !R.blitz) return; const left = Math.max(0, Math.ceil((R.end - Date.now()) / 1000)); const el = $('.clock'); if (el) el.textContent = left + 's'; const m = $('.bar .meter i'); if (m) m.style.width = (left / 60 * 100) + '%'; if (left <= 0) endBlitz(); }, 250);
     location.hash = '#/play'; render();
   }
   function viewBlitz() {
     if (R.over) return;
     const x = R.pool[R.i % R.pool.length], left = Math.max(0, Math.ceil((R.end - Date.now()) / 1000));
-    app.innerHTML = `<div class="play-top"><button class="x" data-act="quit">${I.cross}</button><div class="prog"><i style="width:${Math.max(4, Math.round(left / 60 * 100))}%;background:var(--home)"></i></div><span class="clock">${left}s</span></div>
-      <div class="stage d-${x.c.deck}" id="bz"><div class="qhead"><span class="pill">${inl(DK[x.c.deck].tag.en, DK[x.c.deck].tag.zh)}</span><span class="qdrug">${nameHtml(x.c)}</span><span style="margin-left:auto;font-weight:800">${R.score}</span></div>
-      <div class="blitz-s"><div>${T(x.d.s)}</div></div>
-      <div class="two" style="padding-bottom:calc(16px + env(safe-area-inset-bottom))"><button class="tr" data-bz="1">${tx('True', '对')}</button><button class="fa" data-bz="0">${tx('False', '错')}</button></div></div>`;
+    app.innerHTML = `<div class="bar"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button><div class="segs cont">${meter(left / 60 * 100)}</div><span class="clock">${left}s</span></div>
+      <div class="stage blitz" id="bz"><div class="qhd"><span>${esc(short(x.c.name))} · ${inl(DK[x.c.deck].tag.en, DK[x.c.deck].tag.zh)}</span><span class="sp"></span><b class="bscore">${R.score}</b></div>
+      <div class="herostk">${stk(x.c.id, 'mid')}</div>
+      <div class="blitz-s">${T(x.d.s)}</div>
+      <div class="two"><button class="give" data-bz="1">${inl('True', '对')}</button><button class="hold" data-bz="0">${inl('False', '错')}</button></div></div>`;
   }
   function endBlitz() {
     clearInterval(R.timer); R.over = true;
     const best = R.score > (S.blitzBest || 0); if (best) { S.blitzBest = R.score; save(); }
-    app.innerHTML = `<div class="top"><h1></h1></div><main class="done d-bcehs"><div class="big">${R.score}</div><h2>${best ? tx('New best.', '新纪录。') : tx(`Best so far: ${S.blitzBest}`, `目前最高：${S.blitzBest}`)}</h2>
-      <p class="muted">${inl(`${R.n} answered in 60 seconds`, `60 秒答了 ${R.n} 题`)}</p>
-      ${R.miss.length ? `<div class="sect" style="text-align:left">${inl('Worth another look', '值得再看一眼')}</div><div class="missed-list">${R.miss.slice(0, 8).map(m => `<p><b>${esc(short(m.c.name))}</b> ${T(m.d.s)}<span class="zh" style="color:var(--ok)">${esc(S.lang === 'zh' ? m.d.why.zh : m.d.why.en)}</span></p>`).join('')}</div>` : ''}
-      <button class="btn" data-act="blitz">${tx('Again', '再来')}</button><div style="height:12px"></div><button class="btn ghost" data-go="#/">${tx('Home', '回首页')}</button></main>`;
+    app.innerHTML = `<main class="done"><div class="score">${R.score}</div><h2 class="h2">${best ? inl('New best.', '新纪录。') : inl(`Best so far: ${S.blitzBest}`, `目前最高：${S.blitzBest}`)}</h2>
+      <p class="muted center">${inl(`${R.n} answered in 60 seconds`, `60 秒答了 ${R.n} 题`)}</p>
+      ${R.miss.length ? `<h3 class="grp">${inl('Worth another look', '值得再看一眼')}</h3><div class="missed">${R.miss.slice(0, 8).map(m => `<div>${stk(m.c.id, 'thumb')}<p><b>${esc(short(m.c.name))}</b> ${T(m.d.s)}<span class="fix">${T(m.d.why)}</span></p></div>`).join('')}</div>` : ''}
+      <button class="go" data-act="blitz"><span>${inl('Again', '再来')}</span><span class="arrow">${I.arrow}</span></button><button class="ghostbtn" data-go="#/">${inl('Home', '回首页')}</button></main>`;
     if (best && R.score >= 8) confetti();
     R = null; window.scrollTo(0, 0);
   }
 
   /* ---------------- settings ---------------- */
   function viewSettings() {
-    const seg = (name, cur, list) => `<div class="seg">${list.map(([v, l]) => `<button class="${cur === v ? 'on' : ''}" data-set="${name}" data-val="${v}">${l}</button>`).join('')}</div>`;
+    const seg = (name, cur, opts) => `<div class="seg">${opts.map(([v, l]) => `<button class="${cur === v ? 'on' : ''}" data-set="${name}" data-val="${v}">${l}</button>`).join('')}</div>`;
     const answered = Object.values(S.items).reduce((s, r) => s + r.n, 0);
-    app.innerHTML = topbar(inl('Settings', '设置'), '#/') + `<main>
+    app.innerHTML = head(inl('Settings', '设置'), '#/') + `<main class="settings">
       <div class="set"><div class="row"><span>${inl('Language', '语言')}</span>${seg('lang', S.lang, [['en', 'EN'], ['both', 'EN+中'], ['zh', '中文']])}</div>
+      <p class="hint">${inl('In EN, tap 中文 on any question to see the Chinese.', '选 EN 时，题目上点「中文」就能看中文。')}</p>
       <div class="row"><span>${inl('Sound', '声音')}</span>${seg('sound', S.sound ? '1' : '0', [['0', inl('Off', '关')], ['1', inl('On', '开')]])}</div></div>
-      <div class="set"><div class="row"><span>${inl('Questions answered', '累计答题')}</span><b>${answered}</b></div><div class="row"><span>${inl('Longest streak', '最长连续')}</span><b>${S.streak.best || 0}</b></div>
-      <div class="row"><span>${inl('Add to your home screen', '添加到手机桌面')}</span></div><p class="tiny muted" style="margin:-6px 0 14px">${tx('iPhone: Share, then Add to Home Screen. Android: menu, then Add to Home screen. It then opens like an app and works offline.', 'iPhone：点分享，再点「添加到主屏幕」。安卓：点菜单，再点「添加到主屏幕」。之后像 App 一样打开，没网也能用。')}</p></div>
+      <div class="set"><div class="row"><span>${inl('Questions answered', '累计答题')}</span><b>${answered}</b></div><div class="row"><span>${inl('Longest streak', '最长连续')}</span><b>${S.streak.best || 0}</b></div></div>
+      <div class="set"><div class="row"><span>${inl('Add to your home screen', '添加到手机桌面')}</span></div><p class="hint">${inl('iPhone: Share, then Add to Home Screen. Android: menu, then Add to Home screen. It opens like an app and works offline.', 'iPhone：点分享，再点「添加到主屏幕」。安卓：点菜单，再点「添加到主屏幕」。之后像 App 一样打开，没网也能用。')}</p></div>
       <div class="set"><div class="row"><button class="danger" data-act="reset">${inl('Reset all progress', '清空全部进度')}</button></div></div>
       <p class="foot">Drug Drill · ${esc(D.built || '')}</p></main>`;
   }
@@ -577,6 +601,7 @@
       const s = $('#bz'); if (s) s.classList.add(ok ? 'flash-ok' : 'flash-no'); return;
     }
     switch (b.dataset.act) {
+      case 'peek': app.classList.toggle('peek'); return;
       case 'lang': S.lang = S.lang === 'both' ? 'en' : S.lang === 'en' ? 'zh' : 'both'; save(); return render();
       case 'start': location.hash = '#/play'; return startRound({ deck: b.dataset.deck });
       case 'startcard': location.hash = '#/play'; return startRound({ card: b.dataset.card });
