@@ -6,8 +6,11 @@
 // Scheduling is per card, not per question: a card comes back after IV days and each visit asks 3–4 of its items, the ones
 // missed last time first. A new card is taught in three short screens, then asked straight away. A round is 10 questions;
 // missed items are asked again at the end of the round. Progress: store key 'drill:wNN'.
+// Also the EMR Play & learn decks (src/play.js): opts.key / opts.kick / opts.tag. A deck with mode "sims" plays each card as one
+// whole call in order: a dispatch screen, every step once (no retries), deductions "w" from 100 ("fail" = automatic fail),
+// 70 passes; the card's learn screens become the debrief.
 // Styles: styles.css, everything under .ddx (light and dark follow the site's theme). Fonts load on first use.
-import { S, esc } from './app.js?v=80';
+import { S, esc } from './app.js?v=81';
 
 const IV = [0, 1, 3, 7, 14, 30], ROUND = 10;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@1&family=Noto+Sans+SC:wght@400;500;700&display=swap';
@@ -48,7 +51,7 @@ const up = o => (o == null ? '' : typeof o === 'string' ? o : { en: String(o.en 
 
 export function drillLab(host, store, D, opts = {}) {
   loadFonts();
-  const wk = +(D && D.wk) || +opts.wk || 0, KEY = 'drill:w' + String(wk).padStart(2, '0');
+  const wk = +(D && D.wk) || +opts.wk || 0, KEY = opts.key || 'drill:w' + String(wk).padStart(2, '0'), SIM = !!D && D.mode === 'sims', PASS = 70;
   const st = Object.assign({ items: {}, cards: {}, seen: {}, days: {}, streak: { n: 0, last: 0, best: 0 } }, store.get(KEY, null) || {});
   const save = () => store.set(KEY, st);
   const SH = {}, CARD = {};
@@ -117,7 +120,8 @@ export function drillLab(host, store, D, opts = {}) {
   }
   function settle(c, tally) { // every question planned for this card in this round is answered: move it along the schedule
     const r = st.cards[c.id] || (st.cards[c.id] = { b: 0, due: 0, n: 0 }), miss = tally.wrong / tally.n;
-    if (tally.fresh) r.b = miss > 0.34 ? 0 : 1;
+    if (SIM && R && R.sim) { const ok = !R.sim.fail && R.sim.score >= PASS; r.b = !ok ? 0 : R.sim.score >= 90 ? Math.min(5, r.b + 1) : Math.max(1, r.b); r.best = Math.max(r.best || 0, R.sim.fail ? 0 : R.sim.score); }
+    else if (tally.fresh) r.b = miss > 0.34 ? 0 : 1;
     else if (miss <= 0.1) r.b = Math.min(5, r.b + 1);
     else if (miss > 0.34) r.b = Math.max(1, r.b - 1);
     r.n++; r.due = today() + IV[r.b];
@@ -139,6 +143,11 @@ export function drillLab(host, store, D, opts = {}) {
   /* ---------------- question builders ---------------- */
   const has = o => o && (typeof o === 'string' || o.en);
   function build(it) {
+    const q = build0(it);
+    if (q && it.d.stem && (!q.stem || q.mode === 'tf')) q.stem = it.d.stem;
+    return q;
+  }
+  function build0(it) {
     const d = it.d;
     switch (d.kind) {
       case 'do':
@@ -168,6 +177,14 @@ export function drillLab(host, store, D, opts = {}) {
   const q1 = it => ({ t: 'q', item: it });
   function buildRound(scope) {
     const pool = scope.card ? [CARD[scope.card]] : scope.shelf ? shelfCards(scope.shelf) : cards, tally = {};
+    if (SIM) { // one whole call: the next due, else the next new one, else the weakest
+      const sc = c => crec(c) || { b: 0, due: 0 };
+      const c = scope.card ? pool[0] : (dueCards(pool).sort((x, y) => sc(x).due - sc(y).due)[0] || pool.find(x => !st.seen[x.id]) || pool.slice().sort((x, y) => sc(x).b - sc(y).b)[0]);
+      if (!c) return { steps: [], tally };
+      const its = itemsOf(c);
+      tally[c.id] = { n: its.length, done: 0, wrong: 0, fresh: !st.seen[c.id] };
+      return { steps: [{ t: 'brief', card: c }].concat(its.map(q1)), tally };
+    }
     if (scope.card) { // one card, everything about it
       const c = pool[0], fresh = !st.seen[c.id], its = fresh ? introSet(c, 12) : shuffle(itemsOf(c)).slice(0, 12);
       if (fresh || isDue(c)) tally[c.id] = { n: its.length, done: 0, wrong: 0, fresh };
@@ -199,7 +216,7 @@ export function drillLab(host, store, D, opts = {}) {
     const { steps, tally } = buildRound(scope);
     if (!steps.length) { R = null; return goHome(); }
     const cs = [...new Set(steps.map(s => s.card || s.item.card))];
-    R = { scope, steps, tally, i: 0, right: 0, first: 0, combo: 0, best: 0, cards: cs, learned: [] };
+    R = { scope, steps, tally, i: 0, right: 0, first: 0, combo: 0, best: 0, cards: cs, learned: [], sim: SIM ? { score: 100, fail: false, lost: [] } : null };
     render();
   }
 
@@ -226,7 +243,7 @@ export function drillLab(host, store, D, opts = {}) {
   const meter = pct => `<span class="meter"><i style="width:${Math.max(pct ? 3 : 0, Math.round(pct))}%"></i></span>`;
   const head = title => `<header class="top"><button class="iconbtn" data-act="back" aria-label="${inl('Back', '返回')}">${I.back}</button><div class="top-t">${title}</div>${zhChip()}</header>`;
   const goBtn = (act, label, sub, extra = '') => `<button class="go" data-act="${act}"${extra}><span>${label}${sub ? `<small>${sub}</small>` : ''}</span><span class="arrow">${I.arrow}</span></button>`;
-  const label = c => (c.label || []).length ? `<div class="label"><div class="lh"><span>${esc(String(nm(c.title)).toUpperCase())}</span><span>W${wk}</span></div>${c.label.map(x => `<div class="ll"><span class="lk">${T(x.k)}</span><span class="lv">${T(up(x.v))}</span></div>`).join('')}</div>` : '';
+  const label = c => (c.label || []).length ? `<div class="label"><div class="lh"><span>${esc(String(nm(c.title)).toUpperCase())}</span><span>${esc(opts.tag || 'W' + wk)}</span></div>${c.label.map(x => `<div class="ll"><span class="lk">${T(x.k)}</span><span class="lv">${T(up(x.v))}</span></div>`).join('')}</div>` : '';
   const nameBlock = c => `<div class="dname">${esc(nm(c.title))}</div>${lang() !== 'zh' && c.title.zh ? `<div class="dzh">${esc(c.title.zh)}</div>` : ''}`;
   function render() {
     root.className = 'ddx lang-' + lang() + (view.name === 'play' ? ' playing' : '');
@@ -248,7 +265,10 @@ export function drillLab(host, store, D, opts = {}) {
     if (pile.length < 3 && fresh && !pile.includes(fresh)) pile.push(fresh);
     for (const c of cards) { if (pile.length >= 3) break; if (!pile.includes(c)) pile.push(c); }
     const n = due.length;
-    const title = n ? { en: `${NUM[n] || n} card${n > 1 ? 's are' : ' is'} due <em>today</em>.`, zh: `今天有 <em>${n}</em> 张卡要复习。` }
+    const title = SIM ? (n ? { en: `${NUM[n] || n} call${n > 1 ? 's' : ''} to run <em>again</em>.`, zh: `有 <em>${n}</em> 单要再跑一次。` }
+        : fresh ? (Object.keys(st.seen).length ? { en: 'A new call is <em>waiting</em>.', zh: '有一单<em>新任务</em>在等你。' } : { en: 'Run the call. <em>Pass</em> the station.', zh: '跑一单，<em>过一站</em>。' })
+        : { en: 'Every call run. Keep it <em>sharp</em>.', zh: '都跑过了，<em>保持手感</em>。' })
+      : n ? { en: `${NUM[n] || n} card${n > 1 ? 's are' : ' is'} due <em>today</em>.`, zh: `今天有 <em>${n}</em> 张卡要复习。` }
       : fresh ? (Object.keys(st.seen).length ? { en: 'A new card is <em>waiting</em>.', zh: '有一张<em>新卡</em>在等你。' } : { en: 'Learn it by <em>playing</em>.', zh: '<em>边玩</em>边学。' })
         : { en: 'All caught up. Keep it <em>sharp</em>.', zh: '都复习完了，<em>保持手感</em>。' };
     const h1 = lang() === 'zh' ? title.zh : lang() === 'both' ? `${title.en}<span class="zh">${title.zh}</span>` : `${title.en}<span class="zh">${title.zh}</span>`;
@@ -261,13 +281,14 @@ export function drillLab(host, store, D, opts = {}) {
     const learned = Object.keys(st.seen).filter(id => CARD[id]).length;
     root.innerHTML = `<header class="top home-top"><span class="date">${esc(date)}</span><span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st0} ${inl(st0 === 1 ? 'day' : 'days', '天')}</span></header>
       <main class="home">
-      <p class="kick">${inl('Weekend', '周末')} ${wk} · ${D.title ? esc(nm(D.title)) : inl('Play & learn', '边学边玩')}</p>
+      <p class="kick">${opts.kick ? inl(opts.kick.en, opts.kick.zh) : inl('Weekend', '周末') + ' ' + wk} · ${D.title ? esc(nm(D.title)) : inl('Play & learn', '边学边玩')}</p>
       <h1 class="h1">${h1}</h1>
       <div class="pile">${pile.map((c, i) => { const p = slots[i]; return stk(c, 'pstk', `position:absolute;${p.s};--fs:${p.fs}px;max-height:${p.mh}px;max-width:${p.mw}%;--r:${p.r}deg`)
         + `<span class="tag" style="${p.tag};--r:${p.tr}deg">${esc(nm(c.title))}</span>`; }).join('')}</div>
-      ${goBtn('start', inl('Start a round', '开始一轮'), inl('10 questions, about 3 minutes', '10 题，大约 3 分钟'))}
+      ${SIM ? goBtn('start', inl('Take a call', '接一单'), inl('One whole call, about 5 minutes', '完整一单，大约 5 分钟')) : goBtn('start', inl('Start a round', '开始一轮'), inl('10 questions, about 3 minutes', '10 题，大约 3 分钟'))}
       <div class="shelves">${shelves.map(s => { const x = shelfStats(s.id); return `<button class="shelf" data-shelf="${esc(s.id)}"><b>${shelfName(s)}</b>${x.due ? `<span class="due">${x.due}</span>` : '<span></span>'}<span class="cnt">${x.seen} / ${x.n}</span>${meter(x.n ? x.seen / x.n * 100 : 0)}</button>`; }).join('')}</div>
-      <p class="foot">${T({ en: `${learned} of ${cards.length} cards learned. Answers follow the EMALB exam guidelines; where EMALB is silent, BCEHS, and every answer names its source. A study aid: on the road the current BCEHS guideline and CliniCall decide.`,
+      <p class="foot">${T(SIM ? { en: `${learned} of ${cards.length} calls run. Start at 100%, every mistake deducts like the real station, an automatic fail ends it, 70% passes. Answers follow the EMALB exam guidelines and grading criteria; every step names its source.`,
+        zh: `已跑 ${learned}/${cards.length} 单。和真考站一样 100% 起步、做错就扣、直接挂科项就挂、70% 及格。答案以 EMALB 考纲和评分标准为准，每一步都注明出处。` } : { en: `${learned} of ${cards.length} cards learned. Answers follow the EMALB exam guidelines; where EMALB is silent, BCEHS, and every answer names its source. A study aid: on the road the current BCEHS guideline and CliniCall decide.`,
         zh: `已学 ${learned}/${cards.length} 张卡。答案以 EMALB 考纲为准；考纲没写的按 BCEHS，每题都注明出处。这是学习工具，出车以现行 BCEHS 指南和 CliniCall 为准。` })}</p>
       </main>`;
   }
@@ -275,12 +296,25 @@ export function drillLab(host, store, D, opts = {}) {
   function viewShelf(s) {
     const cs = shelfCards(s.id), x = shelfStats(s.id);
     root.innerHTML = head(shelfName(s)) + `<main class="deckpage">${s.sub ? `<p class="deck-sub">${T(s.sub)}</p>` : ''}
-      ${goBtn('startshelf', inl('Practice this shelf', '练这一格'), inl(`${x.seen} of ${x.n} learned`, `已学 ${x.seen}/${x.n}`) + (x.due ? ' · ' + inl(`${x.due} due`, `${x.due} 张待复习`) : ''), ` data-shelf="${esc(s.id)}"`)}
+      ${goBtn('startshelf', SIM ? inl('Take a call from this shelf', '从这一格接一单') : inl('Practice this shelf', '练这一格'), inl(`${x.seen} of ${x.n} learned`, `已学 ${x.seen}/${x.n}`) + (x.due ? ' · ' + inl(`${x.due} due`, `${x.due} 张待复习`) : ''), ` data-shelf="${esc(s.id)}"`)}
       <div class="book">${cs.map(c => { const seen = st.seen[c.id];
-        return `<button class="slot ${seen ? '' : 'unseen'}" data-card="${esc(c.id)}"><span class="slot-img">${stk(c, 'sstk')}</span><span class="slot-name">${esc(nm(c.title))}</span><span class="slot-stars">${seen ? stars(mastery(c)) : `<em>${inl('new', '未学')}</em>`}</span></button>`; }).join('')}</div></main>`;
+        return `<button class="slot ${seen ? '' : 'unseen'}" data-card="${esc(c.id)}"><span class="slot-img">${stk(c, 'sstk')}</span><span class="slot-name">${esc(nm(c.title))}</span><span class="slot-stars">${seen ? (SIM ? simBest(c) : stars(mastery(c))) : `<em>${inl('new', '未学')}</em>`}</span></button>`; }).join('')}</div></main>`;
   }
 
+  const simBest = c => { const r = crec(c); return r && r.n ? `<em class="simbest ${r.best >= PASS ? 'ok' : 'no'}">${inl('best', '最好')} ${r.best}%</em>` : `<em>${inl('not finished', '没跑完')}</em>`; };
+  const debrief = c => (c.learn || []).length ? `<p class="debrief-h">${inl('Debrief', '复盘')}</p>` + c.learn.map((l, i) => `<section class="lrn"><span class="ln">${i + 1}</span><div><b>${T(l.big)}</b><p>${T(l.say)}</p></div></section>`).join('') : '';
+  function viewSimCard(c) {
+    const s = SH[c.shelf], ran = !!(crec(c) && crec(c).n);
+    root.innerHTML = head(shelfName(s)) + `<main class="cardpage">
+      <div class="cardhero">${stk(c, 'big')}</div>${nameBlock(c)}
+      ${c.hook ? `<p class="hook">${T(c.hook)}</p>` : ''}
+      ${c.dispatch ? `<div class="bubble"><b class="disp">${inl('Dispatch', '调度')}</b> ${T(c.dispatch)}</div>` : ''}
+      ${label(c)}
+      ${ran ? debrief(c) : `<p class="muted">${inl('The debrief opens after your first run.', '跑完第一次才看得到复盘。')}</p>`}
+      <div class="stick">${goBtn('startcard', ran ? inl('Run it again', '再跑一次') : inl('Run this call', '跑这一单'), '', ` data-card="${esc(c.id)}"`)}</div></main>`;
+  }
   function viewCard(c) {
+    if (SIM) return viewSimCard(c);
     const s = SH[c.shelf];
     root.innerHTML = head(shelfName(s)) + `<main class="cardpage">
       <div class="cardhero">${stk(c, 'big')}</div>${nameBlock(c)}
@@ -296,17 +330,19 @@ export function drillLab(host, store, D, opts = {}) {
     if (n > 18) return `<div class="segs cont">${meter(R.i / n * 100)}</div>`;
     return `<div class="segs">${R.steps.map((s, i) => `<i class="${i < R.i ? 'on' : i === R.i ? 'now' : ''}"></i>`).join('')}</div>`;
   };
-  const playTop = () => `<div class="bar"><button class="x" data-act="quit" aria-label="${inl('Close', '关闭')}">${I.cross}</button>${segs()}<span class="combo">${R.combo >= 2 ? '×' + R.combo : ''}</span></div>`;
+  const playTop = () => `<div class="bar"><button class="x" data-act="quit" aria-label="${inl('Close', '关闭')}">${I.cross}</button>${segs()}<span class="combo">${comboTxt()}</span></div>`;
+  const comboTxt = () => R.sim ? `<span class="simscore ${R.sim.fail ? 'no' : ''}">${R.sim.fail ? 'FAIL' : R.sim.score + '%'}</span>` : R.combo >= 2 ? '×' + R.combo : '';
   function viewPlay() {
     root.classList.remove('peek');
     if (R.i >= R.steps.length) return viewDone();
     const step = R.steps[R.i];
     if (step.t === 'learn') return viewLearn(step);
+    if (step.t === 'brief') return viewBrief(step);
     const it = step.item, c = it.card, q = step.q || (step.q = build(it));
     if (!q) { R.i++; return viewPlay(); }
     const call = isCall(it);
     let h = playTop() + `<div class="stage">
-      <div class="qhd">${call ? '<i class="dot"></i>' : ''}<span class="qwhat">${call ? inl('Call', '出车') + ' · ' + shelfName(SH[c.shelf]) : esc(nm(c.title))}</span>${step.retry ? `<span class="again">${inl('again', '再来')}</span>` : ''}<span class="sp"></span>${zhChip()}</div>`;
+      <div class="qhd">${call || SIM ? '<i class="dot"></i>' : ''}<span class="qwhat">${SIM ? (it.d.phase ? esc(nm(it.d.phase)) : esc(nm(c.title))) + (it.d.fail ? ` <span class="afl">${inl('auto-fail item', '挂科项')}</span>` : '') : call ? inl('Call', '出车') + ' · ' + shelfName(SH[c.shelf]) : esc(nm(c.title))}</span>${step.retry ? `<span class="again">${inl('again', '再来')}</span>` : ''}<span class="sp"></span>${zhChip()}</div>`;
     if (q.stem) h += `<div class="bubble">${T(q.stem)}</div>`;
     if (q.quote) h += `<div class="quote">${T(q.quote)}</div>`;
     if (q.ui === 'two') {
@@ -323,15 +359,18 @@ export function drillLab(host, store, D, opts = {}) {
   function answered(ok, detail) {
     const step = R.steps[R.i], it = step.item, q = step.q, c = it.card;
     $('.stage').classList.add('locked');
+    let ded = '';
+    if (R.sim && !ok) { const w = it.d.fail ? 100 : Math.max(0, +it.d.w || 0); R.sim.score = Math.max(0, R.sim.score - w); if (it.d.fail) R.sim.fail = true; R.sim.lost.push({ it, w, fail: !!it.d.fail });
+      ded = `<span class="ded ${it.d.fail ? 'af' : ''}">${it.d.fail ? inl('AUTOMATIC FAIL', '直接挂科') : '−' + w + '%'}</span>`; }
     if (!step.retry) { grade(it, ok); R.first++; if (ok) R.right++; }
-    if (ok) { R.combo++; R.best = Math.max(R.best, R.combo); } else { R.combo = 0; if (!step.retry) R.steps.push({ t: 'q', item: it, retry: true }); }
+    if (ok) { R.combo++; R.best = Math.max(R.best, R.combo); } else { R.combo = 0; if (!step.retry && !R.sim) R.steps.push({ t: 'q', item: it, retry: true }); }
     if (!ok) { try { navigator.vibrate && navigator.vibrate(70); } catch { /* no haptics */ } }
-    const cb = $('.combo'); if (cb) cb.textContent = R.combo >= 2 ? '×' + R.combo : '';
+    const cb = $('.combo'); if (cb) cb.innerHTML = comboTxt();
     const sg = $('.segs'); if (sg && !sg.classList.contains('cont') && sg.children.length < R.steps.length) sg.insertAdjacentHTML('beforeend', '<i></i>');
     if (q.mode === 'do') { const s = $('.stamp'); if (s) { s.textContent = nm(q.a ? q.yes : q.no).toUpperCase(); s.className = 'stamp ' + (q.a ? 'g' : 'h'); s.hidden = false; } }
     const p = pick([['Right call.', '判断对了。'], ['Exactly.', '没错。'], ['Nailed it.', '漂亮。'], ['Yes.', '对。']]);
     const chk = $('#chk'); if (chk) chk.remove();
-    $('#sheet').innerHTML = `<div class="sheet ${ok ? 'ok' : 'no'}"><div class="verdict"><b>${ok ? I.check : I.cross}</b>${ok ? inl(p[0], p[1]) : inl('Not quite.', '不对。')}</div>
+    $('#sheet').innerHTML = `<div class="sheet ${ok ? 'ok' : 'no'}"><div class="verdict"><b>${ok ? I.check : I.cross}</b>${ok ? inl(p[0], p[1]) : inl('Not quite.', '不对。')}${ded}</div>
       ${!ok && q.bad ? `<p class="conseq">${T(q.bad)}</p>` : ''}${!ok && detail ? `<div class="ans">${detail}</div>` : ''}
       ${q.why ? `<p class="why">${T(q.why)}</p>` : ''}${!ok ? label(c) : ''}${q.src ? `<p class="src">${esc(q.src)}</p>` : ''}
       <div class="next">${zhChip()}<span class="sp"></span><button class="nextbtn" data-act="next">${inl('Continue', '继续')} ${I.arrow}</button></div></div>`;
@@ -352,7 +391,31 @@ export function drillLab(host, store, D, opts = {}) {
       <div class="dots">${[0, 1, 2].map(i => `<i class="${i === p ? 'on' : ''}"></i>`).join('')}</div>
       <div class="stick">${goBtn('learnnext', p < 2 ? inl('Next', '下一页') : inl('Got it. Quiz me', '记住了，考我'))}</div></div>`;
   }
+  function viewBrief(step) {
+    const c = step.card;
+    root.innerHTML = playTop() + `<div class="stage learn">
+      <div class="qhd"><i class="dot"></i><span class="qwhat">${inl('Dispatch', '调度')} · ${shelfName(SH[c.shelf])}</span><span class="sp"></span>${zhChip()}</div>
+      <div class="cardhero">${stk(c, 'big')}</div>${nameBlock(c)}
+      ${c.dispatch ? `<div class="bubble">${T(c.dispatch)}</div>` : ''}${label(c)}
+      <p class="ohint">${inl(`${R.steps.length - 1} decisions. You start at 100%; 70% passes.`, `${R.steps.length - 1} 个决定。100% 起步，70% 及格。`)}</p>
+      <div class="stick">${goBtn('respond', inl('Respond', '出发'))}</div></div>`;
+  }
+  function viewSimDone() {
+    const c = R.cards[0], m = R.sim, pass = !m.fail && m.score >= PASS;
+    const txt = o => { const x = nm(o.d.ask || o.d.stem || o.d.s || ''); return x.length > 110 ? x.slice(0, 104).replace(/\s+\S*$/, '') + ' …' : x; };
+    root.innerHTML = `<main class="done simdone">
+      <div class="herostk">${stk(c, 'hero')}<span class="stamp ${pass ? 'g' : 'h'}">${pass ? inl('PASS', '通过') : inl('FAIL', '未过')}</span></div>
+      <div class="score">${m.fail ? 0 : m.score}<small>%</small></div>
+      <h2 class="h2">${m.fail ? inl('On exam day that is an automatic fail.', '真考时这一下就直接挂了。') : pass ? (m.score >= 90 ? inl('Clean run.', '跑得很干净。') : inl('Passed. Tighten the misses.', '过了，把错的补上。')) : inl('Below 70%. Run it again.', '不到 70%，再跑一次。')}</h2>
+      ${m.lost.length ? `<div class="lost">${m.lost.map(x => `<div><span class="lw ${x.fail ? 'af' : ''}">${x.fail ? 'FAIL' : '−' + x.w + '%'}</span><span class="lt">${x.it.d.phase ? `<b>${esc(nm(x.it.d.phase))}</b> · ` : ''}${esc(txt(x.it))}</span></div>`).join('')}</div>` : `<p class="muted">${inl('No deductions.', '没有扣分。')}</p>`}
+      ${debrief(c)}
+      ${goBtn('again', R.scope.card ? inl('Run it again', '再跑一次') : inl('Next call', '下一单'))}
+      <button class="ghostbtn" data-act="back">${inl('Done for now', '先到这儿')}</button></main>`;
+    if (pass && m.score >= 90) confetti();
+    lastScope = R.scope; R = null;
+  }
   function viewDone() {
+    if (R.sim) return viewSimDone();
     const acc = R.first ? Math.round(R.right / R.first * 100) : 0, s0 = curStreak();
     const backIn = c => { const r = crec(c); if (!r) return ''; const d = r.due - today(); return d <= 0 ? inl('again today', '今天再练') : d === 1 ? inl('back tomorrow', '明天再见') : inl(`back in ${d} days`, `${d} 天后再见`); };
     const fan = R.cards.slice(0, 5);
@@ -408,6 +471,11 @@ export function drillLab(host, store, D, opts = {}) {
       case 'again': return startRound(lastScope);
       case 'quit': R = null; return back();
       case 'next': R.i++; render(); return;
+      case 'respond': {
+        const c = R.steps[R.i].card;
+        if (!st.seen[c.id]) { st.seen[c.id] = today(); R.learned.push(c); save(); }
+        R.i++; render(); return;
+      }
       case 'learnnext': {
         const step = R.steps[R.i];
         if ((step.p || 0) < 2) { step.p = (step.p || 0) + 1; render(); return; }

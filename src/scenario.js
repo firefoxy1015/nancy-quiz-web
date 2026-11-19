@@ -1,6 +1,6 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=80';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=81';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -74,6 +74,12 @@ export async function renderPracticalHub(el) {
            '完全复刻真实考试日：系统随机抽 1 个内科 + 1 个创伤场景，连考两场。每场都要 70% 以上才算通过；40 分钟一到当场收卷，没做的项目全部按漏做扣分。')}
       <div class="btn-row"><button class="btn big" id="startPMock" ${pm && pm.active ? 'disabled' : ''}>▶ ${t('Draw my two scenarios', '抽签开考')}</button></div>
     </div>
+    ${tr === 'emr' ? `<div class="card" style="border-color:var(--accent)">
+      <h3 style="margin-top:0">${ico('ambulance')} ${t('Play & learn: run the call', '边学边玩：跑一单')} <span class="pill gray">NEW</span></h3>
+      ${bi('A whole station as a game: dispatch, then every decision in order. Wrong calls deduct like the real grading, automatic fails end it, 70% passes, and the debrief opens at the end.',
+           '把一整站做成游戏：先听调度，再按顺序做每个决定。做错按真实评分扣分，挂科项直接挂，70% 及格，跑完看复盘。')}
+      <div class="btn-row"><a class="btn" href="#/play/emr-sims">${t('Take a call', '接一单')}</a></div>
+    </div>` : ''}
     <div class="card" style="border-color:var(--yellow)">
       <h3 style="margin-top:0">${ico('ambulance')} ${t('AI Examiner — talk to a simulated examiner', '考官机器人——和模拟考官对话')} <span class="pill gray">BETA</span></h3>
       ${bi('A live station: the examiner answers only what you assess or ask, in English, never coaches, and grades you on the official form at the end. Medical and trauma stations at both levels, plus an exam-day draw.',

@@ -1,13 +1,14 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=80';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=80';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=80';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=80';
-import { renderPortal } from './portal.js?v=80';
-import { renderAetClass } from './aetclass.js?v=80';
-import { renderBackup } from './backup.js?v=80';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=81';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=81';
+import { renderPlay } from './play.js?v=81';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=81';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=81';
+import { renderPortal } from './portal.js?v=81';
+import { renderAetClass } from './aetclass.js?v=81';
+import { renderBackup } from './backup.js?v=81';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -156,7 +157,7 @@ const routes = {
   'written': renderWrittenHub, 'practice': renderPractice, 'mock': renderMock, 'wrong': renderWrong, 'aet': renderAetHub,
   'practical': renderPracticalHub, 'scenarios': renderScenarioList, 'scenario': renderScenarioPlayer,
   'rubric': renderRubricBrowser, 'autofails': renderAutoFails, 'examiner': renderExaminerHub, 'examiner-run': renderExaminerRun, 'examiner-log': renderExaminerLog,
-  'juris': renderJurisHub, 'portal': renderPortal, 'backup': renderBackup,
+  'juris': renderJurisHub, 'portal': renderPortal, 'backup': renderBackup, 'play': renderPlay,
 };
 export function nav(hash) { location.hash = hash; }
 export function parseRoute() {
@@ -187,6 +188,7 @@ async function route() {
 }
 function updateNav(name) {
   const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'study', portal: 'study', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', examiner: 'practical', 'examiner-run': 'practical', 'examiner-log': 'practical', juris: 'juris' };
+  if (name === 'play') map.play = /sims/.test(location.hash) ? 'practical' : 'written';
   document.querySelectorAll('#bottomNav a').forEach(a => a.classList.toggle('active', a.dataset.nav === (map[name] || '')));
   syncTrackUI();
 }

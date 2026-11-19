@@ -1,6 +1,6 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=80';
-import { aetUnlocked, aetGate } from './aetclass.js?v=80';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=81';
+import { aetUnlocked, aetGate } from './aetclass.js?v=81';
 
 let session = null; // current exam session (mock or practice)
 
@@ -46,6 +46,12 @@ export async function renderWrittenHub(el) {
       ${ico('clock')} ${bi(`A mock exam is in progress — ${Object.keys(S.writtenMock.answers || {}).length}/${S.writtenMock.ids.length} answered.`,
         `有一场模考进行中——已答 ${Object.keys(S.writtenMock.answers || {}).length}/${S.writtenMock.ids.length} 题。`, 'span')}
       <a class="btn" style="margin-left:auto" href="#/mock">${t('Resume', '继续考试')} →</a>
+    </div>` : ''}
+    ${tr === 'emr' ? `<div class="card" style="border-color:var(--accent)">
+      <h3 style="margin-top:0">${ico('target')} ${t('Play & learn', '边学边玩')} <span class="pill gray">NEW</span></h3>
+      ${bi('The written topics as sticker cards: three short screens, then quick calls, true-or-false, tap-all and put-in-order. Cards come back on a schedule until they stick. About 3 minutes a round.',
+           '笔试考点做成贴纸卡：先 3 屏短讲，再出车判断、对错、多选、排顺序。卡片按间隔回来复习，直到记住。一轮大约 3 分钟。')}
+      <div class="btn-row"><a class="btn" href="#/play/emr-written">${t('Play', '开始玩')}</a></div>
     </div>` : ''}
     <div class="grid-2">
       <div class="card">

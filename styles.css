@@ -1479,3 +1479,24 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 /* the course list row that opens it: a small Battenburg square instead of a number */
 .cls-plan-row .n.ddx-n { border-radius: 6px; background: repeating-conic-gradient(#DCEB3F 0 25%, #0E6A44 0 50%); background-size: 11px 11px; box-shadow: inset 0 0 0 1.5px #15181B; }
 @media (prefers-reduced-motion: reduce) { .ddx *, .ddx *::before, .ddx *::after, .ddx-confetti i { animation: none !important; transition: none !important; } .ddx-confetti { display: none; } }
+
+/* EMR Play & learn: sims mode (drill.js, decks with mode "sims") */
+.ddx .simscore { font: 800 15px var(--display); color: var(--green); background: var(--card); border-radius: 8px; padding: 2px 7px; box-shadow: var(--shadow); white-space: nowrap; }
+.ddx .simscore.no { color: #fff; background: var(--stop); }
+.ddx .combo:has(.simscore) { min-width: 56px; }
+.ddx .afl { font: 600 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--stop); border: 1.5px solid currentColor; border-radius: 5px; padding: 0 5px; margin-left: 4px; vertical-align: 1px; white-space: nowrap; }
+.ddx .ded { margin-left: auto; font: 800 18px var(--display); color: var(--stop); white-space: nowrap; }
+.ddx .ded.af { font: 700 13px var(--mono); letter-spacing: .04em; color: #fff; background: var(--stop); border-radius: 7px; padding: 3px 8px; }
+.ddx .disp { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink2); }
+.ddx .debrief-h { font: 600 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink2); margin: 18px 0 4px; text-align: left; }
+.ddx .simbest { font: 600 11px var(--mono); font-style: normal; border-radius: 5px; padding: 1px 6px; }
+.ddx .simbest.ok { background: var(--hivis); color: #15181B; } .ddx .simbest.no { background: var(--stopbg); color: var(--stop); }
+.ddx .simdone .herostk { min-height: 170px; flex: none; }
+.ddx .simdone .stamp { right: 12%; bottom: 12%; font-size: 30px; }
+.ddx .lost { text-align: left; margin: 16px 0 6px; border-top: 1.5px solid var(--line); }
+.ddx .lost > div { display: flex; gap: 12px; align-items: baseline; padding: 9px 0; border-bottom: 1.5px solid var(--line); }
+.ddx .lw { flex: none; min-width: 52px; font: 800 17px var(--display); color: var(--stop); }
+.ddx .lw.af { font: 700 12px var(--mono); color: #fff; background: var(--stop); border-radius: 6px; padding: 2px 6px; text-align: center; }
+.ddx .lt { flex: 1; min-width: 0; font-size: 15px; line-height: 1.4; }
+.ddx .lt b { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink2); }
+.ddx .simdone .lrn { text-align: left; }

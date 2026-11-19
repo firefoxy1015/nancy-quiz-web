@@ -1,10 +1,10 @@
 // Back up / restore progress. Everything the site remembers lives in this browser's localStorage, so a cleared
 // browser or a new phone starts from zero. This writes it all to one JSON file and reads it back.
 // Passwords and remembered keys (class portal, class lectures) are left out on purpose: a backup is not a login.
-import { t, esc, ico } from './app.js?v=80';
+import { t, esc, ico } from './app.js?v=81';
 
 const EXACT = ['bcprep2', 'bcprepPortalQuiz', 'bcprepExaminerLog', 'drugdrill1'];   // site state (track, language, wrong answers, mocks, chapters read) · portal quiz progress · saved examiner conversations · Drug Drill app (./drugs/)
-const PREFIXES = ['pcpclass:', 'aetclass:'];           // Nancy classroom · AET class (done, tests, flashcard boxes)
+const PREFIXES = ['pcpclass:', 'aetclass:', 'play:'];  // Nancy classroom · AET class (done, tests, flashcard boxes) · EMR Play & learn decks
 const ours = k => EXACT.includes(k) || PREFIXES.some(p => k.startsWith(p));
 
 function collect() {
