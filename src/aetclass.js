@@ -2,10 +2,10 @@
 // Everything is AES-256-GCM encrypted: the lesson text in data/aet-class/vault.json and each narration
 // clip as audio/*.bin (12-byte IV + ciphertext) in the aet-audio repos; the vaults and slide images in aet-class-data. The browser derives the key from the password
 // (PBKDF2-SHA256) and decrypts in memory only; nothing readable is served. Built by D:\Claude\aet-class\tools\build_vault.py.
-import { S, save, t, esc, ico } from './app.js?v=79';
-import { news2Drill } from './news2drill.js?v=79';
-import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=79';
-import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=79';
+import { S, save, t, esc, ico } from './app.js?v=80';
+import { news2Drill } from './news2drill.js?v=80';
+import { makeStrip, stripSVG, overlaysSVG, make12, LAYOUT, heartSVG, torsoSVG, WALLS, wallOf, customStrip, beat } from './ecgstrip.js?v=80';
+import { GUESS, skFigure, wireSk, askBlock, askDone } from './skilldia.js?v=80';
 
 const BASE = './data/aet-class/';
 // The vaults and slide images live in their own Pages repo (aet-class-data, same github.io origin, also passed
@@ -73,6 +73,7 @@ async function loadWeek(wk) {
   if (part.brief) (DOC.briefs = DOC.briefs || {})[wk] = part.brief;
   if (part.quiz) (DOC.quizzes = DOC.quizzes || {})[wk] = part.quiz;
   if (part.cases) (DOC.cases = DOC.cases || {})[wk] = part.cases;       // the weekend's full scenarios (caselevel.js)       // the weekend's detailed quiz (src/weekquiz.js)   // the weekend's 精讲: pass card, chapters, school quiz
+  if (part.drill) (DOC.drills = DOC.drills || {})[wk] = part.drill;      // the weekend's Play & learn sticker drill (src/drill.js)
   weeksLoaded.add(wk);
 }
 function storedKey() { try { return JSON.parse(localStorage.getItem(KEY_LS) || 'null'); } catch { return null; } }
@@ -271,18 +272,21 @@ function drawCourse(el) {
     const nZ = ((DOC.index.quiz || {})[wk]) || 0, zOk = nZ ? Object.values(store.get('quiz:w' + String(wk).padStart(2, '0'), {}).ans || {}).filter(x => x && x.ok).length : 0;
     const quizRow = nZ ? `<div class="cls-plan cls-quizrow"><div class="cls-plan-row"><button class="main" data-quiz="${wk}"><span class="n">?</span><span class="lab">${t('Detailed quiz', '详细测验')} <small>${nZ} ${t('questions, by topic, every answer explained', '题，按主题分组，每题有讲解')}</small></span><span class="meta">${zOk ? `${zOk} / ${nZ}` : t('new', '新')}</span></button></div></div>` : '';
     const SCs = ((DOC.index.cases || {})[wk]) || [], scDone = SCs.filter(c => store.get('case:' + c.id + ':best', null)).length;
+    // Play & learn (边学边玩): the weekend's sticker drill (src/drill.js), shown when the head index says the weekend ships one
+    const DRm = (DOC.index.drill || {})[wk], drSeen = DRm ? Object.keys(store.get('drill:w' + String(wk).padStart(2, '0'), {}).seen || {}).length : 0;
+    const drillRow = DRm ? `<div class="cls-plan cls-quizrow"><div class="cls-plan-row"><button class="main" data-lab="drill${wk}"><span class="n ddx-n"></span><span class="lab">Play &amp; learn · 边学边玩 <small>${t(`${DRm.cards} sticker cards · 10 questions a round, about 3 min`, `${DRm.cards} 张贴纸卡 · 一轮 10 题，约 3 分钟`)}</small></span><span class="meta">${drSeen ? `${Math.min(drSeen, DRm.cards)} / ${DRm.cards}` : t('new', '新')}</span></button></div></div>` : '';
     const casesRow = SCs.length ? `<div class="cls-plan cls-quizrow"><div class="cls-plan-row"><button class="main" data-sc="${wk}"><span class="n">▶</span><span class="lab">${t('Full scenarios', '完整病例')} <small>${SCs.length} ${t('calls, every step is your choice', '个病例，每一步都由你选')}</small></span><span class="meta">${scDone ? `${scDone} / ${SCs.length}` : t('new', '新')}</span></button></div></div>` : '';
     const opts = [
       nQ ? chip(`data-test="${wk}"`, `${t('Test', '测验')} · ${nQ} ${t('Q', '题')} · ${Math.round(nQ * 0.35)} min`) : '',
       hasCards ? chip(`data-cards="${wk}"`, `${t('Flashcards', '闪卡')} · ${due}`) : '',
       bm && bm.school ? chip(`data-brief="${wk}" data-ch="school"`, `${t('School quiz', '学校小测')} · ${bm.school}`) : ''].filter(Boolean);
-    if (!bm && !pathOf(wk)) return `<div class="cls-wk-tools">${quizRow}${casesRow}
+    if (!bm && !pathOf(wk)) return `<div class="cls-wk-tools">${drillRow}${quizRow}${casesRow}
       <div class="btn-row">${nQ ? `<button class="btn ghost" data-test="${wk}">${t('Test first', '先测后听')} · ${nQ} ${t('questions', '题')} · ~${Math.round(nQ * 0.35)} min</button>` : ''}
         ${hasCards ? `<button class="btn ghost" data-cards="${wk}">${t('Flashcards', '闪卡')} · ${due} ${t('due', '待复习')}</button>` : ''}</div>
       <div class="tiny muted" style="margin-top:6px">${t('Suggested week: Mon–Tue the readings · Wed the modules, and the case lesson before the live case · Thu–Fri the lab lessons · then test again and clear your flashcards.',
         '建议节奏：周一二阅读课 · 周三模块课，直播案例前先听案例课 · 周四五实操课 · 然后再测一次、把闪卡清完。')}</div>
     </div>`;
-    if (pathOf(wk)) return `<div class="cls-wk-tools">${pathHTML(wk)}${quizRow}${casesRow}<div class="cls-plan-opt"><span class="k">${t('Companions', '配套')}</span>${[
+    if (pathOf(wk)) return `<div class="cls-wk-tools">${pathHTML(wk)}${drillRow}${quizRow}${casesRow}<div class="cls-plan-opt"><span class="k">${t('Companions', '配套')}</span>${[
       bm ? chip(`data-brief="${wk}" data-ch="card"`, t('Pass card', '必过卡')) : '', bm ? chip(`data-brief="${wk}"`, `${t('Condensed book', '精讲')} · ${bm.n} ${t('chapters', '章')}`) : '',
       bm && (bm.pdf || bm.pdfEn) ? chip(`data-brief="${wk}" data-ch="pdf"`, 'PDF') : '', ...opts].join('')}</div></div>`;
     // condensed weekend: two numbered steps (pass card, condensed book + PDF), then the optional extras as small chips
@@ -293,7 +297,7 @@ function drawCourse(el) {
       ${LABS[wk] ? `<div class="cls-plan-row"><button class="main" data-lab="${LABS[wk].id}"><span class="n">3</span><span class="lab">${t(LABS[wk].en, LABS[wk].zh)} <small>${t(LABS[wk].sub, LABS[wk].subZh)}</small></span><span class="meta">${LABS[wk].min} min</span></button></div>` : ''}
       ${(CASES[wk] || []).map((c, i) => { const b = store.get('case:w' + String(wk).padStart(2, '0') + '-' + c.id + ':best', null); return `<div class="cls-plan-row"><button class="main" data-lab="${c.id}"><span class="n">${(LABS[wk] ? 4 : 3) + i}</span><span class="lab">${t(c.en, c.zh)} <small>${t(c.sub, c.subZh)}</small></span><span class="meta">${b ? `${b.ok}/${b.total}` : t('new', '新')}</span></button></div>`; }).join('')}
       ${opts.length ? `<div class="cls-plan-opt"><span class="k">${t('If you have time', '有时间再做')}</span>${opts.join('')}</div>` : ''}
-    </div>${quizRow}${casesRow}</div>`;
+    </div>${drillRow}${quizRow}${casesRow}</div>`;
   };
   // one obvious thing to do today, above everything else (she said the page had too much and she could not find things)
   const todayCard = () => {
@@ -599,9 +603,9 @@ const LABS = { 3: { id: 'ecg', en: 'ECG lab', zh: '心电图练习室', sub: '7 
 // the numbers room exists per weekend: lab id "numbers" is Weekend 4 (kept for old links), "numbers5" is Weekend 5
 const isNum = id => /^numbers\d*$/.test(id || ''), numWk = id => +String(id).slice(7) || 4, numKey = id => 'num:w' + String(numWk(id)).padStart(2, '0');
 // case levels (出车关卡): one patient, one decision at a time; she answers first, the teacher talks after (src/caselevel.js)
-const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=79', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
-  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=79', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }],
-  5: [{ id: 'checkout', file: './case-w05-checkout.js?v=79', en: 'The arrest at the checkout', zh: '收银台前的心跳骤停', sub: '18 decisions, about 14 min', subZh: '18 个决定，约 14 分钟' }] };
+const CASES = { 3: [{ id: 'chestpain', file: './case-w03-chestpain.js?v=80', en: 'Chest pain call', zh: '胸痛出车', sub: '14 decisions, about 10 min', subZh: '14 个决定，约 10 分钟' }],
+  4: [{ id: 'thigh', file: './case-w04-thigh.js?v=80', en: 'The thigh under the coil', zh: '钢卷下的大腿', sub: '16 decisions, about 12 min', subZh: '16 个决定，约 12 分钟' }],
+  5: [{ id: 'checkout', file: './case-w05-checkout.js?v=80', en: 'The arrest at the checkout', zh: '收银台前的心跳骤停', sub: '18 decisions, about 14 min', subZh: '18 个决定，约 14 分钟' }] };
 // learning path (classroom/paths.json → index.paths[wk]): the one order to take a weekend in; steps are lessons or labs/case levels
 const pathOf = wk => ((DOC.index && DOC.index.paths) || {})[wk] || null;
 const onPath = id => Object.values((DOC.index && DOC.index.paths) || {}).some(P => P.steps.some(s => s.id === id));
@@ -634,7 +638,7 @@ async function drawQuiz(el, wk) {
   if (!QZ) { location.hash = '#/aet/class'; return; }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Detailed quiz', '详细测验')} · ${t('Weekend', '周末')} ${wk}</h2>
     <p class="muted">${t(esc(QZ.title), esc(QZ.titleZh || QZ.title))}</p><div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { weekQuiz } = await import('./weekquiz.js?v=79');
+  const { weekQuiz } = await import('./weekquiz.js?v=80');
   weekQuiz(el.querySelector('#labHost'), store, QZ, wk);
 }
 async function drawCases(el, wk, n) {
@@ -645,7 +649,7 @@ async function drawCases(el, wk, n) {
     el.innerHTML = `<a class="back-link" href="#/aet/class?sc=${wk}">← ${t('All scenarios', '全部病例')}</a><div class="card cls-stage"><h2>${t(esc(S.title.en), esc(S.title.zh))}</h2>
       <p class="muted">${t('Full scenario', '完整病例')} ${n} / ${ALL.length} · ${t('Weekend', '周末')} ${wk} · ${t(esc(S.sub.en), esc(S.sub.zh))}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const { caseLevel } = await import('./caselevel.js?v=79');
+    const { caseLevel } = await import('./caselevel.js?v=80');
     caseLevel(el.querySelector('#labHost'), store, S, { audio: audioURL });
     const nx = ALL.find(c => c.n === n + 1);
     if (nx) { const host = el.querySelector('#labHost'); new MutationObserver((m, o) => { const e = host.querySelector('.case-end .btn-row'); if (e && !e.querySelector('[data-scnext]')) {
@@ -659,27 +663,38 @@ async function drawCases(el, wk, n) {
       return `<div class="cls-plan-row"><a class="main${b ? ' done' : ''}" href="#/aet/class?sc=${wk}&n=${c.n}"><span class="n">${b ? '✓' : c.n}</span><span class="lab">${t(esc(c.title.en), esc(c.title.zh))}<small class="ttl">${t(esc(c.sub.en), esc(c.sub.zh))}</small></span><span class="meta">${b ? `${b.ok}/${b.total}` : mid && mid.idx ? t('continue', '继续') : `${(c.steps || []).filter(x => ['choose', 'multi', 'order'].includes(x.kind)).length} ${t('steps', '步')}`}</span></a></div>`; }).join('')}</div></div>`;
 }
 async function drawLab(el, params) {
+  const dm = /^drill(\d+)$/.exec(params.lab || '');
+  if (dm) {   // Play & learn: the weekend's sticker drill, shipped in its vault part; stickers in aet-class-data/img/drill/wNN/
+    const wk = +dm[1], w2 = String(wk).padStart(2, '0');
+    await loadWeek(wk);
+    const DR = (DOC.drills || {})[wk];
+    if (!DR) { location.hash = '#/aet/class'; return; }
+    el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div id="labHost"></div>`;
+    const { drillLab } = await import('./drill.js?v=80');
+    drillLab(el.querySelector('#labHost'), store, DR, { wk, img: id => `${dataBase}img/drill/w${w2}/${encodeURIComponent(id)}.webp` });
+    return;
+  }
   const c = caseOf(params.lab);
   if (c) {
     el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t(c.en, c.zh)} · ${t('Weekend', '周末')} ${c.wk}</h2>
       <p class="muted">${t('One patient, one decision at a time. You answer first; the teacher talks after. A wrong answer shows what it does to the patient, then you choose again. What you miss comes back next time.',
         '一个病人，一次一个决定。你先答，老师后说。选错了先看病人会怎样，再选一次。没记住的下次开头再考。')}</p>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=79'), import(c.file)]);
+    const [{ caseLevel }, { LEVEL }] = await Promise.all([import('./caselevel.js?v=80'), import(c.file)]);
     caseLevel(el.querySelector('#labHost'), store, LEVEL, { audio: audioURL });
     return;
   }
   if (isNum(params.lab)) {
     el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('Numbers room', '数字练习室')} · ${t('Weekend', '周末')} ${numWk(params.lab)}</h2>
       <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-    const { numLab } = await import('./numlab.js?v=79');
+    const { numLab } = await import('./numlab.js?v=80');
     numLab(el.querySelector('#labHost'), store, numWk(params.lab));
     return;
   }
   el.innerHTML = `<a class="back-link" href="#/aet/class">← ${t('All lessons', '全部课程')}</a><div class="card cls-stage"><h2>${t('ECG lab', '心电图练习室')} · ${t('Weekend', '周末')} 3</h2>
     <p class="muted">${t('Seven short steps. Every idea is drawn on a real-scale strip, and every step ends in practice. Do them in order the first time; after that, jump to the drill.', '七个短步骤。每个概念都画在真实比例的条带上，每一步都以练习收尾。第一遍按顺序做；之后直接跳到训练。')}</p>
     <div id="labHost">${t('Loading…', '加载中…')}</div></div>`;
-  const { ecgLab } = await import('./ecglab.js?v=79');
+  const { ecgLab } = await import('./ecglab.js?v=80');
   ecgLab(el.querySelector('#labHost'), store, params, { audio: audioURL });
 }
 
