@@ -4,10 +4,10 @@
 (() => {
   'use strict';
   const LS = 'drugdrill1', IV = [0, 1, 3, 7, 14, 30], ROUND = 10, GOAL = 20;
-  const DECK_ORDER = ['emalb', 'bcehs', 'home'];
+  const DECK_ORDER = ['emalb', 'home', 'bcehs'];
   const DK = {
     emalb: { en: 'Exam drugs', zh: '考试药', sub: { en: 'EMALB licensing exam monographs', zh: 'EMALB 执照考试的药物专论' }, tag: { en: 'Exam', zh: '考试' }, ico: 'cap' },
-    bcehs: { en: 'On the road', zh: '出车药', sub: { en: 'BCEHS drug monographs', zh: 'BCEHS 药物专论' }, tag: { en: 'BCEHS', zh: '出车' }, ico: 'siren' },
+    bcehs: { en: 'On the road', zh: '出车药', sub: { en: 'BCEHS monographs, for reference. The exam wins where they differ', zh: 'BCEHS 专论，仅供参考。和考试不同时以考试为准' }, tag: { en: 'BCEHS', zh: '出车' }, ico: 'siren' },
     home: { en: "Patients' medicines", zh: '病人的药', sub: { en: 'What the pill bottles tell you', zh: '药瓶告诉你什么' }, tag: { en: 'Home meds', zh: '家用药' }, ico: 'bottle' },
   };
   const GROUPS = {
@@ -327,9 +327,10 @@
   function viewHome() {
     const st = curStreak(), live = DECK_ORDER.filter(k => deckCards(k).length);
     const stats = Object.fromEntries(live.map(k => [k, deckStats(k)]));
-    const dueAll = live.reduce((s, k) => s + stats[k].due, 0);
-    const mostDue = live.map(k => [stats[k].due, k]).sort((x, y) => y[0] - x[0])[0];
-    const deck = mostDue && mostDue[0] > 0 ? mostDue[1] : (live.includes(S.last) ? S.last : live[0]);
+    const dueAll = live.filter(k => k !== 'bcehs').reduce((s, k) => s + stats[k].due, 0);
+    const examLive = live.filter(k => k !== 'bcehs'); // the main button is for the exam: never the road shelf
+    const mostDue = examLive.map(k => [stats[k].due, k]).sort((x, y) => y[0] - x[0])[0];
+    const deck = mostDue && mostDue[0] > 0 ? mostDue[1] : (examLive.includes(S.last) ? S.last : examLive[0]);
     const fresh = deckCards(deck).find(c => !S.seen[key(c)]);
     let pile = dueCards(deckCards(deck)).slice(0, 3);
     if (pile.length < 3 && fresh) pile.push(fresh);

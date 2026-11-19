@@ -1,5 +1,5 @@
 // Drug Drill offline support: try the network first so updates arrive, fall back to the saved copy with no signal.
-const CACHE = 'drugdrill-v3';
+const CACHE = 'drugdrill-v4';
 const SHELL = ['./', './index.html', './app.css', './app.js', './data.json', './manifest.webmanifest', './icon-192.png', './icon-180.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
