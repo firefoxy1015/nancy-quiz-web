@@ -1,14 +1,14 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=81';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=81';
-import { renderPlay } from './play.js?v=81';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=81';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=81';
-import { renderPortal } from './portal.js?v=81';
-import { renderAetClass } from './aetclass.js?v=81';
-import { renderBackup } from './backup.js?v=81';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=82';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=82';
+import { renderPlay } from './play.js?v=82';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=82';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=82';
+import { renderPortal } from './portal.js?v=82';
+import { renderAetClass } from './aetclass.js?v=82';
+import { renderBackup } from './backup.js?v=82';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -174,7 +174,7 @@ async function route() {
   el.className = 'view-root lang-' + S.lang;
   // track required for most views
   const noTrack = ['', 'home', 'guide', 'info', 'portal', 'backup'];
-  if (!S.track && !noTrack.includes(name) && !(name === 'aet' && arg === 'class')) { nav('/'); return; }
+  if (!S.track && !noTrack.includes(name) && name !== 'play' && !(name === 'aet' && arg === 'class')) { nav('/'); return; }
   let fn = routes[name] || renderHome;
   if (name === 'study' && arg) fn = renderStudySection;
   if (name === 'aet' && arg === 'class') fn = renderAetClass;
@@ -188,7 +188,7 @@ async function route() {
 }
 function updateNav(name) {
   const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'study', portal: 'study', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', examiner: 'practical', 'examiner-run': 'practical', 'examiner-log': 'practical', juris: 'juris' };
-  if (name === 'play') map.play = /sims/.test(location.hash) ? 'practical' : 'written';
+  if (name === 'play') map.play = /sims/.test(location.hash) ? 'practical' : /written/.test(location.hash) ? 'written' : 'home';
   document.querySelectorAll('#bottomNav a').forEach(a => a.classList.toggle('active', a.dataset.nav === (map[name] || '')));
   syncTrackUI();
 }
@@ -269,6 +269,11 @@ async function renderHome(el) {
         </div>
       </div>
     </div>
+    ${tr === 'emr' ? `<div class="card" style="border-color:var(--accent)">
+      <h3 style="margin-top:0">${ico('target')} ${t('Play & learn', '边学边玩')} <span class="pill gray">NEW</span></h3>
+      ${bi('Written questions as sticker cards and practical sims you run step by step, graded like the real station.', '笔试题做成贴纸卡，实操 sims 一步步跑、按真考站评分。')}
+      <div class="btn-row"><a class="btn" href="#/play">${t('Open', '打开')}</a><span class="tiny" style="align-self:center">${t('Share it:', '分享地址：')} <b>bcmedicprep.com/emr</b></span></div>
+    </div>` : ''}
     <div class="card">
       <h3 style="margin-top:0">${ico('cap')} ${t('Textbook progress', '教材进度')}</h3>
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">

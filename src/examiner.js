@@ -3,7 +3,7 @@
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
 // Every station is also kept word for word in this browser (localStorage bcprepExaminerLog, last 12) with how each
 // line got in (voice / typed / recognition confidence) and what the examiner credited for it — viewer at #/examiner-log/<sid>.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=81';
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=82';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}

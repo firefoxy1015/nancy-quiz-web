@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>EMR Play &amp; learn · BC Medic Prep</title>
+  <meta name="description" content="Learn the BC EMR licensing exam by playing: written questions as sticker cards and practical sims graded like the real station." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="EMR Play &amp; learn" />
+  <meta property="og:description" content="BC EMR exam prep: sticker-card written questions and practical sims graded like the real station." />
+  <meta property="og:url" content="https://bcmedicprep.com/emr/" />
+  <meta property="og:image" content="https://bcmedicprep.com/emr/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta http-equiv="refresh" content="1; url=../#/play" />
+  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F4F5F1;color:#15181B;font:16px/1.5 system-ui,sans-serif}@media (prefers-color-scheme:dark){body{background:#121513;color:#ECEFEA}}a{color:inherit}</style>
+</head>
+<body>
+  <p>Opening EMR Play &amp; learn… <a href="../#/play">Tap here if nothing happens.</a></p>
+  <script>
+    // Short shareable address for the EMR Play & learn hub (src/play.js). A first-time visitor gets the EMR track and the
+    // site's English default; anyone who already chose a track or a language keeps it.
+    try {
+      var k = 'bcprep2', s = JSON.parse(localStorage.getItem(k) || '{}');
+      if (!s.track) s.track = 'emr';
+      localStorage.setItem(k, JSON.stringify(s));
+    } catch (e) { /* storage blocked: the hub works without it */ }
+    location.replace('../#/play');
+  </script>
+</body>
+</html>

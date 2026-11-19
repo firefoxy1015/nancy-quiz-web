@@ -10,11 +10,11 @@
 // whole call in order: a dispatch screen, every step once (no retries), deductions "w" from 100 ("fail" = automatic fail),
 // 70 passes; the card's learn screens become the debrief.
 // Styles: styles.css, everything under .ddx (light and dark follow the site's theme). Fonts load on first use.
-import { S, esc } from './app.js?v=81';
+import { S, esc } from './app.js?v=82';
 
 const IV = [0, 1, 3, 7, 14, 30], ROUND = 10;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@1&family=Noto+Sans+SC:wght@400;500;700&display=swap';
-function loadFonts() {
+export function loadFonts() {
   if (document.getElementById('ddx-fonts')) return;
   for (const [href, cors] of [['https://fonts.googleapis.com', 0], ['https://fonts.gstatic.com', 1]]) {
     const p = document.createElement('link'); p.rel = 'preconnect'; p.href = href; if (cors) p.crossOrigin = ''; document.head.appendChild(p);

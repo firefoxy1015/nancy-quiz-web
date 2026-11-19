@@ -1500,3 +1500,17 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ddx .lt { flex: 1; min-width: 0; font-size: 15px; line-height: 1.4; }
 .ddx .lt b { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink2); }
 .ddx .simdone .lrn { text-align: left; }
+
+/* EMR Play & learn hub (#/play, src/play.js) */
+.ddx.phub .phub-lede { color: var(--ink2); font-size: 16px; margin: 14px 0 18px; max-width: 60ch; }
+.ddx .phub-tiles { display: grid; gap: 14px; }
+.ddx .phub-tile { display: grid; grid-template-columns: 1fr; gap: 4px; background: var(--card); border-radius: 22px; padding: 18px; box-shadow: var(--shadow); color: var(--ink); text-decoration: none; position: relative; overflow: hidden; }
+.ddx .phub-tile:active { transform: scale(.985); }
+.ddx .phub-pics { display: flex; justify-content: center; align-items: flex-end; height: 120px; margin-bottom: 6px; }
+.ddx .phub-pics img { width: 108px; height: 108px; object-fit: contain; margin: 0 -10px; transform: rotate(var(--r)); filter: var(--sticker); }
+.ddx .phub-tile b { font: 800 24px/1.15 var(--display); letter-spacing: -.02em; }
+.ddx .phub-tile small { font-size: 15px; line-height: 1.45; color: var(--ink2); }
+.ddx .phub-n { justify-self: start; margin-top: 8px; font: 600 12px var(--mono); background: var(--hivis); color: #15181B; border-radius: 6px; padding: 2px 8px; }
+.ddx.phub .foot a { color: var(--green); }
+.ddx.phub .h1 { line-height: 1.08; }
+.ddx.phub .h1 em { padding: 0 5px; }
