@@ -197,7 +197,7 @@
       case 'use': {
         const mine = new Set(c.use.map(u => u.en.toLowerCase()));
         const o = others(c, 3, x => x.use && x.use[0] && !mine.has(x.use[0].en.toLowerCase()), x => x.use[0].en);
-        return o && { ui: 'opts', ask: { en: `${short(c.name)} is given for…`, zh: `${tw} 用于…` }, opts: opts(pick(c.use), o.map(x => x.use[0])),
+        return o && { ui: 'opts', ask: { en: `${short(c.name)} is given for…`, zh: `${tw} 用于…` }, opts: opts(c.use[0], o.map(x => x.use[0])),
           why: { en: c.use.map(u => u.en).join('. ') + '.', zh: c.use.map(u => u.zh).join('。') + '。' } };
       }
       case 'tells': {
