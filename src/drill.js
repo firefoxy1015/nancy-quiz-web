@@ -13,7 +13,7 @@
 // taught, asked straight away, asked again in a later round, and counts as mastered once b >= 2 (two clean visits); a card
 // with misses drops back and returns next round. The EMR decks keep the day-based IV schedule.
 // Styles: styles.css, everything under .ddx (light and dark follow the site's theme). Fonts load on first use.
-import { S, esc } from './app.js?v=83';
+import { S, esc } from './app.js?v=84';
 
 const IV = [0, 1, 3, 7, 14, 30], ROUND = 10;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@1&family=Noto+Sans+SC:wght@400;500;700&display=swap';
