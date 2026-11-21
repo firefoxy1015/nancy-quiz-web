@@ -13,7 +13,9 @@
 // taught, asked straight away, asked again in a later round, and counts as mastered once b >= 2 (two clean visits); a card
 // with misses drops back and returns next round. The EMR decks keep the day-based IV schedule.
 // Styles: styles.css, everything under .ddx (light and dark follow the site's theme). Fonts load on first use.
-import { S, esc } from './app.js?v=84';
+// Sound (sfx): a chime when right (climbing with the combo), a soft buzz when wrong, a lower one for an automatic fail, a jingle
+// at the end of a round and a fanfare when today is done; the speaker button mutes it on this device.
+import { S, esc } from './app.js?v=85';
 
 const IV = [0, 1, 3, 7, 14, 30], ROUND = 10;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@1&family=Noto+Sans+SC:wght@400;500;700&display=swap';
@@ -30,7 +32,50 @@ const I = {
   cross: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
   back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
   arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  snd: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 010 6M18.5 6.5a7.5 7.5 0 010 11"/></svg>',
+  mute: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>',
 };
+
+/* ---------------- sound: right, wrong, round done, today done. Synthesized with Web Audio (no files to load); the speaker
+   button in the top bar turns it off on this device ('ddx:sound' = '0'). Every sound starts from a tap, so phones allow it. */
+const SND = 'ddx:sound';
+let actx = null;
+const soundOn = () => { try { return localStorage.getItem(SND) !== '0'; } catch { return true; } };
+function note(a, f, at, dur, { type = 'sine', vol = 0.16, glide = 0, lp = 0, bell = 0 } = {}) {
+  const t = a.currentTime + at, g = a.createGain();
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(vol, t + 0.008);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+  let out = g;
+  if (lp) { const fl = a.createBiquadFilter(); fl.type = 'lowpass'; fl.frequency.value = lp; g.connect(fl); out = fl; }
+  out.connect(a.destination);
+  for (const [fr, k] of [[f, 1]].concat(bell ? [[f * 2, bell]] : [])) {   // bell: a soft octave partial for a chime
+    const o = a.createOscillator(); o.type = type; o.frequency.setValueAtTime(fr, t);
+    if (glide) o.frequency.exponentialRampToValueAtTime(fr * glide, t + dur);
+    if (k === 1) o.connect(g); else { const gk = a.createGain(); gk.gain.value = k; o.connect(gk); gk.connect(g); }
+    o.start(t); o.stop(t + dur + 0.02);
+  }
+}
+function sfx(kind, combo = 0) {
+  if (!soundOn()) return;
+  try {
+    const A = window.AudioContext || window.webkitAudioContext; if (!A) return;
+    const a = actx || (actx = new A());
+    if (a.state === 'suspended') a.resume().catch(() => {});
+    const up = 2 ** (Math.min(Math.max(combo - 1, 0), 7) / 12);   // a combo climbs a semitone per answer, up to a fifth
+    switch (kind) {
+      case 'ok': note(a, 784 * up, 0, 0.16, { bell: 0.25 }); note(a, 1175 * up, 0.075, 0.32, { bell: 0.25 }); break;
+      case 'no': note(a, 247, 0, 0.16, { type: 'square', vol: 0.07, lp: 800, glide: 0.94 }); note(a, 185, 0.14, 0.3, { type: 'square', vol: 0.07, lp: 700, glide: 0.92 }); break;
+      case 'fail': [294, 247, 196].forEach((f, i) => note(a, f, i * 0.2, i === 2 ? 0.65 : 0.22, { type: 'square', vol: 0.07, lp: 700, glide: i === 2 ? 0.9 : 0.97 })); break;
+      case 'round': [523, 659, 784].forEach((f, i) => note(a, f, i * 0.09, 0.22, { bell: 0.2 })); note(a, 1047, 0.27, 0.55, { bell: 0.3 }); break;
+      case 'today':
+        [523, 659, 784, 1047].forEach((f, i) => note(a, f, i * 0.1, 0.26, { type: 'triangle', vol: 0.12, bell: 0.2 }));
+        [1047, 1319, 1568].forEach(f => note(a, f, 0.44, 1.2, { type: 'triangle', vol: 0.08, bell: 0.15 }));
+        [2093, 2637, 3136, 2637, 3520].forEach((f, i) => note(a, f, 0.56 + i * 0.07, 0.28, { vol: 0.035 }));
+        break;
+    }
+  } catch { /* no audio on this device */ }
+}
 const MISSING = new Set();   // sticker URLs that failed: drawn as the shelf-initial disc from then on, never a broken image
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pick = a => a[Math.floor(Math.random() * a.length)];
@@ -115,6 +160,7 @@ export function drillLab(host, store, D, opts = {}) {
     const t = today(), d = st.days[t] || (st.days[t] = { q: 0, ok: 0 });
     d.q++; if (ok) d.ok++;
     if (d.q >= ROUND && st.streak.last !== t) {
+      if (R) R.dayDone = true;   // today's practice is in: the done screen plays the "today" fanfare
       st.streak.n = st.streak.last === t - 1 ? st.streak.n + 1 : 1;
       st.streak.last = t; st.streak.best = Math.max(st.streak.best || 0, st.streak.n);
     }
@@ -221,7 +267,8 @@ export function drillLab(host, store, D, opts = {}) {
     const { steps, tally } = buildRound(scope);
     if (!steps.length) { R = null; return goHome(); }
     const cs = [...new Set(steps.map(s => s.card || s.item.card))];
-    R = { scope, steps, tally, i: 0, right: 0, first: 0, combo: 0, best: 0, cards: cs, learned: [], sim: SIM ? { score: 100, fail: false, lost: [] } : null };
+    R = { scope, steps, tally, i: 0, right: 0, first: 0, combo: 0, best: 0, cards: cs, learned: [], sim: SIM ? { score: 100, fail: false, lost: [] } : null,
+      allAtStart: cards.every(isMastered), dueAtStart: dueCards(cards).length, dayDone: false };
     render();
   }
 
@@ -244,6 +291,7 @@ export function drillLab(host, store, D, opts = {}) {
 
   /* ---------------- views ---------------- */
   const zhChip = () => (lang() === 'en' ? `<button class="zhchip" data-act="peek" aria-label="Show Chinese">中文</button>` : '');
+  const sndBtn = () => `<button class="snd" data-act="snd" aria-pressed="${soundOn()}" aria-label="${soundOn() ? inl('Sound on. Tap to mute', '声音开着，点一下关掉') : inl('Sound off. Tap to turn on', '声音关着，点一下打开')}">${soundOn() ? I.snd : I.mute}</button>`;
   const stars = m => [0.34, 0.67, 0.95].map(th => `<span class="star ${m >= th ? 'on' : ''}">${I.star}</span>`).join('');
   const meter = pct => `<span class="meter"><i style="width:${Math.max(pct ? 3 : 0, Math.round(pct))}%"></i></span>`;
   const head = title => `<header class="top"><button class="iconbtn" data-act="back" aria-label="${inl('Back', '返回')}">${I.back}</button><div class="top-t">${title}</div>${zhChip()}</header>`;
@@ -289,7 +337,7 @@ export function drillLab(host, store, D, opts = {}) {
     const learned = Object.keys(st.seen).filter(id => CARD[id]).length;
     const topRight = ONE ? `<span class="streak" title="${inl('Mastered', '已掌握')}"><b></b>${mast} / ${cards.length}</span>` : `<span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st0} ${inl(st0 === 1 ? 'day' : 'days', '天')}</span>`;
     const topLeft = ONE ? (mast === cards.length ? inl('Done for this weekend', '这周学完了') : inl(`About ${minsLeft()} min left`, `还剩约 ${minsLeft()} 分钟`)) : esc(date);
-    root.innerHTML = `<header class="top home-top"><span class="date">${topLeft}</span>${topRight}</header>
+    root.innerHTML = `<header class="top home-top"><span class="date">${topLeft}</span>${topRight}${sndBtn()}</header>
       <main class="home">
       <p class="kick">${opts.kick ? inl(opts.kick.en, opts.kick.zh) : inl('Weekend', '周末') + ' ' + wk} · ${D.title ? esc(nm(D.title)) : inl('Play & learn', '边学边玩')}</p>
       <h1 class="h1">${h1}</h1>
@@ -341,7 +389,7 @@ export function drillLab(host, store, D, opts = {}) {
     if (n > 18) return `<div class="segs cont">${meter(R.i / n * 100)}</div>`;
     return `<div class="segs">${R.steps.map((s, i) => `<i class="${i < R.i ? 'on' : i === R.i ? 'now' : ''}"></i>`).join('')}</div>`;
   };
-  const playTop = () => `<div class="bar"><button class="x" data-act="quit" aria-label="${inl('Close', '关闭')}">${I.cross}</button>${segs()}<span class="combo">${comboTxt()}</span></div>`;
+  const playTop = () => `<div class="bar"><button class="x" data-act="quit" aria-label="${inl('Close', '关闭')}">${I.cross}</button>${segs()}<span class="combo">${comboTxt()}</span>${sndBtn()}</div>`;
   const comboTxt = () => R.sim ? `<span class="simscore ${R.sim.fail ? 'no' : ''}">${R.sim.fail ? 'FAIL' : R.sim.score + '%'}</span>` : R.combo >= 2 ? '×' + R.combo : '';
   function viewPlay() {
     root.classList.remove('peek');
@@ -376,6 +424,7 @@ export function drillLab(host, store, D, opts = {}) {
     if (!step.retry) { grade(it, ok); R.first++; if (ok) R.right++; }
     if (ok) { R.combo++; R.best = Math.max(R.best, R.combo); } else { R.combo = 0; if (!step.retry && !R.sim) R.steps.push({ t: 'q', item: it, retry: true }); }
     if (!ok) { try { navigator.vibrate && navigator.vibrate(70); } catch { /* no haptics */ } }
+    sfx(ok ? 'ok' : R.sim && it.d.fail ? 'fail' : 'no', R.combo);
     const cb = $('.combo'); if (cb) cb.innerHTML = comboTxt();
     const sg = $('.segs'); if (sg && !sg.classList.contains('cont') && sg.children.length < R.steps.length) sg.insertAdjacentHTML('beforeend', '<i></i>');
     if (q.mode === 'do') { const s = $('.stamp'); if (s) { s.textContent = nm(q.a ? q.yes : q.no).toUpperCase(); s.className = 'stamp ' + (q.a ? 'g' : 'h'); s.hidden = false; } }
@@ -422,6 +471,7 @@ export function drillLab(host, store, D, opts = {}) {
       ${debrief(c)}
       ${goBtn('again', R.scope.card ? inl('Run it again', '再跑一次') : inl('Next call', '下一单'))}
       <button class="ghostbtn" data-act="back">${inl('Done for now', '先到这儿')}</button></main>`;
+    sfx(!pass ? 'fail' : m.score >= 90 ? 'today' : 'round');
     if (pass && m.score >= 90) confetti();
     lastScope = R.scope; R = null;
   }
@@ -431,15 +481,21 @@ export function drillLab(host, store, D, opts = {}) {
     const backIn = c => { const r = crec(c); if (!r) return ''; if (ONE) return r.b >= GOAL ? inl('mastered', '已掌握') : inl('next round', '下一轮再练'); const d = r.due - today(); return d <= 0 ? inl('again today', '今天再练') : d === 1 ? inl('back tomorrow', '明天再见') : inl(`back in ${d} days`, `${d} 天后再见`); };
     const fan = R.cards.slice(0, 5);
     const msg = acc >= 90 ? ['Sharp.', '很稳。'] : acc >= 70 ? ['Solid round.', '这轮不错。'] : ['The misses come back first.', '错的下次先考。'];
+    // today done: the one-day weekend just got its last card mastered; a day deck reached today's 10 questions or cleared what was due
+    const allNow = cards.every(isMastered), cleared = R.dueAtStart > 0 && !dueCards(cards).length;
+    const todayDone = ONE ? allNow && !R.allAtStart : R.dayDone || cleared;
+    const todayLine = !todayDone ? '' : `<p class="todaydone">${I.check}${ONE ? inl(`Weekend done: all ${cards.length} cards mastered today.`, `这周学完了：${cards.length} 张卡今天全部掌握。`)
+      : R.dayDone ? inl(`Today's practice done. ${s0}-day streak.`, `今天的练习完成了，连续 ${s0} 天。`) : inl('Everything due today is done.', '今天要复习的都做完了。')}</p>`;
     root.innerHTML = `<main class="done">
       <div class="fan">${fan.map((c, i) => stk(c, 'fanstk', `--r:${(i - (fan.length - 1) / 2) * 9}deg;z-index:${10 - Math.abs(i - 2)};animation-delay:${i * 0.06}s`)).join('')}</div>
-      <div class="score">${acc}<small>%</small></div><h2 class="h2">${inl(msg[0], msg[1])}</h2><p class="muted">${inl('That is how it sticks.', '就是这样记住的。')}</p>
+      <div class="score">${acc}<small>%</small></div><h2 class="h2">${inl(msg[0], msg[1])}</h2><p class="muted">${inl('That is how it sticks.', '就是这样记住的。')}</p>${todayLine}
       <div class="stats"><div><b>${R.right}/${R.first}</b><span>${inl('first try', '一次答对')}</span></div><div><b>×${R.best}</b><span>${inl('best combo', '最长连对')}</span></div>${ONE ? `<div><b>${cards.filter(isMastered).length}/${cards.length}</b><span>${inl('mastered', '已掌握')}</span></div>` : `<div><b>${s0}</b><span>${inl('day streak', '天连续')}</span></div>`}</div>
       ${R.cards.length ? `<div class="gain">${R.cards.map(c => `<div>${stk(c, 'thumb')}<span class="gname">${esc(nm(c.title))}${R.learned.includes(c) ? ` <em>${inl('new', '新')}</em>` : ''}</span><span class="gstars">${stars(mastery(c))}</span><span class="gback">${backIn(c)}</span></div>`).join('')}</div>` : ''}
-      ${ONE && cards.every(isMastered) ? `<p class="muted">${inl('Every card mastered. Extra rounds are pure practice.', '全部卡都掌握了，再练就是巩固。')}</p>` : ''}
+      ${ONE && allNow && !todayDone ? `<p class="muted">${inl('Every card mastered. Extra rounds are pure practice.', '全部卡都掌握了，再练就是巩固。')}</p>` : ''}
       ${goBtn('again', ONE ? inl('Next round', '下一轮') : inl('One more round', '再来一轮'), ONE ? inl(`About ${minsLeft()} min left`, `还剩约 ${minsLeft()} 分钟`) : '')}
       <button class="ghostbtn" data-act="back">${inl('Done for now', '先到这儿')}</button></main>`;
-    if (acc >= 80) confetti();
+    sfx(todayDone ? 'today' : 'round');
+    if (acc >= 80 || todayDone) confetti();
     lastScope = R.scope; R = null;
   }
   function confetti() {
@@ -476,6 +532,13 @@ export function drillLab(host, store, D, opts = {}) {
     if (b.dataset.card !== undefined && !b.dataset.act) return go({ name: 'card', id: b.dataset.card });
     switch (b.dataset.act) {
       case 'peek': root.classList.toggle('peek'); return;
+      case 'snd': {
+        const on = !soundOn();
+        try { localStorage.setItem(SND, on ? '1' : '0'); } catch { /* storage blocked: stays on */ }
+        $$('.snd').forEach(el => { el.outerHTML = sndBtn(); });
+        if (on) sfx('ok');
+        return;
+      }
       case 'back': return back();
       case 'start': return startFrom({ all: true });
       case 'startshelf': return startFrom({ shelf: b.dataset.shelf });
