@@ -9,8 +9,11 @@
 // Also the EMR Play & learn decks (src/play.js): opts.key / opts.kick / opts.tag. A deck with mode "sims" plays each card as one
 // whole call in order: a dispatch screen, every step once (no retries), deductions "w" from 100 ("fail" = automatic fail),
 // 70 passes; the card's learn screens become the debrief.
+// One-day pace (the AET class, opts.key not set): a weekend is learned in one sitting, so nothing waits for tomorrow. A card is
+// taught, asked straight away, asked again in a later round, and counts as mastered once b >= 2 (two clean visits); a card
+// with misses drops back and returns next round. The EMR decks keep the day-based IV schedule.
 // Styles: styles.css, everything under .ddx (light and dark follow the site's theme). Fonts load on first use.
-import { S, esc } from './app.js?v=82';
+import { S, esc } from './app.js?v=83';
 
 const IV = [0, 1, 3, 7, 14, 30], ROUND = 10;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@1&family=Noto+Sans+SC:wght@400;500;700&display=swap';
@@ -51,7 +54,7 @@ const up = o => (o == null ? '' : typeof o === 'string' ? o : { en: String(o.en 
 
 export function drillLab(host, store, D, opts = {}) {
   loadFonts();
-  const wk = +(D && D.wk) || +opts.wk || 0, KEY = opts.key || 'drill:w' + String(wk).padStart(2, '0'), SIM = !!D && D.mode === 'sims', PASS = 70;
+  const wk = +(D && D.wk) || +opts.wk || 0, KEY = opts.key || 'drill:w' + String(wk).padStart(2, '0'), SIM = !!D && D.mode === 'sims', PASS = 70, ONE = !opts.key && !SIM, GOAL = 2;
   const st = Object.assign({ items: {}, cards: {}, seen: {}, days: {}, streak: { n: 0, last: 0, best: 0 } }, store.get(KEY, null) || {});
   const save = () => store.set(KEY, st);
   const SH = {}, CARD = {};
@@ -99,9 +102,11 @@ export function drillLab(host, store, D, opts = {}) {
   const isCall = it => it.d.kind === 'do' || (it.d.kind === 'pick' && !!it.d.stem);
   const rec = it => st.items[it.k];
   const crec = c => st.cards[c.id];
-  const mastery = c => { const r = crec(c); return r ? Math.min(1, r.b / 4) : 0; };
+  const mastery = c => { const r = crec(c); return r ? Math.min(1, r.b / (ONE ? GOAL : 4)) : 0; };   // one-day: mastered = three stars
   const curStreak = () => (st.streak.last >= today() - 1 ? st.streak.n : 0);
-  const isDue = c => { const r = crec(c); return !!st.seen[c.id] && (!r || r.due <= today()); };
+  const isDue = c => { const r = crec(c); return !!st.seen[c.id] && (!r || (ONE ? r.b < GOAL : r.due <= today())); };
+  const isMastered = c => { const r = crec(c); return !!r && r.b >= GOAL; };
+  const minsLeft = () => { const un = cards.filter(c => !st.seen[c.id]).length, du = dueCards(cards).length; return Math.max(1, Math.round(un * 2.2 + du * 0.7)); };
   const dueCards = cs => cs.filter(isDue);
   let R = null;   // the round in progress
   function grade(it, ok) { // one first-try answer
@@ -122,8 +127,8 @@ export function drillLab(host, store, D, opts = {}) {
     const r = st.cards[c.id] || (st.cards[c.id] = { b: 0, due: 0, n: 0 }), miss = tally.wrong / tally.n;
     if (SIM && R && R.sim) { const ok = !R.sim.fail && R.sim.score >= PASS; r.b = !ok ? 0 : R.sim.score >= 90 ? Math.min(5, r.b + 1) : Math.max(1, r.b); r.best = Math.max(r.best || 0, R.sim.fail ? 0 : R.sim.score); }
     else if (tally.fresh) r.b = miss > 0.34 ? 0 : 1;
-    else if (miss <= 0.1) r.b = Math.min(5, r.b + 1);
-    else if (miss > 0.34) r.b = Math.max(1, r.b - 1);
+    else if (miss <= (ONE ? 0.34 : 0.1)) r.b = Math.min(5, r.b + 1);   // one-day: at most one miss in a visit still counts
+    else if (miss > 0.34) r.b = ONE ? Math.max(0, r.b - 1) : Math.max(1, r.b - 1);
     r.n++; r.due = today() + IV[r.b];
   }
   function pickItems(c, n) { // missed last time first, then never asked, then asked longest ago; always one patient call if the card has one
@@ -195,7 +200,7 @@ export function drillLab(host, store, D, opts = {}) {
     const unseen = pool.filter(c => !st.seen[c.id]);
     let lead = [], fresh = null, room = ROUND;
     const teach = (c, n) => { const its = introSet(c, n); tally[c.id] = { n: its.length, done: 0, wrong: 0, fresh: true }; room -= its.length; return [{ t: 'learn', card: c }].concat(its.map(q1)); };
-    if (unseen.length && due.length <= 6) { fresh = unseen[0]; lead = teach(fresh, due.length ? 5 : 6); } // room for a new card: teach it, then ask straight away
+    if (unseen.length && (ONE || due.length <= 6)) { fresh = unseen[0]; lead = teach(fresh, due.length ? 5 : 6); } // room for a new card: teach it, then ask straight away
     const review = [];
     for (const c of due) {
       if (room < 2) break;
@@ -203,7 +208,7 @@ export function drillLab(host, store, D, opts = {}) {
       review.push(...its.map(q1)); room -= its.length;
       tally[c.id] = { n: its.length, done: 0, wrong: 0 };
     }
-    if (!due.length && unseen.length > 1 && room >= 4) lead = lead.concat(teach(unseen[1], 4));   // nothing to review yet: a second new card fills the round
+    if (due.length <= (ONE ? 2 : 0) && unseen.length > 1 && room >= 4) lead = lead.concat(teach(unseen[1], 4));   // nothing to review yet: a second new card fills the round
     if (room >= 2) { // nothing else is due: extra practice on the weakest cards already learned. It does not move their schedule.
       const rest = shuffle(pool.filter(c => st.seen[c.id] && !tally[c.id])).sort((x, y) => sched(x).b - sched(y).b);
       for (const c of rest) { if (room < 2) break; const its = pickItems(c, Math.min(room, 3)); review.push(...its.map(q1)); room -= its.length; }
@@ -264,8 +269,11 @@ export function drillLab(host, store, D, opts = {}) {
     const pile = due.slice(0, 3);
     if (pile.length < 3 && fresh && !pile.includes(fresh)) pile.push(fresh);
     for (const c of cards) { if (pile.length >= 3) break; if (!pile.includes(c)) pile.push(c); }
-    const n = due.length;
-    const title = SIM ? (n ? { en: `${NUM[n] || n} call${n > 1 ? 's' : ''} to run <em>again</em>.`, zh: `有 <em>${n}</em> 单要再跑一次。` }
+    const n = due.length, mast = cards.filter(isMastered).length;
+    const title = ONE ? (mast === cards.length ? { en: `All ${cards.length} cards <em>mastered</em>.`, zh: `${cards.length} 张卡<em>全部学会</em>了。` }
+        : !Object.keys(st.seen).length ? { en: 'Learn the whole weekend <em>today</em>.', zh: '<em>今天</em>就把这周学完。' }
+        : { en: `${mast} of ${cards.length} <em>mastered</em>. Keep going.`, zh: `已掌握 <em>${mast}</em>/${cards.length}，继续。` })
+      : SIM ? (n ? { en: `${NUM[n] || n} call${n > 1 ? 's' : ''} to run <em>again</em>.`, zh: `有 <em>${n}</em> 单要再跑一次。` }
         : fresh ? (Object.keys(st.seen).length ? { en: 'A new call is <em>waiting</em>.', zh: '有一单<em>新任务</em>在等你。' } : { en: 'Run the call. <em>Pass</em> the station.', zh: '跑一单，<em>过一站</em>。' })
         : { en: 'Every call run. Keep it <em>sharp</em>.', zh: '都跑过了，<em>保持手感</em>。' })
       : n ? { en: `${NUM[n] || n} card${n > 1 ? 's are' : ' is'} due <em>today</em>.`, zh: `今天有 <em>${n}</em> 张卡要复习。` }
@@ -279,16 +287,19 @@ export function drillLab(host, store, D, opts = {}) {
     ];
     const date = new Date().toLocaleDateString(lang() === 'zh' ? 'zh-CN' : 'en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
     const learned = Object.keys(st.seen).filter(id => CARD[id]).length;
-    root.innerHTML = `<header class="top home-top"><span class="date">${esc(date)}</span><span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st0} ${inl(st0 === 1 ? 'day' : 'days', '天')}</span></header>
+    const topRight = ONE ? `<span class="streak" title="${inl('Mastered', '已掌握')}"><b></b>${mast} / ${cards.length}</span>` : `<span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st0} ${inl(st0 === 1 ? 'day' : 'days', '天')}</span>`;
+    const topLeft = ONE ? (mast === cards.length ? inl('Done for this weekend', '这周学完了') : inl(`About ${minsLeft()} min left`, `还剩约 ${minsLeft()} 分钟`)) : esc(date);
+    root.innerHTML = `<header class="top home-top"><span class="date">${topLeft}</span>${topRight}</header>
       <main class="home">
       <p class="kick">${opts.kick ? inl(opts.kick.en, opts.kick.zh) : inl('Weekend', '周末') + ' ' + wk} · ${D.title ? esc(nm(D.title)) : inl('Play & learn', '边学边玩')}</p>
       <h1 class="h1">${h1}</h1>
       <div class="pile">${pile.map((c, i) => { const p = slots[i]; return stk(c, 'pstk', `position:absolute;${p.s};--fs:${p.fs}px;max-height:${p.mh}px;max-width:${p.mw}%;--r:${p.r}deg`)
         + `<span class="tag" style="${p.tag};--r:${p.tr}deg">${esc(nm(c.title))}</span>`; }).join('')}</div>
-      ${SIM ? goBtn('start', inl('Take a call', '接一单'), inl('One whole call, about 5 minutes', '完整一单，大约 5 分钟')) : goBtn('start', inl('Start a round', '开始一轮'), inl('10 questions, about 3 minutes', '10 题，大约 3 分钟'))}
+      ${SIM ? goBtn('start', inl('Take a call', '接一单'), inl('One whole call, about 5 minutes', '完整一单，大约 5 分钟')) : goBtn('start', inl(ONE && Object.keys(st.seen).length ? 'Next round' : 'Start a round', ONE && Object.keys(st.seen).length ? '下一轮' : '开始一轮'), ONE ? inl('10 questions a round, finish every card today', '每轮 10 题，今天学完全部卡') : inl('10 questions, about 3 minutes', '10 题，大约 3 分钟'))}
       <div class="shelves">${shelves.map(s => { const x = shelfStats(s.id); return `<button class="shelf" data-shelf="${esc(s.id)}"><b>${shelfName(s)}</b>${x.due ? `<span class="due">${x.due}</span>` : '<span></span>'}<span class="cnt">${x.seen} / ${x.n}</span>${meter(x.n ? x.seen / x.n * 100 : 0)}</button>`; }).join('')}</div>
       <p class="foot">${T(SIM ? { en: `${learned} of ${cards.length} calls run. Start at 100%, every mistake deducts like the real station, an automatic fail ends it, 70% passes. Answers follow the EMALB exam guidelines and grading criteria; every step names its source.`,
-        zh: `已跑 ${learned}/${cards.length} 单。和真考站一样 100% 起步、做错就扣、直接挂科项就挂、70% 及格。答案以 EMALB 考纲和评分标准为准，每一步都注明出处。` } : { en: `${learned} of ${cards.length} cards learned. Answers follow the EMALB exam guidelines; where EMALB is silent, BCEHS, and every answer names its source. A study aid: on the road the current BCEHS guideline and CliniCall decide.`,
+        zh: `已跑 ${learned}/${cards.length} 单。和真考站一样 100% 起步、做错就扣、直接挂科项就挂、70% 及格。答案以 EMALB 考纲和评分标准为准，每一步都注明出处。` } : ONE ? { en: `${learned} of ${cards.length} cards learned, ${mast} mastered. Each card: three short screens, questions straight away, then again a round later; two clean rounds and it is mastered. Misses come back next round, so you can finish it all in one day. Answers follow the EMALB exam guidelines; where EMALB is silent, BCEHS, and every answer names its source.`,
+        zh: `已学 ${learned}/${cards.length} 张，已掌握 ${mast} 张。每张卡：先 3 屏短讲，马上考，隔一轮再考；两轮都答对就算掌握。错的下一轮再来，不用等明天，一天就能学完。答案以 EMALB 考纲为准；考纲没写的按 BCEHS，每题都注明出处。` } : { en: `${learned} of ${cards.length} cards learned. Answers follow the EMALB exam guidelines; where EMALB is silent, BCEHS, and every answer names its source. A study aid: on the road the current BCEHS guideline and CliniCall decide.`,
         zh: `已学 ${learned}/${cards.length} 张卡。答案以 EMALB 考纲为准；考纲没写的按 BCEHS，每题都注明出处。这是学习工具，出车以现行 BCEHS 指南和 CliniCall 为准。` })}</p>
       </main>`;
   }
@@ -417,15 +428,16 @@ export function drillLab(host, store, D, opts = {}) {
   function viewDone() {
     if (R.sim) return viewSimDone();
     const acc = R.first ? Math.round(R.right / R.first * 100) : 0, s0 = curStreak();
-    const backIn = c => { const r = crec(c); if (!r) return ''; const d = r.due - today(); return d <= 0 ? inl('again today', '今天再练') : d === 1 ? inl('back tomorrow', '明天再见') : inl(`back in ${d} days`, `${d} 天后再见`); };
+    const backIn = c => { const r = crec(c); if (!r) return ''; if (ONE) return r.b >= GOAL ? inl('mastered', '已掌握') : inl('next round', '下一轮再练'); const d = r.due - today(); return d <= 0 ? inl('again today', '今天再练') : d === 1 ? inl('back tomorrow', '明天再见') : inl(`back in ${d} days`, `${d} 天后再见`); };
     const fan = R.cards.slice(0, 5);
     const msg = acc >= 90 ? ['Sharp.', '很稳。'] : acc >= 70 ? ['Solid round.', '这轮不错。'] : ['The misses come back first.', '错的下次先考。'];
     root.innerHTML = `<main class="done">
       <div class="fan">${fan.map((c, i) => stk(c, 'fanstk', `--r:${(i - (fan.length - 1) / 2) * 9}deg;z-index:${10 - Math.abs(i - 2)};animation-delay:${i * 0.06}s`)).join('')}</div>
       <div class="score">${acc}<small>%</small></div><h2 class="h2">${inl(msg[0], msg[1])}</h2><p class="muted">${inl('That is how it sticks.', '就是这样记住的。')}</p>
-      <div class="stats"><div><b>${R.right}/${R.first}</b><span>${inl('first try', '一次答对')}</span></div><div><b>×${R.best}</b><span>${inl('best combo', '最长连对')}</span></div><div><b>${s0}</b><span>${inl('day streak', '天连续')}</span></div></div>
+      <div class="stats"><div><b>${R.right}/${R.first}</b><span>${inl('first try', '一次答对')}</span></div><div><b>×${R.best}</b><span>${inl('best combo', '最长连对')}</span></div>${ONE ? `<div><b>${cards.filter(isMastered).length}/${cards.length}</b><span>${inl('mastered', '已掌握')}</span></div>` : `<div><b>${s0}</b><span>${inl('day streak', '天连续')}</span></div>`}</div>
       ${R.cards.length ? `<div class="gain">${R.cards.map(c => `<div>${stk(c, 'thumb')}<span class="gname">${esc(nm(c.title))}${R.learned.includes(c) ? ` <em>${inl('new', '新')}</em>` : ''}</span><span class="gstars">${stars(mastery(c))}</span><span class="gback">${backIn(c)}</span></div>`).join('')}</div>` : ''}
-      ${goBtn('again', inl('One more round', '再来一轮'))}
+      ${ONE && cards.every(isMastered) ? `<p class="muted">${inl('Every card mastered. Extra rounds are pure practice.', '全部卡都掌握了，再练就是巩固。')}</p>` : ''}
+      ${goBtn('again', ONE ? inl('Next round', '下一轮') : inl('One more round', '再来一轮'), ONE ? inl(`About ${minsLeft()} min left`, `还剩约 ${minsLeft()} 分钟`) : '')}
       <button class="ghostbtn" data-act="back">${inl('Done for now', '先到这儿')}</button></main>`;
     if (acc >= 80) confetti();
     lastScope = R.scope; R = null;
