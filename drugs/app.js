@@ -39,6 +39,8 @@
     check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>',
     cross: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     spk: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 010 7"/></svg>',
+    snd: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 010 6M18.5 6.5a7.5 7.5 0 010 11"/></svg>',
+    mute: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>',
     back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>',
     arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
     gear: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-2.8 1.2V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-2.9-1.2l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00-1.2-2.8H3a2 2 0 110-4h.1a1.7 1.7 0 001.2-2.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 002.8-1.2V3a2 2 0 114 0v.1a1.7 1.7 0 002.9 1.2l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 001.2 2.8H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>',
@@ -49,8 +51,11 @@
   const S = (() => {
     let s = {};
     try { s = JSON.parse(localStorage.getItem(LS) || '{}') || {}; } catch (e) { s = {}; }
-    return Object.assign({ lang: null, items: {}, cards: {}, seen: {}, days: {}, streak: { n: 0, last: 0, best: 0 }, xp: 0, last: 'emalb', sound: false, blitzBest: 0 }, s);
+    return Object.assign({ lang: null, items: {}, cards: {}, seen: {}, days: {}, streak: { n: 0, last: 0, best: 0 }, xp: 0, last: 'emalb', sound: true, blitzBest: 0 }, s);
   })();
+  // 2026-11-21: sound became the Play & learn set and is on by default. Before that it was off by default and hidden in settings,
+  // so a saved "off" says nothing about a choice: switch everyone on once; the speaker button mutes it from then on.
+  if (S.sfx !== 2) { S.sound = true; S.sfx = 2; }
   if (!S.lang) {
     S.lang = 'en';
     try { const site = JSON.parse(localStorage.getItem('bcprep2') || '{}'); if (site.langChosen && site.lang) S.lang = site.lang; } catch (e) { /* keep default */ }
@@ -85,17 +90,46 @@
   function speak(text) {
     try { const u = new SpeechSynthesisUtterance(short(text)); u.lang = 'en-US'; u.rate = 0.85; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) { /* no speech on this device */ }
   }
+  // Sound: the same set as the site's Play & learn drills (src/drill.js), synthesized, no files. A chime when right that climbs
+  // with the combo, a soft buzz when wrong, a jingle at the end of a round, a fanfare when today is done (the day's 10 questions
+  // tick the streak, or every drug due in that shelf is reviewed) or a blitz sets a new best. The speaker button mutes it.
   let actx = null;
-  function beep(ok) {
+  function tone(a, f, at, dur, o) {
+    const type = o.type || 'sine', vol = o.vol || 0.16, glide = o.glide || 0, lp = o.lp || 0, bell = o.bell || 0;
+    const t = a.currentTime + at, g = a.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.008);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    let out = g;
+    if (lp) { const fl = a.createBiquadFilter(); fl.type = 'lowpass'; fl.frequency.value = lp; g.connect(fl); out = fl; }
+    out.connect(a.destination);
+    for (const [fr, k] of [[f, 1]].concat(bell ? [[f * 2, bell]] : [])) { // bell: a soft octave partial for a chime
+      const osc = a.createOscillator(); osc.type = type; osc.frequency.setValueAtTime(fr, t);
+      if (glide) osc.frequency.exponentialRampToValueAtTime(fr * glide, t + dur);
+      if (k === 1) osc.connect(g); else { const gk = a.createGain(); gk.gain.value = k; osc.connect(gk); gk.connect(g); }
+      osc.start(t); osc.stop(t + dur + 0.02);
+    }
+  }
+  function sfx(kind, combo) {
     if (!S.sound) return;
     try {
-      actx = actx || new (window.AudioContext || window.webkitAudioContext)();
-      const o = actx.createOscillator(), g = actx.createGain();
-      o.frequency.value = ok ? 880 : 220; o.type = ok ? 'sine' : 'triangle';
-      g.gain.setValueAtTime(0.08, actx.currentTime); g.gain.exponentialRampToValueAtTime(0.001, actx.currentTime + 0.18);
-      o.connect(g); g.connect(actx.destination); o.start(); o.stop(actx.currentTime + 0.2);
-    } catch (e) { /* no audio */ }
+      const A = window.AudioContext || window.webkitAudioContext; if (!A) return;
+      const a = actx || (actx = new A());
+      if (a.state === 'suspended') a.resume().catch(() => {});
+      const up = Math.pow(2, Math.min(Math.max((combo || 0) - 1, 0), 7) / 12); // a combo climbs a semitone per answer, up to a fifth
+      switch (kind) {
+        case 'ok': tone(a, 784 * up, 0, 0.16, { bell: 0.25 }); tone(a, 1175 * up, 0.075, 0.32, { bell: 0.25 }); break;
+        case 'no': tone(a, 247, 0, 0.16, { type: 'square', vol: 0.07, lp: 800, glide: 0.94 }); tone(a, 185, 0.14, 0.3, { type: 'square', vol: 0.07, lp: 700, glide: 0.92 }); break;
+        case 'round': [523, 659, 784].forEach((f, i) => tone(a, f, i * 0.09, 0.22, { bell: 0.2 })); tone(a, 1047, 0.27, 0.55, { bell: 0.3 }); break;
+        case 'today':
+          [523, 659, 784, 1047].forEach((f, i) => tone(a, f, i * 0.1, 0.26, { type: 'triangle', vol: 0.12, bell: 0.2 }));
+          [1047, 1319, 1568].forEach(f => tone(a, f, 0.44, 1.2, { type: 'triangle', vol: 0.08, bell: 0.15 }));
+          [2093, 2637, 3136, 2637, 3520].forEach((f, i) => tone(a, f, 0.56 + i * 0.07, 0.28, { vol: 0.035 }));
+          break;
+      }
+    } catch (e) { /* no audio on this device */ }
   }
+  const sndBtn = () => `<button class="iconbtn snd" data-act="snd" aria-pressed="${S.sound}" aria-label="${S.sound ? inl('Sound on. Tap to mute', '声音开着，点一下关掉') : inl('Sound off. Tap to turn on', '声音关着，点一下打开')}">${S.sound ? I.snd : I.mute}</button>`;
   const buzz = ms => { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) { /* no haptics */ } };
 
   /* ---------------- items and spaced repetition ---------------- */
@@ -123,6 +157,7 @@
     if (d.q >= ROUND && S.streak.last !== t) {
       S.streak.n = S.streak.last === t - 1 ? S.streak.n + 1 : 1;
       S.streak.last = t; S.streak.best = Math.max(S.streak.best || 0, S.streak.n);
+      if (R) R.dayDone = true;
     }
     for (const k of Object.keys(S.days)) if (+k < t - 90) delete S.days[k];
     const tally = R && R.tally && R.tally[key(it.card)];
@@ -282,7 +317,8 @@
     if (!steps.length) { go('#/'); return; }
     if (scope.deck) { S.last = scope.deck; save(); }
     const cards = [...new Set(steps.map(s => s.card || s.item.card))];
-    R = { scope, steps, tally, i: 0, right: 0, first: 0, combo: 0, best: 0, xp: 0, cards, learned: [] };
+    R = { scope, steps, tally, i: 0, right: 0, first: 0, combo: 0, best: 0, xp: 0, cards, learned: [], dayDone: false,
+      dueAtStart: scope.deck ? dueCards(deckCards(scope.deck)).length : 0 };
     render();
   }
   function startBags() {
@@ -345,7 +381,7 @@
       { s: 'right:2%;top:24px', mh: 180, mw: 150, tag: 'right:5%;top:196px' },
     ];
     const date = new Date().toLocaleDateString(S.lang === 'zh' ? 'zh-CN' : 'en-CA', { weekday: 'long', month: 'short', day: 'numeric' });
-    let h = `<header class="top home-top"><span class="date">${esc(date)}</span><span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st} ${inl(st === 1 ? 'day' : 'days', '天')}</span><button class="iconbtn" data-go="#/settings" aria-label="Settings">${I.gear}</button></header>
+    let h = `<header class="top home-top"><span class="date">${esc(date)}</span><span class="streak" title="${inl('Day streak', '连续天数')}"><b></b>${st} ${inl(st === 1 ? 'day' : 'days', '天')}</span>${sndBtn()}<button class="iconbtn" data-go="#/settings" aria-label="Settings">${I.gear}</button></header>
       <main class="home">
       <h1 class="h1">${rawT(title)}</h1>
       <div class="pile">${pile.map((c, i) => `<img class="stk" src="img/${esc(c.id)}.webp" alt="" draggable="false" style="position:absolute;${slots[i].s};max-height:${slots[i].mh}px;max-width:${slots[i].mw}px;--r:${[-12, -4, 9][i]}deg" onerror="this.style.visibility='hidden'"><span class="tag" style="${slots[i].tag};--r:${[-4, 3, 5][i]}deg">${esc(short(c.name))}</span>`).join('')}</div>
@@ -433,7 +469,7 @@
     if (n > 18) return `<div class="segs cont">${meter(R.i / n * 100)}</div>`;
     return `<div class="segs">${R.steps.map((s, i) => `<i class="${i < R.i ? 'on' : i === R.i ? 'now' : ''}"></i>`).join('')}</div>`;
   };
-  const playTop = extra => `<div class="bar"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button>${segs()}${extra === undefined ? `<span class="combo">${R.combo >= 2 ? '×' + R.combo : ''}</span>` : extra}</div>`;
+  const playTop = extra => `<div class="bar"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button>${segs()}${extra === undefined ? `<span class="combo">${R.combo >= 2 ? '×' + R.combo : ''}</span>` : extra}${sndBtn()}</div>`;
   const HIDE_NAME = ['hook', 'stem', 'brand'];
   function viewPlay() {
     app.classList.remove('peek');
@@ -468,7 +504,7 @@
     $('.stage').classList.add('locked');
     if (!st.retry) { grade(it, ok); R.first++; if (ok) R.right++; }
     if (ok) { R.combo++; R.best = Math.max(R.best, R.combo); } else { R.combo = 0; if (!st.retry) R.steps.push({ t: 'q', item: it, retry: true }); }
-    save(); beep(ok); if (!ok) buzz(70);
+    save(); sfx(ok ? 'ok' : 'no', R.combo); if (!ok) buzz(70);
     const cb = $('.combo'); if (cb) cb.textContent = R.combo >= 2 ? '×' + R.combo : '';
     if (q.mode === 'gh') { const s = $('.stamp'); if (s) { s.textContent = q.a ? inl('GIVE', '给') : inl('HOLD', '不给'); s.className = 'stamp ' + (q.a ? 'g' : 'h'); s.hidden = false; } }
     const p = pick([['Right call.', '判断对了。'], ['Exactly.', '没错。'], ['Nailed it.', '漂亮。'], ['Yes.', '对。']]);
@@ -509,14 +545,17 @@
     const fan = R.cards.slice(0, 5);
     const msg = acc >= 90 ? ['Sharp.', '很稳。'] : acc >= 70 ? ['Solid round.', '这轮不错。'] : ['The misses come back tomorrow.', '错的明天会再出现。'];
     const sub = acc >= 70 ? ['That is how it sticks.', '就是这样记住的。'] : ['That is how it sticks.', '这样才记得住。'];
+    const cleared = R.dueAtStart > 0 && !dueCards(deckCards(R.scope.deck)).length, todayDone = R.dayDone || cleared;
+    const todayLine = !todayDone ? '' : `<p class="todaydone">${I.check}${R.dayDone ? inl(`Today's practice done. ${st}-day streak.`, `今天的练习完成了，连续 ${st} 天。`) : inl('Every drug due on this shelf is reviewed.', '这一栏今天要复习的药都做完了。')}</p>`;
     app.innerHTML = `<main class="done">
       <div class="fan">${fan.map((c, i) => stk(c.id, 'fanstk', `--r:${(i - (fan.length - 1) / 2) * 9}deg;z-index:${10 - Math.abs(i - 2)}`)).join('')}</div>
-      <div class="score">${acc}<small>%</small></div><h2 class="h2">${inl(msg[0], msg[1])}</h2><p class="muted center">${inl(sub[0], sub[1])}</p>
+      <div class="score">${acc}<small>%</small></div><h2 class="h2">${inl(msg[0], msg[1])}</h2><p class="muted center">${inl(sub[0], sub[1])}</p>${todayLine}
       <div class="stats"><div><b>${R.right}/${R.first}</b><span>${inl('first try', '一次答对')}</span></div><div><b>×${R.best}</b><span>${inl('best combo', '最长连对')}</span></div><div><b>${st}</b><span>${inl('day streak', '天连续')}</span></div></div>
       ${R.cards.length ? `<div class="gain">${R.cards.map(c => `<div>${stk(c.id, 'thumb')}<span class="gname">${esc(short(c.name))}${R.learned.includes(c) ? ` <em>${inl('new', '新')}</em>` : ''}</span><span class="gstars">${stars(mastery(c))}</span><span class="gback">${back(c)}</span></div>`).join('')}</div>` : ''}
       <button class="go" data-act="again"><span>${inl('One more round', '再来一轮')}</span><span class="arrow">${I.arrow}</span></button>
       <button class="ghostbtn" data-go="#/">${inl('Done for now', '先到这儿')}</button></main>`;
-    if (acc >= 80) confetti();
+    sfx(todayDone ? 'today' : 'round');
+    if (acc >= 80 || todayDone) confetti();
     const keep = R.scope; R = null; viewDone.scope = keep;
     window.scrollTo(0, 0);
   }
@@ -533,14 +572,14 @@
     if (cards.length < 3) cards = DECK_ORDER.flatMap(deckCards);
     const pool = shuffle(cards.flatMap(c => (c.tf || []).map(d => ({ c, d }))));
     if (!pool.length) return;
-    R = { blitz: true, pool, i: 0, score: 0, n: 0, miss: [], end: Date.now() + 60000 };
+    R = { blitz: true, pool, i: 0, score: 0, n: 0, combo: 0, miss: [], end: Date.now() + 60000 };
     R.timer = setInterval(() => { if (!R || !R.blitz) return; const left = Math.max(0, Math.ceil((R.end - Date.now()) / 1000)); const el = $('.clock'); if (el) el.textContent = left + 's'; const m = $('.bar .meter i'); if (m) m.style.width = (left / 60 * 100) + '%'; if (left <= 0) endBlitz(); }, 250);
     location.hash = '#/play'; render();
   }
   function viewBlitz() {
     if (R.over) return;
     const x = R.pool[R.i % R.pool.length], left = Math.max(0, Math.ceil((R.end - Date.now()) / 1000));
-    app.innerHTML = `<div class="bar"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button><div class="segs cont">${meter(left / 60 * 100)}</div><span class="clock">${left}s</span></div>
+    app.innerHTML = `<div class="bar"><button class="x" data-act="quit" aria-label="Close">${I.cross}</button><div class="segs cont">${meter(left / 60 * 100)}</div><span class="clock">${left}s</span>${sndBtn()}</div>
       <div class="stage blitz" id="bz"><div class="qhd"><span>${esc(short(x.c.name))} · ${inl(DK[x.c.deck].tag.en, DK[x.c.deck].tag.zh)}</span><span class="sp"></span><b class="bscore">${R.score}</b></div>
       <div class="herostk">${stk(x.c.id, 'mid')}</div>
       <div class="blitz-s">${T(x.d.s)}</div>
@@ -553,6 +592,7 @@
       <p class="muted center">${inl(`${R.n} answered in 60 seconds`, `60 秒答了 ${R.n} 题`)}</p>
       ${R.miss.length ? `<h3 class="grp">${inl('Worth another look', '值得再看一眼')}</h3><div class="missed">${R.miss.slice(0, 8).map(m => `<div>${stk(m.c.id, 'thumb')}<p><b>${esc(short(m.c.name))}</b> ${T(m.d.s)}<span class="fix">${T(m.d.why)}</span></p></div>`).join('')}</div>` : ''}
       <button class="go" data-act="blitz"><span>${inl('Again', '再来')}</span><span class="arrow">${I.arrow}</span></button><button class="ghostbtn" data-go="#/">${inl('Home', '回首页')}</button></main>`;
+    sfx(best && R.score >= 8 ? 'today' : 'round');
     if (best && R.score >= 8) confetti();
     R = null; window.scrollTo(0, 0);
   }
@@ -578,7 +618,7 @@
     if (b.dataset.go) return go(b.dataset.go);
     if (b.dataset.set) {
       if (b.dataset.set === 'lang') S.lang = b.dataset.val; else S.sound = b.dataset.val === '1';
-      save(); if (S.sound) beep(true); return render();
+      save(); if (S.sound) sfx('ok'); return render();
     }
     if (b.dataset.ans !== undefined) {
       const q = R.steps[R.i].q, i = +b.dataset.ans, ok = q.opts[i].ok;
@@ -597,11 +637,12 @@
     }
     if (b.dataset.bz !== undefined) {
       const x = R.pool[R.i % R.pool.length], ok = (b.dataset.bz === '1') === x.d.a;
-      R.n++; if (ok) R.score++; else { R.miss.push(x); buzz(50); }
-      beep(ok); R.i++; viewBlitz();
+      R.n++; if (ok) { R.score++; R.combo++; } else { R.miss.push(x); R.combo = 0; buzz(50); }
+      sfx(ok ? 'ok' : 'no', R.combo); R.i++; viewBlitz();
       const s = $('#bz'); if (s) s.classList.add(ok ? 'flash-ok' : 'flash-no'); return;
     }
     switch (b.dataset.act) {
+      case 'snd': S.sound = !S.sound; save(); document.querySelectorAll('.snd').forEach(el => { el.outerHTML = sndBtn(); }); if (S.sound) sfx('ok'); return;
       case 'peek': app.classList.toggle('peek'); return;
       case 'lang': S.lang = S.lang === 'both' ? 'en' : S.lang === 'en' ? 'zh' : 'both'; save(); return render();
       case 'start': location.hash = '#/play'; return startRound({ deck: b.dataset.deck });
