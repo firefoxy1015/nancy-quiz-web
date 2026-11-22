@@ -1,0 +1,3946 @@
+{
+ "meta": {
+  "part": "pcp-trauma-medical",
+  "auditedThrough": "ptm-120",
+  "keep": 18,
+  "fix": 85,
+  "delete": 17
+ },
+ "verdicts": [
+  {
+   "id": "ptm-001",
+   "verdict": "fix",
+   "why": "解析只讲顺序，补充抬高、填塞两个干扰项为何错；补 competency"
+  },
+  {
+   "id": "ptm-002",
+   "verdict": "fix",
+   "why": "解析补齐三个干扰项（叠纱布、填塞、抬高冷敷）各错在哪"
+  },
+  {
+   "id": "ptm-003",
+   "verdict": "fix",
+   "why": "解析补齐骨盆带、单纯加压两个干扰项的错因"
+  },
+  {
+   "id": "ptm-004",
+   "verdict": "fix",
+   "why": "解析补齐三个错误做法的理由；中文药名华法林补英文"
+  },
+  {
+   "id": "ptm-005",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.19",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-006",
+   "verdict": "fix",
+   "why": "正确项带「因为危及气道」理由泄底，改写四个选项；解析按 BC p.19 + Nancy Ch24 写清拔出方法和各干扰项错因"
+  },
+  {
+   "id": "ptm-007",
+   "verdict": "fix",
+   "why": "选项D不是「归类」答案、C明显凑数，改成四个同结构的归类陈述；解析补错因，加 p.7 依据"
+  },
+  {
+   "id": "ptm-008",
+   "verdict": "fix",
+   "why": "正确项远长于其他项（长度泄底），重写四项为等长；B改为「直接埋入碎冰」避免装袋放冰的歧义"
+  },
+  {
+   "id": "ptm-009",
+   "verdict": "delete",
+   "reason": "标准5：与ptm-008考点相同（断肢保存：塑料袋保持低温，不泡水、不直接接触冰、不加温），保留情境更好的008"
+  },
+  {
+   "id": "ptm-010",
+   "verdict": "fix",
+   "why": "原题考直接加压（与001重复、干扰项一眼排除），且忽略了「3周婴儿自己滚下尿布台」与发育不符这一虐待警示；改为识别病史与发育阶段不符（Nancy Ch44/46）"
+  },
+  {
+   "id": "ptm-011",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.32",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-012",
+   "verdict": "fix",
+   "why": "正确项是唯一带理由的选项（泄底），四项都改为「做法+理由」；解析补齐半量、先补液两个干扰项错因；中文TXA补中文名氨甲环酸"
+  },
+  {
+   "id": "ptm-013",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.21",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-014",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.23",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-015",
+   "verdict": "fix",
+   "why": "解析未说明5磅是开放性骨折上限、22磅超限，补齐；正确项原带解释性从句偏长，缩短"
+  },
+  {
+   "id": "ptm-016",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.23",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-017",
+   "verdict": "fix",
+   "why": "正确项最长最细（长度泄底），四项改为等长；解析补错因"
+  },
+  {
+   "id": "ptm-018",
+   "verdict": "delete",
+   "reason": "标准5：与ptm-027重复（单纯跌倒致髋部骨折禁用骨盆固定带），027带心率陷阱、鉴别价值更高；且本题正确项明显最长、D扶走送分"
+  },
+  {
+   "id": "ptm-019",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.22",
+   "competency": "H2"
+  },
+  {
+   "id": "ptm-020",
+   "verdict": "fix",
+   "why": "选项C英文语法错误且荒谬，四项重写；解析补齐错因"
+  },
+  {
+   "id": "ptm-021",
+   "verdict": "delete",
+   "reason": "标准3：「足背动脉消失+麻木」下，稳定/轻伤两个干扰项一眼排除，只剩B与D二选一；考点与019同出 p.22 一段，保留019"
+  },
+  {
+   "id": "ptm-022",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.24",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-023",
+   "verdict": "fix",
+   "why": "正确项最长最细（长度泄底），四项改等长；解析补C、D两个干扰项错因"
+  },
+  {
+   "id": "ptm-024",
+   "verdict": "fix",
+   "why": "正确项自带「因其稳定且适合」理由、D「儿童骨折不镇痛」荒谬；四项重写为同等合理的时机选项，解析补错因"
+  },
+  {
+   "id": "ptm-025",
+   "verdict": "delete",
+   "reason": "标准3：被动活动度、血糖、瞳孔三个干扰项与前臂夹板毫无关系，一眼排除"
+  },
+  {
+   "id": "ptm-026",
+   "verdict": "fix",
+   "why": "正确项最长最细（长度泄底），四项改为等长；解析补错因"
+  },
+  {
+   "id": "ptm-027",
+   "verdict": "fix",
+   "why": "C/D为凑数选项且正确项最长，改为更有迷惑性的选项；解析补错因"
+  },
+  {
+   "id": "ptm-028",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.25",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-029",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.25",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-030",
+   "verdict": "fix",
+   "why": "正确项最长且自带理由，C/D荒谬；改为等长、有迷惑性的选项（含「先用NEXUS排除」），加 p.11 昏迷患者颈椎固定指征"
+  },
+  {
+   "id": "ptm-031",
+   "verdict": "fix",
+   "why": "正确项最长且D「俯卧转运」荒谬；四项改等长，D换成「任何碰撞都是高危机制」这一常见误区，解析补错因"
+  },
+  {
+   "id": "ptm-032",
+   "verdict": "fix",
+   "why": "正确项是唯一点出「高危」理由的选项（泄底），四项都改为「做法+理由」等长句；解析补错因"
+  },
+  {
+   "id": "ptm-033",
+   "verdict": "fix",
+   "why": "D「80岁以上一律固定」与加拿大颈椎准则「≥65岁即高危」部分吻合，可辩为对；换成45度转颈测试干扰项，正确项缩短"
+  },
+  {
+   "id": "ptm-034",
+   "verdict": "fix",
+   "why": "原题答案是超长的全流程清单（长度泄底）且与028/029重复；改为儿童特有要点：头大需在躯干下加垫保持中立位（Nancy Ch25）"
+  },
+  {
+   "id": "ptm-035",
+   "verdict": "delete",
+   "reason": "标准3：坐起擦干、走去担架、恢复体位三个干扰项面对「颈痛+手臂麻刺」一眼排除；脊柱活动限制指征已由028/030/031覆盖"
+  },
+  {
+   "id": "ptm-036",
+   "verdict": "delete",
+   "reason": "标准5：与ptm-042同考GCS中度分级（9–12），042用边界值9并加考SpO2，保留042"
+  },
+  {
+   "id": "ptm-037",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.27",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-038",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.27",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-039",
+   "verdict": "fix",
+   "why": "正确项是唯一带理由的选项（泄底），四项改为同结构；TXA补中文名；解析补错因"
+  },
+  {
+   "id": "ptm-040",
+   "verdict": "fix",
+   "why": "正确项最长，D「给TXA升压」凑数；改为等长选项，D换成「TKVO维持」这一真正的易错点"
+  },
+  {
+   "id": "ptm-041",
+   "verdict": "fix",
+   "why": "C/D为凑数选项、正确项唯一带具体数值；改为等长选项，解析补B（高血糖顾虑）错因及纠正方式"
+  },
+  {
+   "id": "ptm-042",
+   "verdict": "fix",
+   "why": "真错误：题干写「呼唤睁眼(3)+言语混乱(4)+疼痛定位(5)」=GCS 12，却标GCS 9，自相矛盾；改为疼痛睁眼(2)+言语错乱(3)+疼痛回缩(4)=9，解析补齐"
+  },
+  {
+   "id": "ptm-043",
+   "verdict": "fix",
+   "why": "正确项最长且把两个要点捆在一起（长度泄底）；聚焦「松开颈托」，四项等长，解析补错因"
+  },
+  {
+   "id": "ptm-044",
+   "verdict": "delete",
+   "reason": "标准3：冰敷、不降温直接干敷、涂药膏三个干扰项一眼排除；15–20分钟降温已由045/050/052覆盖"
+  },
+  {
+   "id": "ptm-045",
+   "verdict": "fix",
+   "why": "选项A自相矛盾（「旁观者降温不计入」却「无需再降温」），改为「10分钟已足够」；解析补错因"
+  },
+  {
+   "id": "ptm-046",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.28; Nancy Ch 23",
+   "competency": "H2"
+  },
+  {
+   "id": "ptm-047",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.28",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-048",
+   "verdict": "fix",
+   "why": "正确项带「因疑似吸入性损伤」理由泄底，四项改等长；Entonox、对乙酰氨基酚补中英；加 p.50 烟雾吸入用非再吸入面罩、p.7 面部气道烧伤属不稳定"
+  },
+  {
+   "id": "ptm-049",
+   "verdict": "delete",
+   "reason": "标准5：降温后用干燥无菌敷料与ptm-050重复，且冰袋、每10分钟换湿纱布等干扰项一眼排除"
+  },
+  {
+   "id": "ptm-050",
+   "verdict": "fix",
+   "why": "正确项最长（长度泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-051",
+   "verdict": "delete",
+   "reason": "标准5：与ptm-045同考「旁观者降温计入15–20分钟总时长」，保留选项更干净的045"
+  },
+  {
+   "id": "ptm-052",
+   "verdict": "fix",
+   "why": "正确项是一整句流程（长度泄底），四项改等长；解析补错因，并提示婴儿双小腿袜套样烫伤需警惕人为浸烫（Nancy Ch46）"
+  },
+  {
+   "id": "ptm-053",
+   "verdict": "fix",
+   "why": "原答案是一长串流程清单（长度泄底）、C「交给父母」荒谬；改为考电烧伤「体表小伤口掩盖深部损伤与心律失常风险」（Nancy Ch23），保留BC p.35要点"
+  },
+  {
+   "id": "ptm-054",
+   "verdict": "fix",
+   "why": "正确项最长，C「指挥昏迷司机跳车」不成立；改为等长选项（含「开另一侧车门」这一常见错误），解析补错因"
+  },
+  {
+   "id": "ptm-055",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.34",
+   "competency": "H3"
+  },
+  {
+   "id": "ptm-056",
+   "verdict": "fix",
+   "why": "正确项最长且点明诊断（泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-057",
+   "verdict": "delete",
+   "reason": "标准5：与ptm-058同考连枷胸手法固定，058有情境并考辅助通气，保留058"
+  },
+  {
+   "id": "ptm-058",
+   "verdict": "fix",
+   "why": "正确项最长（长度泄底），D「不给氧」凑数；四项改等长，解析补错因"
+  },
+  {
+   "id": "ptm-059",
+   "verdict": "fix",
+   "why": "TXA、阿司匹林补中英对照；解析补齐肌注1克、胸部创伤禁忌、阿司匹林三个干扰项错因"
+  },
+  {
+   "id": "ptm-060",
+   "verdict": "fix",
+   "why": "正确项是唯一结合体征的选项（泄底），四项都改为「理由」式陈述；Entonox补中文；解析补错因（年龄限制属于甲氧氟烷）"
+  },
+  {
+   "id": "ptm-061",
+   "verdict": "fix",
+   "why": "正确项最长且带「不拔出」重复限定（长度泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-062",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.29",
+   "competency": "H2"
+  },
+  {
+   "id": "ptm-063",
+   "verdict": "fix",
+   "why": "正确项是三件事的长清单（长度泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-064",
+   "verdict": "fix",
+   "why": "正确项最长，四项改等长；这是BC与教材不同的考点（BC最多除颤3次，Nancy Ch38只建议1次），按任务书在中英解析末尾加教材差异说明"
+  },
+  {
+   "id": "ptm-065",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.29",
+   "competency": "H2"
+  },
+  {
+   "id": "ptm-066",
+   "verdict": "fix",
+   "why": "正确项是超长一整句（长度泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-067",
+   "verdict": "fix",
+   "why": "正确项超长且把「不主动复温」也塞进去（与063重复），改为只考「用力/粗暴搬动诱发室颤」，四项等长"
+  },
+  {
+   "id": "ptm-068",
+   "verdict": "fix",
+   "why": "正确项自带「因其意识下降」理由泄底，改为同结构选项；解析补错因"
+  },
+  {
+   "id": "ptm-069",
+   "verdict": "fix",
+   "why": "正确项最长最细（长度泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-070",
+   "verdict": "fix",
+   "why": "正确项唯一带「针对脱水表现」限定，改为等长；茶苯海明补英文；解析补错因"
+  },
+  {
+   "id": "ptm-071",
+   "verdict": "delete",
+   "reason": "标准5/3：热射病降温方法与10分钟时机已由069考查；毛毯包裹、给无反应患儿喝冷水等干扰项一眼排除"
+  },
+  {
+   "id": "ptm-072",
+   "verdict": "fix",
+   "why": "正确项最长（长度泄底），四项改等长；解析补错因，以 p.33 溺水可致肺水肿替代无出处的「延迟恶化」说法"
+  },
+  {
+   "id": "ptm-073",
+   "verdict": "fix",
+   "why": "题干「脉搏缓慢」未给数值，无法判断是否需按压（BC <60伴灌注差才按压），改为约80次/分；正确项最长，四项改等长"
+  },
+  {
+   "id": "ptm-074",
+   "verdict": "delete",
+   "reason": "标准3：保留湿毛巾、降低室温两个干扰项荒谬，擦干保暖属常识，无鉴别价值"
+  },
+  {
+   "id": "ptm-075",
+   "verdict": "fix",
+   "why": "中文药名（苯海拉明、肾上腺素、沙丁胺醇）补英文；解析补D（先补液）错因"
+  },
+  {
+   "id": "ptm-076",
+   "verdict": "fix",
+   "why": "中文药名肾上腺素、苯海拉明补英文"
+  },
+  {
+   "id": "ptm-077",
+   "verdict": "fix",
+   "why": "正确项带绝对化理由「过敏性休克患者不可行走」泄底，改为等长做法；肾上腺素补英文；删去无出处的「空心室综合征」"
+  },
+  {
+   "id": "ptm-078",
+   "verdict": "fix",
+   "why": "肾上腺素补英文；解析补D（减半）错因"
+  },
+  {
+   "id": "ptm-079",
+   "verdict": "fix",
+   "why": "正确项最长且自带理由（泄底），四项改等长；药名补英文；解析补错因"
+  },
+  {
+   "id": "ptm-080",
+   "verdict": "fix",
+   "why": "肾上腺素补英文；解析补齐B/C/D各错在哪（成人量、10倍量、1/10量）"
+  },
+  {
+   "id": "ptm-081",
+   "verdict": "fix",
+   "why": "正确项带「已给过肾上腺素」限定泄底，D凑数；四项改等长；药名补英文；解析补错因"
+  },
+  {
+   "id": "ptm-082",
+   "verdict": "fix",
+   "why": "中文药名（苯海拉明、肾上腺素、沙丁胺醇）补英文"
+  },
+  {
+   "id": "ptm-083",
+   "verdict": "fix",
+   "why": "正确项超长（长度泄底）、A/B荒谬；四项改等长；BC要求「不稳定」才给肾上腺素，而Nancy Ch33以两系统受累即诊断，属BC与教材不同的考点，加差异说明"
+  },
+  {
+   "id": "ptm-084",
+   "verdict": "fix",
+   "why": "肾上腺素补英文；解析补A（留置）、C（止血带）错因"
+  },
+  {
+   "id": "ptm-085",
+   "verdict": "fix",
+   "why": "正确项最长（长度泄底），四项改等长；纳洛酮补英文；解析补错因"
+  },
+  {
+   "id": "ptm-086",
+   "verdict": "fix",
+   "why": "正确项是唯一列满四项的选项（长度泄底），四项都改为四个体征；解析说明各干扰组合对应的中毒/病情"
+  },
+  {
+   "id": "ptm-087",
+   "verdict": "fix",
+   "why": "真错误：BC纳洛酮递增为0.4→0.4→0.8→2.0mg，首剂0.4mg后下一剂应是第二个0.4mg，原答案0.8mg跳了一级；改正答案并把选项改为四个剂量"
+  },
+  {
+   "id": "ptm-088",
+   "verdict": "fix",
+   "why": "正确项超长（长度泄底），四项改等长；纳洛酮补英文；解析补错因"
+  },
+  {
+   "id": "ptm-089",
+   "verdict": "fix",
+   "why": "正确项明显最长，缩短为等长；纳洛酮补英文；解析补C/D（血压、行走不是终点）错因"
+  },
+  {
+   "id": "ptm-090",
+   "verdict": "delete",
+   "reason": "标准3/4：问「哪种途径最快」答案却是两种并列，题目结构有问题；口服途径（不存在）及15/20分钟等干扰项一眼排除，只考琐碎的起效数字"
+  },
+  {
+   "id": "ptm-091",
+   "verdict": "fix",
+   "why": "正确项超长（长度泄底），四项改等长；纳洛酮半衰期短、不应让其轻易拒绝转运出自 Nancy Ch36，补出处"
+  },
+  {
+   "id": "ptm-092",
+   "verdict": "fix",
+   "why": "正确项明显最长，四项改等长；药名补英文；解析补A（年龄）、C（胰高血糖素）错因"
+  },
+  {
+   "id": "ptm-093",
+   "verdict": "fix",
+   "why": "解析未说明D（D10W需静脉通路且非能口服者的初始治疗）为何错，补齐；药名补英文"
+  },
+  {
+   "id": "ptm-094",
+   "verdict": "fix",
+   "why": "中文药名（葡萄糖凝胶、胰高血糖素、D10W）补中英对照；解析补C（只顾穿刺）错因"
+  },
+  {
+   "id": "ptm-095",
+   "verdict": "fix",
+   "why": "解析未说明三个错误剂量各错在哪，补齐；D10W补中文名"
+  },
+  {
+   "id": "ptm-096",
+   "verdict": "fix",
+   "why": "正确项超长（长度泄底），四项改等长（D改为「只按低血糖处理」这一真实陷阱）；解析补错因"
+  },
+  {
+   "id": "ptm-097",
+   "verdict": "fix",
+   "why": "正确项自带「可5分钟重复且无上限」理由泄底，D「吃大餐」荒谬；四项改等长，药名补英文"
+  },
+  {
+   "id": "ptm-098",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.57",
+   "competency": "H2"
+  },
+  {
+   "id": "ptm-099",
+   "verdict": "fix",
+   "why": "正确项唯一带「备好吸引」附加条件（长度泄底），四项改等长；解析补错因"
+  },
+  {
+   "id": "ptm-100",
+   "verdict": "fix",
+   "why": "正确项自带理由泄底、C「新生儿不测血糖」荒谬；四项改等长，解析补错因"
+  },
+  {
+   "id": "ptm-101",
+   "verdict": "delete",
+   "reason": "标准5：「卒中必须测血糖」已由ptm-096在更高层次考查，问法又与068/100（必须测血糖）雷同，反复出同一答案"
+  },
+  {
+   "id": "ptm-102",
+   "verdict": "keep",
+   "sourceRef": "BC Guidelines p.30; Nancy Ch 31",
+   "competency": "H2"
+  },
+  {
+   "id": "ptm-103",
+   "verdict": "fix",
+   "why": "C「左肘窝18G，腕关节以下」自相矛盾；改为「左手18G避开无力侧」这一真实易错点；删去无出处的「便于造影/介入」理由"
+  },
+  {
+   "id": "ptm-104",
+   "verdict": "delete",
+   "reason": "标准3：双下肢疼痛、单纯胸部不适、发热咳痰三个干扰项与卒中毫无关系，一眼排除"
+  },
+  {
+   "id": "ptm-105",
+   "verdict": "delete",
+   "reason": "标准7/3：答案依赖卒中中心绕行/目的地规则，BC考纲没有规定（Nancy也只说「若当地流程允许绕行」）；A「气道受累送最近医院」在不少流程中可辩为对；正确项超长"
+  },
+  {
+   "id": "ptm-106",
+   "verdict": "fix",
+   "why": "正确项超长且把多项处置捆在一起（长度泄底），改为等长体位选项，以 p.13 AVPU 半俯卧位为依据"
+  },
+  {
+   "id": "ptm-107",
+   "verdict": "fix",
+   "why": "A「青少年不会卒中」、D「推迟30分钟」荒谬且正确项超长；改为疼痛危象、试给糖、观察等有迷惑性的选项，加 Nancy Ch37 镰状细胞致卒中依据"
+  },
+  {
+   "id": "ptm-108",
+   "verdict": "delete",
+   "reason": "标准3：到门口才通知、调度员负责等干扰项一眼排除；「途中通知接收医院」已含在096等题中"
+  },
+  {
+   "id": "ptm-109",
+   "verdict": "fix",
+   "why": "正确项自带理由泄底，改为同结构选项；药名补英文；解析补错因"
+  },
+  {
+   "id": "ptm-110",
+   "verdict": "fix",
+   "why": "药名补英文；解析补C（昂丹司琼剂量）、D（无按年龄减半）错因"
+  },
+  {
+   "id": "ptm-111",
+   "verdict": "fix",
+   "why": "D「任何原住民都不可用止吐药」荒谬且有冒犯性，改为「只看本人诊断」这一真实误区；药名补英文"
+  },
+  {
+   "id": "ptm-112",
+   "verdict": "fix",
+   "why": "药名补英文；解析补B（8毫克）错因"
+  },
+  {
+   "id": "ptm-113",
+   "verdict": "fix",
+   "why": "正确项超长（长度泄底），四项改等长；药名补英文；补 Nancy Ch43 幽门狭窄与新生儿院前禁食依据"
+  },
+  {
+   "id": "ptm-114",
+   "verdict": "fix",
+   "why": "正确项两段式最长（长度泄底），四项改等长；药名补英文；解析补错因"
+  },
+  {
+   "id": "ptm-115",
+   "verdict": "fix",
+   "why": "正确项唯一带限定条件（长度泄底），四项改为同结构；药名补英文；解析补错因"
+  },
+  {
+   "id": "ptm-116",
+   "verdict": "fix",
+   "why": "正确项唯一带「6小时后可重复」限定泄底，删去；药名补英文；解析补A错因"
+  },
+  {
+   "id": "ptm-117",
+   "verdict": "fix",
+   "why": "正确项带「避免布洛芬和甲氧氟烷」限定泄底，改为等长；药名补英文"
+  },
+  {
+   "id": "ptm-118",
+   "verdict": "fix",
+   "why": "正确项超长并列出替代方案（长度泄底），四项改等长；药名补英文"
+  },
+  {
+   "id": "ptm-119",
+   "verdict": "fix",
+   "why": "Entonox、硝酸甘油补中英；解析补C（疼痛评分高）错因"
+  },
+  {
+   "id": "ptm-120",
+   "verdict": "fix",
+   "why": "真错误（双答案）：原题甲氧氟烷的禁忌是「既往卤代麻醉后肝损」和肾损，患者两者都没有，D同样可辩为对；题干加慢性肾病（尿量减少）使甲氧氟烷明确禁用，并补清醒、双肺清晰支持Entonox；四项改为等长"
+  }
+ ],
+ "fixed": [
+  {
+   "id": "ptm-001",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "trauma-wound",
+   "difficulty": "foundation",
+   "questionEn": "A 24-year-old male cut his forearm with a circular saw. Bright red blood is spurting from a 6 cm laceration. He is alert, HR 102, BP 128/84. What is your first action to control the hemorrhage?",
+   "questionZh": "一名24岁男性用圆锯割伤前臂，6厘米的伤口喷出鲜红色血液。患者清醒，心率102，血压128/84。控制出血的首要措施是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply a tourniquet proximal to the wound",
+     "zh": "在伤口近端使用止血带"
+    },
+    {
+     "key": "B",
+     "en": "Elevate the arm above the level of the heart",
+     "zh": "将手臂抬高至心脏水平以上"
+    },
+    {
+     "key": "C",
+     "en": "Apply direct pressure to the wound",
+     "zh": "对伤口直接加压"
+    },
+    {
+     "key": "D",
+     "en": "Pack the wound with hemostatic gauze",
+     "zh": "用止血纱布填塞伤口"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC lists hemorrhage-control methods in order of preference: direct pressure, pressure dressing, positioning the part (elevation), positioning the patient, tourniquet, and finally extremity wound packing. Direct pressure (C) therefore comes first, even for spurting arterial bleeding. A tourniquet (A) is applied only if direct pressure fails to control the bleeding. Elevation (B) is a positioning measure that supplements pressure and is used only if it will not aggravate other injuries; it does not replace direct pressure. Wound packing (D) is the last option, reserved for bleeding that cannot be controlled otherwise, typically junctional wounds where a tourniquet cannot be applied.",
+   "explanationZh": "BC指南按优先顺序列出止血方法：直接加压、加压敷料、抬高患处、调整患者体位、止血带，最后是肢体伤口填塞。因此即使是喷射性动脉出血，第一步也是直接加压（C）。止血带（A）只在直接加压无法控制出血时才使用。抬高患肢（B）属于体位措施，只能在不加重其他损伤时作为加压的辅助，不能代替直接加压。伤口填塞（D）排在最后，用于其他方法都止不住的出血，通常是无法上止血带的交界部位。",
+   "sourceRef": "BC Guidelines p.19",
+   "verified": true
+  },
+  {
+   "id": "ptm-002",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "trauma-wound",
+   "difficulty": "intermediate",
+   "questionEn": "A 35-year-old male has a deep mid-thigh laceration from a chainsaw. Direct pressure and a pressure dressing have failed to control the arterial bleeding. He is pale, HR 124, BP 96/60. What is the next appropriate intervention?",
+   "questionZh": "一名35岁男性大腿中段被链锯深度割伤。直接加压和加压敷料均未能控制动脉出血。患者面色苍白，心率124，血压96/60。下一步适当的处置是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply a tourniquet proximal to the wound and note the time",
+     "zh": "在伤口近端使用止血带并记录时间"
+    },
+    {
+     "key": "B",
+     "en": "Add more gauze on top of the soaked dressing and continue pressure",
+     "zh": "在浸透的敷料上再叠加纱布并继续加压"
+    },
+    {
+     "key": "C",
+     "en": "Pack the wound and apply a fresh pressure dressing",
+     "zh": "填塞伤口并重新使用加压敷料"
+    },
+    {
+     "key": "D",
+     "en": "Elevate the leg and apply cold to slow the bleeding",
+     "zh": "抬高下肢并冷敷以减缓出血"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "The thigh is an area amenable to a tourniquet. When direct pressure and a pressure dressing fail, BC directs applying a tourniquet proximal to the wound, noting the time and never releasing it once applied (A). Piling more gauze on a soaked dressing (B) repeats the method that has already failed while he is becoming hypotensive. Wound packing (C) is for bleeding in areas NOT amenable to a tourniquet, such as junctional wounds. Elevation and cold (D) are adjuncts that will not stop arterial bleeding; cold is not a hemorrhage-control method.",
+   "explanationZh": "大腿属于可以上止血带的部位。直接加压和加压敷料都无效时，BC指南要求在伤口近端上止血带，记录时间，且一旦上好就不再松开（A）。在浸透的敷料上继续叠加纱布（B）只是重复已经失败的方法，而患者血压正在下降。伤口填塞（C）用于不适合上止血带的部位（如交界部位）的出血。抬高和冷敷（D）只是辅助措施，止不住动脉出血，冷敷本身也不属于止血方法。",
+   "sourceRef": "BC Guidelines p.19",
+   "verified": true
+  },
+  {
+   "id": "ptm-003",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "trauma-wound",
+   "difficulty": "advanced",
+   "questionEn": "A 31-year-old male has been stabbed in the left groin. Blood is pooling rapidly despite firm direct pressure. He is diaphoretic, HR 132, BP 88/54. A tourniquet cannot be effectively applied to this location. What should you do?",
+   "questionZh": "一名31岁男性左腹股沟被刺伤。尽管持续用力直接加压，血液仍迅速积聚。患者大汗，心率132，血压88/54。该部位无法有效使用止血带。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply a pelvic binder to tamponade the bleeding vessel",
+     "zh": "使用骨盆固定带压迫止血"
+    },
+    {
+     "key": "B",
+     "en": "Apply a tourniquet as high on the thigh as possible",
+     "zh": "尽可能在大腿高位使用止血带"
+    },
+    {
+     "key": "C",
+     "en": "Maintain direct pressure only and initiate rapid transport",
+     "zh": "仅维持直接加压并立即快速转运"
+    },
+    {
+     "key": "D",
+     "en": "Pack the wound to control the junctional hemorrhage",
+     "zh": "填塞伤口以控制交界部位出血"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "The groin is a junctional site where a tourniquet cannot be applied. When direct pressure fails in such an area, BC directs wound packing (D); packing is prohibited only for wounds of the neck, chest, or abdomen. A pelvic binder (A) is for suspected pelvic fractures and does not compress a bleeding groin wound. A tourniquet high on the thigh (B) would sit at or below the wound and cannot occlude the bleeding vessel. Continuing direct pressure alone (C) abandons the next method the guideline provides while he is already in shock; rapid transport follows once the bleeding is controlled.",
+   "explanationZh": "腹股沟属于交界部位，无法使用止血带。此类部位直接加压无效时，BC指南要求进行伤口填塞（D）；只有颈部、胸部和腹部的伤口禁止填塞。骨盆固定带（A）用于疑似骨盆骨折，压不到腹股沟的出血伤口。大腿高位止血带（B）只能扎在伤口处或伤口远端，无法阻断出血的血管。只继续直接加压（C）等于放弃指南给出的下一步方法，而患者已经休克；应先控制出血，再快速转运。",
+   "sourceRef": "BC Guidelines p.19",
+   "verified": true
+  },
+  {
+   "id": "ptm-004",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "trauma-wound",
+   "difficulty": "intermediate",
+   "questionEn": "A 78-year-old female on warfarin has a deep lower-leg laceration that did not stop bleeding with direct pressure. You applied a tourniquet at 14:32 and the bleeding stopped. Transport time is 40 minutes. How should the tourniquet be managed?",
+   "questionZh": "一名78岁女性服用华法林（warfarin），小腿深部裂伤直接加压无法止血。你于14:32使用止血带后出血停止。转运需40分钟。应如何管理止血带？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Loosen it every 15 minutes to allow distal perfusion",
+     "zh": "每15分钟松开一次以恢复远端灌注"
+    },
+    {
+     "key": "B",
+     "en": "Document the application time and do not release it",
+     "zh": "记录使用时间且不再松开"
+    },
+    {
+     "key": "C",
+     "en": "Convert it to a pressure dressing once clotting begins",
+     "zh": "一旦开始凝血就改用加压敷料"
+    },
+    {
+     "key": "D",
+     "en": "Release it when transport time exceeds 30 minutes",
+     "zh": "转运时间超过30分钟时松开"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC is explicit: when a tourniquet is applied, note the time and do not release it once applied (B). Loosening it every 15 minutes (A) lets the wound re-bleed each time, which is especially dangerous in a patient on warfarin. Converting to a pressure dressing once clotting begins (C) also means releasing the tourniquet, which the guideline prohibits. There is no 30-minute release rule (D) in the BC guideline; a long transport is not a reason to remove it.",
+   "explanationZh": "BC指南明确规定：上止血带时要记录时间，一旦上好就不再松开（B）。每15分钟松开一次（A）会让伤口反复出血，对服用华法林（warfarin）的患者尤其危险。凝血后改用加压敷料（C）同样意味着松开止血带，这是指南禁止的。BC指南中没有「超过30分钟就松开」的规定（D），转运时间长不是撤除止血带的理由。",
+   "sourceRef": "BC Guidelines p.19",
+   "verified": true
+  },
+  {
+   "id": "ptm-006",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "trauma-wound",
+   "difficulty": "advanced",
+   "questionEn": "A 9-year-old boy fell while running with a wooden stick, which is now embedded through his cheek into the oral cavity. Blood is running into his mouth, he is gurgling and unable to clear it despite suction. What is the appropriate management of the embedded object?",
+   "questionZh": "一名9岁男孩奔跑时摔倒，木棍穿透面颊进入口腔。血液流入口中，患儿发出咕噜声，抽吸后仍无法清理气道。对该嵌入物的正确处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Stabilize the stick in place with bulky dressings and transport",
+     "zh": "用厚敷料原位固定木棍后转运"
+    },
+    {
+     "key": "B",
+     "en": "Cut the stick short and stabilize the remaining portion",
+     "zh": "将木棍剪短，再固定剩余部分"
+    },
+    {
+     "key": "C",
+     "en": "Leave the stick and transport him supine with suction ready",
+     "zh": "保留木棍，备好吸引器，让他仰卧转运"
+    },
+    {
+     "key": "D",
+     "en": "Remove the stick, then pack the inside of the cheek and suction",
+     "zh": "拔出木棍，再填塞面颊内侧并吸引"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Embedded objects are normally stabilized in place, but BC makes an exception when the object is impairing the airway. Here blood is pouring into the mouth and suction cannot keep up, so the stick is removed (D). Nancy advises withdrawing it in the direction it entered, packing the inside of the cheek with gauze, applying counter-pressure on the outside, and suctioning, turning the patient on his side (with spinal stabilization if needed) if bleeding continues. Stabilizing the stick (A) or shortening it (B) leaves the cause of the airway compromise in place. Lying him supine (C) lets blood run back into the airway and makes aspiration more likely.",
+   "explanationZh": "嵌入物原则上应原位固定，但BC指南规定：若嵌入物妨碍气道，可以例外。本例血液不断流入口腔，吸引已清除不及，因此应拔出木棍（D）。Nancy教材建议沿刺入方向拔出，用纱布填塞面颊内侧，外侧加压包扎并持续吸引；若仍出血不止，可让患儿侧卧（必要时同时保护颈椎）以利引流。原位固定（A）或剪短木棍（B）都没有去除造成气道受阻的原因。让患儿仰卧（C）会使血液流回气道，增加误吸风险。",
+   "sourceRef": "BC Guidelines p.19; Nancy Ch 24",
+   "verified": true
+  },
+  {
+   "id": "ptm-007",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "trauma-wound",
+   "difficulty": "intermediate",
+   "questionEn": "An 81-year-old male fell down three stairs. His right wrist is grossly deformed and the radial pulse distal to the injury is absent. You realign the limb to anatomical position and the pulse returns. How should this patient now be categorized?",
+   "questionZh": "一名81岁男性从三级台阶跌落。右腕明显畸形，损伤远端桡动脉搏动消失。你将肢体复位至解剖位后脉搏恢复。该患者现在应如何归类？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Stable: circulation returned after one realignment; keep reassessing pulses",
+     "zh": "稳定：一次复位后循环已恢复，继续复评远端脉搏"
+    },
+    {
+     "key": "B",
+     "en": "Unstable: a limb that was ever pulseless stays in the unstable category",
+     "zh": "不稳定：肢体只要曾经无脉，就一直归为不稳定"
+    },
+    {
+     "key": "C",
+     "en": "Unstable: his age alone places him in the rapid transport category",
+     "zh": "不稳定：仅凭年龄就属于快速转运类别"
+    },
+    {
+     "key": "D",
+     "en": "Undetermined: realign a second time to confirm the pulse is reliable",
+     "zh": "暂不能判断：需要再复位一次，确认脉搏可靠"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC allows one attempt to realign a limb that is pulseless distal to an injury. If circulation returns, the patient can be treated as stable; if the limb remains pulseless, the patient is managed as unstable (A). Distal circulation is still reassessed throughout the call. The initial pulselessness (B) does not keep him unstable once circulation is restored. Age alone (C) is not one of BC's unstable criteria. A second realignment (D) is not part of the guideline: only one attempt is made, and there is no reason to manipulate a limb that now has a pulse.",
+   "explanationZh": "对损伤远端无脉的肢体，BC指南允许尝试复位一次：若循环恢复，患者可按稳定处理；若仍无脉，则按不稳定处理（A）。整个出勤过程中仍要持续复评远端循环。最初无脉（B）并不意味着循环恢复后仍属不稳定。单凭年龄（C）不在BC的不稳定标准之内。指南只允许复位一次，没有「再复位一次确认」的做法（D），对已经有脉搏的肢体也没有理由再搬动。",
+   "sourceRef": "BC Guidelines p.19, p.7",
+   "verified": true
+  },
+  {
+   "id": "ptm-008",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "trauma-wound",
+   "difficulty": "intermediate",
+   "questionEn": "A 6-year-old girl's index finger was completely amputated in a slammed car door. Bleeding from the stump is controlled and she is stable. How should the amputated finger be preserved for transport?",
+   "questionZh": "一名6岁女孩的食指被车门完全夹断。断端出血已控制，患儿情况稳定。断指应如何保存转运？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Submerge it in cool sterile water inside a sealed container",
+     "zh": "放进装有凉无菌水的密封容器中浸泡"
+    },
+    {
+     "key": "B",
+     "en": "Pack it directly in crushed ice so it stays as cold as possible",
+     "zh": "直接埋进碎冰里，让它尽可能保持低温"
+    },
+    {
+     "key": "C",
+     "en": "Wrap it in saline-moistened gauze, bag it, and keep it cool",
+     "zh": "用生理盐水浸湿的纱布包裹，装袋后保持低温"
+    },
+    {
+     "key": "D",
+     "en": "Wrap it in dry gauze and keep it warm against the parent",
+     "zh": "用干纱布包裹，贴着家长身体保温"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC's procedure is to rinse gross contamination with cool sterile water, wrap the part loosely in saline-moistened sterile gauze, place it in a plastic bag, keep it cool in a protective container, and transport it with the patient (C). The key points forbid each of the other options: never place the part in water (A), never place it directly on ice (B), and never warm it (D).",
+   "explanationZh": "BC的保存步骤是：用凉无菌水冲去明显污染物，用生理盐水浸湿的无菌纱布松松包裹，放入塑料袋，置于保护容器中保持低温，与患者一同转运（C）。其余选项都是要点中明令禁止的：断离部位不可泡在水里（A），不可直接接触冰块（B），也不可加温（D）。",
+   "sourceRef": "BC Guidelines p.20",
+   "verified": true
+  },
+  {
+   "id": "ptm-010",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "neonatal",
+   "topic": "trauma-wound",
+   "difficulty": "intermediate",
+   "questionEn": "Parents call because their 3-week-old \"rolled off the change table\" and has a 2 cm scalp laceration. You control the bleeding with gentle direct pressure. The infant is alert and crying vigorously. Which finding should concern you most?",
+   "questionZh": "家长来电称，他们3周大的婴儿「从尿布台上滚了下来」，头皮有一处2厘米的裂伤。你用轻柔的直接加压止住了出血。婴儿清醒，哭声有力。下列哪项发现最应引起你的警惕？",
+   "options": [
+    {
+     "key": "A",
+     "en": "The infant cries loudly throughout your assessment",
+     "zh": "评估全程婴儿都在大声哭闹"
+    },
+    {
+     "key": "B",
+     "en": "A 3-week-old is not yet developmentally able to roll",
+     "zh": "3周大的婴儿在发育上还不会翻身"
+    },
+    {
+     "key": "C",
+     "en": "The scalp wound bled heavily before pressure was applied",
+     "zh": "加压之前头皮伤口出血较多"
+    },
+    {
+     "key": "D",
+     "en": "The parents called for help soon after the fall",
+     "zh": "家长在跌落后很快就呼叫了急救"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Infants typically begin rolling over at around 4 months, so a 3-week-old cannot roll off a change table by itself (B). An injury that is inconsistent with the child's developmental age, or a history that does not fit the injury, is a red flag for maltreatment (the first items of Nancy's CHILD ABUSE mnemonic); document the facts objectively and report your concern. A loud, vigorous cry (A) is reassuring in an infant with a head injury. Scalp wounds normally bleed heavily (C) because the scalp is very vascular. Calling promptly (D) is appropriate; it is a delay in seeking care that raises suspicion.",
+   "explanationZh": "婴儿一般在4个月左右才会翻身，3周大的婴儿不可能自己从尿布台上滚下来（B）。损伤与孩子的发育阶段不符、病史与伤情对不上，是虐待的警示信号（Nancy教材CHILD ABUSE记忆法的前两项）；应客观记录事实并上报疑虑。头部受伤的婴儿哭声响亮有力（A）反而令人放心。头皮血管丰富，出血多（C）本身属于常见现象。家长及时呼救（D）是恰当的，真正引起怀疑的是延迟就医。",
+   "sourceRef": "Nancy Ch 46; Nancy Ch 44",
+   "verified": true
+  },
+  {
+   "id": "ptm-012",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "trauma-wound",
+   "difficulty": "advanced",
+   "questionEn": "A 68-year-old female was in a high-speed MVC 3.5 hours ago in a remote area. She has abdominal bruising, HR 122, BP 86/58, and cool clammy skin. Vascular access is established en route. Regarding TXA, what is the correct decision?",
+   "questionZh": "一名68岁女性3.5小时前在偏远地区发生高速车祸。腹部瘀伤，心率122，血压86/58，皮肤湿冷。转运途中已建立静脉通路。关于氨甲环酸（TXA），正确的决定是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give 2 g IV push over 1 minute; she meets the shock criteria",
+     "zh": "2克静脉推注，1分钟推完；她符合休克标准"
+    },
+    {
+     "key": "B",
+     "en": "Give 1 g IV, reduced because she is over 65 years old",
+     "zh": "静脉给1克，因她已超过65岁而减量"
+    },
+    {
+     "key": "C",
+     "en": "Give 2 g only after a 2-litre fluid bolus is complete",
+     "zh": "先输完2升液体，再给2克"
+    },
+    {
+     "key": "D",
+     "en": "Withhold it; the injury occurred more than 3 hours ago",
+     "zh": "不给药；受伤已超过3小时"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "TXA is contraindicated if more than 3 hours have passed since the injury; the other contraindications are hypersensitivity, age under 12, and isolated TBI. She has shock and a mechanism suggesting occult bleeding, but at 3.5 hours TXA is withheld (D). The standard 2 g IV push over 1 minute (A) is correct only within the 3-hour window. There is no age-based dose reduction (B); the BC dose is a fixed 2 g. TXA does not require a 2-litre bolus first (C); it is indicated after the hypovolemia protocol has been started, and she still receives fluid per that protocol.",
+   "explanationZh": "受伤超过3小时是氨甲环酸（tranexamic acid，TXA）的禁忌证，其他禁忌还包括过敏、12岁以下和单纯颅脑损伤。她虽有休克表现且受伤机制提示隐匿性出血，但距受伤已3.5小时，因此不给TXA（D）。2克静脉推注、1分钟推完（A）只适用于3小时窗口内。BC没有按年龄减量的规定（B），剂量固定为2克。TXA也不需要先输满2升液体（C）——启动低血容量流程后即可使用；她仍应按该流程补液。",
+   "sourceRef": "BC Guidelines p.78, p.54",
+   "verified": true
+  },
+  {
+   "id": "ptm-015",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "trauma-fracture",
+   "difficulty": "intermediate",
+   "questionEn": "You are applying a Sager splint to a stable 80 kg (176 lb) male with a closed mid-shaft femur fracture. How much traction should be applied?",
+   "questionZh": "你正在为一名体重80公斤（176磅）、病情稳定的男性闭合性股骨干中段骨折患者使用Sager牵引夹板。应施加多少牵引力？",
+   "options": [
+    {
+     "key": "A",
+     "en": "18 lbs, exactly 10% of his body weight",
+     "zh": "18磅，即体重的10%"
+    },
+    {
+     "key": "B",
+     "en": "5 lbs, the standard for all femur fractures",
+     "zh": "5磅，所有股骨骨折的标准值"
+    },
+    {
+     "key": "C",
+     "en": "15 lbs, the maximum for a closed fracture",
+     "zh": "15磅，即闭合性骨折的上限"
+    },
+    {
+     "key": "D",
+     "en": "22 lbs, to ensure adequate bony alignment",
+     "zh": "22磅，以确保骨折对线充分"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "For a closed mid-shaft femur fracture, traction is 10% of body weight to a maximum of 15 lbs (7 kg). Ten percent of 176 lbs is 17.6 lbs, which exceeds the cap, so 15 lbs is applied (C). Option A ignores the 15-lb maximum (and 10% is 17.6 lbs, not 18). Five pounds (B) is the maximum for an OPEN mid-shaft fracture, not a standard for all femur fractures. Twenty-two pounds (D) exceeds the maximum; more traction is not better. Once applied, traction is never released.",
+   "explanationZh": "闭合性股骨干中段骨折的牵引力为体重的10%，最大15磅（7公斤）。176磅的10%是17.6磅，超过上限，因此施加15磅（C）。A忽略了15磅上限（而且10%是17.6磅，不是18磅）。5磅（B）是开放性股骨干中段骨折的上限，不是所有股骨骨折的标准。22磅（D）超过上限，牵引并非越大越好。牵引一旦施加就不能松开。",
+   "sourceRef": "BC Guidelines p.23",
+   "verified": true
+  },
+  {
+   "id": "ptm-017",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H1",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "trauma-fracture",
+   "difficulty": "advanced",
+   "questionEn": "A 45-year-old logger has a grossly deformed mid-thigh, decreased breath sounds on the left, HR 124, BP 88/56. Your partner begins preparing the Sager splint. What is the correct course of action?",
+   "questionZh": "一名45岁伐木工人大腿中段明显畸形，左侧呼吸音减弱，心率124，血压88/56。你的搭档开始准备Sager牵引夹板。正确的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply the traction splint first to reduce bleeding at the fracture",
+     "zh": "先上牵引夹板，以减少骨折处出血"
+    },
+    {
+     "key": "B",
+     "en": "Apply traction en route once the primary survey is complete",
+     "zh": "完成初步评估后，在转运途中施加牵引"
+    },
+    {
+     "key": "C",
+     "en": "Skip traction; stabilize the limb manually and transport rapidly",
+     "zh": "不做牵引；手法固定患肢后快速转运"
+    },
+    {
+     "key": "D",
+     "en": "Apply only 5 lbs of traction because he is hypotensive",
+     "zh": "因为低血压，只施加5磅牵引"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Traction splints are indicated only for suspected mid-shaft femur fractures in STABLE patients. This patient is unstable (hypotensive and tachycardic, with decreased breath sounds suggesting chest injury), so the limb is stabilized and he is transported rapidly without a traction splint (C). Applying the splint first (A) delays transport of a patient whose life threats are in the chest and circulation. Applying it en route (B) still uses a device that is not indicated for an unstable patient and diverts attention from reassessing his breathing. The 5-lb limit (D) applies to open fractures; hypotension does not create a 'reduced traction' option.",
+   "explanationZh": "牵引夹板只适用于病情稳定患者的疑似股骨干中段骨折。该患者不稳定——低血压、心动过速，左侧呼吸音减弱提示胸部损伤——因此应手法固定患肢并快速转运，不使用牵引夹板（C）。先上夹板（A）会延误转运，而他的致命威胁在胸部和循环。途中再上（B）仍是对不稳定患者使用不适用的装置，还会分散复评呼吸的精力。5磅上限（D）针对的是开放性骨折，低血压并不构成「减量牵引」的理由。",
+   "sourceRef": "BC Guidelines p.23, p.7",
+   "verified": true
+  },
+  {
+   "id": "ptm-020",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "geriatric",
+   "topic": "trauma-fracture",
+   "difficulty": "intermediate",
+   "questionEn": "During transport of a 79-year-old with a suspected hip dislocation, the patient reports sudden relief of pain and the limb appears to have returned to normal position. What must you do?",
+   "questionZh": "转运一名79岁疑似髋关节脱位患者途中，患者诉疼痛突然缓解，患肢外观恢复正常位置。你必须做什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Downgrade to routine transport now that the hip has reduced",
+     "zh": "髋关节已经复位，改为常规转运"
+    },
+    {
+     "key": "B",
+     "en": "Notify the receiving hospital that the hip spontaneously reduced",
+     "zh": "通知接收医院：髋关节已自行复位"
+    },
+    {
+     "key": "C",
+     "en": "Stop the regular distal neurovascular checks, as the risk has passed",
+     "zh": "风险已过，停止定期检查远端神经血管"
+    },
+    {
+     "key": "D",
+     "en": "Stop the ambulance and re-splint the hip in its new position",
+     "zh": "停车，按新位置重新固定髋部"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC states that if a suspected hip dislocation spontaneously reduces during treatment or transport, the receiving hospital must be updated (B). The guideline also requires regular checks of vital signs, distal pulses, and neurological function in the affected limb, so stopping them (C) is wrong. All hip dislocations are in the Rapid Transport Category and the patient still needs early medical assessment, so downgrading (A) is not supported. Stopping to re-splint (D) delays transport; the patient stays secured to the firm stretcher as already packaged.",
+   "explanationZh": "BC指南规定：疑似髋关节脱位若在处置或转运途中自行复位，必须通知接收医院（B）。指南同时要求定期检查生命体征、远端脉搏和患肢神经功能，因此停止检查（C）是错误的。所有髋关节脱位都属于快速转运类别，患者仍需尽早接受医疗评估，降为常规转运（A）没有依据。停车重新固定（D）会延误转运，患者保持原有的硬质担架固定即可。",
+   "sourceRef": "BC Guidelines p.22",
+   "verified": true
+  },
+  {
+   "id": "ptm-023",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "trauma-fracture",
+   "difficulty": "intermediate",
+   "questionEn": "You suspect an unstable pelvic fracture in a 33-year-old after a fall from scaffolding, but no commercial binder is available. What is the acceptable alternative?",
+   "questionZh": "一名33岁患者从脚手架坠落，你怀疑不稳定性骨盆骨折，但没有商用骨盆固定带。可接受的替代方法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Three overlapping broad triangular bandages",
+     "zh": "三条相互重叠的宽三角巾"
+    },
+    {
+     "key": "B",
+     "en": "Heavy-duty zap straps tightened across the trochanters",
+     "zh": "在股骨大转子处收紧的重型束线带"
+    },
+    {
+     "key": "C",
+     "en": "A rolled blanket placed under the lumbar spine",
+     "zh": "在腰椎下垫一条卷起的毛毯"
+    },
+    {
+     "key": "D",
+     "en": "Circumferential tape binding the hips to the board",
+     "zh": "用胶带环形把髋部绑在脊柱板上"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC states the pelvis is bound with a commercial binder or three overlapping broad triangular bandages, centred on the greater trochanters and tied tightly enough to support the pelvis without causing pain, without rolling the patient (A). Zap straps (B) are explicitly NOT acceptable. A blanket under the lumbar spine (C) does not compress the pelvic ring or reduce pelvic volume. Taping the hips to the board (D) secures the patient to the device but does not bind the pelvis, and it is not a BC binding method.",
+   "explanationZh": "BC规定骨盆应使用商用固定带或三条相互重叠的宽三角巾捆绑，中心对准股骨大转子，松紧以支撑骨盆但不引起疼痛为度，捆绑时不翻动患者（A）。指南明确规定束线带（B）不可接受。腰椎下垫毛毯（C）既不能压紧骨盆环，也不能缩小骨盆容积。用胶带把髋部绑在板上（D）只是把患者固定在装置上，并没有捆绑骨盆，也不是BC规定的捆绑方法。",
+   "sourceRef": "BC Guidelines p.24",
+   "verified": true
+  },
+  {
+   "id": "ptm-024",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "trauma-fracture",
+   "difficulty": "intermediate",
+   "questionEn": "An 11-year-old girl has an isolated, closed deformity of the lower leg after a soccer tackle. She is stable with intact distal pulses but cries with any movement. When should analgesia be provided?",
+   "questionZh": "一名11岁女孩足球铲球后单纯闭合性小腿畸形。病情稳定，远端脉搏正常，但任何移动都会使她哭喊。应何时给予镇痛？",
+   "options": [
+    {
+     "key": "A",
+     "en": "After splinting, so the fracture is stable before any drug is given",
+     "zh": "夹板固定之后，先稳定骨折再给药"
+    },
+    {
+     "key": "B",
+     "en": "Only if the transport time to hospital will exceed 30 minutes",
+     "zh": "只有当转运时间超过30分钟时"
+    },
+    {
+     "key": "C",
+     "en": "Before moving her, once the primary survey and vitals are done",
+     "zh": "在搬动她之前，完成初步评估和生命体征之后"
+    },
+    {
+     "key": "D",
+     "en": "Not until hospital, so the injury can be examined first",
+     "zh": "到院后再给，以便医院先检查伤情"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "The musculoskeletal protocol component directs providing analgesia prior to movement in stable, appropriate patients (C). She is stable with an isolated injury, so pain relief comes before splinting and moving her, not afterwards (A). There is no transport-time threshold for analgesia (B). Withholding analgesia until hospital so the injury can be examined (D) is not supported; distal circulation, sensation, and movement are documented before and after treatment instead.",
+   "explanationZh": "肌肉骨骼损伤流程要求：对病情稳定且合适的患者，在搬动之前给予镇痛（C）。她病情稳定、为单纯损伤，因此应先镇痛，再固定和搬动，而不是固定之后才给（A）。镇痛没有转运时间门槛（B）。为了让医院检查伤情而到院前不镇痛（D）没有依据，在处置前后记录远端循环、感觉和运动即可。",
+   "sourceRef": "BC Guidelines p.21",
+   "verified": true
+  },
+  {
+   "id": "ptm-026",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "trauma-fracture",
+   "difficulty": "advanced",
+   "questionEn": "A Sager splint with 12 lbs of traction was applied to a stable 14-year-old with a closed mid-shaft femur fracture. After moving him onto the stretcher, the ankle harness looks shifted and the traction reads 8 lbs. What should you do?",
+   "questionZh": "一名病情稳定的14岁闭合性股骨干中段骨折患者已用Sager夹板施加12磅牵引。将其移上担架后，踝部固定带似有移位，牵引读数降至8磅。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Release the traction fully and reapply the splint from the start",
+     "zh": "完全松开牵引，从头重新安装夹板"
+    },
+    {
+     "key": "B",
+     "en": "Leave it at 8 lbs, since reduced traction is acceptable once splinted",
+     "zh": "维持8磅，固定后牵引减少也可以接受"
+    },
+    {
+     "key": "C",
+     "en": "Reassess and correct the traction back to 12 lbs without releasing it",
+     "zh": "在不松开的前提下复评，把牵引校正回12磅"
+    },
+    {
+     "key": "D",
+     "en": "Remove the splint and bind the legs together with a blanket only",
+     "zh": "拆除夹板，只用毛毯把双腿绑在一起"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "With each movement or reassessment of ABCs or vital signs, traction should be reassessed and corrected if necessary, and once traction is applied it must NOT be released. The correct response is to adjust the harness and restore the required traction while maintaining it (C). Releasing it to start over (A) breaks the 'never release' rule. Accepting 8 lbs (B) ignores the requirement to correct traction after movement. Removing the splint (D) abandons an indicated device in a stable patient; the blanket between the legs is an addition to the Sager, not a substitute for traction.",
+   "explanationZh": "每次搬动或复评ABC、生命体征时，都应重新检查牵引并在必要时校正；牵引一旦施加就不能松开。正确做法是调整踝带，在保持牵引的同时把牵引力恢复到所需数值（C）。完全松开再重装（A）违反了「绝不松开」的规定。接受8磅（B）忽视了搬动后必须校正牵引的要求。拆除夹板（D）等于放弃一个对稳定患者有适应证的装置；双腿之间垫毯子只是Sager的附加步骤，不能代替牵引。",
+   "sourceRef": "BC Guidelines p.23",
+   "verified": true
+  },
+  {
+   "id": "ptm-027",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "trauma-fracture",
+   "difficulty": "advanced",
+   "questionEn": "A 79-year-old female slipped from standing on her kitchen floor. She has left hip pain, a shortened left leg, HR 105, BP 118/76. Your partner suggests a pelvic binder because her heart rate exceeds 100. What is the correct decision?",
+   "questionZh": "一名79岁女性在厨房站立时滑倒。左髋疼痛，左腿短缩，心率105，血压118/76。搭档因其心率超过100建议使用骨盆固定带。正确的决定是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply the binder; a heart rate over 100 alone is an indication",
+     "zh": "使用固定带；心率超过100本身就是指征"
+    },
+    {
+     "key": "B",
+     "en": "Do not bind; a hip fracture from a standing-height fall is a contraindication",
+     "zh": "不捆绑；站立高度跌倒所致髋部骨折属于禁忌证"
+    },
+    {
+     "key": "C",
+     "en": "Apply the binder loosely so it supports without compressing the hip",
+     "zh": "松松地捆上，只支撑、不压迫髋部"
+    },
+    {
+     "key": "D",
+     "en": "Bind only if her systolic blood pressure falls below 90 mmHg",
+     "zh": "只在收缩压降到90mmHg以下时才捆绑"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Pelvic binding requires a major mechanism suggestive of pelvic fracture PLUS a clinical criterion such as HR > 100 or SBP < 90. Falls from standing height and neck-of-femur (hip) fractures are both listed contraindications, so the binder is not applied and the limb is supported instead (B). Tachycardia alone (A) is not an indication without a major mechanism. A loose binder (C) is still a binder on a contraindicated injury and offers no benefit. Waiting for SBP < 90 (D) misses the point: a change in vital signs does not override the contraindications of a simple fall with a hip fracture.",
+   "explanationZh": "骨盆捆绑需要「提示骨盆骨折的高能量机制」再加一项临床指标（如心率>100或收缩压<90）。站立高度跌倒和股骨颈（髋部）骨折都列为禁忌证，因此不用固定带，改为支撑患肢（B）。没有高能量机制，单凭心动过速（A）不构成指征。松松地捆（C）仍是在禁忌情况下使用固定带，毫无益处。等收缩压降到90以下再捆（D）也不对：单纯跌倒伴髋部骨折的禁忌证不会因生命体征变化而失效。",
+   "sourceRef": "BC Guidelines p.24",
+   "verified": true
+  },
+  {
+   "id": "ptm-030",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "trauma-spinal",
+   "difficulty": "intermediate",
+   "questionEn": "A 38-year-old male is found unconscious at the bottom of a staircase, breathing adequately, with a scalp hematoma. GCS is 8. Your partner suggests the recovery position for airway protection. What is the appropriate management?",
+   "questionZh": "一名38岁男性被发现昏迷倒在楼梯底部，呼吸尚可，头皮血肿，GCS 8分。搭档建议摆恢复体位保护气道。恰当的处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Recovery position as suggested, rolling him without spinal precautions",
+     "zh": "按搭档建议摆恢复体位，翻身时不做脊柱保护"
+    },
+    {
+     "key": "B",
+     "en": "Spinal motion restriction, managing the airway with manual manoeuvres and suction",
+     "zh": "实施脊柱活动限制，用手法开放气道并吸引"
+    },
+    {
+     "key": "C",
+     "en": "Sit him upright to lower intracranial pressure, then apply a collar",
+     "zh": "先扶他坐直以降低颅内压，再上颈托"
+    },
+    {
+     "key": "D",
+     "en": "Clear his spine clinically with the NEXUS criteria before moving him",
+     "zh": "先用NEXUS标准临床排除脊柱损伤，再搬动他"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "An unconscious patient found at the bottom of stairs cannot be clinically cleared. BC lists 'unconscious patient where trauma cannot be reasonably ruled out' as an indication for cervical spine stabilization, and NEXUS or the Canadian C-Spine Rule cannot be applied to a patient who cannot give a reliable exam (D). He therefore needs spinal motion restriction, with the airway maintained by manual manoeuvres, suction, and adjuncts (B). Rolling him into a recovery position without spinal precautions (A) risks cord injury. Sitting an unconscious trauma patient upright (C) is wrong; for TBI, BC elevates the head of the bed 30 degrees once he is secured.",
+   "explanationZh": "在楼梯底部被发现的昏迷患者无法临床排除脊柱损伤。BC指南把「无法合理排除创伤的昏迷患者」列为颈椎固定的指征，而NEXUS或加拿大颈椎准则都要求患者能配合可靠的检查，昏迷者无法使用（D）。因此应实施脊柱活动限制，同时用手法、吸引和辅助器械维持气道（B）。不做脊柱保护就翻成恢复体位（A）有造成脊髓损伤的风险。让昏迷的创伤患者坐直（C）是错误的；颅脑损伤患者应在固定好之后把床头抬高30度。",
+   "sourceRef": "BC Guidelines p.11, p.25, p.27",
+   "verified": true
+  },
+  {
+   "id": "ptm-031",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "trauma-spinal",
+   "difficulty": "advanced",
+   "questionEn": "A 24-year-old male was in a low-speed parking-lot collision. He is alert, calm, and sober, with no midline cervical tenderness, no neurological deficit, and no painful distracting injury. He asks if he needs a collar. Based on NEXUS criteria, what is appropriate?",
+   "questionZh": "一名24岁男性在停车场低速碰撞。患者清醒、平静、未饮酒，无颈椎正中压痛，无神经功能缺损，无引起注意力分散的疼痛性损伤。他询问是否需要颈托。根据NEXUS标准，恰当的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply full spinal motion restriction as a precaution",
+     "zh": "以防万一，实施完全脊柱活动限制"
+    },
+    {
+     "key": "B",
+     "en": "Apply a collar only, without a spinal device",
+     "zh": "只上颈托，不用脊柱装置"
+    },
+    {
+     "key": "C",
+     "en": "No spinal motion restriction is needed",
+     "zh": "不需要脊柱活动限制"
+    },
+    {
+     "key": "D",
+     "en": "Immobilize, because any vehicle collision is a high-risk mechanism",
+     "zh": "需要固定，因为任何车辆碰撞都属于高危机制"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC directs following the NEXUS criteria and the Canadian C-Spine Rule. He is alert, calm, and sober, with no midline tenderness, no neurological deficit, and no distracting injury after a low-speed collision, so he meets the low-risk criteria and spinal motion restriction is not indicated (C). Immobilizing 'just in case' (A) or applying a collar alone (B) adds discomfort and risk without benefit once he has been clinically cleared. Not every collision is high risk (D): a low-speed parking-lot crash is not a dangerous mechanism, unlike high-speed collisions, rollovers, or ejection.",
+   "explanationZh": "BC要求遵循NEXUS标准和加拿大颈椎准则。他在低速碰撞后清醒、平静、未饮酒，无颈椎正中压痛、无神经功能缺损、无分散注意力的损伤，符合低危标准，因此不需要脊柱活动限制（C）。「以防万一」完全固定（A）或只上颈托（B），在已临床排除后只会增加不适和风险，没有益处。并非所有碰撞都属于高危（D）：停车场低速碰撞不是危险机制，高速碰撞、翻车或被甩出车外才是。",
+   "sourceRef": "BC Guidelines p.25; Nancy Ch 25",
+   "verified": true
+  },
+  {
+   "id": "ptm-032",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "trauma-spinal",
+   "difficulty": "intermediate",
+   "questionEn": "A 78-year-old male fell down six stairs and complains of neck stiffness. He is alert with no neurological deficit. Your partner notes he seems fine and suggests skipping immobilization. Applying the Canadian C-Spine Rule, what is correct?",
+   "questionZh": "一名78岁男性从六级台阶跌落，主诉颈部僵硬。患者清醒，无神经功能缺损。搭档觉得他状态尚好，建议不做固定。应用加拿大颈椎准则，正确的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply SMR; his age and the mechanism both make him high risk",
+     "zh": "实施脊柱活动限制；他的年龄和受伤机制都属于高危"
+    },
+    {
+     "key": "B",
+     "en": "Clear the spine, because he is alert with no neurological deficit",
+     "zh": "排除脊柱损伤，因为他清醒且无神经功能缺损"
+    },
+    {
+     "key": "C",
+     "en": "Have him rotate his neck 45 degrees and clear him if it is painless",
+     "zh": "让他转颈45度，不痛就排除"
+    },
+    {
+     "key": "D",
+     "en": "Apply a collar only, and add full SMR if pain worsens en route",
+     "zh": "只上颈托，途中疼痛加重再完全固定"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Under the Canadian C-Spine Rule, which BC directs paramedics to follow, age 65 or older and a dangerous mechanism (such as a fall down five or more stairs) are each high-risk factors that mandate spinal motion restriction, and he has both (A). Being alert without a deficit (B) does not override high-risk factors. The 45-degree rotation test (C) is permitted only in patients with no high-risk factors. A collar alone with escalation 'if pain worsens' (D) under-treats a high-risk patient; the decision is made now, not during transport.",
+   "explanationZh": "BC要求遵循的加拿大颈椎准则规定，65岁及以上和危险受伤机制（如从五级及以上台阶跌落）各自都是必须实施脊柱活动限制的高危因素，而他两者兼有（A）。清醒且无神经缺损（B）不能抵消高危因素。45度转颈测试（C）只适用于没有高危因素的患者。只上颈托、等疼痛加重再升级（D），对高危患者处理不足；是否固定应现在决定，而不是等到转运途中。",
+   "sourceRef": "BC Guidelines p.25",
+   "verified": true
+  },
+  {
+   "id": "ptm-033",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "trauma-spinal",
+   "difficulty": "advanced",
+   "questionEn": "An 84-year-old female with advanced dementia fell from her bed. She cannot reliably answer questions and does not complain of neck pain, but grimaces when her neck is palpated. GCS is 13 (her baseline is unknown). Can her cervical spine be clinically cleared?",
+   "questionZh": "一名84岁重度失智女性从床上跌落。她无法可靠回答问题，未主诉颈痛，但触诊颈部时表情痛苦。GCS 13分（基线不详）。能否临床排除其颈椎损伤？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Yes: she has not complained of any neck pain",
+     "zh": "可以：她没有主诉颈部疼痛"
+    },
+    {
+     "key": "B",
+     "en": "Yes: a fall from bed is a low-energy mechanism",
+     "zh": "可以：从床上跌落属于低能量机制"
+    },
+    {
+     "key": "C",
+     "en": "No: her mental status makes the exam unreliable; apply SMR",
+     "zh": "不可以：她的精神状态使检查不可靠，应实施脊柱活动限制"
+    },
+    {
+     "key": "D",
+     "en": "Yes: if she can actively rotate her neck 45 degrees each way",
+     "zh": "可以：只要她能主动向左右各转颈45度"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Clinical clearance requires a reliable patient: alert, oriented, without brain injury or intoxication, and able to recognize and report pain. Advanced dementia with an unknown baseline and GCS 13 makes her exam unreliable, and she grimaces on palpation, so spinal motion restriction is applied (C). The absence of a complaint (A) means little when she cannot reliably report pain. A low-energy fall (B) does not clear the spine of an elderly patient with an unreliable exam. The 45-degree rotation test (D) of the Canadian C-Spine Rule is used only in alert, reliable patients with no high-risk factors, and age 65 or older is itself a high-risk factor.",
+   "explanationZh": "临床排除颈椎损伤要求患者可靠：清醒、定向力正常、无脑损伤或醉酒，并能感知和表达疼痛。重度失智、基线不详、GCS 13分使她的检查不可靠，而且触诊颈部时她表情痛苦，因此应实施脊柱活动限制（C）。她无法可靠地表达疼痛，「没有主诉」（A）说明不了什么。低能量跌倒（B）不能为检查不可靠的老年患者排除损伤。加拿大颈椎准则的45度转颈测试（D）只用于清醒可靠且没有高危因素的患者，而65岁及以上本身就是高危因素。",
+   "sourceRef": "BC Guidelines p.25; Nancy Ch 25",
+   "verified": true
+  },
+  {
+   "id": "ptm-034",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "trauma-spinal",
+   "difficulty": "intermediate",
+   "questionEn": "A 4-year-old boy fell from a trampoline and has midline cervical tenderness. He is alert and cooperative. As you place him on a standard spinal board, which adjustment best keeps his cervical spine in neutral alignment?",
+   "questionZh": "一名4岁男孩从蹦床上摔下，颈椎正中压痛，清醒配合。把他放到标准脊柱板上时，哪项调整最有助于保持颈椎中立位？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Place padding under his shoulders and torso",
+     "zh": "在他的肩部和躯干下方加垫"
+    },
+    {
+     "key": "B",
+     "en": "Place a folded towel under the back of his head",
+     "zh": "在他的后脑勺下垫一条折叠的毛巾"
+    },
+    {
+     "key": "C",
+     "en": "Use an adult collar folded down to fit his neck",
+     "zh": "把成人颈托折小一点凑合使用"
+    },
+    {
+     "key": "D",
+     "en": "Tape his forehead firmly to the board",
+     "zh": "用胶带把他的前额牢牢固定在板上"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Young children have a relatively large head with a prominent occiput, so lying flat on a board pushes the neck into flexion. Nancy directs padding under the torso (shoulders and back) to keep the spine neutral (A). A towel under the head (B) increases the flexion further; occipital padding suits adults, not small children. Collars must be measured and sized to the child rather than improvised from an adult collar (C). BC states the head is not taped (D); the body is secured to the device and foam blocks support the head.",
+   "explanationZh": "幼儿头部相对较大、枕部突出，平躺在板上时颈部会被推向前屈。Nancy教材要求在躯干（肩背部）下方加垫，以保持脊柱中立（A）。在后脑下垫毛巾（B）会进一步加重前屈；枕部垫高适用于成人，不适用于幼儿。颈托必须按孩子实际测量选号，不能用成人颈托折叠凑合（C）。BC指南规定不用胶带固定头部（D），应把躯体固定在装置上，再用泡沫块固定头部。",
+   "sourceRef": "Nancy Ch 25; BC Guidelines p.25",
+   "verified": true
+  },
+  {
+   "id": "ptm-039",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "tbi",
+   "difficulty": "advanced",
+   "questionEn": "A 30-year-old was struck on the head with a bat. He has an isolated head injury, GCS 7, BP 100/60, HR 118. Your partner suggests TXA given the mechanism and vital signs. What is the correct decision?",
+   "questionZh": "一名30岁男性头部被球棒击伤，单纯颅脑损伤，GCS 7分，血压100/60，心率118。搭档根据机制和生命体征建议使用氨甲环酸（TXA）。正确的决定是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Withhold TXA; it is contraindicated in isolated TBI",
+     "zh": "不给氨甲环酸（TXA）；单纯颅脑损伤禁用"
+    },
+    {
+     "key": "B",
+     "en": "Give TXA 2 g IV push over 1 minute for his tachycardia",
+     "zh": "因心动过速，静脉推注氨甲环酸（TXA）2克，1分钟推完"
+    },
+    {
+     "key": "C",
+     "en": "Give TXA 1 g, the reduced dose used for head injury",
+     "zh": "给氨甲环酸（TXA）1克，即颅脑损伤的减量剂量"
+    },
+    {
+     "key": "D",
+     "en": "Give TXA only after a 20 mL/kg fluid bolus",
+     "zh": "先按20毫升/公斤补液，再给氨甲环酸（TXA）"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "TXA is explicitly contraindicated for isolated traumatic brain injuries in both the TBI guideline and the TXA monograph, so it is withheld (A) regardless of dose or timing. The standard 2 g push (B) does not apply because of the contraindication. There is no reduced 'head injury' dose (C). A fluid bolus first (D) does not make TXA appropriate in isolated TBI. His care focuses on the airway and ventilation to keep SpO2 >= 94%, elevating the head of the bed 30 degrees, and fluid to keep the systolic BP above 120 mmHg.",
+   "explanationZh": "颅脑损伤指南和氨甲环酸（tranexamic acid，TXA）药物专论都明确规定：单纯颅脑损伤禁用TXA，因此不给（A），与剂量和时机无关。标准的2克推注（B）因禁忌证而不适用。不存在针对颅脑损伤的减量方案（C）。先补液（D）也不会让单纯颅脑损伤变得可以用TXA。他的处置重点是管理气道和通气使SpO2≥94%、床头抬高30度，并补液使收缩压维持在120mmHg以上。",
+   "sourceRef": "BC Guidelines p.27, p.78",
+   "verified": true
+  },
+  {
+   "id": "ptm-040",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "tbi",
+   "difficulty": "intermediate",
+   "questionEn": "A 76-year-old male on the stretcher after a fall has a suspected TBI, GCS 11, SpO2 95%, systolic BP 108 mmHg. As a PCP, what does the blood pressure require you to do?",
+   "questionZh": "一名76岁男性跌倒后疑似颅脑损伤，已在担架上，GCS 11分，SpO2 95%，收缩压108mmHg。作为PCP，该血压要求你做什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "No action; a systolic of 108 mmHg is adequate in TBI",
+     "zh": "无需处理；收缩压108对颅脑损伤已经足够"
+    },
+    {
+     "key": "B",
+     "en": "Tilt him head-down to raise his blood pressure",
+     "zh": "让他头低足高，以升高血压"
+    },
+    {
+     "key": "C",
+     "en": "Start an IV and give fluid to keep the systolic above 120",
+     "zh": "建立静脉通路并补液，使收缩压保持在120以上"
+    },
+    {
+     "key": "D",
+     "en": "Start an IV at TKVO and recheck the BP in 15 minutes",
+     "zh": "建立静脉通路以TKVO维持，15分钟后复测血压"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "The additional PCP interventions for TBI include maintaining a systolic BP above 120 mmHg; the IV runs at TKVO only when the systolic is already above 120. At 108 mmHg he needs IV access and fluid to reach the target (C). Accepting 108 (A) ignores the BC target for cerebral perfusion. Head-down positioning (B) raises intracranial pressure; TBI patients have the head of the bed elevated 30 degrees. Running the IV at TKVO (D) is what BC directs only once the systolic is above 120 mmHg.",
+   "explanationZh": "PCP对颅脑损伤的附加处置包括把收缩压维持在120mmHg以上；只有收缩压已经高于120时，静脉通路才以TKVO（保持静脉开放）维持。他现在是108mmHg，需要建立静脉通路并补液达标（C）。接受108（A）忽视了BC为保证脑灌注设定的目标。头低位（B）会升高颅内压，颅脑损伤患者应把床头抬高30度。以TKVO维持（D）是收缩压已高于120时才采用的做法。",
+   "sourceRef": "BC Guidelines p.27",
+   "verified": true
+  },
+  {
+   "id": "ptm-041",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "tbi",
+   "difficulty": "advanced",
+   "questionEn": "A 79-year-old female struck her head falling from a chair. GCS 13, confused. Blood glucose is 3.2 mmol/L. In the context of her suspected TBI, what should the PCP do about this reading?",
+   "questionZh": "一名79岁女性从椅子上跌落撞到头部。GCS 13分，意识混乱。血糖3.2mmol/L。就其疑似颅脑损伤而言，PCP应如何处理该血糖值？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Correct it, aiming for a glucose of 4.0-8.0 mmol/L",
+     "zh": "纠正低血糖，使血糖达到4.0–8.0mmol/L"
+    },
+    {
+     "key": "B",
+     "en": "Withhold glucose, because hyperglycemia worsens brain injury",
+     "zh": "不给糖，因为高血糖会加重脑损伤"
+    },
+    {
+     "key": "C",
+     "en": "Attribute her confusion to the TBI and recheck at hospital",
+     "zh": "把意识混乱归因于颅脑损伤，到院后再复测"
+    },
+    {
+     "key": "D",
+     "en": "Give glucose only if her GCS falls to 8 or below",
+     "zh": "只有当GCS降到8分或以下时才给糖"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's additional PCP interventions for TBI include maintaining normal blood sugar of 4.0-8.0 mmol/L, and the diabetic guideline corrects a BGL below 4.0 mmol/L. Her 3.2 mmol/L is below range and may itself be contributing to her confusion, so it is corrected (A): glucose gel if she can maintain her airway, or D10W once IV access is obtained. Avoiding hyperglycemia (B) is why the target has an upper limit, not a reason to leave her hypoglycemic. Attributing the confusion to the head injury (C) risks missing a treatable cause. Waiting for GCS <= 8 (D) lets hypoglycemia keep injuring an already vulnerable brain.",
+   "explanationZh": "BC规定PCP对颅脑损伤的附加处置包括把血糖维持在4.0–8.0mmol/L的正常范围，糖尿病急症指南也要求纠正低于4.0mmol/L的血糖。她的血糖3.2mmol/L低于范围，本身就可能是意识混乱的原因之一，因此要纠正（A）：若能自行维持气道可用葡萄糖凝胶（glucose gel），建立静脉通路后可用10%葡萄糖（D10W）。目标范围设上限是为了避免高血糖（B），不是让她维持低血糖的理由。把意识混乱全归因于颅脑损伤（C）可能漏掉可以纠正的病因。等GCS降到8分以下再处理（D），会让低血糖继续损害本已脆弱的大脑。",
+   "sourceRef": "BC Guidelines p.27, p.57",
+   "verified": true
+  },
+  {
+   "id": "ptm-042",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "knowledge",
+   "population": "pediatric",
+   "topic": "tbi",
+   "difficulty": "intermediate",
+   "questionEn": "A 6-year-old fell from a climbing frame and struck his head. He opens his eyes only to pain, speaks inappropriate words, and withdraws from pain (GCS 9). How is his brain injury classified, and what oxygen saturation must be maintained?",
+   "questionZh": "一名6岁男孩从攀爬架上摔下撞到头部。只有疼痛刺激才睁眼，言语错乱（说不恰当的词），对疼痛有回缩反应（GCS 9分）。他的脑损伤如何分级？血氧饱和度应维持在多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Mild injury; SpO2 at or above 90%",
+     "zh": "轻度损伤；SpO2维持90%及以上"
+    },
+    {
+     "key": "B",
+     "en": "Severe injury; SpO2 at or above 92%",
+     "zh": "重度损伤；SpO2维持92%及以上"
+    },
+    {
+     "key": "C",
+     "en": "Moderate injury; SpO2 at or above 94%",
+     "zh": "中度损伤；SpO2维持94%及以上"
+    },
+    {
+     "key": "D",
+     "en": "Moderate injury; SpO2 at or above 88%",
+     "zh": "中度损伤；SpO2维持88%及以上"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Eyes opening to pain (2), inappropriate words (3), and withdrawal from pain (4) give GCS 9. BC classifies GCS 13 or higher as mild, 9-12 as moderate, and 8 or lower as severe TBI, so GCS 9 is moderate, at the lower boundary. All TBI patients need SpO2 maintained at 94% or greater, with assisted ventilation if needed (C). Mild (A) requires GCS 13 or higher, and severe (B) GCS 8 or lower. The saturation targets of 90%, 92%, and 88% in A, B, and D are all below the BC TBI target.",
+   "explanationZh": "疼痛睁眼（2分）、言语错乱（3分）、疼痛回缩（4分），合计GCS 9分。BC将GCS≥13分定为轻度、9–12分为中度、≤8分为重度颅脑损伤，因此9分属于中度（恰在下限）。所有颅脑损伤患者都要把SpO2维持在94%及以上，必要时辅助通气（C）。轻度（A）要求GCS≥13分，重度（B）要求GCS≤8分。A、B、D中的90%、92%、88%都低于BC对颅脑损伤的氧合目标。",
+   "sourceRef": "BC Guidelines p.27",
+   "verified": true
+  },
+  {
+   "id": "ptm-043",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "tbi",
+   "difficulty": "advanced",
+   "questionEn": "A 12-year-old struck by a car has a suspected TBI and is fully immobilized with a hard collar on a spinal device. GCS 11 and his face appears congested. What TBI-specific adjustment should be made?",
+   "questionZh": "一名12岁被汽车撞伤的患儿疑似颅脑损伤，已用硬质颈托完全固定于脊柱装置。GCS 11分，面部充血。应做何种针对颅脑损伤的调整？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Remove the collar completely, since collars raise intracranial pressure",
+     "zh": "完全取下颈托，因为颈托会升高颅内压"
+    },
+    {
+     "key": "B",
+     "en": "Loosen the collar while keeping the head stabilized on the device",
+     "zh": "松开颈托，同时保持头部在装置上固定"
+    },
+    {
+     "key": "C",
+     "en": "Tighten the collar to stop any neck movement during transport",
+     "zh": "收紧颈托，防止转运中颈部活动"
+    },
+    {
+     "key": "D",
+     "en": "Tilt the board head-down to improve blood flow to the brain",
+     "zh": "把脊柱板调成头低位，以增加脑部血流"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC's TBI interventions include loosening the hard collar (and elevating the head of the bed 30 degrees). A tight collar compresses the jugular veins, impairing venous drainage and raising intracranial pressure; a congested face is a clue. Loosening it while the head stays stabilized with foam blocks on the device addresses this without abandoning spinal precautions (B). Removing the collar entirely (A) is not what the guideline says. Tightening it (C) worsens venous obstruction. A head-down tilt (D) raises intracranial pressure.",
+   "explanationZh": "BC的颅脑损伤处置包括松开硬质颈托（并将床头抬高30度）。颈托过紧会压迫颈静脉，阻碍静脉回流、升高颅内压，面部充血就是提示。在头部仍由泡沫块固定于装置上的前提下松开颈托，既能解决问题又不放弃脊柱保护（B）。完全取下颈托（A）不是指南的要求。收紧颈托（C）会加重静脉回流受阻。头低位（D）会升高颅内压。",
+   "sourceRef": "BC Guidelines p.27",
+   "verified": true
+  },
+  {
+   "id": "ptm-045",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "burns",
+   "difficulty": "intermediate",
+   "questionEn": "A 7-year-old pulled a pot of hot soup onto his chest. His parents held the area under cool running water for 10 minutes before you arrived. He is stable with superficial partial-thickness burns. How much additional cooling is required?",
+   "questionZh": "一名7岁男孩将一锅热汤打翻在胸前。到达前父母已用凉水冲淋患处10分钟。患儿稳定，为浅二度烧伤。还需要额外降温多长时间？",
+   "options": [
+    {
+     "key": "A",
+     "en": "None; 10 minutes is enough for a superficial partial-thickness burn",
+     "zh": "无需再降温；浅二度烧伤降温10分钟已足够"
+    },
+    {
+     "key": "B",
+     "en": "A full 20 minutes, restarting the clock on your arrival",
+     "zh": "到达后重新计时，再降温整整20分钟"
+    },
+    {
+     "key": "C",
+     "en": "At least 30 more minutes for pediatric burns",
+     "zh": "儿童烧伤至少再降温30分钟"
+    },
+    {
+     "key": "D",
+     "en": "Approximately 5-10 more minutes, to reach 15-20 minutes total",
+     "zh": "再降温约5–10分钟，使总时长达到15–20分钟"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC recommends 15-20 minutes of cooling, and this total includes any time bystanders have provided effective cooling. With 10 effective minutes done, roughly 5-10 more minutes completes the target without over-cooling a child (D). Ten minutes (A) falls short of the 15-minute minimum. Restarting the clock for a full 20 minutes (B) ignores the bystander cooling that counts toward the total and increases the risk of hypothermia. There is no 30-minute pediatric standard (C); prolonged cooling of a child's chest promotes hypothermia.",
+   "explanationZh": "BC建议烧伤降温15–20分钟，这一总时长包括旁观者已实施的有效降温时间。已完成有效降温10分钟，再降约5–10分钟即可达标，同时避免患儿过度降温（D）。10分钟（A）达不到15分钟的下限。到达后重新计时再降20分钟（B）忽略了旁观者降温可以计入总时长，还会增加失温风险。儿童烧伤没有「再降30分钟」的标准（C），长时间冷却患儿胸部容易导致体温过低。",
+   "sourceRef": "BC Guidelines p.28",
+   "verified": true
+  },
+  {
+   "id": "ptm-048",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H1",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "burns",
+   "difficulty": "advanced",
+   "questionEn": "A 45-year-old male escaped a house fire. He has facial burns, singed nasal hairs, a hoarse voice, and increasing shortness of breath. SpO2 93%. What is the priority intervention?",
+   "questionZh": "一名45岁男性从住宅火灾中逃出。面部烧伤、鼻毛烧焦、声音嘶哑、呼吸困难逐渐加重。SpO2 93%。优先处置是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply high-flow oxygen and begin transport without delay",
+     "zh": "给予高流量吸氧，立即转运"
+    },
+    {
+     "key": "B",
+     "en": "Give Entonox for pain relief before moving him",
+     "zh": "搬动前先给Entonox（笑气）镇痛"
+    },
+    {
+     "key": "C",
+     "en": "Complete 20 minutes of facial cooling before leaving the scene",
+     "zh": "完成20分钟面部降温后再离开现场"
+    },
+    {
+     "key": "D",
+     "en": "Give oral acetaminophen and reassess in 15 minutes",
+     "zh": "口服对乙酰氨基酚（acetaminophen），15分钟后复评"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Hoarseness, singed nasal hairs, facial burns, and worsening dyspnea signal an inhalation injury with impending airway compromise; facial or airway burns are also an unstable finding. BC directs high-flow oxygen for suspected inhalation injury or shortness of breath (a non-rebreather is indicated for smoke inhalation), and he needs prompt transport (A). Entonox (B) is contraindicated in inhalation injury. Staying on scene for 20 minutes of cooling (C) is for patients without immediate life threats; a patient needing immediate conveyance can be cooled with cool saline en route. Oral acetaminophen and a 15-minute wait (D) ignore the airway threat.",
+   "explanationZh": "声音嘶哑、鼻毛烧焦、面部烧伤和进行性呼吸困难提示吸入性损伤和即将出现的气道危象，面部或气道烧伤本身也属于不稳定表现。BC要求对疑似吸入性损伤或呼吸困难给予高流量吸氧（烟雾吸入应使用非再吸入面罩），并尽快转运（A）。吸入性损伤禁用Entonox（笑气）（B）。在现场停留20分钟降温（C）只适用于没有即刻生命危险的患者，需要立即转运的患者可在途中用凉生理盐水降温。口服对乙酰氨基酚（acetaminophen）后等15分钟（D）忽视了气道威胁。",
+   "sourceRef": "BC Guidelines p.28, p.50, p.65, p.7",
+   "verified": true
+  },
+  {
+   "id": "ptm-050",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "burns",
+   "difficulty": "advanced",
+   "questionEn": "A 77-year-old female has 25% BSA scald burns. She has received 20 minutes of cooling and is now shivering with a temperature of 35.8°C. Her daughter asks you to keep rinsing the burns for pain relief. What is correct?",
+   "questionZh": "一名77岁女性烫伤面积25%。已降温20分钟，现在寒战，体温35.8°C。其女儿请你继续冲洗烧伤处以缓解疼痛。正确的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Stop cooling, apply dry sterile dressings, and keep her warm",
+     "zh": "停止降温，覆盖干燥无菌敷料并为她保暖"
+    },
+    {
+     "key": "B",
+     "en": "Keep cooling until she is pain-free, as her daughter requests",
+     "zh": "按女儿的要求继续降温，直到她不痛为止"
+    },
+    {
+     "key": "C",
+     "en": "Alternate 10 minutes of cooling with 5 minutes of warming",
+     "zh": "降温10分钟、保暖5分钟交替进行"
+    },
+    {
+     "key": "D",
+     "en": "Switch to cold-water soaks of the burns throughout transport",
+     "zh": "转运全程改用冷水浸湿烧伤处"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Cooling is limited to 15-20 minutes. She has completed 20 minutes and is already hypothermic (shivering, 35.8°C), and patients with large burns lose heat rapidly. Cooling stops, the burns are dressed with sterile, nonstick, dry gauze, and heat loss is prevented (A); her pain is then managed with analgesia. Cooling until pain-free (B) exceeds the recommended duration and worsens hypothermia. Alternating cooling and warming (C) is not a BC practice and keeps cooling beyond the limit. Cold soaks during transport (D) prolong cooling and are colder than the cool water BC recommends.",
+   "explanationZh": "烧伤降温以15–20分钟为限。她已降温20分钟，并已出现体温过低（寒战、35.8°C），而大面积烧伤患者散热极快。应停止降温，用无菌、不粘、干燥的纱布覆盖创面并防止热量丢失（A），疼痛改用镇痛药处理。降温到不痛为止（B）超过了推荐时长，会加重失温。降温与保暖交替（C）不是BC的做法，实际上仍在超时降温。转运全程冷水湿敷（D）延长了降温时间，而且比BC要求的凉水更冷。",
+   "sourceRef": "BC Guidelines p.28",
+   "verified": true
+  },
+  {
+   "id": "ptm-052",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "neonatal",
+   "topic": "burns",
+   "difficulty": "advanced",
+   "questionEn": "A 3-week-old was bathed in water that was too hot and has reddened, blistering skin over both lower legs. The infant is crying vigorously. What is the appropriate management?",
+   "questionZh": "一名3周大的婴儿洗澡水过热，双小腿皮肤发红起疱。婴儿哭声有力。恰当的处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Cool the burned legs with cool water, keeping the rest of him warm",
+     "zh": "只用凉水冷却烧伤的双腿，其余部位保暖"
+    },
+    {
+     "key": "B",
+     "en": "Skip cooling entirely, because neonates must never be cooled",
+     "zh": "完全不降温，因为新生儿绝不能降温"
+    },
+    {
+     "key": "C",
+     "en": "Immerse the whole infant in a basin of cold water for 15 minutes",
+     "zh": "把婴儿整个浸入冷水盆中15分钟"
+    },
+    {
+     "key": "D",
+     "en": "Apply moist dressings and keep re-wetting them during transport",
+     "zh": "覆盖湿敷料，转运途中不断重新浸湿"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Cooling burns for 15-20 minutes with cool (not cold) water applies at every age, but a neonate's large surface area relative to body mass demands strict protection from hypothermia: cool only the burned area, keep the rest of the infant warm, and afterwards dress the burns with sterile, nonstick, dry gauze (A). Withholding cooling (B) gives up an important analgesic and tissue-protecting measure. Whole-body immersion in cold water (C) will quickly make a neonate hypothermic. Repeatedly re-wetted dressings (D) continue evaporative cooling beyond the limit; BC dresses burns dry after cooling. Note also that symmetrical scalds of both lower legs from bath water ('stocking' pattern) in an infant raise concern for an inflicted immersion burn (Nancy Ch 46) and should be documented and reported.",
+   "explanationZh": "用凉（而非冰冷）水降温15–20分钟适用于所有年龄，但新生儿体表面积相对体重很大，必须严防失温：只冷却烧伤部位，身体其余部分保暖，降温结束后用无菌、不粘、干燥纱布覆盖（A）。完全不降温（B）放弃了重要的镇痛和保护组织措施。整个浸入冷水（C）会让新生儿迅速失温。反复浸湿敷料（D）会让蒸发散热持续超时，BC要求降温后用干敷料覆盖。另外要注意：婴儿双小腿对称性洗澡水烫伤（「袜套样」分布）提示可能是人为浸烫（Nancy Ch 46），应客观记录并上报。",
+   "sourceRef": "BC Guidelines p.28; Nancy Ch 46",
+   "verified": true
+  },
+  {
+   "id": "ptm-053",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "burns",
+   "difficulty": "intermediate",
+   "questionEn": "A 9-year-old touched an exposed household wire in the garage. The power is confirmed off. He is alert with a small burn on his palm and another on his knee, and says he feels fine. His parents ask whether he really needs to go to hospital. What is the most important reason to transport him?",
+   "questionZh": "一名9岁男孩在车库触碰了裸露的家用电线，电源已确认切断。他意识清醒，手掌和膝部各有一处小烧伤，自述没有不适。家长问他是否真的需要去医院。转运他的最重要理由是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Small entry and exit wounds can hide deep-tissue injury and dysrhythmia risk",
+     "zh": "小小的入口和出口伤口可能掩盖深部组织损伤和心律失常风险"
+    },
+    {
+     "key": "B",
+     "en": "All electrical burns become infected and need IV antibiotics in hospital",
+     "zh": "所有电烧伤都会感染，需要到医院静脉用抗生素"
+    },
+    {
+     "key": "C",
+     "en": "Household current burns only the skin, but the wounds need a dressing change",
+     "zh": "家用电流只烧伤皮肤，但伤口需要到医院换药"
+    },
+    {
+     "key": "D",
+     "en": "The burns need 40 minutes of cooling, which is easier to do in hospital",
+     "zh": "烧伤需要降温40分钟，在医院更方便"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Current passing between the entry and exit points (here hand to knee) travels through the body and turns into heat along vessels, nerves, and muscle. Nancy stresses that electrical burns can produce devastating internal injuries with little external evidence, and dysrhythmias remain a risk after the contact, so he needs assessment and transport even though he looks well (A). Infection (B) is not the reason for urgent evaluation, and IV antibiotics are not routine. Household (low-voltage) current can still cause deep injury and dysrhythmias (C). BC limits cooling of electrical burns to 15-20 minutes including decontamination time (D). BC also directs identifying the type of current and duration of contact and estimating the burn area.",
+   "explanationZh": "电流在入口和出口之间（本例为手到膝）穿过身体，沿血管、神经和肌肉转化为热量。Nancy教材强调，电烧伤可以造成严重的体内损伤而体表证据很少，接触后仍有发生心律失常的风险，所以即使他看起来没事，也需要评估并转运（A）。感染（B）不是紧急评估的理由，也不常规静脉用抗生素。家用（低压）电流同样可能造成深部损伤和心律失常（C）。BC规定电烧伤降温包括冲洗净化时间在内不超过15–20分钟（D）。BC还要求了解电流类型和接触时长，并估算烧伤面积。",
+   "sourceRef": "Nancy Ch 23; BC Guidelines p.35",
+   "verified": true
+  },
+  {
+   "id": "ptm-054",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H1",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "burns",
+   "difficulty": "advanced",
+   "questionEn": "You arrive at a single-vehicle MVC where a power line has fallen across the car. The 38-year-old driver is slumped inside, apparently unconscious. Bystanders urge you to pull him out. What must you do?",
+   "questionZh": "你到达一起单车事故现场，一根电线倒落在车上。38岁司机瘫坐车内，似已昏迷。旁观者催促你把他拉出来。你必须怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Lift the line off the car with a dry wooden pole",
+     "zh": "用干燥的木杆把电线从车上挑开"
+    },
+    {
+     "key": "B",
+     "en": "Approach quickly wearing rubber gloves and boots",
+     "zh": "戴上橡胶手套、穿上胶靴后迅速接近"
+    },
+    {
+     "key": "C",
+     "en": "Open the far door, which is not touching the line",
+     "zh": "打开没有接触电线的另一侧车门"
+    },
+    {
+     "key": "D",
+     "en": "Stay back until qualified personnel declare the scene safe",
+     "zh": "保持距离，等专业人员宣布现场安全"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC is explicit: paramedics do not approach electrical sources or downed power lines until qualified personnel have deemed the scene safe (D). Improvised tools such as a 'dry' wooden pole (A) can conduct high voltage. Rubber gloves and boots (B) are not rated protection against power-line voltage. Touching any part of the vehicle, including a door away from the line (C), can complete the circuit because the whole car may be energized. Rescuers die in these situations; patient care begins once the power company or other qualified personnel confirm the scene is safe.",
+   "explanationZh": "BC明确规定：在专业人员确认现场安全之前，急救人员不得接近电源或倒落的电线（D）。临时工具如「干燥」木杆（A）在高压下也可能导电。普通橡胶手套和胶靴（B）不能防护输电线电压。整辆车都可能带电，碰触车辆任何部位——包括远离电线一侧的车门（C）——都可能形成回路。施救者常在这种情况下丧生；只有在电力公司或其他专业人员确认安全后才开始救治。",
+   "sourceRef": "BC Guidelines p.35; Nancy Ch 23",
+   "verified": true
+  },
+  {
+   "id": "ptm-056",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "chest-trauma",
+   "difficulty": "advanced",
+   "questionEn": "Ten minutes after you sealed a stab wound to the left chest, the 33-year-old patient develops severe respiratory distress, absent breath sounds on the left, and BP falls to 78/50. What should you do immediately?",
+   "questionZh": "你封闭一名33岁患者左胸刺伤伤口10分钟后，患者出现严重呼吸窘迫，左侧呼吸音消失，血压降至78/50。你应立即做什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Reinforce the seal with additional tape to stop the air leak",
+     "zh": "多贴几层胶带加固敷料，堵住漏气"
+    },
+    {
+     "key": "B",
+     "en": "Increase the oxygen flow and continue transport unchanged",
+     "zh": "加大氧流量，其余照旧继续转运"
+    },
+    {
+     "key": "C",
+     "en": "Briefly lift one edge of the dressing to release trapped air",
+     "zh": "短暂掀开敷料一角，让积聚的气体排出"
+    },
+    {
+     "key": "D",
+     "en": "Begin chest compressions in anticipation of cardiac arrest",
+     "zh": "预判即将心搏骤停，开始胸外按压"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "After sealing an open chest wound, BC directs monitoring closely for tension pneumothorax and relieving it if necessary. Worsening distress, absent breath sounds on the injured side, and hypotension after sealing indicate tension physiology; lifting ('burping') the dressing lets trapped air escape (C). Reinforcing the seal (A) traps even more air. Oxygen alone (B) does not relieve the pressure building in the chest. Compressions (D) are for a pulseless patient; he still has a blood pressure, and the cause must be relieved.",
+   "explanationZh": "封闭开放性胸部伤口后，BC要求密切监测张力性气胸并在必要时予以解除。封闭后呼吸窘迫加重、伤侧呼吸音消失、血压下降，提示张力性气胸；掀开敷料一角（「打嗝」放气）可以让积聚的气体排出（C）。加固封闭（A）只会困住更多气体。单纯加大给氧（B）无法解除胸腔内不断升高的压力。胸外按压（D）用于无脉患者，他仍有血压，应先解除病因。",
+   "sourceRef": "BC Guidelines p.34",
+   "verified": true
+  },
+  {
+   "id": "ptm-058",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "chest-trauma",
+   "difficulty": "intermediate",
+   "questionEn": "A 74-year-old male fell against a workbench. A segment of his right chest moves paradoxically with breathing, SpO2 is 89%, and he is working hard to breathe. What is the appropriate management?",
+   "questionZh": "一名74岁男性撞到工作台。右胸一段胸壁随呼吸出现反常运动，SpO2 89%，呼吸费力。恰当的处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Encourage deep breathing and coughing to prevent atelectasis",
+     "zh": "鼓励深呼吸和咳嗽，以防肺不张"
+    },
+    {
+     "key": "B",
+     "en": "Strap the chest tightly to splint the moving segment",
+     "zh": "紧紧捆扎胸廓，固定反常活动的胸壁"
+    },
+    {
+     "key": "C",
+     "en": "Stabilize the segment by hand and assist ventilation as needed",
+     "zh": "用手固定该段胸壁，必要时辅助通气"
+    },
+    {
+     "key": "D",
+     "en": "Place a sandbag on the segment and give low-flow oxygen",
+     "zh": "在该段胸壁上压沙袋，给予低流量吸氧"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Paradoxical chest wall movement indicates a flail chest. BC directs MANUAL stabilization of the flail segment and assisting oxygenation and ventilation if necessary (C); with SpO2 89% and increasing work of breathing, ventilatory support should not be delayed. Coaching deep breaths (A) does nothing for the unstable segment or his hypoxia. Tight circumferential strapping (B) and heavy objects such as sandbags (D) restrict chest expansion and worsen hypoventilation; low-flow oxygen is also inadequate for an SpO2 of 89%.",
+   "explanationZh": "胸壁反常运动提示连枷胸。BC要求以手法固定连枷段，必要时辅助氧合与通气（C）；SpO2仅89%且呼吸越来越费力，通气支持不可延误。指导深呼吸（A）既不能稳定连枷段，也纠正不了缺氧。环形紧缚（B）和压沙袋等重物（D）都会限制胸廓扩张、加重通气不足；SpO2 89%时低流量吸氧也不够。",
+   "sourceRef": "BC Guidelines p.34",
+   "verified": true
+  },
+  {
+   "id": "ptm-059",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "chest-trauma",
+   "difficulty": "intermediate",
+   "questionEn": "A 69-year-old male was crushed against a loading dock by a trailer 45 minutes ago. He has right-sided chest wall bruising, HR 122, BP 86/58, cool pale skin. You are en route with vascular access established. What additional PCP intervention is indicated?",
+   "questionZh": "一名69岁男性45分钟前被拖车挤压在装卸台上。右侧胸壁瘀伤，心率122，血压86/58，皮肤苍白湿冷。转运途中已建立静脉通路。还应给予哪项PCP处置？",
+   "options": [
+    {
+     "key": "A",
+     "en": "TXA 1 g IM into the deltoid",
+     "zh": "氨甲环酸（TXA）1克三角肌肌注"
+    },
+    {
+     "key": "B",
+     "en": "TXA 2 g (2,000 mg) IV push over 1 minute",
+     "zh": "氨甲环酸（TXA）2克（2000毫克）静脉推注1分钟"
+    },
+    {
+     "key": "C",
+     "en": "TXA is contraindicated in chest trauma",
+     "zh": "胸部创伤禁用氨甲环酸（TXA）"
+    },
+    {
+     "key": "D",
+     "en": "Aspirin 160 mg PO to prevent clot formation",
+     "zh": "口服阿司匹林（ASA）160毫克预防血栓形成"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC's chest trauma interventions include vascular access and TXA if indicated en route. TXA is indicated for signs of shock with a mechanism or findings suggestive of ongoing bleeding; he is within 3 hours, older than 12, and has no isolated TBI, so TXA 2 g (2,000 mg) IV push over 1 minute is given (B). TXA is not given IM, and 1 g is not the BC dose (A). Chest trauma is not a contraindication (C); the contraindications are hypersensitivity, more than 3 hours since injury, age under 12, and isolated TBI. ASA (D) is an antiplatelet for cardiac chest pain and would worsen bleeding in a trauma patient.",
+   "explanationZh": "BC胸部创伤处置包括途中建立静脉通路，并在符合指征时给予氨甲环酸（tranexamic acid，TXA）。有休克表现且受伤机制或体征提示持续出血即符合指征；他受伤不到3小时、年龄大于12岁、也不是单纯颅脑损伤，因此给予TXA 2克（2000毫克）静脉推注、1分钟推完（B）。TXA不肌注，1克也不是BC剂量（A）。胸部创伤不是禁忌证（C），禁忌证是过敏、受伤超过3小时、12岁以下和单纯颅脑损伤。阿司匹林（ASA）（D）是用于心源性胸痛的抗血小板药，会加重创伤患者出血。",
+   "sourceRef": "BC Guidelines p.34, p.78",
+   "verified": true
+  },
+  {
+   "id": "ptm-060",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "chest-trauma",
+   "difficulty": "advanced",
+   "questionEn": "A 71-year-old female has severe pain from suspected rib fractures after a fall. She requests \"the gas she got last time.\" On auscultation, breath sounds are decreased on the right. Why must Entonox be withheld?",
+   "questionZh": "一名71岁女性跌倒后疑似肋骨骨折，疼痛剧烈。她要求使用\"上次用过的镇痛气体\"。听诊发现右侧呼吸音减弱。为什么必须停用Entonox（笑气）？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Entonox does not relieve musculoskeletal pain such as rib fractures",
+     "zh": "Entonox（笑气）不能缓解肋骨骨折这类肌肉骨骼疼痛"
+    },
+    {
+     "key": "B",
+     "en": "Her age places her above the upper age limit for Entonox",
+     "zh": "她的年龄超过了Entonox（笑气）的年龄上限"
+    },
+    {
+     "key": "C",
+     "en": "Decreased breath sounds suggest a pneumothorax, a contraindication",
+     "zh": "呼吸音减弱提示气胸，属于禁忌证"
+    },
+    {
+     "key": "D",
+     "en": "Nitrous oxide needs a physician order in every trauma patient",
+     "zh": "所有创伤患者使用氧化亚氮（nitrous oxide）都需要医生医嘱"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Pneumothorax is a listed contraindication to Entonox: nitrous oxide diffuses into air-filled spaces and can enlarge a pneumothorax toward tension. Rib fractures with unilateral decreased breath sounds must be treated as a possible pneumothorax, so Entonox is withheld (C). Entonox is indicated for isolated extremity injuries and other pain (A); it is not ineffective for musculoskeletal pain. BC lists no upper age limit for Entonox (B); the under-18 limit belongs to methoxyflurane. No physician order is needed for Entonox in trauma (D) once its prerequisites are met: primary survey, pain assessment, baseline vitals including SpO2, and a history and exam that rule out contraindications.",
+   "explanationZh": "气胸是Entonox（笑气，即氧化亚氮，nitrous oxide）的禁忌证：氧化亚氮会弥散进含气腔隙，可使气胸扩大甚至发展成张力性气胸。肋骨骨折伴单侧呼吸音减弱应按可能存在气胸处理，因此不用Entonox（C）。Entonox适用于单纯肢体损伤等疼痛（A），并非对肌肉骨骼疼痛无效。BC没有规定Entonox的年龄上限（B），18岁以下的年龄限制属于甲氧氟烷（methoxyflurane）。创伤患者使用Entonox不需要医生医嘱（D），只要先完成初步评估、疼痛评估、含SpO2的基线生命体征，并通过病史和体检排除禁忌证即可。",
+   "sourceRef": "BC Guidelines p.34, p.65",
+   "verified": true
+  },
+  {
+   "id": "ptm-061",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "chest-trauma",
+   "difficulty": "intermediate",
+   "questionEn": "An 11-year-old boy fell from a tree and a broken branch is impaled in his right anterior chest. He is alert, breathing rapidly, SpO2 94%. How should the branch be managed?",
+   "questionZh": "一名11岁男孩从树上跌落，一根断枝刺入右前胸。患儿清醒，呼吸急促，SpO2 94%。应如何处理该断枝？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Remove it quickly and seal the wound with a chest seal",
+     "zh": "迅速拔出，再用胸腔封闭贴封住伤口"
+    },
+    {
+     "key": "B",
+     "en": "Rock it gently to judge how deep it has penetrated",
+     "zh": "轻轻晃动，判断刺入有多深"
+    },
+    {
+     "key": "C",
+     "en": "Remove it only if transport will exceed 20 minutes",
+     "zh": "只有转运超过20分钟时才拔出"
+    },
+    {
+     "key": "D",
+     "en": "Stabilize it in place with bulky dressings and transport",
+     "zh": "用厚敷料原位固定后转运"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC directs that embedded objects be stabilized in place unless they impair the airway (D). An object in the chest may be tamponading bleeding vessels or lung tissue; pulling it out in the field (A) can cause uncontrollable hemorrhage or an open pneumothorax. Rocking it (B) causes further internal damage and gives no reliable information. Transport time (C) is not a criterion for removal. After stabilizing it, monitor breathing closely for a developing pneumothorax and transport.",
+   "explanationZh": "BC规定嵌入物除非妨碍气道，否则应原位固定（D）。胸部的刺入物可能正压迫出血的血管或肺组织，现场拔出（A）可导致无法控制的大出血或开放性气胸。晃动它（B）会加重体内损伤，也得不到可靠信息。转运时间（C）不是拔出的依据。固定后要密切监测呼吸，警惕气胸发生，并尽快转运。",
+   "sourceRef": "BC Guidelines p.19, p.34",
+   "verified": true
+  },
+  {
+   "id": "ptm-063",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "environmental",
+   "difficulty": "foundation",
+   "questionEn": "A 39-year-old man pulled from a crevasse has a core temperature of 26°C. He is breathing slowly with a weak pulse. What does the guideline direct for rewarming?",
+   "questionZh": "一名39岁男性从冰裂缝中被救出，核心体温26°C。呼吸缓慢，脉搏微弱。指南对复温有何要求？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Active rewarming with towel-wrapped hot packs to the trunk and groin",
+     "zh": "在躯干和腹股沟放毛巾包裹的热敷袋主动复温"
+    },
+    {
+     "key": "B",
+     "en": "Mild activity and warm sweet drinks to generate body heat",
+     "zh": "轻度活动并喝温热的甜饮料以产生热量"
+    },
+    {
+     "key": "C",
+     "en": "No active rewarming; insulate him and heat the ambulance to 30°C",
+     "zh": "不主动复温；做好隔热保温，救护车加热到30°C"
+    },
+    {
+     "key": "D",
+     "en": "Immersion in warm water to rewarm him before transport",
+     "zh": "转运前把他浸入温水中复温"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "At 26°C this is severe hypothermia (below 28°C). BC directs NOT actively rewarming in the field: insulate the patient to prevent further heat loss, heat the ambulance to 30°C, and avoid rough handling (C). Towel-wrapped hot packs (A) are the active rewarming used for mild and moderate hypothermia. Mild activity and drinks (B) are for mild cases and are unsafe with a slow, weak pulse and an irritable cold heart. Warm-water immersion (D) is active rewarming and is not a BC prehospital measure.",
+   "explanationZh": "26°C属重度低体温（低于28°C）。BC规定院前不主动复温：做好隔热防止继续散热，把救护车加热到30°C，并避免粗暴搬动（C）。毛巾包裹的热敷袋（A）是轻、中度低体温采用的主动复温方法。轻度活动和喝饮料（B）只适用于轻症，对脉搏缓慢微弱、心肌易激惹的患者并不安全。温水浸泡（D）属于主动复温，不是BC的院前措施。",
+   "sourceRef": "BC Guidelines p.29",
+   "verified": true
+  },
+  {
+   "id": "ptm-064",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "environmental",
+   "difficulty": "advanced",
+   "questionEn": "A severely hypothermic 50-year-old is in cardiac arrest. The AED has delivered three shocks with no change. What does the BC guideline direct next?",
+   "questionZh": "一名重度低体温的50岁患者心搏骤停。AED已电击三次无效。BC指南要求接下来怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Continue CPR and transport rapidly, without pausing to analyze or shock",
+     "zh": "持续心肺复苏并快速转运，不再停下来分析或电击"
+    },
+    {
+     "key": "B",
+     "en": "Keep analyzing and shocking every 2 minutes, as in a normothermic arrest",
+     "zh": "按常温骤停处理，每2分钟继续分析和电击"
+    },
+    {
+     "key": "C",
+     "en": "Stop resuscitation, because three failed shocks indicate futility",
+     "zh": "终止复苏，因为三次电击无效说明已无希望"
+    },
+    {
+     "key": "D",
+     "en": "Hold CPR until the patient has been rewarmed above 30°C",
+     "zh": "暂停心肺复苏，等复温到30°C以上再继续"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's hypothermia guideline: in cardiac arrest, apply the AED and defibrillate up to three times if indicated; after three defibrillations, do not pause CPR for analyzing or shocks, and continue CPR with rapid transport (A). Continuing analysis-and-shock cycles (B) is the normothermic algorithm, which BC modifies after three shocks. Three failed shocks do not indicate futility (C): a cold heart often does not respond until rewarmed, and hypothermia is a reversible cause for which intra-arrest transport is appropriate. Withholding CPR (D) is never appropriate in a pulseless patient. Note: the textbook (Nancy) differs; it suggests a single defibrillation attempt in hypothermic VF, with further shocks unlikely to succeed until the core temperature exceeds 30°C. Answer per BC (up to three).",
+   "explanationZh": "BC低体温指南规定：心搏骤停时使用AED，按指征最多电击三次；三次电击后不再为分析或电击暂停心肺复苏，应持续按压并快速转运（A）。每2分钟继续分析加电击（B）是常温骤停的流程，BC在三次电击后对此作了修改。三次电击无效并不代表无望（C）：低温心脏在复温前常对电击无反应，而低体温属于可逆病因，适合边做心肺复苏边转运。对无脉患者暂停心肺复苏（D）任何时候都不合适。注意：教材（Nancy）写法不同——建议低体温室颤只尝试除颤一次，核心体温超过30°C之前反复电击难以成功；考试按BC作答（最多三次）。",
+   "sourceRef": "BC Guidelines p.29, p.42, p.45; Nancy Ch 38",
+   "verified": true
+  },
+  {
+   "id": "ptm-066",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "environmental",
+   "difficulty": "intermediate",
+   "questionEn": "An 84-year-old female was found on her bathroom floor after a night without heating. She is conscious, shivering, in wet clothing, with a temperature of 31°C. What is the appropriate management?",
+   "questionZh": "一名84岁女性在无暖气的夜晚后被发现躺在浴室地板上。意识清醒，寒战，衣物潮湿，体温31°C。恰当的处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Remove wet clothes; rewarm with blankets, wrapped hot packs, and a 30°C ambulance",
+     "zh": "脱去湿衣；用毛毯、包好的热敷袋和预热到30°C的救护车复温"
+    },
+    {
+     "key": "B",
+     "en": "Leave her wet clothes on to limit exposure and cover her with a sheet",
+     "zh": "不脱湿衣以减少暴露，盖一条床单即可"
+    },
+    {
+     "key": "C",
+     "en": "Insulate only, because active rewarming is prohibited in the elderly",
+     "zh": "只做隔热保温，因为老年人禁止主动复温"
+    },
+    {
+     "key": "D",
+     "en": "Remove wet clothes and place hot packs directly on her bare skin",
+     "zh": "脱去湿衣，把热敷袋直接贴在她的皮肤上"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "At 31°C she has moderate hypothermia (28-32°C), which BC actively rewarms just like mild hypothermia: remove wet and cold clothing, use warm blankets and hot packs wrapped in towels, and preheat the ambulance to 30°C (A). Leaving wet clothing on (B) keeps drawing heat away by conduction and evaporation. Age does not prohibit active rewarming (C); only severe hypothermia (below 28°C) is not actively rewarmed. Hot packs must be wrapped in towels (D) to avoid burning cold, poorly perfused skin.",
+   "explanationZh": "31°C属中度低体温（28–32°C），BC规定与轻度一样要主动复温：脱去湿冷衣物，使用暖毯和毛巾包裹的热敷袋，并把救护车预热到30°C（A）。不脱湿衣（B）会通过传导和蒸发继续带走热量。年龄并不禁止主动复温（C），只有重度低体温（低于28°C）才不主动复温。热敷袋必须用毛巾包裹（D），以免烫伤低温、灌注差的皮肤。",
+   "sourceRef": "BC Guidelines p.29",
+   "verified": true
+  },
+  {
+   "id": "ptm-067",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "environmental",
+   "difficulty": "advanced",
+   "questionEn": "A 79-year-old male found in a snowbank has a core temperature of 27°C, GCS 12, and a slow irregular pulse. Your partner wants him to walk to the stretcher to \"get his circulation going.\" Why must this be refused?",
+   "questionZh": "一名79岁男性被发现困在雪堆中，核心体温27°C，GCS 12分，脉搏缓慢不规则。搭档想让他自己走向担架以\"促进血液循环\"。为什么必须拒绝？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Walking is acceptable if two people support him on each side",
+     "zh": "有两人在两侧搀扶的话，可以走"
+    },
+    {
+     "key": "B",
+     "en": "Exertion helps him rewarm and should be encouraged",
+     "zh": "活动有助于复温，应该鼓励"
+    },
+    {
+     "key": "C",
+     "en": "He may walk once he has had a warm sweet drink",
+     "zh": "喝点温热的甜饮料后就可以走"
+    },
+    {
+     "key": "D",
+     "en": "Exertion and rough handling can trigger VF in a heart this cold",
+     "zh": "心脏这么冷，用力和粗暴搬动可能诱发室颤"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "At 27°C this is severe hypothermia (below 28°C). The cold, irritable myocardium can fibrillate with exertion or rough handling, so BC directs avoiding rough handling, insulating the patient, and not actively rewarming him; he must be carried gently on the stretcher (D). 'Mild activity' appears in BC only for mild and moderate hypothermia, so walking, with or without help (A, B), is not appropriate here. A warm drink (C) does not change the risk, and with GCS 12 oral intake is also unsafe.",
+   "explanationZh": "27°C属重度低体温（低于28°C）。低温、易激惹的心肌在用力或粗暴搬动时可能发生室颤，因此BC要求避免粗暴搬动、做好隔热保温且不主动复温，应轻柔地用担架抬运（D）。BC只在轻、中度低体温中提到「轻度活动」，所以无论有没有人搀扶（A、B），此时都不应让他行走。喝热饮（C）改变不了这一风险，而且GCS 12分时经口进食本身也不安全。",
+   "sourceRef": "BC Guidelines p.29; Nancy Ch 38",
+   "verified": true
+  },
+  {
+   "id": "ptm-068",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "environmental",
+   "difficulty": "intermediate",
+   "questionEn": "During a heat wave, a 76-year-old male is found confused in his non-air-conditioned apartment. Skin is hot and dry, HR 128, BP 98/60, GCS 13. Besides initiating cooling, what must the initial vital signs include?",
+   "questionZh": "热浪期间，一名76岁男性被发现在无空调的公寓内意识混乱。皮肤干热，心率128，血压98/60，GCS 13分。除开始降温外，初始生命体征还必须包括什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "A 12-lead ECG before cooling begins",
+     "zh": "开始降温前先做12导联心电图"
+    },
+    {
+     "key": "B",
+     "en": "A blood glucose level with the first set of vitals",
+     "zh": "在第一组生命体征中测血糖"
+    },
+    {
+     "key": "C",
+     "en": "Orthostatic vital signs, lying and standing",
+     "zh": "卧位和立位的体位性生命体征"
+    },
+    {
+     "key": "D",
+     "en": "A rectal temperature before any cooling",
+     "zh": "降温前先测直肠温度"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC's heat exhaustion/heatstroke guideline states that the initial vital signs must include a blood glucose measurement if there is decreased LOC (B). Hypoglycemia can mimic or accompany heat illness and is quickly correctable. A 12-lead ECG (A) is not a BC requirement and must never delay cooling. Orthostatic vitals (C) would mean standing a confused, hypotensive patient and are unsafe. A temperature (D) is useful, but cooling must not wait for it, and BC names glucose, not temperature, as the mandatory initial measurement in decreased LOC.",
+   "explanationZh": "BC中暑（热衰竭/热射病）指南规定：若患者意识水平下降，初始生命体征必须包括血糖（B）。低血糖可以模拟或合并热疾病，而且可迅速纠正。12导联心电图（A）不是BC的要求，更不能因此延误降温。测体位性生命体征（C）需要让意识混乱、血压偏低的患者站起来，并不安全。测体温（D）有用，但降温不能等它；BC明确规定意识下降时必须测的是血糖，而不是体温。",
+   "sourceRef": "BC Guidelines p.36",
+   "verified": true
+  },
+  {
+   "id": "ptm-069",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "environmental",
+   "difficulty": "intermediate",
+   "questionEn": "A 34-year-old roofer collapsed in 38°C heat. He is confused with hot, flushed skin, HR 132, BP 102/64. You have moved him to a cool area and removed his clothing. When should transport begin?",
+   "questionZh": "一名34岁屋顶工人在38°C高温下晕倒。意识混乱，皮肤发烫潮红，心率132，血压102/64。你已将其移至阴凉处并脱去衣物。何时开始转运？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Immediately; cooling can wait until arrival at hospital",
+     "zh": "立即转运；降温可以等到院后再做"
+    },
+    {
+     "key": "B",
+     "en": "After at least 10 minutes of cooling, continuing en route",
+     "zh": "降温至少10分钟后出发，途中继续降温"
+    },
+    {
+     "key": "C",
+     "en": "Only after his temperature has fully normalized on scene",
+     "zh": "等他在现场体温完全恢复正常后"
+    },
+    {
+     "key": "D",
+     "en": "After he has drunk two litres of oral rehydration fluid",
+     "zh": "等他口服两升补液后"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC directs continuing cooling for a minimum of 10 minutes before beginning conveyance (cold wet towels to the head, torso, and thighs, feet and legs in ice water, and convective cooling), then applying the most aggressive cooling available during transport until the treatment endpoints are reached (B). Leaving immediately without cooling (A) wastes the most important treatment for heatstroke. Waiting for a normal temperature on scene (C) delays hospital care; cooling continues en route instead. A confused patient cannot safely drink two litres (D), and oral fluid does not cool the core.",
+   "explanationZh": "BC要求开始转运前持续降温至少10分钟（头部、躯干和大腿敷冷湿毛巾，双足和小腿浸入冰水，并进行对流降温），转运途中继续采用可用的最积极降温方法，直到达到治疗终点（B）。不降温就立即出发（A）浪费了热射病最重要的治疗。在现场等体温完全正常（C）会延误送院，应改为途中继续降温。意识混乱的患者不能安全地喝下两升液体（D），口服补液也降不了核心体温。",
+   "sourceRef": "BC Guidelines p.36",
+   "verified": true
+  },
+  {
+   "id": "ptm-070",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "environmental",
+   "difficulty": "advanced",
+   "questionEn": "An 81-year-old female with heat exhaustion has been cooling for 15 minutes. She is alert now but has a dry tongue, poor skin turgor, HR 118, BP 92/58. As a PCP, what additional intervention should be considered?",
+   "questionZh": "一名81岁中暑衰竭女性已降温15分钟。现意识清醒，但舌面干燥、皮肤弹性差，心率118，血压92/58。作为PCP，还应考虑哪项处置？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Oral salt tablets to replace sodium losses",
+     "zh": "口服盐片补钠"
+    },
+    {
+     "key": "B",
+     "en": "Dimenhydrinate to prevent heat-related nausea",
+     "zh": "给茶苯海明（dimenhydrinate）预防中暑相关的恶心"
+    },
+    {
+     "key": "C",
+     "en": "No fluids until she is assessed in hospital",
+     "zh": "到院评估前不补任何液体"
+    },
+    {
+     "key": "D",
+     "en": "Vascular access and IV fluid replacement",
+     "zh": "建立静脉通路并静脉补液"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's additional PCP intervention for heat emergencies is to consider fluid replacement in patients with signs and symptoms of dehydration; a dry tongue, poor skin turgor, tachycardia, and borderline hypotension in an elderly patient are exactly those signs (D). Salt tablets (A) are not part of BC care and are unsuitable for a hypotensive elderly patient. Dimenhydrinate (B) treats nausea, which she does not have, and does nothing for her volume deficit. Withholding fluid (C) ignores the dehydration that BC specifically directs PCPs to correct.",
+   "explanationZh": "BC规定中暑的PCP附加处置是：对有脱水症状体征的患者考虑补液；老年患者舌面干燥、皮肤弹性差、心动过速、血压处于临界，正是这些表现（D）。盐片（A）不属于BC的处置，也不适合血压偏低的老年患者。茶苯海明（dimenhydrinate）（B）用于恶心，而她并没有恶心，也补不了血容量。到院前不补液（C）忽视了BC明确要求PCP纠正的脱水。",
+   "sourceRef": "BC Guidelines p.36",
+   "verified": true
+  },
+  {
+   "id": "ptm-072",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "environmental",
+   "difficulty": "intermediate",
+   "questionEn": "A 7-year-old boy was pulled from a lake after going under briefly. He is alert, coughing, SpO2 95%, and shivering in wet clothes. There was no diving or trauma. How should he be managed?",
+   "questionZh": "一名7岁男孩短暂沉入湖水后被救起。意识清醒，咳嗽，SpO2 95%，穿着湿衣寒战。无跳水或外伤史。应如何处理？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Perform abdominal thrusts to expel the water he aspirated",
+     "zh": "做腹部冲击，把吸进去的水排出来"
+    },
+    {
+     "key": "B",
+     "en": "Have him run around to warm up while you prepare",
+     "zh": "准备期间让他跑一跑取暖"
+    },
+    {
+     "key": "C",
+     "en": "Sit him up, remove wet clothes, dry him, and keep him at rest",
+     "zh": "让他坐起，脱去湿衣擦干，保持安静休息"
+    },
+    {
+     "key": "D",
+     "en": "Release him to his parents now that he is alert and coughing",
+     "zh": "他已清醒、能咳嗽，交给父母即可"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC's drowning guideline directs keeping the patient at rest, positioning him sitting up, removing wet clothing and drying him, avoiding rough handling, and maintaining body temperature, followed by transport (C). Abdominal thrusts to remove water (A) are not part of drowning care and risk vomiting and aspiration. Running around (B) contradicts keeping the patient at rest. Releasing him to his parents (D) is unsafe: he was submerged, is still coughing with an SpO2 of 95%, and BC lists drowning as a cause of pulmonary edema, so he needs assessment and transport.",
+   "explanationZh": "BC溺水指南要求让患者安静休息、取坐位、脱去湿衣并擦干、避免粗暴搬动、维持体温，然后转运（C）。用腹部冲击排水（A）不属于溺水处置，还可能引起呕吐和误吸。跑动取暖（B）与保持安静休息相违背。交给父母（D）并不安全：他曾沉入水中，仍在咳嗽、SpO2 95%，而BC把溺水列为肺水肿的病因之一，他需要评估并转运。",
+   "sourceRef": "BC Guidelines p.37, p.33",
+   "verified": true
+  },
+  {
+   "id": "ptm-073",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "neonatal",
+   "topic": "environmental",
+   "difficulty": "advanced",
+   "questionEn": "A 3-week-old infant was found submerged in a bathtub. On assessment the infant is unresponsive and apneic, with a brachial pulse of about 80 per minute. What is the immediate action?",
+   "questionZh": "一名3周大的婴儿被发现沉在浴缸水中。评估发现婴儿无反应、无呼吸，肱动脉搏动约80次/分。应立即采取什么措施？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Begin positive pressure ventilation with a BVM",
+     "zh": "立即用球囊面罩开始正压通气"
+    },
+    {
+     "key": "B",
+     "en": "Dry and stimulate for 5 minutes before ventilating",
+     "zh": "先擦干、刺激5分钟，再考虑通气"
+    },
+    {
+     "key": "C",
+     "en": "Give back blows to drain water from the lungs",
+     "zh": "拍背，把肺里的水控出来"
+    },
+    {
+     "key": "D",
+     "en": "Rewarm the infant fully before starting resuscitation",
+     "zh": "先完全复温，再开始复苏"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's drowning guideline directs immediately commencing resuscitation according to the appropriate guideline for a patient in respiratory arrest. Drowning arrest is driven by hypoxia, so an apneic infant with a pulse needs immediate ventilation (A); with a pulse of 80 (not below 60 with poor perfusion), compressions are not yet indicated, but reassess frequently. Drying and stimulating for 5 minutes (B) delays ventilation; even the newborn algorithm limits that step to 30 seconds. Back blows (C) are for a choking infant and do not remove water from the lungs. Warming (D) is important but must not delay ventilation.",
+   "explanationZh": "BC溺水指南要求：呼吸骤停的患者应按相应指南立即开始复苏。溺水骤停的根源是缺氧，无呼吸但有脉搏的婴儿需要立即通气（A）；脉搏80次/分（并未低于60次/分伴灌注不良），暂不需要胸外按压，但要频繁复评。擦干刺激5分钟（B）会延误通气，即使新生儿复苏流程中这一步也只限30秒。拍背（C）用于异物窒息的婴儿，并不能把肺里的水排出。保暖（D）很重要，但不能因此延误通气。",
+   "sourceRef": "BC Guidelines p.37, p.41, p.44",
+   "verified": true
+  },
+  {
+   "id": "ptm-075",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "anaphylaxis",
+   "difficulty": "foundation",
+   "questionEn": "A 28-year-old female was stung by a wasp 10 minutes ago. She has widespread hives, facial swelling, audible wheeze, and BP 82/50. What is the first-line medication?",
+   "questionZh": "一名28岁女性10分钟前被黄蜂蜇伤。全身荨麻疹、面部肿胀、可闻及喘鸣，血压82/50。首选药物是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Diphenhydramine 50 mg IM",
+     "zh": "苯海拉明（diphenhydramine）50毫克肌注"
+    },
+    {
+     "key": "B",
+     "en": "Epinephrine 0.5 mg IM",
+     "zh": "肾上腺素（epinephrine）0.5毫克肌注"
+    },
+    {
+     "key": "C",
+     "en": "Salbutamol 5 mg nebulized",
+     "zh": "沙丁胺醇（salbutamol）5毫克雾化"
+    },
+    {
+     "key": "D",
+     "en": "A 500 mL fluid bolus before any medication",
+     "zh": "任何药物前先快速输液500毫升"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Anaphylaxis with allergen exposure and instability (hypotension, respiratory distress) is treated with epinephrine 0.5 mg IM first (B). Diphenhydramine (A) is an adjunct given to mitigate medium-term histamine effects, and salbutamol (C) treats bronchospasm after epinephrine has been given; neither reverses the shock. A fluid bolus (D) is a PCP adjunct if the patient remains hypotensive, but epinephrine must not wait for it.",
+   "explanationZh": "接触过敏原并出现不稳定表现（低血压、呼吸窘迫）的过敏性休克，首选肌注肾上腺素（epinephrine）0.5毫克（B）。苯海拉明（diphenhydramine）（A）是辅助用药，用来缓解中期组胺反应；沙丁胺醇（salbutamol）（C）在给过肾上腺素之后用于支气管痉挛；两者都不能逆转休克。快速补液（D）是PCP在患者持续低血压时的辅助措施，但肾上腺素不能等补液。",
+   "sourceRef": "BC Guidelines p.55, p.66",
+   "verified": true
+  },
+  {
+   "id": "ptm-076",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H1",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "anaphylaxis",
+   "difficulty": "foundation",
+   "questionEn": "Through which receptor effect does epinephrine relieve bronchospasm in anaphylaxis?",
+   "questionZh": "肾上腺素（epinephrine）通过哪种受体效应缓解过敏反应中的支气管痉挛？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Alpha-1 mediated vasoconstriction",
+     "zh": "α1介导的血管收缩"
+    },
+    {
+     "key": "B",
+     "en": "Beta-1 mediated increased heart rate",
+     "zh": "β1介导的心率增快"
+    },
+    {
+     "key": "C",
+     "en": "Histamine receptor blockade",
+     "zh": "组胺受体阻断"
+    },
+    {
+     "key": "D",
+     "en": "Beta-2 mediated bronchodilation",
+     "zh": "β2介导的支气管扩张"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Epinephrine's beta-2 effect produces bronchodilation, while alpha-1 causes vasoconstriction (supporting blood pressure and reducing edema) and beta-1 increases heart rate and contractile force. It does not block histamine receptors — that is the role of diphenhydramine.",
+   "explanationZh": "肾上腺素（epinephrine）的β2效应产生支气管扩张，α1效应引起血管收缩（升压并减轻水肿），β1效应增加心率和心肌收缩力。它不阻断组胺受体——那是苯海拉明（diphenhydramine）的作用。",
+   "sourceRef": "BC Guidelines p.66",
+   "verified": true
+  },
+  {
+   "id": "ptm-077",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "anaphylaxis",
+   "difficulty": "intermediate",
+   "questionEn": "A 35-year-old with anaphylaxis after eating shellfish has received epinephrine. BP is 86/54. He insists on walking to the ambulance because he \"feels a bit better.\" What is the correct response?",
+   "questionZh": "一名35岁男性食用贝类后发生过敏性休克，已注射肾上腺素（epinephrine）。血压86/54。他坚持要自己走到救护车，因为\"感觉好点了\"。正确的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Allow him to walk slowly with support on each side",
+     "zh": "允许他在两侧有人搀扶下慢慢走"
+    },
+    {
+     "key": "B",
+     "en": "Let him walk, stopping if his symptoms return",
+     "zh": "让他走，症状再出现就停下"
+    },
+    {
+     "key": "C",
+     "en": "Seat him upright in the stair chair for comfort",
+     "zh": "让他坐在楼梯椅上，坐直更舒服"
+    },
+    {
+     "key": "D",
+     "en": "Keep him supine and carry him to the ambulance",
+     "zh": "让他保持仰卧，抬到救护车上"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's anaphylaxis guideline directs positioning the patient supine to improve blood pressure and explicitly states do not walk the patient (D). With a BP of 86/54 he remains hypotensive despite 'feeling better'; standing or exertion can suddenly reduce venous return and precipitate collapse. Supported walking (A) and walking until symptoms return (B) both break the 'do not walk' rule. Sitting upright in a stair chair (C) also reduces venous return compared with lying supine.",
+   "explanationZh": "BC过敏性休克指南要求让患者仰卧以改善血压，并明确规定不可让患者行走（D）。他虽然「感觉好点了」，血压仍为86/54；站立或用力会使回心血量骤降，可能导致循环崩溃。有人搀扶慢慢走（A）和走到症状再出现为止（B）都违反了「不可行走」的规定。坐在楼梯椅上（C）与仰卧相比也会减少回心血量。",
+   "sourceRef": "BC Guidelines p.55",
+   "verified": true
+  },
+  {
+   "id": "ptm-078",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "anaphylaxis",
+   "difficulty": "intermediate",
+   "questionEn": "An adult in anaphylaxis received epinephrine 0.5 mg IM five minutes ago with no improvement: BP remains 84/50 with ongoing stridor. What is the correct epinephrine regimen now?",
+   "questionZh": "一名成人过敏性休克患者5分钟前肌注肾上腺素（epinephrine）0.5毫克，无改善：血压仍为84/50，喘鸣持续。现在肾上腺素应如何继续使用？",
+   "options": [
+    {
+     "key": "A",
+     "en": "No further doses; a single dose is the maximum",
+     "zh": "不再给药；单次剂量即为上限"
+    },
+    {
+     "key": "B",
+     "en": "Repeat 0.5 mg IM every 5 minutes, up to 3 repeats",
+     "zh": "每5分钟重复肌注0.5毫克，最多重复3次"
+    },
+    {
+     "key": "C",
+     "en": "Switch to 1 mg IV push",
+     "zh": "改为静脉推注1毫克"
+    },
+    {
+     "key": "D",
+     "en": "Halve the dose to 0.25 mg for the repeat",
+     "zh": "重复剂量减半至0.25毫克"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC's adult anaphylaxis dose is epinephrine 0.5 mg IM every 5 minutes, which may be repeated up to 3 times (B); IM onset is 5-15 minutes, and he remains unstable after the first dose. A single dose is not the maximum (A). IV push epinephrine (C) is not a BC PCP route for anaphylaxis; the monograph lists IM only. Repeat doses are the same 0.5 mg, not halved (D).",
+   "explanationZh": "BC成人过敏性休克剂量为肾上腺素（epinephrine）0.5毫克肌注，每5分钟一次，可重复最多3次（B）；肌注起效需5–15分钟，而他在第一剂后仍不稳定。单次剂量并不是上限（A）。静脉推注肾上腺素（C）不是BC规定的PCP过敏反应给药途径，药物专论只列了肌注。重复剂量仍是0.5毫克，不减半（D）。",
+   "sourceRef": "BC Guidelines p.66",
+   "verified": true
+  },
+  {
+   "id": "ptm-079",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "anaphylaxis",
+   "difficulty": "advanced",
+   "questionEn": "A 72-year-old male with coronary artery disease develops anaphylaxis after a new antibiotic: stridor, hypotension 78/44, decreased LOC. Your partner hesitates to give epinephrine because of his cardiac history. What is correct?",
+   "questionZh": "一名72岁冠心病男性服用新抗生素后发生过敏性休克：喘鸣、低血压78/44、意识水平下降。搭档因其心脏病史犹豫是否给肾上腺素（epinephrine）。正确的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Withhold epinephrine and rely on diphenhydramine",
+     "zh": "不给肾上腺素（epinephrine），改用苯海拉明（diphenhydramine）"
+    },
+    {
+     "key": "B",
+     "en": "Give half the usual dose because of his cardiac risk",
+     "zh": "因为心脏风险，给常规剂量的一半"
+    },
+    {
+     "key": "C",
+     "en": "Give epinephrine 0.5 mg IM without delay",
+     "zh": "立即肌注肾上腺素（epinephrine）0.5毫克"
+    },
+    {
+     "key": "D",
+     "en": "Wait for ALS to arrive and make the decision",
+     "zh": "等高级生命支持人员到场再决定"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "The BC epinephrine monograph states there are no absolute contraindications to epinephrine in life-threatening situations such as anaphylaxis. He has stridor, hypotension, and decreased LOC, so epinephrine 0.5 mg IM is given now (C), with close monitoring because of his coronary disease. Diphenhydramine (A) is an adjunct that does not reverse airway swelling or shock. There is no cardiac dose reduction (B); an underdosed patient stays in shock. Waiting for ALS (D) delays the only drug that treats the life threat, and BC directs all licence levels to administer epinephrine.",
+   "explanationZh": "BC肾上腺素药物专论明确：在过敏性休克等危及生命的情况下，肾上腺素没有绝对禁忌证。他有喘鸣、低血压和意识下降，因此应立即肌注肾上腺素（epinephrine）0.5毫克（C），并因冠心病加强监测。苯海拉明（diphenhydramine）（A）只是辅助用药，不能逆转气道水肿或休克。没有针对心脏病的减量方案（B），剂量不足会让患者持续休克。等高级生命支持人员（D）会延误唯一能解除致命威胁的药物，而BC要求各级执照人员都要给肾上腺素。",
+   "sourceRef": "BC Guidelines p.55, p.66",
+   "verified": true
+  },
+  {
+   "id": "ptm-080",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "anaphylaxis",
+   "difficulty": "intermediate",
+   "questionEn": "A 6-year-old weighing 20 kg is in anaphylaxis after peanut exposure: hives, facial swelling, wheeze, and lethargy. What is the correct epinephrine dose?",
+   "questionZh": "一名体重20公斤的6岁儿童接触花生后发生过敏性休克：荨麻疹、面部肿胀、喘息、精神萎靡。肾上腺素（epinephrine）的正确剂量是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "0.2 mg IM (0.01 mg/kg)",
+     "zh": "0.2毫克肌注（0.01毫克/公斤）"
+    },
+    {
+     "key": "B",
+     "en": "0.5 mg IM, the same as an adult",
+     "zh": "0.5毫克肌注，与成人相同"
+    },
+    {
+     "key": "C",
+     "en": "2 mg IM (0.1 mg/kg)",
+     "zh": "2毫克肌注（0.1毫克/公斤）"
+    },
+    {
+     "key": "D",
+     "en": "0.02 mg IM (0.001 mg/kg)",
+     "zh": "0.02毫克肌注（0.001毫克/公斤）"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "The pediatric epinephrine dose is 0.01 mg/kg IM to a maximum of 0.5 mg, repeatable up to 3 times. For a 20 kg child, 0.01 x 20 = 0.2 mg IM (A). The adult 0.5 mg dose (B) is the pediatric maximum, reached only at 50 kg. Option C uses 0.1 mg/kg, ten times the correct dose. Option D uses 0.001 mg/kg, one tenth of the correct dose.",
+   "explanationZh": "儿童肾上腺素（epinephrine）剂量为0.01毫克/公斤肌注，最大0.5毫克，可重复最多3次。20公斤儿童：0.01×20=0.2毫克肌注（A）。成人剂量0.5毫克（B）是儿童剂量上限，体重达到50公斤才用得到。C按0.1毫克/公斤计算，是正确剂量的10倍。D按0.001毫克/公斤计算，只有正确剂量的十分之一。",
+   "sourceRef": "BC Guidelines p.66",
+   "verified": true
+  },
+  {
+   "id": "ptm-081",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "anaphylaxis",
+   "difficulty": "intermediate",
+   "questionEn": "A 68-year-old female in anaphylaxis received epinephrine 0.5 mg IM. Her BP has risen to 104/66 but she still has audible wheeze and mild dyspnea. What should the PCP do next for the bronchospasm?",
+   "questionZh": "一名68岁女性过敏性休克，已肌注肾上腺素（epinephrine）0.5毫克。血压回升至104/66，但仍可闻及喘鸣并有轻度呼吸困难。PCP接下来应如何处理支气管痉挛？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give nebulized salbutamol 5 mg for the residual bronchospasm",
+     "zh": "给予沙丁胺醇（salbutamol）5毫克雾化，处理残余的支气管痉挛"
+    },
+    {
+     "key": "B",
+     "en": "Repeat epinephrine 0.5 mg IM immediately, regardless of response",
+     "zh": "不论反应如何，立即重复肌注肾上腺素（epinephrine）0.5毫克"
+    },
+    {
+     "key": "C",
+     "en": "Give nitroglycerin to reduce pulmonary congestion",
+     "zh": "给予硝酸甘油（nitroglycerin），减轻肺淤血"
+    },
+    {
+     "key": "D",
+     "en": "Give no further medication; the wheeze will settle with time",
+     "zh": "不再用药，喘鸣会自行缓解"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's additional PCP interventions in anaphylaxis include treating bronchospasm with salbutamol AFTER epinephrine has been given. Her blood pressure has recovered, and the residual wheeze and mild dyspnea are treated with nebulized salbutamol 5 mg (A). Epinephrine is repeated every 5 minutes while the patient remains unstable, not automatically regardless of response (B); she is no longer hypotensive and has only mild dyspnea, but she must be reassessed closely. Nitroglycerin (C) is for cardiac chest pain and would drop her blood pressure. Withholding treatment (D) leaves treatable bronchospasm that could worsen.",
+   "explanationZh": "BC规定PCP在过敏性休克中的附加处置包括：在给过肾上腺素之后用沙丁胺醇治疗支气管痉挛。她的血压已回升，残余喘鸣和轻度呼吸困难可用沙丁胺醇（salbutamol）5毫克雾化处理（A）。肾上腺素（epinephrine）应在患者仍不稳定时每5分钟重复，而不是不管反应如何都自动重复（B）；她已不再低血压、只有轻度呼吸困难，但仍需密切复评。硝酸甘油（nitroglycerin）（C）用于心源性胸痛，会让她的血压再次下降。不再用药（D）会让本可治疗的支气管痉挛继续存在甚至加重。",
+   "sourceRef": "BC Guidelines p.55, p.77",
+   "verified": true
+  },
+  {
+   "id": "ptm-082",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "anaphylaxis",
+   "difficulty": "foundation",
+   "questionEn": "A 44-year-old male in anaphylaxis has been stabilized with epinephrine. What is the purpose of administering diphenhydramine?",
+   "questionZh": "一名44岁男性过敏性休克已用肾上腺素（epinephrine）稳定。给予苯海拉明（diphenhydramine）的目的是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "To reverse airway edema faster than epinephrine",
+     "zh": "比肾上腺素（epinephrine）更快逆转气道水肿"
+    },
+    {
+     "key": "B",
+     "en": "To mitigate medium-term effects and limit the histamine response",
+     "zh": "缓解中期效应并限制组胺反应"
+    },
+    {
+     "key": "C",
+     "en": "To raise blood pressure through vasoconstriction",
+     "zh": "通过血管收缩升高血压"
+    },
+    {
+     "key": "D",
+     "en": "To provide bronchodilation as a substitute for salbutamol",
+     "zh": "作为沙丁胺醇（salbutamol）的替代提供支气管扩张"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Diphenhydramine is given to mitigate medium-term effects and limit the histamine response, competing with histamine for receptor sites on effector cells. It is an adjunct — it does not replace epinephrine for airway or blood pressure, nor salbutamol for bronchospasm.",
+   "explanationZh": "给予苯海拉明（diphenhydramine）是为了缓解中期效应并限制组胺反应，它与组胺竞争效应细胞上的受体位点。它是辅助用药——既不能替代肾上腺素（epinephrine）改善气道和血压，也不能替代沙丁胺醇（salbutamol）解除支气管痉挛。",
+   "sourceRef": "BC Guidelines p.55, p.64",
+   "verified": true
+  },
+  {
+   "id": "ptm-083",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "anaphylaxis",
+   "difficulty": "advanced",
+   "questionEn": "A 9-year-old developed hives and vomiting 10 minutes after eating a cookie containing nuts. She is alert, BP 104/68, SpO2 98%, no wheeze or stridor. Her mother asks whether she needs an epinephrine injection. What is the correct assessment?",
+   "questionZh": "一名9岁女童食用含坚果饼干后10分钟出现荨麻疹和呕吐。意识清醒，血压104/68，SpO2 98%，无喘息或喘鸣。母亲询问是否需要注射肾上腺素（epinephrine）。正确的判断是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give epinephrine now: two body systems are involved after a known allergen",
+     "zh": "现在就给肾上腺素（epinephrine）：接触已知过敏原后已累及两个系统"
+    },
+    {
+     "key": "B",
+     "en": "Give diphenhydramine only and let her stay home with her mother",
+     "zh": "只给苯海拉明（diphenhydramine），让她和母亲留在家中"
+    },
+    {
+     "key": "C",
+     "en": "No epinephrine is ever needed, because hives alone are benign",
+     "zh": "永远不需要肾上腺素（epinephrine），因为单纯荨麻疹是良性的"
+    },
+    {
+     "key": "D",
+     "en": "Monitor closely and transport; give epinephrine if instability develops",
+     "zh": "密切监测并转运；一旦出现不稳定立即给肾上腺素（epinephrine）"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's anaphylaxis indication requires all of the following: signs of anaphylaxis, exposure to an allergen, AND instability (syncope, decreased LOC, hypotension with BP < 90 mmHg, or respiratory distress). She has hives and vomiting after a known allergen but is alert, normotensive, and breathing comfortably, so she does not yet meet the BC criteria; she needs close monitoring, transport, and epinephrine as soon as any instability appears (D). Option A applies a two-body-system definition rather than BC's instability criterion. Diphenhydramine at home (B) ignores a reaction that can progress rapidly. Option C is wrong because skin and GI signs after an allergen can herald anaphylaxis. Note: the textbook (Nancy) differs; its criteria treat rapid involvement of two or more systems (for example skin plus severe GI symptoms) after a likely allergen as anaphylaxis. Answer per BC.",
+   "explanationZh": "BC过敏性休克的用药指征要求同时具备：过敏反应体征、接触过敏原，以及不稳定表现（晕厥、意识下降、血压<90mmHg的低血压或呼吸窘迫）。她接触已知过敏原后出现荨麻疹和呕吐，但意识清醒、血压正常、呼吸平稳，因此目前尚不符合BC标准；需要密切监测、转运，一旦出现任何不稳定表现立即给肾上腺素（epinephrine）（D）。A用的是「累及两个系统」的定义，而不是BC的不稳定标准。只给苯海拉明（diphenhydramine）并留在家中（B）忽视了过敏反应可能迅速进展。C是错的，接触过敏原后的皮肤和胃肠道表现可能是过敏性休克的前兆。注意：教材（Nancy）写法不同——其诊断标准把接触可能的过敏原后迅速累及两个及以上系统（如皮肤加严重胃肠道症状）视为过敏性休克；考试按BC作答。",
+   "sourceRef": "BC Guidelines p.55; Nancy Ch 33",
+   "verified": true
+  },
+  {
+   "id": "ptm-084",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "anaphylaxis",
+   "difficulty": "intermediate",
+   "questionEn": "A 31-year-old male was stung by a bee on the forearm and is in anaphylaxis. The stinger is still embedded in the skin. Along with epinephrine, what should be done about the stinger?",
+   "questionZh": "一名31岁男性前臂被蜜蜂蜇伤后发生过敏性休克。螫针仍留在皮肤内。在给予肾上腺素（epinephrine）的同时，螫针应如何处理？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Leave it in place; removal releases more venom",
+     "zh": "保留原位；取出会释放更多毒液"
+    },
+    {
+     "key": "B",
+     "en": "Squeeze it out between two fingers",
+     "zh": "用两指挤出螫针"
+    },
+    {
+     "key": "C",
+     "en": "Apply a tourniquet above the sting site",
+     "zh": "在蜇伤部位近端使用止血带"
+    },
+    {
+     "key": "D",
+     "en": "Scrape the stinger off to remove the allergen",
+     "zh": "刮除螫针以清除过敏原"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's anaphylaxis interventions include removing the allergen, with scraping off any stinger(s) given as the example (D). Leaving the stinger in place (A) lets the venom sac keep delivering venom. Squeezing it out with fingers or forceps (B) can compress the attached venom sac and inject more venom; scraping avoids this. A tourniquet (C) is a hemorrhage-control device and has no role in anaphylaxis; epinephrine and supine positioning treat the reaction.",
+   "explanationZh": "BC过敏性休克处置包括清除过敏原，并明确举例为刮除螫针（D）。把螫针留在原处（A）会让毒囊继续释放毒液。用手指或镊子挤出（B）可能挤压附着的毒囊，把更多毒液注入体内，刮除可以避免这一点。止血带（C）是止血工具，在过敏性休克中没有作用；治疗靠肾上腺素（epinephrine）和仰卧体位。",
+   "sourceRef": "BC Guidelines p.55",
+   "verified": true
+  },
+  {
+   "id": "ptm-085",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H1",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "overdose",
+   "difficulty": "foundation",
+   "questionEn": "A 26-year-old male is found unresponsive in an alley with a syringe nearby. Respirations are 4 per minute and shallow, pupils pinpoint, SpO2 78%. What is the immediate priority?",
+   "questionZh": "一名26岁男性被发现在小巷中无反应，旁边有注射器。呼吸4次/分且浅，瞳孔针尖样，SpO2 78%。当务之急是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Open the airway and ventilate with a BVM and oxygen",
+     "zh": "开放气道，用球囊面罩加氧气通气"
+    },
+    {
+     "key": "B",
+     "en": "Give naloxone 0.4 mg IM before any airway intervention",
+     "zh": "在任何气道处置之前，先肌注纳洛酮（naloxone）0.4毫克"
+    },
+    {
+     "key": "C",
+     "en": "Apply a non-rebreather mask and wait for naloxone to work",
+     "zh": "戴上非再吸入面罩，等纳洛酮（naloxone）起效"
+    },
+    {
+     "key": "D",
+     "en": "Perform a sternal rub and reassess in 2 minutes",
+     "zh": "做胸骨摩擦刺激，2分钟后复评"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's narcotic overdose guideline starts with the primary survey: manage the airway with positioning, suction, and adjuncts, support ventilations as required (consider two-person BVM), and give oxygen to maintain SpO2 >= 94% (A). With respirations of 4 and SpO2 78%, ventilation is the immediate life-saving step. Naloxone follows, but IM onset is about 3 minutes, during which this hypoxic patient must be ventilated, so it never comes before the airway (B). A non-rebreather (C) delivers little to a patient taking 4 shallow breaths a minute. A sternal rub (D) delays treatment of profound hypoxia.",
+   "explanationZh": "BC麻醉药过量指南从初步评估开始：通过体位、吸引和辅助器械管理气道，按需辅助通气（可考虑双人球囊面罩），给氧使SpO2维持在94%及以上（A）。呼吸4次/分、SpO2 78%时，通气就是当下的救命措施。随后才给纳洛酮（naloxone），而肌注起效约需3分钟，这段时间必须为缺氧患者通气，所以纳洛酮绝不能排在气道之前（B）。对每分钟只有4次浅呼吸的患者，非再吸入面罩（C）几乎送不进氧气。胸骨摩擦刺激（D）会延误对严重缺氧的处理。",
+   "sourceRef": "BC Guidelines p.56, p.72",
+   "verified": true
+  },
+  {
+   "id": "ptm-086",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "overdose",
+   "difficulty": "intermediate",
+   "questionEn": "Beyond decreased LOC and depressed respiratory drive, which set of findings is consistent with opioid overdose per BC guidelines?",
+   "questionZh": "根据BC指南，除意识水平下降和呼吸驱动抑制外，下列哪组表现符合阿片类药物过量？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Dilated pupils, hypertension, hyperthermia, and tachycardia",
+     "zh": "瞳孔散大、高血压、体温升高、心动过速"
+    },
+    {
+     "key": "B",
+     "en": "Pinpoint pupils, hypotension, hypothermia, and tachycardia",
+     "zh": "针尖样瞳孔、低血压、体温过低、心动过速"
+    },
+    {
+     "key": "C",
+     "en": "Unequal pupils, hypertension, bradycardia, and irregular breathing",
+     "zh": "瞳孔不等大、高血压、心动过缓、呼吸不规则"
+    },
+    {
+     "key": "D",
+     "en": "Pinpoint pupils, hypertension, fever, and heavy sweating",
+     "zh": "针尖样瞳孔、高血压、发热、大汗"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC lists pinpoint pupils (miosis), hypotension, hypothermia, and tachycardia as signs of opioid overdose, in addition to decreased LOC and respiratory depression with both a decreased rate and limited tidal volume (B). Dilated pupils with hypertension, hyperthermia, and tachycardia (A) suggest a stimulant (sympathomimetic) picture. Unequal pupils with hypertension, bradycardia, and irregular breathing (C) suggest raised intracranial pressure. Pinpoint pupils with hypertension, fever, and sweating (D) combine one opioid sign with findings BC does not list for opioid overdose.",
+   "explanationZh": "BC列出的阿片类过量体征为针尖样瞳孔（瞳孔缩小）、低血压、体温过低和心动过速，此外还有意识下降和呼吸抑制（呼吸频率下降且潮气量不足）（B）。瞳孔散大伴高血压、体温升高、心动过速（A）提示兴奋剂（拟交感）中毒。瞳孔不等大伴高血压、心动过缓、呼吸不规则（C）提示颅内压升高。针尖样瞳孔伴高血压、发热、大汗（D）只有一项符合，其余都不是BC列出的阿片类过量表现。",
+   "sourceRef": "BC Guidelines p.56; Nancy Ch 36",
+   "verified": true
+  },
+  {
+   "id": "ptm-087",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "overdose",
+   "difficulty": "intermediate",
+   "questionEn": "A 71-year-old male on long-term opioids for cancer pain is drowsy with respirations of 6. You gave naloxone 0.4 mg IM. Three minutes later his SpO2 is 90% and he is ventilating at 8 per minute. What is the next dose?",
+   "questionZh": "一名71岁癌痛患者长期使用阿片类药物，现嗜睡，呼吸6次/分。你已肌注纳洛酮（naloxone）0.4毫克。3分钟后SpO2 90%，呼吸8次/分。下一剂应给多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "0.4 mg IM or IV",
+     "zh": "0.4毫克，肌注或静注"
+    },
+    {
+     "key": "B",
+     "en": "4 mg IN",
+     "zh": "4毫克，鼻内给药"
+    },
+    {
+     "key": "C",
+     "en": "0.8 mg IM or IV",
+     "zh": "0.8毫克，肌注或静注"
+    },
+    {
+     "key": "D",
+     "en": "2.0 mg IM or IV",
+     "zh": "2.0毫克，肌注或静注"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's naloxone escalation is 0.4 mg, then 0.4 mg after 3 minutes, then 0.8 mg after 3 more minutes, then 2.0 mg, each step given only if an SpO2 of >= 94% and ventilations > 10 have not been achieved. He has received only the first 0.4 mg and has met neither endpoint (SpO2 90%, RR 8), so the next dose is the second 0.4 mg (A). The 0.8 mg dose (C) is the third step and 2.0 mg (D) the fourth; skipping ahead risks precipitating severe withdrawal and uncontrolled pain in a patient on long-term opioids. 4 mg IN (B) is the separate intranasal dose, not the next step in the IM/IV sequence. Ventilatory support continues throughout.",
+   "explanationZh": "BC的纳洛酮（naloxone）递增方案是：0.4毫克，3分钟后再给0.4毫克，再过3分钟给0.8毫克，然后2.0毫克；每一步都只在SpO2未达94%且呼吸未超过10次/分时给予。他只用了第一剂0.4毫克，两项终点都未达到（SpO2 90%、呼吸8次/分），所以下一剂是第二个0.4毫克（A）。0.8毫克（C）是第三步，2.0毫克（D）是第四步；跳级给药可能让长期使用阿片类的患者出现严重戒断和剧烈疼痛。鼻内4毫克（B）是另一种给药途径的剂量，不是肌注/静注序列的下一步。全程持续通气支持。",
+   "sourceRef": "BC Guidelines p.72; Nancy Ch 36",
+   "verified": true
+  },
+  {
+   "id": "ptm-088",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "overdose",
+   "difficulty": "advanced",
+   "questionEn": "A 33-year-old suspected opioid overdose has received escalating naloxone to a total of 3.6 mg with adequate BVM ventilation throughout. He remains unresponsive with pupils now mid-sized. What is the most important consideration?",
+   "questionZh": "一名33岁疑似阿片类过量患者已递增使用纳洛酮（naloxone）累计3.6毫克，全程球囊面罩通气充分。仍无反应，瞳孔现为中等大小。最重要的考虑是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give a further 4 mg of naloxone IN immediately",
+     "zh": "立即再给鼻内纳洛酮（naloxone）4毫克"
+    },
+    {
+     "key": "B",
+     "en": "Assume he is faking and reduce ventilatory support",
+     "zh": "认定他在装病，减少通气支持"
+    },
+    {
+     "key": "C",
+     "en": "Restrain him now in anticipation of combativeness",
+     "zh": "预判他会躁动，现在就约束"
+    },
+    {
+     "key": "D",
+     "en": "Look for other causes, such as low glucose, while ventilating",
+     "zh": "边通气边寻找其他病因，例如低血糖"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "The full naloxone sequence (0.4 + 0.4 + 0.8 + 2.0 mg = 3.6 mg) has produced no response and his pupils are no longer pinpoint, so opioid toxicity alone does not explain his presentation. BC's overdose guideline requires a blood glucose level in the baseline vitals and correction of a BGL <= 4 mmol/L, and other causes of decreased LOC (head injury, other drugs, hypoxia, stroke) must be considered while ventilation and transport continue (D). More naloxone (A) is unlikely to help after the full sequence has failed. Reducing ventilation (B) is dangerous: he remains unresponsive. Restraint (C) treats a problem he does not have and distracts from finding the real cause.",
+   "explanationZh": "完整的纳洛酮（naloxone）序列（0.4+0.4+0.8+2.0毫克=3.6毫克）用完仍无反应，瞳孔也不再呈针尖样，单纯阿片类中毒解释不了他的表现。BC过量指南要求基线生命体征包括血糖，血糖≤4mmol/L须纠正；同时要考虑意识下降的其他原因（颅脑损伤、其他药物、缺氧、卒中），并继续通气和转运（D）。完整序列失败后，再加纳洛酮（A）不太可能有效。减少通气（B）很危险，他仍然没有反应。约束（C）针对的是一个并不存在的问题，还会分散寻找真正病因的注意力。",
+   "sourceRef": "BC Guidelines p.56, p.72",
+   "verified": true
+  },
+  {
+   "id": "ptm-089",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "overdose",
+   "difficulty": "intermediate",
+   "questionEn": "What are the treatment endpoints that determine whether a further dose of naloxone is required?",
+   "questionZh": "判断是否需要追加纳洛酮（naloxone）的治疗终点是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "SpO2 of 94% or more and ventilations over 10/min",
+     "zh": "SpO2≥94%且呼吸>10次/分"
+    },
+    {
+     "key": "B",
+     "en": "Full return to GCS 15 and normal pupil size",
+     "zh": "完全恢复至GCS 15分且瞳孔大小正常"
+    },
+    {
+     "key": "C",
+     "en": "A systolic blood pressure above 110 mmHg",
+     "zh": "收缩压高于110mmHg"
+    },
+    {
+     "key": "D",
+     "en": "The ability to walk unassisted to the ambulance",
+     "zh": "能够不用搀扶自己走到救护车"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Each escalating naloxone dose is given after 3 minutes if an SpO2 of >= 94% and ventilations > 10 per minute have not been achieved (A). The goal is adequate oxygenation and ventilation, not full arousal (B): pushing for GCS 15 over-reverses the opioid and precipitates withdrawal and combativeness. Blood pressure (C) and the ability to walk (D) are not naloxone endpoints; a systolic of 110 mmHg is a nitroglycerin threshold, not a naloxone one.",
+   "explanationZh": "每一剂递增的纳洛酮（naloxone）都在3分钟后、SpO2未达94%且呼吸未超过10次/分时给予（A）。目标是充分的氧合与通气，而不是完全唤醒（B）：一味追求GCS 15分会过度逆转阿片作用，诱发戒断和躁动。血压（C）和能否自己行走（D）都不是纳洛酮的终点；收缩压110mmHg是硝酸甘油（nitroglycerin）的阈值，与纳洛酮无关。",
+   "sourceRef": "BC Guidelines p.72",
+   "verified": true
+  },
+  {
+   "id": "ptm-091",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "overdose",
+   "difficulty": "advanced",
+   "questionEn": "After naloxone, a 29-year-old opioid overdose patient wakes suddenly, is agitated and diaphoretic, vomits, and demands to leave. What is the safest management approach?",
+   "questionZh": "使用纳洛酮（naloxone）后，一名29岁阿片类过量患者突然苏醒，躁动、大汗、呕吐并要求离开。最安全的处理方式是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give more naloxone so that he stays fully awake for the trip",
+     "zh": "再给纳洛酮（naloxone），让他一路保持完全清醒"
+    },
+    {
+     "key": "B",
+     "en": "Let him leave now, since he is alert, oriented, and refusing",
+     "zh": "他已清醒、定向正常且拒绝，现在就让他离开"
+    },
+    {
+     "key": "C",
+     "en": "Protect his airway, calm him, and urge transport; naloxone may wear off",
+     "zh": "保护气道、安抚情绪并劝他转运；纳洛酮（naloxone）药效可能先消退"
+    },
+    {
+     "key": "D",
+     "en": "Physically restrain him and transport him without further assessment",
+     "zh": "直接约束他，不再评估就转运"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "After naloxone, abrupt reversal can cause combativeness, withdrawal signs, vomiting, sweating, and tachycardia. Naloxone's half-life is shorter than that of many opioids, so sedation and respiratory depression can return; Nancy notes that re-dosing is common and that a patient should not simply be allowed to refuse transport after naloxone because he may lapse back into unconsciousness. The priorities are protecting the airway from vomit, calm de-escalation, and strongly encouraging transport (C). More naloxone (A) deepens withdrawal and agitation. Letting him leave (B) ignores the risk of re-sedation. Restraint without assessment (D) escalates the situation and skips reassessment; restraint is a last resort for safety.",
+   "explanationZh": "使用纳洛酮（naloxone）后，阿片作用被突然逆转可引起躁动、戒断表现、呕吐、出汗和心动过速。纳洛酮的半衰期比许多阿片类药物短，镇静和呼吸抑制可能再次出现；Nancy教材指出重复给药很常见，并强调使用纳洛酮后不应让患者轻易拒绝转运，因为他可能再次陷入昏迷。优先处理是防止呕吐物误吸、冷静地安抚降级，并强烈劝说转运（C）。再给纳洛酮（A）只会加重戒断和躁动。让他离开（B）忽视了再次镇静的风险。不评估就约束（D）会激化局面，也跳过了复评；约束只能作为保障安全的最后手段。",
+   "sourceRef": "BC Guidelines p.72; Nancy Ch 36",
+   "verified": true
+  },
+  {
+   "id": "ptm-092",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "geriatric",
+   "topic": "overdose",
+   "difficulty": "foundation",
+   "questionEn": "An 80-year-old female remains unconscious and apneic after IM naloxone. As a PCP, what additional intervention does the guideline direct?",
+   "questionZh": "一名80岁女性肌注纳洛酮（naloxone）后仍昏迷且呼吸停止。作为PCP，指南要求追加哪项处置？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Withhold further naloxone because of her age",
+     "zh": "因为她年龄大，不再给纳洛酮（naloxone）"
+    },
+    {
+     "key": "B",
+     "en": "Give oral glucose to rule out hypoglycemia",
+     "zh": "口服葡萄糖（oral glucose），以排除低血糖"
+    },
+    {
+     "key": "C",
+     "en": "Give glucagon 1 mg IM for possible hypoglycemia",
+     "zh": "按可能的低血糖肌注胰高血糖素（glucagon）1毫克"
+    },
+    {
+     "key": "D",
+     "en": "Start an IV and give naloxone intravenously",
+     "zh": "建立静脉通路，静脉给予纳洛酮（naloxone）"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's additional PCP intervention for narcotic overdose: in cases of continued unconsciousness and apnea, consider establishing vascular access and giving naloxone intravenously (D); IV onset is about 1 minute versus 3 minutes IM. Age is not a reason to withhold naloxone (A). Oral glucose (B) is contraindicated in a patient who cannot maintain her own airway; her glucose should be measured as part of the baseline vitals. Glucagon (C) is for confirmed hypoglycemia when IV access fails, not a step in the opioid protocol. Ventilation continues throughout.",
+   "explanationZh": "BC规定PCP在麻醉药过量中的附加处置是：若患者持续昏迷、无呼吸，应考虑建立静脉通路并静脉给予纳洛酮（naloxone）（D）；静注约1分钟起效，肌注需3分钟。年龄不是停用纳洛酮的理由（A）。口服葡萄糖（oral glucose）（B）禁用于不能自行维持气道的患者，血糖应作为基线生命体征来测量。胰高血糖素（glucagon）（C）用于确诊低血糖且无法建立静脉通路时，不是阿片流程中的步骤。全程持续通气。",
+   "sourceRef": "BC Guidelines p.56, p.72",
+   "verified": true
+  },
+  {
+   "id": "ptm-093",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "diabetic",
+   "difficulty": "foundation",
+   "questionEn": "A 34-year-old known type 1 diabetic is pale, sweaty, and confused but able to follow commands and swallow safely. Blood glucose is 2.8 mmol/L. What is the appropriate initial treatment?",
+   "questionZh": "一名34岁已知1型糖尿病患者面色苍白、出汗、意识混乱，但能遵嘱且可安全吞咽。血糖2.8mmol/L。恰当的初始治疗是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Apply glucose gel to the oral mucosa",
+     "zh": "将葡萄糖凝胶（glucose gel）涂于口腔黏膜"
+    },
+    {
+     "key": "B",
+     "en": "Administer glucagon 1 mg IM",
+     "zh": "肌注胰高血糖素（glucagon）1毫克"
+    },
+    {
+     "key": "C",
+     "en": "Withhold glucose until IV access is obtained",
+     "zh": "建立静脉通路前不给糖"
+    },
+    {
+     "key": "D",
+     "en": "Give 25 g of D10W IV immediately",
+     "zh": "立即静脉给予10%葡萄糖（D10W）25克"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "For suspected hypoglycemia (BGL < 4.0 mmol/L), BC directs glucose gel to the oral mucosa for patients with sufficient mentation to maintain an airway (15 g, repeatable every 5 minutes with no limit) (A). He can follow commands and swallow, so oral glucose is the right first step. Glucagon (B) is for patients with insufficient mentation or an unprotected airway, or when IV access fails. Withholding glucose until IV access (C) needlessly delays treatment. D10W (D) requires IV access, which has not been established; it is a PCP option for confirmed hypoglycemia, not the initial treatment for a patient who can take oral glucose.",
+   "explanationZh": "疑似低血糖（血糖<4.0mmol/L）时，BC要求对意识足以维持气道的患者，把葡萄糖凝胶涂在口腔黏膜上（15克，每5分钟可重复，无上限）（A）。他能遵嘱、能吞咽，所以口服葡萄糖（oral glucose）是正确的第一步。胰高血糖素（glucagon）（B）用于意识不足、气道无保护或静脉通路失败的患者。等建立静脉通路再给糖（C）会无谓地延误治疗。10%葡萄糖（D10W）（D）需要静脉通路，而目前还没有建立；它是PCP用于确诊低血糖的选项，不是能口服患者的初始治疗。",
+   "sourceRef": "BC Guidelines p.57, p.76",
+   "verified": true
+  },
+  {
+   "id": "ptm-094",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "diabetic",
+   "difficulty": "intermediate",
+   "questionEn": "A 76-year-old diabetic male is unresponsive with snoring respirations. Blood glucose is 2.1 mmol/L. Two IV attempts have failed. What is the correct treatment?",
+   "questionZh": "一名76岁糖尿病男性无反应，有鼾声呼吸。血糖2.1mmol/L。两次静脉穿刺均失败。正确的治疗是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Place glucose gel under his tongue and monitor",
+     "zh": "将葡萄糖凝胶（glucose gel）置于舌下并观察"
+    },
+    {
+     "key": "B",
+     "en": "Administer glucagon 0.5-1 mg IM",
+     "zh": "肌注胰高血糖素（glucagon）0.5-1毫克"
+    },
+    {
+     "key": "C",
+     "en": "Continue IV attempts throughout transport with no other treatment",
+     "zh": "转运全程继续尝试静脉穿刺，不予其他治疗"
+    },
+    {
+     "key": "D",
+     "en": "Give D10W by the intramuscular route",
+     "zh": "经肌肉途径给予10%葡萄糖（D10W）"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "When IV access attempts have been unsuccessful, BC indicates glucagon: 0.5-1 mg IM (or 3 mg IN, repeated after 15 minutes if there is no clinical response) (B). Glucose gel (A) is only for patients with sufficient mentation to maintain their airway; he is unresponsive with snoring respirations. Continuing IV attempts with no other treatment (C) leaves a BGL of 2.1 uncorrected when BC specifically provides glucagon for failed IV access. D10W (D) is an IV-only preparation. Manage the snoring airway with positioning and adjuncts at the same time.",
+   "explanationZh": "静脉穿刺失败时，BC规定使用胰高血糖素（glucagon）：0.5–1毫克肌注（或鼻内3毫克，15分钟无临床反应可重复）（B）。葡萄糖凝胶（glucose gel）（A）只用于意识足以维持气道的患者，而他无反应、有鼾声呼吸。只顾继续穿刺而不做其他治疗（C），会让2.1的血糖得不到纠正，而BC正是为静脉通路失败准备了胰高血糖素。10%葡萄糖（D10W）（D）只能静脉给药。同时要通过体位和辅助器械处理鼾声呼吸。",
+   "sourceRef": "BC Guidelines p.57, p.67",
+   "verified": true
+  },
+  {
+   "id": "ptm-095",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "diabetic",
+   "difficulty": "intermediate",
+   "questionEn": "A PCP has obtained vascular access on a 41-year-old with a confirmed blood glucose of 1.9 mmol/L and decreased LOC. What is the correct D10W dose?",
+   "questionZh": "一名41岁患者确诊血糖1.9mmol/L伴意识下降，PCP已建立静脉通路。10%葡萄糖（D10W）的正确剂量是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "25-50 g (250-500 mL of 10% solution)",
+     "zh": "25-50克（10%溶液250-500毫升）"
+    },
+    {
+     "key": "B",
+     "en": "1-2 g (10-20 mL of 10% solution)",
+     "zh": "1-2克（10%溶液10-20毫升）"
+    },
+    {
+     "key": "C",
+     "en": "10-25 g (100-250 mL of 10% solution)",
+     "zh": "10-25克（10%溶液100-250毫升）"
+    },
+    {
+     "key": "D",
+     "en": "50 g (50 mL of 50% solution)",
+     "zh": "50克（50%溶液50毫升）"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC's D10W dose is 10-25 g, which is 100-250 mL of the 10% solution, given IV with immediate onset (C). 25-50 g (A) is double the BC maximum. 1-2 g (B) is a tenth of the dose and would barely change the glucose. 50 g of D50W (D) is a different concentration that is not in the BC monographs; BC uses D10W, and extravasation still causes tissue necrosis, so check the IV site.",
+   "explanationZh": "BC规定10%葡萄糖（D10W）剂量为10–25克，即10%溶液100–250毫升，静脉给药，立即起效（C）。25–50克（A）是BC上限的两倍。1–2克（B）只有十分之一，几乎改变不了血糖。50%葡萄糖（D50W）50克（D）是BC药物专论里没有的另一种浓度；BC用的是D10W，而且外渗同样会造成组织坏死，要检查静脉穿刺部位。",
+   "sourceRef": "BC Guidelines p.57, p.61",
+   "verified": true
+  },
+  {
+   "id": "ptm-096",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "diabetic",
+   "difficulty": "advanced",
+   "questionEn": "An 83-year-old diabetic woman has sudden right-sided weakness and slurred speech. She is alert. Blood glucose is 3.4 mmol/L. What is the correct approach?",
+   "questionZh": "一名83岁糖尿病女性突发右侧肢体无力和言语含糊。意识清醒。血糖3.4mmol/L。正确的处置是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Treat it as a stroke only and transport without correcting the glucose",
+     "zh": "只按卒中处理，不纠正血糖直接转运"
+    },
+    {
+     "key": "B",
+     "en": "Correct the glucose, recheck the deficit, and keep treating as possible stroke",
+     "zh": "纠正血糖、复查神经缺损，同时仍按可能的卒中处理"
+    },
+    {
+     "key": "C",
+     "en": "Give a 20 mL/kg fluid bolus to improve cerebral perfusion",
+     "zh": "按20毫升/公斤快速补液，改善脑灌注"
+    },
+    {
+     "key": "D",
+     "en": "Treat it as hypoglycemia only; the deficit will resolve with glucose",
+     "zh": "只按低血糖处理；补糖后神经缺损自然会消失"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Hypoglycemia below 4.0 mmol/L can mimic stroke and must be corrected; the diabetic guideline also directs evaluating for stroke signs and symptoms, and a blood glucose check is a required stroke intervention. Correct the glucose, reassess the deficit, and keep managing her as a possible stroke with timely transport and pre-notification (B). Ignoring a glucose of 3.4 (A) leaves a reversible cause untreated. A fluid bolus (C) is not part of BC stroke care for a normotensive patient. Assuming the deficit is purely hypoglycemic (D) loses time if she is truly having a stroke; if the deficit persists after correction, stroke care continues.",
+   "explanationZh": "血糖低于4.0mmol/L可以模拟卒中，必须纠正；糖尿病急症指南也要求评估卒中症状体征，而血糖检查本身就是卒中处置的必做项目。应纠正血糖、复查神经缺损，同时继续按可能的卒中处理，及时转运并预先通知医院（B）。忽视3.4的血糖（A）会让可逆病因得不到处理。对血压正常的患者，快速补液（C）不属于BC卒中处置。认定缺损纯由低血糖引起（D），若她确实在卒中就会延误时间；纠正血糖后缺损仍在，就继续按卒中处理。",
+   "sourceRef": "BC Guidelines p.30, p.57",
+   "verified": true
+  },
+  {
+   "id": "ptm-097",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "diabetic",
+   "difficulty": "intermediate",
+   "questionEn": "A 10-year-old type 1 diabetic is drowsy but rousable and can swallow after playing soccer without eating. Blood glucose is 3.1 mmol/L. Five minutes after glucose gel he is still drowsy and his repeat glucose is 3.3 mmol/L. What should you do?",
+   "questionZh": "一名10岁1型糖尿病患儿踢球后未进食，现嗜睡但可唤醒且能吞咽。血糖3.1mmol/L。使用葡萄糖凝胶（glucose gel）5分钟后仍嗜睡，复测血糖3.3mmol/L。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give a second 15 g dose of oral glucose",
+     "zh": "再给一剂15克口服葡萄糖（oral glucose）"
+    },
+    {
+     "key": "B",
+     "en": "Switch to glucagon, since the gel has failed",
+     "zh": "凝胶无效，改用胰高血糖素（glucagon）"
+    },
+    {
+     "key": "C",
+     "en": "Stop and transport; further oral glucose is not permitted",
+     "zh": "停止治疗并转运；不允许再口服葡萄糖（oral glucose）"
+    },
+    {
+     "key": "D",
+     "en": "Wait 15 minutes for the first dose to take full effect",
+     "zh": "等15分钟，让第一剂充分起效"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Oral glucose is 15 g PO, repeated at 5 minutes as necessary with no limit, for a conscious patient who can maintain his airway. He is still rousable and swallowing, and his glucose remains below 4.0 mmol/L, so a second dose is given (A). Glucagon (B) is for insufficient mentation or an unprotected airway, which he does not have. There is no dose limit for oral glucose (C). Waiting 15 minutes (D) ignores the BC repeat interval of 5 minutes while he remains hypoglycemic.",
+   "explanationZh": "口服葡萄糖（oral glucose）为15克，必要时每5分钟重复，没有上限，适用于意识清醒、能自行维持气道的患者。他仍可唤醒、能吞咽，血糖仍低于4.0mmol/L，因此再给一剂（A）。胰高血糖素（glucagon）（B）用于意识不足或气道无保护的患者，他并不属于这种情况。口服葡萄糖没有剂量上限（C）。他仍处于低血糖时等15分钟（D），不符合BC每5分钟可重复的规定。",
+   "sourceRef": "BC Guidelines p.57, p.76",
+   "verified": true
+  },
+  {
+   "id": "ptm-099",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "diabetic",
+   "difficulty": "advanced",
+   "questionEn": "An 88-year-old diabetic male is unresponsive with a BGL of 1.7 mmol/L and vomiting. He is breathing spontaneously at 14 per minute. Before drug therapy, how should he be positioned?",
+   "questionZh": "一名88岁糖尿病男性无反应，血糖1.7mmol/L，伴呕吐。自主呼吸14次/分。在药物治疗前应如何摆放体位？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Supine with the head of the bed flat",
+     "zh": "仰卧，床头放平"
+    },
+    {
+     "key": "B",
+     "en": "Sitting fully upright with legs dependent",
+     "zh": "完全坐直，双腿下垂"
+    },
+    {
+     "key": "C",
+     "en": "Lateral or three-quarter prone position",
+     "zh": "侧卧位或3/4俯卧位"
+    },
+    {
+     "key": "D",
+     "en": "Trendelenburg, to improve cerebral glucose delivery",
+     "zh": "头低足高位，以改善脑部葡萄糖供应"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC's diabetic emergencies guideline directs positioning the patient in the lateral or 3/4 prone position if needed, with the airway managed by positioning, suctioning, and adjuncts (C). An unresponsive patient who is vomiting must be positioned to protect the airway, with suction ready, before any drug is given. Supine and flat (A) lets vomit pool and be aspirated. Sitting an unresponsive patient upright (B) is unsafe: he cannot hold his head or protect his airway. Trendelenburg (D) does not improve glucose delivery and increases the risk of aspiration.",
+   "explanationZh": "BC糖尿病急症指南要求按需将患者置于侧卧位或3/4俯卧位，并通过体位、吸引和辅助器械管理气道（C）。无反应且呕吐的患者，必须先摆好保护气道的体位并备好吸引，再给予任何药物。平卧（A）会让呕吐物积聚并被误吸。让无反应的患者坐直（B）并不安全，他无法支撑头部，也保护不了气道。头低足高位（D）不能改善葡萄糖供应，反而增加误吸风险。",
+   "sourceRef": "BC Guidelines p.57",
+   "verified": true
+  },
+  {
+   "id": "ptm-100",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "critical",
+   "population": "neonatal",
+   "topic": "diabetic",
+   "difficulty": "advanced",
+   "questionEn": "You are called to a 2-week-old who is lethargic, floppy, and feeding poorly. Airway and breathing are adequate. What must be included in the baseline vital signs?",
+   "questionZh": "你出诊一名2周大的婴儿，表现为嗜睡、肌张力低下、进食差。气道和呼吸尚可。基线生命体征必须包括什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "A blood glucose level as part of the baseline vitals",
+     "zh": "把血糖纳入基线生命体征"
+    },
+    {
+     "key": "B",
+     "en": "A 12-lead ECG before any other assessment",
+     "zh": "先做12导联心电图，再做其他评估"
+    },
+    {
+     "key": "C",
+     "en": "Heart and respiratory rates only, deferring glucose to hospital",
+     "zh": "只测心率和呼吸，血糖留到医院再测"
+    },
+    {
+     "key": "D",
+     "en": "Lying and sitting blood pressures to check for orthostasis",
+     "zh": "测卧位和坐位血压，检查体位性低血压"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's diabetic emergencies guideline applies to patients with decreased LOC without a known cause and directs obtaining a baseline set of vital signs including a blood glucose level (A). A lethargic, floppy, poorly feeding neonate can become hypoglycemic quickly. A 12-lead ECG (B) is not a BC requirement and would not come before glucose. Deferring glucose to hospital (C) misses a rapidly treatable cause. Orthostatic pressures (D) are neither meaningful nor practical in a 2-week-old.",
+   "explanationZh": "BC糖尿病急症指南适用于原因不明的意识下降患者，要求获取包含血糖在内的基线生命体征（A）。嗜睡、肌张力低、进食差的新生儿很快就会出现低血糖。12导联心电图（B）不是BC的要求，也不会排在血糖之前。把血糖留到医院再测（C）会漏掉一个能迅速纠正的病因。体位性血压（D）对2周大的婴儿既无意义也不可行。",
+   "sourceRef": "BC Guidelines p.57",
+   "verified": true
+  },
+  {
+   "id": "ptm-103",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "stroke",
+   "difficulty": "intermediate",
+   "questionEn": "You are en route with a 74-year-old female with right-sided weakness and expressive aphasia. She is stable with SpO2 96%. As a PCP obtaining vascular access, which site and catheter size does BC specify?",
+   "questionZh": "你正在转运一名74岁女性，右侧肢体无力伴运动性失语。病情稳定，SpO2 96%。作为PCP建立静脉通路时，BC指南规定选择什么部位和导管型号？",
+   "options": [
+    {
+     "key": "A",
+     "en": "A 22 G in the back of the left hand",
+     "zh": "左手背，22G"
+    },
+    {
+     "key": "B",
+     "en": "A 20 G in the external jugular vein",
+     "zh": "颈外静脉，20G"
+    },
+    {
+     "key": "C",
+     "en": "An 18 G in the left hand, avoiding the weak right arm",
+     "zh": "左手背18G，避开无力的右臂"
+    },
+    {
+     "key": "D",
+     "en": "An 18 G above the wrist, preferably on the right side",
+     "zh": "腕关节以上18G，首选右侧"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's additional PCP stroke intervention, performed en route, is vascular access at a site above the level of the wrist using an 18 G catheter, preferably on the right side (D). This applies even though her right side is the weak side. A 22 G in the hand (A) is too small and below the wrist. The external jugular (B) is not the BC-specified site. An 18 G in the left hand (C) has the right size but is below the wrist and on the non-preferred side; avoiding the weak arm is not part of the BC instruction.",
+   "explanationZh": "BC规定的PCP卒中附加处置（转运途中进行）是：在腕关节水平以上建立静脉通路，用18G导管，首选右侧（D）。即使她的右侧正是无力侧，也照此执行。手背22G（A）管径太细，而且在腕关节以下。颈外静脉（B）不是BC规定的部位。左手背18G（C）管径对了，但位置在腕关节以下且不是首选侧；BC并没有「避开无力侧」的要求。",
+   "sourceRef": "BC Guidelines p.30",
+   "verified": true
+  },
+  {
+   "id": "ptm-106",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "stroke",
+   "difficulty": "intermediate",
+   "questionEn": "A 62-year-old woman with a suspected stroke is drooling and has a weak gag. She is semi-conscious but breathing adequately. How should she be positioned and managed?",
+   "questionZh": "一名62岁疑似卒中女性流涎，咽反射减弱。半昏迷但呼吸尚可。应如何摆放体位并处理？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Flat supine with a cervical collar applied",
+     "zh": "完全平卧，并戴上颈托"
+    },
+    {
+     "key": "B",
+     "en": "Sitting bolt upright with her legs dependent",
+     "zh": "完全坐直，双腿下垂"
+    },
+    {
+     "key": "C",
+     "en": "Semi-prone (recovery) position with suction ready",
+     "zh": "半俯卧（恢复）体位，备好吸引"
+    },
+    {
+     "key": "D",
+     "en": "Fully prone so that secretions drain from her mouth",
+     "zh": "完全俯卧，让分泌物从口中流出"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Stroke care includes managing the ABCs, oxygen to keep SpO2 >= 94%, and positioning the patient. With a weak gag and pooling secretions she cannot fully protect her airway; BC's AVPU guidance places a drowsy or pain-responsive patient semi-prone (injuries permitting), and suction should be ready (C). Flat supine (A) lets secretions pool in the pharynx, and a collar is not indicated without trauma. Sitting bolt upright (B) is unsafe for a semi-conscious patient who may slump and aspirate. Fully prone (D) makes airway monitoring and ventilation difficult. Oxygen and timely transport with pre-notification continue in every case.",
+   "explanationZh": "卒中处置包括管理ABC、给氧使SpO2≥94%以及摆放合适体位。她咽反射减弱、分泌物积聚，无法完全保护气道；BC的AVPU评估要求对嗜睡或仅对疼痛有反应的患者（伤情允许时）取半俯卧位，并备好吸引（C）。完全平卧（A）会让分泌物积在咽部，没有外伤也不需要颈托。让半昏迷患者完全坐直（B）并不安全，她可能歪倒并误吸。完全俯卧（D）不便观察气道，也难以通气。无论哪种情况，都要继续给氧，并及时转运、预先通知医院。",
+   "sourceRef": "BC Guidelines p.30, p.13",
+   "verified": true
+  },
+  {
+   "id": "ptm-107",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H2",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "stroke",
+   "difficulty": "advanced",
+   "questionEn": "A 14-year-old with sickle cell disease has sudden slurred speech and right arm weakness. Blood glucose is 5.6 mmol/L, SpO2 93%. What is the appropriate management?",
+   "questionZh": "一名14岁镰状细胞病患者突发言语含糊和右上肢无力。血糖5.6mmol/L，SpO2 93%。恰当的处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Treat it as a sickle cell pain crisis with analgesia and routine transport",
+     "zh": "按镰状细胞疼痛危象处理，镇痛后常规转运"
+    },
+    {
+     "key": "B",
+     "en": "Treat it as a stroke: oxygen, FAST-VAN, timely transport, and pre-notification",
+     "zh": "按卒中处理：给氧、FAST-VAN评估、及时转运并预先通知"
+    },
+    {
+     "key": "C",
+     "en": "Give oral glucose as a trial despite the normal reading",
+     "zh": "尽管血糖正常，仍试给口服葡萄糖（oral glucose）"
+    },
+    {
+     "key": "D",
+     "en": "Observe for 30 minutes, as children's deficits are usually transient",
+     "zh": "观察30分钟，因为儿童的神经缺损通常是一过性的"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Any neurological deficit is an indication for the BC stroke guideline, regardless of age, and sickle cell disease predisposes to strokes because sickled cells block small vessels (Nancy Ch 37). His glucose is normal, so he is managed as a stroke: oxygen to keep SpO2 >= 94% (he is at 93%), FAST-VAN recognition, timely transport, and notification of the receiving facility en route (B). Treating it as a pain crisis (A) ignores the focal deficit. A glucose trial (C) is not indicated when the measured glucose is 5.6 mmol/L. Observing for 30 minutes (D) wastes time-critical minutes; there is no basis for assuming the deficit will pass.",
+   "explanationZh": "任何神经功能缺损都是BC卒中指南的适应证，与年龄无关；镰状细胞病会因镰状红细胞堵塞小血管而诱发卒中（Nancy Ch 37）。他的血糖正常，因此按卒中处理：给氧使SpO2≥94%（他现在93%）、用FAST-VAN识别、及时转运并在途中通知接收医院（B）。按疼痛危象处理（A）忽视了局灶性神经缺损。实测血糖5.6mmol/L时，不需要试给葡萄糖（C）。观察30分钟（D）浪费了争分夺秒的时间，没有理由假定缺损会自行消失。",
+   "sourceRef": "BC Guidelines p.30; Nancy Ch 37",
+   "verified": true
+  },
+  {
+   "id": "ptm-109",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "nausea",
+   "difficulty": "foundation",
+   "questionEn": "A 37-year-old male has 8 hours of vomiting from suspected gastroenteritis. He is alert, HR 96, BP 118/74, and requests something for the nausea. He is stable. Where may antiemetics be given?",
+   "questionZh": "一名37岁男性因疑似胃肠炎呕吐8小时。意识清醒，心率96，血压118/74，要求止吐。病情稳定。止吐药可在何处给予？",
+   "options": [
+    {
+     "key": "A",
+     "en": "On scene, before departure",
+     "zh": "在现场、出发之前"
+    },
+    {
+     "key": "B",
+     "en": "Only after arrival at the emergency department",
+     "zh": "只能在到达急诊科之后"
+    },
+    {
+     "key": "C",
+     "en": "Only en route, regardless of stability",
+     "zh": "不论是否稳定，只能在转运途中"
+    },
+    {
+     "key": "D",
+     "en": "Only after a 2-litre fluid bolus has been completed",
+     "zh": "必须先完成2升快速补液之后"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "BC's nausea/vomiting guideline states that stable patients may be treated with antiemetics on scene, while unstable patients are treated en route to hospital. He is hemodynamically stable, so dimenhydrinate or ondansetron may be given before departure (A). There is no requirement to wait for the emergency department (B). The 'en route only' rule (C) applies to unstable patients. A fluid bolus (D) is for hypotension from volume loss, and he is normotensive; it is not a prerequisite for antiemetics.",
+   "explanationZh": "BC恶心呕吐指南规定：稳定的患者可在现场使用止吐药，不稳定的患者则在送院途中处理。他血流动力学稳定，因此出发前即可给予茶苯海明（dimenhydrinate）或昂丹司琼（ondansetron）（A）。没有必须等到急诊科才给药的规定（B）。「只能途中给药」（C）适用于不稳定患者。快速补液（D）用于容量丢失引起的低血压，他血压正常，补液也不是使用止吐药的前提。",
+   "sourceRef": "BC Guidelines p.48",
+   "verified": true
+  },
+  {
+   "id": "ptm-110",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "geriatric",
+   "topic": "nausea",
+   "difficulty": "intermediate",
+   "questionEn": "A 70-year-old male weighing 80 kg requires an antiemetic. What is the correct dimenhydrinate dose?",
+   "questionZh": "一名70岁、体重80公斤的男性需要止吐药。茶苯海明（dimenhydrinate）的正确剂量是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "80 mg, calculated at 1 mg/kg",
+     "zh": "80毫克，按1毫克/公斤计算"
+    },
+    {
+     "key": "B",
+     "en": "50 mg, the maximum dose",
+     "zh": "50毫克，即最大剂量"
+    },
+    {
+     "key": "C",
+     "en": "4 mg, the same as ondansetron",
+     "zh": "4毫克，与昂丹司琼（ondansetron）相同"
+    },
+    {
+     "key": "D",
+     "en": "25 mg, halved because of his age",
+     "zh": "25毫克，因年龄减半"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Dimenhydrinate is dosed at 1 mg/kg to a maximum of 50 mg. At 80 kg the weight-based figure is 80 mg, which exceeds the cap, so 50 mg is given (B). Option A ignores the 50 mg maximum. 4 mg (C) is the adult ondansetron dose, not dimenhydrinate. BC has no age-based halving of dimenhydrinate (D); the elderly are listed as a caution, which calls for monitoring for drowsiness and anticholinergic effects rather than a different dose.",
+   "explanationZh": "茶苯海明（dimenhydrinate）剂量为1毫克/公斤，最大50毫克。80公斤按体重算是80毫克，超过上限，因此给50毫克（B）。A忽略了50毫克的上限。4毫克（C）是成人昂丹司琼（ondansetron）的剂量，不是茶苯海明的。BC没有按年龄把茶苯海明减半的规定（D）；老年人只是列为慎用，需要留意嗜睡和抗胆碱能副作用，而不是改变剂量。",
+   "sourceRef": "BC Guidelines p.63",
+   "verified": true
+  },
+  {
+   "id": "ptm-111",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "nausea",
+   "difficulty": "advanced",
+   "questionEn": "A 42-year-old Indigenous woman with severe nausea tells you her brother was diagnosed with Long QT syndrome. She has no other history. Which antiemetic is appropriate?",
+   "questionZh": "一名42岁原住民女性严重恶心，告知你其兄长被诊断为长QT综合征。无其他病史。应选用哪种止吐药？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Ondansetron 4 mg PO, as it is the first-line antiemetic",
+     "zh": "昂丹司琼（ondansetron）4毫克口服，因为它是一线止吐药"
+    },
+    {
+     "key": "B",
+     "en": "Ondansetron ODT, because the dissolving tablet avoids the QT effect",
+     "zh": "昂丹司琼（ondansetron）口崩片，因为口崩剂型可以避免QT效应"
+    },
+    {
+     "key": "C",
+     "en": "Dimenhydrinate, the antiemetic BC recommends in this situation",
+     "zh": "茶苯海明（dimenhydrinate），BC在这种情况下推荐的止吐药"
+    },
+    {
+     "key": "D",
+     "en": "Ondansetron is fine, since only her own diagnosis would matter",
+     "zh": "昂丹司琼（ondansetron）可以用，只有她本人确诊才需要考虑"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Congenital long QT syndrome is a contraindication to ondansetron. BC notes that some Indigenous people have a higher prevalence of Long QT syndrome due to a genetic variation, advises asking whether the patient or their family has been diagnosed, and recommends dimenhydrinate if so (C). Ondansetron as first-line (A) ignores the family history. The ODT form (B) does not remove the QT concern; the ODT caution relates to aspartame in phenylketonuria. BC specifically asks about family diagnoses (D) because the congenital condition is inherited and she may be affected without knowing it.",
+   "explanationZh": "先天性长QT综合征是昂丹司琼（ondansetron）的禁忌证。BC指出部分原住民因基因变异，长QT综合征患病率较高，建议询问患者本人或其家族是否被诊断过；如果是，推荐使用茶苯海明（dimenhydrinate）（C）。把昂丹司琼当一线用药（A）忽视了家族史。口崩片（B）不能消除QT风险，口崩片的注意事项针对的是苯丙酮尿症患者的阿斯巴甜问题。BC特意要求询问家族诊断（D），因为这种先天性疾病会遗传，她可能已患病而不自知。",
+   "sourceRef": "BC Guidelines p.48, p.75",
+   "verified": true
+  },
+  {
+   "id": "ptm-112",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "nausea",
+   "difficulty": "intermediate",
+   "questionEn": "A 6-year-old boy has been vomiting for several hours. He is alert, tolerating sips, HR 108, BP 100/62. What is the correct ondansetron dose?",
+   "questionZh": "一名6岁男孩呕吐数小时。意识清醒，可小口进水，心率108，血压100/62。昂丹司琼（ondansetron）的正确剂量是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "2 mg PO",
+     "zh": "2毫克口服"
+    },
+    {
+     "key": "B",
+     "en": "8 mg PO",
+     "zh": "8毫克口服"
+    },
+    {
+     "key": "C",
+     "en": "1 mg/kg PO",
+     "zh": "1毫克/公斤口服"
+    },
+    {
+     "key": "D",
+     "en": "4 mg PO",
+     "zh": "4毫克口服"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's pediatric ondansetron dosing is 2 mg PO for ages 6 months to 4 years and 4 mg PO for 4 years and older. At age 6 he receives 4 mg PO, the same as the adult dose (D). 2 mg (A) is for children aged 6 months to 4 years. 8 mg (B) is double the BC dose for any age. 1 mg/kg (C) is the dimenhydrinate calculation, not ondansetron.",
+   "explanationZh": "BC规定昂丹司琼（ondansetron）儿童剂量为：6个月至4岁2毫克口服，4岁及以上4毫克口服。该患儿6岁，给4毫克口服，与成人剂量相同（D）。2毫克（A）适用于6个月至4岁的儿童。8毫克（B）是BC任何年龄剂量的两倍。1毫克/公斤（C）是茶苯海明（dimenhydrinate）的算法，不是昂丹司琼的。",
+   "sourceRef": "BC Guidelines p.75",
+   "verified": true
+  },
+  {
+   "id": "ptm-113",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "neonatal",
+   "topic": "nausea",
+   "difficulty": "intermediate",
+   "questionEn": "A 4-week-old has forceful vomiting after every feed for two days. He is alert with a strong cry, HR 168, and appears dry. What is the appropriate prehospital management?",
+   "questionZh": "一名4周大的婴儿连续两天每次喂奶后剧烈呕吐。意识清醒、哭声有力，心率168，看起来脱水。恰当的院前处理是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Position him to protect the airway, have suction ready, and transport",
+     "zh": "摆放保护气道的体位，备好吸引并转运"
+    },
+    {
+     "key": "B",
+     "en": "Give dimenhydrinate 1 mg/kg IM to stop the vomiting before transport",
+     "zh": "转运前肌注茶苯海明（dimenhydrinate）1毫克/公斤止吐"
+    },
+    {
+     "key": "C",
+     "en": "Give ondansetron 2 mg PO to settle the stomach before transport",
+     "zh": "转运前口服昂丹司琼（ondansetron）2毫克，让胃安定下来"
+    },
+    {
+     "key": "D",
+     "en": "Encourage a full feed to correct the dehydration before you leave",
+     "zh": "出发前鼓励他吃饱奶，以纠正脱水"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Forceful vomiting after every feed in a 4-week-old suggests an obstruction such as pyloric stenosis, which typically presents at around 3 weeks of age (Nancy Ch 43). Core BC nausea/vomiting care is keeping the patient at rest in a position that protects the airway, with suction ready, and transporting (A). Neither antiemetic has a BC dose for this infant: dimenhydrinate (B) requires contacting the ER if the patient appears to be under 25 kg, and ondansetron (C) is dosed only from 6 months of age. A large feed (D) will simply be vomited back and risks aspiration; Nancy advises giving newborns nothing by mouth in the prehospital setting.",
+   "explanationZh": "4周大的婴儿每次喂奶后都剧烈呕吐，提示幽门狭窄等梗阻，此病通常在出生后3周左右出现（Nancy Ch 43）。BC恶心呕吐的基本处置是：让患者安静休息、摆放保护气道的体位、备好吸引，然后转运（A）。两种止吐药在BC中都没有适用于该婴儿的剂量：茶苯海明（dimenhydrinate）（B）在患者看似不足25公斤时须联系急诊科，昂丹司琼（ondansetron）（C）从6个月起才有剂量。大量喂奶（D）只会被吐出来，还有误吸风险；Nancy教材建议院前不要给新生儿经口喂任何东西。",
+   "sourceRef": "BC Guidelines p.48, p.63, p.75; Nancy Ch 43",
+   "verified": true
+  },
+  {
+   "id": "ptm-114",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "pediatric",
+   "topic": "nausea",
+   "difficulty": "advanced",
+   "questionEn": "A 9-year-old with phenylketonuria (PKU) needs an antiemetic for persistent vomiting. Which statement about ondansetron is correct?",
+   "questionZh": "一名9岁苯丙酮尿症（PKU）患儿因持续呕吐需要止吐药。关于昂丹司琼（ondansetron）的下列说法哪项正确？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Ondansetron is contraindicated in PKU by every route and form",
+     "zh": "PKU患者任何途径、任何剂型都禁用昂丹司琼（ondansetron）"
+    },
+    {
+     "key": "B",
+     "en": "Avoid the ODT form, which may contain aspartame; injection is safe",
+     "zh": "避免口崩片（可能含阿斯巴甜），注射剂可安全使用"
+    },
+    {
+     "key": "C",
+     "en": "PKU has no bearing on the choice or the form of antiemetic",
+     "zh": "PKU与止吐药的选择和剂型都无关"
+    },
+    {
+     "key": "D",
+     "en": "Patients with PKU need double the usual ondansetron dose",
+     "zh": "PKU患者需要双倍剂量的昂丹司琼（ondansetron）"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC's ondansetron monograph notes that the ODT (orally disintegrating tablet) may contain aspartame, which should be avoided in phenylketonuria, while ondansetron injections can be safely administered in this population (B). PKU is therefore not a contraindication to ondansetron by every route (A), but it does affect the choice of form (C). There is no dose adjustment for PKU (D).",
+   "explanationZh": "BC昂丹司琼（ondansetron）药物专论指出：口崩片可能含阿斯巴甜，苯丙酮尿症（PKU）患者应避免使用，而昂丹司琼注射剂在这类患者中可以安全使用（B）。因此PKU并不是所有途径都禁用昂丹司琼（A），但它确实影响剂型的选择（C）。PKU也不需要调整剂量（D）。",
+   "sourceRef": "BC Guidelines p.75",
+   "verified": true
+  },
+  {
+   "id": "ptm-115",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "pain-management",
+   "difficulty": "foundation",
+   "questionEn": "A 45-year-old male with an isolated ankle injury rates his pain 7/10. He took no medication today. What is the correct oral acetaminophen dose?",
+   "questionZh": "一名45岁男性单纯踝关节损伤，疼痛评分7/10。今日未服用任何药物。对乙酰氨基酚（acetaminophen）口服的正确剂量是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "2,000 mg PO as a single loading dose",
+     "zh": "单次负荷剂量口服2000毫克"
+    },
+    {
+     "key": "B",
+     "en": "325 mg PO every 2 hours as needed",
+     "zh": "按需每2小时口服325毫克"
+    },
+    {
+     "key": "C",
+     "en": "1,000 mg PO, repeated every hour as needed",
+     "zh": "口服1000毫克，按需每小时重复"
+    },
+    {
+     "key": "D",
+     "en": "500-1,000 mg PO, repeatable once after 4 hours",
+     "zh": "口服500–1000毫克，4小时后可重复一次"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "BC's oral acetaminophen dose for pain or fever is 500-1,000 mg PO, which may be repeated once after 4 hours (D). The 24-hour maximum from all sources is 4,000 mg (2,000 mg in liver dysfunction or malnutrition). A 2,000 mg single dose (A) is double the maximum single dose. 325 mg every 2 hours (B) and 1,000 mg every hour (C) both break the 4-hour rule: acetaminophen must not be given if any dose was taken in the past 4 hours, and hourly 1,000 mg would quickly exceed the daily maximum.",
+   "explanationZh": "BC规定对乙酰氨基酚（acetaminophen）用于疼痛或发热的口服剂量为500–1000毫克，4小时后可重复一次（D）。所有来源合计24小时最大量为4000毫克（肝功能障碍或营养不良者为2000毫克）。单次2000毫克（A）是单次最大量的两倍。每2小时325毫克（B）和每小时1000毫克（C）都违反了4小时规则：过去4小时内用过就不能再给，每小时1000毫克还会很快超过每日上限。",
+   "sourceRef": "BC Guidelines p.58",
+   "verified": true
+  },
+  {
+   "id": "ptm-116",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "pain-management",
+   "difficulty": "intermediate",
+   "questionEn": "A 30 kg 9-year-old has moderate pain from a closed forearm fracture. There is no bleeding history, no GI disease, and no anticoagulant use. What is the correct ibuprofen dose?",
+   "questionZh": "一名30公斤重的9岁儿童因闭合性前臂骨折出现中度疼痛。无出血史、无胃肠疾病、未使用抗凝药。布洛芬（ibuprofen）的正确剂量是多少？",
+   "options": [
+    {
+     "key": "A",
+     "en": "400 mg PO, the adult dose",
+     "zh": "口服400毫克，即成人剂量"
+    },
+    {
+     "key": "B",
+     "en": "5 mg/kg (150 mg) PO",
+     "zh": "5毫克/公斤（150毫克）口服"
+    },
+    {
+     "key": "C",
+     "en": "10 mg/kg (300 mg) PO",
+     "zh": "10毫克/公斤（300毫克）口服"
+    },
+    {
+     "key": "D",
+     "en": "40 mg/kg (1,200 mg) PO as a single dose",
+     "zh": "40毫克/公斤（1200毫克）单次口服"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "BC's pediatric ibuprofen dose for mild to moderate pain is 10 mg/kg PO, which may be repeated once after 6 hours, to a maximum of 40 mg/kg/day. For 30 kg this is 300 mg (C). Children are dosed by weight, not with the adult 300-400 mg dose (A). 5 mg/kg (B) is the PCP pyrexia dose for temperatures below 39°C, not the pain dose. 40 mg/kg (D) is the daily maximum, not a single dose.",
+   "explanationZh": "BC规定儿童布洛芬（ibuprofen）用于轻中度疼痛的剂量为10毫克/公斤口服，6小时后可重复一次，每日最大40毫克/公斤。30公斤即300毫克（C）。儿童按体重给药，不用成人的300–400毫克剂量（A）。5毫克/公斤（B）是PCP用于体温低于39°C发热的剂量，不是镇痛剂量。40毫克/公斤（D）是每日上限，不是单次剂量。",
+   "sourceRef": "BC Guidelines p.68",
+   "verified": true
+  },
+  {
+   "id": "ptm-117",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "pain-management",
+   "difficulty": "advanced",
+   "questionEn": "A 29-year-old woman, 20 weeks pregnant, has severe pain from an isolated closed tibia fracture. She is alert, hemodynamically stable, and has taken nothing today. Which analgesic option is appropriate?",
+   "questionZh": "一名29岁女性，妊娠20周，单纯闭合性胫骨骨折伴剧烈疼痛。意识清醒，血流动力学稳定，今日未服药。哪种镇痛方案合适？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Ibuprofen 400 mg PO plus acetaminophen 1,000 mg PO",
+     "zh": "布洛芬（ibuprofen）400毫克口服，加对乙酰氨基酚（acetaminophen）1000毫克口服"
+    },
+    {
+     "key": "B",
+     "en": "Acetaminophen 1,000 mg PO on its own",
+     "zh": "单用对乙酰氨基酚（acetaminophen）1000毫克口服"
+    },
+    {
+     "key": "C",
+     "en": "Methoxyflurane 3 mL, self-administered",
+     "zh": "甲氧氟烷（methoxyflurane）3毫升，自行吸入"
+    },
+    {
+     "key": "D",
+     "en": "None; all analgesics are contraindicated in pregnancy",
+     "zh": "不给；妊娠期所有镇痛药都禁用"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Ibuprofen is contraindicated in pregnancy in all three trimesters, and methoxyflurane is contraindicated in pregnancy, intended pregnancy, and breast-feeding. Acetaminophen 500-1,000 mg PO remains available, so acetaminophen alone is the appropriate choice among these options (B). The combination (A) includes ibuprofen, which is contraindicated. Methoxyflurane (C) is contraindicated in pregnancy. Not all analgesics are contraindicated (D): acetaminophen is not, and Entonox lists pregnancy neither as a contraindication nor as a caution.",
+   "explanationZh": "布洛芬（ibuprofen）在妊娠早、中、晚三期都禁用；甲氧氟烷（methoxyflurane）在妊娠、备孕和哺乳期禁用。对乙酰氨基酚（acetaminophen）500–1000毫克口服仍可使用，因此在这些选项中单用对乙酰氨基酚是合适的（B）。联合用药（A）含有禁用的布洛芬。甲氧氟烷（C）妊娠期禁用。并非所有镇痛药都禁用（D）：对乙酰氨基酚不禁用，Entonox（笑气）的禁忌证和注意事项中也没有列出妊娠。",
+   "sourceRef": "BC Guidelines p.58, p.68, p.71",
+   "verified": true
+  },
+  {
+   "id": "ptm-118",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "pain-management",
+   "difficulty": "advanced",
+   "questionEn": "A 16-year-old has a painful isolated wrist fracture. He is alert, cooperative, GCS 15, with clear lungs and no head injury. He asks for the \"green whistle\" (methoxyflurane) his friend received. What is correct?",
+   "questionZh": "一名16岁少年单纯腕部骨折伴疼痛。意识清醒、配合，GCS 15分，双肺清晰，无颅脑损伤。他要求使用朋友用过的\"绿色哨子\"（甲氧氟烷，methoxyflurane）。正确的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Decline methoxyflurane (contraindicated under 18) and offer Entonox",
+     "zh": "不用甲氧氟烷（methoxyflurane）（18岁以下禁用），改用Entonox（笑气）"
+    },
+    {
+     "key": "B",
+     "en": "Give methoxyflurane 3 mL, since he is alert and cooperative",
+     "zh": "他清醒配合，可以给甲氧氟烷（methoxyflurane）3毫升"
+    },
+    {
+     "key": "C",
+     "en": "Give methoxyflurane at half the volume because of his age",
+     "zh": "因为年龄，给半量甲氧氟烷（methoxyflurane）"
+    },
+    {
+     "key": "D",
+     "en": "Withhold all analgesia until he arrives at hospital",
+     "zh": "到院前不给任何镇痛"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Methoxyflurane is contraindicated in patients less than 18 years of age, and there is no reduced-volume pediatric option (B, C). With an isolated extremity injury, normal LOC, clear lungs, and no head or inhalation injury, Entonox is appropriate once its prerequisites are met (A); oral analgesics may also be considered. Withholding all analgesia (D) is not appropriate for a stable patient with a painful isolated fracture.",
+   "explanationZh": "甲氧氟烷（methoxyflurane）禁用于18岁以下患者，也不存在儿童减量方案（B、C）。他是单纯肢体损伤、意识正常、双肺清晰、无颅脑或吸入性损伤，满足前提条件后适合使用Entonox（笑气）（A），也可考虑口服镇痛药。病情稳定、单纯骨折疼痛的患者，到院前不给任何镇痛（D）是不恰当的。",
+   "sourceRef": "BC Guidelines p.65, p.71, p.58",
+   "verified": true
+  },
+  {
+   "id": "ptm-119",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "pain-management",
+   "difficulty": "foundation",
+   "questionEn": "Which of the following is a contraindication to Entonox?",
+   "questionZh": "下列哪项是Entonox（笑气）的禁忌证？",
+   "options": [
+    {
+     "key": "A",
+     "en": "An isolated extremity injury",
+     "zh": "单纯肢体损伤"
+    },
+    {
+     "key": "B",
+     "en": "Pain associated with a superficial burn",
+     "zh": "浅表烧伤引起的疼痛"
+    },
+    {
+     "key": "C",
+     "en": "A pain severity score of 9/10",
+     "zh": "疼痛评分9/10"
+    },
+    {
+     "key": "D",
+     "en": "An altered level of consciousness",
+     "zh": "意识水平改变"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Entonox contraindications are inability to comply, inability to ventilate an enclosed treatment area, decompression sickness, altered level of consciousness, pneumothorax, air embolism, inhalation injury, and nitroglycerin used in the last 5 minutes (D). Isolated extremity injuries (A) and pain associated with burns (B) are listed indications. A high pain score (C) is a reason to offer analgesia, not a contraindication.",
+   "explanationZh": "Entonox（笑气）的禁忌证包括：无法配合、治疗区域无法通风、减压病、意识水平改变、气胸、空气栓塞、吸入性损伤，以及5分钟内用过硝酸甘油（nitroglycerin）（D）。单纯肢体损伤（A）和烧伤疼痛（B）都列在适应证中。疼痛评分高（C）是需要镇痛的理由，不是禁忌证。",
+   "sourceRef": "BC Guidelines p.65",
+   "verified": true
+  },
+  {
+   "id": "ptm-120",
+   "licence": "pcp",
+   "cpcfArea": "H",
+   "competency": "H3",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "pain-management",
+   "difficulty": "advanced",
+   "questionEn": "A 77-year-old male with alcohol-related cirrhosis and chronic kidney disease (reduced urine output) has a painful shoulder dislocation. His daughter says he took 1,000 mg of acetaminophen 90 minutes ago. He is on warfarin, is alert, and his chest is clear. What analgesia is appropriate?",
+   "questionZh": "一名77岁男性患有酒精性肝硬化和慢性肾病（尿量减少），现肩关节脱位疼痛。他女儿说他90分钟前吃了1000毫克对乙酰氨基酚（acetaminophen）。他正在服用华法林（warfarin），意识清醒，双肺清晰。合适的镇痛方案是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Acetaminophen 1,000 mg PO, since his 24-hour total stays under 4,000 mg",
+     "zh": "口服对乙酰氨基酚（acetaminophen）1000毫克，因为24小时总量仍低于4000毫克"
+    },
+    {
+     "key": "B",
+     "en": "Ibuprofen 400 mg PO, as it is safer than acetaminophen in liver disease",
+     "zh": "口服布洛芬（ibuprofen）400毫克，因为肝病患者用它比对乙酰氨基酚（acetaminophen）安全"
+    },
+    {
+     "key": "C",
+     "en": "Entonox, once its contraindications are ruled out and the area is ventilated",
+     "zh": "Entonox（笑气），前提是已排除禁忌证且治疗区域可以通风"
+    },
+    {
+     "key": "D",
+     "en": "Methoxyflurane 3 mL, as it avoids both liver and stomach effects",
+     "zh": "甲氧氟烷（methoxyflurane）3毫升，因为它对肝脏和胃都没有影响"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Acetaminophen is barred because a dose was taken within the past 4 hours, and his cirrhosis and heavy alcohol use also lower the 24-hour maximum to 2,000 mg (A). Ibuprofen is contraindicated with anticoagulants such as warfarin (B). Methoxyflurane is contraindicated with a history of clinically significant renal impairment such as reduced urine output (D). Entonox remains available (C) after a primary survey, pain assessment, baseline vitals including SpO2, and a history and exam sufficient to rule out its contraindications, with the treatment area ventilated.",
+   "explanationZh": "对乙酰氨基酚（acetaminophen）不能用：4小时内已服过一剂，而且肝硬化和长期大量饮酒使他的24小时上限降至2000毫克（A）。布洛芬（ibuprofen）与华法林（warfarin）等抗凝药合用属禁忌（B）。甲氧氟烷（methoxyflurane）禁用于有明显肾功能损害（如尿量减少）病史的患者（D）。完成初步评估、疼痛评估、含SpO2的基线生命体征，并通过病史和体检排除禁忌证、保证治疗区域通风之后，Entonox（笑气）仍可使用（C）。",
+   "sourceRef": "BC Guidelines p.58, p.65, p.68, p.71",
+   "verified": true
+  }
+ ]
+}

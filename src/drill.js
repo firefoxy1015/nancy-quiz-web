@@ -15,7 +15,7 @@
 // Styles: styles.css, everything under .ddx (light and dark follow the site's theme). Fonts load on first use.
 // Sound (sfx): a chime when right (climbing with the combo), a soft buzz when wrong, a lower one for an automatic fail, a jingle
 // at the end of a round and a fanfare when today is done; the speaker button mutes it on this device.
-import { S, esc } from './app.js?v=85';
+import { S, esc } from './app.js?v=86';
 
 const IV = [0, 1, 3, 7, 14, 30], ROUND = 10;
 const FONTS = 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Instrument+Serif:ital@1&family=Noto+Sans+SC:wght@400;500;700&display=swap';

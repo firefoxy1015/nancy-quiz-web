@@ -1,0 +1,3424 @@
+{
+ "meta": {
+  "part": "pcp-professional",
+  "auditedThrough": "ppf-105",
+  "keep": 2,
+  "fix": 74,
+  "delete": 29
+ },
+ "verdicts": [
+  {
+   "id": "ppf-001",
+   "verdict": "fix",
+   "why": "正确项比干扰项长近一倍（长度泄底），重写四个选项使长度相近；解析逐项说明三个错项。"
+  },
+  {
+   "id": "ppf-002",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项的 2.4 倍，重写选项平衡长度；金额改为加元；解析补齐每个错项。"
+  },
+  {
+   "id": "ppf-003",
+   "verdict": "fix",
+   "why": "原题是无情境的“哪种情况算利益冲突”定义题、干扰项一眼可排除；改成有真实判断的情境题（亲属开的转运公司），A 项“坦白关系后推荐”作强干扰。"
+  },
+  {
+   "id": "ppf-004",
+   "verdict": "fix",
+   "why": "正确项最长；D 项错因原解析说“引发隐私泄露”不准确，改为“暗示患者被送往医院本身就是泄露”；来源改 Nancy Ch 4（保密）。"
+  },
+  {
+   "id": "ppf-005",
+   "verdict": "keep",
+   "sourceRef": "Nancy Ch 5"
+  },
+  {
+   "id": "ppf-006",
+   "verdict": "fix",
+   "why": "内容正确：题目讲同事挪用药品，无具体患者，population 由 adult 改为 unclassified；D 项略加长使正确项不再最长；来源补 Nancy Ch 5（目睹不当行为须向指挥链上报）。"
+  },
+  {
+   "id": "ppf-007",
+   "verdict": "fix",
+   "why": "正确项最长且唯一完整；重写干扰项使长度相近，B 项改为“建议结束审查”避免与合理做法混淆；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-008",
+   "verdict": "fix",
+   "why": "正确项最长（180 vs 104）；题干改为“你的 PCP 执照和规程不授权静脉抗生素给药”；D 项错因改为“他人预抽的注射器转交他人给药的用药安全风险+时机问题未解决”。"
+  },
+  {
+   "id": "ppf-009",
+   "verdict": "fix",
+   "why": "原题是无情境的知情同意定义题，正确项是教科书定义且最长；改为“患者中途撤回同意”的情境题，考同意可随时撤回、无需签字即生效（Nancy Ch 4）。"
+  },
+  {
+   "id": "ppf-010",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项长度，C 项（默默拉黑）的错因写清楚；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-011",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3 倍；A 项“未满 18 岁”与 BC 成年年龄 19 岁不符，改为 19；能力代码改 A3.3（知情同意），来源改 Nancy Ch 4（mature minor 规则）。"
+  },
+  {
+   "id": "ppf-012",
+   "verdict": "fix",
+   "why": "内容正确：无患者的装备核查情境，population 改 unclassified；A/B/D 选项略加长使长度相近；解析改为逐项说明，补上 B 项（先签后查）的错因。"
+  },
+  {
+   "id": "ppf-013",
+   "verdict": "delete",
+   "reason": "标准4/6：无情境地问“执业标准的首要目的”，考的是 CPCF 首页措辞（public can expect...），没有职业判断。"
+  },
+  {
+   "id": "ppf-014",
+   "verdict": "delete",
+   "reason": "标准5/6：无情境的“哪种说法最准确”，考点（去标识化不等于不可识别）与 ppf-001 纹身照片题重复，保留更好的 ppf-001。"
+  },
+  {
+   "id": "ppf-015",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.2 倍；重写选项平衡长度；解析补充 Nancy 的处理原则（自己先别动气、叫警察留到劝不住或现场不安全时）。"
+  },
+  {
+   "id": "ppf-016",
+   "verdict": "fix",
+   "why": "正确项最长且带引号台词；平衡长度，B 项加入“他有决定能力”使干扰更真实；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-017",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.6 倍；重写选项；解析逐项说明。"
+  },
+  {
+   "id": "ppf-018",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.6 倍；重写选项，B 项改为“为免老人着急改问女儿”增强迷惑性；来源改 Nancy Ch 45（面对面、光线充足、戴助听器）。"
+  },
+  {
+   "id": "ppf-019",
+   "verdict": "fix",
+   "why": "正确项最长；D 项改为“按既往模式做针对性评估、不缓解再复评”，更像真实的锚定偏差；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-020",
+   "verdict": "delete",
+   "reason": "标准3：只有正确项是开放式问题，其余三项是明显的诱导/封闭式反例，一眼可排除，没有鉴别价值。"
+  },
+  {
+   "id": "ppf-021",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.2 倍；重写选项，D 项补上“说法可能矛盾”的理由增强迷惑性；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-022",
+   "verdict": "keep",
+   "sourceRef": "CPCF B3.1"
+  },
+  {
+   "id": "ppf-023",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 2 倍；重写选项，D 改为“上报但只在被问时才告知家属”，考“内部上报不能代替向患者披露”；来源 CPCF B3.2。"
+  },
+  {
+   "id": "ppf-024",
+   "verdict": "delete",
+   "reason": "标准5：与 ppf-030 考点和问法基本相同（已提交记录发现问题→留痕更正、不得替换原件），干扰项结构也一样；保留多了“通知接收机构”判断的 ppf-030。"
+  },
+  {
+   "id": "ppf-025",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；来源改 Nancy Ch 4（即使在医院走廊也不要当着旁人讨论患者）。"
+  },
+  {
+   "id": "ppf-026",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.8 倍；重写选项；来源改 Nancy Ch 4（教材正是用胸痛男性拒绝送医举例，签字不等于知情拒绝）。"
+  },
+  {
+   "id": "ppf-027",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；解析补充“如在用氧，先和家属商定安全安排”的现实提醒。"
+  },
+  {
+   "id": "ppf-028",
+   "verdict": "fix",
+   "why": "正确项最长且最细；平衡选项；C 项改为“默默上监护、向同事了解经过以免逼她开口”增强迷惑性。"
+  },
+  {
+   "id": "ppf-029",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.2 倍；重写选项；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-030",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.9 倍；重写选项；来源改 Nancy Ch 19（更正须注明时间与原因、不得销毁原件、只有原作者能修改）。"
+  },
+  {
+   "id": "ppf-031",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2 倍；重写选项，写明 BC 的 8-1-1；B 项改为“只看知名网站”增强迷惑性。"
+  },
+  {
+   "id": "ppf-032",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.4 倍；重写选项；来源改 Nancy Ch 2（不要用“走了”等委婉语，家属需要听到“死亡”一词）。"
+  },
+  {
+   "id": "ppf-033",
+   "verdict": "delete",
+   "reason": "标准3：无情境的“结构化交班的首要目的”，干扰项是缩短卸载时间/证明照护/收费信息，一眼可排除。"
+  },
+  {
+   "id": "ppf-034",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.5 倍；重写选项；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-035",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；解析去掉“PCP 范围”说法。"
+  },
+  {
+   "id": "ppf-036",
+   "verdict": "fix",
+   "why": "正确项最长；D 项原解析称“把临床决策交到错误的人手里”不准确（消防员可操作 AED），改为角色倒置、无人统筹。"
+  },
+  {
+   "id": "ppf-037",
+   "verdict": "fix",
+   "why": "正确项最长；题干补 BC 考纲的 FAST-VAN 筛查阳性；平衡选项。"
+  },
+  {
+   "id": "ppf-038",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.6 倍；重写选项；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-039",
+   "verdict": "fix",
+   "why": "内容与选项长度都没问题，只改标签：讲的是回应同事求助的职业行为，population 由 adult 改为 unclassified。"
+  },
+  {
+   "id": "ppf-040",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.9 倍；重写选项，精简正确项；解析补充另一名消防员负责现场危险。"
+  },
+  {
+   "id": "ppf-041",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.8 倍；重写选项；population 改 unclassified（同事言行，无患者）。"
+  },
+  {
+   "id": "ppf-042",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；D 项错因补“重复或矛盾用药”。"
+  },
+  {
+   "id": "ppf-043",
+   "verdict": "delete",
+   "reason": "标准3：干扰项是“家属氛围印象”“调度延误”“排班信息”，与临床交接毫不相干，一眼可排除。"
+  },
+  {
+   "id": "ppf-044",
+   "verdict": "delete",
+   "reason": "标准5/3：与 ppf-059（主持病例复盘）同考“不追责的集体复盘”，干扰项（各写报告/独自反思/等年度考核）明显偏弱；保留 ppf-059。"
+  },
+  {
+   "id": "ppf-045",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.8 倍；重写选项；population 改 unclassified（考的是班组冲突）。"
+  },
+  {
+   "id": "ppf-046",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；解析去掉“超出 PCP 范围”措辞，改为“执照不授权”。"
+  },
+  {
+   "id": "ppf-047",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.5 倍；BC 考纲糖尿病急症规程默认“Transport”，原题未提，A 项“凡处置过都必须送医”容易被误认为有考纲依据；改为“按规程建议转运、患者仍拒绝”的知情拒绝题，能力代码改 A3.3，来源 Nancy Ch 4（决定能力判断含血糖/血氧正常、有随访计划）+ BC Guidelines p.57。"
+  },
+  {
+   "id": "ppf-048",
+   "verdict": "delete",
+   "reason": "标准3：三个干扰项是 STEMI、过敏性休克、多发伤，显然都需要急救转运，一眼可排除。"
+  },
+  {
+   "id": "ppf-049",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；解析逐项补齐（文员不是能接手照护的临床人员）。"
+  },
+  {
+   "id": "ppf-050",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.3 倍；重写选项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-051",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.1 倍；重写选项；population 改 unclassified（考的是带教反馈）。"
+  },
+  {
+   "id": "ppf-052",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.1 倍；重写选项；B 项错因补“简短说明即可，不必生硬拒绝”。"
+  },
+  {
+   "id": "ppf-053",
+   "verdict": "delete",
+   "reason": "标准5：与 ppf-055 考点和问法相同（新证据与现行规程不一致→不擅自改变做法、走正式渠道），干扰项结构一样；保留更完整的 ppf-055。"
+  },
+  {
+   "id": "ppf-054",
+   "verdict": "delete",
+   "reason": "标准3：正确项是“机构批准的药物手册/在线医疗支持”，干扰项是随便上网搜、社交群、旧教科书，一眼可排除。"
+  },
+  {
+   "id": "ppf-055",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2 倍；重写选项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-056",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 2 倍；重写选项；B 项错因补“你是在本站内排在最慢四分之一，同站同事面对的是同样的任务构成”。"
+  },
+  {
+   "id": "ppf-057",
+   "verdict": "delete",
+   "reason": "标准4：无情境地问“维持持续胜任能力要求什么”，答案就是 CPCF D3.5 的原话，考框架措辞而非判断。"
+  },
+  {
+   "id": "ppf-058",
+   "verdict": "delete",
+   "reason": "标准4/5：问“为什么这一刻最关键”，是为了引出“隐性课程”这个框架术语，不考行动判断；同事贬损患者、新人跟学的情境已由 ppf-088 以行动题形式考到。"
+  },
+  {
+   "id": "ppf-059",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3 倍；重写选项，精简正确项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-060",
+   "verdict": "delete",
+   "reason": "标准4/6：无情境地问“为什么要关注社会、环境、技术变化”，复述 CPCF D3.1 措辞，干扰项（考核/解释政策/续期要求）一眼可排除。"
+  },
+  {
+   "id": "ppf-061",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 2 倍；重写选项；population 改 unclassified；来源改 Nancy Ch 2（PTSD 征象：脑中挥之不去、睡眠障碍，应告知上级/求助）。"
+  },
+  {
+   "id": "ppf-062",
+   "verdict": "delete",
+   "reason": "标准4：考 PPTE 与慢性应激的定义区别，是 CPCF E2.2 的术语措辞；教材（Nancy Ch 2）不用这一术语，题目没有判断情境。"
+  },
+  {
+   "id": "ppf-063",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；population 改 unclassified；解析补 Nancy 的“学会在同事身上发现应激征象、早发现可防止恶化”。"
+  },
+  {
+   "id": "ppf-064",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 1.9 倍；重写选项；population 改 unclassified；D 项错因补“轻症任务同样要开车、用药”。"
+  },
+  {
+   "id": "ppf-065",
+   "verdict": "delete",
+   "reason": "标准3：四个选项中只有“下班靠喝酒放松”是不健康的，其余三项都是公认的健康做法，一眼可选出。"
+  },
+  {
+   "id": "ppf-066",
+   "verdict": "delete",
+   "reason": "标准3/7：只有正确项不是临床暴露，一眼可辨；题干“加拿大研究一致发现”和解析“组织因素的贡献至少不亚于创伤任务”无法在考纲或教材中核实。"
+  },
+  {
+   "id": "ppf-067",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 1.8 倍；重写选项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-068",
+   "verdict": "delete",
+   "reason": "标准4：问“最准确的理解”，考的是 CPCF E2.1 的措辞（个人经历与社会文化身份影响反应），不考行动判断。"
+  },
+  {
+   "id": "ppf-069",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；population 改 unclassified；来源改 Nancy Ch 2（入行之初就要防倦怠、多和 EMS 圈外的人来往），C 项“只靠同行”正与教材相反。"
+  },
+  {
+   "id": "ppf-070",
+   "verdict": "delete",
+   "reason": "标准7：正确项的“夜班前计划小睡、班次后半段限咖啡因”在教材中找不到，而 Nancy Ch 2 的轮班建议是“避免咖啡因、保持规律作息”，使 A 项（固定夜班作息）反而有据可依，答案不唯一。"
+  },
+  {
+   "id": "ppf-071",
+   "verdict": "delete",
+   "reason": "标准4/6：无情境的“关于韧性哪种说法最准确”，答案是 CPCF E2.4 原意（个人与系统因素共同影响韧性）。"
+  },
+  {
+   "id": "ppf-072",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.3 倍；原题用“同情疲劳/道德损伤”等教材未出现的术语，改按 Nancy Ch 2 的说法：麻木、愤世嫉俗是职业倦怠的警示信号；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-073",
+   "verdict": "delete",
+   "reason": "标准6：无情境的“哪项最能体现自我监测”，属于空泛的自我健康题。"
+  },
+  {
+   "id": "ppf-074",
+   "verdict": "delete",
+   "reason": "标准4：答案依赖 CPCF E4.1“与初级保健提供者定期监测”的原话；在家庭医生短缺的 BC，D 项（职业健康服务）、A 项（无预约诊所）也有现实合理性，判断价值低。"
+  },
+  {
+   "id": "ppf-075",
+   "verdict": "delete",
+   "reason": "标准7：把“即使状态良好也去参加事件后复盘”当唯一正确答案，但 Nancy Ch 2 明确写 CISD 没有证据证明有效、甚至可能有害，且应“提供机会、不可强迫”；D 项（参加但不发言）同样站得住。"
+  },
+  {
+   "id": "ppf-076",
+   "verdict": "delete",
+   "reason": "标准3/4：答案是“积极适应+通过正规渠道表达顾虑”的折中项，其余是拒绝/沉默/集体反对三种极端，一眼可选；考的是 CPCF E1.4 措辞。"
+  },
+  {
+   "id": "ppf-077",
+   "verdict": "delete",
+   "reason": "标准5：与 ppf-064 同考 E3.3“状态受损时退出执业、通知主管”，答案模式相同；保留情境更有判断价值的 ppf-064。"
+  },
+  {
+   "id": "ppf-078",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项长度；population 改 unclassified；来源改 Nancy Ch 40（“活着没意思/没有我更好”是自杀风险信号，应直接询问）。"
+  },
+  {
+   "id": "ppf-079",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.3 倍；重写选项，精简正确项；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-080",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；D 项错因改为“可以作为选择提供，但不征求意见就换人、照常检查没抓住核心原则”。"
+  },
+  {
+   "id": "ppf-081",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.2 倍；重写选项；D 项错因补“未经她同意联系儿子，绕开本人也违反保密”；来源补 Nancy Ch 45（松脱地毯、照明不足是老人跌倒常见外因）。"
+  },
+  {
+   "id": "ppf-082",
+   "verdict": "fix",
+   "why": "正确项最长；平衡选项；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-083",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.4 倍；重写选项；解析逐项补齐。"
+  },
+  {
+   "id": "ppf-084",
+   "verdict": "delete",
+   "reason": "标准6：无患者的历史知识题（为什么原住民对医疗系统有戒备），答案依赖考纲和教材都没写的具体史实；同一能力已由 ppf-079、ppf-085、ppf-027 以情境题考到。"
+  },
+  {
+   "id": "ppf-085",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 3 倍；重写选项；B 项错因写明“未查政策就断言不能陪同”。"
+  },
+  {
+   "id": "ppf-086",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.4 倍；重写选项，把原 D 项换成“只记自述姓名、不写法定姓名”（原解析已在批评这种做法，选项里却没有）。"
+  },
+  {
+   "id": "ppf-087",
+   "verdict": "fix",
+   "why": "与教材冲突：Nancy Ch 36 写明纳洛酮半衰期比多数阿片类短、用药后“不应允许患者拒绝转运”，原题却把拒绝当既成事实、只问减害；改为“已解释再次昏迷风险并劝其就医、有决定能力者仍拒绝”再问减害措施，正确项加入“安排有人陪伴”；正确项原长度是干扰项 5 倍，一并平衡。"
+  },
+  {
+   "id": "ppf-088",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.8 倍；重写选项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-089",
+   "verdict": "delete",
+   "reason": "标准3/7：题干没有任何线索指向“结构性障碍”，“最可能”只是一种笼统主张；三个干扰项都是“怪患者”的标签，一眼可排除。"
+  },
+  {
+   "id": "ppf-090",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.5 倍；重写选项；D 项错因写明“房东失职不等于父母疏忽（若有疏忽或虐待迹象则另当别论）”。"
+  },
+  {
+   "id": "ppf-091",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 3.5 倍；原 D 项（现场报警）的解析称违背意愿报警会升级危险，与 Nancy Ch 46“执法人员在场总是有帮助”、Ch 4“家暴在部分省份属于须报告情形”相冲突，改 D 为“当面告诉伴侣怀疑虐待并要报警”；来源改 Nancy Ch 46。"
+  },
+  {
+   "id": "ppf-092",
+   "verdict": "delete",
+   "reason": "标准3/6：无患者的系统倡导题，正确项是“系统记录+各渠道反映+同时继续做好照护”，把 A 项完全包含在内，属于“全选好的”式答案，没有鉴别价值。"
+  },
+  {
+   "id": "ppf-093",
+   "verdict": "delete",
+   "reason": "标准4/6：无情境的“文化安全是什么意思”定义题；答案“由患者判定是否安全”这一定义在 CPCF 原文和教材中都没有，同一能力已由 ppf-027、ppf-086 以情境题考到。"
+  },
+  {
+   "id": "ppf-094",
+   "verdict": "delete",
+   "reason": "标准4/6：无情境的“哪项活动最能体现以对社会负责的方式支持系统变革”，复述 CPCF F3.4 措辞。"
+  },
+  {
+   "id": "ppf-095",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.6 倍；“一项操作”太空泛，D 项（推迟到医院）因而说不清对错，改为疑似心源性胸痛需做 12 导联并给阿司匹林（ASA）；来源改 Nancy Ch 15（先找翻译、多数机构有电话翻译、孩子做翻译不理想）。"
+  },
+  {
+   "id": "ppf-096",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.3 倍；重写选项；来源改 Nancy Ch 50（首个到场者评估“有什么、要做什么、需要什么资源”并宣布承担指挥）。"
+  },
+  {
+   "id": "ppf-097",
+   "verdict": "fix",
+   "why": "正确项是唯一带理由的选项（长 1.4 倍）；平衡选项；来源改 Nancy Ch 50。"
+  },
+  {
+   "id": "ppf-098",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.1 倍；重写选项；来源改 Nancy Ch 50（ICS 的作用是防止重复劳动和各自为战 freelancing）。"
+  },
+  {
+   "id": "ppf-099",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.8 倍；重写选项；population 改 unclassified；来源改 Nancy Ch 4（绝不让对方挡在你和出口之间、呼叫警察、感到危险立即撤离）。"
+  },
+  {
+   "id": "ppf-100",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.5 倍；重写选项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-101",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.6 倍；重写选项；D 项错因改为“申诉可能是处理工作量的正当途径，但对眼前的犬儒风气无济于事”；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-102",
+   "verdict": "fix",
+   "why": "无情境概念题，但干扰项（追究个人、低上报率、资深员工包揽）有真实迷惑性，保留；正确项最长，平衡选项；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-103",
+   "verdict": "fix",
+   "why": "原题问“为什么值得重视”，答案是框架式表述（潜在系统隐患/改进机会），判断价值弱；改为“最恰当的做法”行动题（通过安全/质量系统上报并建议统一存放 vs 提醒班组/自己贴标签/私下提一句）。"
+  },
+  {
+   "id": "ppf-104",
+   "verdict": "fix",
+   "why": "正确项长度是干扰项 2.2 倍；重写选项；A 项错因补“项目需要所有疑似卒中、包括最后不是卒中的病例”；population 改 unclassified。"
+  },
+  {
+   "id": "ppf-105",
+   "verdict": "fix",
+   "why": "正确项长度约为干扰项 3 倍；重写选项；来源改 Nancy Ch 50（指挥权移交须有序、尽量面对面、按 SOP 进行）；population 改 unclassified。"
+  }
+ ],
+ "fixed": [
+  {
+   "id": "ppf-001",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A1.4",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "professionalism",
+   "difficulty": "intermediate",
+   "questionEn": "After a dramatic rescue call, you notice your partner has posted a photo on Instagram showing the crash scene, including the patient's distinctive tattooed arm visible on the stretcher. The caption reads \"Another wild night.\" What is the best action?",
+   "questionZh": "一次惊险的救援任务结束后，你发现搭档在 Instagram 上发了一张事故现场照片，担架上患者带有独特纹身的手臂清晰可见，配文是\"又是疯狂的一夜\"。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Say nothing for now, because the patient's face is not shown and the account is set to private",
+     "zh": "先不说什么——照片没露脸，账号也设成了仅好友可见的私密模式"
+    },
+    {
+     "key": "B",
+     "en": "Ask your partner to delete the post now, since the tattoo identifies the patient, and report the breach",
+     "zh": "请搭档立刻删帖（纹身足以认出患者），并按机构规定上报这次隐私泄露"
+    },
+    {
+     "key": "C",
+     "en": "Comment on the post asking your partner to blur the tattoo, so the photo can stay up safely",
+     "zh": "在帖子下留言，请搭档把纹身打码，这样照片就可以安全地保留"
+    },
+    {
+     "key": "D",
+     "en": "Wait until the shift ends and raise it casually over coffee, so you avoid tension while still on the truck",
+     "zh": "等下班后喝咖啡时再随口提一句，免得当班的时候在车上和搭档闹得不愉快"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "A distinctive tattoo can identify a patient without a face, so this is a confidentiality breach whatever the privacy setting. The professional response is immediate: get the post removed and report the breach through your service's process, because the breach has already happened even if the post comes down. A is wrong because a private account still shows the image to followers, some of whom may know the patient. C is wrong because a public comment draws more attention to the post and leaves the image online. D is wrong because every hour of delay keeps identifiable patient information circulating.",
+   "explanationZh": "独特的纹身即使不露脸也能让人认出患者，所以无论账号是否私密，这都已经违反了保密义务。专业的做法是立即处理：让帖子删除，并按机构流程上报——即使帖子删了，泄露也已经发生。A 错：私密账号照样把照片展示给关注者，其中可能就有认识患者的人。C 错：公开留言只会让更多人注意到这条帖子，照片也仍挂在网上。D 错：每拖一个小时，可识别的患者信息就多传播一个小时。",
+   "sourceRef": "CPCF A1.4",
+   "verified": true
+  },
+  {
+   "id": "ppf-002",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A1.2",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "ethics",
+   "difficulty": "foundation",
+   "questionEn": "After you help an elderly man up from a fall with no injuries, he presses a $50 bill into your hand and says, “Buy yourselves coffee, you deserve it.” What should you do?",
+   "questionZh": "你帮一位跌倒但没有受伤的老人站起来后，他往你手里塞了一张 50 加元的钞票，说：“拿去买杯咖啡吧，你们应得的。”你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Accept it so he is not embarrassed, then quietly donate the money to a charity after the shift",
+     "zh": "先收下免得他难堪，下班后再悄悄把钱捐给慈善机构"
+    },
+    {
+     "key": "B",
+     "en": "Accept it only if your partner witnesses the exchange and you record the gift in your report",
+     "zh": "只要搭档在场见证、并在报告里记下这笔赠予，就可以收下"
+    },
+    {
+     "key": "C",
+     "en": "Refuse firmly and document the offer as an attempted bribe, so there is a record if asked later",
+     "zh": "严词拒绝，并把这次赠予记录为企图行贿，以备日后有人追问时有据可查"
+    },
+    {
+     "key": "D",
+     "en": "Thank him warmly but decline, explain crews cannot accept money, and say he can thank the service",
+     "zh": "真诚道谢但婉拒，说明救护人员不能收钱，并告诉他可以向机构表达感谢"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Taking money from patients compromises professional integrity and can exploit the gratitude of vulnerable people, so it must be declined — kindly, so the relationship is preserved. Pointing him to the service's feedback route respects his wish to say thanks. A is wrong because donating it later does not change the fact that you accepted cash from a patient while on duty. B is wrong because a witness and a note only document the problem; they do not make accepting money acceptable. C is wrong because a grateful man's thank-you is not a bribe, and treating it as one is disproportionate and humiliating.",
+   "explanationZh": "收取患者的钱有损职业操守，也可能利用了弱势人群的感激之情，所以必须拒绝——但要客气，不伤害彼此的关系。告诉他可以向机构反馈表扬，也照顾到了他想表达感谢的心意。A 错：事后捐掉并不能改变你当班时收了患者现金这一事实。B 错：有人见证、写进记录，只是把问题记录下来，并不会让收钱变得合理。C 错：一位老人出于感激的心意不是行贿，当成行贿处理既反应过度，也让对方难堪。",
+   "sourceRef": "CPCF A1.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-003",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A1.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "ethics",
+   "difficulty": "intermediate",
+   "questionEn": "Your brother-in-law owns a private non-emergency transfer company. On a call, a stable patient who does not need an ambulance asks how she can get to a specialist appointment across town tomorrow. What is the most appropriate response?",
+   "questionZh": "你的姐夫开了一家私营非紧急转运公司。一次出勤中，一位病情稳定、不需要救护车的患者问你，她明天怎样才能去城另一头看专科门诊。最恰当的回应是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Recommend your brother-in-law's company, but tell her openly about the family connection first",
+     "zh": "推荐姐夫的公司，但先坦白告诉她你们之间的亲属关系"
+    },
+    {
+     "key": "B",
+     "en": "Give her neutral information on the available options and let her choose, promoting no company",
+     "zh": "中立地介绍各种出行方式，让她自己选，不推销任何公司"
+    },
+    {
+     "key": "C",
+     "en": "Recommend his company without mentioning the connection, since you know its service is good",
+     "zh": "推荐他的公司但不提亲属关系，反正你知道这家公司服务确实好"
+    },
+    {
+     "key": "D",
+     "en": "Decline to discuss transport at all, since any advice from you could look like a conflict",
+     "zh": "完全不谈出行问题，因为你给出的任何建议都可能被看成利益冲突"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "A conflict of interest exists when a personal or financial interest could influence the advice you give a patient. Giving neutral information meets her need while keeping your family's business out of your professional advice. A is wrong because disclosure alone does not remove the conflict: a patient who relies on you may feel pressured to accept, and steering business to your family from a patient encounter is still inappropriate. C is wrong because hiding the relationship makes the conflict deceptive, however good the company is. D is wrong because refusing to help at all abandons a reasonable patient need; managing a conflict means removing your interest from the advice, not withholding help.",
+   "explanationZh": "当个人或经济利益可能影响你给患者的建议时，就存在利益冲突。中立地介绍各种选择，既满足了患者的需要，又把自家生意排除在专业建议之外。A 错：坦白关系并不能消除冲突——依赖你的患者可能不好意思拒绝，而借出勤机会为亲属招揽生意本身就不恰当。C 错：隐瞒关系会让利益冲突变成欺瞒，公司再好也一样。D 错：干脆什么都不说等于对患者的合理需要置之不理；处理利益冲突是把个人利益从建议中剔除，而不是拒绝提供帮助。",
+   "sourceRef": "CPCF A1.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-004",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A1.1",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "confidentiality",
+   "difficulty": "foundation",
+   "questionEn": "At the grocery store, your neighbour says: \"I saw your ambulance at the Chen house last night — is old Mr. Chen okay? We're all worried.\" What is the appropriate response?",
+   "questionZh": "在超市里，邻居对你说：\"昨晚我看到你们的救护车停在陈家门口——陈老先生还好吗？我们都很担心。\"恰当的回应是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give only general reassurance, such as “he's in good hands,” since the neighbour is worried",
+     "zh": "既然邻居是真心担心，就只给一句笼统的安慰，比如“他已经得到妥善照顾了”"
+    },
+    {
+     "key": "B",
+     "en": "Confirm that your crew attended the call, but decline to share any of his medical details",
+     "zh": "确认你们出了那趟任务，但不透露他的任何病情细节"
+    },
+    {
+     "key": "C",
+     "en": "Explain kindly that you can't confirm or discuss any call, and suggest they ask the family",
+     "zh": "友善地解释你不能确认或讨论任何出勤情况，建议他们直接问候陈家家人"
+    },
+    {
+     "key": "D",
+     "en": "Suggest the neighbour phone the hospital for an update, since staff there can tell him more",
+     "zh": "建议邻居打电话到医院问问最新情况，那边的工作人员能告诉他更多"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Confidentiality covers not only clinical details but the very fact that a call happened and who it involved; information goes only to people with a need to know. Redirecting the neighbour to the family respects their concern without disclosing anything. A is wrong because “he's in good hands” confirms there was a call and that Mr. Chen is a patient. B is wrong because confirming that you attended is itself a disclosure of protected information. D is wrong because pointing the neighbour to the hospital implies Mr. Chen was taken there, which is also a disclosure.",
+   "explanationZh": "保密义务不仅涵盖病情细节，也包括“是否出过这趟任务、涉及谁”这一事实本身；信息只能告诉确有必要知道的人。把邻居引向陈家家人，既尊重了他们的关心，又没有透露任何信息。A 错：“他已经得到妥善照顾了”等于确认出过任务、陈先生是患者。B 错：确认出勤本身就是在透露受保护的信息。D 错：让邻居去问医院，暗示了陈先生被送到了医院，这同样是一种泄露。",
+   "sourceRef": "Nancy Ch 4",
+   "verified": true
+  },
+  {
+   "id": "ppf-006",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A2.2",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "professionalism",
+   "difficulty": "advanced",
+   "questionEn": "During a vehicle check you see your partner — a close friend going through a difficult divorce — slip a vial of medication from the drug kit into their pocket. When you ask, they say \"It's nothing, don't worry about it\" and change the subject. What must you do?",
+   "questionZh": "车辆检查时，你看到搭档——一位正在经历艰难离婚的好友——把药品箱里的一支药悄悄放进了口袋。你问起时，对方说\"没什么，别管了\"就岔开了话题。你必须怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Report what you observed to a supervisor promptly, even though your partner is a close friend",
+     "zh": "尽快向主管报告你所看到的情况，即使搭档是你的好友"
+    },
+    {
+     "key": "B",
+     "en": "Watch them closely for the rest of the block and report only if it happens again",
+     "zh": "在接下来的班次里密切观察，只有再次发生才上报"
+    },
+    {
+     "key": "C",
+     "en": "Insist they return the vial, and consider the matter closed if they do",
+     "zh": "坚持让对方把药放回去，只要照做就当此事了结"
+    },
+    {
+     "key": "D",
+     "en": "Leave an anonymous note in their locker urging them to self-report and get help before it happens again",
+     "zh": "在对方储物柜里留一张匿名纸条，劝其在再次发生之前自行上报并寻求帮助"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Medication diversion endangers patients, the public, and the colleague themselves, and paramedics have an explicit duty to report unprofessional or unethical behaviour when observed. Friendship and sympathy for their circumstances do not change the obligation. Monitoring, private resolution, or anonymous notes all leave a potentially impaired provider caring for patients and an unexplained gap in controlled medications — reporting also opens the door to getting your friend real help.",
+   "explanationZh": "私自挪用药品会危及患者、公众以及这位同事本人，而救护人员有明确义务在目睹不专业或不道德行为时上报。友情和对其处境的同情不能改变这一义务。观察、私下解决或匿名纸条都会让一个可能状态受损的救护人员继续照护患者，也让受管制药品的缺口无从解释——上报同时也是让你的朋友获得真正帮助的开始。",
+   "sourceRef": "Nancy Ch 5",
+   "verified": true
+  },
+  {
+   "id": "ppf-007",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A2.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "professionalism",
+   "difficulty": "intermediate",
+   "questionEn": "A quality review flags a call from last month where you did not apply spinal motion restriction to a patient who met the criteria. Your supervisor asks you to discuss the call. What is the professional response?",
+   "questionZh": "质量审查指出你上个月的一趟任务中，未给一名符合指征的患者实施脊柱活动限制。主管请你来谈谈这趟任务。专业的回应是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Explain that the emergency department raised no concerns at the time, so the decision was sound",
+     "zh": "解释急诊科当时没有提出任何异议，说明这个决定在临床上是没有问题的"
+    },
+    {
+     "key": "B",
+     "en": "Say you cannot recall the call well enough to comment, and suggest the review be closed",
+     "zh": "表示对那趟任务已经记不清，无法评论，建议就此结束审查"
+    },
+    {
+     "key": "C",
+     "en": "Point out that the patient walked into the ED and was discharged, which shows no harm was done",
+     "zh": "指出患者是自己走进急诊并已出院的，说明并未造成伤害"
+    },
+    {
+     "key": "D",
+     "en": "Own the decision, walk through your assessment and reasoning honestly, and help identify fixes",
+     "zh": "承认决定是你做的，如实复盘当时的评估与判断，并配合找出需要改进之处"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Accountability means owning every decision made in practice — including one under review — and engaging honestly so the review can do its job. A is wrong because the ED's silence is not validation; they may not have known the mechanism, and the prehospital decision remains yours. B is wrong because claiming poor memory avoids the review, and your patient care record exists precisely so the call can be reconstructed. C is wrong because a good outcome does not make a departure from the standard of care correct; a lucky result is not a justification.",
+   "explanationZh": "问责意味着为执业中的每个决定负责——包括正在被审查的决定——并如实配合，让审查发挥作用。A 错：急诊没提异议不等于认可，他们可能并不了解受伤机制，而院前决定的责任仍在你身上。B 错：推说记不清是在回避审查，患者照护记录的意义正是让这趟任务可以被还原。C 错：结果好不能证明偏离照护标准的决定是对的，侥幸不是理由。",
+   "sourceRef": "CPCF A2.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-008",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A3.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "professionalism",
+   "difficulty": "intermediate",
+   "questionEn": "During an interfacility transfer, the sending nurse hands you a syringe of the patient's IV antibiotic and says, “Just push this halfway through the trip so the schedule isn't delayed — it's already drawn up.” Your PCP licence and protocols do not authorize you to give IV antibiotics. What should you do?",
+   "questionZh": "一次院间转运中，转出方护士递给你一支已抽好的患者静脉抗生素，说：“路上过半时帮忙推一下，别耽误给药时间——都抽好了。”你的 PCP 执照和规程并不授权你给静脉抗生素。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give it as asked, since it is the patient's own prescribed drug and a nurse has directed it",
+     "zh": "照做——这是患者自己的处方药，而且是护士交代你给的"
+    },
+    {
+     "key": "B",
+     "en": "Decline, explain your licence does not authorize it, and agree on another plan, such as dosing first",
+     "zh": "拒绝并说明执照不授权此操作，同时商量替代方案，如出发前先给药"
+    },
+    {
+     "key": "C",
+     "en": "Give it, but document clearly that the nurse instructed you, so responsibility rests with her",
+     "zh": "照做给药，但清楚记录这是护士的指示，让责任由她承担"
+    },
+    {
+     "key": "D",
+     "en": "Take the syringe along unopened and hand it to the receiving staff, so they can give the dose on arrival",
+     "zh": "把注射器原封不动带上，到达后交给接收机构的工作人员，由他们按时给药"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "You must work within the practice your licence authorizes no matter who asks; a nurse's instruction cannot extend it. Solving the problem with the sending team — giving the dose before departure, arranging a nurse escort, or adjusting the timing with the ordering physician — keeps the therapy on track without crossing that line. A is wrong because neither the patient's prescription nor the nurse's request authorizes you. C is wrong because documenting who asked does not transfer your accountability for an unauthorized act. D is wrong because carrying a syringe someone else drew up for a third person to give later is a medication-safety risk, and it leaves the timing problem unsolved.",
+   "explanationZh": "无论是谁提出要求，你都只能在执照授权的范围内执业；护士的指示无法扩大这个范围。和转出方一起解决问题——出发前先给药、安排护士随车，或请开医嘱的医生调整给药时间——既能保证治疗不中断，也不越界。A 错：患者的处方和护士的要求都不能替代对你的授权。C 错：记录是谁让你做的，并不能转移你实施未授权操作的责任。D 错：带着别人抽好的药交给第三方稍后再给，本身就存在用药安全风险，而且给药时机的问题依然没有解决。",
+   "sourceRef": "CPCF A3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-009",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A3.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "consent",
+   "difficulty": "intermediate",
+   "questionEn": "You explain to an alert, capable 45-year-old man why he needs IV access, and he holds out his arm. As you prepare the site, he says, “Actually, I don't want that.” What should you do?",
+   "questionZh": "你向一名神志清楚、具备决定能力的 45 岁男性解释了为什么要建立静脉通路，他随即伸出了手臂。你正在准备穿刺部位时，他说：“算了，我不想打了。”你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Continue, because holding out his arm gave valid consent that covers a procedure once begun",
+     "zh": "继续操作——他伸出手臂就已给出有效同意，操作一旦开始就都涵盖在内"
+    },
+    {
+     "key": "B",
+     "en": "Stop, ask about his concern, explain the risks of going without IV access, and respect his choice",
+     "zh": "停下来，了解他的顾虑，说明不建立静脉通路的风险，并尊重他的决定"
+    },
+    {
+     "key": "C",
+     "en": "Continue while reassuring him, since a brief change of mind from needle anxiety is not a refusal",
+     "zh": "一边安抚一边继续，因为怕针引起的一时反悔并不算真正拒绝"
+    },
+    {
+     "key": "D",
+     "en": "Stop only once he has signed a refusal form, because a verbal withdrawal is not valid on its own",
+     "zh": "等他签了拒绝单再停手，因为口头撤回同意本身不具效力"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Valid consent must be voluntary, informed, specific, and given by a capable person — and a capable patient may withdraw it or refuse any part of care at any time. Stopping, exploring his concern, and explaining the risks makes his decision an informed one. A is wrong because consent given by conduct is still revocable; it is not a contract that locks him in. C is wrong because continuing after a capable patient says no is treatment without consent, which can amount to assault or battery whatever the reason for his change of mind. D is wrong because a refusal takes effect when he says it; you stop at once and document, and a signature never replaces the informed discussion.",
+   "explanationZh": "有效的同意必须是自愿的、知情的、针对具体操作的，并由有决定能力的人作出——而有决定能力的患者可以随时撤回同意，或拒绝部分处置。停下来、了解他的顾虑并说明风险，才能让他的决定成为知情的决定。A 错：用行动表示的同意同样可以撤回，它不是一份把患者锁死的合同。C 错：有决定能力的患者已经说“不”还继续操作，就是未经同意的治疗，不管他为什么改变主意，都可能构成攻击或殴打（assault and battery）。D 错：拒绝在他说出口时就已生效，你应立即停手并记录；签字永远不能取代知情沟通本身。",
+   "sourceRef": "Nancy Ch 4",
+   "verified": true
+  },
+  {
+   "id": "ppf-010",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A3.4",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "professionalism",
+   "difficulty": "intermediate",
+   "questionEn": "A patient you transported twice last month finds your personal social media account, sends a friendly message thanking you, and asks if you would like to meet for coffee. What is the appropriate response?",
+   "questionZh": "一位上个月你转运过两次的患者找到了你的个人社交媒体账号，发来友好的感谢消息，并问你愿不愿意出来喝杯咖啡。恰当的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Meet once for coffee as a kindness, keeping the conversation general and well away from her medical care",
+     "zh": "出于善意和她见一次面喝杯咖啡，只聊泛泛的话题，绝不谈她的病情"
+    },
+    {
+     "key": "B",
+     "en": "Reply politely and keep chatting online now and then, as long as you never meet in person",
+     "zh": "礼貌回复，偶尔在网上聊聊，只要不见面就行"
+    },
+    {
+     "key": "C",
+     "en": "Block the account without replying and tell no one, so the contact simply ends there",
+     "zh": "不回复直接拉黑，也不告诉任何人，让联系就此结束"
+    },
+    {
+     "key": "D",
+     "en": "Decline politely, avoid personal contact with the patient, and tell your supervisor if it continues",
+     "zh": "礼貌婉拒，避免与患者私下往来，如对方持续联系就告知主管"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Professional boundaries continue after the call: the power imbalance in a care relationship makes a personal relationship with a patient inappropriate, especially one you may treat again. A courteous decline sets the boundary clearly, and telling a supervisor about persistent contact protects both of you. A is wrong because even one social meeting turns a care relationship into a personal one. B is wrong because ongoing online chat is a personal relationship too, just in a different place. C is wrong because silent blocking leaves the patient confused about where the line is and leaves no record if the contact escalates.",
+   "explanationZh": "职业边界在任务结束后依然存在：照护关系中的权力不对等，使得与患者——尤其是你以后可能还会出诊的患者——建立私人关系并不恰当。礼貌的婉拒能把界限讲清楚，对方持续联系时告知主管则能同时保护你和患者。A 错：哪怕只见一次面，也会把照护关系变成私人关系。B 错：持续网聊同样是私人关系，只是换了个场合。C 错：一声不吭直接拉黑，患者不知道界限在哪里，一旦事态升级也没有任何记录。",
+   "sourceRef": "CPCF A3.4",
+   "verified": true
+  },
+  {
+   "id": "ppf-011",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A3.3",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "consent",
+   "difficulty": "advanced",
+   "questionEn": "A 16-year-old with well-controlled asthma had a mild attack at school that fully resolved with her own inhaler before your arrival. Her vitals and exam are normal. She calmly explains her condition, her medications, and why she prefers to see her own doctor rather than go to hospital. Her parents cannot be reached, and the school insists you must transport because \"she's a minor.\" What is the best course of action?",
+   "questionZh": "一名哮喘控制良好的 16 岁学生在学校发作了一次轻度哮喘，在你们到达前已用自己的吸入器完全缓解。她的生命体征和查体均正常。她冷静地说明了自己的病情、用药情况，以及为什么更愿意去看自己的家庭医生而不是去医院。家长联系不上，校方坚持\"她是未成年人\"，必须转运。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Transport her anyway, because in BC no one under 19 may refuse care unless a parent agrees",
+     "zh": "无论如何都转运——在 BC 省，未满 19 岁的人除非家长同意，否则不能拒绝治疗"
+    },
+    {
+     "key": "B",
+     "en": "Assess her capacity; if she understands her condition and the risks of refusing, accept her informed refusal",
+     "zh": "评估她的决定能力；如果她理解自己的病情和拒绝的风险，就接受她的知情拒绝"
+    },
+    {
+     "key": "C",
+     "en": "Ask the school principal to sign the refusal on the parents' behalf, since the school is responsible for her today",
+     "zh": "请校长代表家长在拒绝单上签字，因为此刻学校对她负有责任"
+    },
+    {
+     "key": "D",
+     "en": "Stay on scene with her until a parent can be reached, however long that takes, before deciding",
+     "zh": "不管等多久都留在现场陪她，联系上家长之前不做任何决定"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Under the mature minor rule, a minor who fully appreciates the nature and consequences of a treatment decision may consent to it or refuse it; capacity, not a fixed age, is the test. For a resolved, familiar, low-risk episode with normal findings, a capable 16-year-old can decline transport — document her capacity, complete the informed refusal with clear return advice, and keep trying to reach her parents. A is wrong because there is no blanket age rule: BC's age of majority is 19, but a capable minor can still make this decision. C is wrong because a principal has no legal authority to consent or refuse on a student's behalf. D is wrong because holding the scene indefinitely neither respects her decision nor adds to her safety, and it ties up an ambulance.",
+   "explanationZh": "根据 mature minor（成熟未成年人）规则，充分理解治疗决定的性质和后果的未成年人可以同意或拒绝该治疗；判断标准是决定能力，而不是固定年龄。对于一次已缓解、她本人熟悉、低风险且查体正常的发作，具备决定能力的 16 岁患者可以拒绝转运——记录她的决定能力，完成知情拒绝流程并给出明确的再次呼叫建议，同时继续设法联系家长。A 错：并不存在一刀切的年龄规则——BC 省成年年龄是 19 岁，但有决定能力的未成年人仍然可以作出这个决定。C 错：校长没有替学生同意或拒绝治疗的法定权力。D 错：无限期滞留现场既不尊重她的决定，也不会让她更安全，还白白占用一辆救护车。",
+   "sourceRef": "Nancy Ch 4",
+   "verified": true
+  },
+  {
+   "id": "ppf-012",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A2.1",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "ethics",
+   "difficulty": "advanced",
+   "questionEn": "At the end of a brutal night shift, your partner hands you the equipment checklist and says: \"Just sign off the airway kit — I checked it yesterday, it's fine. Let's get out of here.\" You have not checked it yourself. What should you do?",
+   "questionZh": "一个极度疲惫的夜班结束时，搭档把装备核查单递给你说：\"气道包直接签了吧——我昨天查过，没问题。赶紧走人。\"你自己并没有检查过。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Sign it — routine checks rarely find problems, and your partner is very reliable",
+     "zh": "签了——例行检查很少发现问题，而且搭档一向很靠谱"
+    },
+    {
+     "key": "B",
+     "en": "Sign it now and plan to do the actual check yourself at the first standby point",
+     "zh": "先签字，打算到第一个待命点再亲自补做检查"
+    },
+    {
+     "key": "C",
+     "en": "Decline to sign for a check you did not perform, and do the check now even though you are both tired",
+     "zh": "拒绝为自己没有做过的检查签字，即使两人都很疲惫也现在就把检查做完"
+    },
+    {
+     "key": "D",
+     "en": "Sign it, but write “as per partner” beside your signature so the record shows who actually did the check",
+     "zh": "签字，但在签名旁注明“依据搭档所述”，表明实际是谁检查的"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Your signature is a professional attestation that you verified the equipment yourself — signing for a check you did not do is a false declaration, whatever qualifiers you add. The airway kit is life-critical: the next crew and the next patient rely on that attestation being true. A is wrong because your partner's reliability does not make your signature true. B is wrong because the record is false the moment you sign, and the promised check may never happen if a call comes in first. D is wrong because adding “as per partner” still certifies a check under your name that you did not perform.",
+   "explanationZh": "你的签名是一项职业声明，表明你亲自核实过装备——为没做过的检查签字就是虚假声明，加什么备注都改变不了。气道包关乎生命，下一组人员和下一位患者都依赖这份声明是真的。A 错：搭档再靠谱，也不能让你的签名变成真的。B 错：签字的那一刻记录就已经是假的，而且一来任务，说好的检查可能根本做不成。D 错：注明“依据搭档所述”，仍然是以你的名义证明了一项你没做过的检查。",
+   "sourceRef": "CPCF A2.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-015",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "intermediate",
+   "questionEn": "You arrive at a chest pain call. The patient's adult son meets you at the door, yelling that you took too long and blocking the hallway: \"Twenty minutes! She could be dead!\" What is the best initial response?",
+   "questionZh": "你到达一个胸痛呼救现场。患者的成年儿子在门口拦住走廊对你吼叫：\"二十分钟！她可能已经死了！\"最佳的初步应对是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Tell him firmly that unless he moves aside now, you will call the police before going in",
+     "zh": "严正告诉他，如果现在不让开，你们就先叫警察再进去"
+    },
+    {
+     "key": "B",
+     "en": "Ignore the shouting, step around him, and go straight to the patient without engaging him",
+     "zh": "不理会吼叫，绕过他直接走向患者，完全不和他交涉"
+    },
+    {
+     "key": "C",
+     "en": "Stay calm, acknowledge his fear in a sentence, and ask him to take you to his mother right away",
+     "zh": "保持冷静，用一句话承接他的担心，然后请他马上带你去见他母亲"
+    },
+    {
+     "key": "D",
+     "en": "Have your partner walk him outside to calm down first, then go in and assess the patient",
+     "zh": "先让搭档把他带到屋外冷静一下，然后再进去评估患者"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Briefly acknowledging his fear and immediately giving him a job — leading you to his mother — is the fastest, safest de-escalation: you do not argue about response times, you do not get angry yourself, and he becomes an ally instead of an obstacle. A is wrong because threatening police as an opening move usually escalates someone who is already angry; police are for when calming fails or the scene becomes unsafe. B is wrong because pushing past an agitated person invites a physical confrontation and leaves him behind you, uncontrolled. D is wrong because removing him before trying to talk him down is premature, takes your partner away from the patient, and loses a family member who can give history.",
+   "explanationZh": "用一句话承接他的恐惧，再马上交给他一件事做——带你去见他母亲——这是最快也最安全的降级方式：不就响应时间争论，自己也不动气，还把他从障碍变成帮手。A 错：一开口就拿警察威胁，往往会激怒本已愤怒的人；叫警察应留到劝不住或现场不安全的时候。B 错：硬从情绪激动的人身边挤过去，容易引发肢体冲突，还把一个失控的人留在了身后。D 错：还没尝试言语安抚就把他带走为时过早，既让搭档离开了患者，也失去了一位能提供病史的家属。",
+   "sourceRef": "Nancy Ch 15",
+   "verified": true
+  },
+  {
+   "id": "ppf-016",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.4",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "foundation",
+   "questionEn": "A middle-aged man tells you \"I'm fine, really\" — but he is pale, sitting very still, guarding his abdomen with one arm, and avoiding eye contact. What should you do?",
+   "questionZh": "一名中年男子告诉你\"我真的没事\"——但他脸色苍白、坐着一动不动、一只手护着腹部、回避目光接触。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Gently name the mismatch — “You say you're fine, but you look uncomfortable” — and ask open questions",
+     "zh": "温和地点出言行不一——“你说没事，但看上去挺难受的”——再用开放式问题了解"
+    },
+    {
+     "key": "B",
+     "en": "Accept his answer, since he is alert and capable, and document “patient denies pain” in your report",
+     "zh": "接受他的回答，毕竟他神志清楚、有决定能力，并在报告中清楚记录“患者否认疼痛”"
+    },
+    {
+     "key": "C",
+     "en": "Tell him directly that he is clearly not fine and needs to be transported to hospital immediately",
+     "zh": "直截了当地告诉他明显有问题，必须马上送医"
+    },
+    {
+     "key": "D",
+     "en": "Ask his wife privately to persuade him to admit how much pain he is really in before you go on",
+     "zh": "私下请他妻子劝他承认到底有多疼，然后你再继续"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Pallor, guarding, stillness, and avoided eye contact often say more than words; recognizing and responding to them is a core communication skill. Naming the mismatch respectfully invites him to open up while leaving him in control. B is wrong because being alert and capable does not make his denial an accurate history — documenting “denies pain” alone ignores what his body is showing you. C is wrong because confronting him and ordering transport before you have assessed him shuts the conversation down. D is wrong because working through his wife goes around him and undermines his trust in you.",
+   "explanationZh": "苍白、护腹、僵坐、回避目光，这些非语言表现传递的信息往往比言语更多；识别并回应它们是核心沟通能力。有礼貌地点出言行不一，既能邀请他敞开心扉，又让他保有主动权。B 错：神志清楚、有决定能力，并不代表他的否认就是准确的病史——只记一句“否认疼痛”等于无视他身体发出的信号。C 错：还没评估就正面对峙、命令他送医，会让对话直接中断。D 错：通过妻子施压是绕开患者本人，会破坏他对你的信任。",
+   "sourceRef": "CPCF B1.4",
+   "verified": true
+  },
+  {
+   "id": "ppf-017",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "foundation",
+   "questionEn": "A woman has collapsed in a busy mall food court. She is now conscious and embarrassed; a crowd has gathered and several people are filming on their phones. How should you manage the environment?",
+   "questionZh": "一名女性在繁忙的商场美食广场晕倒。她现在已恢复意识但很难为情；周围聚了一圈人，好几个人在用手机拍摄。你应该如何处理现场环境？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Complete your full assessment where she is lying, since moving her before assessing wastes time",
+     "zh": "就地完成全部评估，评估之前就搬动她只会浪费时间"
+    },
+    {
+     "key": "B",
+     "en": "Shield her, have security move the crowd back, expose only what you must, and finish in the ambulance",
+     "zh": "为她遮挡，请保安疏散人群，只暴露必需的部位，详细检查到救护车上再做"
+    },
+    {
+     "key": "C",
+     "en": "Move her to a private room straight away, before any assessment, so she is out of public view and calmer",
+     "zh": "在做任何评估之前，立刻把她转移到私密房间，让她避开众人目光、情绪平复下来"
+    },
+    {
+     "key": "D",
+     "en": "Ask the bystanders to stop filming and delete their videos before you begin assessing her",
+     "zh": "先要求围观者停止拍摄并删除视频，然后再开始评估她"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Protecting dignity and privacy runs alongside clinical care, not instead of it: shield her, control the crowd, expose only what the assessment needs, and do the detailed exam in the ambulance. A is wrong because a full exam in a public food court, in front of cameras, ignores her dignity when a better option is seconds away. C is wrong because she has just collapsed — moving her before even a primary assessment could miss instability. D is wrong because you cannot enforce deletion, and arguing with bystanders delays care; your bodies and security can block the view instead.",
+   "explanationZh": "保护尊严和隐私应与临床照护同步进行，而不是取而代之：为她遮挡、控制人群、只暴露评估所需的部位，详细检查到救护车上再做。A 错：明明几秒钟就能换个地方，却在美食广场当着镜头做全身检查，无视了她的尊严。C 错：她刚刚晕倒过，连初步评估都不做就搬动，可能漏掉病情不稳定的征象。D 错：你无权强制别人删视频，和围观者交涉只会拖延照护；用身体和保安挡住视线就够了。",
+   "sourceRef": "CPCF B1.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-018",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.6",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "communication",
+   "difficulty": "foundation",
+   "questionEn": "An 84-year-old woman with significant hearing loss is not understanding your questions. Her hearing aids are on the bedside table. Her daughter keeps answering for her. What is the best approach?",
+   "questionZh": "一位有明显听力损失的 84 岁老太太听不懂你的提问。她的助听器放在床头柜上。她女儿不停地替她回答。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Speak louder and more slowly, raising your voice step by step until she starts to respond",
+     "zh": "说得更大声、更慢，一点点提高音量，直到她有反应"
+    },
+    {
+     "key": "B",
+     "en": "Direct your questions to the daughter, who knows her well, to save time and spare her frustration",
+     "zh": "改问熟悉她情况的女儿，既能节省时间，也免得老人一遍遍听不清、心里着急"
+    },
+    {
+     "key": "C",
+     "en": "Skip the history and rely on your physical exam findings, since communication is not working",
+     "zh": "既然沟通不畅，就跳过问诊，只依靠体格检查发现"
+    },
+    {
+     "key": "D",
+     "en": "Help her put in her hearing aids, face her in good light, speak clearly, and write key words",
+     "zh": "帮她戴上助听器，在光线好处与她面对面清楚地说，必要时写下关键词"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Adapting to her needs means restoring her ability to take part: hearing aids in, face-to-face in good light so she can see your lips, clear speech at a moderate pace, and written key words if needed — with the daughter only filling gaps. A is wrong because shouting distorts sound and strips dignity; turning up the volume does not fix a communication barrier. B is wrong because talking past her to the daughter removes her from her own care when she can still answer for herself. C is wrong because abandoning the history throws away information that simple adjustments could have obtained; never assume you cannot talk with a patient until you have tried.",
+   "explanationZh": "适应她的需要，就是先恢复她参与的能力：戴上助听器，在光线充足处与她面对面（方便她看你的口型），语速适中、吐字清晰，必要时写下关键词——女儿只在需要时补充。A 错：喊叫会让声音失真，也有损尊严；提高音量解决不了沟通障碍。B 错：她自己还能回答，却绕过她去问女儿，等于把她排除在自己的照护之外。C 错：放弃问诊会丢掉本来稍作调整就能获得的信息；在真正尝试之前，永远不要认定无法和患者沟通。",
+   "sourceRef": "Nancy Ch 45",
+   "verified": true
+  },
+  {
+   "id": "ppf-019",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "advanced",
+   "questionEn": "En route to a familiar address, your senior partner sighs: \"It's just Doris again — monthly anxiety call, in and out in ten minutes.\" On arrival, Doris tells you her chest feels tight and \"different from my usual panic.\" What should you do?",
+   "questionZh": "前往一个熟悉的地址途中，资深搭档叹气说：\"又是 Doris——每月一次的焦虑发作，十分钟搞定。\"到达后，Doris 告诉你她胸口发紧，\"和我平时的惊恐发作不一样\"。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Reassure Doris that this is most likely her usual anxiety, and coach her breathing to settle it",
+     "zh": "安抚 Doris，说这多半还是她平时的焦虑，并引导她调整呼吸让症状平复"
+    },
+    {
+     "key": "B",
+     "en": "Set the label aside and fully assess today's complaint, treating “different” as a red flag",
+     "zh": "抛开标签，对今天的主诉做完整评估，把“这次不一样”当作危险信号"
+    },
+    {
+     "key": "C",
+     "en": "Let your partner lead the call, since he knows her history and usual presentation far better",
+     "zh": "让搭档主导这趟任务，因为他比你更了解她的病史和平时的表现"
+    },
+    {
+     "key": "D",
+     "en": "Do a focused assessment based on her known pattern, and reassess only if she fails to settle",
+     "zh": "按她既往的发作模式做针对性评估，只有症状不缓解时才重新评估"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Recognizing when a provider's bias may affect care — and correcting for it — is an explicit competency. Familiarity breeds anchoring, patients with anxiety still have heart attacks, and a patient saying “this feels different” is a classic warning sign. A is wrong because reassurance before assessment lets the label make the diagnosis. C is wrong because it hands the call to the very person whose bias is showing. D is wrong because building the assessment around her “known pattern” is the anchoring error itself; waiting to see whether she settles can delay recognition of a cardiac cause.",
+   "explanationZh": "识别照护者自身的偏见可能影响照护质量并加以纠正，本身就是一项明确的能力要求。熟悉会带来锚定偏差，有焦虑病史的人同样会心梗，而患者说“这次感觉不一样”正是经典的警示信号。A 错：评估之前先安抚，等于让标签替你下了诊断。C 错：这是把任务交给偏见正在显露的那个人。D 错：围绕她的“既往模式”来设计评估，本身就是锚定错误；等着看症状会不会缓解，可能延误对心源性病因的识别。",
+   "sourceRef": "CPCF B1.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-021",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B2.3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "communication",
+   "difficulty": "intermediate",
+   "questionEn": "An elderly man with mild confusion gives you a vague history. His daughter is present and says she manages his medications. How should you gather the history?",
+   "questionZh": "一位有轻度意识混乱的老先生只能给出模糊的病史。他的女儿在场，并表示平时由她管理父亲的用药。你应该如何采集病史？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Interview the daughter alone in another room, so the patient does not become agitated",
+     "zh": "到另一个房间单独询问女儿，免得患者情绪激动"
+    },
+    {
+     "key": "B",
+     "en": "Decline the daughter's input to protect his privacy, and rely on what he can tell you",
+     "zh": "为保护他的隐私拒绝女儿提供信息，只依靠他本人能说的内容"
+    },
+    {
+     "key": "C",
+     "en": "With his permission, involve his daughter while keeping him engaged, and check the pill bottles",
+     "zh": "征得他同意后请女儿参与，同时让他本人保持参与，并对照实际药瓶核实"
+    },
+    {
+     "key": "D",
+     "en": "Base the medication history on the bottles you find, since his account and his daughter's may conflict",
+     "zh": "只依据现场找到的药瓶确定用药史，因为他和女儿的说法可能互相矛盾、说不清"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "The competency is to seek and combine information from family and the circle of care — with the patient's consent — while keeping the patient at the centre. His account, his daughter's knowledge, and the actual bottles together give the most accurate picture. A is wrong because interviewing her separately sidelines him and denies him a say in what is shared about him. B is wrong because refusing input from the person who manages his medications throws away key information that he can consent to share. D is wrong because bottles show what was prescribed, not what he actually takes or what changed recently — that comes from people.",
+   "explanationZh": "这项能力要求在征得患者同意的前提下，向家属和照护圈收集并整合信息，同时始终让患者处于中心位置。把他本人的叙述、女儿掌握的情况和实际药瓶结合起来，才能得到最准确的全貌。A 错：单独问女儿等于把他撇在一边，他也无从决定别人怎样谈论他。B 错：拒绝听取管理他用药的人提供的信息，会丢掉关键内容，而这些信息只要他同意就可以分享。D 错：药瓶只能说明开了什么药，说明不了他实际怎么吃、最近有什么变化——这些要靠人来告诉你。",
+   "sourceRef": "CPCF B2.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-023",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B3.2",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "ethics",
+   "difficulty": "advanced",
+   "questionEn": "While moving an elderly patient through a narrow doorway, the stretcher tips and her forearm strikes the frame hard. A bruise is already forming. She and her son did not see exactly what happened. What must you do?",
+   "questionZh": "通过狭窄门口搬运一位老年患者时，担架发生倾斜，她的前臂重重撞上门框，淤青已经开始显现。她和她儿子都没看清刚才发生了什么。你必须怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Tell them factually what happened and apologize, care for the injury, document it, and report it",
+     "zh": "如实告诉患者和她儿子经过并道歉，处理伤情、记录并上报"
+    },
+    {
+     "key": "B",
+     "en": "Assess and dress the bruise, and chart “bruise noted on right forearm” without stating the cause",
+     "zh": "评估并处理淤青，记录“右前臂见淤青”，但不写原因"
+    },
+    {
+     "key": "C",
+     "en": "Report it quietly to the receiving nurse, but spare the patient and her son the distressing details",
+     "zh": "悄悄告知接收护士，但不让患者和她儿子知道这些令人不安的细节"
+    },
+    {
+     "key": "D",
+     "en": "File an incident report, but explain what happened only if the family asks how the bruise occurred",
+     "zh": "提交事件报告，但只有家属问起淤青怎么来的时候才说明经过"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Disclosing harmful patient safety incidents accurately and appropriately to patients and families is an explicit obligation; it does not depend on being asked or on whether anyone saw it, and mistakes in care must never be concealed. Honest disclosure with an apology, care of the injury, accurate documentation, and an incident report maintain trust and let the system learn. B is wrong because charting the bruise without its cause is concealment in an official record. C is wrong because telling staff while keeping the patient and family in the dark withholds information they are entitled to. D is wrong because disclosure is not conditional on a question, and an internal report does not replace telling the patient.",
+   "explanationZh": "向患者和家属准确、恰当地披露造成伤害的患者安全事件是一项明确的义务——不取决于对方有没有问、有没有人看见，照护中的失误也绝不能隐瞒。如实告知并道歉、处理伤情、准确记录并上报，才能维系信任、让系统吸取教训。B 错：只记淤青不写原因，是在正式记录里隐瞒。C 错：只告诉医护人员、却瞒着患者和家属，剥夺了他们有权知道的信息。D 错：披露不以对方提问为前提，内部上报也不能代替向患者本人说明。",
+   "sourceRef": "CPCF B3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-025",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B4.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "confidentiality",
+   "difficulty": "intermediate",
+   "questionEn": "The emergency department is overcrowded. The triage nurse asks for your report while you are standing in a hallway lined with other patients and visitors. Your patient has a psychiatric history relevant to the presentation. How should you give the report?",
+   "questionZh": "急诊科人满为患。分诊护士让你就在挤满其他患者和探视者的走廊里交班。你的患者有一段与本次发病相关的精神科病史。你应该如何交班？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give the full report, psychiatric history included, right where you are — handover cannot wait",
+     "zh": "就地完整交班，包括精神科病史——交接不能等"
+    },
+    {
+     "key": "B",
+     "en": "Hand over only the written report and skip the verbal one, so nothing is said aloud in the hallway",
+     "zh": "只递交书面报告、省略口头交班，这样走廊里就不会说出任何内容"
+    },
+    {
+     "key": "C",
+     "en": "Politely decline to hand over until a private room is free, so the report can be given properly",
+     "zh": "礼貌地表示要等有空的私密房间再交接，以便正规地交班"
+    },
+    {
+     "key": "D",
+     "en": "Step aside with the nurse, give the essentials quietly, and pass the sensitive history privately",
+     "zh": "和护士站到一旁，低声交代要点，敏感病史另找私密的方式传达"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Be careful where you talk about patients — even in hospital hallways, avoid conferring in front of bystanders. Respecting privacy does not mean withholding the information; it means controlling how and where you share it. A is wrong because announcing psychiatric history in a crowded hallway breaches confidentiality. B is wrong because skipping the verbal report removes the chance for questions and raises the risk that critical points are missed. C is wrong because refusing to hand over delays care for an indefinite time on an overcrowded night.",
+   "explanationZh": "谈论患者时要注意场合——即使在医院走廊，也不要当着旁人讨论。尊重隐私不是不传递信息，而是控制传递的方式和场合。A 错：在挤满人的走廊里说出精神科病史就是泄密。B 错：省略口头交班，接收方就没有机会提问，关键信息被遗漏的风险也会增加。C 错：在人满为患的夜里拒绝交接，会让照护无限期地拖延。",
+   "sourceRef": "Nancy Ch 4",
+   "verified": true
+  },
+  {
+   "id": "ppf-026",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B5.3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "consent",
+   "difficulty": "advanced",
+   "questionEn": "A 52-year-old man with 40 minutes of pressure-like chest pain is alert and oriented but refuses transport: \"I can't miss work, just give me the form to sign.\" What is the best response?",
+   "questionZh": "一名 52 岁男性出现压迫样胸痛已 40 分钟，神志清楚、定向力正常，但拒绝转运：\"我不能耽误上班，把拒绝单给我签了吧。\"最佳应对是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Have him sign the refusal form right away, since a capable adult has every right to refuse care",
+     "zh": "立刻让他签拒绝单——有决定能力的成年人完全有权拒绝治疗"
+    },
+    {
+     "key": "B",
+     "en": "Tell him bluntly that he could die tonight, and refuse to leave until he agrees to come with you",
+     "zh": "直截了当地告诉他今晚可能会死，在他同意跟你走之前拒绝离开"
+    },
+    {
+     "key": "C",
+     "en": "Explore why he's refusing, explain the risks plainly, and if he still refuses, complete an informed refusal",
+     "zh": "了解拒绝原因，用通俗的话讲清风险；仍拒绝就完成知情拒绝流程"
+    },
+    {
+     "key": "D",
+     "en": "Ask police to attend and hold him for a capacity assessment, since his choice is putting his life at serious risk",
+     "zh": "请警察到场把他控制住做决定能力评估，因为他的选择已经严重危及生命"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "A capable adult may refuse, but an informed refusal is a process, not a signature. Many patients with chest pain refuse out of fear or denial; finding out what is behind it, explaining that the ambulance cannot rule out a heart attack, offering a call with online medical oversight, and helping with practical barriers often changes the decision. If he still refuses, document capacity and the advice given, and make clear he can call back at any time. A is wrong because rushing to the form skips the “informed” part — a signature alone neither makes the refusal valid nor protects you. B is wrong because threats and refusing to leave are coercive and hostile. D is wrong because he is alert and oriented; there is no basis to detain a capable adult.",
+   "explanationZh": "有决定能力的成年人可以拒绝，但知情拒绝是一个过程，而不是一个签名。不少胸痛患者是出于害怕或否认而拒绝；了解背后的原因、说明救护车上无法排除心梗、提议让他和在线医疗指导通话、帮他解决实际顾虑，往往能改变他的决定。若他仍坚持拒绝，就记录他的决定能力和你给出的建议，并明确告诉他随时可以再打电话。A 错：急着递单子跳过了“知情”这一步——光有签名既不能让拒绝有效，也保护不了你。B 错：恐吓、赖着不走属于强迫，态度也带有敌意。D 错：他神志清楚、定向力正常，没有任何理由扣留一位有决定能力的成年人。",
+   "sourceRef": "Nancy Ch 4",
+   "verified": true
+  },
+  {
+   "id": "ppf-027",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B5.1",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "equity",
+   "difficulty": "intermediate",
+   "questionEn": "You are transporting a stable Indigenous Elder from a small community to hospital. Before departure, the family asks for a few minutes so a community Elder can offer a prayer and smudge. What should you do?",
+   "questionZh": "你正要把一位病情稳定的原住民长者从小社区转运去医院。出发前，家属请求给几分钟时间，让社区长老做祈祷和烟熏净化仪式（smudge）。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Decline politely, explaining that transport times are fixed and the hospital is expecting you",
+     "zh": "礼貌拒绝，说明转运时间早就定好了，接收医院那边正等着你们按时到达"
+    },
+    {
+     "key": "B",
+     "en": "Make time for the ceremony, ask how to support it respectfully, and keep monitoring discreetly",
+     "zh": "为仪式留出时间，询问怎样支持才算尊重，同时不打扰地继续监测患者"
+    },
+    {
+     "key": "C",
+     "en": "Allow it only if it can be finished within two minutes, so the transfer schedule is not upset",
+     "zh": "只要两分钟内能完成就允许，以免打乱转运安排"
+    },
+    {
+     "key": "D",
+     "en": "Agree, and wait outside the room with your partner until the family calls you back in",
+     "zh": "同意，然后和搭档到房间外等候，直到家属叫你们回去"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Culturally safe care means supporting practices that matter to the patient and family in a respectful, non-judgmental way; for a stable patient a short ceremony creates no clinical conflict. Asking how to help shows humility, and quiet monitoring keeps the patient safe (if oxygen is running, agree on a safe arrangement with the family first). A is wrong because a booked transfer time is not a clinical reason to refuse something this important to a stable patient's family. C is wrong because an arbitrary time limit turns respect into a grudging concession. D is wrong because leaving the patient unmonitored abandons your duty — you can stay present respectfully.",
+   "explanationZh": "文化安全的照护，意味着以尊重、不评判的方式支持对患者和家人重要的习俗；对病情稳定的患者来说，简短的仪式与临床需要并不冲突。主动询问如何配合体现了谦逊，不打扰地监测则保障了患者安全（如果正在吸氧，先和家属商定安全的安排）。A 错：预约的转运时间不是临床理由，不足以拒绝一个对稳定患者家庭如此重要的仪式。C 错：武断地限定时间，会把尊重变成勉强的让步。D 错：离开患者不加监测是放弃职责——你完全可以尊重地留在现场。",
+   "sourceRef": "CPCF B5.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-028",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.1",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "intermediate",
+   "questionEn": "A young woman is hyperventilating after a panic attack at her office. She keeps apologizing: \"I'm so sorry, I'm wasting your time, I'm so stupid.\" Coworkers are watching. What is the best approach?",
+   "questionZh": "一名年轻女性在办公室惊恐发作后过度换气。她不停道歉：\"真对不起，我在浪费你们的时间，我太蠢了。\"同事们都在旁观。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Get to her eye level, tell her she was right to call, and coach her breathing while you assess",
+     "zh": "蹲到与她视线平齐，告诉她呼救是对的，边评估边引导她调整呼吸"
+    },
+    {
+     "key": "B",
+     "en": "Reassure her that nothing is physically wrong and that it is just anxiety, so she can relax",
+     "zh": "安慰她身体没有任何问题，只是焦虑而已，让她放轻松"
+    },
+    {
+     "key": "C",
+     "en": "Ask coworkers what happened while you quietly apply the monitor, so she isn't pressed to talk",
+     "zh": "一边默默连接监护仪，一边向同事了解经过，免得这时候逼她开口说话"
+    },
+    {
+     "key": "D",
+     "en": "Keep conversation to a minimum and transport quickly, so the hospital can assess her properly",
+     "zh": "尽量少说话、快速转运，让医院去好好评估"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "A patient-centred approach builds trust through empathy and respect: telling her she was right to seek help counters the shame she is voicing, eye-level positioning reduces the power gap, and breath coaching combines care with assessment. B is wrong because calling it “just anxiety” before you have assessed her is premature — hyperventilation has other causes — and it belittles her. C is wrong because talking about her to coworkers while ignoring her deepens her embarrassment, and she is your best historian. D is wrong because minimal contact skips the assessment you are there to do and misses the reassurance that is itself part of treatment.",
+   "explanationZh": "以患者为中心的方式靠共情和尊重建立信任：告诉她寻求帮助是对的，正好化解她流露出的羞耻感；与她视线平齐能缩小权力落差；呼吸引导则把照护与评估结合在一起。B 错：还没评估就说“只是焦虑”太草率——过度换气还有别的原因——而且有贬低之意。C 错：不理她、却去向同事打听她的情况，会让她更难为情，而她本人才是最好的病史来源。D 错：尽量少接触等于跳过了你本该完成的评估，也错过了本身就有治疗作用的安抚。",
+   "sourceRef": "CPCF B1.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-029",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B2.2",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "communication",
+   "difficulty": "intermediate",
+   "questionEn": "At a call for an elderly man with weakness, five family members crowd the room, all speaking at once and contradicting each other about his medications and when symptoms started. What is the best way to manage the encounter?",
+   "questionZh": "一位老先生因乏力呼救，五名家属挤在房间里同时说话，对他的用药和症状开始时间各执一词。管理这次问诊的最佳方式是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Ask everyone except the patient to leave the room immediately, so you can hear him clearly",
+     "zh": "立即请患者以外的所有人离开房间，好让你听清他说话"
+    },
+    {
+     "key": "B",
+     "en": "Let everyone speak and write down every version, then sort out the history on the way in",
+     "zh": "让每个人都说，把各种版本都记下来，在去医院的路上再慢慢理清病史"
+    },
+    {
+     "key": "C",
+     "en": "Direct your questions to the loudest relative, who seems to be the best informed about him",
+     "zh": "向嗓门最大、看上去最了解他情况的家属提问"
+    },
+    {
+     "key": "D",
+     "en": "Take charge politely: say you'll ask him first, then have one family member fill in details",
+     "zh": "礼貌地掌控节奏：说明先问患者本人，再请一位家属补充细节"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Providing a clear structure for the encounter is the competency here: patient first, then one organized source of collateral. This keeps him at the centre, turns noise into usable information, and keeps the family on side. A is wrong because sending everyone out loses the medication and onset information the family holds. B is wrong because unstructured input wastes time, and contradictory versions cannot reliably be sorted out later. C is wrong because volume is not accuracy, and it bypasses the patient entirely.",
+   "explanationZh": "为整个问诊提供清晰的结构正是这项能力的体现：先问患者，再由一位家属有序补充。这样既让患者始终处于中心，又把嘈杂变成可用的信息，还能维持家属的配合。A 错：把所有人请出去，会丢掉家属掌握的用药和起病时间等信息。B 错：放任七嘴八舌既浪费时间，互相矛盾的说法事后也很难理清。C 错：嗓门大不代表说得准，而且完全绕开了患者本人。",
+   "sourceRef": "CPCF B2.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-030",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B4.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "documentation",
+   "difficulty": "intermediate",
+   "questionEn": "While reviewing your submitted electronic patient care record, you notice you selected the wrong medication from a dropdown menu — the record shows a drug you never gave. What is the appropriate action?",
+   "questionZh": "复查已提交的电子患者照护记录时，你发现自己在下拉菜单里选错了药——记录上显示的是一种你根本没给过的药。恰当的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Delete the record and create a fresh one without the error, so the chart is clean and accurate for the hospital",
+     "zh": "删除这份记录，重新建一份没有错误的，让交给医院的记录干净准确"
+    },
+    {
+     "key": "B",
+     "en": "Ask your supervisor to log in and correct the entry for you, since they have editing rights",
+     "zh": "请有编辑权限的主管登录系统替你更正"
+    },
+    {
+     "key": "C",
+     "en": "Amend it through the system so the change is tracked under your name, and tell the receiving facility",
+     "zh": "用系统的更正功能修改，让更改留痕在你名下，并通知接收机构"
+    },
+    {
+     "key": "D",
+     "en": "Leave it — dropdown errors are common, and the hospital will record what was actually given",
+     "zh": "不用管——下拉菜单选错很常见，医院会记录实际给了什么药"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "A patient care record is a legal document: a correction must show when and why it was made, the original must never be destroyed, and only the author may revise it. Because a drug that was never given now appears on the record, the team relying on it must be told. A is wrong because deleting and recreating the record destroys the original and the audit trail. B is wrong because changes made by someone other than the author raise questions about the record's authenticity. D is wrong because the hospital only knows what you gave from your record — a false entry could lead them to withhold or repeat a medication.",
+   "explanationZh": "患者照护记录是法律文件：更正必须注明时间和原因，原始记录绝不能销毁，而且只有记录的作者本人才能修改。由于记录上出现了一种根本没给过的药，必须告知正在依赖这份记录的团队。A 错：删掉重建会毁掉原始记录和审计痕迹。B 错：由作者以外的人修改，会让人质疑记录的真实性。D 错：医院只能从你的记录得知你给了什么药——一条错误的记录可能导致他们漏给或重复用药。",
+   "sourceRef": "Nancy Ch 19",
+   "verified": true
+  },
+  {
+   "id": "ppf-031",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B5.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "intermediate",
+   "questionEn": "A patient with a minor complaint does not need transport tonight, but tells you he never knows where to get health advice when his clinic is closed. Which response best helps him manage his own health?",
+   "questionZh": "一位轻症患者今晚不需要转运，但他告诉你，诊所关门后他从来不知道去哪里获取健康建议。哪种回应最能帮助他自我管理健康？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Show him how to reach the 24-hour nurse line (8-1-1 in BC) and pharmacists, and say when to call 911",
+     "zh": "教他用 24 小时护士热线（BC 是 8-1-1）和药剂师咨询，并讲清何时打 911"
+    },
+    {
+     "key": "B",
+     "en": "Suggest he look up his symptoms online when unsure, sticking to well-known health websites",
+     "zh": "建议他拿不准时上网查症状，只看知名的健康网站"
+    },
+    {
+     "key": "C",
+     "en": "Tell him advice lines are only for minor problems, so he should simply call 911 whenever he is worried",
+     "zh": "告诉他咨询热线只管小毛病，所以只要心里担心、拿不准，就直接打 911 叫救护车最稳妥"
+    },
+    {
+     "key": "D",
+     "en": "Leave a community resources pamphlet on the table for him to read later, without discussing it",
+     "zh": "把社区资源宣传单放在桌上让他以后看，不做讲解"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Helping patients identify, access, and use information and communication tools to manage their health is the competency here: concrete instructions on the nurse line and pharmacist advice, plus clear advice on when 911 is the right call, genuinely build his ability to cope after hours. B is wrong because a website cannot assess him or connect him with a clinician, and searching often misleads. C is wrong because sending every worry to 911 disempowers him and burdens the system; advice lines triage callers and direct them to emergency care when needed. D is wrong because an unexplained pamphlet is rarely read or acted on.",
+   "explanationZh": "帮助患者识别、获取并使用信息与通讯工具来管理健康，正是这项能力的要求：具体教他使用护士热线和药剂师咨询，并讲清什么情况下才该打 911，才能真正提升他在诊所下班后的自我管理能力。B 错：网站无法评估他的情况，也不能让他联系上医护人员，自己搜索还常常误导人。C 错：事事都打 911 会削弱他的自我管理能力，也加重系统负担；咨询热线会分诊，需要时会让他去急诊。D 错：不加讲解的宣传单很少有人会去看、更少有人照着做。",
+   "sourceRef": "CPCF B5.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-032",
+   "licence": "pcp",
+   "cpcfArea": "B",
+   "competency": "B1.5",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "communication",
+   "difficulty": "advanced",
+   "questionEn": "Resuscitation of a 58-year-old man at home has been unsuccessful and efforts have been terminated. His wife is waiting in the kitchen with a neighbour. You must tell her. What is the best approach?",
+   "questionZh": "对一名 58 岁男性的家中复苏未能成功，抢救已终止。他的妻子和一位邻居在厨房等候。你必须告知她。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Soften the news with gentle words, such as “He has passed on — he's in a better place now”",
+     "zh": "用委婉的说法缓冲，比如“他已经走了——去了更好的地方”"
+    },
+    {
+     "key": "B",
+     "en": "Sit with her, warn that the news is bad, say clearly that Robert has died, then stay with her",
+     "zh": "坐到她身边，先说是坏消息，再清楚告诉她 Robert 已经去世，然后陪着她"
+    },
+    {
+     "key": "C",
+     "en": "Ask her family doctor to phone her with the news, since he knows her and her history better",
+     "zh": "请她的家庭医生打电话告知，因为医生更了解她和她的情况"
+    },
+    {
+     "key": "D",
+     "en": "First walk her through every intervention in detail, so she knows everything was tried, then tell her the outcome",
+     "zh": "先详细讲解你们做过的每一项抢救措施，让她知道大家尽了全力，最后再告诉她结果"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Death notification needs plain words: avoid euphemisms such as “passed away,” because the family needs to hear the word “dead” or “died.” A brief warning, clear language, a pause for her reaction, and continued presence — including helping arrange support such as the neighbour — form the accepted approach. A is wrong because euphemisms create confusion and false hope at the worst possible moment. C is wrong because you are the one there now; handing the news to someone else leaves her waiting and alone. D is wrong because front-loading clinical detail delays the truth she is waiting for — details can follow if she wants them.",
+   "explanationZh": "告知死亡要用直白的语言：不要说“走了”“过世了”这类委婉语，家属需要听到“死亡”或“去世”这样明确的词。先简短预告是坏消息，再用清楚的语言告知，停下来给她反应的时间，并继续陪伴——包括帮她安排身边的支持，比如那位邻居——这是公认的做法。A 错：委婉语会在最糟糕的时刻制造困惑和虚假希望。C 错：此刻在她身边的是你，把告知推给别人只会让她独自干等。D 错：先大段讲解抢救细节，只会拖延她苦等的真相——细节可以等她想知道时再说。",
+   "sourceRef": "Nancy Ch 2",
+   "verified": true
+  },
+  {
+   "id": "ppf-034",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C4.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "handover",
+   "difficulty": "intermediate",
+   "questionEn": "You are handing over a chest pain patient. The receiving nurse keeps glancing at a monitor across the room, interrupts you twice, and starts walking away mid-report. What should you do?",
+   "questionZh": "你正在交接一名胸痛患者。接收护士不停瞟着房间另一头的监护仪，两次打断你，并在交班中途开始走开。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Hand her the written report and leave, since the patient has now become her responsibility",
+     "zh": "把书面报告交给她就走——患者现在已经归她负责了"
+    },
+    {
+     "key": "B",
+     "en": "Pause, ask politely for one minute of full attention, give the key points, and confirm she has them",
+     "zh": "停下来，礼貌地请她专注一分钟，交代关键要点，并确认她已经接收"
+    },
+    {
+     "key": "C",
+     "en": "Start the report again from the beginning, louder, so she cannot miss any of the details",
+     "zh": "提高音量从头再讲一遍，让她不可能漏掉任何细节"
+    },
+    {
+     "key": "D",
+     "en": "Find the charge nurse and complain about her conduct first, so it doesn't happen again, then finish the handover",
+     "zh": "先去找护士长投诉她的态度，然后再回来把交接正式做完，免得同样的事再发生"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "A handover is complete only when the receiver has actually taken in the critical information, and the sender shares responsibility for making that happen. Asking for focused attention, compressing to the essentials, and closing the loop with confirmation adapts the handover to a busy room. A is wrong because care is not safely transferred if the critical information never landed — the paper may not be read in time. C is wrong because repeating everything louder to someone who is not listening changes nothing and wastes time. D is wrong because complaining before the patient is handed over inverts the priorities; any concern can be raised afterward through proper channels.",
+   "explanationZh": "只有当接收方真正接收了关键信息，交接才算完成，而发送方对此负有共同责任。请对方专注片刻、压缩到最核心的要点、再通过确认形成闭环，就是针对繁忙环境调整交接方式。A 错：关键信息没有传达到位，照护就没有安全移交——书面报告未必能及时被看到。C 错：对一个没在听的人提高音量从头再讲，毫无作用，只会浪费时间。D 错：患者还没交接就先去投诉是本末倒置；有意见可以事后通过正规渠道反映。",
+   "sourceRef": "CPCF C4.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-035",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C4.1",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "collaboration",
+   "difficulty": "intermediate",
+   "questionEn": "In a rural BC area, you are transporting a COPD patient whose breathing is worsening despite your treatment. The hospital is 40 minutes away. Dispatch advises an ACP unit is available and could meet you along your route in about 15 minutes. What should you do?",
+   "questionZh": "在 BC 省的乡村地区，你正在转运一名 COPD 患者，尽管已给予处置，其呼吸仍在恶化。距医院还有 40 分钟车程。调度告知有一个 ACP（高级救护）单元可在约 15 分钟后与你们在转运路线上会合。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Request the intercept now, set a meeting point with dispatch, and keep transporting as you treat",
+     "zh": "立即请求中途会合，与调度约定会合点，同时边处置边继续转运"
+    },
+    {
+     "key": "B",
+     "en": "Continue alone to hospital, since transport is under way and arranging a meeting is a distraction",
+     "zh": "独自继续送往医院——反正已经在路上了，安排会合只会让你分心"
+    },
+    {
+     "key": "C",
+     "en": "Pull over and wait at the roadside for the ACP unit, so the patient gets advanced care sooner",
+     "zh": "靠边停车在路边等 ACP 单元，让患者更快得到高级处置"
+    },
+    {
+     "key": "D",
+     "en": "Ask dispatch to have the ACP crew meet you at the hospital, so no time is lost on the road",
+     "zh": "请调度安排 ACP 组员在医院与你们会合，路上不耽误时间"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Recognizing when care should move to a higher level — and acting early — is the competency: an en-route intercept brings advanced care to a deteriorating patient about 25 minutes sooner than the hospital would, without stopping progress toward definitive care. B is wrong because it gives up help that is available to a patient who is getting worse despite your treatment. C is wrong because waiting stationary throws away transport time when a moving rendezvous gives you both. D is wrong because meeting at the hospital defeats the purpose of an intercept — hospital care is waiting there anyway.",
+   "explanationZh": "判断何时应把照护交给更高级别的人员，并尽早行动，正是这项能力的要求：途中会合能让病情恶化的患者比到院提前约 25 分钟得到高级处置，同时不中断向确定性治疗的推进。B 错：患者在处置下仍在恶化，却放弃了现成的支援。C 错：原地等待白白浪费了转运时间，而在路上会合可以两者兼得。D 错：在医院会合就失去了中途会合的意义——医院本来就有高级处置。",
+   "sourceRef": "CPCF C4.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-036",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C2.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "collaboration",
+   "difficulty": "intermediate",
+   "questionEn": "You arrive at a cardiac arrest where two firefighter first responders are performing good-quality CPR with an AED attached. How should you integrate them as you take over the call?",
+   "questionZh": "你到达一个心搏骤停现场，两名消防急救先遣人员正在进行高质量 CPR，AED 已连接。接手任务时你应该如何整合他们？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Take over compressions yourself immediately, since you are now responsible for the arrest",
+     "zh": "既然骤停现在由你负责，就立即亲自接手胸外按压"
+    },
+    {
+     "key": "B",
+     "en": "Ask the firefighters to step back entirely so your own crew can run the resuscitation",
+     "zh": "请消防员完全退开，由你们组自己进行复苏"
+    },
+    {
+     "key": "C",
+     "en": "Keep the firefighters rotating on compressions while you two manage the AED, airway, and team",
+     "zh": "让消防员继续轮换按压，你和搭档负责 AED、气道和整个团队的协调"
+    },
+    {
+     "key": "D",
+     "en": "Have a firefighter run the AED while you and your partner take over and share compressions",
+     "zh": "让一名消防员负责操作 AED，你和搭档亲自接手，两人轮流做胸外按压"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Optimizing care through appropriate delegation means matching tasks to people: CPR-trained first responders are ideal for the physically demanding compression rotation, freeing the paramedics to manage the airway, the AED and rhythm checks, and the team as a whole. A is wrong because replacing an effective compressor for no clinical reason causes an avoidable interruption. B is wrong because sending away trained hands means your two-person crew will tire quickly and compressions will suffer. D is wrong because, although firefighters can operate an AED, putting both paramedics on compressions leaves no one leading the resuscitation or managing the airway.",
+   "explanationZh": "通过恰当委派来优化照护，意味着把任务和人匹配起来：受过 CPR 训练的先遣人员最适合承担体力消耗大的按压轮换，从而让救护员腾出手来管理气道、操作 AED 和判读心律，并统筹整个团队。A 错：没有临床理由就换掉有效的按压者，只会造成本可避免的中断。B 错：把受过训练的人手赶走，你们两人很快会疲劳，按压质量随之下降。D 错：消防员虽然可以操作 AED，但让两名救护员都去按压，就没人主导复苏、也没人管理气道了。",
+   "sourceRef": "CPCF C2.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-037",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C2.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "collaboration",
+   "difficulty": "intermediate",
+   "questionEn": "Your patient has new facial droop and arm weakness that began 90 minutes ago and a positive FAST-VAN screen. You believe she meets your service's criteria to bypass the closer hospital for the designated stroke centre; your equally experienced partner wants to go to the closer community ED. How should this be resolved?",
+   "questionZh": "你的患者 90 分钟前出现新发面部下垂和上肢无力，FAST-VAN 筛查阳性。你认为她符合机构的绕行标准，应越过较近的医院直送指定卒中中心；资历与你相当的搭档则想去更近的社区急诊。这个分歧应如何解决？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Talk it through briefly against the destination criteria; if still unsure, call online clinical support",
+     "zh": "对照转送标准简短讨论，如仍不确定就联系在线临床支持"
+    },
+    {
+     "key": "B",
+     "en": "Defer to your partner this time, since keeping the working relationship smooth matters on a long, busy shift",
+     "zh": "顺着搭档的意见，忙碌的班次里维持合作关系更重要"
+    },
+    {
+     "key": "C",
+     "en": "As the attending paramedic, set the destination yourself and move on without more discussion",
+     "zh": "既然你是主责救护员，就自己定下目的地，不再讨论"
+    },
+    {
+     "key": "D",
+     "en": "Ask the patient's family to choose between the two hospitals, since it affects them most",
+     "zh": "让家属在两家医院中选择，毕竟这个决定对他们和患者影响最大"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Respectful shared decision-making resolves clinical disagreement with evidence rather than hierarchy or harmony: the destination criteria are the objective referee, and online clinical support exists for exactly this kind of unresolved field question. B is wrong because silent deference may cost the patient time-critical stroke treatment. C is wrong because a unilateral decision discards a colleague's input and the chance to catch your own error. D is wrong because the destination is a clinical judgment; handing it to the family shifts a professional decision onto people without the information to make it.",
+   "explanationZh": "尊重的共同决策靠证据而不是层级或和气来化解临床分歧：转送标准就是客观的裁判，而在线临床支持正是为这种现场悬而未决的问题设立的。B 错：沉默让步可能让患者错失时间敏感的卒中治疗。C 错：单方面拍板既抛开了同事的意见，也失去了发现自己判断失误的机会。D 错：去哪家医院是临床判断，交给家属决定等于把专业判断推给了不掌握相关信息的人。",
+   "sourceRef": "CPCF C2.5",
+   "verified": true
+  },
+  {
+   "id": "ppf-038",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C3.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "collaboration",
+   "difficulty": "intermediate",
+   "questionEn": "At an assault scene, a police officer wants to interview your patient — who has facial injuries and a possible concussion — before you complete your assessment and transport. The officer says evidence is time-sensitive. How should you handle this?",
+   "questionZh": "在一处袭击案现场，一名警察想在你完成评估和转运之前询问你的患者——患者面部受伤且可能有脑震荡。警察表示取证有时效性。你应该如何处理？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Let the interview go ahead first, then assess the patient once the officer has what he needs",
+     "zh": "先让警察问话，等他问完再评估患者"
+    },
+    {
+     "key": "B",
+     "en": "Tell the officer he has no authority at a medical scene and must step back until you have left with the patient",
+     "zh": "告诉警察他在医疗现场没有任何权限，必须退到一边，等你们带患者离开再说"
+    },
+    {
+     "key": "C",
+     "en": "Let the patient decide whether he would rather be interviewed before or after treatment",
+     "zh": "让患者自己决定是治疗前还是治疗后接受询问"
+    },
+    {
+     "key": "D",
+     "en": "Explain the patient needs assessment and transport now, and offer brief questions while you package",
+     "zh": "说明患者现在需要评估和转运，并提议在打包转运时让他问几个简短问题"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Managing differences with public safety colleagues means protecting the patient's clinical priority while respecting the officer's legitimate needs; offering concrete options — a few essential questions while you package, a full interview at the hospital — resolves the conflict instead of escalating it. A is wrong because delaying care for an injured, possibly concussed patient puts him at risk. B is wrong because ordering police away damages a working relationship you rely on, often for your own safety. C is wrong because a possibly concussed patient is not a reliable judge of this, and it leaves the disagreement unresolved.",
+   "explanationZh": "与公共安全同事处理分歧，意味着在守住患者临床优先级的同时，尊重警方的正当需要；提出具体方案——打包转运时问几个必要问题，到医院再做完整询问——能化解冲突而不是激化矛盾。A 错：为了问话推迟照护，会让受伤且可能脑震荡的患者承担风险。B 错：命令警察离开会破坏你所依赖的协作关系，而你的安全往往也要靠他们。C 错：可能脑震荡的患者判断不可靠，而且分歧仍然没有解决。",
+   "sourceRef": "CPCF C3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-039",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C1.1",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "collaboration",
+   "difficulty": "foundation",
+   "questionEn": "You have just cleared the hospital when a neighbouring crew radios you directly: they have found a second patient at their scene two blocks away and need another unit. What should you do?",
+   "questionZh": "你们刚在医院交接完毕，附近一个班组直接用无线电呼叫你们：他们在两个街区外的现场发现了第二名患者，需要另一个单元支援。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Tell them to route the request through dispatch and wait to be assigned",
+     "zh": "让他们走调度流程提请求，你们等候派遣"
+    },
+    {
+     "key": "B",
+     "en": "Confirm your availability with dispatch and respond promptly to assist",
+     "zh": "向调度确认你们可以出动，并迅速前往支援"
+    },
+    {
+     "key": "C",
+     "en": "Decline — your meal break is overdue and another unit can take it",
+     "zh": "婉拒——你们的用餐休息早就该开始了，让别的单元去"
+    },
+    {
+     "key": "D",
+     "en": "Drive straight over without notifying dispatch since it is only two blocks",
+     "zh": "反正只有两个街区，不通知调度直接开过去"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Responding appropriately to requests for help means acting on them promptly while keeping the system informed: confirming with dispatch takes seconds, keeps you visible in the deployment picture, and gets help moving. Bouncing a colleague's direct request back into a queue delays care; refusing for a break fails the team; and going off-grid means dispatch cannot track, support, or cover you.",
+   "explanationZh": "恰当回应求助请求意味着迅速行动的同时让系统知情：向调度确认只需几秒钟，既让你们在调派全局中保持可见，又让支援立即启动。把同事的直接请求推回排队流程会延误照护；为了休息而拒绝辜负了团队；而脱离调度擅自行动则意味着调度无法追踪、支援或为你们补位。",
+   "sourceRef": "CPCF C1.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-040",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C2.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "collaboration",
+   "difficulty": "advanced",
+   "questionEn": "At a two-car collision you are the attending paramedic. Present: your partner, two firefighters, and a bystander who identifies herself as an off-duty ICU nurse. Patient 1 is walking around; patient 2 is trapped and moaning. How do you coordinate the team?",
+   "questionZh": "在一起两车相撞事故中你是主责救护员。现场有：你的搭档、两名消防员，以及一位自称是休班 ICU 护士的路人。患者 1 在四处走动；患者 2 被困车内、正在呻吟。你应如何协调团队？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Send everyone to the trapped patient, since his moaning suggests he is the most critically injured",
+     "zh": "让所有人都去处理被困患者，因为他的呻吟说明他伤得最重"
+    },
+    {
+     "key": "B",
+     "en": "Have the nurse manage the trapped patient alone while your whole crew assesses the patient who is walking",
+     "zh": "让护士独自负责被困患者，你们组去评估那位能走动的患者"
+    },
+    {
+     "key": "C",
+     "en": "Put your partner and a firefighter on the trapped patient, the nurse with the walking one, and coordinate",
+     "zh": "让搭档和一名消防员处理被困患者，护士陪同能走动的患者，你负责统筹"
+    },
+    {
+     "key": "D",
+     "en": "Treat the walking patient yourself first, since he is the easiest to reach, then reassess the scene",
+     "zh": "你先亲自处理能走动的患者，因为他最容易接触，处理完再重新评估整个现场"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Coordinating several team members in a complex scene means allocating each resource by acuity and ability while someone keeps overall command: your partner, with a firefighter's help, on the trapped patient; the off-duty nurse — once you have confirmed she is willing — watching the ambulatory patient and reporting changes; the other firefighter on scene hazards; and you coordinating. A is wrong because swarming one patient leaves the other unassessed, and walking does not mean uninjured. B is wrong because it gives primary responsibility for the sicker patient to an unverified bystander working outside your system. D is wrong because anchoring yourself to the easiest task means no one is coordinating the scene.",
+   "explanationZh": "在复杂现场协调多名团队成员，意味着按伤情轻重和各人能力分配资源，同时有人统筹全局：搭档在一名消防员协助下处理被困患者；休班护士在你确认她愿意协助后，陪同能走动的患者并报告变化；另一名消防员负责现场危险；你负责统筹。A 错：全员扑向一名患者会让另一名无人评估，而能走动不代表没受伤。B 错：把较重患者的主责交给身份未经核实、又不在你们体系内的路人。D 错：你把自己拴在最轻松的任务上，现场就没人统筹了。",
+   "sourceRef": "CPCF C2.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-041",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C3.1",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "collaboration",
+   "difficulty": "foundation",
+   "questionEn": "In the ED hallway, your partner mutters loudly enough for staff to hear: \"Typical — nurses here never listen to a word we say.\" A nurse looks over. What should you do?",
+   "questionZh": "在急诊走廊里，你的搭档嘟囔的音量大得让工作人员都能听见：\"一贯如此——这里的护士从来不听我们说话。\"一位护士看了过来。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Quietly agree with your partner, so he doesn't feel isolated in front of the hospital staff",
+     "zh": "小声附和搭档，免得他在医院员工面前孤立无援"
+    },
+    {
+     "key": "B",
+     "en": "Correct your partner on the spot in front of the ED staff, so they see you disagree with him",
+     "zh": "当着急诊员工的面立刻纠正搭档，让他们看到你并不认同"
+    },
+    {
+     "key": "C",
+     "en": "Report the comment to the regulator as unprofessional conduct, since the staff overheard it",
+     "zh": "既然员工都听到了，就把这句话作为不专业行为上报给监管机构"
+    },
+    {
+     "key": "D",
+     "en": "Don't join in, stay courteous with the staff, and talk to your partner privately afterward",
+     "zh": "不附和，继续对急诊员工以礼相待，事后私下和搭档谈谈"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Interacting respectfully includes not amplifying disrespect and dealing with it constructively. A private conversation afterward corrects the behaviour while preserving your partner's dignity and the team relationships you both depend on. A is wrong because joining in damages an interprofessional relationship you need every shift. B is wrong because correcting him publicly humiliates him and creates a second conflict in front of the same staff. C is wrong because a regulatory report is far out of proportion to a first rude remark; this is best handled peer to peer, escalating only if it becomes a pattern.",
+   "explanationZh": "尊重地互动，既包括不为不敬言论推波助澜，也包括以建设性的方式处理它。事后私下沟通既能纠正行为，又保全了搭档的颜面，也维护了你们双方都依赖的团队关系。A 错：附和会破坏你们每个班次都要依赖的跨专业关系。B 错：当众纠正会让搭档难堪，还在同一群员工面前制造了第二个冲突。C 错：为一句失礼的话就上报监管机构严重失当；这类问题最适合同事之间解决，只有形成固定模式时才需要升级。",
+   "sourceRef": "CPCF C3.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-042",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C2.1",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "collaboration",
+   "difficulty": "intermediate",
+   "questionEn": "You respond to a palliative patient's home for increased pain. A home-care nurse is present, knows the patient well, and is following an established palliative care plan. How should you work with her?",
+   "questionZh": "你出诊到一位安宁疗护患者家中处理疼痛加重。一名居家护理护士在场，她非常了解患者，并正在执行既定的安宁照护计划。你应该如何与她协作？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Briefly clarify roles: ask what she has done, review the care plan, and agree on who does what",
+     "zh": "简短厘清分工：问她做了什么，看照护计划怎么定，商定各自负责什么"
+    },
+    {
+     "key": "B",
+     "en": "Take over completely, since once 911 has been called the paramedic crew directs all of the care",
+     "zh": "全面接管——一旦有人拨打了 911，就该由救护组来主导所有的照护和决定"
+    },
+    {
+     "key": "C",
+     "en": "Leave the management to her entirely, since she knows the patient and the plan far better",
+     "zh": "既然她更了解患者和照护计划，就把处置完全交给她"
+    },
+    {
+     "key": "D",
+     "en": "Work in parallel to save time: you do your own assessment while she carries on with hers",
+     "zh": "为节省时间各干各的：你做你的评估，她继续她的"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "This is exactly a situation of overlapping, shared responsibility: the nurse holds continuity, context, and the palliative care plan; you bring emergency assessment and transport. A short role-clarifying conversation merges the two into one coherent plan. B is wrong because a total takeover discards her knowledge and the patient's documented goals of care. C is wrong because deferring entirely abandons your duty to assess the patient you were called to. D is wrong because working in separate silos invites duplicated or contradictory interventions, such as two people giving the same medication.",
+   "explanationZh": "这正是职责重叠、需要协商分工的情境：护士掌握连续性、背景信息和安宁照护计划；你带来急救评估和转运能力。一次简短的分工沟通，就能把两者合成一个连贯的方案。B 错：全盘接管会丢掉她掌握的情况和患者已经写明的照护目标。C 错：完全放手是放弃了你评估这位患者的职责——你正是为此被叫来的。D 错：各干各的容易出现重复或相互矛盾的处置，比如两个人给了同一种药。",
+   "sourceRef": "CPCF C2.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-045",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C3.2",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "collaboration",
+   "difficulty": "advanced",
+   "questionEn": "You and your partner argued about a personal matter before shift. Now, managing an unstable patient, your partner is answering you in single words, and you just caught a miscommunication that nearly caused a missed treatment step. What should you do?",
+   "questionZh": "上班前你和搭档因私事争吵。现在处理一名不稳定患者时，搭档对你爱答不理，你刚刚发现一次沟通失误差点导致漏掉一个处置步骤。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Stop and settle the personal argument right now, so the two of you can work together properly",
+     "zh": "现在就停下来把私人矛盾说清楚，你们俩才能好好配合"
+    },
+    {
+     "key": "B",
+     "en": "Work around your partner and manage the patient largely on your own until the call is over",
+     "zh": "绕开搭档，基本靠自己一个人处理患者直到任务结束"
+    },
+    {
+     "key": "C",
+     "en": "Radio dispatch for a crew swap partway through the call, so the patient gets a calmer, functioning team",
+     "zh": "呼叫调度要求在任务中途换一个班组，让患者能有一个心平气和、配合默契的团队"
+    },
+    {
+     "key": "D",
+     "en": "Call a quick reset — “closed-loop from here on” — finish the call, then deal with the conflict after",
+     "zh": "做一次简短的状态重置——“从现在起指令都复诵”——完成任务后再处理矛盾"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "When conflict starts degrading patient care, the immediate duty is to contain it: an explicit professional reset with closed-loop communication restores safety now, and the underlying conflict is dealt with after transfer of care — with a supervisor's help if you cannot resolve it together. A is wrong because hashing out a personal argument over an unstable patient pulls attention away from the patient. B is wrong because freezing out your partner removes half the crew and doubles the risk of missed steps. C is wrong because a mid-call crew change delays care and is impractical with an unstable patient.",
+   "explanationZh": "当矛盾开始影响患者照护时，当务之急是控制住它：明确的状态重置加上闭环复诵沟通，能立即恢复安全；深层矛盾留到交接之后再处理，两人解决不了就请主管介入。A 错：在不稳定患者面前清算私人恩怨，会把注意力从患者身上拉走。B 错：冷落搭档等于少了半个班组，漏步骤的风险反而加倍。C 错：任务中途换组会延误照护，面对不稳定患者也根本不现实。",
+   "sourceRef": "CPCF C3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-046",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C1.2",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "collaboration",
+   "difficulty": "intermediate",
+   "questionEn": "You are partnered with an ACP who is preparing an advanced intervention that your PCP licence does not authorize. Which form of assistance is appropriate for you to provide?",
+   "questionZh": "你与一名 ACP（高级救护员）搭档，对方正准备实施一项你的 PCP 执照并不授权的高级操作。你提供哪种协助是恰当的？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Prepare and pass equipment, monitor the patient, and carry out tasks your own licence allows",
+     "zh": "准备和传递器械、监测患者，并执行你自己的执照所允许的操作"
+    },
+    {
+     "key": "B",
+     "en": "Perform the advanced procedure yourself under the ACP's direct verbal guidance and supervision",
+     "zh": "在 ACP 的直接口头指导和监督下，由你亲自实施这项高级操作"
+    },
+    {
+     "key": "C",
+     "en": "Decline any involvement in tasks connected to the advanced care, to stay clear of the procedure",
+     "zh": "拒绝参与任何与高级处置有关的工作，和这项操作完全撇清关系"
+    },
+    {
+     "key": "D",
+     "en": "Give the ACP-only drug yourself, as long as the ACP draws it up and double-checks the dose",
+     "zh": "只要 ACP 抽好药并复核剂量，就可以由你给这种 ACP 专属药物"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Helping a team member is expected — within each provider's authorized practice and ability. Preparing equipment, monitoring, and performing tasks your own licence allows make the team effective without crossing authorization lines. B is wrong because supervision by an ACP does not authorize you to perform a procedure your licence does not include. C is wrong because refusing all involvement fails the team and the patient when many supporting tasks are yours to do. D is wrong because administering the drug is the act that requires authorization; who drew it up or checked it does not change that.",
+   "explanationZh": "配合团队成员的协助请求是应尽之责——但要在各自的执照授权和能力范围之内。准备器械、监测患者、执行你自己执照允许的操作，能让团队高效运转，又不越过授权的界线。B 错：有 ACP 监督，并不等于你获得了执照之外的操作授权。C 错：明明有很多辅助工作是你可以做的，拒绝一切参与会辜负团队和患者。D 错：需要授权的恰恰是“给药”这个动作，药是谁抽的、谁核对的，都改变不了这一点。",
+   "sourceRef": "CPCF C1.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-047",
+   "licence": "pcp",
+   "cpcfArea": "A",
+   "competency": "A3.3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "consent",
+   "difficulty": "advanced",
+   "questionEn": "You treated a diabetic man's hypoglycemia with oral glucose. He is now fully alert (GCS 15), has eaten a meal, and a repeat glucose is normal. You recommend transport, as your protocol expects, but he declines. His wife will stay with him. When is it appropriate to leave him at home?",
+   "questionZh": "你用口服葡萄糖（oral glucose）处理了一名糖尿病男性的低血糖。他现已完全清醒（GCS 15），吃过一顿饭，复测血糖正常。你按规程建议转运，但他拒绝了。他妻子会在家陪着他。在什么情况下让他留在家里才是恰当的？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Never — any patient who has received treatment from paramedics must be transported to hospital",
+     "zh": "任何情况都不行——凡是接受过救护员处置的患者都必须送医"
+    },
+    {
+     "key": "B",
+     "en": "Once he shows capacity, understands the risk of recurrence and when to call back, and you document it",
+     "zh": "当他展现出决定能力，理解复发风险和何时该再呼叫，并且你做好了记录时"
+    },
+    {
+     "key": "C",
+     "en": "Only if a police officer attends to witness him signing the refusal form, to protect the crew",
+     "zh": "只有警察到场见证他签拒绝单才可以，以保护出勤人员"
+    },
+    {
+     "key": "D",
+     "en": "As soon as he signs the refusal form, since the signature itself proves he has made an informed decision",
+     "zh": "只要他在拒绝单上签了字就可以，签名本身就说明他已作出决定"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "BC's diabetic emergency protocol expects transport after treatment, so you recommend it — but a capable adult may still refuse. Capacity here means he is oriented, his glucose and oxygen saturation are normal, he understands his condition and the risk of the low sugar returning, and he has a reasonable plan: food eaten, follow-up with his doctor, his wife staying and knowing the warning signs and when to call back. Document all of it thoroughly. A is wrong because treatment does not remove a capable person's right to refuse; the protocol sets what you recommend, not a power to force him. C is wrong because an impartial witness helps if one is present, but police attendance is not a condition of a valid refusal. D is wrong because a signature without capacity and an informed discussion is not an informed refusal and protects no one.",
+   "explanationZh": "BC 考纲的糖尿病急症规程要求处置后转运，所以你应建议他去医院——但有决定能力的成年人仍然可以拒绝。这里的决定能力包括：定向力正常，血糖和血氧饱和度正常，理解自己的病情和低血糖再次发作的风险，并有合理的后续安排——已经进食、会去找自己的医生随访、妻子在家陪着并知道哪些征象要警惕、什么时候要再打电话。这些都要详细记录。A 错：接受过处置并不会剥夺有决定能力者拒绝的权利；规程规定的是你该建议什么，而不是授权你强制送医。C 错：在场有中立见证人固然好，但警察到场并不是拒绝有效的前提。D 错：没有决定能力评估和知情沟通的签名不算知情拒绝，保护不了任何人。",
+   "sourceRef": "Nancy Ch 4; BC Guidelines p.57",
+   "verified": true
+  },
+  {
+   "id": "ppf-049",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C4.2",
+   "cognitive": "critical",
+   "population": "geriatric",
+   "topic": "handover",
+   "difficulty": "advanced",
+   "questionEn": "The ED is overwhelmed. The triage nurse glances at your elderly patient — who has new confusion and a fever — says \"hallway six, we'll get to her,\" and walks away before you can give a report. No one has accepted care. What should you do?",
+   "questionZh": "急诊科忙得不可开交。分诊护士瞥了一眼你那位新发意识混乱伴发热的老年患者，丢下一句\"六号走廊位，我们稍后处理\"，没等你交班就走开了。没有任何人正式接手照护。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Move her to hallway six and leave, since responsibility transfers once she is inside the hospital",
+     "zh": "把她安置到六号走廊位就离开——人进了医院，责任就已经转移了"
+    },
+    {
+     "key": "B",
+     "en": "Wait ten minutes, then leave the paperwork at the triage desk and clear for your next call",
+     "zh": "等十分钟，把文书留在分诊台，然后清空待命接下一趟任务"
+    },
+    {
+     "key": "C",
+     "en": "Give your report to the ward clerk, so that at least someone in the department has the information you have",
+     "zh": "把交班内容告诉科室文员，这样至少科里有人掌握你手上关于她的这些信息"
+    },
+    {
+     "key": "D",
+     "en": "Stay with her, keep monitoring, and pursue a proper handover, escalating if the delay endangers her",
+     "zh": "留在她身边继续监测，坚持完成正规交接；如果拖延危及她，就逐级上报"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Care is not transferred until a qualified clinician accepts it along with the information needed to continue safely — a hallway assignment is not a handover. A confused, febrile older patient can deteriorate quietly, so you stay, monitor, and escalate to the charge nurse or your supervisor if needed. A is wrong because being physically inside the hospital does not transfer responsibility. B is wrong because timing out and leaving paperwork leaves her with no clinician who knows her story. C is wrong because a ward clerk is not a clinician and cannot accept care of a patient.",
+   "explanationZh": "在具备资质的临床人员带着继续安全照护所需的信息正式接手之前，照护并没有转移——分一个走廊位不等于交接。意识混乱伴发热的老年患者可能在不知不觉中恶化，所以你要留下、监测，必要时升级找护士长或你的主管。A 错：人进了医院，并不代表责任就转移了。B 错：等够时间、丢下文书就走，会让她身边没有任何一个了解她病情的临床人员。C 错：科室文员不是临床人员，无法接手患者的照护。",
+   "sourceRef": "CPCF C4.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-050",
+   "licence": "pcp",
+   "cpcfArea": "C",
+   "competency": "C3.2",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "collaboration",
+   "difficulty": "advanced",
+   "questionEn": "During a long offload delay, the ED charge nurse snaps at you in front of colleagues: \"You people keep dumping patients on us and my staff are drowning.\" You still have a moderately ill patient waiting on your stretcher. What is the best response?",
+   "questionZh": "一次漫长的交接延误中，急诊护士长当着同事的面冲你发火：\"你们这些人不停地把患者甩给我们，我的人都快撑不住了。\"你的担架上还躺着一位病情中等的患者等待交接。最佳回应是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Stay professional: acknowledge the pressure, refocus on your patient's needs, and raise offload later",
+     "zh": "保持专业：承认她的压力，把注意力拉回患者身上，交接延误事后再反映"
+    },
+    {
+     "key": "B",
+     "en": "Point out calmly that the ED's staffing problems are not the ambulance service's fault or yours",
+     "zh": "平静地指出急诊人手不足不是救护车服务的错，也不是你的错"
+    },
+    {
+     "key": "C",
+     "en": "Report her outburst to hospital management first, then come back to complete the handover",
+     "zh": "先向医院管理层投诉她的失态，再回来完成交接"
+    },
+    {
+     "key": "D",
+     "en": "Apologize, then wait silently for as long as it takes, without raising your patient's needs with her again",
+     "zh": "向她道歉，然后不管要等多久都默默等着，再也不跟她提你那位患者的需要"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Resolving conflict during care means not taking the bait: acknowledging her very real pressure defuses the confrontation, keeping the focus on the patient serves the person you are both there for, and the systemic offload problem belongs in system-level channels afterward. B is wrong because arguing about fault, even if true, escalates the conflict in front of colleagues and the patient. C is wrong because complaining before the handover is done puts the grievance ahead of the patient. D is wrong because silent capitulation abandons your duty to advocate for the patient on your stretcher — if he worsens, someone must know.",
+   "explanationZh": "在照护过程中化解冲突，关键是不接招：承认她面对的真实压力可以平息对抗，把焦点放在患者身上才是你们双方共同的职责，而系统性的交接延误问题应在事后通过系统层面的渠道反映。B 错：即使说的是事实，当着同事和患者争论谁的责任也只会升级冲突。C 错：交接还没完成就先去投诉，是把个人不满放在了患者前面。D 错：沉默妥协等于放弃为担架上的患者发声——万一他病情加重，总得有人知道。",
+   "sourceRef": "CPCF C3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-051",
+   "licence": "pcp",
+   "cpcfArea": "D",
+   "competency": "D1.5",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "learning",
+   "difficulty": "intermediate",
+   "questionEn": "A student paramedic on her second ride-along shift takes far too long to get IV access and misses the vein. The patient is stable. What is the most effective way to give feedback?",
+   "questionZh": "一名实习救护学员在第二次跟车实习中建立静脉通路耗时过长且穿刺失败。患者情况稳定。给予反馈最有效的方式是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Correct her technique at the bedside straight away, so the lesson lands while it is still fresh",
+     "zh": "当场在患者床边纠正她的手法，趁印象新鲜把要点讲透"
+    },
+    {
+     "key": "B",
+     "en": "Debrief privately soon after: ask how she thought it went, give specific points, and agree one goal",
+     "zh": "任务后尽快私下复盘：先听她自评，再给具体意见，一起定一个改进目标"
+    },
+    {
+     "key": "C",
+     "en": "Say nothing for now — she is new, and early criticism can easily destroy a student's confidence for good",
+     "zh": "暂时什么都不说——她还是新人，过早的批评很容易彻底摧毁一个学员的信心"
+    },
+    {
+     "key": "D",
+     "en": "Note the problem on her evaluation form and leave it for her preceptor to address later on",
+     "zh": "把问题写进她的评估表，留给带教老师日后处理"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Psychologically safe, timely feedback is private, prompt, specific, and two-way: her self-assessment first, concrete observations rather than global judgments, and one actionable goal. A is wrong because correcting her in front of the patient humiliates her and undermines the patient's confidence in the crew. C is wrong because silence denies her the learning she came for; well-delivered feedback builds confidence rather than destroying it. D is wrong because a form filled in later delays feedback past the point where it can change her next attempt and avoids the conversation altogether.",
+   "explanationZh": "心理安全且及时的反馈应当是私下的、迅速的、具体的、双向的：先让她自评，给出具体观察而不是笼统评价，再约定一个可执行的目标。A 错：当着患者的面纠正她，既让她难堪，也削弱了患者对整个班组的信心。C 错：沉默剥夺了她来实习想学的东西；方式得当的反馈只会建立信心，而不是摧毁信心。D 错：事后填表会让反馈错过影响她下一次操作的时机，也回避了面对面的交流。",
+   "sourceRef": "CPCF D1.5",
+   "verified": true
+  },
+  {
+   "id": "ppf-052",
+   "licence": "pcp",
+   "cpcfArea": "D",
+   "competency": "D1.3",
+   "cognitive": "critical",
+   "population": "pediatric",
+   "topic": "learning",
+   "difficulty": "advanced",
+   "questionEn": "You are precepting a student. On a call for a seizing three-year-old, the student — who has never managed a pediatric airway — asks to take the lead. What should you do?",
+   "questionZh": "你正在带教一名学员。一趟三岁儿童抽搐的任务中，从未处理过儿科气道的学员请求主导这次处置。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Let her lead, since high-acuity calls are where students get their most valuable learning",
+     "zh": "让她来主导——毕竟危重任务恰恰是学员能学到最多实战经验的时候"
+    },
+    {
+     "key": "B",
+     "en": "Refuse without explanation and manage the call yourself, so there is no debate on scene",
+     "zh": "不作解释直接拒绝，自己处理这趟任务，免得在现场争论"
+    },
+    {
+     "key": "C",
+     "en": "Run the airway and key decisions yourself, give her defined support tasks, and debrief afterward",
+     "zh": "由你负责气道和关键决策，给她分派明确的辅助任务，事后再复盘"
+    },
+    {
+     "key": "D",
+     "en": "Let her lead while you talk her through each airway step in real time from beside her",
+     "zh": "让她主导，你在旁边实时口头指导每一个气道步骤"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Patient safety must be maintained whenever learners are involved — it is the boundary condition on all clinical teaching. A seizing child is not the place for a first pediatric airway; giving her real tasks matched to her level, plus a thorough debrief, preserves both the learning and the child. A is wrong because it gambles the child's airway on a first attempt. B is wrong because a flat refusal wastes a teaching opportunity and damages the relationship — a one-line “I'll lead this one, you take the suction and timing” works. D is wrong because real-time coaching still leaves an inexperienced learner in charge of a critical airway, and any hesitation costs time.",
+   "explanationZh": "有学员参与时必须守住患者安全，这是所有临床教学的底线。抽搐的患儿不是学员第一次处理儿科气道的场合；给她与能力相匹配的真实任务，再做透彻的复盘，既保住了学习机会，也保住了孩子。A 错：这是拿孩子的气道去赌学员的第一次尝试。B 错：生硬拒绝浪费了教学机会，也伤害带教关系——一句“这次我来主导，你负责吸引和计时”就够了。D 错：即使实时指导，掌控危急气道的仍是一个没有经验的学员，她稍一犹豫就会耽误时间。",
+   "sourceRef": "CPCF D1.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-055",
+   "licence": "pcp",
+   "cpcfArea": "D",
+   "competency": "D2.2",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "evidence",
+   "difficulty": "intermediate",
+   "questionEn": "You have noticed over several months that one of your service's protocols consistently produces delays for a particular patient group, and newer published guidance recommends a different approach. What should you do?",
+   "questionZh": "几个月来你注意到，你所属服务机构的某项规程在某类患者身上持续造成延误，而较新发表的指南推荐了另一种做法。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Switch to the newer published guidance, since it reflects better and more current evidence",
+     "zh": "直接改为遵循较新发表的指南，因为它明显代表了更好、也更新的证据"
+    },
+    {
+     "key": "B",
+     "en": "Keep following the protocol and say nothing, since questioning protocols is not your role",
+     "zh": "继续照规程执行、什么也不说，因为质疑规程不是你的职责"
+    },
+    {
+     "key": "C",
+     "en": "Raise it informally with colleagues to see whether they agree before you decide anything",
+     "zh": "先私下和同事聊聊，看他们是否认同，再决定怎么办"
+    },
+    {
+     "key": "D",
+     "en": "Keep following the protocol while submitting cases and evidence to the guideline review process",
+     "zh": "继续执行现行规程，同时把具体病例和证据提交给负责审议指南的流程"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Giving feedback to the system when guidelines do not reflect best practice is an explicit competency — and it is done while continuing to follow the approved protocol, not by substituting your own. Structured, evidence-supported feedback is what actually changes a guideline. A is wrong because deviating on your own is practising outside your authorized protocols, however good the evidence looks. B is wrong because silent compliance lets a known problem continue for every future patient. C is wrong because informal agreement among colleagues is not a channel that can change anything.",
+   "explanationZh": "在指南未能反映最佳实践时向系统反馈，是一项明确的能力要求——而且要在继续执行既定规程的同时进行，而不是自行替换。有证据支撑的结构化反馈，才是真正能推动指南修订的途径。A 错：不管证据看起来多好，自行偏离都属于在授权规程之外执业。B 错：沉默服从会让已知问题在以后每一位患者身上继续存在。C 错：同事之间私下的共识不是能带来改变的渠道。",
+   "sourceRef": "CPCF D2.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-056",
+   "licence": "pcp",
+   "cpcfArea": "D",
+   "competency": "D3.2",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "learning",
+   "difficulty": "intermediate",
+   "questionEn": "Your service sends you an individual dashboard showing your 12-lead ECG acquisition times are consistently in the slowest quartile of your station. What is the most constructive response?",
+   "questionZh": "服务机构给你发来个人数据看板，显示你的 12 导联心电图采集时间长期处于本站最慢的四分之一区间。最有建设性的回应是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Reflect on why, review your recent calls, learn from a colleague with fast times, and set a goal",
+     "zh": "反思原因，复盘近期任务，向采集快的同事请教，并定一个改进目标"
+    },
+    {
+     "key": "B",
+     "en": "Point out that your station covers the most complex calls, which explains the slower numbers",
+     "zh": "指出你们站承担的任务最复杂，所以数字偏慢情有可原"
+    },
+    {
+     "key": "C",
+     "en": "Disregard the dashboard, since acquisition time is a poor measure of the quality of care",
+     "zh": "不理会这份看板，因为采集时间并不能很好地衡量照护质量"
+    },
+    {
+     "key": "D",
+     "en": "Wait to see whether your supervisor raises it before deciding whether to take any action",
+     "zh": "先等主管会不会提起，再决定要不要采取行动"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Identifying opportunities to improve by reflecting on your own performance using internal and external data is exactly what a dashboard is for; self-review, peer learning, and a concrete goal turn the data into practice change. B is wrong because you are in the slowest quartile of your own station — your colleagues face the same call mix. C is wrong because time to a 12-lead affects how quickly a STEMI is recognized, so dismissing the metric dismisses something that matters to patients. D is wrong because waiting to be told treats the data as a threat rather than a learning source.",
+   "explanationZh": "利用内部和外部数据反思自身表现、发现改进机会，正是绩效看板存在的意义；自我复盘、向同事学习、设定具体目标，才能把数据转化为实践上的改进。B 错：你是在本站内排在最慢的四分之一，同站同事面对的是同样的任务构成。C 错：12 导联心电图采集的快慢直接影响 STEMI 被识别的速度，否定这个指标就是否定一件关系到患者的事。D 错：坐等别人指出，是把数据当成威胁而不是学习来源。",
+   "sourceRef": "CPCF D3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-059",
+   "licence": "pcp",
+   "cpcfArea": "D",
+   "competency": "D1.4",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "learning",
+   "difficulty": "intermediate",
+   "questionEn": "You have been asked to lead a case review at your station about a call that went badly. What approach will make the session most useful?",
+   "questionZh": "你被要求在站里主持一次病例复盘，讨论一趟处理得不好的任务。什么方式能让这次复盘最有价值？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Present a step-by-step account of what the crew should have done differently on the call",
+     "zh": "逐步讲解该班组当时本应如何处置"
+    },
+    {
+     "key": "B",
+     "en": "Keep the discussion general and avoid the specific call, so no one feels singled out",
+     "zh": "讨论保持泛泛而谈，避开这趟具体任务，免得有人觉得被针对"
+    },
+    {
+     "key": "C",
+     "en": "Set blame-free ground rules, rebuild the case with what was known at the time, and agree on changes",
+     "zh": "先定下不追责的规则，按当时掌握的信息还原病例，最后商定改进措施"
+    },
+    {
+     "key": "D",
+     "en": "Invite the crew involved to explain their reasoning to the whole group and then answer everyone's questions",
+     "zh": "请当事班组向全体同事解释他们当时的判断思路，再逐一回答大家的提问"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Leading a learning activity well needs psychological safety plus rigour: explicit blame-free ground rules, reconstruction of the case using only what was known at the time (which guards against hindsight bias), group analysis of what shaped the decisions, and concrete agreed changes. A is wrong because lecturing the “right answers” wastes the group's insight and invites hindsight bias. B is wrong because avoiding the actual case removes the learning the session exists for. D is wrong because putting the involved crew on the spot to justify themselves breeds defensiveness rather than reflection.",
+   "explanationZh": "主持好一次学习活动，需要心理安全与严谨并重：明确的不追责规则，只用当时掌握的信息还原病例（避免事后诸葛亮），集体分析是什么影响了当时的决定，最后形成具体的改进共识。A 错：单向讲授“正确答案”浪费了集体智慧，也容易陷入事后诸葛亮。B 错：避开具体病例，这次复盘就失去了存在的意义。D 错：让当事班组当众自证，只会激起防御心理而不是反思。",
+   "sourceRef": "CPCF D1.4",
+   "verified": true
+  },
+  {
+   "id": "ppf-061",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E3.2",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "intermediate",
+   "questionEn": "Three weeks after a pediatric drowning call, you are sleeping four hours a night, snapping at your family, and you feel your chest tighten every time you drive past that lake. What is the most appropriate action?",
+   "questionZh": "一次儿童溺水任务过去三周后，你每晚只睡四小时、对家人动辄发火，每次开车经过那个湖时都感到胸口发紧。最恰当的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Treat these as warning signs and reach out now — to peer support, your EFAP, or a clinician",
+     "zh": "把这些视为警示信号，马上求助：同伴支持、EFAP 或专业心理人员"
+    },
+    {
+     "key": "B",
+     "en": "Give it more time, since most reactions to a hard call settle on their own within a few months",
+     "zh": "再等等看——大多数人对艰难任务的反应，几个月之内都会自己慢慢平复"
+    },
+    {
+     "key": "C",
+     "en": "Ask to be kept off pediatric calls until the symptoms ease, so you are not reminded of it",
+     "zh": "申请暂时不派儿科任务，直到症状缓解，免得再想起那件事"
+    },
+    {
+     "key": "D",
+     "en": "Step up your exercise and sleep routine on your own, and reassess how you feel in a month",
+     "zh": "自己加强运动、调整作息，一个月后再看看感觉如何"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Poor sleep, irritability, and a physical reaction to reminders of the event three weeks later are warning signs of a stress injury, and the competency is to recognize and act on them — tell someone and get help early, which works far better than waiting. B is wrong because symptoms that are still disrupting sleep and family life at three weeks tend to entrench if you wait. C is wrong because avoidance usually strengthens a trauma response rather than resolving it. D is wrong because exercise and sleep help, but self-care alone is not enough for symptoms at this level, and another month's delay postpones real help.",
+   "explanationZh": "三周后仍然睡不好、易怒，一碰到与事件相关的东西身体就有反应，这些是应激损伤的警示信号，而这项能力要求你识别并采取行动——告诉别人、尽早求助，效果远好于观望。B 错：已经三周还在影响睡眠和家庭生活的症状，越等越容易固化。C 错：回避通常会强化而不是化解创伤反应。D 错：运动和睡眠有帮助，但这种程度的症状单靠自我调理不够，再拖一个月只会推迟真正的帮助。",
+   "sourceRef": "Nancy Ch 2",
+   "verified": true
+  },
+  {
+   "id": "ppf-063",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E5.1",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "intermediate",
+   "questionEn": "A normally meticulous colleague has been arriving late, missing documentation, and eating lunch alone in his car for the past month. Today he told a patient's family to \"just calm down\" — completely out of character. What should you do?",
+   "questionZh": "一位平时一丝不苟的同事，这一个月来经常迟到、文书遗漏、独自在车里吃午饭。今天他对一位患者家属说\"你冷静点行不行\"——完全不像他平时的样子。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Report his comment to the family to your supervisor, and leave the rest for management",
+     "zh": "把他对家属说话的事报告主管，剩下的交给管理层处理"
+    },
+    {
+     "key": "B",
+     "en": "Speak with him privately and without judgment: name what you've noticed and ask how he's really doing",
+     "zh": "私下、不带评判地找他谈：说出你注意到的变化，问问他真实的状态"
+    },
+    {
+     "key": "C",
+     "en": "Say nothing for now, since everyone has rough patches and his private life is really none of your business",
+     "zh": "先什么都不说——谁都有不顺的时候，他的私事也轮不到你管"
+    },
+    {
+     "key": "D",
+     "en": "Check with other colleagues whether they've noticed the same changes before you say anything",
+     "zh": "先问问其他同事有没有注意到同样的变化，再决定要不要跟他说"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Withdrawal, slipping performance, and uncharacteristic irritability are classic warning signs that a colleague is struggling; learning to spot stress in colleagues matters because early recognition can stop things getting worse. A private, caring conversation opens the door without cornering him. A is wrong because reporting only the incident treats a symptom as misconduct and misses the person behind it. C is wrong because silence leaves a colleague to deteriorate alone. D is wrong because canvassing others first turns concern into gossip and can destroy the trust he would need to accept help.",
+   "explanationZh": "退缩、表现下滑、反常的易怒，是同事状态出问题的典型警示信号；要学会在同事身上发现应激征象，因为及早发现能防止情况恶化。一次私下的、关切的谈话能打开话题，又不让他难堪。A 错：只上报那次冲突，等于把症状当成违纪处理，忽略了背后的人。C 错：沉默会让同事独自一步步恶化。D 错：先去问别人，关心就变成了议论，还可能毁掉他接受帮助所需要的信任。",
+   "sourceRef": "CPCF E5.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-064",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E3.3",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "advanced",
+   "questionEn": "You are at hour 14 of a 16-hour shift with no meal break. You just caught yourself drawing up the wrong concentration of a medication, and a moment ago you drifted across the centre line while driving. Dispatch is holding two calls. What must you do?",
+   "questionZh": "你已经连续工作到 16 小时班次的第 14 小时，中间没有用餐休息。你刚刚发现自己抽错了药物浓度，而就在片刻前开车时车身压过了中线。调度还压着两趟任务待派。你必须怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Take the calls, but have your partner drive and double-check every medication you prepare",
+     "zh": "接下任务，但让搭档开车，并让他复核你准备的每一种药"
+    },
+    {
+     "key": "B",
+     "en": "Push through the last two hours, since calls are holding and the public needs ambulance coverage",
+     "zh": "撑完最后两小时——任务在排队，公众需要有救护车随时保障"
+    },
+    {
+     "key": "C",
+     "en": "Tell your supervisor now that you are unsafe to continue, ask for relief, and take no more calls",
+     "zh": "立即告诉主管你已无法安全继续工作，申请换人，不再接任务"
+    },
+    {
+     "key": "D",
+     "en": "Take only low-acuity calls for the rest of the shift, so the risk of an error stays small",
+     "zh": "本班剩余时间只接轻症任务，把出错风险降到最低"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "A drawing-up error and a lane departure are not early warnings — they are impairment that is already producing near misses. The competency is explicit: remove yourself from practice when you cannot perform safely; a paramedic who has been working for many hours without rest cannot safely drive an ambulance or give medications. A is wrong because a partner's checks cannot restore your judgment, and you would still be making decisions on scene. B is wrong because pushing through while impaired is exactly how fatigue harms patients and crews. D is wrong because low-acuity calls still involve driving and medications, and a call's acuity can change after you arrive.",
+   "explanationZh": "抽错药、开车压线，不是能力受损的早期预警——它们本身就是能力受损，而且已经造成了险情。这项能力的要求很明确：无法安全执业时，要主动退出执业；连续工作多个小时、没有休息的救护员，无法安全地驾驶救护车或给药。A 错：搭档复核无法恢复你的判断力，而且到了现场还是你在做决定。B 错：在能力受损时硬撑，正是疲劳伤害患者和同事的典型方式。D 错：轻症任务同样要开车、要用药，而且到了现场病情也可能变化。",
+   "sourceRef": "CPCF E3.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-067",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E5.2",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "intermediate",
+   "questionEn": "After a difficult call, your partner says quietly: \"I don't know, man. Some days I wonder if I'm even cut out for this anymore.\" What is the best response?",
+   "questionZh": "一趟艰难的任务后，搭档低声说：\"我也说不好。有时候我怀疑自己是不是根本不适合干这行了。\"最佳回应是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Reassure him quickly — “Don't be silly, you're one of the best medics here” — to lift his mood",
+     "zh": "赶紧安慰他——“别瞎想，你可是这儿最好的救护员之一”——让他马上振作起来"
+    },
+    {
+     "key": "B",
+     "en": "Suggest he take a few days off, then steer the talk to something lighter to cheer him up",
+     "zh": "建议他休几天假，然后把话题转到轻松的事上，让他开心点"
+    },
+    {
+     "key": "C",
+     "en": "Stay with it — “That sounds heavy. What's been going on?” — listen, then ask who he talks to",
+     "zh": "顺着说下去——“听起来挺沉重，最近怎么了？”——认真听，再问他平时找谁倾诉"
+    },
+    {
+     "key": "D",
+     "en": "Tell him about a call that shook you badly, so he knows he is not alone in feeling this way",
+     "zh": "跟他讲一趟曾让你深受打击的任务，让他知道有这种感受的不止他一个"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Offering non-judgmental help to a colleague means opening the conversation rather than closing it: an open question, genuine listening, and a gentle check on whether he has support. A is wrong because rushed reassurance signals that the topic is unwelcome. B is wrong because changing the subject shuts a door he took courage to open; time off may help later, but it is not a response to what he just said. D is wrong because turning to your own story moves the focus off him at the very moment he opened up.",
+   "explanationZh": "向同事提供不带评判的帮助，意味着把话题打开而不是关上：一个开放式提问、真诚的倾听，再温和地确认他有没有可以倾诉的人。A 错：急着安慰传达的信号是“这个话题我不想听”。B 错：转移话题等于关上了他鼓起勇气才打开的门；休假以后也许有用，但不是对他这句话的回应。D 错：转而讲自己的经历，会在他刚刚开口的那一刻把焦点从他身上移开。",
+   "sourceRef": "CPCF E5.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-069",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E4.3",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "foundation",
+   "questionEn": "You are starting your first year as a paramedic. What is the most effective approach to building support systems for a long career?",
+   "questionZh": "你刚开始救护职业生涯的第一年。为长期从业建立支持体系，最有效的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Build supports now while you're well: know your peer team and EFAP, and keep friends outside EMS",
+     "zh": "趁状态好就建立支持：熟悉同伴支持和 EFAP，保持 EMS 圈外的友谊"
+    },
+    {
+     "key": "B",
+     "en": "Wait until you have had a difficult call, so you know what kind of support you actually need",
+     "zh": "等真正经历过一趟艰难的任务再说，到那时你才知道自己究竟需要哪种支持"
+    },
+    {
+     "key": "C",
+     "en": "Rely mainly on your crew, since only other paramedics truly understand what the work is like",
+     "zh": "主要依靠班组同事，因为只有同行才真正理解这份工作"
+    },
+    {
+     "key": "D",
+     "en": "Focus on physical fitness first, and look into mental health supports only if problems ever appear",
+     "zh": "先专注体能训练，等真出了问题再去了解心理支持"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "The time to guard against burnout is at the very start of your career: supports built while you are well are the ones you actually use in a crisis, because you already know who to call. Keeping relationships and activities with people outside EMS, and having someone to talk to, are core protections. B is wrong because waiting for a bad call means building a network when you are already depleted. C is wrong because socializing only within EMS narrows your perspective; time with people outside the job is specifically recommended. D is wrong because physical health matters, but treating mental health as a contingency plan reverses the logic of prevention.",
+   "explanationZh": "预防职业倦怠要从入行第一天开始：状态好时建立起来的支持，才是危机中真正用得上的，因为你早就知道该找谁。和 EMS 圈外的人保持来往和共同活动、有人可以倾诉，是最基本的保护。B 错：等出了事再建，等于在最耗竭的时候搭建人脉。C 错：只在同行圈子里来往会让视野变窄，教材特别建议多和圈外的人相处。D 错：身体健康固然重要，但把心理健康当成“出事再说”的备用方案，完全颠倒了预防的逻辑。",
+   "sourceRef": "Nancy Ch 2",
+   "verified": true
+  },
+  {
+   "id": "ppf-072",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E1.2",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "advanced",
+   "questionEn": "You work in a community hit hard by the toxic drug crisis and have responded to the same few blocks for repeated overdoses, including two people you had revived before who later died. You notice yourself becoming numb and cynical toward these patients. What is the best understanding and response?",
+   "questionZh": "你所在的社区受有毒药物危机冲击严重，你反复在同样的几个街区处置过量用药，其中两名你曾救回的人后来还是去世了。你发现自己对这些患者开始变得麻木、愤世嫉俗。最恰当的理解和应对是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "This is normal professional adaptation to a caseload that EMS cannot fix, and needs no action",
+     "zh": "这是面对 EMS 根本无力解决的任务类型时正常的职业适应，不需要做什么"
+    },
+    {
+     "key": "B",
+     "en": "This reflects the patients' own repeated choices, so your frustration is a reasonable reaction",
+     "zh": "这反映的是患者自己一再的选择，你的挫败感是合理的反应"
+    },
+    {
+     "key": "C",
+     "en": "Numbness and cynicism are warning signs of burnout; talk to peer or professional support and debrief",
+     "zh": "麻木和愤世嫉俗是职业倦怠的警示信号；应找同伴或专业支持倾诉，并做复盘"
+    },
+    {
+     "key": "D",
+     "en": "Request a transfer to a station with a different call profile, so the exposure simply stops",
+     "zh": "申请调到任务类型不同的站点，让这种暴露就此停止"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Burnout is a consequence of chronic, unrelieved stress, and cynical, negative attitudes are among its warning signs — signals to stop, reflect, and get support: talk with someone, use peer or professional support, and debrief tough calls. The realities of the community you serve can drive this, and unchecked cynicism also threatens the care of patients who are already stigmatized. A is wrong because calling it normal adaptation ignores a recognized warning sign. B is wrong because blaming patients deepens the cynicism and shows it is already affecting your attitude to care. D is wrong because a transfer may sometimes be reasonable, but it does not deal with the stress you are already carrying.",
+   "explanationZh": "职业倦怠是长期得不到缓解的压力造成的，而愤世嫉俗、消极的态度正是它的警示信号之一——提醒你停下来反思、寻求支持：找人倾诉，利用同伴或专业支持，艰难任务后做复盘。你所服务社区的现实处境可能引发这种状态，而任其发展的愤世嫉俗，也会威胁到本已被污名化的患者所得到的照护。A 错：把它说成正常适应，等于无视一个公认的警示信号。B 错：归咎于患者只会加深愤世嫉俗，也说明它已经在影响你对照护的态度。D 错：调岗有时或许合理，但解决不了你身上已经积累的压力。",
+   "sourceRef": "Nancy Ch 2",
+   "verified": true
+  },
+  {
+   "id": "ppf-078",
+   "licence": "pcp",
+   "cpcfArea": "E",
+   "competency": "E5.1",
+   "cognitive": "knowledge",
+   "population": "unclassified",
+   "topic": "wellbeing",
+   "difficulty": "intermediate",
+   "questionEn": "Which change in a colleague should most urgently prompt you to act on concerns about their well-being?",
+   "questionZh": "同事出现哪种变化时，最需要你紧急就其身心状态采取行动？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Comments suggesting hopelessness, or that colleagues would be better off without them",
+     "zh": "说出流露绝望的话，或表示同事们没有他会过得更好"
+    },
+    {
+     "key": "B",
+     "en": "Becoming noticeably quieter and less social around the station over the past few weeks",
+     "zh": "最近几周在站里明显变得沉默、不太和人来往"
+    },
+    {
+     "key": "C",
+     "en": "Making more dark jokes after difficult calls than they used to, sometimes in front of others",
+     "zh": "艰难任务后比以前更多地开黑色玩笑，有时还当着别人的面"
+    },
+    {
+     "key": "D",
+     "en": "Taking more sick days than usual over the past two months, often right after night shifts",
+     "zh": "过去两个月病假比平时多，而且常在夜班之后请假"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Statements of hopelessness or of others being better off without them suggest suicidal thinking, and every such statement must be taken seriously. Respond immediately: ask directly about suicidal thoughts — asking does not plant the idea — stay with the person, and connect them with crisis support. B is wrong as the most urgent choice because withdrawal is a real warning sign of stress worth acting on, but it does not signal immediate danger. C is wrong because more dark humour is a concern to follow up, not a sign of imminent risk. D is wrong because rising absence deserves a caring conversation, but it lacks the urgency of language suggesting the person may be thinking of ending their life.",
+   "explanationZh": "流露绝望、或说“没有我别人会更好”，提示可能有自杀念头，而任何这类言语都必须认真对待。应立即回应：直接询问对方是否有自杀的想法——问出来并不会让人产生这个念头——陪着对方，并帮他联系危机支持。B 错：退缩是值得关注的应激信号，但并不提示迫在眉睫的危险，不是最紧急的。C 错：黑色玩笑增多需要跟进关心，但不代表即将发生危险。D 错：病假增多值得关切地谈一谈，但紧迫性远不及“可能想结束生命”的言语。",
+   "sourceRef": "Nancy Ch 40",
+   "verified": true
+  },
+  {
+   "id": "ppf-079",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F3.3",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "equity",
+   "difficulty": "advanced",
+   "questionEn": "You attend an Indigenous man with abdominal pain. In the ED, you overhear your partner tell the triage nurse: \"Probably just drinking again — you know how it is with these guys.\" Your patient has no signs of intoxication. What should you do?",
+   "questionZh": "你出勤处置一名腹痛的原住民男性。在急诊，你听到搭档对分诊护士说：\"多半又是喝多了——这些人你懂的。\"而你的患者并无任何醉酒表现。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Say nothing at the hospital, but raise the comment privately with your partner afterward",
+     "zh": "在医院不作声，事后再私下和搭档谈这句话"
+    },
+    {
+     "key": "B",
+     "en": "Tell the nurse now there are no signs of intoxication and give your findings, then address and report it",
+     "zh": "立即告诉护士患者毫无醉酒表现并说明评估发现，随后与搭档沟通并上报"
+    },
+    {
+     "key": "C",
+     "en": "Make sure your own written report is accurate and complete, and let it speak for itself rather than argue",
+     "zh": "确保你自己的书面报告准确完整，让文书本身去说明一切，不必在当场和人争论"
+    },
+    {
+     "key": "D",
+     "en": "Ask the nurse quietly to disregard your partner's comment, without explaining anything further",
+     "zh": "悄悄请护士别理会搭档那句话，不再多作解释"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "An unfounded intoxication label on an Indigenous patient can lower triage priority, delay investigation, and lead to a serious cause of abdominal pain being missed. Working toward reconciliation means identifying and addressing Indigenous-specific racism when it happens: correcting the clinical picture immediately protects this patient, and addressing it with your partner and reporting it through your service's process deals with the pattern. A is wrong because the false label keeps shaping this patient's care while you wait. C is wrong because the nurse is triaging now from what she heard, and the written report may not be read before decisions are made. D is wrong because an unexplained aside does not replace the false information with the actual findings, and leaves the behaviour unaddressed.",
+   "explanationZh": "给原住民患者贴上毫无根据的“醉酒”标签，可能降低分诊等级、延误检查，导致腹痛的严重病因被漏诊。推进和解，意味着在原住民特定的种族歧视发生时及时识别和处理：立即纠正临床信息保护的是眼前这位患者，随后与搭档沟通并按机构流程上报，处理的是这种模式本身。A 错：在你等待的时候，这个错误标签一直在影响患者的照护。C 错：护士此刻就在根据她听到的话分诊，书面报告未必能在决策之前被看到。D 错：一句不加解释的私下提醒，并没有用真实的评估发现取代错误信息，搭档的行为也没有得到处理。",
+   "sourceRef": "CPCF F3.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-080",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F2.2",
+   "cognitive": "knowledge",
+   "population": "adult",
+   "topic": "trauma-informed",
+   "difficulty": "intermediate",
+   "questionEn": "Which action best reflects a trauma-informed approach when assessing a patient who appears highly guarded and reluctant to be touched?",
+   "questionZh": "在评估一位显得高度戒备、抗拒被触碰的患者时，哪种做法最能体现创伤知情（trauma-informed）的照护方式？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Ask her gently what happened to her in the past, so you can understand her reaction to care",
+     "zh": "温和地问她过去经历过什么，以便理解她为什么会对照护有这样的反应"
+    },
+    {
+     "key": "B",
+     "en": "Complete the assessment as quickly as possible, to keep the time she feels distressed short",
+     "zh": "尽快完成评估，把她感到不适的时间缩到最短"
+    },
+    {
+     "key": "C",
+     "en": "Explain each step first, ask before touching, offer choices, and let her stop at any time",
+     "zh": "每一步先说明，触碰前先征得同意，给她选择，并允许她随时叫停"
+    },
+    {
+     "key": "D",
+     "en": "Have a paramedic of the same gender do the assessment instead, then proceed with the usual exam",
+     "zh": "改由同性别的救护员来评估，然后照常检查"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Trauma-informed care rests on safety, choice, and control — restoring the sense of agency that trauma takes away. Explaining before acting, asking permission, offering options, and honouring her right to stop achieve this whatever her history is. A is wrong because probing for the traumatic event risks re-traumatizing her and is not needed to care for her. B is wrong because rushing takes away the very control she needs. D is wrong because a same-gender provider can be offered as a choice, but swapping without asking and then carrying on as usual misses the core principle.",
+   "explanationZh": "创伤知情照护建立在安全感、选择权和掌控感之上——也就是恢复被创伤夺走的自主感。先说明再动手、征得同意、提供选择、尊重她随时叫停的权利，无论她有怎样的经历都适用。A 错：追问创伤经历有再次伤害她的风险，而且照护她并不需要知道这些。B 错：匆忙操作恰恰剥夺了她最需要的掌控感。D 错：同性别的救护员可以作为一个选项提供给她，但不问她的意见就换人、然后照常检查，没有抓住核心原则。",
+   "sourceRef": "CPCF F2.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-081",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F1.4",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "advocacy",
+   "difficulty": "intermediate",
+   "questionEn": "An 82-year-old woman calls 911 for the third time in six weeks after falls. Her home has loose rugs, no grab bars, poor lighting, and she tells you her son visits only monthly. She is uninjured today and refuses transport. What is the most appropriate action?",
+   "questionZh": "一位 82 岁的女性六周内第三次因跌倒拨打 911。她家里地毯松脱、没有扶手、照明昏暗，她说儿子每月才来一次。她今天没有受伤，并拒绝转运。最恰当的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Document the refusal and advise her to see her family doctor about the falls when she can",
+     "zh": "记录她拒绝转运，并建议她有空时就跌倒问题去看家庭医生"
+    },
+    {
+     "key": "B",
+     "en": "Explain that she will keep falling and getting hurt unless she agrees to move into an assisted-living facility",
+     "zh": "告诉她除非同意搬进辅助生活机构，否则还会继续摔倒"
+    },
+    {
+     "key": "C",
+     "en": "With her consent, fix the hazards you can, and refer her to falls-prevention or community services",
+     "zh": "征得她同意后，处理力所能及的隐患，并把她转介给防跌倒或社区服务"
+    },
+    {
+     "key": "D",
+     "en": "Phone her son and tell him he needs to visit more often, since she clearly needs more help",
+     "zh": "打电话给她儿子，告诉他需要多来看望，因为她显然需要更多帮助"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Working with patients on the determinants affecting their health — here, environmental hazards such as loose rugs and poor lighting, which are common causes of falls in older adults, plus thin social support — means acting on the causes, not just the latest fall. Removing hazards you can see and referring her into community falls-prevention, home health, or community paramedicine services, then documenting the hazards and the referral, addresses the risk of a fourth call. A is wrong because documenting a refusal changes nothing about why she keeps falling. B is wrong because pressuring her toward assisted living overrides her autonomy when other options exist. D is wrong because contacting her son without her consent goes around her and discloses her health information.",
+   "explanationZh": "与患者一同应对影响其健康的因素——这里是松脱的地毯、昏暗的照明等环境隐患（老年人跌倒的常见外因），以及薄弱的社会支持——意味着处理根源，而不只是处理这一次跌倒。当场清除看得见的隐患，再把她转介给社区防跌倒、居家健康或社区辅助医疗服务，并记录隐患和转介情况，才能应对第四次呼救的风险。A 错：只记录拒绝转运，改变不了她反复跌倒的原因。B 错：明明还有别的办法，却施压让她搬去辅助生活机构，侵犯了她的自主权。D 错：未经她同意就联系儿子，既绕开了她本人，也泄露了她的健康信息。",
+   "sourceRef": "CPCF F1.4; Nancy Ch 45",
+   "verified": true
+  },
+  {
+   "id": "ppf-082",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F1.2",
+   "cognitive": "critical",
+   "population": "adult",
+   "topic": "equity",
+   "difficulty": "advanced",
+   "questionEn": "Reviewing your own practice, you realize you tend to ask fewer questions and spend less time on scene with patients who are visibly homeless. What does professional self-awareness require of you?",
+   "questionZh": "复盘自己的执业时，你意识到面对明显无家可归的患者，自己往往问得更少、在现场停留的时间也更短。职业自我觉察要求你怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Acknowledge it as a bias, examine where it comes from, and apply the same assessment standard to all",
+     "zh": "承认这是一种偏见，反思它从何而来，并对所有患者采用同样的评估标准"
+    },
+    {
+     "key": "B",
+     "en": "Accept it as a realistic adaptation, since these patients often decline a detailed assessment",
+     "zh": "把它当成一种务实的调整，反正这类患者本来就常常不愿意接受详细的评估"
+    },
+    {
+     "key": "C",
+     "en": "Conclude that the pattern reflects genuine differences in how serious these calls tend to be",
+     "zh": "认定这种模式反映的是这类任务在严重程度上的真实差异"
+    },
+    {
+     "key": "D",
+     "en": "Ask your partner to lead assessments with these patients from now on, to keep care consistent",
+     "zh": "今后让搭档主导对这类患者的评估，以保持照护一致"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Practising self-awareness to minimize personal and cognitive bias means naming the bias, understanding where it comes from, and correcting your behaviour with one consistent standard — then monitoring yourself over time. B is wrong because assuming these patients will decline is part of the bias; it is the reason for asking less, not a justification. C is wrong because people experiencing homelessness carry a higher, not lower, burden of undetected illness, so a shorter assessment is exactly how serious conditions get missed. D is wrong because handing these patients to your partner outsources a problem that is yours to fix and leaves your own practice unchanged.",
+   "explanationZh": "以自我觉察来减少个人偏见和认知偏差，意味着直面这种偏见、弄清它的来源，用统一的标准纠正自己的行为，并持续自我监测。B 错：认定这类患者会拒绝，本身就是偏见的一部分——它是你问得少的原因，而不是理由。C 错：无家可归者未被发现的疾病负担更高而不是更低，评估缩水恰恰是漏诊严重疾病的方式。D 错：把这类患者交给搭档，是把本该由你自己解决的问题外包出去，你自己的做法一点没变。",
+   "sourceRef": "CPCF F1.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-083",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F1.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "equity",
+   "difficulty": "intermediate",
+   "questionEn": "A patient with a serious infection tells you she has been treating it with traditional medicines from her community and wants to continue alongside hospital care. How should you respond?",
+   "questionZh": "一位患有严重感染的患者告诉你，她一直在用本社区的传统药物治疗，并希望在接受医院治疗的同时继续使用。你应该如何回应？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Explain that traditional remedies are unproven, and advise her to stop them during treatment",
+     "zh": "解释传统疗法未经证实，建议她治疗期间停用"
+    },
+    {
+     "key": "B",
+     "en": "Say nothing about it, since it is not relevant to the prehospital care you are providing",
+     "zh": "不予置评，因为这与你提供的院前处置无关"
+    },
+    {
+     "key": "C",
+     "en": "Ask respectfully what she uses and when, record it, pass it on at handover, and support her wish",
+     "zh": "尊重地询问她用了什么、何时用的，做好记录，交接时转达，并支持她的意愿"
+    },
+    {
+     "key": "D",
+     "en": "Advise her to keep the traditional treatments to herself, so the hospital staff take her symptoms seriously",
+     "zh": "建议她别向医院提起自己在用传统疗法，免得医护人员不把她的症状当回事"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Showing respect and humility, and bringing the patient's own understanding of health and healing into her care, means treating traditional medicine as legitimate context — clinically relevant because substances may interact, and culturally important to her. Her hospital team can then plan with her how to combine the two. A is wrong because dismissing it damages trust and often just drives the practice out of sight. B is wrong because ignoring it loses real clinical information. D is wrong because advising concealment actively teaches her to hide information from the team caring for her.",
+   "explanationZh": "展现尊重与谦逊、把患者自己对健康与疗愈的理解纳入照护，意味着把传统医药当作正当的背景信息——它有临床意义（成分可能存在相互作用），对她也有文化上的重要性。这样医院团队才能和她一起商量如何结合两种疗法。A 错：轻视传统医药会损害信任，往往只会让她转为偷偷使用。B 错：不闻不问会丢掉真实的临床信息。D 错：建议她隐瞒，等于主动教她向照护团队隐藏信息。",
+   "sourceRef": "CPCF F1.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-085",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F2.3",
+   "cognitive": "application",
+   "population": "geriatric",
+   "topic": "equity",
+   "difficulty": "intermediate",
+   "questionEn": "An Elder from a remote community requires transport to a regional hospital four hours away. She is anxious about going alone — she has no family in that city and speaks limited English. What is the best action?",
+   "questionZh": "一位来自偏远社区的长者需要转运到四小时车程外的地区医院。她对独自前往感到焦虑——她在那座城市没有家人，英语能力也有限。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Reassure her warmly that the hospital staff will take good care of her once she gets there",
+     "zh": "温和地安慰她，到了医院工作人员自然会好好照顾她"
+    },
+    {
+     "key": "B",
+     "en": "Explain that ambulances cannot take passengers, so she will need to arrange her own support",
+     "zh": "说明救护车不能搭载随行人员，她需要自己安排支持"
+    },
+    {
+     "key": "C",
+     "en": "Ask whether a support person can come, and alert the hospital to her language and support needs",
+     "zh": "问问能否有一位支持者陪同，并提前告知医院她的语言和支持需求"
+    },
+    {
+     "key": "D",
+     "en": "Suggest she decline the transfer and look for care closer to home, where she has family",
+     "zh": "建议她拒绝转院，改在离家近、有家人的地方就医"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Adjusting care to promote equitable outcomes means actively removing the barriers she faces — isolation, language, and distance from her community. Asking about an escort, notifying the receiving hospital so interpretation and an Indigenous patient navigator can be arranged, and passing her concerns on at handover turn a foreseeable bad experience into accessible care. A is wrong because general reassurance removes none of these barriers. B is wrong because it states a blanket rule without checking your service's escort policy. D is wrong because steering her away from care she needs makes the very inequity worse.",
+   "explanationZh": "调整照护以促进公平结局，意味着主动清除她面临的障碍——孤立无援、语言不通、远离自己的社区。询问能否有人陪同，提前通知接收医院以便安排翻译和原住民患者协导员，并在交接时转达她的顾虑，能把一次可以预见的糟糕经历变成可及的照护。A 错：泛泛的安慰解决不了任何一个障碍。B 错：没有查机构的随行政策就断言不能陪同。D 错：劝她放弃所需的治疗，只会加剧本来就存在的不公平。",
+   "sourceRef": "CPCF F2.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-086",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F1.1",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "equity",
+   "difficulty": "intermediate",
+   "questionEn": "Your patient's chart lists a name and sex marker that do not match how the patient introduces themselves. They give you a different name and use they/them pronouns. What should you do?",
+   "questionZh": "患者病历上的姓名和性别标记与其自我介绍不符。对方告诉你另一个名字，并使用 they/them 代词。你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Use the name and pronouns they give, record it alongside the legal name, and use it at handover",
+     "zh": "使用患者告知的姓名和代词，同时记下法定姓名，交接时也这样称呼"
+    },
+    {
+     "key": "B",
+     "en": "Use the legal name on the chart throughout, so the medical record stays clear, consistent, and accurate",
+     "zh": "全程使用病历上的法定姓名，这样医疗记录才能保持清晰、一致和准确"
+    },
+    {
+     "key": "C",
+     "en": "Avoid using any name or pronouns at all during the call, so that you stay completely neutral",
+     "zh": "整个出勤过程中完全不用任何姓名或代词，保持绝对中立"
+    },
+    {
+     "key": "D",
+     "en": "Record only the name the patient gives you, and leave the legal name out of your report",
+     "zh": "报告里只写患者告知的姓名，不写法定姓名"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Contributing to culturally safe care for equity-deserving groups means using the patient's name and pronouns as a baseline of respect, while documenting both identifiers so records, medications, and results link correctly. B is wrong because defaulting to the legal name is a well-known source of distress and disengagement from care, and it is unnecessary when both names are recorded. C is wrong because avoiding names altogether is awkward, still othering, and can cause identification errors. D is wrong because leaving out the legal name risks mismatched records, results, and medications in the health system.",
+   "explanationZh": "为应受公平对待的群体营造文化安全的照护，意味着把使用患者自己的姓名和代词作为基本尊重，同时记录两个身份标识，确保病历、用药和检验结果能正确对应。B 错：一律用法定姓名是众所周知会让患者痛苦、疏远医疗的做法，而且两个名字都记录下来就不存在混乱问题。C 错：完全回避称呼既别扭，仍然让人感到被区别对待，还可能造成身份识别错误。D 错：不写法定姓名，可能在医疗系统里造成病历、检验结果和用药的错配。",
+   "sourceRef": "CPCF F1.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-087",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F1.5",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "advocacy",
+   "difficulty": "intermediate",
+   "questionEn": "You respond to a non-fatal opioid overdose. After naloxone the patient is alert and oriented. You explain that the naloxone may wear off before the opioid does and urge him to come to hospital, but he has capacity and still refuses. What is the most valuable harm-reduction step before you leave?",
+   "questionZh": "你出勤处置一起非致死性阿片类药物过量。使用纳洛酮（naloxone）后，患者神志清楚、定向力正常。你向他解释纳洛酮的作用可能比阿片类药物先消退，并劝他去医院，但他具备决定能力，仍然拒绝。离开前最有价值的减低伤害措施是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Warn him clearly that the next overdose could kill him, so fear will motivate him to stop using",
+     "zh": "明确警告他下一次过量可能会要命，让恐惧促使他戒掉"
+    },
+    {
+     "key": "B",
+     "en": "Arrange for someone to stay with him, point him to a free naloxone kit, and advise never using alone",
+     "zh": "安排有人陪着他，告诉他去哪里免费领纳洛酮急救包，并劝他绝不要独自用药"
+    },
+    {
+     "key": "C",
+     "en": "Spend the remaining time persuading him to enter a treatment program before you clear the scene",
+     "zh": "把剩下的时间都用来劝他参加戒治项目，然后再撤离"
+    },
+    {
+     "key": "D",
+     "en": "Document the refusal thoroughly and clear the scene, since he has now made an informed choice",
+     "zh": "把拒绝过程详细记录下来就撤离，毕竟他已经在充分知情的情况下作出了选择"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Naloxone has a shorter half-life than many opioids, so a patient can slip back into respiratory depression after it wears off; that is why patients should generally not be left after naloxone, and why you first urge transport. When a capable adult still refuses, health promotion means reducing his risk of dying in the next hours: someone with him who can call 911 and give naloxone, a free take-home naloxone kit, never using alone, and clear advice to call back. A is wrong because fear-based warnings rarely change behaviour. C is wrong because pressing treatment on someone not seeking it usually ends the conversation, and it does nothing about tonight's risk. D is wrong because documentation alone leaves him no safer if he re-sedates alone.",
+   "explanationZh": "纳洛酮（naloxone）的半衰期比许多阿片类药物短，药效消退后患者可能再次出现呼吸抑制；所以原则上用过纳洛酮的患者不应留在现场，你也应先劝他转运。如果有决定能力的成年人仍然拒绝，健康促进就是降低他接下来几小时内的死亡风险：有人陪着他、能打 911 并给纳洛酮，告诉他去哪里免费领纳洛酮急救包，劝他绝不要独自用药，并明确告诉他需要时再呼叫。A 错：恐吓式警告很少能改变行为。C 错：向没有意愿的人硬推戒治往往会终结对话，而且对今晚的风险毫无帮助。D 错：只做记录，他一旦独自再次昏迷，并不会比你来之前更安全。",
+   "sourceRef": "Nancy Ch 36",
+   "verified": true
+  },
+  {
+   "id": "ppf-088",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F2.4",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "equity",
+   "difficulty": "advanced",
+   "questionEn": "At your station, a senior paramedic regularly refers to patients from a particular neighbourhood as \"the usual garbage from down there.\" Newer staff have started using the phrase too. What is the most effective response?",
+   "questionZh": "在你所在的站点，一位资深救护员经常把某个街区来的患者称作\"那边惯常的垃圾\"。新入职的员工也开始跟着这么说了。最有效的应对是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Refuse to use the phrase yourself, and hope the newer staff gradually follow your quiet example",
+     "zh": "自己坚决不用这种说法，希望新员工慢慢以你为榜样"
+    },
+    {
+     "key": "B",
+     "en": "Call it out calmly each time — “we don't talk about patients that way” — and escalate if it persists",
+     "zh": "每次听到都平静地指出——“我们不这样说患者”——情况持续就向上反映"
+    },
+    {
+     "key": "C",
+     "en": "Report the senior paramedic to the regulator for unprofessional conduct, so the behaviour stops for good",
+     "zh": "以不专业行为向监管机构举报这位资深救护员，让这种行为停止"
+    },
+    {
+     "key": "D",
+     "en": "Avoid working shifts with that paramedic where possible, so you are not part of the culture",
+     "zh": "尽量避免和他同班，免得自己成为这种文化的一部分"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Challenging biases that marginalize a community requires visible action, because silence is read as agreement — which is exactly how the phrase spread to newer staff. Naming it calmly in the moment, without attacking the person, resets the norm and gives juniors permission to object too; raising an entrenched pattern with leadership addresses the culture. A is wrong because quiet modelling is not enough to counter a norm that is actively spreading. C is wrong because going straight to the regulator skips every reasonable step, from a direct word to raising it with leadership. D is wrong because avoidance leaves the newer staff with only one example to follow and the norm unchallenged.",
+   "explanationZh": "挑战那些边缘化某个社区的偏见，需要看得见的行动，因为沉默会被当成默许——新员工正是这样跟着学的。当场平和地、不针对个人地指出来，能够重置规范，也让资历浅的同事有底气表达异议；对已经固化的模式，向管理层反映才能处理文化层面的问题。A 错：仅靠默默以身作则，抵挡不了一个正在扩散的群体规范。C 错：直接举报到监管机构，跳过了从当面提醒到向管理层反映的所有合理步骤。D 错：一味回避，新员工就只剩一个榜样可学，这种风气也无人挑战。",
+   "sourceRef": "CPCF F2.4",
+   "verified": true
+  },
+  {
+   "id": "ppf-090",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F1.6",
+   "cognitive": "application",
+   "population": "pediatric",
+   "topic": "advocacy",
+   "difficulty": "intermediate",
+   "questionEn": "A mother with two young children calls for her child's asthma exacerbation. During the call you notice the apartment is cold, visibly mouldy, and she mentions the landlord has ignored repair requests for months. What is the most appropriate advocacy action?",
+   "questionZh": "一位带着两个幼儿的母亲因孩子哮喘发作呼救。出勤中你注意到公寓寒冷、有明显霉斑，她还提到房东几个月来对维修请求置之不理。最恰当的倡导行动是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Advise her to move to better housing as soon as she can, for the sake of the children's health",
+     "zh": "为了孩子的健康，建议她尽快搬到更好的住处"
+    },
+    {
+     "key": "B",
+     "en": "Treat the child, document the housing conditions, and with her consent connect her to supports",
+     "zh": "处理孩子的发作，记录居住条件，并在她同意后为她对接支持服务"
+    },
+    {
+     "key": "C",
+     "en": "Contact the landlord yourself on her behalf to demand that the mould and heating be repaired",
+     "zh": "你亲自代她联系房东，要求修好霉菌和供暖问题"
+    },
+    {
+     "key": "D",
+     "en": "Report the housing conditions to child protection services as a safety concern for the children",
+     "zh": "以孩子的安全受到威胁为由，向儿童保护机构举报这家人的居住条件"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Advocating with families to reduce environmental determinants of health means connecting them to the people with the authority you lack: your documentation carries the finding forward to the hospital team, and consented referrals — an ED social worker, tenant advocacy, or public health — can push for action on mould and heating. A is wrong because it ignores why she has not moved: cost and the lack of alternatives. C is wrong because contacting the landlord yourself is outside your role and could expose her to retaliation. D is wrong because landlord neglect is not parental neglect; a child-protection report here would punish a mother for poverty (signs of actual neglect or abuse would be a different matter).",
+   "explanationZh": "与家庭一起倡导、减少环境方面的健康决定因素，意味着把他们对接给拥有你所没有的权限的人：你的记录会把这一发现带给医院团队，而经她同意的转介——急诊社工、租客权益服务或公共卫生部门——才能推动霉菌和供暖问题的解决。A 错：这忽略了她为什么一直没搬——房租负担和没有别的选择。C 错：亲自去找房东超出了你的职责，还可能让她遭到报复。D 错：房东失职不等于父母疏忽，在这种情况下举报儿童保护，等于因为贫穷而惩罚一位母亲（如果确有疏忽或虐待迹象则另当别论）。",
+   "sourceRef": "CPCF F1.6",
+   "verified": true
+  },
+  {
+   "id": "ppf-091",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F2.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "trauma-informed",
+   "difficulty": "intermediate",
+   "questionEn": "A woman with visible injuries is evasive about how they occurred, and her partner stays close and answers for her. Applying a trauma-informed approach, what should you do?",
+   "questionZh": "一位身上有明显外伤的女性对受伤经过含糊其辞，她的伴侣一直紧挨着她并替她回答。基于创伤知情的照护方式，你应该怎么做？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Ask her directly, in front of her partner, whether someone at home is hurting her, so that nothing stays hidden",
+     "zh": "当着伴侣的面直接问她家里是否有人伤害她，把事情摆到台面上说清楚"
+    },
+    {
+     "key": "B",
+     "en": "Find a chance to talk with her alone, ask without judgment, offer resources, and share concerns at handover",
+     "zh": "找机会单独与她交谈，不带评判地询问，提供资源，交接时转达担忧"
+    },
+    {
+     "key": "C",
+     "en": "Tell her firmly that she must come to hospital, where she will be properly assessed and kept safe",
+     "zh": "坚决告诉她必须去医院，在那里她才能得到妥善评估和保护"
+    },
+    {
+     "key": "D",
+     "en": "Tell the partner you suspect abuse and that police will be called, so she knows she is protected",
+     "zh": "告诉她伴侣你怀疑有虐待、并会报警，让她知道自己受到保护"
+    }
+   ],
+   "answer": "B",
+   "explanationEn": "Victims of intimate partner violence are often evasive and may protect the abuser. A trauma-informed approach centres safety, trust, and control: find an ordinary clinical reason to speak with her alone (for example, in the ambulance), be non-judgmental and supportive, give her as much control as possible, encourage her to think about where she could go or whom she could call, and pass your concerns on at handover. If she declines transport, ask whether it is safe to leave information about services. A is wrong because asking in front of the partner can trigger retaliation, and she is unlikely to answer honestly. C is wrong because ordering a capable adult to hospital removes her control. D is wrong because confronting a possible abuser escalates danger to her and to your crew; scene safety comes first, and police are involved through safe channels.",
+   "explanationZh": "亲密伴侣暴力的受害者常常含糊其辞，甚至会维护施暴者。创伤知情的做法以安全、信任和掌控感为核心：借一个寻常的临床理由与她单独交谈（比如在救护车里），不评判、多支持，尽量让她掌握主动，鼓励她想想可以去哪里、可以找谁求助，并在交接时转达你的担忧。如果她拒绝转运，问问留下相关服务的资料是否安全。A 错：当着伴侣的面问，可能招致报复，她也不太可能如实回答。C 错：命令一位有决定能力的成年人去医院，剥夺了她的掌控感。D 错：当面质问可能的施暴者，会让她和班组都陷入更大的危险；现场安全永远第一，报警应通过安全的方式进行。",
+   "sourceRef": "Nancy Ch 46",
+   "verified": true
+  },
+  {
+   "id": "ppf-095",
+   "licence": "pcp",
+   "cpcfArea": "F",
+   "competency": "F2.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "equity",
+   "difficulty": "intermediate",
+   "questionEn": "A patient with possible cardiac chest pain speaks little English. You need her consent for a 12-lead ECG and ASA. Her teenage son is present and offers to interpret. What is the best approach?",
+   "questionZh": "一位疑似心源性胸痛的患者英语能力有限。你需要征得她同意，为她做 12 导联心电图并给予阿司匹林（ASA）。她十几岁的儿子在场，主动提出帮忙翻译。最佳做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Accept the son's help for the whole conversation, since she trusts him and he knows her history",
+     "zh": "整个沟通都请儿子翻译，因为她信任儿子，而且儿子也了解她的病史"
+    },
+    {
+     "key": "B",
+     "en": "Use simple English with gestures and demonstration, and go ahead once she nods in agreement",
+     "zh": "用简单英语配合手势和示范，她一点头就开始操作"
+    },
+    {
+     "key": "C",
+     "en": "Use a professional phone interpreter for the consent talk, relying on the son only for urgent basics",
+     "zh": "用专业电话翻译完成同意沟通，接通前只借助儿子传达紧急信息"
+    },
+    {
+     "key": "D",
+     "en": "Hold off on the ECG and ASA until she reaches hospital, where in-person interpreters are readily available",
+     "zh": "心电图和阿司匹林都等她到了医院、有现场翻译时再做"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "The first resource for a language barrier is an interpreter, and many EMS services have telephone interpretation for exactly this. A child is a poor interpreter for consent — someone older and less emotionally involved is better — so use the son only for urgent basics until the interpreter is connected. This gives her the same quality of informed consent a fluent English speaker would get. A is wrong because a teenager may soften or leave out information and carries an unfair burden in his mother's emergency. B is wrong because a nod after a few words of English is not informed consent; your gestures are no substitute for an interpreter. D is wrong because the ECG and ASA are time-sensitive for possible cardiac chest pain, and delaying care because of language is itself an inequitable outcome.",
+   "explanationZh": "遇到语言障碍，首先要找的是翻译，很多 EMS 机构都有电话翻译服务，正是为这种情况准备的。孩子并不适合为知情同意做翻译——年纪大一些、情感牵连少一些的人更好——所以在接通翻译之前，只借助儿子传达紧急的基本信息。这样她才能得到和英语流利者同样质量的知情同意。A 错：十几岁的孩子可能会弱化或漏掉信息，在母亲的急症中让他承担这个角色也不公平。B 错：说几句英语后对方点头并不等于知情同意，手势比划代替不了翻译。D 错：对疑似心源性胸痛来说，心电图和阿司匹林（ASA）都有时间要求，因为语言问题推迟处置本身就是一种不公平。",
+   "sourceRef": "Nancy Ch 15",
+   "verified": true
+  },
+  {
+   "id": "ppf-096",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G2.1",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "incident-command",
+   "difficulty": "intermediate",
+   "questionEn": "You are the first unit to arrive at a highway bus rollover. Multiple people are out of the bus, several are still inside, and traffic is still moving past. Fire and police are minutes away. What should you do first?",
+   "questionZh": "你是第一个到达高速公路大巴侧翻现场的单元。多人已从车内出来，还有几人被困车内，车流仍在旁边通行。消防和警方还有几分钟才到。你首先应该做什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Begin treating the most seriously injured patient you can reach, since every minute counts",
+     "zh": "立即救治你能接触到的伤势最重的伤员，因为在这种现场每一分钟都很关键"
+    },
+    {
+     "key": "B",
+     "en": "Enter the bus to find out exactly how many people are trapped before you call anything in",
+     "zh": "先进入车内弄清到底有多少人被困，再呼叫任何支援"
+    },
+    {
+     "key": "C",
+     "en": "Wait for fire and police to arrive before setting up any kind of command structure on scene",
+     "zh": "等消防和警方到场后再建立任何形式的现场指挥"
+    },
+    {
+     "key": "D",
+     "en": "Assume command: give a radio size-up, request resources, identify hazards, and begin triage",
+     "zh": "承担指挥：无线电通报现场概况，请求资源，识别危险，开始检伤分类"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "The first unit at a multiple-casualty incident sizes up the scene — what do I have, what do I need to do, what resources do I need — reports it, and assumes command until relieved. Safety, early resource requests, and triage do the greatest good; individual treatment waits. A is wrong because committing to one patient leaves the others uncounted and the scene with no commander. B is wrong because entering an unstable bus with traffic still moving puts you at risk and delays the resource request. C is wrong because command should be established early by the first arriving responder, and waiting wastes the minutes when it matters most.",
+   "explanationZh": "多人伤亡事件中，第一个到场的单元要先评估现场——有什么情况、需要做什么、需要哪些资源——通报出去，并承担指挥直到被接替。保障安全、尽早请求资源、开始检伤分类，才能发挥最大效益；个体救治要往后放。A 错：投入救治某一个人，其他伤员就没人清点，现场也没有了指挥。B 错：车流还在通行时进入尚未稳定的车厢，会让自己陷入危险，还延误了资源请求。C 错：指挥应由首个到场的人员尽早建立，干等只会浪费最关键的那几分钟。",
+   "sourceRef": "Nancy Ch 50",
+   "verified": true
+  },
+  {
+   "id": "ppf-097",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G2.2",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "incident-command",
+   "difficulty": "foundation",
+   "questionEn": "At a house fire you are told two occupants are unaccounted for and one rescued person is in respiratory distress. You have one ambulance on scene. When should you request additional resources?",
+   "questionZh": "在一处住宅火灾现场，你被告知有两名住户下落不明，一名已获救者出现呼吸窘迫。现场只有你们一辆救护车。你应该在什么时候请求增援？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Immediately, based on the possible number of patients, since units can be cancelled later",
+     "zh": "立即请求，依据是可能的伤员人数——用不上可以之后再取消"
+    },
+    {
+     "key": "B",
+     "en": "Once the missing occupants have been located and their condition has been confirmed",
+     "zh": "等找到下落不明的住户、确认他们的伤情之后"
+    },
+    {
+     "key": "C",
+     "en": "After you have completed a full assessment of the patient already in front of you",
+     "zh": "在完成对眼前这位患者的全面评估之后"
+    },
+    {
+     "key": "D",
+     "en": "When the fire department's incident commander tells you that more units are needed",
+     "zh": "等消防的现场指挥官明确告诉你需要再多调几辆救护车的时候"
+    }
+   ],
+   "answer": "A",
+   "explanationEn": "Deciding what resources you need is part of the initial scene size-up. Resources take time to arrive, so the request is based on the potential patient load, not the confirmed one: over-requesting costs a cancellation, under-requesting costs a patient waiting with no ambulance. B is wrong because by the time the missing occupants are found and assessed, the extra units are still many minutes away. C is wrong because finishing one patient's assessment first delays a request that should go out on arrival. D is wrong because recognizing the need for medical resources is your job; waiting for another agency to prompt you only adds delay.",
+   "explanationZh": "判断需要哪些资源，本来就是初步现场评估的一部分。资源到场需要时间，所以请求要基于可能的伤员规模，而不是已确认的人数：多请求的代价只是取消一次，请求不足的代价则是有患者等不到救护车。B 错：等找到并评估完失踪住户，增援车辆还要很多分钟才能到。C 错：先评估完一位患者再请求，会延误本该一到场就发出的请求。D 错：识别医疗资源需求是你的职责，等别的部门提醒只会增加延误。",
+   "sourceRef": "Nancy Ch 50",
+   "verified": true
+  },
+  {
+   "id": "ppf-098",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G2.3",
+   "cognitive": "application",
+   "population": "adult",
+   "topic": "incident-command",
+   "difficulty": "intermediate",
+   "questionEn": "You are running a multi-casualty scene. Two additional PCP crews and four first responders have just arrived and are looking to you. What is the most effective way to deploy them?",
+   "questionZh": "你正在指挥一个多人伤亡现场。刚到的两组 PCP 和四名先遣急救员正望向你等待指示。最有效的部署方式是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Send them to the most seriously injured patients and let them organize the work among themselves",
+     "zh": "派他们去处理伤势最重的那几名伤员，到了那里再让他们自己商量着分工"
+    },
+    {
+     "key": "B",
+     "en": "Send each crew to a different part of the scene to search for and treat patients on their own",
+     "zh": "把每组派到现场不同区域，各自寻找并处理伤员"
+    },
+    {
+     "key": "C",
+     "en": "Ask each arriving crew which task they would prefer, so people work where they feel strongest",
+     "zh": "问每个到场班组想承担什么任务，让大家做自己最擅长的事"
+    },
+    {
+     "key": "D",
+     "en": "Give each crew a specific task by name, state who reports to whom, and confirm each is understood",
+     "zh": "按车组点名分派具体任务，说明谁向谁汇报，并确认每组都已理解"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Assigning responsibilities means explicit, confirmed tasks with a clear reporting structure; the incident command system exists to prevent duplicated effort and freelancing, where units make independent, often inefficient decisions. A is wrong because letting crews organize themselves is freelancing and duplicates effort on the same patients. B is wrong because independent searching leaves no one with a coherent picture of who is where. C is wrong because preference-based assignment can leave critical roles, such as transport coordination, unfilled.",
+   "explanationZh": "分派职责意味着明确的、经过确认的任务分配和清晰的汇报关系；事故指挥系统（ICS）的存在，就是为了防止重复劳动和各自为战（freelancing），即各单元各自作出往往低效的决定。A 错：让各组自行分工就是各自为战，会在同几名伤员身上重复用力。B 错：各自搜寻会让谁也掌握不了“谁在哪里”的完整图景。C 错：按个人意愿分工，可能让转运协调等关键角色无人承担。",
+   "sourceRef": "Nancy Ch 50",
+   "verified": true
+  },
+  {
+   "id": "ppf-099",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G2.4",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "incident-command",
+   "difficulty": "advanced",
+   "questionEn": "You are treating a patient in an apartment when you notice the man who called 911 has moved between you and the only door, his voice is rising, and he keeps putting his hand in his jacket pocket. What is the priority action?",
+   "questionZh": "你正在一间公寓内处置患者，此时注意到打 911 的那名男子已挪到你与唯一出口之间，说话声调不断升高，并反复把手伸进夹克口袋。首要行动是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Keep treating the patient while your partner talks with the man and tries to calm him down and distract him",
+     "zh": "继续救治患者，由搭档和该男子交谈，设法让他平静下来、分散他的注意力"
+    },
+    {
+     "key": "B",
+     "en": "Ask the man directly what he has in his pocket, so you know whether there is a real threat",
+     "zh": "直接问他口袋里是什么，弄清是否真的有威胁"
+    },
+    {
+     "key": "C",
+     "en": "Speed up your treatment so you can package the patient and leave as quickly as possible",
+     "zh": "加快处置速度，尽快打包患者撤离"
+    },
+    {
+     "key": "D",
+     "en": "Signal your partner, move toward the exit, call police, and leave — with the patient only if safe",
+     "zh": "暗号提醒搭档，向出口移动，呼叫警察并撤离——安全时才带上患者"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Situational awareness means acting the moment the risk picture changes. Never let someone come between you and your exit; call for law enforcement, and leave immediately if you or your partner are in danger — taking the patient only if that can be done safely. A is wrong because it splits the crew while you remain cut off from the only door. B is wrong because challenging him about the pocket can trigger the very assault you fear. C is wrong because packaging takes minutes, during which you remain trapped while the situation escalates.",
+   "explanationZh": "情境意识，意味着风险一变化就立即行动。绝不能让对方挡在你和出口之间；要呼叫执法人员，一旦你或搭档有危险就立即撤离——只有能安全做到时才带上患者。A 错：这会让班组分散，而你仍然被堵在唯一的出口之内。B 错：当面质问口袋里是什么，可能正好引发你担心的袭击。C 错：打包患者需要好几分钟，这段时间你一直被困，而局势还在升级。",
+   "sourceRef": "Nancy Ch 4",
+   "verified": true
+  },
+  {
+   "id": "ppf-100",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G1.1",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "leadership",
+   "difficulty": "foundation",
+   "questionEn": "A newly licensed paramedic joins your station. She is visibly nervous and hesitant to ask questions. What best supports her integration?",
+   "questionZh": "一位刚取得执照的救护员加入你所在的站点。她明显紧张，也不太敢提问。什么做法最有助于她融入？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Give her space to find her feet on her own, without drawing extra attention to her nerves",
+     "zh": "给她空间自己适应，不要特别关注她的紧张"
+    },
+    {
+     "key": "B",
+     "en": "Assign her only straightforward calls until her confidence improves, to protect both her and her patients",
+     "zh": "在她建立信心之前只给她安排简单的任务，保护她也保护患者"
+    },
+    {
+     "key": "C",
+     "en": "Reassure her that everyone struggles at first, and that it gets easier with time and experience",
+     "zh": "安慰她说人人刚开始都很难，时间和经验多了就好了"
+    },
+    {
+     "key": "D",
+     "en": "Introduce her around, say plainly that questions are welcome, debrief calls with her, and check in",
+     "zh": "带她认识大家，明确告诉她欢迎提问，和她一起复盘任务，并定期关心她"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Facilitating the integration of new paramedics means acting rather than waiting: explicitly making questions normal dismantles the fear of looking incompetent that keeps new staff silent — and that silence is a patient-safety risk. A is wrong because leaving her alone leaves her questions unasked and her isolated. B is wrong because sheltering her from complexity does nothing about her reluctance to ask, and she will meet complex calls anyway. C is wrong because generic reassurance gives her neither concrete permission to ask nor anyone to ask.",
+   "explanationZh": "促进新救护员融入，意味着主动作为而不是等待：明确地把“提问”变成正常的事，才能消除新人怕显得不称职、于是闭口不问的顾虑——而这种沉默本身就是患者安全隐患。A 错：放任她自己摸索，问题没人问，她也一直孤立。B 错：把她和复杂任务隔开，解决不了她不敢提问的问题，复杂任务迟早还是会遇到。C 错：泛泛的安慰既没有明确允许她提问，也没给她一个可以请教的人。",
+   "sourceRef": "CPCF G1.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-101",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G1.2",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "leadership",
+   "difficulty": "intermediate",
+   "questionEn": "Morale at your station has dropped after months of overtime and offload delays. Colleagues are increasingly cynical about doing anything beyond the minimum. You hold no formal leadership position. What can you most usefully do?",
+   "questionZh": "在数月的加班和交接延误之后，站里的士气明显下滑。同事们对做任何超出最低要求的事都越来越消极。你并没有任何正式管理职务。你最有用的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Focus on your own standards and stay out of the negativity, so it doesn't drag you down too",
+     "zh": "守好自己的标准，远离负面情绪，免得自己也被拖下水"
+    },
+    {
+     "key": "B",
+     "en": "Wait for management to deal with morale, since the causes are organizational, not personal",
+     "zh": "等管理层来解决士气问题，毕竟根源在组织而不在个人"
+    },
+    {
+     "key": "C",
+     "en": "Lead informally: model good practice, recognize good work specifically, and turn complaints into asks",
+     "zh": "做非正式的带动者：以身作则，具体肯定同事的表现，把抱怨变成诉求"
+    },
+    {
+     "key": "D",
+     "en": "Organize your colleagues to file a formal group grievance about the workload with management and the union",
+     "zh": "组织站里的同事们就工作负荷问题，向管理层和工会正式提出集体申诉"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Motivating colleagues to strive for excellence is situational leadership — it does not need a title. Visible standards, specific recognition of good work, and turning diffuse frustration into concrete requests leadership can act on are what shift a demoralized culture. A is wrong because withdrawing into your own practice concedes the culture to cynicism. B is wrong because it ignores the influence you already have with your peers. D is wrong because a grievance may be a legitimate route for workload concerns, but it does nothing about the cynicism eroding standards at the station, which is what the question asks you to address.",
+   "explanationZh": "激励同事追求卓越属于情境式领导——不需要头衔。看得见的执业标准、具体地肯定同事的好表现，把弥散的不满整理成管理层可以着手的具体诉求，才能扭转低落的风气。A 错：退回到自己的一亩三分地，等于把站里的风气让给了犬儒心态。B 错：这忽视了你在同事中本来就有的影响力。D 错：集体申诉也许是反映工作负荷的正当途径，但对正在侵蚀站里执业标准的犬儒风气毫无作用，而这才是题目要你应对的问题。",
+   "sourceRef": "CPCF G1.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-102",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G3.2",
+   "cognitive": "knowledge",
+   "population": "unclassified",
+   "topic": "leadership",
+   "difficulty": "intermediate",
+   "questionEn": "Which feature best characterizes a workplace culture that genuinely promotes patient safety?",
+   "questionZh": "哪项特征最能体现一个真正促进患者安全的职场文化？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Errors are investigated thoroughly, and the individuals responsible are identified, disciplined, and retrained",
+     "zh": "错误都会被彻查，找出责任人，给予处分并安排再培训"
+    },
+    {
+     "key": "B",
+     "en": "Incident reports are rare, because staff follow protocols closely and few errors are recorded",
+     "zh": "不良事件报告很少，因为员工都严格遵守规程，几乎没有什么错误被记录下来"
+    },
+    {
+     "key": "C",
+     "en": "Experienced staff take the high-risk calls, so that errors are less likely to happen at all",
+     "zh": "由资深员工承担高风险任务，从根本上减少出错"
+    },
+    {
+     "key": "D",
+     "en": "Staff report errors and near misses without fear, and findings drive system fixes shared with crews",
+     "zh": "员工可以无惧追责地报告错误和险情，结论会推动系统改进并反馈给一线"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "A genuine patient-safety culture depends on reporting without fear, analysis that looks for system causes, and visible feedback that closes the loop; without these, hazards stay hidden. A is wrong because focusing on the individual drives reporting underground, and most errors have system contributors that retraining one person will not fix. B is wrong because a low reporting rate usually signals under-reporting, not safety. C is wrong because shielding less experienced staff from risk prevents them from learning and leaves the underlying system unchanged.",
+   "explanationZh": "真正的患者安全文化依赖三点：无惧追责的上报、着眼于系统原因的分析，以及看得见的反馈闭环；缺了这些，隐患就始终藏在暗处。A 错：盯着个人追责会把上报逼入地下，而且大多数错误都有系统层面的诱因，培训某一个人解决不了。B 错：上报率低通常意味着瞒报漏报，而不是安全。C 错：把经验较浅的员工与风险隔开，既让他们学不到东西，背后的系统问题也原封不动。",
+   "sourceRef": "CPCF G3.2",
+   "verified": true
+  },
+  {
+   "id": "ppf-103",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G3.3",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "leadership",
+   "difficulty": "foundation",
+   "questionEn": "Several crews at your station have mentioned that a critical airway item is stored in a different compartment on the newer ambulances than on the older ones. What is the most appropriate action?",
+   "questionZh": "站里好几个班组都提到，一件关键气道器材在新款救护车上的存放位置和旧款不一样。最恰当的做法是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Remind crews to check where everything is during the vehicle check at the start of each and every shift",
+     "zh": "提醒各班组在每个班次开始做车辆检查时，都逐一确认每样东西放在哪里"
+    },
+    {
+     "key": "B",
+     "en": "Label the compartment on your own truck with tape, and suggest others do the same on theirs",
+     "zh": "自己用胶带给车上那个隔舱贴上标签，并建议其他人也照做"
+    },
+    {
+     "key": "C",
+     "en": "Report it through your service's safety or quality system as a hazard, and suggest standardizing it",
+     "zh": "通过机构的安全或质量报告系统把它作为隐患上报，并建议统一存放位置"
+    },
+    {
+     "key": "D",
+     "en": "Mention it informally to someone from fleet services the next time you happen to see them",
+     "zh": "下次碰到车队部门的人时随口提一下"
+    }
+   ],
+   "answer": "C",
+   "explanationEn": "Inconsistent equipment locations across a fleet are a hidden system hazard: under stress, crews reach for where the item “should” be, and seconds are lost in an airway emergency. Identifying this as a practice-improvement opportunity and reporting it through the formal system puts it in front of the people who can standardize the fleet. A is wrong because it relies on memory under stress and leaves the hazard in place, especially when crews move between trucks. B is wrong because a home-made label on one truck does not fix the fleet and may conflict with equipment standards. D is wrong because an informal mention leaves no record, no owner, and no follow-up.",
+   "explanationZh": "同一车队里器材存放位置不统一，是一种隐蔽的系统隐患：压力之下，人会伸手去“应该在”的地方拿，气道急症时就会白白耽误几秒钟。把它看作实践改进的机会，通过正式系统上报，才能让有权统一全车队标准的人知道。A 错：这依赖高压下的记忆，隐患本身并没有消除，班组在不同车辆之间轮换时尤其如此。B 错：在一辆车上自制标签解决不了整个车队的问题，还可能与装备标准相冲突。D 错：私下随口一提，没有记录、没有负责人，也没有后续跟进。",
+   "sourceRef": "CPCF G3.3",
+   "verified": true
+  },
+  {
+   "id": "ppf-104",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G3.1",
+   "cognitive": "application",
+   "population": "unclassified",
+   "topic": "leadership",
+   "difficulty": "foundation",
+   "questionEn": "Your service launches a quality improvement project on stroke recognition and asks crews to complete a short screening tool on every suspected stroke call. Some colleagues call it \"more paperwork.\" What is the most professional stance?",
+   "questionZh": "你所属机构启动了一项卒中识别的质量改进项目，要求各班组在每次疑似卒中任务中填写一份简短的筛查工具表。有些同事称之为\"又多了文书活\"。最专业的立场是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Complete the tool only on calls where a stroke diagnosis seems likely, to save time on others",
+     "zh": "只在卒中诊断比较明确的任务里填写，其余的省点时间"
+    },
+    {
+     "key": "B",
+     "en": "Complete it as required, but agree with colleagues that its clinical value is probably limited",
+     "zh": "按要求填写，但附和同事们的看法，认为这份工具的临床价值大概相当有限"
+    },
+    {
+     "key": "C",
+     "en": "Wait to see whether the project produces useful findings before taking part fully yourself",
+     "zh": "先看看项目能否得出有用结论，再决定是否全面参与"
+    },
+    {
+     "key": "D",
+     "en": "Use it on every suspected stroke, ask what it measures, and give feedback if it proves impractical",
+     "zh": "每次疑似卒中都填写，了解它要测量什么，如在现场确实不实用就提出反馈"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "Supporting improvement initiatives means engaging constructively: consistent data collection is what makes the findings valid, understanding the purpose sustains participation, and constructive feedback improves the tool. A is wrong because selective completion biases the data — the project needs every suspected stroke, including those that turn out not to be strokes. B is wrong because complying while openly doubting it erodes everyone else's participation. C is wrong because the findings depend on participation now; waiting for results guarantees there will be none.",
+   "explanationZh": "支持工作中的改进项目，意味着建设性地参与：数据收集一致，结论才能成立；理解项目目的，参与才能持续；建设性反馈则能改进工具本身。A 错：选择性填写会让数据产生偏倚——项目需要的是所有疑似卒中病例，包括最后证实不是卒中的。B 错：表面照做、嘴上唱衰，会削弱其他人的参与。C 错：结论要靠现在的参与才能得出，等有了结果再参与，就注定不会有结果。",
+   "sourceRef": "CPCF G3.1",
+   "verified": true
+  },
+  {
+   "id": "ppf-105",
+   "licence": "pcp",
+   "cpcfArea": "G",
+   "competency": "G2.1",
+   "cognitive": "critical",
+   "population": "unclassified",
+   "topic": "incident-command",
+   "difficulty": "advanced",
+   "questionEn": "You have been running command at a multi-casualty scene for 12 minutes with triage underway. A supervisor arrives and says she is assuming command. What is the correct process?",
+   "questionZh": "你已在一个多人伤亡现场担任指挥 12 分钟，检伤分类正在进行中。一位主管到场，表示要接管指挥。正确的流程是什么？",
+   "options": [
+    {
+     "key": "A",
+     "en": "Hand her your triage tags and notes, and return to patient care immediately without delay",
+     "zh": "把检伤标签和笔记交给她，马上回去救治伤员"
+    },
+    {
+     "key": "B",
+     "en": "Keep command until the incident is over, since changing command partway causes confusion",
+     "zh": "保留指挥权直到事件结束，因为中途换指挥会造成混乱"
+    },
+    {
+     "key": "C",
+     "en": "Keep running triage while she handles the resource requests, without any formal transfer of command",
+     "zh": "不做正式移交，你继续负责检伤分类，资源请求那一块就交给她来负责"
+    },
+    {
+     "key": "D",
+     "en": "Brief her face to face on patients, resources, assignments, and hazards, then announce the change",
+     "zh": "当面简报伤员、资源、分工和危险，确认后用无线电通报指挥权变更"
+    }
+   ],
+   "answer": "D",
+   "explanationEn": "An incident commander may hand command to someone more experienced, but the transfer must be orderly and, if possible, face to face, following your service's procedures: patient count and triage status, resources requested and en route, who is doing what, hazards, and what remains — then explicit confirmation and an announcement so everyone knows who is in charge. A is wrong because handing over tags without a briefing loses the whole situational picture. B is wrong because it blocks an appropriate escalation to a more experienced commander. C is wrong because split or unclear command is one of the most dangerous failure modes at a multiple-casualty incident.",
+   "explanationZh": "现场指挥可以把指挥权交给更有经验的人，但移交必须有序，尽量面对面，并按机构的程序进行：伤员人数与检伤进度、已申请和在途的资源、谁在做什么、现场危险，以及还有哪些待办——随后明确确认，并通报给所有人，让大家都知道谁在负责。A 错：不做简报只交标签，会丢失全部现场情况。B 错：这阻碍了把指挥权合理地交给更有经验的指挥者。C 错：指挥权分裂或不清，是多人伤亡事件中最危险的失效方式之一。",
+   "sourceRef": "Nancy Ch 50",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,743 @@
+{
+ "part": "pcp-resp-cardiac",
+ "removed": [
+  {
+   "reason": "标准3：肱动脉是唯一像样的选项，桡动脉、股动脉没有竞争力；而且 Nancy Ch 44 写婴儿查股动脉，股动脉选项反而有双答案风险。",
+   "question": {
+    "id": "prc-004",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "pediatric",
+    "topic": "cpr-aed",
+    "difficulty": "foundation",
+    "questionEn": "When determining cardiac arrest in a 7-month-old infant, which artery should be used to assess the pulse?",
+    "questionZh": "判断7个月大婴儿是否心脏骤停时，应触摸哪条动脉评估脉搏？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Carotid artery",
+      "zh": "颈动脉"
+     },
+     {
+      "key": "B",
+      "en": "Radial artery",
+      "zh": "桡动脉"
+     },
+     {
+      "key": "C",
+      "en": "Femoral artery",
+      "zh": "股动脉"
+     },
+     {
+      "key": "D",
+      "en": "Brachial artery",
+      "zh": "肱动脉"
+     }
+    ],
+    "answer": "D",
+    "explanationEn": "In infants, assess the pulse using the brachial artery rather than the carotid; the infant's short neck makes the carotid unreliable.",
+    "explanationZh": "婴儿应触摸肱动脉而非颈动脉评估脉搏；婴儿颈部短，颈动脉触诊不可靠。",
+    "sourceRef": "BC Guidelines p.43",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准3+5：两个干扰项都是「盲探清扫」，另一项「只能到医院取出」一眼排除；「看到才取、禁止盲探」已在 prc-014、prc-016 的选项和解析中考到。",
+   "question": {
+    "id": "prc-017",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "fbao",
+    "difficulty": "foundation",
+    "questionEn": "During CPR for a foreign body airway obstruction, when is it appropriate to remove an object from the patient's mouth?",
+    "questionZh": "在为气道异物梗阻患者进行CPR的过程中，什么情况下才可以从患者口中取出异物？",
+    "options": [
+     {
+      "key": "A",
+      "en": "After every set of compressions, sweep the mouth with a finger",
+      "zh": "每组按压后都用手指清扫一遍口腔"
+     },
+     {
+      "key": "B",
+      "en": "Whenever ventilation fails, sweep blindly for the object",
+      "zh": "只要通气失败就盲探寻找异物"
+     },
+     {
+      "key": "C",
+      "en": "Only when the foreign body is actually seen in the mouth",
+      "zh": "只有在口腔中确实看到异物时"
+     },
+     {
+      "key": "D",
+      "en": "Never; objects must only be removed in hospital",
+      "zh": "任何时候都不行，异物只能到医院取出"
+     }
+    ],
+    "answer": "C",
+    "explanationEn": "Inspect the mouth prior to ventilating and remove a foreign body only if it is seen. Blind finger sweeps must not be performed.",
+    "explanationZh": "每次通气前应目视检查口腔，只有看到异物才可取出。绝不可进行盲探清扫。",
+    "sourceRef": "BC Guidelines p.46",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：与 prc-015 考点和答案完全相同（婴儿完全梗阻→5 次拍背＋5 次胸部按压），只是把年龄换成 3 周；保留 prc-015。",
+   "question": {
+    "id": "prc-019",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "application",
+    "population": "neonatal",
+    "topic": "fbao",
+    "difficulty": "intermediate",
+    "questionEn": "A 3-week-old neonate suddenly cannot cry or breathe after a feed; the parents suspect something is lodged in his airway. He is still conscious. What should you do?",
+    "questionZh": "一名3周大的新生儿在喂奶后突然不能哭、不能呼吸，家长怀疑气道被异物堵住。患儿仍有意识。你应该怎么做？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Deliver repeated cycles of 5 back blows followed by 5 chest compressions",
+      "zh": "反复进行5次背部拍击加5次胸部按压的循环"
+     },
+     {
+      "key": "B",
+      "en": "Perform gentle abdominal thrusts adapted for his size",
+      "zh": "按其体型进行轻柔的腹部冲击"
+     },
+     {
+      "key": "C",
+      "en": "Attempt a blind finger sweep to find the blockage",
+      "zh": "用手指盲探寻找堵塞物"
+     },
+     {
+      "key": "D",
+      "en": "Apply the AED in case he arrests",
+      "zh": "预防性贴上AED以防骤停"
+     }
+    ],
+    "answer": "A",
+    "explanationEn": "Infants (including neonates) with severe airway obstruction receive repeated cycles of 5 back blows followed by 5 chest compressions until the object is expelled. Abdominal thrusts and blind sweeps are not used at this age, and AEDs are not used on neonates.",
+    "explanationZh": "婴儿（含新生儿）严重气道梗阻应反复进行“5次背部拍击＋5次胸部按压”循环直至异物排出。该年龄段不做腹部冲击和盲探清扫，新生儿也不使用AED。",
+    "sourceRef": "BC Guidelines p.44, p.46",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：prc-006 题干已写明第一步是擦干、刺激、保暖 30 秒，本题答案被同卷题目直接给出；新生儿流程由 prc-006、prc-008 覆盖。",
+   "question": {
+    "id": "prc-024",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "application",
+    "population": "neonatal",
+    "topic": "cpr-aed",
+    "difficulty": "intermediate",
+    "questionEn": "A newborn delivered minutes before your arrival is floppy and not breathing, with a heart rate under 100 beats per minute. What is the first 30-second step?",
+    "questionZh": "一名在你到达前几分钟出生的新生儿全身松软、无呼吸，心率低于每分钟100次。最初30秒应做什么？",
+    "options": [
+     {
+      "key": "A",
+      "en": "BVM ventilation with 100% oxygen",
+      "zh": "用接100%氧气的球囊面罩通气"
+     },
+     {
+      "key": "B",
+      "en": "Chest compressions with ventilations",
+      "zh": "胸外按压并配合通气"
+     },
+     {
+      "key": "C",
+      "en": "Suction the airway for 15 seconds",
+      "zh": "吸引气道15秒"
+     },
+     {
+      "key": "D",
+      "en": "Dry, stimulate, and keep the newborn warm",
+      "zh": "擦干、刺激并为新生儿保暖"
+     }
+    ],
+    "answer": "D",
+    "explanationEn": "Step 1 for a compromised newborn is to dry, stimulate and keep warm for 30 seconds; only if the heart rate remains below 100 do you progress to BVM ventilation on room air, then 100% oxygen, then compressions.",
+    "explanationZh": "新生儿复苏第一步是擦干、刺激、保暖30秒；心率仍低于100次才依次进入室内空气球囊通气、100%氧气通气、再到按压。",
+    "sourceRef": "BC Guidelines p.44",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：与 prc-027 考点相同（曾有 ROSC 或电击→40 分钟），prc-027 是更好的情境判断题，保留 prc-027。",
+   "question": {
+    "id": "prc-025",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "cpr-aed",
+    "difficulty": "foundation",
+    "questionEn": "During a resuscitation, the patient briefly achieved ROSC and then re-arrested; two shocks have been delivered. How long should resuscitation efforts continue before considering cessation?",
+    "questionZh": "抢救过程中患者曾短暂恢复自主循环后再次骤停，期间实施过两次电击。在考虑终止之前，抢救应持续多长时间？",
+    "options": [
+     {
+      "key": "A",
+      "en": "40 minutes, because there was ROSC and defibrillations were delivered",
+      "zh": "40分钟，因为曾恢复自主循环且实施过除颤"
+     },
+     {
+      "key": "B",
+      "en": "30 minutes from the initial arrest in all cases",
+      "zh": "一律从最初骤停算起30分钟"
+     },
+     {
+      "key": "C",
+      "en": "20 minutes after the last shock",
+      "zh": "最后一次电击后20分钟"
+     },
+     {
+      "key": "D",
+      "en": "60 minutes regardless of response",
+      "zh": "不论反应如何均为60分钟"
+     }
+    ],
+    "answer": "A",
+    "explanationEn": "Continue CPR/AED for 30 minutes when there has been no ROSC and no defibrillation, but for 40 minutes if there was ROSC at any time or defibrillations were delivered.",
+    "explanationZh": "若从未恢复自主循环且未除颤，为30分钟；若任何时候曾有ROSC或实施过除颤，则应持续40分钟。",
+    "sourceRef": "BC Guidelines p.40",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：成人/儿童/婴儿吸引时长三题（prc-032/033/034）考同一张表，保留儿童情境题 prc-033，并在其解析中覆盖成人与婴儿的数值。",
+   "question": {
+    "id": "prc-032",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "airway",
+    "difficulty": "foundation",
+    "questionEn": "When suctioning the airway of an adult patient, for how long should suction be applied?",
+    "questionZh": "为成人患者进行气道吸引时，每次吸引应持续多长时间？",
+    "options": [
+     {
+      "key": "A",
+      "en": "5 seconds",
+      "zh": "5秒"
+     },
+     {
+      "key": "B",
+      "en": "20-30 seconds",
+      "zh": "20–30秒"
+     },
+     {
+      "key": "C",
+      "en": "Until the airway is completely clear, without a time limit",
+      "zh": "不限时间，直到气道完全清理干净"
+     },
+     {
+      "key": "D",
+      "en": "10-15 seconds",
+      "zh": "10–15秒"
+     }
+    ],
+    "answer": "D",
+    "explanationEn": "Suction is applied for 10-15 seconds in the adult, 10 seconds in the paediatric patient, and 5 seconds in an infant.",
+    "explanationZh": "成人每次吸引10–15秒，儿童10秒，婴儿5秒。",
+    "sourceRef": "BC Guidelines p.45",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：与 prc-033 考同一张吸引时长表（婴儿 5 秒），数值已并入 prc-033 的解析。",
+   "question": {
+    "id": "prc-034",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "pediatric",
+    "topic": "airway",
+    "difficulty": "foundation",
+    "questionEn": "When suctioning secretions from the airway of a 6-month-old infant, what is the maximum duration of each suction attempt?",
+    "questionZh": "为6个月大的婴儿吸引气道分泌物时，每次吸引的最长持续时间是多少？",
+    "options": [
+     {
+      "key": "A",
+      "en": "15 seconds",
+      "zh": "15秒"
+     },
+     {
+      "key": "B",
+      "en": "5 seconds",
+      "zh": "5秒"
+     },
+     {
+      "key": "C",
+      "en": "10 seconds",
+      "zh": "10秒"
+     },
+     {
+      "key": "D",
+      "en": "2 seconds",
+      "zh": "2秒"
+     }
+    ],
+    "answer": "B",
+    "explanationEn": "In an infant, suction is applied for a maximum of 5 seconds per attempt; infants desaturate quickly and tolerate suction poorly.",
+    "explanationZh": "婴儿每次吸引最长5秒；婴儿血氧下降快，对吸引的耐受性差。",
+    "sourceRef": "BC Guidelines p.45",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准3+5：B（损坏调节阀）、C（氧中毒）一眼排除；「面罩不得低于 6 L/min」已作为 prc-035、prc-036 的干扰项和解析考到。",
+   "question": {
+    "id": "prc-037",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "airway",
+    "difficulty": "foundation",
+    "questionEn": "Why must an adult face mask never be used with an oxygen flow rate below 6 L/min?",
+    "questionZh": "为什么成人吸氧面罩的氧流量绝不能低于6升/分？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Below 6 L/min the mask would deliver less oxygen to the patient than room air",
+      "zh": "低于6升/分时，面罩给患者的氧甚至比室内空气还少"
+     },
+     {
+      "key": "B",
+      "en": "Lower flows damage the oxygen regulator",
+      "zh": "更低的流量会损坏氧气调节阀"
+     },
+     {
+      "key": "C",
+      "en": "Lower flows cause oxygen toxicity",
+      "zh": "更低的流量会引起氧中毒"
+     },
+     {
+      "key": "D",
+      "en": "The mask will not stay sealed below 6 L/min",
+      "zh": "低于6升/分时面罩无法保持密封"
+     }
+    ],
+    "answer": "A",
+    "explanationEn": "At flows below 6 L/min, exhaled CO2 accumulates in the mask and the patient effectively receives less oxygen than breathing room air.",
+    "explanationZh": "流量低于6升/分时，呼出的二氧化碳会在面罩内积聚，患者实际吸入的氧甚至低于直接呼吸室内空气。",
+    "sourceRef": "BC Guidelines p.50",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：与 prc-046 考点重合（异丙托溴铵为单次给药）；成人 500 微克剂量已写入 prc-046 题干，儿童剂量由 prc-060 考查。",
+   "question": {
+    "id": "prc-045",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "respiratory",
+    "difficulty": "intermediate",
+    "questionEn": "What is the adult nebulized dose of ipratropium for severe bronchospasm, and how often may it be repeated?",
+    "questionZh": "成人重度支气管痉挛时异丙托溴铵的雾化剂量是多少，可以重复几次？",
+    "options": [
+     {
+      "key": "A",
+      "en": "500 mcg via nebulizer; it is a single-dose administration",
+      "zh": "雾化500微克；为单次给药"
+     },
+     {
+      "key": "B",
+      "en": "500 mcg via nebulizer, repeated every 5 minutes as required",
+      "zh": "雾化500微克，必要时每5分钟重复一次"
+     },
+     {
+      "key": "C",
+      "en": "250 mcg via nebulizer; may be repeated up to 3 times",
+      "zh": "雾化250微克；最多可重复3次"
+     },
+     {
+      "key": "D",
+      "en": "160 mcg via nebulizer; single dose",
+      "zh": "雾化160微克；单次给药"
+     }
+    ],
+    "answer": "A",
+    "explanationEn": "The adult ipratropium dose is 500 mcg via nebulizer (or 160 mcg by MDI as 8 x 20 mcg sprays). Ipratropium is a single-dose administration, whereas salbutamol may be repeated; both may be combined in the same nebulizer.",
+    "explanationZh": "成人异丙托溴铵剂量为雾化500微克（或经MDI给8×20微克，共160微克）。异丙托溴铵只给一次，而沙丁胺醇可以重复；两者可放入同一雾化器共同给药。",
+    "sourceRef": "BC Guidelines p.70",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：与 prc-068 考点相同（创伤所致呼吸窘迫是 CPAP 禁忌证），prc-068 是更好的情境题；心衰、肺炎、哮喘作为适应证已在 prc-040、prc-061 考到。",
+   "question": {
+    "id": "prc-067",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "cpap",
+    "difficulty": "foundation",
+    "questionEn": "Which of the following is a contraindication to CPAP under the BC guidelines?",
+    "questionZh": "按BC指南，下列哪项是CPAP的禁忌证？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Congestive heart failure",
+      "zh": "充血性心力衰竭"
+     },
+     {
+      "key": "B",
+      "en": "Pneumonia",
+      "zh": "肺炎"
+     },
+     {
+      "key": "C",
+      "en": "A traumatic cause of the respiratory distress",
+      "zh": "呼吸窘迫由创伤引起"
+     },
+     {
+      "key": "D",
+      "en": "A history of asthma",
+      "zh": "哮喘病史"
+     }
+    ],
+    "answer": "C",
+    "explanationEn": "Contraindications include a traumatic cause of respiratory distress, age 12 or under, decreased LOC or inability to follow commands, respiratory arrest or hypoventilation, imminent or actual respiratory failure, inability to fit a mask, vomiting or aspiration risk, tracheostomy, suspected or known pneumothorax, and systolic BP < 90 mmHg. CHF, asthma, pneumonia, COPD and submersion injuries are conditions where CPAP should be considered.",
+    "explanationZh": "禁忌证包括：创伤所致呼吸窘迫、12岁及以下、意识下降或无法听从指令、呼吸停止或通气不足、即将或已发生呼吸衰竭、面罩无法贴合、呕吐或有误吸风险、气管切开、疑似或确诊气胸、收缩压<90毫米汞柱。心衰、哮喘、肺炎、COPD和溺水损伤则是应考虑使用CPAP的情形。",
+    "sourceRef": "BC Guidelines p.52",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准4：考「CHF 指南的适应证清单里写了溺水」这种文件措辞，没有临床判断；溺水致肺水肿的处理由 prc-078 覆盖。",
+   "question": {
+    "id": "prc-077",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "chf",
+    "difficulty": "foundation",
+    "questionEn": "Which of the following is a listed indication for the BC congestive heart failure / pulmonary edema guideline?",
+    "questionZh": "下列哪项是BC充血性心力衰竭／肺水肿指南中列出的适应证？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Tension pneumothorax",
+      "zh": "张力性气胸"
+     },
+     {
+      "key": "B",
+      "en": "Drowning",
+      "zh": "溺水"
+     },
+     {
+      "key": "C",
+      "en": "Anaphylaxis",
+      "zh": "过敏性休克"
+     },
+     {
+      "key": "D",
+      "en": "Hyperglycemia",
+      "zh": "高血糖"
+     }
+    ],
+    "answer": "B",
+    "explanationEn": "The listed indications are drowning, congestive heart failure, cardiogenic shock, and exposure to toxins.",
+    "explanationZh": "该指南列出的适应证为溺水、充血性心力衰竭、心源性休克和毒物暴露。",
+    "sourceRef": "BC Guidelines p.33",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：PEEP 起始 5 cmH2O 已是 prc-071 正确答案的内容，并已并入改写后的 prc-073（起始/递增/上限）。",
+   "question": {
+    "id": "prc-079",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "chf",
+    "difficulty": "intermediate",
+    "questionEn": "As a PCP managing a patient with pulmonary edema who requires positive pressure ventilation by BVM, what PEEP setting should you start with?",
+    "questionZh": "作为PCP处理需要球囊面罩正压通气的肺水肿患者时，PEEP应从多少开始设定？",
+    "options": [
+     {
+      "key": "A",
+      "en": "5 cmH2O",
+      "zh": "5厘米水柱"
+     },
+     {
+      "key": "B",
+      "en": "2.5 cmH2O",
+      "zh": "2.5厘米水柱"
+     },
+     {
+      "key": "C",
+      "en": "10 cmH2O",
+      "zh": "10厘米水柱"
+     },
+     {
+      "key": "D",
+      "en": "15 cmH2O",
+      "zh": "15厘米水柱"
+     }
+    ],
+    "answer": "A",
+    "explanationEn": "Additional PCP interventions for CHF/pulmonary edema include considering CPAP, and if positive pressure ventilation by BVM is required, considering a PEEP valve starting at 5 cmH2O.",
+    "explanationZh": "心衰／肺水肿的PCP附加处置包括考虑CPAP；若需球囊面罩正压通气，则考虑使用PEEP阀，起始设为5厘米水柱。",
+    "sourceRef": "BC Guidelines p.33",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准3+5：A（进一步降温）、B（胸前热敷并让患者走路）、D（SpO2>88% 不给氧）一眼排除；心衰的体位、休息与保暖已由 prc-075、prc-076 覆盖。",
+   "question": {
+    "id": "prc-080",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "critical",
+    "population": "geriatric",
+    "topic": "chf",
+    "difficulty": "advanced",
+    "questionEn": "An 84-year-old woman with pulmonary edema is cold and wet after being found in an unheated apartment. She is dyspneic with SpO2 90%. Which combination of interventions is correct?",
+    "questionZh": "一名84岁肺水肿女性被发现在无暖气的公寓中，全身湿冷。她呼吸困难，SpO2为90%。下列哪组处置是正确的？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Cool her further to reduce myocardial oxygen demand, and lay her supine",
+      "zh": "进一步降温以降低心肌耗氧，并让其仰卧"
+     },
+     {
+      "key": "B",
+      "en": "Warm her actively with hot packs on the chest, and ambulate her to the ambulance",
+      "zh": "在胸部放热敷袋主动加温，并让她自行走到救护车"
+     },
+     {
+      "key": "C",
+      "en": "Keep her warm and protect from further heat loss, sit her upright with legs hung down, and give oxygen to keep SpO2 ≥ 94%",
+      "zh": "注意保暖并防止进一步热量丢失，端坐位双腿下垂，给氧维持SpO2≥94%"
+     },
+     {
+      "key": "D",
+      "en": "Withhold oxygen because her SpO2 is above 88%",
+      "zh": "因SpO2高于88%而不给氧"
+     }
+    ],
+    "answer": "C",
+    "explanationEn": "CHF/pulmonary edema management includes keeping the patient warm and protecting from further heat loss, sitting upright with legs hung down, rest with no exertion, and supplemental oxygen to keep SpO2 ≥ 94%.",
+    "explanationZh": "心衰／肺水肿的处理包括保暖并防止进一步热量丢失、端坐位双腿下垂、静止休息不用力，并给予补充氧以维持SpO2≥94%。",
+    "sourceRef": "BC Guidelines p.33",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准3+5：只有 A 以「直接压迫」开头，其余三项把止血带、填塞或压迫点放在第一位，一眼排除；止血顺序已由 prc-101（先直接压迫）、prc-102（压迫失败上止血带）考到。",
+   "question": {
+    "id": "prc-103",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "adult",
+    "topic": "hemorrhage",
+    "difficulty": "foundation",
+    "questionEn": "According to the BC wound care guideline, what is the correct order of preference for methods of hemorrhage control?",
+    "questionZh": "按BC伤口护理指南，止血方法的正确优先顺序是什么？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Direct pressure, pressure dressing, positioning the part, positioning the patient, tourniquet, wound packing",
+      "zh": "直接压迫→加压包扎→抬高患部→摆放患者体位→止血带→伤口填塞"
+     },
+     {
+      "key": "B",
+      "en": "Tourniquet, direct pressure, wound packing, pressure dressing",
+      "zh": "止血带→直接压迫→伤口填塞→加压包扎"
+     },
+     {
+      "key": "C",
+      "en": "Wound packing, tourniquet, direct pressure, elevation",
+      "zh": "伤口填塞→止血带→直接压迫→抬高"
+     },
+     {
+      "key": "D",
+      "en": "Pressure points, elevation, tourniquet, direct pressure",
+      "zh": "压迫点→抬高→止血带→直接压迫"
+     }
+    ],
+    "answer": "A",
+    "explanationEn": "The listed order is direct pressure, pressure dressing, positioning the part (elevation, only if it will not aggravate other injuries), positioning the patient (at rest and supine if injuries permit), tourniquet (note the time and do not release once applied), and extremity wound packing if the bleed cannot be controlled.",
+    "explanationZh": "指南列出的顺序为：直接压迫→加压包扎→抬高患部（仅在不加重其他损伤时）→摆放患者体位（伤情允许时静卧仰卧）→止血带（记录时间，一旦上好不得松开）→出血仍无法控制时行肢体伤口填塞。",
+    "sourceRef": "BC Guidelines p.19",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准5：与 prc-118 考同一液体推注方案（20 mL/kg、最多 2 L、每 500 mL 复评），prc-118 多了按体重计算，保留 prc-118。",
+   "question": {
+    "id": "prc-112",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "geriatric",
+    "topic": "shock",
+    "difficulty": "foundation",
+    "questionEn": "What is the fluid bolus regimen for a hypovolemic patient under the PCP scope?",
+    "questionZh": "在PCP范围内，低血容量患者的液体推注方案是什么？",
+    "options": [
+     {
+      "key": "A",
+      "en": "10 ml/kg to a maximum of 1 litre, reassessing every 250 ml",
+      "zh": "10毫升/公斤，最多1升，每250毫升复评一次"
+     },
+     {
+      "key": "B",
+      "en": "1 litre wide open, then reassess once",
+      "zh": "1升全速输入后复评一次"
+     },
+     {
+      "key": "C",
+      "en": "500 ml regardless of weight, no repeat",
+      "zh": "不论体重一律500毫升，不重复"
+     },
+     {
+      "key": "D",
+      "en": "20 ml/kg to a maximum of 2 litres, reassessing every 500 ml",
+      "zh": "20毫升/公斤，最多2升，每500毫升复评一次"
+     }
+    ],
+    "answer": "D",
+    "explanationEn": "The fluid bolus is 20 ml/kg to a maximum of 2 litres, reassessing every 500 ml. In the nausea and vomiting protocol the same bolus regimen is used, targeting a systolic blood pressure of 90 mmHg.",
+    "explanationZh": "液体推注为20毫升/公斤，最多2升，每500毫升复评一次。恶心呕吐方案采用同样的推注方案，目标收缩压为90毫米汞柱。",
+    "sourceRef": "BC Guidelines p.54, p.48",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准4+3：问「适用哪份指南」属于文件归类，不是临床判断；三个干扰项（都不适用、只适用伤口护理、CPAP）一眼排除；烧伤补液另由烧伤分卷考查。",
+   "question": {
+    "id": "prc-113",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "application",
+    "population": "pediatric",
+    "topic": "shock",
+    "difficulty": "intermediate",
+    "questionEn": "A 6-year-old boy has scald burns to 25% of his body surface area. He is alert with BP 96/60 and HR 130. Which BC guideline applies?",
+    "questionZh": "一名6岁男孩烫伤面积占体表25%，神志清醒，血压96/60，心率130。适用哪一项BC指南？",
+    "options": [
+     {
+      "key": "A",
+      "en": "None, because his blood pressure is normal for his age",
+      "zh": "都不适用，因为其血压对该年龄属正常"
+     },
+     {
+      "key": "B",
+      "en": "Only the wound care guideline, since burns are wounds",
+      "zh": "只适用伤口护理指南，因为烧伤属于伤口"
+     },
+     {
+      "key": "C",
+      "en": "The CPAP guideline, to support oxygenation",
+      "zh": "CPAP指南，用于支持氧合"
+     },
+     {
+      "key": "D",
+      "en": "The hypovolemia guideline: patients with burns greater than 20% BSA (partial and full thickness) are a listed indication",
+      "zh": "低血容量指南：体表面积超过20%的（部分及全层）烧伤患者是其列出的适应证"
+     }
+    ],
+    "answer": "D",
+    "explanationEn": "Patients with burns greater than 20% BSA (partial and full thickness) are a listed indication for the hypovolemia protocol, alongside hypovolemia with systolic BP < 90 mmHg and other clinical signs of shock. Initiate cooling of major burns and protect against heat loss.",
+    "explanationZh": "体表面积超过20%的（部分及全层）烧伤患者是低血容量方案列出的适应证之一，与收缩压<90毫米汞柱的低血容量及其他休克体征并列。大面积烧伤应开始降温处理并注意防止热量丢失。",
+    "sourceRef": "BC Guidelines p.54, p.11",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准3：三个干扰项（发热咳痰、休息后缓解的胸痛、喘鸣伴辅助呼吸肌参与）与低血容量毫不相干，一眼排除。",
+   "question": {
+    "id": "prc-115",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "knowledge",
+    "population": "pediatric",
+    "topic": "shock",
+    "difficulty": "foundation",
+    "questionEn": "Which findings are listed indications for the BC hypovolemia guideline?",
+    "questionZh": "下列哪组表现是BC低血容量指南列出的适应证？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Fever, tachypnea and a productive cough",
+      "zh": "发热、呼吸增快和咳痰"
+     },
+     {
+      "key": "B",
+      "en": "Chest pain relieved by rest with a normal blood pressure",
+      "zh": "休息后缓解的胸痛且血压正常"
+     },
+     {
+      "key": "C",
+      "en": "Wheezing with accessory muscle use and a normal blood pressure",
+      "zh": "喘鸣伴辅助呼吸肌参与且血压正常"
+     },
+     {
+      "key": "D",
+      "en": "Hypovolemia with systolic BP < 90 mmHg plus other clinical signs or symptoms of shock, or burns > 20% BSA",
+      "zh": "低血容量伴收缩压<90毫米汞柱及其他休克体征或症状，或体表面积>20%的烧伤"
+     }
+    ],
+    "answer": "D",
+    "explanationEn": "The indications are patients with all of: hypovolemia, systolic BP < 90 mmHg, and other clinical signs or symptoms of shock; plus patients with burns greater than 20% BSA (partial and full thickness). Evidence of significant blood or body fluid loss is needed to support the diagnosis of hypovolemia.",
+    "explanationZh": "适应证为同时具备低血容量、收缩压<90毫米汞柱以及其他休克体征或症状的患者，另加体表面积超过20%的（部分及全层）烧伤患者。诊断低血容量需要有明显血液或体液丢失的证据支持。",
+    "sourceRef": "BC Guidelines p.54",
+    "verified": false
+   }
+  },
+  {
+   "reason": "标准3：干扰项（端坐双腿下垂、四肢缠止血带式绷带、静推 2 克 TXA）一眼排除，没有鉴别价值。",
+   "question": {
+    "id": "prc-116",
+    "licence": "pcp",
+    "cpcfArea": "H",
+    "cognitive": "application",
+    "population": "neonatal",
+    "topic": "shock",
+    "difficulty": "foundation",
+    "questionEn": "A 2-week-old infant has been vomiting for 3 days and now has cool mottled skin and a weak rapid pulse. He is wet and exposed on the assessment surface. Beyond oxygenation, which intervention is essential?",
+    "questionZh": "一名2周大的婴儿呕吐已3天，现皮肤湿冷花斑、脉搏细速。他身上潮湿且暴露在检查台上。除了氧合之外，哪项处置最为关键？",
+    "options": [
+     {
+      "key": "A",
+      "en": "Position him sitting upright with the legs hung down",
+      "zh": "让其端坐、双腿下垂"
+     },
+     {
+      "key": "B",
+      "en": "Dry him and keep him warm, protecting from further heat loss",
+      "zh": "擦干并保暖，防止进一步热量丢失"
+     },
+     {
+      "key": "C",
+      "en": "Apply a tourniquet-style pressure wrap to the limbs",
+      "zh": "在四肢缠绕止血带式加压绷带"
+     },
+     {
+      "key": "D",
+      "en": "Administer TXA 2 grams IV",
+      "zh": "静脉给予2克TXA"
+     }
+    ],
+    "answer": "B",
+    "explanationEn": "Keeping the patient warm and protecting from further heat loss is a core intervention at all licence levels for hypovolemia, and neonates lose heat extremely rapidly. Sitting upright is for CHF/pulmonary edema, and TXA is contraindicated under 12 years.",
+    "explanationZh": "保暖并防止进一步热量丢失是各级执照处理低血容量的核心措施，而新生儿散热极快。端坐位适用于心衰／肺水肿，TXA则在12岁以下属禁忌。",
+    "sourceRef": "BC Guidelines p.54",
+    "verified": false
+   }
+  }
+ ]
+}
