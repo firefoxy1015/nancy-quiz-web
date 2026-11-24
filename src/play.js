@@ -4,7 +4,7 @@
 // 'play:<deck>' (in #/backup). #/play is the EMR Play & learn hub (shareable short address: bcmedicprep.com/emr/ ->
 // emr/index.html sets the EMR track for first-time visitors and opens #/play); #/play/emr-written and #/play/emr-sims are
 // the decks. Linked from the EMR home dashboard and the EMR written / practical hubs. No track needed.
-import { t, esc, loadJSON } from './app.js?v=87';
+import { t, esc, loadJSON } from './app.js?v=88';
 
 export const PLAY_DECKS = {
   'emr-written': { kick: { en: 'EMR written', zh: 'EMR 笔试' }, back: '#/play', backEn: 'EMR Play & learn', backZh: 'EMR 边学边玩',
@@ -18,7 +18,7 @@ const store = {
 };
 
 async function renderPlayHub(el) {
-  import('./drill.js?v=87').then(m => m.loadFonts());   // the hub uses the drill's type
+  import('./drill.js?v=88').then(m => m.loadFonts());   // the hub uses the drill's type
   const ids = Object.keys(PLAY_DECKS), decks = await Promise.all(ids.map(id => loadJSON(`./data/play/${id}.json`)));
   const tile = (id, D) => {
     const k = PLAY_DECKS[id], cards = (D && D.cards) || [], st = store.get(id, null) || {}, seen = cards.filter(c => (st.seen || {})[c.id]).length;
@@ -43,6 +43,6 @@ export async function renderPlay(el, arg) {
   const D = await loadJSON(`./data/play/${arg}.json`);
   if (!D) { el.innerHTML = `<div class="card"><p class="muted">${t('Could not load this deck. Check the connection and try again.', '加载失败，请检查网络后重试。')}</p></div>`; return; }
   el.innerHTML = `<a class="back-link" href="${deck.back}">← ${t(deck.backEn, deck.backZh)}</a><div id="playHost"></div>`;
-  const { drillLab } = await import('./drill.js?v=87');
+  const { drillLab } = await import('./drill.js?v=88');
   drillLab(el.querySelector('#playHost'), store, D, { key: arg, kick: deck.kick, tag: 'EMR', img: id => `./img/play/${arg}/${encodeURIComponent(id)}.webp` });
 }

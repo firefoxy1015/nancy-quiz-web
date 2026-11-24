@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "about": "Picture-first cards for the treatment topics (src/study.js, sTreatmentCard). A topic listed here opens as a card; the full guideline text from treatments.json stays underneath, folded. Every fact comes from treatments.json (BC Provincial Examination Guidelines, June 15, 2026). Quiz patients are adults.",
+    "blocks": "ladder | never | fork | phases"
+  },
+  "cards": {
+    "wound-care": {
+      "pic": "./img/home/treat.webp",
+      "headEn": "Stop the <em>bleeding</em> first.",
+      "headZh": "先把血<em>止住</em>。",
+      "lineEn": "Press on it. Still bleeding? Tourniquet on a limb, packing where a tourniquet cannot go.",
+      "lineZh": "先压住。压不住：四肢上止血带，上不了止血带的地方填塞。",
+      "blocks": [
+        {
+          "type": "ladder",
+          "titleEn": "Six ways to stop a bleed, in this order",
+          "titleZh": "止血六招，按这个顺序",
+          "steps": [
+            { "en": "Direct pressure", "zh": "直接压迫", "subEn": "always first", "subZh": "永远第一步" },
+            { "en": "Pressure dressing", "zh": "加压敷料" },
+            { "en": "Raise the injured part", "zh": "抬高伤肢", "subEn": "only if it harms nothing else", "subZh": "不加重别的伤才做" },
+            { "en": "Lay the patient flat", "zh": "让病人躺平", "subEn": "at rest, supine", "subZh": "休息、仰卧" },
+            { "en": "Tourniquet", "zh": "止血带 tourniquet", "subEn": "above the wound · note the time", "subZh": "绑在伤口近端 · 记下时间", "last": true },
+            { "en": "Wound packing", "zh": "伤口填塞 wound packing", "subEn": "no tourniquet possible, or still bleeding", "subZh": "上不了止血带，或还是止不住", "last": true }
+          ],
+          "tagEn": "when pressure fails",
+          "tagZh": "压不住才用"
+        },
+        {
+          "type": "never",
+          "titleEn": "Never",
+          "titleZh": "绝对不要",
+          "items": [
+            { "en": "<b>Loosen a tourniquet.</b> Once on, it stays on.", "zh": "<b>松开止血带。</b>上了就不松。" },
+            { "en": "<b>Pack the neck, chest or abdomen.</b>", "zh": "<b>填塞颈、胸、腹的伤口。</b>" },
+            { "en": "<b>Pull out an embedded object.</b> Stabilize it in place, unless it blocks the airway.", "zh": "<b>拔出插在身上的异物。</b>原位固定，除非堵住气道。" }
+          ]
+        },
+        {
+          "type": "fork",
+          "titleEn": "No pulse below the injury",
+          "titleZh": "伤口远端摸不到脉搏",
+          "actEn": "Realign the limb <b>once</b>",
+          "actZh": "把肢体复位<b>一次</b>",
+          "goodEn": "Pulse returns", "goodZh": "脉搏回来",
+          "goodToEn": "stable", "goodToZh": "stable 稳定",
+          "badEn": "Still no pulse", "badZh": "还是没有",
+          "badToEn": "unstable · Rapid Transport", "badToZh": "unstable 不稳定 · 快速转运"
+        },
+        {
+          "type": "phases",
+          "titleEn": "Where it goes in the exam",
+          "titleZh": "考试里什么时候做",
+          "rows": [
+            { "k": "Primary", "en": "Expose, look, stop the major bleed, then bandage it.", "zh": "暴露、检查，止住大出血，再包扎。" },
+            { "k": "Protocol", "en": "Analgesia if the patient needs it.", "zh": "需要就给镇痛。" },
+            { "k": "Treatment", "en": "Clean and dress small wounds. Check the pulse below the injury. Cold only if that pulse is fine. Big wound or over a joint: immobilize the limb.", "zh": "小伤口清洁、敷料、包扎。查远端循环。远端循环没问题才冷敷。伤口大或跨关节：固定肢体。" }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "qEn": "A man has a deep cut in his thigh. You press hard on it and it keeps bleeding. Next?",
+          "qZh": "一名男子大腿被割开，很深。你用力压住，血还在流。下一步？",
+          "opts": [
+            { "en": "Tourniquet above the wound", "zh": "在伤口近端上止血带" },
+            { "en": "Let go and look at the wound again", "zh": "松手，再看一眼伤口" },
+            { "en": "Put a cold pack on it", "zh": "放冰袋冷敷" }
+          ],
+          "a": 0,
+          "whyEn": "Pressure failed and the wound is on a limb, so a tourniquet goes on above it. Note the time.",
+          "whyZh": "压不住，伤口又在四肢，所以在近端上止血带，并记下时间。"
+        },
+        {
+          "qEn": "A woman is bleeding from the groin, where the leg joins the body. Pressure is not holding and a tourniquet will not fit there. Next?",
+          "qZh": "一名女子腹股沟（腿和躯干交界处）出血。压不住，这个位置也上不了止血带。下一步？",
+          "opts": [
+            { "en": "Tourniquet lower down on the thigh", "zh": "把止血带绑在大腿下段" },
+            { "en": "Pack the wound", "zh": "伤口填塞" },
+            { "en": "Raise her legs and wait", "zh": "抬高双腿，等一等" }
+          ],
+          "a": 1,
+          "whyEn": "This is a junctional bleed: a tourniquet cannot go there, so the wound is packed. The neck, chest and abdomen are never packed.",
+          "whyZh": "这是交界处出血（junctional hemorrhage）：上不了止血带，所以填塞。颈、胸、腹永远不填塞。"
+        },
+        {
+          "qEn": "A broken forearm has no pulse at the wrist. You realign it once. Still no pulse. This patient is…",
+          "qZh": "前臂骨折，手腕摸不到脉搏。你复位了一次，还是没有脉搏。这位病人算……",
+          "opts": [
+            { "en": "Stable: splint it and carry on", "zh": "stable 稳定：固定好，按部就班" },
+            { "en": "Unstable: Rapid Transport", "zh": "unstable 不稳定：快速转运" },
+            { "en": "Not decided yet: realign again", "zh": "还不能定：再复位一次" }
+          ],
+          "a": 1,
+          "whyEn": "Only one attempt is allowed. Pulse back means stable. Still pulseless means unstable, so Rapid Transport.",
+          "whyZh": "只允许复位一次。脉搏回来算 stable；仍然没有就是 unstable，快速转运。"
+        }
+      ]
+    }
+  }
+}

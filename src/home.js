@@ -4,22 +4,22 @@
 // D:\Claude\drug-trainer\design\home_stickers.py), plus a few borrowed from drugs/img and img/play.
 // The AET class is deliberately NOT on this page (class-only, behind its password): it stays under Learn. S.last, written by
 // app.js route(), is the last place worth returning to; AET routes are never recorded.
-import { S, esc } from './app.js?v=87';
+import { S, esc } from './app.js?v=88';
 
-const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
-const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M9 5l7 7-7 7"/></svg>';
+export const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+export const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M9 5l7 7-7 7"/></svg>';
 // names: in both-mode the Chinese sits under the English; short mono lines join with a dot
-const two = (en, zh) => S.lang === 'zh' ? zh : S.lang === 'both' ? `${en}<span class="zh">${zh}</span>` : en;
-const one = (en, zh) => S.lang === 'zh' ? zh : S.lang === 'both' ? `${en} · ${zh}` : en;
-const mini = (en, zh) => S.lang === 'en' ? en : zh;   // the small line under a name: one language only, the cells are narrow
-const stk = (src, r = 0) => `<img class="stk" src="${src}" alt="" draggable="false" style="--r:${r}deg" onerror="this.style.visibility='hidden'">`;
-const meter = pct => `<span class="meter"><i style="width:${Math.max(pct ? 4 : 0, Math.round(pct))}%"></i></span>`;
+export const two = (en, zh) => S.lang === 'zh' ? zh : S.lang === 'both' ? `${en}<span class="zh">${zh}</span>` : en;
+export const one = (en, zh) => S.lang === 'zh' ? zh : S.lang === 'both' ? `${en} · ${zh}` : en;
+export const mini = (en, zh) => S.lang === 'en' ? en : zh;   // the small line under a name: one language only, the cells are narrow
+export const stk = (src, r = 0) => `<img class="stk" src="${src}" alt="" draggable="false" style="--r:${r}deg" onerror="this.style.visibility='hidden'">`;
+export const meter = pct => `<span class="meter"><i style="width:${Math.max(pct ? 4 : 0, Math.round(pct))}%"></i></span>`;
 
 // Places the "continue" button may return to: [hash test, English, Chinese]. Anything not listed (AET above all) is not recorded.
 export const PLACES = [
   [/^#\/study\/classroom/, 'Spoken lessons', '语音课'],
   [/^#\/study\/chapters/, 'Textbook review', '教材精读'],
-  [/^#\/study\/[a-z]/, 'Guidelines', '考纲'],
+  [/^#\/study\/(?!guidelines)[a-z]/, 'Guidelines', '考纲'],   // the guidelines menu itself is not a place to come back to
   [/^#\/practice/, 'Practice questions', '刷题'],
   [/^#\/wrong/, 'Wrong-answer book', '错题本'],
   [/^#\/scenario/, 'Scenarios', '出车场景'],
@@ -44,7 +44,7 @@ function resume(tr) {
   }
   return null;
 }
-const classDone = () => { // spoken lessons finished on this device (classroom.js keeps 'pcpclass:<lesson>:done')
+export const classDone = () => { // spoken lessons finished on this device (classroom.js keeps 'pcpclass:<lesson>:done')
   let n = 0;
   try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (/^pcpclass:.+:done$/.test(k) && localStorage.getItem(k) === 'true') n++; } } catch { /* storage blocked */ }
   return n;
@@ -54,8 +54,10 @@ const best = list => (list.length ? Math.max(...list.map(x => +x || 0)) + '%' : 
 function pickTrack(el) {
   const pics = list => `<span class="phub-pics">${list.map((src, i) => `<img src="${src}" alt="" style="--r:${(i - 1) * 9}deg">`).join('')}</span>`;
   el.innerHTML = `<div class="ddx hm phub lang-${S.lang}"><main>
-    <p class="kick">BC Medic Prep${S.lang === 'en' ? '' : ' · BC 省急救员考证'}</p>
-    <h1 class="h1">${two('Which licence are you <em>going for</em>?', '你要考<em>哪一个</em>执照？')}</h1>
+    <header class="hm-hero"><div class="hm-head">
+      <p class="kick">BC Medic Prep${S.lang === 'en' ? '' : ' · BC 省急救员考证'}</p>
+      <h1 class="h1">${two('<span class="ph">Which licence </span><span class="ph">are you <em>going for</em>?</span>', '<span class="ph">你要考</span><span class="ph"><em>哪一个</em>执照？</span>')}</h1>
+    </div></header>
     <div class="phub-tiles hm-pick">
       <button class="phub-tile" data-pick-track="emr">${pics(['./img/play/emr-written/oxygen.webp', './img/play/emr-written/aed.webp', './drugs/img/oral-glucose.webp'])}
         <b>EMR</b><small>Emergency Medical Responder${S.lang === 'en' ? '' : '<span class="zh">急救反应员</span>'}</small><span class="phub-n">${one('EMALB written · jurisprudence · practical', 'EMALB 笔试 · 法规 · 实操')}</span></button>
@@ -72,7 +74,7 @@ export async function renderHome(el) {
   const go = r || (isPcp
     ? { href: '#/practice', en: 'Start with a few questions', zh: '先做几道题', subEn: 'Instant answers, every option explained', subZh: '做完马上看解析' }
     : { href: '#/play/emr-written', en: 'Start with a sticker round', zh: '先玩一轮贴纸卡', subEn: 'About 3 minutes', subZh: '大约 3 分钟' });
-  const head = r ? two('Pick up where you <em>left off</em>.', '接着<em>上次</em>的来。') : two('Three exams. Start <em>here</em>.', '三关考试，从<em>这里</em>开始。');
+  const head = r ? two('<span class="ph">Pick up where </span><span class="ph">you <em>left off</em>.</span>', '<span class="ph">接着<em>上次</em>的来。</span>') : two('<span class="ph">Three exams. </span><span class="ph">Start <em>here</em>.</span>', '<span class="ph">三关考试，</span><span class="ph">从<em>这里</em>开始。</span>');
 
   const tile = (href, pic, r0, en, zh, subEn, subZh) => `<a class="hm-tile" href="${href}">${stk(pic, r0)}<b>${two(en, zh)}</b><small>${mini(subEn, subZh)}</small></a>`;
   const quiz = tile('#/practice', './img/home/quiz.webp', -5, 'Questions', '刷题', 'instant answers', '即时解析');
@@ -84,21 +86,25 @@ export async function renderHome(el) {
   const row = (href, pic, en, zh, sub, pct, id = '') => `<a class="hm-row" href="${href}">${stk(pic)}<span><b>${two(en, zh)}</b><small${id ? ` id="${id}"` : ''}>${sub}</small>${pct == null ? '' : meter(pct)}</span><span class="chev">${CHEV}</span></a>`;
   const rows = (isPcp ? row('#/study/classroom', './img/home/class.webp', 'Spoken lessons', '语音课', cls ? mini(`${cls} done`, `已听 ${cls} 课`) : mini('a teacher talks you through it', '老师一课一课讲'), cls ? 0 : null, 'hmCls') : '')
     + row('#/study/chapters', './img/home/book.webp', 'Textbook review', '教材精读', mini(`${chRead} / 54 chapters`, `${chRead} / 54 章`), chRead / 54 * 100)
-    + row('#/study', './img/home/guide.webp', 'Guidelines', '考纲', mini('assessment · protocols · drugs', '评估 · 协议 · 药物'), null);
+    + row('#/study/guidelines', './img/home/guide.webp', 'Guidelines', '考纲', mini('assessment · protocols · drugs', '评估 · 协议 · 药物'), null);
 
   const mocks = S.mockHistory.filter(m => m.track === tr).map(m => m.pct), jur = (S.jurisHistory || []).map(j => j.pct), runs = (S.scenarioHistory || []).map(s => s.score);
   const exam = (href, pic, n, en, zh, subEn, subZh) => `<a class="hm-exam" href="${href}">${stk(pic)}<span class="n${n === '—' ? ' none' : ''}">${n}</span><b>${two(en, zh)}</b><small>${mini(subEn, subZh)}</small></a>`;
 
   el.innerHTML = `<div class="ddx hm lang-${S.lang}"><main>
-    <p class="kick">${tr.toUpperCase()} · BC Medic Prep</p>
-    <h1 class="h1">${head}</h1>
-    <a class="go" href="${esc(go.href)}"><span>${two(go.en, go.zh)}<small>${one(go.subEn, go.subZh)}</small></span><span class="arrow">${ARROW}</span></a>
+    <header class="hm-hero"><div class="hm-head">
+      <p class="kick">${tr.toUpperCase()} · BC Medic Prep</p>
+      <h1 class="h1">${head}</h1>
+    </div><div class="hm-cta">
+      <a class="go" href="${esc(go.href)}"><span>${two(go.en, go.zh)}<small>${one(go.subEn, go.subZh)}</small></span><span class="arrow">${ARROW}</span></a>
+    </div></header>
 
-    <p class="kick sec">${one('Quick practice', '练一下')}</p>
-    <div class="hm-tiles">${isPcp ? quiz + drugs + scene : play + drugs + quiz}</div>
-
-    <p class="kick sec">${one('Learn', '上课')}</p>
-    <div class="hm-rows">${rows}</div>
+    <div class="hm-cols">
+      <section><p class="kick sec">${one('Quick practice', '练一下')}</p>
+        <div class="hm-tiles">${isPcp ? quiz + drugs + scene : play + drugs + quiz}</div></section>
+      <section><p class="kick sec">${one('Learn', '上课')}</p>
+        <div class="hm-rows">${rows}</div></section>
+    </div>
 
     <p class="kick sec">${one('The three exams · full mocks', '考试三关 · 全真模考')}</p>
     <div class="hm-exams">

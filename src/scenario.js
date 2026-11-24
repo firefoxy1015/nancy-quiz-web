@@ -1,6 +1,7 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=87';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=88';
+import { two, one, mini, stk, ARROW } from './home.js?v=88';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.
@@ -50,64 +51,31 @@ export async function renderPracticalHub(el) {
   const n = pool.length;
   const med = pool.filter(s => s.type === 'medical').length;
   const runs = S.scenarioHistory;
-  const pm = S.practicalMock;
-  el.innerHTML = `
-    <div class="card">
-      <h2>${ico('ambulance')} ${t('Practical Exam Camp', '实操营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
-      ${bi('The real exam: one medical + one trauma scenario, 40 minutes each plus 5 minutes for the PCR. You start at 100% and every deficiency deducts — 70% passes. RTC (unstable) patients must be packaged in 15 minutes, stable patients in 30.',
-           '真实考试：1 个内科 + 1 个创伤场景，每场 40 分钟另加 5 分钟写 PCR。扣分制 100% 起步，70% 及格。危重(RTC)患者 15 分钟内打包完，稳定患者 30 分钟。')}
-      <div class="stat-row" style="margin-top:12px">
-        <div class="stat"><b>${n}</b><span>${t('scenarios', '场景数')}</span></div>
-        <div class="stat"><b>${med}/${n - med}</b><span>medical/trauma</span></div>
-        <div class="stat"><b>${runs.length}</b><span>${t('runs done', '已练次数')}</span></div>
-        <div class="stat"><b>${runs.length ? Math.max(...runs.map(r => r.score)) + '%' : '—'}</b><span>${t('best score', '最好成绩')}</span></div>
-      </div>
+  const pm = S.practicalMock && S.practicalMock.active ? S.practicalMock : null;
+  const bestRun = runs.length ? Math.max(...runs.map(r => r.score)) + '%' : '';
+  const tile = (href, pic, r0, en, zh, sub) => `<a class="hm-tile" href="${href}">${stk(pic, r0)}<b>${two(en, zh)}</b><small>${sub}</small></a>`;
+  // Same sticker board as the home page (.ddx.hm): the exam-day draw as the one big button, the ways to practise as tiles.
+  el.innerHTML = `<div class="ddx hm lang-${S.lang}"><main>
+    <header class="hm-hero"><div class="hm-head">
+    <p class="kick">${tr.toUpperCase()} · ${one('Practical', '实操')}</p>
+    <h1 class="h1">${two('<span class="ph">Two calls. </span><span class="ph"><em>70%</em> on each.</span>', '<span class="ph">两场考试，</span><span class="ph"><em>各 70%</em> 过。</span>')}</h1>
+    <p class="hm-fact">${mini('1 medical + 1 trauma · 40 min each + 5 min PCR · unstable: packaged in 15 min', '内科 1 场 + 创伤 1 场 · 每场 40 分钟 + 5 分钟写 PCR · 危重 15 分钟内打包')}</p>
+    </div><div class="hm-cta">${pm
+      ? `<a class="go" href="#/scenario/${pm.ids[pm.stage]}"><span>${two('Back to your exam', '继续这场模考')}<small>${one(`Next: the ${pm.stage} call`, `接下来：${pm.stage === 'medical' ? '内科' : '创伤'}场景`)}</small></span><span class="arrow">${ARROW}</span></a>
+         <p class="hm-under"><button id="cancelMock">${one('Abandon this mock', '放弃这场模考')}</button></p>`
+      : `<button class="go" id="startPMock"><span>${two('Draw my two calls', '抽签开考')}<small>${one('Exam-day mock: one medical, one trauma, on the clock', '全真模考：随机 1 内科 + 1 创伤，计时连考')}</small></span><span class="arrow">${ARROW}</span></button>`}</div></header>
+
+    <p class="kick sec">${one('Practise', '练一下')}</p>
+    <div class="hm-tiles big">
+      ${tr === 'emr' ? tile('#/play/emr-sims', './img/home/practical.webp', -4, 'Play a call', '跑一单', mini('a whole station as a game', '把一整站当游戏跑')) : ''}
+      ${tile('#/scenarios', './img/home/scene.webp', 5, 'One scenario', '单场练习', mini(`${n} scenarios`, `${n} 个场景`))}
+      ${tile('#/examiner', './img/home/examiner.webp', -4, 'AI examiner', '考官机器人', mini('talk it through, in English', '开口和考官对话（英文）'))}
+      ${tile('#/autofails', './img/home/autofail.webp', 4, 'Auto-fails', '挂科陷阱', mini('one slip ends the station', '一做就当场挂'))}
+      ${tile('#/rubric', './img/home/rubric.webp', -3, 'Grading sheet', '评分细则', mini("the examiner's own list", '考官手里那张表'))}
     </div>
-    ${pm && pm.active ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-      ${ico('cap')} ${bi(`A full practical mock is in progress — next up: the ${pm.stage} scenario.`, `你有一场全真实操模考进行中——接下来是${pm.stage === 'medical' ? '内科' : '创伤'}场景。`, 'span')}
-      <a class="btn" style="margin-left:auto" href="#/scenario/${pm.ids[pm.stage]}">${t('Continue', '继续考试')} →</a>
-      <button class="btn ghost" id="cancelMock">${t('Abandon', '放弃')}</button>
-    </div>` : ''}
-    <div class="card" style="border-color:var(--accent)">
-      <h3 style="margin-top:0">${ico('cap')} ${t('Full practical mock — exam day simulation', '全真实操模考——考试日模拟')}</h3>
-      ${bi('Exactly like the real day: the system randomly draws one medical and one trauma scenario. Run both under the clock; you must score 70%+ on each to pass. When time expires the scenario ends and everything not done counts against you.',
-           '完全复刻真实考试日：系统随机抽 1 个内科 + 1 个创伤场景，连考两场。每场都要 70% 以上才算通过；40 分钟一到当场收卷，没做的项目全部按漏做扣分。')}
-      <div class="btn-row"><button class="btn big" id="startPMock" ${pm && pm.active ? 'disabled' : ''}>▶ ${t('Draw my two scenarios', '抽签开考')}</button></div>
-    </div>
-    ${tr === 'emr' ? `<div class="card" style="border-color:var(--accent)">
-      <h3 style="margin-top:0">${ico('ambulance')} ${t('Play & learn: run the call', '边学边玩：跑一单')} <span class="pill gray">NEW</span></h3>
-      ${bi('A whole station as a game: dispatch, then every decision in order. Wrong calls deduct like the real grading, automatic fails end it, 70% passes, and the debrief opens at the end.',
-           '把一整站做成游戏：先听调度，再按顺序做每个决定。做错按真实评分扣分，挂科项直接挂，70% 及格，跑完看复盘。')}
-      <div class="btn-row"><a class="btn" href="#/play/emr-sims">${t('Take a call', '接一单')}</a></div>
-    </div>` : ''}
-    <div class="card" style="border-color:var(--yellow)">
-      <h3 style="margin-top:0">${ico('ambulance')} ${t('AI Examiner — talk to a simulated examiner', '考官机器人——和模拟考官对话')} <span class="pill gray">BETA</span></h3>
-      ${bi('A live station: the examiner answers only what you assess or ask, in English, never coaches, and grades you on the official form at the end. Medical and trauma stations at both levels, plus an exam-day draw.',
-           '真人式考站：考官只回答你评估到、问到的内容，全程英文，不教不提示，结束按官方评分表给分。两个等级都有内科和创伤考站，还可以像考试日一样抽签。')}
-      <div class="btn-row"><a class="btn" href="#/examiner">${t('Open the examiner', '进入考官机器人')}</a></div>
-    </div>
-    <div class="grid-2">
-      <div class="card">
-        <h3 style="margin-top:0">${ico('film')} ${t('Practice one scenario', '单场练习')}</h3>
-        ${bi('Pick any scenario and run it phase by phase against the real examiner checklist — no pressure, learn the flow.',
-             '任选一个场景逐幕练，对照真实考官清单自评——没有收卷压力，先把流程练熟。')}
-        <div class="btn-row"><a class="btn" href="#/scenarios">${t('Choose a scenario', '选场景')}</a></div>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0"> ${t('Auto-fail traps', '直接挂科陷阱')}</h3>
-        ${bi('Every 100%-deduction action from the official rubric as flashcards. Know them cold.',
-             '官方评分表里所有 100% 扣分（=当场挂科）的动作做成闪卡，必须背到条件反射。')}
-        <div class="btn-row"><a class="btn danger" href="#/autofails">${t('Drill them', '开背')}</a></div>
-      </div>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">${ico('list')} ${t('The official grading rubric', '官方评分细则')}</h3>
-      ${bi('Browse every scoring item and its deduction weights — this is the exact standard examiners mark you against (EMALB, March 2025).',
-           '逐项浏览每个考核点和扣分权重——这就是考官手里的评分标准（EMALB 2025年3月版）。')}
-      <div class="btn-row"><a class="btn secondary" href="#/rubric">${t('Open rubric', '打开细则')}</a></div>
-    </div>
-    <div class="notice">${t('A website trains decisions, sequencing and timing. Hands-on skills (BVM, bandaging, spinal rolls) need real-world practice with real equipment.',
-      '网站能练决策、流程和时间感；动手技能（BVM、包扎、脊柱滚动）必须用真实器材线下实练。')}</div>`;
+
+    <p class="foot">${runs.length ? one(`${runs.length} runs so far · best ${bestRun}`, `已练 ${runs.length} 次 · 最好 ${bestRun}`) + '<br>' : ''}${one('The site trains decisions, order and timing. Hands-on skills need real equipment.', '网站练的是决策、顺序和时间感；动手技能要用真器材线下练。')}</p>
+  </main></div>`;
   const startBtn = el.querySelector('#startPMock');
   if (startBtn) startBtn.onclick = async () => {
     const meds = ownPool(pool).filter(s => s.type === 'medical');
@@ -183,7 +151,7 @@ function drawPhase(el, sc, phases) {
   const variant = S.track === 'emr' ? [sc.emrVariantEn, sc.emrVariantZh] : [sc.pcpVariantEn, sc.pcpVariantZh];
   const inMock = isMockRun(sc);
   el.innerHTML = `
-    <a class="back-link" href="${inMock ? '#/practical' : '#/scenarios'}">← ${inMock ? t('Practical camp', '实操营') : t('Scenarios', '场景库')}</a>
+    <a class="back-link" href="${inMock ? '#/practical' : '#/scenarios'}">← ${inMock ? t('Practical', '实操') : t('Scenarios', '场景库')}</a>
     <div class="card">
       <div class="q-meta">
         <h2 style="font-size:1.05rem">${bi(sc.titleEn, sc.titleZh, 'span')}</h2>
@@ -499,7 +467,7 @@ function drawScenarioResult(el, sc) {
   const mockDone = pm && !pm.active && pm.results && pm.results.length === 2 && pm.results.find(r => r.id === sc.id);
   const autoFails = run.deductions.filter(d => d.weight >= 100);
   el.innerHTML = `
-    <a class="back-link" href="${pm && (pm.active || mockDone) ? '#/practical' : '#/scenarios'}">← ${pm && (pm.active || mockDone) ? t('Practical camp', '实操营') : t('Scenarios', '场景库')}</a>
+    <a class="back-link" href="${pm && (pm.active || mockDone) ? '#/practical' : '#/scenarios'}">← ${pm && (pm.active || mockDone) ? t('Practical', '实操') : t('Scenarios', '场景库')}</a>
     <div class="card score-hero">
       <div class="score-big ${pass ? 'pass' : 'fail'}">${score}%</div>
       <p><b>${bi(sc.titleEn, sc.titleZh, 'span')}</b></p>
@@ -601,7 +569,7 @@ export async function renderRubricBrowser(el, arg, params) {
   if (!r) { el.innerHTML = `<div class="card"><h2>${t('Rubric deploying…', '评分细则部署中…')}</h2></div>`; return; }
   const wcls = w => w >= 100 ? 'w100' : w >= 25 ? 'wbig' : w >= 10 ? 'wmid' : 'wsm';
   el.innerHTML = `
-    <a class="back-link" href="#/practical">← ${t('Practical camp', '实操营')}</a>
+    <a class="back-link" href="#/practical">← ${t('Practical', '实操')}</a>
     <div class="card">
       <h2>${ico('list')} ${t('Official Grading Rubric', '官方评分细则')}</h2>
       <p class="tiny">${esc(r.meta.source)} · ${esc(r.meta.sourceVersion)} · ${t('start at 100%, pass at 70%', '100% 起扣，70% 及格')}</p>
@@ -647,7 +615,7 @@ export async function renderAutoFails(el) {
   const draw = () => {
     const af = r.autoFails[order[pos]];
     el.innerHTML = `
-      <a class="back-link" href="#/practical">← ${t('Practical camp', '实操营')}</a>
+      <a class="back-link" href="#/practical">← ${t('Practical', '实操')}</a>
       <div class="card">
         <h2> ${t('Auto-fail flashcards', '直接挂科闪卡')} <span class="tag-count">${pos + 1}/${order.length}</span></h2>
         ${bi('These actions (or omissions) are worth a 100% deduction — instant fail. Tap the card to reveal.', '这些动作（或不作为）直接扣 100% = 当场挂科。点卡片翻面。')}

@@ -1,9 +1,11 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=87';
-import { sClassroom } from './classroom.js?v=87';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=88';
+import { sClassroom } from './classroom.js?v=88';
+import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=88';
 
 /* ---------------- study hub ---------------- */
-export async function renderStudyHub(el) {
+// The six official-guideline tiles, shared by the Learn hub and the guidelines page.
+async function guideTiles() {
   const tr = S.track, isEmr = tr === 'emr';
   // count what this candidate's scope actually shows, so the filtering is visible
   const [tData, pData, dData] = await Promise.all([
@@ -16,72 +18,70 @@ export async function renderStudyHub(el) {
   const pMine = pData ? pData.protocols.filter(x => inScope(x)).length : 0;
   const dAll = dData ? dData.drugs.length : 0;
   const dMine = dData ? dData.drugs.filter(x => (x.licence || []).some(l => l.toLowerCase() === tr)).length : 0;
-  const scopeTag = (mine, all) => mine === all
-    ? `<span class="tag-count">${all}</span>`
-    : `<span class="tag-count" style="color:var(--${tr});border-color:var(--${tr})">${mine} / ${all}</span>`;
+  const n = (mine, all) => mine === all ? `${all}` : `${mine} / ${all}`;
+  const tile = (href, pic, r0, en, zh, sub) => `<a class="hm-tile" href="${href}">${stk(pic, r0)}<b>${two(en, zh)}</b><small>${sub}</small></a>`;
+  return tile('#/study/assessment', './img/home/assess.webp', -5, 'Assessment', '评估模型', mini('the exam sequence', '考试的主线'))
+    + tile('#/study/protocols', './img/home/protocol.webp', 4, 'Protocols', '处置协议', mini(`${n(pMine, pAll)} protocols`, `${n(pMine, pAll)} 个`))
+    + tile('#/study/treatments', './img/home/treat.webp', -3, 'Treatments', '处置主题', mini(`${n(tMine, tAll)} topics`, `${n(tMine, tAll)} 个`))
+    + tile('#/study/drugs', './drugs/img/naloxone.webp', 5, 'Drug sheets', '药物专论', mini(`${n(dMine, dAll)} drugs`, `${n(dMine, dAll)} 种`))
+    + tile('#/study/reference', './img/home/ref.webp', -4, 'Reference', '速查', mini('GCS · abbreviations', 'GCS · 缩写表'))
+    + tile('./drugs/', './drugs/img/nitroglycerin.webp', 4, 'Drug Drill', '药箱', mini('3 minutes', '三分钟一轮'));
+}
+const guideFoot = () => one('Guidelines: BC Provincial Examination Guidelines, June 15, 2026. Where the textbook and the guidelines differ, the guidelines win.', '考纲 = BC 官方考试指南（2026 年 6 月 15 日版）。教材和考纲不一样时，以考纲为准。')
+  + (S.track === 'emr' ? '<br>' + one('Shown for the EMR scope: no IV, no CPAP, fewer drugs.', '已按 EMR 范围显示：不开 IV、不用 CPAP、药更少。') : '');
+
+/* ---------------- guidelines page (what "Guidelines" on the home page opens) ---------------- */
+async function sGuidelines(el) {
+  const tiles = await guideTiles();
+  el.innerHTML = `<div class="ddx hm lang-${S.lang}"><main>
+    <header class="hm-hero"><div class="hm-head">
+      <p class="kick">${S.track.toUpperCase()} · ${one('Guidelines', '考纲')}</p>
+      <h1 class="h1">${two('<span class="ph">What the exam </span><span class="ph"><em>goes by</em>.</span>', '<span class="ph">考试</span><span class="ph"><em>以这个为准</em>。</span>')}</h1>
+    </div></header>
+    <div class="hm-tiles big trio">${tiles}</div>
+    <p class="foot">${guideFoot()}<br><a href="#/study">${one('All of Learn', '上课的全部内容')}</a></p>
+  </main></div>`;
+}
+
+export async function renderStudyHub(el) {
+  const tr = S.track;
+  const tiles = await guideTiles();
   const chData = await loadJSON('./data/study/chapters2/index.json');
-  const chV2 = chData ? chData.chapters.filter(c => c.status === 'v2').length : 0;
   const clsData = await fetch('./data/classroom/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
   const clsAll = clsData ? clsData.units.flatMap(u => u.lessons) : [];
   const clsReady = clsAll.filter(l => l.ready).length;
-  const cards = [
-    ['classroom', ico('film'), 'PCP Classroom — spoken lessons', 'PCP 课堂（英文语音课）',
-      'A teacher talks you through each topic in English, slide by slide, with quick questions: what changes when an EMR steps up to PCP.',
-      '老师用英文逐页讲解、随堂提问：从 EMR 升到 PCP，多做什么、要注意什么。课内可看中文翻译。',
-      clsData ? `<span class="tag-count">${clsReady} / ${clsAll.length}</span>` : ''],
-    ['/aet', ico('target'), 'AET PCP Course — lectures, modules, class portal', 'AET PCP 课程（讲课、模块练习、班级门户）',
-      'Class password required. Spoken lessons that follow the AET program weekend by weekend, original practice questions by module, and the class portal.',
-      '需要班级密码。按 AET 课程周末顺序讲的语音课、按模块编排的原创练习题，以及班级门户。', `<span style="display:inline-flex;color:var(--muted)">${ico('lock')}</span>`],
-    ['chapters', ico('cap'), 'Nancy Caroline Chapter Review', 'Nancy Caroline 章节精读',
-      `All 54 chapters of the Canadian edition. ${chV2} are rewritten in depth — knowledge map, every testable number, BC-guideline conflicts flagged.`,
-      `加拿大版教材全部 54 章，其中 ${chV2} 章已深度重写——知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注。`,
-      chData ? `<span class="tag-count">${chV2} / ${chData.chapters.length}</span>` : ''],
-    ['assessment', ico('compass'), 'Patient Assessment Model', '患者评估模型',
-      'The backbone of both written and practical. Learn the exact official sequence.', '笔试和实操共同的主线，按官方顺序学。', ''],
-    ['protocols', ico('list'), 'Protocols', '处置协议',
-      'The decision trees examiners test: cardiac arrest to narcotic overdose.', '考官考的决策树：从心脏骤停到麻醉剂过量。', scopeTag(pMine, pAll)],
-    ['treatments', ico('bandage'), 'Treatments', '处置主题',
-      'Wound care, spinal, burns, CPR, environmental — every testable topic.', '伤口/脊柱/烧伤/CPR/环境急症——每个可考主题。', scopeTag(tMine, tAll)],
-    ['drugs', ico('pill'), 'Drug Monographs', '药物专论',
-      'Doses, contraindications, and who may give what.', '剂量、禁忌、给药权限。', scopeTag(dMine, dAll)],
-    ['./drugs/', ico('pill'), 'Drug Drill — practice app', '药箱 — 药物练习小程序',
-      'Three-minute rounds on your phone: the exam drugs, the BCEHS drugs, and the medicines patients take at home.',
-      '手机上三分钟一轮：考试药、出车药、病人在家吃的药。', ''],
-    ['reference', ico('abc'), 'Reference', '速查参考',
-      'Abbreviations, GCS, AVPU, history mnemonics, PCR fields.', '缩写表、GCS、AVPU、病史口诀、PCR 字段。', ''],
-  ];
-  el.innerHTML = `
-    <div class="card">
-      <h2>${ico('book')} ${t('Learn', '上课')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
-      ${bi('Two layers. The Nancy Caroline chapter review is your textbook backbone — it teaches the subject. Everything below it is structured from the official BC Provincial Examination Guidelines (June 15, 2026), the only standard examiners may mark against, with page references throughout. When the textbook and the guidelines differ, the guidelines win.',
-           '两层内容。Nancy Caroline 章节精读是教材主线——它负责把知识讲明白。它下面的全部内容结构化自 BC 官方考纲（2026年6月15日现行版）——考官唯一被允许采用的标准，每条都带原文页码。教材与考纲冲突时，一律以考纲为准。')}
+  const chRead = Object.keys(S.chaptersRead || {}).length, chAll = chData ? chData.chapters.length : 54;
+  const clsDone = classDone();
+  const row = (href, pic, en, zh, sub, pct) => `<a class="hm-row" href="${href}">${stk(pic)}<span><b>${two(en, zh)}</b><small>${sub}</small>${pct == null ? '' : meter(pct)}</span><span class="chev">${CHEV}</span></a>`;
+  // Same sticker board as the home page (.ddx.hm): the lessons as rows, the official guidelines as six tiles.
+  el.innerHTML = `<div class="ddx hm lang-${S.lang}"><main>
+    <header class="hm-hero"><div class="hm-head">
+      <p class="kick">${tr.toUpperCase()} · ${one('Learn', '上课')}</p>
+      <h1 class="h1">${two('<span class="ph">Listen first. </span><span class="ph"><em>Look it up</em> after.</span>', '<span class="ph">先听课，</span><span class="ph"><em>再查考纲</em>。</span>')}</h1>
+    </div></header>
+
+    <p class="kick sec">${one('Lessons', '听课')}</p>
+    <div class="hm-rows cards">
+      ${row('#/study/classroom', './img/home/class.webp', 'Spoken lessons', '语音课', clsReady ? mini(`${clsDone} / ${clsReady} lessons`, `${clsDone} / ${clsReady} 课`) : mini('a teacher talks you through it', '老师一课一课讲'), clsReady ? clsDone / clsReady * 100 : null)}
+      ${row('#/study/chapters', './img/home/book.webp', 'Textbook review', '教材精读', mini(`${chRead} / ${chAll} chapters`, `${chRead} / ${chAll} 章`), chRead / chAll * 100)}
+      ${row('#/aet', './img/home/aet.webp', 'AET PCP course', 'AET PCP 课程', `<span class="lock">${ico('lock')}</span>${mini('class password', '需要班级密码')}`, null)}
     </div>
-    <div class="notice">
-      ${bi(isEmr
-        ? `Filtered to the EMR scope: you see ${pMine} of ${pAll} protocols, ${tMine} of ${tAll} treatment topics, and ${dMine} of ${dAll} drugs. Assessment, history taking and most trauma and medical care are identical at both levels — what changes is which interventions you are authorized to perform (no IV, no CPAP, fewer drugs).`
-        : `Full PCP scope: all ${pAll} protocols, ${tAll} treatment topics and ${dMine} of ${dAll} drugs are within your authorization. The extra ground over EMR is IV therapy, CPAP, fluid resuscitation and the PCP-only medications.`,
-        isEmr
-        ? `已按 EMR 授权范围过滤：协议 ${pMine}/${pAll}、处置主题 ${tMine}/${tAll}、药物 ${dMine}/${dAll}。评估流程、病史采集和大部分创伤/内科处置在两个等级是完全一样的——区别只在于"你被授权做哪些干预"（EMR 不能开 IV、不能用 CPAP、可用药更少）。`
-        : `PCP 完整范围：${pAll} 个协议、${tAll} 个处置主题全部可用，药物 ${dMine}/${dAll} 在你的授权内。比 EMR 多出来的是 IV 治疗、CPAP、液体复苏和 PCP 专属药物。`)}
-    </div>
-    <div class="list-wrap">
-      ${cards.map(c => `<button class="list-item" data-goto="${/^\.?\//.test(c[0]) ? c[0] : '/study/' + c[0]}">
-        <span style="display:inline-flex;color:var(--accent);font-size:1.15rem">${c[1]}</span>
-        <span>${bi(c[2], c[3], 'span')}<div class="tiny">${t(c[4], c[5])}</div></span>
-        ${c[6]}
-        <span class="li-arrow">›</span></button>`).join('')}
-    </div>`;
-  // './…' is a page of its own (the Drug Drill app), everything else is a route inside this site
-  el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => { if (b.dataset.goto.startsWith('./')) location.href = b.dataset.goto; else nav(b.dataset.goto); });
+
+    <p class="kick sec">${one('Official guidelines', '官方考纲')}</p>
+    <div class="hm-tiles six">${tiles}</div>
+
+    <p class="foot">${guideFoot()}</p>
+  </main></div>`;
 }
 
 /* ---------------- sections ---------------- */
 export async function renderStudySection(el, arg, params) {
-  const fn = { classroom: sClassroom, chapters: sChapters, assessment: sAssessment, protocols: sProtocols, treatments: sTreatments, drugs: sDrugs, reference: sReference }[arg];
+  const fn = { classroom: sClassroom, chapters: sChapters, guidelines: sGuidelines, assessment: sAssessment, protocols: sProtocols, treatments: sTreatments, drugs: sDrugs, reference: sReference }[arg];
   if (!fn) { renderStudyHub(el); return; }
   await fn(el, params);
 }
 const backStudy = () => `<a class="back-link" href="#/study">← ${t('Learn', '上课')}</a>`;
+const backGuide = () => `<a class="back-link" href="#/study/guidelines">← ${t('Guidelines', '考纲')}</a>`;
 const deploying = title => `<div class="card"><h2>${title}</h2><p class="muted">${t('This module is deploying — check back shortly.', '该模块内容部署中，稍后再来。')}</p></div>`;
 
 // Nancy Caroline chapter review. v2 (chapters2/) is the 8-module Canadian-edition
@@ -251,9 +251,9 @@ function ensureToTop() {
 
 async function sAssessment(el) {
   const d = await loadJSON('./data/study/assessment-model.json');
-  if (!d) { el.innerHTML = backStudy() + deploying('Assessment Model'); return; }
+  if (!d) { el.innerHTML = backGuide() + deploying('Assessment Model'); return; }
   el.innerHTML = `
-    ${backStudy()}
+    ${backGuide()}
     <div class="card">
       <h2>${ico('compass')} ${t('Patient Assessment Model', '患者评估模型')}</h2>
       <p class="tiny">${esc(d.meta.source)} · pp.${esc(d.meta.sourcePages)}</p>
@@ -301,7 +301,7 @@ async function sAssessment(el) {
 
 async function sProtocols(el, params) {
   const d = await loadJSON('./data/study/protocols.json');
-  if (!d) { el.innerHTML = backStudy() + deploying('Protocols'); return; }
+  if (!d) { el.innerHTML = backGuide() + deploying('Protocols'); return; }
   const id = params.id;
   const list = d.protocols.filter(p => !(p.licence === 'pcp' && S.track === 'emr'));
   if (id) {
@@ -309,7 +309,7 @@ async function sProtocols(el, params) {
     if (p) { drawProtocol(el, p); return; }
   }
   el.innerHTML = `
-    ${backStudy()}
+    ${backGuide()}
     <div class="card"><h2> ${t('Protocols', '处置协议')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
     ${bi('These 13 protocols are exactly what the practical examiners grade "cognitive ability and protocol decision-making" against.',
          '这 13 个协议就是实操考官评估"认知能力与协议决策"的依据。')}</div>
@@ -355,13 +355,84 @@ function sec(title, en = [], zh = []) {
   return `<div class="detail-section"><h4>${title}</h4><ul>${biList(en, zh)}</ul></div>`;
 }
 
+/* A treatment topic as a picture-first card (data/study/treatment-cards.json): one line, a few drawn blocks, three questions
+   answered one at a time, and the full guideline text folded underneath. Topics without a card keep the plain page below. */
+const CAT = { trauma: ['Trauma', '创伤'], medical: ['Medical', '内科'], 'cardiac-arrest': ['Cardiac arrest', '心脏骤停'], procedure: ['Procedure', '操作'] };
+const X_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+function treatmentCard(el, x, c) {
+  const cat = CAT[x.category] || [x.category, x.category];
+  const block = b => {
+    const title = `<p class="kick sec">${one(b.titleEn, b.titleZh)}</p>`;
+    if (b.type === 'ladder') {
+      const firstLate = b.steps.findIndex(st => st.last);
+      return `<section class="tc-b tc-ladder">${title}<ol>${b.steps.map((st, i) => `${i === firstLate ? `<li class="lbl"><span>${one(b.tagEn, b.tagZh)}</span></li>` : ''}
+        <li class="${st.last ? 'late' : ''}"><i>${i + 1}</i><span><b>${two(st.en, st.zh)}</b>${st.subEn ? `<small>${mini(st.subEn, st.subZh)}</small>` : ''}</span></li>`).join('')}</ol></section>`;
+    }
+    if (b.type === 'never') return `<section class="tc-b tc-never">${title}<ul>${b.items.map(it => `<li><i>${X_ICO}</i><span>${two(it.en, it.zh)}</span></li>`).join('')}</ul></section>`;
+    if (b.type === 'fork') return `<section class="tc-b tc-fork">${title}<div class="fk">
+        <div class="act">${two(b.actEn, b.actZh)}</div>
+        <div class="arms"><div class="good"><small>${mini(b.goodEn, b.goodZh)}</small><b>${mini(b.goodToEn, b.goodToZh)}</b></div>
+          <div class="bad"><small>${mini(b.badEn, b.badZh)}</small><b>${mini(b.badToEn, b.badToZh)}</b></div></div></div></section>`;
+    if (b.type === 'phases') return `<section class="tc-b tc-phases">${title}<div class="phs">${b.rows.map(r => `<div><i>${esc(r.k)}</i><span>${two(r.en, r.zh)}</span></div>`).join('')}</div></section>`;
+    return '';
+  };
+  el.innerHTML = `<div class="ddx hm tc lang-${S.lang}"><main>
+    <a class="tc-back" href="#/study/treatments">← ${one('Treatments', '处置主题')}</a>
+    <header class="tc-hero"><div>
+      <p class="kick">${one(cat[0], cat[1])} · ${one(x.titleEn, x.titleZh)}${x.licence === 'pcp' ? ' · PCP' : ''}</p>
+      <h1 class="h1">${two(c.headEn, c.headZh)}</h1>
+    </div>${stk(c.pic, 6)}</header>
+    <p class="tc-line">${two(c.lineEn, c.lineZh)}</p>
+    <div class="tc-grid">${c.blocks.map(block).join('')}
+      <section class="tc-b tc-quiz"><p class="kick sec">${one('Your turn', '考考你')}</p><div class="qz" id="tcQuiz"></div></section>
+    </div>
+    <details class="tc-src"><summary>${one('The full guideline text', '考纲原文')} · ${one(`page ${x.sourcePage}`, `第 ${x.sourcePage} 页`)}</summary>
+      ${(x.contentEn || []).map((cEn, i) => {
+        const cZh = (x.contentZh || [])[i] || {};
+        return `<div class="detail-section"><h4>${bi(cEn.heading, cZh.heading || '', 'span')}</h4><ul>${biList(cEn.points, cZh.points || [])}</ul></div>`;
+      }).join('')}
+      ${sec(ico('info') + ' ' + t('Exam tips', '考试要点'), x.examTipsEn, x.examTipsZh)}
+    </details>
+    <p class="foot">${one('BC Provincial Examination Guidelines, June 15, 2026.', 'BC 官方考试指南（2026 年 6 月 15 日版）。')}</p>
+  </main></div>`;
+
+  // the questions, one at a time: tap an answer, see why, go on
+  const box = el.querySelector('#tcQuiz'), qs = c.quiz || [];
+  let i = 0, right = 0;
+  const show = () => {
+    if (i >= qs.length) {
+      box.innerHTML = `<p class="qn">${one(`${right} of ${qs.length} right`, `答对 ${right} / ${qs.length}`)}</p>
+        <p class="q">${right === qs.length ? two('All of them. This one is yours.', '全对。这一页你拿下了。') : two('Look at the picture above once more, then try again.', '再看一眼上面的图，然后重来一次。')}</p>
+        <button class="nextbtn" id="tcAgain">${one('Again', '再来一次')}</button>`;
+      box.querySelector('#tcAgain').onclick = () => { i = 0; right = 0; show(); };
+      return;
+    }
+    const q = qs[i];
+    box.innerHTML = `<p class="qn">${i + 1} / ${qs.length}</p><p class="q">${two(q.qEn, q.qZh)}</p>
+      <div class="opts">${q.opts.map((o, k) => `<button data-k="${k}">${two(o.en, o.zh)}</button>`).join('')}</div><div class="why" hidden></div>`;
+    box.querySelectorAll('.opts button').forEach(b => b.onclick = () => {
+      const k = +b.dataset.k, ok = k === q.a;
+      if (ok) right++;
+      box.querySelectorAll('.opts button').forEach((o, n) => { o.disabled = true; if (n === q.a) o.classList.add('ok'); else if (n === k) o.classList.add('no'); });
+      const why = box.querySelector('.why');
+      why.hidden = false;
+      why.innerHTML = `<p class="${ok ? 'ok' : 'no'}"><b>${ok ? one('Right.', '对。') : one('Not this one.', '不是这个。')}</b> ${two(q.whyEn, q.whyZh)}</p>
+        <button class="nextbtn" id="tcNext">${i + 1 < qs.length ? one('Next', '下一题') : one('Done', '看结果')}</button>`;
+      why.querySelector('#tcNext').onclick = () => { i++; show(); };
+    });
+  };
+  show();
+}
+
 async function sTreatments(el, params) {
   const d = await loadJSON('./data/study/treatments.json');
-  if (!d) { el.innerHTML = backStudy() + deploying('Treatments'); return; }
+  if (!d) { el.innerHTML = backGuide() + deploying('Treatments'); return; }
   const id = params.id;
   const list = d.treatments.filter(x => !(x.licence === 'pcp' && S.track === 'emr'));
   if (id) {
     const x = d.treatments.find(y => y.id === id);
+    const cards = x ? await fetch('./data/study/treatment-cards.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null) : null;
+    if (x && cards && cards.cards[x.id]) { treatmentCard(el, x, cards.cards[x.id]); return; }
     if (x) {
       el.innerHTML = `
         <a class="back-link" href="#/study/treatments">← ${t('Treatments', '处置主题')}</a>
@@ -381,7 +452,7 @@ async function sTreatments(el, params) {
   const cats = {};
   for (const x of list) (cats[x.category || 'other'] ||= []).push(x);
   el.innerHTML = `
-    ${backStudy()}
+    ${backGuide()}
     <div class="card"><h2>${ico('bandage')} ${t('Treatments', '处置主题')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2></div>
     ${Object.entries(cats).map(([cat, xs]) => `
       <div class="card"><h3 style="margin-top:0">${esc(cat)}</h3></div>
@@ -396,7 +467,7 @@ async function sTreatments(el, params) {
 
 async function sDrugs(el, params) {
   const [d, add] = await Promise.all([loadJSON('./data/study/drugs.json'), loadJSON('./data/study/drugs-added.json')]);
-  if (!d) { el.innerHTML = backStudy() + deploying('Drugs'); return; }
+  if (!d) { el.innerHTML = backGuide() + deploying('Drugs'); return; }
   const added = add ? add.drugs : [];
   const id = params.id;
   if (id) {
@@ -406,7 +477,7 @@ async function sDrugs(el, params) {
   const mine = d.drugs.filter(dr => (dr.licence || []).map(s => s.toLowerCase()).includes(S.track));
   const others = d.drugs.filter(dr => !mine.includes(dr));
   el.innerHTML = `
-    ${backStudy()}
+    ${backGuide()}
     <div class="card"><h2>${ico('pill')} ${t('Drug Monographs', '药物专论')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
       ${bi(`Licensing exam (EMALB): ${d.drugs.length} drugs. ${mine.length} in your scope · ${others.length} beyond it (still worth recognizing).`,
            `执照考试（EMALB）共 ${d.drugs.length} 种药。你的授权范围内 ${mine.length} 个 · 范围外 ${others.length} 个（也要认识）。`)}</div>
@@ -458,9 +529,9 @@ function drawDrug(el, dr) {
 
 async function sReference(el) {
   const d = await loadJSON('./data/study/reference.json');
-  if (!d) { el.innerHTML = backStudy() + deploying('Reference'); return; }
+  if (!d) { el.innerHTML = backGuide() + deploying('Reference'); return; }
   el.innerHTML = `
-    ${backStudy()}
+    ${backGuide()}
     <div class="card">
       <h2>${ico('abc')} ${t('Abbreviations', '缩写表')} <span class="tag-count">${(d.abbreviations || []).length}</span></h2>
       <input class="search-box" id="abbrSearch" placeholder="${t('Search abbreviations…', '搜索缩写…')}" />
@@ -520,7 +591,7 @@ export async function renderJurisHub(el, arg, params) {
 }
 function drawJurisNotes(el, notes) {
   el.innerHTML = `
-    <a class="back-link" href="#/juris">← ${t('Jurisprudence camp', '法规营')}</a>
+    <a class="back-link" href="#/juris">← ${t('Jurisprudence exam', '法规考')}</a>
     <div class="card"><h2>${ico('book')} ${t('Jurisprudence Notes', '法规笔记')}</h2>
       <p class="tiny">${esc((notes.meta.sources || []).join(' · '))}</p></div>
     ${notes.sections.map(s => `
@@ -541,7 +612,7 @@ function drawJurisPractice(el, bank) {
   }
   const q = bank.questions[jSession.order[jSession.pos]];
   el.innerHTML = `
-    <a class="back-link" href="#/juris">← ${t('Jurisprudence camp', '法规营')}</a>
+    <a class="back-link" href="#/juris">← ${t('Jurisprudence exam', '法规考')}</a>
     <div class="card">
       <div class="q-meta"><b>${t('Practice', '练习')}</b><span class="muted">${jSession.right}/${jSession.done}</span></div>
       <div class="q-text">${bi(q.questionEn, q.questionZh)}</div>
@@ -572,7 +643,7 @@ function drawJurisMock(el, bank) {
   const qs = jSession.qs;
   const q = qs[jSession.pos];
   el.innerHTML = `
-    <a class="back-link" href="#/juris">← ${t('Jurisprudence camp', '法规营')}</a>
+    <a class="back-link" href="#/juris">← ${t('Jurisprudence exam', '法规考')}</a>
     <div class="card">
       <div class="q-meta"><b>${t('Mock exam', '模拟考')}</b><span>Q${jSession.pos + 1}/25 · ${t('no time limit', '不限时')}</span></div>
       <div class="q-grid">${qs.map((qq, i) => `<button class="${jSession.answers[qq.id] ? 'answered' : ''} ${i === jSession.pos ? 'current' : ''}" data-goto="${i}">${i + 1}</button>`).join('')}</div>
@@ -599,7 +670,7 @@ function drawJurisMock(el, bank) {
     jSession.finished = true;
     S.jurisHistory.push({ date: new Date().toISOString().slice(0, 10), right, pct }); save();
     el.innerHTML = `
-      <a class="back-link" href="#/juris">← ${t('Jurisprudence camp', '法规营')}</a>
+      <a class="back-link" href="#/juris">← ${t('Jurisprudence exam', '法规考')}</a>
       <div class="card score-hero">
         <div class="score-big ${pct >= 80 ? 'pass' : 'fail'}">${pct}%</div>
         <p><b>${right}/25</b> · ${pct >= 80 ? t('PASS (80% needed)', '通过（及格线80%）') : t('BELOW 80%', '低于 80%')}</p>

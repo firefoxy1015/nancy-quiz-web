@@ -1,6 +1,7 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=87';
-import { aetUnlocked, aetGate } from './aetclass.js?v=87';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=88';
+import { aetUnlocked, aetGate } from './aetclass.js?v=88';
+import { two, one, mini, stk, ARROW } from './home.js?v=88';
 
 let session = null; // current exam session (mock or practice)
 
@@ -22,69 +23,35 @@ function keyToIndex(k) {
 
 /* ---------------- hub ---------------- */
 export async function renderWrittenHub(el) {
-  const tr = S.track;
+  const tr = S.track, isPcp = tr === 'pcp';
   const bank = await loadBank(tr);
-  const bp = await loadJSON('./data/meta/cpcf-blueprint.json');
-  const isPcp = tr === 'pcp';
   const mocks = S.mockHistory.filter(m => m.track === tr);
-  el.innerHTML = `
-    <div class="card">
-      <h2>${ico('pen')} ${t('Questions', '刷题')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
-      ${isPcp
-        ? bi('COPR national exam: 200 questions (180 scored) · two 120-minute parts with a 10-minute break · standard-score pass mark. Since November 2026 every sitting tests the 2024 CPCF — the old NOCP version is retired — and this bank follows the CPCF blueprint throughout.',
-             'COPR 全国统考：200 题（180 计分）· 两部分各 120 分钟，中间休息 10 分钟 · 标准分制。2026 年 11 月起每一场都按 2024 版 CPCF 出题——旧 NOCP 版已退役——本站题库全程按 CPCF 蓝图配比。')
-        : bi("EMALB's own online exam: 200 questions · 2.5 hours · 75% to pass. Results are instant.",
-             'EMALB 自己的在线考试：200 题 · 2.5 小时 · 75% 及格 · 交卷即出分。')}
-      <div class="stat-row" style="margin-top:12px">
-        <div class="stat"><b>${bank.length}</b><span>${t('questions in bank', '题库总量')}</span></div>
-        <div class="stat"><b>${mocks.length}</b><span>${t('mocks taken', '已考模考')}</span></div>
-        <div class="stat"><b>${mocks.length ? Math.max(...mocks.map(m => m.pct)) + '%' : '—'}</b><span>${t('best mock', '模考最好成绩')}</span></div>
-        <div class="stat"><b>${Object.keys(S.wrong).length}</b><span>${t('wrong answers', '错题数')}</span></div>
-      </div>
+  const wrongN = Object.keys(S.wrong).length, bestMock = mocks.length ? Math.max(...mocks.map(m => m.pct)) + '%' : '';
+  const jur = (S.jurisHistory || []).map(j => j.pct), bestJur = jur.length ? Math.max(...jur) + '%' : '';
+  const wm = S.writtenMock && S.writtenMock.track === tr && S.writtenMock.ids && S.writtenMock.ids.length ? S.writtenMock : null;
+  const wmDone = wm ? Object.keys(wm.answers || {}).length : 0;
+  const tile = (href, pic, r0, en, zh, sub) => `<a class="hm-tile" href="${href}">${stk(pic, r0)}<b>${two(en, zh)}</b><small>${sub}</small></a>`;
+  // Same sticker board as the home page (.ddx.hm): four big tiles, one fact line, the mock results at the bottom.
+  el.innerHTML = `<div class="ddx hm lang-${S.lang}"><main>
+    <header class="hm-hero"><div class="hm-head">
+    <p class="kick">${tr.toUpperCase()} · ${one('Questions', '刷题')}</p>
+    <h1 class="h1">${two('<span class="ph">Answer it. </span><span class="ph"><em>Read why</em>.</span>', '<span class="ph">做完题，</span><span class="ph"><em>看为什么</em>。</span>')}</h1>
+    <p class="hm-fact">${isPcp
+      ? mini('COPR written · 200 questions (180 scored) · 2 × 120 min', 'COPR 笔试 · 200 题（180 计分）· 两段各 120 分钟')
+      : mini('EMALB written · 200 questions · 2.5 hours · pass 75%', 'EMALB 笔试 · 200 题 · 2.5 小时 · 75% 过')}</p>
+    </div>${wm ? `<div class="hm-cta"><a class="go" href="#/mock"><span>${two('Finish your mock exam', '把模考做完')}<small>${one(`${wmDone} of ${wm.ids.length} answered`, `已答 ${wmDone} / ${wm.ids.length} 题`)}</small></span><span class="arrow">${ARROW}</span></a></div>` : ''}</header>
+
+    <div class="hm-tiles big">
+      ${isPcp ? '' : tile('#/play/emr-written', './img/play/emr-written/aed.webp', -4, 'Play & learn', '边学边玩', mini('sticker cards · 3 minutes', '贴纸卡 · 三分钟一轮'))}
+      ${tile('#/practice', './img/home/quiz.webp', -5, 'Practice', '练习', mini(`${bank.length} questions · instant answers`, `${bank.length} 题 · 即时解析`))}
+      ${tile('#/mock', './img/home/written.webp', 4, 'Full mock', '全真模考', bestMock ? mini(`best ${bestMock}`, `最好 ${bestMock}`) : mini(isPcp ? '180 scored · timed' : '200 questions · timed', isPcp ? '180 计分题 · 计时' : '200 题 · 计时'))}
+      ${tile('#/wrong', './img/home/wrong.webp', 5, 'Wrong answers', '错题本', wrongN ? mini(`${wrongN} to redo`, `${wrongN} 题待重做`) : mini('nothing yet', '还没有错题'))}
+      ${tile('#/juris', './img/home/juris.webp', -3, 'Jurisprudence', '法规考', bestJur ? mini(`best ${bestJur}`, `最好 ${bestJur}`) : mini('25 questions · pass 80%', '25 题 · 80% 过'))}
     </div>
-    ${S.writtenMock && S.writtenMock.track === tr ? `<div class="notice" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-      ${ico('clock')} ${bi(`A mock exam is in progress — ${Object.keys(S.writtenMock.answers || {}).length}/${S.writtenMock.ids.length} answered.`,
-        `有一场模考进行中——已答 ${Object.keys(S.writtenMock.answers || {}).length}/${S.writtenMock.ids.length} 题。`, 'span')}
-      <a class="btn" style="margin-left:auto" href="#/mock">${t('Resume', '继续考试')} →</a>
-    </div>` : ''}
-    ${tr === 'emr' ? `<div class="card" style="border-color:var(--accent)">
-      <h3 style="margin-top:0">${ico('target')} ${t('Play & learn', '边学边玩')} <span class="pill gray">NEW</span></h3>
-      ${bi('The written topics as sticker cards: three short screens, then quick calls, true-or-false, tap-all and put-in-order. Cards come back on a schedule until they stick. About 3 minutes a round.',
-           '笔试考点做成贴纸卡：先 3 屏短讲，再出车判断、对错、多选、排顺序。卡片按间隔回来复习，直到记住。一轮大约 3 分钟。')}
-      <div class="btn-row"><a class="btn" href="#/play/emr-written">${t('Play', '开始玩')}</a></div>
-    </div>` : ''}
-    <div class="grid-2">
-      <div class="card">
-        <h3 style="margin-top:0">${ico('target')} ${t('Practice mode', '练习模式')}</h3>
-        ${bi('Instant feedback with explanations. Filter by topic. Wrong answers go to your wrong-answer book automatically.',
-             '即时判分带解析，可按主题筛选。错题自动进错题本。')}
-        <div class="btn-row"><a class="btn" href="#/practice">${t('Start practice', '开始练习')}</a></div>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">${ico('clock')} ${t('Full mock exam', '全真模考')}</h3>
-        ${isPcp
-          ? bi('Blueprint-weighted 180 scored questions, real two-part timing with break, COPR-style area report at the end.',
-               '按 CPCF 蓝图配比抽 180 计分题，全真两段计时+中场休息，考完出 COPR 风格分域报告。')
-          : bi('200 questions, 150-minute timer, pass at 75% — exactly like the EMALB exam.',
-               '200 题 · 150 分钟计时 · 75% 及格线，完全复刻 EMALB 考试。')}
-        <div class="btn-row"><a class="btn" href="#/mock">${t('Start mock', '开始模考')}</a></div>
-      </div>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">${ico('x')} ${t('Wrong-answer book', '错题本')}</h3>
-      ${bi('Re-drill every question you have ever missed until none are left.', '把你错过的每道题反复刷，刷到清零为止。')}
-      <div class="btn-row"><a class="btn secondary" href="#/wrong">${t('Open', '打开')} (${Object.keys(S.wrong).length})</a></div>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">${ico('scale')} ${t('Jurisprudence exam', '法规考')}</h3>
-      ${bi('The other written exam: 25 questions, no time limit, 80% to pass. Notes, practice and a mock.', '另一场笔试：25 题、不限时、80% 及格。这里有笔记、练习和模拟考。')}
-      <div class="btn-row"><a class="btn secondary" href="#/juris">${t('Open', '打开')}</a></div>
-    </div>
-    ${mocks.length ? `<div class="card"><h3 style="margin-top:0">${t('Mock history', '模考历史')}</h3>
-      ${mocks.slice(-8).reverse().map(m => `<div class="area-bar ${m.pass ? 'band-lgreen' : 'band-red'}">
-        <span class="area-tag">${m.pct}</span>
-        <div><b>${m.date}</b> · ${m.right}/${m.total} · ${m.pass ? t('PASS', '通过') : t('FAIL', '未过')}</div>
-      </div>`).join('')}</div>` : ''}`;
+
+    ${mocks.length ? `<p class="kick sec">${one('Mock results', '模考记录')}</p>
+    <div class="hm-rows hm-log">${mocks.slice(-6).reverse().map(m => `<div class="hm-row"><span class="n ${m.pass ? 'ok' : 'bad'}">${m.pct}%</span><span><b>${m.pass ? one('Pass', '通过') : one('Not yet', '未过')}</b><small>${esc(m.date)} · ${m.right} / ${m.total}</small></span></div>`).join('')}</div>` : ''}
+  </main></div>`;
 }
 
 function countBy(arr, fn) { const m = {}; for (const x of arr) { const k = fn(x) || '?'; m[k] = (m[k] || 0) + 1; } return m; }

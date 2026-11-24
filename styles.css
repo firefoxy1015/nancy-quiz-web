@@ -1527,6 +1527,7 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ddx.hm .h1 { line-height: 1.06; margin-bottom: 18px; }
 .ddx.hm .h1 em { display: inline-block; line-height: 1.14; }   /* the highlight is exactly one line tall, so it never covers the line above */
 .ddx.hm.lang-zh .h1 { line-height: 1.24; }
+.ddx.hm .h1 .ph { display: inline-block; white-space: pre-wrap; }   /* a headline breaks between phrases, never inside one */
 .ddx.hm a { text-decoration: none; }
 .ddx.hm a.go { color: var(--paper); font: 800 20px/1.2 var(--display); }
 .ddx.hm a.go .zh { color: var(--ink3); }
@@ -1561,3 +1562,177 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ddx .hm-pick .phub-tile { width: 100%; justify-items: start; text-align: left; }
 .ddx .hm-pick .phub-tile b { font-size: 34px; }
 .ddx .hm-pick .phub-pics { justify-self: stretch; }
+
+/* Second-level pages (Learn / Questions / Practical) are the same board: study.js, exam.js, scenario.js */
+.ddx.hm .go { font: 800 20px/1.2 var(--display); text-align: left; color: var(--paper); }
+.ddx.hm .hm-fact { font: 500 12px/1.55 var(--mono); color: var(--ink2); margin: -6px 0 16px; text-wrap: pretty; }
+.ddx .hm-tiles.big { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ddx .hm-tiles.big .hm-tile { padding: 18px 8px 15px; }
+.ddx .hm-tiles.big .hm-tile .stk { height: 96px; }
+.ddx .hm-tiles.big .hm-tile b { font-size: 19px; }
+.ddx .hm-tiles.big .hm-tile small { font-size: 11.5px; padding: 0 4px; }
+.ddx .hm-tiles.big .hm-tile:first-child:nth-last-child(odd) { grid-column: 1 / -1; }   /* five tiles: the first spans the row */
+.ddx.hm .hm-hero + .hm-tiles { margin-top: 14px; }
+.ddx .hm-row .lock { display: inline-flex; vertical-align: -2px; margin-right: 5px; }
+.ddx .hm-row .lock svg { width: 13px; height: 13px; }
+.ddx .hm-under { text-align: center; margin-top: 6px; }
+.ddx .hm-under button { font: 500 13px var(--body); color: var(--ink3); text-decoration: underline; padding: 9px 12px; }
+.ddx .hm-log .hm-row { grid-template-columns: 68px 1fr; }
+.ddx .hm-log .n { font: 800 21px/1 var(--display); letter-spacing: -.02em; }
+.ddx .hm-log .n.ok { color: var(--green); }
+.ddx .hm-log .n.bad { color: var(--stop); }
+
+/* Wide screens: the board opens out instead of staying a phone-width strip in the middle of the window.
+   Title on the left with the big button beside it, lists side by side, bigger stickers. Phones are untouched. */
+@media (min-width: 900px) {
+  .view-root:has(> .ddx.hm) { max-width: 1120px; }
+  .bottom-nav, .site-footer { max-width: 1120px; }   /* the tab strip and the footer are as wide as the board on every page, so they never jump */
+  :root[data-lang="both"] .bottom-nav .t-zh { margin-left: 5px; }   /* both languages sit on one line here: keep them apart */
+  .ddx.hm { max-width: none; padding: 20px 40px 30px; }
+  .ddx.hm .hm-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; align-items: end; margin-top: 6px; }
+  .ddx.hm .hm-hero:has(.hm-cta) { grid-template-columns: minmax(0, 1fr) minmax(340px, 430px); }
+  .ddx.hm .h1 { font-size: clamp(44px, 4.5vw, 58px); margin-bottom: 0; }
+  .ddx.hm .h1 .zh { font-size: 24px; }
+  .ddx.hm .hm-fact { margin: 14px 0 0; font-size: 13px; }
+  .ddx.hm .go { padding: 20px 20px 20px 26px; font-size: 22px; }
+  .ddx.hm .go small { font-size: 14px; }
+  .ddx.hm .go .arrow { width: 52px; height: 52px; }
+  .ddx.hm .sec { margin-top: 30px; }
+  .ddx.hm .hm-hero + .hm-tiles { margin-top: 28px; }
+  .ddx.hm .foot { margin-top: 30px; }
+
+  /* home: quick practice and the lessons side by side, the same height */
+  .ddx .hm-cols { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 0 36px; }
+  .ddx .hm-cols section { display: flex; flex-direction: column; }
+  .ddx .hm-cols section > :last-child { flex: 1; }
+  .ddx .hm-cols .hm-tiles { gap: 14px; }
+  .ddx .hm-cols .hm-tile { justify-content: center; padding: 22px 8px 18px; }
+  .ddx .hm-cols .hm-tile .stk { height: 116px; margin-bottom: 14px; }
+  .ddx .hm-cols .hm-tile b { font-size: 20px; }
+  .ddx .hm-cols .hm-tile small { font-size: 12px; }
+  .ddx .hm-cols .hm-rows { display: flex; flex-direction: column; padding: 4px 16px 4px 18px; }
+  .ddx .hm-cols .hm-row { flex: 1; grid-template-columns: 62px 1fr auto; gap: 16px; padding: 14px 0; }
+  .ddx .hm-cols .hm-row .stk { width: 62px; height: 62px; }
+  .ddx .hm-cols .hm-row b { font-size: 19px; }
+  .ddx .hm-cols .hm-row .meter { max-width: none; }
+
+  /* the three exams: one wide strip, the picture beside the number */
+  .ddx .hm-exam { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 22px; justify-items: start; align-content: center; text-align: left; padding: 22px 28px; }
+  .ddx .hm-exam .stk { grid-row: 1 / span 3; align-self: center; height: 92px; max-width: 110px; }
+  .ddx .hm-exam .n { font-size: 36px; margin-top: 0; }
+  .ddx .hm-exam b { font-size: 18px; }
+  .ddx .hm-exam small { font-size: 12px; }
+
+  /* Learn: the lessons as three cards, the guidelines as one shelf of six */
+  .ddx .hm-rows.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; background: none; box-shadow: none; padding: 0; }
+  .ddx .hm-rows.cards .hm-row { grid-template-columns: 76px 1fr auto; gap: 16px; background: var(--card); border-radius: 20px; box-shadow: var(--shadow); padding: 20px 14px 20px 20px; border-top: 0; }
+  .ddx .hm-rows.cards .hm-row .stk { width: 76px; height: 76px; }
+  .ddx .hm-rows.cards .hm-row b { font-size: 20px; }
+  .ddx .hm-tiles.six { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+  .ddx .hm-tiles.six .hm-tile { padding: 22px 8px 16px; }
+  .ddx .hm-tiles.six .hm-tile .stk { height: 100px; margin-bottom: 12px; }
+
+  /* Questions and Practical: every tile on one row */
+  .ddx .hm-tiles.big { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .ddx .hm-tiles.big:has(> :nth-child(5)) { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .ddx .hm-tiles.big .hm-tile:first-child:nth-last-child(odd) { grid-column: auto; }
+  .ddx .hm-tiles.big.trio.trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }   /* the guidelines page: six tiles as three by two */
+  .ddx .hm-tiles.big .hm-tile { padding: 30px 10px 24px; }
+  .ddx .hm-tiles.big .hm-tile .stk { height: 136px; margin-bottom: 16px; }
+  .ddx .hm-tiles.big .hm-tile b { font-size: 22px; }
+  .ddx .hm-tiles.big .hm-tile small { font-size: 12.5px; }
+  .ddx .hm-rows.hm-log { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; }
+  .ddx .hm-rows.hm-log .hm-row { border-top: 0; }
+
+  /* licence chooser: the two cards side by side */
+  .ddx .hm-pick { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+  .ddx .hm-pick .phub-tile { padding: 26px 28px; }
+  .ddx .hm-pick .phub-pics { height: 170px; margin-bottom: 12px; }
+  .ddx .hm-pick .phub-pics img { width: 150px; height: 150px; }
+}
+/* with a mouse, the sticker under the pointer lifts and tips the other way */
+@media (hover: hover) {
+  .ddx .hm-tile .stk, .ddx .hm-row .stk, .ddx .hm-exam .stk { transition: transform .2s cubic-bezier(.2, .9, .3, 1.25); }
+  .ddx .hm-tile:hover .stk, .ddx .hm-row:hover .stk, .ddx .hm-exam:hover .stk { transform: rotate(calc(var(--r, 0deg) * -1)) scale(1.08); }
+  .ddx .hm-tile:hover, .ddx .hm-rows.cards .hm-row:hover { transform: translateY(-3px); }
+  .ddx .hm-tile:active, .ddx .hm-rows.cards .hm-row:active { transform: scale(.97); }
+}
+
+/* ---------------- Treatment topic card (src/study.js treatmentCard): picture first, few words, three questions ---------------- */
+.ddx.tc .zh { display: block; font-family: "Noto Sans SC", var(--body); font-weight: 500; font-size: .86em; color: var(--ink2); margin-top: 2px; }
+.ddx.tc .h1 .zh { font: 700 20px/1.3 "Noto Sans SC", var(--body); color: var(--ink); margin-top: 8px; }
+.ddx.tc .tc-back { display: inline-block; font: 600 13px var(--body); color: var(--ink2); padding: 10px 10px 4px 0; }
+.ddx.tc .tc-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; }
+.ddx.tc .tc-hero .h1 { margin-bottom: 0; }
+.ddx.tc .tc-hero .stk { height: 92px; width: auto; }
+.ddx.tc .tc-line { font: 500 17px/1.5 var(--body); color: var(--ink); margin: 14px 0 0; text-wrap: pretty; }
+.ddx.tc .tc-b { min-width: 0; }
+.ddx.tc .tc-b > ol, .ddx.tc .tc-b > ul, .ddx.tc .fk, .ddx.tc .phs, .ddx.tc .qz { background: var(--card); border-radius: 20px; box-shadow: var(--shadow); margin: 0; list-style: none; }
+/* the ladder: a numbered rail; the last-resort steps sit on a hi-vis band */
+.ddx.tc .tc-ladder ol { padding: 8px 14px; }
+.ddx.tc .tc-ladder li { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 12px; padding: 9px 0; position: relative; }
+.ddx.tc .tc-ladder li + li:not(.lbl)::before { content: ""; position: absolute; left: 18px; top: -9px; height: 18px; width: 2px; background: var(--line); }
+.ddx.tc .tc-ladder li i { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--paper); box-shadow: inset 0 0 0 2px var(--ink); font: 800 18px var(--display); font-style: normal; position: relative; z-index: 1; }
+.ddx.tc .tc-ladder li b { display: block; font: 800 18px/1.2 var(--display); letter-spacing: -.01em; }
+.ddx.tc .tc-ladder li small { display: block; font: 500 12px/1.4 var(--mono); color: var(--ink2); margin-top: 2px; }
+.ddx.tc .tc-ladder li.late i { background: var(--hivis); color: #15181B; box-shadow: inset 0 0 0 2px #15181B; }
+.ddx.tc .tc-ladder li.lbl { display: block; padding: 8px 0 2px; }
+.ddx.tc .tc-ladder li.lbl span { display: inline-block; font: 700 11.5px var(--mono); letter-spacing: .04em; background: var(--ink); color: var(--paper); border-radius: 6px; padding: 3px 9px; }
+.ddx.tc .tc-ladder li.lbl + li::before { display: none; }
+/* never */
+.ddx.tc .tc-never ul { padding: 4px 14px; box-shadow: var(--shadow), inset 5px 0 0 var(--stop); }
+.ddx.tc .tc-never li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; padding: 12px 0; font-size: 16px; line-height: 1.45; }
+.ddx.tc .tc-never li + li { border-top: 1.5px solid var(--line); }
+.ddx.tc .tc-never li i { width: 30px; height: 30px; border-radius: 9px; background: var(--stop); color: #fff; display: grid; place-items: center; }
+.ddx.tc .tc-never li i svg { width: 16px; height: 16px; }
+.ddx.tc .tc-never li b { font-weight: 800; }
+/* fork: one action, two outcomes */
+.ddx.tc .fk { padding: 14px; }
+.ddx.tc .fk .act { text-align: center; font: 700 18px/1.3 var(--display); background: var(--paper); border-radius: 14px; padding: 12px 10px; box-shadow: inset 0 0 0 2px var(--ink); }
+.ddx.tc .fk .act b { background: var(--hivis); color: #15181B; border-radius: 5px; padding: 0 5px; }
+.ddx.tc .fk .arms { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; position: relative; }
+.ddx.tc .fk .arms::before { content: ""; position: absolute; left: 25%; right: 25%; top: -12px; height: 12px; border: 2px solid var(--ink3); border-bottom: 0; border-radius: 8px 8px 0 0; }
+.ddx.tc .fk .arms::after { content: ""; position: absolute; left: 50%; top: -22px; height: 10px; width: 2px; margin-left: -1px; background: var(--ink3); }
+.ddx.tc .fk .arms > div { border-radius: 14px; padding: 11px 10px; text-align: center; }
+.ddx.tc .fk .arms small { display: block; font: 500 12px/1.4 var(--mono); }
+.ddx.tc .fk .arms b { display: block; font: 800 16px/1.25 var(--display); margin-top: 3px; }
+.ddx.tc .fk .good { background: color-mix(in srgb, var(--green) 14%, var(--card)); color: var(--green); }
+.ddx.tc .fk .bad { background: var(--stopbg); color: var(--stop); }
+/* phases */
+.ddx.tc .phs { padding: 4px 14px; }
+.ddx.tc .phs > div { display: grid; grid-template-columns: 86px 1fr; gap: 12px; align-items: start; padding: 12px 0; font-size: 15.5px; line-height: 1.5; }
+.ddx.tc .phs > div + div { border-top: 1.5px solid var(--line); }
+.ddx.tc .phs i { font: 700 11.5px var(--mono); font-style: normal; letter-spacing: .03em; background: var(--ink); color: var(--paper); border-radius: 6px; padding: 4px 0; text-align: center; margin-top: 1px; }
+/* the questions */
+.ddx.tc .qz { padding: 16px 14px; }
+.ddx.tc .qz .qn { font: 600 11.5px var(--mono); letter-spacing: .08em; color: var(--ink2); margin: 0; }
+.ddx.tc .qz .q { font: 700 18px/1.4 var(--display); margin: 6px 0 12px; text-wrap: pretty; }
+.ddx.tc .qz .opts { display: grid; gap: 9px; }
+.ddx.tc .qz .opts button { text-align: left; font: 600 16px/1.35 var(--body); color: var(--ink); background: var(--paper); border-radius: 14px; padding: 13px 14px; box-shadow: inset 0 0 0 1.5px var(--line); transition: transform .08s; }
+.ddx.tc .qz .opts button:active { transform: scale(.98); }
+.ddx.tc .qz .opts button.ok { background: color-mix(in srgb, var(--green) 14%, var(--card)); box-shadow: inset 0 0 0 2px var(--green); color: var(--ink); }
+.ddx.tc .qz .opts button.no { background: var(--stopbg); box-shadow: inset 0 0 0 2px var(--stop); }
+.ddx.tc .qz .opts button[disabled] { cursor: default; }
+.ddx.tc .qz .why p { font-size: 15.5px; line-height: 1.5; margin: 12px 0; }
+.ddx.tc .qz .why p.ok b { color: var(--green); }
+.ddx.tc .qz .why p.no b { color: var(--stop); }
+.ddx.tc .qz .nextbtn { font-size: 16px; padding: 11px 20px; border-radius: 14px; }
+/* the full text, folded */
+.ddx.tc .tc-src { margin-top: 26px; background: var(--card); border-radius: 20px; box-shadow: var(--shadow); padding: 0 16px; }
+.ddx.tc .tc-src summary { cursor: pointer; padding: 15px 0; font: 700 15px var(--body); color: var(--ink2); }
+.ddx.tc .tc-src[open] { padding-bottom: 14px; }
+@media (min-width: 900px) {
+  .ddx.tc .tc-hero { gap: 40px; }
+  .ddx.tc .tc-hero .stk { height: 150px; }
+  .ddx.tc .tc-line { font-size: 20px; max-width: 46ch; }
+  .ddx.tc .tc-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 0 36px; align-items: start; }
+  .ddx.tc .tc-ladder { grid-row: span 2; }
+  .ddx.tc .tc-phases, .ddx.tc .tc-quiz { grid-column: 1 / -1; }
+  .ddx.tc .phs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 6px 20px; }
+  .ddx.tc .phs > div { grid-template-columns: 1fr; gap: 10px; padding: 16px 18px 16px 0; align-content: start; }
+  .ddx.tc .phs > div + div { border-top: 0; border-left: 1.5px solid var(--line); padding-left: 18px; }
+  .ddx.tc .phs i { justify-self: start; padding: 4px 10px; }
+  .ddx.tc .qz { padding: 22px 24px; }
+  .ddx.tc .qz .opts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ddx.tc .qz .q { font-size: 21px; }
+}

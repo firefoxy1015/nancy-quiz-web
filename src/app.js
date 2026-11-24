@@ -1,15 +1,15 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=87';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=87';
-import { renderPlay } from './play.js?v=87';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=87';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=87';
-import { renderPortal } from './portal.js?v=87';
-import { renderAetClass } from './aetclass.js?v=87';
-import { renderBackup } from './backup.js?v=87';
-import { renderHome, placeOf } from './home.js?v=87';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=88';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=88';
+import { renderPlay } from './play.js?v=88';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=88';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=88';
+import { renderPortal } from './portal.js?v=88';
+import { renderAetClass } from './aetclass.js?v=88';
+import { renderBackup } from './backup.js?v=88';
+import { renderHome, placeOf } from './home.js?v=88';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -226,34 +226,34 @@ async function renderGuide(el) {
           <div class="btn-row"><a class="btn ghost" href="#/info">${t('Exam logistics', '考务流程')}</a></div>
         </div></div>
         <div class="step"><span class="step-num">3</span><div>
-          ${bi('Learn the content in the Study library — it has two layers. The Nancy Caroline Chapter Review condenses the 4,700-page textbook chapter by chapter (knowledge map, every testable number, textbook-vs-BC conflicts flagged); read the ★★★ chapters first and drill each one\'s domain as you finish it. Then the guideline layer: the Patient Assessment Model, Protocols and Drugs, straight from the official BC exam guidelines — the only standard examiners may mark against.',
-              '进"学习内容库"打基础——它分两层。「Nancy Caroline 章节精读」把 4700 页教材逐章浓缩（知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注），先读 ★★★ 高权重章，每读完一章就顺手刷它对应的题。然后是考纲层：患者评估模型、13 个处置协议、18 个药物卡——全部来自 BC 官方考纲，考官唯一被允许使用的评分标准。')}
+          ${bi('Learn the content under Learn — it has two layers. The Nancy Caroline Chapter Review condenses the 4,700-page textbook chapter by chapter (knowledge map, every testable number, textbook-vs-BC conflicts flagged); read the ★★★ chapters first and drill each one\'s domain as you finish it. Then the guideline layer: the Patient Assessment Model, Protocols and Drugs, straight from the official BC exam guidelines — the only standard examiners may mark against.',
+              '进「上课」打基础——它分两层。「Nancy Caroline 章节精读」把 4700 页教材逐章浓缩（知识地图、全部可考数值、教材与 BC 考纲冲突逐处标注），先读 ★★★ 高权重章，每读完一章就顺手刷它对应的题。然后是考纲层：患者评估模型、13 个处置协议、18 个药物卡——全部来自 BC 官方考纲，考官唯一被允许使用的评分标准。')}
           <div class="btn-row">
             <a class="btn ghost" href="#/study/chapters">${t('Chapter review', '章节精读')}</a>
-            <a class="btn ghost" href="#/study">${t('Study library', '学习内容库')}</a>
+            <a class="btn ghost" href="#/study">${t('Learn', '上课')}</a>
           </div>
         </div></div>
         <div class="step"><span class="step-num">4</span><div>
           ${bi('Drill with Practice mode (instant feedback, filter by topic), then take full timed Mock Exams that replicate the real format — including the two-part timer and break for PCP. Review every wrong answer in the Wrong-answer book.',
               '先用"练习模式"刷题（即时解析、可按主题筛选），再上"全真模考"——完整复刻真实考试格式（PCP 含两段计时和中场休息）。每道错题都会进错题本，考前重点清错题。')}
-          <div class="btn-row"><a class="btn ghost" href="#/written">${t('Written camp', '笔试营')}</a></div>
+          <div class="btn-row"><a class="btn ghost" href="#/written">${t('Questions', '刷题')}</a></div>
         </div></div>
         <div class="step"><span class="step-num">5</span><div>
           ${bi('Train the Practical: run scenarios phase by phase with the real examiner deduction rubric, race the 15/30-minute packaging clock, write PCRs, and memorize the auto-fail traps. Then practice hands-on skills in person — a website cannot replace physical practice.',
               '攻实操：用真实考官扣分表逐幕过场景、卡 15/30 分钟打包倒计时、写 PCR、背熟"直接挂科陷阱"。注意：动手技能（BVM、包扎、脊柱滚动）必须线下真人实练，网站只能练决策和流程。')}
-          <div class="btn-row"><a class="btn ghost" href="#/practical">${t('Practical camp', '实操营')}</a></div>
+          <div class="btn-row"><a class="btn ghost" href="#/practical">${t('Practical', '实操')}</a></div>
         </div></div>
         <div class="step"><span class="step-num">6</span><div>
           ${bi('Do not skip Jurisprudence — 25 questions, 80% to pass, the highest bar of the three. One evening of notes + a few mocks is usually enough, but only if you actually do it.',
               '别小看法规考——25 题、80% 及格，三关里及格线最高。认真过一遍笔记+几套模拟一般就够，但前提是你真的做了。')}
-          <div class="btn-row"><a class="btn ghost" href="#/juris">${t('Jurisprudence camp', '法规营')}</a></div>
+          <div class="btn-row"><a class="btn ghost" href="#/juris">${t('Jurisprudence exam', '法规考')}</a></div>
         </div></div>
       </div>
     </div>
     <div class="card">
       <h3 style="margin-top:0">${t('Suggested weekly rhythm', '建议的备考节奏')}</h3>
-      ${bi('Weeks 1-2: Study library front to back. Weeks 3-4: practice mode by topic, fix weak areas. Weeks 5-6: one full mock every 2-3 days + scenario runs. Final week: wrong-answer book, auto-fail flashcards, jurisprudence mocks, and rest before exam day.',
-          '第1-2周：把学习内容库过完。第3-4周：按主题刷练习题，补弱项。第5-6周：每2-3天一套全真模考+实操场景练习。最后一周：清错题本、背直接挂科卡、做法规模拟，考前一天好好休息。')}
+      ${bi('Weeks 1-2: everything under Learn, front to back. Weeks 3-4: practice mode by topic, fix weak areas. Weeks 5-6: one full mock every 2-3 days + scenario runs. Final week: wrong-answer book, auto-fail flashcards, jurisprudence mocks, and rest before exam day.',
+          '第1-2周：把「上课」里的内容过完。第3-4周：按主题刷练习题，补弱项。第5-6周：每2-3天一套全真模考+实操场景练习。最后一周：清错题本、背直接挂科卡、做法规模拟，考前一天好好休息。')}
     </div>`;
 }
 

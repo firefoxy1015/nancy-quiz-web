@@ -3,7 +3,7 @@
 // Voice: browser SpeechRecognition for the candidate, speechSynthesis for the examiner/patient/partner. No backend.
 // Every station is also kept word for word in this browser (localStorage bcprepExaminerLog, last 12) with how each
 // line got in (voice / typed / recognition confidence) and what the examiner credited for it — viewer at #/examiner-log/<sid>.
-import { S, save, bi, t, esc, nav, ico } from './app.js?v=87';
+import { S, save, bi, t, esc, nav, ico } from './app.js?v=88';
 
 const API = (() => {
   try { const o = localStorage.getItem('bcprep2.examinerApi'); if (o) return o; } catch (e) {}
@@ -280,7 +280,7 @@ export async function renderExaminerHub(el) {
   const mock = S.examinerMock;
   const canMock = list.some(x => x.type === 'medical') && list.some(x => x.type === 'trauma');
   el.innerHTML = `
-    <a class="back-link" href="#/practical">← ${t('Practical camp', '实操营')}</a>
+    <a class="back-link" href="#/practical">← ${t('Practical', '实操')}</a>
     <div class="card">
       <h2>${ico('ambulance')} ${t('AI Examiner', '考官机器人')} <span class="pill ${tr}">${tr.toUpperCase()}</span> <span class="pill gray">BETA</span></h2>
       ${bi('A simulated EMALB station. The examiner reads the dispatch, then only answers what you actually assess or ask — in English, like the real exam. You talk; it never coaches. At 40 minutes the call ends and you write the PCR. Then you get the official-style grading form with every deduction tied to your own words.',
@@ -629,7 +629,7 @@ function drawResult(el) {
     ${mockPanel()}
     <div class="notice">${bi('The whole conversation of this station is saved on this device — every line the microphone heard and what the examiner credited for it. If a deduction looks wrong, open it and check.', '这一场的完整对话已经存在这台设备上——麦克风听到的每一句、考官每句话记到了什么。觉得哪条扣分不对，点开核对。', 'span')}
       <div class="btn-row" style="margin-top:8px"><a class="btn secondary" href="#/examiner-log/${run.sid}">${ico('list')} ${t('Full conversation record', '完整对话记录')}</a></div></div>
-    <div class="btn-row"><a class="btn" href="#/examiner">${t('Another station', '再来一场')}</a><a class="btn ghost" href="#/practical">${t('Practical camp', '实操营')}</a></div>`;
+    <div class="btn-row"><a class="btn" href="#/examiner">${t('Another station', '再来一场')}</a><a class="btn ghost" href="#/practical">${t('Practical', '实操')}</a></div>`;
   const nx = el.querySelector('#exMockNext');
   if (nx) nx.onclick = () => { S.examinerMock.stage = 'trauma'; save(); run = null; nav('/examiner-run/' + S.examinerMock.ids.trauma); };
   const rb = el.querySelector('#exReadFb');
