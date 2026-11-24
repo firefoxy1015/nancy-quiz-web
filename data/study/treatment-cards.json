@@ -1,101 +1,1956 @@
 {
-  "meta": {
-    "about": "Picture-first cards for the treatment topics (src/study.js, sTreatmentCard). A topic listed here opens as a card; the full guideline text from treatments.json stays underneath, folded. Every fact comes from treatments.json (BC Provincial Examination Guidelines, June 15, 2026). Quiz patients are adults.",
-    "blocks": "ladder | never | fork | phases"
-  },
-  "cards": {
-    "wound-care": {
-      "pic": "./img/home/treat.webp",
-      "headEn": "Stop the <em>bleeding</em> first.",
-      "headZh": "先把血<em>止住</em>。",
-      "lineEn": "Press on it. Still bleeding? Tourniquet on a limb, packing where a tourniquet cannot go.",
-      "lineZh": "先压住。压不住：四肢上止血带，上不了止血带的地方填塞。",
-      "blocks": [
-        {
-          "type": "ladder",
-          "titleEn": "Six ways to stop a bleed, in this order",
-          "titleZh": "止血六招，按这个顺序",
-          "steps": [
-            { "en": "Direct pressure", "zh": "直接压迫", "subEn": "always first", "subZh": "永远第一步" },
-            { "en": "Pressure dressing", "zh": "加压敷料" },
-            { "en": "Raise the injured part", "zh": "抬高伤肢", "subEn": "only if it harms nothing else", "subZh": "不加重别的伤才做" },
-            { "en": "Lay the patient flat", "zh": "让病人躺平", "subEn": "at rest, supine", "subZh": "休息、仰卧" },
-            { "en": "Tourniquet", "zh": "止血带 tourniquet", "subEn": "above the wound · note the time", "subZh": "绑在伤口近端 · 记下时间", "last": true },
-            { "en": "Wound packing", "zh": "伤口填塞 wound packing", "subEn": "no tourniquet possible, or still bleeding", "subZh": "上不了止血带，或还是止不住", "last": true }
-          ],
-          "tagEn": "when pressure fails",
-          "tagZh": "压不住才用"
-        },
-        {
-          "type": "never",
-          "titleEn": "Never",
-          "titleZh": "绝对不要",
-          "items": [
-            { "en": "<b>Loosen a tourniquet.</b> Once on, it stays on.", "zh": "<b>松开止血带。</b>上了就不松。" },
-            { "en": "<b>Pack the neck, chest or abdomen.</b>", "zh": "<b>填塞颈、胸、腹的伤口。</b>" },
-            { "en": "<b>Pull out an embedded object.</b> Stabilize it in place, unless it blocks the airway.", "zh": "<b>拔出插在身上的异物。</b>原位固定，除非堵住气道。" }
-          ]
-        },
-        {
-          "type": "fork",
-          "titleEn": "No pulse below the injury",
-          "titleZh": "伤口远端摸不到脉搏",
-          "actEn": "Realign the limb <b>once</b>",
-          "actZh": "把肢体复位<b>一次</b>",
-          "goodEn": "Pulse returns", "goodZh": "脉搏回来",
-          "goodToEn": "stable", "goodToZh": "stable 稳定",
-          "badEn": "Still no pulse", "badZh": "还是没有",
-          "badToEn": "unstable · Rapid Transport", "badToZh": "unstable 不稳定 · 快速转运"
-        },
-        {
-          "type": "phases",
-          "titleEn": "Where it goes in the exam",
-          "titleZh": "考试里什么时候做",
-          "rows": [
-            { "k": "Primary", "en": "Expose, look, stop the major bleed, then bandage it.", "zh": "暴露、检查，止住大出血，再包扎。" },
-            { "k": "Protocol", "en": "Analgesia if the patient needs it.", "zh": "需要就给镇痛。" },
-            { "k": "Treatment", "en": "Clean and dress small wounds. Check the pulse below the injury. Cold only if that pulse is fine. Big wound or over a joint: immobilize the limb.", "zh": "小伤口清洁、敷料、包扎。查远端循环。远端循环没问题才冷敷。伤口大或跨关节：固定肢体。" }
-          ]
-        }
-      ],
-      "quiz": [
-        {
-          "qEn": "A man has a deep cut in his thigh. You press hard on it and it keeps bleeding. Next?",
-          "qZh": "一名男子大腿被割开，很深。你用力压住，血还在流。下一步？",
-          "opts": [
-            { "en": "Tourniquet above the wound", "zh": "在伤口近端上止血带" },
-            { "en": "Let go and look at the wound again", "zh": "松手，再看一眼伤口" },
-            { "en": "Put a cold pack on it", "zh": "放冰袋冷敷" }
-          ],
-          "a": 0,
-          "whyEn": "Pressure failed and the wound is on a limb, so a tourniquet goes on above it. Note the time.",
-          "whyZh": "压不住，伤口又在四肢，所以在近端上止血带，并记下时间。"
-        },
-        {
-          "qEn": "A woman is bleeding from the groin, where the leg joins the body. Pressure is not holding and a tourniquet will not fit there. Next?",
-          "qZh": "一名女子腹股沟（腿和躯干交界处）出血。压不住，这个位置也上不了止血带。下一步？",
-          "opts": [
-            { "en": "Tourniquet lower down on the thigh", "zh": "把止血带绑在大腿下段" },
-            { "en": "Pack the wound", "zh": "伤口填塞" },
-            { "en": "Raise her legs and wait", "zh": "抬高双腿，等一等" }
-          ],
-          "a": 1,
-          "whyEn": "This is a junctional bleed: a tourniquet cannot go there, so the wound is packed. The neck, chest and abdomen are never packed.",
-          "whyZh": "这是交界处出血（junctional hemorrhage）：上不了止血带，所以填塞。颈、胸、腹永远不填塞。"
-        },
-        {
-          "qEn": "A broken forearm has no pulse at the wrist. You realign it once. Still no pulse. This patient is…",
-          "qZh": "前臂骨折，手腕摸不到脉搏。你复位了一次，还是没有脉搏。这位病人算……",
-          "opts": [
-            { "en": "Stable: splint it and carry on", "zh": "stable 稳定：固定好，按部就班" },
-            { "en": "Unstable: Rapid Transport", "zh": "unstable 不稳定：快速转运" },
-            { "en": "Not decided yet: realign again", "zh": "还不能定：再复位一次" }
-          ],
-          "a": 1,
-          "whyEn": "Only one attempt is allowed. Pulse back means stable. Still pulseless means unstable, so Rapid Transport.",
-          "whyZh": "只允许复位一次。脉搏回来算 stable；仍然没有就是 unstable，快速转运。"
-        }
-      ]
+ "meta": {
+  "about": "Picture-first cards for the treatment topics (src/study.js, sTreatmentCard). A topic listed here opens as a card; the full guideline text from treatments.json stays underneath, folded. Every fact comes from treatments.json (BC Provincial Examination Guidelines, June 15, 2026). Quiz patients are adults. A \"|\" in a headline marks where it may break.",
+  "blocks": "ladder | never | ticks | bands | fork | phases. A block or a quiz question with \"pcp\": true shows on the PCP track only."
+ },
+ "cards": {
+  "wound-care": {
+   "pic": "./img/home/treat.webp",
+   "headEn": "Stop the |<em>bleeding</em> first.",
+   "headZh": "先把血|<em>止住</em>。",
+   "lineEn": "Press on it. Still bleeding? Tourniquet on a limb, packing where a tourniquet cannot go.",
+   "lineZh": "先压住。压不住：四肢上止血带，上不了止血带的地方填塞。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Six ways to stop a bleed, in this order",
+     "titleZh": "止血六招，按这个顺序",
+     "steps": [
+      {
+       "en": "Direct pressure",
+       "zh": "直接压迫",
+       "subEn": "always first",
+       "subZh": "永远第一步"
+      },
+      {
+       "en": "Pressure dressing",
+       "zh": "加压敷料"
+      },
+      {
+       "en": "Raise the injured part",
+       "zh": "抬高伤肢",
+       "subEn": "only if it harms nothing else",
+       "subZh": "不加重别的伤才做"
+      },
+      {
+       "en": "Lay the patient flat",
+       "zh": "让病人躺平",
+       "subEn": "at rest, supine",
+       "subZh": "休息、仰卧"
+      },
+      {
+       "en": "Tourniquet",
+       "zh": "止血带 tourniquet",
+       "subEn": "above the wound · note the time",
+       "subZh": "绑在伤口近端 · 记下时间",
+       "last": true
+      },
+      {
+       "en": "Wound packing",
+       "zh": "伤口填塞 wound packing",
+       "subEn": "no tourniquet possible, or still bleeding",
+       "subZh": "上不了止血带，或还是止不住",
+       "last": true
+      }
+     ],
+     "tagEn": "when pressure fails",
+     "tagZh": "压不住才用"
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Loosen a tourniquet.</b> Once on, it stays on.",
+       "zh": "<b>松开止血带。</b>上了就不松。"
+      },
+      {
+       "en": "<b>Pack the neck, chest or abdomen.</b>",
+       "zh": "<b>填塞颈、胸、腹的伤口。</b>"
+      },
+      {
+       "en": "<b>Pull out an embedded object.</b> Stabilize it in place, unless it blocks the airway.",
+       "zh": "<b>拔出插在身上的异物。</b>原位固定，除非堵住气道。"
+      }
+     ]
+    },
+    {
+     "type": "fork",
+     "titleEn": "No pulse below the injury",
+     "titleZh": "伤口远端摸不到脉搏",
+     "actEn": "Realign the limb <b>once</b>",
+     "actZh": "把肢体复位<b>一次</b>",
+     "goodEn": "Pulse returns",
+     "goodZh": "脉搏回来",
+     "goodToEn": "stable",
+     "goodToZh": "stable 稳定",
+     "badEn": "Still no pulse",
+     "badZh": "还是没有",
+     "badToEn": "unstable · Rapid Transport",
+     "badToZh": "unstable 不稳定 · 快速转运"
+    },
+    {
+     "type": "phases",
+     "titleEn": "Where it goes in the exam",
+     "titleZh": "考试里什么时候做",
+     "rows": [
+      {
+       "k": "Primary",
+       "en": "Expose, look, stop the major bleed, then bandage it.",
+       "zh": "暴露、检查，止住大出血，再包扎。"
+      },
+      {
+       "k": "Protocol",
+       "en": "Analgesia if the patient needs it.",
+       "zh": "需要就给镇痛。"
+      },
+      {
+       "k": "Treatment",
+       "en": "Clean and dress small wounds. Check the pulse below the injury. Cold only if that pulse is fine. Big wound or over a joint: immobilize the limb.",
+       "zh": "小伤口清洁、敷料、包扎。查远端循环。远端循环没问题才冷敷。伤口大或跨关节：固定肢体。"
+      }
+     ]
     }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man has a deep cut in his thigh. You press hard on it and it keeps bleeding. Next?",
+     "qZh": "一名男子大腿被割开，很深。你用力压住，血还在流。下一步？",
+     "opts": [
+      {
+       "en": "Tourniquet above the wound",
+       "zh": "在伤口近端上止血带"
+      },
+      {
+       "en": "Let go and look at the wound again",
+       "zh": "松手，再看一眼伤口"
+      },
+      {
+       "en": "Put a cold pack on it",
+       "zh": "放冰袋冷敷"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Pressure failed and the wound is on a limb, so a tourniquet goes on above it. Note the time.",
+     "whyZh": "压不住，伤口又在四肢，所以在近端上止血带，并记下时间。"
+    },
+    {
+     "qEn": "A woman is bleeding from the groin, where the leg joins the body. Pressure is not holding and a tourniquet will not fit there. Next?",
+     "qZh": "一名女子腹股沟（腿和躯干交界处）出血。压不住，这个位置也上不了止血带。下一步？",
+     "opts": [
+      {
+       "en": "Tourniquet lower down on the thigh",
+       "zh": "把止血带绑在大腿下段"
+      },
+      {
+       "en": "Pack the wound",
+       "zh": "伤口填塞"
+      },
+      {
+       "en": "Raise her legs and wait",
+       "zh": "抬高双腿，等一等"
+      }
+     ],
+     "a": 1,
+     "whyEn": "This is a junctional bleed: a tourniquet cannot go there, so the wound is packed. The neck, chest and abdomen are never packed.",
+     "whyZh": "这是交界处出血（junctional hemorrhage）：上不了止血带，所以填塞。颈、胸、腹永远不填塞。"
+    },
+    {
+     "qEn": "A broken forearm has no pulse at the wrist. You realign it once. Still no pulse. This patient is…",
+     "qZh": "前臂骨折，手腕摸不到脉搏。你复位了一次，还是没有脉搏。这位病人算……",
+     "opts": [
+      {
+       "en": "Stable: splint it and carry on",
+       "zh": "stable 稳定：固定好，按部就班"
+      },
+      {
+       "en": "Unstable: Rapid Transport",
+       "zh": "unstable 不稳定：快速转运"
+      },
+      {
+       "en": "Not decided yet: realign again",
+       "zh": "还不能定：再复位一次"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Only one attempt is allowed. Pulse back means stable. Still pulseless means unstable, so Rapid Transport.",
+     "whyZh": "只允许复位一次。脉搏回来算 stable；仍然没有就是 unstable，快速转运。"
+    }
+   ]
+  },
+  "amputated-parts": {
+   "pic": "./img/treat/amputated-parts.webp",
+   "headEn": "The patient first. |<em>Then</em> the part.",
+   "headZh": "先救人，|<em>再</em>管断肢。",
+   "lineEn": "Rinse it, wrap it, bag it, keep it cool, and send it with the patient.",
+   "lineZh": "冲洗、包好、装袋、保持凉，跟病人一起送走。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Four steps",
+     "titleZh": "四步",
+     "steps": [
+      {
+       "en": "Rinse",
+       "zh": "冲洗",
+       "subEn": "cool sterile water, to clear the dirt",
+       "subZh": "用凉的无菌水冲掉脏东西"
+      },
+      {
+       "en": "Wrap loosely",
+       "zh": "松松地包起来",
+       "subEn": "sterile gauze moistened with saline",
+       "subZh": "用生理盐水浸湿的无菌纱布"
+      },
+      {
+       "en": "Bag it and keep it cool",
+       "zh": "装进塑料袋，保持凉",
+       "subEn": "in a protective container",
+       "subZh": "放进保护容器里"
+      },
+      {
+       "en": "It travels with the patient",
+       "zh": "跟病人一起转运"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "The four nevers",
+     "titleZh": "四个绝对不要",
+     "items": [
+      {
+       "en": "<b>Warm it.</b>",
+       "zh": "<b>给它加温。</b>"
+      },
+      {
+       "en": "<b>Put it in water.</b>",
+       "zh": "<b>泡在水里。</b>"
+      },
+      {
+       "en": "<b>Put it straight on ice.</b>",
+       "zh": "<b>直接放在冰上。</b>"
+      },
+      {
+       "en": "<b>Use dry ice.</b>",
+       "zh": "<b>用干冰。</b>"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A carpenter has cut off a finger. His hand is still bleeding heavily. What comes first?",
+     "qZh": "一名木工切断了一根手指，手还在大量出血。先做什么？",
+     "opts": [
+      {
+       "en": "Stop the bleeding from his hand",
+       "zh": "先给他的手止血"
+      },
+      {
+       "en": "Rinse the finger",
+       "zh": "先冲洗断指"
+      },
+      {
+       "en": "Look for a bag and ice",
+       "zh": "先找袋子和冰"
+      }
+     ],
+     "a": 0,
+     "whyEn": "The part waits. You turn to it only once the patient's injuries are stabilized.",
+     "whyZh": "断肢先放一放。病人的伤稳住了，才去处理断肢。"
+    },
+    {
+     "qEn": "How does the finger travel?",
+     "qZh": "断指怎么带走？",
+     "opts": [
+      {
+       "en": "In a cup of sterile water",
+       "zh": "泡在一杯无菌水里"
+      },
+      {
+       "en": "Wrapped in moist gauze, in a bag, kept cool",
+       "zh": "湿纱布包好、装袋、保持凉"
+      },
+      {
+       "en": "Packed directly in ice",
+       "zh": "直接埋在冰里"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Rinse, wrap in saline-moistened gauze, bag, keep cool. Never in water and never straight on ice.",
+     "whyZh": "冲洗、盐水湿纱布包好、装袋、保持凉。不泡水，也不直接碰冰。"
+    },
+    {
+     "qEn": "A bystander hands you the finger lying directly on ice cubes. What do you change?",
+     "qZh": "路人把断指直接放在冰块上递给你。你要改什么？",
+     "opts": [
+      {
+       "en": "Nothing: colder is better",
+       "zh": "不用改，越冷越好"
+      },
+      {
+       "en": "Warm it in your hands first",
+       "zh": "先用手把它捂暖"
+      },
+      {
+       "en": "Wrap it and bag it so it does not touch the ice",
+       "zh": "包好、装袋，不让它直接碰到冰"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Cool, but never directly on ice, and never warmed.",
+     "whyZh": "要保持凉，但不能直接放在冰上，也不能加温。"
+    }
+   ]
+  },
+  "musculoskeletal-injuries": {
+   "pic": "./img/treat/musculoskeletal-injuries.webp",
+   "headEn": "Pain relief |<em>before</em> |you move it.",
+   "headZh": "<em>先</em>镇痛，|再搬动。",
+   "lineEn": "Hold still the joint above and the joint below. Check the pulse below the injury again and again.",
+   "lineZh": "固定伤处上面和下面的关节。远端脉搏查了再查。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "What the splint holds still",
+     "titleZh": "夹板要固定哪里",
+     "items": [
+      {
+       "big": "↑",
+       "en": "the joint above",
+       "zh": "上面的关节",
+       "tone": "ok"
+      },
+      {
+       "big": "✕",
+       "en": "the injury",
+       "zh": "伤处",
+       "tone": "bad"
+      },
+      {
+       "big": "↓",
+       "en": "the joint below",
+       "zh": "下面的关节",
+       "tone": "ok"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "In the primary",
+     "titleZh": "在 Primary 里",
+     "items": [
+      {
+       "en": "Expose and examine.",
+       "zh": "暴露、检查。"
+      },
+      {
+       "en": "Control major bleeding.",
+       "zh": "止住大出血。"
+      },
+      {
+       "en": "Stabilize the broken limb, pelvis or hip.",
+       "zh": "稳住骨折的肢体、骨盆或髋部。"
+      },
+      {
+       "en": "<b>Check the distal pulse</b>, and keep rechecking for the whole call.",
+       "zh": "<b>查远端脉搏</b>，整个过程反复查。"
+      },
+      {
+       "en": "Realign a limb that is grossly deformed or pulseless.",
+       "zh": "严重变形或摸不到脉搏的肢体：复位。"
+      },
+      {
+       "en": "Bind the pelvis if appropriate. Apply cold.",
+       "zh": "需要的话绑骨盆。冷敷。"
+      }
+     ]
+    },
+    {
+     "type": "phases",
+     "titleEn": "After the primary",
+     "titleZh": "Primary 之后",
+     "rows": [
+      {
+       "k": "Protocol",
+       "en": "Analgesia before movement, in stable, appropriate patients.",
+       "zh": "稳定、合适的病人：搬动之前先给镇痛。"
+      },
+      {
+       "k": "Treatment",
+       "en": "Traction if appropriate. Immobilize the joints above and below. Cold again and elevate, if appropriate.",
+       "zh": "需要的话做牵引。固定上下两个关节。需要的话再冷敷、抬高。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Fix the fracture first and give Entonox after.</b> In a stable patient that order is a 100% deduction (Appendix A).",
+       "zh": "<b>先处理骨折，后给 Entonox（笑气-氧气混合气）。</b>稳定病人这样做，按 100% 扣分（附录 A）。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A stable man has a painful broken forearm. You are about to splint it. What comes first?",
+     "qZh": "一名情况稳定的男子前臂骨折，很痛。你正要上夹板。先做什么？",
+     "opts": [
+      {
+       "en": "Splint now, pain relief in the ambulance",
+       "zh": "先上夹板，上车再镇痛"
+      },
+      {
+       "en": "Offer analgesia",
+       "zh": "先给镇痛"
+      },
+      {
+       "en": "Raise the arm above his head",
+       "zh": "把手臂举过头顶"
+      }
+     ],
+     "a": 1,
+     "whyEn": "In a stable, appropriate patient analgesia comes before movement.",
+     "whyZh": "稳定、合适的病人，镇痛在搬动之前。"
+    },
+    {
+     "qEn": "The break is in the middle of the forearm. Which joints does the splint hold still?",
+     "qZh": "骨折在前臂中段。夹板要固定哪两个关节？",
+     "opts": [
+      {
+       "en": "The wrist and the elbow",
+       "zh": "手腕和手肘"
+      },
+      {
+       "en": "Only the wrist",
+       "zh": "只固定手腕"
+      },
+      {
+       "en": "The elbow and the shoulder",
+       "zh": "手肘和肩膀"
+      }
+     ],
+     "a": 0,
+     "whyEn": "The joint above the injury and the joint below it.",
+     "whyZh": "伤处上面一个关节，下面一个关节。"
+    },
+    {
+     "qEn": "The splint is on. What do you check again?",
+     "qZh": "夹板上好了。再查一次什么？",
+     "opts": [
+      {
+       "en": "His blood sugar",
+       "zh": "血糖"
+      },
+      {
+       "en": "His pupils",
+       "zh": "瞳孔"
+      },
+      {
+       "en": "The pulse below the injury",
+       "zh": "伤处远端的脉搏"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Distal pulses are rechecked throughout the call, above all after realigning or splinting.",
+     "whyZh": "远端脉搏整个过程都要反复查，复位或上夹板之后尤其要查。"
+    }
+   ]
+  },
+  "hip-dislocation-fracture": {
+   "pic": "./img/treat/hip-dislocation-fracture.webp",
+   "headEn": "Every hip dislocation |is <em>Rapid Transport</em>.",
+   "headZh": "髋关节脱位，|一律|<em>快速转运</em>。",
+   "lineEn": "A hip fracture on its own is Rapid Transport only when the nerves or blood supply of the leg are impaired.",
+   "lineZh": "单纯的髋部骨折，只有腿的神经或血运受损时才算快速转运。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "Which transport category",
+     "titleZh": "算哪一类转运",
+     "items": [
+      {
+       "big": "Dislocation",
+       "en": "always Rapid Transport",
+       "zh": "一律快速转运",
+       "tone": "bad",
+       "bigZh": "脱位"
+      },
+      {
+       "big": "Fracture +",
+       "en": "nerve or blood supply impaired: Rapid Transport",
+       "zh": "神经或血运受损：快速转运",
+       "tone": "bad",
+       "bigZh": "骨折 +"
+      },
+      {
+       "big": "Fracture",
+       "en": "nerves and blood supply fine: not Rapid Transport for the hip alone",
+       "zh": "神经血运正常：不因髋部算快速转运",
+       "tone": "ok",
+       "bigZh": "单纯骨折"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ladder",
+     "titleEn": "What you do",
+     "titleZh": "怎么做",
+     "steps": [
+      {
+       "en": "Support the leg, fast",
+       "zh": "快速托住伤腿",
+       "subEn": "helpers, rolled blankets, ties",
+       "subZh": "人手、卷起的毯子、绑带"
+      },
+      {
+       "en": "Onto a firm, blanketed stretcher or a spinal device",
+       "zh": "移到铺了毯子的硬担架或脊柱固定装置上"
+      },
+      {
+       "en": "Secure the patient so the hip cannot move",
+       "zh": "绑好病人，让这侧髋部完全不动"
+      },
+      {
+       "en": "Go. The rest of the secondary survey is done en route",
+       "zh": "出发。剩下的 secondary survey 在路上做"
+      },
+      {
+       "en": "Keep checking",
+       "zh": "一路反复查",
+       "subEn": "vitals · distal pulses · nerve function in that leg",
+       "subZh": "生命体征 · 远端脉搏 · 这条腿的神经功能"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Do not forget",
+     "titleZh": "别忘了",
+     "items": [
+      {
+       "en": "Pain management.",
+       "zh": "镇痛。"
+      },
+      {
+       "en": "If the hip slips back in by itself, <b>tell the receiving hospital</b>.",
+       "zh": "髋关节如果自己复位了，<b>通知接收医院</b>。"
+      },
+      {
+       "en": "Early reduction in hospital is what prevents serious long-term damage. That is why you do not wait on scene.",
+       "zh": "尽早在医院复位，才能避免严重的长期后遗症。所以不在现场耽搁。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A woman has a dislocated hip. Her foot is warm, the pulse is strong and feeling is normal. Transport category?",
+     "qZh": "一名女子髋关节脱位。脚是暖的，脉搏有力，感觉正常。转运类别？",
+     "opts": [
+      {
+       "en": "Not Rapid Transport: the pulse is fine",
+       "zh": "不算快速转运：脉搏没问题"
+      },
+      {
+       "en": "Rapid Transport: every hip dislocation is",
+       "zh": "快速转运：髋关节脱位一律是"
+      },
+      {
+       "en": "Decide after the secondary survey",
+       "zh": "做完 secondary survey 再定"
+      }
+     ],
+     "a": 1,
+     "whyEn": "All hip dislocations are in the Rapid Transport Category, with or without nerve or vessel problems.",
+     "whyZh": "所有髋关节脱位都属于快速转运，不管神经血运有没有问题。"
+    },
+    {
+     "qEn": "A man has a hip fracture and nothing else. Foot warm, pulse present, feeling normal. Rapid Transport?",
+     "qZh": "一名男子只有髋部骨折。脚暖、有脉搏、感觉正常。算快速转运吗？",
+     "opts": [
+      {
+       "en": "Yes, like every hip injury",
+       "zh": "算，髋部受伤都算"
+      },
+      {
+       "en": "Only if he is in a lot of pain",
+       "zh": "很痛才算"
+      },
+      {
+       "en": "No, not for the hip alone",
+       "zh": "不算，单凭髋部不算"
+      }
+     ],
+     "a": 2,
+     "whyEn": "An isolated hip fracture is Rapid Transport only with nerve or blood-supply impairment.",
+     "whyZh": "单纯髋部骨折，有神经或血运受损才算快速转运。"
+    },
+    {
+     "qEn": "On the way, the dislocated hip slips back into place. What do you do?",
+     "qZh": "路上，脱位的髋关节自己滑回去了。你做什么？",
+     "opts": [
+      {
+       "en": "Update the receiving hospital",
+       "zh": "通知接收医院"
+      },
+      {
+       "en": "Slow down: it is no longer urgent",
+       "zh": "放慢：已经不急了"
+      },
+      {
+       "en": "Pull on the leg to keep it in",
+       "zh": "拉住腿，防止再脱出来"
+      }
+     ],
+     "a": 0,
+     "whyEn": "A spontaneous reduction is reported to the receiving hospital.",
+     "whyZh": "自行复位要告诉接收医院。"
+    }
+   ]
+  },
+  "traction-splint": {
+   "pic": "./img/treat/traction-splint.webp",
+   "headEn": "Mid-shaft femur. |<em>Stable</em> patient only.",
+   "headZh": "股骨中段，|<em>稳定</em>才用。",
+   "lineEn": "Pain relief and a pulse check come first. Once the traction is on, it is never released.",
+   "lineZh": "先镇痛、先查远端。牵引一旦拉上，绝不放松。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "How hard to pull",
+     "titleZh": "拉多大的力",
+     "items": [
+      {
+       "big": "10%",
+       "en": "closed fracture: 10% of body weight, at most 15 lbs (7 kg)",
+       "zh": "闭合骨折：体重的 10%，最多 15 lbs（7 kg）",
+       "tone": "warn"
+      },
+      {
+       "big": "5 lbs",
+       "en": "open fracture: at most 5 lbs",
+       "zh": "开放骨折：最多 5 lbs",
+       "tone": "bad"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Before the splint",
+     "titleZh": "上夹板之前",
+     "steps": [
+      {
+       "en": "Check below the break",
+       "zh": "查骨折远端",
+       "subEn": "circulation · sensation · function",
+       "subZh": "循环 · 感觉 · 活动"
+      },
+      {
+       "en": "Cold if appropriate",
+       "zh": "需要的话冷敷",
+       "subEn": "10 minutes on, 5 off",
+       "subZh": "敷 10 分钟，停 5 分钟"
+      },
+      {
+       "en": "Analgesia, if not contraindicated",
+       "zh": "没有禁忌就给镇痛"
+      },
+      {
+       "en": "Supine, the leg in line with the body",
+       "zh": "仰卧，伤腿和身体成一直线"
+      },
+      {
+       "en": "Hold it by hand, recheck the distal pulse",
+       "zh": "用手扶稳，再查一次远端脉搏"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "STAPLES (Sager splint)",
+     "titleZh": "STAPLES 口诀（Sager 夹板）",
+     "steps": [
+      {
+       "en": "Size",
+       "zh": "Size 比长度",
+       "subEn": "lay the splint beside the injured leg",
+       "subZh": "把夹板放在伤腿旁边",
+       "k": "S"
+      },
+      {
+       "en": "Thigh",
+       "zh": "Thigh 大腿",
+       "subEn": "fasten the thigh strap",
+       "subZh": "绑好大腿带",
+       "k": "T"
+      },
+      {
+       "en": "Ankle",
+       "zh": "Ankle 脚踝",
+       "subEn": "harness above the malleoli",
+       "subZh": "踝套绑在踝骨上方",
+       "k": "A"
+      },
+      {
+       "en": "Padding",
+       "zh": "Padding 衬垫",
+       "subEn": "enough of it",
+       "subZh": "垫够",
+       "k": "P"
+      },
+      {
+       "en": "Lbs.",
+       "zh": "Lbs. 牵引力",
+       "subEn": "pull the traction, then never release",
+       "subZh": "拉上牵引，拉上就不松",
+       "k": "L"
+      },
+      {
+       "en": "Elevate",
+       "zh": "Elevate 垫高",
+       "subEn": "raise the end of the splint so it lines up with the leg",
+       "subZh": "垫高夹板末端，让它和腿成一直线",
+       "k": "E"
+      },
+      {
+       "en": "Straps",
+       "zh": "Straps 绑带",
+       "subEn": "three elastic straps · blanket between the legs · legs strapped together",
+       "subZh": "三条弹力带 · 两腿间放毯子 · 两腿绑在一起",
+       "k": "S"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Release the traction</b> once it is on.",
+       "zh": "牵引拉上以后<b>再松开</b>。"
+      },
+      {
+       "en": "<b>Use it on an unstable patient</b>, or on anything other than a suspected mid-shaft femur fracture.",
+       "zh": "<b>给不稳定的病人用</b>，或者用在股骨中段以外的骨折上。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "After every move",
+     "titleZh": "每次搬动之后",
+     "items": [
+      {
+       "en": "Each time you move the patient or recheck ABCs or vitals: <b>recheck the traction</b> and correct it.",
+       "zh": "每次搬动病人、复查 ABC 或生命体征时：<b>再查一次牵引</b>，不对就调。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A stable 80 kg man has a closed mid-shaft femur fracture. How much traction?",
+     "qZh": "一名情况稳定的 80 公斤男子，股骨中段闭合骨折。牵引拉多大？",
+     "opts": [
+      {
+       "en": "8 kg: ten percent of his weight",
+       "zh": "8 公斤：体重的 10%"
+      },
+      {
+       "en": "15 lbs (7 kg): the maximum",
+       "zh": "15 lbs（7 公斤）：封顶值"
+      },
+      {
+       "en": "5 lbs",
+       "zh": "5 lbs"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Ten percent of 80 kg is 8 kg, which is over the limit. Closed fractures stop at 15 lbs (7 kg).",
+     "whyZh": "80 公斤的 10% 是 8 公斤，超过上限。闭合骨折最多 15 lbs（7 公斤）。"
+    },
+    {
+     "qEn": "The same fracture, but the bone has come through the skin. How much traction?",
+     "qZh": "同样的骨折，但骨头穿出了皮肤。牵引拉多大？",
+     "opts": [
+      {
+       "en": "At most 5 lbs",
+       "zh": "最多 5 lbs"
+      },
+      {
+       "en": "15 lbs, as before",
+       "zh": "和刚才一样 15 lbs"
+      },
+      {
+       "en": "None: release the traction",
+       "zh": "不拉，把牵引松开"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Open mid-shaft fractures: at most 5 lbs.",
+     "whyZh": "开放的股骨中段骨折：最多 5 lbs。"
+    },
+    {
+     "qEn": "You have just lifted him into the ambulance. What do you recheck?",
+     "qZh": "你刚把他抬上救护车。要复查什么？",
+     "opts": [
+      {
+       "en": "Nothing until the hospital",
+       "zh": "到医院之前都不用查"
+      },
+      {
+       "en": "Loosen the traction to rest the leg",
+       "zh": "松一松牵引，让腿休息"
+      },
+      {
+       "en": "The traction and the distal pulse",
+       "zh": "牵引和远端脉搏"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Traction is reassessed with every movement and every recheck, and it is never released.",
+     "whyZh": "每次搬动、每次复查都要再查牵引。牵引不能松。"
+    }
+   ]
+  },
+  "pelvis-binding": {
+   "pic": "./img/treat/pelvis-binding.webp",
+   "headEn": "Centre it on the |<em>greater</em> <em>trochanter</em>.",
+   "headZh": "绑带中心|对准<em>大转子</em>。",
+   "lineEn": "A major mechanism plus any one sign: bind before transport, and do not roll the patient to do it.",
+   "lineZh": "受伤机制大，再加任何一条：转运前绑好，绑的时候不翻动病人。",
+   "blocks": [
+    {
+     "type": "ticks",
+     "titleEn": "Major mechanism + any ONE of these",
+     "titleZh": "重大受伤机制 + 下面任意一条",
+     "items": [
+      {
+       "en": "Heart rate <b>over 100</b> or systolic pressure <b>under 90</b> mmHg.",
+       "zh": "心率 <b>&gt; 100</b>，或收缩压 <b>&lt; 90</b> mmHg。"
+      },
+      {
+       "en": "Pelvic pain on exam.",
+       "zh": "检查时骨盆痛。"
+      },
+      {
+       "en": "Pelvic instability.",
+       "zh": "骨盆不稳。"
+      },
+      {
+       "en": "Decreased level of consciousness.",
+       "zh": "意识水平下降。"
+      },
+      {
+       "en": "A major injury that distracts from the pelvic exam.",
+       "zh": "有别的大伤，干扰了骨盆检查。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Do not bind",
+     "titleZh": "这两种不绑",
+     "items": [
+      {
+       "en": "<b>Neck-of-femur (\"hip\") fracture.</b>",
+       "zh": "<b>股骨颈（“髋部”）骨折。</b>"
+      },
+      {
+       "en": "<b>A fall from standing height</b>, or another simple fall.",
+       "zh": "<b>站着摔倒</b>这类简单跌倒。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "How",
+     "titleZh": "怎么绑",
+     "items": [
+      {
+       "en": "A commercial pelvic binder, or three overlapping broad triangular bandages.",
+       "zh": "商用骨盆带，或三条宽三角巾叠着用。"
+      },
+      {
+       "en": "The centre of the belt over the <b>greater trochanter</b>.",
+       "zh": "带子中心对准<b>大转子</b>。"
+      },
+      {
+       "en": "Tight enough to support the pelvis, not tight enough to hurt.",
+       "zh": "紧到能托住骨盆，不到弄痛病人。"
+      },
+      {
+       "en": "On before transport.",
+       "zh": "转运之前绑好。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Use zap straps.</b>",
+       "zh": "<b>用扎带（zap straps）。</b>"
+      },
+      {
+       "en": "<b>Roll the patient</b> to put the binder on.",
+       "zh": "为了绑带子而<b>翻动病人</b>。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Why it works",
+     "titleZh": "为什么有用",
+     "items": [
+      {
+       "en": "The pelvis gets smaller inside, which presses on the bleeding (tamponade).",
+       "zh": "骨盆内的空间变小，压住出血（tamponade 填塞效应）。"
+      },
+      {
+       "en": "The broken pieces stop moving, so they bleed less.",
+       "zh": "骨折块不再乱动，出血减少。"
+      },
+      {
+       "en": "The patient is more comfortable.",
+       "zh": "病人舒服一些。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A pedestrian was hit by a car. Heart rate 118, blood pressure 104/70, no pelvic pain, pelvis stable, alert, no other big injury. Bind the pelvis?",
+     "qZh": "行人被车撞。心率 118，血压 104/70，骨盆不痛、稳定，清醒，没有别的大伤。绑骨盆吗？",
+     "opts": [
+      {
+       "en": "Yes",
+       "zh": "绑"
+      },
+      {
+       "en": "No: the pressure is above 90",
+       "zh": "不绑：血压在 90 以上"
+      },
+      {
+       "en": "No: the pelvis does not hurt",
+       "zh": "不绑：骨盆不痛"
+      }
+     ],
+     "a": 0,
+     "whyEn": "A major mechanism and a heart rate over 100. One sign is enough.",
+     "whyZh": "受伤机制大，加上心率超过 100。有一条就够。"
+    },
+    {
+     "qEn": "Where does the centre of the binder go?",
+     "qZh": "绑带的中心放在哪里？",
+     "opts": [
+      {
+       "en": "Over the iliac crests",
+       "zh": "髂嵴上"
+      },
+      {
+       "en": "Over the greater trochanter",
+       "zh": "大转子上"
+      },
+      {
+       "en": "Over the navel",
+       "zh": "肚脐上"
+      }
+     ],
+     "a": 1,
+     "whyEn": "The greater trochanter, not the iliac crests.",
+     "whyZh": "对准大转子，不是髂嵴。"
+    },
+    {
+     "qEn": "An 82-year-old woman tripped on a rug at home. Her hip hurts and you suspect a neck-of-femur fracture. Bind?",
+     "qZh": "82 岁的老太太在家被地毯绊倒。髋部痛，你怀疑股骨颈骨折。绑吗？",
+     "opts": [
+      {
+       "en": "Yes, firmly",
+       "zh": "绑，绑紧"
+      },
+      {
+       "en": "Yes, but loosely",
+       "zh": "绑，绑松一点"
+      },
+      {
+       "en": "No",
+       "zh": "不绑"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Two reasons not to: a simple fall from standing height, and a neck-of-femur fracture.",
+     "whyZh": "两个不绑的理由都占了：站着摔倒的简单跌倒，加上股骨颈骨折。"
+    }
+   ]
+  },
+  "spinal-management": {
+   "pic": "./img/treat/spinal-management.webp",
+   "headEn": "Hands first, |<em>then</em> the collar.",
+   "headZh": "先用手稳住，|<em>再</em>上颈托。",
+   "lineEn": "Restrict spinal motion when the patient meets the NEXUS Criteria or the Canadian C-Spine indications.",
+   "lineZh": "病人符合 NEXUS 标准或 Canadian C-Spine（加拿大颈椎）指征时，才做脊柱固定。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "In this order",
+     "titleZh": "按这个顺序",
+     "steps": [
+      {
+       "en": "Confirm the indication",
+       "zh": "确认有指征",
+       "subEn": "NEXUS · Canadian C-Spine",
+       "subZh": "NEXUS · Canadian C-Spine"
+      },
+      {
+       "en": "Hold the head and neck by hand",
+       "zh": "用手稳住头和颈"
+      },
+      {
+       "en": "Hard collar",
+       "zh": "上硬颈托"
+      },
+      {
+       "en": "Onto a spinal immobilization device",
+       "zh": "放上脊柱固定装置"
+      },
+      {
+       "en": "Foam rollers or foam blocks",
+       "zh": "放泡沫头部固定块"
+      },
+      {
+       "en": "Secure the body to the device, if appropriate",
+       "zh": "需要的话，把身体固定在装置上"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Tape the head.</b>",
+       "zh": "<b>用胶带粘住头。</b>"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "She meets the indications. What goes on first?",
+     "qZh": "她符合指征。第一步做什么？",
+     "opts": [
+      {
+       "en": "The hard collar",
+       "zh": "上硬颈托"
+      },
+      {
+       "en": "The board",
+       "zh": "上固定板"
+      },
+      {
+       "en": "Your hands, on her head and neck",
+       "zh": "你的手，稳住她的头和颈"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Manual stabilization comes before the collar, the device and the blocks.",
+     "whyZh": "先手动稳住，然后才是颈托、固定装置、头部固定块。"
+    },
+    {
+     "qEn": "The blocks are in place. How do you finish securing him?",
+     "qZh": "头部固定块放好了。最后怎么固定？",
+     "opts": [
+      {
+       "en": "Strap the body to the device, no tape on the head",
+       "zh": "把身体绑在装置上，头上不贴胶带"
+      },
+      {
+       "en": "Tape the forehead to the board",
+       "zh": "用胶带把额头粘在板上"
+      },
+      {
+       "en": "Tape the forehead and the chin",
+       "zh": "额头和下巴都用胶带粘住"
+      }
+     ],
+     "a": 0,
+     "whyEn": "The body is secured if appropriate. The head is not taped.",
+     "whyZh": "需要的话固定身体。头不贴胶带。"
+    },
+    {
+     "qEn": "What decides whether you restrict spinal motion?",
+     "qZh": "要不要做脊柱固定，根据什么决定？",
+     "opts": [
+      {
+       "en": "Every fall gets a collar",
+       "zh": "只要摔了都上颈托"
+      },
+      {
+       "en": "The NEXUS Criteria and the Canadian C-Spine indications",
+       "zh": "NEXUS 标准和 Canadian C-Spine 指征"
+      },
+      {
+       "en": "Only whether the neck hurts",
+       "zh": "只看脖子痛不痛"
+      }
+     ],
+     "a": 1,
+     "whyEn": "You confirm a clinical indication first, using NEXUS or the Canadian C-Spine Guidelines.",
+     "whyZh": "先用 NEXUS 或 Canadian C-Spine 确认有临床指征。"
+    }
+   ]
+  },
+  "traumatic-brain-injuries": {
+   "pic": "./img/treat/traumatic-brain-injuries.webp",
+   "headEn": "Head injury |+ altered consciousness |= <em>suspect TBI</em>",
+   "headZh": "头部外伤|+ 意识改变|= <em>怀疑脑外伤</em>",
+   "lineEn": "Keep the oxygen up, raise the head 30 degrees and loosen the hard collar.",
+   "lineZh": "保住氧合，床头抬高 30 度，松开硬颈托。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "How bad, by GCS",
+     "titleZh": "按 GCS 分轻重",
+     "items": [
+      {
+       "big": "≥ 13",
+       "en": "mild",
+       "zh": "轻度",
+       "tone": "ok"
+      },
+      {
+       "big": "9–12",
+       "en": "moderate",
+       "zh": "中度",
+       "tone": "warn"
+      },
+      {
+       "big": "≤ 8",
+       "en": "severe",
+       "zh": "重度",
+       "tone": "bad"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "items": [
+      {
+       "en": "Oxygenation: <b>SpO₂ 94% or more</b>.",
+       "zh": "氧合：<b>SpO₂ ≥ 94%</b>。"
+      },
+      {
+       "en": "Struggling to breathe: assist ventilations, still keeping SpO₂ at 94% or more.",
+       "zh": "呼吸撑不住：辅助通气，SpO₂ 仍保持 ≥ 94%。"
+      },
+      {
+       "en": "Head of the bed up <b>30 degrees</b>.",
+       "zh": "床头抬高 <b>30 度</b>。"
+      },
+      {
+       "en": "<b>Loosen</b> the hard collar.",
+       "zh": "<b>松开</b>硬颈托。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Also does",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "big": "4.0–8.0",
+       "en": "blood sugar, mmol/L",
+       "zh": "血糖 mmol/L",
+       "tone": ""
+      },
+      {
+       "big": "> 120",
+       "en": "systolic pressure, mmHg",
+       "zh": "收缩压 mmHg",
+       "tone": ""
+      },
+      {
+       "big": "IV",
+       "en": "TKVO, if systolic is over 120",
+       "zh": "TKVO，收缩压 > 120 时",
+       "tone": ""
+      }
+     ],
+     "pcp": true
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>TXA (tranexamic acid) for an isolated TBI.</b> It is contraindicated.",
+       "zh": "<b>单纯脑外伤用 TXA 氨甲环酸（tranexamic acid）。</b>这是禁忌。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man fell from a ladder onto his head. GCS 8. How severe?",
+     "qZh": "一名男子从梯子上摔下，头着地。GCS 8。算多重？",
+     "opts": [
+      {
+       "en": "Severe",
+       "zh": "重度"
+      },
+      {
+       "en": "Moderate",
+       "zh": "中度"
+      },
+      {
+       "en": "Mild",
+       "zh": "轻度"
+      }
+     ],
+     "a": 0,
+     "whyEn": "GCS 8 or less is a severe traumatic brain injury. 9 to 12 is moderate, 13 and up is mild.",
+     "whyZh": "GCS ≤ 8 是重度脑外伤。9–12 中度，≥ 13 轻度。"
+    },
+    {
+     "qEn": "A cyclist has a head injury and a hard collar on. Which pair does the guideline ask for?",
+     "qZh": "一名骑车人头部受伤，已经上了硬颈托。考纲要求哪两件事？",
+     "opts": [
+      {
+       "en": "Lie him flat and tighten the collar",
+       "zh": "放平，把颈托收紧"
+      },
+      {
+       "en": "Head of the bed up 30 degrees, collar loosened",
+       "zh": "床头抬高 30 度，松开颈托"
+      },
+      {
+       "en": "Raise the legs, collar off",
+       "zh": "抬高双腿，摘掉颈托"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Head up 30 degrees and the collar loosened, not removed.",
+     "whyZh": "床头抬高 30 度；颈托是松开，不是摘掉。"
+    },
+    {
+     "qEn": "Her breathing slows and her SpO₂ falls to 89%. What now?",
+     "qZh": "她呼吸变慢，SpO₂ 掉到 89%。现在怎么办？",
+     "opts": [
+      {
+       "en": "Watch it for five more minutes",
+       "zh": "再观察五分钟"
+      },
+      {
+       "en": "Lay her flat",
+       "zh": "把她放平"
+      },
+      {
+       "en": "Assist her ventilations and get SpO₂ to 94% or more",
+       "zh": "辅助通气，把 SpO₂ 拉回 ≥ 94%"
+      }
+     ],
+     "a": 2,
+     "whyEn": "If the patient cannot maintain respirations, assist ventilations and keep SpO₂ at 94% or more.",
+     "whyZh": "病人自己维持不了呼吸，就辅助通气，SpO₂ 保持 ≥ 94%。"
+    },
+    {
+     "qEn": "An isolated head injury, GCS 10. Do you give TXA (tranexamic acid)?",
+     "qZh": "单纯头部外伤，GCS 10。给 TXA 氨甲环酸（tranexamic acid） 吗？",
+     "opts": [
+      {
+       "en": "No: contraindicated in isolated TBI",
+       "zh": "不给：单纯脑外伤是禁忌"
+      },
+      {
+       "en": "Yes, as early as possible",
+       "zh": "给，越早越好"
+      },
+      {
+       "en": "Yes, if systolic is under 120",
+       "zh": "收缩压低于 120 就给"
+      }
+     ],
+     "a": 0,
+     "whyEn": "TXA is contraindicated for isolated traumatic brain injuries.",
+     "whyZh": "单纯脑外伤禁用 TXA。",
+     "pcp": true
+    }
+   ]
+  },
+  "burn-management": {
+   "pic": "./img/treat/burn-management.webp",
+   "headEn": "<em>Cool</em> it for |15 to 20 minutes.",
+   "headZh": "<em>冲凉水</em>|15 到 20 分钟。",
+   "lineEn": "Cool running water, not cold. The time a bystander already spent cooling counts.",
+   "lineZh": "用凉的流动水，不是冰水。旁人已经冲过的时间算在里面。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "In the primary",
+     "titleZh": "在 Primary 里",
+     "steps": [
+      {
+       "en": "Expose and examine",
+       "zh": "暴露、检查"
+      },
+      {
+       "en": "Start cooling",
+       "zh": "开始冷却",
+       "subEn": "15–20 minutes",
+       "subZh": "15–20 分钟"
+      },
+      {
+       "en": "High-flow oxygen",
+       "zh": "高流量氧",
+       "subEn": "if you suspect an inhalation injury, or short of breath",
+       "subZh": "怀疑吸入性损伤，或者气短"
+      },
+      {
+       "en": "Work out the burned area",
+       "zh": "算烧伤面积",
+       "subEn": "BSA, by the Rule of Nines",
+       "subZh": "BSA，用九分法（Rule of Nines）"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "About the cooling",
+     "titleZh": "关于冷却",
+     "items": [
+      {
+       "en": "<b>Cool, not cold</b>, and running water wherever you can.",
+       "zh": "<b>凉水，不是冰水</b>，能用流动水就用流动水。"
+      },
+      {
+       "en": "No immediate threat to life: staying on scene more than 20 minutes to cool is acceptable.",
+       "zh": "没有马上危及生命的伤：为了冲水在现场停留超过 20 分钟是可以的。"
+      },
+      {
+       "en": "Has to go now: cool saline may be enough.",
+       "zh": "必须马上走：用凉的生理盐水可能就够。"
+      },
+      {
+       "en": "Cooling is pain relief too.",
+       "zh": "冷却本身也是止痛。"
+      }
+     ]
+    },
+    {
+     "type": "phases",
+     "titleEn": "After the primary",
+     "titleZh": "Primary 之后",
+     "rows": [
+      {
+       "k": "Protocol",
+       "en": "Consider pain management, if indicated.",
+       "zh": "有指征就考虑镇痛。"
+      },
+      {
+       "k": "Treatment",
+       "en": "When the cooling is finished: sterile, nonstick, dry gauze.",
+       "zh": "冷却结束后：盖无菌、不粘、干的纱布。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Use cold or iced water.</b>",
+       "zh": "<b>用冰水。</b>"
+      },
+      {
+       "en": "<b>Dress it wet.</b> After the cooling the gauze is dry.",
+       "zh": "<b>盖湿敷料。</b>冷却之后用的是干纱布。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Also does",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "big": "IV",
+       "en": "if indicated",
+       "zh": "有指征就开",
+       "tone": ""
+      },
+      {
+       "big": "20 ml/kg",
+       "en": "fluid if hypotensive, at most 2 litres",
+       "zh": "低血压时补液，最多 2 升",
+       "tone": ""
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A neighbour held the man's scalded arm under the tap for 10 minutes before you arrived. How much more cooling?",
+     "qZh": "你到之前，邻居已经把他烫伤的手臂放在水龙头下冲了 10 分钟。还要冲多久？",
+     "opts": [
+      {
+       "en": "A full 15 to 20 minutes more",
+       "zh": "再冲满 15–20 分钟"
+      },
+      {
+       "en": "5 to 10 minutes more",
+       "zh": "再冲 5–10 分钟"
+      },
+      {
+       "en": "None: go straight to the dressing",
+       "zh": "不用冲了，直接包"
+      }
+     ],
+     "a": 1,
+     "whyEn": "The 15 to 20 minutes include the time bystanders spent cooling effectively.",
+     "whyZh": "15–20 分钟包含了旁人已经有效冲水的时间。"
+    },
+    {
+     "qEn": "The cooling is finished. What goes on the burn?",
+     "qZh": "冷却结束了。烧伤处盖什么？",
+     "opts": [
+      {
+       "en": "Sterile, nonstick, dry gauze",
+       "zh": "无菌、不粘、干的纱布"
+      },
+      {
+       "en": "A wet saline dressing",
+       "zh": "盐水湿敷料"
+      },
+      {
+       "en": "An ice pack",
+       "zh": "冰袋"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Once cooling has finished the wound is dressed with sterile, nonstick, dry gauze.",
+     "whyZh": "冷却结束后，用无菌、不粘、干的纱布覆盖。"
+    },
+    {
+     "qEn": "A woman pulled from a house fire is short of breath. What do you add in the primary?",
+     "qZh": "一名女子从着火的房子里被救出来，气短。Primary 里要加什么？",
+     "opts": [
+      {
+       "en": "Nothing until her SpO₂ drops",
+       "zh": "等 SpO₂ 掉了再说"
+      },
+      {
+       "en": "A cold wet towel on her face",
+       "zh": "脸上盖冷湿毛巾"
+      },
+      {
+       "en": "High-flow oxygen",
+       "zh": "高流量氧"
+      }
+     ],
+     "a": 2,
+     "whyEn": "High-flow oxygen for a suspected inhalation injury or shortness of breath.",
+     "whyZh": "怀疑吸入性损伤或气短，给高流量氧。"
+    }
+   ]
+  },
+  "abdominal-injuries": {
+   "pic": "./img/treat/abdominal-injuries.webp",
+   "headEn": "Bowel out? |<em>Never</em> push it back.",
+   "headZh": "肠子露出来，|<em>绝不塞回去</em>。",
+   "lineEn": "A moist sterile dressing first, an occlusive layer on top. Keep the patient still and warm.",
+   "lineZh": "先盖湿的无菌敷料，上面再盖一层密封层。让病人少动、保暖。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Control external bleeding",
+       "zh": "止住外出血"
+      },
+      {
+       "en": "Limit movement",
+       "zh": "尽量少动",
+       "subEn": "so the clots are not disturbed",
+       "subZh": "免得把血凝块弄散"
+      },
+      {
+       "en": "Protect against heat loss",
+       "zh": "保暖，防止失温"
+      },
+      {
+       "en": "Cover what has come out",
+       "zh": "盖住露出来的内脏",
+       "subEn": "moist sterile dressing, then an occlusive layer",
+       "subZh": "湿的无菌敷料，再加一层密封层"
+      },
+      {
+       "en": "Position of comfort",
+       "zh": "摆舒服的体位"
+      },
+      {
+       "en": "Transport",
+       "zh": "转运"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Put the contents back</b> into the abdomen.",
+       "zh": "<b>把内脏塞回</b>腹腔。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "On the way",
+     "titleZh": "在路上做",
+     "items": [
+      {
+       "en": "Vascular access, and correct hypoperfusion.",
+       "zh": "建立静脉通路，纠正低灌注。"
+      },
+      {
+       "en": "TXA (tranexamic acid), if indicated.",
+       "zh": "有指征就给 TXA 氨甲环酸（tranexamic acid）。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man has been stabbed in the belly. A loop of bowel is showing. What do you put on it?",
+     "qZh": "一名男子腹部被刺，露出一段肠子。上面盖什么？",
+     "opts": [
+      {
+       "en": "Dry gauze, pressed on firmly",
+       "zh": "干纱布，用力压住"
+      },
+      {
+       "en": "Nothing: push it back in and bandage",
+       "zh": "什么都不盖：塞回去再包扎"
+      },
+      {
+       "en": "A moist sterile dressing, then an occlusive layer",
+       "zh": "湿的无菌敷料，再加一层密封层"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Moist and sterile first, occlusive on top, and the contents are never put back.",
+     "whyZh": "先湿的无菌敷料，再盖密封层。内脏绝不塞回去。"
+    },
+    {
+     "qEn": "Why do you keep him as still as you can?",
+     "qZh": "为什么要让他尽量不动？",
+     "opts": [
+      {
+       "en": "Movement can break up the clots",
+       "zh": "一动可能把血凝块弄散"
+      },
+      {
+       "en": "It saves time on scene",
+       "zh": "节省现场时间"
+      },
+      {
+       "en": "It protects his spine",
+       "zh": "保护脊柱"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Movement is limited to reduce clot disruption.",
+     "whyZh": "少动是为了不破坏已经形成的血凝块。"
+    },
+    {
+     "qEn": "The wound is covered. Which two things come before you leave?",
+     "qZh": "伤口盖好了。出发前还有哪两件事？",
+     "opts": [
+      {
+       "en": "Sit him upright and give him water",
+       "zh": "扶他坐直，给他喝水"
+      },
+      {
+       "en": "Keep him warm, in a position of comfort",
+       "zh": "给他保暖，摆一个舒服的体位"
+      },
+      {
+       "en": "Have him walk to the stretcher",
+       "zh": "让他自己走到担架旁"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Protect against heat loss and use a position of comfort.",
+     "whyZh": "防止失温，摆舒服的体位。"
+    },
+    {
+     "qEn": "When do the IV and TXA (tranexamic acid) happen?",
+     "qZh": "静脉通路和 TXA 氨甲环酸（tranexamic acid） 什么时候做？",
+     "opts": [
+      {
+       "en": "On scene, before he is moved",
+       "zh": "现场做，搬动之前"
+      },
+      {
+       "en": "Only at the hospital",
+       "zh": "到医院才做"
+      },
+      {
+       "en": "En route",
+       "zh": "在路上做"
+      }
+     ],
+     "a": 2,
+     "whyEn": "The PCP interventions for abdominal injuries are done en route.",
+     "whyZh": "腹部损伤的 PCP 处置都在路上做。",
+     "pcp": true
+    }
+   ]
+  },
+  "chest-trauma": {
+   "pic": "./img/treat/chest-trauma.webp",
+   "headEn": "Open chest wound: |<em>seal three sides</em>.",
+   "headZh": "胸部开放伤：|<em>封三边</em>。",
+   "lineEn": "Then watch for a tension pneumothorax. A flail chest is held still by hand.",
+   "lineZh": "封好后盯着有没有张力性气胸（tension pneumothorax）。连枷胸（flail chest）用手稳住。",
+   "blocks": [
+    {
+     "type": "ticks",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "items": [
+      {
+       "en": "Control any bleeding with gauze.",
+       "zh": "用纱布止血。"
+      },
+      {
+       "en": "Assist oxygenation and ventilation if necessary.",
+       "zh": "需要的话辅助给氧和通气。"
+      },
+      {
+       "en": "Seal an open chest wound: a <b>three-sided</b> occlusive dressing, or a commercial chest seal.",
+       "zh": "封住开放性胸部伤口：<b>三边</b>密封敷料，或商用胸部封贴（chest seal）。"
+      },
+      {
+       "en": "Flail chest: stabilize it <b>manually</b>.",
+       "zh": "连枷胸：<b>用手</b>稳住。"
+      },
+      {
+       "en": "Position the patient as soon as possible.",
+       "zh": "尽快摆好体位。"
+      }
+     ]
+    },
+    {
+     "type": "fork",
+     "titleEn": "After the seal is on",
+     "titleZh": "封好之后",
+     "actEn": "Watch closely for a <b>tension pneumothorax</b>",
+     "actZh": "紧盯有没有<b>张力性气胸</b>",
+     "goodEn": "No sign of it",
+     "goodZh": "没有出现",
+     "goodToEn": "keep watching",
+     "goodToZh": "继续盯着",
+     "badEn": "It develops",
+     "badZh": "出现了",
+     "badToEn": "relieve it",
+     "badToZh": "放气减压"
+    },
+    {
+     "type": "ticks",
+     "titleEn": "On the way",
+     "titleZh": "在路上做",
+     "items": [
+      {
+       "en": "Vascular access if required.",
+       "zh": "需要的话建立静脉通路。"
+      },
+      {
+       "en": "TXA (tranexamic acid), if indicated.",
+       "zh": "有指征就给 TXA 氨甲环酸（tranexamic acid）。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man has an open wound in his chest wall and air is moving through it. What do you put on it?",
+     "qZh": "一名男子胸壁有开放伤口，有气体进出。上面盖什么？",
+     "opts": [
+      {
+       "en": "Gauze packed into the wound",
+       "zh": "把纱布塞进伤口"
+      },
+      {
+       "en": "A three-sided occlusive dressing or a chest seal",
+       "zh": "三边密封敷料，或胸部封贴"
+      },
+      {
+       "en": "A dressing taped down tightly on all four sides",
+       "zh": "四边都贴死的敷料"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Open chest wounds are sealed with a three-sided occlusive dressing or a commercial chest seal. Chest wounds are never packed.",
+     "whyZh": "开放性胸部伤口用三边密封敷料或商用胸部封贴。胸部伤口不填塞。"
+    },
+    {
+     "qEn": "Five minutes after the seal goes on, he shows signs of a tension pneumothorax. What do you do?",
+     "qZh": "封好五分钟后，他出现张力性气胸的表现。你怎么办？",
+     "opts": [
+      {
+       "en": "Relieve it",
+       "zh": "放气减压"
+      },
+      {
+       "en": "Add a second seal on top",
+       "zh": "上面再贴一层"
+      },
+      {
+       "en": "Lay him flat and wait",
+       "zh": "放平，等等看"
+      }
+     ],
+     "a": 0,
+     "whyEn": "After sealing you monitor closely for a tension pneumothorax and relieve it if it develops.",
+     "whyZh": "封好之后紧盯张力性气胸，出现了就减压。"
+    },
+    {
+     "qEn": "A section of her chest wall moves the wrong way when she breathes. How do you stabilize it?",
+     "qZh": "她呼吸时有一块胸壁反着动。怎么稳住？",
+     "opts": [
+      {
+       "en": "With a sandbag",
+       "zh": "压沙袋"
+      },
+      {
+       "en": "With tape wound tightly round the chest",
+       "zh": "用胶带绕胸缠紧"
+      },
+      {
+       "en": "By hand",
+       "zh": "用手"
+      }
+     ],
+     "a": 2,
+     "whyEn": "A flail chest is stabilized manually.",
+     "whyZh": "连枷胸用手稳住。"
+    }
+   ]
+  },
+  "electrical-contact": {
+   "pic": "./img/treat/electrical-contact.webp",
+   "headEn": "Stay back until |it is <em>declared safe</em>.",
+   "headZh": "没人宣布安全，|<em>别靠近</em>。",
+   "lineEn": "Qualified personnel clear the scene first. Then think spine, think heart, and treat the burn.",
+   "lineZh": "先由专业人员确认现场安全。然后：想到脊柱，想到心脏，再处理烧伤。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Once the scene is safe",
+     "titleZh": "现场安全之后",
+     "steps": [
+      {
+       "en": "Consider spinal motion restriction",
+       "zh": "考虑脊柱固定"
+      },
+      {
+       "en": "In cardiac arrest: start compressions",
+       "zh": "心脏骤停：开始按压",
+       "subEn": "then follow the resuscitation guidelines",
+       "subZh": "然后按复苏流程走"
+      },
+      {
+       "en": "Oxygen as required",
+       "zh": "需要就给氧"
+      },
+      {
+       "en": "Flush and decontaminate",
+       "zh": "冲洗、去污",
+       "subEn": "sterile saline",
+       "subZh": "用无菌生理盐水"
+      },
+      {
+       "en": "Dress the injuries",
+       "zh": "包扎伤处"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "en": "Find out the <b>type of current</b> and <b>how long</b> the contact lasted.",
+       "zh": "弄清<b>电流类型</b>和<b>接触了多久</b>。"
+      },
+      {
+       "en": "Estimate the burned area with the Burn Estimation Charts.",
+       "zh": "用烧伤面积估算图（Burn Estimation Charts）估算面积。"
+      },
+      {
+       "en": "Go, and consider an intercept with additional resources.",
+       "zh": "出发，考虑和增援在途中会合。"
+      },
+      {
+       "en": "A large area was cooled: consider the ambulance heater on the way.",
+       "zh": "冷却的面积大：路上考虑开救护车暖气。"
+      },
+      {
+       "en": "No inhalation injury: consider analgesia to effect.",
+       "zh": "没有吸入性损伤：考虑镇痛，给到起效。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Go near a power source or a downed line</b> before qualified personnel say it is safe.",
+       "zh": "专业人员确认安全之前，<b>靠近电源或掉落的电线</b>。"
+      },
+      {
+       "en": "<b>Cool the burns for more than 15 to 20 minutes.</b> That total includes the decontamination time.",
+       "zh": "<b>冷却烧伤超过 15–20 分钟。</b>这个时间包括冲洗去污的时间。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also does",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "en": "Vascular access.",
+       "zh": "建立静脉通路。"
+      },
+      {
+       "en": "Hypotensive: <b>consider other causes of shock</b>.",
+       "zh": "低血压：<b>考虑其他原因造成的休克</b>。"
+      },
+      {
+       "en": "Fluid bolus <b>20 ml/kg</b>, at most <b>2 litres</b>, reassessing every 500 ml.",
+       "zh": "补液 <b>20 ml/kg</b>，最多 <b>2 升</b>，每 500 ml 复查一次。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man is lying next to a fallen power line and is not moving. What do you do?",
+     "qZh": "一名男子倒在掉落的电线旁，一动不动。你怎么做？",
+     "opts": [
+      {
+       "en": "Stay back until qualified personnel declare it safe",
+       "zh": "退后，等专业人员宣布安全"
+      },
+      {
+       "en": "Pull him clear with a dry wooden pole",
+       "zh": "用干木棍把他拨开"
+      },
+      {
+       "en": "Run in and start CPR",
+       "zh": "冲过去开始 CPR"
+      }
+     ],
+     "a": 0,
+     "whyEn": "You do not approach electrical sources or downed lines until qualified personnel have deemed the scene safe.",
+     "whyZh": "专业人员确认现场安全之前，不靠近电源或掉落的电线。"
+    },
+    {
+     "qEn": "The scene is now safe. He has no pulse. What comes first?",
+     "qZh": "现场安全了。他没有脉搏。先做什么？",
+     "opts": [
+      {
+       "en": "Flush his burns",
+       "zh": "冲洗烧伤"
+      },
+      {
+       "en": "Start compressions",
+       "zh": "开始按压"
+      },
+      {
+       "en": "Dress his wounds",
+       "zh": "包扎伤口"
+      }
+     ],
+     "a": 1,
+     "whyEn": "In cardiac arrest you begin compressions and follow the resuscitation guidelines.",
+     "whyZh": "心脏骤停就开始按压，按复苏流程走。"
+    },
+    {
+     "qEn": "You have flushed a woman's electrical burns for 10 minutes. How much more cooling is allowed?",
+     "qZh": "你已经给一名女子的电烧伤冲洗了 10 分钟。最多还能再冷却多久？",
+     "opts": [
+      {
+       "en": "As long as it takes",
+       "zh": "冲到不痛为止"
+      },
+      {
+       "en": "Another 20 minutes",
+       "zh": "再冲 20 分钟"
+      },
+      {
+       "en": "5 to 10 minutes",
+       "zh": "5–10 分钟"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Cooling stops at 15 to 20 minutes in total, and the decontamination time is part of it.",
+     "whyZh": "冷却总共不超过 15–20 分钟，冲洗去污的时间也算在内。"
+    },
+    {
+     "qEn": "After an electrical contact his blood pressure is low. Besides the fluid bolus, what must you think of?",
+     "qZh": "触电后他血压低。除了补液，还必须想到什么？",
+     "opts": [
+      {
+       "en": "Other causes of shock",
+       "zh": "其他原因造成的休克"
+      },
+      {
+       "en": "Nothing else: it is the burn",
+       "zh": "不用多想，就是烧伤引起的"
+      },
+      {
+       "en": "Stop the cooling early",
+       "zh": "提前停止冷却"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Hypotensive after electrical contact: consider other causes of shock. Bolus 20 ml/kg to at most 2 litres, reassessing every 500 ml.",
+     "whyZh": "触电后低血压：考虑其他原因的休克。补液 20 ml/kg，最多 2 升，每 500 ml 复查一次。",
+     "pcp": true
+    }
+   ]
   }
+ }
 }

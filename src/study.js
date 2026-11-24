@@ -1,7 +1,7 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=88';
-import { sClassroom } from './classroom.js?v=88';
-import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=88';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=89';
+import { sClassroom } from './classroom.js?v=89';
+import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=89';
 
 /* ---------------- study hub ---------------- */
 // The six official-guideline tiles, shared by the Learn hub and the guidelines page.
@@ -360,15 +360,20 @@ function sec(title, en = [], zh = []) {
 const CAT = { trauma: ['Trauma', '创伤'], medical: ['Medical', '内科'], 'cardiac-arrest': ['Cardiac arrest', '心脏骤停'], procedure: ['Procedure', '操作'] };
 const X_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 function treatmentCard(el, x, c) {
+  const ph = h => h.split('|').map(part => `<span class="ph">${part}</span>`).join('');   // a headline breaks only at its marks
   const cat = CAT[x.category] || [x.category, x.category];
+  const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   const block = b => {
-    const title = `<p class="kick sec">${one(b.titleEn, b.titleZh)}</p>`;
+    if (b.pcp && S.track !== 'pcp') return '';   // beyond the EMR scope
+    const title = `<p class="kick sec">${b.pcp ? '<i class="pcp">PCP</i>' : ''}${one(b.titleEn, b.titleZh)}</p>`;
     if (b.type === 'ladder') {
       const firstLate = b.steps.findIndex(st => st.last);
       return `<section class="tc-b tc-ladder">${title}<ol>${b.steps.map((st, i) => `${i === firstLate ? `<li class="lbl"><span>${one(b.tagEn, b.tagZh)}</span></li>` : ''}
-        <li class="${st.last ? 'late' : ''}"><i>${i + 1}</i><span><b>${two(st.en, st.zh)}</b>${st.subEn ? `<small>${mini(st.subEn, st.subZh)}</small>` : ''}</span></li>`).join('')}</ol></section>`;
+        <li class="${st.last ? 'late' : ''}"><i>${st.k || i + 1}</i><span><b>${two(st.en, st.zh)}</b>${st.subEn ? `<small>${mini(st.subEn, st.subZh)}</small>` : ''}</span></li>`).join('')}</ol></section>`;
     }
     if (b.type === 'never') return `<section class="tc-b tc-never">${title}<ul>${b.items.map(it => `<li><i>${X_ICO}</i><span>${two(it.en, it.zh)}</span></li>`).join('')}</ul></section>`;
+    if (b.type === 'ticks') return `<section class="tc-b tc-ticks">${title}<ul>${b.items.map(it => `<li><i>${TICK}</i><span>${two(it.en, it.zh)}</span></li>`).join('')}</ul></section>`;
+    if (b.type === 'bands') return `<section class="tc-b tc-bands">${title}<div class="bd${b.stack ? ' stack' : ''}" style="--n:${b.items.length}">${b.items.map(it => `<div class="${it.tone || ''}"><b>${mini(it.big, it.bigZh || it.big)}</b><small>${mini(it.en, it.zh)}</small></div>`).join('')}</div></section>`;
     if (b.type === 'fork') return `<section class="tc-b tc-fork">${title}<div class="fk">
         <div class="act">${two(b.actEn, b.actZh)}</div>
         <div class="arms"><div class="good"><small>${mini(b.goodEn, b.goodZh)}</small><b>${mini(b.goodToEn, b.goodToZh)}</b></div>
@@ -379,8 +384,8 @@ function treatmentCard(el, x, c) {
   el.innerHTML = `<div class="ddx hm tc lang-${S.lang}"><main>
     <a class="tc-back" href="#/study/treatments">← ${one('Treatments', '处置主题')}</a>
     <header class="tc-hero"><div>
-      <p class="kick">${one(cat[0], cat[1])} · ${one(x.titleEn, x.titleZh)}${x.licence === 'pcp' ? ' · PCP' : ''}</p>
-      <h1 class="h1">${two(c.headEn, c.headZh)}</h1>
+      <p class="kick">${mini(cat[0], cat[1])} · ${mini(x.titleEn, x.titleZh)}${x.licence === 'pcp' ? ' · PCP' : ''}</p>
+      <h1 class="h1">${two(ph(c.headEn), ph(c.headZh))}</h1>
     </div>${stk(c.pic, 6)}</header>
     <p class="tc-line">${two(c.lineEn, c.lineZh)}</p>
     <div class="tc-grid">${c.blocks.map(block).join('')}
@@ -397,7 +402,7 @@ function treatmentCard(el, x, c) {
   </main></div>`;
 
   // the questions, one at a time: tap an answer, see why, go on
-  const box = el.querySelector('#tcQuiz'), qs = c.quiz || [];
+  const box = el.querySelector('#tcQuiz'), qs = (c.quiz || []).filter(q => !q.pcp || S.track === 'pcp');
   let i = 0, right = 0;
   const show = () => {
     if (i >= qs.length) {
@@ -449,20 +454,26 @@ async function sTreatments(el, params) {
       return;
     }
   }
+  // the list: a sticker board, one section per category; a topic that has a card shows its sticker
+  const cardData = await fetch('./data/study/treatment-cards.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
+  const has = (cardData && cardData.cards) || {};
   const cats = {};
   for (const x of list) (cats[x.category || 'other'] ||= []).push(x);
-  el.innerHTML = `
-    ${backGuide()}
-    <div class="card"><h2>${ico('bandage')} ${t('Treatments', '处置主题')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2></div>
-    ${Object.entries(cats).map(([cat, xs]) => `
-      <div class="card"><h3 style="margin-top:0">${esc(cat)}</h3></div>
-      <div class="list-wrap">
-        ${xs.map(x => `<button class="list-item" data-goto="/study/treatments?id=${x.id}">
-          <span>${bi(x.titleEn, x.titleZh, 'span')}</span>
-          ${x.licence === 'pcp' ? '<span class="pill pcp">PCP</span>' : ''}
-          <span class="li-arrow">›</span></button>`).join('')}
-      </div>`).join('')}`;
-  el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
+  const name = x => `<b>${two(esc(x.titleEn), esc(x.titleZh))}</b>${x.licence === 'pcp' ? '<small>PCP</small>' : ''}`;
+  el.innerHTML = `<div class="ddx hm tl lang-${S.lang}"><main>
+    <a class="tc-back" href="#/study/guidelines">← ${one('Guidelines', '考纲')}</a>
+    <header class="hm-hero"><div class="hm-head">
+      <p class="kick">${S.track.toUpperCase()} · ${one('Treatments', '处置主题')}</p>
+      <h1 class="h1">${two('<span class="ph">This patient. </span><span class="ph"><em>What do you do?</em></span>', '<span class="ph">遇到这种病人，</span><span class="ph"><em>怎么做</em>？</span>')}</h1>
+    </div></header>
+    ${Object.entries(cats).map(([cat, xs]) => {
+      const withCard = xs.filter(x => has[x.id]), plain = xs.filter(x => !has[x.id]);
+      return `<p class="kick sec">${one((CAT[cat] || [cat])[0], (CAT[cat] || [cat, cat])[1])} · ${xs.length}</p>
+        ${withCard.length ? `<div class="hm-tiles tl-tiles">${withCard.map((x, n) => `<a class="hm-tile" href="#/study/treatments?id=${x.id}">${stk(has[x.id].pic, [-5, 4, -3, 5][n % 4])}${name(x)}</a>`).join('')}</div>` : ''}
+        ${plain.length ? `<div class="hm-rows tl-rows">${plain.map(x => `<a class="hm-row" href="#/study/treatments?id=${x.id}"><span>${name(x)}</span><span class="chev">${CHEV}</span></a>`).join('')}</div>` : ''}`;
+    }).join('')}
+    <p class="foot">${guideFoot()}</p>
+  </main></div>`;
 }
 
 async function sDrugs(el, params) {

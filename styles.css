@@ -1663,8 +1663,10 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ddx.tc .h1 .zh { font: 700 20px/1.3 "Noto Sans SC", var(--body); color: var(--ink); margin-top: 8px; }
 .ddx.tc .tc-back { display: inline-block; font: 600 13px var(--body); color: var(--ink2); padding: 10px 10px 4px 0; }
 .ddx.tc .tc-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; }
-.ddx.tc .tc-hero .h1 { margin-bottom: 0; }
+.ddx.tc .tc-hero .h1 { margin-bottom: 0; font-size: clamp(30px, 8.6vw, 40px); }
 .ddx.tc .tc-hero .stk { height: 92px; width: auto; }
+.ddx.tc.lang-en .tc-hero .h1, .ddx.tc.lang-both .tc-hero .h1 { font-size: clamp(25px, 7vw, 40px); }   /* English headlines are longer: smaller type and a smaller sticker on a phone */
+.ddx.tc.lang-en .tc-hero .stk, .ddx.tc.lang-both .tc-hero .stk { height: 76px; }
 .ddx.tc .tc-line { font: 500 17px/1.5 var(--body); color: var(--ink); margin: 14px 0 0; text-wrap: pretty; }
 .ddx.tc .tc-b { min-width: 0; }
 .ddx.tc .tc-b > ol, .ddx.tc .tc-b > ul, .ddx.tc .fk, .ddx.tc .phs, .ddx.tc .qz { background: var(--card); border-radius: 20px; box-shadow: var(--shadow); margin: 0; list-style: none; }
@@ -1723,11 +1725,15 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ddx.tc .tc-src[open] { padding-bottom: 14px; }
 @media (min-width: 900px) {
   .ddx.tc .tc-hero { gap: 40px; }
-  .ddx.tc .tc-hero .stk { height: 150px; }
+  .ddx.tc .tc-hero .stk, .ddx.tc.lang-en .tc-hero .stk, .ddx.tc.lang-both .tc-hero .stk { height: 150px; }
   .ddx.tc .tc-line { font-size: 20px; max-width: 46ch; }
-  .ddx.tc .tc-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 0 36px; align-items: start; }
-  .ddx.tc .tc-ladder { grid-row: span 2; }
-  .ddx.tc .tc-phases, .ddx.tc .tc-quiz { grid-column: 1 / -1; }
+  /* blocks flow into two balanced columns; the exam phases and the questions run the full width */
+  .ddx.tc .tc-grid { columns: 2; column-gap: 36px; }
+  .ddx.tc .tc-b { break-inside: avoid; padding: 30px 4px 12px; margin: 0 -4px -12px; }   /* room for the card shadow inside a column; the gap above is padding, since a margin is dropped at the top of a column */
+  .ddx.tc .tc-grid .sec { margin-top: 0; }
+  .ddx.tc .tc-hero .h1, .ddx.tc.lang-en .tc-hero .h1, .ddx.tc.lang-both .tc-hero .h1 { font-size: clamp(44px, 4.5vw, 58px); }
+  .ddx.tc .tc-phases, .ddx.tc .tc-quiz { column-span: all; }
+  .ddx.tc .bd.stack { grid-template-columns: 1fr; }
   .ddx.tc .phs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 6px 20px; }
   .ddx.tc .phs > div { grid-template-columns: 1fr; gap: 10px; padding: 16px 18px 16px 0; align-content: start; }
   .ddx.tc .phs > div + div { border-top: 0; border-left: 1.5px solid var(--line); padding-left: 18px; }
@@ -1735,4 +1741,46 @@ body.cls-playing .view-root { padding-bottom: 170px; }
   .ddx.tc .qz { padding: 22px 24px; }
   .ddx.tc .qz .opts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ddx.tc .qz .q { font-size: 21px; }
+}
+
+/* treatment cards, more blocks: a tick list, value bands, PCP-only mark */
+.ddx.tc .sec .pcp, .ddx.tl small { font: 700 10.5px var(--mono); font-style: normal; letter-spacing: .06em; background: var(--ink); color: var(--paper); border-radius: 5px; padding: 2px 6px; }
+.ddx.tc .tc-ticks ul { padding: 4px 14px; }
+.ddx.tc .tc-ticks li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; padding: 11px 0; font-size: 16px; line-height: 1.45; }
+.ddx.tc .tc-ticks li + li { border-top: 1.5px solid var(--line); }
+.ddx.tc .tc-ticks li i { width: 26px; height: 26px; border-radius: 50%; background: color-mix(in srgb, var(--green) 16%, var(--card)); color: var(--green); display: grid; place-items: center; margin-top: -1px; }
+.ddx.tc .tc-ticks li i svg { width: 15px; height: 15px; }
+.ddx.tc .tc-ticks li b { font-weight: 800; }
+.ddx.tc .tc-ladder li i { font-size: 17px; }
+.ddx.tc .bd { display: grid; grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); gap: 9px; }
+.ddx.tc .bd.stack { grid-template-columns: 1fr; }
+.ddx.tc .bd > div { background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 13px 10px 12px; text-align: center; min-width: 0; }
+.ddx.tc .bd b { display: block; font: 800 24px/1.1 var(--display); letter-spacing: -.02em; }
+.ddx.tc .bd small { display: block; font: 500 12.5px/1.4 var(--body); color: var(--ink2); margin-top: 5px; text-wrap: balance; }
+.ddx.tc .bd.stack > div { display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 12px; text-align: left; padding: 12px 14px; }
+.ddx.tc .bd.stack b { font-size: 17px; letter-spacing: -.01em; }
+.ddx.tc .bd.stack small { margin: 0; font-size: 14px; }
+.ddx.tc .bd .ok { background: color-mix(in srgb, var(--green) 14%, var(--card)); }   .ddx.tc .bd .ok b { color: var(--green); }
+.ddx.tc .bd .warn { background: var(--hivis); }   .ddx.tc .bd .warn b, .ddx.tc .bd .warn small { color: #15181B; }
+.ddx.tc .bd .bad { background: var(--stopbg); }   .ddx.tc .bd .bad b { color: var(--stop); }
+/* the topic list (#/study/treatments) */
+.ddx.tl .tc-back { display: inline-block; font: 600 13px var(--body); color: var(--ink2); padding: 10px 10px 4px 0; }
+.ddx.tl .zh { display: block; font: 500 .8em/1.3 "Noto Sans SC", var(--body); color: var(--ink2); margin-top: 2px; }
+.ddx.tl .h1 .zh { font: 700 20px/1.3 "Noto Sans SC", var(--body); color: var(--ink); margin-top: 8px; }
+.ddx.tl .tl-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ddx.tl .tl-tiles .hm-tile { padding: 14px 10px 14px; }
+.ddx.tl .tl-tiles .hm-tile b { font-size: 16px; line-height: 1.25; text-wrap: balance; }
+.ddx.tl .tl-tiles .hm-tile small, .ddx.tl .tl-rows small { margin-top: 5px; color: var(--paper); }
+.ddx.tl .tl-rows .hm-row { grid-template-columns: 1fr auto; padding: 14px 0; }
+.ddx.tl .tl-rows .hm-row + .hm-row { border-top: 1.5px solid var(--line); }
+.ddx.tl .tl-rows b { font: 700 16px/1.3 var(--display); }
+.ddx.tl small { display: inline-block; }
+.ddx.tl .tl-rows b { display: inline; }
+.ddx.tl .tl-rows small { margin: 0 0 0 8px; vertical-align: 2px; }
+.ddx.tl .tl-rows .chev { color: var(--ink3); display: grid; }
+@media (min-width: 900px) {
+  .ddx.tl .tl-tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+  .ddx.tl .tl-tiles .hm-tile .stk { height: 104px; }
+  .ddx.tl .tl-rows { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; }
+  .ddx.tl .tl-rows .hm-row:nth-child(-n+3) { border-top: 0; }
 }
