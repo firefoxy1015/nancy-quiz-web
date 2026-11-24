@@ -4476,6 +4476,1143 @@
      "pcp": true
     }
    ]
+  },
+  "adult-cpr-aed": {
+   "pic": "./img/treat/adult-cpr-aed.webp",
+   "headEn": "No pulse, no breathing: |<em>start CPR</em>.",
+   "headZh": "没脉搏、没呼吸：|<em>开始 CPR</em>。",
+   "lineEn": "Check both at the same time, for no more than 10 seconds. Gasping counts as not breathing.",
+   "lineZh": "呼吸和脉搏同时查，不超过 10 秒。喘息样呼吸算没有呼吸。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "Three numbers",
+     "titleZh": "三个数字",
+     "items": [
+      {
+       "big": "100–120",
+       "en": "compressions a minute",
+       "zh": "每分钟按压次数",
+       "tone": ""
+      },
+      {
+       "big": "5–6 cm",
+       "en": "deep, in a normal adult. Smaller or bigger patients: a third to a half of the chest",
+       "zh": "深度（一般成人）。体型偏小或偏大：胸廓前后径的 1/3 到 1/2",
+       "tone": ""
+      },
+      {
+       "big": "30 : 2",
+       "en": "compressions to breaths, with one rescuer or two",
+       "zh": "按压 : 通气，一人两人都一样",
+       "tone": "warn"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ladder",
+     "titleEn": "The algorithm",
+     "titleZh": "流程",
+     "steps": [
+      {
+       "en": "Breathing and pulse together",
+       "zh": "呼吸和脉搏一起查",
+       "subEn": "no more than 10 seconds",
+       "subZh": "不超过 10 秒"
+      },
+      {
+       "en": "Neither, or only gasping: begin CPR",
+       "zh": "都没有，或只有喘息：开始 CPR",
+       "subEn": "30 : 2",
+       "subZh": "30 : 2"
+      },
+      {
+       "en": "AED on, and analyze as soon as possible",
+       "zh": "接上 AED，尽快分析"
+      }
+     ]
+    },
+    {
+     "type": "fork",
+     "titleEn": "After every analysis",
+     "titleZh": "每次分析之后",
+     "actEn": "The AED has <b>analyzed</b>",
+     "actZh": "AED <b>分析</b>完了",
+     "goodEn": "No shock advised",
+     "goodZh": "不建议除颤",
+     "goodToEn": "2 minutes of CPR, at once",
+     "goodToZh": "马上 CPR 2 分钟",
+     "badEn": "Shock advised",
+     "badZh": "建议除颤",
+     "badToEn": "shock, then 2 minutes of CPR",
+     "badToZh": "除颤，然后 CPR 2 分钟"
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Basics",
+     "titleZh": "基本要求",
+     "items": [
+      {
+       "en": "Activate the emergency response system at once, if appropriate, and get an AED.",
+       "zh": "合适的话立即启动应急反应系统，并拿来 AED。"
+      },
+      {
+       "en": "<b>Single shocks.</b> CPR resumes immediately after the shock, and goes on while the AED charges.",
+       "zh": "<b>每次只电一下。</b>电完马上继续 CPR；AED 充电时也继续按。"
+      },
+      {
+       "en": "Then analyze again and repeat.",
+       "zh": "然后再分析，如此循环。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Keep going until",
+     "titleZh": "一直做到",
+     "items": [
+      {
+       "big": "Handover",
+       "en": "more advanced providers take over",
+       "zh": "更高级别的人员接手",
+       "tone": "",
+       "bigZh": "交接"
+      },
+      {
+       "big": "Signs of life",
+       "en": "movement, coughing, breathing",
+       "zh": "病人动了、咳嗽、有呼吸",
+       "tone": "ok",
+       "bigZh": "生命迹象"
+      },
+      {
+       "big": "30 minutes",
+       "en": "with no ROSC and no shocks",
+       "zh": "一直没有 ROSC，也没除过颤",
+       "tone": "warn",
+       "bigZh": "30 分钟"
+      },
+      {
+       "big": "40 minutes",
+       "en": "if there was ROSC at any time, or any shock",
+       "zh": "中间有过 ROSC，或除过颤",
+       "tone": "warn",
+       "bigZh": "40 分钟"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>CPR against a verifiable DNR or No CPR order.</b>",
+       "zh": "<b>有可核实的 DNR（不施行心肺复苏）或 No CPR 医嘱还做 CPR。</b>"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man has collapsed. In 10 seconds you feel no pulse, and he takes an occasional gasp. What do you do?",
+     "qZh": "一名男子倒地。10 秒内你摸不到脉搏，他偶尔喘一下。你怎么做？",
+     "opts": [
+      {
+       "en": "Wait for a normal breath",
+       "zh": "等他出现正常呼吸"
+      },
+      {
+       "en": "Begin CPR",
+       "zh": "开始 CPR"
+      },
+      {
+       "en": "Roll him into the recovery position",
+       "zh": "把他翻成复苏体位"
+      }
+     ],
+     "a": 1,
+     "whyEn": "No pulse or breathing, or gasping breathing: begin CPR.",
+     "whyZh": "没有脉搏或呼吸，或者只有喘息样呼吸：开始 CPR。"
+    },
+    {
+     "qEn": "The AED says \"no shock advised\". What now?",
+     "qZh": "AED 提示“不建议除颤”。接下来？",
+     "opts": [
+      {
+       "en": "CPR again at once, for 2 minutes",
+       "zh": "马上继续 CPR，做 2 分钟"
+      },
+      {
+       "en": "Feel for a pulse for a full minute",
+       "zh": "摸脉搏摸满一分钟"
+      },
+      {
+       "en": "Take the pads off",
+       "zh": "把电极片取下来"
+      }
+     ],
+     "a": 0,
+     "whyEn": "No shock advised: resume CPR immediately, 2 minutes, then analyze again.",
+     "whyZh": "不建议除颤：立刻继续 CPR 2 分钟，然后再分析。"
+    },
+    {
+     "qEn": "You have been going for 25 minutes. He was shocked twice early on and has had no ROSC. How long do you continue?",
+     "qZh": "你已经做了 25 分钟。早些时候除颤过两次，一直没有 ROSC。要做到多久？",
+     "opts": [
+      {
+       "en": "Stop now",
+       "zh": "现在就停"
+      },
+      {
+       "en": "To 30 minutes",
+       "zh": "做到 30 分钟"
+      },
+      {
+       "en": "To 40 minutes",
+       "zh": "做到 40 分钟"
+      }
+     ],
+     "a": 2,
+     "whyEn": "30 minutes applies only with no ROSC and no defibrillations. With any shock or any ROSC it is 40.",
+     "whyZh": "30 分钟只适用于既没有 ROSC 也没除过颤的情况。只要除过颤或有过 ROSC，就是 40 分钟。"
+    },
+    {
+     "qEn": "Which compressions are right for a normal adult?",
+     "qZh": "一般成人的按压，哪一组是对的？",
+     "opts": [
+      {
+       "en": "80–100 a minute, 4 cm deep",
+       "zh": "每分钟 80–100 次，深 4 cm"
+      },
+      {
+       "en": "100–120 a minute, 5–6 cm deep",
+       "zh": "每分钟 100–120 次，深 5–6 cm"
+      },
+      {
+       "en": "140 a minute, 7 cm deep",
+       "zh": "每分钟 140 次，深 7 cm"
+      }
+     ],
+     "a": 1,
+     "whyEn": "A rate of 100–120 a minute and a depth of 5.0 to 6.0 cm.",
+     "whyZh": "频率每分钟 100–120 次，深度 5.0–6.0 cm。"
+    }
+   ]
+  },
+  "cpr-aed-basic-concepts": {
+   "pic": "./img/treat/cpr-aed-basic-concepts.webp",
+   "headEn": "Hands off the chest: |<em>under 5 seconds</em>.",
+   "headZh": "手离开胸口：|<em>不到 5 秒</em>。",
+   "lineEn": "Swap the person compressing every 2 minutes. Stay where you are unless you have to move.",
+   "lineZh": "每 2 分钟换人按压。没有必要就不搬动病人。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "Two numbers",
+     "titleZh": "两个数字",
+     "items": [
+      {
+       "big": "< 5 s",
+       "en": "any interruption to CPR",
+       "zh": "CPR 每次中断",
+       "tone": "bad",
+       "bigZh": "< 5 秒"
+      },
+      {
+       "big": "2 min",
+       "en": "change the person compressing, where possible",
+       "zh": "能换就换人按压",
+       "tone": "warn",
+       "bigZh": "2 分钟"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "High-quality CPR",
+     "titleZh": "高质量 CPR",
+     "items": [
+      {
+       "en": "Start early, and interrupt as little as possible.",
+       "zh": "尽早开始，尽量不中断。"
+      },
+      {
+       "en": "<b>Complete recoil</b> after every compression.",
+       "zh": "每次按压后让胸廓<b>完全回弹</b>。"
+      },
+      {
+       "en": "<b>Avoid hyperventilation.</b>",
+       "zh": "<b>不要过度通气。</b>"
+      },
+      {
+       "en": "Early defibrillation goes together with early CPR. Neither holds up the other.",
+       "zh": "尽早除颤和尽早 CPR 同时进行，谁也不耽误谁。"
+      },
+      {
+       "en": "Pulse checks happen during the analysis. With signs of ROSC (a breath, a cough, eyelid movement, a sound) a pulse check must be done.",
+       "zh": "脉搏在 AED 分析时查。出现 ROSC 的迹象（自主呼吸、咳嗽、眼睑动、出声）就必须查脉搏。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also",
+     "titleZh": "还可以",
+     "items": [
+      {
+       "en": "Once high-quality arrest management is under way, an SGA (supraglottic airway) can be inserted.",
+       "zh": "高质量的骤停处置开始以后，可以放 SGA（声门上气道，supraglottic airway）。"
+      }
+     ],
+     "pcp": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Move early only if",
+     "titleZh": "只有这两种情况才提前搬动",
+     "items": [
+      {
+       "en": "The patient is in a <b>dangerous environment</b>.",
+       "zh": "病人所在的<b>环境危险</b>。"
+      },
+      {
+       "en": "You <b>cannot do effective CPR</b> where or how the patient is lying.",
+       "zh": "因为病人的位置或姿势，<b>没法有效做 CPR</b>。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Transport with CPR going may happen for",
+     "titleZh": "边按压边转运，可能用于",
+     "items": [
+      {
+       "en": "Hypothermic arrests.",
+       "zh": "低体温引起的骤停。"
+      },
+      {
+       "en": "Traumatic arrests.",
+       "zh": "创伤引起的骤停。"
+      },
+      {
+       "en": "Treatable causes.",
+       "zh": "有可逆病因的骤停。"
+      },
+      {
+       "en": "Paediatric arrests.",
+       "zh": "儿科病人。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>End the arrest on scene without consulting medical oversight.</b>",
+       "zh": "<b>没有咨询医疗指导（medical oversight）就在现场终止抢救。</b>"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "How long may CPR be interrupted?",
+     "qZh": "CPR 每次最多能中断多久？",
+     "opts": [
+      {
+       "en": "Less than 5 seconds",
+       "zh": "不到 5 秒"
+      },
+      {
+       "en": "Up to 10 seconds",
+       "zh": "最多 10 秒"
+      },
+      {
+       "en": "Up to 30 seconds",
+       "zh": "最多 30 秒"
+      }
+     ],
+     "a": 0,
+     "whyEn": "CPR is given with as few interruptions as possible, each under 5 seconds.",
+     "whyZh": "CPR 尽量不中断，每次中断不到 5 秒。"
+    },
+    {
+     "qEn": "A man has arrested on a living-room floor with plenty of space. Your partner wants to carry him to the ambulance now. What do you say?",
+     "qZh": "一名男子在客厅地板上心脏骤停，周围空间足够。搭档想现在就把他抬上救护车。你怎么说？",
+     "opts": [
+      {
+       "en": "Yes: move him at once",
+       "zh": "好，马上搬"
+      },
+      {
+       "en": "Stay: CPR works better when we are not moving",
+       "zh": "留在原地：不搬动时 CPR 更有效"
+      },
+      {
+       "en": "Move him after the first shock",
+       "zh": "第一次除颤后再搬"
+      }
+     ],
+     "a": 1,
+     "whyEn": "CPR is more effective while stationary. You move early only for a dangerous environment, or when effective CPR is impossible where the patient is.",
+     "whyZh": "不搬动时 CPR 更有效。只有环境危险，或原地没法有效做 CPR，才提前搬动。"
+    },
+    {
+     "qEn": "During the analysis he coughs and his eyelids flutter. What do you do?",
+     "qZh": "AED 分析时，他咳了一下，眼睑在动。你怎么做？",
+     "opts": [
+      {
+       "en": "Shock him anyway",
+       "zh": "照样除颤"
+      },
+      {
+       "en": "Stop everything and watch",
+       "zh": "全部停下来观察"
+      },
+      {
+       "en": "Check for a pulse",
+       "zh": "查脉搏"
+      }
+     ],
+     "a": 2,
+     "whyEn": "With signs of ROSC a pulse check must be done.",
+     "whyZh": "出现 ROSC 的迹象就必须查脉搏。"
+    },
+    {
+     "qEn": "You think the resuscitation should be stopped on scene. What comes first?",
+     "qZh": "你认为应该在现场终止抢救。先做什么？",
+     "opts": [
+      {
+       "en": "Decide it yourself at 20 minutes",
+       "zh": "做满 20 分钟自己决定"
+      },
+      {
+       "en": "Consult medical oversight",
+       "zh": "咨询医疗指导（medical oversight）"
+      },
+      {
+       "en": "Let the family decide",
+       "zh": "让家属决定"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Medical oversight is consulted during a cardiac arrest to discontinue the arrest at the scene.",
+     "whyZh": "要在现场终止抢救，必须先咨询医疗指导。"
+    }
+   ]
+  },
+  "treatable-causes-cardiac-arrest": {
+   "pic": "./img/treat/treatable-causes-cardiac-arrest.webp",
+   "headEn": "A cause you can fix? |<em>Think transport.</em>",
+   "headZh": "有能逆转的原因？|<em>考虑转运</em>。",
+   "lineEn": "Five H's and five T's. The history and the examination give you the clues.",
+   "lineZh": "5 个 H、5 个 T。线索来自病史和体检。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "The five H's",
+     "titleZh": "5 个 H",
+     "steps": [
+      {
+       "en": "Hypovolemia",
+       "zh": "Hypovolemia 低血容量",
+       "k": "H"
+      },
+      {
+       "en": "Hypoxia",
+       "zh": "Hypoxia 缺氧",
+       "k": "H"
+      },
+      {
+       "en": "Hydrogen ion",
+       "zh": "Hydrogen ion 氢离子",
+       "subEn": "acidosis",
+       "subZh": "酸中毒",
+       "k": "H"
+      },
+      {
+       "en": "Hypo / hyperkalemia",
+       "zh": "Hypo / hyperkalemia 低钾 / 高钾血症",
+       "k": "H"
+      },
+      {
+       "en": "Hypothermia",
+       "zh": "Hypothermia 低体温",
+       "k": "H"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "The five T's",
+     "titleZh": "5 个 T",
+     "steps": [
+      {
+       "en": "Tension pneumothorax",
+       "zh": "Tension pneumothorax 张力性气胸",
+       "k": "T"
+      },
+      {
+       "en": "Tamponade, cardiac",
+       "zh": "Tamponade 心包填塞",
+       "k": "T"
+      },
+      {
+       "en": "Toxins",
+       "zh": "Toxins 毒物",
+       "subEn": "anaphylaxis counts here",
+       "subZh": "过敏性休克也算在这里",
+       "k": "T"
+      },
+      {
+       "en": "Thrombosis, pulmonary",
+       "zh": "Thrombosis 肺栓塞",
+       "k": "T"
+      },
+      {
+       "en": "Thrombosis, coronary",
+       "zh": "Thrombosis 冠脉血栓",
+       "k": "T"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "CPR continues until",
+     "titleZh": "CPR 一直做到",
+     "items": [
+      {
+       "en": "ROSC is achieved.",
+       "zh": "恢复自主循环（ROSC）。"
+      },
+      {
+       "en": "Further efforts are judged futile.",
+       "zh": "判断继续抢救已无意义。"
+      },
+      {
+       "en": "The rescuers cannot go on, from fatigue or a hazard on scene.",
+       "zh": "施救者因为疲劳或现场危险无法继续。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "The decision to transport",
+     "titleZh": "转不转运",
+     "items": [
+      {
+       "en": "It depends on several things: the history and the physical examination point to reversible causes.",
+       "zh": "要综合判断：病史和体检提示有没有可逆病因。"
+      },
+      {
+       "en": "An apparent reversible cause: <b>transport can be considered</b>.",
+       "zh": "有明显的可逆病因：<b>可以考虑转运</b>。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Suction",
+     "titleZh": "吸引",
+     "items": [
+      {
+       "big": "10–15 s",
+       "en": "at a time, in an adult",
+       "zh": "成人每次吸引的时间",
+       "tone": "",
+       "bigZh": "10–15 秒"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A woman arrested minutes after a bee sting, with swelling and hives. Which reversible cause is this?",
+     "qZh": "一名女子被蜜蜂蜇后几分钟心脏骤停，身上有肿胀和荨麻疹。这属于哪一个可逆病因？",
+     "opts": [
+      {
+       "en": "Toxins: anaphylaxis is included",
+       "zh": "Toxins 毒物：过敏性休克算在内"
+      },
+      {
+       "en": "Hydrogen ion",
+       "zh": "Hydrogen ion 氢离子"
+      },
+      {
+       "en": "None of them",
+       "zh": "哪个都不是"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Toxins include anaphylaxis.",
+     "whyZh": "Toxins（毒物）包括过敏性休克。"
+    },
+    {
+     "qEn": "A man is found in the snow in cardiac arrest. What does that mean for transport?",
+     "qZh": "一名男子在雪地里被发现时已经心脏骤停。这对转运意味着什么？",
+     "opts": [
+      {
+       "en": "Nothing: all arrests stay on scene",
+       "zh": "没影响：骤停都留在现场处理"
+      },
+      {
+       "en": "A reversible cause is apparent, so transport can be considered",
+       "zh": "有明显的可逆病因，可以考虑转运"
+      },
+      {
+       "en": "Stop at once",
+       "zh": "立即停止抢救"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Hypothermia is one of the H's. With an apparent reversible cause, transport can be considered.",
+     "whyZh": "Hypothermia（低体温）是 5 个 H 之一。有明显的可逆病因，就可以考虑转运。"
+    },
+    {
+     "qEn": "How long do you suction an adult for at a time?",
+     "qZh": "给成人吸引，每次多长时间？",
+     "opts": [
+      {
+       "en": "30 seconds",
+       "zh": "30 秒"
+      },
+      {
+       "en": "1 minute",
+       "zh": "1 分钟"
+      },
+      {
+       "en": "10 to 15 seconds",
+       "zh": "10–15 秒"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Suction is applied for 10–15 seconds in the adult.",
+     "whyZh": "成人每次吸引 10–15 秒。"
+    }
+   ]
+  },
+  "iv-procedures": {
+   "pic": "./img/treat/iv-procedures.webp",
+   "headEn": "Drip rate: |<em>one formula</em>.",
+   "headZh": "滴速，|<em>一条公式</em>。",
+   "lineEn": "Maintenance is about 75 mL an hour. Recheck the patient and the line every 5 to 15 minutes.",
+   "lineZh": "维持滴速约 75 mL/小时。每 5–15 分钟复查一次病人和输液。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "The formula",
+     "titleZh": "公式",
+     "items": [
+      {
+       "big": "gtts / min",
+       "en": "= (mL to infuse × drops per mL of the set) ÷ time in minutes",
+       "zh": "=（要输的毫升数 × 输液器每毫升的滴数）÷ 分钟数",
+       "tone": "warn",
+       "bigZh": "每分钟滴数"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "bands",
+     "titleEn": "Two sets",
+     "titleZh": "两种输液器",
+     "items": [
+      {
+       "big": "10 gtts/mL",
+       "en": "macro-drip",
+       "zh": "大滴（macro-drip）",
+       "tone": ""
+      },
+      {
+       "big": "60 gtts/mL",
+       "en": "micro-drip",
+       "zh": "微滴（micro-drip）",
+       "tone": ""
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Worked through",
+     "titleZh": "算两道",
+     "items": [
+      {
+       "big": "7 gtts/min",
+       "en": "500 mL of NS over 12 hours, macro set: 500 × 10 ÷ 720",
+       "zh": "500 mL 生理盐水（NS）12 小时输完，大滴：500 × 10 ÷ 720",
+       "tone": ""
+      },
+      {
+       "big": "25 gtts/min",
+       "en": "25 mL of D10W in 60 minutes, micro set: 25 × 60 ÷ 60",
+       "zh": "25 mL D10W（10% 葡萄糖）60 分钟输完，微滴：25 × 60 ÷ 60",
+       "tone": ""
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Starting the IV",
+     "titleZh": "开通静脉",
+     "steps": [
+      {
+       "en": "Aseptic technique, the whole way through",
+       "zh": "全程无菌操作"
+      },
+      {
+       "en": "Gather and prepare",
+       "zh": "准备用物",
+       "subEn": "inspect the catheter, the solution and the set · prime the tubing",
+       "subZh": "检查留置针、液体、输液器 · 排气"
+      },
+      {
+       "en": "Choose and prepare the site",
+       "zh": "选好并准备穿刺部位"
+      },
+      {
+       "en": "Initiate the IV",
+       "zh": "穿刺"
+      },
+      {
+       "en": "Connect the tubing and infuse",
+       "zh": "接上输液管，开始输液"
+      },
+      {
+       "en": "Calculate and keep the flow rate",
+       "zh": "算好并保持滴速"
+      },
+      {
+       "en": "Secure the IV",
+       "zh": "固定"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Every 5 to 15 minutes",
+     "titleZh": "每 5–15 分钟",
+     "items": [
+      {
+       "en": "The ABCs and the injury sites.",
+       "zh": "复查 ABC 和受伤部位。"
+      },
+      {
+       "en": "Vital signs.",
+       "zh": "复查生命体征。"
+      },
+      {
+       "en": "The IV site, the tubing and the bag.",
+       "zh": "检查穿刺部位、输液管、输液袋。"
+      },
+      {
+       "en": "Complications: look for them and act on them.",
+       "zh": "留意并发症，发现就处理。"
+      },
+      {
+       "en": "The flow rate, and the right solution running. Change the bag if needed.",
+       "zh": "滴速对不对、输的液体对不对。需要就换袋。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "1000 mL over 8 hours with a macro-drip set (10 gtts/mL). How many drops a minute?",
+     "qZh": "1000 mL，8 小时输完，用大滴输液器（10 gtts/mL）。每分钟多少滴？",
+     "opts": [
+      {
+       "en": "About 21",
+       "zh": "约 21 滴"
+      },
+      {
+       "en": "About 125",
+       "zh": "约 125 滴"
+      },
+      {
+       "en": "About 2",
+       "zh": "约 2 滴"
+      }
+     ],
+     "a": 0,
+     "whyEn": "1000 × 10 ÷ 480 minutes = 20.8, so about 21 drops a minute.",
+     "whyZh": "1000 × 10 ÷ 480 分钟 = 20.8，约 21 滴/分钟。"
+    },
+    {
+     "qEn": "100 mL in 30 minutes with a micro-drip set (60 gtts/mL). How many drops a minute?",
+     "qZh": "100 mL，30 分钟输完，用微滴输液器（60 gtts/mL）。每分钟多少滴？",
+     "opts": [
+      {
+       "en": "20",
+       "zh": "20 滴"
+      },
+      {
+       "en": "200",
+       "zh": "200 滴"
+      },
+      {
+       "en": "50",
+       "zh": "50 滴"
+      }
+     ],
+     "a": 1,
+     "whyEn": "100 × 60 ÷ 30 minutes = 200 drops a minute.",
+     "whyZh": "100 × 60 ÷ 30 分钟 = 200 滴/分钟。"
+    },
+    {
+     "qEn": "What is the maintenance rate?",
+     "qZh": "维持滴速大约是多少？",
+     "opts": [
+      {
+       "en": "About 250 mL an hour",
+       "zh": "约 250 mL/小时"
+      },
+      {
+       "en": "About 10 mL an hour",
+       "zh": "约 10 mL/小时"
+      },
+      {
+       "en": "About 75 mL an hour",
+       "zh": "约 75 mL/小时"
+      }
+     ],
+     "a": 2,
+     "whyEn": "The maintenance rate is approximately 75 mL/hr.",
+     "whyZh": "维持滴速约 75 mL/小时。"
+    },
+    {
+     "qEn": "How often do you reassess the patient and the IV?",
+     "qZh": "病人和输液多久复查一次？",
+     "opts": [
+      {
+       "en": "Once an hour",
+       "zh": "每小时一次"
+      },
+      {
+       "en": "Every 5 to 15 minutes",
+       "zh": "每 5–15 分钟"
+      },
+      {
+       "en": "On arrival at the hospital",
+       "zh": "到医院时"
+      }
+     ],
+     "a": 1,
+     "whyEn": "The patient's condition and the IV are reassessed on a regular basis, every 5 to 15 minutes.",
+     "whyZh": "定期复查病人情况和输液，每 5–15 分钟一次。"
+    }
+   ]
+  },
+  "cpap": {
+   "pic": "./img/treat/cpap.webp",
+   "headEn": "Start at 5. |Steps of 2.5. |<em>Stop at 10.</em>",
+   "headZh": "从 5 起步，|每次加 2.5，|<em>最高 10</em>。",
+   "lineEn": "For a patient of 13 or older who is awake, follows commands and is working hard to breathe. The numbers are in cmH₂O.",
+   "lineZh": "给 13 岁以上、清醒、能听指令、呼吸很费力的病人。数字的单位是 cmH₂O。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "All three",
+     "titleZh": "三条都有",
+     "items": [
+      {
+       "big": "RR > 24",
+       "en": "breaths a minute",
+       "zh": "呼吸频率",
+       "tone": ""
+      },
+      {
+       "big": "SpO₂ < 94%",
+       "en": "while on oxygen",
+       "zh": "吸着氧的情况下",
+       "tone": "bad"
+      },
+      {
+       "big": "Muscles",
+       "en": "accessory muscle use",
+       "zh": "用上了辅助呼吸肌",
+       "tone": "warn",
+       "bigZh": "辅助呼吸肌"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "And also",
+     "titleZh": "同时还要",
+     "items": [
+      {
+       "en": "13 years or older, in significant respiratory distress.",
+       "zh": "13 岁以上，明显呼吸窘迫。"
+      },
+      {
+       "en": "Awake and following commands.",
+       "zh": "清醒，能听指令。"
+      },
+      {
+       "en": "Keeps the airway open unaided.",
+       "zh": "自己能维持气道通畅。"
+      },
+      {
+       "en": "Think of it in heart failure or acute cardiogenic pulmonary edema, asthma, submersion injuries, pneumonia and COPD.",
+       "zh": "这些情况要想到它：心衰或急性心源性肺水肿、哮喘、淹溺、肺炎、COPD。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "No CPAP for",
+     "titleZh": "这些情况不用 CPAP",
+     "items": [
+      {
+       "en": "A decreased LOC, or cannot follow commands.",
+       "zh": "意识下降，或不能听指令。"
+      },
+      {
+       "en": "Respiratory arrest or hypoventilation.",
+       "zh": "呼吸停止，或通气不足。"
+      },
+      {
+       "en": "Respiratory failure, present or about to happen (slow, shallow breathing, falling LOC). <b>Ventilate with a BVM.</b>",
+       "zh": "已经或即将呼吸衰竭（呼吸慢而浅、意识下降）。<b>改用球囊面罩通气。</b>"
+      },
+      {
+       "en": "The mask will not fit the face.",
+       "zh": "面罩贴不住脸。"
+      },
+      {
+       "en": "Vomiting, or any other risk of aspiration.",
+       "zh": "呕吐，或有其他误吸风险。"
+      },
+      {
+       "en": "A traumatic cause of the distress.",
+       "zh": "呼吸窘迫是外伤造成的。"
+      },
+      {
+       "en": "A tracheostomy.",
+       "zh": "气管切开。"
+      },
+      {
+       "en": "A pneumothorax, suspected or known.",
+       "zh": "怀疑或已知气胸。"
+      },
+      {
+       "en": "<b>Systolic pressure under 90 mmHg.</b>",
+       "zh": "<b>收缩压 &lt; 90 mmHg。</b>"
+      },
+      {
+       "en": "12 years old or younger.",
+       "zh": "12 岁及以下。"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Using CPAP",
+     "titleZh": "CPAP 怎么用",
+     "steps": [
+      {
+       "en": "Start",
+       "zh": "起步",
+       "subEn": "oxygen 5 L/min, valve at 5 cmH₂O",
+       "subZh": "氧流量 5 L/min，阀调到 5 cmH₂O"
+      },
+      {
+       "en": "Get a seal on the face",
+       "zh": "面罩贴紧"
+      },
+      {
+       "en": "Reassess the patient and the vitals",
+       "zh": "复查病人和生命体征"
+      },
+      {
+       "en": "Go up in steps of 2.5",
+       "zh": "每次加 2.5",
+       "subEn": "to a maximum of 10 cmH₂O",
+       "subZh": "最高 10 cmH₂O"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "CPAP → oxygen flow",
+     "titleZh": "CPAP 档位 → 氧流量",
+     "items": [
+      {
+       "big": "5",
+       "en": "5 LPM",
+       "zh": "5 LPM",
+       "tone": ""
+      },
+      {
+       "big": "6",
+       "en": "6 LPM",
+       "zh": "6 LPM",
+       "tone": ""
+      },
+      {
+       "big": "7.5",
+       "en": "7 LPM",
+       "zh": "7 LPM",
+       "tone": ""
+      },
+      {
+       "big": "10",
+       "en": "8 LPM",
+       "zh": "8 LPM",
+       "tone": ""
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "PEEP on a bag-valve mask",
+     "titleZh": "球囊面罩加 PEEP",
+     "steps": [
+      {
+       "en": "Valve onto the exhaust port",
+       "zh": "把 PEEP 阀接到排气口",
+       "subEn": "BVM at 15 lpm",
+       "subZh": "球囊面罩氧流量 15 lpm"
+      },
+      {
+       "en": "Dial to 5 cmH₂O",
+       "zh": "旋到 5 cmH₂O"
+      },
+      {
+       "en": "A good seal, and an appropriate rate",
+       "zh": "面罩贴紧，按合适的频率通气",
+       "subEn": "usually no more than 8–10 breaths a minute",
+       "subZh": "通常不超过每分钟 8–10 次"
+      },
+      {
+       "en": "Watch the SpO₂ and the blood pressure",
+       "zh": "盯着 SpO₂ 和血压"
+      },
+      {
+       "en": "Go up in steps of 2.5",
+       "zh": "每次加 2.5",
+       "subEn": "to a maximum of 10 cmH₂O",
+       "subZh": "最高 10 cmH₂O"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "When it goes wrong",
+     "titleZh": "出问题时",
+     "items": [
+      {
+       "big": "On CPAP, worse",
+       "en": "take the CPAP off and assist with a BVM. Consider a PEEP valve if indicated",
+       "zh": "摘掉 CPAP，改用球囊面罩辅助通气。有指征就考虑加 PEEP 阀",
+       "tone": "bad",
+       "bigZh": "用着 CPAP 变差"
+      },
+      {
+       "big": "On PEEP, < 90",
+       "en": "systolic under 90, or cardiac arrest: take the PEEP valve off",
+       "zh": "收缩压 < 90，或心脏骤停：取下 PEEP 阀",
+       "tone": "bad",
+       "bigZh": "用着 PEEP，< 90"
+      }
+     ],
+     "stack": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A 62-year-old with heart failure is awake and follows commands. Breathing 30 a minute, SpO₂ 90% on oxygen, using accessory muscles. Pressure 86/50. CPAP?",
+     "qZh": "62 岁心衰病人，清醒、能听指令。呼吸每分钟 30 次，吸氧下 SpO₂ 90%，用上了辅助呼吸肌。血压 86/50。上 CPAP 吗？",
+     "opts": [
+      {
+       "en": "Yes: start at 5",
+       "zh": "上：从 5 起步"
+      },
+      {
+       "en": "No: his systolic is under 90",
+       "zh": "不上：收缩压低于 90"
+      },
+      {
+       "en": "Yes: start at 10",
+       "zh": "上：从 10 起步"
+      }
+     ],
+     "a": 1,
+     "whyEn": "A systolic pressure under 90 mmHg is a contraindication, even when all three breathing signs are present.",
+     "whyZh": "收缩压 < 90 mmHg 是禁忌，哪怕三条呼吸指征都有。"
+    },
+    {
+     "qEn": "Where does CPAP start?",
+     "qZh": "CPAP 从多少起步？",
+     "opts": [
+      {
+       "en": "Oxygen 5 L/min, valve at 5 cmH₂O",
+       "zh": "氧流量 5 L/min，阀 5 cmH₂O"
+      },
+      {
+       "en": "Valve at 10 cmH₂O",
+       "zh": "阀 10 cmH₂O"
+      },
+      {
+       "en": "Valve at 15 cmH₂O",
+       "zh": "阀 15 cmH₂O"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Start at 5 L/min with the valve at 5 cmH₂O, then go up 2.5 at a time to at most 10.",
+     "whyZh": "从 5 L/min、阀 5 cmH₂O 起步，每次加 2.5，最高 10。"
+    },
+    {
+     "qEn": "On CPAP she becomes drowsy and her breathing slows. What do you do?",
+     "qZh": "用着 CPAP，她开始犯困，呼吸变慢。你怎么做？",
+     "opts": [
+      {
+       "en": "Turn the CPAP up to 10",
+       "zh": "把 CPAP 调到 10"
+      },
+      {
+       "en": "Tighten the mask and wait",
+       "zh": "把面罩收紧，等一等"
+      },
+      {
+       "en": "CPAP off, assist with a bag-valve mask",
+       "zh": "摘掉 CPAP，用球囊面罩辅助通气"
+      }
+     ],
+     "a": 2,
+     "whyEn": "If the patient deteriorates the CPAP comes off and ventilations are assisted with a BVM.",
+     "whyZh": "病人恶化就摘掉 CPAP，改用球囊面罩辅助通气。"
+    },
+    {
+     "qEn": "You are ventilating with a PEEP valve and his systolic pressure falls to 84. What now?",
+     "qZh": "你正用带 PEEP 阀的球囊面罩通气，他的收缩压掉到 84。现在怎么办？",
+     "opts": [
+      {
+       "en": "Turn the PEEP up",
+       "zh": "把 PEEP 调高"
+      },
+      {
+       "en": "Take the PEEP valve off",
+       "zh": "取下 PEEP 阀"
+      },
+      {
+       "en": "Carry on as before",
+       "zh": "照旧"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Hypotensive (under 90 systolic) or in cardiac arrest: remove the PEEP valve.",
+     "whyZh": "低血压（收缩压 < 90）或心脏骤停：取下 PEEP 阀。"
+    }
+   ]
   }
  }
 }
