@@ -1,6 +1,6 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=86';
-import { sClassroom } from './classroom.js?v=86';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=87';
+import { sClassroom } from './classroom.js?v=87';
 
 /* ---------------- study hub ---------------- */
 export async function renderStudyHub(el) {
@@ -52,7 +52,7 @@ export async function renderStudyHub(el) {
   ];
   el.innerHTML = `
     <div class="card">
-      <h2>${ico('book')} ${t('Study Library', '学习内容库')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>${ico('book')} ${t('Learn', '上课')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${bi('Two layers. The Nancy Caroline chapter review is your textbook backbone — it teaches the subject. Everything below it is structured from the official BC Provincial Examination Guidelines (June 15, 2026), the only standard examiners may mark against, with page references throughout. When the textbook and the guidelines differ, the guidelines win.',
            '两层内容。Nancy Caroline 章节精读是教材主线——它负责把知识讲明白。它下面的全部内容结构化自 BC 官方考纲（2026年6月15日现行版）——考官唯一被允许采用的标准，每条都带原文页码。教材与考纲冲突时，一律以考纲为准。')}
     </div>
@@ -81,7 +81,7 @@ export async function renderStudySection(el, arg, params) {
   if (!fn) { renderStudyHub(el); return; }
   await fn(el, params);
 }
-const backStudy = () => `<a class="back-link" href="#/study">← ${t('Study library', '学习内容库')}</a>`;
+const backStudy = () => `<a class="back-link" href="#/study">← ${t('Learn', '上课')}</a>`;
 const deploying = title => `<div class="card"><h2>${title}</h2><p class="muted">${t('This module is deploying — check back shortly.', '该模块内容部署中，稍后再来。')}</p></div>`;
 
 // Nancy Caroline chapter review. v2 (chapters2/) is the 8-module Canadian-edition
@@ -492,8 +492,9 @@ export async function renderJurisHub(el, arg, params) {
   if (params.mode === 'practice' && bank) { drawJurisPractice(el, bank); return; }
   const hist = S.jurisHistory;
   el.innerHTML = `
+    <a class="back-link" href="#/written">← ${t('Questions', '刷题')}</a>
     <div class="card">
-      <h2> ${t('Jurisprudence Camp', '法规营')}</h2>
+      <h2> ${t('Jurisprudence exam', '法规考')}</h2>
       ${bi('25 questions · no time limit · 80% to pass — the highest pass mark of your three exams. Content: BC law and policy for EMAs.',
            '25 题 · 不限时 · 80% 及格——三关里及格线最高。考 BC 急救人员相关法律与政策。')}
       <div class="stat-row" style="margin-top:12px">
@@ -626,6 +627,14 @@ export async function renderExamInfo(el) {
       <h2>ℹ ${t('Exam Logistics', '考务流程')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${bi('Verified against official sources on ' + rules.meta.verifiedDate + '. Always double-check current rules before booking.',
            '以下信息于 ' + rules.meta.verifiedDate + ' 对照官方文件核实；报名前请再次核对最新规定。')}
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">${t('The rules you are playing by', '你要面对的硬规则')}</h3>
+      <ul class="steps" style="list-style:none">
+        <li class="step"><span class="step-num">3</span>${bi('Three attempts per exam. Fail all three → repeat your entire training program.', '每门考试只有 3 次机会，三次全挂就要重读整个课程。')}</li>
+        <li class="step"><span class="step-num">12</span>${bi('All exams must be passed within 12 months of finishing your course.', '所有考试必须在课程结业后 12 个月内全部通过。')}</li>
+        <li class="step"><span class="step-num">!</span>${bi('Practical exams are only scheduled after written + jurisprudence are passed — do those first.', '实操考要等笔试和法规考都过了才给排期——先攻前两关。')}</li>
+      </ul>
     </div>
     <div class="card"><h3 style="margin-top:0">${ico('pen')} ${t('Written', '笔试')}</h3>
       ${bi(w.providerNoteEn, w.providerNoteZh)}

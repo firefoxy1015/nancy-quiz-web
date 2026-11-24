@@ -1,6 +1,6 @@
 // PCP Classroom — spoken English lessons (slides + narration + quick questions), under Study.
 // Lessons and audio are built in D:\Claude\textbook-study-pdf (classroom/) and synced to data/classroom/.
-import { S, save, t, esc, ico } from './app.js?v=86';
+import { S, save, t, esc, ico } from './app.js?v=87';
 
 const BASE = './data/classroom/';
 // lessons go live in batches: always revalidate the index and lesson files (cheap ETag check) so new lessons show up at once
@@ -28,7 +28,7 @@ export async function sClassroom(el, params) {
   if (live) { live.stop(); live = null; }
   const course = await loadJSON(BASE + 'index.json');
   if (!course) {
-    el.innerHTML = `<a class="back-link" href="#/study">← ${t('Study library', '学习内容库')}</a>
+    el.innerHTML = `<a class="back-link" href="#/study">← ${t('Learn', '上课')}</a>
       <div class="card"><h2>${t('PCP Classroom', 'PCP 课堂')}</h2><p class="muted">${t('Lessons are deploying — check back shortly.', '课程部署中，稍后再来。')}</p></div>`;
     return;
   }
@@ -45,7 +45,7 @@ function drawCourse(el, course) {
   const ready = all.filter(l => l.ready).length;
   const done = all.filter(l => store.get(l.id + ':done', false)).length;
   el.innerHTML = `
-    <a class="back-link" href="#/study">← ${t('Study library', '学习内容库')}</a>
+    <a class="back-link" href="#/study">← ${t('Learn', '上课')}</a>
     <div class="card cls-intro">
       <h2>${ico('film')} PCP Classroom <span class="pill pcp">PCP</span></h2>
       <p>Short spoken lessons in English for EMRs stepping up to PCP practice: what you can now do, what you must do more of, and what's new to watch out for. Built on Nancy Caroline (Canadian 8th ed.) and the BC EMALB exam guidelines.</p>

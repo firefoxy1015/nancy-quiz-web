@@ -1,6 +1,6 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=86';
-import { aetUnlocked, aetGate } from './aetclass.js?v=86';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=87';
+import { aetUnlocked, aetGate } from './aetclass.js?v=87';
 
 let session = null; // current exam session (mock or practice)
 
@@ -29,7 +29,7 @@ export async function renderWrittenHub(el) {
   const mocks = S.mockHistory.filter(m => m.track === tr);
   el.innerHTML = `
     <div class="card">
-      <h2>${ico('pen')} ${t('Written Exam Camp', '笔试营')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
+      <h2>${ico('pen')} ${t('Questions', '刷题')} <span class="pill ${tr}">${tr.toUpperCase()}</span></h2>
       ${isPcp
         ? bi('COPR national exam: 200 questions (180 scored) · two 120-minute parts with a 10-minute break · standard-score pass mark. Since November 2026 every sitting tests the 2024 CPCF — the old NOCP version is retired — and this bank follows the CPCF blueprint throughout.',
              'COPR 全国统考：200 题（180 计分）· 两部分各 120 分钟，中间休息 10 分钟 · 标准分制。2026 年 11 月起每一场都按 2024 版 CPCF 出题——旧 NOCP 版已退役——本站题库全程按 CPCF 蓝图配比。')
@@ -74,6 +74,11 @@ export async function renderWrittenHub(el) {
       <h3 style="margin-top:0">${ico('x')} ${t('Wrong-answer book', '错题本')}</h3>
       ${bi('Re-drill every question you have ever missed until none are left.', '把你错过的每道题反复刷，刷到清零为止。')}
       <div class="btn-row"><a class="btn secondary" href="#/wrong">${t('Open', '打开')} (${Object.keys(S.wrong).length})</a></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">${ico('scale')} ${t('Jurisprudence exam', '法规考')}</h3>
+      ${bi('The other written exam: 25 questions, no time limit, 80% to pass. Notes, practice and a mock.', '另一场笔试：25 题、不限时、80% 及格。这里有笔记、练习和模拟考。')}
+      <div class="btn-row"><a class="btn secondary" href="#/juris">${t('Open', '打开')}</a></div>
     </div>
     ${mocks.length ? `<div class="card"><h3 style="margin-top:0">${t('Mock history', '模考历史')}</h3>
       ${mocks.slice(-8).reverse().map(m => `<div class="area-bar ${m.pass ? 'band-lgreen' : 'band-red'}">
@@ -121,7 +126,7 @@ export async function renderAetHub(el) {
             <span>${bi(m.titleEn, m.titleZh, 'span')}</span>
             <span class="tiny" style="margin-left:auto">${t('coming soon', '待上题')}</span></div>`).join('')}
       </div>`).join('')}
-    <div class="btn-row"><a class="btn ghost" href="#/study">← ${t('Study library', '学习内容库')}</a></div>`;
+    <div class="btn-row"><a class="btn ghost" href="#/study">← ${t('Learn', '上课')}</a></div>`;
 }
 
 /* ---------------- practice ---------------- */

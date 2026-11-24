@@ -1520,3 +1520,44 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .ddx.phub .foot a { color: var(--green); }
 .ddx.phub .h1 { line-height: 1.08; }
 .ddx.phub .h1 em { padding: 0 5px; }
+
+/* ---------------- Home (src/home.js): the front page as a sticker board, same skin as Play & learn ----------------
+   One "continue" button, three quick tiles, the lessons as rows, the three exams as one strip. Whole cards are the tap targets. */
+.ddx.hm { max-width: 600px; padding-bottom: 8px; }
+.ddx.hm .h1 { line-height: 1.06; margin-bottom: 18px; }
+.ddx.hm .h1 em { display: inline-block; line-height: 1.14; }   /* the highlight is exactly one line tall, so it never covers the line above */
+.ddx.hm.lang-zh .h1 { line-height: 1.24; }
+.ddx.hm a { text-decoration: none; }
+.ddx.hm a.go { color: var(--paper); font: 800 20px/1.2 var(--display); }
+.ddx.hm a.go .zh { color: var(--ink3); }
+.ddx.hm .sec { display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; }
+.ddx.hm .sec::after { content: ""; flex: 1; height: 1.5px; background: var(--line); }
+.ddx .hm-tile, .ddx .hm-row, .ddx .hm-exam { color: var(--ink); transition: transform .12s; }
+.ddx .hm-tile:active, .ddx .hm-row:active, .ddx .hm-exam:active { transform: scale(.97); }
+.ddx .hm-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.ddx .hm-tile { display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 0; background: var(--card); border-radius: 20px; padding: 14px 6px 12px; box-shadow: var(--shadow); text-align: center; }
+.ddx .hm-tile .stk { height: 82px; width: auto; max-width: 90%; object-fit: contain; margin-bottom: 8px; }
+.ddx .hm-tile b { font: 800 17px/1.15 var(--display); letter-spacing: -.01em; }
+.ddx .hm-tile small, .ddx .hm-row small, .ddx .hm-exam small { font: 500 11px/1.35 var(--mono); color: var(--ink2); }
+.ddx .hm-rows { background: var(--card); border-radius: 20px; box-shadow: var(--shadow); padding: 2px 12px 2px 14px; }
+.ddx .hm-row { display: grid; grid-template-columns: 54px 1fr auto; align-items: center; gap: 12px; padding: 12px 0; }
+.ddx .hm-row + .hm-row { border-top: 1.5px solid var(--line); }
+.ddx .hm-row .stk { width: 54px; height: 54px; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(20, 24, 20, .16)); }
+.ddx .hm-row b { display: block; font: 800 17px/1.2 var(--display); letter-spacing: -.01em; }
+.ddx .hm-row small { display: block; font-size: 12px; margin-top: 2px; }
+.ddx .hm-row .meter { margin-top: 7px; max-width: 220px; }
+.ddx .hm-row .chev { display: grid; color: var(--ink3); }
+.ddx .hm-exams { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--card); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+.ddx .hm-exam { display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 14px 4px 13px; text-align: center; }
+.ddx .hm-exam + .hm-exam { border-left: 1.5px solid var(--line); }
+.ddx .hm-exam .stk { height: 58px; width: auto; max-width: 84%; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(20, 24, 20, .16)); }
+.ddx .hm-exam .n { font: 800 27px/1.1 var(--display); letter-spacing: -.02em; margin-top: 8px; }
+.ddx .hm-exam .n.none { color: var(--ink3); font-weight: 500; }
+.ddx .hm-exam b { font: 700 15px/1.25 var(--display); }
+.ddx.hm b .zh { font-size: .8em; font-weight: 500; }
+.ddx.hm .foot { margin-top: 24px; font-size: 13px; }
+.ddx.hm .foot a { color: var(--green); display: inline-block; padding: 9px 3px; }
+.ddx .hm-pick { margin-top: 4px; }
+.ddx .hm-pick .phub-tile { width: 100%; justify-items: start; text-align: left; }
+.ddx .hm-pick .phub-tile b { font-size: 34px; }
+.ddx .hm-pick .phub-pics { justify-self: stretch; }

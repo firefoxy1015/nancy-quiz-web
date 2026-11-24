@@ -1,14 +1,15 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=86';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=86';
-import { renderPlay } from './play.js?v=86';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=86';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=86';
-import { renderPortal } from './portal.js?v=86';
-import { renderAetClass } from './aetclass.js?v=86';
-import { renderBackup } from './backup.js?v=86';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=87';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=87';
+import { renderPlay } from './play.js?v=87';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=87';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=87';
+import { renderPortal } from './portal.js?v=87';
+import { renderAetClass } from './aetclass.js?v=87';
+import { renderBackup } from './backup.js?v=87';
+import { renderHome, placeOf } from './home.js?v=87';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -180,6 +181,7 @@ async function route() {
   if (name === 'aet' && arg === 'class') fn = renderAetClass;
   window.scrollTo(0, 0);
   el.innerHTML = `<div class="card"><p class="muted">Loading… 加载中…</p></div>`;
+  if (S.track && placeOf(location.hash)) { S.last = { h: location.hash, track: S.track, at: Date.now() }; save(); }
   try { await fn(el, arg, params); } catch (e) {
     console.error(e);
     el.innerHTML = `<div class="card"><h2>Error 出错了</h2><p class="muted">${esc(e.message)}</p></div>`;
@@ -187,7 +189,7 @@ async function route() {
   updateNav(name);
 }
 function updateNav(name) {
-  const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'study', portal: 'study', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', examiner: 'practical', 'examiner-run': 'practical', 'examiner-log': 'practical', juris: 'juris' };
+  const map = { '': 'home', home: 'home', guide: 'home', info: 'home', study: 'study', 'study-section': 'study', written: 'written', practice: 'written', mock: 'written', wrong: 'written', aet: 'study', portal: 'study', practical: 'practical', scenarios: 'practical', scenario: 'practical', rubric: 'practical', autofails: 'practical', examiner: 'practical', 'examiner-run': 'practical', 'examiner-log': 'practical', juris: 'written' };
   if (name === 'play') map.play = /sims/.test(location.hash) ? 'practical' : /written/.test(location.hash) ? 'written' : 'home';
   document.querySelectorAll('#bottomNav a').forEach(a => a.classList.toggle('active', a.dataset.nav === (map[name] || '')));
   syncTrackUI();
@@ -205,104 +207,6 @@ function syncTrackUI() {
   document.documentElement.lang = S.lang === 'zh' ? 'zh' : 'en';
   const langBtn = document.getElementById('langBtn');
   langBtn.textContent = S.lang === 'both' ? 'EN+中' : (S.lang === 'en' ? 'EN' : '中文');
-}
-
-/* ---------------- home ---------------- */
-async function renderHome(el) {
-  const rules = await loadJSON('./data/meta/exam-rules.json');
-  if (!S.track) {
-    el.innerHTML = `
-      <div class="hero card">
-        <h1>${t('BC Paramedic Licensing Exam Prep', 'BC 省急救员考证备考系统')}</h1>
-        <p class="muted">${t('Written · Jurisprudence · Practical — everything aligned to the official EMALB & COPR requirements.', '笔试 · 法规考 · 实操考——全部对齐 EMALB 与 COPR 官方要求。')}</p>
-        <div class="track-choice">
-          <button class="track-card emr" data-pick-track="emr">
-            <span class="pill emr">EMR</span>
-            <h3>Emergency Medical Responder</h3>
-            ${bi('First responder level. EMALB written (200Q · 75%) + jurisprudence + 2 practical scenarios.', '急救反应员。EMALB 笔试（200题·75%及格）+ 法规考 + 2 场实操。')}
-          </button>
-          <button class="track-card pcp" data-pick-track="pcp">
-            <span class="pill pcp">PCP</span>
-            <h3>Primary Care Paramedic</h3>
-            ${bi('Paramedic entry level. COPR national written (200Q · CPCF) + jurisprudence + 2 practical scenarios.', '初级急救员。COPR 全国统考（200题·CPCF框架）+ 法规考 + 2 场实操。')}
-          </button>
-        </div>
-        <div class="btn-row" style="justify-content:center;margin-top:18px">
-          <a class="btn secondary" href="#/guide">${ico('cap')} ${t('How to use this site', '怎么用这个网站')}</a>
-        </div>
-      </div>`;
-    return;
-  }
-  const tr = S.track, R = rules ? rules[tr] : null;
-  const jr = rules ? rules.jurisprudence : null;
-  const pr = rules ? rules.practical : null;
-  const wrongCount = Object.keys(S.wrong).length;
-  const mocks = S.mockHistory.filter(m => m.track === tr);
-  const lastMock = mocks[mocks.length - 1];
-  const scen = S.scenarioHistory.length;
-  const chaptersRead = Object.keys(S.chaptersRead || {}).length;
-  const writtenFacts = tr === 'pcp'
-    ? t('COPR · 200Q · 2×120 min · standard score', 'COPR 统考 · 200题 · 两段各120分钟 · 标准分制')
-    : t('EMALB · 200Q · 2.5h · pass 75%', 'EMALB 自考 · 200题 · 2.5小时 · 75%及格');
-  el.innerHTML = `
-    <div class="card">
-      <h2>${t(`${tr.toUpperCase()} Candidate Dashboard`, `${tr.toUpperCase()} 考生仪表盘`)}</h2>
-      <p class="muted">${t('Three exams stand between you and your licence. Attack all three.', '拿牌要过三关，三关都在这里练。')}</p>
-      <div class="pillar-row">
-        <div class="pillar">
-          <div class="p-head"><span class="p-ico">${ico('pen')}</span>${t('Written', '笔试')}</div>
-          <div class="p-facts">${writtenFacts}</div>
-          ${lastMock ? `<div class="tiny">${t('Last mock', '上次模考')}: <b>${lastMock.pct}%</b> (${lastMock.date})</div>` : `<div class="tiny">${t('No mock exams yet', '还没做过模考')}</div>`}
-          <a class="btn" href="#/written">${t('Enter', '进入')}</a>
-        </div>
-        <div class="pillar">
-          <div class="p-head"><span class="p-ico">${ico('scale')}</span>${t('Jurisprudence', '法规考')}</div>
-          <div class="p-facts">${t('EMALB · 25Q · no time limit · pass 80%', 'EMALB · 25题 · 不限时 · 80%及格')}</div>
-          <div class="tiny">${S.jurisHistory.length ? t(`${S.jurisHistory.length} mock(s) done`, `已做 ${S.jurisHistory.length} 次模拟`) : t('Highest pass mark of the three!', '三关里及格线最高的一关！')}</div>
-          <a class="btn" href="#/juris">${t('Enter', '进入')}</a>
-        </div>
-        <div class="pillar">
-          <div class="p-head"><span class="p-ico">${ico('ambulance')}</span>${t('Practical', '实操')}</div>
-          <div class="p-facts">${t('1 medical + 1 trauma · 40 min · pass 70% (deduction-based)', '1内科+1创伤 · 每场40分钟 · 扣分制70%过')}</div>
-          <div class="tiny">${scen ? t(`${scen} scenario run(s)`, `已练 ${scen} 场`) : t('Practice with the real grading rubric', '用真实考官扣分表练习')}</div>
-          <a class="btn" href="#/practical">${t('Enter', '进入')}</a>
-        </div>
-      </div>
-    </div>
-    ${tr === 'emr' ? `<div class="card" style="border-color:var(--accent)">
-      <h3 style="margin-top:0">${ico('target')} ${t('Play & learn', '边学边玩')} <span class="pill gray">NEW</span></h3>
-      ${bi('Written questions as sticker cards and practical sims you run step by step, graded like the real station.', '笔试题做成贴纸卡，实操 sims 一步步跑、按真考站评分。')}
-      <div class="btn-row"><a class="btn" href="#/play">${t('Open', '打开')}</a><span class="tiny" style="align-self:center">${t('Share it:', '分享地址：')} <b>bcmedicprep.com/emr</b></span></div>
-    </div>` : ''}
-    <div class="card">
-      <h3 style="margin-top:0">${ico('cap')} ${t('Textbook progress', '教材进度')}</h3>
-      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <div class="progress-outer" style="flex:1;min-width:160px"><i style="width:${Math.round(chaptersRead / 54 * 100)}%"></i></div>
-        <b>${chaptersRead}/54</b>
-        <a class="btn secondary" href="#/study/chapters">${chaptersRead ? t('Continue reading', '继续读') : t('Start the chapter review', '开始章节精读')} →</a>
-      </div>
-      <p class="tiny" style="margin-bottom:0">${t('The Nancy Caroline chapter review, condensed for the exam — mark chapters read as you go.', 'Nancy Caroline 章节精读——读完一章记得点「标记已读」，进度会记在这里。')}</p>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">${t('Quick actions', '快捷入口')}</h3>
-      <div class="btn-row">
-        <a class="btn secondary" href="#/guide">${ico('cap')} ${t('How to use / study path', '使用指南·备考路线')}</a>
-        <a class="btn secondary" href="#/study">${ico('book')} ${t('Study library', '学习内容库')}</a>
-        <a class="btn secondary" href="./drugs/">${ico('pill')} ${t('Drug Drill (practice app)', '药箱（药物练习）')}</a>
-        <a class="btn secondary" href="#/wrong">${ico('x')} ${t(`Wrong answers (${wrongCount})`, `错题本 (${wrongCount})`)}</a>
-        <a class="btn secondary" href="#/autofails">${ico('skull')} ${t('Auto-fail traps', '直接挂科陷阱')}</a>
-        <a class="btn secondary" href="#/info">${ico('info')} ${t('Exam logistics & fees', '考务流程与费用')}</a>
-        <a class="btn secondary" href="#/backup">${ico('download')} ${t('Back up / restore progress', '备份 / 恢复进度')}</a>
-      </div>
-    </div>
-    ${rules ? `<div class="card">
-      <h3 style="margin-top:0">${t('The rules you are playing by', '你要面对的硬规则')}</h3>
-      <ul class="steps" style="list-style:none">
-        <li class="step"><span class="step-num">3</span>${bi('Three attempts per exam. Fail all three → repeat your entire training program.', '每门考试只有 3 次机会，三次全挂就要重读整个课程。')}</li>
-        <li class="step"><span class="step-num">12</span>${bi('All exams must be passed within 12 months of finishing your course.', '所有考试必须在课程结业后 12 个月内全部通过。')}</li>
-        <li class="step"><span class="step-num">!</span>${bi('Practical exams are only scheduled after written + jurisprudence are passed — do those first.', '实操考要等笔试和法规考都过了才给排期——先攻前两关。')}</li>
-      </ul>
-    </div>` : ''}`;
 }
 
 /* ---------------- guide ---------------- */
