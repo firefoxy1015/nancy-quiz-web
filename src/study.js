@@ -1,7 +1,7 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=89';
-import { sClassroom } from './classroom.js?v=89';
-import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=89';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=90';
+import { sClassroom } from './classroom.js?v=90';
+import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=90';
 
 /* ---------------- study hub ---------------- */
 // The six official-guideline tiles, shared by the Learn hub and the guidelines page.
@@ -384,7 +384,7 @@ function treatmentCard(el, x, c) {
   el.innerHTML = `<div class="ddx hm tc lang-${S.lang}"><main>
     <a class="tc-back" href="#/study/treatments">← ${one('Treatments', '处置主题')}</a>
     <header class="tc-hero"><div>
-      <p class="kick">${mini(cat[0], cat[1])} · ${mini(x.titleEn, x.titleZh)}${x.licence === 'pcp' ? ' · PCP' : ''}</p>
+      <p class="kick">${mini(cat[0], cat[1])} · ${mini(x.titleEn, x.titleZh)}${x.licence === 'pcp' && !/PCP/.test(x.titleEn) ? ' · PCP' : ''}</p>
       <h1 class="h1">${two(ph(c.headEn), ph(c.headZh))}</h1>
     </div>${stk(c.pic, 6)}</header>
     <p class="tc-line">${two(c.lineEn, c.lineZh)}</p>
@@ -459,7 +459,7 @@ async function sTreatments(el, params) {
   const has = (cardData && cardData.cards) || {};
   const cats = {};
   for (const x of list) (cats[x.category || 'other'] ||= []).push(x);
-  const name = x => `<b>${two(esc(x.titleEn), esc(x.titleZh))}</b>${x.licence === 'pcp' ? '<small>PCP</small>' : ''}`;
+  const name = x => `<b>${two(esc(x.titleEn), esc(x.titleZh))}</b>${x.licence === 'pcp' && !/PCP/.test(x.titleEn) ? '<small>PCP</small>' : ''}`;
   el.innerHTML = `<div class="ddx hm tl lang-${S.lang}"><main>
     <a class="tc-back" href="#/study/guidelines">← ${one('Guidelines', '考纲')}</a>
     <header class="hm-hero"><div class="hm-head">

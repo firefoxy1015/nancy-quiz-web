@@ -1951,6 +1951,2531 @@
      "pcp": true
     }
    ]
+  },
+  "hypothermia": {
+   "pic": "./img/treat/hypothermia.webp",
+   "headEn": "Below 28°C: |<em>do not rewarm</em>.",
+   "headZh": "低于 28°C：|<em>不主动复温</em>。",
+   "lineEn": "Insulate, heat the ambulance to 30°C and handle gently. Above 28°C you rewarm actively.",
+   "lineZh": "包好保温、车厢加热到 30°C、动作要轻。28°C 以上才主动复温。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "Three bands",
+     "titleZh": "分三档",
+     "items": [
+      {
+       "big": "32–35°C",
+       "en": "mild: rewarm actively",
+       "zh": "轻度：主动复温",
+       "tone": "ok"
+      },
+      {
+       "big": "28–32°C",
+       "en": "moderate: rewarm actively",
+       "zh": "中度：主动复温",
+       "tone": "warn"
+      },
+      {
+       "big": "< 28°C",
+       "en": "severe: insulate only, no active rewarming",
+       "zh": "重度：只保温，不主动复温",
+       "tone": "bad"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "items": [
+      {
+       "en": "Assess and maintain the ABCs.",
+       "zh": "评估并维持 ABC。"
+      },
+      {
+       "en": "Severely hypothermic: take <b>up to 30–45 seconds</b> to decide there is no pulse.",
+       "zh": "重度低体温：判断有没有脉搏，可以摸<b>长达 30–45 秒</b>。"
+      },
+      {
+       "en": "Wet, cold clothing off. Blankets or dry clothing on.",
+       "zh": "脱掉又湿又冷的衣服，盖上毯子或换干衣服。"
+      },
+      {
+       "en": "Take a temperature if appropriate.",
+       "zh": "合适的话测体温。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Mild and moderate: rewarm actively",
+     "titleZh": "轻度、中度：主动复温",
+     "items": [
+      {
+       "en": "Mild activity, if appropriate.",
+       "zh": "合适的话让病人轻微活动。"
+      },
+      {
+       "en": "Preheat the ambulance to <b>30°C</b>.",
+       "zh": "车厢预热到 <b>30°C</b>。"
+      },
+      {
+       "en": "Hot packs, wrapped in towels.",
+       "zh": "热敷包，用毛巾包着。"
+      },
+      {
+       "en": "Warm blankets.",
+       "zh": "暖毯子。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Severe: insulate only",
+     "titleZh": "重度：只保温",
+     "items": [
+      {
+       "en": "Insulate the patient against further heat loss.",
+       "zh": "把病人包好，防止继续失温。"
+      },
+      {
+       "en": "Heat the ambulance to <b>30°C</b>.",
+       "zh": "车厢加热到 <b>30°C</b>。"
+      },
+      {
+       "en": "<b>Avoid rough handling.</b>",
+       "zh": "<b>搬动要轻。</b>"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "In cardiac arrest",
+     "titleZh": "心脏骤停时",
+     "steps": [
+      {
+       "en": "Apply the AED and analyze",
+       "zh": "接上 AED，分析"
+      },
+      {
+       "en": "Shock if indicated",
+       "zh": "有指征就除颤",
+       "subEn": "up to three times",
+       "subZh": "最多三次"
+      },
+      {
+       "en": "Then CPR without pausing",
+       "zh": "之后持续 CPR，不停",
+       "subEn": "no more analyzing, no more shocks",
+       "subZh": "不再分析，不再除颤"
+      },
+      {
+       "en": "Rapid transport to hospital",
+       "zh": "快速转运去医院"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Actively rewarm</b> a patient below 28°C.",
+       "zh": "给低于 28°C 的病人<b>主动复温</b>。"
+      },
+      {
+       "en": "<b>Pause CPR</b> to analyze or shock after the third shock.",
+       "zh": "第三次除颤之后，为了分析或除颤而<b>暂停 CPR</b>。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A hiker is found in the snow. Temperature 27°C. What do you do about the cold?",
+     "qZh": "一名徒步者在雪地里被发现，体温 27°C。怎么处理低体温？",
+     "opts": [
+      {
+       "en": "Hot packs and warm blankets",
+       "zh": "热敷包加暖毯子"
+      },
+      {
+       "en": "Insulate him, heat the ambulance, handle gently",
+       "zh": "包好保温、车厢加热、动作要轻"
+      },
+      {
+       "en": "Have him walk around to warm up",
+       "zh": "让他走动走动暖身"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Below 28°C is severe: no active rewarming. Insulate, heat the ambulance to 30°C and avoid rough handling.",
+     "whyZh": "低于 28°C 是重度：不主动复温。保温，车厢加热到 30°C，搬动要轻。"
+    },
+    {
+     "qEn": "She is severely hypothermic. After 10 seconds you have not found a pulse. Next?",
+     "qZh": "她是重度低体温。摸了 10 秒没摸到脉搏。下一步？",
+     "opts": [
+      {
+       "en": "Keep feeling, up to 30–45 seconds",
+       "zh": "继续摸，最长 30–45 秒"
+      },
+      {
+       "en": "Start CPR at once",
+       "zh": "马上开始 CPR"
+      },
+      {
+       "en": "Shock her at once",
+       "zh": "马上除颤"
+      }
+     ],
+     "a": 0,
+     "whyEn": "In the severely hypothermic patient you take up to 30–45 seconds to determine pulselessness.",
+     "whyZh": "重度低体温的病人，判断无脉搏可以用长达 30–45 秒。"
+    },
+    {
+     "qEn": "A hypothermic man is in cardiac arrest. You have given three shocks. What now?",
+     "qZh": "一名低体温男子心脏骤停。你已经除颤三次。接下来？",
+     "opts": [
+      {
+       "en": "Analyze again every two minutes",
+       "zh": "每两分钟再分析一次"
+      },
+      {
+       "en": "A fourth shock",
+       "zh": "第四次除颤"
+      },
+      {
+       "en": "CPR without pausing, and rapid transport",
+       "zh": "持续 CPR 不停，快速转运"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Up to three defibrillations. After that CPR is not paused for analyzing or shocks.",
+     "whyZh": "最多除颤三次。之后 CPR 不再为分析或除颤而暂停。"
+    },
+    {
+     "qEn": "A woman pulled from a cold river is alert and shivering. Temperature 33°C. What do you do about the cold?",
+     "qZh": "一名女子从冰冷的河里被救起，清醒、发抖，体温 33°C。怎么处理？",
+     "opts": [
+      {
+       "en": "Insulate only: no heat",
+       "zh": "只保温，不加热"
+      },
+      {
+       "en": "Rewarm actively: warm blankets, wrapped hot packs, ambulance at 30°C",
+       "zh": "主动复温：暖毯子、包着毛巾的热敷包、车厢 30°C"
+      },
+      {
+       "en": "Cold packs, to slow her down",
+       "zh": "放冰袋，让她慢下来"
+      }
+     ],
+     "a": 1,
+     "whyEn": "33°C is mild. Mild and moderate hypothermia are actively rewarmed.",
+     "whyZh": "33°C 属于轻度。轻度和中度要主动复温。"
+    }
+   ]
+  },
+  "stroke": {
+   "pic": "./img/treat/stroke.webp",
+   "headEn": "Spot it, |<em>go</em>, |call ahead.",
+   "headZh": "认出来，|<em>快走</em>，|路上通知医院。",
+   "lineEn": "Oxygen to 94%, a blood glucose check, FAST-VAN, then timely transport.",
+   "lineZh": "SpO₂ 保持 ≥ 94%，查血糖，做 FAST-VAN，然后及时转运。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Assess and manage the ABCs",
+       "zh": "评估并处理 ABC"
+      },
+      {
+       "en": "Oxygen to keep SpO₂ at 94% or more",
+       "zh": "给氧，SpO₂ 保持 ≥ 94%"
+      },
+      {
+       "en": "Position the patient",
+       "zh": "摆好体位"
+      },
+      {
+       "en": "Blood glucose check",
+       "zh": "查血糖"
+      },
+      {
+       "en": "Recognize it accurately",
+       "zh": "准确识别",
+       "subEn": "FAST-VAN",
+       "subZh": "FAST-VAN"
+      },
+      {
+       "en": "Timely transport",
+       "zh": "及时转运",
+       "subEn": "tell the receiving facility while en route",
+       "subZh": "路上通知接收医院"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Use this page when you see",
+     "titleZh": "出现这些就按卒中处理",
+     "items": [
+      {
+       "en": "Any neurological deficit.",
+       "zh": "任何神经功能缺损。"
+      },
+      {
+       "en": "Altered level of consciousness, or unconscious.",
+       "zh": "意识改变，或昏迷。"
+      },
+      {
+       "en": "Trouble keeping the airway open.",
+       "zh": "气道难以维持。"
+      },
+      {
+       "en": "Short of breath, or noisy or absent breathing.",
+       "zh": "气短，或呼吸有杂音、没有呼吸。"
+      },
+      {
+       "en": "A weak, rapid or absent radial pulse.",
+       "zh": "桡动脉搏动弱、快，或摸不到。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "On the way: the IV",
+     "titleZh": "在路上：静脉通路",
+     "items": [
+      {
+       "big": "18 G",
+       "en": "the size",
+       "zh": "针的规格",
+       "tone": ""
+      },
+      {
+       "big": "↑ wrist",
+       "en": "a site above the wrist",
+       "zh": "腕关节以上的部位",
+       "tone": "",
+       "bigZh": "腕以上"
+      },
+      {
+       "big": "Right",
+       "en": "preferably the right side",
+       "zh": "首选右侧",
+       "tone": "",
+       "bigZh": "右侧"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man has a drooping face and slurred speech. Which check must not be missed?",
+     "qZh": "一名男子口角歪斜、说话含糊。哪项检查不能漏？",
+     "opts": [
+      {
+       "en": "Blood glucose",
+       "zh": "血糖"
+      },
+      {
+       "en": "Temperature",
+       "zh": "体温"
+      },
+      {
+       "en": "Pelvic stability",
+       "zh": "骨盆稳定性"
+      }
+     ],
+     "a": 0,
+     "whyEn": "A blood glucose check is part of the stroke interventions for every licence level.",
+     "whyZh": "查血糖是所有级别卒中处置里的一步。"
+    },
+    {
+     "qEn": "When do you tell the receiving facility?",
+     "qZh": "什么时候通知接收医院？",
+     "opts": [
+      {
+       "en": "After you arrive",
+       "zh": "到了以后"
+      },
+      {
+       "en": "While you are en route",
+       "zh": "在路上"
+      },
+      {
+       "en": "Before leaving, and wait for their answer",
+       "zh": "出发前，等对方回复再走"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Transport is timely, and the receiving facility is notified while en route.",
+     "whyZh": "要及时转运，在路上通知接收医院。"
+    },
+    {
+     "qEn": "Her SpO₂ is 91% on room air. What do you do?",
+     "qZh": "她不吸氧时 SpO₂ 是 91%。怎么办？",
+     "opts": [
+      {
+       "en": "Nothing: oxygen is not for strokes",
+       "zh": "不处理：卒中不给氧"
+      },
+      {
+       "en": "Wait until it falls under 90%",
+       "zh": "等掉到 90% 以下再说"
+      },
+      {
+       "en": "Give oxygen to bring it to 94% or more",
+       "zh": "给氧，拉到 94% 以上"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Supplemental oxygen is given to maintain SpO₂ at 94% or more.",
+     "whyZh": "给氧，把 SpO₂ 维持在 ≥ 94%。"
+    },
+    {
+     "qEn": "Which IV does the stroke guideline ask a PCP for?",
+     "qZh": "卒中考纲要求 PCP 开什么样的静脉通路？",
+     "opts": [
+      {
+       "en": "22 G in the back of the hand, on scene",
+       "zh": "22 G，手背，在现场开"
+      },
+      {
+       "en": "18 G above the wrist, right side preferred, en route",
+       "zh": "18 G，腕关节以上，首选右侧，在路上开"
+      },
+      {
+       "en": "None",
+       "zh": "不开"
+      }
+     ],
+     "a": 1,
+     "whyEn": "En route: a site above the level of the wrist, size 18 G, preferably on the right side.",
+     "whyZh": "在路上开：腕关节以上，18 G，首选右侧。",
+     "pcp": true
+    }
+   ]
+  },
+  "chf-pulmonary-edema": {
+   "pic": "./img/treat/chf-pulmonary-edema.webp",
+   "headEn": "Sit up, |<em>legs down</em>.",
+   "headZh": "坐直，|<em>双腿垂下</em>。",
+   "lineEn": "No effort at all: the equipment comes to the patient.",
+   "lineZh": "一点力都不让他出：设备搬到病人身边。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "At rest, no exertion",
+       "zh": "休息，不用力",
+       "subEn": "bring the equipment, lifting and transfer devices included",
+       "subZh": "设备搬过来，包括抬运和转移用的器材"
+      },
+      {
+       "en": "Sitting upright, legs hung down",
+       "zh": "坐直，双腿垂下"
+      },
+      {
+       "en": "Keep the patient warm",
+       "zh": "保暖，防止失温"
+      },
+      {
+       "en": "Oxygen to keep SpO₂ at 94% or more",
+       "zh": "给氧，SpO₂ 保持 ≥ 94%"
+      },
+      {
+       "en": "Assist ventilations",
+       "zh": "辅助通气",
+       "subEn": "if LOC is altered or SpO₂ is under 94%",
+       "subZh": "意识改变，或 SpO₂ < 94% 时"
+      },
+      {
+       "en": "Transport",
+       "zh": "转运"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Where pulmonary edema comes from",
+     "titleZh": "肺水肿从哪里来",
+     "items": [
+      {
+       "en": "Congestive heart failure.",
+       "zh": "充血性心力衰竭。"
+      },
+      {
+       "en": "Cardiogenic shock.",
+       "zh": "心源性休克。"
+      },
+      {
+       "en": "Drowning.",
+       "zh": "溺水。"
+      },
+      {
+       "en": "Exposure to toxins.",
+       "zh": "接触毒物。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Let the patient walk</b> or make any effort during transfers.",
+       "zh": "转移时<b>让病人自己走</b>或用力。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "On scene",
+     "titleZh": "在现场",
+     "items": [
+      {
+       "big": "CPAP",
+       "en": "consider it",
+       "zh": "考虑使用",
+       "tone": ""
+      },
+      {
+       "big": "5 cmH₂O",
+       "en": "PEEP valve to start, if you have to ventilate by bag-valve mask",
+       "zh": "如果要用球囊面罩通气：PEEP 阀从这里起步",
+       "tone": ""
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A woman with heart failure is fighting for breath. How do you position her?",
+     "qZh": "一名心衰女子喘得厉害。怎么摆体位？",
+     "opts": [
+      {
+       "en": "Flat, legs raised",
+       "zh": "平躺，抬高双腿"
+      },
+      {
+       "en": "On her side",
+       "zh": "侧卧"
+      },
+      {
+       "en": "Sitting upright, legs hanging down",
+       "zh": "坐直，双腿垂下"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Sitting upright with the legs hung down.",
+     "whyZh": "坐直，双腿垂下。"
+    },
+    {
+     "qEn": "He lives on the second floor and says he can walk down to the stretcher. What do you do?",
+     "qZh": "他住二楼，说自己能走下去上担架。你怎么做？",
+     "opts": [
+      {
+       "en": "Bring the transfer device to him and carry him",
+       "zh": "把转移器材搬上来，抬他下去"
+      },
+      {
+       "en": "Let him walk slowly",
+       "zh": "让他慢慢走"
+      },
+      {
+       "en": "Let him walk with oxygen on",
+       "zh": "让他吸着氧走"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Exertion is avoided during transfers. The equipment comes to the patient.",
+     "whyZh": "转移时不能让病人用力。设备要搬到病人身边。"
+    },
+    {
+     "qEn": "On oxygen her SpO₂ is 90% and she is getting drowsy. What now?",
+     "qZh": "吸着氧，她的 SpO₂ 是 90%，而且开始犯困。现在怎么办？",
+     "opts": [
+      {
+       "en": "Lay her flat to rest",
+       "zh": "放平让她休息"
+      },
+      {
+       "en": "Assist her ventilations",
+       "zh": "辅助通气"
+      },
+      {
+       "en": "Wait five minutes and recheck",
+       "zh": "等五分钟再测"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Ventilations are assisted when LOC is altered or SpO₂ is under 94%.",
+     "whyZh": "意识改变或 SpO₂ < 94% 时辅助通气。"
+    },
+    {
+     "qEn": "You have to ventilate him by bag-valve mask and add a PEEP valve. Where does it start?",
+     "qZh": "你要用球囊面罩给他通气，加一个 PEEP 阀。从多少起步？",
+     "opts": [
+      {
+       "en": "5 cmH₂O",
+       "zh": "5 cmH₂O"
+      },
+      {
+       "en": "10 cmH₂O",
+       "zh": "10 cmH₂O"
+      },
+      {
+       "en": "15 cmH₂O",
+       "zh": "15 cmH₂O"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Consider a PEEP valve, 5 cmH₂O to start.",
+     "whyZh": "考虑用 PEEP 阀，从 5 cmH₂O 起步。",
+     "pcp": true
+    }
+   ]
+  },
+  "heat-exhaustion-heatstroke": {
+   "pic": "./img/treat/heat-exhaustion-heatstroke.webp",
+   "headEn": "<em>Cool first.</em> |Then go.",
+   "headZh": "<em>先降温，</em>|再走。",
+   "lineEn": "At least 10 minutes of cooling before you leave, and keep cooling all the way in.",
+   "lineZh": "出发前至少降温 10 分钟，路上一直降。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "On scene",
+     "titleZh": "在现场",
+     "steps": [
+      {
+       "en": "Move to a cool area, if appropriate",
+       "zh": "合适的话移到凉快的地方"
+      },
+      {
+       "en": "All clothing off",
+       "zh": "脱掉全部衣服"
+      },
+      {
+       "en": "Air conditioning on maximum cold",
+       "zh": "空调开到最冷",
+       "subEn": "if you have it, together with everything else",
+       "subZh": "有的话，和其他措施一起用"
+      },
+      {
+       "en": "Cold, wet towels",
+       "zh": "冷湿毛巾",
+       "subEn": "head · torso · thighs",
+       "subZh": "头 · 躯干 · 大腿"
+      },
+      {
+       "en": "Feet and legs into ice water",
+       "zh": "脚和小腿泡进冰水",
+       "subEn": "a bucket or a basin",
+       "subZh": "用桶或盆"
+      },
+      {
+       "en": "At least 10 minutes, then go",
+       "zh": "至少 10 分钟，然后出发"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "On the way",
+     "titleZh": "在路上",
+     "items": [
+      {
+       "en": "Use the <b>most aggressive cooling</b> you have, until the treatment endpoints are reached.",
+       "zh": "用手头<b>最强的降温办法</b>，直到达到治疗终点。"
+      },
+      {
+       "en": "Soaked towels stay on the head, torso and thighs.",
+       "zh": "头、躯干、大腿继续盖湿毛巾。"
+      },
+      {
+       "en": "Ambulance air conditioning on maximum cold.",
+       "zh": "救护车空调开到最冷。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Do not forget",
+     "titleZh": "别忘了",
+     "items": [
+      {
+       "en": "Decreased LOC: the first set of vitals <b>must include a blood glucose</b>.",
+       "zh": "意识下降：第一组生命体征里<b>必须有血糖</b>。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also considers",
+     "titleZh": "还要考虑",
+     "items": [
+      {
+       "en": "Fluid replacement, when there are signs and symptoms of dehydration.",
+       "zh": "有脱水表现时，考虑补液。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A roofer collapsed in the sun. He is hot and confused. Do you load and go?",
+     "qZh": "一名屋顶工在太阳下倒下，身体很烫、神志不清。马上抬上车走吗？",
+     "opts": [
+      {
+       "en": "Yes: cool him only in the ambulance",
+       "zh": "是：上车再降温"
+      },
+      {
+       "en": "No: cool him for at least 10 minutes first",
+       "zh": "不：先降温至少 10 分钟"
+      },
+      {
+       "en": "No: give him water and wait",
+       "zh": "不：给他喝水，等一等"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Cooling continues for a minimum of 10 minutes before conveyance begins.",
+     "whyZh": "开始转运之前，至少持续降温 10 分钟。"
+    },
+    {
+     "qEn": "Where do the cold, wet towels go?",
+     "qZh": "冷湿毛巾盖在哪里？",
+     "opts": [
+      {
+       "en": "Head, torso and thighs",
+       "zh": "头、躯干、大腿"
+      },
+      {
+       "en": "Hands and feet",
+       "zh": "手和脚"
+      },
+      {
+       "en": "Only the back",
+       "zh": "只盖后背"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Head, torso and thighs, to promote evaporative cooling. The feet and legs go into ice water.",
+     "whyZh": "头、躯干、大腿，帮助蒸发散热。脚和小腿泡冰水。"
+    },
+    {
+     "qEn": "He is confused. What must the first set of vitals include?",
+     "qZh": "他神志不清。第一组生命体征必须包括什么？",
+     "opts": [
+      {
+       "en": "A 12-lead",
+       "zh": "12 导联心电图"
+      },
+      {
+       "en": "A pain score",
+       "zh": "疼痛评分"
+      },
+      {
+       "en": "A blood glucose",
+       "zh": "血糖"
+      }
+     ],
+     "a": 2,
+     "whyEn": "With a decreased LOC the initial vital signs must include a blood glucose measurement.",
+     "whyZh": "意识下降时，第一组生命体征必须测血糖。"
+    },
+    {
+     "qEn": "You are now driving to hospital. What happens to the cooling?",
+     "qZh": "已经在去医院的路上。降温怎么办？",
+     "opts": [
+      {
+       "en": "Stop, so he does not shiver",
+       "zh": "停掉，免得他发抖"
+      },
+      {
+       "en": "Keep going: soaked towels and the air conditioning on maximum cold",
+       "zh": "继续：湿毛巾加空调最冷"
+      },
+      {
+       "en": "Cover him with a blanket",
+       "zh": "给他盖上毯子"
+      }
+     ],
+     "a": 1,
+     "whyEn": "The most aggressive cooling available continues during transport until the treatment endpoints are reached.",
+     "whyZh": "路上继续用最强的降温办法，直到达到治疗终点。"
+    }
+   ]
+  },
+  "drowning-near-drowning": {
+   "pic": "./img/treat/drowning-near-drowning.webp",
+   "headEn": "Sit them up, |<em>dry and warm</em>.",
+   "headZh": "扶坐起来，|<em>擦干、保暖</em>。",
+   "lineEn": "Handle gently. Breathing is failing: ventilate. In arrest: resuscitate at once.",
+   "lineZh": "动作要轻。呼吸不行了就通气。骤停就立刻复苏。",
+   "blocks": [
+    {
+     "type": "ticks",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "items": [
+      {
+       "en": "Spinal motion restriction <b>as the mechanism indicates</b>.",
+       "zh": "<b>根据受伤机制</b>决定要不要做脊柱固定。"
+      },
+      {
+       "en": "Keep the patient at rest.",
+       "zh": "让病人休息。"
+      },
+      {
+       "en": "Position: <b>sitting up</b>.",
+       "zh": "体位：<b>坐起来</b>。"
+      },
+      {
+       "en": "Wet clothing off, and dry the patient.",
+       "zh": "脱掉湿衣服，把身体擦干。"
+      },
+      {
+       "en": "Avoid rough handling.",
+       "zh": "搬动要轻。"
+      },
+      {
+       "en": "Maintain body temperature.",
+       "zh": "保持体温。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "If the breathing goes",
+     "titleZh": "呼吸出问题时",
+     "items": [
+      {
+       "big": "Failing",
+       "en": "basic airway management and IPPV (intermittent positive pressure ventilations)",
+       "zh": "基本气道管理 + IPPV（间歇正压通气）",
+       "tone": "warn",
+       "bigZh": "呼吸衰竭"
+      },
+      {
+       "big": "Arrest",
+       "en": "cardiac or respiratory arrest: resuscitate at once, by the appropriate guideline",
+       "zh": "心跳或呼吸停止：立刻按相应流程复苏",
+       "tone": "bad",
+       "bigZh": "骤停"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also uses",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "en": "PEEP or CPAP, if indicated.",
+       "zh": "有指征就用 PEEP 或 CPAP。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man was pulled from a lake. He is awake, coughing and breathing on his own. How do you position him?",
+     "qZh": "一名男子从湖里被救上来，清醒、咳嗽、能自己呼吸。怎么摆体位？",
+     "opts": [
+      {
+       "en": "Flat, legs raised",
+       "zh": "平躺，抬高双腿"
+      },
+      {
+       "en": "Sitting up",
+       "zh": "坐起来"
+      },
+      {
+       "en": "Face down, to drain the water",
+       "zh": "趴着，把水控出来"
+      }
+     ],
+     "a": 1,
+     "whyEn": "The drowning patient is positioned sitting up, kept at rest, dried and kept warm.",
+     "whyZh": "溺水病人坐起来，休息，擦干，保暖。"
+    },
+    {
+     "qEn": "A woman dived into shallow water and hit her head on the bottom. What do you add?",
+     "qZh": "一名女子跳进浅水，头撞到了水底。还要加什么？",
+     "opts": [
+      {
+       "en": "Spinal motion restriction",
+       "zh": "脊柱固定"
+      },
+      {
+       "en": "Nothing: drowning patients are not immobilized",
+       "zh": "不用：溺水病人不做固定"
+      },
+      {
+       "en": "A walk, to warm her up",
+       "zh": "让她走走暖身"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Spinal motion restriction is applied as indicated by the mechanism of injury.",
+     "whyZh": "根据受伤机制决定做脊柱固定。"
+    },
+    {
+     "qEn": "His breathing becomes slow and shallow and is clearly failing. What do you do?",
+     "qZh": "他的呼吸变得又慢又浅，明显撑不住了。你怎么做？",
+     "opts": [
+      {
+       "en": "Oxygen mask on, and watch",
+       "zh": "戴上氧气面罩，观察"
+      },
+      {
+       "en": "Sit him up straighter and wait",
+       "zh": "让他坐得更直，等一等"
+      },
+      {
+       "en": "Manage the airway and start IPPV",
+       "zh": "管理气道，开始 IPPV"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Failing respirations are supported with basic airway management and intermittent positive pressure ventilations.",
+     "whyZh": "呼吸衰竭时：基本气道管理加间歇正压通气。"
+    }
+   ]
+  },
+  "fbao": {
+   "pic": "./img/treat/fbao.webp",
+   "headEn": "Collapsed? |<em>Compressions.</em> |No pulse check.",
+   "headZh": "倒下了？|<em>直接按压</em>，|不查脉搏。",
+   "lineEn": "Still coughing: let them cough. Fully blocked: thrusts and back slaps. Take out only what you can see.",
+   "lineZh": "还能咳：让他用力咳。完全堵住：冲击和拍背。看得见的异物才取。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "A conscious adult",
+     "titleZh": "清醒的成人",
+     "items": [
+      {
+       "big": "Partial",
+       "en": "have the patient cough forcefully",
+       "zh": "让病人用力咳",
+       "tone": "warn",
+       "bigZh": "部分梗阻"
+      },
+      {
+       "big": "Full",
+       "en": "chest thrusts, back slaps, abdominal thrusts. Two techniques in turn, five at a time, is fine. Abdominal thrusts not working: consider chest thrusts",
+       "zh": "胸部冲击、拍背、腹部冲击。两种手法每次 5 下轮换也可以。腹部冲击无效：考虑胸部冲击",
+       "tone": "bad",
+       "bigZh": "完全梗阻"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ladder",
+     "titleEn": "If the patient collapses",
+     "titleZh": "病人倒下了",
+     "steps": [
+      {
+       "en": "CPR, starting with compressions",
+       "zh": "开始 CPR，先按压",
+       "subEn": "do not check for a pulse",
+       "subZh": "不查脉搏"
+      },
+      {
+       "en": "After 30 compressions: open the airway and look",
+       "zh": "按 30 下后：打开气道，看一眼"
+      },
+      {
+       "en": "You see an object: take it out",
+       "zh": "看见异物：取出来"
+      },
+      {
+       "en": "Try 2 breaths",
+       "zh": "尝试吹 2 口气"
+      },
+      {
+       "en": "Keep cycling, checking the airway each time",
+       "zh": "继续循环，每次都看一眼气道"
+      },
+      {
+       "en": "Complete the RBS and transport",
+       "zh": "完成 RBS 并转运",
+       "subEn": "RBS: rapid body survey",
+       "subZh": "RBS：快速全身检查（rapid body survey）"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Found unconscious, not breathing",
+     "titleZh": "发现时已昏迷、没有呼吸",
+     "steps": [
+      {
+       "en": "Try one ventilation",
+       "zh": "先试吹一口气"
+      },
+      {
+       "en": "No air goes in: reposition the head, try again",
+       "zh": "吹不进：重新摆头位，再试一次"
+      },
+      {
+       "en": "Still nothing: start compressions",
+       "zh": "还是吹不进：开始按压"
+      },
+      {
+       "en": "30 compressions to 2 ventilations",
+       "zh": "30 次按压 : 2 次通气",
+       "subEn": "look in the mouth before each ventilation",
+       "subZh": "每次通气前看一眼口腔"
+      },
+      {
+       "en": "You see an object: take it out",
+       "zh": "看见异物：取出来"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "From the start",
+     "titleZh": "一开始就做",
+     "items": [
+      {
+       "en": "Stabilize the head and neck, if necessary.",
+       "zh": "需要的话稳住头颈。"
+      },
+      {
+       "en": "Level of consciousness by AVPU, then the ABCs.",
+       "zh": "用 AVPU 评估意识，然后 ABC。"
+      },
+      {
+       "en": "Suction, AED and bag-valve mask within reach.",
+       "zh": "吸引器、AED、球囊面罩放在手边。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Blind finger sweeps.</b>",
+       "zh": "<b>盲目用手指掏口腔。</b>"
+      },
+      {
+       "en": "<b>A pulse check</b> when the choking patient collapses.",
+       "zh": "窒息的病人倒下时<b>去查脉搏</b>。"
+      }
+     ]
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man at a restaurant grabs his throat. He is coughing loudly and can get a few words out. What do you do?",
+     "qZh": "餐厅里一名男子捂住喉咙。他咳得很响，还能说出几个字。你怎么做？",
+     "opts": [
+      {
+       "en": "Abdominal thrusts at once",
+       "zh": "马上做腹部冲击"
+      },
+      {
+       "en": "Tell him to keep coughing hard",
+       "zh": "让他继续用力咳"
+      },
+      {
+       "en": "Five back slaps",
+       "zh": "拍背五下"
+      }
+     ],
+     "a": 1,
+     "whyEn": "A partial obstruction: have the patient cough forcefully.",
+     "whyZh": "部分梗阻：让病人用力咳。"
+    },
+    {
+     "qEn": "A choking woman goes limp and collapses in front of you. What comes first?",
+     "qZh": "一名窒息的女子在你面前瘫软倒下。先做什么？",
+     "opts": [
+      {
+       "en": "Chest compressions, with no pulse check",
+       "zh": "胸外按压，不查脉搏"
+      },
+      {
+       "en": "A 10-second pulse check",
+       "zh": "查 10 秒脉搏"
+      },
+      {
+       "en": "Five more abdominal thrusts",
+       "zh": "再做五次腹部冲击"
+      }
+     ],
+     "a": 0,
+     "whyEn": "If the patient collapses, CPR starts with chest compressions and no pulse check is done.",
+     "whyZh": "病人倒下后，从胸外按压开始 CPR，不查脉搏。"
+    },
+    {
+     "qEn": "After 30 compressions you open his mouth and see nothing. What now?",
+     "qZh": "按了 30 下，你打开他的嘴，什么也没看见。接下来？",
+     "opts": [
+      {
+       "en": "Sweep a finger deep into the throat",
+       "zh": "把手指伸进喉咙深处掏"
+      },
+      {
+       "en": "Stop CPR and reassess",
+       "zh": "停下 CPR 重新评估"
+      },
+      {
+       "en": "No sweep: try 2 breaths and carry on",
+       "zh": "不掏：试吹 2 口气，继续循环"
+      }
+     ],
+     "a": 2,
+     "whyEn": "No blind finger sweeps. An object is removed only when it is seen.",
+     "whyZh": "不做盲目的手指清扫。看得见异物才取。"
+    },
+    {
+     "qEn": "You find a man unconscious and not breathing. Your first ventilation does not go in. Next?",
+     "qZh": "你发现一名男子昏迷、没有呼吸。第一口气吹不进去。下一步？",
+     "opts": [
+      {
+       "en": "Compressions straight away",
+       "zh": "直接开始按压"
+      },
+      {
+       "en": "Reposition the head and try again",
+       "zh": "重新摆头位，再吹一次"
+      },
+      {
+       "en": "A finger sweep",
+       "zh": "用手指掏口腔"
+      }
+     ],
+     "a": 1,
+     "whyEn": "No air entry: reposition the head and attempt ventilation again. Still none: begin compressions.",
+     "whyZh": "吹不进：重新摆头位再试。还是不进：开始按压。"
+    }
+   ]
+  },
+  "cardiac-chest-pain": {
+   "pic": "./img/treat/cardiac-chest-pain.webp",
+   "headEn": "ASA: |<em>chewed, once.</em>",
+   "headZh": "阿司匹林：|<em>嚼服</em>，|只给一次。",
+   "lineEn": "Get moving early. Nitroglycerin if appropriate, and transport after the first dose.",
+   "lineZh": "尽早转运。合适就给硝酸甘油（nitroglycerin），第一剂后就走。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Position of comfort, little movement",
+       "zh": "舒服的体位，尽量少动"
+      },
+      {
+       "en": "Primary survey",
+       "zh": "做 primary survey",
+       "subEn": "oxygen as needed for SpO₂ of 94% or more",
+       "subZh": "按需给氧，SpO₂ ≥ 94%"
+      },
+      {
+       "en": "ASA, chewed and swallowed",
+       "zh": "阿司匹林 ASA：嚼碎吞下",
+       "subEn": "unless it was already taken before you arrived",
+       "subZh": "你到之前已经吃过就不再给"
+      },
+      {
+       "en": "Start transport",
+       "zh": "启动转运",
+       "subEn": "now if you can; if not, the crew prepares the way out",
+       "subZh": "能走就马上走；走不了就让队友先准备撤离路线"
+      },
+      {
+       "en": "History and baseline vitals",
+       "zh": "问病史，测基线生命体征",
+       "subEn": "with a pain assessment",
+       "subZh": "包括疼痛评估"
+      },
+      {
+       "en": "Nitroglycerin, if appropriate",
+       "zh": "合适就给硝酸甘油 nitroglycerin",
+       "subEn": "transport after the first dose, if you are not moving yet",
+       "subZh": "还没出发的话，第一剂后就走"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "After the nitroglycerin",
+     "titleZh": "给了硝酸甘油之后",
+     "items": [
+      {
+       "big": "Pain returns",
+       "en": "it was completely gone for over 5 minutes: restart the nitroglycerin, not the ASA",
+       "zh": "完全不痛超过 5 分钟后又痛：重新给硝酸甘油，不再给阿司匹林",
+       "tone": "warn",
+       "bigZh": "痛又回来"
+      },
+      {
+       "big": "3 doses / < 110",
+       "en": "still pain after 3 doses, or systolic under 110 mmHg: Entonox, 5 minutes after the last nitroglycerin",
+       "zh": "三剂后还痛，或收缩压 < 110 mmHg：最后一剂硝酸甘油 5 分钟后给 Entonox（笑气-氧气混合气）",
+       "tone": "bad",
+       "bigZh": "三剂 / < 110"
+      },
+      {
+       "big": "30 minutes",
+       "en": "after the first nitroglycerin the protocol may be repeated, once the nitrous oxide has been off for 5 minutes",
+       "zh": "第一剂硝酸甘油 30 分钟后可以重复本流程，先停笑气 5 分钟",
+       "tone": "",
+       "bigZh": "30 分钟"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "All the way",
+     "titleZh": "全程",
+     "items": [
+      {
+       "en": "Assessment, treatment and vitals <b>every 5 minutes</b>.",
+       "zh": "评估、处置、生命体征<b>每 5 分钟一次</b>。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Repeat the ASA</b>, even when the pain comes back.",
+       "zh": "<b>再给一次阿司匹林</b>，哪怕胸痛又回来。"
+      },
+      {
+       "en": "<b>Give nitroglycerin before a baseline set of vitals</b> and a pain assessment.",
+       "zh": "<b>没测基线生命体征</b>、没做疼痛评估<b>就给硝酸甘油</b>。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also does",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "en": "Vascular access, with running intravenous fluid.",
+       "zh": "建立静脉通路，挂上液体。"
+      },
+      {
+       "en": "Consider dimenhydrinate for nausea.",
+       "zh": "恶心：考虑茶苯海明（dimenhydrinate）。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man with crushing chest pain chewed his own ASA ten minutes before you arrived. Do you give ASA?",
+     "qZh": "一名胸口压榨样疼痛的男子，在你到之前十分钟已经自己嚼服了阿司匹林（ASA）。你还给吗？",
+     "opts": [
+      {
+       "en": "No: it has been done",
+       "zh": "不给：已经吃过了"
+      },
+      {
+       "en": "Yes, a full dose again",
+       "zh": "给，再来一整剂"
+      },
+      {
+       "en": "Yes, half a dose",
+       "zh": "给半剂"
+      }
+     ],
+     "a": 0,
+     "whyEn": "ASA is given if it was not already taken before EHS arrived.",
+     "whyZh": "你到之前没吃过，才给阿司匹林。"
+    },
+    {
+     "qEn": "She has had three doses of nitroglycerin and still has pain. What is next?",
+     "qZh": "她已经用了三剂硝酸甘油（nitroglycerin），还在痛。下一步？",
+     "opts": [
+      {
+       "en": "A fourth dose of nitroglycerin",
+       "zh": "第四剂硝酸甘油"
+      },
+      {
+       "en": "Entonox, 5 minutes after the last nitroglycerin",
+       "zh": "最后一剂硝酸甘油 5 分钟后给 Entonox"
+      },
+      {
+       "en": "A second ASA",
+       "zh": "再给一次阿司匹林"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Pain beyond 3 doses, or a systolic under 110 mmHg: Entonox 5 minutes after the last dose of nitroglycerin.",
+     "whyZh": "三剂后还痛，或收缩压 < 110 mmHg：最后一剂硝酸甘油 5 分钟后给 Entonox（笑气-氧气混合气）。"
+    },
+    {
+     "qEn": "His pain went away completely for ten minutes. Now it is back. What do you restart?",
+     "qZh": "他的胸痛完全消失了十分钟，现在又痛了。重新开始什么？",
+     "opts": [
+      {
+       "en": "The ASA and the nitroglycerin",
+       "zh": "阿司匹林和硝酸甘油都重新给"
+      },
+      {
+       "en": "Entonox straight away",
+       "zh": "直接上 Entonox"
+      },
+      {
+       "en": "The nitroglycerin, not the ASA",
+       "zh": "硝酸甘油，不给阿司匹林"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Completely relieved for more than 5 minutes and then back: the nitroglycerin component may be restarted, never the ASA.",
+     "whyZh": "完全缓解超过 5 分钟后又痛：可以重新开始硝酸甘油部分，阿司匹林不再给。"
+    },
+    {
+     "qEn": "After one nitroglycerin her systolic pressure is 104 mmHg and she still has pain. What now?",
+     "qZh": "用了一剂硝酸甘油后，她的收缩压是 104 mmHg，还在痛。现在怎么办？",
+     "opts": [
+      {
+       "en": "Another nitroglycerin",
+       "zh": "再给一剂硝酸甘油"
+      },
+      {
+       "en": "Entonox, 5 minutes after that dose",
+       "zh": "那一剂 5 分钟后给 Entonox"
+      },
+      {
+       "en": "A second ASA",
+       "zh": "再给一次阿司匹林"
+      }
+     ],
+     "a": 1,
+     "whyEn": "A systolic pressure under 110 mmHg ends the nitroglycerin. Entonox follows 5 minutes after the last dose.",
+     "whyZh": "收缩压 < 110 mmHg 就不再给硝酸甘油。最后一剂 5 分钟后改用 Entonox（笑气-氧气混合气）。"
+    }
+   ]
+  },
+  "nausea-vomiting": {
+   "pic": "./img/treat/nausea-vomiting.webp",
+   "headEn": "Stable: |<em>treat on scene.</em> |Unstable: en route.",
+   "headZh": "稳定：|<em>现场给药</em>。|不稳定：路上给。",
+   "lineEn": "The airway comes first: position the patient and keep the suction ready.",
+   "lineZh": "先护住气道：摆好体位，吸引器随时备用。",
+   "blocks": [
+    {
+     "type": "ticks",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "items": [
+      {
+       "en": "At rest, in a position of comfort that still protects the airway.",
+       "zh": "休息，摆一个舒服、同时能保护气道的体位。"
+      },
+      {
+       "en": "Expect more vomiting: <b>suction ready</b>.",
+       "zh": "随时可能再吐：<b>吸引器备好</b>。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Where you give the anti-emetic",
+     "titleZh": "止吐药在哪里给",
+     "items": [
+      {
+       "big": "Stable",
+       "en": "on scene",
+       "zh": "在现场给",
+       "tone": "ok",
+       "bigZh": "稳定"
+      },
+      {
+       "big": "Unstable",
+       "en": "en route to hospital",
+       "zh": "在去医院的路上给",
+       "tone": "bad",
+       "bigZh": "不稳定"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "PCP considers",
+     "titleZh": "PCP 考虑",
+     "items": [
+      {
+       "en": "Vascular access.",
+       "zh": "建立静脉通路。"
+      },
+      {
+       "en": "Dimenhydrinate.",
+       "zh": "茶苯海明（dimenhydrinate）。"
+      },
+      {
+       "en": "Ondansetron.",
+       "zh": "昂丹司琼（ondansetron）。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Low pressure from fluid loss",
+     "titleZh": "失液造成的低血压",
+     "items": [
+      {
+       "big": "20 ml/kg",
+       "en": "bolus, at most 2 litres",
+       "zh": "补液，最多 2 升",
+       "tone": ""
+      },
+      {
+       "big": "500 ml",
+       "en": "reassess every",
+       "zh": "每补这么多复查一次",
+       "tone": ""
+      },
+      {
+       "big": "90",
+       "en": "target systolic, mmHg",
+       "zh": "目标收缩压 mmHg",
+       "tone": ""
+      }
+     ],
+     "stack": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A stable woman has been vomiting all morning. Where does she get her anti-emetic?",
+     "qZh": "一名情况稳定的女子吐了一上午。止吐药在哪里给？",
+     "opts": [
+      {
+       "en": "On scene",
+       "zh": "在现场"
+      },
+      {
+       "en": "Only en route",
+       "zh": "只能在路上"
+      },
+      {
+       "en": "Only at the hospital",
+       "zh": "到医院才给"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Stable patients may be treated with anti-emetics on scene. Unstable patients are treated en route.",
+     "whyZh": "稳定的病人可以在现场给止吐药。不稳定的在路上给。"
+    },
+    {
+     "qEn": "He is hypotensive from fluid loss and you are giving fluid. What systolic pressure are you aiming for?",
+     "qZh": "他因为失液而低血压，你在补液。目标收缩压是多少？",
+     "opts": [
+      {
+       "en": "120 mmHg",
+       "zh": "120 mmHg"
+      },
+      {
+       "en": "90 mmHg",
+       "zh": "90 mmHg"
+      },
+      {
+       "en": "100 mmHg",
+       "zh": "100 mmHg"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Reassess after every bolus. The target systolic pressure is 90 mmHg.",
+     "whyZh": "每次补液后复查。目标收缩压 90 mmHg。"
+    },
+    {
+     "qEn": "The bolus is running. How often do you reassess?",
+     "qZh": "正在补液。多久复查一次？",
+     "opts": [
+      {
+       "en": "After the full 2 litres",
+       "zh": "2 升全部补完之后"
+      },
+      {
+       "en": "Every 100 ml",
+       "zh": "每 100 ml"
+      },
+      {
+       "en": "Every 500 ml",
+       "zh": "每 500 ml"
+      }
+     ],
+     "a": 2,
+     "whyEn": "20 ml/kg to a maximum of 2 litres, reassessing every 500 ml.",
+     "whyZh": "20 ml/kg，最多 2 升，每 500 ml 复查一次。"
+    }
+   ]
+  },
+  "sob-asthma-copd": {
+   "pic": "./img/treat/sob-asthma-copd.webp",
+   "headEn": "Sit forward. |<em>Salbutamol.</em> |Go.",
+   "headZh": "坐着前倾，|<em>沙丁胺醇</em>，|走。",
+   "lineEn": "Transport after the first dose. The target is SpO₂ 94%, and it may not be reachable.",
+   "lineZh": "给了第一剂沙丁胺醇（salbutamol）就转运。SpO₂ 目标 94%，但不一定达得到。",
+   "blocks": [
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Position of comfort",
+       "zh": "舒服的体位",
+       "subEn": "usually seated, leaning forward · little movement",
+       "subZh": "通常是坐着、身体前倾 · 尽量少动"
+      },
+      {
+       "en": "Primary survey",
+       "zh": "做 primary survey",
+       "subEn": "oxygen for SpO₂ of 94% or more",
+       "subZh": "给氧，SpO₂ ≥ 94%"
+      },
+      {
+       "en": "Listen to the chest",
+       "zh": "听诊"
+      },
+      {
+       "en": "Start transport",
+       "zh": "启动转运",
+       "subEn": "now if you can; if not, the crew prepares the way out",
+       "subZh": "能走就马上走；走不了就让队友先准备撤离路线"
+      },
+      {
+       "en": "History and baseline vitals",
+       "zh": "问病史，测基线生命体征"
+      },
+      {
+       "en": "Salbutamol",
+       "zh": "沙丁胺醇 salbutamol",
+       "subEn": "nebulizer or MDI · transport after the first dose",
+       "subZh": "雾化或 MDI · 第一剂后就走"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Which way the salbutamol goes in",
+     "titleZh": "沙丁胺醇怎么给",
+     "items": [
+      {
+       "en": "Flu-like or other infectious breathing illness: <b>MDI with a spacer</b> is strongly recommended.",
+       "zh": "有流感样症状或其他呼吸道传染病：强烈建议用 <b>MDI 加储雾罐（spacer）</b>。"
+      },
+      {
+       "en": "A ventilated patient: MDI through the side port of the bag-valve mask.",
+       "zh": "正在通气的病人：从球囊面罩的侧孔给 MDI。"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Oxygen, one step at a time",
+     "titleZh": "给氧，一级一级加",
+     "steps": [
+      {
+       "en": "Turn the oxygen up",
+       "zh": "调大氧流量",
+       "subEn": "up to 15 L/min, for SpO₂ 94%",
+       "subZh": "最高 15 L/min，目标 SpO₂ 94%"
+      },
+      {
+       "en": "Non-rebreather mask at 15 L/min",
+       "zh": "换非重复呼吸面罩，15 L/min"
+      },
+      {
+       "en": "Add a nasal cannula underneath",
+       "zh": "面罩下面再加鼻导管",
+       "subEn": "also at 15 L/min",
+       "subZh": "也是 15 L/min"
+      },
+      {
+       "en": "Consider CPAP",
+       "zh": "考虑 CPAP",
+       "subEn": "PCP",
+       "subZh": "PCP"
+      },
+      {
+       "en": "Consider assisted ventilations",
+       "zh": "考虑辅助通气",
+       "subEn": "with PEEP for PCPs · record the SpO₂ changes",
+       "subZh": "PCP 加 PEEP · 记录 SpO₂ 的变化"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "Oxygen numbers",
+     "titleZh": "给氧的数字",
+     "items": [
+      {
+       "big": "≥ 6 L/min",
+       "en": "an adult face mask never runs below this",
+       "zh": "成人面罩不能低于这个流量",
+       "tone": "bad"
+      },
+      {
+       "big": "1–3 L/min",
+       "en": "COPD by nasal cannula, after the acute treatment",
+       "zh": "COPD 用鼻导管，在急性期处理之后",
+       "tone": ""
+      },
+      {
+       "big": "NRB",
+       "en": "non-rebreather for carbon monoxide poisoning and smoke inhalation",
+       "zh": "一氧化碳中毒、吸入烟雾：用非重复呼吸面罩",
+       "tone": "warn"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "COPD and oxygen",
+     "titleZh": "COPD 和氧气",
+     "items": [
+      {
+       "en": "A COPD patient who is short of breath <b>does get high-flow oxygen</b>.",
+       "zh": "COPD 病人只要喊气短，<b>就要给高流量氧</b>。"
+      },
+      {
+       "en": "Not short of breath and not in shock: titrate by the oximeter, aiming for 94%.",
+       "zh": "不气短、没有休克：按血氧仪调，目标 94%。"
+      },
+      {
+       "en": "Short of breath, in shock, or carbon monoxide poisoning: high-flow oxygen.",
+       "zh": "气短、休克、一氧化碳中毒：高流量氧。"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Run an adult face mask below 6 L/min.</b> It delivers less oxygen than room air.",
+       "zh": "<b>成人面罩流量低于 6 L/min。</b>这样给的氧比空气还少。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also does",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "en": "Salbutamol <b>with ipratropium</b> in the same nebulizer. Ipratropium is given once; salbutamol may be repeated.",
+       "zh": "沙丁胺醇<b>加异丙托溴铵（ipratropium）</b>放同一个雾化器。异丙托溴铵只给一次，沙丁胺醇可以重复。"
+      },
+      {
+       "en": "Severe disease or respiratory failure about to happen: <b>epinephrine IM</b>.",
+       "zh": "病情严重或即将呼吸衰竭：<b>肌注肾上腺素（epinephrine）</b>。"
+      },
+      {
+       "en": "Consider epinephrine IM when SpO₂ is under 90%, and/or moderate to severe bronchospasm has not settled with salbutamol.",
+       "zh": "SpO₂ < 90%，和/或沙丁胺醇后中重度支气管痉挛仍不缓解：考虑肌注肾上腺素。"
+      },
+      {
+       "en": "Consider dexamethasone. Consider CPAP.",
+       "zh": "考虑地塞米松（dexamethasone）。考虑 CPAP。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man with COPD says he cannot get his breath. SpO₂ 86%. What oxygen does he get?",
+     "qZh": "一名 COPD 男子说喘不上气，SpO₂ 86%。给他怎么吸氧？",
+     "opts": [
+      {
+       "en": "Nasal cannula at 1–3 L/min only",
+       "zh": "只给鼻导管 1–3 L/min"
+      },
+      {
+       "en": "High-flow oxygen",
+       "zh": "高流量氧"
+      },
+      {
+       "en": "None: he has COPD",
+       "zh": "不给：他是 COPD"
+      }
+     ],
+     "a": 1,
+     "whyEn": "High-flow oxygen is indicated for COPD patients complaining of shortness of breath. The 1–3 L/min by cannula comes after the acute treatment.",
+     "whyZh": "COPD 病人喊气短就给高流量氧。鼻导管 1–3 L/min 是急性期处理之后的事。"
+    },
+    {
+     "qEn": "Your partner sets an adult face mask to 4 L/min. Is that acceptable?",
+     "qZh": "搭档把成人面罩的流量调到 4 L/min。可以吗？",
+     "opts": [
+      {
+       "en": "No: at least 6 L/min",
+       "zh": "不行：至少 6 L/min"
+      },
+      {
+       "en": "Yes, for a mild case",
+       "zh": "轻症可以"
+      },
+      {
+       "en": "Yes, for COPD",
+       "zh": "COPD 可以"
+      }
+     ],
+     "a": 0,
+     "whyEn": "An adult face mask below 6 L/min delivers less oxygen than room air.",
+     "whyZh": "成人面罩低于 6 L/min，给的氧比空气还少。"
+    },
+    {
+     "qEn": "A wheezy woman with asthma also has a fever and a cough, like the flu. How do you give the salbutamol?",
+     "qZh": "一名哮喘女子在喘，同时发烧、咳嗽，像流感。沙丁胺醇怎么给？",
+     "opts": [
+      {
+       "en": "By nebulizer",
+       "zh": "雾化"
+      },
+      {
+       "en": "Not at all",
+       "zh": "不给"
+      },
+      {
+       "en": "By MDI with a spacer",
+       "zh": "MDI 加储雾罐"
+      }
+     ],
+     "a": 2,
+     "whyEn": "MDI and spacer use is strongly recommended with signs of influenza-like illness or other infectious respiratory conditions.",
+     "whyZh": "有流感样表现或其他呼吸道传染病时，强烈建议用 MDI 加储雾罐。"
+    },
+    {
+     "qEn": "The first nebulizer held salbutamol and ipratropium. He needs another. What goes in?",
+     "qZh": "第一次雾化放了沙丁胺醇（salbutamol）和异丙托溴铵（ipratropium）。他还需要一次。这次放什么？",
+     "opts": [
+      {
+       "en": "Both again",
+       "zh": "两种都再放"
+      },
+      {
+       "en": "Salbutamol only",
+       "zh": "只放沙丁胺醇"
+      },
+      {
+       "en": "Ipratropium only",
+       "zh": "只放异丙托溴铵"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Ipratropium is a single dose. Salbutamol may be repeated.",
+     "whyZh": "异丙托溴铵只给一剂。沙丁胺醇可以重复。",
+     "pcp": true
+    }
+   ]
+  },
+  "hypovolemia": {
+   "pic": "./img/treat/hypovolemia.webp",
+   "headEn": "<em>Stop</em> the bleeding, |flat, |warm.",
+   "headZh": "<em>止血</em>，|平躺，|保暖。",
+   "lineEn": "The protocol asks for all three: hypovolemia, a systolic under 90 and other signs of shock.",
+   "lineZh": "启用条件三条都要有：低血容量、收缩压 < 90、还有其他休克表现。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "All three together",
+     "titleZh": "三条同时满足",
+     "items": [
+      {
+       "big": "Loss",
+       "en": "evidence of a significant loss of blood or body fluids",
+       "zh": "有证据显示大量失血或失液",
+       "tone": "",
+       "bigZh": "失血失液"
+      },
+      {
+       "big": "< 90",
+       "en": "systolic pressure, mmHg",
+       "zh": "收缩压 mmHg",
+       "tone": "bad"
+      },
+      {
+       "big": "+ shock",
+       "en": "other clinical signs or symptoms of shock",
+       "zh": "其他休克的表现",
+       "tone": "warn",
+       "bigZh": "+ 休克"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "These count too",
+     "titleZh": "这些也算",
+     "items": [
+      {
+       "en": "Burns over <b>20% BSA</b>, partial and full thickness.",
+       "zh": "<b>&gt; 20% BSA</b> 的烧伤（部分皮层和全层烧伤）。"
+      },
+      {
+       "en": "Pressure <b>above 90</b>, but shock is anticipated from the mechanism, the injuries or the patient's condition.",
+       "zh": "血压<b>高于 90</b>，但从受伤机制、伤情或病人状况看，预计会休克。"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Control external bleeding",
+       "zh": "止住外出血"
+      },
+      {
+       "en": "Splint the pelvis or fractures",
+       "zh": "固定骨盆或骨折",
+       "subEn": "if clinically indicated",
+       "subZh": "有临床指征时"
+      },
+      {
+       "en": "Supine",
+       "zh": "仰卧",
+       "subEn": "to support the blood pressure",
+       "subZh": "帮助维持血压"
+      },
+      {
+       "en": "Keep the patient warm",
+       "zh": "保暖，防止失温"
+      },
+      {
+       "en": "Oxygen to keep SpO₂ at 94% or more",
+       "zh": "给氧，SpO₂ 保持 ≥ 94%"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "On the way, or when delayed",
+     "titleZh": "在路上，或被耽搁时",
+     "items": [
+      {
+       "en": "Vascular access.",
+       "zh": "建立静脉通路。"
+      },
+      {
+       "en": "Consider a fluid bolus for hypoperfusion or hypotension: <b>20 ml/kg</b>, at most <b>2 litres</b>, reassessing every 500 ml.",
+       "zh": "低灌注或低血压，考虑补液：<b>20 ml/kg</b>，最多 <b>2 升</b>，每 500 ml 复查一次。"
+      },
+      {
+       "en": "Consider TXA (tranexamic acid) for shock from blood loss, and for hypovolemia from occult bleeding.",
+       "zh": "失血性休克，或隐匿出血造成的低血容量：考虑 TXA 氨甲环酸（tranexamic acid）。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man fell from a roof. Pelvic pain, pale, heart rate 124, pressure 108/70. Do you use the hypovolemia protocol?",
+     "qZh": "一名男子从屋顶摔下。骨盆痛、面色苍白，心率 124，血压 108/70。启用低血容量流程吗？",
+     "opts": [
+      {
+       "en": "No: his pressure is over 90",
+       "zh": "不：血压在 90 以上"
+      },
+      {
+       "en": "Yes: shock is anticipated",
+       "zh": "启用：预计会休克"
+      },
+      {
+       "en": "Wait until the pressure drops",
+       "zh": "等血压掉下来再说"
+      }
+     ],
+     "a": 1,
+     "whyEn": "The protocol may be used above 90 mmHg when shock is anticipated from the mechanism, the injuries or the patient's condition.",
+     "whyZh": "从受伤机制、伤情或病人状况预计会休克时，血压高于 90 也可以启用。"
+    },
+    {
+     "qEn": "How do you position a hypovolemic patient?",
+     "qZh": "低血容量的病人怎么摆体位？",
+     "opts": [
+      {
+       "en": "Supine",
+       "zh": "仰卧"
+      },
+      {
+       "en": "Sitting upright",
+       "zh": "坐直"
+      },
+      {
+       "en": "Sitting, legs down",
+       "zh": "坐着，双腿垂下"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Supine, to support the blood pressure.",
+     "whyZh": "仰卧，帮助维持血压。"
+    },
+    {
+     "qEn": "A woman has partial and full thickness burns over 25% of her body. Pressure 118/76. Does she qualify?",
+     "qZh": "一名女子部分和全层烧伤面积 25%。血压 118/76。符合启用条件吗？",
+     "opts": [
+      {
+       "en": "No: she is not hypotensive",
+       "zh": "不符合：没有低血压"
+      },
+      {
+       "en": "Only if she becomes confused",
+       "zh": "神志不清了才算"
+      },
+      {
+       "en": "Yes: burns over 20% BSA",
+       "zh": "符合：烧伤超过 20% BSA"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Patients with burns over 20% BSA, partial and full thickness, are an indication on their own.",
+     "whyZh": "部分和全层烧伤超过 20% BSA，本身就是启用条件。"
+    },
+    {
+     "qEn": "You decide on a fluid bolus. How much, and how do you run it?",
+     "qZh": "你决定补液。补多少，怎么补？",
+     "opts": [
+      {
+       "en": "2 litres straight in",
+       "zh": "2 升一口气补完"
+      },
+      {
+       "en": "20 ml/kg, at most 2 litres, reassessing every 500 ml",
+       "zh": "20 ml/kg，最多 2 升，每 500 ml 复查一次"
+      },
+      {
+       "en": "10 ml/kg, once",
+       "zh": "10 ml/kg，只补一次"
+      }
+     ],
+     "a": 1,
+     "whyEn": "20 ml/kg to a maximum of 2 litres, reassessing every 500 ml.",
+     "whyZh": "20 ml/kg，最多 2 升，每 500 ml 复查一次。",
+     "pcp": true
+    }
+   ]
+  },
+  "anaphylaxis": {
+   "pic": "./drugs/img/epinephrine-autoinjector.webp",
+   "headEn": "<em>Epinephrine.</em> |Flat, |no walking.",
+   "headZh": "<em>肾上腺素。</em>|平躺，|不许走。",
+   "lineEn": "An allergen, the signs, and an unstable patient: that is the protocol.",
+   "lineZh": "接触了过敏原 + 有过敏表现 + 病人不稳定 = 启用流程。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "All three",
+     "titleZh": "三条都有",
+     "items": [
+      {
+       "big": "Allergen",
+       "en": "exposure to an allergen",
+       "zh": "接触过敏原",
+       "tone": "",
+       "bigZh": "过敏原"
+      },
+      {
+       "big": "Signs",
+       "en": "breathing (short of breath, wheeze, cough, stridor) · gut (nausea, vomiting, diarrhea, pain) · hives · swelling · low pressure",
+       "zh": "呼吸（气短、喘鸣、咳嗽、喉鸣）· 胃肠（恶心、呕吐、腹泻、腹痛）· 荨麻疹 · 血管性水肿 · 低血压",
+       "tone": "warn",
+       "bigZh": "表现"
+      },
+      {
+       "big": "Unstable",
+       "en": "syncope, decreased LOC, pressure under 90 mmHg, or respiratory distress",
+       "zh": "晕厥、意识下降、血压 < 90 mmHg，或呼吸窘迫",
+       "tone": "bad",
+       "bigZh": "不稳定"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Supine. Do not walk the patient",
+       "zh": "仰卧。不让病人走"
+      },
+      {
+       "en": "Remove the allergen",
+       "zh": "去掉过敏原",
+       "subEn": "scrape off the stinger · stop the drug",
+       "subZh": "刮掉毒刺 · 停药"
+      },
+      {
+       "en": "Primary survey",
+       "zh": "做 primary survey",
+       "subEn": "airway, and oxygen for SpO₂ of 94% or more",
+       "subZh": "管理气道，给氧，SpO₂ ≥ 94%"
+      },
+      {
+       "en": "The crew prepares the way out",
+       "zh": "队友准备撤离路线"
+      },
+      {
+       "en": "History and baseline vitals",
+       "zh": "问病史，测基线生命体征"
+      },
+      {
+       "en": "Epinephrine",
+       "zh": "肾上腺素 epinephrine"
+      },
+      {
+       "en": "Transport, and carry on en route",
+       "zh": "转运，路上继续评估和处置"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Stand the patient up or walk them.</b>",
+       "zh": "<b>让病人站起来或自己走。</b>"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also does",
+     "titleZh": "还要做",
+     "items": [
+      {
+       "en": "Still hypotensive or hypoperfused: vascular access and fluid. Fluid bolus <b>20 ml/kg</b>, at most <b>2 litres</b>, reassessing every 500 ml.",
+       "zh": "仍然低血压或低灌注：建立静脉通路并补液。补液 <b>20 ml/kg</b>，最多 <b>2 升</b>，每 500 ml 复查一次。"
+      },
+      {
+       "en": "Bronchospasm: salbutamol, <b>after</b> the epinephrine.",
+       "zh": "支气管痉挛：给沙丁胺醇（salbutamol），要在肾上腺素<b>之后</b>。"
+      },
+      {
+       "en": "Diphenhydramine, for the medium-term effects and to limit the histamine response.",
+       "zh": "苯海拉明（diphenhydramine）：减轻中期反应，抑制组胺反应。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man was stung by a bee. Hives, wheezing, pressure 84/50. He wants to walk to the ambulance. What do you do?",
+     "qZh": "一名男子被蜜蜂蜇了。全身荨麻疹、喘，血压 84/50。他想自己走去救护车。你怎么做？",
+     "opts": [
+      {
+       "en": "Let him walk slowly",
+       "zh": "让他慢慢走"
+      },
+      {
+       "en": "Lay him flat and carry him",
+       "zh": "让他平躺，抬着走"
+      },
+      {
+       "en": "Sit him up and walk beside him",
+       "zh": "扶他坐起来，陪着他走"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Position supine to improve the blood pressure, and do not walk the patient.",
+     "whyZh": "仰卧帮助血压回升，不让病人走。"
+    },
+    {
+     "qEn": "The stinger is still in his arm. What do you do with it?",
+     "qZh": "毒刺还留在他手臂上。怎么处理？",
+     "opts": [
+      {
+       "en": "Scrape it off",
+       "zh": "刮掉"
+      },
+      {
+       "en": "Leave it for the hospital",
+       "zh": "留给医院处理"
+      },
+      {
+       "en": "Cover it with a dressing",
+       "zh": "盖上敷料"
+      }
+     ],
+     "a": 0,
+     "whyEn": "Remove the allergen: scrape off any stinger, or stop the drug.",
+     "whyZh": "去掉过敏原：刮掉毒刺，或停止用药。"
+    },
+    {
+     "qEn": "Which drug does the anaphylaxis protocol give at every licence level?",
+     "qZh": "过敏性休克流程里，所有级别都给的药是哪个？",
+     "opts": [
+      {
+       "en": "Salbutamol",
+       "zh": "沙丁胺醇（salbutamol）"
+      },
+      {
+       "en": "Diphenhydramine",
+       "zh": "苯海拉明（diphenhydramine）"
+      },
+      {
+       "en": "Epinephrine",
+       "zh": "肾上腺素（epinephrine）"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Epinephrine is in the interventions for all licence levels. Salbutamol and diphenhydramine are PCP additions.",
+     "whyZh": "肾上腺素在所有级别的处置里。沙丁胺醇和苯海拉明是 PCP 另加的。"
+    },
+    {
+     "qEn": "She is still wheezing after the sting. When does the salbutamol go in?",
+     "qZh": "被蜇之后她还在喘。沙丁胺醇（salbutamol）什么时候给？",
+     "opts": [
+      {
+       "en": "Before the epinephrine",
+       "zh": "在肾上腺素之前"
+      },
+      {
+       "en": "After the epinephrine",
+       "zh": "在肾上腺素之后"
+      },
+      {
+       "en": "Instead of the epinephrine",
+       "zh": "代替肾上腺素"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Bronchospasm is treated with salbutamol after epinephrine has been administered.",
+     "whyZh": "给了肾上腺素之后，再用沙丁胺醇处理支气管痉挛。",
+     "pcp": true
+    }
+   ]
+  },
+  "narcotic-overdose": {
+   "pic": "./img/treat/narcotic-overdose.webp",
+   "headEn": "<em>Breathe</em> for them first. |Then naloxone.",
+   "headZh": "<em>先帮他呼吸</em>，|再给纳洛酮。",
+   "lineEn": "A low LOC with slow, shallow breathing. Check the sugar as well.",
+   "lineZh": "意识差，加上呼吸又慢又浅。血糖也要查。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "It takes both",
+     "titleZh": "两条都要有",
+     "items": [
+      {
+       "big": "LOC ↓",
+       "en": "decreased level of consciousness",
+       "zh": "意识水平下降",
+       "tone": "warn",
+       "bigZh": "意识 ↓"
+      },
+      {
+       "big": "Breathing ↓",
+       "en": "a slow rate and a small tidal volume",
+       "zh": "呼吸频率慢，而且潮气量小",
+       "tone": "bad",
+       "bigZh": "呼吸 ↓"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Other signs of an opioid overdose",
+     "titleZh": "阿片类过量的其他表现",
+     "items": [
+      {
+       "en": "Pinpoint pupils (miosis).",
+       "zh": "针尖样瞳孔（miosis）。"
+      },
+      {
+       "en": "Hypotension.",
+       "zh": "低血压。"
+      },
+      {
+       "en": "Hypothermia.",
+       "zh": "低体温。"
+      },
+      {
+       "en": "Tachycardia.",
+       "zh": "心动过速。"
+      }
+     ]
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Primary survey: manage the airway",
+       "zh": "做 primary survey：管好气道",
+       "subEn": "positioning · suction · an adjunct as needed",
+       "subZh": "摆体位 · 吸引 · 需要时放气道辅助器"
+      },
+      {
+       "en": "Support the ventilations",
+       "zh": "辅助通气",
+       "subEn": "consider a two-person bag-valve mask",
+       "subZh": "考虑双人球囊面罩"
+      },
+      {
+       "en": "Oxygen to keep SpO₂ at 94% or more",
+       "zh": "给氧，SpO₂ 保持 ≥ 94%"
+      },
+      {
+       "en": "History and baseline vitals",
+       "zh": "问病史，测基线生命体征",
+       "subEn": "with a blood glucose",
+       "subZh": "包括血糖"
+      },
+      {
+       "en": "Glucose 4 mmol/L or less: correct it",
+       "zh": "血糖 ≤ 4 mmol/L：纠正血糖"
+      },
+      {
+       "en": "Naloxone",
+       "zh": "纳洛酮 naloxone"
+      },
+      {
+       "en": "Transport, and carry on en route",
+       "zh": "转运，路上继续评估和处置"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Decide on naloxone from the LOC alone.</b> Look at the rate and the tidal volume too.",
+       "zh": "<b>只凭意识水平就决定给纳洛酮。</b>还要看呼吸频率和潮气量。"
+      }
+     ]
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Also considers",
+     "titleZh": "还要考虑",
+     "items": [
+      {
+       "en": "Still unconscious and not breathing: vascular access, and naloxone intravenously.",
+       "zh": "仍然昏迷、没有呼吸：建立静脉通路，静脉给纳洛酮。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A man is unresponsive, breathing 4 times a minute and shallowly, with pinpoint pupils. What comes first?",
+     "qZh": "一名男子没有反应，每分钟呼吸 4 次、很浅，针尖样瞳孔。先做什么？",
+     "opts": [
+      {
+       "en": "Open the airway and ventilate him",
+       "zh": "打开气道，给他通气"
+      },
+      {
+       "en": "Naloxone",
+       "zh": "给纳洛酮（naloxone）"
+      },
+      {
+       "en": "A blood glucose",
+       "zh": "测血糖"
+      }
+     ],
+     "a": 0,
+     "whyEn": "The primary survey comes first: airway, then supported ventilations and oxygen. The vitals and the naloxone follow.",
+     "whyZh": "先做 primary survey：气道、辅助通气、给氧。然后才是生命体征和纳洛酮。"
+    },
+    {
+     "qEn": "His blood glucose comes back at 3.2 mmol/L. What do you do with that?",
+     "qZh": "他的血糖是 3.2 mmol/L。怎么处理？",
+     "opts": [
+      {
+       "en": "Ignore it: this is an opioid call",
+       "zh": "不管：这是阿片类过量"
+      },
+      {
+       "en": "Correct the glucose",
+       "zh": "纠正血糖"
+      },
+      {
+       "en": "Recheck it at the hospital",
+       "zh": "到医院再复测"
+      }
+     ],
+     "a": 1,
+     "whyEn": "A blood glucose of 4 mmol/L or less is corrected.",
+     "whyZh": "血糖 ≤ 4 mmol/L 要纠正。"
+    },
+    {
+     "qEn": "A woman is drowsy after taking pills. She breathes 16 times a minute with good volume. Does she fit this protocol?",
+     "qZh": "一名女子吃药后犯困。呼吸每分钟 16 次，潮气量正常。符合这个流程吗？",
+     "opts": [
+      {
+       "en": "Yes: drowsy is enough",
+       "zh": "符合：犯困就够了"
+      },
+      {
+       "en": "Yes, with a double dose",
+       "zh": "符合，而且要双倍剂量"
+      },
+      {
+       "en": "No: her breathing is not depressed",
+       "zh": "不符合：呼吸没有受抑制"
+      }
+     ],
+     "a": 2,
+     "whyEn": "The indication is a decreased LOC together with a depressed respiratory drive: a low rate and a limited tidal volume.",
+     "whyZh": "启用条件是意识下降，同时呼吸驱动受抑制：频率慢、潮气量小。"
+    }
+   ]
+  },
+  "diabetic-emergencies": {
+   "pic": "./img/treat/diabetic-emergencies.webp",
+   "headEn": "Below 4.0: |gel only if they can |<em>protect</em> the airway.",
+   "headZh": "血糖低于 4.0：|<em>护得住气道</em>|才给凝胶。",
+   "lineEn": "A low LOC with no known cause always gets a blood glucose. Look for stroke signs too.",
+   "lineZh": "意识下降又原因不明，一定要查血糖。还要看有没有卒中表现。",
+   "blocks": [
+    {
+     "type": "bands",
+     "titleEn": "Glucose under 4.0: which way in",
+     "titleZh": "血糖 < 4.0：怎么给",
+     "items": [
+      {
+       "big": "Awake enough",
+       "en": "enough mentation to keep the airway: glucose gel on the oral mucosa",
+       "zh": "神志足以护住气道：葡萄糖凝胶（glucose gel）涂在口腔黏膜上",
+       "tone": "ok",
+       "bigZh": "够清醒"
+      },
+      {
+       "big": "Not awake enough",
+       "en": "insufficient mentation or an unprotected airway: an EMR gives glucagon; a PCP goes to the IV first",
+       "zh": "神志不够，或气道没有保护：EMR 给胰高血糖素（glucagon）；PCP 先开静脉",
+       "tone": "bad",
+       "bigZh": "不够清醒"
+      }
+     ],
+     "stack": true
+    },
+    {
+     "type": "ladder",
+     "titleEn": "Everyone does this",
+     "titleZh": "所有级别都做",
+     "steps": [
+      {
+       "en": "Primary survey: manage the airway",
+       "zh": "做 primary survey：管好气道",
+       "subEn": "positioning · suction · an adjunct as needed",
+       "subZh": "摆体位 · 吸引 · 需要时放气道辅助器"
+      },
+      {
+       "en": "Oxygen to keep SpO₂ at 94% or more",
+       "zh": "给氧，SpO₂ 保持 ≥ 94%"
+      },
+      {
+       "en": "Lateral or three-quarter prone, if needed",
+       "zh": "需要的话侧卧或 3/4 俯卧"
+      },
+      {
+       "en": "The crew prepares the way out",
+       "zh": "队友准备撤离路线"
+      },
+      {
+       "en": "History and baseline vitals",
+       "zh": "问病史，测基线生命体征",
+       "subEn": "with a blood glucose",
+       "subZh": "包括血糖"
+      },
+      {
+       "en": "Look for stroke signs and symptoms",
+       "zh": "评估有没有卒中表现"
+      },
+      {
+       "en": "Correct suspected hypoglycemia",
+       "zh": "纠正疑似低血糖",
+       "subEn": "glucose under 4.0 mmol/L",
+       "subZh": "血糖 < 4.0 mmol/L"
+      }
+     ]
+    },
+    {
+     "type": "never",
+     "titleEn": "Never",
+     "titleZh": "绝对不要",
+     "items": [
+      {
+       "en": "<b>Put glucose gel in the mouth</b> of a patient who cannot protect the airway.",
+       "zh": "给护不住气道的病人<b>往嘴里涂葡萄糖凝胶</b>。"
+      }
+     ]
+    },
+    {
+     "type": "bands",
+     "titleEn": "With an IV",
+     "titleZh": "有静脉通路时",
+     "items": [
+      {
+       "big": "D10W",
+       "en": "10–25 g, which is 100–250 ml of the 10% solution, for confirmed hypoglycemia",
+       "zh": "确认低血糖：10–25 g，也就是 10% 葡萄糖（D10W）100–250 ml",
+       "tone": ""
+      },
+      {
+       "big": "No IV",
+       "en": "glucagon",
+       "zh": "开不了静脉：给胰高血糖素（glucagon）",
+       "tone": "warn",
+       "bigZh": "开不了"
+      }
+     ],
+     "pcp": true,
+     "stack": true
+    },
+    {
+     "type": "ticks",
+     "titleEn": "Then go",
+     "titleZh": "然后出发",
+     "items": [
+      {
+       "en": "Transport after the first bolus of D10W, or after the glucagon, and carry on en route.",
+       "zh": "第一剂 D10W 或胰高血糖素给完就转运，路上继续评估和处置。"
+      }
+     ],
+     "pcp": true
+    }
+   ],
+   "quiz": [
+    {
+     "qEn": "A known diabetic is confused but talking, and swallows when asked. Glucose 2.9 mmol/L. What do you give?",
+     "qZh": "一名糖尿病病人神志有些混乱，但能说话，让他吞咽他能做到。血糖 2.9 mmol/L。给什么？",
+     "opts": [
+      {
+       "en": "Glucose gel on the oral mucosa",
+       "zh": "葡萄糖凝胶，涂口腔黏膜"
+      },
+      {
+       "en": "Nothing by mouth: wait for the hospital",
+       "zh": "什么都不经口给，等到医院"
+      },
+      {
+       "en": "A cold pack",
+       "zh": "冰袋"
+      }
+     ],
+     "a": 0,
+     "whyEn": "With enough mentation to maintain an airway, glucose gel goes on the oral mucosa.",
+     "whyZh": "神志足以护住气道的病人，把葡萄糖凝胶涂在口腔黏膜上。"
+    },
+    {
+     "qEn": "A woman is unresponsive and snoring. Glucose 2.1 mmol/L. No IV is possible. What do you give?",
+     "qZh": "一名女子没有反应、打鼾样呼吸。血糖 2.1 mmol/L。开不了静脉。给什么？",
+     "opts": [
+      {
+       "en": "Glucose gel in her cheek",
+       "zh": "把葡萄糖凝胶涂在她的颊内"
+      },
+      {
+       "en": "Glucagon",
+       "zh": "胰高血糖素（glucagon）"
+      },
+      {
+       "en": "Juice",
+       "zh": "果汁"
+      }
+     ],
+     "a": 1,
+     "whyEn": "Insufficient mentation or an unprotected airway: glucagon. A PCP uses it when IV access cannot be obtained.",
+     "whyZh": "神志不够或气道没有保护：给胰高血糖素。PCP 在开不了静脉时用它。"
+    },
+    {
+     "qEn": "A man has a low LOC. His glucose is 6.2 mmol/L and one arm is weak. What do you look for?",
+     "qZh": "一名男子意识下降。血糖 6.2 mmol/L，一侧手臂无力。你要评估什么？",
+     "opts": [
+      {
+       "en": "Nothing more: the sugar is normal",
+       "zh": "不用了：血糖正常"
+      },
+      {
+       "en": "A reason to give glucagon anyway",
+       "zh": "找理由照样给胰高血糖素"
+      },
+      {
+       "en": "Stroke signs and symptoms",
+       "zh": "卒中的表现"
+      }
+     ],
+     "a": 2,
+     "whyEn": "Every patient on this page is evaluated for stroke signs and symptoms.",
+     "whyZh": "这一页的每个病人都要评估有没有卒中表现。"
+    },
+    {
+     "qEn": "The IV is in and the hypoglycemia is confirmed. How much D10W?",
+     "qZh": "静脉通路开好了，低血糖也确认了。D10W（10% 葡萄糖）给多少？",
+     "opts": [
+      {
+       "en": "50 g",
+       "zh": "50 g"
+      },
+      {
+       "en": "10–25 g, which is 100–250 ml",
+       "zh": "10–25 g，也就是 100–250 ml"
+      },
+      {
+       "en": "5 g",
+       "zh": "5 g"
+      }
+     ],
+     "a": 1,
+     "whyEn": "D10W 10–25 g: 100–250 ml of the 10% solution.",
+     "whyZh": "D10W 10–25 g：10% 溶液 100–250 ml。",
+     "pcp": true
+    }
+   ]
   }
  }
 }
