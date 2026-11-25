@@ -1784,3 +1784,77 @@ body.cls-playing .view-root { padding-bottom: 170px; }
   .ddx.tl .tl-rows { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; }
   .ddx.tl .tl-rows .hm-row:nth-child(-n+3) { border-top: 0; }
 }
+
+/* ---------------- Guideline pages in the card style (src/guides.js): protocols, drug sheets, assessment model, reference ---------------- */
+.ddx.tc .tc-ladder.long li { align-items: start; }
+.ddx.tc .tc-ladder.long li b { font: 700 16px/1.35 var(--display); letter-spacing: 0; padding-top: 7px; text-wrap: pretty; }
+.ddx.tc .tc-ladder.long li small { font: 500 13.5px/1.5 var(--body); margin-top: 3px; }
+.ddx.tc em.pcp, .ddx.tc em.say { font: 700 10.5px var(--mono); font-style: normal; letter-spacing: .06em; border-radius: 5px; padding: 2px 6px; vertical-align: 2px; white-space: nowrap; }
+.ddx.tc em.pcp { background: var(--ink); color: var(--paper); }
+.ddx.tc em.say { background: var(--hivis); color: #15181B; }
+.ddx.tc .tc-ticks.warn li i { background: var(--hivis); color: #15181B; }
+.ddx.tc .tc-ticks.warn li i svg, .ddx.tc .tc-ticks.dot li i svg { display: none; }
+.ddx.tc .tc-ticks.warn li i::before { content: "!"; font: 800 15px var(--display); }
+.ddx.tc .tc-ticks.dot li { grid-template-columns: 8px 1fr; }
+.ddx.tc .tc-ticks.dot li i { width: 8px; height: 8px; margin-top: 8px; background: var(--ink3); }
+.ddx.tc .bd.stack.gdr > div { grid-template-columns: 62px 1fr; align-items: start; }
+.ddx.tc .bd.gdr b { font-size: 17px; padding-top: 2px; }
+.ddx.tc .bd.gdr small { font-size: 15px; line-height: 1.5; color: var(--ink); text-wrap: pretty; min-width: 0; overflow-wrap: anywhere; }
+.ddx.tc .tc-ladder li > span { min-width: 0; }
+.ddx.tc .bd.gdr .warn small { color: #15181B; }
+.ddx.tc .bd.gdr small strong { display: block; font: 800 16px/1.3 var(--display); }
+.ddx.tc .bd.stack.avpu > div, .ddx.tc .bd.stack.gcs > div { grid-template-columns: 40px 1fr; align-items: center; }
+.ddx.tc .bd.avpu b, .ddx.tc .bd.gcs b { font-size: 26px; text-align: center; padding: 0; }
+.ddx.tc .bd.stack.gcs > div { padding: 9px 14px; }
+.ddx.tc .bd.gcs .head { background: var(--ink); }
+.ddx.tc .bd.gcs .head b, .ddx.tc .bd.gcs .head strong { color: var(--paper); }
+.ddx.tc .phs.gd-note { display: block; padding: 14px 16px; }
+.ddx.tc .phs.gd-note p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+.ddx.tc .gd-flag { background: var(--hivis); color: #15181B; border-radius: 14px; padding: 10px 14px; font: 600 14px/1.5 var(--body); margin: 14px 0 0; }
+.ddx .gd-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ddx .gd-tiles .hm-tile b { font-size: 12px; line-height: 1.25; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.ddx.tc .bd.gdr .warn .zh { color: #15181B; opacity: .78; }
+.ddx .gd-tiles .hm-tile .stk { height: 64px; }
+.ddx .gd-cta { margin-top: 26px; text-decoration: none; }
+.ddx.tl .tl-tiles .hm-tile b { overflow-wrap: anywhere; }
+.ddx.tc .qz .qq { background: var(--paper); border-radius: 12px; padding: 10px 12px; font: 600 15.5px/1.45 var(--body); margin: 0 0 12px; box-shadow: inset 4px 0 0 var(--ink); }
+.ddx.tc .qz .opts.short { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ddx.tc .qz .opts.short button { text-align: center; font: 800 20px var(--display); }
+/* the assessment order: each step opens */
+.ddx.tc .gd-ph summary { cursor: pointer; list-style: none; padding-right: 28px; position: relative; }
+.ddx.tc .gd-ph summary::-webkit-details-marker { display: none; }
+.ddx.tc .gd-ph summary::after { content: ""; position: absolute; right: 6px; top: 13px; width: 9px; height: 9px; border-right: 2.4px solid var(--ink3); border-bottom: 2.4px solid var(--ink3); transform: rotate(45deg); transition: transform .15s; }
+.ddx.tc .gd-ph[open] summary::after { transform: rotate(-135deg); top: 18px; }
+.ddx.tc .tc-ladder.gd-phases summary b { font: 800 18px/1.25 var(--display); }
+.ddx.tc .tc-ladder.gd-phases .gd-steps { margin: 10px 0 6px; display: grid; gap: 8px; }
+.ddx.tc .tc-ladder.gd-phases .gd-steps > div { background: var(--paper); border-radius: 12px; padding: 10px 12px; }
+.ddx.tc .tc-ladder.gd-phases .gd-steps b { font: 700 15.5px/1.35 var(--display); padding: 0; overflow-wrap: anywhere; min-width: 0; }
+.ddx.tc .tc-ladder.gd-phases .gd-steps small { font: 500 13.5px/1.5 var(--body); color: var(--ink2); }
+.ddx.tc .gd-sub { font: 600 11.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink2); margin: 12px 0 4px; }
+.ddx.tc .gd-list, .ddx.tc .tc-ladder.gd-phases .gd-list { margin: 0; padding: 0 0 0 18px; list-style: disc; font-size: 14.5px; line-height: 1.55; background: none; box-shadow: none; border-radius: 0; }
+.ddx.tc .gd-list li, .ddx.tc .tc-ladder.gd-phases .gd-list li { display: list-item; padding: 2px 0; }
+.ddx.tc .tc-ladder.gd-phases .gd-list li::before { display: none; }
+.ddx.tc .gd-more { margin-top: 4px; }
+.ddx.tc .gd-more summary { cursor: pointer; font: 600 13px var(--body); color: var(--ink2); padding: 6px 0; }
+.ddx.tc .gd-fold { margin-top: 10px; }
+.ddx.tc .gd-fold summary { color: var(--ink); }
+/* the reference page */
+.ddx.tc .gd-search { width: 100%; font: 500 16px var(--body); color: var(--ink); background: var(--paper); border: 0; border-radius: 12px; padding: 12px 14px; box-shadow: inset 0 0 0 1.5px var(--line); }
+.ddx.tc .gd-abbrs { margin-top: 8px; }
+.ddx.tc .gd-abbrs > div { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 9px 2px; font-size: 15px; line-height: 1.4; break-inside: avoid; }
+.ddx.tc .gd-abbrs > div + div { border-top: 1.5px solid var(--line); }
+.ddx.tc .gd-abbrs b { font: 700 15px var(--mono); overflow-wrap: anywhere; }
+.ddx.tc .gd-none { color: var(--ink2); margin: 12px 2px 0; }
+.ddx.tc .gd-abbr .nextbtn { margin-top: 12px; font-size: 15px; padding: 10px 18px; }
+@media (min-width: 900px) {
+  .ddx.tc .gd-wide { column-span: all; }
+  .ddx .gd-tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+  .ddx .gd-tiles .hm-tile .stk { height: 88px; }
+  .ddx .gd-tiles .hm-tile b { font-size: 14px; letter-spacing: -.01em; }
+  .ddx .gd-cta.wide { width: auto; padding: 14px 28px; }
+  .ddx.tc .gd-gcs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; align-items: start; }
+  .ddx.tc .gd-gcs .tc-b { padding-top: 12px; }
+  .ddx.tc .gd-abbrs { columns: 2; column-gap: 40px; }
+  .ddx.tc .gd-phases ol { padding: 12px 22px; }
+  .ddx.tc .qz .opts.short { max-width: 520px; }
+}

@@ -1,7 +1,8 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=90';
-import { sClassroom } from './classroom.js?v=90';
-import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=90';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=91';
+import { sClassroom } from './classroom.js?v=91';
+import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=91';
+import { sAssessment, sProtocols, sDrugs, sReference } from './guides.js?v=91';   // the other guideline pages, in the card style
 
 /* ---------------- study hub ---------------- */
 // The six official-guideline tiles, shared by the Learn hub and the guidelines page.
@@ -249,107 +250,6 @@ function ensureToTop() {
   }
 }
 
-async function sAssessment(el) {
-  const d = await loadJSON('./data/study/assessment-model.json');
-  if (!d) { el.innerHTML = backGuide() + deploying('Assessment Model'); return; }
-  el.innerHTML = `
-    ${backGuide()}
-    <div class="card">
-      <h2>${ico('compass')} ${t('Patient Assessment Model', '患者评估模型')}</h2>
-      <p class="tiny">${esc(d.meta.source)} · pp.${esc(d.meta.sourcePages)}</p>
-      ${bi('Master this order until it is automatic — the practical exam is scored phase by phase against it.',
-           '把这个顺序练到条件反射——实操考试就是按它逐阶段评分的。')}
-    </div>
-    ${(d.phases || []).map((p, i) => `
-      <details class="acc">
-        <summary><span class="step-num" style="flex:0 0 26px;height:26px;font-size:.8rem">${i + 1}</span> ${bi(p.nameEn, p.nameZh, 'span')}</summary>
-        <div class="acc-body">
-          ${(p.stepsEn || []).map((st, j) => {
-            const zh = (p.stepsZh || [])[j] || {};
-            return `<div class="chk" style="cursor:default">
-              <span>${bi(st.step, zh.step, 'span')}${st.detail ? `<div class="tiny">${bi(st.detail, zh.detail || '', 'span')}</div>` : ''}</span>
-              ${st.verbalize ? `<span class="chk-w" style="background:var(--accent-soft);color:var(--accent)"> ${t('say it', '要口述')}</span>` : ''}
-            </div>`;
-          }).join('')}
-          ${(p.interventionsEn || []).length ? `<div class="detail-section"><h4>${t('Possible interventions', '可能触发的干预')}</h4><ul>${biList(p.interventionsEn, p.interventionsZh)}</ul></div>` : ''}
-          <p class="tiny">p.${p.sourcePage || ''}</p>
-        </div>
-      </details>`).join('')}
-    ${d.unstableCriteria ? `<div class="card"><h3 style="margin-top:0">${ico('cross')} ${t('Unstable / RTC criteria', '危重(RTC)判定标准')}</h3>
-      ${d.unstableCriteria.descriptionEn ? bi(d.unstableCriteria.descriptionEn, d.unstableCriteria.descriptionZh) : ''}
-      ${[['primarySurveyFindings', t('Primary survey findings', '初级评估发现')],
-         ['anatomicalFindings', t('Anatomical findings', '解剖学发现')],
-         ['mechanismOfInjury', t('Mechanism of injury', '受伤机制')]]
-        .map(([key, label]) => sec(label, d.unstableCriteria[key + 'En'], d.unstableCriteria[key + 'Zh'])).join('')}
-      <p class="tiny">pp. ${pages(d.unstableCriteria.sourcePages)}</p></div>` : ''}
-    ${d.criticalHistory ? `<div class="card"><h3 style="margin-top:0"> ${t('Critical History Questions', '关键病史问题')}</h3>
-      ${(d.criticalHistory.mnemonics || []).map(m => `<details class="acc"><summary><b>${esc(m.name)}</b>${m.supplementary ? ` <span class="pill gray">${t('study aid', '辅助记忆')}</span>` : ''}</summary>
-        <div class="acc-body"><ul>${biList(m.expansionEn, m.expansionZh)}</ul></div></details>`).join('')}
-      ${renderCriticalHistory(d.criticalHistory)}
-    </div>` : ''}
-    ${d.avpu ? `<div class="card"><h3 style="margin-top:0"> AVPU</h3>
-      ${(d.avpu.levelsEn || []).map((lv, i) => {
-        const lz = (d.avpu.levelsZh || [])[i] || {};
-        return `<div class="chk" style="cursor:default">
-          <span class="opt-key" style="background:var(--accent-soft);color:var(--accent);border:none">${esc(lv.letter || '')}</span>
-          <span><b>${bi(lv.term, lz.term || lv.term, 'span')}</b><div class="tiny">${bi(lv.description, lz.description || '', 'span')}</div></span>
-        </div>`;
-      }).join('')}
-      ${(d.avpu.notesEn || []).length ? `<div class="detail-section"><h4>${t('Notes', '要点')}</h4><ul>${biList(d.avpu.notesEn, d.avpu.notesZh)}</ul></div>` : ''}</div>` : ''}
-    ${d.pcr ? `<div class="card"><h3 style="margin-top:0">${ico('list')} ${t('Patient Care Report fields', 'PCR 报告字段')}</h3><ul>${biList(d.pcr.fieldsEn, d.pcr.fieldsZh)}</ul></div>` : ''}`;
-}
-
-async function sProtocols(el, params) {
-  const d = await loadJSON('./data/study/protocols.json');
-  if (!d) { el.innerHTML = backGuide() + deploying('Protocols'); return; }
-  const id = params.id;
-  const list = d.protocols.filter(p => !(p.licence === 'pcp' && S.track === 'emr'));
-  if (id) {
-    const p = d.protocols.find(x => x.id === id);
-    if (p) { drawProtocol(el, p); return; }
-  }
-  el.innerHTML = `
-    ${backGuide()}
-    <div class="card"><h2> ${t('Protocols', '处置协议')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
-    ${bi('These 13 protocols are exactly what the practical examiners grade "cognitive ability and protocol decision-making" against.',
-         '这 13 个协议就是实操考官评估"认知能力与协议决策"的依据。')}</div>
-    <div class="list-wrap">
-      ${list.map(p => `<button class="list-item" data-goto="/study/protocols?id=${p.id}">
-        <span>${bi(p.nameEn, p.nameZh, 'span')}</span>
-        ${p.licence === 'pcp' ? '<span class="pill pcp">PCP</span>' : ''}
-        <span class="li-arrow">›</span></button>`).join('')}
-    </div>`;
-  el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
-}
-function drawProtocol(el, p) {
-  el.innerHTML = `
-    <a class="back-link" href="#/study/protocols">← ${t('Protocols', '协议列表')}</a>
-    <div class="card">
-      <h2>${bi(p.nameEn, p.nameZh, 'span')} ${p.licence === 'pcp' ? '<span class="pill pcp">PCP</span>' : ''}</h2>
-      ${sec(t('Indications', '适应指征'), p.indicationsEn, p.indicationsZh)}
-      ${sec(t('Contraindications', '禁忌'), p.contraindicationsEn, p.contraindicationsZh)}
-      ${sec(t('Steps', '处置步骤'), p.stepsEn, p.stepsZh)}
-      ${p.emrPcpDiffEn ? `<div class="detail-section"><h4>EMR vs PCP</h4>${bi(p.emrPcpDiffEn, p.emrPcpDiffZh)}</div>` : ''}
-      ${sec(' ' + t('Common exam deductions', '考试常见扣分'), p.commonDeductionsEn, p.commonDeductionsZh)}
-      ${(p.drugs || []).length ? `<div class="detail-section"><h4>${t('Linked drugs', '关联药物')}</h4><div class="btn-row">${p.drugs.map(dg => `<a class="btn ghost" href="#/study/drugs?id=${dg}">${esc(dg)}</a>`).join('')}</div></div>` : ''}
-      <p class="tiny">pp. ${pages(p.sourcePages)}</p>
-    </div>`;
-}
-// source page refs arrive as arrays in some files and plain strings in others
-function pages(v) { return esc(Array.isArray(v) ? v.join(', ') : (v ?? '')); }
-// criticalHistory.questionsEn is grouped by mechanism: [{category, questions[]}, …]
-function renderCriticalHistory(ch) {
-  const en = ch.questionsEn || [], zh = ch.questionsZh || [];
-  if (!en.length) return '';
-  if (typeof en[0] === 'string') {
-    return `<div class="detail-section"><h4>${t('By mechanism', '按受伤机制')}</h4><ul>${biList(en, zh)}</ul></div>`;
-  }
-  return en.map((g, i) => {
-    const gz = zh[i] || {};
-    return `<details class="acc"><summary>${bi(g.category, gz.category || g.category, 'span')}</summary>
-      <div class="acc-body"><ul>${biList(g.questions || [], gz.questions || [])}</ul></div></details>`;
-  }).join('');
-}
 function sec(title, en = [], zh = []) {
   if (!en || !en.length) return '';
   return `<div class="detail-section"><h4>${title}</h4><ul>${biList(en, zh)}</ul></div>`;
@@ -474,94 +374,6 @@ async function sTreatments(el, params) {
     }).join('')}
     <p class="foot">${guideFoot()}</p>
   </main></div>`;
-}
-
-async function sDrugs(el, params) {
-  const [d, add] = await Promise.all([loadJSON('./data/study/drugs.json'), loadJSON('./data/study/drugs-added.json')]);
-  if (!d) { el.innerHTML = backGuide() + deploying('Drugs'); return; }
-  const added = add ? add.drugs : [];
-  const id = params.id;
-  if (id) {
-    const dr = d.drugs.find(x => x.id === id) || added.find(x => x.id === id);
-    if (dr) { drawDrug(el, dr); return; }
-  }
-  const mine = d.drugs.filter(dr => (dr.licence || []).map(s => s.toLowerCase()).includes(S.track));
-  const others = d.drugs.filter(dr => !mine.includes(dr));
-  el.innerHTML = `
-    ${backGuide()}
-    <div class="card"><h2>${ico('pill')} ${t('Drug Monographs', '药物专论')} <span class="pill ${S.track}">${S.track.toUpperCase()}</span></h2>
-      ${bi(`Licensing exam (EMALB): ${d.drugs.length} drugs. ${mine.length} in your scope · ${others.length} beyond it (still worth recognizing).`,
-           `执照考试（EMALB）共 ${d.drugs.length} 种药。你的授权范围内 ${mine.length} 个 · 范围外 ${others.length} 个（也要认识）。`)}</div>
-    <div class="list-wrap">
-      ${mine.map(dr => drugRow(dr)).join('')}
-    </div>
-    ${others.length ? `<div class="card"><h3 style="margin-top:0">${t('Beyond your scope', '超出你的授权')}</h3></div>
-    <div class="list-wrap">${others.map(dr => drugRow(dr)).join('')}</div>` : ''}
-    ${added.length ? `<div class="card"><h3 style="margin-top:0">${t('BCEHS added scope (school course)', 'BCEHS 扩展范围（学校课程）')} <span class="pill gray">${t('not on the licensing exam', '执照考试不考')}</span></h3>
-      ${bi('PCP drugs from the BCEHS Handbook that BC PCPs give after Schedule 1/2 training. Your school course teaches and tests them; the EMALB licensing exam does not. On the licensing exam, answer with the 18 drugs above.',
-           'BC 的 PCP 完成 Schedule 1/2 培训后，按 BCEHS 手册可以给的药。学校课程会教、会考；EMALB 执照考试不考。执照考试只按上面 18 种药作答。')}</div>
-    <div class="list-wrap">${added.map(dr => drugRow(dr)).join('')}</div>` : ''}`;
-  el.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => nav(b.dataset.goto));
-}
-// label | value line under a drug's name; both-language mode keeps the short English label
-const drugLine = (en, zh, labelEn, labelZh) => en ? `<div class="tiny drug-line"><b>${S.lang === 'zh' ? labelZh : labelEn}</b>${bi(en, zh)}</div>` : '';
-function drugRow(dr) {
-  return `<button class="list-item" data-goto="/study/drugs?id=${dr.id}">
-    <span class="drug-main">${bi(dr.nameEn, dr.nameZh, 'span')}
-      <span class="drug-pills">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}${dr.scope === 'bcehs-added' ? '<span class="pill gray">BCEHS</span>' : ''}</span>
-      ${drugLine(dr.forEn, dr.forZh, 'Indications', '适应指征')}
-      ${drugLine(dr.whatEn, dr.whatZh, 'What it does', '作用')}</span>
-    <span class="li-arrow">›</span></button>`;
-}
-function drawDrug(el, dr) {
-  const dose = dr.doseEn || {}, doseZh = dr.doseZh || {};
-  el.innerHTML = `
-    <a class="back-link" href="#/study/drugs">← ${t('Drugs', '药物列表')}</a>
-    <div class="card">
-      <h2>${bi(dr.nameEn, dr.nameZh, 'span')}</h2>
-      ${dr.scope === 'bcehs-added' ? `<p class="notice">${t('BCEHS added scope: taught and tested in the school course, not on the EMALB licensing exam.', 'BCEHS 扩展范围：学校课程会教会考，EMALB 执照考试不考。')}</p>` : ''}
-      <div style="display:flex;gap:6px;margin:6px 0">${(dr.licence || []).map(l => `<span class="pill ${l.toLowerCase()}">${l}</span>`).join('')}
-        ${(dr.routes || []).map(r => `<span class="pill gray">${esc(r)}</span>`).join('')}</div>
-      ${dr.whatEn ? `<div class="detail-section"><h4>${t('What it does', '作用')}</h4>${bi(dr.whatEn, dr.whatZh)}</div>` : ''}
-      ${dr.classificationEn ? `<div class="detail-section"><h4>${t('Class', '分类')}</h4>${bi(dr.classificationEn, dr.classificationZh)}</div>` : ''}
-      ${sec(t('Indications', '适应指征'), dr.indicationsEn, dr.indicationsZh)}
-      ${sec(' ' + t('Contraindications', '禁忌'), dr.contraindicationsEn, dr.contraindicationsZh)}
-      ${sec(' ' + t('Cautions', '慎用'), dr.cautionsEn, dr.cautionsZh)}
-      <div class="detail-section"><h4>${t('Dose', '剂量')}</h4>
-        <table class="vitals-table">
-          ${Object.entries(dose).filter(([, v]) => v).map(([k, v]) => `<tr><th>${esc(k)}</th><td>${bi(v, doseZh[k] || '', 'span')}</td></tr>`).join('')}
-        </table></div>
-      ${sec(t('Side effects', '副作用'), dr.sideEffectsEn, dr.sideEffectsZh)}
-      ${sec(t('Notes', '备注'), dr.notesEn, dr.notesZh)}
-      ${sec(ico('info') + ' ' + t('Exam tips', '考试要点'), dr.examTipsEn, dr.examTipsZh)}
-      <p class="tiny">${dr.sourceUrl ? `${t('Source', '来源')}: <a href="${dr.sourceUrl}" target="_blank" rel="noopener">BCEHS Handbook</a>` : `p. ${dr.sourcePage || ''}`}</p>
-    </div>`;
-}
-
-async function sReference(el) {
-  const d = await loadJSON('./data/study/reference.json');
-  if (!d) { el.innerHTML = backGuide() + deploying('Reference'); return; }
-  el.innerHTML = `
-    ${backGuide()}
-    <div class="card">
-      <h2>${ico('abc')} ${t('Abbreviations', '缩写表')} <span class="tag-count">${(d.abbreviations || []).length}</span></h2>
-      <input class="search-box" id="abbrSearch" placeholder="${t('Search abbreviations…', '搜索缩写…')}" />
-      <div id="abbrList"></div>
-    </div>
-    ${d.gcs ? `<div class="card"><h3 style="margin-top:0"> Glasgow Coma Scale</h3>
-      <div class="grid-3">
-        ${['eye', 'verbal', 'motor'].map(k => `<div><h4 style="text-transform:capitalize">${k}</h4>
-          <ul style="padding-left:18px">${(d.gcs[k] || []).map(x => `<li class="tiny">${esc(typeof x === 'string' ? x : JSON.stringify(x))}</li>`).join('')}</ul></div>`).join('')}
-      </div>
-      ${(d.gcs.notesEn || []).length ? `<ul>${biList(d.gcs.notesEn, d.gcs.notesZh)}</ul>` : ''}</div>` : ''}`;
-  const listEl = el.querySelector('#abbrList');
-  const drawAbbr = q => {
-    const rows = (d.abbreviations || []).filter(a => !q || a.abbr.toLowerCase().includes(q) || (a.en || '').toLowerCase().includes(q));
-    listEl.innerHTML = `<table class="vitals-table">${rows.slice(0, 200).map(a =>
-      `<tr><th style="white-space:nowrap">${esc(a.abbr)}</th><td>${bi(a.en, a.zh, 'span')}</td></tr>`).join('')}</table>`;
-  };
-  drawAbbr('');
-  el.querySelector('#abbrSearch').oninput = e => drawAbbr(e.target.value.trim().toLowerCase());
 }
 
 /* ---------------- jurisprudence ---------------- */
