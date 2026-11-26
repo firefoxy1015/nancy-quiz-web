@@ -1,15 +1,15 @@
 // BC EMR/PCP Exam Prep v2 — core: state, i18n, router, data, home/guide
 // NOTE: keep the ?v= build tag in sync across index.html and these imports —
 // without it browsers serve stale modules after a deploy.
-import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=91';
-import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=91';
-import { renderPlay } from './play.js?v=91';
-import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=91';
-import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=91';
-import { renderPortal } from './portal.js?v=91';
-import { renderAetClass } from './aetclass.js?v=91';
-import { renderBackup } from './backup.js?v=91';
-import { renderHome, placeOf } from './home.js?v=91';
+import { renderWrittenHub, renderPractice, renderMock, renderWrong, renderAetHub } from './exam.js?v=92';
+import { renderPracticalHub, renderScenarioList, renderScenarioPlayer, renderRubricBrowser, renderAutoFails } from './scenario.js?v=92';
+import { renderPlay } from './play.js?v=92';
+import { renderStudyHub, renderStudySection, renderJurisHub, renderExamInfo } from './study.js?v=92';
+import { renderExaminerHub, renderExaminerRun, renderExaminerLog } from './examiner.js?v=92';
+import { renderPortal } from './portal.js?v=92';
+import { renderAetClass } from './aetclass.js?v=92';
+import { renderBackup } from './backup.js?v=92';
+import { renderHome, placeOf } from './home.js?v=92';
 
 /* ---------------- state ---------------- */
 const LS_KEY = 'bcprep2';
@@ -175,7 +175,10 @@ async function route() {
   el.className = 'view-root lang-' + S.lang;
   // track required for most views
   const noTrack = ['', 'home', 'guide', 'info', 'portal', 'backup'];
-  if (!S.track && !noTrack.includes(name) && name !== 'play' && !(name === 'aet' && arg === 'class')) { nav('/'); return; }
+  // The class course is reached by direct link only (no entrance on the site), so its pages must open for a visitor who has
+  // never picked a track: the hub, the lectures and the module drills all show the password screen first.
+  const classLink = name === 'aet' || (name === 'practice' && params.aet);
+  if (!S.track && !noTrack.includes(name) && name !== 'play' && !classLink) { nav('/'); return; }
   let fn = routes[name] || renderHome;
   if (name === 'study' && arg) fn = renderStudySection;
   if (name === 'aet' && arg === 'class') fn = renderAetClass;

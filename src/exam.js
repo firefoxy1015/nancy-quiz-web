@@ -1,7 +1,7 @@
 // Written exam engine: practice mode + blueprint-weighted mock + wrongbook
-import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=91';
-import { aetUnlocked, aetGate } from './aetclass.js?v=91';
-import { two, one, mini, stk, ARROW } from './home.js?v=91';
+import { S, save, bi, t, esc, loadJSON, loadBank, nav, ico, TOPIC_GROUPS, topicGroup, groupLabel } from './app.js?v=92';
+import { aetUnlocked, aetGate } from './aetclass.js?v=92';
+import { two, one, mini, stk, ARROW } from './home.js?v=92';
 
 let session = null; // current exam session (mock or practice)
 
@@ -151,7 +151,7 @@ function drawPracticeQ(el, groups, gCount, areas, group, area, pop, aet) {
         ${q ? questionHTML(q, false) : `<p class="muted">${t('No questions match this filter.', '这个筛选下没有题。')}</p>`}
         <div class="btn-row">
           <button class="btn ghost" id="skipBtn">${t('Skip', '跳过')} →</button>
-          <a class="btn ghost" href="#/written">← ${t('Back', '返回')}</a>
+          <a class="btn ghost" href="${aet ? '#/aet' : '#/written'}">← ${t('Back', '返回')}</a>
         </div>
         <p class="tiny">${t('Keys: A–D answer · Enter next', '键盘：A–D 选答案 · Enter 下一题')}</p>
       </div>

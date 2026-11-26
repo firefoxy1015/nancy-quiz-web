@@ -1,7 +1,7 @@
 // Practical exam: scenario player with official deduction rubric, timers, PCR practice,
 // full-exam mock mode (1 medical + 1 trauma), and crash-safe run persistence.
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=91';
-import { two, one, mini, stk, ARROW } from './home.js?v=91';
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=92';
+import { two, one, mini, stk, ARROW } from './home.js?v=92';
 
 // Scenarios live in several files (see data/practical/index.json) so batches can
 // be authored independently; they are merged into one pool at load time.

@@ -2,9 +2,9 @@
 // About one phone screen: one "continue" button, three quick-practice tiles, the lessons, and the three exams with one number
 // each. Every card is tapped as a whole; there are no separate "Enter" buttons. Stickers: img/home/<id>.webp (drawn by
 // D:\Claude\drug-trainer\design\home_stickers.py), plus a few borrowed from drugs/img and img/play.
-// The AET class is deliberately NOT on this page (class-only, behind its password): it stays under Learn. S.last, written by
+// The AET class is deliberately NOT on this page, nor anywhere else on the site: direct link plus the class password only. S.last, written by
 // app.js route(), is the last place worth returning to; AET routes are never recorded.
-import { S, esc } from './app.js?v=91';
+import { S, esc } from './app.js?v=92';
 
 export const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 export const CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M9 5l7 7-7 7"/></svg>';

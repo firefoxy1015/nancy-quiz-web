@@ -1,8 +1,8 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=91';
-import { sClassroom } from './classroom.js?v=91';
-import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=91';
-import { sAssessment, sProtocols, sDrugs, sReference } from './guides.js?v=91';   // the other guideline pages, in the card style
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=92';
+import { sClassroom } from './classroom.js?v=92';
+import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=92';
+import { sAssessment, sProtocols, sDrugs, sReference } from './guides.js?v=92';   // the other guideline pages, in the card style
 
 /* ---------------- study hub ---------------- */
 // The six official-guideline tiles, shared by the Learn hub and the guidelines page.
@@ -55,6 +55,7 @@ export async function renderStudyHub(el) {
   const clsDone = classDone();
   const row = (href, pic, en, zh, sub, pct) => `<a class="hm-row" href="${href}">${stk(pic)}<span><b>${two(en, zh)}</b><small>${sub}</small>${pct == null ? '' : meter(pct)}</span><span class="chev">${CHEV}</span></a>`;
   // Same sticker board as the home page (.ddx.hm): the lessons as rows, the official guidelines as six tiles.
+  // The class course has no entrance here or anywhere else on the site: it opens by direct link plus the class password only.
   el.innerHTML = `<div class="ddx hm lang-${S.lang}"><main>
     <header class="hm-hero"><div class="hm-head">
       <p class="kick">${tr.toUpperCase()} · ${one('Learn', '上课')}</p>
@@ -62,10 +63,9 @@ export async function renderStudyHub(el) {
     </div></header>
 
     <p class="kick sec">${one('Lessons', '听课')}</p>
-    <div class="hm-rows cards">
+    <div class="hm-rows cards duo">
       ${row('#/study/classroom', './img/home/class.webp', 'Spoken lessons', '语音课', clsReady ? mini(`${clsDone} / ${clsReady} lessons`, `${clsDone} / ${clsReady} 课`) : mini('a teacher talks you through it', '老师一课一课讲'), clsReady ? clsDone / clsReady * 100 : null)}
       ${row('#/study/chapters', './img/home/book.webp', 'Textbook review', '教材精读', mini(`${chRead} / ${chAll} chapters`, `${chRead} / ${chAll} 章`), chRead / chAll * 100)}
-      ${row('#/aet', './img/home/aet.webp', 'AET PCP course', 'AET PCP 课程', `<span class="lock">${ico('lock')}</span>${mini('class password', '需要班级密码')}`, null)}
     </div>
 
     <p class="kick sec">${one('Official guidelines', '官方考纲')}</p>
