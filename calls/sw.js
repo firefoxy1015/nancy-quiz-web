@@ -1,6 +1,6 @@
 // Call Questions offline support. Everything is saved on first visit and served from the phone,
 // so the app opens instantly with or without signal. A new build has a new cache name and replaces the old one.
-const CACHE = 'calls-b87ab7f7e8';
+const CACHE = 'calls-a83743f8be';
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-180.png", "./icon-512.png", "./fonts/atkinson-hyperlegible-400.woff2", "./fonts/atkinson-hyperlegible-700.woff2", "./fonts/barlow-condensed-600.woff2", "./fonts/barlow-condensed-700.woff2"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL.map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
