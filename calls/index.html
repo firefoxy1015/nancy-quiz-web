@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Call Questions</title>
+<meta name="description" content="Glance cards for paramedic history-taking and handover.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F2F5F9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B131E" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Call Qs">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-180.png">
+<style>
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url('./fonts/atkinson-hyperlegible-400.woff2') format('woff2')}
+@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/atkinson-hyperlegible-700.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url('./fonts/barlow-condensed-600.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/barlow-condensed-700.woff2') format('woff2')}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+
+/* Layout: a glance card. Home = every call as a short tile, one tap away. Card = cue words in a 2-column grid:
+   red "ask first", then the rest. Tapped cues fade, so what is still bright is what has not been asked. */
+:root{
+  --bg:#F2F5F9; --surface:#FFFFFF; --fg:#0F1B2D; --muted:#55627A; --line:#C9D2DF;
+  --accent:#0B5CAD; --accent-soft:#E3EEFA; --flag:#B3261E; --flag-bg:#FCE4E1; --flag-line:#E9A9A3; --ok:#1E7A4C;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0B131E; --surface:#16233A; --fg:#EEF3FA; --muted:#9AA8BD; --line:#2E4060;
+  --accent:#74B4FF; --accent-soft:#17304D; --flag:#FF9A90; --flag-bg:#4A1D1A; --flag-line:#8A3B35; --ok:#6FD3A0; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#0B131E; --surface:#16233A; --fg:#EEF3FA; --muted:#9AA8BD; --line:#2E4060;
+  --accent:#74B4FF; --accent-soft:#17304D; --flag:#FF9A90; --flag-bg:#4A1D1A; --flag-line:#8A3B35; --ok:#6FD3A0; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.35;
+  padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px));padding-block:0 40px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:760px;margin:0 auto}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;margin:0}
+
+/* home */
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-block:14px 6px}
+h1{font-size:28px;line-height:1}
+.search{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:6px}
+.search input{width:100%;font:inherit;font-size:17px;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--fg)}
+.search input:focus{border-color:var(--accent);outline:none}
+.grp{font-family:var(--display);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:12px 0 5px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+@media (min-width:620px){.grid3{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+.tile{min-height:50px;padding:6px 8px;text-align:left;font-weight:700;font-size:16px;line-height:1.15;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
+.tile:active,.cue:active{background:var(--accent-soft)}
+.none{color:var(--muted);padding:20px 0}
+.addnote{margin:4px 0;padding:10px 12px;background:var(--accent-soft);border-radius:10px}
+.link{border:0;background:none;color:var(--accent);font-weight:700;padding:6px 4px;text-decoration:underline}
+.foot{color:var(--muted);font-size:13px;margin-top:24px;border-top:1px solid var(--line);padding-top:10px}
+.newpt{flex:none;min-height:40px;padding:0 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-weight:700;font-size:14px}
+
+/* card */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;align-items:center;gap:8px;padding-block:8px;border-bottom:1px solid var(--line)}
+.back{flex:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:26px;line-height:1;font-weight:700}
+.bar h2{flex:1;min-width:0;font-size:25px;line-height:1.02;text-wrap:balance}
+.left{flex:none;font-size:14px;font-weight:700;color:var(--flag);font-variant-numeric:tabular-nums;white-space:nowrap}
+.left.ok{color:var(--ok)}
+.adds{display:flex;gap:6px;overflow-x:auto;padding-block:8px 2px;scrollbar-width:none}
+.adds::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:38px;padding:0 12px;border:1px dashed var(--muted);border-radius:999px;background:none;font-size:15px;white-space:nowrap;color:var(--muted)}
+.chip.on{border:1px solid var(--accent);background:var(--accent-soft);color:var(--fg);font-weight:700}
+.blk h3{font-size:16px;letter-spacing:.08em;color:var(--muted);margin:12px 0 5px}
+.blk.first h3{color:var(--flag)}
+.cues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+@media (min-width:620px){.cues{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cue{min-height:48px;padding:7px 10px;text-align:left;font-weight:700;font-size:17px;line-height:1.15;background:var(--surface);border:1.5px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
+.blk.first .cue{background:var(--flag-bg);border-color:var(--flag-line)}
+.blk.small .cues{grid-template-columns:repeat(3,minmax(0,1fr))}
+.blk.small .cue{min-height:44px;font-size:15px;padding:6px 8px}
+.cue[aria-pressed="true"],.blk.first .cue[aria-pressed="true"]{background:none;border-style:dashed;border-color:var(--line);color:var(--muted);font-weight:400;opacity:.6}
+.cue[aria-pressed="true"]::before{content:"✓ ";color:var(--ok);font-weight:700}
+.dm{margin-top:14px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.dm h3{font-size:16px;letter-spacing:.08em;color:var(--flag);margin-bottom:3px}
+.dm p{margin:3px 0;font-size:16px}
+.full{margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:0 12px;background:var(--surface)}
+.full summary{padding:13px 0;font-weight:700;color:var(--accent)}
+.full h4{font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px}
+.full ul{margin:0;padding-left:20px}
+.full li{margin:5px 0}
+.src{color:var(--muted);font-size:13px;margin:12px 0}
+
+/* handover section */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.tile.ho{background:var(--accent);color:var(--bg);border-color:var(--accent);font-size:18px;min-height:58px}
+.tile.ho small{display:block;font-weight:400;font-size:13px;line-height:1.2;margin-top:3px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding-block:8px 0}
+.seg button{min-height:42px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-weight:700}
+.seg button[aria-current="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.use{margin:8px 0 4px;font-size:15px;color:var(--muted)}
+.tel{font-weight:700;color:var(--fg);white-space:nowrap;user-select:all;-webkit-user-select:all}
+.step{margin:10px 0 0;padding:8px 12px;border-radius:10px;background:var(--fg);color:var(--bg);font-family:var(--display);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.rows{display:grid;gap:6px}
+.row{display:flex;gap:12px;align-items:center;width:100%;min-height:58px;padding:6px 10px 6px 6px;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:10px}
+.row:active{background:var(--accent-soft)}
+.row .L{flex:none;width:46px;height:46px;display:grid;place-items:center;border-radius:8px;background:var(--accent);color:var(--bg);font-family:var(--display);font-size:34px;font-weight:700;line-height:1}
+.row .W{min-width:0}
+.row .T{display:block;font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.row .d{display:block;font-size:16px;line-height:1.25}
+.row[aria-pressed="true"]{background:none;border-style:dashed;opacity:.55}
+.row[aria-pressed="true"] .L{background:var(--ok)}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<p class="wrap foot" id="offl"></p>
+<script>
+// first = ask in the first minute. s = [section title, [questions]]. miss = don't-miss list.
+var G=["Heart & breathing","Brain & nerves","Medical","Trauma","Environment","Special calls"];
+var SAMPLE=["Any allergies — medications, food, latex?","What medications do you take? Did you take them today?","Any blood thinners?","What medical problems do you have? Any surgeries?","Have you been in hospital in the last 90 days, or seen a doctor recently?","When did you last eat or drink?","What were you doing right before this started?","Is there a MOST form, No CPR form or advance directive we should know about?"];
+var C=[
+{id:"chest-pain",n:"Chest pain",g:0,k:"cardiac acs mi heart attack angina stemi",
+first:["Is the pain there right now? Show me where with one finger.","Any trouble breathing?","Did you pass out, or feel like you were going to?","Have you taken Aspirin or nitro today? How much, and when? Is the nitro prescribed to you?","Any allergy to Aspirin? Any recent bleeding from your stomach or bowel?","Any Viagra, Cialis or Levitra in the last 2 days?"],
+s:[["The pain (OPQRRRST)",["What time did it start? What were you doing?","Did it hit suddenly and at its worst right away, or build up slowly?","Does anything make it better or worse — a deep breath, moving, pressing on it?","What does it feel like — pressure, tight, sharp, burning, tearing?","Does it go anywhere — arm, jaw, neck, back, belly?","Did the nitro or resting help?","How bad out of 10 right now? At its worst?","Is it constant, or does it come and go?","Have you had this before? Is it the same as your angina or heart attack?"]],
+["With the pain",["Nausea or vomiting?","Sweaty or clammy?","Dizzy or light-headed?","Heart racing or skipping beats?","Cough, fever, or coughing anything up?","Is one leg swollen or sore? Any long trip, surgery or bed rest lately?","Any cancer, pregnancy, birth control or hormone pills, or past blood clots?","Any new weakness, numbness, hoarse voice, or a cold or painful arm or leg?"]],
+["Heart history",["Any heart problems — heart attack, stents, bypass, heart failure?","High blood pressure, diabetes, high cholesterol? Do you smoke?","Anyone in your family with heart disease at a young age?","Any aortic aneurysm or dissection in you or your family? Marfan syndrome? Any heart or aortic surgery?","Any cocaine or other stimulants today?"]]],
+miss:["Heart attack — can show up as just shortness of breath, belly pain, fainting, nausea or tiredness, especially in women, older adults, diabetics and younger people","Blood clot in the lung (PE)","Aortic dissection — sharp or tearing pain, worst at the start; can be painless with only fainting or stroke signs; equal arm BPs do not rule it out","Collapsed lung","Pain when you press on the chest does not rule out the heart"]},
+
+{id:"breathing",n:"Breathing problems",g:0,k:"sob short of breath dyspnea asthma copd chf wheeze respiratory",
+first:["Can you speak in full sentences? (listen — full sentences, a few words, or single words)","When did this start? Suddenly or over hours or days?","Any chest pain? Did you faint or nearly faint?","Did you use your puffer? Which one, how many puffs, did it help?","Could this be an allergic reaction — any new food, medication, or a sting?"],
+s:[["The breathing",["What were you doing when it started?","Is it worse lying flat? How many pillows do you sleep on?","Do you wake up at night gasping?","Is it worse when you walk or move?","Has this happened before? What was it that time?","Is this like your usual asthma / COPD attack, or different?"]],
+["With it",["Any cough? Bringing anything up — what colour? Any blood?","Fever or chills?","Are your ankles or legs more swollen than usual? Gained weight this week?","Is one leg sore or swollen? Any long trip, surgery or bed rest lately?","Any cancer, pregnancy, birth control or hormone pills, or past blood clots?","Anything stuck in your throat? Did you choke on something?"]],
+["Lung history",["Do you have asthma, COPD, heart failure, or a past blood clot?","Are you on home oxygen? How many litres? What is your normal oxygen level?","Is this the worst it has ever been?","Have you ever been intubated or in ICU for your breathing? How many hospital visits for it this year?","Have you been using your puffer more than usual lately?","Do you have an asthma or COPD action plan? Did you follow it? Did it help?","Any steroids or antibiotics recently?","Do you smoke or vape?","Were you around smoke, fumes or chemicals?"]]],
+miss:["Anaphylaxis","Heart attack presenting as shortness of breath","Blood clot in the lung (PE)","Collapsed lung","Heart failure / fluid in the lungs","Sepsis from pneumonia","Beware the silent chest — a quiet chest in an asthmatic is worse than a wheezy one","Not all wheezing is asthma — heart failure and PE wheeze too","Too breathless to talk? Ask yes/no questions they can nod to"]},
+
+{id:"heart-problems",n:"Heart problems / palpitations",g:0,k:"palpitations afib svt racing heart pacemaker icd aicd arrhythmia",
+first:["Is your heart racing or fluttering right now?","Any chest pain or trouble breathing?","Did you pass out, or nearly?","Do you have a pacemaker or a defibrillator? Did it shock you? How many times?"],
+s:[["The episode",["When did it start — more than 48 hours ago? What were you doing?","Did it start suddenly, like a switch, or build up?","Is it regular or all over the place? Can you tap the rhythm out for me?","Has this happened before? What stopped it last time?","How long do the episodes usually last?"]],
+["With it",["Dizzy, light-headed, or weak?","Sweaty or nauseated?","Any fever, vomiting, diarrhea, or not drinking enough?","Any pain anywhere, or any bleeding?","Dizzy when you stand up, better lying flat?"]],
+["Triggers and history",["Any known rhythm problem — A-fib, SVT? Any heart surgery or ablation?","Did you miss any heart pills? Any new medications?","Caffeine, energy drinks, alcohol, cold medicine or diet pills today?","Any cocaine, meth or other stimulants?","Any thyroid problems?","Any kidney problems or dialysis?","Are you on a beta-blocker or calcium channel blocker? Could you have taken extra?","Have you had a heart transplant?","Any anxiety or panic attacks? Does this feel the same?"]]],
+miss:["Unstable rhythm — altered, ischemic chest pain, very short of breath or wet lungs, low BP (systolic under 80 narrow-complex, under 90 wide-complex)","Heart attack","A fast heart can be the body compensating for pain, blood loss, fever or low oxygen — fix the cause","Slow heart — think low oxygen, drug effect, high potassium, heart attack","A stable wide-complex rhythm can crash quickly","Sepsis or dehydration","Stimulant overdose"]},
+
+{id:"cardiac-arrest",n:"Cardiac arrest",g:0,k:"cpr vsa code arrest dead not breathing",
+first:["Did anyone see them go down? What time?","Was anyone doing CPR before we got here? How long were they down before it started — 20 minutes or more?","Was an AED used? Did it shock? How many times?","Is there a No CPR form, MOST form, advance directive, or a No CPR MedicAlert bracelet? Where is it?","Is there a representation agreement? Who is the decision-maker — are they here?"],
+s:[["Just before",["What were they doing when it happened?","Did they complain of anything first — chest pain, trouble breathing, a headache?","Did they choke on something?","Any seizure-like shaking?","Any bleeding, vomiting or diarrhea beforehand?","When were they last seen well?"]],
+["Possible causes",["Any heart problems? Kidney failure or dialysis?","Any drugs or alcohol today? Any opioids in the home?","Any recent illness, surgery or injury?","Were they in cold water or out in the cold?","Could this be an allergic reaction — food, a sting, a new medication?","Do they have asthma? Any leg swelling, cancer, or being laid up recently?","Could they have taken too many pills on purpose?","Any terminal illness or palliative care?"]],
+["For the family",["What medications are they on? Can someone bring the pills or a list?","Any allergies?","Who is next of kin? Who is the family doctor?"]]],
+miss:["Reversible causes — low oxygen, blood loss, acidosis, low or high potassium (dialysis), cold, overdose or anaphylaxis, tamponade, tension pneumothorax, clot in the lung or heart","Photograph the No CPR or MOST document for your record — forms differ between health authorities","Opioid overdose — look for the scene clues","Ask bystanders, not just family — the person who saw it knows the downtime"]},
+
+{id:"choking",n:"Choking",g:0,k:"fbao airway obstruction foreign body",
+first:["Can you speak or cough? (strong cough — let them cough; weak cough, stridor or turning blue — treat as complete)","What did they choke on?","Is it still stuck, or did it come out?","Did they turn blue or pass out?","Is the patient pregnant? Is the child under 1 year old?"],
+s:[["What happened",["When did it happen? How long were they choking?","What was done — back blows, abdominal thrusts, CPR? By who?","Did anything come out? Do you have it?","Any injury to the mouth, face or neck?"]],
+["Right now",["Any trouble breathing or noisy breathing now?","Does it still feel like something is stuck?","Can you swallow your own saliva?","Any pain in your throat, chest or belly?","Is your voice different from normal?","Any vomiting?"]],
+["History",["Any trouble swallowing normally — stroke, dementia, Parkinson's?","Any alcohol or sedating medication before eating?","Has this happened before?","Any dentures?","Any fever, barking cough, sore throat or drooling before this?"]]],
+miss:["Partial obstruction that can still become complete","Aspiration — coughing or low sats afterwards","Anyone given abdominal thrusts — by a bystander or by us — goes to hospital","Croup or epiglottitis rather than a foreign body","Was it really choking, or an allergic reaction / cardiac arrest at the table?"]},
+
+{id:"stroke",n:"Stroke",g:1,k:"cva tia fast facial droop slurred speech weakness",
+first:["When were they LAST SEEN NORMAL? Exact clock time, and who saw them? (hot stroke = within 6 hours, or woke with symptoms)","Did they wake up like this? What time did they go to bed?","Any blood thinners? Which one, and when was the last dose?","Has the blood sugar been checked?","Any seizure at the start?"],
+s:[["What changed",["What did you notice first — face, arm, leg, speech, vision, balance?","Which side?","Did it come on all at once?","Is it getting better, worse, or staying the same?","Any sudden severe headache? Vomiting?","Any trouble seeing — double vision, or loss of vision on one side?","Any trouble swallowing?","Did they fall or hit their head?"]],
+["Normal for them",["How are they normally — walking, talking, living on their own?","Any old weakness from a previous stroke?","Is the confusion new, or do they have dementia?"]],
+["History",["Any past stroke or TIA?","High blood pressure, A-fib, diabetes?","Any recent surgery, bleeding, or head injury?","Who can come with us or be reached by phone? What is their number?"]]],
+miss:["Low blood sugar looks exactly like a stroke — check it","Seizure with weakness afterwards","Head bleed — severe headache, vomiting, unequal pupils, slow pulse with high BP, blood thinners","A negative FAST-VAN does not rule out a stroke","Symptoms that went away are still a TIA — convey to a stroke centre or an ED with CT","Get the last-seen-normal time and a phone number for the witness before you leave"]},
+
+{id:"seizure",n:"Seizure",g:1,k:"convulsion fit epilepsy postictal",
+first:["Are they still seizing? How long has it been going?","How many seizures today? Did they wake up in between?","Do they have epilepsy / known seizures?","Are they diabetic? Has the sugar been checked?","Could she be pregnant, or did she recently have a baby? How many weeks?"],
+s:[["What it looked like (ask the witness)",["What did you see first? What were they doing right before?","Whole body shaking, or one side, or just staring?","Did they fall? Did they hit their head?","Did they turn blue? Bite their tongue? Lose bladder control?","How long did the shaking last?","How were they afterwards — confused, sleepy, back to normal? How long did that take?","Did anyone give their prescribed rescue medication (a benzodiazepine)? How much, and when?"]],
+["If they have seizures",["What seizure medication? Any missed doses or recent changes?","Is this like their usual seizure?","How often do they normally have one? When was the last?"]],
+["If it is the first one",["Any head injury recently?","Any fever, headache, or stiff neck?","Any alcohol — when was the last drink? Any drugs?","Any new medications?","Any contact with chemicals or toxic substances?","Any history of stroke, brain tumour, or cancer?","If pregnant: any headache, vision changes, or pain under the right ribs before the seizure? Any high blood pressure this pregnancy?"]]],
+miss:["Low blood sugar","Low oxygen or cardiac arrest — brief shaking is common at the start of an arrest","Head injury or brain bleed","Alcohol withdrawal","Eclampsia — pregnant or up to weeks after delivery","Overdose","Stroke, brain infection, or electrolyte problems","Injuries from the fall","Confusion or aggression after a seizure is not intentional — give them quiet space","Known epileptic, one short seizure, declines transport — CliniCall consult"]},
+
+{id:"fainting",n:"Unconscious / fainting",g:1,k:"syncope passed out collapse loc faint blackout",
+first:["Are they fully awake now? Back to normal?","Any chest pain, palpitations, or trouble breathing before or after?","Did they hit their head or hurt anything when they went down?","Are they diabetic?","Any shaking or seizure activity?"],
+s:[["Before",["What were you doing — standing up, straining on the toilet, exercising, lying down?","Any warning — dizzy, hot, sweaty, blurred or tunnel vision, weakness, nausea?","Any pain, sight of blood, or big emotional upset just before?","Were you out in the heat or working hard in a hot place?","Or no warning at all?","Any headache or back or belly pain before it?"]],
+["During (ask the witness)",["How long were they out?","What colour were they — pale, grey, blue?","Any jerking? Did they wet themselves?","Did someone catch them, or did they hit the floor?"]],
+["After",["How fast did they come around — seconds, or were they confused for a while?","How do you feel now?"]],
+["Why",["Has this happened before? Was a cause found?","Eating and drinking normally? Any vomiting or diarrhea?","Any black or bloody stools?","Any new or changed medications — blood pressure pills, water pills, beta-blockers, sedatives, opioids? Could you have taken extra?","Any kidney problems or dialysis?","Could you be pregnant? When was your last period?","Any heart problems? Anyone in your family die suddenly when young?"]]],
+miss:["Heart rhythm problem — collapse with no warning is a dysrhythmia until proven otherwise, even with normal vitals and ECG","Out for more than a minute or two — look for another cause or an injury","Nearly fainting is worked up the same as fainting","Check FAST-VAN once they are awake","Heart attack, PE, aortic dissection","Internal bleeding — GI bleed, ruptured ectopic, AAA","Low blood sugar","Stroke or seizure","The injury from the fall"]},
+
+{id:"confused",n:"Altered / confused",g:1,k:"altered loc aloc confusion delirium not acting right unresponsive gcs",
+first:["How are they normally? What is different today?","When were they last seen normal?","Are they diabetic? Do they take insulin — could they have taken too much? Has the sugar been checked?","Any drugs, alcohol or pills they could have taken? Any opioids in the home?","Any fall or head injury?"],
+s:[["The change",["Did it come on suddenly, or over hours or days?","Is it getting worse, or does it come and go?","Any weakness on one side, slurred speech, or facial droop?","Any seizure?","Any headache or vomiting?","Are they seeing or hearing things?"]],
+["Looking for the cause",["Any fever, cough, or burning when they pee? Peeing more often, or much less?","Have they had Tylenol or Advil today? (it hides a fever)","Any new rash or blotchy skin?","Eating and drinking normally?","Any new medications, or changes in dose? Any missed doses?","Any chest pain or trouble breathing?","Is the furnace or a heater on — is anyone else in the home feeling sick?","Any history of mental illness, dementia, liver or kidney disease?","Any cancer, chemo, or immune-suppressing medication? In hospital in the last 90 days?","Any Addison's disease or long-term steroids?"]],
+["From the scene",["Who found them? Where and how?","Any pill bottles, drug gear, alcohol, or a note?","How long could they have been on the floor?","Is the home very cold or very hot?"]]],
+miss:["Low blood sugar","Opioid or other overdose","Stroke or head bleed","Sepsis — especially in older adults; no fever does not rule it out, and a low temperature is a bad sign","Shock, kidney failure, adrenal crisis","Low oxygen, or high CO2 in COPD","Carbon monoxide","Do not write it off as drunk or dementia until the rest is ruled out"]},
+
+{id:"headache",n:"Headache",g:1,k:"migraine head pain",
+first:["Did it hit its worst instantly — like a thunderclap?","Is this the worst headache of your life?","Any weakness, numbness, trouble speaking, or change in vision?","Any head injury in the last few weeks?","Any fever or stiff neck?"],
+s:[["The headache (OPQRRRST)",["When did it start? What were you doing?","Where is it — one side, front, back, all over?","What does it feel like — throbbing, pressure, stabbing?","Does anything make it better or worse — light, noise, lying down, coughing?","How bad out of 10?","Did you take anything for it — Tylenol? How much, and when? Did it help?","Do you get headaches or migraines? Is this one different?","Do you have a migraine or cluster headache treatment plan? Did you follow it?"]],
+["With it",["Nausea or vomiting?","Does light bother you? Does bending your neck hurt?","Any rash?","Any severe pain in one eye, with blurred or lost vision on that side?","Have you been drinking enough? Any vomiting or diarrhea?","Any confusion or sleepiness?","Any seizure or passing out?"]],
+["History",["Any blood thinners?","High blood pressure?","Are you pregnant, or did you have a baby recently?","Is anyone else at home sick with a headache? Any gas appliances or heaters running?","Any cancer or immune problems?"]]],
+miss:["Bleed in the brain — sudden, worst-ever, or on blood thinners","Meningitis — fever, stiff neck, rash","Stroke","Carbon monoxide","Pre-eclampsia in pregnancy or after delivery","Bleed after a fall days or weeks ago in an older adult","Acute angle-closure glaucoma — severe eye pain with vision loss","Artery tear in the neck, clot in a brain vein, tumour, giant cell arteritis","Droplet precautions if you suspect meningitis"]},
+
+{id:"abdo-pain",n:"Abdominal pain",g:2,k:"belly stomach abdo abdominal pain gi nausea vomiting flank",
+first:["Show me where it hurts most.","Did it start suddenly?","Any vomiting blood, or black or bloody stools?","Could you be pregnant? When was your last period?","Any chest pain or trouble breathing?","Did you faint or feel faint?"],
+s:[["The pain (OPQRRRST)",["When did it start? Is it constant, or does it come in waves?","Was it at its worst the moment it started? Has it moved since?","What does it feel like — cramping, sharp, burning, tearing?","Does it go to your back, shoulder, or groin?","Does anything make it better or worse — eating, moving, lying still, bumps on the road?","How bad out of 10?","Have you had this before? What was it?"]],
+["Gut and bladder",["Any nausea or vomiting? How many times? What did it look like?","Any diarrhea or constipation? When was your last bowel movement? Passing gas?","Any pain or burning when you pee? Blood in the urine? Peeing more or less?","Any fever or chills?","Is your belly much more swollen than normal? Eating and drinking less than usual?","When did you last eat? Has anyone who ate the same food been sick?"]],
+["If she could be pregnant",["Any vaginal bleeding or discharge?","Any pain in the shoulder tip?"]],
+["History",["Any belly surgeries? Still have your appendix and gallbladder?","Any history of ulcers, gallstones, kidney stones, hernia, diverticulitis, or aneurysm?","Any atrial fibrillation, heart or blood-vessel disease, or high blood pressure?","Any anti-inflammatories like Advil or Aspirin regularly? Any blood thinners?","How much alcohol do you drink?","Are you diabetic?"]]],
+miss:["Aortic aneurysm or dissection — ripping or tearing, goes to the back, fainted","Ruptured ectopic pregnancy — any woman of childbearing age","Heart attack — pain above the belly button in anyone over 35","GI bleed","Bowel obstruction or perforation — rigid belly","Appendicitis","DKA in a type 1 diabetic","Mesenteric ischemia — sudden severe pain out of proportion to the exam (A-fib)","Pancreatitis — constant upper pain going to the back","Anaphylaxis or sepsis presenting as belly pain","Testicular torsion in a young male"]},
+
+{id:"diabetic",n:"Diabetic problem",g:2,k:"hypoglycemia hyperglycemia sugar bgl insulin dka diabetes",
+first:["What is the sugar reading? When was it taken? (low = under 4.0 mmol/L)","Are they awake enough to swallow safely?","Did they take insulin or diabetes pills today? What time and how much?","When did they last eat? What did they eat?"],
+s:[["Today",["What is your sugar normally?","Did you eat less than usual, or skip a meal?","More exercise or activity than usual?","Any change in insulin dose or new medications?","Any alcohol?","Have you been sick — any fever or infection?","Could you have taken too much insulin or too many pills, by accident or on purpose?","Any other low that needed treatment in the last 24 hours?","Has anyone given sugar, juice, or glucagon? When?"]],
+["If the sugar is high",["Very thirsty? Peeing a lot? Blurred vision?","Nausea, vomiting, or belly pain?","Breathing fast or deep?","Any missed insulin? Is the pump working — when was the site changed?","Any fever, cough, burning urine, or a wound or sore that is not healing?"]],
+["History",["Type 1 or type 2? Insulin, pills, or both?","Do you use a pump or a continuous glucose monitor?","Do you normally feel it when your sugar is low?","Has this happened before? Have you been in hospital for it?","Any chest pain or trouble breathing?","Is there a responsible adult who can stay with you for at least 4 hours? Can you eat a proper meal now?","Could you be pregnant?"]]],
+miss:["Why is the sugar low? Sepsis, kidney failure, overdose and alcohol all cause it","Diabetes pills or long-acting insulin — sugar can drop again; anyone on oral diabetes pills does not meet the stay-home criteria","Retest after treatment — must be 4.0 mmol/L or above","DKA can be the first sign of diabetes — fruity breath; HHS in type 2","DKA — high sugar, vomiting, fast deep breathing","Silent heart attack in a diabetic","A normal sugar in a confused patient means look for another cause"]},
+
+{id:"allergic",n:"Allergic reaction",g:2,k:"anaphylaxis allergy sting hives epipen swelling",
+first:["Any trouble breathing, or tightness in your throat or chest?","Is your tongue or throat swelling? Is your voice changing?","Do you feel faint or dizzy?","Did you use an EpiPen? What time? How many?","What do you think caused it?"],
+s:[["The reaction",["When were you exposed? When did symptoms start?","What did you notice first?","Is it getting worse, better, or staying the same?","Any hives, itching, or flushing? Where?","Any swelling of the lips, face, or eyes?","Any nausea, vomiting, belly cramps, or diarrhea?","Any trouble swallowing?"]],
+["The trigger",["What did you eat or drink in the last couple of hours?","Any new medication — antibiotics, anti-inflammatories? When was the first dose?","Were you stung or bitten? Is the stinger still in?","Is the trigger gone — medication stopped, lotion washed off?","Any new soap, latex, plants, or animals?"]],
+["History",["What are you allergic to?","Have you had a reaction this bad before? Ever been intubated or admitted for it?","Are your reactions getting worse each time?","Do you have asthma, COPD or other lung disease? Did you use your puffer?","Do you carry an EpiPen? Is there another one here?","Did you take any Benadryl or other antihistamine? Which one, how much, and when?","Are you on a beta-blocker or ACE inhibitor (blood pressure pills)?"]]],
+miss:["Anaphylaxis with no rash — just low BP, vomiting, or wheeze","Airway swelling getting worse","Reaction coming back hours after epinephrine","ACE-inhibitor swelling of lips and tongue (no itch, no hives)","Asthma attack mistaken for a mild reaction","Hives alone can still progress, and anaphylaxis can be delayed for hours — convey","Benadryl drowsiness can hide a reaction getting worse"]},
+
+{id:"sick-person",n:"Sick person / unwell",g:2,k:"weak weakness general unwell fever sepsis infection dizzy flu vomiting nausea diarrhea",
+first:["What is the main thing bothering you today?","When did you last feel well?","Any chest pain or trouble breathing?","Any fever or chills? Has your temperature been taken? Any Tylenol or Advil today?","Any new confusion? (ask family)"],
+s:[["Narrow it down",["What changed today that made you call?","Any pain anywhere?","Any dizziness — is the room spinning, or do you feel faint?","Any weakness — all over, or one side?","Any falls?"]],
+["Head to toe",["Headache, stiff neck, vision changes?","Cough, sore throat, or bringing anything up? Any blood? Short of breath when you walk?","Nausea, vomiting, diarrhea? How many times? Any blood or black stools?","Burning or pain when you pee? Peeing more often, or much less?","Any rash, wound, sore, or swollen red area? Any catheter or line?","Are you eating and drinking? Lost weight?"]],
+["History",["Any surgery, hospital stay, or antibiotics in the last 90 days?","Any cancer, chemo, or immune problems? Any transplant?","Do you have Addison's disease or a pituitary problem? On steroids like prednisone for 3 weeks or more — any missed or vomited doses?","Are you diabetic? What is your sugar?","Any new medications or missed doses?","Is anyone around you sick? Any travel? Any gas appliances or heaters running?","Could you be pregnant?"]],
+["Home and wishes",["Do you live alone? Who helps you? Can you manage at home right now?","Do you have a phone and a way to get to a doctor?","Do you have a MOST form, advance directive or representation agreement? Who makes decisions for you?"]]],
+miss:["Sepsis — fast heart, fast breathing, new confusion, blotchy skin; no fever does not rule it out","Adrenal crisis (Addison's, long-term steroids) or sepsis — do not walk the patient","Carbon monoxide — several people sick, headache, vomiting","Heart attack with vague symptoms in older adults, women and diabetics","Low or high blood sugar","GI bleed — weak, pale, black stools","Stroke","Medication side effect or overdose","Dehydration or kidney failure","Vague complaint in an older adult is serious until proven otherwise"]},
+
+{id:"back-pain",n:"Back pain",g:2,k:"back pain non traumatic sciatica flank kidney",
+first:["Did it start suddenly? Is it tearing or ripping?","Any numbness, tingling, or weakness in your legs?","Any trouble peeing, or loss of bowel or bladder control? Any numbness or changed feeling around your groin or inner thighs?","Any belly pain, or did you feel faint?","Any fall or injury?"],
+s:[["The pain (OPQRRRST)",["When did it start? What were you doing?","Where exactly? Does it go down a leg, to the belly, or to the groin?","What does it feel like?","Does moving make it worse? Does any position ease it?","Is it there at rest and at night?","How bad out of 10?","Have you had this before?"]],
+["With it",["Any fever or chills?","Any pain or blood when you pee?","Any chest pain or trouble breathing?","Any nausea or vomiting?"]],
+["History",["Any aneurysm, kidney stones, or back surgery?","Any cancer, now or in the past?","Any IV drug use? Any recent infection, or immune problems?","Any steroids or osteoporosis?","Any blood thinners?"]]],
+miss:["Aortic aneurysm or dissection — older, sudden, faint, belly or flank pain","Cauda equina — bladder or bowel trouble, saddle numbness, leg weakness; loss of control is a late sign, do not wait for it","Spinal fracture","Bleeding inside the belly","Spinal infection — fever, IV drug use","Cancer in the spine","Kidney stone or kidney infection","Heart attack or PE felt in the back"]},
+
+{id:"bleeding",n:"Hemorrhage / lacerations",g:2,k:"hemorrhage gi bleed nosebleed epistaxis vomiting blood hematemesis rectal vaginal dialysis fistula",
+first:["Where is the blood coming from?","How much? (cups, soaked towels, pads per hour)","Is it still bleeding?","Do you feel dizzy or faint, especially when you stand?","Any blood thinners or antiplatelet pills — Aspirin, Plavix, Brilinta? Which one, last dose?"],
+s:[["The bleed",["When did it start? Has this happened before?","What colour — bright red, dark, black, coffee-ground?","Any clots?","Any pain with it? Where?","What have you done to stop it?"]],
+["Cut or wound",["What cut you? How deep did it go? Is anything still in the wound?","Did the blood spurt, or flow steadily?","Has a tourniquet or pressure dressing been put on? What time?","Can you feel and move everything past the cut?","When was your last tetanus shot?"]],
+["Vomiting or stool",["How many times? Was there vomiting or retching before the blood appeared?","Are your stools black and tarry, or red?","Any belly pain?","Any ulcers, liver disease, or heavy drinking?","Any anti-inflammatories like Advil or Aspirin?"]],
+["Vaginal",["Could you be pregnant? How many weeks? When was your last period?","How many pads in the last hour? Is the bleeding painful or painless?","Any belly pain or shoulder pain?","Did you pass any tissue?","Any recent delivery, miscarriage, or procedure? If just delivered: when, and has the placenta come out?","Any previous C-section, ectopic, IUD, fertility treatment, or pelvic infection?"]],
+["Nose",["Which side? How long has it been bleeding?","Is blood running down the back of your throat?","Have you pinched the soft part, leaning forward, for a full 15 minutes without letting go?","Any injury to the nose or blow to the head? High blood pressure?"]],
+["Dialysis fistula",["When was your last dialysis? Which arm is the fistula in?"]],
+["History",["Any bleeding disorder — hemophilia, von Willebrand, low platelets, liver disease? Any cancer or chemo?","Any chest pain or shortness of breath?","Any recent surgery or dental work?"]]],
+miss:["Shock — fast heart and pale before the BP drops","Ruptured ectopic — any woman of childbearing age with belly pain, vaginal bleeding, shock or fainting","Varices in liver disease — can bleed massively","Aneurysm leaking into the gut after aortic repair","Bleeding dialysis fistula — life-threatening; firm direct pressure, tape over the gauze, do not lift it to check, never wrap all the way round; no BP or IV in that arm","Patients on blood thinners or beta-blockers hide how sick they are"]},
+
+{id:"overdose",n:"Overdose / poisoning",g:2,k:"od opioid fentanyl naloxone narcan ingestion toxic drugs alcohol intoxication poison",
+first:["What did they take? Can I see the bottle or package?","How much? How many pills are missing? (street drugs — do not press for amounts)","What time exactly?","How — swallowed, smoked, snorted, injected?","Has anyone given naloxone? How many doses, what time, nose or needle?","Was it on purpose?"],
+s:[["The substance",["Anything else with it — alcohol, other pills, other drugs?","Whose medication is it? What strength are the tablets?","If opioids: their own prescription for pain or palliative care, or street supply?","If Tylenol: how much do they weigh? All at once, or spread over the day? Any cold and flu pills or combination painkillers too?","Any cannabis edibles? How long ago?","Was it long-acting or slow-release?","Where did the drugs come from? Did anyone else use the same supply?","Was it a first time, or after a break from using?"]],
+["Since then",["Any vomiting? Were pills in it?","Any seizure?","Were they breathing when found? What colour were they? Did anyone do rescue breaths or CPR?","How long could they have been down before being found?","Any chest pain, trouble breathing, or racing heart?","Did they fall or get injured?"]],
+["If it was on purpose",["Were you trying to end your life?","Have you tried before?","Did you hurt yourself any other way — cutting, anything else?","Are there other pills or weapons here?"]],
+["History",["Any regular medications — opioids, benzos, antidepressants, beta-blockers, calcium channel blockers, digoxin, diabetes pills?","Any heart disease?","Any liver or kidney problems?","Any mental health history? Any recent bad news or crisis?","Do they use regularly? Any withdrawal before — seizures, DTs?","Is there a naloxone kit here? Has anyone called Poison Control?"]]],
+miss:["Tylenol — looks fine early, kills the liver later","Mixed overdose — opioid plus benzo; naloxone only fixes part","Naloxone wearing off before the opioid does","Opioid toxicity in someone who says they only used cocaine, meth or GHB — treat what you see","Tricyclics, beta-blockers, calcium channel blockers — look fine, then crash","Low blood sugar, head injury or stroke in the person labelled as drunk","Long time on the floor — pressure injuries, cold, kidney damage","A child or another person who got into the same supply","Your own safety — needles, powders, the patient waking up agitated"]},
+
+{id:"fall",n:"Fall",g:3,k:"fell lift assist trip slip hip elderly",
+first:["Why did you fall — did you trip, or did you get dizzy or black out first?","Did you hit your head? Were you knocked out?","Any neck or back pain? Any numbness or tingling?","Any blood thinners?","Where does it hurt most?"],
+s:[["The fall",["How far did you fall — more than 3 metres? What did you land on — head, feet, tailbone?","What time did it happen? How long were you on the floor?","Could you get up on your own? Have you walked since?","Do you remember the whole thing? (check with a witness)"]],
+["Before the fall",["Any chest pain, palpitations, or trouble breathing?","Any weakness, dizziness, or trouble with balance or speech?","Were you getting up quickly, or rushing to the bathroom?","Any alcohol or new medications today?","Have you eaten and had fluids today?"]],
+["Injuries",["Any pain in your hips, groin, or when you move your legs?","Any pain in your chest, ribs, or belly?","Any pain in your wrists, shoulders, or knees?","Any headache, nausea, or vision change since?"]],
+["History and home",["Any other fall in the past 3 months? What happened?","Do you use a walker or cane? Were you using it? Wearing your usual shoes and glasses?","Do you live alone? Who can stay with you? Can you manage the stairs and bathroom?","Any osteoporosis or past fractures?","Diabetic? What is your sugar?"]]],
+miss:["The medical cause of the fall — heart rhythm, stroke, sepsis, low sugar, bleeding","Head bleed on blood thinners, even with a minor knock","Age 65 and over — spinal fracture from low force; assess carefully with any injury above the collarbones","Intoxication, confusion, a language barrier or a painful distracting injury make the spine exam unreliable","Hip fracture — may still walk on it","Long lie — cold, dehydrated, muscle breakdown","Elder abuse or neglect","A lift assist is still a patient — assess before you leave"]},
+
+{id:"mvc",n:"Motor vehicle collision",g:3,k:"mva mvi car crash accident rollover pedestrian motorcycle cyclist",
+first:["Where does it hurt most?","Any neck or back pain? Can you feel and move your hands and feet?","Any trouble breathing, or chest or belly pain?","Were you knocked out? Do you remember the crash?","How many people were in the vehicle? Is everyone accounted for?"],
+s:[["The crash",["Were you the driver or a passenger? Front or back seat?","How fast were you going — over 100 km/h? What did you hit? Were you hit from the side?","Seatbelt on? Did the airbags go off?","Did the vehicle roll? Was anyone thrown out?","Were you trapped? How long did it take to get out? Did you get out yourself?","Have you been walking around since?"]],
+["Motorcycle, cyclist, pedestrian",["Helmet on? Is it damaged? Did you hit the handlebars?","How fast was the vehicle that hit you? Where did it hit you?","Were you thrown? How far? Did you go over the hood or under the vehicle?"]],
+["Since the crash",["Any headache, nausea, vomiting, or blurry vision?","Any numbness, tingling, or weakness anywhere?","Any pain when you breathe in?","Any pain in your hips or pelvis?","Any pain in the tip of either shoulder?"]],
+["Why it happened",["What caused the crash? Did you black out or feel unwell before it?","Any alcohol or drugs today?","Any blood thinners? Could you be pregnant? How many weeks?","Are you diabetic, or do you have seizures or a heart condition?"]]],
+miss:["High-risk mechanism — rollover, ejection, death in the same vehicle, long extrication, major intrusion","Internal bleeding with normal early vitals","Seatbelt mark across the lower belly — high risk of internal bleeding","A medical event that caused the crash","Pregnant — even a low-speed crash that compresses the belly is major trauma; shock shows late; think placental abruption","Other patients who walked away or are not yet found","Alcohol hiding a head or spine injury","Rollover or over 100 km/h — high risk for spinal injury","No Entonox if a collapsed lung is suspected"]},
+
+{id:"head-injury",n:"Head injury",g:3,k:"concussion tbi head trauma hit head",
+first:["Were you knocked out, or dazed and not yourself, even briefly? For how long? (ask a witness)","Do you remember what happened? What is the last thing you remember before it?","Any neck pain? Any numbness or tingling?","Any blood thinners?","Any vomiting? How many times?"],
+s:[["What happened",["What hit your head, or what did you hit it on?","How far did you fall, or how fast was it going?","Helmet on?","What time did it happen?","Why did it happen — any dizziness or blackout first?"]],
+["Since then",["Any headache? Getting worse?","Any confusion, repeating the same questions, or acting differently? (ask family)","Any drowsiness — harder to wake than normal?","Any seizure?","Any double or blurry vision?","Any dizziness or trouble with balance? Slurred or slow speech?","Any weakness or clumsiness on one side?","Any clear fluid or blood from the nose or ears?"]],
+["History",["Any alcohol or drugs today?","Any previous head injuries or concussions?","Any bleeding disorders?"]]],
+miss:["Brain bleed — vomiting, worsening headache, drowsy; older or on blood thinners, even after a minor knock","Fine now, crashes later — symptoms can take hours to appear; altered mental status after a head injury should be conveyed","C-spine injury with every significant head injury","Skull fracture — bruising behind the ears is a late sign; no bruising does not rule it out","The medical cause of the fall","Head injuries are seldom isolated — look for other injuries","Check the blood sugar","Intoxication hiding a real head injury","Non-accidental injury in a child or vulnerable adult"]},
+
+{id:"limb-injury",n:"Limb injury / fracture",g:3,k:"fracture broken sprain dislocation arm leg ankle wrist shoulder traumatic injury",
+first:["Where does it hurt? Point with one finger.","Can you feel me touching here? Can you wiggle your fingers / toes?","How did it happen?","Any other injuries — head, neck, back, chest, belly?","Is the skin broken? Is any bone showing? Is any part cut off — where is it?"],
+s:[["The injury",["What time did it happen?","Did you hear or feel a snap or pop?","Has it looked deformed since it happened, or did it go back into place?","Could you use it afterwards? Could you take four steps on it — limping counts?","Any numbness, tingling, or does it feel cold? Has the colour changed — pale, blue, dusky?","How bad is the pain out of 10?","Did you take anything for the pain? What and when?"]],
+["The cause",["Did you trip, or did you feel dizzy or black out first?","How far did you fall, or how much force was involved?","Was it trapped or crushed under something? For how long?","Did you hit your head?"]],
+["History",["Have you injured this before? Any surgery or hardware in it?","Any osteoporosis, bone disease or cancer?","Any blood thinners?","Are you right or left handed?","When did you last eat or drink? (they may need surgery)","Any problems with Entonox — recent diving, chest injury, or bowel blockage?"]]],
+miss:["No pulse or cold limb below the injury","Open fracture","Knee dislocation — assume the artery is injured","Still trapped — treat before the weight comes off","Compartment syndrome — pain out of proportion, pain when the fingers or toes are stretched; the classic signs come late","Hip or femur fracture with hidden blood loss","Other injuries hidden by the painful one","Why did they fall?","Injury that does not match the story — abuse"]},
+
+{id:"assault",n:"Assault / stabbing / shooting",g:3,k:"stab gunshot gsw penetrating trauma violence domestic sexual assault",
+first:["Is the person who did this still here? Are there weapons here? (police on scene?)","Where are you hurt? Is there anywhere else?","Any trouble breathing?","Were you knocked out?","How much blood did you lose? Is anything still bleeding?"],
+s:[["What happened",["What were you hit with, or what was the weapon?","How many times were you hit, stabbed, or shot?","How long was the knife? What kind of gun, how far away?","What time did it happen?","Were you kicked or stomped while on the ground?","Were you choked or strangled? Did you black out? Any trouble swallowing, or change in your voice, vision or hearing?","Could you have been drugged? Any gaps in your memory?"]],
+["Injuries",["Any neck or back pain? Numbness or weakness?","Any chest or belly pain? Any pain in the tip of your shoulder?","Any headache, vomiting, or vision changes?","Any pain in your jaw or teeth — do your teeth fit together normally?","Could you be pregnant?"]],
+["Safety",["Do you feel safe going home? Is the person someone you live with? Do you have somewhere safe to go, and someone you trust?","Are there children in the home?","Were you sexually assaulted? (ask privately; ask consent before each touch; do not press for the story; if they are willing, ask them to stay in their clothes and hold off using the washroom)","You do not have to tell me what happened. Is there anything you would like to share?","Do you want police involved? (after a sexual assault it is their choice — no report, a police report, or an anonymous third-party report)","Any alcohol or drugs today?","Any blood thinners? Tetanus up to date?"]]],
+miss:["Wounds you have not found — back, armpits, groin, buttocks, scalp","Small entry wound, large internal injury","Wound between the nipple line and the belly button — both chest and belly are at risk","Blood pressure can hold until about 30% of blood volume is lost","Human trafficking — a companion who answers for them, a changing story, no ID","Collapsed lung or bleeding into the chest","Strangulation — the airway can swell, and stroke signs can appear, hours later","Head injury under the alcohol","Domestic violence — the story may change when the partner leaves the room","Scene safety comes first"]},
+
+{id:"burns",n:"Burns",g:3,k:"burn scald fire chemical electrical thermal",
+first:["What burned you — flame, hot liquid, chemical, electricity?","Were you in a closed space with smoke?","Any trouble breathing, hoarse voice, or cough?","Is anything still on your skin — chemical, clothing, jewellery?","Any other injuries — did you fall or jump?"],
+s:[["The burn",["What time did it happen?","How long was it in contact with your skin?","Is it on the face, hands, feet, genitals, or over a joint?","Has it been cooled? With what, and for how long? (target 15 minutes of cool running water — bystander time counts)","Has anything been put on it — creams, butter, ice?","How bad is the pain out of 10? Any areas with no feeling at all?"]],
+["Chemical or electrical",["What chemical? Do you have the container or safety data sheet?","Has it been rinsed? For how long?","Any in your eyes?","What voltage — under or over 1,000 volts? AC or DC? How long were you in contact? Where did it enter and exit?","Did you black out or have chest pain or palpitations after the shock? Did you fall or get thrown?"]],
+["Smoke",["How long were you in the smoke? What was burning — plastics, furniture?","Did you pass out?","Any headache, dizziness, or nausea?","Is there soot in your nose or mouth? Coughing up black sputum?"]],
+["History",["Any lung or heart problems?","Is your tetanus shot up to date?","How did this happen? (does the story fit the burn?)"]]],
+miss:["Airway burn — hoarse voice, soot, singed nose hairs, burn to the face","Carbon monoxide and cyanide from smoke","Burn that goes all the way around a limb or the chest","Electrical — small skin burn, big internal damage, heart rhythm","Other trauma from an explosion or escape","Hypothermia from over-cooling a large burn","No Entonox with a suspected inhalation injury","Over 65 — more than 10% is a major burn","Burn that does not fit the story in a child or vulnerable adult"]},
+
+{id:"heat-cold",n:"Heat / cold exposure",g:4,k:"hypothermia frostbite heat stroke exhaustion hyperthermia environmental",
+first:["How long were they out in the heat / cold?","Are they confused or acting differently?","Did they pass out or have a seizure?","What were they doing — working, exercising, found down?"],
+s:[["Heat",["Are they sweating? (heat stroke can be wet or dry)","How much have they had to drink? What?","Any headache, nausea, vomiting, or muscle cramps?","Have they been cooled? How, and for how long?","Has anyone given Tylenol, Aspirin or ibuprofen for it? (it does not help)","Any medications — water pills, psychiatric medication, lithium, antihistamines, beta-blockers, stimulants?","Is there air conditioning at home? (a fan alone is not enough) Shade and water?"]],
+["Cold",["Were they wet? In water? For how long?","Are they shivering, or did they stop shivering?","Were they stumbling, mumbling, or taking their clothes off?","Any numbness, or white or hard skin on fingers, toes, nose, ears?","Has anyone tried to rewarm the frostbitten part?","Any alcohol or drugs?"]],
+["History",["Any heart, thyroid, or diabetes problems?","Do they have housing? Can they get somewhere warm / cool?","Any fall or injury? How long could they have been lying there?","Any schizophrenia, other mental health issues, or dementia? Pregnant?"]]],
+miss:["Heat stroke — hot and confused; cool on scene for at least 10 minutes, then keep cooling during transport","Sepsis, stroke, low sugar or poisoning looking like heat illness","Low blood sugar in the cold patient","The reason they were found outside — overdose, stroke, fall","Severe hypothermia — handle gently; check breathing and pulse for 30–45 seconds","Frostbite — do not rewarm frozen limbs in the field"]},
+
+{id:"drowning",n:"Drowning / water rescue",g:4,k:"submersion near drowning diving water pool",
+first:["How long were they under the water?","Were they breathing when pulled out? Did they have a pulse?","Was CPR done? For how long?","Did they dive or fall in? Could the neck be hurt?"],
+s:[["What happened",["What time did it happen?","How cold was the water? Did the head and face go under, or just the body?","Did anyone see them go under? What happened right before?","Did they cough or vomit when they came out? Any blood or froth?","Scuba in the last 24 hours? How deep, how long, how many dives? Did they come up fast, hold their breath, or miss a safety stop?","How soon after surfacing did symptoms start? Any joint pain, headache, dizziness or balance trouble?","Where is the dive computer? Who was the dive buddy?"]],
+["Right now",["Any trouble breathing or coughing?","Any chest pain?","Any neck pain, numbness, or weakness?","Any confusion or sleepiness?"]],
+["Why",["Can they swim?","Any alcohol or drugs?","Any seizures, heart problems, or diabetes?","Could it have been on purpose?"]]],
+miss:["Breathing getting worse hours later (lung injury can take up to 6 hours) — everyone who was submerged goes to hospital","C-spine injury — uncommon; go by the mechanism","Hypothermia","The medical cause — seizure, arrhythmia, low sugar","Decompression illness after scuba — no CPAP, keep flat","Injuries from the fall in"]},
+
+{id:"inhalation",n:"CO / inhalation / hazmat",g:4,k:"carbon monoxide gas fumes smoke chemical exposure hazmat",
+first:["Is the scene safe — is the source still running? Has fire measured the CO level and cleared the building?","What were you exposed to? For how long?","Is anyone else sick? Any pets sick?","Any trouble breathing or chest pain?","Did anyone pass out?"],
+s:[["The exposure",["Where were you — closed room, garage, vehicle, workplace?","What kind of heating or appliances — furnace, gas stove, generator, barbecue, heater?","Is there a CO alarm? Did it go off? What was the reading?","What chemical? Is there a label, container, or safety data sheet?","Was it smoke from a building fire?","Were cleaning products mixed — bleach with toilet cleaner?","Any rotten-egg smell — sewer, manure tank, oil or gas site? (the smell fades — do not rely on it)","Was any of it swallowed?","Did it get on your skin or in your eyes? Has it been rinsed?"]],
+["Symptoms",["Any headache, dizziness, or nausea?","Do you feel better when you leave the building?","Any confusion or sleepiness?","Any burning in your eyes, nose, or throat? Any cough?","Any palpitations?","Any blurred vision, weakness, or seizure?"]],
+["History",["Are you pregnant?","Any heart or lung problems? Angina, anemia? Do you smoke?","Could this have been on purpose?"]]],
+miss:["Carbon monoxide — pulse oximeter will read normal","Several people with headaches in one home is CO until proven otherwise","Pregnant patient — CO crosses the placenta; always convey","Airway swelling after chemical or hot gas","Contaminated patient — decontaminate before the ambulance; never work in the hot or warm zone (CO alone needs no decon)","Smoke from a fire — think cyanide as well as CO","CliniCall consult for suspected CO, cyanide, H2S or any chemical exposure","Intentional exposure — chemical suicide (H2S) is a danger to rescuers"]},
+
+{id:"pregnancy",n:"Pregnancy / childbirth",g:5,k:"labour labor delivery ob obstetric baby miscarriage contractions",
+first:["How many weeks are you? What is your due date?","Do you feel like you need to push or have a bowel movement?","Has your water broken? What time? Was it clear or pink, or green or brown?","Any bleeding? How much?","Is this your first baby? How fast were the others?"],
+s:[["Labour",["When did the contractions start? How far apart are they? How long does each last?","Can you feel the baby moving? When did you last feel it?","Is it one baby or more?","Before 37 weeks: any period-like cramps, low backache, pelvic pressure, or bloody show?","Do you know the baby's position — head down or breech?","Where were you planning to deliver? Who is your midwife or doctor? Have they been called?"]],
+["Warning signs",["Any headache, blurry vision, or seeing spots?","Any pain under your ribs on the right, or in the upper-middle belly?","Any swelling of your face or hands?","Any constant belly pain that does not ease between contractions?","Any fall, crash, or blow to the belly — even minor? Is anyone hurting you?","Any fever?"]],
+["This pregnancy",["Any problems — high blood pressure, pre-eclampsia (now, before, or in your family), diabetes, placenta previa?","Has the hospital already seen you for this labour?","Have you had prenatal care and an ultrasound?","Any medications, smoking, alcohol, cocaine or other drugs during the pregnancy?"]],
+["Past pregnancies",["How many pregnancies? How many deliveries? Any born before 37 weeks? Any miscarriages? How many living children?","Any C-sections?","Any heavy bleeding after delivery, a baby's shoulders getting stuck, or other complications?"]]],
+miss:["Imminent delivery — urge to push, crowning, contractions under 2 minutes apart; deliver here","Pre-eclampsia / eclampsia — headache, vision change, seizure; BP 160 systolic or 110 diastolic is severe","Bleeding after 20 weeks — previa, abruption, uterine rupture (previous C-section), vasa previa","Cord showing, or an arm or leg first — do not deliver; knees-to-chest, go now","Ectopic in early pregnancy with belly pain or fainting","Bleeding after delivery — more than 500 mL","Two patients after the birth — dry and warm the baby"]},
+
+{id:"psychiatric",n:"Psychiatric / suicidal",g:5,k:"mental health suicide psych behavioural anxiety depression self harm agitated",
+first:["Are you thinking about hurting or killing yourself?","Have you done anything to hurt yourself today — taken an overdose or poison, cut yourself?","Are you thinking about hurting anyone else?","Are there any weapons here?","Have you taken any drugs, alcohol, or medication today?"],
+s:[["Suicide risk",["Do you have a plan? What is it? Have you written a note?","Do you have what you would need to do it?","Have you tried before? When, and how?","What has stopped you so far?","What are your plans for the next few days? Anything you are looking forward to?","Has something happened recently — a loss, a breakup, bad news?"]],
+["What is going on",["What happened today that led to the call?","How long have you been feeling like this?","Are you hearing or seeing things other people don't? What are the voices saying?","Do you feel like someone is watching you or trying to harm you?","How have you been sleeping and eating?","How are things with housing, money and work?","What is your name? Where are you right now? What day is it?"]],
+["History",["Do you have a mental health diagnosis?","Are you on medication for it? Are you taking it?","Do you have a psychiatrist, counsellor, or mental health team? A mental health care plan?","Have you been in hospital for this before?","Any medical problems — diabetes, thyroid, head injury, seizures?","Who supports you? Is there someone we can call?"]]],
+miss:["Medical cause — low sugar, low oxygen, head injury, infection, stroke, overdose, withdrawal","An overdose they have not told you about","Your safety and your partner's — exits, weapons, call police early","New psychosis in an older adult is medical until proven otherwise","Asking about suicide directly does not plant the idea","Carbon monoxide can look like mental illness — is anyone else unwell, any heaters on?","Intoxicated, or likely to harm self or others — cannot refuse care; competent but high-risk and declining — CliniCall consult","If you withdraw from the scene, do not go back in until police are there"]},
+
+{id:"sick-child",n:"Sick child",g:5,k:"pediatric paediatric infant baby kid fever croup febrile",
+first:["Is the child acting normally for them — playing, alert, making eye contact?","Do they recognise you? Can you settle them the way you normally do?","Are they floppy, or moving normally?","Any trouble breathing — fast, noisy, pulling in at the ribs?","Does the child look their usual colour — or pale, blue, blotchy?","How old, and how much does the child weigh?","When did this start?"],
+s:[["Fluids in and out",["Are they drinking or feeding? How much compared with normal?","How many wet diapers or pees today?","Any vomiting or diarrhea? How many times? Any blood or green vomit?","Are there tears when they cry?"]],
+["Symptoms",["Any fever? How high, how was it taken? Any medication for it — what dose, when?","Any cough? Barking? Any drooling or trouble swallowing?","Did it come on suddenly, or after a few days of a cold? Will they lie down, or only sit leaning forward?","Any rash? Does it fade when you press on it?","Any seizure or shaking? How long — over 5 minutes? More than one?","Pulling at an ear, or holding their neck stiff?","Is the cry normal — or weak, or high-pitched?","Could they have swallowed something — pills, cannabis, alcohol, a button battery, a small object?","If a battery: when? How big? Is there a matching one or the packet? Any vomiting blood, nosebleed, black stools, or refusing food?","Any fall or injury?"]],
+["History",["Born on time, or early? Any problems at birth?","Any medical conditions — asthma, heart, seizures, diabetes? Any missed medications?","Immunizations up to date?","Is anyone at home or daycare sick?","Any allergies or regular medications?"]]],
+miss:["A quiet, floppy, or uninterested child is sicker than a screaming one","Fever in a baby under 3 months","Meningitis or sepsis — rash that does not fade, lethargy","Dehydration — no wet diapers","Button battery — an emergency even with no symptoms; can look like a viral illness; do not make them vomit","Swallowed medication, cannabis or alcohol","Low blood sugar","Injury that does not fit the story","Trust the parent who says the child is not right"]},
+
+{id:"transfer",n:"Interfacility transfer",g:5,k:"ift transfer hospital care home nursing facility handover",
+first:["What is the diagnosis and why are they being moved?","Can I check the patient's identifiers against the wristband and paperwork?","How have they been in the last hour — stable? Last vitals?","What is their code status — MOST form? Is it coming with us?","Any infection precautions — MRSA, C. diff, COVID, TB?"],
+s:[["Ask the nurse",["What is their normal mental status and mobility?","What treatments have they had today? Last pain medication or sedation — what and when?","Any IV lines, pumps, oxygen, drains, or catheters going with them? What rate?","What is in the transport plan (ITP)? Is everything in it within my licence level?","Which medications are needed on the way — dose and route? Any controlled drugs coming?","Is a nurse or medical escort coming?","Any allergies?","Any falls risk, aggression, or wandering?","Who is the receiving doctor and unit? Have they been given report?","Is the paperwork ready — chart, medication record, imaging?","Does family know? Is anyone coming along?"]],
+["Ask the patient",["How are you feeling right now? Any pain?","Any nausea — do you get car sick?","Do you need the washroom before we go?","Do you have your glasses, hearing aids, dentures, phone, belongings?"]]],
+miss:["Patient sicker than the booking said — reassess before you load","Oxygen and battery needs for the full trip plus delays","Anything not in the transport plan or outside your scope — call the Clinical Hub before you leave","Lost belongings and paperwork","A change during transport — where is the closest hospital?"]},
+
+{id:"unknown",n:"Unknown problem / person down",g:5,k:"man down unknown welfare check third party caller",
+first:["Is the scene safe? Who called, and are they still here?","Can you hear me? What is your name?","What happened? Why were we called?","Are you hurt anywhere? Any pain?","Any medical problems — diabetes, seizures, heart?"],
+s:[["From bystanders",["Did you see what happened? Did they drop with no warning? How long were they out?","How long have they been here like this?","Did they fall, or were they hit by something?","Were they shaking, or holding their chest?","Do you know them? Do they have any medical problems?","Have you seen any drugs, alcohol, or pill bottles?"]],
+["From the patient",["Do you know where you are and what day it is?","What is the last thing you remember?","Have you had any alcohol or drugs today?","Do you take any medications? Any missed? Any allergies?","Any fever or infection lately? Any black stools or bleeding? Any kidney disease or dialysis?","Is there someone we can call for you?"]],
+["From the scene",["Medical alert bracelet, wallet card, MOST form, or phone with medical ID?","Pill bottles, insulin, inhalers, needles, naloxone kit?","Signs of a fall, a fight, or how long they have been there?"]]],
+miss:["Low blood sugar","Opioid overdose","Head injury","Stroke or seizure","Cardiac event","Too cold or too hot","Sepsis, hidden bleeding, shock, pulmonary embolism","Assume trauma if nobody saw what happened"]},
+
+{id:"animal-bite",n:"Animal bite / attack",g:3,k:"dog cat bite attack snake wildlife bear cougar rabies",
+first:["Is the animal contained or gone? Is the scene safe?","Where were you bitten? Anywhere else?","Any bites to the face or neck? Any trouble breathing?","How much blood did you lose? Is it still bleeding?"],
+s:[["The attack",["What kind of animal? Whose is it — a pet, a stray, or wild?","What time did it happen?","Did it bite once and let go, or hold on and shake?","Were you knocked down or dragged? Did you hit your head?","Was the animal acting strangely or sick? Was it a bat?"]],
+["The wound",["Can you feel and move everything past the bite?","Is it over a joint, on the hand, or near the eye?","Has it been washed? With what?","Snake: what did it look like? Is the swelling spreading?"]],
+["History",["When was your last tetanus shot?","Any diabetes, immune problems, or no spleen?","Any blood thinners?","Do you know if the animal has had its rabies shots?"]]],
+miss:["Neck and face bites — airway and major vessels","Large dogs crush as well as cut — fractures and deep damage under small punctures","Children — bites to the head and neck, hidden scalp wounds","Cat bites and hand bites infect easily","Rabies — any bat contact, even with no visible bite","Allergic reaction to a sting or bite — see Allergies"]},
+
+{id:"electrocution",n:"Electrocution / lightning",g:3,k:"electric shock electrical power line lightning strike",
+first:["Is the power off? Has someone qualified said the scene is safe?","Did they pass out or stop breathing? Was CPR done?","Any chest pain or palpitations?","Did they fall or get thrown after the shock?"],
+s:[["The shock",["What was the source — household, industrial, a power line?","What voltage — under or over 1,000 volts? AC or DC?","How long were they in contact? Could they let go?","Where did the current go in, and where did it come out?","Were they wet or standing in water?","What time did it happen?"]],
+["Lightning",["Was anyone else nearby hit? How many people?","Is anyone not breathing? (treat them first)"]],
+["Since the shock",["Any pain, numbness, or weakness in the arms or legs?","Any neck or back pain?","Any trouble breathing?","Any burns you can see? Any burned clothing?","Is the urine dark or brown?"]],
+["History",["Any heart problems, pacemaker or defibrillator?","Could you be pregnant?"]]],
+miss:["Cardiac arrest is the most immediate threat — VT or VF; resuscitation often works","Lightning with several patients — reverse triage: those not breathing first","The skin burn is a poor guide to the damage inside","High voltage — muscle breakdown and high potassium","Cool or flush electrical burns for 1–2 minutes only","Falls after the shock — consider spinal motion restriction"]},
+
+{id:"eye",n:"Eye problems / injuries",g:3,k:"eye vision chemical splash foreign body ocular",
+first:["Did a chemical get in the eye? What was it? Has it been rinsed — for how long?","Did something hit or go into the eye? Is it still in there?","Can you see out of each eye? Is your vision different from normal?","Any other injuries — head, face, neck?"],
+s:[["The injury",["What time did it happen?","What were you doing — grinding, hammering, using chemicals?","Were you wearing safety glasses?","Do you wear contact lenses? Are they still in?","How bad is the pain out of 10?","Any nausea or vomiting?","Do you have the container, label, or safety data sheet?"]],
+["Vision",["Blurry, double, or a part missing?","Any flashes of light, floaters, or a curtain coming across?","Did the vision loss come on suddenly? Is it painful or painless?","Any headache, or halos around lights?"]],
+["History",["Any eye surgery or eye disease — glaucoma, cataracts?","Do you normally wear glasses?","Any diabetes or high blood pressure?","Any blood thinners?","Any weakness, numbness or trouble speaking with it?"]]],
+miss:["All eye trauma is conveyed for specialist assessment — minor symptoms can hide serious injury","Chemical in the eye — start rinsing now; CliniCall consult","Do not press on the eyeball; leave penetrating objects in and stabilise them","Cover both eyes after direct trauma; head up during transport if possible","Vomiting raises the pressure in the eye — treat nausea early","Head, spine and facial fractures with direct trauma","Sudden painless vision loss — stroke or a blocked vessel","Severe eye pain with headache and halos — acute glaucoma"]},
+
+{id:"entrapment",n:"Entrapment / crush",g:3,k:"trapped pinned crush machinery collapse confined space inaccessible",
+first:["Is the scene safe — confined space, gas, unstable load, machinery locked out?","What is trapped, and by what? How heavy is it?","How long have they been trapped?","Has anything been lifted or moved yet? (do not release before treatment)","Any trouble breathing?"],
+s:[["The trapped part",["Can you feel me touching below where it is trapped? Can you move it?","How bad is the pain out of 10?","What colour and temperature is the limb below?","Is there bleeding you can see?"]],
+["The rest of the patient",["Did you hit your head or pass out?","Any pain in your neck, back, chest, or belly?","Are you cold? How long have you been on the ground?","Any dizziness or palpitations?"]],
+["The rescue",["Who is doing the extrication, and how long will it take?","Is a higher-level crew coming?","Can I reach an arm for IV access and monitoring?"]],
+["History",["Any kidney or heart problems?","Any blood thinners?","When did you last eat or drink?"]]],
+miss:["Treat before the weight comes off — releasing first can kill","Prepare for cardiac arrest on release — high potassium","CliniCall before a tourniquet or fluids; call extra resources early","Hypothermia and other injuries besides the crush","Crush syndrome can come from the patient's own body weight after a long time on the floor","Rescuer hazards — confined space, carbon monoxide, low oxygen, toxic air"]}
+];
+
+var CPG={"chest-pain":"C01 C05 B06","breathing":"B03 B05 B06 C06","heart-problems":"C02 C03 C04","cardiac-arrest":"N02 R01 R02 R04","choking":"B02","stroke":"F03","seizure":"F02 L03","fainting":"F01 C02","confused":"F01 K02","headache":"F04","abdo-pain":"E05 C05","diabetic":"E01","allergic":"E09 E10","sick-person":"K02 K03 E02 E07 A09","back-pain":"E06","bleeding":"D02 E11 E04 L05 L06 L09","overdose":"J12 J10 J07 J08 J09 J11","fall":"H05 H03 H08 CP4.4","mvc":"H01 H05 H06 H07 L10","head-injury":"H03","limb-injury":"H09 H02 H13","assault":"A10 H06 H07 D02","burns":"H10 H11","heat-cold":"I01 I02","drowning":"H12 I03","inhalation":"J01 J02 J03 J04","pregnancy":"L01 to L10","psychiatric":"G01 G02","sick-child":"M00 M02 M03 M04 B04 J13","transfer":"A08 A03","unknown":"A02 F01","animal-bite":"","electrocution":"H11","eye":"H04","entrapment":"H02"};
+// Dispatch cards: [MPDS card number (0 = no card), CAD name, page id]
+var CARDS=[[1,"Abdominal Pain / Problems","abdo-pain"],[2,"Allergies (Reactions) / Envenomations (Stings, Bites)","allergic"],[3,"Animal Bites / Attacks","animal-bite"],[4,"Assault / Sexual Assault","assault"],[5,"Back Pain (Non-Traumatic)","back-pain"],[6,"Breathing Problems","breathing"],[7,"Burns (Scalds) / Explosion","burns"],[8,"Carbon Monoxide / Inhalation / HAZMAT","inhalation"],[9,"Cardiac or Respiratory Arrest / Death","cardiac-arrest"],[10,"Chest Pain (Non-Traumatic)","chest-pain"],[11,"Choking","choking"],[12,"Convulsions / Seizures","seizure"],[13,"Diabetic Problems","diabetic"],[14,"Drowning / Diving / SCUBA Accident","drowning"],[15,"Electrocution / Lightning","electrocution"],[16,"Eye Problems / Injuries","eye"],[17,"Falls","fall"],[18,"Headache","headache"],[19,"Heart Problems / A.I.C.D.","heart-problems"],[20,"Heat / Cold Exposure","heat-cold"],[21,"Hemorrhage / Lacerations","bleeding"],[22,"Inaccessible Incident / Entrapment","entrapment"],[23,"Overdose / Poisoning (Ingestion)","overdose"],[24,"Pregnancy / Childbirth / Miscarriage","pregnancy"],[25,"Psychiatric / Abnormal Behaviour / Suicide Attempt","psychiatric"],[26,"Sick Person (Specific Diagnosis)","sick-person"],[27,"Stab / Gunshot / Penetrating Trauma","assault"],[28,"Stroke (CVA) / TIA","stroke"],[29,"Traffic / Transportation Incidents","mvc"],[30,"Traumatic Injuries — limb, fracture","limb-injury"],[30,"Traumatic Injuries — head","head-injury"],[31,"Unconscious / Fainting (Near)","fainting"],[32,"Unknown Problem (Person Down)","unknown"],[33,"Transfer / Interfacility / Palliative Care","transfer"],[0,"Altered / confused","confused"],[0,"Sick child","sick-child"]];
+// ---- Glance layer: short cue words per call. key = ask first, more = then ask, dm = don't miss.
+var Q={sob:"Short of breath",cp:"Chest pain",cps:"Chest pain / short of breath",syn:"Passed out / nearly",preg:"Pregnant? Weeks",thin:"Blood thinners",sugar:"Diabetic? Sugar",head:"Hit head / knocked out",spine:"Neck / back pain, numbness",etoh:"Drugs / alcohol",fever:"Fever / chills",nv:"Nausea / vomiting",seiz:"Seizure / shaking",dizzy:"Dizzy / faint",palp:"Palpitations",lsn:"Last seen normal — time",time:"What time",tet:"Tetanus shot",other:"Other injuries",purpose:"On purpose?",nalox:"Naloxone given — doses",clot:"Leg swelling / clot risk",urine:"Urine: pain, blood, less",stool:"Black / bloody stools",newmeds:"New / missed meds",kidney:"Kidney / dialysis",pain10:"Pain /10",hv:"Headache / vomiting",stroke:"Face / arm / speech",alone:"Lives alone / coping"};
+var OPQ=["Onset time","Provokes / eases","Quality","Radiates","Severity /10","Constant?","Had it before","Took for it"];
+var SAMPLE_CUES=["Allergies","Medications",Q.thin,"Past history","Hospital in 90 days","Last ate / drank","Events before","MOST / No CPR form"];
+var SN={"chest-pain":"Chest pain","abdo-pain":"Belly pain","back-pain":"Back pain","headache":"Headache","breathing":"Breathing","heart-problems":"Heart / palps","allergic":"Allergy","choking":"Choking","cardiac-arrest":"Arrest","fainting":"Fainted","confused":"Confused","unknown":"Unknown / down","stroke":"Stroke","seizure":"Seizure","sick-person":"Sick / weak","diabetic":"Diabetic","bleeding":"Bleeding","overdose":"Overdose","psychiatric":"Psych / suicidal","fall":"Fall","mvc":"MVC","head-injury":"Head injury","limb-injury":"Limb / fracture","assault":"Assault / stab","animal-bite":"Animal bite","entrapment":"Trapped / crush","eye":"Eye","burns":"Burns","electrocution":"Electric shock","heat-cold":"Heat / cold","drowning":"Drowning","inhalation":"CO / gas","pregnancy":"Pregnant / birth","sick-child":"Sick child","transfer":"Transfer"};
+var K={
+"chest-pain":{opq:1,key:["Pain now? Where",Q.sob,Q.syn,"ASA / nitro taken — when","Nitro prescribed to them?","ASA allergy / GI bleed","Viagra / Cialis 48 h"],
+ more:["Tearing / worst at start","Goes to arm, jaw, back, belly","Worse with breath / pressing",Q.nv,"Sweaty",Q.palp,Q.clot,"Cardiac history / stents","Same as last MI / angina","BP, diabetes, smoker, family","Cocaine / stimulants"],
+ dm:"ACS (atypical in women, elderly, diabetics) · PE · Aortic dissection · Collapsed lung"},
+"abdo-pain":{opq:1,key:["Where most? Moved?","Sudden / worst at start","Vomiting blood",Q.stool,Q.preg,"Last period / vaginal bleeding",Q.syn,Q.cps],
+ more:["Goes to back, shoulder, groin","Waves or constant","Vomiting — how many times","Last BM / passing gas",Q.urine,Q.fever,"Belly swollen","Belly surgery","Ulcer, stones, hernia, aneurysm","A-fib / heart disease","NSAIDs / alcohol",Q.sugar],
+ dm:"AAA / dissection · Ectopic · MI (pain above belly button, over 35) · GI bleed · Obstruction / perforation · Mesenteric ischemia · DKA"},
+"back-pain":{opq:1,key:["Sudden / tearing","Leg numb / weak","Bladder / bowel control","Saddle numbness","Belly pain / felt faint","Fall / injury"],
+ more:["Goes down leg / to groin","Worse moving? At rest / night?",Q.fever,Q.urine,Q.cps,"Aneurysm, stones, back surgery","Cancer","IV drugs / infection / immune","Steroids / osteoporosis"],
+ dm:"AAA / dissection · Cauda equina (losing bladder or bowel is late) · Spinal infection · Cancer · Kidney stone · MI / PE"},
+"headache":{opq:1,key:["Thunderclap onset","Worst ever","Weak, numb, speech, vision","Head injury in last weeks","Fever / stiff neck",Q.thin],
+ more:["Where on the head","Light hurts / rash",Q.nv,"Confused / drowsy",Q.seiz,"Eye pain + vision loss","Usual migraine? Plan followed?","High BP","Pregnant / just delivered","Others sick / heaters (CO)"],
+ dm:"Brain bleed · Meningitis · Stroke · Carbon monoxide · Pre-eclampsia · Glaucoma"},
+"breathing":{key:["Full sentences?","Sudden or gradual",Q.cp,"Puffer used — helped?","Allergy trigger / throat swelling","Choked on something",Q.syn],
+ more:["Worse lying flat / pillows","Cough, sputum colour, blood",Q.fever,"Ankles swollen / weight up",Q.clot,"Asthma, COPD, heart failure","Worst ever? ICU / intubated","Home oxygen / normal sats","Action plan followed","Steroids / antibiotics lately","Smoker / fumes"],
+ dm:"Anaphylaxis · MI · PE · Collapsed lung · Pulmonary edema · Sepsis · Beware the silent chest"},
+"heart-problems":{key:["Racing right now?",Q.cps,Q.syn,"Pacemaker / ICD — shocks?","Started when (over 48 h?)"],
+ more:["Sudden like a switch","Regular or irregular","Before? What stopped it",Q.dizzy,"Fever, vomiting, pain, bleeding","A-fib, SVT, ablation",Q.newmeds,"Beta / calcium blocker — extra?","Caffeine / stimulants",Q.kidney,"Thyroid","Heart transplant"],
+ dm:"Unstable = altered, ischemic pain, wet lungs, SBP under 80 (narrow) or 90 (wide) · MI · Fast heart compensating for pain, bleed, fever, hypoxia · High potassium"},
+"allergic":{key:["Breathing / throat tight","Tongue swelling / voice change",Q.dizzy,"EpiPen used — time, how many","Trigger? When exposed"],
+ more:["Getting worse?","Hives / itch","Lip / face swelling","Vomiting, cramps, diarrhea","Stinger out / trigger gone","Known allergies","Reaction this bad before?","Asthma / COPD — puffer?","Antihistamine — which, when","Beta-blocker / ACE inhibitor"],
+ dm:"Anaphylaxis without a rash · Airway swelling · Comes back hours later · Hives can progress — convey"},
+"choking":{key:["Can speak / cough?","What? Still stuck?","Turned blue / passed out","Pregnant? Under 1 year?"],
+ more:["How long choking","Back blows / thrusts / CPR done","Noisy breathing now","Can swallow saliva","Throat, chest, belly pain","Voice changed","Swallowing problems / dentures","Alcohol / sedatives","Fever / barking cough before"],
+ dm:"Partial can become complete · Aspiration · Anyone given abdominal thrusts goes to hospital · Croup / epiglottitis · Anaphylaxis"},
+"cardiac-arrest":{key:["Witnessed? Time down","CPR before us — started when","AED — how many shocks","No CPR / MOST / bracelet","Decision-maker here?"],
+ more:["Complaints just before","Choked / seizure first","Drugs / opioids in home","Heart disease / dialysis","Bleeding, vomiting before","Cold / in water","Allergic reaction?","Terminal illness / palliative","Medication list","Next of kin / family doctor"],
+ dm:"Reversible: hypoxia, bleed, acidosis, potassium, cold, toxins / anaphylaxis, tamponade, tension pneumo, clot · Photograph the No CPR / MOST form"},
+"fainting":{key:["Back to normal now?",Q.cps,Q.palp,"Any warning — or none",Q.head,Q.sugar,Q.seiz],
+ more:["Doing what (standing, straining, exercise)","How long out","Colour when out","Woke in seconds or confused","Trigger: pain, blood, heat",Q.stool,"Fluids / vomiting / diarrhea","New BP pills / took extra",Q.preg,"Before? Cause found","Heart disease / family sudden death",Q.kidney],
+ dm:"Arrhythmia (no warning) · MI · PE · Dissection · Internal bleed (GI, ectopic, AAA) · Low sugar · Stroke"},
+"confused":{key:["Normal baseline? What changed",Q.lsn,"Diabetic / insulin / sugar","Drugs, pills, opioids in home","Fall / head injury",Q.stroke],
+ more:["Sudden or over days",Q.seiz,Q.hv,"Fever, cough, burning urine","Tylenol today (hides fever)","Rash / blotchy skin",Q.newmeds,"Eating / drinking","Heater on / others sick (CO)","Dementia, psych, liver, kidney","Cancer / immune / hospital 90 d","Steroids / Addison's","Pill bottles / note on scene"],
+ dm:"Low sugar · Overdose · Stroke / bleed · Sepsis (often no fever in elderly) · Low oxygen / high CO2 · Carbon monoxide · Not just drunk or dementia"},
+"unknown":{key:["Scene safe? Who called","Responds? Name","What happened","Hurt anywhere","Diabetes, seizures, heart"],
+ more:["Witness: saw it? No warning?","How long here","Fell / got hit","Shaking / holding chest","Anyone know them",Q.etoh,"Knows place and day","Last thing remembered","Medical ID / MOST form","Scene: pills, insulin, needles, naloxone","Fever, bleeding, dialysis","Someone to call"],
+ dm:"Low sugar · Opioid overdose · Head injury · Stroke / seizure · Cardiac · Too cold or hot · Sepsis / hidden bleed · Assume trauma if unwitnessed"},
+"stroke":{key:["LAST SEEN NORMAL — clock time","Woke with it? Bedtime","Thinners — which, last dose","Sugar checked","Seizure at onset","Witness name + phone"],
+ more:["First sign? Which side","Better / worse / same","Sudden severe headache / vomit","Vision loss / double","Swallowing","Fall / hit head","Baseline: walks, talks, independent","Old stroke weakness / dementia","Past stroke / TIA","High BP, A-fib, diabetes","Recent surgery / bleeding"],
+ dm:"Low sugar looks like stroke · Seizure with weakness after · Head bleed · TIA still goes (stroke centre / CT) · Hot stroke = within 6 h or woke with it · Negative FAST-VAN does not rule it out"},
+"seizure":{key:["Still seizing? How long","How many? Awake between?","Known epilepsy",Q.sugar,"Pregnant / just delivered",Q.head],
+ more:["Looked like: whole body, one side, staring","Blue / bit tongue / wet","Confused after — how long","Rescue med given — dose, time","Seizure meds — missed?","Like their usual one?","First ever?","Fever / stiff neck / headache","Alcohol — last drink",Q.etoh,"Stroke, tumour, cancer","Pregnant: headache, vision, high BP"],
+ dm:"Low sugar · Low oxygen / arrest (brief shaking at start) · Head injury · Alcohol withdrawal · Eclampsia · Overdose · Stroke / infection"},
+"sick-person":{key:["Main problem? What changed today",Q.cps,"Fever? Tylenol / Advil today","New confusion (ask family)","Last felt well",Q.sugar],
+ more:["Pain anywhere","Dizzy: spinning or faint","Weak: all over or one side","Falls","Cough, sputum, blood","Vomiting / diarrhea — times",Q.stool,Q.urine,"Rash, wound, catheter, line","Eating / drinking","Surgery / antibiotics in 90 d","Cancer, chemo, immune","Steroids / Addison's",Q.newmeds,"Others sick / travel / heaters",Q.alone],
+ dm:"Sepsis (no fever does not rule it out) · Atypical MI · Sugar · GI bleed · Stroke · Adrenal crisis — do not walk them · Carbon monoxide"},
+"diabetic":{key:["Sugar reading + time (low < 4.0)","Awake enough to swallow","Insulin / pills today — time, dose","Last ate — what","Sugar / glucagon given"],
+ more:["Normal sugar","Skipped meal / extra exercise","Dose change","Alcohol","Sick / infection","Took too much? Accident or on purpose","Another low in 24 h","High: thirsty, peeing, vision","High: vomiting / belly pain","Fast deep breathing","Missed insulin / pump site","Type 1 or 2? On what","Feels their lows?",Q.cps,"Adult staying 4 h? Can eat",Q.preg],
+ dm:"Why low? Sepsis, kidney failure, overdose, alcohol · Pills or long-acting insulin: drops again, not a stay-home · DKA · Silent MI · Retest, must be 4.0 or above"},
+"bleeding":{key:["From where","How much (cups, towels, pads/h)","Still bleeding?","Dizzy standing up","Thinners / Aspirin / Plavix",Q.preg],
+ more:["Colour: red, dark, black, coffee-ground","Clots","Started when? Before?","Pain with it","Tourniquet / pressure — time","Vomit or stool: how many times","Ulcer, liver disease, alcohol","NSAIDs","Vaginal: pads, weeks, tissue passed","Just delivered? Placenta out?","Nose: pinched 15 min?","Dialysis fistula — which arm","Bleeding disorder / chemo",Q.cps,"Feel / move past the cut",Q.tet],
+ dm:"Shock: fast heart and pale before BP drops · Ectopic · Varices · Fistula bleed: firm direct pressure, do not lift to check · Thinners and beta-blockers hide how sick they are"},
+"overdose":{key:["What taken — see the bottle","How much / how many missing","What time exactly","Swallowed, smoked, snorted, injected",Q.nalox,Q.purpose,"Anything else with it"],
+ more:["Breathing / colour when found","Down how long","Vomited — pills in it",Q.seiz,"Chest pain / palpitations","Fell / injured","Own prescription or street","Tylenol: weight, all at once?","Slow-release?","Others used same supply","Regular meds (opioid, benzo, heart)","Liver, kidney, heart disease","Psych history / recent crisis","Tried before","Other pills / weapons here"],
+ dm:"Tylenol looks fine early · Mixed overdose · Naloxone wears off first · Low sugar or head injury in the 'drunk' · Tricyclics, beta-blockers, calcium blockers crash late · Your safety"},
+"psychiatric":{key:["Weapons here?","Thinking of suicide?","Done anything today (overdose, cut)","Thinking of hurting others","Drugs, alcohol, meds today"],
+ more:["Plan? Means? Note?","Tried before","What stopped you","What happened today","How long like this","Voices / seeing things","Feels watched / threatened","Sleep / eating","Knows name, place, day","Diagnosis — taking meds?","Care team / care plan","Sugar, head injury, infection","Support person to call","Housing, money, work"],
+ dm:"Medical cause first: sugar, oxygen, head injury, infection, overdose, withdrawal, CO · Hidden overdose · Safety: exits, police early · Intoxicated or high-risk cannot refuse"},
+"fall":{key:["Tripped — or dizzy / blacked out first",Q.head,Q.spine,Q.thin,"Hurts most where","Hip / groin pain"],
+ more:["How far? Landed on what","Time? How long on floor","Got up / walked since","Remembers everything","Before: chest pain, palps, breath","Before: weak, balance, speech","Alcohol / new meds","Chest, rib, belly pain","Wrist, shoulder, knee","Headache / vomiting since","Other falls in 3 months","Walker, shoes, glasses",Q.alone,Q.sugar],
+ dm:"The medical cause of the fall · Head bleed on thinners · Spine fracture from low force at 65+ · Hip fracture may still walk · Long lie · Elder abuse"},
+"mvc":{key:["Hurts most where",Q.spine,"Feel / move hands and feet","Breathing, chest, belly pain","Knocked out? Remembers crash","How many patients — all found?"],
+ more:["Driver / passenger / which seat","Speed (over 100?) What hit","Side impact","Seatbelt / airbag","Rollover / thrown out","Trapped? Got out alone?","Walking since","Bike: helmet, handlebars","Pedestrian: thrown, under","Headache, vomiting, vision","Hip / pelvis pain","Shoulder-tip pain","Blacked out before crash",Q.etoh,Q.thin,Q.preg,"Diabetes, seizures, heart"],
+ dm:"Mechanism: rollover, ejection, death in vehicle, long extrication · Internal bleed with normal vitals · Seatbelt mark · Medical cause of the crash · Pregnant = major trauma · Missing patients"},
+"head-injury":{key:["Knocked out / dazed — how long","Remembers? Last memory","Neck pain / numbness",Q.thin,"Vomiting — how many times"],
+ more:["What hit? Height / speed","Helmet",Q.time,"Blacked out before it?","Headache getting worse","Confused / repeating questions","Drowsy",Q.seiz,"Double / blurry vision","Balance / slurred speech","Weak on one side","Fluid from nose / ears",Q.etoh,"Past concussions","Bleeding disorder",Q.sugar],
+ dm:"Brain bleed (thinners, older, vomiting, drowsy) · Can crash later — convey if altered · C-spine · Skull fracture (bruising is late) · Other injuries · Check sugar"},
+"limb-injury":{key:["Where — one finger","Feel touch? Wiggle?","How it happened",Q.other,"Skin broken / bone showing / amputated","Colour changed / cold"],
+ more:[Q.time,"Snap / pop","Deformed? Went back in?","Could use it / take 4 steps",Q.pain10,"Pain meds taken","Tripped or blacked out","How much force / height","Crushed — how long",Q.head,"Old injury / hardware","Osteoporosis / bone disease",Q.thin,"Right or left handed","Last ate (surgery)","Entonox: diving, chest injury, bowel block"],
+ dm:"No pulse or cold limb · Open fracture · Compartment syndrome · Knee dislocation = artery · Hip / femur blood loss · Other injuries hidden by the painful one · Abuse"},
+"assault":{key:["Attacker gone? Weapons?","Where hurt — anywhere else",Q.sob,"Knocked out","Blood lost / still bleeding","Weapon? How many times"],
+ more:[Q.time,"Knife length / gun, distance","Kicked on the ground","Strangled: blackout, voice, swallow","Drugged / memory gaps",Q.spine,"Chest, belly, shoulder-tip pain","Headache, vomiting, vision","Jaw / teeth",Q.preg,"Safe to go home? Lives with them?","Children in the home","Sexual assault (private, consent first)","Wants police?",Q.etoh,Q.thin,Q.tet],
+ dm:"Unfound wounds: back, armpits, groin, scalp · Small hole, big injury · Collapsed lung / chest bleed · Strangulation swells hours later · Head injury under the alcohol · Domestic violence · Scene safety"},
+"animal-bite":{key:["Animal contained?","Where bitten — anywhere else","Face / neck / breathing","How much bleeding"],
+ more:["What animal? Whose?",Q.time,"Held on and shook","Knocked down / hit head","Animal sick? A bat?","Feel / move past the bite","Over a joint, hand, near eye","Washed?","Snake: look, swelling spreading",Q.tet,"Diabetes, immune, no spleen",Q.thin,"Animal's rabies shots"],
+ dm:"Airway and vessels in neck / face bites · Crush injury under small punctures · Children: scalp and neck · Cat and hand bites infect · Rabies: any bat contact"},
+"entrapment":{key:["Scene safe / machine locked out","What is trapped, by what, how heavy","How long trapped","Anything lifted yet? (do not release)",Q.sob],
+ more:["Feel / move below it",Q.pain10,"Limb colour / temperature","Bleeding seen",Q.head,"Neck, back, chest, belly pain","Cold? Time on the ground","Dizzy / palpitations","Extrication: who, how long","Higher-level crew coming","Arm free for IV",Q.kidney,Q.thin],
+ dm:"Treat BEFORE the weight comes off · Arrest on release (high potassium) · CliniCall before tourniquet or fluids · Hypothermia · Rescuer hazards: confined space, CO, toxic air"},
+"eye":{key:["Chemical? Rinsed how long","Hit / something in it — still there","Vision in each eye","Head, face, neck injury"],
+ more:[Q.time,"Doing what? Safety glasses?","Contact lenses in",Q.pain10,Q.nv,"Container / safety data sheet","Flashes, floaters, curtain","Vision loss: sudden? painful?","Headache / halos","Eye surgery / glaucoma","Diabetes / high BP",Q.thin,Q.stroke],
+ dm:"All eye trauma is conveyed · Chemical: rinse now · Do not press on the eyeball · Leave objects in · Treat nausea early · Painless sudden loss = stroke / blocked vessel"},
+"burns":{key:["Cause: flame, liquid, chemical, electric","Closed space / smoke","Hoarse voice, cough, breathing","Still on skin? Clothes, jewellery","Fell / jumped / blast"],
+ more:[Q.time,"Contact time","Cooled — how long (15 min)","Anything put on it","Face, hands, feet, genitals, joints",Q.pain10,"Numb areas","Chemical: which? Rinsed? Eyes?","Electric: volts, AC/DC, path","Blackout / palpitations after shock","In smoke how long / passed out","Headache, dizzy, nausea","Soot / black sputum","Lung / heart disease",Q.tet,"Does the story fit?"],
+ dm:"Airway burn · Carbon monoxide + cyanide · Burn right around a limb or chest · Electrical: small skin burn, big damage · Blast injuries · Over-cooling · Over 65 with more than 10% = major"},
+"electrocution":{key:["Power off? Scene safe","Knocked out / stopped breathing / CPR",Q.cp,Q.palp,"Fell / thrown"],
+ more:["Source: household, industrial, line","Volts (over 1,000?) AC / DC","Contact time / could let go","Entry and exit points","Wet / in water",Q.time,"Lightning: others hit?","Limb pain, numb, weak",Q.spine,Q.sob,"Burns / burned clothing","Dark urine","Heart disease / pacemaker",Q.preg],
+ dm:"Cardiac arrest (VF / VT) — resuscitation works · Lightning: treat those not breathing first · Skin burn does not show the damage · Muscle breakdown / potassium · Cool burns 1–2 min only · Spine"},
+"heat-cold":{key:["Exposed how long","Confused / acting odd","Passed out / seizure","Doing what? Found down?"],
+ more:["Sweating? (wet or dry)","How much drunk","Headache, vomiting, cramps","Cooled — how, how long","Tylenol given (does not help)","Meds: water pills, psych, lithium","AC, shade, water","Wet / in water — how long","Shivering stopped","Stumbling, mumbling, undressing","Frostbite: numb, white, hard","Rewarmed already?",Q.etoh,"Heart, thyroid, diabetes","Housing","Fall / long lie","Schizophrenia / dementia"],
+ dm:"Heat stroke: cool at least 10 min on scene, keep cooling · Looks like sepsis, stroke, low sugar, poisoning · Why were they found outside? · Hypothermia: gentle, pulse check 30–45 s · Do not rewarm frozen limbs"},
+"drowning":{key:["How long under water","Breathing / pulse when pulled out","CPR — how long","Dived / fell in — neck?"],
+ more:[Q.time,"Water temperature","Head and face under?","Seen going under? Before it?","Coughed, vomited, froth","Breathing / cough now",Q.cp,"Neck pain / numbness","Confused / sleepy","Scuba: depth, time, fast ascent","Symptoms how soon after surfacing","Dive computer / buddy","Can swim",Q.etoh,"Seizures, heart, diabetes",Q.purpose],
+ dm:"Gets worse hours later (up to 6 h) — everyone submerged goes · Hypothermia · Medical cause (seizure, heart, sugar) · Scuba: no CPAP, keep flat · C-spine by mechanism"},
+"inhalation":{key:["Scene safe? Source off? CO level","Exposed to what, how long","Others / pets sick",Q.cps,"Anyone passed out"],
+ more:["Where: room, garage, vehicle","Furnace, stove, generator, heater","CO alarm reading","Chemical label / data sheet","Fire smoke (cyanide)","Cleaners mixed","Rotten-egg smell (H2S)","On skin / eyes — rinsed?","Swallowed","Headache, dizzy, nausea","Better outside the building","Confused / sleepy","Burning throat / cough","Vision, weakness, seizure",Q.preg,"Heart, lung, anemia",Q.purpose],
+ dm:"CO: the sat probe reads normal · Several headaches in one home = CO · Pregnant: always convey · Airway swelling · Decontaminate first · CliniCall · H2S suicide endangers rescuers"},
+"pregnancy":{key:["How many weeks / due date","Urge to push","Water broke — time, colour","Bleeding — how much","Which baby? How fast before","Contractions: how far apart, how long"],
+ more:["Baby moving — last felt","One baby or more","Breech?","Planned place? Midwife called?","Headache / vision changes","Right rib / upper belly pain","Face / hand swelling","Constant belly pain","Fall, blow to belly, abuse",Q.fever,"This pregnancy: BP, diabetes, previa","Prenatal care / ultrasound","Smoking, alcohol, drugs","Pregnancies, births, preterm, miscarriages","C-sections","Heavy bleeding / stuck shoulders before","Under 37 wk: cramps, backache, show"],
+ dm:"Imminent: urge to push, crowning, under 2 min apart — deliver here · Pre-eclampsia (BP 160 / 110) · Bleeding after 20 weeks · Cord or limb first: knees-to-chest, go · Bleeding after birth over 500 mL · Two patients"},
+"sick-child":{key:["Acting normal / alert?","Knows parent? Can be settled?","Breathing: fast, noisy, pulling in","Colour: pale, blue, blotchy","Floppy?","Age + weight","Started when"],
+ more:["Drinking / feeding","Wet diapers today","Vomiting / diarrhea — blood, green","Tears when crying","Fever: how high? Meds, dose, time","Cough: barking? Drooling?","Sudden, or after a cold? Sits forward?","Rash — fades when pressed?","Seizure: over 5 min? More than one?","Pulling ear / stiff neck","Cry weak or high-pitched","Swallowed: pills, battery, object","Fall / injury","Born early / birth problems","Conditions / missed meds","Immunized","Sick contacts"],
+ dm:"Quiet and floppy is sicker than screaming · Fever under 3 months · Sepsis / meningitis · Dehydration · Button battery · Low sugar · Story does not fit the injury · Trust the parent"},
+"transfer":{key:["Diagnosis? Why moving","ID matches wristband","Stable? Last vitals","Code status — MOST coming?","Infection precautions"],
+ more:["Baseline mental state / mobility","Treatments today / last pain med","Lines, pumps, oxygen — rates","Transport plan within my scope?","Meds for the trip / controlled drugs","Nurse / escort coming","Allergies","Falls / aggression risk","Receiving doctor, unit — report given?","Paperwork ready","Family aware","Patient: pain / nausea now","Washroom before leaving","Glasses, hearing aids, dentures, phone"],
+ dm:"Sicker than the booking said — reassess before loading · Oxygen and battery for the trip plus delays · Not in the plan or your scope: Clinical Hub · Paperwork · Nearest hospital on the route"}
+};
+var GROUPS=[
+{n:"Pain",parts:["chest-pain","abdo-pain","back-pain","headache"]},
+{n:"Breathing & heart",parts:["breathing","heart-problems","allergic","choking"]},
+{n:"Collapse & brain",parts:["cardiac-arrest","fainting","confused","unknown","stroke","seizure"]},
+{n:"Medical",parts:["sick-person","diabetic","bleeding","overdose","psychiatric"]},
+{n:"Injury",parts:["fall","mvc","head-injury","limb-injury","assault","animal-bite","entrapment","eye"]},
+{n:"Environment",parts:["burns","electrocution","heat-cold","drowning","inhalation"]},
+{n:"Special",parts:["pregnancy","sick-child","transfer"]}
+];
+
+// ---- Handover section (BCEHS guideline A03). rows = [letter, heading, [what to say]]
+var HO={
+"atmist-ambo":{n:"ATMIST AMBO",tag:"Bedside handover · pre-alert",
+ use:"Every handover of care, in or out of hospital. ATMIST alone for the hospital pre-alert. Whole report in 45–60 seconds.",
+ parts:[{step:"1 · Hands off · Eyes on · Team listens"},
+ {h:"2 · ATMIST — first 30 seconds",rows:[["A","Age",["Age, name, date of birth"]],["T","Time",["Onset of symptoms, or time of injury"]],["M","Mechanism or medical complaint",["Synopsis of mechanism, or chief complaint"]],["I","Injuries",["Injuries and exam findings"]],["S","Signs",["Vitals and GCS"]],["T","Treatment",["Treatment and response"]]]},
+ {h:"AMBO — done by 60 seconds",rows:[["A","Allergies",["Including reactions"]],["M","Medication",["Provide the list"]],["B","Background",["Past medical, social and family history"]],["O","Other",["Any relevant information"]]]},
+ {step:"3 · Pause · Questions from team · Hands on"}],
+ more:[["Call ahead (pre-arrival notification) for",["STEMI","Suspected stroke — FAST or FAST-VAN positive","Cardiac arrest — post-arrest or CPR in progress","Major trauma criteria met","Unstable: systolic under 90 · heart rate over 130 or under 40 · resp rate over 30 or under 8 · needs high-flow oxygen · GCS under 13","Impending airway compromise","Restraints required","Active labour and other maternity patients","Spinal motion restriction in place","Child with PEWS 5 or higher, or major trauma (facility-specific — check local rules)","Significant overdose expected to decline fast — insulin, bupropion, beta-blockers, tricyclics","Suspected COVID or other infectious disease","Mass or multiple casualty incident","Interfacility transfer arriving from an airport","Anything needing immediate treatment on arrival"]],
+ ["Also consider calling ahead for",["You are more worried than the numbers show","High-profile patient needing security","Ischemic emergency — leg, testicle","Eye emergency with vision loss","Active non-traumatic bleeding — nose, vaginal, GI"]],
+ ["Tips",["Say each heading before its information.","Short, plain language — no jargon.","Speak loudly and clearly; pause so listeners can keep up.","Write it down before you arrive if you have time.","If the receiving staff do not know ATMIST AMBO, use it anyway."]],
+ ["Example",["A — 68-year-old man, David Chan, born 3 March 1958.","T — Chest pain started at 14:10 while resting.","M — Central chest pressure going to the left arm.","I — Pale and sweaty, chest clear, 12-lead shows inferior ST elevation.","S — Pulse 58, BP 104 over 62, resp 18, sats 96% on room air, GCS 15.","T — Aspirin given at 14:25; pain down from 8 to 6 out of 10.","A — Penicillin, gets a rash.","M — Metoprolol and atorvastatin.","B — High blood pressure; lives with his wife; father had a heart attack at 60.","O — Wife is following by car with his medications."]]]},
+"sbar":{n:"SBAR",tag:"Phone consult · CliniCall",
+ use:'Phone consults only — CliniCall <span class="tel">1-833-829-4099</span> or EPOS. Not for bedside handover. Identify yourself and the patient first (the I in ISBAR).',
+ parts:[{h:"What to say",rows:[["S","Situation",["Identify yourself","Identify the patient","Reason for call","Concerns"]],["B","Background",["Time of onset","Chief complaint","History of chief complaint","Medical history"]],["A","Assessment",["General impression","Vitals","Physical findings","Treatment provided"]],["R","Recommendation",["Discuss treatment plan and options"]]]}],
+ more:[["Tips",["Clarity over brevity — it is a phone call.","Check the line is clear and you understand each other.","Give them time to write before you move on.","Write your SBAR out before you call if time allows."]],
+ ["Example",["S — This is (your name), PCP on unit (number). I have a 54-year-old woman, Maria Santos. I am calling about a fast heart rate, and I am concerned she may become unstable.","B — It started 40 minutes ago at rest. Palpitations and light-headedness, no chest pain. She has high blood pressure and takes amlodipine.","A — Anxious but alert. Pulse 180 and regular, BP 112 over 70, sats 97%. The monitor shows a narrow-complex tachycardia. IV is in place.","R — I would like to discuss treatment options, and whether to treat on scene or convey now."]]]}
+};
+var HOWORDS="handover hand over atmist ambo sbar isbar report consult clinicall pre-alert prealert notification";
+var from="";
+var app=document.getElementById("app"), done={}, query="", extra=[], adding="", recent=[];
+try{recent=JSON.parse(localStorage.getItem("cq-recent")||"[]").filter(function(i){return !!SN[i]})}catch(e){recent=[]}
+function esc(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function find(id){for(var i=0;i<C.length;i++)if(C[i].id===id)return C[i];return null}
+function groupOf(id){for(var i=0;i<GROUPS.length;i++)if(GROUPS[i].parts.indexOf(id)>=0)return GROUPS[i];return null}
+function ticks(){return Object.keys(done).length}
+
+function tile(id){return '<button class="tile" data-go="'+id+'">'+esc(SN[id])+'</button>'}
+function list(q){
+  var h="";
+  if(q){
+    var m=C.filter(function(c){return (SN[c.id]+" "+c.n+" "+c.k).toLowerCase().indexOf(q)>=0});
+    var ho=!adding&&HOWORDS.indexOf(q)>=0?hoTiles():"";
+    return m.length||ho?ho+(m.length?'<div class="grid3">'+m.map(function(c){return tile(c.id)}).join("")+'</div>':''):'<p class="none">Nothing matches. Try another word, or open Sick / weak.</p>';
+  }
+  if(!adding)h+=hoTiles();
+  if(recent.length&&!adding)h+='<div class="grp">Recent</div><div class="grid3">'+recent.map(tile).join("")+'</div>';
+  GROUPS.forEach(function(g){h+='<div class="grp">'+esc(g.n)+'</div><div class="grid3">'+g.parts.map(tile).join("")+'</div>'});
+  return h;
+}
+function home(){
+  var h='<div class="top"><h1>Call Questions</h1>'+(ticks()&&!adding?'<button class="newpt" id="newpt">New patient</button>':'')+'</div>';
+  if(adding)h+='<p class="addnote">Adding to <b>'+esc(SN[adding])+'</b> — pick another complaint. <button class="link" id="canceladd">Cancel</button></p>';
+  h+='<div class="search"><input id="search" type="search" placeholder="Search — sob, od, mvc, stroke…" autocomplete="off" value="'+esc(query).replace(/"/g,"&quot;")+'"></div><div id="list">'+list(query.trim().toLowerCase())+'</div>';
+  h+='<p class="foot">A memory aid for history-taking, checked against the BCEHS Clinical Practice Guidelines as published 26 Nov 2026. It does not replace the guidelines or your own assessment.</p>';
+  app.innerHTML=h;
+  var s=document.getElementById("search");
+  s.addEventListener("input",function(){query=s.value;document.getElementById("list").innerHTML=list(query.trim().toLowerCase())});
+}
+function cueBtn(t){var k=t.toLowerCase();return '<button class="cue" data-cue="'+esc(k).replace(/"/g,"&quot;")+'" aria-pressed="'+(done[k]?"true":"false")+'">'+esc(t)+'</button>'}
+function block(title,cues,cls){return cues.length?'<section class="blk '+cls+'"><h3>'+title+'</h3><div class="cues">'+cues.map(cueBtn).join("")+'</div></section>':""}
+function fullHtml(c){
+  var h='<details class="full"><summary>Full wording — '+esc(SN[c.id])+'</summary>';
+  [["Ask first",c.first]].concat(c.s).forEach(function(s){h+='<h4>'+esc(s[0])+'</h4><ul>'+s[1].map(function(t){return"<li>"+esc(t)+"</li>"}).join("")+'</ul>'});
+  h+='<h4>Keep in mind</h4><ul>'+c.miss.map(function(t){return"<li>"+esc(t)+"</li>"}).join("")+'</ul>';
+  h+='<p class="src">'+(CPG[c.id]?'Checked against BCEHS guidelines '+esc(CPG[c.id].split(" ").join(" · "))+'.':'No BCEHS guideline covers this on its own. These questions are general practice.')+'</p>';
+  return h+'</details>';
+}
+function card(c){
+  var ids=[c.id].concat(extra.filter(function(i){return i!==c.id})), seen={};
+  function uniq(a){return a.filter(function(t){var k=t.toLowerCase();if(seen[k])return false;seen[k]=1;return true})}
+  function all(f){var o=[];ids.forEach(function(i){o=o.concat(K[i][f]||[])});return o}
+  if(ids.indexOf("chest-pain")>=0)seen[Q.cps.toLowerCase()]=1;
+  var first=uniq(all("key")), opq=ids.some(function(i){return K[i].opq})?uniq(OPQ):[], more=uniq(all("more")), sample=uniq(SAMPLE_CUES);
+  var h='<div class="bar"><button class="back" data-go="" aria-label="All calls">‹</button><h2>'+ids.map(function(i){return esc(SN[i])}).join(" + ")+'</h2><span class="left" id="left"></span><button class="newpt" id="newpt">New pt</button></div>';
+  h+='<div class="adds">';
+  extra.forEach(function(i){h+='<button class="chip on" data-rm="'+i+'">'+esc(SN[i])+' ×</button>'});
+  (groupOf(c.id)||{parts:[]}).parts.forEach(function(i){if(ids.indexOf(i)<0)h+='<button class="chip" data-add="'+i+'">+ '+esc(SN[i])+'</button>'});
+  h+='<button class="chip" id="addother">+ Other…</button></div>';
+  h+=block("Ask first",first,"first")+block("The pain (OPQRRRST)",opq,"small")+block("Then ask",more,"")+block("Every patient",sample,"small");
+  h+='<div class="dm"><h3>Don\'t miss</h3>'+ids.map(function(i){return'<p>'+(ids.length>1?'<b>'+esc(SN[i])+':</b> ':'')+esc(K[i].dm)+'</p>'}).join("")+'</div>';
+  h+=hoTiles();
+  ids.forEach(function(i){h+=fullHtml(find(i))});
+  app.innerHTML=h; left();
+  recent=[c.id].concat(recent.filter(function(i){return i!==c.id})).slice(0,3);
+  try{localStorage.setItem("cq-recent",JSON.stringify(recent))}catch(e){}
+}
+function left(){
+  var el=document.getElementById("left"); if(!el)return;
+  var n=app.querySelectorAll('.blk.first .cue[aria-pressed="false"]').length;
+  el.textContent=n?n+" to ask":"✓ asked"; el.className="left"+(n?"":" ok");
+}
+function hoTiles(){
+  return '<div class="grp">Handover</div><div class="grid2">'+Object.keys(HO).map(function(k){
+    return '<button class="tile ho" data-go="'+k+'" data-keep>'+esc(HO[k].n)+'<small>'+esc(HO[k].tag)+'</small></button>'}).join("")+'</div>';
+}
+function handover(id){
+  var o=HO[id], n=0;
+  var h='<div class="bar"><button class="back" data-go="'+from+'" data-keep aria-label="Back">‹</button><h2>'+esc(o.n)+'</h2><button class="newpt" id="clearho">Clear</button></div>';
+  h+='<div class="seg">'+Object.keys(HO).map(function(k){return '<button data-go="'+k+'" data-keep aria-current="'+(k===id)+'">'+esc(HO[k].n)+'</button>'}).join("")+'</div>';
+  h+='<p class="use">'+o.use+'</p>';
+  o.parts.forEach(function(p){
+    if(p.step){h+='<div class="step">'+esc(p.step)+'</div>';return}
+    h+='<section class="blk"><h3>'+esc(p.h)+'</h3><div class="rows">';
+    p.rows.forEach(function(r){var key="ho:"+id+":"+(n++);
+      h+='<button class="row" data-row="'+key+'" aria-pressed="'+(done[key]?"true":"false")+'"><span class="L">'+r[0]+'</span><span class="W"><span class="T">'+esc(r[1])+'</span>'+r[2].map(function(d){return '<span class="d">'+esc(d)+'</span>'}).join("")+'</span></button>'});
+    h+='</div></section>';
+  });
+  o.more.forEach(function(m){h+='<details class="full"><summary>'+esc(m[0])+'</summary><ul>'+m[1].map(function(t){return"<li>"+esc(t)+"</li>"}).join("")+'</ul></details>'});
+  h+='<p class="src">From BCEHS guideline A03 Clinical Handover and Communication, as published 26 Nov 2026.</p>';
+  app.innerHTML=h;
+}
+function route(){
+  var id=location.hash.replace("#",""), c=find(id);
+  if(HO[id]&&!adding)handover(id); else if(c&&!adding)card(c); else home();
+  window.scrollTo(0,0);
+}
+function go(id){ if(location.hash.replace("#","")===id)route(); else location.hash=id }
+var wl=null;
+function wake(){try{if(navigator.wakeLock&&!wl)navigator.wakeLock.request("screen").then(function(l){wl=l;l.addEventListener("release",function(){wl=null})}).catch(function(){})}catch(e){}}
+app.addEventListener("click",function(e){
+  wake();
+  var t=e.target.closest("button"); if(!t)return;
+  var cur=location.hash.replace("#","");
+  if(t.hasAttribute("data-row")){var rk=t.getAttribute("data-row"), ron=t.getAttribute("aria-pressed")!=="true"; t.setAttribute("aria-pressed",ron?"true":"false"); if(ron)done[rk]=1; else delete done[rk]}
+  else if(t.id==="clearho"){Object.keys(done).forEach(function(x){if(x.indexOf("ho:"+cur+":")===0)delete done[x]}); route()}
+  else if(t.hasAttribute("data-cue")){var k=t.getAttribute("data-cue"), on=t.getAttribute("aria-pressed")!=="true"; t.setAttribute("aria-pressed",on?"true":"false"); if(on)done[k]=1; else delete done[k]; left()}
+  else if(t.hasAttribute("data-go")){var id=t.getAttribute("data-go");
+    if(adding&&id){var p=adding; if(id!==p&&extra.indexOf(id)<0)extra.push(id); adding=""; query=""; go(p)}
+    else{ if(HO[id]&&!HO[cur])from=cur; if(id&&!t.hasAttribute("data-keep"))extra=[]; adding=""; query=""; go(id) }}
+  else if(t.hasAttribute("data-add")){extra.push(t.getAttribute("data-add")); route()}
+  else if(t.hasAttribute("data-rm")){var r=t.getAttribute("data-rm"); extra=extra.filter(function(i){return i!==r}); route()}
+  else if(t.id==="addother"){adding=cur; go("")}
+  else if(t.id==="canceladd"){var b=adding; adding=""; go(b)}
+  else if(t.id==="newpt"){done={}; extra=[]; route()}
+});
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")wake()});
+window.addEventListener("hashchange",route);
+route();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('offl'), V='26 Nov 2026 23:02';
+  function say(t){el.textContent=t+' · Version '+V}
+  if(!('serviceWorker' in navigator)||!window.isSecureContext){say('Offline use is not available in this browser');return}
+  var had=!!navigator.serviceWorker.controller;
+  say(had?'Offline ready \u2713':'Saving for offline use\u2026');
+  navigator.serviceWorker.register('./sw.js').then(function(){return navigator.serviceWorker.ready})
+    .then(function(){say('Offline ready \u2713 works with no signal')})
+    .catch(function(){say('Could not save for offline use')});
+  navigator.serviceWorker.addEventListener('controllerchange',function(){
+    if(!had){had=true;return}
+    if(!location.hash.replace('#','')&&!Object.keys(done).length)location.reload();
+    else say('Update saved, it loads next time you open the app');
+  });
+})();
+</script>
+</body>
+</html>
