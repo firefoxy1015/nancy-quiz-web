@@ -529,6 +529,11 @@ var HO={
 var HOWORDS="handover hand over atmist ambo sbar isbar report consult clinicall pre-alert prealert notification";
 var from="";
 var app=document.getElementById("app"), done={}, query="", extra=[], adding="", recent=[];
+// Ticks survive the phone reloading the page (switching apps, screen lock) for 3 hours.
+var saved={}, primary="", firstCard=true;
+try{saved=JSON.parse(localStorage.getItem("cq-state")||"{}")||{}}catch(e){saved={}}
+if(saved.t&&Date.now()-saved.t<3*3600*1000&&saved.done)done=saved.done; else saved={};
+function save(){try{localStorage.setItem("cq-state",JSON.stringify({t:Date.now(),done:done,primary:primary,extra:extra}))}catch(e){}}
 try{recent=JSON.parse(localStorage.getItem("cq-recent")||"[]").filter(function(i){return !!SN[i]})}catch(e){recent=[]}
 function esc(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
 function find(id){for(var i=0;i<C.length;i++)if(C[i].id===id)return C[i];return null}
@@ -567,6 +572,8 @@ function fullHtml(c){
   return h+'</details>';
 }
 function card(c){
+  if(firstCard){firstCard=false; if(saved.primary===c.id&&saved.extra&&!extra.length)extra=saved.extra.filter(function(i){return !!SN[i]&&i!==c.id})}
+  primary=c.id;
   var ids=[c.id].concat(extra.filter(function(i){return i!==c.id})), seen={};
   function uniq(a){return a.filter(function(t){var k=t.toLowerCase();if(seen[k])return false;seen[k]=1;return true})}
   function all(f){var o=[];ids.forEach(function(i){o=o.concat(K[i][f]||[])});return o}
@@ -584,6 +591,7 @@ function card(c){
   app.innerHTML=h; left();
   recent=[c.id].concat(recent.filter(function(i){return i!==c.id})).slice(0,3);
   try{localStorage.setItem("cq-recent",JSON.stringify(recent))}catch(e){}
+  save();
 }
 function left(){
   var el=document.getElementById("left"); if(!el)return;
@@ -622,9 +630,9 @@ app.addEventListener("click",function(e){
   wake();
   var t=e.target.closest("button"); if(!t)return;
   var cur=location.hash.replace("#","");
-  if(t.hasAttribute("data-row")){var rk=t.getAttribute("data-row"), ron=t.getAttribute("aria-pressed")!=="true"; t.setAttribute("aria-pressed",ron?"true":"false"); if(ron)done[rk]=1; else delete done[rk]}
-  else if(t.id==="clearho"){Object.keys(done).forEach(function(x){if(x.indexOf("ho:"+cur+":")===0)delete done[x]}); route()}
-  else if(t.hasAttribute("data-cue")){var k=t.getAttribute("data-cue"), on=t.getAttribute("aria-pressed")!=="true"; t.setAttribute("aria-pressed",on?"true":"false"); if(on)done[k]=1; else delete done[k]; left()}
+  if(t.hasAttribute("data-row")){var rk=t.getAttribute("data-row"), ron=t.getAttribute("aria-pressed")!=="true"; t.setAttribute("aria-pressed",ron?"true":"false"); if(ron)done[rk]=1; else delete done[rk]; save()}
+  else if(t.id==="clearho"){Object.keys(done).forEach(function(x){if(x.indexOf("ho:"+cur+":")===0)delete done[x]}); save(); route()}
+  else if(t.hasAttribute("data-cue")){var k=t.getAttribute("data-cue"), on=t.getAttribute("aria-pressed")!=="true"; t.setAttribute("aria-pressed",on?"true":"false"); if(on)done[k]=1; else delete done[k]; left(); save()}
   else if(t.hasAttribute("data-go")){var id=t.getAttribute("data-go");
     if(adding&&id){var p=adding; if(id!==p&&extra.indexOf(id)<0)extra.push(id); adding=""; query=""; go(p)}
     else{ if(HO[id]&&!HO[cur])from=cur; if(id&&!t.hasAttribute("data-keep"))extra=[]; adding=""; query=""; go(id) }}
@@ -632,7 +640,7 @@ app.addEventListener("click",function(e){
   else if(t.hasAttribute("data-rm")){var r=t.getAttribute("data-rm"); extra=extra.filter(function(i){return i!==r}); route()}
   else if(t.id==="addother"){adding=cur; go("")}
   else if(t.id==="canceladd"){var b=adding; adding=""; go(b)}
-  else if(t.id==="newpt"){done={}; extra=[]; route()}
+  else if(t.id==="newpt"){done={}; extra=[]; primary=""; save(); route()}
 });
 document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")wake()});
 window.addEventListener("hashchange",route);
@@ -640,7 +648,7 @@ route();
 </script>
 <script>
 (function(){
-  var el=document.getElementById('offl'), V='26 Nov 2026 23:02';
+  var el=document.getElementById('offl'), V='26 Nov 2026 23:04';
   function say(t){el.textContent=t+' · Version '+V}
   if(!('serviceWorker' in navigator)||!window.isSecureContext){say('Offline use is not available in this browser');return}
   var had=!!navigator.serviceWorker.controller;
