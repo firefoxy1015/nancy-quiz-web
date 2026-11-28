@@ -1,6 +1,6 @@
 // Offline support. The lock screen and the encrypted app are saved on first visit and served from the device.
 // A new build has a new cache name and replaces the old one the next time the page is opened.
-const CACHE = 'pcr-da2d715f63';
+const CACHE = 'pcr-a282128843';
 const SHELL = ["./", "./index.html", "./app.bin", "./manifest.webmanifest", "./icon-192.png", "./icon-180.png", "./icon-512.png"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL.map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
