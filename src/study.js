@@ -1,8 +1,8 @@
 // Study library (assessment model / protocols / treatments / drugs / reference) + jurisprudence + exam info
-import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=92';
-import { sClassroom } from './classroom.js?v=92';
-import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=92';
-import { sAssessment, sProtocols, sDrugs, sReference } from './guides.js?v=92';   // the other guideline pages, in the card style
+import { S, save, bi, biList, t, esc, loadJSON, nav, ico} from './app.js?v=93';
+import { sClassroom } from './classroom.js?v=93';
+import { two, one, mini, stk, meter, classDone, CHEV } from './home.js?v=93';
+import { sAssessment, sProtocols, sDrugs, sReference } from './guides.js?v=93';   // the other guideline pages, in the card style
 
 /* ---------------- study hub ---------------- */
 // The six official-guideline tiles, shared by the Learn hub and the guidelines page.

@@ -1,8 +1,8 @@
 // The official-guideline pages other than the treatment topics: protocols, drug sheets, the assessment model and the
 // quick reference. Same picture-first card as a treatment topic (.ddx.tc) and the same sticker list (.ddx.tl), drawn
 // straight from the existing data files: nothing here is new content, only a new way of showing it.
-import { S, biList, t, esc, loadJSON } from './app.js?v=92';
-import { two, one, mini, stk } from './home.js?v=92';
+import { S, biList, t, esc, loadJSON } from './app.js?v=93';
+import { two, one, mini, stk } from './home.js?v=93';
 
 const TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 const X_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';

@@ -935,6 +935,23 @@ body.cls-playing .view-root { padding-bottom: 170px; }
 .cls-book .card-grid div { border: 1px solid var(--line-strong); border-radius: 6px; padding: 6px 10px; font-size: .92rem; line-height: 1.45; }
 .cls-book .card-grid div > b:first-child { display: block; color: var(--accent); font-size: .74rem; letter-spacing: .08em; }
 @media (max-width: 520px) { .cls-book .card-grid { grid-template-columns: 1fr; } .cls-book { font-size: 1rem; } }
+/* review-book chapters (Weekend 6 on): a small source line, hand-drawn SVG figures, 12-lead figures from the ECG engine.
+   The figures are drawn for white paper, so they keep a white card in dark mode. */
+.cls-book p.src { font-size: .76rem; color: var(--ink-3); margin: -2px 0 8px; line-height: 1.4; }
+.cls-book svg.fig { display: block; width: 100%; max-width: 560px; height: auto; margin: 10px auto 14px; }
+:root[data-theme="dark"] .cls-book svg.fig { background: #fff; color: #1d2326; border-radius: 8px; padding: 8px; box-sizing: border-box; }
+.cls-book .w6ecg { margin: 10px 0 14px; max-width: 640px; }
+.cls-book .w6ecg .l12 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; }
+.cls-book .w6ecg .ecg { display: block; box-sizing: border-box; width: 100%; height: auto; border: 1px solid #e2c4c4; border-radius: 4px; }
+.cls-book .w6ecg .ecg .paper { fill: #fff8f8; } .cls-book .w6ecg .ecg .g1 { stroke: #f1cfcf; stroke-width: .09; fill: none; } .cls-book .w6ecg .ecg .g2 { stroke: #e4a6a6; stroke-width: .22; fill: none; }
+.cls-book .w6ecg .ecg .tr { stroke: #15181a; stroke-width: .38; fill: none; stroke-linejoin: round; }
+.cls-book .w6ecg .ecg text.lab { font: 700 3.6px "Noto Sans", sans-serif; letter-spacing: 0; fill: #15181a; }
+.cls-book .w6ecg .ecg .ov, .cls-book .w6ecg .ecg .ov-s, .cls-book .w6ecg .ecg .ov-d, .cls-book .w6ecg .ecg .ov-a { stroke: #0d5c5c; fill: none; stroke-width: .3; }
+.cls-book .w6ecg .ecg .ov-d { stroke-dasharray: .9 .7; } .cls-book .w6ecg .ecg .ov-j, .cls-book .w6ecg .ecg .ov-c { fill: #0d5c5c; } .cls-book .w6ecg .ecg .ov-t { fill: #0d5c5c; font-weight: 700; }
+.cls-book .w6ecg .up .ecg { border: 2.5px solid #d0383b; } .cls-book .w6ecg .down .ecg { border: 2.5px solid #3b6fd6; }
+.cls-book .w6ecg .st { font-size: .68rem; font-weight: 700; text-align: right; line-height: 1.2; min-height: 1.2em; } .cls-book .w6ecg .up .st { color: #d0383b; } .cls-book .w6ecg .down .st { color: #3b6fd6; }
+.cls-book .w6ecg .key { font-size: .74rem; color: var(--ink-3); line-height: 1.4; margin-top: 2px; }
+.cls-book .w6ecg .key .k { font-weight: 700; } .cls-book .w6ecg .key .up { color: #d0383b; } .cls-book .w6ecg .key .down { color: #3b6fd6; }
 /* the brief's chapter chips, the folded reference lessons, the school quiz Q→A */
 .cls-plan { display: grid; gap: 6px; }
 .cls-plan-row { display: flex; gap: 6px; }
